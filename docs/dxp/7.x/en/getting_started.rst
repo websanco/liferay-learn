@@ -8,7 +8,7 @@ Getting Started
    getting-started/introduction-to-the-admin-account.md
    getting-started/navigating-dxp.md
    getting-started/creating-your-first-site.md
-   getting-started/changing-your-theme.md
+   getting-started/changing-your-sites-theme.md
 
 .. raw:: html
    :file: landingpage_template.html

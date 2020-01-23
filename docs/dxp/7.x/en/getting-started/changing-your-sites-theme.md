@@ -32,7 +32,7 @@ This will load the sample theme into your DXP instance. You can check your conso
 
 ## Change Your Site's Theme
 
-Configure the Pages for your Site to use the a deployed theme:
+Next, configure the Public Pages for your Site to use the deployed theme:
 
 1. Open your browser to `https://localhost:8080` and [login as an administrator](./introduction-to-the-admin-account.md).
 
