@@ -14,22 +14,22 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
     docker run -it -p 8080:8080 liferay/dxp:7.2.10.1-sp1
     ```
 
-1. Download the WAR containing the [Acme Sample Theme](./liferay-5b2v.war):
+1. Download the WAR containing the [Acme Sample Theme](./liferay-5b2v-theme.war):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-theme/liferay-5b2v.war -O
+    curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-theme/liferay-5b2v-theme.war -O
     ```
 
 1. Deploy the WAR containing the theme:
 
     ```bash
-    docker cp liferay-5b2v.war docker-container:path-to-deploy-folder
+    docker cp liferay-5b2v-theme.war docker-container:path-to-deploy-folder
     ```
 
 This will load the sample theme into your DXP instance. You can check your console for the following message to confirm that the theme successfully deployed:
 
 ```
-020-01-23 00:04:32.824 INFO  [fileinstall-/home/liferay/deploy/7.2-test/osgi/war][BundleStartStopLogger:39] STARTED liferay-5b2v_1.0.0 [934]
+020-01-23 00:04:32.824 INFO  [fileinstall-/home/liferay/deploy/7.2-test/osgi/war][BundleStartStopLogger:39] STARTED liferay-5b2v-theme_1.0.0 [934]
 ```
 
 ## Change Your Site's Theme
