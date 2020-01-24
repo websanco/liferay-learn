@@ -48,7 +48,7 @@ Next, configure the Public Pages for your Site to use the deployed theme:
 
     ![Click Change Current Theme to select a new theme for your Public Pages.](./changing-your-sites-theme/images/03.png)
 
-1. Select the deployed sample theme, _Classic with Blue Background._
+1. Select the deployed sample theme, _Getting Started Example._
 
 1. Navigate back to the home page for your Site to confirm that the theme has changed. The background for your Site is now blue.
 
