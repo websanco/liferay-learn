@@ -4,7 +4,7 @@ Themes are used to set the overall look and feel for your Site. A Site's Pages c
 
 The DXP Docker image has the _Classic_ theme available by default. In this example, we will deploy a new simple theme and then show you how to switch from one theme to another.
 
-![Out-of-the-box themes](./changing-your-sites-theme/images/01.png)
+![Out-of-the-box themes](./changing-your-sites-appearance/images/01.png)
 
 ## Deploy a New Theme
 
@@ -17,7 +17,7 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
 1. Download the WAR containing the [Acme Sample Theme](./liferay-5b2v-theme.war):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-theme/liferay-5b2v-theme.war -O
+    curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O
     ```
 
 1. Deploy the WAR containing the theme:
@@ -42,17 +42,17 @@ Next, configure the Public Pages for your Site to use the deployed theme:
 
 1. Click the gear icon ![Gear icon](../images/icon-control-menu-gear.png) next to _Public Pages_ to configure them:
 
-    ![Open the Pages screen to configure your Public Pages.](./changing-your-sites-theme/images/02.png)
+    ![Open the Pages screen to configure your Public Pages.](./changing-your-sites-appearance/images/02.png)
 
 1. Scroll down and click the _Change Current Theme_ button:
 
-    ![Click Change Current Theme to select a new theme for your Public Pages.](./changing-your-sites-theme/images/03.png)
+    ![Click Change Current Theme to select a new theme for your Public Pages.](./changing-your-sites-appearance/images/03.png)
 
 1. Select the deployed sample theme, _Getting Started Example._
 
 1. Navigate back to the home page for your Site to confirm that the theme has changed. The background for your Site is now blue.
 
-    ![The home page has a different color background after changing the theme.](./changing-your-sites-theme/images/04.png)
+    ![The home page has a different color background after changing the theme.](./changing-your-sites-appearance/images/04.png)
 
 Your site's theme has been updated.
 

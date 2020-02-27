@@ -37,6 +37,6 @@ Sites built with the _Community Site_ template come with two pages: _Home_ and _
 
 ## What's Next
 
-Continue our Getting Started guide by learning how to change the look and feel of your site by [Changing Your Site's Theme](./changing-your-sites-theme.md).
+Continue our Getting Started guide by learning how to change the look and feel of your site by [Changing Your Site's Theme](./changing-your-sites-appearance.md).
 
 Liferay Sites are flexible, powerful, and can be configured to meet many different needs. See our [Introduction to Site Building](../site-building/introduction-to-site-building.md).

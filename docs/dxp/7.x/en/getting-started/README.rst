@@ -5,4 +5,4 @@ Getting Started
 -  :doc:`/getting-started/introduction-to-the-admin-account`
 -  :doc:`/getting-started/navigating-dxp`
 -  :doc:`/getting-started/creating-your-first-site`
--  :doc:`/getting-started/changing-your-sites-theme`
+-  :doc:`/getting-started/changing-your-sites-appearance`
