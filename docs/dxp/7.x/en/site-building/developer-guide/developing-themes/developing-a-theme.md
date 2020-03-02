@@ -1,6 +1,12 @@
 # Developing a Theme
 
-Since Liferay DXP 7.1+, you can create the overall design of your [Content Page](../../creating-pages/content-pages-overview.md) with [Page Fragments](TODO), and since Liferay DXP 7.3+ you can define the common elements of the page (Header, Footer, etc.) in the [Master Page Template](TODO). If you're running an earlier version of Liferay Portal, or you want to create a custom look for a Widget Page, you can create your own Theme to create the overall look and feel for the page, as described below.
+Themes are x that can be used to create a custom look and feel for pages. Create your own Theme by following the steps, as described below:
+
+```note::
+   Starting with Liferay DXP 7.1+, the overall design of [Content Pages](../../creating-pages/content-pages-overview.md) can be accomplished with [Page Fragments](TODO). Starting with Liferay DXP 7.3+ users can define the common elements of a page (Header, Footer, etc.) in the [Master Page Template](TODO). These look and feel changes can be implemented without needing to develop a theme.
+```
+
+<!-- opening screenshot of the end result - the goal of what a person would hope to accomplish. -->
 
 ## Overview
 
@@ -10,11 +16,15 @@ Since Liferay DXP 7.1+, you can create the overall design of your [Content Page]
 
 ## Deploy an Example
 
-```note::
-  This example runs on Liferay Portal 7.3.
-```
+> Liferay DXP 7.3+
 
 First you must deploy an example Theme. Follow these steps:
+
+1. Start the Docker container with a bind mount:
+
+    ```bash
+    docker run -d -it -p 8080:8080 -p 8000:8000 --name mylrdev -v C:\Users\liferay\Desktop\liferay-docker:/mnt/liferay liferay/portal:7.3.0-ga1
+    ```
 
 1. Download and unzip [Example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-a-theme/1581698982liferay22.zip):
 
@@ -22,28 +32,34 @@ First you must deploy an example Theme. Follow these steps:
     curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-a-theme/1581698982liferay22.zip
     ```
 
+<!-- missing unzip command? -->
+
 1. Install the Theme's dependencies:
 
     ```bash
     npm install
     ```
 
-1. Build the Theme's WAR. If you're running Liferay JS Themes Toolkit v9.5.0+, run `npm run build` to build your Theme's WAR file. Otherwise, run `node_modules\.bin\gulp build` to build the WAR file.
+1. Build the Theme's WAR.
 
-    ```note::
-      You can check the version of the toolkit by running `npm list -g generator-liferay-theme`.
+    **If you're running Liferay JS Themes Toolkit v9.5.0+:**
+
+    ```bash
+    npm run build
     ```
 
-1. Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
+    **Otherwise run:**
+
+    ```bash
+    node_modules\.bin\gulp build
+    ```
+
+    You can check the version of the toolkit by running `npm list -g generator-liferay-theme`.
+
+1. <!-- This part, I think there's two possibilities: 1. Brian is going to work with us to implement a standard docker deploy command (similar to what exists in commerce w/ gradle deploy - or 2. these instructions say "Copy the Theme War to the ..." and then right below we provide a sample `cp sample-theme.war path/to/your/bind/mount` type sample command.) --> Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
 
     ```note::
     You must restart the Docker container if you're creating the `[host_folder]/deploy` folder for the first time in your bind mount.
-    ```
-
-1. Start the Docker container with a bind mount:
-    
-    ```bash
-    docker run -d -it -p 8080:8080 -p 8000:8000 --name mylrdev -v C:\Users\liferay\Desktop\liferay-docker:/mnt/liferay liferay/portal:7.3.0-ga1
     ```
 
 1. Confirm the deployment to the Liferay Docker container console:
@@ -60,36 +76,36 @@ Great! You successfully built and deployed a custom Theme. Next, you'll walk thr
 
 ## Walk Through the Example
 
-* Generate the Theme
-* Build the base files
-* Customize the CSS
-* Customize the Theme templates
-* Customize the JavaScript
+* [Generate the Theme](#generate-the-theme)
+* [Build the base files](#build-the-base-files)
+* [Customize the CSS](#customize-the-css)
+* [Customize the Theme templates](#customize-the-theme-templates)
+* [Customize the JavaScript](#customize-the-javascript)
 
 ### Generate the Theme
 
-1. Install the [Liferay Theme Generator](./installing-the-theme-generator.md) if it's not installed.
+1. Install the [Liferay Theme Generator](./installing-the-theme-generator.md), if it's not installed.
 1. Run the Liferay Theme Generator and follow the prompts to create the Theme. The example Theme generates a Theme based on the Classic Theme with this command:
 
     ```bash
     yo liferay-theme:classic
     ```
-    
+
     ```note::
-      The `liferay-theme:classic` sub-generator is available in Liferay DXP 7.3+. 
+      The `liferay-theme:classic` sub-generator is available in Liferay DXP 7.3+.
     ```
 
 ### Build the Base Files
 
 Run the build script for your Liferay JS Toolkit version. If you're unsure of your version run `npm list -g generator-liferay-theme` from your command line to print it.
 
-v9.5.0+:
+**v9.5.0+:**
 
 ```bash
 npm run build
 ```
 
-Older versions:
+**Older versions:**
 
 ```bash
 node_modules\.bin\gulp build
@@ -112,7 +128,7 @@ Add custom CSS to the Theme's `/src/css/_custom.scss` file:
 ```
 
 ```note::
-  This changes the background color of the Header and updates the font color of the navigation links. Styles are condensed by using [Sass](https://sass-lang.com/), as demonstrated by the nested styles in the example code.
+  This changes the background color of the Header and updates the font color of the navigation links. Styles are condensed by using `Sass <https://sass-lang.com/>`_, as demonstrated by the nested styles in the example code.
 ```
 
 ```css
