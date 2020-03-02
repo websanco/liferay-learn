@@ -1,6 +1,8 @@
 # Developing Themelets
 
-Themelets are Small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. The steps below show how to use the Liferay Theme Generator's Themelets sub-generator to create a Themelet.
+Themelets are small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. The steps below show how to use the Liferay Theme Generator's Themelets sub-generator to create a Themelet.
+
+<!-- screenshot of ... end result is that even possible in this case? -->
 
 ## Overview
 
@@ -9,7 +11,7 @@ Themelets are Small, extendable, and reusable pieces of code containing CSS and 
 1. [Additional Information](#additional-information)
 
 ## Deploy an Example
-
+<!-- update to follow pattern from developing-a-theme.md -->
 ```note::
   This example runs on Liferay Portal 7.3.
 ```
@@ -21,6 +23,8 @@ First you must deploy an example Theme that contains the Themelet. Follow these 
     ```bash
     curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-themelets/1582903559liferay45.zip
     ```
+
+    <!-- missing unzip? -->
 
 1. Open the Command Line and navigate to the `my-liferay-themelet` folder.
 1. Run the `npm link` command to globally install the Themelet so you can install it in the example Theme.
@@ -94,9 +98,9 @@ First you must deploy an example Theme that contains the Themelet. Follow these 
 
 1. Verify that the Theme is available and [apply it](TODO:applying-themes). The Themelet modifies the tooltips and alerts the user whether they're viewing the Site from a mobile device.
 
-![Themelets can customize the CSS.](./developing-themelets/images/03.png)
+    ![Themelets can customize the CSS.](./developing-themelets/images/03.png)
 
-![Themelets can customize the CSS.](./developing-themelets/images/04.png)
+    ![Themelets can customize the CSS.](./developing-themelets/images/04.png)
 
 Great! You successfully built and deployed a custom Theme with a Themelet. Next, you'll walk through the example and learn how it works.
 
@@ -184,5 +188,5 @@ Add these JavaScript inject tags to the bottom of the `<body>` tag in `/src/port
 Themelets can also be installed from registered npm packages and npm package URLS.
 
 ```note::
-  You can retrieve the URL for a package by running `npm show package-name dist.tarball`. 
+  You can retrieve the URL for a package by running `npm show package-name dist.tarball`.
 ```
