@@ -6,7 +6,7 @@ Themes are x that can be used to create a custom look and feel for pages. Create
    Starting with Liferay DXP 7.1+, the overall design of [Content Pages](../../creating-pages/content-pages-overview.md) can be accomplished with [Page Fragments](TODO). Starting with Liferay DXP 7.3+ users can define the common elements of a page (Header, Footer, etc.) in the [Master Page Template](TODO). These look and feel changes can be implemented without needing to develop a theme.
 ```
 
-<!-- opening screenshot of the end result - the goal of what a person would hope to accomplish. -->
+![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/01.png)
 
 ## Overview
 
@@ -26,13 +26,13 @@ First you must deploy an example Theme. Follow these steps:
     docker run -d -it -p 8080:8080 -p 8000:8000 --name mylrdev -v C:\Users\liferay\Desktop\liferay-docker:/mnt/liferay liferay/portal:7.3.0-ga1
     ```
 
-1. Download and unzip [Example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-a-theme/1581698982liferay22.zip):
+1. Download and unzip [Example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/1581698982liferay22.zip):
 
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-a-theme/1581698982liferay22.zip
+    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/1581698982liferay22.zip
+    
+    unzip 1581698982liferay22.zip
     ```
-
-<!-- missing unzip command? -->
 
 1. Install the Theme's dependencies:
 
@@ -70,7 +70,7 @@ First you must deploy an example Theme. Follow these steps:
 
 1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Components*, and select the *Themes* tab.
 
-    ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
+    ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/02.png)
 
 Great! You successfully built and deployed a custom Theme. Next, you'll walk through the example and learn how it works.
 
@@ -141,7 +141,7 @@ Add custom CSS to the Theme's `/src/css/_custom.scss` file:
   This updates the Footer's background color to match the Header.
 ```
 
-![You can completely customize the page's styling with the Theme.](./developing-a-theme/images/02.png)
+![You can completely customize the page's styling with the Theme.](./developing-a-theme/images/03.png)
 
 ### Customize the Theme Templates
 
@@ -162,8 +162,6 @@ Add your HTML markup customizations to the Theme templates in the `/src/template
 ```note::
   This adds a new button to the Header beside the User Personal Bar in `portal_normal.ftl`.
 ```
-
-![You can change the base markup for every page by modifying the Theme's templates.](./developing-a-theme/images/03.png)
 
 ### Customize the JavaScript
 
