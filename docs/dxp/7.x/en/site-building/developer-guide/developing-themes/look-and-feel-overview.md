@@ -23,12 +23,12 @@ Theme templates, along with the CSS, can provide much of the overall look and fe
 * **Color Schemes:** Specifies configurable color scheme settings Administrators can configure via the Look and Feel menu. <!--See the [color scheme tutorial](TODO) for more information.-->
 * **Configurable Theme Settings:** Administrators can configure aspects of a Theme that change frequently, such as the visibility of certain elements, changing a daily quote, etc. <!--See the [Configurable Theme Settings tutorial](TODO) for more information.-->
 * **Context Contributor:** Exposes Java variables and functionality for use in FreeMarker templates. This allows non-JSP templating languages in themes, widget templates, and any other templates. <!--See the [Context Contributors tutorial](TODO) for more information.-->
-* **Theme Contributor:** A package containing UI resources, not attached to a Theme, that you want to include on every page. <!--See the [Theme Contributors tutorial](TODO) for more information.-->
+* **Theme Contributor:** A package containing independent UI resources (CSS and JavaScript), not attached to a Theme, that you want to include on every page. The Control Menu, Product Menu, and Simulation Panel are included inside Theme Contributors because they are required for every page, regardless of what Theme is currently applied. To modify them, you must create your own Theme Contributor to override the default styles and behavior. <!--See the [Theme Contributors tutorial](TODO) for more information.-->
 * **Themelet:** Small, extendable, and reusable pieces of code containing CSS and JavaScript. They can be shared with other developers to provide common components for Themes. See [Developing Themelets](./developing-themelets) for more information.
 
 ### CSS Frameworks and Extensions
 
-Themes are integrated with [SASS](https://sass-lang.com/), so you can take full advantage of Sass mixins, nesting, partials, and variables in your CSS.
+Themes support [SASS](https://sass-lang.com/), so you can take advantage of Sass features (mixins, nesting, partials, and variables) in your CSS.
 
 Also important to note is [Clay CSS](https://clayui.com/), the web implementation of Liferay's [Lexicon design language](https://liferay.design/lexicon/). An extension of Bootstrap, Clay CSS fills the gaps between Bootstrap and the needs of Liferay DXP, providing additional components and CSS patterns that you can use in your themes. <!--Clay base, Liferay's Bootstrap API extension, along with Atlas, a custom Bootstrap Theme, creates the Classic Theme. See [Customizing Atlas and Clay Base Themes](TODO) for more information.-->
 

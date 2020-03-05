@@ -1,5 +1,7 @@
 # Installing the Liferay Theme Generator
-<!-- is there any information about what the liferay theme generator is? or what the value prop is for it? -->
+
+The Theme Generator is a handy CLI tool that creates the required files and structure you need to get started with liferay DXP Theme development. It provides several sub-generators for creating Themes, extending Themes, and generating Layout Templates.
+
 The steps below show how to install the Liferay Theme Generator for your development environment.
 
 1. Install the version of [NodeJS](http://nodejs.org/) (along with Node Package Manager(npm)) that corresponds with your version of Liferay DXP:
@@ -34,3 +36,15 @@ The steps below show how to install the Liferay Theme Generator for your develop
     If you're on Windows, follow the instructions in step 4 to install Sass.
 
 1. The generator uses node-sass. If you're on Windows, you must also install [node-gyp and Python](https://github.com/nodejs/node-gyp#installation).
+
+## Additional Information
+
+The Theme Generator has several sub-generators available that you can use. The available sub-generators are listed in the table below:
+
+| command | description | Generator Version |
+| --- | --- | --- |
+| `yo liferay-theme` | Generates a Theme based on the Styled base Theme | All versions |
+| `yo liferay-theme:classic` | Generates a Theme based on the Classic Theme | 9.5.0+ |
+| `yo liferay-theme:admin` | Generates an Admin Theme based on the Control Panel's Admin Theme | 9.5.0+ |
+| `yo liferay-theme:themelet` | Generates a Themelet to extend a Theme | All versions |
+| `yo liferay-theme:layout` | Generates a Layout Template | All versions |
