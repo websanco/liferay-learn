@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if test -f liferay-5b2v-theme.war
+then
+	exit 1
+fi
+
+if test -d liferay-5b2v-theme
+then
+	rm -r liferay-5b2v-theme
+fi
+
 ./changing_your_sites_appearance_resource.sh
 
 cd liferay-5b2v-theme
