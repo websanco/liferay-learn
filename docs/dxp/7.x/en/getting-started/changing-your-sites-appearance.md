@@ -14,7 +14,7 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
     docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
     ```
 
-1. Download the WAR containing the [Acme Sample Theme](./liferay-5b2v-theme.war):
+1. Download the WAR containing the [Acme Sample Blue Theme](./liferay-5b2v-theme.war):
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O
@@ -50,7 +50,7 @@ Configure the Pages for your Site to use the a deployed theme:
 
     ![Click Change Current Theme to select a new theme for your Public Pages.](./changing-your-sites-appearance/images/02.png)
 
-1. Select the deployed sample theme, _Classic with Blue Background._
+1. Select the deployed sample theme, _Acme Sample Blue Theme._
 
 1. Navigate back to the home page for your Site to confirm that the theme has changed. The background for your Site is now blue.
 

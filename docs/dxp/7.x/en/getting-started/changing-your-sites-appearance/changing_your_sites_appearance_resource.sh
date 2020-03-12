@@ -5,7 +5,7 @@ set timeout -1
 spawn yo liferay-theme:classic
 
 expect "What would you like to call your theme?"
-send -- "Classic with Blue Background\r"
+send -- "Acme Sample Blue Theme\r"
 expect "What id would you like to give to your theme?"
 send -- "liferay-5b2v\r"
 expect "Which version of Liferay is this theme for?"
