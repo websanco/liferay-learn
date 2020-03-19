@@ -3,7 +3,6 @@
 Several useful tools are available to help you build high-performance components and applications in Liferay DXP using React. Here are the available utilities:
 
 * [`frontend-js-react-web` module](#frontend-js-react-web-module)
-* [React Renderer APIs](#react-renderer-apis)
 * [React Component Tag](#react-component-tag)
 
 ## `frontend-js-react-web` Module
@@ -13,11 +12,17 @@ The `frontend-js-react-web` module is a shared module that provides a single com
 ```javascript
 import {render} from 'frontend-js-react-web';
 render(
-renderFunction,
+renderable,
 renderData,
-document.getElementById(placeholderId).parentElement
+container
 );
 ```
+
+These parameters are required:
+
+* `renderable`: The React element or a function that returns one to render
+* `renderData`: Data to pass to the renderable component as props
+* `container`: The DOM node where the component is to be mounted (e.g. `document.getElementById(placeholderId).parentElement`)
 
 ### Common Hooks
 
@@ -28,17 +33,20 @@ The `frontend-js-react-web` module also includes a set of common hooks that you 
 
     ```javascript
     import {useIsMounted} from 'frontend-js-react-web';
-     
+
     const InlineConfirm = props => {
         const isMounted = useIsMounted();
      
         const _handleConfirmButtonClick = () => {
-            onConfirmButtonClick().then(() => {
+            props.onConfirmButtonClick().then(() => {
                 if (isMounted()) {
                     setPerformingAction(false);
                 }
             });
         };
+        
+        return <button onClick={handleConfirmButtonClick} />;
+
     };
     ```
 
@@ -55,41 +63,6 @@ The `frontend-js-react-web` module also includes a set of common hooks that you 
     }
     ```
     
-## React Renderer APIs
-
-The React Renderer APIS are two new modules that let you render a React component from Java:
-
-* [portal-template-react-renderer-api](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-template/portal-template-react-renderer-api)
-* [portal-template-react-renderer-impl](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-template/portal-template-react-renderer-impl)
-
-The React Renderer includes these two key pieces: 
-
-* [React Renderer Interface](https://docs.liferay.com/ce/apps/portal-template/latest/javadocs/com/liferay/portal/template/react/renderer/ReactRenderer.html)
-* [Component Descriptor Class](https://docs.liferay.com/ce/apps/portal-template/latest/javadocs/com/liferay/portal/template/react/renderer/ComponentDescriptor.html)
-
-The example below creates a JSP tag to render a React component, but you can use the `writer` that best suites your needs:
-
-```java
-import com.liferay.portal.template.react.renderer.ComponentDescriptor;
-import com.liferay.portal.template.react.renderer.ReactRenderer;
- 
-public class ComponentTag extends ParamAndPropertyAncestorTagImpl {
-    @Override
-    public int doEndTag() throws JspException {
-        ComponentDescriptor componentDescriptor = new ComponentDescriptor(
-            getModule(), getComponentId(), null, isPositionInLine());
- 
-        ReactRenderer reactRenderer =
-            ReactRendererProvider.getReactRenderer();
- 
-        reactRenderer.renderReact(
-            componentDescriptor, data, request, jspWriter);
- 
-        return EVAL_PAGE;
-    }
-}
-```
-
 ## React Component Tag
 
 The `<react:component>` tag adds a React view to your JSP. An example is shown below:
@@ -100,3 +73,5 @@ The `<react:component>` tag adds a React view to your JSP. An example is shown b
     module="js/pages/form-view/EditFormViewApp.es"
 />
 ```
+
+It wraps the `render()` function for the `frontend-js-react-web` module mentioned [above](#frontend-js-react-web-module). The `data` passed here is passed as `renderData` and the `module` must export a `renderable` (component function or React element as mentioned [above](#frontend-js-react-web-module)).
