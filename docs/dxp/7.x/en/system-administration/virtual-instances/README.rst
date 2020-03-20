@@ -1,15 +1,12 @@
 Virtual Instances
 =================
 
-Coming soon!
-
-understanding-virtual-instances
-adding-virtual-instances
-configuring-a-virtual-instance-analytics
-configuring-a-virtual-instance-email-settings
-configuring-a-virtual-instance-infrastructure
-configuring-a-virtual-instance-instance-configuration
-configuring-a-virtual-instance-localization
-configuring-a-virtual-instance-third-party
-configuring-a-virtual-instance-user-authentication
-configuring-a-virtual-instance-users
+-  :doc:`/system-administration/virtual-instances/understanding-virtual-instances`
+-  :doc:`/system-administration/virtual-instances/adding-virtual-instances`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-analytics`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-infrastructure`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-instance-configuration`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-localization`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-third-party`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-user-authentication`
+-  :doc:`/system-administration/virtual-instances/configuring-a-virtual-instance-users`
