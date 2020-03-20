@@ -1,15 +1,16 @@
 # Understanding Virtual Instances
 
-Once @product@ is installed, the configuration begins. Recall that configuration happens at different scopes. Here we're covering configuration at the virtual instance scope. There's an important difference between the system scope and the instance scope. The system scope is the highest level scope you can make configurations at. All virtual instances are impacted by configuration done at this scope. The instance scope applies only to one particular virtual instance.
+Virtual instances are semi-discrete instances of Liferay DXP: the have unique domain names, but share a server and database. Each virtual instance can have independent data and configurations.
 
-Virtual instances have unique domain names but share a server and database. Each virtual instance can have independent data and configurations. 
+<!-- Table: Uses of Virtual Instances -->
 
-The articles in this section cover these topics:
+Configuration of a Liferay DXP system happens at different [scopes](../system-seetings/system-settings-and-configuration-scope.md). Configuration at the virtual instance scope is the next most broad scope after the system scope. 
 
-- Adding a virtual instance
-- Configuring a virtual instance
+```important::
+   The system scope is the highest level scope you can make configurations at. All virtual instances are impacted by configuration done at this scope. The instance scope applies only to one particular virtual instance.
 
-Get started by learning how to add a virtual instance. 
+   If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Configuration will apply throughout your system.
+```
 
 ## Virtual Instances
 
