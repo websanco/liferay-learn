@@ -10,4 +10,4 @@ The Localization category contains these entries:
 
 To access the Localization settings, Open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings*, and select the *Localization* category under the *PLATFORM* section.
 
-![Configure the default language and the time zone for the instance scope.](./configuring-a-virtual-instance/images/01.png)
+![Configure the default language and the time zone for the instance scope.](./configuring-a-virtual-instance-localization/images/01.png)
