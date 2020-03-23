@@ -1,10 +1,10 @@
 # Adding a Virtual Instance
 
-![There's one Virtual Instance by default.](./adding-virtual-instances/images/01.png)
+Before you do anything in Liferay DXP to add a Virtual Instance, you must configure its domain name in your network. 
 
-To create a Virtual Instance,
+![There's one Virtual Instance by default.](./adding-a-virtual-instance/images/01.png)
 
-1. Configure its domain name in your network. 
+Once the domain name is ready, create the Virtual Instance:
 
 1. Go to *Control Panel* &rarr; *Configuration* &rarr; *Virtual Instances*. 
 
@@ -12,7 +12,7 @@ To create a Virtual Instance,
 
 1. Complete the New Instance form as follows:
 
-![Fill out the Add Virtual Instance form.](./adding-virtual-instances/images/02.png)
+![Fill out the Add Virtual Instance form.](./adding-a-virtual-instance/images/02.png)
 
 **Web ID:** Specify the instance ID. Using the domain name is a common convention.
 
