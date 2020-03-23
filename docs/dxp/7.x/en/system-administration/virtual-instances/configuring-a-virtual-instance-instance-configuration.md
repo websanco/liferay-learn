@@ -1,13 +1,13 @@
 # Configuring a Virtual Instance: Instance Configuration
 
-The Instance Configuration settings define the basic configuration information for the virtual instance, from the appearance to the Terms of Use for your Users to agree to. Access the Instance Configuration settings from the Control Panel's *Configuration* &rarr; *Instance Settings* section, and select the *Instance Configuration* category under the *PLATFORM* section. The Instance Configuration contains four entries:
+The Instance Configuration settings define the basic configuration information for the virtual instance, from its appearance to the Terms of Use your Users agree to the first time they sign in. Access the Instance Configuration settings from the Control Panel's *Configuration* &rarr; *Instance Settings* section, and select the *Instance Configuration* category under the *PLATFORM* section. The Instance Configuration contains four entries:
 
-- Appearance
-- Contact Information
-- General
-- Terms of Use
-
-Each configuration entry is described in the corresponding section below. 
+| Configuration | Purpose |
+| --------- | ------------ |
+| Appearance | Define the default logo and the overall look and feel |
+| Contact Information | Configure physical addresses, email addresses, wbsites, and phone numbers for the instance |
+| General | Specify landing pages, legal information, and other details |
+| Terms of Use | Provide custom Terms of Use for the instance |
 
 ## Appearance
 
@@ -16,6 +16,8 @@ The Appearance configuration entry defines the default logo and overall look and
 **LOGO:** Change the default logo and check/uncheck the *Allow site administrators to use their own logo?* checkbox, enabled by default, to specify whether site administrators can upload a logo when they configure a site. When configuring a new logo, be careful to choose an image file that fits the space. Large images might overlap with the navigation. 
 
 **LOOK AND FEEL:** Set the default theme(s) for the instance and Control Panel. 
+
+![Configure the appearance of the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/01.png)
 
 ## Contact Information
 
@@ -30,6 +32,8 @@ The Contact Information configuration entry specifies how to contact the organiz
 **WEBSITES:** Specify the public and/or intranet websites for the organization. 
 
 Developers can query for this contact information in their applications. Note that you can add and remove additional entries in a section with the plus and minus buttons respectively. 
+
+![Configure contact information for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/02.png)
 
 ## General
 
@@ -54,30 +58,36 @@ default.logout.page.path=
 company.default.home.url=
 ```
 
-All virtual instances share the values specified in the properties file. Changes made in Instance Settings override the values set in the properties file. For more information, see the [Portal Properties documentation](@platform-ref@/7.2-latest/propertiesdoc/portal.properties.html).
+All virtual instances share the values specified in the properties file. Changes made in Instance Settings override the values set in the properties file. For more information, see the [Portal Properties documentation](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html).
 
 **Additional Information:** Specify a Legal name, ID, company type, SIC code, ticker symbol, industry and industry type for the owner of the virtual instance. 
 
+![Configure general information for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/03.png)
+
 ## Terms of Use
 
-The Terms of Use entry contains everything you need to provide a custom Terms of Use agreement for your Users. Terms of Use are important when you need them, but not all Sites do. They're not listed first, but they're one of the first things to configure for your virtual instance, whether you require them or not. 
+The Terms of Use page is enabled by default, so one of your first actions should be to disable or replace the placeholder terms. To You can disable the requirement for all Users to read the Terms of Use or set the Group ID and Article ID for the Web Content Article that contains your Terms of Use. Either way, the Terms of Use entry contains everything you need to configure Terms of Use for your Users.
 
-Since the Terms of Use page is enabled by default, one of your first actions should be to disable or replace the default, placeholder terms. You can disable the requirement for all Users to read the Terms of Use or set the Group ID and Article ID for the Web Content Article that contains your Terms of Use. "How do I find a web content article's Group ID and Article ID," you ask? No problem.  The Group ID is the ID of the Site the Web Content is associated with. To find the Group/Site ID, follow these steps:
+![Configure Terms of Use for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/04.png)
+
+If you are configuring a new Terms of Use, you might be wondering "How do I find a web content article's Group ID and Article ID,"?
+ 
+The Group ID is the ID of the Site the Web Content is associated with. 
+
+To find the Group/Site ID,
 
 1. Go to *Site Menu* &rarr; *Configuration* &rarr; *Settings*.
 
 1. Find the Site ID field in the General tab. Enter it into the Group ID field.
 
-![igure 1: The Site ID in Site Settings is the Group ID in the terms of Use configuration.](../../../../images/instance-settings-group-id.png)
+![The Site ID (20125) in Site Settings is the Group ID in the terms of Use configuration.](./configuring-a-virtual-instance-instance-configuration/images/05.png)
 
-To find the Web Content Article's ID, follow these steps:
+To find the Web Content Article's ID,
 
 1. Go to the *Site Menu* &rarr; *Content & Data* &rarr; *Web Content*. 
 
-1. Click on your Terms of Use article. Its ID appears at the top of the screen, with the Version and Workflow Status. 
+1. Click on your Terms of Use article. Its ID appears in the Properties panel on the right side of the screen, under the Version and Workflow Status. 
 
-![Figure 2: The Web Content Article ID is displayed in the edit screen.](../../../../images/instance-settings-wc-id.png)
+![The Web Content Article ID (37808) is displayed in the edit screen.](./configuring-a-virtual-instance-instance-configuration/images/06.png)
 
 Save the configuration. All your users signing in for the first time see your Terms of Use article. Users must agree to the Terms of Use to register their User Accounts. 
-
-![Figure 3: Turn a Web Content Article into the Site's Terms of Use page.](../../../../images/instance-settings-terms-of-use.png)
