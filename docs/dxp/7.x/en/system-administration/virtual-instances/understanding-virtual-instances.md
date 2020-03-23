@@ -9,40 +9,24 @@ Configuration of a Liferay DXP system happens at different [scopes](../system-se
 ```important::
    The system scope is the highest level scope you can make configurations at. All virtual instances are impacted by configuration done at this scope. The instance scope applies only to one particular virtual instance.
 
-   If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Configuration will apply throughout your system.
+   If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration will apply throughout your system.
 ```
 
-## Virtual Instances
+Here's a quick scenario: you already have a server hosting a Liferay DXP installation and a database. It has many [Users](./../../users-and-permissions/users/understanding-users.md), [Sites](/docs/7-2/user/-/knowledge_base/u/building-a-site), and specific [instance settings](./../virtual-instances/configuring-a-virtual-instance-instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
 
-Here's a quick scenario: you already have a server hosting a @product@ installation and a database. It has many [Users](/docs/7-2/user/-/knowledge_base/u/users-and-organizations), [Sites](/docs/7-2/user/-/knowledge_base/u/building-a-site), and specific [instance settings](/docs/7-2/user/-/knowledge_base/u/instance-configuration-instance-settings#general).  If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
+Because of the unique domain name, Users are directed to the correct Virtual Instance. Because Virtual Instances share an application server and OSGi container, they also share these customizations: 
 
-You can run more than one Virtual Instance on a single server with a shared database, but separate data and configurations. Users are directed to the correct Virtual Instance via its unique domain name. And because Virtual Instances share an application server and OSGi container, they also share these customizations: 
-
--  Custom code deployed by developers and administrators.
--  [System-scoped configurations](/docs/7-2/user/-/knowledge_base/u/system-settings) (e.g., `.config` files, changes made in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*). 
+-  All custom code you've deployed
+-  [System-scoped configurations](./../system-settings/system-settings.md) (e.g., `.config` files and changes made in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*). 
 -  Application server configuration.
 
-Administrators can manage Virtual Instances in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*.
+Add and manage Virtual Instances in *Control Panel* &rarr; *Configuration* &rarr; *Virtual Instances*.
 
-![Figure 1: Add and manage virtual instances of Liferay in the Control Panel's *Configuration* &rarr; *Virtual Instances* section.](../../../images/virtual-instances.png)
+![Add and manage virtual instances of Liferay in the Control Panel's Virtual Instances section.](./understanding-virtual-instances/images/01.png)
 
-## Configuring Virtual Instances
+Configure an instance in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*. The Instance Settings are organized into three sections: PLATFORM, SECURITY, and CONTENT AND DATA. Here we focus on the instance settings categories under the PLATFORM section. The CONTENT AND DATA settings are specific to an application, and the [SECURITY instance settings](./../../installation-and-upgrades/securing-liferay/introduction-to-securing-liferay.md) are covered in separate documentation.
 
-To access instance settings, open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings*. The Instance Settings are organized into three sections: PLATFORM, SECURITY, and CONTENT AND DATA. Here we focus on the instance settings available under the PLATFORM section. The CONTENT AND DATA settings are specific to each application, and the SECURITY instance settings are covered in their respective articles, listed below for reference:
+![Instance Settings has three sections: PLATFORM, SECURITY, and CONTENT AND DATA.](./understanding-virtual-instances/images/02.png)
 
-- [LDAP](/docs/7-2/deploy/-/knowledge_base/d/configuring-ldap)
-- [OAuth 2](/docs/7-2/deploy/-/knowledge_base/d/oauth2-scopes#creating-the-authorization-page)
-- SSO: 
-  - [CAS Server](/docs/7-2/deploy/-/knowledge_base/d/cas-central-authentication-service-single-sign-on-authentication)
-  - [Token based SSO](/docs/7-2/deploy/-/knowledge_base/d/token-based-single-sign-on-authentication)
-  <!-- [Facebook Connect]() Add back once article is available-->
-  - [Open ID Connect](/docs/7-2/deploy/-/knowledge_base/d/authenticating-with-openid-connect#enabling-openid-connect-authentication)
-  - [OpenSSO](/docs/7-2/deploy/-/knowledge_base/d/opensso-single-sign-on-authentication)
+[Search](./../../using-search/) and [Analytics Cloud](https://help.liferay.com/hc/en-us/categories/360000872551) are also covered separately.
 
-  The PLATFORM instance settings are covered in the articles shown below:
-
-  - [Email](/docs/7-2/user/-/knowledge_base/u/email-instance-settings)
-  - [Instance Configuration](/docs/7-2/user/-/knowledge_base/u/instance-configuration-instance-settings)
-  - [User Authentication](/docs/7-2/user/-/knowledge_base/u/user-authentication-instance-settings)
-  - [Users](/docs/7-2/user/-/knowledge_base/u/users-instance-settings)
-  - [More Platform Settings](/docs/7-2/user/-/knowledge_base/u/more-platform-section-instance-settings)
