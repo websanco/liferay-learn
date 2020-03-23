@@ -26,7 +26,7 @@ Add and manage Virtual Instances in *Control Panel* &rarr; *Configuration* &rarr
 
 Configure an instance in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*. The Instance Settings are organized into three sections: PLATFORM, SECURITY, and CONTENT AND DATA. Here we focus on the instance settings categories under the PLATFORM section. The CONTENT AND DATA settings are specific to an application, and the [SECURITY instance settings](./../../installation-and-upgrades/securing-liferay/introduction-to-securing-liferay.md) are covered in separate documentation.
 
-![Instance Settings has three sections: PLATFORM, SECURITY, and CONTENT AND DATA.](./understanding-virtual-instances/images/02.png)
+![Instance Settings has several PLATFORM categories.](./understanding-virtual-instances/images/02.png)
 
 [Search](./../../using-search/) and [Analytics Cloud](https://help.liferay.com/hc/en-us/categories/360000872551) are also covered separately.
 
