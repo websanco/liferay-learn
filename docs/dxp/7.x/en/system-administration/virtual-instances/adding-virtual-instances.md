@@ -1,25 +1,29 @@
 # Adding a Virtual Instance
 
-Follow these steps to create a Virtual Instance: 
+![There's one Virtual Instance by default.](./adding-virtual-instances/images/01.png)
 
-1. Before you create a Virtual Instance, configure its domain name in your network. 
+To create a Virtual Instance,
+
+1. Configure its domain name in your network. 
 
 1. Go to *Control Panel* &rarr; *Configuration* &rarr; *Virtual Instances*. 
 
-1. Click the *Add* button (![Add](../../../images/icon-add.png)).  This opens the *New Instance* form. 
+1. Click the *Add* button (![Add](../../images/icon-add.png)).  This opens the *New Instance* form. 
 
 1. Complete the New Instance form as follows:
 
-**Web ID:** The instance's ID. Using the domain name is a common convention.
+![Fill out the Add Virtual Instance form.](./adding-virtual-instances/images/02.png)
 
-**Virtual Host:** The domain name you configured in your network. When users are directed to your server via this domain name, they'll be sent to the Virtual Instance that contains their data.
+**Web ID:** Specify the instance ID. Using the domain name is a common convention.
 
-**Mail Domain:** The mail host's domain name for the Virtual Instance.  Email notifications are sent from the instance using this domain. 
+**Virtual Host:** Set the domain name you configured in your network. When users are directed to your server via this domain name, they're sent to the Virtual Instance with their data.
 
-**Max Users:** The maximum number of user accounts the Virtual Instance supports. Enter *0* to support unlimited users. 
+**Mail Domain:** Enter the mail host's domain name for the Virtual Instance. Email notifications are sent from the instance using this domain. 
 
-**Active:** Whether the Virtual Instance is active. Note that inactive Virtual Instances aren't accessible to anyone, even the administrator. 
+**Max Users:** Set the maximum number of user accounts the Virtual Instance supports. Enter *0* to support unlimited users. 
+
+**Active:** Set the Virtual Instance to active or inactive. Inactive Virtual Instances aren't accessible to anyone, even the administrator. 
 
 Click *Save* when you're done filling out the form. 
 
-Now you can navigate to the instance using its domain name. You're brought to what looks like a clean install of @product@. This is your new Virtual Instance!  You can configure it any way you like. The remaining articles in this section show you how to configure an instance's settings. 
+Now you can navigate to the instance using its domain name. You're brought to what looks like a clean install of Liferay DXP. This is your new Virtual Instance! You can configure it any way you like. The remaining articles in this section describe the instance configuration options.
