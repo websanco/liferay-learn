@@ -5,7 +5,7 @@ The Instance Configuration settings define the basic configuration information f
 | Configuration | Purpose |
 | --------- | ------------ |
 | Appearance | Define the default logo and the overall look and feel |
-| Contact Information | Configure physical addresses, email addresses, wbsites, and phone numbers for the instance |
+| Contact Information | Configure physical addresses, email addresses, websites, and phone numbers for the instance |
 | General | Specify landing pages, legal information, and other details |
 | Terms of Use | Provide custom Terms of Use for the instance |
 
@@ -48,7 +48,9 @@ The General entry specifies the virtual instance's configuration information, la
 
 **Navigation:** Set a home page for your virtual instance as well as default landing and logout pages. To set these pages, use the page's relative URL that follows the domain. For example, to set the default landing page to `http://localhost:8080/web/guest/login`, use `/web/guest/login`. You can use the variable `${liferay:screenName}` as part of the address to redirect Users to their personal pages upon login. For example, the User `marvin` has this default URL to his personal page:
 
-    http://localhost:8080/user/marvin
+```bash
+http://localhost:8080/user/marvin
+```
 
 To make sure he's directed there on login, place `/user/${liferay:screenName}` in the Default Landing Page field. These URLs can also be set at the system scope, in a `portal-ext.properties` file:
 

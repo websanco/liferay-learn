@@ -29,4 +29,3 @@ Configure an instance in *Control Panel* &rarr; *Configuration* &rarr; *Instance
 ![Instance Settings has several PLATFORM categories.](./understanding-virtual-instances/images/02.png)
 
 [Search](./../../using-search/) and [Analytics Cloud](https://help.liferay.com/hc/en-us/categories/360000872551) are also covered separately.
-
