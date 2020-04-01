@@ -1,19 +1,12 @@
 # Developing Fragments Introduction
 
-Page Fragments are the building blocks for [Content Pages](../../creating-pages/understanding-pages.md#content-pages). They create the design for the page. They are individual Components, built from CSS, HTML, and JavaScript, that add functionality to the page. They can be combined with other Page Fragments to create a more complex interaction (such as cards or paragraph elements), or they can stand alone on their own (such as a banner). 
+Page Fragments are the building blocks for [Content Pages](../../creating-pages/understanding-pages.md#content-pages). They're individual Components, built from CSS, HTML, and JavaScript, that create the overall design for the page and add functionality. Fragments can be combined to create a more complex interaction (such as cards or paragraph elements), or they can stand alone on their own (such as a banner).
 
-## Features
-
-The HTML, CSS, and JavaScript are standard, but you can enhance the Fragment further with these options:
-
-* [Add Liferay-specific tags](./fragment-specific-tags-reference.md): Editable text, images, and links and "rich" text formatting. You can also embed widgets. 
-* [Make the Fragment Configurable](./making-a-page-fragment-configurable.md): Add configurable features, such as selectors, through the *Configuration* tab. 
-* Access the FreeMarker templates engine: From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html). 
-<!--Learn more about the available FreeMarker objects in the Front-end Reference TODO.-->
+![Fragments are combined to build a Content Page.](./developing-fragments-intro/images/01.png)
 
 ## Collections
 
-Fragments are created inside of Collections. Collections provide an easy way to manage and share groups of related Fragments. Users navigate Collections when selecting Fragments to add to a page. To see examples, the admin page shows all the out-of-the-box Fragments (and their code). By default, a Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code to be static (locked and unable to be updated) instead, you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
+Fragments are created inside of Collections. Collections provide an easy way to manage and share groups of related Fragments. Users navigate Collections when selecting Fragments to add to a page. To see examples, the admin page shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code to be static (locked and unable to be edited through the interface) instead, you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
 
 ## Tooling
 
@@ -23,6 +16,15 @@ Several Page Fragments are included by default that you can use to [build Conten
 * [The Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md): use the Fragments CLI to generate, import, and export Page Fragments and Fragment Collections from your desktop.
 
 Page Fragment files must be properly arranged in the folder structure and have the appropriate metadata to be imported onto your server. See the [project structure](./developing-page-fragments-with-the-fragments-toolkit.md#collection-format) for more information.
+
+## Features
+
+The HTML, CSS, and JavaScript are standard, but you can enhance Fragments further with these options:
+
+* [Editable Elements](./fragment-specific-tags-reference.md): make text, images, links, and "rich" text elements editable, so the content can be replaced with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets. 
+* [Configuration Options](./making-a-page-fragment-configurable.md): Add configuration options to the application's Configuration Menu, such as the ability to modify the Fragment's font color.
+* [FreeMarker](https://freemarker.apache.org/): FreeMarker is an enhanced form of standard HTML that gives you access to variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
+<!--Learn more about the available FreeMarker objects in the Front-end Reference TODO.-->
 
 ## Best Practices
 
