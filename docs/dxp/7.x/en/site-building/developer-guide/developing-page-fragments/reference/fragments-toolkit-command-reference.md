@@ -1,6 +1,6 @@
 # Fragments Toolkit Command Reference
 
-The [Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md) can connect to your currently running Liferay DXP instance to import and export fragments. You can even have Fragments that you create with the toolkit imported into Portal automatically. These commands are available:
+The [Fragments Toolkit](../developing-page-fragments-with-the-fragments-toolkit.md) can connect to your currently running Liferay DXP instance to import and export fragments. You can even have Fragments that you create with the toolkit imported into Portal automatically. These commands are available:
 
 | Command | Description |
 | --- | --- |
@@ -12,7 +12,7 @@ The [Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.m
 | `npm run compress` | Create a `.zip` file that can be manually imported into Portal |
 
 ```note::
-  You can see all of the available tasks inside the `scripts` section in the Fragment Collection project's `package.json`.
+  You can see all of the available tasks inside the ``scripts`` section in the Fragment Collection project's ``package.json``.
 ```
 
 With these tools at your disposal, you can efficiently manage creating and editing Page Fragments from the command line in your local environment.

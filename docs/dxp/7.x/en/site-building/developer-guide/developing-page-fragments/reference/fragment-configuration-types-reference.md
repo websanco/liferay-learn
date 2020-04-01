@@ -1,6 +1,6 @@
 # Fragment Configuration Types Reference
 
-This reference list the available configuration types for Fragments. See [Making a Fragment Configurable](./making-a-page-fragment-configurable.md) for more information on how to make a Fragment configurable.
+This reference list the available configuration types for Fragments. See [Making a Fragment Configurable](../making-a-page-fragment-configurable.md) for more information on how to make a Fragment configurable.
 
 There are five configurable Fragment types available to implement:
 
@@ -9,6 +9,10 @@ There are five configurable Fragment types available to implement:
 * `itemSelector` (Available Liferay DXP 7.3)
 * `select`
 * `text`
+
+```note::
+  Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
+```
 
 ## Checkbox Configuration
 
@@ -232,34 +236,3 @@ This JSON configuration creates an input text field you can implement for cases 
 ```
 
 ![The Text configuration is useful when an input text option is necessary.](./fragment-configuration-types-reference/images/05.png)
-
-## Additional Information
-
-Configuration values inserted into the FreeMarker context honor the defined `datatype` value specified in the JSON file. For example, if the `dataType` is String, `configuration.[name-value]?is_string` is `true`.
-
-The configuration values selected by the user are made available to the Fragment developer through the FreeMarker context. A configuration value can be referenced using the notation `${configuration.fieldName}`. The example below uses it in a conditional statement:
-
-```html
-[#if configuration.fieldName] == 'value']
-...
-[#else]
-...
-[/#if]
-```
-
-You can also access configuration values via JavaScript. JavaScript configuration objects are named the same as their FreeMarker counterparts. For example, a configuration object could be built like this:
-
-```js
-var configuration = {
-    field1: value1,
-    field2: value2
-}
-```
-
-Another example of setting the configuration object and using it is shown below:
-
-```javascript
-const configurationValue = configuration.field1
-
-console.log(configurationValue);
-```

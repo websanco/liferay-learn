@@ -42,7 +42,7 @@ If you need formatting options like text or color styles, use `rich-text`:
 ```
 
 ```note::
-  If you want to make text inside an HTML element editable, you must use the `rich-text` type. The `text` type strips HTML formatting out of the text before rendering.
+  If you want to make text inside an HTML element editable, you must use the ``rich-text`` type. The ``text`` type strips HTML formatting out of the text before rendering.
 ```
 
 ## Making Images Editable
@@ -135,5 +135,5 @@ When you deploy your widget, it's available to add. The name you specify in the 
 ```
 
 ```note::
-    According to the W3C HTML standards, custom elements can't be self closing. Therefore, even though you can't add anything between the opening and closing `<lfr-widget...>` tags, you can't use the self closing notation for the tag.
+    According to the W3C HTML standards, custom elements can't be self closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self closing notation for the tag.
 ```
