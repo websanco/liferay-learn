@@ -102,11 +102,11 @@ These are the widgets that can be embedded and their accompanying tags:
 
 | Widget Name    | Tag |
 | -------- | --- |	
-|DDL Display	|`<lfr-widget-dynamic-data-list>`  |
-|Form           |`<lfr-widget-form>`               |
-|Asset Publisher|`<lfr-widget-asset-list>`     |
-|Breadcrumb	    |`<lfr-widget-breadcrumb>` |
-|Categories Navigation |`<lfr-widget-categories-nav>` |
+|DDL Display	|`<lfr-widget-dynamic-data-list>`|
+|Form           |`<lfr-widget-form>`|
+|Asset Publisher|`<lfr-widget-asset-list>`|
+|Breadcrumb	    |`<lfr-widget-breadcrumb>`|
+|Categories Navigation |`<lfr-widget-categories-nav>`|
 |Flash	|`<lfr-widget-flash>`|
 |Media Gallery	|`<lfr-widget-media-gallery>`|
 |Navigation Menu	|`<lfr-widget-nav>`|
@@ -115,7 +115,7 @@ These are the widgets that can be embedded and their accompanying tags:
 |Site Map	|`<lfr-widget-site-map>`|
 |Tag Cloud	|`<lfr-widget-tag-cloud>`|
 |Tags Navigation	|`<lfr-widget-tags-nav>`|
-|Web Content Display	|`<lfr-widget-web-content>`
+|Web Content Display	|`<lfr-widget-web-content>`|
 |RSS Publisher (Deprecated)	|`<lfr-widget-rss>`|
 |Iframe	|`<lfr-widget-iframe>`|
 
