@@ -1,20 +1,14 @@
 # Look and Feel Overview
 
-You can use Master Page Templates, create a Theme, or customize the look and feel of individual widgets.
-
-## Master Page Templates
-
-> Available since Liferay DXP 7.3
-
-[Master Page Templates](TODO) define the look and feel for the common components of a page, such as the Header and Footer. Along with the [Page Fragments](../../creating-pages/content-pages-overview.md#fragments) of a [Content Page](../../creating-pages/content-pages-overview.md), you can use Master Page Templates to create the overall look and feel for your site pages.
+You can create a Theme, create a Themelet, or customize the look and feel of individual widgets.
 
 ```note::
-    Content Pages and Page Fragments are supported in Liferay Portal 7.0+
+  You can also control the look and feel of Headers and Footers in Liferay DXP 7.3+ using Master Pages. See `Master Page Templates <../../creating-pages/defining-headers-and-footers/master-page-templates.md>`_.
 ```
 
 ## Themes
 
-Themes use standard components (CSS, JavaScript, and HTML) along with FreeMarker templates for rendering. There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](./generating-a-theme.md) to create the required files and structure you need to get started developing a Theme.
+Themes use standard components (CSS, JavaScript, and HTML) along with FreeMarker templates for rendering. There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](./reference/installing-the-theme-generator-reference.md) to create the required files and structure you need to get started developing a Theme.
 
 ### Theme Components
 
