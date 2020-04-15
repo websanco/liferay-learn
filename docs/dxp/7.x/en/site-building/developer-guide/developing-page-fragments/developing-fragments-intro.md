@@ -1,30 +1,27 @@
-# Developing Fragments Introduction
+# Developing Fragments
 
-Page Fragments are the building blocks for [Content Pages](../../creating-pages/understanding-pages.md#content-pages). They're individual Components, built from CSS, HTML, and JavaScript, that create the overall design for the page and add functionality. Fragments can be combined to create a more complex interaction (such as cards or paragraph elements), or they can stand alone on their own (such as a banner).
+Page Fragments are the building blocks for [Content Pages](../../creating-pages/understanding-pages.md#content-pages). They're made from the three components of web pages: CSS, HTML, and JavaScript. To create a page you combine multiple fragments, and together they create the design for the page and its functionality. Fragments can make up a larger page element (such as cards or paragraph elements), or they can stand alone on their own (such as a banner).
 
-![Fragments are combined to build a Content Page.](./developing-fragments-intro/images/01.png)
+![Fragments are combined like puzzle pieces to build a Content Page.](./developing-fragments-intro/images/01.png)
 
 ## Collections
 
-Fragments are created inside of Collections. Collections provide an easy way to manage and share groups of related Fragments. Users navigate Collections when selecting Fragments to add to a page. To see examples, the admin page shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code to be static (locked and unable to be edited through the interface) instead, you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
+Collections organize Fragments so that groups of related Fragments can be managed and shared. Users navigate Collections when selecting Fragments to add to a page, so you'll create Fragments in Collections that make it easy to combine into Pages. An example appears in the admin page, which shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code to be static (locked and unable to be edited through the interface) instead, you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
 
 ## Tooling
 
-Several Page Fragments are included by default that you can use to [build Content Pages](../../creating-pages/building-content-pages.md). To cover your specific use case you may need to create your own Page fragments. You can build Page Fragments using the tooling of your choice, but internal and external tools are available to help:
+Several Page Fragments are included that you can use to [build Content Pages](../../creating-pages/building-content-pages.md), but you can create your own Page Fragments. Browser-based tools help you create Fragments directly on your system, and CLI-based tools integrate with your own toolset to preserve your productivity: 
 
 * [The Built-in Fragments Editor](./developing-page-fragments-with-the-editor.md): use the built-in editor to develop Page Fragments inside of Liferay Portal.
 * [The Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md): use the Fragments CLI to generate, import, and export Page Fragments and Fragment Collections from your desktop.
 
-Page Fragment files must be properly arranged in the folder structure and have the appropriate metadata to be imported onto your server. See the [project structure](./developing-page-fragments-with-the-fragments-toolkit.md#collection-format) for more information.
-
 ## Features
 
-The HTML, CSS, and JavaScript are standard, but you can enhance Fragments further with these options:
+Fragments are much more powerful than plain HTML, CSS, and JavaScript. You can enhance Fragments further using these resources:
 
-* [Editable Elements](./fragment-specific-tags-reference.md): make text, images, links, and "rich" text elements editable, so the content can be replaced with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets. 
-* [Configuration Options](./making-a-page-fragment-configurable.md): Add configuration options to the application's Configuration Menu, such as the ability to modify the Fragment's font color.
-* [FreeMarker](https://freemarker.apache.org/): FreeMarker is an enhanced form of standard HTML that gives you access to variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
-<!--Learn more about the available FreeMarker objects in the Front-end Reference TODO.-->
+* [Editable Elements](./fragment-specific-tags-reference.md): make text, images, links, and "rich" text elements editable, so users can replace the content with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets. 
+* [Configuration Options](./making-a-page-fragment-configurable.md): Add configuration options to the application's Configuration Menu, like modifying the Fragment's font color.
+* [FreeMarker](https://freemarker.apache.org/): FreeMarker is a templating language that enhances HTML with variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
 
 ## Best Practices
 

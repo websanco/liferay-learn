@@ -1,8 +1,8 @@
 # Developing Page Fragments in the built-in Fragments Editor
 
-The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-reference.md) has all the tools you need to develop Page Fragments inside Liferay Portal. Page Fragments are organized in *Collections*. Collections differentiate between types of Page Fragments or Page Fragments used by different groups or departments. You can use the editor to create Page Fragments in just a few steps:
+The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-reference.md) has all the tools you need to develop Page Fragments inside Liferay DXP. You'll create Page Fragments in *Collections*, which are ways to organize Fragments so users can find the functionality they need to build Pages. You can use Collections to differentiate between types of Page Fragments, the functionality provided, or Page Fragments used by different groups or departments. Getting started takes only a few steps: 
 
-1. Start Docker.
+1. Start Liferay DXP.
 1. Create a Collection.
 1. Create a Fragment in the Collection.
 1. Create the HTML component.
@@ -12,26 +12,26 @@ The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-
 
 This example uses a Docker image with a fresh install of Liferay DXP.
 
-## Start Docker
+## Start Liferay DXP
 
-Open the command line and run the command below to start the Docker container:
+Run the command below to start the Docker container:
 
 ```bash
 docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
 ```
 
 ## Create a Collection
-  
+
 1. Select the Site you wish to build.
 
   ```note::
-    Since Liferay DXP 7.2 SP1+ and Liferay Portal CE 7.2 GA2+, you can create Page Fragments on the *Global* Site to make them available for all Sites. To expose this feature in the initial releases of these versions, you must create a ``.config`` file named ``com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config`` and add the ``enabled=B"true"`` property. Then copy it to your Liferay Portal instance's ``osgi/configs`` folder. Global Page Fragments are inherited by child Sites, so they can only be edited from the Global Site. Any resources the Global Page Fragment references (e.g., image) from the Global Site are copied to a Site that leverages the Page Fragment.
+    Since Liferay DXP 7.2 SP1+ and Liferay Portal CE 7.2 GA2+, you can create Page Fragments on the *Global* Site to make them available for all Sites. To expose this feature in the initial releases of these versions, you must create a ``.config`` file named ``com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config`` and add the ``enabled=B"true"`` property. Then copy it to your Liferay DXP instance's ``osgi/configs`` folder. Global Page Fragments are inherited by child Sites, so they can only be edited from the Global Site. Any resources the Global Page Fragment references (e.g., image) from the Global Site are copied to a Site that leverages the Page Fragment.
   ``` 
 
 1. Open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. From this page you can manage your Page Fragments and Collections. See [Managing Page Fragments](../../using-fragments/managing-page-fragments.md) for more information on the available actions for Page Fragments.
 1. Click the (![Add Button](../../../images/icon-add-app.png)) and enter a name and optional description for the Collection.
 
-    ![Create a new Collection for the Fragments.](./developing-page-fragments-with-the-editor/images/01.png)
+![Collections help you organize Fragments.](./developing-page-fragments-with-the-editor/images/01.png)
 
 ## Create a Fragment in the Collection
 
@@ -43,8 +43,10 @@ docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
 
 1. Enter a name for the Fragment and click *Save*.
 
+<!-- Please replace this screenshot. If it's a banner, call it a banner. Don't make confusing and uninformative sample names. -->
+
     ![Create a new Component for the Fragment.](./developing-page-fragments-with-the-editor/images/02.png)
-    
+
 Next you can create your Fragment's HTML.
 
 ## Create the HTML Component

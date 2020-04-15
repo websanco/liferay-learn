@@ -1,5 +1,7 @@
 # Creating Page Fragments with the Fragments Toolkit
 
+<!-- This article has the same issue as the prior one. Please see the comment there, and please let me know if you have any questions. -->
+
 You can use the Fragments Toolkit to create Fragments and Collections from the Command Line. Here you'll learn how to use the Fragments Toolkit to create Fragments. This just takes a few steps:
 
 1. Create a Collection.

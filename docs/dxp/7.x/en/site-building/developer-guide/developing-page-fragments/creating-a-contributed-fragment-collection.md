@@ -9,13 +9,31 @@ Contributed Fragment Collections are deployable modules containing Page Fragment
 1. Add the Fragment Resources.
 1. Build the JAR and copy it to the Docker Container.
 
-This example uses a Docker image with a fresh install of Liferay DXP.
-
-> This example runs on Liferay DXP 7.3+
-
+This example uses a Docker image with a fresh install of Liferay DXP and runs on Liferay DXP 7.3+. 
+ 
 ```note::
   All Fragments added through a Contributed Fragment Collection are available globally to all Sites.
 ```
+
+## Start Liferay DXP
+
+Run the command below to start the Docker container:
+
+```bash
+docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
+```
+
+
+<!-- I pasted the above before looking at the rest of this. This tutorial doesn't follow the pattern we're looking for. There should be an example project already created with the name liferay-[letter-number-letter-number].zip that contains a deployable skeleton of the project. Readers should never have to start from scratch as your instructions below appear to indicate. The tutorial should start by having the reader deploy the project first to see what the skeleton does. This would mean your component class below is already done. Then you just explain how that part works, rather than having the reader do it. 
+
+The skeleton perhaps wouldn't have the fragments in it. You'd have the reader do this by providing real (not the empty ones you have) working fragments in the project and then redeploying it to see how the fragments get imported properly. 
+
+The main points here are 
+
+1. All code should be real code. We don't want anything like "My Sample Fragment" or blank examples. 
+2. Everything should be functional. It can be simple (like a banner or a card with static links), but it has to be something real. 
+3. The pattern is deploy a skeleton that already includes the boring stuff nobody wants to do (structure, bnd files, component classes, and all other infrastructure stuff), modify or add to the skeleton to make it fully functional, redeploy the project and see the results. Throughout, describe what's going on so the reader could make the project from scratch if he/she wanted to. 
+-->
 
 ## Annotate the Fragment Collection Contributor Class for OSGi Registration
 
@@ -106,9 +124,9 @@ Next you need to include the Fragments that you want to contribute in your modul
         "name": "[collection-name]"
     }
     ```
-    
+
     The example has this configuration:
-    
+
     ```json
     {
         "fragments": [
