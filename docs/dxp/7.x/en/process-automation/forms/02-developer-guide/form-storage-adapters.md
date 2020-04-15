@@ -1,17 +1,15 @@
 # Writing a Form Storage Adapter
 
-You can store form records in alternate storage formats, or inject other logic into the lifecycle of a form record persistence event, by implement a `DDMStorageAdapter`.
+You can store form records in alternate storage formats, or inject custom logic into the lifecycle of a form record persistence event, by implementing a
 
-You can display your custom content in the [Similar Results widget](LINK to widget docs) by implementing a `SimilarResultsContributor`. Note that for the contributor to work, the Similar Results widget must be able to detect your content as the main asset on a page. That means it must be displayable via a URL in a "Display Widget", like the supported Liferay DXP assets (e.g., blogs entries and wiki pages).
+```java
+com.liferay.dynamic.data.mapping.storage.DDMStorageAdapter
+```
 
-> The Similar Results widget can already be used with any content displayed in Lifery DXP's Asset Publisher, without the need for a custom contributor.
+![Use a DDMStorageAdapter to add a Storage Type to the Forms application.](./writing-a-form-storage-adapter/images/01.png)
 
-picture?
-
-
-You can see the [SimilarResultsContributor interface](https://github.com/liferay/liferay-portal/blob/7.3.0-ga1/modules/dxp/apps/portal-search-similar-results/portal-search-similar-results-web-spi/src/main/java/com/liferay/portal/search/similar/results/web/spi/contributor/SimilarResultsContributor.java) and the bundled [implementations](https://github.com/liferay/liferay-portal/tree/7.3.0-ga1/modules/dxp/apps/portal-search-similar-results/portal-search-similar-results-web/src/main/java/com/liferay/portal/search/similar/results/web/internal/contributor) on GitHub.
-
-<!-- ![Out-of-the-box product types](./adding-a-new-product-type/images/01.png "Out-of-the-box product types") -->
+<!-- make sure this is accurate once implemented -->
+The example storage adapter in this tutorial stores each Form Record in a simple file, stored on the file system.
 
 ## Overview
 
@@ -21,12 +19,12 @@ You can see the [SimilarResultsContributor interface](https://github.com/liferay
 
 ## Deploy an Example
 
-In this section, we will get an example product type up and running on your instance of Liferay Commerce. Follow these steps:
+To get an example product type up and running on your instance of Liferay DXP,
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
+    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
     If you already have a docker container, use
@@ -37,14 +35,15 @@ In this section, we will get an example product type up and running on your inst
 
     If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly.
 
-1. Download and unzip [the KB Article Similar Results Contributor](./ZIPNAME.zip).
+<!-- test once fully created -->
+1. Download and unzip [the DDM File System Storage Adapter project](./liferay-r2f1.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp-7.x/[???]/ZIPNAME.zip -O
+    curl https://learn.liferay.com/dxp-7.x/process-automation/forms/developer-guide/writing-a-form-storage-adapter/liferay-r2f1.zip -O
     ```
 
     ```bash
-    unzip ZIPNAME.zip
+    unzip liferay-r2f1.zip
     ```
 
 1. From the module root, build and deploy.
@@ -58,143 +57,287 @@ In this section, we will get an example product type up and running on your inst
 1. Confirm the deployment in the Liferay Docker container console.
 
     ```bash
-    STARTED com.liferay.learn.r1s1.impl_1.0.0 [1009]
+    STARTED com.liferay.learn.r2f1.impl_1.0.0 [1009]
     ```
 
-1. Verify that the example contributor is working. Begin by opening your browser to `https://localhost:8080`
+1. Verify that the example storage adapter is working. Begin by opening your browser to `https://localhost:8080`
 
-1.  Add some KB Articles at  _Site Menu_ &rarr; _Content_ &rarr; _Knowledge Base_.
+1.  Go to the Forms application in _Site Menu_ &rarr; _Content_ &rarr; _Forms_.
 
-    Make sure they have similar _Title_ and _Content_ fields. You can use these Strings to create three articles (use the same string for title and content):
+1.  Click the *Add* button ![Add](./../../../images/icon-add.png) to open the Form Builder.
 
-    _Test KB Article one_
+1. In the Form Builder view, click the *Options* button (![Options](./../../../images/icon-options.png)) and open the *Settings* window. 
 
-    _Test KB Article two_
+1. From the select list field called *Select a Storage Type*, choose the File System type and click _Done_.
 
-    _Test KB Article three_
+<!-- Keep going to show how to verify it's working? -->
 
-1.  Add the Knowledge Base Display widget to a page, followed by the Similar Results widget.
-
-1.  Click on one of the KB Articles to select it for display, as the main asset.
-
-    The Similar Results widget now shows other related KB Articles.
-
-![Similar Results widget can display KB Articles.](./adding-a-new-product-type/images/01.png "KB Similar Results")
+![The File System storage adapter stores forms entries on your local system.](./writing-a-form-storage-adapter/images/02.png)
+<!-- take screenshot -->
 
 Now that you verified that the example behaves properly, enter the deep end to learn more.
 
 ## Walk Through the Example
 
-Let's review the deployed example. It contains just one class: the contributor that enables custom content for the Similar Results widget.
+The deployed example contains just one class: `DDMFileSystemStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries on the File System.
 
 * [Annotate the Contributor Class for OSGi Registration](#annotate-the-contributor-class-for-osgi-registration)
-* [Review the `SimilarResultsContributor` Interface](#review-the-cptype-interface)
+* [Review the `DDMStorageAdapter` Interface](#review-the-ddm-storage-adapter-interface)
 
 ### Annotate the Contributor Class for OSGi Registration
 
-The `KBSimilarResultsContributor` implements the `SimilarResultsContributor` interface:
+The `DDMFileSystemStorageAdapter` implements the `DDMStorageAdapter` interface:
 
 ```java
-@Component(service = SimilarResultsContributor.class)
-public class KBSimilarResultsContributor implements SimilarResultsContributor {
+@Component(
+	immediate = true, property = "ddm.storage.adapter.type=file",
+	service = DDMStorageAdapter.class
+)
+public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 ```
 
-The `service` component property registers your implementation as a `SimilarResultsContributor` service. 
+The `service` component property registers your implementation as a `DDMStorageAdapter` service.
 
-### Review the `SimilarResultsContributor` Interface
-
-Implement the three methods from the interface.
+The `property = "ddm.storage.adapter.type=file"` provides an identifier so that your service can be dynamically retrieved from a Service Tracker in the Forms service layer or specifically referenced as a unique `DDMStorageAdapter` implementation:  
 
 ```java
-public void detectRoute(RouteBuilder routeBuilder, RouteHelper routeHelper);
+@Reference(target = "(ddm.form.values.deserializer.type=file)")
+private DDMFormValuesDeserializer jsonDDMFormValuesDeserializer;
 ```
 
-Implement `detectRoute` to provide a distinctive portion of your entity's URL pattern, so that the Similar Results widget can detect if your contributor should be invoked. The URL pattern is added as an attribute of the `RouteBuilder` object. The `RouteHelper` is useful for retrieving the whole URL String for parsing.
+### Review the DDM Storage Adapter Interface
+
+You must implement three methods: `delete`, `get`, and `save`.
 
 ```java
-public void resolveCriteria(CriteriaBuilder criteriaBuilder, CriteriaHelper criteriaHelper);
+public DDMStorageAdapterDeleteResponse delete(
+        DDMStorageAdapterDeleteRequest ddmStorageAdapterDeleteRequest)
+    throws StorageException;
 ```
-
-Implement `resolveCriteria` to match the main entity on the page to the corresponding search engine document. This will be invoked if route detected indicates that your Contributor is the appropriate one.
 
 ```java
-public void writeDestination(DestinationBuilder destinationBuilder, DestinationHelper destinationHelper);
+public DDMStorageAdapterGetResponse get(
+        DDMStorageAdapterGetRequest ddmStorageAdapterGetRequest)
+    throws StorageException;
 ```
 
-Implement `writeDestination` to update the main asset when a User clicks a link in the similar results widget and re-run the backing More Like This Query that's used to populate the Similar Results widget. 
+```java
+public DDMStorageAdapterSaveResponse save(
+        DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
+    throws StorageException;
+```
 
-### Complete the Similar Results Contributor
+Each method must return a
+_DDMStorageAdapter[[Save](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterSaveResponse.java)/[Get](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterGetResponse.java)/[Delete](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterDeleteSaveResponse.java)]Response_
+object, each constructed using a static inner `Builder` class's `newBuilder`
+method. 
 
-#### Implement the `detectRoute` Method
+Each method of the storage adapter is passed a very useful `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information. See [DDMStorageAdapter Request Getters](#ddmStorageAdapter-request-getters) for a reference on these getters.
+
+#### The Storage Adapter's Calling Context
+
+The Forms application's service code looks up the appropriate storage adapter, and calls its storage logic against the `DDMFormInstanceRecord` being handled.
+
+From `DDMFormInstanceRecordLocalServiceImpl`:
+
+```java
+DDMStorageAdapter ddmStorageAdapter = getDDMStorageAdapter();
+
+DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
+    ddmStorageAdapter.save(ddmStorageAdapterSaveRequest);
+```
+
+### Complete the DDM Storage Adapter
+
+#### Implement the `delete` Method
+
+Put form record deletion logic in the `delete` method.
+
+The `delete` method takes a `DDMStorageAdapterDeleteRequest`. The interface demands that you return a `DDMStorageAdapterDeleteResponse` and handle `StorageException`s.
+
+<!-- Change to our example and explain more if needed; review other dev tutorials to see how much explanation is given-->
+The default storage adapter's implementation:
 
 ```java
 @Override
-public void detectRoute(RouteBuilder routeBuilder, RouteHelper routeHelper) {
+public DDMStorageAdapterDeleteResponse delete(
+        DDMStorageAdapterDeleteRequest ddmStorageAdapterDeleteRequest)
+    throws StorageException {
 
-    String[] subpath = StringUtil.split(HttpUtil.getPath(routeHelper.getURLString()),
-            Portal.FRIENDLY_URL_SEPARATOR);
+    try {
+        ddmContentLocalService.deleteDDMContent(
+            ddmStorageAdapterDeleteRequest.getPrimaryKey());
 
-    String[] parameters = StringUtil.split(subpath[subpath.length - 1], CharPool.FORWARD_SLASH);
+        DDMStorageAdapterDeleteResponse.Builder builder =
+            DDMStorageAdapterDeleteResponse.Builder.newBuilder();
 
-    if (parameters[0].matches("knowledge_base")) {
-
-        routeBuilder.addAttribute("urlTitle", parameters[1]);
+        return builder.build();
+    }
+    catch (Exception e) {
+        throw new StorageException(e);
     }
 }
 ```
 
-    // get the friendly url parameter that matches the urlString
-    //uses the friendly url separator constant, which is /-/, to extract the last 1/2 of the URL:
-    //   "/-/knowledge_base/test-kb-article-two"
-    // i don't know if this check of the array value is appropriate
-    // if the first fruendlyUrl parameter is for the knowledge base, add the second param 
-    // as the attribute that similar results will use to grab our contributor
+This code deletes the `DDMContent` with the ID returned by the delete request's `getPrimaryKey` method. After that a delete response object is built and returned.
 
-Implement `detectRoute` to inject logic checking for a distinctive portion of your entity's URL pattern. The Similar results widget uses this check to find the correct Contributor. If your entity's display URL is detected, you must add at least one attribute to the URL route for use later. Here we're checking for `"knowledge_base"` in the Friendly URL, and adding `"urlTitle"` as an attribute to the `RouteBuilder` passed in the method signature if it's detected.
+Since there's no serialization or deserialization involved with deletion you can use the default storage adapter's basic deletion code as is, unless you require some custom deletion logic for your use case.
 
-`routehlper.getUrlString` is important. Check if the portlet ID parameter starts with "wikiDisplayPortlet". If yes, this contributor is resolved. After the detecting that you are in the right page, extract the `entityID` form the URL. When you have the ID, add at least one attribute to the route in order to use later.
+#### Implement the `get` Method
 
-The ID added as an attribute to the `RouteBuilder` is used to fetch the entity and the corresponding search engine document in the `resolveCriteria` method.
+Put form record retrieval logic in the `get` method.
 
-#### Implement the `resolveCriteria` Method
+The `get` method takes a `DDMStorageAdapterGetRequest`. The interface demands that you return a `DDMStorageAdapterGetResponse` and handle `StorageException`s.
+
+Get the DDM content using the storage ID of the form record, retrieved from the request object, then construct the `DDMFormValues` object from the serialized data you've already stored, by calling the deserialization code. Set the now-deserialized `DDMFormValues` into the response object. Of course, if you need to add custom logic in the meantime, do that too.
+
+The default implementation:
+<!--replace with ours and explain -->
 
 ```java
 @Override
-public void resolveCriteria(CriteriaBuilder criteriaBuilder, CriteriaHelper criteriaHelper) {
+public DDMStorageAdapterGetResponse get(
+        DDMStorageAdapterGetRequest ddmStorageAdapterGetRequest)
+    throws StorageException {
 
-    long groupId = criteriaHelper.getGroupId();
+    try {
+        // get the ddm content, in the stored format,  using the storaeId from the passed request
+        DDMContent ddmContent = ddmContentLocalService.getContent(
+            ddmStorageAdapterGetRequest.getPrimaryKey());
 
-    String urlTitle = (String) criteriaHelper.getRouteParameter("urlTitle");
+        // pass the the form object and the ddm content to the deserializer
+        // to transform into a pure DDMFormValues object out of the stored format.
+        DDMFormValues ddmFormValues = deserialize(
+            ddmContent.getData(), ddmStorageAdapterGetRequest.getDDMForm());
 
-    /*
-     * need help here. how would i retrieve the folder? is there a service
-     * call to fetch it using the url title of the article maybe?
-     */ long kbFolderId = 0;
-    KBArticle kbArticle = _kbArticleLocalService.fetchKBArticleByUrlTitle(groupId, kbFolderId, urlTitle);
+        // build a response, passing the ddmFormValues
+        DDMStorageAdapterGetResponse.Builder builder =
+            DDMStorageAdapterGetResponse.Builder.newBuilder(ddmFormValues);
 
-    if (kbArticle == null) {
-        return;
+        return builder.build();
     }
-
-    AssetEntry assetEntry = _assetEntryLocalService.fetchEntry(groupId, kbArticle.getUuid());
-
-    if (assetEntry == null) {
-        return;
+    catch (Exception e) {
+        // throw a storage exception when an exception is caught
+        throw new StorageException(e);
     }
-
-    criteriaBuilder.uid(Field.getUID(assetEntry.getClassName(), String.valueOf(kbArticle.getClassPK())));
 }
 ```
 
-Match the page's displayed entity to the corresponding search engine document. You must provide the `criteriaBuilder.uid` method the value of the appropriate search engine document's `uid` field. In the Liferay DXP index, this is done using a combination of the entry class name and the class primary key. Pass both as Strings to `Field.getUID`. This example starts by fetching the model entity using the ID you added to the attribute in the `detectRoute` method, and then uses it to retrieve the asset entry. 
+To do the deserialization you can use a `deserialize` utility method. This is what it looks like for the default storage adapter.
 
+```java
+protected DDMFormValues deserialize(String content, DDMForm ddmForm) {
+    DDMFormValuesDeserializerDeserializeRequest.Builder builder =
+        DDMFormValuesDeserializerDeserializeRequest.Builder.newBuilder(
+            content, ddmForm);
 
-<!-- for blogs this sets something like this as the uid: com.liferay.blogs.model.BlogsEntry_PORTLET_38805 might need to doc this uid thing a bit. it wasn't clear which field from the model entity was going to be used to match the uid. i tried getPrimaryKey(), getKBArticleId(), and finally found that getEntryClassPK was the golden ticket for kb articles. -->
+    DDMFormValuesDeserializerDeserializeResponse
+        ddmFormValuesDeserializerDeserializeResponse =
+            jsonDDMFormValuesDeserializer.deserialize(builder.build());
 
-Now that you told the criteria what document to match, write the destination URL so the similar results are updated.
+    return ddmFormValuesDeserializerDeserializeResponse.getDDMFormValues();
+}
+```
 
-#### Implement the `writeDestination` Method
+It calls the `DDMFormValuesDeserializer` for this. Liferay DXP provides a [JSON deserializer](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java). If you need different serialization logic for your storage adapter, you'll need to provide your own serialization code. As you might imagine, you'll also need a serialization logic. There's a [JSON implementation](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) of the `DDMFormValuesSerializer` in Liferay DXP.
 
+#### Implement the `save` Method
+
+Because Form Records are autosaved to avoid data loss, each save request will be one of two types: a new record is being added or an existing record is being updated.
+<!-- Also ,as of 7.3 I think updating form entries will be possible, so mentions that -->
+
+The `save` method takes a `DDMStorageAdapterSaveRequest`. The interface demands that you return a `DDMStorageAdapterSaveResponse` and handle `StorageException`s.
+
+<!-- update for our example and make sure the explanation is accurate -->
+The default JSON implementation responds differently depending on the value of a boolean value stored in the save request, `isInsert`. If true, logic for adding a new form record is invoked, and if false, an update is precipitated instead. This logic is contained in two protected methods, `insert` and `update`.
+
+```java
+@Override
+public DDMStorageAdapterSaveResponse save(
+        DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
+    throws StorageException {
+
+    if (ddmStorageAdapterSaveRequest.isInsert()) {
+        return insert(ddmStorageAdapterSaveRequest);
+    }
+
+    return update(ddmStorageAdapterSaveRequest);
+}
+
+protected DDMStorageAdapterSaveResponse insert(
+        DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
+    throws StorageException {
+
+    DDMFormValues ddmFormValues =
+        ddmStorageAdapterSaveRequest.getDDMFormValues();
+
+    try {
+        ServiceContext serviceContext = new ServiceContext();
+
+        serviceContext.setScopeGroupId(
+            ddmStorageAdapterSaveRequest.getScopeGroupId());
+        serviceContext.setUserId(ddmStorageAdapterSaveRequest.getUserId());
+        serviceContext.setUuid(ddmStorageAdapterSaveRequest.getUuid());
+
+        DDMContent ddmContent = ddmContentLocalService.addContent(
+            ddmStorageAdapterSaveRequest.getUserId(),
+            ddmStorageAdapterSaveRequest.getScopeGroupId(),
+            ddmStorageAdapterSaveRequest.getClassName(), null,
+            serialize(ddmFormValues), serviceContext);
+
+        DDMStorageAdapterSaveResponse.Builder builder =
+            DDMStorageAdapterSaveResponse.Builder.newBuilder(
+                ddmContent.getPrimaryKey());
+
+        return builder.build();
+    }
+    catch (Exception e) {
+        throw new StorageException(e);
+    }
+}
+
+protected DDMStorageAdapterSaveResponse update(
+        DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
+    throws StorageException {
+
+    try {
+        DDMContent ddmContent = ddmContentLocalService.getContent(
+            ddmStorageAdapterSaveRequest.getPrimaryKey());
+
+        /* The modified date is set here instead of in the service layer.
+        */
+        ddmContent.setModifiedDate(new Date());
+
+        ddmContent.setData(
+            serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
+
+        ddmContentLocalService.updateContent(
+            ddmContent.getPrimaryKey(), ddmContent.getName(),
+            ddmContent.getDescription(), ddmContent.getData(),
+            new ServiceContext());
+
+        DDMStorageAdapterSaveResponse.Builder builder =
+            DDMStorageAdapterSaveResponse.Builder.newBuilder(
+                ddmContent.getPrimaryKey());
+
+        return builder.build();
+    }
+    catch (Exception e) {
+        throw new StorageException(e);
+    }
+}
+
+protected String serialize(DDMFormValues ddmFormValues) {
+    DDMFormValuesSerializerSerializeRequest.Builder builder =
+        DDMFormValuesSerializerSerializeRequest.Builder.newBuilder(
+            ddmFormValues);
+
+    DDMFormValuesSerializerSerializeResponse
+        ddmFormValuesSerializerSerializeResponse =
+            jsonDDMFormValuesSerializer.serialize(builder.build());
+
+    return ddmFormValuesSerializerSerializeResponse.getContent();
+}
 ```java
 @Override
 public void writeDestination(DestinationBuilder destinationBuilder, DestinationHelper destinationHelper) {
@@ -215,14 +358,20 @@ In addition to re-sending the qeury re-populating the Similar Results list, repl
 
 #### Declare the Service Dependencies
 
-This code relies on two services deployed to an OSGi container: `AssetEntryLocalService` and `KBArticleLocalService`. Declare your need for them using the Declarative Services `@Reference` annotation, provided by `org.osgi.service.component.annotations.Reference`. Set them into private fields.
+This code relies on several services deployed to an OSGi container:
 
+`DDMContentLocalService`, a `DDMFormValuesSerializer` implementation, and a `DDMFormValuesDeserializer`implementation. Declare your need for them using the Declarative Services `@Reference` annotation, provided by `org.osgi.service.component.annotations.Reference`. Set them into private fields.
+
+<!-- update the references when we write our example -->
 ```java
 @Reference
-private AssetEntryLocalService _assetEntryLocalService;
+private DDMContentLocalService ddmContentLocalService;
 
-@Reference
-private KBArticleLocalService _kbArticleLocalService;
+@Reference(target = "(ddm.form.values.deserializer.type=json)")
+private DDMFormValuesDeserializer jsonDDMFormValuesDeserializer;
+
+@Reference(target = "(ddm.form.values.serializer.type=json)")
+private DDMFormValuesSerializer jsonDDMFormValuesSerializer;
 ```
 
 ## Additional Information
@@ -240,7 +389,79 @@ A newly added storage adapter can only be used with new Forms. All existing Form
 
 The example storage adapter in this tutorial serializes form data to be stored in a simple file, stored on the file system.
 
-<!-- ![Figure 1: Choose from available Storage Types.](../../images/forms-storage-type.png) -->
+### Serializing and Deserializing Form Records
+
+The example here uses the JSON logic for serializing and deserializing the form record's content, and just shows storing the content in an alternate location: instead of the usual database storage, we're storing Form Records on the file system. Implementing your own serialization code to store `DDMContent` in a different format requires implementing some additional interfaces and more complete documentation for these extension points will be provided in the future to help round out this usage.
+
+**Serialization:** When you're saving `DDMcontent`, you need to transform the `DDMFormValues` object and transform it into the target storage format.
+
+**Deserialization:** When reading `DDMContent` (in the `get` method if the storage adapter), it must be transformed from the storage format back into a `DDMFormValues` object that the `DDMStorageAdapterGetResponse`'s `Builder` constructor requires.
+
+There's a `DDMFormValuesSerializer` interface to implement for this serialization logic, and a `DDMFormValuesDeserializer` interface to implement for the deserialization logic. Liferay's default implementations, which support transforming the `DDMFormValues` object to JSON and vice versa, can be found [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) and [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java), respectively.
+
+### DDMStorageAdapter Request Getters
+
+Each method of the `DDMStorageAdapter` interface is passed a request object with specific getters so you can access useful data in your Storage Adapter implementation.
+
+`DDMStorageAdapterSaveRequest`:
+
+- Method: `public String getClassName()` 
+    Returns a String, `com.liferay.dynamic.data.mapping.model.DDMStorageLink`
+    <!-- is this always returned?-->
+
+- Method: `public DDMFormValues getDDMFormValues()`
+    Returns the `DDMFormValues` of the form. You need the form values object in
+    order to manipulate into the format in which they should be stored.
+    <!-- note about serialization here?-->
+
+- Method: `public long getPrimaryKey()`
+    Returns the `storageId` <!-- ???--> of the form record, which is useful for
+    any work that requires identifying a record. This will be unique for each
+    form record in the @product@ database, but isn't guaranteed to be unique
+    across portal environments like staging and live. Before the record is
+    persisted for the first time (whether through auto-save or user submission
+    of the form), this returns `0`.
+
+- Method: `public long getScopeGroupId()`
+    Returns the group ID of the current scope. For example, if the Form widget
+    is placed on a portal page, the scope group ID returned is the group ID for
+    the site. If the form is accessed by direct URL, the group ID returned is a
+    group ID dedicated to the Forms application.
+
+- Method: `public long getUserId()`
+    Returns the user ID submitting the request. For a save event, this would be
+    the @product@ User ID if authenticated in the session, or the ID for the
+    default account if an unauthenticated User or Guest User submits a form.
+
+- Method: `public String getUuid()`
+    Returns the unique ID of the Form Record, which is useful for identifying
+    the form record across portal environments (like staged and live). This is
+    often needed to pass to the `ServiceContext` object used in a service call.
+    Before the record is persisted, this returns `null`.
+
+- Method: `public boolean isInsert()`
+    Returns _true_ if the primary key is `0`, and _false_ if there's an existing
+    ID for the form record. The default JSON storage adapter uses it to test
+    whether an add or update is called for.
+
+`DDMStorageAdapterGetRequest`:
+
+- Method: `public long getPrimaryKey()`
+    Returns the `storageId` of the form record, which is useful for
+    any work that requires identifying a record.
+
+- Method: `public DDMForm getDDMForm()`
+    Returns the `DDMForm` object of the form the record is associated with.
+
+`DDMStorageAdapterDeleteRequest`:
+
+- Method: `public long getPrimaryKey()`
+    Returns the `storageId` of the form record, which is useful for
+    any work that requires identifying a record. The default JSON storage
+    adapter uses it to retrieve the `DDMContent` object associated with the
+    primary key, which, in turn with the form itself (see the next method) is
+    used to get deserialized `DDMFormValues`, which can be passed to the delete
+    request.
 
 ## Conclusion
 
