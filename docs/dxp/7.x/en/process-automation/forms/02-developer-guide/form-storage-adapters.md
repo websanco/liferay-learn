@@ -70,7 +70,7 @@ To get an example product type up and running on your instance of Liferay DXP,
 
 1. From the select list field called *Select a Storage Type*, choose the File System type and click _Done_.
 
-<!-- Keep going to show how to verify it's working? -->
+<!-- Keep going to show how to verify it's working? Tell them where the files are stored -->
 
 ![The File System storage adapter stores forms entries on your local system.](./writing-a-form-storage-adapter/images/02.png)
 <!-- take screenshot -->
@@ -399,69 +399,36 @@ The example here uses the JSON logic for serializing and deserializing the form 
 
 There's a `DDMFormValuesSerializer` interface to implement for this serialization logic, and a `DDMFormValuesDeserializer` interface to implement for the deserialization logic. Liferay's default implementations, which support transforming the `DDMFormValues` object to JSON and vice versa, can be found [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) and [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java), respectively.
 
+<!-- This is useful but maybe it's beeter as Javadoc? --> 
 ### DDMStorageAdapter Request Getters
 
 Each method of the `DDMStorageAdapter` interface is passed a request object with specific getters so you can access useful data in your Storage Adapter implementation.
 
 `DDMStorageAdapterSaveRequest`:
 
-- Method: `public String getClassName()` 
-    Returns a String, `com.liferay.dynamic.data.mapping.model.DDMStorageLink`
-    <!-- is this always returned?-->
+- Method: `public String getClassName()` Returns a String, `com.liferay.dynamic.data.mapping.model.DDMStorageLink` <!-- is this always returned?-->
 
-- Method: `public DDMFormValues getDDMFormValues()`
-    Returns the `DDMFormValues` of the form. You need the form values object in
-    order to manipulate into the format in which they should be stored.
-    <!-- note about serialization here?-->
+- Method: `public DDMFormValues getDDMFormValues()` Returns the `DDMFormValues` of the form. You need the form values object in order to manipulate into the format in which they should be stored.  <!-- note about serialization here?-->
 
-- Method: `public long getPrimaryKey()`
-    Returns the `storageId` <!-- ???--> of the form record, which is useful for
-    any work that requires identifying a record. This will be unique for each
-    form record in the @product@ database, but isn't guaranteed to be unique
-    across portal environments like staging and live. Before the record is
-    persisted for the first time (whether through auto-save or user submission
-    of the form), this returns `0`.
+- Method: `public long getPrimaryKey()` Returns the `storageId` <!-- ???--> of the form record, which is useful for any work that requires identifying a record. This will be unique for each form record in the @product@ database, but isn't guaranteed to be unique across portal environments like staging and live. Before the record is persisted for the first time (whether through auto-save or user submission of the form), this returns `0`.
 
-- Method: `public long getScopeGroupId()`
-    Returns the group ID of the current scope. For example, if the Form widget
-    is placed on a portal page, the scope group ID returned is the group ID for
-    the site. If the form is accessed by direct URL, the group ID returned is a
-    group ID dedicated to the Forms application.
+- Method: `public long getScopeGroupId()` Returns the group ID of the current scope. For example, if the Form widget is placed on a portal page, the scope group ID returned is the group ID for the site. If the form is accessed by direct URL, the group ID returned is a group ID dedicated to the Forms application.
 
-- Method: `public long getUserId()`
-    Returns the user ID submitting the request. For a save event, this would be
-    the @product@ User ID if authenticated in the session, or the ID for the
-    default account if an unauthenticated User or Guest User submits a form.
+- Method: `public long getUserId()` Returns the user ID submitting the request. For a save event, this would be the @product@ User ID if authenticated in the session, or the ID for the default account if an unauthenticated User or Guest User submits a form.
 
-- Method: `public String getUuid()`
-    Returns the unique ID of the Form Record, which is useful for identifying
-    the form record across portal environments (like staged and live). This is
-    often needed to pass to the `ServiceContext` object used in a service call.
-    Before the record is persisted, this returns `null`.
+- Method: `public String getUuid()` Returns the unique ID of the Form Record, which is useful for identifying the form record across portal environments (like staged and live). This is often needed to pass to the `ServiceContext` object used in a service call.  Before the record is persisted, this returns `null`.
 
-- Method: `public boolean isInsert()`
-    Returns _true_ if the primary key is `0`, and _false_ if there's an existing
-    ID for the form record. The default JSON storage adapter uses it to test
-    whether an add or update is called for.
+- Method: `public boolean isInsert()` Returns _true_ if the primary key is `0`, and _false_ if there's an existing ID for the form record. The default JSON storage adapter uses it to test whether an add or update is called for.
 
 `DDMStorageAdapterGetRequest`:
 
-- Method: `public long getPrimaryKey()`
-    Returns the `storageId` of the form record, which is useful for
-    any work that requires identifying a record.
+- Method: `public long getPrimaryKey()` Returns the `storageId` of the form record, which is useful for any work that requires identifying a record.
 
-- Method: `public DDMForm getDDMForm()`
-    Returns the `DDMForm` object of the form the record is associated with.
+- Method: `public DDMForm getDDMForm()` Returns the `DDMForm` object of the form the record is associated with.
 
 `DDMStorageAdapterDeleteRequest`:
 
-- Method: `public long getPrimaryKey()`
-    Returns the `storageId` of the form record, which is useful for
-    any work that requires identifying a record. The default JSON storage
-    adapter uses it to retrieve the `DDMContent` object associated with the
-    primary key, which, in turn with the form itself (see the next method) is
-    used to get deserialized `DDMFormValues`, which can be passed to the delete
-    request.
+- Method: `public long getPrimaryKey()` Returns the `storageId` of the form record, which is useful for any work that requires identifying a record. The default JSON storage adapter uses it to retrieve the `DDMContent` object associated with the primary key, which, in turn with the form itself (see the next method) is used to get deserialized `DDMFormValues`, which can be passed to the delete request.
 
 ## Conclusion
 
