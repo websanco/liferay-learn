@@ -2,10 +2,11 @@ Other Tools
 ===========
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    other-tools/fragments-cli.md
    other-tools/liferay-js-generator.md
+   other-tools/liferay-npm-bundler.rst
    other-tools/intellij-plugin.md
    other-tools/theme-generator.md
    other-tools/maven-plugins.md
