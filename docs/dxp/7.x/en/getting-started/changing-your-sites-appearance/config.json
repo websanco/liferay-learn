@@ -1,0 +1,15 @@
+
+{
+    "answers": {
+        "theme": {
+            "themeName": "Acme Sample Blue Theme",
+             "themeId": "liferay-5b2v",
+             "liferayVersion": "7.3"
+        },          
+        "init": {
+            "appServerPath": "/opt/tomcat",
+             "deploymentStrategy": "Other"
+        }
+    },
+    "batchMode": true
+}

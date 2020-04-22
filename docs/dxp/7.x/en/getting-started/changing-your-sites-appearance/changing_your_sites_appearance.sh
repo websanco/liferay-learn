@@ -10,7 +10,7 @@ then
 	rm -r liferay-5b2v-theme
 fi
 
-./changing_your_sites_appearance_resource.sh
+yo liferay-theme:classic --config config.json
 
 cd liferay-5b2v-theme
 
