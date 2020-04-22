@@ -17,6 +17,10 @@ The text or images you provide here are the default values for the fields. You m
 
 All of these work together to help you create dynamic, reusable elements for building a site. For example, if you need a small text box with an image and link to provide a product description, you can create a Fragment containing editable filler text, space for an editable image, the appropriate formatting, and an editable link. You can then add the Fragment to multiple pages and define the image, text, and link for each product you need to describe.
 
+```warning::
+  IDs of editable elements must be unique. Do not change the ID after the Page Fragment has been added to a page. Changing the ID of an editable Fragment after it's been modified can cause the changes to be lost.
+```
+
 You can make a Fragment even more dynamic by including a widget. Currently, portlets are the only embeddable types of widgets, but other options are planned.
 
 ![The Fragment editor provides autocomplete for Liferay Fragment specific tags.](./fragment-specific-tags-reference/images/01.png)
