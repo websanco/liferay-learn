@@ -17,7 +17,7 @@ The Appearance configuration entry defines the default logo and overall look and
 
 **LOOK AND FEEL:** Set the default theme(s) for the instance and Control Panel. 
 
-![Configure the appearance of the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/01.png)
+![Configure the appearance of the Virtual Instance.](./instance-configuration/images/01.png)
 
 ## Contact Information
 
@@ -33,7 +33,7 @@ The Contact Information configuration entry specifies how to contact the organiz
 
 Developers can query for this contact information in their applications. Note that you can add and remove additional entries in a section with the plus and minus buttons respectively. 
 
-![Configure contact information for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/02.png)
+![Configure contact information for the Virtual Instance.](./instance-configuration/images/02.png)
 
 ## General
 
@@ -64,13 +64,13 @@ All virtual instances share the values specified in the properties file. Changes
 
 **Additional Information:** Specify a Legal name, ID, company type, SIC code, ticker symbol, industry and industry type for the owner of the virtual instance. 
 
-![Configure general information for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/03.png)
+![Configure general information for the Virtual Instance.](./instance-configuration/images/03.png)
 
 ## Terms of Use
 
 The Terms of Use page is enabled by default, so one of your first actions should be to disable or replace the placeholder terms. To You can disable the requirement for all Users to read the Terms of Use or set the Group ID and Article ID for the Web Content Article that contains your Terms of Use. Either way, the Terms of Use entry contains everything you need to configure Terms of Use for your Users.
 
-![Configure Terms of Use for the Virtual Instance.](./configuring-a-virtual-instance-instance-configuration/images/04.png)
+![Configure Terms of Use for the Virtual Instance.](./instance-configuration/images/04.png)
 
 If you are configuring a new Terms of Use, you might be wondering "How do I find a web content article's Group ID and Article ID,"?
  
@@ -82,7 +82,7 @@ To find the Group/Site ID,
 
 1. Find the Site ID field in the General tab. Enter it into the Group ID field.
 
-![The Site ID (20125) in Site Settings is the Group ID in the terms of Use configuration.](./configuring-a-virtual-instance-instance-configuration/images/05.png)
+![The Site ID (20125) in Site Settings is the Group ID in the terms of Use configuration.](./instance-configuration/images/05.png)
 
 To find the Web Content Article's ID,
 
@@ -90,6 +90,6 @@ To find the Web Content Article's ID,
 
 1. Click on your Terms of Use article. Its ID appears in the Properties panel on the right side of the screen, under the Version and Workflow Status. 
 
-![The Web Content Article ID (37808) is displayed in the edit screen.](./configuring-a-virtual-instance-instance-configuration/images/06.png)
+![The Web Content Article ID (37808) is displayed in the edit screen.](./instance-configuration/images/06.png)
 
 Save the configuration. All your users signing in for the first time see your Terms of Use article. Users must agree to the Terms of Use to register their User Accounts. 

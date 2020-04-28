@@ -12,7 +12,7 @@ Configuration of a Liferay DXP system happens at different [scopes](../system-se
    If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration will apply throughout your system.
 ```
 
-Here's a quick scenario: you already have a server hosting a Liferay DXP installation and a database. It has many [Users](./../../users-and-permissions/users/understanding-users.md), [Sites](/docs/7-2/user/-/knowledge_base/u/building-a-site), and specific [instance settings](./../virtual-instances/configuring-a-virtual-instance-instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
+Here's a quick scenario: you already have a server hosting a Liferay DXP installation and a database. It has many [Users](./../../users-and-permissions/users/understanding-users.md), [Sites](/docs/7-2/user/-/knowledge_base/u/building-a-site), and specific [instance settings](./../virtual-instances/instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
 
 Because of the unique domain name, Users are directed to the correct Virtual Instance. Because Virtual Instances share an application server and OSGi container, they also share these customizations: 
 

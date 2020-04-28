@@ -2,7 +2,7 @@
 
 The Infrastructure category contains settings to specify which content types are validated during the Import/Export process and whether to delete temporary LAR files during the Import/Export process. 
 
-![Configure the Import Export settings at the Virtual Instance scope.](./configuring-a-virtual-instance-infrastructure/images/01.png)
+![Configure the Import Export settings at the Virtual Instance scope.](./infrastructure/images/01.png)
 
 To access these settings, open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings* and select *Infrastructure* under the PLATFORM heading. 
 

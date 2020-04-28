@@ -15,34 +15,34 @@ The Email configuration is where you configure email notifications at the Virtua
 
 The Account Created Notification entry defines the email templates, with and without the new User's password included in the body of the text, for the message sent to notify Users when they create a new account. You can specify whether this email is sent by the *Enabled* checkbox at the top of the configuration entry. Use the template variables listed at the bottom of the configuration under the "Definition of Terms" heading to help build your email template. 
 
-![Configure the Account Created email notification](./configuring-a-virtual-instance-email-settings/images/01.png)
+![Configure the Account Created email notification](./email-settings/images/01.png)
 
 ## Email Sender
 
 The Email Sender entry specifies the virtual instance's administrative Name and Address for email notifications, declared as the `[$FROM_NAME$]` and `[$FROM_ADDRESS$]` variables respectively in the email templates. By default, they are from the [`admin.email.from.name` and `admin.email.from.address`](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Admin%20Portlet) portal properties. This name and email address appear in the *From* field in all email messages sent by the virtual instance. 
 
-![Configure the From name and address for system emails.](./configuring-a-virtual-instance-email-settings/images/02.png)
+![Configure the From name and address for system emails.](./email-settings/images/02.png)
 
 ## Email Verification Notification
 
 The Email Verification Notification entry defines the email template for the message sent to Users when asked to verify their Email Address. Use the template variables listed at the bottom of the configuration under the "Definition of Terms" heading to help build your email template. 
 
-![Verify the email address of Users.](./configuring-a-virtual-instance-email-settings/images/03.png)
+![Verify the email address of Users.](./email-settings/images/03.png)
 
 ## Mail Host Names
 
 Use the Mail Host Names entry to specify additional mail host names that are owned by your organization for the virtual instance. Enter one mail host name per line, but don't enter the one specified in the Virtual Instance configuration. 
 
-![Configure additional mail host names for the Virtual Instance.](./configuring-a-virtual-instance-email-settings/images/04.png)
+![Configure additional mail host names for the Virtual Instance.](./email-settings/images/04.png)
 
 ## Password Changed Notification
 
 The Password Changed Notification entry defines the email template for the message sent to notify Users when their password has changed. Use the template variables listed at the bottom of the configuration under the "Definition of Terms" heading to help build your email template. 
 
-![Notify Users when their password changes.](./configuring-a-virtual-instance-email-settings/images/05.png)
+![Notify Users when their password changes.](./email-settings/images/05.png)
 
 ## Password Reset Notification
 
 The Password Reset Notification entry defines the email template for the message sent to notify Users when a request has been made to reset their password. Use the template variables listed at the bottom of the configuration under the "Definition of Terms" heading to help build your email template. 
 
-![Notify Users when a password reset has been requested.](./configuring-a-virtual-instance-email-settings/images/06.png)
+![Notify Users when a password reset has been requested.](./email-settings/images/06.png)

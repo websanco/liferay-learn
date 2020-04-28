@@ -9,7 +9,7 @@ User Authentication contains two entries:
 - General
 - Reserved Credentials
 
-![Configure general authentication behavior and settings for external authentication systems.](./configuring-a-virtual-instance-user-authentication/images/01.png)
+![Configure general authentication behavior and settings for external authentication systems.](./user-authentication/images/01.png)
 
 ## General
 
@@ -39,6 +39,6 @@ By default, all settings are enabled. User authentication by email address is an
 
 The Reserved Credentials configuration entry specifies the screen names and email addresses Users aren't allowed to use. This prevents Users from creating IDs that look like administrative IDs or that have reserved words in their names. 
 
-![Configure the reserved credentials that Users cannot claim.](./configuring-a-virtual-instance-user-authentication/images/02.png)
+![Configure the reserved credentials that Users cannot claim.](./user-authentication/images/02.png)
 
 Learn to configure a third party authentication service or set up Single Sign On (SSO) in the [security documentation](../../installation-and-upgrades/securing-liferay). 
