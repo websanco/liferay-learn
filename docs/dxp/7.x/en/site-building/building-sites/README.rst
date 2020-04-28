@@ -8,6 +8,3 @@ Building Sites
 -  :doc:`/site-building/building-sites/site-hierarchies`
 -  :doc:`/site-building/building-sites/customizing-personal-sites`
 -  :doc:`/site-building/building-sites/importing-exporting-pages-and-content`
-
--  :doc:`/site-building/building-sites/adding-members-to-sites`
--  :doc:`/site-building/building-sites/creating-teams-for-sites`

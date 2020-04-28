@@ -2,6 +2,10 @@
 
 Site Templates define a preconfigured structure for a Site, which includes the pages, theme, content, layouts, page templates, applications and app configurations defined for each page. Changes made to a Site Template are automatically propagated to the sites that use it, unless specified otherwise.
 
+```note::
+  While Site Templates propagate changes to a Site, they should not be used as a means of propagating Site data. To propagate Site data, `export the data and import it into another Site <./importing-exporting-pages-and-content.md>`_ instead.
+```
+
 Three Site Templates are provided out-of-the-box:
 
 * **Blank Site:** Creates a Site that doesn't contain any pages or content.
@@ -12,7 +16,7 @@ Three Site Templates are provided out-of-the-box:
 
 ## Creating a Site from a Site Template
 
-To create a site using a Site Template, follow these steps:
+To create a Site using a Site Template, follow these steps:
 
 1. Open the Product Menu and go to *Control Panel* &rarr; *Sites* &rarr; *Sites*.
 
@@ -41,8 +45,8 @@ To create a site using a Site Template, follow these steps:
        To view a newly created *blank site*, you must first create a page for it. See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
     ```
 
-## Additional Information
+## Related Information
 
 * [Introduction to Site Building](../introduction-to-site-building.md)
-* Creating a Site Template
+* [Creating a Site Template](./building-sites-with-site-templates.md)
 * [Adding Members to Sites](./adding-members-to-sites.md)

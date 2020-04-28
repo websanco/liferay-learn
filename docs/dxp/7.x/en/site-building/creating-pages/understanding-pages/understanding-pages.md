@@ -83,6 +83,10 @@ Pages can also be created in a hierarchical fashion by creating Child Pages. Chi
 
 ![You can add a child Page to a top-level page to organize pages hierarchically.](./understanding-pages/images/06.png)
 
+```tip::
+  You can navigate among pages of a Site hierarchy with the Site Map application. A Site Administrator can configure a root page and a display depth. The display depth of the Site Map application determines how many levels of nested pages to display.
+```
+
 ## Related Information
 
 * [Adding a Page](../adding-pages/adding-a-page-to-a-site.md)
