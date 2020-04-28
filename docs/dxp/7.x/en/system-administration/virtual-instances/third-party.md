@@ -1,4 +1,4 @@
-# Configuring a Virtual Instance: Third Party
+#  Third Party
 
 The Third Party category specifies the maps API provider for geolocalized assets.  Choose OpenStreetMap or Google Maps as the maps API provider. 
 

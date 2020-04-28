@@ -1,4 +1,4 @@
-# Configuring a Virtual Instance: Infrastructure
+#  Infrastructure
 
 The Infrastructure category contains settings to specify which content types are validated during the Import/Export process and whether to delete temporary LAR files during the Import/Export process. 
 

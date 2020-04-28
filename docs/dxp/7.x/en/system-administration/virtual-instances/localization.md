@@ -1,4 +1,4 @@
-# Configuring a Virtual Instance: Localization
+#  Localization
 
 The Localization category contains these entries:
 

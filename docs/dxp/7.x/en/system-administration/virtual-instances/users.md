@@ -1,4 +1,4 @@
-# Configuring a Virtual Instance: Users
+#  Users
 
 The Users configuration defines the look and feel of the Personal Menu, the default user associations for Users, and defines whether specific fields are available when a new User creates an account. 
 
