@@ -19,7 +19,7 @@ The Account Created Notification entry defines the email templates, with and wit
 
 ## Email Sender
 
-The Email Sender entry specifies the virtual instance's administrative Name and Address for email notifications, declared as the `[$FROM_NAME$]` and `[$FROM_ADDRESS$]` variables respectively in the email templates. By default, they are from the [`admin.email.from.name` and `admin.email.from.address`](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Admin%20Portlet) portal properties. This name and email address appear in the *From* field in all email messages sent by the virtual instance. 
+The Email Sender entry specifies the virtual instance's administrative Name and Address for email notifications, declared as the `[$FROM_NAME$]` and `[$FROM_ADDRESS$]` variables respectively in the email templates. By default, they are from the `admin.email.from.name` and `admin.email.from.address` [portal properties](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Admin%20Portlet). This name and email address appear in the *From* field in all email messages sent by the virtual instance. 
 
 ![Configure the From name and address for system emails.](./email-settings/images/02.png)
 

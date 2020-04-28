@@ -13,6 +13,7 @@ Virtual Instances
    virtual-instances/analytics.md
    virtual-instances/localization.md
    virtual-instances/infrastructure.md
+   virtual-instances/third-party.md
 
 .. include:: /system-administration/virtual-instances/README.rst
    :start-line: 2

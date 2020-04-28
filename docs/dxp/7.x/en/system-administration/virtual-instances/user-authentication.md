@@ -41,4 +41,4 @@ The Reserved Credentials configuration entry specifies the screen names and emai
 
 ![Configure the reserved credentials that Users cannot claim.](./user-authentication/images/02.png)
 
-You can learn to configure a third party authentication service or set up Single Sign On (SSO) in the [security documentation](../../installation-and-upgrades/securing-liferay). 
+You can learn to configure a third party authentication service or set up Single Sign On (SSO) in the [security documentation](../../installation-and-upgrades/securing_liferay.rst). 
