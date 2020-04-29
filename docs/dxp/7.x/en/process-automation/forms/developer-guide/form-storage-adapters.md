@@ -10,13 +10,22 @@ com.liferay.dynamic.data.mapping.storage.DDMStorageAdapter
 
 The example storage adapter in this tutorial stores each Form Record in a simple file, stored on the file system.
 
-## Overview
+<!--
+Here, you'll learn how to create model listeners:
+
+1. [Examine a Running Model Listener](#examine-a-running-model-listener)
+1. [Identify a Model Class and Event](#identify-a-model-class-and-event)
+1. [Declare the Model](#declare-the-model)
+1. [Declare the Event](#declare-the-event)
+1. [Implement Your Business Logic](#implement-your-business-logic)
+1. [Deploy and Test](#deploy-and-test)
+-->
 
 1. [**Deploy an Example**](#deploy-an-example)
 1. [**Walk Through the Example**](#walk-through-the-example)
 1. [**Additional Information**](#additional-information)
 
-## Deploy an Example
+## Examine a Running DDM Storage Adapter
 
 To get an example product type up and running on your instance of Liferay DXP,
 
@@ -32,9 +41,6 @@ To get an example product type up and running on your instance of Liferay DXP,
     docker start -a [container_name] 
     ```
 
-    If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly.
-
-<!-- test once fully created -->
 1. Download and unzip [the DDM File System Storage Adapter project](./liferay-r2f1.zip).
 
     ```bash
@@ -61,9 +67,9 @@ To get an example product type up and running on your instance of Liferay DXP,
 
 1. Verify that the example storage adapter is working. Begin by opening your browser to `https://localhost:8080`
 
-1.  Go to the Forms application in _Site Menu_ &rarr; _Content_ &rarr; _Forms_.
+1. Go to the Forms application in _Site Menu_ &rarr; _Content_ &rarr; _Forms_.
 
-1.  Click the *Add* button ![Add](./../../../images/icon-add.png) to open the Form Builder.
+1. Click the *Add* button ![Add](./../../../images/icon-add.png) to open the Form Builder.
 
 1. In the Form Builder view, click the *Options* button (![Options](./../../../images/icon-options.png)) and open the *Settings* window. 
 
@@ -88,7 +94,7 @@ To get an example product type up and running on your instance of Liferay DXP,
 
 Now that you verified that the example behaves properly, enter the deep end to learn more.
 
-## Walk Through the Example
+## Understanding the DDM Storage Adapter
 
 The deployed example contains just one class: `DDMFileSystemStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries on the File System.
 
@@ -116,9 +122,22 @@ The `property = "ddm.storage.adapter.type=file"` provides an identifier so that 
 private DDMStorageAdapter fileSystemDDMStorageAdapter;
 ```
 
-### Review the DDM Storage Adapter Interface
+### The Storage Adapter's Calling Context
 
-You must implement three methods: `delete`, `get`, and `save`.
+The Forms application's service code looks up the appropriate storage adapter, and calls its storage logic against the `DDMFormInstanceRecord` being handled.
+
+From `DDMFormInstanceRecordLocalServiceImpl`:
+
+```java
+DDMStorageAdapter ddmStorageAdapter = getDDMStorageAdapter();
+
+DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
+    ddmStorageAdapter.save(ddmStorageAdapterSaveRequest);
+```
+
+### The DDM Storage Adapter Interface
+
+To creae your own storage adapter you must implement three methods: `delete`, `get`, and `save`.
 
 ```java
 public DDMStorageAdapterDeleteResponse delete(
@@ -147,22 +166,9 @@ Each method of the storage adapter is passed a very useful `DDMStorageAdapter[Sa
 
 <!-- link to javadoc when available See [DDMStorageAdapter Request Getters](#ddmStorageAdapter-request-getters) for a reference on these getters. -->
 
-#### The Storage Adapter's Calling Context
+## Exploring the File System DDM Storage Adapter Implementation
 
-The Forms application's service code looks up the appropriate storage adapter, and calls its storage logic against the `DDMFormInstanceRecord` being handled.
-
-From `DDMFormInstanceRecordLocalServiceImpl`:
-
-```java
-DDMStorageAdapter ddmStorageAdapter = getDDMStorageAdapter();
-
-DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
-    ddmStorageAdapter.save(ddmStorageAdapterSaveRequest);
-```
-
-### Complete the DDM Storage Adapter
-
-#### Implement the `delete` Method
+### Implement the `delete` Method
 
 Put form record deletion logic in the `delete` method.
 
@@ -210,7 +216,7 @@ After dealing with the file storage scenario, this code does the same thing the 
 
 Since there's no serialization or deserialization involved with deletion you can use the default storage adapter's basic deletion code in most cases, unless you require some custom deletion logic for your use case.
 
-#### Implement the `get` Method
+### Implement the `get` Method
 
 Put form record retrieval logic in the `get` method.
 
@@ -279,7 +285,7 @@ protected DDMFormValues deserialize(String content, DDMForm ddmForm) {
 
 It calls the `DDMFormValuesDeserializer` for this. Liferay DXP provides a [JSON deserializer](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java). If you need different deserialization logic for your storage adapter, you'll need to provide your own deserialization code. As you might imagine, you'll also need serialization logic when first saving a Form Record into your preferred storage format. There's a [JSON implementation](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) of the `DDMFormValuesSerializer` in Liferay DXP.
 
-#### Implement the `save` Method
+### Implement the `save` Method
 
 Because Form Records are autosaved to avoid data loss, each save request will be one of two types: a new record is being added or an existing record is being updated.
 
@@ -392,7 +398,7 @@ Implement `writeDestination` to update the main asset when a user clicks a link 
 In addition to re-sending the qeury re-populating the Similar Results list, replace the `urlTitle` in each result with the appropriate ID for each entry.
 <!-- My code, copied from blogs example, has a bug and doesn't do this currently. It keeps the url of the current main asset for some reason -->
 
-#### Declare the Service Dependencies
+### Declare the Service Dependencies
 
 This code relies on several services deployed to an OSGi container:
 

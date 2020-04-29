@@ -2,7 +2,9 @@ Developer Guide
 ===============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-.. include:: /process-automation/01-forms/02-developer-guide/README.rst
+   developer-guide/form-storage-adapters.md
+
+.. include:: /process-automation/forms/developer-guide/README.rst
    :start-line: 2
