@@ -68,7 +68,7 @@ It is possible to create and deploy multiple Portal Properties override files at
 1. `${Liferay Home}/portal.properties`
 1. `portal-impl.jar/portal.properties`
 
-This ordering itself can be changed and configured by setting DXP's [`include-and-override`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Properties%20Override) Portal Property.
+This ordering itself can be changed and configured by setting DXP's [`include-and-override`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Properties%20Override) portal property. Note that if a properties file specifies a value for a portal property and includes another properties file that also specifies a value for the same portal property, the value in the included properties value takes precedence. For example, suppose that a `portal-ext.properties` specifies `module.framework.properties.osgi.console=localhost:11312` and also specifies `include-and-override=portal-developer.properties`. And suppose that the `portal-developer.properties` files specifies `module.framework.properties.osgi.console=localhost:11311`. In this case, `module.framework.properties.osgi.console=localhost:11311` will be applied since this is the value in the *included* properties file.
 
 ```note::
    We recommend using as few properties files as necessary to simplify configuration management for a DXP installation.
