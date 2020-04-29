@@ -37,7 +37,7 @@ Developer Guide
 * Managing Data Record Collections
 * Managing Data Records
 * Managing Data Layouts
--  :doc:`/process-automation/forms/developer-guide/form-storage-adapters`
+-  :doc:`/process-automation/forms/developer-guide/writing-a-form-storage-adapter`
 
 APIs
 ----
