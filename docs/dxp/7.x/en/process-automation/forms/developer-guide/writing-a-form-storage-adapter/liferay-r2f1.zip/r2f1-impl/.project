@@ -2,50 +2,56 @@
 <projectDescription>
 	<name>r2f1-impl</name>
 	<comment>Liferay Learn R2F1 Knowledge Base Similar Results Contributor</comment>
-	<projects/>
-	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>com.liferay.ide.core.liferayNature</nature>
-	</natures>
+	<projects>
+	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments/>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
+			<arguments>
+			</arguments>
 		</buildCommand>
 	</buildSpec>
-	<linkedResources/>
-	<filteredResources/>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.liferay.ide.core.liferayNature</nature>
+		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
+	</natures>
 	<filteredResources>
 		<filter>
 			<id>1588023217202</id>
-			<name/>
+			<name></name>
 			<type>26</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.orFilterMatcher</id>
 				<arguments>
 					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-name-matches-false-false-.git</arguments>
-						<id>org.eclipse.ui.ide.multiFilter</id>
 					</matcher>
 					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-name-matches-false-false-.gradle</arguments>
-						<id>org.eclipse.ui.ide.multiFilter</id>
 					</matcher>
 					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-name-matches-false-false-build</arguments>
-						<id>org.eclipse.ui.ide.multiFilter</id>
 					</matcher>
 					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-name-matches-false-false-node_modules</arguments>
-						<id>org.eclipse.ui.ide.multiFilter</id>
 					</matcher>
 					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-name-matches-false-false-node_modules_cache</arguments>
-						<id>org.eclipse.ui.ide.multiFilter</id>
 					</matcher>
 					<matcher>
-						<arguments>1.0-name-matches-false-false-tmp</arguments>
 						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-name-matches-false-false-tmp</arguments>
 					</matcher>
 				</arguments>
 			</matcher>

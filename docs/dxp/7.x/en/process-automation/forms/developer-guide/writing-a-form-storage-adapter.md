@@ -8,26 +8,11 @@ com.liferay.dynamic.data.mapping.storage.DDMStorageAdapter
 
 ![Use a DDM Storage Adapter to add a Storage Type to the Forms application.](./writing-a-form-storage-adapter/images/01.png)
 
-The example storage adapter in this tutorial stores each Form Record in a simple file, stored on the file system.
-
-<!--
-Here, you'll learn how to create model listeners:
-
-1. [Examine a Running Model Listener](#examine-a-running-model-listener)
-1. [Identify a Model Class and Event](#identify-a-model-class-and-event)
-1. [Declare the Model](#declare-the-model)
-1. [Declare the Event](#declare-the-event)
-1. [Implement Your Business Logic](#implement-your-business-logic)
-1. [Deploy and Test](#deploy-and-test)
--->
-
-1. [**Deploy an Example**](#deploy-an-example)
-1. [**Walk Through the Example**](#walk-through-the-example)
-1. [**Additional Information**](#additional-information)
+The example storage adapter in this tutorial provides the [default storage adapter's](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) logic, to save form records in the Liferay DXP database as JSON content, but also adds logic to store each Form Record in a simple file on the file system.
 
 ## Examine a Running DDM Storage Adapter
 
-To get an example product type up and running on your instance of Liferay DXP,
+To get the example storage adapter up and running,
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
@@ -77,29 +62,25 @@ To get an example product type up and running on your instance of Liferay DXP,
 
 1. Add a [Text Field](./../user-guide/creating-forms.md) to the form, publish the form, and submit it a couple times.
 
-![The File System storage adapter stores forms entries on your local system.](./writing-a-form-storage-adapter/images/02.png)
-<!-- take screenshot -->
-
-1. To verify the files were written to `/opt/liferay/form-records/`, execute a `find` and `cat` to print them to the Docker command line:
+1. To verify the form record files were written in the container, execute a `find` and `cat` via `docker exec` to print the file contents to the command line:
 
    ```bash
    docker exec -it lrdev find /opt/liferay/form-records -type f -exec cat {} +
    ```
 
-    If you named the container something other than `lrdev`, subsitute it in the above command. The JSON for each form record stored in a file is printed to the command prompt:
+    The JSON for each form record file is printed to the command line:
 
     ```json
-    {"availableLanguageIds":["en_US"],"defaultLanguageId":"en_US","fieldValues":[{"instanceId":"d0bVzHXG","name":"PetsFavoriteWine","value":{"en_US":"white zinfandel"}}]}{"availableLanguageIds":["en_US"],"defaultLanguageId":"en_US","fieldValues":[{"instanceId":"TUgzhNPd","name":"PetsFavoriteWine","value":{"en_US":"chardonnay"}}]}
+    {"availableLanguageIds":["en_US"],"defaultLanguageId":"en_US","fieldValues":[{"instanceId":"d0bVzHXG","name":"PetsFavoriteWine","value":{"en_US":"white zinfandel"}}]}
     ```
-
-Now that you verified that the example behaves properly, enter the deep end to learn more.
 
 ## Understanding the DDM Storage Adapter
 
 The deployed example contains just one class: `DDMFileSystemStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries on the File System.
 
-* [Annotate the Contributor Class for OSGi Registration](#annotate-the-contributor-class-for-osgi-registration)
+* [Annotate the Adapter Class for OSGi Registration](#annotate-the-adapter-class-for-osgi-registration)
 * [Review the `DDMStorageAdapter` Interface](#review-the-ddm-storage-adapter-interface)
+* [Understand the Storage Adapter Calling Context](#understand-the-storage-adapter-calling-context)
 
 ### Annotate the Contributor Class for OSGi Registration
 
@@ -122,7 +103,7 @@ The `property = "ddm.storage.adapter.type=file"` provides an identifier so that 
 private DDMStorageAdapter fileSystemDDMStorageAdapter;
 ```
 
-### The Storage Adapter's Calling Context
+### Understand the Storage Adapter Calling Context
 
 The Forms application's service code looks up the appropriate storage adapter, and calls its storage logic against the `DDMFormInstanceRecord` being handled.
 
@@ -135,9 +116,9 @@ DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
     ddmStorageAdapter.save(ddmStorageAdapterSaveRequest);
 ```
 
-### The DDM Storage Adapter Interface
+### Review the DDM Storage Adapter Interface
 
-To creae your own storage adapter you must implement three methods: `delete`, `get`, and `save`.
+To create your own storage adapter you must implement three methods: `delete`, `get`, and `save`.
 
 ```java
 public DDMStorageAdapterDeleteResponse delete(
@@ -164,7 +145,7 @@ method.
 
 Each method of the storage adapter is passed a very useful `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information. 
 
-<!-- link to javadoc when available See [DDMStorageAdapter Request Getters](#ddmStorageAdapter-request-getters) for a reference on these getters. -->
+<!-- link to javadoc when available -->
 
 ## Exploring the File System DDM Storage Adapter Implementation
 
@@ -174,7 +155,6 @@ Put form record deletion logic in the `delete` method.
 
 The `delete` method takes a `DDMStorageAdapterDeleteRequest`. The interface demands that you return a `DDMStorageAdapterDeleteResponse` and handle `StorageException`s.
 
-<!-- Change to our example and explain more if needed; review other dev tutorials to see how much explanation is given-->
 The default storage adapter's implementation:
 
 ```java
@@ -202,7 +182,7 @@ public DDMStorageAdapterDeleteResponse delete(
 }
 ```
 
-The first thing accomplished is to call a utility method, `deleteFile`:
+The first thing to note is the call to the `deleteFile` utility method:
 
 ```java
 private void deleteFile(long fileId) {
@@ -270,7 +250,7 @@ private void getFile(long fileId) throws IOException {
 To do the deserialization of the `DDMContent` you can use a `deserialize` utility method. This is what it looks like for the default storage adapter.
 
 ```java
-protected DDMFormValues deserialize(String content, DDMForm ddmForm) {
+private DDMFormValues deserialize(String content, DDMForm ddmForm) {
     DDMFormValuesDeserializerDeserializeRequest.Builder builder =
         DDMFormValuesDeserializerDeserializeRequest.Builder.newBuilder(
             content, ddmForm);
@@ -283,7 +263,7 @@ protected DDMFormValues deserialize(String content, DDMForm ddmForm) {
 }
 ```
 
-It calls the `DDMFormValuesDeserializer` for this. Liferay DXP provides a [JSON deserializer](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java). If you need different deserialization logic for your storage adapter, you'll need to provide your own deserialization code. As you might imagine, you'll also need serialization logic when first saving a Form Record into your preferred storage format. There's a [JSON implementation](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) of the `DDMFormValuesSerializer` in Liferay DXP.
+It calls the `DDMFormValuesDeserializer` for this. Liferay DXP provides a [JSON deserializer](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java). If you need different deserialization logic for your storage adapter, you'll need to provide your own deserialization code. As you might imagine, you'll also need corresponding serialization logic for saving a Form Record into your preferred storage format. There's a [JSON implementation](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) of the `DDMFormValuesSerializer` included in Liferay DXP.
 
 ### Implement the `save` Method
 
@@ -291,7 +271,7 @@ Because Form Records are autosaved to avoid data loss, each save request will be
 
 The `save` method takes a `DDMStorageAdapterSaveRequest`. The interface demands that you return a `DDMStorageAdapterSaveResponse` and handle `StorageException`s.
 
-The default JSON implementation responds differently depending on the value of a boolean value stored in the save request, `isInsert`. If true, logic for adding a new form record is invoked, and if false, an update is precipitated instead. This logic is contained in two protected methods, `insert` and `update`. The File System example preserves this logic and adds calls to its `saveFile` utility method for writing a file with the `storageId` as the filename and the `DDMContent` (in JSON) as the file contents.
+The default JSON implementation responds differently depending on the value of a boolean value stored in the save request, `isInsert`. If true, logic for adding a new form record is invoked, and if false, an update is precipitated instead. This logic is contained in two the methods `insert` and `update`. The File System example preserves this logic and adds calls to its `saveFile` utility method for writing a file with the `storageId` as the filename and the `DDMContent` (in JSON) as the file contents.
 
 ```java
 @Override
@@ -306,9 +286,9 @@ public DDMStorageAdapterSaveResponse save(
     return update(ddmStorageAdapterSaveRequest);
 }
 
-protected DDMStorageAdapterSaveResponse insert(
+private DDMStorageAdapterSaveResponse insert(
         DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
-    throws StorageException {
+    throws PortalException, StorageException {
 
     DDMFormValues ddmFormValues =
         ddmStorageAdapterSaveRequest.getDDMFormValues();
@@ -331,23 +311,32 @@ protected DDMStorageAdapterSaveResponse insert(
             DDMStorageAdapterSaveResponse.Builder.newBuilder(
                 ddmContent.getPrimaryKey());
 
-        return builder.build();
+        DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
+            builder.build();
+
+
+        long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
+
+        saveFile(fileId, ddmFormValues);
+
+        return ddmStorageAdapterSaveResponse;
     }
     catch (Exception e) {
         throw new StorageException(e);
     }
 }
 
-protected DDMStorageAdapterSaveResponse update(
+private DDMStorageAdapterSaveResponse update(
         DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
     throws StorageException {
+
+    DDMFormValues ddmFormValues =
+        ddmStorageAdapterSaveRequest.getDDMFormValues();
 
     try {
         DDMContent ddmContent = ddmContentLocalService.getContent(
             ddmStorageAdapterSaveRequest.getPrimaryKey());
 
-        /* The modified date is set here instead of in the service layer.
-        */
         ddmContent.setModifiedDate(new Date());
 
         ddmContent.setData(
@@ -362,14 +351,37 @@ protected DDMStorageAdapterSaveResponse update(
             DDMStorageAdapterSaveResponse.Builder.newBuilder(
                 ddmContent.getPrimaryKey());
 
-        return builder.build();
+        DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
+            builder.build();
+
+        long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
+
+        saveFile(fileId, ddmFormValues);
+
+        return ddmStorageAdapterSaveResponse;
     }
     catch (Exception e) {
         throw new StorageException(e);
     }
 }
 
-protected String serialize(DDMFormValues ddmFormValues) {
+private void saveFile(long fileId, DDMFormValues formValues)
+    throws IOException {
+
+    try {
+        String serializedDDMFormValues = serialize(formValues);
+
+        File abstractFile = new File(String.valueOf(fileId));
+
+        FileUtil.write(
+            _PATHNAME, abstractFile.getName(), serializedDDMFormValues);
+    }
+    catch (IOException e) {
+        throw new IOException(e);
+    }
+}
+
+private String serialize(DDMFormValues ddmFormValues) {
     DDMFormValuesSerializerSerializeRequest.Builder builder =
         DDMFormValuesSerializerSerializeRequest.Builder.newBuilder(
             ddmFormValues);
@@ -380,23 +392,9 @@ protected String serialize(DDMFormValues ddmFormValues) {
 
     return ddmFormValuesSerializerSerializeResponse.getContent();
 }
-```java
-@Override
-public void writeDestination(DestinationBuilder destinationBuilder, DestinationHelper destinationHelper) {
-
-    String urlTitle = (String)destinationHelper.getRouteParameter(
-        "urlTitle");
-
-    AssetRenderer<?> assetRenderer = destinationHelper.getAssetRenderer();
-
-    destinationBuilder.replace(urlTitle, assetRenderer.getUrlTitle());
-}
 ```
 
-Implement `writeDestination` to update the main asset when a user clicks a link in the Similar Results widget. The More Like This query is re-sent to thes earch engine, and the Similar Results list is re-rendered to match the new main asset. The entirety of the work here is to replace the ID in the original URL for each similar result (to render the clickable links)
-
-In addition to re-sending the qeury re-populating the Similar Results list, replace the `urlTitle` in each result with the appropriate ID for each entry.
-<!-- My code, copied from blogs example, has a bug and doesn't do this currently. It keeps the url of the current main asset for some reason -->
+The `serialize` method returns a String of the serialized form record content (JSON, for this case).
 
 ### Declare the Service Dependencies
 
@@ -404,46 +402,36 @@ This code relies on several services deployed to an OSGi container:
 
 `DDMContentLocalService`, a `DDMFormValuesSerializer` implementation, and a `DDMFormValuesDeserializer`implementation. Declare your need for them using the Declarative Services `@Reference` annotation, provided by `org.osgi.service.component.annotations.Reference`. Set them into private fields.
 
-<!-- update the references when we write our example -->
 ```java
 @Reference
 private DDMContentLocalService ddmContentLocalService;
 
-@Reference(target = "(ddm.form.values.deserializer.type=json)")
-private DDMFormValuesDeserializer jsonDDMFormValuesDeserializer;
+@Reference
+private DDMFormValuesDeserializerTracker ddmFormValuesDeserializerTracker;
 
-@Reference(target = "(ddm.form.values.serializer.type=json)")
-private DDMFormValuesSerializer jsonDDMFormValuesSerializer;
+@Reference
+private DDMFormValuesSerializerTracker ddmFormValuesSerializerTracker;
 ```
 
 ## Additional Information
 
 When a User adds a form record, the Forms API routes the processing of the request through a storage adapter API. The same is true for the other *CRUD* operations performed on form entries (read, update, and delete operations). The default implementation of the storage service is called `DDMJSONStorageAdapter`, and as its name implies, it implements the `DDMStorageAdapter` interface to provide JSON storage of form entry data.
 
-The Dynamic Data Mapping (DDM) backend can *adapt* to other data storage formats for form records. Want to store your data in XML? YAML? No problem. Because the storage API is separated from the regular service calls used to populate the database table for form entries, a developer can even choose to store form data outside the Liferay database.
-<!--A Diagram?-->
-
-Define your own format to save form entries by writing your own implementation of the `DDMStorageAdapter` interface. The interface follows the *CRUD* approach, so implementing it requires that you write methods to create, read, update and delete form values.
-
-> **Note:** The `StorageAdapter` interface and it's abstract implementation, `BaseStorageAdapter`, are deprecated in @product-ver@. Migrate existing code using these classes to implement the `DDMStorageAdapter` interface.
+The Dynamic Data Mapping (DDM) backend can *adapt* to other data storage formats for form records. Want to store your data in XML? YAML? No problem. Because the storage API is separated from the regular service calls used to populate the database table for form entries, you can even choose to store form data outside the Liferay database.
 
 A newly added storage adapter can only be used with new Forms. All existing Forms continue to use the adapter selected (JSON by default) at the time of their creation, and a different storage adapter cannot be selected.
 
-The example storage adapter in this tutorial serializes form data to be stored in a simple file, stored on the file system.
-
 ### Serializing and Deserializing Form Records
 
-The example here uses the JSON logic for serializing and deserializing the form record's content, and just shows storing the content in an alternate location: instead of the usual database storage, we're storing Form Records on the file system. Implementing your own serialization code to store `DDMContent` in a different format requires implementing some additional interfaces and more complete documentation for these extension points will be provided in the future to help round out this usage.
+The example here uses the logic for serializing and deserializing the form record's content to and from JSON, and shows storing the Form Records' content in an additional location: on the file system. Implementing your own serialization code to store `DDMContent` in a different format requires implementing some additional interfaces and more complete documentation for these extension points will be provided in the future to help round out this usage.
 
 **Serialization:** When you're saving `DDMcontent`, you need to transform the `DDMFormValues` object and transform it into the target storage format.
 
 **Deserialization:** When reading `DDMContent` (in the `get` method if the storage adapter), it must be transformed from the storage format back into a `DDMFormValues` object that the `DDMStorageAdapterGetResponse`'s `Builder` constructor requires.
 
-There's a `DDMFormValuesSerializer` interface to implement for this serialization logic, and a `DDMFormValuesDeserializer` interface to implement for the deserialization logic. Liferay's default implementations, which support transforming the `DDMFormValues` object to JSON and vice versa, can be found [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) and [here](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java), respectively.
-
-<!-- This is useful but maybe it's beeter as Javadoc? --> 
+There's a `DDMFormValuesSerializer` interface to implement for this serialization logic, and a `DDMFormValuesDeserializer` interface to implement for the deserialization logic. Liferay's default implementations, which support transforming the `DDMFormValues` object to JSON and vice versa, can be found [here](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) and [here](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java), respectively.
 
 ## Conclusion
 
-By implementing a `DDMFormStorageAdapter`, you can save forms records in any storage format you want.
+By implementing a `DDMStorageAdapter`, you can save forms records in any storage format you want.
 
