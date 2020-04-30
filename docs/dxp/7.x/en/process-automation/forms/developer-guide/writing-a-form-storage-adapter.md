@@ -26,7 +26,7 @@ To get the example storage adapter up and running,
     docker start -a [container_name] 
     ```
 
-1. Download and unzip [the DDM File System Storage Adapter project](./liferay-r2f1.zip).
+1. Download and unzip [the DDM File System Storage Adapter project](./writing-a-form-storage-adapter/liferay-r2f1.zip).
 
     ```bash
     curl https://learn.liferay.com/dxp-7.x/process-automation/forms/developer-guide/writing-a-form-storage-adapter/liferay-r2f1.zip -O
@@ -155,7 +155,7 @@ Put form record deletion logic in the `delete` method.
 
 The `delete` method takes a `DDMStorageAdapterDeleteRequest`. The interface demands that you return a `DDMStorageAdapterDeleteResponse` and handle `StorageException`s.
 
-The default storage adapter's implementation:
+The File System storage adapter's implementation:
 
 ```java
 @Override
