@@ -1,3 +1,74 @@
 # System Properties
 
-Coming soon!
+Settings that are not specific to DXP are configured using system properties. The application server and all of the web applications, including DXP can use them. They're different from [Portal Properties](./portal-properties.md), which configure DXP-specific settings. Here are some functionalities that system properties configure:
+
+* File encoding
+* Logging
+* Default XML parser configuration
+* JAXB context factory
+* Enabling JRuby native extensions
+
+The Java Virtual Machine (JVM) accepts system properties. The application server startup scripts pass in system properties as JVM arguments using this format:
+
+```
+-D[name1]=[value1] -D[name2]=[value2]
+```
+
+An application server's prescribed script is the safest place to add/modify system properties. It can be used to centralize the system properties. Passing all of the properties in as JVM arguments eliminates timing issues by setting all of properties at application server startup. The application server, DXP, and all other web applications can use the properties immediately.
+
+DXP uses the `portal-impl.jar/system.properties` file, however, as a convenience to set required properties. The properties are described at [`system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html). Also any system properties, including the `system.properties` can be extended or overridden using a `system-ext.properties` file. See [Using a `system-ext.properties` file](#using-a-system-ext-properties-file) for details.
+
+Here is DXP's logic for extending and overriding system properties:
+
+* DXP _extends_ properties using new properties in `system.properties` (and in `system-ext.properties`), unless the system property `system.properties.set` is `false`
+* DXP _overrides_ properties using new values in `system.properties` (and in `system-ext.properties`), unless the system property `system.properties.set.override` is `false`.
+
+```warning::
+   Setting or reseting system properties after application server startup has risks:
+
+   * If permissions are enabled on the application server, they may forbid changing system values.
+   * System properties are intended to be immutable. Another process on the application server can conceivably cache an initial property value before DXP resets the value. In such a case, the system attempts to operate with different values for the same property.
+```
+
+## Setting System Properties Directly
+
+An application server's prescribed script for setting system properties is the recommended place to add and modify properties:
+
+1. Disable using `system.properties` and `system-ext.properties` files by setting the following system properties as JVM arguments in the application server script:
+
+    ```
+    -Dsystem.properties.set=false -Dsystem.properties.set.override=false
+    ```
+
+1. Add each new property as JVM argument using the following format:
+
+    ```
+    -D[name]=[value]
+    ```
+
+1. Modify any existing properties.
+
+1. Restart the application server.
+
+The application server and DXP are using the new system properties.
+
+## Using a `system-ext.properties` File
+
+If you want to use DXP's `system.properties` file and you want to extend/override system properties, use a `system-ext.properties` file. Here are the steps:
+
+1. Stop the application server.
+
+1. Create a file called `system-ext.properties`.
+
+1. In `system-ext.properties`, add any new properties or new values for existing properties.
+
+1. Add the `system-ext.properties` file your application server class path by copying the file to the DXP application's `WEB-INF/classes` folder.
+
+1. Start the application server.
+
+Now you understand the purpose of system properties, you are familiar with DXP's default system properties, and you know how to extend and override system properties.
+
+## Additional Information
+
+* [7.2 System Properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/system.properties.html)
+* [Portal Properties](./portal-properties.md)
