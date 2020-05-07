@@ -1,6 +1,6 @@
 # System Properties
 
-Settings that are not specific to DXP are configured using system properties. The application server and all of the web applications, including DXP can use them. They're different from [Portal Properties](./portal-properties.md), which configure DXP-specific settings. Here are some functionalities that system properties configure:
+DXP runs in the application server's JVM. JVM's accept system properties. They can be passed in as arguments to `java` and loaded via properties files. Settings that are not specific to DXP are configured using system properties. The application server and all of the web applications, including DXP can use them. They're different from [Portal Properties](./portal-properties.md), which configure DXP-specific settings. Here are some functionalities that system properties configure:
 
 * File encoding
 * Logging
@@ -8,15 +8,15 @@ Settings that are not specific to DXP are configured using system properties. Th
 * JAXB context factory
 * Enabling JRuby native extensions
 
-The Java Virtual Machine (JVM) accepts system properties. The application server startup scripts pass in system properties as JVM arguments using this format:
+System properties specified as JVM arguments use this format:
 
 ```
 -D[name1]=[value1] -D[name2]=[value2]
 ```
 
-An application server's prescribed script is the safest place to add/modify system properties. It can be used to centralize the system properties. Passing all of the properties in as JVM arguments eliminates timing issues by setting all of properties at application server startup. The application server, DXP, and all other web applications can use the properties immediately.
+Your application server's prescribed script is the safest place to add/modify system properties. It can be used to centralize the system properties. Passing all of the properties in as JVM arguments eliminates timing issues by setting all of properties at application server startup. The application server, DXP, and all other web applications can use the properties immediately.
 
-DXP uses the `portal-impl.jar/system.properties` file, however, as a convenience to set required properties. The properties are described at [`system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html). Also any system properties, including the `system.properties` can be extended or overridden using a `system-ext.properties` file. See [Using a `system-ext.properties` file](#using-a-system-ext-properties-file) for details.
+DXP uses the `portal-impl.jar/system.properties` file, however, as a convenience to set required properties. The properties are described at [`system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html). Also any system properties, including the `system.properties` can be extended or overridden using a `system-ext.properties` file. System properties files are loaded by the [Portal application class loader](https://help.liferay.com/hc/en-us/articles/360035828131-Liferay-Portal-Classloader-Hierarchy). See [Using a `system-ext.properties` file](#using-a-system-ext-properties-file) for details.
 
 Here is DXP's logic for extending and overriding system properties:
 
@@ -29,6 +29,11 @@ Here is DXP's logic for extending and overriding system properties:
    * If permissions are enabled on the application server, they may forbid changing system values.
    * System properties are intended to be immutable. Another process on the application server can conceivably cache an initial property value before DXP resets the value. In such a case, the system attempts to operate with different values for the same property.
 ```
+
+Here both ways of specified system properties are demonstrated:
+
+* [Setting System Properties Directly](#setting-system-properties-directly)
+* [Using a `system-ext.properties` File](#using-a-system-ext-properties-file)
 
 ## Setting System Properties Directly
 
@@ -49,6 +54,18 @@ An application server's prescribed script for setting system properties is the r
 1. Modify any existing properties.
 
 1. Restart the application server.
+
+    Stop the server:
+
+    ```bash
+    [Liferay Home]/[App Server]/bin/shutdown.sh
+    ```
+
+    Start the server:
+
+    ```bash
+    [Liferay Home]/[App Server]/bin/startup.sh
+    ```
 
 The application server and DXP are using the new system properties.
 
