@@ -19,8 +19,8 @@ A Portal Properties extension file is the most common and recommended way to con
 **Contents:**
 
 * [Using Portal Properties](#using-portal-properties)
-* [Understanding Configuration Priority](#understanding-configuration-priority)
-* [Configuration via System Settings and Configuration Files](#property-configuration-via-system-settings)
+* [Portal Property Priority](#portal-property-priority)
+* [Using System Settings and Configuration Files](#using-system-settings-and-configuration-files)
 
 ## Using Portal Properties
 
@@ -65,25 +65,47 @@ company.security.auth.type=screenName
 company.security.auth.type=userId
 ```
 
-## Understanding Configuration Priority
+## Portal Property Priority
 
-Some use cases involve multiple extension files.
+Some use cases involve multiple properties sources.
 
-* The Setup Wizard creates a `portal-setup-wizard.properties` file and you want to use a `portal-ext.properties` file to add/override properties.
-* You want to add/override properties without modifying your `portal-ext.properties` file. For example, you want to temporarily use developer property via an additional extension file.
+* Using the Setup Wizard (which creates a `portal-setup-wizard.properties` file) and using a `portal-ext.properties` file to add/override properties.
+* Creating an environment-specific configuration by using an extension file in addition to a `portal-ext.properties` file.
 
-If you use multiple extension files that that specify the same property, it's important to understand which property setting is prioritized. An overview of the configuration process and some examples are the best way to learn how properties are prioritized.
+If you use multiple extension files that specify the same property, it's important to understand which property setting is prioritized. The following topics summarize, explain, and demonstrate how portal property settings are prioritized.
+
+1. [Key Points](#key-points)
+1. [Understanding Configuration Processing](#understanding-configuration-processing)
+1. [Portal Property Priority Examples](#portal-property-priority-examples)
+
+### Key Points
+
+These key points summarize how portal properties are defined and prioritized:
+
+1. Portal properties sources include:
+
+    * The `portal-impl.jar/portal.properties` file
+    * Extension properties files
+    * Liferay Docker Env variables
+
+1. The first value read for a *shared property* (a property defined multiple times) takes priority.
+
+1. Properties sources are read in a deterministic order. See [Properties Source Order](#properties-source-order) for details.
+
+[Understanding Configuration Processing](#understanding-configuration-processing) (next) describes the the initial property source list, explains how property sources are added, and demonstrates how to determine property source order and property priority.
+
+### Configuration Processing
 
 The configuration process has two phases.
 
 1. [Create the List of Property Sources](#phase-1-create-the-list-of-property-sources)
-2. [Process the Properties](#phase-2-process-the-properties)
+1. [Process the Properties](#phase-2-process-the-properties)
 
-These phases are executed in the context of DXP's `portal-impl.jar/portal.properties` file, which specifies the initial list of other properties files to include and specifies the default property values.
+These phases are executed in the context of DXP's `portal-impl.jar/portal.properties` file, which  specifies the default property settings and the initial list of extension files to include.
 
-### Phase 1: Create the List of Property Sources
+#### Phase 1: Create the List of Property Sources
 
-First DXP creates a list of all the Portal Properties sources. The `portal-impl.jar/portal.properties` file is the first source added. The properties files that `portal-impl.jar/portal.properties` specifies via [`include-and-override`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html#Properties%20Override) properties are added next. Here are those `include-and-override` definitions:
+First DXP creates a list of all the Portal Properties sources. The `portal-impl.jar/portal.properties` file is the first source added. The extension files that `portal-impl.jar/portal.properties` specifies via [`include-and-override`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html#Properties%20Override) properties are added next. Here are those `include-and-override` definitions:
 
 ```properties
 include-and-override=portal-bundle.properties
@@ -96,17 +118,17 @@ include-and-override=${external-properties}
 include-and-override=${liferay.home}/${external-properties}
 ```
 
-DXP checks each of the above properties files for additional `include-and-override` properties. The process adds the properties files as sources if it encounters any.
+DXP checks each of the above extension files for additional `include-and-override` definitions. The process adds any extension files found as portal properties sources.
 
-In light of this recursive process, it's comforting to know that the only `include-and-override` definitions you have to worry about are the ones in `portal-impl.jar/portal.properties` and any that you (or your teammates) add to the extension files.
+In light of this recursive process, it's comforting to know that the only `include-and-override` definitions you have to worry about are the ones that are in `portal-impl.jar/portal.properties` and any that you (or your teammates) add to the extension files it includes.
 
-![The list of included properties files used by your DXP server is available in the Server Administration page of the Control Panel's Configuration section](./portal-properties/images/01.png)
+![The list of included extension files your DXP server is using is available in the Server Administration page of the Control Panel's Configuration section](./portal-properties/images/01.png)
 
-DXP scans [Liferay Home](./liferay-home.md) for the `include-and-override` files whose path starts with `${liferay.home}/` and scans your home folder (for example, `/home/$USER`) for files specified by a relative path or file name. `${external-properties}` represents any properties file assigned to DXP's Java property `external-properties` (for example, `java -Dexternal-properties=some.properties`).
+DXP scans [Liferay Home](./liferay-home.md) for the `include-and-override` files whose path starts with `${liferay.home}/` and scans your home folder (for example, `/home/$USER`) for files specified by file name or a relative path. `${external-properties}` represents any properties file assigned to DXP's Java property `external-properties` (for example, `-Dexternal-properties=some.properties`).
 
 If you're using a Liferay Docker container, any Liferay Env variables you specify are aggregated into a Portal Properties source that's added to the list.<!--TODO Link to docker docs when they're published. jhinkey -->
 
-Here's the potential list of Portal Property sources:
+Here's the potential list of Portal Properties sources:
 
 ```properties
 portal-impl.jar/portal.properties
@@ -122,11 +144,11 @@ include-and-override=${liferay.home}/${external-properties}
 [Liferay Docker Env variables]
 ```
 
-**Important:** DXP reverses the order of the sources and in essence processes the sources listed above from **bottom to top**.
+**Important:** DXP **reverses** the initial properties source order (shown above) and in essence processes the sources listed above from bottom to top.
 
 #### Properties Source Order
 
-DXP processes the sources in this order:
+DXP reverses the initial properties source order and reads the sources in this order:
 
 1. [Liferay Docker Env variables]
 1. [Added `include-and-override` files]
@@ -140,21 +162,25 @@ DXP processes the sources in this order:
 1. `[User Home]/portal-bundle.properties`
 1. `portal-impl.jar/portal.properties`
 
-### Phase 2: Processing the Properties
+The properties source order dictates the priority of shared property settings.
 
-DXP parses the Portal Properties sources based on the [Properties Source Order](#properties-source-order) and assigns properties to the DXP configuration.
+#### Phase 2: Processing the Properties
 
-**Important:** A Portal Property is set only once---the first time it is read.
+DXP reads the Portal Properties sources based on the [Properties Source Order](#properties-source-order) and assigns properties to the DXP configuration.
 
-The [Properties Source Order](#properties-source-order) indicates that properties in the `portal-impl.jar/portal.properties` file have the lowest priority, and are overridden by properties of the same name defined in any of the other properties sources.
+```important::
+   Remember, a Portal Property is set only once---the first time it is read.
+```
+
+The [Properties Source Order](#properties-source-order) indicates that properties in the `portal-impl.jar/portal.properties` file have the lowest priority and they are overridden by properties of the same name defined in any of the other properties sources.
 
 ![All of your DXP server's Portal Properties are available to view in the Server Administration page in the Control Panel's Configuration section.](./portal-properties/images/02.png)
 
-The following examples demonstrate how properties sources and specific properties are used to configure DXP.
+The following examples demonstrate how properties sources and specific properties configure DXP.
 
 ### Example 1: Using `portal-ext.properties` to Override a Property
 
-If you've configured a mail session on your app server and it's named differently than the default in `portal-impl.jar/portal.properties` (it sets `mail.session.jndi.name=mail/MailSession`), specify your mail session name in a `portal-ext.properties` file.
+If you've configured a mail session on your application server and it's named differently than the default in `portal-impl.jar/portal.properties` (it sets `mail.session.jndi.name=mail/MailSession`), specify your mail session name in a `portal-ext.properties` file.
 
 New value in `portal-ext.properties`:
 
@@ -162,12 +188,12 @@ New value in `portal-ext.properties`:
 mail.session.jndi.name=mail/SomeMailSession
 ```
 
-Phase 1 - resulting properties source order:
+Resulting properties source order:
 
 1. `[Liferay Home]/portal-ext.properties`
 2. `portal-impl.jar/portal.properties`
 
-Phase 2 - resulting configuration:
+Resulting configuration:
 
 ```properties
 mail.session.jndi.name=mail/SomeMailSession
@@ -175,7 +201,7 @@ mail.session.jndi.name=mail/SomeMailSession
 
 ### Example 2: Adding a Properties File
 
-You can add a properties file for a specific environment, such as a development environment. This allows you to keep your `portal-ext.properties` as is, while adding or overriding properties to create an environment-specific configuration. Here are the steps:
+You can add a properties file for a specific environment, such as a development environment. This allows you to preserve your `portal-ext.properties` while adding or overriding properties for an environment-specific configuration. Here are the steps:
 
 1. Create an arbitrary extension file (e.g., `portal-development.properties`) for your environment and add environment-specific properties to it:
 
@@ -183,31 +209,33 @@ You can add a properties file for a specific environment, such as a development 
     mail.session.jndi.name=mail/DevMailSession
     ```
 
-1. Include the new extension file in your properties file list by adding the following entry to the top of your `portal-ext.properties` file:
+1. Include the new extension file as a properties source by adding this `include-and-override` property to the top of your `portal-ext.properties` file:
 
     ```properties
     include-and-override=portal-development.properties
     ```
 
-Phase 1 - Resulting properties source order:
+Resulting properties source order:
 
 1. `[Liferay Home]/portal-development.properties`
 1. `[Liferay Home]/portal-ext.properties`
 1. `portal-impl.jar/portal.properties`
 
-Phase 2 - Resulting configuration:
+Resulting configuration:
 
 ```properties
 mail.session.jndi.name=mail/DevMailSession
 ```
 
-```note::
-   We recommend using as few properties files as necessary to simplify configuration management for a DXP installation.
+```tip::
+   Using as few properties files as necessary simplifies managing DXP configuration.
 ```
 
-## Configuration Via System Settings and Configuration Files
+## Using System Settings and Configuration Files
 
-Some Portal Properties are available to change as [System Settings](../../system-administration/system-settings/system-settings.md), at *Control Panel* &rarr; *Configuration* &rarr; *System Settings* or in [`.config` files](../../system-administration/system-settings/understanding-configuration-files.md). These properties are stored in the DXP database. The SAML authentication properties, for example, are Portal Properties available in System Settings.
+Some Portal Properties can be set using [System Settings](../../system-administration/system-settings/system-settings.md) and [Configuration Files](../../system-administration/system-settings/understanding-configuration-files.md). The SAML authentication properties, for example, are Portal Properties available in System Settings.
+
+System Settings is available in the *Control Panel* at *Configuration* &rarr; *System Settings*. The System Settings can be exported as Configuration Files (`.config` files), for example, to save in source control and use in distributed DXP installations. Portal Properties set via System Settings and Configuration Files are stored in the DXP database. Some of the properties are applied immediately while others require restarting the server.
 
 ```important::
    Properties stored in the DXP database are prioritized over properties set in Portal Properties files.
