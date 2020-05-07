@@ -1,10 +1,10 @@
 # System Properties
 
-DXP runs in the application server's JVM. System properties can be passed directly to the JVM as arguments to `java` in the format `-D[name1]=[value1]` or can be loaded using DXP System Properties files. System properties are different from [Portal Properties](./portal-properties.md) in that they're used by the JVM.
+DXP runs in the application server's JVM. System properties can be passed directly to the JVM as arguments to `java` in the format `-D[name1]=[value1]` or can be loaded using DXP System Properties files. System properties are different from [Portal Properties](./portal-properties.md) in that they're available to the application server and all of its applications.
 
 Your application server's prescribed script is the safest place to add/modify system properties. It can be used to centralize the system properties. Passing all of the properties in as JVM arguments eliminates timing issues by setting all of properties at application server startup. The application server, DXP, and all other web applications can use the properties immediately.
 
-DXP uses the `portal-impl.jar/system.properties` file, however, as a convenience to set required properties. The properties are described at [`system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html). Also any system properties, including the `system.properties` can be extended or overridden using a `system-ext.properties` file. System properties files are loaded by the [Portal application class loader](https://help.liferay.com/hc/en-us/articles/360035828131-Liferay-Portal-Classloader-Hierarchy). See [Using a `system-ext.properties` file](#using-a-system-ext-properties-file) for details. Here are some functionalities that DXP configures using system properties:
+DXP uses the `portal-impl.jar/system.properties` file, however, as a convenience to set required properties. The properties are described at [`system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html). Also any system properties, including the `system.properties` can be extended or overridden using a `system-ext.properties` file. System properties files are loaded by the [Portal application class loader](https://help.liferay.com/hc/en-us/articles/360035828131-Liferay-Portal-Classloader-Hierarchy) after application server startup. Here are some functionalities that DXP configures using system properties:
 
 * File encoding
 * Logging
