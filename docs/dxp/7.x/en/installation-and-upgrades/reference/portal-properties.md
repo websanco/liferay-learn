@@ -75,7 +75,7 @@ Some use cases involve multiple properties sources.
 If you use multiple extension files that specify the same property, it's important to understand which property setting is prioritized. The following topics summarize, explain, and demonstrate how portal property settings are prioritized.
 
 1. [Key Points](#key-points)
-1. [Understanding Configuration Processing](#understanding-configuration-processing)
+1. [Configuration Processing](#configuration-processing)
 1. [Portal Property Priority Examples](#portal-property-priority-examples)
 
 ### Key Points
@@ -92,7 +92,7 @@ These key points summarize how portal properties are defined and prioritized:
 
 1. Properties sources are read in a deterministic order. See [Properties Source Order](#properties-source-order) for details.
 
-[Understanding Configuration Processing](#understanding-configuration-processing) (next) describes the the initial property source list, explains how property sources are added, and demonstrates how to determine property source order and property priority.
+[Configuration Processing](#configuration-processing) (next) describes the the initial property source list, explains how property sources are added, and demonstrates how to determine property source order and property priority.
 
 ### Configuration Processing
 
@@ -176,9 +176,11 @@ The [Properties Source Order](#properties-source-order) indicates that propertie
 
 ![All of your DXP server's Portal Properties are available to view in the Server Administration page in the Control Panel's Configuration section.](./portal-properties/images/02.png)
 
+### Portal Property Priority Examples
+
 The following examples demonstrate how properties sources and specific properties configure DXP.
 
-### Example 1: Using `portal-ext.properties` to Override a Property
+#### Example 1: Using `portal-ext.properties` to Override a Property
 
 If you've configured a mail session on your application server and it's named differently than the default in `portal-impl.jar/portal.properties` (it sets `mail.session.jndi.name=mail/MailSession`), specify your mail session name in a `portal-ext.properties` file.
 
@@ -199,7 +201,7 @@ Resulting configuration:
 mail.session.jndi.name=mail/SomeMailSession
 ```
 
-### Example 2: Adding a Properties File
+#### Example 2: Adding a Properties File
 
 You can add a properties file for a specific environment, such as a development environment. This allows you to preserve your `portal-ext.properties` while adding or overriding properties for an environment-specific configuration. Here are the steps:
 
