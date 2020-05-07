@@ -55,7 +55,7 @@ These warnings are caused by a known issue ([LPS-87421](https://issues.liferay.c
 
 If you're on Linux/UNIX and starting Liferay DXP on JDK 11 using an LCS 5.0.0 client, the following error can occur:
 
-```
+```message
 ERROR [LCS Worker 2][BaseScheduledTask:92] java.lang.reflect.InaccessibleObjectException: Unable to make public long com.sun.management.internal.OperatingSystemImpl.getOpenFileDescriptorCount() accessible: module jdk.management does not
  "opens com.sun.management.internal" to unnamed module @1a3325e5
 java.lang.reflect.InaccessibleObjectException: Unable to make public long com.sun.management.internal.OperatingSystemImpl.getOpenFileDescriptorCount() accessible: module jdk.management does not "opens com.sun.management.internal" to unnamed module @1a3325e5
