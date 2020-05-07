@@ -5,3 +5,4 @@ Developing Page Fragments Reference
    :maxdepth: 3
 
    reference/page-fragment-editor-interface-reference.md
+   reference/fragments-toolkit-command-reference.md
