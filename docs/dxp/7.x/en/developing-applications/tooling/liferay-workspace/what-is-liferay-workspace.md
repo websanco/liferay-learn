@@ -1,6 +1,6 @@
 # What is Liferay Workspace? 
 
-Liferay Workspace is a set of folders and Gradle scripts that represents the Liferay-opinionated way of handling a full development lifecycle:
+Liferay Workspace is a set of folders and Gradle scripts that represents the Liferay-opinionated way of handling a full development life cycle:
 
 - [Creating projects](#creating-projects)
 - [Building projects](#building-projects)
