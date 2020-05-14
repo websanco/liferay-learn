@@ -22,6 +22,10 @@ A Portal Properties extension file is the most common and recommended way to con
 * [Portal Property Priority](#portal-property-priority)
 * [Using System Settings and Configuration Files](#using-system-settings-and-configuration-files)
 
+```note::
+   As of DXP 7.3, the per-virtual instance portal properties file feature has been removed. DXP no longer applies per-instance properties from files of the format ``portal-[companyId].properties``) to instances matching the company IDs.
+```
+
 ## Using Portal Properties
 
 `[Liferay Home]/portal-ext.properties` is the most common extension file to use. If there is no `portal-ext.properties` file and you apply changes using the [Setup Wizard](../installing-liferay/running-liferay-dxp-for-the-first-time.md), DXP sets those properties in a file called `portal-setup-wizard.properties`.
