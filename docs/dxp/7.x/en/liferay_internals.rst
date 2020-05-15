@@ -8,6 +8,7 @@ Liferay Internals
    liferay-internals/customizing_the_core.rst
    liferay-internals/customizing_web_apis.rst
    liferay-internals/contributing_to_liferay_development.rst
+   liferay-internals/reference.rst
 
 .. raw:: html
    :file: landingpage_template.html
