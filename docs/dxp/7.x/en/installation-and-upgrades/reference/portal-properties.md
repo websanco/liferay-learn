@@ -28,7 +28,11 @@ A Portal Properties extension file is the most common and recommended way to con
 
 ## Using Portal Properties
 
-`[Liferay Home]/portal-ext.properties` is the most common extension file to use. If there is no `portal-ext.properties` file and you apply changes using the [Setup Wizard](../installing-liferay/running-liferay-dxp-for-the-first-time.md), DXP sets those properties in a file called `portal-setup-wizard.properties`.
+`[Liferay Home]/portal-ext.properties` is the most common extension file to use. A best practice for overriding properties is to copy the relevant section from `portal-impl.jar/portal.properties` into your `portal-ext.properties` file, and then modify the values in `portal-ext.properties`.
+
+```note::
+   If you use the `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_, DXP sets those properties in a file called `portal-setup-wizard.properties` in ``[Liferay Home]``.
+```
 
 Here are a few examples of configurations that can be set in an extension file.
 
