@@ -15,20 +15,20 @@ Here is how to configure the upgrade to migrate from sharding:
 1. Copy all of the shard JDBC connection properties from `portal-ext.properties` to`portal-upgrade-database.properties`. For example, JDBC connections for a default shard and two non-default shards might look like this:
 
     ```properties
-    jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.default.url=jdbc:mysql://database-server/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.default.username=
-    jdbc.default.password=
+    jdbc.default.driverClassName=[the database driver class name]
+    jdbc.default.url=[the URL to the default database shard]
+    jdbc.default.username=[the user name]
+    jdbc.default.password=[the password]
 
-    jdbc.one.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.one.url=jdbc:mysql://database-server/lportal_one?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.one.username=
-    jdbc.one.password=
+    jdbc.one.driverClassName=[the database driver class name]
+    jdbc.one.url=[the URL to database shard one]
+    jdbc.one.username=[the user name]
+    jdbc.one.password=[the password]
 
-    jdbc.two.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.two.url=jdbc:mysql://database-server/lportal_two?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.two.username=
-    jdbc.two.password=
+    jdbc.two.driverClassName=[the database driver class name]
+    jdbc.two.url=[the URL to database shard two]
+    jdbc.two.username=[the user name]
+    jdbc.two.password=[the password]
     ```
 
 1. Set the JDBC _default_ connection properties in each server's `portal-upgrade-database.properties` to specify the associated shard.
@@ -36,19 +36,19 @@ Here is how to configure the upgrade to migrate from sharding:
     * Add the original JDBC properties for the respective non-default shard database. For example, shard `one`'s original properties might start with `jdbc.one`:
 
     ```properties
-    jdbc.one.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.one.url=jdbc:mysql://database-server/lportal_one?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.one.username=
-    jdbc.one.password=
+    jdbc.one.driverClassName=[the database driver class name]
+    jdbc.one.url=[the URL to database shard one]
+    jdbc.one.username=[the user name]
+    jdbc.one.password=[the password]
     ```
 
     * Rename the properties to start with `jdbc.default`. For example:
 
     ```properties
-    jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.default.url=jdbc:mysql://database-server/lportal_one?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.default.username=
-    jdbc.default.password=
+    jdbc.default.driverClassName=[the database driver class name]
+    jdbc.default.url=[the URL to database shard one]
+    jdbc.default.username=[the user name]
+    jdbc.default.password=[the password]
     ```
 
 ## Upgrade and Update Properties
@@ -64,29 +64,29 @@ After the database upgrade has been completed, make the following configuration 
     Old JDBC properties:
 
     ```properties
-    jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.default.url=jdbc:mysql://database-server/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.default.username=
-    jdbc.default.password=
+    jdbc.default.driverClassName=[the database driver class name]
+    jdbc.default.url=[the URL to the default database shard]
+    jdbc.default.username=[the user name]
+    jdbc.default.password=[the password]
 
-    jdbc.one.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.one.url=jdbc:mysql://database-server/lportal_one?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.one.username=
-    jdbc.one.password=
+    jdbc.one.driverClassName=[the database driver class name]
+    jdbc.one.url=[the URL to database shard one]
+    jdbc.one.username=[the user name]
+    jdbc.one.password=[the password]
 
-    jdbc.two.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.two.url=jdbc:mysql://database-server/lportal_two?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.two.username=
-    jdbc.two.password=
+    jdbc.two.driverClassName=[the database driver class name]
+    jdbc.two.url=[the URL to database shard two]
+    jdbc.two.username=[the user name]
+    jdbc.two.password=v[the password]
     ```
 
     New JDBC properties:
 
     ```properties
-    jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
-    jdbc.default.url=jdbc:mysql://database-server/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-    jdbc.default.username=
-    jdbc.default.password=
+    jdbc.default.driverClassName=[the database driver class name]
+    jdbc.default.url=[the URL to your database]
+    jdbc.default.username=[the user name]
+    jdbc.default.password=[the password]
     ```
 
 Once you have completed all of these steps, you have migrated off of a sharded environment to virtual instances on separate Liferay DXP servers together with your DXP upgrade.
