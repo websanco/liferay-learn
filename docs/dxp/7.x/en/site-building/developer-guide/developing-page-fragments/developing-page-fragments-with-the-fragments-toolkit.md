@@ -26,17 +26,20 @@ First, deploy an example to see what a Fragment Collection looks like:
     unzip liferay-x2y6.zip
     ```
 
-1. Copy the Fragment Collection's ZIP to the Docker container. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
     
     ```bash
-    cd liferay-x2y6
-    docker cp liferay-fragments.zip docker-container-name:/opt/liferay/deploy
-    ```
-
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
-
-    ```bash
-    INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:263] Processing liferay-fragments.zip
+    cd liferay-x2y6/marketing-fragments
+    npm run import
+    ? Liferay host & port http://localhost:8080
+    ? Username test@liferay.com
+    ? Password [hidden]
+    
+    Checking connection...
+    Connection successful
+    
+    ? Company ID liferay.com
+    ? Group ID Liferay
     ```
 
 1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections.
@@ -86,7 +89,7 @@ The generated Fragment Collection has the project structure below. You can manua
 
 ## Add a New Collection and Fragment
 
-Follow these steps to add a new Fragment Collection with a new Fragment to the compressed ZIP:
+Follow these steps to add a new Fragment Collection with a new Fragment:
 
 1. Install the Fragments Generator using the instructions in the project's [README](https://github.com/liferay/generator-liferay-fragments/blob/master/README.md).
 1. Create a Collection for the Fragment(s) in the project with the `npm run add-collection` command and answer the prompts to provide a name and an optional description:
@@ -176,31 +179,13 @@ Follow these steps to add a new Fragment Collection with a new Fragment to the c
 
 ## Deploy and Test
 
-You can build and deploy the updated Fragments Zip as you did above:
+You can import the updated Fragments as you did above:
 
-1. Compress the Fragment Collections into a ZIP file and Press Enter to accept the defaults for the prompts to configure the ZIP for [auto-deployment](./auto-deploying-fragments.md):
+1. Run the import command and provide your credentials:
 
     ```bash
     cd marketing-fragments
-    npm run compress
-    
-    ? Add deployment descriptor? Yes
-    ? Deployment descriptor company Web ID? liferay.com
-    ? Deployment descriptor group key? Guest
-    ```
-    
-    This automatically imports the Fragment Collection into your server when you copy it to your Liferay DXP instance.
-
-1. Copy the Fragment Collection's ZIP to the Docker container. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
-    
-    ```bash
-    docker cp liferay-fragments.zip docker-container-name:/opt/liferay/deploy
-    ```
-
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
-
-    ```bash
-    INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:263] Processing liferay-fragments.zip
+    npm run import
     ```
 
 1. Verify that the new Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new Collection appears with the other Collections.
