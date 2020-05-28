@@ -1,16 +1,17 @@
-# Fragment Specific Tags Reference
+# Fragment Specific Tags and Attributes Reference
 
-Along with standard HTML, CSS, and JavaScript you can use Liferay-specific tags to make editable sections or embed widgets in your Fragment. Editable elements can be modified before publication, which means that you can create simple, reusable Fragments that have identical formatting, but contain elements that are adaptable to the specific context.
+Along with standard HTML, CSS, and JavaScript, you can use Liferay-specific tags and, since Liferay Portal CE 7.3 GA3 and Liferay DXP 7.3, attributes, to make editable sections or embed widgets in your Fragment. Editable elements can be modified before publication, which means that you can create simple, reusable Fragments that have identical formatting, but contain elements that are adaptable to the specific context.
 
-Page Fragments have access to four types of liferay-specific tags that add these features:
+Page Fragments have access to these types of liferay-specific tags and attributes that add these features:
 
 * Editable Text
 * Editable Images
 * Editable Links
+* Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)
 * Embedded Widgets
 
 ```note::
-    When you start typing the name of a tag, the `HTML editor <./developing-page-fragments-with-the-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
+  When you start typing the name of a tag, the `HTML editor <./developing-page-fragments-with-the-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
 ```
 
 The text or images you provide here are the default values for the fields. You may want to display them in the final version of the page, or you may want filler text that should be replaced before the page is published.
@@ -25,11 +26,27 @@ You can make a Fragment even more dynamic by including a widget. Currently, port
 
 ![The Fragment editor provides autocomplete for Liferay Fragment specific tags.](./fragment-specific-tags-reference/images/01.png)
 
-This reference list the available editable tags along with examples of how to use them in your Fragments.
+This reference list the available editable tags and attributes along with examples of how to use them in your Fragments.
+
+```note::
+  Since Liferay Portal CE 7.3 GA3 and Liferay DXP 7.3, you can use ``data-lfr-editable*`` attributes to define elements as editable, rather than wrapping editable elements with ``lfr-editable`` tags. The old tags still work for backwards compatibility, but we recommend that you use the newer data attributes if you're running Portal CE 7.3 GA3+ or Liferay DXP 7.3, as they are easier to write.
+```
 
 ## Making Text Editable
 
-You can make Fragment text editable by enclosing it in an `<lfr-editable>` tag. A unique ID is required to render the element properly:
+You can make Fragment text editable by including the `data-lfr-editable-type="text"` attribute in the image element. An example is shown below. The `data-lfr-editable-id` must be a unique ID:
+
+```html
+<p data-lfr-editable-id="text1" data-lfr-editable-type="text">
+  Placeholder
+</p>
+```
+
+```note::
+   All block elements and inline elements are supported for editable text. 
+```
+
+For Liferay Portal CE 7.3 GA2 and below, use the syntax below. A unique ID is required to render the element properly:
 
 ```html
 <lfr-editable id="unique-id" type="text">
@@ -38,6 +55,18 @@ You can make Fragment text editable by enclosing it in an `<lfr-editable>` tag. 
 ```
 
 If you need formatting options like text or color styles, use `rich-text`:
+
+```html
+<p data-lfr-editable-id="text1" data-lfr-editable-type="rich-text">
+  Placeholder
+</p>
+```
+
+```note::
+   All block element tags are supported for editable Rich text. 
+```
+
+For Liferay Portal CE 7.3 GA2 and below, use the syntax below:
 
 ```html
 <lfr-editable id="unique-id" type="rich-text">
@@ -51,8 +80,19 @@ If you need formatting options like text or color styles, use `rich-text`:
 
 ## Making Images Editable
 
-Images use the same `<lfr-editable>` tag as text, but with the `image` type, like this:
+Images use the same `data-lfr-editable-type` attribute as text, but with the `image` type, like this:
  
+```html
+<img
+  src="placeholder.jpg"
+  alt="Placeholder"
+  data-lfr-editable-id="img1"
+  data-lfr-editable-type="image"
+>
+```
+
+For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+
 ```html
 <lfr-editable id="unique-id" type="image">
    <img src="...">
@@ -80,6 +120,19 @@ Content mapping connects editable fields in your Fragment with fields from an As
 There is also a specific syntax for creating editable link elements:
 
 ```html
+<a
+  href="#placeholder"
+  target="_blank"
+  data-lfr-editable-id="link1"
+  data-lfr-editable-type="link"
+>
+  Go to placeholder
+</a>
+```
+
+For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+
+```html
 <lfr-editable id="unique-id" type="link">
     <a href="default-target-url-goes-here">Link text goes here</a>
 </lfr-editable>
@@ -90,6 +143,28 @@ You can edit the link text, target URL, and basic link styling---primary button,
 ![You have several options for defining a link's appearance and behavior.](./fragment-specific-tags-reference/images/03.png)
 
 For more information on editable links, see [Editable Links](../../creating-pages/building-content-pages.md#editing-a-hyperlink).
+
+## Creating Editable HTML
+
+You can make general HTML elements editable as well by setting the `data-lfr-editable-type` attribute to `html`:
+
+```html
+<article data-lfr-editable-id="text1" data-lfr-editable-type="html">
+  <h1>Placeholder</h1>
+</article>
+```
+
+For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+
+```html
+<lfr-editable type="html" id="text1">
+  <h1>Placeholder</h1>
+</lfr-editable>
+```
+
+![You have several options for defining an HTML element on a Content Page.](./fragment-specific-tags-reference/images/04.png)
+
+For more information on editable HTML, see [Editable HTML](../../creating-pages/building-content-pages.md#editing-an-html-element).
 
 ## Including Widgets Within A Fragment 
 

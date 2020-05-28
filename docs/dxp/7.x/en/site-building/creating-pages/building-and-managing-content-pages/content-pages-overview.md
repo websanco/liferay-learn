@@ -72,7 +72,7 @@ The *Navigation Bars* panel includes Fragments that you can add as the Header of
 
 > Available: Liferay DXP 7.3+
 
-You can display a single existing web content, blog entry, or document by adding a Content Display Fragment from the *Content Display* panel. See [Using the Content Display Fragment](./README.md#using-fragments) for more information.
+You can display a single existing web content, blog entry, or document by adding a Content Fragment from the *Content Display* panel. See [Using the Content Display Fragment](./using-fragments.md#using-the-content-fragment) for more information.
 
 ## Widgets
 

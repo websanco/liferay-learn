@@ -8,6 +8,7 @@ Building and Managing Content Pages
    building-and-managing-content-pages/building-content-pages.md
    building-and-managing-content-pages/using-widgets-on-a-content-page.md
    building-and-managing-content-pages/managing-web-content-on-content-pages.md
+   building-and-managing-content-pages/using-fragments.md
    building-and-managing-content-pages/mapping-web-content-templates-to-fragments.md
    building-and-managing-content-pages/using-fragment-comments.md
 
