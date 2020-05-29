@@ -443,3 +443,144 @@ There is no need to change the code if the property is not overwritten. If the p
 The change was made so users don't have to change the name for the default vocabulary in all languages.
 
 ---------------------------------------
+
+### Liferay.Poller Is No Longer Initialized by Default
+- **Date:** 2020-May-19
+- **JIRA Ticket:** [LPS-112942](https://issues.liferay.com/browse/LPS-112942)
+
+#### What changed?
+
+The global AUI `Liferay.Poller` utility is now deprecated and is no longer
+initialized by default.
+
+#### Who is affected?
+
+This affects any code that relies on `Liferay.Poller`; this is usually done via
+a call to `Liferay.Poller.init()` in a JSP.
+
+#### How should I update my code?
+
+There's no direct replacement for the `Liferay.Poller` utility. If you must
+initialize `Liferay.Poller`, update your JSP to use the code below:
+
+```
+<%@ page import="com.liferay.petra.encryptor.Encryptor" %>
+
+<%-- For access to `company` and `themeDisplay`. --%>
+<liferay-theme:defineObjects>
+
+<aui:script use="liferay-poller">
+	<c:if test="<%= themeDisplay.isSignedIn() %>">
+		Liferay.Poller.init({
+			encryptedUserId:
+				'<%= Encryptor.encrypt(company.getKeyObj(), String.valueOf(themeDisplay.getUserId())) %>',
+		});
+	</c:if>
+</aui:script>
+```
+
+#### Why was this change made?
+
+The `Liferay.Poller` component was only used in the Chat application, which is
+archived. Skipping initialization by default streamlines page loads for the
+common case.
+
+---------------------------------------
+
+### ContentTransformerListener Is Disabled By Default
+- **Date:** 2020-May-25
+- **JIRA Ticket:** [LPS-114239](https://issues.liferay.com/browse/LPS-114239)
+
+#### What changed?
+
+`ContentTransformerListener` is now disabled by default.
+
+#### Who is affected?
+
+This affects Liferay Portal installations using legacy web content features
+provided by the `ContentTransformerListener`, such as embedding web content
+inside another web content, a legacy edit in place infrastructure, token
+replacements (`@article_group_id@`, `@articleId;elementName@`), etc.
+
+#### How should I update my code?
+
+There's no need to update your code. If you still want to use
+`ContentTransformerListener`, you can enable it in System Settings via the
+*Enable ContentTransformerListener* property under *Content & Data* &rarr; *Web
+Content* &rarr; *Virtual Instance Scope* &rarr; *Web Content*.
+
+#### Why was this change made?
+
+`ContentTransformerListener` was disabled to improve performance, due to its
+expensive string processing on article elements (calling
+`HtmlUtil.stripComments` and `HtmlUtil.stripHtml` on article fields).
+
+---------------------------------------
+
+### Liferay.BrowserSelectors.run Is No Longer Called
+- **Date:** 2020-May-26
+- **JIRA Ticket:** [LPS-112983](https://issues.liferay.com/browse/LPS-112983)
+
+#### What changed?
+
+The `Liferay.BrowserSelectors.run()` function is no longer called on pages,
+which as a result removes some CSS classes from the opening `<html>` tag. Many
+of these are now added to the `<body>` element instead.
+
+#### Who is affected?
+
+This affects any code that relies on these CSS classes in the `<html>` element:
+
+- `aol`
+- `camino`
+- `edgeHTML` or `edge`
+- `firefox`
+- `flock`
+- `gecko`
+- `icab`
+- `ie`, `ie6`, `ie7`, `ie9`, or `ie11`
+- `js`
+- `konqueror`
+- `mac`
+- `mozilla`
+- `netscape`
+- `opera`
+- `presto`
+- `safari`
+- `secure`
+- `touch`
+- `trident`
+- `webkit`
+- `win`
+
+#### How should I update my code?
+
+There's no direct replacement for the `Liferay.BrowserSelectors.run()` function,
+but you can adapt your CSS and JavaScript to target new classes on the `<body>`
+element instead. These classes are added to the `<body>` element to reflect
+the browser you're currently using:
+
+- `chrome`
+- `edge`
+- `firefox`
+- `ie`
+- `mobile`
+- `other`
+
+Alternatively, you can still invoke `Liferay.BrowserSelectors.run()` to apply
+the old classes to the `<html>` element with the code below:
+
+```
+<aui:script use="liferay-browser-selectors">
+	Liferay.BrowserSelectors.run();
+</aui:script>
+```
+
+#### Why was this change made?
+
+The classes, some of which referred to outdated browsers, were being added to
+the top `<html>` element via legacy JavaScript that depended on Alloy UI. This
+change, which removes the outdated browser references, is now done on the server
+side, improving page loading times.
+
+---------------------------------------
