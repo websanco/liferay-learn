@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Developing Fragments',
+					sectionURL: 'developer-guide/developing_page_fragments.html',
+					subsections: [
+						{
+							name: 'Developing Fragments with the Editor',
+							url: 'developer-guide/developing-page-fragments/developing-page-fragments-with-the-editor.html'
+						},
+						{
+							name: 'Developing Fragments with the Fragments Toolkit',
+							url: 'developer-guide/developing-page-fragments/developing-page-fragments-with-the-toolkit.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Developer Reference',
+					sectionURL: 'developer-guide/reference.html',
+					subsections: [
+						{
+							name: 'Fragments Reference',
+							url: 'developer-guide/reference/fragments.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

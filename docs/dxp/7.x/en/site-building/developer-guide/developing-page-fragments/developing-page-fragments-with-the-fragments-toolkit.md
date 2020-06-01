@@ -79,7 +79,7 @@ The generated Fragment Collection has the project structure below. You can manua
 
         * `index.html`: the HTML source for the Fragment
 
-        * `configuration.json`: a JSON file that defines the Fragment's configuration. See [Making Fragments Configurable](./making-fragments-configurable.md) for more information.
+        * `configuration.json`: a JSON file that defines the Fragment's configuration. See [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md) for more information.
 
         * `main.js`: the JavaScript source for the Fragment
 
@@ -145,7 +145,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
         The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their path in the ``fragment.json`` to reflect the change.
     ```
 
-1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./making-a-page-fragment-configurable.md) (configuration.json) if applicable. The example just uses HTML and Bootstrap utilities for styling:
+1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example just uses HTML and Bootstrap utilities for styling:
 
     ```html
     <div class="marketing-jumbotron-fragment-01">

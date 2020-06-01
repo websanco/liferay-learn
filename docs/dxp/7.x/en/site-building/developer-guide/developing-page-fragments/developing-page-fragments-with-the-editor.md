@@ -39,7 +39,7 @@ Now that the Collection is created, you can add a Fragment:
 
     ![Create a new Component for the Fragment.](./developing-page-fragments-with-the-editor/images/02.png)
 
-1. Add your Fragment's resources (HTML, CSS, JavaScript, and [configuration options](./making-a-page-fragment-configurable.md)). The example below adds a Card component with editable text:
+1. Add your Fragment's resources (HTML, CSS, JavaScript, and [configuration options](./adding-configuration-options-to-fragments.md)). The example below adds a Card component with editable text:
 
     ```html
     <div class="marketing-card-fragment-01">
@@ -76,7 +76,7 @@ Now that the Collection is created, you can add a Fragment:
 
     ![A live preview is displayed as the code is updated.](./developing-page-fragments-with-the-editor/images/03.png)
 
-    1. Click *Publish* to save your work and make it available to add to a [Content Page](../../creating-pages/understanding-pages.md#content-pages).
+1. Click *Publish* to save your work and make it available to add to a [Content Page](../../creating-pages/understanding-pages.md#content-pages).
 
     ![The Fragment can be used on a Content Page.](./developing-page-fragments-with-the-editor/images/04.png)
 
@@ -89,4 +89,4 @@ Great! You've successfully created a Fragment Collection and added a new Fragmen
 ## Related Information
 
 * [Developing Page Fragments with the Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md)
-* [Making a Page Fragment Configurable](./making-a-page-fragment-configurable.md)
+* [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
