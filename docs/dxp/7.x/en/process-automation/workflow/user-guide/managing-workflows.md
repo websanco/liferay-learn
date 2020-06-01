@@ -10,11 +10,11 @@ Because of this far-reaching access, permission to create or edit workflow defin
 
 To grant Users with these Roles the workflow publication access in additional Virtual Instances,
 
-1. Make sure you understand the access you're granting these admins.
+1. Make sure you understand the access you're granting these administrators.
 1. Navigate to Control Panel &rarr; System Settings &rarr; Workflow &rarr; Workflow Definition. 
 1. Check the box for the setting _Allow Administrators to Publish and Edit Workflows_.
 
-This only applies to Virtual Instances that have been added to the system. The Default Virtual Instance provides workflow publication access to Regular Administrators (via Control Panel &rarr; Workflow &rarr; Process Builder), and, if running Liferay DXP, to Site Administrators and other Users with access to the Kaleo Forms Admin application.
+This only applies to Virtual Instances that have been added to the system. The Default Virtual Instance provides out of the box workflow publication access to Regular Administrators, via Control Panel &rarr; Workflow &rarr; Process Builder and for Liferay DXP subscribers via the Kaleo Forms Admin application.
 
 ## Uploading a New Workflow Definition
 
@@ -81,7 +81,7 @@ _Published_ workflow definitions cannot be deleted if they are current associate
 
 ## Configuring Workflow Definition Permissions
 
-In the _System Settings_, you can enable or disable permissions for Site Administrators to publish workflows and scripts.
+In the _System Settings_, you can enable or disable permissions for Regular Administrators to publish workflows and scripts.
 
 ![Explicit permission must be granted before administrators are allowed to publish and edit workflow definitions.](./managing-workflows/images/06.png)
 
