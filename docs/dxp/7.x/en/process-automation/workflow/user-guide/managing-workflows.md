@@ -2,6 +2,20 @@
 
 The _Workflow_ application allows users to manage their workflow processes; they can upload a new workflow definition, and make changes to the definitions. Lastly, they can delete workflows.
 
+## Workflow Definition Publication Permissions
+
+Users with permission to edit or publish workflow definitions can add [Groovy scripts](../../../system-administration/using-the-script-engine/using-the-script-engine.md) to the workflow. Access to the scripting engine means access to the Java Virtual Machine (JVM) of the server. Users who publish (or edit) workflow definitions containing scripts, therefore, can get access to any data within the reach of the JVM, such as data contained in a separate [Virtual Instance](../../../system-administration/virtual-instances.md) of Liferay DXP itself. 
+
+Because of this far-reaching access, permission to create or edit workflow definitions is limited to Regular Administrators of the Default Virtual Instance. For Liferay DXP customers, Site Administrators who can access the Kaleo Designer and Kaleo Forms Admin applications can also edit and publish workflows.
+
+To grant Users with these Roles the workflow publication access in additional Virtual Instances,
+
+1. Make sure you understand the access you're granting these admins.
+1. Navigate to Control Panel &rarr; System Settings &rarr; Workflow &rarr; Workflow Definition. 
+1. Check the box for the setting _Allow Administrators to Publish and Edit Workflows_.
+
+This only applies to Virtual Instances that have been added to the system. The Default Virtual Instance provides workflow publication access to Regular Administrators (via Control Panel &rarr; Workflow &rarr; Process Builder), and, if running Liferay DXP, to Site Administrators and other Users with access to the Kaleo Forms Admin application.
+
 ## Uploading a New Workflow Definition
 
 Workflow process definitions can be [built in Liferay](./building-workflows.md) or uploaded in `XML` format. DXP workflow definitions are written in `XML` format; see the [Introduction to Crafting XML Workflow Definitions](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions) to learn more.
