@@ -28,6 +28,7 @@ To begin building a Content Page:
     * [Editing a Hyperlink](#editing-a-hyperlink)
     * [Editing an Image](#editing-an-image)
     * [Copying a Fragment](#copying-a-fragment)
+    * [Saving a Fragment Composition](#saving-a-fragment-composition)
     * [Configuring Section Width and Padding](#configuring-section-width-and-padding)
     * [Configuring a Row's Columns](#configuring-a-row-s-columns)
     * [General Configuration](#general-configuration)
@@ -140,6 +141,37 @@ You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save
   Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated. In this case, a message will appear, indicating the Widget preventing the duplication.
 ```
 
+### Saving a Fragment Composition
+
+```note::
+  Available: Liferay Portal 7.3 GA3+
+```
+
+You can save customized Fragment compositions (Section or Row layout Fragments) as a new Fragment, so you can reuse it in your other Fragment-based pages. Follow these steps:
+
+1. Click the Row or Section composition to save.
+1. Click (![Save icon](../../../images/icon-save.png)) in the context menu that appears.
+
+  ![Click the Row or Section to bring up the Save Fragment composition button.](./building-content-pages/images/11.png)
+
+1. In the "Save as Fragment" dialog that appears, provide a name, optional description and thumbnail, disable/enable options for including inline content (fragment entries (links, images, text, etc.) that have been edited) and [mapped content](#mapping-content), and select the Collection where you want to save the Fragment.
+
+  ![Provide the information for the Fragment composition in the dialog that appears.](./building-content-pages/images/12.png)
+
+```note::
+   If no Site-specific Fragment Collection exist, the saved Fragment composition is automatically saved to a new Fragment Collection called "Saved Fragments".
+```
+
+The saved Fragment composition is available to use immediately in the Fragments sidebar and through the Page Fragments administrative application.
+
+![The saved Fragment composition is available to use immediately.](./building-content-pages/images/13.png)
+
+Compositions can be exported/imported between sites just as any other Fragment.
+
+```note::
+  The latest version of the `Liferay Fragments Toolkit <../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md>`_ supports creation, export/import, and preview of Fragment compositions.
+```
+
 ### Configuring Section Width and Padding
 
 To configure the Section, follow these steps:
@@ -148,7 +180,7 @@ To configure the Section, follow these steps:
 1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Section's Configuration Menu.
 1. Update the Section's *Container* setting to adjust the width styling (*Fixed Width* or *Fluid*), and update the *Padding Top* and *Padding Bottom* setting to adjust the padding for the Section container.
 
-![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/11.png)
+![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/14.png)
 
 You can also configure a background image and color for a layout Section. See 
 [Using a Background Image](#using-a-background-image) for more information.
@@ -161,14 +193,14 @@ To configure a Row, follow these steps:
 1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Row's Configuration Menu.
 1. Update the *Number of Columns* setting (from 1 to 6) to specify the number of columns for the Row, and disable/enable the *Columns Gutter* setting to remove/add padding between columns.
 
-![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/12.png)
+![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/15.png)
 
 You can adjust the width of the columns to create a more custom layout. Follow these steps:
 
 1. Click on the Row to select it. A blue dot appears between each of the columns, indicating that they can be resized.
 1. Click one of the blue dots and drag to the left or right to adjust the size of the column.
 
-![You can adjust the spacing of columns in a Layout to create a custom Layout.](./building-content-pages/images/13.png)
+![You can adjust the spacing of columns in a Layout to create a custom Layout.](./building-content-pages/images/16.png)
 
 ### General Configuration
 
