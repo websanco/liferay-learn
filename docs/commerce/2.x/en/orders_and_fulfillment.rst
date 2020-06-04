@@ -9,7 +9,7 @@ Orders and Fulfillment
    orders-and-fulfillment/subscriptions.md
    orders-and-fulfillment/shipments.rst
 
-This section describes the different components of order management and how to process an order, manage subscriptions, and create a shipment. It also describes how to enable Order Workflows.
+Orders and shipments are a fundamental part of a store. Liferay Commerce provides many features so you can track an order's lifecycle, from the moment it is received to when it is delivered to the customer. You can also activate workflows to allow only certain users to submit orders. 
 
 .. raw:: html
    :file: landingpage_template.html
