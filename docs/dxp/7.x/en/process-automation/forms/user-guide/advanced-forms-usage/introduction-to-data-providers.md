@@ -1,8 +1,8 @@
 # Introduction to Data Providers
 
-A form often asks the respondent to select from a list of something (for example, language, gender, or country). If the number of options is small, users can create the list manually. However, if the list is much larger, such as a country (over 230), consider using a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer). This saves time from having to manually input all the options and also ensures accuracy.
+A form often asks the respondent to select from a list of something (for example, language, gender, or country). If the number of options is small, users can create the list manually. However, if the list is much larger, such as list of a country (over 230), consider using a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer). This saves time from having to manually input all the options and also ensures accuracy.
 
-The list of the registered JSON web services in Liferay DXP are found at [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) (assuming you're running a local server). For example, if populating a list of countries, there are two `get-countries` JSON web services (you can use either one) and clicking Invoke generates the results.
+The list of the registered JSON web services in Liferay DXP are found at [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) (assuming you're running a local server). For example, if populating a list of countries, there are two `get-countries` JSON web services (either one will work) and clicking Invoke generates the results.
 
 The _Result_ tab shows a list of countries using JSON syntax, like this:
 
@@ -33,13 +33,9 @@ The URL of an internal or external REST service endpoint. Consider the REST serv
 
 Data Provider URLs can take two parameter types: path parameters and query parameters.
 
-#### Path Parameters
-
 Path parameters are part of the URL calling the REST web service, and are added using the pattern `https://service-url.com/service/{path_parameter_name}`:
 
 The `restcountries.eu` service's `region` endpoint's path parameter is `{region}`. Path parameters are mandatory parts of the URL, so make sure you specify an Input (see below) with a _Parameter_ field value matching the path parameter from the URL.
-
-#### Query Parameters
 
 Query parameters are complementary parts of the URL that filter the output of the service call, following the pattern
 `?query_parameter=query_parameter_value`:
@@ -79,7 +75,7 @@ The Output Path field is specified in [JsonPath syntax](https://github.com/json-
 
 If this is used with the `restcountries.eu` data provider, the name of the country is displayed to the User, while the numeric country code is stored in the database.
 
-![Set up Data Providers to display data retrieved from a REST service.](../../images/forms-data-provider-configuration.png)
+![Set up Data Providers to display data retrieved from a REST service.](./introduction-to-data-providers/images/01.png)
 
 ## What's Next
 
