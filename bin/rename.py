@@ -1,10 +1,8 @@
 import colorama
 from colorama import Fore, Back, Style
-import difflib
 import glob
 import os
 import re
-import shutil
 import sys
 from pprint import pprint
 from pathlib import Path
@@ -17,14 +15,12 @@ if __name__ == "__main__":
         pprint("Usage: migrate.py oldName newName\nIMPORTANT: Run this script in the folder containing the article to rename.")
         sys.exit()
 
-    colorama.init() # supposedly init is needed for windows
+    colorama.init() # colorama provides cross-platform color support for
+                    # python's print functionality: init call is needed for
+                    # windows
 
     oldName = sys.argv[1]
     newName = sys.argv[2]
-
-    dest_folder = "."
-    if (len(sys.argv)) > 2:
-        dest_folder = sys.argv[2]
 
     # Find article and dir names matching the pattern passed, then replace the
     # text passed in the first arg with the text from the second arg.
@@ -42,7 +38,19 @@ if __name__ == "__main__":
         content = f.read()
         f.close()
 
-        if re.search(oldName,content):
+        if re.search(oldName + ".html",content):
+
+            matchingfiles.append(filename)
+
+        if re.search(oldName + ".md",content):
+
+            matchingfiles.append(filename)
+
+        if re.search("/" + oldName + "/", content):
+
+            matchingfiles.append(filename)
+
+        if re.search("/" + oldName + "`", content):
 
             matchingfiles.append(filename)
 
@@ -73,20 +81,28 @@ if __name__ == "__main__":
         newlines = []
 
         for origline in origlines:
-            newline = origline.replace(oldName,newName)
-            if re.search(newName,newline):
-                print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
-            newlines.append(newline)
+            #oldtextpatterns = ["/" + oldName + "/","/" + oldName + ".md", "/" +
+            #                oldName + ".html"]
+            #newtextpatterns = ["/" + newName + "/","/" + newName + ".md", "/" +
+            #                newName + ".html"]
+            #for oldtextpattern, newtextpattern in zip(oldtextpatterns, newtextpatterns):
+                if re.search('/'+oldName+'.md',origline) or re.search('/'+oldName+'/',origline) or re.search('/'+oldName+'.html', origline) or re.search('/'+oldName+'`',origline):
 
-        # d = difflib.Differ()
-        # result = list(difflib.context_diff(origlines, newlines,n=0))
-        # pprint(result)
+                    newline = origline.replace(oldName,newName)
+                    newlines.extend(newline)
+
+                    re.search(newName,newline)
+                    print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
+
+                else:
+                    newlines.extend(origline)
 
         f = open(filepath, "w")
         f.writelines(newlines)
         f.close
 
-    matchingfilepatterns = glob.glob("**/*"+oldName+"*", recursive=True)
+    matchingfilepatterns = glob.glob("**/"+oldName+".md", recursive=True)
+    matchingfilepatterns.extend(glob.glob("**/"+oldName+"/", recursive=True))
 
     choices = [
     inquirer.Checkbox('filepatterns',
@@ -105,7 +121,8 @@ if __name__ == "__main__":
 
         os.rename(renamefile, newfilename)
 
-        print(Fore.BLUE + renamefile + "\n" + " was renamed to " + "\n" + newfilename)
+        print(Fore.BLUE + renamefile + "\n" + Fore.WHITE + " was renamed to " +
+              "\n" + Fore. BLUE + newfilename)
 
         if newfilename.endswith('.md'):
 
