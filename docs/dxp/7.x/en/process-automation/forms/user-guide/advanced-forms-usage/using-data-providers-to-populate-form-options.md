@@ -121,13 +121,13 @@ The Data Provider is now being used to populate a select field.
 
 To uncover errors arising from Data Provider failures, [configure log levels](../../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for these services:
 
-**Category:**
-`com.liferay.dynamic.data.mapping.data.provider.internal.DDMDataProviderInvokerImpl`
-*Level:* WARN
+1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Server Administration_.
+1. Click the _Log Levels_ tab.
+1. Search for `com.liferay.dynamic.data.mapping.data.provider.web.internal.DDMDataProviderPortlet` in the Category field.
+1. Select _WARN_ in the Level field.
+1. Click _Save_ when finished.
 
-**Category:**
-`com.liferay.dynamic.data.mapping.form.field.type.internal.DDMFormFieldOptionsFactoryImpl`
-*Level:* DEBUG
+The console now sends warning messages whenever there are errors in the Data Provider.
 
 ## Additional Information
 
