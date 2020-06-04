@@ -23,7 +23,7 @@ Should we remove this diagram since it includes a load balancer? -->
 Here are the main steps:
 
 1. [Start a Database Server](#prepare-a-database-server)
-1. [Start a File Store](#prepare-a-file-store)
+1. [Start a File Store Server](#prepare-a-file-store-server)
 1. [Start a Search Engine](#prepare-a-search-engine)
 1. [Configure the DXP Cluster Nodes](#configure-the-dxp-cluster-nodes)
 1. [Start the DXP Cluster](#start-the-dxp-cluster)
@@ -31,7 +31,7 @@ Here are the main steps:
 
 ## Start a Database Server
 
-A DXP cluster requires a data source that's accessible to all of the app server nodes. The data source can be a JNDI data source, a database server, or a database server cluster. See the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports.
+A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source, a database server, or a database server cluster. See the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports.
 
 1. Start a Maria DB Docker container.
 
@@ -69,13 +69,13 @@ See [Database Configuration for Cluster Nodes](./database-configuration-for-clus
 
 Your database server is ready for DXP.
 
-## Create a File Store
+## Start a File Store Server
 
-A DXP cluster requires a File Store that's accessible to all of the app server nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. It's configured by the DXP cluster nodes (described next). Please see [File Store](../../../system-administration/file-storage/configuring-file-storage.md) for other file store types.
+A DXP cluster requires a File Store that's accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [File Store](../../../system-administration/file-storage/configuring-file-storage.md) for other file store types.
 
 ## Start a Search Engine Server
 
-A DXP cluster requires a search engine (running as a separate process) that's accessible to all of the app server nodes. See [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
+A DXP cluster requires a search engine (running as a separate process) that's accessible to all of the DXP cluster nodes. See [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
 
 1. Set a local folder for storing an Elasticsearch server's data volume.  For example,
 
@@ -103,7 +103,7 @@ Your search engine is ready to manage search indexes.
 
 ## Configure the DXP Cluster Nodes
 
-Each DXP app server that you add as a cluster node must be configured for the cluster and configured to connect to the supporting servers you created.
+Each DXP server that you add as a cluster node must be configured for the cluster and configured to connect to the supporting servers you created.
 
 Here's a summary of the items to configure:
 
@@ -176,7 +176,7 @@ Configure the database, File Store, and cluster using a [Portal Properties](../.
     EOT
     ```
 
-2. Set `dxp-2`'s properties using `dxp-1`'s properties but specifying new logic names for the control channel and transport channel:
+2. Set `dxp-2`'s properties using `dxp-1`'s properties, but specify new logic names for the control channel and transport channel:
 
     ```bash
     sed 's/control-channel-logic-name-1/control-channel-logic-name-2/g;s/transport-channel-logic-name-1/transport-channel-logic-name-2/g' dxp-1/files/portal-ext.properties >> dxp-2/files/portal-ext.properties
@@ -185,7 +185,7 @@ The tables below describe the common and distinguishing property settings.
 
 #### Common Properties
 
-These property settings are common to each node:
+The following property settings are common to each node.
 
 | Property Setting | Description |
 | :--------------- | :---------- |
@@ -247,17 +247,18 @@ The `--add-host [domain]:[IP address]` options [add `/etc/hosts` file entries](h
 
 ## Test the DXP Cluster
 
-1. Visit each DXP cluster node at the following URLs.
+The DXP cluster nodes are available at the following URLs:
 
-    DXP-1: http://localhost:8080
+* DXP-1: http://localhost:8080
+* DXP-2: http://localhost:9080
 
-    DXP-2: http://localhost:9080
+The figure below shows their home pages.
 
-    The figure below shows their home pages.
+![DXP cluster nodes.](./example-creating-a-simple-dxp-cluster/images/02.png)
 
-    ![DXP cluster nodes.](./example-creating-a-simple-dxp-cluster/images/02.png)
+Each node's container ID and port (`Node: [id]:[port]`) show on the home pages because of the Portal Property setting `web.server.display.node=true`. You can find a container's using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
 
-    Each node's container ID and port (`Node: [id]:[port]`) show on the home pages because of the Portal Property setting `web.server.display.node=true`. You can find a container's using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
+Test data synchronization between the nodes:
 
 1. Add content to one of the cluster nodes.
 
