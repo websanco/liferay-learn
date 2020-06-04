@@ -1,3 +1,5 @@
+import colorama
+from colorama import Fore, Back, Style
 import difflib
 import glob
 import os
@@ -15,6 +17,8 @@ if __name__ == "__main__":
         pprint("Usage: migrate.py oldName newName\nIMPORTANT: Run this script in the folder containing the article to rename.")
         sys.exit()
 
+    colorama.init() # supposedly init is needed for windows
+
     oldName = sys.argv[1]
     newName = sys.argv[2]
 
@@ -25,7 +29,7 @@ if __name__ == "__main__":
     # Find article and dir names matching the pattern passed, then replace the
     # text passed in the first arg with the text from the second arg.
 
-    types = ('*.md', '*.rst')
+    types = ('*.md', '*.rst', '*.html')
     files_grabbed = []
     for filetype in types:
         files_grabbed.extend(glob.glob("**/" + filetype, recursive=True))
@@ -38,9 +42,6 @@ if __name__ == "__main__":
         content = f.read()
         f.close()
 
-        # for each line of each file, look for the matching oldName arg,.
-        # i think i still need to rewrite the line, see jim's code for
-        # inspiration
         if re.search(oldName,content):
 
             matchingfiles.append(filename)
@@ -68,40 +69,52 @@ if __name__ == "__main__":
         # newcontents = contents.replace(oldName, newName)
         origlines = f.readlines()
         f.close()
-        # not working, prints a single char on each line right now because it
-        # wants a list of strings--probably use readlines to get it the list.
-
 
         newlines = []
 
         for origline in origlines:
             newline = origline.replace(oldName,newName)
+            if re.search(newName,newline):
+                print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
             newlines.append(newline)
 
-        d = difflib.Differ()
-        result = list(difflib.ndiff(origlines, newlines))
-        pprint(result)
+        # d = difflib.Differ()
+        # result = list(difflib.context_diff(origlines, newlines,n=0))
+        # pprint(result)
 
         f = open(filepath, "w")
         f.writelines(newlines)
         f.close
 
-    # Warning, below we're working with a potentially different list of files
-    # than just the list from the inqurirer stuff, because that's looking at
-    # file content not file names. Also we should adopt the approach for only
-    # renaming the .md and .rst files here as well, so we don't go renaming
-    # anything in a src.zip folder.
+    matchingfilepatterns = glob.glob("**/*"+oldName+"*", recursive=True)
 
-    types = ('*.md', '*.rst')
-    files_caught = []
-    for filetype in types:
-        files_caught.extend(glob.glob("**/*"+oldName+"*", recursive=True))
+    choices = [
+    inquirer.Checkbox('filepatterns',
+                      message="De-select the files and folders you wish to skip (spacebar) renaming. For all selected, the string '" + oldName + "' will be replaced with '" + newName,
+                      choices=matchingfilepatterns,
+                      default=matchingfilepatterns),
+    ]
 
-    for filename in files_caught:
+    chosenfilepatterns = inquirer.prompt(choices).values()
 
-        newfilename = re.sub(oldName, newName, filename, 1, 0)
+    renamelist = list(chosenfilepatterns)
 
-        os.rename(filename, newfilename)
+    for renamefile in renamelist[0]:
 
-        pprint(filename + " was renamed to " + newfilename)
+        newfilename = re.sub(oldName, newName, renamefile, 1, 0)
 
+        os.rename(renamefile, newfilename)
+
+        print(Fore.BLUE + renamefile + "\n" + " was renamed to " + "\n" + newfilename)
+
+        if newfilename.endswith('.md'):
+
+            f = open(newfilename)
+            titleline = f.readline()
+            f.close()
+
+            print(Fore.YELLOW + "<<<Make sure your first level heading matches the new file name>>>")
+            print(Fore.YELLOW + titleline + "------------")
+
+        else:
+            print(Fore.YELLOW + "------------")
