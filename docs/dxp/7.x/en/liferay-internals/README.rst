@@ -5,11 +5,11 @@ Fundamentals
 ------------
 
 * Fundamentals
-* Using Felix Gogo Shell
 * Importing Packages
 * Exporting Packages
 * Semantic Versioning
 * Deploying WARs (WAB Generator)
+* Using Felix Gogo Shell
 
 Extending Liferay
 -----------------
