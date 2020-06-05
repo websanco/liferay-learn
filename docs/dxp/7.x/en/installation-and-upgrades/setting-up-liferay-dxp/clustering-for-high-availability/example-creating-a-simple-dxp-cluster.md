@@ -25,13 +25,13 @@ Here are the main steps:
 1. [Start a Database Server](#prepare-a-database-server)
 1. [Start a File Store Server](#prepare-a-file-store-server)
 1. [Start a Search Engine](#prepare-a-search-engine)
-1. [Configure the DXP Cluster Nodes](#configure-the-dxp-cluster-nodes)
+1. [Configure the Search Engine for Each Node](#configure-the-search-engine-for-each-node)
 1. [Start the DXP Cluster](#start-the-dxp-cluster)
 1. [Test the DXP Cluster](#test-the-dxp-cluster)
 
 ## Start a Database Server
 
-A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source, a database server, or a database server cluster. See the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports.
+A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source, a database server, or a database server cluster. Please see the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports. Please see [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
 
 1. Start a Maria DB Docker container.
 
@@ -65,17 +65,15 @@ A DXP cluster requires a data source that's accessible to all of the DXP cluster
     exit
     ```
 
-See [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
-
 Your database server is ready for DXP.
 
 ## Start a File Store Server
 
-A DXP cluster requires a File Store that's accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [File Store](../../../system-administration/file-storage/configuring-file-storage.md) for other file store types.
+A DXP cluster requires a File Store that's accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md) for information on all of the File Store types.
 
 ## Start a Search Engine Server
 
-A DXP cluster requires a search engine (running as a separate process) that's accessible to all of the DXP cluster nodes. See [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
+A DXP cluster requires a search engine (running as a separate process) that's accessible to all of the DXP cluster nodes. Please see [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
 
 1. Set a local folder for storing an Elasticsearch server's data volume.  For example,
 
@@ -101,22 +99,9 @@ A DXP cluster requires a search engine (running as a separate process) that's ac
 
 Your search engine is ready to manage search indexes.
 
-## Configure the DXP Cluster Nodes
+## Configure the Search Engine Server For Each Node
 
-Each DXP server that you add as a cluster node must be configured for the cluster and configured to connect to the supporting servers you created.
-
-Here's a summary of the items to configure:
-
-| Item | Configuration Method |
-| :--- | :---------- |
-| Search engine connection | [Configuration file](../../../system-administration/system-settings/using-configuration-files.md) |
-| Data source connection | `portal-ext.properties` file | See [Database Templates](../../reference/database-templates.md) |
-| File Store connection | `portal-ext.properties` file. Some File Store types require a configuration file too. | See [Configuring a File Store](../../..//system-administration/file-storage/configuring-file-storage.md) |
-| Cluster Link | `portal-ext.properties` file | See [Configuring Cluster Link](./configuring-cluster-link.md) |
-
-### Configure the Search Engine Server on Each Node
-
-Configure Elasticsearch on both DXP nodes, using [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md).
+Use [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) to configure Elasticsearch for both DXP nodes.
 
 1. Create the Configuration Files locations.
 
@@ -144,106 +129,96 @@ Configure Elasticsearch on both DXP nodes, using [Configuration Files](../../../
     EOT
     ```
 
+You'll make these configuration files accessible to the cluster nodes via bind mounts when you start the DXP server containers next.
+
 ```note::
    The ``docker run --add-host elasticsearch:[ip] ...`` commands that start the DXP servers later add ``/etc/hosts/`` entries that map the name _elasticsearch_ to the Elasticsearch server host IP address.
 ```
 
-### Configure the Cluster, Database, and File Store on Each Node
-
-Configure the database, File Store, and cluster using a [Portal Properties](../../reference/portal-properties.md) file for each node:
-
-1. Set `dxp-1`'s' properties:
-
-    ```bash
-    cat <<EOT >> dxp-1/files/portal-ext.properties
-    jdbc.default.jndi.name=
-
-    jdbc.default.driverClassName=org.mariadb.jdbc.Driver
-    jdbc.default.url=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
-    jdbc.default.username=root
-    jdbc.default.password=my-secret-pw
-
-    dl.store.impl=com.liferay.portal.store.db.DBStore
-
-    cluster.link.enabled=true
-
-    cluster.link.autodetect.address=some-mariadb:3306
-
-    cluster.link.channel.logic.name.control=control-channel-logic-name-1
-    cluster.link.channel.logic.name.transport.0=transport-channel-logic-name-1
-
-    web.server.display.node=true
-    EOT
-    ```
-
-2. Set `dxp-2`'s properties using `dxp-1`'s properties, but specify new logic names for the control channel and transport channel:
-
-    ```bash
-    sed 's/control-channel-logic-name-1/control-channel-logic-name-2/g;s/transport-channel-logic-name-1/transport-channel-logic-name-2/g' dxp-1/files/portal-ext.properties >> dxp-2/files/portal-ext.properties
-    ```
-The tables below describe the common and distinguishing property settings.
-
-#### Common Properties
-
-The following property settings are common to each node.
-
-| Property Setting | Description |
-| :--------------- | :---------- |
-| `cluster.link.autodetect.address=some-mariadb:3306` | Known address to ping to get cluster node addresses |
-| `cluster.link.enabled=true` | Enables Cluster Link |
-| `dl.store.impl=com.liferay.portal.store.db.DBStore` | File Store (Document Library Store) class |
-| `jdbc.default.jndi.name=` | Data source JNDI name |
-| `jdbc.default.driverClassName=org.mariadb.jdbc.Driver` | Database driver class |
-| `jdbc.default.url=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false` | Data source URL |
-| `jdbc.default.username=root` | Database admin user name |
-| `jdbc.default.password=my-secret-pw` | Database admin user password |
-| `web.server.display.node=true` | Displays the server address and web server port |
-
-#### Distinguishing Properties
-
-The following cluster logic name properties distinguish each node.
-
-| Property | dxp-1 | dxp-2 |
-| :------- | :---- | :---- |
-| `cluster.link.channel.logic.name.control` | control-channel-logic-name-1 | control-channel-logic-name-2 |
-| `cluster.link.channel.logic.name.transport.0` | transport-channel-logic-name-1 | transport-channel-logic-name-2 |
-
-```note::
-   The ``docker run --add-host some-mariadb:[ip] ...`` commands that start the DXP servers later, add ``/etc/hosts/`` entries that map the name _some-mariadb_ to the database server host IP address.
-```
-
-You've configured the properties required to configure the server connections, to enable and configure Cluster Link. Cluster Link enables communication between the nodes and replicates cache between them.
-
-The DXP servers are ready to start.
-
 ## Start the DXP Cluster
 
-Start the DXP server containers.
-
-1. Start `dxp-1`:
-
-    ```bash
-    docker run -it --name dxp-1 --add-host some-mariadb:172.17.0.3 --add-host elasticsearch:172.17.0.2 -p 8009:8009 -p 8080:8080 -p 11311:11311 -v ${PWD}/dxp-1:/mnt/liferay liferay/portal:7.3.2-ga3
-    ```
-
-1. Start `dxp-2`:
-
-    ```bash
-    docker run -it --name dxp-2 --add-host some-mariadb:172.17.0.3 --add-host elasticsearch:172.17.0.2  -p 9009:8009 -p 9080:8080 -p 11312:11311 -v ${PWD}/dxp-2:/mnt/liferay liferay/portal:7.3.2-ga3
-    ```
-
-The nodes have these configurations
+The DXP cluster node containers will have these unique settings:
 
 | Configuration | dxp-1 | dxp-2 |
 | :------------ | :---- | :---- |
 | AJP port mapping | `8009:8009` | `9009:8009` |
 | HTTP port mapping | `8080:8080` | `9080:8080` |
 | OSGi container port mapping | ``11311:11311`` | `11312:11311` |
-| Volume bind mount | `$(pwd)/dxp-1:/mnt/liferay` | `$(pwd)/dxp-2:/mnt/liferay` |
+| Bind mount | `${PWD}/dxp-1/files:/mnt/liferay` | `${PWD}/dxp-2/files:/mnt/liferay` |
+| Cluster Link control channel logic name | control-channel-logic-name-1 | control-channel-logic-name-2 |
+| Cluster Link transport channel logic name | transport-channel-logic-name-1 | transport-channel-logic-name-2 |
 
-| Volume bind mount | `${PWD}/dxp-1/files:/mnt/liferay` | `${PWD}/dxp-2/files:/mnt/liferay` |
+Start the DXP containers.
 
-The `--add-host [domain]:[IP address]` options [add `/etc/hosts` file entries](https://docs.docker.com/engine/reference/run/#managing-etchosts) that map the domain names to the IP addresses. Descriptors, such as this example's Elasticsearch `.config` files and `portal-ext.properties` files, can then refer to the servers by domain name or IP address. Note, the [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/) command reports the IP addresses of the servers on the `bridge` network (the default network).
+1. Start `dxp-1`.
+
+    Command expanded for readability:
+
+    ```bash
+    docker run -it \
+      --add-host elasticsearch:172.17.0.2 \
+      --add-host some-mariadb:172.17.0.3 \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=  \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-1 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-1 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 \
+      -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true \
+      -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore \
+      --name dxp-1 \
+      -p 11311:11311 \
+      -p 8009:8009 \
+      -p 8080:8080 \
+      -v ${PWD}/dxp-1:/mnt/liferay \
+      liferay/portal:7.3.2-ga3
+    ```
+
+    Command condensed to one line:
+
+    ```bash
+    docker run -it --name dxp-1  --add-host elasticsearch:172.17.0.2 --add-host some-mariadb:172.17.0.3 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=  -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-1 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-1 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore --name dxp-1 -p 11311:11311 -p 8009:8009 -p 8080:8080 -v ${PWD}/dxp-1:/mnt/liferay liferay/portal:7.3.2-ga3
+    ```
+
+1. Start `dxp-2`.
+
+    Command expanded for readability:
+
+    ```bash
+    docker run -it \
+      --add-host elasticsearch:172.17.0.2 \
+      --add-host some-mariadb:172.17.0.3 \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=  \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-2 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-2 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 \
+      -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true \
+      -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore \
+      --name dxp-2 \
+      -p 11312:11311 \
+      -p 9009:8009 \
+      -p 9080:8080 \
+      -v ${PWD}/dxp-2:/mnt/liferay \
+      liferay/portal:7.3.2-ga3
+    ```
+
+    Command condensed to one line:
+
+    ```bash
+    docker run -it --add-host elasticsearch:172.17.0.2 --add-host some-mariadb:172.17.0.3 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=  -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-2 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-2 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore --name dxp-1 -p 11312:11311 -p 9009:8009 -p 9080:8080 -v ${PWD}/dxp-1:/mnt/liferay liferay/portal:7.3.2-ga3
+    ```
+
+The `--add-host [domain]:[IP address]` options [add `/etc/hosts` file entries](https://docs.docker.com/engine/reference/run/#managing-etchosts) that map the domain names to the IP addresses. Configurations (such as environment variables, Portal Properties, and `.config` files) can then refer to the servers by domain name or IP address. Note, the [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/) command reports the server IP addresses on the `bridge` network (the default network).
+
+[Appendix A: Environment Settings](#appendix-a-environment-settings) describes the environment variables.
 
 ## Test the DXP Cluster
 
@@ -252,11 +227,11 @@ The DXP cluster nodes are available at the following URLs:
 * DXP-1: http://localhost:8080
 * DXP-2: http://localhost:9080
 
-The figure below shows their home pages.
+The figure below shows the cluster node home pages.
 
 ![DXP cluster nodes.](./example-creating-a-simple-dxp-cluster/images/02.png)
 
-Each node's container ID and port (`Node: [id]:[port]`) show on the home pages because of the Portal Property setting `web.server.display.node=true`. You can find a container's using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
+Each page shows the node's container ID and port (`Node: [id]:[port]`). The `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true` environment setting enabled this display feature. You can find a container's using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
 
 Test data synchronization between the nodes:
 
@@ -275,6 +250,26 @@ Congratulations on creating a working DXP cluster!
 ## What's Next
 
 Tune your [database](./database-configuration-for-cluster-nodes.md) for your DXP cluster.
+
+## Appendix A: Environment Settings
+
+Here is a summary of the environment settings used:
+
+| Configuration | Description |
+| :------------ | :---------- |
+| LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME= | Data source JNDI name |
+| LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=\\<br>org.mariadb.jdbc.Driver | Database driver class |
+| LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=\\<br>jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false | Data source URL |
+| LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=\\<br>root | Database admin user name |
+| LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=\\<br>my-secret-pw | Database admin user password |
+| LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=\\<br>true | Enables Cluster Link  |
+| LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=\\<br>control-channel-logic-name-2 | The cluster node's unique control channel name |
+| LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=\\<br>transport-channel-logic-name-2 | The cluster node's unique transport channel name |
+| LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=\\<br>some-mariadb:3306 | Known address to ping to get cluster node addresses |
+| LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=\\<br>true | Displays the server address and web server port |
+| LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=\\<br>com.liferay.portal.store.db.DBStore | File Store (Document Library Store) class |
+
+Please see the [Portal Properties](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html) definitions for more information.
 
 ## Additional Information
 
