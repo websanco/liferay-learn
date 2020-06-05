@@ -25,8 +25,10 @@ if __name__ == "__main__":
     # Find article and dir names matching the pattern passed, then replace the
     # text passed in the first arg with the text from the second arg.
 
+    # only look in these three file types
     types = ('*.md', '*.rst', '*.html')
     files_grabbed = []
+
     for filetype in types:
         files_grabbed.extend(glob.glob("**/" + filetype, recursive=True))
 
@@ -38,83 +40,87 @@ if __name__ == "__main__":
         content = f.read()
         f.close()
 
-        if re.search(oldName + ".html",content):
+        # Search for certain patterns that are good to replace. This should
+        # cover all the text patterns we want to look at for replacement
+        # without going too far,though this cannot be guaranteed.
+        if (re.search(oldName + ".html",content) or
+            re.search(oldName + ".md",content) or
+            re.search("/" + oldName + "/", content) or
+            re.search("/" + oldName + "`", content)):
 
             matchingfiles.append(filename)
 
-        if re.search(oldName + ".md",content):
-
-            matchingfiles.append(filename)
-
-        if re.search("/" + oldName + "/", content):
-
-            matchingfiles.append(filename)
-
-        if re.search("/" + oldName + "`", content):
-
-            matchingfiles.append(filename)
+    print(Back.LIGHTCYAN_EX + Fore.BLACK + "FILES WITH MATCHES TO THE OLD "
+          "STRING:" + Style.RESET_ALL)
 
     choices = [
-        inquirer.Checkbox('files',
-                          message="De-select the files you wish to skip (spacebar). For all selected, the string '" + oldName + "' will be replaced with '" + newName + "', and the file will be re-written:",
-                          choices=matchingfiles,
-                          default=matchingfiles),
+        inquirer.Checkbox(
+            'files',
+            message="The selected paths will undergo a search and replace. "
+                "De-select a path with the spacebar",
+            choices=matchingfiles,
+            default=matchingfiles),
     ]
 
     filtermatches = inquirer.prompt(choices).values()
 
     matcheslist = list(filtermatches)
 
-            # moar logic: test for absolute links, like if there's a http
-            # don't replace because it's not a relative link (elasticesearch
-            # and github links, for example, must not be changed).
-
+    # Now we have the final list of files that contain the string and that the
+    # user confirms they want to operate on, so here we do the replacement of
+    # known good patterns for replacement.
     for each in matcheslist[0]:
 
         filepath = Path(each)
+
         f = open(filepath, "r")
-        # contents = f.read()
-        # newcontents = contents.replace(oldName, newName)
         origlines = f.readlines()
         f.close()
 
         newlines = []
 
         for origline in origlines:
-            #oldtextpatterns = ["/" + oldName + "/","/" + oldName + ".md", "/" +
-            #                oldName + ".html"]
-            #newtextpatterns = ["/" + newName + "/","/" + newName + ".md", "/" +
-            #                newName + ".html"]
-            #for oldtextpattern, newtextpattern in zip(oldtextpatterns, newtextpatterns):
-                if re.search('/'+oldName+'.md',origline) or re.search('/'+oldName+'/',origline) or re.search('/'+oldName+'.html', origline) or re.search('/'+oldName+'`',origline):
+            if (re.search('/'+oldName+'.md',origline) or
+                re.search('/'+oldName+'/',origline) or
+                re.search('/'+oldName+'.html', origline) or
+                re.search('/'+oldName+'`',origline)):
 
-                    newline = origline.replace(oldName,newName)
-                    newlines.extend(newline)
+                newline = origline.replace(oldName,newName)
 
-                    re.search(newName,newline)
-                    print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
+                newlines.extend(newline)
 
-                else:
-                    newlines.extend(origline)
+                re.search(newName,newline)
+
+                print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
+
+            else:
+                newlines.extend(origline)
 
         f = open(filepath, "w")
         f.writelines(newlines)
-        f.close
+        f.close()
 
+    # for a file rename we only want to match anything/my-string.md and
+    # anything/my-string/
     matchingfilepatterns = glob.glob("**/"+oldName+".md", recursive=True)
     matchingfilepatterns.extend(glob.glob("**/"+oldName+"/", recursive=True))
 
+    print(Back.LIGHTCYAN_EX + Fore.BLACK + "FILES/FOLDERS TO RENAME" +
+          Style.RESET_ALL)
+
     choices = [
-    inquirer.Checkbox('filepatterns',
-                      message="De-select the files and folders you wish to skip (spacebar) renaming. For all selected, the string '" + oldName + "' will be replaced with '" + newName,
-                      choices=matchingfilepatterns,
-                      default=matchingfilepatterns),
+        inquirer.Checkbox('filepatterns',
+        message="The selected paths will be renamed. De-select a path "
+            "with the spacebar",
+        choices=matchingfilepatterns,
+        default=matchingfilepatterns),
     ]
 
     chosenfilepatterns = inquirer.prompt(choices).values()
 
     renamelist = list(chosenfilepatterns)
 
+    # now we have the final list of files to rename
     for renamefile in renamelist[0]:
 
         newfilename = re.sub(oldName, newName, renamefile, 1, 0)
@@ -126,12 +132,14 @@ if __name__ == "__main__":
 
         if newfilename.endswith('.md'):
 
-            f = open(newfilename)
+            f = open(newfilename, "r")
             titleline = f.readline()
             f.close()
 
-            print(Fore.YELLOW + "<<<Make sure your first level heading matches the new file name>>>")
+            print(Fore.YELLOW + "<<<Make sure the article's title "
+                  "corresponds to the new file name>>>")
             print(Fore.YELLOW + titleline + "------------")
 
         else:
+
             print(Fore.YELLOW + "------------")
