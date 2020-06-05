@@ -4,6 +4,7 @@ Liferay Internals
 .. toctree::
    :maxdepth: 4
 
+   liferay-internals/fundamentals.rst
    liferay-internals/extending_liferay.rst
    liferay-internals/customizing_the_core.rst
    liferay-internals/customizing_web_apis.rst

@@ -1,6 +1,16 @@
 Liferay Internals
 =================
 
+Fundamentals
+------------
+
+* Fundamentals
+* Using Felix Gogo Shell
+* Importing Packages
+* Exporting Packages
+* Semantic Versioning
+* Deploying WARs (WAB Generator)
+
 Extending Liferay
 -----------------
 
