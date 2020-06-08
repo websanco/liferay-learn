@@ -53,31 +53,25 @@ The application server and DXP are using the new system properties.
 
 ## Using a `system-ext.properties` File
 
-<!-- I removed the non-generic "generic" instructions above, but the one below isn't as easy to fix. As you know, not all application servers operate from an exploded WAR file, and so asking people to add a system-ext.properties file this way won't work. You have a bit more explaining to do (the file must go in Liferay's classpath; WEB-INF/classes is on the classpath; etc.). Some servers require extracting the WAR, putting the file in it, and redeploying the WAR. So you might be a bit less specific in your instructions below (i.e., no touch commands, etc.) and say to put the file on the classpath, and here are some ways some app servers handle it. -Rich --> 
+<!-- I removed the non-generic "generic" instructions above, but the one below isn't as easy to fix. As you know, not all application servers operate from an exploded WAR file, and so asking people to add a system-ext.properties file this way won't work. You have a bit more explaining to do (the file must go in Liferay's classpath; WEB-INF/classes is on the classpath; etc.). Some servers require extracting the WAR, putting the file in it, and redeploying the WAR. So you might be a bit less specific in your instructions below (i.e., no touch commands, etc.) and say to put the file on the classpath, and here are some ways some app servers handle it. -Rich -->
 
 If you want to use DXP's `system.properties` file and you want to extend/override system properties, use a `system-ext.properties` file. Here are the steps:
 
 1. Stop the application server.
 
-1. Create a file called `system-ext.properties`.
+1. Add your properties to a file called `system-ext.properties`.
 
-    ```bash
-    touch [Liferay Home]/[App Server]/[Path to Portal Application]/WEB-INF/classes/system-ext.properties
-    ```
+1. Add the `system-ext.properties` file to DXP's classpath. Since DXP's `WEB-INF/classes` folder is on the classpath, you can add the `system-ext.properties` file to that folder. Here are two ways to add it:
 
-1. In `system-ext.properties`, add any new properties or new values for existing properties.
+    If DXP installs to your application server as an exploded web application, add `system-ext.properties` to the DXP application's `WEB-INF/classes` folder.
 
-    ```bash
-    echo "name=value" >> [Liferay Home]/[App Server]/[Path to Portal Application]/WEB-INF/classes/system-ext.properties
-    ```
+    If DXP installs to your application server as a WAR file, extract the WAR file contents and add the `system-ext.properties` file to the `WEB-INF/classes` folder. Then repackage the contents as a WAR file.
 
 1. Start the application server.
 
-    ```bash
-    [Liferay Home]/[App Server]/bin/startup.sh
-    ```
+1. Deploy DXP. For more information, please see the instructions for [installing on your application server](../installing-liferay/installing_liferay_on_an_application_server.html).
 
-Liferay DXP handles system properties in a flexible way, leaving you free to configure your system as best suits you. 
+Liferay DXP handles system properties in a flexible way, leaving you free to configure your system as best suits you.
 
 ## Additional Information
 
