@@ -2,7 +2,7 @@
 
 The liferay-npm-bundler is configured via a `.npmbundlerrc` file placed in the widget project's root folder. You can create a complete configuration manually or extend a configuration preset (via Babel).
 
-This article explains the `.npmbundlerrc` file's structure. See the `default preset reference <./how-the-default-preset-configures-the-liferay-npm-bundler.md>`_  to learn how the default preset configures the liferay-npm-bundler. See `Creating JavaScript Widgets with JavaScript Tooling <../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md>`_ to learn how to use the liferay-npm-bundler along with the Liferay JS Generator to create JavaScript widgets.
+See the `default preset reference <./how-the-default-preset-configures-the-liferay-npm-bundler.md>`_  to learn how the default preset configures the liferay-npm-bundler. See `Creating JavaScript Widgets with JavaScript Tooling <../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md>`_ to learn how to use the liferay-npm-bundler along with the Liferay JS Generator to create JavaScript widgets.
 
 ## The Structure
 
@@ -125,13 +125,13 @@ Below are the standard configuration options for the `.npmbundlerrc` file:
 }
 ```
 
-`dump-report:` Sets whether to generate a debugging report. If `true`, a `liferay-npm-bundler-report.html` file is generated in the project directory that describes all actions and decisions taken when processing project and npm modules. Note that you can also pass this as the build flag `$ liferay-npm-bundler --dump-report` or `$ liferay-npm-bundler -r`. The default value is `false`.
+`dump-report:` Sets whether to generate a debugging report. If `true`, a `liferay-npm-bundler-report.html` file that describes all actions and decisions taken when processing project and npm modules is generated in the project directory. Note that you can also pass this as the build flag `$ liferay-npm-bundler --dump-report` or `$ liferay-npm-bundler -r`. The default value is `false`.
 
-`no-tracking:` whether to send usage analytics to our servers. Note that you can also pass this as a build flag with the CLI argument `$ liferay-npm-bundler --no-tracking`, or by creating a marker file called `.liferay-npm-bundler-no-tracking` in the project's root folder or any of its ancestors, or by setting the environment variable `LIFERAY_NPM_BUNDLER_NO_TRACKING=''`. The default value is `false`.
+`no-tracking:` Sets whether to send usage analytics to our servers. Note that you can also pass this as a build flag with the CLI argument `$ liferay-npm-bundler --no-tracking`, or by creating a marker file called `.liferay-npm-bundler-no-tracking` in the project's root folder or any of its ancestors, or by setting the environment variable `LIFERAY_NPM_BUNDLER_NO_TRACKING=''`. The default value is `false`.
 
-`output:` by default the bundler writes packages to the standard Gradle resources folder: `build/resources/main/META-INF/resources`. Set this value to override the default output folder. Note that the dependency npm packages are placed in a `node_modules` folder inside the build folder. Note if `create-jar` is set, the default output folder is `build`.
+`output:` By default the bundler writes packages to the standard Gradle resources folder: `build/resources/main/META-INF/resources`. Set this value to override the default output folder. Note that the dependency npm packages are placed in a `node_modules` folder inside the build folder. Note if `create-jar` is set, the default output folder is `build`.
 
-`preset:` specifies the `liferay-npm-bundler` preset to use as a base configuration. Note that if a `.npmbundlerrc` file is not provided, the default `liferay-npm-bundler-preset-standard` preset is used. All settings provided by the preset are inherited, but they can be overridden.
+`preset:` Specifies the `liferay-npm-bundler` preset to use as a base configuration. Note that if a `.npmbundlerrc` file is not provided, the default `liferay-npm-bundler-preset-standard` preset is used. All settings provided by the preset are inherited, but they can be overridden.
 
 `verbose:` Sets whether to output detailed information about what the tool is doing to the console. The default value is `false`.
 
@@ -143,7 +143,7 @@ Below are the standard configuration options for the `.npmbundlerrc` file:
 
 *(asterisk)*: Defines the default plugin configuration for all npm packages. It contains four values identified by a corresponding key. Keys `copy-plugins`, `plugins` and `post-plugins` identify arrays of `liferay-npm-bundler` plugins to apply in the copy, pre and post process steps. Key `.babelrc` identifies an object specifying the configuration to use in the Babel step and has the same structure of a standard `.babelrc` file.
 
-`exclude:` defines glob expressions of files to exclude from bundling from all or specific packages. Each list is an array identified by one of the following keys: `*` (any package), `{package name}` (any version of the package), or `{package name}@{version}` (a specific version of a package). Below is an example configuration:
+`exclude:` Defines glob expressions of files to exclude from bundling from all or specific packages. Each list is an array identified by one of the following keys: `*` (any package), `{package name}` (any version of the package), or `{package name}@{version}` (a specific version of a package). Below is an example configuration:
 
 ```json
 {
@@ -155,7 +155,7 @@ Below are the standard configuration options for the `.npmbundlerrc` file:
 }
 ```
 
-`ignore:` skips processing the specified JavaScript files with Babel for the project. An example configuration is shown below:
+`ignore:` Skips processing the specified JavaScript files with Babel for the project. Here's an example configuration:
 
 ```json
 {
@@ -163,19 +163,19 @@ Below are the standard configuration options for the `.npmbundlerrc` file:
 }
 ```
 
-`include-dependencies:` defines packages to include in bundling, even if they are not listed under the `dependencies` section of `package.json`. These packages must be available in the `node_modules` folder (i.e. installed manually, without saving them to `package.json`, or listed in the `devDependencies` section).
+`include-dependencies:` Defines packages to include in bundling, even if they are not listed under the `dependencies` section of `package.json`. These packages must be available in the `node_modules` folder (i.e. installed manually, without saving them to `package.json`, or listed in the `devDependencies` section).
 
-`packages:` defines plugin configuration for npm packages, per package.
+`packages:` Defines plugin configuration for npm packages, per package.
 
 `max-parallel-files:` Defines the maximum number of files to process in parallel to avoid EMFILE errors (especially on Windows). The default value is `128`.
 
 `process-serially:` **Note**: removed since v 2.7.0. Replaced with `max-parallel-files`.
 
-`rules:` defines rules to apply to the projects source files with the loader. Rules must have a `use` array property that defines the loader to use, which can be specified using a package name or an object with `loader` and `options` properties if applicable, and one or more of the properties below:
+`rules:` Defines rules to apply to the projects source files with the loader. Rules must have a `use` array property that defines the loader to use, which can be specified using a package name or an object with `loader` and `options` properties if applicable, and one or more of the properties below:
 
-* `test`: defines a regular expression to filter files in the `sources` folders to determine whether to apply rules to them. The project-relative path of each eligible file is compared against the regular expression and files that match are processed by the loaders.
-* `exclude`: refines the `test` expression by specifying files to exclude.
-* `include`: refines the `test` expression by specifying files to include.
+* `test`: Defines a regular expression to filter files in the `sources` folders to determine whether to apply rules to them. The project-relative path of each eligible file is compared against the regular expression and files that match are processed by the loaders.
+* `exclude`: Refines the `test` expression by specifying files to exclude.
+* `include`: Refines the `test` expression by specifying files to include.
 
 Here's an example configuration:
 
@@ -206,9 +206,9 @@ Here's an example configuration:
 }
 ```
 
-`sources:` rules apply to files in these project folders. Folders can be nested (e.g. `/src/main/resources/`) and must be written using POSIX path separators (i.e. use `/` instead of `\` on Win32 systems). Note that rules are automatically applied to package dependency files of the project.
+`sources:` Rules apply to files in these project folders. Folders can be nested (e.g. `/src/main/resources/`) and must be written using POSIX path separators (i.e. use `/` instead of `\` on Win32 systems). Note that rules are automatically applied to package dependency files of the project.
 
-An example configuration is shown below:
+Here's an example configuration: 
 
 ```json
 {
@@ -218,7 +218,7 @@ An example configuration is shown below:
 
 ### OSGi Bundle Creation Options
 
-Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for you. See [Creating and Bundling JavaScript Widgets with JavaScript Tooling](../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md) for complete instructions. The configuration options for OSGi bundle creation are shown below:
+Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for you. See [Creating and Bundling JavaScript Widgets with JavaScript Tooling](../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md) for complete instructions. Here are the configuration options for OSGi bundle creation:
 
 * **create-jar**: Creates an OSGi bundle when set to a truthy value. When set to `true`, all sub-options take default values. When an object is passed, each sub-option can be configured individually. Note that you can also pass this as a build flag: `$ liferay-npm-bundler --create-` or `$ liferay-npm-bundler -j`. The default value is `false`.
 
@@ -228,9 +228,9 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.auto-deploy-portlet**: **Note** that this option is deprecated. Use the `create-jar.features.js-extender` option instead.
+* **create-jar.auto-deploy-portlet**: This option is deprecated. Use the `create-jar.features.js-extender` option instead.
 
-* **create-jar.features.configuration**: specifies the file describing the system (OSGi) and widget instance (widget preferences, as defined in the Portlet spec) configuration to use. (see [Configuring System Settings and Instance Settings for Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/configuring-system-settings-and-instance-settings-for-your-js-widget.md) for more information on the required settings configuration). The default value is `features/configuration.json` if that file exists, otherwise the default is `undefined`.
+* **create-jar.features.configuration**: Specifies the file describing the system (OSGi) and widget instance (widget preferences, as defined in the Portlet spec) configuration to use. (see [Configuring System Settings and Instance Settings for Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/configuring-system-settings-and-instance-settings-for-your-js-widget.md) for more information on the required settings configuration). The default value is `features/configuration.json` if that file exists, otherwise the default is `undefined`.
 
 ```json
 {
@@ -242,7 +242,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.output-dir:** specifies where to place the final JAR
+* **create-jar.output-dir:** Specifies where to place the final JAR.
 
 ```json
 {
@@ -252,7 +252,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.features.js-extender:** controls whether to process the OSGi bundle with the JS Portlet Extender. You can also specify the minimum required version of the Extender to use for the bundle. This can be useful if you want to use advanced features in your bundle, but you want it to be deployable in older versions of the Extender. Pass the string `"any"` to let the bundle deploy in any version of the Extender. If `true`, the liferay-npm-bundler automatically determines the minimum version of the Extender required for the features used in the bundle. the default value is `true`. An example configuration is shown below:
+* **create-jar.features.js-extender:** Controls whether to process the OSGi bundle with the JS Portlet Extender. You can also specify the minimum required version of the Extender to use for the bundle. This can be useful if you want to use advanced features in your bundle, but you want it to be deployable in older versions of the Extender. Pass the string `"any"` to let the bundle deploy in any version of the Extender. If `true`, the liferay-npm-bundler automatically determines the minimum version of the Extender required for the features used in the bundle. The default value is `true`. Here's an example configuration:
 
 ```json
 {
@@ -264,7 +264,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.features.web-context:** specifies the context path to use for publishing bundle's static resources. The default value is `/{project name}-{project version}`.
+* **create-jar.features.web-context:** Specifies the context path to use for publishing bundle's static resources. The default value is `/{project name}-{project version}`.
 
 ```json
 {
@@ -276,7 +276,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.features.localization:** specifies the L10N file to use for the bundle (see [Providing Localization in Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/localizing-your-widget.md) for more information on using localization in your widget. The default value is `features/localization/Language` if a properties file with that base name exists, otherwise the default is `undefined`.
+* **create-jar.features.localization:** Specifies the L10N file to use for the bundle See [Providing Localization in Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/localizing-your-widget.md) for more information on using localization in your widget. The default value is `features/localization/Language` if a properties file with that base name exists, otherwise the default is `undefined`.
 
 ```json
 {
@@ -288,7 +288,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.features.settings:** **Note** that this option is deprecated. Use the `create-jar.features.configuration` option instead.
+* **create-jar.features.settings:** This option is deprecated. Use the `create-jar.features.configuration` option instead.
 
 ```note::
   Plugins' configuration specifies the options for configuring plugins in all the possible phases, as well as the ``.babelrc`` file to use when running Babel (see `Babel's documentation <https://babeljs.io/docs/usage/babelrc/>`_ for more information on that file format).

@@ -6,7 +6,7 @@ liferay-npm-bundler's mechanism is inspired by webpack. Like webpack, the lifera
   While webpack creates a single JS bundle file, liferay-npm-bundler targets an AMD loader, so webpack and liferay-npm-bundler loaders are not compatible.
 ```
 
-Loaders are npm packages that export a function in their main module that receives source files and returns modified files, and optionally new files, based on the loader's configuration. For example, the [babel-loader](https://github.com/liferay/liferay-js-toolkit/tree/master/packages/liferay-npm-bundler-loader-babel-loader) receives ES6+ JavaScript files, runs Babel on them, and returns transpiled ES5 files along with a generated source map. You can use this pattern to [create custom loaders](../developer/creating-custom-loaders-for-the-bundler.md). A few example loader functions are shown below:
+Loaders are npm packages that in their main module export a function that receives source files and returns new or modified files, based on the loader's configuration. For example, the [babel-loader](https://github.com/liferay/liferay-js-toolkit/tree/master/packages/liferay-npm-bundler-loader-babel-loader) receives ES6+ JavaScript files, runs Babel on them, and returns transpiled ES5 files along with a generated source map. You can use this pattern to [create custom loaders](../developer/creating-custom-loaders-for-the-bundler.md). Here are some example loader functions:
 
 * Pass JavaScript files through Babel or TSC
 * Convert CSS files into JS modules that dynamically inject the CSS into the HTML page
@@ -20,4 +20,4 @@ Loaders are configured via the project's `.npmbundlerrc` file. A loader's config
 
 See [Understanding the `.npmbundlerrc`'s Structure](./npmbundlerrc-structure.md#package-processing-options) for more information on the configuration requirements and options.
 
-Loaders can be chained. Files are processed by the loaders in the order they are listed in the `use` property. The files are passed to the first loader, processed, sent to the next loader, and so on, until the files are processed by the rules. You can run complex processes, such as converting a SASS file into CSS with the sass-loader, and then convert it into a JavaScript module with the style-loader. Once the rules are applied, the liferay-npm-bundler continues with the pre, post, and babel phases of the bundler plugins.
+Loaders can be chained. Loaders process files in the order they are listed in the `use` property. The files are passed to the first loader, processed, sent to the next loader, and so on, until the files are processed by the rules. You can run complex processes, such as converting a SASS file into CSS with the sass-loader, and then convert it into a JavaScript module with the style-loader. Once the rules are applied, the liferay-npm-bundler continues with the pre, post, and babel phases of the bundler plugins.

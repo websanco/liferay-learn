@@ -8,7 +8,7 @@ In version series 1.x of the bundler it was the developer's responsibility to wr
 
 ## Isolating Project Dependencies
 
-Package names are prefixed with the bundle name since version 2.0.0 of the bundler, but were left intact in previous versions. This strategy is used to isolate packages from different bundles. You can still deploy bundler 1.x packages (without prefix), and they will still work as they did for previous versions of the bundler.
+Package names are prefixed with the bundle name since version 2.0.0 of the bundler, but were left intact in previous versions. This strategy is used to isolate packages from different bundles. You can still deploy bundler 1.x packages (without prefix), and they work as they did for previous versions of the bundler.
 
 ## Improved Peer Dependency Support
 
@@ -20,6 +20,6 @@ Note that injected dependency version constraints are the specific version numbe
 
 Namespacing means that each widget gets its own dependencies. Only using the bundler this way obtains the same functionality as standard bundlers like webpack or Browserify, so you wouldn't need a specific tool like liferay-npm-bundler. Since Liferay Portal is a widget based architecture, sharing dependencies among different widgets would be very beneficial.
 
-In bundler 1.x that deduplication was made automatically, but there was no control over it. However, with version 2.x, you may now import packages from an external OSGi bundle, instead of using your own. This lets you put shared dependencies in one project, and reference them from the rest. Though This new way of de-duplication is not automatic, it leads to full control (during build time) of how each package is resolved.
+In bundler 1.x that deduplication was made automatically, but there was no control over it. However, with version 2.x, you may now import packages from an external OSGi bundle, instead of using your own. This lets you put shared dependencies in one project and reference them from the rest. Though This new way of de-duplication is not automatic, it leads to full control (during build time) of how each package is resolved.
 
 Now that you understand what changed between version 1.x and 2.x of the liferay-npm-bundler, you can follow the steps in the [Migrating a liferay-npm-bundler Project from 1.x to 2.x](./bundler-migration-guide/migrating-bundler-projects-intro.md) to migrate your 1.x projects to 2.x. 
