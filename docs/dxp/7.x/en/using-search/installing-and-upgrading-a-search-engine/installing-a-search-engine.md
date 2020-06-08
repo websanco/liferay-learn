@@ -1,10 +1,14 @@
-# Introduction to Installing a Search Engine
+# Installing a Search Engine
 
-A search engine is a critical component of your Liferay DXP installation. This overview discusses the fundamentals on how to install a search engine in a **production** environment.
+A search engine is a critical component of your Liferay DXP installation. Some information is provided in the [creating an example cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine), but this section will cover more of the details (though at a high level) you need for setting up a production system.
 
-As noted in the Configuration Overview<!-- TODO link -->, DXP includes an Elasticsearch server that runs in the same JVM. The embedded server is supported for development but not for production environments. Administrators should **not** use the [embedded version in a production deployment](https://help.liferay.com/hc/en-us/articles/360029031631-Elasticsearch#embedded-vs-remote-operation-mode).
+<!-- DIAGRAM -->
+
+Liferay DXP includes an Elasticsearch server that runs in the same JVM. This makes local testing convenient since lots of Liferay DXP's functionality depends on a search engine, but the bundled server is but not supported in production environments.
+<!-- Is this the place to introduce sidecar which will replace embedded in GA4? -->
 
 Besides Elasticsearch, DXP also supports [Solr](http://lucene.apache.org/solr). Note that Solr is not embedded and has to be connected remotely. To use Solr, see the [Installing Solr](https://help.liferay.com/hc/articles/360032264052-Installing-Solr) article.
+<!-- Is this the place to mention our deprecation of solr support? -->
 
 ## Prerequisites
 
@@ -14,7 +18,7 @@ The search engine and Liferay DXP must use the same Java version and distributio
 
 ### Elasticsearch and Java Distribution Compatibility
 
-Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay DXP compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) to learn more about supported JDK distributions and versions.
+Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay DXP compatibility matrix](https://help.liferay.com/hc/sections/360002103292-Compatibility-Matrix) to learn more about supported JDK distributions and versions.
 
 ### Solr and Java Distribution Compatibility
 
