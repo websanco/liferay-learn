@@ -53,8 +53,6 @@ The application server and DXP are using the new system properties.
 
 ## Using a `system-ext.properties` File
 
-<!-- I removed the non-generic "generic" instructions above, but the one below isn't as easy to fix. As you know, not all application servers operate from an exploded WAR file, and so asking people to add a system-ext.properties file this way won't work. You have a bit more explaining to do (the file must go in Liferay's classpath; WEB-INF/classes is on the classpath; etc.). Some servers require extracting the WAR, putting the file in it, and redeploying the WAR. So you might be a bit less specific in your instructions below (i.e., no touch commands, etc.) and say to put the file on the classpath, and here are some ways some app servers handle it. -Rich -->
-
 If you want to use DXP's `system.properties` file and you want to extend/override system properties, use a `system-ext.properties` file. Here are the steps:
 
 1. Stop the application server.
@@ -75,5 +73,4 @@ Liferay DXP handles system properties in a flexible way, leaving you free to con
 
 ## Additional Information
 
-* [7.2 System Properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/system.properties.html)
 * [Portal Properties](./portal-properties.md)
