@@ -85,7 +85,7 @@ Create and configure an Elasticsearch server:
     mkdir -p elasticsearch/es_data_volume
     ```
 
-1. Start an Elastisearch container named `elasticsearch`.
+1. Start an Elasticsearch container named `elasticsearch`.
 
     ```bash
     docker run -it --name elasticsearch -p 9200:9200 -p 9300:9300 -e cluster.name=LiferayElasticsearchCluster -e ES_JAVA_OPTS="-Xms512m -Xmx512m" -v $(pwd)/elasticsearch/es_data_volume:/usr/share/elasticsearch/data elasticsearch:6.8.7
