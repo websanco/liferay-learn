@@ -20,6 +20,7 @@ from the structure.
 field and all its settings and iterates the *Name* to avoid conflicts.
 
 6. Optionally, add a *Description* for your structure.
+<!-- 1. Describe the optional Parent Structure option -->
 7. Click *Save*.
 
 ```note::
