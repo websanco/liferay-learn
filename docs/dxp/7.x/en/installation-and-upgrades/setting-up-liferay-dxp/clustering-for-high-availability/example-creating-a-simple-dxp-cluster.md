@@ -224,7 +224,7 @@ The `--add-host [domain]:[IP address]` options [add `/etc/hosts` file entries](h
 
 The `-e [variable]=[value]` options set the DXP container environment variables. See [Appendix A: Environment Settings](#appendix-a-environment-settings) for more information.
 
-## Test the DXP Cluster
+### Visit the DXP Nodes
 
 The DXP cluster nodes are available at the following URLs:
 
@@ -236,6 +236,21 @@ The figure below shows the cluster node home pages.
 ![DXP cluster nodes.](./example-creating-a-simple-dxp-cluster/images/02.png)
 
 Each node's container ID and port (`Node: [id]:[port]`) show at the bottom of each page. The `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true` environment setting enabled this display feature. You can find a container's ID using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
+
+### Index the Content into the Search Engine
+
+Initiate indexing DXP content into the search engine:
+
+1. Navigating to *Control Panel &rarr; Configuration &rarr; Search*.
+
+1. In the Index Actions tab, click on these options:
+
+    * *Reindex all search indexes*
+    * *Reindex all spell check indexes*
+
+Content is indexing into the search engine. Please see [Search Overview](../../../using-search/getting-started/search-overview.html) for more information.
+
+## Test the DXP Cluster
 
 Test data synchronization between the nodes:
 
