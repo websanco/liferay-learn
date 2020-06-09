@@ -66,18 +66,20 @@ if __name__ == "__main__":
 
     matcheslist = list(filtermatches)
 
+    warnhtmllines = []
     # Now we have the final list of files that contain the string and that the
     # user confirms they want to operate on, so here we do the replacement of
     # known good patterns for replacement.
     for each in matcheslist[0]:
 
         filepath = Path(each)
-
         f = open(filepath, "r")
         origlines = f.readlines()
         f.close()
 
         newlines = []
+
+        lastline = ""
 
         for origline in origlines:
             if (re.search('/'+oldName+'.md',origline) or
@@ -93,8 +95,16 @@ if __name__ == "__main__":
 
                 print(Fore.LIGHTBLUE_EX + f.name + Fore.RESET + Fore.LIGHTYELLOW_EX + "\n" + newline)
 
+                if each.endswith("landing.html"):
+                    combo = Fore.BLUE + each + "\n" + Fore.YELLOW + lastline + newline
+                    warnhtmllines.append(combo)
+
+                lastline = newline
+
+
             else:
                 newlines.extend(origline)
+                lastline = origline
 
         f = open(filepath, "w")
         f.writelines(newlines)
@@ -143,3 +153,11 @@ if __name__ == "__main__":
         else:
 
             print(Fore.YELLOW + "------------")
+
+    print(Fore.WHITE + "For each " + Fore.BLUE + "landing.html " +
+          Fore.WHITE + "file that was modified,")
+    print(Fore.YELLOW + "<<<Make sure the 'name'"
+          " attribute reflects the new content from the 'url' attribute>>> \n")
+    for eachline in warnhtmllines:
+        print(eachline)
+        print(Fore.YELLOW + "------------")
