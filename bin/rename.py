@@ -131,6 +131,8 @@ if __name__ == "__main__":
     renamelist = list(chosenfilepatterns)
 
     # now we have the final list of files to rename
+    warnmdlines = []
+    print(Fore.YELLOW + "------------")
     for renamefile in renamelist[0]:
 
         newfilename = re.sub(oldName, newName, renamefile, 1, 0)
@@ -139,6 +141,7 @@ if __name__ == "__main__":
 
         print(Fore.BLUE + renamefile + "\n" + Fore.WHITE + " was renamed to " +
               "\n" + Fore. BLUE + newfilename)
+        print(Fore.YELLOW + "------------")
 
         if newfilename.endswith('.md'):
 
@@ -146,18 +149,26 @@ if __name__ == "__main__":
             titleline = f.readline()
             f.close()
 
-            print(Fore.YELLOW + "<<<Make sure the article's title "
-                  "corresponds to the new file name>>>")
-            print(Fore.YELLOW + titleline + "------------")
+            combolines = Fore.BLUE + newfilename + "\n" + Fore.YELLOW + titleline
+            warnmdlines.append(combolines)
 
-        else:
-
-            print(Fore.YELLOW + "------------")
-
+    print(Back.LIGHTCYAN_EX + Fore.BLACK + "FOLLOW-UP ACTION MAY BE REQUIRED" +
+          Style.RESET_ALL)
     print(Fore.WHITE + "For each " + Fore.BLUE + "landing.html " +
           Fore.WHITE + "file that was modified,")
     print(Fore.YELLOW + "<<<Make sure the 'name'"
           " attribute reflects the new content from the 'url' attribute>>> \n")
+    print(Fore.YELLOW + "------------")
     for eachline in warnhtmllines:
         print(eachline)
         print(Fore.YELLOW + "------------")
+    print(Fore.YELLOW + "------------")
+
+    print(Fore.WHITE + "For each " + Fore.BLUE + ".md " +
+          Fore.WHITE + "file that was renamed,")
+
+    print(Fore.YELLOW + "<<<Make sure the article's title "
+          "corresponds to the new file name>>>")
+    for warnmdline in warnmdlines:
+        print(Fore.YELLOW + warnmdline + "------------")
+
