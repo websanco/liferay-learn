@@ -1,14 +1,10 @@
 # Writing a Form Storage Adapter
 
-You can store form records in alternate storage formats, or inject custom logic into the lifecycle of a form record persistence event, by implementing a
-
-```java
-com.liferay.dynamic.data.mapping.storage.DDMStorageAdapter
-```
+By default, forms are stored in Liferay DXP's database. You can store form records in alternate storage formats or inject custom logic into the lifecycle of a form record persistence event by implementing a ` com.liferay.dynamic.data.mapping.storage.DDMStorageAdapter`.
 
 ![Use a DDM Storage Adapter to add a Storage Type to the Forms application.](./writing-a-form-storage-adapter/images/01.png)
 
-The example storage adapter in this tutorial provides the [default storage adapter's](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) logic, to save form records in the Liferay DXP database as JSON content, but also adds logic to store each Form Record in a simple file on the file system.
+This example storage adapter provides the [default storage adapter's](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) logic, to save form records in the Liferay DXP database as JSON content, but also adds logic to store each Form Record on the file system.
 
 ## Examine a Running DDM Storage Adapter
 
@@ -17,7 +13,7 @@ To get the example storage adapter up and running,
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 --name lrdev liferay/portal:7.3.1-ga2
+    docker run -it -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
     ```
 
     If you already have a docker container, use
@@ -41,8 +37,9 @@ To get the example storage adapter up and running,
     ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
-
-    >**Note:** This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```note::
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```
 
 1. Confirm the deployment in the Liferay Docker container console.
 
@@ -76,6 +73,21 @@ To get the example storage adapter up and running,
 
 ## Understanding the DDM Storage Adapter
 
+<!-- 
+Hey Russ, this is close, but there's a lot of detail that makes this too long, and you don't actually have the user making any changes. Generically, the steps should be 
+
+1. Deploy something
+2. Use it and see what it does (you have these two steps)
+3. Show how the thing works
+4. Modify it to do something additional
+5. Deploy it again
+6. Use it and see the changes
+
+Anything else should go in a separate reference document. For this article, I'd recommend deploying the same implementation Liferay has (the database) and then adding the functionality for saving to the file system. In that way, the reader is making the changes and learns what has to be implemented as those changes are made. If you have additional information, that should go in a reference document.
+
+Please let me know if you have any questions.
+-->
+
 The deployed example contains just one class: `DDMFileSystemStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries on the File System.
 
 * [Annotate the Adapter Class for OSGi Registration](#annotate-the-adapter-class-for-osgi-registration)
@@ -96,7 +108,7 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 
 The `service` component property registers your implementation as a `DDMStorageAdapter` service.
 
-The `property = "ddm.storage.adapter.type=file"` provides an identifier so that your service can be dynamically retrieved from a Service Tracker in the Forms service layer or specifically referenced as a unique `DDMStorageAdapter` implementation:  
+The `property = "ddm.storage.adapter.type=file"` provides an identifier so that your service can be dynamically retrieved from a Service Tracker in the Forms service layer or specifically referenced as a unique `DDMStorageAdapter` implementation: 
 
 ```java
 @Reference(target = "(ddm.storage.adapter.type=file)")
@@ -105,7 +117,7 @@ private DDMStorageAdapter fileSystemDDMStorageAdapter;
 
 ### Understand the Storage Adapter Calling Context
 
-The Forms application's service code looks up the appropriate storage adapter, and calls its storage logic against the `DDMFormInstanceRecord` being handled.
+The Forms application's service code looks up the appropriate storage adapter and calls its storage logic against the `DDMFormInstanceRecord` being handled.
 
 From `DDMFormInstanceRecordLocalServiceImpl`:
 
@@ -143,7 +155,7 @@ _DDMStorageAdapter[[Save](https://github.com/liferay/liferay-portal/blob/7.2.0-g
 object, each constructed using a static inner `Builder` class's `newBuilder`
 method. 
 
-Each method of the storage adapter is passed a very useful `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information. 
+Each method of the storage adapter is passed a `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information. 
 
 <!-- link to javadoc when available -->
 
