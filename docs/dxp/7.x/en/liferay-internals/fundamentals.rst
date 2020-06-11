@@ -5,6 +5,7 @@ Fundamentals
    :maxdepth: 3
 
    fundamentals/fundamentals.md
+   fundamentals/module-projects.md
    fundamentals/importing-packages.md
    fundamentals/exporting-packages.md
    fundamentals/semantic-versioning.md
