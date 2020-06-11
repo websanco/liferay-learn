@@ -5,6 +5,7 @@ Forms
 -----
 
 -  :doc:`/process-automation/forms/developer-guide/writing-a-form-storage-adapter`
+-  :doc:`/process-automation/forms/developer-guide/understanding-form-storage-adapters`
 * Form Serialization with the DDM IO API
 
 Data Engine
@@ -19,3 +20,4 @@ Data Engine
    :maxdepth: 3
 
    developer-guide/writing-a-form-storage-adapter.md
+   developer-guide/understanding-form-storage-adapters.md
