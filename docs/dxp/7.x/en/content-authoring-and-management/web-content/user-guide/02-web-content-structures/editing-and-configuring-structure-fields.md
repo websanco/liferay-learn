@@ -1,55 +1,59 @@
-# Editing and Configuring the Structure Fields
+# Configuring Structure Fields
 
-You can edit the different fields that are part of a structure, as well as the properties of each field.
+You can edit the fields in a Structure, as well as the properties of each field. To edit a Structure, follow these steps:
 
-To edit a Structure:
+1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
+1. Select the *Structures* tab.
+1. Click the name of the Structure you want to modify.
 
-1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
-2. Select the *Structures* tab.
-3. Click the name of the structure you want to modify
+    ```tip::
+       You can also open the Actions Menu next to the Structure and select *Edit*.
+    ```
 
-```tip::
-   You can also click the (![Action Menu](../../../../../../images/icon-actions.png) menu and choose *Edit*.
-```
+1. Add, [remove](#structure-field-options), or reorganize the fields in the Structure.
+1. Select the field you want to configure and click the *Settings* tab, or hover over the field and click the *Settings* (![Settings icon](../../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. You can perform [other actions](#structure-field-options) in the context menu as well.
+1. [Configure your desired settings](#configurable-settings) for the field and *Save* the changes.
 
-4. Add, remove, or reorganize the fields in the structure.
-5. On the structure, click the field you want to configure and select *Settings*, or click the *Options* (![Options](../../../../images/icon-gear.png)) icon
-6. Configure your desired settings for the field.
-
-## Configurable Settings in the Structure Fields
+## Configurable Settings
 
 ```note::
-   The available settings for a field depend on the type of field.
+   The available settings for a field depend on the type of field. A setting listed below may not be available for a field.
 ```
 
-**Type:** Lists the type of field placed in the definition. This is not editable but is available to reference from a template.
+**Type:** The type of field placed in the definition. This is not editable but is available to reference from a Web Content Template.
 
-**Field Label:** Sets the text that can be displayed with the field. This is the human-readable text that the user sees.
+**Field Label:** The text to display above the field to the user
 
-**Show Label:** Select *Yes* to display the Field Label.
+**Show Label:** Whether to show the *Field Label.* The default value is *Yes*.
 
-**Required:** Select *Yes* to mark the field required. If a field is required, users must enter a value for it to submit content using the structure.
+**Required:** Whether to mark the field as required. If a field is required, users must enter a value for it to submit content using the Structure. The default value is *No*.
 
-**Name:** The name of the field internally, automatically generated. Since this is the variable name that you can read the data from in a template or display page, you should enter a descriptive name.
+**Name:** The variable name used to retrieve data for the field in Web Content Templates. You should enter a descriptive name. The default value is automatically generated.
 
 ```tip::
-   Liferay DXP assigns a random name for each new field in the structure. Change this random name for something descriptive, so it's easier to identify the field when you read the data in a templaste or display page.
+   Liferay DXP assigns a random name for each new field in the Structure. Replace the default value with something more descriptive, so it's easier to identify the field when you read the data in a Web Content Template or Display Page.
 ```
 
-**Predefined Value:** When a user creates a new web content article based on a structure that has predefined values for various fields, the predefined values appear in the form as defaults for those fields.
+**Predefined Value:** The default placeholder value for a field. Alternatively, you can define predefined values using the *Edit Default Values* option. See [Managing Structures](./managing-structures.md#edit-default-values) for more information.
 
-Alternatively, you can define predefined values using the *Edit Default Values* option from the *Actions* menu for the structure. For more information, read [Managing Structures](managing-structures.md).
+**Tip:** Help text to display with the field when the user hovers over the help icon
 
-**Tip:** Each field can have a small help icon, with a tooltip attached that displays helpful information. If you want to provide text for the tooltip, you may enter it here.
+**Indexable:** Whether to index the field for search. The default value is *Yes*.
 
-**Indexable:** Select *Yes* to index the field for search.
+**Localizable:** Whether the field can be localized in the user's language. The default value is *Yes*.
 
-**Localizable:** Select *Yes* to allow localization for the field.
+**Repeatable:** Whether the user can duplicate the field while creating the Web Content. For example, you can have a repeatable author field so the user can duplicate the field to enter a second author for an article. The default value is *No*. If set to *Yes*, the user can click a `+` icon on the field to duplicate it while creating the Web Content.
 
-**Repeatable:** Select *Yes* to make your field repeatable. Users can then add as many copies of this field as they need. For example, if you're creating a structure for articles, you might want a repeatable Author field in case you have multiple authors for a particular article.
+**Multiple:** Whether a user can select multiple options in a *Select* field. The default value is *No*.
 
-**Multiple:** Select *Yes* to enable a multi-selection list. This is only available for the Select field.
+**Options:** The available options for a *Select* field or *Radio* field. You can add and remove options as well as edit each individual option's display name (the name the user sees when creating the Web Content) and value (the value stored for the option, which can be retrieved in the Web Content Template) pair.
 
-**Options:** Changes the options available for selection. You can add and remove options as well as edit each individual option's display name and value. This is only available for the Radio and Select fields.
+**Style:** Optional CSS styles for the *Separator* field.
 
-**Style:** Changes the style of the line separator. This is only available for the Separator field.
+## Structure Field Options
+
+When you hover over a Structure field, these options are available in the context menu that appears:
+
+* **Settings** (![Settings](../../../../images/icon-settings.png)): Changes the name and label and set other information about the field, like whether or not it is required.
+* **Delete** (![Delete](../../../../images/icon-app-trash.png)): Removes the field from the structure.
+* **Duplicate** (![Duplicate](../../../../images/icon-duplicate.png)): Duplicates the field and all its settings and iterates the *Name* to avoid conflicts.

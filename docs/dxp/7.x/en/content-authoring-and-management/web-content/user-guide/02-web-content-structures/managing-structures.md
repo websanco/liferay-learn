@@ -1,47 +1,65 @@
 # Managing Structures
 
-Web content structures can inherit characteristics from other structures. A child structure inherits all the parent's fields and settings. You can use this functionality to create a structure from one that already exists. For example, if you have a *Sports Article* structure and you want to create a new *In-depth Sports Article* structure, set *Sports Article* as the parent structure. The *In-depth Sports Article* inherits all its fields, letting you add new ones for more in-depth information.
-<!-- Need to describe how to set this parent-child relationship in the UI -->
+You can manage Structures from the Structures Page. Follow these steps:
 
-```note::
-   Due to import/export operations, it's possible to have both a global and a Site-scoped structure with the same `structureKey`. If this happens, the Site-scoped structure takes precedence, and you can't access the global structure from that Site.
-```
+1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
+1. Select the *Structures* tab.
+1. Open the *Actions Menu* (![Action Menu](../../../../images/icon-actions.png)) next to the Structure and select one of the [available actions](#available-actions).
+1. Click *Save* to apply your changes.
 
-You can manage your structures using the different options in the *Actions* (![Action Menu](../../../../../../images/icon-actions.png) menu.
+## Available Actions
 
-## Edit
-Choose *Edit* to edit and configure the structure's content. For more information, read [Editing and Configuring Structures' Content](./03-editing-and-configuring-structures-content.md).
+The available options in a Structure's Actions Menu (![Action Menu](../../../../images/icon-actions.png)) are listed below.
 
-## Edit Default Values
-Using this option you can set default values for the elements of your structure. For example, for a structure that used for confidential memos, you may want to add the "confidential" tag for all the articles created with that structure. Or you may want to make the content of all confidential memos non-searchable. 
+**Edit:** Opens the Structure so you can update it. See [Configuring Structure Fields](./03-editing-and-configuring-structures-content.md) for more information.
 
-To edit default values:
+**Edit Default Values:** Opens a form to set default values for the Structure's fields. See [below](#editing-default-values) for more information.
 
-1. From the *Structures* tab, click the *Actions* menu and choose *Edit Default Values*
-2. In the *Structure Default Values* page, configure the default values for your elements.
-3. If you want to restore the original values of the structure, click *Reset Values*.
-4. Click *Save*.
+**Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](managing-templates.md) for more information.
+
+**Permissions:** Opens the permissions configuration dialog for the Structure. See [below](#permissions-tips) for some useful tips.
+
+**Copy:** Opens a form to copy the Structure and set its name. See [below](#copying-an-existing-structure) for more information.
+
+**Delete:** Deletes the Structure
+
+## Editing Default Values
+
+You can set the default values for a Structure's fields. For example, a Structure used for confidential memos may want to add the "confidential" tag for all the articles created with that Structure, or you may want to make the content of all confidential memos non-searchable. From the Structures Page, open the Actions Menu for the Structure and follow these steps:
+
+1. Choose *Edit Default Values*.
+1. In the *Structure Default Values* page, configure the default values for your fields.
+
+    ```tip::
+      You can restore the original values of the Structure at any time by clicking the *Reset Values* button at the top.
+    ```
+
+1. Click *Save* to apply the changes.
 
 ```tip::
-   You can also use the *Predefined Value* setting for the structure field to set default values. For more information, read [Editing and Configuring Structures' Content](./03-editing-and-configuring-structures-content.md)
+   You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and `Configuring Structures' Content <./editing-and-configuring-structures-content.md)>`_
 ```
 
-## Manage Templates
-To understand how you can create templates with structures, see [Adding Templates with Structures](02-adding-templates.md)
+## Permissions Tips
 
-## Permission
-You configure permissions in structures in the same way you configure permissions for other elements. For more information, read [01-introduction-to-roles-and-permissions].
+Consider these points when setting permissions for Structures:
 
-Consider the following information when setting permissions for structures:
-
-* As a best practice, assign permissions to roles.
-* The *View* permission allows users to view structures.
-* Most users should not be able to edit structures.
+* Most users should not be able to edit Structures
+* The *View* permission allows users to create Web Content that uses the Structure. You should enable this if you want your Structure to be used.
 
 ![Configuring Structure Permissions](./managing-structures/images/01.png)
 
-## Copy
-You can use an existing structure to create a new one. For more information, read [creating-structures](./creating-structures.md)
+See [Roles and Permissions](../../../../users-and-permissions/roles_and_permissions.rst) for more information on configuring Permissions.
 
-## Delete
-Deletes the structure.
+## Copying an Existing Structure
+
+You can copy an existing structure to create a new one. From the Structures Page, open the Actions Menu for the Structure and follow these steps:
+
+1. Choose *Copy*.
+1. Type a new *Name* for the Structure and, optionally, a new *Description*.
+1. Optionally check the *Copy Templates* box if you want to copy the Web Content Templates associated with the Structure. 
+1. Click *Copy*.
+
+```tip::
+   Liferay DXP generates a unique ID for the copied Structure. The new copy inherits all the attributes from the original Structure, including the name. To avoid confusing the copy with the original, use a different name for the copy.
+```
