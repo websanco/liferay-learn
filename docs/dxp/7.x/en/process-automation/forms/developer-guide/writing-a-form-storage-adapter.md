@@ -65,7 +65,7 @@ To get the example storage adapter up and running,
 
    ![Verify that the form entries were added.](./writing-a-form-storage-adapter/images/02.png)
 
-## Understanding the Extension Point
+## Understand the Extension Point
 
 The deployed example contains just one class: `DDMFileSystemStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The current example holds logic identical to the default implementation used for all forms by default: `DDMJSONStorageAdapter`. Adding logic to this will extend the existing example to do something in addition to it. Here's how it works in its current state:
 
@@ -87,7 +87,7 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 
 The `service` component property registers your implementation as a `DDMStorageAdapter` service.
 
-The `property = "ddm.storage.adapter.type=file"` provides an identifier so that your service can be dynamically retrieved from a Service Tracker in the Forms service layer or specifically referenced as a unique `DDMStorageAdapter` implementation: 
+The `property = "ddm.storage.adapter.type=file-system"` provides an identifier so that your service can be dynamically retrieved from a Service Tracker in the Forms service layer or specifically referenced as a unique `DDMStorageAdapter` implementation: 
 
 ```java
 @Reference(target = "(ddm.storage.adapter.type=file)")
@@ -95,8 +95,6 @@ private DDMStorageAdapter fileSystemDDMStorageAdapter;
 ```
 
 ### Understand the DDMStorageAdapter Interface
-
-#### Storage Adapter Calling Context
 
 The Forms application's service code looks up the appropriate storage adapter and calls its storage logic against the `DDMFormInstanceRecord` being handled.
 
@@ -108,8 +106,6 @@ DDMStorageAdapter ddmStorageAdapter = getDDMStorageAdapter();
 DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
     ddmStorageAdapter.save(ddmStorageAdapterSaveRequest);
 ```
-
-#### Review the DDM Storage Adapter Interface
 
 To create your own storage adapter you must implement three methods to handle CRUD operations on form records: `delete`, `get`, and `save` (which also handles update logic).
 
@@ -155,14 +151,13 @@ private DDMFormValuesDeserializerTracker _ddmFormValuesDeserializerTracker;
 private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
 ```
 
+## Implement File System Storage
 
-## Implementing File System Storage
-
-The default storage adapter already overrides the three methods of the interface, and the file system storage is in addition to that logic.
+The default storage adapter already overrides the three methods of the interface, and the file system storage adds file storage logic to it.
 
 ### Implement File Deletion
 
-Add a line to the beginning of the `delete` method that sets the `fileId` as the primary key returned by the delete request object:
+To handle deletion, add a line to the beginning of the `delete` method that sets the `fileId` as the primary key returned by the delete request object:
 
 ```java
 long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
@@ -252,6 +247,7 @@ After that, we keep the default JSON implementation: get the DDM content using t
 Here's the new method with the file retrieval call:
 
 ```java
+@Override
 public DDMStorageAdapterGetResponse get(
         DDMStorageAdapterGetRequest ddmStorageAdapterGetRequest)
     throws StorageException {
@@ -316,7 +312,7 @@ return builder.build();
 The `_saveFile` method looks like this:
 
 ```java
-private void __saveFile(long fileId, DDMFormValues formValues)
+private void _saveFile(long fileId, DDMFormValues formValues)
     throws IOException {
 
     try {
@@ -332,7 +328,7 @@ private void __saveFile(long fileId, DDMFormValues formValues)
     }
 }
 ```
-Here's the entirety of the save logic after adapting to the file system example:
+Here's the entirety of the save logic (including the `save`, `insert` and `update` methods) after adapting to the file system example:
 
 ```java
 @Override
@@ -349,7 +345,7 @@ public DDMStorageAdapterSaveResponse save(
 
 private DDMStorageAdapterSaveResponse _insert(
         DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
-    throws PortalException, StorageException {
+    throws StorageException {
 
     DDMFormValues ddmFormValues =
         ddmStorageAdapterSaveRequest.getDDMFormValues();
@@ -390,9 +386,6 @@ private DDMStorageAdapterSaveResponse update(
         DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
     throws StorageException {
 
-    DDMFormValues ddmFormValues =
-        ddmStorageAdapterSaveRequest.getDDMFormValues();
-
     try {
         DDMContent ddmContent = _ddmContentLocalService.getContent(
             ddmStorageAdapterSaveRequest.getPrimaryKey());
@@ -411,9 +404,6 @@ private DDMStorageAdapterSaveResponse update(
             DDMStorageAdapterSaveResponse.Builder.newBuilder(
                 ddmContent.getPrimaryKey());
 
-        DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
-            builder.build();
-
         DDMFormValues ddmFormValues =
             ddmStorageAdapterSaveRequest.getDDMFormValues();
 
@@ -429,7 +419,7 @@ private DDMStorageAdapterSaveResponse update(
 }
 ```
 
-The `_serialize` and `_deserialize` methods didn't change for this example. If you wanted to write a format other than JSON you would need to add custom serialization logic.
+The `_serialize` and `_deserialize` methods are copied from the default storage adapter's code. If you wanted to write a format other than JSON you would need to add custom serialization logic.
 
 ## Deploy and Test the Storage Adapter
 
@@ -454,7 +444,7 @@ Now verify that it's working:
 1. To verify the form record files were written in the container, execute a `find` and `cat` via `docker exec` to print the file contents to the command line:
 
    ```bash
-   docker exec -it lrdev find /opt/liferay/form-records -type f -exec cat {} +
+   docker exec -it $(docker ps -lq) find /opt/liferay/form-records -type f -exec cat {} +
    ```
 
    The JSON for each form record file is printed to the command line:
@@ -466,4 +456,3 @@ Now verify that it's working:
 ## Conclusion
 
 By implementing a `DDMStorageAdapter`, you can save forms records in any storage format you want.
-
