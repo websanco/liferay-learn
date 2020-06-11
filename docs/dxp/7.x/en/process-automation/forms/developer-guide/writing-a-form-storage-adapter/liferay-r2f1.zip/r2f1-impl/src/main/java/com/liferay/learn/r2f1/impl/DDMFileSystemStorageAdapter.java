@@ -36,10 +36,6 @@ import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveRequest;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveResponse;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.service.ServiceContext;
-import com.liferay.portal.kernel.util.FileUtil;
-
-import java.io.File;
-import java.io.IOException;
 
 import java.util.Date;
 
@@ -60,10 +56,6 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterDeleteRequest ddmStorageAdapterDeleteRequest)
 		throws StorageException {
 
-		long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
-
-		deleteFile(fileId);
-
 		try {
 			ddmContentLocalService.deleteDDMContent(
 				ddmStorageAdapterDeleteRequest.getPrimaryKey());
@@ -83,10 +75,6 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
-			long fileId = ddmStorageAdapterGetRequest.getPrimaryKey();
-
-			getFile(fileId);
-
 			DDMContent ddmContent = ddmContentLocalService.getContent(
 				ddmStorageAdapterGetRequest.getPrimaryKey());
 
@@ -119,12 +107,6 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		return update(ddmStorageAdapterSaveRequest);
 	}
 
-	private void deleteFile(long fileId) {
-		File file = new File(_PATHNAME + "/" + fileId);
-
-		file.delete();
-	}
-
 	private DDMFormValues deserialize(String content, DDMForm ddmForm) {
 		DDMFormValuesDeserializer ddmFormValuesDeserializer =
 			ddmFormValuesDeserializerTracker.getDDMFormValuesDeserializer(
@@ -139,18 +121,6 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 				ddmFormValuesDeserializer.deserialize(builder.build());
 
 		return ddmFormValuesDeserializerDeserializeResponse.getDDMFormValues();
-	}
-
-	private void getFile(long fileId) throws IOException {
-		try {
-			System.out.println(
-				"Reading the file named:" + fileId + "\n" +
-					"The file contents: " +
-						FileUtil.read(_PATHNAME + "/" + fileId));
-		}
-		catch (IOException e) {
-			throw new IOException(e);
-		}
 	}
 
 	private DDMStorageAdapterSaveResponse insert(
@@ -181,31 +151,10 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
 				builder.build();
 
-
-			long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
-
-			saveFile(fileId, ddmFormValues);
-
 			return ddmStorageAdapterSaveResponse;
 		}
 		catch (Exception e) {
 			throw new StorageException(e);
-		}
-	}
-
-	private void saveFile(long fileId, DDMFormValues formValues)
-		throws IOException {
-
-		try {
-			String serializedDDMFormValues = serialize(formValues);
-
-			File abstractFile = new File(String.valueOf(fileId));
-
-			FileUtil.write(
-				_PATHNAME, abstractFile.getName(), serializedDDMFormValues);
-		}
-		catch (IOException e) {
-			throw new IOException(e);
 		}
 	}
 
@@ -252,18 +201,12 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
 				builder.build();
 
-			long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
-
-			saveFile(fileId, ddmFormValues);
-
 			return ddmStorageAdapterSaveResponse;
 		}
 		catch (Exception e) {
 			throw new StorageException(e);
 		}
 	}
-
-	private static final String _PATHNAME = "/opt/liferay/form-records";
 
 	@Reference
 	private DDMContentLocalService ddmContentLocalService;
