@@ -79,7 +79,7 @@ The `DDMFileSystemStorageAdapter` implements the `DDMStorageAdapter` interface:
 
 ```java
 @Component(
-	immediate = true, property = "ddm.storage.adapter.type=file",
+	immediate = true, property = "ddm.storage.adapter.type=file-system",
 	service = DDMStorageAdapter.class
 )
 public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
@@ -146,17 +146,15 @@ This code relies on several services deployed to an OSGi container:
 
 ```java
 @Reference
-private DDMContentLocalService ddmContentLocalService;
+private DDMContentLocalService _ddmContentLocalService;
 
 @Reference
-private DDMFormValuesDeserializerTracker ddmFormValuesDeserializerTracker;
+private DDMFormValuesDeserializerTracker _ddmFormValuesDeserializerTracker;
 
 @Reference
-private DDMFormValuesSerializerTracker ddmFormValuesSerializerTracker;
+private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
 ```
 
-
-DO SOMETHING WITH THE EXAMPLE (ADD FILE SYSTEM LOGIC)
 
 ## Implementing File System Storage
 
@@ -170,16 +168,16 @@ Add a line to the beginning of the `delete` method that sets the `fileId` as the
 long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
 ```
 
-Then outsource the file deletion logic to a utility method called `deleteFile`, and pass it the file ID:
+Then outsource the file deletion logic to a utility method called `_deleteFile`, and pass it the file ID:
 
 ```java
-deleteFile(fileId);
+_deleteFile(fileId);
 ```
 
-Give `deleteFile` these contents:
+Give `_deleteFile` these contents:
 
 ```java
-private void deleteFile(long fileId) {
+private void _deleteFile(long fileId) {
     File file = new File(_PATHNAME + "/" + fileId);
 
     file.delete();
@@ -202,10 +200,10 @@ public DDMStorageAdapterDeleteResponse delete(
 
     long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
 
-    deleteFile(fileId);
+    _deleteFile(fileId);
 
     try {
-        ddmContentLocalService.deleteDDMContent(
+        _ddmContentLocalService.deleteDDMContent(
             ddmStorageAdapterDeleteRequest.getPrimaryKey());
 
         DDMStorageAdapterDeleteResponse.Builder builder =
@@ -219,25 +217,24 @@ public DDMStorageAdapterDeleteResponse delete(
 }
 ```
 
-
 After dealing with the file storage scenario, this code does the same thing the default JSON storage adapter does: delete the `DDMContent` with the ID returned by the delete request's `getPrimaryKey` method. After that a delete response object is built and returned.
 
 Since there's no serialization or deserialization involved with deletion you can use the default storage adapter's basic deletion code in most cases, unless you require some custom deletion logic for your use case.
 
-### Implement file Retrieval
+### Implement File Retrieval
 
-At the very beginning of the `get` method, set the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and call a `getFile` utility method which prints the retrieved content to the Liferay log.
+At the very beginning of the `get` method, set the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and call a `_getFile` utility method which prints the retrieved content to the Liferay log.
 
 ```java 
 long fileId = ddmStorageAdapterGetRequest.getPrimaryKey();
 
-getFile(fileId);
+_getFile(fileId);
 ```
 
-Here's the `getFile` utility method:
+Here's the `_getFile` utility method:
 
 ```java
-private void getFile(long fileId) throws IOException {
+private void _getFile(long fileId) throws IOException {
     try {
         System.out.println(
             "Reading the file named:" + fileId + "\n" +
@@ -262,12 +259,12 @@ public DDMStorageAdapterGetResponse get(
     try {
         long fileId = ddmStorageAdapterGetRequest.getPrimaryKey();
 
-        getFile(fileId);
+        _getFile(fileId);
 
-        DDMContent ddmContent = ddmContentLocalService.getContent(
+        DDMContent ddmContent = _ddmContentLocalService.getContent(
             ddmStorageAdapterGetRequest.getPrimaryKey());
 
-        DDMFormValues ddmFormValues = deserialize(
+        DDMFormValues ddmFormValues = _deserialize(
             ddmContent.getData(), ddmStorageAdapterGetRequest.getDDMForm());
 
         DDMStorageAdapterGetResponse.Builder builder =
@@ -285,22 +282,9 @@ public DDMStorageAdapterGetResponse get(
 
 The Forms application autosaves partially created forms by calling the `save` method. In addition, `save` is called when the user submits the form. Each save request can be one of two types: a new record is being added or an existing record is being updated.
 
-For a File-backed form record, just overwrite an existing file each time a save is made.
+For a File-backed form record, the `update` method can just overwrite an existing file each time a save is made, using the current `ddmFormValues` as the file contents.
 
-When inserting a new form (see the `insert` method), you must retrieve the primary key from the `DDMStorageAdapterSaveResponse` object this time. The request object will return `0`, as the record and its primary key is not yet created in the database. The end of the `insert` method will now look like this:
-
-```java
-DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
-    builder.build();
-
-long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
-
-saveFile(fileId, ddmFormValues);
-
-return ddmStorageAdapterSaveResponse;
-```
-
-The same code is needed at the end of the `update` method: 
+Whether inserting a new form (see the `insert` method), you must retrieve the primary key from the `DDMStorageAdapterSaveResponse` object this time. The request object would return `0`, as the record and its primary key is not yet created in the database. The end of the `insert` method will now look like this:
 
 ```java
 DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
@@ -308,17 +292,35 @@ DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
 
 long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
 
-saveFile(fileId, ddmFormValues);
+_saveFile(fileId, ddmFormValues);
 
 return ddmStorageAdapterSaveResponse;
 ```
 
+The same call to `_saveFile` is needed near the end of the `update` method, but the code has two small differences:
+
+1. You must retrieve the `ddmFormValues` from the save request. This is already done in the existing logic of the `insert` method.
+2. You don't need anything from the response object, so don't declare it explicitly.
+
 ```java
-private void saveFile(long fileId, DDMFormValues formValues)
+DDMFormValues ddmFormValues =
+    ddmStorageAdapterSaveRequest.getDDMFormValues();
+
+long fileId = ddmStorageAdapterSaveRequest.getPrimaryKey();
+
+_saveFile(fileId, ddmFormValues);
+
+return builder.build();
+```
+
+The `_saveFile` method looks like this:
+
+```java
+private void __saveFile(long fileId, DDMFormValues formValues)
     throws IOException {
 
     try {
-        String serializedDDMFormValues = serialize(formValues);
+        String serializedDDMFormValues = _serialize(formValues);
 
         File abstractFile = new File(String.valueOf(fileId));
 
@@ -345,7 +347,7 @@ public DDMStorageAdapterSaveResponse save(
     return update(ddmStorageAdapterSaveRequest);
 }
 
-private DDMStorageAdapterSaveResponse insert(
+private DDMStorageAdapterSaveResponse _insert(
         DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
     throws PortalException, StorageException {
 
@@ -360,11 +362,11 @@ private DDMStorageAdapterSaveResponse insert(
         serviceContext.setUserId(ddmStorageAdapterSaveRequest.getUserId());
         serviceContext.setUuid(ddmStorageAdapterSaveRequest.getUuid());
 
-        DDMContent ddmContent = ddmContentLocalService.addContent(
+        DDMContent ddmContent = _ddmContentLocalService.addContent(
             ddmStorageAdapterSaveRequest.getUserId(),
             ddmStorageAdapterSaveRequest.getScopeGroupId(),
             ddmStorageAdapterSaveRequest.getClassName(), null,
-            serialize(ddmFormValues), serviceContext);
+            _serialize(ddmFormValues), serviceContext);
 
         DDMStorageAdapterSaveResponse.Builder builder =
             DDMStorageAdapterSaveResponse.Builder.newBuilder(
@@ -373,10 +375,9 @@ private DDMStorageAdapterSaveResponse insert(
         DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
             builder.build();
 
-
         long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
 
-        saveFile(fileId, ddmFormValues);
+        _saveFile(fileId, ddmFormValues);
 
         return ddmStorageAdapterSaveResponse;
     }
@@ -393,15 +394,15 @@ private DDMStorageAdapterSaveResponse update(
         ddmStorageAdapterSaveRequest.getDDMFormValues();
 
     try {
-        DDMContent ddmContent = ddmContentLocalService.getContent(
+        DDMContent ddmContent = _ddmContentLocalService.getContent(
             ddmStorageAdapterSaveRequest.getPrimaryKey());
 
         ddmContent.setModifiedDate(new Date());
 
         ddmContent.setData(
-            serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
+            _serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
 
-        ddmContentLocalService.updateContent(
+        _ddmContentLocalService.updateContent(
             ddmContent.getPrimaryKey(), ddmContent.getName(),
             ddmContent.getDescription(), ddmContent.getData(),
             new ServiceContext());
@@ -413,11 +414,14 @@ private DDMStorageAdapterSaveResponse update(
         DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
             builder.build();
 
-        long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
+        DDMFormValues ddmFormValues =
+            ddmStorageAdapterSaveRequest.getDDMFormValues();
 
-        saveFile(fileId, ddmFormValues);
+        long fileId = ddmStorageAdapterSaveRequest.getPrimaryKey();
 
-        return ddmStorageAdapterSaveResponse;
+        _saveFile(fileId, ddmFormValues);
+
+        return builder.build();
     }
     catch (Exception e) {
         throw new StorageException(e);
@@ -425,11 +429,9 @@ private DDMStorageAdapterSaveResponse update(
 }
 ```
 
-The `serialize` method didn't change. If you wanted to write a format other than JSON you would need to add serialization logic.
-
+The `_serialize` and `_deserialize` methods didn't change for this example. If you wanted to write a format other than JSON you would need to add custom serialization logic.
 
 ## Deploy and Test the Storage Adapter
-
 
 Use the same `deploy` command as earlier to deploy the Storage Adapter. From the module root run
 

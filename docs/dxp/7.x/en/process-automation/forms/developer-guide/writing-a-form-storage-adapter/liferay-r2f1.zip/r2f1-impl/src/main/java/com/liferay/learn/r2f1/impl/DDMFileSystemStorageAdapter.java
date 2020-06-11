@@ -57,7 +57,7 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
-			ddmContentLocalService.deleteDDMContent(
+			_ddmContentLocalService.deleteDDMContent(
 				ddmStorageAdapterDeleteRequest.getPrimaryKey());
 
 			DDMStorageAdapterDeleteResponse.Builder builder =
@@ -75,10 +75,10 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
-			DDMContent ddmContent = ddmContentLocalService.getContent(
+			DDMContent ddmContent = _ddmContentLocalService.getContent(
 				ddmStorageAdapterGetRequest.getPrimaryKey());
 
-			DDMFormValues ddmFormValues = deserialize(
+			DDMFormValues ddmFormValues = _deserialize(
 				ddmContent.getData(), ddmStorageAdapterGetRequest.getDDMForm());
 
 			DDMStorageAdapterGetResponse.Builder builder =
@@ -98,18 +98,18 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 
 		try {
 			if (ddmStorageAdapterSaveRequest.isInsert()) {
-				return insert(ddmStorageAdapterSaveRequest);
+				return _insert(ddmStorageAdapterSaveRequest);
 			}
 		}
 		catch (Exception e) {
 		}
 
-		return update(ddmStorageAdapterSaveRequest);
+		return _update(ddmStorageAdapterSaveRequest);
 	}
 
-	private DDMFormValues deserialize(String content, DDMForm ddmForm) {
+	private DDMFormValues _deserialize(String content, DDMForm ddmForm) {
 		DDMFormValuesDeserializer ddmFormValuesDeserializer =
-			ddmFormValuesDeserializerTracker.getDDMFormValuesDeserializer(
+			_ddmFormValuesDeserializerTracker.getDDMFormValuesDeserializer(
 				"json");
 
 		DDMFormValuesDeserializerDeserializeRequest.Builder builder =
@@ -123,7 +123,7 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		return ddmFormValuesDeserializerDeserializeResponse.getDDMFormValues();
 	}
 
-	private DDMStorageAdapterSaveResponse insert(
+	private DDMStorageAdapterSaveResponse _insert(
 			DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
 		throws PortalException, StorageException {
 
@@ -138,29 +138,28 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 			serviceContext.setUserId(ddmStorageAdapterSaveRequest.getUserId());
 			serviceContext.setUuid(ddmStorageAdapterSaveRequest.getUuid());
 
-			DDMContent ddmContent = ddmContentLocalService.addContent(
+			DDMContent ddmContent = _ddmContentLocalService.addContent(
 				ddmStorageAdapterSaveRequest.getUserId(),
 				ddmStorageAdapterSaveRequest.getScopeGroupId(),
 				ddmStorageAdapterSaveRequest.getClassName(), null,
-				serialize(ddmFormValues), serviceContext);
+				_serialize(ddmFormValues), serviceContext);
 
 			DDMStorageAdapterSaveResponse.Builder builder =
 				DDMStorageAdapterSaveResponse.Builder.newBuilder(
 					ddmContent.getPrimaryKey());
 
-			DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
-				builder.build();
+			builder.build();
 
-			return ddmStorageAdapterSaveResponse;
+			return builder.build();
 		}
 		catch (Exception e) {
 			throw new StorageException(e);
 		}
 	}
 
-	private String serialize(DDMFormValues ddmFormValues) {
+	private String _serialize(DDMFormValues ddmFormValues) {
 		DDMFormValuesSerializer ddmFormValuesSerializer =
-			ddmFormValuesSerializerTracker.getDDMFormValuesSerializer("json");
+			_ddmFormValuesSerializerTracker.getDDMFormValuesSerializer("json");
 
 		DDMFormValuesSerializerSerializeRequest.Builder builder =
 			DDMFormValuesSerializerSerializeRequest.Builder.newBuilder(
@@ -173,23 +172,20 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		return ddmFormValuesSerializerSerializeResponse.getContent();
 	}
 
-	private DDMStorageAdapterSaveResponse update(
+	private DDMStorageAdapterSaveResponse _update(
 			DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
 		throws StorageException {
 
-		DDMFormValues ddmFormValues =
-			ddmStorageAdapterSaveRequest.getDDMFormValues();
-
 		try {
-			DDMContent ddmContent = ddmContentLocalService.getContent(
+			DDMContent ddmContent = _ddmContentLocalService.getContent(
 				ddmStorageAdapterSaveRequest.getPrimaryKey());
 
 			ddmContent.setModifiedDate(new Date());
 
 			ddmContent.setData(
-				serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
+				_serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
 
-			ddmContentLocalService.updateContent(
+			_ddmContentLocalService.updateContent(
 				ddmContent.getPrimaryKey(), ddmContent.getName(),
 				ddmContent.getDescription(), ddmContent.getData(),
 				new ServiceContext());
@@ -198,10 +194,7 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 				DDMStorageAdapterSaveResponse.Builder.newBuilder(
 					ddmContent.getPrimaryKey());
 
-			DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
-				builder.build();
-
-			return ddmStorageAdapterSaveResponse;
+			return builder.build();
 		}
 		catch (Exception e) {
 			throw new StorageException(e);
@@ -209,12 +202,12 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 	}
 
 	@Reference
-	private DDMContentLocalService ddmContentLocalService;
+	private DDMContentLocalService _ddmContentLocalService;
 
 	@Reference
-	private DDMFormValuesDeserializerTracker ddmFormValuesDeserializerTracker;
+	private DDMFormValuesDeserializerTracker _ddmFormValuesDeserializerTracker;
 
 	@Reference
-	private DDMFormValuesSerializerTracker ddmFormValuesSerializerTracker;
+	private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
 
 }
