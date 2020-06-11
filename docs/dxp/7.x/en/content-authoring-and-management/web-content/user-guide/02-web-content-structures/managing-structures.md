@@ -38,6 +38,8 @@ Consider the following information when setting permissions for structures:
 * The *View* permission allows users to view structures.
 * Most users should not be able to edit structures.
 
+![Configuring Structure Permissions](./managing-structures/images/01.png)
+
 ## Copy
 You can use an existing structure to create a new one. For more information, read [creating-structures](./creating-structures.md)
 

@@ -6,7 +6,7 @@ To create a Structure:
 
 1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
 2. Select the *Structures* tab.
-3. Click *Add* (![Add Structure](../../../../../../images/icon-add.png)) to create a new structure.
+3. Click *Add* (![Add Structure](../images/icon-add.png)) to create a new structure.
 4. Enter the title of your new structure and, optionally, choose the structure language.
 5. Add and arrange the available fields under the structure.
 
@@ -22,9 +22,11 @@ field and all its settings and iterates the *Name* to avoid conflicts.
 6. Optionally, add a *Description* for your structure.
 7. Click *Save*.
 
-```note::
+```markdown
    When you crete or edit a structure, the *View* mode is selected by default. You can also manually customize a structure's XML by clicking in the *Source* tab.
 ```
+
+![Creating a new Structure](./creating-structures/images/01.png)
 
 You can copy an existing structure to create a new one. To copy a Structure:
 
