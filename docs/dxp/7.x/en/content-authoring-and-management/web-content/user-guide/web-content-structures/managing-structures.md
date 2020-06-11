@@ -25,7 +25,7 @@ The available options in a Structure's Actions Menu (![Action Menu](../../../../
 
 ## Editing Default Values
 
-You can set the default values for a Structure's fields. For example, a Structure used for confidential memos may want to add the "confidential" tag for all the articles created with that Structure, or you may want to make the content of all confidential memos non-searchable. From the Structures Page, open the Actions Menu for the Structure and follow these steps:
+You can set the default values for a Structure's fields. For example, a Structure used for confidential memos may want to include the "confidential" tag for all the articles created with that Structure, or you may want to make the content of all confidential memos non-searchable. From the Structures Page, open the Actions Menu for the Structure and follow these steps:
 
 1. Choose *Edit Default Values*.
 1. In the *Structure Default Values* page, configure the default values for your fields.
