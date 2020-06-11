@@ -22,7 +22,7 @@ field and all its settings and iterates the *Name* to avoid conflicts.
 6. Optionally, add a *Description* for your structure.
 7. Click *Save*.
 
-```markdown
+```note::
    When you crete or edit a structure, the *View* mode is selected by default. You can also manually customize a structure's XML by clicking in the *Source* tab.
 ```
 
