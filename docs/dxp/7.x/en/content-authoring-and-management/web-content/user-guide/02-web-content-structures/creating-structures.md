@@ -1,82 +1,64 @@
 # Creating Structures
 
-Structures are a set of web elements organized in a certain way. In Liferay DXP, these elements are configured in the *Structures* page. 
+Follow these steps to create a Structure:
 
-To create a Structure:
+1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
+1. Select the *Structures* tab.
+1. Click the *Add button* (![Add Structure](../../../../images/icon-add.png)) to create a new Structure.
+1. Enter the title of your new Structure and, optionally, choose its language.
+1. Drag and drop the [available fields](#structure-fields) onto the Structure and [configure their settings](./editing-and-configuring-structure-fields.md#configurable-settings) to create the Structure.
 
-1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
-2. Select the *Structures* tab.
-3. Click *Add* (![Add Structure](../images/icon-add.png)) to create a new structure.
-4. Enter the title of your new structure and, optionally, choose the structure language.
-5. Add and arrange the available fields under the structure.
+    ```tip::
+       When you create or `edit a Structure <./editing-and-configuring-structure-fields.md>`_, the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
+    ```
 
-    Each field shows the following three options:
-    * **Settings:** (![Settings](../../../../../../images/icon-wrench.png)) Changes the
-name and label and set other information about the field, like whether or not
-it is required.
-    * **Delete:** (![Delete](../../../../../../images/icon-trash.png)) Removes the field 
-from the structure.
-    * **Duplicate:** (![Duplicate](../../../../../../images/icon-wysiwyg-add.png)) Duplicates the 
-field and all its settings and iterates the *Name* to avoid conflicts.
-
-6. Optionally, add a *Description* for your structure.
-7. Click *Save*.
-
-```note::
-   When you crete or edit a structure, the *View* mode is selected by default. You can also manually customize a structure's XML by clicking in the *Source* tab.
-```
+1. Optionally, add a *Description* for your Structure.
+1. Click *Save*.
 
 ![Creating a new Structure](./creating-structures/images/01.png)
 
-You can copy an existing structure to create a new one. To copy a Structure:
-
-1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
-2. Click the dotted menu (![Action Menu](../../../../../../images/icon-actions.png)) for the structure you want to copy.
-3. Choose *Copy*.
-4. Type a new *Name* for the structure and, optionally, a new *Description*.
-5. If you want to copy the templates associated with the structure, check the *Copy Templates* box. 
-5. Click *Copy*.
-
-```note::
-   Liferay DXP generates a unique ID for the copied structure. The new copy inherits all the attributes from the original structure, including the name. To avoid confusing the copy with the original, use a different name for the copy.
+```warning::
+  Due to import/export operations, it's possible to have both a global and a Site-scoped Structure with the same `structureKey`. If this happens, the Site-scoped Structure takes precedence, and you can't access the global Structure from that Site.
 ```
 
-## Structure fields
+## Structure Fields
 
-**Boolean:** Adds a checkbox onto your structure, which stores either `true` (checked) or `false` (unchecked). You can use this field to set a display rule for the structure's content.
+The available Structure fields are listed below. See [Editing and Configuring Structure Fields](./editing-and-configuring-structure-fields.md) for more information on configuring and editing Structure fields.
 
-**Color:** Adds a color chooser.
+**Boolean:** A checkbox that stores either `true` (checked) or `false` (unchecked). For example, you can use this field to set a display rule for the Structure's content.
 
-**Date:** Adds a pre-formatted text field that displays a date picker. The date format depends on the current locale.
+**Color:** A color picker
 
-**Decimal:** Adds a text box to include decimal numbers.
+**Date:** A pre-formatted text field that displays a date picker. The date format depends on the current locale.
 
- **Documents and Media:** Adds a way to include a document into the structure. You can include the document from your computer or from the Documents and Media library.
+**Decimal:** An input that accepts decimal numbers
 
-**Geolocation:** Adds a map that displays a configured location. Geolocation provides both the current location and directions to a another place.
+**Documents and Media:** A file selector to include a file from the Documents and Media library or your computer
 
-**HTML:** An area that uses a WYSIWYG editor to enhance the content.
+**Geolocation:** A map that displays a configured location. Geolocation provides both the current location and directions to another place.
 
-**Image:** Adds the browse image application into your structure. Using this field, you can select an image from the Documents and Media library or from your computer.
+**HTML:** A WYSIWYG editor to offer more formatting options for writing content
+
+**Image:** An image selector to include an image from the Documents and Media library or your computer
 
 ```note::
-   If you upload an image from your computer, the image is only available for that particular article.
+  If you upload an image from your computer, the image is only available for that particular article.
 ```
 
-**Integer:** Adds a text box to include whole numbers.
+**Integer:** An input that accepts whole numbers
 
-**Link to Page:** Inserts a link to another page in the same site.
+**Link to Page:** A selector to include a link to another page in the same site
 
-**Number:** Adds a text box to include any type of number number.
+**Number:** An input that accepts any type of number
 
-**Radio:** Presents the user with a list of options to choose from using radio buttons. This field allows one selection only.
+**Radio:** A list of options to choose from using radio buttons. This field allows one selection only.
 
-**Select:** Presents a selection of options for the user to choose from using a combo box. This field allows multiple selections.
+**Select:** A selection of options to choose from using a combo box. This field allows multiple selections.
 
-**Separator:** Adds a horizontal line between fields.
+**Separator:** A horizontal line to separate fields
 
-**Text:** Used for short texts descriptions, such as titles or headings.
+**Text:** A text input for short entries, such as titles or headings
 
-**Text Box:** Used for long texts descriptions, such as the body of your content.
+**Text Box:** A textbox input for long entries, such as the body of your content
 
-**Web Content:** Provides a way to select a web content element.
+**Web Content:** A web content selector to include an existing Web Content Article
