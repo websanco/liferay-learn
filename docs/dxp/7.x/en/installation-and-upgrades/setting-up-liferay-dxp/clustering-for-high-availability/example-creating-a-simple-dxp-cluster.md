@@ -148,7 +148,7 @@ The DXP cluster node containers will have these unique settings:
 | AJP port mapping | `8009:8009` | `9009:8009` |
 | HTTP port mapping | `8080:8080` | `9080:8080` |
 | OSGi container port mapping | ``11311:11311`` | `11312:11311` |
-| Bind mount | `$(pwd)/dxp-1/files:/mnt/liferay` | `$(pwd)/dxp-2/files:/mnt/liferay` |
+| Bind mount | `$(pwd)/dxp-1:/mnt/liferay` | `$(pwd)/dxp-2:/mnt/liferay` |
 | Cluster Link control channel logic name | control-channel-logic-name-1 | control-channel-logic-name-2 |
 | Cluster Link transport channel logic name | transport-channel-logic-name-1 | transport-channel-logic-name-2 |
 
