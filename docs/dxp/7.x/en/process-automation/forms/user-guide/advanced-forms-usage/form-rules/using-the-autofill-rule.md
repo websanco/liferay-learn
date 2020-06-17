@@ -42,6 +42,6 @@ Users can now search for a region then the countries in the form.
 
 ## Additional Information
 
-* [Creating Form](../../creating-forms.md)
+* [Creating Forms](../../creating-forms.md)
 * [Introduction to Data Providers](../introduction-to-data-providers.md)
 * [Using Data Providers to Populate Form Options](../using-data-providers-to-populate-form-options.md)
