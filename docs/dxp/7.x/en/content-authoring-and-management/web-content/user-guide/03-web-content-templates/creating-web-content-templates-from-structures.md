@@ -1,6 +1,6 @@
 # Creating Web Content Templates from Structures
 
-Using Web Content Templates, you can configure how to present the content of a [Structure](./03-editing-and-configuring-structures-content.md). Structures define the type of web content, templates define how this web content is represented. A template is always associated to a structure, and changes in the structure require changes in the associated template.
+Using Web Content Templates, you can configure how to present the content of a [Structure](./03-editing-and-configuring-structures-content.md). Structures define the type of web content, Templates define how this web content is represented. A Template is always associated to a Structure, and changes in the Structure require changes in the associated Template.
 
 ```note::
    You create Web Content Templates using the FreeMarker Template Language (FTL).
