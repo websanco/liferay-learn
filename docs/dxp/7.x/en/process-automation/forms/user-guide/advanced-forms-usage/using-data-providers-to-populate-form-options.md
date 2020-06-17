@@ -1,16 +1,18 @@
 # Using Data Providers to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
+_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md).
+
+This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form. The example below demonstrates how to populate a Select field for a user's "Country" when collecting personal information on a form.
 
 ## Prerequisites
 
-One example is to populate a Select field for a user's "Country" when collecting personal information on a form.
-
-[Create a form](../../creating-forms.md) that includes the following:
+1. [Create a form](../../creating-forms.md) that includes the following:
 
 * **Country**: a Single Select field.
 
-Next, use the `get-countries` JSON web service (there are two---use either one).
+## Initial Setup
+
+Invoke the `get-countries` JSON web service (there are two; use either one).
 
 1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
 1. Search for "get-countries".
@@ -19,7 +21,7 @@ Next, use the `get-countries` JSON web service (there are two---use either one).
 
 1. Click _Invoke_.
 
-The list of countries are now ready for use.
+The list of countries is now ready for use.
 
 ### Enabling Access to Data on the Local Network
 
@@ -63,7 +65,7 @@ To add a _Countries of the World_ Data Provider:
 1. Click _Save_ when finished.
 
 ```note::
-   `$..` before `nameCurrentValue` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
+   The `$..` before `nameCurrentValue` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
 ```
 
 ## Using Inputs as Filters
@@ -131,4 +133,5 @@ The console now sends warning messages whenever there are errors in the Data Pro
 
 ## Additional Information
 
+* [Introduction to Data Providers](./introduction-to-data-providers.md)
 * [Using the Autofill Rule](./form-rules/using-the-autofill-rule.md)
