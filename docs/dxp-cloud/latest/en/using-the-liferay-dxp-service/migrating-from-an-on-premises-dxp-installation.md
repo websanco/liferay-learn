@@ -60,7 +60,11 @@ curl -X POST \
    Substitute ``<PROJECT-NAME>`` with the appropriate name for your DXP Cloud project. Substitute ``/my-folder`` with the correct path to the zipped files.
 ```
 
-Once these are uploaded, the backup service will initialize a DXP Cloud backup. At this point, the biggest step of the migration to DXP Cloud is complete.
+Once these are uploaded, the backup service will initialize a DXP Cloud backup.
+
+```note::
+   The backup will appear on the _Backups_ page in your `prd` environment, but it will not apply to any of your environments until you choose to restore it.
+```
 
 ## Copy Liferay DXP Configurations
 
@@ -87,6 +91,30 @@ Remaining configurations will primarily be handled through the services provided
 Web server configurations must be done through webserver service, using Nginx. See [Web Server Service](../platform-services/web-server-service.md) for more information on adding configurations to this service. See the [official Nginx documentation](https://docs.nginx.com/) for more information on the configurations themselves.
 
 Search configurations must be done through the search service, using Elasticsearch. See [Search Service](../platform-services/search-service.md) for more information on adding configurations to this service. See the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html) for more information on the configurations themselves.
+
+## Restore the Backup
+
+Now that the backup has been uploaded and your service configurations are applied, you can restore your backup to one of your environments. When you are ready, follow these steps to apply the backup to your chosen environment:
+
+1. Log into the DXP Cloud console, if you are not already logged in.
+
+1. Navigate to your production environment, then click _Backups_ from the side menu.
+
+1. Choose the newly uploaded backup on the list, and then click _Restore to_ from the Actions menu for that backup.
+
+    ![Select Restore to... from the Actions menu for the uploaded backup.](./migrating-from-an-on-premises-dxp-installation/images/03.png)
+
+1. Select one of your environments to restore to from the drop-down list (e.g., your `dev` environment):
+
+    ![Select an environment to deploy the backup to.](./migrating-from-an-on-premises-dxp-installation/images/04.png)
+
+1. Click _Restore to environment_.
+
+```note::
+   The chosen environment will be unavailable while the backup is being deployed.
+```
+
+When the restore process finishes, the chosen environment has your migrated instance of DXP available in it. At this point, most of the migration to DXP Cloud is complete.
 
 ## Use a VPN to Connect External Services
 
