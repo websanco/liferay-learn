@@ -56,14 +56,12 @@ curl -X POST \
   -u user@domain.com:password
 ```
 
-```note::
-   Substitute ``<PROJECT-NAME>`` with the appropriate name for your DXP Cloud project. Substitute ``/my-folder`` with the correct path to the zipped files.
-```
+Substitute `<PROJECT-NAME>` with the appropriate name for your DXP Cloud project. Substitute `/my-folder` with the correct path to the zipped files.
 
 Once these are uploaded, the backup service will initialize a DXP Cloud backup.
 
 ```note::
-   The backup will appear on the _Backups_ page in your `prd` environment, but it will not apply to any of your environments until you choose to restore it.
+   The backup will appear on the `Backups` page in your ``prd`` environment, but it will not apply to any of your environments until you choose to restore it.
 ```
 
 ## Copy Liferay DXP Configurations
@@ -102,11 +100,11 @@ Now that the backup has been uploaded and your service configurations are applie
 
 1. Choose the newly uploaded backup on the list, and then click _Restore to_ from the Actions menu for that backup.
 
-    ![Select Restore to... from the Actions menu for the uploaded backup.](./migrating-from-an-on-premises-dxp-installation/images/03.png)
+    ![Select Restore to... from the Actions menu for the uploaded backup.](./migrating-from-an-on-premises-dxp-installation/images/01.png)
 
 1. Select one of your environments to restore to from the drop-down list (e.g., your `dev` environment):
 
-    ![Select an environment to deploy the backup to.](./migrating-from-an-on-premises-dxp-installation/images/04.png)
+    ![Select an environment to deploy the backup to.](./migrating-from-an-on-premises-dxp-installation/images/02.png)
 
 1. Click _Restore to environment_.
 
