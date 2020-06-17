@@ -6,7 +6,7 @@ Other Tools
 
    other-tools/fragments-cli.md
    other-tools/liferay-js-generator.md
-   other-tools/liferay-npm-bundler.rst
+   other-tools/liferay_npm_bundler.rst
    other-tools/intellij-plugin.md
    other-tools/theme-generator.md
    other-tools/maven-plugins.md
@@ -16,5 +16,5 @@ Other Tools
    other-tools/push.md
    other-tools/sync.md
 
-.. include:: developing-applications/tooling/other-tools/README.rst
+.. include:: /developing-applications/tooling/other-tools/README.rst
    :start-line: 2

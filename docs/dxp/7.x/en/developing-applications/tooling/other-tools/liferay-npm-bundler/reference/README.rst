@@ -1,24 +1,5 @@
-Other Tools
-===========
-
--  :doc:`/developing-applications/tooling/other-tools/fragments-cli`
--  :doc:`/developing-applications/tooling/other-tools/liferay-js-generator`
--  :doc:`/developing-applications/tooling/other-tools/intellij-plugin`
--  :doc:`/developing-applications/tooling/other-tools/theme-generator`
--  :doc:`/developing-applications/tooling/other-tools/maven-plugins`
--  :doc:`/developing-applications/tooling/other-tools/gradle-plugins`
--  :doc:`/developing-applications/tooling/other-tools/screens`
--  :doc:`/developing-applications/tooling/other-tools/mobile-sdk`
--  :doc:`/developing-applications/tooling/other-tools/push`
--  :doc:`/developing-applications/tooling/other-tools/sync`
-
-liferay-npm-bundler
--------------------
-
--  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/liferay-npm-bundler-intro`
-
 Reference
-~~~~~~~~~
+=========
 
 -  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/reference/changes-between-bundler-1.x-and-2.x`
 -  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/reference/default-bundler-loaders`
@@ -31,7 +12,7 @@ Reference
 -  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/reference/understanding-bundler-loaders`
 
 Bundler Migration Guide
-***********************
+~~~~~~~~~~~~~~~~~~~~~~~
 
 -  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/reference/bundler-migration-guide/migrating-bundler-projects-intro`
 -  :doc:`/developing-applications/tooling/other-tools/liferay-npm-bundler/reference/bundler-migration-guide/migrating-to-the-new-mode`

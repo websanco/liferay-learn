@@ -1,5 +1,5 @@
-liferay-npm-bundler
-============
+Reference
+=========
 
 .. toctree::
    :maxdepth: 3
@@ -13,6 +13,7 @@ liferay-npm-bundler
    reference/changes-between-bundler-1.x-and-2.x.md
    reference/understanding-bundler-loaders.md
    reference/default-bundler-loaders.md
+   reference/bundler_migration_guide.rst
 
-.. include:: /site-building/creating-pages/adding-pages/README.rst
+.. include:: /developing-applications/tooling/other-tools/liferay-npm-bundler/reference/README.rst
    :start-line: 2
