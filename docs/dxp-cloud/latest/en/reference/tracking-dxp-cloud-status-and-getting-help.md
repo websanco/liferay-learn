@@ -7,7 +7,9 @@ ticketing support on
 and 
 [phone support](https://help.liferay.com/hc/en-us/articles/360017784212).
 
-> **Note:** Details are subject to your legal agreement with Liferay. 
+```note::
+   Details are subject to your legal agreement with Liferay. 
+```
 
 For more detailed information about legal agreements and services, see 
 [liferay.com/legal](https://www.liferay.com/legal). 

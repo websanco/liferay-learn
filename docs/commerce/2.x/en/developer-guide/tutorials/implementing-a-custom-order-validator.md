@@ -36,7 +36,9 @@ In this section, we will get an example order validator up and running on your i
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    >**Note:** This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```note::
+       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```
 
 1. Confirm the deployment in the Docker container console.
 

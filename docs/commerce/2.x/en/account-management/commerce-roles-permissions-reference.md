@@ -2,7 +2,9 @@
 
 Liferay Commerce offers four Commerce [account roles](./account-roles.md) out of the box: Account Administrator, Buyer, Order Manager, and Sales Agent. This article serves as a reference for the specific permissions keys associated with each role.
 
-> **Note:** These permission keys may change in future updates.
+```note::
+   These permission keys may change in future updates.
+```
 
 To view the permissions associated with each Commerce account role:
 

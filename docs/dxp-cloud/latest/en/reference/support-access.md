@@ -6,7 +6,9 @@ can enable and disable Support Access per environment. For example, an
 administrator can enable Support Access on the development environment but 
 disable it on the production environment. 
 
-> **Note:** Support access is enabled by default in each environment. 
+```note::
+   Support access is enabled by default in each environment. 
+```
 
 When Support Access is enabled, Liferay Support engineers have read access 
 to the following information: 
@@ -18,9 +20,9 @@ to the following information:
 * Team members and their associated roles
 * Members' activities
 
-> **Note:** Only the project administrator can configure Support Access. Support 
-> Access **does not** allow Liferay Support engineers to deploy assets or 
-> perform write actions in your project. 
+```note::
+   Only the project administrator can configure Support Access. Support Access **does not** allow Liferay Support engineers to deploy assets or perform write actions in your project. 
+```
 
 ## Changing the Support Access Setting
 

@@ -38,7 +38,9 @@ In this section, we will get an example checkout step up and running on your ins
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    >**Note:** This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```note::
+       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```
 
 1. Confirm the deployment in the Docker container console.
 
@@ -58,7 +60,9 @@ Next, let's dive deeper to learn more.
 
 In this section, we will review the example we deployed. First, we will annotate the class for OSGi registration. Second, we will review the `CommerceCheckoutStep` interface. And third, we will complete our implementation of `CommerceCheckoutStep`.
 
-> **Note:** To simplify implementing `CommerceCheckoutStep`, we extend `BaseCommerceCheckoutStep` for its base functionality.
+```note::
+   To simplify implementing ``CommerceCheckoutStep``, we extend ``BaseCommerceCheckoutStep`` for its base functionality.
+```
 
 ### Annotate the Class for OSGi Registration
 

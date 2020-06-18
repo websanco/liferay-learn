@@ -10,8 +10,9 @@ cannot. Eventually, the domain will be reachable from any device and return the
 standard `default backend - 404` error from the Ingress Load Balancer. Now 
 you're ready for the next step. 
 
-> **Note:** You can find the dedicated environment IP on a service's Custom 
-> Domains or the Network page. 
+```note::
+   You can find the dedicated environment IP on a service's Custom Domains or the Network page.
+```
 
 ![Figure 1: This example uses Cloudflare as a domain name registrar to create DNS records.](./custom-domains/images/01.png)
 

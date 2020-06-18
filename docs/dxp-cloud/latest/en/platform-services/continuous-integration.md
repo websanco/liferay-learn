@@ -4,7 +4,9 @@ DXP Cloud uses [Jenkins](https://jenkins.io/) to power its continuous integratio
 
 By default, this automated build will compile code and can be configured to execute tests. DXP Cloud will build your services and show their status on your environment's Builds page. If the tests fail, you can check the Jenkins dashboard and logs at `https://ci-companyname-infra.lfr.cloud`.
 
-> **Note:** Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
+```note::
+   Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
+```
 
 ## Using the Default Jenkinsfile
 

@@ -38,7 +38,9 @@ First, you must deploy an example discount rule type on your instance of Liferay
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    >**Note:** This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```note::
+       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```
 
 1. Confirm the deployment in the Liferay Docker container console.
 

@@ -58,7 +58,9 @@ Follow these steps to restore the latest stable backup of Production to the DR e
 1. In the DR environment, click the *Backups* tab.
 1. Click the tab corresponding to the Production environment.
 
-    > Note: The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```note::
+       The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```
 
 1. Click the *Actions* button (![Actions](./disaster-recovery/images/02.png)), for the latest stable backup in the Production environment,  then select *Restore*.
 
@@ -100,7 +102,9 @@ During the incident, the DR environment functions as the Production environment 
 1. In the DR environment, click *Backups* in the menu on the left.
 1. Click the tab corresponding to the DR environment.
 
-    > **Note:** The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```note::
+       The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```
 
 1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./disaster-recovery/images/02.png)) then select *Restore*.
 1. Select the Production environment and click *Deploy Build*.

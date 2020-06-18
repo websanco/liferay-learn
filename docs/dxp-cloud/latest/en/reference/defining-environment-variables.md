@@ -4,7 +4,9 @@ Environment variables are a set of dynamic placeholders that can affect the way 
 
 There are two ways to define environment variables: via the DXP Cloud Management Console or configuring the `LCP.json` file for each service.
 
-> **Note:** DXP Cloud will always apply the most recent changes to settings. If the latest changes are made in the LCP.json file, upon restart, the environment variables will be reflected in the web console. However, if the environment variables are changed in the web console, the container will be restarted with those new configurations.
+```note::
+   DXP Cloud will always apply the most recent changes to settings. If the latest changes are made in the LCP.json file, upon restart, the environment variables will be reflected in the web console. However, if the environment variables are changed in the web console, the container will be restarted with those new configurations.
+```
 
 ## Defining Environment Variables via the DXP Cloud Management Console
 

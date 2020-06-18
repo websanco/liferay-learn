@@ -18,7 +18,9 @@ Once the buyer has submitted his cart for pre-approval, or placed an order for s
 
    ![Review](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
 
-    > **Note:** Alternatively, click _Assign to..._ and select another user to review the Commerce Order.
+    ```note::
+       Alternatively, click `Assign to...` and select another user to review the Commerce Order.
+    ```
 
 1. Add a comment (optionally) and click *Done*.
 
