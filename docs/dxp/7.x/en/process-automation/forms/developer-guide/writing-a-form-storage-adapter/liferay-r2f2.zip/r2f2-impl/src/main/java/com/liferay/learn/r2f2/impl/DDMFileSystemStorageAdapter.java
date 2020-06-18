@@ -12,8 +12,10 @@
  *
  */
 
-package com.liferay.learn.r2f1.impl;
+package com.liferay.learn.r2f2.impl;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 
 import org.osgi.service.component.annotations.Component;
@@ -40,6 +42,7 @@ import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterGetResponse;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveRequest;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveResponse;
 import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.FileUtil;
 
 /**
  * @author Russell Bohl
@@ -53,6 +56,8 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 
 		long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
 
+		_deleteFile(fileId);
+
 		try {
 			_ddmContentLocalService.deleteDDMContent(ddmStorageAdapterDeleteRequest.getPrimaryKey());
 
@@ -64,11 +69,21 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 		}
 	}
 
+	private void _deleteFile(long fileId) {
+		File file = new File(_PATHNAME + "/" + fileId);
+
+		file.delete();
+	}
+
 	@Override
 	public DDMStorageAdapterGetResponse get(DDMStorageAdapterGetRequest ddmStorageAdapterGetRequest)
 			throws StorageException {
 
 		try {
+			long fileId = ddmStorageAdapterGetRequest.getPrimaryKey();
+
+			_getFile(fileId);
+
 			DDMContent ddmContent = _ddmContentLocalService.getContent(ddmStorageAdapterGetRequest.getPrimaryKey());
 
 			DDMFormValues ddmFormValues = _deserialize(ddmContent.getData(), ddmStorageAdapterGetRequest.getDDMForm());
@@ -79,6 +94,15 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 			return builder.build();
 		} catch (Exception e) {
 			throw new StorageException(e);
+		}
+	}
+
+	private void _getFile(long fileId) throws IOException {
+		try {
+			System.out.println("Reading the file named:" + fileId + "\n" + "The file contents: "
+					+ FileUtil.read(_PATHNAME + "/" + fileId));
+		} catch (IOException e) {
+			throw new IOException(e);
 		}
 	}
 
@@ -114,6 +138,10 @@ public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
 
 			DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse = builder.build();
 
+			long fileId = ddmStorageAdapterSaveResponse.getPrimaryKey();
+
+			_saveFile(fileId, ddmFormValues);
+
 			return ddmStorageAdapterSaveResponse;
 		} catch (Exception e) {
 			throw new StorageException(e);
@@ -145,12 +173,29 @@ private DDMStorageAdapterSaveResponse update(
         DDMFormValues ddmFormValues =
             ddmStorageAdapterSaveRequest.getDDMFormValues();
 
+        long fileId = ddmStorageAdapterSaveRequest.getPrimaryKey();
+
+        _saveFile(fileId, ddmFormValues);
+
         return builder.build();
     }
     catch (Exception e) {
         throw new StorageException(e);
     }
 }
+
+	private void _saveFile(long fileId, DDMFormValues formValues) throws IOException {
+
+		try {
+			String serializedDDMFormValues = _serialize(formValues);
+
+			File abstractFile = new File(String.valueOf(fileId));
+
+			FileUtil.write(_PATHNAME, abstractFile.getName(), serializedDDMFormValues);
+		} catch (IOException e) {
+			throw new IOException(e);
+		}
+	}
 
 	private DDMFormValues _deserialize(String content, DDMForm ddmForm) {
 		DDMFormValuesDeserializer ddmFormValuesDeserializer = _ddmFormValuesDeserializerTracker
