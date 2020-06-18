@@ -1,25 +1,63 @@
 # Patching DXP in Docker
 
-Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) that fix DXP issues and a Patching Tool for applying the patches. Fix Packs and Service Packs are provided as new DXP images (on [Docker Hub](https://hub.docker.com/r/liferay/dxp)) that you migrate to. Liferay also provides Security Fix Packs, Hotfixes, and new Patching Tool versions to install to your containers.
+Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) that fix DXP issues and a Patching Tool for applying the patches. Fix Packs, Security Fix Packs, and Service Packs are provided as new DXP images (on [Docker Hub](https://hub.docker.com/r/liferay/dxp)) that you migrate to. Liferay also provides Security Fix Packs, Hotfixes, and new Patching Tool versions to install to your containers.
 
 | Enterprise subscription
 
 Here are the DXP container patching topics:
 
-* [Installing a Hotfix or Security Fix Pack](#installing-a-hotfix-or-security-fix-pack)
 * [Using Fix Pack and Service Pack Images](#using-fix-pack-and-service-pack-images)
+* [Installing a Hotfix or Security Fix Pack](#installing-a-hotfix-or-security-fix-pack)
 * [Updating the Patching Tool](#updating-the-patching-tool)
 * [Upgrading the Database for a Patch](#upgrading-the-database-for-a-patch)
 
-## Installing a Hotfix or Security Fix Pack
+## Using Fix Pack, Security Fix Pack, and Service Pack Images
 
-Installing a Hotfix or Security Fix Pack requires a folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder.
+Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles](../..//maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching/using-slim-bundles.md). They start up faster and have a smaller footprint than regular [Liferay Tomcat bundles](../installing-a-liferay-tomcat-bundle.md). They are limited, however, to one additional patch installation: a Hotfix or a Security Fix Pack (on top of a Fix Pack or Service Pack).
 
-```note::
-   Please see `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
-```
+Using a new Fix Pack, Security Fix Pack, or Service Pack requires migrating to a container based on that image. Here are steps for creating such a container.
 
-Here are two methods for installing these patches:
+1. Stop your current DXP container.
+
+1. Back up your container's artifacts and configuration files using a source control repository or some other means.
+
+    ```bash
+    git commit -a
+    ```
+
+1. Download the new image from [Docker Hub](https://hub.docker.com/r/liferay/dxp).
+
+    ```bash
+    docker pull liferay/dxp:[tag]
+    ```
+
+1. Create a new container that is based on the image, using qualified volumes or bind mounts to provide your artifacts and configuration files to the container.
+
+    For example, if your files are in subfolders of a host folder like this ...
+
+    ```
+    [host folder]
+    ├───deploy
+    ├───files
+    ├───patching
+    └───scripts
+    ```
+
+    then you can [bind mount the host folder to the container's `/mnt/liferay` folder](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay).
+
+    ```bash
+    docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    ```
+
+DXP launches in a container based on the new image.
+
+## Installing a Patch
+
+A single patch can be applied to a Fix Pack image or Service Pack image. The patch can be a Hotfix, Security Fix Pack, or a patch that includes both kinds of fixes. To get this last type of patch, create a [Help Center ticket](https://help.liferay.com/hc) and request the latest security fixes and fixes to product issues.
+
+Patching requires a folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder. Please see `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
+
+Here are two methods for installing patches to containers:
 
 1. [Install to your existing container](#install-to-your-existing-container), if it has an existing qualified volume or bind mount that maps to the `/mnt/liferay/patching` folder.
 
@@ -27,17 +65,17 @@ Here are two methods for installing these patches:
 
 ### Install to Your Existing Container
 
-Here are the steps for installing the patch to your existing container:
+Here are the steps for installing a patch to your existing container:
 
 1. Stop your current container.
 
-1. Copy the patch to a folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder.
+1. Copy the patch to a folder in your volume or [bind mount](./providing-files-to-the-container.md) that maps to the container's `/mnt/liferay/patching` folder.
 
 1. Restart your container.
 
 ### Install to a New Container
 
-Here are steps for installing the patch to a new container:
+Here are steps for installing a patch to a new container:
 
 1. Create a host folder and a subfolder called `patching`.
 
@@ -69,44 +107,6 @@ The Patching Tool installs the patch and DXP launches.
    If the Patching Tool reports this message: ``[patch file] is incompatible with Patching Tool version [x.y.z]``, install the latest Patching Tool. See `Installing the Patching Tool <#installing-the-patching-tool>`_ for details.
 ```
 
-## Using Fix Pack and Service Pack Images
-
-Using a new Fix Pack or a new Service Pack requires migrating to a container that is created from an image based on that Fix Pack or Service Pack. Here are steps for creating such a container.
-
-1. Stop your current DXP container.
-
-1. Back up your container's artifacts and configuration files using a source control repository or some other means.
-
-    ```bash
-    git commit -a
-    ```
-
-1. Download the Fix Pack image or Service Pack image from [Docker Hub](https://hub.docker.com/r/liferay/dxp).
-
-    ```bash
-    docker pull liferay/dxp:[tag]
-    ```
-
-1. Create a new container that is based on the Fix Pack image or Service Pack image, using qualified volumes or bind mounts to provide your artifacts and configuration files to the container.
-
-    For example, if your files are in host folders at ...
-
-    ```
-    [host folder]
-    ├───deploy
-    ├───files
-    ├───patching
-    └───scripts
-    ```
-
-    then you can [bind mount to the container's `/mnt/liferay` folder](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay).
-
-    ```bash
-    docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
-    ```
-
-DXP launches on the new Fix Pack or Service Pack.
-
 ## Updating the Patching Tool
 
 If your current Patching Tool is incompatible with the patch you're installing, the Patching Tool reports this message: `[patch file] is incompatible with Patching Tool version [x.y.z]`.
@@ -137,4 +137,4 @@ After the database is upgraded, run your container that uses that database.
 * [DXP Docker Container Basics](./dxp-docker-container-basics.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)
-* [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)
+* [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md)
