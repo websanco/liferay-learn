@@ -1,3 +1,0 @@
-# JVM Configurations
-
-Coming soon!
