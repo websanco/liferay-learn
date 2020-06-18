@@ -63,7 +63,7 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     ...
     ```
 
-1.  If you installed a Service Pack and its release notes mention [micro or minor schema/data changes](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning), use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
+1.  If you installed a Service Pack and its release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
 
     ```important::
        If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
