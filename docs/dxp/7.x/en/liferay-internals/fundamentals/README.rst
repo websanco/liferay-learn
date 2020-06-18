@@ -2,11 +2,10 @@ Fundamentals
 ============
 
 -  :doc:`/liferay-internals/fundamentals/fundamentals`
--  :doc:`/liferay-internals/fundamentals/module-projects`
+-  :doc:`/liferay-internals/fundamentals/understanding-module-projects`
 -  :doc:`/liferay-internals/fundamentals/importing-packages`
 -  :doc:`/liferay-internals/fundamentals/exporting-packages`
 -  :doc:`/liferay-internals/fundamentals/semantic-versioning`
--  :doc:`/liferay-internals/fundamentals/deploying-wars-wab-generator`
 -  :doc:`/liferay-internals/fundamentals/using-felix-gogo-shell`
 
 Configuring Dependencies

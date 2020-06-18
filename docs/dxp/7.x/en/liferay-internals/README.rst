@@ -5,6 +5,7 @@ Fundamentals
 ------------
 
 * Fundamentals
+* Understanding Module Projects
 * Importing Packages
 * Exporting Packages
 * Semantic Versioning
