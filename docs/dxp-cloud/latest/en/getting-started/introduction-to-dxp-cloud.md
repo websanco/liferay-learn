@@ -8,7 +8,7 @@ Worry less and build more with a platform that provides:
 * [High Availability, Scalability, and Performance](#high-availability-scalability-and-performance)
 * [Real Time Alerts](#real-time-alerts)
 
-All of which is designed, built, and supported by a dedicated team of Liferay professionals with a over a decade of experience running business-critical solutions on Liferay DXP.
+All of which is designed, built, and supported by a dedicated team of Liferay professionals with over a decade of experience running business-critical solutions on Liferay DXP.
 
 DXP Cloud accelerates application development and deployment by providing a complete DevOps CI/CD strategy, tools, and workflow.
 
