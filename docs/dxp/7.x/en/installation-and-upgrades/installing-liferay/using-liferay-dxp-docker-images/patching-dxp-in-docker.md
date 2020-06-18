@@ -6,8 +6,9 @@ Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching
 
 Here are the DXP container patching topics:
 
-* [Using Fix Pack and Service Pack Images](#using-fix-pack-and-service-pack-images)
-* [Installing a Hotfix or Security Fix Pack](#installing-a-hotfix-or-security-fix-pack)
+* [Using Fix Pack and Service Pack Images](#using-fix-pack-security-fix-pack-and-service-pack-images)
+* [Installing a Patch](#installing-a-patch)
+* [Reverting a Patch to Install a Different Patch](#reverting-a-patch-to-install-a-different-patch)
 * [Updating the Patching Tool](#updating-the-patching-tool)
 * [Upgrading the Database for a Patch](#upgrading-the-database-for-a-patch)
 
@@ -53,7 +54,7 @@ DXP launches in a container based on the new image.
 
 ## Installing a Patch
 
-A single patch can be applied to a Fix Pack image or Service Pack image. The patch can be a Hotfix, Security Fix Pack, or a patch that includes both kinds of fixes. To get this last type of patch, create a [Help Center ticket](https://help.liferay.com/hc) and request the latest security fixes and fixes to product issues.
+A single patch can be applied to a Fix Pack image or Service Pack image. The patch can be a Hotfix, Security Fix Pack, or a patch that includes both kinds of fixes. To get this last type of patch, create a [Help Center ticket](https://help.liferay.com/hc) and request a patch that includes the latest security fixes and fixes to product issues on top of your current Fix Pack level.
 
 Patching requires a folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder. Please see `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
 
@@ -106,6 +107,26 @@ The Patching Tool installs the patch and DXP launches.
 ```important::
    If the Patching Tool reports this message: ``[patch file] is incompatible with Patching Tool version [x.y.z]``, install the latest Patching Tool. See `Installing the Patching Tool <#installing-the-patching-tool>`_ for details.
 ```
+
+## Reverting a Patch
+
+If you want to revert a patch from a container or install a different patch to the container, you must remove the container and create a new one.
+
+1. [Stop the container](./dxp-docker-container-basics.md#stopping-a-container).
+
+    ```bash
+    docker stop [container]
+    ```
+
+1. Remove the container.
+
+    ```bash
+    docker rm [container]
+    ```
+
+1. Use the `docker run` arguments you used previously to create a new container from an image that has a compatible Fix Pack Level. Apply any patches you want via a volume or bind mount.
+
+DXP is running on the Fix Pack Level you have specified, with the old patch gone and optionally replaced.
 
 ## Updating the Patching Tool
 
