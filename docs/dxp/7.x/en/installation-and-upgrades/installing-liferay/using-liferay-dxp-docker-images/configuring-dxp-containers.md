@@ -168,7 +168,7 @@ Here are the options for working with image-defined environment variables:
 
 ### Example: Working with an Image-Defined Portal Property Environment Variable
 
-The following image-defined Portal Property environment variable declares that users don't have to agree to your terms of use. 
+The following image-defined Portal Property environment variable declares that users don't have to agree to your terms of use.
 
 ```properties
 LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
@@ -269,7 +269,7 @@ The system component configurations are visible in DXP's Control Panel at _Confi
 If you have a container already, you can copy `.config` files to your container at run time using a `docker cp` command like this one:
 
 ```bash
-docker cp [config file] [container]:/mnt/liferay/osgi/configs
+docker cp [config file] [container]:/opt/liferay/osgi/configs
 ```
 
 ## Conclusion
