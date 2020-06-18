@@ -152,7 +152,7 @@ Verify that new Git pushes trigger Jenkins builds:
 
 Verify that new pull requests trigger Jenkins builds:
 
-1. Create a pull request from the any branch to the `develop` branch.
+1. Create a pull request from any branch to the `develop` branch.
 
 1. Verify that a new build is created for the pull request.
 

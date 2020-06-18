@@ -158,7 +158,7 @@ Verify that new Git pushes trigger Jenkins builds:
 
 Verify that new merge requests trigger Jenkins builds:
 
-1. Create a merge request from the any branch to the `develop` branch.
+1. Create a merge request from any branch to the `develop` branch.
 
 1. Verify that a new build is created for the merge request.
 
