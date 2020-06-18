@@ -1,6 +1,6 @@
 # Initial Setup Overview
 
-Before beginning development in Liferay DXP Cloud, ensure all accounts, Environments, and Services have been successfully provisioned and deployed.
+Getting started with Liferay DXP Cloud involves ensuring all accounts, environments, and services have been successfully provisioned and deployed in your instance. Begin with the following steps:
 
 - [Check Setup Emails](#check-setup-emails)
 - [Access the DXP Cloud Console](#access-the-dxp-cloud-console)
