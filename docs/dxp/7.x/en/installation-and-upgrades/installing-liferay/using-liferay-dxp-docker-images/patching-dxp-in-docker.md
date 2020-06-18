@@ -6,9 +6,9 @@ Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching
 
 Here are the DXP container patching topics:
 
-* [Using Fix Pack and Service Pack Images](#using-fix-pack-security-fix-pack-and-service-pack-images)
+* [Using Fix Pack, Security Fix Pack, and Service Pack Images](#using-fix-pack-security-fix-pack-and-service-pack-images)
 * [Installing a Patch](#installing-a-patch)
-* [Reverting a Patch to Install a Different Patch](#reverting-a-patch-to-install-a-different-patch)
+* [Reverting a Patch](#reverting-a-patch)
 * [Updating the Patching Tool](#updating-the-patching-tool)
 * [Upgrading the Database for a Patch](#upgrading-the-database-for-a-patch)
 
