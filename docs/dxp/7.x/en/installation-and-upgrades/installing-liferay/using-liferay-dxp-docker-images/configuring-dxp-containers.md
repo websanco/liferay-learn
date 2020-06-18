@@ -228,13 +228,13 @@ The properties are visible in the Control Panel at _Configuration_ &rarr; _Serve
 
 ## System Settings
 
-DXP System Settings can be configured in the [Control Panel](https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings) or by providing [Configuration Files](https://help.liferay.com/hc/en-us/articles/360029131651-Understanding-System-Configuration-Files) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
+DXP System Settings can be configured in the [Control Panel](../../../system-administration/system-settings/system-settings.md) or by providing [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
 
 Modify the System Settings using one of these ways:
 
 * [Applying Configurations to a New Container](#applying-configurations-to-a-new-container)
 * [Applying Configuration Files at Run Time](#applying-configuration-files-at-run-time)
-* [Using the Control Panel](https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings)
+* [Using the Control Panel](../../../system-administration/system-settings/system-settings.md)
 
 ### Applying Configurations to a New Container
 
