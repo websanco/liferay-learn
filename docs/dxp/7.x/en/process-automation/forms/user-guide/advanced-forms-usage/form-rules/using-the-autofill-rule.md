@@ -1,14 +1,16 @@
 # Using the Autofill Rule
 
-The Autofill Rule allows users to populate a field based on specific conditions. Normally, users can simply populate a Form Field's options by using a [data provider](../introduction-to-data-providers.md) without having to add conditions. For example, users can populate the list of countries and their states and provinces. See [Using Data Providers to Populate Form Options](../using-data-providers-to-populate-form-options.md) to learn more about setting up a data provider and populating a field.
+The Autofill Rule allows filtering a form field's options based on preconfigured conditions. The data all comes from the same [data provider](../introduction-to-data-providers.md), which can also [provide a list of options]((../using-data-providers-to-populate-form-options.md)) without conditions.
 
 Here is an example of how to use the Autofill Rule to filter countries based on geographic region.
 
 ## Prerequisites
 
+<!-- This make sit sound like any data provider will do. Don't we specifically need the restcountries.eu data provider form the other article? -->
 1. [A data provider has been configured.](../using-data-providers-to-populate-form-options.md)
 1. [Create a form](../../creating-forms.md) that has the following:
 
+<!--It doesn't look from the screenshots and GIF like we're using the Rewards field, recommend removing if that's true -->
     * A Single Select field called _Rewards_ with two options: "Cash" or "All expenses paid trip"
     * A Text field called _Region_
     * A Select from List field called _Choose a Destination Country_ that uses the [restcountries.eu](https://restcountries.eu) data provider
