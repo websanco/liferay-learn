@@ -17,7 +17,7 @@ The available options in a Structure's Actions Menu (![Action Menu](../../../../
 
 **Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](managing-templates.md) for more information.
 
-**Permissions:** Opens the permissions configuration dialog for the Structure. See [below](#permissions-tips) for some useful tips.
+**Permissions:** Opens the permissions configuration dialog for the Structure. For information about assigning permissions to Structures, see [Assigning Permissions to Web Content Structures and Templates](./../web-content-templates/assigning-permissions-to-structures-and-templates.md).
 
 **Copy:** Opens a form to copy the Structure and set its name. See [below](#copying-an-existing-structure) for more information.
 
@@ -39,17 +39,6 @@ You can set the default values for a Structure's fields. For example, a Structur
 ```tip::
    You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and `Configuring Structures' Content <./editing-and-configuring-structures-content.md)>`_
 ```
-
-## Permissions Tips
-
-Consider these points when setting permissions for Structures:
-
-* Most users should not be able to edit Structures
-* The *View* permission allows users to create Web Content that uses the Structure. You should enable this if you want your Structure to be used.
-
-![Configuring Structure Permissions](./managing-structures/images/01.png)
-
-See [Roles and Permissions](../../../../users-and-permissions/roles_and_permissions.rst) for more information on configuring Permissions.
 
 ## Copying an Existing Structure
 
