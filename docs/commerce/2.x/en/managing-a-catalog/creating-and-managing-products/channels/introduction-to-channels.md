@@ -22,4 +22,4 @@ Products and discounts can be configured to be available in all channels or spec
 ## Additional Information
 
 * [Managing Channels](./managing-channels.md)
-* [Configuring Product Visibility by Site Using Channels](./configuring-product-visibility-by-site-using-channels.md)
+* [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)

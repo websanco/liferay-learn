@@ -16,9 +16,9 @@ To add a new Channel, follow these steps:
 
     ![Adding a channel](./managing-channels/images/01.png)
 
-The channel is created and associated with the selected site. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility by Site Using Channels](./configuring-product-visibility-by-site-using-channels.md) for more information.
+The channel is created and associated with the selected site. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md) for more information.
 
 ## Additional Information
 
 * [Introduction to Channels](./introduction-to-channels.md)
-* [Configuring Product Visibility by Site Using Channels](./configuring-product-visibility-by-site-using-channels.md)
+* [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)

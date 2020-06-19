@@ -2,9 +2,14 @@
 
 By default, Products are visible across all channels, but visibility can be limited to specific channels.
 
-For the purpose of this example, we will consider a scenario of a multi-region seller providing products from a single catalog.
+<!--
+We need to update this image.
 
-![Catalog organization](./configuring-product-visibility-by-site-using-channels/images/01.png)
+For the purpose of this example, we will consider a multi-brand scenario where the same products are shared across multiple brands. Here, each site has a different brand experience.
+
+![Catalog organization](./configuring-product-visibility-using-channels/images/01.png)
+
+-->
 
 To learn more about the using Channels in Liferay Commerce, see: [Introduction to Channels](./introduction-to-channels.md).
 
@@ -22,7 +27,7 @@ To configure a product to be available in a specific channel, follow these steps
 1. Click on a product.
 1. Click on the _Visibility_ tab.
 
-    ![Product visibility in 2.1](./configuring-product-visibility-by-site-using-channels/images/03.png)
+    ![Product visibility in 2.1](./configuring-product-visibility-using-channels/images/03.png)
 
 1. Click the Add button.
 1. Click on the desired channel (for example, _Test Channel One_).
@@ -41,7 +46,7 @@ To configure a product to be available in a specific channel, follow these steps
 1. Switch the _Enable filter channels_ toggle to _Yes_.
 1. Check the boxes for each Channel (in this case, the _NA Minium Store_) where the product should be visible.
 
-    ![Product configuration](./configuring-product-visibility-by-site-using-channels/images/02.png)
+    ![Product configuration](./configuring-product-visibility-using-channels/images/02.png)
 
 1. Click _Save_.
 
