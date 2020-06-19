@@ -35,11 +35,11 @@ Depending on how you're using icon fonts, there's a few approaches you can take.
 
 Replace `<liferay-ui:icon iconCssClass="icon-user">` with `<liferay-ui:icon icon="user" markupView="lexicon" />`
 
-##### For JS generated icons
+##### For JavaScript-generated icons
 
 Those manually generating FontAwesome icon html can use the `Liferay.Util.getLexiconIconTpl('user')` API. For example, the previous call would return the html code for a user svg icon.
 
-##### For direct html within jsps
+##### For direct HTML within JSPs
 
 Developers directly using icons in jsps can either use the `liferay-ui:icon` tag as explained above or the `clay:icon` one to generate svg-based icons instead.
 
@@ -376,7 +376,7 @@ As of 7.3, CKEditor is the default and only supported WYSIWYG editor.
 
 ### Who is affected
 
-This affects anyone who uses the Liferay Frontend Editor Simple Web module.
+This affects anyone who uses the Liferay Front-end Editor Simple Web module.
 
 ### How should I update my code?
 
