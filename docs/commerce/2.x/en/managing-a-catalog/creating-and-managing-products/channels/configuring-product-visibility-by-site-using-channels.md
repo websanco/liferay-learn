@@ -1,6 +1,6 @@
-# Configuring Product Visibility by Site Using Channels
+# Configuring Product Visibility by Channel
 
-By default in Liferay Commerce Products added to any catalog are visible globally - products are visible across all sites added to a Liferay Commerce installation. Store administrators may want to limit product visibility to particular channels based on their criteria.
+By default, Products are visible across all channels, but visibility can be limited to specific channels.
 
 For the purpose of this example, we will consider a scenario of a multi-region seller providing products from a single catalog.
 
