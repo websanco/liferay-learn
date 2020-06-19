@@ -25,4 +25,4 @@ To assign permissions for Web Content Structures or Templates, follow these step
 
 ![Permissions Dialog for Web Content Structures and Templates](./assigning-permissions-to-structures-and-templates/images/01.png).
 
-See [Roles and Permissions](../../../../users-and-permissions/roles_and_permissions.rst) for more information on configuring Permissions.
+See [Defining Role Permissions](../../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information on configuring Permissions.
