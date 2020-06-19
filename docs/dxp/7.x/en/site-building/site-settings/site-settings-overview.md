@@ -1,10 +1,3 @@
 # Site Settings Overview
 
-What is Site Settings?
-
-Where can I find it?
-
-What kinds of problems can it help me solve?
-
-Can I provide translations for the values? Are the fields localizable?
-
+Once you've [created a Site](../building-sites/adding-a-site.md), you'll want to customize it to meet your needs and the needs of your users. Liferay DXP has a wealth of configuration options and tools available to help you create the Site you envision. Through the Site Menu you can access these settings to configure every aspect of the Site, from the name to the analytics services. They can help define default permissions for users, the default language you'd like to provide for the Site, and much more.
