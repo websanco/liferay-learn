@@ -12,7 +12,9 @@ To create a new thread:
 1. Enter a title in the **Subject** field.
 1. Create your thread's content in the **Body** field.
 
-   > **Note:** This field uses the same editor as the Blogs app, except that it uses BBCode instead of HTML. For further instructions, see the documentation on [using the editor](https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor-).
+    ```note::
+      This field uses the same editor as the Blogs app, except that it uses BBCode instead of HTML. For further instructions, see the documentation on [using the editor](https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor-).
+    ```
 
     ![Figure 1. Creating the first post](./creating-message-boards-threads/images/01.png)
 

@@ -30,7 +30,9 @@ Upon successful authentication, the IdP constructs a SAML Response. It includes 
 
 The IdP sends the response to the Assertion Consumer Service URL. The request contains two parameters: `SAMLResponse` and `RelayState`.
 
-**Note:** The method for sending the SAML response (for example, HTTP-POST) and the Assertion Consumer Service URL are usually imported as part of the SAML metadata XML provided by the SP. In @product@, you import the SP's metadata in the SAML Adapter's Service Provider Connections tab.
+```note::
+   The method for sending the SAML response (for example, HTTP-POST) and the Assertion Consumer Service URL are usually imported as part of the SAML metadata XML provided by the SP. In @product@, you import the SP's metadata in the SAML Adapter's Service Provider Connections tab.
+```
 
 ### The SP Processes the SSO Response
 

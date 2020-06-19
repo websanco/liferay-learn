@@ -76,6 +76,8 @@ This section contains settings for exporting Liferay user data to LDAP.
 
 When you've set all your options and tested your connection, click *Save*.
 
-**Note:** If a user changes a value like a password in Liferay, that change is passed to the LDAP server, provided Liferay has enough schema access to make the change.
+```note::
+   If a user changes a value like a password in Liferay, that change is passed to the LDAP server, provided Liferay has enough schema access to make the change.
+```
 
 Now you know how to connect an LDAP server to Liferay and how to configure user import behavior, export behavior, and other LDAP settings. There are other configurable options; [Configuring LDAP](./ldap-configuration-reference.md) describes those.

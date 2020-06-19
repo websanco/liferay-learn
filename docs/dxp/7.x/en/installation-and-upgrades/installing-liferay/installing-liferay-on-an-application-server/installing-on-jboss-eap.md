@@ -198,13 +198,15 @@ Make the following edits as applicable to the respective operating system:
     JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Djboss.as.management.blocking.timeout=480 -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxMetaspaceSize=512m"
     ```
 
-On JDK 11, add this JVM argument to display four-digit years.
+    On JDK 11, add this JVM argument to display four-digit years.
 
-```bash
--Djava.locale.providers=JRE,COMPAT,CLDR
-```
+    ```bash
+    -Djava.locale.providers=JRE,COMPAT,CLDR
+    ```
 
-**Note:** If using the IBM JDK with the JBoss server, complete these additional steps:
+    ```note::
+       If using the IBM JDK with the JBoss server, complete these additional steps:
+    ```
 
 1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert the following dependency within the `<dependencies>` element:
 
