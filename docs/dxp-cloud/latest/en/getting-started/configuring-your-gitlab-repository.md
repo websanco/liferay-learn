@@ -1,6 +1,6 @@
 # Configuring Your GitLab Repository
 
-Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub repository hosted in the `dxpcloud` organization. This repository should be used as a template for a team's separate private DXP Cloud development repository and is typically removed after 10 business days. Users must:
+Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub repository hosted in the `dxpcloud` organization. This repository is a template for a team's separate private DXP Cloud development repository and is typically removed after 10 business days. Users must:
 
 1. Transfer the provisioned repository to their own private repository.
 1. Integrate their private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
@@ -108,11 +108,11 @@ Lastly, set environment variables in the Jenkins service's to point to your new 
 | `LCP_CI_SCM_REPOSITORY_NAME` | [repo_name] |
 | `LCP_CI_SCM_TOKEN` | [access_token] |
 
-After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in your new repository should now trigger.
+After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in your new repository trigger builds.
 
 ## Additional GitLab Webhook Configurations
 
-Liferay DXP Cloud's Jenkins service automatically creates a webhook for your selected git SCM provider; however, it only creates the default one, and GitLab's default webhook needs some additional configurations to match the functionality of GitHub and BitBucket's webhooks.
+Liferay DXP Cloud's Jenkins service creates a webhook for your selected git SCM provider; however, it only creates the default one. GitLab's default webhook requires additional configuration to match the functionality of GitHub and BitBucket's webhooks.
 
 1. Navigate to your GitLab repository.
 
@@ -132,7 +132,7 @@ Liferay DXP Cloud's Jenkins service automatically creates a webhook for your sel
 
 ## Verifying Builds
 
-Pushed branches and merge requests (GitLab's equivalent of pull requests) should trigger builds that you can see or deploy from the _Builds_ tab in the DXP Cloud Console. After setting up integration with the Jenkins service, a good next step is to verify these builds, to ensure that the integration was successful.
+Pushed branches and merge requests (GitLab's equivalent of pull requests) trigger builds that you can see or deploy from the _Builds_ tab in the DXP Cloud Console. After setting up integration with the Jenkins service, a good next step is to verify these builds, to ensure that the integration was successful.
 
 ### Verifying Builds from Pushed Branches
 

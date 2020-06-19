@@ -1,6 +1,6 @@
 # Configuring Your GitHub Repository
 
-Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub repository hosted in the `dxpcloud` organization. This repository should be used as a template for a team's separate private DXP Cloud development repository and is typically removed after 10 business days. Users must:
+Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub repository hosted in the `dxpcloud` organization. This repository is a template for a team's separate private DXP Cloud development repository and is typically removed after 10 business days. Users must:
 
 1. Transfer the provisioned repository to their own private GitHub repository.
 1. Integrate their private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
@@ -17,7 +17,7 @@ If you need help creating, cloning, and pushing GitHub repositories, see [GitHub
 
 ## Integrating with the Jenkins Service
 
-Now you must integrate your new repository with the Jenkins service in DXP Cloud. To do this, you must set up a webhook in GitHub that pushes to the Jenkins service:
+Now you must integrate your new repository with the Jenkins service in DXP Cloud. Set up a webhook in GitHub that pushes to the Jenkins service:
 
 1. In GitHub, go to your repository's *Settings* page and select *Webhooks*.
 1. Click *Add Webhook*. This opens the *Add webhook* form.
@@ -58,11 +58,11 @@ Lastly, set environment variables in the Jenkins service to point to your new re
 
 For the `LCP_CI_SCM_TOKEN` value, use the personal access token you created for your GitHub organization. For instructions on creating and accessing this token, see [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line).
 
-After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in your new repository should now trigger.
+After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.
 
 ## Verifying Builds
 
-Pushed branches and pull requests should trigger builds that you can see or deploy from the _Builds_ tab in the DXP Cloud Console. After setting up integration with the Jenkins service, a good next step is to verify these builds, to ensure that the integration was successful.
+Pushed branches and pull requests trigger builds that you can see or deploy from the _Builds_ tab in the DXP Cloud Console. After setting up integration with the Jenkins service, a good next step is to verify these builds, to ensure that the integration was successful.
 
 ### Verifying Builds from Pushed Branches
 
