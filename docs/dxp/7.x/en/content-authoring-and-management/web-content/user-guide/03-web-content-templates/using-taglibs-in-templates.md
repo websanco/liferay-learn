@@ -1,2 +1,0 @@
-# Using Taglibs in Templates
-
