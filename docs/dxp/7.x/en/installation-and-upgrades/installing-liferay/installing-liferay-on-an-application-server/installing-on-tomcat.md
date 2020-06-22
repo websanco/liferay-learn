@@ -16,7 +16,7 @@ In addition to copying dependencies, scripts, and configurations from the Lifera
 * Dependencies ZIP file
 * OSGi Dependencies ZIP file
 
-Liferay DXP requires a **Java JDK 8 or 11**. See [www.java.com](https://www.java.com/) to install a JDK.
+Liferay DXP requires a Java JDK 8 or 11. Please see [the compatibility matrix](https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.2+Compatibility+Matrix.pdf/ed234765-db47-c4ad-7c82-2acb4c73b0f9) for further information
 
 ```note::
    The `Liferay DXP Compatibility Matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>`_ specifies supported databases and environments.
@@ -245,10 +245,10 @@ Otherwise, you can configure the data source in Tomcat.
             name="jdbc/LiferayPool"
             auth="Container"
             type="javax.sql.DataSource"
-            driverClassName="com.mysql.cj.jdbc.Driver"
-            url="jdbc:mysql://localhost/lportal?useUnicode=true&amp;characterEncoding=UTF-8"
-            username="root"
-            password="root"
+            driverClassName="[place the driver name here]"
+            url="[place the URL to your database here]"
+            username="[place your user name here]"
+            password="[place your password here]"
             maxTotal="100"
             maxIdle="30"
             maxWaitMillis="10000"
@@ -256,7 +256,7 @@ Otherwise, you can configure the data source in Tomcat.
     </Context>
     ```
 
-    The example resource definition above is for a MySQL database named `lportal` that has a user named `root` whose password is `root`. Replace these values with your own.
+    Make sure to replace the database URL, user name, and password with the appropriate values.
 
 1. In a `portal-ext.properties` file in **[Liferay_Home]**, specify the data source:
 
@@ -281,16 +281,16 @@ If you want to use Tomcat to manage the mail session, follow these steps:
             name="mail/MailSession"
             auth="Container"
             type="javax.mail.Session"
-            mail.pop3.host="pop.gmail.com"
+            mail.pop3.host="[place POP mail host here]"
             mail.pop3.port="110"
-            mail.smtp.host="smtp.gmail.com"
+            mail.smtp.host="[place SMTP mail host here]"
             mail.smtp.port="465"
-            mail.smtp.user="user"
-            mail.smtp.password="password"
+            mail.smtp.user="[place user name here]"
+            mail.smtp.password="[place password here]"
             mail.smtp.auth="true"
             mail.smtp.starttls.enable="true"
             mail.smtp.socketFactory.class="javax.net.ssl.SSLSocketFactory"
-            mail.imap.host="imap.gmail.com"
+            mail.imap.host="[place IMAP mail host here]"
             mail.imap.port="993"
             mail.transport.protocol="smtp"
             mail.store.protocol="imap"
@@ -320,6 +320,6 @@ You can [sign in as your administrator user](../../../getting-started/introducti
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
-* Installing and Configuring a Search Engine
+* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
