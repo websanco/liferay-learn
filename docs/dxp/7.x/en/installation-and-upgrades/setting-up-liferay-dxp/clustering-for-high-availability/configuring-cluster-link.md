@@ -77,8 +77,8 @@ An alternative to detecting the host address automatically for the bind address,
 2. Set the following properties to your host's IP address:
 
     ```properties
-    cluster.link.bind.addr["cluster-link-control"]=[place your IP address here]
-    cluster.link.bind.addr["cluster-link-udp"]=[place your IP address here]
+    cluster.link.bind.addr["cluster-link-control"]=[place your IP address or host name here]
+    cluster.link.bind.addr["cluster-link-udp"]=[place your IP address or host name here]
     ```
 
 Your network configuration may preclude the use of multicast over TCP, see [Configuring Unicast over TCP](./configuring-unicast-over-tcp.md) for information for those situations. Note that these methods are all provided by JGroups.

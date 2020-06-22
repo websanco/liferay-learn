@@ -15,7 +15,7 @@ Use the following steps to configure Unicast:
 1. Add a JGroups bind address parameter to your app server's JVM on each node:
 
     ```bash
-    -Djgroups.bind_addr=[node_ip_address]
+    -Djgroups.bind_addr=[place your IP address or host name here]
     ```
 
     Use the node's IP address.
