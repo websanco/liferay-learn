@@ -18,7 +18,7 @@ Use the following steps to configure Unicast:
     -Djgroups.bind_addr=[place your IP address or host name here]
     ```
 
-    Use the node's IP address.
+    Use the node's IP address or host name.
 
 1. Select a discovery protocol for the nodes to use to find each other. Here are the protocol choices:
 
