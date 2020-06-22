@@ -1,6 +1,6 @@
 # Developing Page Fragments in the built-in Fragments Editor
 
-The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-reference.md) has all the tools you need to develop Page Fragments inside Liferay DXP. You'll create Page Fragments in *Collections*, which are ways to organize Fragments so users can find the functionality they need to build Pages. You can use Collections to differentiate between types of Page Fragments, the functionality provided, or Page Fragments used by different groups or departments.
+The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-reference.md) has everything you need to develop Page Fragments inside Liferay DXP. You'll organize Page Fragments in *Collections*, so users can find the functionality they need to build Pages. Collections can differentiate between types of Page Fragments, the functionality provided, or Page Fragments used by different groups or departments.
 
 Here you'll learn how to create a Collection and Fragments using the built-in Editor:
 
