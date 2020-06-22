@@ -1,8 +1,6 @@
 # Creating Page Fragments with the Fragments Toolkit
 
-You can use the Fragments Toolkit to create Fragments and Collections from the Command Line. This example uses a Docker image with a fresh install of Liferay DXP.
-
-Here, you'll learn how to create Page Fragments with the Fragments Toolkit:
+The Fragments Toolkit helps you package Fragments and Collections created using your own tools. It takes only three steps to learn how to use it:
 
 1. [Deploy a Fragment Collection](#deploy-a-fragment-collection)
 1. [Add a New Collection and Fragment](#add-a-new-collection-and-fragment)
@@ -145,7 +143,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
         The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their path in the ``fragment.json`` to reflect the change.
     ```
 
-1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example just uses HTML and Bootstrap utilities for styling:
+1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
 
     ```html
     <div class="marketing-jumbotron-fragment-01">
@@ -174,7 +172,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
     You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) for more information.
 
     ```note::
-      The Fragment and configuration object are passed in as arguments in the JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.
+      The Fragment and configuration object are passed in as arguments in JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.
     ```
 
 ## Deploy and Test
