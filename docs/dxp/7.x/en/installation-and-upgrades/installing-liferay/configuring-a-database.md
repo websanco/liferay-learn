@@ -1,6 +1,15 @@
 # Configuring a Database
 
-By default for demonstration purposes, Liferay DXP is configured to use an embedded HSQL database. Beyond demonstration purposes, we recommend using a full-featured, supported RDBMS that is listed in the [Liferay DXP Compatibility Matrix](https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7).
+By default for demonstration purposes, Liferay DXP is configured to use an embedded HSQL database. Beyond demonstration purposes, we recommend using a full-featured, supported RDBMS, such as:
+
+* MySQL
+* MariaDB
+* Oracle
+* PostgreSQL
+
+```important::
+   The `Liferay DXP Compatibility Matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7>`_ lists the supported databases and versions.
+```
 
 <!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->
 
