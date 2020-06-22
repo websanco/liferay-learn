@@ -7,11 +7,14 @@ Web Content Articles
 
 Web Content Structures
 ----------------------
-Coming soon!
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/understanding-web-content-structures
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/creating-structures
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/configuring-structure-fields
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/managing-structures
 
 Web Content Templates
 ---------------------
-Coming soon!
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-templates/creating-web-content-templates
 
 Auto Tagging
 ------------

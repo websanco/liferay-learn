@@ -4,5 +4,8 @@ Web Content Templates
 .. toctree::
    :maxdepth: 2
 
-.. include:: /content-authoring-and-management/web-content/01-user-guide/03-web-content-templates/README.rst
+   web-content-templates/creating-web-content-templates.md
+   web-content-templates/assigning-permissions-to-structures-and-templates.md
+
+.. include:: /content-authoring-and-management/web-content/user-guide/web-content-templates/README.rst
    :start-line: 2
