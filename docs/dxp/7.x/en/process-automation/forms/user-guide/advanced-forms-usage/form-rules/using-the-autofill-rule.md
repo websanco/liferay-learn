@@ -1,6 +1,6 @@
 # Using the Autofill Rule
 
-The Autofill Rule allows filtering a form field's options based on preconfigured conditions. The data all comes from the same [data provider](../introduction-to-data-providers.md), which can also [provide a list of options]((../using-data-providers-to-populate-form-options.md)) without conditions.
+The Autofill Rule allows filtering a form field's options based on pre-configured conditions. The data all comes from the same [data provider](../introduction-to-data-providers.md), which can also [provide a list of options]((../using-data-providers-to-populate-form-options.md)) without conditions.
 
 Here is an example of how to use the Autofill Rule to filter countries based on geographic region.
 
