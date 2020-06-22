@@ -335,7 +335,6 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 
 * [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)
 * [Activating Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md)
-* Installing and Configuring a Search Engine
+* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
-* Maintaining Liferay DXP

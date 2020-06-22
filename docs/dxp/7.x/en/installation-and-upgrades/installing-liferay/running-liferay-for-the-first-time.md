@@ -77,6 +77,6 @@ You can [sign in as your administrator user](../../getting-started/introduction-
 
 * [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
-* Installing and Configuring a Search Engine
+* [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../securing-liferay/introduction-to-securing-liferay.md)
 * [Clustering for High Availability](../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
