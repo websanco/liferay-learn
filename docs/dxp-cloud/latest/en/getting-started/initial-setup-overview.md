@@ -10,7 +10,7 @@ Getting started with Liferay DXP Cloud involves ensuring all accounts, environme
 
 ## Check Setup Emails
 
-Check the email account associated with your Liferay DXP Cloud subscription for setup emails. You should receive a DXP Cloud onboarding email along with email invitations to each purchased DXP Cloud environment.
+Check the email account associated with your Liferay DXP Cloud subscription for setup emails. You should receive a DXP Cloud onboarding email along with email invitations for each purchased DXP Cloud environment.
 
 The onboarding email provides necessary credentials for accessing Jenkins and Liferay DXP on non-production environments, as well as important steps for getting started with DXP Cloud.
 
@@ -28,9 +28,9 @@ From here, you can access and manage environments and deployments, as well as in
 
 ## Access the Provisioned Project Source Code
 
-New DXP Cloud projects are provisioned a temporary GitHub repository hosted in the `dxpcloud` organization. This repository contains the necessary source code for your projects.
+New DXP Cloud projects are provisioned a temporary GitHub repository hosted in the `dxpcloud` organization. This repository contains the template for a DXP Cloud development project.
 
-To gain access to your new project repository, follow instructions in the DXP Cloud onboarding email and accept the subsequent GitHub invitation.
+To access to your new project repository, follow the instructions in the DXP Cloud onboarding email and accept the subsequent GitHub invitation.
 
 After accepting the invitation, locate your provisioned project repository:
 
@@ -46,10 +46,10 @@ Once you have found your provisioned repository, you must:
 
 1. Integrate the private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
 
-See [Configuring Your GitHub Repository](https://learn.liferay.com/dxp-cloud-latest/getting-started/configuring-your-github-repository.html) for detailed instructions.
+See [Configuring Your GitHub Repository](./configuring-your-github-repository.md) for detailed instructions.
 
 ```note::
-   Using an alternative hosting service? See how to configure your `Bitbucket <https://learn.liferay.com/dxp-cloud-latest/getting-started/configuring-your-bitbucket-repository.html>`_ or `GitLab <https://learn.liferay.com/dxp-cloud-latest/getting-started/configuring-your-gitlab-repository.html>`_ repositories.
+   Using an alternative hosting service? See how to configure your `Bitbucket <./configuring-your-bitbucket-repository.md>`_ or `GitLab <./configuring-your-gitlab-repository.md>`_ repositories.
 ```
 
 ## Log in to Your CI and DXP Services
@@ -58,7 +58,7 @@ Log in to Jenkins (CI) and Liferay DXP to directly access their web interfaces.
 
 Both login credentials are provided in the initial onboarding email, but they are also listed under *Environment Variables* in the *ci* service page of the *infra* environment.
 
-See [Logging into Your DXP Cloud Services](https://learn.liferay.com/dxp-cloud-latest/getting-started/logging-into-your-dxp-cloud-services.html) for detailed instructions.
+See [Logging into Your DXP Cloud Services](./logging-into-your-dxp-cloud-services.md) for detailed instructions.
 
 ## Verifying Setup
 
@@ -82,7 +82,7 @@ You can also view an environment's location by navigating to its *Overview* page
 
 ![Figure 4: View the environment's location in the Overview page.](./initial-setup-overview/images/04.png)
 
-If the environment location does not match the location requested by your team, please contact the Liferay Support team.
+If the environment location does not match the location requested by your team, please [contact the Liferay Support team](../reference/tracking-dxp-cloud-status-and-getting-help.md).
 
 ### Verifying Cloud Stack Services
 
@@ -98,6 +98,6 @@ When properly deployed, the status of all 5 default Cloud Stack services should 
 
 ## Additional Information
 
-- [Configuring Your GitHub Repository](https://learn.liferay.com/dxp-cloud-latest/getting-started/configuring-your-github-repository.html)
-- [Understanding DXP Cloud Environments](https://learn.liferay.com/dxp-cloud-latest/getting-started/understanding-dxp-cloud-environments.html?highlight=location)
-- [Logging into Your DXP Cloud Services](https://learn.liferay.com/dxp-cloud-latest/getting-started/logging-into-your-dxp-cloud-services.html)
+- [Configuring Your GitHub Repository](./configuring-your-github-repository.md)
+- [Understanding DXP Cloud Environments](./understanding-dxp-cloud-environments.md)
+- [Logging into Your DXP Cloud Services](./logging-into-your-dxp-cloud-services.md)
