@@ -1,6 +1,6 @@
 # Creating a Contributed Fragment Collection
 
-Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections (either [with your own tools](developing-page-fragments-with-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](developing-page-fragments-with-the-fragments-toolkit.md) may be more favorable, as they can be modified from the UI and can include image resources.
+Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](developing-page-fragments-with-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](developing-page-fragments-with-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
 
 This example runs on Liferay DXP 7.3+.
  
@@ -23,7 +23,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+    docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
     ```
 
 1. Download and unzip the [Marketing Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip):
@@ -64,7 +64,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 
 Great! You successfully deployed a contributed Fragment Collection.
 
-As you can see, the contributed Fragment Collection appears with the other default Fragment Collections, and the Fragments can't be modified from the UI. The only way to modify the Collection is to either update the module they came from or [copy the Fragment to another Collection](../../fragments/managing-page-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
+As you can see, the contributed Fragment Collection appears with the default Fragment Collections, and the Fragments can't be modified from the UI. The only way to modify the Collection is to update the module they came from or [copy the Fragment to another Collection](../../fragments/managing-page-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
 
 ## Contributed Fragment Collection Logic and metadata
 
