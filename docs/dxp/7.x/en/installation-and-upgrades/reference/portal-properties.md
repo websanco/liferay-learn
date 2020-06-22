@@ -1,8 +1,8 @@
 # Portal Properties
 
-Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file. 
+Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file.
 
-Some properties can be changed through the user interface (UI), but others can only be changed in a properties file. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, changing how users authenticate (by screen name instead of by email address), and increasing the size limit for file uploads.
+Some properties can be changed through the user interface (UI), but others can only be changed in a properties file. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, and [changing how users authenticate](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (by screen name instead of by email address).
 
 By convention, `portal-ext.properties` should be created in your `[Liferay Home](./liferay-home.md)` folder or `[USER_HOME]` folder to override default property values. You must restart DXP to apply a new or modified properties file.
 
@@ -10,7 +10,7 @@ By convention, `portal-ext.properties` should be created in your `[Liferay Home]
    Never directly modify the ``portal-impl.jar/portal.properties`` file; instead, create a separate file to override properties you want to change. The ``portal-ext.properties`` file has been defined for this purpose.
 ```
 
-Using a `portal-ext.properties` file to override default properties has these benefits: 
+Using a `portal-ext.properties` file to override default properties has these benefits:
 
 * You can copy the file to other Liferay DXP environments and server nodes.
 * You can store configurations in a version control system to simplify configuration management.
@@ -28,13 +28,13 @@ Using a `portal-ext.properties` file to override default properties has these be
 
 ## Using Portal Properties
 
-When creating `[Liferay Home]/portal-ext.properties`, a best practice is to copy the relevant section from `portal-impl.jar/portal.properties` into your `portal-ext.properties` file, and then change the value to what you want. 
+When creating `[Liferay Home]/portal-ext.properties`, a best practice is to copy the relevant section from `portal-impl.jar/portal.properties` into your `portal-ext.properties` file, and then change the value to what you want.
 
 ```note::
    If you use the `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_, DXP sets those properties in a file called `portal-setup-wizard.properties` in ``[Liferay Home]``.
 ```
 
-Here are a few configuration examples. 
+Here are a few configuration examples.
 
 ### Setting a Database Connection
 
@@ -75,9 +75,9 @@ company.security.auth.type=userId
 
 ## Portal Property Priority
 
-A special property called `include-and-override` defines property override order. 
+A special property called `include-and-override` defines property override order.
 
-1. There are three property sources: 
+1. There are three property sources:
 
     * The `portal-impl.jar/portal.properties` file
     * Extension properties files
@@ -85,11 +85,11 @@ A special property called `include-and-override` defines property override order
 
 1. The first value read for a *shared property* (a property defined multiple times) takes priority.
 
-1. Property sources are read in a [deterministic order](#properties-source-order).
+1. Property sources are read in a [deterministic order](#configuration-processing).
 
 ### Configuration Processing
 
-The default overrides are defined in this order: 
+The default overrides are defined in this order:
 
 ```properties
 include-and-override=portal-bundle.properties
@@ -104,7 +104,7 @@ include-and-override=${liferay.home}/${external-properties}
 [Liferay Docker Env variables]
 ```
 
-DXP checks each of the above files for additional `include-and-override` definitions, which means you can define your own. 
+DXP checks each of the above files for additional `include-and-override` definitions, which means you can define your own.
 
 ![The list of included extension files your DXP server is using is available in the Server Administration page of the Control Panel's Configuration section](./portal-properties/images/01.png)
 
@@ -112,7 +112,9 @@ The `${external-properties}` definition represents any properties file assigned 
 
 Liferay Docker containers aggregate Liferay environment variables into a Portal Properties source that's added to the list.
 
-**Important:** If you override a property in more than one file, the **last** defined property source wins. All others are ignored. 
+```important::
+   If you override a property in more than one file, the **last** defined property source wins. All others are ignored.
+```
 
 ![All of your DXP server's Portal Properties are available to view in the Server Administration page in the Control Panel's Configuration section.](./portal-properties/images/02.png)
 
@@ -143,7 +145,7 @@ mail.session.jndi.name=mail/SomeMailSession
 
 #### Example 2: Adding a Properties File
 
-You can add a properties file for a specific environment, such as a development environment. Then you can use a single `portal-ext.properties` for common properties, and an environment-specific configuration for others. 
+You can add a properties file for a specific environment, such as a development environment. Then you can use a single `portal-ext.properties` for common properties, and an environment-specific configuration for others.
 
 1. Create an arbitrary extension file (e.g., `portal-development.properties`) for your environment and add environment-specific properties to it:
 
@@ -175,7 +177,7 @@ mail.session.jndi.name=mail/DevMailSession
 
 ## Using System Settings and Configuration Files
 
-Some properties can be set using [System Settings](../../system-administration/system-settings/system-settings.md) and [Configuration Files](../../system-administration/system-settings/understanding-configuration-files.md). The SAML authentication properties, for example, are properties available in System Settings.
+Some properties can be set using [System Settings](../../system-administration/system-settings/system-settings.md) and [Configuration Files](../../system-administration/system-settings/using-configuration-files.md). The SAML authentication properties, for example, are properties available in System Settings.
 
 Properties stored in the DXP database are prioritized over properties set in Portal Properties files.
 
@@ -187,4 +189,4 @@ Go to *Control Panel* at *Configuration* &rarr; *System Settings* to find System
 
 * [System Settings](../../system-administration/system-settings/system-settings.md)
 
-* [Understanding Configuration Files](../../system-administration/system-settings/understanding-configuration-files.md)
+* [Understanding Configuration Files](../../system-administration/system-settings/using-configuration-files.md)
