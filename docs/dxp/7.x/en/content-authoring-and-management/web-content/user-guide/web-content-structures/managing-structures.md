@@ -17,7 +17,7 @@ The available options in a Structure's Actions Menu (![Action Menu](../../../../
 
 **Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](managing-templates.md) for more information.
 
-**Permissions:** Opens the permissions configuration dialog for the Structure. For information about assigning permissions to Structures, see [Assigning Permissions to Web Content Structures and Templates](./../web-content-templates/assigning-permissions-to-structures-and-templates.md).
+**Permissions:** Opens the permissions configuration dialog for the Structure. See [Assigning Permissions to Web Content Structures and Templates](./../web-content-templates/assigning-permissions-to-structures-and-templates.md) for more information.
 
 **Copy:** Opens a form to copy the Structure and set its name. See [below](#copying-an-existing-structure) for more information.
 
