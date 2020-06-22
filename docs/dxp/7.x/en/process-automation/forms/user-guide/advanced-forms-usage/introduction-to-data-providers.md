@@ -1,6 +1,6 @@
 # Introduction to Data Providers
 
-The Forms application has a _Select from List_ field that asks respondents to select from a list of options. For some Select from List fields a manually created list makes sense: _T-shirt size_ might be one example. If the list is longer or requires some expertise to populate accurately, a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer) is better suited to provide the form options. A _Country of Residence_ field is an example of this. 
+The Forms application has a _Select from List_ field that asks respondents to select from a list of options. For some Select from List fields a manually created list makes sense: _T-shirt size_ might be one example. If the list is longer or requires some expertise to populate accurately, a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer) is better suited to provide the form options. A _Country of Residence_ field is an example of this.
 
 ## Registered JSON Web Services
 
