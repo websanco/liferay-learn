@@ -10,8 +10,6 @@ Reference
    reference/database-templates.md
    reference/database-configurations.md
    reference/jvm-configurations.md
-   reference/comparing-patch-levels.md
-   reference/patching-tool-configuration-properties.md
 
 .. include:: /installation-and-upgrades/reference/README.rst
    :start-line: 2
