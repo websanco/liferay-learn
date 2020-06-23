@@ -1,6 +1,6 @@
 # Application Metrics
 
-With Liferay DXP Cloud's built-in monitoring, you can track resources used by each environment service.
+With Liferay DXP Cloud's built-in monitoring, you can track resources used by each environment service. Metrics are available for the default DXP Cloud stack services: Webserver, Liferay, Search, Database, and Backup.
 
 ## Quick View
 
@@ -13,7 +13,7 @@ Quickly view a service's current resource usage by hovering over its icon, where
 Users can view extended service metrics from the *Monitoring* page:
 
 1. Click *Monitoring* in the environment menu.
-1. Use the drop-down menus to select the service and time frame/period you want to monitor.
+1. Use the drop-down menus to select the service and time frame you want to monitor.
 
 ![You can use DXP Cloud to monitor your services.](./application-metrics/images/02.png)
 
@@ -25,6 +25,23 @@ Users can also view extended service metrics from the *Services* page:
 
 ![View metrics from the service's page.](./application-metrics/images/03.png)
 
+## Determining Resources Allocated to Services
+
+A service's `LCP.json` file configuration determines the total memory and CPUs allocated to that service, and the application metrics show the usage of those resources over time.
+
+Here is an example of CPU and Memory allocation for the DXP service in its `LCP.json` file:
+
+```
+"id": "liferay",
+"image": "@liferay.workspace.lcp.liferay.image@",
+"memory": 8192,
+"cpu": 8
+```
+
+Users can view allocated resources from the DXP Cloud console.
+
+![View resources allocated to your environment services from the DXP Cloud console.](./application-metrics/images/04.png)
+
 ## Advanced Application Metrics (Production Only)
 
 With Liferay DXP Cloud, you can integrate [Dynatrace's](https://www.dynatrace.com/) advanced performance monitoring with your production environments.
@@ -35,7 +52,7 @@ Follow these steps to integrate Dynatrace:
 
 1. Create a Dynatrace account.
 1. Generate the Dynatrace secret `token` and `tenant` values.
-1. Add Dynatrace environment variables to the `LCP.json` file in the DXP Service's production environment. <!-- "...in the DXP Service's production environment" is unclear to me. --> For example:
+1. Add Dynatrace environment variables to the `LCP.json` file in the DXP service's production environment. For example:
 
 ```json
 {
@@ -64,10 +81,13 @@ Now you can access Dynatrace's advanced performance monitoring from the DXP Clou
 1. Click the *Advanced* tab.
 1. Click the *Go to Dynatrace Dashboard* button to access your Dynatrace dashboard.
 
-	![Access the Dynatrace dashboard from the DXP Cloud Console](./application-metrics/images/04.png)
+	![Access the Dynatrace dashboard from the DXP Cloud Console](./application-metrics/images/05.png)
 
 Log in with your Dynatrace credentials to check log trails and create custom dashboards.
 
 ## Additional Information
 
+* [Introduction to the Liferay DXP Service](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.html)
+* [Real-Time Alerts](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/real-time-alerts.html)
+* [Quotas](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/quotas.html)
 * [Advanced Monitoring: APM Tools - Dynatrace](https://help.liferay.com/hc/en-us/articles/360017896452-Advanced-Monitoring-APM-Tools-Dynatrace)
