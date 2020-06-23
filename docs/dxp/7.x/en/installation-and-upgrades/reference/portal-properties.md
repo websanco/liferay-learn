@@ -83,15 +83,16 @@ A special property called `include-and-override` defines property override order
     * Extension properties files
     * Liferay Docker Env variables
 
-1. The first value read for a *shared property* (a property defined multiple times) takes priority.
+1. The last value defined for a *shared property* (a property defined multiple times) takes priority.
 
 1. Property sources are read in a [deterministic order](#configuration-processing).
 
 ### Configuration Processing
 
-The default overrides are defined in this order:
+Properties are defined in this order:
 
 ```properties
+portal-impl.jar/portal.properties
 include-and-override=portal-bundle.properties
 include-and-override=${liferay.home}/portal-bundle.properties
 include-and-override=portal-ext.properties
@@ -104,7 +105,7 @@ include-and-override=${liferay.home}/${external-properties}
 [Liferay Docker Env variables]
 ```
 
-DXP checks each of the above files for additional `include-and-override` definitions, which means you can define your own.
+The `portal-impl.jar/portal.properties` file specifies the above `include-and-override` definitions. DXP checks each of the files for additional `include-and-override` definitions, which means you can define your own.
 
 ![The list of included extension files your DXP server is using is available in the Server Administration page of the Control Panel's Configuration section](./portal-properties/images/01.png)
 
@@ -134,8 +135,10 @@ mail.session.jndi.name=mail/SomeMailSession
 
 Resulting properties source order:
 
+1. `portal-impl.jar/portal.properties`
 1. `[Liferay Home]/portal-ext.properties`
-2. `portal-impl.jar/portal.properties`
+
+The last value defined for `mail.session.jndi.name` is in `[Liferay Home]/portal-ext.properties`.
 
 Resulting configuration:
 
@@ -161,9 +164,11 @@ You can add a properties file for a specific environment, such as a development 
 
 Resulting properties source order:
 
-1. `[Liferay Home]/portal-development.properties`
-1. `[Liferay Home]/portal-ext.properties`
 1. `portal-impl.jar/portal.properties`
+1. `[Liferay Home]/portal-ext.properties`
+1. `[Liferay Home]/portal-development.properties`
+
+The last value defined for `mail.session.jndi.name` is in `[Liferay Home]/portal-development.properties`.
 
 Resulting configuration:
 
