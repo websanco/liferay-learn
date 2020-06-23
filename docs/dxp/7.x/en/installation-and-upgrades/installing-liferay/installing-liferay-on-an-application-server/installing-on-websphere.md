@@ -32,6 +32,7 @@ Here are the basic steps for installing DXP on WebSphere:
 
 1. Preparing WebSphere for DXP
 1. Installing DXP Dependencies
+1. Installing Elasticsearch Archives (7.3 only)
 1. Database Configuration
 1. Mail Configuration
 1. Enable Cookies for HTTP Sessions
@@ -151,6 +152,23 @@ DXP communicates with your database via JDBC. Add your database JDBC driver JAR 
 * [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
 
 Note that although a Hypersonic database is bundled with DXP and is fine for testing purposes, do not use it for production DXP instances.
+
+## Installing Elasticsearch Archives
+
+If installing Liferay DXP 7.3, the following archives are required to install a sidecar [Elasticsearch](https://www.elastic.co/elasticsearch/) server that can be used for testing and development.
+
+1. Download the following archives:
+
+    <!-- sort out the version -->
+    * Elasticsearch OSS No JDK (available [here](https://www.elastic.co/downloads/past-releases#elasticsearch-oss-no-jdk))
+    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.8.0.zip))
+    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.8.0.zip))
+    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.8.0.zip))
+    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.8.0.zip))
+
+1. Copy the downloaded files into `[Liferay Home]`.
+
+When Liferay DXP is started, logic is run to check if Elasticsearch is already installed. If not, Liferay DXP looks for archives in `[Liferay Home]`. If the archives are found, Liferay DXP installs Elasticsearch for you. If the archives are not found, Liferay DXP attempts to download then install the archives.
 
 ### Ensuring That the DXP Portlet.jar is Loaded First
 
