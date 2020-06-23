@@ -1,4 +1,4 @@
-# Understanding liferay-npm-bundler's Loaders
+# Understanding the Liferay npm Bundler Loader
 
 liferay-npm-bundler's mechanism is inspired by webpack. Like webpack, the liferay-npm-bundler processes files using a set of rules that include loaders that transform a project's source files before producing the final output.
 

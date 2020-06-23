@@ -1,4 +1,4 @@
-# How the Default Preset Configures the liferay-npm-bundler
+# Understanding Bundler Configuration Presets
 
 The liferay-npm-bundler comes with a default configuration preset: [`liferay-npm-bundler-preset-standard`](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/liferay-npm-bundler-preset-standard). You may omit the `liferay-npm-bundler` prefix from the npm package name in your `.npmbundlerrc` file. This preset configures several plugins for the build process and is automatically used (even if the `.npmbundlerrc` is missing), unless you override it with one of your own. Running the liferay-npm-bundler with this preset applies the [config file](https://github.com/liferay/liferay-npm-build-tools/blob/master/packages/liferay-npm-bundler-preset-standard/config.json) from `liferay-npm-bundler-preset-standard`:
 
@@ -66,4 +66,4 @@ The bundler also runs Babel with the [babel-preset-liferay-standard](https://git
 
 * [babel-plugin-namespace-amd-define](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/babel-plugin-namespace-amd-define): Add a prefix to AMD `define()` calls (by default `Liferay.Loader.`).
 
-Now you know the available configuration presets for `.npmbundlerrc` and how they work. 
+Now you know the available configuration presets for `.npmbundlerrc` and how they work.

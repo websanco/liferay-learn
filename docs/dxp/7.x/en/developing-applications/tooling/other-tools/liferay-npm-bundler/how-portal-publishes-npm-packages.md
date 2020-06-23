@@ -1,4 +1,4 @@
-# How the Liferay npm Bundler Publishes npm Packages
+# How the Bundler Publishes npm Packages
 
 When you deploy an OSGi bundle with the specified [structure](./the-structure-of-osgi-bundles-containing-npm-packages.md), its modules are made available for consumption through canonical URLs. To better illustrate resolved modules, the example structure below is the standard structure that the liferay-npm-bundler 1.x generates. It doesn't have the namespaced packages that the 2.x version generates. The liferay-npm-bundler 2.0 overrides this de-duplication mechanism to implement isolated dependencies and imports, as explained below.
 

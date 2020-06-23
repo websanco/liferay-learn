@@ -1,8 +1,8 @@
-# Understanding the `.npmbundlerrc`'s Structure
+# Understanding the npmbundlerrc Structure
 
 The liferay-npm-bundler is configured via a `.npmbundlerrc` file placed in the widget project's root folder. You can create a complete configuration manually or extend a configuration preset (via Babel).
 
-See the `default preset reference <./how-the-default-preset-configures-the-liferay-npm-bundler.md>`_  to learn how the default preset configures the liferay-npm-bundler. See `Creating JavaScript Widgets with JavaScript Tooling <../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md>`_ to learn how to use the liferay-npm-bundler along with the Liferay JS Generator to create JavaScript widgets.
+See the [default preset reference](./how-the-default-preset-configures-the-liferay-npm-bundler.md) to learn how the default preset configures the liferay-npm-bundler. See [Creating JavaScript Widgets with JavaScript Tooling](../liferay-js-generator.md) to learn how to use the liferay-npm-bundler along with the Liferay JS Generator to create JavaScript widgets.
 
 ## The Structure
 
@@ -218,7 +218,7 @@ Here's an example configuration:
 
 ### OSGi Bundle Creation Options
 
-Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for you. See [Creating and Bundling JavaScript Widgets with JavaScript Tooling](../../../../tooling/other-tools/liferay-js-generator/developer-guide/creating-a-js-widget-with-the-js-generator.md) for complete instructions. Here are the configuration options for OSGi bundle creation:
+Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for you. See [Creating and Bundling JavaScript Widgets with JavaScript Tooling](../liferay-js-generator.md) for complete instructions. Here are the configuration options for OSGi bundle creation:
 
 * **create-jar**: Creates an OSGi bundle when set to a truthy value. When set to `true`, all sub-options take default values. When an object is passed, each sub-option can be configured individually. Note that you can also pass this as a build flag: `$ liferay-npm-bundler --create-` or `$ liferay-npm-bundler -j`. The default value is `false`.
 
@@ -230,7 +230,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 
 * **create-jar.auto-deploy-portlet**: This option is deprecated. Use the `create-jar.features.js-extender` option instead.
 
-* **create-jar.features.configuration**: Specifies the file describing the system (OSGi) and widget instance (widget preferences, as defined in the Portlet spec) configuration to use. (see [Configuring System Settings and Instance Settings for Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/configuring-system-settings-and-instance-settings-for-your-js-widget.md) for more information on the required settings configuration). The default value is `features/configuration.json` if that file exists, otherwise the default is `undefined`.
+* **create-jar.features.configuration**: Specifies the file describing the system (OSGi) and widget instance (widget preferences, as defined in the Portlet spec) configuration to use. (see [Configuring System Settings and Instance Settings for Your JavaScript Widgets](../liferay-js-generator.md) for more information on the required settings configuration). The default value is `features/configuration.json` if that file exists, otherwise the default is `undefined`.
 
 ```json
 {
@@ -276,7 +276,7 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 }
 ```
 
-* **create-jar.features.localization:** Specifies the L10N file to use for the bundle See [Providing Localization in Your JavaScript Widgets](../../../../tooling/other-tools/liferay-js-generator/developer-guide/localizing-your-widget.md) for more information on using localization in your widget. The default value is `features/localization/Language` if a properties file with that base name exists, otherwise the default is `undefined`.
+* **create-jar.features.localization:** Specifies the L10N file to use for the bundle See [Providing Localization in Your JavaScript Widgets](../liferay-js-generator.md) for more information on using localization in your widget. The default value is `features/localization/Language` if a properties file with that base name exists, otherwise the default is `undefined`.
 
 ```json
 {

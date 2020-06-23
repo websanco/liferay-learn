@@ -1,6 +1,6 @@
-# What Changed Between Liferay npm Bundler 1.x and 2.x
+# Changes Between Bundler 1.x and 2.x
 
-This reference doc outlines the key changes between liferay-npm-bundler version 1.x and 2.x.
+This article outlines the key changes between liferay-npm-bundler version 1.x and 2.x.
 
 ## Automatically Formatting Modules for AMD
 
@@ -22,4 +22,4 @@ Namespacing means that each widget gets its own dependencies. Only using the bun
 
 In bundler 1.x that deduplication was made automatically, but there was no control over it. However, with version 2.x, you may now import packages from an external OSGi bundle, instead of using your own. This lets you put shared dependencies in one project and reference them from the rest. Though This new way of de-duplication is not automatic, it leads to full control (during build time) of how each package is resolved.
 
-Now that you understand what changed between version 1.x and 2.x of the liferay-npm-bundler, you can follow the steps in the [Migrating a liferay-npm-bundler Project from 1.x to 2.x](./bundler-migration-guide/migrating-bundler-projects-intro.md) to migrate your 1.x projects to 2.x. 
+Now that you understand what changed between version 1.x and 2.x of the liferay-npm-bundler, you can follow the steps in the [Migrating a liferay-npm-bundler Project from 1.x to 2.x](./bundler-migration-guide/migrating-bundler-projects-intro.md) to migrate your 1.x projects to 2.x.

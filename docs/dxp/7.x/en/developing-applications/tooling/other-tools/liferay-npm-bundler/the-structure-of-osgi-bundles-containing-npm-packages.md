@@ -1,4 +1,4 @@
-# The Structure of OSGi Bundles Containing npm Packages
+# OSGi Bundles and npm Package Structure
 
 To deploy JavaScript modules, you must create an OSGi bundle with the npm dependencies extracted from the project's `node_modules` folder and modify them to work with the [Liferay AMD Loader](https://github.com/liferay/liferay-amd-loader). The liferay-npm-bundler automates this process for you, creating a bundle similar to the one below:
 

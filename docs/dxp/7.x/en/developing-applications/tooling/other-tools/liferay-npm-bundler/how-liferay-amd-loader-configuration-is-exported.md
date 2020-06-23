@@ -1,13 +1,13 @@
-# Understanding How Liferay AMD Loader Configuration is Exported
+# How AMD Loader Configuration is Exported
 
 ```note::
-  If you don't understand how Liferay AMD Loader works under the hood, please read `Liferay AMD Module Loader <./loading-amd-modules-in-liferay>`_ first.
+  If you don't understand how Liferay AMD Loader works under the hood, please read `Liferay AMD Module Loader <./understanding-bundler-loaders.md>`_ first.
 ```
 
 With [de-duplication](./how-portal-publishes-npm-packages.md#package-de-duplication) in place, JavaScript modules are made available to Liferay AMD Loader through the configuration returned by the `/o/js_loader_modules` URL.
 
 The OSGi bundle shown below is used for reference in this article:
-
+<!-- TODO: Update the following bullets into an actual dir structure diagram akin to: https://learn.liferay.com/dxp-cloud/latest/en/reference/upgrading-your-dxp-cloud-stack.html#preparing-to-upgrade -->
 * `my-bundle/`
     * `META-INF/`
         * `resources/`
@@ -46,7 +46,7 @@ The OSGi bundle shown below is used for reference in this article:
                         * ...
                     * ...
 
-For example, for the above structure, as explained in [The Structure of OSGi Bundles Containing npm Packages](./the-structure-of-osgi-bundles-containing-npm-packages.md), the configuration below is published for Liferay AMD loader to consume:
+For example, for the above structure, as explained in [OSGi Bundles and npm Package Structure](./the-structure-of-osgi-bundles-containing-npm-packages.md), the configuration below is published for Liferay AMD loader to consume:
 
 ```javascript
 Liferay.PATHS = {
@@ -91,7 +91,6 @@ Liferay.MAPS = {
   ...
 }
 ```
-
 
 Note:
 
