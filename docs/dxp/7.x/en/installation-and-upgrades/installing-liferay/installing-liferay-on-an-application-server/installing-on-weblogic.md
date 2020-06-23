@@ -17,6 +17,7 @@ Installing Liferay DXP on WebLogic requires the following steps:
 1. [Configure WebLogic for DXP](#configure-weblogic)
 1. [Declare the Liferay Home folder](#declare-the-liferay-home-folder)
 1. [Install the dependencies](#install-dxp-dependencies)
+1. [Install Elasticsearch archives](#install-elasticsearch-archives)
 1. [Connect to Database](#connect-to-database)
 1. [Connect to Mail Server](#connect-to-mail-server)
 1. [Deploy the WAR](#deploy-the-war)
@@ -120,6 +121,23 @@ DXP depends on libraries (Dependencies ZIP) and OSGi modules (OSGi Dependencies 
 DXP communicates with your database via JDBC. Add your database JDBC driver JAR file to the domain's `lib` folder.
 
 Please see the [compatibility matrix](https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.2+Compatibility+Matrix.pdf/ed234765-db47-c4ad-7c82-2acb4c73b0f9) for a list of supported databases.
+
+## Install Elasticsearch Archives
+
+If installing Liferay DXP 7.3, the following archives are required to install a sidecar [Elasticsearch](https://www.elastic.co/elasticsearch/) server that can be used for testing and development.
+
+1. Download the following archives:
+
+    <!-- sort out the version -->
+    * Elasticsearch OSS No JDK (available [here](https://www.elastic.co/downloads/past-releases#elasticsearch-oss-no-jdk))
+    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.8.0.zip))
+    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.8.0.zip))
+    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.8.0.zip))
+    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.8.0.zip))
+
+1. Copy the downloaded files into `[Liferay Home]`.
+
+When Liferay DXP is started, logic is run to check if Elasticsearch is already installed. If not, Liferay DXP looks for archives in `[Liferay Home]`. If the archives are found, Liferay DXP installs Elasticsearch for you. If the archives are not found, Liferay DXP attempts to download then install the archives.
 
 ## Connect to Database
 
