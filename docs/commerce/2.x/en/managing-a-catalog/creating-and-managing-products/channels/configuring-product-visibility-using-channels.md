@@ -1,4 +1,4 @@
-# Configuring Product Visibility by Channel
+# Configuring Product Visibility Using Channels
 
 By default, Products are visible across all channels, but visibility can be limited to specific channels.
 
@@ -8,7 +8,6 @@ We need to update this image.
 For the purpose of this example, we will consider a multi-brand scenario where the same products are shared across multiple brands. Here, each site has a different brand experience.
 
 ![Catalog organization](./configuring-product-visibility-using-channels/images/01.png)
-
 -->
 
 To learn more about the using Channels in Liferay Commerce, see: [Introduction to Channels](./introduction-to-channels.md).
