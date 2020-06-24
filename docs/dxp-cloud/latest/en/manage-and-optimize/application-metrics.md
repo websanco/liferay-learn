@@ -20,7 +20,9 @@ Users can view extended service metrics from the *Monitoring* page:
 Users can also view extended service metrics from the *Services* page:
 
 1. Click *Services* in the environment menu.
+
 1. Click on the *Service* you want to monitor.
+
 1. Click on the *Metrics* tab.
 
 ![View metrics from the service's page.](./application-metrics/images/03.png)
@@ -51,7 +53,9 @@ With Liferay DXP Cloud, you can integrate [Dynatrace's](https://www.dynatrace.co
 Follow these steps to integrate Dynatrace:
 
 1. Create a Dynatrace account.
+
 1. Generate the Dynatrace secret `token` and `tenant` values.
+
 1. Add Dynatrace environment variables to the `LCP.json` file in the Liferay service's production environment. For example:
 
 ```json
@@ -77,8 +81,11 @@ Follow these steps to integrate Dynatrace:
 Now you can access Dynatrace's advanced performance monitoring from the DXP Cloud console:
 
 1. Navigate to a production environment.
+
 1. Click *Monitoring* in the environment menu.
+
 1. Click the *Advanced* tab.
+
 1. Click the *Go to Dynatrace Dashboard* button to access your Dynatrace dashboard.
 
 	![Access the Dynatrace dashboard from the DXP Cloud Console](./application-metrics/images/05.png)

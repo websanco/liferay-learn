@@ -7,6 +7,7 @@ Logs are crucial for debugging. With DXP Cloud, you can access and download envi
 The easiest way to access environment logs is via the web console.
 
 1. Navigate to a project environment.
+
 1. Click on *Logs* in the environment menu.
 
 View application and build logs across all environment services, or filter results using the drop-down menus.

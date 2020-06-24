@@ -3,6 +3,7 @@
 Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub repository hosted in the `dxpcloud` organization. This repository is a template for a team's separate private DXP Cloud development repository and is typically removed after 10 business days. Users must:
 
 1. Transfer the provisioned repository to their own private GitHub repository.
+
 1. Integrate their private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
 
 ## Transferring the Repository
@@ -10,7 +11,9 @@ Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub reposit
 Follow these steps to transfer the provisioned repository to your own GitHub repository:
 
 1. Create a new private GitHub repository.
+
 1. Clone your provisioned `dxpcloud` repository locally.
+
 1. Push the cloned repository from step two to the remote repository you created in step one.
 
 If you need help creating, cloning, and pushing GitHub repositories, see [GitHub's documentation](https://help.github.com).
@@ -20,9 +23,13 @@ If you need help creating, cloning, and pushing GitHub repositories, see [GitHub
 Now you must integrate your new repository with the Jenkins service in DXP Cloud. Set up a webhook in GitHub that pushes to the Jenkins service:
 
 1. In GitHub, go to your repository's *Settings* page and select *Webhooks*.
+
 1. Click *Add Webhook*. This opens the *Add webhook* form.
+
 1. In the *Payload URL* field, add the domain of your DXP Cloud `infra` environment's Jenkins service. For example, the URL of the `infra` environment's `ci` service for a project named `acme` is `https://ci-acme-infra.lfr.cloud/github-webhook/`. Note that the relative path `github-webhook` is required to integrate with the Jenkins GitHub plugin.
+
 1. In the *Content type* selector menu, select *application/json*.
+
 1. Leave the *Secret* field blank and ensure that *Enable SSL verification* is selected.
 
     ![Figure 1: Specify the payload URL and content type, and enable SSL verification.](./configuring-your-github-repository/images/webhook-1.png)
