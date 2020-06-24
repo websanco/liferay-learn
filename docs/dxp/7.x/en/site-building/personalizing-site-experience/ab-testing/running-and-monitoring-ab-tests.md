@@ -1,6 +1,6 @@
 # Running and Monitoring A/B Tests
 
-You can run the A/B Test using two different configurations:
+You can configure the following parameters when you run the A/B Test:
 
 - *Traffic Split*: the percentage of visitors that are randomly split between the Variants when visiting the page. A visitor is randomly assigned to a Variant and always sees the same Variant until the test is finished.
 - *Confidence Level Required*: represents the accuracy of your test. The higher the required confidence level, the longer it takes to declare the winning Variant.
