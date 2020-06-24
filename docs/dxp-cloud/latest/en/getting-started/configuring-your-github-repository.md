@@ -61,7 +61,7 @@ For the `LCP_CI_SCM_TOKEN` value, use the personal access token you created for 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.
 
 ```note::
-   Jenkins versions prior to :code:`2.222.1-3.2.0` use :code:`GITHUB_*` to configure environment variables. To use :code:`LCP_CI_SCM_*` variables, ensure you are running Jenkins :code:`2.222.1-3.2.0` or higher.
+   Jenkins versions prior to ``2.222.1-3.2.0`` use the environment variables ``GITHUB_REPOSITORY`` and ``GITHUB_TOKEN`` instead. To use the ``LCP_CI_SCM_*`` environment variables, ensure you are running Jenkins ``2.222.1-3.2.0`` or higher.
 ```
 
 ## Verifying Builds
