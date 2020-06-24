@@ -33,7 +33,7 @@ Here is an example of CPU and Memory allocation for the `liferay` service in its
 
 ```
 "id": "liferay",
-"image": "@liferay.workspace.lcp.liferay.image@",
+
 "memory": 8192,
 "cpu": 8
 ```
