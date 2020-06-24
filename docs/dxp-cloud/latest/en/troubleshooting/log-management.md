@@ -1,39 +1,46 @@
 # Log Management
 
-Logs are crucial for debugging. On DXP Cloud, you can access your environment's 
-logs via the web console or terminal. You can also download log files. 
+Logs are crucial for debugging. With DXP Cloud, you can access and download environment logs via the web console or your OS terminal.
 
 ## Accessing Logs from the Web Console
 
-The easiest way to access an environment's logs is via the web console. To do 
-so, select the environment and click the *Logs* tab in the left menu. To access 
-a specific service's logs, select the service from the *All Services* menu in 
-the toolbar. To download the logs, click *Download Logs*. 
+The easiest way to access environment logs is via the web console.
+
+1. Navigate to a project environment.
+1. Click on *Logs* in the environment menu.
+
+View application and build logs across all environment services, or filter results using the drop-down menus.
+
+To download logs, click the *Download Logs* button.
 
 ![Figure 1: The web console also lets you view your logs.](./log-management/images/01.png)
 
+Environment service logs are also available under the *Logs* tab in each service's dedicated page.
+
 ## Accessing Logs from the Terminal
 
-```note::
-   To access logs via the terminal, you must be an administrator or developer. 
-```
+Administrators and developers can also view logs via their OS terminals.
 
-Run this command to access logs from your terminal: 
+Run the following command to list logs for all services:
 
 ```shell
 lcp log
 ```
 
-The `lcp log` command lists logs for all services. You can then choose which 
-log(s) to access. To access logs from a specific environment, you can enter its 
-ID or run the `lcp log` command with that ID: 
+To access service logs from a specific environment, either enter the environment's ID after running the `lcp log` command, or run the `lcp log` command with the environment ID:
 
 ```shell
 lcp log -p <environment-id>
 ```
 
-You can also specify the service as part of the command: 
+Users can also specify a service as part of the `lcp log` command:
 
 ```shell
 lcp log -p <environment-id> -s <service-id>
 ```
+
+## Additional Information
+
+- [Shell Access](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/shell-access.html)
+- [Disaster Recovery Overview](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/disaster-recovery-overview.html)
+- [Configuring Cross-Region Disaster Recovery](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/configuring-cross-region-disaster-recovery.html)
