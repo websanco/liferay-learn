@@ -1,10 +1,10 @@
 # Application Metrics
 
-With Liferay DXP Cloud's built-in monitoring, you can track resources used by each environment service. Metrics are available for the default DXP Cloud stack services: Webserver, Liferay, Search, Database, and Backup.
+With Liferay DXP Cloud's built-in monitoring, you can track resources used by each environment service. These application metrics include memory and CPU usage, as well as network data transfer. Metrics are available for the default DXP Cloud stack services: Webserver, Liferay, Search, Database, and Backup.
 
-## Quick View
+## Viewing Metrics from the Services Page
 
-Quickly view a service's current resource usage by hovering over its icon, wherever it appears.
+You can quickly see a service's current resource usage from any environment's _Services_ page. View the chosen service's resource usage by hovering over the service's icon.
 
 ![Hover over a service's icon.](./application-metrics/images/01.png)
 
@@ -29,7 +29,7 @@ Users can also view extended service metrics from the *Services* page:
 
 A service's `LCP.json` file configuration determines the total memory and CPUs allocated to that service, and the application metrics show the usage of those resources over time.
 
-Here is an example of CPU and Memory allocation for the DXP service in its `LCP.json` file:
+Here is an example of CPU and Memory allocation for the `liferay` service in its `LCP.json` file:
 
 ```
 "id": "liferay",
@@ -52,7 +52,7 @@ Follow these steps to integrate Dynatrace:
 
 1. Create a Dynatrace account.
 1. Generate the Dynatrace secret `token` and `tenant` values.
-1. Add Dynatrace environment variables to the `LCP.json` file in the DXP service's production environment. For example:
+1. Add Dynatrace environment variables to the `LCP.json` file in the Liferay service's production environment. For example:
 
 ```json
 {

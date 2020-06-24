@@ -17,7 +17,7 @@ Users can also access alert preferences from the Alerts page.
 
 ## Alerts Page
 
-View and manage alerts delivered to your console from the [Alerts page](https://console.liferay.cloud/alerts). You can access this page by clicking the bell icon at the top-right of the console navigation bar.
+View and manage alerts delivered to your console from the [Alerts page](https://console.liferay.cloud/alerts). You can access this page by clicking the bell icon at the top-right of the page.
 
 The Alerts table lists the following alert information:
 
