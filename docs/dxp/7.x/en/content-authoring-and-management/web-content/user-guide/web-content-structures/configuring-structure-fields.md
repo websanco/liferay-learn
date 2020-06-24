@@ -14,6 +14,10 @@ You can edit the fields in a Structure, as well as the properties of each field.
 1. Select the field you want to configure and click the *Settings* tab, or hover over the field and click the *Settings* (![Settings icon](../../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. You can perform [other actions](#structure-field-options) in the context menu as well.
 1. [Configure your desired settings](#configurable-settings) for the field and *Save* the changes.
 
+```tip::
+   When you create or `edit a Structure <./configuring-structure-fields.md>`_, the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
+```
+
 ## Configurable Settings
 
 ```note::

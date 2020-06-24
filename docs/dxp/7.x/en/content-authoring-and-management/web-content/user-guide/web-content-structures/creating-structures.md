@@ -9,7 +9,7 @@ Follow these steps to create a Structure:
 1. Drag and drop the [available fields](#structure-fields) onto the Structure and [configure their settings](./configuring-structure-fields.md#configurable-settings) to create the Structure.
 
     ```tip::
-       When you create or `edit a Structure <./editing-and-configuring-structure-fields.md>`_, the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
+       When you create or `edit a Structure <./configuring-structure-fields.md>`_, the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
     ```
 
 1. Optionally, add a *Description* for your Structure.
