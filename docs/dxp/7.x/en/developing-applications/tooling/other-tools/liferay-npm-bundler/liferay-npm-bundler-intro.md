@@ -10,7 +10,7 @@ The workflow for running npm packages inside widgets is slightly different from 
 
 ## How the Liferay npm Bundler Works Internally
 
-The liferay-npm-bundler takes a widget project and outputs its files (including npm packages) to a build folder, so the standard widget build (Gradle) can produce an OSGi bundle. You can learn more about the build folder's structure in [The Structure of OSGi Bundles Containing NPM Packages](./the-structure-of-osgi-bundles-containing-npm-packages.md) reference.
+The liferay-npm-bundler takes a widget project and outputs its files (including npm packages) to a build folder, so the standard widget build (Gradle) can produce an OSGi bundle. You can learn more about the build folder's structure in [OSGi Bundles and npm Package Structure](./the-structure-of-osgi-bundles-containing-npm-packages.md) reference.
 
 The liferay-npm-bundler uses the process below to create the OSGi bundle:
 
