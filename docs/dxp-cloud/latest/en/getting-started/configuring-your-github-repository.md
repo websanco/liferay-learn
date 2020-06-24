@@ -60,6 +60,10 @@ For the `LCP_CI_SCM_TOKEN` value, use the personal access token you created for 
 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.
 
+```note::
+   Jenkins versions prior to :code:`2.222.1-3.2.0` use :code:`GITHUB_*` to configure environment variables. To use :code:`LCP_CI_SCM_*` variables, ensure you are running Jenkins :code:`2.222.1-3.2.0` or higher.
+```
+
 ## Verifying Builds
 
 Pushed branches and pull requests trigger builds that you can see or deploy from the _Builds_ tab in the DXP Cloud Console. After setting up integration with the Jenkins service, a good next step is to verify these builds, to ensure that the integration was successful.
