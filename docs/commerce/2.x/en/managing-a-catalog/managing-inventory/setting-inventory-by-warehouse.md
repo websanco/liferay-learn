@@ -20,7 +20,7 @@ Each warehouse now has the correct quantity available for sale.
 
 ## Transferring Stock Between Warehouses
 
-If a store has more than one [warehouse](./adding-a-new-warehouse.md), inventory managers can transfer stock from one warehouse to another. In Liferay Commerce, inventory is tracked at the SKU level and reflected in _Inventory_ administration.
+If a store has more than one [warehouse](./adding-a-new-warehouse.md), users can transfer stock from one warehouse to another. Inventory is tracked at the SKU level and reflected in _Inventory_ administration.
 
 To transfer stock between warehouses:
 
@@ -39,6 +39,8 @@ To transfer stock between warehouses:
     ![Designate the quantity, source, and destination.](./setting-inventory-by-warehouse/images/03.png)
 
 1. Click _Submit_.
+
+Inventory counts for each warehouse are now updated.
 
 ## Additional Information
 
