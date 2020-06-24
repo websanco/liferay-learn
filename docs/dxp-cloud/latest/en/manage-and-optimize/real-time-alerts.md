@@ -1,40 +1,41 @@
 # Real-Time Alerts
 
-Liferay DXP Cloud can alert system administrators of unexpected behaviors in a 
-project. Unexpected behaviors include (but are not limited to) auto-scaling events, 
-higher than expected memory consumption, CPU reaching an allotted quota, or 
-database connection issues. Here, you'll learn how to configure and view alerts. 
+Liferay DXP Cloud can alert system administrators of unexpected behaviors in a project. Examples of unexpected behaviors include auto-scaling events, higher than expected memory consumption, reaching the allotted CPU quota, and database connection issues.
 
 ## Alert Preferences
 
-You can configure your alert preferences via the DXP Cloud management console. 
-Follow these steps to do so: 
+Users can set [Alert Preferences](https://console.liferay.cloud/account/alerts-preferences) for all environments via the DXP Cloud Console.
 
-1. Click your profile photo at the top-right corner of the navigation bar and 
-    select *Alerts Preferences*. 
-1. For each alert, select the checkbox for how you wish to receive it (console 
-    and/or email). To disable an alert, unselect all its checkboxes. 
-1. Click *Save Alerts Preferences* when you're finished. 
+1. Click the *User Profile* icon at the top-right of the console navigation bar.
+1. Click on *Alerts Preferences*.
+1. Select the type of alerts you want to receive by clicking the checkbox for your preferred method of notification. To disable an alert, unselect the associated checkbox.
+1. Click *Save Alerts Preferences* when finished.
 
 ![Real Time Alerts](./real-time-alerts/images/01.png)
 
+Users can also access alert preferences from the Alerts page.
+
 ## Alerts Page
 
-You can access Alerts delivered to your console from the *Alerts* page. To 
-access this page, click the bell icon in the top navigation bar. A table shows 
-the following information for each alert: 
+View and manage alerts delivered to your console from the [Alerts page](https://console.liferay.cloud/alerts). You can access this page by clicking the bell icon at the top-right of the console navigation bar.
 
-* **Status:** The alert's current state. Each alert is triggered by a specific 
-    event. If the event is still happening, its alert status is *Ongoing*. If 
-    the event is finished, the alert status is *Resolved*. 
-* **Started at:** The time the alert began. 
-* **Duration:** How long the alert lasted. 
+The Alerts table lists the following alert information:
 
-You can perform the following actions via the buttons above the table: 
+* Status: This column indicates the alert's current state. Each alert is triggered by a specific event. If the event is still happening, its alert status is *Ongoing*. If the event is finished, the alert status is *Resolved*.
+* Started at: This column indicates when the alert began.
+* Duration: This column indicates how long the alert lasted.
 
-* **Unread alerts/All alerts:** View only unread alerts, or all alerts.
-* **All environments/other environments:** Filter alerts by environment.
-* **Mark all as read:** Mark all alerts as read. 
-* **Alerts Preferences:** Go to your alert preferences page. 
+Filter and manage alerts using the buttons above the table:
+
+* Unread alerts/All alerts: View only unread alerts, or all alerts.
+* All environments/other environments: Filter alerts by environment.
+* Mark all as read: Mark all alerts as read.
+* Alerts Preferences: Go to your alert preferences page.
 
 ![Real Time Alerts](./real-time-alerts/images/02.png)
+
+## Additional Information
+
+* [Application Metrics](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/application-metrics.html)
+* [Quotas](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/quotas.html)
+* [Team Activities](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/team-activities.html)
