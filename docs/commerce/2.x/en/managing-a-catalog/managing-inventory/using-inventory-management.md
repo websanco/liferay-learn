@@ -1,14 +1,14 @@
-# Using the Inventory Administration
+# Using Inventory Management
 
 > Commerce 2.1+
 
-The _Inventory Administration_ allows users to manage to the store's inventory at the SKU level. This is especially useful if a product has multiple SKUs (for example, a product has multiple colors and each variant has its own SKU).
+_Inventory Management_ allows users to manage to the store's inventory at the SKU level. This is especially useful if a product has multiple SKUs (for example, a product has multiple colors and each variant has its own SKU).
 
 ```tip::
    There should be at least one active warehouse. If you had used the Minium accelerator to create your store, there are three warehouses added by default. You can always add more.
 ```
 
-To access the Inventory Administration, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
+To manage your inventory, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
 
 ## Adding an Inventory Item
 
@@ -24,7 +24,7 @@ To add an inventory item:
     * **Warehouse**: United States - Southwest
     * **Quantity**: 120
 
-    ![Add a new inventory item.](./using-the-inventory-administration/images/01.png)
+    ![Add a new inventory item.](./using-inventory-management/images/01.png)
 
 1. Click _Submit_ when finished.
 
@@ -43,21 +43,21 @@ To set a safety stock quantity:
    * **Quantity on Hand**: 40 (leave as-is)
    * **Safety Stock Quantity**: 5
 
-    ![Set a safety stock quantity.](./using-the-inventory-administration/images/02.png)
+    ![Set a safety stock quantity.](./using-inventory-management/images/02.png)
 
 1. Click _Save_ when finished.
 1. Close the window.
 
 Once the Safety Stock quantity has been set, the number has decreased in the _Available_ column.
 
-![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-the-inventory-administration/images/03.png)
+![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-inventory-management/images/03.png)
 
 ## Viewing Accepted Orders
 
 1. Click on the SKU (_MIN55681_).
 1. Click the _On Order_ tab.
 
-    ![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-the-inventory-administration/images/06.png)
+    ![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-inventory-management/images/06.png)
 
 Users can view all the orders that include this SKU.
 
@@ -74,13 +74,13 @@ Store managers can enter incoming stock quantities and the expected delivery day
     * **Destination**: Choose a warehouse (United States Northeast)
     * **Expected Delivery Date**: Choose a future date (7/01/2020)
 
-    ![Add incoming stock.](./using-the-inventory-administration/images/04.png)
+    ![Add incoming stock.](./using-inventory-management/images/04.png)
 
 1. Click _Submit_ when finished.
 
 Once the incoming quantity has been added, this is updated on the _Overview_ tab.
 
-![The incoming stock quantity is updated on the SKU's Overview tab.](./using-the-inventory-administration/images/05.png)
+![The incoming stock quantity is updated on the SKU's Overview tab.](./using-inventory-management/images/05.png)
 
 ## Tracking Changes to the SKU
 
@@ -93,10 +93,10 @@ The Changelog tracks the following events:
 * When a shipment is cancelled, the previously allocated quantities need to be returned.
 * Any update action to an inventory item.
 
-![Changelog tracks changes.](./using-the-inventory-administration/images/07.png)
+![Changelog tracks changes.](./using-inventory-management/images/07.png)
 
 ## Additional Information
 
-* [Inventory Administration Reference Guide](./inventory-administration-reference-guide.md)
+* [Inventory Management Reference Guide](./inventory-management-reference-guide.md)
 * [Warehouse Reference Guide](./warehouse-reference-guide.md)
 * [Setting Inventory by Warehouse](./setting-inventory-by-warehouse.md)

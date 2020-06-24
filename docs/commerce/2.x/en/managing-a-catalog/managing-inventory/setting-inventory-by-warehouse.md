@@ -45,4 +45,4 @@ Inventory counts for each warehouse are now updated.
 ## Additional Information
 
 * [Adding A New Warehouse](./adding-a-new-warehouse.md)
-* [Inventory Administration Reference Guide](./inventory-administration-reference-guide.md)
+* [Inventory Management Reference Guide](./inventory-management-reference-guide.md)
