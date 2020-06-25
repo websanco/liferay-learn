@@ -4,7 +4,7 @@ _Node_ elements and their sub-elements are fundamental building blocks making up
 
 ## State Nodes
 
-State nodes do not require user input. The workflow does whatever is specified in the state node's `actions` tag (a notification and/or a custom script), and then moves to the provided transition. Workflows start and end with a state.
+State nodes do not require user input. The workflow does whatever is specified in the state node's `actions` tag (a notification and/or a custom script) and then moves to the provided transition. Workflows start and end with a state.
 
 The initial state node often only contains a transition:
 
@@ -41,7 +41,7 @@ If a notification or script is required in your state node, you can use an `acti
 
 ## Conditions
 
-Conditions let you inspect the asset (or its execution context) and do something, like send it to a particular transition.
+Conditions inspect whether a certain condition is met before executing.
 
 Here's the `determine-branch` condition from the Category Specific Approval workflow definition:
 
@@ -107,11 +107,11 @@ Here's the `determine-branch` condition from the Category Specific Approval work
 
 This example checks the asset category to choose the processing path, whether to transition to the _Legal Review_ task or the _Content Review_ task.
 
-The `returnValue` variable points from the condition to a transition, and its value must match a valid transition name. This script looks up the asset in question, retrieves its asset category, and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the _legal_ category. If not it goes through _Content Review_ (to the content-review task in the workflow), and if it does it goes through _Legal Review_ (to the legal-review task in the workflow).
+The `returnValue` variable points from the condition to a transition and its value must match a valid transition name. This script looks up the asset in question, retrieves its asset category, and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the _legal_ category. If not it goes through _Content Review_ (to the content-review task in the workflow), and if it does it goes through _Legal Review_ (to the legal-review task in the workflow).
 
 ## Forks and Joins
 
-Forks split the workflow process, and joins bring the process back to a unified branch. Processing must always be brought back using a Join (or a Join XOR), and the number of forks and joins in a workflow definition must be equal.
+Forks split the workflow process and joins bring the process back to a unified branch. Processing must always be brought back using a Join (or a Join XOR), and the number of forks and joins in a workflow definition must be equal.
 
 ```xml
 <fork>
@@ -141,7 +141,7 @@ Forks split the workflow process, and joins bring the process back to a unified 
 </join>
 ```
 
-The workflow doesn't move past the join until the asset transitions to it from both of the forks. To fork the workflow process, but then allow the processing to continue when only one fork is completed, use a Join XOR.
+The workflow does not advance past the join until the asset transitions to it from both of the forks. To fork the workflow process, but then allow the processing to continue when only one fork is completed, use a Join XOR.
 
 A Join XOR differs from a join in one important way: it removes the constraint that both forks must be completed before processing can continue. The asset must complete just one of the forks before processing continues.
 
@@ -160,7 +160,7 @@ A Join XOR differs from a join in one important way: it removes the constraint t
 
 ## Task Nodes
 
-[Task nodes](/docs/7-2/reference/-/knowledge_base/r/workflow-task-nodes) are at the core of the workflow definition. They're the part where a user interacts with the asset in some way. Tasks can also have sub-elements, including notifications, assignments, and task timers.
+[Task nodes](./workflow-task-node-reference.md) are at the core of the workflow definition. They're the part where a user interacts with the asset in some way. Tasks can also have sub-elements, including notifications, assignments, and task timers.
 
 Here's the `content-review` task from the Category Specific Approval workflow, with some of the `role` assignment tags cut out for brevity:
 
