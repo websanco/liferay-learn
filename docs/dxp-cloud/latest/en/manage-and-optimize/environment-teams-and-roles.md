@@ -9,9 +9,13 @@ Invite members and assign roles with varying access levels to achieve your desir
 Follow these steps to invite users to your environment:
 
 1. Navigate to a project environment.
+
 1. Click on *Team* in the environment menu.
+
 1. Enter the user's email into the *Email* field.
+
 1. Click the drop-down *Role* menu to assign a role to the new user.
+
 1. Click on *Send Invite*.
 
 ![Figure 1: Invite new team members to an environment from the Team page.](./environment-teams-and-roles/images/01.png)
@@ -61,6 +65,6 @@ Roles determine a user's access level within an environment. Liferay DXP Cloud c
 
 ## Additional Information
 
-- [Initial Setup Overview](../getting-started/initial-setup-overview.md)
-- [Understanding DXP Cloud Environments](../getting-started/understanding-dxp-cloud-environments.md)
-- [Team Activities](./team-activities.md)
+* [Initial Setup Overview](../getting-started/initial-setup-overview.md)
+* [Team Activities](./team-activities.md)
+* [Understanding DXP Cloud Environments](../getting-started/understanding-dxp-cloud-environments.md)
