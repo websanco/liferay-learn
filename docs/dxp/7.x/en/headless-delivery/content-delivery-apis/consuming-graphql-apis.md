@@ -13,10 +13,18 @@ This example uses a Docker image with a fresh install of Liferay DXP.
 You need a running Liferay DXP to call its GraphQL APIs. To obtain one using Docker, run this command:
 
 ```bash
-docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
 ```
 
-After Liferay DXP initializes, you can find the service you need. You can discover your local installation's APIs by requesting the schema:
+After Liferay DXP initializes, you can find the service you need. 
+
+1.  Log into your server. Once authenticated, go to this URL: 
+
+    http://localhost:8080/o/api
+
+2.  Click the *Show GraphQL* button at the top-right of the screen to open Liferay's [GraphiQL](https://github.com/graphql/graphiql) browser. 
+
+You can discover your local installation's APIs by requesting the schema:
 
 ```bash
 curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'
