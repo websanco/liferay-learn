@@ -42,6 +42,6 @@ lcp log -p <environment-id> -s <service-id>
 
 ## Additional Information
 
-- [Shell Access](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/shell-access.html)
-- [Disaster Recovery Overview](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/disaster-recovery-overview.html)
-- [Configuring Cross-Region Disaster Recovery](https://learn.liferay.com/dxp-cloud/latest/en/troubleshooting/configuring-cross-region-disaster-recovery.html)
+- [Shell Access](./shell-access.md)
+- [Disaster Recovery Overview](./disaster-recovery-overview.md)
+- [Configuring Cross-Region Disaster Recovery](./configuring-cross-region-disaster-recovery.md)

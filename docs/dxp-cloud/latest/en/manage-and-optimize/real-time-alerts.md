@@ -44,6 +44,6 @@ Filter and manage alerts using the buttons above the table:
 
 ## Additional Information
 
-* [Application Metrics](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/application-metrics.html)
-* [Quotas](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/quotas.html)
-* [Team Activities](https://learn.liferay.com/dxp-cloud/latest/en/manage-and-optimize/team-activities.html)
+* [Application Metrics](./application-metrics.md)
+* [Quotas](./quotas.md)
+* [Team Activities](./team-activities.md)
