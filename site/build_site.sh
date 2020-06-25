@@ -25,7 +25,7 @@ function generate_sphinx_input {
 
 	cd ../site
 
-	for product_name in `find ../docs -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
+	for product_name in `find ../docs -maxdepth 1 -mindepth 1 -path */tools -prune -o -printf "%f\n" -type d`
 	do
 		for version_name in `find ../docs/${product_name} -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
 		do
