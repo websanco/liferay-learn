@@ -2,9 +2,9 @@
 
 With Liferay DXP Cloud's built-in monitoring, you can track resources used by each environment service. These application metrics include memory and CPU usage, as well as network data transfer. Metrics are available for the default DXP Cloud stack services: Webserver, Liferay, Search, Database, and Backup.
 
-## Viewing Metrics from the Services Page
+## Service Popover
 
-You can quickly see a service's current resource usage from any environment's _Services_ page. View the chosen service's resource usage by hovering over the service's icon.
+You can quickly see a service's current resource usage from several pages in your DXP Cloud environment, including the environment's _Overview_ and _Services_ pages, and the individual service pages. View a popover of any service's resource usage by hovering over the service's icon.
 
 ![Hover over a service's icon.](./application-metrics/images/01.png)
 
