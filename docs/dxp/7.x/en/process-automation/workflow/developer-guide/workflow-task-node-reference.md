@@ -27,23 +27,23 @@ Check out the Review task in the Single Approver definition, noting that several
         <notification-type>email</notification-type>
             <recipients>
             <user />
-			</recipients>
-			<execution-type>onExit</execution-type>
-		</notification>
+            </recipients>
+            <execution-type>onExit</execution-type>
+        </notification>
     </actions>
     <assignments>
         <roles>
             <role>
-				<role-type>organization</role-type>
-				<name>Organization Administrator</name>
-			</role>
+                <role-type>organization</role-type>
+                <name>Organization Administrator</name>
+        </role>
               ...
-		</roles>
+        </roles>
     </assignments>
     <transitions>
     <transition>
-			<name>approve</name>
-			<target>approved</target>
+            <name>approve</name>
+            <target>approved</target>
     </transition>
             <transition>
             <name>reject</name>
@@ -59,9 +59,15 @@ These have a name and a [script](/docs/7-2/user/-/knowledge_base/u/leveraging-th
 
 ## Assignments
 
-Workflow tasks are completed by a user. Assignments make sure the right users can access the tasks. You can choose how you want to configure your assignments.
+Workflow tasks are completed by a user. Assignments make sure the right users can access the tasks. You can choose how you want to configure your assignments. Assignments can be added to:
 
-You can choose to add assignments to specific roles, to multiple roles of a role type (organization, site, or regular role types), to the asset creator, to resource actions, or to specific users. Additionally, you can write a script to define the assignment. For an example, see the `single-approver-definition-scripted-assignment.xml`.
+* Specific roles
+* Multiple roles of a role type (organization, site, or regular role types)
+* Asset creator
+* Resource actions
+* Specific users
+
+Additionally, you can write a script to define the assignment. For an example, see the `single-approver-definition-scripted-assignment.xml`.
 
 ```xml
 <assignments>
@@ -74,8 +80,7 @@ You can choose to add assignments to specific roles, to multiple roles of a role
 </assignments>
 ```
 
-The above assignment specifies that an Organization Administrator must complete
-the task.
+The above assignment specifies that an Organization Administrator must complete the task.
 
 ```xml
 <assignments>
@@ -134,16 +139,16 @@ The above assignment assigns the task to the *Administrator* role, then checks w
 
 Note the `roles = new ArrayList<Role>();` line above. In a scripted assignment, the `roles` variable is where you specify any roles the task is assigned to. For example, when `roles.add(adminRole);` is called, the Administrator role is added to the assignment.
 
-Assigning tasks to Roles, Organizations, or Asset Creators is a straightforward concept, but what does it mean to assign a workflow task to a Resource Action? Imagine an *UPDATE* resource action. If your workflow definition specifies the UPDATE action in an assignment, then anyone who has permission to update the type of asset being processed in the workflow is assigned to the task. You can configure multiple assignments for a task.
-
 ## Resource Action Assignments
 
-*Resource actions* are operations performed by users on an application or entity. For example, a user might have permission to update Message Boards Messages. This is called an UPDATE resource action, because the user can update the resource. If you're uncertain about what resource actions are, refer to the developer tutorial on the [permission system]() for a more detailed explanation.
+Users can assign a task to a resource action such as an *Update* action. If your workflow definition specifies the UPDATE action in an assignment, then anyone who has permission to update the type of asset being processed in the workflow is assigned to the task. You can configure multiple assignments for a task.
+
+*Resource actions* are operations performed by users on an application or entity. For example, a user might have permission to update Message Boards Messages. This is called an UPDATE resource action, because the user can update the resource. If you're uncertain about what resource actions are, refer to the developer tutorial on the [permission system](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for a more detailed explanation.
 
 To find all the resource actions that have been created, you need access to the Roles Admin application in the Control Panel (in other words, you need permission for the VIEW action on the roles resource).
 
 1. Navigate to the _Control Panel_ &rarr; _Users_ &rarr; _Roles_.
-1. Add a new Regular Role. See the [article on managing roles]() for more information.
+1. Add a new Regular Role. See the [article on managing roles](../../../users-and-permissions/roles-and-permissions/creating-and-managing-roles.md) for more information.
 1. Once the role is added, navigate to the Define Permissions interface for the role.
 1. Find the resource whose action should define your workflow assignment.
 
@@ -236,7 +241,7 @@ Like `<action>` elements, `<timer-action>` elements can contain scripts.
 ```
 
 The above example isn't functional but it demonstrates setting up a `<script>` in your task timer.
-[Read the _Scripting in Workflow_ article](/docs/7-2/user/-/knowledge_base/u/leveraging-the-script-engine-in-workflow) for more information.
+[Read the _Scripting in Workflow_ article](https://help.liferay.com/hc/en-us/articles/360028818852-Leveraging-the-Script-Engine-in-Workflow) for more information.
 
 ```note::
    A `timer-action` can contain all the same tags as an `action`, with one exception: `execution-type`. Timer actions are always triggered once the time is up, so specifying and execution type of `onEntry`, for example, isn't meaningful inside a timer.
