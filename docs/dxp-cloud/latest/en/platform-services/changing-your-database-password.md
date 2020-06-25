@@ -8,15 +8,15 @@ If you are changing the password for a production environment, then you must ens
 
 To create a backup, navigate to your production (`prd`) environment and click _Backups_ from the menu on the left:
 
-(screenshot)
+![Navigate to your production environment's Backups page.](./changing-your-database-password/images/01.png)
 
 Then, click _Backup Now_ on the _Backups_ page:
 
-(screenshot)
+![Click Backup Now to create a new backup.](./changing-your-database-password/images/02.png)
 
 ## Changing the Database Password
 
-The database password is changed directly using the [secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) feature for your chosen environment. However, for the database password secret, you must follow additional steps to ensure that your services update correctly with the new value.
+The database password is changed directly using the [secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) feature within your chosen environment. However, for the database password secret, you must follow additional steps to ensure that your services update correctly with the new value.
 
 <!-- Mention required service versions, and link to possible section on the procedure for 3.x services -->
 
@@ -30,21 +30,21 @@ When you are ready, follow these steps to change your database password:
 
 1. Click _Settings_ from the menu on the left:
 
-    (screenshot)
+    ![Navigate to your environment's Settings page.](./changing-your-database-password/images/03.png)
 
 1. In the _Secrets_ section, click _Edit..._ from the Actions menu beside the `lcp-secret-database-password` secret:
 
-    (screenshot)
+    ![Edit the lcp-secret-database-password secret.](./changing-your-database-password/images/04.png)
 
 1. In the _Value_ section, click _Show_ beside the value to reveal the secret and enable editing.
 
-    (screenshot)
+    ![Show the secret to enable editing it.](./changing-your-database-password/images/05.png)
 
 1. Edit the value of the secret.
 
 1. Scroll down and check all of the boxes acknowledging the effects of changing the value of the secret.
 
-    (screenshot)
+    ![Check the boxes to enable the Publish secret button.](./changing-your-database-password/images/06.png)
 
 1. Click _Publish secret_.
 
@@ -56,7 +56,7 @@ When you are ready, follow these steps to change your database password:
 
 1. From the Actions menu for the `database` service, click _Delete Service_.
 
-    (screenshot)
+    ![Delete the service so it can be redeployed and start up with the updated password.](./changing-your-database-password/images/07.png)
 
 1. Open a command prompt within your local clone of the repository.
 
