@@ -128,12 +128,11 @@ If installing Liferay DXP 7.3, the following archives are required to install a 
 
 1. Download the following archives:
 
-    <!-- sort out the version -->
-    * Elasticsearch OSS No JDK (available [here](https://www.elastic.co/downloads/past-releases#elasticsearch-oss-no-jdk))
-    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.8.0.zip))
-    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.8.0.zip))
-    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.8.0.zip))
-    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.x/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.8.0.zip))
+    * [Elasticsearch OSS No JDK 7.3](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/release-notes-7.3.2.html) ([available here--7.3.2](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-no-jdk-7-3-2))
+    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.3/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.3.2.zip))
+    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.3/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.3.2.zip))
+    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.3/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.3.2.zip))
+    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.3/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.3.2.zip))
 
 1. Copy the downloaded files into `[Liferay Home]`.
 
