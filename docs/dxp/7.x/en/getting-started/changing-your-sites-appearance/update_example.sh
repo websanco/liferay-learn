@@ -1,19 +1,31 @@
 #!/bin/bash
 
-rm -fr liferay-5b2v-theme
+readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-yo liferay-theme:classic --config config.json
+function generate_theme {
+	rm -fr liferay-5b2v-theme
 
-cd liferay-5b2v-theme
+	yo liferay-theme:classic --config config.json
 
-echo -e "\n#wrapper {" >> src/css/_custom.scss
-echo -e "\tbackground-color: #0000ff !important;" >> src/css/_custom.scss
-echo "}" >> src/css/_custom.scss
+	cd liferay-5b2v-theme
 
-npm run build
+	echo -e "\n#wrapper {" >> src/css/_custom.scss
+	echo -e "\tbackground-color: #0000ff !important;" >> src/css/_custom.scss
+	echo "}" >> src/css/_custom.scss
 
-cd ..
+	npm run build
 
-mv liferay-5b2v-theme/dist/liferay-5b2v-theme.war .
+	cd ..
 
-rm -fr liferay-5b2v-theme
+	mv liferay-5b2v-theme/dist/liferay-5b2v-theme.war .
+
+	rm -fr liferay-5b2v-theme
+}
+
+function main {
+    pushd "${CURRENT_DIR_NAME}" || exit 1
+
+	generate_theme
+}
+
+main "${@}"

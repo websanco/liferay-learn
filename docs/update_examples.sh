@@ -1,5 +1,7 @@
 #!/bin/bash
 
+readonly CURRENT_DIR_NAME=$(dirname "$0")
+
 function copy_template {
 	for zip_dir_name in `find . -name "liferay-*.zip" -type d`
 	do
@@ -30,9 +32,11 @@ function update_examples {
 }
 
 function main {
+    pushd "${CURRENT_DIR_NAME}" || exit 1
+
 	copy_template
 
 	update_examples
 }
 
-main
+main "${@}"

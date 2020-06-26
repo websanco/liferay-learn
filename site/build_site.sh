@@ -2,6 +2,8 @@
 
 set -eou pipefail
 
+readonly CURRENT_DIR_NAME=$(dirname "$0")
+
 function check_utils {
 
 	#
@@ -118,6 +120,7 @@ function generate_static_html {
 }
 
 function main {
+	pushd "${CURRENT_DIR_NAME}" || exit 1
 
 	#
 	# sudo dnf install python3-sphinx
@@ -157,4 +160,4 @@ function upload_to_server {
 	echo upload_to_server
 }
 
-main ${@}
+main "${@}"
