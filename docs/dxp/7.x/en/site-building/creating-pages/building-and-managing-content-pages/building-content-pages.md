@@ -178,8 +178,7 @@ Compositions can be exported/imported between sites just as any other Fragment.
 
 ![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/14.png)
 
-You can also configure a background image and color for a layout Section. See 
-[Using a Background Image](#using-a-background-image) for more information.
+You can also configure a background image and color for a layout Section. See [Using a Background Image](#using-a-background-image) for more information.
 
 ### Configuring a Row's Columns
 
