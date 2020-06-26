@@ -43,7 +43,7 @@ notfound_template = "404.html"
 project = "Liferay Learn"
 release = "1.0"
 source_suffix = [".md", ".rst"]
-templates_path = ["_templates"]
+templates_path = ["_template"]
 version = "1.0"
 
 class WithRootSiteHTMLBuilder(StandaloneHTMLBuilder):

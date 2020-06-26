@@ -22,7 +22,7 @@
 		"css:watch": "node-sass -w --include-path node_modules/clay-css/src/scss _static/scss/main.scss _static/main.css",
 		"propagate-img": "cp _static/img/* ../docs/_static/img",
 		"propagate-js": "cp _static/js/* ../docs/_static/js",
-		"propagate-template": "cp _templates/* ../docs/_templates"
+		"propagate-template": "cp _template/* ../docs/_template"
 	},
 	"version": "1.0.0"
 }
