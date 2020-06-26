@@ -146,7 +146,7 @@ function pip_install {
 	do
 		if [[ -z `pip3 list --disable-pip-version-check --format=columns | grep ${package_name}` ]]
 		then
-			sudo pip3 install --disable-pip-version-check ${package_name}
+			pip3 install --disable-pip-version-check ${package_name}
 		fi
 	done
 }
