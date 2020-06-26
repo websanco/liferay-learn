@@ -54,16 +54,24 @@ function generate_sphinx_input {
 }
 
 function generate_static_html {
-	for dir_name in `find build/input -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
-	do
+    for product_name in `find build/input/ -maxdepth 1 -mindepth 1 -type d -printf "%f\n"`; do
+		if [[ ${product_name} == homepage ]]
+		then
+			continue
+		fi
 
-		#
-		# Use Sphinx to generate static HTML.
-		#
+        for version_name in `find build/input/${product_name} -maxdepth 1 -mindepth 1 -type d -printf "%f\n"`; do
+            for language in `find build/input/${product_name}/${version_name} -maxdepth 1 -mindepth 1 -type d -printf "%f\n"`; do
+                echo "Generating static html for $product_name $version_name $language"
 
-		sphinx-build -M html build/input/${dir_name} build/output/${dir_name}
+                #
+                # Use Sphinx to generate static HTML for each
+                #   product/version/language. The Homepage content is built
+                #   separately at the end of the function.
+                #
+                sphinx-build -M html build/input/${product_name}/${version_name}/${language} build/output/${product_name}/${version_name}/${language}
 
-		mv build/output/${dir_name}/html/* build/output/${dir_name}
+                mv build/output/${product_name}/${version_name}/${language}/html/* build/output/${product_name}/${version_name}/${language}
 
 		#
 		# Fix broken links.
