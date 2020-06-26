@@ -27,6 +27,11 @@ function generate_sphinx_input {
 
 	for product_name in `find ../docs -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
 	do
+		if [[ ${product_name} == _* ]]
+		then
+			continue
+		fi
+
 		for version_name in `find ../docs/${product_name} -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
 		do
 			mkdir -p build/input/${product_name}-${version_name}/docs
