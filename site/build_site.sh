@@ -76,55 +76,57 @@ function generate_static_html {
 
                 mv ${output_path}/html/* ${output_path}
 
-		#
-		# Fix broken links.
-		#
+                #
+                # Fix broken links.
+                #
 
-		for html_file_name in `find build/output/${dir_name} -name *.html -type f`
-		do
-			sed -i 's/.md"/.html"/g' ${html_file_name}
-			sed -i 's/.md#/.html#/g' ${html_file_name}
-			sed -i 's/README.html"/index.html"/g' ${html_file_name}
-			sed -i 's/README.html#/index.html#/g' ${html_file_name}
-		done
+                for html_file_name in `find ${output_path} -name *.html -type f`
+                do
+                    sed -i 's/.md"/.html"/g' ${html_file_name}
+                    sed -i 's/.md#/.html#/g' ${html_file_name}
+                    sed -i 's/README.html"/index.html"/g' ${html_file_name}
+                    sed -i 's/README.html#/index.html#/g' ${html_file_name}
+                done
 
-		#
-		# Rename README.html to index.html.
-		#
+                #
+                # Rename README.html to index.html.
+                #
 
-		for readme_file_name in `find build/output/${dir_name} -name *README.html -type f`
-		do
-			mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
-		done
+                for readme_file_name in `find ${output_path} -name *README.html -type f`
+                do
+                    mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
+                done
 
-		#
-		# Update search references for README.html to index.html.
-		#
+                #
+                # Update search references for README.html to index.html.
+                #
 
-		sed -i 's/README"/index"/g' build/output/${dir_name}/searchindex.js
+                sed -i 's/README"/index"/g' ${output_path}/searchindex.js
 
-		#
-		# Make ZIP files.
-		#
+                #
+                # Make ZIP files.
+                #
 
-		for zip_dir_name in `find build/input/${dir_name} -name *.zip -type d`
-		do
-			pushd ${zip_dir_name}
+                for zip_dir_name in `find ${input_path} -name *.zip -type d`
+                do
+                    pushd ${zip_dir_name}
 
-			local zip_file_name=$(basename ${zip_dir_name})
+                    local zip_file_name=$(basename ${zip_dir_name})
 
-			zip -r ${zip_file_name} .
+                    zip -r ${zip_file_name} .
 
-			local output_dir_name=$(dirname ${zip_dir_name})
+                    local output_dir_name=$(dirname ${zip_dir_name})
 
-			output_dir_name=$(dirname ${output_dir_name})
-			output_dir_name=${output_dir_name/input/output}
+                    output_dir_name=$(dirname ${output_dir_name})
+                    output_dir_name=${output_dir_name/input/output}
 
-			popd
+                    popd
 
-			mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
-		done
-	done
+                    mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
+                done
+            done
+        done
+    done	
 
 	mv build/output/homepage/* build/output
 
