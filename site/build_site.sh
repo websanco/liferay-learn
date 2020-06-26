@@ -128,9 +128,11 @@ function generate_static_html {
         done
     done	
 
-	mv build/output/homepage/* build/output
+    sphinx-build -M html build/input/homepage build/output/homepage
 
-	rmdir build/output/homepage
+    mv build/output/homepage/html/* build/output/
+
+    rm -r build/output/homepage
 }
 
 function main {
