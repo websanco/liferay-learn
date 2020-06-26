@@ -1,10 +1,8 @@
 # Building Content Pages
 
-Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md) you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
+Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
 
 ## Adding Elements to a Content Page
-
-To begin building a Content Page:
 
 1. Enter the Site Builder view for your Content Page. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your Site's Menu.
 
@@ -48,7 +46,7 @@ Many elements that can be added to a content page can be configured and customiz
 
 ### Setting a Background Color
 
-You can set the background color of a Layout. Follow these steps:
+You can set the background color of a Layout:
 
 1. Click the Layout to select it.
 1. Click the (![Background Color](../../../images/icon-color.png)) icon to select a color.
@@ -61,7 +59,7 @@ You can set the background color of a Layout. Follow these steps:
 
 ### Using a Background Image
 
-You can configure a background image for a Layout. Follow these steps:
+You can configure a background image for a Layout:
 
 1. Click on the Layout to select it.
 1. Select *Layout Background Image*, and choose the image to display.
@@ -125,7 +123,7 @@ You can also [specify a background image for a layout](#using-a-background-image
 
 ### Copying a Fragment
 
-You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save time. Follow these steps:
+You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save time:
 
 1. Hover over the Fragment you want to copy.
 1. Click the Fragment to select it.
@@ -147,24 +145,24 @@ You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save
   Available: Liferay Portal 7.3 GA3+
 ```
 
-You can save customized Fragment compositions (Section or Row layout Fragments) as a new Fragment, so you can reuse it in your other Fragment-based pages. Follow these steps:
+You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages:
 
 1. Click the Row or Section composition to save.
 1. Click (![Save icon](../../../images/icon-save.png)) in the context menu that appears.
 
   ![Click the Row or Section to bring up the Save Fragment composition button.](./building-content-pages/images/11.png)
 
-1. In the "Save as Fragment" dialog that appears, provide a name, optional description and thumbnail, disable/enable options for including inline content (fragment entries (links, images, text, etc.) that have been edited) and [mapped content](#mapping-content), and select the Collection where you want to save the Fragment.
+1. In the Save as Fragment dialog that appears, provide a name, optional description and thumbnail, disable/enable options for including inline content such as fragment entries (links, images, text, etc.) that have been edited and [mapped content](#mapping-content), and select the Collection where you want to save the Fragment.
 
   ![Provide the information for the Fragment composition in the dialog that appears.](./building-content-pages/images/12.png)
 
 ```note::
-   If no Site-specific Fragment Collection exist, the saved Fragment composition is automatically saved to a new Fragment Collection called "Saved Fragments".
+   If no Site-specific Fragment Collection exists, the saved Fragment composition is automatically saved to a new Fragment Collection called Saved Fragments.
 ```
 
-The saved Fragment composition is available to use immediately in the Fragments sidebar and through the Page Fragments administrative application.
+The saved Fragment composition can be used immediately in the Fragments sidebar and through the Page Fragments administrative application.
 
-![The saved Fragment composition is available to use immediately.](./building-content-pages/images/13.png)
+![The saved Fragment composition can be used immediately.](./building-content-pages/images/13.png)
 
 Compositions can be exported/imported between sites just as any other Fragment.
 
@@ -173,8 +171,6 @@ Compositions can be exported/imported between sites just as any other Fragment.
 ```
 
 ### Configuring Section Width and Padding
-
-To configure the Section, follow these steps:
 
 1. Click the Section to select it.
 1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Section's Configuration Menu.
@@ -186,8 +182,6 @@ You can also configure a background image and color for a layout Section. See
 [Using a Background Image](#using-a-background-image) for more information.
 
 ### Configuring a Row's Columns
-
-To configure a Row, follow these steps:
 
 1. Click the Row to select it.
 1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Row's Configuration Menu.
@@ -204,7 +198,7 @@ You can adjust the width of the columns to create a more custom layout. Follow t
 
 ### General Configuration
 
-Available for some out-of-the-box fragments. This menu option presents context specific fragment configurations. For a reference on these configurations, see Basic Component Configuration Reference.
+This appears for some out-of-the-box fragments and presents context specific fragment configurations. For a reference on these configurations, see Basic Component Configuration Reference.
 
 ### Mapping Content
 

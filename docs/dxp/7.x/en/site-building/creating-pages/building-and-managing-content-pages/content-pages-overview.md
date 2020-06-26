@@ -104,7 +104,7 @@ The Contents panel provides a list of the web content that's used on the page. T
 
 ## Page Structure
 
-Page Structure provides a hierarchical view of the Fragments and their contents on the page. Click on a field in the page structure to highlight it on the page and quickly locate it amongst other elements. Headers and Footers are displayed in the hierarchy as well for custom [Master Page Templates](../defining-headers-and-footers/master-page-templates.md), but they appear disabled because they can only be modified from the Master Page Template.
+Page Structure provides a hierarchical view of the Fragments and their contents on the page. Click on a field in the page structure to highlight it on the page. Headers and Footers appear in the hierarchy as well for custom [Master Page Templates](../defining-headers-and-footers/master-page-templates.md), but they're disabled because they can only be modified from the Master Page Template.
 
 ![Page Structure shows you a hierarchy of your page.](./content-pages-overview/images/08.png)
 
