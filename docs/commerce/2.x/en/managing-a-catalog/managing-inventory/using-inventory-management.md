@@ -2,17 +2,15 @@
 
 > Commerce 2.1+
 
-_Inventory Management_ allows users to manage to the store's inventory at the SKU level. This is especially useful if a product has multiple SKUs (for example, a product has multiple colors and each variant has its own SKU).
+The latest Liferay Commerce 2.1's _Inventory Management_ system creates a single place for users to manage their inventory across the entire Liferay Commerce instance.
 
-```tip::
-   There should be at least one active warehouse. If you had used the Minium accelerator to create your store, there are three warehouses added by default. You can always add more.
-```
+Users can add inventory items, view the list of orders for a particular item (SKU), designate Safety Stock, and view changes to the item. Inventory Management is also tied to the warehouses; from here, users can also view the stock available in each warehouse.
 
 To manage your inventory, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
 
 ## Adding an Inventory Item
 
-Users normally have to set inventory at the product level but you can now add a new inventory item here.
+Each inventory item is tracked by a SKU; this SKU is semi-independent from the SKU created in the product catalog. Users can add multiple SKUs in the _Inventory Management_ and ensure that there is adequate quantities for each SKU.
 
 To add an inventory item:
 
@@ -32,7 +30,7 @@ The new inventory item has been added.
 
 ## Setting a Safety Stock
 
-In addition to configuring a [Low Stock Action](./low-stock-action.md), store managers can also set a quantity as Safety Stock. Once a quantity has been entered, it reduces the number of stock available for sale in that particular warehouse.
+Users can also set a quantity as Safety Stock; safety stock is the inventory physically located in a warehouse but has been to set aside and made unavailable for sale. This could be for a prospective order or the items are to be sold on a different channel. Once a quantity has been entered, it reduces the number of stock available for sale in that particular warehouse.
 
 To set a safety stock quantity:
 
@@ -52,7 +50,7 @@ Once the Safety Stock quantity has been set, the number has decreased in the _Av
 
 ![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-inventory-management/images/03.png)
 
-## Viewing Accepted Orders
+## Viewing On Orders
 
 1. Click on the SKU (_MIN55681_).
 1. Click the _On Order_ tab.
@@ -82,12 +80,12 @@ Once the incoming quantity has been added, this is updated on the _Overview_ tab
 
 ![The incoming stock quantity is updated on the SKU's Overview tab.](./using-inventory-management/images/05.png)
 
-## Tracking Changes to the SKU
+## Viewing Inventory Changes
 
 The Changelog tracks the following events:
 
-* When an order is placed, the quantities are "booked" (allocated) to fulfill the order.
-* When a shipment is created, the previously "booked" quantity is committed; the inventory is updated by removing the amount previously booked.
+* When an order is placed, the quantities are booked (allocated) to fulfill the order.
+* When a shipment is created, the previously booked quantity is committed; the inventory is updated by removing the amount previously booked.
 * When a quantity is added to the inventory
 * When a quantity is moved between warehouses.
 * When a shipment is cancelled, the previously allocated quantities need to be returned.
