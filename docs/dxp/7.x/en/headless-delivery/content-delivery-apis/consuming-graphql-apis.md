@@ -6,8 +6,6 @@ Liferay DXP contains [GraphQL](https://graphql.org) APIs for most of its applica
 1. Identify the site containing the data you need.
 1. Make the API call using credentials that have access to the data.
 
-This example uses a Docker image with a fresh install of Liferay DXP.
-
 ## Identify the Service to Consume
 
 You need a running Liferay DXP to call its GraphQL APIs. To obtain one using Docker, run this command:
@@ -18,7 +16,7 @@ docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
 
 After Liferay DXP initializes, you can find the service you need. 
 
-1.  Sign in using the default credentials:
+1.  Go to `http://localhost:8080` and sign in using the default credentials:
     **User Name:** `test@liferay.com`
     **Password:** `test`
 
@@ -26,7 +24,7 @@ After Liferay DXP initializes, you can find the service you need.
 
         http://localhost:8080/o/api
 
-1.  At the top left of the screen that appears, pick *headless-delivery* from the selector. This is the category that contains the Blog posting API. 
+1.  At the top-left of the screen that appears, pick *headless-delivery* from the selector. This is the category that contains the Blog posting API. 
 
 1.  Click the *Show GraphQL* button at the top-right of the screen to open Liferay's [GraphiQL](https://github.com/graphql/graphiql) browser. 
 
@@ -66,7 +64,7 @@ Now you must find the default Site ID:
    **User Name:** `test@liferay.com`
    **Password:** `test`
 1. Go to Control Panel &rarr; Sites &rarr; Sites.
-1. Click the Actions button next to the Liferay site and choose *Go to Site Settings*.
+1. Click the Actions button next to the Liferay Site and choose *Go to Site Settings*.
 
 The Site ID appears at the top of the Details section. It's an Integer, like `20122`.
 
@@ -150,16 +148,15 @@ The GraphQL schema revealed the call that must be made to post a blog entry.
 
 1.  Make the request by visiting `http://localhost:8080/o/api` again. Click the *Show GraphQL* button. 
 
-1.  Enter your JSON document into the Query Variables box at the lower left. 
+1.  Paste your JSON document into the Query Variables box at the lower left. 
 
-1.  Enter your mutation in the unlabeled box at the top right. 
+1.  Paste your mutation in the unlabeled box at the top right. 
 
 1.  Run your query by clicking the play button at the top. 
 
-![The GraphQL client makes it easy to call GraphQL services directly from your browser.](../../images/02.png)
-
 The blog entry you added now appears in the GraphQL client's right pane:
 
+![The GraphQL client makes it easy to call GraphQL services directly from your browser.](../../images/02.png)
 
 Liferay DXP returns a JSON representation of your blog entry that contains the fields you requested in the mutation:
 
@@ -176,15 +173,15 @@ Liferay DXP returns a JSON representation of your blog entry that contains the f
 }
 ```
 
+```note::
 You can make these requests with any web client, such as Curl:
 
-   ```bash
-   curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'
-   ```
+   ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
+```
 
 ### Getting All Blog Entries
 
-Now you can repeat the first query you did to see that the blog entry you posted is there:
+Now you can repeat the first query you did: 
 
 ```graphql
 query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:"")
@@ -201,7 +198,7 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 }
 ```
 
-Liferay DXP returns JSON containing the data you requested:
+Liferay DXP returns JSON containing the blog entry you posted:
 
 ```json
 {
