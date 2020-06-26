@@ -1,9 +1,9 @@
 # Creating a Contributed Fragment Collection
 
-Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](developing-page-fragments-with-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](developing-page-fragments-with-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
+Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) <!-- TODO: Fix link --> created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
 
 This example runs on Liferay DXP 7.3+.
- 
+
 ```note::
   All Fragments added through a Contributed Fragment Collection are available globally to all Sites.
 ```
@@ -27,12 +27,14 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     ```
 
 1. Download and unzip the [Marketing Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip):
-
+<!-- TODO: This sample and curl command need to be updated to download from the site, and to host the source in the repo -->
     ```bash
     curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip
 
     unzip liferay-l3m9.zip
     ```
+
+<!-- TODO: There should be a way to combine the BUILDING and Deploying task - see writing-a-similar-results-contributor for an example: "./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)" -->
 
 1. Build the contributed Collection's JAR.
 
@@ -47,7 +49,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     cd build\libs
     docker cp com.liferay.learn.fragments-1.0.0.jar docker-container-name:/opt/liferay/deploy
     ```
-    
+
     ```note::
       If testing on Windows, you may need to deploy to `docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
     ```
@@ -64,7 +66,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 
 Great! You successfully deployed a contributed Fragment Collection.
 
-As you can see, the contributed Fragment Collection appears with the default Fragment Collections, and the Fragments can't be modified from the UI. The only way to modify the Collection is to update the module they came from or [copy the Fragment to another Collection](../../fragments/managing-page-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
+As you can see, the contributed Fragment Collection appears with the default Fragment Collections, and the Fragments can't be modified from the UI. The only way to modify the Collection is to update the module they came from or [copy the Fragment to another Collection](../../displaying-content/using-fragments/managing-page-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
 
 ## Contributed Fragment Collection Logic and metadata
 
@@ -88,7 +90,7 @@ public ServletContext getServletContext() {
 }
 ```
 
-The `ServletContext` points to the bundle's symbolic name so it can find the Fragment resources: 
+The `ServletContext` points to the bundle's symbolic name so it can find the Fragment resources:
 
 ```java
 @Reference(
@@ -101,7 +103,7 @@ The `bnd.bnd` file includes a few properties that must be defined for the Collec
 
 * The `osgi.web.symbolicname` matches the `Bundle-SymbolicName` in the `bnd.bnd` file.
 * The `Web-ContextPath` Header indicates the module folder that contains the Collection, so the `ServletContext` is correctly generated.
-* The `-dsannotations-options` enables the Declarative Service annotations found in the class hierarchy of the Component class. 
+* The `-dsannotations-options` enables the Declarative Service annotations found in the class hierarchy of the Component class.
 
 See the example project's [`bnd.bnd`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip) for a reference of these values.
 
@@ -111,7 +113,7 @@ Now you'll modify the project to include another Fragment in the contributed Col
 
 Follow these steps to add a new packaged Fragment to the contributed Fragment Collection:
 
-1. Move the `liferay-l3m9/marketing-jumbotron` folder in the example's ZIP file into the `contributed-marketing-fragment-collection/src/main/resources/com/liferay/learn/fragments/dependencies/` folder. See [Developing Page Fragments with the Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md) for more information on creating Fragments.
+1. Move the `liferay-l3m9/marketing-jumbotron` folder in the example's ZIP file into the `contributed-marketing-fragment-collection/src/main/resources/com/liferay/learn/fragments/dependencies/` folder. See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
 
     ```note::
       Packaged Fragments go in the `dependencies` folder, and the class package name and resources package name must match (e.g. ``[class.package.path].dependencies``).
@@ -128,7 +130,7 @@ Follow these steps to add a new packaged Fragment to the contributed Fragment Co
         "name": "Marketing Collection"
     }
     ```
-
+<!-- TODO: Fix link -->
     ```note::
       Contributed Fragment Collections do not support `included resources <./including-default-resources-with-fragments.md>`_.
     ```
@@ -159,5 +161,5 @@ Congratulations! You now know how to create a contributed Fragment Collection, a
 
 ## Related Information
 
-* [Developing Page Fragments with the Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md)
-* [Developing Page Fragments with the Editor](./developing-page-fragments-with-the-editor.md)
+* [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md)
+* [Developing Page Fragments with the Editor](./using-the-fragments-editor.md)

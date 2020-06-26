@@ -1,6 +1,8 @@
 # Fragments Toolkit Command Reference
 
-The [Fragments Toolkit](../developing-page-fragments-with-the-fragments-toolkit.md) can connect to your currently running Liferay DXP instance to import and export fragments. You can even have Fragments that you create with the toolkit imported into Portal automatically. These commands are available:
+The [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-toolkit.md) can connect to your currently running Liferay DXP instance to import and export fragments. You can even have Fragments that you create with the toolkit imported into Portal automatically. These commands are available:
+
+<!-- TODO: The description for `npm run preview` is probably too long, it's overrunning the column width into a new table cell when the site is built. Probably should consider adding an asterisk and adding the version specific info separately after the table. -->
 
 | Command | Description |
 | --- | --- |

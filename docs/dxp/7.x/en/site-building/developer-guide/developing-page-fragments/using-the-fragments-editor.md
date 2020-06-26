@@ -1,6 +1,6 @@
-# Developing Page Fragments in the built-in Fragments Editor
+# Using the Fragments Editor
 
-The built-in [Page Fragments editor](./reference/page-fragment-editor-interface-reference.md) has everything you need to develop Page Fragments inside Liferay DXP. You'll organize Page Fragments in *Collections*, so users can find the functionality they need to build Pages. Collections can differentiate between types of Page Fragments, the functionality provided, or Page Fragments used by different groups or departments.
+The built-in [Page Fragments editor](../reference/fragments/page-fragment-editor-interface-reference.md) has everything you need to develop Page Fragments inside Liferay DXP. You'll organize Page Fragments in *Collections*, so users can find the functionality they need to build Pages. Collections can differentiate between types of Page Fragments, the functionality provided, or Page Fragments used by different groups or departments.
 
 Here you'll learn how to create a Collection and Fragments using the built-in Editor:
 
@@ -23,13 +23,13 @@ First, you must create a Collection:
 1. Open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. From this page you can manage your Page Fragments and Collections. See [Managing Page Fragments](../../using-fragments/managing-page-fragments.md) for more information on the available actions for Page Fragments.
 1. Click the (![Add Button](../../../images/icon-add-app.png)) and enter a name and optional description for the Collection.
 
-![Collections help you organize Fragments.](./developing-page-fragments-with-the-editor/images/01.png)
+![Collections help you organize Fragments.](./using-the-fragments-editor/images/01.png)
 
 ## Add a Fragment to the Collection
 
 Now that the Collection is created, you can add a Fragment:
 
-1. With the Collection selected, click the [![Add Button](../../../images/icon-add.png)] in the Collection to create a new Fragment [Component](../../creating-pages/content-pages-overview.md#basic-components). 
+1. With the Collection selected, click the [![Add Button](../../../images/icon-add.png)] in the Collection to create a new Fragment [Component](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#basic-components).
 
     ```note::
       Prior to Liferay DXP 7.3, a Fragment could either be a Section or a Component. In Liferay DXP 7.3+, all Page Fragments are Components.
@@ -37,9 +37,9 @@ Now that the Collection is created, you can add a Fragment:
 
 1. Enter a name for the Fragment and click *Save*.
 
-    ![Create a new Component for the Fragment.](./developing-page-fragments-with-the-editor/images/02.png)
+    ![Create a new Component for the Fragment.](./using-the-fragments-editor/images/02.png)
 
-1. Add your Fragment's resources (HTML, CSS, JavaScript, and [configuration options](./adding-configuration-options-to-fragments.md)). The example below adds a Card component with editable text:
+1. Add your Fragment's resources (HTML, CSS, JavaScript, and [configuration options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->). The example below adds a Card component with editable text:
 
     ```html
     <div class="marketing-card-fragment-01">
@@ -74,11 +74,11 @@ Now that the Collection is created, you can add a Fragment:
     }
     ```
 
-    ![A live preview is displayed as the code is updated.](./developing-page-fragments-with-the-editor/images/03.png)
+    ![A live preview is displayed as the code is updated.](./using-the-fragments-editor/images/03.png)
 
 1. Click *Publish* to save your work and make it available to add to a [Content Page](../../creating-pages/understanding-pages.md#content-pages).
 
-    ![The Fragment can be used on a Content Page.](./developing-page-fragments-with-the-editor/images/04.png)
+    ![The Fragment can be used on a Content Page.](./using-the-fragments-editor/images/04.png)
 
 Great! You've successfully created a Fragment Collection and added a new Fragment to it.
 
@@ -88,5 +88,5 @@ Great! You've successfully created a Fragment Collection and added a new Fragmen
 
 ## Related Information
 
-* [Developing Page Fragments with the Fragments Toolkit](./developing-page-fragments-with-the-fragments-toolkit.md)
-* [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+* [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md)
+* [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->

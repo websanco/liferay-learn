@@ -4,7 +4,7 @@ Page Fragments are chunks of HTML, CSS, and JavaScript that when combined togeth
 
 ![You can quickly build a page with Fragments.](./using-page-fragments/images/01.png)
 
-You may, however, require custom fragments. You can create your own Page Fragments using the built-in [Page Fragment editor](../../developer-guide/developing-page-fragments/reference/page-fragment-editor-interface-reference.md) or locally from your desktop with the [Fragments Toolkit](../../developer-guide/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md). For a deeper dive into creating a custom Page Fragment, see [Developing Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md).
+You may, however, require custom fragments. You can create your own Page Fragments using the built-in [Page Fragment editor](../../developer-guide/developing-page-fragments/reference/page-fragment-editor-interface-reference.md) or locally from your desktop with the [Fragments Toolkit](../../developer-guide/developing-page-fragments/using-the-fragments-toolkit.md). For a deeper dive into creating a custom Page Fragment, see [Developing Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md).
 
 You can [embed Liferay widgets](../../developer-guide/developing-page-fragments/reference/fragment-specific-tags-reference.md#including-widgets-within-a-fragment) and add fields containing text and images into page fragments. End users can add content to these page elements during the final Content Page publication process.
 

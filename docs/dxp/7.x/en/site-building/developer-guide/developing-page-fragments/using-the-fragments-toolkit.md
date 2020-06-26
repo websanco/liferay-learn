@@ -1,4 +1,4 @@
-# Creating Page Fragments with the Fragments Toolkit
+# Using the Fragments Toolkit
 
 The Fragments Toolkit helps you package Fragments and Collections created using your own tools. It takes only three steps to learn how to use it:
 
@@ -17,7 +17,7 @@ First, deploy an example to see what a Fragment Collection looks like:
     ```
 
 1. Download and unzip the [Marketing Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/developing-page-fragments-using-the-fragments-toolkit/liferay-x2y6.zip)
-
+<!-- TODO: Update this curl command to get the zip that's made when the site is built. See a different dev tutorial for an example. -->
     ```bash
     curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/developing-page-fragments-using-the-fragments-toolkit/liferay-x2y6.zip
 
@@ -25,25 +25,25 @@ First, deploy an example to see what a Fragment Collection looks like:
     ```
 
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
-    
+
     ```bash
     cd liferay-x2y6/marketing-fragments
     npm run import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
     ? Password [hidden]
-    
+
     Checking connection...
     Connection successful
-    
+
     ? Company ID liferay.com
     ? Group ID Liferay
     ```
 
 1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections.
 
-    ![The Collection is available.](./developing-page-fragments-with-the-fragments-toolkit/images/01.png)
-    
+    ![The Collection is available.](./using-the-fragments-toolkit/images/01.png)
+
 Great! You successfully deployed a zipped Fragment Collection created with the Fragments Toolkit.
 
 ## Collection Format Overview
@@ -83,22 +83,22 @@ The generated Fragment Collection has the project structure below. You can manua
 
         * `thumbnail.png`: the thumbnail that's displayed when the Fragment is in a list
 
-    * `resources/`: a folder containing any additional images or other external files needed for the Fragment. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
+    * `resources/`: a folder containing any additional images or other external files needed for the Fragment. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) <!-- TODO: Fix link --> for more information.
 
 ## Add a New Collection and Fragment
 
 Follow these steps to add a new Fragment Collection with a new Fragment:
 
-1. Install the Fragments Generator using the instructions in the project's [README](https://github.com/liferay/generator-liferay-fragments/blob/master/README.md).
+1. Install the Fragments Generator using the instructions in the project's [README](https://github.com/liferay/generator-liferay-fragments/blob/master/README.md) <!--TODO: This link actually is broken because the parser takes out the .md extension from the link. I made a couple attempts to fix this but haven't found one. -->.
 1. Create a Collection for the Fragment(s) in the project with the `npm run add-collection` command and answer the prompts to provide a name and an optional description:
 
     ```bash
     cd marketing-fragments
     npm run add-collection
-    
+
     > marketing-fragments@1.0.0 add-collection C:\Users\liferay\Desktop\projects\marketing-fragments
     > yo liferay-fragments:collection
-    
+
     ? Collection name (required) Marketing Collection 2
     ? Collection description (optional)
        create src\marketing-collection-2\collection.json
@@ -109,9 +109,9 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
     ```bash
     npm run add-fragment
     ```
-    
+
     The CLI starts the process:
-    
+
     ```bash
     > my-fragments@1.0.0 add-fragment liferay-x2y6\marketing-fragments
     > yo liferay-fragments:fragment
@@ -143,7 +143,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
         The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their path in the ``fragment.json`` to reflect the change.
     ```
 
-1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
+1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link --> (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
 
     ```html
     <div class="marketing-jumbotron-fragment-01">
@@ -169,7 +169,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
       Give the main wrapper element for the Component in ``index.html`` a unique ID so it doesn't conflict with other Components on the page.
     ```
 
-    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) for more information.
+    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) <!-- TODO: Fix link --> for more information.
 
     ```note::
       The Fragment and configuration object are passed in as arguments in JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.
@@ -188,11 +188,11 @@ You can import the updated Fragments as you did above:
 
 1. Verify that the new Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new Collection appears with the other Collections.
 
-    ![The Collection is available.](./developing-page-fragments-with-the-fragments-toolkit/images/02.png)
-    
+    ![The Collection is available.](./using-the-fragments-toolkit/images/02.png)
+
 Great! Now you know how to use the Fragments Toolkit to create Collections and Fragments for Liferay DXP.
 
 ## Related Information
 
 * [Creating a Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md)
-* [Developing Page Fragments with the Editor](./developing-page-fragments-with-the-editor.md)
+* [Developing Page Fragments with the Editor](./using-the-fragments-editor.md)

@@ -1,5 +1,5 @@
-Developing Fragments Reference
-===========================
+Fragments Reference
+===================
 
 .. toctree::
    :maxdepth: 3
@@ -8,6 +8,6 @@ Developing Fragments Reference
    fragments/page-fragment-editor-interface-reference.md
    fragments/fragment-configuration-types-reference.md
    fragments/fragment-specific-tags-reference.md
-   
-.. include:: /site-building/developer-guide/reference/fragments/README.rst
-  :start-line: 2
+
+-  :doc:`/site-building/developer-guide/reference/fragments/fragments-toolkit-command-reference`
+-  :doc:`/site-building/developer-guide/reference/fragments/page-fragment-editor-interface-reference`
