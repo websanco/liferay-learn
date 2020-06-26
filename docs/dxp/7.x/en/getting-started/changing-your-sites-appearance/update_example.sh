@@ -1,14 +1,6 @@
 #!/bin/bash
 
-if test -f liferay-5b2v-theme.war
-then
-	exit 1
-fi
-
-if test -d liferay-5b2v-theme
-then
-	rm -r liferay-5b2v-theme
-fi
+rm -fr liferay-5b2v-theme
 
 yo liferay-theme:classic --config config.json
 
@@ -20,4 +12,8 @@ echo "}" >> src/css/_custom.scss
 
 npm run build
 
-cp dist/liferay-5b2v-theme.war ../liferay-5b2v-theme.war
+cd ..
+
+mv liferay-5b2v-theme/dist/liferay-5b2v-theme.war .
+
+rm -fr liferay-5b2v-theme

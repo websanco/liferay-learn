@@ -22,8 +22,17 @@ function copy_template {
 	done
 }
 
+function update_examples {
+	for update_example_script_name in `find . -name "update_example.sh" -type f`
+	do
+		${update_example_script_name}
+	done
+}
+
 function main {
 	copy_template
+
+	update_examples
 }
 
 main
