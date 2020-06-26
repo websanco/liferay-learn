@@ -14,25 +14,25 @@ You need a running Liferay DXP to call its GraphQL APIs. To obtain one using Doc
 docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
 ```
 
-After Liferay DXP initializes, you can find the service you need. 
+After Liferay DXP initializes, you can find the service you need.
 
-1.  Go to `http://localhost:8080` and sign in using the default credentials:
+1. Go to `http://localhost:8080` and sign in using the default credentials:
     **User Name:** `test@liferay.com`
     **Password:** `test`
 
-1.  Go to this URL: 
+1. Go to this URL:
 
         http://localhost:8080/o/api
 
-1.  At the top-left of the screen that appears, pick *headless-delivery* from the selector. This is the category that contains the Blog posting API. 
+1. At the top-left of the screen that appears, pick *headless-delivery* from the selector. This is the category that contains the Blog posting API.
 
-1.  Click the *Show GraphQL* button at the top-right of the screen to open Liferay's [GraphiQL](https://github.com/graphql/graphiql) browser. 
+1. Click the *Show GraphQL* button at the top-right of the screen to open Liferay's [GraphiQL](https://github.com/graphql/graphiql) browser.
 
-1.  Click the *Docs* link below the button you just clicked. Now you can browse the API. 
+1. Click the *Docs* link below the button you just clicked. Now you can browse the API.
 
-1.  GraphQL separates read and write operations by calling the first a *query* and the second a *mutation*. Since the first thing you want to do is post a blog entry, click *mutation*. 
+1. GraphQL separates read and write operations by calling the first a *query* and the second a *mutation*. Since the first thing you want to do is post a blog entry, click *mutation*.
 
-1.  A list appears of the entire API use the search at the top or scroll down and find the call to `createSiteBlogPosting`: 
+1. A list appears of the entire API use the search at the top or scroll down and find the call to `createSiteBlogPosting`:
 
     ```graphql
     createSiteBlogPosting(
@@ -42,7 +42,7 @@ After Liferay DXP initializes, you can find the service you need.
     ```
 
 ```note::
-   You can also discover your local installation's APIs by requesting the schema directly: 
+   You can also discover your local installation's APIs by requesting the schema directly:
 
    ``curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'``
 
@@ -70,9 +70,9 @@ The Site ID appears at the top of the Details section. It's an Integer, like `20
 
 ## Make the Service Call using Credentials with Access to the Data
 
-Now you have everything you need to make the call. All web services must be accessed using credentials that have access to the data you're requesting. The included GraphQL client authenticates using your browser. If your plan is to write a standalone client, you should authorize users via [OAuth2](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md). 
+Now you have everything you need to make the call. All web services must be accessed using credentials that have access to the data you're requesting. The included GraphQL client authenticates using your browser. If your plan is to write a standalone client, you should authorize users via [OAuth2](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 
-During development, it's much easier to use Basic Auth, which passes credential data in the URL. Since this is insecure, *never use this method for production.* 
+During development, it's much easier to use Basic Auth, which passes credential data in the URL. Since this is insecure, *never use this method for production.*
 
 ### Calling a GraphQL API Using Basic Auth (During Development Only)
 
@@ -92,7 +92,7 @@ curl --request POST --url http://localhost:8080/o/graphql -H "Authorization: Bea
 
 ## Getting and Posting Data
 
-In the top left window of the GraphQL client, place this code, which retrieves all blog entries: 
+In the top left window of the GraphQL client, place this code, which retrieves all blog entries:
 
 ```graphql
 query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:"")
@@ -109,7 +109,7 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 }
 ```
 
-Click the play button to run it, and you'll see there aren't any blog entries: 
+Click the play button to run it, and you'll see there aren't any blog entries:
 
 ```json
 {"data":{"blogPostings":{"page":1,"items":[]}}}
@@ -121,7 +121,7 @@ Now you'll post a blog entry.
 
 The GraphQL schema revealed the call that must be made to post a blog entry.
 
-1.  Construct a JSON document containing the entry you wish to publish:
+1. Construct a JSON document containing the entry you wish to publish:
 
    ```json
    {
@@ -132,7 +132,7 @@ The GraphQL schema revealed the call that must be made to post a blog entry.
    }
     ```
 
-1.  Construct the GraphQL query based on the schema documentation:
+1. Construct the GraphQL query based on the schema documentation:
 
    ```
    mutation CreateBlog($blog: InputBlogPosting){
@@ -146,13 +146,13 @@ The GraphQL schema revealed the call that must be made to post a blog entry.
     }
     ```
 
-1.  Make the request by visiting `http://localhost:8080/o/api` again. Click the *Show GraphQL* button. 
+1. Make the request by visiting `http://localhost:8080/o/api` again. Click the *Show GraphQL* button.
 
-1.  Paste your JSON document into the Query Variables box at the lower left. 
+1. Paste your JSON document into the Query Variables box at the lower left.
 
-1.  Paste your mutation in the unlabeled box at the top right. 
+1. Paste your mutation in the unlabeled box at the top right.
 
-1.  Run your query by clicking the play button at the top. 
+1. Run your query by clicking the play button at the top.
 
 The blog entry you added now appears in the GraphQL client's right pane:
 
@@ -181,7 +181,7 @@ You can make these requests with any web client, such as Curl:
 
 ### Getting All Blog Entries
 
-Now you can repeat the first query you did: 
+Now you can repeat the first query you did:
 
 ```graphql
 query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:"")
