@@ -64,14 +64,17 @@ function generate_static_html {
             for language in `find build/input/${product_name}/${version_name} -maxdepth 1 -mindepth 1 -type d -printf "%f\n"`; do
                 echo "Generating static html for $product_name $version_name $language"
 
+                input_path="build/input/${product_name}/${version_name}/${language}"
+                output_path="build/output/${product_name}/${version_name}/${language}"
+
                 #
                 # Use Sphinx to generate static HTML for each
                 #   product/version/language. The Homepage content is built
                 #   separately at the end of the function.
                 #
-                sphinx-build -M html build/input/${product_name}/${version_name}/${language} build/output/${product_name}/${version_name}/${language}
+                sphinx-build -M html ${input_path} ${output_path}
 
-                mv build/output/${product_name}/${version_name}/${language}/html/* build/output/${product_name}/${version_name}/${language}
+                mv ${output_path}/html/* ${output_path}
 
 		#
 		# Fix broken links.
