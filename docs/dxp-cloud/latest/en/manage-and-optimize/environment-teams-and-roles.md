@@ -1,6 +1,6 @@
 # Environment Teams and Roles
 
-Administrators can manage team members and roles in each project environment from the DXP Cloud Console. Each environment can have unique members, and each member can have different roles in different environments.
+Administrators can manage team members and roles in each project environment using the DXP Cloud Console. Each environment can have unique members, and each member can have different roles in different environments.
 
 Invite members and assign roles with varying access levels to achieve your desired team structure in each project environment.
 
@@ -44,22 +44,22 @@ Roles determine a user's access level within an environment. Liferay DXP Cloud c
 
 **Admin:** Administrators have full control over the DXP Cloud environment and its members. The following permissions belong exclusively to administrators:
 
-- Enable/disable auto scaling
-- Manually downscale a service
-- Restore from a backup
-- Change user roles
-- Invite members to the environment
-- Remove members from the environment
-- Enable/disable support access
-- Delete a service
+* Enable/disable auto scaling
+* Manually downscale a service
+* Restore from a backup
+* Change user roles
+* Invite members to the environment
+* Remove members from the environment
+* Enable/disable support access
+* Delete a service
 
 **Contributor:** Contributors can handle application management and most of the development life cycle, but can't manage team members or perform other Admin-exclusive actions. Contributors have the following permissions:
 
-- Start a backup
-- Change VPN settings
-- Restart a service
-- Deploy a build
-- Remove themselves from the environment
+* Start a backup
+* Change VPN settings
+* Restart a service
+* Deploy a build
+* Remove themselves from the environment
 
 **Guest:** Guests have view-only access. Guests can see what is happening in the environment, but can't perform actions or make any changes. They only have permission to remove themselves from the environment.
 
