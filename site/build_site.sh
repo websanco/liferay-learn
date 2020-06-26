@@ -33,21 +33,22 @@ function generate_sphinx_input {
 		then
 			continue
 		fi
-
 		for version_name in `find ../docs/${product_name} -maxdepth 1 -mindepth 1 -printf "%f\n" -type d`
 		do
-			mkdir -p build/input/${product_name}-${version_name}/docs
+            for language in `find ../docs/${product_name}/${version_name} -maxdepth 1 -mindepth 1 -type d -printf "%f\n"`
+            do
+                if [ ! -f "../docs/${product_name}/${version_name}/${language}/contents.rst" ]; then
+                    echo "docs/${product_name}/${version_name}/${language}/contents.rst does not exist, skipping..."
+                else
+                    mkdir -p build/input/${product_name}/${version_name}/${language}/docs
 
-			cp -R docs/* build/input/${product_name}-${version_name}
+                    cp -R docs/* build/input/${product_name}/${version_name}/$language
 
-			cp -R ../docs/${product_name}/${version_name}/en/* build/input/${product_name}-${version_name}
-
-			if [ ! -f "build/input/${product_name}-${version_name}/contents.rst" ]
-			then
-				mv build/input/${product_name}-${version_name}/contents.rst build/input/${product_name}-${version_name}
-			fi
-		done
-	done
+                    cp -R ../docs/${product_name}/${version_name}/${language}/* build/input/${product_name}/${version_name}/${language}
+                fi
+            done
+        done
+    done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
 }
