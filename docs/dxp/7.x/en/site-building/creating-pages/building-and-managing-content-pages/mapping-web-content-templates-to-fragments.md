@@ -1,8 +1,6 @@
 # Mapping Web Content Templates to Fragments
 
-By default, the basic information and Structure fields for a Web Content article (Date, Decimal, Image, Number, Text, and TextBox) can be mapped to Fragments. To include other information, such as Select Field values, Radio Button values, or HTML, you must render the Web Content Structure field's value in a separate Web Content Template, then the Template can be mapped to a Fragment.
-
-## Mapping a Web Content Template
+By default, Web Content structure fields holding a single value (Date, Decimal, Image, Number, Text, and TextBox) can be mapped to Fragments. Multi-value fields such as Select Field values, Radio Button values, or HTML must be rendered using a Web Content Template first; then the Template can be mapped to a Fragment.
 
 The steps below show how to map a Web Content Template to a Fragment.
 
