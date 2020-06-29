@@ -27,94 +27,94 @@ function generate_sphinx_input {
 
 	cd ../site
 
-    for path in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
-    do
-        # removes the ../docs/ from the found paths, returning "product/version/language"
-        site_path=$(echo "${path}" | cut -f3- -d'/')
+	for path in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
+	do
+		# removes the ../docs/ from the found paths, returning "product/version/language"
+		site_path=$(echo "${path}" | cut -f3- -d'/')
 
-        mkdir -p build/input/${site_path}/docs
+		mkdir -p build/input/${site_path}/docs
 
-        cp -R docs/* build/input/${site_path}
+		cp -R docs/* build/input/${site_path}
 
-        cp -R ../docs/${site_path}/* build/input/${site_path}
-    done
+		cp -R ../docs/${site_path}/* build/input/${site_path}
+	done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
 
 }
 
 function generate_static_html {
-    for path in `find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
-    do
-        # removes the build/input/ from the found paths, returning "product/version/language"
-        site_path=$(echo "${path}" | cut -f3- -d'/')
+	for path in `find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
+	do
+		# removes the build/input/ from the found paths, returning "product/version/language"
+		site_path=$(echo "${path}" | cut -f3- -d'/')
 
-        echo "Generating static html for $site_path"
+		echo "Generating static html for $site_path"
 
-        #
-        # Use Sphinx to generate static HTML for each
-        #   product/version/language. The Homepage content is built
-        #   separately at the end of the function.
-        #
-        sphinx-build -M html "build/input/${site_path}" "build/output/${site_path}"
+		#
+		# Use Sphinx to generate static HTML for each
+		#   product/version/language. The Homepage content is built
+		#   separately at the end of the function.
+		#
+		sphinx-build -M html "build/input/${site_path}" "build/output/${site_path}"
 
-        mv build/output/${site_path}/html/* build/output/${site_path}
+		mv build/output/${site_path}/html/* build/output/${site_path}
 
-        #
-        # Fix broken links.
-        #
+		#
+		# Fix broken links.
+		#
 
-        for html_file_name in `find build/output/${site_path} -name *.html -type f`
-        do
-            sed -i 's/.md"/.html"/g' ${html_file_name}
-            sed -i 's/.md#/.html#/g' ${html_file_name}
-            sed -i 's/README.html"/index.html"/g' ${html_file_name}
-            sed -i 's/README.html#/index.html#/g' ${html_file_name}
-        done
+		for html_file_name in `find build/output/${site_path} -name *.html -type f`
+		do
+			sed -i 's/.md"/.html"/g' ${html_file_name}
+			sed -i 's/.md#/.html#/g' ${html_file_name}
+			sed -i 's/README.html"/index.html"/g' ${html_file_name}
+			sed -i 's/README.html#/index.html#/g' ${html_file_name}
+		done
 
-        #
-        # Rename README.html to index.html.
-        #
+		#
+		# Rename README.html to index.html.
+		#
 
-        for readme_file_name in `find build/output/${site_path} -name *README.html -type f`
-        do
-            mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
-        done
+		for readme_file_name in `find build/output/${site_path} -name *README.html -type f`
+		do
+			mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
+		done
 
-        #
-        # Update search references for README.html to index.html.
-        #
+		#
+		# Update search references for README.html to index.html.
+		#
 
-        sed -i 's/README"/index"/g' build/output/${site_path}/searchindex.js
+		sed -i 's/README"/index"/g' build/output/${site_path}/searchindex.js
 
-        #
-        # Make ZIP files.
-        #
+		#
+		# Make ZIP files.
+		#
 
-        for zip_dir_name in `find build/input/${site_path} -name *.zip -type d`
-        do
-            pushd ${zip_dir_name}
+		for zip_dir_name in `find build/input/${site_path} -name *.zip -type d`
+		do
+			pushd ${zip_dir_name}
 
-            local zip_file_name=$(basename ${zip_dir_name})
+			local zip_file_name=$(basename ${zip_dir_name})
 
-            zip -r ${zip_file_name} .
+			zip -r ${zip_file_name} .
 
-            local output_dir_name=$(dirname ${zip_dir_name})
+			local output_dir_name=$(dirname ${zip_dir_name})
 
-            output_dir_name=$(dirname ${output_dir_name})
-            output_dir_name=${output_dir_name/input/output}
+			output_dir_name=$(dirname ${output_dir_name})
+			output_dir_name=${output_dir_name/input/output}
 
-            popd
+			popd
 
-            mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
-        done
-    done
+			mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
+		done
+	done
 
-    sphinx-build -M html build/input/homepage build/output/homepage
+	sphinx-build -M html build/input/homepage build/output/homepage
 
-    mv build/output/homepage/html/* build/output/
+	mv build/output/homepage/html/* build/output/
 
-    rm -r build/output/homepage
+	rm -r build/output/homepage
 }
 
 function main {
