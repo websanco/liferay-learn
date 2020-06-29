@@ -1,6 +1,6 @@
 # Creating a Contributed Fragment Collection
 
-Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) <!-- TODO: Fix link --> created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
+Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
 
 This example runs on Liferay DXP 7.3+.
 
@@ -26,32 +26,23 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
     ```
 
-1. Download and unzip the [Marketing Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip):
-<!-- TODO: This sample and curl command need to be updated to download from the site, and to host the source in the repo -->
+1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):
+
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip
 
     unzip liferay-l3m9.zip
     ```
 
-<!-- TODO: There should be a way to combine the BUILDING and Deploying task - see writing-a-similar-results-contributor for an example: "./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)" -->
-
-1. Build the contributed Collection's JAR.
+1. From the module root, build and deploy the contributed Collection's JAR.
 
     ```bash
     cd liferay-l3m9\contributed-marketing-fragments-collection
-    .\gradlew build
-    ```
-
-1. Copy the contributed Collection's JAR to the Docker container:
-
-    ```bash
-    cd build\libs
-    docker cp com.liferay.learn.fragments-1.0.0.jar docker-container-name:/opt/liferay/deploy
+    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to deploy to `docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
+      If testing on Windows, you may need to build the module first with `.\gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
@@ -105,7 +96,7 @@ The `bnd.bnd` file includes a few properties that must be defined for the Collec
 * The `Web-ContextPath` Header indicates the module folder that contains the Collection, so the `ServletContext` is correctly generated.
 * The `-dsannotations-options` enables the Declarative Service annotations found in the class hierarchy of the Component class.
 
-See the example project's [`bnd.bnd`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-fragments/creating-a-contributed-fragment-collection/liferay-l3m9.zip) for a reference of these values.
+See the example project's [`bnd.bnd`](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) for a reference of these values.
 
 Now you'll modify the project to include another Fragment in the contributed Collection.
 
@@ -130,7 +121,7 @@ Follow these steps to add a new packaged Fragment to the contributed Fragment Co
         "name": "Marketing Collection"
     }
     ```
-<!-- TODO: Fix link -->
+
     ```note::
       Contributed Fragment Collections do not support `included resources <./including-default-resources-with-fragments.md>`_.
     ```
@@ -143,14 +134,11 @@ You can build and deploy the updated contributed Fragment Collection as you did 
 
     ```bash
     cd contributed-marketing-fragments-collection
-    .\gradlew build
+    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-1. Copy the updated JAR to the Docker container:
-
-    ```bash
-    cd build\libs
-    docker cp com.liferay.learn.fragments-1.0.0.jar docker-container-name:/opt/liferay/deploy
+    ```note::
+      If testing on Windows, you may need to build the module first with `.\gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
     ```
 
 1. Verify that the updated Fragment is included in the contributed Collection. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Page Fragments* under the Site Menu.

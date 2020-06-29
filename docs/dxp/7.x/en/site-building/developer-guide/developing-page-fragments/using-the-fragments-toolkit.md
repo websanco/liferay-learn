@@ -2,11 +2,11 @@
 
 The Fragments Toolkit helps you package Fragments and Collections created using your own tools. It takes only three steps to learn how to use it:
 
-1. [Deploy a Fragment Collection](#deploy-a-fragment-collection)
+1. [Import a Fragment Collection](#import-a-fragment-collection)
 1. [Add a New Collection and Fragment](#add-a-new-collection-and-fragment)
-1. [Deploy and Test](#deploy-and-test)
+1. [Import and Test](#import-and-test)
 
-## Deploy a Fragment Collection
+## Import a Fragment Collection
 
 First, deploy an example to see what a Fragment Collection looks like:
 
@@ -16,10 +16,10 @@ First, deploy an example to see what a Fragment Collection looks like:
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-1. Download and unzip the [Marketing Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/developing-page-fragments-using-the-fragments-toolkit/liferay-x2y6.zip)
-<!-- TODO: Update this curl command to get the zip that's made when the site is built. See a different dev tutorial for an example. -->
+1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip)
+
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/developing-page-fragments-using-the-fragments-toolkit/liferay-x2y6.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip
 
     unzip liferay-x2y6.zip
     ```
@@ -83,13 +83,19 @@ The generated Fragment Collection has the project structure below. You can manua
 
         * `thumbnail.png`: the thumbnail that's displayed when the Fragment is in a list
 
-    * `resources/`: a folder containing any additional images or other external files needed for the Fragment. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) <!-- TODO: Fix link --> for more information.
+    * `resources/`: a folder containing any additional images or other external files needed for the Fragment. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
 
 ## Add a New Collection and Fragment
 
 Follow these steps to add a new Fragment Collection with a new Fragment:
 
-1. Install the Fragments Generator using the instructions in the project's [README](https://github.com/liferay/generator-liferay-fragments/blob/master/README.md) <!--TODO: This link actually is broken because the parser takes out the .md extension from the link. I made a couple attempts to fix this but haven't found one. -->.
+1. Install the Fragments Generator using the command below. Note that you must have [NodeJS](https://nodejs.org/) 8+ and [npm](https://www.npmjs.com/) 6+ installed first.
+
+    ```bash
+    npm install -g yo
+    npm install -g generator-liferay-fragments
+    ```
+
 1. Create a Collection for the Fragment(s) in the project with the `npm run add-collection` command and answer the prompts to provide a name and an optional description:
 
     ```bash
@@ -143,7 +149,7 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
         The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their path in the ``fragment.json`` to reflect the change.
     ```
 
-1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link --> (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
+1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
 
     ```html
     <div class="marketing-jumbotron-fragment-01">
@@ -169,13 +175,13 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
       Give the main wrapper element for the Component in ``index.html`` a unique ID so it doesn't conflict with other Components on the page.
     ```
 
-    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) <!-- TODO: Fix link --> for more information.
+    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) for more information.
 
     ```note::
       The Fragment and configuration object are passed in as arguments in JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.
     ```
 
-## Deploy and Test
+## Import and Test
 
 You can import the updated Fragments as you did above:
 

@@ -1,0 +1,5 @@
+Bundle-Name: contributed-marketing-fragments-collection
+Bundle-SymbolicName: com.liferay.learn.fragments
+Bundle-Version: 1.0.0
+Web-ContextPath: /contributed-marketing-fragments-collection
+-dsannotations-options: inherit

@@ -1,0 +1,8 @@
+{
+	"cssPath": "index.css",
+	"fragmentEntryKey": "marketing-card",
+	"htmlPath": "index.html",
+	"jsPath": "index.js",
+	"name": "Marketing Card",
+	"type": "component"
+}
