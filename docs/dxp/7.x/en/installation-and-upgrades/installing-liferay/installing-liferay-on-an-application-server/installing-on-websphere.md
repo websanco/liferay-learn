@@ -155,7 +155,7 @@ Note that although a Hypersonic database is bundled with DXP and is fine for tes
 
 ## Installing Elasticsearch Archives
 
-If installing Liferay DXP 7.3, the following archives are required to install a sidecar [Elasticsearch](https://www.elastic.co/elasticsearch/) server that can be used for testing and development.
+When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-built-in-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
 
 1. Download the following archives:
 
@@ -167,7 +167,7 @@ If installing Liferay DXP 7.3, the following archives are required to install a 
 
 1. Copy the downloaded files into `[Liferay Home]`.
 
-When Liferay DXP is started, logic is run to check if Elasticsearch is already installed. If not, Liferay DXP looks for archives in `[Liferay Home]`. If the archives are found, Liferay DXP installs Elasticsearch for you. If the archives are not found, Liferay DXP attempts to download then install the archives.
+When Liferay DXP is started, the archives are unpackaged and installed, and the sidecar Elasticsearch server is started.
 
 ### Ensuring That the DXP Portlet.jar is Loaded First
 
