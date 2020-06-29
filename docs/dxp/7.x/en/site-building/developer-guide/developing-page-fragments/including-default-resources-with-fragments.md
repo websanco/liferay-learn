@@ -5,7 +5,7 @@ When creating Page Fragments, you can upload image resources (e.g. `.gif`, `.jpg
 1. [Import a Fragment Collection with Resources](#import-a-fragment-collection-with-resources)
 1. [Include a New Resource](#include-a-new-resource)
 
-This example uses a Docker image with a fresh install of Liferay DXP and runs on Liferay DXP 7.3.
+This example uses a Docker image with a fresh install of Liferay DXP 7.3.
 
 ## Import a Fragment Collection with Resources
 
@@ -17,10 +17,10 @@ First, import an example to see how Fragment resources work:
     docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
     ```
 
-1. Download and unzip the [example resources Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/developing-page-fragments/including-default-resources-with-fragments/liferay-i6r3.zip):
+1. Download and unzip the [example resources Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):
 		
 		```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/developing-page-fragments/including-default-resources-with-fragments/liferay-i6r3.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip
     
     unzip liferay-i6r3.zip
     cd liferay-i6r3

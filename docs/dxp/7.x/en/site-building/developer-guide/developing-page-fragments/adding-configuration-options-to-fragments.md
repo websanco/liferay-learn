@@ -20,10 +20,10 @@ First, deploy an example to see how Fragment Configuration options work:
     docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
     ```
 
-1. Download and unzip the [example configurable Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/developing-page-fragments/making-a-page-fragment-configurable/liferay-c7f8.zip):
+1. Download and unzip the [example configurable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
 		
 		```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/developing-page-fragments/making-a-page-fragment-configurable/liferay-c7f8.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip
     
     unzip liferay-c7f8.zip
     cd liferay-c7f8

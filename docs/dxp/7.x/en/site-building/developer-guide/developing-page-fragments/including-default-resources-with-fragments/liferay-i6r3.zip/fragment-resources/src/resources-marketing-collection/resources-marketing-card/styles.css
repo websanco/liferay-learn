@@ -1,0 +1,11 @@
+.marketing-card-fragment-01 .card {
+  max-width: 100%;
+}
+
+.marketing-card-fragment-01 .card img {
+  display: block;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}

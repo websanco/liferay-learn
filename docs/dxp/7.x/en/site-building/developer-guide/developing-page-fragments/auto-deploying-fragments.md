@@ -21,10 +21,10 @@ First, deploy an example to see how auto-deployable Fragments work:
     docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
     ```
 
-1. Download and unzip the [example auto-deployable Fragment Collection](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/auto-deploying-fragments/liferay-a2f8.zip):
+1. Download and unzip the [example auto-deployable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip):
 		
 		```bash
-		curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/auto-deploying-fragments/liferay-a2f8.zip
+		curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip
 		
 		unzip liferay-a2f8.zip
 		cd liferay-a2f8
@@ -39,7 +39,7 @@ First, deploy an example to see how auto-deployable Fragments work:
 1. Copy the Collection `zip` file to the Docker container to automatically import the Fragments Collection:
 
 		```bash
-		cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
+		docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
 		```
 		
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
@@ -93,7 +93,7 @@ Follow these steps to add a new Fragment to the Collection and redeploy:
 1. Copy the Collection `zip` file to the Docker container to automatically import the Fragments Collection:
 
 		```bash
-		cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
+		docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
 		```
 
 1. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection includes the new Marketing Jumbotron Fragment.
