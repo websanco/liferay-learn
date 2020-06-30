@@ -13,13 +13,13 @@ To create a Web Content Template, follow these steps:
 1. Open the Product Menu and go to the Site Menu &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Templates* tab.
 1. Click the *Add button* (![Add Template](../../../../images/icon-add.png)) to create a new Web Content Template.
-1. Enter the title of your new Web Content Template and add your code to the script window. You can add the code from the example *Newspaper Article* Template by clicking the *Choose File* button below the Script window and importing the `/liferay-a2e7/newspaper-article-template.ftl` file. If you're creating a Web Content Template to [embed in another Template](./advanced-web-content-templates/embedding-web-content-templates.md), you can skip to step eight.
+1. Enter the title of your new Web Content Template and add your code to the script window. You can add the code from the example *Newspaper Article* Template by clicking the *Choose File* button below the Script window and importing the `/liferay-a2e7/a2e7-impl/newspaper-article-template.ftl` file. If you're creating a Web Content Template to [embed in another Template](./advanced-web-content-templates/embedding-web-content-templates.md), you can skip to step eight.
 
     ![Template code (FreeMarker) is added to the script window.](./creating-web-content-templates/images/01.png)
 
 1. Optionally link a Structure to the Template by clicking *Select* under the *Structure* field in the *Properties* panel on the right and clicking the name of the Structure in the dialog that appears. See [Creating Structures](../web-content-structures/creating-structures.md) for more information on creating Structures.
 
-    To follow along with the example, [Create a new Structure](../web-content-structures/creating-structures.md) called *Newspaper Article Structure* and replace the contents of the *Source* tab with the `/liferay-a2e7/newspaper-article-structure.ftl` file.
+    To follow along with the example, [Create a new Structure](../web-content-structures/creating-structures.md) called *Newspaper Article Structure* and replace the contents of the *Source* tab with the `/liferay-a2e7/a2e7-impl/newspaper-article-structure.ftl` file.
    
     ![You can link the Template to a Structure through the Properties panel.](./creating-web-content-templates/images/02.png)
 
