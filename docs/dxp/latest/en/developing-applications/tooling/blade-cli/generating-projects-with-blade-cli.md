@@ -1,6 +1,6 @@
 # Generating Projects with Blade CLI
 
-Blade CLI's exists to create, build, and deploy Liferay projects <!-- jr: as a lay person, what does this really mean? What is a Liferay "project"? How does it relate to Liferay Workspace? -->. Once created, these projects (whether standalone or in a Liferay Workspace) can be imported into an IDE or worked on directly. Here you'll learn the various ways in which you can create and manage Liferay projects.
+Blade CLI exists to create, build, and deploy Liferay projects in Liferay Workspaces. Once created, these projects can be imported into an IDE or worked on directly. Here you'll learn the various ways in which you can create and manage Liferay projects.
 
 ## Creating a Liferay Workspace
 
@@ -18,7 +18,7 @@ Liferay Workspace is a set of folders on your machine where you store projects a
 
 ## Creating a Project
 
-Most of the time, projects <!-- jr: I'm lost here because, as a relative layperson, I don't know what a project is and how it relates to a Workspace. --> exist in a Liferay Workspace. Whether inside a Workspace or standalone, creating a project is done the same way. The important options to remember are these:
+Projects exist in a Liferay Workspace. Here are the important options to remember:
 
 **-t:** Specify the project template to use. You can get a list of these by typing `blade create -l`.
 
@@ -34,11 +34,7 @@ Putting these together, if you want to create a Liferay MVC Portlet called "gues
 blade create -t mvc-portlet -p com.liferay.docs.portlet -c GuestbookPortlet -v 7.3 guestbook
 ```
 
-This creates an MVC Portlet project. Standalone projects can be imported into any IDE. Liferay Workspaces can be imported into IntelliJ by using the Liferay IntelliJ plugin, or into Eclipse by using Liferay Developer Studio.
-
-```tip::
-If you run this command from inside a Liferay Workspace, your project is created in the Workspace, and can take advantage of all the infrastructure and automation that Workspace offers.
-```
+This creates a project using the MVC Portlet template, a default package called `com.liferay.docs.portlet`, a portlet class called `GuestbookPortlet`, for Liferay 7.3, called *guestbook*. Liferay Workspaces can be imported into any IDE, because they are Gradle projects. The Liferay IntelliJ plugin or the Eclipse plugins in Liferay Developer Studio provide enhanced support.
 
 ## Creating Sample Projects
 

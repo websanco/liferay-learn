@@ -13,8 +13,7 @@ Installing Blade CLI for Linux and Mac operating systems is a one-line command:
 ```bash
 curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/installers/local | sh
 ```
-<!-- is there a success message after running the above script to let someone know they 'did it right'? -->
-After the install completes, open a new command line and type `blade`. If you get a command not found error, you must [add the `blade` command to your path](./troubleshooting-blade-cli.md#the-blade-command-is-not-available-in-my-cli).
+After the install completes a `Blade installed successfully` message appears. Open a new command line and type `blade`. If you get a command not found error, you must [add the `blade` command to your path](./troubleshooting-blade-cli.md#the-blade-command-is-not-available-in-my-cli).
 
 ### Installing from the Graphical Installer
 
