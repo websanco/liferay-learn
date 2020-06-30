@@ -100,28 +100,28 @@ Specify the following information to configure DXP's application server:
 | Property Name | Meaning | Notes |
 | --- | ---------- | --- |
 | `dir` | The absolute path of the application server folder. | |
-| `extra.lib.dirs` | A comma-delimited list of extra directories containing any binaries or resources to add to the class path. | Use all absolute paths or all paths relative to `dir`. |
-| `global.lib.dir` | The application server's global library directory. | Use the absolute path or a path relative to `dir`. |
-| `portal.dir` | The directory where portal is installed in your application server. | Use the absolute path or a path relative to `dir`. |
+| `extra.lib.dirs` | A comma-delimited list of extra directories containing any binaries or resources to add to the class path. | Use paths relative to `dir`. |
+| `global.lib.dir` | The application server's global library directory. | Use a path relative to `dir`. |
+| `portal.dir` | The directory where portal is installed in your application server. | Use a path relative to `dir`. |
 | `server.detector.server.id` | The ID of a supported application server. | Supported IDs: `jboss`, `jonas`, `resin`, `tomcat`, `weblogic`, `websphere`, `wildfly` |
 
-Relative paths must use Unix style format. For example, the following properties are for Windows and use relative paths:
+Relative paths must use Unix style format (forward slashes) and start with a `/`. For example, the following properties are for Windows:
 
 ```properties
-dir=D:\
-extra.lib.dirs=Liferay/liferay-portal-master/tomcat-9.0.10/bin
-global.lib.dir=Liferay/liferay-portal-master/tomcat-9.0.10/lib
-portal.dir=Liferay/liferay-portal-master/tomcat-9.0.10/webapps/ROOT
+dir=D:\liferay-dxp\tomcat-9.0.17
+extra.lib.dirs=/bin
+global.lib.dir=/lib
+portal.dir=/webapps/ROOT
 server.detector.server.id=tomcat
 ```
 
-As another example, the following properties are for Linux and use absolute paths:
+As another example, the following properties are for Linux:
 
 ```properties
-dir=/
-extra.lib.dirs=/home/user/liferay/liferay-portal-master/tomcat-9.0.10/bin
-global.lib.dir=/home/user/liferay/liferay-portal-master/tomcat-9.0.10/lib
-portal.dir=/home/user/liferay/liferay-portal-master/tomcat-9.0.10/webapps/ROOT
+dir=/home/user/liferay
+extra.lib.dirs=/liferay-portal-master/tomcat-9.0.10/bin
+global.lib.dir=/liferay-portal-master/tomcat-9.0.10/lib
+portal.dir=/liferay-portal-master/tomcat-9.0.10/webapps/ROOT
 server.detector.server.id=tomcat
 ```
 
@@ -161,10 +161,10 @@ Here are example upgrade configuration files that you can customize and copy int
 
     ```properties
     dir=../../tomcat-9.0.17
-    global.lib.dir=/lib
-    portal.dir=/webapps/ROOT
+    global.lib.dir=lib
+    portal.dir=webapps/ROOT
     server.detector.server.id=tomcat
-    extra.lib.dirs=/bin
+    extra.lib.dirs=bin
     ```
 
 * `portal-upgrade-database.properties`:
