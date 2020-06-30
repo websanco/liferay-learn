@@ -1,6 +1,6 @@
 # Patching DXP in Docker
 
-Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) that fix DXP issues and a Patching Tool for applying the patches. [Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#fix-packs), [Security Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs), and [Service Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#service-packs) are provided as new DXP images (on [Docker Hub](https://hub.docker.com/r/liferay/dxp)) that you migrate to. Liferay also provides Security Fix Packs, [Hotfixes](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#hotfixes), and new [Patching Tool](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md) versions to install to your containers.
+Liferay provides [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) that fix DXP issues and a Patching Tool for applying the patches. [Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#fix-packs), [Security Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs), and [Service Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#service-packs) are provided as new DXP images (on [Docker Hub](https://hub.docker.com/r/liferay/dxp)) that you migrate to. Liferay also provides [Security Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs), [Hotfixes](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#hotfixes), and new [Patching Tool](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md) versions to install to your containers.
 
 | Enterprise subscription
 
@@ -56,15 +56,21 @@ DXP launches in a container based on the new image.
 
 A single patch can be applied to a Fix Pack image or Service Pack image. The patch can be a Hotfix, Security Fix Pack, or a patch that includes both kinds of fixes. To get this last type of patch, create a [Help Center ticket](https://help.liferay.com/hc) and request a patch that includes the latest security fixes and fixes to product issues on top of your current Fix Pack level.
 
-Patching requires a folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder. Please see `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
+Patching requirements:
+
+1. No existing patches in the container. Any existing patch must be [reverted](#reverting-a-patch) before applying a new patch.
+
+1. The image must not be Security Fix Pack image; such an image already includes a patch (the Security Fix Pack).
+
+1. A folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder. Please see [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
 
 Here are two methods for installing patches to containers:
 
-1. [Install to your existing container](#install-to-your-existing-container), if it has an existing qualified volume or bind mount that maps to the `/mnt/liferay/patching` folder.
+1. [Installing to an existing container](#installing-to-an-existing-container).
 
-1. [Install to a new container](#install-to-a-new-container).
+1. [Installing to a new container](#installing-to-a-new-container).
 
-### Install to Your Existing Container
+### Installing to an Existing Container
 
 Here are the steps for installing a patch to your existing container:
 
@@ -74,7 +80,7 @@ Here are the steps for installing a patch to your existing container:
 
 1. [Restart your container](./dxp-docker-container-basics.md#restartings-a-container).
 
-### Install to a New Container
+### Installing to a New Container
 
 Here are steps for installing a patch to a new container:
 
