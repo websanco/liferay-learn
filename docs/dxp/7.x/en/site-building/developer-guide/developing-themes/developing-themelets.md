@@ -20,31 +20,32 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-1. Download and unzip the [Custom Tooltips Themelet and Pastel Purple Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-themelet/liferay-m2t6.zip):
+1. Download and unzip the [Custom Tooltips Themelet and Pastel Purple Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip):
 
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-themelet/liferay-m2t6.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip
     
     unzip liferay-m2t6.zip
+    ```
+
+1. From the module root, build the Theme and install it's dependencies:
+
+    ```bash
+    cd liferay-m2t6
+    .\gradlew build
     ```
 
 1. Navigate to the Themelet and globally install it with the `npm link` command to make it available for the Theme:
 
     ```bash
-    cd liferay-m2t6/custom-tooltips-themelet
+    cd liferay-m2t6/m2t6-impl/custom-tooltips-themelet
     npm link
-    ```
-
-1. Navigate to the Theme and install it's dependencies:
-
-    ```bash
-    cd liferay-m2t6/purple-pastel-theme
-    npm install
     ```
 
 1. Extend the Theme with the Themelet:
 
     ```bash
+    cd liferay-m2t6/m2t6-impl/purple-pastel-theme
     npm run extend
     ```
 

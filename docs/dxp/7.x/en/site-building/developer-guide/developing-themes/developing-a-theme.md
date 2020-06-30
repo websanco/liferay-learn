@@ -19,28 +19,18 @@ First, deploy an example to see what a Theme looks like:
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-1. Download and unzip the [example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip) and install its dependencies:
+1. Download and unzip the [example Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-g4t8.zip) and install its dependencies:
 
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-g4t8.zip
     
     unzip liferay-g4t8.zip
     cd liferay-g4t8
-    npm install
+    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-1. Build the Theme's WAR.
-
-    ```bash
-    cd pastel-purple-theme
-    npm run build
-    ```
-
-1. Copy the Theme's WAR to the Docker container:
-
-    ```bash
-    cd dist
-    docker cp pastel-purple-theme-1.0.0.war docker-container-name:/opt/liferay/osgi/war
+    ```note::
+      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to ``docker cp .\g4t8-impl\dist\pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
@@ -128,14 +118,11 @@ To update the Theme you just have to modify the code and redeploy.
 
     ```bash
     cd liferay-g4t8
-    npm run build
+    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-1. Copy the Theme's WAR to the Docker container:
-
-    ```bash
-    cd dist
-    docker cp pastel-purple-theme-1.0.0.war docker-container-name:/opt/liferay/osgi/war
+    ```note::
+      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to ``docker cp .\g4t8-impl\dist\pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console:
