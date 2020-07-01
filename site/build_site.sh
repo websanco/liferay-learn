@@ -16,13 +16,12 @@ function check_utils {
 	done
 }
 
-#
-# Extract the product, version, and language from paths.
-#
-function get_site_tokens {
-	product=$(echo "${path}" | cut -f3 -d'/')
-	version=$(echo "${path}" | cut -f4 -d'/')
-	language=$(echo "${path}" | cut -f5 -d'/')
+function get_product_version_language_dir_name {
+	local language=$(echo "${docs_dir_name}" | cut -f5 -d'/')
+	local product=$(echo "${docs_dir_name}" | cut -f3 -d'/')
+	local version=$(echo "${docs_dir_name}" | cut -f4 -d'/')
+
+	echo ${product}/${version}/${language}
 }
 
 function generate_sphinx_input {
@@ -36,40 +35,40 @@ function generate_sphinx_input {
 
 	cd ../site
 
-	for path in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n"`
+	for docs_dir_name in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n"`
 	do
-		get_site_tokens
+		local product_version_language_dir_name=`get_product_version_language_dir_name`
 
-		mkdir -p build/input/${product}/${version}/${language}/docs
+		mkdir -p build/input/${product_version_language_dir_name}/docs
 
-		cp -R docs/* build/input/${product}/${version}/${language}
+		cp -R docs/* build/input/${product_version_language_dir_name}
 
-		cp -R ../docs/${product}/${version}/${language}/* build/input/${product}/${version}/${language}
+		cp -R ../docs/${product_version_language_dir_name}/* build/input/${product_version_language_dir_name}
 	done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
 }
 
 function generate_static_html {
-	for path in `find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
+	for docs_dir_name in `find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
 	do
-		get_site_tokens
+		local product_version_language_dir_name=`get_product_version_language_dir_name`
 
-		echo "Generating static html for ${product} ${version} ${language}"
+		echo "Generating static html for get_product_version_language_dir_name"
 
 		#
 		# Use Sphinx to generate static HTML for each product/version/language.
 		#
 
-		sphinx-build -M html "build/input/${product}/${version}/${language}" "build/output/${product}/${version}/${language}"
+		sphinx-build -M html "build/input/${product_version_language_dir_name}" "build/output/${product_version_language_dir_name}"
 
-		mv build/output/${product}/${version}/${language}/html/* build/output/${product}/${version}/${language}
+		mv build/output/${product_version_language_dir_name}/html/* build/output/${product_version_language_dir_name}
 
 		#
 		# Fix broken links.
 		#
 
-		for html_file_name in `find build/output/${product}/${version}/${language} -name *.html -type f`
+		for html_file_name in `find build/output/${product_version_language_dir_name} -name *.html -type f`
 		do
 			sed -i 's/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
@@ -81,7 +80,7 @@ function generate_static_html {
 		# Rename README.html to index.html.
 		#
 
-		for readme_file_name in `find build/output/${product}/${version}/${language} -name *README.html -type f`
+		for readme_file_name in `find build/output/${product_version_language_dir_name} -name *README.html -type f`
 		do
 			mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
 		done
@@ -90,13 +89,13 @@ function generate_static_html {
 		# Update search references for README.html to index.html.
 		#
 
-		sed -i 's/README"/index"/g' build/output/${product}/${version}/${language}/searchindex.js
+		sed -i 's/README"/index"/g' build/output/${product_version_language_dir_name}/searchindex.js
 
 		#
 		# Make ZIP files.
 		#
 
-		for zip_dir_name in `find build/input/${product}/${version}/${language} -name *.zip -type d`
+		for zip_dir_name in `find build/input/${product_version_language_dir_name} -name *.zip -type d`
 		do
 			pushd ${zip_dir_name}
 
