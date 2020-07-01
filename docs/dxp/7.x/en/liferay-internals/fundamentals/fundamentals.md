@@ -1,15 +1,19 @@
 # Fundamentals
 
-The fundamentals of developing on Liferay DXP and customizing it are perhaps best learned in the context of projects. It's in projects that you configure access to  DXP's API, extend and override  DXP features, and package your software for deployment. Projects are developed as OSGi JARs, but are all installed to Liferay's OSGi framework as OSGi bundles (modules). These modules can depend on external Java packages, share Java packages, and be manipulated at run time via Apache Gogo Shell. The fundamentals are explained in the context of projects so that you understand them in a practical sense and can apply them right away. Here are the fundamental topics:
+Liferay development projects consist primarily of simple .jar files. These contain a few extra configuration files that make them OSGi modules, but they're easily understandable by anyone who knows Java. 
+
+Part of the power of OSGi is that you have a single, consistent way to build projects that access DXP's API, extend and override various features, or package new software for deployment. These projects, or modules, form an ecosystem where they can depend on each other for functionality and be manipulated at runtime. 
+
+These are the fundamentals of Liferay DXP's ecosystem. 
 
 * **[Module Projects](./module-projects.md)** explains what an OSGi module is, its project structure, and how it is used by Liferay's OSGi framework.
 
 * **[Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)** demonstrates how to identify and configure Liferay artifacts and third-party artifacts to use their Java packages in your projects.
 
-* **[Importing](./importing-packages.md) and [Exporting Packages](./exporting-packages.md)** shows how to import the packages your projects need and export packages your projects provide. Liferay's tooling detects package use and specifies package imports automatically.
+* **[Importing](./importing-packages.md) and [Exporting Packages](./exporting-packages.md)** shows how to use functionality from other modules and publish your functionality for other modules to use. Liferay's tooling detects package use and specifies package imports automatically.
 
-* **[Semantic Versioning](./semantic-versioning.md)** shows how Liferay uses a standard for ascribing meaning to major, minor, and micro versions of modules and Java packages.
+* **[Semantic Versioning](./semantic-versioning.md)** describes how Liferay manages dependencies on code as it evolves to new versions, so that you can use the same mechanism to manage your version and avoid code breakage. 
 
-* **[Gogo Shell](./using-felix-gogo-shell.md)** enables you to examine components, debug issues, and manage deployments.
+* **[Gogo Shell](./using-felix-gogo-shell.md)** shows how you can examine components, debug issues, and manage deployments at runtime by issuing commands into a shell.
 
-Start with understanding how module projects are used in development.
+You can begin by learning about [module projects](./module-projects.md). 
