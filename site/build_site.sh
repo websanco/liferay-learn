@@ -122,7 +122,7 @@ function generate_static_html {
 
 	mv build/output/homepage/html/* build/output/
 
-	rm -r build/output/homepage
+	rm -fr build/output/homepage
 }
 
 function main {
