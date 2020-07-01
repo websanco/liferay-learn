@@ -128,7 +128,7 @@ function get_product_version_language_dir_name {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	setup_env
+	configure_env
 
 	generate_sphinx_input
 
@@ -147,7 +147,8 @@ function pip_install {
 	done
 }
 
-function setup_env {
+function configure_env {
+
 	#
 	# sudo dnf install python3-sphinx
 	#
