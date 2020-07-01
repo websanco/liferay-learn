@@ -8,6 +8,7 @@ Using Web Experience Management
    Building Content Pages From Fragments<https://help.liferay.com/hc/en-us/articles/360018171351-Building-Content-Pages-from-Fragments->
    Creating and Managing Navigation Menus<https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus>
    Using Application Display Templates<https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates>
+   Selecting Commerce Products as Related Assets</creating-store-content/using-web-experience-management/selecting-commerce-products-as-related-assets>
 
 .. raw:: html
    :file: ../landingpage_template.html
