@@ -16,14 +16,6 @@ function check_utils {
 	done
 }
 
-function get_product_version_language_dir_name {
-	local language=$(echo "${docs_dir_name}" | cut -f5 -d'/')
-	local product=$(echo "${docs_dir_name}" | cut -f3 -d'/')
-	local version=$(echo "${docs_dir_name}" | cut -f4 -d'/')
-
-	echo ${product}/${version}/${language}
-}
-
 function generate_sphinx_input {
 	rm -fr build
 
@@ -123,6 +115,14 @@ function generate_static_html {
 	mv build/output/homepage/html/* build/output/
 
 	rm -fr build/output/homepage
+}
+
+function get_product_version_language_dir_name {
+	local language=$(echo "${docs_dir_name}" | cut -f5 -d'/')
+	local product=$(echo "${docs_dir_name}" | cut -f3 -d'/')
+	local version=$(echo "${docs_dir_name}" | cut -f4 -d'/')
+
+	echo ${product}/${version}/${language}
 }
 
 function main {
