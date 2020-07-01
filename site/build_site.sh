@@ -16,6 +16,21 @@ function check_utils {
 	done
 }
 
+function configure_env {
+
+	#
+	# sudo dnf install python3-sphinx
+	#
+
+	python3 -m venv venv
+
+	source venv/bin/activate
+
+	check_utils pip3 zip
+
+	pip_install recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+}
+
 function generate_sphinx_input {
 	rm -fr build
 
@@ -145,21 +160,6 @@ function pip_install {
 			pip3 install --disable-pip-version-check ${package_name}
 		fi
 	done
-}
-
-function configure_env {
-
-	#
-	# sudo dnf install python3-sphinx
-	#
-
-	python3 -m venv venv
-
-	source venv/bin/activate
-
-	check_utils pip3 zip
-
-	pip_install recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
 }
 
 function upload_to_server {
