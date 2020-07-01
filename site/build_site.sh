@@ -145,7 +145,7 @@ function main {
 
 	if [[ ${build_type} == "prod" ]]
 	then
-		pre_clean_for_prod
+		clean_for_prod
 	fi
 
 	configure_env
@@ -167,11 +167,13 @@ function pip_install {
 	done
 }
 
-function pre_clean_for_prod {
+function clean_for_prod {
 	rm -fr venv
 
-	pushd $(git rev-parse --show-toplevel)/docs
-		git clean -dfx .
+	pushd ../docs
+
+	git clean -dfx .
+
 	popd
 }
 
