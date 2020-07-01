@@ -1,6 +1,6 @@
 # Creating A Liferay Workspace
 
-You can create a Liferay Workspace with either [Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) or [Apache Maven](https://maven.apache.org). Liferay Workspaces created with Blade CLI are Gradle-based; Liferay Workspaces created with Maven are (obviously) Maven-based. 
+You can create a Liferay Workspace with [Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) or manually. 
 
 ## Creating a Liferay Workspace with Blade CLI
 
@@ -20,29 +20,45 @@ blade init -v 7.0 [workspace name]
 
 The workspace version is stored in the hidden `.blade.properties` file in the workspace's root folder, using the `liferay.version.default` property. When you create projects based on templates, the version stored here is used to determine which template version should be used. 
 
-## Creating a Liferay Workspace with Maven
+## Creating a Liferay Workspace Manually
 
-1. Run this command: 
+To create a Liferay Workspace manually, you must have [Gradle](https://gradle.org) installed. You must also either know the ID of the product you're targeting or be able to look it up with Blade CLI using the `blade init -l` command. 
 
-   ```bash
-   mvn archetype:generate -Dfilter=liferay
-   ```
+1.  Create a folder on your system to store your workspace. 
 
-1. Select the `com.liferay.project.templates.workspace` archetype. At the time of this writing, it's #40. 
+1.  Inside this folder, create a file called `settings.gradle` with this content: 
 
-1. Choose a version. If unsure, choose the latest. 
+    ```groovy
+    buildscript {
+            dependencies {
+                    classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "latest.release"
+            }
 
-1. Type the `groupId`. This is the `pom.xml` `groupId` for your project. 
+            repositories {
+                    mavenLocal()
 
-1. Type the `artifactId`. This is the `pom.xml` `artifactId` for your project. 
+                    maven {
+                            url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+                    }
+            }
+    }
 
-1. Type the version or hit Enter to accept the default SNAPSHOT version. 
+    apply plugin: "com.liferay.workspace"
+    ```
 
-1. Type the default Java package for your application. 
+1.  Now add the Gradle wrapper to your project using this command: 
 
-1. Type the version of Liferay you're targeting. 
+    ```bash
+    gradle wrapper --gradle-version 5.6.4
+    ```
 
-1. Maven will ask if all the values you supplied are correct. Hit Enter to confirm them, and your workspace is created! 
+1.  Create a file called `gradle.properties` with this content: 
+
+    ```properties
+    liferay.workspace.product=portal-7.3-ga3
+    ```
+
+    This defines the lastest GA of Liferay Portal CE at the time of this writing. You can always get a current list using Blade CLI by typing `blade init -l`. 
 
 ## Configuring a Proxy 
 
