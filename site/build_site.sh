@@ -128,17 +128,7 @@ function get_product_version_language_dir_name {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	#
-	# sudo dnf install python3-sphinx
-	#
-
-	python3 -m venv venv
-
-	source venv/bin/activate
-
-	check_utils pip3 zip
-
-	pip_install recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+	setup_env
 
 	generate_sphinx_input
 
@@ -155,6 +145,20 @@ function pip_install {
 			pip3 install --disable-pip-version-check ${package_name}
 		fi
 	done
+}
+
+function setup_env {
+	#
+	# sudo dnf install python3-sphinx
+	#
+
+	python3 -m venv venv
+
+	source venv/bin/activate
+
+	check_utils pip3 zip
+
+	pip_install recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
 }
 
 function upload_to_server {
