@@ -54,10 +54,10 @@ function generate_static_html {
 	do
 		local product_version_language_dir_name=`get_product_version_language_dir_name`
 
-		echo "Generating static html for get_product_version_language_dir_name"
+		echo "Generating static HTML for `get_product_version_language_dir_name`."
 
 		#
-		# Use Sphinx to generate static HTML for each product/version/language.
+		# Use Sphinx to generate static HTML for each product, version, and language.
 		#
 
 		sphinx-build -M html "build/input/${product_version_language_dir_name}" "build/output/${product_version_language_dir_name}"
@@ -115,7 +115,7 @@ function generate_static_html {
 	done
 
 	#
-	# Use Sphinx to build the Homepage content separately.
+	# Build the Homepage separately.
 	#
 
 	sphinx-build -M html build/input/homepage build/output/homepage
