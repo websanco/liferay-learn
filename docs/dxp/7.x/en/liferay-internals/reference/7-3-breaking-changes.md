@@ -463,7 +463,7 @@ a call to `Liferay.Poller.init()` in a JSP.
 There's no direct replacement for the `Liferay.Poller` utility. If you must
 initialize `Liferay.Poller`, update your JSP to use the code below:
 
-```
+```markup
 <%@ page import="com.liferay.petra.encryptor.Encryptor" %>
 
 <%-- For access to `company` and `themeDisplay`. --%>
