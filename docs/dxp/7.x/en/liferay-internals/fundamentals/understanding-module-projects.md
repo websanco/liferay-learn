@@ -1,8 +1,14 @@
 # Understanding Module Projects
 
-Liferay software is developed using [OSGi modules](https://www.osgi.org/developer/what-is-osgi/). OSGi modules is a way of developing cohesive software packages that define APIs, provide implementations, and that use concrete implementations to provide functionality to users and other consumers.
+When you write customizations or new applications on Liferay's platform, you implement them using [OSGi modules](https://www.osgi.org/developer/what-is-osgi/). OSGi modules are .jar files containing some extra configuration that enables some powerful features: 
 
-Module packages are private by default. The only packages that are published are ones specified via the module's meta data. This keeps implementation details hidden from other modules. Liferay leverages a component framework called [Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) that facilitates defining, implementing, and using APis. You'll see module components in action later. First, look at the simplicity of the module project structure:
+* Publishing APIs 
+* Resolving API implementations
+* Ensuring version compatibility
+
+Modules can publish their Java packages to the rest of the installed system by declaring them public in their configuration metadata; otherwise, packages are private by default. At runtime, you can use the [Apache Felix Gogo Shell](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html) to manipulate modules. 
+
+Modules follow a standard project structure:
 
 ```
 [module project]
@@ -16,23 +22,19 @@ Module packages are private by default. The only packages that are published are
             └── [any image files, templates, descriptors, etc.]
 ```
 
-The module project comprises three basic things:
+The module project comprises three things:
 
-* **Code:** Java classes that define services, provide services, and consume services. Any required resources, such as images, templates, and additional descriptors, are also part of the code. Classes that serve a common purpose are grouped in the same Java package. Packages are private by default. Packages for other modules to use (such as API packages) are [specified for export](./exporting-packages.md) in the `bnd.bnd` file.
+1. **Code:** Java classes and required resources, such as images, templates, and additional descriptors. Packages are private by default. Packages for other modules to use (such as API packages) are [specified for export](./exporting-packages.md) in the `bnd.bnd` file.
 
-* **A Build Script:** Specifies required artifacts. Liferay uses Gradle to build modules.
+1. **A Build Script:** Specifies required artifacts. Liferay uses Gradle to build modules.
 
-* **Meta Data:** Headers in the `bnd.bnd` [Bnd](https://bnd.bndtools.org/) file define the module artifact and specify the module's characteristics, including capabilities that the module defines, provides, and requires. On building the module JAR file, Bnd propagates meta data from `bnd.bnd` file to the JAR's `META-INF/MANIFEST.MF` file and Bnd adds capability and component meta data based on its inspection of the module code. The runtime framework uses the meta data to add the module's services to the registry and to inject components with the services they reference. Component services are used in the example modules, discussed next. 
+1. **Metadata:** The `bnd.bnd` [Bnd](https://bnd.bndtools.org/) file defines the module artifact and specifies the module's characteristics: capabilities that the module defines, provides, and requires. On building the module JAR file, Bnd propagates configuration metadata from `bnd.bnd` file to the JAR's `META-INF/MANIFEST.MF` file. When the module is deployed, the runtime framework uses the metadata to add the module's services to the registry and to inject components with the services they reference. 
 
-```tip::
-   You can examine module JAR ``META-INF/MANIFEST.MF`` files to see the propagated ``bnd.bnd`` meta data and the meta data that Bnd generates based on the module code inspection.
-```
-
-Module code and the meta data mentioned above, are more easily understood by way of example.
+Here are some examples. 
 
 ## Example Modules: Greeting Command
 
-The following modules collectively provide an [Apache Felix Gogo](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html) shell command that takes a String and uses it in a greeting. Consider this example to be a "Hello World" for modules.
+The following modules collectively provide an [Apache Felix Gogo](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html) shell command that takes a String and uses it in a greeting. You'll create a simple API, implementation, and client. 
 
 ![The example modules implement a greeting command for Gogo Shell.](./understanding-module-projects/images/01.png)
 
@@ -53,7 +55,7 @@ Here's what you'll do with the example:
 
 Start using the example modules.
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images//dxp-docker-container-basics.md).
+1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
 
     ```bash
     docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
@@ -61,27 +63,12 @@ Start using the example modules.
 
 1. Download and unzip `liferay-j1h1.zip`.
 
-    ```curl
+    ```bash
     curl https://learn.liferay.com/dxp-7.x/liferay-internals/fundamentals/liferay-j1h1.zip -O
     ```
 
     ```bash
     unzip liferay-j1h1.zip
-    ```
-
-    The following files are extracted:
-
-    ```
-    $(pwd)/
-    ├── build.gradle
-    ├── gradle/
-    ├── gradlew
-    ├── gradlew.bat
-    ├── j1h1-api/
-    ├── j1h1-command/
-    ├── j1h1-service/
-    ├── settings.gradle
-    └── source-formatter-suppressions.xml
     ```
 
 1. Build the example modules.
@@ -126,6 +113,10 @@ Start using the example modules.
     STARTED com.liferay.docs.j1h1.greeting.command_1.0.0
     ```
 
+1. Go to `http://localhost:8080` and sign in using the default credentials:
+   **User Name:** `test@liferay.com`
+   **Password:** `test`
+
 1. Access the Gogo Shell by clicking *Control Panel &rarr; Configuration &rarr; Gogo Shell*.
 
 1. In the *Command* field, use the `greet:greet` command send a greeting.
@@ -158,7 +149,7 @@ j1h1-api
                 └── `Greeting.java`
 ```
 
-Very simple, right? Beyond the Java source file, there are only three other files: a Gradle build script, a Gradle settings file (for this multi-project build), and a configuration file called `bnd.bnd`. The `bnd.bnd` file describes and configures the module:
+Beyond the Java source file, there are only three other files: a Gradle build script, a Gradle settings file (for this multi-project build), and a configuration file called `bnd.bnd`. The `bnd.bnd` file describes and configures the module:
 
 ```properties
 Bundle-Name: j1h1 Greeting API
@@ -167,7 +158,7 @@ Bundle-Version: 1.0.0
 Export-Package: com.liferay.docs.j1h1.greeting.api
 ```
 
-The module's name is *j1hs Greeting API*. Its symbolic name--a name that ensures uniqueness--is `com.liferay.docs.j1h1.greeting.api`. Its semantic version is declared next, and its package is *exported*, which means it's made available to other modules. This module's package is just an API other modules can implement.
+The module's name is *j1h1 Greeting API*. Its symbolic name---a name that ensures uniqueness---is `com.liferay.docs.j1h1.greeting.api`. Its semantic version is declared next, and its package is *exported*, which means it's made available to other modules. This module's package is just an API other modules can implement.
 
 Finally, there's the Java class, which in this case is an interface:
 
@@ -186,11 +177,11 @@ public interface Greeting {
 
 The interface's [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation tells the service registry that anything implementing the interface is a provider. The interface's one method asks for a `String` and doesn't return anything.
 
-That's it! As you can see, creating modules is not very different from creating other Java projects.
+That's it! As you can see, creating modules is the same as creating other Java projects, with some added configuration.
 
 ### Examine the Provider (Service)
 
-An interface only defines an API; to do something, it must be implemented. This is what the provider module is for. Here's what a provider module for the Greeting API looks like:
+An interface only defines an API; to do something, it must be implemented. This is what the provider module does. Here's its structure:
 
 ```
 j1h1-service
@@ -214,7 +205,7 @@ Bundle-Version: 1.0.0
 
 The bundle name, symbolic name, and version are all set similarly to the API.
 
-Finally, there's no `Export-Package` declaration. A client (which is the third module you'll create) just wants to use the API: it doesn't care how its implementation works as long as the API returns what it's supposed to return. The client, then, only needs to declare a dependency on the API; the service registry injects the appropriate implementation at runtime.
+Finally, there's no `Export-Package` declaration. A client (which is the third module you'll create) asks for the API: it doesn't care how its implementation works as long as the API returns what it's supposed to return. The service registry injects the appropriate implementation at runtime.
 
 All that's left, then, is the class that provides the implementation:
 
@@ -241,9 +232,9 @@ public class GreetingImpl implements Greeting {
 }
 ```
 
-The implementation is simple. It uses the `String` as a name and prints a hello message. A better implementation might be to use Liferay's API to collect all the names of all the users in the system and send each user a greeting notification, but the point here is to keep things simple.
+This simple implementation uses the `String` as a name and prints a hello message. A real implementation might use Liferay's API to collect the names of all users in the system and send each one a greeting notification. 
 
-This [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation defines three options: `immediate = true`, an empty property list, and the service class that it implements. The `immediate = true` setting means that this module should not be lazy-loaded; the service registry loads it as soon as it's deployed, instead of when it's first used. Using the `@Component` annotation declares the class as a Declarative Services component, which is the most straightforward way to create components for OSGi modules. A component is a POJO that the runtime creates automatically when the module starts.
+The [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation defines three options: `immediate = true`, an empty property list, and the service class that it implements. The `immediate = true` setting means that this module should not be lazy-loaded; the service registry loads it as soon as it's deployed, instead of when it's first used. The `@Component` annotation declares the class as a Declarative Services component, a way of declaring its configuration in the class without having to use messy configuration files. A component is a POJO that the runtime creates automatically when the module starts.
 
 To compile this module, the API it's implementing must be on the classpath. You'd add the `j1h1-api` project to your `build.gradle` file's `dependencies { ... }` block, like this:
 
@@ -255,7 +246,7 @@ That's all there is to a provider module.
 
 ### Examine the Consumer (Client)
 
-The client or consumer uses the API that the API module defines and the provider module implements. DXP has many different kinds of consumer modules. Portlets are the most common consumer module type, but since they are a topic all by themselves, this example stays simple by creating an command for the Apache Felix Gogo shell. Note that consumers can, of course, consume many different APIs to provide functionality.
+The client or consumer uses the API that the API module defines and the provider module implements. DXP has many different kinds of consumer modules, with portlets as the most common consumer module type. This simple example creates a command for the Apache Felix Gogo shell. Note that consumers can, of course, consume many different APIs to provide functionality.
 
 A consumer module has the same structure as the other module types:
 
@@ -281,7 +272,7 @@ Bundle-Version: 1.0.0
 
 There's nothing new here: you declare the same things you declared for the provider.
 
-Your Java class has a little bit more going on:
+Here's the Java class: 
 
 ```java
 package com.liferay.docs.j1h1.greeting.command;
@@ -313,19 +304,19 @@ public class GreetingCommand {
 }
 ```
 
-The `@Component` annotation declares the same attributes, but specifies some properties and a different service. As in Java, where every class is a subclass of `java.lang.Object` (even though you don't need to specify it by default), in Declarative Services, the runtime needs to know the type of class to register. Because you're not implementing any particular type, your parent class is `java.lang.Object`, so you must specify that class as the service. While Java doesn't require you to specify `Object` as the parent when you're creating a class that doesn't inherit anything, Declarative Services does.
+The `@Component` annotation declares the same attributes, but specifies some properties and a different service. As in Java, where every class is a subclass of `java.lang.Object` (even though you don't need to specify it by default), in Declarative Services, the runtime must know the type of class to register. Because you're not implementing any particular type, your parent class is `java.lang.Object`, so you must specify that class as the service. While Java doesn't require you to specify `Object` as the parent when you're creating a class that doesn't inherit anything, Declarative Services does.
 
 The two properties define a Gogo shell command scope and a command function. All commands have a scope to define their context, as it's common for multiple APIs to have similar functions, such as `copy` or `delete`. These properties specify you're creating a command called `greet` in a scope called `greet`. While you get no points for imagination, this sufficiently defines the command.
 
-Since you specified `osgi.command.function=greet` in the `@Component` annotation, your class must have a method named `greet`, and you do. But how does this `greet` method work? It obtains an instance of the `Greeting` OSGi service and invokes its `greet` method, passing in the `name` parameter. How is an instance of the `Greeting` OSGi service obtained? The `GreetingCommand` class declares a private service bean, `_greeting` of type `Greeting`. This is the OSGi service type that the provider module registers. The [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation tells the OSGi runtime to instantiate the service bean with a service from the service registry. The runtime binds the `Greeting` object of type `GreetingImpl` to the private field `_greeting`. The `greet` method uses the `_greeting` field value.
+Since you specified `osgi.command.function=greet` in the `@Component` annotation, your class must have a method named `greet`, and you do. This method obtains an instance of the `Greeting` OSGi service and invokes its `greet` method, passing in the `name` parameter. To retrieve an instance of the OSGi `Greeting` service, the `GreetingCommand` class declares a private service bean, `_greeting` of type `Greeting`. This is the OSGi service type that the provider module registers. The [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation tells the OSGi runtime to instantiate the service bean with a service from the service registry. The runtime binds the `Greeting` object of type `GreetingImpl` to the private field `_greeting`. The `greet` method uses the `_greeting` field value.
 
-Just like the provider, the consumer needs to have the API on its classpath in order to compile, but at runtime, since you've declared all the dependencies appropriately, the container knows about these dependencies, and provides them automatically.
+Just like the provider, the consumer must have the API on its classpath in order to compile, but at runtime, since you've declared all the dependencies appropriately, the container knows about these dependencies and provides them automatically.
 
-This most basic of examples should make it clear that module-based development is easy and straightforward. The API-Provider-Consumer contract fosters loose coupling, making your software easy to manage, enhance, and support.
+This most basic of examples should make it clear that module-based development is clear for any Java developer. The API-Provider-Consumer contract fosters loose coupling, making your software easy to manage, enhance, and support.
 
 ## What's Next
 
-Now that you're familiar with module projects, explore how to [configure dependencies](./configuring-dependencies/configuring-dependencies.md).
+Now that you're familiar with module projects, you can explore how to [configure dependencies](./configuring-dependencies/configuring-dependencies.md).
 
 ## Additional Information
 
