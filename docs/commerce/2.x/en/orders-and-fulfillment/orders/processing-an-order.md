@@ -1,6 +1,6 @@
 # Processing an Order
 
-Processing an order in Liferay Commerce consists of three stages: accepting an order, processing an order, and creating a shipment. To begin processing all orders, including [Subscriptions](../subscriptions/managing-subscriptions.md) (recurring orders), navigate to the [_Orders_ menu](./orders-menu-reference-guide.md) in the _Control Panel_.
+Processing an order in Liferay Commerce consists of two stages: accepting an order and processing an order. Shipments are created while orders are processed. To begin processing all orders, including [Subscriptions](../subscriptions/managing-subscriptions.md) (recurring orders), navigate to the [_Orders_ menu](./orders-menu-reference-guide.md) in the _Control Panel_.
 
 ## Accepting an Order
 
@@ -41,6 +41,12 @@ See the [Managing Subscriptions](../subscriptions/managing-subscriptions.md) art
 ## Creating a Shipment
 
 Creating a shipment begins in the _Orders_ menu as a continuation of processing an accepted order. See the [Creating a Shipment](../shipments/creating-a-shipment.md) article to learn more.
+
+If the order has no shippable items (for example, a service contract or online products), users cannot create a shipment.
+
+## Completed Orders
+
+An order is marked as Completed when the customer has received all the items purchased. (For physical stock, this is usually when the items have been delivered to the customer.) An order is also marked as Completed when it is cancelled. At this point, a Completed order cannot not return to a previous status.
 
 ## Commerce 2.0 and Below
 

@@ -1,6 +1,6 @@
 # Enabling or Disabling Order Workflows
 
-[Order workflows](./introduction-to-order-workflows.md) are a channel-specific setting that, if enabled, require the buyer or seller to give internal prior [approval](./approving-or-rejecting-orders-in-order-workflows.md) for an order before it can be [processed](../orders/processing-an-order.md).
+[Order workflows](./introduction-to-order-workflows.md) are a channel-specific setting that, if enabled, require the buyer or seller to give internal prior [approval](./approving-or-rejecting-orders-in-order-workflows.md) for an order before it can be [processed](../orders/processing-an-order.md). To learn more about enabling Workflow in general, see [Activating Workflow](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/user-guide/activating-workflow.html)
 
 This article documents how to enable and disable Order Workflows.
 
