@@ -12,7 +12,3 @@
 1. Open the Product Menu and go to the Site Menu &rarr; *Site Builder* &rarr; *Pages*.
 1. Click the Actions menu (![Action Menu](../../../images/icon-actions.png)) next to the Content Page and Select *Permissions*.
 1. Check or verify the *Update* permission box for the Role(s) you want to grant A/B Testing access for and click *Save*.
-
-
-
-

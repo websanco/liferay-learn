@@ -39,12 +39,11 @@
        Only links and buttons with an ID attribute can be selected as a target for the click goal. The click target element applies to the whole A/B Test, and therefore it must be present in all variants.
     ```
 
+    <!-- Hey Jorge, I replaced the note above with the original text because I'm not sure where you heard that "You can select any clickable element with an ID attribute." Did someone one the team tell you that it can be any clickable element? If so, please add it back. Thanks! -->
+
     You can edit the target element any time before starting the test.
     
     ![You can edit the target element any time before the test starts.](./creating-ab-tests/images/02.png)
-    
-<!-- Hey Jorge, I replaced this with the original text because I'm not sure where you got this information. Did someone one the team tell you that it can be any clickable element?
-You can select any clickable element with an ID attribute.  -->
 
 1. click *Review and Run Test* to run the test.
 1. Optionally, configure test parameters:
@@ -52,7 +51,7 @@ You can select any clickable element with an ID attribute.  -->
     * *Traffic Split*: The percentage of visitors that are randomly split between the Variants when visiting the page. A visitor is randomly assigned to a Variant and always sees the same Variant until the test is finished.
     * *Confidence Level Required*: Represents the accuracy of your test. The higher the required confidence level, the longer it takes to declare the winning Variant.
 
-    ![You can configure test parameters for A/B Tests.](./creating-ab-tests/images/images/03.png)
+    ![You can configure test parameters for A/B Tests.](./creating-ab-tests/images/03.png)
 
     The *Estimated Time to Declare Winner* provides an estimation of the test duration. This estimation is based on the *Traffic Split* and *Confidence Level Required* configurations, as well as on the estimated page traffic (based on the traffic history provided by Analytics Cloud).
 
@@ -65,7 +64,7 @@ You can select any clickable element with an ID attribute.  -->
 Liferay DXP only shows your test's status and the winning Variant when the test finishes. You can manage the other aspects of your A/B test, including monitoring, in Analytics Cloud. See [A/B Testing Analytics](https://learn.liferay.com/../../../../ab-testing-analytics.md) for more information.
 
 ```note::
-    After you create the test, you can always click the *A/B Testing* flask icon on the Content Page to view the test status and history of completed and terminated A/B tests. In Liferay DXP 7.3+, you can also access the A/B Test panel (via the flask icon) and view the test status through the Experiences dialog for an experience.
+    After you create the test, you can always click the *A/B Testing* flask icon on the Content Page to view the test status and history of completed and terminated A/B tests. Since Liferay DXP 7.3, you can also access the A/B Test panel (via the flask icon) and view the test status for an experience through the `experience selection dialog <../experience-personalization/content-page-personalization.md>`_.
 ```
 
 ## A/B Tests Behavior and Restrictions
