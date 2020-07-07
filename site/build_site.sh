@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eou pipefail
+set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
