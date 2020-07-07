@@ -4,6 +4,30 @@ set -eou pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
+function check_args {
+	if [[ ${#} -eq 0 ]]
+	then
+		return
+	fi
+
+	if [[ ${#} -eq 1 ]]
+	then
+		if [ "${1}" != "prod" ]
+		then
+			echo "Invalid Argument: Pass no arguments to build for dev, or pass \"prod\" to build for production."
+
+			exit 1
+		fi
+	fi
+
+	if [[ ${#} -gt 1 ]]
+	then
+		echo "Too Many Arguments: Pass no arguments to build for dev, or pass \"prod\" to build for production."
+
+		exit 1
+	fi
+}
+
 function check_utils {
 
 	#
@@ -22,6 +46,11 @@ function configure_env {
 	# sudo dnf install python3-sphinx
 	#
 
+	if [ "${1}" == "prod" ]
+	then
+		rm -fr venv
+	fi
+
 	python3 -m venv venv
 
 	source venv/bin/activate
@@ -35,6 +64,11 @@ function generate_sphinx_input {
 	rm -fr build
 
 	cd ../docs
+
+	if [ "${1}" == "prod" ]
+	then
+		git clean -dfx .
+	fi
 
 	./update_examples.sh && ./update_permissions.sh
 
@@ -141,16 +175,11 @@ function get_product_version_language_dir_name {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	set_build_type $@
+	check_args "${@}"
 
-	if [[ ${build_type} == "prod" ]]
-	then
-		clean_for_prod
-	fi
+	configure_env ${1}
 
-	configure_env
-
-	generate_sphinx_input
+	generate_sphinx_input ${1}
 
 	generate_static_html
 
@@ -158,47 +187,13 @@ function main {
 }
 
 function pip_install {
-	for package_name in "$@"
+	for package_name in "${@}"
 	do
 		if [[ -z `pip3 list --disable-pip-version-check --format=columns | grep ${package_name}` ]]
 		then
 			pip3 install --disable-pip-version-check ${package_name}
 		fi
 	done
-}
-
-function clean_for_prod {
-	rm -fr venv
-
-	pushd ../docs
-
-	git clean -dfx .
-
-	popd
-}
-
-function set_build_type {
-	if [[ $# -eq 0 ]]
-	then
-		build_type="dev"
-	fi
-
-	if [[ $# -eq 1 ]]
-	then
-		build_type=$1
-
-		if [[ ${build_type} != "prod" ]]
-		then
-			echo "Invalid Argument: Pass no arguments to build for dev, or pass \"prod\" to build for production."
-			exit 1
-		fi
-	fi
-
-	if [[ $# -gt 1 ]]
-	then
-		echo "Too Many Arguments: Pass no arguments to build for dev, or pass \"prod\" to build for production."
-		exit 1
-	fi
 }
 
 function upload_to_server {
