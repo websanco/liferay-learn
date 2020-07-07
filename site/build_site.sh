@@ -57,7 +57,15 @@ function configure_env {
 
 	check_utils pip3 zip
 
-	pip_install recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+	pip_install nodeenv recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+
+	# this tool installs a npm environment within our virtual environment. unfortunately it seems to reinstall node every time you run this command, so it is slow. i don't like it for anything but production.
+	nodeenv -p --prebuilt
+
+	# i seem to need to reactivate the python virtual environment for it to work.
+	source venv/bin/activate
+
+	npm_install yo generator-liferay-theme@10.x.x
 }
 
 function generate_sphinx_input {
@@ -184,6 +192,16 @@ function main {
 	generate_static_html
 
 	upload_to_server
+}
+
+function npm_install {
+	for package_name in "${@}"
+	do
+		if [[ -z `npm list --parseable --no-versions --depth=0 --loglevel silent | grep ${package_name}` ]] 
+		then
+			npm install -g ${package_name}
+		fi
+	done
 }
 
 function pip_install {
