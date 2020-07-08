@@ -62,28 +62,26 @@ function configure_env {
 	if [ "${1}" == "prod" ]
 	then
 		nodeenv -p
-	else
-		nodeenv -p --node=system
+
+		source venv/bin/activate
+
+		npm_install yo generator-liferay-theme
 	fi
-
-	source venv/bin/activate
-
-	npm_install yo generator-liferay-theme
 }
 
 function generate_sphinx_input {
 	rm -fr build
 
-	cd ../docs
-
 	if [ "${1}" == "prod" ]
 	then
+		pushd ../docs
+
 		git clean -dfx .
+
+		./update_examples.sh && ./update_permissions.sh
+
+		pushd ../site
 	fi
-
-	./update_examples.sh && ./update_permissions.sh
-
-	cd ../site
 
 	for docs_dir_name in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n"`
 	do
