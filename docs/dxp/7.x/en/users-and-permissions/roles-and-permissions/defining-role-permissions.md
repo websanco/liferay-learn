@@ -75,6 +75,14 @@ Don't limit yourself to just one category: when defining a custom Role you can m
 
 You may find that a certain permission grants more or less access than what you expected---always test your permissions configurations! 
 
+## Troubleshooting: Site Roles Sometimes Require Global View Permissions
+
+A Site Role cannot, by definition, define permissions to act on entities outside the Site scope. This can be problematic when defining administrative type permissions in a custom Role. For example, if you try to duplicate the default Site Administrator Role in a Custom Site Administrator Role, you'll find that adding all the _Site and Asset Library Permissions_ &rarr; _People_ &rarr; _Membership_ permissions isn't enough to assign new members to the site. There will be no Users visible to the Custom Site Administrator. To grant the proper permissions, you'll need a Regular Role on top of the Site Role. Give the Regular Role View permission on the User resource (from the Define Permissions section of the Roles application, go to _Control Panel_ &rarr; _Users_ &rarr; _Users and Organizations_). Users with the Site Role and the Regular Role can now see the Users in the system and add them to the Site.
+
+```note::
+   The built-in Site Administrator Role automatically grants permission to view Users.
+```
+
 ## Delegating Social Activities Configuration
 
 There's a permission that allows Site administrators to delegate to other Users responsibility for configuring social activities. To add this permission to a Role, click *Actions* next to the desired Role and select *Define Permissions*. Find the *Site Administration* &rarr; *Configuration* &rarr; *Social Activity* permissions category. Flag all of the permissions and then click *Save*:

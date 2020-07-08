@@ -20,6 +20,10 @@ All roles available in a Liferay DXP installation can be viewed in the Roles adm
 
 **Site Administrator:** The Site Administrator Role grants permission to manage *almost* all aspects of a Site including Site content, Site memberships, and Site settings. Site Administrators cannot delete the membership of or remove Roles from other Site Administrators or Site Owners. They also *cannot* assign other Users as Site Administrators or Site Owners.
 
+```note::
+   The built-in Site Administrator Role intentionally grants a permission that is not normally possible for a Site-scoped Role: Site Administrators can view Users that are not yet part of the Site. This view permission is required to add Users to the Site. A custom Site Role cannot duplicate this ability because of the Regular-scoped permission that's required: `View Users`. Therefore, to duplicate the Site Administrator's permissions within a custom Role, you must create two Roles: the Site Role and a separate `Regular Role with permission <./defining-role-permissions.md>`__ to view the globally scoped User resource.
+```
+
 **Site Owner:** The Site Owner Role is the same as the Site Administrator Role except that it grants permission to manage *all* aspects of a Site, including permission to delete the membership of or remove Roles from Site Administrators or other Site Owners. They *can* assign other Users as Site Administrators or Site Owners.
 
 ## Organization Roles
