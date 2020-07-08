@@ -1,6 +1,8 @@
 # Managing Channels
 
-This article describes how to manage Channels in Liferay Commerce. To learn about the uses for Channels in Liferay Commerce, see: [Introduction to Channels](./introduction-to-channels.md).
+This article describes how to manage Channels in Liferay Commerce. To learn about the uses for Channels in Liferay Commerce, see: [Introduction to Channels](./introduction-to-channels.md) and the [Channels Reference Guide](./channels-reference-guide.md).
+
+By default, a channel is created if using an accelerator (for example, Minium) to jump-start a store site.
 
 ## Adding a New Channel
 
@@ -22,3 +24,4 @@ The channel is created and associated with the selected site. Products may now b
 
 * [Introduction to Channels](./introduction-to-channels.md)
 * [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)
+* [Channels Reference Guide](./channels-reference-guide.md)
