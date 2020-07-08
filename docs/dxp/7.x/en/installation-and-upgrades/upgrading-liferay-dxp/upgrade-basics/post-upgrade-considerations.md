@@ -19,7 +19,7 @@ Reindex your search indexes in the Control Panel by navigating to *Search* &rarr
 ![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/01.png)
 
 ```note::
-   If you upgraded from an older version (7.1 and below) consider `installing Elasticsearch <https://help.liferay.com/hc/en-us/articles/360029031631-Elasticsearch>`_ to handle search indexing.
+   If you upgraded from an older version (7.1 and below) consider `installing Elasticsearch <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ to handle search indexing.
 ```
 
 ### Database Configurations

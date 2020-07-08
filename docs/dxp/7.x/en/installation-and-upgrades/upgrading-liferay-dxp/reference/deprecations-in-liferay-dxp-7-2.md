@@ -19,24 +19,24 @@ The deprecations in DXP 7.2 are as follows:
 
 | Feature |  Availability |  Notes |
 | --- | ------------- | ------ |
-| AlloyUI | Bundled | Replaced by [MetalJS](https://metaljs.com/) (temporary) exposed as [ClayUI tag](https://help.liferay.com/hc/en-us/articles/360028832192-Front-End-Taglibs) equivalents. |
-| CMIS Store | Archived | Migrate to another [Document Repository Store option](https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration). Before [upgrading to DXP 7.2](../upgrade-basics/upgrade-overview.md), migrate your document store data using [Data Migration in Server Administration](https://help.liferay.com/hc/en-us/articles/360029131691-Server-Administration). |
-| JCRStore | Archived | Migrate to another [Document Repository Store option](https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration). Before [upgrading to DXP 7.2](../upgrade-basics/upgrade-overview.md), migrate your document store data using [Data Migration in Server Administration](https://help.liferay.com/hc/en-us/articles/360029131691-Server-Administration). |
-| Legacy Search Portlet | Bundled | Will be archived in a future release. This will be replaced by the [Search widgets](https://help.liferay.com/hc/en-us/articles/360029133791-Introduction-to-Search). |
+| AlloyUI | Bundled | Replaced by [MetalJS](https://metaljs.com/) (temporary) exposed as [ClayUI tag](https://clayui.com/) equivalents. |
+| CMIS Store | Archived | Migrate to another [File Store option](../../../system-administration/file-storage/configuring-file-storage.md). Before [upgrading to DXP 7.2](../upgrade-basics/upgrade-overview.md), [migrate your File Store data](../../../system-administration/file-storage/file-store-migration.md). |
+| JCRStore | Archived | Migrate to another [File Store option](../../../system-administration/file-storage/configuring-file-storage.md). Before [upgrading to DXP 7.2](../upgrade-basics/upgrade-overview.md), [migrate your File Store data](../../../system-administration/file-storage/file-store-migration.md). |
+| Legacy Search Portlet | Bundled | Will be archived in a future release. This will be replaced by the [Search widgets](../../../using-search/search-pages-and-widgets/search-results/search-results.md). |
 | Sprite framework | Bundled | Liferay's image sprite framework is deprecated and is disabled by default via the `sprite.enabled` [portal property](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html). You can still build image sprites using any framework you like and deploy them in your plugins. |
 
 ## Personalization
 
 | Feature |  Availability |  Notes |
 | --- | ------------- | ------ |
-| Audience Targeting | Archived | Replaced by [Personalization](https://help.liferay.com/hc/en-us/articles/360028721372-Introduction-to-Segmentation-and-Personalization) (see [Migrating from Audience Targeting](./96-migrating-from-audience-targeting/01-migrating-from-audience-targeting.md)). |
+| Audience Targeting | Archived | Replaced by [Personalization](../../../site-building/personalizing-site-experience/personalizing-site-experience.html) (see [Migrating from Audience Targeting](https://help.liferay.com/hc/en-us/articles/360028711992-Manually-Migrating-from-Audience-Targeting)). |
 
 ## Web Experience
 
 | Feature |  Availability |  Notes |
 | --- | ------------- | ------ |
 | RSS Publisher | Bundled | See [the article](https://help.liferay.com/hc/en-us/articles/360028820672-The-RSS-Publisher-Widget) on enabling and using this widget. |
-| User Group Pages (Copy Mode) | Bundled | See the [Legacy User Group Sites Behavior](https://help.liferay.com/hc/en-us/articles/360028819172-User-Group-Sites#legacy-user-group-sites-behavior) instructions on how to enable it. |
+| User Group Pages (Copy Mode) | Bundled | See the [Legacy User Group Sites Behavior](../../../users-and-permissions/user-groups/user-group-sites.md) instructions on how to enable it. |
 | Resources Importer | Bundled | Deprecated as of 7.1 with no direct replacement |
 
 ## Forms
@@ -55,16 +55,16 @@ The deprecations in DXP 7.2 are as follows:
 
 | Feature |  Availability |  Notes |
 | --- | ------------------ | ----------- |
-| Central Authentication Service | Bundled | Migrate to [SAML based authentication](https://help.liferay.com/hc/en-us/articles/360028711032-Introduction-to-Authenticating-Using-SAML). |
-| Google Login | Marketplace | Replaced by [OpenID Connect](https://help.liferay.com/hc/en-us/articles/360028711312-Authenticating-with-OpenID-Connect). |
-| NTLM | Marketplace | Replaced by [Kerberos](https://help.liferay.com/hc/en-us/articles/360029031831-Authenticating-with-Kerberos). |
+| Central Authentication Service | Bundled | Migrate to [SAML based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
+| Google Login | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). |
+| NTLM | Marketplace | Replaced by [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). |
 | OAuth 1.0a | Marketplace | Replaced by OAuth 2.0, which is included in the bundle. |
-| OpenAM / OpenSSO | Bundled | Migrate to [SAML based authentication](https://help.liferay.com/hc/en-us/articles/360028711032-Introduction-to-Authenticating-Using-SAML). |
-| OpenID | Marketplace | Replaced by [OpenID Connect](https://help.liferay.com/hc/en-us/articles/360028711312-Authenticating-with-OpenID-Connect). |
+| OpenAM / OpenSSO | Bundled | Migrate to [SAML based authentication](../../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
+| OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). |
 
 ### Switching from NTLM to Kerberos
 
-If you're using NTLM to authenticate Microsoft Windows™ accounts with Liferay DXP, switch to using [Kerberos](https://help.liferay.com/hc/en-us/articles/360029031831-Authenticating-with-Kerberos). Security vulnerabilities persist with NTLM. NTLM has been deprecated and removed from the bundle, but you can still [build and deploy the module](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/portal-security-sso-ntlm).
+If you're using NTLM to authenticate Microsoft Windows™ accounts with Liferay DXP, switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). Security vulnerabilities persist with NTLM. NTLM has been deprecated and removed from the bundle, but you can still [build and deploy the module](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/portal-security-sso-ntlm).
 
 ## User and System Management
 
