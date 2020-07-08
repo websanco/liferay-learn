@@ -65,7 +65,7 @@ function configure_env {
 
 		source venv/bin/activate
 
-		npm_install yo generator-liferay-theme
+		npm_install generator-liferay-theme yo
 	fi
 }
 
