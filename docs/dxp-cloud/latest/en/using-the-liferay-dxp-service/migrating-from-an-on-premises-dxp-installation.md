@@ -15,10 +15,14 @@ This step should be done when the database is not being updated in order to prev
 
 ### Export a Database Dump
 
-Begin by exporting the data to a database dump. The export from MySQL can be accomplished using the following command:
+Begin by exporting the data to a database dump. The export from MySQL can be accomplished using the following commands:
 
 ```bash
 mysqldump -uroot -ppassword --databases --add-drop-database lportal | gzip -c | cat > database.gz
+```
+
+```bash
+tar zcvf database.tgz database.gz
 ```
 
 ```important::
@@ -51,7 +55,7 @@ Run this command to invoke the API and upload the zipped files:
 curl -X POST \
   https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
-  -F 'database=@/my-folder/database.gz' \
+  -F 'database=@/my-folder/database.tgz' \
   -F 'volume=@/my-folder/volume.tgz' \
   -u user@domain.com:password
 ```
@@ -69,18 +73,21 @@ Once these are uploaded, the backup service will initialize a DXP Cloud backup.
 Portal properties and OSGi configurations can be copied over to DXP Cloud by putting them into the appropriate folder per environment (e.g., `dev`, `uat`, or `prd`, or `common` to apply to all) inside of `lcp/liferay/config/`.
 
 ```
-    |-- lcp
-        |-- liferay
-            |-- LCP.json
-            |-- config
-                |-- common
-                |-- dev
-                |-- local
-                |-- prd
-                |-- uat
+liferay
+  ├── configs
+  |   ├── common
+  |   ├── dev
+  |   ├── local
+  |   ├── prd
+  |   └── uat
+  └── LCP.json
 ```
 
 Any portal properties of the form `portal-*.properties` placed in one of the appropriate folders will be automatically copied over to the `$LIFERAY_HOME` within the Liferay DXP service for the applicable environment(s). OSGi properties (.cfg or .config files) will be copied over to the `osgi/configs` folder within the Liferay DXP service for the applicable environment(s).
+
+```note::
+   If you are still using version 3.x services, then these configuration files instead belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder in your repository.
+```
 
 ## Add Service Configurations
 

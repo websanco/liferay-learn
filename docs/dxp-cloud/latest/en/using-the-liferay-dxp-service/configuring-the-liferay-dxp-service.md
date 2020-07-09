@@ -1,26 +1,33 @@
 # Configuring the Liferay DXP Service
 
-There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `config` folders in the Liferay DXP service directory in your repository.
+There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
 
 ```
-lcp
-└── liferay
-  ├── LCP.json
-  └── config
-    ├── common
-    ├── dev
-    ├── local
-    ├── prd
-    └── uat
+liferay
+├── configs
+│   ├── common
+│   ├── dev
+│   ├── local
+│   ├── prd
+│   └── uat
+└── LCP.json
 ```
 
-With the exception of the `common/` directory, changes added to a given service's environment folder (e.g., `dev`, `uat`, `prod`) will _only_ be propagated when deploying to the corresponding environment. Changes added to the `common/` directory will _always_ be deployed, regardless of the target deployment environment. This applies to the `config`, `deploy`, `license`, and `script` directories within `lcp/liferay/`.
+With the exception of the `common/` directory, changes added to an environment-specific folder (e.g., `dev`, `uat`, `prod`) will _only_ be propagated when deploying to the corresponding environment. Changes added to a `common/` directory will _always_ be deployed, regardless of the target deployment environment. This applies to all subfolders within the `configs/` directory, for all services.
+
+```note::
+   If you are still using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder.
+```
 
 ## Portal Properties
 
 [Portal properties](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html) are files of the form `portal-*.properties` that are used to configure your Liferay DXP environment.
 
-In an on-site Liferay DXP instance, these files belong inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place these files into the appropriate `config` folder(s) for them to be copied into `$LIFERAY_HOME` for the Liferay DXP instance on deployment.
+In an on-site Liferay DXP instance, these files belong inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place these files into the appropriate `configs/{ENV}/` folder(s) for them to be copied into `$LIFERAY_HOME` for the Liferay DXP instance on deployment.
+
+```note::
+   If you are still using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder.
+```
 
 These are the types of portal properties files you may use in one of the `config` folders:
 
@@ -40,7 +47,11 @@ These are the types of portal properties files you may use in one of the `config
 
 OSGi configurations (`.cfg` or `.config` files) are used to configure OSGi components in Liferay DXP.
 
-These configuration files belong in the `/osgi/configs` folder inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place these files into the appropriate `config` folder(s) for them to be copied into `/osgi/configs` for the Liferay DXP instance on deployment.
+These configuration files belong in the `osgi/configs/` folder inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place these files into the appropriate `configs/{ENV}/osgi/` folder(s) for them to be copied into `/osgi/configs` for the Liferay DXP instance on deployment.
+
+```note::
+   If you are still using version 3.x.x services, then OSGi configuration files instead belong in the appropriate ``config/{ENV/`` folder within the Liferay service directory.
+```
 
 ## Additional Information
 

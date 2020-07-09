@@ -10,15 +10,21 @@ services in your application, not with the outside internet.
 
 Although DXP Cloud's services are fine-tuned to work well by default, you may 
 need to configure Elasticsearch further. To do so, you can include any YML file 
-inside the `config` folder. When you deploy your changes, the file is 
+inside the appropriate `configs/{ENV}/config/` folder. When you deploy your changes, the file is 
 automatically injected into your service and overwrites the default 
 configuration. Here's an example folder structure of such a file inside the 
-`config` folder: 
+correct folder: 
 
     search
-    ├── config
-    │ └── elasticsearch.yml
+    ├── configs
+    │   └── common
+    │       └── config
+    │           └── elasticsearch.yml
     └── LCP.json
+
+```note::
+   If you are still using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/search/config/{ENV}/`` folder.
+```
 
 ## Scripts
 
@@ -26,24 +32,34 @@ You can use scripts for more extensive customizations. However, use caution when
 doing so. This is the most powerful way to customize the search service and can 
 cause undesired side effects. 
 
-Any `.sh` files found in the `script` folder are run prior to starting your 
+Any `.sh` files found in a `scripts/{ENV}/scripts/` folder are run prior to starting your 
 service. For example, to include a script that removes all log files, you could 
 place it in this directory structure: 
 
     search
-    ├── script
-    │ └── remove-log-files.sh
+    ├── configs
+    │   └── common
+    │       └── scripts
+    │           └── elasticsearch.yml
     └── LCP.json
+
+```note::
+   If you are still using version 3.x.x services, then these scripts instead belong in the appropriate ``lcp/search/script/{ENV}/`` folder.
+```
 
 ## Deploying a License to the Search Service
 
 To deploy a license to the search service, you must create the path 
-`lcp/search/license/common` and put your license file there. 
+`search/configs/{ENV}/license/` and put your license file there.
+
+```note::
+   If you are still using version 3.x.x services, then instead put your license file in a ``lcp/search/license/common/` folder.
+```
 
 ## Environment Variables Reference
 
 All environment variables and other forms of configuration for Elastisearch are in the [official Elastisearch documentation](https://www.elastic.co/guide/index.html).
-You can set such configurations and environment variables in the `config` directory and `LCP.json`, respectively. Examples include:
+You can set such configurations and environment variables in the `configs/{ENV}/config/` directory and `LCP.json`, respectively. Examples include:
 
 | Name | Value | Description |
 | --- | --- | --- |

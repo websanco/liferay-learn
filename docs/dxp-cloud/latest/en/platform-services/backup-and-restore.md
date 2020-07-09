@@ -46,18 +46,10 @@ The following formats are supported for SQL scripts:
 
 Note that scripts are run in alphanumerical order when they are executed. SQL scripts must also reference the exact database to run on (for example, with `USE lportal;` or `lportal.User_`).
 
-Place the scripts into the subfolder for the appropriate environment within `lcp/backup/script/`:
+Place the scripts into the appropriate, environment-specific `backup/configs/{ENV}/scripts/` folder.
 
-```
-lcp
-└── backup
-    ├── LCP.json
-    └── script
-        ├── common
-        ├── dev
-        ├── local
-        ├── prd
-        └── uat
+```note::
+   If you are still using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder.
 ```
 
 ### Performing the Data Restore

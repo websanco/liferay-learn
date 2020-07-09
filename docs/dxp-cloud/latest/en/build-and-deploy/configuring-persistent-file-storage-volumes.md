@@ -3,7 +3,9 @@
 Administrators can configure the volumes for their services in DXP Cloud depending on their deployment type (`Deployment` or `StatefulSet`). Volumes can be stored either with persistent shared storage (NFS) or with dedicated storage (SSD), depending on the deployment type. This article documents how to configure volumes via a service's `LCP.json` file. See [Understanding Deployment Types](./understanding-deployment-types.md) for more information on deplyoment types.
 
 1. Choose the folders that contain the data to be persisted (for example `/liferay/opt/data`).
-1. Navigate to the `LCP.json` file in the repository for the specific environment (for example, `lcp/liferay`).
+
+1. Navigate to the `LCP.json` file in the repository for the specific environment (for example, `liferay/`).
+
 1. Add the `volumes` configuration to the `LCP.json` file. This configuration must contain a key for each volume. For example, the following configuration contains a `data` key for `/liferay/opt/data`:
 
 ```json
@@ -17,13 +19,18 @@ Administrators can configure the volumes for their services in DXP Cloud dependi
 }
 ```
 
+```note::
+   If you are still using version 3.x.x services, then the ``LCP.json`` file for the ``liferay`` service is instead located in the ``lcp/liferay/`` directory.
+```
+
 ## Sharing Volumes Between Different Services
 
 Volumes are shared between all instances within a single service, but only volumes in `Deployment` type services may be shared with other services in the same environment using NFS. Volumes shared in this way are persisted even if the services are deleted, because they will be stored in NFS.
 
 To share a volume:
 
-1. Navigate to the `LCP.json` file in the Github repository for the service (`[ProjectID]/lcp/liferay/LCP.json`).
+1. Navigate to the `LCP.json` file in the Github repository for the service (`[ProjectID]/liferay/LCP.json`).
+
 1. Enter the following:
      * service's ID
      * location (absolute path) of the content to be shared

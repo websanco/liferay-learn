@@ -16,28 +16,29 @@ The repository provides the following:
 * Shared version control for configuration and customizations of DXP Cloud services. 
 * Single source of truth for DXP Cloud project deployments. 
 
-With the exception of the `common` folder, changes added to a given service's environment folder (e.g., `dev`, `uat`, `prd`) are only propagated when deploying to the corresponding environment. Changes added to `common` are always deployed regardless of the target deployment environment. See [Deployment](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deployment-customization-patching-and-licensing) for more information.
+With the exception of the `common/` directory, changes added to an environment-specific folder (e.g., `dev`, `uat`, `prod`) will _only_ be propagated when deploying to the corresponding environment. Changes added to a `common/` directory will _always_ be deployed, regardless of the target deployment environment. This applies to all subfolders within the `configs/` directory, for all services. See [Deployment](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deployment-customization-patching-and-licensing) for more information.
 
 ### Code Additions
 
-The source for new code additions must be added to folders at the root of the
-repository: 
+The source for new code additions must be added to folders in the repository's `liferay/` directory: 
 
 * The `modules` folder for new modules
 * The `themes` folder for custom themes
 * The `wars` folder for exploded WARs 
 
-When the build is deployed, code changes in any of these locations are 
-automatically compiled and added to the Liferay DXP service. 
+When the build is deployed, code changes in any of these locations are automatically compiled and added to the Liferay DXP service.
+
+```note::
+   If you are still using version 3.x.x services, then these folders are instead located at the root of the repository.
+```
 
 ### Compiled Additions
 
-You can add compiled files (e.g., pre-built JARs or LPKGs) to a service's 
-`deploy` folder. When the build is deployed to an environment, these files are 
-copied to the corresponding folder within `$LIFERAY_HOME` (depending on the file 
-type). For example, adding a JAR file
-to `lcp/liferay/deploy/common/` will result in the file being copied to
-`$LIFERAY_HOME/osgi/modules/` for any environment the build is deployed to. 
+You can add compiled files (e.g., pre-built JARs or LPKGs) to a `liferay/configs/{ENV}/deploy/` folder. When the build is deployed to an environment, these files are copied to the corresponding folder within `$LIFERAY_HOME` (depending on the file type). For example, adding a JAR file to `liferay/configs/common/deploy/` will result in the file being copied to `$LIFERAY_HOME/osgi/modules/` for any environment the build is deployed to. 
+
+```note::
+   If you are still using version 3.x.x services, then these additions are instead added to the appropriate ``lcp/liferay/deploy/{ENV}`` folder.
+```
 
 ## Build and Test
 
