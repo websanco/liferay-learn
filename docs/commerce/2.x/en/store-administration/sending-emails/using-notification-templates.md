@@ -97,8 +97,9 @@ To create email notifications in Commerce 2.0 and below:
 
 1. Click _Save_.
 
-The new Notification Template has been saved and your store will send an automated email to buyers after the store has received their order. Once the template is created, a new notification is added to the notification queue whenever an order is placed. Check the _Notifications Queue_ sub-tab when an order has been placed. Liferay Commerce checks the queue at specified intervals to send any unsent notifications.
+The new Notification Template has been saved and your store will send an automated email to buyers after the store has received their order. Once the template is created, a new notification is added to the notification queue whenever an order is placed. Check the _Notifications Queue_ sub-tab when an order has been placed. By default Liferay Commerce checks the queue every 15 minutes to send any unsent notifications. To learn how to change the interval, see [Configuring the Commerce Notification Queue](./configuring-the-commerce-notification-queue.md).
 
 ## Additional Information
 
 * [Notification Template Variables Reference Guide](./notification-template-variables-reference-guide.md)
+* [Configuring the Commerce Notification Queue](./configuring-the-commerce-notification-queue.md)
