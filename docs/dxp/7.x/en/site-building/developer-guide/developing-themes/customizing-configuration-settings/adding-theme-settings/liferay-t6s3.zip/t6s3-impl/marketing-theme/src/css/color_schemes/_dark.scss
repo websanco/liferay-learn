@@ -1,0 +1,16 @@
+body.dark{
+  .navbar.navbar-classic {
+    background-color: #B9AAC5;
+  }  
+  .navbar-light .navbar-nav .nav-link:hover, 
+  .navbar-light .navbar-nav .nav-underline .tab a:hover, 
+  .nav-underline .tab .navbar-light .navbar-nav a:hover, 
+  .navbar-light .navbar-nav .nav-link:focus, 
+  .navbar-light .navbar-nav .nav-underline .tab a:focus, 
+  .nav-underline .tab .navbar-light .navbar-nav a:focus {
+    color: #FFF;
+  }
+  #footer {
+    background-color: #716C7F;
+  }
+}
