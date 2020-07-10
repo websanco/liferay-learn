@@ -9,7 +9,7 @@ This article will walk you through the steps to deploy a sample module similarly
 
 ## Prerequisites
 
-In order to get started, we will need the following:
+In order to get started, you will need the following:
 
 * A sample module
 * A configured DXP Cloud Git repository
@@ -26,14 +26,18 @@ Develop or use an existing module to deploy in this tutorial. This tutorial will
 
 ## Add the Sample to the Repository
 
-Begin the deployment life cycle by adding your sample module into the Git repository. Add the JAR to the appropriate `deploy` folder within `lcp/liferay`. For this tutorial, choose the folder for a development environment (e.g., `dev`):
+Begin the deployment life cycle by adding your sample module into the Git repository. Add the JAR to the appropriate `deploy` folder within `liferay/configs/{ENV}/deploy/`. For this tutorial, choose the folder for a development environment (e.g., `dev`):
 
 ```bash
-cp path-to-module/my-module my-repository-path/lcp/liferay/deploy/dev
+cp path-to-module/my-module my-repository-path/liferay/configs/dev/deploy
 ```
 
 ```note::
    This tutorial will assume your development environment is named ``dev``, by default. If your development environment is named differently, substitute ``dev`` with the correct name.
+```
+
+```note::
+   If you are still using version 3.x.x services, then the appropriate ``deploy/`` folder instead is in ``lcp/liferay/``. The environment-specific folder is also inside of ``deploy/``, so the path to use in the repository in this case is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <#project-version-3-differences>`__ for more information on the differences in the directory structure.
 ```
 
 ## Deploy the Sample to the Development Environment
@@ -84,23 +88,9 @@ Click "Deploy Build to..." for any successful build to deploy to the environment
 
 ![Choosing an environment for deployment](./walking-through-the-deployment-life-cycle/images/04.png)
 
-### Deploy Using the CLI
+### Preparing LCP.json Files in Project Version 3
 
-Developers may use the DXP Cloud CLI tool to directly deploy to services if desired.
-
-First, ensure that you have the DXP Cloud CLI installed:
-
-```bash
-lcp version
-```
-
-```bash
-Liferay Cloud Platform CLI version 2.1.2 linux/amd64
-Build commit: 59e244b342d7b119f8e77eb94c6486f8049ca2b3
-Build time: Wed Jul 10 01:59:00 UTC 2019
-```
-
-If not, see the [Command Line Tool](../reference/command-line-tool.md) article for more information about installation and usage.
+If you are still using version 3.x.x services in your project, then you must first update the `LCP.json` files in your project to deploy using the CLI tool. Otherwise, skip to [the next section](#deploy-using-the-cli) to proceed.
 
 Open the `gradle.properties` at the root of your repository, and find properties for the Docker image versions for each of your services, like the following:
 
@@ -125,17 +115,39 @@ For example, use the value from the `liferay.workspace.lcp.search.image` propert
 "image": "@liferay.workspace.lcp.search.image@",
 ```
 
-To begin deploying the module, first navigate with your command prompt to the `lcp` directory. This is necessary to allow the CLI to traverse this directory for your changes.
+```important::
+   In project version 3, you must also navigate to the `lcp` directory in your repository before running the tool, so that it can traverse the directory and find your services' `LCP.json` files.
+```
+
+### Deploy Using the CLI
+
+Developers may use the DXP Cloud CLI tool to directly deploy to services if desired.
+
+First, ensure that you have the DXP Cloud CLI installed:
 
 ```bash
-cd lcp
+lcp version
 ```
+
+```bash
+Liferay Cloud Platform CLI version 2.1.2 linux/amd64
+Build commit: 59e244b342d7b119f8e77eb94c6486f8049ca2b3
+Build time: Wed Jul 10 01:59:00 UTC 2019
+```
+
+If not, see the [Command Line Tool](../reference/command-line-tool.md) article for more information about installation and usage.
+
+To begin deploying the module, run the `lcp deploy` command within your repository:
 
 ```bash
 lcp deploy --project=<project-name> --environment=dev
 ```
 
 ![Deploying through the CLI](./walking-through-the-deployment-life-cycle/images/05.png)
+
+```tip::
+   You can omit the ``--project`` and ``--environment`` parameters from the command usage, as well. Without these parameters, the tool will instead prompt you to enter them while it is running.
+```
 
 Once the command finishes running, the module will be copied to the chosen environment. The affected services will need some time to restart and apply the new module to the Docker images.
 
@@ -165,9 +177,11 @@ When the `webserver` service is ready to use, navigate to it, and then click on 
    You can also go directly to ``https://webserver-<project-name>-<environment>.lfr.cloud/`` to get to the same location.
 ```
 
-You can use the Gogo shell to easily confirm whether your module was deployed. Navigate to the Control Panel → Configuration → Gogo Shell. From here, use this command to check whether the module has been deployed:
+You can use the Gogo shell to easily confirm whether your module was deployed. Navigate to the _Control Panel_ → _Configuration_ → _Gogo Shell_. From here, enter this command to check whether the module has been deployed:
 
-`lb | grep "my.module.name"`
+```
+lb | grep "my.module.name"`
+```
 
 ![Verifying module deployment](./walking-through-the-deployment-life-cycle/images/08.png)
 
