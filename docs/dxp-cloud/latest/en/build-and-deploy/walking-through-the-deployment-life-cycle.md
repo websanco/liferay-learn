@@ -1,6 +1,6 @@
 # Walking Through the Deployment Life Cycle
 
-This article will walk you through the steps to deploy a sample module similarly to a normal deployment workflow. See [Overview of the DXP Cloud Development Workflow](./overview-of-the-dxp-cloud-deployment-workflow.md) for a more comprehensive explanation of the different steps of this workflow.
+This article walks through the steps to deploy a sample module using a typical deployment workflow. See [Overview of the DXP Cloud Development Workflow](./overview-of-the-dxp-cloud-deployment-workflow.md) for a more comprehensive explanation of the different steps of this workflow.
 
 1. [Prerequisites](#prerequisites)
 1. [Add the Sample to the Repository](#add-the-sample-to-the-repository)
@@ -9,7 +9,7 @@ This article will walk you through the steps to deploy a sample module similarly
 
 ## Prerequisites
 
-In order to get started, you will need the following:
+In order to get started, you need the following:
 
 * A sample module
 * A configured DXP Cloud Git repository
@@ -20,9 +20,9 @@ You must have your GitHub repository configured. See [Configuring Your GitHub Re
 
 ### Sample Module
 
-A sample module compiled into a JAR will be necessary for this tutorial. You can proceed through this walkthrough using any module.
+A sample module compiled into a JAR is be necessary for this tutorial. You can proceed through this walkthrough using any module.
 
-Develop or use an existing module to deploy in this tutorial. This tutorial will use the sample "JSP Portlet" from the [Liferay Blade Samples](https://github.com/liferay/liferay-blade-samples) repository.
+Develop or use an existing module to deploy in this tutorial. This tutorial uses the sample "JSP Portlet" from the [Liferay Blade Samples](https://github.com/liferay/liferay-blade-samples) repository.
 
 ## Add the Sample to the Repository
 
@@ -33,11 +33,11 @@ cp path-to-module/my-module my-repository-path/liferay/configs/dev/deploy
 ```
 
 ```note::
-   This tutorial will assume your development environment is named ``dev``, by default. If your development environment is named differently, substitute ``dev`` with the correct name.
+   This tutorial assumes your development environment is named ``dev``, by default. If your development environment is named differently, substitute ``dev`` with the correct name.
 ```
 
 ```note::
-   If you are still using version 3.x.x services, then the appropriate ``deploy/`` folder instead is in ``lcp/liferay/``. The environment-specific folder is also inside of ``deploy/``, so the path to use in the repository in this case is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <#project-version-3-differences>`__ for more information on the differences in the directory structure.
+   If you are using version 3.x.x services, then the appropriate ``deploy/`` folder instead is in ``lcp/liferay/``. The environment-specific folder is also inside of ``deploy/``, so the path to use in the repository in this case is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <#project-version-3-differences>`__ for more information on the differences in the directory structure.
 ```
 
 ## Deploy the Sample to the Development Environment
@@ -64,13 +64,13 @@ git push origin testing-branch
 
 ### Trigger a Build with the Sample
 
-Next, send a pull request to the upstream repository. The CI service will automatically begin a build that you will be able to use for your deployment.
+Next, send a pull request to the upstream repository. The CI service automatically begins a build that can be used for your deployment.
 
 First, navigate to your repository, and create a new pull request for your changes:
 
 ![Pull request button](./walking-through-the-deployment-life-cycle/images/02.png)
 
-Once you have sent the pull request to the upstream repository, the CI service will automatically begin a build that you will be able to use for your deployment.
+Once you have sent the pull request to the upstream repository, the CI service automatically begins a build that can be used for your deployment.
 
 ![PR Triggered Build in CI](./walking-through-the-deployment-life-cycle/images/09.png)
 
@@ -80,7 +80,7 @@ Once you have sent the pull request to the upstream repository, the CI service w
 
 ### Deploy the Build to the Development Environment from the DXP Cloud Management Console
 
-Navigate to the DXP Cloud Management Console, and then go to the `Builds` tab for the desired environment. The option to deploy the build will appear when the build completes successfully; click the three dots to the right side of the build to see the option.
+Navigate to the DXP Cloud Management Console, and then go to the `Builds` tab for the desired environment. The option to deploy the build appears when the build completes successfully; click the three dots to the right side of the build to see the option.
 
 ![Builds](./walking-through-the-deployment-life-cycle/images/03.png)
 
@@ -90,7 +90,7 @@ Click "Deploy Build to..." for any successful build to deploy to the environment
 
 ### Preparing LCP.json Files in Project Version 3
 
-If you are still using version 3.x.x services in your project, then you must first update the `LCP.json` files in your project to deploy using the CLI tool. Otherwise, skip to [the next section](#deploy-using-the-cli) to proceed.
+If you are using version 3.x.x services in your project, then you must first update the `LCP.json` files in your project to deploy using the CLI tool. Otherwise, skip to [the next section](#deploy-using-the-cli) to proceed.
 
 Open the `gradle.properties` at the root of your repository, and find properties for the Docker image versions for each of your services, like the following:
 
@@ -103,7 +103,7 @@ liferay.workspace.lcp.webserver.image=liferaycloud/nginx:1.14.2-3.1.1
 liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 ```
 
-For each of these properties, copy the value and use it to replace the placeholder value for the `image` property in the corresponding service's `LCP.json` file. This will allow the CLI to use the correct Docker images when it searches within the `lcp` directory.
+For each of these properties, copy the value and use it to replace the placeholder value for the `image` property in the corresponding service's `LCP.json` file. This allows the CLI to use the correct Docker images when it searches within the `lcp` directory.
 
 ```note::
    The ``liferay.workspace.lcp.jenkins.image`` property corresponds to the ``ci`` service.
@@ -146,10 +146,10 @@ lcp deploy --project=<project-name> --environment=dev
 ![Deploying through the CLI](./walking-through-the-deployment-life-cycle/images/05.png)
 
 ```tip::
-   You can omit the ``--project`` and ``--environment`` parameters from the command usage, as well. Without these parameters, the tool will instead prompt you to enter them while it is running.
+   You can omit the ``--project`` and ``--environment`` parameters from the command usage, as well. Without these parameters, the tool prompts you to enter them while it is running.
 ```
 
-Once the command finishes running, the module will be copied to the chosen environment. The affected services will need some time to restart and apply the new module to the Docker images.
+Once the command finishes running, the module is copied to the chosen environment. The affected services need some time to restart and apply the new module to the Docker images.
 
 ## Verify the Sample Deployment
 
@@ -157,7 +157,7 @@ Verify that the module was deployed in the `dev` environment by navigating to yo
 
 ### Login Credentials
 
-You will first need the customer user name and password to access the web server; these credentials are shared between all environments.
+You first need the customer user name and password to access the web server; these credentials are shared between all environments.
 
 From the DXP Cloud Management Console, navigate to the `infra` environment → CI service → Environment Variables tab (or go directly to `https://console.liferay.cloud/projects/<project-name>-infra/services/ci/environment-variables`).
 
@@ -169,7 +169,7 @@ From this screen, you can check the `JENKINS_CUSTOMER_USER_NAME` and `JENKINS_CU
 
 Go to `https://console.liferay.cloud/projects/<project-name>-dev/services` to see the status of your services.
 
-When the `webserver` service is ready to use, navigate to it, and then click on the link on the word "webserver" near the top of the page. This will take you to your running Liferay DXP instance through the web server.
+When the `webserver` service is ready to use, navigate to it, and then click on the link on the word "webserver" near the top of the page. This takes you to your running Liferay DXP instance through the web server.
 
 ![Link from the webserver Service](./walking-through-the-deployment-life-cycle/images/07.png)
 
@@ -185,7 +185,7 @@ lb | grep "my.module.name"`
 
 ![Verifying module deployment](./walking-through-the-deployment-life-cycle/images/08.png)
 
-Once you have verified the deployment was successful, you will have completed this tutorial.
+Once you have verified the deployment was successful, you have completed this tutorial.
 
 ## Additional Information
 

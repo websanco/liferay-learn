@@ -23,7 +23,7 @@ correct folder:
     └── LCP.json
 
 ```note::
-   If you are still using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/search/config/{ENV}/`` folder.
+   If you are using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/search/config/{ENV}/`` folder.
 ```
 
 ## Scripts
@@ -44,7 +44,7 @@ place it in this directory structure:
     └── LCP.json
 
 ```note::
-   If you are still using version 3.x.x services, then these scripts instead belong in the appropriate ``lcp/search/script/{ENV}/`` folder.
+   If you are using version 3.x.x services, then these scripts instead belong in the appropriate ``lcp/search/script/{ENV}/`` folder.
 ```
 
 ## Deploying a License to the Search Service
@@ -53,7 +53,7 @@ To deploy a license to the search service, you must create the path
 `search/configs/{ENV}/license/` and put your license file there.
 
 ```note::
-   If you are still using version 3.x.x services, then instead put your license file in a ``lcp/search/license/common/` folder.
+   If you are using version 3.x.x services, then instead put your license file in a ``lcp/search/license/common/` folder.
 ```
 
 ## Environment Variables Reference
