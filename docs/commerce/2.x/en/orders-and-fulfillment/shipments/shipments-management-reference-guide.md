@@ -47,11 +47,7 @@ Next to the corresponding warehouse, users can enter a quantity in the field or 
 
 ![Select the items to be included in this shipment.](./shipments-management-reference-guide/images/05.png)
 
-Lastly, clicking _Finish Processing_ advances to the next phase in shipment processing. There is a validation check when clicking _Finish Processing_: if the _Quantity in Shipment_ value for any SKU is 0, the following error message is displayed:
-
-```error::
-   Error:Please select a valid warehouse and quantity for all shipment items.
-```
+Lastly, clicking _Finish Processing_ advances to the next phase in shipment processing. There is a validation check when clicking _Finish Processing_: if the _Quantity in Shipment_ value for any SKU is 0, the following error message is displayed: `Error: Please select a valid warehouse and quantity for all shipment items.`
 
 ## Ready to Ship Tab
 
