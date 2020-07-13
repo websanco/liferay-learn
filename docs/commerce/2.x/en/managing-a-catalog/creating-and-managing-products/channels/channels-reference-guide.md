@@ -2,7 +2,7 @@
 
 > Commerce 2.1+
 
-Liferay Commerce 2.1+ has implemented many features in the Commerce _Channels_. This article documents all the features available in a channel. To create a channel, see [Managing Channels](./managing-channels.md).
+This article provides an overview to the Channels management inferface. To create a channel, see [Managing Channels](./managing-channels.md).
 
 ## General
 
@@ -16,7 +16,7 @@ The _Details_ section is where the channel's name, currency, and [Commerce Site 
 
 ### Orders
 
-Users can enable a workflow for [buyers and sellers](../../../orders-and-fulfillment/order-workflows/introduction-to-orders-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
+Users can enable a workflow for [buyers and sellers](../../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
 
 ![The Orders tab is where the Workflow is enabled.](./channels-reference-guide/images/02.png)
 
@@ -85,7 +85,7 @@ The Category Display Pages tab displays the list of all Category Display pages c
 To learn more about creating DXP site pages, see [Creating Pages](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html). To learn more about creating Tags and Categories in general, see [Tags and Categories](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/tags_and_categories.html).
 
 ```note::
-   The Minium accelerator auto-generates this tab. If creating the channel manually, this tab appears once there are Category Display Pages.
+   The Minium accelerator generates this tab. If creating the channel manually, this tab appears once there are Category Display Pages.
 ```
 
 ## Product Display Pages
@@ -93,7 +93,7 @@ To learn more about creating DXP site pages, see [Creating Pages](https://learn.
 Product Display Pages operate on a similar premise to Category Display Pages; users can create a specific site page to highlight a specific product instead of the default Catalog page. On the _Product Display Pages_ tab, users can view the list of all Product Display Pages created on the site.
 
 ```note::
-   The Minium accelerator auto-generates this tab. If creating the channel manually, this tab appears once there are Product Display Pages.
+   The Minium accelerator generates this tab. If creating the channel manually, this tab appears once there are Product Display Pages.
 ```
 
 ## Payment Restrictions
@@ -111,4 +111,4 @@ Users can configure which shipment methods are _excluded_ for a specific country
 ## Additional Information
 
 * [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)
-*[Enabling or Disabling Order Workflows](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)
+* [Enabling or Disabling Order Workflows](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)
