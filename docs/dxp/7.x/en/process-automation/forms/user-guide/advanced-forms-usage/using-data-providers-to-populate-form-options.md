@@ -1,18 +1,16 @@
 # Using Data Providers to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md).
-
-This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form. The example below demonstrates how to populate a Select field for a user's "Country" when collecting personal information on a form.
+Liferay Forms' _Select from List_ fields can hold a lot of options and user can auto-populate the select fields by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
 
 ## Prerequisites
 
-1. [Create a form](../../creating-forms.md) that includes the following:
+One example is to populate a Select field for a user's "Country" when collecting personal information on a form.
+
+[Create a form](../../creating-forms.md) that includes the following:
 
 * **Country**: a Single Select field.
 
-## Initial Setup
-
-Invoke the `get-countries` JSON web service (there are two; use either one).
+Next, use the `get-countries` JSON web service (there are two---use either one).
 
 1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
 1. Search for "get-countries".
@@ -21,7 +19,7 @@ Invoke the `get-countries` JSON web service (there are two; use either one).
 
 1. Click _Invoke_.
 
-The list of countries is now ready for use.
+The list of countries are now ready for use.
 
 ### Enabling Access to Data on the Local Network
 
@@ -65,7 +63,7 @@ To add a _Countries of the World_ Data Provider:
 1. Click _Save_ when finished.
 
 ```note::
-   The `$..` before `nameCurrentValue` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
+   `$..` before `nameCurrentValue` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
 ```
 
 ## Using Inputs as Filters
@@ -123,15 +121,14 @@ The Data Provider is now being used to populate a select field.
 
 To uncover errors arising from Data Provider failures, [configure log levels](../../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for these services:
 
-1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Server Administration_.
-1. Click the _Log Levels_ tab.
-1. Search for `com.liferay.dynamic.data.mapping.data.provider.web.internal.DDMDataProviderPortlet` in the Category field.
-1. Select _WARN_ in the Level field.
-1. Click _Save_ when finished.
+**Category:**
+`com.liferay.dynamic.data.mapping.data.provider.internal.DDMDataProviderInvokerImpl`
+*Level:* WARN
 
-The console now sends warning messages whenever there are errors in the Data Provider.
+**Category:**
+`com.liferay.dynamic.data.mapping.form.field.type.internal.DDMFormFieldOptionsFactoryImpl`
+*Level:* DEBUG
 
 ## Additional Information
 
-* [Introduction to Data Providers](./introduction-to-data-providers.md)
 * [Using the Autofill Rule](./form-rules/using-the-autofill-rule.md)
