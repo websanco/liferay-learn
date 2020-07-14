@@ -6,15 +6,15 @@ Keeping track of activities within each project environment is essential. With L
 
 Within each environment, activities are organized into two sections: *Builds and Deployments* and *General Activities*.
 
-**Builds and Deployments**: This section lists all build, deployment, and ci related activities in a project environment. Each entry includes a Build ID, start time, duration, and status (e.g., in process, successful, failed, interrupted).
+**Builds and Deployments**: This section lists all build, deployment, and CI-related activities in a project environment. Each entry includes a Build ID, start time, duration, and status (e.g., in process, successful, failed, interrupted).
 
-**General Activities**: This section lists automated service events and manual team member activities other than build, deployment, and ci activities. General activities include the following categories:
+**General Activities**: This section lists automated service events and manual team member activities other than build, deployment, and CI activities. General activities include the following categories:
 
-* **Services Activities.** These include when environment variables are updated, and when services are installed, restarted, or deleted.
-* **Settings Activities.** These include when Support Access is disabled or enabled, and when environment Secrets are added, edited, or viewed by team members.
-* **Backup Activities.** These include when automated or manual backups start, and whether they succeed.
-* **Scaling Activities.** These include when auto-scaling is enabled or disabled, and when the Liferay service is scaled up or downscaled.
-* **Membership Activities.** These include when environment invitations are sent, and when new members join the environment.
+* **Services Activities**: examples include when environment variables are updated, and when services are installed, restarted, or deleted.
+* **Settings Activities**: examples include when Support Access is disabled or enabled, and when environment Secrets are added, edited, or viewed by team members.
+* **Backup Activities**: examples include when automated or manual backups start, and whether they succeed.
+* **Scaling Activities**: examples include when auto-scaling is enabled or disabled, and when the Liferay service is scaled up or downscaled.
+* **Membership Activities**: examples include when environment invitations are sent, and when new members join the environment.
 
 Both sections specify the acting team member and the time of the activity.
 
