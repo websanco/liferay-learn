@@ -1,8 +1,8 @@
-# Selecting Commerce Products as Related Assets
+# Enabling Commerce Products as Related Assets
 
-Users can link to Commerce Products when creating Web Content articles. However, before Liferay Commerce Products are listed as [Related Assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) in a [Web Content article](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html), users have configure the Liferay DXP Instance then execute a reindex.
+Web content creators can use Related Assets to connect other assets. In particular, users can link to Commerce Products. However, before Liferay Commerce Products are listed as [Related Assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) in a [Web Content article](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html), users have configure the Liferay DXP Instance then execute a reindex.
 
-## Configure the DXP Instance
+## Configure the Asset Browser to Search the Database
 
 1. Navigate to `[Liferay Home]\osgi\modules\`.
 1. Using an archive manager, open the `com.liferay.asset.browser.web.jar`.
@@ -22,16 +22,16 @@ Execute a reindex to ensure that the Related Assets are populated in the filter.
 Because Commerce Products are stored globally (that is, available on all Liferay DXP sites), users must change the Filter to _Global_.
 
 1. Click on _Site Administration_ &rarr; _Content_ &rarr; _Web Content_.
-1. Click the (![Add icon](../images/icon-add.png)) icon then _Basic Web Content_.
+1. Click the (![Add icon](../../images/icon-add.png)) icon then _Basic Web Content_.
 1. Scroll down to the _Related Assets_ section.
 1. Click _Select_.
 1. Click _Commerce Product_.
 
-     ![Select Commerce Product in the Related Assets section.](./selecting-commerce-products-as-related-assets/images/01.png)
+     ![Select Commerce Product in the Related Assets section.](./enabling-commerce-products-as-related-assets/images/01.png)
 
 1. Click _Filter and Order_ then _Global_.
 
-     ![Select the Global filter to view Commerce products.](./selecting-commerce-products-as-related-assets/images/02.png)
+     ![Select the Global filter to view Commerce products.](./enabling-commerce-products-as-related-assets/images/02.png)
 
 1. Click the product.
 
