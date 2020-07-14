@@ -20,7 +20,9 @@ First, deploy an example to see what a Fragment Collection looks like:
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip
+    ```
 
+    ```bash
     unzip liferay-x2y6.zip
     ```
 
@@ -28,6 +30,9 @@ First, deploy an example to see what a Fragment Collection looks like:
 
     ```bash
     cd liferay-x2y6/marketing-fragments
+    ```
+
+    ```bash
     npm run import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
@@ -93,6 +98,9 @@ Follow these steps to add a new Fragment Collection with a new Fragment:
 
     ```bash
     npm install -g yo
+    ```
+
+    ```bash
     npm install -g generator-liferay-fragments
     ```
 
@@ -189,6 +197,9 @@ You can import the updated Fragments as you did above:
 
     ```bash
     cd marketing-fragments
+    ```
+
+    ```bash
     npm run import
     ```
 

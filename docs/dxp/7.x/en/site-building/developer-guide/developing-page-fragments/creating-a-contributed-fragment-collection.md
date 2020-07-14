@@ -1,6 +1,6 @@
 # Creating a Contributed Fragment Collection
 
-Contributed Fragment Collections are deployable modules containing Page Fragments. The Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
+Contributed Fragment Collections are deployable modules containing Page Fragments. Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
 
 This example runs on Liferay DXP 7.3+.
 
@@ -30,7 +30,9 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip
+    ```
 
+    ```bash
     unzip liferay-l3m9.zip
     ```
 
@@ -38,6 +40,9 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 
     ```bash
     cd liferay-l3m9\contributed-marketing-fragments-collection
+    ```
+
+    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
@@ -134,6 +139,9 @@ You can build and deploy the updated contributed Fragment Collection as you did 
 
     ```bash
     cd contributed-marketing-fragments-collection
+    ```
+
+    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
