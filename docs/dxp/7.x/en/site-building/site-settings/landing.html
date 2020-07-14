@@ -1,0 +1,131 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Building Sites',
+					sectionURL: 'site-building/building_sites.html',
+					subsections: [
+						{
+							name: 'Adding a Site',
+							url: 'site-building/building-sites/adding-a-site.html'
+						},
+						{
+							name: 'Building a Site with Site Templates',
+							url: 'site-building/building-sites/building-sites-with-site-templates.html'
+						},
+						{
+							name: 'Understanding Site Membership (Coming Soon)',
+							url: ''
+						}
+					]
+				},
+				{
+					sectionName: 'Creating Pages',
+					sectionURL: 'site-building/creating_pages.html',
+					subsections: [
+						{
+							name: 'Adding a Page to a Site',
+							url: 'site-building/creating-pages/adding-pages/adding-a-page-to-a-site.html'
+						},
+						{
+							name: 'Content Pages Overview',
+							url: 'site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.html'
+						},
+						{
+							name: 'Building Content Pages',
+							url: 'site-building/creating-pages/building-and-managing-content-pages/building-content-pages.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Displaying Content',
+					sectionURL: 'site-building/displaying_content.html',
+					subsections: [
+						{
+							name: 'Using Web Content Display (Coming Soon)',
+							url: ''
+						},
+						{
+							name: 'Using the Asset Publisher (Coming Soon)',
+							url: ''
+						},
+						{
+							name: 'Using Page Fragments',
+							url: 'site-building/displaying-content/using-fragments/using-page-fragments.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Site Navigation',
+					subsections: [
+						{
+							name: 'Configuring Site Navigation (Coming Soon)',
+							url: ''
+						},
+					]
+				},
+				{
+					sectionName: 'Personalizing Site Experience',
+					sectionURL: 'site-building/personalizing-site-experience/personalizing-site-experience.html',
+					subsections: [
+						{
+							name: 'Creating User Segments',
+							url: 'site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.html'
+						},
+						{
+							name: 'Getting Analytics for User Segments',
+							url: 'site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments.html'
+						},
+						{
+							name: 'Content Page Personalization',
+							url: 'site-building/personalizing-site-experience/experience-personalization/content-page-personalization.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Optimizing Sites',
+					subsections: [
+						{
+							name: 'Optimizing Site SEO (Coming Soon)',
+							url: 'site-building/07-optimizing-sites/seo_optimization.html'
+						},
+						{
+							name: 'Setting up A/B Testing (Coming Soon)',
+							url: 'site-building/07-optimizing-sites/ab_testing.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Site Settings',
+					subsections: [
+						{
+							name: 'Site Localization (Coming Soon)',
+							url: ''
+						},
+					]
+				},
+				{
+					sectionName: 'Developer Guide',
+					subsections: [
+						{
+							name: 'Developing Fragments',
+							url: 'site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html'
+						},
+						{
+							name: 'Using the Fragments Editor',
+							url: 'site-building/developer-guide/developing-page-fragments/using-the-fragments-editor.html'
+						},
+						{
+							name: 'Using the Fragments Toolkit',
+							url: 'site-building/developer-guide/developing-page-fragments/using-the-fragments-toolkit.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
