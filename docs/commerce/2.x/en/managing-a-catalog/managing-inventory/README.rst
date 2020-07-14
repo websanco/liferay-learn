@@ -7,7 +7,7 @@ Managing Inventory
 -  :doc:`/managing-a-catalog/managing-inventory/low-stock-action`
 -  :doc:`/managing-a-catalog/managing-inventory/availability-estimates`
 -  :doc:`/managing-a-catalog/managing-inventory/managing-product-publication`
--  :doc:`/managing-a-catalog/managing-inventory/using-inventory-management`
+-  :doc:`/managing-a-catalog/managing-inventory/using-the-inventory-management-system`
 -  :doc:`/managing-a-catalog/managing-inventory/inventory-management-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/warehouse-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/product-inventory-configuration-reference`

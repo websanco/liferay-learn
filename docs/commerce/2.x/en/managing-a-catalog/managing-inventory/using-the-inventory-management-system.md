@@ -1,4 +1,4 @@
-# Using Inventory Management
+# Using the Inventory Management System
 
 > Commerce 2.1+
 
@@ -22,7 +22,7 @@ To add an inventory item:
     * **Warehouse**: United States - Southwest
     * **Quantity**: 120
 
-    ![Add a new inventory item.](./using-inventory-management/images/01.png)
+    ![Add a new inventory item.](./using-the-inventory-management-system/images/01.png)
 
 1. Click _Submit_ when finished.
 
@@ -41,21 +41,21 @@ To set a safety stock quantity:
    * **Quantity on Hand**: 40 (leave as-is)
    * **Safety Stock Quantity**: 5
 
-    ![Set a safety stock quantity.](./using-inventory-management/images/02.png)
+    ![Set a safety stock quantity.](./using-the-inventory-management-system/images/02.png)
 
 1. Click _Save_ when finished.
 1. Close the window.
 
 Once the Safety Stock quantity has been set, the number has decreased in the _Available_ column.
 
-![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-inventory-management/images/03.png)
+![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-the-inventory-management-system/images/03.png)
 
 ## Viewing On Orders
 
 1. Click on the SKU (_MIN55681_).
 1. Click the _On Order_ tab.
 
-    ![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-inventory-management/images/06.png)
+    ![Setting a safety stock quantity reduces the available stock in that warehouse.](./using-the-inventory-management-system/images/06.png)
 
 Users can view all the orders that include this SKU.
 
@@ -72,13 +72,13 @@ Store managers can enter incoming stock quantities and the expected delivery day
     * **Destination**: Choose a warehouse (United States Northeast)
     * **Expected Delivery Date**: Choose a future date (7/01/2020)
 
-    ![Add incoming stock.](./using-inventory-management/images/04.png)
+    ![Add incoming stock.](./using-the-inventory-management-system/images/04.png)
 
 1. Click _Submit_ when finished.
 
 Once the incoming quantity has been added, this is updated on the _Overview_ tab.
 
-![The incoming stock quantity is updated on the SKU's Overview tab.](./using-inventory-management/images/05.png)
+![The incoming stock quantity is updated on the SKU's Overview tab.](./using-the-inventory-management-system/images/05.png)
 
 ## Viewing Inventory Changes
 
@@ -91,7 +91,7 @@ The Changelog tracks the following events:
 * When a shipment is cancelled, the previously allocated quantities need to be returned.
 * Any update action to an inventory item.
 
-![Changelog tracks changes.](./using-inventory-management/images/07.png)
+![Changelog tracks changes.](./using-the-inventory-management-system/images/07.png)
 
 ## Additional Information
 
