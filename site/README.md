@@ -32,10 +32,22 @@ The product and section landing pages are achieved via [Vue](https://vuejs.org/)
 
 ## Building the Site
 
-> **OS-specific pitfalls:** 
-> - _Windows:_ If you see an error like
->    `[./build_site.sh: line 220: /c/Users/liferay/AppData/Local/Microsoft/WindowsApps/python3: Permission denied` you probably have conflicting Python versions installed. To correct it, use the second part of this [StackOverflow post](https://stackoverflow.com/a/57168165/4325798) to fix it: "type `manage app execution aliases` into the Windows search prompt and disable [all] the store versions of Python altogether."
-> - _MacOS:_ This script requires `gnu-find` and `gnu-sed`. Make sure you have these installed (e.g., `brew install gnu-find/sed`)
+> **MacOS--Replace the `find` and `sed` tools:** 
+> This script requires the `gnu` versions of `find` and `sed`. You can install these and replace the default versions: 
+>
+>    1. Use `brew` to install the tools:
+>    
+>       brew install findutils
+>
+>       brew install gnu-sed
+>    
+>
+>    2. Prepend the PATH with the path to the new tools, so they will be used in place of the native `find` and `sed`:
+>
+>       export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+>
+>       export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+>    
 
 Sphinx projects are typically built with a `Makefile`. This project is built with a shell script instead. Once executed it generates a `build/output` directory inside `site`. The final static html pages are there.
 
