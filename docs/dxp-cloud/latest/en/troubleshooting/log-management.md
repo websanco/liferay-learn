@@ -6,8 +6,10 @@ Environment logs are crucial for diagnosing and resolving technical issues in a 
 
 Liferay DXP Cloud provides three types of logs for environment services:
 
-* **Build Logs**: These logs list build information generated as the application boots up. Examples of build information include: when docker images are pulled from the registry, when deploys are in progress, and when builds are successful.
+* **Build Logs**: These logs list build information generated as the application boots up. Examples of build information include: when Docker images are pulled from the registry, when deploys are in progress, and when builds are successful.
+
 * **Status Logs**: These logs list orchestration layer information from the Kubernetes cluster. Examples of status information include: when images are successfully pulled, when containers are created and started, and when readiness or liveness probes fail.
+
 * **Application Logs**: These logs list runtime information generated after the application is running and accessed by users.
 
 ## Accessing Logs via the DXP Cloud Console
