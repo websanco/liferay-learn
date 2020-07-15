@@ -21,9 +21,9 @@ General settings range from core configuration, like your Site's Membership Type
 
 **Active:** Whether a Site is active or inactive. Inactive Sites are inaccessible but can be activated later if needed.
 
-**Membership Type:** Specifies how restrictive a Site is. See [Changing Site Membership Types](./user-settings/changing-site-membership-types.md) for more information.
+**Membership Type:** Specifies how restrictive a Site is. See [Changing Site Membership Types](./site-users/changing-site-membership-types.md) for more information.
 
-**Allow Manual Membership Management:** Whether Users can be added and removed manually from the Site. By default, manual Site membership management is enabled. This lets Users join the Site or request membership to the Site if it's restricted using the My Sites app. If your Site's membership is handled automatically by a membership policy, you can disable this setting. See [Managing Membership Policies for Sites](./user-settings/managing-membership-policies-for-sites.md) for more information.
+**Allow Manual Membership Management:** Whether Users can be added and removed manually from the Site. By default, manual Site membership management is enabled. This lets Users join the Site or request membership to the Site if it's restricted using the My Sites app. If your Site's membership is handled automatically by a membership policy, you can disable this setting. See [Managing Membership Policies for Sites](./site-users/managing-membership-policies-for-sites.md) for more information.
 
 ```note::
   Site memberships can be handled automatically by a membership policy. The membership policy can check various pieces of information from each User, such as their first names, last names, birthdays, job titles, Organizations, and User Groups. Using this information, the Site membership policy can automatically assign members to the Site. If your Site implements a membership policy, you can disable the *Allow Manual Membership Management* option; when the option is disabled, the *Members* section of Site Administration (Site Memberships and Site Teams) is hidden, even from Administrators.
@@ -93,7 +93,7 @@ Advanced Settings relate to security (like User Roles) or require external confi
 
 **Teams:** Specifies the Teams to assign newly assigned Site members to by default.
 
- See [Configuring Role and Team Defaults for Site Members](./user-settings/configuring-role-and-team-defaults-for-site-members.md) for more information.
+ See [Configuring Role and Team Defaults for Site Members](./site-users/configuring-role-and-team-defaults-for-site-members.md) for more information.
 
 ### Analytics
 
@@ -113,13 +113,13 @@ The *Maps* option configures the maps API provider used by your Liferay Portal i
 
 ### Recycle Bin
 
-The *Recycle Bin* panel provides options for enabling/disabling the Recycle Bin and specifying how long to retain assets in the Recycle Bin before deleting them. See [Configuring the Asset Recycle Bin for Sites](./content-settings/configuring-the-asset-recycle-bin-for-sites.md) for more information.
+The *Recycle Bin* panel provides options for enabling/disabling the Recycle Bin and specifying how long to retain assets in the Recycle Bin before deleting them. See [Configuring the Asset Recycle Bin for Sites](./site-content-configurations/configuring-the-asset-recycle-bin-for-sites.md) for more information.
 
 ### Content Sharing
 
 **Allow subsites to display content from this site:** Specifies whether sub-sites can display content from this Site. Administrators of this Site's sub-Sites can use all structures, templates, categories, widget templates, and more from this parent Site. Even if you initially allowed content sharing between the parent Site and its sub-sites, you can disable this option and immediately revoke content sharing from all sub-Sites.
 
-You can also manage content sharing at the global level. See [Managing Content Sharing Globally](./content-settings/managing-content-sharing-globally.md) for more information.
+You can also manage content sharing at the global level. See [Managing Content Sharing Globally](./site-content-configurations/managing-content-sharing-globally.md) for more information.
 
 ## Social
 
@@ -127,11 +127,11 @@ The Social tab provides options for managing the social interactions on your Sit
 
 ### Ratings
 
-The *Ratings* section lets you select the ratings types (Stacked Stars, Stars, Likes, and Thumbs) for applications. See [Configuring Content Ratings Types](./content-settings/configuring-content-ratings-types) for more information.
+The *Ratings* section lets you select the ratings types (Stacked Stars, Stars, Likes, and Thumbs) for applications. See [Configuring Content Ratings Types](./site-content-configurations/configuring-content-ratings-types) for more information.
 
 ### Mentions
 
-**Allow Users to Mention Other Users:** Specifies whether Users can mention (notify and/or draw attention to) friends and colleagues by entering the "@" character followed by their User names. See [Mentioning Users](./user-settings/configuring-user-mentions.md) for more information.
+**Allow Users to Mention Other Users:** Specifies whether Users can mention (notify and/or draw attention to) friends and colleagues by entering the "@" character followed by their User names. See [Mentioning Users](./site-users/configuring-user-mentions.md) for more information.
 
 ## Language
 
