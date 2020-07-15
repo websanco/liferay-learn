@@ -1,4 +1,5 @@
 # Modifying Localizable Site Fields
+<!-- This article feels a bit odd - what's the broader goal here that this article is helping someone accomplish? -->
 
 Some Site setting fields have a language flag appended to the end. These fields can be translated into other languages.
 

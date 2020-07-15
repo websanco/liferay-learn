@@ -6,8 +6,8 @@ Site Users
 
    site-users/changing-site-membership-type.md
    site-users/configuring-role-and-team-defaults-for-site-members.md
-   site-users/configuring-user-mentions.md
+   ../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md
 
 -  :doc:`/site-building/site-settings/site-users/changing-site-membership-type`
 -  :doc:`/site-building/site-settings/site-users/configuring-role-and-team-defaults-for-site-members`
--  :doc:`/site-building/site-settings/site-users/configuring-user-mentions`
+-  :doc:`/collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions`

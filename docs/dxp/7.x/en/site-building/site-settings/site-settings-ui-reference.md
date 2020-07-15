@@ -4,26 +4,28 @@ Liferay DXP is built with flexibility in mind, and beyond just creating content 
 
 * [General](#general)
 * [Social](#social)
-* [Languages](#language)
+* [Language](#language)
 * [Advanced](#advanced)
+
+![Site Settings are organized in four tabs.](./site-settings-ui-reference/images/05.png)
 
 To view Site Settings, open the Product Menu and go to *Configuration* &rarr; *Settings*. Each tab is described below in the order in which it appears in the UI.
 
 ## General
 
-General settings range from core configuration, like your Site's Membership Type, to finer details like Documents and Media indexing options. 
+General settings range from core configuration, like your Site's Membership Type, to finer details like Documents and Media indexing options.
 
 ### Details
 
-**Name:** The Site's name. You can translate the name into multiple languages. See [Modifying Localizable Site Fields](./modifying-localizable-site-fields.md) for more information.
+**Name:** The Site's name. You can translate the name into multiple languages. See [Modifying Localizable Site Fields](./configuring-site-languages/modifying-localizable-site-fields.md) for more information.
 
-**Description:** Describes the Site's intended function. The description can also be translated into other languages. See [Modifying Localizable Site Fields](./modifying-localizable-site-fields.md) for more information.
+**Description:** Describes the Site's intended function. The description can also be translated into other languages. See [Modifying Localizable Site Fields](./configuring-site-languages/modifying-localizable-site-fields.md) for more information.
 
 **Active:** Whether a Site is active or inactive. Inactive Sites are inaccessible but can be activated later if needed.
 
-**Membership Type:** Specifies how restrictive a Site is. See [Changing Site Membership Types](./site-users/changing-site-membership-types.md) for more information.
+**Membership Type:** Specifies how restrictive a Site is. See [Changing Site Membership Types](./site-users/changing-site-membership-type.md) for more information.
 
-**Allow Manual Membership Management:** Whether Users can be added and removed manually from the Site. By default, manual Site membership management is enabled. This lets Users join the Site or request membership to the Site if it's restricted using the My Sites app. If your Site's membership is handled automatically by a membership policy, you can disable this setting. See [Managing Membership Policies for Sites](./site-users/managing-membership-policies-for-sites.md) for more information.
+**Allow Manual Membership Management:** Whether Users can be added and removed manually from the Site. By default, manual Site membership management is enabled. This lets Users join the Site or request membership to the Site if it's restricted using the My Sites app. If your Site's membership is handled automatically by a membership policy, you can disable this setting. See [Managing Membership Policies for Sites](./site-users/managing-membership-policies-for-sites.md) <!-- TODO: Please create a placeholder article be created for this in the appropriate section? --> for more information.
 
 ```note::
   Site memberships can be handled automatically by a membership policy. The membership policy can check various pieces of information from each User, such as their first names, last names, birthdays, job titles, Organizations, and User Groups. Using this information, the Site membership policy can automatically assign members to the Site. If your Site implements a membership policy, you can disable the *Allow Manual Membership Management* option; when the option is disabled, the *Members* section of Site Administration (Site Memberships and Site Teams) is hidden, even from Administrators.
@@ -41,13 +43,13 @@ Under Pages you can view your Site's Public or Private Pages, if any exist. If t
 
 ### Categorization
 
-*Categorization* helps Administrators organize the Site and makes it easier for Users to find your Site and its content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](TODO).
+*Categorization* helps Administrators organize the Site and makes it easier for Users to find your Site and its content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories]() <!-- TODO: Fix link -->.
 
 ### Site URL
 
-**Friendly URL:** Specifies your Site's URL paths (i.e. `/my-site`). See [Configuring Your Site's Friendly URL](./configuring-your-site-s-friendly-url.md) for more information.
+**Friendly URL:** Specifies your Site's URL paths (i.e. `/my-site`). See [Configuring Your Site's Friendly URL](./managing-site-urls/configuring-your-sites-friendly-url.md) for more information.
 
-**Public/Private Pages:** Specifies the virtual host to map to the Public and Private Pages of the Site. See [Configuring Virtual Hosts Site URLs](./configuring-virtual-hosts-site-urls.md) for more information.
+**Public/Private Pages:** Specifies the virtual host to map to the Public and Private Pages of the Site. See [Configuring Virtual Hosts Site URLs](./managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information.
 
 ![You can configure virtual hosts for your Sites.](./site-settings-ui-reference/images/02.png)
 
@@ -62,7 +64,7 @@ If you created your Site using a Site Template, this section appears and display
 ### Open Graph
 
 ```note::
-  Available in Liferay DXP 7.3+
+  Available in Liferay 7.3+
 ```
 
 The Open Graph section provides configuration settings for the [Open Graph protocol](https://ogp.me/) for your Site.
@@ -71,9 +73,11 @@ The Open Graph section provides configuration settings for the [Open Graph proto
 
 **Open Graph Image:** The default image to use for Open Graph tags. You can override the default image set here by setting a different image for the individual page's configuration.
 
+ See [Configuring Open Graph](./configuring-open-graph.md) to learn more.
+
 ### Asset Auto Tagging
 
-**Enable Auto Tagging of Assets on This Site:** Whether to use Asset Auto Tagging rules on your Site. See [Asset Auto Tagging](TODO) for more information.
+**Enable Auto Tagging of Assets on This Site:** Whether to use Asset Auto Tagging rules on your Site. See [Asset Auto Tagging]() <!-- TODO: Fix link --> for more information.
 
 ### Sharing
 
@@ -81,7 +85,25 @@ The Open Graph section provides configuration settings for the [Open Graph proto
 
 ### Custom Fields
 
-*Custom Fields* only appears if you've created them in Control Panel &rarr; *Configuration* &rarr; *Custom Fields*. For more information on Custom Fields, see [Custom Fields](TODO).
+*Custom Fields* only appears if you've created them in Control Panel &rarr; *Configuration* &rarr; *Custom Fields*. For more information on Custom Fields, see [Custom Fields]() <!-- TODO: Fix link -->.
+
+## Social
+
+The Social tab provides options for managing the social interactions on your Site.
+
+### Ratings
+
+The *Ratings* section lets you select the ratings types (Stacked Stars, Stars, Likes, and Thumbs) for applications. See [Configuring Content Ratings Types](./site-content-configurations/configuring-content-rating-type.md) for more information.
+
+### Mentions
+
+**Allow Users to Mention Other Users:** Specifies whether Users can mention (notify and/or draw attention to) friends and colleagues by entering the "@" character followed by their User names. See [Mentioning Users](../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md) for more information.
+
+## Language
+
+The *Languages* tab lets you configure language options for your Site. You can use the default language or define another supported language as the default for your Site.
+
+![You can update language options through the Languages tab of Site Settings.](./site-settings-ui-reference/images/04.png)
 
 ## Advanced
 
@@ -105,11 +127,11 @@ Advanced Settings relate to security (like User Roles) or require external confi
 
 ![To set up Google Analytics: sign up, receive an ID, and then enter it into the Google Analytics ID field.](./site-settings-ui-reference/images/03.png)
 
-If you require a different analytics service, you can add it. See [Adding a New Analytics Service](./configuring-analytics-for-sites/adding-a-new-analytics-service.md) for more information.
+If you require a different analytics service, you can add it. See [Adding a New Analytics Service](./adding-a-new-analytics-service.md) for more information.
 
 ### Maps
 
-The *Maps* option configures the maps API provider used by your Liferay Portal instance when displaying geolocalized assets. Geolocalized assets can be displayed for documents, web content articles, DDL records, etc. See [Geolocating Assets](TODO) for more information.
+The *Maps* option configures the maps API provider used by your Liferay Portal instance when displaying geolocalized assets. Geolocalized assets can be displayed for documents, web content articles, DDL records, etc. See [Geolocating Assets](./site-content-configurations/configuring-geolocation-for-assets.md) for more information.
 
 ### Recycle Bin
 
@@ -120,21 +142,3 @@ The *Recycle Bin* panel provides options for enabling/disabling the Recycle Bin 
 **Allow subsites to display content from this site:** Specifies whether sub-sites can display content from this Site. Administrators of this Site's sub-Sites can use all structures, templates, categories, widget templates, and more from this parent Site. Even if you initially allowed content sharing between the parent Site and its sub-sites, you can disable this option and immediately revoke content sharing from all sub-Sites.
 
 You can also manage content sharing at the global level. See [Managing Content Sharing Globally](./site-content-configurations/managing-content-sharing-globally.md) for more information.
-
-## Social
-
-The Social tab provides options for managing the social interactions on your Site.
-
-### Ratings
-
-The *Ratings* section lets you select the ratings types (Stacked Stars, Stars, Likes, and Thumbs) for applications. See [Configuring Content Ratings Types](./site-content-configurations/configuring-content-ratings-types) for more information.
-
-### Mentions
-
-**Allow Users to Mention Other Users:** Specifies whether Users can mention (notify and/or draw attention to) friends and colleagues by entering the "@" character followed by their User names. See [Mentioning Users](./site-users/configuring-user-mentions.md) for more information.
-
-## Language
-
-The *Languages* tab lets you configure language options for your Site. You can use the default language or define another supported language as the default for your Site. 
-
-![You can update language options through the Languages tab of Site Settings.](./site-settings-ui-reference/images/04.png)

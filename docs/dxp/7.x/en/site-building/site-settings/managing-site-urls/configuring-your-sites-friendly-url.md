@@ -1,6 +1,10 @@
 # Configuring Your Site's Friendly URL
 
-Friendly URLs are used for both Public and Private Pages. The public Site base URL is `https://localhost:8080/web`, and the private one is `https://localhost:8080/group`. This helps Users quickly access their Site without having to recall an extended URL. Each friendly URL must be unique. The URL path is appended to the `https://localhost:8080/` URL (i.e. `https://localhost:8080/web/my-site/`). Follow these steps:
+Friendly URLs are used for both Public and Private Pages. The public Site base URL is `https://localhost:8080/web`, and the private one is `https://localhost:8080/group`. This helps Users quickly access their Site without having to recall an extended URL. Each friendly URL must be unique. The URL path is appended to the `https://localhost:8080/` URL (i.e. `https://localhost:8080/web/my-site/`).
+
+## Setting a Site's Friendly URL
+
+To update your site's friendly URL, follow these steps:
 
 1. Open the Product Menu and go to *Site* &rarr; *Configuration* &rarr; *Settings*.
 1. Scroll down and expand the *Site URL* panel.
@@ -12,7 +16,7 @@ If you add a friendly URL for your Site's Home Page, follow the additional steps
 
 ## Updating Your Instance's Home URL
 
-If you add a friendly URL for your instance's Home Page, you should update your instance's Home URL field so that page requests to `http://localhost:8080` redirect properly:
+If you add a friendly URL for your instance's Home Page, you should update your instance's Home URL field so that page requests to `http://localhost:8080` redirect properly: <!-- What is a Home URL? Do I HAVE to do this? What does it impact? -->
 
 1. Open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*.
 1. Select *Instance Configuration* under the Platform heading and click the *General* link.
