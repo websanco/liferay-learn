@@ -51,9 +51,16 @@ function configure_env {
 		rm -fr venv
 	fi
 
-	python3 -m venv venv
+	if [[ "$(uname)" == "Linux" || "$(uname)" == "Darwin" ]]
+	then
+			python3 -m venv venv
 
-	source venv/bin/activate
+			source venv/bin/activate
+	else
+			python -m venv ${PWD}/venv
+
+			source ${PWD}/venv/scripts/activate
+	fi
 
 	check_utils pip3 zip
 
