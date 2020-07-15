@@ -198,7 +198,7 @@ function main {
 function npm_install {
 	for package_name in "${@}"
 	do
-		if [[ -z `npm list -g --parseable --no-versions --depth=0 --loglevel silent | grep ${package_name}` ]]
+		if [[ -z `npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep ${package_name}` ]]
 		then
 			npm install -g ${package_name}
 		fi
