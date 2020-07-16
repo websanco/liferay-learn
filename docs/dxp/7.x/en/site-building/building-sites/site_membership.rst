@@ -8,5 +8,6 @@ Site Membership
    site-membership/adding-members-to-sites.md
    site-membership/creating-teams-for-sites.md
 
-.. include:: /site-building/building-sites/site-membership/README.rst
-   :start-line: 2
+-  :doc:`/site-building/building-sites/site-membership/understanding-site-membership`
+-  :doc:`/site-building/building-sites/site-membership/adding-members-to-sites`
+-  :doc:`/site-building/building-sites/site-membership/creating-teams-for-sites`

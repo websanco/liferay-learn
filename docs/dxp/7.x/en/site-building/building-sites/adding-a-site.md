@@ -9,7 +9,7 @@ To add a new Site to your Liferay Portal instance:
 1. Click the Add icon (![Add Site](../../images/icon-add.png)) at the top right of the page.
 1. Select a Site Template. See [Site Templates](./building-sites-with-site-templates.md) for more information on creating Site Templates.
 1. Enter a Name for the Site and optionally provide a description.
-1. Set the *Membership Type*. See [Understanding Site Membership]() for more information on the benefits of Site membership. These membership types are available:
+1. Set the *Membership Type*. See [Understanding Site Membership](./site-membership/understanding-site-membership.md) for more information on the benefits of Site membership. These membership types are available:
 
     * **Open:** Users can become members of the Site at any time.
     * **Restricted:** Users can request Site membership but Site Administrators must approve requests for users to become members.

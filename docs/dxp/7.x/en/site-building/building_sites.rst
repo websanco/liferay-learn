@@ -9,12 +9,21 @@ Building Sites
    building-sites/merging-site-template-changes.md
    building-sites/sharing-site-templates.md
    building-sites/site-hierarchies.md
-   building-sites/customizing-personal-sites.md
+   building-sites/managing-personal-sites.md
    building-sites/importing-exporting-pages-and-content.md
+   building-sites/site_membership.rst
 
-   building-sites/site-membership/understanding-site-membership.md
-   building-sites/site-membership/adding-members-to-sites.md
-   building-sites/site-membership/creating-teams-for-sites.md
+-  :doc:`/site-building/building-sites/adding-a-site`
+-  :doc:`/site-building/building-sites/building-sites-with-site-templates`
+-  :doc:`/site-building/building-sites/merging-site-template-changes`
+-  :doc:`/site-building/building-sites/sharing-site-templates`
+-  :doc:`/site-building/building-sites/site-hierarchies`
+-  :doc:`/site-building/building-sites/managing-personal-sites`
+-  :doc:`/site-building/building-sites/importing-exporting-pages-and-content`
 
-.. include:: /site-building/building-sites/README.rst
-   :start-line: 2
+Site Membership
+~~~~~~~~~~~~~~~
+
+-  :doc:`/site-building/building-sites/site-membership/understanding-site-membership`
+-  :doc:`/site-building/building-sites/site-membership/adding-members-to-sites`
+-  :doc:`/site-building/building-sites/site-membership/creating-teams-for-sites`

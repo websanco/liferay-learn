@@ -1,6 +1,6 @@
 # Managing Personal Sites
 
-By default, every User created in Liferay DXP has a Personal Site generated for them, of which they are the only member, that consists of public (Profile) pages and private (Dashboard) pages. This per-user Personal Site can be [easily disabled](#configuring-personal-site-behavior-with-portal-properties) if this behavior is not desired.
+By default, every User created in Liferay DXP has a Personal Site generated for them, of which they are the only member, that consists of public (Profile) pages and private (Dashboard) pages. This per-user Personal Site can be [easily disabled](#customizing-personal-sites-with-portal-properties) if this behavior is not desired.
 
 ## Profile Pages and Dashboard Pages
 
@@ -23,8 +23,8 @@ To access your Personal Site pages, follow these steps:
 1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under the Site Menu.
 1. Manage the pages as you would any other [Widget Page](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
 
-    ```tip:
-    You can switch between the Dashboard and Profile pages from the Pages page by switching between the Public Pages and Private Pages menus and selecting the *View* option from the page's Actions Menu.
+    ```tip::
+       You can switch between the Dashboard and Profile pages from the Pages page by switching between the Public Pages and Private Pages menus and selecting the *View* option from the page's Actions Menu.
     ```
 
 You can also add and define pages for a User's Personal Site via a User Group. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.
@@ -38,7 +38,7 @@ Permissions and Roles for personal sites follow the behavior shown below:
 
 ## Customizing Personal Sites with Portal Properties
 
-There are several portal properties you can add to `portal-ext.properties` to customize the default pages of personal Sites. You can customize the names of the pages, the applications that appear on the pages, the themes and layout templates of pages, and more. Please refer to the [Default User Public Layouts](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts) and [Default User Private Layouts](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts) sections of the `portal.properties` file for details. Some of these properties are listed in the table below:
+There are several portal properties you can add to [`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md) to customize the default pages of personal Sites. You can customize the names of the pages, the applications that appear on the pages, the themes and layout templates of pages, and more. Please refer to the [Default User Public Layouts](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts) and [Default User Private Layouts](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts) sections of the `portal.properties` file for details. Some of these properties are listed in the table below:
 
 | Functionality | Property |
 | --- | --- |
