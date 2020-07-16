@@ -39,7 +39,7 @@ import {useIsMounted} from 'frontend-js-react-web';
 
 const InlineConfirm = props => {
     const isMounted = useIsMounted();
- 
+
     const _handleConfirmButtonClick = () => {
         props.onConfirmButtonClick().then(() => {
             if (isMounted()) {
@@ -47,7 +47,7 @@ const InlineConfirm = props => {
             }
         });
     };
-    
+
     return <button onClick={handleConfirmButtonClick} />;
 
 };
@@ -57,11 +57,11 @@ const InlineConfirm = props => {
 
 ```javascript
 import {useEventListener} from 'frontend-js-react-web';
- 
+
 function OverlayContainer({root, allowEdit}) {
     useEventListener('keydown', handleKeydown, true, document);
     useEventListener('click', handleClick, false, document);
- 
+
     return <></>;
 }
 ```
@@ -70,7 +70,7 @@ function OverlayContainer({root, allowEdit}) {
 
 The `<react:component>` tag adds a React view to your JSP. An example is shown below:
 
-```markup
+```jsp
 <react:component
     data="<%= data %>"
     module="js/pages/form-view/EditFormViewApp.es"
