@@ -2,10 +2,6 @@
 
 Support Access is an optional setting that expedites troubleshooting by giving Liferay engineers direct access to a DXP Cloud project environment. DXP Cloud administrators can enable or disable Support Access for individual project environments.
 
-```note::
-   Support Access is enabled by default in each environment. Only the project administrator can configure Support Access.
-```
-
 When Support Access is enabled, Liferay Support engineers have read access to the following information:
 
 * Project console
@@ -21,20 +17,20 @@ When Support Access is enabled, Liferay Support engineers have read access to th
 
 ## Changing the Support Access Setting
 
-Support access is enabled by default in each environment, but administrators can disable it at any time.
+Support Access is enabled by default in each environment, but administrators can disable it at any time.
 
-Follow these steps to change the support access setting:
+Follow these steps to change the Support Access setting:
 
-1. Navigate to *Settings* &rarr; *Support access*.
+1. Navigate to *Settings* &rarr; *Support Access*.
 1. Set the toggle switch to your desired setting (*Enabled* or *Disabled*).
 
-![Figure 1: Administrators can enable or disable support access.](./support-access/images/01.png)
+![Figure 1: Administrators can enable or disable Support Access.](./support-access/images/01.png)
 
 ## Monitoring Changes to Support Access
 
-Any change to support access registers a new activity that lists who made that change and when. These activities appear in *Activities* &rarr; *General*.
+Any change to Support Access registers a new activity that lists who made that change and when. These activities appear in *Activities* &rarr; *General*.
 
-![Figure 2: The general activities panel shows any changes to support access.](./support-access/images/02.png)
+![Figure 2: The general activities panel shows any changes to Support Access.](./support-access/images/02.png)
 
 DXP Cloud also sends an email to all team members when the Support Access setting changes.
 
