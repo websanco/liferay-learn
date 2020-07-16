@@ -131,23 +131,25 @@ Put the `.config` files in a folder called `[Liferay Home]/osgi/configs`.
 
 There are resources for migrating properties related to specific environments, Liferay versions, and features. They're called out here for convenience.
 
-* Updates to file store settings are discussed in [Updating the File Store](./updating-the-file-store.md).
+1. Updates to file store settings are discussed in [Updating the File Store](./updating-the-file-store.md).
 
-* If you're on Liferay Portal 6.1 or earlier, [adapt your properties to the new defaults that Liferay Portal 6.2 introduced](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults).
+1. If you're on Liferay Portal 6.1 or earlier, [adapt your properties to the new defaults that Liferay Portal 6.2 introduced](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults).
 
-* If you have a sharded environment, [configure your upgrade to generate a non-sharded environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md).
+1. If you have a sharded environment, [configure your upgrade to generate a non-sharded environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md).
 
-* Examine the default settings changes in 7.0+ [here](../reference/changes-to-default-settings.md).
+1. Examine the default settings changes in 7.0+ [here](../reference/changes-to-default-settings.md).
 
-* Liferay's image sprite framework is deprecated as of 7.2 and is disabled by default. The framework requires scanning plugins for image sprites. If you don't use the framework, there's no need for it to scan for images sprites. If you use the framework yourself, enable it by overriding the default `sprite.enabled` portal property (since 7.2) value with the following setting in your [`portal-ext.properties`](../../reference/portal-properties.md) file:
+1. Liferay's image sprite framework is deprecated as of 7.2 and is disabled by default. The framework requires scanning plugins for image sprites. If you don't use the framework, there's no need for it to scan for images sprites. If you use the framework yourself, enable it by overriding the default `sprite.enabled` portal property (since 7.2) value with the following setting in your [`portal-ext.properties`](../../reference/portal-properties.md) file.
 
     ```properties
     sprite.enabled=true
     ```
 
-```note::
-   You can build image sprites using any framework you like and deploy them in your plugins.
-```
+    ```note::
+       You can build image sprites using any framework you like and deploy them in your plugins.
+    ```
+
+1. As of 7.3, cache is solely configured using Ehcache XML files. Cache is no longer enabled or configured using portal properties. If you have configured cache using portal properties, configure the cache using Ehcache XML files in a module. Please see [Cache Configuration](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration) for more information.
 
 ## Next Steps
 
