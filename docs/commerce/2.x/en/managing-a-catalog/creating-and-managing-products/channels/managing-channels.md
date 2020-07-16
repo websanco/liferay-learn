@@ -22,9 +22,9 @@ The channel is now created. Products may now be configured to be filtered by thi
 
 At this point, the channel is not yet been associated with any store site.
 
-## Associating a Channel with a Store Site
+## Associating a Channel with a DXP Site
 
-Users often associate a channel with a store site created on a Liferay Commerce Instance, but they can also use a non-DXP site such as Amazon Marketplace. To associate a channel with a store on a DXP instance:
+A channel can be associated with a Liferay site or an external channel such as Amazon Marketplace. To associate a channel with a site on a DXP instance:
 
 1. Click on the desired channel (for example, _Everest_ from the steps above).
 1. Click the _Type_ tab.
