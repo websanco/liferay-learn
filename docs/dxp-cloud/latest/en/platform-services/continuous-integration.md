@@ -10,17 +10,15 @@ By default, this automated build will compile code and can be configured to exec
 
 ## Using the Default Jenkinsfile
 
-In the past, we used to give customers an entire `Jenkinsfile` for them to customize. The problem with this approach is that bug fixes, security fixes, and improvements had to be manually applied, line by line.
+Starting with CI service version `liferaycloud/jenkins:2.222.1-3.2.0`, a default Jenkinsfile is available when it is not overridden. The default Jenkinsfile is always available for use for projects [using version 4.x.x services](../reference/understanding-service-stack-versions.md).
 
-Starting with CI service version `liferaycloud/jenkins:2.222.1-3.2.0`, we are introducing the concept of a default Jenkinsfile. The default Jenkinsfile is always available for use for projects using version 4.x.x services. This encapsulates all the logic that was previously stored on the Jenkinsfile and moves it to a Jenkins plugin.
+The default Jenkinsfile encapsulates all the logic that was previously stored on the Jenkinsfile and moves it to a Jenkins plugin. This means that all bug fixes, security fixes, and improvements can be applied without requiring any CI configuration.
 
-This means that all bug fixes, security fixes, and improvements can be applied by us, without any requiring any user action.
-
-Apart from that, a powerful set of extension points are now provided for you to customize every step of the pipeline.
+Apart from that, a powerful set of extension points are now provided to customize every step of the CI pipeline.
 
 ### Enable the Default Jenkinsfile
 
-If your project is already updated to version 4.x.x, then these steps are already complete. Otherwise, enable the default Jenkinsfile by performing the following steps:
+If your project is already updated to [version 4.x.x](../reference/understanding-service-stack-versions.md), then these steps are already complete. Otherwise, enable the default Jenkinsfile by performing the following steps:
 
 1. Update your CI service to version `liferaycloud/jenkins:2.222.1-3.2.0`
 
