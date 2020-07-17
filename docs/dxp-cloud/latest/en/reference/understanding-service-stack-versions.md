@@ -1,6 +1,6 @@
 # Understanding Service Stack Versions
 
-The DXP Cloud service stack represents the major version of all of the services in your DXP Cloud environment. Each individual service may have a different minor version, but they all share the service stack version (e.g., version 4.x.x).
+The DXP Cloud service stack represents the major version of all of the services in your DXP Cloud environment. Each individual service may have a different minor version, but they all share the service stack version (e.g., version 4.x.x). New service stack versions generally introduce a variety of new features (such as the addition of a default Jenkinsfile, and a new repository structure in [version 4.x.x](./dxp-cloud-project-changes-in-version-4.md)).
 
 The version of the DXP Cloud service stack itself is indicated by the major version of your services' Docker images. This version is the last number that appears in the Docker image name.
 
