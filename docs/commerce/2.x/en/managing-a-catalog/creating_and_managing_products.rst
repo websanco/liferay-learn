@@ -4,7 +4,6 @@ Creating and Managing Products
 .. toctree::
    :maxdepth: 2
 
-   creating-and-managing-products/channels.rst
    creating-and-managing-products/product_types.rst
    creating-and-managing-products/products.rst
 

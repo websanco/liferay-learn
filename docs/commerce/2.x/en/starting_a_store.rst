@@ -12,5 +12,7 @@ Starting a Store
 
    starting-a-store/sites-and-site-types.md
 
+   starting-a-store/channels.rst
+
 .. include:: /starting-a-store/README.rst
    :start-line: 2

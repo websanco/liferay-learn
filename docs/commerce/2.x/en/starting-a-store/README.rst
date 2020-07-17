@@ -14,3 +14,8 @@ Site Management
 ~~~~~~~~~~~~~~~
 
 -  :doc:`/starting-a-store/sites-and-site-types`
+
+Channels
+~~~~~~~~~~~~~~~
+
+-  :doc:`/starting-a-store/channels/introduction-to-channels`
