@@ -23,7 +23,7 @@ The version of Liferay DXP that you are using is configured within the `LCP.json
 ```
 
 ```note::
-   If your DXP Cloud stack is not yet updated to 4.x.x, then by default, this version is instead located within a ``gradle.properties`` file at the root of the repository (using the ``liferay.workspace.lcp.liferay.image`` property).
+   If your DXP Cloud stack is not yet updated to 4.x.x, then by default, this version is instead located within a ``gradle.properties`` file at the root of the repository (using the ``liferay.workspace.lcp.liferay.image`` property). See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 This version includes the specific service pack and fix pack that your Liferay DXP instance will be based on.

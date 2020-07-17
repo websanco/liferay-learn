@@ -9,9 +9,9 @@ The provisioned repository will be on GitHub, but you can transfer it to a BitBu
 
 ## Preparing the Jenkins service
 
-If you are using version 4.x.x services in your DXP Cloud instance already, then your Jenkins service is already compatible with Bitbucket. See [Upgrading Your DXP Cloud Stack](../reference/upgrading-your-dxp-cloud-stack.md) for more information on upgrading.
+If you are using [version 4.x.x services](../reference/understanding-service-stack-versions.md) in your DXP Cloud instance already, then your Jenkins service is already compatible with Bitbucket. See [Upgrading Your DXP Cloud Stack](../reference/upgrading-your-dxp-cloud-stack.md) for more information on upgrading.
 
-If you are using [version 3.x.x services](../reference/understanding-service-stack-versions.md), then check the `LCP.json` for your `ci` service, and ensure you're running the following Jenkins service or higher:
+If you are using version 3.x.x services, then check the `LCP.json` for your `ci` service, and ensure you're running the following Jenkins service or higher:
 
 ```
 liferaycloud/jenkins:2.222.1-3.2.0
