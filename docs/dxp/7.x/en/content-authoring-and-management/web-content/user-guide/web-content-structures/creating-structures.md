@@ -15,7 +15,7 @@ Follow these steps to create a Structure:
 1. Optionally, add a *Description* for your Structure.
 1. Click *Save*.
 
-![Creating a new Structure](./creating-structures/images/01.png)
+![When creating a new Structure, you can drag fields from the palette and drop them on the canvas.](./creating-structures/images/01.png)
 
 ```warning::
   Due to import/export operations, it's possible to have both a global and a Site-scoped Structure with the same ``structureKey``. If this happens, the Site-scoped Structure takes precedence, and you can't access the global Structure from that Site.
@@ -23,7 +23,7 @@ Follow these steps to create a Structure:
 
 ## Structure Fields
 
-The available Structure fields are listed below. See [Editing and Configuring Structure Fields](./configuring-structure-fields.md) for more information on configuring and editing Structure fields.
+You can place these fields on a Structure: 
 
 **Boolean:** A checkbox that stores either `true` (checked) or `false` (unchecked). For example, you can use this field to set a display rule for the Structure's content.
 
@@ -62,3 +62,5 @@ The available Structure fields are listed below. See [Editing and Configuring St
 **Text Box:** A textbox input for long entries, such as the body of your content
 
 **Web Content:** A web content selector to include an existing Web Content Article
+
+See [Editing and Configuring Structure Fields](./configuring-structure-fields.md) for more information on configuring and editing Structure fields.

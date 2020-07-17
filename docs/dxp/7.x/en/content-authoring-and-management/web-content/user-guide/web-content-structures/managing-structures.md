@@ -1,6 +1,6 @@
 # Managing Structures
 
-You can manage Structures from the Structures Page. Follow these steps:
+You can manage Structures from the Structures Page: 
 
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
@@ -9,7 +9,7 @@ You can manage Structures from the Structures Page. Follow these steps:
 
 ## Available Actions
 
-The available options in a Structure's Actions Menu (![Action Menu](../../../../images/icon-actions.png)) are listed below.
+You can perform these actions from the Structure's Actions Menu (![Action Menu](../../../../images/icon-actions.png)): 
 
 **Edit:** Opens the Structure so you can update it. See [Configuring Structure Fields](./03-editing-and-configuring-structures-content.md) for more information.
 
@@ -21,11 +21,11 @@ The available options in a Structure's Actions Menu (![Action Menu](../../../../
 
 **Copy:** Opens a form to copy the Structure and set its name. See [below](#copying-an-existing-structure) for more information.
 
-**Delete:** Deletes the Structure
+**Delete:** Deletes the Structure.
 
 ## Editing Default Values
 
-You can set the default values for a Structure's fields. For example, a Structure used for confidential memos may want to include the "confidential" tag for all the articles created with that Structure, or you may want to make the content of all confidential memos non-searchable. From the Structures Page, open the Actions Menu for the Structure and follow these steps:
+You can set the default values for a Structure's fields. For example, a Structure used for confidential memos may want to include the "confidential" tag for all the articles created with that Structure, or you may want to make the content of all confidential memos non-searchable. From the Structures Page, open the Actions Menu for the Structure:
 
 1. Choose *Edit Default Values*.
 1. In the *Structure Default Values* page, configure the default values for your fields.
