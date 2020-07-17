@@ -1,6 +1,6 @@
 # Troubleshooting Tools and Resources
 
-The ability to quickly diagnose and resolve technical issues is vital. Familiarize yourself with available tools and resources for troubleshooting problems pre- and post-launch in your Liferay DXP Cloud projects:
+The ability to quickly diagnose and resolve technical issues is vital. Familiarize yourself with the available tools and resources for troubleshooting problems in your Liferay DXP Cloud projects:
 
 * [Application Metrics](#application-metrics)
 * [Real-Time Alerts](#real-time-alerts)
