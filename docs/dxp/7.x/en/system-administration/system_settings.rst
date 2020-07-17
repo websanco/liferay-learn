@@ -5,6 +5,7 @@ System Settings
    :maxdepth: 4
 
    system-settings/system-settings.md
+   system-settings/enabling-openoffice-libreoffice-integration.md
    system-settings/understanding-configuration-scope.md
    system-settings/using-configuration-files.md
    system-settings/using-factory-configuration.md
