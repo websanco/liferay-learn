@@ -10,7 +10,7 @@ Here's a sumamry of the DXP patch types and the Portal CE fix delivery method.
 | [Security Fix Packs](#security-fix-packs) | Address the latest security issues immediately. |
 | [Hotfixes](#hotfixes) | Requested by customers to fix business critical DXP issues fast. |
 | [Service Packs](#service-packs) | Incorporate the latest Fix Pack and can include larger fixes that require more testing. |
-| [Portal CE GA releases](#fix-delivery-for-portal-ce) | Apply fixes based on the latest DXP Service Pack. |
+| [Rolling Releases](#rolling-releases) | Apply fixes to Portal CE based on the latest DXP Service Pack. |
 
 ## Fix Packs
 
@@ -57,9 +57,9 @@ It's best to start a new project on the latest Service Pack for DXP, because of 
 
 If you're maintaining an existing DXP installation, it's best to keep it updated with the latest Fix Pack (according to your own deployment schedule). This way, you're integrating changes in smaller doses.
 
-## Fix Delivery for Portal CE
+## Rolling Releases
 
-Liferay Portal CE GA releases are based on DXP Service Packs and are typically available a few weeks after the corresponding Service Pack. They include the same fixes, minus those for EE-only features. See [Updating Liferay Portal CE](./updating-liferay-portal-ce.md) for more information.
+Rolling Releases are based on DXP Service Packs and are typically available a few weeks after the corresponding Service Pack. They include the same fixes, minus those for EE-only features. See [Upgrading Via Docker](../../upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker.md) for more information.
 
 ## Patch Testing
 
@@ -70,7 +70,7 @@ The following table describes the testing applied to each patch type.
 | Hotfixes       | Automated regression testing similar to Fix Packs (see below), and the support engineer who fixes the reported issue tests it. |
 | Fix packs      | Automated regression testing and manual testing. |
 | Service packs  | Liferay runs test suites on the packaged Service Pack. |
-| Portal CE GA Releases | Same testing as the corresponding DXP Service Pack, plus upgrade testing from the previous GA. |
+| Rolling Releases | Same testing as the corresponding DXP Service Pack, plus upgrade testing from the previous GA. |
 
 ## Keeping Up With Patches
 
@@ -101,4 +101,4 @@ Now that you know the patch types Liferay provides for delivering fixes, you can
 
 * [Installing Patches](./installing-patches.md)
 * [Installing the Patching Tool](./installing-the-patching-tool.md)
-* [Updating Liferay Portal CE](./updating-liferay-portal-ce.md)
+* [Upgrading to a New Liferay Portal CE Rolling Release](../../installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrading-to-a-new-liferay-portal-ce-rolling-release.md)
