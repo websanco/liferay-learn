@@ -1,4 +1,4 @@
-# DXP Cloud Service Stack Version Guide
+# Understanding Service Stack Versions
 
 The DXP Cloud service stack represents the major version of all of the services in your DXP Cloud environment. Each individual service may have a different minor version, but they all share the service stack version (e.g., version 4.x.x).
 
@@ -12,9 +12,9 @@ liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.21
 
 The version of this image is `3.0.21`. This indicates that the service stack for this environment is at version 3.x.x.
 
-Any DXP Cloud environment displays the version of its services in various locations. You can 
+Any DXP Cloud environment displays the version of its services' Docker images in various locations. You can check the service stack version of your environment by examining the number at the end of the displayed image name in any of these locations -- including the environment's _Overview_ or _Services_ pages, or each individual service's page.
 
-![The first page you see after navigating to an environment is just one page that shows you the version of your services.](./dxp-cloud-service-stack-version-guide/images/01.png)
+![The first page you see after navigating to an environment is one page that shows you the version of your services.](./understanding-service-stack-versions/images/01.png)
 
 ## Verifying the Service Stack Version from the Repository
 
