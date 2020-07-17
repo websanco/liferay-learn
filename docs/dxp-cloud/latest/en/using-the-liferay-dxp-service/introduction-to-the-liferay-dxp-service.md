@@ -60,7 +60,7 @@ liferay
 ```
 
 ```note::
-   If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate ``lcp/liferay/deploy/{ENV}`` folder.
+   If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate ``lcp/liferay/deploy/{ENV}`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Source Code
@@ -78,7 +78,7 @@ A CI build will compile source code within these folders:
 ```
 
 ```note::
-   If you are using version 3.x.x services, then these subfolders are located at the root of the repository instead of in the ``liferay/`` directory.
+   If you are using version 3.x.x services, then these subfolders are located at the root of the repository instead of in the ``liferay/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Hotfixes
@@ -102,7 +102,7 @@ liferay
 Note that hotfixes will each need to be re-applied each time the server starts up. For this reason, updating to the latest Fix Pack or Service pack of the Liferay DXP Docker image in your `LCP.json` file is better than adding many hotfixes into this folder for the long term; you can update the Docker version by replacing the `image` environment variable in this file (in the `liferay/` directory.
 
 ```note::
-   If you are using version 3.x.x services, then hotfixes are instead added into the ``lcp/liferay/hotfix/`` folder. The Docker image version in this case is instead defined with the ``liferay.workspace.lcp.liferay.image`` property, in your repository's ``gradle.properties`` file.
+   If you are using version 3.x.x services, then hotfixes are instead added into the ``lcp/liferay/hotfix/`` folder. The Docker image version in this case is instead defined with the ``liferay.workspace.lcp.liferay.image`` property, in your repository's ``gradle.properties`` file. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Licenses
@@ -127,7 +127,7 @@ liferay
 Behind the scenes, XML licenses are copied to `$LIFERAY_HOME/deploy`, and AATF licenses are copied to `$LIFERAY_HOME/data`.
 
 ```note::
-   If you are using version 3.x.x services, then licenses instead belong in the ``lcp/liferay/license/{ENV}/ folder in your repository.
+   If you are using version 3.x.x services, then licenses instead belong in the ``lcp/liferay/license/{ENV}/ folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Configuration
@@ -165,7 +165,7 @@ liferay
 ```
 
 ```note::
-   If you are using version 3.x.x services, then scripts instead belong in the ``lcp/liferay/script/`` folder in the repository.
+   If you are using version 3.x.x services, then scripts instead belong in the ``lcp/liferay/script/`` folder in the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Environment Variables Reference

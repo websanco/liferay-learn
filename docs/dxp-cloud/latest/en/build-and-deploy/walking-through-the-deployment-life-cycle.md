@@ -37,7 +37,7 @@ cp path-to-module/my-module my-repository-path/liferay/configs/dev/deploy
 ```
 
 ```note::
-   If you are using version 3.x.x services, then the appropriate ``deploy/`` folder instead is in ``lcp/liferay/``. The environment-specific folder is also inside of ``deploy/``, so the path to use in the repository in this case is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <#project-version-3-differences>`__ for more information on the differences in the directory structure.
+   If you are using version 3.x.x services, then the appropriate ``deploy/`` folder instead is in ``lcp/liferay/``. The environment-specific folder is also inside of ``deploy/``, so the path to use in the repository in this case is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <#project-version-3-differences>`__ for more information on the differences in the directory structure, and `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Deploy the Sample to the Development Environment

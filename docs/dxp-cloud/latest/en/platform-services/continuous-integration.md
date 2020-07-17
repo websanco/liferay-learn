@@ -64,7 +64,7 @@ Here is a basic overview of the steps in the CI build process:
    build fails and when it succeeds.
 
 ```note::
-   If you are using version 3.x.x services, then these extensions to the Jenkinsfile are located in the ``lcp/ci/`` folder instead.
+   If you are using version 3.x.x services, then these extensions to the Jenkinsfile are located in the ``lcp/ci/`` folder instead. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 To see how they are used in the default pipeline, simply monitor the Jenkins service startup logs. The full default Jenkinsfile is printed out in the startup logs.
@@ -90,7 +90,7 @@ util.sendSlackMessage("About to create DXP Cloud build...")
 ```
 
 ```note::
-   If you are using version 3.x.x services, then these files instead belong in the ``lcp/ci/`` directory in the repository.
+   If you are using version 3.x.x services, then these files instead belong in the ``lcp/ci/`` directory in the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Environment Variables Reference

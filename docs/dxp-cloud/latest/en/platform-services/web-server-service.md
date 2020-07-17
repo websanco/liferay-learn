@@ -25,7 +25,7 @@ appropriate directory:
 Files in `/webserver/configs/{ENV}/` will be copied as overrides into /etc/nginx/ in the webserver container in DXP Cloud. Files in `/webserver/configs/{ENV}/public/` will be copied as overrides into var/www/html/.
 
 ```note::
-   If you are using version 3.x.x services, then Nginx configurations instead belong in the appropriate ``lcp/webserver/config/{ENV}/`` directory.
+   If you are using version 3.x.x services, then Nginx configurations instead belong in the appropriate ``lcp/webserver/config/{ENV}/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Environment Variables
@@ -54,5 +54,5 @@ place it in this directory structure:
     └── LCP.json
 
 ```note::
-   If you are using version 3.x.x services, then webserver scripts instead belong in the appropriate ``lcp/webserver/script/{ENV}/`` directory.
+   If you are using version 3.x.x services, then webserver scripts instead belong in the appropriate ``lcp/webserver/script/{ENV}/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```

@@ -20,7 +20,7 @@ Administrators can configure the volumes for their services in DXP Cloud dependi
 ```
 
 ```note::
-   If you are using version 3.x.x services, then the ``LCP.json`` file for the ``liferay`` service is instead located in the ``lcp/liferay/`` directory.
+   If you are using version 3.x.x services, then the ``LCP.json`` file for the ``liferay`` service is instead located in the ``lcp/liferay/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Sharing Volumes Between Different Services

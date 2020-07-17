@@ -49,7 +49,7 @@ Note that scripts are run in alphanumerical order when they are executed. SQL sc
 Place the scripts into the appropriate, environment-specific `backup/configs/{ENV}/scripts/` folder.
 
 ```note::
-   If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder.
+   If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Performing the Data Restore

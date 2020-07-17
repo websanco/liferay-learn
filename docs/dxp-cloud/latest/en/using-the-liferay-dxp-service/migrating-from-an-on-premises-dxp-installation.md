@@ -86,7 +86,7 @@ liferay
 Any portal properties of the form `portal-*.properties` placed in one of the appropriate folders will be automatically copied over to the `$LIFERAY_HOME` within the Liferay DXP service for the applicable environment(s). OSGi properties (.cfg or .config files) will be copied over to the `osgi/configs` folder within the Liferay DXP service for the applicable environment(s).
 
 ```note::
-   If you are using version 3.x services, these configuration files belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder in your repository.
+   If you are using version 3.x services, these configuration files belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Add Service Configurations

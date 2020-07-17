@@ -29,7 +29,7 @@ The source for new code additions must be added to folders in the repository's `
 When the build is deployed, code changes in any of these locations are automatically compiled and added to the Liferay DXP service.
 
 ```note::
-   If you are using version 3.x.x services, then these folders are instead located at the root of the repository.
+   If you are using version 3.x.x services, then these folders are instead located at the root of the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Compiled Additions
@@ -37,7 +37,7 @@ When the build is deployed, code changes in any of these locations are automatic
 You can add compiled files (e.g., pre-built JARs or LPKGs) to a `liferay/configs/{ENV}/deploy/` folder. When the build is deployed to an environment, these files are copied to the corresponding folder within `$LIFERAY_HOME` (depending on the file type). For example, adding a JAR file to `liferay/configs/common/deploy/` will result in the file being copied to `$LIFERAY_HOME/osgi/modules/` for any environment the build is deployed to. 
 
 ```note::
-   If you are using version 3.x.x services, then these additions are instead added to the appropriate ``lcp/liferay/deploy/{ENV}`` folder.
+   If you are using version 3.x.x services, then these additions are instead added to the appropriate ``lcp/liferay/deploy/{ENV}`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Build and Test

@@ -6,7 +6,7 @@ Upgrading to the new repository structure involves the use of an [upgrade script
 
 ## Preparing to Upgrade
 
-In order to upgrade to version 4.x of the DXP Cloud stack, your current services must be at 3.x. To verify your current version, locate the gradle.properties file in your repository. Repositories follow this structure:
+In order to upgrade to version 4.x.x of the DXP Cloud stack, your current services must be at 3.x.x. To verify your current version, locate the gradle.properties file in your repository. Before upgrading to version 4.x.x, epositories follow this structure:
 
 ```
 repository
@@ -23,6 +23,10 @@ repository
 ├── README.md
 ├── README-dxpcloud.md
 └── settings.gradle
+```
+
+```important::
+   If the repository does not follow this structure (and there is no ``gradle.properties`` file or ``lcp`` folder present at the root), then this indicates an upgrade to version 4.x.x has already been completed.
 ```
 
 Open the `gradle.properties` file and review the versions specified for any of your Docker images. For example, this is the image version for the Liferay service:
@@ -157,3 +161,7 @@ If you are defining your own Jenkinsfile within your `ci` service directory to o
 After your local repository has changed, use the [CLI tool](./command-line-tool.md)'s `lcp deploy` command to deploy your `ci` service to the `infra` environment. This ensures that the changes to the `ci` service are deployed first, which will allow further changes to deploy correctly.
 
 You may then want to [deploy the new service versions](../build-and-deploy/walking-through-the-deployment-life-cycle.md) to a development environment, or explore some of the new functionality in the new versions of your DXP Cloud services. See the [explanation of the changes](./dxp-cloud-project-changes-in-version-4.md) to learn more.
+
+## Additional Information
+
+* [Understanding Service Stack Versions](./understanding-service-stack-versions.md)
