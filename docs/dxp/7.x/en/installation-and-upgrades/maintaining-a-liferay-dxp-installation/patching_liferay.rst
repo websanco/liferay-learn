@@ -11,7 +11,6 @@ Patching Liferay
    patching-liferay/installing-the-patching-tool.md
    patching-liferay/configuring-the-patching-tool.md
    patching-liferay/getting-patch-information.md
-   patching-liferay/updating-liferay-portal-ce.md
 
    patching-liferay/advanced_patching.rst
 
