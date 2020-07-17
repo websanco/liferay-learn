@@ -1,8 +1,53 @@
 # Creating Code with Liferay Workspace
 
-Liferay Workspace is the developer's tool for creating and managing Liferay development projects. To write code to run on Liferay DXP, you must have a Liferay runtime on which to deploy it. Your first task, therefore, after installing Liferay Workspace should be to add a Liferay bundle to your workspace. 
+Liferay Workspace is the developer's tool for creating and managing Liferay development projects. 
 
-Once you've done that, you can create your first projects. 
+## Creating Projects
+
+[Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) makes it easy to create projects in Liferay Workspace. 
+
+### Creating a Project Using Blade CLI
+
+1. From inside your workspace, find the project template that most closely matches what you want to do, using this command: 
+
+   ```bash
+   blade create -l
+   ```
+
+1. Once you've identified the template you want to use, generate your project. For example, to create a MVC Portlet, use this command: 
+
+   ```bash
+   blade create -t mvc-portlet -p com.liferay.docs.myproject.portlet -c MyPortlet myproject-web
+   ```
+
+   This creates a project using the MVC Portlet template (`-t mvc-portlet`), generates the portlet class in the Java package you specify (`-p com.liferay.docs.myproject.portlet`), specifies the name of the portlet class (`-c MyPortlet`), and names the project `myproject-web`. 
+
+### Creating Projects Manually
+
+You don't need Blade CLI to create projects. You can create a project folder manually if you wish: 
+
+1. From inside your workspace, create a folder to house your project: 
+
+   ```bash
+   cd [my project name]
+   ```
+
+1. Create a `build.gradle` script for your project. Since you're using Liferay Workspace, you need only define the dependencies you need: 
+
+   ```groovy
+   dependencies {
+       compileOnly group: "com.liferay", name: "biz.aQute.bnd.annotation", version: "4.2.0.LIFERAY-PATCHED-1"
+       compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "8.1.0"
+       compileOnly group: "com.liferay.portal", name: "release.portal.api", version: "7.3.3-ga4"
+       compileOnly group: "javax.portlet", name: "portlet-api", version: "3.0.0"
+       compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
+       compileOnly group: "org.osgi", name: "osgi.core", version: "6.0.0"
+   }
+   ```
+
+1. Create the folder structure for your project. 
+
+To write code to run on Liferay DXP, you must have a Liferay runtime on which to deploy it. Your first task, therefore, after installing Liferay Workspace should be to add a Liferay bundle to your workspace. 
 
 ## Adding a Liferay Bundle to Workspace
 
@@ -43,24 +88,6 @@ If you're using the Maven version of Workspace, the steps are exactly the same, 
 
 To initialize the server, use this command: ``mvn bundle-support:init``. 
 ```
-
-## Creating Module Projects
-
-[Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) makes it easy to create projects in Gradle-based Liferay Workspaces. If you're a Maven user, there are many Liferay archetypes you can use. 
-
-### Creating a Project Using Blade CLI
-
-1. Find the project template that most closely matches what you want to do, using this command: 
-
-   ```bash
-   blade create -l
-   ```
-
-1. Once you've identified the template you want to use, generate your project: 
-
-   ```bash
-   blade create -t [template] [various options] [project name]
-   ```
 
 ### Creating a Project Using Maven
 

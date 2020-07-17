@@ -13,7 +13,7 @@ Liferay Workspace is implemented using Gradle scripts and plugins. As such, it i
 
 ## Building Projects
 
-Liferay Workspace incorporates Liferay's Gradle and Maven plugins seamlessly to make it easier to build your projects. A Gradle wrapper comes with Workspace so you can use Gradle without having to install it globally on your machine. 
+Liferay Workspace incorporates Liferay's Gradle plugins seamlessly to jump start building Liferay projects. A Gradle wrapper comes with Workspace so you can use Gradle without having to install it globally on your machine. 
 
 Since Workspace is set up to build Liferay applications already, it saves you the time of hunting down repositories and dependencies to create your build configurations. 
 
