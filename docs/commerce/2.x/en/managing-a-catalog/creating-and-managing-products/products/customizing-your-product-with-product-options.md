@@ -124,8 +124,16 @@ When _Use in Faceted Navigation_ is switched to _Active_, users have the ability
 
 A SKU contributor can be assigned a unique price and other attributes for each variant via [SKUs](./adding-skus-to-your-products.md). If enabled, the option must have a SKU in order to be sold.
 
+The following Field types can be used as SKU contributors:
+
+* Select From List
+* Single Selection
+* Multiple Selection
+
+Otherwise if selecting one of the others, the following warning message appears:
+
 ```warning::
-   You cannot use a Boolean option as a SKU contributor. Attempting to use a Boolean option as a SKU contributor shows the following warning message: ``SKU Contributor cannot be set as true for the selected Field Type.``
+    ``SKU Contributor cannot be set as true for the selected Field Type.``
 ```
 
 ### Adding Option Values
