@@ -1,5 +1,5 @@
-Bundle-Name: Liferay Learn R2F1 Knowledge Base Similar Results Contributor
-Bundle-SymbolicName: com.liferay.learn.r2f1.impl
+Bundle-Name: Liferay Learn R2F2 DDM Form Storage Adapter Final Solution
+Bundle-SymbolicName: com.liferay.learn.r2f2.impl
 Bundle-Version: 1.0.0
 Provide-Capability:\
 	liferay.resource.bundle;\
