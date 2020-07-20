@@ -64,7 +64,11 @@ function configure_env {
 
 	check_utils pip3 zip
 
-	pip_install nodeenv recommonmark sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+	# install deps
+	pip_install nodeenv recommonmark wheel 
+
+	# install sphinx
+	pip_install sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
 
 	if [ "${1}" == "prod" ]
 	then
