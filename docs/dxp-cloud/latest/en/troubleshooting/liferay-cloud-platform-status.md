@@ -47,4 +47,4 @@ Click on *Subscribe to Updates*, and select the method of notification that is m
 ## Additional Information
 
 * [DXP Cloud Support Overview](https://help.liferay.com/hc/articles/360030208451-DXP-Cloud-Support-Overview)
-* [Troubleshooting Tools and Resources](./troubleshooting/troubleshooting-tools-and-resources.md)
+* [Troubleshooting Tools and Resources](./troubleshooting-tools-and-resources.md)

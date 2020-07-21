@@ -27,7 +27,7 @@ Metrics are available for the default DXP Cloud stack services: Webserver, Lifer
 
 ![Figure 1: View application metrics via the Monitoring page in the DXP Cloud console](./troubleshooting-tools-and-resources/images/01.png)
 
-Users can also integrate [Dynatrace’s](https://www.dynatrace.com/) advanced performance monitoring with production environments.
+Users can also integrate [Dynatrace’s](../manage-and-optimize/application-metrics.md#advanced-application-metrics-production-only) advanced performance monitoring with production environments.
 
 See [Application Metrics](../manage-and-optimize/application-metrics.md) for more information.
 
