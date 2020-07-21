@@ -4,6 +4,19 @@ set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
+function activate_venv {
+	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
+	then
+		python3 -m venv venv
+
+		source venv/bin/activate
+	else
+		python -m venv ${PWD}/venv
+
+		source ${PWD}/venv/scripts/activate
+	fi
+}
+
 function check_args {
 	if [[ ${#} -eq 0 ]]
 	then
@@ -46,16 +59,7 @@ function configure_env {
 		rm -fr venv
 	fi
 
-	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
-	then
-		python3 -m venv venv
-
-		source venv/bin/activate
-	else
-		python -m venv ${PWD}/venv
-
-		source ${PWD}/venv/scripts/activate
-	fi
+	activate_venv
 
 	check_utils pip3 zip
 
@@ -68,7 +72,7 @@ function configure_env {
 	then
 		nodeenv -p
 
-		source venv/bin/activate
+		activate_venv
 
 		npm_install generator-liferay-theme yo
 	fi
