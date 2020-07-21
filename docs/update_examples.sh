@@ -16,18 +16,18 @@ function copy_template {
 
 		echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
 
-		#pushd ${dir_name}
+		pushd ${zip_dir_name}
 
 		#./gradlew classes formatSource
 
-		#popd
+		popd
 	done
 }
 
 function update_examples {
 	for update_example_script_name in `find . -name "update_example.sh" -type f`
 	do
-		${update_example_script_name}
+		echo ${update_example_script_name}
 	done
 }
 
