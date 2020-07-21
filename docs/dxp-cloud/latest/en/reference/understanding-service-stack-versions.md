@@ -22,7 +22,7 @@ Docker image versions are defined in different locations depending on whether or
 
 ### Checking Before the Upgrade to 4.x.x
 
-If your repository is at version 4.x.x, there is a `gradle.properties` article at the root of your repository that defines the versions of each of your services. Open this file and identify these properties to identify the versions of your Docker images:
+If your repository is at version 3.x.x or below, there is a `gradle.properties` article at the root of your repository that defines the versions of each of your services. Open this file and identify these properties to identify the versions of your Docker images:
 
 ```properties
 liferay.workspace.lcp.backup.image=liferaycloud/backup:3.2.1
@@ -52,7 +52,7 @@ For example, see this section of an `LCP.json` file for the `database` service:
 In this example, the `image` property's value has a name ending in `4.0.0`, indicating that the service stack is at version 4.x.x.
 
 ```tip::
-   Upgrading your service stack to version ``4.x.x`` is recommended for access to future improvements. See `Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>`__ for steps on performing the upgrade.
+   Upgrading your service stack to version ``4.x.x`` is recommended for access to the latest improvements. See `Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>`__ for steps on performing the upgrade.
 ```
 
 ## Additional Information
