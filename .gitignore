@@ -1,3 +1,8 @@
 .gradle/
 .metadata/
 docs/**/liferay-????-theme/
+docs/**/liferay-????.zip/gradle/
+docs/**/liferay-????.zip/gradlew
+docs/**/liferay-????.zip/gradlew.bat
+docs/**/liferay-????.zip/settings.gradle
+docs/**/liferay-????.zip/source-formatter-suppressions.xml
