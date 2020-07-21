@@ -14,9 +14,6 @@
 
 package com.liferay.learn.r1s1.impl;
 
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.model.AssetRenderer;
 import com.liferay.asset.kernel.service.AssetEntryLocalService;
@@ -37,19 +34,27 @@ import com.liferay.portal.search.similar.results.web.spi.contributor.helper.Dest
 import com.liferay.portal.search.similar.results.web.spi.contributor.helper.RouteBuilder;
 import com.liferay.portal.search.similar.results.web.spi.contributor.helper.RouteHelper;
 
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
 /**
  * @author Russell Bohl
  * @author Tibor Lipusz
  */
 @Component(service = SimilarResultsContributor.class)
-public class KBArticleSimilarResultsContributor implements SimilarResultsContributor {
+public class KBArticleSimilarResultsContributor
+	implements SimilarResultsContributor {
 
 	@Override
-	public void detectRoute(RouteBuilder routeBuilder, RouteHelper routeHelper) {
+	public void detectRoute(
+		RouteBuilder routeBuilder, RouteHelper routeHelper) {
 
-		String[] subpath = StringUtil.split(_http.getPath(routeHelper.getURLString()), Portal.FRIENDLY_URL_SEPARATOR);
-		
-		String[] parameters = StringUtil.split(subpath[subpath.length - 1], CharPool.FORWARD_SLASH);
+		String[] subpath = StringUtil.split(
+			_http.getPath(routeHelper.getURLString()),
+			Portal.FRIENDLY_URL_SEPARATOR);
+
+		String[] parameters = StringUtil.split(
+			subpath[subpath.length - 1], CharPool.FORWARD_SLASH);
 
 		if (!parameters[0].matches("knowledge_base")) {
 			throw new RuntimeException("KBArticle was not detected");
@@ -59,20 +64,22 @@ public class KBArticleSimilarResultsContributor implements SimilarResultsContrib
 	}
 
 	@Override
-	public void resolveCriteria(CriteriaBuilder criteriaBuilder, CriteriaHelper criteriaHelper) {
+	public void resolveCriteria(
+		CriteriaBuilder criteriaBuilder, CriteriaHelper criteriaHelper) {
 
 		long groupId = criteriaHelper.getGroupId();
 
-		String urlTitle = (String) criteriaHelper.getRouteParameter("urlTitle");
+		String urlTitle = (String)criteriaHelper.getRouteParameter("urlTitle");
 
-		KBArticle kbArticle = _kbArticleLocalService.fetchKBArticleByUrlTitle(groupId,
-				KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
+		KBArticle kbArticle = _kbArticleLocalService.fetchKBArticleByUrlTitle(
+			groupId, KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
 
 		if (kbArticle == null) {
 			return;
 		}
 
-		AssetEntry assetEntry = _assetEntryLocalService.fetchEntry(groupId, kbArticle.getUuid());
+		AssetEntry assetEntry = _assetEntryLocalService.fetchEntry(
+			groupId, kbArticle.getUuid());
 
 		if (assetEntry == null) {
 			return;
@@ -80,7 +87,8 @@ public class KBArticleSimilarResultsContributor implements SimilarResultsContrib
 
 		String uidField = String.valueOf(kbArticle.getPrimaryKeyObj());
 
-		if (ReleaseInfo.getBuildNumber() == ReleaseInfo.RELEASE_7_2_10_BUILD_NUMBER) {
+		if (ReleaseInfo.getBuildNumber() ==
+				ReleaseInfo.RELEASE_7_2_10_BUILD_NUMBER) {
 
 			uidField = String.valueOf(kbArticle.getResourcePrimKey());
 		}
@@ -89,15 +97,18 @@ public class KBArticleSimilarResultsContributor implements SimilarResultsContrib
 	}
 
 	@Override
-	public void writeDestination(DestinationBuilder destinationBuilder, DestinationHelper destinationHelper) {
+	public void writeDestination(
+		DestinationBuilder destinationBuilder,
+		DestinationHelper destinationHelper) {
 
-		String urlTitle = (String) destinationHelper.getRouteParameter("urlTitle");
+		String urlTitle = (String)destinationHelper.getRouteParameter(
+			"urlTitle");
 
 		AssetRenderer<?> assetRenderer = destinationHelper.getAssetRenderer();
 
-		KBArticle kbArticle = (KBArticle) assetRenderer.getAssetObject();
-		destinationBuilder.replace(urlTitle, kbArticle.getUrlTitle());
+		KBArticle kbArticle = (KBArticle)assetRenderer.getAssetObject();
 
+		destinationBuilder.replace(urlTitle, kbArticle.getUrlTitle());
 	}
 
 	@Reference
