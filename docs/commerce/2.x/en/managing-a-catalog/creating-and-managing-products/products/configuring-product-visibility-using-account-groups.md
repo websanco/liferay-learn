@@ -1,6 +1,6 @@
 # Configuring Product Visibility Using Account Groups
 
-By default, all products are viewable in the Catalog. However, users can limit which products are available based on Account Groups.
+By default, all products are visible in the Catalog. However, users can limit a product's visibility based on Account Groups.
 
 ## Prerequisites
 
@@ -8,9 +8,9 @@ By default, all products are viewable in the Catalog. However, users can limit w
 1. One or more [Account Group](../../../account-management/creating-a-new-account-group.md) has been created.
 1. Products have been added to a catalog.
 
-## Configuring Product Filter Channels
+## Configuring a Product's Filter
 
-To configure a product to be available in a specific channel, follow these steps:
+To configure a product to be visible for a specific Account Group, follow these steps:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product.
