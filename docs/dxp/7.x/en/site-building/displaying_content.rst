@@ -5,9 +5,9 @@ Displaying Content
    :maxdepth: 3
 
    displaying-content/using_the_web_content_display_widget.rst
-   03-displaying-content/using_the_asset_publisher_widget.rst
-   03-displaying-content/using_the_iframe_widget.rst
-   03-displaying-content/configuring_content_recommendations.rst
+   displaying-content/using_the_asset_publisher_widget.rst
+   displaying-content/using_the_iframe_widget.rst
+   displaying-content/configuring_content_recommendations.rst
    displaying-content/using_fragments.rst
    displaying-content/customizing_widgets.rst
 
@@ -18,7 +18,11 @@ Using the Web Content Display Widget
 
 Using the Asset Publisher Widget
 --------------------------------
-Coming soon!
+
+-  :doc:`/site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro`
+-  :doc:`/site-building/displaying-content/using-the-asset-publisher-widget/selecting-assets-for-the-asset-publisher`
+-  :doc:`/site-building/displaying-content/using-the-asset-publisher-widget/configuring-display-settings`
+-  :doc:`/site-building/displaying-content/using-the-asset-publisher-widget/configuring-asset-publisher-subscriptions`
 
 Using the Iframe Widget
 -----------------------

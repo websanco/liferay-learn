@@ -1,6 +1,6 @@
 # Configuring Display Settings
 
-Once you've [selected your assets](./selecting-assets.md) for the Asset Publisher, you can configure several display settings to specify how users view your content. Follow these steps:
+Once you've [selected your assets](./selecting-assets-for-the-asset-publisher.md) for the Asset Publisher, you can configure several display settings to specify how users view your content. Follow these steps:
 
 1. Hover over the Asset Publisher and click the Options icon (![Options](../../../images/icon-app-options.png)) in the widget's menu and select *Configuration*.
 1. With the *Setup* tab selected, click on the *Display Settings* tab.
@@ -29,7 +29,7 @@ These templates are in every site by default:
 | Title List | instance | Displays the content's title as defined by the user who entered it |
 | Full Content | instance | Displays the entire content of the entry |
 | Rich Summary | global | Displays a summary view of each asset along with a *Read More* link to the article's full content |
-| Map | global | displays [geo-localized assets](TODO) in either a Google Map or an Open Street Map provider. The map provider can be configured in Instance Settings, and Site Settings in the Advanced section. |
+| Map | global | displays [geo-localized assets](../../site-settings/site-content-configurations/configuring-geolocation-for-assets.md) in either a Google Map or an Open Street Map provider. The map provider can be configured in Instance Settings, and Site Settings in the Advanced section. |
 
 These are the remaining settings for the *Display Settings* section:
 

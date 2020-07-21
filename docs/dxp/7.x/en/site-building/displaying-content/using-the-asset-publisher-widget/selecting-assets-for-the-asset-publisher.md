@@ -1,10 +1,12 @@
 # Selecting Assets for the Asset Publisher
 
-You can configure the Asset Publisher to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Content Sets](TODO).
+You can configure the Asset Publisher to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Content Sets](../../../content-authoring-and-management/content_sets.md).
 
 ## Selecting Assets Dynamically
 
-By default, the Asset Publisher selects assets dynamically, according to a set of customizable rules. These rules can be combined to compliment each other to create a nice, refined query for your content. Assets are filtered by permissions automatically, no matter how complicated your asset selection rules are. To enable dynamic asset selection, follow these steps:
+By default, the Asset Publisher selects assets dynamically, according to a set of customizable rules. These rules can be combined to compliment each other to create a nice, refined query for your content. Assets are filtered by permissions automatically, no matter how complicated your asset selection rules are.
+
+To enable dynamic asset selection, follow these steps:
 
 1. Hover over the Asset Publisher and click the Options icon (![Options](../../../images/icon-app-options.png)) in the widget's menu and select *Configuration*.
 
@@ -42,7 +44,7 @@ To enable manual asset selection, follow these steps:
 
     ![You can add scopes to expand the list of available assets to display.](./selecting-assets-for-the-asset-publisher/images/02.png)
 
-1. Open the *Asset Entries* panel and click the *Select* button for each scope to select the assets to display for it. A list of the selected assets appears in the Asset Entries section. See [Configuring Display Settings](./03-configuring-display-settings.md) for more information.
+1. Open the *Asset Entries* panel and click the *Select* button for each scope to select the assets to display for it. A list of the selected assets appears in the Asset Entries section. See [Configuring Display Settings](./configuring-display-settings.md) for more information.
 1. click *Save* to apply the manual configuration.
 
 ## Selecting a Content Set
@@ -55,7 +57,7 @@ Since Liferay DXP 7.2, you can select Content Sets: predefined lists of content 
 
 ![Select a Content Set beneath the Select Content Set heading to display assets from it.](./selecting-assets-for-the-asset-publisher/images/04.png)
 
-For more information on using Content Sets, see [Creating Content Sets](TODO).
+For more information on using Content Sets, see [Creating Content Sets](../../../content-authoring-and-management/content_sets.md).
 
 ## Configuring Asset Display Ordering
 
