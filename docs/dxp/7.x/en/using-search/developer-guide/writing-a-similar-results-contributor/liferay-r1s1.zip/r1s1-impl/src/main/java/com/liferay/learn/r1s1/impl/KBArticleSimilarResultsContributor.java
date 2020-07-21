@@ -37,6 +37,11 @@ import com.liferay.portal.search.similar.results.web.spi.contributor.helper.Rout
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+com.liferay.portal.kernel
+com.liferay.portal
+
+com.liferay.learn.r1s1.internal.search.similar.results.web.spi.contributor.
+
 /**
  * @author Russell Bohl
  * @author Tibor Lipusz
@@ -67,19 +72,17 @@ public class KBArticleSimilarResultsContributor
 	public void resolveCriteria(
 		CriteriaBuilder criteriaBuilder, CriteriaHelper criteriaHelper) {
 
-		long groupId = criteriaHelper.getGroupId();
-
 		String urlTitle = (String)criteriaHelper.getRouteParameter("urlTitle");
 
 		KBArticle kbArticle = _kbArticleLocalService.fetchKBArticleByUrlTitle(
-			groupId, KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
+			criteriaHelper.getGroupId(), KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
 
 		if (kbArticle == null) {
 			return;
 		}
 
 		AssetEntry assetEntry = _assetEntryLocalService.fetchEntry(
-			groupId, kbArticle.getUuid());
+			criteriaHelper.getGroupId(), kbArticle.getUuid());
 
 		if (assetEntry == null) {
 			return;
