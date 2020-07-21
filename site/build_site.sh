@@ -41,11 +41,6 @@ function check_utils {
 }
 
 function configure_env {
-
-	#
-	# sudo dnf install python3-sphinx
-	#
-
 	if [ "${1}" == "prod" ]
 	then
 		rm -fr venv
@@ -64,11 +59,10 @@ function configure_env {
 
 	check_utils pip3 zip
 
-	# install deps
-	pip_install nodeenv recommonmark wheel 
-
-	# install sphinx
-	pip_install sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+	pip_install \
+		nodeenv recommonmark wheel \
+		\
+		sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
 
 	if [ "${1}" == "prod" ]
 	then
