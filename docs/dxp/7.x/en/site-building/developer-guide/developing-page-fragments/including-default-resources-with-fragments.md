@@ -1,6 +1,6 @@
 # Including Default Resources in Fragments
 
-When creating Page Fragments, you can upload image resources (e.g. `.gif`, `.jpg`, `.jpeg`, or `.png`) with your Fragment Collection to make them available from the Collection, rather than relying on resources uploaded in other areas of your Site (e.g. Documents and Media). When your Fragment Collection is exported, the images are included with it, making the Collection easier to maintain. Here, You'll learn how to include resources with your Fragment Collection:
+When creating Page Fragments, you can upload image resources (e.g. `.gif`, `.jpg`, `.jpeg`, or `.png`) with your Fragment Collection to make them available from the Collection, rather than relying on resources uploaded to other applications, like Documents and Media. When your Fragment Collection is exported, the images come with it, making the Collection easier to maintain. Here's how to include resources with your Fragment Collection:
 
 1. [Import a Fragment Collection with Resources](#import-a-fragment-collection-with-resources)
 1. [Include a New Resource](#include-a-new-resource)
@@ -19,15 +19,15 @@ First, import an example to see how Fragment resources work:
 
 1. Download and unzip the [example resources Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):
 		
-		```bash
+    ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip
-    
+
     unzip liferay-i6r3.zip
     cd liferay-i6r3
-		```
-    
+    ```
+
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
-    
+
     ```bash
     cd liferay-i6r3/fragment-resources-collection
     npm run import
@@ -43,7 +43,7 @@ First, import an example to see how Fragment resources work:
     ? Group ID Liferay
     ```
 
-1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections and includes the resource in the *Resources* tab.
+1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections and includes the resource in the *Resources* tab.
 
     ![The Collection is available along with the included resource.](./auto-deploying-fragments/images/01.png)
 
@@ -87,7 +87,7 @@ Now that you know how resources are included and referenced, you can include a n
     ```
 
 1. Import the Fragment Collection in the Docker container as you did above:
-    
+
     ```bash
     cd liferay-i6r3/fragment-resources-collection
     npm run import

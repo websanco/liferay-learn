@@ -1,9 +1,5 @@
 package com.liferay.learn.fragments;
 
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-import javax.portlet.Portlet;
-
 import javax.servlet.ServletContext;
 
 import org.osgi.service.component.annotations.Component;

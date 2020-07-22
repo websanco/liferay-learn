@@ -16,9 +16,10 @@ First, you must create a Collection:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+    docker run -it -p 8080:8080 liferay/portal:7.3.3-ga4
     ```
 
+1. Access the site at `http://localhost:8080`; user name `test@liferay.com`; password `test`. 
 1. Select the Site you wish to build.
 1. Open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. From this page you can manage your Page Fragments and Collections. See [Managing Page Fragments](../../using-fragments/managing-page-fragments.md) for more information on the available actions for Page Fragments.
 1. Click the (![Add Button](../../../images/icon-add-app.png)) and enter a name and optional description for the Collection.

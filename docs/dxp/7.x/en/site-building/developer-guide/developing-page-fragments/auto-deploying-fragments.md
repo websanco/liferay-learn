@@ -23,32 +23,32 @@ First, deploy an example to see how auto-deployable Fragments work:
 
 1. Download and unzip the [example auto-deployable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip):
 		
-		```bash
-		curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip
-		
-		unzip liferay-a2f8.zip
-		cd liferay-a2f8
-		```
+    ```bash
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip
+    
+    unzip liferay-a2f8.zip
+    cd liferay-a2f8
+    ```
 
 1. Compress the Fragment project into a ZIP:
 
-		```bash
-		zip marketing-fragments
-		```
+    ```bash
+    zip marketing-fragments
+    ```
 
-1. Copy the Collection `zip` file to the Docker container to automatically import the Fragments Collection:
+1. Copy the Collection `zip` file to the Docker container to import the Fragments Collection automatically:
 
-		```bash
-		docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
-		```
+    ```bash
+    docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
+    ```
 		
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
+1. Confirm the deployment to the Liferay Docker container console. The log message below appears in the Docker console:
 
     ```bash
     INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:263] Processing marketing-fragments.zip
     ```
 
-1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection is listed with the other Collections.
+1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection is listed with the other Collections.
 
 ![The Collection is available.](./auto-deploying-fragments/images/01.png)
 
@@ -89,14 +89,14 @@ Follow these steps to add a new Fragment to the Collection and redeploy:
     ```bash
     zip marketing-fragments
     ```
-    
+
 1. Copy the Collection `zip` file to the Docker container to automatically import the Fragments Collection:
 
-		```bash
-		docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
-		```
+   ```bash
+   docker cp marketing-fragments.zip docker-container-name:/path/to/deploy/folder
+   ```
 
-1. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection includes the new Marketing Jumbotron Fragment.
+1. Open your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection includes the new Marketing Jumbotron Fragment.
 
     ![The new Fragment is included in the auto-deployed Collection.](./auto-deploying-fragments/images/02.png)
 

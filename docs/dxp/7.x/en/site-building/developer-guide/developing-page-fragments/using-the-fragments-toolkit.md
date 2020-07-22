@@ -1,6 +1,6 @@
 # Using the Fragments Toolkit
 
-The Fragments Toolkit helps you package Fragments and Collections created using your own tools. It takes only three steps to learn how to use it:
+The Fragments Toolkit helps you package Fragments and Collections created using your own tools. Using it takes only three steps: 
 
 1. [Import a Fragment Collection](#import-a-fragment-collection)
 1. [Add a New Collection and Fragment](#add-a-new-collection-and-fragment)
@@ -13,7 +13,7 @@ First, deploy an example to see what a Fragment Collection looks like:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+    docker run -it -p 8080:8080 liferay/portal:7.3.3-ga4
     ```
 
 1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip)
@@ -26,13 +26,13 @@ First, deploy an example to see what a Fragment Collection looks like:
     unzip liferay-x2y6.zip
     ```
 
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
     ```bash
     cd liferay-x2y6/marketing-fragments
     ```
 
-    ```bash
+    ```
     npm run import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
@@ -45,7 +45,7 @@ First, deploy an example to see what a Fragment Collection looks like:
     ? Group ID Liferay
     ```
 
-1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections.
+1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears in the Collection list.
 
     ![The Collection is available.](./using-the-fragments-toolkit/images/01.png)
 
@@ -53,7 +53,7 @@ Great! You successfully deployed a zipped Fragment Collection created with the F
 
 ## Collection Format Overview
 
-The generated Fragment Collection has the project structure below. You can manually create this project structure with your own tools if you wish and compress it into a ZIP file.
+The generated Fragment Collection has the project structure below. You can create this project structure manually and compress it into a ZIP file.
 
 * `collection.json`: a text file which describes your collection with the format `{"name":"collection name>","description":"collection description"}`.
 
@@ -92,7 +92,7 @@ The generated Fragment Collection has the project structure below. You can manua
 
 ## Add a New Collection and Fragment
 
-Follow these steps to add a new Fragment Collection with a new Fragment:
+Follow these steps to add a new Fragment Collection containing a new Fragment:
 
 1. Install the Fragments Generator using the command below. Note that you must have [NodeJS](https://nodejs.org/) 8+ and [npm](https://www.npmjs.com/) 6+ installed first.
 
@@ -203,7 +203,7 @@ You can import the updated Fragments as you did above:
     npm run import
     ```
 
-1. Verify that the new Fragment Collection is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new Collection appears with the other Collections.
+1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new Collection appears in the Collection list.
 
     ![The Collection is available.](./using-the-fragments-toolkit/images/02.png)
 

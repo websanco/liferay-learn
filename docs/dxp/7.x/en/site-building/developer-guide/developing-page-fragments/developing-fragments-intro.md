@@ -6,18 +6,18 @@ Page Fragments are the building blocks for [Content Pages](../../creating-pages/
 
 ## Collections
 
-Collections organize Fragments so that groups of related Fragments can be managed and shared. Users navigate Collections when selecting Fragments to add to a page, so you'll create Fragments in Collections that make it easy to combine into Pages. An example appears in the admin page, which shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code to be static (locked and unable to be edited through the interface) instead, you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
+Collections organize Fragments so that groups of related Fragments can be managed and shared. Users navigate Collections when selecting Fragments to add to a page, so you'll create Fragments in Collections that make it easy to combine into Pages. An example appears in the admin page, which shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code instead to be static (locked and unable to be edited through the interface), you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
 
 ## Tooling
 
-Several Page Fragments are included that you can use to [build Content Pages](../../creating-pages/building-and-managing-content-pages/building-content-pages.md), but you can create your own Page Fragments. Browser-based tools help you create Fragments directly on your system, and CLI-based tools integrate with your own toolset to preserve your productivity:
+You can use the included Page Fragments to [build Content Pages](../../creating-pages/building-and-managing-content-pages/building-content-pages.md), and you can also create your own Page Fragments. Browser-based tools help you create Fragments directly on your system, and CLI-based tools integrate with your own toolset to preserve your productivity:
 
 * [The Built-in Fragments Editor](./using-the-fragments-editor.md): use the built-in editor to develop Page Fragments inside of Liferay Portal.
 * [The Fragments Toolkit](./using-the-fragments-toolkit.md): use the Fragments CLI to generate, import, and export Page Fragments and Fragment Collections from your desktop.
 
 ## Features
 
-Fragments are much more powerful than plain HTML, CSS, and JavaScript. You can enhance Fragments further using these resources:
+Fragments can be enhanced using the below resources, making them much more powerful than plain HTML, CSS, and JavaScript: 
 
 * [Editable Elements](../reference/fragments/fragment-specific-tags-reference.md) <!-- TODO: Fix link -->: make text, images, links, and "rich" text elements editable, so users can replace the content with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets.
 * [Configuration Options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->: Add configuration options to the application's Configuration Menu, like modifying the Fragment's font color.

@@ -4,7 +4,8 @@
   Available since Liferay DXP 7.2 SP1.
 ```
 
-You can add configurable options to your Fragments (checkboxes, selectors, etc.) that you can access through the Fragment's Configuration Menu when it's added to a page. Defining configuration options for a Fragment gives it more flexibility, reducing the number of Fragments you must maintain. For example, instead of having one Fragment that has a heading with style A and another Fragment that has a heading with style B, you can just create one Fragment that has a configurable style for the heading with options for style A and B. Here you'll learn how to add configuration options to a Fragment:
+Configurable options help make your Fragments flexible, so you don't have to maintain many similar Fragments. For example, instead of having one Fragment that has a heading with style A and another Fragment that has a heading with style B, you can create one Fragment that has a configurable style for the heading with options for style A and B. 
+ Here you'll learn how to add configuration options to a Fragment:
 
 1. [Deploy a Configurable Fragment](#deploy-a-configurable-fragment)
 1. [Modify the Configuration](#modify-the-configuration)
@@ -22,15 +23,15 @@ First, deploy an example to see how Fragment Configuration options work:
 
 1. Download and unzip the [example configurable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
 		
-		```bash
+	```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip
-    
+
     unzip liferay-c7f8.zip
     cd liferay-c7f8
-		```
-    
+	```
+
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
-    
+
     ```bash
     cd liferay-c7f8/configurable-marketing-fragment
     npm run import
@@ -51,7 +52,7 @@ First, deploy an example to see how Fragment Configuration options work:
 
 1. Go to the Home Page and click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
 1. Expand the *Configurable Marketing Collection* heading in the [Fragments panel](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) and drag the *Configurable Marketing Card* Fragment onto the page.
-1. Select the Configurable Marketing Card and click the (![Gear icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears to open the Fragment Configuration Menu. From here, you can choose a configuration option for the text style to change the text from dark to light.
+1. Select the Configurable Marketing Card. Open the Fragment Configuration Menu by clicking the (![Gear icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. From here, you can choose a configuration option for the text style to change the text from dark to light.
 
     ![Configurable Fragments provide options to modify the Fragment's look and feel.](./making-a-page-fragment-configurable/images/01.png)
 
@@ -120,7 +121,7 @@ The example demonstrates a select configuration. See the [Configuration Types Re
 
 Malicious code can be inserted into the text field, wreaking havoc for other users of the Fragment. You must escape Fragment text values so you're protected from cross-site scripting (XSS) attacks.
 
-For generic cases, an HTML `escape()` method is available. See the [HtmlUtil](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html) class for more information.
+For generic cases, an HTML `escape()` method is available. See the [`HtmlUtil`](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html) class for more information.
 
 ```html
 <div class="fragment_38816">
@@ -159,7 +160,7 @@ Now that you know how the configuration works, you can modify it.
     }
     ```
 
-1. Go back to the *Code* tab and wrap the paragraph element with a conditional statement to check for the checkbox's value, and click *Publish* to apply the changes.
+1. Go back to the *Code* tab and wrap the paragraph element with a conditional statement to check for the checkbox's value. Click *Publish* to apply the changes.
 
     ```html
     [#if configuration.showDescription]
@@ -182,7 +183,7 @@ Now you can test the updates.
 1. Check the box for the Home Page and click the (![propagate button](../../../images/icon-propagate.png)) button.
 
     ![Configurable Fragments provide options to modify the Fragment's look and feel.](./making-a-page-fragment-configurable/images/03.png)
-    
+
 1. Go back to the Home Page and once again click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
 1. Select the Configurable Marketing Card again and click the (![Gear icon](../../../images/icon-control-menu-gear.png)) to open the Fragment Configuration Menu.
 1. Check/uncheck the *Show Description* checkbox to show/hide the card's text.
