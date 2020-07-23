@@ -1,0 +1,75 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Using the Web Content Display Widget',
+					sectionURL: 'displaying-content/using_the_web_content_display_widget.html',
+					subsections: [
+						{
+							name: 'Web Content Display',
+							url: 'displaying-content/using-the-web-content-display-widget/web-content-display.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using the Asset Publisher Widget',
+					sectionURL: 'displaying-content/using_the_asset_publisher_widget.html',
+					subsections: [
+						{
+							name: 'Displaying Assets',
+							url: 'displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.html'
+						},
+						{
+							name: 'Selecting Assets for the Asset Publisher',
+							url: 'displaying-content/using-the-asset-publisher-widget/selecting-assets-for-the-asset-publisher.html'
+						},
+						{
+							name: 'Configuring Display Settings',
+							url: 'displaying-content/using-the-asset-publisher-widget/configuring-display-settings.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using the Iframe Widget (Coming Soon)',
+					sectionURL: '',
+				},
+				{
+					sectionName: 'Using Fragments',
+					sectionURL: 'displaying-content/using_fragments.html',
+					subsections: [
+						{
+							name: 'Using Page Fragments',
+							url: 'displaying-content/using-fragments/using-page-fragments.html'
+						},
+						{
+							name: 'Managing Page Fragments',
+							url: 'displaying-content/using-fragments/managing-page-fragments.html'
+						},
+						{
+							name: 'Displaying Content with Display Page Templates',
+							url: 'displaying-content/using-fragments/using-display-page-templates/displaying-content-with-display-page-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Customizing Widgets',
+					sectionURL: 'displaying-content/customizing_widgets.html',
+					subsections: [
+						{
+							name: 'Styling Widgets with Widget Templates',
+							url: 'displaying-content/customizing-widgets/styling-widgets-with-widget-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Configuring Content Recommendations (Coming Soon)',
+					sectionURL: 'displaying-content/configuring_content_recommendations.html',
+				},
+			]
+		}
+	})
+</script>
