@@ -11,7 +11,10 @@ function activate_venv {
 
 		source venv/bin/activate
 	else
-		python -m venv ${PWD}/venv
+		if [[ -z `find ${PWD} -maxdepth 1 -mindepth 1 -name venv -type d` ]]
+		then
+			python -m venv ${PWD}/venv
+		fi
 
 		source ${PWD}/venv/scripts/activate
 	fi
