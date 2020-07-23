@@ -11,7 +11,8 @@
     [11:36:34] Finished 'build' after 8.58 s
     ```
 
-1. The `build` task generates the base Theme files (in the `build` folder), compiles Sass into CSS, and compresses all Theme files into a `.war` file (in the `dist` folder) that you can deploy to your server. Copy any of these files and folders to your Theme's `src` folder to modify them.
+1. The `build` task generates the base Theme files (in the `build` folder), compiles Sass into CSS, and compresses all Theme files into a `.war` file (in the `dist` folder) for deployment. Copy any of these files and folders to your Theme's `src` folder to modify them.
+
 1. [Deploy](./deploying-themes.md) the `war` file to your app server to make it available.
 
 Great! Now you know how to build your Theme.

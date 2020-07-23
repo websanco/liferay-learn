@@ -1,6 +1,6 @@
 # Copying an Existing Theme's Files
 
-Unlike extending a base Theme, which is a dynamic inheritance that applies your `src` files on top of the base Theme on every build, the `kickstart` task is a one time inheritance. 
+Unlike extending a base Theme, which overlays your `src` files on top of the base Theme on every build, the `kickstart` task is a one-time overlay. 
 
 ```warning::
   The gulp kickstart task copies an existing Theme's files into your own, which can potentially overwrite files with the same name. Proceed with caution.
@@ -24,13 +24,13 @@ Unlike extending a base Theme, which is a dynamic inheritance that applies your 
     ```
 
 1. Select where to search for the Theme to copy. You can copy files from globally installed Themes or Themes published on the npm registry.
-    
+
     ```note::
       You can't kickstart the Classic Theme. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands>`_ instead.
     ```
-    
+
     ```note::
-      To globally install a Theme, run the ``npm link`` command from the Theme's root folder.
+      To install a Theme globally, run the ``npm link`` command from the Theme's root folder.
     ```
 
     ```bash
@@ -42,6 +42,6 @@ Unlike extending a base Theme, which is a dynamic inheritance that applies your 
       Answer:
     ```
 
-1. The Theme's files are copied into your own Theme, jump starting development. Add your changes on top of these files.
-    
+1. The Theme's files are copied into your own Theme. Add your changes on top of these files.
+
 Congrats! Now you have a head start to developing your Theme.
