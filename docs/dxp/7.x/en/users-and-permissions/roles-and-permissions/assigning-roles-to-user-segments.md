@@ -37,7 +37,7 @@ The selected User Segment(s) appear(s) in the list of assignees for the Role.
 
 > Available: Liferay DXP 7.2 SP3+
 
-[Site Roles](../understanding-roles-and-permissions.md) can be assigned to Segments, with two exceptions: Site Administrator and Site Owner.
+[Site Roles](./understanding-roles-and-permissions.md) can be assigned to Segments, with two exceptions: Site Administrator and Site Owner.
 
 1. Open the Product Menu and go to *People* &rarr; *Segments* in the Site Menu.
 

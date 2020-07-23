@@ -21,7 +21,7 @@ The steps below cover these topics:
     ![Create Teams through the People heading the Product Menu.](./creating-teams-for-sites/images/01.png)
 
     ```note::
-      You can configure other Site membership groupings, such as *Users*, *Organizations*, and *User Groups* in the *Site Memberships* app, which is also in the *Members* tab. You can visit [User Management](TODO) for more information on how Site memberships work.
+      You can configure other Site membership groupings, such as *Users*, *Organizations*, and *User Groups* in the *Site Memberships* app, which is also in the *Members* tab. See [Changing Site Membership Type](../../site-settings/site-users/changing-site-membership-type.md) for more information on how Site memberships work.
     ```
 
 1. Click the *Add Team* icon (![Add Team](../../../images/icon-add.png)).

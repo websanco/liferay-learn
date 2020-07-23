@@ -6,12 +6,12 @@ To get things done in Liferay DXP, [Users](./../users/understanding-users.md) mu
 
 To skip straight to creating Roles and assigning Users, see
 
-- [Role Creation and Management](./creating-and-managing-roles.md)
-- [Defining Role Permissions](./defining-role-permissions.md)
-- [Assigning Users to Roles](./assigning-users-to-roles.md)
+* [Role Creation and Management](./creating-and-managing-roles.md)
+* [Defining Role Permissions](./defining-role-permissions.md)
+* [Assigning Users to Roles](./assigning-users-to-roles.md)
 
 ```note::
-   `Site Teams <./../../site-building/building-sites/creating-teams-for-sites.md>`_ have a dedicated permissions management User Interface.
+   `Site Teams <./../../site-building/building-sites/site-membership/creating-teams-for-sites.md>`_ have a dedicated permissions management User Interface.
 ```
 
 ## Roles and Scope
@@ -49,10 +49,10 @@ Instance scoped Roles are called Regular Roles. These Roles grant permissions gl
 
 Several User collections can be assigned to Regular Roles:
 
-- [Organizations](./../organizations/understanding-organizations.md) hold Users of a shared hierarchical level.
-- [User Groups](./../user-groups/creating-and-managing-user-groups.md) hold Users that only share the need to perform the same function.
-- [Sites](./../../site-building/building-sites/adding-members-to-sites.md) hold Users (as Site Members) that might need to perform a certain action.
-- [Segments](./../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) hold Users of a Site that match certain conditions.
+* [Organizations](./../organizations/understanding-organizations.md) hold Users of a shared hierarchical level.
+* [User Groups](./../user-groups/creating-and-managing-user-groups.md) hold Users that only share the need to perform the same function.
+* [Sites](./../../site-building/building-sites/site-membership/adding-members-to-sites.md) hold Users (as Site Members) that might need to perform a certain action.
+* [Segments](./../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) hold Users of a Site that match certain conditions.
 
 ### Organization Roles
 
@@ -64,7 +64,7 @@ Site scoped Roles are called Site Roles. Permissions for Site Roles are defined 
 
 ## Permissions
 
-Permissions are created by developers of applications. They define actions Users can perform or how much access a User has to a particular asset. 
+Permissions are created by developers of applications. They define actions Users can perform or how much access a User has to a particular asset.
 
 ### Application Scoped Permissions
 
@@ -77,7 +77,5 @@ Asset-level permissions (for instance, permission to edit an individual blog pos
 ## Related Topics
 
 * [Role Creation and Management](./creating-and-managing-roles.md)
-
 * [Defining Role Permissions](./defining-role-permissions.md)
-
-* [Assigning Users to Roles](./assigning-user-to-roles.md)
+* [Assigning Users to Roles](./assigning-users-to-roles.md)

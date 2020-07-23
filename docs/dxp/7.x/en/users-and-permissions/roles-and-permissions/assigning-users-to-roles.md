@@ -10,7 +10,7 @@ Globally scoped regular roles are available for configuration in the DXP [Contro
 | ---------------- | --------- |
 | Throughout the Virtual Instance (global) | User Groups <br />Organizations <br />Sites <br />Segments <br />Individual Users |
 
-You can assign Users to a Regular Role in the Assignees tab of the Add/Edit Role form. 
+You can assign Users to a Regular Role in the Assignees tab of the Add/Edit Role form.
 
 1. Go to Control Panel &rarr; Users &rarr; Roles, and click on a Regular Role.
 
@@ -20,13 +20,13 @@ You can assign Users to a Regular Role in the Assignees tab of the Add/Edit Role
 
 1. Select the assignees and click *Add*.
 
-   If assigning a group, all Users assigned to that group inherit the Role. 
+   If assigning a group, all Users assigned to that group inherit the Role.
 
 ![You can assign a Regular Role to an entire Organization of Users.](./assigning-users-to-roles/images/05.png)
 
 ## Site Roles
 
-You can assign Users to a Site Role in the Memberships section of a Site's People sub-menu. 
+You can assign Users to a Site Role in the Memberships section of a Site's People sub-menu.
 
 | Permission Scope | Available Assignments |
 | ---------------- | --------- |
@@ -40,7 +40,7 @@ You can assign Users to a Site Role in the Memberships section of a Site's Peopl
 
 1. Choose the Roles to assign and click *Done*.
 
-   If assigning a group, all Users assigned to that group inherit the Role. 
+   If assigning a group, all Users assigned to that group inherit the Role.
 
 ![Assign a Site Role within the Site Menu's People &rarr; Memberships section.](./assigning-users-to-roles/images/01.png)
 
@@ -50,7 +50,7 @@ You can assign Users to a Site Role in the Memberships section of a Site's Peopl
 
 ## Organization Roles
 
-You can assign Users to a Organization Role in the Organizations tab of the Users and Organizations Control Panel section. 
+You can assign Users to a Organization Role in the Organizations tab of the Users and Organizations Control Panel section.
 
 | Permission Scope | Available Assignments |
 | ---------------- | --------- |
@@ -70,7 +70,7 @@ You can assign Users to a Organization Role in the Organizations tab of the User
 
 ## Asset Library Roles
 
-Making Role assignments for Asset Libraries is nearly identical to making assignments for Sites: assign Users to an Asset Library Role in the Memberships section of the Asset Library's People sub-menu. 
+Making Role assignments for Asset Libraries is nearly identical to making assignments for Sites: assign Users to an Asset Library Role in the Memberships section of the Asset Library's People sub-menu.
 
 | Permission Scope | Available Assignments |
 | ---------------- | --------- |
@@ -84,13 +84,13 @@ Making Role assignments for Asset Libraries is nearly identical to making assign
 
 1. Choose the Roles to assign and click *Done*.
 
-   If assigning a group, all Users assigned to that group inherit the Role. 
+   If assigning a group, all Users assigned to that group inherit the Role.
 
 ![Assign a Asset Library Role within the Asset Library Menu's People &rarr; Memberships section.](./assigning-users-to-roles/images/03.png)
 
 ## Account Roles
 
-You can assign Users to an Account Role in the Accounts Control Panel section. 
+You can assign Users to an Account Role in the Accounts Control Panel section.
 
 | Permission Scope | Available Assignments |
 | ---------------- | --------- |
@@ -110,7 +110,7 @@ You can assign Users to an Account Role in the Accounts Control Panel section.
 
 ## Default User Associations
 
-By default, new Users receive only the Users Role, but you can manage the default Role associations to add new Roles or remove the User assignment. 
+By default, new Users receive only the Users Role, but you can manage the default Role associations to add new Roles or remove the User assignment.
 
 | Permission Scope | Available Assignments |
 | ---------------- | --------- |
@@ -129,4 +129,3 @@ Read more in the [Default User Associations](../../system-administration/virtual
 ![Use Instance Settings to set the default Regular Roles for all new Users.](./assigning-users-to-roles/images/06.png)
 
 Assignment is important, but a Role isn't worth the database row it occupies without permissions. Read about [defining permissions](./defining-role-permissions.md) for a Role next.
-
