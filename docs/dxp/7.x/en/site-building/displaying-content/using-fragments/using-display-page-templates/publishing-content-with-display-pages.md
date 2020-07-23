@@ -1,4 +1,4 @@
-# Displaying Content on Display Pages
+# Publishing Content With Display Pages
 
 Follow these steps to display your content on a Display Page:
 
@@ -8,17 +8,17 @@ Follow these steps to display your content on a Display Page:
 
 1. Expand the *Display Page Template* section in the Properties window, open the dropdown selector and choose *Specific Display Page Template*.
 
-    ![Select a specific display page template to configure a display page template.](./displaying-content-on-display-pages/images/01.png)
+    ![Select a specific display page template to configure a display page template.](./publishing-content-with-display-pages/images/01.png)
 
 1. Click the *Select* button and select the Display Page Template and click *Done*.
 
     When editing the content, you can preview what the display page looks like with the *Preview* (![Preview Template](../../../images/icon-preview.png)) button located next to the selected Display Page Template.
 
-    ![The preview button lets you view what the content looks like with the selected Display Page Template.](./displaying-content-on-display-pages/images/02.png)
+    ![The preview button lets you view what the content looks like with the selected Display Page Template.](./publishing-content-with-display-pages/images/02.png)
 
 1. Scroll down to the *Friendly URL* panel, expand it, and modify the friendly URL if you want. This is the URL your web content is displayed at when the full content is viewed.
 
-    ![The friendly URL is the unique URL that you can view the web content at.](./displaying-content-on-display-pages/images/03.png)
+    ![The friendly URL is the unique URL that you can view the web content at.](./publishing-content-with-display-pages/images/03.png)
 
 1. Click *Publish*.
 

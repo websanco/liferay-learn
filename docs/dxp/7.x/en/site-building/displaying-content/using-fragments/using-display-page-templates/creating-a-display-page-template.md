@@ -27,4 +27,4 @@ Follow these steps to create a Display Page Template:
        You can manage Display Page Templates through the Site Builder Menu Page Templates section. If you're viewing the content on the Display Page, you can also select the Pencil (Edit icon) from the Control Menu.
     ```
 
-Now that your Display Page Template is created, you can [display your content with it](./displaying-content-on-display-pages.md).
+Now that your Display Page Template is created, you can [display your content with it](./publishing-content-with-display-pages.md).
