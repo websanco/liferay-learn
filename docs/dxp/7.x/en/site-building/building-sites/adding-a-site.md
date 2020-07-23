@@ -23,10 +23,10 @@ To add a new Site to your Liferay Portal instance:
    In order to view a newly created *blank site*, you must first create a page for it. See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
 ```
 
-The new Site is selected when you open the Product Menu. See [Site Settings](../06-site-settings/README.md) for an overview of all of the available Site settings.
+The new Site is selected when you open the Product Menu. See [Site Settings](../site_settings.md) for an overview of all of the available Site settings.
 
 ## Related Information
 
 * [Introduction to Site Building](../introduction-to-site-building.md)
 * [Building Sites with Site Templates](./building-sites-with-site-templates.md)
-* [Adding Members to Sites](./adding-members-to-sites.md)
+* [Adding Members to Sites](./site-membership/adding-members-to-sites.md)
