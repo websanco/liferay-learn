@@ -57,7 +57,7 @@ Once started, the backup service icon will indicate a backup is in progress, and
 
 Clicking *View logs* redirects you to the Logs page, where you can view the backup stages in real-time. You can also view backup logs in the *Logs* tab of the backup service's page.
 
-See [Log Management](../troubleshooting/log-management.md) for more information about viewing service logs.
+See [Log Management](../../troubleshooting/log-management.md) for more information about viewing service logs.
 
 ## Configuring the Backup Service
 
@@ -89,7 +89,7 @@ Follow these steps to configure the backup service via the DXP Cloud Console:
 
 1. Click on *Save Changes*.
 
-Besides *Regular variables*, you can also set *Secret Variables* via the DXP Cloud console, see [Managing Secure Environment Variables with Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
+Besides *Regular variables*, you can also set *Secret Variables* via the DXP Cloud console, see [Managing Secure Environment Variables with Secrets](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
 
 ### Configuring the Backup Service via the Backup `LCP.json` File
 
@@ -111,7 +111,7 @@ Follow these steps to configure the backup service via its `LCP.json` file:
 
 1. Save the file and deploy to your project to implement the configuration.
 
-See [Configuration via LCP.json](../reference/configuration-via-lcp-json.md) for more information about configuring environment services via their `LCP.json` files.
+See [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md) for more information about configuring environment services via their `LCP.json` files.
 
 ### Scheduling Automated Backups and Cleanups
 
@@ -158,5 +158,5 @@ Name                          | Default Value              | Description |
 
 * [Downloading and Uploading Backups](./downloading-and-uploading-backups.md)
 * [Restoring Data from a Backup](./restoring-data-from-a-backup.md)
-* [Configuration via LCP.json](../reference/configuration-via-lcp-json.md)
-* [Database Service (MySQL)](./database-service.md)
+* [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md)
+* [Database Service (MySQL)](../database-service.md)

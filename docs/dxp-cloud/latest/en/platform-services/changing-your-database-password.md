@@ -86,7 +86,7 @@ When you are ready, follow these steps to change your database password:
 
     The database service starts up using the updated password. The `liferay` and `backup` services restart to reconnect to the database service with the correct password, as well.
 
-1. If you [prepared a backup](#creating-a-backup), then navigate to your **production** environment's _Backups_ page, and [restore the backup](./backup-and-restore.md).
+1. If you [prepared a backup](#creating-a-backup), then navigate to your **production** environment's _Backups_ page, and [restore the backup](./backup-service/restoring-data-from-a-backup.md).
 
 Your `database` service is now updated with a new password, and your other services are synchronized to connect to it properly.
 

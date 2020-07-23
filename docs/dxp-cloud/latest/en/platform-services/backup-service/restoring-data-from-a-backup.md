@@ -64,14 +64,14 @@ Note that scripts are run in alphanumerical order when they are executed. SQL sc
 Place SQL scripts into the appropriate, environment-specific `backup/configs/{ENV}/scripts/` folder.
 
 ```note::
-   If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+   If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder. See `Understanding Service Stack Versions <../../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ### Performing the Data Restore
 
 Once you have prepared your SQL script(s), follow these steps to apply your custom SQL script(s) with a data restore:
 
-1. [Deploy your backup service](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) to include the custom SQL script(s) online.
+1. [Deploy your backup service](../../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) to include the custom SQL script(s) online.
 
 1. Follow the instructions listed above for [Restoring an Environment from the Backups Page](#restoring-an-environment-from-the-backups-page)
 
@@ -86,4 +86,4 @@ Jun 20 14:46:41.970 build-39 [backup-57488f8b8-rjq4f] Running Script: SanitizeUs
 
 * [Backup Service](./backup-service-overview.md)
 * [Downloading and Uploading Backups](./downloading-and-uploading-backups.md)
-* [Database Service (MySQL)](./database-service.md)
+* [Database Service (MySQL)](../database-service.md)
