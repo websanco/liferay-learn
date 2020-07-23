@@ -1,8 +1,6 @@
 # Backup Service Overview
 
-Maintaining regular backups is vital to protecting your project's data. The DXP Cloud backup service stores iterations of environment data that can be used to restore your environments if needed.
-
-These backups include both the Liferay DXP Database and the full contents of the `LIFERAY_HOME/data` folder.
+Maintaining regular backups is vital to protecting your project's data. The DXP Cloud backup service stores iterations of environment data that can be used to restore your environments if needed. These backups include both the Liferay DXP Database and the full contents of the `LIFERAY_HOME/data` folder.
 
 From the Backups page in `prd` environments, you can create backups, view or download retained backups, and restore an environment from a backup.
 
@@ -49,7 +47,7 @@ For more information and instructions on how to perform these actions, see [Down
 
 ## Creating a Manual Backup
 
-To manually backup your `prd` environment from the Backups page, simply click on *Backup Now*. This process can take several minutes or hours depending on the size of your services.
+To manually backup your `prd` environment from the Backups page, click on *Backup Now*. This process can take several minutes or hours depending on the size of your services.
 
 Once started, the backup service icon will indicate a backup is in progress, and a new backup will appear in the *Backup history*.
 
@@ -66,14 +64,14 @@ You can configure the backup service to meet your project's needs via the DXP Cl
 See [Environment Variables Reference](#environment-variables-reference) for a list of variables you can use to configure the backup service.
 
 ```important::
-   Whenever the backup service is reconfigured, the backup service will restart and may stop receiving requests for some minutes or behave differently depending on the regular variable values.
+   Whenever the backup service is reconfigured, the backup service will restart and may stop receiving requests for some minutes or behave differently depending on the configuration.
 ```
 
 ### Configuring the Backup Service via the DXP Cloud Console
 
 Follow these steps to configure the backup service via the DXP Cloud Console:
 
-1. Navigate to an environment where the backup service is installed.
+1. Navigate to an environment where the backup service is deployed.
 
 1. Click on *Services* in the environment menu.
 
@@ -83,13 +81,13 @@ Follow these steps to configure the backup service via the DXP Cloud Console:
 
    ![Figure 5: Navigate to the backup service's variables tab in your production environment.](./backup-service-overview/images/05.png)
 
-   You can also access the backup service's page by clicking on *Backup* in the environment Overview page.
+   You can also access the backup service's page by clicking on *Backup* in the environment *Overview* page.
 
 1. Add variables from the [Environment Variables Reference](#environment-variables-reference) list to configure the backup service.
 
 1. Click on *Save Changes*.
 
-Besides *Regular variables*, you can also set *Secret Variables* via the DXP Cloud console, see [Managing Secure Environment Variables with Secrets](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
+Apart from regular environment variables, you can also set *Secret* variables via the DXP Cloud console. See [Managing Secure Environment Variables with Secrets](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
 
 ### Configuring the Backup Service via the Backup `LCP.json` File
 

@@ -1,8 +1,6 @@
 # Downloading and Uploading Backups
 
-The DXP Cloud backup service creates backups of an environment's database and the full contents of the `LIFERAY_HOME/data` folder.
-
-This content is stored as `.tgz` files and can be downloaded via the DXP Cloud console.
+The DXP Cloud backup service creates backups of an environment's database and the full contents of the `LIFERAY_HOME/data` folder. This content is stored as `.tgz` files and can be downloaded via the DXP Cloud console.
 
 Users can also download or upload environment backups using backup service APIs.
 
