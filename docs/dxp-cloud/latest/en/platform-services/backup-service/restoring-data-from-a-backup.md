@@ -2,9 +2,11 @@
 
 During project development, there may be times when you need to restore data or roll back the project to an earlier state.
 
-Only production (`prd`) environment administrators can manually restore environments via the DXP Cloud console.
+```important::
+   Only production (`prd`) environment administrators can manually restore environments via the DXP Cloud console.
+```
 
-They can also use custom SQL scripts to perform additional updates to a database as part of the data restore.
+You can also use custom SQL scripts to perform additional updates to a database as part of the data restore.
 
 ```note::
    The Backups page is only available in production environments.
@@ -34,7 +36,7 @@ Follow these steps to restore an environment from a backup:
       Production environment administrators can only restore environments to which they have access.
    ```
 
-1. Click all *checkboxes* to confirm the restore.
+1. Click all *checkboxes* that appear below. You must check these boxes to enable the button to initiate the restore.
 
 1. Click on *Restore to Environment* to start the restore process.
 
