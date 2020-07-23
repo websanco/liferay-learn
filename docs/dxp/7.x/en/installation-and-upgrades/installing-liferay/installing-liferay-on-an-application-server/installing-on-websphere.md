@@ -170,19 +170,19 @@ When Liferay DXP is started, the archives are unpackaged and installed, and the 
 
 ### Installing the DXP portlet.jar
 
-DXP's `portlet.jar` (version 3) is backwards-compatible. It is included with the Dependencies ZIP that you unzipped above. WebSphere contains an older `portlet.jar` version which must be overridden.
+DXP's `portlet.jar` (version 3) is backwards-compatible. It is included with the Dependencies ZIP that you unzipped above. WebSphere contains an older `portlet.jar` version that must be overridden.
 
 1. In your `[Install Location]/WebSphere/AppServer/profiles/your-profile/` folder, create a folder called `app_shared_libraries`.
 
 1. Move DXP's `portlet.jar` from the `[Install Location]/WebSphere/AppServer/lib/ext` folder to the `app_shared_libraries` folder you created.
 
-1. Follow IBM's steps for [using a server associated shared library](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver); make sure to choose *Classes loaded with local class loader first (parent_Last)* on step 4d.
+1. Follow IBM's steps for [using a server-associated shared library](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver); make sure to choose *Classes loaded with local class loader first (parent_Last)* on step 4d.
 
 1. Save the configuration.
 
 ### Ensuring That the DXP Portlet.jar is Loaded First
 
-In addition to placing DXP's `portlet.jar` in a server associated shared library, configure the `config.ini` file so that it is loaded first.
+In addition to placing DXP's `portlet.jar` in a server-associated shared library, configure the `config.ini` file so that it is loaded first.
 
 1. Open the `[Install Location]/WebSphere/AppServer/configuration/config.ini` file.
 1. Find the property `com.ibm.CORBA,com.ibm`.
@@ -194,7 +194,7 @@ In addition to placing DXP's `portlet.jar` in a server associated shared library
 ### Dependencies Checkpoint
 
 1. DXP dependencies have been installed.
-1. DXP's `portlet.jar` is installed.
+1. DXP's `portlet.jar` has been installed.
 1. The `config.ini` file has been configured.
 
 Start the application server profile.
