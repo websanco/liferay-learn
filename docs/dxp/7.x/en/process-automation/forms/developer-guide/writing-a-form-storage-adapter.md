@@ -93,7 +93,7 @@ The `service` component property registers your implementation as a `DDMStorageA
 The `property = "ddm.storage.adapter.type=file-system"` provides an identifier so that your service is registered as a unique `DDMStorageAdapter` implementation. Other services can now reference it like this:
 
 ```java
-@Reference(target = "(ddm.storage.adapter.type=file)")
+@Reference(target = "(ddm.storage.adapter.type=file-system)")
 private DDMStorageAdapter fileSystemDDMStorageAdapter;
 ```
 
@@ -156,7 +156,7 @@ Since the example already overrides the necessary methods, you only need add the
    private static final String _PATHNAME = "/opt/liferay/form-records";
    ```
 
-1. Create a `_deleteFile` utility method:
+1. Create a `_deleteFile` utility method (use the `java.io.File` class here):
 
    ```java
    private void _deleteFile(long fileId) {
@@ -166,13 +166,13 @@ Since the example already overrides the necessary methods, you only need add the
    }
     ```
 
-1. Find the existing `delete` method. At the start of this method, set a `fileId` variable as the primary key returned by the delete request object:
+1. Find the existing `delete` method. At the start of this method (before the `try` block), set a `fileId` variable as the primary key returned by the delete request object:
 
    ```java
    long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
    ```
 
-1. Call your `_deleteFile` method, passing it the file ID:
+1. Immediately after, call your `_deleteFile` method, passing it the file ID:
 
    ```java
    _deleteFile(fileId);
@@ -200,7 +200,9 @@ You'll follow the same procedure for the `get` method: create a private utility 
    }
     ```
 
-1. At the beginning of the `get` method, set the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and call a `_getFile` utility method which prints the retrieved content to the Liferay log.
+   Import `com.liferay.portal.kernel.FileUtil`.
+
+1. At the beginning of the `get` method (inside the `try` block), set the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and call a `_getFile` utility method which prints the retrieved content to the Liferay log.
 
    ```java
    long fileId = ddmStorageAdapterGetRequest.getPrimaryKey();
@@ -232,7 +234,8 @@ There are two types of save requests: 1) a new record is added or 2) an existing
    }
     ```
 
-1. Add this logic and the call to `_saveFile` to the `insert` method above the `return` statement:
+1. Add this logic and the call to `_saveFile` to the `insert` method by replacing the existing `return` statement:
+
    ```java
    DDMStorageAdapterSaveResponse ddmStorageAdapterSaveResponse =
         builder.build();
@@ -246,7 +249,7 @@ There are two types of save requests: 1) a new record is added or 2) an existing
 
    When the `insert` method saves a new form, you must retrieve the primary key from the `DDMStorageAdapterSaveResponse` object, because before that the record and its primary key is not yet created in the database.
 
-1. You must also call `_saveFile` near the end of the `update` method:
+1. You must also call `_saveFile` near the end of the `update` method. Replace the existing return stament with
 
    ```java
    DDMFormValues ddmFormValues =
