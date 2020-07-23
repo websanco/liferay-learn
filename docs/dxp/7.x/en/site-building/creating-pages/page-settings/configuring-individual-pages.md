@@ -86,7 +86,7 @@ You can also configure canonical URLs at the global and instance levels.
 
 ## Look and Feel
 
-*Look and Feel* lets you set a page-specific theme. You can inherit what you already have configured for your [Page Set's Theme](./05-configuring-page-sets.md#look-and-feel), or you can define a theme per page. This section is available for Content Pages through the [*Look and Feel* menu](./03-content-page-elements.md#look-and-feel) of the Section Builder.
+*Look and Feel* lets you set a page-specific theme. You can inherit what you already have configured for your [Page Set's Theme](./05-configuring-page-sets.md#look-and-feel), or you can define a theme per page. This section is available for Content Pages through the [*Look and Feel* menu](./content-page-elements.md#look-and-feel) of the Section Builder.
 
 Follow these steps to manage the Theme for a page:
 

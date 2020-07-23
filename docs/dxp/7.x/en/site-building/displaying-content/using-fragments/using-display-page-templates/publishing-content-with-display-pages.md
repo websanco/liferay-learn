@@ -12,7 +12,7 @@ Follow these steps to display your content on a Display Page:
 
 1. Click the *Select* button and select the Display Page Template and click *Done*.
 
-    When editing the content, you can preview what the display page looks like with the *Preview* (![Preview Template](../../../images/icon-preview.png)) button located next to the selected Display Page Template.
+    When editing the content, you can preview what the display page looks like with the *Preview* (![Preview Template](../../../../images/icon-preview.png)) button located next to the selected Display Page Template.
 
     ![The preview button lets you view what the content looks like with the selected Display Page Template.](./publishing-content-with-display-pages/images/02.png)
 
