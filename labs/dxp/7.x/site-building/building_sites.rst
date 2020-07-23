@@ -13,7 +13,7 @@ Building Sites
    building-sites/importing-exporting-pages-and-content.md
 
    building-sites/adding-members-to-sites.md
-   building-sites/creating-teams-for-sites.md
+   building-sites/site-membership/creating-teams-for-sites.md
 
 .. include:: /site-building/building-sites/README.rst
    :start-line: 2

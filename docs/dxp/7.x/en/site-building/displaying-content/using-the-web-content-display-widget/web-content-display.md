@@ -1,6 +1,6 @@
 # Web Content Display
 
-Once you've created a [Web Content Article](../../content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md), the quickest way to display it on a page is the Web Content Display widget. Once a web content article is displayed updates to that content will be displayed immediately, unless a [workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) is enabled.
+Once you've created a [Web Content Article](../../../content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md), the quickest way to display it on a page is the Web Content Display widget. Once a web content article is displayed updates to that content will be displayed immediately, unless a [workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) is enabled.
 
 ## Adding Web Content Display to a Page
 

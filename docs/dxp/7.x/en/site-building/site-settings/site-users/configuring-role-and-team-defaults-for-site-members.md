@@ -15,4 +15,4 @@ You can configure the default Roles and Teams that newly assigned members of you
 <!-- Does this change apply retroactively to users who are already members of a site? -->
 Users added to the site now receive the configured role and team assignments.
 
-See [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) and [Creating Teams for Advanced Site Membership Management](../../building-sites/creating-teams-for-sites.md) for more information.
+See [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) and [Creating Teams for Advanced Site Membership Management](../../building-sites/site-membership/creating-teams-for-sites.md) for more information.
