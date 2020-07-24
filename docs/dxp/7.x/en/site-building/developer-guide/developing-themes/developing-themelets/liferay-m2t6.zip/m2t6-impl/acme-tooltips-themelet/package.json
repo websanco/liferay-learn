@@ -1,0 +1,13 @@
+{
+	"name": "acme-tooltips-themelet",
+	"version": "1.0.0",
+	"main": "package.json",
+	"keywords": [
+		"liferay-theme"
+	],
+	"liferayTheme": {
+		"screenshot": "",
+		"themelet": true,
+		"version": "7.3"
+	}
+}

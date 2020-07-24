@@ -19,31 +19,51 @@ First, deploy an example to see what a Theme looks like:
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-1. Download and unzip the [example Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-g4t8.zip) and install its dependencies:
+1. Download and unzip the [example Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-g4t8.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-g4t8.zip
+    ```
     
+    ```bash
     unzip liferay-g4t8.zip
-    cd liferay-g4t8
+    ```
+
+1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md).
+1. Navigate to the `/g4t8-impl` folder and run the command below to generate the example Theme:
+
+    ```bash
+    yo liferay-theme:classic --config config.json
+    ```
+
+1. Replace the `/g4t8-impl/liferay-g4t8-theme/src/css/_custom.scss` file with the `/g4t8-impl/_custom.scss` file.
+1. Replace the `/g4t8-impl/liferay-g4t8-theme/src/templates/portal_normal.ftl` file with the `/g4t8-impl/portal_normal.ftl` file.
+1. Replace the `/g4t8-impl/liferay-g4t8-theme/src/images/thumbnail.png` file with the `/g4t8-impl/thumbnail.png` file.
+1. Navigate back to the `/liferay-g4t8/` folder and build and deploy the Theme.
+
+    ```bash
+    cd ../liferay-g4t8
+    ```
+    
+    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to ``docker cp .\g4t8-impl\dist\pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
+      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to ``docker cp .\g4t8-impl\liferay-g4t8-theme\dist\liferay-g4t8-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
 
     ```bash
-    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED pastel-purple-theme_1.0.0 [1141]
+    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED liferay-g4t8-theme_1.0.0 [1180]
     ```
 
 1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
 
-1. Scroll down and click the *Change Current Theme* button. Click the Pastel Purple Theme thumbnail next to the Classic Theme.
+1. Scroll down and click the *Change Current Theme* button. Click the ACME Pastel Purple Theme thumbnail next to the Classic Theme.
 
-    ![The Pastel Purple Theme appears in the Theme selector.](./developing-a-theme/images/01.png)
+    ![The ACME Pastel Purple Theme appears in the Theme selector.](./developing-a-theme/images/01.png)
 
 1. Click *Save* to apply the changes, and go back to the home page.
 
@@ -53,7 +73,7 @@ Great! You successfully deployed and applied a Theme. Next you can review the ex
 
 ## Theme Breakdown
 
-The Purple Pastel Theme was generated with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
+The ACME Purple Pastel Theme was generated with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
 
 ```bash
 yo liferay-theme:classic
@@ -138,13 +158,13 @@ You'll modify the Theme to remove the alert button.
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to ``docker cp .\g4t8-impl\dist\pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
+      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR with ``docker cp .\g4t8-impl\liferay-g4t8-theme\dist\liferay-g4t8-theme.war docker-container-name:/opt/liferay/osgi/war`` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console:
 
     ```bash
-    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED pastel-purple-theme_1.0.0 [1141]
+    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED liferay-g4t8-theme_1.0.0 [1141]
     ```
 
 1. Refresh the home page to view the changes.

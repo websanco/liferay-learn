@@ -20,39 +20,50 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-1. Download and unzip the [Custom Tooltips Themelet and Pastel Purple Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip):
+1. Download and unzip the [ACME Tooltips Themelet and ACME Pastel Purple Theme](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip
+    ```
     
+    ```bash
     unzip liferay-m2t6.zip
     ```
 
-1. From the module root, build the Theme and install it's dependencies:
+1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md).
+1. Navigate to the `/m2t6-impl` folder and run the command below to generate the example Theme:
 
     ```bash
-    cd liferay-m2t6
-    .\gradlew build
+    yo liferay-theme:classic --config config.json
     ```
 
+1. Replace the `/m2t6-impl/liferay-m2t6-theme/src/css/_custom.scss` file with the `/m2t6-impl/_custom.scss` file.
+1. Replace the `/m2t6-impl/liferay-m2t6-theme/src/templates/portal_normal.ftl` file with the `/m2t6-impl/portal_normal.ftl` file.
+1. Replace the `/m2t6-impl/liferay-m2t6-theme/src/images/thumbnail.png` file with the `/m2t6-impl/thumbnail.png` file.
 1. Navigate to the Themelet and globally install it with the `npm link` command to make it available for the Theme:
 
     ```bash
-    cd liferay-m2t6/m2t6-impl/custom-tooltips-themelet
+    cd liferay-m2t6/m2t6-impl/acme-tooltips-themelet
+    ```
+    
+    ```bash
     npm link
     ```
 
 1. Extend the Theme with the Themelet:
 
     ```bash
-    cd liferay-m2t6/m2t6-impl/purple-pastel-theme
+    cd liferay-m2t6/m2t6-impl/liferay-m2t6-theme
+    ```
+    
+    ```bash
     npm run extend
     ```
 
 1. Choose *Themelet* as the Theme asset to extend.
 
     ```bash
-    [11:39:03] Using gulpfile ~\Desktop\test\liferay-m2t6\purple-pastel-theme\gulpfile.js
+    [11:39:03] Using gulpfile ~\Desktop\test\liferay-m2t6\liferay-m2t6-theme\gulpfile.js
     [11:39:03] Starting 'extend'...
     ? What kind of theme asset would you like to extend?
       1) Base theme
@@ -70,28 +81,24 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
       Answer: 1
     ```
 
-1. Highlight the `custom-tooltips-themelet` Themelet, press spacebar to select it, and press *Enter* to install it.
+1. Highlight the `acme-tooltips-themelet` Themelet, press spacebar to select it, and press *Enter* to install it.
 
     ```bash
     ? Select a themelet
-    >(*) custom-tooltips-themelet
+    >(*) acme-tooltips-themelet
     ```
     
     The extend task completes with the output below:
     
     ```bash
-    npm WARN pastel-purple-theme@1.0.0 No description
-    npm WARN pastel-purple-theme@1.0.0 No repository field.
-    npm WARN pastel-purple-theme@1.0.0 No license field.
-    
-    + custom-tooltips-themelet@1.0.0
+    + acme-tooltips-themelet@1.0.0
     added 1 package and audited 6174 packages in 4.252s
     found 48 vulnerabilities (30 low, 1 moderate, 17 high)
       run `npm audit fix` to fix them, or `npm audit` for details
     [11:41:51] Finished 'extend' after 2.8 min
     ```
 
-1. Build the updated Pastel Purple Theme's WAR:
+1. Build the updated ACME Pastel Purple Theme's WAR:
 
     ```bash
     npm run build
@@ -116,13 +123,16 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
 
     ```bash
     cd dist
-    docker cp pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war
+    ```
+    
+    ```bash
+    docker cp liferay-m2t6-theme.war docker-container-name:/opt/liferay/osgi/war
     ```
 
 1. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
-1. Scroll down and click the *Change Current Theme* button, and click the custom Theme thumbnail. The custom Theme appears next to the Classic Theme.
+1. Scroll down and click the *Change Current Theme* button, and click the ACME Pastel Purple Theme thumbnail that appears next to the Classic Theme.
 
-    ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
+    ![The ACME Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
 
 1. Click *Save* to apply the changes, and go back to the home page and hover over an icon in the Control Menu to see the tooltip CSS applied from the Themelet.
 
@@ -187,6 +197,9 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
 
     ```bash
     cd platform-console-logger-themelet
+    ```
+    
+    ```bash
     touch main.js
     ```
 
@@ -209,13 +222,19 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
 
     ```bash
     cd platform-console-logger-themelet
+    ```
+    
+    ```bash
     npm link
     ```
 
 1. Extend the Theme with the Themelet:
 
     ```bash
-    cd purple-pastel-theme
+    cd liferay-m2t6-theme
+    ```
+    
+    ```bash
     npm run extend
     ```
 
@@ -225,11 +244,11 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
 
     ```bash
     ? Select a themelet
-     (*) custom-tooltips-themelet
+     (*) acme-tooltips-themelet
     >(*) platform-console-logger-themelet
     ```
 
-1. Build the updated Pastel Purple Theme's WAR:
+1. Build the updated ACME Pastel Purple Theme's WAR:
 
     ```bash
     npm run build
@@ -239,7 +258,10 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
 
     ```bash
     cd dist
-    docker cp pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war
+    ```
+    
+    ```bash
+    docker cp liferay-m2t6-theme.war docker-container-name:/opt/liferay/osgi/war
     ```
 
 1. Open your browser to `https://localhost:8080`, and refresh the page.
