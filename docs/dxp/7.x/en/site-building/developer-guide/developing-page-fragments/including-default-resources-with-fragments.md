@@ -18,11 +18,16 @@ First, import an example to see how Fragment resources work:
     ```
 
 1. Download and unzip the [example resources Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):
-		
+
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip
+    ```
 
+    ```bash
     unzip liferay-i6r3.zip
+    ```
+
+    ```bash
     cd liferay-i6r3
     ```
 
@@ -30,15 +35,18 @@ First, import an example to see how Fragment resources work:
 
     ```bash
     cd liferay-i6r3/fragment-resources-collection
+    ```
+
+    ```bash
     npm run import
-    
+
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
     ? Password [hidden]
-    
+
     Checking connection...
     Connection successful
-    
+
     ? Company ID liferay.com
     ? Group ID Liferay
     ```
@@ -58,7 +66,7 @@ The image resource is included in the project's `/resources` folder:
     * `resources/`
 
 ```tip::
-  Alternatively, you can upload the image through the *Resources* tab in the `Fragments Editor <./developing-page-fragments/developing-page-fragments-with-the-editor.md>`_.
+  Alternatively, you can upload the image through the *Resources* tab in the `Fragments Editor <./using-the-fragments-editor.md>`_.
 ```
 
 The image is referenced in the HTML with the syntax `[resources:image-name.extension]`. The example has the configuration below:
@@ -90,6 +98,9 @@ Now that you know how resources are included and referenced, you can include a n
 
     ```bash
     cd liferay-i6r3/fragment-resources-collection
+    ```
+
+    ```bash
     npm run import
     ```
 
@@ -103,4 +114,4 @@ Great! Now you know how to include image resources with your Fragment Collection
 
 * [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
 * [Auto-deploying Fragments](./auto-deploying-fragments.md)
-* [Developing Page Fragments with the Fragments Editor](./developing-page-fragments-with-the-editor.md)
+* [Developing Page Fragments with the Fragments Editor](./using-the-fragments-editor.md)

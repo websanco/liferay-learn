@@ -2,13 +2,9 @@
 
 Here you'll learn how to use some of the common Fragments. These Fragments are covered here:
 
-* [Content Fragment](#using-the-content-fragment)
-
 ## Using the Content Fragment
 
-```note::
-  Available in Liferay DXP 7.3+.
-```
+> Available: Liferay DXP 7.3+.
 
 You can display a single existing web content, blog entry, or document by adding a Content Fragment from the *Content Display* panel. Follow these steps to use it:
 

@@ -1,8 +1,6 @@
 # Adding Configuration Options to Fragments
 
-```note::
-  Available since Liferay DXP 7.2 SP1.
-```
+> Available: Liferay DXP 7.2 SP1+
 
 Configurable options help make your Fragments flexible, so you don't have to maintain many similar Fragments. For example, instead of having one Fragment that has a heading with style A and another Fragment that has a heading with style B, you can create one Fragment that has a configurable style for the heading with options for style A and B. 
  Here you'll learn how to add configuration options to a Fragment:
@@ -22,26 +20,34 @@ First, deploy an example to see how Fragment Configuration options work:
     ```
 
 1. Download and unzip the [example configurable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
-		
-	```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip
 
+    ```bash
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip
+    ```
+
+    ```bash
     unzip liferay-c7f8.zip
+    ```
+
+    ```bash
     cd liferay-c7f8
-	```
+    ```
 
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
 
     ```bash
     cd liferay-c7f8/configurable-marketing-fragment
+    ```
+
+    ```bash
     npm run import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
     ? Password [hidden]
-    
+
     Checking connection...
     Connection successful
-    
+
     ? Company ID liferay.com
     ? Group ID Liferay
     ```
@@ -115,7 +121,7 @@ The configuration values selected by the user are made available to the HTML thr
 </div>
 ```
 
-The example demonstrates a select configuration. See the [Configuration Types Reference](./reference/configuration-types-reference.md) for a complete list of the available Fragment configuration types.
+The example demonstrates a select configuration. See the [Configuration Types Reference](../reference/fragments/fragment-configuration-types-reference.md) for a complete list of the available Fragment configuration types.
 
 ## Escape Configuration Text Values
 
