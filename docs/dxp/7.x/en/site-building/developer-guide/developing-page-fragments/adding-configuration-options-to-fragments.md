@@ -201,4 +201,4 @@ Great! Now you know how to add configuration options for your Fragments.
 
 * [Auto-deploying Fragments](./auto-deploying-fragments.md)
 * [Including Default Resources with Fragments](./including-default-resources-with-fragments.md)
-* [Fragment Configuration Types Reference](../reference/fragment-configuration-types-reference.md)
+* [Fragment Configuration Types Reference](../reference/fragments/fragment-configuration-types-reference.md)
