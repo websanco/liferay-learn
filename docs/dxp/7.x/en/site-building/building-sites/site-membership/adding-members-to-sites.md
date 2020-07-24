@@ -1,10 +1,10 @@
 # Adding Members to Sites
 
-Users and Sites are central concepts in Liferay DXP. Sites are where all your content and pages are stored, and Users access and create that content. While User management is covered in depth in [User Management](TODO), there are some configuration options specific to Site management and assigning Users to sites that are relevant here:
+Users and Sites are central concepts in Liferay DXP. Sites are where all your content and pages are stored, and Users access and create that content. While User management is covered in depth in [User Management](../../../users_and_permissions.md), there are some configuration options specific to Site management and assigning Users to sites that are relevant here:
 
 * [Managing Site Membership](#managing-site-membership)
 * Configuring Users to Automatically Join a Site
-* [Creating Teams]((./creating-teams-for-sites.md)) or groups of Site Members for various site functions
+* [Creating Teams](./creating-teams-for-sites.md) or groups of Site Members for various site functions
 
 The steps below show how to add Users manually to Sites and how to provide options for self management.
 
@@ -15,7 +15,7 @@ Administrators can manage Site members from that Site's *Site Membership* page.
 1. Open *Site Administration* and select the Site that you want to manage members for.
 1. Click on *People* &rarr; *Memberships*
 
-From here you can manage Site memberships, Organizations, and User Group associations. You can learn more about those in [Users and Organizations](TODO). On this page, you can see a list of all of the current Users of the Site and you can add or remove user memberships from the Site.
+From here you can manage Site memberships, Organizations, and User Group associations. You can learn more about those in [Users and Organizations](../../../users_and_permissions.md). On this page, you can see a list of all of the current Users of the Site and you can add or remove user memberships from the Site.
 
 ![The current members of the Site are displayed on the Site Memberships page.](./adding-members-to-sites/images/01.png)
 
@@ -51,7 +51,7 @@ Removed Users lose access to the Site's Private Pages and membership in any Site
 
 ### Assigning Site Roles
 
-Roles grant permissions in Liferay Portal. Roles can be assigned for the entire instance or just for one specific Site or Organization. Site Roles assign permissions for a specific Site. Learn more about roles in [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/README.rst).
+Roles grant permissions in Liferay Portal. Roles can be assigned for the entire instance or just for one specific Site or Organization. Site Roles assign permissions for a specific Site. Learn more about roles in [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
 Follow these steps to assign Site Roles to Users:
 

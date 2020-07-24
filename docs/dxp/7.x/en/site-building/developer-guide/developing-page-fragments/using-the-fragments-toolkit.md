@@ -183,7 +183,7 @@ Follow these steps to add a new Fragment Collection containing a new Fragment:
       Give the main wrapper element for the Component in ``index.html`` a unique ID so it doesn't conflict with other Components on the page.
     ```
 
-    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-in-fragments.md) for more information.
+    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
 
     ```note::
       The Fragment and configuration object are passed in as arguments in JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.

@@ -2,8 +2,7 @@
 
 > Available: Liferay DXP 7.2 SP1+
 
-Configurable options help make your Fragments flexible, so you don't have to maintain many similar Fragments. For example, instead of having one Fragment that has a heading with style A and another Fragment that has a heading with style B, you can create one Fragment that has a configurable style for the heading with options for style A and B. 
- Here you'll learn how to add configuration options to a Fragment:
+Configurable options help make your Fragments flexible, so you don't have to maintain many similar Fragments. For example, instead of having one Fragment that has a heading with style A and another Fragment that has a heading with style B, you can create one Fragment that has a configurable style for the heading with options for style A and B. Here you'll learn how to add configuration options to a Fragment:
 
 1. [Deploy a Configurable Fragment](#deploy-a-configurable-fragment)
 1. [Modify the Configuration](#modify-the-configuration)
@@ -66,7 +65,7 @@ Great! You successfully imported and configured a configurable Fragment.
 
 ## Configuration Overview
 
-The configuration (`configuration.json` in the [contributed Fragment Collection](./creating-a-contributed-fragment-collection.md) or [Fragments Toolkit project](./developing-page-fragments-with-the-fragments-toolkit.md) and *Configuration* tab in the [Editor](./developing-fragments-using-the-editor.md)) defines the type of configuration and the available options (if applicable). The example has the configuration below which provides the `select` option to choose *dark* or *light* for a Fragment's text style:
+The configuration (`configuration.json` in the [contributed Fragment Collection](./creating-a-contributed-fragment-collection.md) or [Fragments Toolkit project](./using-the-fragments-toolkit.md) and *Configuration* tab in the [Editor](./using-the-fragments-editor.md)) defines the type of configuration and the available options (if applicable). The example has the configuration below which provides the `select` option to choose *dark* or *light* for a Fragment's text style:
 
 ```json
 {

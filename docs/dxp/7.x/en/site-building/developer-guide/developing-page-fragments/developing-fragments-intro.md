@@ -17,9 +17,9 @@ You can use the included Page Fragments to [build Content Pages](../../creating-
 
 ## Features
 
-Fragments can be enhanced using the below resources, making them much more powerful than plain HTML, CSS, and JavaScript: 
+Fragments can be enhanced using the below resources, making them much more powerful than plain HTML, CSS, and JavaScript:
 
-* [Editable Elements](../reference/fragments/fragment-specific-tags-reference.md) <!-- TODO: Fix link -->: make text, images, links, and "rich" text elements editable, so users can replace the content with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets.
+* [Editable Elements](../reference/fragments/fragment-specific-tags-reference.md): make text, images, links, and "rich" text elements editable, so users can replace the content with custom text and images. This is the key feature of Fragments that makes them reusable. You can also embed widgets.
 * [Configuration Options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->: Add configuration options to the application's Configuration Menu, like modifying the Fragment's font color.
 * [FreeMarker](https://freemarker.apache.org/): FreeMarker is a templating language that enhances HTML with variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
 

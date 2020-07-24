@@ -77,7 +77,7 @@ Now that the Collection is created, you can add a Fragment:
 
     ![A live preview is displayed as the code is updated.](./using-the-fragments-editor/images/03.png)
 
-1. Click *Publish* to save your work and make it available to add to a [Content Page](../../creating-pages/understanding-pages.md#content-pages).
+1. Click *Publish* to save your work and make it available to add to a [Content Page](../../creating-pages/understanding-pages/understanding-pages.md#content-pages).
 
     ![The Fragment can be used on a Content Page.](./using-the-fragments-editor/images/04.png)
 
@@ -90,4 +90,4 @@ Great! You've successfully created a Fragment Collection and added a new Fragmen
 ## Related Information
 
 * [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md)
-* [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->
+* [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
