@@ -167,7 +167,7 @@ The saved Fragment composition can be used immediately in the Fragments sidebar 
 Compositions can be exported/imported between sites just as any other Fragment.
 
 ```note::
-  The latest version of the `Liferay Fragments Toolkit <../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md>`_ supports creation, export/import, and preview of Fragment compositions.
+  The latest version of the `Liferay Fragments Toolkit <../../developer-guide/developing-page-fragments/using-the-fragments-editor.md>`_ supports creation, export/import, and preview of Fragment compositions.
 ```
 
 ### Configuring Section Width and Padding
@@ -207,7 +207,7 @@ You can also map these elements to content. You can set the *Content* for the el
    Many mapping improvements were released in Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+. For example, mapping editable elements to text/URL fields of existing content and mapping Fragment background images to image fields of existing content. You can also `map Web Content Templates to Fragments <./mapping-web-content-templates-to-fragments.md>`_.
 ```
 
-When you create Content Pages, you can create different **Experiences** for users based on User Segments. You can create a unique Experience on any Content Page for any existing User Segment. For more information, see the [Content Page Personalization guide](../../personalizing-site-experience/README.md).
+When you create Content Pages, you can create different **Experiences** for users based on User Segments. You can create a unique Experience on any Content Page for any existing User Segment. For more information, see the [Content Page Personalization guide](../../personalizing-site-experience/personalizing-site-experience.md).
 
 ## Related Information
 
