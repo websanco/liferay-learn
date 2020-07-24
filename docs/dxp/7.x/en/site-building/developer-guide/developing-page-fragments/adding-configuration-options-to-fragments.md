@@ -60,7 +60,7 @@ First, deploy an example to see how Fragment Configuration options work:
 1. Expand the *Configurable Marketing Collection* heading in the [Fragments panel](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) and drag the *Configurable Marketing Card* Fragment onto the page.
 1. Select the Configurable Marketing Card. Open the Fragment Configuration Menu by clicking the (![Gear icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. From here, you can choose a configuration option for the text style to change the text from dark to light.
 
-    ![Configurable Fragments provide options to modify the Fragment's look and feel.](./making-a-page-fragment-configurable/images/01.png)
+    ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/01.png)
 
 Great! You successfully imported and configured a configurable Fragment.
 
@@ -150,7 +150,7 @@ Now that you know how the configuration works, you can modify it.
 1. Open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*.
 1. Select the *Configurable Marketing Collection*, and open the Actions Menu for the Configurable Marketing Card and select *Edit*.
 
-    ![Select the Edit option to modify the Fragment.](./making-a-page-fragment-configurable/images/02.png)
+    ![Select the Edit option to modify the Fragment.](./adding-configuration-options-to-fragments/images/02.png)
 
 1. Click the *configuration* tab and update the configuration to include a new configuration to hide/show the card's description:
 
@@ -188,13 +188,13 @@ Now you can test the updates.
 1. Propagate the changes so they're reflected on the Home Page. Open the Actions Menu for the Configurable Marketing Fragment and select *View Usages*. 
 1. Check the box for the Home Page and click the (![propagate button](../../../images/icon-propagate.png)) button.
 
-    ![Configurable Fragments provide options to modify the Fragment's look and feel.](./making-a-page-fragment-configurable/images/03.png)
+    ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/03.png)
 
 1. Go back to the Home Page and once again click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
 1. Select the Configurable Marketing Card again and click the (![Gear icon](../../../images/icon-control-menu-gear.png)) to open the Fragment Configuration Menu.
 1. Check/uncheck the *Show Description* checkbox to show/hide the card's text.
 
-    ![You can have as many configuration options as you want for your Fragments.](./making-a-page-fragment-configurable/images/04.png)
+    ![You can have as many configuration options as you want for your Fragments.](./adding-configuration-options-to-fragments/images/04.png)
 
 Great! Now you know how to add configuration options for your Fragments.
 

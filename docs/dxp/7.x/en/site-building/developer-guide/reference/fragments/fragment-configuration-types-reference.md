@@ -1,6 +1,6 @@
 # Fragment Configuration Types Reference
 
-This reference list the available configuration types for Fragments. See [Adding Configuration Options to Fragments](../adding-configuration-options-to-fragments.md) for more information on how to make a Fragment configurable.
+This reference list the available configuration types for Fragments. See [Adding Configuration Options to Fragments](../../developing-page-fragments/adding-configuration-options-to-fragments.md) for more information on how to make a Fragment configurable.
 
 There are five configurable Fragment types available to implement:
 

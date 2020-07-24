@@ -11,7 +11,7 @@ Page Fragments have access to these types of liferay-specific tags and attribute
 * Embedded Widgets
 
 ```note::
-  When you start typing the name of a tag, the `HTML editor <./developing-page-fragments-with-the-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
+  When you start typing the name of a tag, the `HTML editor <../../developing-page-fragments/using-the-fragments-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
 ```
 
 The text or images you provide here are the default values for the fields. You may want to display them in the final version of the page, or you may want filler text that should be replaced before the page is published.
@@ -43,7 +43,7 @@ You can make Fragment text editable by including the `data-lfr-editable-type="te
 ```
 
 ```note::
-   All block elements and inline elements are supported for editable text. 
+   All block elements and inline elements are supported for editable text.
 ```
 
 For Liferay Portal CE 7.3 GA2 and below, use the syntax below. A unique ID is required to render the element properly:
@@ -63,14 +63,14 @@ If you need formatting options like text or color styles, use `rich-text`:
 ```
 
 ```note::
-   All block element tags are supported for editable Rich text. 
+   All block element tags are supported for editable Rich text.
 ```
 
 For Liferay Portal CE 7.3 GA2 and below, use the syntax below:
 
 ```html
 <lfr-editable id="unique-id" type="rich-text">
-   This is editable text that I can make bold or italic! 
+   This is editable text that I can make bold or italic!
 </lfr-editable>
 ```
 
@@ -81,7 +81,7 @@ For Liferay Portal CE 7.3 GA2 and below, use the syntax below:
 ## Making Images Editable
 
 Images use the same `data-lfr-editable-type` attribute as text, but with the `image` type, like this:
- 
+
 ```html
 <img
   src="placeholder.jpg"
@@ -113,7 +113,7 @@ Most images can be handled like this, but to add an editable background image yo
 </div>
 ```
 
-Content mapping connects editable fields in your Fragment with fields from an Asset type like Web Content or Blogs. For example, you can map an image field to display a preview image for a Web Content Article. For more information on mapping fields, see [Building Content Pages](../../creating-pages/building-content-pages.md#mapping-content).
+Content mapping connects editable fields in your Fragment with fields from an Asset type like Web Content or Blogs. For example, you can map an image field to display a preview image for a Web Content Article. For more information on mapping fields, see [Building Content Pages](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#mapping-content).
 
 ## Creating Editable Links
 
@@ -142,7 +142,7 @@ You can edit the link text, target URL, and basic link styling---primary button,
 
 ![You have several options for defining a link's appearance and behavior.](./fragment-specific-tags-reference/images/03.png)
 
-For more information on editable links, see [Editable Links](../../creating-pages/building-content-pages.md#editing-a-hyperlink).
+For more information on editable links, see [Editable Links](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-a-hyperlink).
 
 ## Creating Editable HTML
 
@@ -164,9 +164,9 @@ For Liferay Portal CE 7.3 GA2 and below, use this syntax:
 
 ![You have several options for defining an HTML element on a Content Page.](./fragment-specific-tags-reference/images/04.png)
 
-For more information on editable HTML, see [Editable HTML](../../creating-pages/building-content-pages.md#editing-an-html-element).
+For more information on editable HTML, see [Editable HTML](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-an-html-element).
 
-## Including Widgets Within A Fragment 
+## Including Widgets Within A Fragment
 
 To include a widget, you must know its registered name. For example, the Site Navigation Menu portlet is registered as `nav`. Each registered portlet has an `lfr-widget-[name]` tag that's used to embed it. For example: the Navigation Menu tag is `<lfr-widget-nav />`. You could embed it in a block like this:
 
@@ -180,7 +180,7 @@ To include a widget, you must know its registered name. For example, the Site Na
 These are the widgets that can be embedded and their accompanying tags:
 
 | Widget Name    | Tag |
-| -------- | --- |	
+| -------- | --- |
 |DDL Display	|`<lfr-widget-dynamic-data-list>`|
 |Form           |`<lfr-widget-form>`|
 |Asset Publisher|`<lfr-widget-asset-list>`|
