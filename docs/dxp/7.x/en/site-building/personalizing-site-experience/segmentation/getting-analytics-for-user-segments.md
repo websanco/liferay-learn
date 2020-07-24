@@ -25,7 +25,7 @@ Follow these steps to get Segment analytics:
 
 ![When you see Analytics Cloud Segments in the list of Segments, they are marked with the Analytics Cloud icon.](./getting-analytics-for-user-segments/images/02.png)
 
-Analytics are based on the criteria that you set on Analytics Cloud, but you can set additional criteria here to use this Segment for personalization in DXP. Changing the Segment criteria here doesn't affect the gathered analytics data, unless it is configured in some way that restricts its members from viewing content that you are using as an Analytics Cloud criteria.
+When you click on the Analytics Cloud Segment, you are directed to Analytics Cloud to edit the segment and change your criteria. You cannot edit the Analytics Cloud Segment in Liferay DXP.
 
 ## Related Information
 
