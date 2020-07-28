@@ -28,6 +28,8 @@ Developers interested in creating their own custom low stock action can refer to
 
 In Liferay Commerce, inventory management is done per product SKU. To learn more, read the [Setting Inventory by Warehouse](./setting-inventory-by-warehouse.md) article.
 
+![Inventory life cycle](./introduction-to-managing-inventory/images/01.png)
+
 ## Additional Information
 
 * [Creating a New Shipment](../../orders-and-fulfillment/shipments/creating-a-shipment.md)
