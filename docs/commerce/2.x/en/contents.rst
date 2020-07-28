@@ -14,6 +14,7 @@ Contents
    account_management
    orders_and_fulfillment
    store_administration
+   add_ons_and_connectors
    developer_guide
    get_help
 
