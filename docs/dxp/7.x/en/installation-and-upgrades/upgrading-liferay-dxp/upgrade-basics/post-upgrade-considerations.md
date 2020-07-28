@@ -8,12 +8,6 @@ Now that you are done upgrading your DXP database, you should re-enable your pro
 
 ### Search Indexing
 
-If you disabled indexing to prevent upgrade process performance issues by configuring the `indexReadOnly="true"` property, then re-enable indexing by removing the `com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config` file or setting `indexReadOnly="false"`.
-
-```bash
-rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
-```
-
 Reindex your search indexes in the Control Panel by navigating to *Search* &rarr; *Index Actions* and clicking *Execute* for *Reindex All Search Indexes.*
 
 ![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/01.png)

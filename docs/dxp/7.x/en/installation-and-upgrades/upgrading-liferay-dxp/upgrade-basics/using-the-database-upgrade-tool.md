@@ -55,13 +55,6 @@ db_upgrade.sh --help
 
 Here are steps for upgrading your database with the upgrade tool:
 
-1. Disable search indexing during database upgrade by setting `indexReadOnly="true"` in a `com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config`file:
-
-    ```bash
-    mkdir -p liferay-home/files/osgi/configs
-    echo "indexReadOnly=\"true\"" > files/osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
-    ```
-
 1. Start the upgrade tool. Here's an example command:
 
     ```bash
