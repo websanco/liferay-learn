@@ -1,6 +1,6 @@
 # JARs Excluded from WABs
 
-[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](./exported-third-party-packages.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
+[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](../../liferay-internals/reference/exported-third-party-packages.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
 
 ```properties
 module.framework.web.generator.excluded.paths=\
