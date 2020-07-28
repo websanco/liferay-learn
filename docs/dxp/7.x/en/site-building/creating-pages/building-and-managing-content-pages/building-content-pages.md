@@ -64,6 +64,11 @@ Content from here applies to 7.3 but needs UI update
        In progress work on a Content Page is automatically saved.
     ```
 
+1. You can revert any action using the undo or redo buttons, or you can return to a previous version of your edits using the History button.
+
+    ![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
+
+1. To preview your Content Page, click the *Preview* button (![Preview](../../../images/icon-preview.png)).
 1. Click the *Publish* button in the top right to make the updates available to the live page.
 
 ## Configuring Elements on a Content Page
