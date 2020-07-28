@@ -12,7 +12,7 @@
  *
  */
 
-package com.liferay.learn.r2f1.impl;
+package com.acme.r2f1.impl;
 
 import com.liferay.dynamic.data.mapping.exception.StorageException;
 import com.liferay.dynamic.data.mapping.io.DDMFormValuesDeserializer;
