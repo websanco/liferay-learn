@@ -1,40 +1,50 @@
 # Custom Domains
 
-To add a custom domain to a DXP Cloud service, you must first register that 
-domain with the dedicated environment IP as an `A` record. Do this using the 
-domain name registrar of your choice. DNS propagation can take up to 24-48 hours 
-to take effect, but in some cases takes only a few minutes. During this 
-propagation process, depending on the DNS server that a device reaches out to, 
-one device may be able to reach the domain at the updated address while another 
-cannot. Eventually, the domain will be reachable from any device and return the 
-standard `default backend - 404` error from the Ingress Load Balancer. Now 
-you're ready for the next step. 
+With Liferay DXP Cloud, you can connect custom domains to environment services with a DNS provider.
 
-```note::
-   You can find the dedicated environment IP on a service's Custom Domains or the Network page.
-```
+To do this, first register your custom domain with your environment's Ingress Load Balancer IP. Then add the domain to the desired service via the DXP Cloud console or the service's LCP.json file.
 
-![Figure 1: This example uses Cloudflare as a domain name registrar to create DNS records.](./custom-domains/images/01.png)
+* [Registering a Custom Domain with an Environment IP](#registering-a-custom-domain-with-an-environment-ip)
+* [Adding a Custom Domain to a DXP Cloud Service](#adding-a-custom-domain-to-a-dxp-cloud-service)
+* [Verifying the Status of a Custom Domain](#verifying-the-status-of-a-custom-domain)
+
+## Registering a Custom Domain with an Environment IP
+
+Each project environment has its own Ingress Load Balancer IP that can be used to connect custom domains to environment services.
+
+This IP is listed in each environment's *Network* page, as well as in each service's dedicated page under *Custom Domains*.
+
+![Figure 1: You can find the environment's Ingress Load Balancer IP in the environment's Network page.](./custom-domains/images/01.png)
+
+Register a custom domain with the environment's dedicated IP as a type `A` record before adding the domain to an environment service. You can do this using the domain name registrar of your choice.
+
+The following example uses Cloudflare to create DNS records.
+
+![Figure 2: This example uses Cloudflare as a domain name registrar to create DNS records.](./custom-domains/images/02.png)
+
+DNS propagation can take up to 24-48 hours to take full effect, but in some cases takes only a few minutes.
+
+During this propagation process, one device may be able to reach the domain at the updated address, while another cannot. This depends on which DNS server a device reaches out to.
+
+When ready, the domain will be reachable from any device and return the standard `default backend - 404` error from the Ingress Load Balancer.
 
 ## Adding a Custom Domain to a DXP Cloud Service
 
-Once the domain is reachable, you can add it to your service and Liferay DXP 
-Cloud will handle the routing for you. You can do this via the web console or 
-`LCP.json`. 
+Once a domain is ready, you can add it to your environment's services via the DXP Cloud console or `LCP.json` files.
 
-Follow these steps to add custom domains via the web console: 
+Follow these steps to add custom domains to environment services via the DXP Cloud console:
 
-1. Go to your environment page. 
-1. Select the service to which you want to add the custom domains. 
-1. Click the *Custom Domains* tab and add your custom domains. To add more than 
-    one custom domain name, enter all the names on each new field created then 
-    click *Update Custom Domains*. The number of custom domains can be capped by 
-    the quotas set during the provisioning process. 
+1. Navigate to the desired environment.
 
-![Figure 2: Use the service's Custom Domains tab to add the domains.](./custom-domains/images/02.png)
+1. Select the service to which you want to add a custom domain.
 
-Alternatively, you can add your custom domains via the `customDomains` property 
-in the service's `LCP.json`: 
+1. Click on the *Custom Domains* tab.
+
+1. Enter a custom domain registered with your environment, and click *Update Custom Domains*. To add more than one domain to a service, repeat this step. <!--CONFIRM MEANING: "To add more than one custom domain name, enter all the names on each new field created"???-->
+
+![Figure 3: Use the service's Custom Domains tab to add the domains.](./custom-domains/images/03.png)
+
+Alternatively, you can add custom domains to an environment service by adding the `customDomains` property to its `LCP.json` file:
 
 ```json
 {
@@ -45,25 +55,34 @@ in the service's `LCP.json`:
 }
 ```
 
-Note that DXP Cloud restricts its Ingress Load Balancer to 50 custom domains. 
-When the configurations are complete, DXP Cloud handles the routing. 
+Once a custom domain is added to your service and your changes are deployed, DXP Cloud handles the routing.
 
-## Verifying a Custom Domain's Status
+```note::
+   The number of custom domains can be capped by the quotas set during the provisioning process, though DXP Cloud restricts its Ingress Load Balancer to 50 custom domains.
+```
 
-Once a custom domain has been added, there are two ways to verify its status.
+## Verifying the Status of a Custom Domain
 
-1. Wait until the service endpoint is reachable and stops responding with a `default backend - 404` error.
-1. Navigate to the status on the Network page on the DXP Cloud Console.
-  ![Figure 3: View all your endpoints and custom domains on the Network page.](./custom-domains/images/03.png)
+You can verify the status of your custom domain in two ways:
 
-Once a Custom Domain is configured, it may take some time to be verifiable due to the following processes that occur on the backend:
+* Open a browser and enter the custom domain. When the endpoint is ready, it no longer returns a `default backend - 404` error or security warnings.
+* Check the status of the service's domain via the DXP Cloud console by navigating to the environment's *Network* page.
 
-1. The route must be added to the Ingress Load Balancer, which can take around 30 minutes depending on the region.
-1. Liferay DXP Cloud reaches out to [Let's Encrypt](https://letsencrypt.org/) for an SSL Server Certificate. The _Let's Encrypt_ site responds with a challenge.
-1. Once the challenge is passed, the Ingress Load Balancer is updated with the certificate and the service is reachable and secure. If someones try to reach the domain during the challenge process, the browser will display security warnings. These warnings can be ignored safely because the process is not yet complete.
+![Figure 4: View all your endpoints and custom domains on the Network page.](./custom-domains/images/04.png)
 
-To learn more about SSL certificates in Liferay DXP Cloud, including how to set up a custom SSL certificate, see the [Load Balancer](./load-balancer.md) article.
+Following configuration, the custom domain may take some time to be verifiable due to backend processes.
+
+These processes include: adding a route to the Ingress Load Balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the Ingress Load Balancer with the certificate once it passes the challenge.
+
+```note::
+   If a user attempts to reach the domain during the challenge process, the browser will display security warnings that can be safely ignored.
+```
+
+Once backend processes are complete, the Ingress Load Balancer is updated with the SSL server certificate, and the service is reachable and secure.
+
+See [Load Balancer](./load-balancer.md) to learn more about SSL certificates in Liferay DXP Cloud, including how to set up a custom SSL certificate.
 
 ## Additional Information
 
+* [Load Balancer](./load-balancer.md)
 * [Configuration Via LCP.json](../../reference/configuration-via-lcp-json.md)
