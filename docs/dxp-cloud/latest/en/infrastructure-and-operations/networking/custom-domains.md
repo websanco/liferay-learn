@@ -26,7 +26,7 @@ DNS propagation can take up to 24-48 hours to take full effect, but in some case
 
 During this propagation process, one device may be able to reach the domain at the updated address, while another cannot. This depends on which DNS server a device reaches out to.
 
-When ready, the domain will be reachable from any device and return the standard `default backend - 404` error from the Ingress Load Balancer.
+When ready, the domain is reachable from any device and returns the standard `default backend - 404` error from the Ingress Load Balancer.
 
 ## Adding a Custom Domain to a DXP Cloud Service
 
@@ -40,9 +40,11 @@ Follow these steps to add custom domains to environment services via the DXP Clo
 
 1. Click on the *Custom Domains* tab.
 
-1. Enter a custom domain registered with your environment, and click *Update Custom Domains*. To add more than one domain to a service, repeat this step. <!--CONFIRM MEANING: "To add more than one custom domain name, enter all the names on each new field created"???-->
+1. Enter any custom domains registered with your environment into the *Domain Names* field.
 
-![Figure 3: Use the service's Custom Domains tab to add the domains.](./custom-domains/images/03.png)
+    ![Figure 3: Use the service's Custom Domains tab to add the domains.](./custom-domains/images/03.png)
+
+1. Click *Update Custom Domains* to finalize the addition.
 
 Alternatively, you can add custom domains to an environment service by adding the `customDomains` property to its `LCP.json` file:
 
@@ -58,7 +60,7 @@ Alternatively, you can add custom domains to an environment service by adding th
 Once a custom domain is added to your service and your changes are deployed, DXP Cloud handles the routing.
 
 ```note::
-   The number of custom domains can be capped by the quotas set during the provisioning process, though DXP Cloud restricts its Ingress Load Balancer to 50 custom domains.
+   The number of custom domains can be capped by the quotas set during the provisioning process. DXP Cloud restricts its own Ingress Load Balancer to 50 custom domains.
 ```
 
 ## Verifying the Status of a Custom Domain
@@ -70,12 +72,14 @@ You can verify the status of your custom domain in two ways:
 
 ![Figure 4: View all your endpoints and custom domains on the Network page.](./custom-domains/images/04.png)
 
-Following configuration, the custom domain may take some time to be verifiable due to backend processes.
+```note::
+   It may take some time to be able to verify a custom domain after it is configured due to backend processes.
+```
 
 These processes include: adding a route to the Ingress Load Balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the Ingress Load Balancer with the certificate once it passes the challenge.
 
 ```note::
-   If a user attempts to reach the domain during the challenge process, the browser will display security warnings that can be safely ignored.
+   If a user attempts to reach the domain during the challenge process, the browser displays security warnings that can be safely ignored.
 ```
 
 Once backend processes are complete, the Ingress Load Balancer is updated with the SSL server certificate, and the service is reachable and secure.
