@@ -2,7 +2,7 @@
 
 With Liferay DXP Cloud, you can connect custom domains to environment services with a DNS provider.
 
-To do this, first register your custom domain with your environment's Ingress Load Balancer IP. Then add the domain to the desired service via the DXP Cloud console or the service's LCP.json file.
+To do this, first register your custom domain with your environment's Load Balancer IP address. Then add the domain to the desired service via the DXP Cloud console or the service's LCP.json file.
 
 * [Registering a Custom Domain with an Environment IP](#registering-a-custom-domain-with-an-environment-ip)
 * [Adding a Custom Domain to a DXP Cloud Service](#adding-a-custom-domain-to-a-dxp-cloud-service)
@@ -26,7 +26,7 @@ DNS propagation can take up to 24-48 hours to take full effect, but in some case
 
 During this propagation process, one device may be able to reach the domain at the updated address, while another cannot. This depends on which DNS server a device reaches out to.
 
-When ready, the domain is reachable from any device and returns the standard `default backend - 404` error from the Ingress Load Balancer.
+When ready, the domain is reachable from any device and returns the standard `default backend - 404` error from DXP Cloud's load balancer.
 
 ## Adding a Custom Domain to a DXP Cloud Service
 
@@ -60,7 +60,7 @@ Alternatively, you can add custom domains to an environment service by adding th
 Once a custom domain is added to your service and your changes are deployed, DXP Cloud handles the routing.
 
 ```note::
-   The number of custom domains can be capped by the quotas set during the provisioning process. DXP Cloud restricts its own Ingress Load Balancer to 50 custom domains.
+   The number of custom domains can be capped by the quotas set during the provisioning process. DXP Cloud restricts its own load balancer to 50 custom domains.
 ```
 
 ## Verifying the Status of a Custom Domain
@@ -76,13 +76,13 @@ You can verify the status of your custom domain in two ways:
    It may take some time to be able to verify a custom domain after it is configured due to backend processes.
 ```
 
-These processes include: adding a route to the Ingress Load Balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the Ingress Load Balancer with the certificate once it passes the challenge.
+These processes include: adding a route to DXP Cloud's load balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the load balancer with the certificate once it passes the challenge.
 
 ```note::
    If a user attempts to reach the domain during the challenge process, the browser displays security warnings that can be safely ignored.
 ```
 
-Once backend processes are complete, the Ingress Load Balancer is updated with the SSL server certificate, and the service is reachable and secure.
+Once backend processes are complete, DXP Cloud's load balancer is updated with the SSL server certificate, and the service is reachable and secure.
 
 See [Load Balancer](./load-balancer.md) to learn more about SSL certificates in Liferay DXP Cloud, including how to set up a custom SSL certificate.
 
