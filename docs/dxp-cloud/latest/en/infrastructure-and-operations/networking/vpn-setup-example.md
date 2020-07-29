@@ -267,3 +267,8 @@ Follow these steps if using an OpenVPN server:
     ```
 
 The OpenVPN server has been configured.
+
+## Additional Information
+
+* [Client-to-Site VPN](./client-to-site-vpn.md)
+* [Connecting a VPN to DXP Cloud](./connecting-a-vpn-to-dxp-cloud.md)

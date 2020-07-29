@@ -19,13 +19,13 @@ Subscribers can choose one of the protocols (IPSec or OpenVPN) to perform the co
 
 The image below demonstrates how the addresses and ports are mapped between the VPN server and DXP Cloud.
 
-![Forwarding ports](./connecting-a-vpn-to-dxp-cloud/images/03.png)
+![Forwarding ports](./client-to-site-vpn/images/03.png)
 
 ## Connecting DXP Cloud to an IPSec VPN Server
 
 In this use case, assume there is a DXP Portal instance running inside DXP Cloud and needs to access an HTTP service running inside an internal network.
 
-![Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network](./client-to-site-vpn/images/03.png)
+![Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network](./client-to-site-vpn/images/04.png)
 
 Note the following:
 
