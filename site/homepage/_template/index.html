@@ -72,6 +72,7 @@
                             </svg>
                         </button>
                         <ul class="dropdown-menu" id="productDropdown">
+                            <li data-producturl="/analytics-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Analytics Cloud{% endtrans %}</li>
                             <li data-producturl="/commerce/2.x/{{ language }}/{{ pathto('search') }}">{% trans %}Commerce{% endtrans %}</li>
                             <li data-producturl="/dxp/7.x/{{ language }}/{{ pathto('search') }}">{% trans %}DXP{% endtrans %}</li>
                             <li data-producturl="/dxp-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}DXP Cloud{% endtrans %}</li>
@@ -117,6 +118,10 @@
 
                 <div class="col-md-12 row">
                     <div class="col-lg-4">
+                        {{ productCard(href="/analytics-cloud/latest/" + language + "/index.html", iconId="#analytics-cloud-logo", title="Analytics Cloud") }}
+                    </div>
+
+                    <div class="col-lg-4">
                         {{ productCard(href="/commerce/2.x/" + language + "/index.html", iconId="#commerce-logo", title="Commerce") }}
                     </div>
 
@@ -126,10 +131,6 @@
 
                     <div class="col-lg-4">
                         {{ productCard(href="/dxp-cloud/latest/" + language + "/index.html", iconId="#dxp-cloud-logo", title="DXP Cloud")}}
-                    </div>
-
-                    <div class="col-lg-4">
-                        {{ productCard(iconId="#analytics-cloud-logo", title="Analytics Cloud") }}
                     </div>
 
                     <div class="col-lg-4">
