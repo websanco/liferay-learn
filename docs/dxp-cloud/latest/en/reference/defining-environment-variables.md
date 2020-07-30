@@ -54,7 +54,7 @@ The following example defines the `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` variable
 ```json
 {
   "id": "liferay",
-  "image": "@liferay.workspace.lcp.liferay.image@",
+  "image": "liferaycloud/liferay-dxp:7.2-4.0.0",
   "env": {
     "LCP_PROJECT_LIFERAY_CLUSTER_ENABLED": "true"
   }
