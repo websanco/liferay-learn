@@ -12,6 +12,10 @@ You can define environment variables via the DXP Cloud console or by configuring
 
 You can add, change, or remove environment variables for a service via the DXP Cloud console. When configuring a service in this way, all variables are scoped to the project environment in which they are defined.
 
+```warning::
+   Updating a service's environment variables restarts the service to apply the change. While restarting, the service may stop receiving requests for some minutes and behave differently depending on the variable values.
+```
+
 Follow these steps to add environment variables to a service via the DXP Cloud console:
 
 1. Navigate to a project environment.
@@ -31,13 +35,9 @@ Follow these steps to add environment variables to a service via the DXP Cloud c
 
 1. Click on *Save Changes* to restart the service with the new environment variable.
 
-```note::
-   While restarting, the service may stop receiving requests for some minutes and behave differently depending on the variable values.
-```
-
 Once an environment variable is added to a service, you can remove it or change its value at any time from the service's *Environment Variables* tab.
 
-To remove a variable, click on the *Remove* button ( x ).
+To remove a variable, click on the *Remove* button ( ⨉ ).
 
 To change a variable's value, click on the *Show* icon, and enter a new value.
 
@@ -49,7 +49,7 @@ Once you have finished removing or changing variables, click on *Save Changes* t
 
 You can define environment variables for a service via its `LCP.json` file using the `env` property. When configuring a service in this way, you can define the service's behavior across all or select environments.
 
-The following example defines the `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` variable with the value `true`.This variable is set as a top level attribute applied by default to all environments, unless otherwise specified.
+The following example defines the `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` variable with the value `true`. This variable is set as a top level attribute applied by default to all environments, unless otherwise specified.
 
 ```json
 {
