@@ -18,7 +18,7 @@ function copy_template {
 
 		pushd ${zip_dir_name}
 
-		#./gradlew classes formatSource
+		./gradlew classes formatSource
 
 		popd
 	done

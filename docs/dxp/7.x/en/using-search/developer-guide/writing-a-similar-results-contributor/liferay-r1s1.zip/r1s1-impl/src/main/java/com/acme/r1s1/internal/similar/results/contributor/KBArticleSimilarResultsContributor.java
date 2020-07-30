@@ -12,7 +12,7 @@
  *
  */
 
-package com.acme.r1s1.impl;
+package com.acme.r1s1.internal.similar.results.contributor;
 
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.model.AssetRenderer;
@@ -70,7 +70,8 @@ public class KBArticleSimilarResultsContributor
 		String urlTitle = (String)criteriaHelper.getRouteParameter("urlTitle");
 
 		KBArticle kbArticle = _kbArticleLocalService.fetchKBArticleByUrlTitle(
-			criteriaHelper.getGroupId(), KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
+			criteriaHelper.getGroupId(),
+			KBFolderConstants.DEFAULT_PARENT_FOLDER_ID, urlTitle);
 
 		if (kbArticle == null) {
 			return;
