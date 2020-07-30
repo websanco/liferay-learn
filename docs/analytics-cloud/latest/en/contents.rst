@@ -7,8 +7,8 @@ Contents
    :maxdepth: 3
 
    getting_started
-   individuals_and_segments
    touchpoints
+   individuals_and_segments
    apis
    administration
    troubleshooting
