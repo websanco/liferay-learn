@@ -12,7 +12,7 @@
  *
  */
 
-package com.liferay.learn.r1s1.impl;
+package com.acme.r1s1.impl;
 
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.model.AssetRenderer;
@@ -36,11 +36,6 @@ import com.liferay.portal.search.similar.results.web.spi.contributor.helper.Rout
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-
-com.liferay.portal.kernel
-com.liferay.portal
-
-com.liferay.learn.r1s1.internal.search.similar.results.web.spi.contributor.
 
 /**
  * @author Russell Bohl
