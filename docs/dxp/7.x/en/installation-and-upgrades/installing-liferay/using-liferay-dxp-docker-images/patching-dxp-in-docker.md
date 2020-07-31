@@ -5,7 +5,7 @@ Liferay [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/
 > Enterprise Subscription
 
 ```important::
-   **Always** `back up <../backing-up.md>`_ your database and installation before patching.
+   **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your database and installation before patching.
 ```
 
 Here are the DXP container patching topics:
