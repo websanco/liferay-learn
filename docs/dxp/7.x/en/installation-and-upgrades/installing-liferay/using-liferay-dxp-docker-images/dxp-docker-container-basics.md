@@ -97,3 +97,4 @@ If you want to know what the container entry point does and learn the container'
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
 * [Patching DXP in Docker](./patching-dxp-in-docker.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
+* [Upgrading to a New Docker Image](./upgrading-to-a-new-docker-image.md)
