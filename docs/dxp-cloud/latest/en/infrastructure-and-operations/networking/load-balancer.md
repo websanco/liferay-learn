@@ -71,6 +71,10 @@ Note that you must manage your own custom certificate. This includes updating it
 }
 ```
 
+```important::
+   The ``ssl`` property (containing the ``key`` and ``crt`` properties) must be contained within the ``loadbalancer`` property to work properly.
+```
+
 ```warning::
    DXP Cloud accepts only properly formatted PEM certificates and keys which must include the encapsulation boundaries. See the `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ to learn more.
 ```
