@@ -1,3 +1,3 @@
-# Tracking Sites with a Property
+# Tracking Sites Using Properties
 
 Coming soon!

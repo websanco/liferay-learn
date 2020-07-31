@@ -1,6 +1,6 @@
 # Managing Interest Topics
 
-Analytics Cloud's [Recommendation API]() suggests topics of interest based on user interactions with content in Liferay DXP. Administrators can exclude certain keywords from the recommendation API, therefore preventing Analytics Cloud from suggesting content based on those keywords. This is useful for further curating suggested content.
+Analytics Cloud's [Recommendation API](../touchpoints/content-recommendation-api.md) suggests topics of interest based on user interactions with content in Liferay DXP. Administrators can exclude certain keywords from the recommendation API, therefore preventing Analytics Cloud from suggesting content based on those keywords. This is useful for further curating suggested content.
 
 ## Adding Keywords to the Block List
 
@@ -18,4 +18,4 @@ To delete a keyword from the block list, click that keyword's trash icon (![Dele
 
 ## Additional Information
 
-* [Interests]()
+* [Interests](../individuals-and-segments/interests.md)
