@@ -1,6 +1,6 @@
 # Using the Database Upgrade Tool
 
-The Liferay Database Upgrade Tool is a client program for upgrading Liferay Liferay and Liferay Portal CE databases offline.
+The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal CE databases offline.
 
 ```warning::
    **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
