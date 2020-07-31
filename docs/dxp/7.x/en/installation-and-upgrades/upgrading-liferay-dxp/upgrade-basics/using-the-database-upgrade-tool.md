@@ -2,7 +2,7 @@
 
 The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal CE databases offline.
 
-```warning::
+```important::
    **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
@@ -12,15 +12,13 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to upgrade the database using the upgrade tool.
 
-After setting up your new Liferay installation, you can upgrade your database using the database upgrade tool.
-
 ## Setting Up a New  Installation
 
 1. Install the new Liferay release.
 
-1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your backup.
+1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
-1. Copy the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) that you have added or edited from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to your new installation. The files may include but are not limited to these:
+1. Copy your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to your new installation. The files may include but are not limited to these:
 
     `/license/*`: Activation keys. (Subscription)
 
