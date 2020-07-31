@@ -43,7 +43,7 @@ If a notification or script is required in your state node, you can use an `acti
 
 Conditions inspect whether a certain condition is met before executing.
 
-Here's the `determine-branch` condition from the Category Specific Approval workflow definition:
+Here's the `determine-branch` condition from the [Category Specific Approval](../user-guide/workflow-designer-overview/workflow-processes/category-specific-definition.xml) workflow definition:
 
 ```xml
 <condition>
