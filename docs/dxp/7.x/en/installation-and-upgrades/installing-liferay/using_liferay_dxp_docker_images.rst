@@ -11,6 +11,7 @@ Using Liferay DXP Docker Images
    using-liferay-dxp-docker-images/patching-dxp-in-docker.md
    using-liferay-dxp-docker-images/running-scripts-in-containers.md
    using-liferay-dxp-docker-images/providing-files-to-the-container.md
+   using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.md
 
 .. include:: /installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/README.rst
 	:start-line: 2

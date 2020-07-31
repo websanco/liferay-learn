@@ -12,7 +12,7 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
-If you're upgrading to a new Liferay Docker image and want to use the Database Upgrade Tool, you'll use that tool from the [Liferay Tomcat Bundle](../../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
+If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.md) and want to use the Database Upgrade Tool, you'll use that tool from a [Liferay Tomcat Bundle](../../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
 
 ## Setting Up a New Installation
 
@@ -35,6 +35,8 @@ If you're upgrading to a new Liferay Docker image and want to use the Database U
     * `web.xml`: Portal web application descriptor.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
+
+    If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) instead of Docker env variables. The [Portal Properties reference](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) lists the corresponding Portal Property with each Liferay Env variable.
 
 1. If your installation is a Liferay Tomcat Bundle, it includes the upgrade tool at `[Liferay Home]/tools/portal-tools-db-upgrade-client`. Otherwise download the tool and install it to that folder.
 
