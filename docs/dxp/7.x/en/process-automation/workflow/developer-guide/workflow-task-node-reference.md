@@ -1,12 +1,12 @@
 # Workflow Task Node Reference
 
-Task nodes are fundamental parts of a workflow definition. When you define your organization's business processes and design corresponding workflows, you likely first envision the tasks. As the name implies, tasks are the part of the workflow where *work* is done. A user enters the picture and must interact with the submitted asset. Users often take the role of reviewer, deciding if an asset from the workflow is acceptable for publication or needs more work.
+Task nodes are fundamental parts of a workflow definition.  As the name implies, tasks are the part of the workflow where *work* is done. Tasks have to be assigned to users to review the submitted asset and decide if an asset from the workflow is acceptable for publication or needs more work.
 
 Unlike other workflow nodes, task nodes have Assignments, because a user is expected to *do something* (often approve or reject the submitted asset) when a workflow process enters the task node.
 
-Commonly, task nodes contain task timers, assignments, actions (which can include notifications and scripts), and transitions. Notifications and actions aren't limited to task nodes, but task nodes and their assignments deserve their own article (this one).
+Commonly, task nodes contain task timers, assignments, actions (which can include notifications and scripts), and transitions. Notifications and actions are not limited to task nodes, but task nodes and their assignments deserve their own article (this one).
 
-Check out the Review task in the Single Approver definition, noting that several `<role>` tags are excluded from this snippet for brevity:
+Check out the Review task in the Single Approver definition:
 
 ```xml
 <task>
@@ -55,7 +55,7 @@ Check out the Review task in the Single Approver definition, noting that several
 ```
 
 There are two `actions` in the review task, both `<notification>`s. Each notification may contain a name, template, notification-type, execution-type, and recipients. Besides notifications, You can also use the `<action>` tag.
-These have a name and a [script](/docs/7-2/user/-/knowledge_base/u/leveraging-the-script-engine-in-workflow) and are more often used in state nodes than tasks.
+These have a name and a [script](https://help.liferay.com/hc/articles/360028818852-Leveraging-the-Script-Engine-in-Workflow) and are more often used in state nodes than tasks.
 
 ## Assignments
 
@@ -67,7 +67,7 @@ Workflow tasks are completed by a user. Assignments make sure the right users ca
 * Resource actions
 * Specific users
 
-Additionally, you can write a script to define the assignment. For an example, see the `single-approver-definition-scripted-assignment.xml`.
+Additionally, you can write a script to define the assignment. For an example, see the [single-approver-definition-scripted-assignment.xml](../user-guide/workflow-designer-overview/workflow-processes/single-approver-definition-scripted-assignment.xml).
 
 ```xml
 <assignments>
@@ -225,23 +225,7 @@ The above task timer creates a notification. Specify a time period in the `<dela
 
 The above snippet demonstrates how to set up a reassignment action.
 
-Like `<action>` elements, `<timer-action>` elements can contain scripts.
-
-```xml
-<timer-actions>
-    <timer-action>
-        <name>doSomething</name>
-        <description>Do something cool when time runs out.</description>
-        <script>
-           ...
-        </script>
-        <script-language>groovy</script-language>
-    </timer-action>
-</timer-actions>
-```
-
-The above example isn't functional but it demonstrates setting up a `<script>` in your task timer.
-[Read the _Scripting in Workflow_ article](https://help.liferay.com/hc/en-us/articles/360028818852-Leveraging-the-Script-Engine-in-Workflow) for more information.
+Like `<action>` elements, `<timer-action>` elements can contain scripts. See the [_Scripting in Workflow_ article](https://help.liferay.com/hc/articles/360028818852-Leveraging-the-Script-Engine-in-Workflow) for more information.
 
 ```note::
    A `timer-action` can contain all the same tags as an `action`, with one exception: `execution-type`. Timer actions are always triggered once the time is up, so specifying and execution type of `onEntry`, for example, isn't meaningful inside a timer.
