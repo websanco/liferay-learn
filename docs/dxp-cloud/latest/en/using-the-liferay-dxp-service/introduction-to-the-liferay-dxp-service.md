@@ -105,6 +105,25 @@ Note that hotfixes will each need to be re-applied each time the server starts u
    If you are using version 3.x.x services, then hotfixes are instead added into the ``lcp/liferay/hotfix/`` folder. The Docker image version in this case is instead defined with the ``liferay.workspace.lcp.liferay.image`` property, in your repository's ``gradle.properties`` file. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
+#### Patching via Environment Variable
+
+You can also install hotfixes as part of the CI build process instead of directly committing them to your Git repository. This approach is ideal for large hotfixes so you can avoid keeping large files in your repository.
+
+Add a comma-delimited list of hotfixes to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
+
+See the following example of defining hotfixes through in the `LCP.json` file:
+
+```
+"env": {
+    "LCP_CI_LIFERAY_DXP_HOTFIXES_COMMON": "liferay-hotfix-10-7210,liferay-hotfix-17-7210",
+    "LCP_CI_LIFERAY_DXP_HOTFIXES_DEV": "liferay-hotfix-15-7210,liferay-hotfix-33-7210",
+}
+```
+
+```note::
+   This environment variable is only available if you have upgraded to at least version 4.x.x services. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```
+
 ### Licenses
 
 You can add your own license by putting it into a `configs/{ENV}/deploy/` folder within the Liferay DXP service directory.

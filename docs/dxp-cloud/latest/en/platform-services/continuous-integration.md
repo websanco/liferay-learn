@@ -98,6 +98,7 @@ The following environment variables are only used in the default Jenkinsfile. To
 Name                                          | Default Value   | Description |
 --------------------------------------------- | --------------- | ----------- |
 `LCP_CI_USE_DEFAULT_JENKINSFILE`      | `false`         | Option to enable of disable the Default Jenkinsfile |
+`LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}`   |                 | Comma-delimited list of hotfixes for CI to apply automatically when deploying the Liferay service. Replace `{ENV}` with the environment name (in all-caps), or `COMMON`. |
 `LCP_CI_BUILD_TIMEOUT_MINUTES`        | `30`            | Set a timeout period for the Pipeline run, after which Jenkins should abort the Pipeline  |
 `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` | `20`            | Preserve stashes from completed builds, for use with stage restarting |
 `LCP_CI_BUILD_NUM_TO_KEEP`            | `10`            | Number of builds that will be stored |

@@ -46,6 +46,8 @@ The following table summarizes the new organization of your `liferay` service co
    Files within the ``configs/{ENV}/`` directory will be copied as overrides into the ``LIFERAY_HOME`` directory in the Liferay container in DXP Cloud.
 ```
 
+Instead of directly committing hotfixes to the repository, a new CI service environment variable is now available to automatically add when deploying the Liferay service. See [Installing Hotfixes with an Environment Variable](#installing-hotfixes-with-an-environment-variable) for more information.
+
 ### Custom Script Execution
 
 Scripts placed in `liferay/configs/{ENV}/scripts/` will now be run as the `liferay` user, rather than as a root user. If a script must be run as root, then the script must be added to the `Jenkinsfile` instead.
@@ -79,6 +81,19 @@ If you would like to install additional Elasticsearch plugins beyond the ones ou
 A default `Jenkinsfile` is no longer required in the repository, as a default pipeline is now defined. Any `Jenkinsfile` is now defined in the `ci` folder, rather than the root of the repository.
 
 Multiple `Jenkinsfile` extension points are now available in the `ci` folder to define procedures at different stages of creating a build. <!-- TODO: Add reference to Jenkinsfile-specific article -->
+
+### Installing Hotfixes with an Environment Variable
+
+Instead of directly committing large hotfixes to your Git repository, a new environment variable has been added that allows you to install hotfixes through the CI build process. Add a comma-delimited list of hotfixes to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
+
+See the following example of defining hotfixes through in the `LCP.json` file:
+
+```
+"env": {
+    "LCP_CI_LIFERAY_DXP_HOTFIXES_COMMON": "liferay-hotfix-10-7210,liferay-hotfix-17-7210",
+    "LCP_CI_LIFERAY_DXP_HOTFIXES_DEV": "liferay-hotfix-15-7210,liferay-hotfix-33-7210",
+}
+```
 
 ## Webserver Service Changes
 
