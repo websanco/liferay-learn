@@ -53,7 +53,7 @@ When the configurations are complete, DXP Cloud handles the routing.
 Once a custom domain has been added, there are two ways to verify its status.
 
 1. Wait until the service endpoint is reachable and stops responding with a `default backend - 404` error.
-1. Navigate to the status on the Network page on the DXP Cloud Management Console.
+1. Navigate to the status on the Network page on the DXP Cloud Console.
   ![Figure 3: View all your endpoints and custom domains on the Network page.](./custom-domains/images/03.png)
 
 Once a Custom Domain is configured, it may take some time to be verifiable due to the following processes that occur on the backend:

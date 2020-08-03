@@ -40,7 +40,7 @@ See [Defining Environment Variables](../reference/defining-environment-variables
 
 ## Managing Auto-scaling
 
-Follow these steps to enable or disable auto-scaling in the DXP Cloud Management Console:
+Follow these steps to enable or disable auto-scaling in the DXP Cloud Console:
 
 1. Navigate to the production environment.
 1. Navigate to *Services* &rarr; *Liferay* &rarr; *Scale*.

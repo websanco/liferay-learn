@@ -1,6 +1,6 @@
 # Logging into Your DXP Cloud Services
 
-By default, login is required to directly access the web interfaces for the DXP and Infrastructure services. Login credentials for these services are typically provided in an initial onboarding email - but may be located in the DXP Cloud Management Console if needed.
+By default, login is required to directly access the web interfaces for the DXP and Infrastructure services. Login credentials for these services are typically provided in an initial onboarding email - but may be located in the DXP Cloud Console if needed.
 
 ## Locating Login Credentials
 

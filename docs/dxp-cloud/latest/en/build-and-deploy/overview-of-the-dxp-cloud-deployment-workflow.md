@@ -50,7 +50,7 @@ Navigate to the `Builds` tab to see all builds that have been initiated. Pending
 
 ## Deploy
 
-There are two main ways to deploy to services on DXP Cloud: deploying through the CLI, or deploying a successful build from the `Builds` tab in the DXP Cloud Management Console.
+There are two main ways to deploy to services on DXP Cloud: deploying through the CLI, or deploying a successful build from the `Builds` tab in the DXP Cloud Console.
 
 ### Option 1: Deploying Through the Command Line Interface
 
@@ -60,7 +60,7 @@ After logging in through the CLI, use `lcp deploy` to deploy any additions prese
 
 ### Option 2: Deploying From `Builds` in DXP Cloud
 
-Another way to deploy changes is to use a completed build in CI from the DXP Cloud Management Console.
+Another way to deploy changes is to use a completed build in CI from the DXP Cloud Console.
 
 Committed changes to the repository will automatically trigger a new build in CI any time a pull request is sent or merged. This allows changes to be deployed to a testing environment at any point of the review process. See [Continuous Integration](./walking-through-the-deployment-life-cycle.md) for an example tutorial.
 

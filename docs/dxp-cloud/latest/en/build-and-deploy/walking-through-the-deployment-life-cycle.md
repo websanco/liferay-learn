@@ -45,7 +45,7 @@ cp path-to-module/my-module my-repository-path/liferay/configs/dev/deploy
 Deployment to DXP Cloud normally consists of pushing the changes in Git, the GitHub webhook triggering a build with the DXP Cloud CI service, and finally deploying the successful build. However, you can also skip pushing your changes to GitHub by using the CLI if desired.
 
 ```tip::
-   In general, pushing to GitHub and using the DXP Cloud Management Console is recommended for deployments.
+   In general, pushing to GitHub and using the DXP Cloud Console is recommended for deployments.
 ```
 
 ### Commit the Sample in Git
@@ -78,9 +78,9 @@ Once you have sent the pull request to the upstream repository, the CI service a
    You may view triggered builds in the Jenkins `CI service <../platform-services/continuous-integration.md>`_ by visiting ``https://ci-<project>-<environment>.lfr.cloud``.
 ```
 
-### Deploy the Build to the Development Environment from the DXP Cloud Management Console
+### Deploy the Build to the Development Environment from the DXP Cloud Console
 
-Navigate to the DXP Cloud Management Console, and then go to the `Builds` tab for the desired environment. The option to deploy the build appears when the build completes successfully; click the three dots to the right side of the build to see the option.
+Navigate to the DXP Cloud Console, and then go to the `Builds` tab for the desired environment. The option to deploy the build appears when the build completes successfully; click the three dots to the right side of the build to see the option.
 
 ![Builds](./walking-through-the-deployment-life-cycle/images/03.png)
 
@@ -159,7 +159,7 @@ Verify that the module was deployed in the `dev` environment by navigating to yo
 
 You first need the customer user name and password to access the web server; these credentials are shared between all environments.
 
-From the DXP Cloud Management Console, navigate to the `infra` environment → CI service → Environment Variables tab (or go directly to `https://console.liferay.cloud/projects/<project-name>-infra/services/ci/environment-variables`).
+From the DXP Cloud Console, navigate to the `infra` environment → CI service → Environment Variables tab (or go directly to `https://console.liferay.cloud/projects/<project-name>-infra/services/ci/environment-variables`).
 
 From this screen, you can check the `JENKINS_CUSTOMER_USER_NAME` and `JENKINS_CUSTOMER_PASSWORD` variables for the login credentials for your web server:
 
