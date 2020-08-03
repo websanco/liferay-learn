@@ -18,6 +18,8 @@ The easiest way to create a blog entry is on the _Blogs_ widget deployed on a si
 
 ### Organizing Blog Entries with Tags and Related Assets
 
+<!-- ```note:: Available in Liferay DXP 7.3+. This section must be updated to reflect the new by-default categories and vocabularies in 7.3 -->
+
 Adding Tags and relating other assets to the blog entry can help users better find content on your site.
 
 To add tags:
