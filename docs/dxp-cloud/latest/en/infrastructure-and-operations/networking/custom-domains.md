@@ -72,13 +72,9 @@ You can verify the status of your custom domain in two ways:
 
 ![Figure 4: View all your endpoints and custom domains on the Network page.](./custom-domains/images/04.png)
 
-```note::
-   It may take some time to be able to verify a custom domain after it is configured due to backend processes.
-```
+It may take some time to be able to verify a custom domain after configuration due to backend processes. Backend processes that impact the time for a custom domain to be verifiable include: adding a route to DXP Cloud's load balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the load balancer with the certificate once it passes the challenge.
 
-These processes include: adding a route to DXP Cloud's load balancer, requesting an SSL server certificate through [Let's Encrypt](https://letsencrypt.org/), receiving a challenge from Let's Encrypt, and updating the load balancer with the certificate once it passes the challenge.
-
-```note::
+```important::
    If a user attempts to reach the domain during the challenge process, the browser displays security warnings that can be safely ignored.
 ```
 
