@@ -1,6 +1,6 @@
-# VPN Setup Example
+# Configuring a VPN Server
 
-The following scenario walks through how to set up an IPsec or OpenVPN VPN server. Once a VPN server is configured, a secure connection can be established between an internal network and the production environment on DXP Cloud. This example uses Ubuntu Server 18.0.4 as a proof of concept. Please read the [Client to Site VPN](./client-to-site-vpn.md) article for an overview on DXP Cloud's Client-to-Site VPNs functionality.
+The following scenario walks through how to set up an IPsec or OpenVPN VPN server. Once a VPN server is configured, a secure connection can be established between an internal network and the production environment on DXP Cloud. This example uses Ubuntu Server 18.0.4 as a proof of concept. Please read the [VPN Integration Overview](./vpn-integration-overview.md) article for an overview on DXP Cloud's Client-to-Site VPNs functionality.
 
 ```warning::
    Configuration commands and values are subject to change and should be adapted for your specific environment.
@@ -270,5 +270,5 @@ The OpenVPN server has been configured.
 
 ## Additional Information
 
-* [Client-to-Site VPN](./client-to-site-vpn.md)
-* [Connecting a VPN to DXP Cloud](./connecting-a-vpn-to-dxp-cloud.md)
+* [VPN Integration Overview](./vpn-integration-overview.md)
+* [Connecting a VPN Server to DXP Cloud](./connecting-a-vpn-server-to-dxp-cloud.md)

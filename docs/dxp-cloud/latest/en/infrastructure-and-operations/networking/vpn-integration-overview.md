@@ -1,8 +1,8 @@
-# Client-to-Site VPN
+# VPN Integration Overview
 
 Liferay DXP Cloud provides a VPN client-to-site connection that has port forwarding and redundant tunnels support. This feature is commonly used to connect a subscriber's production environment on DXP Cloud to their internal network. For security and reliability, these VPN connections are segregated for each environment (production, staging, or development).
 
-![Topology 1 - DXP Cloud VPN client-to-site topology](./client-to-site-vpn/images/01.png)
+![Topology 1 - DXP Cloud VPN client-to-site topology](./vpn-integration-overview/images/01.png)
 
 Subscribers can use redundant VPN tunnels by mapping their connections between their DXP Cloud services to their corresponding VPN server's IP addresses. The redundancy is placed in different availability zones to provide resiliency. The client-to-site approach covers connecting to a service running on the company network. This model is recommended for the containerized architecture and Kubernetes network layer provided.
 
@@ -13,19 +13,13 @@ The client to site VPN feature supports the following protocols:
 * IPsec (IKEv2)
 * OpenVPN
 
-Subscribers can choose one of the protocols (IPSec or OpenVPN) to perform the connection from DXP Cloud Console settings page for the desired environment. See [Connecting a VPN to DXP Cloud](./connecting-a-vpn-to-dxp-cloud.md) for more information.
-
-![VPN Settings](./client-to-site-vpn/images/02.png)
-
-The image below demonstrates how the addresses and ports are mapped between the VPN server and DXP Cloud.
-
-![Forwarding ports](./client-to-site-vpn/images/03.png)
+Subscribers can choose one of the protocols (IPSec or OpenVPN) to perform the connection from DXP Cloud console settings page for the desired environment. Any number of forwarding ports can be configured for the connection in the console UI. See [Connecting a VPN Server to DXP Cloud](./connecting-a-vpn-server-to-dxp-cloud.md) for more information.
 
 ## Connecting DXP Cloud to an IPSec VPN Server
 
 In this use case, assume there is a DXP Portal instance running inside DXP Cloud and needs to access an HTTP service running inside an internal network.
 
-![Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network](./client-to-site-vpn/images/04.png)
+![Topology 2 - Portal instance accessing an HTTP service inside the customer’s company network](./vpn-integration-overview/images/02.png)
 
 Note the following:
 
@@ -53,4 +47,4 @@ Liferay DXP Cloud offers optional Private Clusters which isolate each subscriber
 
 ## What's Next
 
-* [Setting up a Client-to-Site VPN example](./vpn-setup-example.md)
+* [Configuring a Client-to-Site VPN example](./configuring-a-vpn-server.md)
