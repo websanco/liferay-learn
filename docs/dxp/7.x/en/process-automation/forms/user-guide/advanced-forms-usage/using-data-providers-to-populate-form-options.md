@@ -1,6 +1,6 @@
 # Using Data Providers to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about how data providers work, see [Introduction to Data Providers](./introduction-to-data-providers.md).
+_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about how data providers work, see [Data Providers Overview](./data-providers-overview.md).
 
 This article walks users through invoking a JSON web service, configuring the data provider, and adding the data provider to a form. The example below demonstrates how to populate a Select from List field with a list of countries.
 
@@ -84,7 +84,7 @@ For example, to apply a region (for example, Americas, Europe, or Oceania) filte
    * **Outputs Path**: `*$..name*`
    * **Output Type**: List
 
-    To understand more about these values, read the [Data Provider documentation](../introduction-to-data-providers.md)).
+    To understand more about these values, read the [Data Provider documentation](../data-providers-overview.md)).
 
 ## Granting Data Provider Permissions
 
@@ -133,5 +133,5 @@ The console now sends warning messages whenever there are errors in the Data Pro
 
 ## Additional Information
 
-* [Introduction to Data Providers](./introduction-to-data-providers.md)
+* [Data Providers Overview](./data-providers-overview.md)
 * [Using the Autofill Rule](./form-rules/using-the-autofill-rule.md)
