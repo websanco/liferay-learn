@@ -2,16 +2,11 @@
 
 Maintaining regular backups is vital to protecting your project's data. The DXP Cloud backup service stores iterations of environment data that can be used to restore your environments if needed. These backups include both the Liferay DXP Database and the full contents of the `LIFERAY_HOME/data` folder.
 
+![Figure 1: The backup service is one of several services available in DXP Cloud.](./backup-service-overview/images/01.png)
+
 From the Backups page in `prd` environments, you can create backups, view or download retained backups, and restore an environment from a backup.
 
 You can also configure the backup service to meet your project's needs via the DXP Cloud console or the backup service's `LCP.json` file.
-
-* [The Backups Page](#the-backups-page)
-* [Creating a Manual Backup](#creating-a-manual-backup)
-* [Configuring the Backup Service](#configuring-the-backup-service)
-* [Environment Variables Reference](#environment-variables-reference)
-
-![Figure 1: The backup service is one of several services available in DXP Cloud.](./backup-service-overview/images/01.png)
 
 ## The Backups Page
 
@@ -33,7 +28,7 @@ From here, you can perform the following tasks:
 
 * **View Backup Info**: You can quickly view backup service information for the `prd` environment. This includes the frequency of automated backups, the backup retention period, and timestamp information for the next scheduled backup, the latest created backup, and the oldest retained backup.
 * **View Backup History**: You can view the full list of retained backups in the `prd` environment. Each entry lists the backup's name, size, and time of creation.
-* **Create Manual Backups**: You can manually create a backup of the `prd` environment. See [Performing a Manual Backup](#performing-a-manual-backup) for more information.
+* **Create Manual Backups**: You can manually create a backup of the `prd` environment. See [Creating a Manual Backup](#creating-a-manual-backup) for more information.
 
 ```note::
    Backup timestamps are displayed automatically based on your browser location, while backup schedules are based on the UTC±00 time zone.
@@ -100,8 +95,8 @@ Follow these steps to configure the backup service via its `LCP.json` file:
    ```
     "env": {
       "LCP_BACKUP_FOLDER": "/opt/liferay/data",
-      "LCP_DATABASE_SERVICE": "database",
-      "LCP_MASTER_USER_PASSWORD": "           "
+      "LCP_DATABASE_SERVICE": "mydatabase",
+      "LCP_MASTER_USER_PASSWORD": "mypassword"
     },
    ```
 
@@ -130,8 +125,8 @@ The following `LCP.json` example creates backups every 12 hours (i.e., 00:00 and
 ```
  "env": {
    "LCP_BACKUP_FOLDER": "/opt/liferay/data",
-   "LCP_DATABASE_SERVICE": "database",
-   "LCP_MASTER_USER_PASSWORD": "           ",
+   "LCP_DATABASE_SERVICE": "mydatabase",
+   "LCP_MASTER_USER_PASSWORD": "mypassword",
    "LCP_BACKUP_CREATE_SCHEDULE": "0 0,12 * * *",
    "LCP_BACKUP_CLEANUP_SCHEDULE": "@monthly",
    "LCP_BACKUP_RETENTION_PERIOD": "30"

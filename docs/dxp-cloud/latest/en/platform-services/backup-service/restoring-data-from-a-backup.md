@@ -2,17 +2,13 @@
 
 During project development, there may be times when you need to restore data or roll back the project to an earlier state.
 
-```important::
-   Only production (`prd`) environment administrators can manually restore environments via the DXP Cloud console.
-```
-
 You can also use custom SQL scripts to perform additional updates to a database as part of the data restore.
 
-```note::
-   The Backups page is only available in production environments.
-```
-
 See [Backup Service](./backup-service-overview.md) and [Downloading and Uploading Backups](./downloading-and-uploading-backups.md) for more information about the Backups page.
+
+```important::
+   The Backups page is only available for production (``prd``) environments. Only users with the Admin role for the prod environment can manually restore environments via the DXP Cloud console.
+```
 
 ## Restoring an Environment from the Backups Page
 
