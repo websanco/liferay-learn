@@ -2,33 +2,6 @@
 
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
 
-<<<<<<< HEAD
-## Adding Elements to a Content Page in Liferay DXP 7.3+
-
-1. Open the Product Menu and, under the Site Menu, go to *Site Builder* &rarr; *Pages* to open the Site Builder.
-1. Click the Add Page button ![Add Page](../../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
-
-    ![Begin by adding your new Content Page.](building-content-pages/images/01v.png)
-
-1. Select the *Blank* template or one of the exiting templates.
-1. In the *Add Page* dialog, type your page's *Name*.
-1. Alternatively, click the Actions Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
-
-    ![Edit an existing Content Page](building-content-pages/images/02v.png)
-
-1. From the Content Page sidebar, select the *Fragments and Widgets* button (![Fragments and Widgets](../../../images/icon-cards2.png)) and start adding the Fragments and Widgets for your content.
-1. Configure the look and content preferences of the Fragments and Widgets using the following configuration options:
-
-
-
-## Adding Elements to a Content Page in Previous Liferay DXP Versions
-
-<!-- 
-####################################################
-Content from here applies to 7.3 but needs UI update
-####################################################
--->
-=======
 <!-- ```note::
    New Edit Mode drop-down menu available in Liferay DXP 7.3+.
 ``` -->
@@ -43,7 +16,6 @@ When you enter the Site Builder view, you can add or edit your content using two
 The editing options available in the Content Page sidebar depend on the editing mode you choose.
 
 ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
->>>>>>> 2109832c... Update Building Content Pages. Second draft.
 
 ## Adding Elements to a Content Page
 
