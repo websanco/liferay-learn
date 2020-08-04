@@ -12,7 +12,7 @@ Advanced Forms Usage
    advanced-forms-usage/redirecting-users-on-form-submission.md
    advanced-forms-usage/reusing-sets-of-form-elements.md
    advanced-forms-usage/translating-forms.md
-   advanced-forms-usage/introduction-to-data-providers.md
+   advanced-forms-usage/data-providers-overview.md
    advanced-forms-usage/using-data-providers-to-populate-form-options.md
    advanced-forms-usage/using-forms-with-a-workflow.md
    advanced-forms-usage/validating-text-and-numeric-field-entries.md

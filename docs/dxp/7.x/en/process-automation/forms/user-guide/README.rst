@@ -19,7 +19,7 @@ Advanced Forms Usage
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/redirecting-users-on-form-submission`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/reusing-sets-of-form-elements`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/translating-forms`
--  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/introduction-to-data-providers`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/data-providers-overview`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/using-data-providers-to-populate-form-options`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/using-forms-with-a-workflow`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/validating-text-and-numeric-field-entries`
