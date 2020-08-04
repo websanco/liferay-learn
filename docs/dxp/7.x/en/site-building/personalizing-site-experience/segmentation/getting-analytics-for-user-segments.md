@@ -19,13 +19,11 @@ Follow these steps to get Segment analytics:
 1. Once the Segment is synced, go to the *Segments* page.
 1. Click on the new Segment to view and customize it.
 
-<!-- The list of segments view changes in 7.3. The *Active* column has been removed -->
-
 > Product image may differ slightly depending on your Liferay DXP version.
 
 ![When you see Analytics Cloud Segments in the list of Segments, they are marked with the Analytics Cloud icon.](./getting-analytics-for-user-segments/images/02.png)
 
-When you click on the Analytics Cloud Segment, you are directed to Analytics Cloud to edit the segment and change your criteria. You cannot edit the Analytics Cloud Segment in Liferay DXP.
+When you click on the Analytics Cloud Segment, you are directed to Analytics Cloud to edit the segment and change your criteria. You cannot edit Analytics Cloud Segments in Liferay DXP.
 
 ## Related Information
 
