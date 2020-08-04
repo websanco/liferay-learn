@@ -88,7 +88,11 @@ Apart from regular environment variables, you can also set *Secret* variables vi
 
 Follow these steps to configure the backup service via its `LCP.json` file:
 
-1. Use a text editor to open the backup `LCP.json` file located at the following path: `/{your_project_name}/lcp/backup/LCP.json`.
+1. Use a text editor to open the backup `LCP.json` file located at the following path: `/{your_project_name}/backup/LCP.json`.
+
+   ```note::
+      If you are using version 3.x.x services, then the backup ``LCP.json`` file is located at the following path: ``/{your_project_name}/backup/LCP.json``.  
+   ```
 
 1. Scroll down to the environment section.
 
