@@ -72,6 +72,30 @@ The Pause field is if there's an event in the workflow when time should stop cou
 | Days | Enter a whole number for number of days. If there are partial days such as 36 hours, use in combination with the _Hours_ field; express it 1 Day and 12 Hours. |
 | Hours | Enter the number of hours and minutes. The values in the _Hours_ box must not exceed _23:59_; if the duration exceeds one day, use in combination with the _Days_ field. |
 
+## Configuring the SLA Job Interval
+
+The _Check SLA Job Interval_ is the time between metrics recalculation. The default values is 1 minute. To change it,
+
+1. From the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)), go to the System Settings application and open the Workflow Metrics entry.
+
+2. Change the Check SLA Job Interval configuration value and click _Save_.
+
+Alternatively,
+
+1. Create a configuration file called
+
+   ```
+   com.liferay.portal.workflow.metrics.internal.configuration.WorkflowMetricsConfiguration.config
+   ```
+
+2. Give it contents like these:
+
+   ```properties
+   checkSLAJobInterval="1"
+   ```
+
+3. Place it in `[Liferay Home]/osgi/configs`.
+
 ## Additional Information
 
 * [Creating Tasks in the Workflow Designer](https://help.liferay.com/hc/articles/360028821932-Creating-Tasks-in-the-Workflow-Designer)
