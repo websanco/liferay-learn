@@ -2,15 +2,11 @@
 
 Open the Workflow Metrics from the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)) (Control Panel &rarr; Workflow &rarr; Metrics) and you immediately see metrics on each workflow installed in the system.
 
-![In this view, the only process with pending items is the Auto Insurance Application.](./images/06.png)
+![In this view, the only process with pending items is the Auto Insurance Application.](./workflow-metrics-reports/images/06.png)
 
 A table view of all installed workflow processes shows you how many items are overdue, how many are on time, and how many are pending in the workflow process.
 
 Access more detailed reports by clicking on one of the workflow processes.
-
-```note::
-   **Requires Elasticsearch:** To use Workflow Metrics, you must be using Elasticsearch to index your Liferay DXP data. Read `here <../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch.rst>`_ to learn about installing Elasticsearch.
-```
 
 The Reports UI has two main views, represented as tabs: _Dashboard_ and _Performance_.
 
@@ -18,11 +14,15 @@ The Dashboard view is displayed by default. Included are items currently in the 
 
 The Performance view shows metrics for items that have completed processing in the workflow.
 
+```note::
+   **Requires Elasticsearch:** To use Workflow Metrics, you must be using Elasticsearch to index your Liferay DXP data. Read `here <../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch.rst>`_ to learn about installing Elasticsearch.
+```
+
 ## Understanding the Dashboard
 
-The Dashboard metrics include three valuable reports on pending items: the Pending Items overview, the Workload by Step table, and the Workflow by Assignee table.
+Three valuable reports on pending items are provided in the Dashboard: the Pending Items overview, the Workload by Step table, and the Workflow by Assignee table.
 
-![The Dashboard tab shows on the pending items in the process.](./images/11.png)
+![The Dashboard tab shows on the pending items in the process.](./workflow-metrics-reports/images/11.png)
 
 **Pending Items:** Pending Items shows you the overview of items by their SLA status. Drill down by clicking on any of the statuses to see the specific items that are enumerated in Pending Items.
 
@@ -32,27 +32,27 @@ The Dashboard metrics include three valuable reports on pending items: the Pendi
 
 ## Understanding Process Performance
 
-Click the *Performance* tab to see metrics for items that have completed the workflow process. The time period is configurable for each data presentation (with a default of 30 days).
+The *Performance* tab shows metrics for items that have completed the workflow process. The time period is configurable for each data presentation (with a default of 30 days).
 
 **Completed Items:** See overview metrics of the SLA status for all completed items. Untracked items are included here as well.
 
-![View the completed items, broken down by SLA status.](./images/02.png)
+![View the completed items, broken down by SLA status.](./workflow-metrics-reports/images/02.png)
 
 **Completion Velocity:** A line chart displays the completion rate for the workflow process. The default display shows the number of completed workflow instances per day, for the last 30 days.
 
-The overall completion rate for the time period is displayed in the top right corner of the chart (as _Inst/timeUnit_), while the trend-line is presented in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
+The overall completion rate for the time period is displayed in the top of the chart (as _Inst/timeUnit_), while the trend-line is presented in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
 
-![View the completion rate of items in a workflow process.](./images/03.png)
+![View the completion rate of items in a workflow process.](./workflow-metrics-reports/images/03.png)
 
-**Performance by Step:** See each step's performance via how many SLA breaches it's responsible for and its average completion time. If the step is part of one or more SLA definitions, discover how many total SLA breaches have occurred at the step and the proportion (as a percentage) of the total breaches that occurred at this step of the process.
+**Performance by Step:** See how many SLA breaches each step is responsible for and the step's average completion time. If the step is part of at least one SLA definition, discover how many total SLA breaches have occurred at the step and the proportion (as a percentage) of the total breaches that occurred at this step of the process.
 
-![View the performance of each workflow step.](./images/04.png)
+![View the performance of each workflow step.](./workflow-metrics-reports/images/04.png)
 
 To see a full view of all the step performance metrics, click _View All Steps_.
 
 **Performance by Assignee:** See each workflow assignee's average completion time and total completed tasks.
 
-![View the completion rate of items in a workflow process over time.](./images/05.png)
+![View the completion rate of items in a workflow process over time.](./workflow-metrics-reports/images/05.png)
 
 To see a full view of the workflow assignees, click _View All Assignees_.
 
@@ -94,7 +94,7 @@ The All Items view can be filtered so you can find the subset of items you want 
 
 Filter items based on whether they're Overdue, On Time, or Untracked.
 
-![Filter by SLA status: Overdue, On Time, or Untracked.](./images/10.png)
+![Filter by SLA status: Overdue, On Time, or Untracked.](./workflow-metrics-reports/images/10.png)
 
 **Overdue**: Overdue items have breached at least one SLAs defined deadline.
 
@@ -108,7 +108,7 @@ Filter items based on whether they're Pending or Completed in the workflow proce
 
 If you filter by the Completed status, you'll get an additional filtering option: filter items by the Completion Period.
 
-![Filter by Process Status and Completion Period.](./images/09.png)
+![Filter by Process Status and Completion Period.](./workflow-metrics-reports/images/09.png)
 
 ### Filtering by Process Step
 
@@ -118,13 +118,13 @@ Filter items based on where they are in the workflow definition. For example, in
 
 Use a combination of filters to find just the items you need to see. For example, below are all items in the Single Approver process's Review task that have the status Completed or Pending, whether On time or Overdue. Untracked items aren't shown.
 
-![Combine filters to see just the items you want.](./images/08.png)
+![Combine filters to see just the items you want.](./workflow-metrics-reports/images/08.png)
 
 ## Item Details
 
 To see the metrics for a single workflow process item, click the ID field while in the All Items view. A pop-up shows you more detailed information on the item.
 
-![Item Details include SLA status information and whether the item is Resolved or Open.](./images/07.png)
+![Item Details include SLA status information and whether the item is Resolved or Open.](./workflow-metrics-reports/images/07.png)
 
 From here you can view detailed information about the asset and even click *Go to Submission Page*, which redirects you to the item's view in the Submissions section of the Control Panel.
 
