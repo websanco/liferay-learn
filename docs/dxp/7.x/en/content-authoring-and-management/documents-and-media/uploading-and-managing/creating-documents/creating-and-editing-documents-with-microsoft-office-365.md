@@ -14,7 +14,7 @@ To unlink your account:
 1. On the *General* tab, click *Apps*.
 1. Click *Revoke* next to OneDrive&trade;.
 
-    ![Figure 1: You can unlink your account from the portal.](./creating-and-editing-documents-with-microsoft-office-365/images/office365-unlink.png)
+    ![You can unlink your account from the portal.](./creating-and-editing-documents-with-microsoft-office-365/images/01.png)
 
 OneDrive&trade; has been unlinked.
 
@@ -31,11 +31,11 @@ Follow these steps to create a new Documents and Media file via Office 365&trade
 
     When you select one of these options, a new window opens for you to enter the document's name.
 
-    ![Figure 2: Select the type of document you want to create.](./creating-and-editing-documents-with-microsoft-office-365/images/office365-new.png)
+    ![Select the type of document you want to create.](./creating-and-editing-documents-with-microsoft-office-365/images/02.png)
 
 1. Enter the document's name in the *Title* field, and click *Save*. When you click *Save*, DXP creates a temporary Documents and Media file and links it to the new Office 365&trade; file. Your browser then opens a new window with that Office 365&trade; file so you can create its content.
 
-    ![Figure 3: Give the document a name.](./creating-and-editing-documents-with-microsoft-office-365/images/office365-creation-modal.png)
+    ![Give the document a name.](./creating-and-editing-documents-with-microsoft-office-365/images/03.png)
 
 1. Use the Office 365&trade; editor to create your document's content.
 
@@ -65,7 +65,7 @@ Follow these steps to edit a Documents and Media file in Office 365&trade;:
 
 1. Edit the file in Office 365&trade;. The editing process is exactly the same as described above for creating files.
 
-    ![Figure 4: Select *Edit in Office 365* from the file's Actions menu.](./creating-and-editing-documents-with-microsoft-office-365/images/office365-edit.png)
+    ![Select Edit in Office 365 from the file's Actions menu.](./creating-and-editing-documents-with-microsoft-office-365/images/04.png)
 
 ## Additional Information
 

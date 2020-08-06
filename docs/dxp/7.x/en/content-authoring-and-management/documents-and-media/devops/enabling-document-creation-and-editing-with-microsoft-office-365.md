@@ -34,7 +34,7 @@ To grant access at the global level:
 
 1. Click *OneDrive* in the left menu.
 
-    ![Click the Documents and Media settings.](./enabling-document-creation-and-editing-with-microsoft-office-365/images/02.png)
+    ![Enter your credentials in the corresponding fields.](./enabling-document-creation-and-editing-with-microsoft-office-365/images/02.png)
 
 1. Enter your application's OAuth 2 client ID and client secret in the *Client ID* and *Client Secret* fields, respectively.
 1. Enter your tenant ID in the *Tenant* field. To find your tenant ID, see [Microsoft's documentation](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id).
@@ -52,7 +52,7 @@ To grant access at the instance level:
 
 1. Click *OneDrive* in the left navigation menu.
 
-    ![Click the Documents and Media settings.](./enabling-document-creation-and-editing-with-microsoft-office-365/images/04.png)
+    ![Enter your credentials in the corresponding fields at the instance level.](./enabling-document-creation-and-editing-with-microsoft-office-365/images/04.png)
 
 1. Enter your application's OAuth 2 client ID and client secret in the *Client ID* and *Client Secret* fields, respectively.
 1. Enter your tenant ID in the *Tenant* field. To find your tenant ID, see [Microsoft's documentation](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id).
@@ -61,3 +61,6 @@ To grant access at the instance level:
  **Note:** Once enabled, you can disable this feature by deleting the client ID, client secret, and tenant values from the form.
 
 ## Additional Information
+
+* [Enabling Document Creation and Editing with Google Drive](./google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)
+* [Creating and Editing Documents with Microsoft Office 365](../uploading-and-managing/creating-documents/creating-and-editing-documents-with-microsoft-office-365.md)
