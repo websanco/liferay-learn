@@ -10,8 +10,6 @@ The editing options available in the Content Page sidebar depend on the editing 
 
 ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
 
-<!-- The following content will be updated in a different LRDOCS to describe the new sidebar layout in 7.3+. -->
-
 The Content Page sidebar contains these elements and tools for Content Pages:
 
 * [Fragments](#fragments)

@@ -2,16 +2,12 @@
 
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
 
-<!-- ```note::
-   New Edit Mode drop-down menu available in Liferay DXP 7.3+.
-``` -->
-
 > The drop-down Edit Mode menu is available in Liferay 7.3+.
 
 When you enter the Site Builder view, you can add or edit your content using two different editing modes:
 
-- *Page Design*: Using this mode, you can edit the page design and content. This option is only available for users with the permissions to update the page and the page content.
-- *Content Edition*: Using this mode, you can only edit the content. This options is available for users with permission to update the page, but not the page content.
+- *Page Design*: Using this mode, you can edit the page design and content. This option is only available for users with permission to update the page and the page content.
+- *Content Edition*: Using this mode, you can only edit the content. This option is available for users with permission to update the page, but not the page content.
 
 The editing options available in the Content Page sidebar depend on the editing mode you choose.
 
@@ -53,19 +49,11 @@ The editing options available in the Content Page sidebar depend on the editing 
        In progress work on a Content Page is automatically saved.
     ```
 
-<!-- ```note::
-   New Undo, Redo, and History UI options available in Liferay DXP 7.3+.
-``` -->
-
 > The *Undo*, *Redo*, and *History* options are available in Liferay 7.3+.
 
 1. You can revert any action using the *Undo* (![Preview](../../../images/icon-undo.png)) or *Redo* (![Preview](../../../images/icon-redo.png)) buttons, or you can return to a previous version of your edits using the *History* (![Preview](../../../images/icon-time.png)) button.
 
     ![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
-
-<!-- ```note::
-   New Preview option available in Liferay DXP 7.3+.
-``` -->
 
 > The *Preview* option is available in Liferay 7.3+.
 
