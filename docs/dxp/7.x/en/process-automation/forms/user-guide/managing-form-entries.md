@@ -67,15 +67,3 @@ There is a system level setting to determine whether administrators can export e
 1. Click the _X_ button to delete all the entries.
 
 Alternately, users can delete just one entry; check the box next to the chosen entry and then click the _X_ in the upper right corner. Click _OK_ to confirm the command.
-
-<!-- Removed this information because it really doesn't belong in an article titled, "Managing Form Entries". Export/Import does more than just manage entries - it handles Forms and Forms Application Configurations.
-
-## Additional Information
-
-```note::
-   The Forms application itself has an Import/Export window accessible from the application's Configuration menu. This is how you import and export the application configuration and its data (forms and form entries). The file format for this type of import and export is a LAR file.
-```
-
-![Exporting Form contents as a LAR](./managing-form-entries/images/08.png)
-
-For more information, see the article on [importing and exporting application content](https://help.liferay.com/hc/articles/360029132551-Importing-Exporting-Sites-and-Content). -->
