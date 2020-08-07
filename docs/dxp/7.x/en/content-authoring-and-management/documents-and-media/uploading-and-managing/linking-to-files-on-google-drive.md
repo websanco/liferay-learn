@@ -51,7 +51,7 @@ With the preceding configuration steps complete, you can create files in your Do
 
 1. In your Document Library, click the _Add_ button (![Add](../../../images/icon-add.png)) and select _Google Drive Shortcut_. The _New Google Drive Shortcut_ screen appears.
 
-    ![Select *New Google Drive Shortcut* from the *Add* menu in your Document Library.](./linking-to-files-on-google-drive/images/01.png)
+    ![Select New Google Drive Shortcut from the Add menu in your Document Library.](./linking-to-files-on-google-drive/images/01.png)
 
 2. Click the _Select File_ button to open Google's file picker.
 3. Use the file picker to select a file from Google Drive&trade; or Google Photos&trade;.

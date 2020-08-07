@@ -45,7 +45,7 @@ Follow these steps to create a new Documents and Media file via Google Docs&trad
 
     Note that it's also possible to close the Google Docs&trade; window without clicking either button. In this case, the editing session remains open even though the window that displayed it is closed. For more information, see the section below on [multiple editing sessions](#multiple-editing-sessions).
 
-    ![Figure 3: Save or discard your changes by using the toolbar in the editor.](./creating-and-editing-documents-with-google-drive/images/03.png)
+    ![Save or discard your changes by using the toolbar in the editor.](./creating-and-editing-documents-with-google-drive/images/03.png)
 
 ## Editing Files
 
@@ -63,7 +63,7 @@ Follow these steps to edit a Documents and Media file in Google Docs&trade;:
 1. Navigate to the file in the Documents and Media Library.
 1. Click the file's Actions icon (![Actions](../../../../images/icon-actions.png)) and select *Edit in Google Docs*. This automatically [checks out](../../publishing-and-sharing/managing-document-access/managing-document-changes-with-checkout.md) the file, transfers its content to a new Google Docs&trade; file, and redirects you to that Google Docs&trade; file.
 
-    ![Figure 4: Select *Edit in Google Docs* from the file's Actions menu.](./creating-and-editing-documents-with-google-drive/images/04.png)
+    ![Select Edit in Google Docs from the file's Actions menu.](./creating-and-editing-documents-with-google-drive/images/04.png)
 
 1. Edit the file in Google Docs&trade;. The editing process is exactly the same as described above for creating files.
 
