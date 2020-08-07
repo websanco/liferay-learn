@@ -8,7 +8,7 @@ To create a document type:
 1. Select the site where the form will be created.
 1. Click _Content & Data_  &rarr; _Documents and Media_.
 1. Click the _Document Types_ tab.
-1. Click the _Add button (![Add](../../../../images/icon-add.png)). The _New Document Type_ form appears.
+1. Click the _Add button_ (![Add](../../../../images/icon-add.png)). The _New Document Type_ form appears.
 1. Enter a name.
 1. Enter a description.
 1. Expand the _Main Metadata Fields_ section.
