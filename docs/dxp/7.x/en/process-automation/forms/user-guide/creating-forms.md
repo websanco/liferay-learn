@@ -1,6 +1,6 @@
 # Creating Forms
 
-The _Forms_ application allows users to create multi-field forms. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) have the ability to create forms. (At minimum, they should have the ability to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions in general, see [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions).
+The _Forms_ application allows users to create multi-field forms. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) have the ability to create forms. (At minimum, they should have the ability to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions, see [Roles and Permissions](../../../users-and-permissions/roles_and_permissions.rst).
 
 ![Forms are displayed in List format by default.](./creating-forms/images/01.png)
 
@@ -50,36 +50,38 @@ The sample below is a hotel guest feedback survey form.
 1. Close the sidebar.
 1. Click _Save Form_ to save the form as a draft.
 
-### Adding Additional Pages
+### Adding Form Pages
 
-If you decide multiple pages are appropriate for your form, Liferay _Forms_ supports multi-page forms.
+If you decide multiple pages are appropriate for your form, Liferay Forms supports multi-page forms.
 
-To add a subsequent page to the form:
+To add Form Pages,
 
 1. Navigate to the form builder view.
-1. Click the _Actions_ button (![Actions](../../../images/icon-actions.png)) at the top-right corner of the form.
-1. Click _Add New Page_.
+1. Click the _New Page_ button at the bottom of the first Form Page.
 
-    ![You can add new pages or reset the current page from the Page Actions menu.](./creating-forms/images/06.png)
+    ![You can add Form Pages.](./creating-forms/images/06.png)
 
-1. Click the page number.
-1. Once on that new page, enter a page name (for example, _Page 2_). Otherwise, it stays as _Untitled Page (2 of 2)_.
+1. New Form Pages are appended to the bottom of the Form Builder (but before the Success Page).
+1. Enter a page name.
 1. Drag and drop additional elements.
-
-    ![Adding a second page.](./creating-forms/images/07.png)
+1. Add even more pages if necessary.
 
 ### Adding a Success Page
 
-One very useful page is the _Success Page_ which lets the user know they have reached the end of form and that the form has been successfully submitted.
+The _Success Page_ provides resolution for Form users, by letting them know they have reached the end of form and that the form has been successfully submitted.
 
-To add a _Success Page_:
+The default Success Page is handy:
 
-1. Click the _Actions_ button (![Actions](../../../images/icon-actions.png)) at the top-right corner of the form.
-1. Click _Add Success Page_.
+![The default success page provides a clear indicator that the Form submission was successful.](./creating-forms/images/08.png)
 
-1. Modify the default the _Title_ and _Content_ fields with your values. Note that you cannot rename the _Success Page_.
+If you don't want a Success Page, click the Actions (![Actions](../../../images/icon-actions.png)) button on the default success page and choose _Remove Success Page_.
 
-    ![Adding a Success Page](./creating-forms/images/08.png)
+To customize the Success Page,
+
+1. Click the Title field (_Thank You_ by default) and use the editor box.
+1. Click the Message field (_Your information was..._ by default) and use the editor to customize the success message.
+
+![The default Success Page is customizable.](./creating-forms/images/12.png)
 
 ### Publishing a Form
 

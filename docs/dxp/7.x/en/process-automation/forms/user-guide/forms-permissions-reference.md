@@ -32,6 +32,6 @@ Navigate to the site page where the _Form_ widget has been deployed. Click the O
 | --- | --- |
 | Delete | Grants the ability to delete the form |
 | Permissions | Grants the ability to view and set the form's permissions |
-| Update | Grants the ability to make changes to the form |
+| Update | Grants the ability to make changes to the form, and to edit form entries. |
 | Add Form Instance Record | Grants the ability to add an entry |
 | View | Grants the ability to view the form |
