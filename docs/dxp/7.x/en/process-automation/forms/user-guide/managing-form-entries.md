@@ -4,7 +4,7 @@ Once users begin submitting form entries, you can access the form entry data thr
 
 ## Viewing Form Entries
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu. Select the site where the form has been created.
+1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu. Select the site where the form was created.
 1. Navigate to _Content & Data_ &rarr; _Forms_.
 1. Click the _Actions_ (![Actions](../../../images/icon-actions.png)) button for the form and select _View Entries_.
 
@@ -19,6 +19,31 @@ Once users begin submitting form entries, you can access the form entry data thr
     ![Viewing individual responses in the Forms application.](./managing-form-entries/images/03.png)
 
 1. Click _Back_ to return to view the _Form Entries_ again.
+
+## Editing Form Entries
+
+> Available: Liferay CE/DXP 7.3
+
+To edit form entries 
+
+1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu. Select the site where the form was created.
+1. Navigate to _Content & Data_ &rarr; _Forms_.
+1. Click the _Actions_ (![Actions](../../../images/icon-actions.png)) button for the form and select _Edit_.
+1. Once you finish editing, click _Submit_.
+
+![Updated Form Entries have an incrementally higher version.](./managing-form-entries/images/10.png)
+
+Users need the following permissions to edit Form Entries: 
+
+- Update permission on the Form Instance
+- View permission on the Site and Asset Library Menu
+- Access permission on the Forms application in Site and Asset Library Administration
+
+![Users with permissions can edit form entries.](./managing-form-entries/images/09.png)
+
+```note::
+   The Update permission on Form Instances is the same permissions required to edit the Form itself.
+```
 
 ## Exporting Form Entries
 
