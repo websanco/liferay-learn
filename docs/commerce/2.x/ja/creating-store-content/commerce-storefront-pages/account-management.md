@@ -8,7 +8,7 @@ Minium Acceleratorを使用してサンプルデータを作成する場合、 *
 
 ページにデプロイされると、 *[Account Management]* ウィジェットにすべてのアカウントがリストされます。
 
-![Account Management](./account-management/images/02.png)
+![アカウント管理](./account-management/images/02.png)
 
 新しいアカウントを作成し、ユーザーをアカウントに割り当てることができます。
 

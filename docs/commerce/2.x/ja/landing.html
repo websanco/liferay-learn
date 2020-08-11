@@ -1,0 +1,189 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#installation-and-upgrades-logo',
+					sectionName: 'Installation and Upgrades',
+					sectionURL: 'installation_and_upgrades.html',
+					subsections: [
+						{
+							name: 'Using the Liferay Commerce Docker Image',
+							url: 'installation-and-upgrades/using-the-liferay-commerce-docker-image.html'
+						},
+						{
+							name: 'Activating Liferay Commerce Enterprise',
+							url: 'installation-and-upgrades/activating-liferay-commerce-enterprise.html'
+						},
+						{
+							name: 'Upgrading Liferay Commerce',
+							url: 'installation-and-upgrades/upgrading-liferay-commerce.html'
+						}
+					]
+				},
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Starting a Store',
+					sectionURL: 'starting_a_store.html',
+					subsections: [
+						{
+							name: 'Using the Minium Accelerator to Jump-Start Your B2B Store',
+							url: 'starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.html'
+						},
+						{
+							name: 'Introduction to the Admin Account',
+							url: 'starting-a-store/introduction-to-the-admin-account.html'
+						},
+						{
+							name: 'Accelerators',
+							url: 'starting-a-store/accelerators.html'
+						}
+					]
+				},
+				{
+					icon: '#developing-applications-logo',
+					sectionName: 'Managing a Catalog',
+					sectionURL: 'managing_a_catalog.html',
+					subsections: [
+						{
+							name: 'Creating a New Catalog',
+							url: 'managing-a-catalog/catalogs/creating-a-new-catalog.html'
+						},
+						{
+							name: 'Introduction to Channels',
+							url: 'managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.html'
+						},
+						{
+							name: 'Introduction to Managing Inventory',
+							url: 'managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html'
+						}
+					]
+				},
+				{
+					icon: '#site-building-logo',
+					sectionName: 'Creating Store Content',
+					sectionURL: 'creating_store_content.html',
+					subsections: [
+						{
+							name: 'Creating Your Storefront',
+							url: 'creating-store-content/creating-your-storefront.html'
+						},
+						{
+							name: 'Checkout',
+							url: 'creating-store-content/commerce-storefront-pages/checkout.html'
+						},
+						{
+							name: 'Creating a Catalog Page',
+							url: 'creating-store-content/creating-a-catalog-page.html'
+						}
+					]
+				},
+				{
+					icon: '#collaboration-and-social-logo',
+					sectionName: 'Promoting Products',
+					sectionURL: 'promoting_products.html',
+					subsections: [
+						{
+							name: 'Introduction to Discounts',
+							url: 'promoting-products/introduction-to-discounts.html'
+						},
+						{
+							name: 'Creating a Discount',
+							url: 'promoting-products/creating-a-discount.html'
+						}
+					]
+				},
+				{
+					icon: "#users-and-permissions-logo",
+					sectionName: 'Account Management',
+					sectionURL: 'account_management.html',
+					subsections: [
+						{
+							name: 'Creating a New Account',
+							url: 'account-management/creating-a-new-account.html'
+						},
+						{
+							name: 'Account Roles',
+							url: 'account-management/account-roles.html'
+						},
+						{
+							name: 'Adding Addresses to an Account',
+							url: 'account-management/adding-addresses-to-an-account.html'
+						}
+					]
+				},
+				{
+					icon: '#orders-and-fulfillment-logo',
+					sectionName: 'Orders and Fulfillment',
+					sectionURL: 'orders_and_fulfillment.html',
+					subsections: [
+						{
+							name: 'Processing an Order',
+							url: 'orders-and-fulfillment/orders/processing-an-order.html'
+						},
+						{
+							name: 'Introduction to Shipments',
+							url: 'orders-and-fulfillment/shipments/introduction-to-shipments.html'
+						},
+						{
+							name: 'Introduction to Order Workflows',
+							url: 'orders-and-fulfillment/order-workflows/introduction-to-order-workflows.html'
+						}
+					]
+				},
+				{
+					icon: '#system-administration-logo',
+					sectionName: 'Store Administration',
+					sectionURL: 'store_administration.html',
+					subsections: [
+						{
+							name: 'Liferay Commerce Configuration Overview',
+							url: 'store-administration/liferay-commerce-configuration-overview.html'
+						},
+						{
+							name: 'Managing Payment Methods',
+							url: 'store-administration/configuring-payment-methods/managing-payment-methods.html'
+						},
+						{
+							name: 'Managing Exchange Rates',
+							url: 'store-administration/currencies/managing-exchange-rates.html'
+						}
+					]
+				},
+				{
+					icon: '#headless-delivery-logo',
+					sectionName: 'Developer Guide',
+					sectionURL: 'developer_guide.html',
+					subsections: [
+						{
+							name: 'Introduction to the Liferay Commerce Developer Guide',
+							url: 'developer-guide/introduction-to-the-liferay-commerce-developer-guide.html'
+						},
+						{
+							name: 'Adding a New Product Type',
+							url: 'developer-guide/tutorials/adding-a-new-product-type.html' 
+						},
+						{
+							name: 'Implementing a Custom Checkout Step',
+							url: 'developer-guide/tutorials/implementing-a-custom-checkout-step.html'
+						}
+					]
+				},
+				{
+					icon: '#get-help-logo',
+					sectionName: 'Get Help',
+					sectionURL: 'get_help.html',
+					subsections: [
+						{
+							name: 'Liferay Commerce Fix Delivery Method',
+							url: 'get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>

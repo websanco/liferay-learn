@@ -1,34 +1,36 @@
-# インストールの概要
+# Installation Overview
 
-この記事では、前提条件、必要なソフトウェアに関する情報、インストールとデプロイ、およびLiferay Commerceの保守方法について詳しく説明しています。 Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 したがって、Liferay Commerceをインストールする前に、まずLiferay DXPをインストールする必要があります。
+Liferay Commerceは、Liferay DXP上に構築されたデジタルコマースプラットフォームです。 この記事では、Liferay Commerceをインストール、展開、および保守するための前提条件と利用可能なオプションについて概説します。
 
 ## 前提条件
 
-インストールする前に、システム要件とLiferay DXPデプロイドキュメンテーションを参照してください。
+Liferay Commerceをインストールする前に、システム要件を確認し、Liferay DXP展開チェックリストを参照してください。
 
 ### システム要件
 
-[Liferay Commerce 2.0互換性マトリックス](https://web.liferay.com/documents/14/21598941/Liferay+Commerce+2.0+Compatibility+Matrix/0ed97477-f5a7-40a6-b5ab-f00d5e01b75f)を参照して、サポートされているテクノロジーのリストを確認してください。
+サポートされるテクノロジーのリストについては、 [Liferay Commerce 2.0互換性マトリックス](https://web.liferay.com/documents/14/21598941/Liferay+Commerce+2.0+Compatibility+Matrix/0ed97477-f5a7-40a6-b5ab-f00d5e01b75f) を参照してください。
 
 ### Liferay DXPデプロイチェックリスト
 
-Liferay DXPのアーキテクチャとパフォーマンスチューニングのガイドラインについては、[Liferay Digital Experience Platform 7.1デプロイチェックリスト](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+7.1+Deployment+Checklist/cacaac23-9e02-411a-dcc9-adf86f95c513)をご覧ください。
+Liferay DXPのアーキテクチャとパフォーマンスチューニングのガイドラインについては、 [Liferay DXP 7.1展開チェックリスト](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+7.1+Deployment+Checklist/cacaac23-9e02-411a-dcc9-adf86f95c513) を参照してください。
+
+Liferay DXPアーキテクチャとパフォーマンスチューニングガイドラインについては、 [Liferay DXP 7.2展開チェックリスト](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+7.2+Deployment+Checklist.pdf/22dee290-6b06-0bdc-aa89-30bb88d1d42e?t=1566483298239) を参照してください。
 
 ## Liferay Commerceのインストール
 
-Liferayは、Liferay Commerceのインストール方法をいくつか提供しています。
+Liferay Commerceをインストールするには、いくつかの方法があります。
 
 ### Dockerイメージを使用する
 
-Liferay Commerceの最新バージョンは、Dockerイメージとして利用できます。 詳細については、[Using Liferay Commerce Docker Image](./using-the-liferay-commerce-docker-image.md)を参照してください。
+Dockerを使用してLiferay Commerceをインストールします。 詳細については、[Using Liferay Commerce Docker Image](./using-the-liferay-commerce-docker-image.md)を参照してください。
 
 ### バンドルを使用する
 
-Liferay Commerceの最新バージョンは、[[Liferay Commerce Community Download]](https://commerce.liferay.dev/download)ページからバンドルとしてダウンロードできます。 詳細については、[Using the Liferay Commerce Tomcat Bundle](./using-the-liferay-commerce-tomcat-bundle.md)を参照してください。
+[Liferay Community Downloads](https://commerce.liferay.dev/download) ページのバンドルを使用してLiferay Commerceをインストールします。 詳細については、[Using the Liferay Commerce Tomcat Bundle](./using-the-liferay-commerce-tomcat-bundle.md)を参照してください。
 
 ### 既存のLiferay DXPインストールを使用する
 
-既存のLiferay DXPインストールを使用する場合、ユーザーは`LPKG`を使用してLiferay Commerceをデプロイできます。 詳細については、[Deploying Liferay Commerce to an Existing Installation](./deploying-liferay-commerce-to-an-existing-liferay-installation.md)を参照してください。
+`LPKG` ファイルを既存のLiferay DXPインストールに展開して、Liferay Commerceをインストールします。 詳細については、[Deploying Liferay Commerce to an Existing Installation](./deploying-liferay-commerce-to-an-existing-liferay-installation.md)を参照してください。
 
 ### Commerce Enterpriseのアクティベーション
 
@@ -36,12 +38,15 @@ Liferay Commerce Enterpriseを購入した加入者は、[ヘルプセンター]
 
 ## Liferay Commerceの管理
 
-### アップグレードと更新
+定期的なメンテナンスアップデートと商品アップグレードを利用して、Liferay Commerceのエクスペリエンスの品質を保証および強化できます。
 
-最新の機能とバグ修正を含む定期的な更新とアップグレードがあります。
+### アップデート
 
-  - [Maintenance Versions](../../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
-  - [Upgrading from Liferay Commerce 1.1.x](./upgrading-from-liferay-commerce-1.1.x.md)
+バグを修正するメンテナンスアップデートについては、 [メンテナンスバージョン](../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md) を参照してください。
+
+### アップグレード
+
+最新のLiferay Commerce機能を備えた商品アップグレードのインストールについては、 [Liferay Commerce](./upgrading-liferay-commerce.md) アップグレードを参照してください。
 
 ## 追加情報
 

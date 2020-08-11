@@ -1,4 +1,4 @@
-# Pending Orders
+# 保留中の注文
 
 [Pending Orders] ページは、オーダーマネージャーがアカウントに関連付けられたすべての未完了の注文を表示できるページです。未完了の注文にはカート内の商品が含まれていますが、精算プロセスは完了していません。 さらに、[Pending Orders] ページには、オーダーマネージャーが同時に複数の注文を作成できるようにする *[Add Order]* ボタンがあります。
 
@@ -14,10 +14,10 @@
 
 ![保留中の注文の確認](./pending-orders/images/04.png)
 
-[注文ワークフロー](../../orders-and-fulfillment/order-management/order-workflows.md)が有効になっている場合、上記の手順は若干異なる場合があります。
+[注文ワークフロー](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)が有効になっている場合、上記の手順は若干異なる場合があります。
 
 ## 追加情報
 
   - [Widget Reference Guide](../widget-reference.md)
   - [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
-  - [Workflows](../../orders-and-fulfillment/order-management/order-workflows.md)
+  - [Order Workflows](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)

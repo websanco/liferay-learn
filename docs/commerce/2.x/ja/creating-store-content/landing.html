@@ -1,0 +1,77 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+        {
+					sectionName: 'Creating Your Storefront',
+					sectionURL: 'creating-store-content/creating-your-storefront.html',
+				},
+				{
+					sectionName: 'Creating a Catalog Page',
+					sectionURL: 'creating-store-content/creating-a-catalog-page.html',
+				},
+				{
+					sectionName: 'Liferay Commerce Widget Reference List',
+					sectionURL: 'creating-store-content/widget-reference.html',
+				},
+				{
+					sectionName: 'Commerce Storefront Pages',
+					sectionURL: 'creating-store-content/commerce_storefront_pages.html',
+					subsections: [
+						{
+							name: 'Catalog',
+							url: 'creating-store-content/commerce-storefront-pages/catalog.html'
+						},
+						{
+							name: 'Checkout',
+							url: 'creating-store-content/commerce-storefront-pages/checkout.html'
+						},
+						{
+							name: 'Account Management',
+							url: 'creating-store-content/commerce-storefront-pages/account-management.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using Web Experience Management',
+					sectionURL: 'creating-store-content/using_web_experience_management.html',
+					subsections: [
+						{
+							name: 'Creating Page Fragments',
+							url: 'https://help.liferay.com/hc/en-us/articles/360018171331-Creating-Page-Fragments'
+						},
+						{
+							name: 'Building Content Pages from Fragments',
+							url: 'https://help.liferay.com/hc/en-us/articles/360018171351-Building-Content-Pages-from-Fragments-'
+						},
+						{
+							name: 'Creating and Managing Navigation Menus',
+							url: 'https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus'
+						},
+						{
+							name: 'Using Application Display Templates',
+							url: 'https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates'
+						},
+					]
+				},
+				{
+					sectionName: 'Design and Theme',
+					sectionURL: 'creating-store-content/design_and_theme.html',
+					subsections: [
+						{
+							name: 'Understanding the Page Layout',
+							url: 'https://help.liferay.com/hc/en-us/articles/360022488271-Understanding-the-Page-Layout-'
+						},
+						{
+							name: 'Theme Reference Guide',
+							url: 'https://help.liferay.com/hc/en-us/articles/360017901512-Theme-Reference-Guide'
+						},
+					]
+				}
+			]
+		}
+	})
+</script>

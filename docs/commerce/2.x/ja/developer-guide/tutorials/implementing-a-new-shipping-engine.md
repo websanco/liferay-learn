@@ -27,7 +27,7 @@
 2.  [Acme Commerce Shipping Engine](./liferay-j6x8.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-j6x8.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-j6x8.zip -O
     ```
 
     ``` bash
@@ -40,7 +40,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -252,5 +254,5 @@ public List<CommerceShippingOption> getCommerceShippingOptions(
 
 ## 追加情報
 
-  - [Applying Shipping Method Restrictions](../../orders-and-fulfillment/configuring-shipping-methods/applying-shipping-method-restrictions.md)
+  - [Applying Shipping Method Restrictions](../../store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

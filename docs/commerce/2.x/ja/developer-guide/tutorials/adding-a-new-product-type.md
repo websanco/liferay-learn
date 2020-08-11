@@ -25,7 +25,7 @@
 2.  [Acme Commerce Product Type](./liferay-c1n4.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-c1n4.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-c1n4.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
 
@@ -170,7 +172,7 @@ String getEntryKey();
 > これは、画面ナビゲーションエントリの一意の識別子を返します。 `getCategoryKey`と同じ値を返します。
 
 ``` java
-String getScreenNavigationKey();
+String getScreenNavigationKey（）;
 ```
 
 > これは、`ScreenNavigationCategory`インターフェイスの`getScreenNavigationKey`と同じメソッドです。 String値`"cp.definition.general"`を返すことにより、このメソッドを実装しました。
@@ -199,8 +201,8 @@ void render(
 モジュール内でJSPを見つけられるように、バンドルのシンボル名を使用して`ScreenNavigationEntry`クラスで`ServletContext`を定義します。
 
 ``` java
-@Reference(target = "(osgi.web.symbolicname=com.acme.c1n4.web)")
-private ServletContext _servletContext;
+@Reference（target = "（osgi.web.symbolicname = com.acme.c1n4.web）"）
+プライベートServletContext _servletContext;
 ```
 
 > `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
@@ -275,5 +277,5 @@ public boolean isVisible(User user, CPDefinition context) {
 
 ## 追加情報
 
-  - [Introduction to Product Types](../../managing-a-catalog/creating-and-managing-products/introduction-to-product-types.md)
+  - [商品タイプについて](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

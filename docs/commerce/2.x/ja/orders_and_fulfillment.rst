@@ -4,10 +4,13 @@
 .. toctree::
    :maxdepth: 2
 
-   orders-and-fulfillment/order_management.rst
-   orders-and-fulfillment/payment_methods.rst
-   orders-and-fulfillment/configuring_shipping_methods.rst
-   orders-and-fulfillment/managing_shipments.rst
+   orders-and-fulfillment/orders.rst
+   orders-and-fulfillment / order_workflows.rst
+   orders-and-fulfillment/subscriptions.md
+   orders-and-fulfillment/shipments.rst
 
-.. include:: /orders-and-fulfillment/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: landingpage_template.html
+
+.. raw:: html
+   :file: orders-and-fulfillment/landing.html

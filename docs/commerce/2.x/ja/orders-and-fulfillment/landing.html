@@ -1,0 +1,75 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+        {
+					sectionName: 'Orders',
+					sectionURL: 'orders-and-fulfillment/orders.html',
+					subsections: [
+          {
+							name: 'Processing an Order',
+							url: 'orders-and-fulfillment/orders/processing-an-order.html'
+						},
+						{
+							name: 'Order Information',
+							url: 'orders-and-fulfillment/orders/order-information.html'
+						},
+						{
+							name: 'Orders Menu Reference Guide',
+							url: 'orders-and-fulfillment/orders/orders-menu-reference-guide.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Order Workflows',
+					sectionURL: 'orders-and-fulfillment/order-workflows/introduction-to-order-workflows.html',
+					subsections: [
+						{
+							name: 'Enabling or Disabling Order Workflows',
+							url: 'orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.html'
+						},
+						{
+							name: 'Approving or Rejecting Orders in Order Workflows',
+							url: 'orders-and-fulfillment/order-workflows/approving-or-rejecting-orders-in-order-workflows.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Subscriptions',
+					sectionURL: 'orders-and-fulfillment/subscriptions.html',
+					subsections: [
+						{
+							name: 'Managing Subscriptions',
+							url: 'orders-and-fulfillment/subscriptions/managing-subscriptions.html'
+						},
+						{
+							name: 'Subscription Administration Reference Guide',
+							url: 'orders-and-fulfillment/subscriptions/subscription-administration-reference-guide.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Shipments',
+					sectionURL: 'orders-and-fulfillment/shipments/introduction-to-shipments.html',
+					subsections: [
+						{
+							name: 'Creating a Shipment',
+							url: 'orders-and-fulfillment/shipments/creating-a-shipment.html'
+						},
+						{
+							name: 'Cancelling a Shipment',
+							url: 'orders-and-fulfillment/shipments/cancelling-a-shipment.html'
+						},
+						{
+							name: 'Shipments Management Reference Guide',
+							url: 'orders-and-fulfillment/shipments/shipments-management-reference-guide.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

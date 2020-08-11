@@ -1,6 +1,6 @@
 # メンテナンスバージョン
 
-Liferayは、定期的に、オープンソースとエンタープライズの両方の加入者向けにLiferay Commerceのアップデート（メンテナンスバージョン）をリリースします。 特に、メンテナンスバージョンとは、バージョン番号の3桁目の変更を指します。 各メンテナンスバージョンには最新のバグ修正が含まれており、セキュリティと信頼性のレベルが向上しています。 カスタマイゼーションは一般に安全ですが、実装の前にカスタマイゼーションを確認することを強くお勧めします。 新しい機能は含まれていません。
+Liferayは、定期的に、オープンソースとエンタープライズの両方の加入者向けにLiferay Commerceのアップデート（メンテナンスバージョン）をリリースします。 特に、メンテナンスバージョンとは、バージョン番号の3桁目の変更を指します。 各メンテナンスバージョンには最新のバグ修正が含まれており、セキュリティと信頼性のレベルが向上しています。 カスタマイゼーションは一般に安全ですが、実装の前にカスタマイゼーションを確認することを強くお勧めします。
 
 新しいメンテナンスバージョンへのアップデートは、Liferay Commerceの新しいメジャーバージョンまたはマイナーバージョンへのアップグレードと非常に似ています。
 
@@ -67,5 +67,5 @@ Liferay Commerceインスタンスが更新されました。 インデックス
 Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 場合によっては、コアのLiferay DXPプラットフォームをアップデートする必要があります。これは、最新のメジャー、マイナー、またはメンテナンスのバージョンにアップデートするための要件です。 Liferay Commerceの修正は、Liferayから独立しています。
 
   - [Liferay Commerce Fix Delivery Method](../../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
-  - [Upgrading from Liferay Commerce 1.1.x](./upgrading-from-liferay-commerce-1.1.x.md)
+  - [Liferay Commerceのアップグレード](./upgrading-liferay-commerce.md)
   - [End of Life](https://www.liferay.com/subscription-services/end-of-life/commerce)

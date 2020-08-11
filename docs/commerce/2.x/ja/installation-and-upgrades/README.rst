@@ -14,5 +14,5 @@
 アップグレードと更新
 --------------------
 
--  :doc:`/installation-and-upgrades/upgrading-from-liferay-commerce-1.1.x`
+-  :doc:`/installation-and-upgrades/upgrading-liferay-commerce`
 -  :doc:`/installation-and-upgrades/maintenance-versions`

@@ -18,7 +18,7 @@
 
 販売代理店にアカウントへのアクセスを許可するには：
 
-1.  アカウントウィジェットを使用して、アカウントを組織にグループ化します。
+1.  アカウントウィジェットを使用して、組織をアカウントにグループ化します。
 2.  同じ組織に販売代理店を関連付けます。
 
 ![販売代理店の役割を持つユーザーのリスト](./account-roles/images/01.png)
@@ -31,7 +31,7 @@
 
 ## 追加情報
 
-  - [新しいアカウントを作成する](./creating-a-new-account.md)
-  - [新しいアカウントグループの作成](./creating-a-new-account-group.md)
-  - [アカウントの概要](./introduction-to-accounts.md)
+  - [新規アカウントの作成](./creating-a-new-account.md)
+  - [新規アカウントグループの作成](./creating-a-new-account-group.md)
+  - [Introduction to Accounts](./introduction-to-accounts.md)
   - [ロールと権限](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)

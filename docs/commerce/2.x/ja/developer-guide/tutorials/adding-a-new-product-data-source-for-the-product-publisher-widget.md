@@ -25,7 +25,7 @@
 2.  [Acme Commerce Product Data Source](./liferay-m5x7.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-m5x7.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-m5x7.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+    ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
 
@@ -46,7 +48,7 @@
     STARTED com.acme.m5x7.impl_1.0.0
     ```
 
-5.  サンプルの商品データソースが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、[Product Publisher] ウィジェットを含むページに移動します。 Product Publisherの *[Configuration]* をクリックし、 *[Product Selection]* セクションで *[Data Source]* を選択します。 新しい商品データソース（「Products Ending in the Same Word」）が、*[Data Source]* ドロップダウンの下に表示されます。
+5.  サンプルの商品データソースが追加されたことを確認します。 ブラウザーで  `https://localhost:8080`  を開き、Product Publisherウィジェットのあるページに移動します。 Product Publisherの[ *Configuration* ]をクリックし、[ *Product Selection* ]セクションで[ *Data Source* ]を選択します。 新しい商品データソース（「Products Ending in the Same Word」）が、*[Data Source]* ドロップダウンの下に表示されます。
 
 ![新しい商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/02.png "新しい商品データソース")
 
@@ -162,4 +164,4 @@ public CPDataSourceResult getResult(
 ## 追加情報
 
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-  - [Related Products, Up-Sells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/related-products-up-sells-and-cross-sells.md)
+  - [Related Products, Up-Sells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)

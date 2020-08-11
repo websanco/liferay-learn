@@ -1,16 +1,16 @@
 # 在庫管理の概要
 
-Liferay Commerceは、複数の倉庫とストアを持つ組織に、ストアが1つの販売業者向けの商品在庫管理ツールを提供します。 ストア管理者はこれらの機能を使用して、販売数量を管理し、出荷を処理して注文を完了することができます。
+Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複数の販売チャネルと地理的に分散した倉庫を持つ大規模な組織まで、商品在庫管理のためのツールを提供します。
 
 在庫管理機能には、倉庫、入荷見積り、在庫不足アクション、倉庫ごとに在庫を設定する機能など、いくつかの重要な機能があります。
 
 ## 倉庫
 
-倉庫とは、商品在庫が管理され、注文処理のために調達される物理的な場所を表します。
+倉庫とは、商品在庫が管理され、注文処理のために調達される物理的な場所を表します。 商品の在庫数量は、倉庫ごとに管理されます。
 
 倉庫の管理方法の詳細については、[Warehouse Reference Guide](./warehouse-reference-guide.md)および記事[「Adding a New Warehouse」](./adding-a-new-warehouse.md)を参照してください。
 
-倉庫は、少なくとも1つのチャネルに関連付けられている必要があります。 チャネルの仕組みについては、記事[「Introduction to Channels」](../creating-and-managing-products/introduction-to-channels.md)を参照してください。
+ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../creating-and-managing-products/channels/introduction-to-channels.md)を参照してください。
 
 ## 入荷見積り
 
@@ -30,6 +30,7 @@ Liferay Commerceでは、在庫管理は商品SKUごとに行われます。 詳
 
 ## 追加情報
 
-  - [Creating a New Shipment](../../orders-and-fulfillment/managing-shipments/creating-a-shipment.md)
+  - [Creating a New Shipment](../../orders-and-fulfillment/shipments/creating-a-shipment.md)
+  - [在庫管理リファレンスガイド](./inventory-administration-reference-guide.md)
   - [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
-  - [Order Life Cycle](../../orders-and-fulfillment/order-management/order-life-cycle.md)
+  - [Order Life Cycle](../../orders-and-fulfillment/orders/order-life-cycle.md)

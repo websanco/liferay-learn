@@ -1,0 +1,117 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Liferay Commerce Configuration Overview',
+					sectionURL: 'store-administration/liferay-commerce-configuration-overview.html',
+				},
+				{
+					sectionName: 'Locale Options',
+					sectionURL: 'store-administration/locale-options.html',
+				},
+				{
+					sectionName: 'Adding Regions',
+					sectionURL: 'store-administration/adding-regions.html',
+				},
+				{
+					sectionName: 'Sending Emails',
+					sectionURL: 'store-administration/sending-emails/store-emails.html',
+					subsections: [
+          {
+              name: 'Using Notification Templates',
+              url: 'store-administration/sending-emails/using-notification-templates.html'
+						},
+						{
+              name: 'Configuring the Commerce Notification Queue',
+              url: 'store-administration/sending-emails/configuring-the-commerce-notification-queue.html'
+						},
+						{
+              name: 'Notification Template Variables Reference Guide',
+              url: 'store-administration/sending-emails/notification-template-variables-reference-guide.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Deactivating a Country for Billing or Shipping',
+					sectionURL: 'store-administration/deactivating-a-country-for-billing-or-shipping.html',
+				},
+				{
+					sectionName: 'Currencies',
+					sectionURL: 'store-administration/currencies.html',
+					subsections: [
+						{
+							name: 'Adding a New Currency',
+							url: 'store-administration/currencies/adding-a-new-currency.html'
+						},
+						{
+							name: 'Currencies Reference',
+							url: 'store-administration/currencies/currencies-reference.html'
+						},
+						{
+							name: 'Managing Exchange Rates',
+							url: 'store-administration/currencies/managing-exchange-rates.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Configuring Taxes',
+					sectionURL: 'store-administration/configuring_taxes.html',
+					subsections: [
+						{
+							name: 'Creating Tax Categories',
+							url: 'store-administration/configuring-taxes/creating-tax-categories.html'
+						},
+						{
+							name: 'Setting Tax Rate by Address',
+							url: 'store-administration/configuring-taxes/setting-tax-rate-by-address.html'
+						},
+						{
+							name: 'Setting Tax Rate by Fixed Rate',
+							url: 'store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Configuring Payment Methods',
+					sectionURL: 'store-administration/configuring-payment-methods/payments.html',
+					subsections: [
+            {
+							name: 'Managing Payment Methods',
+							url: 'store-administration/configuring-payment-methods/managing-payment-methods.html'
+						},
+						{
+							name: 'Authorize.net',
+							url: 'store-administration/configuring-payment-methods/authorize.net.html'
+						},
+						{
+							name: 'PayPal',
+							url: 'store-administration/configuring-payment-methods/paypal.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Configuring Shipping Methods',
+					sectionURL: 'store-administration/configuring-shipping-methods/shipping-methods.html',
+					subsections: [
+						{
+							name: 'Shipping Methods',
+							url: 'store-administration/configuring-shipping-methods/shipping-methods.html'
+						},
+						{
+							name: 'Measurement Units',
+							url: 'store-administration/configuring-shipping-methods/measurement-units.html'
+						},
+						{
+							name: 'Applying Shipping Method Restrictions',
+							url: 'store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.html'
+						},
+					]
+				}
+			]
+		}
+	})
+</script>

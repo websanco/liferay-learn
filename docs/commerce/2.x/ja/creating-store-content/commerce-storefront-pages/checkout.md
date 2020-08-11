@@ -16,7 +16,7 @@
 
 ![配送方法のステップ](./checkout/images/03.png)
 
-購入者が利用できる配送方法は、 *[Site Administration]* → *[Commerce]* → *[Settings]* -\> *[Shipping Methods]* で *[Shipping Methods]* を変更することにより設定されます。 詳細については、[Using the Flat Rate Shipping Method](../../orders-and-fulfillment/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)を参照してください。
+購入者が利用できる配送方法は、 *[Site Administration]* → *[Commerce]* → *[Settings]* -\> *[Shipping Methods]* で *[Shipping Methods]* を変更することにより設定されます。 詳細については、[Using the Flat Rate Shipping Method](../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)を参照してください。
 
 ## 請求先住所の入力
 
@@ -32,11 +32,11 @@
 
 ![注文確定のステップ](./checkout/images/06.png)
 
-注文が確定されると、販売者は注文を処理できる状態になります。 詳細については、[Order Life Cycle](../../orders-and-fulfillment/order-management/order-life-cycle.md)を参照してください。
+注文が確定されると、販売者は注文を処理できる状態になります。 詳細については、[Order Life Cycle](../../orders-and-fulfillment/orders/order-life-cycle.md)を参照してください。
 
 ## 追加情報
 
   - [Widget Reference Guide](../widget-reference.md)
   - [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
   - [Implementing a Custom Checkout Step](../../developer-guide/tutorials/implementing-a-custom-checkout-step.md)
-  - [Using the Flat Rate Shipping Method](../../orders-and-fulfillment/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
+  - [Using the Flat Rate Shipping Method](../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)

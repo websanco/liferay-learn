@@ -25,7 +25,7 @@
 2.  [Acme Commerce Payment Method](./liferay-b1c3.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-b1c3.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-b1c3.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -116,7 +118,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
   - [支払処理ロジックを実装する。](#implement-payment-processing-logic)
   - [支払完了ロジックを実装する。](#implement-payment-completion-logic)
   - [オプションのメソッドを実装する。](#implement-optional-methods)
-  - [言語キーを`Language.properties`に追加する。](#add-the-language-keys-to-languageproperties)
+  - [言語キーを `Language.properties`追加します。](#add-the-language-keys-to-languageproperties)
 
 #### 支払処理ロジックを実装する
 
@@ -178,7 +180,7 @@ public CommercePaymentResult completePayment(
 
 この例では、これらのオプションのメソッドをオーバーライドしていません。
 
-#### 言語キーを`Language.properties`に追加する
+#### 言語キーを追加します `Language.properties`
 
 モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-new-payment-method/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 

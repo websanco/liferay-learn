@@ -25,7 +25,7 @@
 2.  [Acme Commerce Discount Rule Type](./liferay-m6a8.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-m6a8.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-m6a8.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
 
@@ -46,7 +48,7 @@
     STARTED com.acme.m6a8.web_1.0.0
     ```
 
-5.  サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、*[Control Panel]* → *[Commerce]* → *[Discounts]*に移動します。 任意の割引のメニュー内の *[Edit]* をクリックし、画面上部の *[Rules]* に移動します。
+5.  サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザーで `https://localhost:8080` を開き、 *コントロールパネル* → *コマース* → *ディスカウント*へ行きます。 メニュー内の[ *Edit* ]をクリックして割引を適用し、画面上部の[ *Rules* ]に移動します。
 
     そこから（+）アイコンをクリックして、新しい割引ルールを追加します。 *[Type]* ドロップダウンの下に、新しい割引ルールタイプ（「Has a minimum number of products」）が表示されます。
 
@@ -148,7 +150,7 @@ public void render(
   - [`CommerceDiscountRuleTypeJSPContributor`の`render` メソッドを実装する。](#implement-the-commercediscountruletypejspcontributors-render-method)
   - [評価ロジックを追加して`評価`する。](#add-the-evaluation-logic-to-evaluate)
   - [JSPを追加して、カスタムUI入力をレンダリングする。](#add-a-jsp-to-render-the-custom-ui-input)
-  - [言語キーを`Language.properties`に追加する。](#add-the-language-keys-to-languageproperties)
+  - [言語キーを `Language.properties`に追加します。](#add-the-language-keys-to-languageproperties)
 
 #### モジュールに`ServletContext`を構成する
 
@@ -232,12 +234,12 @@ public boolean evaluate(
 > 
 > AUI入力の使用の詳細については、[Using AUI Taglibs](https://help.liferay.com/hc/en-us/articles/360020189212-Using-AUI-Taglibs)を参照してください。
 
-#### 言語キーを`Language.properties`に追加する
+#### 言語キーを `Language.properties`に追加します。
 
 [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
-    has-a-minimum-number-of-products=Has a minimum number of products
-    minimum-number-of-products=Minimum Number of Products
+    has-a-minimum-number-of-products =商品の最小数があります
+    minimum-number-of-products =商品の最小数
 
 > 詳細は、[Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
 
@@ -247,6 +249,6 @@ public boolean evaluate(
 
 ## 追加情報
 
-  - [Adding Discounts by Product](../../promoting-products/adding-discounts-by-product.md)
+  - [割引を作成する](../../promoting-products/creating-a-discount.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
   - [Using AUI Taglibs](https://help.liferay.com/hc/en-us/articles/360020189212-Using-AUI-Taglibs)

@@ -25,7 +25,7 @@
 2.  [Acme Commerce Exchange Rate Provider](./liferay-f2y1.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-f2y1.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-f2y1.zip -O
     ```
 
     ``` bash
@@ -44,7 +44,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+    ```
 
 5.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -138,5 +140,5 @@ public BigDecimal getExchangeRate(
 
 ## 追加情報
 
-  - [Adding a New Currency](../../starting-a-store/store-administration/adding-a-new-currency.md)
-  - [Managing Exchange Rates](../../starting-a-store/store-administration/managing-exchange-rates.md)
+  - [Adding a New Currency](../../store-administration/currencies/adding-a-new-currency.md)
+  - [Managing Exchange Rates](../../store-administration/currencies/managing-exchange-rates.md)

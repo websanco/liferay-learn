@@ -1,12 +1,11 @@
-製品のプロモーション
+商品のプロモーション
 ==================
 
 .. toctree::
    :maxdepth: 1
 
-   promoting-products/automating-store-emails-by-using-notification-templates.md
-   promoting-products/adding-discounts-by-product.md
-   promoting-products/adding-discounts-to-the-subtotal.md
+   promoting-products/introduction-to-discounts.md
+   promoting-products/creating-a-discount.md
 
 .. include:: /promoting-products/README.rst
    :start-line: 2

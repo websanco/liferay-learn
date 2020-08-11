@@ -1,0 +1,79 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+        {
+					sectionName: 'Catalogs',
+					sectionURL: 'managing-a-catalog/catalogs.html',
+					subsections: [
+						{
+							name: 'Creating a New Catalog',
+							url: 'managing-a-catalog/catalogs/creating-a-new-catalog.html'
+						},
+						{
+							name: 'Configuring a Product Placeholder Image',
+							url: 'managing-a-catalog/catalogs/configuring-a-product-placeholder-image.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Creating and Managing Products',
+					sectionURL: 'managing-a-catalog/creating_and_managing_products.html',
+					subsections: [
+						{
+							name: 'Introduction to Channels',
+							url: 'managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.html'
+						},
+						{
+							name: 'Creating a Simple Product',
+							url: 'managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.html'
+						},
+						{
+							name: 'Organizing Your Catalog with Product Categories',
+							url: 'managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Managing Inventory',
+					sectionURL: 'managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html',
+					subsections: [
+            {
+							name: 'Adding a New Warehouse',
+							url: 'managing-a-catalog/managing-inventory/adding-a-new-warehouse.html'
+						},
+						{
+							name: 'Low Stock Actions',
+							url: 'managing-a-catalog/managing-inventory/low-stock-action.html'
+						},
+						{
+							name: 'Managing Product Publication',
+							url: 'managing-a-catalog/managing-inventory/managing-product-publication.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Managing Price',
+					sectionURL: 'managing-a-catalog/managing_price.html',
+					subsections: [
+						{
+							name: 'Introduction to Product Pricing Methods',
+							url: 'managing-a-catalog/managing-price/introduction-to-product-pricing-methods.html'
+						},
+						{
+							name: 'Creating a Price List',
+							url: 'managing-a-catalog/managing-price/creating-a-price-list.html'
+						},
+						{
+							name: 'Adding Tiered Pricing',
+							url: 'managing-a-catalog/managing-price/adding-tiered-pricing.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>

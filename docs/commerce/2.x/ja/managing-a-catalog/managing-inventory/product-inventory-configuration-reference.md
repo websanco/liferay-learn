@@ -4,9 +4,9 @@
 
 在庫切れしきい値は、商品をいつ再発注する必要があるかを示し、在庫の販売可能数量から差し引かれ、取り寄せ注文をサポートするように設定できます。 管理者は取り寄せ注文を許可し、注文の最大量を設定できます。
 
-各商品の在庫を管理するには、商品の*[Configuration]*タブに移動し、左側のメニューで*[Inventory]*をクリックします。
+各商品の在庫を管理するには、[商品の *構成* ]タブに移動します。
 
-![在庫不足アクションの商品設定](./product-inventory-configuration-reference/images/01.png "在庫不足アクションの商品設定")
+![在庫の商品構成](./product-inventory-configuration-reference/images/02.png)
 
 | フィールド                    | 説明                                                    |
 | ------------------------ | ----------------------------------------------------- |
@@ -21,6 +21,12 @@
 | Maximum Order Quantity   | 購入者が購入できる最大アイテム数                                      |
 | Allowed Order Quantities | 注文数量は入力された数字に制限されます。 2、4、6を入力すると、購入者はそれらの数量のみを購入できます。 |
 | Multiple Order Quantity  | 入力した数の倍数の注文数量のみを許可します。                                |
+
+## Commerce 2.0以前
+
+各商品の在庫を管理するには、商品の*[Configuration]*タブに移動し、左側のメニューで*[Inventory]*をクリックします。
+
+![在庫不足アクションの商品設定](./product-inventory-configuration-reference/images/01.png "在庫不足アクションの商品設定")
 
 ## 追加情報
 

@@ -24,9 +24,9 @@
       - **Allowed Order Quantities**：1
       - **Multiple Order Quantity**：1
 
-    ![在庫不足アクションの商品設定](./low-stock-action/images/01.png "在庫不足アクションの商品設定")
+    ![在庫不足アクションの商品設定](./low-stock-action/images/01.png)
 
-5.  *[Save]*をクリックします。
+5.  *[Publish]*をクリックします。
 
 この商品の在庫不足アクションが設定されました。 今後、在庫数が*5*を下回ると、「U-Joint」商品は非公開になります。
 

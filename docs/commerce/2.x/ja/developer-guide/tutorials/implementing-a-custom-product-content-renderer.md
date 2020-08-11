@@ -2,7 +2,7 @@
 
 このチュートリアルでは、[CPContentRenderer](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-product-content-api/src/main/java/com/liferay/commerce/product/content/render/CPContentRenderer.java)インターフェイスを実装して、カスタム商品コンテンツレンダラーを追加する方法を示します。
 
-商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の[商品タイプ](../../managing-a-catalog/creating-and-managing-products/introduction-to-product-types.md)の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の[SimpleCPContentRenderer](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java)など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
+商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の[商品タイプ](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の[SimpleCPContentRenderer](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java)など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
 
 ![すぐに使える商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/01.png "すぐに使える商品コンテンツレンダラー")
 
@@ -25,7 +25,7 @@
 2.  [Acme Commerce Product Content Renderer](./liferay-q4f7.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-q4f7.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-q4f7.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -116,13 +118,13 @@ public void render(
 商品コンテンツレンダラーは、定義およびレンダリングするカスタムビューで構成されます。 以下を行います。
 
   - [モジュールに`ServletContext`を構成する。](#configure-the-servletcontext-for-the-module)
-  - [`render`メソッドを実装する。](#implement-the-render-method)
+  - [`render` メソッドを実装します。](#implement-the-render-method)
   - [カスタムビューのJSPを追加する。](#add-a-jsp-for-the-custom-view)
   - [言語キーを`Language.properties`に追加する。](#add-the-language-key-to-languageproperties)
 
 #### モジュールに`ServletContext`を構成する
 
-モジュール内でJSPを見つけられるように、バンドルのシンボル名を使用して`ServletContext`を定義します。
+バンドルのシンボル名を使用して `ServletContext` を定義し、モジュールでJSPを見つけられるようにします。
 
 ``` java
 @Reference(
@@ -203,5 +205,5 @@ long cpDefinitionId = cpCatalogEntry.getCPDefinitionId();
 
 ## 追加情報
 
-  - [Introduction to Product Types](../../managing-a-catalog/creating-and-managing-products/introduction-to-product-types.md)
+  - [Introduction to Product Types](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

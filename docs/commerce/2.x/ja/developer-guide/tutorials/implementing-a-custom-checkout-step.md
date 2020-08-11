@@ -4,7 +4,7 @@
 
 清算ステップは、顧客の清算プロセスの1つの画面を表します。 Liferay Commerceでは、[支払い方法のステップ](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/PaymentMethodCommerceCheckoutStep.java)や[注文確認のステップ](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/OrderConfirmationCommerceCheckoutStep.java)などの基本的なステップを含む、すぐに使えるいくつかの清算ステップを提供しています。
 
-![すぐに使える清算ステップ](./implementing-a-custom-checkout-step/images/01.png "すぐに使える清算ステップ")
+![すぐに使える清算ステップ](./implementing-a-custom-checkout-step/images/01.png "すぐに使えるチェックアウトステップ")
 
 ## 概要
 
@@ -25,7 +25,7 @@
 2.  [Acme Commerce Checkout Step](./liferay-n8n6.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-n8n6.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-n8n6.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -46,9 +48,9 @@
     STARTED com.acme.n8n6.web_1.0.0
     ```
 
-5.  サンプルの清算ステップが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、Liferay Commerceサイトのカタログに移動します。 カートにアイテムを追加し、カートを表示して、[Checkout] をクリックします。 新しい「Example Step」が清算ステップのリストに表示されます。
+5.  サンプルの清算ステップが追加されたことを確認します。 ブラウザーで `https://localhost:8080` を開き、Liferay Commerceサイトのカタログに移動します。 カートにアイテムを追加し、カートを表示して、「チェックアウト」をクリックします。 新しい「Example Step」が清算ステップのリストに表示されます。
 
-![新しい清算ステップ](./implementing-a-custom-checkout-step/images/02.png "新しい清算ステップ")
+![新しい清算ステップ](./implementing-a-custom-checkout-step/images/02.png "新しいチェックアウトステップ")
 
 これで、`CommerceCheckoutStep`を実装する新しい清算ステップのビルドとデプロイが完了しました。
 
@@ -58,7 +60,9 @@
 
 このセクションでは、デプロイした例について確認します。 最初に、OSGi登録用のクラスに注釈を付けます。 次に、`CommerceCheckoutStep`インターフェイスを確認します。 そして第三に、 `CommerceCheckoutStep`の実装を完了します。
 
-> **注：**`CommerceCheckoutStep`の実装を簡素化するために、基本機能の`BaseCommerceCheckoutStep`を拡張しています。
+``` note::
+   `` CommerceCheckoutStep``の実装を簡略化するために、基本機能の `` BaseCommerceCheckoutStep``を拡張します。
+```
 
 ### OSGi登録用のクラスに注釈を付ける
 
@@ -88,7 +92,7 @@ public class N8N6CommerceCheckoutStep extends BaseCommerceCheckoutStep {
 public String getName();
 ```
 
-> このメソッドは、清算ステップの名前を返します。 この名前は、UIに表示される名前に対応する言語キーにできます。
+> このメソッドは、清算ステップの名前を返します。 この名前は、UIに表示される名前に対応する言語キーの場合があります。
 
 ``` java
 public void processAction(
@@ -96,7 +100,7 @@ public void processAction(
     throws Exception;
 ```
 
-> バックエンド処理が必要な場合、`processAction`メソッドを使用して、`ActionRequest`を介して渡された情報を使用してビジネスロジックを実装できます。
+> バックエンド処理が必要な場合は、 `processAction` メソッドを使用して、 `ActionRequest` 介して渡された情報でビジネスロジックを実装できます。
 
 ``` java
 public void render(
@@ -128,7 +132,7 @@ private ServletContext _servletContext;
 
 > `osgi.web.symbolicname`に設定した値は、[bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-checkout-step/liferay-n8n6.zip/n8n6-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
 > 
-> `ServletContext`が正しく生成されるように、bnd.bndファイルで`Web-ContextPath`の一意の値を宣言する必要もあります。 この例では、`Web-ContextPath`を`/n8n6-web`に設定しています。 これらの値のリファレンスについては、[bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-checkout-step/liferay-n8n6.zip/n8n6-web/bnd.bnd)を参照してください。
+> また、 `ServletContext` が正しく生成されるように、bnd.bndファイルで `Web-ContextPath` 一意の値を宣言する必要があります。 この例では、 `Web-ContextPath` は `/ n8n6-web`設定されています。 これらの値のリファレンスについては、[bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-checkout-step/liferay-n8n6.zip/n8n6-web/bnd.bnd)を参照してください。
 
 #### `render`メソッドを実装する
 

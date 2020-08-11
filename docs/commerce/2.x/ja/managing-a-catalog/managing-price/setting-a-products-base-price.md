@@ -6,27 +6,27 @@
 
 2.  商品をクリックします（この例では*Torque Converters*）。
 
-3.  *[SKUs]*サブタブをクリックします。
+3.  *[SKUs]*タブをクリックします。
 
 4.  SKUをクリックします（この例では*MIN55859*）。
 
-5.  *[Pricing]*をクリックします。
+5.  [ *詳細* ]タブで、[価格]セクションに次のように入力します。
 
-6.  以下のフィールドに入力します（値の例を次に示します）。
-
-      - **Price**: 34.00
+      - **Price**: 34
       - **Promo Price**：（空白のままにします）（このフィールドに入力すると、上記の価格とプロモーション価格の両方が商品ページに表示され、買い手がマークダウンを確認できるようになります。）
-      - **Cost**：20.00
+      - **Cost**: 20
 
-    ![商品の基本価格の設定](./setting-a-products-base-price/images/01.png)
+    ![2.1での商品の基本価格の設定](./setting-a-products-base-price/images/01.png)
 
-7.  [Save]をクリックします。
+6.  *[Publish]*をクリックします。
 
 この商品SKUの基本価格、プロモーション価格（オプション）、およびコスト（オプション）が設定されました。 *[Cost]*フィールドは、このSKUのコストに対応しており、マージンの追跡に役立ちます。
 
+``` note::
+   商品SKUの価格を変更するには、プロモーション価格、価格リスト、割引を使用できます。
+```
+
 ## 追加情報
 
-**注1 **：商品SKUの価格を変更するには、プロモーション価格、価格表、割引を使用できます。
-
   - [Creating a Price List](./creating-a-price-list.md)
-  - [商品ごとの割引の追加](../../promoting-products/adding-discounts-by-product.md)
+  - [割引を作成する](../../promoting-products/creating-a-discount.md)

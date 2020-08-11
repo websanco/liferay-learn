@@ -43,4 +43,4 @@ Liferay Commerceでは、ストアマネージャーが価格階層を使用し�
   - [Creating a Price List](./creating-a-price-list.md)
   - [Adding Products to a Price List](./adding-products-to-a-price-list.md)
   - [Adding Tiered Pricing](./adding-products-to-a-price-list.md)
-  - [商品ごとの割引の追加](../../promoting-products/adding-discounts-by-product.md)
+  - [割引を作成する](../../promoting-products/creating-a-discount.md)

@@ -25,7 +25,7 @@
 2.  [Acme Commerce Low Stock Activity](./liferay-j1e4.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl .https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-j1e4.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-j1e4.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの``/opt/liferay/osgi/modules`` にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -46,7 +48,7 @@
     STARTED com.acme.j1e4.impl_1.0.0
     ```
 
-5.  サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、*[Control Panel]* → *[Commerce]* → *[Products]*に移動します。 次に、任意の商品のメニュー内の*[Edit]*をクリックします。 必要に応じて、これを行うための商品を追加できます（詳細については、../../managing-a-catalog/creating-and-managing-products/creating-a-simple-product.mdを参照してください）。
+5.  サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザーを開いて `https://localhost:8080` に移動し、 *コントロールパネル* → *コマース* → *商品*ます。 次に、任意の商品のメニュー内の*[Edit]*をクリックします。 必要に応じて、 [商品](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
 
     そこから、*[Configuration]*に移動します。 新しいアクティビティ（"Log a warning message"）が*[Low Stock Action]*ドロップダウンの下に表示されます。
 
@@ -138,6 +140,6 @@ public String getLabel(Locale locale);
 
 ## 追加情報
 
-  - [Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/creating-a-simple-product.md)
+  - [Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
   - [Low Stock Action](../../managing-a-catalog/managing-inventory/low-stock-action.md)

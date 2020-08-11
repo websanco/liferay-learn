@@ -1,6 +1,6 @@
 # カタログページの作成
 
-[[Catalog]](./catalog.md) ページは、ユーザーがストアで提供されている商品を閲覧するための最初のエントリーポイントです。 このページには、次のウィジェットが含まれています：*[Search Bar]*、*[Options Facets]*、*[Specification Facet]*、*[Category Facet]* および *[Search Results]*。 Commerceウィジェットの詳細は、[Widget Reference](./widget-reference.md)を参照してください。
+[[Catalog]](./commerce-storefront-pages/catalog.md) ページは、ユーザーがストアで提供されている商品を閲覧するための最初のエントリーポイントです。 このページには、次のウィジェットが含まれています：*[Search Bar]*、*[Options Facets]*、*[Specification Facet]*、*[Category Facet]* および *[Search Results]*。 Commerceウィジェットの詳細は、[Widget Reference](./widget-reference.md)を参照してください。
 
 この記事では、 [アクセラレータ](../starting-a-store/accelerators.md)を使用せずにカタログページを作成する方法の例を説明します。
 
@@ -62,4 +62,4 @@ Liferay Commerceでは、ストアマネージャーは、購入者に最初に�
 
 Liferay Commerceインスタンスに格納されているストアサイトが複数ある場合、カタログ全体がすべてのストアサイトで検索可能になります。
 
-商品の特定のサイトへのスコープ設定については、[Configuring Product Visibility by Site using Channels](../managing-a-catalog/configuring-product-visibility-by-site-using-channels.md)を参照してください。
+商品の範囲を特定のサイトに限定するには、 [チャネルを使用した商品の表示設定](../managing-a-catalog/creating-and-managing-products/channels/configuring-product-visibility-using-channels.md)を参照してください。

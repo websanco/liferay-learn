@@ -23,7 +23,7 @@
 2.  [Acme Commerce Order Validator](./liferay-n9b2.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-n9b2.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-n9b2.zip -O
     ```
 
     ``` bash
@@ -36,7 +36,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -44,7 +46,7 @@
     STARTED com.acme.n9b2.impl_1.0.0
     ```
 
-5.  失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細については、[Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/creating-a-simple-product.md)を参照してください。
+5.  失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細については、[Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)を参照してください。
 
     カタログからこの価格の商品を見つけて、[Add to Cart]をクリックします。 数量を11以上に増やし、矢印をクリックして続行します。 表示されるエラーメッセージは、カスタム注文バリデーターがアイテムの追加を正常に拒否したことを示しています。
 
@@ -106,7 +108,7 @@ public CommerceOrderValidatorResult validate(Locale locale, CommerceOrderItem co
 
   - [商品をカートに追加するための検証ロジックを追加する。](#add-validation-logic-for-adding-a-product-to-cart)
   - [清算に進むための検証ロジックを追加する。](#add-validation-logic-for-proceeding-in-checkout)
-  - [言語キーを`Language.properties`に追加する。](#add-the-language-keys-to-languageproperties)
+  - [言語キーを `Language.properties`追加します。](#add-the-language-keys-to-languageproperties)
 
 2つの`検証`メソッドでは、注文バリデーター用のカスタム検証ロジックを定義します。 この例では、特定の価格で商品が11個以上ある注文を拒否するロジックを追加します。
 
@@ -172,7 +174,7 @@ public CommerceOrderValidatorResult validate(
 
 > このメソッドは顧客のカート内のアイテムに対して呼び出されるため、同じ検証ロジックをこのメソッドに追加します。 この場合の主な違いは、`CommerceOrderItem`オブジェクトから情報を取得することです。`CommerceOrderItem`で使用できる他のメソッドを見つけるには、[CommerceOrderItem](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderItem.java)および[CommerceOrderItemModel](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderItemModel.java)を参照してください。
 
-#### 言語キーを`Language.properties`に追加する
+#### 言語キーを追加します `Language.properties`
 
 モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-order-validator/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
@@ -187,5 +189,5 @@ public CommerceOrderValidatorResult validate(
 
 ## 追加情報
 
-  - [Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/creating-a-simple-product.md)
+  - [Creating a Simple Product](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

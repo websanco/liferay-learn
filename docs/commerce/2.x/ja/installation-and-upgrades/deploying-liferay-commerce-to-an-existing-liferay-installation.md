@@ -1,6 +1,6 @@
 # Liferay Commerceを既存のLiferayインストールにデプロイする
 
-この記事では、Liferay Commerceを既存のLiferay DXPインスタンスにデプロイする方法について説明します。 Liferay CommerceはLiferay DXP上に構築されているため、既存のDXP 7.1インスタンスを実行する必要があります。 このガイドに従う前に、システム要件を確認してください。
+この記事では、Liferay Commerceを既存のLiferay DXPインスタンスにデプロイする方法について説明します。 Liferay CommerceはLiferay DXP上に構築されているため、既存のDXP 7.1または7.2インスタンスを実行している必要があります。 このガイドに従う前に、システム要件を確認してください。
 
 Liferay Commerceの使用を開始するには：
 
@@ -8,13 +8,15 @@ Liferay Commerceの使用を開始するには：
 
       - エンタープライズの加入者は、最新の`LPKG`を[ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)からダウンロードできます。
           - 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391)を参照してください。
-      - 最新のオープンソース`LPKG`は、[Liferay Commerceのコミュニティサイト](https://commerce.liferay.dev/download)から取得できます。
+      - 最新のオープンソース `LPKG` は、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community)から入手できます。
 
 2.  `LPKG`を`${liferay.home}/deploy`フォルダにデプロイします。
 
-    > Liferay DXPにアプリケーションをデプロイする詳細については、[ Liferay Home](https://help.liferay.com/hc/en-us/articles/360028712272-Liferay-Home)を参照してください。
+    ``` note::
+       LiferayのDXPへのアプリケーションの展開の詳細については、 `Liferayのホームページを参照 してください<https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html>` _。
+    ```
 
-3.  （*加入者のみ* ）アクティベーションキーを`${liferay.home}/deploy`フォルダにデプロイします。
+3.  （*サブスクライバー*） `${liferay.home}/ deploy` フォルダーにアクティベーションキーを展開します。
 
 4.  アプリケーションサーバーコンソールに次のメッセージが表示されることを確認します。
    

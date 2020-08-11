@@ -40,28 +40,23 @@
 
 2.  商品をクリックします（この例では*Premium Brake Fluid*）。
 
-3.  *[SKUs]*サブタブをクリックします。
+3.  *[SKUs]*タブをクリックします。
 
 4.  SKUをクリックします（*MIN93017* ）。
 
 5.  *[Price Lists]*をクリックします。
 
-6.  （+）ボタンをクリックします。
+    ![2.1での価格表への商品の追加](./adding-products-to-a-price-list/images/02.png)
+
+6.  追加（![Add icon](../../images/icon-add.png)）ボタンをクリックします。
 
 7.  このSKUを追加する1つ以上の価格表を選択します（この例では*VIP Customers*）。
 
 8.  *[Add]*をクリックします。
 
-9.  価格表をクリックします（この例では*VIP Customers*）。
+これで、価格リストが商品に関連付けられました。
 
-10. 以下のフィールドに入力します（値の例を次に示します）。
-
-      - **Price**：100
-      - **Promo Price**：95
-
-    ![商品を価格表に追加する](./adding-products-to-a-price-list/images/01.png)
-
-11. [Save]をクリックします。
+![2.1での価格表への商品の追加](./adding-products-to-a-price-list/images/03.png)
 
 商品（*Premium Brake Fluid*）が価格表（*VIP Customers*）に追加されました。 この価格表または別の価格表に他の商品を追加するには、上記の手順を繰り返します。
 

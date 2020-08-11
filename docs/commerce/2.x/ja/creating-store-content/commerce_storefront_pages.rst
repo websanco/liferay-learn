@@ -15,5 +15,8 @@ Commerce ストアフロントページ
    commerce-storefront-pages/product-details.md
    commerce-storefront-pages/search.md
 
-.. include:: /creating-store-content/commerce-storefront-pages/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: ../landingpage_template.html
+
+.. raw:: html
+   :file: commerce-storefront-pages/landing.html

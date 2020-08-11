@@ -25,7 +25,7 @@
 2.  [Acme Commerce Tax Engine](./liferay-q4b9.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce-2.x/developer-guide/tutorials/liferay-q4b9.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-q4b9.zip -O
     ```
 
     ``` bash
@@ -38,7 +38,9 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    > **注：** このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ``` note::
+       このコマンドは、デプロイされたjarをDockerコンテナーの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
 
@@ -102,7 +104,7 @@ public String getName(Locale locale);
 税エンジンは、税計算を実行するロジックで構成されています。 以下を行います。
 
   - [ビジネスロジックを`getCommerceTaxValue`に追加する 。](#add-business-logic-to-getcommercetaxvalue)
-  - [言語キーを`Language.properties`に追加する。](#add-the-language-keys-to-languageproperties)
+  - [言語キーを `Language.properties`追加します。](#add-the-language-keys-to-languageproperties)
 
 #### ビジネスロジックを`getCommerceTaxValue`に追加する
 
@@ -127,7 +129,7 @@ public CommerceTaxValue getCommerceTaxValue(
 
 > `CommerceTaxCalculateRequest`パラメータには、計算に必要な情報が含まれています。 この例では、`CommerceTaxCalculateRequest`からの価格と、レートをパーセンテージとして適用するかどうかを示す値を使用します。 `CommerceTaxCalculateRequest`で使用できる他のメソッドを見つけるには、[CommerceTaxCalculateRequest.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxCalculateRequest.java)を参照してください。
 
-#### 言語キーを`Language.properties`に追加する
+#### 言語キーを追加します `Language.properties`
 
 モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-new-tax-engine/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
@@ -143,4 +145,4 @@ public CommerceTaxValue getCommerceTaxValue(
 ## 追加情報
 
   - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-  - [Setting Tax Rate by Fixed Rate](../../configuring-taxes/setting-tax-rate-by-fixed-rate.md)
+  - [Setting Tax Rate by Fixed Rate](../../store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.md)
