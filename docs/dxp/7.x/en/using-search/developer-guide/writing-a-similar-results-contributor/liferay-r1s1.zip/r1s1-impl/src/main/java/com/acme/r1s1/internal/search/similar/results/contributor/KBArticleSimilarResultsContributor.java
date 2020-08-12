@@ -12,7 +12,7 @@
  *
  */
 
-package com.acme.r1s1.internal.similar.results.contributor;
+package com.acme.r1s1.internal.search.similar.results.contributor;
 
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.model.AssetRenderer;
