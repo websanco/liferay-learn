@@ -49,12 +49,12 @@ public class KBArticleSimilarResultsContributor
 	public void detectRoute(
 		RouteBuilder routeBuilder, RouteHelper routeHelper) {
 
-		String[] subpath = StringUtil.split(
+		String[] pathParts = StringUtil.split(
 			_http.getPath(routeHelper.getURLString()),
 			Portal.FRIENDLY_URL_SEPARATOR);
 
 		String[] parameters = StringUtil.split(
-			subpath[subpath.length - 1], CharPool.FORWARD_SLASH);
+			pathParts[pathParts.length - 1], CharPool.FORWARD_SLASH);
 
 		if (!parameters[0].matches("knowledge_base")) {
 			throw new RuntimeException("KBArticle was not detected");
