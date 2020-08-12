@@ -64,8 +64,8 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 
 			return builder.build();
 		}
-		catch (Exception e) {
-			throw new StorageException(e);
+		catch (Exception exception) {
+			throw new StorageException(exception);
 		}
 	}
 
@@ -86,8 +86,8 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 
 			return builder.build();
 		}
-		catch (Exception e) {
-			throw new StorageException(e);
+		catch (Exception exception) {
+			throw new StorageException(exception);
 		}
 	}
 
@@ -123,9 +123,6 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
 		throws StorageException {
 
-		DDMFormValues ddmFormValues =
-			ddmStorageAdapterSaveRequest.getDDMFormValues();
-
 		try {
 			ServiceContext serviceContext = new ServiceContext();
 
@@ -138,7 +135,8 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 				ddmStorageAdapterSaveRequest.getUserId(),
 				ddmStorageAdapterSaveRequest.getScopeGroupId(),
 				ddmStorageAdapterSaveRequest.getClassName(), null,
-				_serialize(ddmFormValues), serviceContext);
+				_serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()),
+				serviceContext);
 
 			DDMStorageAdapterSaveResponse.Builder builder =
 				DDMStorageAdapterSaveResponse.Builder.newBuilder(
@@ -146,8 +144,8 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 
 			return builder.build();
 		}
-		catch (Exception e) {
-			throw new StorageException(e);
+		catch (Exception exception) {
+			throw new StorageException(exception);
 		}
 	}
 
@@ -175,7 +173,6 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 				ddmStorageAdapterSaveRequest.getPrimaryKey());
 
 			ddmContent.setModifiedDate(new Date());
-
 			ddmContent.setData(
 				_serialize(ddmStorageAdapterSaveRequest.getDDMFormValues()));
 
@@ -190,8 +187,8 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 
 			return builder.build();
 		}
-		catch (Exception e) {
-			throw new StorageException(e);
+		catch (Exception exception) {
+			throw new StorageException(exception);
 		}
 	}
 
