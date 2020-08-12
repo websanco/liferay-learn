@@ -12,7 +12,7 @@
  *
  */
 
-package com.acme.r2f1.internal.data.mapping.storage;
+package com.acme.r2f1.internal.dynamic.data.mapping.storage;
 
 import com.liferay.dynamic.data.mapping.exception.StorageException;
 import com.liferay.dynamic.data.mapping.io.DDMFormValuesDeserializer;
