@@ -90,5 +90,5 @@ Pages can also be created in a hierarchical fashion by creating Child Pages. Chi
 ## Related Information
 
 * [Adding a Page](../adding-pages/adding-a-page-to-a-site.md)
-* [Configuring Individual Pages](../page-settings/configuring-individual-pages.md)
+* [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md)
 * [Enabling User Personalization of Widget Pages](../using-widget-pages/enabling-user-personalization-of-widget-pages.md)

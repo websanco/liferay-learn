@@ -1,6 +1,6 @@
 # Adding a Page to a Site
 
-The steps below describe how to add a new page to your Site and configure the general options. To learn how to configure the remaining page settings, see [Configuring Individual Pages](../page-settings/configuring-individual-pages.md), or see [Configuring Page Sets](../page-settings/configuring-page-sets.md) to configure options for a [Page Set](../understanding-pages/understanding-pages.md#page-sets).
+The steps below describe how to add a new page to your Site and configure the general options. To learn how to configure the remaining page settings, see [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md), or see [Configuring Page Sets](../page-settings/configuring-page-sets.md) to configure options for a [Page Set](../understanding-pages/understanding-pages.md#page-sets).
 
 ## Adding a New Page
 
