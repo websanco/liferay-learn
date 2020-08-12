@@ -1,4 +1,4 @@
-Bundle-Name: Acme R2F1 DDM Form Storage Adapter
+Bundle-Name: Acme R2F1 Dynamic Data Mapping Form Storage Adapter
 Bundle-SymbolicName: com.liferay.learn.r2f1.impl
 Bundle-Version: 1.0.0
 Provide-Capability:\
