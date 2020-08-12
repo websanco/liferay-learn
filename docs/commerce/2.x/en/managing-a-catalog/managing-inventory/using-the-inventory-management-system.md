@@ -1,16 +1,16 @@
 # Using the Inventory Management System
 
-> Commerce 2.1+
+> Availability: Commerce 2.1+
 
-The latest Liferay Commerce 2.1's _Inventory Management_ system creates a single place for users to manage their inventory across the entire Liferay Commerce instance.
+Liferay Commerce's _Inventory Management_ system is a single place for users to manage inventory across an entire Liferay Commerce instance.
 
-Users can add inventory items, view the list of orders for a particular item (SKU), designate Safety Stock, and view changes to the item. Inventory Management is also tied to the warehouses; from here, users can also view the stock available in each warehouse.
+Users can add inventory items, view the list of orders for a particular item (SKU), designate Safety Stock, and view historical changes to items. Inventory Management is also tied to the warehouses; from here, users can also view the stock available in each warehouse.
 
 To manage your inventory, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
 
 ## Adding an Inventory Item
 
-Each inventory item is tracked by a SKU; this SKU is semi-independent from the SKU created in the product catalog. Users can add multiple SKUs in the _Inventory Management_ and ensure that there is adequate quantities for each SKU.
+Each inventory item is tracked by a SKU<!-- ; this SKU is semi-independent from the SKU created in the product catalog -->. Users can add multiple SKUs in the _Inventory Management_ and ensure that there is adequate quantities for each SKU.
 
 To add an inventory item:
 
@@ -18,7 +18,7 @@ To add an inventory item:
 1. Click the (![Add Icon](../../images/icon-add.png)) icon.
 1. Enter the following:
 
-    * **SKU*: CHINAWARE-GRAY
+    * **SKU**: CHINAWARE-GRAY
     * **Warehouse**: United States - Southwest
     * **Quantity**: 120
 
@@ -28,9 +28,9 @@ To add an inventory item:
 
 The new inventory item has been added.
 
-## Setting a Safety Stock
+## Setting Inventory Safety Stock
 
-Users can also set a quantity as Safety Stock; safety stock is the inventory physically located in a warehouse but has been to set aside and made unavailable for sale. This could be for a prospective order or the items are to be sold on a different channel. Once a quantity has been entered, it reduces the number of stock available for sale in that particular warehouse.
+Safety Stock is product inventory that is physically located in a warehouse but has been to set aside and made unavailable for sale. This could be for a prospective order or the items are to be sold on a different channel. Once set, available stock for the item is reduced for the configured warehouse.
 
 To set a safety stock quantity:
 
@@ -61,7 +61,7 @@ Users can view all the orders that include this SKU.
 
 ## Adding Incoming Stock
 
-Store managers can enter incoming stock quantities and the expected delivery day. This is useful when a particular stock is dwindling and the store is expecting an influx of new orders.
+Store managers can enter incoming stock quantities and the expected delivery day.
 
 1. Click on the SKU.
 1. Click the _Incoming_ tab.

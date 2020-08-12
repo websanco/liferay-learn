@@ -2,13 +2,13 @@
 
 > Commerce 2.1+
 
-Liferay Commerce 2.1 introduces a dedicated Inventory Administration section to manage product availability in the _Control Panel_. This article introduces the functionality in the _Inventory_ section.
+The Inventory section of the _Control Panel_ is used to manage product stock levels. This article introduces the functionality in the _Inventory_ section.
 
 To access the Inventory Management, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
 
 ![The Inventory section is in the Control Panel.](./inventory-management-reference-guide/images/01.png)
 
-The first screen displays product variants identified by their SKU code (instead of Product code) and their availability details.
+The first screen displays product variants identified by their SKU code (instead of Product code) with availability details.
 
 ![The Inventory section's initial screen tracks all the SKUs in the catalog.](./inventory-management-reference-guide/images/02.png)
 
@@ -22,9 +22,9 @@ The first screen displays product variants identified by their SKU code (instead
 
 ## SKU
 
-Click on a SKU. (Note that if you had used an accelerator like Minium to create a catalog, these products are created by default.) There are four tabs: Overview, On Order, Incoming, and a Changelog.
+When viewing an individual SKU, there are four tabs: Overview, On Order, Incoming, and a Changelog.
 
-### Overview Tab
+### Overview
 
 The _Overview_ tab displays a short summary of the inventory of a given SKU by warehouse.
 
@@ -48,7 +48,7 @@ The _On Order_ tab displays a list of Accounts that have placed an order for thi
 
 ![The On Order tab tracks which accounts have ordered this SKU.](./inventory-management-reference-guide/images/08.png)
 
-### Incoming Tab
+### Incoming
 
 You can input a quantity that will be delivered to a particular warehouse at a future date.
 

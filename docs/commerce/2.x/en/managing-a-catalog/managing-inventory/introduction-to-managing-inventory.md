@@ -2,13 +2,13 @@
 
 Liferay Commerce provides tools for product inventory management that scale from users with a single storefront and warehouse to larger organizations with multiple sales channels and geographically distributed warehouses.
 
-There are several key features used in managing inventory: Inventory Management, Warehouses, Availability Estimates, Low Stock Actions, and the ability to set inventory by warehouse.
+There are several features used in managing inventory: Inventory Management, Warehouses, Availability Estimates, Low Stock Actions, and the ability to set inventory by warehouse.
 
 ## Inventory Management
 
-> Commerce 2.1+
+> Availability: Commerce 2.1+
 
-Beginning in Liferay Commerce 2.1, the new Inventory Management system allows users to track all their inventory in a single place. The Inventory Management tracks inventory by SKU; all items that share the same SKU now share the same inventory regardless of how they were created in the product catalog.
+The Inventory Management system allows users to track all their inventory in a single place. The Inventory Management tracks inventory by SKU; all items that share the same SKU now share the same inventory regardless of how they were created in the product catalog.
 
 See [Using Inventory Management](./using-the-inventory-management-system.md) for more information.
 
