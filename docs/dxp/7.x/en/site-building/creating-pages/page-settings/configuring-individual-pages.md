@@ -16,7 +16,7 @@ These settings are organized into the following tabs:
 * [Custom Meta Tags](#custom-meta-tags)
 
 ```note::
-   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./configuring-site-languages/modifying-localizable-site-fields.md>`_ or more information.
+   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./../../site-settings/configuring-site-languages/modifying-localizable-site-fields.md>`_ or more information.
 ```
 
 ## General
@@ -52,7 +52,7 @@ In the *Categorization* section, you can categorize page content using *Topics* 
 
 ![Figure 06: Categorize page content using Topics and Tags.](./configuring-individual-pages/images/06.png)
 
-## Look and Feel
+### Look and Feel
 
 In the *Look and Feel* tab, you can determine whether to use the page set's theme settings or define a unique look and feel for your page. When you choose to customize the page's theme, you can toggle various theme settings.
 
@@ -64,7 +64,7 @@ You can also access a *CSS* editor where you can add custom CSS code to the page
    While Widget Pages include the *Look and Feel* tab here, Content Pages include these settings in the *Edit* sidebar menu.
 ```
 
-## Advanced Settings
+### Advanced Settings
 
 In the *Advanced* tab, you can access additional settings to customize your individual page's content and features, including query strings, mobile device rules, custom fields, and embedded widgets.
 
@@ -72,25 +72,17 @@ In the *Advanced* tab, you can access additional settings to customize your indi
    While Widget Pages include the *Advanced* tab here, Content Pages include these settings in the *Edit* sidebar menu under *Look and Feel*.
 ```
 
-### Query String
-
-In the *Query String* section, you can use the *Query String* field to provide default parameters for a page when no others exist. This can be useful for web content templates.
+**Query String**: You can use the *Query String* field to provide default parameters for a page when no others exist. This can be useful for web content templates.
 
 ![Figure 8: Use the Query String field to provide default parameters for a page when no others exist.](./configuring-individual-pages/images/08.png)
 
-### Target
-
-In the *Target* section, you can determine the behavior of a page's link using specific target attributes, such as opening the link in a new window, tab, or frameset.
+**Target**: You can use the *Target* field determine the behavior of a page's link using specific target attributes, such as opening the link in a new window, tab, or frameset.
 
 ![Figure 9: Determine the behavior of a page's link using specific target attributes.](./configuring-individual-pages/images/09.png)
 
-### Icon
+**Icon**: You can select an icon to display along with a page's name in the site's navigation menus.
 
-In the *Icon* section, you can select an icon to display along with a page's name in the site's navigation menus.
-
-### JavaScript
-
-In the *JavaScript* section, you can add JS code to a page using the provided editor. Any added code is executed at the bottom of the page. You can also access this editor in the *Configuration* page for each page set.
+**JavaScript**: You can use the provided *JavaScript* editor to add JS code to a page. Any added code is executed at the bottom of the page. You can also access this editor in a page set's *Configuration* page.
 
 ![Figure 10: Add JS code to a page using the provided editor](./configuring-individual-pages/images/10.png)
 
@@ -98,25 +90,21 @@ In the *JavaScript* section, you can add JS code to a page using the provided ed
    If your site's theme uses JS, it’s best to add any custom JS code to the theme rather than an individual page or page set. This ensures your site’s JS code remains in one place. However, if your site’s theme does not use JS, it's best practice to place all of your site’s JS code here.
 ```
 
-### Mobile Device Rules
-
-In the *Mobile Device Rules* section, you can determine whether a page uses the page set's rules for mobile devices, or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. See [Mobile Device Rules](https://help.liferay.com/hc/articles/360028819552-Mobile-Device-Rules) and [Creating Mobile Device Rules](https://help.liferay.com/hc/articles/360028819572-Creating-Mobile-Device-Rules) for more information and instructions on how to create your own rules.
+**Mobile Device Rules**: You can determine whether a page uses its page set's rules for mobile devices or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. See [Mobile Device Rules](https://help.liferay.com/hc/articles/360028819552-Mobile-Device-Rules) and [Creating Mobile Device Rules](https://help.liferay.com/hc/articles/360028819572-Creating-Mobile-Device-Rules) for more information and instructions on how to create your own rules.
 
 ![Figure 11: Determine whether a page uses the page set's rules for mobile devices, or is uniquely configured](./configuring-individual-pages/images/11.png)
 
-### Customization Settings
-
-In the *Customizable* section, you can determine whether users can customize a widget page. When enabled, you can select which rows and columns you want to make customizable. See [Personalizing Pages](https://help.liferay.com/hc/en-us/articles/360028819932-Personalizing-Pages) for more information.
+**Customization Settings**: You can determine whether widget page columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages](https://help.liferay.com/hc/en-us/articles/360028819932-Personalizing-Pages) for more information.
 
 ![Figure 12: Determine whether users can customize a widget page.](./configuring-individual-pages/images/12.png)
 
-### Custom Fields
+**Custom Fields**: You can view and configure the *Custom Fields* you've defined for site pages. See [Custom Fields](https://help.liferay.com/hc/articles/360028818872-Custom-Fields) for more information.
 
-In the *Custom Field* section, you can view and configure any custom fields you've defined for your pages. With these fields, you can set page metadata, such as author, date of creation, and geolocation. This section only appears once you've configured custom fields for your site. See [Custom Fields](https://help.liferay.com/hc/articles/360028818872-Custom-Fields) for more information.
+**Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](https://help.liferay.com/hc/en-us/articles/360028820272-Embedding-Widgets-in-Templates), [Page Fragments](https://help.liferay.com/hc/en-us/articles/360020757071-Embedding-Widgets-in-Page-Fragments), or [Themes](https://help.liferay.com/hc/en-us/articles/360029067011-Embedding-Portlets-in-Themes).
 
-### Embedded Widgets
-
-In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](https://help.liferay.com/hc/en-us/articles/360028820272-Embedding-Widgets-in-Templates), [Page Fragments](https://help.liferay.com/hc/en-us/articles/360020757071-Embedding-Widgets-in-Page-Fragments), or [Themes](https://help.liferay.com/hc/en-us/articles/360029067011-Embedding-Portlets-in-Themes). This section only appears once you've embedded one or more widgets.
+```note::
+   The *Custom Fields* and *Embedded Widget* sections only appear once you've created custom fields and embedded widgets in a page.
+```
 
 ## SEO
 
@@ -214,11 +202,11 @@ In the *Custom Title* and *Custom Description* sections, you can define the `og:
 
 In the *Preview* section, you can see a preview of what your page will look like when its URL is shared in contexts that support the Open Graph protocol. This preview is based on how you've configured Open Graph properties.
 
+![Figure 23: Preview your Open Graph configuration.](./configuring-individual-pages/images/23.png)
+
 ```note::
    An image's ratio may change depending on where the URL is posted.
 ```
-
-![Figure 23: Preview your Open Graph configuration.](./configuring-individual-pages/images/23.png)
 
 ## Custom Meta Tags
 
