@@ -42,7 +42,7 @@ import org.osgi.service.component.annotations.Reference;
  * @author Tibor Lipusz
  */
 @Component(service = SimilarResultsContributor.class)
-public class KBArticleSimilarResultsContributor
+public class R1S1SimilarResultsContributor
 	implements SimilarResultsContributor {
 
 	@Override

@@ -48,7 +48,7 @@ import org.osgi.service.component.annotations.Reference;
 	immediate = true, property = "ddm.storage.adapter.type=file-system",
 	service = DDMStorageAdapter.class
 )
-public class DDMFileSystemStorageAdapter implements DDMStorageAdapter {
+public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 
 	@Override
 	public DDMStorageAdapterDeleteResponse delete(
