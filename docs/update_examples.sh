@@ -32,7 +32,7 @@ function update_examples {
 }
 
 function main {
-    pushd "${CURRENT_DIR_NAME}" || exit 1
+	pushd "${CURRENT_DIR_NAME}" || exit 1
 
 	copy_template
 
