@@ -57,7 +57,8 @@ public class KBArticleSimilarResultsContributor
 			pathParts[pathParts.length - 1], CharPool.FORWARD_SLASH);
 
 		if (!parameters[0].matches("knowledge_base")) {
-			throw new RuntimeException("KBArticle was not detected");
+			throw new RuntimeException(
+				"Knowledge base article was not detected");
 		}
 
 		routeBuilder.addAttribute("urlTitle", parameters[1]);
