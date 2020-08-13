@@ -42,7 +42,7 @@ You can determine whether a page is hidden from *Navigation Menu* widgets config
 
 ### Page Layout
 
-For basic *Widget Pages*, you can select a layout template that defines droppable rows and columns for widgets. If you create a widget page using a global template (e.g., blog, wiki, search), you can determine whether the page *Inherits Changes* made to the global template.
+For basic *Widget Pages*, you can select a layout template that defines droppable rows and columns for widgets. If you create a Widget Page using a global template (e.g., blog, wiki, search), you can determine whether the page *Inherits Changes* made to the global template.
 
 ![Figure 5: Select a layout template that defines droppable rows and columns for widgets.](./page-configuration-ui-reference/images/05.png)
 
@@ -82,21 +82,21 @@ In the *Advanced* tab, you can access additional settings to customize your indi
 
 **Icon**: You can select an icon to display along with a page's name in the site's navigation menus.
 
-**JavaScript**: You can use the provided *JavaScript* editor to add JS code to a page. Any added code is executed at the bottom of the page. You can also access this editor in a page set's *Configuration* page.
+**JavaScript**: You can use the provided *JavaScript* editor to add JavaScript code to a page. Any added code is executed at the bottom of the page. You can also access this editor in a page set's *Configuration* page.
 
-![Figure 10: Add JS code to a page using the provided editor](./page-configuration-ui-reference/images/10.png)
+![Figure 10: Add JavaScript code to a page using the provided editor](./page-configuration-ui-reference/images/10.png)
 
 ```tip::
-   If your site's theme uses JS, it’s best to add any custom JS code to the theme rather than an individual page or page set. This ensures your site’s JS code remains in one place. However, if your site’s theme does not use JS, it's best practice to place all of your site’s JS code here.
+   If your site's theme uses JavaScript, it’s best to add any custom JavaScript code to the theme rather than an individual page or page set. This ensures your site’s JavaScript code remains in one place. However, if your site’s theme does not use JavaScript, it's best practice to place all of your site’s JavaScript code here.
 ```
 
 **Mobile Device Rules**: You can determine whether a page uses its page set's rules for mobile devices or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. See [Mobile Device Rules](https://help.liferay.com/hc/articles/360028819552-Mobile-Device-Rules) and [Creating Mobile Device Rules](https://help.liferay.com/hc/articles/360028819572-Creating-Mobile-Device-Rules) for more information and instructions on how to create your own rules.
 
 ![Figure 11: Determine whether a page uses the page set's rules for mobile devices, or is uniquely configured](./page-configuration-ui-reference/images/11.png)
 
-**Customization Settings**: You can determine whether widget page columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages](https://help.liferay.com/hc/en-us/articles/360028819932-Personalizing-Pages) for more information.
+**Customization Settings**: You can determine whether a Widget Page's columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages](https://help.liferay.com/hc/en-us/articles/360028819932-Personalizing-Pages) for more information.
 
-![Figure 12: Determine whether users can customize a widget page.](./page-configuration-ui-reference/images/12.png)
+![Figure 12: Determine whether users can customize a Widget Page.](./page-configuration-ui-reference/images/12.png)
 
 **Custom Fields**: You can view and configure the *Custom Fields* you've defined for site pages. See [Custom Fields](https://help.liferay.com/hc/articles/360028818872-Custom-Fields) for more information.
 
