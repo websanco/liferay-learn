@@ -6,7 +6,7 @@ To configure a page, open the *Product Menu* and go to *Site Builder* &rarr; *Pa
 
 ![Figure 1: Click on the Actions button for the page you want to customize, and select Configure](./page-configuration-ui-reference/images/01.png)
 
-Alternatively, you can access individual page settings by navigating to the page you want to customize and clicking on the *Configure Page* button <!--NEED ICON IMG--> at the top right of your *Application Bar*.
+Alternatively, you can access individual page settings by navigating to the page you want to customize and clicking on the *Configure Page* button ( ![Configure Page Button](./../../../images/icon-cog.png) ) at the top right of the *Application Bar*.
 
 These settings are organized into the following tabs:
 
@@ -25,13 +25,13 @@ In the *General* tab, you can configure the basic information and design of a pa
 
 ### Name and Friendly URL
 
-In the *Name* field, you can set a page's title, which is used for site navigation and the browser’s title bar. You can also use the *Friendly URL* field to set the page’s custom URL.
+In the *Name* field, you can set a page's title, which is used for site navigation and the browser’s title bar. You can also use the *Friendly URL* field to set a new URL for a page, or click the *Restore* icon ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) to see and restore a previously used URL. <!--Link to Friendly URL article when finished.-->
 
 ![Figure 2: Use the Name field to set a page's title.](./page-configuration-ui-reference/images/02.png)
 ![Figure 3: Use the Friendly URL field to set a page's custom URL.](./page-configuration-ui-reference/images/03.png)
 
 ```tip::
-   While a page's name and friendly URL are set independently, it is best practice to update them together so that they match.
+   While a page's name and friendly URL are initially defined together at page creation, they are afterwards defined independently. It is best practice to update them together so that they match.
 ```
 
 ### Navigation Menu Widget
