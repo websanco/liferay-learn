@@ -16,7 +16,7 @@ public class N4G6ModelListener extends BaseModelListener<JournalArticle> {
 		throws ModelListenerException {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn("A new web content article was added.");
+			_log.warn("A new web content article was added");
 		}
 	}
 
