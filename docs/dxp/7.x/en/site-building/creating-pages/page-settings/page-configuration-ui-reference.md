@@ -1,8 +1,8 @@
 # Page Configuration UI Reference
 
-In addition to global and site settings, Liferay DXP provides tools for configuring individual site pages to meet your needs. All changes made in this way are scoped to the selected page.
+In addition to global and Site settings, Liferay DXP provides tools for configuring individual Site pages to meet your needs. All changes made in this way are scoped to the selected page.
 
-To configure a page, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](./../images/../../../images/icon-staging-bar-options.png)) for the page you want to customize, and select *Configure*.
+To configure a page, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](../../../images/icon-staging-bar-options.png)) for the page you want to customize, and select *Configure*.
 
 ![Figure 1: Click on the Actions button for the page you want to customize, and select Configure](./page-configuration-ui-reference/images/01.png)
 
@@ -25,7 +25,7 @@ In the *General* tab, you can configure the basic information and design of a pa
 
 ### Name and Friendly URL
 
-In the *Name* field, you can set a page's title, which is used for site navigation and the browser’s title bar. You can also use the *Friendly URL* field to set a new URL for a page, or click the *Restore* icon ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) to see and restore a previously used URL. <!--Link to Friendly URL article when finished.-->
+In the *Name* field, you can set a page's title, which is used for Site navigation and the browser’s title bar. You can also use the *Friendly URL* field to set a new URL for a page, or click the *Restore* icon ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) to see and restore a previously used URL. <!--Link to Friendly URL article when finished.-->
 
 ![Figure 2: Use the Name field to set a page's title.](./page-configuration-ui-reference/images/02.png)
 ![Figure 3: Use the Friendly URL field to set a page's custom URL.](./page-configuration-ui-reference/images/03.png)
@@ -98,7 +98,7 @@ In the *Advanced* tab, you can access additional settings to customize your indi
 
 ![Figure 12: Determine whether users can customize a Widget Page.](./page-configuration-ui-reference/images/12.png)
 
-**Custom Fields**: You can view and configure the *Custom Fields* you've defined for site pages. See [Custom Fields](https://help.liferay.com/hc/articles/360028818872-Custom-Fields) for more information.
+**Custom Fields**: You can view and configure the *Custom Fields* you've defined for Site pages. See [Custom Fields](https://help.liferay.com/hc/articles/360028818872-Custom-Fields) for more information.
 
 **Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](https://help.liferay.com/hc/en-us/articles/360028820272-Embedding-Widgets-in-Templates), [Page Fragments](https://help.liferay.com/hc/en-us/articles/360020757071-Embedding-Widgets-in-Page-Fragments), or [Themes](https://help.liferay.com/hc/en-us/articles/360029067011-Embedding-Portlets-in-Themes).
 
@@ -188,7 +188,7 @@ In the *Change Frequency* section, you can indicate how frequently a page is upd
 
 ### Image and Alt Description
 
-In the *Image* and *Image Alt Description* sections, you can define the `og:image` and `og:image:alt` properties for a page. You can also localize an image's alt description via the *Language Flag* button. Open Graph properties defined here override values defined in a page's site settings.
+In the *Image* and *Image Alt Description* sections, you can define the `og:image` and `og:image:alt` properties for a page. You can also localize an image's alt description via the *Language Flag* button. Open Graph properties defined here override values defined in a page's Site settings.
 
 ![Figure 21: Define the Open Graph Image and Image Alt Description properties for a page.](./page-configuration-ui-reference/images/21.png)
 
