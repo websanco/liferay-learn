@@ -57,4 +57,5 @@ If you undeploy Adaptive Media at some point after running the migration process
 
 ## Additional Information
 
+* [Managing Image Resolutions](./managing-image-resolutions.md)
 * [Adaptive Media Configuration Reference](./adaptive-media-configuration-reference.md)

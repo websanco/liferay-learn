@@ -11,3 +11,4 @@ Developer Guide
 * Updating Media
 * File Check In and Check Out
 * Copying and Moving Files and Folders
+-  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/adaptive-media-modules-reference`
