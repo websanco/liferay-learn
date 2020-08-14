@@ -129,11 +129,12 @@ Most artifacts, regardless of type or origin, are on [MVNRepository](https://mvn
    Make sure to follow the instructions listed earlier to determine the version of Liferay artifacts you need.
 ```
 
-Now that you know the artifact's attributes, you can configure a dependency on it.
+## What's Next
+
+Now that you know the artifact's attributes, you can configure a dependency on it. See [Specifying Dependencies](./specifying-dependencies.md) for details.
 
 ## Additional Information
 
-* [Specifying Dependencies](./specifying-dependencies.md)
 * [Importing Packages](../importing-packages.md)
 * [Exporting Packages](../exporting-packages.md)
 * [Resolving Third Party Library Package Dependencies](./resolving-third-party-library-package-dependencies.md)
