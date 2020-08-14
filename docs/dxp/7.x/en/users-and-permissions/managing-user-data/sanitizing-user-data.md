@@ -1,6 +1,9 @@
 # Sanitizing User Data
 
-One of the technically challenging requirements of the General Data Protection Regulation (GDPR) is _the right to be forgotten_. The purpose of this article is not to go into the details of this requirement, but to show you how the personal data erasure functionality can assist you in satisfying this requirement. 
+One of the technically challenging requirements of the General Data Protection Regulation (GDPR) is _the right to be forgotten_. The purpose of this article is not to go into the details of this requirement, but to show you two pieces of functionality that can assist you in satisfying the requirement:
+
+- Personal Data Erasure 
+- Data Anonymization
 
 A simple way to think of what it means to be _forgotten_ by software is to consider a scenario where a new portal administrator is hired immediately after a User's right to be forgotten request has been honored. The new portal administrator has access to all of the Site's content and administration capabilities. Despite this, the administrator must not be able to glean information that could lead her to knowing the identity of the User whose personal data was erased.
 
@@ -9,31 +12,34 @@ Conceptually, forgetting a User means two things, at a minimum:
 * Erasing the User's identifying information from the system. In Liferay DXP, this  entails removing the User from database tables and search indexes.
 * Erasing or anonymizing content the User has interacted with so it cannot be tracked to a real person.
 
-Users can already be deactivated and then deleted, so why add new functionality? Deleting removes the User from the table of Users in the database. The User's information is preserved in other locations, however. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User and her identifiers (User ID and User Name) still appear in the UI next to content associated with her. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added in @product-ver@.
+_Isn't User deactivation and deletion enough?_
+Deleting removes the User from the table of Users in the database. The User's information is preserved in other locations, however. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User by the system's identifiers (User ID and User Name) and still appears in the UI next to the content. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added.
 
 ```note::
    Personal data erasure can help companies in their attempts to satisfy the requirements of GDPR. Using the data erasure tool described here provides no guarantee of compliance with the legal requirements of GDPR. Each company or individual whose website processes user personal data and is under the jurisdiction of GDPR must carefully determine the precise steps necessary to ensure they are fully compliant with GDPR.
 ```
 
-To begin sanitizing a user's data,
+Whether deleting or anonymizing, to begin sanitizing a User's data,
 
-1. Go to Control Panel &rarr; Users &rarr; Users and Organizations.
+1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and go to Control Panel &rarr; Users &rarr; Users and Organizations.
 
-1. Click the Actions button for a User (![Actions](./sanitizing-user-data/images/icon-actions.png)) and select *Delete Personal Data*. If you have not deactivated the user, you will be asked to do so. 
+1. Click the Actions button for a User (![Actions](../../images/icon-actions.png)) and select *Delete Personal Data*.
 
-    The User's Personal Data Erasure screen appears.
+   > If you have not deactivated the user, you will be asked to do so.
+
+   The User's Personal Data Erasure screen appears.
 
 ## The Personal Data Erasure Screen
 
-You can browse all data the user has posted on the system. Click *Personal Site* to browse data from that site. 
+You can browse all data the user has posted on the system. Click *Personal Site* to browse data from that site.
 
 ![Figure 1: From here, you can browse all data the user posted on his or her personal Site.](./sanitizing-user-data/images/users-data-erasure-personal.png)
 
-Click *Regular Sites* to browse any data posted in regular Liferay sites. 
+Click *Regular Sites* to browse any data posted in regular Liferay sites.
 
 ![Figure 2: Choose Regular Sites to browse all data posted by the user on administratively-created Sites.](./sanitizing-user-data/images/users-data-erasure-regular.png)
 
-To review the user's data, click the item. For example, Pepper seems to have posted a blog entry on her personal Site. Clicking that entry reveals the title of that blog entry. 
+To review the user's data, click the item. For example, Pepper seems to have posted a blog entry on her personal Site. Clicking that entry reveals the title of that blog entry.
 
 ![Figure 3: Pepper's blog entry might need review.](./sanitizing-user-data/images/users-data-erasure-blog.png)
 
