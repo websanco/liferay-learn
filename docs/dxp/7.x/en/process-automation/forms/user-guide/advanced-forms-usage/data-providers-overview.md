@@ -1,6 +1,6 @@
 # Data Providers Overview
 
-Data Providers are [REST web services](https://en.wikipedia.org/wiki/Representational_state_transfer) which can be used to import data. You can use data providers to auto-populate fields instead of having to enter each data point manually, especially with large data sets. One common example (but not limited to) is using a data provider to import a list of the countries of their world and their administrative regions. This tutorial demonstrates how to use a data provider with DXP _Forms_.
+Data Providers are [REST web services](https://en.wikipedia.org/wiki/Representational_state_transfer) for importing data. You can use data providers to auto-populate fields rather than entering each data point manually, especially with large data sets. One common example is using a data provider to import a list of the countries with their administrative regions. This tutorial demonstrates how to use a data provider with DXP _Forms_.
 
 ## Registered JSON Web Services
 
@@ -8,34 +8,36 @@ Some data sources are from third party sources, such as the [restcountries.eu](h
 
 The _Result_ tab shows a list of countries using JSON syntax, like this record for Afghanistan:
 
-    [
-      {
-        "a2": "AF",
-        "a3": "AFG",
-        "countryId": "20",
-        "idd": "093",
-        "mvccVersion": "0",
-        "name": "afghanistan",
-        "nameCurrentValue": "Afghanistan",
-        "number": "4"
-      },
-        ...
+```json
+[
+  {
+    "a2": "AF",
+    "a3": "AFG",
+    "countryId": "20",
+    "idd": "093",
+    "mvccVersion": "0",
+    "name": "afghanistan",
+    "nameCurrentValue": "Afghanistan",
+    "number": "4"
+  },
+    ...
+```
 
-Take note of the web service's field you want Users to select. For `get-countries` it's most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
+Choose carefully the selectable field from the web service. For `get-countries` it's most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
 
-On the _URL Example_ tab, find the URL to use when creating the data provider. It's the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
+On the URL Example tab, find the URL to use when creating the data provider. It's the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
 
 ![The URL Example tab displays the corresponding the JSON web service.](./data-providers-overview/images/02.png)
 
 ## Data Provider Configuration Reference
 
-Configure data providers from the Forms application at _Site Administration_ &rarr; _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin. There are several fields to fill out when configuring a data provider.
+You can configure data providers from the Forms application at _Site Administration_ &rarr; _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin. There are several fields to fill out when configuring a data provider.
 
-![Here are the different fields and their explanations.](./data-providers-overview/images/03.png)
+![This data service returns countries.](./data-providers-overview/images/03.png)
 
 ### URL
 
-Enter the URL of an internal or external REST service endpoint. Consider the REST service at <https://restcountries.eu/> which contains a REST API endpoint to find countries by `region`:
+Enter the URL of an internal or external REST service endpoint. The example above shows the REST service at <https://restcountries.eu/> which contains an endpoint to find countries by `region`:
 
 `https://restcountries.eu/rest/v2/region/{region}`
 
@@ -62,7 +64,7 @@ If the data is cached, a second load of the select list field is much faster, si
 
 ### Timeout
 
-Enter the time (in ms) to allow the REST service call to process before aborting the request, if a response is not returned.
+Enter the time (in ms) to wait for a response to the REST call before aborting the request. 
 
 ### Inputs
 
@@ -75,13 +77,13 @@ The Outputs are the Parameters to display in Select from List or Text fields wit
 You can add multiple Inputs. To provide a way for users to specify the input value, use an
 [_Autofill_ Form Rule](../form-rules/using-the-autofill-rule.md). A User enters input into one field, and their input is sent to the REST service. The REST service's response data is filtered by the input parameter.
 
-The Output Path field is specified in [JsonPath syntax](https://github.com/json-path/JsonPath/blob/master/README.md), so it must always start with a `$`. The type of data returned by the Path must match the type you choose in the Type field. Using the `restcountries.eu` service, specify the `name` field as an Output by entering enter `$..name` in the Path field. If you have a more complex JsonPath expression to construct (for example, you need the names of all countries with a population over 100 million---`$..[?(@.population>100000000)].name` with the `restcountries.eu` service), consider using an online JsonPath evaluator, like [this one](http://jsonpath.herokuapp.com/) or [this one](https://jsonpath.com/).
+The Output Path field is specified in [JsonPath syntax](https://github.com/json-path/JsonPath/blob/master/README.md), so it must always start with a `$`. The type of data returned by the Path must match the type you choose in the Type field. Using the `restcountries.eu` service, specify the `name` field as an Output by entering enter `$..name` in the Path field. If you have a more complex JsonPath expression to construct (for example, you need the names of all countries with a population over 100 million---`$..[?(@.population>100000000)].name` with the `restcountries.eu` service), consider using a `JsonPath` evaluator, like [this one](http://jsonpath.herokuapp.com/) or [this one](https://jsonpath.com/).
 
 ```tip::
-   To display one value to the user, but persist another in the database, enter both into the Paths field, separated by a semicolon: ``$..name;$..numericCode``
+   To display one value but persist another in the database, enter both into the Paths field, separated by a semicolon: ``$..name;$..numericCode``
 ```
 
-If using the `restcountries.eu` data provider, the name of the country is displayed to the User, while the numeric country code is stored in the database.
+If using the `restcountries.eu` data provider, the name of the country appears for the User, while the numeric country code is stored in the database.
 
 ![Set up Data Providers to display data retrieved from a REST service.](./data-providers-overview/images/01.png)
 
