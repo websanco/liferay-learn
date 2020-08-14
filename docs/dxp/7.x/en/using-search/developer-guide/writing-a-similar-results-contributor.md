@@ -122,7 +122,8 @@ Implement `resolveCriteria` to use the main entity on the page to look up the co
 
 ```java
 public void writeDestination(
-    DestinationBuilder destinationBuilder, DestinationHelper destinationHelper);
+    DestinationBuilder destinationBuilder,
+    DestinationHelper destinationHelper);
 ```
 
 Implement `writeDestination` to update the main asset when a User clicks a link in the similar results widget.
