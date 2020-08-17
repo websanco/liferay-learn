@@ -47,9 +47,6 @@ public class JSPPortlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
-		RequestBackedPortletURLFactory requestBackedPortletURLFactory =
-			RequestBackedPortletURLFactoryUtil.create(renderRequest);
-
 		RoleItemSelectorCriterion itemSelectorCriterion =
 			new RoleItemSelectorCriterion();
 
@@ -65,6 +62,9 @@ public class JSPPortlet extends MVCPortlet {
 
 		itemSelectorCriterion.setDesiredItemSelectorReturnTypes(
 			itemSelectorReturnTypes);
+
+		RequestBackedPortletURLFactory requestBackedPortletURLFactory =
+			RequestBackedPortletURLFactoryUtil.create(renderRequest);
 
 		PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
 			requestBackedPortletURLFactory, "selectItem",
