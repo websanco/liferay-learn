@@ -1,5 +1,5 @@
 Bundle-Name: Acme R2F1 Dynamic Data Mapping Form Storage Adapter
-Bundle-SymbolicName: com.liferay.learn.r2f1.impl
+Bundle-SymbolicName: com.acme.r2f1.impl
 Bundle-Version: 1.0.0
 Provide-Capability:\
 	liferay.resource.bundle;\
