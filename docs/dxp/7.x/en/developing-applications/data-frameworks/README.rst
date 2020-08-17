@@ -7,7 +7,7 @@ Data Frameworks
 -  :doc:`/developing-applications/data-frameworks/expando`
 -  :doc:`/developing-applications/data-frameworks/export-import`
 -  :doc:`/developing-applications/data-frameworks/info-framework`
--  :doc:`/developing-applications/data-frameworks/item-selector`
+-  :doc:`/developing-applications/data-frameworks/implementing-an-item-selector`
 -  :doc:`/developing-applications/data-frameworks/recycle-bin`
 -  :doc:`/developing-applications/data-frameworks/search`
 -  :doc:`/developing-applications/data-frameworks/service-builder`

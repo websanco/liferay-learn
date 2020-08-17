@@ -10,7 +10,7 @@ Data Frameworks
    data-frameworks/ddm.md
    data-frameworks/expando.md
    data-frameworks/export-import.md
-   data-frameworks/item-selector.md
+   data-frameworks/implementing-an-item-selector.md
    data-frameworks/cache.md
    data-frameworks/recycle-bin.md
    data-frameworks/search.md
