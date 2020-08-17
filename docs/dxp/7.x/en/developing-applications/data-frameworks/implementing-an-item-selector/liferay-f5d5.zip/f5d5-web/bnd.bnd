@@ -1,0 +1,4 @@
+Bundle-Name: Acme F5D5 Item Selector Portlet
+Bundle-SymbolicName: com.acme.f5d5.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /f5d5-web
