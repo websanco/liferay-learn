@@ -26,7 +26,7 @@ To see how item selectors work in Liferay DXP, begin by deploying an example mod
     ```
 
     ```bash
-    unzip liferay-f5d5.zip.zip
+    unzip liferay-f5d5.zip
     ```
 
 1. Start a Liferay DXP Docker container with the following command:
@@ -55,7 +55,7 @@ The example module is now deployed to your Docker image. Now you can see the ite
 
 ### Use the Deployed Sample Widget
 
-The example module adds a new widget ("Item Selector Example") to 
+The example module adds a new widget ("Item Selector Example") to demonstrate a basic item selector. Perform the following steps to deploy this module to a Liferay Docker image:
 
 1. Open your browser to `https://localhost:8080`.
 
@@ -89,6 +89,13 @@ Once you have the example module, you are ready to begin adding an item selector
 
 To create and use an item selector, you must define the necessary criteria that will determine how the selector works, and then you must create a URL for that criteria.
 
+First, get an instance of the [`ItemSelector` class](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelector.java) by adding an `@Reference` annotation:
+
+```java
+@Reference
+private ItemSelector _itemSelector;
+```
+
 ### Define the Item Criteria
 
 The item criteria for an item selector determine the kind of data that it will handle, including what kind of entities to select from.
@@ -104,13 +111,15 @@ Since the Java class defining the portlet render logic for the sample JSP portle
         new RoleItemSelectorCriterion();
     ```
 
-    ```tip
-    If no criterion exists for the type of entity that you need, then you can define your own `ItemSelectorCriterion` by extending [`BaseItemSelectorCriterion`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/BaseItemSelectorCriterion.java).
+    ```tip::
+       If no criterion exists for the type of entity that you need, then you can define your own ``ItemSelectorCriterion`` by extending `BaseItemSelectorCriterion <https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/BaseItemSelectorCriterion.java>`__.
     ```
 
-1. A return type class to represent the information the entities provide when Users select them. Return type classes must implement the [`ItemSelectorReturnType` interface](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java). For example, a return type class may be used to return the entity's URL, UUID, or primary key.
+1. A return type class to represent the information the entities provide when Users select them. Return type classes must implement the [`ItemSelectorReturnType` interface](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java). For example, a return type class may be used to return the entity's URL, UUID, or primary key. The return type class is added to the criterion class created previously.
 
-    The return type class is added to the criterion class created previously. Every criterion used **must** have at least one return type associated with it.
+    ```important::
+       Every criterion used **must** have at least one return type associated with it.
+    ```
 
     This example uses a reference to [`UUIDItemSelectorReturnType`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-criteria-api/src/main/java/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.java) to define the selected Roles' `UUID` value as the crucial data to return. If multiple Roles are selected, they are returned as a comma-delimited list.
 
@@ -129,15 +138,30 @@ Since the Java class defining the portlet render logic for the sample JSP portle
         itemSelectorReturnTypes);
     ```
 
-    ```tip
-    If no return type exists for the type of information that you need, then you can define your own ```ItemSelectorReturnType`` <https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)>`__ implementation.
+    ```tip::
+       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)>`__ implementation.
     ```
 
-Your item selector uses these two classes to decide what selection views of items (presented as tabs) to show, and how to identify each item.
+The item selector uses these two classes to decide what selection views of items (presented as tabs) to show, and how to identify each item.
 
 ### Get an Item Selector for the Chosen Criteria
 
-(explain the OSGi reference bit, and calling the factory to actually get it)
+Now that you have defined the criteria for your item selector, you must use them to generate a URL for the item selector. This URL is used to create the item selector dialog in your front-end code.
+
+The [`RequestBackedPortletURLFactory` class](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.java) allows you to quickly generate an item selector URL using the criteria:
+
+```java
+RequestBackedPortletURLFactory requestBackedPortletURLFactory =
+    RequestBackedPortletURLFactoryUtil.create(renderRequest);
+
+PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
+    requestBackedPortletURLFactory, "selectItem",
+    itemSelectorCriterion);
+```
+
+```important::
+   The String you use to generate the URL (in this example, "selectItem") is the dialog's event name. This must match a value you use when creating the dialog in your front-end code later.
+```
 
 ### Pass the Item Selector URL to Your View
 
@@ -210,14 +234,14 @@ var itemSelectorDialog = new ItemSelectorDialog.default(
 );
 ```
 
-The value for the `eventName` field **must** match the  You must also use the URL that you retrieved from the `request` object for the `url` field when defining the item selector dialog.
+The value for the `eventName` field **must** match the String you used with the `RequestBackedPortletURLFactory` in the Java code (in this example, "selectItem"). You must also use the URL that you retrieved from the `request` object previously for the `url` field when defining the item selector dialog.
 
 ```note::
-The ``title`` field in this example uses a `language key <https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application>`__ to define the dialog title. Add any language keys you are using to a ```Language.properties`` <./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/content/Language.properties>`__ file within your module.
+   The ``title`` field in this example uses a `language key <https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application>`__ to define the dialog title. Add any language keys you are using to a ```Language.properties`` <./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/content/Language.properties>`__ file within your module.
 ```
 
 ```tip::
-If you only want to support selecting one item, then you can restrict the dialog to a single selection by adding this field to the ``ItemSelectorDialog``: ``singleSelect: true``.
+   If you only want to support selecting one item, then you can restrict the dialog to a single selection by adding this field to the ``ItemSelectorDialog``: ``singleSelect: true``. You can also change the text of the dialog's `Add` and `Cancel` buttons by adding the ``buttonAddLabel`` or ``buttonCancelLabel`` fields, respectively (e.g., with a value of ``'<liferay-ui:message key="done" />'``).
 ```
 
 Then, define the dialog's behavior when the user makes a selection:
