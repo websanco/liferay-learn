@@ -76,7 +76,7 @@ Note that you must manage your own custom certificate. This includes updating it
 ```
 
 ```warning::
-   DXP Cloud accepts only properly formatted PEM certificates and keys which must include the encapsulation boundaries. See the `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ to learn more.
+   DXP Cloud only accepts keys and certificates that are in the proper PEM format with Base64 encoding, which must include the encapsulation boundaries. The key must be generated using RSA 2048, with an exponent of 655337. See the `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ to learn more.
 ```
 
 If it has not already been encoded, then the certificate and key files may both contain text like the following snippet (with either `CERTIFICATE` or `KEY` in the begin/end tags, respectively):
