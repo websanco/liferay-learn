@@ -24,7 +24,7 @@ Here's how to configure dependencies:
     ```groovy
     dependencies {
         compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.5.0"
-        compileOnly group: "com.liferay", name: "com.liferay.journal.api", version: "1.0.1"
+        compileOnly group: "com.liferay", name: "com.liferay.journal.api", version: "2.0.2"
         ...
     }
     ```
