@@ -24,4 +24,11 @@ You can cancel a running test at any time using the *Terminate Test* button. To 
    After you create the test, you can always click the *A/B Testing* button (![A/B Test icon](../../../images/icon-ab-testing.png)) on the Content Page to view the test status and history of completed and terminated A/B tests. Since Liferay DXP 7.3, you can also access the A/B Test panel (via the *A/B Testing* button) and view the test status for an experience through the `experience selection dialog <../experience-personalization/content-page-personalization.md>`_.
 ```
 
-Liferay DXP only shows your test's status and the winning Variant when the test finishes. You can manage the other aspects of your A/B test, including monitoring, in Analytics Cloud. For more information, see [A/B Testing Analytics](../../../../ab-testing-analytics.md).
+Liferay DXP only shows your test's status and the winning Variant when the test finishes. You can manage the other aspects of your A/B test in Analytics Cloud. For more information, see [A/B Testing Analytics](../../../../ab-testing-analytics.md).
+
+## Related Information
+
+* [A/B Testing](./ab-testing.md)
+* [Configuring A/B Testing](./configuring-ab-testing.md)
+* [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
+* [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
