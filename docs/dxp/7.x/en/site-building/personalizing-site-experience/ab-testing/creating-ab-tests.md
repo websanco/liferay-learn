@@ -58,6 +58,8 @@ A test Variant is a customization of the Experience you want to optimize with A/
 1. Edit the variant with the changes you want to test and  to apply them. For example, if you want to test a different call-to-action text, update the button with the new text.
 1. Click *Save Variant*.
 
+## Related Information
+
 * [A/B Testing](./ab-testing.md)
 * [Configuring A/B Testing](./configuring-ab-testing.md)
 * [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
