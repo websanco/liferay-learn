@@ -30,7 +30,7 @@ import org.osgi.service.component.annotations.Reference;
  * @author Russell Bohl
  */
 @Component(
-	immediate = true, property = "ddm.storage.adapter.type=file-system",
+	immediate = true, property = "ddm.storage.adapter.type=json-wrapper",
 	service = DDMStorageAdapter.class
 )
 public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
@@ -40,9 +40,12 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterDeleteRequest ddmStorageAdapterDeleteRequest)
 		throws StorageException {
 
-		System.out.println("DELETE");
-
-		return _jsonStorageAdapter.delete(ddmStorageAdapterDeleteRequest);
+		try {
+			return _jsonStorageAdapter.delete(ddmStorageAdapterDeleteRequest);
+		}
+		catch (Exception exception) {
+			throw new StorageException(exception);
+		}
 	}
 
 	@Override
@@ -50,9 +53,12 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterGetRequest ddmStorageAdapterGetRequest)
 		throws StorageException {
 
-		System.out.println("GET");
-
-		return _jsonStorageAdapter.get(ddmStorageAdapterGetRequest);
+		try {
+			return _jsonStorageAdapter.get(ddmStorageAdapterGetRequest);
+		}
+		catch (Exception exception) {
+			throw new StorageException(exception);
+		}
 	}
 
 	@Override
@@ -60,9 +66,12 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 			DDMStorageAdapterSaveRequest ddmStorageAdapterSaveRequest)
 		throws StorageException {
 
-		System.out.println("SAVE");
-
-		return _jsonStorageAdapter.save(ddmStorageAdapterSaveRequest);
+		try {
+			return _jsonStorageAdapter.save(ddmStorageAdapterSaveRequest);
+		}
+		catch (Exception exception) {
+			throw new StorageException(exception);
+		}
 	}
 
 	@Reference(target = "(ddm.storage.adapter.type=json)")

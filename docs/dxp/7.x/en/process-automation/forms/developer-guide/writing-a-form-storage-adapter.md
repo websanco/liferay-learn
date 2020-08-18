@@ -127,25 +127,11 @@ method.
 
 All methods are passed a `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information.
 
-### Declare the Service Dependencies
-
-This code relies on several services deployed to an OSGi container:
-
-`DDMContentLocalService`, a `DDMFormValuesSerializer`, and a `DDMFormValuesDeserializer`. They're declared at the end using Declarative Services `@Reference` annotations, provided by `org.osgi.service.component.annotations.Reference`.
-```java
-@Reference
-private DDMContentLocalService _ddmContentLocalService;
-
-@Reference
-private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
-```
-Using this structure, you'll now alter the example to add file system storage logic.
-
 ## Implement File System Storage
 
 The example already overrides the necessary methods. You'll create private utility methods for your functionality and then call them from the overridden methods.
 
-## Change the Service's Name
+### Change the Service's Name
 
 Find the `@Component` declaration and change the type property to `file-system`. The Component now looks like this:
 
@@ -158,6 +144,27 @@ Find the `@Component` declaration and change the type property to `file-system`.
 
 ```note::
    The ``json-wrapper`` and ``file-system`` keys added here are localized into the values `JSON Wrapper` and `File System` by the ``src/main/resources/content/Language.properties`` file and the ``Provide-Capability`` header in the ``bnd.bnd`` file.
+```
+
+## Declare the Service Dependencies
+
+This code relies on two services deployed to an OSGi container. Add these declarations at the end of the class using Declarative Services `@Reference` annotations, provided by `org.osgi.service.component.annotations.Reference`.
+
+```java
+@Reference
+private DDMContentLocalService _ddmContentLocalService;
+
+@Reference
+private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
+```
+
+### Create  Logger
+
+Create a logger for the class and set it in a `_log` variable:
+
+```java
+private static final Log _log = LogFactoryUtil.getLog(
+    R2F1DDMStorageAdapter.class);
 ```
 
 ### Implement File Deletion
