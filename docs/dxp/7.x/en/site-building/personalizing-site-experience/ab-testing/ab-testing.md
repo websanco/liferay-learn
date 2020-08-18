@@ -8,7 +8,7 @@ With A/B Testing, you can show different versions of your site to different user
 
 For example, a Marketing team for a bank provides a Content Page advertising a new credit card. The page has been published for a few weeks, but a redesign might help to promote the new credit card better. With A/B Testing, the team can create a new page variant and display both pages at random to visitors. Then, they can compare the clickthrough rate for the two pages and find which page is more effective. If the new variant is more effective than the original page, they can publish it and replace the original page.
 
-![Selecting the Site in the Liferay DXP configuration for Analytics Cloud](./ab-testing/images/01.png)
+![Using A/B Test to compare the efficiency of two different call-to-action buttons](./ab-testing/images/01.png)
 
 To run A/B Tests, you must have your Liferay DXP instance connected to Liferay Analytics Cloud. Liferay Analytics Cloud shares this workflow with Liferay DXP:
 
