@@ -1,10 +1,8 @@
 # Specifying Dependencies
 
-Compiling a module and deploying it to Liferay requires satisfying the module's external dependencies. After [finding dependency artifacts](../finding-artifacts.md), you must [declare them as dependencies](https://docs.gradle.org/current/userguide/declaring_dependencies.html) in your Gradle build file.
+Compiling a module and deploying it to Liferay requires satisfying the module's external dependencies. After [finding dependency artifacts](../finding-artifacts.md), you must [declare them as dependencies](https://docs.gradle.org/current/userguide/declaring_dependencies.html) in your Gradle build file. Liferay includes many artifacts whose [packages](../../reference/exported-third-party-packages.md) are available at run time. If you depend on other artifacts, you must deploy them manually. Here you'll find dependency configuration steps and examples.
 
-Compilation requires locally available packages from artifacts. Deployment requires packages from artifacts at run time. Run time artifacts may be bundled with Liferay or can be deployed to Liferay separately in other modules or packaged with your project. Here you'll learn how to specify artifact dependencies for compile time and run time scenarios.
-
-## Adding Dependencies
+## Configuring Dependencies
 
 Here's how to configure dependencies:
 
@@ -15,48 +13,33 @@ Here's how to configure dependencies:
     }
     ```
 
-1. Make all Liferay-bundled APIs available at compile time by adding a `release.portal.api` dependency for your Liferay version.
-
-    ```groovy
-    dependencies {
-        compileOnly group: "com.liferay.portal", name: "release.portal.api", version: "7.2.0"
-    }
-    ```
-
-1. Add dependencies for non-bundled artifacts (from Liferay or third parties), making sure to specify each dependency's attributes:
+1. Add a dependency for each artifact your module requires. Use the [`compileOnly` configuration](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management) and specify these artifact attributes:
 
     * Group
-    * Name
+    * Name (Artifact ID)
     * Version
 
-    Here a non-bundled dependency on Bnd Lib has been added.
+    Here are dependencies for Bnd Lib and Liferay's Journal API.
 
     ```groovy
     dependencies {
-        compileOnly group: "com.liferay.portal", name: "release.portal.api", version: "7.2.0"
         compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.5.0"
+        compileOnly group: "com.liferay", name: "com.liferay.journal.api", version: "1.0.1"
         ...
     }
     ```
 
-    Use the `compileOnly` scope initially and adjust scope as demonstrated in the remaining steps.
-
-1. Change the scope to `providedCompile` for any artifacts that Liferay exports packages from already. Please see [Exported Third Party Packages](../../reference/exported-third-party-packages.md) for details.
-
-    For example, if your project uses Spring Bean packages, use the Liferay-provided packages at run time by specifying the `providedCompile` scope. The `providedCompile` scope prevents the project from deploying the artifact with the project.
-
-    ```groovy
-    dependencies {
-        providedCompile group: "org.springframework", name: "spring-bean", version: "4.1.9"
-        ...
-    }
+    ```important::
+       Make sure to use artifact versions compatible with your Liferay product version.
     ```
+
+    Use the `compileOnly` scope initially and adjust scope as needed.
 
 1. Deploy your module and check for unsatisfied package dependencies by browsing the logs or using [Gogo Shell commands](../using-the-gogo-shell.md).
 
-1. If there are unsatisfied dependencies on Liferay modules or third party modules, deploy those modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
+1. If there are unsatisfied dependencies on Liferay modules or third party modules, deploy them and check if your module resolves. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
 
-1. If there are unsatisfied dependencies on third party libraries (not modules), please see [Resolving Third Party Library Dependencies](./resolving-third-party-library-dependencies.md) for guidance.
+1. If there are unsatisfied dependencies on third party libraries (not modules), please see [Resolving Third Party Library Dependencies](./resolving-third-party-library-dependencies.md) for guidance in resolving them.
 
 Next, there is a table that shows dependency suggestions for various scenarios.
 
@@ -66,11 +49,10 @@ The following table describes several different example dependency scenarios.
 
 | Example Artifact | OSGi Module? | Liferay Artifact? | Deployment Method | Notes |
 | :--------------- | :---------- | :---------------- | :---------------- | :-------------- |
-| [Liferay Journal API](https://docs.liferay.com/dxp/apps/journal/latest/javadocs/) | yes | yes | Bundled with Liferay | Specify a `release.portal.api` dependency with the `compileOnly` scope |
+| [Liferay Journal API](https://docs.liferay.com/dxp/apps/journal/latest/javadocs/) | yes | yes | Bundled with Liferay | Use `compileOnly` scope |
 | [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) | yes | yes | Deployed separately | Use `compileOnly` scope |
-| Bnd Lib | yes | no | Deployed separately | Use `compileOnly` scope |
-| Spring Framework Spring Bean | yes | no  | Bundled with Liferay | Use the `providedCompile` scope and the version of the artifact that Liferay uses |
-| [Apachi Shiro](https://shiro.apache.org/) Shiro Core library | no  | no  | Deployed separately or in the project | Please see [Resolving Third-Party Library Dependencies](./resolving-third-party-library-package-dependencies.md) |
+| [BndTools](https://bnd.bndtools.org/) [Bnd Lib](https://search.maven.org/search?q=a:biz.aQute.bndlib) | yes | no | Deployed separately | Use `compileOnly` scope |
+| [Apachi Shiro](https://shiro.apache.org/) [Shiro Core](https://search.maven.org/search?q=a:shiro-core) | no  | no  | Deployed separately or in the project | Please see [Resolving Third-Party Library Dependencies](./resolving-third-party-library-package-dependencies.md) |
 
 Nice! You know how to specify artifact dependencies. Now that's a skill you can depend on!
 
