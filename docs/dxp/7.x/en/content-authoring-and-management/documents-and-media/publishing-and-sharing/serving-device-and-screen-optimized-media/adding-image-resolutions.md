@@ -4,7 +4,7 @@ By default, DXP contains two Image Resolutions: a Preview and Thumbnail. Users c
 
 This article documents how to define the resolutions for the images delivered to users' devices. Once the resolutions are defined, Adaptive Media then generates new images scaled to fit those resolutions, while maintaining the original aspect ratio.
 
-Images uploaded before you create the resolution are _not_ affected and must be adapted separately (see [Generating Missing Adapted Images](./managing-image-resolutions.md#generating-missing-adapted-images).
+Images uploaded before you create the resolution are _not_ affected and must be adapted separately (see [Generating Missing Adapted Images](./managing-image-resolutions.md#generating-missing-adapted-images)).
 
 ![Figure 1: Adaptive Media's image resolutions are listed in a table.](./adding-image-resolutions/images/01.png)
 
