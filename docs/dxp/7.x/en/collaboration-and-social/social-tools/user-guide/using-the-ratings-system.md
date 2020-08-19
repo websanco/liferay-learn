@@ -29,6 +29,7 @@ Because the different types of configurable ratings (likes, stars, etc.) are pre
 The following table shows how ratings from each type can be converted to the other types:
 
 |  | **Converted to Likes** | **Converted to Stars** | **Converted to Thumbs Up/Down** |
+| --- | --- | --- | --- |
 | **Likes** | No change | 1 Like = 5 Star rating | 1 Like = 1 Thumbs Up |
 | **Stars** | 3-5 Stars = 1 Like; 1-2 Stars are omitted | No change | 3-5 Stars = 1 Thumbs Up; 1-2 Stars = 1 Thumbs Down |
 | **Thumbs** | 1 Thumbs Up = 1 Like; Thumbs Down are omitted | 1 Thumbs Up = 5 Star rating; 1 Thumbs Down = 1 Star rating | No change |
