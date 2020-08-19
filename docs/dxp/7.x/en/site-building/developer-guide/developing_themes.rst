@@ -4,7 +4,6 @@ Developing Themes
 .. toctree::
    :maxdepth: 3
 
-   developing-themes/look-and-feel-overview.md
    developing-themes/developing-a-theme.md
    developing-themes/developing-themelets.md
    developing-themes/customizing_configuration_settings.rst
