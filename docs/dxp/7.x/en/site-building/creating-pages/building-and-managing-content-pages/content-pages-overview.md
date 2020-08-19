@@ -4,8 +4,6 @@ The default type of page used in Liferay DXP is a Content Page. The Content Page
 
 ![Using the Content Page sidebar to add elements to the page.](./content-pages-overview/images/14.png)
 
-> The drop-down Edit Mode menu is available in Liferay 7.3+.
-
 The editing options available in the Content Page sidebar depend on the editing mode you choose. For more information, see [Building Content Pages](./building-content-pages.md).
 
 ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
