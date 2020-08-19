@@ -5,9 +5,8 @@
 By default, forms are stored as JSON in Liferay DXP's database. This example shows you how to implement a new storage adapter to inject custom logic into a form record persistence event.
 
 ![Use a DDM Storage Adapter to add a Storage Type to the Forms application.](./writing-a-form-storage-adapter/images/01.png)
-UPDATE screenshot to use the JSON Wrapper label
 
-First you'll see how the [defaul storage adapter](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) saves form records in the Liferay DXP database as JSON content. Then you'll add logic to store each Form Record on the file system.
+First you'll see how the [default storage adapter](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) saves form records in the Liferay DXP database as JSON content. Then you'll add logic to store each Form Record on the file system.
 
 ## Examine a Running DDM Storage Adapter
 
@@ -75,7 +74,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 ## Understand the Extension Point
 
-The example contains only one class: `R2F1DDMStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The deployed example currently just wraps the the default JSON implementation: `DDMJSONStorageAdapter`. Later, you'll add file system storage to the code that's already here.
+The example contains only one class: `R2F1DDMStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The deployed example currently just wraps the default JSON implementation: `DDMJSONStorageAdapter`. Later, you'll add file system storage to the code that's already here.
 
 ### Register the Adapter Class with the OSGi Container
 
@@ -120,10 +119,7 @@ public DDMStorageAdapterSaveResponse save(
     throws StorageException;
 ```
 
-Each method must return a
-_DDMStorageAdapter[[Save](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterSaveResponse.java)/[Get](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterGetResponse.java)/[Delete](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterDeleteSaveResponse.java)]Response_
-object, constructed using a static inner `Builder` class's `newBuilder`
-method.
+Each method must return a _DDMStorageAdapter[[Save](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterSaveResponse.java)/[Get](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterGetResponse.java)/[Delete](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/storage/DDMStorageAdapterDeleteSaveResponse.java)]Response_ object, constructed using a static inner `Builder` class's `newBuilder` method.
 
 All methods are passed a `DDMStorageAdapter[Save/Delete/Get]Request`. The request objects contain getter methods that return useful contextual information.
 
@@ -158,7 +154,7 @@ private DDMContentLocalService _ddmContentLocalService;
 private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
 ```
 
-### Create  Logger
+### Create a Logger
 
 Create a logger for the class and set it in a `_log` variable:
 
@@ -166,6 +162,8 @@ Create a logger for the class and set it in a `_log` variable:
 private static final Log _log = LogFactoryUtil.getLog(
     R2F1DDMStorageAdapter.class);
 ```
+
+This will be used to add some log messages each time one of the CRUD methods is invoked.
 
 ### Implement File Deletion
 
@@ -182,6 +180,10 @@ private static final Log _log = LogFactoryUtil.getLog(
        File file = new File(_PATHNAME + "/" + fileId);
 
        file.delete();
+
+       if (_log.isWarnEnabled()) {
+        _log.warn("Deleted file with the ID " + fileId);
+       }
    }
    ```
 
@@ -191,10 +193,6 @@ private static final Log _log = LogFactoryUtil.getLog(
     long fileId = ddmStorageAdapterDeleteRequest.getPrimaryKey();
 
     _deleteFile(fileId);
-
-    if (_log.isWarnEnabled()) {
-        _log.warn("Deleted file with the ID " + fileId);
-    }
    ```
 
 Now the code first deletes the file from the file system before it deletes the copy in the database.
@@ -247,6 +245,10 @@ There are two types of save requests: 1) a new record is added or 2) an existing
 
            FileUtil.write(
                _PATHNAME, abstractFile.getName(), serializedDDMFormValues);
+
+           if (_log.isWarnEnabled()) {
+               _log.warn("Saved a file with the ID" + fileId);
+           }
        }
        catch (IOException e) {
            throw new IOException(e);
@@ -283,14 +285,10 @@ There are two types of save requests: 1) a new record is added or 2) an existing
 
     _saveFile(fileId, ddmStorageAdapterSaveRequest.getDDMFormValues());
 
-    if (_log.isWarnEnabled()) {
-        _log.warn("Saved a file with the ID" + fileId);
-    }
-
     return jsonStorageAdapterSaveResponse;
    ```
 
-   The `_jsonStorageAdapter.save` call is made first, so that a Primary Key is created for the form entry. This is retrieved from the `Response` object to create the `fielId`.
+   The `_jsonStorageAdapter.save` call is made first, so that a Primary Key is created for a new form entry. This Primary Key is retrieved from the `Response` object to create the `fielId`.
 
 ## Deploy and Test the Storage Adapter
 
