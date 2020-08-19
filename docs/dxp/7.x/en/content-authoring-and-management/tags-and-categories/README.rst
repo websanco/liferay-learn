@@ -1,15 +1,13 @@
 Tags and Categories
 ===================
 
-User Guide
-----------
-
 * Tagging Content
 * Defining Categories for Content
 * Targeted Vocabularies
+* Geolocating Assets
 
-Geolocating Assets
-~~~~~~~~~~~~~~~~~~
+Auto Tagging
+------------
 
 * Configuring Asset Auto Tagging
 * Auto Tagging Images

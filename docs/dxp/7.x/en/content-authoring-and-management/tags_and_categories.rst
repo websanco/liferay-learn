@@ -3,9 +3,9 @@ Tags and Categories
 .. toctree::
    :maxdepth: 4
 
-   05-tags-and-categories/user_guide.rst
-   05-tags-and-categories/developer_guide.rst
-   05-tags-and-categories/apis.rst
+   tags-and-categories/user_guide.rst
+   tags-and-categories/developer_guide.rst
+   tags-and-categories/apis.rst
 
-.. include:: /content-authoring-and-management/05-tags-and-categories/README.rst
+.. include:: /content-authoring-and-management/tags-and-categories/README.rst
    :start-line: 2

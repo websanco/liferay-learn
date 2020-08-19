@@ -1,5 +1,5 @@
-Geolocating Assets
-==================
+Auto Tagging
+============
 
 * Configuring Asset Auto Tagging
 * Auto Tagging Images
