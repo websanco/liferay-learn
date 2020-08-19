@@ -9,10 +9,10 @@ Project administrators connect data sources to the project, manage project users
 To learn about connecting and managing data sources:
 
 * [Managing Data Sources](../getting-started/connecting-data-sources/managing-data-sources.md)
-* [Connecting Liferay DXP Sites to Analytics Cloud](../getting-started/connecting-data-sources/connecting-liferay-dxp-sites-to-analytics-cloud.md)
+* [Connecting Liferay DXP Sites to Analytics Cloud](../getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
 * [Connecting Salesforce](../individuals-and-segments/individual-profiles/adding-a-salesforce-data-source.md)
 * [Importing CSV Data](../individuals-and-segments/individual-profiles/adding-a-csv-data-source.md)
-* [Tracking Sites Using Properties](../getting-started/connecting-data-sources/tracking-sites-using-properties.md)
+* [Tracking Sites Using Properties](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.md)
 
 ## Managing Project Users
 
