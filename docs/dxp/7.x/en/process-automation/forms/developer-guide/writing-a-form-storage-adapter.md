@@ -139,7 +139,7 @@ Find the `@Component` declaration and change the type property to `file-system`.
 ```
 
 ```note::
-   The ``json-wrapper`` and ``file-system`` keys added here are localized into the values `JSON Wrapper` and `File System` by the ``src/main/resources/content/Language.properties`` file and the ``Provide-Capability`` header in the ``bnd.bnd`` file.
+   The ``json-wrapper`` and ``file-system`` keys are localized into the values `JSON Wrapper` and `File System` by the ``src/main/resources/content/Language.properties`` file and the ``Provide-Capability`` header in the ``bnd.bnd`` file.
 ```
 
 ## Declare the Service Dependencies
@@ -173,7 +173,7 @@ This will be used to add some log messages each time one of the CRUD methods is 
    private static final String _PATHNAME = "/opt/liferay/form-records";
    ```
 
-1. Create a `_deleteFile` utility method (use the `java.io.File` class here):
+1. Create a `_deleteFile` utility method (import the `java.io.File` class):
 
    ```java
    private void _deleteFile(long fileId) {
@@ -218,7 +218,7 @@ You'll follow the same procedure for the `get` method: create a private utility 
 	}
     ```
 
-   Import `com.liferay.portal.kernel.FileUtil`.
+   Import `com.liferay.portal.kernel.FileUtil` and `java.io.IOException`.
 
 1. In the overridden `get` method (inside the `try` block), insert the following immediately before the `return` statement, setting the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and calling the `_getFile` utility method which prints the retrieved content to the Liferay log.
 
@@ -255,6 +255,8 @@ There are two types of save requests: 1) a new record is added or 2) an existing
        }
    }
     ```
+
+   Import `com.liferay.dynamic.data.mapping.storage.DDMFormValues`.
 
 1. Create a `_serialize` utility method to convert the `DDMFormValues` object to JSON:
 
