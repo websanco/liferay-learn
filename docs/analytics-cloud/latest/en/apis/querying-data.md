@@ -4,8 +4,9 @@ The root endpoint of Liferay Analytics Cloud is <https://analytics.liferay.com/a
 
 ```
 curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/reports
-The following response should be returned:
 ```
+
+The following response should be returned:
 
 ```json
 {
