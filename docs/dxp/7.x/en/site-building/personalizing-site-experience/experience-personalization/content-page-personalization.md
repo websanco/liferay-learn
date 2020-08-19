@@ -47,6 +47,16 @@ From here you have three options:
   Creating new Segments from the New Experience interface is available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.
 ```
 
+## Content Page Personalization and A/B Testing
+
+When you [create an A/B Test](../ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one, or any other you have created.
+
+To avoid changes in the Experience that can interfere with the A/B Test results, you cannot edit an Experience that is part of a running A/B Test.
+
+![You cannot edit Experiences that are part of a running A/B Test](./content-page-personalization/images/05.png)
+
+For more information about A/B Testing in Liferay DXP and Liferay Analytics, see [A/B Testing](../ab-testing/ab-testing.md).
+
 ## Related Information
 
 * [Personalizing Collections](./personalizing-collection.md)
