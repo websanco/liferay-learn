@@ -58,7 +58,7 @@ There are three configurations listed under _SYSTEM SCOPE_:
 
 ### Systems Images Resolutions
 
-Normally, Adaptive Media choose the best image based on the closet dimensions. The System Images Resolution settings overrides its own heuristics and whichever specified image here will be used.
+Normally, Adaptive Media choose the best image based on the closet dimensions. The System Images Resolution settings overrides its own heuristics and whichever specified image here will be used. Enter the ID generated (for example: _Preview-1000_).
 
 ![Access the System Settings](./adaptive-media-configuration-reference/images/09.png)
 
