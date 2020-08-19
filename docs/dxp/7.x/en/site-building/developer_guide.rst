@@ -1,5 +1,6 @@
-Developer Guide
-===============
+<<<<<<< HEAD
+Site Building Developer Guide
+=============================
 
 .. toctree::
    :maxdepth: 3

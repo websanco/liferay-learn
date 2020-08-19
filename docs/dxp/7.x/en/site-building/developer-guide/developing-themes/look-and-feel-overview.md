@@ -8,7 +8,9 @@ You can create a Theme, create a Themelet, or customize the look and feel of ind
 
 ## Themes
 
-Themes use standard components (CSS, JavaScript, and HTML) along with FreeMarker templates for rendering. There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](./reference/installing-the-theme-generator-reference.md) to create the required files and structure you need to get started developing a Theme.
+Themes use standard components (CSS, JavaScript, and HTML) along with FreeMarker templates for rendering. Themes are built on top of either the *Unstyled* base Theme (provides basic markup, functions, and images for Liferay DXP) or the *Styled* base Theme (inherits from the Unstyled base Theme and adds some styling on top).
+
+There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](../reference/installing-the-theme-generator-reference.md) to create the required files and structure you need to get started developing a Theme.
 
 ### Theme Components
 
@@ -18,7 +20,7 @@ Theme templates, along with the CSS, can provide much of the overall look and fe
 * **Configurable Theme Settings:** Administrators can configure aspects of a Theme that change frequently, such as the visibility of certain elements, changing a daily quote, etc. <!--See the [Configurable Theme Settings tutorial](TODO) for more information.-->
 * **Context Contributor:** Exposes Java variables and functionality for use in FreeMarker templates. This allows non-JSP templating languages in themes, widget templates, and any other templates. <!--See the [Context Contributors tutorial](TODO) for more information.-->
 * **Theme Contributor:** A package containing independent UI resources (CSS and JavaScript), not attached to a Theme, that you want to include on every page. The Control Menu, Product Menu, and Simulation Panel are included inside Theme Contributors because they are required for every page, regardless of what Theme is currently applied. To modify them, you must create your own Theme Contributor to override the default styles and behavior. <!--See the [Theme Contributors tutorial](TODO) for more information.-->
-* **Themelet:** Small, extendable, and reusable pieces of code containing CSS and JavaScript. They can be shared with other developers to provide common components for Themes. See [Developing Themelets](./developing-themelets) for more information.
+* **Themelet:** Small, extendable, and reusable pieces of code containing CSS and JavaScript. They can be shared with other developers to provide common components for Themes. See [Developing Themelets](./developing-themelets.md) for more information.
 
 ### CSS Frameworks and Extensions
 

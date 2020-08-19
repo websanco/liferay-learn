@@ -2,61 +2,78 @@
 
 Themes are packaged WAR files composed of CSS, HTML (FreeMarker), and JavaScript that can be used to create a custom look and feel for pages.
 
-```note::
-   Starting with Liferay DXP 7.1+, the overall design of `Content Pages <../../creating-pages/building-and-managing-content-pages/content-pages-overview.md>`_ can be accomplished with `Page Fragments <../../displaying-content/using-fragments/page-fragments-intro.md>`_. Starting with Liferay DXP 7.3+ users can define the common elements of a page (Header and Footer) in the `Master Page Template <../../creating-pages/defining-headers-and-footers-with-master-pages/master-page-templates-intro.md>`_ .
-```
+Here, you'll learn how to develop a Theme with the Liferay JS Themes Toolkit:
 
-![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/01.png)
-
-You can create your own Theme in a few steps:
-
-1. Generate the Theme.
-1. Build the base files.
-1. Customize the CSS.
-1. Customize the Theme templates.
-1. Customize the JavaScript.
-1. Build the Theme's WAR file and copy it to the Docker container.
+1. [Deploy a Theme](#deploy-a-theme)
+1. [Modify the Theme and Redeploy](#modify-the-theme-and-redeploy)
 
 This example uses a Docker image with a fresh install of Liferay DXP.
 
-> This example runs on Liferay DXP 7.3+
+## Deploy a Theme
 
-## Generate the Theme
+First, deploy an example to see what a Theme looks like:
 
-1. Install the [Liferay Theme Generator](./reference/installing-the-theme-generator-reference.md), if it's not installed.
-1. Run the Liferay Theme Generator and follow the prompts to create the Theme. The example Theme is based on the Classic Theme, created with this command:
+1. Run the command below to start the Docker container:
 
     ```bash
-    yo liferay-theme:classic
+    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-    ```note::
-      The ``liferay-theme:classic`` sub-generator is available for Liferay DXP 7.2+ in v9.50+ of the Liferay Theme Generator.
+1. Download and unzip the [example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip) and install its dependencies:
+
+    ```bash
+    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip
+    
+    unzip liferay-g4t8.zip
+    cd liferay-g4t8
+    npm install
     ```
+
+1. Build the Theme's WAR.
+
+    ```bash
+    cd pastel-purple-theme
+    npm run build
+    ```
+
+1. Copy the Theme's WAR to the Docker container:
+
+    ```bash
+    cd dist
+    docker cp pastel-purple-theme-1.0.0.war docker-container-name:/opt/liferay/osgi/war
+    ```
+
+1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
+
+    ```bash
+    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED pastel-purple-theme_1.0.0 [1141]
+    ```
+
+1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
+
+1. Scroll down and click the *Change Current Theme* button, and click the Pastel Purple Theme thumbnail next to the Classic Theme.
+
+    ![The Pastel Purple Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
+
+1. Click *Save* to apply the changes, and go back to the home page.
+
+    ![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/02.png)
+
+Great! You successfully deployed and applied a Theme.
+
+## Theme Breakdown
+
+The Purple Pastel Theme was created with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](./reference/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
+
+```bash
+yo liferay-theme:classic
+```
 
 ```note::
-  Since Liferay DXP Fix Pack 2 and Liferay Portal 7.2 CE GA2, Font Awesome is available globally as a system setting, which is enabled by default. If you're using Font Awesome icons in your theme, answer yes (y) to the Font Awesome question in v9.x.x generator to include Font Awesome imports in your theme. This ensures that your icons won't break if they are disabled in the global setting.
+  The ``liferay-theme:classic`` sub-generator is available for Liferay DXP 7.2+ in v9.50+ of the Liferay JS Themes Toolkit.
 ```
 
-## Build the Base Files
-
-Run the build script for your Liferay JS Toolkit version. If you're unsure of your version run `npm list -g generator-liferay-theme` from your command line to print it.
-
-**v9.5.0+:**
-
-```bash
-npm run build
-```
-
-**Older versions:**
-
-```bash
-node_modules\.bin\gulp build
-```
-
-## Customize the CSS
-
-Add custom CSS to the Theme's `/src/css/_custom.scss` file. The example below changes the background color of the Header and updates the font color of the navigation links. Styles are condensed by using `Sass <https://sass-lang.com/>`_ , as demonstrated by the nested styles in the example code.
+Custom CSS in `_custom.scss` changes the background color of the Header and Footer and updates the font color of the navigation links. Styles are condensed with the [Sass](https://sass-lang.com/) syntax, as demonstrated by the nested styles in the CSS below:
 
 ```scss
 body header .navbar-classic {
@@ -68,21 +85,13 @@ body header .navbar-classic {
     }
   }
 }
-```
-
-This updates the Footer's background color to match the Header:
-
-```css
+...
 body #footer {
 	background-color: #9EB1F5;
 }
 ```
 
-![You can completely customize the page's styling with the Theme.](./developing-a-theme/images/03.png)
-
-## Customize the Theme Templates
-
-Add your HTML markup customizations to the Theme templates in the `/src/templates/` folder. If this folder doesn't exist, you must create it. Copy the Theme templates from the `/build/templates/` folder to the `/src/templates/` folder to modify them. The example below adds a new button to the Header beside the User Personal Bar in `portal_normal.ftl`:
+A new button is added to the Header's markup beside the User Personal Bar in `portal_normal.ftl`:
 
 ```markup
 ...
@@ -96,62 +105,52 @@ Add your HTML markup customizations to the Theme templates in the `/src/template
 ...
 ```
 
-## Customize the JavaScript
-
-Add custom JavaScript to the generated `/src/js/main.js` file. If this folder doesn't exist, you must create it. You can copy the `main.js` file from the `/build/js/` folder to get started. The example prints a message in the browser's console when the Theme is loaded on the page:
+Custom JavaScript in the `main.js` file prints a message in the browser's console when the Theme is loaded on the page:
 
 ```javascript
 console.log('My Theme is loaded to the page.');
 ```
 
-## Build the Theme's WAR File and Copy it to the Docker Container
+## Modify the Theme and Redeploy
 
-You can download and unzip this [example Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip) if you want to deploy it or compare your code at this point:
+To update the Theme you just have to modify the code and redeploy.
+
+1. Open the Theme's `portal_normal.ftl` template to modify the page's HTML markup.
+1. Remove the button markup in the Header shown below and save the file:
+
+    ```markup
+    <div class="ml-3 autofit-col">
+      <button name="Alert Button" onclick="alert('You pushed the button.')" class="btn btn-primary">Alert</button>
+    </div>
+    ```
+
+1. Build the Theme's WAR as you did before.
 
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-theme/liferay-g4t8.zip
-    
-    unzip liferay-g4t8.zip
     cd liferay-g4t8
-    npm install
-    ```
-
-1. Start the Docker container:
-
-    ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
-    ```
-
-1. Build the Theme's WAR.
-
-    ```bash
-    cd my-theme-project
     npm run build
     ```
 
-1. Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
+1. Copy the Theme's WAR to the Docker container:
 
     ```bash
-    cp my-liferay-theme-1.0.0.war path/to/your/bind/mount
+    cd dist
+    docker cp pastel-purple-theme-1.0.0.war docker-container-name:/opt/liferay/osgi/war
     ```
 
-    ```note::
-    You must restart the Docker container if you're creating the `[host_folder]/deploy` folder for the first time in your bind mount.
-    ```
-
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
+1. Confirm the deployment to the Liferay Docker container console:
 
     ```bash
-    INFO [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED my-liferay-theme_1.0.0 [1114]
+    INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:46] STARTED pastel-purple-theme_1.0.0 [1141]
     ```
 
-1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Components*, and select the *Themes* tab.
+1. Refresh the home page to view the changes.
 
-    ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/02.png)
+![You can completely customize the page's styling with the Theme.](./developing-a-theme/images/03.png)
 
-Great! You successfully built and deployed a custom Theme.
+Congratulations! Now you know how to develop and deploy a Theme to Liferay DXP with the Liferay JS Themes Toolkit.
 
 ## Related Information
 
-* [Apply a New Theme](TODO:applying-themes)
-* [Installing the Theme Generator](./installing-the-theme-generator.md)
+* [Installing the Theme Generator](../reference/themes/installing-the-theme-generator-reference.md)
+* [Theme Development Workflow](../reference/themes/liferay-js-themes-toolkit-theme-development-workflow.md)
