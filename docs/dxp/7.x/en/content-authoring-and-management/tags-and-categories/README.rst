@@ -1,17 +1,17 @@
 Tags and Categories
 ===================
 
-* Tagging Content
-* Defining Categories for Content
-* Targeted Vocabularies
-* Geolocating Assets
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/tagging-content`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/defining-categories-for-content`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/targeted-vocabularies`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/geolocating-assets`
 
 Auto Tagging
 ------------
 
-* Configuring Asset Auto Tagging
-* Auto Tagging Images
-* Auto Tagging Assets
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/auto-tagging/configuring-asset-auto-tagging`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/auto-tagging/auto-tagging-assets`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/auto-tagging/auto-tagging-images`
 
 Developer Guide
 ---------------
