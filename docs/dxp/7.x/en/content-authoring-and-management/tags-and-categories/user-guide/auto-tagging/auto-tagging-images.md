@@ -102,5 +102,4 @@ If you have more than one virtual instance, you can configure each instance indi
 ## Additional Information
 
 * [Configuring Asset Auto Tagging](./configuring-asset-auto-tagging.md)
-* [Auto Tagging Text](./auto-tagging-text.md)
-* [Auto Tagging Web Content](./auto-tagging-web-content.md)
+* [Auto Tagging Assets](./auto-tagging-assets.md)

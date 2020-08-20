@@ -1,12 +1,10 @@
-# Auto Tagging Text
+# Auto Tagging Assets
 
-Once [asset auto tagging has been enabled](./configuring-asset-auto-tagging.md), users can also configure text auto tagging. Text auto tagging automatically [tags](../tagging-content.md) text-based assets. Thus tags are applied automatically.
+Users are able to manually tag most "assets", including (but not limited to) Message Boards, Blogs, Documents, Images, and Web Content Articles. Furthermore, users are also tag assets automatically when they are created. Tags applied automatically are in only English.
 
-```tip::
-   Currently, text auto tagging is only available for text-based documents, text-based web content, and blog entries. Tags applied automatically are English only.
-```
+However, auto tagging is only available for text-based documents, text-based web content, and blog entries. You can also auto tagging images; see [Auto Tagging Images](./auto-tagging-images.md) to learn more.
 
-By default, Text Auto Tagging is disable by default. Users must enable Auto Tagging in DXP and then enable a text auto tagging provider. Lastly, they must choose the asset types they want to auto tag. There are two text auto-tagging providers in DXP:
+By default, Text Auto Tagging is disabled by default. Users must [enable Auto Tagging](./configuring-asset-auto-tagging.md) in DXP and then enable a text auto tagging provider. Lastly, they must choose the asset types they want to auto tag. There are two text auto-tagging providers in DXP:
 
 * **Google Cloud Natural Language Text Auto Tagging**: Uses the [Google Cloud Natural Language API](https://cloud.google.com/natural-language/) to analyze and automatically tag content.
 
@@ -23,11 +21,11 @@ Follow these steps:
 1. Click the _Global Menu_ &rarr; _Control Panel_
 1. Click _System Settings_.
 
-    ![Navigate to the System Settings.](./auto-tagging-text/images/01.png)
+    ![Navigate to the System Settings.](./auto-tagging-assets/images/01.png)
 
 1. Click _Assets_ under _Content and Data_.
 
-    ![Click on Assets.](./auto-tagging-text/images/02.png)
+    ![Click on Assets.](./auto-tagging-assets/images/02.png)
 
 1. Under _VIRTUAL INSTANCE SCOPE_, click _Google Cloud Natural Language Text Auto Tagging_.
 1. Enter the following information:
@@ -44,7 +42,7 @@ Follow these steps:
 
     * **Enable Google Cloud Natural Language Text Auto Tagging For:** The asset types to enable text auto tagging for. Select _Document_, _Blogs Entry_, or _Web Content Article_. To add multiple asset types, click the _Add_ icon (![Add](../../../../images/icon-add.png)) and select the asset type from the menu. You can delete any additional asset types by clicking the Trash icon (![Trash](../../../../images/icon-trash.png)).
 
-    ![Enter your settings.](./auto-tagging-text/images/03.png)
+    ![Enter your settings.](./auto-tagging-assets/images/03.png)
 
 1. Click _Save_ when finished.
 
@@ -59,14 +57,14 @@ Follow these steps to use OpenNLP:
 1. Click the _Global Menu_ &rarr; _Control Panel_
 1. Click _System Settings_.
 1. Click _Assets_ under _Content and Data_.
-1. Under *VIRTUAL INSTANCE SCOPE*, click *OpenNLP Text Auto Tagging*.
+1. Under _VIRTUAL INSTANCE SCOPE_, click _OpenNLP Text Auto Tagging_.
 1. Enter the following values:
 
     * **Confidence Threshold:** Set the minimum confidence threshold (from 0 to 1, where 1 is the highest confidence) above which tags will be applied. Higher values yield fewer tags because the provider needs more confidence before it applies a tag. Likewise, lower values yield more tags.
 
     * **Enable OpenNLP Text Auto Tagging For:** The asset types to enable text auto tagging for. Use the menu to select _Document_, _Blogs Entry_, or _Web Content Article_. To add multiple asset types, click the _Add_ icon (![Add](../../../../images/icon-add.png)) and select the asset type from the menu. You can delete any additional asset types by clicking the Trash icon (![Trash](../../../../images/icon-trash.png)).
 
-    ![Enter your settings.](./auto-tagging-text/images/04.png)
+    ![Enter your settings.](./auto-tagging-assets/images/04.png)
 
 1. Click _Save_ when finished.
 
@@ -76,6 +74,4 @@ If there are multiple virtual instances on the server, users can override these 
 
 ## Additional Information
 
-* [Auto Tagging Documents](./auto-tagging-documents.md)
 * [Auto Tagging Images](./auto-tagging-images.md)
-* [Auto Tagging Web Content](./auto-tagging-web-content.md)
