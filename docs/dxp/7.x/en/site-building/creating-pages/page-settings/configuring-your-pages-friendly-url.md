@@ -1,6 +1,6 @@
 # Configuring Your Page's Friendly URL
 
-With Liferay DXP, you can set user and SEO friendly URLs for each Page of your Site. These URLs can help users easily understand and recall your Page's address while providing key information to search engines and other tools crawling your Site.
+With Liferay DXP, you can set friendly URLs for each Page of your Site. These URLs can help users easily understand and recall your Page's address while providing key information to search engines and other tools crawling your Site.
 
 When you create a Site Page, a friendly URL is automatically generated to match the Page's name, though you can change it at any time. Liferay DXP also maintains a history of previously used URLs for a Page to prevent broken links and provide an easy way to revert changes.
 
@@ -12,7 +12,7 @@ To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder
 
 Alternatively, you can access individual Page settings by navigating to the Page you want to customize and clicking on the *Configure Page* button (![Configure Page Button](../../../images/icon-cog.png)) at the top right of the *Application Bar*.
 
-In the General tab, use the *Friendly URL* field to enter a new URL for the Page. If you would like to set a localized URL, click on the *Language Flag* and select your desired language. When finished, click *Save*.
+In the General tab, use the *Friendly URL* field to enter a new URL for the Page. To set a localized URL, click on the *Language Flag* and select your desired language. When finished, click *Save*.
 
 ![Use the Friendly URL field to set a Page's custom URL.](./configuring-your-pages-friendly-url/images/02.png)
 
@@ -26,7 +26,7 @@ The value entered in this field is appended to its [Site URL](./../../site-setti
 
 Liferay DXP maintains a list of all friendly URLs used for a Page. This means that when you change a friendly URL, old URLs remain associated with your Page to prevent broken links, unless manually removed. For Page requests using an old URL, Liferay provides a redirect to the browser (or other consumer) pointing to the active friendly URL.
 
-To view and manage the full list of URLS associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. YOu can also click on the *Language Flag* button to view set URLs for other languages.
+To view and manage the full list of URLS associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. You can also click on the *Language Flag* button to view set URLs for other languages.
 
 ![View a Page's friendly URL History by language.](./configuring-your-pages-friendly-url/images/03.png)
 
