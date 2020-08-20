@@ -6,15 +6,9 @@ Once [asset auto tagging has been enabled](./configuring-asset-auto-tagging.md),
    Currently, text auto tagging is only available for text-based documents, text-based web content, and blog entries. Tags applied automatically are English only.
 ```
 
-Text auto tagging is disabled by default. To enable Text Auto Tagging:
+By default, Text Auto Tagging is disable by default. Users must enable Auto Tagging in DXP and then enable a text auto tagging provider. Lastly, they must choose the asset types they want to auto tag. There are two text auto-tagging providers in DXP:
 
-* Ensure that [asset auto tagging](./configuring-asset-auto-tagging.md) is enabled. Although it's enabled by default, administrators can disable it.
-
-* Ensure that a text auto tagging provider is configured and enabled for the asset types you want to auto tag.
-
-There are two text auto-tagging providers in the portal:
-
-* **Google Cloud Natural Language Text Auto Tagging**: Uses the [Google Cloud Natural Language API](https://cloud.google.com/natural-language/) to analyze and automatically tag portal content.
+* **Google Cloud Natural Language Text Auto Tagging**: Uses the [Google Cloud Natural Language API](https://cloud.google.com/natural-language/) to analyze and automatically tag content.
 
 * **OpenNLP Text Auto Tagging**: Uses the open source [Apache OpenNLP](https://opennlp.apache.org/) library to analyze and automatically tag portal content. Three models are used: location name finder, organization finder, and person name finder.
 
