@@ -1,7 +1,7 @@
 Managing User Data (GDPR)
 ========================
 
-Liferay's User Associated Data (UAD) framework was developed to assist you in meeting two of GDPR's technically challenging requirements:
+Liferay's User Associated Data (UAD) framework was developed to assist you in meeting two of the General Data Protection Regulation's (GDPR) technically challenging requirements:
 
 - The `right to data portability`: `Exporting User Data <./managing-user-data/exporting-user-data.md>`__
 - The `right to be forgotten`: `Sanitizing User Data <./managing-user-data/sanitizing-user-data.md>`__
@@ -14,3 +14,4 @@ Liferay's User Associated Data (UAD) framework was developed to assist you in me
 
    managing-user-data/exporting-user-data.md
    managing-user-data/sanitizing-user-data.md
+   managing-user-data/configuring-the-anonymous-user.md

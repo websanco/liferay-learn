@@ -1,12 +1,8 @@
 # Exporting User Data
 
-User Management practices must account for the EU's General Data Protection Regulation. One of its tenets is that Users have a right to _data portability_.
+One of the General Data Protection Regulation's (GDPR) tenets is that Users have a right to _data portability_.
 
 Data portability means that a User has the right to receive their personal data in a machine-readable format.
-
-```note::
-   Personal data export can help companies in their attempts to satisfy the requirements of GDPR. Using the export tool described here provides no guarantee of compliance with any GDPR requirement. Each company or individual whose website processes user personal data and is under the jurisdiction of GDPR must carefully determine the precise steps necessary to ensure they are fully compliant with GDPR.
-```
 
 The Control Panel's User Management system now natively supports the export of a User's personal data to a ZIP file for download. The data format for the files containing the data is XML.
 
@@ -18,21 +14,21 @@ To export user data,
 
 1. Go to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*.
 
-1. Find the User and click the Actions button (![Actions](./exporting-user-data/images/icon-actions.png)), then click *Export Personal Data*.
+1. Find the User and click the Actions button (![Actions](../../images/icon-actions.png)), then click *Export Personal Data*.
 
    This opens the User's Export Personal Data screen.
 
-1. If there are no existing export processes shown, there's only one thing to do: click the *Add* button (![Add](./exporting-user-data/images/icon-add.png)). The tool for exporting the User's data appears.
+1. If there are no existing export processes shown, there's only one thing to do: click the *Add* button (![Add](../../images/icon-add.png)). The tool for exporting the User's data appears.
 
-   ![The Export Personal Data tool lets you export all or some of the User's data.](./exporting-user-data/images/users-export-data.png)
+   ![The Export Personal Data tool lets you export all or some of the User's data.](./exporting-user-data/images/01.png)
 
 1. Most of the time you want to export all the available data. Click *Select Items*, and all applications containing User data are selected in the UI.
 
 1. Click *Export*. You're taken back to the User's Export Personal Data screen, but now there's an export process in the list.
 
-   ![Once User data is successfully exported, the export process is displayed in the User's Export Personal Data list.](./exporting-user-data/images/users-export-processes.png)
+   ![Once User data is successfully exported, the export process is displayed in the User's Export Personal Data list.](./exporting-user-data/images/02.png)
 
-1. Download the data. Click the Actions button (![Actions](./exporting-user-data/images/icon-actions.png)) for the process and select *Download*.
+1. Download the data. Click the Actions button (![Actions](../../images/icon-actions.png)) for the process and select *Download*.
 
 ## Examining Exported Data
 
@@ -80,6 +76,6 @@ In this example, User Jane Slaughter made a Message Boards Message post, and her
 
 This actually corresponds with a comment on a Blogs Entry:
 
-![A Comment on a blog post is User Associated Data.](./exporting-user-data/images/users-mbmessage.png)
+![A Comment on a blog post is User Associated Data.](./exporting-user-data/images/03.png)
 
 Exporting User data informs Site owners and Users about how much personal data the sight may have.
