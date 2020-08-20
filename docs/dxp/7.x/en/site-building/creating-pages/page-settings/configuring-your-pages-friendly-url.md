@@ -6,11 +6,11 @@ When you create a Site Page, a friendly URL is automatically generated to match 
 
 ## Changing a Page's Friendly URL
 
-To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](./../images/../../../images/icon-staging-bar-options.png)) for the Page you want to customize, and select *Configure*.
+To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](../../../images/icon-staging-bar-options.png)) for the Page you want to customize, and select *Configure*.
 
 ![Figure 1: Click on the Actions button for the Page you want to customize, and select Configure](./configuring-your-pages-friendly-url/images/01.png)
 
-Alternatively, you can access individual Page settings by navigating to the Page you want to customize and clicking on the *Configure Page* button ( ![Configure Page Button](./../../../images/icon-cog.png) ) at the top right of the *Application Bar*.
+Alternatively, you can access individual Page settings by navigating to the Page you want to customize and clicking on the *Configure Page* button (![Configure Page Button](../../../images/icon-cog.png)) at the top right of the *Application Bar*.
 
 In the General tab, use the *Friendly URL* field to enter a new URL for the Page. If you would like to set a localized URL, click on the *Language Flag* and select your desired language. When finished, click *Save*.
 
@@ -26,15 +26,15 @@ The value entered in this field is appended to its [Site URL](./../../site-setti
 
 Liferay DXP maintains a list of all friendly URLs used for a Page. This means that when you change a friendly URL, old URLs remain associated with your Page to prevent broken links, unless manually removed. For Page requests using an old URL, Liferay provides a redirect to the browser (or other consumer) pointing to the active friendly URL.
 
-To view and manage the full list of URLS associated with a Page, click on the *History* icon ( ![Friendly URL History icon](./configuring-your-pages-friendly-url/images/icon-history.png) ). This opens a modal window that displays the Page's active and old URLs for the selected language. YOu can also click on the *Language Flag* button to view set URLs for other languages.
+To view and manage the full list of URLS associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. YOu can also click on the *Language Flag* button to view set URLs for other languages.
 
 ![Figure 3: View a Page's friendly URL History by language.](./configuring-your-pages-friendly-url/images/03.png)
 
 From here, you can hover over an old URL to reveal the following options:
 
-**Restore URL**: If you want to replace the active URL with an old one, click on the *Restore URL* button ( ![Restore icon](./configuring-your-pages-friendly-url/images/icon-restore2.png) ) for the URL you want to make active.
+**Restore URL**: If you want to replace the active URL with an old one, click on the *Restore URL* button (![Restore icon](../../../images/icon-restore2.png)) for the URL you want to make active.
 
-**Forget URL**: If you no longer want a friendly URL associated with a Page, click on the *Forget URL* button ( ![Delete icon](./configuring-your-pages-friendly-url/images/icon-delete.png) ). When users attempt to access the Page using a forgotten URL, the link breaks and Liferay renders a “Not found” message.
+**Forget URL**: If you no longer want a friendly URL associated with a Page, click on the *Forget URL* button (![Delete icon](../../../images/icon-delete.png)). When users attempt to access the Page using a forgotten URL, the link breaks and Liferay renders a “Not found” message.
 
 ![Figure 4: Hover over an old URL to reveal the Restore and Forget options.](./configuring-your-pages-friendly-url/images/04.png)
 
