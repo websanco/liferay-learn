@@ -1,9 +1,9 @@
 # Copying an Existing Theme's Files
 
-Unlike extending a base Theme, which overlays your `src` files on top of the base Theme on every build, the `kickstart` task is a one-time overlay. 
+Unlike extending a base Theme, which overlays your `src` files on top of the base Theme on every build, the `kickstart` task is a one-time overlay.
 
 ```warning::
-  The gulp kickstart task copies an existing Theme's files into your own, which can potentially overwrite files with the same name. Proceed with caution.
+  The ``gulp kickstart`` task copies an existing Theme's files into your own, which can potentially overwrite files with the same name. Proceed with caution.
 ```
 
 1. Navigate to your Theme's root folder and run the `kickstart` task.
@@ -26,7 +26,7 @@ Unlike extending a base Theme, which overlays your `src` files on top of the bas
 1. Select where to search for the Theme to copy. You can copy files from globally installed Themes or Themes published on the npm registry.
 
     ```note::
-      You can't kickstart the Classic Theme. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands>`_ instead.
+      You can't kickstart the Classic Theme. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../../../../developing-applications/tooling/other-tools/theme-generator.md>`_ instead.
     ```
 
     ```note::

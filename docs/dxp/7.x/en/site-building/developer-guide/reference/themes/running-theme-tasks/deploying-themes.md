@@ -1,6 +1,6 @@
 # Deploying Themes
 
-1. Navigate to your Theme's root folder and run the `deploy` task. The `deploy` task initially runs the [`build`](./building-themes.md) task: 
+1. Navigate to your Theme's root folder and run the `deploy` task. The `deploy` task initially runs the [`build`](./building-themes.md) task:
 
     ```bash
     C:\Users\liferay\Desktop\projects\marketing-theme>npm run deploy
@@ -22,7 +22,7 @@
     ```
 
     ```note::
-      If you're running the `Felix Gogo shell <../../../../../../liferay-internals/fundamentals/using-felix-gogo-shell.md>`_ , you can also deploy your Theme using the `gulp deploy:gogo` command.
+      If you're running the `Felix Gogo shell <../../../../../liferay-internals/fundamentals/using-felix-gogo-shell.md>`_ , you can also deploy your Theme using the `gulp deploy:gogo` command.
     ```
 
 1. Your server's log displays that the OSGi bundle is started.

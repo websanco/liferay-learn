@@ -14,10 +14,10 @@
     ? What kind of theme asset would you like to extend?
       1) Base theme
       2) Themelet
-      Answer: 1 
+      Answer: 1
     ```
 
-1. By default, Themes created with the [Liferay Theme Generator](https://github.com/liferay/generator-liferay-theme) are based on the [styled Theme](https://www.npmjs.com/package/liferay-theme-styled). You can extend the styled or unstyled base Theme, a globally installed Theme, a Theme published on the npm registry, or you can specify a package URL. Enter the number for the option you wish to select. 
+1. By default, Themes created with the [Liferay Theme Generator](https://github.com/liferay/generator-liferay-theme) are based on the [styled Theme](https://www.npmjs.com/package/liferay-theme-styled). You can extend the styled or unstyled base Theme, a globally installed Theme, a Theme published on the npm registry, or you can specify a package URL. Enter the number for the option you wish to select.
 
     ```note::
       You can retrieve the URL for a package by running ``npm show package-name dist.tarball``.
@@ -34,7 +34,7 @@
     ```
 
     ```note::
-      The Classic Theme implements an existing base Theme and is therefore not meant to be extended. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands>`_ instead.
+      The Classic Theme implements an existing base Theme and is therefore not meant to be extended. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../../../../developing-applications/tooling/other-tools/theme-generator.md>`_ instead.
     ```
 
 Your Theme's `package.json` contains the updated base Theme configuration:

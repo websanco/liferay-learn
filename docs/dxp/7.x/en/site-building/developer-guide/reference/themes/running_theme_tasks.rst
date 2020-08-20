@@ -1,25 +1,17 @@
-Reference
-=========
+Running Theme Tasks
+===================
 
 .. toctree::
    :maxdepth: 3
 
-   reference/fragments.rst
-   reference/themes.rst
-
-Fragments
-~~~~~~~~~
-
--  :doc:`/site-building/developer-guide/reference/fragments/fragments-toolkit-command-reference`
--  :doc:`/site-building/developer-guide/reference/fragments/page-fragment-editor-interface-reference`
--  :doc:`/site-building/developer-guide/reference/fragments/fragment-configuration-types-reference`
--  :doc:`/site-building/developer-guide/reference/fragments/fragment-specific-tags-reference`
-
-Themes
-~~~~~~
-
-Running Theme Tasks
--------------------
+   running-theme-tasks/running-theme-tasks.md
+   running-theme-tasks/building-themes.md
+   running-theme-tasks/deploying-themes.md
+   running-theme-tasks/changing-the-base-theme.md
+   running-theme-tasks/configuring-your-themes-app-server.md
+   running-theme-tasks/previewing-theme-changes.md
+   running-theme-tasks/copying-an-existing-themes-files.md
+   running-theme-tasks/listing-your-themes-extensions.md
 
 -  :doc:`/site-building/developer-guide/reference/themes/running-theme-tasks/running-theme-tasks`
 -  :doc:`/site-building/developer-guide/reference/themes/running-theme-tasks/building-themes`
