@@ -4,7 +4,7 @@ One of the General Data Protection Regulation's (GDPR) tenets is that Users have
 
 Data portability means that a User has the right to receive their personal data in a machine-readable format.
 
-The Control Panel's User Management system now natively supports the export of a User's personal data to a ZIP file for download. The data format for the files containing the data is XML.
+The Control Panel's User Management system natively supports the export of a User's personal data to a ZIP file for download. The data format for the data files is XML.
 
 ## Exporting and Downloading
 
@@ -78,4 +78,4 @@ This actually corresponds with a comment on a Blogs Entry:
 
 ![A Comment on a blog post is User Associated Data.](./exporting-user-data/images/03.png)
 
-Exporting User data informs Site owners and Users about how much personal data the sight may have.
+Exporting User data informs Site Owners and Users about how much personal data the Site may have.

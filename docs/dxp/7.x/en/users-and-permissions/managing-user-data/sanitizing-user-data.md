@@ -1,23 +1,23 @@
 # Sanitizing User Data
 
-One of the technically challenging requirements of the General Data Protection Regulation (GDPR) is _the right to be forgotten_. The purpose of this article is not to go into the details of this requirement, but to show you two pieces of functionality that can assist you in satisfying the requirement:
+One of the technically challenging requirements of the General Data Protection Regulation (GDPR) is _the right to be forgotten_. The purpose of this article is not to go into the details of this requirement, but to show you two pieces of functionality that can assist you in satisfying the requirement: Personal Data Erasure and Data Anonymization
 
-- Personal Data Erasure 
-- Data Anonymization
-
-Being _forgotten_ by software is removing the ability for even administrative Users to glean information that could lead to knowing the identity of the User whose personal data was erased.
+Being _forgotten_ by software is removing the ability for even administrative Users to glean information that could lead to knowing the identity of the User whose personal data was erased or anonymized.
 
 Conceptually, forgetting a User means two things, at a minimum:
 
-* Erasing the User's identifying information from the system. In Liferay DXP, this  entails removing the User from database tables and search indexes.
+* Erasing the User's identifying information from the system. In Liferay DXP, this entails removing the User from database tables and search indexes.
 * Erasing or anonymizing content the User has interacted with so it cannot be tracked to a real person.
 
-_Isn't User deactivation and deletion enough?_
-Deleting removes the User from the table of Users in the database. The User's information is preserved in other locations, however. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User by the system's identifiers (User ID and User Name) and still appears in the UI next to the content. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added.
+``` tip::
+   `Isn't User deactivation and deletion enough?`
+
+   Deleting removes the User from the table of Users in the database. The User's information is preserved in other locations, however. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User by the system's identifiers (User ID and User Name) and still appears in the UI next to the content. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added.
+```
 
 ## The Personal Data Erasure Screen
 
-Whether deleting or anonymizing, to begin sanitizing a User's data,
+User data deletion and anonymization both happen in the same place: the Personal Data Erasure screen:
 
 1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and go to Control Panel &rarr; Users &rarr; Users and Organizations.
 
