@@ -1,6 +1,6 @@
 # Developing Themelets
 
-Themelets are small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. 
+Themelets are small, extendable, and reusable CSS and JavaScript for extending Themes. You can share them with other developers to provide common components for Themes. 
 
 Here, you'll learn how to develop a Themelet with the Liferay JS Themes Toolkit:
 
@@ -25,7 +25,7 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip
     ```
-    
+ 
     ```bash
     unzip liferay-m2t6.zip
     ```
@@ -45,7 +45,7 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     cd liferay-m2t6/m2t6-impl/acme-tooltips-themelet
     ```
-    
+
     ```bash
     npm link
     ```
@@ -55,7 +55,7 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     cd liferay-m2t6/m2t6-impl/liferay-m2t6-theme
     ```
-    
+ 
     ```bash
     npm run extend
     ```
@@ -81,15 +81,15 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
       Answer: 1
     ```
 
-1. Highlight the `acme-tooltips-themelet` Themelet, press spacebar to select it, and press *Enter* to install it.
+1. Highlight the `acme-tooltips-themelet` Themelet, press space to select it, and press *Enter* to install it.
 
     ```bash
     ? Select a themelet
     >(*) acme-tooltips-themelet
     ```
-    
+
     The extend task completes with the output below:
-    
+
     ```bash
     + acme-tooltips-themelet@1.0.0
     added 1 package and audited 6174 packages in 4.252s
@@ -103,9 +103,9 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     npm run build
     ```
-    
+
     Verify in the output that the Themelet's CSS is injected in the Theme:
-    
+
     ```bash
     [12:01:13] Starting 'build:themelets'...
     [12:01:13] Starting 'build:themelet-src'...
@@ -124,7 +124,7 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     cd dist
     ```
-    
+
     ```bash
     docker cp liferay-m2t6-theme.war docker-container-name:/opt/liferay/osgi/war
     ```
@@ -176,9 +176,10 @@ The Themelet changes the look of the tooltips with the CSS in the `_custom.scss`
 
 ## Extend the Theme with a New Themelet
 
-Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet to extend the Theme in just a few steps that prints to the console whether the Theme is being viewed on Desktop or Mobile.
+Themes can have mutliple Themelet extensions. Here's how to add a new Themelet that prints to the console whether the Theme is being viewed on Desktop or Mobile:
 
-1. [Install the Theme Generator](../reference/installing-the-theme-generator-reference.md) and run the [Themelet sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands) with the command below:
+1. Make sure you're in the `m2t6-impl` folder where the other projects are. 
+1. If you have not done so already, [Install the Theme Generator](../reference/installing-the-theme-generator-reference.md) and run the [Themelet sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands) with the command below:
 
     ```bash
     yo liferay-theme:themelet
@@ -192,18 +193,8 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
       7.2
       Any 
     ```
-    
+
 1. Create a `/src/main.js` file in the Themelet and add the code below to it:
-
-    ```bash
-    cd platform-console-logger-themelet
-    ```
-    
-    ```bash
-    touch main.js
-    ```
-
-    Add the code below to the `main.js` file:
 
     ```javascript
     AUI().ready(
@@ -223,7 +214,7 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
     ```bash
     cd platform-console-logger-themelet
     ```
-    
+
     ```bash
     npm link
     ```
@@ -233,7 +224,7 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
     ```bash
     cd liferay-m2t6-theme
     ```
-    
+
     ```bash
     npm run extend
     ```
@@ -259,7 +250,7 @@ Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet
     ```bash
     cd dist
     ```
-    
+
     ```bash
     docker cp liferay-m2t6-theme.war docker-container-name:/opt/liferay/osgi/war
     ```

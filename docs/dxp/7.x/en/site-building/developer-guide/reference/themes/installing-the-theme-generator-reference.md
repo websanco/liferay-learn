@@ -15,7 +15,7 @@ The steps below show how to install the Liferay Theme Generator for your develop
     | 7.2.x | 10.15.1 |
     | 7.3.x | 10.15.1 |
 
-    For instance, Liferay Portal 7.2 supports [v10.15.1](https://nodejs.org/download/release/v10.15.1/). Make sure to properly [set up your npm environment](./setting-up-your-npm-environment-reference.md).
+    For instance, Liferay Portal 7.3 supports [v10.15.1](https://nodejs.org/download/release/v10.15.1/). Make sure to properly [set up your npm environment](./setting-up-your-npm-environment-reference.md).
 
     ```note::
       Gulp 4 and Node v12 are supported in Liferay JS Themes Toolkit v10.x.x. Unless you have a reason not to switch to 10.x.x (e.g. you need to migrate custom gulp tasks from 3 to 4), you should use version 10.x.x. 
@@ -31,7 +31,7 @@ The steps below show how to install the Liferay Theme Generator for your develop
       In Liferay JS Themes Toolkit v7.x.x and v8.x.x, Gulp is included as a local dependency in generated themes, so you aren't required to install it. It can be accessed by running ``node_modules\.bin\gulp`` followed by the Gulp task from a generated theme's root folder. In v9.5.0+ the gulp tasks are available as npm scripts and can be run as ``npm run [command]``.
     ```
 
-1. Install the Liferay Theme Generator with the command that matches the Liferay Portal version you want to develop on:
+1. Install the Liferay Theme Generator with the command that matches the Liferay DXP version you're using:
 
     | Liferay Version | Liferay Theme Generator Version | Command |
     | --- | --- | --- |
@@ -40,7 +40,7 @@ The steps below show how to install the Liferay Theme Generator for your develop
     | 7.1 | 8.x.x | `npm install -g generator-liferay-theme@8.x.x` |
     | 7.2 | 9.x.x or 10.x.x | `npm install -g generator-liferay-theme@9.x.x` |
     | 7.3 | 9.x.x or 10.x.x | `npm install -g generator-liferay-theme@10.x.x` |
-    
+ 
     See [compatibility](https://github.com/liferay/liferay-js-themes-toolkit#compatibility) for more information.
 
     If you're on Windows, follow the instructions in step 4 to install Sass.

@@ -10,14 +10,14 @@ You can create a Theme, create a Themelet, or customize the look and feel of ind
 
 Themes use standard components (CSS, JavaScript, and HTML) along with FreeMarker templates for rendering. Themes are built on top of either the *Unstyled* base Theme (provides basic markup, functions, and images for Liferay DXP) or the *Styled* base Theme (inherits from the Unstyled base Theme and adds some styling on top).
 
-There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](../reference/installing-the-theme-generator-reference.md) to create the required files and structure you need to get started developing a Theme.
+There are several [default FreeMarker templates](#theme-building-utilities) that each handle a key piece of functionality for the page. There are also [Theme template utilities](#theme-building-utilities) that let you use widgets, taglibs, Theme objects, and more in your Theme templates. You can use the [Theme Generator](../reference/installing-the-theme-generator-reference.md) to create the required files and structure for developing a Theme.
 
 ### Theme Components
 
 Theme templates, along with the CSS, can provide much of the overall look and feel for the page, but additional extension points/customizations are available for Themes. These extensions and mechanisms are available for Themes:
 
-* **Color Schemes:** Specifies configurable color scheme settings Administrators can configure via the Look and Feel menu. <!--See the [color scheme tutorial](TODO) for more information.-->
-* **Configurable Theme Settings:** Administrators can configure aspects of a Theme that change frequently, such as the visibility of certain elements, changing a daily quote, etc. <!--See the [Configurable Theme Settings tutorial](TODO) for more information.-->
+* **Color Schemes:** Specifies configurable color scheme settings Administrators can configure via the Look and Feel menu. See [color schemes](../../customizing-configuration-settings/creating-color-schemes-for-your-theme.md) for more information.
+* **Configurable Theme Settings:** Administrators can configure aspects of a Theme that change frequently, such as the visibility of certain elements, changing a daily quote, etc. See [Configurable Theme Settings](../../customizing-configuration-settings/adding-configurable-theme-settings.md) for more information.
 * **Context Contributor:** Exposes Java variables and functionality for use in FreeMarker templates. This allows non-JSP templating languages in themes, widget templates, and any other templates. <!--See the [Context Contributors tutorial](TODO) for more information.-->
 * **Theme Contributor:** A package containing independent UI resources (CSS and JavaScript), not attached to a Theme, that you want to include on every page. The Control Menu, Product Menu, and Simulation Panel are included inside Theme Contributors because they are required for every page, regardless of what Theme is currently applied. To modify them, you must create your own Theme Contributor to override the default styles and behavior. <!--See the [Theme Contributors tutorial](TODO) for more information.-->
 * **Themelet:** Small, extendable, and reusable pieces of code containing CSS and JavaScript. They can be shared with other developers to provide common components for Themes. See [Developing Themelets](./developing-themelets.md) for more information.
@@ -34,7 +34,7 @@ The default FreeMarker templates provide helpful utilities and handle key pieces
 
 * `portal_normal.ftl`: Similar to a static site's `index.html`, this file is the hub for all the Theme templates and provides the overall markup for the page.
 * `init.ftl`: Contains variables commonly used throughout the Theme templates. Refer to it to look up Theme objects. <!--For convenience, the [FreeMarker Variable Reference Guide](TODO) lists the objects.--> **DO NOT override this file**.
-* `init_custom.ftl`: Used to override FreeMarker variables in `init.ftl` and to define new variables, such as [Theme settings](TODO).
+* `init_custom.ftl`: Overrides FreeMarker variables in `init.ftl` and to define new variables, such as [Theme settings](../../customizing-configuration-settings/adding-configurable-theme-settings.md).
 * `portlet.ftl`: Defines the markup for the Theme's widgets. If your Theme uses Portlet Decorators, modify this file to create application decorator-specific Theme settings.
 * `navigation.ftl`: Contains the navigation markup. To customize pages in the navigation, you must use the `liferay.navigation_menu` macro. Then you can leverage widget templates for the navigation menu. Note that `navigation.ftl` also defines the hamburger icon and `navbar-collapse` class that provides the simplified navigation toggle for mobile viewports, as shown in the snippet below for the Classic Theme:
 
