@@ -1,23 +1,23 @@
 # Specifying Dependencies
 
-Compiling a module and deploying it to Liferay requires satisfying the module's external dependencies. After [finding dependency artifacts](../finding-artifacts.md), you must [declare them as dependencies](https://docs.gradle.org/current/userguide/declaring_dependencies.html) in your Gradle build file. Liferay includes many artifacts whose [packages](../../reference/exported-third-party-packages.md) are available at run time. If you depend on other artifacts, you must deploy them manually. Here you'll find dependency configuration steps and examples.
+Compiling a module and deploying it to Liferay requires satisfying the module's external dependencies. After [finding dependency artifacts](../finding-artifacts.md), you must declare them as dependencies in your Gradle build file. Liferay includes many artifacts whose [packages](../../reference/exported-third-party-packages.md) are available at run time. If you depend on other artifacts, you must deploy them manually. Here you'll find dependency configuration steps and examples.
 
 ## Configuring Dependencies
 
 Here's how to configure dependencies:
 
-1. In your Gradle build file (e.g., `build.Gradle`), declare a `dependencies` set, if one doesn't already exist.
+1. In your Gradle build file (e.g., `build.Gradle`), [declare a `dependencies` set](https://docs.gradle.org/current/userguide/declaring_dependencies.html), if one doesn't already exist.
 
     ```groovy
     dependencies {
     }
     ```
 
-1. Add a dependency for each artifact your module requires. Use the [`compileOnly` configuration](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management) and specify these artifact attributes:
+1. To add Liferay, OSGi, and Bnd dependencies, use the [`compileOnly` configuration](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_plugin_and_dependency_management) and specify these artifact attributes:
 
-    * Group
-    * Name (Artifact ID)
-    * Version
+    * `group`
+    * `name` (artifact ID)
+    * `version`
 
     Here are dependencies for Bnd Lib and Liferay's Journal API.
 
@@ -30,31 +30,22 @@ Here's how to configure dependencies:
     ```
 
     ```important::
-       Make sure to use artifact versions compatible with your Liferay product version.
+       Make sure to use artifact versions compatible with your `Liferay product version <./finding-artifacts.md>`_.
     ```
 
-    Use the `compileOnly` scope initially and adjust scope as needed.
+1. For all other dependencies, use the `compileInclude` configuration.
 
-1. Deploy your module and check for unsatisfied package dependencies by browsing the logs or using [Gogo Shell commands](../using-the-gogo-shell.md).
+    `compileIndlude` bundles the dependency JAR, and transitive dependency JARs, with your module. The `com.liferay.plugin` Gradle plugin provides the `compileInclude` configuration and is available in [Workspace](../../../developing-applications/tooling/liferay-workspace.md).
 
-1. If there are unsatisfied dependencies on Liferay modules or third party modules, deploy them and check if your module resolves. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
+1. Deploy your module and check for unsatisfied package dependencies, by using [Gogo Shell commands](../using-the-gogo-shell.md) or browsing the logs.
 
-1. If there are unsatisfied dependencies on third party libraries (not modules), please see [Resolving Third Party Library Dependencies](./resolving-third-party-library-dependencies.md) for guidance in resolving them.
+1. If you have unsatisfied dependencies, resolve them:
 
-Next, there is a table that shows dependency suggestions for various scenarios.
+    **For module dependencies,** deploy such modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
 
-## Dependency Scenario Examples
+    **For library dependencies,** follow the instructions at [Resolving Third Party Library Dependencies](./resolving-third-party-library-dependencies.md).
 
-The following table describes several different example dependency scenarios.
-
-| Example Artifact | OSGi Module? | Liferay Artifact? | Deployment Method | Notes |
-| :--------------- | :---------- | :---------------- | :---------------- | :-------------- |
-| [Liferay Journal API](https://docs.liferay.com/dxp/apps/journal/latest/javadocs/) | yes | yes | Bundled with Liferay | Use `compileOnly` scope |
-| [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) | yes | yes | Deployed separately | Use `compileOnly` scope |
-| [BndTools](https://bnd.bndtools.org/) [Bnd Lib](https://search.maven.org/search?q=a:biz.aQute.bndlib) | yes | no | Deployed separately | Use `compileOnly` scope |
-| [Apachi Shiro](https://shiro.apache.org/) [Shiro Core](https://search.maven.org/search?q=a:shiro-core) | no  | no  | Deployed separately or in the project | Please see [Resolving Third-Party Library Dependencies](./resolving-third-party-library-package-dependencies.md) |
-
-Nice! You know how to specify artifact dependencies. Now that's a skill you can depend on!
+Nice! Specifying dependencies is a skill you can depend on!
 
 ## Additional Information
 
