@@ -1,6 +1,6 @@
 # Third Party Packages that Liferay Exports
 
-Liferay provides over one-hundred third party Java packages at run time. Liferay's `com.liferay.portal.bootstrap` module exports the packages by specifying individual packages explicitly and groups of packages using globs. For example, here is an excerpt from [7.3.4-ga5](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/core/portal-bootstrap/system.packages.extra.bnd)'s `Export-Package` declaration:
+Liferay provides over one-hundred third party Java packages at run time. The `com.liferay.portal.bootstrap` module exports the packages by specifying individual packages explicitly and groups of packages using globs. For example, here is an excerpt from [7.3.4-ga5](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/core/portal-bootstrap/system.packages.extra.bnd)'s `Export-Package` declaration:
 
 ```groovy
 Export-Package:\
@@ -36,7 +36,7 @@ Export-Package:\
 
 Multiple packages are specified using wild card characters, such as `*` in `org.aspectj.*`. Groups of packages, such as `org.objectweb.asm*` packages and `org.slf4j*` packages are separated by lines that have the `\` character only.
 
-Exporting the same package from different JARs leads to "split package" issues, whose side affects differ from case to case. Therefore, refrain from deploying JARs that have the same packages that Liferay exports.
+Exporting the same package from different JARs leads to "split package" issues. This can cause problems difficult to define. Therefore, refrain from deploying JARs that have the same packages that Liferay exports.
 
 Here's how to make sure a project has required packages at compile time but relies on Liferay for its exported packages at run time.
 
