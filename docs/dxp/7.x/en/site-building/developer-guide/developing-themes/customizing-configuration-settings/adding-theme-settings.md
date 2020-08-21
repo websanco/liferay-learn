@@ -1,4 +1,4 @@
-# Adding Theme Settings to Your Theme
+# Adding Theme Settings
 
 Theme Settings define configurable options (such as whether elements are visible) that can be changed without requiring the Theme to be manually updated and redeployed. They can be set from inside Liferay DXP, or they can be static (set when the Theme is created) and hold a value that you can reference. You can create a Theme Setting in just a few steps:
 
@@ -22,7 +22,9 @@ First, install an existing Theme with Theme Settings to see how they work:
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/adding-configurable-theme-settings/liferay-t6s3.zip
-    
+    ```
+
+    ```bash
     unzip liferay-t6s3.zip
     ```
 
@@ -30,31 +32,30 @@ First, install an existing Theme with Theme Settings to see how they work:
 
     ```bash
     cd liferay-t6s3
+    ```
+
+    ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to Docker with ``docker cp t6s3-impl\marketing-theme\dist\marketing-theme.war [docker-container-name]:/opt/liferay/osgi/modules`` directly if deployment fails.
+       If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to Docker with ``docker cp t6s3-impl\marketing-theme\dist\marketing-theme.war [docker-container-name]:/opt/liferay/osgi/modules`` directly if deployment fails.
     ```
 
-1. Confirm the deployment to the Liferay Docker container console: 
+1. Confirm the deployment to the Liferay Docker container console:
 
     ```bash
     INFO  [fileinstall-/opt/liferay/osgi/modules][BundleStartStopLogger:39] STARTED marketing-theme_1.0.0 [2294]
     ```
 
-1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
+1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../../images/icon-control-menu-gear.png)) next to Public Pages.
 
 1. Scroll down and click the *Change Current Theme* button, and select the Marketing Theme thumbnail next to the Classic Theme.
 
-    ![The Marketing Theme is listed in the Theme selector.](./creating-a-color-scheme/images/01.png)
-
 1. Click *Save* to apply the changes, and go back to the Home Page to see what the Marketing Theme looks like with the default look and feel.
 
-    ![The default Marketing Theme looks like the Classic Theme.](./creating-a-color-scheme/images/02.png)
-
     ```note::
-      You can also configure Theme Settings for an individual `Content Page <../../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#look-and-feel>`_ or `Widget Page <../../../creating-pages/page-settings/configuring-page-sets.md#look-and-feel>`_ to override the default configuration.
+       You can also configure Theme Settings for an individual `Content Page <../../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#look-and-feel>`_ or `Widget Page <../../../creating-pages/page-settings/configuring-page-sets.md#look-and-feel>`_ to override the default configuration.
     ```
 
 1. Go back to the Public Pages configuration, toggle the *Show Footer* setting to *No*, and click *Save* to apply the changes.
@@ -170,18 +171,21 @@ The variable is used in the Theme's `portal_normal.ftl` template to determine wh
     </#if>
     ```
 
-1. rebuild and redeploy the updated Theme:
+1. Rebuild and redeploy the updated Theme:
 
     ```bash
     cd liferay-t6s3
+    ```
+
+    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to Docker with ``docker cp t6s3-impl\marketing-theme\dist\marketing-theme.war docker-container-name:/opt/liferay/osgi/modules`` directly if deployment fails.
+       If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to Docker with ``docker cp t6s3-impl\marketing-theme\dist\marketing-theme.war docker-container-name:/opt/liferay/osgi/modules`` directly if deployment fails.
     ```
 
-1. Open your browser to `https://localhost:8080`, open the Product Menu, and go to *Site Builder* &rarr; *Pages*. Click the gear icon. 
+1. Open your browser to `https://localhost:8080`, open the Product Menu, and go to *Site Builder* &rarr; *Pages*. Click the gear icon.
 
 1. Scroll down to the *Show Footer* setting, toggle it to *Yes*, and enter a value for the *footer-text* Theme Setting.
 
@@ -210,10 +214,10 @@ type="text" value="#993300"
 </setting>
 ```
 
-Try it out and see how it works! 
+Try it out and see how it works!
 
 ## Related Information
 
 * [Developing a Theme](../developing-a-theme.md)
-* [Creating a Thumbnail Preview for Your Theme](./creating-a-thumbnail-preview-for-your-theme.md)
-* [Creating Color Schemes for Your Theme](./creating-color-schemes-for-your-theme.md)
+* [Creating a Thumbnail Preview](./creating-a-thumbnail-preview.md)
+* [Creating Color Schemes](./creating-color-schemes.md)
