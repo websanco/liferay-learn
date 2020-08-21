@@ -1,36 +1,36 @@
 # Third Party Packages that Liferay Exports
 
-Liferay provides over one-hundred third party Java packages at run time. Liferay's `com.liferay.portal.bootstrap` module exports the packages by specifying individual packages explicitly and groups of packages using globs. Here are excerpts from the `Export-Package` declaration:
+Liferay provides over one-hundred third party Java packages at run time. Liferay's `com.liferay.portal.bootstrap` module exports the packages by specifying individual packages explicitly and groups of packages using globs. For example, here is an excerpt from [7.3.4-ga5](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/core/portal-bootstrap/system.packages.extra.bnd)'s `Export-Package` declaration:
 
 ```groovy
 Export-Package:\
     ...
     \
-	org.aspectj.*,\
-	\
-	org.dom4j.*;version='2.1.3',\
-	\
-	org.hibernate.*;version='3.6.10',\
-	\
-	org.jaxen.*;version='1.1.6',\
-	\
-	org.jdom.*;version='1.1.3',\
-	\
-	org.json.*;version='20180813',\
-	\
-	org.objectweb.asm;version='7.0',\
-	org.objectweb.asm.commons;version='7.0',\
-	org.objectweb.asm.signature;version='7.0',\
-	org.objectweb.asm.tree;version='7.0',\
-	org.objectweb.asm.tree.analysis;version='7.0',\
-	org.objectweb.asm.util;version='7.0',\
-	\
-	org.slf4j;version='1.7.2',\
-	org.slf4j.helpers;version='1.7.2',\
-	org.slf4j.spi;version='1.7.2',\
-	\
-	org.springframework.*;version='4.1.9',\
-	\
+    org.aspectj.*,\
+    \
+    org.dom4j.*;version='2.1.3',\
+    \
+    org.hibernate.*;version='3.6.10',\
+    \
+    org.jaxen.*;version='1.1.6',\
+    \
+    org.jdom.*;version='1.1.3',\
+    \
+    org.json.*;version='20180813',\
+    \
+    org.objectweb.asm;version='7.0',\
+    org.objectweb.asm.commons;version='7.0',\
+    org.objectweb.asm.signature;version='7.0',\
+    org.objectweb.asm.tree;version='7.0',\
+    org.objectweb.asm.tree.analysis;version='7.0',\
+    org.objectweb.asm.util;version='7.0',\
+    \
+    org.slf4j;version='1.7.2',\
+    org.slf4j.helpers;version='1.7.2',\
+    org.slf4j.spi;version='1.7.2',\
+    \
+    org.springframework.*;version='4.1.9',\
+    \
     ...
 ```
 
