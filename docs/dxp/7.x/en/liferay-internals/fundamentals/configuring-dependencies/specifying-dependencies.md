@@ -35,7 +35,23 @@ Here's how to configure dependencies:
 
 1. For all other dependencies, use the `compileInclude` configuration.
 
-    `compileIndlude` bundles the dependency JAR, and transitive dependency JARs, with your module. The `com.liferay.plugin` Gradle plugin provides the `compileInclude` configuration and is available in [Workspace](../../../developing-applications/tooling/liferay-workspace.md).
+    `compileIndlude` bundles the dependency JAR, and transitive dependency JARs, with your module. `compileInclude` comes with the `com.liferay.plugin` Gradle plugin, available in [Workspace](../../../developing-applications/tooling/liferay-workspace.md) or by applying the plugin to your `build.gradle` file, as shown below:
+
+    ```groovy
+    buildscript {
+        dependencies {
+            classpath group: "com.liferay", name: "com.liferay.gradle.plugins", version: "4.0.4"
+        }
+
+        repositories {
+            maven {
+                url "https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/"
+            }
+        }
+    }
+
+    apply plugin: "com.liferay.plugin"
+    ```
 
 1. Deploy your module and check for unsatisfied package dependencies, by using [Gogo Shell commands](../using-the-gogo-shell.md) or browsing the logs.
 
