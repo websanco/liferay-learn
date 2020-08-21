@@ -4,7 +4,7 @@ Data Providers are [REST web services](https://en.wikipedia.org/wiki/Representat
 
 ## Registered JSON Web Services
 
-Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services to serve as your data provider's service: see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for the list (assuming you're running a local server). If populating a list of countries, you'll find two `get-countries` JSON web services: either one will work. Click _Invoke_ to generate the results.
+Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services to serve as your data provider's service. If you are running a local server, see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for a list. If populating a list of countries, you'll find two `get-countries` JSON web services: either one will work. Click _Invoke_ to generate the results.
 
 The _Result_ tab shows a list of countries using JSON syntax, like this record for Afghanistan:
 
@@ -23,7 +23,7 @@ The _Result_ tab shows a list of countries using JSON syntax, like this record f
     ...
 ```
 
-Choose carefully the selectable field from the web service. For `get-countries` it's most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
+Choose the selectable field from the web service. For `get-countries` it's most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
 
 On the URL Example tab, find the URL to use when creating the data provider. It's the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
 
@@ -31,7 +31,7 @@ On the URL Example tab, find the URL to use when creating the data provider. It'
 
 ## Data Provider Configuration Reference
 
-You can configure data providers from the Forms application at _Site Administration_ &rarr; _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin. There are several fields to fill out when configuring a data provider.
+You can configure data providers from the Forms application by going to _Site Administration_ &rarr; _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin. There are several fields to fill out when configuring a data provider.
 
 ![This data service returns countries.](./data-providers-overview/images/03.png)
 
@@ -75,9 +75,9 @@ Configure path or query parameters from the REST service to filter the REST serv
 The Outputs are the Parameters to display in Select from List or Text fields with autocomplete enabled. You can add multiple Outputs. Outputs can be filtered by inputs (see above) but can also be displayed without configuring input filtering. Specify the Label, Path, and Type (Text, Number, or List).
 
 You can add multiple Inputs. To provide a way for users to specify the input value, use an
-[_Autofill_ Form Rule](../form-rules/using-the-autofill-rule.md). A User enters input into one field, and their input is sent to the REST service. The REST service's response data is filtered by the input parameter.
+[Autofill Form Rule](./form-rules/using-the-autofill-rule.md). A User enters input into one field, and their input is sent to the REST service. The REST service's response data is filtered by the input parameter.
 
-The Output Path field is specified in [JsonPath syntax](https://github.com/json-path/JsonPath/blob/master/README.md), so it must always start with a `$`. The type of data returned by the Path must match the type you choose in the Type field. Using the `restcountries.eu` service, specify the `name` field as an Output by entering enter `$..name` in the Path field. If you have a more complex JsonPath expression to construct (for example, you need the names of all countries with a population over 100 million---`$..[?(@.population>100000000)].name` with the `restcountries.eu` service), consider using a `JsonPath` evaluator, like [this one](http://jsonpath.herokuapp.com/) or [this one](https://jsonpath.com/).
+The Output Path field is specified in [JsonPath syntax](https://github.com/json-path/JsonPath), so it must always start with a `$`. The type of data returned by the Path must match the type you choose in the Type field. Using the `restcountries.eu` service, specify the `name` field as an Output by entering enter `$..name` in the Path field. If you have a more complex JsonPath expression to construct (for example, you need the names of all countries with a population over 100 million---`$..[?(@.population>100000000)].name` with the `restcountries.eu` service), consider using a `JsonPath` evaluator, like [this one](http://jsonpath.herokuapp.com/) or [this one](https://jsonpath.com/).
 
 ```tip::
    To display one value but persist another in the database, enter both into the Paths field, separated by a semicolon: ``$..name;$..numericCode``
