@@ -9,7 +9,7 @@
 This is required prior to configuring auto-tagging for specific asset types, which is documented separately:
 
 * [Auto Tagging Images](./auto-tagging-images.md)
-* [Auto Tagging Text](./auto-tagging-text.md)
+* [Auto Tagging Assets](./auto-tagging-assets.md)
 
 Auto-tagging is enabled by default. You can configure it at three levels:
 
