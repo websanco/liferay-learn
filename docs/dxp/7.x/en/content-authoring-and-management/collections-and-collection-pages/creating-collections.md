@@ -2,18 +2,6 @@
 
 You can create two different type of Collections in Liferay DXP, *Manual* or *Dynamic*.
 
-- Manual Collection
-
-    In a Manual Collection, you select the items that are part of the Collection manually. After you include the items in a Manual Collection, the items that are part of the collection do not change.
-
-    For example, you may create a Manual Collection "Success Stories" that includes several blog posts in your public website. After you create the Manual Collection, new blog post about "Success Stories" will not be part of the collection.
-
-- Dynamic Collection
-
-    In the Dynamic Collection, you define the type of items that you want to be part of the collection, but you define additional criteria for these items. The items that are part of the collection may change based on the criteria you select.
-
-    For example, you create a Collection that includes all blog posts with the tag "kitchenware". When a new blog post including the "kitchenware" tag is published, it is automatically included in your Dynamic Collection.
-
 By default, a new collection does not include a Personalized Variation and shows all the items that are part of the collection. However, you can create variations of these items using Segments. When you use Segment along with Collections, the items that are part of your collection don't change, but the items that are shown depend on the user segment. For more information, see [Customizing Collections Using Segments](./customizing-collections-using-segments.md).
 
 
