@@ -1,0 +1,47 @@
+# Embedding Widgets in Templates
+
+You can also embed widgets in web content templates. Core apps and custom apps, instanceable or non-instanceable can be embedded in web content templates. Below is an example of embedding a Language widget in FreeMarker:
+
+```markup
+<@liferay_portlet_ext["runtime"] portletName="com_liferay_portal_kernel_servlet_taglib_ui_LanguageEntry" />
+```
+
+To embed a widget:
+
+1. Navigate to your site's (the default DXP site in this example) _Site Administration_.
+1. Click _Content & Data_ &rarr; _Web Content_.
+1. Click on the _Templates_ tab.
+
+    ![The Templates tab is where all the templates are displayed.](./embedding-widgets-in-templates/images/01.png)
+
+1. Click the Add (![Add Icon](../../../../images/icon-add.png)) icon.
+1. Enter a name for the template (for example, _Template 1_)
+1. Click _Select_ from the _Properties_ section to choose the structure (for example, _Structure 1_).
+
+    ![Select a structure.](./embedding-widgets-in-templates/images/02.png)
+
+1. Paste the `<@liferay_portlet_ext["runtime"] portletName="com_liferay_portal_kernel_servlet_taglib_ui_LanguageEntry" />` in the Template Editor.
+
+    ![Select a structure.](./embedding-widgets-in-templates/images/03.png)
+
+1. Click _Save_ when finished.
+
+```important::
+   The `theme` variable is no longer injected into the FreeMarker context. For more information about why the theme variable was removed for DXP 7.0 and suggestions for updating your code, visit the `Taglibs Are No Longer Accessible via the theme Variable in FreeMarker <https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker>`_ breaking change entry.
+```
+
+## Embedding Other Templates
+
+In addition to embedding widgets in templates, you can embed a template within another template. This allows for reusable code, JavaScript library imports, scripts, or macros.
+
+Below is an example of embedding a template in FreeMarker:
+
+```markup
+<#include "${templatesPath}/[template-key]" />
+```
+
+The *Template Key* can be found when editing a previously published template.
+
+![You can find the Template Key when view the Edit page for a template.](./embedding-widgets-in-templates/images/adt-template-key.png)
+
+## Additional Information
