@@ -12,6 +12,6 @@ Upgrading involves updating configurations, Marketplace applications, and custom
 
 * [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md): Upgrading a database using the Database Upgrade Tool must be done in a non-containerized Liferay installation. After the upgrade completes, you can point a new Liferay Docker container to it. DXP environments and Portal CE environments that are complex, have larger data sets, or have many customizations should be upgraded using the Database Upgrade Tool.
 
-## What's Nextt
+## What's Next
 
 Start by reading the [Upgrade Overview](../../upgrading-liferay-dxp/upgrade-basics/upgrade-overview.md). Then if you are interested in using auto-upgrade in the new container, see [Upgrading via Docker](../../upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker.md). If your environment calls for using the Database Upgrade Tool, see [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md).
