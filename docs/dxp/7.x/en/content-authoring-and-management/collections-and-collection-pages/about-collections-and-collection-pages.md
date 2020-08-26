@@ -24,7 +24,7 @@ A Collection Page is a type of page where the content is linked to a Collection.
 
 ![You can display your Collection using a Collection Page](./about-collections-and-collection-pages/images/01.png)
 
-A Collection Display Fragment is a type of fragment that represents a Collection. As with any other Fragment in Liferay DXP, you can 
+A Collection Display Fragment is a type of fragment that shows a Collection. As with any other Fragment in Liferay DXP, you can 
 
 ![You can show the Collection's content using a Collection Display Fragment](./about-collections-and-collection-pages/images/02.png)
 
