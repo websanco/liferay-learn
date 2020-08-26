@@ -6,7 +6,7 @@ Upgrading to the new repository structure involves the use of an [upgrade script
 
 ## Preparing to Upgrade
 
-In order to upgrade to version 4.x.x of the DXP Cloud stack, your current services must be at 3.x.x. To verify your current version, locate the gradle.properties file in your repository. Before upgrading to version 4.x.x, epositories follow this structure:
+In order to upgrade to version 4.x.x of the DXP Cloud stack, your current services must be at 3.x.x. To verify your current version, locate the gradle.properties file in your repository. Before upgrading to version 4.x.x, repositories follow this structure:
 
 ```
 repository
