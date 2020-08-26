@@ -1,9 +1,9 @@
 # Embedding Widgets in Templates
 
-You can also embed widgets in web content templates. Core apps and custom apps, instanceable or non-instanceable can be embedded in web content templates. Below is an example of embedding a Language widget in FreeMarker:
+You can also embed widgets in web content templates. Core apps and custom apps, instanceable or non-instanceable can be embedded in web content templates. Below is an example of embedding a Web Content widget in FreeMarker:
 
 ```markup
-<@liferay_portlet_ext["runtime"] portletName="com_liferay_portal_kernel_servlet_taglib_ui_LanguageEntry" />
+<@liferay_portlet["runtime"] portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
 ```
 
 To embed a widget:
@@ -20,9 +20,9 @@ To embed a widget:
 
     ![Select a structure.](./embedding-widgets-in-templates/images/02.png)
 
-1. Paste the `<@liferay_portlet_ext["runtime"] portletName="com_liferay_portal_kernel_servlet_taglib_ui_LanguageEntry" />` in the Template Editor.
+1. Paste your macro (for example, `<@liferay_portlet["runtime"] portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />`) in the Template Editor. Depending on whether your portlet is instanceable, you may need to enter the portlet ID.
 
-    ![Select a structure.](./embedding-widgets-in-templates/images/03.png)
+    ![Enter the portlet macro.](./embedding-widgets-in-templates/images/03.png)
 
 1. Click _Save_ when finished.
 
@@ -45,3 +45,5 @@ The *Template Key* can be found when editing a previously published template.
 ![You can find the Template Key when view the Edit page for a template.](./embedding-widgets-in-templates/images/adt-template-key.png)
 
 ## Additional Information
+
+* [Embedding a Portlet by Portlet Name](https://help.liferay.com/hc/articles/360028746512-Embedding-a-Portlet-by-Portlet-Name)
