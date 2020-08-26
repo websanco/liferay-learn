@@ -18,7 +18,7 @@ There are two different types of Collections in Liferay DXP:
 
 ## Displaying Collections
 
-You can display collection using Collection Pages or the Collection Display Fragment.
+You can display collection using Collection Pages or a Collection Display Fragment.
 
 A Collection Page is a type of page where the content is linked to a Collection. The goal of Collection Pages is to make it easier to show and customize the Collection.
 
