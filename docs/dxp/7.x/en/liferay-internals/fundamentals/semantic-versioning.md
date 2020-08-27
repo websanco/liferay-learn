@@ -81,7 +81,5 @@ You now know the pros and cons for tracking dependencies as a range and as an ex
 ## Additional Information
 
 * [Importing Packages](./importing-packages.md)
-
 * [Exporting Packages](./exporting-packages.md)
-
 * [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
