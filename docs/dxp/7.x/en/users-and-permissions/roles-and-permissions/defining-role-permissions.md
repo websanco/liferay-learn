@@ -1,10 +1,10 @@
 # Defining Role Permissions
 
-Roles collect permissions, so when Users are given a Role, they inherit all Role's permissions. 
+Roles collect permissions, so when Users are given a Role, they inherit all Role's permissions.
 
 If you create a Role with permission to access something in the Control Panel, the *View Control Panel Menu* permission is automatically granted.
 
-To determine the permissions to carry out an action within Liferay DXP, iteration is necessary. Add one or two permissions, then test the Role to ensure the behavior you see is what you expected. As you create more Roles, you'll better understand how to combine permissions to accomplish a given task. 
+To determine the permissions to carry out an action within Liferay DXP, iteration is necessary. Add one or two permissions, then test the Role to ensure the behavior you see is what you expected. As you create more Roles, you'll better understand how to combine permissions to accomplish a given task.
 
 ```tip::
    Assigning a User to the Role and then `Impersonating the User <./../users/adding-and-managing-users.md#impersonating-users>`__ is a good way to see what permissions the User has inherited from the Role.
@@ -22,7 +22,7 @@ To define permissions for any Role in Liferay DXP,
 
 ![Define the permissions of a Role so its Users can carry out their tasks.](./understanding-roles-and-permissions/images/04.png)
 
-Of course, the bulk of the work is in choosing the permissions for the Role. Use the Search bar to find the permissions you need. 
+Of course, the bulk of the work is in choosing the permissions for the Role. Use the Search bar to find the permissions you need.
 
 ```note::
    The Roles application in the Control Panel is the main, but not the only place where permissions are configured. You can configure a Role's permissions on a resource at a more granular level. For example, you can configure permissions on a particular widget from its Permissions menu. Permissions granted or removed in the Control Panel override permissions defined at the more granular level.
@@ -77,7 +77,7 @@ You may find that a certain permission grants more or less access than what you 
 
 ## Troubleshooting: Site Roles May Require Global View Permissions
 
-A Site Role cannot, by definition, define permissions to act on entities outside the Site scope. This can be problematic when defining administrative type permissions in a custom Role. For example, if you try to duplicate the default Site Administrator Role in a Custom Site Administrator Role, you'll find that adding all the _Site and Asset Library Permissions_ &rarr; _People_ &rarr; _Membership_ permissions isn't enough to assign new members to the Site. Users that aren't already Site Members are not visible to the Custom Site Administrator. To grant the proper permissions, you need a Regular Role on top of the Site Role. To give the Regular Role view permission on the User resource (from the Define Permissions section of the Roles application, go to _Control Panel_ &rarr; _Users_ &rarr; _Users and Organizations_). Users with the Site Role and the Regular Role can now see the Users in the system and add them to the Site.
+A Site Role cannot, by definition, define permissions to act on entities outside the Site scope. This can be problematic when defining administrative type permissions in a custom Role. For example, if you try to duplicate the default Site Administrator Role in a Custom Site Administrator Role, you'll find that adding all the _Site and Asset Library Permissions_ &rarr; _People_ &rarr; _Membership_ permissions isn't enough to assign new members to the Site. Users that aren't already Site Members are not visible to the Custom Site Administrator. To grant the proper permissions, you need a Regular Role on top of the Site Role. To give the Regular Role view permission on the User resource, go to the _Define Permissions_ section of the Roles application, then _Control Panel_ &rarr; _Users_ &rarr; _Users and Organizations_). Users with the Site Role and the Regular Role can now see the Users in the system and add them to the Site.
 
 ```note::
    The built-in Site Administrator Role automatically grants permission to view Users.
