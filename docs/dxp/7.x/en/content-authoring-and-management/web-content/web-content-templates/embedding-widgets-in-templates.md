@@ -42,7 +42,7 @@ Below is an example of embedding a template in FreeMarker:
 
 The *Template Key* can be found when editing a previously published template.
 
-![You can find the Template Key when view the Edit page for a template.](./embedding-widgets-in-templates/images/adt-template-key.png)
+![You can find the Template Key when view the Edit page for a template.](./embedding-widgets-in-templates/images/04.png)
 
 ## Additional Information
 

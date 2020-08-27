@@ -12,7 +12,7 @@ When you're using DXP's template editor, you can find variables on the left side
 
 If the variable name doesn't give you sufficient information on the variable's functionality, you can hover your pointer over it for a more detailed description.
 
-![You can hover your pointer over a variable for a more detailed description.](./using-taglibs-in-templates/images/web-content-templates-create.png)
+![You can hover your pointer over a variable for a more detailed description.](./using-taglibs-in-templates/images/01.png)
 
 The interactive template editor is available for the FreeMarker, Velocity, and XSL languages. Depending on which language you select, the variable content changes so you're always adding content in the language you've chosen. Another cool feature for the template editor is the autocomplete feature. It can be invoked by typing `*${*` which opens a drop-down menu of available variables. By clicking one of the variables, the editor inserts the variable into the template editor.
 
