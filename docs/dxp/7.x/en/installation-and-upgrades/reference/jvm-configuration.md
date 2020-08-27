@@ -3,7 +3,7 @@
 Liferay DXP requires a Java JDK 8 or 11 and requires specific JVM option settings. There are also recommended settings specific to JDK 11 and recommended baseline memory settings. Here you'll learn about all of these settings and see them demonstrated in an example Tomcat script.
 
 ```note::
-   See `the Liferay DXP compatibility matrix <https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.2+Compatibility+Matrix.pdf/ed234765-db47-c4ad-7c82-2acb4c73b0f9)>`_ to choose a JDK.
+   See `the Liferay DXP compatibility matrix <https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.2+Compatibility+Matrix.pdf/ed234765-db47-c4ad-7c82-2acb4c73b0f9>`_ to choose a JDK.
 ```
 
 ## Recommended JVM Settings
@@ -29,7 +29,7 @@ WARNING: Use --illegal-access=warn to enable warnings of further illegal reflect
 WARNING: All illegal access operations will be denied in a future release
 ```
 
-These warnings are caused by a known issue ([LPS-87421](https://issues.liferay.com/browse/LPS-87421) and can be resolved by adding these JVM options:
+These warnings are caused by a known issue ([LPS-87421](https://issues.liferay.com/browse/LPS-87421)) and can be resolved by adding these JVM options:
 
 ```
 --add-opens=java.base/java.awt.font=ALL-UNNAMED
