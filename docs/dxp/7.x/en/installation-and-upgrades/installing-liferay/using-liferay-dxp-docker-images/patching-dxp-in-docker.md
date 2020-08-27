@@ -2,7 +2,7 @@
 
 Liferay [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) fix DXP issues and the Patching Tool applies the patches. On [Docker Hub](https://hub.docker.com/r/liferay/dxp), Liferay provides images pre-populated with each new [Fix Pack](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#fix-packs), [Security Fix Pack](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs), and [Service Pack](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#service-packs). Liferay also provides [Security Fix Packs](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs), [Hotfixes](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#hotfixes), and new [Patching Tool](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md) versions to install to DXP containers.
 
-| Enterprise subscription
+> Enterprise Subscription
 
 Here are the DXP container patching topics:
 
