@@ -38,6 +38,8 @@ Multiple packages are specified using wild card characters, such as `*` in `org.
 
 Exporting the same package from different JARs leads to "split package" issues. This can cause problems difficult to define. Therefore, refrain from deploying JARs that have the same packages that Liferay exports.
 
+## Relying on Liferay for Exported Packages at Run Time
+
 Here's how to make sure a project has required packages at compile time but relies on Liferay for its exported packages at run time.
 
 1. Check if packages your project requires are listed in `com.liferay.portal.bootstrap` module's export manifest. There are two ways to check:
