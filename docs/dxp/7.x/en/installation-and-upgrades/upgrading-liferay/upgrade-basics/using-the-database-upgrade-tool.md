@@ -20,14 +20,7 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
-1. Copy and merge your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
-
-    * `/license/*`: Activation keys. (Subscription)
-    * `/log/*`: Log files.
-    * `/osgi/*.config`: OSGi configuration files.
-    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
-    * Application server files: Modified scripts and configuration files.
-    * `web.xml`: Portal web application descriptor.
+1. Copy the license file (only EE version) and your [OSGi configuration files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) from your backup to the new installation.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
@@ -98,7 +91,16 @@ Now that the database upgrade is complete, test it.
 
 1. If you're upgrading to a new Liferay Docker image, point your image to the upgraded database and validate Liferay with the database. Please see [Configuring Liferay Containers](../../installing-liferay/using-liferay-dxp-docker-images/configuring-dxp-containers.md) for more information.
 
-1. Re-index the search indexes and examine the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
+1. Examine the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
+
+1. Copy and merge your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
+
+    * `/license/*`: Activation keys. (Subscription)
+    * `/log/*`: Log files.
+    * `/osgi/*.config`: OSGi configuration files.
+    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
+    * Application server files: Modified scripts and configuration files.
+    * `web.xml`: Portal web application descriptor.
 
 1. [Update the Portal properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
 
