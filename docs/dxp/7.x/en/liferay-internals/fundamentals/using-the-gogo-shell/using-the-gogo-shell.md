@@ -9,7 +9,7 @@ The Gogo shell provides a way to interact with the module framework. Among other
 
 The Control Panel is the safest, most secure way to access Gogo shell:
 
-1. Open the *Global Menu* (![icon](./using-the-gogo-shell/images/01.png)).
+1. Open the *Global Menu* (![icon](../../../images/icon-applications-menu.png)).
 
 1. Select the *Control Panel* tab.
 
@@ -32,7 +32,7 @@ The Control Panel is the safest, most secure way to access Gogo shell:
     ![The Output section shows the command result.](./using-the-gogo-shell/images/03.png)
 
 ```warning::
-   The Gogo shell is extremely powerful and can manipulate the platform's core functionality. Only grant Gogo shell access to trusted administrators. Please see `Understanding Roles and Permissions <../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_ for more information.
+   The Gogo shell is extremely powerful and can manipulate the platform's core functionality. Only grant Gogo shell access to trusted administrators. Please see `Understanding Roles and Permissions <../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_ for more information.
 ```
 
 ## Conclusion
