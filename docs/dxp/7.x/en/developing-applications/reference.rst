@@ -2,9 +2,10 @@ Reference
 =========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+
    reference/deploying-wars-wab-generator.md
    reference/jars-excluded-from-wabs.md
 
-.. include:: /developing-applications/reference/README.rst
-   :start-line: 2
+-  :doc:`/developing-applications/reference/deploying-wars-wab-generator`
+-  :doc:`/developing-applications/reference/jars-excluded-from-wabs`
