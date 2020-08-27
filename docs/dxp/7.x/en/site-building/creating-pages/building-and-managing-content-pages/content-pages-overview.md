@@ -1,6 +1,8 @@
 # Content Pages Overview
 
-The default type of page used in Liferay DXP is a Content Page. The Content Page editing UI provides access to many different drag-and-drop elements (Fragments) that are available for immediate use with minimal configuration. Continue reading to get an overview of the Content Pages UI. See [Building Content Pages](./building-content-pages.md) to jump directly in to building a Content Page.
+```note::
+   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.1 and 7.2](#liferay-dxp-7.1-and-7.2).
+```
 
 ![Using the Content Page sidebar to add elements to the page.](./content-pages-overview/images/14.png)
 
@@ -90,9 +92,49 @@ The Widgets panel list the applications and tools available out-of-the-box that 
 
 ## Contents
 
-<!-- ```note::
-   Available in Liferay DXP 7.3+
-``` -->
+The *Contents* panel provides a list of the web content that's used on the page. This includes content displayed in a widget and content mapped to content fields. Click the *Contents* button (![Contents](../../../images/icon-contents.png)) to open the *Contents* panel. From this panel, you can perform a variety of actions to edit and manage web content. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
+
+## Page Structure
+
+*Page Structure* provides a hierarchical view of the Fragments and their contents on the page. Click on a field in the page structure to highlight it on the page. Headers and Footers appear in the hierarchy as well for custom [Master Page Templates](../defining-headers-and-footers/master-page-templates.md), but they're disabled because they can only be modified from the Master Page Template.
+
+![Page Structure shows you a hierarchy of your page and contents.](./content-pages-overview/images/08.png)
+
+## Page Design Options
+
+Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-look-and-feel.png)) to change the theme or manage other options for the page. These options are further explored in [Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel).
+
+## Comments
+
+You can comment on a Page Fragment to discuss changes and collaborate. Comments are disabled by default, but Administrators can enable them. See [Using Fragment Comments](./using-fragment-comments.md) for more information.
+
+<!-- 
+####################################################
+Content from Liferay Help Center follows
+####################################################
+-->
+
+## Liferay DXP 7.1 and 7.2
+
+<!-- This content belongs to the "Content Page Management Interface" article in Liferay Help Center. -->
+
+Unlike Widget Pages, Content Pages can only be edited through the *Site 
+Builder* and cannot be edited live on the page. Any edits that you make to a 
+page are saved as a draft until you publish the page. Subsequent changes 
+after the initial publication are again saved as a draft, without affecting the 
+live page, until the page is published again. To create a Content Page,
+
+1.  Go to *Site Management* &rarr; *Site Builder* &rarr; *Pages*.
+
+2.  Click ![Add](../../../images/icon-add.png).
+
+3.  On the next page, select *Content Page* and provide a name for the page.
+
+    You will be brought to the Content Page management interface.
+ 
+    ![Figure 1: Each Content Page starts as a blank page.](./content-pages-overview/images/20.png)
+
+To edit an existing Content Page,
 
 > Available: Liferay DXP 7.3+
 

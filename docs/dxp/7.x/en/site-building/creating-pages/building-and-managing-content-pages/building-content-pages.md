@@ -1,5 +1,9 @@
 # Building Content Pages
 
+```note::
+   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.1 and 7.2](#liferay-dxp-7.1-and-7.2).
+```
+
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
 
 When you enter the Site Builder view, you can add or edit your content using two different editing modes:
@@ -195,7 +199,7 @@ Compositions can be exported/imported between sites just as any other Fragment.
 1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Section's Configuration Menu.
 1. Update the Section's *Container* setting to adjust the width styling (*Fixed Width* or *Fluid*), and update the *Padding Top* and *Padding Bottom* setting to adjust the padding for the Section container.
 
-![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/14.png)
+## Liferay DXP 7.1 and 7.2
 
 You can also configure a background image and color for a layout Section. See [Using a Background Image](#using-a-background-image) for more information.
 
