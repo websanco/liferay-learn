@@ -16,7 +16,7 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
     * `/log/*`: Log files.
     * `/osgi/*.config`: OSGi configuration files.
     * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
-    * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
+    * Application server files: Modified scripts and configuration files.
     * `web.xml`: Portal web application descriptor.
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your backup.
