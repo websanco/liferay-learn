@@ -36,7 +36,14 @@ You can associate an existing Liferay DXP Segment to you Collection, to customiz
 
 For example, you may want to show special promotions in your website for non-registered users, so you can increase the number of registrants. You create a Collection that contains all types of promotions, In this case, you create a Collection and you link the Collection to a Segment representing non-registered users. 
 
-
 For information about how to customize your collection, read [Customizing Collection Using Segments](./customizing-collections-using-segments.md)
 
-# Converting Asset Publisher Configurations to Collections ?????
+## Converting Asset Publisher Configurations to Collections
+
+In addition to create Collections directly, you can create Collections from Asset Publisher Widget (XXXX link XXXX). This option is helpful when you have already configured an Asset Publisher and you want to save and use the same configuration in other places. For more information, read [Creating Collections](./creating-collections.md#).
+
+## Related Information
+
+* [Creating Collections](./creating-collections.md)
+* [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
+* [Customizing Collections Using Segments](./customizing-collections-using-segments.md)

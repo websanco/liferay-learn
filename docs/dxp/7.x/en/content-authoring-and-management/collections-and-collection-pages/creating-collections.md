@@ -1,9 +1,6 @@
 # Creating Collections
 
-You can create two different type of Collections in Liferay DXP, *Manual* or *Dynamic*.
-
-By default, a new collection does not include a Personalized Variation and shows all the items that are part of the collection. However, you can create variations of these items using Segments. When you use Segment along with Collections, the items that are part of your collection don't change, but the items that are shown depend on the user segment. For more information, see [Customizing Collections Using Segments](./customizing-collections-using-segments.md).
-
+You can create *Manual* or *Dynamic* Collections. For more information, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
 
 ## Creating a Manual Collection
 
@@ -44,3 +41,30 @@ By default, a new collection does not include a Personalized Variation and shows
 
     - *Content Recommendation* - Enable this option to display content based on user behavior. For information about *Content Recommendation*, see [Configuring Content Recommendations](../XXXXXXXXXX/configuring-content-recommendations.md).
     - *Ordering* - Configure the order criteria for the items in the Dynamic Collection. Items in the collection appear in the order you define here.
+
+## Creating a Collection from an Asset Publisher 
+
+You can create a new Collection from an Asset Publisher widget.
+
+![You can transform an Asset Publisher widget into a Collection](./creating-collections/images/06.png)
+
+1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
+1. Select the Action button next to the Page that contains the Asset Publisher and select *Edit*.
+1. Click the *Options* button in the Asset Publisher Widget and select *Configuration*.
+
+    ![Configure the Asset Publisher Widget](./creating-collections/images/07.png)
+
+1. In the *Asset Publisher - Configuration* dialog, click the *Setup* tab and *Asset Selection* sub-tab.
+1. Scroll down and click on the *Create a Collection from this Configuration* link.
+
+    ![Configure the Asset Publisher Widget](./creating-collections/images/07.png)
+
+1. Enter the *Title* for your Collection and click *Save*.
+1. Close the *Asset Publisher - Configuration* dialog.
+1. Find your new Collection in *Site Administration* &rarr; *Site Builder* &rarr; *Collections*.
+
+## Related Information
+
+* [About Collections and Collection Pages](./about-collections-and-collection-pages.md)
+* [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
+* [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
