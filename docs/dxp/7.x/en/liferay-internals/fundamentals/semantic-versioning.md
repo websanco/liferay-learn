@@ -22,7 +22,7 @@ Following Semantic Versioning is especially important because DXP is a modular p
 
 ## Baselining Your Project
 
-Following Semantic Versioning manually seems deceptively easy. There's a sad history of good-intentioned developers updating their projects' semantic versions manually, only to find out later they made a mistake. The truth is, it's hard to anticipate the ramifications of a simple update. To avoid this, you can *baseline* your project after it has been updated. This verifies that your project obeys the Semantic Versioning rules, and can catch API changes that are not always obvious to humans. 
+Following Semantic Versioning manually seems deceptively easy. There's a sad history of good-intentioned developers updating their projects' semantic versions manually, only to find out later they made a mistake. The truth is, it's hard to anticipate the ramifications of a simple update. To avoid this, you can *baseline* your project after it has been updated. This verifies that your project obeys the Semantic Versioning rules, and can catch API changes that are not always obvious to humans.
 You can use Liferay's Baseline Gradle plugin to provide baselining capabilities. Add it to your Gradle build configuration and execute the following command:
 
 ```bash
@@ -71,7 +71,7 @@ Tracking a range of versions comes with a price. It's hard to reproduce old buil
 Tracking a dependency's exact version is safer, but less flexible. You could be limited to a specific DXP version or locked into APIs that exist only in that specific version. Your module, however, is much easier to test and has less chance for unexpected failures.
 
 ```note::
-   When specifying package versions in your ``bnd.bnd`` file, exact versions are typically specified like this: ``version="1.1.2"``. However, this syntax is technically a range; it is interpreted as [1.1.2, &#8734;). Therefore, if a higher version of the package is available, it's used instead of the version you specified. For these cases, it may be better to specify a version range for compatible versions that have been tested. If you want to specify a true exact match, the syntax is like this: ``[1.1.2]``. See the `Version Range <https://osgi.org/specification/osgi.core/7.0.0/framework.module.html#i3189032>`_ section in the OSGi specifications for more info.
+   When specifying package versions in your ``bnd.bnd`` file, exact versions are typically specified like this: ``version="1.1.2"``. However, this syntax is technically a range; it is interpreted as [1.1.2, ∞). Therefore, if a higher version of the package is available, it's used instead of the version you specified. For these cases, it may be better to specify a version range for compatible versions that have been tested. If you want to specify a true exact match, the syntax is like this: ``[1.1.2]``. See the `Version Range <https://osgi.org/specification/osgi.core/7.0.0/framework.module.html#i3189032>`_ section in the OSGi specifications for more info.
 
    Gradle uses exact versions when only one version is specified.
 ```
