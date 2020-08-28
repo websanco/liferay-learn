@@ -1,6 +1,7 @@
 # Displaying Collections
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 You can display collection using Collection Pages or a Collection Display Fragment. By default, a Collection displays all the items that are part of it. However, you can create variations of these items using Segments. For more information, see [Customizing Collections Using Segments](./customizing-collections-using-segments.md).
 
 ```note::
@@ -11,6 +12,13 @@ You can display collection using Collection Pages or a Collection Display Fragme
 
 Before displaying a Collection, you must create one. For more information, see [Creating Collections](./creating-collections.md).
 >>>>>>> 69759bf0... First draft for Displaying Collections and Collection Pages.
+=======
+You can display collection using Collection Pages or a Collection Display Fragment. By default, a Collection displays all the items that are part of it. However, you can create variations of these items using Segments. For more information, see [Customizing Collections Using Segments](./customizing-collections-using-segments.md).
+
+```note::
+   Before displaying a Collection, you must create one. For more information, see [Creating Collections](./creating-collections.md).
+```
+>>>>>>> e82c36a9... LRDOCS-8202 Third draft for Collections and Collection Pages content.
 
 ## Displaying Collections Using a Collection Page
 

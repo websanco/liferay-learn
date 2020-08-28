@@ -1,13 +1,6 @@
 # Creating Collections
 
-<<<<<<< HEAD
 You can create *Manual* or *Dynamic* Collections. For more information, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
-=======
-You can create two different type of Collections in Liferay DXP, *Manual* or *Dynamic*.
-
-By default, a new collection does not include a Personalized Variation and shows all the items that are part of the collection. However, you can create variations of these items using Segments. When you use Segment along with Collections, the items that are part of your collection don't change, but the items that are shown depend on the user segment. For more information, see [Customizing Collections Using Segments](./customizing-collections-using-segments.md).
-
->>>>>>> 1d4ec067... First draft for Creating Collections.
 
 ## Creating a Manual Collection
 
@@ -75,3 +68,4 @@ You can create a new Collection from an Asset Publisher widget.
 * [About Collections and Collection Pages](./about-collections-and-collection-pages.md)
 * [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
 * [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
+
