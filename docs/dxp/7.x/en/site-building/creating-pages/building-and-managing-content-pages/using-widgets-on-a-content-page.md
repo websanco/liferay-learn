@@ -18,7 +18,7 @@ Follow these steps to configure a Widget on a Content Page:
 1. Hover over the widget.
 1. Open the Options Menu (![Options Menu](../../../images/icon-app-options.png)) and select *Configuration*. From here, you have several options, depending on the widget.
 
-    ![You can configure widgets on Content Pages through their Options Menu.](./using-widgets-on-content-pages/images/01.png)
+    ![You can configure widgets on Content Pages through their Options Menu.](./using-widgets-on-a-content-page/images/01.png)
 
 1. Click *Save* to apply the changes.
 
@@ -35,7 +35,7 @@ Since Liferay Portal CE 7.3 GA2, you can configure permissions for widgets from 
 1. Check/uncheck the permissions for the Roles in the new window that appears.
 1. Click *Save* to apply the changes.
 
-![You can configure widget permissions on Content Pages through their Options Menu.](./using-widgets-on-content-pages/images/02.png)
+![You can configure widget permissions on Content Pages through their Options Menu.](./using-widgets-on-a-content-page/images/02.png)
 
 ```note::
   When you create a page based on a `page template <../adding-pages/creating-a-page-template.md>`_, the permissions are copied too. Permissions for a Master Page are set in the `Master Page <../defining-headers-and-footers/managing-master-pages.md>`_, not in the pages.
