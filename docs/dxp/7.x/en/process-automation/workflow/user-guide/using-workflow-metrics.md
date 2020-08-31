@@ -74,7 +74,7 @@ The Pause field is if there's an event in the workflow when time should stop cou
 
 ## Configuring the SLA Job Interval
 
-The _Check SLA Job Interval_ is the time between metrics recalculation. The default values is 1 minute. To change it,
+The time interval between metrics recalculation is called the _SLA Job Interval_. The default value is 1 minute. To change it,
 
 1. From the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)), go to the System Settings application and open the Workflow Metrics entry.
 

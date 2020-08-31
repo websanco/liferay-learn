@@ -10,7 +10,7 @@ Access more detailed reports by clicking on one of the workflow processes.
 
 The Reports UI has two main views, represented as tabs: _Dashboard_ and _Performance_.
 
-The Dashboard view is displayed by default. Included are items currently in the workflow process, even those untracked by the SLA. Untracked items include those in the paused step of the workflow and items outside the scope of the configured SLA duration.
+The Dashboard view is displayed by default. Included are items currently in the workflow process, even those untracked by the SLA. Untracked items include those that pre-date the SLA itself or those that are in the process but have not reached the step where the SLA is triggered.
 
 The Performance view shows metrics for items that have completed processing in the workflow.
 
@@ -28,7 +28,7 @@ Three valuable reports on pending items are provided in the Dashboard: the Pendi
 
 **Workload by Step:** Workload by Step shows a breakdown of the items that are in each step of the workflow process, by their SLA status (Overdue or On Time).
 
-**Workload by Assignee:** The Workload by Assignee chart shows a breakdown of the workflow process's assignees, in descending order by the number of items in their queue. This chart offers a valuable glimpse, but click the _View all Assignees_ link to see the [All Items](#viewing-all-workflow-items) view, featuring a more robust table with better filtering and search capabilities.
+**Workload by Assignee:** The Workload by Assignee chart shows a breakdown of the workflow process's assignees, in descending order by the number of items in their queue. This chart offers a valuable glimpse to identify overloaded assignees, but click the _View all Assignees_ link to see the [All Items](#viewing-all-workflow-items) view, featuring a more robust table with better filtering and search capabilities. Filtering by workflow step, for example, helps identify assignees that are overloaded and assignees that have a lighter load. Re-assigning some tasks could remove a bottleneck.
 
 ## Understanding Process Performance
 
@@ -40,17 +40,17 @@ The *Performance* tab shows metrics for items that have completed the workflow p
 
 **Completion Velocity:** A line chart displays the completion rate for the workflow process. The default display shows the number of completed workflow instances per day, for the last 30 days.
 
-The overall completion rate for the time period is displayed in the top of the chart (as _Inst/timeUnit_), while the trend-line is presented in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
+The overall throughput rate for the time period is displayed in the top of the chart (as _Inst/timeUnit_), while the trend-line is presented in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
 
 ![View the completion rate of items in a workflow process.](./workflow-metrics-reports/images/03.png)
 
-**Performance by Step:** See how many SLA breaches each step is responsible for and the step's average completion time. If the step is part of at least one SLA definition, discover how many total SLA breaches have occurred at the step and the proportion (as a percentage) of the total breaches that occurred at this step of the process.
+**Performance by Step:** See how many SLA breaches occurred at each step and the step's average completion time. If the step is part of at least one SLA definition, discover how many items had their SLA breached at the step and the proportion (as a percentage) of the total breaches that occurred at this step of the process, in comparison with all items that passed through this workflow step.
 
 ![View the performance of each workflow step.](./workflow-metrics-reports/images/04.png)
 
 To see a full view of all the step performance metrics, click _View All Steps_.
 
-**Performance by Assignee:** See each workflow assignee's average completion time and total completed tasks.
+**Performance by Assignee:** See each workflow assignee's average completion time and total completed tasks. Filtering this metric by workflow step give a fine-grained view into where an assignee's bottlenecks lie.
 
 ![View the completion rate of items in a workflow process over time.](./workflow-metrics-reports/images/05.png)
 
@@ -58,7 +58,7 @@ To see a full view of the workflow assignees, click _View All Assignees_.
 
 ## Filtering Metrics by Time
 
-The time duration for which metrics are calculated and displayed is configurable.
+The time range for which metrics are calculated and displayed is configurable.
 
 **Today**: Calculate _Inst/Hour_ from _00:00_, or _12:00 AM_, of the current day until the current time (rounded to the nearest whole hour).
 
@@ -100,7 +100,7 @@ Filter items based on whether they're Overdue, On Time, or Untracked.
 
 **On Time**: On Time items have not breached _any_ SLA deadline.
 
-**Untracked**: Untracked items are items in the workflow process that aren't currently under the purview of an SLA. The can be in a task identified as a _Pause_ in the SLA, or perhaps outside the scope of the SLA entirely, if the SLA isn't defined for the entire process (Process Begins to Process Ends in the SLA Definition screen).
+**Untracked**: Untracked items are items in the workflow process that aren't currently under the purview of an SLA. They might be in the workflow process but haven't reached the step identified as the SLA start, or they might pre-date the SLA definition entirely.
 
 ### Filtering by Process Status and Completion Period
 
