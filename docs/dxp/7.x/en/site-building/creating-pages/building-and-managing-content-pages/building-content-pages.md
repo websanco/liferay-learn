@@ -138,7 +138,7 @@ You can also specify a background image for a layout by [setting the layout styl
 1. Under the *Configuration* tab, select the *Number of Modules* (from 1 to 6) to specify the number of columns for the grid.
 1. Click *Show Gutter* to show the spacing between modules.
 
-You can adjust the columns width to create a more custom layout:
+You can adjust the columns' width to create a more custom layout:
 
 1. Click on the Row to select it. A blue dot appears between each of the columns, indicating that they can be resized.
 1. Click one of the blue dots and drag to the left or right to adjust the size of the column.
