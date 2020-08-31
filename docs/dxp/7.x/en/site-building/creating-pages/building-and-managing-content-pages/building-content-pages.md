@@ -6,43 +6,43 @@
 
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you may begin building your page by adding and configuring the various [Content Page elements](./content-pages-overview.md).
 
-When you enter the Site Builder view, you can add or edit your content using two different editing modes:
+1. Open the Product Menu and, under the Site Menu, go to *Site Builder* &rarr; *Pages* to open the Site Builder.
+1. Click the Add Page button (![Add Page](../../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
 
-* *Page Design*: Using this mode, you can edit the page design and content. This option is only available for users with permission to update the page and the page content.
-* *Content Edition*: Using this mode, you can only edit the content. This option is available for users with permission to update the page, but not the page content.
+    ![Begin by adding your new Content Page.](building-content-pages/images/01.png)
 
-The editing options available in the Content Page sidebar depend on the editing mode you choose.
+1. Select the *Blank* template or one of the exiting templates.
+1. In the *Add Page* dialog, type your page's *Name*.
+1. Alternatively, click the Actions Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
 
-![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
+    ![Edit an existing Content Page](building-content-pages/images/02.png)
 
-## Adding Elements to a Content Page
+    When you enter the Site Builder view, you can add or edit your content using two different editing modes:
+    
+    - *Page Design*: Using this mode, you can edit the page design and content. This option is only available for users with the permissions to update the page and the page content.
+    - *Content Edition*: Using this mode, you can only edit the content. This options is available for users with permission to update the page, but not the page content.
+    
+    The editing options available in the Content Page sidebar depend on the editing mode you choose.
+    
+    ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
 
-1. Enter the Site Builder view for your Content Page. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your Site's Menu.
+1. From the Content Page sidebar, select the *Fragments and Widgets* button (![Fragments and Widgets](../../../images/icon-cards2.png)) and start adding the Fragments and Widgets for your content.
 
-    ![Begin by editing your new Content Page in the Site Builder menu.](building-content-pages/images/01.png)
+    ![Add Fragments and Widgets from the Content Page sidebar](building-content-pages/images/03.png)
 
     ```note::
        New Content Pages start empty and in a *Draft* status. The page is not visible until it is published.
     ```
 
-    ![A Content Page is blank to begin with. You must add Fragments to it to build it.](./building-content-pages/images/02.png)
+1. Configure the look and content preferences of the Fragments and Widgets using the following configuration options:
 
-1. Open the Content Page sidebar and begin adding Page Fragment elements.
-
-    ![Add Fragments to the page to create the mockup you want.](./building-content-pages/images/03.png)
-
-1. Configure the editable portions of the Page Fragments to customize the look of your Content Page. Elements can be configured in some of these ways:
-
-    * [Setting a Background Color](#setting-a-background-color)
-    * [Using a Background Image](#using-a-background-image)
-    * [Editing Text](#editing-text)
-    * [Editing a Hyperlink](#editing-a-hyperlink)
-    * [Editing an Image](#editing-an-image)
+    * [Setting the Layout Style](#setting-the-layout-style)
+    * [Editing Text Inline](#editing-text-inline)
+    * [Editing Hyperlinks](#editing-hyperlinks)
+    * [Editing Images](#editing-images)
+    * [Configuring the Grid Layout](#configuring-the-grid-layout)
     * [Copying a Fragment](#copying-a-fragment)
     * [Saving a Fragment Composition](#saving-a-fragment-composition)
-    * [Configuring Section Width and Padding](#configuring-section-width-and-padding)
-    * [Configuring a Row's Columns](#configuring-a-row-s-columns)
-    * [General Configuration](#general-configuration)
     * [Mapping Content](#mapping-content)
 
     ![Modify the Fragments to display the content you want.](./building-content-pages/images/04.png)
@@ -51,111 +51,111 @@ The editing options available in the Content Page sidebar depend on the editing 
        In progress work on a Content Page is automatically saved.
     ```
 
+1. You can revert any action using the *Undo* (![Preview](../../../images/icon-undo.png)) or *Redo* (![Preview](../../../images/icon-redo.png)) buttons, or you can return to a previous version of your edits using the *History* (![Preview](../../../images/icon-time.png)) button.
+
+    ![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
+
+1. To preview your Content Page, click the *Preview* button (![Preview](../../../images/icon-preview.png)).
 1. Click the *Publish* button in the top right to make the updates available to the live page.
-
-### Content Page Editing
-
-> Available: Liferay 7.3+
-
-You can revert any action using the *Undo* (![Preview](../../../images/icon-undo.png)) or *Redo* (![Preview](../../../images/icon-redo.png)) buttons, or you can return to a previous version of your edits using the *History* (![Preview](../../../images/icon-time.png)) button.
-
-![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
-
-To preview your Content Page, click the *Preview* button (![Preview](../../../images/icon-preview.png)).
 
 ## Configuring Elements on a Content Page
 
-Many elements that can be added to a content page can be configured and customized. Clicking on an element provides a management toolbar with access to available configurations for the selected element.
+Many elements that can be added to a content page can be configured and customized. When you click on an element, the Content Page sidebar shows the available configuration options for the element.
 
-### Setting a Background Color
+### Setting the Layout Style
 
-You can set the background color of a Layout:
+You can set different style options for your Content Page layout, like background color, background image, margins, opacity, etc.
 
-1. Click the Layout to select it.
-1. Click the (![Background Color](../../../images/icon-color.png)) icon to select a color.
+1. Click the layout element you want to change.
+1. In the Content Page sidebar, under the *Styles* tab, configure the style options for your content:
 
-![You can set the background color of a Layout.](./building-content-pages/images/05.png)
+    * Content Display and Container Width
+    * Margin
+    * Padding
+    * Background and Border color
+    * Effects
+
+      ![You can set different style option for your layout.](./building-content-pages/images/05.png)
 
 ```note::
-   The available color palette can be configured by the Fragment developer. See Fragment Configuration Types for more information.
+   The available color palette can be configured by the Fragment developer. See [Fragment Configuration Types Reference](../../../site-building/developer-guide/reference/fragments/fragment-configuration-types-reference.md) for more information.
 ```
 
-### Using a Background Image
+### Editing Text Inline
 
-You can configure a background image for a Layout:
+1. Double-click the page element containing your text to enter into the edit text mode.
+1. Select the text that you want to edit.
+1. Use the inline text editor to update the text styles, typographical emphasis, alignment, and other text formatting options.
 
-1. Click on the Layout to select it.
-1. Select *Layout Background Image*, and choose the image to display.
+    ![You can modify editable text.](./building-content-pages/images/07.png)
 
-    ![Layouts have options for background color, background image, and spacing.](./building-content-pages/images/06.png)
-
-    ```note::
-       Mapping a Layout background image is available in Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+.
-    ```
-
-### Editing Text
-
-1. Click on the text that you want to edit.
-1. Replace the text if Plain text or use the inline text editor to update the Rich text styles, typographical emphasis, alignment, and list formatting.
-
-![You can modify editable text.](./building-content-pages/images/07.png)
-
-### Editing a Hyperlink
+### Editing Hyperlinks
 
 1. Click on the link, button, or image that you want to edit.
-1. Click on (![Edit](../../../images/icon-edit.png)) to edit the link text, (![Link](../../../images/icon-link.png)) to edit the link properties, or (![Map](../../../images/icon-map.png)) to edit the link mapping (described earlier).
+1. On the Content Page sidebar, under the *Link* tab, choose the options for your link:
 
-    From the Link Properties popup, you can define these link options:
-
-    *Manual:* defines a manual link or maps it to an existing content field
-
+    * *Link:* defines a manual link or maps it to an existing content field
     * *URL:* set the link's URL
     * *Target:* set the link's behavior
 
-    *From Content Field:*
+        ![You can modify editable links.](./building-content-pages/images/08.png)
+
+    When you choose the *From Content Field* option for your link, you can configure the following options:
 
     * *Content:* set the content type
-    * *Field:* set the field to display for the selected content
+    * *Field:* set the field to display for the selected content. Some of the available content fields are:
 
-    A list of some of the available content fields is shown below:
+        * Categories
+        * Tags
+        * Display Page URL
+        * Description
+        * Publish Date
+        * Summary
+        * Title
+        * Last Editor Name
+        * Author Name
+        * Basic Web Content
 
-    * Categories
-    * Tags
-    * Display Page URL
-    * Description
-    * Publish Date
-    * Summary
-    * Title
-    * Last Editor Name
-    * Author Name
-    * Basic Web Content
+    * *Target*: set where to open the linked content.
 
-![You can modify editable links.](./building-content-pages/images/08.png)
+### Editing Images
 
-### Editing an Image
+1. Click on the image you want to edit.
+1. In the Content Page sidebar, you can configure the image using three different options:
 
-1. Click on the image you want to replace.
-1. Click the (![Image Properties](../../../images/icon-edit.png)) icon.
+    * *Link*: enter the URL for your image.
+    * *Image*: select an image from your computer or from the Documents and Media library.
+    * *Mapping*: select an image by [mapping content](#mapping-content).
 
     ![Editing an image allows you to enter a URL, select an image from Documents and Media or set a link for the image.](./building-content-pages/images/09.png)
 
-1. Click *Select* to upload an image from Docs and Media or define an image URL. Click *Clear* to reset the image. You can also specify an
-image description.
+You can also specify a background image for a layout by [setting the layout style](#setting-the-layout-style) or provide a link for your image by [editing hyperlinks](#editing-hyperlinks).
 
-You can also [specify a background image for a layout](#using-a-background-image) and [provide a link for your image](#editing-a-hyperlink).
+### Configuring the Grid Layout
+
+1. Click the Grid element you want to configure.
+1. In the Content Page sidebar, under the *Styles* tab, select the style options for your content.
+1. Under the *Configuration* tab, select the *Number of Modules* (from 1 to 6) to specify the number of columns for the grid.
+1. Click *Show Gutter* to show the spacing between modules.
+
+You can adjust the columns width to create a more custom layout:
+
+1. Click on the Row to select it. A blue dot appears between each of the columns, indicating that they can be resized.
+1. Click one of the blue dots and drag to the left or right to adjust the size of the column.
+
+    ![You can adjust the spacing of columns in a Layout to create a custom Layout.](./building-content-pages/images/16.gif)
 
 ### Copying a Fragment
 
-You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save time:
+You can duplicate a Fragment (Component, Section, Row, etc.) to save time:
 
-1. Hover over the Fragment you want to copy.
-1. Click the Fragment to select it.
-1. Click the Duplicate Fragment button in the context menu that appears.
+1. Click the Fragment you want to copy.
+1. Click the Options Menu (![Image Properties](../../../images/icon-app-options.png)) for the container and select *Duplicate*.
 
-![You can duplicate Fragments on the page.](./building-content-pages/images/10.png)
+    ![You can duplicate Fragments on the page.](./building-content-pages/images/10.png)
 
 ```note::
-  Duplicated Sections and Rows appear directly below the Section or Row that is duplicated. The Fragments, mappings, and customizations are duplicated as well.
+  When you ducplicate a Fragment, you also ducplicate the mappings and customizations.
 ```
 
 ```warning::
@@ -164,76 +164,196 @@ You can duplicate a Fragment on the page (Component, Section, Row, etc.) to save
 
 ### Saving a Fragment Composition
 
-```note::
-  Available: Liferay Portal 7.3 GA3+
-```
-
 You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages:
 
-1. Click the Row or Section composition to save.
-1. Click (![Save icon](../../../images/icon-save.png)) in the context menu that appears.
+1. Click the Row or Section composition you want to save.
+1. Click the Options Menu (![Image Properties](../../../images/icon-app-options.png)) for the container and select *Save Composition*.
 
-  ![Click the Row or Section to bring up the Save Fragment composition button.](./building-content-pages/images/11.png)
+      ![Click the Row or Section to save your composition.](./building-content-pages/images/11.png)
 
-1. In the Save as Fragment dialog that appears, provide a name, optional description and thumbnail, disable/enable options for including inline content such as fragment entries (links, images, text, etc.) that have been edited and [mapped content](#mapping-content), and select the Collection where you want to save the Fragment.
+1. In the Save as Fragment dialog that appears, provide a name and other optional information:
 
-  ![Provide the information for the Fragment composition in the dialog that appears.](./building-content-pages/images/12.png)
+    * Fragment *Description* and *Thumbnail*.
+    * *Save Inline Content* option, for including inline content such as fragment entries (links, images, text, etc.)
+    * *Save Mapping Configuration* option, for including [mapped content](#mapping-content).
+    * *Collection* to save the Fragment.
+
+      ![Provide the information for the Fragment composition in the dialog that appears.](./building-content-pages/images/12.png)
 
 ```note::
    If no Site-specific Fragment Collection exists, the saved Fragment composition is automatically saved to a new Fragment Collection called Saved Fragments.
 ```
 
-The saved Fragment composition can be used immediately in the Fragments sidebar and through the Page Fragments administrative application.
+You can use the saved Fragment composition immediately using the Fragments sidebar or through the Page Fragments administrative application.
 
 ![The saved Fragment composition can be used immediately.](./building-content-pages/images/13.png)
 
-Compositions can be exported/imported between sites just as any other Fragment.
+Compositions can be exported or imported between sites just as any other Fragment.
 
 ```note::
   The latest version of the `Liferay Fragments Toolkit <../../developer-guide/developing-page-fragments/using-the-fragments-editor.md>`_ supports creation, export/import, and preview of Fragment compositions.
 ```
 
-### Configuring Section Width and Padding
+### Mapping Content
 
-1. Click the Section to select it.
-1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Section's Configuration Menu.
-1. Update the Section's *Container* setting to adjust the width styling (*Fixed Width* or *Fluid*), and update the *Padding Top* and *Padding Bottom* setting to adjust the padding for the Section container.
+You can also map these elements to existing content. You can set the *Content* for the element (web content article, document, or blog) and choose its applicable *Field* to display (e.g., title, author name, tags, etc.).
+
+To map your elements to existing content:
+
+1. Click the Grid element you want to map.
+1. In the Content Page sidebar, under the *Mapping* tab, click the *Add* button (![Map](../../../images/icon-plus.png)).
+1. Select the content you want to map to your Content Page element.
+1. Select the *Field* of your content that you want to map.
+
+    ![You can map Content Page elements to existing content using the Mapping option](./building-content-pages/images/17.gif)
+
+<!-- 
+####################################################
+Content from Liferay Help Center follows
+####################################################
+-->
 
 ## Liferay DXP 7.1 and 7.2
 
-You can also configure a background image and color for a layout Section. See [Using a Background Image](#using-a-background-image) for more information.
+<!-- This content belongs to the "Content Page Elements" article in Liferay Help Center. -->
 
-### Configuring a Row's Columns
+Content Pages, like Widget Pages, are built by dragging and dropping elements
+onto the page and then configuring the way those elements appear. There are
+three kinds of elements: 
 
-1. Click the Row to select it.
-1. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) to open the Row's Configuration Menu.
-1. Update the *Number of Columns* setting (from 1 to 6) to specify the number of columns for the Row, and disable/enable the *Columns Gutter* setting to remove/add padding between columns.
+**Sections** are fragments that define a space to place other elements.
+A section fills the entire width of the page. Sections can be thought of as
+*complete* Fragments that serve a purpose by themselves. A large banner image
+with a text overlay is an example of something you might build as a section.
 
-![You can configure basic styling through the Section's Configuration Menu.](./building-content-pages/images/15.png)
+![Figure 1: A Section named Banner being displayed while editing a Content Page.](./building-content-pages/images/20.png)
 
-You can adjust the width of the columns to create a more custom layout. Follow these steps:
+**Layouts** are special Sections that define spaces where you can add fragments
+or widgets. Each layout you add fills the width of the page. You can add any
+number of layouts to the page.
 
-1. Click on the Row to select it. A blue dot appears between each of the columns, indicating that they can be resized.
-1. Click one of the blue dots and drag to the left or right to adjust the size of the column.
+![Figure 2: A 3 Column and 1 Column layout stacked on top of each other.](./building-content-pages/images/21.png)
 
-![You can adjust the spacing of columns in a Layout to create a custom Layout.](./building-content-pages/images/16.png)
+**Components** are small design elements or pieces that add functionality to the
+page. A component might be an image with formatting or a block of text with
+styling pre-applied. Components must be added to the page inside a Layout. If
+you add a component outside an existing Layout, a one column layout is
+automatically added to contain the Component. While Sections should be complete
+by themselves, Components work together to build pages piece by piece.
 
-### General Configuration
+![Figure 3: Here are several of Liferay's out of the box components arranged in the layout you saw previously.](./building-content-pages/images/22.png)
 
-This appears for some out-of-the-box fragments and presents context specific fragment configurations. For a reference on these configurations, see Basic Component Configuration Reference.
+Liferay DXP ships with a plethora of Layouts, Sections, and Components to use to
+build pages, and a
+[web developer can create their own Fragments](https://help.liferay.com/hc/en-us/articles/360032884532-Creating-Page-Fragments) to add to these. 
 
-### Mapping Content
+## Editable Elements
 
-You can also map these elements to content. You can set the *Content* for the element (web content article, document, or blog) and choose its applicable *Field* to display (e.g., title, author name, tags, etc.). You can configure this by selecting the element's *Map* button (![Map](../../../images/icon-map.png)).
+Fragments can have editable elements. After a Fragment has been added to a page,
+you can click on an editable area to provide your own text, image, or links in
+place of the default defined in the Fragment.
+
+You can also map these elements to content. You can set the *Content* for the
+element (web content article, document, or blog) and choose its applicable
+*Field* to display (e.g., title, author name, tags, etc.). You can configure
+this by selecting the element's *Map* button
+(![Map](../../../images/icon-map.png)).
 
 ```note::
-   Many mapping improvements were released in Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+. For example, mapping editable elements to text/URL fields of existing content and mapping Fragment background images to image fields of existing content. You can also `map Web Content Templates to Fragments <./mapping-web-content-templates-to-fragments.md>`_.
+   Many mapping improvements were released in Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+. For example, mapping editables to text/URL fields of existing content and mapping Fragment background images to image fields of existing content. You can also map [custom fields](https://help.liferay.com/hc/en-us/articles/360028818872-Custom-Fields). To ensure you leverage the latest editable element mapping features, upgrade to these versions.
 ```
 
-When you create Content Pages, you can create different **Experiences** for users based on User Segments. You can create a unique Experience on any Content Page for any existing User Segment. For more information, see the [Content Page Personalization guide](../../personalizing-site-experience/personalizing-site-experience.md).
+For more information on developing these elements, see 
+[Fragment Specific Tags](https://help.liferay.com/hc/en-us/articles/360029147771-Fragment-Specific-Tags).
+
+Now you'll learn about each editable type.
+
+### Editable Text
+
+Editable text can be plain or rich text. Plain text has no special styling. Rich
+text enables text styles, typographical emphasis, alignment, and list
+formatting.
+
+![Figure 4: The rich text editor provides a simple WYSIWYG interface with a number of formatting options.](./building-content-pages/images/23.png)
+
+### Editable Images
+
+Editable image elements allow replacing the image URL or an image from your
+Documents and Media library. You can provide a link target for the image.
+
+To edit an image from the Content Page editor,
+
+1.  Click on the image you want to replace.
+
+2.  Click ![Image Properties](../../../images/icon-edit.png).
+
+![Figure 5: Editing an image allows you to enter a URL, select an image from Documents and Media or set a link for the image.](./building-content-pages/images/24.png)
+
+From here, you can click *Select* to upload an image from Docs and Media or
+define an image URL. Click *Clear* to reset the image. You can also specify an
+image description.
+
+You can also specify a background image for a layout from Section Builder. Click
+the Layout, select *Layout Background Image*, and define the image to display.
+
+```note::
+   Mapping a Layout background image is available in Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+.
+```
+
+For more information on developing editable images, see 
+[Making Images Editable](https://help.liferay.com/hc/en-us/articles/360029147771-Fragment-Specific-Tags#making-images-editable).
+
+You can also define a link for your image. You'll learn about this next.
+
+### Editable Links
+
+Editable links can be associated with entities that redirect you to a content
+type or Page (e.g., buttons).
+
+To edit a link from the content page editor,
+
+1.  Click on the link or button that you want to edit.
+
+2.  Click on ![Edit](../../../images/icon-edit.png) to edit the link text.
+
+3.  Click on ![Link](../../../images/icon-link.png) to edit the link properties.
+
+4.  Click on ![Map](../../../images/icon-map.png) to edit the link mapping
+    (described earlier).
+
+From the Link Properties popup, you can define the following link options:
+
+*Manual:* defines a manual link or map it to an existing content field.
+
+- *URL:* sets the link's URL.
+- *Target:* set the link's behavior.
+
+*From Content Field:* 
+
+- *Content:* sets the content type.
+- *Field:* sets the field to display for the selected content.
+
+Some of the content fields include
+
+- Categories
+- Tags
+- Display Page URL
+- Description
+- Publish Date
+- Summary
+- Title
+- Last Editor Name
+- Author Name
+- Basic Web Content
+
+For more information on developing editable links, see 
+[Creating Editable Links](https://help.liferay.com/hc/en-us/articles/360029147771-Fragment-Specific-Tags#creating-editable-links).
+
+Next you'll learn about the Content Page Editing Interface.
 
 ## Related Information
 
 * [Developing a Page Fragment](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)
 * [Using Master Pages](../defining-headers-and-footers/master-page-templates.md)
 * [Changing Content Pages Look and Feel](./content-pages-overview.md#look-and-feel)
+* [Content Page Personalization guide](../../personalizing-site-experience/personalizing-site-experience.md)
