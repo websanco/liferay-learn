@@ -8,6 +8,7 @@ Web Content Structures
    web-content-structures/creating-structures.md
    web-content-structures/configuring-structure-fields.md
    web-content-structures/managing-structures.md
+   web-content-structures/assigning-permissions-to-structures-and-templates.md
 
 .. include:: /content-authoring-and-management/web-content/user-guide/web-content-structures/README.rst
    :start-line: 2
