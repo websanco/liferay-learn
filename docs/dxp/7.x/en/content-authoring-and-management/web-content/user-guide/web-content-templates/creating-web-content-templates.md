@@ -56,3 +56,8 @@ To create a Web Content Template, follow these steps:
 1. Click *Save*.
 
 Once you've created the Web Content Template, you can [create a Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md) to use it.
+
+## Related Information
+
+* [Creating Structures](./creating-structures.md)
+* [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)
