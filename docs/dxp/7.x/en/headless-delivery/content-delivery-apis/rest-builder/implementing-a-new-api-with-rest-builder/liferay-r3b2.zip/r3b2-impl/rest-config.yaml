@@ -1,0 +1,7 @@
+apiDir: "../r3b2-api/src/main/java"
+apiPackagePath: "com.acme.r3b2.journal.article.expansion"
+application:
+    baseURI: "/journal-article-expansion"
+    className: "JournalArticleExpansionApplication"
+    name: "R3B2.Acme.Journal.Article.Expansion"
+author: "Liferay"

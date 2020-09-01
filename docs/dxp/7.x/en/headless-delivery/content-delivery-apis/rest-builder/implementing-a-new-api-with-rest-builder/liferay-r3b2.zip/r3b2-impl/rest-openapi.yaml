@@ -1,0 +1,47 @@
+info:
+  description: ""
+  license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  title: "Journal Article API Expansion"
+  version: v1.0
+openapi: 3.0.1
+components:
+  schemas:
+    Article:
+      description: A journal article's content
+      properties:
+        userId:
+          description: The author's user ID
+          type: integer
+        id:
+          description: The article's id
+          type: string
+        title:
+          description: The article's title
+          type: string
+        content:
+          description: The article content as XML
+          type: string
+      type: object
+paths:
+  "/entities/{userId}":
+    get:
+      operationId: getFirstArticleByUser
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Article"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Article"
+          description: ""
+      tags: ["Article"]
