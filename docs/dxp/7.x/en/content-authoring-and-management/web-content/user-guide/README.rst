@@ -11,6 +11,7 @@ Web Content Structures
 -  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/creating-structures
 -  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/configuring-structure-fields
 -  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/managing-structures
+-  :doc:`/content-authoring-and-management/web-content/user-guide/web-content-structures/assigning-permissions-to-structures-and-templates
 
 Web Content Templates
 ---------------------
