@@ -1,16 +1,16 @@
-# Punch Out
+# Liferay Commerce Connector to PunchOut2Go
 
 > Subscribers
 
-Liferay Commerce offers the additional _Punch Out_ connector, a "mechanism which makes it possible for a buyer to access a supplier's website from the buyer's own procurement application" ([PunchOut2Go](https://www.punchout2go.com/frequently-asked-questions/)).
+Liferay Commerce offers the additional _Commerce Connector to PunchOut2Go_, which is a "mechanism which makes it possible for a buyer to access a supplier's website from the buyer's own procurement application" ([PunchOut2Go](https://www.punchout2go.com/frequently-asked-questions/)).
 
-![Punch Out Flow Diagram](./punch-out/images/01.png)
+<!--![Punch Out Flow Diagram](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
-This connector is available for subscribers with a Commerce subscription _and_ have purchased the additional `LPKG`. The Connector is available for download exclusively on [Help Center](http://customer.liferay.com/downloads).
+This connector is available for subscribers who have purchased the additional PunchOut2Go Connector and can be downloaded on [Help Center](http://customer.liferay.com/downloads).
 
-## Deploy the Connector
+## Deploy the PunchOut2Go Connector
 
-1. Download the _Punch Out_ `LPKG` into the `${liferay.home}/deploy` folder. See the [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) article to learn more.
+1. Download the _PunchOut2Go Connector_ `LPKG` into the `${liferay.home}/deploy` folder. See the [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) article to learn more.
 1. Verify that the following message displays in the application server console:
 
     ```
@@ -32,14 +32,14 @@ The connector has been deployed.
 
 ## Configure the Connector
 
-The Punch Out connector is configured on a Commerce Channel. To learn more about Channels, see [Introduction to Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md).
+The PunchOut2Go Connector is configured on a Commerce Channel. To learn more about Channels, see [Introduction to Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md).
 
 Users must have the URL of the store's catalog page; in this example: `http://localhost:8080/web/everest.com/catalog`.
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_.
 1. Click on the desired channel.
 1. Click the _Punch Out_ tab.
-1. Check the _Enabled_ checkbox.
+1. Slide the toggle to _Enabled_.
 1. Enter the Punch Out Start URL.
 1. Click _Save_ when finished.
 
@@ -50,12 +50,12 @@ Users must enable the Punch Out Access Token for the buyer's procurement system 
 1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _System Settings_.
 1. Click _API Authentication_ under _Security_.
 
-    ![Authentication](./punch-out/images/02.png)
+    ![Authentication](./liferay-commerce-connector-to-punchout2go/images/02.png)
 
 1. Click _Auto Login Punch Out Access Token_ in the left menu.
 1. Check the _Enabled_ checkbox.
 
-    ![Enable the Auto Login Access Token.](./punch-out/images/03.jpg)
+    ![Enable the Auto Login Access Token.](./liferay-commerce-connector-to-punchout2go/images/03.jpg)
 
 1. Click the _Update_ button.
 
@@ -72,7 +72,7 @@ Once the Punch Out Access Token has been enabled, users can configure the Punch 
     * **Access Token Duration**:
     * **Access Token Size**:
 
-    ![Enable the Auto Login Access Token.](./punch-out/images/04.jpg)
+    ![Enable the Auto Login Access Token.](./liferay-commerce-connector-to-punchout2go/images/04.jpg)
 
 1. Click _Save_ when finished.
 
@@ -96,20 +96,20 @@ As best practice, users should create a Role for vendors using Punch Out. To lea
     * **Check Out Open Orders**
     * **View Open Orders**
 
-    ![Punch Out Role Permissions](./punch-out/images/05.png)
+    ![Punch Out Role Permissions](./liferay-commerce-connector-to-punchout2go/images/05.png)
 
 1. Click _Save_ when finished.
 
 The Role has been created with the required minimum permissions. Assign this Role to the buyers who are using Punch Out.
 
-## Verify Redirect to PunchOut2Go
+## Verify Redirect to Buyer's Procurement System
 
-Buyers who are using the Punch Out connector to Liferay Commerce checkout items the same way. However, once, they click _Submit_, they are redirected to PunchOut2Go.
+Buyers who are using the connector to Liferay Commerce checkout items the same way. However, once, they click _Submit_, they are redirected back to their procurement system.
 
-![Punch out redirects once an order has been submitted.](./punch-out/images/06.jpg)
+![Punch out redirects once an order has been submitted.](./liferay-commerce-connector-to-punchout2go/images/06.jpg)
 
 ## Additional Information
 
 * [Deploying Liferay Commerce to an Existing Liferay Installation](../installation-and-upgrades/deploying-liferay-commerce-to-an-existing-liferay-installation.md)
 * [Activating Liferay Commerce Enterprise](../installation-and-upgrades/activating-liferay-commerce-enterprise.md)
-* [Punch Out Reference Guide](./punch-out-reference-guide.md)
+* [Liferay Commerce Connector to PunchOut2Go Reference Guide](./liferay-commerce-connector-to-punchout2go-reference-guide.md)
