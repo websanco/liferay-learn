@@ -1,6 +1,6 @@
 # Configuring Structure Fields
 
-You can edit the fields in a Structure, as well as the properties of each field: 
+You can edit the fields in a Structure, as well as the properties of each field:
 
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
@@ -61,3 +61,9 @@ When you hover over a Structure field, these options appear in its context menu:
 * **Settings** (![Settings](../../../../images/icon-settings.png)): Changes the name and label, and other information about the field, like whether or not it is required.
 * **Delete** (![Delete](../../../../images/icon-app-trash.png)): Removes the field from the structure.
 * **Duplicate** (![Duplicate](../../../../images/icon-duplicate.png)): Duplicates the field and all its settings and iterates the *Name* to avoid conflicts.
+
+## Related Information
+
+* [Creating Structures](./creating-structures.md)
+* [Managing Structures](./managing-structures.md)
+* [Understanding Web Content Structures](./understanding-web-content-structures.md)
