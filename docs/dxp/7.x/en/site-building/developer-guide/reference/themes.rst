@@ -4,13 +4,20 @@ Themes
 .. toctree::
    :maxdepth: 3
 
-   themes/understanding-the-page-structure.md
    themes/look-and-feel-overview.md
-   themes/installing-the-theme-generator-reference.md
-   themes/liferay-js-themes-toolkit-theme-development-workflow.md
+   themes/understanding-the-page-structure.md
+   themes/installing-the-theme-generator.md
    themes/setting-up-your-npm-environment-reference.md
-   themes/theme-anatomy-reference.md
+   themes/theme-anatomy.md
+   themes/liferay-js-themes-toolkit-theme-development-workflow.md
    themes/running_theme_tasks.rst
+
+-  :doc:`/site-building/developer-guide/reference/themes/look-and-feel-overview`
+-  :doc:`/site-building/developer-guide/reference/themes/understanding-the-page-structure`
+-  :doc:`/site-building/developer-guide/reference/themes/installing-the-theme-generator`
+-  :doc:`/site-building/developer-guide/reference/themes/setting-up-your-npm-environment-reference`
+-  :doc:`/site-building/developer-guide/reference/themes/theme-anatomy`
+-  :doc:`/site-building/developer-guide/reference/themes/liferay-js-themes-toolkit-theme-development-workflow`
 
 Running Theme Tasks
 ~~~~~~~~~~~~~~~~~~~

@@ -1,6 +1,6 @@
 # Liferay JS Themes Toolkit Theme Development Workflow
 
-The steps below outline the basic workflow for Theme development with the [Liferay JS Themes Toolkit](./installing-the-theme-generator-reference.md).
+The steps below outline the basic workflow for Theme development with the [Liferay JS Themes Toolkit](./installing-the-theme-generator.md).
 
 1. Build the Base Files. Run the build script for your Liferay JS Toolkit version. If you're unsure of your version run `npm list -g generator-liferay-theme` from your command line to print it.
 
@@ -16,7 +16,7 @@ The steps below outline the basic workflow for Theme development with the [Lifer
     node_modules\.bin\gulp build
     ```
 
-1. Mirror the [structure of the files](./theme-anatomy-reference.md) you want to modify in the Theme's `/src/` folder.
+1. Mirror the [structure of the files](./theme-anatomy.md) you want to modify in the Theme's `/src/` folder.
 
 1. Copy the files over from the `/src/build/` folder to the mirrored structure and add your modifications. The main modifications are placed in the files listed below:
 
@@ -26,7 +26,7 @@ The steps below outline the basic workflow for Theme development with the [Lifer
 
 1. Build and deploy the Theme to your Liferay DXP server. The finished Theme is bundled as a WAR (Web application ARchive) file.
 
-1. Apply the Theme [through the Look and Feel menu](applying-themes.md) by selecting your [Theme's thumbnail](../../developing-themes/creating-a-thumbnail-preview-for-your-theme.md). 
+1. Apply the Theme [through the Look and Feel menu](../../../../getting-started/changing-your-sites-appearance.md#change-your-sites-theme) by selecting your [Theme's thumbnail](../../developing-themes/customizing-configuration-settings/creating-a-thumbnail-preview.md).
 
 <!-- Add note back once Developer mode docs are ported
 ```note::

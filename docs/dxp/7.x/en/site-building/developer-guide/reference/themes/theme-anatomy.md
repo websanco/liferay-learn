@@ -1,4 +1,4 @@
-# Theme Anatomy Reference Guide
+# Theme Anatomy
 
 A Theme contains several files. Although most of the files are named after their matching components, their functions may be unclear. This reference guide explains each file's usage to make clear which files to modify.
 
@@ -29,7 +29,7 @@ Themes built with the [Liferay JS Theme Toolkit](https://github.com/liferay/life
                     - (Many directories)
     - [`liferay-theme.json`](#liferay-theme-json)
     - [`package.json`](#package-json)
- 
+
 Regarding CSS files, you should only modify `_clay_custom.scss`, `_clay_variables.scss`, `_custom.scss`, and `_liferay_variables_custom.scss`.
 
 You can of course overwrite any CSS file you want, but if you modify any other files, you're removing styling that Liferay Portal needs to work properly.
@@ -54,7 +54,7 @@ Used for overwriting variables defined in `_liferay_variables.scss` without wipi
 
 ### init_custom.ftl
 
-Used for custom FreeMarker variables i.e. [theme setting](making-configurable-theme-settings.md) variables.
+Used for custom FreeMarker variables i.e. [theme setting](../../developing-themes/customizing-configuration-settings/adding-theme-settings.md) variables.
 
 ### navigation.ftl
 
@@ -86,7 +86,7 @@ Used for custom JavaScript.
 
 ### liferay-look-and-feel.xml
 
-Contains basic information for the Theme. If your Theme has [theme settings](making-configurable-theme-settings.md), they are defined in this file. For a full explanation of this file, please see the [Definitions docs](https://docs.liferay.com/portal/7.3-latest/definitions/liferay-look-and-feel_7_3_0.dtd.html).
+Contains basic information for the Theme. If your Theme has [theme settings](../../developing-themes/customizing-configuration-settings/adding-theme-settings.md), they are defined in this file. For a full explanation of this file, please see the [Definitions docs](https://docs.liferay.com/portal/7.3-latest/definitions/liferay-look-and-feel_7_3_0.dtd.html).
 
 ### liferay-plugin-package.properties
 
