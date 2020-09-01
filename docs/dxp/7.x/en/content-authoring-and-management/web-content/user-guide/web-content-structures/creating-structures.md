@@ -64,3 +64,9 @@ You can place these fields on a Structure:
 **Web Content:** A web content selector to include an existing Web Content Article
 
 See [Editing and Configuring Structure Fields](./configuring-structure-fields.md) for more information on configuring and editing Structure fields.
+
+## Related Information
+
+* [Understanding Web Content Structures](./understanding-web-content-structures.md)
+* [Managing Structures](./managing-structures.md)
+* [Configuring Structure Fields](./configuring-structure-fields.md)
