@@ -8,4 +8,3 @@ Using Liferay DXP Docker Images
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/patching-dxp-in-docker`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/running-scripts-in-containers`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container`
-- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image`
