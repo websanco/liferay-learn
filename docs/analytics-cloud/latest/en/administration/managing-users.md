@@ -48,4 +48,4 @@ The user is assigned the selected Role.
 
 ## Additional Information
 
-* [Accessing Your Analytics Cloud Workspace](../getting-started/quick-tour/accessing-your-workspace.md)
+* [Accessing Your Analytics Cloud Workspace]()
