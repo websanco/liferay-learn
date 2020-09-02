@@ -2,6 +2,8 @@
 
 Themelets are small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. The steps below show how to use the Liferay Theme Generator's Themelets sub-generator to create a Themelet.
 
+<!-- screenshot of ... end result is that even possible in this case? -->
+
 ## Overview
 
 1. [Deploy an Example](#deploy-an-example)
@@ -9,18 +11,20 @@ Themelets are small, extendable, and reusable pieces of code containing CSS and 
 1. [Additional Information](#additional-information)
 
 ## Deploy an Example
-
-> Liferay DXP 7.3+
+<!-- update to follow pattern from developing-a-theme.md -->
+```note::
+  This example runs on Liferay Portal 7.3.
+```
 
 First you must deploy an example Theme that contains the Themelet. Follow these steps:
 
-1. Download and unzip the [example Themelet Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-themelets/1582903559liferay45.zip):
+1. Download and unzip the [example Themelet Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-themelets/1582903559liferay45.zip):
 
     ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-themelets/1582903559liferay45.zip
-    
-    unzip 1582903559liferay45.zip
+    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/dev/01-developing-a-theme/developing-themelets/1582903559liferay45.zip
     ```
+
+    <!-- missing unzip? -->
 
 1. Open the Command Line and navigate to the `my-liferay-themelet` folder.
 1. Run the `npm link` command to globally install the Themelet so you can install it in the example Theme.
