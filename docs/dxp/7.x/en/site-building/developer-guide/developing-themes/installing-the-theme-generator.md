@@ -2,8 +2,6 @@
 
 The Theme Generator is a handy CLI tool that creates the required files and structure you need to get started with liferay DXP Theme development. It provides several sub-generators for creating Themes, extending Themes, and generating Layout Templates.
 
-![You can use the Theme Generator to create wonderful user experiences.](./installing-the-theme-generator-reference/images/01.png)
-
 The steps below show how to install the Liferay Theme Generator for your development environment.
 
 1. Install the version of [NodeJS](http://nodejs.org/) (along with Node Package Manager(npm)) that corresponds with your version of Liferay DXP:
@@ -14,7 +12,7 @@ The steps below show how to install the Liferay Theme Generator for your develop
     | 7.1.x | 8.10.0 |
     | 7.2.x+ | 10.15.1 |
 
-    For instance, Liferay Portal 7.2 supports [v10.15.1](https://nodejs.org/download/release/v10.15.1/). Make sure to properly [set up your npm environment](./setting-up-your-npm-environment-reference.md).
+    For instance, Liferay Portal 7.2 supports [v10.15.1](https://nodejs.org/download/release/v10.15.1/). Make sure to properly [set up your npm environment](TODO:setting-up-your-npm-environment).
 
 1. Use npm to install the [Yeoman](http://yeoman.io/) dependency:
 
@@ -39,7 +37,7 @@ The steps below show how to install the Liferay Theme Generator for your develop
 
 1. The generator uses node-sass. If you're on Windows, you must also install [node-gyp and Python](https://github.com/nodejs/node-gyp#installation).
 
-## Sub-generators
+## Additional Information
 
 The Theme Generator has several sub-generators available that you can use. The available sub-generators are listed in the table below:
 
