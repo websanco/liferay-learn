@@ -8,5 +8,3 @@ docs/**/liferay-????.zip/gradlew
 docs/**/liferay-????.zip/gradlew.bat
 docs/**/liferay-????.zip/settings.gradle
 docs/**/liferay-????.zip/source-formatter-suppressions.xml
-docs/**/liferay-*theme
-/docs/**/nbproject/private/

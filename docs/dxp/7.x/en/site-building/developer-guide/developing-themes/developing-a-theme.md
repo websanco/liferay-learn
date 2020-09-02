@@ -41,9 +41,9 @@ First, deploy an example to see what a Theme looks like:
 
 1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
 
-1. Scroll down and click the *Change Current Theme* button. Click the Pastel Purple Theme thumbnail next to the Classic Theme.
+1. Scroll down and click the *Change Current Theme* button, and click the Pastel Purple Theme thumbnail next to the Classic Theme.
 
-    ![The Pastel Purple Theme appears in the Theme selector.](./developing-a-theme/images/01.png)
+    ![The Pastel Purple Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
 
 1. Click *Save* to apply the changes, and go back to the home page.
 
@@ -103,7 +103,7 @@ console.log('My Theme is loaded to the page.');
 
 ## Modify the Theme and Redeploy
 
-You'll modify the theme to remove the alert button. 
+To update the Theme you just have to modify the code and redeploy.
 
 1. Open the Theme's `portal_normal.ftl` template to modify the page's HTML markup.
 1. Remove the button markup in the Header shown below and save the file:
@@ -135,7 +135,7 @@ You'll modify the theme to remove the alert button.
 
 ![You can completely customize the page's styling with the Theme.](./developing-a-theme/images/03.png)
 
-Congratulations! Now you know how to develop and deploy a Theme to Liferay DXP using the Liferay JS Themes Toolkit.
+Congratulations! Now you know how to develop and deploy a Theme to Liferay DXP with the Liferay JS Themes Toolkit.
 
 ## Related Information
 
