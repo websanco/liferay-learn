@@ -15,13 +15,13 @@ Running a Liferay Docker image with auto-upgrade enabled upgrades your database 
    Upgrades to enterprise subscriber installations and critical installations should be done using the Database Upgrade Tool. See `Using the Database Upgrade Tool <./using-the-database-upgrade-tool.md>`_ for more information.
 ```
 
-```important::
+```warning::
    **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your database and existing installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 ## Upgrading with the Latest Docker Image
 
-Here are the steps for upgrading with a Docker image:
+Here are the steps for using the Docker image:
 
 1. Create an arbitrary folder to use with the new Liferay Docker image and create subfolders called `files` and `deploy`. For example,
 
@@ -50,7 +50,7 @@ Here are the steps for upgrading with a Docker image:
 
     `web.xml`: Portal web application descriptor.
 
-1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
+1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
 1. Run the Docker image [mounted](./../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
 
@@ -91,8 +91,8 @@ If the upgraded database is all you need, then enjoy using your new Liferay inst
 
 * [Upgrade Overview](./upgrade-overview.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
 
-* [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) demonstrates upgrading the database while the Liferay server is offline. If the upgrade took too long, consider [tuning the database](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [pruning unneeded data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md), and [using Database Upgrade Tool](./using-the-database-upgrade-tool.md).
+* [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) demonstrates upgrading the database while the Liferay server is offline. If the upgrade took too long, [tuning the database](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [pruning unneeded data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md), and using database upgrade tool is recommended.
 
-* [Custom Code Upgrade](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2) demonstrates adapting custom plugin code to a new Liferay version.
+* [Custom Code Upgrade](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2) guides you in adapting custom plugin code you've developed to the new Liferay version.
 
 * [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) describes how to upgrade in a clustered environment.
