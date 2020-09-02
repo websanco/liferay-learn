@@ -17,7 +17,7 @@ Here are the module upgrade topics:
 
 ## Command Usage
 
-Use the [Gogo Shell portlet](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to execute module upgrade and verification commands.
+Use the [Gogo Shell portlet](https://help.liferay.com/hc/en-us/articles/360029070351-Using-the-Felix-Gogo-Shell) to execute module upgrade and verification commands.
 
 Here are the commands:
 
@@ -143,4 +143,4 @@ To check for available verify processes, enter the Gogo shell command `verify:li
 
 ## Related Topics
 
-* [Liferay Commands and Standard Commands Available in Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/gogo-shell-commands.md)
+* [Liferay Commands and Standard Commands Available in Gogo Shell](https://help.liferay.com/hc/en-us/articles/360029070351-Using-the-Felix-Gogo-Shell)

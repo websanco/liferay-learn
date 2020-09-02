@@ -68,7 +68,7 @@ To reinstall blacklisted items, follow these steps:
 To reinstall _all_ the blacklisted items execute one of these options:
 
 * Remove the configuration file.
-* Uninstall the module `com.liferay.portal.bundle.blacklist` using the [Application Manager](./using-the-app-manager.md) or [Felix Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+* Uninstall the module `com.liferay.portal.bundle.blacklist` using the [Application Manager](./using-the-app-manager.md) or [Felix Gogo Shell](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell).
 
 ```tip::
    To temporarily reinstall an item that's been blacklisted, you can remove its symbolic name from the Bundle Blacklist module in *System Settings* and click the *Update* button. If you're using a blacklist config file (in the ``[Liferay Home]/osgi/configs`` folder) and want the item to install on subsequent server startup, make sure to remove the item's symbolic name from the file.
