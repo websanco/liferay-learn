@@ -1,68 +1,6 @@
 # Content Pages Overview
 
-The default type of page used in Liferay DXP is a Content Page. The Content Page editing UI provides access to many different drag-and-drop elements (Fragments and Widgets) that are available for immediate use with minimal configuration. Continue reading to get an overview of the Content Pages UI. See [Building Content Pages](./building-content-pages.md) to jump directly in to building a Content Page.
-
-The Content Page sidebar contains two different groups of elements that you can drag-and-drop to build your content:
-
-- Fragments
-    
-    Fragments can have editable elements, such as [text](./building-content-pages.md#editing-text), [images](./building-content-pages.md#editing-an-image), or [links](./building-content-pages.md#editing-a-hyperlink), that you can replace with custom content. You can also [map these elements](./building-content-pages.md#mapping-content) to content that is already available on the site itself. For more information on developing these elements, see [Fragment Specific Tags](../../developer-guide/developing-page-fragments/fragment-specific-tags-reference.md).
-
-    ![The Fragments panel provides a list of Fragments that can be added inside the page editor.](./content-pages-overview/images/01v.png)
-
-- Widgets
-
-    Widgets are applications and tools available out-of-the-box that you can add to the page. There are some limitations to using Widgets on Content Pages. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
-    
-    ![The Widgets panel provides a list of Widgets that can be added inside the page editor.](./content-pages-overview/images/02v.png)
-    
-    ```note::
-      While portlets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
-    ```
-## Fragments
-
-You can find the following Fragments under the Content Page sidebar:
-
-- [Layout Elements](#layout-elements)
-- [Basic Components](#basic-components)
-- [Content Display](#content-display)
-- [Featured Content](#featured-content)
-- [Footers](#footers)
-- [Navigation Bars](#navigation-bars)
-
-### Layout Elements
-
-The Layout Elements section contains two Fragments:
-
-- *Container*: A Fragment that can contain Rows. Each Section you add fills the width of the page. A Section can contain multiple Rows stacked.
-- *Grid*: A Fragment containing a set of columns that you can add Fragments or Widgets to. A Row can be nested inside another Row to create more complex layouts. You can [adjust the spacing](./building-content-pages.md#configuring-a-row-s-columns) of a Row's columns to create new designs.
-
-    ![The Layouts panel contains layouts for organizing Fragments.](content-pages-overview/images/03v.png)
-
-### Basic Components
-
-Basic Components are small design elements or pieces that add functionality to the page. A Component might be an image with formatting or a block of text with styling pre-applied. Components work together to build pages piece by piece.
-
-![Here are several out of the box components arranged in a Layout.](./content-pages-overview/images/04v.png)
-
-### Content Display
-
-You can display a single existing web content, blog entry, or document by adding a Content Fragment from the *Content Display* panel. See [Using the Content Display Fragment](./using-fragments.md#using-the-content-fragment) for more information.
-
-### Featured Content
-
-### Footers
-
-### Navigation Bars
-
-## Widgets
-
-
-<!-- 
-####################################################
-Content from here applies to 7.3 but needs UI update
-####################################################
--->
+The default type of page used in Liferay DXP is a Content Page. The Content Page editing UI provides access to many different drag-and-drop elements (Fragments) that are available for immediate use with minimal configuration. Continue reading to get an overview of the Content Pages UI. See [Building Content Pages](./building-content-pages.md) to jump directly in to building a Content Page.
 
 ![Using the Content Page sidebar to add elements to the page.](./content-pages-overview/images/14.png)
 
