@@ -8,7 +8,7 @@ Now that you are done upgrading your database, re-enable your production setting
 
 ### Search Indexing
 
-Reindex your search indexes is required except most of the cases when upgrading between GAs or service packs for the same Liferay version. You can do it from the Control Panel by navigating to *Search* &rarr; *Index Actions* and clicking *Execute* for *Reindex All Search Indexes.*
+Reindex your search indexes in the Control Panel by navigating to *Search* &rarr; *Index Actions* and clicking *Execute* for *Reindex All Search Indexes.*
 
 ![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/01.png)
 

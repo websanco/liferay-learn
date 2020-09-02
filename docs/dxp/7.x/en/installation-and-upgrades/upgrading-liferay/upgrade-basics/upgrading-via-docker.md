@@ -76,7 +76,7 @@ Here are the steps for upgrading with a Docker image:
 
     If there are any upgrade failures or errors, they're printed to the console and log. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot any issues and finish the upgrade.
 
-1. After you have resolved any failures or errors, examine the [Post Upgrade Considerations](./post-upgrade-considerations.md).
+1. After you have resolved any failures or errors, re-index the search indexes and examine the [Post Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. [Update the Portal properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
 
