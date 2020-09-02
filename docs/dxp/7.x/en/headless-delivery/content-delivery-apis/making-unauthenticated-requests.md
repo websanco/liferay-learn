@@ -1,0 +1,63 @@
+# Making Unauthenticated Requests
+
+By default Liferay DXP restricts API access for the sake of security, requiring authentication in order to get a valid response. However, in certain cases it may make sense to open up an API for guest access. Liferay DXP provides a straightforward way to achieve this.
+
+## Making an Unauthenticated Request
+
+Making an API request without passing credentials generally leads to an error response:
+
+```
+curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
+```
+
+```
+{
+  "message" : "Access denied to com.liferay.headless.admin.user.internal.resource.v1_0.SiteResourceImpl#getSite"
+}
+```
+
+If you need access to an API without credentials, then grant unresricted access via a Service Access Policy.
+
+## Relaxing API Restrictions via Service Access Policy
+
+Creating [Service Access Policies](../../installation-and-upgrades/securing-liferay/securing-web-services/setting-service-access-policies.md) allows you to determine which APIs you want unrestricted at a very granular level.
+
+1. Visit your site with your browser at `http://localhost:8080`.
+1. Sign in using the default credentials:
+   **User Name:** `test@liferay.com`
+   **Password:** `test`
+1. Go to Control Panel &rarr; Security &rarr; Service Access Policy.
+1. Click *Add* (![add](../../../images/icon-add.png)).
+1. Give the policy a name. The intent for this policy is very specific, so it might make sense to call it something like "SITE_API_GUEST_ACCESS".
+1. Flip the *Enabled* toggle to enable the policy.
+1. Flip the toggle labeled *Default* to apply the policy to unauthenticated requests as well as authenticated requests.
+1. Give the policy a localized title -- something like "Grant Guest access to the Site API".
+1. Click *Switch to Advanced Mode* at the bottom.
+1. Copy and paste the method signature listed in the error message above: `com.liferay.headless.admin.user.internal.resource.v1_0.SiteResourceImpl#getSite`.
+1. Click *Save*.
+
+Your Service Access Policy is now active, granting Guests access to the Sites API.
+
+## Gaining Access
+
+Now that the Service Access Policy change is applied, the API call that previously failed now succeeds:
+
+```
+curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
+```
+
+```
+{
+  "availableLanguages" : [ "en-US" ],
+  "description" : "",
+  "friendlyUrlPath" : "/guest",
+  "id" : 20122,
+  "key" : "Guest",
+  "membershipType" : "open",
+  "name" : "Guest",
+  "parentSiteId" : 0,
+  "sites" : [ ]
+}
+```
+
+This pattern can be applied to open up access to any API. Leverage the flexibility of Service Access Policies to make this as granular as you need.
