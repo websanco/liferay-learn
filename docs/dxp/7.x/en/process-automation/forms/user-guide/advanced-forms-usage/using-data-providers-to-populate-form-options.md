@@ -6,7 +6,8 @@ Here, you'll learn how to invoke a JSON web service, configure the data provider
 
 ## Prerequisite
 
-[Create a form](../creating-forms.md) with one Select from List field called _Country_.
+[Create a form](../../creating-forms.md) with one Select from List field called _Country_.
+
 
 ## Enabling Access to Data on the Local Network
 
@@ -51,7 +52,7 @@ To add a _Countries of the World_ Data Provider,
 
 1. Click the Add button (![Add](../../../../images/icon-add.png)).
 
-1. Fill out the form:
+1. Fill out the form: 
 
     * **Name**: Countries of the World
     * **URL**: `http://localhost:8080/api/jsonws/country/get-countries/`
@@ -69,25 +70,25 @@ To add a _Countries of the World_ Data Provider,
 1. Click _Save_ when finished.
 
 ```note::
-   The `$..` before `nameCurrentValue` is the ``JsonPath`` syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
+   The `$..` before `nameCurrentValue` is the ``JsonPath`` syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
 ```
 
 ## Using Inputs as Filters
 
 The above example uses one Output to populate a Select from List field. Often the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
 
-For example, to apply a region (for example, Americas, Europe, or Oceania) filter for the countries of the world, configure the provider like this:
+For example, to apply a region (for example, Americas, Europe, or Oceania) filter for the countries of the world, configure the provider like this: 
 
-* **Name**: `restcountries`
-* **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`
-* **Input Label**: Region
-* **Parameter**: Region
-* **Input Type**: Text
-* **Outputs Label**: Countries of the World with Regions
-* **Outputs Path**: `*$..name*`
-* **Output Type**: List
+   * **Name**: `restcountries`
+   * **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`
+   * **Input Label**: Region
+   * **Parameter**: Region
+   * **Input Type**: Text
+   * **Outputs Label**: Countries of the World with Regions
+   * **Outputs Path**: `*$..name*`
+   * **Output Type**: List
 
-To understand more about these values, see the [Data Providers Overview](../data-providers-overview.md).
+    To understand more about these values, see the [Data Providers Overview](../data-providers-overview.md).
 
 ## Granting Data Provider Permissions
 
@@ -115,11 +116,11 @@ Once the Data Provider is configured, use it to populate a Select from List fiel
 
 1. Drag a _Select from List_ field onto the form.
 
-1. Select _From Data Provider_ from the Create List selector.
+1. Select _From Data Provider_ from the Create List selector. 
 
-1. Select _Countries of the World_ from the Choose a Data Provider selector.
+1. Select _Countries of the World_ from the Choose a Data Provider selector. 
 
-1. Select _Country Name_ from the Choose an Output Parameter selector.
+1. Select _Country Name_ from the Choose an Output Parameter selector. 
 
     ![Configure the Data Provider values on the Select from List field.](./using-a-data-provider-to-populate-form-options/images/06.png)
 
