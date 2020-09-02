@@ -28,7 +28,7 @@ Creating [Service Access Policies](../../installation-and-upgrades/securing-life
    **Password:** `test`
 1. Go to Control Panel &rarr; Security &rarr; Service Access Policy.
 1. Click *Add* (![add](../../../images/icon-add.png)).
-1. Give the policy a name. The intent for this policy is very specific, so it might make sense to call it something like "SITE_API_GUEST_ACCESS".
+1. Give the policy a name. The intent for this policy is very specific, so it makes sense to call it something like "SITE_API_GUEST_ACCESS".
 1. Flip the *Enabled* toggle to enable the policy.
 1. Flip the toggle labeled *Default* to apply the policy to unauthenticated requests as well as authenticated requests.
 1. Give the policy a localized title -- something like "Grant Guest access to the Site API".
