@@ -24,7 +24,7 @@ Using a new Fix Pack, Security Fix Pack, or Service Pack image requires migratin
 
 1. Stop your current DXP container.
 
-1. [Back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) files you've used to customize your DXP container.
+1. [Back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) files you've used to customize your DXP container. using a source control repository or some other means.
 
     ```bash
     git commit -a
@@ -36,9 +36,9 @@ Using a new Fix Pack, Security Fix Pack, or Service Pack image requires migratin
     docker pull liferay/dxp:[tag]
     ```
 
-1. Create a new container based on the image and that uses the artifacts and configuration files from your backup.
+1. Create a new container that is based on the image and that uses your artifacts and configuration files from your backup.
 
-   For example, you can put your artifacts and files in a local folder structure like this:
+    For example, you can put your artifacts and files in a local folder structure like this:
 
     ```
     [host folder]
@@ -64,7 +64,7 @@ Patching requirements:
 
 1. No existing patches in the container. Any existing patch must be [reverted](#reverting-a-patch) before applying a new patch.
 
-1. The image must not be Security Fix Pack image; those images already include a patch (the Security Fix Pack).
+1. The image must not be Security Fix Pack image; such an image already includes a patch (the Security Fix Pack).
 
 1. A folder in your volume or bind mount that maps to the container's `/mnt/liferay/patching` folder. Please see [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
 
@@ -102,7 +102,7 @@ Here are steps for installing a patch to a new container:
 
 1. Stop your current DXP container, if it's running.
 
-1. Create a container with a bind mount that maps the patch file's folder to the container's `/mnt/liferay/patching` folder. Since this example's patch file is in a folder called `patching`, you can [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) its parent folder (`[host folder]`) to the container's `/mnt/liferay` folder. This makes the patch accessible for applying to DXP.
+1. Create a container, that includes a bind mount that maps the patch file's folder to the container's `/mnt/liferay/patching` folder. Since this example's patch file is in a folder called `patching`, you can [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) its parent folder (`[host folder]`) to the container's `/mnt/liferay` folder makes the patch accessible for applying to DXP.
 
     ```bash
     docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
@@ -138,11 +138,13 @@ If you want to revert a patch from a container or install a different patch to a
 
 1. Use the `docker run` arguments you used previously to create a new container from the same image or an image that has a compatible Fix Pack Level. Apply any patch you want via a volume or [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay.md).
 
+DXP is running on the Fix Pack Level you have specified, with the old patch gone and optionally replaced.
+
 ## Updating the Patching Tool
 
 If your current Patching Tool is incompatible with the patch you're installing, the Patching Tool reports this message: `[patch file] is incompatible with Patching Tool version [x.y.z]`, where `x.y.z` are the tool's major, minor, and micro version number.
 
-Here's how to install a new [Patching Tool](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md) version:
+Here are steps to install a new [Patching Tool](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md) version:
 
 1. Download the latest Patching Tool from the [Customer Portal](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066).
 
