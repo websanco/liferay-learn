@@ -36,7 +36,7 @@ Creating [Service Access Policies](../../installation-and-upgrades/securing-life
 
 Your Service Access Policy is now active, granting Guests access to the Sites API.
 
-## Gaining Access
+## Confirming Access
 
 Now that the Service Access Policy change is applied, the API call that previously failed now succeeds:
 
