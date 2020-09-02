@@ -63,34 +63,6 @@
                                     class="custom-control-input"
                                     name="productName"
                                     type="radio"
-                                    value="analytics-cloud"
-                                />
-    
-                                <span class="custom-control-label">{% trans %}Analytics Cloud{% endtrans %}</span>
-                            </label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
-                                    value="commerce"
-                                />
-
-                                <span class="custom-control-label">{% trans %}Commerce{% endtrans %}</span>
-                            </label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
                                     value="dxp"
                                 />
 
@@ -109,6 +81,20 @@
                                 />
 
                                 <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
+                            </label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <label>
+                                <input
+                                    aria-label="{{ getLanguageLabel(language_code) }}"
+                                    class="custom-control-input"
+                                    name="productName"
+                                    type="radio"
+                                    value="commerce"
+                                />
+
+                                <span class="custom-control-label">{% trans %}Commerce{% endtrans %}</span>
                             </label>
                         </div>
                     </div>
@@ -167,10 +153,6 @@
 
     const docProducts = [
         {
-            name: 'analytics-cloud',
-            pathname: '/analytics-cloud/latest/en/search.html'
-        },
-        {
             name: 'commerce',
             pathname: '/commerce/2.x/en/search.html'
         },
@@ -190,8 +172,7 @@
         currentDocProduct = 'commerce';
     } else if (pathname.includes('dxp-cloud')) {
         currentDocProduct = 'dxp-cloud'
-    } else if (pathname.includes('analytics-cloud')) {
-        currentDocProduct = 'analytics-cloud'
+    }
 
     const productSelect = document.querySelectorAll('[name="productName"]');
 
