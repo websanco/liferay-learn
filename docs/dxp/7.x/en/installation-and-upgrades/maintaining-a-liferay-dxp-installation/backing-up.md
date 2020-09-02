@@ -28,10 +28,6 @@ The Liferay Home folder is important to back up because it contains the followin
 
 * **`/logs` folder:** Contains DXP's log files. If a problem occurs on DXP, the log files provide information for determining what went wrong.
 
-```note::
-   If you are using a Liferay Docker image and are using custom Liferay and application server configuration files via a bind mount, back up those files (e.g., files in your ``[host folder]/files`` folder).
-```
-
 Using a source control repository such as Git, BitBucket, Subversion, or CVS, is a great way to back up your Liferay Home folder.
 
 ```important::
