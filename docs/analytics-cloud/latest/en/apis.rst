@@ -4,7 +4,7 @@ APIs
 .. toctree::
    :maxdepth: 2
 
-   apis/apis.md
+   apis/api-overview.md
    apis/authentication.md
    apis/querying-data.md
    apis/exporting-data.md

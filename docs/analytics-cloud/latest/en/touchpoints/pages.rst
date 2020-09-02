@@ -4,8 +4,8 @@ Pages
 .. toctree::
    :maxdepth: 1
 
-   pages/pages.md
-   pages/paths.md
+   getting-started/pages.md
+   getting-started/paths.md
 
 -  :doc:`/touchpoints/pages/pages`
 -  :doc:`/touchpoints/pages/paths`
