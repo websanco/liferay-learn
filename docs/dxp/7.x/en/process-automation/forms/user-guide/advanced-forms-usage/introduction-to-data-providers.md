@@ -19,31 +19,23 @@ The _Result_ tab shows a list of countries using JSON syntax, like this:
       },
         ...
 
-That is the record for the country Afghanistan.
+That is the record for the country Afghanistan. On the _URL Example_ tab, the URL you entered into the data provider form is the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
 
 Note the field you want Users to select. With this service, it is most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
 
-Lastly, on the _URL Example_ tab, the URL you entered into the data provider form is the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
-
-![The URL Example tab displays the corresponding the JSON web service.](./introduction-to-data-providers/images/02.png)
-
 ## Data Provider Configuration Reference
-
-This reference section explains the different fields when configuring a data provider. Users can add data providers in the _Site Administration_ menu. Navigate to the site where the forms are created then click _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin.
-
-![Here are the different fields and their explanations.](./introduction-to-data-providers/images/03.png)
 
 ### URL
 
-This refers to the URL of an internal or external REST service endpoint. Consider the REST service at <https://restcountries.eu/> which contains a REST API endpoint to find countries by `region`:
+The URL of an internal or external REST service endpoint. Consider the REST service at <https://restcountries.eu/> which contains a REST API endpoint to find countries by `region`:
 
 `https://restcountries.eu/rest/v2/region/{region}`
 
 Data Provider URLs can take two parameter types: path parameters and query parameters.
 
-Path parameters are part of the URL calling the REST web service and are added using the pattern `https://service-url.com/service/{path_parameter_name}`:
+Path parameters are part of the URL calling the REST web service, and are added using the pattern `https://service-url.com/service/{path_parameter_name}`:
 
-For example, the `restcountries.eu` service's `region` endpoint's path parameter is `{region}`. Path parameters are mandatory parts of the URL, so make sure you specify an Input (see below) with a _Parameter_ field value matching the path parameter from the URL.
+The `restcountries.eu` service's `region` endpoint's path parameter is `{region}`. Path parameters are mandatory parts of the URL, so make sure you specify an Input (see below) with a _Parameter_ field value matching the path parameter from the URL.
 
 Query parameters are complementary parts of the URL that filter the output of the service call, following the pattern
 `?query_parameter=query_parameter_value`:
@@ -62,7 +54,7 @@ If the data is cached, a second load of the select list field is much faster, si
 
 ### Timeout
 
-This is the time (in ms) to allow the REST service call to process before aborting the request, if a response is not returned.
+The time (in ms) to allow the REST service call to process before aborting the request, if a response is not returned.
 
 ### Inputs
 
@@ -70,7 +62,7 @@ Configure path or query parameters from the REST service to filter the REST serv
 
 ### Outputs
 
-The Outputs are the Parameters to display in Select from List or Text fields with autocomplete enabled. You can add multiple Outputs. Outputs can be filtered by inputs (see above) but can also be displayed without configuring input filtering. Specify the Label, Path, and Type (Text, Number, or List).
+The Parameter to display in Select from List or Text fields with autocomplete enabled. You can add multiple Outputs. Outputs can be filtered by inputs (see above) but can also be displayed without configuring input filtering. Specify the Label, Path, and Type (Text, Number, or List).
 
 You can add multiple Inputs. To provide a way for users to specify the input value, use an
 [_Autofill_ Form Rule](../form-rules/using-the-autofill-rule.md). A User enters input into one field, and their input is sent to the REST service. The REST service's response data is filtered by the input parameter.
@@ -81,7 +73,7 @@ The Output Path field is specified in [JsonPath syntax](https://github.com/json-
    To display one value to the user, but persist another in the database, enter both into the Paths field, separated by a semicolon: ``$..name;$..numericCode``
 ```
 
-If using the `restcountries.eu` data provider, the name of the country is displayed to the User, while the numeric country code is stored in the database.
+If this is used with the `restcountries.eu` data provider, the name of the country is displayed to the User, while the numeric country code is stored in the database.
 
 ![Set up Data Providers to display data retrieved from a REST service.](./introduction-to-data-providers/images/01.png)
 
