@@ -1,12 +1,10 @@
 # Introduction to Data Providers
 
-The Forms application has a _Select from List_ field that asks respondents to select from a list of options. For some Select from List fields a manually created list makes sense: _T-shirt size_ might be one example. If the list is longer or requires some expertise to populate accurately, a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer) is better suited to provide the form options. A _Country of Residence_ field is an example of this. 
+Forms can sometimes require a respondent to select from a list of options. For example, language and country of residence. If the number of options is small, users can create the list manually. However, if the list is much larger, such as list of countries (over 230), users can utilize a [REST web service](https://en.wikipedia.org/wiki/Representational_state_transfer) to provide form options. This saves time and helps to ensure accuracy.
 
-## Registered JSON Web Services
+Registered JSON web services in Liferay DXP can be viewed at [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) (assuming you're running a local server). For example, if populating a list of countries, there are two `get-countries` JSON web services (either one will work) and clicking _Invoke_ generates results.
 
-You can use Liferay DXP's registered JSON web services as your data provider's service: see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for the list (assuming you're running a local server). If populating a list of countries, you'll find two `get-countries` JSON web services: either one will work. Click _Invoke_ to generate the results.
-
-The _Result_ tab shows a list of countries using JSON syntax, like this record for Afghanistan:
+The _Result_ tab shows a list of countries using JSON syntax, like this:
 
     [
       {
@@ -21,21 +19,23 @@ The _Result_ tab shows a list of countries using JSON syntax, like this record f
       },
         ...
 
-Take note of the web service's field you want Users to select. For `get-countries` it's most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
+That is the record for the country Afghanistan.
 
-On the _URL Example_ tab, find the URL to use when creating the data provider. It's the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
+Note the field you want Users to select. With this service, it is most likely `nameCurrentValue`, because it contains the full, properly capitalized name of the country.
+
+Lastly, on the _URL Example_ tab, the URL you entered into the data provider form is the same as the one generated for accessing the `get-countries` JSON web service. Users can find the URL for any registered JSON web service using this same procedure.
 
 ![The URL Example tab displays the corresponding the JSON web service.](./introduction-to-data-providers/images/02.png)
 
 ## Data Provider Configuration Reference
 
-Configure data providers from the Forms application at _Site Administration_ &rarr; _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin. There are several fields to fill out when configuring a data provider.
+This reference section explains the different fields when configuring a data provider. Users can add data providers in the _Site Administration_ menu. Navigate to the site where the forms are created then click _Content & Data_ &rarr; _Forms_. Click the _Data Provider_ tab then the (![Add icon](../../../../images/icon-add.png)) icon to begin.
 
 ![Here are the different fields and their explanations.](./introduction-to-data-providers/images/03.png)
 
 ### URL
 
-Enter the URL of an internal or external REST service endpoint. Consider the REST service at <https://restcountries.eu/> which contains a REST API endpoint to find countries by `region`:
+This refers to the URL of an internal or external REST service endpoint. Consider the REST service at <https://restcountries.eu/> which contains a REST API endpoint to find countries by `region`:
 
 `https://restcountries.eu/rest/v2/region/{region}`
 
@@ -54,7 +54,7 @@ Unlike path parameters, query parameters are optional.
 
 ### User Name and Password
 
-Enter the credentials used to authenticate to the REST Web Service, if necessary.
+These are the Credentials used to authenticate to the REST Web Service, if necessary.
 
 ### Cache data on the first request
 
@@ -62,7 +62,7 @@ If the data is cached, a second load of the select list field is much faster, si
 
 ### Timeout
 
-Enter the time (in ms) to allow the REST service call to process before aborting the request, if a response is not returned.
+This is the time (in ms) to allow the REST service call to process before aborting the request, if a response is not returned.
 
 ### Inputs
 
