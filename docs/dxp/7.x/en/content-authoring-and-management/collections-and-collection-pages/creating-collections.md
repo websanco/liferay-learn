@@ -1,6 +1,6 @@
 # Creating Collections
 
-You can create *Manual* or *Dynamic* Collections. For more information, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
+You can create *Manual* and *Dynamic* Collections. For more information, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
 
 ## Creating a Manual Collection
 
@@ -44,7 +44,7 @@ You can create *Manual* or *Dynamic* Collections. For more information, see [Abo
 
 ## Creating a Collection from an Asset Publisher 
 
-You can create a new Collection from an Asset Publisher widget.
+You can create a new Collection from an Asset Publisher widget. This is useful when you have an Asset Publisher widget with a customization you want to use as a Collection.
 
 ![You can transform an Asset Publisher widget into a Collection](./creating-collections/images/06.png)
 
@@ -57,7 +57,7 @@ You can create a new Collection from an Asset Publisher widget.
 1. In the *Asset Publisher - Configuration* dialog, click the *Setup* tab and *Asset Selection* sub-tab.
 1. Scroll down and click on the *Create a Collection from this Configuration* link.
 
-    ![Configure the Asset Publisher Widget](./creating-collections/images/07.png)
+    ![Click the Create a collection fro this configuration to transform the Asset Publihser widget into a new Collection](./creating-collections/images/08.png)
 
 1. Enter the *Title* for your Collection and click *Save*.
 1. Close the *Asset Publisher - Configuration* dialog.

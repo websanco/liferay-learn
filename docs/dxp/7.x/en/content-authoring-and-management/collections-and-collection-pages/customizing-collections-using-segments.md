@@ -1,6 +1,6 @@
 # Customizing Collections Using Segments
 
-By default, all the items in a Collection are visible for all users and assigned to the *Anyone* group. However, you can create a *Personalized Variation* of these items using Segments. When you use a Personalized Variation, the items that are part of your collection don't change, but the items that are shown depend on the user Segment.
+By default, all the items in a Collection are visible for all users and assigned to the *Anyone* group. However, you can create a *Personalized Variation* of these items using Segments. When you use a Personalized Variation, the items that are part of your Collection don't change, but the items shown are filtered for your Segment.
 
 ![Collections are available for anyone, by default](./customizing-collections-using-segments/images/02.png)
 
