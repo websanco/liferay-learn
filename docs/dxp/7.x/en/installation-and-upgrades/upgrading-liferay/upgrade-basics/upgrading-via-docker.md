@@ -39,7 +39,7 @@ Here are the steps for upgrading with a Docker image:
 
 1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the `files` folder (e.g., creating `new-version/files/data`).
 
-1. Copy and merge the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key from `[Liferay Home backup]/license/` to `new-version/files/license/`. The files may include but are not limited to these:
+1. Copy the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key from `[Liferay Home backup]/license/` to `new-version/files/license/`. The files may include but are not limited to these:
 
     * `/license/*`: Activation keys. (Subscription)
 
@@ -75,8 +75,6 @@ Here are the steps for upgrading with a Docker image:
     ```
 
     If there are any upgrade failures or errors, they're printed to the console and log. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot any issues and finish the upgrade.
-
-1. After you have resolved any failures or errors, re-index the search indexes and examine the [Post Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. Validate your upgraded database.
 

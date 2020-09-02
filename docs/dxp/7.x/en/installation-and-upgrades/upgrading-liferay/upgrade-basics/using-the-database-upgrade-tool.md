@@ -20,13 +20,18 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
-1. Copy and merge your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
+1. Copy your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
 
     * `/license/*`: Activation keys. (Subscription)
+
     * `/log/*`: Log files.
+
     * `/osgi/*.config`: OSGi configuration files.
+
     * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
-    * Application server files: Modified scripts and configuration files.
+
+    * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
+
     * `web.xml`: Portal web application descriptor.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
@@ -88,19 +93,17 @@ Here are steps for upgrading your database with the upgrade tool:
 
     After configuration is complete, the upgrade starts. You can monitor the log file. Log messages are reported for the start and completion of each upgrade process.
 
-1. After the upgrade completes, check the log for any database upgrade failures or errors. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrade.
-
-You have completed the database upgrade and resolved any issues.
+1. After the upgrade completes, check the log for any database upgrade failures or errors. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrades.
 
 ## Test the Upgraded Database
 
 Now that the database upgrade is complete, test it.
 
-1. If you're upgrading to a new Liferay Docker image, point your image to the upgraded database and validate Liferay with the database. Please see [Configuring Liferay Containers](../../installing-liferay/using-liferay-dxp-docker-images/configuring-dxp-containers.md) for more information.
+If you're upgrading to a new Liferay Docker image, point your image to the upgraded database and validate Liferay with its upgraded database. Please see [Configuring Liferay Containers](../../installing-liferay/using-liferay-dxp-docker-images/configuring-dxp-containers.md) for more information.
 
-1. Re-index the search indexes and examine the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
+If you're using the on-premises installation, follow these steps:
 
-1. [Update the Portal properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
+1. Prepare for testing Liferay by undoing any upgrade-specific tuning and reviewing the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. Start your server and validate Liferay with its upgraded database.
 
@@ -108,7 +111,7 @@ Now that the database upgrade is complete, test it.
 
 You've upgraded your Liferay database using the Database Upgrade Tool.
 
-If this was a trial upgrade and you want to shorten the upgrade time, tune your database for upgrade (if you haven't already) and [remove unnecessary data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md) from the database. Repeat this article's steps as necessary.
+If this was a trial upgrade and you want to shorten the upgrade time, tune your database for upgrade (if you haven't already) and [review for and remove unnecessary data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md) from the database. Repeat this article as necessary.
 
 ## Next Steps
 
