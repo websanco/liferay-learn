@@ -11,7 +11,6 @@ Developing Applications
    developing-applications/core_frameworks.rst
    developing-applications/data_frameworks.rst
    developing-applications/tooling.rst
-   developing-applications/reference.rst
 
 .. raw:: html
    :file: landingpage_template.html
