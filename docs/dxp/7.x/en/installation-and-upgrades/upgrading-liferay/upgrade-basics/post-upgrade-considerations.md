@@ -8,13 +8,9 @@ Now that you are done upgrading your database, re-enable your production setting
 
 ### Search Indexing
 
-Reindexing search indexes is required for most upgrades, but is typically not required for applying a service pack or upgrading to a new GA (rolling release) within the same Liferay version. Here's how to reindex:
+Reindex your search indexes is required except most of the cases when upgrading between GAs or service packs for the same Liferay version. You can do it from the Control Panel by navigating to *Search* &rarr; *Index Actions* and clicking *Execute* for *Reindex All Search Indexes.*
 
-1. Click on the *Global Menu* (![Global Menu icon](./post-upgrade-considerations/images/01.png)) and select the *Control Panel* tab. The Control Panel appears.
-
-1. Click on *Search* in the Configuration section, select the *Index Actions* tab, and click *Execute* for *Reindex all search indexes.* The reindex executes and displays a success message when done.
-
-![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/02.png)
+![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/01.png)
 
 ```note::
    If you upgraded from an older version (7.1 and below) consider `installing Elasticsearch <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ to handle search indexing.
@@ -52,7 +48,7 @@ Prior to 7.1, all users could view Web Content articles by default. Now view per
 
 **Option 1:** Open view permissions for all web content articles by navigating to _Control Panel_ → _Configuration_ → _System Settings_ → _Web Content_ → _Virtual Instance Scope_ → _Web Content_ and de-selecting _Article view permissions check enabled_.
 
-![Disable the permissions check for viewing web content by scrolling down in the Web Content menu in the System Settings.](./post-upgrade-considerations/images/03.png)
+![Disable the permissions check for viewing web content by scrolling down in the Web Content menu in the System Settings.](./post-upgrade-considerations/images/02.png)
 
 **Option 2:** If few Web Content articles exist, then edit view permissions per Web Content article per role.
 

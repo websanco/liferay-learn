@@ -138,7 +138,7 @@ See the latest [portal properties reference](https://docs.liferay.com/dxp/portal
 
 #### Configuring portal-upgrade-ext.properties
 
-Add all [portal properties](../../reference/portal-properties.md), such as `portal-ext.properties` file properties, from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md). The following properties are especially important to configure the upgrade:
+Add all properties from your old `portal-ext.properties` file. The following information is especially important to configure the upgrade:
 
 * `liferay.home`: The [LIFERAY_HOME folder](../../reference/liferay-home.md).
 
