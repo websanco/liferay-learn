@@ -10,7 +10,20 @@ This article walks users through invoking a JSON web service, configuring the da
 
 ## Initial Setup
 
+Invoke the `get-countries` JSON web service (there are two; use either one).
+
+1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
+1. Search for _get-countries_.
+    <!-- This screenshot takes up a lot of real estate -->
+
+    ![Search for the get-countries web service.](./using-a-data-provider-to-populate-form-options/images/01.png)
+
+1. Click _Invoke_.
+
+The list of countries is now ready for use.
+
 ### Enabling Access to Data on the Local Network
+<!-- Would this be better as a first step? -->
 
 By default, users cannot configure data providers to use URLs on the local network. This is a good default for security in a production environment, but makes testing more difficult.
 
@@ -23,19 +36,6 @@ To enable local network access from data providers:
     ![Grant access to the local network.](./using-a-data-provider-to-populate-form-options/images/02.png)
 
 1. Click _Save_ when finished.
-
-### Invoking the JSON Web Service for Countries
-
-Invoke the `get-countries` JSON web service (there are two; use either one).
-
-1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
-1. Search for _get-countries_.
-
-    ![Search for the get-countries web service.](./using-a-data-provider-to-populate-form-options/images/01.png)
-
-1. Click _Invoke_.
-
-The list of countries is now ready for use.
 
 ## Adding a Basic Data Provider
 
