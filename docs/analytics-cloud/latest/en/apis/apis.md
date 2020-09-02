@@ -1,6 +1,6 @@
 # APIs
 
-Liferay Analytics Cloud supports access to its analytics data via a set of API endpoints. Developer can now access and integrate the data either through RESTful APIs or data export.
+As of January 2020 release, Liferay Analytics Cloud supports access to its analytics data via a set of API endpoints. Developer can now access and integrate the data either through RESTful APIs or data export.
 
 Business can do the following with the Analytics Cloud data:
 
