@@ -91,6 +91,12 @@ Here are steps for upgrading your database with the upgrade tool:
 
 1. After the upgrade completes, check the log for any database upgrade failures or errors. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrades.
 
+1. Re-enable search indexing by setting `indexReadOnly="false"` or by deleting the `com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config` file.
+
+    ```bash
+    rm liferay-home/files/osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+    ```
+
 1. Prepare for testing Liferay by undoing any upgrade-specific tuning and reviewing the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. Start your server and validate Liferay with its upgraded database.
