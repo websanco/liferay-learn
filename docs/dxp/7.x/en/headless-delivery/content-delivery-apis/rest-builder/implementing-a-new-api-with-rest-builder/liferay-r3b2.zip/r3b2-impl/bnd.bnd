@@ -3,4 +3,4 @@ Bundle-SymbolicName: com.acme.r3b2.impl
 Bundle-Version: 1.0.0
 Import-Package: com.liferay.*;version="[1.0.0,99.0.0)",\
 \
-        *
+		*

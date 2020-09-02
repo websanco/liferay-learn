@@ -2,8 +2,8 @@ Bundle-Name: Acme R3B2 Journal Article API Expansion
 Bundle-SymbolicName: com.acme.r3b2.api
 Bundle-Version: 1.0.0
 Export-Package:\
-    com.acme.r3b2.journal.article.expansion.resource.v1_0,\
-    com.acme.r3b2.journal.article.expansion.dto.v1_0
+	com.acme.r3b2.journal.article.expansion.resource.v1_0,\
+	com.acme.r3b2.journal.article.expansion.dto.v1_0
 Import-Package: com.liferay.*;version="[1.0.0,99.0.0)",\
 \
-        *
+		*
