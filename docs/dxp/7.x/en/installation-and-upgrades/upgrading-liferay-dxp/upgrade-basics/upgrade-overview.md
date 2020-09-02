@@ -84,6 +84,10 @@ If your Liferay server has instances, sites, pages, or versioned content items (
 
 Adjusting your database for upgrade operations (more data writes than in production) improves database upgrade performance. See [Database Tuning for Upgrades](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) for details.
 
+### Tune the Search Engine
+
+The search engine typically indexes regularly while the Liferay server is running. However, this indexing can have a detrimental impact to upgrade performance if it is left on when upgrading the database during server startup. Even if Liferay is offline during database upgrade, upgrade processes that call services that call a search server produce errors if indexing is on. Indexing should be disabled before performing an upgrade, and re-enabled once an upgrade is complete. The database upgrade steps and post upgrade steps demonstrate configuring the indexing.
+
 ## Executing the Database Upgrade
 
 There are two ways to upgrade your Liferay database:
