@@ -142,6 +142,7 @@ By this point, the following steps should be completed:
 ## Installing DXP Dependencies
 
 1. Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder. Add the appropriate JDBC connector JAR for the database being used to this location as well.
+1. From the same archive, copy `portlet.jar` into `[Install Location]/WebSphere/AppServer/javaext` for WebSphere 9.0.0.x. WebSphere already contains an older version of `portlet.jar` which must be overridden at the highest class loader level. The new `portlet.jar` (version 3) is backwards-compatible.
 1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). This is typically `[Install Location]/WebSphere/AppServer/profiles/your-profile/liferay/osgi`.
 
 DXP communicates with your database via JDBC. Add your database JDBC driver JAR file to the user domain's lib folder. You can download JDBC driver JARs for these databases:
@@ -168,24 +169,11 @@ When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../..
 
 When Liferay DXP is started, the archives are unpackaged and installed, and the sidecar Elasticsearch server is started.
 
-### Installing the DXP portlet.jar
-
-DXP's `portlet.jar` (version 3) is backwards-compatible. It is included with the Dependencies ZIP that you unzipped above. WebSphere contains an older `portlet.jar` version which must be overridden.
-
-1. In your `[Install Location]/WebSphere/AppServer/profiles/your-profile/` folder, create a folder called `app_shared_libraries`.
-
-1. Move DXP's `portlet.jar` from the `[Install Location]/WebSphere/AppServer/lib/ext` folder to the `app_shared_libraries` folder you created.
-
-1. Follow IBM's steps for [using a server associated shared library](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver); make sure to choose *Classes loaded with local class loader first (parent_Last)* on step 4d.
-
-1. Save the configuration.
-
 ### Ensuring That the DXP Portlet.jar is Loaded First
 
-In addition to placing DXP's `portlet.jar` in a server associated shared library, configure the `config.ini` file so that it is loaded first.
+In addition to placing the `portlet.jar` in the correct folder, configure the `config.ini` file so that it is loaded first. Navigate to `/IBM/WebSphere/AppServer/configuration/config.ini`.
 
-1. Open the `[Install Location]/WebSphere/AppServer/configuration/config.ini` file.
-1. Find the property `com.ibm.CORBA,com.ibm`.
+1. Find the property `com.ibm.CORBA,com.ibm`
 1. Insert the property
     `javax.portlet,javax.portlet.filter,javax.portlet.annotations`
     after `com.ibm.CORBA` and before `com.ibm`.
@@ -194,7 +182,6 @@ In addition to placing DXP's `portlet.jar` in a server associated shared library
 ### Dependencies Checkpoint
 
 1. DXP dependencies have been installed.
-1. DXP's `portlet.jar` is installed.
 1. The `config.ini` file has been configured.
 
 Start the application server profile.
