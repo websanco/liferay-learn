@@ -18,7 +18,7 @@ module.framework.web.generator.excluded.paths=\
     Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a ``portal-dependency-jars`` property in a `liferay-plugin-package.properties <https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/liferay-plugin-package_7_2_0.properties.html>`_ file.
 ```
 
-If your WAR requires different versions of the [exported third party packages](../../liferay-internals/reference/exported-third-party-packages.md), you can include them in JARs named differently from the excluded JARs.
+If your WAR requires different versions of the [exported third party packages](../../liferay-internals/reference/exported-third-party-packages.md), however, you can include them in JARs named differently from the excluded JARs.
 
 For example, here's how to include a different version of a Spring Framework package:
 
