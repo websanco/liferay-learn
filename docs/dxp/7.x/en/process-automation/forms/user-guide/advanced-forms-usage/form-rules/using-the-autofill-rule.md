@@ -1,8 +1,8 @@
 # Using the Autofill Rule
 
-The Autofill Rule allows users to populate a field based on specific conditions. Normally, users can simply populate a Form Field's options by using a [data provider](../introduction-to-data-providers.md) without having to add conditions. For example, users can populate the list of countries and their states and provinces. See [Using Data Providers to Populate Form Options](../using-data-providers-to-populate-form-options.md) to learn more about setting up a data provider and populating a field.
+Normally, a Form field's options may be populated by using a [data provider](../introduction-to-data-providers.md). For example, users can populate the list of countries and their states and provinces. See [Using Data Providers to Populate Form Options](../using-data-providers-to-populate-form-options.md) to learn more about setting up a data provider and populating a field.
 
-Here is an example of how to use the Autofill Rule to filter countries based on geographic region.
+The Autofill Rule allows users to populate a field based on specific conditions. In this example, users can list countries sorted by their geographic regions (the Americas, Europe, or Asia).
 
 ## Prerequisites
 

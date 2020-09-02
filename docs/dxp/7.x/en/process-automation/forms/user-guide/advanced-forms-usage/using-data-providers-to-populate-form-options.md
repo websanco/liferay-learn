@@ -1,10 +1,6 @@
 # Using Data Providers to Populate Form Options
 
-<<<<<<< HEAD
 Liferay Forms' _Select from List_ fields can hold a lot of options and user can auto-populate the select fields by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
-=======
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
->>>>>>> jrhoun-pr-461
 
 ## Prerequisites
 
