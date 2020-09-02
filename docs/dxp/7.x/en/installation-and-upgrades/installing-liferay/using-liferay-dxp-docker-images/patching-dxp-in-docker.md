@@ -168,7 +168,7 @@ If a patch requires upgrading the database, you must upgrade it using the Databa
 
 1. Apply the patch to the installation. Please see [Patching Liferay](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) for more information.
 
-1. Upgrade the database using the Database Upgrade Tool. Please see [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) for more information.
+1. Upgrade the database using the Database Upgrade Tool. Please see [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md) for more information.
 
 After the database is upgraded, run your container that uses that database.
 
