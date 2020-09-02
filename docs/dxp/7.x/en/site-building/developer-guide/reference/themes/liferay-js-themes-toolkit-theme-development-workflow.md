@@ -15,17 +15,14 @@ The steps below outline the basic workflow for Theme development with the [Lifer
     ```bash
     node_modules\.bin\gulp build
     ```
-
 1. Mirror the [structure of the files](./theme-anatomy-reference.md) you want to modify in the Theme's `/src/` folder.
-
 1. Copy the files over from the `/src/build/` folder to the mirrored structure and add your modifications. The main modifications are placed in the files listed below:
 
     * `/src/templates/portal_normal.ftl`: main markup
     * `/src/css/_custom.scss`: custom CSS styling
     * `/src/js/main.js`: custom JavaScript
 
-1. Build and deploy the Theme to your Liferay DXP server. The finished Theme is bundled as a WAR (Web application ARchive) file.
-
+1. Build and deploy the Theme to your Liferay Portal server. The finished Theme is bundled as a WAR (Web application ARchive) file.
 1. Apply the Theme [through the Look and Feel menu](applying-themes.md) by selecting your [Theme's thumbnail](../../developing-themes/creating-a-thumbnail-preview-for-your-theme.md). 
 
 <!-- Add note back once Developer mode docs are ported
@@ -34,7 +31,7 @@ The steps below outline the basic workflow for Theme development with the [Lifer
 ```
 -->
 
-Themes generated with the Liferay Theme Generator can access several helpful Gulp tasks to make the process easier:
+Theme's generated with the Liferay Theme Generator can access several helpful Gulp tasks to make the process easier:
 
 * **build:** builds your Theme's files based on the specified base Theme. See the [Build task](./running-theme-tasks/building-themes.md) for more information.
 * **extend:** sets the base Theme or Themelet to extend. See the [Extend task](./running-theme-tasks/changing-the-base-theme.md) for more information.
