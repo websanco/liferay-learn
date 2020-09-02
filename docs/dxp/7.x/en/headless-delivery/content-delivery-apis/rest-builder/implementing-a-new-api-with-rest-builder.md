@@ -1,6 +1,6 @@
 # Implementing a New API with REST Builder
 
-REST Builder allows you to quickly implement new JAX-RS APIs for your DXP application. It allows you to simply define the API you want to build, while providing the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
+REST Builder allows you to quickly implement new JAX-RS APIs for your DXP application. You can simply define the API you want to build, and REST Builder provides the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
 
 ## Deploy an Example REST Builder API
 
@@ -47,7 +47,7 @@ First, see a sample REST Builder API in your own Liferay DXP instance. Follow th
     jaxrs:check
     ```
 
-    The page lists all of the installed JAX-RS bundles, including the newly deployed API. The API is now deployed and ready for you to call.
+    The page lists all of the installed JAX-RS bundles, including the newly deployed API, "R3B2.Acme.Journal.Article.Expansion". The API is now deployed and ready for you to call.
 
     ![The newly deployed API (named R3B2.Acme.Journal.Article.Expansion) is listed as a result from the command, and ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
 
@@ -265,20 +265,20 @@ Finally, add the business logic to complete the request. REST Builder only creat
 ```java
 List<JournalArticle> journalArticles = JournalArticleLocalServiceUtil.getArticles();
 
-  for (JournalArticle journalArticle : journalArticles) {
-      if (journalArticle.getUserId() == userId.longValue()) {
-          Article article = new Article();
+for (JournalArticle journalArticle : journalArticles) {
+    if (journalArticle.getUserId() == userId.longValue()) {
+        Article article = new Article();
 
-          article.setUserId((int)journalArticle.getUserId());
-          article.setId(journalArticle.getArticleId());
-          article.setTitle(journalArticle.getTitle());
-          article.setContent(journalArticle.getContent());
+        article.setUserId((int)journalArticle.getUserId());
+        article.setId(journalArticle.getArticleId());
+        article.setTitle(journalArticle.getTitle());
+        article.setContent(journalArticle.getContent());
 
-          return article;
-      }
-  }
+        return article;
+    }
+}
 
-    return null;
+return null;
 ```
 
 This example uses [`JournalArticleLocalServiceUtil`](https://github.com/liferay/liferay-portal/blob/7.1.3-ga4/modules/apps/journal/journal-api/src/main/java/com/liferay/journal/service/JournalArticleLocalServiceUtil.java) to retrieve all articles, and then compares their authors with the `userId` from the request to return the first match.
