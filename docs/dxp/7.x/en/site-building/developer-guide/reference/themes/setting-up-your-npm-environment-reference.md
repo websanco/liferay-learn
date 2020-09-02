@@ -2,8 +2,7 @@
 
 If you're using npm for Liferay Portal development, you should set up your npm environment to avoid potential permissions issues. Follow these steps to configure your npm environment:
 
-1. Create an `.npmrc` file in your user's home directory. This helps bypass npm permission-related issues.
-
+1. Create an `.npmrc` file in your user's home directory. This helps bypass npm permission-related issues. 
 1. In the `.npmrc` file, specify a `prefix` property based on your user's home directory, like the one shown below. This value specifies where to install global npm packages:
 
     ```bash

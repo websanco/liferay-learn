@@ -1,10 +1,6 @@
 # Developing Themelets
 
-Coming soon!
-
-<!-- TODO: Fix Themelet example first before publishing.
-
-Themelets are small, extendable, and reusable CSS and JavaScript for extending Themes. You can share them with other developers to provide common components for Themes.
+Themelets are small, extendable, and reusable CSS and JavaScript for extending Themes. You can share them with other developers to provide common components for Themes. 
 
 Here, you'll learn how to develop a Themelet with the Liferay JS Themes Toolkit:
 
@@ -29,12 +25,12 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/liferay-m2t6.zip
     ```
-
+ 
     ```bash
     unzip liferay-m2t6.zip
     ```
 
-1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator.md).
+1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md).
 1. Navigate to the `/m2t6-impl` folder and run the command below to generate the example Theme:
 
     ```bash
@@ -59,7 +55,7 @@ First, install an existing Themelet in a Theme and deploy it to see what it look
     ```bash
     cd liferay-m2t6/m2t6-impl/liferay-m2t6-theme
     ```
-
+ 
     ```bash
     npm run extend
     ```
@@ -162,7 +158,7 @@ JavaScript is injected with these tags at the bottom of the `<body>` tag in `/sr
   ...
   <!-- inject:js -->
   <!-- endinject -->
-<!-- </body>
+</body>
 ```
 
 The Themelet changes the look of the tooltips with the CSS in the `_custom.scss` below:
@@ -183,7 +179,7 @@ The Themelet changes the look of the tooltips with the CSS in the `_custom.scss`
 Themes can have mutliple Themelet extensions. Here's how to add a new Themelet that prints to the console whether the Theme is being viewed on Desktop or Mobile:
 
 1. Make sure you're in the `m2t6-impl` folder where the other projects are. 
-1. If you have not done so already, [Install the Theme Generator](../reference/installing-the-theme-generator.md) and run the [Themelet sub-generator](../reference/installing-the-theme-generator.md#generator-and-sub-generator-commands) with the command below:
+1. If you have not done so already, [Install the Theme Generator](../reference/installing-the-theme-generator-reference.md) and run the [Themelet sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands) with the command below:
 
     ```bash
     yo liferay-theme:themelet
@@ -270,4 +266,4 @@ Great! Now you know how to create Themelets with the Liferay JS Themes Toolkit.
 
 * [Developing a Theme](./developing-a-theme.md)
 * [Theme Development Workflow](../reference/themes/liferay-js-themes-toolkit-theme-development-workflow.md)
-* [Look and Feel Overview](./look-and-feel-overview.md) -->
+* [Look and Feel Overview](./look-and-feel-overview.md)

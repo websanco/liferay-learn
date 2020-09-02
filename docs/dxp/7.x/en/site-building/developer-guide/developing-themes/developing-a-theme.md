@@ -29,7 +29,7 @@ First, deploy an example Theme:
     unzip liferay-g4t8.zip
     ```
 
-1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator.md).
+1. [Install the Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md).
 
 1. Navigate to the `/g4t8-impl` folder and run the command below to generate the example Theme:
 
@@ -73,11 +73,11 @@ First, deploy an example Theme:
 
    ![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/02.png)
 
-Great! You successfully deployed and applied a Theme. Next you can review the example Theme and learn how it's built. See the [Theme Anatomy reference](../reference/themes/theme-anatomy.md) for a complete listing of the files included in a Theme and their usage.
+Great! You successfully deployed and applied a Theme. Next you can review the example Theme and learn how it's built. See the [Theme Anatomy reference](../reference/themes/theme-anatomy-reference.md) for a complete listing of the files included in a Theme and their usage.
 
 ## Theme Breakdown
 
-The ACME Purple Pastel Theme was generated with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](../reference/themes/installing-the-theme-generator.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/themes/installing-the-theme-generator.md#generator-and-sub-generator-commands):
+The ACME Purple Pastel Theme was generated with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
 
 ```bash
 yo liferay-theme:classic
@@ -179,5 +179,5 @@ Congratulations! Now you know how to develop and deploy a Theme to Liferay DXP u
 
 ## Related Information
 
-* [Installing the Theme Generator](../reference/themes/installing-the-theme-generator.md)
+* [Installing the Theme Generator](../reference/themes/installing-the-theme-generator-reference.md)
 * [Theme Development Workflow](../reference/themes/liferay-js-themes-toolkit-theme-development-workflow.md)

@@ -15,16 +15,6 @@ Fragments
 -  :doc:`/site-building/developer-guide/reference/fragments/fragment-configuration-types-reference`
 -  :doc:`/site-building/developer-guide/reference/fragments/fragment-specific-tags-reference`
 
-Themes
-~~~~~~
-
--  :doc:`/site-building/developer-guide/reference/themes/look-and-feel-overview`
--  :doc:`/site-building/developer-guide/reference/themes/understanding-the-page-structure`
--  :doc:`/site-building/developer-guide/reference/themes/installing-the-theme-generator`
--  :doc:`/site-building/developer-guide/reference/themes/setting-up-your-npm-environment-reference`
--  :doc:`/site-building/developer-guide/reference/themes/theme-anatomy`
--  :doc:`/site-building/developer-guide/reference/themes/liferay-js-themes-toolkit-theme-development-workflow`
-
 Running Theme Tasks
 -------------------
 

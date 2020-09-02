@@ -8,9 +8,6 @@ Developing Themes
    developing-themes/developing-themelets.md
    developing-themes/customizing_configuration_settings.rst
 
--  :doc:`/site-building/developer-guide/developing-themes/developing-a-theme`
--  :doc:`/site-building/developer-guide/developing-themes/developing-themelets`
-
 Customizing Configuration Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
