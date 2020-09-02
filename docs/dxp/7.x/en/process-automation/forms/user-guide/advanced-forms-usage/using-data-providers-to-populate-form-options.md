@@ -1,20 +1,21 @@
 # Using Data Providers to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about how data providers work, see [Introduction to Data Providers](./introduction-to-data-providers.md).
+_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md).
 
-This article walks users through invoking a JSON web service, configuring the data provider, and adding the data provider to a form. The example below demonstrates how to populate a Select from List field with a list of countries.
+This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form. The example below demonstrates how to populate a Select field for a user's "Country" when collecting personal information on a form.
 
 ## Prerequisites
 
-[Create a form](../../creating-forms.md) with one Select from List field called _Country_.
+1. [Create a form](../../creating-forms.md) that includes the following:
+
+* **Country**: a Single Select field.
 
 ## Initial Setup
 
 Invoke the `get-countries` JSON web service (there are two; use either one).
 
 1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
-1. Search for _get-countries_.
-    <!-- This screenshot takes up a lot of real estate -->
+1. Search for "get-countries".
 
     ![Search for the get-countries web service.](./using-a-data-provider-to-populate-form-options/images/01.png)
 
@@ -23,7 +24,6 @@ Invoke the `get-countries` JSON web service (there are two; use either one).
 The list of countries is now ready for use.
 
 ### Enabling Access to Data on the Local Network
-<!-- Would this be better as a first step? -->
 
 By default, users cannot configure data providers to use URLs on the local network. This is a good default for security in a production environment, but makes testing more difficult.
 
@@ -70,13 +70,13 @@ To add a _Countries of the World_ Data Provider:
 
 ## Using Inputs as Filters
 
-The above example is simple which uses only an Output to populate a Select from List field. Often the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
+The above example is simple which uses only an Output to populate a _Select from List field_. Often the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
 
 For example, to apply a region (for example, Americas, Europe, or Oceania) filter for the countries of the world:
 
 1. Enter the following:
    * **Name**: `restcountries`
-   * **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`
+   * **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`(using a different REST provider)
    * **Input Label**: Region
    * **Parameter**: Region
    * **Input Type**: Text
@@ -101,7 +101,7 @@ To configure the data provider's permissions:
 1. Grant the necessary permissions.
 1. Click _Save_ when finished.
 
-## Using a Data Provider in a Select from List Field
+## Using a Data Provider in a Select Field
 
 Once the Data Provider is configured, use it to populate a Select from List field:
 
@@ -121,7 +121,7 @@ The Data Provider is now being used to populate a select field.
 
 ## Troubleshooting Data Provider Errors
 
-To uncover errors arising from Data Provider failures, [configure the log level](../../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for the `DDMDataProviderPortlet` service:
+To uncover errors arising from Data Provider failures, [configure log levels](../../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for these services:
 
 1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Server Administration_.
 1. Click the _Log Levels_ tab.
