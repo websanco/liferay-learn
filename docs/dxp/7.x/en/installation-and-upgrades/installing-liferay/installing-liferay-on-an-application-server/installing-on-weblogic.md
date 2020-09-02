@@ -124,7 +124,7 @@ Please see the [compatibility matrix](https://www.liferay.com/documents/10182/24
 
 ## Install Elasticsearch Archives
 
-When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-built-in-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
+If installing Liferay DXP 7.3, the following archives are required to install a sidecar [Elasticsearch](https://www.elastic.co/elasticsearch/) server that can be used for testing and development.
 
 1. Download the following archives:
 
@@ -136,7 +136,7 @@ When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../..
 
 1. Copy the downloaded files into `[Liferay Home]`.
 
-When Liferay DXP is started, the archives are unpackaged and installed, and the sidecar Elasticsearch server is started.
+When Liferay DXP is started, logic is run to check if Elasticsearch is already installed. If not, Liferay DXP looks for archives in `[Liferay Home]`. If the archives are found, Liferay DXP installs Elasticsearch for you. If the archives are not found, Liferay DXP attempts to download then install the archives.
 
 ## Connect to Database
 
