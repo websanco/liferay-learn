@@ -7,11 +7,11 @@ Touchpoints
    touchpoints/touchpoints.md
    touchpoints/pages.rst
    touchpoints/assets.rst
-   touchpoints/a-b-testing.md
+   touchpoints/a-b-testing-analytics.md
    touchpoints/content-recommendation-api.md
 
 -  :doc:`/touchpoints/touchpoints`
--  :doc:`/touchpoints/a-b-testing`
+-  :doc:`/touchpoints/a-b-testing-analytics`
 -  :doc:`/touchpoints/content-recommendation-api`
 
 Pages
