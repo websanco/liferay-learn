@@ -36,7 +36,7 @@ Export-Package:\
 
 Multiple packages are specified using wild card characters, such as `*` in `org.aspectj.*`. Groups of packages, such as `org.objectweb.asm*` packages and `org.slf4j*` packages are separated by lines that have the `\` character only.
 
-Exporting the same package from different JARs leads to "split package" issues, whose side affects differ from case to case. Therefore, refrain from deploying JARs that have the same packages that Liferay exports.
+Deploying these packages with artifacts in your projects can cause weird errors that are hard to debug. You must therefore, refrain from deploying these packages.
 
 Here's how to make sure a project has required packages at compile time but relies on Liferay for its exported packages at run time.
 
