@@ -8,7 +8,7 @@ If you're in a development environment, you can interact with the module framewo
 
 ## Prerequisites
 
-Gogo shell on the command line requires that the server is running in Developer Mode. You can enable Developer Mode on the server in [Developer Studio](../../../developing-applications/tooling/developer-studio.md) or by setting the following [Portal Property](../../../installation-and-upgrade/reference/portal-properties.md):
+Gogo shell on the command line requires that the server is running in Developer Mode. You can enable Developer Mode on the server in [Developer Studio](../../../developing-applications/tooling/developer-studio.md) or by setting the following [Portal Property](../../../installation-and-upgrade/reference/portal-properties.md).
 
 ```properties
 include-and-override=portal-developer.properties

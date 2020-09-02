@@ -1,11 +1,12 @@
 # Using the Gogo Shell
 
-The Gogo shell provides a way to interact with the module framework. Among other things, you can
+The Gogo shell provides a way to interact with the module framework. You can
 
-* Dynamically install/uninstall bundles (modules)
-* Examine package dependencies
-* Examine extension points
-* List service references
+* dynamically install/uninstall bundles (modules)
+* examine package dependencies
+* examine extension points
+* list service references
+* etc.
 
 The Control Panel is the safest, most secure way to access Gogo shell:
 
@@ -15,9 +16,9 @@ The Control Panel is the safest, most secure way to access Gogo shell:
 
 1. Click *Gogo Shell* in the System section.
 
-   The Gogo shell command screen appears.
+    The Gogo shell command screen appears.
 
-   ![Gogo shell in the Control Panel](./gogo-shell/images/01.png)
+    ![Gogo shell in the Control Panel](./gogo-shell/images/01.png)
 
     ```note::
        In DXP 7.2, open the Control Panel and navigate to *Configuration* &rarr; *Gogo Shell*
