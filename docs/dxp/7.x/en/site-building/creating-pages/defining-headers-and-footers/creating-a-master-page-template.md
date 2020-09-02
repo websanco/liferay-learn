@@ -23,7 +23,15 @@ Follow these steps to create a Master Page Template:
 
     ![Check and uncheck Fragments from the Allowed Fragments dialog to specify whether they can be added to a page that uses this Master Page Template.](./creating-a-master-page-template/images/04.png)
 
+<!-- ```note::
+   New Undo, Redo, and History UI options available in Liferay DXP 7.3+.
+``` -->
+
 1. You can revert any action using the *Undo* (![Preview](../../../images/icon-undo.png)) or *Redo* (![Preview](../../../images/icon-redo.png)) buttons, or you can return to a previous version of your edits using the *History* (![Preview](../../../images/icon-time.png)) button.
+
+<!-- ```note::
+   New Preview option available in Liferay DXP 7.3+.
+``` -->
 
 1. To preview your Content Page, click the *Preview* button (![Preview](../../../images/icon-preview.png)).
 1. Click *Publish* to create the Master Page Template.
