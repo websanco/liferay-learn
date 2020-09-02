@@ -16,10 +16,10 @@ In addition to copying dependencies, scripts, and configurations from the Lifera
 * Dependencies ZIP file
 * OSGi Dependencies ZIP file
 
-Liferay DXP requires a Java JDK 8 or 11.
+Liferay DXP requires Java JDK 8 or 11.
 
 ```note::
-   Please see `the compatibility matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>`_ for information on supported JDKs, databases, and environments.  See [JVM Configuration](../../reference/jvm-configuration.md) for recommended JVM settings.
+   Please see `the compatibility matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>`_ for information on supported JDKs, databases, and environments.
 ```
 
 Here are the basic steps for installing DXP on Tomcat:
