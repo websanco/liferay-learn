@@ -4,8 +4,6 @@ Themes
 .. toctree::
    :maxdepth: 3
 
-   themes/understanding-the-page-structure.md
-   themes/look-and-feel-overview.md
    themes/installing-the-theme-generator-reference.md
    themes/liferay-js-themes-toolkit-theme-development-workflow.md
    themes/setting-up-your-npm-environment-reference.md

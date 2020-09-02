@@ -49,11 +49,11 @@ First, deploy an example to see what a Theme looks like:
 
     ![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/02.png)
 
-Great! You successfully deployed and applied a Theme. Next you can review the example Theme and learn how it's built. See the [Theme Anatomy reference](../reference/themes/theme-anatomy-reference.md) for a complete listing of the files included in a Theme and their usage.
+Great! You successfully deployed and applied a Theme.
 
 ## Theme Breakdown
 
-The Purple Pastel Theme was generated with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](../reference/themes/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
+The Purple Pastel Theme was created with the [Liferay JS Themes Toolkit's](https://github.com/liferay/liferay-js-themes-toolkit) [Liferay Theme Generator](./reference/installing-the-theme-generator-reference.md). It's based on the Classic Theme, created with the Classic [Sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands):
 
 ```bash
 yo liferay-theme:classic
@@ -63,11 +63,7 @@ yo liferay-theme:classic
   The ``liferay-theme:classic`` sub-generator is available for Liferay DXP 7.2+ in v9.50+ of the Liferay JS Themes Toolkit.
 ```
 
-Once the Theme was generated, its base files were built using the [Liferay JS Themes Toolkit Workflow](../reference/themes/liferay-js-themes-toolkit-theme-development-workflow.md). The example Theme's updates are described in more detail below.
-
-### Modify the CSS Styles
-
-Custom CSS is placed in `_custom.scss`. In this case, the example styles change the background color of the Header and Footer and update the font color of the navigation/ links. See [Understanding the Page Structure](../reference/themes/understanding-the-page-structure.md) for more information on the various elements and IDs you can target for styling. Styles are condensed with the [Sass](https://sass-lang.com/) syntax, as demonstrated by the nested styles in the CSS below:
+Custom CSS in `_custom.scss` changes the background color of the Header and Footer and updates the font color of the navigation links. Styles are condensed with the [Sass](https://sass-lang.com/) syntax, as demonstrated by the nested styles in the CSS below:
 
 ```scss
 body header .navbar-classic {
@@ -85,11 +81,7 @@ body #footer {
 }
 ```
 
-### Modify the HTML
-
-The HTML markup is contained in a set of FreeMarker Theme Template files. See the [Look and Feel Overview](../reference/look-and-feel-overview.md#theme-building-utilities) for more information on the available Theme Templates and their functionality. `portal_normal.ftl` is similar to the index page (`index.html`) of a Site. It is responsible for rendering the markup you see on the page and includes all the Theme templates. `portal_normal.ftl` differs from a traditional index in that it specifies the markup that is rendered on every page of the Site, not just one.
-
-The example adds a new button to the Header markup beside the User Personal Bar in `portal_normal.ftl`:
+A new button is added to the Header's markup beside the User Personal Bar in `portal_normal.ftl`:
 
 ```markup
 ...
@@ -103,15 +95,7 @@ The example adds a new button to the Header markup beside the User Personal Bar 
 ...
 ```
 
-### Modify the JavaScript
-
-The `main.js` file is the primary file used for including JavaScript in your Theme. You can of course include external JavaScript files as well by including their scripts in a Theme Template (`portal_normal.ftl` for instance) as you would a traditional site's HTML.
-
-```note::
-  JavaScript can also be included through the Site's `Page Set <../../creating-pages/page-settings/configuring-page-sets.md#javascript>`_ and `individual Page <../../creating-pages/page-settings/configuring-individual-pages.md#javascript>`_ settings.
-```
-
-The example includes JavaScript in the `main.js` file that prints a message in the browser's console when the Theme is loaded on the page:
+Custom JavaScript in the `main.js` file prints a message in the browser's console when the Theme is loaded on the page:
 
 ```javascript
 console.log('My Theme is loaded to the page.');
@@ -119,7 +103,7 @@ console.log('My Theme is loaded to the page.');
 
 ## Modify the Theme and Redeploy
 
-You'll modify the Theme to remove the alert button. 
+You'll modify the theme to remove the alert button. 
 
 1. Open the Theme's `portal_normal.ftl` template to modify the page's HTML markup.
 1. Remove the button markup in the Header shown below and save the file:
