@@ -1,14 +1,12 @@
 # Developing a Theme
 
-Themes are packaged WAR files composed of CSS, HTML (FreeMarker), and JavaScript that can be used to create a custom look and feel for pages.
+Themes are x that can be used to create a custom look and feel for pages. Create your own Theme by following the steps, as described below:
 
 ```note::
    Starting with Liferay DXP 7.1+, the overall design of [Content Pages](../../creating-pages/content-pages-overview.md) can be accomplished with [Page Fragments](TODO). Starting with Liferay DXP 7.3+ users can define the common elements of a page (Header, Footer, etc.) in the [Master Page Template](TODO). These look and feel changes can be implemented without needing to develop a theme.
 ```
 
 ![Themes can change the look and feel of your Site's pages.](./developing-a-theme/images/01.png)
-
-Create your own Theme by following the steps, as described below.
 
 ## Overview
 
@@ -44,21 +42,27 @@ First you must deploy an example Theme. Follow these steps:
 
 1. Build the Theme's WAR.
 
+    **If you're running Liferay JS Themes Toolkit v9.5.0+:**
+
     ```bash
     npm run build
     ```
 
-1. Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
+    **Otherwise run:**
 
     ```bash
-    cp my-liferay-theme-1.0.0.war path/to/your/bind/mount
+    node_modules\.bin\gulp build
     ```
+
+    You can check the version of the toolkit by running `npm list -g generator-liferay-theme`.
+
+1. <!-- This part, I think there's two possibilities: 1. Brian is going to work with us to implement a standard docker deploy command (similar to what exists in commerce w/ gradle deploy - or 2. these instructions say "Copy the Theme War to the ..." and then right below we provide a sample `cp sample-theme.war path/to/your/bind/mount` type sample command.) --> Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
 
     ```note::
     You must restart the Docker container if you're creating the `[host_folder]/deploy` folder for the first time in your bind mount.
     ```
 
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
+1. Confirm the deployment to the Liferay Docker container console:
 
     ```bash
     INFO [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED my-liferay-theme_1.0.0 [1114]
@@ -88,7 +92,7 @@ Great! You successfully built and deployed a custom Theme. Next, you'll walk thr
     ```
 
     ```note::
-      The `liferay-theme:classic` sub-generator is available for Liferay DXP 7.2+ in v9.50+ of the Liferay Theme Generator.
+      The `liferay-theme:classic` sub-generator is available in Liferay DXP 7.3+.
     ```
 
 ### Build the Base Files
@@ -112,7 +116,7 @@ node_modules\.bin\gulp build
 Add custom CSS to the Theme's `/src/css/_custom.scss` file:
 
 ```scss
-body header .navbar-classic {
+.navbar-classic {
   background-color: #9EB1F5;
   
   &.navbar-light {
@@ -128,7 +132,7 @@ body header .navbar-classic {
 ```
 
 ```css
-body #footer {
+#footer {
 	background-color: #9EB1F5;
 }
 ```
@@ -169,12 +173,6 @@ console.log('My Theme is loaded to the page.');
 
 ```note::
   This prints a message in the browser's console when the Theme is loaded on page.
-```
-
-## Additional Information
-
-```note::
-  Since Liferay DXP Fix Pack 2 and Liferay Portal 7.2 CE GA2, Font Awesome is available globally as a system setting, which is enabled by default. If you're using Font Awesome icons in your theme, answer yes (y) to the Font Awesome question in v9.x.x generator to include Font Awesome imports in your theme. This ensures that your icons won't break if they are disabled in the global setting.
 ```
 
 ## Related Information

@@ -12,13 +12,7 @@ Themelets are small, extendable, and reusable pieces of code containing CSS and 
 
 > Liferay DXP 7.3+
 
-First you must extend an example Theme to use an example Themelet and deploy it. Follow these steps:
-
-1. Start the Docker container with a bind mount:
-    
-    ```bash
-    docker run -d -it -p 8080:8080 -p 8000:8000 --name mylrdev -v C:\Users\liferay\Desktop\liferay-docker:/mnt/liferay liferay/portal:7.3.0-ga1
-    ```
+First you must deploy an example Theme that contains the Themelet. Follow these steps:
 
 1. Download and unzip the [example Themelet Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-themelets/1582903559liferay45.zip):
 
@@ -36,10 +30,18 @@ First you must extend an example Theme to use an example Themelet and deploy it.
     npm install
     ```
 
-1. Extend the example Theme with the example Themelet with the command below:
+1. Extend the example Theme with the example Themelet. Run the appropriate command for your Liferay JS Themes Toolkit version:
+
+    v9.5.0+:
 
     ```bash
     npm run extend
+    ```
+
+    Older versions:
+
+    ```bash
+    node_modules\.bin\gulp extend
     ```
 
 1. Choose *Themelet* as the Theme asset to extend.
@@ -51,13 +53,13 @@ First you must extend an example Theme to use an example Themelet and deploy it.
 
     ![You can install Themelets in multiple Themes, so you can reuse code.](./developing-themelets/images/02.png)
 
-1. Build the Theme's WAR with the command below:
+1. Build the Theme's WAR. If you're running Liferay JS Themes Toolkit v9.5.0+, run `npm run build` to build your Theme's WAR file. Otherwise, run `node_modules\.bin\gulp build` to build the WAR file.
 
-    ```bash
-    npm run build
+    ```note::
+      You can check the version of the toolkit by running `npm list -g generator-liferay-theme`.
     ```
 
-1. Verify that the Themelet's CSS has been injected into `_custom.scss` and the JavaScript has been injected into `portal_normal.ftl`. These messages should print in the command line after the build script is run in the previous step:
+1. Verify that the Themelet's CSS has been injected into `_custom.scss` and the JavaScript has been injected into `portal_normal.ftl`:
 
     ```bash
     [15:41:37] Starting 'build:themelets'...
@@ -78,13 +80,19 @@ First you must extend an example Theme to use an example Themelet and deploy it.
     You must restart the Docker container if you're creating the `[host_folder]/deploy` folder for the first time in your bind mount.
     ```
 
-1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
+1. Start the Docker container with a bind mount:
+    
+    ```bash
+    docker run -d -it -p 8080:8080 -p 8000:8000 --name mylrdev -v C:\Users\liferay\Desktop\liferay-docker:/mnt/liferay liferay/portal:7.3.0-ga1
+    ```
+
+1. Confirm the deployment to the Liferay Docker container console:
 
     ```bash
     INFO [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED my-liferay-themelet_theme_1.0.0 [1114]
     ```
 
-1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Components*, and select the *Themes* tab. [Apply the Theme](TODO:applying-themes). The Themelet modifies the tooltips and alerts the user whether they're viewing the Site from a mobile device.
+1. Verify that the Theme is available and [apply it](TODO:applying-themes). The Themelet modifies the tooltips and alerts the user whether they're viewing the Site from a mobile device.
 
     ![Themelets can customize the CSS.](./developing-themelets/images/03.png)
 
@@ -94,10 +102,10 @@ Great! You successfully built and deployed a custom Theme with a Themelet. Next,
 
 ## Walk through the Example
 
-* [Generate the Themelet](#generate-the-themelet)
-* [Customize the CSS](#customize-the-css)
-* [Customize the JavaScript](#customize-the-javascript)
-* [Add the inject tags](#add-the-inject-tags)
+* Generate the Themelet
+* Customize the CSS
+* Customize the JavaScript
+* Add the inject tags
 
 ### Generate the Themelet
 
