@@ -162,9 +162,7 @@ For Liferay Portal CE 7.3 GA2 and below, use this syntax:
 </lfr-editable>
 ```
 
-<!-- Image commented out until a replacement is provided.
 ![You have several options for defining an HTML element on a Content Page.](./fragment-specific-tags-reference/images/04.png)
--->
 
 For more information on editable HTML, see [Editable HTML](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-an-html-element).
 

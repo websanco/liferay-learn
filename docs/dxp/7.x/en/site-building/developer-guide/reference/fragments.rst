@@ -1,5 +1,5 @@
-Fragments
-=========
+Fragments Reference
+===================
 
 .. toctree::
    :maxdepth: 3
