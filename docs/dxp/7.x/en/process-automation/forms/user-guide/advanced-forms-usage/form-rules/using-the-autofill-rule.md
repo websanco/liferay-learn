@@ -1,14 +1,16 @@
 # Using the Autofill Rule
 
-User can use the _Autofill_ Rule which filters a form field's options based on pre-configured conditions. If you already have a [data provider](../data-providers-overview.md) enabled, the _Autofill_ Rule is the next step in enhancing your form. See [Using Data Providers to Populate Form Options]((../using-data-providers-to-populate-form-options.md)) to learn more.
+The Autofill Rule allows filtering a form field's options based on pre-configured conditions. The data all comes from the same [data provider](../introduction-to-data-providers.md), which can also [provide a list of options]((../using-data-providers-to-populate-form-options.md)) without conditions.
 
-In this tutorial, we have a sample form that asks the respondent to select either a cash reward or a vacation. If the respondent selects the latter, he must then choose the geographical region and then a country. To do so, we are using the Autofill Rule to filter countries based on a geographic region.
+Here is an example of how to use the Autofill Rule to filter countries based on geographic region.
 
-Follow the steps below:
+## Prerequisites
 
-1. Configure a [data provider which imports the countries of the world with regional filters.](../using-data-providers-to-populate-form-options.md)
+<!-- This make sit sound like any data provider will do. Don't we specifically need the restcountries.eu data provider form the other article? -->
+1. [A data provider has been configured.](../using-data-providers-to-populate-form-options.md)
 1. [Create a form](../../creating-forms.md) that has the following:
 
+<!--It doesn't look from the screenshots and GIF like we're using the Rewards field, recommend removing if that's true -->
     * A Single Select field called _Rewards_ with two options: "Cash" or "All expenses paid trip"
     * A Text field called _Region_
     * A Select from List field called _Choose a Destination Country_ that uses the [restcountries.eu](https://restcountries.eu) data provider
@@ -43,5 +45,5 @@ Users can now search for a region then the countries in the form.
 ## Additional Information
 
 * [Creating Forms](../../creating-forms.md)
-* [Data Providers Overview](../data-providers-overview.md)
+* [Introduction to Data Providers](../introduction-to-data-providers.md)
 * [Using Data Providers to Populate Form Options](../using-data-providers-to-populate-form-options.md)
