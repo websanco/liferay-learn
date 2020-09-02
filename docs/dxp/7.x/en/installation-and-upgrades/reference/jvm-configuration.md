@@ -1,27 +1,40 @@
-# JVM Configuration
+# JVM Configurations
 
-Liferay DXP requires specific JVM option settings. There are also recommended baseline memory settings and settings to use with JDK 11. Here you'll learn about all of these settings and see them demonstrated in an example Tomcat script.
+The following JVM configurations are a recommended baseline set of configurations for the functionality and performance of a Liferay DXP installation:
 
-**Outline:**
+## UTF-8 File Encoding
 
-* [Recommended Settings](#recommended-jvm-settings)
-* [Known Issue Workarounds](#known-issue-workarounds)
-* [Example Tomcat Script](#example-tomcat-script)
+```properties
+  -Dfile.encoding=UTF8
+```
 
-## Recommended JVM Settings
+## GMT Timezone
 
-| Type | Setting | Required | Description |
-| :---------- | :------ | :------- | :---------- |
-| File Encoding | `-Dfile.encoding=UTF8` | Yes | DXP expects files to be encoded using UTF-8. |
-| Timezone | `-Dfile.encoding=UTF8` | Yes | DXP uses the GTM timezone for all dates. |
-| Four-digit Years | `-Djava.locale.providers=JRE,COMPAT,CLDR` | No | On JDK 11, this setting is required to display four-digit years. Since JDK 9, the Unicode Common Locale Data Repository (CLDR) is the default locales provider. CLDR does not provide years in a four-digit format (see [LPS-87191](https://issues.liferay.com/browse/LPS-87191)). This setting works around the issue by using JDK 8's default locales provider. |
-| Heap Size | `-Xms2560m -Xmx2560m` | No | The recommended maximum heap size is 2GB. Setting the minimum heap size to the maximum heap size value minimizes garbage collections. |
+```properties
+  -Duser.timezone=GMT
+```
 
-## Known Issue Workarounds
+## Display Four Digit Years
 
-### Illegal Access Warnings
+On JDK 11, it is recommended to add this JVM argument to display four-digit years. Since JDK 9, the Unicode Common Locale Data Repository (CLDR) is the default locales provider. CLDR does not provide years in a four-digit format (see [LPS-87191](https://issues.liferay.com/browse/LPS-87191)). The setting `java.locale.providers=JRE,COMPAT,CLDR` works around this issue by using JDK 8's default locales provider.
 
-If you're using JDK 11, _Illegal Access_ warnings like these may print to your logs:
+```properties
+  -Djava.locale.providers=JRE,COMPAT,CLDR
+```
+
+## Memory Configurations
+
+The recommended maximum heap size is 2GB. Setting the minimum heap size to the maximum heap size value minimizes garbage collections.
+
+```properties
+  -Xms2560m -Xmx2560m
+```
+
+## Workaround Known Issues
+
+### JDK 11 Illegal Access Warnings
+
+If using JDK 11, _Illegal Access_ warnings may appear in the logs:
 
 ```message
 WARNING: An illegal reflective access operation has occurred
@@ -31,27 +44,27 @@ WARNING: Use --illegal-access=warn to enable warnings of further illegal reflect
 WARNING: All illegal access operations will be denied in a future release
 ```
 
-These warnings are caused by a known issue ([LPS-87421](https://issues.liferay.com/browse/LPS-87421) and can be resolved by adding JVM options like these:
+This is a known issue: [LPS-87421](https://issues.liferay.com/browse/LPS-87421). As a workaround, these warnings can be eliminated by adding these properties into the application server JVM options:
 
-```
---add-opens=java.base/java.awt.font=ALL-UNNAMED
---add-opens=java.base/java.io=ALL-UNNAMED
---add-opens=java.base/java.lang=ALL-UNNAMED
---add-opens=java.base/java.lang.reflect=ALL-UNNAMED
---add-opens=java.base/java.net=ALL-UNNAMED
---add-opens=java.base/java.nio=ALL-UNNAMED
---add-opens=java.base/java.text=ALL-UNNAMED
---add-opens=java.base/java.util=ALL-UNNAMED
---add-opens=java.base/sun.nio.ch=ALL-UNNAMED
---add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
---add-opens=java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
+```properties
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.awt.font=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.io=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.lang=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.net=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.nio=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.text=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/java.util=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.base/sun.nio.ch=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS --add-opens=java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
 ```
 
 ### Unable to Determine Server Capabilities
 
-If you're on Linux/UNIX and starting Liferay DXP on JDK 11 using an LCS 5.0.0 client, the following error can occur:
+If using JDK 11 on Linux or UNIX and are activating Liferay DXP using an LCS 5.0.0 client, the following errors might appear in the logs:
 
-```
+```properties
 ERROR [LCS Worker 2][BaseScheduledTask:92] java.lang.reflect.InaccessibleObjectException: Unable to make public long com.sun.management.internal.OperatingSystemImpl.getOpenFileDescriptorCount() accessible: module jdk.management does not
  "opens com.sun.management.internal" to unnamed module @1a3325e5
 java.lang.reflect.InaccessibleObjectException: Unable to make public long com.sun.management.internal.OperatingSystemImpl.getOpenFileDescriptorCount() accessible: module jdk.management does not "opens com.sun.management.internal" to unnamed module @1a3325e5
@@ -61,15 +74,15 @@ at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:198)
 at java.base/java.lang.reflect.Method.setAccessible(Method.java:192)
 ```
 
-This error is caused by a known issue ([LPS-87506](https://issues.liferay.com/browse/LPS-87506)) and can be resolved by adding this JVM option:
+This is a known issue: [LPS-87506](https://issues.liferay.com/browse/LPS-87506). To workaround this issue, add this property after the application server JVM options:
 
 ```properties
 --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED
 ```
 
-## Example Tomcat Script
+## Configuration Sample
 
-Here is a Tomcat `setenv.sh` script that demonstrates some of the JVM options mentioned above:
+Here is a sample `setenv.bat|sh` from Tomcat.
 
 ```properties
 CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
