@@ -1,6 +1,6 @@
 # JARs Excluded from WABs
 
-[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](../../liferay-internals/reference/third-party-packages-that-liferay-exports.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
+[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](../../liferay-internals/reference/exported-third-party-packages.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
 
 ```properties
 module.framework.web.generator.excluded.paths=\
@@ -18,13 +18,11 @@ module.framework.web.generator.excluded.paths=\
     Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a ``portal-dependency-jars`` property in a `liferay-plugin-package.properties <https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/liferay-plugin-package_7_2_0.properties.html>`_ file.
 ```
 
-## Including a Different Version of a Third Party Package
-
-If your WAR requires different versions of the [exported third party packages](../../liferay-internals/reference/third-party-packages-that-liferay-exports.md), you can include them in JARs named differently from the excluded JARs.
+If your WAR requires different versions of the [exported third party packages](../../liferay-internals/reference/exported-third-party-packages.md), you can include them in JARs named differently from the excluded JARs.
 
 For example, here's how to include a different version of a Spring Framework package:
 
-1. Determine the [package version that Liferay provides](../../liferay-internals/reference/third-party-packages-that-liferay-exports.md). For example, Liferay exports Spring Framework version 4.1.9 packages via the `com.liferay.portal.bootstrap` module:
+1. Determine the [package version that Liferay provides](../../liferay-internals/reference/exported-third-party-packages.md). For example, Liferay exports Spring Framework version 4.1.9 packages via the `com.liferay.portal.bootstrap` module:
 
     ```
     Export-Package:\
@@ -68,6 +66,6 @@ You are now including the version of the JAR your WAB requires.
 
 ## Additional Information
 
-* [Exported Third Party Packages](../../liferay-internals/reference/third-party-packages-that-liferay-exports.md)
+* [Exported Third Party Packages](../../liferay-internals/reference/exported-third-party-packages.md)
 * [Configuring Dependencies](../../liferay-internals/fundamentals/configuring-dependencies.md)
 * [Deploying WARs \(WAB Generator\)](./deploying-wars-wab-generator.md)
