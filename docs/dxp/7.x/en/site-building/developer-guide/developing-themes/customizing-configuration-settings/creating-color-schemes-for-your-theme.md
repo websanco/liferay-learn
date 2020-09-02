@@ -1,4 +1,4 @@
-# Creating Color Schemes
+# Creating Color Schemes for Your Theme
 
 Color schemes give your Theme additional color palettes, while maintaining the same design and feel to it. You can create a Color Scheme in just a few steps:
 
@@ -22,9 +22,7 @@ First, install an existing Theme with a Color Scheme to see what it looks like:
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-themes/creating-a-color-scheme-for-your-theme/liferay-d4t8.zip
-    ```
-
-    ```
+    
     unzip liferay-d4t8.zip
     ```
 
@@ -32,9 +30,6 @@ First, install an existing Theme with a Color Scheme to see what it looks like:
 
     ```bash
     cd liferay-d4t8
-    ```
-
-    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
@@ -48,21 +43,21 @@ First, install an existing Theme with a Color Scheme to see what it looks like:
     INFO  [fileinstall-/opt/liferay/osgi/modules][BundleStartStopLogger:39] STARTED marketing-theme_1.0.0 [2294]
     ```
 
-1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../../images/icon-control-menu-gear.png)) next to Public Pages.
+1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
 
 1. Scroll down and click the *Change Current Theme* button, and select the Marketing Theme thumbnail next to the Classic Theme.
 
-    ![The Marketing Theme is listed in the Theme selector.](./creating-color-schemes/images/01.png)
+    ![The Marketing Theme is listed in the Theme selector.](./creating-color-schemes-for-your-theme/images/01.png)
 
 1. Click *Save* to apply the changes and go back to the home page to see what the Marketing Theme looks like with the default Color Scheme applied.
 
-    ![The default Marketing Theme looks like the Classic Theme.](./creating-color-schemes/images/02.png)
+    ![The default Marketing Theme looks like the Classic Theme.](./creating-color-schemes-for-your-theme/images/02.png)
 
 1. Go back to the Public Pages configuration, select the *Dark* Color Scheme, and click *Save* to apply it.
 
 1. Go back to the home page once again to see what the Dark Color Scheme looks like.
 
-    ![The Dark Color Scheme adds a darker color palette to the Site.](./creating-color-schemes/images/03.png)
+    ![The Dark Color Scheme adds a darker color palette to the Site.](./creating-color-schemes-for-your-theme/images/03.png)
 
 Great! You successfully deployed a Theme and applied a Color Scheme.
 
@@ -99,7 +94,7 @@ The Color Scheme is defined by these elements in the `liferay-look-and-feel.xml`
 
 `<default-cs>true<default-cs>`: Nested element that marks the default selected Color Scheme when the Theme is applied
 
-`<color-scheme-images-path>`: Defines the path to the folder containing the Color Scheme thumbnail images. This must only be specified for one Color Scheme. The Color Scheme's [thumbnail preview](./creating-a-thumbnail-preview.md) is included in a folder that **matches** the Color Scheme's CSS class name (`/src/images/color_schemes/dark/thumbnail.png`).
+`<color-scheme-images-path>`: Defines the path to the folder containing the Color Scheme thumbnail images. This must only be specified for one Color Scheme. The Color Scheme's [thumbnail preview](./creating-a-thumbnail-preview-for-your-theme.md) is included in a folder that **matches** the Color Scheme's CSS class name (`/src/images/color_schemes/dark/thumbnail.png`).
 
 `<css-class>dark</css-class>`: The Color Scheme's CSS class. The `default` CSS class defines the original look and feel.
 
@@ -187,15 +182,12 @@ Next you'll modify the project to include another Color Scheme.
     @import 'color_schemes/light';
     ```
 
-1. Add a `/src/images/color_schemes/light/` folder, and move the [ `thumbnail.png` file](./creating-a-thumbnail-preview.md) from the `/d4t8-impl/thumbnail/` folder to it.
+1. Add a `/src/images/color_schemes/light/` folder, and move the [ `thumbnail.png` file](/docs/7-2/frameworks/-/knowledge_base/f/creating-a-thumbnail-preview-for-your-theme) from the `/d4t8-impl/thumbnail/` folder to it.
 
 1. From the module root, build and deploy the Marketing Theme:
 
     ```bash
     cd liferay-d4t8
-    ```
-
-    ```bash
     .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
@@ -203,18 +195,18 @@ Next you'll modify the project to include another Color Scheme.
       If testing on Windows, you may need to build the module first with ``.\gradlew build`` and then manually copy the JAR to Docker with ``docker cp d4t8-impl\marketing-theme\dist\marketing-theme.war docker-container-name:/opt/liferay/osgi/modules`` directly if deployment fails.
     ```
 
-1. In Liferay DXP, open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../../images/icon-control-menu-gear.png)) next to Public Pages, and you'll see that the Light Color Scheme is available.
+1. In Liferay DXP, open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages, and you'll see that the Light Color Scheme is available.
 
-    ![The Light Color Scheme is now available to select.](./creating-color-schemes/images/04.png)
+    ![The Light Color Scheme is now available to select.](./creating-color-schemes-for-your-theme/images/04.png)
 
 1. Select the Light Color Scheme and click *Save* to apply the changes.
 1. Go back to the Home Page to see what the Marketing Theme looks like with the Light Color Scheme applied.
 
-    ![The Light Color Scheme provides a different color palette.](./creating-color-schemes/images/05.png)
+    ![The Light Color Scheme provides a different color palette.](./creating-color-schemes-for-your-theme/images/05.png)
 
 Great! Now you know how to create Color Schemes for your Theme.
 
 ## Related Information
 
-* [Creating a Thumbnail Preview](./creating-a-thumbnail-preview.md)
+* [Creating a Thumbnail Preview for Your Theme](./creating-a-thumbnail-preview-for-your-theme.md)
 * [Developing a Theme](../developing-a-theme.md)
