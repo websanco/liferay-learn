@@ -4,10 +4,6 @@ Liferay [patches](../../maintaining-a-liferay-dxp-installation/patching-liferay/
 
 > Enterprise Subscription
 
-```important::
-   **Always** `back up <../backing-up.md>`_ your database and installation before patching.
-```
-
 Here are the DXP container patching topics:
 
 * [Using Fix Pack, Security Fix Pack, and Service Pack Images](#using-fix-pack-security-fix-pack-and-service-pack-images)
@@ -162,13 +158,7 @@ On restarting your container or running a new container, the container entry poi
 
 ## Upgrading the Database for a Patch
 
-If a patch requires upgrading the database, you must upgrade it using the Database Upgrade Tool in a non-containerized environment.
-
-1. Install the [Liferay Tomcat Bundle installation](../installing-a-liferay-tomcat-bundle.md) of the Liferay version you're using.
-
-1. Apply the patch to the installation. Please see [Patching Liferay](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) for more information.
-
-1. Upgrade the database using the Database Upgrade Tool. Please see [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md) for more information.
+If a patch requires upgrading the database, you must upgrade it using the Database Upgrade Tool in a non-containerized environment, such as a [Liferay Tomcat Bundle installation](../installing-a-liferay-tomcat-bundle.md) or [Liferay on an Application Server](../docs/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md). Please see [Using the Database Upgrade Tool](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md) for more information.
 
 After the database is upgraded, run your container that uses that database.
 
