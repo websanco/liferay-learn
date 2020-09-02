@@ -16,9 +16,9 @@ Configuring Dependencies
 -  :doc:`/liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies`
 -  :doc:`/liferay-internals/fundamentals/configuring-dependencies/understanding-excluded-jars`
 
-Using the Gogo Shell
---------------------
+Gogo Shell
+----------
 
--  :doc:`/liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell`
--  :doc:`/liferay-internals/fundamentals/using-the-gogo-shell/command-line-gogo-shell`
--  :doc:`/liferay-internals/fundamentals/using-the-gogo-shell/gogo-shell-commands`
+-  :doc:`/liferay-internals/fundamentals/gogo-shell/using-the-gogo-shell`
+-  :doc:`/liferay-internals/fundamentals/gogo-shell/command-line-gogo-shell`
+-  :doc:`/liferay-internals/fundamentals/gogo-shell/gogo-shell-commands`
