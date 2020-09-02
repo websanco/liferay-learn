@@ -34,6 +34,8 @@ Creating [Service Access Policies](../../installation-and-upgrades/securing-life
 1. Copy and paste the method signature listed in the error message above: `com.liferay.headless.admin.user.internal.resource.v1_0.SiteResourceImpl#getSite`.
 1. Click *Save*.
 
+![Service Access Policy Form](./making-unauthenticated-requests/images/01.png)
+
 Your Service Access Policy is now active, granting Guests access to the Sites API.
 
 ## Confirming Access
