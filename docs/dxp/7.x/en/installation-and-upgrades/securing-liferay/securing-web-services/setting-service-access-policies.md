@@ -63,8 +63,8 @@ To create a new Service Access Policy:
 1. Navigate to the *Configuration* &rarr; *Service Access Policy* section of the Control Panel.
 1. Click *Add* (![add](../../../images/icon-add.png)).
 1. Give your policy a name.
-1. Flip the *Enabled* toggle to enable your policy.
-1. If you want the policy applied to unauthenticated requests as well as authenticated requests, flip the toggle labeled *Default*.
+1. Switch the *Enabled* toggle to enable your policy.
+1. If you want the policy applied to unauthenticated requests as well as authenticated requests, switch the toggle labeled *Default*.
 1. Give your policy a localized title.
 1. Under _Allowed Service Signatures_, type the fully qualified name of a service class that's installed.
 1. Under Method Name, start typing a service method call.

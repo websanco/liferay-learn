@@ -27,8 +27,8 @@ Creating [Service Access Policies](../../installation-and-upgrades/securing-life
 1. Go to Control Panel &rarr; Security &rarr; Service Access Policy.
 1. Click *Add* (![add](../../../images/icon-add.png)).
 1. Give the policy a name. The intent for this policy is very specific, so it makes sense to call it something like "SITE_API_GUEST_ACCESS".
-1. Flip the *Enabled* toggle to enable the policy.
-1. Flip the toggle labeled *Default* to apply the policy to unauthenticated requests as well as authenticated requests.
+1. Switch the *Enabled* toggle to enable the policy.
+1. Switch the toggle labeled *Default* to apply the policy to unauthenticated requests as well as authenticated requests.
 1. Give the policy a localized title -- something like "Grant Guest access to the Site API".
 1. Click *Switch to Advanced Mode* at the bottom.
 1. Copy and paste the method signature listed in the error message above: `com.liferay.headless.admin.user.internal.resource.v1_0.SiteResourceImpl#getSite`.
