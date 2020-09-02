@@ -18,7 +18,7 @@
 
 Your Theme's current extensions are also found under the `baseTheme` and `themeletDependencies` headings in your Theme's `package.json`.
 
-```json
+```bash
 "liferayTheme": {
   "baseTheme": "styled",
   "fontAwesome": false,

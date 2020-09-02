@@ -25,7 +25,7 @@
     ```
 
 1. Make a change to your Theme and save the file. The updated files are built, compiled, and copied directly to the proxy port (e.g. `9080`). CSS changes are deployed live, so no page reload is needed.
-
+    
     ```bash
     [16:59:08] Starting 'build:clean'...
     [16:59:09] Finished 'build:clean' after 560 ms

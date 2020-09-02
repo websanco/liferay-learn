@@ -17,7 +17,7 @@
       Answer: 1 
     ```
 
-1. By default, Themes created with the [Liferay Theme Generator](https://github.com/liferay/generator-liferay-theme) are based on the [styled Theme](https://www.npmjs.com/package/liferay-theme-styled). You can extend the styled or unstyled base Theme, a globally installed Theme, a Theme published on the npm registry, or you can specify a package URL. Enter the number for the option you wish to select. 
+1. By default, Themes created with the [Liferay Theme Generator](https://github.com/liferay/generator-liferay-theme) are based off of the [styled Theme](https://www.npmjs.com/package/liferay-theme-styled). You can extend the styled or unstyled base Theme, a globally installed Theme, a Theme published on the npm registry, or you can specify a package URL. Enter the number for the option you wish to select. 
 
     ```note::
       You can retrieve the URL for a package by running ``npm show package-name dist.tarball``.
@@ -34,7 +34,7 @@
     ```
 
     ```note::
-      The Classic Theme implements an existing base Theme and is therefore not meant to be extended. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands>`_ instead.
+      The Classic Theme is an implementation of an existing base Theme and is therefore not meant to be extended. If you want to use the Classic Theme as a starting point, use the `Classic sub-generator <../../reference/themes/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands>`_ instead.
     ```
 
 Your Theme's `package.json` contains the updated base Theme configuration:
@@ -48,4 +48,4 @@ Your Theme's `package.json` contains the updated base Theme configuration:
 },
 ```
 
-Great! You've updated your base Theme. When you [build your Theme's files](./building-themes.md) or [deploy it](./deploying-themes.md), your Theme inherits the updated base Theme's files.
+Great! You've updated your base Theme. When you [build your Theme's files](./building-themes.md) or [deploy it](./deploying-themes.md), your Theme will inherit the updated base Theme's files.
