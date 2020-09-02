@@ -9,8 +9,8 @@ Fundamentals
    fundamentals/importing-packages.md
    fundamentals/exporting-packages.md
    fundamentals/semantic-versioning.md
+   fundamentals/using-felix-gogo-shell.md
    fundamentals/configuring-dependencies/configuring-dependencies.rst
-   fundamentals/using-the-gogo-shell.rst
 
 .. include:: /liferay-internals/fundamentals/README.rst
    :start-line: 2
