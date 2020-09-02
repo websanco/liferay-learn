@@ -25,37 +25,34 @@ Here are the steps for upgrading with a Docker image:
 
 1. Create an arbitrary folder to use with the new Liferay Docker image and create subfolders called `files` and `deploy`. For example,
 
-    ```
+    ```bash
     mkdir -p new-version/files
-    ```
-
-    ```
     mkdir -p new-version/deploy
     ```
 
-    * `files`: The Docker container copies files from this folder to the container's [Liferay Home](../../reference/liferay-home.md) folder.
+    `files`: The Docker container copies files from this folder to the container's [Liferay Home](../../reference/liferay-home.md) folder.
 
-    * `deploy`: The Docker container copies artifacts from this folder to the container's auto-deploy folder.
+    `deploy`: The Docker container copies artifacts from this folder to the container's auto-deploy folder.
 
 1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the `files` folder (e.g., creating `new-version/files/data`).
 
 1. Copy the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key from `[Liferay Home backup]/license/` to `new-version/files/license/`. The files may include but are not limited to these:
 
-    * `/license/*`: Activation keys. (Subscription)
+    `/license/*`: Activation keys. (Subscription)
 
-    * `/log/*`: Log files.
+    `/log/*`: Log files.
 
-    * `/osgi/*.config`: OSGi configuration files.
+    `/osgi/*.config`: OSGi configuration files.
 
-    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
+    `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
 
-    * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
+    `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
 
-    * `web.xml`: Portal web application descriptor.
+    `web.xml`: Portal web application descriptor.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
-1. Run the Docker image [mounted](../../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
+1. Run the Docker image [mounted](./../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
 
     ```bash
     docker run -it -p 8080:8080 \

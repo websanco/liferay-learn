@@ -12,12 +12,17 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
 
 1. Merge the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) that you have added and edited from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to your installation. The files may include but are not limited to these:
 
-    * `/license/*`: Activation keys. (Subscription)
-    * `/log/*`: Log files.
-    * `/osgi/*.config`: OSGi configuration files.
-    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
-    * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
-    * `web.xml`: Portal web application descriptor.
+    `/license/*`: Activation keys. (Subscription)
+
+    `/log/*`: Log files.
+
+    `/osgi/*.config`: OSGi configuration files.
+
+    `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
+
+    `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
+
+    `web.xml`: Portal web application descriptor.
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your backup.
 
@@ -27,7 +32,7 @@ Upgrade processes in DXP and in some Marketplace apps use portal properties and 
 
 Here are the settings updates DXP upgrade processes require:
 
-* [Database driver](#database-drivers)
+* [Database driver](#database-driver)
 * Document library store implementation name (See [Updating the File Store](./updating-the-file-store.md#updating-the-store-implementation-class-name))
 
 ```important::
@@ -48,7 +53,7 @@ See the [Database Templates](../../reference/database-templates.md) for more dri
 
 ## Migrating Portal Properties
 
-The properties discussed here can be updated after database upgrade. Migrating properties involves these actions:
+The properties discussed here can be updated after database upgrade. Migrating properties involves these things:
 
 * Updating your `liferay.home` property, if you changed it
 * Using [Blade CLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md) to report property changes

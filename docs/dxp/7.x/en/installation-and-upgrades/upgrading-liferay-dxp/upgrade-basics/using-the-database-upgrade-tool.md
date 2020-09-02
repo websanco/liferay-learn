@@ -12,7 +12,7 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to upgrade the database using the upgrade tool.
 
-## Setting Up a New Installation
+## Setting Up a New  Installation
 
 1. Install the new Liferay release.
 
@@ -20,17 +20,17 @@ Modifying a database while it's detached from your Liferay instance allows you t
 
 1. Copy your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to your new installation. The files may include but are not limited to these:
 
-    * `/license/*`: Activation keys. (Subscription)
+    `/license/*`: Activation keys. (Subscription)
 
-    * `/log/*`: Log files.
+    `/log/*`: Log files.
 
-    * `/osgi/*.config`: OSGi configuration files.
+    `/osgi/*.config`: OSGi configuration files.
 
-    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
+    `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
 
-    * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
+    `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
 
-    * `web.xml`: Portal web application descriptor.
+    `web.xml`: Portal web application descriptor.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
