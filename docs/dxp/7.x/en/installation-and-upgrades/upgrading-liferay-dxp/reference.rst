@@ -10,5 +10,5 @@ Reference
    reference/deprecations-in-liferay-dxp-7-2.md
    reference/features-in-maintenance-mode.md
 
-.. include:: /installation-and-upgrades/upgrading-liferay/reference/README.rst
+.. include:: /installation-and-upgrades/upgrading-liferay-dxp/reference/README.rst
    :start-line: 2

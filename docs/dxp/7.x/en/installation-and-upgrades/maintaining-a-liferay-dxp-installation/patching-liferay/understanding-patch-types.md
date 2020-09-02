@@ -59,7 +59,7 @@ If you're maintaining an existing DXP installation, it's best to keep it updated
 
 ## Rolling Releases
 
-Rolling Releases are based on DXP Service Packs and are typically available a few weeks after the corresponding Service Pack. They include the same fixes, minus those for EE-only features. See [Upgrading Via Docker](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md) for more information.
+Rolling Releases are based on DXP Service Packs and are typically available a few weeks after the corresponding Service Pack. They include the same fixes, minus those for EE-only features. See [Upgrading Via Docker](../../upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker.md) for more information.
 
 ## Patch Testing
 
@@ -101,4 +101,4 @@ Now that you know the patch types Liferay provides for delivering fixes, you can
 
 * [Installing Patches](./installing-patches.md)
 * [Installing the Patching Tool](./installing-the-patching-tool.md)
-* [Upgrading to a New Liferay Portal CE Rolling Release](../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-to-a-new-liferay-portal-ce-rolling-release.md)
+* [Upgrading to a New Liferay Portal CE Rolling Release](../../installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrading-to-a-new-liferay-portal-ce-rolling-release.md)

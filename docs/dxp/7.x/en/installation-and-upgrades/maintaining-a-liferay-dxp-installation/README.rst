@@ -22,7 +22,7 @@ Advanced Patching
 
 Updating Rolling Releases
 --------------------------
--  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker`
+-  :doc:`/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker`
 
 Maintaining Clustered Installations
 -----------------------------------
