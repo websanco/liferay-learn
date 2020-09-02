@@ -4,7 +4,7 @@ After upgrading the DXP database, you should configure DXP for production again 
 
 ## Re-enable Production Settings
 
-Now that you are done upgrading your DXP database, you should re-enable your production settings.
+Now that your done upgrading your DXP database, you should re-enable your production settings.
 
 ### Search Indexing
 
