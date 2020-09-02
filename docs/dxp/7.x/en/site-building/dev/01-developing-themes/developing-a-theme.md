@@ -52,7 +52,7 @@ First you must deploy an example Theme. Follow these steps:
     INFO [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED my-liferay-theme_1.0.0 [1114]
     ```
 
-1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Components*, and select the *Themes* tab.
+1.  Verify that the Theme is available. Open your browser to `https://localhost:8080` and [apply the Theme](TODO:applying-themes)
 
     ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
 
