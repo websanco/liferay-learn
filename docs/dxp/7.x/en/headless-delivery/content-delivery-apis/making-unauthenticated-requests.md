@@ -1,8 +1,6 @@
 # Making Unauthenticated Requests
 
-By default Liferay DXP restricts API access for the sake of security, requiring authentication in order to get a valid response. However, in certain cases it may make sense to open up an API for guest access. Liferay DXP provides a straightforward way to achieve this.
-
-## Making an Unauthenticated Request
+By default Liferay DXP restricts API access for the sake of security, requiring authentication in order to get a valid response. However, in certain cases it may make sense to open up an API for guest access.
 
 Making an API request without passing credentials generally leads to an error response:
 
