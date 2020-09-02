@@ -73,8 +73,8 @@ A/B Testing
 ~~~~~~~~~~~
 Coming soon!
 
-Developer Guide
----------------
+Dev Guide
+---------
 
 * Product Navigation
 * Developing Page Fragments
@@ -82,5 +82,5 @@ Developer Guide
 * Creating Custom Content Types
 * Screen Navigation Framework
 * Dynamic Includes
-* Developing Themes
+* Developing a Theme
 * APIs

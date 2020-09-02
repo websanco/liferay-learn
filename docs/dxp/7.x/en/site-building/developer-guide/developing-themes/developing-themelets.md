@@ -1,156 +1,35 @@
 # Developing Themelets
 
-Themelets are small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. 
+Themelets are small, extendable, and reusable pieces of code containing CSS and JavaScript, that you can extend Themes with. They can be shared with other developers to provide common components for Themes. The steps below show how to use the Liferay Theme Generator's Themelets sub-generator to create a Themelet. You can create a Themelet in just a few steps:
 
-Here, you'll learn how to develop a Themelet with the Liferay JS Themes Toolkit:
+1. Generate the Themelet.
+1. Customize the CSS.
+1. Customize the JavaScript.
+1. Globally install the Themelet.
+1. Add the inject tags into the Theme.
+1. Install the Themelet in the Theme.
+1. Build the Theme's WAR file and copy it to the Docker container.
 
-1. [Install a Themelet and Deploy It](#install-a-themelet-and-deploy-it)
-1. [Extend the Theme with a New Themelet](#extend-the-theme-with-a-new-themelet)
-1. [Deploy and Test](#deploy-and-test)
+## Generate the Themelet
 
-This example uses a Docker image with a fresh install of Liferay DXP.
-
-## Install a Themelet and Deploy It
-
-First, install an existing Themelet in a Theme and deploy it to see what it looks like:
-
-1. Run the command below to start the Docker container:
+You can download and unzip this [example Theme and Themelet](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-themelets/liferay-m2t6.zip) if you want to deploy it or compare your code as you follow along:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
-    ```
-
-1. Download and unzip the [Custom Tooltips Themelet and Pastel Purple Theme](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-themelet/liferay-m2t6.zip):
-
-    ```bash
-    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-a-themelet/liferay-m2t6.zip
+    curl https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/site-building/developer-guide/developing-themes/developing-themelets/liferay-m2t6.zip
     
     unzip liferay-m2t6.zip
-    ```
-
-1. Navigate to the Themelet and globally install it with the `npm link` command to make it available for the Theme:
-
-    ```bash
-    cd liferay-m2t6/custom-tooltips-themelet
-    npm link
-    ```
-
-1. Navigate to the Theme and install it's dependencies:
-
-    ```bash
-    cd liferay-m2t6/purple-pastel-theme
+    cd my-theme-to-extend
     npm install
     ```
 
-1. Extend the Theme with the Themelet:
+1. Install the [Liferay Theme Generator](./installing-the-liferay-theme-generator.md) if it's not already installed. 
+1. Run `yo liferay-theme:themelet` and follow the prompts to generate the Themelet.
 
-    ```bash
-    npm run extend
-    ```
+    ![Themelets can add new functionality.](./developing-themelets/images/01.png)
 
-1. Choose *Themelet* as the Theme asset to extend.
+## Customize the CSS
 
-    ```bash
-    [11:39:03] Using gulpfile ~\Desktop\test\liferay-m2t6\purple-pastel-theme\gulpfile.js
-    [11:39:03] Starting 'extend'...
-    ? What kind of theme asset would you like to extend?
-      1) Base theme
-      2) Themelet
-      Answer: 2
-    ```
-
-1. Select *Search globally installed npm modules*
-
-    ```bash
-    ? Where would you like to search for themelets?
-      1) Search globally installed npm modules (development purposes only)
-      2) Search npm registry (published modules)
-      3) Specify a package URL
-      Answer: 1
-    ```
-
-1. Highlight the `custom-tooltips-themelet` Themelet, press spacebar to select it, and press *Enter* to install it.
-
-    ```bash
-    ? Select a themelet
-    >(*) custom-tooltips-themelet
-    ```
-    
-    The extend task completes with the output below:
-    
-    ```bash
-    npm WARN pastel-purple-theme@1.0.0 No description
-    npm WARN pastel-purple-theme@1.0.0 No repository field.
-    npm WARN pastel-purple-theme@1.0.0 No license field.
-    
-    + custom-tooltips-themelet@1.0.0
-    added 1 package and audited 6174 packages in 4.252s
-    found 48 vulnerabilities (30 low, 1 moderate, 17 high)
-      run `npm audit fix` to fix them, or `npm audit` for details
-    [11:41:51] Finished 'extend' after 2.8 min
-    ```
-
-1. Build the updated Pastel Purple Theme's WAR:
-
-    ```bash
-    npm run build
-    ```
-    
-    Verify in the output that the Themelet's CSS is injected in the Theme:
-    
-    ```bash
-    [12:01:13] Starting 'build:themelets'...
-    [12:01:13] Starting 'build:themelet-src'...
-    [12:01:13] Finished 'build:themelet-src' after 14 ms
-    [12:01:13] Starting 'build:themelet-css-inject'...
-    [12:01:13] Starting 'build:themelet-js-inject'...
-    [12:01:13] gulp-inject 1 file into _custom.scss.
-    [12:01:13] gulp-inject Nothing to inject into portal_normal.ftl.
-    [12:01:13] Finished 'build:themelet-js-inject' after 32 ms
-    [12:01:13] Finished 'build:themelet-css-inject' after 99 ms
-    [12:01:13] Finished 'build:themelets' after 135 ms
-    ```
-
-1. Deploy the WAR to the Docker Container:
-
-    ```bash
-    cd dist
-    docker cp pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war
-    ```
-
-1. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Pages*. Click the (![Cog icon](../../../images/icon-control-menu-gear.png)) next to Public Pages.
-1. Scroll down and click the *Change Current Theme* button, and click the custom Theme thumbnail. The custom Theme appears next to the Classic Theme.
-
-    ![The custom Theme is listed in the Theme selector.](./developing-a-theme/images/01.png)
-
-1. Click *Save* to apply the changes, and go back to the home page and hover over an icon in the Control Menu to see the tooltip CSS applied from the Themelet.
-
-    ![Themelets can customize the JavaScript.](./developing-themelets/images/01.png)
-
-## Themelet Breakdown
-
-The Theme includes the Themelet's code with inject tags. CSS styles are injected with these tags at the top of `/src/_custom.scss`:
-
-```scss
-/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
-
-/* inject:imports */
-/* endinject */
-
-/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
-```
-
-JavaScript is injected with these tags at the bottom of the `<body>` tag in `/src/portal_normal.ftl`:
-
-```html
-<body>
-  ...
-  <!-- inject:js -->
-  <!-- endinject -->
-</body>
-```
-
-The Themelet changes the look of the tooltips with the CSS in the `_custom.scss` below:
+Add custom CSS to the Theme's `/src/css/_custom.scss` file. The example has the configuration below which changes the look of the tooltips, making them appear more round like speech bubbles and changes their color to blue:
 
 ```scss
 .clay-tooltip-bottom .arrow::before, .clay-tooltip-bottom-left .arrow::before, .clay-tooltip-bottom-right .arrow::before {
@@ -163,93 +42,122 @@ The Themelet changes the look of the tooltips with the CSS in the `_custom.scss`
 }
 ```
 
-## Extend the Theme with a New Themelet
+## Customize the JavaScript
 
-Theme's can have mutliple Themelet extensions. Here you'll create a new Themelet to extend the Theme in just a few steps that prints to the console whether the Theme is being viewed on Desktop or Mobile.
+Add custom JavaScript to the generated `/src/js/main.js` file. If this folder doesn't exist, you must create it. The example has the configuration below which alerts the user whether they're viewing the site on a mobile device, after the page's HTML loads:
 
-1. [Install the Theme Generator](../reference/installing-the-theme-generator-reference.md) and run the [Themelet sub-generator](../reference/installing-the-theme-generator-reference.md#generator-and-sub-generator-commands) with the command below:
+```javascript
+AUI().ready(
+	function() {
+    if(Liferay.Browser.isMobile !== 'true'){
+      alert("You're viewing this site on a desktop device.");
+    }
+    else if(Liferay.Browser.isMobile == 'true'){
+      alert("You're viewing this site on a mobile device.");
+    }
+  }
+);
+```
+
+## Globally Install the Themelet
+
+To use the Themelet, you must first globally install it to make it available. Follow these steps:
+
+1. Open the Command Line and navigate to the Themelet's root folder (`my-themelet` in the example).
+1. Run the `npm link` command to globally install the Themelet so you can install it in your Theme.
+
+## Add the Inject Tags in the Theme
+
+To extend a Theme with a Themelet's CSS and JavaScript, you must have inject tags in the Theme's `_custom.scss` and `portal_normal` Theme template. Add these inject tags to the top of `/src/_custom.scss` if they're not there:
+
+```scss
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+```
+
+Add these JavaScript inject tags to the bottom of the `<body>` tag in `/src/portal_normal.ftl` if they're not there:
+
+```html
+<body>
+  ...
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+```
+
+## Install the Themelet in a Theme
+
+Once the Themelet is globally installed, follow these steps to install it in a Theme:
+
+1. Navigate to the Theme you want to extend (`my-theme-to-extend` in the example).
+1. Extend the Theme with the command below:
 
     ```bash
-    yo liferay-theme:themelet
-    ```
-
-    ```bash
-    ? What would you like to call your themelet? Platform Console Logger Themelet
-    ? What id would you like to give to your themelet? platform-console-logger-themelet
-    ? Which version of Liferay is this themelet for?
-    > 7.3
-      7.2
-      Any 
-    ```
-    
-1. Create a `/src/main.js` file in the Themelet and add the code below to it:
-
-    ```bash
-    cd platform-console-logger-themelet
-    touch main.js
-    ```
-
-    Add the code below to the `main.js` file:
-
-    ```javascript
-    AUI().ready(
-    	function() {
-        if(Liferay.Browser.isMobile !== 'true'){
-          console.log("You're viewing this site on a desktop device.");
-        }
-        else if(Liferay.Browser.isMobile == 'true'){
-          console.log("You're viewing this site on a mobile device.");
-        }
-      }
-    );
-    ```
-
-1. Globally install the Platform Console Logger Themelet with the `npm link` command to make it available for the Theme:
-
-    ```bash
-    cd platform-console-logger-themelet
-    npm link
-    ```
-
-1. Extend the Theme with the Themelet:
-
-    ```bash
-    cd purple-pastel-theme
     npm run extend
     ```
 
 1. Choose *Themelet* as the Theme asset to extend.
 1. Select *Search globally installed npm modules*
-1. Highlight the `platform-console-logger-themelet`, press spacebar to select it, and press *Enter* to install it.
+
+    ![You can extend your Theme using globally installed npm modules or published npm modules.](./developing-themelets/images/02.png)
+
+1. Highlight the Themelet (`my-themelet` in the example), press spacebar to select it, and press *Enter* to install it.
+
+    ![You can install Themelets in multiple Themes, so you can reuse code.](./developing-themelets/images/03.png)
+    
+```note::
+  Themelets can also be installed from registered npm packages and npm package URLS. You can retrieve the URL for a package by running ``npm show package-name dist.tarball``.
+```
+
+## Build the Theme's WAR File and Copy It to the Docker Container
+
+1. Start the Docker container:
 
     ```bash
-    ? Select a themelet
-     (*) custom-tooltips-themelet
-    >(*) platform-console-logger-themelet
+    docker run -it -p 8080:8080 liferay/portal:7.3.0-ga1
     ```
 
-1. Build the updated Pastel Purple Theme's WAR:
+1. Build the Theme's WAR with the command below:
 
     ```bash
     npm run build
     ```
 
-1. Deploy the WAR to the Docker Container:
+1. Verify that the Themelet's CSS has been injected into `_custom.scss` and the JavaScript has been injected into `portal_normal.ftl`. If you've modified both files, these messages should print in the command line after the build script is run in the previous step:
 
     ```bash
-    cd dist
-    docker cp pastel-purple-theme.war docker-container-name:/opt/liferay/osgi/war
+    [15:41:37] Starting 'build:themelets'...
+    [15:41:37] Starting 'build:themelet-src'...
+    [15:41:37] Finished 'build:themelet-src' after 9.91 ms
+    [15:41:37] Starting 'build:themelet-css-inject'...
+    [15:41:37] Starting 'build:themelet-js-inject'...
+    [15:41:37] gulp-inject 1 file into _custom.scss.
+    [15:41:37] gulp-inject 1 file into portal_normal.ftl.
+    [15:41:37] Finished 'build:themelet-js-inject' after 24 ms
+    [15:41:37] Finished 'build:themelet-css-inject' after 76 ms
+    [15:41:37] Finished 'build:themelets' after 106 ms
     ```
 
-1. Open your browser to `https://localhost:8080`, and refresh the page.
-1. Open the browser console to view the message from the Platform Console Logger Themelet:
+1. Copy the Theme's WAR to the `[host_folder]/deploy` folder for your Docker image's [bind mount](TODO), or create the `[host_folder]/deploy` folder if it doesn't exist.
 
-    You're viewing this site on a desktop device.
+    ```note::
+    You must restart the Docker container if you're creating the `[host_folder]/deploy` folder for the first time in your bind mount.
+    ```
 
-Great! Now you know how to create Themelets with the Liferay JS Themes Toolkit.
+1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
 
-## Related Information
+    ```bash
+    INFO [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED my-theme-to-extend_theme_1.0.0 [1114]
+    ```
 
-* [Developing a Theme](./developing-a-theme.md)
-* [Theme Development Workflow](../reference/themes/liferay-js-themes-toolkit-theme-development-workflow.md)
-* [Look and Feel Overview](./look-and-feel-overview.md)
+1. Verify that the Theme is available. Open your browser to `https://localhost:8080`, open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Components*, and select the *Themes* tab. [Apply the Theme](TODO:applying-themes). The example Themelet modifies the tooltips and alerts the user whether they're viewing the Site from a mobile device.
+
+    ![Themelets can customize the CSS.](./developing-themelets/images/04.png)
+
+    ![Themelets can customize the JavaScript.](./developing-themelets/images/05.png)
+
+Great! You successfully built and deployed a custom Theme with a Themelet.
