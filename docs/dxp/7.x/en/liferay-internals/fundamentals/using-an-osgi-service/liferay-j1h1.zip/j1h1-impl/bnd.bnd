@@ -1,0 +1,3 @@
+Bundle-Name: Acme J1H1 Greeting
+Bundle-SymbolicName: com.liferay.learn.j1h1.impl
+Bundle-Version: 1.0.0
