@@ -91,7 +91,7 @@ To confirm that everything is upgraded properly, follow these steps:
 1. View the new data source setting screen. The connection status should say *Connected*.
 
 ```note::
-   The data will take time to sync. To troubleshoot and confirm that data is synced properly to Analytics Cloud, please see `Connecting Data Sources <../../troubleshooting/connecting-data-sources.md>`_.
+   Sometimes the data will take time to sync. To troubleshoot and confirm that data is synced properly to Analytics Cloud, please follow the guide here.
 ```
 
 Congratulations! You have successfully upgraded to the Token connection for your DXP data source.

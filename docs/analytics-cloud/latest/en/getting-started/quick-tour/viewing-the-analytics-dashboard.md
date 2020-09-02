@@ -14,7 +14,7 @@ The first task for a new workspace is to connect it to a Data Source. Analytics 
 
 As a workspace owner or admin, you can invite your colleagues to the workspace. Invited users can be configured to help setup and configure data sources, create segments, or simply view analytics reports.
 
-See [Managing Users](../../administration/managing-users.md) to learn more about adding users to your workspace.
+See [Managing Users](../administration/managing-users.md) to learn more about adding users to your workspace.
 
 ## Configure Settings for Your Workspace
 
