@@ -1,6 +1,6 @@
 # App Builder Overview
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay CE/DXP 7.3+
 
 App Builder is a low-code application development solution for Liferay DXP. Build a data model, define the application's forms (for entering data) and tables (for viewing and managing data records), then deploy your application to your Liferay DXP site, or as a completely standalone application. With App Builder, creating functional business applications with dedicated user interfaces and data separation is accomplished without a single line of code.
 
@@ -18,17 +18,20 @@ Why use App Builder when the [Liferay Forms](../../process-automation/forms/user
 | Control the presentation of form data |        |      &#10004;   |
 | Deploy multiple forms for one data object |        |      &#10004;   |
 | Deploy multiple data record views for one data object |        |      &#10004;   |
+<!-- update with new features -->
 
 The ability to combine forms, data display tables, and flexible deployment options, all backed by a single data object, are what distinguish App Builder use cases from standard Forms.
 
 ## Creating an App
+<!-- Does the title need to be changed since there are now 2 flavors of app? the workflow powered app is dxp only Also need to define the workflow powered app -->
 
-Apps made with App builder are made up of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-an-application-with-app-builder.md).
+There are two flavors of App Builder app: Standard and Workflow Powered. Regardle, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-an-application-with-app-builder.md).
 
 ### App Builder Objects
 
-An _Object_ is at the foundation of every App Builder application. It defines the information and types of information that you want to the application to collect and interact with. For example, a Guestbook object would contain a _Name_ field and a _Message_ field, at least. There are two kinds of objects in App Builder:
+An _Object_ is at the foundation of every App Builder application. It defines the information you want the application to collect and interact with. For example, a Guestbook object would contain a _Name_ field and a _Message_ field, at least. There are two kinds of objects in App Builder:
 
+<!-- remove mention of native objects as they won't be here for 7.3 -->
 * _Custom Objects_ are created using a drag-and-drop Form Builder interface.
 * _Native Objects_ are pre-defined sets of data fields that can be used out of the box or extended to suit your needs.
 
