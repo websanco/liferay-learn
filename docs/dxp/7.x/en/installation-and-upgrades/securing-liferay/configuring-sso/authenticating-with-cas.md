@@ -51,7 +51,7 @@ The rest of the settings are various URLs with defaults included. Change *localh
 For some situations, it might be more convenient to specify the system configuration via files on the disk. To do so, create the following file:
 
 ```bash
-[Liferay Home]/osgi/configs/com.liferay.portal.security.sso.cas.configuration.CASConfiguration.cfg
+[Liferay Home]/osgi/configs/com.liferay.portal.security.sso.cas.configuration.CASConfiguration.config
 ```
 
 The format of this file is the same as any properties file. The key to use for each property that can be configured is shown below. Enter values in the same format as you would when initializing a Java primitive type with a literal value.
