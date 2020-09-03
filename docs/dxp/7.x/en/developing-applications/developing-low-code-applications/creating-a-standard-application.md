@@ -13,7 +13,9 @@ Here we'll create two simple time off management applications with App Builder, 
 
 Create the Time Off Request custom object:
 
-1. Navigate to Control Panel &rarr; App Builder &rarr; Custom Objects, and click the add button.
+1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Custom Objects.
+
+1. Click the add button (![Add](../../images/icon-add.png)).
 
 1. Enter the name: _Time Off Request_.
 
@@ -86,9 +88,10 @@ We will deploy two applications for the Time Off Request object: one is a widget
 
     For the _Time Off Requester_ application, select _Widget_ and click Deploy. The _Time Off Requester_ widget application can now be deployed to a site's page and utilized immediately by site users.
 
-1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu.
+1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu (leave the defaul selection to add it to the Applications Menu).
 
-    ![Here's a simple application deployed to the Site Menu (one of the Product Menu deployment options).](./creating-a-standard-application/images/04.png)
+    ![Here's the Time Off Request Manage entry in the Applications Menu.](./creating-a-standard-application/images/04.png)
+<!-- replace above screenshot -->
 
 Administrators can now access the _Time Off Manager_ application in the Product Menu to begin monitoring time off requests from site users.
 
@@ -116,7 +119,7 @@ To remove a field from an existing object, hover over it in the object view and 
 
 ### Adding and Editing Fields
 
-When you add or edit a field already being used in an object, the changes to the object will only affect records added after the add or edit. All existing records remain, unaffected by the change to the object.
+When you add or edit a field already being used in an object, the changes to the object will only affect records added after the add or edit. All existing records remain unaffected by the change to the object.
 
 To add a field directly to an existing object, open the any of the object's form views and click the add button in the left pane of the form builder.
 
@@ -129,3 +132,4 @@ To edit a field, navigate to the form view where it exists and click the field i
 ## Related Information
 
 * [App Builder Overview](./app-builder-overview.md)
+* [Creating a Workflow Powered App](./creating-a-workflow-powered-app.md)
