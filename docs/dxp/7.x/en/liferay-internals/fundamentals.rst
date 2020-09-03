@@ -5,7 +5,9 @@ Fundamentals
    :maxdepth: 3
 
    fundamentals/fundamentals.md
-   fundamentals/understanding-module-projects.md
+   fundamentals/module-projects.md
+   fundamentals/apis-as-osgi-services.md
+   fundamentals/using-an-osgi-service.md
    fundamentals/importing-packages.md
    fundamentals/exporting-packages.md
    fundamentals/semantic-versioning.md

@@ -2,7 +2,9 @@ Fundamentals
 ============
 
 -  :doc:`/liferay-internals/fundamentals/fundamentals`
--  :doc:`/liferay-internals/fundamentals/understanding-module-projects`
+-  :doc:`/liferay-internals/fundamentals/module-projects`
+-  :doc:`/liferay-internals/fundamentals/apis-as-osgi-services`
+-  :doc:`/liferay-internals/fundamentals/using-an-osgi-service`
 -  :doc:`/liferay-internals/fundamentals/importing-packages`
 -  :doc:`/liferay-internals/fundamentals/exporting-packages`
 -  :doc:`/liferay-internals/fundamentals/semantic-versioning`
