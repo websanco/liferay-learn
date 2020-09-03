@@ -25,7 +25,7 @@ The ability to combine forms, data display tables, and flexible deployment optio
 ## Creating an App
 <!-- Does the title need to be changed since there are now 2 flavors of app? the workflow powered app is dxp only Also need to define the workflow powered app -->
 
-There are two flavors of App Builder app: Standard and Workflow Powered. Regardle, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-an-application-with-app-builder.md).
+There are two flavors of App Builder app: Standard and Workflow Powered. Regardle, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-a-standard-application.md).
 
 ### App Builder Objects
 
@@ -79,4 +79,4 @@ A Standalone or Product Menu application always includes both the form and table
 
 ## Next Steps
 
-* [Creating an Application with App Builder](./creating-an-application-with-app-builder.md)
+* [Creating an Application with App Builder](./creating-a-standard-application.md)
