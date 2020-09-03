@@ -103,6 +103,10 @@ function generate_sphinx_input {
 
 		mkdir -p build/input/"${product_version_language_dir_name}"/docs
 
+		local product_version_english_dir_name=$(get_product_version_language_dir_name | sed 's@/[^/]*$@/en@')
+
+		rsync -a --exclude '*.md' --exclude '*.rst' --ignore-existing ../docs/"${product_version_english_dir_name}"/* build/input/"${product_version_language_dir_name}"/
+
 		cp -R docs/* build/input/"${product_version_language_dir_name}"
 
 		cp -R ../docs/"${product_version_language_dir_name}"/* build/input/"${product_version_language_dir_name}"
