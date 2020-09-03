@@ -99,4 +99,3 @@ You can create a new Collection from an Asset Publisher widget. This is useful w
 - [About Collections and Collection Pages](./about-collections-and-collection-pages.md)
 - [Displaying Collections and Collection Pages](./displaying-collections-and-collection-pages.md)
 - [Customizing Collections Using Segments](./customizing-collections-using-segments.md)
-
