@@ -70,9 +70,9 @@ You can create *Manual* or *Dynamic* Collections. For more information, see [Abo
 
 1. Click *Save*.
 
-## Creating a Collection from an Asset Publisher 
+## Creating a Collection from an Asset Publisher
 
-You can create a new Collection from an Asset Publisher widget. This is useful when you have an Asset Publisher customization that you want to use as a Collection.
+You can create a new Collection from an Asset Publisher widget. This is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages.
 
 ![You can transform an Asset Publisher widget into a Collection](./creating-collections/images/06.png)
 
