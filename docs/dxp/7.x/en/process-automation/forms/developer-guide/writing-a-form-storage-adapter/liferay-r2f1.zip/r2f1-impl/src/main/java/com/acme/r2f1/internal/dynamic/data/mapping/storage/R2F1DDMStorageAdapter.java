@@ -22,6 +22,8 @@ import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterGetRequest;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterGetResponse;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveRequest;
 import com.liferay.dynamic.data.mapping.storage.DDMStorageAdapterSaveResponse;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -41,6 +43,10 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
+			if (_log.isWarnEnabled()) {
+				_log.warn("Acme storage adapter's delete method was invoked");
+			}
+
 			return _jsonStorageAdapter.delete(ddmStorageAdapterDeleteRequest);
 		}
 		catch (Exception exception) {
@@ -54,6 +60,10 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
+			if (_log.isWarnEnabled()) {
+				_log.warn("Acme storage adapter's get method was invoked");
+			}
+
 			return _jsonStorageAdapter.get(ddmStorageAdapterGetRequest);
 		}
 		catch (Exception exception) {
@@ -67,12 +77,19 @@ public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 		throws StorageException {
 
 		try {
+			if (_log.isWarnEnabled()) {
+				_log.warn("Acme storage adapter's save method was invoked");
+			}
+
 			return _jsonStorageAdapter.save(ddmStorageAdapterSaveRequest);
 		}
 		catch (Exception exception) {
 			throw new StorageException(exception);
 		}
 	}
+
+	private static final Log _log = LogFactoryUtil.getLog(
+		R2F1DDMStorageAdapter.class);
 
 	@Reference(target = "(ddm.storage.adapter.type=json)")
 	private DDMStorageAdapter _jsonStorageAdapter;

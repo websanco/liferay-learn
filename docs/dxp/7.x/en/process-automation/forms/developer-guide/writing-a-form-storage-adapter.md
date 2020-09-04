@@ -72,6 +72,12 @@ To see how storage adapters work, deploy an example and then add some form data 
 
    ![Verify that the form entries were added.](./writing-a-form-storage-adapter/images/02.png)
 
+1. Additionally, logging is provided in each CRUD method to demonstrate that the sample's methods are being invoked.
+
+   ```bash
+   2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Called save()
+   ```
+
 ## Understand the Extension Point
 
 The example contains only one class: `R2F1DDMStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The deployed example currently just wraps the default JSON implementation: `DDMJSONStorageAdapter`. Later, you'll add file system storage to the code that's already here.
