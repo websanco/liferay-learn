@@ -1,6 +1,6 @@
 # Personalizing Collections
 
-By default, all the items in a Collection are visible for all users and assigned to the *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
+By default, any user can see all the Collection's content and is part of *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
 
 ```note::
    To customize a Collection using Segments, you must define your Segments first. For more information, see [Creating and Managing User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)

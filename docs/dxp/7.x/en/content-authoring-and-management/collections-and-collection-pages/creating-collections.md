@@ -1,6 +1,6 @@
 # Creating Collections
 
-You can create *Manual* or *Dynamic* Collections. For more information, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
+You can create *Manual* or *Dynamic* Collections. For information about the different types of Collections, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
 
 ## Creating a Manual Collection
 
@@ -18,19 +18,19 @@ You can create *Manual* or *Dynamic* Collections. For more information, see [Abo
 
     - If you want to include more than one item type:
 
-        1. Select *Select Types* under *Multiple Item Types*.
+        1. Select *Select More Than One* under *Multiple Item Types*.
         1. In the dual list box, add or remove the item types you want to include in your collection.
 
         ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
 
 1. Click *Save*.
-1. Click *Select* next to *Collection Items* and select the item type to include.
+1. Click *Select* next to *Collection Items* and select one of your item types.
 
     ![Select the items you want to include in the Manual Collection](./creating-collections/images/03.png)
 
 1. In the selection dialog, check the items you want to include.
 1. Click *Add*.
-1. If your Manual Collection includes more than one item type, repeat steps 6 to 8.
+1. If your Manual Collection includes more than one item type, repeat steps 6 to 8 for the other types.
 
 ## Creating a Dynamic Collection
 
@@ -45,19 +45,19 @@ You can create *Manual* or *Dynamic* Collections. For more information, see [Abo
         1. To filter you *Item Subtype* by a specific field, enable the *Filter by Field* switch, click *Select*, choose the field, and click *Apply*.
         1. Click *Save*.
 
-        ![You can filter the Item Subtype in your Collection by one of the item fields](./creating-collections/images/09.gif)
+            ![You can filter the Item Subtype in your Collection by one of the item fields](./creating-collections/images/09.gif)
 
     - If you want to include more than one item type:
 
         1. Select *Select Types* under *Multiple Item Types*.
         1. In the dual list box, add or remove the item types you want to include in your collection.
 
-        ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
+            ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
 
 1. Configure the criteria for your Dynamic Collection, based on *Scope*, *Filter*, *Content Recommendation*, or *Ordering*
 
     - *Scope* - Define the source of items in your Dynamic Collection. By default, the source is the current site.
-    - *Filter* - Configure the rules for the items in the Dynamic Collections. For example, you may want the collection to include only items with the "Promotion" tag.
+    - *Filter* - Configure the rules for the items in the Dynamic Collection. For example, you may want to include only items with the "promotion" tag.
 
     ![Filter your Dynamic Collection by adding one or more rules](./creating-collections/images/10.png)
 
@@ -72,7 +72,7 @@ You can create *Manual* or *Dynamic* Collections. For more information, see [Abo
 
 ## Creating a Collection from an Asset Publisher
 
-You can create a new Collection from an Asset Publisher widget. This is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages.
+You can create a new Collection from an [Asset Publisher Widget](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md). This is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages.
 
 ![You can transform an Asset Publisher widget into a Collection](./creating-collections/images/06.png)
 
@@ -81,7 +81,7 @@ You can create a new Collection from an Asset Publisher widget. This is useful w
 
     ![Edit the page which contains your Asset Publisher](./creating-collections/images/11.png)
 
-1. Hover over the Asset Publisher, click the *Options* icon (![Options](../../images/icon-app-options.png)) in the widget's menu, and select *Configuration*.
+1. Hover over the *Asset Publisher*, click the *Options* icon (![Options](../../images/icon-app-options.png)) in the widget's menu, and select *Configuration*.
 
     ![Configure the Asset Publisher Widget](./creating-collections/images/07.png)
 
