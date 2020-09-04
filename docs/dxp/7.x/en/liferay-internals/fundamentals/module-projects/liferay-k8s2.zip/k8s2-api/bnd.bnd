@@ -1,4 +1,4 @@
-Bundle-Name: ACME K8S2 Greeting API
-Bundle-SymbolicName: com.liferay.learn.k8s2.api
+Bundle-Name: Acme K8S2 Greeting API
+Bundle-SymbolicName: com.acme.k8s2.api
 Bundle-Version: 1.0.0
 Export-Package: com.acme.k8s2.greeting
