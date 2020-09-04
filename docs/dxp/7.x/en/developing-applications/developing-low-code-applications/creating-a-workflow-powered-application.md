@@ -1,6 +1,40 @@
-# Creating a Standard Application with App Builder
+# Creating a Workflow Powered Application
 
-To create applications based on a custom object: create the object, create at least one form view, create at least one table view, and deploy the application.
+Tried to start with a copy of the other article but it looks very different
+
+
+To use Workflow Powered apps to their potential, make sure you understand these functionalities:
+
+- [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+- [Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md)
+- [App Builder fundamentals](./app-builder-overview.md)
+
+Follow the instructions in [Creating a Standard Application](./creating-a-standard-application.md) to create the object, form views, and table views for the app. Whether or not you've already created a Standard App, you can use the same object to create a Workflow Powered App. The difference is all in how you create the app from these elements. These instructions assume you already have these components:
+
+A Standard app can be created from within the Object Control Panel entry, but not a Workflow Powered app. Instead use the _Apps_ Control Panel Entry:
+
+1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Apps.
+
+1. Click the _Workflow Powered_ tab. Any existing Workflow Powered apps are displayed. 
+
+1. Click the Add button (![Add](../../images/icon-add.png)) to open the New Workflow Powered App canvas.
+
+   ![The time Off Requester Workflow Powered app is underway.](./creating-a-workflow-powered-application/images/01.png)
+
+1. The first step of the workflow is in place, just rename it to _Submitted_.
+
+1. Add a step to the workflow by clicking the plus icon. Often times each step you add will correspond to a different form. Together, all the steps/forms will fill out all the fields of the backing object.
+
+1. Each step of the workflow 
+
+
+
+
+
+
+
+
+Like all App Builder apps, Workflow Powered Apps are created based on an object: create the object, create at least one form view, create at least one table view, and deploy the application.
 
 * [Creating a Custom Object](#creating-a-custom-object)
 * [Creating Form Views](#creating-form-views)
@@ -81,10 +115,6 @@ We will deploy two applications for the Time Off Request object: one is a widget
 1. Open the Time Off Request (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
 1. From the _Apps_ tab, click the Add button (![Add](../../images/icon-add.png)).
-
-   ```note::
-      If you want to create a `Workflow Powered` app for the object, you must create and deploy the app from the Apps entry in the Application Menu. See `Creating a Workflow Powered Application <./creating-a-workflow-powered-application.md>`__ for details.
-   ```
 
 1. Name the app _Time Off Requester_.
 

@@ -18,14 +18,14 @@ Why use App Builder when the [Liferay Forms](../../process-automation/forms/user
 | Control the presentation of form data |        |      &#10004;   |
 | Deploy multiple forms for one data object |        |      &#10004;   |
 | Deploy multiple data record views for one data object |        |      &#10004;   |
-<!-- update with new features -->
+<!-- update with new features like the workflow powered feature-->
 
 The ability to combine forms, data display tables, and flexible deployment options, all backed by a single data object, are what distinguish App Builder use cases from standard Forms.
 
 ## Creating an App
 <!-- Does the title need to be changed since there are now 2 flavors of app? the workflow powered app is dxp only Also need to define the workflow powered app -->
 
-There are two flavors of App Builder app: Standard and Workflow Powered. Regardle, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-a-standard-application.md).
+There are two flavors of App Builder app: Standard and Workflow Powered. Regardless, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-a-standard-application.md).
 
 ### App Builder Objects
 
