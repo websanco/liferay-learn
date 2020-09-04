@@ -51,11 +51,11 @@ A Collection Display Fragment is a type of fragment that shows a Collection in a
 1. In the tools sidebar, click the *Fragments and Widgets* (![Fragment and Widgets](../../images/icon-view-type-cards.png)) button.
 1. From the *Fragments and Widgets* sidebar panel, drag and drop the elements you want to use to show the Collection items.
 
-```note::
-   If the Collection contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection will automatically use the same layout settings.
-```
+    ![Add fragments or widgets to the Collection Display and configure the display properties](./displaying-collections-and-collection-pages/images/06.gif)
 
-![Add fragments or widgets to the Collection Display and configure the display properties](./displaying-collections-and-collection-pages/images/06.gif)
+    ```note::
+       If the Collection contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection will automatically use the same layout settings.
+    ```
 
 1. Click the Fragment or Widget.
 1. Click again to access the mapping options.
@@ -69,7 +69,7 @@ A Collection Display Fragment is a type of fragment that shows a Collection in a
 
 1. Click *Publish* to publish your changes or return to the *Pages* screen to save your page as a draft.
 
-## Viewing Your Collection Usage Through the Site.
+## Viewing Your Collection Usage Throughout the Site.
 
 You can find how your Collections are being used and displayed in the Site.
 
