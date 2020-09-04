@@ -178,7 +178,7 @@ components:
       type: object
 ```
 
-In this example, a schema called `Article` represents the important data for the use of this API. The `Article` entity contains an integer (`userId`) and three string values (`id`, `title`, and `content`) as its fields (or `properties`), which are the important pieces of data for this API to return.
+In this example, a schema called `Article` represents the important data for the use of this API. The `Article` entity contains an integer (`userId`) and three string values (`id`, `title`, and `content`) as its fields (or `properties`), which are the important pieces of data for this API to return. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
 
 ### Define Your APIs
 
