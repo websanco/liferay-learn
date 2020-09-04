@@ -3,6 +3,7 @@
 docs/**/build/
 docs/**/liferay-????-theme.war
 docs/**/liferay-????-theme/
+docs/**/liferay-????.zip/gradle.properties
 docs/**/liferay-????.zip/gradle/
 docs/**/liferay-????.zip/gradlew
 docs/**/liferay-????.zip/gradlew.bat
