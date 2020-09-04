@@ -8,11 +8,11 @@ Use a Jump to Page rule to navigate automatically to a specific page in the form
 
 In this example, there are three pages:
 
-* _First time camper?_: a required single selection field with two options: _Yes_ and _No_.
-* A second form page called _New Camper Information_.
-* A third form page called _Success_.
+* _First time camper?_: a required single selection field with two options: _Yes_ and _No_
+* A second form page called _New Camper Information_
+* A third form page called _Success_
 
-Depending on the respondent's choice, the form skips the second page and proceeds to the _Success_ page.
+If the user selects *no* on the first page, the form skips the second page and proceeds to the _Success_ page.
 
 ## Configuring the Jump to Page Action Rule
 
@@ -31,10 +31,8 @@ To configure the Jump to Page Rule:
 
 1. Click _Save_ when finished.
 
-![View the completed rule](./using-the-jump-to-page-rule/images/02.png)
-
 ```note::
-   It's best to use the *is not equal to* condition with fields existing on the same page. This is because Forms will check the first field and if it is returned as _true_, it will skip the second field.
+   It's best to use the *is not equal to* condition with fields existing on the same page. Forms checks the first field, and if it is returned as _true_, it skips the second field.
 ```
 
 ## Additional Information
