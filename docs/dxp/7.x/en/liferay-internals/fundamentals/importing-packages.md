@@ -1,10 +1,8 @@
 # Importing Packages
 
-Modules often depend on functionality from other modules. Modules in the OSGi framework must [export](./exporting-packages.md) a package for your module to import it.
+Modules often depend on functionality from other modules. A module in the OSGi framework must [export](./exporting-packages.md) a package for your module to import it. When an OSGi module imports a package, the OSGi framework finds other registered modules that export the package and wires it to the importing module. At run time, the importing module gets the class from the wired module that exports the package.
 
-When an OSGi module imports a package, the OSGi framework finds other registered modules that export the package and wires it to the importing module. At run time, the importing module gets the class from the wired module that exports the package.
-
-For this to happen, a module JAR's `META-INF/MANIFEST.MF` file must specify the `Import-Package` OSGi manifest header with a comma-separated list of the Java packages it needs. For example, if a module needs classes from the `javax.portlet` and `com.liferay.portal.kernel.util` packages, it must specify them like so:
+For this to happen, the importing module JAR's `META-INF/MANIFEST.MF` file must specify the `Import-Package` OSGi manifest header with a comma-separated list of the Java packages it needs. For example, if a module needs classes from the `javax.portlet` and `com.liferay.portal.kernel.util` packages, it must specify them like so:
 
 ```properties
 Import-Package: javax.portlet,com.liferay.portal.kernel.util
