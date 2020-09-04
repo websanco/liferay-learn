@@ -1,8 +1,8 @@
 # Configuring Remote Live Staging
 
-With *Remote Live Staging*, your Staging and Live environments are hosted on separate Liferay servers. When enabled, the Site used to configure Staging becomes your Staging environment, while the linked/configured <!--w/c--> remote server becomes your Live environment.
+With *Remote Live Staging*, your Staging and Live environments are hosted on separate Liferay servers. When enabled, the Site used to configure Staging becomes your Staging environment, while the configured remote server becomes your Live environment.
 
-Before enabling Remote Live Staging, you'll need to configure the Liferay servers you want to use for your Staging and Live environments.You will also need to create a new blank Site on your Remote server and use its ID during Staging configuration. You can find any Site's ID by selecting the Site's name on the *Sites Page* of the Control Panel.
+Before enabling Remote Live Staging, you'll need to configure the Liferay servers you want to use for your Staging and Live environments. You will also need to create a new blank Site on your Remote server and use its ID during Staging configuration. You can find any Site's ID by selecting the Site's name on the *Sites Page* of the Control Panel.
 
 * [Preparing Your Liferay Servers](#preparing-your-liferay-servers)
 * [Setting Up Remote Live Staging](#setting-up-remote-live-staging)
@@ -115,7 +115,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
    ![Select the data and content types you want to stage.](./configuring-remote-live-staging/images/05.png)
 
     ```warning::
-       When an application is checked, its data is copied, and it may not be possible to edit them directly in live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
+       When an application is checked, its data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
     ```
 
 1. Click on *Save* to initiate the Staging process. The duration of this process depends on the size of your Site.
@@ -136,7 +136,7 @@ When a User attempts to publish changes from Staging to Live, Liferay passes the
 
 To give a local User permission to publish changes from staging to production/live, create an identical User account with identical permissions for the User on the remote server.
 
-To simplify this process, you can use LDAP to copy selected User accounts from your local server to your remote server. See [Connecting to an LDAP Directory](./../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) for more information.
+To simplify this process, you can use LDAP to copy selected User accounts from your local server to your remote server. See [Connecting to an LDAP Directory](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) for more information.
 
 ## Configuring Remote Staging's Buffer Size
 
@@ -150,11 +150,11 @@ This property sets the file block sizes for remote staging. If a LAR file used f
 
 ## Disabling Remote Live Staging
 
-If for any reason you need to disable Staging for your Site, follow these steps:
+If you need to disable Staging for your Site, follow these steps:
 
 1. Go to *Publishing* &rarr; *Staging*, which is only available from your Staging environment.
 
-1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) located in the *Application* bar, and select *Staging Configuration*.
+1. Click on the *Actions* button ( ![Actions button](../../images/icon-actions.png) ) located in the *Application* bar, and select *Staging Configuration*.
 
 1. Select *None* for your Staging configuration, and click on *Save*.
 

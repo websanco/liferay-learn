@@ -1,4 +1,4 @@
-# Managing Data and Content in Staging
+# Managing Data and Content Types in Staging
 
 Liferay DXP's Staging tool provides ways to manage which application data and content types are available both during initial configuration and during the publication process. Because there can be so many relationships between applications and types of content, be sure to consider how they reference each other in your database before deciding to stage or unstage any categories.
 
@@ -17,7 +17,7 @@ Content must have specific attributes to be used in Staging. For instance, all s
 
 Any application data not staged is only contained in the Site's Live environment, while staged data exists in both environments. Staged application data is automatically published whenever a Page containing the application is published. And disabled applications that are checked are always automatically exported, while disabled and unchecked applications are never automatically published. Note that Asset Publisher and its data are always staged.
 
-Also, keep in mind that disabled staged content types can also cause unintended problems if you're referring to them in the Staging environment. For example, if the Asset Publisher is set to display content types that are not staged, it won't be able to access them. Make sure to plan for the content types you'll need in your staged Site.
+Disabled staged content types can also cause unintended problems if you're referring to them in the Staging environment. For example, if the Asset Publisher is set to display content types that are not staged, it won't be able to access them. Make sure to plan for the content types you'll need in your staged Site.
 
 ```important::
    After configuration, users are unable to change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.

@@ -44,7 +44,7 @@ The following permissions are relevant to Staging:
 
 **Publish Staging**: This permission hides/shows the *Publish to Live* button on the Staging Bar and hides/shows the *Add Staging Process* button in the Site Administration menu's Staging app. This permission automatically applies the Export/Import Application Info, Export/Import Pages, and Publish Application Info permission functionality regardless of whether they're unselected.
 
-**View Staging**: If Publish Staging, Manage Pages, Manage Staging, or Update permissions are not granted, this permission hides/shows the Site Administration menu's Staging app.
+**View Staging**: If *Publish Staging*, *Manage Pages*, *Manage Staging*, or *Update permissions* are not granted, this permission hides/shows the Site Administration menu's Staging app.
 
 ## Individual Variation Permissions
 

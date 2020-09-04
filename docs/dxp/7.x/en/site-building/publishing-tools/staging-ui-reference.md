@@ -62,7 +62,7 @@ Here, you can access information and settings that you can use to customize your
 
 **Name**: Enter a descriptive name for your publication into the *Name* field.
 
-**Date**: Select whether to publish your changes *now*/immediately, or *schedule* your changes to be published at a later date and time. You can also determine whether and how frequently your publication is repeated.
+**Date**: Select whether to publish your changes immediately, or *schedule* your changes to be published at a later date and time. You can also determine whether and how frequently your publication is repeated.
 
 ![Select when to publish your changes.](./staging-ui-reference/images/06.png)
 
@@ -84,7 +84,7 @@ If you want to publish pages with a custom theme, you must check the Theme Setti
 
 ![Select whether to include permissions for the Pages and widgets when your changes are published.](./staging-ui-reference/images/10.png)
 
-Instead of manually configuring advanced options every time you publish a Page or content, you can use pre-configured *publication templates*. To view and select a saved template for your publication, click on the *Publish Templates* tab.
+Instead of manually configuring advanced options every time you publish a Page or content, you can save your staging configuration as a [*publication template*](#publish-templates) for future use. To view and select a saved template for your publication, click on the *Publish Templates* tab.
 
 ![To view and select a saved template for your publication, click on the Publish Templates tab.](./staging-ui-reference/images/11.png)
 

@@ -7,15 +7,15 @@ Publication is the process whereby your Site's Pages, content, and application c
 
 ## The Staging Process
 
-From a low level perspective, staging is an equivalence relation where entities are mirrored to a different location. From a high level perspective, the staging process is executed in three sequential phases: Export, Validation, and Import.
+From a low level perspective, staging is a relationship between two Sites, where the same entities from the local Site are mirrored to a different Site. From a high level perspective, staging involves a publication process that is executed in three sequential phases: Export, Validation, and Import.
 
 ### Export Phase
 
-During *Export*, your publication configuration is processed and necessary/obligatory<!--w/c--> referenced entities are gathered. Then everything is processed into the instance's own file format, per publication parameters, and is either stored locally or transferred to the remote live DXP instance.
+During *Export*, your publication configuration is processed and necessary referenced entities are gathered. Then everything is processed into the instance's own file format, and it is either stored locally or transferred to the remote live DXP instance.
 
 ### Validation Phase
 
-During *Validation*, everything is checked to determine whether it's possible to start the import process. This includes verifying the file's version and integrity, checking for additional system information (e.g., language settings), and ensuring there is no missing content referenced. <!--awk, necessary wording?-->
+During *Validation*, everything is checked to determine whether it's possible to start the import process. This includes verifying the file versions and integrity, checking for additional system information (e.g., language settings), and ensuring that the files do not reference missing content.
 
 If anything is not verified during the publication process, the transactional database reverts the Site back to its original state, discarding the current publication. This is a necessary action to safeguard against publishing incomplete information, which could break an otherwise well-designed live Site.
 
@@ -49,7 +49,7 @@ It's recommended users enable Staging at the beginning of the Site creation proc
 
 For Staging, it's recommended JVMs/networks are configured with a minimum of 4GB of memory and 20MB/s transfer rate (disk).
 
-## Additional
+## Additional Information
 
 * [Configuring Local Live Staging](./configuring-local-live-staging.md)
 * [Configuring Remote Live Staging](./configuring-remote-live-staging.md)

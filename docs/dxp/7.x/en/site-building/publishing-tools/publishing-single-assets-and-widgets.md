@@ -1,6 +1,6 @@
 # Publishing Single Assets and Widgets
 
-With Liferay DXP, you can publish single assets and widgets when needed, without going through the entire publication process. You can also schedule when web content is published.
+With Liferay DXP, you can publish single assets and widgets when needed, without going through the entire publication process. This strategy allows you to fine-tune your publications more specifically than publishing all content at once.
 
 ## Publishing Single Assets
 

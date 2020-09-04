@@ -13,9 +13,9 @@ Liferay DXP provides two options for configuring Staging on your Site: *Local Li
 
 **Local Live Staging**: With *Local Live Staging*, you host both your Staging and Live environments on the same Liferay server. When enabled, Liferay DXP creates a local clone of your Site that serves as the Staging environment, while your original DXP instance becomes your Live environment.
 
-**Remote Live Staging**: With *Remote Live Staging*, you host your Staging and Live environments on separate Liferay servers. When enabled, the Site used to configure Staging becomes your Staging environment, while the configured <!--w/c--> remote server becomes your Live environment.
+**Remote Live Staging**: With *Remote Live Staging*, you host your Staging and Live environments on separate Liferay servers. When enabled, the Site used to configure Staging becomes your Staging environment, while the configured remote server becomes your Live environment.
 
-While both options use the same interface for managing and publishing staged Pages, applications, and content, they differ in their setup. Once you've chosen the configuration option that best suits your needs, see [Configuring Local Live Staging](./configuring-local-live-staging.md) and [Configuring Remote Live Staging](./configuring-remote-live-staging.md) for more information and setup instructions.
+While both options use the same interface for managing and publishing staged Pages, applications, and content, they differ in their setup. Once you've chosen the configuration option that best suits your needs, see [Configuring Local Live Staging](./configuring-local-live-staging.md) or [Configuring Remote Live Staging](./configuring-remote-live-staging.md) for more information and setup instructions.
 
 ### Page Versioning
 
