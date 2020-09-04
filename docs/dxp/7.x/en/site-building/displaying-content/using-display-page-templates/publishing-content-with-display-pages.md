@@ -2,7 +2,7 @@
 
 Follow these steps to display your content on a Display Page:
 
-1. Open the Product Menu and go to *Content & Data* &rarr;, open the site's menu, and select the type of content you want to configure a Display Page Template for: *Web Content*, *Blogs*, or *Documents and Media*.
+1. Open the Product Menu and go to *Content & Data* &rarr;, open the site's menu, and then select the type of content you want to configure a Display Page Template for: *Web Content*, *Blogs*, or *Documents and Media*.
 
 1. Open the Edit menu for an existing content or create a new piece of content.
 
@@ -10,7 +10,7 @@ Follow these steps to display your content on a Display Page:
 
     ![Select a specific display page template to configure a display page template.](./publishing-content-with-display-pages/images/01.png)
 
-1. Click the *Select* button, and select the Display Page Template and click *Done*.
+1. Click the *Select* button, and then select the Display Page Template and click *Done*.
 
     When editing the content, you can preview what the display page looks like with the *Preview* (![Preview Template](../../../images/icon-preview.png)) button located next to the selected Display Page Template.
 

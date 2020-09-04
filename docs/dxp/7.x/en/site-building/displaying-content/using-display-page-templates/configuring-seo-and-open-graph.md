@@ -2,11 +2,11 @@
 
 With *Display Page Templates*, you can create standard formats for displaying different content types, such as *Web Content Articles*, *Documents*, and *Blog Entries*. When configuring a template, you can define SEO and Open Graph fields that are dynamically filled for your displayed content.
 
-To create or configure these setting for an existing Display Page template, go to *Design* &rarr; *Page Templates* in the Product menu, and click on the *Display Page Templates* tab.
+To create or configure these settings for an existing Display Page template, go to *Design* &rarr; *Page Templates* in the Product menu, and click on the *Display Page Templates* tab.
 
 ![Click on the Display Page Templates tab.](./configuring-seo-and-open-graph/images/01.png)
 
-Create a new template using the Add button (![Add button](./../../../images/icon-add.png)), or edit an existing template by clicking on its *Actions* button ( ![Actions button](./../../../images/icon-actions.png) ) and selecting *Configure*. Here, configuration options are organized into two tabs: *SEO* and *Open Graph*.
+Create a new template using the Add button (![Add button](../../../images/icon-add.png)), or edit an existing template by clicking on its *Actions* button (![Actions button](./../../../images/icon-actions.png)) and selecting *Configure*. Here, configuration options are organized into two tabs: *SEO* and *Open Graph*.
 
 * [Configuring SEO Settings](#configuring-seo-settings)
 * [Configuring Open Graph Settings](#configuring-open-graph-settings)
@@ -17,13 +17,13 @@ Search engine optimization (SEO) refers to the methods used to improve your Page
 
 ### HTML Title
 
-The *HTML Title* field defines a Display Page's title `<meta>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to *Title*, but you can select any other Text field. Though keep in mind, the recommended length for an HTML title is under 60 characters.
+The *HTML Title* field defines a Display Page's title `<meta>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to *Title*, but you can select any other Text field. The recommended length for an HTML title is under 60 characters.
 
 ![The HTML Title field defines a Display Page's title meta tag](./configuring-seo-and-open-graph/images/02.png)
 
 ### Description
 
-The *Description* field defines a Display Page's description `<meta>` tag. This description is used by search engines to rank your Page and appears in search engine results as a preview of your Page. By default, Display Page templates map this field to *Description*, but you can select any other Text field. Though keep in mind, the recommended length for a Page's description is under 155 characters.
+The *Description* field defines a Display Page's description `<meta>` tag. This description is used by search engines to rank your Page and appears in search engine results as a preview of your Page. By default, Display Page templates map this field to *Description*, but you can select any other Text field. The recommended length for a Page's description is under 155 characters.
 
 ![The Description field defines a Display Page's description meta tag.](./configuring-seo-and-open-graph/images/03.png)
 
@@ -49,13 +49,13 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 ### Title
 
-The *Title* field defines a Display Page's `og:title` property, which determines the title displayed for your content in rich previews. By default, this field is mapped to *Title*, like the HTML title field for SEO. While you can select any other Text field, its best practice to update SEO and Open Graph titles together.
+The *Title* field defines a Display Page's `og:title` property, which determines the title displayed for your content in rich previews. By default, this field is mapped to *Title*, like the HTML title field for SEO. While you can select any other Text field, it's best practice to update SEO and Open Graph titles together.
 
 ![The Title field defines a Display Page's og:title property.](./configuring-seo-and-open-graph/images/06.png)
 
 ### Description
 
-The *Description* field defines a Display Page's `og:description` property, which determines the description displayed for your content in rich previews. By default, Display Page templates map this field to *Description*, like the description field for SEO. While you can select any other Text field, its best practice to update SEO and Open Graph descriptions together.
+The *Description* field defines a Display Page's `og:description` property, which determines the description displayed for your content in rich previews. By default, Display Page templates map this field to *Description*, like the description field for SEO. While you can select any other Text field, it's best practice to update SEO and Open Graph descriptions together.
 
 ![The Description field defines a Display Page's og:description property.](./configuring-seo-and-open-graph/images/07.png)
 
