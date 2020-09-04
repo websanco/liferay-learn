@@ -49,6 +49,6 @@ From here you have three options:
 
 ## Related Information
 
-* [Content Set Personalization](./content-set-personalization.md)
+* [Personalizing Collections](./personalizing-collection.md)
 * [Getting Analytics for User Segments](../segmentation/getting-analytics-for-user-segments.md)
 * [Creating User Segments](../segmentation/creating-and-managing-user-segments.md)
