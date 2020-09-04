@@ -75,7 +75,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 1. Additionally, logging is provided in each CRUD method to demonstrate that the sample's methods are being invoked.
 
    ```bash
-   2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Called save()
+   2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Acme storage adapter's save method was invoked
    ```
 
 ## Understand the Extension Point
