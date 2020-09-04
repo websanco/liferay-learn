@@ -8,7 +8,7 @@ Before starting, you must first [enable](../../devops/enabling-document-creation
 
 The first time you create or edit a Documents and Media file via Office 365&trade;, you must authenticate with your Microsoft account. This links OneDrive&trade; to your DXP account, so you only need to do this once.
 
-To unlink your account:
+Unlinking your account takes only three steps:
 
 1. Click on *your profile* &rarr; *Account Settings*.
 1. On the *General* tab, click *Apps*.
@@ -19,8 +19,6 @@ To unlink your account:
 OneDrive&trade; has been unlinked.
 
 ## Creating Files
-
-Follow these steps to create a new Documents and Media file via Office 365&trade;:
 
 1. Open the *Menu* (![Product Menu](../../../../images/icon-menu.png)), click your Site's name, and navigate to *Content & Data* &rarr; *Documents and Media*.
 1. Click the *Add* icon (![Add](../../../../images/icon-add.png)) and select the type of Office 365&trade; document to add to the Document Library:
@@ -35,7 +33,7 @@ Follow these steps to create a new Documents and Media file via Office 365&trade
 
 1. Enter the document's name in the *Title* field, and click *Save*. When you click *Save*, DXP creates a temporary Documents and Media file and links it to the new Office 365&trade; file. Your browser then opens a new window with that Office 365&trade; file so you can create its content.
 
-    ![Give the document a name.](./creating-and-editing-documents-with-microsoft-office-365/images/03.png)
+    ![When you create a document, you must give it a name.](./creating-and-editing-documents-with-microsoft-office-365/images/03.png)
 
 1. Use the Office 365&trade; editor to create your document's content.
 
@@ -65,7 +63,7 @@ Follow these steps to edit a Documents and Media file in Office 365&trade;:
 
 1. Edit the file in Office 365&trade;. The editing process is exactly the same as described above for creating files.
 
-    ![Select Edit in Office 365 from the file's Actions menu.](./creating-and-editing-documents-with-microsoft-office-365/images/04.png)
+    ![To modify a document, select Edit in Office 365 from the file's Actions menu.](./creating-and-editing-documents-with-microsoft-office-365/images/04.png)
 
 ## Additional Information
 
