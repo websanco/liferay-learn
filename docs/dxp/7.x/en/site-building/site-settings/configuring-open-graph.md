@@ -34,7 +34,7 @@ When you enter text into the Image Alt Description field, you determine the defa
 <meta property="og:image:alt" content="This is an example." />
 ```
 
-Here, you can also preview how your Open Graph image will appear in supported contexts. Though keep in mind the image ratio may change, depending on where your Page's URL is shared.
+Here, you can also preview how your Open Graph image will appear in supported contexts. However, the image ratio may change depending on where your Page's URL is shared.
 
 ![Preview your default Open Graph configuration.](./configuring-open-graph/images/05.png)
 
