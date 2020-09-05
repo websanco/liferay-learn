@@ -83,8 +83,8 @@ APIs
 ~~~~
 Coming son!
 
-Content Sets
-------------
+Collections
+-----------
 
 User Guide
 ~~~~~~~~~~
