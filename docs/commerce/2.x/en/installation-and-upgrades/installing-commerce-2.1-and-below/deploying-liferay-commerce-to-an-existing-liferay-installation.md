@@ -37,6 +37,9 @@ To begin using Liferay Commerce:
     2019-08-09 00:34:51.753 INFO  [main][ThemeHotDeployListener:108] 1 theme for minium-theme is available for use
     ```
 
+1. On first startup, execute a reindex to populate the Liferay Commerce default content; navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Search_.
+1. Click _Execute_ next to _Reindex all search indexes_.
+
 Liferay Commerce has been deployed and is ready for use. Store administrators can begin building a storefront and populating their catalog.
 
 ## Additional Information
