@@ -7,8 +7,10 @@ Store Administration
    store-administration/liferay-commerce-configuration-overview.md
    store-administration/locale-options.md
    store-administration/adding-regions.md
+   store-administration/guest_checkout.rst
    store-administration/deactivating-a-country-for-billing-or-shipping.md
 
+   
    store-administration/sending_emails.rst
    store-administration/currencies.rst
    store-administration/configuring_taxes.rst
