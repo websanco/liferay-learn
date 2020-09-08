@@ -267,6 +267,7 @@ This change was made because the tag was primarily used internally.
 The placement and structure of the Control and Product Menus has changed to address several accessibility concerns and common visual glitches.
 
 These changes have been applied to the Control and Product menus:
+
 - The Product Menu has been moved outside of the Control Menu
 - The Control Menu now uses `position:sticky` to control its behaviour
 - Styles of the menus inside the Control Menu have been updated to account for the new sticky behaviour
@@ -310,6 +311,7 @@ Developers with custom Control Panel themes should move the call (if any) to the
 Developers with custom Sticky Bars included using the `*ControlMenuEntry` API can use the newly included extension points in the Control Menu to inject their components.
 
 Move the code that injects the menu to a `DynamicInclude` component and register it for the proper position:
+
 - Before the Control Menu: Use `com.liferay.product.navigation.taglib#/page.jsp#pre`
 - After the Control Menu: Use `com.liferay.product.navigation.taglib#/page.jsp#post`
 
@@ -393,6 +395,28 @@ This change was made to consolidate all our UX for writing Rich Text Content aro
 
 ---------------------------------------
 
+### Removed liferay-editor-image-uploader Plugin
+- **Date:** 2020-Mar-27
+- **JIRA Ticket:** [LPS-110734](https://issues.liferay.com/browse/LPS-110734)
+
+### What changed?
+
+`liferay-editor-image-uploader` AUI plugin was removed. Its code was merged into `addimages` CKEditor plugin, used by Alloy Editor and CKEditor.
+
+### Who is affected
+
+This affects custom solutions that use the plugin directly.
+
+### How should I update my code?
+
+There's no direct replacement for the `liferay-editor-image-uploader` plugin. If you have a component that relies on it, you can co-locate a copy of the old implementation and use it locally within your module.
+
+#### Why was this change made?
+
+This change enables image drag and drop handling in CKEditor and provides a common image uploader for both Alloy Editor and CKEditor.
+
+---------------------------------------
+
 ### TinyMCE Editor Is No Longer Bundled by Default
 - **Date:** 2020-Mar-27
 - **JIRA Ticket:** [LPS-110733](https://issues.liferay.com/browse/LPS-110733)
@@ -449,18 +473,15 @@ The change was made so users don't have to change the name for the default vocab
 
 #### What changed?
 
-The global AUI `Liferay.Poller` utility is now deprecated and is no longer
-initialized by default.
+The global AUI `Liferay.Poller` utility is now deprecated and is no longer initialized by default.
 
 #### Who is affected?
 
-This affects any code that relies on `Liferay.Poller`; this is usually done via
-a call to `Liferay.Poller.init()` in a JSP.
+This affects any code that relies on `Liferay.Poller`; this is usually done via a call to `Liferay.Poller.init()` in a JSP.
 
 #### How should I update my code?
 
-There's no direct replacement for the `Liferay.Poller` utility. If you must
-initialize `Liferay.Poller`, update your JSP to use the code below:
+There's no direct replacement for the `Liferay.Poller` utility. If you must initialize `Liferay.Poller`, update your JSP to use the code below:
 
 ```markup
 <%@ page import="com.liferay.petra.encryptor.Encryptor" %>
@@ -480,9 +501,7 @@ initialize `Liferay.Poller`, update your JSP to use the code below:
 
 #### Why was this change made?
 
-The `Liferay.Poller` component was only used in the Chat application, which is
-archived. Skipping initialization by default streamlines page loads for the
-common case.
+The `Liferay.Poller` component was only used in the Chat application, which is archived. Skipping initialization by default streamlines page loads for the common case.
 
 ---------------------------------------
 
@@ -496,23 +515,15 @@ common case.
 
 #### Who is affected?
 
-This affects Liferay Portal installations using legacy web content features
-provided by the `ContentTransformerListener`, such as embedding web content
-inside another web content, a legacy edit in place infrastructure, token
-replacements (`@article_group_id@`, `@articleId;elementName@`), etc.
+This affects Liferay Portal installations using legacy web content features provided by the `ContentTransformerListener`, such as embedding web content inside another web content, a legacy edit in place infrastructure, token replacements (`@article_group_id@`, `@articleId;elementName@`), etc.
 
 #### How should I update my code?
 
-There's no need to update your code. If you still want to use
-`ContentTransformerListener`, you can enable it in System Settings via the
-*Enable ContentTransformerListener* property under *Content & Data* &rarr; *Web
-Content* &rarr; *Virtual Instance Scope* &rarr; *Web Content*.
+There's no need to update your code. If you still want to use `ContentTransformerListener`, you can enable it in System Settings via the *Enable ContentTransformerListener* property under *Content & Data* &rarr; *Web Content* &rarr; *Virtual Instance Scope* &rarr; *Web Content*.
 
 #### Why was this change made?
 
-`ContentTransformerListener` was disabled to improve performance, due to its
-expensive string processing on article elements (calling
-`HtmlUtil.stripComments` and `HtmlUtil.stripHtml` on article fields).
+`ContentTransformerListener` was disabled to improve performance, due to its expensive string processing on article elements (calling `HtmlUtil.stripComments` and `HtmlUtil.stripHtml` on article fields).
 
 ---------------------------------------
 
@@ -522,9 +533,7 @@ expensive string processing on article elements (calling
 
 #### What changed?
 
-The `Liferay.BrowserSelectors.run()` function is no longer called on pages,
-which as a result removes some CSS classes from the opening `<html>` tag. Many
-of these are now added to the `<body>` element instead.
+The `Liferay.BrowserSelectors.run()` function is no longer called on pages, which as a result removes some CSS classes from the opening `<html>` tag. Many of these are now added to the `<body>` element instead.
 
 #### Who is affected?
 
@@ -554,10 +563,7 @@ This affects any code that relies on these CSS classes in the `<html>` element:
 
 #### How should I update my code?
 
-There's no direct replacement for the `Liferay.BrowserSelectors.run()` function,
-but you can adapt your CSS and JavaScript to target new classes on the `<body>`
-element instead. These classes are added to the `<body>` element to reflect
-the browser you're currently using:
+There's no direct replacement for the `Liferay.BrowserSelectors.run()` function, but you can adapt your CSS and JavaScript to target new classes on the `<body>` element instead. These classes are added to the `<body>` element to reflect the browser you're currently using:
 
 - `chrome`
 - `edge`
@@ -566,8 +572,7 @@ the browser you're currently using:
 - `mobile`
 - `other`
 
-Alternatively, you can still invoke `Liferay.BrowserSelectors.run()` to apply
-the old classes to the `<html>` element with the code below:
+Alternatively, you can still invoke `Liferay.BrowserSelectors.run()` to apply the old classes to the `<html>` element with the code below:
 
 ```
 <aui:script use="liferay-browser-selectors">
@@ -577,10 +582,7 @@ the old classes to the `<html>` element with the code below:
 
 #### Why was this change made?
 
-The classes, some of which referred to outdated browsers, were being added to
-the top `<html>` element via legacy JavaScript that depended on Alloy UI. This
-change, which removes the outdated browser references, is now done on the server
-side, improving page loading times.
+The classes, some of which referred to outdated browsers, were being added to the top `<html>` element via legacy JavaScript that depended on Alloy UI. This change, which removes the outdated browser references, is now done on the server side, improving page loading times.
 
 ---------------------------------------
 
@@ -590,8 +592,7 @@ side, improving page loading times.
 
 #### What changed?
 
-Blocking cache support was removed. These properties can no longer be used to
-enable blocking cache:
+Blocking cache support was removed. These properties can no longer be used to enable blocking cache:
 
 - `ehcache.blocking.cache.allowed`
 - `permissions.object.blocking.cache`
@@ -603,8 +604,7 @@ This affects anyone using the properties listed above.
 
 #### How should I update my code?
 
-There's no direct replacement for the removed feature. If you have code that
-depends on it, you must implement it yourself.
+There's no direct replacement for the removed feature. If you have code that depends on it, you must implement it yourself.
 
 #### Why was this change made?
 
@@ -624,8 +624,7 @@ Support was removed for setting these cache properties for an entity:
 - `value.object.finder.cache.enabled*`
 - `value.object.column.bitmask.enabled*`
 
-For example, these properties are for entity
-`com.liferay.portal.kernel.model.User`:
+For example, these properties are for entity `com.liferay.portal.kernel.model.User`:
 
 - `value.object.entity.cache.enabled.com.liferay.portal.kernel.model.User`
 - `value.object.finder.cache.enabled.com.liferay.portal.kernel.model.User`
@@ -637,10 +636,116 @@ This affects anyone using the properties listed above for an entity.
 
 #### How should I update my code?
 
-There's no direct replacement for the removed feature. You must remove
-these properties from your entities.
+There's no direct replacement for the removed feature. You must remove these properties from your entities.
 
 #### Why was this change made?
 
 This change was made because these properties are not useful for an entity.
+
+---------------------------------------
+
+### Dynamic Data Mapping fields in Elasticsearch have changed to a nested document
+- **Date:** 2020-Jul-27
+- **JIRA Ticket:** [LPS-103224](https://issues.liferay.com/browse/LPS-103224)
+
+#### What changed?
+
+Dynamic Data Mapping fields in Elasticsearch that start with `ddm__keyword__` and `ddm__text__` have been moved to a new nested document `ddmFieldArray`.
+
+The `ddmFieldArray` has several entries with following fields:
+
+- `ddmFieldName`: Contains the Dynamic Data Mapping structure field name. This name is generated using `DDMIndexer.encodeName` methods.
+- `ddmFieldValue*`: Contains the indexed data. The name of this field is generated using `DDMIndexer.getValueFieldName` and depends on the field's data type and language.
+- `ddmValueFieldName`: Contains the index field name where the indexed data is stored.
+
+ This change is not applied if you are using the SOLR search engine.
+
+#### Who is affected?
+
+This affects anyone with custom developments that execute queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
+
+#### How should I update my code?
+
+You have to use the new nested document `ddmFieldArray` in your Elasticsearch queries.
+
+There are some examples in Liferay code. For example, [DDMIndexerImpl](https://github.com/liferay/liferay-portal/blob/7.3.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/util/DDMIndexerImpl.java) and [AssetHelperImpl](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-service/src/main/java/com/liferay/asset/internal/util/AssetHelperImpl.java) use the `DDM_FIELD_ARRAY` constant.
+
+#### Why was this change made?
+
+This change was made to avoid the *Limit of total fields has been exceeded* Elasticsearch error that occurs if you have too many Dynamic Data Mapping structures.
+
+For more information about this error, see [LPS-103224](https://issues.liferay.com/browse/LPS-103224).
+
+---------------------------------------
+
+### Removed classNameId related methods from DDM Persistence classes
+- **Date:** 2020-Aug-18
+- **JIRA Ticket:** [LPS-108525](https://issues.liferay.com/browse/LPS-108525)
+
+### What changed?
+
+The `countByClassNameId`, `findByClassNameId`, and `removeByClassNameId` methods were removed from the following classes:
+
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMStructureLinkPersistence`
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMStructureLinkUtil`
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMStructurePersistence`
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMStructureUtil`
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMTemplateLinkPersistence`
+- `com.liferay.dynamic.data.mapping.service.persistence.DDMTemplateLinkUtil`
+
+### Who is affected
+
+This affects anyone who uses one of these methods.
+
+### How should I update my code?
+
+You can use the other finder and counter methods.
+
+#### Why was this change made?
+
+These methods were removed as part of the solution for https://issues.liferay.com/browse/LPS-108525.
+
+---------------------------------------
+
+### Removed com.liferay.dynamic.data.mapping.util.BaseDDMDisplay Method
+- **Date:** 2020-Aug-18
+- **JIRA Ticket:** [LPS-103549](https://issues.liferay.com/browse/LPS-103549)
+
+### What changed?
+
+The `isShowAddStructureButton` method was removed.
+
+### Who is affected
+
+This affects anyone who uses one of these methods.
+
+### How should I update my code?
+
+You can use `isShowAddButton(Group scopeGroup)` method instead of this method.
+
+#### Why was this change made?
+
+This method was removed as part of a clean up refactor. See more in https://issues.liferay.com/browse/LPS-103549.
+
+---------------------------------------
+### Moving lexicon icons path
+- **Date:** 2020-Aug-17
+- **JIRA Ticket:** [LPS-115812](https://issues.liferay.com/browse/LPS-115812)
+
+### What changed?
+
+The path for the lexicon icons has been changed from `themeDisplay.getPathThemeImages() + "/lexicon/icons.svg` to `themeDisplay.getPathThemeImages() + "/clay/icons.svg`
+
+### Who is affected
+
+This affects custom solutions that use the lexicon icons path directly. The Gradle task for building the icons on the `lexicon` path will be removed.
+
+### How should I update my code?
+
+Update the path to reference `clay` instead of `lexicon`
+
+#### Why was this change made?
+
+This change was made to unify references to the icon sprite map.
+
 ---------------------------------------
