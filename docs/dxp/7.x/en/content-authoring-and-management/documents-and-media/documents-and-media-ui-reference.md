@@ -40,7 +40,7 @@ To learn more about Metadata Sets, see [Using Metadata Sets](./uploading-and-man
 
 You can access the application's settings from any of the three tabs by clicking the (![Options icon](../../images/icon-options.png)) to access the _Options_ menu.
 
-![Access the Options menu.](./documents-and-media-ui-reference/images/05.png)
+![Click the Options menu in the top right to access the application settings.](./documents-and-media-ui-reference/images/05.png)
 
 ### Access from Desktop
 
