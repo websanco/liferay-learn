@@ -21,6 +21,11 @@ Sending Emails
 -  :doc:`/store-administration/sending-emails/configuring-the-commerce-notification-queue`
 -  :doc:`/store-administration/sending-emails/notification-template-variables-reference-guide`
 
+Guest Checkout
+---------------
+
+-  :doc:`/store-administration/guest-checkout/guest-checkout-overview`
+-  :doc:`/store-administration/guest-checkout/enabling-guest-checkout`
 
 Configuring Taxes
 -----------------
