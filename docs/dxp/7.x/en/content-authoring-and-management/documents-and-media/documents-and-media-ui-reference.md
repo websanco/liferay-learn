@@ -16,7 +16,7 @@ Click the (![Add icon](../../images/icon-add.png)) to begin using the _Documents
 
 ## Document Types Tab
 
-_Document Types_ are made of metadata fields and help users define the purpose of Document Library files.
+_Document Types_ are made of metadata fields that users fill out to and help define the purpose of Document Library files. They provide additional, searchable information about uploaded documents.
 
 ![The Document Types Tab contains all Document Types which contain metadata sets.](./documents-and-media-ui-reference/images/02.png)
 
@@ -26,7 +26,7 @@ To learn more about using Document Types, see [Defining Document Types](./upload
 
 ## Metadata Set Tab
 
-You can define metadata fields that users fill out when they create or edit Documents and Media files by creating a Metadata Set. Metadata Sets are independent from _Document Types_, but you can still use Metadata Sets in a Document Type.
+Metadata Sets are groups of fields that can be added to Document Types.
 
 Metadata Sets can be grouped in a hierarchy and can become the foundation of another metadata set (an "extension"). A "child" metadata set is displayed on the same level as the parent.
 
@@ -96,5 +96,5 @@ If an existing document has been updated, this is the email notification sent to
 
 ## Additional Information
 
-* [Introduction to Documents and Media](./introduction-to-documents-and-media.md)
+* [Sharing Documents and Media](./sharing-documents-and-media.md)
 * [Importing/Exporting Sites and Contents](../../site-building/building-sites/importing-exporting-pages-and-content.md)
