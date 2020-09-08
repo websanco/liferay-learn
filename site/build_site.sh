@@ -4,6 +4,8 @@ set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
+readonly LIFERAY_LEARN_DXP_VERSION=7.3.4-ga5
+
 function activate_venv {
 	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
 	then
@@ -134,6 +136,7 @@ function generate_static_html {
 			sed -i 's/.md#/.html#/g' ${html_file_name}
 			sed -i 's/README.html"/index.html"/g' ${html_file_name}
 			sed -i 's/README.html#/index.html#/g' ${html_file_name}
+			sed -i "s/LIFERAY_LEARN_DXP_VERSION/${LIFERAY_LEARN_DXP_VERSION}/g" ${html_file_name}
 		done
 
 		#
