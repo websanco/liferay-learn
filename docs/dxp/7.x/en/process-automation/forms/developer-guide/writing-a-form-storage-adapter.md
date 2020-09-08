@@ -88,18 +88,22 @@ The `DDMFileSystemStorageAdapter` implements the `DDMStorageAdapter` interface, 
 
 ```java
 @Component(
-	immediate = true, property = "ddm.storage.adapter.type=json-wrapper",
+	immediate = true, property = "ddm.storage.adapter.type=r2f1-ddm-storage-adapter",
 	service = DDMStorageAdapter.class
 )
 public class R2F1StorageAdapter implements DDMStorageAdapter {
 ```
 
+```note::
+   The ``r2f1-ddm-storage-adapter`` key is localized into the value `R2F1 Dynamic Data Mapping Storage Adapter` by the ``src/main/resources/content/Language.properties`` file and the ``Provide-Capability`` header in the ``bnd.bnd`` file.
+```
+
 The `service` component property registers your implementation as a `DDMStorageAdapter` service.
 
-The `property = "ddm.storage.adapter.type=json-wrapper"` provides an identifier so that your service is registered as a unique `DDMStorageAdapter` implementation. Other services can now reference it like this:
+The property `ddm.storage.adapter.type` provides an identifier so that your service is registered as a unique `DDMStorageAdapter` implementation. Other services can now reference it like this:
 
 ```java
-@Reference(target = "(ddm.storage.adapter.type=json-wrapper)")
+@Reference(target = "(ddm.storage.adapter.type=r2f1-ddm-storage-adapter)")
 private DDMStorageAdapter jsonWrapperDDMStorageAdapter;
 ```
 
@@ -133,22 +137,7 @@ All methods are passed a `DDMStorageAdapter[Save/Delete/Get]Request`. The reques
 
 The example already overrides the necessary methods. You'll create private utility methods for your functionality and then call them from the overridden methods.
 
-### Change the Service's Name
-
-Find the `@Component` declaration and change the type property to `file-system`. The Component now looks like this:
-
-```java
-@Component(
-	immediate = true, property = "ddm.storage.adapter.type=file-system",
-	service = DDMStorageAdapter.class
-)
-```
-
-```note::
-   The ``json-wrapper`` and ``file-system`` keys are localized into the values `JSON Wrapper` and `File System` by the ``src/main/resources/content/Language.properties`` file and the ``Provide-Capability`` header in the ``bnd.bnd`` file.
-```
-
-## Declare the Service Dependencies
+### Declare the Service Dependencies
 
 This code relies on two services deployed to an OSGi container. Add these declarations at the end of the class using Declarative Services `@Reference` annotations, provided by `org.osgi.service.component.annotations.Reference`.
 

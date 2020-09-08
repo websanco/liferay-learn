@@ -32,7 +32,8 @@ import org.osgi.service.component.annotations.Reference;
  * @author Russell Bohl
  */
 @Component(
-	immediate = true, property = "ddm.storage.adapter.type=json-wrapper",
+	immediate = true,
+	property = "ddm.storage.adapter.type=r2f1-ddm-storage-adapter",
 	service = DDMStorageAdapter.class
 )
 public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
