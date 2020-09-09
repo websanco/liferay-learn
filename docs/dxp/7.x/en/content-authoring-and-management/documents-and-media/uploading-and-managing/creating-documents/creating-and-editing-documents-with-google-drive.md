@@ -4,15 +4,15 @@ You can use Google Docs&trade; to create and edit text documents, spreadsheets, 
 
 ## Authentication
 
-The first time you create or edit a Documents and Media file via Google Docs&trade;, you must authenticate with your Google account. This links Google Drive&trade; to your portal account, so you only need to do this once.
+The first time you create or edit a Documents and Media file via Google Docs&trade;, you must authenticate to your Google account. This links Google Drive&trade; to your portal account, so you only need to do this once.
 
-To unlink your account:
+To unlink your account,
 
 1. Click on *your profile* &rarr; *Account Settings*.
 1. On the *General* tab, click *Apps*.
 1. Click *Revoke* next to Google Drive&trade;.
 
-    ![You can unlink your Google account from the portal.](./creating-and-editing-documents-with-google-drive/images/01.png)
+![You can unlink your Google account from the portal.](./creating-and-editing-documents-with-google-drive/images/01.png)
 
 Access to Google Drive&trade; has been unlinked.
 
@@ -29,7 +29,7 @@ Follow these steps to create a new Documents and Media file via Google Docs&trad
 
 1. When you select one of these options, DXP creates a temporary Documents and Media file and links it to a new Google file. Your browser then redirects you to that Google file so you can create its content. Note that some actions on the temporary Documents and Media file can affect its linked Google file. For more information, see [multiple editing sessions](#multiple-editing-sessions).
 
-    ![Figure 2: Select the type of Google document you want to create.](./creating-and-editing-documents-with-google-drive/images/02.png)
+    ![Select the type of Google document you want to create.](./creating-and-editing-documents-with-google-drive/images/02.png)
 
 1. Use the Google Docs&trade; editor to create your document's content. All Google Docs&trade; features are available except for sharing.
 
