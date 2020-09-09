@@ -1,15 +1,91 @@
 # Creating a Workflow Powered Application
 
-Tried to start with a copy of the other article but it looks very different
+> **Subscribers**
 
+Workflow Powered Applications require data input from multiple stakeholders. These process-driven applications can go through multiple stages before the object's data model is fully fleshed out. They can even be sent back to previous stages/stakeholders in more complex cases.
 
-To use Workflow Powered apps to their potential, make sure you understand these functionalities:
+The application is designed by thinking about the steps the object's forms must pass through before being considered complete.
 
-- [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
-- [Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md)
-- [App Builder fundamentals](./app-builder-overview.md)
+   ![The Role Change Request object goes through several steps before it's completely filled out.](./creating-a-workflow-powered-application/images/02.png)
 
-Follow the instructions in [Creating a Standard Application](./creating-a-standard-application.md) to create the object, form views, and table views for the app. Whether or not you've already created a Standard App, you can use the same object to create a Workflow Powered App. The difference is all in how you create the app from these elements. These instructions assume you already have these components:
+Each step has configuration options depending on its stage in the workflow:
+
+| Step | Configuration Options | Description |
+| ---- | ------ | ----------- |
+| Start (Initial Step) | Step Name <br /> Main Data Object <br /> Form View <br /> Table View <br /> Action | At a minimum, choose an object, form view, and table view so that the data object can begin getting filled out. There's no assignee, because anyone who can add a record begins the processing. The action can be renamed but always proceeds to the next step. |
+| 1 (Step 1) | Step Name <br /> Assignee <br /> Form View <br /> Action | Name the step and assign it to a Role. Then choose a form view (set it to read only or editable) or create a new one, and name the action that transitions to the next step. |
+| Additional Numbered Steps (e.g., Step 2, 3, 4, etc.) | Same as for step 1, plus the _Add New Action_ option | Additional steps can do everything that Step 1 can do, plus choose to create a new action that transitions back to the previous workflow step, if necessary. |
+| End (Final Step) | Step Name | Name the last step in the workflow process |
+
+## App Version
+
+Workflow Powered Apps are versioned, because [workflow processes are versioned](../process-automation/workflow/user-guide/managing-workflows.html#viewing-and-restoring-workflow-revisions). A new version of the app is created when you
+
+- Add, edit, or remove steps or transitions in the workflow process (actions that generate a new version of the workflow process).
+- Add, update, or remove a form view in one of the workflow steps.
+- Add, update, or remove the assignees of a workflow step.
+
+A new version of the Workflow Powered App will only apply to new submissions. The app's manager can check the version for each submission from its details view--view the record's details by clicking on it in a table view.
+
+## Creating an Example Workflow Powered App
+
+Consider a Human Resources application that allows employees to request changing Roles within the software engineering department: the Role Change Request App. This app starts with the employee submitting a request form, which proceeds to the Current Manager, then to the Receiving Manager, and finally to Human Resources. Each step along the way is responsible for collecting more fields of the data object, until, by the end of the process, the whole data object is complete.
+
+<!-- Not Final -->
+![The Role Change Request object flows through several steps in this Workflow Powered App.](./creating-a-workflow-powered-application/drawings/role-request-app.png)
+
+First create the backing object, form views, and table views, then create the Workflow Powered App itself.
+
+### Creating the Role Change Request Object
+
+For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is all in how you create the app from the basic elements of the App Builder framework. These instructions are for creating the Object, Form Views, and Table Views needed in the Role Change Request App. You can accomplish this from the Objects entry in the Applications Menu's (![Applications Menu](../../images/icon-applications-menu.png)) Applications &rarr; App Builder section.
+
+#### **Object:** Create the object named _Role Change Request_.
+
+#### **Form:** Create the _Employee Request_ form.
+
+   | Field Type | Field Label | Options | Required | Other Properties |
+   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | Text | Name | Not applicable (NA) |  &#10004; | NA |
+   | Text | Current Manager's Name | NA |  &#10004; | NA |
+   | Text | Current Role | NA |  &#10004; | NA |
+   | Select from List | Requested Role | Support Engineer <br /> Backend Developer <br /> Frontend Developer <br /> Technical Writer <br /> IT Engineer |  &#10004; | NA |
+
+#### **Form:** Create the _Current Manager's Assessment_ form.
+
+   | Field Type | Field Label | Options | Required | Other Properties |
+   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | Single Selection | Current Manager: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
+   | Single Selection | Does the employee exhibit skills and experiences requisite with the requested role? | Yes <br /> No |  &#10004; | NA |
+   | Text | Detail the employee's skills and characteristics that will make the transfer successful | NA |  &#10008; | Multiple Lines |
+   | Text | Detail the employee's skills and characteristics that might inhibit a successful transfer | NA |  &#10008; | Multiple Lines |
+   | Date | When can the transfer occur? | NA | &#10008; | NA |
+
+#### **Form:** Create the _Potential Manager's Assessment_ form.
+
+   | Field Type | Field Label | Options | Required | Other Properties |
+   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | Single Selection | Receiving Manager: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
+   | Single Selection | Is there an available role for the employee? | Yes <br /> No |  &#10004; | NA |
+   | Single Selection | Do you have concerns about the suitability of the employee? | Yes <br /> No |  &#10008; | NA |
+   | Single Selection | Are training resources available? | Yes <br /> Unnecessary: The employee is already proficient in the subject matter. |  &#10008; | NA |
+   | Text | Comments | NA |  &#10008; | Multiple Lines | NA |
+
+#### **Form:** Create the _HR Assessment_ form.
+
+   | Field Type | Field Label | Options | Required | Other Properties |
+   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | Single Selection | HR Representative: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
+   | Single Selection | Does the transfer require a reassessment of the employee's benefits? | Yes <br /> No |  &#10004; | NA |
+
+#### **Table:** Create the _Role Change Request Master List_ table.
+
+   | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 |
+   | ---------- | ----------- | ------- | -------- | ---------------- | ---- |
+   | Name | Requested Role | Current Manager: Is the Transfer Approved? | Receiving Manager: Is the Transfer Approved? | HR Representative: Is the Transfer Approved? | When can the transfer occur? |
+   
+
+### Creating the Role Change Request App
 
 A Standard app can be created from within the Object Control Panel entry, but not a Workflow Powered app. Instead use the _Apps_ Control Panel Entry:
 
@@ -19,151 +95,68 @@ A Standard app can be created from within the Object Control Panel entry, but no
 
 1. Click the Add button (![Add](../../images/icon-add.png)) to open the New Workflow Powered App canvas.
 
-   ![The time Off Requester Workflow Powered app is underway.](./creating-a-workflow-powered-application/images/01.png)
+   ![The Workflow Powered App is underway.](./creating-a-workflow-powered-application/images/01.png)
 
-1. The first step of the workflow is in place, just rename it to _Submitted_.
+1. The first step of the workflow is in place--rename it to _Request Role Change_. The first step represents the submission of the first form that kicks off the application's process. After renaming the step, configure the Data and Views:
 
-1. Add a step to the workflow by clicking the plus icon. Often times each step you add will correspond to a different form. Together, all the steps/forms will fill out all the fields of the backing object.
+   - Main Data Object: Select the _Role Change Request_ object.
+   - Form View: Select the _Employee Request_ form.
+   - Table View: Select the _Role Change Request Master List_ (this table view won't be used for this step). <!-- Find out how this is supposed to work. Can we leave it blank? -->
 
-1. Each step of the workflow 
+   Configure the Actions:
 
+   - Rename the current action to _Send to Manager_.
 
+   Save the application.
 
+1. Re-open the app, then add a step to the workflow by clicking the plus icon.
 
+   Name it _Review: Current Manager_ and assign it to the _Administrator_ Role. Each step you add for the Role Change Request App corresponds to a different form. Together, all the steps/forms will fill out all the fields of the backing object.
 
+   Now configure the Data and Views:
 
+   - Form View: _Current Manager's Assessment_. Make it editable.
 
+   Go back to the Step Configuration screen and configure the Actions:
 
-Like all App Builder apps, Workflow Powered Apps are created based on an object: create the object, create at least one form view, create at least one table view, and deploy the application.
+   - Rename the action to _Forward to Receiving Manager_.
 
-* [Creating a Custom Object](#creating-a-custom-object)
-* [Creating Form Views](#creating-form-views)
-* [Creating Table Views](#creating-table-views)
-* [Deploying the Application](#deploying-the-application)
+   Save the app. If you see a warning message about applying the updates to existing app data, click _Save_ in the dialog box. This is a new app that doesn't currently have any data records, and the warning is informational.
 
-Here we'll create two simple time off management applications with App Builder, backed by a custom object called Time Off Request. The first application will be a Time Off Requester widget that just shows an Add Request form. The application's users will fill out this form when they want to request time off. The second application is a Time Off Management application deployed to the Product Menu, where administrative Users can see and manage the Time Off Requests.
+1. Re-open the app, click on the last step added, then add a new step by clicking the plus icon.
 
-## Creating a Custom Object
+   Name it  _Review: Receiving Manager_ and assign it to the _Administrator_ Role.
 
-Create the Time Off Request custom object:
+   Now configure the Data and Views:
 
-1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Custom Objects.
+   - Form View: _Potential Manager's Assessment_. Make it editable.
 
-1. Click the add button (![Add](../../images/icon-add.png)).
+   Go back to the Step Configuration screen and configure the Actions:
 
-1. Enter the name: _Time Off Request_.
+   - Rename the existing action to _Forward to Human Resources_. It transitions to the next step in the workflow.
 
-1. To create a form view for the object and define the data fields present in the object, leave the _Continue and Create Form View_ setting checked and click _Continue_.
+   - Add a secondary action, named _Send Back to Current Manager_. It transitions back to the previous workflow step, enabling the two managers to collaborate on the details until it's ready for HR review.
 
-    ![Creating a custom object is the first step to writing an App Builder application.](./creating-a-standard-application/images/01.png)
+1. Re-open the app, click on the last step added, then add a new step by clicking the plus icon.
 
-Define the data fields to include in the Time Off Request object by creating a form view.
+   Name it  _Review: HR_ and assign it to the _Administrator_ Role.
 
-## Creating Form Views
+   Now configure the Data and Views:
 
-A form view defines the visual interface that users will use to enter the data you define in your Custom Object. You may create as many form views as needed for your application. In this example, the Time Off Requester and Manager applications only need one form view between them.
+   - Form View: _HR Assessment_. Make it editable.
 
-Create a Form View:
+   Go back to the Step Configuration screen and configure the Actions:
 
-1. Open the custom object (Control Panel &rarr; App Builder &rarr; Custom Objects).
+   - Leave the action named _Submit_.
 
-1. From the _Form Views_ tab, click the Add button. The Form Builder is displayed.
+### Deploying and Using the App
 
-1. Name the form view _Add Request_.
+<!-- do we also need a standard app for admins to just view the records in the master list?
 
-1. Using the layout in the screenshot, add
-
-    * a required text field labeled _Name_
-    * a required date field labeled _From_
-    * a required date field labeled _To_
-    * an optional text field labeled _Comment_, which allows multiple lines
-
-1. Save the form view.
-
-    ![Use the form builder embedded inside the App Builder to create form views.](./creating-a-standard-application/images/02.png)
-
-In addition to the embedded form builder, any fields included in the custom object (via the existence of other form views) are available to add to the form view in the left sidebar.
-
-To define how users will view and interact with your application's data, create a table view.
-
-## Creating Table Views
-
-Table views are for displaying and managing (deleting, editing) entries that have been submitted to your application. Like form views, a custom object can have one or multiple table views. The Time Off Requester and Manager applications only need one table view between them.
-
-1. Open the Time Off Request object (Control Panel &rarr; App Builder &rarr; Custom Objects).
-
-1. From the Table Views tab, click the Add button. The Table Builder is displayed.
-
-    ![Use the table builder embedded inside the App Builder to create table views.](./creating-a-standard-application/images/03.png)
-
-1. Name the table view _Time Off Requests_.
-
-1. Drag all the available fields except for the Comment field onto the table canvas.
-
-1. Save the table view.
-
-```note::
-    Even though it's not in the table view, the Comment field is still visible in the Details View of an individual record. In a deployed application, click on a specific record from the table view to display the Details View of the record.
-```
-
-## Deploying the Application
-
-Deploying an application is what makes it accessible to users. There are several ways you can make your application available to users. See the [App Builder Overview](./app-builder-overview.md#deployment) learn about the deployment options.
-
-We will deploy two applications for the Time Off Request object: one is a widget application that we can add to a site page for users to access, and the other is an administrative application in the [Product Menu](../../getting-started/navigating-dxp.md#product-menu), where the request can be managed by users with additional permissions.
-
-1. Open the Time Off Request (Control Panel &rarr; App Builder &rarr; Custom Objects).
-
-1. From the _Apps_ tab, click the Add button (![Add](../../images/icon-add.png)).
-
-1. Name the app _Time Off Requester_.
-
-1. Select the form view, the table view, and configure the [deployment options](./app-builder-overview.md#deployment) for the app.
-
-    For the _Time Off Requester_ application, select _Widget_ and click Deploy. The _Time Off Requester_ widget application can now be deployed to a site's page and utilized immediately by site users.
-
-1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu (leave the defaul selection to add it to the Applications Menu).
-
-    ![Here's the Time Off Request Manage entry in the Applications Menu.](./creating-a-standard-application/images/04.png)
-<!-- replace above screenshot -->
-
-Administrators can now access the _Time Off Manager_ application in the Product Menu to begin monitoring time off requests from site users.
-
-## Undeploying an Application
-
-You can undeploy and redeploy App Builder applications at any time (e.g., if a new set of time off management applications are created). If you undeploy an application, any entries already submitted are preserved, but no new entries can be added. To undeploy,
-
-1. Open the custom object (Control Panel &rarr; App Builder &rarr; Custom Objects).
-
-1. From the _Apps_ tab, click the kebab menu for the app you want to undeploy.
-
-1. Select _Undeploy_.
-
-## Editing an Object with Data Records
-
-The App Builder is designed to prevent data corruption or loss. Deleting, adding, or editing a field, even after data records have been added for it, is permitted.
-
-### Deleting Fields
-
-Deleting a field from an object that already has data records prevents the field from display in the UI, but doesn't delete the data. If you create a field with same name and type as a deleted field, the field's data will be restored for records that already hold its data.
-
-To remove a field from an existing object, hover over it in the object view and click the *x*. You'll be asked for confirmation and warned about data loss.
-
-![Deleting a field will cause data loss for existing records.](./creating-a-standard-application/images/06.png)
-
-### Adding and Editing Fields
-
-When you add or edit a field already being used in an object, the changes to the object will only affect records added after the add or edit. All existing records remain unaffected by the change to the object.
-
-To add a field directly to an existing object, open the any of the object's form views and click the add button in the left pane of the form builder.
-
-![You can add a field directly to an existing object.](./creating-a-standard-application/images/05.png)
-
-To edit a field, navigate to the form view where it exists and click the field in the form builder. The field properties will open.
-
-![You can edit a field from its form view.](./creating-a-standard-application/images/07.png)
 
 ## Related Information
 
 * [App Builder Overview](./app-builder-overview.md)
-* [Creating a Workflow Powered App](./creating-a-workflow-powered-app.md)
+* [Creating a Standard Application](./creating-a-standard-application.md)
+* [Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md)
+* [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
