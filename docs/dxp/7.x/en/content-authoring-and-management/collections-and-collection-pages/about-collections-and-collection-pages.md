@@ -1,5 +1,9 @@
 # About Collections and Collection Pages
 
+```note::
+   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.2](#liferay-dxp-7.2).
+```
+
 Collections are sets of content items that you can use to group and filter information. Consider the following example. You plan to create a new section in your product webpage with customer success stories. You want this section to automatically show new success stories as these stories are published. In this case, you can create a Collection that groups all your success stories, and a Collection Page that shows the Collection's content. In addition to Collection Pages, you can show this Collection in other Content Pages using a Collection Display Fragment (for more information, see [Building Content Pages](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
 
 There are two types of Collections in Liferay:
@@ -43,6 +47,56 @@ For information, read [Personalizing Collections](../../site-building/personaliz
 ## Converting Asset Publisher Configurations to Collections
 
 In addition to creating Collections directly, you can create Collections from an [Asset Publisher Widget](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md). This option is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages. For more information, read [Creating Collections](./creating-collections.md#creating-a-collection-from-an-asset-publisher).
+
+<!--
+Content from Liferay Help Center follows
+-->
+
+## Liferay DXP 7.2
+
+<!-- This content belongs to the "Managing Content Sets" article in Liferay Help Center -->
+
+## Managing Content Sets
+
+A Content Set is exactly what it sounds like: a set of content items. In short, 
+an administrator can defines a list of content, and then that list can be 
+displayed. The way that the Content Set is displayed is determined by the 
+method that is used to display it. For example, if the Content Set is being 
+used by a smartwatch app, it could be displayed as a simple list of titles, and 
+selecting a title would cause the full article to display on a connected mobile 
+device. The same Content Set could be displayed in a web browser with the full 
+content of each article.
+
+```note::
+    In previous versions of Liferay DXP, you used the Asset Publisher to define and display either static lists of assets or dynamic lists based on criteria like tags, categories, or asset type. In Liferay DXP Content Sets take the core idea of defining different types of asset lists and expands it. Content Lists are created outside of the context of a specific application or widget and can be used and re-used across different channels and applications.
+```
+
+## Creating and Displaying Content Sets
+
+Content Sets are created through the Site Administration interface. All the 
+features for creating and managing Content Sets are contained here. They are 
+displayed using Liferay's widgets or your own custom applications. Read our
+guides for information on
+[Creating Content Sets](./creating-collections.md#creating-content-sets) and
+[Displaying Content Sets](./displaying-collections-and-collection-pages.md#displaying-content-sets)
+
+## Content Set Personalization
+
+Content Sets can have variations driven by @product@'s Personalization engine. 
+After you create a Content Set, if you have at least one User Segment created, 
+you can create a personalized experience of the Content Set for that Segment.
+To learn to harness the power of experience personalization for Content Sets, 
+see
+[Content Set Personalization](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization).
+
+## Converting Asset Publisher Configurations to Content Sets
+
+You may have already gone through a great deal of work to create a perfect, 
+curated list of content through the Asset Publisher, but now you want to 
+display that list elsewhere without duplicating your work. You can do that with 
+Content Sets. Read the
+[Converting Asset Publisher Configuration to Content Sets guide](./creating-collections.md#converting-asset-publisher-configurations-to-content-sets)
+article to learn more.
 
 ## Related Information
 

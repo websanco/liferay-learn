@@ -1,9 +1,13 @@
 # Personalizing Collections
 
+```note::
+   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.2](#liferay-dxp-7.2).
+```
+
 By default, any user can see all the Collection's content and is part of *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
 
 ```note::
-   To customize a Collection using Segments, you must define your Segments first. For more information, see [Creating and Managing User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)
+   To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)
 ```
 
 ![Collections are available for anyone, by default](./personalizing-collections/images/02.png)
@@ -35,6 +39,77 @@ Consider the following example. You want to increase sales in your online Kitche
     - In the Dynamic Collection, click the *Options* menu (![Options](../../../images/icon-staging-bar-options.png)) next to the Personalized Variation's name and select *View Items*.
 
         ![Edit the Collection you want to customize](./personalizing-collections/images/03.png)
+
+<!--
+Content from Liferay Help Center follows
+-->
+
+## Liferay DXP 7.2
+
+<!-- This content belongs to the "Content Set Personalization" article in Liferay Help Center -->
+
+## Content Set Personalization
+
+Now, you'll use [Segments](../segmentation/creating-and-managing-user-segments.md) to
+demonstrate Content Set Personalization. For this example, create a Content Set
+to be the default displayed on the *Home* page. Then you'll modify it to create
+a personalized variation containing technical articles for members of the
+*American Engineers* segment.
+
+If you're not familiar with Content Set, see the
+[Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets)
+article before you get started here. 
+
+### Creating and Setting the Default Content Set
+
+First create the default Content Set and configure it on the Home page using the
+Asset Publisher.
+
+1.  Go to *Site Administration* &rarr; *Content & Data* &rarr; *Content Sets*.
+
+2.  Click the Add button (![Add](../../../images/icon-add.png)) and choose *Manual 
+    Selection*.
+
+3.  Name it *Home Page Content*.
+
+4.  For the new Content Set, click *Select* next to *Asset Entries* and select
+    *Basic Web Content*.
+
+    ![Figure 1: Click *Select* to add a new Asset Entries.](./personalizing-collections/images/20.png)
+
+5.  On the *Select Basic Web Content* page, check the boxes next to the content 
+    you want to add and click *Add*.
+
+6.  Navigate to the *Home* page and add an Asset Publisher to the page.
+
+7.  Open *Configuration* for the Asset Publisher.
+
+8.  Under *Asset Selection* select *Content Set*.
+
+9.  Under *Select Content Set* click *Select*, choose *Home Page Content*,
+    and click *Save*.
+
+Now the Content Set that you configured appears in the Asset Publisher on 
+the *Home Page*. Next configure the Content Set for Personalization.
+
+### Personalizing the Content Set
+
+Now create the content set for engineers and configure its display.
+
+1.  Go back to the Content Set from *Site Administration*.
+
+2.  Click *New Personalized Variation* and select the *American Engineers* 
+    segment
+
+    ![Figure 2: Create a new Personalized Variation.](./personalizing-collections/images/21.png)
+
+3.  Click *Select* next to *Asset Entries* and select *Basic Web Content*.
+
+4.  Select articles appropriate to an engineering audience and click *Add*.
+
+Now anytime a member of the *American Engineers* segment views this Content Set 
+being displayed, they see the personalized version and not the default. Test
+this now, using the *Simulator*.
 
 ## Related Information
 
