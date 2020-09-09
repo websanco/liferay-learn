@@ -16,9 +16,16 @@ See the [Liferay DXP 7.1 Deployment Checklist](https://www.liferay.com/documents
 
 See the [Liferay DXP 7.2 Deployment Checklist](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+7.2+Deployment+Checklist.pdf/22dee290-6b06-0bdc-aa89-30bb88d1d42e?t=1566483298239) for information about Liferay DXP architecture and performance tuning guidelines.
 
-## Installing Liferay Commerce
+<!-- 
+See the [Liferay DXP 7.3 Deployment Checklist]() for information about Liferay DXP architecture and performance tuning guidelines. -->
 
-Several methods are available for installing Liferay Commerce.
+## Installing Liferay Commerce 3.0
+
+Liferay Commerce 3.0 is bundled with Portal 7.3 CE GA6 and is ready for use. Liferay Commerce Enterprise 3.0 requires a Liferay Commerce subscription. To use Liferay Commerce Enterprise 3.0, deploy your activation key and execute a reindex to populate the data. See [Activating Liferay Commerce Enterprise](./activating-liferay-commerce-enterprise.md) on how to activate Liferay Commerce Enterprise.
+
+## Installing Liferay Commerce 2.1.x and Below
+
+Several methods are available for installing Liferay Commerce 2.1.x and below.
 
 ### Using a Docker Image
 
