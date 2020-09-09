@@ -1,6 +1,6 @@
 # Using Adapted Images in Site Content
 
-Adaptive Media works behinds the scenes so that once blog and web content creators upload an image in their content, the app automatically adapts the image. Adaptive Media identifies each adapted image in the content's HTML with a `data-fileentryid` attribute that is replaced with the latest adapted image when the user views the content. This lets Adaptive Media deliver the latest adapted images to your content, even if the content existed prior to those images.
+Adaptive Media works behinds the scenes so that when blog and web content creators upload an image for their content, the app automatically adapts the image. Adaptive Media identifies each adapted image in the content's HTML with a `data-fileentryid` attribute that is replaced with the latest adapted image when the user views the content. This lets Adaptive Media deliver the latest adapted images to your content, even if the content existed prior to those images.
 
 ```tip::
    If Adaptive Media is uninstalled, the original images are displayed in the blog entries and web content articles.
@@ -36,7 +36,7 @@ This example uses three different images, each with a different resolution. A `s
 
 To use adapted images in [structured web content](../../../web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md), <!--Need to update the URL for web content structures.--> content creators must manually include an image field in the web content's structure. Then they can reference that image field in the matching template by selecting it on the left side of the editor. Here's an example snippet of an image field named `Imagecrrf` included in a template:
 
-```html
+```markup
     <#if Imagecrrf.getData()?? && Imagecrrf.getData() !="">
       <img data-fileentryid="${Imagecrrf.getAttribute("fileEntryId")}" alt="${Imagecrrf.getAttribute("alt")}" src="${Imagecrrf.getData()}" />
     </#if>
@@ -52,7 +52,7 @@ Note the `<img>` tag with a `data-fileentryid` attribute. Adaptive Media uses th
 
 ## Staging Adapted Images
 
-Adaptive Media is fully integrated with DXP's [content staging](https://help.liferay.com/hc/articles/360028721472-Staging) and [export/import](../../../../site-building/building-sites/importing-exporting-pages-and-content.md) functionality. Adaptive Media includes adapted images in staged content when published, and can update those images to match any new resolutions.
+Adaptive Media is fully integrated with DXP's [content staging](/dxp/7.x/en/content_authoring_and_management.html) and [export/import](../../../../site-building/building-sites/importing-exporting-pages-and-content.md) functionality. Adaptive Media includes adapted images in staged content when published, and can update those images to match any new resolutions.
 
 Similarly, when content that contains adapted images is exported, Adaptive Media exports those images in the LAR file. That LAR file can then be imported to restore or transfer that content, along with its adapted images.
 
