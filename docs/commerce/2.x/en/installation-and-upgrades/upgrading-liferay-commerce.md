@@ -1,18 +1,49 @@
 # Upgrading Liferay Commerce
 
-This article documents how to upgrade Liferay Commerce to the latest Commerce version. Store administrators should consider regularly updating to the latest available product version to receive bug fixes and new features.
+This article documents how to upgrade Liferay Commerce. Store administrators should consider regularly updating to the latest available product version to receive bug fixes and new features.
 
-## Upgrading the Base DXP Version
+## Upgrading to Commerce 3.0
 
-If administrators are upgrading both DXP and Commerce, upgrade DXP 7.1 to 7.2 first. To learn more about the DXP upgrade process:
+Commerce 3.0 is bundled with DXP 7.3. To upgrade to Commerce 3.0, upgrade your base Liferay DXP installation to DXP 7.3 then execute a reindex (see below).
 
-* [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)
+To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
+
+Once DXP has been successfully upgraded from 7.1 to 7.3, execute a reindex (see below).
+
+```important::
+   Administrators should **not** deploy the Commerce `LPKG` again. The Commerce 3.0 modules are already present and thus will cause conflicts.
+```
+
+### Execute Post-Upgrade Reindex
+
+After upgrading to DXP 7.3, execute a full search reindex.
+
+1. Navigate to the _Global_ menu &rarr; _Control Panel_.
+1. Click _Search_.
+
+    ![The Search feature is located inside the revamped DXP 7.3 Control Panel.](./upgrading-liferay-commerce/images/01.png)
+
+1. Click _Execute_ next to _Reindex all search indexes_.
+1. Wait for the reindex to finish.
+1. Navigate to the _Global_ → _Commerce_ → _Products_.
+1. Verify all the products are displayed again.
+
+## Upgrading to Commerce 2.1.x
+
+When upgrading to Commerce 2.1.x, users have two options:
+
+* Upgrade both DXP and Commerce
+* Upgrade just Commerce.
+
+### Upgrading Both DXP and Commerce
+
+If administrators are upgrading both DXP and Commerce, upgrade DXP 7.1 to 7.2. To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
 
 Once DXP has been successfully upgraded from 7.1 to 7.2, follow the steps below to upgrade Liferay Commerce.
 
 Alternately, administrators can chose to upgrade just Liferay Commerce.
 
-## Upgrading Commerce
+### Upgrading only Commerce
 
 Liferay Commerce provides a seamless upgrade process to the latest version. Users can perform either one of the following:
 
@@ -108,7 +139,7 @@ Fix Packs are cumulative in nature and include all previously release fix packs.
 
 The Liferay Commerce instance has been upgraded.
 
-### Execute Post-Upgrade Reindex
+### Execute Post-Upgrade Reindex (2.1 and below)
 
 After upgrading from to the latest version, execute a full search reindex.
 
