@@ -1,7 +1,5 @@
 # Using an OSGi Service
 
-TODO How to discover a capability? https://docs.liferay.com/dxp/portal/7.2-latest/javadocs/
-
 Liferay APIs are readily available as OSGi services. You can access a service by creating a field of that type and adding the [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to the field. Here's what it looks like:
 
 ```java
@@ -109,9 +107,9 @@ Read on to learn how to use an OSGi service from a client.
 
 ## Walk Through the Example
 
-* [Write Your Business Logic](#TODO)
-* [Annotate External Service References](#TODO)
-* [Make the Client a Component](#TODO)
+* [Write Your Business Logic](#write-your-business-logic)
+* [Annotate External Service References](#annotate-external-service-references)
+* [Make the Client a Component](#make-the-client-a-component)
 
 ### Write Your Business Logic
 
