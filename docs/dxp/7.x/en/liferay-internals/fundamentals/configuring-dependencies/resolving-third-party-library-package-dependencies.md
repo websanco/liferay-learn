@@ -1,59 +1,17 @@
 # Resolving Third Party Library Package Dependencies
 
-Liferay's OSGi framework lets you build applications composed of multiple OSGi bundles (modules). For the framework to assemble the modules into a working system, the modules must resolve their Java package dependencies. In a perfect world, every Java library would be an OSGi module, but many libraries aren't. So how do you resolve the packages your project needs from non-OSGi third party libraries?
+An application can contain multiple OSGi modules. Resolving their Java package dependencies can be challenging. In a perfect world, every package would be in an OSGi JAR, but many packages are only in traditional libraries (non-OSGi JARs). So how do you resolve dependencies on non-OSGi JARs?
 
-Here is the main workflow for resolving third party Java library packages:
+Here's a workflow for resolving dependencies on packages from non-OSGi JARs:
 
-## Option 1 - Find an OSGi module of the library
+1. Find an OSGi JAR with the packages. Projects, such as [Eclipse Orbit](https://www.eclipse.org/orbit/) and [ServiceMix Bundles](https://servicemix.apache.org/developers/source/bundles-source.html), convert hundreds of traditional Java libraries to OSGi modules.
 
-Projects, such as [Eclipse Orbit](https://www.eclipse.org/orbit/) and [ServiceMix Bundles](https://servicemix.apache.org/developers/source/bundles-source.html), convert hundreds of traditional Java libraries to OSGi modules. Their artifacts are available at these locations:
+    * [Eclipse Orbit downloads \(select a build\)](https://download.eclipse.org/tools/orbit/downloads/)
+    * [ServiceMix Bundles](https://mvnrepository.com/artifact/org.apache.servicemix.bundles)
 
-* [Eclipse Orbit downloads \(select a build\)](https://download.eclipse.org/tools/orbit/downloads/)
-* [ServiceMix Bundles](https://mvnrepository.com/artifact/org.apache.servicemix.bundles)
+    If you find a module with the packages, [deploy](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) it and [add a `compileOnly` dependency](./specifying-dependencies.md) on it. If there is no module for the packages, continue to the next step.
 
-Deploying the module to Liferay's OSGi framework lets you share it on the system. If you find a module for the library you need, deploy it. Then [add a compile-only dependency](./specifying-dependencies.md) for it in your project. When you deploy your project, the OSGi framework wires the dependency module to your project's module or web application bundle (WAB). If you don't find an OSGi module based on the Java library, follow Option 2 (next).
-
-```tip::
-   Refrain from embedding library JARs that provide the same `packages that Liferay DXP or existing modules provide already <../../reference/exported-third-party-packages.md>`_.
-```
-
-```note::
-   If you're developing a WAR that requires a different version of a third-party package that `Liferay DXP or another module exports <../../reference/exported-third-party-packages.md>`_, specify that package in your `Import-Package: list <../importing-packages.md>`_. If the package provider is an OSGi module, publish its exported packages by deploying that module. Otherwise, rename the third-party library (not an OSGi module) differently from the `JAR that the WAB generator excludes <../../../developing-apps/reference/jars-excluded-from-wabs.md>`_ and embed the JAR in your project.
-```
-
-## Option 2 - Resolve the Java packages privately in your project
-
-Copy *required packages* only from libraries into your project, if you can or embed *libraries* wholesale, if you must. The rest of this article shows you how to do these things.
-
-### Library Package Resolution Workflow
-
-When you depend on a library JAR, much of the time you only need parts of it. Explicitly specifying only the Java packages you need makes your module more modular. This also keeps other modules that depend on your module from incorporating unneeded packages.
-
-This configuration workflow minimizes dependencies and Java package imports:
-
-1. Add the library as a `compileOnly` dependency. Please see [Specifying Dependencies](./specifying-dependencies.md) for examples.
-
-1. Copy only the library packages you need by specifying them in a conditional package instruction (`Conditional-Package`) in your `bnd.bnd` file. Here are some examples:
-
-    `Conditional-Package: foo.common*` adds packages such as `foo.common`, `foo.common-messages`, `foo.common-web` to your module's class path.
-
-    `Conditional-Package: foo.bar.*` adds packages such as `foo.bar` and all its sub-packages (e.g., `foo.bar.baz`, `foo.bar.biz`, etc.) to your module's class path.
-
-    Deploy your project. If a class your module needs or class its dependencies need isn't found, go back to main workflow **Option 1 - Find an OSGi module of the library** to resolve it.
-
-    ```important::
-       Resolving packages by using ``compileOnly`` dependencies and conditional package instructions assures you use only the packages you need and avoids unnecessary transitive dependencies. Therefore, use the steps up to this point, as much as possible, to resolve required packages.
-    ```
-
-1. If a library package you depend on requires non-class files (e.g., DLLs, descriptors) from the library, then you might need to [embed the library wholesale in your module](#embedding-libraries-in-a-project). This adds the entire library to your module's classpath.
-
-Next you'll learn how to embed libraries in your module.
-
-### Embedding a Library
-
-You can embed libraries in your project. Below are examples for adding [Apache Shiro](https://shiro.apache.org).
-
-1. Open your module's `build.gradle` file and add the library as a dependency in the `compileInclude` configuration:
+1. Add the non-OSGi JAR as a `compileInclude` dependency:
 
     ```groovy
     dependencies {
@@ -61,23 +19,19 @@ You can embed libraries in your project. Below are examples for adding [Apache S
     }
     ```
 
-    The `com.liferay.plugin` plugin's `compileInclude` configuration is transitive. The configuration embeds the artifact and all its dependencies in a `lib` folder in the module's JAR. Also, it adds the artifact JARs to the module's `Bundle-ClassPath` manifest header.
+    Liferay's `compileInclude` configuration is transitive--it embeds the library and all of the library's dependencies in a `lib` folder in the module JAR and adds the JARs to the module's `Bundle-ClassPath` manifest header.
 
     ```note::
-       The ``compileInclude`` configuration does not download transitive `optional dependencies <https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html>`_. If your module requires such artifacts, add them as you would another third party library.
+       The ``compileInclude`` configuration does not download transitive `optional dependencies <https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html>`_. If you require a package from an optional dependency, resolve the package as you would another third party library package.
     ```
 
-1. If the library you've added as a dependency in your `build.gradle` file has transitive dependencies, you can reference them by name in an `-includeresource:` instruction without having to add them explicitly to the dependency list.
+1. Compile your module.
 
-    Open your module's `bnd.bnd` file and add the library to an `-includeresource` instruction:
+1. Check if Liferay already exports library packages you're using. If Liferay exports them, adjust your dependency per the instructions in [Exported Third Party Packages](../../reference/exported-third-party-packages.md).
 
-    ```
-    -includeresource: META-INF/lib/shiro-core.jar=shiro-core-[0-9]*.jar;lib:=true
-    ```
+1. Deploy your module and check for unresolved package dependencies.
 
-    This instruction adds the `shiro-core-[version].jar` file as an included resource in the module's `META-INF/lib` folder. The `META-INF/lib/shiro-core.jar` is your module's embedded library. The expression `[0-9]*` helps the build tool match the library version to make available on the module's class path. The `lib:=true` directive adds the embedded JAR to the module's class path via the `Bundle-Classpath` manifest header.
-
-1. If after embedding a library you get unresolved imports when trying to deploy to Liferay, you might need to block some imports:
+1. If there is an unresolved dependency on a package your module doesn't use, block importing that package.
 
     ```
     Import-Package:\
@@ -85,12 +39,16 @@ You can embed libraries in your project. Below are examples for adding [Apache S
         *
     ```
 
-    The `*` character represents all packages that the module refers to explicitly. Bnd detects the referenced packages.
+    The `!`character negates importing the package. The `*` character represents all packages that the module refers to explicitly. Using `*` at the end of the list assures that the packages Bnd finds your module referencing are imported.
 
-Congratulations! Resolving all of your module's package dependencies, especially those from traditional Java libraries, is a quite an accomplishment.
+```note::
+   If you're developing a WAR that requires a different version of a third-party package that `Liferay exports already <../../reference/exported-third-party-packages.md>`_, specify that package in your `Import-Package: list <../importing-packages.md>`_. If that package is in an OSGi module, deploy it. Otherwise, rename that package's non-OSGi JAR differently from the `JAR that the WAB generator excludes <../../../developing-apps/reference/jars-excluded-from-wabs.md>`_ and `embed the JAR <#embedding-a-library>`_ in your project.
+```
+
+Congratulations! You resolved dependencies on packages from non-OSGi JARs.
 
 ## Additional Information
 
 * [Importing Packages](../importing-packages.md)
 * [Exporting Packages](../exporting-packages.md)
-* [Understanding Module Projects](../understading-module-projects.md)
+* [Semantic Versioning](../semantic-versioning.md)
