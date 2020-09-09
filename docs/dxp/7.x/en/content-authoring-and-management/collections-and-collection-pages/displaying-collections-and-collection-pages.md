@@ -10,7 +10,7 @@ By default, any user can see all the Collection's content. However, you can crea
 
 ## Displaying Collections Using a Collection Page
 
-A Collection Page is a type of page where the content is linked to a Collection.
+A Collection Page is a type of page where the page is linked to a Collection.
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 1. Click the *New Page* button (![New Page](../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Collection Page*.

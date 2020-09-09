@@ -14,7 +14,7 @@ There are two types of Collections in Liferay:
 
     In a Dynamic Collection, you define the type of items in the collection, along with some criteria for these items. The Collection's items can change based on the criteria you define. A Dynamic Collection is useful when you want to maintain the content up-to-date with new items matching the criteria.
 
-    For example, for your online Kitchenware Store, you create a Collection including all blog posts with the *porcelain* tag (this tag represents your criteria.) The Dynamic Collection automatically includes all the new blog post with the *porcelain* tag.
+    For example, for your online Kitchenware Store, you create a Collection including all blog posts with the *porcelain* tag (this tag represents your criteria.) The Dynamic Collection automatically includes all the new blog posts with the *porcelain* tag.
 
 For information about how to create Manual or Dynamic Collections, see [Creating Collections](./creating-collections.md).
 
@@ -22,11 +22,11 @@ For information about how to create Manual or Dynamic Collections, see [Creating
 
 You can display collection using a [Collection Page](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-page) or a [Collection Display Fragment](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-display-fragment).
 
-A Collection Page is a type of page where the content is linked to a Collection. Collection Pages ease the task of showing and customizing Collections.
+A Collection Page is a type of page linked to a Collection. Collection Pages ease the task of showing and customizing Collections. For example, you can quickly add new items to your Collection using a Collection page.
 
 ![You can display your Collection using a Collection Page](./about-collections-and-collection-pages/images/01.png)
 
-A Collection Display Fragment is a type of Fragment that shows a Collection. You can use this Fragment to show your Collection on any Content Page.
+A Collection Display Fragment is a type of Fragment that shows a Collection. You can use this Fragment to show your Collection on any Content Page, Page Template, or Display Page.
 
 ![You can show the Collection's content using a Collection Display Fragment](./about-collections-and-collection-pages/images/02.png)
 
@@ -34,7 +34,7 @@ For more information, see [Displaying Collection](./displaying-collections.md).
 
 ## Customizing Collections
 
-You can associate a Liferay Segment to your Collection to display different Collection's content based on the [Segment](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md).
+You can associate a Liferay Segment to your Collection to display different Collection items based on the [Segment configuration](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md).
 
 Consider the following example. You want to increase sales in your online Kitchenware Store by offering exclusive promotions to registered users. You create a Collection including promotions for registered users and news about your products. You want all users to see the news about your products, but you want to restrict the promotions to registered users. In this example, you can create a new Segment for registered users, and link the Segment to a new *Personalized Variation* that filters the promotional content.
 
