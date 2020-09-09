@@ -1,6 +1,6 @@
 # Adaptive Media Configuration Reference
 
-This article is a reference guide to the Adaptive Media UI. To access the Adaptive Media, navigate to the _Global Menu_ *rarr; _Control Panel_ &rarr; _Adaptive Media_.
+To access the Adaptive Media, navigate to the _Global Menu_ *rarr; _Control Panel_ &rarr; _Adaptive Media_.
 
 Users can adapt all images at once using all the existing Image Resolution rules by clicking the (![Actions icon](../../../../images/icon-actions.png)) at the upper right.
 
@@ -40,7 +40,7 @@ Clicking the (![Add icon](../../../../images/icon-add.png)) icon creates a new I
 
 ## Advanced Configuration
 
-Adaptive Media's advanced configuration options are available in System Settings. To access the System Settings:
+Adaptive Media's advanced configuration options are available in System Settings:
 
 1. Navigate to the _Global Menu_ &rarr; _Control Panel_ &rarr; _System Settings_.
 
