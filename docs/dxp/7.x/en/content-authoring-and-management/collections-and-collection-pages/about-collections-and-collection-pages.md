@@ -24,7 +24,7 @@ For information about how to create Manual or Dynamic Collections, see [Creating
 
 ## Displaying Collections
 
-You can display collection using a [Collection Page](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-page) or a [Collection Display Fragment](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-display-fragment).
+You can display Collections using a [Collection Page](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-page) or a [Collection Display Fragment](./displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-display-fragment).
 
 A Collection Page is a type of page linked to a Collection. Collection Pages ease the task of showing and customizing Collections. For example, you can quickly add new items to your Collection using a Collection page.
 

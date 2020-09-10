@@ -14,7 +14,7 @@ By default, any user can see all the Collection's content and is part of *Anyone
 
 Consider the following example. You want to increase sales in your online Kitchenware Store by offering exclusive promotions to registered users. You create a Collection including promotions for registered users and news about your products. You want all users to see the news about your products, but you want to restrict the promotions to registered users. In this example, you can create a new Segment for registered users, and link the Segment to a new Personalized Variation that filters the promotional content.
 
-```note::
+```tip::
    You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
 ```
 
@@ -75,7 +75,7 @@ Asset Publisher.
 4.  For the new Content Set, click *Select* next to *Asset Entries* and select
     *Basic Web Content*.
 
-    ![Figure 1: Click *Select* to add a new Asset Entries.](./personalizing-collections/images/20.png)
+    ![Figure 1: Click Select to add a new Asset Entries.](./personalizing-collections/images/20.png)
 
 5.  On the *Select Basic Web Content* page, check the boxes next to the content 
     you want to add and click *Add*.

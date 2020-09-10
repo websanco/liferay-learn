@@ -66,7 +66,7 @@ A Collection Display Fragment is a type of fragment that shows a Collection in a
     ![Add fragments or widgets to the Collection Display and configure the display properties](./displaying-collections-and-collection-pages/images/06.gif)
 
     ```note::
-       If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection will automatically use the same layout settings.
+       If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection automatically use the same layout settings.
     ```
 
 1. Click the Fragment or Widget on the Collection Display.
