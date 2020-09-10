@@ -11,7 +11,7 @@ To learn more about the DXP upgrade process, see [Upgrade Overview](https://lear
 Once DXP has been successfully upgraded from 7.1 to 7.3, execute a reindex (see below).
 
 ```important::
-   Administrators should **not** deploy the Commerce `LPKG` again. The Commerce 3.0 modules are already present and thus will cause conflicts.
+   Administrators should **not** deploy a Commerce `LPKG` again. The Commerce 3.0 modules are already present and thus will cause conflicts.
 ```
 
 ### Execute Post-Upgrade Reindex
@@ -41,9 +41,9 @@ If administrators are upgrading both DXP and Commerce, upgrade DXP 7.1 to 7.2. T
 
 Once DXP has been successfully upgraded from 7.1 to 7.2, follow the steps below to upgrade Liferay Commerce.
 
-Alternately, administrators can chose to upgrade just Liferay Commerce.
+### Upgrading just Commerce
 
-### Upgrading only Commerce
+Alternately, administrators can chose to upgrade just Liferay Commerce.
 
 Liferay Commerce provides a seamless upgrade process to the latest version. Users can perform either one of the following:
 
