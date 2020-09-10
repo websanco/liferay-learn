@@ -15,7 +15,7 @@ Here's how to configure dependencies:
     }
     ```
 
-1. If your module requires pacakges from Liferay, OSGi, or Bnd, add a `compileOnly` dependency on the Liferay Portal API.
+1. If your module requires packages from Liferay, OSGi, or Bnd, add a `compileOnly` dependency on the Liferay Portal API.
 
     ```groovy
     dependencies {
