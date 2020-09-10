@@ -1,6 +1,6 @@
 # Example: Creating a Simple DXP Cluster
 
-A fast, easy way to learn DXP clustering is to set up a two node DXP cluster environment on one machine using [Docker containers](https://docs.docker.com/get-started/overview/). Here you'll create two DXP server containers and server containers for a database, search engine, and file store.
+A fast, easy way to learn DXP clustering is to set up a two node DXP cluster environment on one machine using [Docker containers](https://docs.docker.com/get-started/overview/). Here you'll create two DXP server containers along with server containers for a database, search engine, and file store.
 
 Here are the server containers you'll create:
 
@@ -31,11 +31,11 @@ Here are the main steps:
 
 ## Start a Database Server
 
-A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source, a database server, or a database server cluster. Please see the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports. Please see [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
+A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source or a direct connection to a database server or a database server cluster. Please see the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports. Please see [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
 
 Create the database server and DXP database:
 
-1. Start a Maria DB Docker container.
+1. Start a MariaDB Docker container.
 
     ```bash
     docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:10.2
@@ -71,11 +71,11 @@ Your database server is ready for DXP.
 
 ## Start a File Store Server
 
-A DXP cluster requires a File Store that's accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md) for information on configuring all File Store types.
+A DXP cluster requires a File Store accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md) for information on configuring all File Store types.
 
 ## Start a Search Engine Server
 
-A DXP cluster requires a search engine (running as a separate process) that's accessible to all of the DXP cluster nodes. Please see [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
+A DXP cluster requires a search engine (running as a separate process) accessible to all of the DXP cluster nodes. Please see [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
 
 Create and configure an Elasticsearch server:
 
@@ -241,20 +241,20 @@ The figure below shows the cluster node home pages.
 
 ![DXP cluster nodes.](./example-creating-a-simple-dxp-cluster/images/02.png)
 
-Each node's container ID and port (`Node: [id]:[port]`) show at the bottom of each page. The `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true` environment setting enabled this display feature. You can find a container's ID using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
+Each node's container ID and port (`Node: [id]:[port]`) appear at the bottom of each page. The `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true` environment setting enabled this display feature. You can find a container's ID using the [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) command.
 
 ### Index the Content into the Search Engine
 
-Initiate indexing DXP content into the search engine:
+Initiate indexing DXP content:
 
 1. Navigating to *Control Panel &rarr; Configuration &rarr; Search*.
 
-1. In the Index Actions tab, click on these options:
+1. In the Index Actions tab, click these options:
 
     * *Reindex all search indexes*
     * *Reindex all spell check indexes*
 
-Content is indexing into the search engine. Please see [Search Overview](../../../using-search/getting-started/search-overview.html) for more information.
+Content indexes into the search engine. Please see [Search Overview](../../../using-search/getting-started/search-overview.html) for more information.
 
 ## Test the DXP Cluster
 
