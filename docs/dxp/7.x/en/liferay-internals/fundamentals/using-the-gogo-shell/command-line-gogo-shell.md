@@ -54,4 +54,4 @@ You can execute commands in a `telnet` session:
 
 ## Conclusion
 
-Now that you know how to run Gogo shell from the command line, explore the available [Gogo shell commands](./gogo-shell-commands). If you need to use Gogo shell in a production environment, please see [Using the Gogo Shell](./using-the-gogo-shell.md).
+Now that you know how to run Gogo shell from the command line, explore the available [Gogo shell commands](./gogo-shell-commands.md). If you need to use Gogo shell in a production environment, please see [Using the Gogo Shell](./using-the-gogo-shell.md).

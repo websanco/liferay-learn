@@ -37,4 +37,4 @@ The Control Panel is the safest, most secure way to access Gogo shell:
 
 ## Conclusion
 
-Now that you know how to run Gogo shell, explore the available [Gogo shell commands](./gogo-shell-commands). If you're working in a developer environment, consider Gogo shell from the command line. See [Command Line Gogo Shell](./command-line-gogo-shell.md) for more information.
+Now that you know how to run Gogo shell, explore the available [Gogo shell commands](./gogo-shell-commands.md). If you're working in a developer environment, consider Gogo shell from the command line. See [Command Line Gogo Shell](./command-line-gogo-shell.md) for more information.
