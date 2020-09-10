@@ -90,100 +90,60 @@ You can find usage statistics for the Collections on your site.
 
     ![Select View Usages to understand how your Collections are being used through the Site](./displaying-collections-and-collection-pages/images/05.png)
 
-<!--
-Content from Liferay Help Center follows
--->
-
 ## Liferay DXP 7.2
 
-<!-- This content belongs to the "Displaying Content Sets" article in Liferay Help Center -->
+### Displaying Content Sets
 
-## Displaying Content Sets
+Content Sets are primarily displayed through the Asset Publisher. It is currently the only method to display them out of the box, but you can develop your own external applications or widgets to utilize Content Sets. In [Creating Content Sets](./creating-collections.md#creating-content-sets) you created two Content Sets. Now display them on a page.
 
-Content Sets are primarily displayed through the Asset Publisher. It is 
-currently the only method to display them out of the box, but you can develop 
-your own external applications or widgets to utilize Content Sets. In [Creating Content Sets](./creating-collections.md#creating-content-sets) you 
-created two Content Sets. Now display them 
-on a page.
+#### Configuring the Asset Publisher for Content Sets
 
-### Configuring the Asset Publisher for Content Sets
+To display the Content Sets, start with a blank page, and then add the necessary Asset Publishers and configure them to display the Content Sets.
 
-To display the Content Sets, start with a blank page, and then add the 
-necessary Asset Publishers and configure them to display the Content Sets.
+1. Create a new *Home* page for your site as a Widget Page with a 1 column layout. If you're using a fresh Liferay DXP bundle, you can just remove the *Hello World* widget from the sample *Home* page.
+2. Open the *Add* menu and add two *Content Management* &rarr; *Asset Publishers* to the page stacked vertically.
+3. Click ![Options](../../images/icon-app-options.png) &rarr; *Configuration* for the top Asset Publisher.
+4. Under *Asset Selection* choose *Content Set*.
 
-1.  Create a new *Home* page for your site as a Widget Page with a 1 column 
-    layout. If you're using a fresh @product@ bundle, you can just remove the 
-    *Hello World* widget from the sample *Home* page.
-    
-2.  Open the *Add* menu and add two *Content Management* &rarr; *Asset 
-    Publishers* to the page stacked vertically.
+    ![The Asset Publisher has a number of options available for selecting its source for content.](./displaying-collections-and-collection-pages/images/20.png)
 
-3.  Click ![Options](../../images/icon-app-options.png) &rarr; 
-    *Configuration* for the top Asset Publisher.
+5. Open *Select Content Set* and click *Select*.
+6. Click on the *Space Program Images* Content Set.
+7. Click *Save*.
 
-4.  Under *Asset Selection* choose *Content Set*.
-
-    ![Figure 1: The Asset Publisher has a number of options available for selecting its source for content.](./displaying-collections-and-collection-pages/images/20.png)
-
-5.  Open *Select Content Set* and click *Select*.
-
-6.  Click on the *Space Program Images* Content Set.
-
-7.  Click *Save*.
-
-Now the images will appear at the top of the page. You can manage the way the 
-content is displayed---like what metadata appears---or even create a
-*Widget Template* to style the content, but the items which 
-display and the order in which they appear are determined by the Content Set.
+Now the images will appear at the top of the page. You can manage the way the content is displayed---like what metadata appears---or even create a *Widget Template* to style the content, but the items which display and the order in which they appear are determined by the Content Set.
 
 Now configure the bottom Asset Publisher with the other Content Set.
 
-1.  Click ![Options](../../images/icon-app-options.png) &rarr;
-    *Configuration* for the bottom Asset Publisher.
+1. Click ![Options](../../images/icon-app-options.png) &rarr; *Configuration* for the bottom Asset Publisher.
+2. Under *Asset Selection* choose *Content Set*.
+3. Open *Select Content Set* and click *Select*.
+4. Click on the *Trending* Content Set.
 
-2.  Under *Asset Selection* choose *Content Set*.
+    ![Select the Content Set you want to use.](./displaying-collections-and-collection-pages/images/21.png)
 
-3.  Open *Select Content Set* and click *Select*.
+5. Click *Save*.
 
-6.  Click on the *Trending* Content Set.
+Again, you can manage various display settings, but the items which appear and their order are determined by the Content Set criteria.
 
-    ![Figure 2: Select the Content Set you want to use.](./displaying-collections-and-collection-pages/images/21.png)
+![You can see the results as the standard Asset Publisher output. You can create Widget Templates to add more style and pizzazz here.](./displaying-collections-and-collection-pages/images/22.png)
 
-7.  Click *Save*.
+#### Adding Items to an existing Content Set
 
-Again, you can manage various display settings, but the items which appear and 
-their order are determined by the Content Set criteria.
+To demonstrate both the management of both static and dynamic Content Sets, upload a new image, tag it, and add it to the static set manually.
 
-![Figure 3: You can see the results as the standard Asset Publisher output. You can create Widget Templates to add more style and pizzazz here.](./displaying-collections-and-collection-pages/images/22.png)
+1. Upload a new image, and under *Categorization* tag it as *trending*.
+2. Without lifting another finger, the image is added to the top of the *Trending* Content List.
 
-### Adding Items to an existing Content Set
+    ![The result is dynamically added to the Content List wherever it is displayed.](./displaying-collections-and-collection-pages/images/23.png)
 
-To demonstrate both the management of both static and dynamic Content Sets, 
-upload a new image, tag it, and add it to the static set manually.
+3. To add it to the manual set, go back to *Site Administration* &rarr; *Content & Data* &rarr; *Site Builder*.
+4. Click on *Space Program Images* or select ![Options](../../images/icon-options.png) &rarr; *Edit* next to *Space Program Images*.
+5. Next to *Asset Entries* click *Select* &rarr; *Basic Document*.
+6. Select the new image and click *Add*.
+7. Navigate back to the *Home* page to see your image added to the list.
 
-1.  Upload a new image, and under *Categorization* tag it as *trending*.
-
-2.  Without lifting another finger, the image is added to the top of the 
-    *Trending* Content List.
-    
-    ![Figure 4: The result is dynamically added to the Content List wherever it is displayed.](./displaying-collections-and-collection-pages/images/23.png)
-
-3.  To add it to the manual set, go back to *Site Administration* &rarr; 
-    *Content & Data* &rarr; *Site Builder*.
-
-4.  Click on *Space Program Images* or select ![Options](../../images/icon-options.png) &rarr; *Edit* next to 
-    *Space Program Images*.
-    
-5.  Next to *Asset Entries* click *Select* &rarr; *Basic Document*.
-
-6.  Select the new image and click *Add*.
-    
-7.  Navigate back to the *Home* page to see your image added to the list.
-
-Content Sets are a powerful feature which provide one place to easily define 
-content and other assets to be displayed all over your site. Their reusability 
-also means less repeated work involved in getting great content delivered to 
-your users.
+Content Sets are a powerful feature which provide one place to easily define content and other assets to be displayed all over your site. Their reusability also means less repeated work involved in getting great content delivered to your users.
 
 ## Related Information
 

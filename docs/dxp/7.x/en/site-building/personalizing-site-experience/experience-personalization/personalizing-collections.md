@@ -40,76 +40,46 @@ Consider the following example. You want to increase sales in your online Kitche
 
         ![Edit the Collection you want to customize](./personalizing-collections/images/03.png)
 
-<!--
-Content from Liferay Help Center follows
--->
-
 ## Liferay DXP 7.2
 
-<!-- This content belongs to the "Content Set Personalization" article in Liferay Help Center -->
+### Content Set Personalization
 
-## Content Set Personalization
+Now, you'll use [Segments](../segmentation/creating-and-managing-user-segments.md) to demonstrate Content Set Personalization. For this example, create a Content Set to be the default displayed on the *Home* page. Then you'll modify it to create a personalized variation containing technical articles for members of the *American Engineers* segment.
 
-Now, you'll use [Segments](../segmentation/creating-and-managing-user-segments.md) to
-demonstrate Content Set Personalization. For this example, create a Content Set
-to be the default displayed on the *Home* page. Then you'll modify it to create
-a personalized variation containing technical articles for members of the
-*American Engineers* segment.
+If you're not familiar with Content Set, see the [Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets) article before you get started here. 
 
-If you're not familiar with Content Set, see the
-[Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets)
-article before you get started here. 
+#### Creating and Setting the Default Content Set
 
-### Creating and Setting the Default Content Set
+First create the default Content Set and configure it on the Home page using the Asset Publisher.
 
-First create the default Content Set and configure it on the Home page using the
-Asset Publisher.
+1. Go to *Site Administration* &rarr; *Content & Data* &rarr; *Content Sets*.
+2. Click the Add button (![Add](../../../images/icon-add.png)) and choose *Manual Selection*.
+3. Name it *Home Page Content*.
+4. For the new Content Set, click *Select* next to *Asset Entries* and select *Basic Web Content*.
 
-1.  Go to *Site Administration* &rarr; *Content & Data* &rarr; *Content Sets*.
+    ![Click Select to add a new Asset Entries.](./personalizing-collections/images/20.png)
 
-2.  Click the Add button (![Add](../../../images/icon-add.png)) and choose *Manual 
-    Selection*.
+5. On the *Select Basic Web Content* page, check the boxes next to the content you want to add and click *Add*.
+6. Navigate to the *Home* page and add an Asset Publisher to the page.
+7. Open *Configuration* for the Asset Publisher.
+8. Under *Asset Selection* select *Content Set*.
+9. Under *Select Content Set* click *Select*, choose *Home Page Content*, and click *Save*.
 
-3.  Name it *Home Page Content*.
+Now the Content Set that you configured appears in the Asset Publisher on the *Home Page*. Next configure the Content Set for Personalization.
 
-4.  For the new Content Set, click *Select* next to *Asset Entries* and select
-    *Basic Web Content*.
-
-    ![Figure 1: Click Select to add a new Asset Entries.](./personalizing-collections/images/20.png)
-
-5.  On the *Select Basic Web Content* page, check the boxes next to the content 
-    you want to add and click *Add*.
-
-6.  Navigate to the *Home* page and add an Asset Publisher to the page.
-
-7.  Open *Configuration* for the Asset Publisher.
-
-8.  Under *Asset Selection* select *Content Set*.
-
-9.  Under *Select Content Set* click *Select*, choose *Home Page Content*,
-    and click *Save*.
-
-Now the Content Set that you configured appears in the Asset Publisher on 
-the *Home Page*. Next configure the Content Set for Personalization.
-
-### Personalizing the Content Set
+#### Personalizing the Content Set
 
 Now create the content set for engineers and configure its display.
 
-1.  Go back to the Content Set from *Site Administration*.
+1. Go back to the Content Set from *Site Administration*.
+2. Click *New Personalized Variation* and select the *American Engineers* segment
 
-2.  Click *New Personalized Variation* and select the *American Engineers* 
-    segment
+    ![Create a new Personalized Variation.](./personalizing-collections/images/21.png)
 
-    ![Figure 2: Create a new Personalized Variation.](./personalizing-collections/images/21.png)
+3. Click *Select* next to *Asset Entries* and select *Basic Web Content*.
+4. Select articles appropriate to an engineering audience and click *Add*.
 
-3.  Click *Select* next to *Asset Entries* and select *Basic Web Content*.
-
-4.  Select articles appropriate to an engineering audience and click *Add*.
-
-Now anytime a member of the *American Engineers* segment views this Content Set 
-being displayed, they see the personalized version and not the default. Test
-this now, using the *Simulator*.
+Now anytime a member of the *American Engineers* segment views this Content Set being displayed, they see the personalized version and not the default. Test this now, using the *Simulator*.
 
 ## Related Information
 
