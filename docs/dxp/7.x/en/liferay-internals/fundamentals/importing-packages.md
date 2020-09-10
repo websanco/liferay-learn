@@ -8,11 +8,10 @@ Import-Package: javax.portlet,com.liferay.portal.kernel.util
 
 Import packages must sometimes be specified manually, but not always. Conveniently, [Workspace](../../developing-applications/tooling/liferay-workspace.md)-based module projects automatically detect required packages and add them to the module manifest's package import list. Import packages must sometimes be specified manually.
 
-Here are the different package import scenarios:
+There are two different package import scenarios:
 
-* [Automatic Package Import Generation](#automatic-package-import-generation)
-
-* [Manually Adding Package Imports](#manually-adding-package-imports)
+* [Automatic Package Imports](#automatic-package-imports)
+* [Manual Package Imports](#manual-package-imports)
 
 Read below to explore how package imports are specified in these scenarios.
 
@@ -42,10 +41,10 @@ Import-Package: com.liferay.portal.kernel.service;version="[4.3,5)"
 The build file specifies dependencies. Bnd examines the module class path to import packages the module uses. The examination includes all classes found in the class path--even those from embedded [third party library JARs](./configuring-dependencies/resolving-third-party-library-package-dependencies.md).
 
 ```note::
-   For a plugin WAR project, Liferay's `WAB Generator <../reference/deploying-wars-wab-generator.md>`_ detects packages used in the WAR's JSPs, descriptor files, and classes (in ``WEB-INF/classes`` and embedded JARs). Also the WAB Generator searches the ``web.xml``, ``liferay-web.xml``, ``portlet.xml``, ``liferay-portlet.xml``, and `liferay-hook.xml` descriptor files. It adds package imports for classes that are neither found in the plugin's ```WEB-INF/classes``` folder nor in its embedded JARs.
+   For a plugin WAR project, Liferay's `WAB Generator <../reference/deploying-wars-wab-generator.md>`_ detects packages used in the WAR's JSPs, descriptor files, and classes (in ``WEB-INF/classes`` and embedded JARs). Also the WAB Generator searches the ``web.xml``, ``liferay-web.xml``, ``portlet.xml``, ``liferay-portlet.xml``, and ``liferay-hook.xml`` descriptor files. It adds package imports for classes that are neither found in the plugin's ```WEB-INF/classes``` folder nor in its embedded JARs.
 ```
 
-## Manually Adding Package Imports
+## Manual Package Imports
 
 If a module references a class in only the following places, you must manually add a package import.
 
@@ -67,7 +66,7 @@ Import-Package: [... existing package list,][add the package here]
 ```
 
 ```note::
-   To manually import a package in a plugin WAR project, add an `Import-Package` header like the one above to the project's ``WEB-INF/liferay-plugin-package.properties`` file.
+   To manually import a package in a plugin WAR project, add an ``Import-Package`` header like the one above to the project's ``WEB-INF/liferay-plugin-package.properties`` file.
 ```
 
 ### Java API Packages
