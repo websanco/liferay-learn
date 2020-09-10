@@ -1,4 +1,4 @@
-# Creating a Standard Application with App Builder
+# Creating a Standard Application
 
 To create applications based on a custom object: create the object, create at least one form view, create at least one table view, and deploy the application.
 
