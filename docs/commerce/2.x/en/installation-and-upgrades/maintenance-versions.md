@@ -1,12 +1,12 @@
 # Maintenance Versions
 
-Periodically, Liferay will release Fix Packs to Liferay Commerce Enterprise. Each Fix Pack includes the latest bug fixes and provides an improved level of security and reliability. Customizations are generally safe, but reviewing the customizations are highly recommended before implementation.
+Periodically, Liferay will release Fix Packs to Liferay Commerce Enterprise 3.0. Each Fix Pack includes the latest bug fixes and provides an improved level of security and reliability. Customizations are generally safe, but reviewing the customizations are highly recommended before implementation.
 
-See [Patching Liferay](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html) and [](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html) to learn about the various types of patches.
+See [Patching Liferay](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html) and [Understanding Patch Types](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html) to learn about the various types of patches.
 
 To learn how to apply a patch, see [Installing Patches](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-patches.html).
 
-For Liferay Commerce (open source) users, updates to Liferay Commerce will be released in the next version of Liferay Portal 7.3 CE.
+For Liferay Commerce 3.0 (open source) users, updates to Liferay Commerce will be released in the next version of Liferay Portal 7.3 CE.
 
 ## Updating Liferay Commerce 2.1.x and Below
 
@@ -14,13 +14,13 @@ Periodically, Liferay will release updates (maintenance versions) to Liferay Com
 
 Updating to a new maintenance version is very similar to upgrading to a new major or minor version of Liferay Commerce.
 
-## Roadmap
+### Roadmap
 
 1. [Download and Deploy](#download-and-deploy)
 1. [Clear Stale Data and Restart the Server](#clear-stale-data-and-restart-the-server)
 1. [Additional Information](#additional-information)
 
-## Download and Deploy
+### Download and Deploy
 
 1. Download the latest Liferay Commerce `LPKG`.
     * Enterprise subscribers can download the latest `LPKG` from [Help Center](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001).
@@ -38,7 +38,7 @@ Updating to a new maintenance version is very similar to upgrading to a new majo
 
 1. Shut down the application server.
 
-## Clear Stale Data and Restart the Server
+### Clear Stale Data and Restart the Server
 
 1. Delete the `${liferay.home}/osgi/state` folder.
     > To learn more about OSGi folders, see [Installing Apps Manually](https://help.liferay.com/hc/en-us/articles/360017895412-Installing-Apps-Manually#using-your-file-system-to-install-apps).
