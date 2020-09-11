@@ -47,7 +47,7 @@ You can find two new vocabularies by default: Audience and Stage. Content Author
 1. Enter a name for your category and, optionally, a description.
 1. Optionally, complete the rest of the Category options:
 
-    - *Allow Multiple Categories*: When this option is enabled, you can apply more than one category from the vocabulary to your asset. When this options is disabled, you can only apply one category from the vocabulary.
+    - *Allow Multiple Categories*: When this option is enabled, you can apply more than one category from the vocabulary to your asset. When this option is disabled, you can only apply one category from the vocabulary.
     - *Visibility*: Use *Internal* visibility for categories you don't want to expose . Use *Public* when you want the categories to 
 
 
