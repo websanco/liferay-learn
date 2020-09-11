@@ -91,6 +91,12 @@ Configuring JBoss to run DXP includes these things:
 
 Make the following modifications to `$JBOSS_HOME/standalone/configuration/standalone.xml`:
 
+1. In the `<jsp-config>` tag, set the Java VM compatibility for Liferay Java source and class files. They are compatible with Java 8 by default.
+
+    ```xml
+    <jsp-config development="true" source-vm="1.8" target-vm="1.8" />
+    ```
+
 1. Locate the closing `</extensions>` tag. Directly beneath that tag, insert these system properties:
 
     ```xml
