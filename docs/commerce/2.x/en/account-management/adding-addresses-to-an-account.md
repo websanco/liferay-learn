@@ -24,6 +24,24 @@ The new address has been added using the _Account Management_ widget.
 
 ## Using the Control Panel
 
+Users can add addresses to an account in the _Control Panel_.
+
+1. Click the _Open Menu_ button then _Control Panel_.
+1. Click _Accounts_.
+
+    ![Navigate to the Global Applications menu to access the Accounts menu.](./adding-addresses-to-an-account/images/05.png)
+
+1. Click _Address_ in the left menu.
+1. Fill the address fields.
+1. Check the _Default Billing_ box if this is the default billing address.
+1. Check the _Default Shipping_ box if this is the default shipping address.
+
+   ![Adding a New Address in the Control Panel](./adding-addresses-to-an-account/images/04.png)
+
+1. Click _Save_.
+
+### Liferay Commerce 2.1 and below
+
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
 1. Click an account (for example, _Acme International_).
 1. Click _Address_ in the left menu.

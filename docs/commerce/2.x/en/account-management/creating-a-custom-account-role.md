@@ -4,6 +4,54 @@ Liferay Commerce offers four account roles by default: Account Administrator, Bu
 
 To add a new Commerce account role:
 
+1. Navigate to the _Global_ menu → _Control Panel_.
+1. Click _Roles_.
+
+    ![Navigate to the Roles menu in the revamped Control Panel.](./creating-a-custom-account-role/images/04.png)
+
+1. Click the _Site Roles_ tab.
+1. Click the _Add Site Role_ button.
+1. Enter the following:
+    * **Name**: Customer Service Representative.
+1. Click _Save_.
+1. Click _Define Permissions_.
+1. Click _Site and Asset Library Administration_ to expand the dropdown menu.
+
+    ![Commerce permission keys are located in the Applications section under Site and Asset Library Administration.](./creating-a-custom-account-role/images/05.png)
+
+    * All Commerce-specific permissions keys are located in the _Applications_ sub-menu:
+      * Accounts
+      * Cart
+      * Cart Summary
+      * Checkout
+      * Commerce Addresses
+      * Commerce BOM
+      * Commerce Categories Navigation
+      * Coupon Code Entry
+      * Dashboard Forecasts Chart
+      * Mini Cart
+      * Open Carts
+      * Option Facet
+      * Orders
+      * Shipments
+      * Specification Facet
+      * Wish List Contents
+      * Wish Lists
+
+1. Select the Commerce permissions from the _Site Administration_.
+
+    ![New custom role permissions](./creating-a-custom-account-role/images/03.png)
+
+1. Click _Save_.
+
+Once the new role has been created, it will be listed in the _Site Roles_ menu in the Control Panel and also the _Account Management_ widget.
+
+![New custom role](./creating-a-custom-account-role/images/01.png)
+
+## Liferay Commerce 2.1.x and Below
+
+To add a new Commerce account role:
+
 1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
 1. Click the _Site Roles_ tab.
 1. Click the _Add Site Role_ button.

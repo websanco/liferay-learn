@@ -7,7 +7,10 @@ The Admin user is created by default in any new installation of Liferay Commerce
 1. Open a browser to `http://localhost:8080`.
 1. Click the _Sign In_ link.
 
-    ![Sign In Link](./introduction-to-the-admin-account/images/01.png "Sign In Link")
+    ![Sign In Link](./introduction-to-the-admin-account/images/01a.png "Sign In Link")
+
+    <!--
+    ![Sign In Link](./introduction-to-the-admin-account/images/01.png "Sign In Link") -->
 
     > If a Liferay Commerce Bundle is being used, you will be presented with the [_Setup Wizard_](https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP-#using-the-setup-wizard). Follow the on-screen instructions to configure your Admin user.
 
@@ -16,6 +19,10 @@ The Admin user is created by default in any new installation of Liferay Commerce
     > It is **highly** recommended that the default login credentials be updated when starting a new Liferay Commerce installation.
 
 ## Configuring the Admin User
+
+1. Click the _User Administration_ menu and navigate to _Account Settings_.
+
+    ![Account Settings](./introduction-to-the-admin-account/images/06.png "Account Settings")
 
 ### Changing Account Information
 

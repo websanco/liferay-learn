@@ -19,6 +19,20 @@ This user has been added to the account.
 
 ## Using the Control Panel
 
+1. Click _Open Menu_ &rarr; _Control Panel_ &rarr; _Accounts_.
+
+    ![Inviting a User to the Account](./inviting-users-to-an-account/images/04.png)
+
+1. Click the account (for example _Acme, Inc_)
+1. Click _Users_ in the left menu.
+1. Click the (![Add icon](../images/icon-add.png)) button to add a new user.
+1. Check the boxes for all the users to be added.
+1. Click _Add_.
+
+The users have been added to the account.
+
+### Liferay Commerce 2.1.x and Below
+
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
 1. Click the account (for example _Acme, Inc_)
 1. Click _Users_ in the left menu.

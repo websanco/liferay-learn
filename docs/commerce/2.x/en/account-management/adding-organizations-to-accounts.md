@@ -24,7 +24,25 @@ The organization has been added to the account using the Account Management Widg
 
 Users who have administrative permissions for the store or installation may create and update account information in the Control Panel.
 
-1. Navigate to the Control Panel → Users → Accounts.
+1. Navigate to the _Global_ menu → _Control Panel_.
+1. Click _Accounts_.
+
+    ![Navigate to the Global Applications menu to access the Accounts menu.](./adding-organizations-to-accounts/images/04.png)
+
+1. Click _Organizations_ on the left.
+1. Click the (+) button to add a new organization.
+1. Check the boxes for all the organizations to be added (for example, _Italy - South_).
+1. Click Add.
+
+    ![Adding Organization in the Control Panel](./adding-organizations-to-accounts/images/03.png)
+
+The organization has been added to the account using the Control Panel.
+
+### Liferay Commerce 2.1 and Below
+
+Users who have administrative permissions for the store or installation may create and update account information in the Control Panel.
+
+1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
 1. Click on an account (for example _South Bay Auto Parts Distributors_).
 1. Click _Organizations_ on the left.
 1. Click the (+) button to add a new organization.

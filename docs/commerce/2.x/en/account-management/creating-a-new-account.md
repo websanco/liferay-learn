@@ -23,8 +23,28 @@ The new account has been created.
 
 Users who have administrative permissions for the store or installation may create and update account information in the _Control Panel_.
 
+1. Navigate to the _Global_ menu → _Control Panel_.
+1. Click _Accounts_.
+
+    ![Navigate to Accounts in the Control Panel.](./creating-a-new-account/images/04.png)
+
+1. Click the (![Add icon](../images/icon-add.png)) button.
+1. Enter the following:
+    * **Name**: _your company name_ (Acme International)
+    * **Email**: _your company email_ (Acme1@acme.org)
+    * **Type**: _Business_
+    * **VAT Number**: _your VAT number*_
+
+    ![Creating a New Account in the Control Panel](./creating-a-new-account/images/03.png)
+
+1. Click _Save_.
+
+### Liferay Commerce 2.1.x and Below
+
+Users who have administrative permissions for the store or installation may create and update account information in the _Control Panel_.
+
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
-1. Click the (+) button to add a new account.
+1. Click the (![Add icon](../images/icon-add.png)) button to add a new account.
 1. Enter the following:
     * **Name**: _your company name_ (Acme International)
     * **Email**: _your company email_ (Acme1@acme.org)

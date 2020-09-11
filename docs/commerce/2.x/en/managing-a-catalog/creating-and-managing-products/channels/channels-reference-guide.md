@@ -100,6 +100,13 @@ Users can configure which shipment methods are _restricted_ for the buyer's coun
 
 ![Shipment Restrictions](./channels-reference-guide/images/09.png)
 
+<!--
+## Punch Out
+
+Users can manage their Punch Out procurement systems from here. Purchasing the additional Liferay Commerce Connector to PunchOut2Go ("PunchOut2Go Connector") is required. See [Liferay Commerce Connector to PunchOut2Go]() for more information.
+
+-->
+
 ## Additional Information
 
 * [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)

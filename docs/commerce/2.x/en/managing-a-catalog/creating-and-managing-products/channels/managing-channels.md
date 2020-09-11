@@ -6,6 +6,23 @@ By default, a channel is automatically created if using an accelerator (for exam
 
 ## Adding a New Channel
 
+1. Click _Open Menu_ &rarr; _Commerce_ &rarr; _Channels_.
+
+    ![Navigate to Channels.](./managing-channels/images/05.png)
+
+1. Click the (![Add icon](../../../images/icon-add.png)) button.
+1. Enter a name for the new channel.
+1. Select a currency to associate with the channel.
+1. In the _Type_ field, select _Site_.
+
+    ![Adding a Channel](./managing-channels/images/02.png)
+
+1. Click _Add_.
+
+The channel is now created. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md) for more information.
+
+### Commerce 2.1
+
 To add a new Channel, follow these steps:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.

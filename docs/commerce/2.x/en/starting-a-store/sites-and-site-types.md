@@ -22,7 +22,11 @@ The following site types are available:
 
 ## Setting a Site Type
 
-It is best practice to set a site's type as soon as you create it and avoid changing it in the future.
+It is best practice to set a site's type as soon as you create it and avoid changing it in the future. In Commerce 2.1+, site types are managed on a per-channel basis.
+
+To set your site's type, navigate to _Commerce_ &rarr; _Channels_ and click the desired channel. Click the _Type_ tab and select the Type from the dropdown menu. Click _Save_ to apply the changes.
+
+### Commerce 2.0 and Below
 
 To set your site's type, navigate to _Site Administration_ → _Commerce_ → _Settings_ and select the Site Type tab. Select a type from the dropdown menu and click _Save_.
 

@@ -19,7 +19,7 @@ It’s highly recommended all the product options (templates and values) be fina
 
 Once your product options are created, here’s how to quickly and easily generate SKUs for all product variants:
 
-1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
+1. Navigate to the _Commerce_ menu → _Products_.
 1. Click on a product (_Torque Converters_ in this example).
 1. Click the _SKUs_ sub-tab.
 1. Click the (+) button.
