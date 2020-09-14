@@ -62,7 +62,7 @@ Upgrading to 7.2 moves Web Content images to the Document Library and then delet
 
 ### Account for Deprecations and Features in Maintenance Mode
 
-If you haven't done so already, review the [deprecations](../reference/deprecations-in-liferay-dxp-7-3.md) and [features in maintenance mode](../reference/features-in-maintenance-mode.md) and plan for handling how they affect your Liferay instance.
+If you haven't done so already, review the [deprecations and features in maintenance mode](../reference/maintenance-mode-and-deprecations-in-7-3.md) and plan for handling how they affect your Liferay instance.
 
 ## Conclusion
 

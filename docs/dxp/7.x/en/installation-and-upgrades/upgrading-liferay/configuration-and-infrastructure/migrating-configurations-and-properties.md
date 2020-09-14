@@ -137,7 +137,7 @@ There are resources for migrating properties related to specific environments, L
 
 1. If you have a sharded environment, [configure your upgrade to generate a non-sharded environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md).
 
-1. Examine the default settings changes in 7.0+ [here](../reference/changes-to-default-settings.md).
+1. Examine the [default setting changes](../reference/default-setting-changes-in-7-3.md).
 
 1. Liferay's image sprite framework is deprecated as of 7.2 and is disabled by default. The framework requires scanning plugins for image sprites. If you don't use the framework, there's no need for it to scan for images sprites. If you use the framework yourself, enable it by overriding the default `sprite.enabled` portal property (since 7.2) value with the following setting in your [`portal-ext.properties`](../../reference/portal-properties.md) file.
 

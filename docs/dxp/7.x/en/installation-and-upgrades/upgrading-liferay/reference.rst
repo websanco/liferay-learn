@@ -5,10 +5,13 @@ Reference
    :maxdepth: 2
 
    reference/database-upgrade-tool-reference.md
-   reference/changes-to-default-settings.md
-   reference/deprecations-in-liferay-dxp-7-3.md
-   reference/deprecations-in-liferay-dxp-7-2.md
-   reference/features-in-maintenance-mode.md
+   reference/default-setting-changes-in-7-3.md
+   reference/default-setting-changes-in-7-2.md
+   reference/maintenance-mode-and-deprecations-in-7-3.md
+   reference/maintenance-mode-and-deprecations-in-7-2.md
 
-.. include:: /installation-and-upgrades/upgrading-liferay/reference/README.rst
-   :start-line: 2
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/database-upgrade-tool-reference`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-3`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-2`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-3`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-2`

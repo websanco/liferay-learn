@@ -1,7 +1,7 @@
 Upgrading Liferay
 =================
 
-Upgrade Basics 
+Upgrade Basics
 --------------
 
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview`
@@ -15,7 +15,7 @@ Configuration and Infrastructure
 -  :doc:`/installation-and-upgrades/upgrading-liferay/configuration-and-infrastructure/migrating-configurations-and-properties`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/configuration-and-infrastructure/updating-the-file-store`
 
-Upgrade Stability and Performance 
+Upgrade Stability and Performance
 ---------------------------------
 
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-stability-and-performance/upgrade-stability-and-performance-overview.md`
@@ -23,7 +23,7 @@ Upgrade Stability and Performance
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-stability-and-performance/example-removing-intermediate-journal-article-versions.md`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md`
 
-Other Upgrade Scenarios 
+Other Upgrade Scenarios
 -----------------------
 
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations`
@@ -32,7 +32,8 @@ Other Upgrade Scenarios
 Reference
 ---------
 
--  :doc:`/installation-and-upgrades/upgrading-liferay/reference/liferay-database-upgrade-tool-reference`
--  :doc:`/installation-and-upgrades/upgrading-liferay/reference/deprecations-in-liferay-dxp-7-3`
--  :doc:`/installation-and-upgrades/upgrading-liferay/reference/deprecations-in-liferay-dxp-7-2`
--  :doc:`/installation-and-upgrades/upgrading-liferay/reference/features-in-maintenance-mode`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/database-upgrade-tool-reference`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-3`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-2`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-3`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-2`

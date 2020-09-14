@@ -1,6 +1,6 @@
 # Maintenance Mode and Deprecations in 7.3
 
-In some new Liferay versions, Liferay stops enhancing specific items or makes plans to remove specific apps and capabilities. TODO
+In some new Liferay versions, Liferay stops enhancing specific items or makes plans to remove specific apps and capabilities.
 
 1. **Moving an Item to Maintenance Mode:** Support continues for the item but enhancements cease. Future deprecation is not necessarily implied.
 
