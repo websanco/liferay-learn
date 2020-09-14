@@ -1,7 +1,7 @@
 # Building Content Pages
 
 ```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.1 and 7.2 <#liferay-dxp-7.1-and-7.2>`_.
+   Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.1 and 7.2 <#liferay-dxp-7-1-and-7-2>`_.
 ```
 
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you can build it by adding and configuring various [Content Page elements](./content-pages-overview.md).
@@ -17,9 +17,9 @@ Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), 
 
     ![Edit an existing Content Page by dropping Fragments or Widgets in the edit area.](building-content-pages/images/02.png)
 
-    When you enter the Site Builder view, you can add or edit your content in two ways: 
+    When you enter the Site Builder view, you can add or edit your content in two ways:
 
-    - *Page Design*: If you have permission to update the page and the page content, this mode is available. 
+    - *Page Design*: If you have permission to update the page and the page content, this mode is available.
     - *Content Edition*: If you only have permission to update the page but not the page content, you can use this mode.
 
     The editing options available in the Content Page sidebar depend on the editing mode you choose.

@@ -1,40 +1,38 @@
 # Content Pages Overview
 
 ```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.1 and 7.2](#liferay-dxp-7.1-and-7.2).
+   Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.1 and 7.2 <#liferay-dxp-7-1-and-7-2>`_.
 ```
 
-The default page type in Liferay DXP is a Content Page. Its editing UI contains many different drag-and-drop elements (Fragments and Widgets) you can use with minimal configuration. To jump directly into building a Content Page, see [Building Content Pages](./building-content-pages.md). 
+The default page type in Liferay DXP is a Content Page. Its editing UI contains many different drag-and-drop elements (Fragments and Widgets) you can use with minimal configuration. To jump directly into building a Content Page, see [Building Content Pages](./building-content-pages.md).
 
-There are two editing modes: Page Design and Content Edition, and each have different options. 
+There are two editing modes: Page Design and Content Edition, and each have different options.
 
 ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
 
-*Page Design* mode contains these action elements in the Content Page sidebar 
+*Page Design* mode contains these action elements in the Content Page sidebar.
 
 ![The Content Page sidebar includes the different elements you can add to your content](./content-pages-overview/images/07.png)
 
-|  |  |
-| --- | --- |
-| ![Fragments and Widgets](../../../images/icon-cards2.png) | [Fragments and Widgets](#fragments-and-widgets) |
-| ![Contents](../../../images/icon-list-ul.png) | [Contents](#contents) |
-| ![Page Structure](../../../images/icon-pages-tree.png) | [Page Structure](#page-structure) |
-| ![Page Design Options](../../../images/icon-format.png) | [Page Design Options](##page-design-options) |
-| ![Comments](../../../images/icon-comments-w.png) | [Comments](#comments) |
+* ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
+* ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
+* ![Page Structure](../../../images/icon-pages-tree.png) - [Page Structure](#page-structure)
+* ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](##page-design-options)
+* ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
 
 ## Fragments and Widgets
 
 Fragments and Widgets elements that you can drag-and-drop to build your content.
 
-- [Fragments](#fragments)
+* [Fragments](#fragments)
 
-    Fragments can have editable elements, such as [text](./building-content-pages.md#editing-text), [images](./building-content-pages.md#editing-an-image), or [links](./building-content-pages.md#editing-a-hyperlink), that you can replace with custom content. You can also [map these elements](./building-content-pages.md#mapping-content) to content that is already available on the Site itself. For more information on developing Fragments, see [Fragment Specific Tags](../../developer-guide/developing-page-fragments/fragment-specific-tags-reference.md).
+    Fragments can have editable elements, such as [text](./building-content-pages.md#editing-text-inline), [images](./building-content-pages.md#editing-images), or [links](./building-content-pages.md#editing-hyperlinks), that you can replace with custom content. You can also [map these elements](./building-content-pages.md#mapping-content) to content that is already available on the Site itself. For more information on developing Fragments, see [Fragment Specific Tags](../../developer-guide/reference/fragments/fragment-specific-tags-reference.md).
 
     ![The Fragments panel provides a list of Fragments that can be added inside the page editor.](./content-pages-overview/images/01.png)
 
-- [Widgets](#widgets)
+* [Widgets](#widgets)
 
-    Widgets are [applications](/dxp/7.x/en/developing_applications.html) that you can add to the page.
+    Widgets are [applications](../../../developing_applications.html) that you can add to the page.
 
     ![The Widgets panel provides a list of Widgets that can be added inside the page editor.](./content-pages-overview/images/02.png)
 
@@ -42,19 +40,19 @@ Fragments and Widgets elements that you can drag-and-drop to build your content.
 
 You can find the following Fragments under the Content Page sidebar:
 
-- [Layout Elements](#layout-elements)
-- [Basic Components](#basic-components)
-- [Content Display](#content-display)
-- [Featured Content](#featured-content)
-- [Footers](#footers)
-- [Navigation Bars](#navigation-bars)
+* [Layout Elements](#layout-elements)
+* [Basic Components](#basic-components)
+* [Content Display](#content-display)
+* [Featured Content](#featured-content)
+* [Footers](#footers)
+* [Navigation Bars](#navigation-bars)
 
 #### Layout Elements
 
 The Layout Elements section contains two Fragments:
 
-- *Container*: A Fragment that can contain Rows. Each Section you add fills the width of the page. A Section can contain multiple stacked Rows.
-- *Grid*: A Fragment containing a set of columns where Fragments or Widgets can be added. A Row can be nested inside another Row to create more complex layouts. You can [adjust the spacing](./building-content-pages.md#configuring-a-row-s-columns) of a Row's columns to create new designs.
+* *Container*: A Fragment that can contain Rows. Each Section you add fills the width of the page. A Section can contain multiple stacked Rows.
+* *Grid*: A Fragment containing a set of columns where Fragments or Widgets can be added. A Row can be nested inside another Row to create more complex layouts. You can [adjust the spacing](./building-content-pages.md#configuring-a-row-s-columns) of a Row's columns to create new designs.
 
     ![The Layouts panel contains layouts for organizing Fragments.](content-pages-overview/images/03.png)
 
@@ -139,11 +137,11 @@ Here you can view a preview of your page, add Fragments and Widgets, and manage 
 
 Your tools for building the page are all found on the right side of the page. From top to bottom, the options are
 
-- [Sections](#sections)
-- [Section Builder](#section-builder)
-- [Widgets](#widgets)
-- [Page Structure](#page-structure)
-- [Look and Feel](#look-and-feel)
+* [Sections](#sections)
+* [Section Builder](#section-builder)
+* [Widgets](#widgets)
+* [Page Structure](#page-structure)
+* [Look and Feel](#look-and-feel)
 
 ### Sections
 
@@ -191,10 +189,10 @@ Comments are disabled by default, but administrators can enable them from *Contr
 
 If comments are enabled, you can access them via the *Comments* icon (![Comments](../../../images/icon-comments.png)). The comments appear for the selected fragment. You can take the following actions in the comments UI for a fragment:
 
--   Add new comments and reply to any existing ones. 
--   Resolve comments by clicking the checkbox for each. Resolving a comment 
+*   Add new comments and reply to any existing ones. 
+*   Resolve comments by clicking the checkbox for each. Resolving a comment 
     hides it from view, unless *Show Resolved Comments* is selected. 
--   Edit and delete your own comments via the Actions button 
+*   Edit and delete your own comments via the Actions button 
     (![Actions](../../../images/icon-actions.png)) 
     for each. 
 
