@@ -96,6 +96,11 @@ Alternatively,
 
 3. Place it in `[Liferay Home]/osgi/configs`.
 
+Workflow Metrics data is read from the search engine to calculate metrics. When configuring the interval value consider these competing performance concerns:
+
+- A long time between metrics recalculation events corresponds with more search documents being read during each recalculation.
+- A short time between metrics recalculation events corresponds with a higher frequency of read requests to the search engine.
+
 ## Additional Information
 
 * [Creating Tasks in the Workflow Designer](https://help.liferay.com/hc/articles/360028821932-Creating-Tasks-in-the-Workflow-Designer)
