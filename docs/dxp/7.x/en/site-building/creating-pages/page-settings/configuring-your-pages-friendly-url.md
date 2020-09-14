@@ -1,12 +1,12 @@
 # Configuring Your Page's Friendly URL
 
-With Liferay DXP, you can set friendly URLs for each Page of your Site. These URLs can help users easily understand and recall your Page's address while providing key information to search engines and other tools crawling your Site.
+With Liferay DXP, you can set friendly URLs for each Page of your Site. These URLs make it easy to understand and recall your Page's address while providing key information to search engines and other tools crawling your Site.
 
 When you create a Site Page, a friendly URL is automatically generated to match the Page's name, though you can change it at any time. Liferay DXP also maintains a history of previously used URLs for a Page to prevent broken links and provide an easy way to revert changes.
 
 ## Changing a Page's Friendly URL
 
-To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](../../../images/icon-staging-bar-options.png)) for the Page you want to customize, and select *Configure*.
+To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder* &rarr; *Pages*. Then click on the *Actions* button (![Actions button](../../../images/icon-staging-bar-options.png)) for the Page you want to customize and select *Configure*.
 
 ![Click on the Actions button for the Page you want to customize, and select Configure](./configuring-your-pages-friendly-url/images/01.png)
 
@@ -19,14 +19,14 @@ In the General tab, use the *Friendly URL* field to enter a new URL for the Page
 The value entered in this field is appended to its [Site URL](./../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) and must be unique.
 
 ```note::
-   When setting a custom URL, you do not need to maintain the Site's Page hierarchy. This means a Child Page does not need to include its Parent as part of its friendly URL.
+   When setting a custom URL, you don't have to maintain the Site's Page hierarchy. This means a Child Page does not need to include its Parent as part of its friendly URL.
 ```
 
 ## Managing a Page's URL History
 
 Liferay DXP maintains a list of all friendly URLs used for a Page. This means that when you change a friendly URL, old URLs remain associated with your Page to prevent broken links, unless manually removed. For Page requests using an old URL, Liferay provides a redirect to the browser (or other consumer) pointing to the active friendly URL.
 
-To view and manage the full list of URLS associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. You can also click on the *Language Flag* button to view set URLs for other languages.
+To view and manage the full list of URLs associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. You can also click on the *Language Flag* button to view set URLs for other languages.
 
 ![View a Page's friendly URL History by language.](./configuring-your-pages-friendly-url/images/03.png)
 
