@@ -6,10 +6,10 @@ You can create Document Library files that link to Google Drive&trade; files and
 1. Create and/or configure a Google project capable of communicating with your DXP instance. The [Google Picker API](https://developers.google.com/picker/) must be enabled for this project. You must also create the credentials the Google project needs to communicate with your DXP instance.
 1. Configure your portal to communicate with your Google project.
 
-Next you'll complete these steps. 
+Next you'll complete these steps.
 
 ```Important::
-   The Liferay Plugin for Google Drive&trade; is a Labs application available for Liferay CE Portal and Liferay DXP. Labs apps are experimental and not supported by Liferay. They're released to accelerate the availability of useful and cutting-edge features. This status may change without notice. Use Labs apps at your own discretion.
+   The Liferay Plugin for Google Drive is a Labs application available for Liferay CE Portal and Liferay DXP. Labs apps are experimental and not supported by Liferay. They're released to accelerate the availability of useful and cutting-edge features. This status may change without notice. Use Labs apps at your own discretion.
 ```
 
 ## Install the App
@@ -47,5 +47,4 @@ You must configure the portal to connect to Google Drive&trade;. See the [Enabli
 
 ## Additional Information
 
-* [Enabling Document Creation and Edition with Google Drive](./enabling-document-creation-and-edition-with-google-drive.md)
-
+* [Enabling Document Creation and Editing with Google Drive](./enabling-document-creation-and-editing-with-google-drive.md)

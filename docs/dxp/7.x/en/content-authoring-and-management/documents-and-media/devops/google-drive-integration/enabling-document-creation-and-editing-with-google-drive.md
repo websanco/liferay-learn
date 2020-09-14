@@ -54,7 +54,7 @@ The DXP instance is now connected at the global level.
 ```
 
 ```tip::
-   You can ignore the *Picker API Key* field. This field is unrelated to the Google Docs&trade; online editing features in DXP.
+   You can ignore the *Picker API Key* field. This field is unrelated to the Google Docs online editing features in DXP.
 ```
 
 ## Additional Information
