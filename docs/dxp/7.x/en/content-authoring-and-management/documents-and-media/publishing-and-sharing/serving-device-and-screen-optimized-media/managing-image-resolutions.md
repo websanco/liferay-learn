@@ -49,13 +49,11 @@ Therefore, editing an image resolution is only possible if Adaptive Media hasn't
 
 If Adaptive Media hasn't generated all the images you need (for example, if new images were uploaded before a new image resolution was created or while the resolution was disabled), you must generate the missing images manually.
 
-<!-- The below image is missing/not named properly. -Rich -->
-
-![The Adapted Images column shows the percentage of images that are adapted for each resolution.](../../../images/adaptive-media-coverage.png)
+![The Adapted Images column shows the percentage of images that are adapted for each resolution.](./managing-image-resolutions/images/01.png)
 
 To manually generate missing adapted images,
 
-1. For a single resolution, select *Adapt Remaining* from the resolution's Actions menu (![Actions](../../../images/icon-actions.png)).
+1. For a single resolution, select *Adapt Remaining* from the resolution's Actions menu (![Actions](../../../../images/icon-actions.png)).
 1. For all resolutions at once, select *Adapt All Images* from the Actions menu in the Control Menu at the top of the page.
 
 ## The Recycle Bin and Adapted Images
