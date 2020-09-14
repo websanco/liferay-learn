@@ -4,7 +4,7 @@ Once you have a form, you can implement Form Rules. Form Rules define question v
 
 ## Form Rule Conditions and Actions
 
-Rules have two components: 
+Rules have two components:
 
 * **Conditions** determine whether any actions are executed.
 * **Actions** determine what happens if the condition is met.

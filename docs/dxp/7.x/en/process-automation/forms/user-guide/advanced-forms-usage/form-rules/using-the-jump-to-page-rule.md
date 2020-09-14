@@ -32,7 +32,7 @@ To configure the Jump to Page Rule:
 1. Click _Save_ when finished.
 
 ```note::
-   It's best to use the *is not equal to* condition with fields existing on the same page. Forms checks the first field, and if it is returned as _true_, it skips the second field.
+   It's best to use the *is not equal to* condition with fields existing on the same page. Forms checks the first field, and if it is returned as *true*, it skips the second field.
 ```
 
 ## Additional Information

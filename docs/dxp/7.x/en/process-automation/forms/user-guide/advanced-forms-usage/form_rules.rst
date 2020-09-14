@@ -2,7 +2,7 @@ Form Rules
 ==========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    form-rules/form-rules-overview.md
    form-rules/using-the-show-hide-rule.md
