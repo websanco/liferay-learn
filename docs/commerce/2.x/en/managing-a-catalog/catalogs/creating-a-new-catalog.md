@@ -4,7 +4,7 @@ A catalog is the complete list of related products that can be displayed on a st
 
 To create a new catalog:
 
-1. Click the _Open Menu_ button then _Commerce_.
+1. Click the _Global Applications_ button then _Commerce_.
 1. Click _Catalogs_.
 
     ![Navigate to the Catalogs in the Commerce section.](./creating-a-new-catalog/images/03.png)

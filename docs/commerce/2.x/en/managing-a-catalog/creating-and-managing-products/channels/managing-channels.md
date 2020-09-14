@@ -6,7 +6,7 @@ By default, a channel is automatically created if using an accelerator (for exam
 
 ## Adding a New Channel
 
-1. Click _Open Menu_ &rarr; _Commerce_ &rarr; _Channels_.
+1. Click _Global Applications_ &rarr; _Commerce_ &rarr; _Channels_.
 
     ![Navigate to Channels.](./managing-channels/images/05.png)
 

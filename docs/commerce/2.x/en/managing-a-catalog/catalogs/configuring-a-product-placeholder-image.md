@@ -4,7 +4,7 @@ Products in a catalog that do not have an associated [product image](../creating
 
 To set a catalog's placeholder image:
 
-1. Click the _Open Menu_ button then _Commerce_.
+1. Click the _Global Applications_ button then _Commerce_.
 1. Click _Catalogs_.
 
     ![Click the Refresh button to change the image.](./configuring-a-product-placeholder-image/images/05.png)

@@ -19,7 +19,7 @@ This user has been added to the account.
 
 ## Using the Control Panel
 
-1. Click _Open Menu_ &rarr; _Control Panel_ &rarr; _Accounts_.
+1. Click _Global Applications_ &rarr; _Control Panel_ &rarr; _Accounts_.
 
     ![Inviting a User to the Account](./inviting-users-to-an-account/images/04.png)
 
