@@ -11,7 +11,7 @@ Fundamentals
    fundamentals/importing-packages.md
    fundamentals/exporting-packages.md
    fundamentals/semantic-versioning.md
-   fundamentals/configuring-dependencies/configuring-dependencies.rst
+   fundamentals/configuring_dependencies.rst
    fundamentals/using_the_gogo_shell.rst
 
 -  :doc:`/liferay-internals/fundamentals/fundamentals`
