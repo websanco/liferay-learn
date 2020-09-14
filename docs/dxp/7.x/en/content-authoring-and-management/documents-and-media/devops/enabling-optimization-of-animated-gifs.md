@@ -1,10 +1,10 @@
-# Enabling Optimization of Animated Gifs
+# Enabling Optimization of Animated GIFs
 
 To scale animated GIFs, Adaptive Media uses an external tool called [Gifsicle](https://www.lcdf.org/gifsicle/). If Gifsicle isn't installed and `image/gif` is included as a supported MIME type, Adaptive Media scales only one frame of the GIF, making a static GIF.
 
 Optimizing animated GIFs using Adaptive Media requires three steps: installing Gifsicle on your local server where DXP is running, setting the `PATH` environment variable, and then enabling Gifsicle in DXP's _System Settings_.
 
-1. Install [Gifsicle](https://www.lcdf.org/gifsicle/).
+1. Install [Gifsicle](https://www.lcdf.org/gifsicle/) and add it to path of the server environment.
 
 1. Navigate to the _Global Menu_ &rarr; _Control Panel_.
 
