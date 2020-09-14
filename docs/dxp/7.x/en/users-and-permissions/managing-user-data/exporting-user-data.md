@@ -4,7 +4,7 @@ One of the General Data Protection Regulation's (GDPR) tenets is that Users have
 
 Data portability means that a User has the right to receive their personal data in a machine-readable format.
 
-The Control Panel's User Management system natively supports the export of a User's personal data to a ZIP file for download. The data format for the data files is XML.
+The Control Panel's User Management system natively supports the export of a User's personal data to a ZIP file for download. The format is in XML format.
 
 ## Exporting and Downloading
 
@@ -18,7 +18,7 @@ To export user data,
 
    This opens the User's Export Personal Data screen.
 
-1. If there are no existing export processes shown, there's only one thing to do: click the *Add* button (![Add](../../images/icon-add.png)). The tool for exporting the User's data appears.
+1. If there are no existing export processes shown, click the *Add* button (![Add](../../images/icon-add.png)). The tool for exporting the User's data appears.
 
    ![The Export Personal Data tool lets you export all or some of the User's data.](./exporting-user-data/images/01.png)
 
@@ -26,7 +26,7 @@ To export user data,
 
 1. Click *Export*. You're taken back to the User's Export Personal Data screen, but now there's an export process in the list.
 
-   ![Once User data is successfully exported, the export process is displayed in the User's Export Personal Data list.](./exporting-user-data/images/02.png)
+   ![Once User data is successfully exported, the export process appears in the User's Export Personal Data list.](./exporting-user-data/images/02.png)
 
 1. Download the data. Click the Actions button (![Actions](../../images/icon-actions.png)) for the process and select *Download*.
 
