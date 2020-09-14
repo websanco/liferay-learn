@@ -80,7 +80,13 @@ The Role Change Request app can be deployed as a standalone app with a dedicated
 
 Once the Employee Request form is submitted, the assignees of the next step receive a [notification](../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md). Clicking on it brings them to the Review: Current Manager form.
 
-![Each form of the app is accessed via User Notification.](./creating-a-workflow-powered-application/images/03.png)
+![Each form of the app can be accessed via User Notification.](./creating-a-workflow-powered-application/images/03.png)
+
+Alternatively, manage the workflow process of the app's entries from the table view for the app. The app's default view is its table view, so for a standalone app like the Role Change Request, use its dedicated link to go to the app. Click an entry's Actions button (![Actions](../../images/icon-actions.png)).
+
+![Each form of the app can be accessed via the record's Actions menu.](./creating-a-workflow-powered-application/images/04.png)
+
+As with any workflow item, first assign the task to a User (use the _Assign To_ menu item). After that you can access the appropriate form by choosing the _Edit_ menu option.
 
 ```note::
    You cannot use the `My Workflow Tasks <../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task>`__ app to manage the steps of a Workflow Powered App.
