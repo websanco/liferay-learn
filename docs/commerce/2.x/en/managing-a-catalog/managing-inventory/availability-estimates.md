@@ -4,6 +4,24 @@ This article documents how to create Availability Estimates. If a product become
 
 A set of Availability Estimates are created when using an [Accelerator](../../starting-a-store/accelerators.md) to create a storefront.
 
+To create an Availability Estimate:
+
+1. Navigate to the _Global Application_ menu → _Commerce_ → _Availability Estimates_.
+
+    ![Availability Estimates are found in the Global Application.](./availability-estimates/images/05.png)
+
+1. Click the (+) button to add a new estimate.
+1. Enter the following:
+    * Title: 15-21 days
+    * Priority: 4.0
+1. Click _Save_.
+
+The new Availability Estimate has been added. Note that because the priority is set to _4.0_, this means this time period is displayed last in the menu.
+
+## Commerce 2.1 and Below
+
+A set of Availability Estimates are created when using an [Accelerator](../../starting-a-store/accelerators.md) to create a storefront.
+
 ![Managing Availability Estimates](./availability-estimates/images/01.png)
 
 To create an Availability Estimate:

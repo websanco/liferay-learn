@@ -8,7 +8,49 @@ When a product is **expired**, there is a set expiration date in the future so t
 
 ## Scheduling Product's Expiration
 
-Scheduling product expiration is accomplished through the _Control Panel_. To schedule product expiration:
+To schedule product expiration:
+
+1. Go to the _Global Applications_ menu → _Commerce_ → _Products_.
+1. Click on a product (for example, _U-Joint_).
+1. Uncheck the _Never Expire_ checkbox on the _Products Details_ tab. In this example, this configuration will affect all SKUs.
+1. Enter an expiration date and time in the future. All times are set using the GMT time zone.
+
+    ![Setting a Product's Expiration Date](./managing-product-publication/images/03.png)
+
+1. Click _Publish_.
+
+Once the changes are made, it may take some time for the product to be removed from the _Catalog_ page because of the check interval. By default, the check interval is set to 15 minutes. After the expiration date, the product will be not returned when searching on the _Catalog_ page. In the search container, the product status is shown as _Expired_.
+
+![Expired Status](./managing-product-publication/images/04.png)
+
+The product can be made visible again by entering a new expiration date and republishing the product.
+
+## Unpublishing a Product
+
+1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
+1. Click on a product (for example, _U-Joint_).
+    > Expand the _Schedule_ section if necessary.
+1. Uncheck the _Published_ checkbox.
+
+    ![Unchecked Published box](./managing-product-publication/images/01.png)
+
+1. Click _Save as Draft_.
+1. Navigate to the store site.
+1. Search for the product (_U-Joint_ in this example).
+
+![Unpublished U-Joint](./managing-product-publication/images/02.png)
+
+The product is not searchable in the catalog. In the _Control Panel_, the product's status is set to _Draft_.
+
+![Unpublished U-Joint](./managing-product-publication/images/05.png)
+
+## Commerce 2.1 and Below
+
+Settings in Commerce 2.1 and below are found in the _Control Panel_.
+
+### Scheduling Product's Expiration
+
+To schedule product expiration:
 
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product (for example, _U-Joint_).
@@ -19,13 +61,13 @@ Scheduling product expiration is accomplished through the _Control Panel_. To sc
 
 1. Click _Publish_.
 
-Once the changes are made, it may take some time for the product to be removed from the _Catalog_ page because of the check interval. By default, the check interval is set to 15 minutes. After the expiration date, the product will be not returned when searching on the _Catalog_ page. In the _Control Panel_, the product status is shown as _Expired_.
+Once the changes are made, it may take some time for the product to be removed from the _Catalog_ page because of the check interval. By default, the check interval is set to 15 minutes. After the expiration date, the product will be not returned when searching on the _Catalog_ page. In the search container, the product status is shown as _Expired_.
 
 ![Expired Status](./managing-product-publication/images/04.png)
 
 The product can be made visible again by entering a new expiration date and republishing the product.
 
-## Unpublishing a Product
+### Unpublishing a Product
 
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product (for example, _U-Joint_).

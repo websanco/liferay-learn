@@ -6,11 +6,15 @@ Liferay Commerce's _Inventory Management_ system is a single place for users to 
 
 Users can add inventory items, view the list of orders for a particular item (SKU), designate Safety Stock, and view historical changes to items. Inventory Management is also tied to the warehouses; from here, users can also view the stock available in each warehouse.
 
-To manage your inventory, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
+To manage your inventory, go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Inventory_.
+
+```tip::
+   Inventory Management is located in the _Control Panel_ if using Commerce 2.0 or 2.1.
+```
 
 ## Adding an Inventory Item
 
-Each inventory item is tracked by a SKU<!-- ; this SKU is semi-independent from the SKU created in the product catalog -->. Users can add multiple SKUs in the _Inventory Management_ and ensure that there is adequate quantities for each SKU.
+Each inventory item is tracked by a SKU. Users can add multiple SKUs in the _Inventory Management_ and ensure that there is adequate quantities for each SKU.
 
 To add an inventory item:
 

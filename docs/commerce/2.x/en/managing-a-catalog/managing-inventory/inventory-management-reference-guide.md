@@ -1,12 +1,12 @@
-# Inventory Administration Reference Guide
+# Inventory Management Reference Guide
 
 > Commerce 2.1+
 
-The Inventory section of the _Control Panel_ is used to manage product stock levels. This article introduces the functionality in the _Inventory_ section.
+Liferay Commerce's Inventory Management is used to manage product stock levels. This article introduces the functionality in the _Inventory_ menu.
 
-To access the Inventory Management, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
+To access the Inventory Management, navigate to the _Global Applications_ &rarr; _Commerce_ &rarr; _Inventory_.
 
-![The Inventory section is in the Control Panel.](./inventory-management-reference-guide/images/01.png)
+![Navigate to the Inventory Administration.](./inventory-management-reference-guide/images/01.png)
 
 The first screen displays product variants identified by their SKU code (instead of Product code) with availability details.
 
@@ -76,6 +76,12 @@ The Changelog tracks the following events:
 * When a quantity is moved between warehouses.
 * When a shipment is cancelled, the previously allocated quantities need to be returned.
 * Any update action to an inventory item.
+
+## Commerce 2.1
+
+Inventory Management is located in the _Control Panel_. To access Inventory Management, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
+
+The fields remain the same.
 
 ## Additional Information
 
