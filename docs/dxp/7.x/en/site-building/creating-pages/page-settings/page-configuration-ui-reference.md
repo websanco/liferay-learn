@@ -48,7 +48,7 @@ For basic Widget Pages, you can select a layout template that defines row and co
 
 ### Categorization
 
-In the *Categorization* section, you can categorize page content using *Topics* and *Tags*. These tools help organize pages so users can more easily find your site's content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../content-authoring-and-management/index.html#tags-and-categories).
+In the *Categorization* section, you can categorize page content using *Topics* and *Tags*. These tools help organize pages so users can more easily find your site's content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../../content-authoring-and-management/tags_and_categories.html).
 
 ![Categorize page content using Topics and Tags.](./page-configuration-ui-reference/images/06.png)
 
@@ -100,7 +100,7 @@ Here you can access additional settings to customize your individual page's cont
 
 **Custom Fields**: You can view and configure the *Custom Fields* you've defined for Site pages. See [Custom Fields](../../../installation-and-upgrades/setting-up-liferay-dxp/custom-fields.md) for more information.
 
-**Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](), [Page Fragments](), or [Themes]().
+**Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or [Themes]().
 
 ```note::
    The *Custom Fields* and *Embedded Widget* sections only appear once you've created custom fields and embedded widgets in a page.
