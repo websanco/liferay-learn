@@ -7,5 +7,5 @@ Automating Document Tagging
    automating-document-tagging/image-auto-tagging.md
    automating-document-tagging/document-auto-tagging.md
 
-.. include:: /content-authoring-and-management/documents-and-media/publishing-and-sharing/automating-document-tagging/README.rst
-   :start-line: 2
+-  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/automating-document-tagging/image-auto-tagging`
+-  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/automating-document-tagging/document-auto-tagging`
