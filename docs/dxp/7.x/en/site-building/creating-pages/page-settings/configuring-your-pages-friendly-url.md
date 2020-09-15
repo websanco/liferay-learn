@@ -10,7 +10,7 @@ To change a Page's friendly URL, open the *Product Menu* and go to *Site Builder
 
 ![Click on the Actions button for the Page you want to customize, and select Configure](./configuring-your-pages-friendly-url/images/01.png)
 
-Alternatively, you can access individual Page settings by navigating to the Page you want to customize and clicking on the *Configure Page* button (![Configure Page Button](../../../images/icon-cog.png)) at the top right of the *Application Bar*.
+Alternatively, you can access individual Page settings by navigating to the Page you want to customize and clicking on the *Configure Page* button (![Configure Page Button](../../../images/icon-control-menu-gear.png)) at the top right of the *Application Bar*.
 
 In the General tab, use the *Friendly URL* field to enter a new URL for the Page. To set a localized URL, click on the *Language Flag* and select your desired language. When finished, click *Save*.
 
