@@ -6,7 +6,7 @@ Create shipments first in the _Orders_ menu as part of [processing an order](../
    A single shipment may contain multiple orders but all the orders must be created by the *same* account.
 ```
 
-Navigate to _Control Panel_ → _Commerce_ → _Orders_. Select an order that is ready to be shipped and click the _Create Shipment_ button.
+Navigate to _Global Applications_ → _Commerce_ → _Orders_. Select an order that is ready to be shipped and click the _Create Shipment_ button.
 
 ![Shipments Menu](./introduction-to-shipments/images/04.png)
 
@@ -41,6 +41,12 @@ Once delivery has been confirmed, the _Delivered_ tab marks each phase in green 
 When delivery has been confirmed, the shipment process is marked delivered and the order is marked completed.
 
 ![Shipments Menu - Ready to Ship](./introduction-to-shipments/images/07.png)
+
+See the [Shipments Management Reference Guide](./shipments-management-reference-guide.md) to learn more about the specific features and fields.
+
+## Liferay Commerce 2.1
+
+Commerce 2.1 is virtually identically to the latest version, except that you access the _Orders_ menu via the _Control Panel_. Select an order that is ready to be shipped and click the _Create Shipment_ button.
 
 See the [Shipments Management Reference Guide](./shipments-management-reference-guide.md) to learn more about the specific features and fields.
 

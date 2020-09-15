@@ -1,6 +1,6 @@
 # Processing an Order
 
-Processing an order in Liferay Commerce consists of two stages: accepting an order and processing an order. Shipments are created while orders are processed. To begin processing all orders, including [Subscriptions](../subscriptions/managing-subscriptions.md) (recurring orders), navigate to the [_Orders_ menu](./orders-menu-reference-guide.md) in the _Control Panel_.
+Processing an order in Liferay Commerce consists of two stages: accepting an order and processing an order. Shipments are created while orders are processed. To begin processing all orders, including [Subscriptions](../subscriptions/managing-subscriptions.md) (recurring orders), navigate to the [_Orders_ menu](./orders-menu-reference-guide.md) in the _Global Applications_ &rarr; _Commerce_ menu.
 
 ## Accepting an Order
 
@@ -8,11 +8,10 @@ Users can accept an order once it has completed the checkout process. Note that 
 
 To accept an order:
 
-1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
+1. Navigate to the _Global Applications_ &rarr; _Commerce_ &rarr; _Orders_.
 
-    ![The Orders menu is in the Control Panel](./processing-an-order/images/01.png)
+    ![The Orders menu is in the Global Applications menu.](./processing-an-order/images/07.png)
 
-1. Click the _Open_ tab.
 1. Click on the Order ID (for example, _42838_).
 1. Click the _Accept Order_ button.
 
@@ -32,9 +31,7 @@ After the order has been accepted, there are three options:
 
 ### Processing Subscription Orders
 
-You can manage all subscription orders in the _Subscription_ menu in the _Control Panel_.
-
-![Subscription menu](./processing-an-order/images/03.png)
+You can manage all subscription orders in the _Subscription_ menu in the _Global Applications_.
 
 See the [Managing Subscriptions](../subscriptions/managing-subscriptions.md) article to learn more.
 
@@ -45,6 +42,54 @@ Creating a shipment begins in the _Orders_ menu as a continuation of processing 
 If the order has no shippable items (for example, a service contract or online products), users cannot create a shipment.
 
 ## Completed Orders
+
+An order is marked as Completed when the customer has received all the items purchased. (For physical stock, this is usually when the items have been delivered to the customer.) An order is also marked as Completed when it is cancelled. At this point, a Completed order cannot not return to a previous status.
+
+## Commerce 2.1
+
+### Accepting an Order
+
+Users can accept an order once it has completed the checkout process. Creating a shipment is part of processing the order.
+
+To accept an order:
+
+1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
+
+    ![The Orders menu is in the Control Panel](./processing-an-order/images/01.png)
+
+1. Click the _Open_ tab.
+1. Click on the Order ID (for example, _42838_).
+1. Click the _Accept Order_ button.
+
+    ![Click Accept Order button to begin processing.](./processing-an-order/images/02.png)
+
+The order has been accepted and can be processed.
+
+### Processing an Accepted Order
+
+After the order has been accepted, there are three options:
+
+* **Cancel**: The order is cancelled and is moved automatically on the Orders menu from the _Pending_ to the _Completed_ tab. The order cannot be edited again and customers must submit a new order.
+* **Hold**: Processing the order is temporarily halted until additional actions are taken (for example, the store has to restock low inventory or resolve payment issues).
+* **Create Shipment**: The order is ready to be [shipped](../shipments/introduction-to-shipments.md).
+
+![Cancel, Hold, or Create Shipment](./processing-an-order/images/04.png)
+
+#### Processing Subscription Orders
+
+You can manage all subscription orders in the _Subscription_ menu in the _Control Panel_.
+
+![Subscription menu](./processing-an-order/images/03.png)
+
+See the [Managing Subscriptions](../subscriptions/managing-subscriptions.md) article to learn more.
+
+### Creating a Shipment
+
+Creating a shipment begins in the _Orders_ menu as a continuation of processing an accepted order. See the [Creating a Shipment](../shipments/creating-a-shipment.md) article to learn more.
+
+If the order has no shippable items (for example, a service contract or online products), users cannot create a shipment.
+
+### Completed Orders
 
 An order is marked as Completed when the customer has received all the items purchased. (For physical stock, this is usually when the items have been delivered to the customer.) An order is also marked as Completed when it is cancelled. At this point, a Completed order cannot not return to a previous status.
 

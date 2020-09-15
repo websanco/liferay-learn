@@ -4,13 +4,11 @@ Subscriptions are a special type of recurring order and are managed differently 
 
 ## Fulfilling a Subscription Order
 
+In Commerce 3.0, _Orders_ and _Subscriptions_ are managed in the _Global Applications_ menu.
+
 To begin fulfilling a subscription order that has been placed:
 
-1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
-1. Click on the _Open_ tab.
-
-    ![Orders Open tab](./managing-subscriptions/images/01.png)
-
+1. Navigate to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Orders_.
 1. Click on the _Order ID_ to begin.
 1. Click the _Pending_ button. This moves the order into the Pending status.
 
@@ -84,6 +82,28 @@ To configure subscriptions:
       * **Subscription Suspension Allowed** - If checked, allows users to suspend a subscription.
 
 1. Click the _Save_ button to apply the changes.
+
+## Commerce 2.1
+
+Commerce Orders and Subscriptions are managed in the _Control Panel._
+
+1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
+1. Click on the _Open_ tab.
+
+    ![Orders Open tab](./managing-subscriptions/images/01.png)
+
+1. Click on the _Order ID_ to begin.
+1. Click the _Pending_ button. This moves the order into the Pending status.
+
+    ![Orders Open tab](./managing-subscriptions/images/07.png)
+
+1. Click the _Accept Order_ button. This moves the order into the Processing status.
+
+    ![Orders Accept Order](./managing-subscriptions/images/02.png)
+
+1. Once the subscription order has been accepted, follow the steps to create a shipment. See [Creating a Shipment](../shipments/creating-a-shipment.md) to learn more.
+
+Once the order has been accepted, it appears on the [Subscriptions menu](./subscription-administration-reference-guide.md).
 
 ## Additional Information
 

@@ -1,6 +1,6 @@
 # Shipments Management Reference Guide
 
-This guide documents all the features in _Shipments Management_ menu. To access _Shipments Management_, navigate to the _Control Panel_ &rarr; _Shipments_.
+This guide documents all the features in _Shipments Management_ menu. To access _Shipments Management_, navigate to the _Global Applications_ &rarr; _Shipments_.
 
 ![Shipments Management Overview page](./shipments-management-reference-guide/images/01.png)
 

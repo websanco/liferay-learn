@@ -1,6 +1,12 @@
 # Orders Menu Reference Guide
 
-Orders can be [viewed and managed](./processing-an-order.md) by an administrator in the _Orders_ menu. To access the _Orders_ menu, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
+Orders can be [viewed and managed](./processing-an-order.md) by an administrator in the _Orders_ menu. To access the _Orders_ menu, click the _Global Applications_ button &rarr; _Commerce_ &rarr; _Orders_.
+
+![Navigate to the Orders menu in the Global Applications.](./orders-menu-reference-guide/images/11.png)
+
+## Commerce 2.1
+
+To access the _Orders_ menu, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
 
 There are five tabs at the top: _All_, _Open_, _Pending_, _Processing_, and _Completed_.
 

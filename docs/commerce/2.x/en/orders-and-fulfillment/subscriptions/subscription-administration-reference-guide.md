@@ -1,6 +1,20 @@
 # Subscription Administration Reference Guide
 
-Subscriptions are [managed](./managing-subscriptions.md) in the _Subscriptions_ menu in the _Control Panel_. This article describes the various functions and fields available in the _Subscriptions_ menu.
+Subscriptions are [managed](./managing-subscriptions.md) in the _Subscriptions_ menu in the _Global Applications_. This article describes the various functions and fields available in the _Subscriptions_ menu.
+
+There are five fields:
+
+| Field | Description |
+| --- | --- |
+| ID | This is the Subscription's ID. |
+| Status | The Status displays the order's status |
+| Order ID | This is the Order ID that the subscription is based on. |
+| Account ID | The Account ID corresponds to the account that created the subscription. |
+| Account Name | The Account Name corresponds to the account name.|
+
+## Commerce 2.1 and Below
+
+Subscriptions are [managed](./managing-subscriptions.md) in the _Subscriptions_ menu in the _Control Panel_.
 
 Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Subscriptions_.
 
@@ -14,9 +28,11 @@ There are five fields:
 | Status | The Status displays the order's status |
 | Order ID | This is the Order ID that the subscription is based on. |
 | Account ID | The Account ID corresponds to the account that created the subscription. |
-| Account Name | The Account Name corresponds to the account name.||
+| Account Name | The Account Name corresponds to the account name.|
 
 Click on the Subscription's _ID_ to view the subscription order's details.
+
+<!--Need to finish this for Commerce 3.0; blocked by https://issues.liferay.com/browse/COMMERCE-4813 -->
 
 There are three tabs: _General_, _Shipments_, and _Payments_.
 
