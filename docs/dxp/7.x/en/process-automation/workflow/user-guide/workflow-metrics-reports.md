@@ -28,7 +28,7 @@ Three valuable reports on pending items are provided in the Dashboard: the Pendi
 
 **Workload by Step:** Workload by Step shows a breakdown of the items that are in each step of the workflow process, by their SLA status (Overdue or On Time).
 
-**Workload by Assignee:** The Workload by Assignee chart shows a breakdown of the workflow process's assignees, in descending order by the number of items in their queue. This chart offers a valuable glimpse to identify overloaded assignees, but click the _View all Assignees_ link to see the [All Items](#viewing-all-workflow-items) view, featuring a more robust table with better filtering and search capabilities. Filtering by workflow step, for example, helps identify assignees that are overloaded and assignees that have a lighter load. Re-assigning some tasks could remove a bottleneck.
+**Workload by Assignee:** The Workload by Assignee chart shows a breakdown of the workflow process's assignees, in descending order by the number of items in their queue. This chart offers a valuable glimpse to identify overloaded assignees. Click the _View all Assignees_ link to see the [All Items](#viewing-all-workflow-items) view, featuring a more robust table with better filtering and search capabilities. Filtering by workflow step, for example, helps identify assignees that are overloaded and assignees that have a lighter load. Re-assigning some tasks could remove a bottleneck.
 
 ## Understanding Process Performance
 
@@ -40,7 +40,7 @@ The *Performance* tab shows metrics for items that have completed the workflow p
 
 **Completion Velocity:** A line chart displays the completion rate for the workflow process. The default display shows the number of completed workflow instances per day, for the last 30 days.
 
-The overall throughput rate for the time period is displayed in the top of the chart (as _Inst/timeUnit_), while the trend-line is presented in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
+The overall throughput rate for the time period appears in the top of the chart (as _Inst/timeUnit_), while the trend-line appears in the chart body. The overall performance metric and the chart body are updated when you select a new time period; the time unit changes depending on the total time period you're measuring. For the Last 30 Days duration and longer periods, the time unit is configurable (instances per day, week, or month):
 
 ![View the completion rate of items in a workflow process.](./workflow-metrics-reports/images/03.png)
 
@@ -50,7 +50,7 @@ The overall throughput rate for the time period is displayed in the top of the c
 
 To see a full view of all the step performance metrics, click _View All Steps_.
 
-**Performance by Assignee:** See each workflow assignee's average completion time and total completed tasks. Filtering this metric by workflow step give a fine-grained view into where an assignee's bottlenecks lie.
+**Performance by Assignee:** See each workflow assignee's average completion time and total completed tasks. Filtering this metric by workflow step gives a fine-grained view into where an assignee's bottlenecks lie.
 
 ![View the completion rate of items in a workflow process over time.](./workflow-metrics-reports/images/05.png)
 
@@ -58,35 +58,21 @@ To see a full view of the workflow assignees, click _View All Assignees_.
 
 ## Filtering Metrics by Time
 
-The time range for which metrics are calculated and displayed is configurable.
-
-**Today**: Calculate _Inst/Hour_ from _00:00_, or _12:00 AM_, of the current day until the current time (rounded to the nearest whole hour).
-
-**Yesterday**: Calculate _Inst/Hour_  From _00:00-23:59_, or _12:00 AM to 11:59 PM_, of the previous day.
-
-**Last 7 Days**: Calculate _Inst/Day_. The current day counts as 1 day, so this is from 6 days ago to the current day.
-
-**Last 30 Days**: Calculate the _Inst/Week_ or the _Inst/Day_. The current day counts as 1 day, so this is from 29 days ago to the current day.
-
-**Last 90 Days**: Calculate the _Inst/Month_, _Inst/Week_, or _Inst/Day_. The current day counts as 1 day, so this is from 89 days ago to the current day.
-
-**Last 180 Days**: Calculate the _Inst/Month_ or _Inst/Week_. The current day counts as 1 day, so this is from 179 days ago to the current day.
-
-**Last Year**: Calculate the _Inst/Month_ or _Inst/Week_. The current day counts as 1 day, so this is from 364 days (365 for a leap year) ago to the current day.
+You can filter by time, including events from today, yesterday, the last seven days, the last 30 days, 90 days, 180 days, or the last year. As you change the time period, the metric changes (e.g., Instances per hour, week, etc.) to provide a reasonable view of the data.
 
 ## Viewing all Workflow Items
 
-There's a table view for all the items in the workflow that provides handy filters for detailed inquiries. To access it, hover over the SLA status you're interested in, from either the Dashboard or Performance tabs. Click on it to enter the All Items screen from the overview report and a more detailed table appears, including the following columns:
+There's a table view for all the items in the workflow that provides handy filters for detailed inquiries. To access it, hover over the SLA status you want, from either the Dashboard or Performance tabs. Click it to enter the All Items screen from the overview report, and a more detailed table appears, including the following columns:
 
 **ID**: This is the workflow item's numeric identifier to the system. Importantly, you can click this to enter the Item Detail view.
 
-**Item Subject**: This shows a human readable summary of the item, to help administrators identify the item.
+**Item Subject**: A human readable summary of the item, to help administrators identify the item.
 
-**Process Step**: This identifies where the item is in the workflow.
+**Process Step**: Identifies where the item is in the workflow.
 
-**Created By**: This shows the user name of the submitting User.
+**Created By**: Shows the user name of the submitting User.
 
-**Creation Date**: This shows the date and time the item was submitted to the workflow.
+**Creation Date**: Shows the date and time the item was submitted to the workflow.
 
 The All Items view can be filtered so you can find the subset of items you want to analyze.
 
@@ -100,7 +86,7 @@ Filter items based on whether they're Overdue, On Time, or Untracked.
 
 **On Time**: On Time items have not breached _any_ SLA deadline.
 
-**Untracked**: Untracked items are items in the workflow process that aren't currently under the purview of an SLA. They might be in the workflow process but haven't reached the step identified as the SLA start, or they might pre-date the SLA definition entirely.
+**Untracked**: Untracked items are in the workflow process but aren't currently under the purview of an SLA. They might be in the workflow process but haven't reached the step identified as the SLA start, or they might pre-date the SLA definition entirely.
 
 ### Filtering by Process Status and Completion Period
 
