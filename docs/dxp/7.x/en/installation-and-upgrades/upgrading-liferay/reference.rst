@@ -4,6 +4,7 @@ Reference
 .. toctree::
    :maxdepth: 2
 
+   reference/data-cleanup.md
    reference/database-upgrade-tool-reference.md
    reference/default-setting-changes-in-7-3.md
    reference/default-setting-changes-in-7-2.md
