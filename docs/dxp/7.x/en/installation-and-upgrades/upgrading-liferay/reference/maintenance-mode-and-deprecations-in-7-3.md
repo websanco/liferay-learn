@@ -51,4 +51,4 @@ Features deprecated in earlier Liferay versions may also need to be considered, 
 ## Addtional Information
 
 * [7.3 Breaking Changes](../../../liferay-internals/reference/7-3-breaking-changes.md)
-* [7.3 Default Setting Changes](./7-3-efault-setting-changes.md)
+* [7.3 Default Setting Changes](./default-setting-changes-in-7-3.md)
