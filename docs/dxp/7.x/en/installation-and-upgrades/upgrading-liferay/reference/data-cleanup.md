@@ -6,6 +6,8 @@ Here's how to clean up obsolete data:
 
 1. In the *Control Panel*, navigate to *System Settings* &rarr; *Upgrades* (in the *Platform* category) &rarr; *Data Cleanup*. The Data Cleanup screen appears.
 
+    ![Data Cleanup screen](./data-cleanup/images/01.png)
+
 1. Check the modules you want to clean up and click *Save*.
 
     ```note::
