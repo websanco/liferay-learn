@@ -1,18 +1,16 @@
 # Embedding Widgets in Templates
 
-You can also embed widgets in web content templates. Core apps and custom apps, instanceable or non-instanceable can be embedded in web content templates. Below is an example of embedding a Web Content widget in FreeMarker:
+You can embed widgets in web content templates: it doesn't matter whether they're core apps, custom apps, instanceable, or non-instanceable. Below is an example of embedding a Web Content widget in FreeMarker:
 
 ```markup
 <@liferay_portlet["runtime"] portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
 ```
 
-To embed a widget:
-
-1. Navigate to your site's (the default DXP site in this example) _Site Administration_.
+1. Navigate to your Site's (the default DXP site in this example) _Site Administration_.
 1. Click _Content & Data_ &rarr; _Web Content_.
 1. Click on the _Templates_ tab.
 
-    ![The Templates tab is where all the templates are displayed.](./embedding-widgets-in-templates/images/01.png)
+    ![The Templates tab shows the templates in your Site.](./embedding-widgets-in-templates/images/01.png)
 
 1. Click the Add (![Add Icon](../../../../images/icon-add.png)) icon.
 1. Enter a name for the template (for example, _Template 1_)
@@ -40,7 +38,7 @@ Below is an example of embedding a template in FreeMarker:
 <#include "${templatesPath}/[template-key]" />
 ```
 
-The *Template Key* can be found when editing a previously published template.
+You can find the *Template Key* when editing a previously published template.
 
 ![You can find the Template Key when view the Edit page for a template.](./embedding-widgets-in-templates/images/04.png)
 
