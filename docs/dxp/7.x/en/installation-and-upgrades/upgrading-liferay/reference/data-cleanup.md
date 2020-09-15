@@ -11,7 +11,7 @@ Here's how to clean up obsolete data:
 1. Check the modules you want to clean up and click *Save*.
 
     ```note::
-       To save the cleanup settings to a `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *Export*.
+       To save the cleanup settings to a `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_, click the *Actions* menu and select *Export*.
     ```
 
    Module data cleanup executes.
