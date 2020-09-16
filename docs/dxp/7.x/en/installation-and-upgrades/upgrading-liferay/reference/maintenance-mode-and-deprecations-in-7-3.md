@@ -28,10 +28,10 @@ In some new Liferay versions, Liferay stops enhancing specific items or makes pl
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | DDM, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
-| Elasticsearch 6 Connector | Archived | Replaced by Elasticsearch 7 Connector. |
+| Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
 | Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life is Dec 31, 2020](https://www.adobe.com/products/flashplayer/end-of-life.html#:~:text=As%20previously%20announced%20in%20July,(%E2%80%9CEOL%20Date%E2%80%9D)). |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
-| JQuery default global Liferay variables | Disabled | ou can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
+| JQuery default global Liferay variables | Disabled | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
 | SOAP Web Services | disabled | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
@@ -48,7 +48,7 @@ Features deprecated in earlier Liferay versions may also need to be considered, 
 * [7.1 Deprecations](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
 * [7.0 Deprecations](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
-## Addtional Information
+## Additional Information
 
 * [7.3 Breaking Changes](../../../liferay-internals/reference/7-3-breaking-changes.md)
 * [7.3 Default Setting Changes](./default-setting-changes-in-7-3.md)
