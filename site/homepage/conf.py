@@ -4,7 +4,7 @@
 
 author = "Liferay"
 copybutton_image_path="img/paste.svg"
-copyright = "2019, Liferay"
+copyright = "2020, Liferay"
 exclude_patterns = ['node_modules']
 extensions = ["notfound.extension", "recommonmark", "sphinx_copybutton", "sphinx_markdown_tables"]
 html_additional_pages = {"index": "index.html"}

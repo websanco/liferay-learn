@@ -19,7 +19,7 @@ product_path = version_path.parent;
 
 author = "Liferay"
 copybutton_image_path="img/paste.svg"
-copyright = "2019, Liferay"
+copyright = "2020, Liferay"
 extensions = ["notfound.extension", "recommonmark", "sphinx_copybutton", "sphinx_markdown_tables"]
 html_context = {
 	"available_languages": os.listdir('..'),
