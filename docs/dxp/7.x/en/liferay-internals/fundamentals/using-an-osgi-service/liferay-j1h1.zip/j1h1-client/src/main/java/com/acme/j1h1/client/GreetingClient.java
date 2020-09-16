@@ -29,9 +29,7 @@ import org.osgi.service.component.annotations.Reference;
 public class GreetingClient {
 
 	public void greet(String name) {
-		Greeting greeting = _greeting;
-
-		greeting.greet(name);
+		_greeting.greet(name);
 	}
 
 	@Reference
