@@ -32,26 +32,24 @@ The product and section landing pages are achieved via [Vue](https://vuejs.org/)
 
 ## Building the Site
 
-> **MacOS--Replace the `find` and `sed` tools:** 
-> This script requires the `gnu` versions of `find` and `sed`. You can install these and replace the default versions: 
+> **MacOS--Replace the `find` and `sed` tools:**
+> This script requires the `gnu` versions of `find` and `sed`. You can install these and replace the default versions:
 >
->    1. Use `brew` to install the tools:
->    
->       brew install findutils
+> 1. Use `brew` to install the tools:
 >
->       brew install gnu-sed
->    
+>     brew install findutils
 >
->    2. Prepend the PATH with the path to the new tools, so they will be used in place of the native `find` and `sed`:
+>     brew install gnu-sed
 >
->       export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+> 2. Prepend the PATH with the path to the new tools, so they will be used in place of the native `find` and `sed`:
 >
->       export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
->    
+>     export PATH="/usr/local/opt/findutils/libexec/gnubin:\$PATH"
+>
+>     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:\$PATH"
 
 Sphinx projects are typically built with a `Makefile`. This project is built with a shell script instead. Once executed it generates a `build/output` directory inside `site`. The final static html pages are there.
 
-The Build script has two flavors: build for production or build a test site. Usage and behavior is as follows:
+The Build script has two flavors: build for production or build for development. Usage and behavior is as follows:
 
 Build for production:
 
@@ -65,7 +63,7 @@ Build for production:
 ./build_site.sh prod
 ```
 
-Build for testing:
+Build for development:
 
 ```bash
 ./build_site.sh
