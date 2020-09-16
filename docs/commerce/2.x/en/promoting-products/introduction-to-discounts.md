@@ -11,6 +11,10 @@ Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr
    Discounts are not the same as a *Price List*. For more information on Pricing see `Introduction to Product Pricing Methods <../managing-a-catalog/managing-price/introduction-to-product-pricing-methods.md>`_, `Creating a Price List <../managing-a-catalog/managing-price/creating-a-price-list.md>`_, and `Adding Tiered Pricing <../managing-a-catalog/managing-price/adding-tiered-pricing.md>`_.
 ```
 
+```tip::
+   If creating *Discounts* in Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Many Commerce settings in the legacy versions are located there or in the *Site Administration*.
+```
+
 ## Discount Types
 
 The following types of discounts are available:
@@ -22,16 +26,9 @@ The following types of discounts are available:
 | Shipments | The discount is applied to the shipment costs, either by a percentage or flat sum. |
 | Subtotal | The order's subtotal is reduced, usually before taxes and other fees are applied. |
 | Total | The discount is applied to the entire total. |
-
-<!-- | Pricing Class | The discount is applied to all products in the same Product Group. | -->
+| Product Groups | The discount is applied to all products in the same Product Group. |
 
 ![Select a Discount Type.](./introduction-to-discounts/images/01.png)
-
-<!--
-
-The devs inadvertently added Pricing Class as a new discount type which adds a third tab called Pricing Classes. Unfortunately, it is not usable because the rest of the feature is not completed. It should be released in the 2.1.2 release.
-
--->
 
 ## Coupon Codes
 
@@ -78,10 +75,6 @@ If using the _Has all of these products_ or the _Has one of these products_ disc
 ![Discount rule types dropdown](./introduction-to-discounts/images/05.png)
 
 After selecting the applicable products, customers will receive a discount for these goods depending on which of these rules has been chosen.
-
-## Liferay Commerce 2.1 and Below
-
-   _Discounts_ are located in the _Control Panel_. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_.
 
 ## What's Next
 
