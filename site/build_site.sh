@@ -134,9 +134,9 @@ function generate_static_html {
 		do
 			sed -i 's/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
+			sed -i "s/LIFERAY_LEARN_DXP_VERSION/${LIFERAY_LEARN_DXP_VERSION}/g" ${html_file_name}
 			sed -i 's/README.html"/index.html"/g' ${html_file_name}
 			sed -i 's/README.html#/index.html#/g' ${html_file_name}
-			sed -i "s/LIFERAY_LEARN_DXP_VERSION/${LIFERAY_LEARN_DXP_VERSION}/g" ${html_file_name}
 		done
 
 		#
