@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.acme.j1h1.client;
+package com.acme.j1h1.osgi.commands;
 
 import com.acme.j1h1.Greeting;
 
@@ -23,10 +23,10 @@ import org.osgi.service.component.annotations.Reference;
  * @author James Hinkey
  */
 @Component(
-	property = {"osgi.command.function=greet", "osgi.command.scope=greet"},
+	property = {"osgi.command.function=greet", "osgi.command.scope=j1h1"},
 	service = Object.class
 )
-public class GreetingClient {
+public class GreetingOSGiCommands {
 
 	public void greet(String name) {
 		_greeting.greet(name);
