@@ -4,7 +4,7 @@ set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-readonly LIFERAY_LEARN_DXP_VERSION_TOKEN=%5B%24LIFERAY_LEARN_DXP_VERSION%24%5D
+readonly LIFERAY_LEARN_DXP_VERSION_TOKEN=\\[\$LIFERAY_LEARN_DXP_VERSION\$\\]
 readonly LIFERAY_LEARN_DXP_VERSION_VALUE=7.3.4-ga5
 
 function activate_venv {
@@ -110,6 +110,11 @@ function generate_sphinx_input {
 	done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
+
+	for md_file_name in `find build/input -name "*.md" -type f`
+	do
+		sed -i "s/${LIFERAY_LEARN_DXP_VERSION_TOKEN}/${LIFERAY_LEARN_DXP_VERSION_VALUE}/g" ${md_file_name}
+	done
 }
 
 function generate_static_html {
@@ -135,7 +140,6 @@ function generate_static_html {
 		do
 			sed -i 's/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
-			sed -i "s/${LIFERAY_LEARN_DXP_VERSION_TOKEN}/${LIFERAY_LEARN_DXP_VERSION_VALUE}/g" ${html_file_name}
 			sed -i 's/README.html"/index.html"/g' ${html_file_name}
 			sed -i 's/README.html#/index.html#/g' ${html_file_name}
 		done
