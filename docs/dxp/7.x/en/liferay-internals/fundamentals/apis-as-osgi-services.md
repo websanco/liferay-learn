@@ -47,8 +47,8 @@ Start up the example modules.
     Each module JAR file is generated to that module's `build/libs` folder.
 
      ```
-     p9g2-api/build/libs/com.liferay.learn.p9g2.api-1.0.0.jar
-     p9g2-impl/build/libs/com.liferay.learn.p9g2.impl-1.0.0.jar
+     p9g2-api/build/libs/com.acme.p9g2.api-1.0.0.jar
+     p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar
      ```
 
 1. Deploy the module JARs.
@@ -56,20 +56,20 @@ Start up the example modules.
     API:
 
     ```bash
-    docker cp p9g2-api/build/libs/com.liferay.learn.p9g2.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
+    docker cp p9g2-api/build/libs/com.acme.p9g2.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
     ```
 
     Implementation:
 
     ```bash
-    docker cp p9g2-impl/build/libs/com.liferay.learn.p9g2.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
+    docker cp p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
     ```
 
 1. Confirm module startup in the Docker container console.
 
     ```
-    STARTED com.liferay.learn.p9g2.api_1.0.0
-    STARTED com.liferay.learn.p9g2.impl_1.0.0
+    STARTED com.acme.p9g2.api_1.0.0
+    STARTED com.acme.p9g2.impl_1.0.0
     ```
 
 1. Go to `http://localhost:8080` and sign in.
@@ -85,30 +85,30 @@ Start up the example modules.
     Output:
 
     ```
-    1194|Active     |   15|Acme P9G2 Greeting API (1.0.0)|1.0.0
-    1195|Active     |   15|Acme P9G2 Greeting Impl (1.0.0)|1.0.0
+    1150|Active     |   15|Acme P9G2 Greeting API (1.0.0)|1.0.0
+    1151|Active     |   15|Acme P9G2 Greeting Implementation (1.0.0)|1.0.0
     ```
 
 1. List the Implementation module service capabilities by executing the following command, replacing the number with your module's ID.
 
     ```bash
-    g! inspect capability service  1195
+    g! inspect capability service 1195
     ```
 
     Output:
 
     ```
-    com.liferay.learn.p9g2.impl_1.0.0 [1195] provides:
-    --------------------------------------------------
-    service; com.acme.p9g2.greeting.Greeting with properties:
-       service.id = 12779
-       service.bundleid = 1195
+    com.acme.p9g2.impl_1.0.0 [1151] provides:
+    -----------------------------------------
+    service; com.acme.p9g2.Greeting with properties:
+       service.id = 22933
+       service.bundleid = 1151
        service.scope = bundle
-       component.name = com.acme.p9g2.greeting.impl.P9G2Greeting
-       component.id = 6022
+       component.name = com.acme.p9g2.internal.P9G2Greeting
+       component.id = 8462
       ```
 
-The module provides one service: `com.acme.p9g2.greeting.Greeting`. The `component.name` property indicates that the module's `com.acme.p9g2.internal.greeting.P9G2Greeting` component implements the service.
+The module provides one service: `com.acme.p9g2.Greeting`. The `component.name` property indicates that the module's `com.acme.p9g2.internal.P9G2Greeting` component implements the service.
 
 You verified that the `P9G2Greeting` component provides the `Greeting` service. Learn how the modules produce this service.
 
@@ -144,13 +144,13 @@ The `Greeting` capability is defined.
 
 ### Export the Interface Package
 
-The API module `bnd.bnd` file describes the module and exports the `com.acme.p9g2.greeting` interface package.
+The API module `bnd.bnd` file describes the module and exports the `com.acme.p9g2` package.
 
 ```properties
 Bundle-Name: Acme P9G2 Greeting API
-Bundle-SymbolicName: com.liferay.learn.p9g2.api
+Bundle-SymbolicName: com.acme.p9g2.api
 Bundle-Version: 1.0.0
-Export-Package: com.acme.p9g2.greeting
+Export-Package: com.acme.p9g2
 ```
 
 The [package export](./exporting-packages.md) shares the `Greeting` interface with other modules.
@@ -160,9 +160,9 @@ The [package export](./exporting-packages.md) shares the `Greeting` interface wi
 The Implementation module `P9G2Greeting` class implements the `Greeting` interface:
 
 ```java
-package com.acme.p9g2.internal.greeting;
+package com.acme.p9g2.internal;
 
-import com.acme.p9g2.greeting.Greeting;
+import com.acme.p9g2.Greeting;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -200,43 +200,43 @@ When you build the Implementation module JAR, Bnd generates the `[JAR]/META-INF/
 
 ```properties
 Manifest-Version: 1.0
-Bnd-LastModified: 1599056546410
+Bnd-LastModified: 1600290335650
 Bundle-ManifestVersion: 2
-Bundle-Name: Acme P9G2 Greeting Impl
-Bundle-SymbolicName: com.liferay.learn.p9g2.impl
+Bundle-Name: Acme P9G2 Greeting Implementation
+Bundle-SymbolicName: com.acme.p9g2.impl
 Bundle-Version: 1.0.0
 Created-By: 1.8.0_252 (Oracle Corporation)
-Import-Package: com.acme.p9g2.greeting;version="[1.0,2)"
+Import-Package: com.acme.p9g2;version="[1.0,2)"
 Javac-Debug: on
 Javac-Deprecation: off
 Javac-Encoding: UTF-8
-Private-Package: com.acme.p9g2.greeting.impl
-Provide-Capability: osgi.service;objectClass:List<String>="com.acme.j1
- h1.greeting.Greeting";uses:="com.acme.p9g2.greeting"
+Private-Package: com.acme.p9g2.internal
+Provide-Capability: osgi.service;objectClass:List<String>="com.acme.p9
+ g2.Greeting";uses:="com.acme.p9g2"
 Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
  nent)(version>=1.3.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
  e=JavaSE)(version=1.8))"
-Service-Component: OSGI-INF/com.acme.p9g2.greeting.impl.P9G2Greeting.x
- ml
+Service-Component: OSGI-INF/com.acme.p9g2.internal.P9G2Greeting.xml
 Tool: Bnd-4.3.0.201909301554
 ```
 
 Here are key service-related headers that Bnd generates in the manifest:
 
 ```properties
-Import-Package: com.acme.p9g2.greeting;version="[1.0,2)"
+Import-Package: com.acme.p9g2;version="[1.0,2)"
 ```
 
 The [`Import-Package`](./importing-packages.md) header imports the API module's public package that contains the `Greeting` service definition.
 
 ```properties
-Provide-Capability: osgi.service;objectClass:List<String>="com.acme.j1h1.greeting.Greeting";uses:="com.acme.p9g2.greeting"
+Provide-Capability: osgi.service;objectClass:List<String>="com.acme.p9
+ g2.Greeting";uses:="com.acme.p9g2"
 ```
 
 The `Provide-Capability` header configures the `P9G2Greeting` component service.
 
 ```properties
-Service-Component: OSGI-INF/com.acme.p9g2.greeting.impl.P9G2Greeting.xml
+Service-Component: OSGI-INF/com.acme.p9g2.internal.P9G2Greeting.xml
 ```
 
 The `Service-Component` header lists a configuration file for each of the module's service components.
