@@ -39,8 +39,6 @@ As mentioned above, clicking the *Info* icon (![Info](../../../images/icon-infor
 
 There are two tabs in the info panel: Details, and Versions. Details is selected by default and shows the following:
 
-![Here is the top half of Details section.](./previewing-files/images/04.png)
-
 | Detail | Description |
 | --- | --- |
 | **Owner** | The file's owner. |
@@ -50,11 +48,6 @@ There are two tabs in the info panel: Details, and Versions. Details is selected
 | **Document Type** | The file's document type. |
 | **Extension** | The file's extension. |
 | **Size** | The file's size on disk. |
-
-![Here is the bottom half of Details section.](./previewing-files/images/05.png)
-
-| Detail | Description |
-| --- | --- |
 | **Modified** | The user that last modified the file, and when it was last modified. |
 | **Created** | The user that created the file, and when it was created. |
 | **Ratings** | The file's average user rating. |
@@ -68,7 +61,7 @@ To view the file's version history, select the *Versions* tab near the top of th
 
 Documents can be organized in [folders](./creating-folders.md). Clicking the top right (![Actions](../../../images/icon-actions.png)) Options menu displays the possible actions:
 
-![Here are the Folder Options.](./previewing-files/images/06.png)
+![Here are the Folder Options.](./previewing-files/images/04.png)
 
 | Action | Description |
 | --- | --- |
