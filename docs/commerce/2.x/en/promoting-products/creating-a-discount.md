@@ -4,7 +4,7 @@ Follow the steps below to create a discount by selecting the discount type, the 
 
 To create a new discount:
 
-1. Go to the _Control Panel_ → _Commerce_ → _Discounts_.
+1. Go to the _Global Applications_ → _Commerce_ → _Discounts_.
 1. Click the (![Add](../images/icon-add.png)) button to add a new Discount.
 1. Enter a name: _Spring Sale_.
 1. Select a discount type (for example, _Apply to Subtotal_) from the _Target_ drop down. (See [Discount Types](./introduction-to-discounts.md#types-of-discounts) to learn more about the different discount types.)
@@ -21,6 +21,10 @@ To create a new discount:
 1. Click _Publish_.
 
 Your store now has an active discount with 20% off selected goods for those in the specified Account Group.
+
+```tip::
+   _Discounts_ are located in the _Control Panel_ in Commerce 2.0 and 2.1.
+```
 
 ## Adding Rules to a Discount
 

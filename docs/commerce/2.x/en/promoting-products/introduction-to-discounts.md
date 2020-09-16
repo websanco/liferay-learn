@@ -1,6 +1,6 @@
 # Introduction to Discounts
 
-Discounts are created in the _Discounts_ menu in the _Control Panel_. Users can create multiple types of discounts and incentives, such as:
+Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr; _Commerce_. Users can create multiple types of discounts and incentives, such as:
 
 * Reducing the price of specific products
 * Offering free shipping
@@ -78,6 +78,10 @@ If using the _Has all of these products_ or the _Has one of these products_ disc
 ![Discount rule types dropdown](./introduction-to-discounts/images/05.png)
 
 After selecting the applicable products, customers will receive a discount for these goods depending on which of these rules has been chosen.
+
+## Liferay Commerce 2.1 and Below
+
+   _Discounts_ are located in the _Control Panel_. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_.
 
 ## What's Next
 
