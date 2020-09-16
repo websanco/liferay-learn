@@ -1,6 +1,6 @@
 # Importing Packages
 
-Modules often depend on Java packages from other modules. The dependent module must import such packages into its class path and other modules in the OSGi framework must [export](./exporting-packages.md) those packages. The OSGi framework wires the packages to the importing module's class path. The module JAR's `META-INF/MANIFEST.MF` file uses the `Import-Package` OSGi header to import packages.
+You often find yourself in a position of needing functionality provided by another module. To access this functionality, you must import packages from other modules into your module's classpath. This requires that those other modules have already [exported](./exporting-packages.md) their packages containing the functionality you want. The OSGi framework wires the packages to the importing module's classpath. The module JAR's `META-INF/MANIFEST.MF` file uses the `Import-Package` OSGi header to import packages.
 
 ```properties
 Import-Package: javax.portlet,com.liferay.portal.kernel.util
@@ -17,7 +17,7 @@ Read below to explore how package imports are specified in these scenarios.
 
 ## Automatic Package Imports
 
-[Workspace](../../developing-applications/tooling/liferay-workspace.md)-based projects from the tutorial examples (see [Module Projects](./module-projects.md)) or created using [Blade CLI](../../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md) or [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md) use [Bnd](http://bnd.bndtools.org/). When you build the project's JAR, Bnd detects the packages the module uses and generates a `META-INF/MANIFEST.MF` file and assigns the packages to an `Import-Package` header.
+[Workspace](../../developing-applications/tooling/liferay-workspace.md)-based projects from the tutorial examples (see [Module Projects](./module-projects.md)) or created using [Blade CLI](../../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md) or [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md) use [Bnd](http://bnd.bndtools.org/). A Gradle plugin invokes Bnd, which can then read the Gradle dependencies and resolve the imports. When you build the project's JAR, Bnd detects the packages the module uses, generates a `META-INF/MANIFEST.MF` file, and assigns the packages to an `Import-Package` header. In that sense, package import is automatic, because you must only define your dependencies in one place: the build script. 
 
 ```note::
    Liferay's project templates use `a third-party Gradle plugin <https://github.com/TomDmitriev/gradle-bundle-plugin>`_ to invoke Bnd.
@@ -38,7 +38,7 @@ And here's the `Import-Package` header that Bnd generates in sample JAR `META-IN
 Import-Package: com.liferay.portal.kernel.service;version="[4.3,5)"
 ```
 
-The build file specifies dependencies. Bnd examines the module class path to import packages the module uses. The examination includes all classes found in the class path--even those from embedded [third party library JARs](./configuring-dependencies/resolving-third-party-library-package-dependencies.md).
+The build file specifies dependencies. Bnd examines the module classpath to import packages the module uses. The examination includes all classes found in the classpath---even those from embedded [third party library JARs](./configuring-dependencies/resolving-third-party-library-package-dependencies.md).
 
 ```note::
    For a plugin WAR project, Liferay's `WAB Generator <../reference/deploying-wars-wab-generator.md>`_ detects packages used in the WAR's JSPs, descriptor files, and classes (in ``WEB-INF/classes`` and embedded JARs). Also the WAB Generator searches the ``web.xml``, ``liferay-web.xml``, ``portlet.xml``, ``liferay-portlet.xml``, and ``liferay-hook.xml`` descriptor files. It adds package imports for classes that are neither found in the plugin's ```WEB-INF/classes``` folder nor in its embedded JARs.
@@ -51,7 +51,7 @@ If a module references a class in only the following places, you must manually a
 * Unrecognized descriptor file
 * Custom or unrecognized descriptor element or attribute
 * Reflection code
-* Class loader code
+* Classloader code
 
 Here's how to manually import the package:
 
