@@ -19,16 +19,16 @@ In the *Redirects* tab, you can create and manage both *Permanent* (301) and *Te
 
 While both automatically direct users to a specified destination, they each have unique implications for your Site. Before creating a redirect, consider which type is best for your situation.
 
-* **Permanent**: Use a 301 code to inform search engines and other tools accessing your Site that the requested resource has been permanently relocated. Search engines will replace the old URL with the new destination in search results, and browsers will cache the new destination for an indeterminate amount of time. A 301 should only be used when you intend to use the destination URL indefinitely. This improves SEO and helps avoid unintended caching.
-* **Temporary**: Use a 302 code to inform search engines and other tools accessing your Site that the requested resource is temporarily moved. A 302 is useful when you want to conduct A/B testing or redirect traffic while fixing a problem, without impacting your Site ranking. DXP uses 302 codes by default.
+* **Permanent**: Use a 301 code to inform search engines and other tools accessing your Site that the requested resource has been permanently relocated. Search engines will replace the old URL with the new destination in search results, and browsers will cache the new destination for an indeterminate amount of time. A 301 code should only be used when you intend to use the destination URL indefinitely. This improves SEO and helps avoid unintended caching.
+* **Temporary**: Use a 302 code to inform search engines and other tools accessing your Site that the requested resource is temporarily moved. A 302 code is useful when you want to conduct A/B testing or redirect traffic while fixing a problem, without impacting your Site ranking. DXP uses 302 codes by default.
 
-See [Search Engine Optimization](./search_engine_optimization.html) to learn more about the implications of each redirect type for SEO. Also, see [A/B Testing](./ab_testing.html) to learn about using 302s when testing.
+See [Search Engine Optimization](./search_engine_optimization.html) to learn more about the implications of each redirect type for SEO. Also, see [A/B Testing](./ab_testing.html) to learn about using 302 codes when testing.
 
 ### Creating a Redirect
 
 Follow these steps to create a redirect:
 
-1. Click on the *Add* button (![Add button](./../../images/icon-add.png)). This leads to the *New Redirect* screen.
+1. Click on the *Add* button (![Add button](../../images/icon-add.png)). This leads to the *New Redirect* screen.
 
    ![Click on the Add button to create a new redirect.](./using-the-redirection-tool/images/03.png)
 
@@ -38,7 +38,7 @@ Follow these steps to create a redirect:
 
 1. Enter an absolute URL into the *Destination URL* field to specify the link for your desired destination.
 
-   This destination can be internal or external, but must always be entered as an absolute URL. You can also click on the *Shortcut* icon (![Shortcut icon](./../../images/icon-shortcut.png)) to check the entered URL.
+   This destination can be internal or external, but must always be entered as an absolute URL. You can also click on the *Shortcut* icon (![Shortcut icon](../../images/icon-shortcut.png)) to check the entered URL.
 
    ![Enter an absolute URL into the Destination URL field.](./using-the-redirection-tool/images/05.png)
 
@@ -60,12 +60,12 @@ DXP also returns an error if you attempt to create multiple redirects for the sa
 
 ### Editing and Removing Redirects
 
-Once you've successfully added a URL redirect, you can edit or remove it at any time by clicking on its *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) and selecting *Edit* or *Delete*.
+Once you've successfully added a URL redirect, you can edit or remove it at any time by clicking on its *Actions* button (![Actions button](../../images/icon-actions.png)) and selecting *Edit* or *Delete*.
 
 ![You can edit or remove a redirect at any time.](./using-the-redirection-tool/images/09.png)
 
 ```note::
-   Changes made to a redirect may not be immediately seen for users whose browsers have cached the old redirect configuration.
+   Changes made to a redirect may not immediately display in browsers that have cached the old redirect configuration.
 ```
 
 ## 404 URLs
@@ -80,19 +80,21 @@ Here, you can search, filter, and order cataloged 404 URLs, as well as convenien
 
 You can filter cataloged requests by both *type* and *date*. When filtering by type, you can choose to display *Active*, *Ignored*, or *All* 404 URLs. When filtering by date, you can determine whether to view all URLs, or only those that have been requested within the last day, week, or month. You can also order cataloged requests by their *modified date* or *number of requests*.
 
-By default, this page displays all Active URLs by number in descending order.
+By default, this page displays all active URLs by number in descending order.
 
 ![You can filter and order cataloged 404 URLs.](./using-the-redirection-tool/images/11.png)
 
 ### Ignoring/Unignoring 404 URLs
 
-You can determine whether a URL is active or ignored by clicking on its *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) and selecting *Ignore*/*Unignore*. When ignored, the URL is hidden in the default *Active* view, though you can change its status at any time.
+You can determine whether a URL is active or ignored by clicking on its *Actions* button (![Actions button](../../images/icon-actions.png)) and selecting *Ignore*/*Unignore*. When ignored, the URL is hidden in the default *Active* view, though you can change its status at any time.
 
 ![You can determine whether a URL is active or ignored.](./using-the-redirection-tool/images/12.png)
 
 ### Creating Redirects for 404 URLs
 
-You can easily create a redirect for a 404 URL by clicking on its *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) and selecting *Create Redirect*. This directs you to a *New Redirect* screen where the source URL is prefilled with the selected 404. Simply finish filling out the form, and click on *Create* to save the new redirect.
+You can easily create a redirect for a 404 URL by clicking on its *Actions* button (![Actions button](../../images/icon-actions.png)) and selecting *Create Redirect*. This directs you to a *New Redirect* screen where the source URL is prefilled with the selected 404.
+
+Finish filling out the form, and click on *Create* to save the new redirect.
 
 ![Create redirects for 404 URLs.](./using-the-redirection-tool/images/13.png)
 
