@@ -47,7 +47,7 @@ You can place these fields on a Structure:
 
 **Integer:** An input that accepts whole numbers
 
-**Link to Page:** A selector to include a link to another page in the same site
+**Link to Page:** A selector to include a link to another page in the same Site
 
 **Number:** An input that accepts any type of number
 
@@ -59,9 +59,9 @@ You can place these fields on a Structure:
 
 **Text:** A text input for short entries, such as titles or headings
 
-**Text Box:** A textbox input for long entries, such as the body of your content
+**Text Box:** A text input for long entries, such as the body of your content
 
-**Web Content:** A web content selector to include an existing Web Content Article
+**Web Content:** A selector to include an existing Web Content Article
 
 See [Editing and Configuring Structure Fields](./configuring-structure-fields.md) for more information on configuring and editing Structure fields.
 

@@ -1,6 +1,6 @@
 # Configuring Structure Fields
 
-You can edit the fields in a Structure, as well as the properties of each field:
+You can edit Structure fields and their properties:
 
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
@@ -26,11 +26,11 @@ You can edit the fields in a Structure, as well as the properties of each field:
 
 **Type:** The type of field placed in the definition. This is not editable but is available to reference from a Web Content Template.
 
-**Field Label:** The text to display above the field to the user.
+**Field Label:** The text to display above the field. 
 
 **Show Label:** Whether to show the *Field Label.* The default value is *Yes*.
 
-**Required:** Whether to mark the field as required. If a field is required, users must enter a value for it to submit content using the Structure. The default value is *No*.
+**Required:** Whether to mark the field as required. If a field is required, Users must enter a value for it to submit content using the Structure. The default value is *No*.
 
 **Name:** The variable name used in Web Content Templates for this field. You should enter a descriptive name. A default name is automatically generated.
 
@@ -46,11 +46,11 @@ You can edit the fields in a Structure, as well as the properties of each field:
 
 **Localizable:** Whether the field can be localized in the user's language. The default value is *Yes*.
 
-**Repeatable:** Whether the user can duplicate the field while creating the Web Content. For example, you can have a repeatable author field so the user can duplicate the field to enter a second author for an article. The default value is *No*. If set to *Yes*, users can click a `+` icon on the field to duplicate it while creating the Web Content.
+**Repeatable:** Whether the User can duplicate the field while creating the Web Content. For example, you can have a repeatable author field so the User can duplicate the field to enter a second author for an article. The default value is *No*. If set to *Yes*, users can click a `+` icon on the field to duplicate it while creating the Web Content.
 
 **Multiple:** Whether a Select field can have multiple selected options. The default value is *No*.
 
-**Options:** The available options for a *Select* field or *Radio* field. You can add and remove options as well as edit each individual option's display name (the name the user sees when creating the Web Content) and value (the value stored for the option, which can be retrieved in the Web Content Template) pair.
+**Options:** The available options for a *Select* field or *Radio* field. You can add and remove options as well as edit each individual option's display name (the name the User sees when creating the Web Content) and value (the value stored for the option, which can be retrieved in the Web Content Template) pair.
 
 **Style:** Optional CSS styles for the *Separator* field.
 
@@ -58,7 +58,7 @@ You can edit the fields in a Structure, as well as the properties of each field:
 
 When you hover over a Structure field, these options appear in its context menu:
 
-* **Settings** (![Settings](../../../../images/icon-settings.png)): Changes the name and label, and other information about the field, like whether or not it is required.
+* **Settings** (![Settings](../../../../images/icon-settings.png)): Changes the name, label, and other information about the field, like whether or not it is required.
 * **Delete** (![Delete](../../../../images/icon-app-trash.png)): Removes the field from the structure.
 * **Duplicate** (![Duplicate](../../../../images/icon-duplicate.png)): Duplicates the field and all its settings and iterates the *Name* to avoid conflicts.
 
