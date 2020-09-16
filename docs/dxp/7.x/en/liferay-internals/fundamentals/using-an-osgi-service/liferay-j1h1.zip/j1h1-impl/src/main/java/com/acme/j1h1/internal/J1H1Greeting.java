@@ -12,29 +12,21 @@
  * details.
  */
 
-package com.acme.j1h1.greeting.command;
+package com.acme.j1h1.internal;
 
-import com.acme.j1h1.greeting.Greeting;
+import com.acme.j1h1.Greeting;
 
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 
 /**
  * @author James Hinkey
  */
-@Component(
-	property = {"osgi.command.function=greet", "osgi.command.scope=greet"},
-	service = Object.class
-)
-public class GreetingCommand {
+@Component(service = Greeting.class)
+public class J1H1Greeting implements Greeting {
 
+	@Override
 	public void greet(String name) {
-		Greeting greeting = _greeting;
-
-		greeting.greet(name);
+		System.out.println("Hello " + name + "!");
 	}
-
-	@Reference
-	private Greeting _greeting;
 
 }

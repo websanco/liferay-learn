@@ -1,3 +1,3 @@
-Bundle-Name: Acme P9G2 Greeting
-Bundle-SymbolicName: com.liferay.learn.p9g2.impl
+Bundle-Name: Acme P9G2 Greeting Implementation
+Bundle-SymbolicName: com.acme.p9g2.impl
 Bundle-Version: 1.0.0

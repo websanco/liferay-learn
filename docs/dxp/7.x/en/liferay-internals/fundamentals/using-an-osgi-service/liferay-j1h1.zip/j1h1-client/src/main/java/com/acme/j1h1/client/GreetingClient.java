@@ -12,16 +12,29 @@
  * details.
  */
 
-package com.acme.p9g2.greeting;
+package com.acme.j1h1.client;
 
-import aQute.bnd.annotation.ProviderType;
+import com.acme.j1h1.Greeting;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
 /**
  * @author James Hinkey
  */
-@ProviderType
-public interface Greeting {
+@Component(
+	property = {"osgi.command.function=greet", "osgi.command.scope=greet"},
+	service = Object.class
+)
+public class GreetingClient {
 
-	public void greet(String name);
+	public void greet(String name) {
+		Greeting greeting = _greeting;
+
+		greeting.greet(name);
+	}
+
+	@Reference
+	private Greeting _greeting;
 
 }

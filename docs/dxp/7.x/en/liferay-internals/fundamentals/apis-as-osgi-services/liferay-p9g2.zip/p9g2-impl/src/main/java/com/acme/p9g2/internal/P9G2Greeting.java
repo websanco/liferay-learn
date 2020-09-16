@@ -12,16 +12,21 @@
  * details.
  */
 
-package com.acme.k8s2.greeting;
+package com.acme.p9g2.internal;
 
-import aQute.bnd.annotation.ProviderType;
+import com.acme.p9g2.Greeting;
+
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author James Hinkey
  */
-@ProviderType
-public interface Greeting {
+@Component(service = Greeting.class)
+public class P9G2Greeting implements Greeting {
 
-	public void greet(String name);
+	@Override
+	public void greet(String name) {
+		System.out.println("Hello " + name + "!");
+	}
 
 }

@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.acme.j1h1.greeting;
+package com.acme.k8s2;
 
 import aQute.bnd.annotation.ProviderType;
 

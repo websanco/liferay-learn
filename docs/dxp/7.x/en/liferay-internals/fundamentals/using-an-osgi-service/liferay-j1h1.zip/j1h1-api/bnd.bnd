@@ -1,4 +1,4 @@
 Bundle-Name: Acme J1H1 Greeting API
-Bundle-SymbolicName: com.liferay.learn.j1h1.api
+Bundle-SymbolicName: com.acme.j1h1.api
 Bundle-Version: 1.0.0
-Export-Package: com.acme.j1h1.greeting
+Export-Package: com.acme.j1h1

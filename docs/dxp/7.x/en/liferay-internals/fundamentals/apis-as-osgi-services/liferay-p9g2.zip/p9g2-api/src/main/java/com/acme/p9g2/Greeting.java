@@ -12,21 +12,16 @@
  * details.
  */
 
-package com.acme.j1h1.internal.greeting;
+package com.acme.p9g2;
 
-import com.acme.j1h1.greeting.Greeting;
-
-import org.osgi.service.component.annotations.Component;
+import aQute.bnd.annotation.ProviderType;
 
 /**
  * @author James Hinkey
  */
-@Component(service = Greeting.class)
-public class J1H1Greeting implements Greeting {
+@ProviderType
+public interface Greeting {
 
-	@Override
-	public void greet(String name) {
-		System.out.println("Hello " + name + "!");
-	}
+	public void greet(String name);
 
 }

@@ -1,4 +1,4 @@
 Bundle-Name: Acme P9G2 Greeting API
-Bundle-SymbolicName: com.liferay.learn.p9g2.api
+Bundle-SymbolicName: com.acme.p9g2.api
 Bundle-Version: 1.0.0
-Export-Package: com.acme.p9g2.greeting
+Export-Package: com.acme.p9g2
