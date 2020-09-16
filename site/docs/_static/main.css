@@ -9505,6 +9505,9 @@ header {
         border-left: 3px solid #42BFC2;
         margin-left: -1.5rem;
         padding-left: 1.25rem; }
+  .landing-page .show-more {
+    color: #0053F0;
+    margin-left: -0.75rem; }
   .landing-page .subsection {
     font-size: 0.875rem;
     list-style: none;

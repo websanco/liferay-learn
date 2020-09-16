@@ -48,6 +48,11 @@
 		}
 	}
 
+	.show-more {
+		color: $primary-d1;
+		margin-left: -$spacing-sm;
+	}
+
 	.subsection {
 		font-size: $h5-font-size;
 		list-style: none;
