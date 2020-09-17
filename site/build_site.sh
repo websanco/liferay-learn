@@ -111,6 +111,10 @@ function generate_sphinx_input {
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
 
+	#
+	# Replace tokens.
+	#
+
 	for md_file_name in `find build/input -name "*.md" -type f`
 	do
 		sed -i "s/${LIFERAY_LEARN_DXP_VERSION_TOKEN}/${LIFERAY_LEARN_DXP_VERSION_VALUE}/g" ${md_file_name}
