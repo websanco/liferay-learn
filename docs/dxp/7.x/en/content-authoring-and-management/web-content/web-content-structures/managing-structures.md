@@ -4,20 +4,20 @@ You can manage Structures from the Structures Page:
 
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
-1. Open the *Actions Menu* (![Action Menu](../../../../images/icon-actions.png)) next to the Structure and select one of the [available actions](#available-actions).
+1. Open the *Actions Menu* (![Action Menu](../../../images/icon-actions.png)) next to the Structure and select one of the [available actions](#available-actions).
 1. Click *Save* to apply your changes.
 
 ## Available Actions
 
-You can perform these actions from the Structure's Actions Menu (![Action Menu](../../../../images/icon-actions.png)): 
+You can perform these actions from the Structure's Actions Menu (![Action Menu](../../../images/icon-actions.png)):
 
-**Edit:** Opens the Structure so you can update it. See [Configuring Structure Fields](./03-editing-and-configuring-structures-content.md) for more information.
+**Edit:** Opens the Structure so you can update it. See [Configuring Structure Fields](./configuring-structure-fields.md) for more information.
 
 **Edit Default Values:** Opens a form to set default values for the Structure's fields. See [below](#editing-default-values) for more information.
 
-**Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](managing-templates.md) for more information.
+**Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](../web-content-templates/managing-templates.md) for more information.
 
-**Permissions:** Opens the permissions configuration dialog for the Structure. See [Assigning Permissions to Web Content Structures and Templates](../web-content-templates/assigning-permissions-to-structures-and-templates.md) for more information.
+**Permissions:** Opens the permissions configuration dialog for the Structure. See [Assigning Permissions to Web Content Structures and Templates](./assigning-permissions-to-structures-and-templates.md) for more information.
 
 **Copy:** Opens a form to copy the Structure and set its name. See [below](#copying-an-existing-structure) for more information.
 
@@ -37,7 +37,7 @@ You can set the default values for a Structure's fields. For example, a Structur
 1. Click *Save* to apply the changes.
 
 ```tip::
-   You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and `Configuring Structures' Content <./editing-and-configuring-structures-content.md)>`_
+   You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and `Configuring Structures' Content <./configuring-structure-fields.md)>`_
 ```
 
 ## Copying an Existing Structure

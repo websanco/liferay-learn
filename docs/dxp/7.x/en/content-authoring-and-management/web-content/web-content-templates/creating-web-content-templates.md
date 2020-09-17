@@ -6,11 +6,11 @@ Structures define the available fields for creating Web Content, while Web Conte
    Web Content Templates are written in the FreeMarker Template Language (FTL).
 ```
 
-Download the [Newspaper Article Structure and Template](/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-templates/creating-web-content-templates/liferay-a2e7.zip) to follow along with the example. Unzip it to a convenient location on your system. 
+Download the [Newspaper Article Structure and Template](/dxp/7.x/en/content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates/liferay-a2e7.zip) to follow along with the example. Unzip it to a convenient location on your system.
 
 1. Open the Product Menu and go to the Site Menu &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Templates* tab.
-1. Click the *Add button* (![Add Template](../../../../images/icon-add.png)) to create a new Web Content Template.
+1. Click the *Add button* (![Add Template](../../../images/icon-add.png)) to create a new Web Content Template.
 1. Enter the title of your new Web Content Template and add your code to the script window. You can add the code from the example *Newspaper Article* Template by clicking the *Choose File* button below the Script window and importing the `/liferay-a2e7/a2e7-impl/newspaper-article-template.ftl` file. If you're creating a Web Content Template to [embed in another Template](./advanced-web-content-templates/embedding-web-content-templates.md), you can skip to step eight.
 
    ![Add your template code (FreeMarker) to the script window.](./creating-web-content-templates/images/01.png)
@@ -31,7 +31,7 @@ Download the [Newspaper Article Structure and Template](/dxp/7.x/en/content-auth
     ${Title.getData()}
     ${Content.getData()}
     <#if Imagem1j5.getData()?? && Imagem1j5.getData() != "">
-    	<img alt="${Imagem1j5.getAttribute("alt")}" data-fileentryid="${Imagem1j5.getAttribute("fileEntryId")}" src="${Imagem1j5.getData()}" />
+      <img alt="${Imagem1j5.getAttribute("alt")}" data-fileentryid="${Imagem1j5.getAttribute("fileEntryId")}" src="${Imagem1j5.getData()}" />
     </#if>
     ```
 
@@ -42,11 +42,11 @@ Download the [Newspaper Article Structure and Template](/dxp/7.x/en/content-auth
     <hr>
     <p>${Content.getData()}</p>
     <#if Imagem1j5.getData()?? && Imagem1j5.getData() != "">
-    	<img 
-        alt="${Imagem1j5.getAttribute("alt")}" 
-        class="text-center" 
-        data-fileentryid="${Imagem1j5.getAttribute("fileEntryId")}" 
-        src="${Imagem1j5.getData()}" 
+      <img
+        alt="${Imagem1j5.getAttribute("alt")}"
+        class="text-center"
+        data-fileentryid="${Imagem1j5.getAttribute("fileEntryId")}"
+        src="${Imagem1j5.getData()}"
       />
     </#if>
     ```
@@ -57,5 +57,5 @@ Once you've created the Web Content Template, you can [create a Web Content Arti
 
 ## Related Information
 
-* [Creating Structures](./creating-structures.md)
+* [Creating Structures](../web-content-structures/creating-structures.md)
 * [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)

@@ -8,6 +8,8 @@ Web Content Structures are the building blocks for Web Content Articles. They de
 
 To understand these benefits, consider the example of an online news magazine. Each article must contain the same type of information: a title, a subtitle, an author, and one or more pages of text and images that comprise the body of the article. With only basic content creation, each author may submit articles with different types of information. For example, some authors may include a subtitle, while others may not. This requires the magazine editor to spend time reviewing the articles to make sure they contain the right information. To solve this problem, the editor can provide a Structure that defines the required information for each article, so writers know exactly what elements a complete article requires.
 
+![Structures define standardized fields for web content creators.](./understanding-web-content-structures/images/01.png)
+
 When you use structures, you enforce a format for your content, so writers know exactly what elements a complete article needs. In this situation, the editor of the magazine provides a form that can be formatted automatically using a [template](../web-content-templates/creating-web-content-templates.md).
 
 Using structures, the magazine editor must no longer spend time updating every article to a particular format, and writers can save time formatting their content.

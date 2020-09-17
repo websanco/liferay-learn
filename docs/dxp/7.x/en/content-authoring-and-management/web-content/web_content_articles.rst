@@ -6,5 +6,4 @@ Web Content Articles
 
    web-content-articles/adding-a-basic-web-content-article.md
 
-.. include:: /content-authoring-and-management/web-content/user-guide/web-content-articles/README.rst
-   :start-line: 2
+-  :doc:`/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article`

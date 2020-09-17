@@ -4,7 +4,7 @@ By default, Web Content structure fields holding a single value (Date, Decimal, 
 
 The steps below show how to map a Web Content Template to a Fragment.
 
-1. [Create a Web Content Template](../../../content-authoring-and-management/web-content/user-guide/03-web-content-templates/README.md) that uses the same Structure as the Web Content Article that contains the field you want to map. For example, the Web Content Article below uses the Structure *Web Content with Audience*.
+1. [Create a Web Content Template](../../../content-authoring-and-management/web-content/03-web-content-templates/README.md) that uses the same Structure as the Web Content Article that contains the field you want to map. For example, the Web Content Article below uses the Structure *Web Content with Audience*.
 
     ![Create a Template that uses the Same Structure as the Web Content Article.](./mapping-web-content-templates-to-fragments/images/01.png)
 

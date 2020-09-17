@@ -11,7 +11,7 @@ You can edit Structure fields and their properties:
     ```
 
 1. Add, [remove](#structure-field-options), or reorganize the fields in the Structure.
-1. Select the field you want to configure and click the *Settings* tab, or hover over the field and click the *Settings* (![Settings icon](../../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. You can also perform [other actions](#structure-field-options) in the context menu.
+1. Select the field you want to configure and click the *Settings* tab, or hover over the field and click the *Settings* (![Settings icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. You can also perform [other actions](#structure-field-options) in the context menu.
 1. [Configure your desired settings](#configurable-settings) for the field and *Save* the changes.
 
 ```tip::
@@ -58,9 +58,9 @@ You can edit Structure fields and their properties:
 
 When you hover over a Structure field, these options appear in its context menu:
 
-* **Settings** (![Settings](../../../../images/icon-settings.png)): Changes the name, label, and other information about the field, like whether or not it is required.
-* **Delete** (![Delete](../../../../images/icon-app-trash.png)): Removes the field from the structure.
-* **Duplicate** (![Duplicate](../../../../images/icon-duplicate.png)): Duplicates the field and all its settings and iterates the *Name* to avoid conflicts.
+* **Settings** (![Settings](../../../images/icon-settings.png)): Changes the name, label, and other information about the field, like whether or not it is required.
+* **Delete** (![Delete](../../../images/icon-app-trash.png)): Removes the field from the structure.
+* **Duplicate** (![Duplicate](../../../images/icon-duplicate.png)): Duplicates the field and all its settings and iterates the *Name* to avoid conflicts.
 
 ## Related Information
 

@@ -1,6 +1,6 @@
 # Web Content
 
-[Web Content Articles](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html) are important assets for presenting site visitors with information. Analytics Cloud gives you important insights into how site users are engaging with your content.
+[Web Content Articles](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.html) are important assets for presenting site visitors with information. Analytics Cloud gives you important insights into how site users are engaging with your content.
 
 ![Analytics data for web content can be viewed in a table format.](web-content/images/01.png)
 

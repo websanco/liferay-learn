@@ -19,7 +19,7 @@ Consider the following information when you assign permissions to Structures and
 
 1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab to set permissions for Structures, or the *Templates* tab to set permissions for Templates.
-1. For the Web Content Template where you want to assign permissions, click the *Actions* button (![Actions](../../../../images/icon-actions.png)) and select *Permissions*.
+1. For the Web Content Template where you want to assign permissions, click the *Actions* button (![Actions](../../../images/icon-actions.png)) and select *Permissions*.
 1. Select the permissions you need for your Roles.
 1. Click *Save*.
 

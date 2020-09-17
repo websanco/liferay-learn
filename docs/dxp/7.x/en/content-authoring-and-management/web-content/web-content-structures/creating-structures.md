@@ -4,7 +4,7 @@ Follow these steps to create a Structure:
 
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
-1. Click the *Add button* (![Add Structure](../../../../images/icon-add.png)) to create a new Structure.
+1. Click the *Add button* (![Add Structure](../../../images/icon-add.png)) to create a new Structure.
 1. Enter the title of your new Structure and, optionally, choose its language.
 1. Drag and drop the [available fields](#structure-fields) onto the Structure and [configure their settings](./configuring-structure-fields.md#configurable-settings) to create the Structure.
 

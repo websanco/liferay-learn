@@ -4,9 +4,14 @@ Web Content
 .. toctree::
    :maxdepth: 3
 
-   web-content/user_guide.rst
+   web-content/web_content_articles.rst
+   web-content/web_content_structures.rst
+   web-content/web_content_templates.rst
+   web-content/auto_tagging.rst
    web-content/developer_guide.rst
-   web-content/apis.rst
 
-.. include:: /content-authoring-and-management/web-content/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: ../landingpage_template.html
+
+.. raw:: html
+   :file: web-content/landing.html

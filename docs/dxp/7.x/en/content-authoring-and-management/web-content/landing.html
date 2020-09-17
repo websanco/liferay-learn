@@ -1,0 +1,57 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Web Content Articles',
+					sectionURL: 'web-content/web_content_articles.html',
+					subsections: [
+						{
+							name: 'Adding a Basic Web Content Article',
+							url: 'web-content/web-content-articles/adding-a-basic-web-content-article.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Web Content Structures',
+					sectionURL: 'web-content/web_content_structures.html',
+					subsections: [
+						{
+							name: 'Understanding Web Content Structures',
+							url: 'web-content/web-content-structures/understanding-web-content-structures.html'
+						},
+						{
+							name: 'Creating Structures',
+							url: 'web-content/web-content-structures/creating-structures.html'
+						},
+						{
+							name: 'Configuring Structure Fields',
+							url: 'web-content/web-content-structures/understanding-web-content-structures.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Web Content Templates',
+					sectionURL: 'web-content/web_content_templates.html',
+					subsections: [
+						{
+							name: 'Creating Web Content Templates',
+							url: 'web-content/web-content-templates/creating-web-content-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Auto Tagging (Coming Soon)',
+					sectionURL: 'web-content/auto_tagging.html',
+				},
+				{
+					sectionName: 'Developer Guide (Coming Soon)',
+					sectionURL: 'web-content/developer_guide.html',
+				},
+			]
+		}
+	})
+</script>

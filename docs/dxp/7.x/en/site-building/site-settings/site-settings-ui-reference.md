@@ -83,7 +83,7 @@ If you created your Site using a *Site Template*, it's displayed here, along wit
 
 ### Asset Auto Tagging
 
-Here you can enable or disable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/web-content/user-guide/auto_tagging.md) for more information. 
+Here you can enable or disable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/web-content/auto_tagging.md) for more information. 
 
 ![You can enable or disable asset auto tagging for a Site.](./site-settings-ui-reference/images/09.png)
 
