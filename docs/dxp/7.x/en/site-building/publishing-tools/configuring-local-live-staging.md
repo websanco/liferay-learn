@@ -1,6 +1,6 @@
 # Configuring Local Live Staging
 
-With *Local Live Staging*, both your Staging and Live environments are hosted on the same Liferay server. When enabled, Liferay DXP creates a local clone of your Site that serves as the Staging environment, while your original instance becomes your Live environment.
+With Local Live Staging, both your Staging and Live environments are hosted on the same Liferay server. When enabled, Liferay DXP creates a local clone of your Site that serves as the Staging environment, while your original instance becomes your Live environment.
 
 Both environments share the same JVM, database, selected application data, and configurations, such as properties set in the `portal-ext.properties` file.
 
@@ -28,7 +28,7 @@ Follow these steps to set up Local Live Staging for your DXP instance:
    ![Select the data and content types you want to stage.](./configuring-local-live-staging/images/04.png)
 
    ```warning::
-      When an application is checked, its data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
+      When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
    ```
 
 1. Click on *Save* to initiate the cloning process. The duration of this process depends on the size of your Site.
@@ -41,7 +41,7 @@ Once the process is complete, you are ready to use Local Live Staging. See [Stag
 
 ## Disabling Local Live Staging
 
-If for any reason you need to disable Staging for your Site, you can easily do so from your staging environment. However, be aware that disabling Local Live Staging will delete the Staging environment, along with all unpublished content. For this reason, ensure all necessary information is published or preserved elsewhere before disabling Staging. This process may take some time, depending on the size of your Staging environment. So it's best not to disable staging when your DXP instance is busy.
+If for any reason you must disable Staging for your Site, you can do that from your staging environment. However, be aware that disabling Local Live Staging deletes the Staging environment, along with all unpublished content. For this reason, ensure all necessary information is published or preserved elsewhere before disabling Staging. This process may take some time, depending on the size of your Staging environment. It's best not to disable staging when your DXP instance is busy.
 
 Follow these steps to disable Local Live Staging:
 

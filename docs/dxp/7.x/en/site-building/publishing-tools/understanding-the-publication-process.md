@@ -11,23 +11,23 @@ From a low level perspective, staging is a relationship between two Sites, where
 
 ### Export Phase
 
-During *Export*, your publication configuration is processed and necessary referenced entities are gathered. Then everything is processed into the instance's own file format, and it is either stored locally or transferred to the remote live DXP instance.
+During Export, your publication configuration is processed and necessary referenced entities are gathered. Then everything is processed into the instance's own file format, and it is either stored locally or transferred to the remote live DXP instance.
 
 ### Validation Phase
 
-During *Validation*, everything is checked to determine whether it's possible to start the import process. This includes verifying the file versions and integrity, checking for additional system information (e.g., language settings), and ensuring that the files do not reference missing content.
+During Validation, everything is checked to determine whether it's possible to start the import process. This includes verifying the file versions and integrity, checking for additional system information (e.g., language settings), and ensuring that the files do not reference missing content.
 
 If anything is not verified during the publication process, the transactional database reverts the Site back to its original state, discarding the current publication. This is a necessary action to safeguard against publishing incomplete information, which could break an otherwise well-designed live Site.
 
-However, if the file system is not database-stored (e.g., DBStore), it's not transactional and isn't reverted if a staging failure occurs. This could cause a discrepancy between a file and its reference in the database. So to preserve data integrity, ensure that regular backups of both the database and file system are maintained before staging the document library.
+If the Document Library's file system, however, is not database-stored (e.g., [DBStore](../../system-administration/file-storage/other-file-store-types/dbstore.md)), it's not transactional and isn't reverted if a staging failure occurs. This could cause a discrepancy between a file and its reference in the database. To preserve data integrity, ensure that regular backups of both the database and file system are maintained before staging the document library.
 
 ### Import Phase
 
-During *Import*, any necessary updates or additions are made to the Site's content, layouts, and apps according to the publishing parameters. If everything is verified and correct, the staged content is published to your live Site.
+During Import, any necessary updates or additions are made to the Site's content, layouts, and apps according to the publishing parameters. If everything is verified and correct, the staged content is published to your live Site.
 
 ## Planning Ahead for Staging
 
-Staging is a complex subsystem that's flexible and scalable. Before advanced users and administrators begin using it for their Site, it's important to plan ahead and remember a few tips for a seamless process. There are several factors to evaluate.
+Staging is a complex subsystem that's flexible and scalable. Before you begin using it for your Site, it's important to plan ahead and remember a few tips for a seamless process. There are several factors to evaluate.
 
 ### Content Types
 
@@ -43,11 +43,11 @@ Your organization's business logic is most likely implemented in an app, and if 
 
 ### Publication Wait Times
 
-It's recommended users enable Staging at the beginning of the Site creation process to avoid waiting for huge publications that can take long periods to execute. Taking smaller steps throughout the publication process forms an iterative creative process as the Site is built from the ground up, where content creators can publish their changes immediately.
+You should enable Staging at the beginning of the Site creation process to avoid waiting for huge publications that can take a long time to execute. Small, incremental changes are far more performant than huge re-imaginings. 
 
 ### JVM/Network Configuration
 
-For Staging, it's recommended JVMs/networks are configured with a minimum of 4GB of memory and 20MB/s transfer rate (disk).
+For Staging, JVMs/networks should be configured with a minimum of 4GB of memory and 20MB/s transfer rate (disk).
 
 ## Additional Information
 
