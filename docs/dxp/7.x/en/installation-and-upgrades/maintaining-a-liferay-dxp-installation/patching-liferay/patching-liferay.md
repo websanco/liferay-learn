@@ -27,8 +27,5 @@ As you start applying patches regularly, adding new DXP environments, or even wo
 
 * [Getting Patch Information](./getting-patch-information.md)
 * [Uninstalling Patches](./uninstalling-patches.md)
-* [Slimming Down Patched Installations](./advanced-patching/slimming-down-patched-installations.md)
-* [Using Slim Bundles](./advanced-patching/using-slim-bundles.md)
-* [Handling Collisions between Patches and Custom Plugins](./advanced-patching/custom-code-and-patch-compatibility.md)
 
 Now that you've digested the patching overview, learn about the [Patch Types](./understanding-patch-types.md) available to you. Then you'll be ready to apply patches following [Installing Patches](./installing-patches.md).

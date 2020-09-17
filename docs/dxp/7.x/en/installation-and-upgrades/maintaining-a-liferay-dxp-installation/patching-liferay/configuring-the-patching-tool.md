@@ -64,15 +64,13 @@ When the Patching Tool is configured, running the `info` command reports all pro
 /patching-tool>./patching-tool.sh info
 Loading product and patch information...
 Product information:
-  * installation type: binary
-  * build number: 7210
+  * build number: 7310
   * service pack version:
     - available SP version: 1
     - installable SP version: 1
-  * patching-tool version: 2.0.13
-  * time: 2019-12-05 14:02Z
+  * patching-tool version: 3.0.5
+  * time: 2020-09-01 14:02Z
   * host: 91WRQ72 (8 cores)
-  * plugins: no plugins detected
   ...
 ```
 
@@ -86,7 +84,7 @@ Edit the Patching Tool properties file. The `auto-discovery` command creates a `
 
 | Property | Description |
 | :------- | :---------- |
-| `global.lib.path` (`binary` mode only) | Specifies the location for storing `.jar` files on the global classpath. Hint: `portal-kernel.jar` is on the global classpath. |
+| `global.lib.path` | Specifies the location for storing `.jar` files on the global classpath. Hint: `portal-kernel.jar` is on the global classpath. |
 | `liferay.home` | Specifies the [Liferay Home](../../reference/liferay-home.md) folder, which is typically the parent folder to DXP's `osgi` and `tools` folders. |
 | `module.framework.core.path` | Path to DXP's `osgi/core` folder. |
 | `module.framework.marketplace.path` | Path to DXP's `osgi/marketplace` folder. |
@@ -94,8 +92,6 @@ Edit the Patching Tool properties file. The `auto-discovery` command creates a `
 | `module.framework.portal.path` | Path to DXP's `osgi/portal` folder. |
 | `module.framework.static.path` | Path to DXP's `osgi/static` folder. |
 | `patches.folder` | Specifies where to store patches. The default location is `./patches`. |
-| `patching.mode` | Patches contain updated binary and source files. The mode determines which file type to apply.<br><br>* `binary` (the default): For updating your DXP installation.<br>* `source`: For updating source trees that extend DXP. |
-| `source.path` (`source` mode only) | Specifies the DXP source tree location. |
 | `war.path` | Specifies the path to your DXP web application (the path to its exploded folder structure or to its `.war` file). |
 
 ### Proxy Settings

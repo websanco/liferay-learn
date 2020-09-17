@@ -4,7 +4,7 @@ Patching DXP on an application server and updating the Patching Tool are done ma
 
 ## Installation
 
-1.  Download the Patching Tool from the [Customer Portal](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066).
+1.  Download the Patching Tool from the [Customer Portal](THIS-URL-DOESNT-EXIST-YET).
 
 1.  Unzip the Patching Tool to your [Liferay Home](../../reference/liferay-home.md) folder (recommended) or to another folder.
 
@@ -21,7 +21,7 @@ cd patching-tool
 
 The Patching Tool reports when a patch you're installing requires a newer Patching Tool version. Here's how to update the Patching Tool:
 
-1. Download the latest [Patching Tool](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066).
+1. Download the latest [Patching Tool](THIS-URL-DOESNT-EXIST-YET).
 
 1. Back up your existing Patching Tool `.properties` files.
 

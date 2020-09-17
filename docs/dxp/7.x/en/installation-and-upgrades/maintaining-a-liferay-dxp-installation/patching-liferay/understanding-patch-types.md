@@ -18,7 +18,7 @@ A Fix Pack is a bundled collection of the latest fixes for DXP subscribers. They
 
 Fix Packs are available on the Help Center's [Downloads](https://customer.liferay.com/downloads) page and are installed using the [Patching Tool](./installing-patches.md). Release notes and change logs accompany each Fix Pack. Release notes highlight key information, such as important changes and security fixes. Change logs provide detailed information about each fix.
 
-The Patching Tool applies fixes to Fix Packs automatically. If a new (fixed) version of a Fix Pack is released, install it with the Patching Tool. The Patching Tool uninstalls the old Fix Pack and installs the new version in its place.
+The Patching Tool applies fixes to Fix Packs automatically. If a new (fixed) version of a Fix Pack is released, install it with the Patching Tool. The Patching Tool installs the new version on top of the old Fix Pack.
 
 ## Security Fix Packs
 
@@ -44,8 +44,6 @@ For example, the parts of file name `liferay-security-dxp-1-201902-1-7210.zip` r
 A Hotfix is a fix or collection of fixes requested by a customer and delivered in between Fix Pack releases to address confirmed critical issues in DXP. You can request at Hotfix via a [Help Center ticket](https://help.liferay.com/hc). The Liferay Support Team works with you to determine if the issue is with the product, and provides a fix for any unintended product behavior.
 
 A Hotfix can depend on a particular Fix Pack level. If you attempt to install it without installing the Fix Pack first, the Patching Tool reports the required Fix Pack level. Go to the [Customer Portal](https://customer.liferay.com/downloads) and obtain the Fix Pack. Once all the necessary patches are downloaded to the `patches` folder, the Patching Tool installs them.
-
-If you already have a Hotfix installed and a Fix Pack that contains that Hotfix is released, the Patching Tool manages integrating them. Fix packs always supersede Hotfixes; so when you install a Fix Pack, any Hotfixes it contains are uninstalled and the Fix Pack version of the fix is installed in its place.
 
 ## Service Packs
 

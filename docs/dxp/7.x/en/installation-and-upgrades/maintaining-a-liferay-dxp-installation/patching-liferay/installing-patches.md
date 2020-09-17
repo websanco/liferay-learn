@@ -8,6 +8,7 @@ The patching steps for DXP bundles and DXP application server installations are 
 
 If you're patching a DXP bundle, continue with the basic patching steps below. If you're patching DXP on an application server, [prepare to patch DXP on an application server](#preparing-to-patch-dxp-on-an-application-server) _before_ following the patching steps.
 
+
 ## Patching Steps
 
 1.  Download the patch to your `patching-tool/patches` folder---don't unzip the patch.
@@ -32,10 +33,12 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     The output looks like this:
 
     ```
-    One patch is ready to be installed. Applying dxp...
-    Cleaning up: [1%..10%..20%..30%..40%..50%..60%..70%..80%..90%..100%]
-    Installing patches: [1%..10%..20%..30%..40%..50%..60%..70%..80%..90%...100%]
-    The installation was successful. One patch is installed on the system.
+    Running the install command...
+    Installing dxp-1
+    Installation complete!
+    Install finished!
+    Installing hotfix-123
+    Install finished!
     ```
 
 1.  Verify that the patch installation by executing the `info` command and checking the information on the currently installed patches:
@@ -49,15 +52,13 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     ```
     Loading product and patch information...
     Product information:
-      * installation type: binary
-      * build number: 7210
+      * build number: 7310
       * service pack version:
         - available SP version: 1
         - installable SP version: 1
-      * patching-tool version: 2.0.13
-      * time: 2019-12-06 20:26Z
+      * patching-tool version: 3.0.5
+      * time: 2020-09-01 20:26Z
       * host: 91WRQ72 (8 cores)
-      * plugins: no plugins detected
 
     Currently installed patches:
     ...
@@ -138,10 +139,17 @@ If you installed DXP on an application server, you must first install and config
 
 Now you know how to patch a DXP Bundle and a DXP application server installation.
 
+## Preventing an unstable state
+
+Patching Tool uses multiple json files to determine how to patch your DXP bundle. Before starting the install, Patching Tool checks if the bundle is ready for it.
+If the bundle has none (it means no patch is installed) or all (it means there is a patch installed ) of the necessary json files, the install will start, otherwise it will stop.
+
+In case you have accidentally removed these files you can restore them and re-run the install.
+
+If a json file is missing, you can always restore it from the Fix Pack / Hotfix you have installed. Important - the json files for Hotfixes are prefixed with the Hotfix name - e.g. hotfix-123-7310-renames.json.
+
 ## Additional Information
 
 * [Installing the Patching Tool](./installing-the-patching-tool.md)
 * [Configuring the Patching Tool](./configuring-the-patching-tool.md)
 * [Uninstalling Patches](./uninstalling-patches.md)
-* [Slimming Down Patched Installations](./advanced-patching/slimming-down-patched-installations.md)
-* [Using Slim Bundles](./advanced-patching/using-slim-bundles.md)
