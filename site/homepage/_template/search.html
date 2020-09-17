@@ -182,7 +182,6 @@
             name: 'dxp-cloud',
             pathname: '/dxp-cloud/latest/en/search.html'
         }
-
     ];
 
     let currentDocProduct = 'dxp'
@@ -193,6 +192,7 @@
         currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('analytics-cloud')) {
         currentDocProduct = 'analytics-cloud'
+    }
 
     const productSelect = document.querySelectorAll('[name="productName"]');
 

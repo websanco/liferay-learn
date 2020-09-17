@@ -79,7 +79,7 @@
                                     type="radio"
                                     value="commerce"
                                 />
-
+    
                                 <span class="custom-control-label">{% trans %}Commerce{% endtrans %}</span>
                             </label>
                         </div>
@@ -192,6 +192,7 @@
         currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('analytics-cloud')) {
         currentDocProduct = 'analytics-cloud'
+    }
 
     const productSelect = document.querySelectorAll('[name="productName"]');
 
