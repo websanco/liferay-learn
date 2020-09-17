@@ -1,4 +1,4 @@
-# Database Pruning for Faster Upgrades 
+# Database Pruning for Faster Upgrades
 
 The more data you have the longer your data upgrade takes. Unneeded site data is a common occurrence. Pruning the database of unneeded data improves upgrade process performance.
 
@@ -21,9 +21,13 @@ com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.vali
 
 If this error occurs, roll back to your previous backup of Liferay Portal 6.2 and find and remove the duplicate field names.
 
-## Finding and Removing Unused Objects
+## Removing Unused Objects
 
-Identify unused objects in the UI or by using using `SELECT` queries with your database. Then remove them either via the UI, the API through the [script console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), or a portlet you create.
+Your database may have data leftover from obsolete features or unused objects.
+
+1. Use the [Data Cleanup](../reference/data-cleanup.md) screen to remove data from obsolete modules.
+
+2. Identify other unused objects in the UI or by using using `SELECT` queries with your database, and remove the objects either via the UI, the API through the [script console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), or a portlet you create.
 
 ```warning::
    You should only use Liferay's UI or API to manipulate data because they account for relationships between objects in Liferay DXP. Never use SQL directly on your database to remove records. Your SQL may miss object relationships, orphaning objects and causing performance problems.

@@ -64,6 +64,10 @@ Upgrading to 7.2 moves Web Content images to the Document Library and then delet
 
 If you haven't done so already, review the [deprecations and features in maintenance mode](../reference/maintenance-mode-and-deprecations-in-7-3.md) and plan for handling how they affect your Liferay instance.
 
+### Remove Obsolete Data
+
+Clean up data from obsolete features. Please see [Data Cleanup](../reference/data-cleanup.md) for more information.
+
 ## Conclusion
 
 Once you've completed all necessary post-upgrade tasks, your Liferay server is ready for normal operations as before. Congratulations!
