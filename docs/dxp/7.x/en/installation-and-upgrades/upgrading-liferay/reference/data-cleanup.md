@@ -14,14 +14,14 @@ Here's how to clean up obsolete data:
        To save the cleanup settings to a `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_, click the *Actions* menu and select *Export*.
     ```
 
-   Module data cleanup executes.
+   The data cleanup executes.
 
 1. Disable data cleanup by unchecking every module in the Data Cleanup screen or by setting the module cleanup keys `false` in a `com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config` [configuration file](../../../system-administration/system-settings/using-configuration-files.md).
 
-Your server is unburdened of obsolete module data.
+Your server is unburdened of obsolete data.
 
 ```note::
-   You can also clean up module data on server startup (on premises or `Liferay Docker container <../upgrade-basics/upgrading-via-docker.md>`_) using a ``com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config`` `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_. After cleanup completes, delete the configuration file from the `osgi` folder.
+   You can also clean up module data on server startup (in a `Liferay Docker container <../upgrade-basics/upgrading-via-docker.md>`_ or on a local machine) using a ``com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config`` `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_. After the cleanup, remove the configuration file from the `osgi` folder.
 ```
 
 ## Additional Information
