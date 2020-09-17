@@ -10,23 +10,34 @@ const ALERT_LOCAL_STORAGE_ID = 'pageAlertState';
 function initPageAlert() {
 	const pageAlertState = localStorage.getItem(ALERT_LOCAL_STORAGE_ID);
 
-	if (pageAlertState !== "closed") {
+	if (pageAlertState !== 'closed') {
 		const pageAlertElement = document.getElementById(ALERT_ELEMENT_ID);
 
 		if (pageAlertElement) {
 			pageAlertElement.classList.remove('page-alert-hidden');
 
 			document.body.classList.add('page-alert-open');
+
+			const pageAlertContainer = pageAlertElement.parentNode;
+
+			if (pageAlertContainer) {
+				window.addEventListener('scroll', () =>
+					setTimeout(function() {
+						if (window.scrollY > 0) {
+							pageAlertContainer.classList.add('d-none');
+						} else {
+							pageAlertContainer.classList.remove('d-none');
+						}
+					}, 300)
+				);
+			}
 		}
 
-		$('#' + ALERT_ELEMENT_ID).on(
-			'closed.bs.alert',
-			function() {
-				localStorage.setItem(ALERT_LOCAL_STORAGE_ID, "closed");
+		$('#' + ALERT_ELEMENT_ID).on('closed.bs.alert', function() {
+			localStorage.setItem(ALERT_LOCAL_STORAGE_ID, 'closed');
 
-				document.body.classList.remove('page-alert-open');
-			}
-		);
+			document.body.classList.remove('page-alert-open');
+		});
 	}
 }
 
