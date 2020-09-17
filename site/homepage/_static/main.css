@@ -8969,11 +8969,8 @@ a.copybtn {
     visibility: visible; }
 
 .documentations .article-body {
-  flex: 0 0 58.33333%;
   margin-bottom: 5rem;
   margin-left: 8.33333%;
-  margin-right: 8.33333%;
-  max-width: 58.33333%;
   padding: 1.5rem 15px;
   position: relative;
   width: 100%; }
@@ -9112,9 +9109,6 @@ a.copybtn {
     .documentations .general-info .actions svg {
       height: 2.375rem;
       width: 2.375rem; }
-  @media (max-width: 576px) {
-    .documentations .general-info {
-      display: none; } }
 
 .documentations .nav-link {
   color: #30313F; }

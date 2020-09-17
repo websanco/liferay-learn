@@ -1,10 +1,7 @@
 .documentations {
 	.article-body {
-		flex: 0 0 58.33333%;
 		margin-bottom: 5rem;
 		margin-left: 8.33333%;
-		margin-right: 8.33333%;
-		max-width: 58.33333%;
 		padding: $spacing-default 15px;
 		position: relative;
 		width: 100%;
@@ -192,10 +189,6 @@
 				height: 2.375rem;
 				width: 2.375rem;
 			}
-		}
-
-		@media (max-width: 576px) {
-			display: none;
 		}
 	}
 
