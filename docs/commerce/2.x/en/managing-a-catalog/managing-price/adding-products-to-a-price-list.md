@@ -1,5 +1,7 @@
 # Adding Products to a Price List
 
+> Commerce 2.1 and Below
+
 Once you have a [price list](./creating-a-price-list.md) created, you can add products to it. This article describes two ways to add products to a price list. Prices that are set via a Price List will take precedence over prices set directly against a given SKU for the associated users.
 
 ## Adding Products to a Price List Through the Price Lists Menu
