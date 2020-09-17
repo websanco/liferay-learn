@@ -2,7 +2,7 @@
 
 With *Remote Live Staging*, your Staging and Live environments are hosted on separate Liferay servers. When enabled, the Site used to configure Staging becomes your Staging environment, while the configured remote server becomes your Live environment.
 
-Before enabling Remote Live Staging, you'll need to configure the Liferay servers you want to use for your Staging and Live environments. You will also need to create a new blank Site on your Remote server and use its ID during Staging configuration. You can find any Site's ID by selecting the Site's name on the *Sites Page* of the Control Panel.
+Before enabling Remote Live Staging, you must configure the Liferay servers you want to use for your Staging and Live environments. You must also create a new blank Site on your Remote server and use its ID during Staging configuration. You can find any Site's ID by selecting the Site's name on the *Sites Page* of the Control Panel.
 
 * [Preparing Your Liferay Servers](#preparing-your-liferay-servers)
 * [Setting Up Remote Live Staging](#setting-up-remote-live-staging)
@@ -46,13 +46,13 @@ If you haven't already, follow these steps to configure your Liferay servers for
 1. Update the remote instance's *Tunnel Authentication Verifier Configuration*.
 
    To do this, go to the *Control Panel* &rarr; *Configuration* &rarr; *System Settings* &rarr; *API Authentication* &rarr; *Tunnel Authentication*.
-   
+
    Click */api/liferay/do* and insert the additional IP addresses you're using in the *Hosts Allowed* field. When finished, click on *Update*.
 
    ![Update the remote instance's Tunnel Authentication Verifier Configuration via the Control Panel.](./configuring-remote-live-staging/images/06.png)
 
    ```note::
-      While it is enabled by default, ensure each Liferay server's tunneling servlet authentication verifier is enabled.
+      While it is enabled by default, ensure each Liferay server's tunneling servlet `authentication verifier <../../installation-and-upgrades/securing-liferay/securing-web-services/using-authentication-verifiers.md>`_ is enabled.
    ```
 
    Alternatively, you can write this configuration into an OSGi file in your Liferay instance (e.g., `osgi/configs/com.liferay.portal.security.auth.verifier.tunnel.module.configuration.TunnelAuthVerifierConfiguration-default.config`):
@@ -114,9 +114,9 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
    ![Select the data and content types you want to stage.](./configuring-remote-live-staging/images/05.png)
 
-    ```warning::
-       When an application is checked, its data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
-    ```
+   ```warning::
+       When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
+   ```
 
 1. Click on *Save* to initiate the Staging process. The duration of this process depends on the size of your Site.
 
@@ -124,7 +124,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
       If your attempt to enable Remote Live Staging fails, please verify that you've properly prepared your servers.
    ```
 
-Once the process is complete, you are ready to use Local Live Staging. See [Staging UI Reference](./staging-ui-reference.md) for information about navigating the Staging environment's publishing features.
+Once the process is complete, you are ready to use Remote Live Staging. See [Staging UI Reference](./staging-ui-reference.md) for information about navigating the Staging environment's publishing features.
 
 ```warning::
    Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the Remote Publication process to fail.
@@ -132,7 +132,7 @@ Once the process is complete, you are ready to use Local Live Staging. See [Stag
 
 ## Remote Live Staging Permissions
 
-When a User attempts to publish changes from Staging to Live, Liferay passes the User's email address, screen name, or User ID to the remote server to perform a permission check. To succeed, the publishing User must have identical credentials and permissions in both servers.
+When a User attempts to publish changes from Staging to Live, Liferay passes the User's email address, screen name, or User ID to the remote server to perform a permission check. To succeed, the publishing User must have identical credentials and permissions on both servers.
 
 To give a local User permission to publish changes from staging to production/live, create an identical User account with identical permissions for the User on the remote server.
 
@@ -140,29 +140,27 @@ To simplify this process, you can use LDAP to copy selected User accounts from y
 
 ## Configuring Remote Staging's Buffer Size
 
-When you're using Remote Live staging, and you are publishing a large amount of content, your publication could be slow and cause a large amount of network traffic. To help with this, Liferay DXP transfers data piecemeal, instead of one large data dump. You can control the size of data transactions by setting the following portal property in your `portal-ext.properties` file:
+When you're using Remote Live staging and you are publishing a large amount of content, your publication could be slow and cause a large amount of network traffic. To help with this, Liferay DXP transfers data piecemeal, instead of one large data dump. You can control the size of data transactions by setting the following portal property in your `portal-ext.properties` file:
 
 ```
 staging.remote.transfer.buffer.size
 ```
 
-This property sets the file block sizes for remote staging. If a LAR file used for remote staging exceeds this size, the file will be split into multiple files prior to transmission and then reassembled on the remote server. The default buffer size is 10 megabytes.
+This property sets the file block sizes for remote staging. If a LAR file used for remote staging exceeds this size, the file is split into multiple files prior to transmission and then reassembled on the remote server. The default buffer size is 10 megabytes.
 
 ## Disabling Remote Live Staging
-
-If you need to disable Staging for your Site, follow these steps:
 
 1. Go to *Publishing* &rarr; *Staging*, which is only available from your Staging environment.
 
 1. Click on the *Actions* button ( ![Actions button](../../images/icon-actions.png) ) located in the *Application* bar, and select *Staging Configuration*.
 
-1. Select *None* for your Staging configuration, and click on *Save*.
+1. Select *None* for your Staging configuration and click on *Save*.
 
-Disabling Remote Live Staging simply disables the connection between your environments without deleting any data. Since no data is erased and no processes are started, disabling Remote Live Staging is almost instantaneous.
+Disabling Remote Live Staging disables the connection between your environments without deleting any data. Since no data is erased and no processes are started, disabling Remote Live Staging is almost instantaneous.
 
-Also, when you disable remote staging, you must ensure the Live Site is still accessible so both sides can communicate that it's disabled. Do not shut down your Live Site and then attempt to disable remote staging from your staged Site. If the network connection is ever lost between environments, an error message appears and instructs you on how to forcibly disable staging.
+When you disable remote staging, you must ensure the Live Site is still accessible so both sides can communicate that it's disabled. Do not shut down your Live Site and then attempt to disable remote staging from your staged Site. If the network connection is ever lost between environments, an error message appears and instructs you to forcibly disable staging.
 
-This is only an option for your Staging environment; executing this option erases your staging information and not the content. The Live site remains in a locked state. A possible workaround is to create a new Live site and import content to it, if necessary.
+Forcibly disabling staging erases your staging information from your staging server, not the content. The Live site remains in a locked state. A possible workaround is to create a new Live site and import content to it, if necessary.
 
 ## Additional Information
 
