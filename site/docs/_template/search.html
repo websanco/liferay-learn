@@ -23,140 +23,145 @@
 {%- endmacro %}
 
 {% block content %}
-<div class="container search-page">
-    <div class="row">
-        <div class="admonition col-md-12 warning" id="fallback">
-            <script type="text/javascript">$('#fallback').hide();</script>
 
-            <div class="alert alert-danger" role="alert">
-                <span class="alert-indicator">
-                    <svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation"
-                        viewBox="0 0 512 512">
-                        <use xlink:href="#exclamation-full" />
-                    </svg>
-                </span>
-                {% trans %}Please activate JavaScript to enable the search
-                functionality.{% endtrans %}
+<div class="main-content">
+    <div class="col-12 p-0 page-alert">{% include "page-alert.html" %}</div>
+
+    <div class="container search-page">
+        <div class="row">
+            <div class="admonition col-md-12 warning" id="fallback">
+                <script type="text/javascript">$('#fallback').hide();</script>
+
+                <div class="alert alert-danger" role="alert">
+                    <span class="alert-indicator">
+                        <svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation"
+                            viewBox="0 0 512 512">
+                            <use xlink:href="#exclamation-full" />
+                        </svg>
+                    </span>
+                    {% trans %}Please activate JavaScript to enable the search
+                    functionality.{% endtrans %}
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="search-filter-container">
-                <div class="search-filters">
-                    <h3>
-                        {% trans %}Search{% endtrans %}
-                    </h3>
+            <div class="col-md-4">
+                <div class="search-filter-container">
+                    <div class="search-filters">
+                        <h3>
+                            {% trans %}Search{% endtrans %}
+                        </h3>
 
-                    <div class="filter-input-container" id="searchbox" role="search">
-                        {% include "searchbox.html" %}
-                    </div>
-                </div>
-
-                <div class="search-filters">
-                    <h4>{% trans %}Product{% endtrans %}</h4>
-
-                    <div class="filter-input-container">
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
-                                    value="analytics-cloud"
-                                />
-    
-                                <span class="custom-control-label">{% trans %}Analytics Cloud{% endtrans %}</span>
-                            </label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
-                                    value="commerce"
-                                />
-    
-                                <span class="custom-control-label">{% trans %}Commerce{% endtrans %}</span>
-                            </label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
-                                    value="dxp"
-                                />
-
-                                <span class="custom-control-label">{% trans %}DXP{% endtrans %}</span>
-                            </label>
-                        </div>
-
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="productName"
-                                    type="radio"
-                                    value="dxp-cloud"
-                                />
-
-                                <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
-                            </label>
+                        <div class="filter-input-container" id="searchbox" role="search">
+                            {% include "searchbox.html" %}
                         </div>
                     </div>
+
+                    <div class="search-filters">
+                        <h4>{% trans %}Product{% endtrans %}</h4>
+
+                        <div class="filter-input-container">
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="analytics-cloud"
+                                    />
+        
+                                    <span class="custom-control-label">{% trans %}Analytics Cloud{% endtrans %}</span>
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="commerce"
+                                    />
+        
+                                    <span class="custom-control-label">{% trans %}Commerce{% endtrans %}</span>
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="dxp"
+                                    />
+
+                                    <span class="custom-control-label">{% trans %}DXP{% endtrans %}</span>
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="dxp-cloud"
+                                    />
+
+                                    <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-filters">
+                        <h4>{% trans %}Language{% endtrans %}</h4>
+
+                        <div class="filter-input-container">
+                            {% for language_code in available_languages %}
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="language"
+                                        type="radio"
+                                        value="{{ language_code }}"
+                                    />
+
+                                    <span class="custom-control-label">{{ getLanguageLabel(language_code) }}</span>
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 search-results-wrapper">
+                <div class="no-results">
+                    {% include "no-results.html" %}
+
+                    <h4 id="noResultsMessage"></h4>
                 </div>
 
-                <div class="search-filters">
-                    <h4>{% trans %}Language{% endtrans %}</h4>
+                <div id="search-results">
+                    {% if search_results %}
+                    <ul>
+                        {% for href, caption, context in search_results %}
+                        <li>
+                            <a href="{{ pathto(item.href) }}">{{ caption }}</a>
 
-                    <div class="filter-input-container">
-                        {% for language_code in available_languages %}
-                        <div class="custom-control custom-radio">
-                            <label>
-                                <input
-                                    aria-label="{{ getLanguageLabel(language_code) }}"
-                                    class="custom-control-input"
-                                    name="language"
-                                    type="radio"
-                                    value="{{ language_code }}"
-                                />
-
-                                <span class="custom-control-label">{{ getLanguageLabel(language_code) }}</span>
-                            </label>
-                        </div>
+                            <div class="context">{{ context|e }}</div>
+                        </li>
                         {% endfor %}
-                    </div>
+                    </ul>
+                    {% endif %}
                 </div>
-            </div>
-        </div>
-
-        <div class="col-md-8 search-results-wrapper">
-            <div class="no-results">
-                {% include "no-results.html" %}
-
-                <h4 id="noResultsMessage"></h4>
-            </div>
-
-            <div id="search-results">
-                {% if search_results %}
-                <ul>
-                    {% for href, caption, context in search_results %}
-                    <li>
-                        <a href="{{ pathto(item.href) }}">{{ caption }}</a>
-
-                        <div class="context">{{ context|e }}</div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
             </div>
         </div>
     </div>
