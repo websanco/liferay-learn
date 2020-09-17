@@ -43,6 +43,8 @@
 {% block content %}
 <div class="container-fluid documentations main-content" role="main">
     <div class="row">
+        <div class="col-12 p-0">{% include "page-alert.html" %}</div>
+
         <div class="col-12 col-md-2">
             <div class="doc-nav-wrapper">
                 <div class="info-bar">
@@ -115,8 +117,6 @@
 
         <div class="col-12 col-md-10 doc-body">
             <div class="col-12 general-info p-0">
-                <div class="col-12 p-0">{% include "page-alert.html" %}</div>
-
                 <div class="col-12 info-bar">
                     <div class="breadcrumb-wrapper col-md-7 offset-md-1">
                         {% include "breadcrumb.html" %}

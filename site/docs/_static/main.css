@@ -9513,9 +9513,6 @@ header {
 .landing-page-container .toc-container {
   display: none; }
 
-body.page-alert-open .documentations .doc-content {
-  margin-top: calc(4.8125rem + 56px); }
-
 .page-alert-container {
   margin: 0 -15px; }
 
