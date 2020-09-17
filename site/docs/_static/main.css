@@ -9104,8 +9104,7 @@ a.copybtn {
   width: calc(100% - 16.66667%);
   z-index: 1; }
   .documentations .general-info .actions {
-    display: block;
-    padding-left: 1rem; }
+    display: block; }
     .documentations .general-info .actions svg {
       height: 2.375rem;
       width: 2.375rem; }
