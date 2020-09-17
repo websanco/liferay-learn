@@ -23,7 +23,7 @@ To get an example `SimilarResultsContributor` up and running on your instance of
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 liferay/dxp:7.2.10-sp2
+    docker run -it -p 8080:8080 liferay/dxp:[$LIFERAY_LEARN_DXP_VERSION$]
     ```
 
     If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly.

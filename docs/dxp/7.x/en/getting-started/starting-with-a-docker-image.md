@@ -13,13 +13,13 @@ Liferay Portal CE is the open source and community supported platform for buildi
 1. Get the Docker image.
 
     ```bash
-    docker pull liferay/portal:7.3.3-ga4
+    docker pull liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.3-ga4
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
     ```
 
     ```tip::
@@ -37,13 +37,13 @@ Liferay DXP is the commercially supported and enterprise ready platform used aro
 1. Get the Docker image.
 
     ```bash
-    docker pull liferay/dxp:7.2.10-dxp-6
+    docker pull liferay/dxp:[$LIFERAY_LEARN_DXP_VERSION$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/dxp:7.2.10-dxp-6
+    docker run -it -p 8080:8080 liferay/dxp:[$LIFERAY_LEARN_DXP_VERSION$]
     ```
 
 1. Open your browser to `https://localhost:8080`.
