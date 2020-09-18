@@ -9098,7 +9098,6 @@ a.copybtn {
     width: 80%; }
 
 .documentations .general-info {
-  align-items: center;
   background-color: #FFF;
   position: fixed;
   width: calc(100% - 16.66667%);

@@ -5,6 +5,8 @@
 
 const ALERT_ELEMENT_ID = 'pageAlert';
 
+const ALERT_ELEMENT_HEIGHT = 56;
+
 const ALERT_LOCAL_STORAGE_ID = 'pageAlertState';
 
 function initPageAlert() {
@@ -23,10 +25,14 @@ function initPageAlert() {
 			if (pageAlertContainer) {
 				window.addEventListener('scroll', () =>
 					setTimeout(function() {
-						if (window.scrollY > 0) {
-							pageAlertContainer.classList.add('d-none');
-						} else {
+						if (window.scrollY <= ALERT_ELEMENT_HEIGHT) {
 							pageAlertContainer.classList.remove('d-none');
+						} else {
+							if (
+								!pageAlertContainer.classList.contains('d-none')
+							) {
+								pageAlertContainer.classList.add('d-none');
+							}
 						}
 					}, 300)
 				);
