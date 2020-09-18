@@ -14,6 +14,19 @@ Before creating a Grouped Product, ensure that the following conditions have bee
 
 ## Create a Grouped Product
 
+To create a grouped product:
+
+1. Go to the _Global Application_ menu &rarr; _Commerce_ &rarr; _Products_.
+1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Grouped_.
+1. Enter the following:
+    * **Catalog**: Sahara.com
+    * **Name**: Brakes Set Combo Kit
+1. Click _Submit_ when finished.
+
+Once the Grouped Product entity has been initially created, store administrators will need to associate the individual products to the grouped product entry.
+
+### Commerce 2.1 and Below
+
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Grouped_.
 1. Enter the following:

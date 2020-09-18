@@ -4,6 +4,17 @@ A Virtual Product is a non-tangible product that can be downloaded. Examples inc
 
 ## Create a Virtual Product
 
+1. Go to the _Global Application_ menu &rarr; _Commerce_ &rarr; _Products_.
+1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Virtual_.
+1. Enter the following:
+    * **Catalog**: Sahara.com
+    * **Name**: 3 Year Warranty
+1. Click _Submit_ when finished.
+
+Once this virtual product has been created, store administrators need to associate the digital assets and legal rights with the product.
+
+### Commerce 2.1 and Below
+
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click the (+) button then _Virtual_.
 1. Enter the following:

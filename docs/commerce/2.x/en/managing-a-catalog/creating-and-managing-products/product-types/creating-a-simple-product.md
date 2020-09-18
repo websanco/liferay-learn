@@ -4,6 +4,19 @@ A Simple Product is any physical product for which inventory is tracked. This ar
 
 ## Create a Simple Product
 
+To add a new Simple Product:
+
+1. Go to the _Global Application_ menu &rarr; _Commerce_ &rarr; _Products_.
+1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Simple_.
+1. Enter the following:
+   * **Catalog**: Sahara.com
+   * **Name**: Water Bottle
+1. Click _Submit_.
+
+The initial product entry has been created. Continue on to learn about further configuring the product.
+
+### Commerce 2.1 and Below
+
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Simple_.
 1. Enter the following:
