@@ -9277,20 +9277,20 @@ pre {
 
 .help-center-footer {
   border-top: 1px solid #DADEE3;
-  margin-top: 32px;
-  padding-top: 18px; }
+  margin-top: 2rem;
+  padding-top: 1rem; }
   .help-center-footer a strong {
     font-weight: 600; }
   .help-center-footer h3 {
     font-size: 20px;
-    margin-bottom: 12px; }
+    margin-bottom: 0.75rem; }
   .help-center-footer .icon-container {
     margin-top: 0.75rem; }
   .help-center-footer .liferay-waffle-icon {
-    fill: #0B63CE;
-    height: 24px;
+    fill: #0b63ce;
+    height: 1.5rem;
     margin-top: 0;
-    width: 24px; }
+    width: 1.5rem; }
 
 .landing-page-container .help-center-footer {
   margin-left: 1rem;

@@ -1,7 +1,7 @@
 .help-center-footer {
 	border-top: 1px solid $hr-color;
-	margin-top: 32px;
-	padding-top: 18px;
+	margin-top: $spacing-lg;
+	padding-top: $spacing-md;
 
 	a strong {
 		font-weight: 600;
@@ -9,18 +9,18 @@
 
 	h3 {
 		font-size: 20px;
-		margin-bottom: 12px;
+		margin-bottom: $spacing-sm;
 	}
 
 	.icon-container {
-		margin-top: 0.75rem;
+		margin-top: $spacing-sm;
 	}
 
 	.liferay-waffle-icon {
-		fill: #0B63CE;
-		height: 24px;
+		fill: #0b63ce;
+		height: $spacing-default;
 		margin-top: 0;
-		width: 24px;
+		width: $spacing-default;
 	}
 }
 
