@@ -1,10 +1,14 @@
 .documentations {
 	.article-body {
-		margin-bottom: 5rem;
-		margin-left: 8.33333%;
-		padding: $spacing-default 15px;
-		position: relative;
-		width: 100%;
+		margin-top: $spacing-default; 
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 5rem;
+			margin-left: 8.33333%;
+			padding: $spacing-default 15px;
+			position: relative;
+			width: 100%;
+		}
 	}
 
 	.doc-body,
@@ -13,7 +17,9 @@
 	}
 
 	.doc-content {
-		margin-top: $info-bar-height;
+		@include media-breakpoint-up(md) {
+			margin-top: $info-bar-height;
+		}
 	}
 
 	.doc-nav,

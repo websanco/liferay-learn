@@ -8969,18 +8969,22 @@ a.copybtn {
     visibility: visible; }
 
 .documentations .article-body {
-  margin-bottom: 5rem;
-  margin-left: 8.33333%;
-  padding: 1.5rem 15px;
-  position: relative;
-  width: 100%; }
+  margin-top: 1.5rem; }
+  @media (min-width: 768px) {
+    .documentations .article-body {
+      margin-bottom: 5rem;
+      margin-left: 8.33333%;
+      padding: 1.5rem 15px;
+      position: relative;
+      width: 100%; } }
 
 .documentations .doc-body,
 .documentations .doc-nav-wrapper {
   padding: 0; }
 
-.documentations .doc-content {
-  margin-top: 4.8125rem; }
+@media (min-width: 768px) {
+  .documentations .doc-content {
+    margin-top: 4.8125rem; } }
 
 .documentations .doc-nav,
 .documentations .doc-nav-footer,
