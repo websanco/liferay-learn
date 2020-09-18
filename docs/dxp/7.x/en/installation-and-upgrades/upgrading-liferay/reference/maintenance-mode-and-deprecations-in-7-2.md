@@ -28,7 +28,7 @@ Deprecated features have different availability:
 
 **Removed:** The feature and its code are unavailable.
 
-If you're upgrading from Liferay 7.0 or earlier, examine the deprecations that occurred in the applicable releases earlier than 7.2.
+If you're upgrading from Liferay 7.0 or earlier, examine the deprecations that occurred in the applicable releases:
 
 * [ 7.1](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
 * [ 7.0](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
@@ -39,10 +39,10 @@ Here are the categories of features deprecated in 7.2:
 
 * [Foundation](#foundation)
 * [Forms](#forms)
-* [Personalization](#Personalization)
+* [Personalization](#personalization)
 * [Search](#search)
 * [Security](#secturiy)
-* [User and System Management](#User and System Management)
+* [User and System Management](#user-and-system-management)
 * [Web Experience](#web-experience)
 
 ### Foundation
@@ -98,20 +98,20 @@ If you're using NTLM to authenticate Microsoft Windows™ accounts with , switch
 
 | Feature |  Availability |  Notes |
 | --- | ------------- | ------ |
+| Resources Importer | Bundled | Deprecated as of 7.1 with no direct replacement |
 | RSS Publisher | Bundled | See [the article](https://help.liferay.com/hc/en-us/articles/360028820672-The-RSS-Publisher-Widget) on enabling and using this widget. |
 | User Group Pages (Copy Mode) | Bundled | See the [Legacy User Group Sites Behavior](../../../users-and-permissions/user-groups/user-group-sites.md) instructions on how to enable it. |
-| Resources Importer | Bundled | Deprecated as of 7.1 with no direct replacement |
 
 ## Features Moved to Maintenance Mode in 7.2
 
-Here are the items moved to maintenance mode in 7.2:
+Here are the features moved to maintenance mode in 7.2:
 
-* Liferay Connected Services (LCS): [https://liferay.slack.com/archives/CJ1ERLHUZ/p1594042067069000]
-* Liferay Sync
+* Liferay Connected Services (LCS)
 * Liferay Mobile Experience (Liferay Screens, Liferay Mobile SDK, Liferay Push)
+* Liferay Sync
 * Staging
 
-## Addtional Information
+## Additional Information
 
 * [7.2 Breaking Changes](../../../liferay-internals/reference/7-2-breaking-changes.md)
-* [Default Setting Changes in 7.2](./default-setting-changes-in-7-2.md)
+* [7.2 Default Setting Changes](./default-setting-changes-in-7-2.md)
