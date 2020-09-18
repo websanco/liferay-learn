@@ -59,7 +59,7 @@ Features deprecated in earlier Liferay versions may also need to be considered, 
 
 Here are the features moved to Maintenance Mode in 7.3:
 
-* Asset Publisher (deprecation is planned in 7.4)
+* Asset Publisher
 * Export/Import
 * Liferay Drools
 * Liferay Mobile Experience: Mobile SDK, Screens, Push
