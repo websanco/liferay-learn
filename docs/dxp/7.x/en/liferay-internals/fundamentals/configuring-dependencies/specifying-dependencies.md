@@ -1,10 +1,8 @@
 # Specifying Dependencies
 
-Compiling a module and deploying it to Liferay requires satisfying the module's dependencies. After you [find the dependency artifacts](../finding-artifacts.md), add them as dependencies in your Gradle build file. Liferay already includes many artifacts at run time. If you depend on other artifacts, you must deploy them manually or include them in your module. Here you'll find dependency configuration steps and examples.
+You must satisfy all dependencies to compile and deploy a module successfully. After you [find the dependency artifacts](../finding-artifacts.md), add them as dependencies in your Gradle build file. Liferay already includes many artifacts at run time. If you depend on other artifacts, you must deploy them manually or include them in your module. Here you'll find dependency configuration steps and examples.
 
 ## Configuring Dependencies
-
-Here's how to configure dependencies:
 
 1. Open your `build.Gradle` file.
 
@@ -32,11 +30,11 @@ Here's how to configure dependencies:
     }
     ```
 
-1. Deploy your module and check for unsatisfied package dependencies, by using [Gogo Shell commands](../using-the-gogo-shell.md) or browsing the logs.
+1. Deploy your module and check for unsatisfied package dependencies by using [Gogo Shell commands](../using-the-gogo-shell.md) or browsing the logs.
 
 1. If you have unsatisfied dependencies, resolve them:
 
-    **For module dependencies,** deploy such modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
+    **For module dependencies,** deploy the needed modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
 
     **For library dependencies,** follow the instructions at [Resolving Third Party Library Dependencies](./resolving-third-party-library-package-dependencies.md).
 
