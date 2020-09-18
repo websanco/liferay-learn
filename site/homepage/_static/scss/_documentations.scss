@@ -112,13 +112,6 @@
 	}
 
 	.doc-nav-wrapper {
-		height: calc(100vh - #{$header-height});
-		margin-left: -15px;
-		max-width: 16.66667%;
-		position: fixed;
-		width: 100%;
-		z-index: 1;
-
 		.doc-nav-footer {
 			align-items: center;
 			border-top: 1px solid $hr-color;
@@ -159,6 +152,15 @@
 					}
 				}
 			}
+		}
+
+		@include media-breakpoint-up(md) {
+			height: calc(100vh - #{$header-height});
+			margin-left: -15px;
+			max-width: 16.66667%;
+			position: fixed;
+			width: 100%;
+			z-index: 1;
 		}
 	}
 
