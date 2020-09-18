@@ -64,7 +64,7 @@ The deprecations in DXP 7.2 are as follows:
 
 ### Switching from NTLM to Kerberos
 
-If you're using NTLM to authenticate Microsoft Windows™ accounts with Liferay DXP, switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). Security vulnerabilities persist with NTLM. NTLM has been deprecated and removed from the bundle, but you can still [build and deploy the module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_CE_VERSION$]/modules/apps/portal-security-sso-ntlm).
+If you're using NTLM to authenticate Microsoft Windows™ accounts with Liferay DXP, switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). Security vulnerabilities persist with NTLM. NTLM has been deprecated and removed from the bundle, but you can still [build and deploy the module](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/portal-security-sso-ntlm).
 
 ## User and System Management
 
