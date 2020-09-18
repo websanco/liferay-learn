@@ -13,7 +13,7 @@ Obsolete features are eventually either removed or replaced with newer, better f
 ```
 
 ```important::
-   Please see the `maintenance mode and deprecation policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
+   Please see the `Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
 ```
 
 ## Deprecated Feature Availability
@@ -36,7 +36,7 @@ Here are the features deprecated in 7.3:
 | :------ | :----------- | :---- |
 | DDM, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
-| Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html#:~:text=As%20previously%20announced%20in%20July,(%E2%80%9CEOL%20Date%E2%80%9D) is Dec 31, 2020. |
+| Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html) is Dec 31, 2020. |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
 | JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
