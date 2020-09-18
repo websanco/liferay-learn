@@ -1,8 +1,8 @@
 # Page Versioning
 
-With *Page versioning* enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages via the *Staging* bar. Page versioning also maintains a history of changes made to your staged Pages that you can use to revert Pages to an earlier version if needed.
+With Page Versioning enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages via the Staging bar. Page versioning also maintains a history that you can use to revert changes made to your staged Pages to earlier versions if needed.
 
-You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different user roles.
+You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
 
 * [Types of Variations](#types-of-variations)
 * [Creating Variations](#creating-variations)
@@ -13,9 +13,9 @@ You can enable Page versioning for your Private and Public Pages during initial 
 
 When you enable *Page versioning* for a Page set, you can create and manage two types of variations in each Widget Page's Staging bar:
 
-* **Site Pages Variation**: These are variations of your Site's Page sets that you can use to modify multiple Pages while keeping them together as a set.
+* **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set.
 
-* **Page Variations**: These are variations of a single Page that exist within Page set variations.
+* **Page Variations**: Single Page variations that exist within Page set variations.
 
 Both variation types only affect Pages and do not affect your Site's content, since all variations in your staging Site share the same content. That said, each variation can use and configure the same content and applications in different ways, and each variation of a Page set can have different Pages.
 
@@ -63,9 +63,7 @@ Once created, you can switch between each version of a Page or Page set via the 
 
 ## Merging Variations
 
-With Page versioning, you can merge two Page set variations. This adds Pages and Page variations to a Page set variation without affecting or overwriting its content.
-
-Follow these steps to merge two variations of Site Pages:
+You can merge two Page set variations. This adds Pages and Page variations to a Page set variation without affecting or overwriting its content.
 
 1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar, and select Site Pages Variation.
 
