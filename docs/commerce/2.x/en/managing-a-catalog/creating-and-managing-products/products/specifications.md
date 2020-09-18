@@ -12,7 +12,7 @@ To organize specifications and make them easy to display and maintain, specifica
 
 ## Specification Groups
 
-1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
+1. Navigate to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click the _Specifications_ tab.
 1. Click the _Specification Groups_ sub-tab. By default, there are five Specification Groups included:
 
@@ -33,7 +33,7 @@ To add a new Specification Group, click the (+) button.
 
 To create a specification label:
 
-1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
+1. Navigate to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click the _Specifications_ tab.
 1. Click the _Specifications Labels_ sub-tab.
 1. There are nine Specification Labels included by default:
@@ -60,7 +60,7 @@ The label has been created, but assigning a value to it must be done on the prod
 
  To create a specification label, you must first assign a label to a product.
 
-1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
+1. Navigate to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click on a product (for example, _Torque Converter_. This sample product is added when using the Minium accelerator.)
 1. Click on the _Specifications_ sub-tab.
 1. The following values have been added by default:
@@ -80,9 +80,9 @@ Next, edit the label to give it a value.
 
 |Field | Description |
 |----- | --------- |
-|Value | Short description of what the product is made of |
-|Group | Dropdown menu for which Specification Group. | 
-|Priority | Establishes the order to display the specification groups. Smallest numbers go first. |
+| Value | Short description of what the product is made of |
+| Group | Dropdown menu for which Specification Group. |
+| Priority | Establishes the order to display the specification groups. Smallest numbers go first. |
 
 ![Adding specification details](./specifications/images/06.png)
 

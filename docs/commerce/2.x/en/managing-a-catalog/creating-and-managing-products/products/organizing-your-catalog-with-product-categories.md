@@ -18,6 +18,20 @@ Before organizing your catalog, it needs to be populated with Categories. See th
 
 Once you have created your taxonomy using your Vocabulary and Categories, you can start adding categories to the products in the catalog.
 
+1. Go to the _Global Application_ menu &rarr; _Commerce_ &rarr; _Products_.
+1. Click on a product. (If you used Minium to create a site with sample data, click _Transmission Fluid_. Note that the _Transmission Fluid_ product already has been linked to the sample Vocabulary and Category.)
+
+    ![Associating a Category in Commerce 2.1](./organizing-your-catalog-with-product-categories/images/01.png)
+
+1. On the _Details_ tab, click _Select_ next to the catalog in the _Categorization_ widget.
+1. Click on the _Select_ button under the label for the appropriate vocabulary, and in the pop-up that appears the check the box next to each category that applies.
+
+    ![Selecting a Category](./organizing-your-catalog-with-product-categories/images/02.png)
+
+1. Click _Done_.
+
+## Commerce 2.1
+
 1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product. (If you used Minium to create a site with sample data, click _Transmission Fluid_. Note that the _Transmission Fluid_ product already has been linked to the sample Vocabulary and Category.)
 

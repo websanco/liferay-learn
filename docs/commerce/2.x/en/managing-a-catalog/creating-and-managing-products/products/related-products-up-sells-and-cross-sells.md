@@ -20,7 +20,7 @@ In the image above, the two related products are displayed in the Product Publis
 
 More Product Relation types may be added as necessary. This includes intangibles such as warranties. To add a new Product Relation:
 
-1. Navigate to the _Control Panel_ → _Configuration_ → _System Settings_.
+1. Go to the _Global Applications_ menu → _Control Panel_ → _System Settings_.
 1. Click _Catalog_ in the _Commerce_ section.
 1. Click _Product Relations_ on the left menu.
 1. Click the _Add_ button.
@@ -33,7 +33,7 @@ The new Product Relation Type has been added.
 
 ## Creating Relationships Between Products
 
-1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
+1. Go to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Select any product; for example, _Brake Pads_.
 1. Click on the _Product Relations_ sub-tab.
 1. Click on _Related_ in the left menu.
@@ -50,6 +50,62 @@ These two products are now associated with _Brake Pads_. Note that this relation
 Once the product relationships have been created, configure the Product Publisher widget to display the relations.
 
 ## Displaying Product Relations
+
+You can display product relations on a product display page by configuring a Product Publisher widget. You must have a [product display page](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-) in place first.
+
+1. Search for a product (for example _Brake Pads_).
+1. Click _Brake Pads_ to view the Product Details.
+1. Scroll to the bottom of the page to view the related products listed in the _Product Publisher_ widget.
+
+   ![Configuration Menu](./related-products-up-sells-and-cross-sells/images/06.png)
+
+1. Click the _3-dot_ icon (Options) → _Configuration_.
+1. Select _Product Relations related_ from the _Data Source_ dropdown menu.
+
+    ![Choosing a Data Source](./related-products-up-sells-and-cross-sells/images/03.png)
+
+1. Click _Save_ and close the dialog box.
+
+    ![Product Relations: Brake Rotors and Fluid](./related-products-up-sells-and-cross-sells/images/05.png)
+
+The example above shows how different products could be related, ensuring that customers can see the full range of products that may also be potentially useful.
+
+## Commerce 2.1 and Below
+
+## Adding a New Product Relation Type
+
+More Product Relation types may be added as necessary. This includes intangibles such as warranties. To add a new Product Relation:
+
+1. Go to the _Control Panel_ → _Configuration_ → _System Settings_.
+1. Click _Catalog_ in the _Commerce_ section.
+1. Click _Product Relations_ on the left menu.
+1. Click the _Add_ button.
+1. Enter the new Product Relation in the _Type_ field: Warranties.
+1. Click _Save_.
+
+    ![Creating a New Product Relation](./related-products-up-sells-and-cross-sells/images/01.png)
+
+The new Product Relation Type has been added.
+
+### Creating Relationships Between Products
+
+1. Go to the _Control Panel_ menu → _Commerce_ → _Products_.
+1. Select any product; for example, _Brake Pads_.
+1. Click on the _Product Relations_ sub-tab.
+1. Click on _Related_ in the left menu.
+
+    ![Related Menu](./related-products-up-sells-and-cross-sells/images/02.png)
+
+1. Click the (+) button to add one or more relationships. In this example, select _Brake Rotors_ and _Brake Fluid_.
+1. Click _Add_.
+
+    ![Adding Two Products](./related-products-up-sells-and-cross-sells/images/04.png)
+
+These two products are now associated with _Brake Pads_. Note that this relationship is unidirectional; in other words, when viewing _Brake Pads_ the new product relations will be visible but when viewing the _Brake Rotors_ or _Brake Fluid_ products, _Brake Pads_ will _not_ be listed as as a related product.
+
+Once the product relationships have been created, configure the Product Publisher widget to display the relations.
+
+### Displaying Product Relations
 
 You can display product relations on a product display page by configuring a Product Publisher widget. You must have a [product display page](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-) in place first.
 
