@@ -381,7 +381,7 @@ This affects custom solutions that use the plugin directly.
 
 ### How should I update my code?
 
-There's no direct replacement for the `liferay-editor-image-uploader` plugin. If you have a component that relies on it, you can co-locate a copy of the old implementation and use it locally within your module.
+There's no direct replacement for the `liferay-editor-image-uploader` plugin. If you have a component that relies on it, you can locate a copy of the old implementation and use it locally within your module.
 
 #### Why was this change made?
 
@@ -662,7 +662,7 @@ The `ddmFieldArray` has several entries with following fields:
 
 #### Who is affected?
 
-This affects anyone with custom developments that execute queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
+This affects anyone with custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
 
 #### How should I update my code?
 
