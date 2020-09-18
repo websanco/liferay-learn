@@ -1,8 +1,8 @@
 # Staging UI Reference
 
-After enabling Local or Remote Live Staging for your Site, most Page configuration options are only accessible in your Staging environment. This prevents users from directly editing Live Pages.
+After enabling Local or Remote Live Staging for your Site, most Page configuration options are only accessible in your Staging environment. This prevents Users from directly editing Live Pages.
 
-Also, once staging is enabled, you can access additional options in your Staging environment. These options are located in the *Staging bar*, *Publish to Live* menu, and *Staging Page*.
+Also, once staging is enabled, you can access additional options in your Staging environment. These options are in the *Staging bar*, *Publish to Live* menu, and *Staging Page*.
 
 * [Staging Bar](#staging-bar)
 * [Publish to Live](#publish-to-live)
@@ -16,25 +16,23 @@ When Staging is enabled for a Site, you can access additional options via the St
 
 You can also access the following options for Widget Pages in your Staging environment via the Staging bar:
 
-* **Site Pages Variation**: You can toggle between variations of Page sets in your staged Site using the dropdown menu. You can also manage and create Page set variations by clicking on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar and selecting *Site Pages Variation*. See [Page Versioning](./page-versioning.md) for more information.
+* **Site Pages Variation**: You can toggle between variations of Page sets in your staged Site using the drop-down menu. You can also manage and create Page set variations by clicking on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar and selecting *Site Pages Variation*. See [Page Versioning](./page-versioning.md) for more information.
 
-* **Page Variations**: You can toggle between variations of a single Page in your staged Site using the dropdown menu. You can also manage and create Page variations by clicking on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar and selecting *Page Variations*. See [Page Versioning](./page-versioning.md) for more information.
+* **Page Variations**: You can toggle between variations of a single Page in your staged Site using the drop-down menu. You can also manage and create Page variations by clicking on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar and selecting *Page Variations*. See [Page Versioning](./page-versioning.md) for more information.
 
-* **Undo/Redo**: You can undo or redo recent changes to a Page by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) in the Staging bar and selecting *Undo*/*Redo*. Once you've marked a Page as *Ready for Publication*, you are unable to undo or redo recent changes.
+* **Undo/Redo**: You can undo or redo recent changes to a Page by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) in the Staging bar and selecting *Undo*/*Redo*. Once you've marked a Page as *Ready for Publication*, you can't undo or redo recent changes.
 
-* **History**: You can view and manage the history of Page revisions by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) in the Staging bar and selecting *History*. From here, you can also revert a Page to an earlier version by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) for the Page version you want to restore and selecting *Mark as Ready for Publication*.
+* **History**: You can view and manage the Page revision history by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) in the Staging bar and selecting *History*. From here, you can also revert a Page to an earlier version by clicking on the *Actions* button (![Actions button](./../../images/icon-actions.png)) for the Page version you want to restore and selecting *Mark as Ready for Publication*.
 
 * **Ready for Publication**: When you have finished making your changes, click on *Ready for Publication* to change the Page's status from *Draft* to *Ready for Publication*. You can then click *Publish to Live* to configure and initiate the publication process for your changes. When you publish a Page to Live, only the version marked as *Ready for Publication* is published.
 
 ## Publish to Live
 
-When you click on *Publish to Live*, a modal window appears with additional options for configuring your publication. You can make your publication using *Simple* or *Advanced* settings.
+When you click on *Publish to Live*, a modal window appears with additional options for configuring your publication. You can publish using *Simple* or *Advanced* settings.
 
 ![Click on Publish to Live to access the publishing modal window.](./staging-ui-reference/images/03.png)
 
 ## Simple Publication
-
-The *Simple Publication* tab of the modal window includes the following sections:
 
 **Name**: Enter a descriptive name for your publication into the *Name* field.
 
@@ -58,7 +56,7 @@ Here, you can access information and settings that you can use to customize your
 
 ![Use advanced setting to customize your publication.](./staging-ui-reference/images/05.png)
 
-*Custom* advanced publication settings are divided into the following sections:
+Custom advanced publication settings are divided into the following sections:
 
 **Name**: Enter a descriptive name for your publication into the *Name* field.
 
@@ -102,7 +100,7 @@ You can also access new options in the Staging Page. You can now view publicatio
 
 When you publish with Staging, it's captured as a *process* and stored for future reference. To view and manage these processes, go to *Product Menu* &rarr; *Publishing* &rarr; *Staging*.
 
-In the *Processes* tab, you'll see a list of staging processes that have been completed. From here, you can *relaunch*, *clear* or view a *summary* of any previous publications by clicking on a process's *Actions* button ( ![Actions button](./../../images/icon-actions.png) ).
+In the *Processes* tab is a list of staging processes that have been completed. From here, you can *relaunch*, *clear* or view a *summary* of any previous publications by clicking on a process's *Actions* button ( ![Actions button](./../../images/icon-actions.png) ).
 
 ![View and manage previous publication processes from the Staging Page.](./staging-ui-reference/images/14.png)
 
