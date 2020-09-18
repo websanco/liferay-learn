@@ -9100,15 +9100,17 @@ a.copybtn {
     width: 80%; }
 
 .documentations .general-info {
-  background-color: #FFF;
-  position: fixed;
-  width: calc(100% - 16.66667%);
-  z-index: 1; }
+  background-color: #FFF; }
   .documentations .general-info .actions {
     display: block; }
     .documentations .general-info .actions svg {
       height: 2.375rem;
       width: 2.375rem; }
+  @media (min-width: 768px) {
+    .documentations .general-info {
+      position: fixed;
+      width: calc(100% - 16.66667%);
+      z-index: 1; } }
 
 .documentations .nav-link {
   color: #30313F; }
