@@ -9294,7 +9294,8 @@ pre {
     width: 1.5rem; }
 
 .landing-page-container .help-center-footer {
-  margin: 0 1rem 1rem; }
+  margin-left: 1rem;
+  margin-right: 1rem; }
 
 header {
   align-items: center;
