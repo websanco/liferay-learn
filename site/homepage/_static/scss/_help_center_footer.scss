@@ -1,5 +1,6 @@
 .help-center-footer {
 	border-top: 1px solid $hr-color;
+	margin-bottom: $spacing-md;
 	margin-top: $spacing-lg;
 	padding-top: $spacing-md;
 
@@ -26,7 +27,6 @@
 
 .landing-page-container {
 	.help-center-footer {
-		margin-left: 1rem;
-		margin-right: 1rem;
+		margin: 0 $spacing-md $spacing-md;
 	}
 }
