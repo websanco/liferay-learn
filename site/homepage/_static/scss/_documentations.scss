@@ -1,6 +1,6 @@
 .documentations {
 	.article-body {
-		margin-top: $spacing-default; 
+		margin-top: $spacing-default;
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: 5rem;
@@ -12,7 +12,7 @@
 	}
 
 	.doc-body,
-	.doc-nav-wrapper {
+	.doc-nav-wrapper-inner {
 		padding: 0;
 	}
 
@@ -24,7 +24,7 @@
 
 	.doc-nav,
 	.doc-nav-footer,
-	.doc-nav-wrapper {
+	.doc-nav-wrapper-inner {
 		background-color: $background-color;
 	}
 
@@ -118,6 +118,12 @@
 	}
 
 	.doc-nav-wrapper {
+		@include media-breakpoint-down(md) {
+			padding: 0;
+		}
+	}
+
+	.doc-nav-wrapper-inner {
 		.doc-nav-footer {
 			align-items: center;
 			border-top: 1px solid $hr-color;
