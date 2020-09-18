@@ -23,7 +23,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
     ```
 
 1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):

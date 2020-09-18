@@ -16,7 +16,7 @@ First, you must create a Collection:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
     ```
 
 1. Access the site at `http://localhost:8080`; user name `test@liferay.com`; password `test`.

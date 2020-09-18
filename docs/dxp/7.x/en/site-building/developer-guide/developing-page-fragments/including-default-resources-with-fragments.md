@@ -14,7 +14,7 @@ First, import an example to see how Fragment resources work:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
     ```
 
 1. Download and unzip the [example resources Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):

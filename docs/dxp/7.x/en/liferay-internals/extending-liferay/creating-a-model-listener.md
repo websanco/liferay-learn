@@ -1,8 +1,8 @@
 # Creating a Model Listener
 
-Model listeners listen for persistence method calls that signal changes to a specified model (such as `update` or `add` methods). Most of the methods model listeners use are called from DXP's [`BasePersistenceImpl`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/service/persistence/impl/BasePersistenceImpl.java) class. You can define model listeners for out-of-the-box entities (like `JournalArticle` or `AssetEntry`), or for your own entities.
+Model listeners listen for persistence method calls that signal changes to a specified model (such as `update` or `add` methods). Most of the methods model listeners use are called from DXP's [`BasePersistenceImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_CE_VERSION$]/portal-kernel/src/com/liferay/portal/kernel/service/persistence/impl/BasePersistenceImpl.java) class. You can define model listeners for out-of-the-box entities (like `JournalArticle` or `AssetEntry`), or for your own entities.
 
-To add a model listener, you implement the [`ModelListener`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface.
+To add a model listener, you implement the [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_CE_VERSION$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface.
 
 Here, you'll learn how to create model listeners:
 
@@ -20,7 +20,7 @@ First, deploy an example model listener for the `JournalArticle` model on your i
 1. Start the DXP image.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_DXP_VERSION$]
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
     ```
 
 1. Download and unzip `Acme Model Listener`.
@@ -75,9 +75,9 @@ The model listener you'll create is for a Message Boards message. You'll trigger
 
 ## Model Listener Behavior
 
-Model listeners implement the [`ModelListener`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface for specific entities. Model listeners can have code to execute before or after those entities are created, updated, or removed. All of these methods are called from the `BasePersistenceImpl` class; the code for created or updated entities is called from the `update` method in `BasePersistenceImpl`, and the code for removed entities is called from the `remove` method in `BasePersistenceImpl`.
+Model listeners implement the [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_CE_VERSION$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface for specific entities. Model listeners can have code to execute before or after those entities are created, updated, or removed. All of these methods are called from the `BasePersistenceImpl` class; the code for created or updated entities is called from the `update` method in `BasePersistenceImpl`, and the code for removed entities is called from the `remove` method in `BasePersistenceImpl`.
 
-Model listeners can also have code to execute before or after other kinds of related entities are added or removed. These methods are called from the `_addTableMapping` method in [`TableMapperImpl`](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/internal/service/persistence/TableMapperImpl.java).
+Model listeners can also have code to execute before or after other kinds of related entities are added or removed. These methods are called from the `_addTableMapping` method in [`TableMapperImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_CE_VERSION$]/portal-kernel/src/com/liferay/portal/kernel/internal/service/persistence/TableMapperImpl.java).
 
 Now you'll modify the project so it operates on the `MBMessage` class and the `onBeforeRemove` event.
 
