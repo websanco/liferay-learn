@@ -4,7 +4,7 @@ Product images help to ensure that customers know what they are buying and incre
 
 ## Adding a Single Image
 
-To add an image:
+To add a single image:
 
 1. Go to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click on a product (in this example, _Brake Rotors_).
