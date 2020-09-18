@@ -1,40 +1,47 @@
 # Maintenance Mode and Deprecations in 7.3
 
-In some new Liferay versions, Liferay stops enhancing specific items or makes plans to remove specific apps and capabilities.
+With each new DXP release, a feature may not warrant continued enhancements or may become obsolete. Stopping enhancements for a feature puts it in *Maintenance Mode*.
 
-1. **Moving an Item to Maintenance Mode:** Support continues for the item but enhancements cease. Future deprecation is not necessarily implied.
+**Maintenance Mode:** The feature is supported but no longer being enhanced.
 
-2. **Deprecation:** Support for a feature may stop in the next minor release or later. In that future release, Liferay removes the feature from the Liferay bundle. The removed feature may published as a [Marketplace app](https://web.liferay.com/marketplace) or its source code may be preserved as an archive. Liferay puts many archives in the `modules/apps/archived` source code folder. During deprecation, the feature may be disabled.
+Obsolete features are eventually either removed or replaced with newer, better features. Before dropping support for an obsolete feature, Liferay marks it *Deprecated*.
+
+**Deprecated:** The feature will be unsupported as early as the next minor version release. For example, support for a feature deprecated in 7.3 can be dropped as early as 7.4.
+
+```important::
+   Plan to stop using deprecated features because their support may cease as early as the next minor release.
+```
 
 ```important::
    Please see the `maintenance mode and deprecation policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
 ```
 
-```note::
-   Plan to stop using deprecated apps/capabilities because they are not being developed and will be removed.
-```
+## Deprecated Feature Availability
 
-## Items Moved to Maintenance Mode
+Deprecated features have different availability:
 
-* Export/Import
-* Site Templates
-* Liferay Reports
-* Liferay Drools
-* Asset Publisher (deprecation is planned in 7.4)
-* Liferay Mobile Experience: Mobile SDK, Screens, Push
+**Bundled:** The feature is included in the Liferay product.
 
-## Deprecations
+**Marketplace:** The feature is included in a Marketplace app final version.
+
+**Archived:** The feature is unavailable, but its code is available.
+
+**Removed:** The feature and its code are unavailable.
+
+## Features Deprecate in 7.3
+
+Here are the features deprecated in 7.3:
 
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | DDM, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
-| Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life is Dec 31, 2020](https://www.adobe.com/products/flashplayer/end-of-life.html#:~:text=As%20previously%20announced%20in%20July,(%E2%80%9CEOL%20Date%E2%80%9D)). |
+| Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html#:~:text=As%20previously%20announced%20in%20July,(%E2%80%9CEOL%20Date%E2%80%9D) is Dec 31, 2020). |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
-| JQuery default global Liferay variables | Disabled | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
+| JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
-| SOAP Web Services | disabled | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
+| SOAP Web Services | Bundled (disabled) | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
 | Solr | Marketplace | Replaced by Elasticsearch. |
 | Theme: Fjord | Archived | No direct replacement. |
 | Theme: Porygon | Archived | No direct replacement. |
@@ -47,6 +54,17 @@ Features deprecated in earlier Liferay versions may also need to be considered, 
 * [7.2 Deprecations and Features Moved to Maintenance Mode](./maintenance-mode-and-deprecations-in-7-2.md)
 * [7.1 Deprecations](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
 * [7.0 Deprecations](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
+
+## Features Moved to Maintenance Mode in 7.3
+
+Here are the features moved to Maintenance Mode in 7.3:
+
+* Asset Publisher (deprecation is planned in 7.4)
+* Export/Import
+* Liferay Drools
+* Liferay Mobile Experience: Mobile SDK, Screens, Push
+* Liferay Reports
+* Site Templates
 
 ## Additional Information
 
