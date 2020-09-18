@@ -10,7 +10,7 @@ Developer Guide
 This section includes Developer related articles for Site Building.
 
 .. raw:: html
-  :file: landingpage_template.html
+  :file: ../landingpage_template.html
 
 .. raw:: html
   :file: developer-guide/landing.html
