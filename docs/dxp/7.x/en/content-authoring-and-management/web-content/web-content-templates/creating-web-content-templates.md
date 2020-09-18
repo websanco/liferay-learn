@@ -1,6 +1,6 @@
 # Creating Web Content Templates
 
-Structures define the available fields for creating Web Content, while Web Content Templates define how the [Structure's](../web-content-structures/creating-structures.md) content is presented on the page. A Web Content Template can be associated with a Structure or even [embedded in another Web Content Template](./advanced-web-content-templates/embedding-web-content-templates.md). Changes in the Structure may require changes in the associated Web Content Template, if a Structure field name referenced in the Template is renamed or removed.
+Structures define the available fields for creating Web Content, while Web Content Templates define how the [Structure's](../web-content-structures/creating-structures.md) content is presented on the page. A Web Content Template can be associated with a Structure or even [embedded in another Web Content Template](./embedding-widgets-in-templates.md#embedding-other-templates). Changes in the Structure may require changes in the associated Web Content Template, if a Structure field name referenced in the Template is renamed or removed.
 
 ```note::
    Web Content Templates are written in the FreeMarker Template Language (FTL).
@@ -11,7 +11,7 @@ Download the [Newspaper Article Structure](./resources/newspaper-article-structu
 1. Open the Product Menu and go to the Site Menu &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Templates* tab.
 1. Click the *Add button* (![Add Template](../../../images/icon-add.png)) to create a new Web Content Template.
-1. Enter the title of your new Web Content Template and add your code to the script window. You can add the code from the example *Newspaper Article* Template by clicking the *Choose File* button below the Script window and importing the `newspaper-article-template.ftl` file. If you're creating a Web Content Template to [embed in another Template](./advanced-web-content-templates/embedding-web-content-templates.md), you can skip to step eight.
+1. Enter the title of your new Web Content Template and add your code to the script window. You can add the code from the example *Newspaper Article* Template by clicking the *Choose File* button below the Script window and importing the `newspaper-article-template.ftl` file. If you're creating a Web Content Template to [embed in another Template](./embedding-widgets-in-templates.md#embedding-other-templates), you can skip to step eight.
 
    ![Add your template code (FreeMarker) to the script window.](./creating-web-content-templates/images/01.png)
 
