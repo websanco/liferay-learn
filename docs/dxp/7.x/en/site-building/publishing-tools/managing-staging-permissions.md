@@ -8,11 +8,9 @@ With Staging, you can manage User permissions that deal directly with Staging an
 
 ## General Staging Permissions
 
-Follow these steps to assign general Staging permissions to a User Role:
-
 1. Go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
 
-1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) for the role you want to modify, and select *Edit*.
+1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) for the Role you want to modify and select *Edit*.
 
    Alternatively, you can create a new Role by clicking on the *Add* button (![Add button](./../../images/icon-add.png)) and completing the *New Role* section.
 
@@ -20,13 +18,13 @@ Follow these steps to assign general Staging permissions to a User Role:
 
 1. In the side menu, click on *Site and Asset Library Administration* &rarr; *Publishing* &rarr; *Staging*.
 
-1. Select which General Staging permissions you want to assign to the User Role, and define their scope.
+1. Select which General Staging permissions you want to assign to the User Role and define their scope.
 
    ![Assign the desired Staging permissions and define their scope](./managing-staging-permissions/images/04.png)
 
 ## Related Site Resource Permissions
 
-From the *Define Permissions* tab, you can also assign other related Site *Resource permissions* that are relevant for Staging. In the side menu, click on *Control Panel* &rarr; *Sites* &rarr; *Sites*.
+From the *Define Permissions* tab, you can also assign other related Site *Resource permissions* relevant for Staging. In the side menu, click on *Control Panel* &rarr; *Sites* &rarr; *Sites*.
 
 The following permissions are relevant to Staging:
 
@@ -48,21 +46,19 @@ The following permissions are relevant to Staging:
 
 ## Individual Variation Permissions
 
-You can also set permissions for individual variations, so certain Users have access to manage some, but not all variations.
+You can also set permissions for individual variations so certain Users have access to manage some, but not all variations.
 
-Follow these steps to manage permissions:
-
-1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar, and select either *Site Pages Variation* or *Page Variations*.
+1. Click on the *Actions* button ( ![Actions button](./../../images/icon-actions.png) ) in the Staging bar and select either *Site Pages Variation* or *Page Variations*.
 
    ![Click on the Actions button in the Staging bar and select the variation type you want to configure.](./managing-staging-permissions/images/01.png)
 
-1. Click on the *Actions* button ( ![Actions button](./../../../images/icon-actions.png) ) for the variation you want to configure, and select *Permissions*.
+1. Click on the *Actions* button ( ![Actions button](./../../../images/icon-actions.png) ) for the variation you want to configure and select *Permissions*.
 
    ![Select Permissions.](./managing-staging-permissions/images/02.png)
 
-1. Use the checkboxes to configure User permissions for the selected variation, and then click *Save*.
+1. Use the check boxes to configure User permissions for the selected variation, and then click *Save*.
 
-   ![Use the checkboxes to configure User permissions for the selected variation.](./managing-staging-permissions/images/03.png)
+   ![Use the check boxes to configure User permissions for the selected variation.](./managing-staging-permissions/images/03.png)
 
 ## Additional Information
 
