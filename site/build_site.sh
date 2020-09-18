@@ -120,7 +120,6 @@ function generate_sphinx_input {
 
 	for md_file_name in `find build/input -name "*.md" -type f`
 	do
-#		sed -i "s/\(^\s*docker.*liferay\/dxp\:\)${LIFERAY_LEARN_DXP_VERSION_TOKEN}/\1${LIFERAY_LEARN_DXP_VERSION_VALUE}/g" ${md_file_name}
 		sed -i "s/${LIFERAY_LEARN_DXP_VERSION_CE_TOKEN}/${LIFERAY_LEARN_DXP_VERSION_CE_VALUE}/g" ${md_file_name}
 		sed -i "s/${LIFERAY_LEARN_DXP_VERSION_TOKEN}/${LIFERAY_LEARN_DXP_VERSION_VALUE}/g" ${md_file_name}
 	done
