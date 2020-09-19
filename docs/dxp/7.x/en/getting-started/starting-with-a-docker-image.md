@@ -13,13 +13,13 @@ Liferay Portal CE is the open source and community supported platform for buildi
 1. Get the Docker image.
 
     ```bash
-    docker pull liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
+    docker pull liferay/portal:[$LIFERAY_LEARN_PORTAL_VERSION$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_CE_VERSION$]
+    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_PORTAL_VERSION$]
     ```
 
     ```tip::
