@@ -139,15 +139,16 @@ Now that you have the URL, you must provide a way to open the item selector and 
 
 ### Provide a Way to Open the Item Selector
 
-TODO: update aui:button part to clay:button (use https://clayui.com/docs/components/button.html as link)
-
-A button creates the item selector dialog in this example. You can use the `aui:button` tag from the [AUI library](http://alloyui.com/api/) to create a button:
+A button is a simple UI element you can use to open an item selector. You can use the `clay:button` tag from the [Clay library](https://clayui.com/docs/components/button.html) to create a button:
 
 ```jsp
-<aui:button name="selectRole" value="Select" />
+<clay:button
+  id='<%= liferayPortletResponse.getNamespace() + "selectRole" %>'
+  label="Select"
+/>
 ```
 
-The `aui:button` tag creates a button (with the name `selectRole` and the label *Select* displayed on the screen) on your widget. This button can be identified by the String `<portlet:namespace />selectRole`.
+The `clay:button` tag creates a button (with the ID `selectRole` and the label *Select* displayed on the screen) on your widget. This button can be identified by the String `<portlet:namespace />selectRole`.
 
 The easiest way to utilize an item selector is by defining it in JavaScript, so use the `aui:script` tag to embed JavaScript in your JSP file. Use the item selector definition (`frontend-js-web/liferay/ItemSelectorDialog.es`) as a requirement for your script:
 
@@ -174,7 +175,7 @@ Define the item selector dialog and its behavior inside the select button's on-c
 var itemSelectorDialog = new ItemSelectorDialog.default(
     {
         eventName: 'selectItem',
-        title: '<liferay-ui:message key="select-role" />',
+        title: 'Select Role',
         url: '<%= itemSelectorURL %>'
     }
 );
@@ -187,7 +188,7 @@ The value for the `eventName` field **must** match the String you used with the 
 ```
 
 ```tip::
-   If you only want to support selecting one item, then you can restrict the dialog to a single selection by adding this field to the ``ItemSelectorDialog``: ``singleSelect: true``. You can also change the text of the dialog's `Add` and `Cancel` buttons by adding the ``buttonAddLabel`` or ``buttonCancelLabel`` fields, respectively (e.g., with a value of ``'<liferay-ui:message key="done" />'``).
+   If you only want to support selecting one item, then you can restrict the dialog to a single selection by adding this field to the ``ItemSelectorDialog``: ``singleSelect: true``. You can also change the text of the dialog's `Add` and `Cancel` buttons by adding the ``buttonAddLabel`` or ``buttonCancelLabel`` fields, respectively.
 ```
 
 Then, define the dialog's behavior when the user makes a selection:
