@@ -78,12 +78,14 @@ Since the Java class defining the portlet render logic for the sample JSP portle
     List<ItemSelectorReturnType> itemSelectorReturnTypes =
         ListUtil.fromArray(returnTypeArray);
 
+    itemSelectorReturnTypes.add(new UUIDItemSelectorReturnType());
+
     itemSelectorCriterion.setDesiredItemSelectorReturnTypes(
         itemSelectorReturnTypes);
    ```
 
    ```tip::
-       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)>`__ implementation.
+       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java>`__ implementation.
    ```
 
 The item selector uses these two classes to decide what selection views of items (presented as tabs) to show and how to identify each item.
