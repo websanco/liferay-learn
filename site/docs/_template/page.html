@@ -24,7 +24,10 @@
         {% set fileName = title.lower().replace(' ', '-') %}
 
         <a
-            href='https://github.com/liferay/liferay-learn/edit/master/docs/{{ product }}/{{ version }}/{{ language }}/{{ folderPath }}{{ fileName }}.md'>
+            aria-label="{% trans %}Github icon{% endtrans %}"
+            href="https://github.com/liferay/liferay-learn/edit/master/docs/{{ product }}/{{ version }}/{{ language }}/{{ folderPath }}{{ fileName }}.md"
+            title="{% trans %}Contribute on Github{% endtrans %}"
+            >
             <svg>
                 <use xlink:href="#edit"></use>
             </svg>
