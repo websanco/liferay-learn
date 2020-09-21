@@ -10,16 +10,17 @@ Liferay DXP's Staging tool provides ways to manage available application data an
 As part of Staging configuration, you can select which application data and content types are staged. If staged, the selected data and content is managed by your Staging environment, along with all contained entities, and it may not be possible to edit them directly in Live.
 
 ![Select which application data and content types are staged.](./managing-data-and-content-types-in-staging/images/01.png)
-When working with Staging, you must think about the applications you're using on your Site and whether they're appropriate to be staged: 
+When working with Staging, you must think about the applications you're using on your Site and whether they're appropriate to be staged:
 
-* Unstaged data only exists in the Site's live environment. Staged data exists in both environments. 
-* Collaborative applications, such as Blogs, Message Boards, and Wikis should not be staged, because posts would not appear on the live Site until you publish. 
+* Unstaged data only exists in the Site's live environment. Staged data exists in both environments.
+* Collaborative applications, such as Blogs, Message Boards, and Wikis should not be staged, because posts would not appear on the live Site until you publish.
 * You can only stage Site-scoped content.
-* Page-scoped data can only be staged on published Pages; its data is published with the Page. 
-* If you have disabled/removed an application from your Site but it's still selected in your Staging configuration, it's still published and may appear in aggregation apps like Asset Publisher. 
-* Asset Publisher on the Staged Site cannot access data from unstaged apps, because their data exists only on the Live Site. If your Asset Publisher's configuration shows data from both staged and unstaged apps, it won't look the same on both your Staged and your Live Sites. 
+* Page-scoped data can only be staged on published Pages; its data is published with the Page.
+* If you have disabled/removed an application from your Site but it's still selected in your Staging configuration, it's still published and may appear in aggregation apps like Asset Publisher.
+* Asset Publisher on the Staged Site cannot access data from unstaged apps, because their data exists only on the Live Site. If your Asset Publisher's configuration shows data from both staged and unstaged apps, it won't look the same on both your Staged and your Live Sites.
 
 **Content Origin for Staged and Unstaged Applications**
+
 | Content Type | Staged | Unstaged | Data Origin Staged | Data Origin Live |
 | ------------ | -------| -----------| ------------- | ----------- |
 | Collaborative |  | &#10004; | | &#10004; |
@@ -27,8 +28,8 @@ When working with Staging, you must think about the applications you're using on
 | Page Scoped Apps | &#10004;* | | &#10004; | |
 | Unselected Apps in Staging Config | | &#10004; | | &#10004; |
 | Selected Apps in Staging Config | &#10004; | | &#10004; | |
-\* Only published when the Page is published
 
+\* *Only published when the Page is published*
 
 ```important::
    After configuration, users can't change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.
@@ -40,7 +41,7 @@ During the publication process, you can also configure which application data an
 
 ![Configure which application data and content types are published from Staging to Live.](./managing-data-and-content-types-in-staging/images/02.png)
 
-Here, you can exclude some data and content types during publication or export to speed up the process. 
+Here, you can exclude some data and content types during publication or export to speed up the process.
 
 ### Version History
 

@@ -40,9 +40,9 @@ When you click on *Publish to Live*, a modal window appears with additional opti
 
 **Pages to Publish**: View the number of Pages included in your publication.
 
-    ```note::
-       This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
-    ```
+```note::
+   This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
+```
 
 When ready, click on *Publish to Live* to initiate publishing.
 

@@ -115,7 +115,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
    ![Select the data and content types you want to stage.](./configuring-remote-live-staging/images/05.png)
 
    ```warning::
-       When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging<./managing-data-and-content-types-in-staging.md>`_ for more information.
+       When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
    ```
 
 1. Click on *Save* to initiate the Staging process. The duration of this process depends on the size of your Site.
