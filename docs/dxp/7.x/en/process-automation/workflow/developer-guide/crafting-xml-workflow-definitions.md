@@ -52,7 +52,7 @@ Each workflow definition begins and ends with a _State Node_. Create a _Start_ n
     <state>
         <name>created</name>
         <metadata>
-			<![CDATA[{"xy":[36,51]}]]>
+            <![CDATA[{"xy":[36,51]}]]>
         </metadata>
 		<initial>true</initial>
 		<transitions>
@@ -60,8 +60,8 @@ Each workflow definition begins and ends with a _State Node_. Create a _Start_ n
 				<name>review</name>
 				<target>review</target>
 			</transition>
-		</transitions>
-	</state>
+        </transitions>
+    </state>
 ```
 
 In this example, the _Start_ node has the following properties:
@@ -237,7 +237,7 @@ Add a _Task_ node for the review process. In this sample, include a `<notificati
 					<role-type>site</role-type>
 					<name>Site Owner</name>
 				</role>
-			</roles>
+            </roles>
         </assignments>
         <transitions>
 			<transition>
@@ -247,7 +247,7 @@ Add a _Task_ node for the review process. In this sample, include a `<notificati
 			<transition>
 				<name>reject</name>
 				<target>update</target>
-				<default>false</default>
+                <default>false</default>
             </transition>
         </transitions>
     </task>
