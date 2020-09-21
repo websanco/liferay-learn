@@ -20,7 +20,7 @@ First, deploy an example model listener for the `JournalArticle` model on your i
 1. Start the DXP image.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:[$LIFERAY_LEARN_PORTAL_VERSION$]
+    docker run -it -p 8080:8080 [$DXP_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip `Acme Model Listener`.
