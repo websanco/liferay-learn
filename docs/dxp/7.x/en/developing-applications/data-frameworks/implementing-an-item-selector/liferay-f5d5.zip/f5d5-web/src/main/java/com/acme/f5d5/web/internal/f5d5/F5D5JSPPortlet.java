@@ -1,4 +1,4 @@
-package com.acme.f5d5.web.internal.portlet.bridges.mvc;
+package com.acme.f5d5.web.internal.f5d5;
 
 import com.liferay.item.selector.ItemSelector;
 import com.liferay.item.selector.ItemSelectorReturnType;
@@ -40,7 +40,7 @@ import org.osgi.service.component.annotations.Reference;
 	},
 	service = Portlet.class
 )
-public class JSPPortlet extends MVCPortlet {
+public class F5D5JSPPortlet extends MVCPortlet {
 
 	@Override
 	public void render(

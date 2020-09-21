@@ -27,7 +27,7 @@ curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-framework
 ```bash
 unzip liferay-f5d5.zip
 ```
-Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`F5D5JSPPortlet.java`]||||(TODO: fix link -- and do the same for all the following links to the module, because the path is going to change)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The following walkthrough shows how the example project works.
+Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The following walkthrough shows how the example project works.
 
 ## Create an Item Selector URL
 
@@ -123,7 +123,7 @@ Finally, call `MVCPortlet`'s `render` method to continue the rendering process o
 super.render(renderRequest, renderResponse);
 ```
 
-You have now finished adding the necessary Java code to create the item selector; see [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/portlet/bridges/mvc/JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
+You have now finished adding the necessary Java code to create the item selector; see [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
 
 ## Use the Item Selector in Your View
 
