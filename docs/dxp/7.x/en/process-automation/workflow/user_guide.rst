@@ -10,7 +10,12 @@ User Guide
    user-guide/reviewing-assets.md
    user-guide/building-workflows.md
    user-guide/using-workflow-metrics.md
-   
+   user-guide/workflow-metrics-reports.md
 
-.. include:: /process-automation/workflow/user-guide/README.rst
-   :start-line: 2
+-  :doc:`/process-automation/workflow/user-guide/introduction-to-workflow`
+-  :doc:`/process-automation/workflow/user-guide/activating-workflow`
+-  :doc:`/process-automation/workflow/user-guide/managing-workflows`
+-  :doc:`/process-automation/workflow/user-guide/reviewing-assets`
+-  :doc:`/process-automation/workflow/user-guide/building-workflows`
+-  :doc:`/process-automation/workflow/user-guide/using-workflow-metrics`
+-  :doc:`/process-automation/workflow/user-guide/workflow-metrics-reports`
