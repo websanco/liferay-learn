@@ -16,7 +16,7 @@ First, you must create a Collection:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 [$DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Access the site at `http://localhost:8080`; user name `test@liferay.com`; password `test`.
