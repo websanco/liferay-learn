@@ -4,10 +4,10 @@ set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-readonly LIFERAY_LEARN_DOCKER_IMAGE_TOKEN=\\[\$LIFERAY_LEARN_DOCKER_IMAGE\$\\]
-readonly LIFERAY_LEARN_DOCKER_IMAGE_VALUE=liferay/dxp:7.3.10-ga1
-readonly LIFERAY_LEARN_GIT_TAG_TOKEN=\\[\$LIFERAY_LEARN_GIT_TAG\$\\]
-readonly LIFERAY_LEARN_GIT_TAG_VALUE=7.3.4-ga5
+readonly DXP_DOCKER_IMAGE_TOKEN=\\[\$DXP_DOCKER_IMAGE\$\\]
+readonly DXP_DOCKER_IMAGE_VALUE=liferay\\/dxp\\:7.3.10-ga1
+readonly DXP_GIT_TAG_TOKEN=\\[\$DXP_GIT_TAG\$\\]
+readonly DXP_GIT_TAG_VALUE=7.3.4-ga5
 
 function activate_venv {
 	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
@@ -119,8 +119,8 @@ function generate_sphinx_input {
 
 	for md_file_name in `find build/input -name "*.md" -type f`
 	do
-		sed -i "s/${LIFERAY_LEARN_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_DOCKER_IMAGE_VALUE}/g" ${md_file_name}
-		sed -i "s/${LIFERAY_LEARN_GIT_TAG_TOKEN}/${LIFERAY_LEARN_GIT_TAG_VALUE}/g" ${md_file_name}
+		sed -i "s/${DXP_DOCKER_IMAGE_TOKEN}/${DXP_DOCKER_IMAGE_VALUE}/g" ${md_file_name}
+		sed -i "s/${DXP_GIT_TAG_TOKEN}/${DXP_GIT_TAG_VALUE}/g" ${md_file_name}
 	done
 }
 
