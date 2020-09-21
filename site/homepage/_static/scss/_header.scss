@@ -44,19 +44,9 @@ header {
 		}
 	}
 
-	.mobile-nav {
-		display: none;
-
-		svg {
-			cursor: pointer;
-			height: $spacing-md;
-			margin: $spacing-md;
-			margin-left: 0;
-			width: $spacing-md;
-		}
-
-		@media (max-width: 576px) {
-			display: block;
-		}
+	.mobile-menu {
+		cursor: pointer;
+		margin-right: $spacing-xs;
+		padding: $spacing-md;
 	}
 }

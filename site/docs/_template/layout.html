@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {%- endblock %}
     </div>
 
-    <div class="header-links" role="navigation" aria-label="related navigation">
+    <div aria-label="related navigation" class="d-lg-block d-none header-links" role="navigation">
         <a href="https://www.liferay.com">
             {% trans %}Liferay.com{% endtrans %}
         </a>
@@ -61,6 +61,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         {% endif %}
     </div>
+
+    <button aria-haspopup="true" class="btn d-lg-none mobile-menu" id="mobileMenu" onclick="javascript:;" role="navigation" type="button">
+       <svg aria-label="menu" class="lexicon-icon" role="img">
+           <use xlink:href="#bars" />
+       </svg>
+    </button>
 </header>
 {% endblock %}
 

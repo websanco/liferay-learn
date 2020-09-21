@@ -9328,17 +9328,10 @@ header {
   @media (max-width: 576px) {
     header .header-links {
       display: none; } }
-  header .mobile-nav {
-    display: none; }
-    header .mobile-nav svg {
-      cursor: pointer;
-      height: 1rem;
-      margin: 1rem;
-      margin-left: 0;
-      width: 1rem; }
-    @media (max-width: 576px) {
-      header .mobile-nav {
-        display: block; } }
+  header .mobile-menu {
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 1rem; }
 
 .homepage .banner,
 .homepage .products h2,
