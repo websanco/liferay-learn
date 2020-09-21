@@ -8,12 +8,17 @@ All Workflow definitions in Liferay DXP are written in XML format. This article 
 
 ## Existing Workflow Definitions
 
-Only one workflow definition is installed by default: Single Approver. Several more are embedded in the source code of the Liferay DXP installation. These definitions provide good reference material for many of the workflow features and elements described in these articles.
+Only one workflow definition is installed by default: Single Approver. Several more are embedded in the source code of the Liferay DXP installation. These definitions are XML files which can be extracted from a JAR file embedded in an `LPKG` file.
 
-* [Category Specific](../user-guide/workflow-designer-overview/workflow-processes/category-specific-definition.xml)
-* [Legal Marketing](../user-guide/workflow-designer-overview/workflow-processes/legal-marketing-definition.xml)
-* [Single Approver](../user-guide/workflow-designer-overview/workflow-processes/single-approver-definition.xml)
-* [Single Approver Scripted Assignment](../user-guide/workflow-designer-overview/workflow-processes/single-approver-definition-scripted-assignment.xml)
+To extract additional definitions:
+
+1. Navigate to `[Liferay Home]/osgi/marketplace`.
+1. Using an archive manager, open the `Liferay CE Forms and Workflow.lpkg`.
+1. Open the JAR file named `com.liferay.portal.workflow.kaleo.runtime.impl-[version].jar`.
+1. In the JAR file, navigate to `META-INF/definitions/`.
+1. Extract the four XML workflow definition files.
+
+These definitions provide good reference material for many of the workflow features and elements described in these articles.
 
 ## Schema
 
@@ -47,4 +52,4 @@ All these tags are optional. If present the first time a definition is saved,the
 ## Additional Information
 
 * [Managing Workflows](../user-guide/managing-workflows.md)
-* [Introduction to the Workflow Designer](../user-guide/workflow-designer-overview.md)
+* [Introduction to the Workflow Designer](../user-guide/introduction-to-the-workflow-designer.md)
