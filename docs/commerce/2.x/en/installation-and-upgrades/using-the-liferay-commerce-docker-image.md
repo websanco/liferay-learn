@@ -9,13 +9,13 @@ The latest version Liferay Commerce is available as a docker image. Follow these
     ```
 
     ```bash
-    docker pull liferay/commerce:2.0.6
+    docker pull [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
 1. Start Liferay Commerce
 
     ```bash
-    docker run -it -p 8080:8080 liferay/commerce:2.0.6
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
     ```important::

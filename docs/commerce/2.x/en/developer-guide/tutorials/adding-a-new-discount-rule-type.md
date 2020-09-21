@@ -1,8 +1,8 @@
 # Adding a New Discount Rule Type
 
-You can add a new discount rule type by implementing two interfaces: [CommerceDiscountRuleType](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleType.java) and [CommerceDiscountRuleTypeJSPContributor](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributor.java).
+You can add a new discount rule type by implementing two interfaces: [CommerceDiscountRuleType](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleType.java) and [CommerceDiscountRuleTypeJSPContributor](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributor.java).
 
-Discount rule types define conditions for evaluating when discounts are applied to an order. Liferay Commerce provides three discount rule types out-of-the-box: [AddedAllCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-rule-added-all/src/main/java/com/liferay/commerce/discount/rule/added/all/internal/AddedAllCommerceDiscountRuleTypeImpl.java), [AddedAnyCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-rule-added-any/src/main/java/com/liferay/commerce/discount/rule/added/any/internal/AddedAnyCommerceDiscountRuleTypeImpl.java), and [CartTotalCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-rule-cart-total/src/main/java/com/liferay/commerce/discount/rule/cart/total/internal/CartTotalCommerceDiscountRuleTypeImpl.java).
+Discount rule types define conditions for evaluating when discounts are applied to an order. Liferay Commerce provides three discount rule types out-of-the-box: [AddedAllCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-rule-added-all/src/main/java/com/liferay/commerce/discount/rule/added/all/internal/AddedAllCommerceDiscountRuleTypeImpl.java), [AddedAnyCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-rule-added-any/src/main/java/com/liferay/commerce/discount/rule/added/any/internal/AddedAnyCommerceDiscountRuleTypeImpl.java), and [CartTotalCommerceDiscountRuleTypeImpl](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-rule-cart-total/src/main/java/com/liferay/commerce/discount/rule/cart/total/internal/CartTotalCommerceDiscountRuleTypeImpl.java).
 
 ![Out-of-the-box discount rule types](./adding-a-new-discount-rule-type/images/01.png "Out-of-the-box discount rule types")
 
@@ -19,7 +19,7 @@ First, you must deploy an example discount rule type on your instance of Liferay
 1. Start Liferay Commerce.
 
     ```bash
-    docker run -it -p 8080:8080 liferay/commerce:2.0.5
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip [Acme Commerce Discount Rule Type](./liferay-m6a8.zip).
@@ -84,9 +84,9 @@ public class M6A8CommerceDiscountRuleType implements CommerceDiscountRuleType {
     public static final String KEY = "Example";
 ```
 
-> It is important to provide a distinct key for the discount rule type so that Liferay Commerce can distinguish the new type from others in the [discount rule type registry](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/CommerceDiscountRuleTypeRegistryImpl.java). Declaring a key that is already in use overrides the existing associated type.
+> It is important to provide a distinct key for the discount rule type so that Liferay Commerce can distinguish the new type from others in the [discount rule type registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/CommerceDiscountRuleTypeRegistryImpl.java). Declaring a key that is already in use overrides the existing associated type.
 >
-> The `commerce.discount.rule.type.order` value indicates how far in the list of available discount rule types this type appears. For example, the ["added all" discount rule type](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-rule-added-all/src/main/java/com/liferay/commerce/discount/rule/added/all/internal/AddedAllCommerceDiscountRuleTypeImpl.java) has a value of 50. Giving your discount rule type a value of 51 ensures that it appears immediately after the "added all" type.
+> The `commerce.discount.rule.type.order` value indicates how far in the list of available discount rule types this type appears. For example, the ["added all" discount rule type](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-rule-added-all/src/main/java/com/liferay/commerce/discount/rule/added/all/internal/AddedAllCommerceDiscountRuleTypeImpl.java) has a value of 50. Giving your discount rule type a value of 51 ensures that it appears immediately after the "added all" type.
 
 ### Review the `CommerceDiscountRuleType` Interface
 
@@ -127,7 +127,7 @@ public class M6A8CommerceDiscountRuleTypeJSPContributor
     public static final String KEY = "Example";
 ```
 
-> It is important to provide a distinct key for the JSP contributor so that Liferay Commerce can distinguish the contributor from others in the [discount rule type JSP contributor registry](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributorRegistry.java). Declaring a key that is already in use overrides the existing associated type.
+> It is important to provide a distinct key for the JSP contributor so that Liferay Commerce can distinguish the contributor from others in the [discount rule type JSP contributor registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributorRegistry.java). Declaring a key that is already in use overrides the existing associated type.
 
 ### Review the `CommerceDiscountRuleTypeJSPContributor` Interface
 
@@ -213,9 +213,9 @@ public boolean evaluate(
 }
 ```
 
-> Implement any conditions here that must be true for a discount rule to be applied. This example checks that the order contains at least a minimum number of items, using a minimum value defined by a custom UI input (stored as a String within the [CommerceDiscountRule](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-discount-service/src/main/java/com/liferay/commerce/discount/model/impl/CommerceDiscountRuleImpl.java)).
+> Implement any conditions here that must be true for a discount rule to be applied. This example checks that the order contains at least a minimum number of items, using a minimum value defined by a custom UI input (stored as a String within the [CommerceDiscountRule](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-service/src/main/java/com/liferay/commerce/discount/model/impl/CommerceDiscountRuleImpl.java)).
 >
-> The `CommerceOrder` object represents information about the order being evaluated. See [CommerceOrder.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) and [CommerceOrderModel.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) to find more information you can get from a `CommerceOrder`.
+> The `CommerceOrder` object represents information about the order being evaluated. See [CommerceOrder.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) and [CommerceOrderModel.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) to find more information you can get from a `CommerceOrder`.
 
 #### Add a JSP to Render the Custom UI Input
 
