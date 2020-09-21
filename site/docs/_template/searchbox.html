@@ -1,5 +1,7 @@
 <form action="{{ pathto('search') }}" class="search-form" method="get">
-    <input class="form-control" name="q" placeholder="{{ _('Search Docs') }}" type="text" />
+    <label for="docsSearch">
+        <input class="form-control" id="docsSearch" name="q" placeholder="{{ _('Search Docs') }}" type="text" />
+    </label>
     <input name="area" type="hidden" value="default" />
     <input name="check_keywords" type="hidden" value="yes" />
 </form>

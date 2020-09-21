@@ -182,9 +182,10 @@
 		display: flex;
 		height: $info-bar-height;
 
-		select {
+		label {
 			margin-left: $spacing-sm;
-			width: 80%;
+			margin-right: $spacing-sm;
+			width: 100%;
 		}
 	}
 
