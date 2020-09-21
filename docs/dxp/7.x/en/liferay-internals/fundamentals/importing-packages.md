@@ -17,7 +17,7 @@ Read below to explore how package imports are specified in these scenarios.
 
 ## Automatic Package Imports
 
-[Workspace](../../developing-applications/tooling/liferay-workspace.md)-based projects from the tutorial examples (see [Module Projects](./module-projects.md)) or created using [Blade CLI](../../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md) or [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md) use [Bnd](http://bnd.bndtools.org/). A Gradle plugin invokes Bnd, which can then read the Gradle dependencies and resolve the imports. When you build the project's JAR, Bnd detects the packages the module uses, generates a `META-INF/MANIFEST.MF` file, and assigns the packages to an `Import-Package` header. In that sense, package import is automatic, because you must only define your dependencies in one place: the build script. 
+[Workspace](../../developing-applications/tooling/liferay-workspace.md)-based projects from the tutorial examples (see [Module Projects](./module-projects.md)) or created using [Blade CLI](../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md) or [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md) use [Bnd](http://bnd.bndtools.org/). A Gradle plugin invokes Bnd, which can then read the Gradle dependencies and resolve the imports. When you build the project's JAR, Bnd detects the packages the module uses, generates a `META-INF/MANIFEST.MF` file, and assigns the packages to an `Import-Package` header. In that sense, package import is automatic, because you must only define your dependencies in one place: the build script.
 
 ```note::
    Liferay's project templates use `a third-party Gradle plugin <https://github.com/TomDmitriev/gradle-bundle-plugin>`_ to invoke Bnd.
@@ -41,7 +41,7 @@ Import-Package: com.liferay.portal.kernel.service;version="[4.3,5)"
 The build file specifies dependencies. Bnd examines the module classpath to import packages the module uses. The examination includes all classes found in the classpath---even those from embedded [third party library JARs](./configuring-dependencies/resolving-third-party-library-package-dependencies.md).
 
 ```note::
-   For a plugin WAR project, Liferay's `WAB Generator <../reference/deploying-wars-wab-generator.md>`_ detects packages used in the WAR's JSPs, descriptor files, and classes (in ``WEB-INF/classes`` and embedded JARs). Also the WAB Generator searches the ``web.xml``, ``liferay-web.xml``, ``portlet.xml``, ``liferay-portlet.xml``, and ``liferay-hook.xml`` descriptor files. It adds package imports for classes that are neither found in the plugin's ```WEB-INF/classes``` folder nor in its embedded JARs.
+   For a plugin WAR project, Liferay's `WAB Generator <../../developing-applications/reference/deploying-wars-wab-generator.md>`_ detects packages used in the WAR's JSPs, descriptor files, and classes (in ``WEB-INF/classes`` and embedded JARs). Also the WAB Generator searches the ``web.xml``, ``liferay-web.xml``, ``portlet.xml``, ``liferay-portlet.xml``, and ``liferay-hook.xml`` descriptor files. It adds package imports for classes that are neither found in the plugin's ```WEB-INF/classes``` folder nor in its embedded JARs.
 ```
 
 ## Manual Package Imports
@@ -84,8 +84,8 @@ Congratulations! Now you can import all kinds of packages for your modules to us
 ## Additional Information
 
 * [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
-* [Blade CLI](../../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)
+* [Blade CLI](../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)
 * [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md)
 * [Workspace](../../developing-applications/tooling/liferay-workspace.md)
 * [Semantic Versioning](./semantic-versioning.md)
-* [Deploying WARs \(WAB Generator\)](../reference/deploying-wars-wab-generator.md)
+* [Deploying WARs \(WAB Generator\)](../../developing-applications/reference/deploying-wars-wab-generator.md)
