@@ -1,12 +1,12 @@
 # Using the Script Engine in Workflow
 
-Liferay's [workflow engine](../user-guide/introduction-to-workflow.md) is a robust system for reviewing and approving content in enterprise environments. Even if you don't leverage scripts, it's a powerful and robust workflow solution. Adding scripts takes it to the next level. These scripts aren't run from the [Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), but are embedded in [XML workflow definitions](https://help.liferay.com/hc/en-us/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions) and run during workflow execution.
+Liferay's [workflow engine](../user-guide/introduction-to-workflow.md) is a robust system for reviewing and approving content in enterprise environments. Even if you don't leverage scripts, it's a powerful and robust workflow solution. Adding scripts takes it to the next level. These scripts aren't run from the [Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), but are embedded in [XML workflow definitions](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions) and run during workflow execution.
 
 Here are the workflow scripting topics:
 
 * [Adding Scripts to Workflow Nodes](#adding-scripts-to-workflow-nodes)
 * [Using Predefined Variables](#predefined-variables)
-* [Script Example](#script-examples)
+* [Script Example](#script-example)
 * [Calling OSGi Services](#calling-osgi-services)
 
 ## Adding Scripts to Workflow Nodes
@@ -54,28 +54,22 @@ Some variables are available to the node types mentioned above while others are 
 
 These variables are available from anywhere that you can run a workflow script:
 
-`kaleoInstanceToken` ([`KaleoInstanceToken`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoInstanceToken.java))
-: A workflow instance and corresponding instance token (the `KaleoInstanceToken`) are created each time a User clicks _Submit for Publication_. Use the injected token to retrieve its ID, by calling `kaleoInstanceToken.getKaleoInstanceTokenId()`. This is often passed as a method parameter in a script.
-
-`userId`
-: The `userId` returned is context dependent. Technically, the logic works like this: if the `KaleoTaskInstanceToke.getcompletionUserId()` is null, check `KaloeTaskInstanceToken.getUserId()`. If that's null too, call `KaleoInstanceToken.getUserId()`. It's the ID of the last User to intervene in the workflow at the time the script is run. In the `created` node, this would be the User that clicked _Submit for Publication_, whereas it's the ID of the reviewer upon exit of the `review` node of the Single Approver definition.
-
-`workflowContext` (`Map<String, Serializable>`)
-: The workflow context contains information you can use in scripts. The context is typically passed as a parameter, but all of the `WorkflowContext`'s attributes are available in the script as well. The workflow context in the script is context dependent. If a call to `ExecutionContext.getWorkflowContext()` comes back null, then the workflow context is obtained by `KaleoInstanceModel.getWorkflowContext()`.
+| Variable | Description | Usage |
+| --- | --- | --- |
+| `kaleoInstanceToken` ([`KaleoInstanceToken`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoInstanceToken.java)) |  A workflow instance and corresponding instance token (the `KaleoInstanceToken`) are created each time a User clicks _Submit for Publication_. | Use the injected token to retrieve its ID, by calling `kaleoInstanceToken.getKaleoInstanceTokenId()`. This is often passed as a method parameter in a script. |
+| `userId` | The `userId` returned is context dependent. | Technically, the logic works like this: if the `KaleoTaskInstanceToken.getcompletionUserId()` is null, check `KaleoTaskInstanceToken.getUserId()`. If that's null too, call `KaleoInstanceToken.getUserId()`. It's the ID of the last User to intervene in the workflow at the time the script is run. In the `created` node, this would be the User that clicked _Submit for Publication_, whereas it's the ID of the reviewer upon exit of the `review` node of the Single Approver definition. |
+| `workflowContext` (`Map<String, Serializable>`) | The workflow context contains information you can use in scripts. | The context is typically passed as a parameter, but all of the `WorkflowContext`'s attributes are available in the script as well. The workflow context in the script is context dependent. If a call to `ExecutionContext.getWorkflowContext()` comes back null, then the workflow context is obtained by `KaleoInstanceModel.getWorkflowContext()`. |
 
 ### Variables Injected into Task Nodes
 
-`kaleoTaskInstanceToken` ([`KaleoTaskInstanceToken`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoTaskInstanceToken.java))
-: The task's token itself is available in the workflow script. Use it to get its ID, to use in other useful programmatic workflow activities, like programmatic assignment.
+These variables are injected into Task Nodes:
 
-`taskName` (`String`)
-: The task's own name is accessible (returns the same as `KaleoTak.getName()`).
-
-`workflowTaskAssignees` (`List<`[`WorkflowTaskAssignee`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowTaskAssignee.java)`>`)
-: Lists the task's assignees.
-
-`kaleoTimerInstanceToken` ([`KaleoTimerInstanceToken`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoTimerInstanceToken.java))
-: If a [task timer](https://help.liferay.com/hc/en-us/articles/360028834732-Workflow-Task-Nodes#task-timers) exists, get its ID by calling `kaleoTimerInstanceToken.getKaleoTimerInstanceTokenId()`.
+| Variable | Description | Usage |
+| --- | --- | --- |
+| `kaleoTaskInstanceToken` ([`KaleoTaskInstanceToken`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoTaskInstanceToken.java)) | The task's token itself is available in the workflow script. | Use it to get its ID, to use in other useful programmatic workflow activities, like programmatic assignment. |
+| `taskName` (`String`)  The task's own name is accessible (returns the same as `KaleoTak.getName()`). | |
+| `workflowTaskAssignees` (`List<`[`WorkflowTaskAssignee`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowTaskAssignee.java)`>`) | Lists the task's assignees. | |
+| `kaleoTimerInstanceToken` ([`KaleoTimerInstanceToken`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoTimerInstanceToken.java)) | If a [task timer](https://help.liferay.com/hc/en-us/articles/360028834732-Workflow-Task-Nodes#task-timers) exists, get its ID by calling `kaleoTimerInstanceToken.getKaleoTimerInstanceTokenId()`. | | |
 
 ## Script Example
 
@@ -143,11 +137,11 @@ The following workflow script is written using Groovy and is used with a `Condit
    A script's return value determines the next task or state.
 ```
 
-See [Embedded Workflows](https://help.liferay.com/hc/en-us/articles/360028721732-Introduction-to-Workflow#embedded-workflows) for more workflow script examples.
+See [Embedded Workflows](https://help.liferay.com/hc/articles/360028721732-Introduction-to-Workflow#embedded-workflows) for more workflow script examples.
 
 ## Calling OSGi Services
 
-[Service Trackers](https://help.liferay.com/hc/en-us/articles/360028846472-Service-Trackers-for-OSGi-Services) retrieve OSGi services that are available. If the Service Tracker returns null for the service, that service is unavailable and you can do something appropriate in response.
+[Service Trackers](https://help.liferay.com/hc/articles/360028846472-Service-Trackers-for-OSGi-Services) retrieve OSGi services that are available. If the Service Tracker returns null for the service, that service is unavailable and you can do something appropriate in response.
 
 Here's a workflow script written in Groovy that uses a `JournalArticleLocalService` to get an article count:
 

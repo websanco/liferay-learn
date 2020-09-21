@@ -1,10 +1,14 @@
 # Workflow Definition Node Reference
 
-_Node_ elements and their sub-elements are fundamental building blocks making up workflow definitions. This article documents the types of nodes written as XML.
+_Node_ elements and their sub-elements are fundamental building blocks making up workflow definitions. Nodes often reflect the real life stages of the review process: the beginning or end of the review process, or determining which person (or persons) must review the draft, or the review task. This is a guide describing the different types of nodes and how to use them.
+
+* [State Nodes](#state-nodes)
+* [Condition Nodes](#condition-nodes)
+* [Forks and Joins](#forks-and-joins)
 
 ## State Nodes
 
-State nodes do not require user input. The workflow does whatever is specified in the state node's `actions` tag (a notification and/or a custom script) and then moves to the provided transition. Workflows start and end with a state.
+State nodes do not require user input. Usually, a _State_ node is used for the beginning or the end of the workflow definition. The workflow does whatever is specified in the state node's `actions` tag (a notification and/or a custom script) and then moves to the provided transition.
 
 The initial state node often only contains a transition:
 
@@ -41,7 +45,7 @@ If a notification or script is required in your state node, you can use an `acti
 
 ## Conditions
 
-Conditions inspect whether a certain condition is met before executing.
+_Condition nodes_ are used to determine whether a condition is met and if so, transitions the workflow to the appropriate node: for example, if a submitted document is a contract, it must go to the Legal team; otherwise it goes to the Marketing team.
 
 Here's the `determine-branch` condition from the [Category Specific Approval](../user-guide/workflow-designer-overview/workflow-processes/category-specific-definition.xml) workflow definition:
 
