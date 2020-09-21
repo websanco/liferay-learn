@@ -12,6 +12,7 @@
 	}
 
 	.doc-body,
+	.doc-nav-wrapper,
 	.doc-nav-wrapper-inner {
 		padding: 0;
 	}
@@ -117,12 +118,6 @@
 		}
 	}
 
-	.doc-nav-wrapper {
-		@include media-breakpoint-down(md) {
-			padding: 0;
-		}
-	}
-
 	.doc-nav-wrapper-inner {
 		.doc-nav-footer {
 			align-items: center;
@@ -168,7 +163,6 @@
 
 		@include media-breakpoint-up(md) {
 			height: calc(100vh - #{$header-height});
-			margin-left: -15px;
 			max-width: 16.66667%;
 			position: fixed;
 			width: 100%;

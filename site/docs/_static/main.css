@@ -8979,6 +8979,7 @@ a.copybtn {
       width: 100%; } }
 
 .documentations .doc-body,
+.documentations .doc-nav-wrapper,
 .documentations .doc-nav-wrapper-inner {
   padding: 0; }
 
@@ -9058,10 +9059,6 @@ a.copybtn {
     .documentations .doc-nav .toctree-l6 > a {
       padding: 0.5rem 2rem; }
 
-@media (max-width: 991.98px) {
-  .documentations .doc-nav-wrapper {
-    padding: 0; } }
-
 .documentations .doc-nav-wrapper-inner .doc-nav-footer {
   align-items: center;
   border-top: 1px solid #DADEE3;
@@ -9092,7 +9089,6 @@ a.copybtn {
 @media (min-width: 768px) {
   .documentations .doc-nav-wrapper-inner {
     height: calc(100vh - 3.5rem);
-    margin-left: -15px;
     max-width: 16.66667%;
     position: fixed;
     width: 100%;
