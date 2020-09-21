@@ -9,89 +9,25 @@ By configuring the item selector's criteria and defining its usage, you have ful
 Here you'll learn how to create an Item Selector. 
 
 **Contents:**
-1. [See an Example Item Selector](#see-an-example-item-selector)
 1. [Start with a Sample Module](#start-with-a-sample-module)
 1. [Create an Item Selector URL](#create-an-item-selector-url)
 1. [Use the Item Selector in Your View](#use-the-item-selector-in-your-view)
-
-
-## An Item Selector in Action
-
-To see how item selectors work in Liferay DXP, begin by deploying an example module with a basic item selector implementation.
-
-### Deploy the Example
-
-1. Download and unzip the [example module](./liferay-f5d5.zip):
-
-    ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
-    ```
-
-    ```bash
-    unzip liferay-f5d5.zip
-    ```
-
-1. Start a Liferay DXP Docker container with the following command:
-
-    ```bash
-    docker run -it -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
-    ```
-
-1. Run the following commands from the root of the module to build and deploy to your Docker container:
-
-    ```bash
-    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
-
-    ```tip::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
-    ```
-
-1. Confirm the deployment in the Liferay Docker container console.
-
-    ```bash
-    STARTED com.acme.f5d5.web_1.0.0 [1017]
-    ```
-
-The example module is now deployed to your Docker image. Now you can see the item selector in action in Liferay DXP. 
-
-### Use the Deployed Sample Widget
-
-The example module adds a new widget ("Item Selector Example") to demonstrate a basic item selector. Perform the following steps to deploy this module to a Liferay Docker image:
-
-1. Open your browser to `https://localhost:8080`.
-
-1. Edit any page by clicking the Edit icon (![Edit icon](../../images/icon-edit.png)) at the top-right corner of the screen.
-
-1. Open the _Fragments and Widgets_ menu by clicking the Table icon (![Table icon](../../images/icon-view-type-table.png)) on the right edge of the screen.
-
-1. Click the _Widgets_ tab, and then expand the _Sample_ section to locate _Item Selector Sample_.
-
-![Find the Item Selector Sample widget from the Sample section of the Widgets menu.](./implementing-an-item-selector/images/02.png)
-
-1. Drag the _Item Selector Sample_ widget anywhere on the page.
-
-1. Click the _Publish_ button on the top-right corner of the screen.
-
-1. Click the "Select" button that now appears on the page to open the new _Select Role_ item selector.
-
-![Click the Select button to make the item selector pop up as a dialog.](./implementing-an-item-selector/images/03.png)
-
-Now you can see what an item selector looks like in Liferay DXP. In this example, the item selector allows User Roles to be selected.
+1. [Test Your Application](#test-your-application)
 
 ## Start with a Sample Module
 
-Item selectors are useful in a variety of applications to allow users to select data for your purposes. Thus, to implement an item selector, you must embed it in an application, such as a module for a widget.
+Item selectors are useful in a variety of applications to allow users to select data for your purposes. Thus, to implement an item selector, you must embed it in an application, such as a module for a widget. This example uses an [MVC Portlet](../developing-a-java-web-application/using-mvc/creating-an-application-with-mvcportlet.md) with a JSP view as a starting point.
 
-This example uses a Liferay Blade JSP portlet sample as a starting point. To begin from a similar starting point, use [Blade CLI](../tooling/blade-cli/installing-and-updating-blade-cli.md) to download the sample from within a Liferay Workspace: 
+To begin, download the sample module:
 
 ```bash
-blade samples jsp-portlet -d item-selector-example
+curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
 ```
 
-The above command creates a new sample in a folder called `item-selector-example`. Alternatively, clone the [`liferay-blade-samples` repository](https://github.com/liferay/liferay-blade-samples) and copy the module inside of the `liferay-workspace/apps/jsp-portlet` folder.
-
-Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`JSPPortlet.java`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/java/com/liferay/blade/samples/portlet/jsp/JSPPortlet.java)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The below walkthrough shows how the example project works. 
+```bash
+unzip liferay-f5d5.zip
+```
+Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`F5D5JSPPortlet.java`]||||(TODO: fix link -- and do the same for all the following links to the module, because the path is going to change)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The following walkthrough shows how the example project works.
 
 ## Create an Item Selector URL
 
@@ -108,9 +44,9 @@ private ItemSelector _itemSelector;
 
 The item criteria for an item selector determines the kind of data that it handles, including what kind of entities to display.
 
-Since the Java class defining the portlet render logic for the sample JSP portlet is in `JSPPortlet.java`, begin by overriding the `render` method of the [`MVCPortlet` class](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) to add your Java code needed for creating an item selector. References to the two following types of classes are needed together to specify the item criteria for your selector:
+Since the Java class defining the portlet render logic for the sample JSP portlet is in `F5D5JSPPortlet.java`, begin by overriding the `render` method of the [`MVCPortlet` class](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) to add your Java code needed for creating an item selector. References to the two following types of classes are needed together to specify the item criteria for your selector:
 
-1. A criterion class to represent the desired entities to display in the item selector. Criterion classes must implement the [`ItemSelectorCriterion` interface](https://github.com/liferay/liferay-portal/blob/7.3.l-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorCriterion.java).
+1. A criterion class to represent the desired entities to display in the item selector. Criterion classes must implement the [`ItemSelectorCriterion` interface](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorCriterion.java).
 
    This example uses a reference to [`RoleItemSelectorCriterion`](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/roles/roles-item-selector-api/src/main/java/com/liferay/roles/item/selector/RoleItemSelectorCriterion.java) so that User Roles are shown in the selector. Define the criterion by creating a new instance of the class:
 
@@ -147,7 +83,7 @@ Since the Java class defining the portlet render logic for the sample JSP portle
    ```
 
    ```tip::
-       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)>`__ implementation.
+       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)>`__ implementation.
    ```
 
 The item selector uses these two classes to decide what selection views of items (presented as tabs) to show and how to identify each item.
@@ -156,7 +92,7 @@ The item selector uses these two classes to decide what selection views of items
 
 Now that you have defined the criteria for your item selector, you can use them to generate a URL for the item selector. This URL creates the item selector dialog in your front-end code.
 
-The [`RequestBackedPortletURLFactory` class](https://github.com/liferay/liferay-portal/blob/7.3.1-ga2/portal-kernel/src/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.java) can quickly generate an item selector URL using the criteria:
+The [`RequestBackedPortletURLFactory` class](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/portal-kernel/src/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.java) can quickly generate an item selector URL using the criteria:
 
 ```java
 RequestBackedPortletURLFactory requestBackedPortletURLFactory =
@@ -187,7 +123,7 @@ Finally, call `MVCPortlet`'s `render` method to continue the rendering process o
 super.render(renderRequest, renderResponse);
 ```
 
-You have now finished adding the necessary Java code to create the item selector; see [`JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/portlet/bridges/mvc/JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
+You have now finished adding the necessary Java code to create the item selector; see [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/portlet/bridges/mvc/JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
 
 ## Use the Item Selector in Your View
 
@@ -202,6 +138,8 @@ String itemSelectorURL = String.valueOf(request.getAttribute("itemSelectorURL"))
 Now that you have the URL, you must provide a way to open the item selector and then define how to use the result.
 
 ### Provide a Way to Open the Item Selector
+
+TODO: update aui:button part to clay:button (use https://clayui.com/docs/components/button.html as link)
 
 A button creates the item selector dialog in this example. You can use the `aui:button` tag from the [AUI library](http://alloyui.com/api/) to create a button:
 
@@ -286,6 +224,60 @@ if (selectedItem) {
 ```
 
 Your item selector is complete. To see all of the example JSP code in its full context, see the example module's [`view.jsp` file](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/META-INF/resources/view.jsp).
+
+## Test Your Application
+
+Now deploy your sample module to see the item selector in action.
+
+### Deploy the Sample Module
+
+1. Start a Liferay DXP Docker container with the following command:
+
+    ```bash
+    docker run -it -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
+    ```
+
+1. Run the following commands from the root of the module to build and deploy to your Docker container:
+
+    ```bash
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+    ```
+
+    ```tip::
+       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```
+
+1. Confirm the deployment in the Liferay Docker container console.
+
+    ```bash
+    STARTED com.acme.f5d5.web_1.0.0 [1017]
+    ```
+
+The example module is now deployed to your Docker image. Now you can see the item selector in action in Liferay DXP. 
+
+### Use the Deployed Sample Widget
+
+The example module adds a new widget ("Item Selector Example") to demonstrate a basic item selector. Perform the following steps to deploy this module to a Liferay Docker image:
+
+1. Open your browser to `https://localhost:8080`.
+
+1. Edit any page by clicking the Edit icon (![Edit icon](../../images/icon-edit.png)) at the top-right corner of the screen.
+
+1. Open the _Fragments and Widgets_ menu by clicking the Table icon (![Table icon](../../images/icon-view-type-table.png)) on the right edge of the screen.
+
+1. Click the _Widgets_ tab, and then expand the _Sample_ section to locate the _F5D5_ sample widget.
+
+![Find the F5D5 sample widget from the Sample section of the Widgets menu.](./implementing-an-item-selector/images/02.png)
+
+1. Drag the _F5D5_ sample widget anywhere on the page.
+
+1. Click the _Publish_ button on the top-right corner of the screen.
+
+1. Click the "Select" button that now appears on the page to open the new _Select Role_ item selector.
+
+![Click the Select button to make the item selector pop up as a dialog.](./implementing-an-item-selector/images/03.png)
+
+Now you can see what an item selector looks like in Liferay DXP. In this example, the item selector allows User Roles to be selected.
 
 ## Conclusion
 
