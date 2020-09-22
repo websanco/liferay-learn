@@ -9252,6 +9252,11 @@ pre {
       cursor: pointer;
       font-weight: 600; }
 
+.lexicon-icon-shortcut {
+  height: 0.75rem;
+  margin-left: 0.5rem;
+  width: 0.75rem; }
+
 .main-content {
   margin-top: 3.5rem; }
 
@@ -9325,13 +9330,38 @@ header {
   header .header-links a {
     font-size: 0.875rem;
     margin-right: 3.25rem; }
-  @media (max-width: 576px) {
-    header .header-links {
-      display: none; } }
-  header .mobile-menu {
+  header .mobile-menu-wrapper .header-links {
+    background: #FFF;
+    display: none;
+    font-weight: 600;
+    left: 0;
+    list-style: none;
+    padding-inline-start: 0;
+    position: fixed;
+    right: 0; }
+    header .mobile-menu-wrapper .header-links.show {
+      display: block; }
+    header .mobile-menu-wrapper .header-links a {
+      border-bottom: 1px solid #DADEE3;
+      color: #30313F;
+      display: flex;
+      font-size: 1rem;
+      justify-content: space-between;
+      margin-right: 0;
+      padding: 1rem; }
+    header .mobile-menu-wrapper .header-links li:last-child a {
+      border-bottom-width: 0; }
+  header .mobile-menu-wrapper .mobile-menu {
     cursor: pointer;
     margin-right: 0.5rem;
-    padding: 1rem; }
+    padding: 0.75rem; }
+    header .mobile-menu-wrapper .mobile-menu.menu-open .lexicon-icon-bars {
+      display: none; }
+    header .mobile-menu-wrapper .mobile-menu.menu-open .lexicon-icon-times {
+      display: block; }
+    header .mobile-menu-wrapper .mobile-menu .lexicon-icon-times {
+      color: #FFF;
+      display: none; }
 
 .homepage .banner,
 .homepage .products h2,

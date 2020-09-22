@@ -38,15 +38,57 @@ header {
 			font-size: $h5-font-size;
 			margin-right: 3.25rem;
 		}
-
-		@media (max-width: 576px) {
-			display: none;
-		}
 	}
 
-	.mobile-menu {
-		cursor: pointer;
-		margin-right: $spacing-xs;
-		padding: $spacing-md;
+	.mobile-menu-wrapper {
+		.header-links {
+			background: $white;
+			display: none;
+			font-weight: $font-weight-semi-bold;
+			left: 0;
+			list-style: none;
+			padding-inline-start: 0;
+			position: fixed;
+			right: 0;
+
+			&.show {
+				display: block;
+			}
+
+			a {
+				border-bottom: 1px solid $hr-color;
+				color: $default-color;
+				display: flex;
+				font-size: $h4-font-size;
+				justify-content: space-between;
+				margin-right: 0;
+				padding: $spacing-md;
+			}
+
+			li:last-child a {
+				border-bottom-width: 0;
+			}
+		}
+
+		.mobile-menu {
+			cursor: pointer;
+			margin-right: $spacing-xs;
+			padding: $spacing-sm;
+
+			&.menu-open {
+				.lexicon-icon-bars {
+					display: none;
+				}
+
+				.lexicon-icon-times {
+					display: block;
+				}
+			}
+
+			.lexicon-icon-times {
+				color: $white;
+				display: none;
+			}
+		}
 	}
 }

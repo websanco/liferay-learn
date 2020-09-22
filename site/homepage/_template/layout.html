@@ -62,12 +62,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% endif %}
     </div>
 
-    <button aria-haspopup="true" class="btn d-lg-none mobile-menu" id="mobileMenu" onclick="javascript:;" role="navigation" type="button">
-       <svg aria-label="menu" class="lexicon-icon" role="img">
-           <use xlink:href="#bars" />
-       </svg>
-    </button>
+    <div class="d-lg-none mobile-menu-wrapper">
+        <button aria-haspopup="true" class="btn mobile-menu" id="mobileMenu" onclick="javascript:;" role="navigation" type="button">
+            <svg aria-label="open menu" class="lexicon-icon lexicon-icon-bars" role="img">
+                <use xlink:href="#bars" />
+            </svg>
+
+            <svg aria-label="close menu" class="lexicon-icon lexicon-icon-times" role="img">
+                <use xlink:href="#times" />
+            </svg>
+        </button>
+
+        <ul class="header-links" id="mobileHeaderLinks" role="navigation">
+            <li>
+                 <a href="https://www.liferay.com">
+                    {% trans %}Liferay.com{% endtrans %}
+                    <svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+				        <use xlink:href="#shortcut" />
+			        </svg>
+                </a>
+            </li>
+            <li>
+                 <a href="https://university.liferay.com/">
+                    {% trans %}Training{% endtrans %}
+                     <svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+				        <use xlink:href="#shortcut" />
+			        </svg>
+                </a>
+            </li>
+            <li>
+                 <a href="https://liferay.dev">
+                    {% trans %}Community{% endtrans %}
+                     <svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+				        <use xlink:href="#shortcut" />
+			        </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://help.liferay.com/hc">
+                   {% trans %}Help Center{% endtrans %}
+                    <svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+				        <use xlink:href="#shortcut" />
+			        </svg>
+                  </a>
+            </li>
+        </ul>
+    </div>
 </header>
+<script>
+    const mobileHeaderLinks = document.getElementById('mobileHeaderLinks');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (mobileHeaderLinks && mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            mobileHeaderLinks.classList.toggle('show');
+            mobileMenu.classList.toggle('menu-open');
+        })
+    }
+</script>
 {% endblock %}
 
 {# do not display relbar, sidebar, and footer #}
