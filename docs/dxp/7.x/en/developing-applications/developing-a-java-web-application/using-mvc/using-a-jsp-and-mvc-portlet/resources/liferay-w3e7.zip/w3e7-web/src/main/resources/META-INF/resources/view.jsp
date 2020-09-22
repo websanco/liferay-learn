@@ -15,5 +15,5 @@
 --%>
 
 <p>
-	<b>Hello from W3E7 Portlet</b>
+	<b>Hello from W3E7 MVC Portlet</b>
 </p>
