@@ -45,7 +45,7 @@ Select one of the following file permissions to grant to receiving Users:
 
 The file has been shared.
 
-### Using the Site Administration
+### Using Site Administration
 
 Follow these steps to share a file:
 
@@ -72,15 +72,15 @@ You can access files shared with you in three places:
 
 * **The Documents and Media Library:** Files shared with you are visible in their existing Documents and Media locations. For example, if someone shares a file with you that resides in the Documents and Media Library's Home folder, you can access the file in that folder.
 
-![You can view a shared file in the same folder where it was first uploaded.](./sharing-documents-with-other-users/images/05.png)
+    ![You can view a shared file in the same folder where it was first uploaded.](./sharing-documents-with-other-users/images/05.png)
 
 * **The Notifications app:** When a file is shared with you, you get a notification. Clicking the notification takes you to the file in Documents and Media. For information on notifications, see [Managing Notifications and Requests](../../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md).
 
-![The Notifications app contains the notifications that are sent when a user shares a file with you.](./sharing-documents-with-other-users/images/06.png)
+    ![The Notifications app contains the notifications that are sent when a user shares a file with you.](./sharing-documents-with-other-users/images/06.png)
 
 * **The Shared Content app:** You can access this app from your user menu. It lists all the content shared with you and the content you shared. Each file has an Actions button (![Actions](../../../../images/icon-actions.png)) for performing permitted actions on the file (e.g., view, comment, update).
 
-![The Shared Content app lists the files shared with you, and the files you shared.](./sharing-documents-with-other-users/images/07.png)
+    ![The Shared Content app lists the files shared with you, and the files you shared.](./sharing-documents-with-other-users/images/07.png)
 
 ## Managing Shared Files
 
