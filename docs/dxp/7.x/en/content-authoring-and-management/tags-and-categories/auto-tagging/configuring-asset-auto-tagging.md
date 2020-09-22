@@ -6,7 +6,7 @@
    Auto-tagging currently works only for images, text-based documents, text-based web content, and blog entries.
 ```
 
-This is required prior to configuring auto-tagging for specific asset types, which is documented separately:
+Configuring auto-tagging for specific asset types is documented separately:
 
 * [Auto Tagging Images](./auto-tagging-images.md)
 * [Auto Tagging Assets](./auto-tagging-assets.md)
@@ -57,7 +57,7 @@ Auto Tagging had been enabled at the instance level.
 
 ## Site-level Configuration
 
-1. Open the _Menu_ (![Product Menu](../../../../images/icon-menu.png)), click your Site's name, and navigate to _Configuration_ &rarr; _Settings_.
+1. Open the _Menu_ (![Product Menu](../../../images/icon-menu.png)), click your Site's name, and navigate to _Configuration_ &rarr; _Settings_.
 
     ![Navigate to the site settings.](./configuring-asset-auto-tagging/images/04.png).
 

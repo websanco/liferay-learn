@@ -6,7 +6,7 @@ Once [asset auto tagging has been enabled](./configuring-asset-auto-tagging.md),
    Currently, tags applied automatically are English only.
 ```
 
-By default, Image Auto Tagging is disabled by default. In addition to enabling Auto Tagging in DXP, you must also enable an image auto tagging provider. Three such providers are available:
+By default, Image Auto Tagging is disabled by default. In addition to enabling Auto Tagging in DXP, you must also configure an image tagging provider. Three providers are available:
 
 * [**TensorFlow:**](#configuring-tensorflow-image-auto-tagging) An open-source library that provides machine learning capabilities. TensorFlow image auto-tagging in DXP is based on [TensorFlow's `LabelImage` sample for Java](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/java/src/main/java/org/tensorflow/examples/LabelImage.java), and uses the Inception5h model. Use this with caution, since its accuracy is limited.
 
@@ -28,10 +28,10 @@ By default, Image Auto Tagging is disabled by default. In addition to enabling A
     ![Click on Assets.](./auto-tagging-images/images/03.png)
 
 1. Under _VIRTUAL INSTANCE SCOPE_, click _TensorFlow Image Auto Tagging_.
-1. Fill out the form. 
+1. Fill out the form.
 1. Click _Save_ when finished.
 
-The form asks for this information: 
+The form asks for this information:
 
 **Enable TensorFlow Image Auto Tagging:** Check this box to select whether image auto-tagging is enabled by default in any instance that has asset auto tagging enabled.
 
@@ -45,10 +45,10 @@ The form asks for this information:
 1. Click _System Settings_.
 1. Click _Assets_.
 1. Under _SYSTEM SCOPE_, click _TensorFlow Image Auto Tagging Process_.
-1. Fill out the form. 
+1. Fill out the form.
 1. Click _Save_ to apply the settings.
 
-The form asks for this information: 
+The form asks for this information:
 
 **Maximum Number of Relaunches:** The maximum number of times the process is allowed to crash before it is permanently disabled.
 
@@ -77,14 +77,14 @@ The TensorFlow provider has been configured.
 1. Click _System Settings_.
 1. Click _Assets_
 1. Under _VIRTUAL INSTANCE SCOPE_, click _Microsoft Cognitive Services Image Auto Tagging_.
-1. Fill out the form. 
+1. Fill out the form.
 1. Check the _Enabled_ box.
 
     ![The Microsoft Cognitive Services provider requires an API key and an endpoint.](./auto-tagging-images/images/07.png)
 
 1. Click _Save_ when finished.
 
-The form asks for this information: 
+The form asks for this information:
 
 **API Key:** Your [API key](https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/?apiSlug=computer-services) for the Computer Vision API V2.
 

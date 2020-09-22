@@ -8,5 +8,5 @@ Auto Tagging
    auto-tagging/auto-tagging-assets.md
    auto-tagging/auto-tagging-images.md
 
-.. include:: /content-authoring-and-management/tags-and-categories/user-guide/auto-tagging/README.rst
+.. include:: /content-authoring-and-management/tags-and-categories/auto-tagging/README.rst
    :start-line: 2
