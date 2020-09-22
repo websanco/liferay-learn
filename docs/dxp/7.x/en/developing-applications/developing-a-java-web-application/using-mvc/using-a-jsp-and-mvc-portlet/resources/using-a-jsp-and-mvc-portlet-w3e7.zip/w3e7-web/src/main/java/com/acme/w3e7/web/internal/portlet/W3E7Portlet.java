@@ -12,7 +12,7 @@
  * details.
  */
 
-package  com.acme.w3e7.web.internal.portlet;
+package com.acme.w3e7.web.internal.portlet;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
