@@ -26,11 +26,11 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
-		"javax.portlet.display-name=W3E7 MVC Portlet",
+		"javax.portlet.display-name=W3E7 Portlet",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp"
 	},
 	service = Portlet.class
 )
-public class W3E7MVCPortlet extends MVCPortlet {
+public class W3E7Portlet extends MVCPortlet {
 }
