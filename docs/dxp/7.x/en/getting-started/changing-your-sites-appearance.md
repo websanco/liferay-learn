@@ -40,7 +40,7 @@ Configure the Pages for your Site to use the deployed theme:
 
 1. Open your browser to `https://localhost:8080` and [login as an administrator](./introduction-to-the-admin-account.md).
 
-1. Navigate to the Product Menu → _Site Administration_ → _Site Builder_ → _Pages_.
+1. In the _Site Menu_ on the left side of the screen, navigate to _Site Builder_ → _Pages_.
 
 1. Click the gear icon ![Gear icon](../images/icon-control-menu-gear.png) next to _Public Pages_ to configure them:
 
@@ -52,11 +52,11 @@ Configure the Pages for your Site to use the deployed theme:
 
 1. Select the deployed sample theme, _Acme Sample Blue Theme._
 
-1. Navigate back to the home page for your Site to confirm that the theme has changed. The background for your Site is now blue.
+1. Navigate back to the home page for your Site to confirm that the theme has changed. The background for the content section of your Site is now blue.
 
     ![The home page has a different color background after changing the theme.](./changing-your-sites-appearance/images/03.png)
 
-Your site's theme has been updated.
+Your Site's theme has been updated.
 
 ### Theme Resources
 
