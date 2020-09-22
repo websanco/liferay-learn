@@ -32,5 +32,5 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = Portlet.class
 )
-public class W3E7Portlet extends MVCPortlet {
+public class W3E7MVCPortlet extends MVCPortlet {
 }
