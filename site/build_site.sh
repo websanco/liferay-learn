@@ -197,6 +197,8 @@ function generate_static_html {
 
 			popd
 
+			mkdir -p ${output_dir_name}
+
 			mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
 		done
 	done
