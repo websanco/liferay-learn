@@ -18,7 +18,7 @@ In the image above, the two related products are displayed in the Product Publis
 
 ## Adding a New Product Relation Type
 
-More Product Relation types may be added as necessary. This includes intangibles such as warranties. To add a new Product Relation:
+Product Relation types can be added as necessary. This includes intangible products, such as warranties. To add a new Product Relation:
 
 1. Go to the _Global Applications_ menu → _Control Panel_ → _System Settings_.
 1. Click _Catalog_ in the _Commerce_ section.
@@ -72,7 +72,7 @@ The example above shows how different products could be related, ensuring that c
 
 ## Commerce 2.1 and Below
 
-## Adding a New Product Relation Type
+### Adding a New Product Relation Type
 
 More Product Relation types may be added as necessary. This includes intangibles such as warranties. To add a new Product Relation:
 
