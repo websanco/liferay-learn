@@ -62,7 +62,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% endif %}
     </div>
 
-    <div class="d-lg-none mobile-menu-wrapper">
+    <div class="d-lg-none mobile-menu-wrapper" id="mobileMenuWrapper">
+        {% if pagename != 'index' and pagename != 'search' %}
+        <div class="searchbox" id="mobileSearchbox" role="search">
+            {% include "searchbox.html" %}
+        </div>
+
+         <button class="btn mobile-search" id="mobileSearch" onclick="javascript:;" type="button">
+            <svg aria-label="expand search" class="lexicon-icon lexicon-icon-search" role="img">
+                <use xlink:href="#search-icon" />
+            </svg>
+        </button>
+        {% endif %}
+
         <button aria-haspopup="true" class="btn mobile-menu" id="mobileMenu" onclick="javascript:;" role="navigation" type="button">
             <svg aria-label="open menu" class="lexicon-icon lexicon-icon-bars" role="img">
                 <use xlink:href="#bars" />
@@ -110,13 +122,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </header>
 <script>
-    const mobileHeaderLinks = document.getElementById('mobileHeaderLinks');
+    const mobileMenuWrapper = document.getElementById('mobileMenuWrapper');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    if (mobileHeaderLinks && mobileMenu) {
+    if (mobileMenuWrapper && mobileMenu) {
         mobileMenu.addEventListener('click', () => {
-            mobileHeaderLinks.classList.toggle('show');
-            mobileMenu.classList.toggle('menu-open');
+            mobileMenuWrapper.classList.toggle('menu-open');
+        })
+    }
+
+    const mobileSearch = document.getElementById('mobileSearch');
+
+    if (mobileMenuWrapper && mobileSearch) {
+        mobileSearch.addEventListener('click', () => {
+            mobileMenuWrapper.classList.toggle('search-expanded');
         })
     }
 </script>

@@ -41,21 +41,46 @@ header {
 	}
 
 	.mobile-menu-wrapper {
+		&.menu-open {
+			.header-links {
+				display: block;
+			}
+
+			.mobile-menu {
+				.lexicon-icon-bars {
+					display: none;
+				}
+
+				.lexicon-icon-times {
+					display: block;
+				}
+			}
+		}
+
+		&.search-expanded {
+			.mobile-search {
+				display: none;
+			}
+
+			.searchbox {
+				display: inline-block;
+			}
+		}
+
 		.header-links {
 			background: $white;
+			bottom: 0;
 			display: none;
 			font-weight: $font-weight-semi-bold;
 			left: 0;
 			list-style: none;
 			padding-inline-start: 0;
 			position: fixed;
+			top: $header-height;
 			right: 0;
 
-			&.show {
-				display: block;
-			}
-
 			a {
+				align-items: center;
 				border-bottom: 1px solid $hr-color;
 				color: $default-color;
 				display: flex;
@@ -75,20 +100,19 @@ header {
 			margin-right: $spacing-xs;
 			padding: $spacing-sm;
 
-			&.menu-open {
-				.lexicon-icon-bars {
-					display: none;
-				}
-
-				.lexicon-icon-times {
-					display: block;
-				}
-			}
-
 			.lexicon-icon-times {
 				color: $white;
 				display: none;
 			}
+		}
+
+		.searchbox {
+			display: none;
+			margin-right: 0;
+		}
+
+		.search-form {
+			width: 100%;
 		}
 	}
 }

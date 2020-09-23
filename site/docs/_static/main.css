@@ -9330,18 +9330,29 @@ header {
   header .header-links a {
     font-size: 0.875rem;
     margin-right: 3.25rem; }
+  header .mobile-menu-wrapper.menu-open .header-links {
+    display: block; }
+  header .mobile-menu-wrapper.menu-open .mobile-menu .lexicon-icon-bars {
+    display: none; }
+  header .mobile-menu-wrapper.menu-open .mobile-menu .lexicon-icon-times {
+    display: block; }
+  header .mobile-menu-wrapper.search-expanded .mobile-search {
+    display: none; }
+  header .mobile-menu-wrapper.search-expanded .searchbox {
+    display: inline-block; }
   header .mobile-menu-wrapper .header-links {
     background: #FFF;
+    bottom: 0;
     display: none;
     font-weight: 600;
     left: 0;
     list-style: none;
     padding-inline-start: 0;
     position: fixed;
+    top: 3.5rem;
     right: 0; }
-    header .mobile-menu-wrapper .header-links.show {
-      display: block; }
     header .mobile-menu-wrapper .header-links a {
+      align-items: center;
       border-bottom: 1px solid #DADEE3;
       color: #30313F;
       display: flex;
@@ -9355,13 +9366,14 @@ header {
     cursor: pointer;
     margin-right: 0.5rem;
     padding: 0.75rem; }
-    header .mobile-menu-wrapper .mobile-menu.menu-open .lexicon-icon-bars {
-      display: none; }
-    header .mobile-menu-wrapper .mobile-menu.menu-open .lexicon-icon-times {
-      display: block; }
     header .mobile-menu-wrapper .mobile-menu .lexicon-icon-times {
       color: #FFF;
       display: none; }
+  header .mobile-menu-wrapper .searchbox {
+    display: none;
+    margin-right: 0; }
+  header .mobile-menu-wrapper .search-form {
+    width: 100%; }
 
 .homepage .banner,
 .homepage .products h2,
