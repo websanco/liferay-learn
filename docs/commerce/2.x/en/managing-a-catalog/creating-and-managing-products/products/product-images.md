@@ -101,7 +101,7 @@ Once you have created Product Options and generated the corresponding SKUs, you 
 
     ![Hoses Media tab](./product-images/images/09.png)
 
-1. Click the (+) button to add a product image.
+1. Click the (![Add Icon](../../../images/icon-add.png)) button to add a product image.
 1. Drag and drop an image or click _Select File_ to insert an image.
 1. Click on the existing image.
 1. Select _6_ under the _Package Quantity_ drop down.
@@ -121,7 +121,7 @@ The product image has been updated with the respective Product Option. Repeat th
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product (in this example, _Microfiber Cloth_).
 1. Click the _Images_ sub-tab.
-1. Click the (+) button to add a product image.
+1. Click the (![Add Icon](../../../images/icon-add.png)) button to add a product image.
 1. Drag and drop an image or click _Select File_ to upload an image.
 1. Enter a title: _Microfiber Cloth_.
 1. Set a priority: _1.0_.
@@ -135,7 +135,7 @@ The product image has been updated with the respective Product Option. Repeat th
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product, in this example, _Hoses_.
 1. Click the _Images_ sub-tab.
-1. Click the (+) button to add a product image.
+1. Click the (![Add Icon](../../../images/icon-add.png)) button to add a product image.
 1. Drag and drop an image or click _Select File_ to insert an image.
 1. Click on the existing image.
 1. Select _6_ under the _Package Quantity_ drop down.
