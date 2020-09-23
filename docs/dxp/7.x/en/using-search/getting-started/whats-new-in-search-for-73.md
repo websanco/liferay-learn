@@ -44,9 +44,19 @@ See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Developm
 
 > Availability: Liferay 7.3 CE GA6+, Liferay DXP 7.3 GA1+, Liferay DXP 7.2 SP3+/FP8+
 
-For multi-tenant installations, where a single Elasticsearch cluster holds the indexes of multiple Liferay CE/DXP deployments, the need for properly namespaced indexes is paramount. In 7.2 (prior to FP8/SP3), inconsistency in naming of indexes could arise, making multi-tenant installations impossible. In 7.3 all Liferay CE/DXP indexes, including those controlled by specific applications, have their prefix configured through the Elasticsearch 7 configuration entry in System Settings. Third party application indexes can now leverage the same API to ensure consistently namespaced indexes throughout the installation.
+For multi-tenant installations, where a single Elasticsearch cluster holds the indexes of multiple Liferay CE/DXP deployments, the need for properly namespaced indexes is paramount. In 7.2 (prior to FP8/SP3), inconsistency in naming of indexes could arise, making multi-tenant installations impossible. In the latest 7.2 patch and in 7.3 all Liferay CE/DXP indexes, including those controlled by specific applications, have their prefix configured through the Elasticsearch 7 configuration entry in System Settings. Third party application indexes can now leverage the same API to ensure consistently namespaced indexes throughout the installation:
 
-If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new indexes will be created automatically; after a full reindex the old indexes and successful upgrade, the upgrade is successfully completed.
+```bash
+[indexNamePrefix]-[companyId]-[appName]
+```
+
+For example,
+
+```
+liferay-20096-search-tuning-rankings
+```
+
+If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new DXP indexes will be created automatically; after a full reindex and verifying a successful upgrade, the old indexes can be deleted.
 
 ### Connections in Search Admin
 
@@ -84,66 +94,59 @@ The first version of Similar Results supports Blogs, Message Boards, Documents, 
 
 See the [Similar Results](../search-pages-and-widgets/similar-results.md) article for details.
 
-## Search Tuning (DXP)
+## Search Tuning
 
-### Search Tuning: Result Rankings (DXP)
+> **Subscribers**
 
-NOT NEW
+### Search Tuning: Result Rankings
+
 Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
 
 Result Rankings allows search administrators to custom tune the result relevancy for a given query using a graphical UI. Result Rankings features three main capabilities to manually tune relevancy:
+
 1. Results for a query can be pinned and ordered at the top of the list. If the desired document is not in the original result list, it can be manually added. This allows users to promote high-value results.
-1.  Results can be hidden from the result list. This capability can be used to manually remove results that are stale or irrelevant.
+1. Results can be hidden from the result list. This capability can be used to manually remove results that are stale or irrelevant.
 1. Aliases apply the same custom pinned and hidden results to alternate search queries. For example, if a result ranking is created with pinned and hidden results for the query "digital experience platform", adding the aliases "portal" and "dxp" will apply the same pinned and hidden results.
 
-**This feature requires Elasticsearch as a configured search engine for DXP**.
+### Search Tunings: Synonyms
 
-Documentation: LINK-TO
-Internal guide: https://grow.liferay.com/learn/Search+Tuning+-+Result+Rankings+in+DXP+Support+Guide
+> Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
 
-### Search Tunings: Synonyms (DXP)
-
-NOT NEW
-Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
-
-Synonyms allow search administrators to relate queries with similar meaning. Equivalent weight will be applied to all queries in a synonym set when searching. For example, the queries "mobile phone", "cell phone", and "hand phone" have equivalent meanings and can be used interchangeably. Defining a synonym set with these three queries will allow users searching for "mobile phone" to find documents containing the words "cell phone" or "hand phone". See brief summary about "synonyms in Elasticsearch" [here](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html).
-
-**This feature requires Elasticsearch as a configured search engine for DXP**.
-
-Documentation: LINK-TO
-Internal guide: https://grow.liferay.com/learn/Search+Tuning+-+Synonyms+in+DXP+Support+Guide
+Synonyms allow search administrators to relate queries with similar meaning, giving equivalent weight to the synonymous queries when searching. For example, the queries "mobile phone", "cell phone", and "hand phone" have equivalent meanings and can be used interchangeably. Defining a synonym set with these three queries will allow users searching for "mobile phone" to find documents containing the words "cell phone" or "hand phone". See the [Synonyms documentation from Elastic](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html).
 
 ## Liferay Enterprise Search (LES)
 
-The following features requires an active [Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) subscription.
+> **[LES Subscribers](https://www.liferay.com/products/dxp/enterprise-search)**
 
 ### Cross-Cluster Replication (LES)
 
-> Availability: Liferay DXP 7.2 SP3+, Liferay DXP 7.3 GA1+ via the [Liferay Enterprise Search Cross-Cluster Replication]() Marketplace application.
+> Availability: Liferay DXP 7.2 SP3+, Liferay DXP 7.3 GA1+ via the [Liferay Enterprise Search Cross-Cluster Replication]() application.
 
 The Cross-Cluster Replication application replicates Elasticsearch clusters across remote data centers for disaster recovery (high availability) and geo-proximity performance optimization. It leverages Elasticsearch's [Cross-Cluster Replication](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/xpack-ccr.html) feature which replicates search indexes across distributed clusters using an active-passive model. All write operations for all DXP nodes route to a single leader index, while each DXP cluster node can be configured to read from any follower index.
 
 ### Learning to Rank (LES)
 
-NOT NEW
-
-> Availability: Liferay DXP 7.2 SP2+, Liferay DXP 7.3 GA1+ via the [Liferay Enterprise Search Learning to Rank](https://web.liferay.com/marketplace/-/mp/application/170666298)
+> Availability: Liferay DXP 7.2 SP2+, Liferay DXP 7.3 GA1+, via the [Liferay Enterprise Search Learning to Rank](https://web.liferay.com/marketplace/-/mp/application/170666298) application.
 
 Manually tuning search for optimal results is difficult. Optimizing your search algorithm for one specific query may unintentionally result in poorer results for hundreds of other queries.
 
-Learning to Rank (LTR) tackles this challenge by applying a machine learning (ML) model to improving search results.The model is trained by 
+Learning to Rank (LTR) tackles this challenge by applying a machine learning (ML) model to improving search results. The model is trained by 
 
-- selecting "features" (a ML term for the search factors to consider when the model is trained---e.g., recency, geo-proximity, tags match)
+- selecting "features" (a term for the search factors to consider when the model is trained---e.g., recency, geo-proximity, tags match)
 - providing judgment lists (also known as "ground truth") curated either manually (e.g. search experts grading results for a query) or semi-automatically (e.g. measuring user click rate for a query).
 
 Judgment lists are the source of truth that informs and guides the model training. When a user submits a search query, LTR takes the first _x_ number of results (by default the first 1,000 results) returned by the search engine, then re-scores and re-orders those results using the trained model before returning the list to the user.
 
-### Elasticsearch Monitoring (LES)
+### LES Applications Renamed
 
-NOT NEW
-SHOULD WE INSTEAD DISCUSS THE RENAME OF ALL LES APPS?
+Though not explicitly linked to the Liferay CE/DXP 7.3 release, these apps were renamed to better reflect their functionality and to emphasize their identity as LES apps:
 
-The monitoring app was renamed from _Connector to X-Pack Monitoring_ to _Liferay Enterprise Search Monitoring_.
+| Functionality | Old App Name | New App Name |
+| ------------- | ------------ | ------------ |
+| Monitoring the Elasticsearch cluster | Liferay Connector to X-Pack Monitoring [Elastic Stack 6.x] | Liferay Enterprise Search Monitoring |
+| Securing the Elasticsearch cluster | Liferay Connector to X-Pack Security [Elastic Stack 6.x] | Liferay Enterprise Search Security |
+| Using machine learning to optimize the search algorithm | Liferay Connector to Elasticsearch Learning to Rank | Liferay Enterprise Search Learning to Rank |
+| Replicating indexes across remote data centers | NA (new app) | Liferay Enterprise Search Cross-Cluster Replication |
 
 ## Development
 
