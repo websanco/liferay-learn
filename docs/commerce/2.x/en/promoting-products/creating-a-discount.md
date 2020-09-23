@@ -14,9 +14,9 @@ To create a new discount:
 
 1. Click _Submit_.
 
-## Configure the Discount
+## Configuring a Discount
 
-You can specify the discount's details, such as the percentage (if using a percentage based discount), the maximum discount amount, the [discount level](./introduction-to-discounts.md#tiered-discounts), and then activate it.
+You can specify a discount's details, such as the percentage (if using a percentage based discount), the maximum discount amount, the [discount level](./introduction-to-discounts.md#tiered-discounts), and then activate it.
 
 In the Details section:
 
@@ -36,7 +36,9 @@ The discount is now active. Configure the discount's rules and eligibility.
 
 ### Configuring Coupon Codes
 
-1. If using a coupon code, switch the _Use Coupon Code_ toggle to _Yes_.
+If using a coupon code,
+
+1. Wwitch the _Use Coupon Code_ toggle to _Yes_.
 1. Enter the following:
 
     * **Coupon Code**: spring-sale

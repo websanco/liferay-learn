@@ -11,8 +11,8 @@ Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr
    Discounts are not the same as a *Price List*. For more information on Pricing see `Introduction to Product Pricing Methods <../managing-a-catalog/managing-price/introduction-to-product-pricing-methods.md>`_, `Creating a Price List <../managing-a-catalog/managing-price/creating-a-price-list.md>`_, and `Adding Tiered Pricing <../managing-a-catalog/managing-price/adding-tiered-pricing.md>`_.
 ```
 
-```tip::
-   If creating *Discounts* in Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Many Commerce settings in the legacy versions are located there or in the *Site Administration*.
+```note::
+   For Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Many Commerce settings in prior versions are located there or in *Site Administration*.
 ```
 
 ## Discount Types
