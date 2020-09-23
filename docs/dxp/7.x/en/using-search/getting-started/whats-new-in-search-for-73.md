@@ -42,9 +42,11 @@ See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Developm
 
 ### Multi-Tenant Index Names
 
-> Availability: Liferay 7.3 CE GA6+, Liferay DXP 7.3 GA1+ (also in Liferay DXP 7.2 SP3+/FP8+)
+> Availability: Liferay 7.3 CE GA6+, Liferay DXP 7.3 GA1+, Liferay DXP 7.2 SP3+/FP8+
 
-TO BE WRITTEN
+For multi-tenant installations, where a single Elasticsearch cluster holds the indexes of multiple Liferay CE/DXP deployments, the need for properly namespaced indexes is paramount. In 7.2 (prior to FP8/SP3), inconsistency in naming of indexes could arise, making multi-tenant installations impossible. In 7.3 all Liferay CE/DXP indexes, including those controlled by specific applications, have their prefix configured through the Elasticsearch 7 configuration entry in System Settings. Third party application indexes can now leverage the same API to ensure consistently namespaced indexes throughout the installation.
+
+If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new indexes will be created automatically; after a full reindex the old indexes and successful upgrade, the upgrade is successfully completed.
 
 ### Connections in Search Admin
 
