@@ -64,7 +64,5 @@ Now the User's data is anonymized or deleted, and the User is also deleted.
 
 Anonymizing just the User's identification fields and deleting the User is often not enough. If a User named Ziltoid Omniscient complains about The Lunar Resort's coffee in a Message Boards Message and in it signs the post with _Supreme Leader of Ziltoidea 9_, anonymizing this post would remove the User's name (Ziltoid Omnisicent) and replace it with Anonymous Anonymous, but searching the Internet for _Ziltoidea_ quickly reveals that the post was written by [Ziltoid the Omniscient](https://en.wikipedia.org/wiki/Ziltoid_the_Omniscient). Because there can be user-entered personal data within the content of an application, you must manually edit such content to remove identifying details. 
 
-<!-- The image below is missing. -Rich -->
-
-![Even though this Message Boards Message (a comment on a blog post in this case) is anonymized, it should be edited to remove User Associated Data from the content of the message.](./intro/images/users-partial-anonymization.png)
+![Even though this Message Boards Message (a comment on a blog post in this case) is anonymized, it should be edited to remove User Associated Data from the content of the message.](./sanitizing-user-data/images/05.png)
 
