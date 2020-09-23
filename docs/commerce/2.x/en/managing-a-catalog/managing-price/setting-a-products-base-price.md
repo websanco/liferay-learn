@@ -15,7 +15,7 @@ Each product SKU must have at a set base price. To assign one price to one SKU:
 
 1. Click _Publish_.
 
-This product SKU’s base price, promo price (optional), and cost (optional) have been set. The _Cost_ field corresponds to your cost for this SKU which can help you track margins.
+The SKU’s base price, promo price (optional), and cost (optional) are now set. The _Cost_ field corresponds to your cost for this SKU which can help you track margins.
 
 ```note::
    To modify the price of a product SKU, you can use promo prices, price lists and discounts.
