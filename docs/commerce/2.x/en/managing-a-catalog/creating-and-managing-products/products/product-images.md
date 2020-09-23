@@ -4,7 +4,7 @@ Product images help to ensure that customers know what they are buying and incre
 
 ## Adding a Single Image
 
-To add a single image:
+To add an image:
 
 1. Go to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click on a product (in this example, _Brake Rotors_).
@@ -114,9 +114,9 @@ The product image has been updated with the respective Product Option. Repeat th
 
 ![Images in Product Detail widget](./product-images/images/05.png)
 
-## Adding Images for Products on Commerce 2.0 and Below
+### Commerce 2.0 and Below
 
-### Single Images
+#### Adding a Single Product Image
 
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product (in this example, _Microfiber Cloth_).
@@ -130,7 +130,7 @@ The product image has been updated with the respective Product Option. Repeat th
 
 1. Click _Publish_.
 
-### Multiple Images
+### Adding Multiple Product Images
 
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product, in this example, _Hoses_.
