@@ -14,11 +14,11 @@ The first screen displays product variants identified by their SKU code (instead
 
 | Field | Description |
 | --- | --- |
-| SKU | This is the main identifier inside the inventory system. |
-| On Hand | This represent the total number of items for a given SKU by aggregating all the quantities available from the different warehouses. |
-| Available | This represents the quantity of items for a given SKU that are available to the storefront. Commerce uses this calculation: [Quantity Available] = [Quantity on Hand] - [Quantity on Order] - [Safety Stock Quantity]. |
-| On Order | This is the quantity of inventory allocated to open sales orders. These quantities are then consumed when the order is shipped. |
-| Incoming | This represents the quantity that has been shipped by outside vendors (in the form of a replenishment) but not yet received. The values are just informative data and not based on any calculations. It can be used by commerce administrators to keep track of future quantities. |
+| SKU | The main identifier inside the inventory system. |
+| On Hand | Represents the total number of items for a given SKU by aggregating all the quantities available from the different warehouses. |
+| Available | Represents the quantity of items for a given SKU that are available to the storefront. Commerce uses this calculation: [Quantity Available] = [Quantity on Hand] - [Quantity on Order] - [Safety Stock Quantity]. |
+| On Order | The quantity of inventory allocated to open sales orders. These quantities are consumed when an order is shipped. |
+| Incoming | Represents the quantity that has been shipped by outside vendors (in the form of a replenishment) but not yet received. Values are informative data and not based on any calculations. Can be used by administrators to keep track of future quantities. |
 
 ## SKU
 
@@ -32,8 +32,8 @@ The _Overview_ tab displays a short summary of the inventory of a given SKU by w
 
 | Field | Description |
 | --- | --- |
-| Warehouse | A list of warehouses where a particular SKU is located. |
-| On Hand | The physical inventory in possession of the warehouse/business. |
+| Warehouse | List of warehouses where a particular SKU is located. |
+| On Hand | Count of physical inventory in possession at a warehouse. |
 | Safety Stock | Represents a quantity of items reserved for in-store sale at a particular site. Example: if there are 100 units in a warehouse, 20 units can be designated as Safety Stock. |
 | Available | The actual quantity used for calculating the end-user stock availability. |
 | Incoming | This represents quantities that will soon be available in that warehouse. |
