@@ -24,11 +24,11 @@ To add a product attachment:
 
 1. Click _Publish_ when finished.
 
-Customers can download the product attachment when browsing for products on the Catalogs page. The attachment is located towards the bottom in the _Product Details_ widget.
+Customers can download the product attachment when browsing products in a catalog.
 
 ![Product attachment is located inside the product details widget.](./product-attachments/images/03.png)
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Products_.
 1. Click on a product.
@@ -54,7 +54,7 @@ Customers can download the product attachment when browsing for products on the 
 
 ![Product attachment is located inside the product details widget.](./product-attachments/images/03.png)
 
-## Commerce 2.0 and Below
+### Commerce 2.0 and Below
 
 To add a product attachment:
 

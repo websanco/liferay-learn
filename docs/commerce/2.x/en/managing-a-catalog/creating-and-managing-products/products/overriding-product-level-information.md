@@ -1,8 +1,6 @@
 # Overriding Product Level Information
 
-Product SKUs in a catalog typically inherit the specifications and configurations from the parent product. You can override certain product configurations or specifications on a per SKU basis.
-
-SKUs can be configured to have shipping weights and dimensions that are distinct from the those configured for the product. Altering SKU weights and dimensions will update shipping calculations for that particular SKU, independently from the product.
+Product SKUs in a catalog typically inherit the specifications and configurations from the parent product. You can override certain product configurations or specifications on a per SKU basis. For example, individual SKUs can be configured to have shipping weights and dimensions that are distinct from the those configured for the product. Altering a specific SKU's weights and dimensions will update shipping calculations for that particular SKU.
 
 ## Overriding Product Shipping Values
 
