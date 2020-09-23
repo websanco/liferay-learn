@@ -1,4 +1,4 @@
-# What's New in Search for 7.3
+# What's New in Search for 7.3?
 
 ## Elasticsearch Integration
 
@@ -6,7 +6,7 @@
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-Liferay DXP 7.3 comes with out-of-the-box support for Elasticsearch 7. The minimum required version is 7.9. Refer to the [Compatibility-Matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) for detailed support information.
+Liferay DXP 7.3 comes with out-of-the-box support for Elasticsearch 7. The minimum required version is 7.9. Refer to the [Compatibility Matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) for detailed support information.
 
 ```important::
    Elasticsearch 6.x is not supported on Liferay CE/DXP 7.3.
@@ -16,13 +16,13 @@ Liferay DXP 7.3 comes with out-of-the-box support for Elasticsearch 7. The minim
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-The Elasticsearch 7 connector bundled with DXP 7.3 uses [Elastic's Java REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.8/java-rest-overview.html) to communicate with Elasticsearch over HTTP. This communication protocol does not require Java serialization between DXP and Elasticsearch, so Elasticsearch nodes can run on a different JVM than the Liferay DXP deployment.
+The Elasticsearch 7 connector bundled with DXP 7.3 uses [Elastic's Java REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) to communicate with Elasticsearch over HTTP. This communication protocol does not require Java serialization between DXP and Elasticsearch, so Elasticsearch 7 nodes can now be run on a different JVM than Liferay DXP.
 
 ### X-Pack Security Features Integrated
 
 > Availability: Liferay 7.3 CE GA4+, Liferay DXP 7.3 GA1+
 
-The functionality of the _Liferay Connector to X-Pack Security_ module is included in the _Liferay Connector to Elasticsearch 7_. All customers on CE/DXP 7.3 can connect securely to their Elasticsearch cluster without a [Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) subscription.
+The functionality of the _Liferay Enterprise Search Security_ (formerly _Liferay Connector to X-Pack Security_)  module is included in the _Liferay Connector to Elasticsearch 7_. All customers on CE/DXP 7.3 can connect securely to their Elasticsearch cluster without a [Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) subscription.
 
 The [upgrade](../installing-and-upgrading-a-search-engine/upgrading-search-to-73.md) guide will contain information on moving the encryption configuration into the Elasticsearch 7 connector.
 
@@ -30,13 +30,13 @@ The [upgrade](../installing-and-upgrading-a-search-engine/upgrading-search-to-73
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-Configure connections to multiple Elasticsearch clusters. In Liferay DXP 7.2 it was possible to query against any index (even non-Liferay indices) in the Elasticsearch cluster that Liferay was connected to. It's now possible to query against indices in non-Liferay Elasticsearch clusters. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. This functionality was added primarily to support [Cross-Cluster Replication](#cross-cluster-replication).
+Configure connections to multiple Elasticsearch clusters. In Liferay DXP 7.2 it was possible to query against any index (even non-Liferay indices) in the Elasticsearch cluster that Liferay was connected to. It's now possible to query against indices in non-Liferay Elasticsearch clusters. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. This functionality was added primarily to support the Liferay Enterprise Search (LES) [Cross-Cluster Replication](#cross-cluster-replication) feature.
 
 ### Embedded Mode Replaced with Sidecar
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Development(#development).
+See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Development](#development).
 
 ## Search Infrastructure & Administration
 
@@ -44,7 +44,7 @@ See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Developm
 
 > Availability: Liferay 7.3 CE GA6+, Liferay DXP 7.3 GA1+, Liferay DXP 7.2 SP3+/FP8+
 
-For multi-tenant installations, where a single Elasticsearch cluster holds the indexes of multiple Liferay CE/DXP deployments, the need for properly namespaced indexes is paramount. In 7.2 (prior to FP8/SP3), inconsistency in naming of indexes could arise, making multi-tenant installations impossible. In the latest 7.2 patch and in 7.3 all Liferay CE/DXP indexes, including those controlled by specific applications, have their prefix configured through the Elasticsearch 7 configuration entry in System Settings. Third party application indexes can now leverage the same API to ensure consistently namespaced indexes throughout the installation:
+In a multi-tenant installation, a single Elasticsearch cluster holds the indexes of multiple Liferay CE/DXP deployments. The need for properly namespaced indexes is paramount. In 7.2 (prior to FP8/SP3), inconsistency in naming of indexes could arise, making multi-tenant installations impossible. In the latest 7.2 patch and in 7.3, all Liferay CE/DXP indexes (including those controlled by specific applications) have their prefix configured through the Elasticsearch 7 configuration entry in System Settings. Third party application indexes can now leverage the same API to ensure consistently namespaced indexes throughout the installation:
 
 ```bash
 [indexNamePrefix]-[companyId]-[appName]
@@ -74,7 +74,7 @@ This replaces the information bar found on the top of the Index Actions page in 
 
 > Availability: Liferay CE 7.3 GA1+, Liferay DXP 7.3 GA1+
 
-The UID (or `id`) of index documents has 1-to-1 parity with the database rows of Liferay DXP entities.
+The UID (or `id`) of index documents now has 1-to-1 parity with the database rows of Liferay DXP entities.
 
 ## Search Widgets
 
@@ -84,7 +84,9 @@ The UID (or `id`) of index documents has 1-to-1 parity with the database rows of
 
 The Search widgets now support [Widget Templates]( ./../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) (previously known as Application Display Templates). This allows customizing the visual look and feel of each widget using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like author or modified date can be shown or hidden. Some default templates are provided out of the box for each supported search widget.
 
-### Similar Results (DXP)
+### Similar Results
+
+> **Subscribers**
 
 > Availability: Bundled with Liferay DXP 7.3 GA1+, installable on Liferay DXP 7.2 SP2+ via the [Similar Results](https://web.liferay.com/marketplace/-/mp/application/172465398) Marketplace app
 
@@ -100,7 +102,7 @@ See the [Similar Results](../search-pages-and-widgets/similar-results.md) articl
 
 ### Search Tuning: Result Rankings
 
-Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
+> Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
 
 Result Rankings allows search administrators to custom tune the result relevancy for a given query using a graphical UI. Result Rankings features three main capabilities to manually tune relevancy:
 
@@ -154,7 +156,7 @@ Though not explicitly linked to the Liferay CE/DXP 7.3 release, these apps were 
 
 > Availability: Liferay CE 7.3 GA6+, Liferay DXP 7.3 GA1+
 
-An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src code here](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_DXP_GIT_TAG$]/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/settings/IndexSettingsContributor.java):
+An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src code here)](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_DXP_GIT_TAG$]/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/settings/IndexSettingsContributor.java):
 
 * `com.liferay.portal.search.spi.settings.IndexSettingsContributor`
 * `com.liferay.portal.search.spi.settings.IndexSettingsHelper.java`
@@ -164,10 +166,10 @@ An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src cod
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-The Open Source (OSS) version of Elasticsearch 7.9.0 (licensed under Apache 2.0) is bundled with the Liferay CE/DXP 7.3 Tomcat bundles and started simultaneously in a _sidecar_ JVM. This sidecar installation is referred to as _development mode_, and it replaces the previous _embedded_ mode (neither of which are supported for production installations). Sidecar has dedicated properties in the Elasticsearch 7 configuration in the System Settings. By default, it runs on HTTP port 9201.See [Understanding Sidecar](../installing-and-upgrading-a-search-engine/sidecar.md) for more information.
+The Open Source (OSS) version of Elasticsearch 7.9.0 (licensed under Apache 2.0) is bundled with the Liferay CE/DXP 7.3 Tomcat bundles and started simultaneously in a _sidecar_ JVM. This sidecar installation is referred to as _development mode_, and it replaces the previous _embedded_ mode (neither of which are supported for production installations). Sidecar has dedicated properties in the Elasticsearch 7 configuration in the System Settings. By default, it runs on HTTP port 9201. See [Understanding Sidecar](../installing-and-upgrading-a-search-engine/sidecar.md) for more information.
 
 The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to the article on manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/manually-installing-sidecar.md) if your deployment is not able to reach external sites to download resources.
 
 ## Upgrading to DXP 7.3
 
-Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult with [the upgrade documentation](../installing-and-upgrading-a-search-engine/upgrading-elasticsearch.md) for important information to assist your upgrade journey.
+Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult with [the upgrade documentation](../installing-and-upgrading-a-search-engine/upgrading-elasticsearch.md) for important information to assist your upgrade journey.
