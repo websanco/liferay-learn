@@ -30,7 +30,7 @@ Once you have created your taxonomy using your Vocabulary and Categories, you ca
 
 1. Click _Done_.
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product. (If you used Minium to create a site with sample data, click _Transmission Fluid_. Note that the _Transmission Fluid_ product already has been linked to the sample Vocabulary and Category.)
@@ -62,4 +62,4 @@ Repeat as necessary for all other products that might fall under this category.
 
 ## Additional Information
 
-* [Creating a New Product Category](./creating-a-new-product-category.md) to start organizing your products.
+* [Creating a New Product Category](./creating-a-new-product-category.md)
