@@ -24,6 +24,10 @@
 		transition: transform 0.2s ease;
 		width: 45%;
 
+		@include media-breakpoint-down(md) {
+			margin-left: 0;
+		}
+
 		&:hover {
 			border-bottom: 3px solid $brand-primary;
 			box-shadow: 0 6px 11px 0 rgba(9, 16, 29, 0.09);

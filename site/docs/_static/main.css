@@ -9519,6 +9519,9 @@ header {
     padding: 1.25rem 1.5rem;
     transition: transform 0.2s ease;
     width: 45%; }
+    @media (max-width: 991.98px) {
+      .landing-page .section-card {
+        margin-left: 0; } }
     .landing-page .section-card:hover {
       border-bottom: 3px solid #0B5FFF;
       box-shadow: 0 6px 11px 0 rgba(9, 16, 29, 0.09);
