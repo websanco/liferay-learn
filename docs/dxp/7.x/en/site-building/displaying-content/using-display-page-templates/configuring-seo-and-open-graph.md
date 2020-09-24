@@ -17,7 +17,7 @@ Search engine optimization (SEO) refers to the methods used to improve your Page
 
 ### HTML Title
 
-The *HTML Title* field defines a Display Page's title `<meta>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to *Title*, but you can select any other Text field. The recommended length for an HTML title is under 60 characters.
+The *HTML Title* field defines a Display Page's `<title>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to *Title*, but you can select any other Text field. The recommended length for an HTML title is under 60 characters.
 
 ![The HTML Title field defines a Display Page's title meta tag](./configuring-seo-and-open-graph/images/02.png)
 
