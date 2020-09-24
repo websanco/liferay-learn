@@ -12,7 +12,7 @@ Patching Liferay
    patching-liferay/configuring-the-patching-tool.md
    patching-liferay/getting-patch-information.md
    ../upgrading-liferay/upgrade-basics/upgrading-via-docker.md
-   patching-liferay/advanced_patching.rst
+   patching-liferay/advanced_patching_for_dxp_7_2.rst
 
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types`
@@ -26,6 +26,6 @@ Patching Liferay
 Advanced Patching
 -----------------
 
--  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching/using-slim-bundles`
--  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching/slimming-down-patched-installations`
--  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching/custom-code-and-patch-compatibility`
+-  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/using-slim-bundles`
+-  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/slimming-down-patched-installations`
+-  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility`
