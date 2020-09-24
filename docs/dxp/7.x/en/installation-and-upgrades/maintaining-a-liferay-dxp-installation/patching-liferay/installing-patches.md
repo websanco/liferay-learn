@@ -139,15 +139,6 @@ If you installed DXP on an application server, you must first install and config
 
 Now you know how to patch a DXP Bundle and a DXP application server installation.
 
-## Preventing an unstable state
-
-Patching Tool uses multiple json files to determine how to patch your DXP bundle. Before starting the install, Patching Tool checks if the bundle is ready for it.
-If the bundle has none (it means no patch is installed) or all (it means there is a patch installed ) of the necessary json files, the install will start, otherwise it will stop.
-
-In case you have accidentally removed these files you can restore them and re-run the install.
-
-If a json file is missing, you can always restore it from the Fix Pack / Hotfix you have installed. Important - the json files for Hotfixes are prefixed with the Hotfix name - e.g. hotfix-123-7310-renames.json.
-
 ## Additional Information
 
 * [Installing the Patching Tool](./installing-the-patching-tool.md)
