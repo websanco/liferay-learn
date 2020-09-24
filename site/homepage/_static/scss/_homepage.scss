@@ -117,8 +117,8 @@
 				background-image: clay-icon(times, $brand-primary);
 			}
 
-			@media (max-width: 576px) {
-				width: 35vw;
+			@include media-breakpoint-down(md) {
+				width: 55vw;
 			}
 		}
 

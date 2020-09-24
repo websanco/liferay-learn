@@ -9466,9 +9466,9 @@ header {
       color: #30313F; }
     .homepage .homepage-search input[type='text']:focus {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M295.781%20256L500.986%2050.795c10.998-10.998%2010.998-28.814%200-39.781-10.998-10.998-28.815-10.998-39.781%200L256%20216.219%2050.795%2010.981c-10.966-10.998-28.814-10.998-39.781%200-10.998%2010.998-10.998%2028.814%200%2039.781L216.219%20256%2011.014%20461.205c-10.998%2010.998-10.998%2028.815%200%2039.781%205.467%205.531%2012.671%208.265%2019.874%208.265s14.407-2.734%2019.907-8.233L256%20295.78l205.205%20205.205c5.5%205.5%2012.703%208.233%2019.906%208.233s14.407-2.734%2019.906-8.233c10.998-10.998%2010.998-28.815%200-39.781L295.779%20255.999z'%20fill='%230B5FFF'/%3E%3C/svg%3E"); }
-    @media (max-width: 576px) {
+    @media (max-width: 991.98px) {
       .homepage .homepage-search input[type='text'] {
-        width: 35vw; } }
+        width: 55vw; } }
   .homepage .homepage-search .product-toggle {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
