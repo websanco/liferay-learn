@@ -22,7 +22,7 @@ Patching Liferay
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/configuring-the-patching-tool`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/getting-patch-information`
--  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced_patching`
+-  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker`
 
 Maintaining Clustered Installations
