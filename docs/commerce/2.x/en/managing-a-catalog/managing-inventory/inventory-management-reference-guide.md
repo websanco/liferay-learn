@@ -77,11 +77,9 @@ The Changelog tracks the following events:
 * When a shipment is cancelled, the previously allocated quantities need to be returned.
 * Any update action to an inventory item.
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 Inventory Management is located in the _Control Panel_. To access Inventory Management, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
-
-The fields remain the same.
 
 ## Additional Information
 

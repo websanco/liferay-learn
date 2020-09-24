@@ -8,8 +8,8 @@ Users can add inventory items, view the list of orders for a particular item (SK
 
 To manage your inventory, go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Inventory_.
 
-```tip::
-   Inventory Management is located in the _Control Panel_ if using Commerce 2.0 or 2.1.
+```note::
+   Inventory Management is located in the *Control Panel* if using Commerce 2.0 or 2.1.
 ```
 
 ## Adding an Inventory Item

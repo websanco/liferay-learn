@@ -42,7 +42,7 @@ To transfer stock between warehouses:
 
 Inventory counts for each warehouse are now updated.
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 Managing a product and its sub-menus are done in the _Control Panel_.
 
@@ -62,7 +62,7 @@ To set inventory by warehouse:
 
 Each warehouse now has the correct quantity available for sale.
 
-### Transferring Stock Between Warehouses (2.1)
+### Transferring Stock Between Warehouses
 
 If a store has more than one [warehouse](./adding-a-new-warehouse.md), users can transfer stock from one warehouse to another. Inventory is tracked at the SKU level and reflected in _Inventory_ administration.
 
