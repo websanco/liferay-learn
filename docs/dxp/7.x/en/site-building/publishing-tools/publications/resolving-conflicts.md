@@ -38,7 +38,7 @@ Constraint conflicts occur when an entity in your publication cannot coexist wit
 
 ## Resolving Missing Parent Conflicts
 
-Missing Parent conflicts occur when a child entity is created or edited in your publication, while its parent has been removed from production. Examples include deleting a folder from production, while your publication adds or modifies a sub-folder. To resolve missing parent conflicts, you can discard the conflicting changes from your publication or revert the deletion in production. See [Reverting Changes](./reverting-changes.md) for how to revert changes published to production. Missing parent conflicts can only be resolved manually.
+Missing Parent conflicts occur when a child entity is created or edited in your publication, while its parent has been removed from production. Examples include deleting a folder from production, while your publication adds or modifies a sub-folder. To resolve missing parent conflicts, you can discard the conflicting changes from your publication or revert the deletion in production. See [Reverting Changes](./reverting-changes.md) for how to revert changes published to production.
 
 ## Additional Information
 
