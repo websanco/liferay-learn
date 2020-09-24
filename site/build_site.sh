@@ -108,11 +108,11 @@ function generate_sphinx_input {
 	do
 		local product_version_language_dir_name=$(get_product_version_language_dir_name)
 
-		mkdir -p build/input/${product_version_language_dir_name}/docs
+		mkdir -p build/input/"${product_version_language_dir_name}"/docs
 
-		cp -R docs/* build/input/${product_version_language_dir_name}
+		cp -R docs/* build/input/"${product_version_language_dir_name}"
 
-		cp -R ../docs/${product_version_language_dir_name}/* build/input/${product_version_language_dir_name}
+		cp -R ../docs/"${product_version_language_dir_name}"/* build/input/"${product_version_language_dir_name}"
 	done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
@@ -123,11 +123,11 @@ function generate_sphinx_input {
 
 	for md_file_name in $(find build/input -name "*.md" -type f)
 	do
-		sed -i "s/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_VALUE}/g" ${md_file_name}
-		sed -i "s/${LIFERAY_LEARN_COMMERCE_GIT_TAG_TOKEN}/${LIFERAY_LEARN_COMMERCE_GIT_TAG_VALUE}/g" ${md_file_name}
+		sed -i "s/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
+		sed -i "s/${LIFERAY_LEARN_COMMERCE_GIT_TAG_TOKEN}/${LIFERAY_LEARN_COMMERCE_GIT_TAG_VALUE}/g" "${md_file_name}"
 
-		sed -i "s/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_VALUE}/g" ${md_file_name}
-		sed -i "s/${LIFERAY_LEARN_DXP_GIT_TAG_TOKEN}/${LIFERAY_LEARN_DXP_GIT_TAG_VALUE}/g" ${md_file_name}
+		sed -i "s/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
+		sed -i "s/${LIFERAY_LEARN_DXP_GIT_TAG_TOKEN}/${LIFERAY_LEARN_DXP_GIT_TAG_VALUE}/g" "${md_file_name}"
 	done
 }
 
@@ -144,13 +144,13 @@ function generate_static_html {
 
 		sphinx-build -M html "build/input/${product_version_language_dir_name}" "build/output/${product_version_language_dir_name}"
 
-		mv build/output/${product_version_language_dir_name}/html/* build/output/${product_version_language_dir_name}
+		mv build/output/"${product_version_language_dir_name}"/html/* build/output/"${product_version_language_dir_name}"
 
 		#
 		# Fix broken links.
 		#
 
-		for html_file_name in $(find build/output/${product_version_language_dir_name} -name *.html -type f)
+		for html_file_name in $(find build/output/"${product_version_language_dir_name}" -name *.html -type f)
 		do
 			sed -i 's/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
@@ -162,44 +162,44 @@ function generate_static_html {
 		# Rename README.html to index.html.
 		#
 
-		for readme_file_name in $(find build/output/${product_version_language_dir_name} -name *README.html -type f)
+		for readme_file_name in $(find build/output/"${product_version_language_dir_name}" -name *README.html -type f)
 		do
-			mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
+			mv "${readme_file_name}" "$(dirname "${readme_file_name}")"/index.html
 		done
 
 		#
 		# Update search references for README.html to index.html.
 		#
 
-		sed -i 's/README"/index"/g' build/output/${product_version_language_dir_name}/searchindex.js
+		sed -i 's/README"/index"/g' build/output/"${product_version_language_dir_name}"/searchindex.js
 
 		#
 		# Make ZIP files.
 		#
 
-		for zip_dir_name in $(find build/input/${product_version_language_dir_name} -name *.zip -type d)
+		for zip_dir_name in $(find build/input/"${product_version_language_dir_name}" -name *.zip -type d)
 		do
-			pushd ${zip_dir_name}
+			pushd "${zip_dir_name}"
 
-			local zip_file_name=$(basename ${zip_dir_name})
+			local zip_file_name=$(basename "${zip_dir_name}")
 
 			zip -r ${zip_file_name} .
 
-			local output_dir_name=$(dirname ${zip_dir_name})
+			local output_dir_name=$(dirname "${zip_dir_name}")
 
 			if [[ "${output_dir_name}" == *"/resources" ]]
 			then
-				output_dir_name=$(dirname ${output_dir_name})
+				output_dir_name=$(dirname "${output_dir_name}")
 			fi
 
-			output_dir_name=$(dirname ${output_dir_name})
+			output_dir_name=$(dirname "${output_dir_name}")
 			output_dir_name=${output_dir_name/input/output}
 
 			popd
 
-			mkdir -p ${output_dir_name}
+			mkdir -p "${output_dir_name}"
 
-			mv ${zip_dir_name}/${zip_file_name} ${output_dir_name}
+			mv "${zip_dir_name}"/"${zip_file_name}" "${output_dir_name}"
 		done
 	done
 
@@ -219,7 +219,7 @@ function get_product_version_language_dir_name {
 	local product=$(echo "${docs_dir_name}" | cut -f3 -d'/')
 	local version=$(echo "${docs_dir_name}" | cut -f4 -d'/')
 
-	echo ${product}/${version}/${language}
+	echo "${product}"/"${version}"/"${language}"
 }
 
 function main {
