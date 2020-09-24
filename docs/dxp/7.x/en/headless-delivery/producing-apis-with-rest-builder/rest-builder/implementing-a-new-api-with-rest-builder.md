@@ -1,21 +1,21 @@
 # Implementing a New API with REST Builder
 
-REST Builder allows you to quickly implement new JAX-RS APIs for your DXP application. You can simply define the API you want to build, and REST Builder provides the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
+With REST Builder, you can define the API you want to build, and REST Builder provides the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
 
 ## Deploy an Example REST API
 
-First, see a sample REST API in your own Liferay DXP instance. Follow these steps to add the API to your instance:
+To see REST Builder in action, you can deploy an example API that retrieves Web Content articles by the user ID that created them. Once you understand how this simple example works, you can create APIs for your own applications. 
 
-1. Start up the Liferay DXP Docker image:
+1. Start the Liferay DXP Docker image:
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip the `.zip` archive containing the [Acme Journal Article API Expansion](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/headless-delivery/content-delivery-apis/rest-builder/implementing-a-new-api-with-rest-builder/liferay-r3b2.zip -O
+    curl https://learn.liferay.com/dxp/7.x/en/headless-delivery/producing-apis-with-rest-builder/rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip -O
     ```
 
     ```bash
@@ -39,7 +39,7 @@ First, see a sample REST API in your own Liferay DXP instance. Follow these step
     STARTED com.acme.r3b2.impl_1.0.0
     ```
 
-1. Log into your DXP instance, and navigate to the Product Menu &rarr; _Control Panel_ &rarr; _Gogo Shell._
+1. Log into your DXP instance and navigate to the Product Menu &rarr; _Control Panel_ &rarr; _Gogo Shell._
 
 1. In the Gogo Shell prompt, type the following command:
 
@@ -47,11 +47,11 @@ First, see a sample REST API in your own Liferay DXP instance. Follow these step
     jaxrs:check
     ```
 
-    The page lists all of the installed JAX-RS bundles, including the newly deployed API, "R3B2.Acme.Journal.Article.Expansion". The API is now deployed and ready for you to call.
+    The page lists all of the installed JAX-RS bundles, including the newly deployed API, `R3B2.Acme.Journal.Article.Expansion`. The API is now deployed and ready for you to call.
 
     ![The newly deployed API (named R3B2.Acme.Journal.Article.Expansion) is listed as a result from the command, and ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
 
-1. Add a [basic content article](../../../content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md) to test the new API with.
+1. Add a [basic content article](../../../content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md) you can later retrieve using the API.
 
 1. Test the API by running the following command from your terminal:
 
@@ -59,7 +59,7 @@ First, see a sample REST API in your own Liferay DXP instance. Follow these step
     curl -u 'test@liferay.com:test' "localhost:8080/o/journal-article-expansion/v1.0/entities/{userId}"
     ```
 
-    If you use the correct `userId` for the User you added the article with, then the query returns the content, ID, title, and User ID in a JSON object:
+    If you use the `userId` that owns the article, the query returns the content, ID, title, and User ID in a JSON object:
 
     ```json
     {
@@ -71,16 +71,16 @@ First, see a sample REST API in your own Liferay DXP instance. Follow these step
     ```
 
     ```tip::
-       You can query your database to find the ``userId`` that you added the article with. If you use the default Test User in a fresh 7.3 GA2 instance, then the default ``userId`` is ``20126``.
+       You can query your database to find the ``userId`` that added the article.
     ```
 
 Congratulations, you've successfully deployed and used a new REST API.
 
-Now that you've seen a REST Builder behavior, walk through the steps to build one yourself.
+Now that you've seen an API generated with REST Builder, it's time to understand how it works. 
 
 ## Initial Setup
 
-Begin by setting up both an `impl` and `api` module in your Liferay workspace project. Your `impl` module's `build.gradle` file must install and apply REST Builder as a plugin:
+Begin by creating `impl` and `api` modules in your Liferay workspace project. Your `impl` module's `build.gradle` file must install and apply REST Builder as a plugin:
 
 ```
 buildscript {
@@ -98,25 +98,25 @@ buildscript {
 apply plugin: "com.liferay.portal.tools.rest.builder"
 ```
 
-Your `build.gradle` files in both modules must also declare several dependencies on annotation packages, including the `jackson-annotations` and `swagger-annotations` packages, as well as Vulcan API. <!-- It doesn't seem to be ready yet, but insert a REST Builder to the complete compatibility matrix. --> See the example [`build.gradle` file](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip/r3b2-impl/build.gradle) for a reference of needed package imports for your module.
+Your `build.gradle` files in both modules must also declare dependencies on the portal release and the Vulcan API. 
 
 ## YAML configuration
 
-The first step of creating new API with REST Builder is in creating the REST Builder configuration files. Open the folder for your `impl` module, and then add two files into it: `rest-config.yaml` and `rest-openapi.yaml`. These files must contain all of the information necessary for REST Builder to generate the scaffolding code for your API.
+Your first step is to create the REST Builder configuration files. In the `impl` module's root folder, add two files: `rest-config.yaml` and `rest-openapi.yaml`. These files must contain all the information necessary for REST Builder to generate the scaffolding code for your API.
 
-### Add Basic REST Builder Configuration
+### Add REST Builder Configuration
 
-The most basic configuration belongs in the `rest-config.yaml` file. Open this file and add the following fields to it:
+REST Builder configuration belongs in the `rest-config.yaml` file. It defines the following fields: 
 
-* **apiDir**: the directory for your Java scaffolding code (in this case, your `api` directory source folder)
+`apiDir`: your Java source code folder 
 
-* **apiPackagePath**: the convention used to place all API packages across all modules
+`apiPackagePath`: the starting Java package path where REST Builder generates code across all modules
 
-* **baseURI**: the base string to append to the URL for all of the configured APIs in this project
+`baseURI`: the context URL for all APIs in this project
 
-* **className**: the Java class name for the root resource class (used by JAX-RS)
+`className`: the Java class name for the root resource class (used by JAX-RS)
 
-* **name**: the JAX-RS name of the API
+`name`: the JAX-RS name of the API
 
 Define these fields using this structure:
 
@@ -132,9 +132,9 @@ author: "Liferay"
 
 ### Add an Information Block to the OpenAPI Configuration
 
-Next, open the `rest-openapi.yaml` file to add configuration more specific to your APIs.
+Next, open the `rest-openapi.yaml` file to begin configuring your APIs. 
 
-The first section to add into your OpenAPI configuration file is the information block. Add this block of fields into your `rest-openapi.yaml` file:
+The first section to add is the information block: 
 
 ```
 info:
@@ -148,14 +148,14 @@ openapi: 3.0.1
 ```
 
 ```important::
-   The ``version`` field defined here affects part of the URL when your API paths are exposed within your Liferay instance.
+   The ``version`` field defined here becomes part of the URL when your API paths are exposed within your Liferay instance.
 ```
 
 ### Define the Necessary Schemas
 
-Next, define any schemas for entities that your API will use within the `components` block. Defining each schema in the `rest-openapi.yaml` file allows REST Builder to create the Java classes to use their corresponding Objects in Java code. <!-- Add reference to overview article elaborating a bit more on how REST Builder represents Java Objects with schemas. -->
+Next, in the `components` block, define schemas for your entities. REST Builder uses what you define here to create corresponding Java beans to represent these entities. <!-- Add reference to overview article elaborating a bit more on how REST Builder represents Java Objects with schemas. -->
 
-Define a `schema` block for each schema your API will work with:
+Define a `schema` block for each entity you want to represent: 
 
 ```
 components:
@@ -178,13 +178,13 @@ components:
       type: object
 ```
 
-In this example, a schema called `Article` represents the important data for the use of this API. The `Article` entity contains an integer (`userId`) and three string values (`id`, `title`, and `content`) as its fields (or `properties`), which are the important pieces of data for this API to return. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
+In this example, a schema called `Article` represents the important data for the use of this API. The `Article` entity contains an integer (`userId`) and three string values (`id`, `title`, and `content`) as its fields (or `properties`), which this API returns. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
 
-The schema also determines what to call the resource classes when REST Builder builds the scaffolding and templates for your code, in the "resources" files. In this example, because the schema is called `Article`, the implementation logic belongs in the `ArticleResourceImpl` class.
+Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schema is called `Article`, the implementation logic belongs in the `ArticleResourceImpl` class.
 
 ### Define Your APIs
 
-Finally, add the `paths` block, which must include all APIs that you plan to implement with REST Builder. Add each API to a path:
+Finally, add the `paths` block. This must include all APIs that you plan to implement with REST Builder. Add each API to a path:
 
 ```
 paths:
@@ -232,7 +232,7 @@ tags: ["Article"]
 
 The tag specifies information that is added to the generated documentation when REST Builder annotates your scaffolding code. The tag name should reflect the name of your schema.
 
-See the [example `rest-openapi.yaml` file](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip/r3b2-impl/rest-openapi.yaml) for a complete reference.
+See the `rest-openapi.yaml` file you downloaded earlier for a complete reference.
 
 ## Run REST Builder
 
@@ -242,14 +242,14 @@ Now that you have added all of the configuration necessary for REST Builder to d
 ../gradlew buildREST
 ```
 
-REST Builder uses your configuration and populates both your `api` and `impl` classes with scaffolding code, as well as the Java classes you can add your implementation logic into.
+REST Builder uses your configuration and populates both your `api` and `impl` classes with scaffolding code, as well as the Java classes where you can add your implementation logic.
 
 ## Add Your Implementation Logic
 
-The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class to add your implementation to, based on the schema name you defined in ``rest-openapi.yaml`` (in this example, ``ArticleResourceImpl.java``).
+The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in ``rest-openapi.yaml`` (in this example, ``ArticleResourceImpl.java``).
 
 ```tip::
-   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` within your ``rest-config.yaml`` file. Follow that path, and that navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/java/com/acme/r3b2/journal/article/expansion/internal/resource/v1_0/``.
+   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` within your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/java/com/acme/r3b2/journal/article/expansion/internal/resource/v1_0/``.
 ```
 
 The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class and add the implementation of your API as an overridden method:
@@ -262,11 +262,9 @@ The implementation class (`[SchemaName]ResourceImpl`) is located beside the base
 }
 ```
 
-```note::
-   This method overrides the base method defined in the base class (``Base[SchemaName]ResourceImpl``), which is defined using special JAX-RS annotations. The base implementation of the method returns an empty ``Article`` object.
-```
+This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if an `Article` is not found (see below).
 
-Finally, add the business logic to complete the request. REST Builder only creates a default constructor for the Object you defined in your schema, so you must create an empty Object, and then add your values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
+Finally, add the business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema, so you must create an empty object and then add your values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
 
 ```java
 List<JournalArticle> journalArticles = JournalArticleLocalServiceUtil.getArticles();
@@ -287,7 +285,7 @@ for (JournalArticle journalArticle : journalArticles) {
 return null;
 ```
 
-This example uses [`JournalArticleLocalServiceUtil`](https://github.com/liferay/liferay-portal/blob/7.1.3-ga4/modules/apps/journal/journal-api/src/main/java/com/liferay/journal/service/JournalArticleLocalServiceUtil.java) to retrieve all articles, and then compares their authors with the `userId` from the request to return the first match.
+This example uses [`JournalArticleLocalServiceUtil`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_DXP_GIT_TAG$]/modules/apps/journal/journal-api/src/main/java/com/liferay/journal/service/JournalArticleLocalServiceUtil.java) to retrieve all articles, and then compares their authors with the `userId` from the request to return the first match.
 
 ## Conclusion
 
