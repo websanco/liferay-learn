@@ -20,7 +20,7 @@ Fix Packs are available on the Help Center's [Downloads](https://customer.lifera
 
 The Patching Tool applies fixes to Fix Packs automatically. If a new (fixed) version of a Fix Pack is released, install it with the Patching Tool. The Patching Tool installs the new version on top of the old Fix Pack.
 
-```note::
+```important::
    In DXP 7.2, the Patching Tool uninstalls the old fix pack, replacing it with the new fix pack.
 ```
 
@@ -49,7 +49,7 @@ A Hotfix is a fix or collection of fixes requested by a customer and delivered i
 
 A Hotfix can depend on a particular Fix Pack level. If you attempt to install it without installing the Fix Pack first, the Patching Tool reports the required Fix Pack level. Go to the [Customer Portal](https://customer.liferay.com/downloads) and obtain the Fix Pack. Once all the necessary patches are downloaded to the `patches` folder, the Patching Tool installs them.
 
-```note::
+```important::
    In DXP 7.2, if you already have a Hotfix installed and a Fix Pack that contains that Hotfix is released, the Patching Tool manages integrating them. Fix packs always supersede Hotfixes; so when you install a Fix Pack, any Hotfixes it contains are uninstalled and the Fix Pack version of the fix is installed in its place.
 ```
 

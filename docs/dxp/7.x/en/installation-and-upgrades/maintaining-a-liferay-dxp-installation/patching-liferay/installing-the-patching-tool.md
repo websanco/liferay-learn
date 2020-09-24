@@ -6,9 +6,8 @@ Patching DXP on an application server and updating the Patching Tool are done ma
 
 1. Download the Patching Tool from the [Customer Portal](https://customer.liferay.com/downloads).
 
-    **For DXP 7.3+,** download the latest Patching Tool.
-
-    **For DXP 7.2,** download the latest version of Patching Tool 2.x.
+    * **For DXP 7.3+,** download the latest Patching Tool.
+    * **For DXP 7.2,** download the latest version of Patching Tool 2.x.
 
 1. Unzip the Patching Tool to your [Liferay Home](../../reference/liferay-home.md) folder (recommended) or to another folder.
 
@@ -27,9 +26,8 @@ The Patching Tool reports when a patch you're installing requires a newer Patchi
 
 1. Download the Patching Tool from the [Customer Portal](https://customer.liferay.com/downloads).
 
-    **For DXP 7.3+,** download the latest Patching Tool.
-
-    **For DXP 7.2,** download the latest 2.x version of the Patching Tool.
+    * **For DXP 7.3+,** download the latest Patching Tool.
+    * **For DXP 7.2,** download the latest 2.x version of the Patching Tool.
 
 1. Back up your existing Patching Tool `.properties` files.
 
