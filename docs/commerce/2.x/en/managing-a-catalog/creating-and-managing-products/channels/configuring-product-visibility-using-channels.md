@@ -31,7 +31,7 @@ To learn more about the using Channels in Liferay Commerce, see: [Introduction t
 
 The channel is now associated with the product.
 
-### Commerce 2.1
+## Commerce 2.1 and Below
 
 To configure a product to be available in a specific channel, follow these steps:
 

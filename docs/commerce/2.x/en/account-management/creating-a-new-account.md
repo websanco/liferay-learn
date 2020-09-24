@@ -39,7 +39,7 @@ Users who have administrative permissions for the store or installation may crea
 
 1. Click _Save_.
 
-### Liferay Commerce 2.1.x and Below
+## Liferay Commerce 2.1 and Below
 
 Users who have administrative permissions for the store or installation may create and update account information in the _Control Panel_.
 

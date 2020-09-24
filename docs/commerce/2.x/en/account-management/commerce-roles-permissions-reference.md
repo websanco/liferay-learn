@@ -17,15 +17,6 @@ To view the permissions associated with each Commerce account role:
 1. Click (Commerce Role) (for example, _Account Administrator_).
 1. Click the _Define Permissions_ tab.
 
-## Liferay Commerce 2.1 and Below
-
-To view the permissions associated with each Commerce account role:
-
-1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
-1. Click the _Site Roles_ tab.
-1. Click (Commerce Role) (for example, _Account Administrator_).
-1. Click the _Define Permissions_ tab.
-
 ## Account Administrator
 
 An Account Administrator can modify the account, invite and add users to join the account, and assign roles to other account members. Note that a Liferay Commerce account administrator cannot create or delete an account. This permission is reserved for the store administrator.
@@ -101,7 +92,18 @@ The Sales Agent is a regular role in Liferay Commerce and assignees are able to 
 1. Click _Sales Agent_.
 1. Click the _Define Permissions_ tab.
 
-### Liferay Commerce 2.1 and Below
+## Liferay Commerce 2.1 and Below
+
+### Viewing Permissions
+
+To view the permissions associated with each Commerce account role:
+
+1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
+1. Click the _Site Roles_ tab.
+1. Click (Commerce Role) (for example, _Account Administrator_).
+1. Click the _Define Permissions_ tab.
+
+### Defining Permissions
 
 1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
 1. Click the _Regular Roles_ tab.

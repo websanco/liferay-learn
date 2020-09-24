@@ -30,7 +30,7 @@ If there is an existing placeholder image and you want to change it, follow the 
 
 The placeholder image has been replaced.
 
-## Liferay Commerce 2.1
+## Liferay Commerce 2.1 and Below
 
 You can set a new placeholder image when creating a new catalog or replace an existing one. To replace an existing placeholder image:
 
@@ -46,7 +46,7 @@ You can set a new placeholder image when creating a new catalog or replace an ex
 
 The placeholder image is now replaced for this catalog and is used for all products in the catalog without an image.
 
-## Liferay Commerce 2.0 and Below
+### Liferay Commerce 2.0 and Below
 
 ```tip::
    On Liferay Commerce 2.0 and below, the same placeholder image is used globally across catalogs created on a Liferay Commerce instance.

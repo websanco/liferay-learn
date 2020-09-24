@@ -23,7 +23,7 @@ Navigate to the _Global Applications_ menu &rarr; _Commerce_. Administrators can
 * [Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
 * [Availability Estimates](../managing-a-catalog/managing-inventory/availability-estimates.md)
 
-## Liferay Commerce 2.1
+## Liferay Commerce 2.1 and Below
 
 Liferay Commerce 2.1 configurations are divided into several locations in the Liferay _Product Menu_. The Commerce _Control Panel_ drop down contains configurations and settings that apply _globally_ to the Liferay Commerce installation. The Commerce _Site Menu_ drop down contains configurations and settings that are scoped to a specific store site.
 
@@ -47,7 +47,7 @@ The Commerce Global Settings menu contains the following tabs:
 * [Regions](../store-administration/adding-regions.md)
 * [Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
 
-## Commerce Site Settings
+### Commerce Site Settings
 
 > Commerce 2.0 and below
 

@@ -38,7 +38,7 @@ Users who have administrative permissions for the store or installation may crea
 
 The organization has been added to the account using the Control Panel.
 
-### Liferay Commerce 2.1 and Below
+## Liferay Commerce 2.1 and Below
 
 Users who have administrative permissions for the store or installation may create and update account information in the Control Panel.
 
@@ -58,9 +58,4 @@ The organization has been added to the account using the Control Panel.
 * [Account Roles](../account-management/account-roles.md)
 * [Commerce Roles Permissions Reference](../account-management/commerce-roles-permissions-reference.md)
 * [Introduction to Accounts](../account-management/introduction-to-accounts.md)
-
-<!-- This link is broken please update to point to correct article:
-
-* [Adding Users to Organizations](../account-management/adding-users-to-organizations.md)
-
--->
+* [Adding Users to Organizations](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/organizations/adding-users-to-organizations.html)

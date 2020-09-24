@@ -2,7 +2,7 @@
 
 Account Groups allow accounts to be grouped based on business criteria, such as grouping accounts by geographic region (US West Coast, the Midwest, and the South). Sellers may then apply discounts or target marketing campaigns to specific Account Groups.
 
-```tip::
+```note::
    As of Liferay Commerce 2.0, Account Groups has replaced User Segmentation.
 ```
 
@@ -26,7 +26,7 @@ To create an account group:
 
 1. Click _Add_.
 
-## Liferay Commerce 2.1.x and Below
+## Liferay Commerce 2.1 and Below
 
 1. Go to the _Control Panel_ → _Users_ → _Accounts Groups_.
 1. Click the (![Add icon](../images/icon-add.png)) button to add a new account group.

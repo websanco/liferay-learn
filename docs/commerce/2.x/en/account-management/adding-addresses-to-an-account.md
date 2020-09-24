@@ -40,7 +40,7 @@ Users can add addresses to an account in the _Control Panel_.
 
 1. Click _Save_.
 
-### Liferay Commerce 2.1 and below
+## Liferay Commerce 2.1 and below
 
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
 1. Click an account (for example, _Acme International_).

@@ -22,7 +22,7 @@ To create a new catalog:
 
 The new catalog has been created.
 
-## Liferay Commerce 2.1.x and Below
+## Liferay Commerce 2.1 and Below
 
 To create a new catalog:
 

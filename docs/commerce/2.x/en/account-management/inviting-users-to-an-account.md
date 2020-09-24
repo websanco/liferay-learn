@@ -17,7 +17,7 @@ The _Members_ tab is where administrators can add additional users to an account
 
 This user has been added to the account.
 
-## Using the Control Panel
+## Using the Global Application Menu Control Panel
 
 1. Click _Global Applications_ &rarr; _Control Panel_ &rarr; _Accounts_.
 
@@ -31,7 +31,7 @@ This user has been added to the account.
 
 The users have been added to the account.
 
-### Liferay Commerce 2.1.x and Below
+## Liferay Commerce 2.1.x and Below
 
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
 1. Click the account (for example _Acme, Inc_)

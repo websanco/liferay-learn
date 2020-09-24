@@ -48,7 +48,7 @@ Once the new role has been created, it will be listed in the _Site Roles_ menu i
 
 ![New custom role](./creating-a-custom-account-role/images/01.png)
 
-## Liferay Commerce 2.1.x and Below
+## Liferay Commerce 2.1 Below
 
 To add a new Commerce account role:
 

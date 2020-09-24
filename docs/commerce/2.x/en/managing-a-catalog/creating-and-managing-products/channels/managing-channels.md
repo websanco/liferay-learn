@@ -21,24 +21,6 @@ By default, a channel is automatically created if using an accelerator (for exam
 
 The channel is now created. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md) for more information.
 
-### Commerce 2.1
-
-To add a new Channel, follow these steps:
-
-1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.
-1. Click the (![Add icon](../../../images/icon-add.png)) button.
-1. Enter a name for the new channel.
-1. Select a currency to associate with the channel.
-1. In the _Type_ field, select _Site_.
-
-    ![Adding a Channel](./managing-channels/images/02.png)
-
-1. Click _Add_.
-
-The channel is now created. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md) for more information.
-
-At this point, the channel is not yet been associated with any store site.
-
 ## Associating a Channel with a DXP Site
 
 A channel can be associated with a Liferay site or an external channel such as Amazon Marketplace. To associate a channel with a site on a DXP instance:
@@ -66,7 +48,29 @@ Channels can be deleted, including those created by an site accelerator. Note th
 
 The channel is now deleted.
 
-## Commerce 2.0 and Below
+## Commerce 2.1 and Below
+
+### Adding a New Channel
+
+To add a new Channel, follow these steps:
+
+1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.
+1. Click the (![Add icon](../../../images/icon-add.png)) button.
+1. Enter a name for the new channel.
+1. Select a currency to associate with the channel.
+1. In the _Type_ field, select _Site_.
+
+    ![Adding a Channel](./managing-channels/images/02.png)
+
+1. Click _Add_.
+
+The channel is now created. Products may now be configured to be filtered by this new channel. See [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md) for more information.
+
+At this point, the channel is not yet been associated with any store site.
+
+### Commerce 2.0 and Below
+
+#### Adding a New Channel
 
 To add a new Channel, follow these steps:
 
