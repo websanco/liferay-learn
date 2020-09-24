@@ -20,7 +20,7 @@ function activate_venv {
 
 		source venv/bin/activate
 	else
-		if [[ -z `find ${PWD} -maxdepth 1 -mindepth 1 -name venv -type d` ]]
+		if [[ -z $(find ${PWD} -maxdepth 1 -mindepth 1 -name venv -type d) ]]
 		then
 			python -m venv ${PWD}/venv
 		fi
@@ -104,9 +104,9 @@ function generate_sphinx_input {
 		pushd ../site
 	fi
 
-	for docs_dir_name in `find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n"`
+	for docs_dir_name in $(find ../docs -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n")
 	do
-		local product_version_language_dir_name=`get_product_version_language_dir_name`
+		local product_version_language_dir_name=$(get_product_version_language_dir_name)
 
 		mkdir -p build/input/${product_version_language_dir_name}/docs
 
@@ -121,7 +121,7 @@ function generate_sphinx_input {
 	# Replace tokens.
 	#
 
-	for md_file_name in `find build/input -name "*.md" -type f`
+	for md_file_name in $(find build/input -name "*.md" -type f)
 	do
 		sed -i "s/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_VALUE}/g" ${md_file_name}
 		sed -i "s/${LIFERAY_LEARN_COMMERCE_GIT_TAG_TOKEN}/${LIFERAY_LEARN_COMMERCE_GIT_TAG_VALUE}/g" ${md_file_name}
@@ -132,11 +132,11 @@ function generate_sphinx_input {
 }
 
 function generate_static_html {
-	for docs_dir_name in `find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" `
+	for docs_dir_name in $(find build/input -maxdepth 4 -mindepth 4 -type f -name "contents.rst" -printf "%h\n" )
 	do
-		local product_version_language_dir_name=`get_product_version_language_dir_name`
+		local product_version_language_dir_name=$(get_product_version_language_dir_name)
 
-		echo "Generating static HTML for `get_product_version_language_dir_name`."
+		echo "Generating static HTML for $(get_product_version_language_dir_name)."
 
 		#
 		# Use Sphinx to generate static HTML for each product, version, and language.
@@ -150,7 +150,7 @@ function generate_static_html {
 		# Fix broken links.
 		#
 
-		for html_file_name in `find build/output/${product_version_language_dir_name} -name *.html -type f`
+		for html_file_name in $(find build/output/${product_version_language_dir_name} -name *.html -type f)
 		do
 			sed -i 's/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
@@ -162,7 +162,7 @@ function generate_static_html {
 		# Rename README.html to index.html.
 		#
 
-		for readme_file_name in `find build/output/${product_version_language_dir_name} -name *README.html -type f`
+		for readme_file_name in $(find build/output/${product_version_language_dir_name} -name *README.html -type f)
 		do
 			mv ${readme_file_name} $(dirname ${readme_file_name})/index.html
 		done
@@ -177,7 +177,7 @@ function generate_static_html {
 		# Make ZIP files.
 		#
 
-		for zip_dir_name in `find build/input/${product_version_language_dir_name} -name *.zip -type d`
+		for zip_dir_name in $(find build/input/${product_version_language_dir_name} -name *.zip -type d)
 		do
 			pushd ${zip_dir_name}
 
@@ -239,7 +239,7 @@ function main {
 function npm_install {
 	for package_name in "${@}"
 	do
-		if [[ -z `npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep ${package_name}` ]]
+		if [[ -z $(npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep ${package_name}) ]]
 		then
 			npm install -g ${package_name}
 		fi
@@ -249,7 +249,7 @@ function npm_install {
 function pip_install {
 	for package_name in "${@}"
 	do
-		if [[ -z `pip3 list --disable-pip-version-check --format=columns | grep ${package_name}` ]]
+		if [[ -z $(pip3 list --disable-pip-version-check --format=columns | grep ${package_name}) ]]
 		then
 			pip3 install --disable-pip-version-check ${package_name}
 		fi
