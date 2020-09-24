@@ -74,6 +74,7 @@ header {
 			font-weight: $font-weight-semi-bold;
 			left: 0;
 			list-style: none;
+			margin-bottom: 0;
 			padding-inline-start: 0;
 			position: fixed;
 			top: $header-height;
@@ -113,6 +114,10 @@ header {
 
 		.search-form {
 			width: 100%;
+
+			label {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

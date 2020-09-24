@@ -9347,6 +9347,7 @@ header {
     font-weight: 600;
     left: 0;
     list-style: none;
+    margin-bottom: 0;
     padding-inline-start: 0;
     position: fixed;
     top: 3.5rem;
@@ -9374,6 +9375,8 @@ header {
     margin-right: 0; }
   header .mobile-menu-wrapper .search-form {
     width: 100%; }
+    header .mobile-menu-wrapper .search-form label {
+      margin-bottom: 0; }
 
 .homepage .banner,
 .homepage .products h2,
