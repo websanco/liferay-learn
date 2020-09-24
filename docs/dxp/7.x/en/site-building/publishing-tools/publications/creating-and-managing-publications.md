@@ -27,9 +27,9 @@ To access this Page, open the *Applications* menu, and go to *Publications* in t
 
 Follow these steps to create a new publication for your instance.
 
-1. Click on *Create New Publication* in the drop-down Publications bar menu. This redirects you to the *Create New Publication* Page.
+1. Click *Create New Publication* in the drop-down Publications bar menu. This redirects you to the *Create New Publication* Page.
 
-   ![Click on Create New Publication in the drop-down Publications bar menu.](./creating-and-managing-publications/images/02.png)
+   ![Click Create New Publication in the drop-down Publications bar menu.](./creating-and-managing-publications/images/02.png)
 
    Alternatively, you can create a new publication by going to the *Ongoing* tab in the Publications overview page and clicking on the *Add* button ( ![Add button](../../../images/icon-add.png) ).
 
@@ -41,9 +41,9 @@ Follow these steps to create a new publication for your instance.
 
 1. Optionally, enter a *description* of your new publication.
 
-1. Click on *Create*.
+1. Click *Create*.
 
-![Enter a name and description for your publication, and click on Create.](./creating-and-managing-publications/images/03.png)
+![Enter a name and description for your publication, and click Create.](./creating-and-managing-publications/images/03.png)
 
 Publications created in this way use the current production environment as their baseline, without adding any changes. All changes made in your publication are tracked as deviations from the production environment at the time it is created.
 
@@ -51,11 +51,11 @@ After creating a new publication, you can begin adding changes to it. See [Makin
 
 ## Managing Ongoing Publications
 
-The *Ongoing* tab lists all active, unpublished publications for your DXP instance. By default, these publications are ordered by *Modified Date*, though you can order them by *Name*. Each entry includes the publication's name, description, time of last modification, time of creation, and owner.
+The *Ongoing* tab lists all active, unpublished publications for your DXP instance. By default, these publications are ordered by *Modified Date*, though you can also order them by *Name*. Each entry includes the publication's name, description, time of last modification, time of creation, and owner.
 
 ![The Ongoing tab lists all active, unpublished publications for your DXP instance and their information.](./creating-and-managing-publications/images/04.png)
 
-By clicking on a publication's *Actions* button ( ![Actions button](../../../images/icon-actions.png) ), you can select which publication to work on, edit its name and description, review its changes, prepare it for publication, configure its permissions, or remove it from your database.
+By clicking on a publication's *Actions* button ( ![Actions button](../../../images/icon-actions.png) ), you can select a publication to perform any of the tasks listed below.
 
 ### Work on Publication
 
@@ -71,11 +71,11 @@ Select *Review Changes* to see all changes included in your selected publication
 
 ### Publish
 
-Select *Publish* to immediately publish your publication's changes. When selected, DXP performs a conflicts detection and notifies you if your publication includes any conflicting changes. If there are no conflicts, click on *Publish* to make your changes live. See [Making and Publishing Changes](./making-and-publishing-changes.md) and [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
+Select *Publish* to immediately publish your publication's changes. When selected, DXP performs a conflicts detection and notifies you if your publication includes any conflicting changes. If there are no conflicts, click *Publish* to make your changes live. See [Making and Publishing Changes](./making-and-publishing-changes.md) and [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
 
 ### Schedule
 
-Select *Schedule* to determine a future date and time when your publication's changes are applied to production. When selected, DXP performs a conflicts detection and notifies you if there are any conflicting changes. If there are no conflicts, click on *Next*, and set a *Date and Time* using UTC to publish your changes. When finished, click on *Schedule*. See [Making and Publishing Changes](./making-and-publishing-changes.md) and [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
+Select *Schedule* to determine a future date and time when your publication's changes are applied to production. When selected, DXP performs a conflicts detection and notifies you if there are any conflicting changes. If there are no conflicts, click *Next*, and set a *Date and Time* using UTC to publish your changes. When finished, click *Schedule*. See [Making and Publishing Changes](./making-and-publishing-changes.md) and [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
 
 ### Permissions
 
@@ -103,7 +103,7 @@ The *History* tab lists all previously published publications for your instance.
 
 ![The History tab lists all previously published publications for your instance.](./creating-and-managing-publications/images/06.png)
 
-Click on *Revert* to easily create publications that revert previously published changes to your instance. You can also make additional changes to your DXP instance as part of your Revert publication. See [Reverting Changes](./reverting-changes.md) for more information about this process.
+Click *Revert* to easily create publications that revert previously published changes to your instance. You can also make additional changes to your DXP instance as part of your Revert publication. See [Reverting Changes](./reverting-changes.md) for more information about this process.
 
 ```tip::
    Its recommended Users enable Publications early on in your development process to achieve a more complete audit of your instance's changes.

@@ -10,7 +10,7 @@ Publications provides a convenient and flexible way for you and your teams to de
 
 Follow these steps to enable *Publications* for your DXP instance:
 
-1. Go to the *Applications* menu, and click on *Settings* under Publications.
+1. Go to the *Applications* menu, and click on *Settings* under *Publications*.
 
     ![In the Applications menu, click on Settings under Publications.](./enabling-publications/images/01.png)
 
@@ -22,7 +22,7 @@ Follow these steps to enable *Publications* for your DXP instance:
 
     ![Set the Toggle to Yes, and click on Submit or Save and Go to Overview.](./enabling-publications/images/02.png)
 
-Once enabled, you can access the drop-down Publications bar menu from any page in your DXP instance. You can use this menu to create new publications, select which publication you want to work on, switch between edit and production modes, as well as review and publish your select publication's changes, either immediately or at a later time. See [Creating and Managing Publications](./creating-and-managing-publications.md) to learn about creating, editing, and removing individual publications.
+Once enabled, you can access the drop-down Publications bar menu from any page in your DXP instance. You can use this menu to create new publications, select which publication you want to work on, switch between edit and production modes, and review and publish your select publication's changes, either immediately or at a later time. See [Creating and Managing Publications](./creating-and-managing-publications.md) to learn about creating, editing, and removing individual publications.
 
 ## How to Disable Publications
 

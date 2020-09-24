@@ -1,6 +1,6 @@
 # Resolving Conflicts
 
-The Publications tool provides a high level of process transparency that you can use to identify and resolve conflicts when publishing. By default, Publications can automatically resolve some conflicts, while others require User intervention. Users can encounter three general types of conflicts: *Modification*, *Constraint*, and *Missing Parent*.
+The Publications tool is highly transparent so you can identify and resolve conflicts when publishing. By default, Publications can automatically resolve some conflicts, while others require User intervention. Users can encounter three general types of conflicts: *Modification*, *Constraint*, and *Missing Parent*.
 
 ## Automatic and Manual Resolutions
 

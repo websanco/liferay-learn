@@ -52,7 +52,7 @@ If parallel publications include compatible changes, they can be published witho
 
 ### Conflicting Changes
 
-If parallel publications include incompatible changes, they cause a changes conflict during the publishing process. In this case, the User attempting to publish these conflicting changes is notified of the conflict. This notification also includes information about the cause of the conflict as well as whether DXP has automatically resolved the conflict, or if the conflict requires manual resolution. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
+If parallel publications include incompatible changes, they cause a conflict during the publishing process. In this case, the User attempting to publish these conflicting changes receives a notification, explaining the cause of the conflict and whether DXP has automatically resolved it, or if the conflict requires manual resolution. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
 
 ## Reviewing Publication Changes
 
@@ -76,7 +76,7 @@ Here, you can also switch between two display styles: *Changes* and *Context*.
 
     ![View tracked changes in a list.](./making-and-publishing-changes/images/04.png)
 
-* **Context**: This displays all changes in a tree, where every change ach change can be seen in its relative context.
+* **Context**: This displays all changes in a tree, where every change can be seen in its relative context.
 
     ![View tracked changes in context.](./making-and-publishing-changes/images/05.png)
 
@@ -94,7 +94,7 @@ To publish your changes immediately, ensure you're on the publication you want t
 
 Alternatively, you can publish a publication by going to its *Changes* page and clicking on *Publish*.
 
-DXP performs a conflict detection to see if there are any conflicting changes. If there are any conflicts detected, DXP notifies you of all automatically resolved conflicts and whether any conflicts require manual resolution. You cannot move forward with publishing until all conflicts are resolved. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
+DXP performs conflict detection to see if there are any conflicting changes. If there are any conflicts detected, DXP notifies you of all automatically resolved conflicts and whether any conflicts require manual resolution. You cannot move forward with publishing until all conflicts are resolved. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
 
 Once all conflicts are resolved, you can click on *Publish* to make your changes live on production. Clicking on *Publish* also redirects you to the *History* tab of the Publications page, where you can see publication details, including its date, publisher, and status. Here, you can also revert changes. See [Reverting Changes](./reverting-changes.md) for more information.
 
