@@ -21,11 +21,19 @@ Once you have a patch you need, you can use Liferay's Patching Tool to apply it.
 
 The [`patching-tool.sh auto-discovery` command](./configuring-the-patching-tool.md) configures the tool automatically for Tomcat bundles and common app server configurations. You can also configure the Patching Tool manually to handle DXP installation variations.
 
-## Advanced Patching
+## Other Patching Topics
 
-As you start applying patches regularly, adding new DXP environments, or even working with the DXP source code, you'll want to know the best way to manage patching. Some advanced patching topics include:
+As you start applying patches regularly, you may need to submit patch information in support requests or uninstall patches you no longer need.
 
 * [Getting Patch Information](./getting-patch-information.md)
 * [Uninstalling Patches](./uninstalling-patches.md)
+
+## DXP 7.2 Patching Topics
+
+The following topics provide best practices for managing patches in DXP 7.2:
+
+* [Slimming Down Patched Installations](./advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
+* [Using Slim Bundles](./advanced-patching-for-dxp-7-2/using-slim-bundles.md)
+* [Handling Collisions between Patches and Custom Plugins](./advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
 
 Now that you've digested the patching overview, learn about the [Patch Types](./understanding-patch-types.md) available to you. Then you'll be ready to apply patches following [Installing Patches](./installing-patches.md).
