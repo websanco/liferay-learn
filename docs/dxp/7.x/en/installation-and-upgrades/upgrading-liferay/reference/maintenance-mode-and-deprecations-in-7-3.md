@@ -34,6 +34,7 @@ Here are the features deprecated in 7.3:
 
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
+| Central Authentication Service (CAS) | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
 | DDM, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
 | Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html) is Dec 31, 2020. |
@@ -41,6 +42,9 @@ Here are the features deprecated in 7.3:
 | JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
+| OpenAM / OpenSSO | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
+| OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). Deprecated in 7.2. |
+| Search widget (classic) in *Tools* category | Bundled | Deprecated in 7.1. Replaced by the [Search widgets](../../../using-search/search-pages-and-widgets/search-results/search-results.md) in the *Search* category. |
 | SOAP Web Services | Bundled (disabled) | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
 | Solr | Marketplace | Replaced by Elasticsearch. |
 | Theme: Fjord | Archived | No direct replacement. |
