@@ -1,0 +1,7 @@
+<form action="{{ pathto('search') }}" class="search-form" method="get">
+    <label for="mobileDocsSearch">
+        <input class="form-control" id="mobileDocsSearch" name="q" placeholder="{{ _('Search Docs') }}" type="text" />
+    </label>
+    <input name="area" type="hidden" value="default" />
+    <input name="check_keywords" type="hidden" value="yes" />
+</form>
