@@ -7,8 +7,8 @@
 		&:active,
 		&:focus {
 			background-color: $white;
-			border-color: $brand-primary;
-			color: $brand-primary;
+			border-color: $primary;
+			color: $primary;
 		}
 
 		&:hover {
@@ -23,7 +23,7 @@
         &:hover,
         &:not(:disabled):not(.disabled):active {
 			background-color: $filter-color;
-			border-color: $brand-primary;
+			border-color: $primary;
 			color: $default-color;
         }
         

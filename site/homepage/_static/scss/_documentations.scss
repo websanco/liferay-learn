@@ -71,13 +71,13 @@
 
 		.toctree-l1 {
 			&.active a {
-				color: $brand-primary;
+				color: $primary;
 			}
 
 			&.current {
 				> a {
 					background-image: none;
-					border-left-color: $brand-primary;
+					border-left-color: $primary;
 				}
 			}
 
@@ -100,7 +100,7 @@
 			&.current {
 				&.parent-level > a {
 					background-image: none;
-					border-left-color: $brand-primary;
+					border-left-color: $primary;
 					color: inherit;
 					font-size: initial;
 					padding: $spacing-xs $spacing-default $spacing-xs
@@ -108,7 +108,7 @@
 				}
 
 				> a {
-					color: $brand-primary;
+					color: $primary;
 				}
 			}
 
@@ -207,7 +207,7 @@
 		color: $default-color;
 
 		&.active {
-			color: $brand-primary;
+			color: $primary;
 			font-weight: $font-weight-semi-bold;
 		}
 	}

@@ -4,54 +4,54 @@
 $grid-gutter-width: 30px !default; // 30px is the original from bootstrap instead of the 24px defined in Atlas. This variable is needed to be defined earlier for alerts.
 
 $primary: #0B5FFF !default;
-$primary-d1: darken($primary, 5.10) !default;
-$primary-d2: darken($primary, 10) !default;
-$primary-l1: lighten($primary, 22.94) !default;
-$primary-l2: lighten($primary, 32.94) !default;
-$primary-l3: lighten($primary, 44.90) !default;
+$primary-d1: darken($primary, 5.10) !default; // #0053F0 
+$primary-d2: darken($primary, 10) !default; // #004AD7
+$primary-l1: lighten($primary, 22.94) !default; // #80ACFF
+$primary-l2: lighten($primary, 32.94) !default; // #B3CDFF
+$primary-l3: lighten($primary, 44.90) !default; // #F0F5FF
 
 $secondary: #6B6C7E !default;
 $secondary-d1: darken(saturate($secondary, 4.82), 20) !default;
 $secondary-d2: darken(saturate($secondary, 5.36), 23.92) !default;
-$secondary-l1: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
-$secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
-$secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$secondary-l1: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default; // #A7A9BC
+$secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default; // #CDCED9
+$secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default; // #E7E7ED
 
-$info: #2E5AAC !default;
-$info-d1: darken($info, 5.10) !default;
-$info-d2: darken($info, 10) !default;
-$info-l1: lighten(saturate($info, 0.59), 28.04) !default;
-$info-l2: lighten(desaturate($info, 3.25), 52.94) !default;
+$info: #2E5AAC !default; 
+$info-d1: darken($info, 5.10) !default; // #294F98
+$info-d2: darken($info, 10) !default; // #234584
+$info-l1: lighten(saturate($info, 0.59), 28.04) !default; // #89A7E0
+$info-l2: lighten(desaturate($info, 3.25), 52.94) !default; // #EEF2FA
 
-$success: #287D3D !default;
-$success-d1: darken($success, 5.10) !default;
-$success-d2: darken($success, 10) !default;
-$success-l1: lighten(desaturate($success, 0.14), 24.90) !default;
-$success-l2: lighten(desaturate($success, 1.52), 62.94) !default;
+$success: #287D3C !default;
+$success-d1: darken($success, 5.10) !default; // #226A33
+$success-d2: darken($success, 10) !default; // #1C5629
+$success-l1: lighten(desaturate($success, 0.14), 24.90) !default; // #5ACA75
+$success-l2: lighten(desaturate($success, 1.52), 62.94) !default; // #EDF9F0
 
 $warning: #B95000 !default;
-$warning-d1: darken($warning, 5.10) !default;
-$warning-d2: darken($warning, 10) !default;
-$warning-l1: lighten($warning, 24.90) !default;
-$warning-l2: lighten($warning, 60) !default;
+$warning-d1: darken($warning, 5.10) !default; // #9F4500
+$warning-d2: darken($warning, 10) !default; // #863A00
+$warning-l1: lighten($warning, 24.90) !default; // #FF8F39
+$warning-l2: lighten($warning, 60) !default; // #FFF4EC
 
 $danger: #DA1414 !default;
-$danger-d1: darken($danger, 5.10) !default;
-$danger-d2: darken($danger, 10) !default;
-$danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default;
-$danger-l2: lighten(saturate($danger, 5.04), 50) !default;
+$danger-d1: darken($danger, 5.10) !default; // #C31212
+$danger-d2: darken($danger, 10) !default; // #AB1010
+$danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default; // #F48989
+$danger-l2: lighten(saturate($danger, 5.04), 50) !default; // #FEEFEF
 
 $light: #F1F2F5 !default;
-$light-d1: darken($light, 5.10) !default;
-$light-d2: darken($light, 10) !default;
-$light-l1: lighten(desaturate(adjust-hue($light, -15), 2.38), 1.96) !default;
+$light-d1: darken($light, 5.10) !default; // #E2E4EA
+$light-d2: darken($light, 10) !default; // #D3D6E0
+$light-l1: lighten(desaturate(adjust-hue($light, -15), 2.38), 1.96) !default; // #F7F8F9
 $light-l2: lighten(desaturate(adjust-hue($light, -225), 16.67), 4.71) !default;
 
 $dark: #272833 !default;
-$dark-d1: darken($dark, 5.10) !default;
-$dark-d2: darken($dark, 10) !default;
-$dark-l1: lighten(saturate($dark, 0.18), 4.12) !default;
-$dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default;
+$dark-d1: darken($dark, 5.10) !default; // #1C1C24
+$dark-d2: darken($dark, 10) !default; // #111116
+$dark-l1: lighten(saturate($dark, 0.18), 4.12) !default; // #30313F
+$dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default; // #393A4A
 
 $link-color: $primary !default;
 $link-hover-color: $primary-d2 !default;
@@ -61,33 +61,31 @@ $link-hover-color: $primary-d2 !default;
 $alert: #D33A2F !default;
 $background-color: #F4F6F9 !default;
 $black: #000 !default;
-$brand-primary: #0B5FFF !default;
 $brand-secondary: #184496 !default;
-$default-color: #30313F !default;
-$filter-color: #EFF3FD !default;
+$default-color: $dark-l1 !default;
+$filter-color: #EFF3FD !default; 
 $header-color: #09101D !default;
 $highlight-color: #C4D6F8 !default;
 $hr-color: #DADEE3 !default;
-$nav-color: #6B6C7E !default;
+$nav-color: $secondary !default;
 $pre-text-color: #F8FAFF !default;
-$primary-d1: #0053F0 !default;
 $white: #FFF !default;
 
-$admonition-error: #DA1414 !default;
-$admonition-error-bg: #FEEFEF !default;
+$admonition-error: $danger !default;
+$admonition-error-bg: $danger-l2 !default;
 $admonition-error-highlight: $alert !default;
-$admonition-important: #2E5AAC !default;
-$admonition-important-bg: #EEF2FA !default;
-$admonition-important-highlight: #89A7E0 !default;
-$admonition-note: #287D3C !default;
-$admonition-note-bg: #EDF9F0 !default;
-$admonition-note-highlight: #5ACA75 !default;
+$admonition-important: $info !default;
+$admonition-important-bg: $info-l2 !default;
+$admonition-important-highlight: $info-l1 !default;
+$admonition-note: $success !default;
+$admonition-note-bg: $success-l2 !default;
+$admonition-note-highlight: $success-l1 !default;
 $admonition-tip: #0B7543 !default;
 $admonition-tip-bg: #EAFAF7 !default;
 $admonition-tip-highlight: #50D2A0 !default;
-$admonition-warning: #B95000 !default;
-$admonition-warning-bg: #FFF4EC !default;
-$admonition-warning-highlight: #FF8F39 !default;
+$admonition-warning: $warning !default;
+$admonition-warning-bg: $warning-l2 !default;
+$admonition-warning-highlight: $warning-l1 !default;
 
 $card-sidebar: #42BFC2 !default;
 
