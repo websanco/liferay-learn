@@ -32,6 +32,7 @@ Here are the features deprecated in 7.2:
 | CMIS Store | Removed | Migrate to another [File Store option](../../../system-administration/file-storage/configuring-file-storage.md). Before [upgrading to Liferay 7.2](../upgrade-basics/upgrade-overview.md), [migrate your File Store data](../../../system-administration/file-storage/file-store-migration.md). |
 | Google Login | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). |
 | JCRStore | Removed | Migrate to another [File Store option](../../../system-administration/file-storage/configuring-file-storage.md). Before [upgrading to Liferay 7.2](../upgrade-basics/upgrade-overview.md), [migrate your File Store data](../../../system-administration/file-storage/file-store-migration.md). |
+| Liferay Mobile Device Detection Enterprise | Removed | Contact 51Degrees for up-to-date definitions |
 | Live Users | Bundled | Enabled through the [`live.users.enabled`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) [portal property](../../reference/portal-properties.md). |
 | NTLM | Removed |  Security vulnerabilities persist with NTLM. It is replaced by [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). If you're using NTLM to authenticate Microsoft Windows™ accounts with , switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). |
 | OAuth 1.0a | Marketplace | Replaced by OAuth 2.0, which is included in the bundle. |
