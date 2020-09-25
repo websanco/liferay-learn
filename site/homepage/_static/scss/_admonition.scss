@@ -1,5 +1,6 @@
 div.admonition {
-	border-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+	border-top-right-radius: $border-radius;
 	margin: $spacing-md 0;
 	padding: $spacing-sm $spacing-default $spacing-md 2.625rem;
 
