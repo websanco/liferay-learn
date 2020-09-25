@@ -17,7 +17,7 @@ Setting Up Liferay DXP
 -  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-liferay-dxp`
 -  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/activating-liferay-dxp`
 -  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-liferay-dxp/using-a-cdn`
+-  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/using-a-cdn`
 
 Configuring Mail
 ----------------
