@@ -5,33 +5,6 @@
 
 <portlet:defineObjects />
 
-<clay:button
-	id='<%= liferayPortletResponse.getNamespace() + "selectRole" %>'
-	label="Select"
-/>
-
-<%
-String itemSelectorURL = String.valueOf(request.getAttribute("itemSelectorURL"));
-%>
-
-<script>
-	var selectRoleButton = document.getElementById('<portlet:namespace />selectRole');
-
-	selectRoleButton.addEventListener(
-		'click',
-		function(event) {
-			var itemSelectorDialog = new Liferay.Util.openSelectionModal(
-				{
-                    onSelect: function (selectedItem) {
-                        if (selectedItem) {
-                            // Use the selected item value(s) here.
-                        }
-                    },
-					selectEventName: 'selectItem',
-					title: 'Select Role',
-					url: '<%= itemSelectorURL %>'
-				}
-			);
-		}
-	);
-</script>
+<%-- 
+// Add view implementation here.
+--%>

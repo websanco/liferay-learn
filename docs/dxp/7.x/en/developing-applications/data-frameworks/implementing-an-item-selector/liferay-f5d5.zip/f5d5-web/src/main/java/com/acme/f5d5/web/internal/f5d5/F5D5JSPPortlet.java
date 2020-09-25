@@ -47,32 +47,7 @@ public class F5D5JSPPortlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
-		RoleItemSelectorCriterion itemSelectorCriterion =
-			new RoleItemSelectorCriterion();
-
-		ItemSelectorReturnType[] returnTypeArray =
-			new ItemSelectorReturnType[1];
-
-		returnTypeArray[0] = new UUIDItemSelectorReturnType();
-
-		List<ItemSelectorReturnType> itemSelectorReturnTypes =
-			ListUtil.fromArray(returnTypeArray);
-
-		itemSelectorReturnTypes.add(new UUIDItemSelectorReturnType());
-
-		itemSelectorCriterion.setDesiredItemSelectorReturnTypes(
-			itemSelectorReturnTypes);
-
-		RequestBackedPortletURLFactory requestBackedPortletURLFactory =
-			RequestBackedPortletURLFactoryUtil.create(renderRequest);
-
-		PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
-			requestBackedPortletURLFactory, "selectItem",
-			itemSelectorCriterion);
-
-		renderRequest.setAttribute("itemSelectorURL", itemSelectorURL);
-
-		super.render(renderRequest, renderResponse);
+		// Add implementation logic here.
 	}
 
 	@Reference
