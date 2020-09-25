@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %><%@
-taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
+
+<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
 
 <portlet:defineObjects />
 
@@ -14,32 +14,24 @@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
 String itemSelectorURL = String.valueOf(request.getAttribute("itemSelectorURL"));
 %>
 
-<aui:script require="frontend-js-web/liferay/ItemSelectorDialog.es as ItemSelectorDialog">
+<script>
 	var selectRoleButton = document.getElementById('<portlet:namespace />selectRole');
 
 	selectRoleButton.addEventListener(
 		'click',
 		function(event) {
-			var itemSelectorDialog = new ItemSelectorDialog.default(
+			var itemSelectorDialog = new Liferay.Util.openSelectionModal(
 				{
-					eventName: 'selectItem',
+                    onSelect: function (selectedItem) {
+                        if (selectedItem) {
+                            // Use the selected item value(s) here.
+                        }
+                    },
+					selectEventName: 'selectItem',
 					title: 'Select Role',
 					url: '<%= itemSelectorURL %>'
 				}
 			);
-
-			itemSelectorDialog.on(
-				'selectedItemChange',
-				function(event) {
-					var selectedItem = event.selectedItem;
-
-					if (selectedItem) {
-						// Use the selected item value(s) here.
-					}
-				}
-			);
-
-			itemSelectorDialog.open();
 		}
 	);
-</aui:script>
+</script>
