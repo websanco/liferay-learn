@@ -27,7 +27,7 @@ curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-framework
 ```bash
 unzip liferay-f5d5.zip
 ```
-Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The following walkthrough shows how the example project works.
+Once you have the example module, you are ready to begin adding an item selector to it. Implementing the item selector requires changes to both the Java code (in the example module, [`F5D5JSPPortlet.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.2/en/developing-applications/data-frameworks/implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java)) and either a `.js` or `.jsp` file to add it to the front-end of your application (in the example module, [`view.jsp`](https://github.com/liferay/liferay-blade-samples/blob/7.1/liferay-workspace/apps/jsp-portlet/src/main/resources/META-INF/resources/view.jsp)). The following walkthrough shows how the example project works.
 
 ## Create an Item Selector URL
 
@@ -125,7 +125,7 @@ Finally, call `MVCPortlet`'s `render` method to continue the rendering process o
 super.render(renderRequest, renderResponse);
 ```
 
-You have now finished adding the necessary Java code to create the item selector; see [`F5D5JSPPortlet.java`](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
+You have now finished adding the necessary Java code to create the item selector; see [`F5D5JSPPortlet.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.2/en/developing-applications/data-frameworks/implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/java/com/acme/f5d5/web/internal/f5d5/F5D5JSPPortlet.java) in the provided example module to see the complete implementation. Now you only need to retrieve and use the item selector in your front-end code.
 
 ## Use the Item Selector in Your View
 
@@ -152,10 +152,10 @@ A button is a simple UI element you can use to open an item selector. You can us
 
 The `clay:button` tag creates a button (with the ID `selectRole` and the label *Select* displayed on the screen) on your widget. This button can be identified by the String `<portlet:namespace />selectRole`.
 
-The easiest way to utilize an item selector is by defining it in JavaScript, so use the `aui:script` tag to embed JavaScript in your JSP file. Use the item selector definition (`frontend-js-web/liferay/ItemSelectorDialog.es`) as a requirement for your script:
+The easiest way to utilize an item selector is by defining it in JavaScript, so use the `<script>` tag to embed JavaScript in your JSP file:
 
 ```jsp
-<aui:script require="frontend-js-web/liferay/ItemSelectorDialog.es as ItemSelectorDialog">
+<script>
     var selectRoleButton = document.getElementById('<portlet:namespace />selectRole');
 
     selectRoleButton.addEventListener(
@@ -164,18 +164,21 @@ The easiest way to utilize an item selector is by defining it in JavaScript, so 
             // Create and use the item selector dialog.
         }
     );
-</aui:script>
+<script>
 ```
 
 This snippet of JavaScript first retrieves the "Select Role" button through its identifier (`portlet:namespace />selectRole`). Then it adds an event listener to create the item selector dialog when clicked.
 
 ### Define and Use the Item Selector Dialog
 
-Define the item selector dialog and its behavior inside the select button's on-click function. Use the `ItemSelectorDialog.default` constructor to create the dialog:
+Define the item selector dialog and its behavior inside the select button's on-click function. Use the `Liferay.Util.openSelectionModal` constructor to create the dialog:
 
 ```js
 var itemSelectorDialog = new ItemSelectorDialog.default(
     {
+        onSelect: function (selectedItem) {
+            // Use the selected item value(s) here.
+        },
         eventName: 'selectItem',
         title: 'Select Role',
         url: '<%= itemSelectorURL %>'
@@ -183,37 +186,13 @@ var itemSelectorDialog = new ItemSelectorDialog.default(
 );
 ```
 
+The `onSelect` field must define a function to handle the value when it is clicked. Define the dialog's behavior when the user makes a selection within this function.
+
 The value for the `eventName` field **must** match the String you used with the `RequestBackedPortletURLFactory` in the Java code (in this example, `selectItem`). You must also use the URL that you retrieved from the `request` object previously for the `url` field when defining the item selector dialog.
 
-```note::
-   The ``title`` field in this example uses a language key to define the dialog title. Add any language keys you are using to a ```Language.properties`` <./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/content/Language.properties>`__ file within your module.
-```
-
 ```tip::
-   If you only want to support selecting one item, then you can restrict the dialog to a single selection by adding this field to the ``ItemSelectorDialog``: ``singleSelect: true``. You can also change the text of the dialog's `Add` and `Cancel` buttons by adding the ``buttonAddLabel`` or ``buttonCancelLabel`` fields, respectively.
+   If you want your item selector to support selecting multiple items, then you can enable multiple selection by adding this field to the ``ItemSelectorDialog``: ``multiple: true``.
 ```
-
-Then, define the dialog's behavior when the user makes a selection:
-
-```js
-itemSelectorDialog.on(
-    'selectedItemChange',
-    function(event) {
-        var selectedItem = event.selectedItem;
-    
-        if (selectedItem) {
-            // Use the selected item value(s) here.
-        }
-    }
-);
-```
-
-Finally, now that the item selector is defined, the last step is to open the dialog:
-
-```js
-itemSelectorDialog.open();
-```
-
 ## Use the Item Selector Result
 
 Use the item selection, stored previously as `selectedItem`. The data type and information contained in the result `selectedItem` depends on what return type class you used in the Java code. Since this example uses `UUIDItemSelectorReturnType`, the data is a String value with the UUIDs of one or more selected items.
@@ -226,7 +205,7 @@ if (selectedItem) {
 }
 ```
 
-Your item selector is complete. To see all of the example JSP code in its full context, see the example module's [`view.jsp` file](./implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/META-INF/resources/view.jsp).
+Your item selector is complete. To see all of the example JSP code in its full context, see the example module's [`view.jsp` file](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.2/en/developing-applications/data-frameworks/implementing-an-item-selector/liferay-f5d5.zip/f5d5-web/src/main/resources/META-INF/resources/view.jsp).
 
 ## Test Your Application
 
