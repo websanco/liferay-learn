@@ -54,6 +54,15 @@ Here's how to configure your CDN in the Control Panel:
 
 ![CDN configuration in the Control Panel.](./using-a-cdn/images/02.png)
 
-These fields correspond to the Content Delivery Network portal properties. Refer to the [portal.properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) document for information on how to set values for these fields. Once you're finished, click *Save* and your old host is replaced with your new CDN host for static content.
+These fields correspond to the Content Delivery Network portal properties. Refer to the [portal.properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) document for information on how to set values for these fields.
+
+Make sure to specify your CDN host(s) with a URL that includes the protocol and domain.
+
+Examples,
+
+*CDN Host HTTP:* `http://cdnhost1.liferay.com`  
+*CDN Host HTTP:* `https://cdnhost2.liferay.com`
+
+Once you're finished, click *Save* and your old host is replaced with your new CDN host for static content.
 
 Congratulations! Your new CDN can drastically reduce latency time and improve performance.
