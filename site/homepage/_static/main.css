@@ -9098,7 +9098,8 @@ a.copybtn {
   align-items: center;
   border-bottom: 1px solid #DADEE3;
   display: flex;
-  height: 4.8125rem; }
+  height: 4.8125rem;
+  z-index: 1; }
   .documentations .info-bar label {
     margin-left: 0.75rem;
     margin-right: 0.75rem;

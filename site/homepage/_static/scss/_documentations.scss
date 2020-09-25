@@ -175,6 +175,7 @@
 		border-bottom: 1px solid $hr-color;
 		display: flex;
 		height: $info-bar-height;
+		z-index: 1;
 
 		label {
 			margin-left: $spacing-sm;
