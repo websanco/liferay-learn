@@ -123,7 +123,6 @@
 			align-items: center;
 			border-top: 1px solid $hr-color;
 			bottom: 0;
-			display: flex;
 			height: $footer-height;
 			padding: 0 $spacing-sm;
 			position: absolute;
@@ -133,7 +132,8 @@
 				width: 100%;
 
 				button {
-					color: $secondary-l1;
+					color: $nav-color;
+					font-size: $h5-font-size;
 					padding: 0.25rem;
 					width: 100%;
 

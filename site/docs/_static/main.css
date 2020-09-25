@@ -9063,7 +9063,6 @@ a.copybtn {
   align-items: center;
   border-top: 1px solid #DADEE3;
   bottom: 0;
-  display: flex;
   height: 3.5rem;
   padding: 0 0.75rem;
   position: absolute;
@@ -9071,7 +9070,8 @@ a.copybtn {
   .documentations .doc-nav-wrapper-inner .doc-nav-footer .dropdown {
     width: 100%; }
     .documentations .doc-nav-wrapper-inner .doc-nav-footer .dropdown button {
-      color: #a7a9bc;
+      color: #6B6C7E;
+      font-size: 0.875rem;
       padding: 0.25rem;
       width: 100%; }
       .documentations .doc-nav-wrapper-inner .doc-nav-footer .dropdown button svg {
