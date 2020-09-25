@@ -1,38 +1,3 @@
-// Color Variables
-
-$alert: #D33A2F !default;
-$background-color: #F4F6F9 !default;
-$black: #000 !default;
-$brand-primary: #0B5FFF !default;
-$brand-secondary: #184496 !default;
-$default-color: #30313F !default;
-$filter-color: #EFF3FD !default;
-$header-color: #09101D !default;
-$highlight-color: #C4D6F8 !default;
-$hr-color: #DADEE3 !default;
-$nav-color: #6B6C7E !default;
-$pre-text-color: #F8FAFF !default;
-$primary-d1: #0053F0 !default;
-$white: #FFF !default;
-
-$admonition-error: #DA1414 !default;
-$admonition-error-bg: #FEEFEF !default;
-$admonition-error-highlight: $alert !default;
-$admonition-important: #2E5AAC !default;
-$admonition-important-bg: #EEF2FA !default;
-$admonition-important-highlight: #89A7E0 !default;
-$admonition-note: #287D3C !default;
-$admonition-note-bg: #EDF9F0 !default;
-$admonition-note-highlight: #5ACA75 !default;
-$admonition-tip: #0B7543 !default;
-$admonition-tip-bg: #EAFAF7 !default;
-$admonition-tip-highlight: #50D2A0 !default;
-$admonition-warning: #B95000 !default;
-$admonition-warning-bg: #FFF4EC !default;
-$admonition-warning-highlight: #FF8F39 !default;
-
-$card-sidebar: #42BFC2 !default;
-
 // Variables from atlas/variables/_globals for alerts
 // https://github.com/liferay/clay/blob/0568f0a1ffb82b0bc85321b10cb32ff5f68e2cc1/packages/clay-css/src/scss/atlas/variables/_globals.scss
 
@@ -90,6 +55,41 @@ $dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default;
 
 $link-color: $primary !default;
 $link-hover-color: $primary-d2 !default;
+
+// Site Color Variables
+
+$alert: #D33A2F !default;
+$background-color: #F4F6F9 !default;
+$black: #000 !default;
+$brand-primary: #0B5FFF !default;
+$brand-secondary: #184496 !default;
+$default-color: #30313F !default;
+$filter-color: #EFF3FD !default;
+$header-color: #09101D !default;
+$highlight-color: #C4D6F8 !default;
+$hr-color: #DADEE3 !default;
+$nav-color: #6B6C7E !default;
+$pre-text-color: #F8FAFF !default;
+$primary-d1: #0053F0 !default;
+$white: #FFF !default;
+
+$admonition-error: #DA1414 !default;
+$admonition-error-bg: #FEEFEF !default;
+$admonition-error-highlight: $alert !default;
+$admonition-important: #2E5AAC !default;
+$admonition-important-bg: #EEF2FA !default;
+$admonition-important-highlight: #89A7E0 !default;
+$admonition-note: #287D3C !default;
+$admonition-note-bg: #EDF9F0 !default;
+$admonition-note-highlight: #5ACA75 !default;
+$admonition-tip: #0B7543 !default;
+$admonition-tip-bg: #EAFAF7 !default;
+$admonition-tip-highlight: #50D2A0 !default;
+$admonition-warning: #B95000 !default;
+$admonition-warning-bg: #FFF4EC !default;
+$admonition-warning-highlight: #FF8F39 !default;
+
+$card-sidebar: #42BFC2 !default;
 
 // Variable Overrides
 
