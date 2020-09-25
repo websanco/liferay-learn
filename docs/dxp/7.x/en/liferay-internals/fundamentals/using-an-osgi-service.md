@@ -34,14 +34,14 @@ Liferay service package Javadoc is available at these locations:
    For instructions on how to create an OSGi service, please see `APIs as OSGi Services <./apis-as-osgi-services.md>`_.
 ```
 
-## Deploy an Example
+## Deploy the Gogo Shell Command Example
 
 Start using the example.
 
 1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip `liferay-j1h1.zip`.
@@ -110,9 +110,9 @@ Start using the example.
     Hello Captain Kirk!
     ```
 
-The example module leverages the API and Implementation modules to produce the content returned from the `j1h1:greet` Gogo Shell command.
+The example module leverages the API and implementation modules to produce the content returned from the `j1h1:greet` Gogo Shell command.
 
-## Walk Through the Example
+## How to Use an OSGi Service
 
 * [Write Your Business Logic](#write-your-business-logic)
 * [Annotate External Service References](#annotate-external-service-references)
@@ -130,11 +130,11 @@ public void greet(String name) {
 private Greeting _greeting;
 ```
 
-The method above invokes a `Greeting` instance's `greet` method with its `name` parameter. `Greeting` is the OSGi service type that the Implementation module registers. The class must get a `Greeting` instance from the OSGi service registry.
+The method above invokes a `Greeting` instance's `greet` method with its `name` parameter. `Greeting` is the OSGi service type that the implementation module registers. The class must get a `Greeting` instance from the OSGi service registry.
 
 ### Annotate External Service References
 
-Getting an OSGi service requires creating a field of the service type and adding a [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to that field.
+Getting an OSGi service requires creating a field of that service type and adding a [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to the field.
 
 ```java
 @Reference
@@ -174,3 +174,4 @@ Now that you're familiar with creating and using OSGi services, you can explore 
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)
 * [Semantic Versionings](./semantic-versioning.md)
+* [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
