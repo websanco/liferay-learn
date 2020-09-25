@@ -1,31 +1,31 @@
 # APIs as OSGi Services
 
-After you've learned what a [module](./module-projects.md) is and how to deploy one, you can use modules to define and implement APIs. In Liferay, APIs are implemented as [OSGi services](https://enroute.osgi.org/). An OSGi service is a capability defined by a Java interface and implemented by a concrete Java class. The OSGi runtime framework dynamically registers services for other classes to use.
+After you've learned what a [module](./module-projects.md) is and how to deploy one, you can use modules to define APIS and implement them. Liferay APIs are [OSGi services](https://enroute.osgi.org/): capabilities defined by Java interfaces and implemented by concrete Java classes.
 
-Liferay uses a component-based framework called [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) to represent APIs and implementations as components. DS annotations simplify defining components and their relationships.
+Liferay represents APIs, implementations, and clients as components. The [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) framework facilitates defining each component and their relationships.
 
-You can separate API and Implementation concerns into different modules.
+You can separate API and implementation concerns into different modules.
 
 * **API** modules *define* capabilities using Java interfaces. The modules export the interface packages.
 * **Implementation** modules *provide* capabilities using concrete Java classes.
 
-Here you'll deploy an API module and Implementation module that create a simple greeting service.
+Here you'll deploy an API module and implementation module that create a simple greeting OSGi service.
 
 ## Overview
 
-1. [Deploy an Example](#deploy-an-example)
-1. [Walk Through the Example](#walk-through-the-example)
+1. [Deploy a Simple API and Implementation](#deploy-a-simple-api-and-implementation)
+1. [How to Create an API and Implementation](#how-to-create-an-api-and-implementation)
 1. [Conclusion](#conclusion)
 1. [Additional Information](#additional-information)
 
-## Deploy an Example
+## Deploy a Simple API and Implementation
 
 Start up the example modules.
 
 1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images//dxp-docker-container-basics.md).
 
     ```bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip `liferay-p9g2.zip`.
@@ -89,7 +89,7 @@ Start up the example modules.
     1151|Active     |   15|Acme P9G2 Greeting Implementation (1.0.0)|1.0.0
     ```
 
-1. List the Implementation module service capabilities by executing the following command, replacing the number with your module's ID.
+1. List the implementation module service capabilities by executing the following command, replacing the number with your module's ID.
 
     ```bash
     g! inspect capability service 1195
@@ -112,27 +112,30 @@ The module provides one service: `com.acme.p9g2.Greeting`. The `component.name` 
 
 You verified that the `P9G2Greeting` component provides the `Greeting` service. Learn how the modules produce this service.
 
-## Walk Through the Example
+## How to Create an API and Implementation
 
-The API module defines a greeting capability and the Implementation module provides the greeting capability as an OSGi service.
+The example API module defines a greeting capability and the implementation module provides the greeting capability as an OSGi service. Start with creating the API.
 
-* [Annotate the Java Interface](#annotate-the-java-interface)
+* [Create the API](#create-the-api)
+* [Create the Implementation](#create-the-implementation)
+
+## Create the API
+
+An API is created in just two steps:
+
+* [Define the Capability](#define-the-capability)
 * [Export the Interface Package](#export-the-interface-package)
-* [Annotate the Implementation Class](#annotate-the-implementation-class)
-* [Implement the `greet` Method](#implement-the-greet-method)
-* [Add a Dependency on the API](#add-a-dependency-on-the-api)
-* [Examine the Implementation Module JAR](#examine-the-implementation-module-jar)
 
-### Annotate the Java interface
+### Define the Capability
 
-The API module `Greeting` class is a Java interface.
+The example API module `Greeting` class is a Java interface.
 
 ```java
 @ProviderType
 public interface Greeting {
 ```
 
-The [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation registers `Greeting` as a type that modules can provide by implementing the interface.
+The [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation registers `Greeting` as a type that that can be implemented and consumed.
 
 The `greet` method takes a name `String` as input.
 
@@ -144,7 +147,7 @@ The `Greeting` capability is defined.
 
 ### Export the Interface Package
 
-The API module `bnd.bnd` file describes the module and exports the `com.acme.p9g2` package.
+The API module `bnd.bnd` file describes the module and exports the `com.acme.p9g2` interface package.
 
 ```properties
 Bundle-Name: Acme P9G2 Greeting API
@@ -155,9 +158,20 @@ Export-Package: com.acme.p9g2
 
 The [package export](./exporting-packages.md) shares the `Greeting` interface with other modules.
 
-### Annotate the Implementation Class
+The `Greeting` service type is available to implement and use.
 
-The Implementation module `P9G2Greeting` class implements the `Greeting` interface:
+## Create the Implementation
+
+The example implementation module contains a concrete Java class that provides the `Greeting` capability. Here are the implementation steps.
+
+* [Annotate the Implementation Class](#annotate-the-implementation-class)
+* [Implement the Interface](#implement-the-interface)
+* [Add a Dependency on the API](#add-a-dependency-on-the-api)
+* [Examine the Module JAR](#examine-the-module-jar)
+
+#### Add the Component Annotation
+
+The `P9G2Greeting` class implements the `Greeting` interface:
 
 ```java
 package com.acme.p9g2.internal;
@@ -170,9 +184,11 @@ import org.osgi.service.component.annotations.Component;
 public class P9G2Greeting implements Greeting {
 ```
 
-The `@Component` annotation and its `service = Greeting.class` attribute make the `P9G2Greeting` class a `Greeting` service provider.
+The `@Component` annotation and its `service = Greeting.class` attribute make the `P9G2Greeting` class a `Greeting` OSGi service provider.
 
-### Implement the `greet` Method
+#### Implement the Interface
+
+The `Greeting` interface defines a method `greet(String)` with a `void` return value.
 
 ```java
 @Override
@@ -181,9 +197,11 @@ public void greet(String name) {
 }
 ```
 
-### Add a Dependency on the API
+The example `greet` method prints an enthusiastic greeting using the given name.
 
-Here is the Implementation module `build.Gradle` file.
+#### Add a Dependency on the API
+
+Here is the implementation module `build.Gradle` file.
 
 ```groovy
 dependencies {
@@ -192,11 +210,11 @@ dependencies {
 }
 ```
 
-It includes a compile-time dependency on the `p9g2-api` API module project.
+It includes a compile-time dependency on the `p9g2-api` API module project because it requires the `Greeting` class from the API's `com.acme.p9g2` module.
 
-### Examine the Implementation module JAR
+#### Examine the Module JAR
 
-When you build the Implementation module JAR, Bnd generates the `[JAR]/META-INF/MANIFEST.MF` file.
+When you build the implementation module JAR, Bnd generates the `[JAR]/META-INF/MANIFEST.MF` file.
 
 ```properties
 Manifest-Version: 1.0
@@ -245,7 +263,7 @@ When you deploy the module, the Service Component Runtime registered the `P9G2Gr
 
 ## Conclusion
 
-You have defined a service capability called `Greeting` and provided it to the runtime framework in another module's service component called `P9G2Greeting`. The `Greeting` service is in place. How do clients access the service and use it? That's demonstrated in [Using an OSGi Service](./using-an-osgi-service.md).
+You have *defined* a service capability called `Greeting` and *provided* it in a service component called `P9G2Greeting`. The `Greeting` service is in place. How do clients access the service and use it? That's demonstrated in [Using an OSGi Service](./using-an-osgi-service.md).
 
 ## Additional Information
 
