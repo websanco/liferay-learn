@@ -2,14 +2,18 @@
 
 After you've learned what a [module](./module-projects.md) is and how to deploy one, you can use modules to define APIS and implement them. Liferay APIs are [OSGi services](https://enroute.osgi.org/): capabilities defined by Java interfaces and implemented by concrete Java classes.
 
-Liferay represents APIs, implementations, and clients as components. The [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) framework facilitates defining each component and their relationships.
+Liferay represents APIs, implementations, and clients as components. The [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) framework provides annotations that facilitate defining components and their relationships.
+
+* `@ProviderType` defines an interface as a capability that other components can provide (implement) or consume.
+* `@Component` declares the class as providing a particular capability.
+* `@Reference` wires a class member (typically a field) to a provided capability.
 
 You can separate API and implementation concerns into different modules.
 
 * **API** modules *define* capabilities using Java interfaces. The modules export the interface packages.
 * **Implementation** modules *provide* capabilities using concrete Java classes.
 
-Here you'll deploy an API module and implementation module that create a simple greeting OSGi service.
+Here you'll deploy an API module and implementation module that create a simple greeting OSGi service. In the next tutorial, you'll create the client--the part that you can invoke in the UI.
 
 ## Overview
 
