@@ -9526,7 +9526,15 @@ header {
     width: 45%; }
     @media (max-width: 991.98px) {
       .landing-page .section-card {
-        margin-left: 0; } }
+        margin-left: 0;
+        margin-right: 0; }
+        .landing-page .section-card:nth-child(odd) {
+          margin-left: 0.5rem;
+          margin-right: 1.25rem; }
+        .landing-page .section-card .autofit-col-expand {
+          margin-top: 1rem; }
+        .landing-page .section-card .autofit-row {
+          display: block; } }
     .landing-page .section-card:hover {
       border-bottom: 3px solid #0B5FFF;
       box-shadow: 0 6px 11px 0 rgba(9, 16, 29, 0.09);
@@ -9551,6 +9559,7 @@ header {
     padding-inline-start: 0; }
 
 .landing-page-container .article-body {
+  flex: initial;
   max-width: 100%; }
 
 .landing-page-container .toc-container {
