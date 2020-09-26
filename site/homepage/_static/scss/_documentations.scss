@@ -4,10 +4,7 @@
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: 5rem;
-			margin-left: 8.33333%;
-			padding: $spacing-default 15px;
-			position: relative;
-			width: 100%;
+			padding: $spacing-default 8.33333%;
 		}
 	}
 
@@ -216,14 +213,5 @@
 		position: fixed;
 		margin-top: $spacing-default;
 		max-width: 12%;
-	}
-
-	.toc-container {
-		flex: 0 0 16.66667%;
-		max-width: 16.66667%;
-		padding-right: 15px;
-		padding-left: 15px;
-		position: relative;
-		width: 100%;
 	}
 }

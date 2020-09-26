@@ -133,16 +133,18 @@
                 </div>
             </div>
 
-            <div class="col-12 doc-content row" id="docContent">
-                <div class="article-body col-12 col-md-8">
-                    {% block document %}
-                    {{ body }}
-                    {% endblock %}
-                    {% include "help-center-footer.html" %}
-                </div>
+            <div class="col-12 doc-content" id="docContent">
+                <div class="row">
+                     <div class="article-body col-12 col-md-8">
+                        {% block document %}
+                        {{ body }}
+                        {% endblock %}
+                        {% include "help-center-footer.html" %}
+                    </div>
 
-                <div class="col-md-4 d-none d-sm-block toc-container">
-                    <ul class="nav nav-stacked toc" id="articleTOC"></ul>
+                    <div class="col-md-4 d-none d-sm-block toc-container">
+                        <ul class="nav nav-stacked toc" id="articleTOC"></ul>
+                    </div>
                 </div>
             </div>
         </div>

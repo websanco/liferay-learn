@@ -8974,10 +8974,7 @@ a.copybtn {
   @media (min-width: 768px) {
     .documentations .article-body {
       margin-bottom: 5rem;
-      margin-left: 8.33333%;
-      padding: 1.5rem 15px;
-      position: relative;
-      width: 100%; } }
+      padding: 1.5rem 8.33333%; } }
 
 .documentations .doc-body,
 .documentations .doc-nav-wrapper,
@@ -9129,14 +9126,6 @@ a.copybtn {
   position: fixed;
   margin-top: 1.5rem;
   max-width: 12%; }
-
-.documentations .toc-container {
-  flex: 0 0 16.66667%;
-  max-width: 16.66667%;
-  padding-right: 15px;
-  padding-left: 15px;
-  position: relative;
-  width: 100%; }
 
 h1 {
   font-size: 2rem; }
@@ -9562,7 +9551,6 @@ header {
     padding-inline-start: 0; }
 
 .landing-page-container .article-body {
-  flex: initial;
   max-width: 100%; }
 
 .landing-page-container .toc-container {
