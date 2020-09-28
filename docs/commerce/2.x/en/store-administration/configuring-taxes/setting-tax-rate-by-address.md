@@ -6,6 +6,39 @@ Calculating taxes by address sets rates for geographical areas independently. Yo
 
 To set a tax rate by address:
 
+1. Go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Channels_.
+1. Click on the channel you are configuring a tax rate for. If you used an accelerator like Minium, a channel is created by default.
+1. Scroll down to _Tax Calculations_.
+
+    ![Activate tax calculations by address](./setting-tax-rate-by-address/images/03.png)
+
+1. Click _Edit_ next to By Address.
+1. Slide the _Percentage_ and _Active_ toggles to _YES_.
+1. Click _Save_.
+
+Next, set the Tax Rate by Category and by Address:
+
+1. Click _Tax Rate Settings_.
+1. Select whether the taxed address is the Billing Address or the Shipping Address from the _Apply Tax to_ dropdown menu.
+1. Click the Add (![Add icon](../../images/icon-add.png)) button to add a Tax Category.
+1. Select the Tax Category (for example, _Holiday Special_).
+1. Enter the following:
+
+    * **Rate**: Your tax rate
+    * **Country**: Applicable country
+    * **Region**: Leave blank to apply to the whole country
+    * **Zip**: Leave blank to apply to the whole country
+
+    ![Activate tax calculations by address](./setting-tax-rate-by-address/images/04.png)
+
+1. Click _Submit_.
+
+Address specific tax rates are now configured.
+
+![Activate tax calculations by address](./setting-tax-rate-by-address/images/05.png)
+
+## Commerce 2.1 and Below
+
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_.
 1. Click on the channel you are configuring a tax rate for. If you used an accelerator like Minium, a channel is created by default.
 1. Scroll down to _Tax Calculations_.

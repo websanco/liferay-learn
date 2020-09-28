@@ -4,6 +4,18 @@ Tax Categories are containers for one or more tax calculations in your store. Ta
 
 To create a new tax category:
 
+1. Go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Tax Categories_.
+1. Click the (![Add icon](../../images/icon-add.png)) icon.
+1. Enter the following:
+    * **Name**: Holiday Special
+    * **Description**: Taxes for holidays
+
+1. Click _Save_ when finished.
+
+A new tax category has been created.
+
+## Commerce 2.1 and Below
+
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Settings_.
 1. Click the _Tax Categories_ tab.
 
