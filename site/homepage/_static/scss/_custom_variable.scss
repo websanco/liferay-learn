@@ -3,52 +3,64 @@
 
 $grid-gutter-width: 30px !default; // 30px is the original from bootstrap instead of the 24px defined in Atlas. This variable is needed to be defined earlier for alerts.
 
-$primary: #0B5FFF !default;
-$primary-d1: darken($primary, 5.10) !default; // #0053F0 
+$primary: #0b5fff !default;
+$primary-d1: darken($primary, 5.1) !default; // #0053F0
 $primary-d2: darken($primary, 10) !default; // #004AD7
 $primary-l1: lighten($primary, 22.94) !default; // #80ACFF
 $primary-l2: lighten($primary, 32.94) !default; // #B3CDFF
-$primary-l3: lighten($primary, 44.90) !default; // #F0F5FF
+$primary-l3: lighten($primary, 44.9) !default; // #F0F5FF
 
-$secondary: #6B6C7E !default;
+$secondary: #6b6c7e !default;
 $secondary-d1: darken(saturate($secondary, 4.82), 20) !default;
 $secondary-d2: darken(saturate($secondary, 5.36), 23.92) !default;
-$secondary-l1: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default; // #A7A9BC
-$secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default; // #CDCED9
-$secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default; // #E7E7ED
+$secondary-l1: lighten(
+	saturate(adjust-hue($secondary, -3), 5.39),
+	23.92
+) !default; // #A7A9BC
+$secondary-l2: lighten(
+	saturate(adjust-hue($secondary, -2), 5.48),
+	37.06
+) !default; // #CDCED9
+$secondary-l3: lighten(
+	saturate(adjust-hue($secondary, 3), 6.13),
+	46.08
+) !default; // #E7E7ED
 
-$info: #2E5AAC !default; 
-$info-d1: darken($info, 5.10) !default; // #294F98
+$info: #2e5aac !default;
+$info-d1: darken($info, 5.1) !default; // #294F98
 $info-d2: darken($info, 10) !default; // #234584
 $info-l1: lighten(saturate($info, 0.59), 28.04) !default; // #89A7E0
 $info-l2: lighten(desaturate($info, 3.25), 52.94) !default; // #EEF2FA
 
-$success: #287D3C !default;
-$success-d1: darken($success, 5.10) !default; // #226A33
+$success: #287d3c !default;
+$success-d1: darken($success, 5.1) !default; // #226A33
 $success-d2: darken($success, 10) !default; // #1C5629
-$success-l1: lighten(desaturate($success, 0.14), 24.90) !default; // #5ACA75
+$success-l1: lighten(desaturate($success, 0.14), 24.9) !default; // #5ACA75
 $success-l2: lighten(desaturate($success, 1.52), 62.94) !default; // #EDF9F0
 
-$warning: #B95000 !default;
-$warning-d1: darken($warning, 5.10) !default; // #9F4500
+$warning: #b95000 !default;
+$warning-d1: darken($warning, 5.1) !default; // #9F4500
 $warning-d2: darken($warning, 10) !default; // #863A00
-$warning-l1: lighten($warning, 24.90) !default; // #FF8F39
+$warning-l1: lighten($warning, 24.9) !default; // #FF8F39
 $warning-l2: lighten($warning, 60) !default; // #FFF4EC
 
-$danger: #DA1414 !default;
-$danger-d1: darken($danger, 5.10) !default; // #C31212
+$danger: #da1414 !default;
+$danger-d1: darken($danger, 5.1) !default; // #C31212
 $danger-d2: darken($danger, 10) !default; // #AB1010
 $danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default; // #F48989
 $danger-l2: lighten(saturate($danger, 5.04), 50) !default; // #FEEFEF
 
-$light: #F1F2F5 !default;
-$light-d1: darken($light, 5.10) !default; // #E2E4EA
+$light: #f1f2f5 !default;
+$light-d1: darken($light, 5.1) !default; // #E2E4EA
 $light-d2: darken($light, 10) !default; // #D3D6E0
-$light-l1: lighten(desaturate(adjust-hue($light, -15), 2.38), 1.96) !default; // #F7F8F9
+$light-l1: lighten(
+	desaturate(adjust-hue($light, -15), 2.38),
+	1.96
+) !default; // #F7F8F9
 $light-l2: lighten(desaturate(adjust-hue($light, -225), 16.67), 4.71) !default;
 
 $dark: #272833 !default;
-$dark-d1: darken($dark, 5.10) !default; // #1C1C24
+$dark-d1: darken($dark, 5.1) !default; // #1C1C24
 $dark-d2: darken($dark, 10) !default; // #111116
 $dark-l1: lighten(saturate($dark, 0.18), 4.12) !default; // #30313F
 $dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default; // #393A4A
@@ -58,18 +70,18 @@ $link-hover-color: $primary-d2 !default;
 
 // Site Color Variables
 
-$alert: #D33A2F !default;
-$background-color: #F4F6F9 !default;
+$alert: #d33a2f !default;
+$background-color: #f4f6f9 !default;
 $black: #000 !default;
 $brand-secondary: #184496 !default;
 $default-color: $dark-l1 !default;
-$filter-color: #EFF3FD !default; 
-$header-color: #09101D !default;
-$highlight-color: #C4D6F8 !default;
-$hr-color: #DADEE3 !default;
+$filter-color: #eff3fd !default;
+$header-color: #09101d !default;
+$highlight-color: #c4d6f8 !default;
+$hr-color: #dadee3 !default;
 $nav-color: $secondary !default;
-$pre-text-color: #F8FAFF !default;
-$white: #FFF !default;
+$pre-text-color: #f8faff !default;
+$white: #fff !default;
 
 $admonition-error: $danger !default;
 $admonition-error-bg: $danger-l2 !default;
@@ -80,14 +92,14 @@ $admonition-important-highlight: $info-l1 !default;
 $admonition-note: $success !default;
 $admonition-note-bg: $success-l2 !default;
 $admonition-note-highlight: $success-l1 !default;
-$admonition-tip: #0B7543 !default;
-$admonition-tip-bg: #EAFAF7 !default;
-$admonition-tip-highlight: #50D2A0 !default;
+$admonition-tip: #0b7543 !default;
+$admonition-tip-bg: #eafaf7 !default;
+$admonition-tip-highlight: #50d2a0 !default;
 $admonition-warning: $warning !default;
 $admonition-warning-bg: $warning-l2 !default;
 $admonition-warning-highlight: $warning-l1 !default;
 
-$card-sidebar: #42BFC2 !default;
+$card-sidebar: #42bfc2 !default;
 
 // Variable Overrides
 
@@ -131,7 +143,10 @@ $blockquote-color: $nav-color !default;
 $blockquote-font-weight: 300 !default;
 $blockquote-line-height: 30px !default;
 
-$breadcrumb-divider-svg-icon: clay-icon(angle-right, $breadcrumb-divider-color) !default;
+$breadcrumb-divider-svg-icon: clay-icon(
+	angle-right,
+	$breadcrumb-divider-color
+) !default;
 $breadcrumb-divider-svg-icon-height: 0.75em !default; // 12px
 $breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
 
@@ -141,7 +156,7 @@ $info-bar-height: 4.8125rem !default; // 77px
 $page-alert-height: 3.5rem !default; //56px
 
 $spacing-default: 1.5rem !default; // 24px
-$spacing-lg: 2rem; // 32px 
+$spacing-lg: 2rem; // 32px
 $spacing-md: 1rem !default; // 16px
 $spacing-sm: 0.75rem !default; // 12px
 $spacing-xs: 0.5rem !default; // 8px

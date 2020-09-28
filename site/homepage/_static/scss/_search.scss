@@ -7,7 +7,7 @@
 .search-form {
 	width: 232px;
 
-	input[type='text'] {
+	input[type="text"] {
 		background-color: rgba(255, 255, 255, 0.2);
 		background-image: clay-icon(search, $white);
 		background-position: right 0.7rem center;
@@ -82,7 +82,7 @@
 	.search-form {
 		width: 100%;
 
-		input[type='text'] {
+		input[type="text"] {
 			background-color: $white;
 			background-image: none;
 			border: 1px solid $hr-color;

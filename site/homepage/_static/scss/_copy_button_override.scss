@@ -11,7 +11,7 @@ a.copybtn {
 	width: 26px;
 
 	> img {
-		background-color: #373F52;
+		background-color: #373f52;
 		border-radius: 4px;
 		border: 1px dashed rgba(255, 255, 255, 0.2);
 		box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.55);
@@ -32,7 +32,7 @@ a.copybtn {
 		background-color: #272833;
 		border-radius: 4px;
 		box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.4);
-		color: #FFF;
+		color: #fff;
 		content: attr(data-tooltip);
 		font-size: 14px;
 		left: 50%;
