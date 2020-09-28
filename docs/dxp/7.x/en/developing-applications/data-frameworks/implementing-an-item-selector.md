@@ -174,7 +174,7 @@ This snippet of JavaScript first retrieves the "Select Role" button through its 
 Define the item selector dialog and its behavior inside the select button's on-click function. Use the `Liferay.Util.openSelectionModal` constructor to create the dialog:
 
 ```js
-var itemSelectorDialog = new ItemSelectorDialog.default(
+Liferay.Util.openSelectionModal(
     {
         onSelect: function (selectedItem) {
             // Use the selected item value(s) here.
@@ -191,7 +191,7 @@ The `onSelect` field must define a function to handle the value when it is click
 The value for the `eventName` field **must** match the String you used with the `RequestBackedPortletURLFactory` in the Java code (in this example, `selectItem`). You must also use the URL that you retrieved from the `request` object previously for the `url` field when defining the item selector dialog.
 
 ```tip::
-   If you want your item selector to support selecting multiple items, then you can enable multiple selection by adding this field to the ``ItemSelectorDialog``: ``multiple: true``.
+   If you want your item selector to support selecting multiple items, then you can enable multiple selection by adding this field to the ``openSelectionModal`` call: ``multiple: true``.
 ```
 ## Use the Item Selector Result
 
