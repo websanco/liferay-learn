@@ -15,13 +15,21 @@ To enable Guest Checkout:
 
 Guest Checkout has been enabled.
 
-## Adding the Guest Checkout Authentication Widget
+If you had used the Speedwell Accelerator to build your site, the Email Address field now appears during the checkout process.
+
+![The email address field appears in the initial checkout process.](./enabling-guest-checkout/images/03.png)
+
+<!--
+
+Otherwise, use the _Health Checks_ to build a site page with the _Guest Checkout Authentication_ widget.
 
 1. On the _General_ tab's _Health Checks_ section, click _Fix Issue_ next to _Guest Checkout Authentication_. This creates a new authentication page with an option to sign in as Guest.
 
     ![Add authentication page](./enabling-guest-checkout/images/02.png)
 
 1. Click _Save_ again when finished.
+
+-->
 
 ## Additional Information
 
