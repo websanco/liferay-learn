@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-12 p-0 page-alert">{% include "page-alert.html" %}</div>
 
-        <div class="col-12 col-md-2 doc-nav-wrapper">
+        <div class="col-12 col-md-2 doc-nav-wrapper mobile-nav-hide">
             <div class="doc-nav-wrapper-inner">
                 <div class="info-bar">
                     <label for="productDocumentationSelector">
@@ -68,6 +68,20 @@
                             </option>
                         </select>
                     </label>
+                </div>
+
+                <div class="d-md-none mobile-doc-nav-toggler" id="mobileDocNavToggler">{% trans %}Documentation Menu{% endtrans %}
+                    <button aria-label="Expand Documentation Menu" class="btn expand-btn" onclick="javascript:;" title="Expand Documentation Menu" type="button">
+                         <svg class="lexicon-icon lexicon-icon-product-menu" role="presentation">
+                            <use xlink:href="#product-menu" />
+                        </svg>
+                    </button>
+
+                    <button aria-label="Close Documentation Menu" class="btn collapse-btn" onclick="javascript:;" title="Close Documentation Menu" type="button">
+                         <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+                            <use xlink:href="#times" />
+                        </svg>
+                    </button>
                 </div>
 
                 <div class="doc-nav">
@@ -304,6 +318,21 @@
 
     if (activeNavL1) {
         checkDescendantLevel(1);
+    }
+
+    // Left Nav mobile interaction
+
+    const docNavWrapper = document.querySelector('.doc-nav-wrapper');
+    const mobileDocNavToggler = document.getElementById('mobileDocNavToggler');
+
+    if (docNavWrapper && mobileDocNavToggler) {
+        const togglers = mobileDocNavToggler.querySelectorAll('button');
+
+        togglers.forEach(toggler => 
+            toggler.addEventListener('click', () => {
+                docNavWrapper.classList.toggle('mobile-nav-hide');
+            })
+        );
     }
 </script>
 {% endblock %}

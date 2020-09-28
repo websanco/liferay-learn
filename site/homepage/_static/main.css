@@ -5560,22 +5560,22 @@ textarea.form-control {
   table.docutils td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6; }
+    border-top: 1px solid #ebeef2; }
   .table thead th, table.docutils thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6; }
+    border-bottom: 2px solid #ebeef2; }
   .table tbody + tbody, table.docutils tbody + tbody {
-    border-top: 2px solid #dee2e6; }
+    border-top: 2px solid #ebeef2; }
 
 .table-sm th,
 .table-sm td {
   padding: 0.3rem; }
 
 .table-bordered {
-  border: 1px solid #dee2e6; }
+  border: 1px solid #ebeef2; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #dee2e6; }
+    border: 1px solid #ebeef2; }
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
@@ -5748,7 +5748,7 @@ textarea.form-control {
 .table .thead-light th, table.docutils .thead-light th {
   color: #495057;
   background-color: #FFF;
-  border-color: #dee2e6; }
+  border-color: #ebeef2; }
 
 .table-dark {
   color: #fff;
@@ -8471,30 +8471,30 @@ table.docutils tbody .table-disabled:nth-of-type(odd) th {
     border-bottom-right-radius: 0.25rem; }
   .table-list th,
   .table-list td {
-    box-shadow: inset 0 0.0625rem #dee2e6, 0 0.0625rem #dee2e6;
+    box-shadow: inset 0 0.0625rem #ebeef2, 0 0.0625rem #ebeef2;
     padding-top: 0.8125rem; }
     .table-list th:first-child,
     .table-list td:first-child {
-      box-shadow: inset 0 0.0625rem #dee2e6, 0 0.0625rem #dee2e6, inset 0.0625rem 0 #dee2e6;
+      box-shadow: inset 0 0.0625rem #ebeef2, 0 0.0625rem #ebeef2, inset 0.0625rem 0 #ebeef2;
       padding-left: 0.8125rem;
       padding-top: 0.8125rem; }
     .table-list th:last-child,
     .table-list td:last-child {
-      box-shadow: inset 0 0.0625rem #dee2e6, inset -0.0625rem 0 #dee2e6, 0 0.0625rem #dee2e6;
+      box-shadow: inset 0 0.0625rem #ebeef2, inset -0.0625rem 0 #ebeef2, 0 0.0625rem #ebeef2;
       padding-right: 0.8125rem;
       padding-top: 0.8125rem; }
     .table-list th:only-child,
     .table-list td:only-child {
-      box-shadow: inset 0 0.0625rem #dee2e6, inset -0.0625rem 0 #dee2e6, 0 0.0625rem #dee2e6, inset 0.0625rem 0 #dee2e6;
+      box-shadow: inset 0 0.0625rem #ebeef2, inset -0.0625rem 0 #ebeef2, 0 0.0625rem #ebeef2, inset 0.0625rem 0 #ebeef2;
       padding-left: 0.8125rem;
       padding-right: 0.8125rem;
       padding-top: 0.8125rem; }
   .table-list .table-cell-start {
-    box-shadow: inset 0 0.0625rem #dee2e6, 0 0.0625rem #dee2e6, inset 0.0625rem 0 #dee2e6;
+    box-shadow: inset 0 0.0625rem #ebeef2, 0 0.0625rem #ebeef2, inset 0.0625rem 0 #ebeef2;
     padding-left: 0.8125rem;
     padding-top: 0.8125rem; }
   .table-list .table-cell-end {
-    box-shadow: inset 0 0.0625rem #dee2e6, inset -0.0625rem 0 #dee2e6, 0 0.0625rem #dee2e6;
+    box-shadow: inset 0 0.0625rem #ebeef2, inset -0.0625rem 0 #ebeef2, 0 0.0625rem #ebeef2;
     padding-right: 0.8125rem;
     padding-top: 0.8125rem; }
   .table-list thead td,
@@ -8512,12 +8512,12 @@ table.docutils tbody .table-disabled:nth-of-type(odd) th {
   border-width: 0; }
   .table-list.table-bordered th,
   .table-list.table-bordered td {
-    box-shadow: inset 0 0.0625rem #dee2e6, inset -0.0625rem 0 #dee2e6, 0 0.0625rem #dee2e6;
+    box-shadow: inset 0 0.0625rem #ebeef2, inset -0.0625rem 0 #ebeef2, 0 0.0625rem #ebeef2;
     padding-right: 0.8125rem;
     padding-top: 0.8125rem; }
     .table-list.table-bordered th:first-child,
     .table-list.table-bordered td:first-child {
-      box-shadow: inset 0 0.0625rem #dee2e6, inset -0.0625rem 0 #dee2e6, 0 0.0625rem #dee2e6, inset 0.0625rem 0 #dee2e6;
+      box-shadow: inset 0 0.0625rem #ebeef2, inset -0.0625rem 0 #ebeef2, 0 0.0625rem #ebeef2, inset 0.0625rem 0 #ebeef2;
       padding-left: 0.8125rem;
       padding-right: 0.8125rem;
       padding-top: 0.8125rem; }
@@ -9057,6 +9057,23 @@ a.copybtn {
     .documentations .doc-nav .toctree-l6 > a {
       padding: 0.5rem 2rem; }
 
+.documentations .doc-nav-wrapper.mobile-nav-hide .collapse-btn {
+  display: none; }
+
+.documentations .doc-nav-wrapper.mobile-nav-hide .expand-btn {
+  display: block; }
+
+@media (max-width: 767.98px) {
+  .documentations .doc-nav-wrapper.mobile-nav-hide .doc-nav {
+    display: none; } }
+
+.documentations .doc-nav-wrapper .collapse-btn,
+.documentations .doc-nav-wrapper .doc-nav {
+  display: block; }
+
+.documentations .doc-nav-wrapper .expand-btn {
+  display: none; }
+
 .documentations .doc-nav-wrapper-inner .doc-nav-footer {
   align-items: center;
   border-top: 1px solid #dadee3;
@@ -9115,6 +9132,16 @@ a.copybtn {
       position: fixed;
       width: calc(100% - 16.66667%);
       z-index: 1; } }
+
+.documentations .mobile-doc-nav-toggler {
+  align-items: center;
+  border-bottom: 1px solid #ebeef2;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem 0.5rem 1rem; }
+  .documentations .mobile-doc-nav-toggler button {
+    color: #0b5fff; }
 
 .documentations .nav-link {
   color: #30313f; }

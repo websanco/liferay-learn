@@ -115,6 +115,33 @@
 		}
 	}
 
+	.doc-nav-wrapper {
+		&.mobile-nav-hide {
+			.collapse-btn {
+				display: none;
+			}
+
+			.expand-btn {
+				display: block;
+			}
+
+			@include media-breakpoint-down(sm) {
+				.doc-nav {
+					display: none;
+				}
+			}
+		}
+
+		.collapse-btn,
+		.doc-nav {
+			display: block;
+		}
+
+		.expand-btn {
+			display: none;
+		}
+	}
+
 	.doc-nav-wrapper-inner {
 		.doc-nav-footer {
 			align-items: center;
@@ -197,6 +224,19 @@
 			position: fixed;
 			width: calc(100% - 16.66667%);
 			z-index: 1;
+		}
+	}
+
+	.mobile-doc-nav-toggler {
+		align-items: center;
+		border-bottom: 1px solid $border-color;
+		display: flex;
+		font-weight: $font-weight-semi-bold;
+		justify-content: space-between;
+		padding: $spacing-xs 0.25rem $spacing-xs $spacing-md;
+
+		button {
+			color: $primary;
 		}
 	}
 
