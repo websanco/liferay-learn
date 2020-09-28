@@ -1,8 +1,8 @@
 {
 	"dependencies": {
 		"clay-css": "^2.18.1",
-		"node-sass": "^4.13.1",
-		"prettier": "^1.18.2"
+		"node-sass": "^4.14.1",
+		"prettier": "^2.0.0"
 	},
 	"description": "Liferay Learn",
 	"license": "ISC",
