@@ -1,6 +1,10 @@
 # Enabling Commerce Products as Related Assets
 
-Web content creators can use Related Assets to connect other assets. In particular, users can link to Commerce Products. However, before Liferay Commerce Products are listed as [Related Assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) in a [Web Content article](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html), users have configure the Liferay DXP Instance then execute a reindex.
+Commerce Products can be connected to other assets in Liferay Commerce by using the [Related Assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) relationship.
+
+```note::
+   Performing a search reindex may be necessary for Commerce Products to appear as a Related Asset option when editing content.
+```
 
 ## Configure the Asset Browser to Search the Database
 
