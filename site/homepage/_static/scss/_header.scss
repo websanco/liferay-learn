@@ -29,8 +29,12 @@ header {
 	}
 
 	.company-logo {
-		margin-left: 1.125rem;
+		margin-left: $spacing-xs;
 		margin-right: $spacing-xs;
+
+		@include media-breakpoint-up(md) {
+			margin-left: 1.125rem;
+		}
 	}
 
 	.header-links {
@@ -41,6 +45,9 @@ header {
 	}
 
 	.mobile-menu-wrapper {
+		align-items: center;
+		display: flex;
+
 		&.menu-open {
 			.header-links {
 				display: block;

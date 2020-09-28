@@ -24,7 +24,7 @@ function initPageAlert() {
 
 			if (pageAlertContainer) {
 				window.addEventListener('scroll', () =>
-					setTimeout(function() {
+					setTimeout(function () {
 						if (window.scrollY <= ALERT_ELEMENT_HEIGHT) {
 							pageAlertContainer.classList.remove('d-none');
 						} else {
@@ -39,7 +39,7 @@ function initPageAlert() {
 			}
 		}
 
-		$('#' + ALERT_ELEMENT_ID).on('closed.bs.alert', function() {
+		$('#' + ALERT_ELEMENT_ID).on('closed.bs.alert', function () {
 			localStorage.setItem(ALERT_LOCAL_STORAGE_ID, 'closed');
 
 			document.body.classList.remove('page-alert-open');
