@@ -1,0 +1,10 @@
+*.py
+*.rst
+**/*.css
+**/img/
+
+# Ignore third party js:
+**/js/*.min.js
+**/js/modified-search-tools.js
+
+_template/
