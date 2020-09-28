@@ -45,7 +45,7 @@ If the order has no shippable items (for example, a service contract or online p
 
 An order is marked as Completed when the customer has received all the items purchased. (For physical stock, this is usually when the items have been delivered to the customer.) An order is also marked as Completed when it is cancelled. At this point, a Completed order cannot not return to a previous status.
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 ### Accepting an Order
 

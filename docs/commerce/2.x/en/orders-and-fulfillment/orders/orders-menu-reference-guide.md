@@ -4,7 +4,7 @@ Orders can be [viewed and managed](./processing-an-order.md) by an administrator
 
 ![Navigate to the Orders menu in the Global Applications.](./orders-menu-reference-guide/images/11.png)
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 To access the _Orders_ menu, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_.
 

@@ -44,7 +44,7 @@ When delivery has been confirmed, the shipment process is marked delivered and t
 
 See the [Shipments Management Reference Guide](./shipments-management-reference-guide.md) to learn more about the specific features and fields.
 
-## Liferay Commerce 2.1
+## Liferay Commerce 2.1 and Below
 
 Commerce 2.1 is virtually identically to the latest version, except that you access the _Orders_ menu via the _Control Panel_. Select an order that is ready to be shipped and click the _Create Shipment_ button.
 

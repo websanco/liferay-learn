@@ -83,7 +83,7 @@ To configure subscriptions:
 
 1. Click the _Save_ button to apply the changes.
 
-## Commerce 2.1
+## Commerce 2.1 and Below
 
 Commerce Orders and Subscriptions are managed in the _Control Panel._
 
