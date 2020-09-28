@@ -8,18 +8,32 @@
 	"license": "ISC",
 	"name": "liferay-learn",
 	"prettier": {
+		"arrowParens": "avoid",
 		"bracketSpacing": false,
 		"endOfLine": "lf",
 		"jsxSingleQuote": true,
+		"overrides": [
+			{
+				"files": [
+					"**/*.css",
+					"**/*.scss",
+					"**/*.html"
+				],
+				"options": {
+					"singleQuote": false
+				}
+			}
+		],
 		"singleQuote": true,
 		"tabWidth": 4,
 		"useTabs": true
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm run build-css && npm run propagate-img && npm run propagate-js && npm run propagate-template",
+		"build": "npm run format && npm run build-css && npm run propagate-img && npm run propagate-js && npm run propagate-template",
 		"build-css": "node-sass --include-path node_modules/clay-css/src/scss _static/scss/main.scss _static/main.css && cp _static/main.css ../docs/_static",
 		"css:watch": "node-sass -w --include-path node_modules/clay-css/src/scss _static/scss/main.scss _static/main.css",
+		"format": "prettier --write .",
 		"propagate-img": "cp _static/img/* ../docs/_static/img",
 		"propagate-js": "cp _static/js/* ../docs/_static/js",
 		"propagate-template": "cp _template/* ../docs/_template"
