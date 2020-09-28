@@ -1,5 +1,7 @@
 # Enabling Guest Checkout
 
+> Commerce 2.1 and Below
+
 Users can allow guests to submit orders without first having to sign in. The Guest Checkout function can be enabled or disabled for each [Channel](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md) (if there are more than one channel on the Commerce instance).
 
 To enable Guest Checkout:
@@ -11,15 +13,15 @@ To enable Guest Checkout:
 
     ![Enable Guest Checkout](./enabling-guest-checkout/images/01.png)
 
-## Adding an Optional Authentication Widget
+Guest Checkout has been enabled.
+
+## Adding the Guest Checkout Authentication Widget
 
 1. On the _General_ tab's _Health Checks_ section, click _Fix Issue_ next to _Guest Checkout Authentication_. This creates a new authentication page with an option to sign in as Guest.
 
     ![Add authentication page](./enabling-guest-checkout/images/02.png)
 
 1. Click _Save_ again when finished.
-
-Guest Checkout has been enabled.
 
 ## Additional Information
 
