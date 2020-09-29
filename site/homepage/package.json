@@ -31,7 +31,6 @@
 	"scripts": {
 		"build": "npm run format && npm run build-css && npm run propagate-img && npm run propagate-js && npm run propagate-template",
 		"build-css": "node-sass --include-path node_modules/clay-css/src/scss _static/scss/main.scss _static/main.css && npm run minify-css && cp _static/main.min.css ../docs/_static",
-		"css:watch": "node-sass -w --include-path node_modules/clay-css/src/scss _static/scss/main.scss _static/main.css",
 		"format": "liferay-npm-scripts fix",
 		"format-check": "yarn liferay-npm-scripts check",
 		"minify-css": "./node_modules/.bin/cleancss -O1 specialComments:0 -o _static/main.min.css _static/main.css",
