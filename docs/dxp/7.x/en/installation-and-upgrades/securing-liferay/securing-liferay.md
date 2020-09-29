@@ -1,4 +1,4 @@
-# Introduction to Securing Liferay
+# Securing Liferay
 
 Liferay DXP is built with security in mind. This includes mitigation of common security vulnerabilities and exploits like those described by the [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10) and the [CWE/SANS Top 25](https://www.sans.org/top25-software-errors/).
 
@@ -8,7 +8,7 @@ There are several aspects of securing a Liferay installation---including, but no
    For example, Liferay DXP relies on the application server for sanitizing CRLF in HTTP headers. You must ensure this is configured properly on the application server. Skipping this configuration may result in security verification products, like Veracode, flagging false positives in security reports.
 ```
 
-Here you'll learn the basic elements to secure Liferay DXP itself. This includes configuring how users authenticate to your Liferay DXP installation, authorizing users with permissions, configuring secure access to Liferay DXP Web Services, and fine-tuning security features on an as-needed basis.
+Here you'll learn the basic elements to secure Liferay DXP. This includes configuring how users authenticate to your Liferay DXP installation, authorizing users with permissions, configuring secure access to Liferay DXP Web Services, and fine-tuning security features on an as-needed basis.
 
 ```important::
    Customers are advised to deploy security patches as they are released. For community and CE installations, we recommend always using the latest community release, which contains all previous security patches.
@@ -16,9 +16,10 @@ Here you'll learn the basic elements to secure Liferay DXP itself. This includes
 
 ## Authentication
 
-Liferay DXP is flexible in how users may be authenticated to the system. By default, users log into Liferay DXP by using the _Sign In_ widget, which authenticates the user using the portal database. By default, guest users can use the Sign In widget to create accounts with default permissions before logging in. Nearly every element of the default authentication experience can be changed by an administrator. For example,
+Liferay DXP authentication is flexible. By default, users log into Liferay DXP by using the _Sign In_ widget, which uses the database to authenticate the user. By default, guests can use the Sign In widget to create accounts with default permissions. Nearly every element of the default authentication experience can be changed by an administrator. For example,
 
-* Liferay can be [integrated with an SSO to manage](./configuring-sso/README.md) authentication.
+* You can configure [Multi-Factor authentication](./multi-factor-authentication/using-multi-factor-authentication.md).
+* You can [use an SSO to manage](./configuring-sso/README.md) authentication.
 * Liferay can also be [integrated with LDAP](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to validate users instead of using the portal database.
 * Guest account creation can be [turned off](./authentication-basics.md#disabling-guest-account-creation).
 

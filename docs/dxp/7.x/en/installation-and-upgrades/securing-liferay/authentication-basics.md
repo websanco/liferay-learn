@@ -43,7 +43,7 @@ _Authentication Type_ can be configured through the Control Panel or a propertie
 1. Click on *Configuration* &rarr; *Instance Settings* &rarr; *Platform* &rarr; *User Authentication*
 1. Choose an option under the *How do users authenticate?* selector.
 
-    ![Figure 1: You can select from three types of authentication.](./authentication-basics/images/03.png)
+    ![You can select from three types of authentication.](./authentication-basics/images/03.png)
 
 ### Configuring Authentication Type Using Properties
 
@@ -67,7 +67,7 @@ To prevent guest users from creating new user accounts:
 1. Un-check *Allow strangers to create accounts?*.
 1. Click *Save*.
 
-    ![Figure 2: Guests can't create accounts if this box is unchecked.](./authentication-basics/images/04.png)
+    ![Guests can't create accounts if this box is unchecked.](./authentication-basics/images/04.png)
 
 ### Preventing Password Resets
 
@@ -83,7 +83,7 @@ Prevent bots from creating and logging into accounts by enabling CAPTCHA or reCA
 
 1. Navigate to the Control Panel &rarr; *Configuration* &rarr; *System Settings* &rarr; *Security Tools* &rarr; *CAPTCHA*.
 
-    ![The CAPTCHA configuration screen.](./authentication-basics/images/02.png)
+    ![CAPTCHA is enabled by default.](./authentication-basics/images/02.png)
 
     ```note::
        By default, *Create Account CAPTCHA* and *Send Password CAPTCHA* are enabled. If necessary, enable Message Boards CAPTCHA.
