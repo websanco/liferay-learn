@@ -13,7 +13,7 @@ Ready to get started configuring Multi-Factor Authentication? There are some pre
 
 ## Prerequisites
 
-Enabling multi-factor authentication implies enabling the default one-time password factor. The OTP factor requires a working mail configuration on your server, as it sends the one-time password to users via email. *If your server can't send email and you enable MFA, you will lock yourself and everybody else out of the system.* 
+Enabling Multi-Factor Authentication implies enabling the default one-time password factor. The OTP factor requires a working mail configuration on your server, as it sends the one-time password to users via email. *If your server can't send email and you enable MFA, you will lock yourself and everybody else out of the system.* 
 
 Another prerequisite is to communicate with your users before enabling MFA, to remind them to make sure the email addresses in their profiles are correct and up to date. With MFA enabled, they must be able to receive the one-time passwords to access the system. 
 
