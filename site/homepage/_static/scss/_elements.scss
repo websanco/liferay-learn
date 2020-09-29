@@ -88,7 +88,7 @@ blockquote {
 code,
 pre {
 	border-radius: $border-radius;
-	font-family: "Roboto Mono", SFMono-Regular, monospace;
+	font-family: 'Roboto Mono', SFMono-Regular, monospace;
 	font-size: $code-font-size;
 	line-height: $code-line-height;
 }
@@ -99,8 +99,8 @@ code {
 	padding: 0.125rem 0.25rem;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
 	vertical-align: middle;
 }
 
@@ -137,12 +137,12 @@ pre {
 	border-radius: $border-radius;
 	box-shadow: 0 6px 11px 0 rgba(9, 16, 29, 0.09);
 	display: none;
-	left: 0px;
+	left: 0;
 	list-style: none;
 	padding: 0.375rem 0;
 	position: absolute;
 	text-align: left;
-	top: 0px;
+	top: 0;
 	transform: translate3d(0, 3.125rem, 0);
 	z-index: 1;
 
