@@ -17,9 +17,6 @@ To learn more about the using Channels in Liferay Commerce, see: [Introduction t
 ## Configuring Product Filter Channels
 
 1. Click _Global Applications_ &rarr; _Commerce_ & _Products_.
-
-    ![Navigate to Products.](./configuring-product-visibility-using-channels/images/04.png)
-
 1. Click on a product.
 1. Click on the _Visibility_ tab.
 

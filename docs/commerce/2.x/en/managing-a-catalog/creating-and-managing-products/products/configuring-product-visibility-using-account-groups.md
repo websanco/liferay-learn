@@ -62,5 +62,5 @@ This product is now visible to only the accounts that are customer accounts of t
 
 ## Additional Information
 
-* [Configuring Product Visibility Using Channels](../channels/configuring-product-visibility-using-channels.md)
+* [Configuring Product Visibility Using Channels](../../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
 * [Creating a New Account Group](../../../account-management/creating-a-new-account-group.md)

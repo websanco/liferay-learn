@@ -52,7 +52,7 @@ Once a product has been created, users can configure its inventory rules. Rules 
 
 ## Visibility
 
-In order for products in a catalog to be visible, the catalog must be associated with a channel. Catalogs can be associated with multiple [channels](../channels/introduction-to-channels.md). Furthermore, users can advertise a product to specific [Account Groups](../../../account-management/creating-a-new-account-group.md).
+In order for products in a catalog to be visible, the catalog must be associated with a channel. Catalogs can be associated with multiple [channels](../../../starting-a-store/channels/introduction-to-channels.md). Furthermore, users can advertise a product to specific [Account Groups](../../../account-management/creating-a-new-account-group.md).
 
 ![Managing Product visibility.](./products-overview/images/08.png)
 

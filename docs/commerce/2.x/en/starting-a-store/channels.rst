@@ -9,5 +9,7 @@ Channels
    channels/configuring-product-visibility-using-channels.md
    channels/channels-reference-guide.md
 
-.. include:: /starting-a-store/channels/README.rst
-   :start-line: 2
+-  :doc:`/starting-a-store/channels/introduction-to-channels`
+-  :doc:`/starting-a-store/channels/managing-channels`
+-  :doc:`/starting-a-store/channels/configuring-product-visibility-using-channels`
+-  :doc:`/starting-a-store/channels/channels-reference-guide`

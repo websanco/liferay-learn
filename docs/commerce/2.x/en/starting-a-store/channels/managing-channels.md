@@ -7,12 +7,12 @@ By default, a channel is automatically created if using an accelerator (for exam
 ## Adding a New Channel
 
 1. Click _Global Applications_ &rarr; _Commerce_ &rarr; _Channels_.
-
-    ![Navigate to Channels.](./managing-channels/images/05.png)
-
-1. Click the (![Add icon](../../../images/icon-add.png)) button.
+1. Click the (![Add icon](../../images/icon-add.png)) button.
 1. Enter a name for the new channel.
 1. Select a currency to associate with the channel.
+
+    ![Navigate to Channels.](./managing-channels/images/01.png)
+
 1. In the _Type_ field, select _Site_.
 
     ![Adding a Channel](./managing-channels/images/02.png)
@@ -44,7 +44,7 @@ The channel is now associated with that store site. Users can always select a di
 Channels can be deleted, including those created by an site accelerator. Note that when deleting a channel, this does not delete the DXP site. To delete a channel:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.
-1. Click the (![3-dot icon](../../../images/icon-actions.png)) then _Delete_.
+1. Click the (![3-dot icon](../../images/icon-actions.png)) then _Delete_.
 
 The channel is now deleted.
 
@@ -55,7 +55,7 @@ The channel is now deleted.
 To add a new Channel, follow these steps:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.
-1. Click the (![Add icon](../../../images/icon-add.png)) button.
+1. Click the (![Add icon](../../images/icon-add.png)) button.
 1. Enter a name for the new channel.
 1. Select a currency to associate with the channel.
 1. In the _Type_ field, select _Site_.
@@ -75,7 +75,7 @@ At this point, the channel is not yet been associated with any store site.
 To add a new Channel, follow these steps:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Channels_.
-1. Click the (![Add icon](../../../images/icon-add.png)) button.
+1. Click the (![Add icon](../../images/icon-add.png)) button.
 1. Enter a name for the new channel.
 1. In the _Type_ field, select _Site_.
 1. Select a site to associate with the channel.

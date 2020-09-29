@@ -6,7 +6,7 @@ Liferay Commerce 3.0's configurations are reached through the _Global Applicatio
 
 Navigate to the _Global Applications_ menu &rarr; _Commerce_. Administrators can configure:
 
-* [Channels](../managing-a-catalog/creating-and-managing-products/channels/managing-channels.md)
+* [Channels](../starting-a-store/channels/managing-channels.md)
 * [Price Lists](../managing-a-catalog/managing-price/creating-a-price-list.md)
 * [Discounts](../promoting-products/introduction-to-discounts.md)
 * Promotions
@@ -33,7 +33,7 @@ Navigate to the _Control Panel_ → _Commerce_. Making changes to any of the fol
 
 ![Global Commerce Settings](./liferay-commerce-configuration-overview/images/01.png)
 
-* [Channels](../managing-a-catalog/creating-and-managing-products/channels/managing-channels.md)
+* [Channels](../starting-a-store/channels/managing-channels.md)
 * [Price Lists](../managing-a-catalog/managing-price/creating-a-price-list.md)
 * [Orders](../orders-and-fulfillment/orders/orders-menu-reference-guide.md)
 

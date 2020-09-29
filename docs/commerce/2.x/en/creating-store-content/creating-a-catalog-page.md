@@ -61,4 +61,4 @@ Once this option has been enabled, all the products in this catalog are displaye
 
 If there is more than one store site that is housed on the Liferay Commerce instance, the entire catalog becomes searchable on every store site.
 
-To scope product to specific sites, see [Configuring Product Visibility Using Channels](../managing-a-catalog/creating-and-managing-products/channels/configuring-product-visibility-using-channels.md).
+To scope product to specific sites, see [Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md).
