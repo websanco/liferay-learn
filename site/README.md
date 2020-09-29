@@ -1,18 +1,18 @@
 # Generating the Site
 
-The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `/sphinx/homepage/` directory and propagated to the `/sphinx/docs/` directory via the [build script](#build-resources). The final project is compiled into static html pages by the `build_site.sh` script.
+The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `/site/homepage/` directory and propagated to the `/site/docs/` directory via the [build script](#build-resources). The final project is compiled into static html pages by the `build_site.sh` script.
 
 ## Getting Started
 
 1. [Install node](https://nodejs.org/en/).
-2. Install all dependencies with `npm install` in the `sphinx/homepage/` directory.
+2. Install all dependencies with `npm install` in the `site/homepage/` directory.
 3. If you would like to take advantage of live update, install autobuild with `pip install sphinx-autobuild`.
 
 ## Build Resources
 
-To build `main.css` and propagate assets, run `npm run build` in the `/sphinx/homepage/` directory.
+To build `main.min.css` and propagate assets, run `npm run build` in the `/site/homepage/` directory.
 
-To leverage live update for theme changes, run `sphinx-autobuild ${path/to/sphinx/homepage/directory} build/output/homepage`. The output will be served on `http://127.0.0.1:8000/`.
+To leverage live update for theme changes, run `sphinx-autobuild ${path/to/site/homepage/directory} build/output/homepage`. The output will be served on `http://127.0.0.1:8000/`.
 
 ## Project Structure
 

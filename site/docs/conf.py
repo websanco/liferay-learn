@@ -26,7 +26,7 @@ html_context = {
 	"product_name": os.path.basename(product_path),
 	"product_version": os.path.basename(version_path)
 }
-html_css_files = ["main.css"]
+html_css_files = ["main.min.css"]
 html_favicon = "_static/img/favicon.ico"
 html_logo = "_static/img/liferay-waffle.svg"
 html_short_title = "Documentation"
