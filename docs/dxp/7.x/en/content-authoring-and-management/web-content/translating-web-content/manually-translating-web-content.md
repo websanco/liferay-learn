@@ -1,6 +1,6 @@
 # Manually Translating Web Content
 
-Liferay DXP integrates translation functionality with your web content, so you can create engaging, localized experiences for your global users. With the requisite/necessary permissions, Users can manually translate Site content to any <!--supported?--> language. You can also integrate the translation process with custom workflows to streamline the review and publication process for new translations.
+Liferay DXP integrates translation functionality with your web content, so you can create engaging, localized experiences for your global users. Users with the required permissions can manually translate Site content to any available language. You can also integrate the translation process with custom workflows to streamline the review and publication process for new translations.
 
 * [Managing Permissions for Translation](#managing-permissions-for-translation)
 * [Translating Web Content in DXP](#translating-web-content-in-dxp)
@@ -8,19 +8,19 @@ Liferay DXP integrates translation functionality with your web content, so you c
 
 ## Managing Permissions for Translation
 
-To manually translate web content, Users must have either *Update* permissions for the specific content, or *Translate* permissions for one or more languages.
+To manually translate web content, Users must have either Update permissions for the specific content, or Translate permissions for one or more languages.
 
 ### Assigning Update Permissions
 
-Update permissions are content specific and must be assigned individually. Users with *Update* permissions for web content can manually translate it into any <!--supported?--> language. They can also export web content for translation and import finished translations of the content.
+Update permissions are content specific and must be assigned individually. Users with *Update* permissions for web content can manually translate it into any available language. They can also export web content for translation and import finished translations of the content.
 
 Follow these steps to assign Update permissions for web content:
 
 1. Open the *Product* menu, and go to *Content & Data* &rarr; *Web Content*.
 
-1. Click on the *Actions* button ( ![Actions Button ](../../../images/icon-actions.png) ) for the content you want to configure, and select *Permissions*.
+1. Click on the *Actions* menu ( ![Actions Button ](../../../images/icon-actions.png) ) for the content you want to configure, and select *Permissions*.
 
-1. Use the checkboxes to assign Update Permissions to the desired User roles.
+1. Use the checkboxes to assign Update permissions to the desired User roles.
 
    Alternatively, you can assign permissions during content creation. Simply go to *Permissions* in the content Properties sidebar, and assign the desired permissions to specific User roles.
 
@@ -32,7 +32,7 @@ Follow these steps to assign Translate permissions for specific languages:
 
 1. Open the Control Panel, and go to *Users* &rarr; *Roles*.
 
-1. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) for the role you want to assign Translate permissions, and select *Edit*.
+1. Click on the *Actions* menu ( ![Actions button](../../../images/icon-actions.png) ) for the role you want to assign Translate permissions, and select *Edit*.
 
    Alternatively, you can create a new role by clicking on the Add button ( ![Add button](../../../images/icon-add.png) ).
 
@@ -42,7 +42,7 @@ Follow these steps to assign Translate permissions for specific languages:
 
    ![Assign the desired language permissions to the selected role.](./manually-translating-web-content/images/01.png)
 
-1. Click on *Save* at the bottom of the page.
+1. Click *Save* at the bottom of the page.
 
 Users with the configured role can now manually translate any web content into the specified languages.
 
@@ -52,7 +52,7 @@ Follow these steps to manually translate web content in DXP:
 
 1. Open the *Product* menu, and go to *Content & Data* &rarr; *Web Content*.
 
-1. Click on the *Actions* button ( ![Actions Button ](../../../images/icon-actions.png) ) for the content you want to translate, and select *Translate*.
+1. Click on the *Actions* menu ( ![Actions Button ](../../../images/icon-actions.png) ) for the content you want to translate, and select *Translate*.
 
    This redirects you to DXP's content translation interface, where you can view the content's original text alongside your translation. The left column displays the language you're translating from, while the right column provides editable fields you can use for your translation.
 
@@ -66,9 +66,9 @@ Follow these steps to manually translate web content in DXP:
 
 1. Enter your translation into the *Title*, *Description*, and *Content* fields.
 
-1. Click on *Publish* to create a new version of the web content or initiate a workflow, depending on your configuration.
+1. Click *Publish* to create a new version of the web content or initiate a workflow, depending on your configuration.
 
-   Alternatively, click on *Save as Draft* to save and publish your translation at a later time.
+   Alternatively, click *Save as Draft* to save and publish your translation at a later time.
 
 ## Integrating Translation with Custom Workflows
 
@@ -80,9 +80,9 @@ Follow these steps to enable a custom workflow for translation:
 
 1. Click on the workflow dropdown menu for *Translation*, and select the desired workflow.
 
-1. Click on *Save*.
+1. Click *Save*.
 
-![Click on the workflow dropdown menu for Translation, and select the desired workflow](./manually-translating-web-content/images/03.png)
+![Click on the workflow dropdown menu for Translation, and select the desired workflow.](./manually-translating-web-content/images/03.png)
 
 Once workflow is enabled, each published translation is listed as an individual task and must be approved before the web content is officially updated. Those reviewing translations are provided with a read-only, side-by-side preview of the content's original and translated texts.
 
