@@ -1,17 +1,17 @@
 name: Format
 on: [pull_request, push]
 jobs:
-  run-prettier:
-    container: node:13
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+    check-format:
+        container: node:13
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+                uses: actions/checkout@v2
 
-      - name: Install Dependencies
-        run: npm ci
-        working-directory: ./site/homepage
+            - name: Install Dependencies
+                run: npm ci
+                working-directory: ./site/homepage
 
-      - name: Check Format
-        run: npm run format-check
-        working-directory: ./site/homepage
+            - name: Check Format
+                run: npm run format-check
+                working-directory: ./site/homepage
