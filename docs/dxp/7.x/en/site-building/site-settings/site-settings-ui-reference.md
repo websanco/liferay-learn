@@ -1,6 +1,6 @@
 # Site Settings UI Reference
 
-To view a Site's settings, open the *Product Menu* and go to *Configuration* &rarr; *Settings*, where you 'll see the following tabs:
+To view a Site's settings, open the Site Menu and go to *Configuration* &rarr; *Settings*, where you'll see the following tabs:
 
 * [General](#general)
 * [Social](#social)
@@ -33,7 +33,7 @@ General settings range from core configuration, like a Site's Membership Type, t
 
 **Parent Site**: Designate a Site as a child Site by selecting its parent Site. See [Site Hierarchies](../building-sites/site-hierarchies.md) for more information.
 
-**Limit Membership to Parent Site Members**: Determine whether a child Site's membership is limited to members of its parent Site.
+**Limit Membership to Parent Site Members**: Determine whether a child Site's membership is limited to members of its parent Site. This option only appears for child Sites.
 
 ![In the Details section you can view and edit a site's name, description, status, and more.](./site-settings-ui-reference/images/02.png)
 
@@ -81,17 +81,17 @@ If you created your Site using a *Site Template*, it's displayed here, along wit
 
 ![You can enable or disable Open Graph, define image meta tags, and see an image preview.](./site-settings-ui-reference/images/08.png)
 
-### Asset Auto Tagging
-
-Here you can enable or disable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/web-content/auto_tagging.md) for more information. 
-
-![You can enable or disable asset auto tagging for a Site.](./site-settings-ui-reference/images/09.png)
-
 ### Sharing
 
 Here you can enable or disable document sharing between Site Users. When enabled, Users can share items with other users. See [Sharing Documents with Other Users](../../content-authoring-and-management/documents-and-media/publishing-and-sharing/managing-document-access/sharing-documents-with-other-users.md) for more information. 
 
 ![You can enable or disable document sharing between Site Users.](./site-settings-ui-reference/images/10.png)
+
+### Asset Auto Tagging
+
+Here you can enable or disable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/web-content/auto_tagging.md) for more information. 
+
+![You can enable or disable asset auto tagging for a Site.](./site-settings-ui-reference/images/09.png)
 
 ## Social
 
