@@ -13,5 +13,5 @@ jobs:
               working-directory: ./site/homepage
 
             - name: Check Format
-              run: npm run format-check
+              run: npm run format:check
               working-directory: ./site/homepage
