@@ -27,7 +27,8 @@ function initPageAlert() {
 					setTimeout(function () {
 						if (window.scrollY <= ALERT_ELEMENT_HEIGHT) {
 							pageAlertContainer.classList.remove('d-none');
-						} else {
+						}
+						else {
 							if (
 								!pageAlertContainer.classList.contains('d-none')
 							) {
