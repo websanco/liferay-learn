@@ -8,10 +8,8 @@ jobs:
 
             - name: Install Dependencies
               run: npm ci
-              working-directory: ./site/homepage
 
             - name: Check Format
               run: npm run format:check
-              working-directory: ./site/homepage
 name: Format
 on: [pull_request, push]
