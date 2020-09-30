@@ -13,13 +13,13 @@ Liferay Portal CE is the open source and community supported platform for buildi
 1. Get the Docker image.
 
     ```bash
-    docker pull [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker pull [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
     ```tip::
@@ -54,4 +54,4 @@ Continue our Getting Started walkthrough and learn about logging in for the firs
 
 Doing more than just checking things out? See the [Installing a Liferay-Tomcat Bundle](../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md) to learn more.
 
-Want to learn more about what you can build with Liferay DXP? Learn how to [Build Solutions on DXP](../building-solutions-on-dxp/README.md).
+Learn more about [using Docker images](../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
