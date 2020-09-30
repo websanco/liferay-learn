@@ -20,9 +20,16 @@ First, you must create a Collection:
     ```
 
 1. Access the site at `http://localhost:8080`; user name `test@liferay.com`; password `test`.
-1. Select the Site you wish to build.
-1. Open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. From this page you can manage your Page Fragments and Collections. See [Managing Page Fragments](../../displaying-content/using-fragments/managing-page-fragments.md) for more information on the available actions for Page Fragments.
-1. Click the (![Add Button](../../../images/icon-add-app.png)) and enter a name and optional description for the Collection.
+
+1. Go to the Site you wish to build.
+
+1. From the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. From this page you can manage your Page Fragments and Collections. See [Managing Page Fragments](../../displaying-content/using-fragments/managing-page-fragments.md) for more information on the available actions for Page Fragments.
+
+    ```note::
+       In Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* from the Product Menu to access the *Fragments* page.
+    ```
+
+1. Click the *Add* button (![Add Button](../../../images/icon-add-app.png)) and enter a name and optional description for the Collection.
 
 ![Collections help you organize Fragments.](./using-the-fragments-editor/images/01.png)
 
