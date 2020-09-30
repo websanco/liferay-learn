@@ -1,4 +1,4 @@
-const CHECK_AND_FIX_GLOBS = ['/**/*.scss'];
+const CHECK_AND_FIX_GLOBS = ['/**/*.scss', '/**/*.js'];
 
 module.exports = {
 	check: CHECK_AND_FIX_GLOBS,
