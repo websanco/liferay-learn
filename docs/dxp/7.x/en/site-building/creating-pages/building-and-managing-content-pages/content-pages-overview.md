@@ -64,7 +64,7 @@ Basic Components are small design elements that add functionality to the page: a
 
 #### Content Display
 
-You can display web content, a blog entry, or document by adding a Content Fragment from the *Content Display* panel. See [Using the Content Display Fragment](./using-fragments.md#using-the-content-fragment) for more information.
+You can display web content, a blog entry, or a document by adding a Content Fragment from the *Content Display* panel. See [Using the Content Display Fragment](./using-fragments.md#using-the-content-fragment) for more information.
 
 ![Use Content Display fragments to display existing web content.](./content-pages-overview/images/05.png)
 
