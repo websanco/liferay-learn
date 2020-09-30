@@ -2,7 +2,7 @@
 
 > Subscribers
 
-This article provides an overview to the Liferay Commerce Connector to PunchOut2Go and describes the various features.
+This article describes configuration terms for Liferay Commerce Connector to PunchOut2Go.
 
 | Term | Description |
 | --- | --- |

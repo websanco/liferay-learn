@@ -1,16 +1,15 @@
 # Liferay Commerce Connector to PunchOut2Go
 
-> Subscribers
+> Subscription Required
 
-Liferay Commerce offers the additional _Commerce Connector to PunchOut2Go_, which is a "mechanism which makes it possible for a buyer to access a supplier's website from the buyer's own procurement application" ([PunchOut2Go](https://www.punchout2go.com/frequently-asked-questions/)).
+The Liferay Commerce Connector to PunchOut2Go enables integration with a user's existing PunchOut2Go infrastructure.
 
 <!--![Punch Out Flow Diagram](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
-This connector is available for subscribers who have purchased the additional PunchOut2Go Connector and can be downloaded on [Help Center](http://customer.liferay.com/downloads).
-
 ## Deploy the PunchOut2Go Connector
 
-1. Download the _PunchOut2Go Connector_ `LPKG` into the `${liferay.home}/deploy` folder. See the [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) article to learn more.
+1. Download the connector from the [Liferay Help Center](http://customer.liferay.com/downloads).
+1. Copy the _PunchOut2Go Connector_ `LPKG` into the `${liferay.home}/deploy` folder. See the [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) article to learn more.
 1. Verify that the following message displays in the application server console:
 
     ```
@@ -18,8 +17,7 @@ This connector is available for subscribers who have purchased the additional Pu
     2020-07-24 22:10:01.926 INFO  [fileinstall-../../liferay-portal-7.1.10.1-sp1/osgi/marketplace][LPKGArtifactInstaller:209] The portal instance needs to be restarted to complete the installation of file:/../../liferay-portal-7.1.10.1-sp1/osgi/marketplace/Liferay%20Commerce%20Connector%20to%20PunchOut2Go%20-%20Impl.lpkg`
     ```
 
-1. Shut down the application server completely.
-1. Start the application server.
+1. Restart the application server.
 
 <!-- 1. Verify that the following message displays in the application server console:
 
@@ -28,24 +26,24 @@ This connector is available for subscribers who have purchased the additional Pu
     ```
 -->
 
-The connector has been deployed.
+The connector is now active.
 
 ## Configure the Connector
 
-The PunchOut2Go Connector is configured on a Commerce Channel. To learn more about Channels, see [Introduction to Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md).
+The PunchOut2Go Connector is configured on a per-[channel](../starting-a-store/channels/introduction-to-channels.md) basis.
 
 Users must have the URL of the store's catalog page; in this example: `http://localhost:8080/web/everest.com/catalog`.
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_.
 1. Click on the desired channel.
 1. Click the _Punch Out_ tab.
-1. Slide the toggle to _Enabled_.
+1. Switch the toggle to _Enabled_.
 1. Enter the Punch Out Start URL.
 1. Click _Save_ when finished.
 
 ### Enable Auto Login Punch Out Access Token
 
-Users must enable the Punch Out Access Token for the buyer's procurement system to gain access to the Liferay Commerce instance. Otherwise, the buyer's procurement will not be able to log into the Liferay Commerce instance. To enable the token:
+Users must enable the Punch Out Access Token for the buyer's procurement system to enable access to the Liferay Commerce instance. To enable the token:
 
 1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _System Settings_.
 1. Click _API Authentication_ under _Security_.
@@ -59,7 +57,7 @@ Users must enable the Punch Out Access Token for the buyer's procurement system 
 
 1. Click the _Update_ button.
 
-The Auto Login _Punch Out_ Token has been enabled and the buyer's procurement system can now log in.
+The Auto Login _Punch Out_ Token is enabled and the buyer's procurement system can now log in.
 
 ### Punch Out Access Token Provider Configuration
 
@@ -76,7 +74,7 @@ Once the Punch Out Access Token has been enabled, users can configure the Punch 
 
 1. Click _Save_ when finished.
 
-The Auto Login _Punch Out_ Token has been configured.
+The Auto Login _Punch Out_ Token is configured.
 
 ## Create a Punch Out Buyer Role
 
@@ -104,7 +102,7 @@ The Role has been created with the required minimum permissions. Assign this Rol
 
 ## Verify Redirect to Buyer's Procurement System
 
-Buyers who are using the connector to Liferay Commerce checkout items the same way. However, once, they click _Submit_, they are redirected back to their procurement system.
+The checkout process with the Connector to PunchOut2Go active occurs in the same way. When users click _Submit_ they are redirected to the appropriate procurement system.
 
 ![Punch out redirects once an order has been submitted.](./liferay-commerce-connector-to-punchout2go/images/06.jpg)
 
