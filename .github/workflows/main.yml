@@ -6,10 +6,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-            uses: actions/checkout@master
+              uses: actions/checkout@master
 
             - name: Install Dependencies
-            run: sudo apt-get install python3-venv python3-sphinx
+              run: sudo apt-get install python3-venv python3-sphinx
 
             - name: Build Site
-            run: cd site && ./build_site.sh prod
+              run: cd site && ./build_site.sh prod
