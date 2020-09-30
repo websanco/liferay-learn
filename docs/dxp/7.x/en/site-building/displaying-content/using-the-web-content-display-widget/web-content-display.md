@@ -6,15 +6,19 @@ Once you've created a [Web Content Article](../../../content-authoring-and-manag
 
 Follow these steps to add a Web Content Display widget to a page and configure it:
 
-1. [Add the Web Content Display widget to the page](../../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
+1. Enter Edit ( ![Edit icon](../../../images/icon-edit.png) ) mode (if you are using a content page), and then [add the Web Content Display widget to the page](../../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
 
     ![Add the Web Content Display app to a page to begin displaying your new web content article.](./web-content-display/images/01.png)
 
 1. [Open the Web Content Display widget's configuration menu](TODO:adding-widgets#configuration-menu).
+
 1. Click the *Select* button to select a piece of web content.
+
 1. Search for and click on the article that you want to display.
+
 1. [Configure the options](#web-content-display-configuration-options) you want to enable for the widget.
-1. Click *Save* to apply the changes, and close the configuration window.
+
+1. Click *Save* to apply the changes, and close the configuration window. If you are using a content page, then click *Publish* to publish the page with the widget.
 
 ## Web Content Display Configuration Options
 
@@ -39,10 +43,15 @@ All features are implemented as simple selector buttons so you can enable or dis
 
 By default, guests can't leave comments on web content. If you want to allow guests to comment on your web content article, follow these steps:
 
-1. Open the Product Menu and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
+1. Open the Applications Menu ( ![Applications Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Roles*.
+
 1. Select *Guest* &rarr; *Define Permissions*.
-1. From the left menu, select *Site Administration* &rarr; *Content & Data* &rarr; *Web Content*.
-1. Navigate down to the Web Content Article heading and select the *Add Discussion* checkbox. Click *Save*.
+
+1. From the left menu, select *Site and Asset Library Administration* &rarr; *Content & Data* &rarr; *Web Content*.
+
+1. Navigate down to the Web Content Article heading and check the *Add Discussion* checkbox.
+
+1. Click *Save*.
 
 Guests can now post comments on your web content article.
 
