@@ -11,7 +11,7 @@ Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), 
 
     ![Begin by adding your new Content Page.](building-content-pages/images/01.png)
 
-1. Select the *Blank* template or one of the exiting templates.
+1. Select the *Blank* template or one of the existing templates.
 1. In the *Add Page* dialog, type your page's *Name*.
 1. Alternatively, click the Actions Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
 
