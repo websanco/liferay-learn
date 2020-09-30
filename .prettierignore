@@ -1,6 +1,12 @@
-# Generated Files
-/site/build/**
+##
+## Generated Files
+##
 
-# Third Party
-/site/**/*.min.js
-/site/**/modified-search-tools.js
+	/site/build/**
+
+##
+## Third Party
+##
+
+	/site/**/*.min.js
+	/site/**/modified-search-tools.js
