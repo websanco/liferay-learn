@@ -12,7 +12,7 @@ A Site's membership type determines how freely users may join your site. There a
 
 To change your Site's membership type, follow these steps:
 
-1. Open the Product Menu and go to *Configuration* &rarr; *Settings* (previously *Site Settings*) &rarr; and scroll down to the *Membership Options* sub-heading under *Details*.
+1. From the Site Menu on the left side of the screen, go to *Configuration* &rarr; *Settings* (previously *Site Settings*) &rarr; and scroll down to the *Membership Options* sub-heading under *Details*.
 
     ![You can change the Site membership type from the Settings section of the Site Menu](./changing-site-membership-type/images/01.png)
 
