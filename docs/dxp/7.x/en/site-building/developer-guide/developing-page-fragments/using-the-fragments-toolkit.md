@@ -45,9 +45,13 @@ First, deploy an example to see what a Fragment Collection looks like:
     ? Group ID Liferay
     ```
 
-1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears in the Collection list.
+1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
 
     ![The Collection is available.](./using-the-fragments-toolkit/images/01.png)
+
+    ```note::
+       For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
+    ```
 
 Great! You successfully deployed a zipped Fragment Collection created with the Fragments Toolkit.
 
