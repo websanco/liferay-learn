@@ -24,13 +24,15 @@ The following site types are available:
 
 It is best practice to set a site's type as soon as you create it and avoid changing it in the future. In Commerce 2.1+, site types are managed on a per-channel basis.
 
-To set your site's type, navigate to _Commerce_ &rarr; _Channels_ and click the desired channel. Click the _Type_ tab and select the Type from the dropdown menu. Click _Save_ to apply the changes.
+To set your site's type, navigate to _Commerce_ &rarr; _Channels_ and click the desired channel. Click the _General_ tab and select the Type from the dropdown menu. Click _Save_ to apply the changes.
+
+![Select the Site Type from the Channels settings.](./sites-and-site-types/images/02.png)
 
 ### Commerce 2.0 and Below
 
 To set your site's type, navigate to _Site Administration_ → _Commerce_ → _Settings_ and select the Site Type tab. Select a type from the dropdown menu and click _Save_.
 
-![Site Type](./sites-and-site-types/images/01.png)
+![Select the Site Type from the Site Adminstration Settings.](./sites-and-site-types/images/01.png)
 
 Changing a site's type also changes which accounts appear in its Accounts widget. If an instance contains business accounts but a site's type is set to B2C, those accounts still exist in the database but do not appear in the Accounts widget and are inaccessible to users.
 
