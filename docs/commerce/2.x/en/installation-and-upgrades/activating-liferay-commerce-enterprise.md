@@ -1,8 +1,8 @@
 # Activating Liferay Commerce Enterprise
 
-> **Subscribers**
+> Subscription Required
 
-Liferay Commerce Enterprise is built on Liferay DXP and requires activation in order to fully function.
+Liferay Commerce Enterprise is built on Liferay DXP and requires activation to use.
 
 ## Deploying an Activation Key
 

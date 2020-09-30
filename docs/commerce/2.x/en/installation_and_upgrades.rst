@@ -5,13 +5,20 @@ Installation and Upgrades
    :maxdepth: 1
 
    installation-and-upgrades/installation-overview.md
-   installation-and-upgrades/using-the-liferay-commerce-docker-image.md
-   System Requirements<https://web.liferay.com/documents/14/21598941/Liferay+Commerce+2.0+Compatibility+Matrix/0ed97477-f5a7-40a6-b5ab-f00d5e01b75f>
-   installation-and-upgrades/deploying-liferay-commerce-to-an-existing-liferay-installation.md
-   installation-and-upgrades/using-the-liferay-commerce-tomcat-bundle.md
    installation-and-upgrades/activating-liferay-commerce-enterprise.md
    installation-and-upgrades/upgrading-liferay-commerce.md
    installation-and-upgrades/maintenance-versions.md
+   installation-and-upgrades/installing_commerce_2.1_and_below.rst
 
-.. include:: /installation-and-upgrades/README.rst
-	:start-line: 2
+-  :doc:`/installation-and-upgrades/installation-overview`
+-  :doc:`/installation-and-upgrades/activating-liferay-commerce-enterprise`
+-  :doc:`/installation-and-upgrades/upgrading-liferay-commerce`
+-  :doc:`/installation-and-upgrades/maintenance-versions`
+
+Installing Commerce 2.1 and Below
+---------------------------------
+
+-  :doc:`/installation-and-upgrades/installing-commerce-2.1-and-below/using-the-liferay-commerce-docker-image`
+-  :doc:`/installation-and-upgrades/installing-commerce-2.1-and-below/using-the-liferay-commerce-tomcat-bundle`
+-  :doc:`/installation-and-upgrades/installing-commerce-2.1-and-below/deploying-liferay-commerce-to-an-existing-liferay-installation`
+

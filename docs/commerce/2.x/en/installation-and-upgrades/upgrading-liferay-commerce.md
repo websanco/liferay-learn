@@ -25,7 +25,7 @@ Liferay Commerce provides a seamless upgrade process to the latest version. User
 
 ### Apply the Latest Fix Pack
 
-> Subscribers
+> Subscription Required
 
 Before upgrading Liferay Commerce, update Liferay Digital Experience Platform (DXP) to the latest available fix pack release. For example, if upgrading to Liferay Commerce Enterprise 2.0.6 - upgrading Liferay DXP to Fix Pack 14 is required. The latest fix pack releases are available from [Help Center](https://customer.liferay.com/downloads).
 

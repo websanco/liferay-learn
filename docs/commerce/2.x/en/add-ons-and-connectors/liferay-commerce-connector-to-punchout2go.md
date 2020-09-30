@@ -108,6 +108,6 @@ The checkout process with the Connector to PunchOut2Go active occurs in the same
 
 ## Additional Information
 
-* [Deploying Liferay Commerce to an Existing Liferay Installation](../installation-and-upgrades/deploying-liferay-commerce-to-an-existing-liferay-installation.md)
+* [Deploying Liferay Commerce to an Existing Liferay Installation](../installation-and-upgrades/installing-commerce-2.1-and-below/deploying-liferay-commerce-to-an-existing-liferay-installation.md)
 * [Activating Liferay Commerce Enterprise](../installation-and-upgrades/activating-liferay-commerce-enterprise.md)
 * [Liferay Commerce Connector to PunchOut2Go Reference Guide](./liferay-commerce-connector-to-punchout2go-reference-guide.md)

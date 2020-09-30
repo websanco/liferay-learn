@@ -1,14 +1,14 @@
 # Maintenance Versions
 
-Periodically, Liferay will release Fix Packs to Liferay Commerce Enterprise 3.0. Each Fix Pack includes the latest bug fixes and provides an improved level of security and reliability. Customizations are generally safe, but reviewing the customizations are highly recommended before implementation.
+Fix Packs are released on a periodic basis and include bug and security fixes. If you are installing a fix pack to an installation that has custom code deployed, we recommend that you deploy and test the fix pack with your custom code on a test environment prior to installing on production.
 
 See [Patching Liferay](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html) and [Understanding Patch Types](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html) to learn about the various types of patches.
 
 To learn how to apply a patch, see [Installing Patches](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-patches.html).
 
-For Liferay Commerce 3.0 (open source) users, updates to Liferay Commerce will be released in the next version of Liferay Portal 7.3 CE.
+Liferay Commerce 3.0 (open source) users have access to the same bug and security updates through new releases of Liferay Portal 7.3.
 
-## Updating Liferay Commerce 2.1.x and Below
+## Updating Liferay Commerce 2.1 and Below
 
 Periodically, Liferay will release updates (maintenance versions) to Liferay Commerce for both open source and enterprise subscribers. In particular, Maintenance Versions refer to the change in the third digit of the version number. Each maintenance version includes the latest bug fixes and provides an improved level of security and reliability. Customizations are generally safe, but reviewing the customizations are highly recommended before implementation.
 

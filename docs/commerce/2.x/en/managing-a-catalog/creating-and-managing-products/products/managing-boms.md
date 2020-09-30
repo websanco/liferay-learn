@@ -1,6 +1,6 @@
 # Managing BOMs
 
-> Subscribers
+> Subscription Required
 
 Bill of Materials (BOM) diagrams identify component parts belonging to a product. Users can create and annotate BOM diagrams in Liferay Commerce that reference products in the store. BOM diagrams can then be displayed on a site page.
 

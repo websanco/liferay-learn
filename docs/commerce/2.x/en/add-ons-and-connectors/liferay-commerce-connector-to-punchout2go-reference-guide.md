@@ -1,6 +1,6 @@
 # Liferay Commerce Connector to PunchOut2Go Reference Guide
 
-> Subscribers
+> Subscription Required
 
 This article describes configuration terms for Liferay Commerce Connector to PunchOut2Go.
 

@@ -1,6 +1,6 @@
 # Using the FedEx Shipping Method
 
-> Subscribers
+> Subscription Required
 
 This article details how to configure and enable FedEx as a shipping method.
 
