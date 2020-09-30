@@ -1,6 +1,12 @@
 # Configuring Open Graph
 
-[Open Graph](https://ogp.me) is an Internet protocol that you can use to create engaging representations of your Site's content when shared on social networks. With Liferay DXP, you can easily configure Site-wide Open Graph settings. To access these settings, open the Site Menu and go to *Configuration* &rarr; *Settings*. Then scroll down to the *Open Graph* sub-heading in the General tab.
+[Open Graph](https://ogp.me/) meta tags are embedded on every page, so you can share content on applications that support it, such as Facebook, Twitter, Slack, etc. You can disable this behavior from your Site's General settings.
+<!-- It'd be great to have a screenshot here of the practical application of this feature. -->
+1. Open the Site Menu and go to *Configuration* &rarr; *Settings* (previously *Site Settings*)
+
+1. Scroll down to the *Open Graph* sub-heading and expand it.
+
+1. Check/uncheck the *Enable Open Graph* setting to enable/disable this feature, and optionally set an Open Graph image to act as the default for the Open Graph tags.
 
 ![Configure Site-wide Open Graph settings in the General tab of your Site's settings.](./configuring-open-graph/images/01.png)
 
