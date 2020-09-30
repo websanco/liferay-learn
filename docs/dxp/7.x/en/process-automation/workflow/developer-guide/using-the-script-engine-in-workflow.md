@@ -1,6 +1,6 @@
 # Using the Script Engine in Workflow
 
-Liferay's [workflow engine](../user-guide/introduction-to-workflow.md) is a robust system for reviewing and approving content in enterprise environments. Even if you don't leverage scripts, it's a powerful and robust workflow solution. Adding scripts takes it to the next level. These scripts aren't run from the [Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), but are embedded in [XML workflow definitions](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions) and run during workflow execution.
+Liferay's [workflow engine](../user-guide/introduction-to-workflow.md) is a robust system for reviewing and approving content in enterprise environments, even without scripts. Adding scripts takes it to the next level. These scripts aren't run from the [Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), but are embedded in [XML workflow definitions](./crafting-xml-workflow-definitions.md) and run during workflow execution.
 
 Here are the workflow scripting topics:
 

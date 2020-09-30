@@ -1,14 +1,20 @@
 # Crafting XML Workflow Definitions
 
-All Workflow definitions in Liferay DXP are written in XML format. To craft your own workflow definition, remember that each definition ought to reflect the real life approval process - when an asset enters the review process, approval or rejection by the reviewer, and then exiting the review process to be published on a site or in a document repository.
+All Workflow definitions in Liferay DXP are written in XML format. To craft your own workflow definition, remember that each definition ought to reflect the real life approval process.
 
 ```tip::
-   Subscribers using DXP have the option of using a graphical designer to edit their workflows. They have the option to upload an XML file and then continue configuring their workflows.
+   Subscribers using DXP can use a `graphical designer <../user-guide/workflow-designer/creating-workflow-tasks.md>_ to create workflows. If you've already begun crafting workflows in XML, you can upload them and continue in the GUI. 
 ```
+
+1. Open the Global Menu (![Global Menu](../../../images/applications-menu.png)). Under Workflow, select _Process Builder_. 
+
+1. To add a new Workflow definition click the ![add](../../../images/icon-add.png) icon. 
+
+1. You can either type your workflow definition into the editor or import one you've created locally. 
 
 ## Existing Workflow Definitions
 
-Only one workflow definition is installed by default: Single Approver. Several more are embedded in the Liferay source code, but are available here. These definitions provide good reference material for many of the workflow features and elements described in these articles.
+Only one workflow definition is installed by default: Single Approver. Several more are embedded in the Liferay source code. These definitions provide good reference material for many of the workflow features and elements described in these articles.
 
 * [Category Specific](../user-guide/workflow-designer-overview/workflow-processes/category-specific-definition.xml)
 * [Legal Marketing](../user-guide/workflow-designer-overview/workflow-processes/legal-marketing-definition.xml)
@@ -17,7 +23,7 @@ Only one workflow definition is installed by default: Single Approver. Several m
 
 ## Schema
 
-The XML structure of a workflow definition is defined in this XSD file: [`liferay-workflow-definition-7_3_0.xsd`](https://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd).
+The structure of a workflow definition is defined in its XSD file: [`liferay-workflow-definition-7_3_0.xsd`](https://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd).
 
 Declare the schema at the top of the workflow definition file:
 
@@ -30,8 +36,6 @@ Declare the schema at the top of the workflow definition file:
         http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd">
 ```
 
-To learn more, you can download the [`liferay-workflow-definition-7_3_0.xsd` XSD file](https://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd).
-
 ## Metadata
 
 Give the definition a name, description, and version:
@@ -41,8 +45,6 @@ Give the definition a name, description, and version:
 <description>A single approver can approve a workflow content.</description>
 <version>1</version>
 ```
-
-Metadata tags are optional. If present the first time a definition is saved, the `<name>` tag serves as a unique identifier for the definition. If not specified (or added sometime after the first save), a random unique name is generated and used to identify the workflow.
 
 ## Start and End Nodes
 
@@ -97,21 +99,21 @@ The _End_ node may look like this:
     </state>
 ```
 
-Here, the final state of the workflow is that the submission is approved and ready for publication. There are no notifications - the original author is not informed that it has been published, but that is one possibility.
+Here, the final state of the workflow is that the submission is approved and ready for publication. To keep the example simple, there are no notifications, but they could have been added.
 
 See the [Workflow Definition Node Reference](./workflow-definition-node-reference) to learn more.
 
 ## Task Nodes
 
-Task nodes are fundamental parts of a workflow definition because this is where the actual work is done. Tasks have to be assigned to users to review the submitted asset then approve or reject the submission.
+Task nodes are fundamental parts of a workflow definition because this is where most of the work is done. Tasks must be assigned to Users to review the submitted asset and then approve or reject the submission.
 
-Unlike other workflow nodes, task nodes have Assignments; you can assign the task to a specific or a specific DXP [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
+Unlike other workflow nodes, task nodes have Assignments; you can assign the task to a User or a [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
-In addition, task nodes contain task timers, actions (which can include notifications and scripts), and transitions. See the [Workflow Task Node Reference](./workflow-task-node-reference.md) to learn more.
+Task nodes can contain task timers, actions (which can include notifications and scripts), and transitions. See the [Workflow Task Node Reference](./workflow-task-node-reference.md) to learn more.
 
 ### Creating an Update Task Node
 
-When an asset needs more work before being published, you need create a _Task_ node which encompasses this process. In this example from the _Single Approver_ workflow definition, this _Task_ node uses the action `<name>reject</name>` node where the submission is rejected. Once the asset has been reviewed, a notification is sent to the original author. The asset is also reassigned to the original author.
+When an asset needs more work before being published, you must create a _Task_ node to encompass this process. In this example from the _Single Approver_ workflow definition, this _Task_ node uses the action `<name>reject</name>` node where the submission is rejected. Once the asset has been reviewed, a notification is sent to the original author. The asset is also reassigned to the original author.
 
 ```xml
     <task>

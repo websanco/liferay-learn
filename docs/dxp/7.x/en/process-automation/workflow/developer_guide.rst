@@ -6,8 +6,8 @@ Developer Guide
 
    developer-guide/implementing-workflow.md 
    developer-guide/implementing-a-custom-sla-calendar.md
-   developer-guide/using-the-script-engine-in-workflow.md
    developer-guide/crafting-xml-workflow-definitions.md
+   developer-guide/using-the-script-engine-in-workflow.md
    developer-guide/workflow-definition-node-reference.md
    developer-guide/workflow-task-node-reference.md
 
