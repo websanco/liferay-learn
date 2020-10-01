@@ -26,6 +26,8 @@
 	},
 	"private": true,
 	"scripts": {
+		"fix": "liferay-npm-scripts fix",
+		"check": "liferay-npm-scripts check",
 		"format": "liferay-npm-scripts format",
 		"format:check": "liferay-npm-scripts format:check"
 	},

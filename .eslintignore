@@ -8,5 +8,6 @@
 ## Third Party
 ##
 
-	/site/**/*.min.js
+	/site/venv/*
+    /site/**/*.min.js
 	/site/**/modified-search-tools.js

@@ -75,6 +75,8 @@ This builds all products and versions for local testing. Your git index is safe 
 
 ## Formatting
 
-This project is using [@liferay/npm-scripts](https://github.com/liferay/liferay-frontend-projects/tree/master/projects/npm-tools) to format all its `.scss` and `.js` files.
+This project is using [@liferay/npm-scripts](https://github.com/liferay/liferay-frontend-projects/tree/master/projects/npm-tools) to format all its `.scss` and `.js` files. It enforces Liferay specific code styles via ESLint, Prettier, and stylelint.
 
-To automatically format the source, go to the root directory and run `npm run format`. Alternatively, run `npm run format:check` to check if there are any formatting errors.
+To automatically format the source, go to the root directory and run `npm run fix`. Alternatively, run `npm run check` to check if there are any formatting errors.
+
+To only format source code with Prettier, run `npm run format` and `npm run format:check`.
