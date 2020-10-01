@@ -40,9 +40,9 @@ An application can rely on multiple OSGi modules. Resolving their Java package d
    The `!`character negates importing the package. The `*` character represents all packages that the module refers to explicitly. Putting `*` at the end of the list causes Bnd to import all packages your module references.
 
 ```note::
-   If your WAR file requires a different version of a third-party package that `Liferay exports already <../../reference/exported-third-party-packages.md>`_, specify that package in your `Import-Package: list <../importing-packages.md>`_. If that package is in an OSGi module, deploy it. 
+   If your WAR file requires a different version of a third-party package that `Liferay exports already <../../reference/exported-third-party-packages.md>`_, specify that package in your `Import-Package: list <../importing-packages.md>`_. If that package is in an OSGi module, deploy it.
 
-   When Liferay DXP deploys a WAR, it converts it to a `WAB <https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.war.html>_, and it strips already exported third-party JARs out of WABs at deploy time. To force deployment of a different version than Liferay exports, rename that package's non-OSGi JAR differently from the `JAR that the WAB generator excludes <../../../developing-apps/reference/jars-excluded-from-wabs.md>`_ and `embed the JAR <#embedding-a-library>`_ in your project.
+   When Liferay DXP deploys a WAR, it converts it to a `WAB <https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.war.html>`_, and it strips already exported third-party JARs out of WABs at deploy time. To force deployment of a different version than Liferay exports, rename that package's non-OSGi JAR differently from the `JAR that the WAB generator excludes <../../../developing-applications/reference/jars-excluded-from-wabs.md>`_ and `embed the JAR <#embedding-a-library>`_ in your project.
 ```
 
 Congratulations! You resolved dependencies on packages from non-OSGi JARs.
