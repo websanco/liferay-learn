@@ -12,5 +12,10 @@ Form Rules
    form-rules/using-the-calculate-rule.md
    form-rules/using-the-jump-to-page-rule.md
 
-.. include:: /process-automation/forms/user-guide/advanced-forms-usage/form-rules/README.rst
-	:start-line: 2
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/form-rules-overview`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-show-hide-rule`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-require-rule`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-autofill-rule`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-enable-disable-rule`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-calculate-rule`
+-  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-jump-to-page-rule`
