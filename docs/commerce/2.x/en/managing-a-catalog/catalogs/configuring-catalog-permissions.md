@@ -3,12 +3,12 @@
 Catalog permissions determine which users can see and modify catalogs and their related products. Admin users have these permissions by default and these permissions can be added to new roles that have been added to the system.
 
 ```note::
-   Individual product view permissions are managed by modifying the channels that they are available in. See `Configuring Product Visibility Using Channels <../creating-and-managing-products/channels/configuring-product-visibility-using-channels.md>`_ to learn more.
+   Individual product view permissions are managed by modifying the channels that they are available in. See `Configuring Product Visibility Using Channels <../../starting-a-store/channels/configuring-product-visibility-using-channels.md>`_ to learn more.
 ```
 
 ## Adding Catalog Management Permissions to an Existing Role
 
-Get started by [creating a new custom account role](../../account-management/creating-a-custom-account-role.md) or by modifying an existing role to manage Catalogs and Products. This Role will can be configured to have minium access to the system wide permissions. To learn more about defining a user permissions, see [Defining Role Permissions](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html).
+Get started by [creating a new custom account role](../../account-management/creating-a-custom-account-role.md) or by modifying an existing role to manage Catalogs and Products. This Role will can be configured to have minium access to system wide functions. To learn more about defining a user permissions, see [Defining Role Permissions](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html).
 
 To define catalog management permissions for an existing role:
 
@@ -36,7 +36,7 @@ To define catalog management permissions for an existing role:
 1. Select the desired Permissions; at the very least, all _General Permissions_ and _Resource Permissions_.
 1. Click _Save_ when finished.
 
-The new Catalog Manager role received the minimum connections to view the Catalog and Products menu. Users with this role are now able to access the _Control Panel_ &rarr; _Commerce_ &rarr; _Catalogs_ and _Products_ menus.
+The new Catalog Manager role receives the minimum permissions to view the Catalog and Products menu. Users with this role are now able to access the _Control Panel_ &rarr; _Commerce_ &rarr; _Catalogs_ and _Products_ menus.
 
 ## Configuring a Catalog's Permissions
 
@@ -58,4 +58,4 @@ The catalog's permissions are now configured.
 ## Additional Information
 
 * [Understanding Roles and Permissions](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
-* [Configuring Product Visibility Using Channels](../creating-and-managing-products/channels/configuring-product-visibility-using-channels.md)
+* [Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
