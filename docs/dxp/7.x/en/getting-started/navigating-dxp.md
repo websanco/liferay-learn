@@ -1,6 +1,6 @@
 # Navigating DXP
 
-Liferay DXP's out-of-the-box navigation is organized into two major areas: the _Personal Menu_ and the _Product Menu_.
+Liferay DXP's out-of-the-box navigation is organized into two major areas: the _Personal Menu_ and the Global Menu_.
 
 ## Personal Menu
 
@@ -16,15 +16,15 @@ Users can use the personal menu to:
 * [Sign out](./introduction-to-the-admin-account.md#signing-out)
 * And more...
 
-## Product Menu
+## Global
 
-The DXP _Product Menu_ contains the _Applications Menu_ and the _Control Panel_. Click the _Applications Menu_ icon (![Applications Menu icon](../images/icon-applications-menu.png)) at the top of the screen to access it.
+The DXP Global Menu_ contains the _Applications Menu_ and the _Control Panel_. Click the _Applications Menu_ icon (![Applications Menu icon](../images/icon-applications-menu.png)) at the top of the screen to access it.
 
 ```note::
-   By default, Users with the *Guest* or *User* roles are not be able to access the Product Menu.
+   By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
 ```
 
-You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Product Menu_.
+You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the Global Menu_, on the right side.
 
 ### Applications Menu
 
@@ -56,12 +56,12 @@ The following common administrative activities can be done in the Control Panel:
 
 ## Site Menu
 
-The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed.
+The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed. The Site Menu may be hidden until you expand it by clicking the icon ( ![Site Menu icon](../images/icon-menu.png) ) at the upper-left corner of the screen.
 
 ![A view of the expanded Site Menu so that all options are visible.](./navigating-dxp/images/04.png)
 
 ```note::
-   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the site is `Liferay DXP`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
+   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay DXP`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
 ```
 
 The following common site building and management activities can be done in the _Site Menu_:
@@ -71,6 +71,12 @@ The following common site building and management activities can be done in the 
 * [Managing Site Memberships](../site-building/building-sites/adding-members-to-sites.md)
 * [Configuring and Optimizing Site Behavior and Functionality](../site-building/optimizing-sites/README.md)
 * And more...
+
+## DXP 7.1 and 7.2
+
+In Liferay DXP versions prior to 7.3, all of the contents of the Global Menu are instead contained within the Control Panel. The Control Panel itself is located above the Site Menu on the left side of the screen in these versions.
+
+![The Control Panel in DXP 7.1 and 7.2 is located above the Site Menu.](./navigating-dxp/images/05.png)
 
 ## What's Next
 
