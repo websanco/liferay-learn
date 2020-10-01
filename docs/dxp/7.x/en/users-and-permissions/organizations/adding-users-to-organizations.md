@@ -1,6 +1,6 @@
 # Adding Users to Organizations
 
-When a User (for example, a Sales Agent) belongs to a specific Organization in Liferay Commerce, he or she can then view (or depending on the role, possibly manage) the accounts associated with that Organization.
+Add a User to a specific Organization to manage permissions and model real-life organizational hierarchies in Liferay DXP. In the Commerce context, he or she can also view (or depending on the role, possibly manage) the accounts associated with that Organization.
 
 To add a User to an Organization:
 

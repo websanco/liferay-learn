@@ -14,7 +14,7 @@ To define permissions for any Role in Liferay DXP,
 
 1. Go to the Control Panel and then click on *Users* &rarr; *Roles*.
 
-1. Click on the Regular, Site, Organization, Account, or Asset Library Role, or [create a new one](./creating-and-managing-roles.md).
+1. Click on the Regular, Site, Organization, or Asset Library Role, or [create a new one](./creating-and-managing-roles.md).
 
 1. From the Role Editor screen, click the _Define Permissions_ tab.
 

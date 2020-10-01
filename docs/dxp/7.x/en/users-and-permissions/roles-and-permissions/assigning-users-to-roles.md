@@ -88,6 +88,7 @@ Making Role assignments for Asset Libraries is nearly identical to making assign
 
 ![Assign a Asset Library Role within the Asset Library Menu's People &rarr; Memberships section.](./assigning-users-to-roles/images/03.png)
 
+<!--
 ## Account Roles
 
 You can assign Users to an Account Role in the Accounts Control Panel section.
@@ -107,6 +108,7 @@ You can assign Users to an Account Role in the Accounts Control Panel section.
 1. Choose the assignees, then click _Update Associations_.
 
 ![Assign an Account Role within the Accounts section of the Control Panel.](./assigning-users-to-roles/images/04.png)
+-->
 
 ## Default User Associations
 

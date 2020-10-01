@@ -44,15 +44,16 @@ All roles available in a Liferay DXP installation can be viewed in the Roles adm
 
 **Asset Library Owner:** The Asset Library Owner Role is the same as the Asset Library Administrator Role except that it grants permission to manage *all* aspects of a Asset Library, including permission to delete the membership of or remove Roles from Asset Library Administrators or other Asset Library Owners. They *can* assign other Users as Asset Library Administrators or Asset Library Owners.
 
-
-## Account Roles
-
-**Account Member:** The Account Member Role grants basic privileges within a Account, such as permission to visit the Account's private pages.
-
-**Account Administrator:** Account Administrators are super users of their account. They have permissions to manage *almost* all aspects of a Account including Account content, Account memberships, and Account settings. Account Administrators cannot delete the membership of or remove Roles from other Account Administrators or Account Owners. They also *cannot* assign other Users as Account Administrators or Account Owners.
-
 ```note::
    It's easy to overlook the differences between owner type Roles and administrator type Roles. Administrators cannot remove the administrator or owner Role from any other administrator or owner, and they cannot appoint other Users as administrators or owners.
 
    In contrast, owners can do those things.
 ```
+
+<!-- commented out section as per LRDOCS-8188
+## Account Roles
+
+**Account Member:** The Account Member Role grants basic privileges within a Account, such as permission to visit the Account's private pages.
+
+**Account Administrator:** Account Administrators are super users of their account. They have permissions to manage *almost* all aspects of a Account including Account content, Account memberships, and Account settings. Account Administrators cannot delete the membership of or remove Roles from other Account Administrators or Account Owners. They also *cannot* assign other Users as Account Administrators or Account Owners.
+-->
