@@ -35,13 +35,6 @@ Advanced Forms Usage
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/validating-text-and-numeric-field-entries`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/validation-conditions-reference`
 
-<<<<<<< HEAD:docs/dxp/7.x/en/process-automation/forms/user-guide/advanced_forms_usage.rst
-Form Rules
-----------
-
--  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-autofill-rule`
-=======
-
 Form Rules
 ----------
 
@@ -53,7 +46,6 @@ Form Rules
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-require-rule`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-show-hide-rule`
 -  :doc:`/process-automation/forms/user-guide/advanced-forms-usage/form-rules/using-the-jump-to-page-rule`
->>>>>>> LRDOCS-8151 Forms Rules Documentation:docs/dxp/7.x/en/process-automation/forms/user-guide/advanced-forms-usage/README.rst
 
 Kaleo Forms
 -----------
