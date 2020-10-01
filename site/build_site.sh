@@ -14,8 +14,6 @@ readonly LIFERAY_LEARN_DXP_GIT_TAG_TOKEN=\\[\$LIFERAY_LEARN_DXP_GIT_TAG\$\\]
 readonly LIFERAY_LEARN_DXP_GIT_TAG_VALUE=7.3.4-ga5
 readonly LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_TOKEN=\\[\$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE\$\\]
 readonly LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_VALUE=liferay\\/portal\\:7.3.4-ga5
-readonly LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN=\\[\$LIFERAY_LEARN_PORTAL_GIT_TAG\$\\]
-readonly LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE=7.3.4-ga5
 
 function activate_venv {
 	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
@@ -134,7 +132,6 @@ function generate_sphinx_input {
 		sed -i "s/${LIFERAY_LEARN_DXP_GIT_TAG_TOKEN}/${LIFERAY_LEARN_DXP_GIT_TAG_VALUE}/g" "${md_file_name}"
 
 		sed -i "s/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
-		sed -i "s/${LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN}/${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/g" "${md_file_name}"
 	done
 }
 
