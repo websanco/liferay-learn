@@ -43,7 +43,7 @@ All features are implemented as simple selector buttons so you can enable or dis
 
 By default, guests can't leave comments on web content. If you want to allow guests to comment on your web content article, follow these steps:
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Roles*.
+1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Roles*.
 
 1. Select *Guest* &rarr; *Define Permissions*.
 

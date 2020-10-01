@@ -18,7 +18,7 @@ Three Site Templates are provided out-of-the-box:
 
 To create a Site using a Site Template, follow these steps:
 
-1. Open the [Applications Menu](../../getting-started/navigating-dxp.md) ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Sites*.
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Sites*.
 
     ![Navigating to the Control Panel to the Sites option.](./building-sites-with-site-templates/images/01.png)
 
@@ -42,7 +42,7 @@ To create a Site using a Site Template, follow these steps:
 
 1. Click *Save* to create your Site.
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and go to *Sites* under the *Control Panel* tab.
+1. Open the Global Menu ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Sites* under the *Control Panel* tab.
 
 1. Click *Actions* ( ![Actions icon](../../images/icon-actions.png) ) beside your new Site and select *Go to Public Pages* or *Go to Private Pages* to view it.
 

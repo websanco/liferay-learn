@@ -2,7 +2,7 @@
 
 To add a new Site to your Liferay Portal instance:
 
-1. Open the [Applications Menu](../../getting-started/navigating-dxp.md) ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and navigate to the Control Panel, and then select *Sites*.
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and navigate to the Control Panel, and then select *Sites*.
 
     ![The Sites Control Panel location.](./adding-a-site/images/01.png)
 
@@ -22,7 +22,7 @@ To add a new Site to your Liferay Portal instance:
    In order to view a newly created *blank site*, you must first create a page for it. See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
 ```
 
-The new Site is selected when you open the Product Menu. See [Site Settings](../site_settings.md) for an overview of all of the available Site settings.
+The new Site now selected in the Site Menu. See [Site Settings](../site_settings.md) for an overview of all of the available Site settings.
 
 ## Related Information
 

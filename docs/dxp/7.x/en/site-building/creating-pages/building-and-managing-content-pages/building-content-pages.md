@@ -6,13 +6,16 @@
 
 Once you've [added a Content Page](../adding-pages/adding-a-page-to-a-site.md), you can build it by adding and configuring various [Content Page elements](./content-pages-overview.md).
 
-1. Open the Product Menu and, under the Site Menu, go to *Site Builder* &rarr; *Pages* to open the Site Builder.
-1. Click the Add Page button (![Add Page](../../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
+1. Under the Site Menu, go to *Site Builder* &rarr; *Pages*.
+
+1. Click the *Add Page* button (![Add Page](../../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
 
     ![Begin by adding your new Content Page.](building-content-pages/images/01.png)
 
 1. Select the *Blank* template or one of the existing templates.
+
 1. In the *Add Page* dialog, type your page's *Name*.
+
 1. Alternatively, click the Actions Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
 
     ![Edit an existing Content Page by dropping Fragments or Widgets in the edit area.](building-content-pages/images/02.png)

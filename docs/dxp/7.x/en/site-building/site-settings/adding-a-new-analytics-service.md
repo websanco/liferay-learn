@@ -4,7 +4,7 @@ Liferay DXP includes support for Google Analytics and Piwik for analyzing traffi
 
 ## Adding a New Analytics Service
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Instance Settings*.
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Instance Settings*.
 
 1. Select *Analytics* under the *Platform* heading.
 

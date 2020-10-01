@@ -4,7 +4,7 @@ To export a Site that uses Site Templates or Page Templates to a different Lifer
 
 To export a Site using a Site Template, follow these steps:
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Site Templates*.
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Site Templates*.
 
 1. Open the *Actions* Menu (![Actions icon](../../images/icon-actions.png)) for the Site Template you want to export and select *Manage*.
 
@@ -18,7 +18,7 @@ To export a Site using a Site Template, follow these steps:
 
 1. Click on the *Download* icon for the template that you exported.
 
-1. In your target environment (Liferay Portal instance), open the Applications Menu ( ![Applications Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Site Templates*.
+1. In your target environment (Liferay Portal instance), open the Global Menu ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Site Templates*.
 
 1. Create a new Site Template.
 

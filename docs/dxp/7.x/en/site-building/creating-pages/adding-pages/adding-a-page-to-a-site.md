@@ -6,9 +6,9 @@ The steps below describe how to add a new page to your Site and configure the ge
 
 Follow these steps to add a page:
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../../images/icon-applications-menu.png) ), and then navigate to your desired Site on the right side of the menu.
+1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ), and then navigate to your desired Site on the right side of the menu.
 
-    ![Select the desired Site after opening the Applications Menu.](./adding-pages/images/01.png)
+    ![Select the desired Site after opening the Global Menu.](./adding-pages/images/01.png)
 
 1. Go to *Site Builder* &rarr; *Pages* under the Site Menu.
 

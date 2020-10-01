@@ -20,7 +20,7 @@ If you add a friendly URL for your Site's Home Page, follow the additional steps
 
 If you add a friendly URL for your instance's Home Page, you should update your instance's Home URL field so that page requests to `http://localhost:8080` redirect properly: <!-- What is a Home URL? Do I HAVE to do this? What does it impact? -->
 
-1. Open the Applications Menu ( ![Applications Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Instance Settings*.
+1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Instance Settings*.
 
 1. Select *Instance Configuration* under the *Platform* heading and click the *General* link.
 
