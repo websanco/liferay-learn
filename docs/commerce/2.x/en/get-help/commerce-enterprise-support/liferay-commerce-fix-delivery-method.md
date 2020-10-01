@@ -1,6 +1,6 @@
 # Liferay Commerce Fix Delivery Method
 
->**Subscribers only**
+> Subscription Required
 
 Delivering fixes is one of the essential services included with your Liferay Enterprise Subscription. For Liferay Commerce, we have designed our fix delivery method to match your project phase so you have ongoing access to the latest updates. Use the chart below as well as the definitions that follow to better understand how we provide fixes for Liferay Commerce.
 

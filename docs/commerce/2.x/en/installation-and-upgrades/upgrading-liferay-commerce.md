@@ -1,20 +1,18 @@
 # Upgrading Liferay Commerce
 
-This article documents how to upgrade Liferay Commerce. Store administrators should consider regularly updating to the latest available product version to receive bug fixes and new features.
+This article documents how to upgrade Liferay Commerce. Users should consider regularly updating to the latest release to receive bug fixes and new features.
 
-## Upgrading to Commerce 3.0
+## Upgrading to Commerce 3.0 from Commerce 2.1 and Below
 
-Commerce 3.0 is bundled with DXP 7.3. To upgrade to Commerce 3.0, upgrade your base Liferay DXP installation to DXP 7.3 then execute a reindex (see below).
+Starting with Liferay Commerce 3.0, Commerce is now bundled with Liferay DXP 7.3. In order to upgrade to Commerce 3.0, you must first upgrade your base Liferay DXP installation to DXP 7.3 and then execute a search reindex.
 
-To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
+To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html). Once DXP is upgraded to 7.3, execute a reindex.
 
-Once DXP has been successfully upgraded from 7.1 to 7.3, execute a reindex (see below).
-
-```important::
-   Administrators should **not** deploy a Commerce `LPKG` again. The Commerce 3.0 modules are already present and thus will cause conflicts.
+```warning::
+   After upgrading to 7.3, do **not** deploy the Commerce ``LPKG`` again. The Commerce 3.0 modules are bundled with 7.3. Deploying the ``LPKG`` causes conflicts.
 ```
 
-### Execute Post-Upgrade Reindex
+### Executing a Post-Upgrade Reindex
 
 After upgrading to DXP 7.3, execute a full search reindex.
 
@@ -26,14 +24,14 @@ After upgrading to DXP 7.3, execute a full search reindex.
 1. Click _Execute_ next to _Reindex all search indexes_.
 1. Wait for the reindex to finish.
 1. Navigate to the _Global_ → _Commerce_ → _Products_.
-1. Verify all the products are displayed again.
+1. Verify all the products are displayed.
 
 ## Upgrading to Commerce 2.1.x
 
 When upgrading to Commerce 2.1.x, users have two options:
 
-* Upgrade both DXP and Commerce
-* Upgrade just Commerce.
+* Upgrade DXP and Commerce
+* Upgrade just Commerce
 
 ### Upgrading Both DXP and Commerce
 
