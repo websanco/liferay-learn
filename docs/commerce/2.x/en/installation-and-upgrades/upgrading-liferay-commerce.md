@@ -2,7 +2,7 @@
 
 This article documents how to upgrade Liferay Commerce. Users should consider regularly updating to the latest release to receive bug fixes and new features.
 
-## Upgrading to Commerce 3.0 from Commerce 2.1 and Below
+## Upgrading to Commerce 3.0 from 2.1 and Below
 
 Starting with Liferay Commerce 3.0, Commerce is now bundled with Liferay DXP 7.3. In order to upgrade to Commerce 3.0, you must first upgrade your base Liferay DXP installation to DXP 7.3 and then execute a search reindex.
 
@@ -137,7 +137,9 @@ Fix Packs are cumulative in nature and include all previously release fix packs.
 
 The Liferay Commerce instance has been upgraded.
 
-### Execute Post-Upgrade Reindex (2.1 and below)
+### Execute Post-Upgrade Reindex
+
+> Liferay Commerce 2.1 and Below
 
 After upgrading from to the latest version, execute a full search reindex.
 
