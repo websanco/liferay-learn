@@ -25,20 +25,6 @@ To create a grouped product:
 
 Once the Grouped Product entity has been initially created, store administrators will need to associate the individual products to the grouped product entry.
 
-### Commerce 2.1 and Below
-
-1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
-1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Grouped_.
-1. Enter the following:
-    * **Catalog**: Sahara.com
-    * **Name**: Brakes Set Combo Kit
-    * **Short Description**: Brakes Set Combo Kit
-    * **Friendly URL**: (auto-generated)
-    * **Meta Title**: Brakes Set Combo Kit
-1. Click _Publish_.
-
-Once the Grouped Product entity has been initially created, store administrators will need to associate the individual products to the grouped product entry.
-
 ## Associate Products in Group
 
 1. Click the _Grouped_ sub-tab.
@@ -71,6 +57,7 @@ Once you have applied product options to the product, SKUs have to be generated.
 
 After the SKUs have been generated, set the base price and quantities in the inventory for each item. Depending on how many SKUs were generated based on the various product options, each SKU can have its own prices. Some products are sold in bulk quantities while others are sold individually.
 
+1. Click the _SKU_ tab.
 1. Click the _3-dot_ icon then _Edit_ next to _default_. (At this point, you can rename the SKU to something more descriptive like _Brakes Set Combo Kit_ on the _Details_ menu.)
 
     ![Add the Price](./creating-a-grouped-product/images/07.png)
@@ -85,6 +72,7 @@ To learn how to configure inventory for your product, see: [Setting Inventory by
 
 To set product prices and quantities for a Grouped product:
 
+1. Click the _SKU_ tab.
 1. Click the _3-dot_ icon then _Edit_ next to _default_. (At this point, you can rename the SKU to something more descriptive like _Brakes Set Combo Kit_ on the _Details_ menu.)
 1. Click _Pricing_ on the left menu.
 1. Enter the following:
@@ -120,6 +108,42 @@ Store administrators can also add attachments that are associated with a particu
 The new Grouped Product appears in the catalog. As long as each individual product has enough stock in the inventory, buyers can select the Grouped Product for purchase.
 
 ![Dog Grooming Kit](./creating-a-grouped-product/images/05.png)
+
+## Commerce 2.1 and Below
+
+1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
+1. Click the Add (![Add icon](../../../images/icon-add.png)) button then _Grouped_.
+1. Enter the following:
+    * **Catalog**: Sahara.com
+    * **Name**: Brakes Set Combo Kit
+    * **Short Description**: Brakes Set Combo Kit
+    * **Friendly URL**: (auto-generated)
+    * **Meta Title**: Brakes Set Combo Kit
+1. Click _Publish_.
+
+Once the Grouped Product entity has been initially created, store administrators will need to associate the individual products to the grouped product entry.
+
+### Associate Products in Group
+
+1. Click the _Grouped_ sub-tab.
+
+   ![Grouped Sub-Tab](./creating-a-grouped-product/images/01.png)
+
+1. Click the (![Add icon](../../../images/icon-add.png)) button to add a Grouped Entry.
+1. Select the following products: _Brake Fluid_, _Brake Pads_, and _Brake Rotors_.
+1. Click _Add_.
+
+    ![Grouped Sub-Tab](./creating-a-grouped-product/images/02.png)
+
+Next, specify the priority (the order in which they are displayed), and the quantity sold in each package. Click the _3-dot_ icon then _Edit_ next to any of the products.
+
+![Adding a Product to a Grouped Product](./creating-a-grouped-product/images/03.png)
+
+In the image above, the product has been given priority 1.0 which means it will be listed first. Assign incremental values to the other products.
+
+![Grouped Product Priority](./creating-a-grouped-product/images/04.png)
+
+Once the products have been grouped, follow the sections above to add Product Options, Generate SKUs, and set the prices. In addition, see the above sections on how to add Product Options, Specifications or upload Product Images.
 
 ## Additional Information
 

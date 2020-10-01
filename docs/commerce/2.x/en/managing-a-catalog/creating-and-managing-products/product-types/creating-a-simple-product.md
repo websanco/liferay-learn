@@ -93,6 +93,8 @@ To set product prices and quantities:
 1. Click _Save_. (If Promo Price and Cost fields are left as 00, no discounts or promotions are applied at this point.)
 1. Click _Price List_ to apply this product to any existing [price lists](../../managing-price/adding-products-to-a-price-list.md).
 
+Once you have set the product's price and SKUs, see the sections above on how to add Product Options, Specifications or upload Product Images.
+
 ## Additional Information
 
 * [Introduction to Product Types](./introduction-to-product-types.md)
