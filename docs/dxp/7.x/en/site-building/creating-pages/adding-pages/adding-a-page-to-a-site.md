@@ -8,7 +8,7 @@ Follow these steps to add a page:
 
 1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ), and then navigate to your desired Site on the right side of the menu.
 
-    ![Select the desired Site after opening the Global Menu.](./adding-pages/images/01.png)
+    ![Select the desired Site after opening the Global Menu.](./adding-a-page-to-a-site/images/01.png)
 
 1. Go to *Site Builder* &rarr; *Pages* under the Site Menu.
 
@@ -40,7 +40,7 @@ To add a child page through the Page Tree Menu, follow these steps:
 
 1. Select *Add Child Page* from the Actions Menu ( ![Actions icon](../../../images/icon-actions.png) ) next to an existing page to create a nested child page for it.
 
-    ![Adding a Child Page using the Page Tree menu.](adding-a-page-to-a-site/images/05.png)
+    ![Adding a Child Page using the Page Tree menu.](adding-a-page-to-a-site/images/04.png)
 
 1. Follow the standard steps for creating a page, as outlined [above](#adding-a-new-page).
 
