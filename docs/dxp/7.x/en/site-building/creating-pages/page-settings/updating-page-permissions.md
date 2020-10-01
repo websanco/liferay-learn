@@ -1,17 +1,29 @@
 # Updating Page Permissions
 
-Coming soon!
+When a user joins a site, he is able to see all of the site's Public and Private pages. You can update each page's permissions to allow (or deny) access to that page based on the site user's assigned DXP [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
-<!-- Public Pages can be viewed by anyone, and private pages are only private from non-members of the Site. If someone has joined your site or is a member of your Organization, that person can see all the private pages. You can override this default behavior by modifying the permissions of an individual page so only certain users can view them. Follow these steps to update the permissions for a page:
+Modifying each Page's permission overrides the site level's [Page Set's](./configuring-page-sets.md) settings.
 
-1. Open the Product Menu and select *Site Builder* &rarr; *Pages* under your site's menu.
+Lastly, only administrators can update a Page's permission.
 
-1. Select the Page Set (*Public Pages* or *Private Pages*) that contains the page you want to update permissions for.
+To update a site page's permissions:
 
-1. Open the *Options* (![Options](../../../../images/icon-options.png)) Menu next to the page and select *Permissions*.
+1. Navigate to your site where the pages are published (for example, _Site 1_).
+1. Click the _Product Menu_ (![Product menu](../../../images/icon-product-menu.png)) icon.
+1. Click _Site Builder_ &rarr; _Pages_.
+1. Select the Page Set (_Public Pages_ or _Private Pages_) that contains the page whose permissions you are updating.
+1. Click the Options (![Options](../../../images/icon-options.png)) icon next to the desired page (_Public Page 1_) then _Permissions_.
 
-1. Check/uncheck the permissions for the Role(s). For example, you could uncheck the *View* and *Add Discussion* permissions next to the Site Member Role for a private page to create a page that only site administrators can view.
+    ![The Page Permissions are found in the Control Panel's Site Builder menu.](./updating-page-permissions/images/02.png)
 
-1. Click *Save* to apply the changes.
+1. Update the permissions for each Role.
 
-![The Permissions offer a plethora of options for each role.](./updating-page-permissions/images/01.png) -->
+    ![The Permissions offer a plethora of options for each role.](./updating-page-permissions/images/01.png)
+
+1. Click _Save_ to apply the changes.
+
+## Additional Information
+
+* [Understanding Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [Assigning Users to Roles](../../../users-and-permissions/roles-and-permissions/assigning-users-to-roles.md)
+* [Configuring Page Sets](./configuring-page-sets.md)
