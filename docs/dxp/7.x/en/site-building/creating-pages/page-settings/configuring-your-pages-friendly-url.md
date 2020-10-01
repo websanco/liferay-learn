@@ -41,5 +41,5 @@ From here, you can hover over an old URL to reveal the following options:
 ## Additional Information
 
 * [Configuring Your Site's Friendly URL](./../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md)
-* [Page Configuration UI Reference](./page-configuration-ui-reference.md)
+* [Configuring Individual Pages](./configuring-individual-pages.md)
 <!--Include Reference to SEO article when finished.-->
