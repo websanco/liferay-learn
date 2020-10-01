@@ -6,15 +6,15 @@ Sites are collections of pages that contain and display content. This article wa
 
 To create a new Community Site, follow these steps:
 
-1. Open the _Product Menu_ and navigate to the _Control Panel_ and select _Sites_.
+1. Open the Global Menu_ and navigate to the _Control Panel_ and select _Sites_.
 
-    ![Sites Menu in the Control Panel](./creating-your-first-site/images/01.png)
+    ![Select Sites from the Control Panel.](./creating-your-first-site/images/01.png)
 
 1. Click the Add icon (![Add Icon](../images/icon-add.png)) at the top right of the page.
 
-1. Select the _Community Site_ template. The Site Template you choose determines what default pages and applications the new Site is populated with.
+1. Select the _Community Site_ Template. The Site Template you choose determines what default pages and applications the new Site is populated with.
 
-   ![Select a Site Template](./creating-your-first-site/images/02.png)
+   ![Select a Site Template.](./creating-your-first-site/images/02.png)
 
 1. Enter a name for the Site.
 

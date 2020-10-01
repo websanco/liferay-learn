@@ -71,6 +71,6 @@ The User is now a portal administrator. Log out and then log back in with your n
 
 ## What's Next
 
-Continue our Getting Started walkthrough by familiarizing yourself with the [DXP Product Menu](./navigating-dxp.md).
+Continue our Getting Started walkthrough by familiarizing yourself with the [DXP Global Menu](./navigating-dxp.md).
 
 Learn more about [configuring how users log into DXP](../installation-and-upgrades/securing-liferay/authentication-basics.md).
