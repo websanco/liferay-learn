@@ -6,6 +6,35 @@
 
 Once the buyer has submitted his cart for pre-approval, or placed an order for seller-approval, the order can be approved or rejected by the appropriate user as follows:
 
+1. Click the _Personal_ menu &rarr; _Notifications_.
+1. Click on the order workflow notification.
+1. Click the _3-dot icon_ in the upper-right corner → *Assign to Me*.
+
+   ![Review](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
+
+    ```note::
+       Alternatively, click `Assign to...` and select another user to review the Commerce Order.
+    ```
+
+1. Add a comment (optionally) and click *Done*.
+1. Click the _3-dot icon_ in the upper-right corner → *Approve* (or *Reject*).
+
+   ![Review Drop Down](./approving-or-rejecting-orders-in-order-workflows/images/04.png)
+
+1. Add a comment (optionally) and click *Done*.
+
+   ![Adding a Comment](./approving-or-rejecting-orders-in-order-workflows/images/05.png)
+
+    The reviewed order is then displayed in _My Workflow Tasks_.
+
+   ![Order Approved](./approving-or-rejecting-orders-in-order-workflows/images/06.png)
+
+The order has been approved (or rejected). To review additional orders, return to the *Notifications* page and repeat the steps outlined above.
+
+## Commerce 2.1 and Below
+
+Once the buyer has submitted his cart for pre-approval, or placed an order for seller-approval, the order can be approved or rejected by the appropriate user as follows:
+
 1. Navigate to *User Administration* → *My Account* → *Notifications*.
 
    ![Notifications](./approving-or-rejecting-orders-in-order-workflows/images/01.png)
