@@ -1,8 +1,8 @@
 # Configuring SEO and Open Graph
 
-With *Display Page Templates*, you can create standard formats for displaying different content types, such as *Web Content Articles*, *Documents*, and *Blog Entries*. When configuring a template, you can define SEO and Open Graph fields that are dynamically filled for your displayed content.
+With Display Page Templates, you can create standard formats for displaying different content types, such as Web Content Articles, Documents, and Blog Entries. When configuring a template, you can define SEO and Open Graph fields that are dynamically filled for your displayed content.
 
-To create or configure these settings for an existing Display Page template, go to *Design* &rarr; *Page Templates* in the Product menu, and click on the *Display Page Templates* tab.
+To create or configure these settings for an existing Display Page template, go to *Design* &rarr; *Page Templates* in the Site menu, and click on the *Display Page Templates* tab.
 
 ![Click on the Display Page Templates tab.](./configuring-seo-and-open-graph/images/01.png)
 
@@ -29,7 +29,7 @@ The *Description* field defines a Display Page's description `<meta>` tag. This 
 
 ### Robots
 
-The *Robots* field configures `robots.txt` rules for a Display Page. These rules provide instructions to search engines and other tools crawling and indexing your Site, either blocking or granting a crawler access to a specified path. You can also localize this field using the *Language Flag*.
+The *Robots* field configures `robots.txt` rules for a Display Page. These rules provide instructions to search engines and other tools crawling and indexing your Site, defining what paths should or should not be crawled. Note that web crawlers may or may not obey instructions in `robots.txt`. You can also localize this field using the *Language Flag*.
 
 ![The Robots field configures robots.txt rules for a Display Page.](./configuring-seo-and-open-graph/images/04.png)
 
@@ -41,7 +41,7 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 ## Configuring Open Graph Settings
 
-[Open Graph](https://ogp.me/) is an internet protocol that standardizes how a Site's metadata is displayed on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
+[Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
 
 ```note::
    For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
@@ -49,7 +49,7 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 ### Title
 
-The *Title* field defines a Display Page's `og:title` property, which determines the title displayed for your content in rich previews. By default, this field is mapped to *Title*, like the HTML title field for SEO. While you can select any other Text field, it's best practice to update SEO and Open Graph titles together.
+The *Title* field defines a Display Page's `og:title` property, which defines the title displayed for your content in rich previews. By default, this field is mapped to *Title*, like the HTML title field for SEO. While you can select any other Text field, it's best practice to update SEO and Open Graph titles together.
 
 ![The Title field defines a Display Page's og:title property.](./configuring-seo-and-open-graph/images/06.png)
 
