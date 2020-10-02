@@ -1,5 +1,7 @@
 # Using Multi-Factor Authentication
 
+> Availability: in Liferay DXP 7.3+.
+
 Multi-Factor Authentication (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
 
 ![Enabling Multi-Factor Authentication and One Time Passwords is a one-click operation. Just make sure the prerequisites are set up first.](./using-multi-factor-authentication/images/01.png)
