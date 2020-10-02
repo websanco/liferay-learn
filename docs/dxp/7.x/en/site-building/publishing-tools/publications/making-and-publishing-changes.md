@@ -52,7 +52,9 @@ If parallel publications include compatible changes, they can be published witho
 
 ### Conflicting Changes
 
-If production is updated while Users are developing their changes in a publication, this may cause a conflict during the publishing process. If Users attempt to publish a publication that includes changes that are incompatible with the current version of production, they are notified of any conflicting changes. These notifications explain the cause of each conflict and whether DXP has an available automatic solution, or if a conflict requires manual resolution. These conflicts can occur whether production is updated directly or by means of a publication. However, when production is directly updated, these changes are not tracked as part of your instance's publication history. See [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
+If production is updated while Users are developing their changes in a publication, this may cause a conflict during the publishing process. If Users attempt to publish a publication that includes changes that are incompatible with the current version of production, they are notified of any conflicting changes. These notifications explain the cause of each conflict and whether DXP has an available automatic solution, or if a conflict requires manual resolution.
+
+Changing production after a publication is created can lead to a conflict when attempting to publish it, whether production is changed directly or with another publication. However, when production is directly updated, these changes are not tracked as part of your instance's publication history. See [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
 
 ## Reviewing Publication Changes
 
