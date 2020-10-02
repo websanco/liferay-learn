@@ -1,4 +1,4 @@
-# Factor Checkers
+# Multi-Factor Authentication Checkers
 
 Liferay DXP ships with two additional factor checkers for Multi-Factor Authentication. Both of them are disabled by default, because they're only useful in particular circumstances. Once Multi-Factor Authentication is enabled, however, you can configure them. 
 
