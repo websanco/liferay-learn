@@ -1,6 +1,6 @@
 # Using Multi-Factor Authentication
 
-> Availability: in Liferay DXP 7.3+.
+> Availability: Liferay DXP 7.3+.
 
 Multi-Factor Authentication (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
 
@@ -51,7 +51,7 @@ The options on this screen configure the email one-time password factor:
 
 **Retry Timeout:** Delay further attempts to verify one-time passwords by this time period in seconds. The default value of `-1` disables the retry timeout. 
 
-## Logging In using MFA
+## Logging In Using MFA
 
 Enabling Multi-Factor Authentication causes the Sign-In widget to behave differently. After users supply their passwords, they're asked to generate a one-time password. 
 
@@ -65,4 +65,4 @@ Out-of-the-box, two other authentication factors are included, and there are ext
 
 ## Related Information
 
-[Multi-Factor Authentication Checkers](./multi-factor-authenticatin-checkers.md)
+[Multi-Factor Authentication Checkers](./multi-factor-authentication-checkers.md)
