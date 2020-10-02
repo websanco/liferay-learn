@@ -27,7 +27,7 @@ By default, Multi-Factor Authentication is _available_ to be enabled at the syst
 
 The default state has it enabled system-wide, but _disabled_ on the default instance. In effect, this means MFA is disabled on default Liferay DXP installations. Enabling it takes only two steps: 
 
-1. Go to *Control Panel* &rarr; *Instance Settings* &rarr; *Security* &rarr; *Multi-Factor Authentication*. 
+1. Go to *Control Panel* &rarr; *Instance Settings* &rarr; *Security* &rarr; *Multi-Factor Authentication* &rarr; *Multi-Factor Authentication and Email One-Time Password Configuration*. 
 
 1. Check the *Enabled* box, scroll to the bottom, and click the *Update* button. 
 
@@ -49,7 +49,7 @@ The options on this screen configure the email one-time password factor:
 
 **Retry Timeout:** Delay further attempts to verify one-time passwords by this time period in seconds. The default value of `-1` disables the retry timeout. 
 
-## Logging In via Multi-Factor
+## Logging In using MFA
 
 Enabling Multi-Factor Authentication causes the Sign-In widget to behave differently. After users supply their passwords, they're asked to generate a one-time password. 
 
@@ -63,4 +63,4 @@ Out-of-the-box, two other authentication factors are included, and there are ext
 
 ## Related Information
 
-[Factor Checkers](./factor-checkers.md)
+[Multi-Factor Authentication Checkers](./multi-factor-authenticatin-checkers.md)
