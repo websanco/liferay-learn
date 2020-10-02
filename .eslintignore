@@ -2,12 +2,12 @@
 ## Generated Files
 ##
 
-	/site/build/*
+    /site/build/*
 
 ##
 ## Third Party
 ##
 
-	/site/venv/*
     /site/**/*.min.js
-	/site/**/modified-search-tools.js
+    /site/**/modified-search-tools.js
+    /site/venv/*
