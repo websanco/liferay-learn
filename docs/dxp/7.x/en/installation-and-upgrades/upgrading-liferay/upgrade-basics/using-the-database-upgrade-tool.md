@@ -31,7 +31,7 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 | DXP Edition | Download Instructions |
 | :---------- | :-------------------- |
 | Liferay DXP (Subscription) | Go to the [*Downloads* page](https://customer.liferay.com/group/customer/downloads) and select the DXP version and the _Product/Service Packs_ file type. In the listing that appears, click _Download_ for the _Liferay DXP Upgrade Client_. |
-| Liferay Portal CE | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community) and select _Download_ for _Liferay Portal Tools for 7.x_. |
+| Liferay Portal CE | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community). In the _Liferay Portal_ downloads menu, select _Other files_ and click _Download_. The latest Liferay Portal release assets GitHub page appears. Click on `liferay-ce-portal-tools-[version].zip`. |
 
 ## Running the Upgrade Tool
 
