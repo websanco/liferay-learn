@@ -27,9 +27,9 @@ You can use [Service Access Policies](../../installation-and-upgrades/securing-l
    **User Name:** `test@liferay.com`  
    **Password:** `test`
 
-1. Go to Control Panel &rarr; Security &rarr; Service Access Policy.
+1. Go to Global Menu &rarr; Control Panel &rarr; Security &rarr; Service Access Policy.
 
-1. Click *Add* (![add](../../../images/icon-add.png)).
+1. Click *Add* (![add](../../images/icon-add.png)).
 
 1. Give the policy a descriptive name. It makes sense to call it something like "SITE_API_GUEST_ACCESS".
 
@@ -73,6 +73,6 @@ curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
 
 You can apply this pattern to open access to any headless REST API. Leverage the flexibility of Service Access Policies to make this as granular as you need.
 
-```note::
+```important::
    Service Access Policies can't discriminate between GraphQL APIs as easily as Headless REST APIs, since all the APIs are consolidated under a single endpoint. So while opening up GraphQL access like this may work in some cases, it isn't generally recommended, because you might accidently grant access to too much data.
    ```
