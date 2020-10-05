@@ -28,7 +28,7 @@ Deprecated features have different availability:
 
 **Removed:** The feature and its code are unavailable.
 
-## Features Deprecate in 7.3
+## Features Deprecated in 7.3
 
 Here are the features deprecated in 7.3:
 
