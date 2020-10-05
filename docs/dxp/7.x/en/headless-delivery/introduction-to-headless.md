@@ -13,13 +13,13 @@ There are three different approaches available for clients to connect to Liferay
 
 Liferay DXP's headless APIs allow [RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest) interaction with Liferay DXP resources. These APIs follow the [OpenAPI specification](https://swagger.io/docs/specification/about/), which defines a standard for REST interfaces, allowing for more straightforward implementation and consumption.
 
-You can find detailed information on these APIs by accessing the definitions on a running Liferay DXP instance at `[server][:port]/o/api` or exploring their documentation on [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/).
+You can find detailed information on these APIs by accessing the definitions on a running Liferay DXP instance at `[server][:port]/o/api` or exploring their documentation on [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/). The most relevant documentation is also available at `[server][:port]/o/[api-name]/[api-version]/openapi.[yaml or json]` in a raw format – SwaggerHub presents a more friendly interface but may not match your running version.
 
 ### GraphQL API
 
-The GraphQL API is accessed using [GraphQL](https://graphql.org/), a query language that supports interactions similar to the headless REST APIs, but with slightly more flexibility.
+The GraphQL API is accessed using [GraphQL](https://graphql.org/), a query language that supports interactions similar to the headless REST APIs, but with slightly more flexibility. Liferay DXP exposes this API at `[server][:port]/o/graphql`.
 
-You can find detailed information on this API by exploring the API itself or its documentation through a GraphQL client. Liferay DXP includes a built-in client that can be found on a running Liferay DXP instance at `[server][:port]/o/api` (select "GraphQL" on the top-right). You can also use [external clients](https://graphql.org/graphql-js/graphql-clients/), targeting `[server][:port]/o/graphql`.
+You can find detailed information on this API by exploring the API itself or its documentation through a GraphQL client. Liferay DXP includes a built-in client that can be found on a running Liferay DXP instance at `[server][:port]/o/api` (select "GraphQL" on the top-right) and also supports [external clients](https://graphql.org/graphql-js/graphql-clients/).
 
 ### Plain Web/REST Services
 
