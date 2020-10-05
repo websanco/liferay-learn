@@ -4,5 +4,16 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-.. include:: /content-authoring-and-management/documents-and-media/developer-guide/README.rst
-   :start-line: 2
+   developer-guide/adaptive-media-modules-reference.md
+
+* Getting Files and Folders
+* Creating Files, Folders, and Shortcuts
+* Deleting Files
+* Deleting File Versions
+* Deleting File Shortcuts
+* Deleting Folders
+* Moving Media to the Recycle Bin
+* Updating Media
+* File Check In and Check Out
+* Copying and Moving Files and Folders
+-  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/adaptive-media-modules-reference`
