@@ -7,7 +7,7 @@ Adaptive Media integrates with Documents and Media, Blogs, and Web Content. It g
 The Adaptive Media app is installed in DXP by default. Here, you'll learn about the Adaptive Media app's modules and how to prepare Adaptive Media to handle animated GIFs.
 
 ```tip::
-   Since the Adaptive Media app is installed by default, it's updated via Liferay DXP Fix Packs and Liferay Portal CE GA releases. Using `Liferay Marketplace <https://web.liferay.com/marketplace>_ to update the app causes an error.
+   Since the Adaptive Media app is installed by default, it's updated via Liferay DXP Fix Packs and Liferay Portal CE GA releases. Using `Liferay Marketplace <https://web.liferay.com/marketplace>`_ to update the app causes an error.
 ```
 
 To use Adaptive Media, you must first define the resolutions for the images delivered to users' devices. Adaptive Media then generates new images scaled to fit those resolutions, while maintaining the original aspect ratio. See [Adding Image Resolutions](./adding-image-resolutions.md) to learn more about creating new Image Resolutions.
