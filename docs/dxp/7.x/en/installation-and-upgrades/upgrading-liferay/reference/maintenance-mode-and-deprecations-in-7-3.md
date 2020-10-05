@@ -35,7 +35,7 @@ Here are the features deprecated in 7.3:
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | Central Authentication Service (CAS) | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
-| DDM, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
+| DDM Form Builder, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
 | Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html) is Dec 31, 2020. |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
