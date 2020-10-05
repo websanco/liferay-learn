@@ -1,6 +1,6 @@
 # Creating Forms
 
-The _Forms_ application allows users to create multi-field forms. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) have the ability to create forms. (At minimum, they should have the ability to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions, see [Roles and Permissions](../../../users-and-permissions/roles_and_permissions.rst).
+You can create multi-field forms with the _Forms_ application. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) can create forms. At minimum, they should have permission to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions, see [Roles and Permissions](../../../users-and-permissions/roles_and_permissions.rst).
 
 ![Forms are displayed in List format by default.](./creating-forms/images/01.png)
 
@@ -68,7 +68,7 @@ To add Form Pages,
 
 ### Adding a Success Page
 
-The _Success Page_ provides resolution for Form users, by letting them know they have reached the end of form and that the form has been successfully submitted.
+The _Success Page_ provides resolution for Form submitters by letting them know they have reached the end of form and that the form has been successfully submitted.
 
 The default Success Page is handy:
 
