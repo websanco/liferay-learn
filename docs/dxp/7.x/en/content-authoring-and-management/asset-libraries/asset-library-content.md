@@ -6,7 +6,7 @@ Asset Libraries provide a convenient way to share content across your Sites. Thi
 
 Each Library's dashboard displays its active applications and categorization tools. From here, you can view, create, and organize a Library's content, as well as initiate import/export processes. You can also enable a workflow to direct the publishing process for your Library's web content.
 
-If enabled, all removed content will be temporarily stored in the Library's Recycle Bin, where you can manually restore it to its Library or delete it from your instance.
+If enabled, all removed content will be temporarily stored in the Library's [Recycle Bin](../recycle-bin/user-guide/configuring-the-recycle-bin.md), where you can manually restore it to its Library or delete it from your instance.
 
 * [Creating Content](#creating-content)
 * [Using Content in Your Sites](#using-content-in-your-sites)
@@ -18,7 +18,7 @@ If enabled, all removed content will be temporarily stored in the Library's Recy
 
 Since all supported applications behave in the same way, creating content in an Asset library is essentially the same as creating it in a Site. The only differences are its location and default theme settings.
 
-To create content, first go to the dashboard for the desired Asset Library, and then click on the *application* with which you want to create content. From here, the content creation process is the same as with Site content. See [Content Authoring and Management](../../content_authoring_and_management.html) articles for more information about creating each type of content.
+To create content, first go to the dashboard for the desired Asset Library, and then click on the *application* to create content for. From here, the content creation process is the same as with Site content. See [Content Authoring and Management](../../content_authoring_and_management.html) articles for more information about creating each type of content.
 
 ```note::
    Only active applications appear on a Library's dashboard. To activate or deactivate an application, see `Configuring Asset Libraries <./creating-and-managing-asset-libraries.md#configuring-asset-libraries>`_ for more information.
@@ -28,7 +28,7 @@ To create content, first go to the dashboard for the desired Asset Library, and 
 
 To use Asset Library content in a Site, they must be connected, and the library must have the desired application activated. Once configured, using Asset Library content in your Site works the same way as using Site content. The only difference is that Users must filter available content to display content from connected Asset Libraries.
 
-For example, when mapping content to a page fragment, you can use content from an asset library by filtering displayed content to include content from *Everywhere*. Then, select the desired content in the Item Selector.
+For example, when mapping content to a page fragment, you can use content from an Asset Library by filtering displayed content to include content from *Everywhere*. Then, select the desired content in the Item Selector.
 
 ![Filter content in the Item Selector to include content from Everywhere.](./asset-library-content/images/02.png)
 

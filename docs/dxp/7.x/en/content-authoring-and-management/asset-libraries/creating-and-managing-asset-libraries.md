@@ -1,6 +1,6 @@
 # Creating and Managing Asset Libraries
 
-You can manage Asset Libraries for your DXP instance via the *Asset Libraries* Page in the *Applications* tab of the Global Menu. Here, you can create and configure as many Libraries as needed and determine how each Library is connected to your Sites.
+You can manage Asset Libraries for your DXP instance via the *Asset Libraries* link in the *Applications* tab of the Global Menu. Here, you can create and configure as many Libraries as needed and determine how each Library is connected to your Sites.
 
 ![Create and manage Asset Libraries for your DXP instance via the Asset Libraries Page in the Applications tab of the Global Menu.](./creating-and-managing-asset-libraries/images/01.png)
 
@@ -91,14 +91,14 @@ By default, Asset Libraries include the five following roles:
    By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you’ll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
 ```
 
-Creating or customizing an Asset Library role is the same process as for other kinds of roles. See [Roles and Permissions](../../users-and-permissions/roles_and_permissions.html) documentation for how to create, customize, manage, and assign User roles.
+Creating or customizing an Asset Library role is the same process as for other kinds of roles. See [Roles and Permissions](../../users-and-permissions/roles_and_permissions.html) for how to create, customize, manage, and assign User roles.
 
 ## Deleting an Asset Library
 
-To remove an Asset Library and its contents from your instance, click on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ), and select *Delete*. You are then prompted to confirm this action. Once deleted, all contained assets are removed from your database and are no longer available to previously connected Sites.
+To remove an Asset Library and its contents from your instance, click on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ), and select *Delete*. You are then prompted to confirm the deletion. Once deleted, all contained assets are removed from your database and are no longer available to previously connected Sites.
 
 ```warning::
-   This action cannot be undone. Ensure you're removing the correct Asset Library and that you've backed up any assets you want to keep.
+   Asset Library deletion cannot be undone. Ensure you're removing the correct Asset Library and that you've backed up any assets you want to keep.
 ```
 
 ## Additional Information
