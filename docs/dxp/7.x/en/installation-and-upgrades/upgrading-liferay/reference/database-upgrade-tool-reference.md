@@ -21,14 +21,11 @@ Here are all the upgrade tool command line options:
 
 **--help** or **-h**: Prints the tool's help message.
 
-**--jvm-opts** or **-j** + **[arg]**: Sets any JVM options for the upgrade
-process.
+**--jvm-opts** or **-j** + **[arg]**: Sets any JVM options for the upgrade process.
 
-**--log-file** or **-l** + **[arg]**: Specifies the tool's log file name---the
-default name is `upgrade.log`.
+**--log-file** or **-l** + **[arg]**: Specifies the tool's log file name---the default name is `upgrade.log`.
 
-**--shell** or **-s**: Automatically connects you to the Gogo shell after
-finishing the upgrade process.
+**--shell** or **-s**: Automatically connects you to the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) after finishing the upgrade process.
 
 ### Logging Output
 

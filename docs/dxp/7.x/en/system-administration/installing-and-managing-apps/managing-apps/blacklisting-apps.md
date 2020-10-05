@@ -1,6 +1,6 @@
 # Blacklisting Apps
 
-The bundle blacklist is a convenient way to uninstall or reinstall multiple apps, OSGi bundles (modules), and WAR plugins at once. It saves you the trouble of managing app, module, and plugin installations individually with the [Application Manager](./using-the-app-manager.md) or [Gogo shell](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell).
+The bundle blacklist is a convenient way to uninstall or reinstall multiple apps, OSGi bundles (modules), and WAR plugins at once. It saves you the trouble of managing app, module, and plugin installations individually with the [Application Manager](./using-the-app-manager.md) or [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
 
 ```important::
    The blacklist is an `OSGi configuration <../../system-settings/using-configuration-files.md#creating-configuration-files>`_ that DXP uses to uninstall apps. Using it will prevent any apps listed from being installed until they are removed.
@@ -81,6 +81,6 @@ Congratulations! Now you can manage multiple app, module, and plugin installatio
 ## Additional Information
 
 * [Managing Apps](./using-the-app-manager.md)
-* [Using the Felix Gogo shell](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell)
+* [Using the Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md)
 * [Blacklisting OSGi Components](./blacklisting-osgi-components.md)
 * [Configuring Portlets, Themes, and Layout Templates](./configuring-portlets-themes-and-layout-templates.md)
