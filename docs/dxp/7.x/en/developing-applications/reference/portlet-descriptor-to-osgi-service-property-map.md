@@ -161,7 +161,7 @@ The standard portlet descriptor mappings are first.
 * [<a name="two">2</a>] Multiples of these properties may be used. This results in an array of values.
 * [<a name="three">3</a>] This type is registered as an OSGi service.
 * [<a name="four">4</a>] <https://xmlns.jcp.org/xml/ns/portlet/portlet-app_3_0.xsd>
-* [<a name="five">5</a>] [http://www.liferay.com/dtd/liferay-portlet-app_7_3_0.dtd](@platform-ref@/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html)
+* [<a name="five">5</a>] [http://www.liferay.com/dtd/liferay-portlet-app_7_3_0.dtd](https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html)
 * [<a name="six">6</a>] Here's an example of using multiple `javax.portlet.dependency` properties.
 
     *Old:*
