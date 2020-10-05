@@ -1,6 +1,6 @@
 # Portlet Descriptor to OSGi Service Property Map
 
-Here's a map of portlet XML descriptor values to OSGi service properties for publishing OSGi Portlets. The properties centralize and simplify portlet configuration. They are typically represented as key-value pairs or, more generally, as a Map-like object.
+Here portlet XML descriptor values are mapped to OSGi service properties for publishing OSGi Portlets. The properties centralize and simplify portlet configuration. They are typically represented as key-value pairs or, more generally, as a Map-like object.
 
 The property keys essentially flatten the XML descriptors but resemble the descriptor names. 
 
@@ -21,14 +21,14 @@ The standard portlet descriptor mappings are first.
 
 | portlet.xml XPath | OSGi Portlet Service Property|
 |-------------------|------------------------------|
-|`/portlet-app/container-runtime-option`|not supported for the portlet-app scope|
+|`/portlet-app/container-runtime-option`|not supported|
 |`/portlet-app/custom-portlet-mode`|not supported|
 |`/portlet-app/custom-window-state`|not supported|
 |`/portlet-app/default-namespace`|`javax.portlet.default-namespace=<String>`|
 |`/portlet-app/event-definition`|`javax.portlet.event-definition=<QNameLocalPart>;<QNameURI>[;<PayloadType>][,<AliasQNameLocalPart>;<AliasQNameURI>]` [2](#two)|
 |`/portlet-app/filter`<br/>`/portlet-app/filter/init-param/name`<br/>`/portlet-app/filter-mapping`|[3](#three)<br/>`javax.portlet.init-param.<name>=<value>` [3](#three), [9](#nine)<br/>[3](#three)|
 |`/portlet-app/public-render-parameter`|not supported|
-|`/portlet-app/resource-bundle`|not supported for the portlet-app scope|
+|`/portlet-app/resource-bundle`|not supported|
 |`/portlet-app/security-constraint`|not supported|
 |`/portlet-app/user-attribute`|not supported|
 |`/portlet-app/version`|`javax.portlet.version=<value>`|
@@ -58,7 +58,7 @@ The standard portlet descriptor mappings are first.
 |`/portlet-app/portlet/supported-processing-event`|`javax.portlet.supported-processing-event=<QNameLocalPart>` OR `javax.portlet.supported-processing-event=<QNameLocalPart>;<QNameURI>`  [2](#two)|
 |`/portlet-app/portlet/supported-public-render-parameter`|`javax.portlet.supported-public-render-parameter=<String>`[2](#two)|
 |`/portlet-app/portlet/supported-publishing-event`|`javax.portlet.supported-publishing-event=<QNameLocalPart>` OR `javax.portlet.supported-publishing-event=<QNameLocalPart>;<QNameURI>` [2](#two)|
-|`/portlet-app/portlet/supports/mime-type`|not supported|
+|`/portlet-app/portlet/supports/mime-type`|`javax.portlet.mime-type=<mime-type>`|
 |`/portlet-app/portlet/supports/portlet-mode`|`javax.portlet.portlet-mode=<mime-type>;<portlet-mode>[,<portlet-mode>]*`|
 |`/portlet-app/portlet/supports/window-state`|`javax.portlet.window-state=<mime-type>;<window-state>[,<window-state>]*`|
 
@@ -81,19 +81,18 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/active`|`com.liferay.portlet.active=<boolean>`|
 |`/liferay-portlet-app/portlet/add-default-resource`|`com.liferay.portlet.add-default-resource=<boolean>`|
 |`/liferay-portlet-app/portlet/ajaxable`|`com.liferay.portlet.ajaxable=<boolean>`|
-|`/liferay-portlet-app/portlet/application-type`|`com.liferay.portlet.application-type=full-page-application` or `com.liferay.portlet.application-type=widget`[2](#two)|
 |`/liferay-portlet-app/portlet/asset-renderer-factory`|[3](#three)|
 |`/liferay-portlet-app/portlet/atom-collection-adapter`|[3](#three)|
 |`/liferay-portlet-app/portlet/autopropagated-parameters`|`com.liferay.portlet.autopropagated-parameters=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/configuration-action-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/configuration-path`|not supported|
+|`/liferay-portlet-app/portlet/configuration-path`|`com.liferay.portlet.configuration-path=<String>`|
 |`/liferay-portlet-app/portlet/control-panel-entry-category`|`com.liferay.portlet.control-panel-entry-category=<String>`|
 |`/liferay-portlet-app/portlet/control-panel-entry-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/control-panel-entry-weight`|`com.liferay.portlet.control-panel-entry-weight=<double>`|
 |`/liferay-portlet-app/portlet/css-class-wrapper`|`com.liferay.portlet.css-class-wrapper=<String>`|
 |`/liferay-portlet-app/portlet/custom-attributes-display`|[3](#three)|
 |`/liferay-portlet-app/portlet/ddm-display`|[3](#three)|
-|`/liferay-portlet-app/portlet/facebook-integration`|not supported|
+|`/liferay-portlet-app/portlet/facebook-integration`|`com.liferay.portlet.facebook-integration=<String>`|
 |`/liferay-portlet-app/portlet/footer-portal-css`|`com.liferay.portlet.footer-portal-css=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/footer-portal-javascript`|`com.liferay.portlet.footer-portal-javascript=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/footer-portlet-css`|`com.liferay.portlet.footer-portlet-css=<String>`[2](#two)|
@@ -108,7 +107,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/header-request-attribute-prefix`|`com.liferay.portlet.header-request-attribute-prefix=<String>` [7](#seven)|
 |`/liferay-portlet-app/portlet/header-timeout`|`header-timeout=<int>`|
 |`/liferay-portlet-app/portlet/icon`|`com.liferay.portlet.icon=<String>`|
-|`/liferay-portlet-app/portlet/include`|`com.liferay.portlet.include=<boolean>`|
+|`/liferay-portlet-app/portlet/include`|not supported|
 |`/liferay-portlet-app/portlet/indexer-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/instanceable`|`com.liferay.portlet.instanceable=<boolean>`|
 |`/liferay-portlet-app/portlet/layout-cacheable`|`com.liferay.portlet.layout-cacheable=<boolean>`|
@@ -116,14 +115,11 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/maximize-help`|`com.liferay.portlet.maximize-help=<boolean>`|
 |`/liferay-portlet-app/portlet/open-search-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/parent-struts-path`|`com.liferay.portlet.parent-struts-path=<String>`|
-|`/liferay-portlet-app/portlet/partial-action-serve-resource`|`com.liferay.portlet.partial-action-serve-resource=<boolean>`|
 |`/liferay-portlet-app/portlet/permission-propagator`|[3](#three)|
 |`/liferay-portlet-app/portlet/poller-processor-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/pop-message-listener-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/pop-up-print`|`com.liferay.portlet.pop-up-print=<boolean>`|
 |`/liferay-portlet-app/portlet/portlet-data-handler-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/portlet-dependency-css-enabled`|`com.liferay.portlet.portlet-dependency-css-enabled=<boolean>`|
-|`/liferay-portlet-app/portlet/portlet-dependency-javascript-enabled`|`com.liferay.portlet.dependency-javascript-enabled=<boolean>`|
 |`/liferay-portlet-app/portlet/portlet-layout-listener-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/portlet-name`|not supported|
 |`/liferay-portlet-app/portlet/portlet-url-class`|[3](#three)|
@@ -132,7 +128,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/preferences-unique-per-layout`|`com.liferay.portlet.preferences-unique-per-layout=<boolean>`|
 |`/liferay-portlet-app/portlet/private-request-attributes`|`com.liferay.portlet.private-request-attributes=<boolean>`|
 |`/liferay-portlet-app/portlet/private-session-attributes`|`com.liferay.portlet.private-session-attributes=<boolean>`|
-|`/liferay-portlet-app/portlet/remoteable`|not supported|
+|`/liferay-portlet-app/portlet/remoteable`|`com.liferay.portlet.remoteable=<boolean>`|
 |`/liferay-portlet-app/portlet/render-timeout`|`com.liferay.portlet.render-timeout=<int>`|
 |`/liferay-portlet-app/portlet/render-weight`|`com.liferay.portlet.render-weight=<int>`|
 |`/liferay-portlet-app/portlet/requires-namespaced-parameters`|`com.liferay.portlet.requires-namespaced-parameters=<boolean>`|
@@ -152,12 +148,12 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/trash-handler`|[3](#three)|
 |`/liferay-portlet-app/portlet/url-encoder-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/use-default-template`|`com.liferay.portlet.use-default-template=<boolean>`|
-|`/liferay-portlet-app/portlet/user-notification-definitions`|[3](#three)|
+|`/liferay-portlet-app/portlet/user-notification-definitions`|not supported|
 |`/liferay-portlet-app/portlet/user-notification-handler-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/user-principal-strategy`|`com.liferay.portlet.user-principal-strategy=<String>`|
 |`/liferay-portlet-app/portlet/virtual-path`|`com.liferay.portlet.virtual-path=<String>`|
 |`/liferay-portlet-app/portlet/webdav-storage-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/webdav-storage-token`|declared in the `webdav-storage-token=<string>` WebDavStorage OSGi service property |
+|`/liferay-portlet-app/portlet/webdav-storage-token`|not supported|
 |`/liferay-portlet-app/portlet/workflow-handler`|[3](#three)|
 |`/liferay-portlet-app/portlet/xml-rpc-method-class`|[3](#three)|
 
@@ -215,7 +211,7 @@ The standard portlet descriptor mappings are first.
     	...
     </portlet>
     ```
-
+    
     *New:* 
 
     ```java
@@ -276,7 +272,7 @@ The standard portlet descriptor mappings are first.
     }
     ```
 
-* [<a name="ten">10</a>] Liferay creates each portlet's ID based on the portlet's name (i.e., the `portlet-name` descriptor in `liferay-portlet.xml` or the `javax.portlet.name` OSGi service property). Dashes, periods, and spaces are allowed in the portlet name, but they and all other JavaScript unsafe characters are stripped from the name value that's used for the portlet ID. Therefore, make your portlet name unique in light of the characters that are removed. Otherwise, if you try to deploy a portlet whose ID is the same as a portlet that's already deployed, your portlet deployment fails and Liferay logs this message:
+* [<a name="ten">10</a>] Liferay creates each portlet's ID based on the portlet's name (i.e., the `portlet-name` descriptor in `liferay-portlet.xml` or the `javax.portlet.name` OSGi service property). Dashes, periods, and spaces are allowed in the portlet name, but they and all other JavaScript unsafe characters are stripped from the name value that's used for the portlet ID. Therefore, make your portlet name unique in light of the characters that are removed. Otherwise, if you try to deploy a portlet whose ID is the same as a portlet that's already deployed, your portlet deployment fails and Liferay logs a message like this:
 
     ```
     Portlet id [portletId] is already in use
