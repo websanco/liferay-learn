@@ -25,7 +25,9 @@ You can configure your Library now, or accept the default settings and get start
 
 ## Configuring Asset Libraries
 
-Once you've created an Asset Library, you can configure it at any time by clicking on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ) and selecting *Edit*. Configuration options are organized into three sections: *General*, *Sites*, and *Languages*. <!--IS THE FOLLOWING TEXT RELEVANT, OR TOO MUCH INFO? "You can also access a Library's settings via its dashboard page. Simply click on the *name* of the Asset Library you want to configure, and then click on *Settings*."-->
+Once you've created an Asset Library, you can configure it at any time by clicking on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ) and selecting *Edit*. Configuration options are organized into three sections: *General*, *Sites*, and *Languages*.
+
+You can also access a Library's settings via its dashboard page. Simply click on the *Name* of the Asset Library you want to configure, and then click on *Settings*.
 
 ### General Settings
 
