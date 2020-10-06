@@ -49,19 +49,19 @@ Any workflow task can be used as a start or end parameter for the SLA.
 
 When the item makes it to the event defined here, the SLA timer begins counting. Choose between these options:
 
-| Start Event | Description | Example Using the Single Approver Definition |
-| --- | --- | --- |
-| Process Begins | This corresponds to the start node. | Start the SLA timer when entering the _created_ node. |
-| Enters Task | The SLA clock begins when the workflow transitions to the task. | Start the SLA timer when entering the _Update_ Task. |
-| Leaves Task | The SLA clock begins when the workflow transitions out of the task. | Start the SLA timer when leaving the _Review_ Task. |
+| Start Event | Description |
+| --- | --- |
+| The Start Node | The SLA timer starts when entering the _created_ node. |
+| Entry into a Task | The SLA clock begins when the workflow transitions to the task.
+| Exit from a Task | The SLA clock begins when the workflow transitions out of the task. For example, the SLA timer starts when leaving the _Review_ Task. |
 
 If the item makes it to the Stop event before the defined SLA duration (the deadline), it's _On Time_ according to the SLA. If it fails to make it to the Stop event in the specified duration, it's _Overdue_. When defining the tasks to act as the SLA's Stop Events, choose between these options:
 
-| Stop Event | Description | Example Using the Single Approver Definition |
-| --- | --- | --- |
-| Enters Task | The SLA clock stops when the workflow transitions to the task. | Stop the SLA timer when entering the _Update_ Task. |
-| Leaves Task | The SLA clock stops when the workflow transitions out of the task. | Stop the SLA timer when entering the _Review_ Task. |
-| Process Ends | This corresponds to the end node. | Stop the SLA timer when entering the _approved_ node. |
+| Stop Event | Description |
+| --- | --- |
+| Entry into a Task | The SLA clock stops when the workflow transitions to the task (for example, an _Update_ Task). |
+| Exit from a Task | The SLA clock stops when the workflow transitions out of the task (for example, a _Review_ Task). |
+| The end node | The SLA timer stops when entering the _approved_ node. |
 
 The Pause field defines an event in the workflow when time should stop counting. For the Single Approver workflow, you might choose to pause the SLA timer when the item is in the Update task. The SLA can be paused at any task that falls between the start node and the end node, and it is defined by setting the node(s) when the SLA should be paused. _The SLA timer is paused the entire time a workflow item is in the specified node_.
 
