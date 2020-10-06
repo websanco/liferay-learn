@@ -1,14 +1,14 @@
 # Data Cleanup
 
-When you're done using an obsolete Liferay app or capability, you can remove its data. Data cleanup is done using the Control Panel or a [configuration file](../../../system-administration/system-settings/using-configuration-files.md).
+When you're done using an obsolete Liferay app or capability, you can remove its data. You can use the Control Panel or a [configuration file](../../../system-administration/system-settings/using-configuration-files.md) to do data cleanup.
 
 Here's how to clean up obsolete data:
 
 1. In the *Control Panel*, navigate to *System Settings* &rarr; *Upgrades* (in the *Platform* category) &rarr; *Data Cleanup*. The Data Cleanup screen appears.
 
-    ![Data Cleanup screen](./data-cleanup/images/01.png)
+    ![Data Cleanup provides an interface for removing data from obsolete Liferay applications.](./data-cleanup/images/01.png)
 
-1. Check the modules you want to clean up and click *Save*.
+1. Select the modules you want to clean up and click *Save*.
 
     ```note::
        To save the cleanup settings to a `configuration file <../../../system-administration/system-settings/using-configuration-files.md>`_, click the *Actions* menu and select *Export*.
