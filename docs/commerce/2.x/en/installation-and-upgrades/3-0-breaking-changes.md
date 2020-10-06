@@ -40,7 +40,7 @@ This also affects end users, who now access Commerce management items from the n
 
 ### Why was this change made?
 
-This change was made to keep the navigation scope in the header bar while remaining compliant with DXP 7.3 standards.
+The menu change was made to keep the navigation scope in the header bar while remaining compliant with DXP 7.3 standards. The `commerce-admin-api` and `commerce-admin-web` modules were removed since they are no longer in use with the removal of the old menu location.
 
 ## Files Moved
 
