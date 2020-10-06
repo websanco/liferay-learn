@@ -3,7 +3,7 @@
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
 function copy_template {
-	for zip_dir_name in `find . -name "liferay-*.zip" -type d`
+	for zip_dir_name in `find . -name "liferay-c8m3.zip" -type d`
 	do
 		cp -fr _template/* ${zip_dir_name}
 

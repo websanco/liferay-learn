@@ -1,0 +1,3 @@
+Bundle-Name: Acme C8M3 Web
+Bundle-SymbolicName: com.acme.c8m3.web
+Bundle-Version: 1.0.0
