@@ -4,7 +4,7 @@ With each new DXP release, a feature may not warrant continued enhancements or m
 
 **Maintenance Mode:** The feature is supported but no longer being enhanced.
 
-Obsolete features are eventually either removed or replaced with newer, better features. Before dropping support for an obsolete feature, Liferay marks it *Deprecated*.
+Obsolete features are eventually removed or replaced with newer, better features. Before dropping support for an obsolete feature, Liferay marks it *Deprecated*.
 
 **Deprecated:** The feature will be unsupported as early as the next minor version release. For example, support for a feature deprecated in 7.3 can be dropped as early as 7.4.
 
@@ -13,7 +13,7 @@ Obsolete features are eventually either removed or replaced with newer, better f
 ```
 
 ```important::
-   Please see the `Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
+   Please see `Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
 ```
 
 ## Deprecated Feature Availability
