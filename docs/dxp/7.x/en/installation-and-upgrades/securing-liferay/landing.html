@@ -1,0 +1,72 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Securing Liferay',
+					sectionURL: 'securing-liferay/securing-liferay.html',
+				},
+				{
+					sectionName: 'Authentication Basics',
+					sectionURL: 'securing-liferay/authentication-basics.html',
+				},
+				{
+					sectionName: 'Configuring SSO',
+					sectionURL: 'securing-liferay/configuring_sso.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Token-based Single Sign On Authentication',
+							url: 'securing-liferay/configuring-sso/token-based-authentication.html'
+						},
+						{
+							name: 'Using OAuth 2.0',
+							url: 'securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.html'
+						},
+						{
+							name: 'Authenticating with Kerberos',
+							url: 'securing-liferay/configuring-sso/authenticating-with-kerberos.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Multi-Factor Authentication',
+					sectionURL: 'securing-liferay/multi_factor_authentication.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using Multi-Factor Authentication',
+							url: 'securing-liferay/multi-factor-authentication/using-multi-factor-authentication.html'
+						},
+						{
+							name: 'Multi-Factor Authentication Checkers',
+							url: 'securing-liferay/multi-factor-authentication/multi-factor-authentication-checkers.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Securing Web Services',
+					sectionURL: 'securing-liferay/securing_liferay.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Introduction to Securing Web Services',
+							url: 'securing-liferay/securing-web-services/introduction-to-securing-web-services.html'
+						},
+						{
+							name: 'Setting Service Access Policies',
+							url: 'securing-liferay/securing-web-services/setting-service-access-policies.html'
+						},
+						{
+							name: 'Using Authentication Verifiers',
+							url: 'securing-liferay/securing-web-services/using-authentication-verifiers.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
