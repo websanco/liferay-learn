@@ -1,5 +1,5 @@
 # Workflow Designer Overview
 
-> Subscribers
+> Subscription Required
 
 Coming soon!

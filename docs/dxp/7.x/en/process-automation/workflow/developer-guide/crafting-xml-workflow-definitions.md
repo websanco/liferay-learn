@@ -3,10 +3,10 @@
 All Workflow definitions in Liferay DXP are written in XML format. To craft your own workflow definition, remember that definitions should reflect real life approval processes.
 
 ```tip::
-   Subscribers using DXP can use a `graphical designer <../user-guide/workflow-designer/creating-workflow-tasks.md>_ to create workflows. If you've already begun crafting workflows in XML, you can upload them and continue in the GUI. 
+   Subscribers using DXP can use a `graphical designer <../user-guide/workflow-designer/workflow-designer-overview.md>`_ to create workflows. If you've already begun crafting workflows in XML, you can upload them and continue in the GUI. 
 ```
 
-1. Open the Global Menu (![Global Menu](../../../images/applications-menu.png)). Under Workflow, select _Process Builder_. 
+1. Open the Global Menu (![Global Menu](../../../images/icon-applications-menu.png)). Under Workflow, select _Process Builder_. 
 
 1. To add a new Workflow definition click the ![add](../../../images/icon-add.png) icon. 
 
@@ -260,14 +260,9 @@ The Single Approver workflow is now complete. Now that you see how workflows are
 
 ## Additional Information
 
-[Workflow Definition Node Reference](./workflow-definition-node-reference.md)
-
-[Workflow Task Node Reference](./workflow-task-node-reference.md)
-
-[Using the Script Engine in Workflow](./using-the-script-engine-in-workflow.md)
-
-[Managing Workflows](../user-guide/managing-workflows.md)
-
-[Workflow Designer Overview](../user-guide/workflow-designer-overview.md)
-
-[Understanding Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [Workflow Definition Node Reference](./workflow-definition-node-reference.md)
+* [Workflow Task Node Reference](./workflow-task-node-reference.md)
+* [Using the Script Engine in Workflow](./using-the-script-engine-in-workflow.md)
+* [Managing Workflows](../user-guide/managing-workflows.md)
+* [Workflow Designer Overview](../user-guide/workflow-designer-overview.md)
+* [Understanding Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

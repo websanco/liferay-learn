@@ -1,12 +1,12 @@
 # Using Data Providers to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Introduction to Data Providers](./introduction-to-data-providers.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
+_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see the [Data Providers Overview](./data-providers-overview.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
 
 ## Prerequisites
 
 One example is to populate a Select field for a user's "Country" when collecting personal information on a form.
 
-[Create a form](../../creating-forms.md) that includes the following:
+[Create a form](../creating-forms.md) that includes the following:
 
 * **Country**: a Single Select field.
 
@@ -63,7 +63,7 @@ To add a _Countries of the World_ Data Provider:
 1. Click _Save_ when finished.
 
 ```note::
-   `$..` before `nameCurrentValue` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath/blob/master/README.md>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
+   ``$..`` before ``nameCurrentValue`` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
 ```
 
 ## Using Inputs as Filters
@@ -82,7 +82,7 @@ For example, to apply a region (for example, Americas, Europe, or Oceania) filte
    * **Outputs Path**: `*$..name*`
    * **Output Type**: List
 
-    To understand more about these values, read the [Data Provider documentation](../introduction-to-data-providers.md)).
+    To understand more about these values, read the [Data Provider documentation](../data-providers-overview.md).
 
 ## Granting Data Provider Permissions
 
