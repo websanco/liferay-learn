@@ -4,6 +4,7 @@ Tags and Categories
 User Guide
 ----------
 
+* Organizing Content with Categories and Tags
 * Tagging Content
 * Defining Categories for Content
 * Targeted Vocabularies

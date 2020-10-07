@@ -23,11 +23,11 @@ In Liferay DXP, you can find Categories and Tags under the Categorization panel 
    Only site administrators can manage Categories and Tags in the Categorization panel.
 ```
 
-![Find the Categories and Tags options under the Categorization panel](./organizing-content-with-tags-and-categories/images/01.png)
+![Find the Categories and Tags options under the Categorization panel](./organizing-content-with-categories-and-tags/images/01.png)
 
 In addition to the Categorization panel, you can tag or categorize an asset at creation time or edit an existing asset using the Categorization section.
 
-![Tag and Categorize your content using the Categorization section](./organizing-content-with-tags-and-categories/images/02.png)
+![Tag and Categorize your content using the Categorization section](./organizing-content-with-categories-and-tags/images/02.png)
 
 ## Vocabulary Visibility
 
@@ -40,7 +40,7 @@ When you [create a new Vocabulary](./defining-categories-and-vocabularies-for-co
 
     In the Categories panel, Internal Vocabularies show a *Hidden* icon ![Hidden](../../../images/icon-hidden.png) next to their name.
 
-    ![Tag and Categorize your content using the Categorization section](./organizing-content-with-tags-and-categories/images/06.png)
+    ![Tag and Categorize your content using the Categorization section](./organizing-content-with-categories-and-tags/images/06.png)
 
 This Visibility option is useful when you need to separate internal and external categorization. For example, your Marketing department may want to create Internal categories for describing and organizing web content according to a specific target audience or criteria (for example, "USA visitors", or "High-Margin"), without exposing these Categories to consumers. At the same time, you may want to use Public Categories to provide your users with relevant search results.
 
@@ -49,7 +49,7 @@ Before configuring your Vocabulary's Visibility, consider the following informat
 - Existing Vocabularies from previous Liferay versions have now Public Visibility.
 - Content editors and administrators can use Public or Internal Categories for asset categorization and search.
 
-    ![Administrators can search for assets using Categories in Internal Vocabularies](./organizing-content-with-tags-and-categories/images/09.png)
+    ![Administrators can search for assets using Categories in Internal Vocabularies](./organizing-content-with-categories-and-tags/images/09.png)
 
 - Website visitors can use and discover only Public categories in Pages, Widgets, Fragments, and Searches.
 - Search Widgets in Content Pages won't consider or expose Internal Vocabularies.
@@ -57,7 +57,7 @@ Before configuring your Vocabulary's Visibility, consider the following informat
 - When you map an existing content using Fragments, only Internal Vocabularies are available.
 - If you select All Categories when mapping existing content, only Public Categories are displayed.
 
-    ![Add new Categories from the Categorization section in the Content Editor](./organizing-content-with-tags-and-categories/images/05.png)
+    ![Add new Categories from the Categorization section in the Content Editor](./organizing-content-with-categories-and-tags/images/05.png)
 
 ## Default Vocabularies
 
