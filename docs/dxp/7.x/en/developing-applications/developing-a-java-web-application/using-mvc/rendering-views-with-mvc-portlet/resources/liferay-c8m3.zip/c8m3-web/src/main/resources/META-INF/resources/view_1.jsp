@@ -16,12 +16,12 @@
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
+<p>
+	<strong>View 1</strong>
+</p>
+
 <portlet:renderURL var="view2URL">
 	<portlet:param name="mvcPath" value="/view_2.jsp" />
 </portlet:renderURL>
 
-<p>
-	<strong>C8M3 View 1</strong>
-</p>
-
-<a href="<%= view2URL %>">Visit View 2</a>
+<a href="<%= view2URL %>">Go to View 2</a>
