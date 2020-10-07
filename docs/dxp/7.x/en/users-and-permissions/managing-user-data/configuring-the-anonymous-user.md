@@ -2,13 +2,13 @@
 
 Internet users are increasingly and justifiably concerned about how their personal data is processed by the systems they use. Liferay is aware of the need for functionality to address User data management. [Deleting User data](./sanitizing-user-data.md#the-personal-data-erasure-screen) is the safest way to honor _right to be forgotten_ requests.
 
-When User data must be preserved, automatic anonymization of the data is in order. Users being anonymized must have their identifiers (for example, User ID and User Name) removed from content they've interacted with. Since portal content usually requires this information for its applications to work properly, the User's identifiers must be replaced by something, or someone. Meet *Anonymous Anonymous*, identity swapper *extraordinaire*. This deactivated User is dedicated to be the User whose identifiers are assigned to anonymized content. This identity swap is an important step in the anonymization process, but additional manual intervention may be necessary to truly achieve anonymization.
+When User data must be preserved, automatic anonymization of the data is in order. Users being anonymized must have their identifiers (for example, User ID and User Name) removed from content they've interacted with. Since portal content usually requires this information for its applications to work properly, the User's identifiers must be replaced by something, or someone. That someone is *Anonymous Anonymous*. This deactivated User becomes the User whose identifiers are assigned to anonymized content. This identity swap is an important step in the anonymization process, but additional manual intervention may be necessary to truly achieve anonymization.
 
 ![Anonymized content is presented with the User Anonymous Anonymous's identifying information.](./configuring-the-anonymous-user/images/01.png)
 
 The easiest way to set up a new User as the Anonymous User is to edit an existing Anonymous User configuration, passing in a different User ID. 
 
-To edit an existing configuration:
+To edit an existing configuration,
 
 1. Go to Control Panel &rarr; Configuration &rarr; Instance Settings &rarr; Users &rarr; Anonymous User.
 
