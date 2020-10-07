@@ -1,6 +1,6 @@
 # Patching Liferay
 
-As you develop and maintain DXP instances, you'll want to update them with the latest fixes. Liferay aggregates fixes and makes them available to Enterprise Subscribers in ZIP files called _patches_.
+As Liferay releases fixes, you'll want to keep your DXP instances up to date. Liferay aggregates fixes and makes them available to Enterprise Subscribers in ZIP files called _patches_.
 
 ## Patch Types
 
@@ -9,7 +9,7 @@ There are several different kinds of patches, and they serve different purposes.
 * **Fix Packs:** Resolve the most recent issues.
 * **Security Fix Packs:** Address the latest security issues immediately.
 * **Hotfixes:** Requested by customers to fix business critical DXP issues fast.
-* **Service Packs:** Incorporate larger fixes that require more testing. Service Pack releases also offer DXP built with the Service Pack and bundled with Tomcat.
+* **Service Packs:** Incorporate larger fixes that require more testing. Service Pack releases also include full DXP Service Pack Tomcat bundles.
 
 [Patch Types](./understanding-patch-types) explains all of the patch options.
 
@@ -28,7 +28,7 @@ As you start applying patches regularly, you may need to submit patch informatio
 * [Getting Patch Information](./getting-patch-information.md)
 * [Uninstalling Patches](./uninstalling-patches.md)
 
-## DXP 7.2 Patching Topics
+## Patching DXP 7.2 
 
 The following topics provide best practices for managing patches in DXP 7.2:
 
