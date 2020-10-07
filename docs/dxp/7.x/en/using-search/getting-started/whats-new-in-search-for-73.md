@@ -24,13 +24,13 @@ The Elasticsearch 7 connector bundled with DXP 7.3 uses [Elastic's Java REST Cli
 
 The functionality of the _Liferay Enterprise Search Security_ (formerly _Liferay Connector to X-Pack Security_)  module is included in the _Liferay Connector to Elasticsearch 7_. All customers on CE/DXP 7.3 can connect securely to their Elasticsearch cluster without a [Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) subscription.
 
-The [upgrade](../installing-and-upgrading-a-search-engine/upgrading-search-to-73.md) guide will contain information on moving the encryption configuration into the Elasticsearch 7 connector.
+The [upgrade](../installing-and-upgrading-a-search-engine/upgrading-search-to-73.md) guide contains information on moving the encryption configuration into the Elasticsearch 7 connector.
 
 ### Multiple Elasticsearch Connections
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-Configure connections to multiple Elasticsearch clusters. In Liferay DXP 7.2 it was possible to query against any index (even non-Liferay indices) in the Elasticsearch cluster that Liferay was connected to. It's now possible to query against indices in non-Liferay Elasticsearch clusters. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. This functionality was added primarily to support the Liferay Enterprise Search (LES) [Cross-Cluster Replication](#cross-cluster-replication) feature.
+Configure connections to multiple Elasticsearch clusters. In Liferay DXP 7.2 it was possible to query against any index (even non-Liferay indexes) in the Elasticsearch cluster that Liferay was connected to. It's now possible to query against indexes in non-Liferay Elasticsearch clusters. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. This functionality was added primarily to support the Liferay Enterprise Search (LES) [Cross-Cluster Replication](#cross-cluster-replication) feature.
 
 ### Embedded Mode Replaced with Sidecar
 
@@ -56,7 +56,7 @@ For example,
 liferay-20096-search-tuning-rankings
 ```
 
-If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new DXP indexes will be created automatically; after a full reindex and verifying a successful upgrade, the old indexes can be deleted.
+If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new DXP indexes are created automatically; after a full reindex and verifying a successful upgrade, the old indexes can be deleted.
 
 ### Connections in Search Admin
 
@@ -64,9 +64,9 @@ If upgrading to 7.3 from DXP 7.2 SP2 or earlier, the new DXP indexes will be cre
 
 View the status and health of Elasticsearch connections via the Control Panel's Search entry (found in the Configurations section). See
 
-- the health of each connected Elasticsearch cluster
-- the node names and versions within each cluster
-- the Elasticsearch client versions
+- The health of each connected Elasticsearch cluster
+- The node names and versions within each cluster
+- The Elasticsearch client versions
 
 This replaces the information bar found on the top of the Index Actions page in prior versions.
 
@@ -82,7 +82,7 @@ The UID (or `id`) of index documents now has 1-to-1 parity with the database row
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-The Search widgets now support [Widget Templates]( ./../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) (previously known as Application Display Templates). This allows customizing the visual look and feel of each widget using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like author or modified date can be shown or hidden. Some default templates are provided out of the box for each supported search widget.
+The Search widgets now support [Widget Templates]( ./../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) (previously known as Application Display Templates) for customizing the visual look and feel of each widget using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like `author` or `modified date` can be shown or hidden. Some default templates are provided out of the box for each supported search widget.
 
 ### Similar Results
 
@@ -94,7 +94,7 @@ The Similar Results widget displays a collection of assets similar to the main a
 
 The first version of Similar Results supports Blogs, Message Boards, Documents, and Wikis. Support for additional asset types (both native and custom assets) is possible by implementing an [extension point](../developer-guide/writing-a-similar-results-contributor.md). The logic used to determine document similarity can be configured per Elasticsearch's More Like This [query parameters](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html). 
 
-See the [Similar Results](../search-pages-and-widgets/similar-results.md) article for details.
+See [Similar Results](../search-pages-and-widgets/similar-results.md) for details.
 
 ## Search Tuning
 
@@ -104,17 +104,17 @@ See the [Similar Results](../search-pages-and-widgets/similar-results.md) articl
 
 > Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
 
-Result Rankings allows search administrators to custom tune the result relevancy for a given query using a graphical UI. Result Rankings features three main capabilities to manually tune relevancy:
+Result Rankings are a graphical UI for custom-tuning the result relevancy for a given query. Result Rankings features three main capabilities to tune relevancy manually:
 
-1. Results for a query can be pinned and ordered at the top of the list. If the desired document is not in the original result list, it can be manually added. This allows users to promote high-value results.
-1. Results can be hidden from the result list. This capability can be used to manually remove results that are stale or irrelevant.
-1. Aliases apply the same custom pinned and hidden results to alternate search queries. For example, if a result ranking is created with pinned and hidden results for the query "digital experience platform", adding the aliases "portal" and "dxp" will apply the same pinned and hidden results.
+1. Results for a query can be pinned and ordered at the top of the list. If the desired document is not in the original result list, it can be added manually. This allows users to promote high-value results.
+1. Results can be hidden from the result list. This capability can be used to remove results that are stale or irrelevant.
+1. Aliases apply the same custom pinned and hidden results to alternate search queries. For example, if a result ranking is created with pinned and hidden results for the query "digital experience platform," adding the aliases "portal" and "dxp" apply the same pinned and hidden results.
 
 ### Search Tunings: Synonyms
 
 > Availability: Liferay DXP 7.2 SP1+, Liferay DXP 7.3 GA1+
 
-Synonyms allow search administrators to relate queries with similar meaning, giving equivalent weight to the synonymous queries when searching. For example, the queries "mobile phone", "cell phone", and "hand phone" have equivalent meanings and can be used interchangeably. Defining a synonym set with these three queries will allow users searching for "mobile phone" to find documents containing the words "cell phone" or "hand phone". See the [Synonyms documentation from Elastic](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html).
+Synonyms relate queries with similar meaning, giving equivalent weight to the synonymous queries when searching. For example, the queries "mobile phone", "cell phone", and "hand phone" have equivalent meanings and can be used interchangeably. Defining a synonym set with these three queries shows users searching for "mobile phone" documents containing the words "cell phone" or "hand phone". See the [Synonyms documentation from Elastic](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html).
 
 ## Liferay Enterprise Search (LES)
 
@@ -168,8 +168,8 @@ An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src cod
 
 The Open Source (OSS) version of Elasticsearch 7.9.0 (licensed under Apache 2.0) is bundled with the Liferay CE/DXP 7.3 Tomcat bundles and started simultaneously in a _sidecar_ JVM. This sidecar installation is referred to as _development mode_, and it replaces the previous _embedded_ mode (neither of which are supported for production installations). Sidecar has dedicated properties in the Elasticsearch 7 configuration in the System Settings. By default, it runs on HTTP port 9201. See [Understanding Sidecar](../installing-and-upgrading-a-search-engine/sidecar.md) for more information.
 
-The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to the article on manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/manually-installing-sidecar.md) if your deployment is not able to reach external sites to download resources.
+The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/manually-installing-sidecar.md) if your deployment is not able to reach external sites to download resources.
 
 ## Upgrading to DXP 7.3
 
-Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult with [the upgrade documentation](../installing-and-upgrading-a-search-engine/upgrading-elasticsearch.md) for important information to assist your upgrade journey.
+Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult the [upgrade documentation](../installing-and-upgrading-a-search-engine/upgrading-elasticsearch.md) for important information to assist your upgrade journey.
