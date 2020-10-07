@@ -67,7 +67,7 @@ xpack.security.http.ssl.key: certs/elastic-certificates.key
 xpack.security.http.ssl.certificate: certs/elastic-certificates.crt
 xpack.security.http.ssl.certificate_authorities : ["certs/ca.crt"]
 
-# Remote prod
+# Example production mode settings - 3-node cluster
 cluster.initial_master_nodes:
   - es-node1
   - es-node2
@@ -85,6 +85,7 @@ transport.port: 9302
 > **Related Elasticsearch Documentation:** 
 > - [Important Elasticsearch configuration](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html)
 > - [Security settings in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html)
+> - [Bootstrap Checks, Development vs. production mode](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html)
 
 These properties should have unique values for each node in the cluster:
 
@@ -109,7 +110,11 @@ transport.port: 9300
 The `elasticsearch.yml` configuration is simpler for a single-node cluster:
 
 ```yaml
-# Single node, remote elasticsearch.yml example:
+cluster.name: LiferayElasticsearchCluster
+
+# X-Pack Security
+xpack.security.enabled: true
+
 discovery.type: single-node
 discovery.seed_hosts:
   - es-node1:9300
@@ -121,7 +126,7 @@ transport.port: 9300
 
 This is a fine configuration for development and testing that relies on a remote Elasticsearch server. For production, you should [force the bootstrap checks](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html#_forcing_the_bootstrap_checks) and always configure security (authentication and encryption).
 
-To force the bootstrap check, add a property to the end of `ES_HOME/config/jvm.options`:
+To [force the bootstrap check in a single-node setup](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html#_forcing_the_bootstrap_checks), add a property to the end of `ES_HOME/config/jvm.options`:
 
 ```properties
 # For a single node production cluster
