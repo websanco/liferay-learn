@@ -23,7 +23,7 @@ You can skip this if you'll set up a testing environment using `localhost` or Do
 <your IP> es-node1
 <your IP> es-node2
 <your IP> es-node3
-<your IP> dxp.liferay.com
+<your IP> dxp.example.com
 ```
 
 Use the real IP address of your system, not the loopback address `127.0.0.1`.
