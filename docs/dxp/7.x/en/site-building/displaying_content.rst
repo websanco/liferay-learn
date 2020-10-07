@@ -8,9 +8,9 @@ Displaying Content
    displaying-content/using_the_asset_publisher_widget.rst
    displaying-content/using_the_iframe_widget.rst
    displaying-content/using_fragments.rst
+   displaying-content/using_display_page_templates.rst
    displaying-content/customizing_widgets.rst
    displaying-content/configuring_content_recommendations.rst
-   displaying-content/using_display_page_templates.rst
 
 .. raw:: html
    :file: ../landingpage_template.html

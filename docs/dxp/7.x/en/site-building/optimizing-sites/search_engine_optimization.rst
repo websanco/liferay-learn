@@ -4,5 +4,5 @@ SEO Optimization
 .. toctree::
    :maxdepth: 2
 
-.. include:: /site-building/07-optimizing-sites/01-seo-optimization/README.rst
+.. include:: /site-building/optimizing-sites/01-search-engine-optimization/README.rst
    :start-line: 2

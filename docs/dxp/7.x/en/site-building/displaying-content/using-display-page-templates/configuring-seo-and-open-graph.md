@@ -13,7 +13,7 @@ Create a new template using the Add button (![Add button](../../../images/icon-a
 
 ## Configuring SEO Settings
 
-Search engine optimization (SEO) refers to the methods used to improve your Page's ranking in a search engine results page (SERP). With Liferay DXP, you can create Display Page templates that dynamically configure your displayed content for SEO.
+Search engine optimization (SEO) refers to the methods used to improve your Page's ranking in a search engine results page (SERP). With Liferay DXP, you can create Display Page templates that dynamically configure your displayed content for optimal SEO.
 
 ### HTML Title
 
