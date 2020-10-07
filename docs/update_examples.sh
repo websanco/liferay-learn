@@ -3,7 +3,14 @@
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
 function copy_template {
-	for zip_dir_name in `find . -name "liferay-c8m3.zip" -type d`
+	local zip_dir_name_pattern="liferay-*.zip"
+
+	if [ ! -z ${1} ]
+	then
+		zip_dir_name_pattern="liferay-${1}.zip"
+	fi
+
+	for zip_dir_name in `find . -name ${zip_dir_name_pattern} -type d`
 	do
 		cp -fr _template/* ${zip_dir_name}
 
@@ -34,7 +41,7 @@ function update_examples {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	copy_template
+	copy_template ${1}
 
 	update_examples
 }
