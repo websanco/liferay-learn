@@ -23,7 +23,7 @@ User data deletion and anonymization both happen in the same place: the Personal
 
 1. Click the Actions button for a User (![Actions](../../images/icon-actions.png)) and select *Delete Personal Data*.
 
-   > If you have not deactivated the user, you are asked to do so.
+   > If you have not deactivated the User, you are asked to do so.
 
    The User's Personal Data Erasure screen appears.
 
@@ -31,7 +31,7 @@ You can browse all data the User has posted on the system. Click *Personal Site*
 
 ![From here, you can browse all data the User posted on his or her personal Site.](./sanitizing-user-data/images/01.png)
 
-Click *Regular Sites* to browse any data posted in regular Liferay Sites.
+Click *Regular Sites* to browse data posted in regular Liferay Sites.
 
 ![Choose Regular Sites to browse all data posted by the User on administratively-created Sites.](./sanitizing-user-data/images/02.png)
 
@@ -41,7 +41,7 @@ To review the User's data, click the item. For example, Pepper seems to have pos
 
 To review any entry, click it. You're brought to the application's edit mode (in this case, Blogs), where you can make any changes to the content that are necessary. 
 
-To manage (anonymize or delete) all the items for an application at once: 
+To manage (anonymize or delete) all the items for an application at once, 
 
 1. Click the Actions button (![Actions](../../images/icon-actions.png)) for the application.
 
