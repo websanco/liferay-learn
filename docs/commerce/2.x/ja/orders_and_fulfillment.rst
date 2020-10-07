@@ -5,7 +5,7 @@
    :maxdepth: 2
 
    orders-and-fulfillment/orders.rst
-   orders-and-fulfillment / order_workflows.rst
+   orders-and-fulfillment/order_workflows.rst
    orders-and-fulfillment/subscriptions.md
    orders-and-fulfillment/shipments.rst
 

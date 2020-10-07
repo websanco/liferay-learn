@@ -4,9 +4,9 @@
 .. toctree::
    :maxdepth: 2
 
-   作成および管理する商品/channels.rst
-   作成および管理する商品/product_types.rst
-   作成および管理する商品/products.rst
+   creating-and-managing-products/channels.rst
+   creating-and-managing-products/product_types.rst
+   creating-and-managing-products/products.rst
 
 .. raw:: html
    :file: ../landingpage_template.html

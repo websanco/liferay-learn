@@ -21,21 +21,21 @@
 ~~~~~~~~~~~~~
 
 -  :doc:`/managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types`
-:doc:`/ managing-a-catalog / creating-and-managing-products / product-types / creating-a-simple-product`
-:doc:`/ managing-a-catalog / creating-and-managing-products / product-types / creating-a-grouped-product`
-:doc:`/ managing-a-catalog / creating-and-managing-products / product-types / creating-a-virtual-product`
-:doc:`/ managing-a-catalog / creating-and-managing-products / product-types / virtual-product-reference`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/product-types/creating-a-grouped-product`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/product-types/creating-a-virtual-product`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/product-types/virtual-product-reference`
 
 商品
 ~~~~~~~~
 
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / customizing-your-product-with-product-options`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / adding-skus-to-your-products`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / product-images`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / specifications`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / creating-a-new-product-category`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / organizing-your-catalog-with-product-categories`
-:doc:`/ managing-a-catalog / creating-and-managing-products / products / related-products-up-sells-and-cross-sells`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/customizing-your-product-with-product-options`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/adding-skus-to-your-products`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/product-images`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/specifications`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/creating-a-new-product-category`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories`
+-  :doc:`/managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells`
 
 在庫管理
 ------------------
@@ -46,7 +46,7 @@
 -  :doc:`/managing-a-catalog/managing-inventory/low-stock-action`
 -  :doc:`/managing-a-catalog/managing-inventory/availability-estimates`
 -  :doc:`/managing-a-catalog/managing-inventory/managing-product-publication`
-:doc:`/ managing-a-catalog / managing-inventory / inventory-administration-reference-guide`
+-  :doc:`/managing-a-catalog/managing-inventory/inventory-administration-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/warehouse-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/product-inventory-configuration-reference`
 
