@@ -1,12 +1,14 @@
 # Installing Patches
 
-The patching steps for DXP bundles and DXP application server installations are similar. Since DXP bundles include the Patching Tool preconfigured, you can apply patches right away. DXP application server installations, however, require installing and configuring the Patching Tool before patching.
+> Subscribers
+
+The patching steps for DXP bundles and DXP application server installations are similar. Since DXP bundles include the preconfigured Patching Tool, you can apply patches right away. DXP application server installations, however, require installing and configuring the Patching Tool before patching.
 
 ```warning::
    **Always** `back up <../backing-up.md>`_ your database and installation before patching.
 ```
 
-If you're patching a DXP bundle, continue with the basic patching steps below. If you're patching DXP on an application server, [prepare to patch DXP on an application server](#preparing-to-patch-dxp-on-an-application-server) _before_ following the patching steps.
+If you're patching a DXP bundle, continue with the basic patching steps below. If you're patching DXP on an application server, [make additional preparations](#preparing-to-patch-dxp-on-an-application-server) _before_ following the patching steps.
 
 
 ## Patching Steps
@@ -14,14 +16,14 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
 1.  Download the patch to your `patching-tool/patches` folder---don't unzip the patch.
 
     * Fix Packs and Service Packs are on the [Downloads](https://customer.liferay.com/downloads) page in the Help Center.
-    * Hotfixes are in [Help Center](https://help.liferay.com/hc) tickets
+    * Hotfixes are in [Help Center](https://help.liferay.com/hc) tickets. 
 
 1.  Shut down your application server.
 
     Reasons:
 
     * On Windows systems, files in use are locked and can't be patched.
-    * On Unix-style systems, you can usually replace files that are running but the old ones reside in memory.
+    * On Unix-style systems, you can usually replace files that are running, but the old ones reside in memory.
 
 1.  Install the patch by running the Patching Tool's `install` command from the `patching-tool` folder:
 
@@ -41,7 +43,7 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     Install finished!
     ```
 
-1.  Verify that the patch installation by executing the `info` command and checking the information on the currently installed patches:
+1.  Verify that the patch installed by executing the `info` command and checking the information on the currently installed patches:
 
     ```bash
     ./patching-tool.sh info
@@ -85,10 +87,10 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     rm -rf work/*
     ```
 
-    Delete the application server cache. Please consult the application vendor documentation on where where to find the cache.
+    Delete the application server cache. Please consult the application server vendor's documentation on where where to find the cache.
 
     ```warning::
-       **Do not delete these two files:** ``patching-backup-deps.zip`` and ``patching-backup.zip``. The Patching Tool creates them in the DXP application's `WEB-INF` folder. The Patching Tool examines them to determine previous Fix Pack files to revert before installing a new Fix Pack.
+       **Do not delete these two files:** ``patching-backup-deps.zip`` and ``patching-backup.zip``. The Patching Tool creates them in the DXP application's ``WEB-INF`` folder. The Patching Tool examines them to determine previous Fix Pack files to revert before installing a new Fix Pack.
     ```
 
     ```note::
@@ -124,7 +126,7 @@ Congratulations! Your DXP instance is patched and running.
 
 ## Preparing to Patch DXP on an Application Server
 
-If you installed DXP on an application server, you must first install and configure the Patching Tool before patching DXP.
+If you installed DXP on an application server, you must first install and configure the Patching Tool.
 
 1.  [Install the Patching Tool](./installing-the-patching-tool.md), if you have not yet installed it.
 
