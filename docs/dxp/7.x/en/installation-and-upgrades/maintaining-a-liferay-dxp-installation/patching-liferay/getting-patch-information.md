@@ -1,6 +1,6 @@
 # Getting Patch Information
 
-Having patch level information at your finger tips facilitates maintaining your installation and getting help from Liferay Support. The Patching Tool's `info` command lists the following information:
+You can see patch information at a glance, which helps maintain your installation and get help from Liferay Support. The Patching Tool's `info` command lists the following information:
 
 * Service Pack version
 * Patching Tool version
