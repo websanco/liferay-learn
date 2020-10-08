@@ -24,7 +24,7 @@ Once users begin submitting form entries, you can access the form entry data thr
 
 > Available: Liferay CE/DXP 7.3
 
-To edit form entries 
+To edit form entries:
 
 1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu. Select the site where the form was created.
 1. Navigate to _Content & Data_ &rarr; _Forms_.

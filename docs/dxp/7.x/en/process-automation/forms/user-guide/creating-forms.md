@@ -1,6 +1,6 @@
 # Creating Forms
 
-You can create multi-field forms with the _Forms_ application. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) can create forms. At minimum, they should have permission to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions, see [Roles and Permissions](../../../users-and-permissions/roles_and_permissions.rst).
+You can create multi-field forms with the _Forms_ application. Only authenticated users with the requisite [Process Automation Permissions](./forms-permissions-reference.md) can create forms. At minimum, they should have permission to access the _Site Administration_ menu and the _Forms_ application.) To learn more about DXP Roles and Permissions, see [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
 ![Forms are displayed in List format by default.](./creating-forms/images/01.png)
 
