@@ -1,7 +1,7 @@
 # Creating Collections
 
 ```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7.2>`_.
+   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
 ```
 
 You can create *Manual* or *Dynamic* Collections. For information about the different types of Collections, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
@@ -66,9 +66,9 @@ You can create *Manual* or *Dynamic* Collections. For information about the diff
 
    ![Filter your Dynamic Collection by adding one or more rules.](./creating-collections/images/10.png)
 
-        ```tip::
-           You can add multiple rules to your Filter clicking on the Add button. The final content in the Dynamic Collection is the result of adding all the rules.
-        ```
+    ```tip::
+        You can add multiple rules to your Filter clicking on the Add button. The final content in the Dynamic Collection is the result of adding all the rules.
+    ```
 
    **Content Recommendation:** Enable this option to display content based on user behavior. For more information, see [Configuring Content Recommendations](../site-building/displaying-content/configuring-content-recommendations.md).
 

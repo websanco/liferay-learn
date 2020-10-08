@@ -9,6 +9,7 @@ Displaying Content
    displaying-content/using_the_iframe_widget.rst
    displaying-content/using_fragments.rst
    displaying-content/using_display_page_templates.rst
+   ../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md
    displaying-content/customizing_widgets.rst
    displaying-content/configuring_content_recommendations.rst
 
