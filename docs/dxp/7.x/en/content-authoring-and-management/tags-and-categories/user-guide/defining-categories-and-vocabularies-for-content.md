@@ -39,6 +39,10 @@ You group Categories using [Vocabularies](#defining-vocabularies), and you creat
 
 You create and manage Categories in the open the Site Menu &rarr; *Categorization* &rarr; *Categories* panel. You can also create new Categories from the Categorization section in the Content Editor, using the Select button for each Vocabulary.
 
+```important::
+   You can create a maximum of 150 Categories in one Vocabulary.
+```
+
 ![Add new Categories from the Categorization section in the Content Editor](./defining-categories-and-vocabularies-for-content/images/04.png)
 
 ### Creating Categories
