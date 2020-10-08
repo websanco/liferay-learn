@@ -1,6 +1,6 @@
 # Uninstalling Patches
 
-After you install a patch, you may determine that you're not ready for the patch and decide to restore your installation to a previous patch level. Here you'll learn how to:
+After you install a patch, you may decide to restore your installation to a previous patch level. Here you'll learn how to
 
 * Uninstall Patches
 * Revert (uninstall) all patches at once.
@@ -27,7 +27,7 @@ If you want to remove all or most of your patches, it may be easier to use the P
 
     All of the patches are removed from your `patches` folder.
 
-1. Bring your installation up to a desired patch level, by [installing the applicable patches](./installing-patches.md).
+1. Bring your installation back up to a desired patch level by [installing the applicable patches](./installing-patches.md).
 
 ```tip::
    It's helpful to store your patches in a convenient location in case you want to restore your installation to a particular patch level. You can always download fix packs again from the `Customer Portal <https://customer.liferay.com/downloads>`_.
