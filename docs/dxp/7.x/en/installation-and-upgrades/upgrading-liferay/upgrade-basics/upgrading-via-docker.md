@@ -1,6 +1,6 @@
 # Upgrading Via Docker
 
-Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/docker-container-basics.md) or point a new Liferay on-premises installation to the upgraded database.
+Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md) or point a new Liferay on-premises installation to the upgraded database.
 
 ```important::
    Don't have Docker? Go here first: `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_
@@ -55,7 +55,7 @@ Here are the steps for upgrading with a Docker image:
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
-1. Run the Docker image [mounted](../../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
+1. Run the Docker image [mounted](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
 
     ```bash
     docker run -it -p 8080:8080 \
@@ -64,7 +64,7 @@ Here are the steps for upgrading with a Docker image:
      liferay/[place image name here]:[place tag here]
     ```
 
-    The `-v new-version:/mnt/liferay` arguments bind mount the host's `new-version` folder to the container's `/mnt/liferay` folder. Please see [Providing Files to the Container](../../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md) for more information on the mapping files to the container's Liferay Home.
+    The `-v new-version:/mnt/liferay` arguments bind mount the host's `new-version` folder to the container's `/mnt/liferay` folder. Please see [Providing Files to the Container](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) for more information on the mapping files to the container's Liferay Home.
 
     The parameter `-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true` triggers the database upgrade.
 
@@ -89,7 +89,7 @@ Your database upgrade is now complete!
 If you want to continue using the new Liferay version via Docker, leave off the ``-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`` environment setting from the ``docker run ...`` command you use to create the new container.
 
 ```note::
-   `Docker Container Basics <../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/docker-container-basics.md>`_ demonstrates creating, stopping, and restarting Docker containers.
+   `Docker Container Basics <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md>`_ demonstrates creating, stopping, and restarting Docker containers.
 ```
 
 ## Conclusion
