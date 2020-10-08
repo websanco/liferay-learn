@@ -86,13 +86,13 @@ The *Navigation Bars* panel includes Fragments for page headers. See [Master Pag
 
 See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information on how to use Widgets for your Content Page.
 
-   ```note::
-   While portlets are rendered according to `render-weight <https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
+```note::
+   While widgets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Widgets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
 ```
 
 ## Contents
 
-The *Contents* panel provides a list of the web content on the page. This includes content displayed in a widget and content mapped to content fields. Click the *Contents* button (![Contents](../../../images/icon-contents.png)) to open the *Contents* panel. From this panel, you can perform a variety of actions to edit and manage web content. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
+The *Contents* panel provides a list of the web content on the page. This includes content displayed in a widget and content mapped to content fields. Click the *Contents* button (![Contents](../../../images/icon-list-ul.png)) to open the *Contents* panel. From this panel, you can perform a variety of actions to edit and manage web content. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
 
 ## Page Structure
 
@@ -102,15 +102,15 @@ The *Contents* panel provides a list of the web content on the page. This includ
 
 ## Page Design Options
 
-Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-look-and-feel.png)) to change the theme or manage other options for the page. These options are further explored in [Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel).
+Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-format.png)) to change the theme or manage other options for the page. These options are further explored in [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel).
 
 ## Comments
 
-You can comment on a Page Fragment to discuss changes and collaborate. Comments are disabled by default. See [Using Fragment Comments](./using-fragment-comments.md) to enable them.
+Use Page Fragment *comments* to collaborate with team members while developing your Content Page. To make a comment, begin editing a Content Page and click on the Page Fragment you want to annotate. Then click on the *Comment* icon (![Comment icon](../../../images/icon-comments-w.png)) for the Fragment. You can view and respond to open fragment comments via the *Comments* panel in the Content Page sidebar.<!--FINISH--> If comment mentions are enabled, you can mention Users with Page update permissions as part of your comment. See [Mentioning Users](./../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) for more information.
 
 ## Liferay DXP 7.1 and 7.2
 
-Unlike Widget Pages, Content Pages can only be edited through the *Site Builder* and cannot be edited live on the page. Any edits that you make to a page are saved as a draft until you publish the page. Subsequent changes after the initial publication are again saved as a draft, without affecting the live page, until the page is published again. 
+Unlike Widget Pages, Content Pages can only be edited through the *Site Builder* and cannot be edited live on the page. Any edits that you make to a page are saved as a draft until you publish the page. Subsequent changes after the initial publication are again saved as a draft, without affecting the live page, until the page is published again.
 
 ### Creating Content Pages
 
