@@ -4,7 +4,7 @@ With REST Builder, you can define the API you want to build, and REST Builder pr
 
 ## Deploy an Example REST API
 
-To see REST Builder in action, you can deploy an example API that retrieves Web Content articles by the user ID that created them. Once you understand how this simple example works, you can create APIs for your own applications. 
+To see REST Builder in action, you can deploy an example API that retrieves a dummy product by its ID in a catalog. Once you understand how this simple example works, you can create APIs for your own applications. 
 
 1. Start the Liferay DXP Docker image:
 
@@ -12,7 +12,7 @@ To see REST Builder in action, you can deploy an example API that retrieves Web 
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the `.zip` archive containing the [Acme Journal Article API Expansion](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip):
+1. Download and unzip the `.zip` archive containing the [Acme Product Catalog API](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/headless-delivery/producing-apis-with-rest-builder/rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip -O
@@ -39,7 +39,7 @@ To see REST Builder in action, you can deploy an example API that retrieves Web 
     STARTED com.acme.r3b2.impl_1.0.0
     ```
 
-1. Log into your DXP instance and navigate to the Product Menu &rarr; _Control Panel_ &rarr; _Gogo Shell._
+1. Log into your DXP instance and navigate to the _Global Menu_ ( ![Global Menu icon](../../images/icon-applications-menu.png) ) &rarr; _Control Panel_ &rarr; _Gogo Shell._
 
 1. In the Gogo Shell prompt, type the following command:
 
@@ -47,31 +47,24 @@ To see REST Builder in action, you can deploy an example API that retrieves Web 
     jaxrs:check
     ```
 
-    The page lists all of the installed JAX-RS bundles, including the newly deployed API, `R3B2.Acme.Journal.Article.Expansion`. The API is now deployed and ready for you to call.
+    The page lists all of the installed JAX-RS bundles, including the newly deployed API, `R3B2.Acme.Product.Catalog`. The API is now deployed and ready for you to call.
 
-    ![The newly deployed API (named R3B2.Acme.Journal.Article.Expansion) is listed as a result from the command, and ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
-
-1. Add a [basic content article](../../../content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.md) you can later retrieve using the API.
+    ![The newly deployed API (named R3B2.Acme.Product.Catalog) is listed as a result from the command, and ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
 
 1. Test the API by running the following command from your terminal:
 
     ```bash
-    curl -u 'test@liferay.com:test' "localhost:8080/o/journal-article-expansion/v1.0/entities/{userId}"
+    curl -u 'test@liferay.com:test' "localhost:8080/o/product-catalog/v1.0/entities/{productId}"
     ```
 
-    If you use the `userId` that owns the article, the query returns the content, ID, title, and User ID in a JSON object:
+    Substitute a number between 1 and 3 for `{productId}`. The query returns a corresponding product's ID, name, and price wrapped in a JSON object:
 
     ```json
     {
-        "content" : "<?xml version=\"1.0\"?>\n\n<root available-locales=\"en_US\" default-locale=\"en_US\">\n\t<dynamic-element name=\"content\" type=\"text_area\" index-type=\"text\" instance-id=\"psqx\">\n\t\t<dynamic-content language-id=\"en_US\"><![CDATA[<p>test content</p>]]></dynamic-content>\n\t</dynamic-element>\n</root>",
-        "id" : "36528",
-        "title" : "Web Content A",
-        "userId" : 20126
+        "name" : "Folding Chair",
+        "price" : 15,
+         "productId" : 1
     }
-    ```
-
-    ```tip::
-       You can query your database to find the ``userId`` that added the article.
     ```
 
 Congratulations, you've successfully deployed and used a new REST API.
@@ -122,11 +115,11 @@ Define these fields using this structure:
 
 ```
 apiDir: "../r3b2-api/src/main/java"
-apiPackagePath: "com.acme.r3b2.journal.article.expansion"
+apiPackagePath: "com.acme.r3b2.product.catalog"
 application:
-    baseURI: "/journal-article-expansion"
-    className: "JournalArticleExpansionApplication"
-    name: "R3B2.Acme.Journal.Article.Expansion"
+    baseURI: "/product-catalog"
+    className: "ProductCatalogApplication"
+    name: "R3B2.Acme.Product.Catalog"
 author: "Liferay"
 ```
 
@@ -138,11 +131,11 @@ The first section to add is the information block:
 
 ```
 info:
-  description: "Extra API for Liferay journal articles"
+  description: "EAPI to return a product from a catalog."
   license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-  title: "Journal Article API Expansion"
+  title: "Product Catalog API"
   version: v1.0
 openapi: 3.0.1
 ```
@@ -159,28 +152,29 @@ Define a `schema` block for each entity you want to represent:
 
 ```
 components:
-  schemas:
-    Article:
-      description: A journal article's content
-      properties:
-        userId:
-          description: The author's user ID
-          type: integer
-        id:
-          description: The article's id
-          type: string
-        title:
-          description: The article's title
-          type: string
-        content:
-          description: The article content as XML
-          type: string
-      type: object
+    schemas:
+        Product:
+            description:
+                A product with an ID, name, and price.
+            properties:
+                name:
+                    description:
+                        The product's name
+                    type: string
+                price:
+                    description:
+                        The product's price, in dollars
+                    type: integer
+                productId:
+                    description:
+                        The product's ID
+                    type: integer
+            type: object
 ```
 
-In this example, a schema called `Article` represents the important data for the use of this API. The `Article` entity contains an integer (`userId`) and three string values (`id`, `title`, and `content`) as its fields (or `properties`), which this API returns. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
+In this example, a schema called `Product` represents the important data for the use of this API. The `Product` entity contains one string value and two integers as fields (or `properties`), which this API returns. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
 
-Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schema is called `Article`, the implementation logic belongs in the `ArticleResourceImpl` class.
+Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schema is called `Product`, the implementation logic belongs in the `ProductResourceImpl` class.
 
 ### Define Your APIs
 
@@ -188,24 +182,24 @@ Finally, add the `paths` block. This must include all APIs that you plan to impl
 
 ```
 paths:
-  "/entities/{userId}":
-    get:
-      operationId: getFirstArticleByUser
-      parameters:
-        - in: path
-          name: userId
-          required: true
-          schema:
-            type: integer
+    "/entities/{productId}":
+        get:
+            operationId: getProduct
+            parameters:
+                - in: path
+                  name: productId
+                  required: true
+                  schema:
+                      type: integer
 ```
 
 ```tip::
    Paths can be added for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
 ```
 
-The path (`entities/{userId}`) specifies that this API (`getFirstArticleByUser`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/journal-article-expansion/v1.0/entities/{userId}`.
+The path (`entities/{productId}`) specifies that this API (`getProduct`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/product-catalog/v1.0/entities/{productId}`.
 
-The value you substitute in for `userId` is used as the parameter with the matching name.
+The value you substitute in for `productId` is used as the parameter with the matching name.
 
 Beneath the `parameters` block (and within the `get` block), add in a `responses` block to define at least the response for a successful call (indicated by a `200` response):
 
@@ -215,19 +209,19 @@ responses:
         content:
             application/json:
                 schema:
-                    $ref: "#/components/schemas/Article"
+                    $ref: "#/components/schemas/Product"
             application/xml:
                 schema:
-                    $ref: "#/components/schemas/Article"
-        description: "Return the first article found by the User with the given User ID"
+                    $ref: "#/components/schemas/Product"
+        description: "Returns the product matching the given product ID."
 ```
 
-This `responses` block specifies that a successful call returns an `Article`. The string `#/components/schemas/Article` references the schema defined earlier in the same file, allowing REST Builder to use the `Article` schema as the return type for this API.
+This `responses` block specifies that a successful call returns a `Product`. The string `#/components/schemas/Product` references the schema defined earlier in the same file, allowing REST Builder to use the `Product` schema as the return type for this API.
 
 Lastly, add a `tags` definition for this path, beneath the `responses` block:
 
 ```
-tags: ["Article"]
+tags: ["Product"]
 ```
 
 The tag specifies information that is added to the generated documentation when REST Builder annotates your scaffolding code. The tag name should reflect the name of your schema.
@@ -246,46 +240,35 @@ REST Builder uses your configuration and populates both your `api` and `impl` cl
 
 ## Add Your Implementation Logic
 
-The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in ``rest-openapi.yaml`` (in this example, ``ArticleResourceImpl.java``).
+The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `ProductResourceImpl.java`).
 
 ```tip::
-   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` within your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/java/com/acme/r3b2/journal/article/expansion/internal/resource/v1_0/``.
+   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` within your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/``.
 ```
 
 The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class and add the implementation of your API as an overridden method:
 
 ```java
 @Override
-    public Article getFirstArticleByUser(Integer userId) {
+    public Product getProduct(Integer productId) {
 
     return null;
 }
 ```
 
-This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if an `Article` is not found (see below).
+This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if a `Product` is not found (see below).
 
 Finally, add the business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema, so you must create an empty object and then add your values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
 
 ```java
-List<JournalArticle> journalArticles = JournalArticleLocalServiceUtil.getArticles();
+Product chair = new Product();
 
-for (JournalArticle journalArticle : journalArticles) {
-    if (journalArticle.getUserId() == userId.longValue()) {
-        Article article = new Article();
-
-        article.setUserId((int)journalArticle.getUserId());
-        article.setId(journalArticle.getArticleId());
-        article.setTitle(journalArticle.getTitle());
-        article.setContent(journalArticle.getContent());
-
-        return article;
-    }
-}
-
-return null;
+chair.setProductId(Integer.valueOf(1));
+chair.setName("Folding Chair");
+chair.setPrice(Integer.valueOf(15));
 ```
 
-This example uses [`JournalArticleLocalServiceUtil`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_DXP_GIT_TAG$]/modules/apps/journal/journal-api/src/main/java/com/liferay/journal/service/JournalArticleLocalServiceUtil.java) to retrieve all articles, and then compares their authors with the `userId` from the request to return the first match.
+In this example, a simple `LinkedHashMap` is populated with a few products, and the `getProduct` method returns the product from the `LinkedHashMap` with the matching `productId`. See [`ProductResourceImpl.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/headless-delivery/producting-apis-with-rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip/r3b2-impl/src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/ProductResourceImpl.java) for the full implementation.
 
 ## Conclusion
 
