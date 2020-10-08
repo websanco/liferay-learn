@@ -1,6 +1,6 @@
-# Configuring DXP Containers
+# Configuring Containers
 
-Everything that is configurable in a DXP installation is configurable in a DXP Docker container.
+Everything that is configurable in a Liferay installation is configurable in a Liferay Docker container.
 
 Here are the most common things to configure:
 
@@ -34,9 +34,9 @@ The container runs with the `LIFERAY_JVM_OPTS` value appended to Tomcat's `CATAL
 
 ### Replacing the setenv.sh File
 
-Another method of configuring JVM options involves overriding Tomcat's `setenv.sh` script. A fast way to create a `setenv.sh` script is to copy one from a DXP container. Here's how to modify a copy of the script and use it in a new container:
+Another method of configuring JVM options involves overriding Tomcat's `setenv.sh` script. A fast way to create a `setenv.sh` script is to copy one from a Liferay container. Here's how to modify a copy of the script and use it in a new container:
 
-1. If you have an existing DXP container, start it. Otherwise, run a new one.
+1. If you have an existing Liferay container, start it. Otherwise, run a new one.
 
     ```bash
     docker run -it --name tmp-dxp -p 8080:8080 liferay/dxp:[tag]
@@ -48,7 +48,7 @@ Another method of configuring JVM options involves overriding Tomcat's `setenv.s
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-1. [Stop the container](./dxp-docker-container-basics.md#stopping-a-container).
+1. [Stop the container](./docker-container-basics.md#stopping-a-container).
 
 1. Set the JVM options in your copy of `setenv.sh`.
 
@@ -72,19 +72,19 @@ The container uses your `setenv.sh` script's JVM options.
 ```
 
 ```note::
-   See `DXP Docker Container Basics <./dxp-docker-container-basics.md>`_ for details on starting and operating DXP containers.
+   See `Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating Liferay containers.
 ```
 
 ## Portal Properties
 
-DXP container [Portal Properties](../../reference/portal-properties.md) can be overridden in these two ways:
+Container [Portal Properties](../../reference/portal-properties.md) can be overridden in these two ways:
 
 * [Using Liferay Env Variables](#using-liferay-env-variables)
 * [Using a Portal Properties File](#using-a-portal-properties-file)
 
 ### Using Liferay Env Variables
 
-There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env properties override a DXP Docker container's Portal Properties.
+There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env properties override a Liferay Docker container's Portal Properties.
 
 1. In the [Portal Properties](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html) online description, find the property you want to override.
 
@@ -105,14 +105,14 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
     ```
 
     ```note::
-       See `DXP Docker Container Basics <./dxp-docker-container-basics.md>`_ for details on starting and operating the containers.
+       See `Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating the containers.
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _Portal Properties_.
 
 ### Using a Portal Properties File
 
-You can override a DXP container's Portal Properties using a `portal-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
+You can override a container's Portal Properties using a `portal-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
 
 1. Create a host folder and a subfolder called `files`.
 
@@ -228,7 +228,7 @@ The properties are visible in the Control Panel at _Configuration_ &rarr; _Serve
 
 ## System Settings
 
-DXP System Settings can be configured in the [Control Panel](../../../system-administration/system-settings/system-settings.md) or by providing [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
+Liferay System Settings can be configured in the [Control Panel](../../../system-administration/system-settings/system-settings.md) or by providing [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
 
 Modify the System Settings using one of these ways:
 
@@ -252,7 +252,7 @@ If you have not yet created a container, follow these steps to provide a `.confi
     cp ~/*.config [host folder path]/files/osgi/configs
     ```
 
-1. Run the DXP container with a `-v` option that bind mounts your host folder:
+1. Run the container with a `-v` option that bind mounts your host folder:
 
     ```bash
     docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
@@ -262,7 +262,7 @@ If you have not yet created a container, follow these steps to provide a `.confi
        Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
     ```
 
-The system component configurations are visible in DXP's Control Panel at _Configuration_ &rarr; _System Settings_, in the screen for that component.
+The system component configurations are visible in the Control Panel at _Configuration_ &rarr; _System Settings_, in the screen for that component.
 
 ### Applying Configuration Files at Run Time
 
@@ -274,12 +274,12 @@ docker cp [config file] [container]:/opt/liferay/osgi/configs
 
 ## Conclusion
 
-Now you know how to configure a DXP container's JVM options, Portal Properties, DXP image Env variable, System Properties, and System Settings.
+Now you know how to configure a Liferay container's JVM options, Portal Properties, image Env variable, System Properties, and System Settings.
 
 ## Additional Information
 
-* [DXP Docker Container Basics](./dxp-docker-container-basics.md)
-* [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)
+* [Docker Container Basics](./docker-container-basics.md)
+* [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
 * [Patching DXP in Docker](./patching-dxp-in-docker.md)

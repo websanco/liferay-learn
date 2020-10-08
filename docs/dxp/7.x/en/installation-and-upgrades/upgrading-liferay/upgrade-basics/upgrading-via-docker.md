@@ -1,6 +1,6 @@
 # Upgrading Via Docker
 
-Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md) or point a new Liferay on-premises installation to the upgraded database.
+Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/docker-container-basics.md) or point a new Liferay on-premises installation to the upgraded database.
 
 ```important::
    Don't have Docker? Go here first: `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_
@@ -89,7 +89,7 @@ Your database upgrade is now complete!
 If you want to continue using the new Liferay version via Docker, leave off the ``-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`` environment setting from the ``docker run ...`` command you use to create the new container.
 
 ```note::
-   `Docker Container Basics <../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md>`_ demonstrates creating, stopping, and restarting Docker containers.
+   `Docker Container Basics <../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/docker-container-basics.md>`_ demonstrates creating, stopping, and restarting Docker containers.
 ```
 
 ## Conclusion

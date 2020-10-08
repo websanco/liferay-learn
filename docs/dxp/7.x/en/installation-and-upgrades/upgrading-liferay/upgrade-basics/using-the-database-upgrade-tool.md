@@ -89,7 +89,7 @@ You have completed the database upgrade and resolved any issues.
 
 Now that the database upgrade is complete, test it.
 
-1. If you're upgrading to a new Liferay Docker image, point your image to the upgraded database and validate Liferay with the database. Please see [Configuring Liferay Containers](../../installing-liferay/using-liferay-dxp-docker-images/configuring-dxp-containers.md) for more information.
+1. If you're upgrading to a new Liferay Docker image, point your image to the upgraded database and validate Liferay with the database. Please see [Configuring Liferay Containers](../../installing-liferay/using-liferay-dxp-docker-images/configuring-containers.md) for more information.
 
 1. Examine the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 

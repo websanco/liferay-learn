@@ -1,6 +1,6 @@
 # Running Scripts in Containers
 
-If there's more that you want to do in the DXP container beyond setting up Tomcat and DXP files, deploying arifacts, and applying patches, you can use scripts. The container scans for scripts in specific folders at several points in its [lifecycle](./dxp-container-lifecycle-and-api.md). The following table describes the script insertion points.
+If there's more that you want to do in the Liferay container beyond setting up Tomcat and Liferay files, deploying arifacts, and applying patches, you can use scripts. The container scans for scripts in specific folders at several points in its [lifecycle](./container-lifecycle-and-api.md). The following table describes the script insertion points.
 
 | Lifecycle Phase | Description | Target Container Folder |
 | :-------------- | :---------- | :---------------------- |
@@ -13,7 +13,7 @@ The following sections demonstrate creating and running scripts in the above-men
 
 ## Running Scripts During the Configure Phase
 
-If there are more ways that you want to configure Tomcat and DXP than what the Configure Phase offers, implement them in a Configure Phase script. Please see [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md#lifecycle) for details on the Configure Phase.
+If there are more ways that you want to configure Tomcat and Liferay than what the Configure Phase offers, implement them in a Configure Phase script. Please see [Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) for details on the Configure Phase.
 
 Here are steps for setting up Configure Phase scripts using a bind mount.
 
@@ -126,6 +126,6 @@ Now you know how to execute scripts in all parts of the container's lifecycle.
 
 ## Additional Information
 
-* [DXP Docker Container Basics](./dxp-docker-container-basics.md)
-* [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)
+* [Docker Container Basics](./docker-container-basics.md)
+* [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)

@@ -1,6 +1,6 @@
 # Installing Apps and Other Artifacts to Containers
 
-Applications and other artifacts (such as [DXP activation keys](../../setting-up-liferay-dxp/activating-liferay-dxp.md)) are installed to DXP Docker containers via the container's `/mnt/liferay/deploy` folder. The container entry point symbolically links the `/mnt/liferay/deploy` folder to the container's `[Liferay Home]/deploy` folder (i.e., `/opt/liferay/deploy`). Any artifacts that you provide to the `/mnt/liferay/deploy` folder are auto-deployed to DXP.
+Applications and other artifacts (such as [DXP activation keys](../../setting-up-liferay-dxp/activating-liferay-dxp.md)) are installed to DXP Docker containers via the container's `/mnt/liferay/deploy` folder. The container entry point symbolically links the `/mnt/liferay/deploy` folder to the container's `[Liferay Home]/deploy` folder (i.e., `/opt/liferay/deploy`). Any artifacts that you provide to the `/mnt/liferay/deploy` folder are auto-deployed to Liferay.
 
 Here are two ways to install artifacts:
 
@@ -33,14 +33,14 @@ Here are the steps:
     docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-DXP launches and installs the artifact. The container reports a message like this:
+Liferay launches and installs the artifact. The container reports a message like this:
 
 ```message
 [LIFERAY] The directory /mnt/liferay/deploy is ready. Copy files to [host folder]/deploy on the host operating system to deploy modules to Liferay Portal at runtime.
 ```
 
 ```note::
-   After DXP launches, you can install additional artifacts to DXP by copying them to your ``[host folder]/deploy`` folder.
+   After Liferay launches, you can install additional artifacts to Liferay by copying them to your ``[host folder]/deploy`` folder.
 ```
 
 ## Installing Artifacts Using `docker cp`
@@ -51,12 +51,12 @@ Use a `docker cp` command like this one to copy your artifact to your running co
 docker cp ~/my-apps/some-app.lpkg [container]:/mnt/liferay/deploy
 ```
 
-Now you know how to install apps and other artifacts to DXP.
+Now you know how to install apps and other artifacts to Liferay.
 
 ## Additional Information
 
-* [DXP Docker Container Basics](./dxp-docker-container-basics.md)
+* [Docker Container Basics](./docker-container-basics.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
-* [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)
-* [Configuring DXP Containers](./configuring-dxp-containers.md)
+* [Container Lifecycle and API](./container-lifecycle-and-api.md)
+* [Configuring Containers](./configuring-containers.md)
 * [Patching DXP in Docker](./patching-dxp-in-docker.md)

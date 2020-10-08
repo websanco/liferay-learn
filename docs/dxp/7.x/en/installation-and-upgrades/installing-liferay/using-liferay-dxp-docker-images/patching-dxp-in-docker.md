@@ -82,11 +82,11 @@ There are two methods for installing patches to containers:
 
 Here are the steps for installing a patch to your existing container:
 
-1. [Stop your current container](./dxp-docker-container-basics.md#stopping-a-container.md).
+1. [Stop your current container](./docker-container-basics.md#stopping-a-container.md).
 
 1. [Download](https://customer.liferay.com/downloads) the patch and copy it to a folder in a volume or [bind mount](./providing-files-to-the-container.md) that maps to the container's `/mnt/liferay/patching` folder.
 
-1. [Restart your container](./dxp-docker-container-basics.md#restartings-a-container).
+1. [Restart your container](./docker-container-basics.md#restartings-a-container).
 
 ### Installing to a New Container
 
@@ -126,7 +126,7 @@ The Patching Tool installs the patch and DXP launches.
 
 If you want to revert a patch from a container or install a different patch to a patched container, you must remove the container and create a new one.
 
-1. [Stop the container](./dxp-docker-container-basics.md#stopping-a-container).
+1. [Stop the container](./docker-container-basics.md#stopping-a-container).
 
     ```bash
     docker stop [container]
@@ -175,7 +175,7 @@ After the database is upgraded, run your container that uses that database.
 ## Additional Information
 
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-* [DXP Docker Container Basics](./dxp-docker-container-basics.md)
+* [Docker Container Basics](./docker-container-basics.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
-* [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)
+* [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)

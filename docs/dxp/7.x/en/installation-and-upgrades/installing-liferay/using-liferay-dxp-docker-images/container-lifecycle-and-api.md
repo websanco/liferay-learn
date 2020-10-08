@@ -1,9 +1,9 @@
-# DXP Container Lifecycle and API
+# Container Lifecycle and API
 
-At a high level, the container starts Tomcat with DXP deployed on it. Additionally, however, the container entry point provides an API for executing these use cases:
+At a high level, the container starts Tomcat with Liferay deployed on it. Additionally, however, the container entry point provides an API for executing these use cases:
 
 * Invoking scripts
-* Configuring Tomcat and DXP
+* Configuring Tomcat and Liferay
 * Deploying artifacts
 * Installing patches
 * Updating the Patching Tool
@@ -14,10 +14,10 @@ The container provides an API for triggering and configuring these use cases. It
 
 After you create a container in an environment, the container entry point executes the following lifecycle phases in that environment:
 
-1. **Pre-configure:** [Runs user-provided scripts](./running-scripts-in-containers.md) before configuring Tomcat and DXP.
-1. **Configure:** Prepares for running DXP on Tomcat.
-    1. [Set Tomcat's Java runtime environment](./configuring-dxp-containers.md#jvm-options).
-    1. [Copy user-provided files](./configuring-dxp-containers.md) to [Liferay Home](../../reference/liferay-home.md).
+1. **Pre-configure:** [Runs user-provided scripts](./running-scripts-in-containers.md) before configuring Tomcat and Liferay.
+1. **Configure:** Prepares for running Liferay on Tomcat.
+    1. [Set Tomcat's Java runtime environment](./configuring-containers.md#jvm-options).
+    1. [Copy user-provided files](./configuring-containers.md) to [Liferay Home](../../reference/liferay-home.md).
     1. [Run user-provided scripts](./running-scripts-in-containers.md).
     1. [Deploy user-provided artifacts](./installing-apps-and-other-artifacts-to-containers.md).
     1. [Update the Patching Tool](./patching-dxp-in-docker.md#updating-the-patching-tool) with the user-provided version.
@@ -28,7 +28,7 @@ After you create a container in an environment, the container entry point execut
 
 ## API
 
-The container entry point scans the following container folders for files and uses those files to configure the container, Tomcat, and DXP and to act on DXP.
+The container entry point scans the following container folders for files and uses those files to configure the container, Tomcat, and Liferay and to act on Liferay.
 
 * `/mnt/liferay`
 * `/user/local/liferay/scripts`
@@ -56,9 +56,9 @@ The following lifecycle phases act on user-provided files.
 
 | File Location | Action | Use Cases |
 | :------------ | :----- | :-------- |
-| `/mnt/liferay/files` | Copy files to corresponding folders under Liferay Home (`/opt/liferay`) | [Configuring DXP Containers](./configuring-dxp-containers.md)<br><br>[Configuring Tomcat](./configuring-dxp-containers.md#jvm-options) |
+| `/mnt/liferay/files` | Copy files to corresponding folders under Liferay Home (`/opt/liferay`) | [Configuring Containers](./configuring-containers.md)<br><br>[Configuring Tomcat](./configuring-containers.md#jvm-options) |
 | `/mnt/liferay/scripts` | Run scripts in alphabetical order | [Running scripts](./running-scripts-in-containers.md) during configuration |
-| `/mnt/liferay/deploy` | Symbolically link `/mnt/liferay/deploy` to `/opt/liferay/deploy` for auto-deploying artifacts at DXP startup.<br><br>At run time, auto-deploy any artifacts copied into `/mnt/liferay/deploy`, into `/opt/liferay/deploy`, or into any folder mounted to either folder.<br><br>Note: Auto-deployed artifacts are moved to appropriate folders under `/opt/liferay/osgi`. | [Installing apps and other artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md) |
+| `/mnt/liferay/deploy` | Symbolically link `/mnt/liferay/deploy` to `/opt/liferay/deploy` for auto-deploying artifacts at Liferay startup.<br><br>At run time, auto-deploy any artifacts copied into `/mnt/liferay/deploy`, into `/opt/liferay/deploy`, or into any folder mounted to either folder.<br><br>Note: Auto-deployed artifacts are moved to appropriate folders under `/opt/liferay/osgi`. | [Installing apps and other artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md) |
 | `/mnt/liferay/patching` | If a Patching Tool is provided, install it. Install any patches provided. | [Patching DXP in Docker](./patching-dxp-in-docker.md) |
 
 ### Pre-Startup Phase API
@@ -77,6 +77,6 @@ The following lifecycle phases act on user-provided files.
 
 Now that you're familiar with the container lifecycle and API, you can determine the best ways to [provide files to the container](./providing-files-to-the-container.md). You can alternatively start exercising the use cases mentioned in the tables above. They're listed here for your convenience:
 
-* [Configuring DXP Containers](./configuring-dxp-containers.md)
+* [Configuring Containers](./configuring-containers.md)
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
 * [Patching DXP in Docker](./patching-dxp-in-docker.md)
