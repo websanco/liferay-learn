@@ -63,7 +63,7 @@ Before configuring your Vocabulary's Visibility, consider the following informat
 
 > Available: Liferay 7.3+.
 
-In addition to the *Topic* Vocabulary in previous Liferay versions, you can find two new Vocabularies by default: *Audience* and *Stage*. These Vocabularies are industry standards that Content Authors, Content Strategist, and Marketers can use in combination with the [Content Dashboard](link?) to answer common content strategy questions:
+In addition to the *Topic* Vocabulary in previous Liferay versions, you can find two new Vocabularies by default: *Audience* and *Stage*. These Vocabularies are industry standards that Content Authors, Content Strategist, and Marketers can use in combination with the [Content Dashboard](../../content-dashboard/about-the-content-dashboard.md) to answer common content strategy questions:
 
 - Determine content areas with enough content as well as content gaps.
 - Audit of existing content.
@@ -82,3 +82,4 @@ You edit the Audience and Stage Vocabularies in the Global site. You can use the
 - [Defining Categories and Vocabularies for Content](./defininig-categories-and-vocabularies-for-content.md)
 - [Tagging Content and Managing Tags](./tagging-content-and-managing-tags.md)
 - [Targeted Vocabularies](./targeted-vocabularies.md)
+- [Content Dashboard](../../content-dashboard/about-the-content-dashboard.md)
