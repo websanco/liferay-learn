@@ -15,7 +15,7 @@ You group Categories using [Vocabularies](#defining-vocabularies), and you creat
 1. Enter a *Name* for the Vocabulary and, optionally, a *Description*.
 1. Complete the rest of the Category options:
 
-    - *Allow Multiple Categories*: When this option is enabled, you can use more than one Category from the Vocabulary to the asset. When this option is disabled, you can use only one Category from the Vocabulary.
+    - *Allow Multiple Categories*: When this option is enabled, you can use more than one Category from the Vocabulary to categorize the asset. When this option is disabled, you can use only one Category from the Vocabulary.
     - *Visibility*: See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabularies-visibility) for more information.
 
         ```important::

@@ -25,7 +25,7 @@ In Liferay DXP, you can find Categories and Tags under the Categorization panel 
 
 ![Find the Categories and Tags options under the Categorization panel](./organizing-content-with-categories-and-tags/images/01.png)
 
-In addition to the Categorization panel, you can tag or categorize an asset at creation time or edit an existing asset using the Categorization section.
+In addition to the Categorization panel, you can tag or categorize an asset at creation time or edit an existing asset using the Categorization section. Each Vocabulary is represented as a separate entry in this section.
 
 ![Tag and Categorize your content using the Categorization section](./organizing-content-with-categories-and-tags/images/02.png)
 
