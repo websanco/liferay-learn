@@ -38,7 +38,7 @@ When you [create a new Vocabulary](./defining-categories-and-vocabularies-for-co
 - *Public Visibility*: Visitors of your site can use Public categories to find the content through search or navigation. Public Categories are exposed to your site visitors.
 - *Internal Visibility*: You can use Internal categories to organize and search your content internally. Internal Categories are not exposed to your site visitors.
 
-    In the Categories panel, Internal Vocabularies show a *Hidden* icon ![Hidden](../../../images/icon-hidden.png) next to their name.
+    In the Categories panel, Internal Vocabularies show a *Hidden* icon (![Hidden](../../../images/icon-hidden.png)) next to their name. Vocabularies with a *Locker* icon (![Locker](../../../images/icon-lock.png)) can only be edited at the Global site.
 
     ![Tag and Categorize your content using the Categorization section](./organizing-content-with-categories-and-tags/images/06.png)
 
@@ -63,15 +63,15 @@ Before configuring your Vocabulary's Visibility, consider the following informat
 
 > Available: Liferay 7.3+.
 
-In addition to the *Topic* Vocabulary in previous Liferay versions, you can find two new Vocabularies by default: *Audience* and *Stage*. These Vocabularies are industry standards that Content Authors, Content Strategist, and Marketers can use in combination with the [Content Dashboard](link?) to answer common content strategy questions :
+In addition to the *Topic* Vocabulary in previous Liferay versions, you can find two new Vocabularies by default: *Audience* and *Stage*. These Vocabularies are industry standards that Content Authors, Content Strategist, and Marketers can use in combination with the [Content Dashboard](link?) to answer common content strategy questions:
 
 - Determine content areas with enough content as well as content gaps.
 - Audit of existing content.
 - Discover trends or insights to create or adapt the content strategy.
 
-```important::
-   You can use Audience and Stage Vocabularies with Web Content Articles only.
-```
+You edit the Audience and Stage Vocabularies in the Global site. You can use these Vocabularies with Web Content Articles only.
+
+![Edit the Audience and Stage Vocabularies in the Global Site](./organizing-content-with-categories-and-tags/images/06.png)
 
 ```note::
    In previous Liferay versions, the *Topic* Vocabulary exists on each site. The *Topic* Vocabulary exists now at the Global Site.
