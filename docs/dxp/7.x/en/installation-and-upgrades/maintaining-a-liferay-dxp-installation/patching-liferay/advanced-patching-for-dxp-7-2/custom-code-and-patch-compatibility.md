@@ -1,5 +1,7 @@
 # Custom Code and Patch Compatibility
 
+> Subscribers
+
 If you deploy code that customizes or patches your DXP 7.2 installation, you must  maintain its compatibility with all patches you're using. The following topics explain how to do this.
 
 * [Storing Patch Level Information for Custom Patches](#storing-patch-level-information-for-custom-patches)
@@ -37,7 +39,7 @@ For detailed usage information, run `./patching-tool.sh help diff`.
 
 ## Handling Collisions Between Patches and Custom Plugins
 
-Some patches update files you might have customized via a plugin. The `list-collisions` command lists  JSP file differences (collisions) in OSGi fragment bundles:
+Some patches update files you might have customized via a plugin. The `list-collisions` command returns JSP file differences (collisions) in OSGi fragment bundles:
 
 ```bash
 ./patching-tool.sh list-collisions
@@ -49,7 +51,7 @@ It is an alias for the following diff command:
 ./patching-tool.sh diff collisions files _base
 ```
 
-The `_base` argument is the literal patch level name. Collisions are only listed for installed patches that contain source code files.
+The `_base` argument is the literal patch level name. Collisions only appear for installed patches that contain source code files.
 
 If you removed certain patches or there is a collision of some kind use the `-force` argument to force the Patching Tool to install the currently available patches no matter what.
 
