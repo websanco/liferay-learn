@@ -2,12 +2,8 @@ components:
     schemas:
         Product:
             description:
-                A product with a name, price, and stock quantity.
+                A product with an ID, name, and price.
             properties:
-                productId:
-                    description:
-                        The product's ID
-                    type: integer
                 name:
                     description:
                         The product's name
@@ -16,10 +12,14 @@ components:
                     description:
                         The product's price, in dollars
                     type: integer
+                productId:
+                    description:
+                        The product's ID
+                    type: integer
             type: object
 info:
     description:
-        ""
+        "API to return a product from a catalog."
     license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -46,5 +46,5 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/Product"
                     description:
-                        ""
+                        "Returns the product matching the given product ID."
             tags: ["Product"]
