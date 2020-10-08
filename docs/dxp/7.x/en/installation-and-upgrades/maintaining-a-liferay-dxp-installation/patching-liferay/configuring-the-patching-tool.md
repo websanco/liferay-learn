@@ -1,6 +1,6 @@
 # Configuring the Patching Tool
 
-The Patching Tool can be adapted to any DXP installation. The tool's auto-discovery option is the easiest way to configure the Patching Tool. If you installed DXP on an application server or if you need to proxy Patching Tool requests, you can configure the Patching Tool manually where you need to.
+The Patching Tool can be adapted to any DXP installation. The tool's auto-discovery option is the easiest way to configure the Patching Tool. If you installed DXP on an application server or if you need to proxy Patching Tool requests, you can configure the Patching Tool manually. 
 
 **Outline:**
 
@@ -13,7 +13,7 @@ The Patching Tool can be adapted to any DXP installation. The tool's auto-discov
 
 The Patching Tool's `auto-discovery` command scans for DXP files and writes their paths to a properties file that it uses for patching.
 
-Follow these steps to automatically configure the Patching Tool:
+Follow these steps to configure the Patching Tool automatically:
 
 1. Open a command line to your `patching-tool` folder:
 
@@ -37,7 +37,7 @@ Follow these steps to automatically configure the Patching Tool:
 
 The tool writes the configuration to the file `default.properties`.
 
-If you specify the wrong path to Liferay Home or if Liferay Home is not in the parent folder, the Patching Tool reports an error like this:
+If you specify the wrong path to Liferay Home or if Liferay Home is not in the parent folder, the Patching Tool reports an error:
 
 ```
 The .liferay-home has not been detected in the given directory tree.
@@ -51,7 +51,7 @@ liferay.home=**[please enter manually]**
 The configuration hasn't been saved. Please save this to the default.properties file.
 ```
 
-Resolve the issue using one of these ways:
+Resolve the issue in one of these ways:
 
 * If the Liferay Home is in the Patching Tool's tree, create a `.liferay-home` file in the Liferay Home folder and re-run the `auto-discovery` command.
 * Specify the Liferay Home path in the `liferay.home` property in your properties file (e.g., `default.properties`).
