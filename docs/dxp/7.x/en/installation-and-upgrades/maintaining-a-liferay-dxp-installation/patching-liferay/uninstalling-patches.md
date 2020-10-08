@@ -1,5 +1,7 @@
 # Uninstalling Patches
 
+> Subscribers
+
 After you install a patch, you may decide to restore your installation to a previous patch level. Here you'll learn how to
 
 * Uninstall Patches

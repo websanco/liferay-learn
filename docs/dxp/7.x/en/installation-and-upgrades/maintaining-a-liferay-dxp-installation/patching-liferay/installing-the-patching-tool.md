@@ -1,5 +1,7 @@
 # Installing the Patching Tool
 
+> Subscribers
+
 Patching DXP on an application server and updating the Patching Tool are done manually.
 
 ## Installation

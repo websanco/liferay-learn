@@ -1,5 +1,7 @@
 # Getting Patch Information
 
+> Subscribers
+
 You can see patch information at a glance, which helps maintain your installation and get help from Liferay Support. The Patching Tool's `info` command lists the following information:
 
 * Service Pack version
