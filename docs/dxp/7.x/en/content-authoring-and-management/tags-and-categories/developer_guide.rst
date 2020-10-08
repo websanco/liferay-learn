@@ -4,5 +4,11 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-.. include:: /content-authoring-and-management/tags-and-categories/02-developer-guide/README.rst
-   :start-line: 2
+   developer-guide/apis.rst
+
+- Implementing Asset Tags and Categories
+
+APIs
+----
+
+Coming soon!
