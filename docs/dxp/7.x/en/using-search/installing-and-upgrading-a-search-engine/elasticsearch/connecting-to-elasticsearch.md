@@ -28,7 +28,8 @@ blacklistBundleSymbolicNames=[ \
 	"com.liferay.portal.search.elasticsearch6.impl", \
 	"com.liferay.portal.search.elasticsearch6.spi", \
 	"com.liferay.portal.search.elasticsearch6.xpack.security.impl", \
-	"Liferay Connector to X-Pack Security [Elastic Stack 6.x] - Impl" \
+	"Liferay Connector to X-Pack Security [Elastic Stack 6.x] - Impl", \
+	"Liferay Enterprise Search Security - Impl.lpkg" \
 ]
 ```
 
@@ -104,7 +105,7 @@ productionModeEnabled="true"
 networkHostAddresses=["http://es-node1:9200","http://es-node3:9200","http://es-node3:9200"]
 remoteClusterConnectionId="remote"
 # In CE/DXP 7.3 the HTTP security settings are included in the ElasticsearchConfiguration
-# In CE/DXP 7.2 the Transport security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.comfig
+# In CE/DXP 7.2 the Transport security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
 # authentication
 authenticationEnabled="true"
 username="elastic"
@@ -176,7 +177,7 @@ If Elasticsearch is [installed and running](./installing-elasticsearch.md) and t
 
 Re-index your search and spell check indexes. Both of these re-index actions are carried out from the Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
 
-Re-index the [Workflow Metrics](../../../process-automation/workflow/user-guide/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
+(On DXP 7.3) Re-index the [Workflow Metrics](../../../process-automation/workflow/user-guide/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
 
 1. From the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)) navigate to Applications &rarr; Workflow Metrics. 
 
@@ -190,12 +191,14 @@ Now Liferay CE/DXP is indexing its content into a remote Elasticsearch 7 install
 
 The bundled connector to Elasticsearch is not always the best choice for your installation. It's important to understand the differences between the connectors you can use to communicate with Elasticsearch:
 
-| Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Elasticsearch Version | Operation Modes |
-| ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | ---------------------- | --------------- |
-| CE 7.3 GA4+ <br /><br /> DXP 7.3 GA1+ | Liferay Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | 7.9+ | Sidecar <br /> Remote |
-| 7.2, all patch levels  | Liferay Connector to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | 6.1.x-6.8.x | Embedded <br /> Remote |
-| DXP 7.2 SP3/FP8+ | Liferay Connector to Elasticsearch 7 (3.1.0) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x -7.9.x | Embedded <br /> Remote |
-| CE 7.2 GA2+ | Liferay CE Connector to Elasticsearch 7 (3.0.0) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170642090) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x -7.6.x | Embedded <br /> Remote |
+| Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Compatible Elasticsearch Version | Recommended Elasticsearch Version | Operation Modes |
+| ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | ---------------------- | -------------------------- |--------------- |
+| CE 7.3 GA4+ <br /><br /> DXP 7.3 GA1+ | Liferay Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | 7.9+ | 7.9+| Sidecar <br /> Remote |
+| 7.2, all patch levels  | Liferay Connector to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004;\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | 6.1.x-6.8.x | 6.8.x | Embedded <br /> Remote |
+| DXP 7.2 SP3/FP8+ | Liferay Connector to Elasticsearch 7 (3.1.0+) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x -7.9.x | 7.9.x | Embedded <br /> Remote |
+| CE 7.2 GA2+ | Liferay CE Connector to Elasticsearch 7 (3.0.0) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170642090) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x -7.6.x | 7.6.x| Embedded <br /> Remote |
+
+\* Through the [Liferay Connector to X-Pack Security [Elastic Stack 6.x]](https://web.liferay.com/marketplace/-/mp/application/106163963).
 
 ## Related Topics
 
