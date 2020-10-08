@@ -107,10 +107,9 @@ Tags and Categories
 User Guide
 ~~~~~~~~~~
 
-* Tagging Content
-* Defining Categories for Content
-* Targeted Vocabularies
-* Geolocating Assets
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/organizing-content-with-categories-and-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/tagging-content-and-managing-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content`
 
 Developer Guide
 ~~~~~~~~~~~~~~~

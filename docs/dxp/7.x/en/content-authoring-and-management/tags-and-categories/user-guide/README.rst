@@ -1,10 +1,9 @@
 User Guide
 ==========
 
-* Organizing Content with Categories and Tags
-* Tagging Content
-* Defining Categories for Content
-* Targeted Vocabularies
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/organizing-content-with-categories-and-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/tagging-content-and-managing-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content`
 
 Geolocating Assets
 ------------------

@@ -81,5 +81,4 @@ You edit the Audience and Stage Vocabularies in the Global site. You can use the
 
 - [Defining Categories and Vocabularies for Content](./defininig-categories-and-vocabularies-for-content.md)
 - [Tagging Content and Managing Tags](./tagging-content-and-managing-tags.md)
-- [Targeted Vocabularies](./targeted-vocabularies.md)
 - [Content Dashboard](../../content-dashboard/about-the-content-dashboard.md)

@@ -96,5 +96,4 @@ To access these options, click the *Actions* (![Actions](../../../images/icon-ac
 
 - [Organizing Content with Categories and Tags](./organizing-content-with-categories-and-tags.md)
 - [Tagging Content and Managing Tags](./tagging-content-and-managing-tags.md)
-- [Targeted Vocabularies](./targeted-vocabularies.md)
 - [Content Dashboard](../../content-dashboard/about-the-content-dashboard.md)

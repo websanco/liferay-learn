@@ -10,7 +10,7 @@ Use the Categorization section in the sidebar panel to tag assets as you create 
 1. In the sidebar panel, select the *Properties* tab.
 1. Under the *Categorization* section and *Other Metadata* subsection, click *Select* next to *Tags*.
 
-    ![Access the Tagging options under the Categorization section of the sidebar panel](./tagging-content/images/02.png)
+    ![Access the Tagging options under the Categorization section of the sidebar panel](./tagging-content-and-managing-tags/images/02.png)
 
 1. Select the tags you want to use from the list of existing tags and click *Done*.
 1. If you want to create new tags for the content, write the name of the new tag in the *Tags* field and press Enter.
@@ -19,7 +19,7 @@ Use the Categorization section in the sidebar panel to tag assets as you create 
 
 You can manage Tags under the Categorization panel in the Site Navigation menu. From here, you can create new Tags or customize the existing ones.
 
-![Managing Tags in Liferay DXP](./tagging-content/images/03.png)
+![Managing Tags in Liferay DXP](./tagging-content-and-managing-tags/images/03.png)
 
 ```note::
    Only site administrators can manage Tags in the Tags panel.
@@ -40,10 +40,10 @@ You can manage Tags under the Categorization panel in the Site Navigation menu. 
     1. Select the Tag where you want to merge in the *Into This Tag* dropdown menu.
     1. Click *Save*.
 
-        ![You can merge two or more tags into a single one](./tagging-content/images/01.png)
+        ![You can merge two or more tags into a single one](./tagging-content-and-managing-tags/images/01.png)
 
 ## Related Information
 
 - [Organizing Content with Categories and Tags](./organizing-content-with-categories-and-tags.md)
 - [Defining Categories and Vocabularies for Content](./defining-categories-and-vocabularies-for-content.md)
-- [Targeted Vocabularies](./targeted-vocabularies.md)
+
