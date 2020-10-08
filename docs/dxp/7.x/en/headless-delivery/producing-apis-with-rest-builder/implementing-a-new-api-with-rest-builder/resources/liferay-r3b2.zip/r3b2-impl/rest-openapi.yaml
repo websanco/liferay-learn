@@ -1,24 +1,20 @@
 components:
     schemas:
-        Article:
+        Product:
             description:
-                A journal article's content
+                A product with a name, price, and stock quantity.
             properties:
-                content:
+                productId:
                     description:
-                        The article content as XML
+                        The product's ID
+                    type: integer
+                name:
+                    description:
+                        The product's name
                     type: string
-                id:
+                price:
                     description:
-                        The article's id
-                    type: string
-                title:
-                    description:
-                        The article's title
-                    type: string
-                userId:
-                    description:
-                        The author's user ID
+                        The product's price, in dollars
                     type: integer
             type: object
 info:
@@ -27,16 +23,16 @@ info:
     license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-    title: "Journal Article API Expansion"
+    title: "Product Catalog API"
     version: v1.0
 openapi: 3.0.1
 paths:
-    "/entities/{userId}":
+    "/entities/{productId}":
         get:
-            operationId: getFirstArticleByUser
+            operationId: getProduct
             parameters:
                 - in: path
-                  name: userId
+                  name: productId
                   required: true
                   schema:
                       type: integer
@@ -45,10 +41,10 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Article"
+                                $ref: "#/components/schemas/Product"
                         application/xml:
                             schema:
-                                $ref: "#/components/schemas/Article"
+                                $ref: "#/components/schemas/Product"
                     description:
                         ""
-            tags: ["Article"]
+            tags: ["Product"]
