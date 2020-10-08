@@ -1,8 +1,10 @@
 # Understanding Patch Types
 
+> Subscribers
+
 The Liferay Support Team creates and releases fixes to issues discovered in DXP. The fixes are packaged in ZIP files referred to generally as _patches_. There are patches for security issues, customer-specific issues, and issues reported by the Liferay community. Here you'll learn about the patch types provided to DXP subscribers, [fix delivery](#ce-ga-releases) for Liferay Portal CE users, and the [levels of testing for each patch type](#patch-testing).
 
-Here's a sumamry of the DXP patch types and the Portal CE fix delivery method.
+Here's a summary of the DXP patch types and the Portal CE fix delivery method.
 
 | Patch Type | Purpose |
 | :--------- | :------ |
@@ -50,7 +52,7 @@ A Hotfix is a fix or collection of fixes requested by a customer and delivered i
 A Hotfix can depend on a particular Fix Pack level. If you attempt to install it without installing the Fix Pack first, the Patching Tool reports the required Fix Pack level. Go to the [Customer Portal](https://customer.liferay.com/downloads) and obtain the Fix Pack. Once all the necessary patches are downloaded to the `patches` folder, the Patching Tool installs them.
 
 ```important::
-   In DXP 7.2, if you already have a Hotfix installed and a Fix Pack that contains that Hotfix is released, the Patching Tool manages integrating them. Fix packs always supersede Hotfixes; so when you install a Fix Pack, any Hotfixes it contains are uninstalled and the Fix Pack version of the fix is installed in its place.
+   In DXP 7.2, if you already have a Hotfix installed and a Fix Pack that contains that Hotfix is released, the Patching Tool manages integrating them. Fix packs always supersede Hotfixes; when you install a Fix Pack, any Hotfixes it contains are uninstalled and the Fix Pack version of the fix is installed in its place.
 ```
 
 ## Service Packs
