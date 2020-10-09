@@ -3,17 +3,17 @@ Tags and Categories
 .. toctree::
    :maxdepth: 4
 
-   tags-and-categories/tagging-content.md
-   tags-and-categories/defining-categories-and-vocabularies-for-content.md
-   tags-and-categories/targeted-vocabularies.md
-   tags-and-categories/geolocating-assets.md
-   tags-and-categories/auto_tagging.rst
-   tags-and-categories/developer_guide.rst
+   tags-and-categories/user-guide/organizing-content-with-categories-and-tags.md
+   tags-and-categories/user-guide/tagging-content-and-managing-tags
+   tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md
+   tags-and-categories/user-guide/geolocating-assets.md
+   tags-and-categories/user-guide/auto_tagging.rst
+   tags-and-categories/user-guide/developer_guide.rst
 
--  :doc:`/content-authoring-and-management/tags-and-categories/tagging-content`
--  :doc:`/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content`
--  :doc:`/content-authoring-and-management/tags-and-categories/targeted-vocabularies`
--  :doc:`/content-authoring-and-management/tags-and-categories/geolocating-assets`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/organizing-content-with-categories-and-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/tagging-content-and-managing-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content`
+-  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/geolocating-assets`
 
 Auto Tagging
 ------------

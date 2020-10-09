@@ -1,3 +1,0 @@
-# Targeted Vocabularies
-
-Coming soon!
