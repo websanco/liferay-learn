@@ -1,6 +1,6 @@
 # Navigating DXP
 
-Liferay DXP's out-of-the-box navigation is organized into two major areas: the _Personal Menu_ and the Global Menu_.
+Liferay DXP's out-of-the-box navigation is organized into three major areas: the _Personal Menu_, _Global Menu_, and _Site Menu_.
 
 ## Personal Menu
 
@@ -11,20 +11,20 @@ The Personal Menu is the hub for information and activities for a User that is l
 Users can use the personal menu to:
 
 * [Change account information](./introduction-to-the-admin-account.md#changing-account-information) (Name, Password, etc.)
-* [See what sites they are members of](../site-building/building-sites/adding-members-to-sites.md)
+* [See what sites they are members of](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [Review site notifications](../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)
 * [Sign out](./introduction-to-the-admin-account.md#signing-out)
 * And more...
 
-## Global
+## Global Menu
 
-The DXP Global Menu_ contains the _Applications Menu_ and the _Control Panel_. Click the _Applications Menu_ icon (![Applications Menu icon](../images/icon-applications-menu.png)) at the top of the screen to access it.
+The DXP _Global Menu_ contains the _Applications Menu_ and the _Control Panel_. Click the _Applications Menu_ icon (![Applications Menu icon](../images/icon-applications-menu.png)) at the top of the screen to access it.
 
 ```note::
    By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
 ```
 
-You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the Global Menu_, on the right side.
+You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side.
 
 ### Applications Menu
 
@@ -32,17 +32,15 @@ The _Applications Menu_ contains a variety of links to manage many different app
 
 ![A view of the Applications Menu.](./navigating-dxp/images/02.png)
 
-The following sections can be managed from the _Applications Menu_:
+Here are some of the applications that can be managed from the _Applications Menu_:
 
-* Asset Libraries and the Content Dashboard
-* [User Accounts](../users-and-permissions/accounts/introduction-to-accounts.md)
+* [Collections](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and the Content Dashboard
 * [Workflow](../process-automation/workflow/user-guide/introduction-to-workflow.md)
-* [Alerts and Announcements](../collaboration-and-social/alerts-and-announcements.md)
 * [App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md)
 
 ### Control Panel
 
-The _Control Panel_ contains general administrative actions and configurations that apply _globally_ to the Liferay DXP installation.
+The _Control Panel_ contains general administrative actions and configurations that can be scoped _globally_ to the Liferay DXP installation or to a particular instance.
 
 ![A view of the Control Panel.](./navigating-dxp/images/03.png)
 
@@ -61,15 +59,15 @@ The DXP _Site Menu_ on the left side of the screen contains actions, content, an
 ![A view of the expanded Site Menu so that all options are visible.](./navigating-dxp/images/04.png)
 
 ```note::
-   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay DXP`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
+   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
 ```
 
 The following common site building and management activities can be done in the _Site Menu_:
 
 * [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
-* [Creating Content](../content-authoring-and-management/README.md)
-* [Managing Site Memberships](../site-building/building-sites/adding-members-to-sites.md)
-* [Configuring and Optimizing Site Behavior and Functionality](../site-building/optimizing-sites/README.md)
+* [Creating Content](../content_authoring_and_management.html)
+* [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
+* [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
 * And more...
 
 ## DXP 7.1 and 7.2

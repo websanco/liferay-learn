@@ -6,7 +6,7 @@ Sites are collections of pages that contain and display content. This article wa
 
 To create a new Community Site, follow these steps:
 
-1. Open the Global Menu_ and navigate to the _Control Panel_ and select _Sites_.
+1. Open the _Global Menu_ and navigate to the _Control Panel_ and select _Sites_.
 
     ![Select Sites from the Control Panel.](./creating-your-first-site/images/01.png)
 
@@ -22,7 +22,7 @@ To create a new Community Site, follow these steps:
 
 A new Site is created and ready for use with two pages: _Home_ and _Wiki_. Each page has several applications already deployed that you may begin exploring.
 
-Users are presented a variety of Site Settings options to further configure their new Site. Click to learn more about [Site Settings](../site-building/introduction-to-site-building.md).
+Users are presented a variety of Site Settings options to further configure their new Site. Click to learn more about [Site Settings](../site-building/site_settings.html).
 
 ## Viewing the Site
 

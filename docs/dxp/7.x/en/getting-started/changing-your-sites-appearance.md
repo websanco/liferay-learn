@@ -60,9 +60,9 @@ Your Site's theme has been updated.
 
 ### Theme Resources
 
-There are many themes available on the [Liferay Marketplace](../advanced-installation-and-upgrades/01-installing-liferay-dxp/10-setting-up-marketplace.md) that can be used to quickly achieve a professional look and feel.
+There are many themes available on the [Liferay Marketplace](../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md) that can be used to quickly achieve a professional look and feel.
 
-You can also learn how to [create your own theme](../site-building/README.md).
+You can also learn how to [create your own theme](https://help.liferay.com/hc/en-us/articles/360035353731-Introduction-to-Creating-a-Theme).
 
 ## Changing Your Site's Logo
 
