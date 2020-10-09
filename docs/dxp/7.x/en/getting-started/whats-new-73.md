@@ -4,6 +4,139 @@ Liferay DXP 7.3 aims to refine Experience Management and Digital Operations to b
 
 For a full feature list, please read the Liferay DXP 7.3 Features Overview or contact 
 
+## Page Building
+
+### Master Pages
+
+Master Pages define page areas that are consistent across several or even all pages across Sites. Most commonly, they're used to define headers, footers, and side bars. Prior to this feature, common page areas could only be defined within a theme. Now non-technical users can create their own master pages, use them across the site and change them at any time (having the changes automatically applied to all pages). This is actually part of a larger ongoing effort to support customizing Liferay's look and feel and branding for the most common cases without the need for development. Master pages are created using the page editor, allowing the use of any fragment or widget in the common page areas. A cool feature is the ability to configure which fragments are allowed for a given master page, giving administrators the possibility to provide useful guide rails per use case. Master Pages are a type of Page Template and can be created and managed from the "Page Templates" application within Design .
+
+### Undo and Redo
+
+![Undo and Redo](./whats-new-73/images/image25.gif)
+
+New buttons are added to the toolbar that make it possible to undo/redo the actions. Keyboard shortcuts are also available: CMD + z / CMD + shift + z (MacOS) Ctrl + z / Ctrl + shift + z (Windows, Linux)
+
+In addition to this feature, we have added a panel that lists all the actions performed by the user in the editing session, allowing also to move rapidly to a concrete state of the page.
+
+### At-Mention Users in Page Comments
+
+Page Commenting was introduced in DXP 7.2 SP1 to make it easier for users to collaborate and review. In DXP 7.3, this will be improved with the ability to @mention users in the comments. Mentioned users will receive a notification they can click on to view the comment. Users must have permission to edit the page to be @mentioned.
+
+Known limitation is that page comments do not work with workflow comments, which can be rather unintuitive for customers. This will be fixed for the next version.
+
+### Collection Display
+
+![Collection Display](./whats-new-73/images/image21.gif)
+
+A new fragment has been added that takes advantage of the collection functionality ("content sets" in 7.2) to easily display sets of assets. We are introducing this as an alternative and, eventually, a replacement to Asset Publisher.
+
+The limitations of Asset Publisher was that it required a developer to alter the presentation. The new Collection Display fragment allows for the drag and drop editing.
+
+When the fragment is added to the page, it must first be configured by linking it to a collection. After this,  the fragment is divided into different spaces, each one corresponding to an asset in the collection. From there, any adjustment made to each of the spaces will be replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping will propagate to each item.
+
+In addition to this, we can also make some adjustments to the presentation format, changing the layout or the maximum number of items to be displayed.
+
+### Visual Responsive Layout Editor
+
+Responsive design is a must have because there is a wide and increasing variety of device screen sizes accessing the same source of information. The responsive editor makes it possible to adapt the page content in the most suitable way for each device where it is visualized.
+
+Although the layouts provided out of the box with Liferay for fragment-based pages are configured to be responsive depending on the size of the browser window, in some cases, it's desirable to finetune the out of the box responsive behavior. The new tool allows the page author to customize the fluid page behavior of each of the layouts.
+
+![Visual Responsive Layout Editor](./whats-new-73/images/image3.gif)
+
+The new tool to customize the responsive behavior is located in the page editor toolbar, providing 4 buttons. Each button represents a viewport: desktop, tablet, landscape mobile and portrait mobile. If the user selects either of them, the page is resized to the corresponding width simulating the size of each device. Moreover, the user can resize the page to an intermediate size within the limits of the viewport.
+
+
+![Visual Responsive Layout Editor 2](./whats-new-73/images/image3.gif)
+
+Styles are maintained per viewport and are inherited by viewports smaller than it. There is an initial configuration and this configuration is inherited by the rest of viewports (from desktop to mobile). If the style of some of the viewports changes for the first time, the rest of viewports inherit this style in descending order. That is to say, if the tablet viewport is modified, the style of the smaller size devices (mobile) will also change, inheriting its style [and breaking the desktop viewport inheritance. Consequently, when the desktop viewport is modified again only that viewport is modified.
+
+### General Performance Improvements
+
+The page editor was completely overhauled to utilize React in Liferay DXP 7.3. This has substantially increased the performance when utilizing the editor, especially when working with larger pages. A number of bugs have also been fixed during the process.
+
+
+### Visual Fragment Composition
+
+![Visual Fragment Composition](./whats-new-73/images/image31.gif)
+
+As page authors invest time in creating fragments for their pages, a clear need is to be able to reuse the compositions of fragments created in some pages in other pages. To solve this need it should be possible for a page author to take a composition defined within one section or row of columns and save them with a name. When the composition is saved as a fragment, the following information should be saved with it (or at least offered as an option for the user to save). 
+
+All the fragments inside the section or rows of columns.
+
+Configuration of the section, row of columns and all of its fragments.
+
+Inline content (the author should be allowed to leave this out)
+
+Mapping to existing content (the author should be allowed to leave this out)
+
+When saving the composition the user should be able to specify a name and description. Also, the user must select a collection among those specific to the site. If no site-specific collection exists one will be created automatically with the name \"Saved Fragments\".
+ 
+With the new capability introduced with fragments of fragments we gave the possibility to assemble fragments from fragments with endless combinations. With container fragment we wanted to provide this capability to non-technical users that will be able to do that visually using the new container fragment located in the page editor.
+
+## Design and Theme Editor
+
+![Design and Theme Editor](./whats-new-73/images/image23.png)
+
+### Stylebooks
+
+The need for a Stylebook goes hand in hand with the need to have "design systems" where solutions can be scaled with efficiency, while design and experiences remain consistent. A Stylebook is a group of Styles (CSS rules) that can be created and modified using the Style editor UI. A Theme creator can create multiple Stylebooks[ for the same site and a Page Creator can pick the Stylebook for a particular page. The Stylebooks aim at bringing order by reducing inconsistencies, and disconnected experiences that site users may have when multiple content authors and web designers work in parallel to create new experiences.
+
+Stylebooks will hence allow UX Designers to create consistent user experiences across pages leveraging re-usable and shareable Styles and Style rules for all contents within the same site and reinforce the company brand while reducing implementation time.
+
+## Content Authoring and Management
+
+### Asset Libraries
+
+Create dedicated libraries to organize better the content  and have better-isolated control on them. Asset libraries make it easier to reuse resources across different sites, connecting them only to the sites where you need to provide access to.
+
+
+Asset Libraries support the storage of documents and web content allowing, for example, a marketing team to organize collateral used in a campaign in an asset library and connect it to the sites where the campaign will be run.  While creating a page, or writing a blog post, content authors can access the connected asset libraries and use images, documents or content stored in them. 
+
+![Asset Libraries](./whats-new-73/images/image7.png)
+
+### Instance-level Content Application
+
+The average content typically requires 3 weeks to produce yet most companies have databases full of content that goes unused. A large reason is the difficulty of auditing content across different solutions and sites. We offer a centralized Content Dashboard that can sort and group content and their performance by topics and audiences so performing content can be repurposed and campaigns can be optimized to make use of existing collateral.
+
+The new Content Dashboard aims to be a one-stop-place where content authors will be able to access all the contents generated by them, not only for a given site, but for all the sites and asset libraries in a Liferay instance. [As this all-content-view can be overwhelming, a comprehensive set of filters provides filter and ordering capabilities that will apply to both list of content and audit graph, to help users to easily find and audit the contents they need. 
+
+
+You can access this content dashboard through Global Menu &gt; Applications tab.
+
+![Instance-level Content Application](./whats-new-73/images/image9.gif)
+
+### Content Audit Tool
+
+Content Marketing teams usually have in mind that conducting a content audit periodically is a good practice - although a time and resources consuming activity too. The new Content Dashboard includes a tool that makes it easier to audit a company\'s content. Simply by selecting the vocabularies whose contents need to be audited, the Content Audit graph will automatically calculate the number of existing assets for each category of the featured vocabularies. Filters available in the content's list (categories, tags, authors, asset subtype, site...) can be used also to adjust the volume of assets represented in the graph.
+
+This way the content marketing teams can streamline the content audit process and minimize the effort of finding gaps in their content strategy execution.
+
+![Content Audit Tool](./whats-new-73/images/image2.gif)
+
+### Extended categorization capabilities
+
+Content categorization can be carried out in many ways and for many different purposes. For example, content that is created for marketing purposes have specific requirements in terms of metadata, so it can be tracked, searched and reused whether by content teams or other areas of the organization. In these cases, having vocabularies that are only visible from the administration side can facilitate sorting, findability and reuse of contents. In 7.3 we've added a new configuration to vocabularies in order to set visibility as internal or public. New Out-of-the-box Audience, Stage and Topic Global Vocabularies provide a more systematic categorization throughout sites.
+
+## Publication Management
+
+Your sites are constantly evolving and updated. Changes are made on a regular basis and must be staged and reviewed before they go live.  Publications is a new feature in Liferay DXP that allows content creators to prepare their own set of changes and publish them on their own schedule. Publications allow teams to collaborate on site changes. For instance, a customer portal team may need to roll out a special, seasonal promotion that involves updating images, copy, and adding new pages to the site. They can create a Publication and invite the necessary users to make their changes before publishing them. Because multiple Publications can be worked on at a time, this is very useful for customer portals that involve regular campaign roll outs, program offers, or seasonal changes.
+
+![Publication Management](./whats-new-73/images/image6.gif)
+
+### Dedicated translation experience for web contents
+
+Now Liferay allows the possibility to define roles for translators where they will be able to translate web content articles to the languages they are allowed to. Translators will perform the job from a new side by side UI that optimizes the translation process. Additionally, this translation process is integrated with our workflow capabilities, allowing teams to review in parallel the different translations, approve the ones that are ready and wait for the needed ones to be ready before publishing the final article.
+
+![Dedicated Translation Experience for Web Content](./whats-new-73/images/image12.png)
+
+### Import/Export of web content for translations
+
+For content-heavy sites and presence in multiple markets, translations are done with the help of external agencies or freelancers that use dedicated software to provide the translations.
+
+Now Liferay allows the possibility to select the content to be translated and export the needed languages in the standard format for translations (XLIFF, either in 1.2 or 2.0 versions), then these files can be sent to the translation agency. After the translations are ready, the files with the translations can be imported in Liferay to include the translations with the original content.
+
+![Import/Export of Web Content for Translations](./whats-new-73/images/image26.gif)
 ## SEO Configuration
 
 ### Open Graph
@@ -36,132 +169,12 @@ URL design is important for SEO and other reasons, and we have continued develop
 
 As part of that process, now users can easily check the friendly URLs previously used in any page for each language and manage them visually, either forgetting URLs to be reused in other pages or restoring old friendly URLs in case of a mistake or after finding that the new one is not performing as well as expected.
 
-## Page Building
-
-### Master Pages
-
-Master Pages are a new tool that facilitates visual consistency across all pages of a site. In particular they allow defining page areas that have to be consistent across several or even all pages across sites. The most common use case is to define headers, footers, and side bars. Prior to this feature, common page areas could only be defined within a theme. Thanks to this feature, non-technical users can create their own master pages, use them across the site and change them at any time (having the changes automatically applied to all pages). This is actually part of a larger ongoing effort to support customizing Liferay's look and feel and branding for the most common cases without the need for development. Master pages are created using the page editor, allowing the use of any fragment or widget in the common page areas. A cool feature is the ability to configure which fragments are allowed for a given master page, giving administrators the possibility to provide useful guide rails per use case. Master Pages are a type of Page Template and can be created and managed from the "Page Templates" application within Design .
-
-### Undo and Redo
-
-![Undo and Redo](./whats-new-73/images/image25.gif)
-
-New buttons are added to the toolbar that make it possible to undo/redo the actions. Keyboard shortcuts are also available: CMD + z / CMD + shift + z (MacOS) Ctrl + z / Ctrl + shift + z (Windows, Linux)
-
-In addition to this feature, we have added a panel that lists all the actions performed by the user in the editing session, allowing also to move rapidly to a concrete state of the page.
-
-### At-Mention Users in Page Comments
-
-Page Commenting was introduced in DXP 7.2 SP1 to make it easier for users to collaborate and review. In DXP 7.3, this will be improved with the ability to @mention users in the comments. Mentioned users will receive a notification they can click on to view the comment. Users must have permission to edit the page to be @mentioned.
-
-Known limitation is that page comments do not work with workflow comments, which can be rather unintuitive for customers. This will be fixed for the next version.
-
-### Collection Display
-
-![Collection Display](./whats-new-73/images/image21.gif)
-
-A new fragment has been added that takes advantage of the collection functionality ("content sets" in 7.2) to easily display sets of assets. We are introducing this as an alternative and, eventually, a replacement to Asset Publisher.
-
-The limitations of Asset Publisher was that it required a developer to alter the presentation. The new Collection Display fragment allows for the drag and drop editing.
-
-When the fragment is added to the page, it must first be configured by linking it to a collection. After this,  the fragment is divided into different spaces, each one corresponding to an asset in the collection. From there, any adjustment made to each of the spaces will be replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping will propagate to each item.
-
-In addition to this, we can also make some adjustments to the presentation format, changing the layout or the maximum number of items to be displayed.
-
-
-### Visual Responsive Layout Editor
-
-Responsive design is a must have because there is a wide and increasing variety of device screen sizes accessing the same source of information. The responsive editor makes it possible to adapt the page content in the most suitable way for each device where it is visualized.
-
-Although the layouts provided out of the box with Liferay for fragment-based pages are configured to be responsive depending on the size of the browser window, in some cases, it's desirable to finetune the out of the box responsive behavior. The new tool allows the page author to customize the fluid page behavior of each of the layouts.
-
-
-![Visual Responsive Layout Editor](./whats-new-73/images/image3.gif)
-
-
-The new tool to customize the responsive behavior is located in the page editor toolbar, providing 4 buttons. Each button represents a viewport: desktop, tablet, landscape mobile and portrait mobile. If the user selects either of them, the page is resized to the corresponding width simulating the size of each device. Moreover, the user can resize the page to an intermediate size within the limits of the viewport.
-
-
-![Visual Responsive Layout Editor 2](./whats-new-73/images/image3.gif)
-
-Styles are maintained per viewport and are inherited by viewports smaller than it. There is an initial configuration and this configuration is inherited by the rest of viewports (from desktop to mobile). If the style of some of the viewports changes for the first time, the rest of viewports inherit this style in descending order. That is to say, if the tablet viewport is modified, the style of the smaller size devices (mobile) will also change, inheriting its style [and breaking the desktop viewport inheritance. Consequently, when the desktop viewport is modified again only that viewport is modified.
-
-### General Performance Improvements
-
-The page editor was completely overhauled to utilize React in Liferay DXP 7.3. This has substantially increased the performance when utilizing the editor, especially when working with larger pages. A number of bugs have also been fixed during the process.
-
-
-### Visual Fragment Composition
-
-![Visual Fragment Composition](./whats-new-73/images/image31.gif)
-
-As page authors invest time in creating fragments for their pages, a clear need is to be able to reuse the compositions of fragments created in some pages in other pages. To solve this need it should be possible for a page author to take a composition defined within one section or row of columns and save them with a name. When the composition is saved as a fragment, the following information should be saved with it (or at least offered as an option for the user to save). 
-
-All the fragments inside the section or rows of columns.
-
-Configuration of the section, row of columns and all of its fragments.
-
-Inline content (the author should be allowed to leave this out)
-
-Mapping to existing content (the author should be allowed to leave this out)
-
-When saving the composition the user should be able to specify a name and description. Also, the user must select a collection among those specific to the site. If no site-specific collection exists one will be created automatically with the name \"Saved Fragments\".
- 
-With the new capability introduced with fragments of fragments we gave the possibility to assemble fragments from fragments with endless combinations. With container fragment we wanted to provide this capability to non-technical users that will be able to do that visually using the new container fragment located in the page editor.
-
 ## Segmentation and Personalization
 
 ### Create new segments combining existing segments
 
 Since Liferay 7.2, Personalization Capabilities allow users to define Segments that match the different types of audiences and deliver personalized experiences for them. These Segments can be created combining User, Organization and Session criteria. Now in Liferay CE/DXP 7.3, it is possible to reuse existing segments and combine them with complex rules to create new audiences. In DXP, this allows marketers to mix DXP and Analytics Cloud segments to create new and more powerful criteria.
 
-## Design and Theme Editor
-
-![Design and Theme Editor](./whats-new-73/images/image23.png)
-
-### Stylebooks
-
-The need for a Stylebook goes hand in hand with the need to have "design systems" where solutions can be scaled with efficiency, while design and experiences remain consistent. A Stylebook is a group of Styles (CSS rules) that can be created and modified using the Style editor UI. A Theme creator can create multiple Stylebooks[ for the same site and a Page Creator can pick the Stylebook for a particular page. The Stylebooks aim at bringing order by reducing inconsistencies, and disconnected experiences that site users may have when multiple content authors and web designers work in parallel to create new experiences.
-
-Stylebooks will hence allow UX Designers to create consistent user experiences across pages leveraging re-usable and shareable Styles and Style rules for all contents within the same site and reinforce the company brand while reducing implementation time.
-
-## Fragment Developer Experience
-
-## Content Authoring and Management
-
-### Asset Libraries
-
-Create dedicated libraries to organize better the content  and have better-isolated control on them. Asset libraries make it easier to reuse resources across different sites, connecting them only to the sites where you need to provide access to.
-
-
-Asset Libraries support the storage of documents and web content allowing, for example, a marketing team to organize collateral used in a campaign in an asset library and connect it to the sites where the campaign will be run.  While creating a page, or writing a blog post, content authors can access the connected asset libraries and use images, documents or content stored in them. 
-
-![Asset Libraries](./whats-new-73/images/image7.png)
-
-### Instance-level Content Application
-
-The average content typically requires 3 weeks to produce yet most companies have databases full of content that goes unused. A large reason is the difficulty of auditing content across different solutions and sites. We offer a centralized Content Dashboard that can sort and group content and their performance by topics and audiences so performing content can be repurposed and campaigns can be optimized to make use of existing collateral.
-
-The new Content Dashboard aims to be a one-stop-place where content authors will be able to access all the contents generated by them, not only for a given site, but for all the sites and asset libraries in a Liferay instance. [As this all-content-view can be overwhelming, a comprehensive set of filters provides filter and ordering capabilities that will apply to both list of content and audit graph, to help users to easily find and audit the contents they need. 
-
-
-You can access this content dashboard through Global Menu &gt; Applications tab.
-
-![Instance-level Content Application](./whats-new-73/images/image9.gif)
-
-### Content Audit Tool
-
-[Content Marketing teams usually have in mind that conducting a content audit periodically is a good practice - although a time and resources consuming activity too. The new Content Dashboard includes a tool that makes it easier to audit a company\'s content. Simply by selecting the vocabularies whose contents need to be audited, the Content Audit graph will automatically calculate the number of existing assets for each category of the featured vocabularies. Filters available in the content's list (categories, tags, authors, asset subtype, site\...) can be used also to adjust the volume of assets represented in the graph.]{.c10}
-
-
-This way the content marketing teams can streamline the content audit process and minimize the effort of finding gaps in their content strategy execution.
-
-
-![Content Audit Tool](./whats-new-73/images/image2.gif)
-
-### Extended categorization capabilities
-
-Content categorization can be carried out in many ways and for many different purposes. For example, content that is created for marketing purposes have specific requirements in terms of metadata, so it can be tracked, searched and reused whether by content teams or other areas of the organization. In these cases, having vocabularies that are only visible from the administration side can facilitate sorting, findability and reuse of contents. In 7.3 we've added a new configuration to vocabularies in order to set visibility as internal or public. New Out-of-the-box Audience, Stage and Topic Global Vocabularies provide a more systematic categorization throughout sites.
 
 ## Content Performance
 
@@ -174,25 +187,6 @@ Liferay DXP provides authors with a simple way to understand how many visitors a
 
 ![Content Performance](./whats-new-73/images/image28.gif)
 
-## Publication Management
-
-Your sites are constantly evolving and updated. Changes are made on a regular basis and must be staged and reviewed before they go live.  Publications is a new feature in Liferay DXP that allows content creators to prepare their own set of changes and publish them on their own schedule. Publications allow teams to collaborate on site changes. For instance, a customer portal team may need to roll out a special, seasonal promotion that involves updating images, copy, and adding new pages to the site. They can create a Publication and invite the necessary users to make their changes before publishing them. Because multiple Publications can be worked on at a time, this is very useful for customer portals that involve regular campaign roll outs, program offers, or seasonal changes.
-
-![Publication Management](./whats-new-73/images/image6.gif)
-
-### Dedicated translation experience for web contents
-
-Now Liferay allows the possibility to define roles for translators where they will be able to translate web content articles to the languages they are allowed to. Translators will perform the job from a new side by side UI that optimizes the translation process. Additionally, this translation process is integrated with our workflow capabilities, allowing teams to review in parallel the different translations, approve the ones that are ready and wait for the needed ones to be ready before publishing the final article.
-
-![Dedicated Translation Experience for Web Content](./whats-new-73/images/image12.png)
-
-### Import/Export of web content for translations
-
-For content-heavy sites and presence in multiple markets, translations are done with the help of external agencies or freelancers that use dedicated software to provide the translations.
-
-Now Liferay allows the possibility to select the content to be translated and export the needed languages in the standard format for translations (XLIFF, either in 1.2 or 2.0 versions), then these files can be sent to the translation agency. After the translations are ready, the files with the translations can be imported in Liferay to include the translations with the original content.
-
-![Import/Export of Web Content for Translations](./whats-new-73/images/image26.gif)
 
 ## User Collaboration
 
@@ -248,15 +242,13 @@ Users can also internationalize the applications created through App Builder by 
 
 ## Forms
 
-### GDPR Coverage and entries management
-
 Because web forms are among the most common interfaces for collecting user-provided data, there needs to be a GUI and development tools to design forms that comply with GDPR requirements. Doing so means implementing 2 Data Protection Features within Forms.
 
-#### Data Erasure (AKA Right to be Forgotten)
+### Data Erasure (AKA GDPR Right to be Forgotten)
 
 The right to be forgotten (technically known as the "right to erasure") requires organizations to delete an individual's personal data upon his or her request. Personal data is considered erased when the data can no longer be reasonably linked to an identifiable individual. Like in other applications in Liferay DXP, administrators can review Form\'s entries that potentially contains personal information and edit, anonymize or delete as needed through a simple interface.
 
-#### Data Export (AKA Right to Data Portability)
+### Data Export (AKA GDPR Right to Data Portability)
 
 The right to data portability requires organizations to provide a machine-readable export of a user's personal data upon request. This right intends to prevent vendor lock-in by requiring organizations to export a user\'s personal data in a machine-readable format upon request. Like in other applications in Liferay DXP, administrators can export a user's personal data submitted through Forms before going through the erasure process.
 
@@ -266,7 +258,7 @@ Liferay Forms counts now with a built-in summary report of the answers received,
 
 ![Forms Reports](./whats-new-73/images/image30.png)
 
-#### Page Reorder
+### Page Reorder
 
 The UI/UX of Forms page management was enhanced to not only make it easier to create and manage multi-page Forms, but also to allow reordering pages of a Form. A feature that was highly requested by customers and community and is now available in DXP 7.3 GA1.
 
@@ -343,100 +335,6 @@ For this reason, we have created a new application drawer that houses cross-site
 
 We can enable or disable the Global Apps Menu from Instance Settings &gt; Navigation
 
-## Search
-
-### Elasticsearch Improvements
-
-There are several improvements and changes to Liferay DXP 7.3's search engine connector to Elasticsearch.
-
-#### Elasticsearch 7 Support
-
-Liferay DXP's default search engine has been upgraded to Elasticsearch 7, providing improved performance, scalability, and resilience over previous Elasticsearch releases.
-
-#### Multiple Connections
-
-Liferay DXP supports connecting to multiple Elasticsearch clusters. App developers are no longer limited to reading and writing from the same Elasticsearch cluster containing Liferay DXP's system indices. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters.
-
-#### REST Client
-
-Liferay DXP now communicates with Elasticsearch using the REST Client instead of the Transport Client. This provides greater deployment flexibility and future-proofing as Elastic has deprecated their Transport Client.
-
-### Widget Template Support
-
-The Search widgets now support Widget Templates. This allows customizing search widgets' visual look and feel using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like author or modified date can be shown or hidden.
-
-## APIs
-
-### API explorer
-
-![API Explorer](./whats-new-73/images/image20.png)
-
-The API explorer is a new web application that allows developers to check the available APIs, their documentation and also perform queries to test their apps during development. It allows to explore all the REST applications and its endpoints. 
-
-To access, log in the portal and then go to {myportalURL}/o/api.
-
-![API Explorer 2](./whats-new-73/images/image27.png)
-
-It includes a GraphQL client as well, so a developer will be able to define and test their query before including it in the application, accelerating the development.
-
-### OpenAPI validator
-
-For the developers that need or want to extend the APIs with OpenAPI, and in order to improve the developer experience when working with the REST builder to implement your custom REST and/or GraphQL APIs, we've added an OpenAPI validator that will inform users in case there's any format error with the input file, as well as informing of any feature in the standard that we are not supporting yet.
-
-### Batch Operations
-
-Support for batch operations in the headless APIs, so now the headless APIs support batch operations allowing to perform requests over multiple elements in a single request asynchronously. 
-
-
-### Manage all translations of localized content in a single request
-
-All translations can now be retrieved, added or updated in the headless APIs using the new set of properties added to localized elements. Every localized property, for example "title", has an equivalent property that supports multiple values for the translations, "title\_i18n". Use the new custom header "X-Accept-All-Languages" (set to true) to retrieve all translations. For scenarios where it is important to maximize the performance, being able to create a content with all the translations in the same request can drastically reduce the number of requests needed.
-
-### Expose actions in Headless APIs
-
-Now you can retrieve in your queries which are the operations the user can execute, taking into account permissions as well as OAuth2 scopes. [With this feature, frontend developers will be able to create apps with dynamic action menus, showing the user only what they can perform, instead of waiting for the server to return permissions errors.
-
-
-### Exposing Metadata in Documents & Media APIs
-
-Now the APIs do not only expose the basic fields of documents, but the whole set of metadata included in document types. Those fields are exposed when retrieving document information, but also, while uploading or updating a new document, it is possible to choose which document type to use and fill the metadata information.
-
-### Access to content templates to render web content articles with any of its templates externally
-
-The content templates stored in a site are exposed through an API, so developers can retrieve them and render the content on their side when needed.
-
-#### Asset Libraries delivery APIs
-
-Asset Libraries are meant to help you organize and reuse better the content. This becomes key with the growth of different channels that are available and also, there are situations where creating a whole site to feed content to a mobile or web application might be too much. Now Liferay provides access through the headless REST and GraphQL APIs to the content and documents stored in an Asset Library, allowing customers to created dedicated content repositories with the collateral needed for a new microsite the company is working on.
-
-### Headless APIs extensibility
-
-The headless APIs cover the most common use cases, but sometimes, the projects you'll be working on might need some modifications to fit 100% your needs. For that reason, we have implemented different extensibility mechanisms that will allow developers to perform changes such as: exposing new properties or new components in the OOTB applications, deactivating endpoints, add contributions in GraphQL, etc
-
-### Return facets in collections
-
-
-To create more dynamic applications making use of the headless APIs, now it is possible for developers to request the available facets when retrieving collections of elements (documents, structured contents, etc). This will allow developers to build dynamic filters to show to end-users where they can choose the information they are interested in.
-
-## Developer Experience
-
-### React.js Facilities 
-
-Liferay has started to transition big portions of its internal UI to React as stated in The State of Frontend Infrastructure by David Truong. As a side effect of those changes, new utilities have been added that can make life easier for others following a similar path. In particular, we've added:
-
-### ReactRenderer
-
-A low level Java primitive that can be used to render React components simplifying the bootstrapping of a React component and generating the necessary JavaScript code for its initialization. At the time of this writing, this component does not render the component on the server side (does not generate HTML markup), which is something we'd like to consider in the future.
-
-### React:component
-
- A high level JSP tag that can be combined with traditional MVCPortlet approaches to render and initialize complex React applications from traditional JSPs. This facilitates the progressive migration of complex JS applications and the adoption of more modern front-end workflows.
-
-
-### Upgrade Improvements 
-
-Many reliability improvements have been added to the upgrade process.  The upgrade process has been unified  between Core and Modules.  Auto upgrade behavior can be controlled by a new portal property: upgrade.database.auto.run.  More information can be found in the Breaking Changes document.
-
 ## Application security
 
 ### Multi-factor authentication (DXP only)
@@ -480,3 +378,92 @@ The option to configure an OpenId Connect Provider on system level is still avai
 This change allows to configure CORS settings on instance level. The way to configure on instance level remains the same as at system level.
 
 The new CORS infrastructure will try to match url patterns that are configured at instance level first, then try to match url patterns that are configured at system level, meaning if there are the same url patterns, those configured at instance level will take precedence.
+## Search
+
+There are several improvements and changes to Liferay DXP 7.3's search engine connector to Elasticsearch.
+
+### Elasticsearch 7 Support
+
+Liferay DXP's default search engine has been upgraded to Elasticsearch 7, providing improved performance, scalability, and resilience over previous Elasticsearch releases.
+
+### Multiple Connections
+
+Liferay DXP supports connecting to multiple Elasticsearch clusters. App developers are no longer limited to reading and writing from the same Elasticsearch cluster containing Liferay DXP's system indices. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters.
+
+### REST Client
+
+Liferay DXP now communicates with Elasticsearch using the REST Client instead of the Transport Client. This provides greater deployment flexibility and future-proofing as Elastic has deprecated their Transport Client.
+
+### Widget Template Support
+
+The Search widgets now support Widget Templates. This allows customizing search widgets' visual look and feel using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like author or modified date can be shown or hidden.
+
+## Developer Experience
+
+### API explorer
+
+![API Explorer](./whats-new-73/images/image20.png)
+
+The API explorer is a new web application that allows developers to check the available APIs, their documentation and also perform queries to test their apps during development. It allows to explore all the REST applications and its endpoints. 
+
+To access, log in the portal and then go to {myportalURL}/o/api.
+
+![API Explorer 2](./whats-new-73/images/image27.png)
+
+It includes a GraphQL client as well, so a developer will be able to define and test their query before including it in the application, accelerating the development.
+
+### OpenAPI validator
+
+For the developers that need or want to extend the APIs with OpenAPI, and in order to improve the developer experience when working with the REST builder to implement your custom REST and/or GraphQL APIs, we've added an OpenAPI validator that will inform users in case there's any format error with the input file, as well as informing of any feature in the standard that we are not supporting yet.
+
+### Batch Operations
+
+Support for batch operations in the headless APIs, so now the headless APIs support batch operations allowing to perform requests over multiple elements in a single request asynchronously. 
+
+
+### Manage all translations of localized content in a single request
+
+All translations can now be retrieved, added or updated in the headless APIs using the new set of properties added to localized elements. Every localized property, for example "title", has an equivalent property that supports multiple values for the translations, "title\_i18n". Use the new custom header "X-Accept-All-Languages" (set to true) to retrieve all translations. For scenarios where it is important to maximize the performance, being able to create a content with all the translations in the same request can drastically reduce the number of requests needed.
+
+### Expose actions in Headless APIs
+
+Now you can retrieve in your queries which are the operations the user can execute, taking into account permissions as well as OAuth2 scopes. [With this feature, frontend developers will be able to create apps with dynamic action menus, showing the user only what they can perform, instead of waiting for the server to return permissions errors.
+
+
+### Exposing Metadata in Documents & Media APIs
+
+Now the APIs do not only expose the basic fields of documents, but the whole set of metadata included in document types. Those fields are exposed when retrieving document information, but also, while uploading or updating a new document, it is possible to choose which document type to use and fill the metadata information.
+
+### Access to content templates to render web content articles with any of its templates externally
+
+The content templates stored in a site are exposed through an API, so developers can retrieve them and render the content on their side when needed.
+
+### Asset Libraries delivery APIs
+
+Asset Libraries are meant to help you organize and reuse better the content. This becomes key with the growth of different channels that are available and also, there are situations where creating a whole site to feed content to a mobile or web application might be too much. Now Liferay provides access through the headless REST and GraphQL APIs to the content and documents stored in an Asset Library, allowing customers to created dedicated content repositories with the collateral needed for a new microsite the company is working on.
+
+### Headless APIs extensibility
+
+The headless APIs cover the most common use cases, but sometimes, the projects you'll be working on might need some modifications to fit 100% your needs. For that reason, we have implemented different extensibility mechanisms that will allow developers to perform changes such as: exposing new properties or new components in the OOTB applications, deactivating endpoints, add contributions in GraphQL, etc
+
+### Return facets in collections
+
+To create more dynamic applications making use of the headless APIs, now it is possible for developers to request the available facets when retrieving collections of elements (documents, structured contents, etc). This will allow developers to build dynamic filters to show to end-users where they can choose the information they are interested in.
+
+### React.js Facilities 
+
+Liferay has started to transition big portions of its internal UI to React as stated in The State of Frontend Infrastructure by David Truong. As a side effect of those changes, new utilities have been added that can make life easier for others following a similar path. In particular, we've added:
+
+### ReactRenderer
+
+A low level Java primitive that can be used to render React components simplifying the bootstrapping of a React component and generating the necessary JavaScript code for its initialization. At the time of this writing, this component does not render the component on the server side (does not generate HTML markup), which is something we'd like to consider in the future.
+
+### React:component
+
+ A high level JSP tag that can be combined with traditional MVCPortlet approaches to render and initialize complex React applications from traditional JSPs. This facilitates the progressive migration of complex JS applications and the adoption of more modern front-end workflows.
+
+
+### Upgrade Improvements 
+
+Many reliability improvements have been added to the upgrade process.  The upgrade process has been unified  between Core and Modules.  Auto upgrade behavior can be controlled by a new portal property: upgrade.database.auto.run.  More information can be found in the Breaking Changes document.
+
