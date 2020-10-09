@@ -1,65 +1,65 @@
 # Search Overview
 
-Liferay uses a bundled instance of Elasticsearch to power search throughout the system. Use the bundled instance for testing and development, but you must install a standalone Elasticsearch instance in production for optimal system and search performance.
+Search is a fundamental component of Liferay. Elasticsearch is bundled with Liferay for testing and development purposes. Production environments require Elasticsearch running on a separate server (a side-car). [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) explains Side-car setup. You can explore the search functionality immediately, however, using the bundled Elasticsearch engine.
 
-Start Liferay DXP and begin exploring the out-of-the-box search functionality:
+Here are the search features:
 
-* Full-text search features
+* Full-text search
 * Indexing of all content types (blogs, documents, web content, etc.)
 * Highly configurable search pages
 * A search bar embedded in the header of every page
-* Automatic index synchronization when new content is added, updated, or deleted
-* Search results filtered by roles and permissions
+* Automatic index synchronization for added, updated, and deleted content
+* Search result filtering by roles and permissions
 * Search suggestions
-* Configure search results (e.g., filter and sort)
+* Search result configuration (e.g., filter and sort)
 * Faceted search
-* Enable or disable advanced search syntax (e.g., AND/OR/NOT, wildcards, etc.)
+* Enable or disable advanced search syntax (e.g., AND/OR/NOT, wildcards, and more)
 
 ## Search Pages and Widgets
 
-The search widgets that come out-of-the-box can be used to quickly build out a fully functional search page. In addition, the global search page template can be used or modified as you have need.
-
-The default search page (`localhost:8080/search`) is based on the search page template, and contains a sensible set of search widgets, but it's also customizable:
+The default search page (`localhost:8080/search`) has a practical set of search widgets. It is customizable and based on the global search page template (also customizable). 
 
 ![The search page template is useful.](./search-overview/images/05.png)
 
 To add search widgets to a page, click the Add button on the page, select _Widgets_, and open the Search category:
 
-![Add the search widgets to a page.](./search-overview/images/07.png)
+![There are plenty of search widgets.](./search-overview/images/07.png)
 
-To read more about building a search page, read [here](https://help.liferay.com/hc/en-us/articles/360028821052-Configuring-Search-Pages).
-
-To read more about the functionality of each widget, read [here](../search-pages-and-widgets/README.md).
+To learn more, visit [Configuring Search Pages](https://help.liferay.com/hc/en-us/articles/360028821052-Configuring-Search-Pages) or [Search Pages and Widgets](../search-pages-and-widgets/README.md).
 
 ## Search Configuration and Administration
 
-There are several ways to configure how search works and how it indexes content.
+In the Control Panel, you can configure search functionality, view connections and field mappings, and perform search index actions.
 
-Many of the system scoped search configurations are located in System Settings &rarr; Search:
+You can configure search at the system scope in the Control Panel. In the Configuration category, select *System Settings* &rarr; *Search*. The search settings page appears.
 
-![The search System Settings are numerous.](./search-overview/images/06.png)
+![Search is highly configurable.](./search-overview/images/06.png)
 
-Additional administrative screens are located in the Control Panel &rarr; Configuration &rarr; Search section:
+You can examine search connections and field mappings, and execute indexes in the search administration screens. Navigate them in the Control Panel, by selecting *Search* in the Configuration category.
 
 ![The search admin screens are informative and useful.](./search-overview/images/08.png)
 
-To read more about configuring search, read [here](../search-administration-and-tuning/README.md).
+Learn more at [Search Administration and Tuning](../search-administration-and-tuning/README.md).
 
 ## Custom Development in Search
 
-Custom code for search usually involves intervening in at least one of these search phases:
+Search customization usually involves at least on of these search phases:
 
 **Indexing** is the sending one or more documents to the search engine. The document contains fields of various types (text, keyword, etc.). The search engine processes each field and determines whether to store the field or analyze it.
 
-**Searching** is sending a search query and obtaining results (a.k.a. hits) from the search engine. Queries and filters can be part of the search request, both of which specify a field to search within and the value to match against. The search engine iterates through each field within the nested queries and filters and may perform special analysis prior to executing the query (search time analysis). Search time analysis can be configured for each field via the mapping definitions.
+**Searching** is sending a search query and obtaining results (a.k.a. hits) from the search engine. Queries and filters can be part of the search request, both of which specify a field to search within and the value to match against. The search engine iterates through each field within the nested queries and filters, and optionally performs special analysis prior to executing the query (search time analysis). Search time analysis can be configured for each field via the mapping definitions.
 
-The development functionality around Search can be broken into two categories:
+Search functionality can be extended and invoked using is Service Provider Interfaces and APIs, respectively. 
 
-* Service Provider Interfaces (SPIs) are meant to be implemented. In the source code, these are found in modules ending in `-spi` (for example, the [`portal-search-spi` module](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-search/portal-search-spi)).
+* Service Provider Interfaces (SPIs) are meant to be implemented. In the source code, these are found in modules ending in `-spi` (for example, the [`portal-search-spi` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-spi)).
 
-* APIs contain methods you can call in your own code. In the source code, these are found in modules ending in `-api` (for example, the [`portal-search-api` module](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-search/portal-search-api)).
+* APIs contain methods you can call in your own code. In the source code, these are found in modules ending in `-api` (for example, the [`portal-search-api` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-api)).
 
-Further detail on the usage of these APIs and extension points is provided in the Developer Guide.
+See the Developer Guide for details.
+
+## What's Next 
+
+Explore the search features by [Searching for Content](./searching-for-content.md). When you're ready to configure search for production, see [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md).
 
 <!--
 
