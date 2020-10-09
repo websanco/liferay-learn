@@ -106,7 +106,9 @@ Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-format.png
 
 ## Comments
 
-Use Page Fragment *comments* to collaborate with team members while developing your Content Page. To make a comment, begin editing a Content Page and click on the Page Fragment you want to annotate. Then click on the *Comment* icon (![Comment icon](../../../images/icon-comments-w.png)) for the Fragment. You can view and respond to open fragment comments via the *Comments* panel in the Content Page sidebar.<!--FINISH--> If comment mentions are enabled, you can mention Users with Page update permissions as part of your comment. See [Mentioning Users](./../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) for more information.
+Use Page Fragment *comments* to collaborate with team members while developing your Content Page. To make a comment, begin editing a Content Page and click on the Page Fragment you want to annotate. Then click on the *Comment* icon (![Comment icon](../../../images/icon-comments-w.png)) for the Fragment. You can view and respond to open fragment comments via the *Comments* panel in the Content Page sidebar.
+
+If comment mentions are enabled, you can mention Users with Page update permissions as part of your comment. See [Mentioning Users](./../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) for more information.
 
 ## Liferay DXP 7.1 and 7.2
 
