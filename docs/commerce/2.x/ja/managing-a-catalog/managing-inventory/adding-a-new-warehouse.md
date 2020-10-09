@@ -3,7 +3,7 @@
 倉庫は、商品の在庫が保管されている物理的な場所を表します。 [ Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してストアが作成された場合は、すでに3つの倉庫が作成されています。
 
 ``` note::
-   新しい倉庫を追加するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細については、「リージョンの追加 <../../store-administration/adding-regions.md>`_」を参照してください。
+   新しい倉庫を追加するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細については、 `リージョンの追加 <../../store-administration/adding-regions.md>`_ を参照してください。
 ```
 
 倉庫を追加するには：

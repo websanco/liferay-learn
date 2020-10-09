@@ -45,7 +45,7 @@
     ```
 
     ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
 5.  Dockerコンテナコンソールでデプロイを確認します。
@@ -126,7 +126,7 @@ public BigDecimal getExchangeRate(
     double secondaryRate = _getRateForCode(
         exchangeRatesArray, codesList, secondaryCurrencyCode);
 
-    return new BigDecimal(secondaryRate / primaryRate);
+    return new BigDecimal(secondaryRate/primaryRate);
 }
 ```
 

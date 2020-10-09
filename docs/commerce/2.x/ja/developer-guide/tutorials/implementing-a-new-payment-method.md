@@ -39,7 +39,7 @@
     ```
 
     ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナーの `` / opt / liferay / osgi / modules``にコピーするのと同じです。
+       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。

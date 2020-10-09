@@ -76,7 +76,7 @@
 
 ### 保留中
 
-*[Pending]*タブは注文の保留場所として機能します。これは、すべての注文をすぐに送信するわけではないビジネスコンテキストで役立ちます。 購入者が注文すると、注文は*[Pending]*タブに移動します。 ここで、売り手は注文を変更、キャンセル、または送信することができ [](./processing-an-order.md#commerce-20-and-below)。
+*[Pending]*タブは注文の保留場所として機能します。これは、すべての注文をすぐに送信するわけではないビジネスコンテキストで役立ちます。 購入者が注文すると、注文は*[Pending]*タブに移動します。 ここで、売り手は、 [変更、キャンセル、または注文を送信することができます](./processing-an-order.md#commerce-20-and-below)。
 
 ``` note::
    * Transmission Workflow *が有効になっている場合、売り手が注文を拒否して買い手に送り返す場合でも、注文はワークフロープロセス全体で* Pending *タブに残ります。
@@ -86,7 +86,7 @@
 
 ### 送信済み
 
-このタブでは、注文アクティビティは販売者側のみで行われます。 売り手は送信 *保留* 順 [オーダーステータス変更](./processing-an-order.md#commerce-20-and-below) 「から（手動または自動化を介して）*に送信*他の注文ステータスを」ステータス。 この時点で、注文は*[Transmitted]*タブに移動し、設定されている場合は、MicrosoftのDynamics GP、OracleのNetSuite、SAPなどの外部システムに送信されます。 その後、販売者は、購入者への注文された商品の配送を進めることができます。 追加情報はまた、更新されたように、順に添加することができる [注文状況](./order-management-statuses-reference-guide.md)、 [出荷情報](../shipments/introduction-to-shipments.md) と推定された到着時間。
+このタブでは、注文アクティビティは販売者側のみで行われます。 売り手は、 *保留中の* 注文を、 [注文ステータス](./processing-an-order.md#commerce-20-and-below) を（手動または自動で）"*To Transmit*"ステータスから他の注文ステータスに変更することで送信します。 この時点で、注文は*[Transmitted]*タブに移動し、設定されている場合は、MicrosoftのDynamics GP、OracleのNetSuite、SAPなどの外部システムに送信されます。 その後、販売者は、購入者への注文された商品の配送を進めることができます。 Additional information may also be added to the order, such as an updated [order status](./order-management-statuses-reference-guide.md), [shipping information](../shipments/introduction-to-shipments.md) and estimated arrival time.
 
 ![[Transmitted]タブ](./orders-menu-reference-guide/images/04.png "[Transmitted]タブ")
 
