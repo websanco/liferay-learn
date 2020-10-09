@@ -1,10 +1,6 @@
 Getting Started
 ===============
 
--  :doc:`/using-search/getting-started/search-overview`
--  :doc:`/using-search/getting-started/searching-for-content`
--  :doc:`/using-search/getting-started/whats-new-in-search-for-73`
-
 .. toctree::
    :maxdepth: 2
 
@@ -12,5 +8,6 @@ Getting Started
    getting-started/searching-for-content.md
    getting-started/whats-new-in-search-for-73.md
 
-.. include:: /using-search/getting-started/README.rst
-   :start-line: 2
+-  :doc:`/using-search/getting-started/search-overview`
+-  :doc:`/using-search/getting-started/searching-for-content`
+-  :doc:`/using-search/getting-started/whats-new-in-search-for-73`
