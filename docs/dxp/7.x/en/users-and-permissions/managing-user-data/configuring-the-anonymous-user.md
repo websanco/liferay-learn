@@ -16,7 +16,7 @@ To edit an existing configuration,
 
    Get the User ID from Control Panel &rarr; Users &rarr; Users and Organizations. Click on the User and find the User ID in the User Display Data section of the Edit User screen.
 
-1.  Click *Update*.
+1. Click *Update*.
 
 To create a brand new Anonymous User, first [create the User](../users/adding-and-managing-users.md) to use for data anonymization, then follow the same steps described above.
 
@@ -47,5 +47,6 @@ To find the `companyId` for a [Virtual Instance](../../system-administration/vir
 
 ```note::
    `Why is there an extra field in the configuration file?`
+
    When configuring the Anonymous User by configuration file, you must provide the Company ID of the instance. In Instance Settings the configuration is already associated to the instance where it's being configured, but the configuration file is deployed at the system scope, so it must contain the ID of the instance where it applies.
 ```

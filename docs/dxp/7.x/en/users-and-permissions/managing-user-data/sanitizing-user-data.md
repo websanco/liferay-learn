@@ -21,9 +21,7 @@ User data deletion and anonymization both happen in the same place: the Personal
 
 1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and go to Control Panel &rarr; Users &rarr; Users and Organizations.
 
-1. Click the Actions button for a User (![Actions](../../images/icon-actions.png)) and select *Delete Personal Data*.
-
-   > If you have not deactivated the User, you are asked to do so.
+1. Click the Actions button for a User (![Actions](../../images/icon-actions.png)) and select *Delete Personal Data*. If you have not deactivated the User, you are asked to do so.
 
    The User's Personal Data Erasure screen appears.
 
@@ -59,10 +57,6 @@ Once all data is reviewed, deleted, edited, and/or anonymized as appropriate, de
 
 Now the User's data is anonymized or deleted, and the User is also deleted.
 
-
 ## Manual Anonymization
 
-Anonymizing just the User's identification fields and deleting the User is often not enough. If a User named Ziltoid Omniscient complains about The Lunar Resort's coffee in a Message Boards Message and in it signs the post with _Supreme Leader of Ziltoidea 9_, anonymizing this post would remove the User's name (Ziltoid Omnisicent) and replace it with Anonymous Anonymous, but searching the Internet for _Ziltoidea_ quickly reveals that the post was written by [Ziltoid the Omniscient](https://en.wikipedia.org/wiki/Ziltoid_the_Omniscient). Because there can be user-entered personal data within the content of an application, you must manually edit such content to remove identifying details. 
-
-![Even though this Message Boards Message (a comment on a blog post in this case) is anonymized, it should be edited to remove User Associated Data from the content of the message.](./sanitizing-user-data/images/05.png)
-
+Anonymizing just the User's identification fields and deleting the User is often not enough. If a User named John Smith writes a Message Boards Message and signs the post with "_The John Smith_", anonymizing the user would remove the User's name (John Smith) and replace it with Anonymous Anonymous. However, the _content_ of the Message Boards Message can still be searched for and discovered because of John Smith's signature. Application content like this must be manually identified and edited to remove personally identifying information.

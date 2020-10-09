@@ -8,7 +8,8 @@ Users
    users/adding-and-managing-users.md
    users/updating-user-profile-pictures.md
    users/user-management-ui-reference.md
-   users/managing_user_data_gdpr_compliance.rst
 
-.. include:: /users-and-permissions/users/README.rst
-   :start-line: 2
+-  :doc:`/users-and-permissions/users/understanding-users`
+-  :doc:`/users-and-permissions/users/adding-and-managing-users`
+-  :doc:`/users-and-permissions/users/updating-user-profile-pictures`
+-  :doc:`/users-and-permissions/users/user-management-ui-reference`

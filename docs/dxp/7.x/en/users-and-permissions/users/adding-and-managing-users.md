@@ -42,15 +42,15 @@ If you haven't set up a mail server, click the *Password* item from the General 
 | Manage Pages | Configure the personal pages of a User. |
 | Impersonate User | Browse the Site in another window as though you were that User. |
 | Deactivate | [Disable the user's account](#deactivating-users). |
-| Erase Personal Data | [Delete the User's personal data](./managing-user-data-gdpr-compliance/introduction-to-managing-user-data.md). |
-| Export Personal Data | [Download the User's personal data](./managing-user-data-gdpr-compliance/exporting-user-data.md). |
+| Erase Personal Data | [Delete the User's personal data](../managing-user-data/sanitizing-user-data.md). |
+| Export Personal Data | [Download the User's personal data](../managing-user-data/exporting-user-data.md). |
 
 ## Deactivating and Deleting Users
 
 Removing Users is a two-step process for several reasons:
 
 * You or the User may decide you really wanted that account.
-* Users are often tied to content with possible [legal ramifications](./managing-user-data-gdpr-compliance/introduction-to-managing-user-data.md) in your country.
+* Users are often tied to content with possible [legal ramifications](../managing_user_data.md) in your country.
 * You may need time to review a User's account activity before removing all evidence of that User's existence.
 
 For these and more reasons, you must first *deactivate* a User before *deleting* that User.
