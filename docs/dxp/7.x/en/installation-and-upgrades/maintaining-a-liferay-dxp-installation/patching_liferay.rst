@@ -23,9 +23,10 @@ Patching Liferay
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/getting-patch-information`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker`
 
-Advanced Patching
------------------
+Advanced Patching for DXP 7.2
+-----------------------------
 
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/using-slim-bundles`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/slimming-down-patched-installations`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility`
+

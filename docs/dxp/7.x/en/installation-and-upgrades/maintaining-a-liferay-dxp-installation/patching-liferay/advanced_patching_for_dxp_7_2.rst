@@ -1,5 +1,5 @@
-Advanced Patching
-=================
+Advanced Patching for DXP 7.2
+=============================
 
 .. toctree::
    :maxdepth: 3

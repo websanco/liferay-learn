@@ -2,7 +2,7 @@
 
 > Subscribers
 
-If you deploy code that customizes or patches your DXP 7.2 installation, you must  maintain its compatibility with all patches you're using. The following topics explain how to do this.
+If you deploy code that customizes or patches your DXP 7.2 installation, you must maintain its compatibility with all patches you're using. The following topics explain how to do this.
 
 * [Storing Patch Level Information for Custom Patches](#storing-patch-level-information-for-custom-patches)
 * [Comparing Patch Level Differences](#comparing-patch-level-differences)
