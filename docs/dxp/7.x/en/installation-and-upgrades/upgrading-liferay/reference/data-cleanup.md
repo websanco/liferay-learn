@@ -28,5 +28,5 @@ Your server is unburdened of obsolete data.
 
 * [Using Configuration Files](../../../system-administration/system-settings/using-configuration-files.md)
 * [Upgrading Via Docker](../upgrade-basics/upgrading-via-docker.md)
-* [Providing Files to the Container](../../installing-liferay/using-liferay-dxp-docker-images/providing-files-to-the-container.md)
+* [Providing Files to the Container](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)
 * [Using the Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)
