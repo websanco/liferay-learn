@@ -1,5 +1,5 @@
-Using Liferay DXP Docker Images
-===============================
+Using Liferay Docker Images
+===========================
 
 .. toctree::
    :maxdepth: 3

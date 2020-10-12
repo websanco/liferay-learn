@@ -18,8 +18,8 @@ Installing Liferay
 -  :doc:`/installation-and-upgrades/installing-liferay/configuring-a-database`
 -  :doc:`/installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time`
 
-Using Liferay DXP Docker Images
--------------------------------
+Using Liferay Docker Images
+---------------------------
 
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api`
