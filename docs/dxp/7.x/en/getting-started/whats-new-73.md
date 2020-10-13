@@ -116,11 +116,11 @@ For links that do break, Liferay now keeps track of all 404 errors. You can use 
 
 ![Friendly URL History shows all URLs ever used for any page.](./whats-new-73/images/15.png)
 
-Now you can easily check all friendly URLs used in any page for each language and manage them visually. You can "forget" URLs to be reused in other pages or restore old friendly URLs. 
+Now you can easily check all [friendly URLs used in any page](../site-building/creating-pages/page-settings/configuring-your-pages-friendly-url.md#managing-a-page-s-url-history) for each language and manage them visually. You can "forget" URLs to be reused in other pages or restore old friendly URLs. 
 
 ## Content Performance
 
->Subscribers
+> Subscription Required
 
 Now you can tell how many visitors completely read your content. Content performance analytics appear in context with content it relates to, to help content authors and marketers to build and assess a successful content strategy. 
 
