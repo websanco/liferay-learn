@@ -17,6 +17,8 @@ If you use a [_Container_ Fragment](./using-fragments.md#using-the-container-fra
    Many of the styles correspond to CSS classes. If you know CSS, many of the following fields will be familiar.
 ```
 
+Many of the following styles have defined tokens; see [Creating a Style Book](../../site-appearance/creating-a-style-book.md) and [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md) for more information.
+
 ## Margin
 
 Configure the Fragment's Margins using these settings:
@@ -105,3 +107,5 @@ This property specifies whether to clip content or to add scrollbars when an ele
 * [Configuring Fragment Styles](./configuring-fragment-styles.md)
 * [Content Pages Overview](./content-pages-overview.md)
 * [Using Fragments](./using-fragments.md)
+* [Creating a Style Book](../../site-appearance/creating-a-style-book.md)
+* [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)
