@@ -8,6 +8,7 @@ Installation and Upgrades
    installation-and-upgrades/activating-liferay-commerce-enterprise.md
    installation-and-upgrades/upgrading-liferay-commerce.md
    installation-and-upgrades/maintenance-versions.md
+   installation-and-upgrades/3.0-release-notes
    installation-and-upgrades/3-0-breaking-changes.md
    installation-and-upgrades/installing_commerce_2.1_and_below.rst
 
@@ -15,6 +16,7 @@ Installation and Upgrades
 -  :doc:`/installation-and-upgrades/activating-liferay-commerce-enterprise`
 -  :doc:`/installation-and-upgrades/upgrading-liferay-commerce`
 -  :doc:`/installation-and-upgrades/maintenance-versions`
+-  :doc:`/installation-and-upgrades/3.0-release-notes`
 -  :doc:`/installation-and-upgrades/3-0-breaking-changes`
 
 Installing Commerce 2.1 and Below
