@@ -1,8 +1,6 @@
 # What's New in Liferay DXP 7.3
 
-Liferay DXP 7.3 aims to refine Experience Management and Digital Operations to be better leveraged by non-technical practitioners. Improvements to site building, design, and personalization give users a new level of control and maintainability to the platform without having to know templating languages or relying on developers, built in content analytics empowers authors to be data driven, and app builder opens the door for business analysts to digitize operations without developers.
-
-For a full feature list, please read the Liferay DXP 7.3 Features Overview or contact 
+The latest release of Liferay DXP has been improved across the board. From page building to design, from content authoring and publication management to search engine optimization and content performance, from the new App Builder to the API Explorer, you'll find a wide range of improvements to help you build your site, analyze your traffic, manage the documents, or create the applications you need to be successful. 
 
 ## Page Building
 
