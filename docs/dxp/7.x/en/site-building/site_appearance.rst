@@ -4,13 +4,10 @@ Site Appearance
 .. toctree::
    :maxdepth: 2
 
-   site-appearance/user_guide.rst
+   site-appearance/creating-a-style-book.md
    site-appearance/developer_guide.rst
 
-User Guide
-----------
-
--  :doc:`/site-building/site-appearance/user-guide/creating-a-style-book`
+-  :doc:`/site-building/site-appearance/creating-a-style-book`
 
 Developer Guide
 ---------------
