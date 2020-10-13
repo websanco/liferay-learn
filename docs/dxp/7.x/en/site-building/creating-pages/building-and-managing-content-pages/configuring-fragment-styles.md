@@ -10,6 +10,7 @@ To configure a _Fragment_'s style:
 
 1. Navigate to the site where the content is published.
 1. Click _Edit_ on the Content page that supports fragments.
+1. Select the desired fragment (for example, a _Container Fragment_ or _HTML_).
 1. Click the _Selection_ (![Selection icon](../../../images/icon-page-tree.png)) icon.
 1. Click the _Styles_ tab.
 1. Configure the fragment's styles as desired.
