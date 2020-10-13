@@ -1,6 +1,6 @@
 # Documents and Media UI Reference
 
-This article serves as a reference guide to the _Documents and Media_ menu. Navigate to the _Site Administration_ &rarr; _Content & Data_ &rarr; _Documents and Media_.
+Navigate to the _Site Administration_ &rarr; _Content & Data_ &rarr; _Documents and Media_.
 
 ![The Documents and Media menu is found in the Site Administration.](./documents-and-media-ui-reference/images/01.png)
 
@@ -8,7 +8,7 @@ There are three tabs: _Documents and Media_, _Document Types_, and _Metadata Set
 
 ## Documents and Media Tab
 
-The _Documents and Media_ Tab's Home screen displays all the folders and documents on that site. This is the Root folder. Here, users can upload a single document or multiple documents, add a new folder, add a new Repository (for example, Sharepoint), or a new shortcut.
+The _Documents and Media_ Tab's Home screen displays the selected Site's folders and documents. This is the Root folder. Here, users can upload a single document or multiple documents, add a new folder, add a new Repository (for example, Sharepoint), or a new shortcut.
 
 Click the (![Add icon](../../images/icon-add.png)) to begin using the _Documents and Media_ application.
 
@@ -16,7 +16,7 @@ Click the (![Add icon](../../images/icon-add.png)) to begin using the _Documents
 
 ## Document Types Tab
 
-_Document Types_ are made of metadata fields that users fill out to and help define the purpose of Document Library files. They provide additional, searchable information about uploaded documents.
+_Document Types_ are made of metadata fields that help define the purpose of Document Library files. They provide additional, searchable information about uploaded documents.
 
 ![The Document Types Tab contains all Document Types which contain metadata sets.](./documents-and-media-ui-reference/images/02.png)
 
@@ -28,7 +28,7 @@ To learn more about using Document Types, see [Defining Document Types](./upload
 
 Metadata Sets are groups of fields that can be added to Document Types.
 
-Metadata Sets can be grouped in a hierarchy and can become the foundation of another metadata set (an "extension"). A "child" metadata set is displayed on the same level as the parent.
+Metadata Sets can be grouped in a hierarchy and can become the foundation of another metadata set (an *extension*). A child metadata set is displayed on the same level as the parent.
 
 ![The Metadata Set Tab contains all Metadata Sets.](./documents-and-media-ui-reference/images/03.png)
 
@@ -44,7 +44,7 @@ You can access the application's settings from any of the three tabs by clicking
 
 ### Access from Desktop
 
-Users can access their _Documents and Media_ repository in their file explorer on their desktop using WebDAV. To do so, users can click on _Access from Desktop_ to generate the WebDAV URL.
+Users can access their _Documents and Media_ repository in their file explorer on their desktop using WebDAV. Click on _Access from Desktop_ to generate the WebDAV URL.
 
 ![Generate the WebDAV URL.](./documents-and-media-ui-reference/images/06.png)
 
@@ -74,7 +74,7 @@ You can [Export or Import](../../site-building/building-sites/importing-exportin
 
 Users can configure their DM email notifications settings on the _Configuration_ menu. See [Connecting to a Mail Server](../../installation-and-upgrades/setting-up-liferay-dxp-configuring-mail/connecting-to-a-mail-server.md) to set up a mail server first.
 
-Users can use the _Definition of Terms_ which are placeholders that parse information such as the system administrator, the recipient, and the name of the document.
+Users can use the _Definition of Terms_: placeholders that parse information such as the system administrator, the recipient, and the name of the document.
 
 #### Email From Tab
 
