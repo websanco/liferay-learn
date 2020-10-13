@@ -7,8 +7,8 @@ Site Building
    site-building/introduction-to-site-building.md
    site-building/building_sites.rst
    site-building/creating_pages.rst
-   site-building/designing_site_appearance.rst
    site-building/displaying_content.rst
+   site-building/site_appearance.rst
    site-building/site_navigation.rst
    site-building/personalizing_site_experience.rst
    site-building/publishing_tools.rst

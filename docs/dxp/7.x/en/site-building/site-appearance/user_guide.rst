@@ -6,4 +6,4 @@ User Guide
 
    user-guide/creating-a-style-book
 
--  :doc:`/site-building/designing-site-appearance/user-guide/creating-a-style-book`
+-  :doc:`/site-building/site-appearance/user-guide/creating-a-style-book`
