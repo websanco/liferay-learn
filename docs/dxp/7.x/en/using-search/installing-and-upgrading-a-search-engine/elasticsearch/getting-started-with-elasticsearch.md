@@ -27,7 +27,6 @@ Elasticsearch can be installed and run locally on premises or using Docker. It c
 
 * [Installing Elasticsearch](./installing-elasticsearch.md) installs Elasticsearch manually.
 * [Exercise Installing Elasticsearch](./exercise-installing-elasticsearch.md) installs Elasticsearch with a Docker `run` command
-* [Elasticsearch Clustering with Docker](./elasticsearch-clustering-with-docker.md) installs Elasticsearch with Docker compose.
 
 To walk through a quick setup of a single Liferay node remotely connected to a single Elasticsearch 7 node, see the [Exercise](./exercise-installing-elasticsearch.md).
 
