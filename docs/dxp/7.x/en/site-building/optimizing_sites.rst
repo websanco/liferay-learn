@@ -4,9 +4,18 @@ Optimizing Sites
 .. toctree::
    :maxdepth: 3
 
-   optimizing-sites/search_engine_optimization.rst
    optimizing-sites/ab_testing.rst
-   optimizing-sites/using-the-redirection-tool.md
 
-.. include:: /site-building/optimizing-sites/README.rst
-   :start-line: 2
+Search Engine Optimization
+--------------------------
+
+-  :doc:`/site-building/creating-pages/page-settings/configuring-your-pages-friendly-url`
+-  :doc:`/site-building/site-settings/managing-site-urls/configuring-your-sites-friendly-url`
+-  :doc:`/site-building/site-settings/managing-site-urls/configuring-virtual-hosts-site-urls`
+-  :doc:`/site-building/site-settings/managing-site-urls/using-the-redirection-tool`
+-  :doc:`/site-building/displaying-content/using-display-page-templates/configuring-seo-and-open-graph`
+-  :doc:`/site-building/site-settings/configuring-open-graph`
+
+A/B Testing
+-----------
+Coming soon!

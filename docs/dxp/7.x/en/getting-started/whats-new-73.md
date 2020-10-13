@@ -106,7 +106,7 @@ You can now configure your Pages' previews on social media with built-in [Open G
 
 ![You can create redirects and even set the type.](./whats-new-73/images/13.png)
 
-You can now [redirect](../site-building/optimizing-sites/using-the-redirection-tool.md) your Site's URLs to any valid URL. Now you don't have to worry about old links directing to a 404 error. It supports temporary and permanent redirections, as well as setting an expiration date for the redirections.
+You can now [redirect](../site-building/site-settings/managing-site-urls/using-the-redirection-tool.md) your Site's URLs to any valid URL. Now you don't have to worry about old links directing to a 404 error. It supports temporary and permanent redirections, as well as setting an expiration date for the redirections.
 
 For links that do break, Liferay now keeps track of all 404 errors. You can use this list to create new redirects to help users find what they wanted.
 

@@ -1,4 +1,0 @@
-SEO Optimization
-================
-
-Coming soon!

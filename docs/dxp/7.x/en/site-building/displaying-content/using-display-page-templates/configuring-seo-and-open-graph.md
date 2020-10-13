@@ -89,7 +89,5 @@ By default, this field is unmapped in Display Page templates. This means the tem
 
 ## Additional Information
 
-* [Displaying Content with Display Page Templates](./displaying-content-with-display-page-templates.md)
-* [Creating a Display Page Template](./creating-a-display-page-template.md)
-* [Search Engine Optimization](./../../optimizing-sites/search_engine_optimization.html)
+* [Search Engine Optimization](./../../optimizing_sites.html#search-engine-optimization)
 * [Open Graph](./../../site-settings/configuring-open-graph.md)

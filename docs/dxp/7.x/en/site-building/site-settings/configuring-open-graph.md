@@ -42,6 +42,6 @@ When finished, click on *Save* to apply your changes.
 
 ## Additional Information
 
-* [Search Engine Optimization](./../optimizing-sites/search_engine_optimization.html)
+* [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
 * [Site Settings UI Reference](./site-settings-ui-reference.md)
 * [Page Configuration UI Reference](./../creating-pages/page-settings/page-configuration-ui-reference.md)
