@@ -6,7 +6,7 @@ The latest release of Liferay DXP has been improved across the board. From page 
 
 ### Master Pages
 
-Master Pages define page areas that are consistent across several or even all pages across Sites. Most commonly, they're used to define headers, footers, and side bars. Prior to this feature, common page areas could only be defined within a theme. Now non-technical users can create their own master pages, use them across the Site, and change them at any time (having the changes automatically applied to all pages). 
+[Master Pages](../site-building/creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) define page areas that are consistent across several or even all pages across Sites. Most commonly, they're used to define headers, footers, and side bars. Prior to this feature, common page areas could only be defined within a theme. Now non-technical users can create their own master pages, use them across the Site, and change them at any time (having the changes automatically applied to all pages). 
 
 ### Undo and Redo
 
@@ -46,13 +46,13 @@ We took Themes to the next level by providing Master Pages, Templates, fragments
 
 ### Stylebooks
 
-A Stylebook is a group of Styles (CSS rules) you can create using the Style editor UI. Stylebooks provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Stylebooks for the same Site and a page creator can pick the Stylebook for a particular page. Stylebooks help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
+A [Stylebook](../site-building/designing-site-appearance/user-guide/creating-a-style-book.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Stylebooks provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Stylebooks for the same Site and a page creator can pick the Stylebook for a particular page. Stylebooks help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
 
 ## Content Authoring and Management
 
 ### Asset Libraries
 
-You can now create dedicated libraries to organize and reuse your content. Asset libraries make it easier to reuse resources across different Sites. 
+You can now create [dedicated libraries](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) to organize and reuse your content. Asset libraries make it easier to reuse resources across different Sites. 
 
 Asset Libraries aren't limited to web content: you can share any asset type and connect them to the Sites where they're needed.While creating a page or writing a blog post, content authors can access the connected asset libraries and use images, documents or content stored in them. 
 
@@ -78,7 +78,7 @@ In 7.3 we've added a new configuration to vocabularies in order to set visibilit
 
 ## Publication Management
 
-Publications is a new feature that enables content creators to prepare changes and publish them on a schedule. If you must roll out a special, seasonal promotion that involves updating images, copy, and adding new pages, you can create a Publication and invite the necessary users to make their changes before publishing them. Multiple Publications can be worked on at a time, giving you the freedom to create many updates at once and roll them out on your schedule.
+[Publications](../site-building/publishing-tools/publications/publications-overview.md) is a new feature that enables content creators to prepare changes and publish them on a schedule. If you must roll out a special, seasonal promotion that involves updating images, copy, and adding new pages, you can create a Publication and invite the necessary users to make their changes before publishing them. Multiple Publications can be worked on at a time, giving you the freedom to create many updates at once and roll them out on your schedule.
 
 ![Publications provide a way to update your Site on a schedule of your choosing.](./whats-new-73/images/09.gif)
 
@@ -100,13 +100,13 @@ If you use an external agency or freelancers for your translations, you can now 
 
 ![Open Graph support means you can configure and preview links for social media and search engines.](./whats-new-73/images/12.gif)
 
-You can now configure your Pages' previews on social media with built-in Open Graph support. You also get a real time preview of how your pages appear on search engines and social networks.
+You can now configure your Pages' previews on social media with built-in [Open Graph](../site-building/site-settings/configuring-open-graph.md) support. You also get a real time preview of how your pages appear on search engines and social networks.
 
 ### Redirection Management
 
 ![You can create redirects and even set the type.](./whats-new-73/images/13.png)
 
-You can now redirect your Site's URLs to any valid URL. Now you don't have to worry about old links directing to a 404 error. It supports temporary and permanent redirections, as well as setting an expiration date for the redirections.
+You can now [redirect](../site-building/optimizing-sites/using-the-redirection-tool.md) your Site's URLs to any valid URL. Now you don't have to worry about old links directing to a 404 error. It supports temporary and permanent redirections, as well as setting an expiration date for the redirections.
 
 For links that do break, Liferay now keeps track of all 404 errors. You can use this list to create new redirects to help users find what they wanted.
 
@@ -122,7 +122,7 @@ Now you can easily check all friendly URLs used in any page for each language an
 
 >Subscribers
 
-Liferay DXP provides authors with a simple way to understand how many visitors actually read the content completely. Content performance analytics appear in context with content it relates to, to help content authors and marketers to build and assess a successful content strategy. 
+Now you can tell how many visitors completely read your content. Content performance analytics appear in context with content it relates to, to help content authors and marketers to build and assess a successful content strategy. 
 
 ![Content Performance shows views versus reads, search engines' incoming traffic volume, and keyword reports by region.](./whats-new-73/images/16.gif)
 
@@ -138,7 +138,7 @@ If you use your site to support products, the new Questions app can help your us
 
 ![App Builder provides an in-browser development environment for low-code applications.](./whats-new-73/images/image29.png)
 
-App Builder is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
+[App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
 
 ### Form View Rules and Field Sets
 
@@ -182,7 +182,7 @@ Under App Builder's hood, Data Engine was improved to augment the developer expe
 
 ## Forms
 
-Since user-provided data is often collected using web forms, Liferay has provided a GUI and development tools to design forms that comply with GDPR requirements. 
+Since user-provided data is often collected using [web forms](../process-automation/forms/user-guide/introduction-to-forms.md), Liferay has provided a GUI and development tools to design forms that comply with GDPR requirements. 
 
 ### Data Erasure (AKA GDPR Right to be Forgotten)
 
@@ -208,7 +208,7 @@ It's now not only easier to create and manage multi-page Forms, but also to reor
 
 ### Workload by Assignee
 
-There's now a card to show a breakdown of the workload of the process's assignees. This new chart offers a valuable glimpse to identify overloaded assignees and better drive decisions like re-assigning tasks to remove bottlenecks.
+In [Workflow Metrics](../process-automation/workflow/user-guide/using-workflow-metrics.md), there's now a card to show a breakdown of the workload of the process's assignees. This new chart offers a valuable glimpse to identify overloaded assignees and better drive decisions like re-assigning tasks to remove bottlenecks.
 
 ![Workload by Assignee shows you at a glance the workflow queues of various users.](./whats-new-73/images/25.png)
 
@@ -234,35 +234,35 @@ You can now bulk-transition and/or reassign instances while analyzing the proces
 
 A new application drawer houses cross-site applications, such as workflow, forms and Commerce. 
 
-![Global Menu](./whats-new-73/images/29.png)
+![The Global Menu provides convenient access to cross-site applications.](./whats-new-73/images/29.png)
 
 ## Application security
 
 ### Multi-factor authentication (DXP only)
 
-Multi-Factor Authentication (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
+[Multi-Factor Authentication](../installation-and-upgrades/securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md) (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
 
 ### SAML configuration on instance level
 
-This change allows to configure SAML settings on instance level, including handling the certificates. 
+This change allows to configure [SAML](../installation-and-upgrades/security-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md) settings on instance level, including handling the certificates. 
 
 A new SAML property was introduced: *Unknown users are strangers*. This property determines the behavior of SAML IdP connection when an End User is a stranger. The property defines if users that do not exist already in the portal database should be classified as strangers. Once classified, the portal instance's existing stranger handling policy determines if the user should be automatically provisioned using information available from the IdP's SAML assertion.
 
 ### OAuth 2 configuration on instance level
 
-The OAuth 2 application scopes screen has been simplified, so you have more control over the presentation of scopes during application authorization requests. For example, two scopes relating to two separate API applications can be presented as if they are one.
+The [OAuth 2](../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md) application scopes screen has been simplified, so you have more control over the presentation of scopes during application authorization requests. For example, two scopes relating to two separate API applications can be presented as if they are one.
 
 Expired authorizations can now be configured to be removed. After the expired authorizations afterlife duration, the authorization data is automatically removed by a scheduled process running in the background.
 
 ### OpenId Connect configuration on instance level
 
-Each instance can now configure connections to different OpenId Connect providers. 
+Each instance can now configure connections to different [OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/other-ssos/using-openid-connect.md) providers. 
 
 A system-level OpenId Connect Provider is visible to all instances, acting like a default OpenId Connect Provider. 
 
 ### CORS configuration on instance level
 
-CORS settings can now be configured on the instance level. The way to configure on instance level remains the same as at system level.
+[CORS](../installation-and-upgrades/securing-liferay/securing-web-services/setting-up-cors.md) settings can now be configured on the instance level. The way to configure on instance level remains the same as at system level.
 
 Url patterns are now matched at the instance level first, and then at the system level. Patterns at the instance level take precedence.
 
@@ -292,11 +292,11 @@ The Search widgets now support Widget Templates.
 
 ![The API Explorer shows all available APIs in a Liferay DXP installation.](./whats-new-73/images/30.png)
 
-The API explorer provides an interface for browsing and querying Liferay DXP's available APIs. You can explore all the REST applications and their endpoints. 
+The [API explorer](../headless-delivery/consuming-apis/consuming-rest-services.md) provides an interface for browsing and querying Liferay DXP's available APIs. You can explore all the REST applications and their endpoints. 
 
 ![You can query any of the APIs from the API Explorer.](./whats-new-73/images/31.png)
 
-The GraphQL client makes it easy to define and test queries.
+The [GraphQL client](../headless-delivery/consuming-apis/consuming-graphql-apis.md) makes it easy to define and test queries.
 
 ### OpenAPI validator
 
@@ -344,4 +344,4 @@ Liferay has begun transitioning big portions of its internal UI to React. As a s
 
 ### Upgrade Improvements 
 
-Many reliability improvements have been added to the upgrade process. The upgrade process has been unified between Core and Modules. Auto upgrade behavior can be controlled by a new portal property: `upgrade.database.auto.run`. 
+Many reliability improvements have been added to the [upgrade process](../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md). The upgrade process has been unified between Core and Modules. Auto upgrade behavior can be controlled by a new portal property: `upgrade.database.auto.run`. 
