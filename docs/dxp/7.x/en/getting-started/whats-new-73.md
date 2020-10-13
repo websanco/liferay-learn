@@ -1,6 +1,6 @@
 # What's New in Liferay DXP 7.3
 
-The latest release of Liferay DXP has been improved across the board. From page building to design, from content authoring and publication management to search engine optimization and content performance, from the new App Builder to the API Explorer, you'll find a wide range of improvements to help you build your site, analyze your traffic, manage the documents, or create the applications you need to be successful. 
+The latest release of Liferay DXP has been improved across the board. From page building to design, from content authoring and publication management to search engine optimization and content performance, from the new App Builder to the API Explorer, you'll find a wide range of improvements to help you build your site, analyze your traffic, manage documents, or create the applications you need to be successful. 
 
 ## Page Building
 
@@ -12,7 +12,7 @@ The latest release of Liferay DXP has been improved across the board. From page 
 
 ![Undo and redo works for the entire editing session.](./whats-new-73/images/01.gif)
 
-New buttons make it possible to undo/redo actions. Keyboard shortcuts are also available: CMD + z / CMD + shift + z (MacOS) Ctrl + z / Ctrl + shift + z (Windows, Linux)
+New buttons make it possible to undo/redo actions. Keyboard shortcuts are also available: `CMD + z` / `CMD + shift + z` (MacOS) `Ctrl + z` / `Ctrl + shift + z` (Windows, Linux)
 
 There's also a panel listing all actions performed, for quick movement to any page state in the editing session.
 
@@ -136,7 +136,7 @@ If you use your site to support products, the new Questions app can help your us
 
 ## App Builder
 
-![App Builder provides an in-browser development environment for low-code applications.](./whats-new-73/images/image29.png)
+![App Builder provides an in-browser development environment for low-code applications.](./whats-new-73/images/19.png)
 
 [App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
 
@@ -150,7 +150,9 @@ Fieldsets are fields grouped together, and App Builder's fieldsets make it easy 
 
 ![Fieldsets group fields so they can be shared across forms.](./whats-new-73/images/21.png)
 
-### Process Driven Apps (DXP-only)
+### Process Driven Apps
+
+> Subscription Required
 
 App Builder contains a workflow process for approvals. You can define the stages of the process and specify what information should be requested and/or displayed in each step of the application. You can also make use of [Workflow Metrics](#workflow-metrics-improvements) to understand the performance and health of the App's processes. 
 
@@ -202,7 +204,7 @@ Liferay Forms now comes with a built-in summary report of the answers received, 
 
 It's now not only easier to create and manage multi-page Forms, but also to reorder pages of a Form. 
 
-![Page Reordering, an oft-requested feature, is now provided in Forms.](./whats-new-73/images/image18.png)
+![Page Reordering, an oft-requested feature, is now provided in Forms.](./whats-new-73/images/24.png)
 
 ### Workflow Metrics Improvements
 
@@ -232,19 +234,21 @@ You can now bulk-transition and/or reassign instances while analyzing the proces
 
 ## Global Menu
 
-A new application drawer houses cross-site applications, such as workflow, forms and Commerce. 
+A new application drawer houses cross-site applications, such as workflow, forms and [Commerce](https://learn.liferay.com/commerce/2.x/en/index.html). 
 
 ![The Global Menu provides convenient access to cross-site applications.](./whats-new-73/images/29.png)
 
 ## Application security
 
-### Multi-factor authentication (DXP only)
+### Multi-factor authentication
+
+> Subscription Required
 
 [Multi-Factor Authentication](../installation-and-upgrades/securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md) (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
 
 ### SAML configuration on instance level
 
-This change allows to configure [SAML](../installation-and-upgrades/security-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md) settings on instance level, including handling the certificates. 
+This change allows to configure [SAML](../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md) settings on instance level, including handling the certificates. 
 
 A new SAML property was introduced: *Unknown users are strangers*. This property determines the behavior of SAML IdP connection when an End User is a stranger. The property defines if users that do not exist already in the portal database should be classified as strangers. Once classified, the portal instance's existing stranger handling policy determines if the user should be automatically provisioned using information available from the IdP's SAML assertion.
 
