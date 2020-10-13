@@ -8,8 +8,9 @@ Commerce Products can be connected to other assets in Liferay Commerce by using 
 
 ## Configure the Asset Browser to Search the Database
 
-1. Navigate to `[Liferay Home]\osgi\modules\`.
-1. Using an archive manager, open the `com.liferay.asset.browser.web.jar`.
+1. Navigate to `[Liferay Home]\osgi\marketplace\`. For more information about `Liferay Home` folder and how it works, see [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html).
+1. Find the `Liferay Web Experience - Liferay Asset - Impl.lpkg` then open it with an archive manager.
+1. In the archive manager window, open the `com.liferay.asset.browser.web.jar`.
 1. Using a text editor, open the `portlet.properties` file.
 1. Set `search.with.database=true` and update the jar.
 1. Restart the application server.
