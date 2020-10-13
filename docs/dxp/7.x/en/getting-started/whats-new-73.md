@@ -46,7 +46,7 @@ We took Themes to the next level by providing Master Pages, Templates, fragments
 
 ### Stylebooks
 
-A [Stylebook](../site-building/designing-site-appearance/user-guide/creating-a-style-book.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Stylebooks provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Stylebooks for the same Site and a page creator can pick the Stylebook for a particular page. Stylebooks help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
+A [Stylebook](../site-building/site-appearance/creating-a-style-book.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Stylebooks provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Stylebooks for the same Site and a page creator can pick the Stylebook for a particular page. Stylebooks help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
 
 ## Content Authoring and Management
 
