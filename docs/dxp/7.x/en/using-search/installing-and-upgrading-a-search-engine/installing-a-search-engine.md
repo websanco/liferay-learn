@@ -1,55 +1,56 @@
 # Installing a Search Engine
 
-A search engine is a critical component of your Liferay DXP installation. The [creating an example cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) documentation can get you started with the installation, but this section will cover more of the details (though at a high level) you need for setting up a production system.
+A search engine is a critical component of your Liferay installation. The [creating an example cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) documentation can get you started with the installation, but this section covers more of the details (though at a high level) you need for setting up a production system.
 
 <!-- MAKE A DIAGRAM SIMILAR TO THE CCR ONE BUT WITH JUST ONE CONNECTION -->
 
-When you start Liferay DXP a built-in Elasticsearch server is simultaneously started. This default search engine makes local testing convenient since lots of Liferay DXP's functionality depends on a search engine, but it isn't supported for use in production environments. See the [Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) instructions for more details, and [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) for the features and limitations of the default search engine.
+When you start Liferay a built-in Elasticsearch server is simultaneously started. This default search engine provides search capabilities as a convenience for testing, but it isn't supported for use in production. [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) describes production-level Elasticsearch setup. [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) describes the default search engine's features and limitations.
 <!-- Is this the place to introduce sidecar which will replace embedded in GA4? -->
 
 ```note::
-   Besides Elasticsearch, DXP also supports `Solr <http://lucene.apache.org/solr>`__. Solr is not embedded and must be connected remotely, even for development and testing. To use Solr, see the `Installing Solr <https://help.liferay.com/hc/articles/360032264052-Installing-Solr>`__ article.
+   Besides Elasticsearch, Liferay also supports `Solr <http://lucene.apache.org/solr>`__. Solr is not embedded and must be connected remotely, even for development and testing. To use Solr, see `Installing Solr <https://help.liferay.com/hc/articles/360032264052-Installing-Solr>`_.
 ```
 <!-- Is this the place to mention our deprecation of solr support? And that one can develop their own search engine adapter? And what we support in terms of custom search engine adapters? -->
 
-## Satisfying the Java Requirements
+## Java Requirements
 
-- You must set the [`JAVA_HOME` environment variable](https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/).
+- Search engines require the `JAVA_HOME` environment variable. Set it on your search engine host.
 
-- If using Liferay DXP 7.2, Elasticsearch and Liferay DXP must use the same Java version and distribution (e.g., Oracle Open JRE 1.8.0_201). Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay DXP compatibility matrix](https://help.liferay.com/hc/sections/360002103292-Compatibility-Matrix) to learn more about supported JDK distributions and versions. You can specify this in Elasticsearch:
+- If you're using Liferay 7.2, Elasticsearch and Liferay must use the same Java version and distribution. Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay compatibility matrix](https://help.liferay.com/hc/sections/360002103292-Compatibility-Matrix) to learn more about supported JDK distributions and versions. You can specify this in Elasticsearch:
 
-   ```properties
-   [Elasticsearch Home]/bin/elasticsearch.in.sh`: `JAVA_HOME=/path/to/java`
-   ```
+    ```properties
+    [Elasticsearch Home]/bin/elasticsearch.in.sh`: `JAVA_HOME=/path/to/java`
+    ```
 
-   The Liferay Connector to Elasticsearch that's bundled with 7.3 relies on the [High-Level REST Client from Elastic](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html), so this requirement does not apply.
+    This requirement doesn't apply to Liferay 7.3 because the Elasticsearch 7 connector communicates via HTTP; there's no JVM level serialization. See the [Elastic's High-Level REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) for details.
 
-```note::
-   The same requirement is not applicable to Solr as no JVM level serialization happens between the servers. Rather, all communication occurs at the HTTP level.
-```
+    ```note::
+       The same requirement is not applicable to Solr as no JVM level serialization happens between the servers. Rather, all communication occurs at the HTTP level.
+    ```
 ## Clustering the Search Engine
 
-A production environment's search engine should be clustered for load managements and optimal Liferay DXP performance. Both Elasticsearch and Solr can be configured successfully on multiple nodes in the remote environment.
+A production environment's search engine should be clustered for load managements and optimal performance. Both Elasticsearch and Solr can be configured successfully on multiple nodes in the remote environment.
 
-* To configure a remote Elasticsearch server or cluster, see [Installing Elasticsearch](./getting-started-with-elasticsearch.md).
+* To configure a remote Elasticsearch server or cluster, see [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md).
 
-* To configure a remote Solr server or cluster, see the [Installing Solr](./solr/installing-solr.md) article.
+* To configure a remote Solr server or cluster, see the [Installing Solr](./solr/installing-solr.md).
 
 ## Selecting a Search Engine Vendor and Version
 
-Elasticsearch is the recommended search engine for search and indexing with Liferay DXP. Elasticsearch and Solr are supported, but the [Solr integration is less robust](./installing-solr/solr-limitations.md)
+Elasticsearch is the recommended search engine for search and indexing with Liferay. Elasticsearch and Solr are supported, but the [Solr integration is less robust](./installing-solr/solr-limitations.md)
 
 ```important::
-   Always refer to the `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ to find the exact versions supported.
+   Always refer to the `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`_ to find the exact versions supported.
 ```
 
 - [Install the latest supported Elasticsearch version](./elasticsearch/getting-started-with-elasticsearch.md)
 - [Installing the latest supported Solr version](./solr/installing-solr.md)
 
 ```note::
-   If your installation requires a search engine besides Elasticsearch, whether as a replacement or in conjunction, you can write your own client application to provide a custom search engine connection. See the `Writing a Search Engine Adapter <../developer-guide/writing-a-search-engine-adapter.md>`__ for details.
-.. Probably add at least a parenthetical statement about why a search engine might be used in conjunction w/Elasticsearch
+   If your installation requires a search engine besides Elasticsearch, whether as a replacement or in conjunction, you can write your own client application to provide a custom search engine connection. See the `Writing a Search Engine Adapter <../developer-guide/writing-a-search-engine-adapter.md>`_ for details.
 ```
+
+<!-- Probably add at least a parenthetical statement about why a search engine might be used in conjunction w/Elasticsearch-->
 
 <!-- Goes in the Solr section intro article and will need updates
 ## Using Solr
