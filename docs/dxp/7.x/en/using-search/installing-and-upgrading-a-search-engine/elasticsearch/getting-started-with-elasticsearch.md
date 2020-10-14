@@ -1,21 +1,29 @@
 # Getting Started with Elasticsearch
 
 > Latest Supported Elasticsearch Version: 7.9 \
-> Available: Liferay DXP 7.2 SP1+ and Liferay CE/DXP 7.3
+> Available: Liferay DXP/CE 7.3 and  Liferay DXP 7.2 SP1+
 
-Here's an overview of setting up Elasticsearch:
+The Elasticsearch stack comprises:
 
-1. Determine the Elasticsearch server and connector client version to use.
+* Elasticsearch server
+* Elasticsearch connector 
+* Elasticsearch monitoring (optional)
+
+Here's an overview of the setup steps:
+
+1. Determine the Elasticsearch server and connector to use.
 
 1. Set up your Elasticsearch server(s).
 
 1. Connect Liferay to Elasticsearch. 
 
-1. Secure communication with Elasticsearch (required in production or if monitoring X-Pack security with Kibana).
+1. Secure communication with Elasticsearch.
+
+1. Set up monitoring (optional).
 
 ## Elasticsearch and Connector Versions 
 
-The [Compatibility Matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) shows the latest Elasticsearch version (and corresponding Liferay Connector to Elasticsearch) that each Liferay version supports. Always install the latest supported version of Elasticsearch and the connector.
+The [compatibility matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components. Elasticsearch security is required for production.
 
 ```warning::
    The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on `Liferay Marketplace <https://web.liferay.com/marketplace>`_.
@@ -23,25 +31,21 @@ The [Compatibility Matrix](https://help.liferay.com/hc/en-us/sections/3600021032
 
 ## Installing Elasticsearch 
 
-Elasticsearch can be installed and run locally on premises or using Docker. It can be configured on a cluster of servers too. Here are some different Elasticsearch hosting examples:
+Elasticsearch can be installed using the Elasticsearch archive or Docker image. It can be configured on a cluster of servers too. Here are some different Elasticsearch hosting examples:
 
-* [Installing Elasticsearch](./installing-elasticsearch.md) installs Elasticsearch manually.
-* [Exercise Installing Elasticsearch](./exercise-installing-elasticsearch.md) installs Elasticsearch with a Docker `run` command
+* [Installing Elasticsearch from an archive](./installing-elasticsearch.md)
+* [Installing Elasticsearch using Docker](./exercise-installing-elasticsearch.md)
 
-To walk through a quick setup of a single Liferay node remotely connected to a single Elasticsearch 7 node, see the [Exercise](./exercise-installing-elasticsearch.md).
-
-To set up an example Liferay DXP cluster with a remote Elasticsearch connection, see the [Clustering for High Availability](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md) documentation.
+Also the [Liferay clustering example](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md) demonstrates using a Liferay cluster with Elasticsearch.
 
 ## Connecting Liferay to Elasticsearch 
 
-The Liferay 7.3 connector to Elasticsearch uses the [REST-based Elasticsearch Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) while the Liferay 7.2 connector to Elasticsearch uses the [Java Transport Client](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html).
-
-See [Connecting to Elasticsearch](./connecting-to-elasticsearch.md) for details on connecting your Liferay version to Elasticsearch.
+A connector to Elasticsearch is bundled with Liferay. The latest Liferay Connector to Elasticsearch application is also available on Liferay Marketplace. See [Connecting to Elasticsearch](./connecting-to-elasticsearch.md) for details on connecting your Liferay version to Elasticsearch.
 
 ## Securing Elasticsearch 
 
-In production, you should secure communication between your Liferay and your Elasticsearch servers. [Securing Elasticsearch](./securing-elasticsearch.md) explains how to configure authentication, encryption, and data integrity. It also includes using PEM certificates, required when using Kibana to monitor Elasticsearch.
+In production, you should secure Liferay's communication with Elasticsearch. [Securing Elasticsearch](./securing-elasticsearch.md) explains how to configure authentication and encryption. It also demonstrates using PEM certificates, required for Elasticsearch monitoring.
 
 ## What's Next 
 
-[Installing Elasticsearch](./installing-elasticsearch.md) explains each manual installation and configuration step. Understanding these steps is helpful, even if you're running on Docker. If you'd rather start with running Elasticsearch and Liferay 7.3 on Docker, visit [Exercise Installing Elasticsearch](./exercise-installing-elasticsearch.md).
+[Installing Elasticsearch](./installing-elasticsearch.md) explains each manual installation and configuration step. These steps are helpful to understand, even if you're running on Docker. If you'd rather start with running Elasticsearch and Liferay 7.3 on Docker, visit [Exercise Installing Elasticsearch](./exercise-installing-elasticsearch.md).
