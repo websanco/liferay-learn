@@ -5,5 +5,5 @@ Orders
 -  :doc:`/orders-and-fulfillment/orders/order-information`
 -  :doc:`/orders-and-fulfillment/orders/orders-menu-reference-guide`
 -  :doc:`/orders-and-fulfillment/orders/order-life-cycle`
--  :doc:`/orders-and-fulfillment/orders/order-life-cycle-2.1.x`
+-  :doc:`/orders-and-fulfillment/orders/order-life-cycle-latest`
 -  :doc:`/orders-and-fulfillment/orders/order-management-statuses-reference-guide`
