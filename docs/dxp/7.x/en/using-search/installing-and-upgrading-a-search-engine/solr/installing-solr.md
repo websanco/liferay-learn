@@ -1,0 +1,3 @@
+# Installing Solr 
+
+Coming soon!

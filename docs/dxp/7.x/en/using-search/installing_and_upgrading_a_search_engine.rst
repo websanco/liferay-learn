@@ -6,6 +6,7 @@ Installing and Upgrading a Search Engine
 
    installing-and-upgrading-a-search-engine/installing-a-search-engine.md
    installing-and-upgrading-a-search-engine/elasticsearch.rst
+   installing-and-upgrading-a-search-engine/solr.rst
 
 -  :doc:`/using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine`
 -  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch`
