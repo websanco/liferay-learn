@@ -8,10 +8,8 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 * PostgreSQL
 
 ```important::
-   The `Liferay DXP Compatibility Matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7>`_ lists the supported databases and versions.
+   The `Liferay DXP Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ lists the supported databases and versions.
 ```
-
-<!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->
 
 ## Configure the database
 

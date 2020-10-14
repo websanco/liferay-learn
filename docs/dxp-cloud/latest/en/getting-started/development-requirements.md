@@ -7,7 +7,7 @@ In order to set up a local environment for development with DXP Cloud, the follo
 * [JDK 1.8 or JDK 11](http://www.oracle.com/technetwork/java/javase/downloads/index.html): required for running Liferay DXP locally
 
     ```important::
-       JDK 9 and JDK 10 are unsupported. Please see the latest `Compatibility Matrix <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>`_ for more information.
+       JDK 9 and JDK 10 are unsupported. Please see the latest `Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ for more information.
     ```
 
 * [Gradle 4+](http://www.gradle.org/downloads): used to run any of various build commands for Liferay DXP and DXP Cloud

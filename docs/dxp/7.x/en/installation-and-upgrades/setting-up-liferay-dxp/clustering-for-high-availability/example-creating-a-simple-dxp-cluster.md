@@ -31,7 +31,7 @@ Here are the main steps:
 
 ## Start a Database Server
 
-A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source or a direct connection to a database server or a database server cluster. Please see the [compatibility matrix](https://www.liferay.com/compatibility-matrix) for the database servers your DXP version supports. Please see [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
+A DXP cluster requires a data source that's accessible to all of the DXP cluster nodes. The data source can be a JNDI data source or a direct connection to a database server or a database server cluster. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for the database servers your DXP version supports. Please see [Database Configuration for Cluster Nodes](./database-configuration-for-cluster-nodes.md) for more information.
 
 Create the database server and DXP database:
 

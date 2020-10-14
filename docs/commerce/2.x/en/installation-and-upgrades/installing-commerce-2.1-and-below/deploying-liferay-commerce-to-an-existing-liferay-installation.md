@@ -46,6 +46,6 @@ Liferay Commerce has been deployed and is ready for use. Store administrators ca
 
 Note that if the application server is restarted, Liferay Commerce will not execute the `VerifyProcess` commands a second time.
 
-* [Liferay Commerce 2.0 Compatibility Matrix](https://web.liferay.com/documents/14/21598941/Liferay+Commerce+2.0+Compatibility+Matrix/0ed97477-f5a7-40a6-b5ab-f00d5e01b75f)
+* [Liferay Commerce 3.0 Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151)
 * [Installation Overview](./installation-overview.md)
 * [Using the Liferay Commerce Tomcat Bundle](./using-the-liferay-commerce-tomcat-bundle.md)

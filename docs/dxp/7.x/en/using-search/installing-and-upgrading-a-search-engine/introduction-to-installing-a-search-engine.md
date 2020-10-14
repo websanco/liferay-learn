@@ -14,7 +14,7 @@ The search engine and Liferay DXP must use the same Java version and distributio
 
 ### Elasticsearch and Java Distribution Compatibility
 
-Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay DXP compatibility matrix](https://help.liferay.com/hc/sections/360002103292-Compatibility-Matrix) to learn more about supported JDK distributions and versions.
+Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay DXP compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) to learn more about supported JDK distributions and versions.
 
 ### Solr and Java Distribution Compatibility
 

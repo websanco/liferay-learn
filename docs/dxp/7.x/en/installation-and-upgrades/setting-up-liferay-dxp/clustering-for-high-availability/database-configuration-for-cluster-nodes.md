@@ -114,7 +114,7 @@ DXP uses a read data source, a write data source, and a counter data source the 
 
 ## Database Replication
 
-Using a database cluster improves fault tolerance and DXP performance. Database cluster instances must be stay in sync. Replication is the process of copying changed data and changed schema from one database instance to another. All [supported databases](https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7) support replication. If you're using a database cluster, set up the databases for replication by following the database vendor's instructions.
+Using a database cluster improves fault tolerance and DXP performance. Database cluster instances must be stay in sync. Replication is the process of copying changed data and changed schema from one database instance to another. All [supported databases](https://help.liferay.com/hc/en-us/articles/360049238151) support replication. If you're using a database cluster, set up the databases for replication by following the database vendor's instructions.
 
 ## What's Next
 
