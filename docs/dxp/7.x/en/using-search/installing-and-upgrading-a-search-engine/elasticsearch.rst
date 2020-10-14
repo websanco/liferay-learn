@@ -1,14 +1,14 @@
 Elasticsearch
 =============
 
-Elasticsearch is the highly scalable, full-text search engine Liferay uses by default. Elasticsearch is bundled with Liferay 7.3+ for non-production purposes. In production, Liferay requires Elasticsearch running on separate server (a side-car).
+Elasticsearch is the highly scalable, full-text search engine Liferay uses by default. Elasticsearch is bundled with Liferay for non-production purposes. In production, Liferay requires Elasticsearch running on separate remote server.
 
 ```important::
-   Always check the `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ for the Elasticsearch version and server configuration compatible with your Liferay version.
+   Always check the `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`_ for the Elasticsearch version and server configuration compatible with your Liferay version.
 ```
 
 ```important:
-   Liferay 7.2 and 7.3 include support for Elasticsearch 7 and securing authenticated, encrypted Elasticsearch connections. Securing the Elasticsearch 6 connector (available on Liferay 7.2) requires an additional module only available with a `Liferay Enterprise Search subscription <./../liferay_enterprise_search.rst>`__
+   Liferay 7.2 and 7.3 include support for Elasticsearch 7 and securing authenticated, encrypted Elasticsearch connections. Securing the Elasticsearch 6 connector (available on Liferay 7.2) requires an additional module only available with a `Liferay Enterprise Search subscription <./../liferay_enterprise_search.rst>`_.
 ```
 
 Installing
