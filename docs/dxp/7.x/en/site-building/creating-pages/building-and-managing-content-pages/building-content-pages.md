@@ -92,6 +92,10 @@ You can set different style options for your Content Page layout like background
 
     ![You can modify editable text.](./building-content-pages/images/07.png)
 
+```note::
+   *Heading* fragments cannot have line breaks. Although both *Heading* and *Paragraph* fragments use `element-text` fields, only the latter can have multiple line texts separated by a line break.
+```
+
 ### Editing Hyperlinks
 
 1. Click on the link, button, or image that you want to edit.
@@ -158,7 +162,7 @@ To save time, you can duplicate a Fragment (Component, Section, Row, etc.):
     ![You can duplicate Fragments on the page.](./building-content-pages/images/10.png)
 
 ```note::
-  When you duplicate a Fragment, you also ducplicate the mappings and customizations.
+  When you duplicate a Fragment, you also duplicate the mappings and customizations.
 ```
 
 ```warning::
@@ -222,7 +226,7 @@ Content Pages, like Widget Pages, are built by dragging and dropping elements on
 
 ![A 3 Column and 1 Column layout stacked on top of each other.](./building-content-pages/images/21.png)
 
-**Components** are small design elements or pieces that add functionality to the page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the page inside a Layout. If you add a component outside an existing Layout, a one column layout is automatically added to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece. 
+**Components** are small design elements or pieces that add functionality to the page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the page inside a Layout. If you add a component outside an existing Layout, a one column layout is automatically added to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece.
 
 ![Here are several of Liferay's out of the box components arranged in the layout you saw previously.](./building-content-pages/images/22.png)
 
@@ -257,9 +261,8 @@ Editable image elements allow replacing the image URL or an image from your Docu
 
 To edit an image from the Content Page editor,
 
-1.  Click on the image you want to replace.
-
-2.  Click ![Image Properties](../../../images/icon-edit.png).
+1. Click on the image you want to replace.
+1. Click ![Image Properties](../../../images/icon-edit.png).
 
 ![Editing an image allows you to enter a URL, select an image from Documents and Media or set a link for the image.](./building-content-pages/images/24.png)
 
@@ -282,41 +285,37 @@ Editable links can be associated with entities that redirect you to a content ty
 
 To edit a link from the content page editor,
 
-1.  Click on the link or button that you want to edit.
-
-2.  Click on ![Edit](../../../images/icon-edit.png) to edit the link text.
-
-3.  Click on ![Link](../../../images/icon-link.png) to edit the link properties.
-
-4.  Click on ![Map](../../../images/icon-map.png) to edit the link mapping (described earlier).
+1. Click on the link or button that you want to edit.
+1. Click on ![Edit](../../../images/icon-edit.png) to edit the link text.
+1. Click on ![Link](../../../images/icon-link.png) to edit the link properties.
+1. Click on ![Map](../../../images/icon-map.png) to edit the link mapping (described earlier).
 
 From the Link Properties pop-up, you can define the following link options:
 
 *Manual:* defines a manual link or map it to an existing content field.
 
-- *URL:* sets the link's URL.
-- *Target:* set the link's behavior.
+* *URL:* sets the link's URL.
+* *Target:* set the link's behavior.
 
-*From Content Field:* 
+*From Content Field:*
 
-- *Content:* sets the content type.
-- *Field:* sets the field to display for the selected content.
+* *Content:* sets the content type.
+* *Field:* sets the field to display for the selected content.
 
 Some of the content fields include
 
-- Categories
-- Tags
-- Display Page URL
-- Description
-- Publish Date
-- Summary
-- Title
-- Last Editor Name
-- Author Name
-- Basic Web Content
+* Categories
+* Tags
+* Display Page URL
+* Description
+* Publish Date
+* Summary
+* Title
+* Last Editor Name
+* Author Name
+* Basic Web Content
 
-For more information on developing editable links, see 
-[Creating Editable Links](../../developer-guide/reference/fragments/fragment-specific-tags-reference.md#creating-editable-links).
+For more information on developing editable links, see [Creating Editable Links](../../developer-guide/reference/fragments/fragment-specific-tags-reference.md#creating-editable-links).
 
 Next you'll learn about the Content Page Editing Interface.
 
