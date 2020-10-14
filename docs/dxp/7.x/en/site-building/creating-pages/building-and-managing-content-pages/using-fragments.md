@@ -16,6 +16,10 @@ You can display a single existing web content, blog entry, or document by adding
 
 1. Click the plus button next to the *Content* input and select an existing web content, blog entry, or document to display.
 
+```note::
+   *Heading* fragments cannot have line breaks. Although both *Heading* and *Paragraph* fragments use `element-text` fields, only the latter can have multiple line texts separated by a line break.
+```
+
 ## Using the Container Fragment
 
 You can deploy a single *Container* fragment or multiple *Container* fragments on a page. In addition to having multiple *Container* fragments on a page, these fragments can be nested.
@@ -61,3 +65,4 @@ The link has been added to the *Container*. Once published, clicking on the name
 
 * [Using Fragment Comments](./using-fragment-comments.md)
 * [Using Widgets on a Content Page](./using-widgets-on-a-content-page.md)
+
