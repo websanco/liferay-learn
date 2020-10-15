@@ -1,8 +1,8 @@
 # Publications Overview
 
-*Publications* is a flexible publishing tool that you can use to develop, track, and publish changes across your DXP instance. It works by creating a database column to determine which version of your content is displayed on your live Sites. With it, Users create separate *publications* to group their changes into publishable blocks.
+You can use *Publications* to develop, track, and publish changes across your DXP instance. It works by creating a database column to determine which version of your content is displayed on your live Sites. With it, Users create separate *publications* to group their changes into publishable blocks.
 
-When making your changes, you can easily switch between *edit* and *production* modes. This frees you up to work on minor or major changes to your instance in an editing environment before they go live. You can then review and publish your changes immediately, or schedule them to be published at a later time.
+When making your changes, you can switch between *edit* and *production* modes. This frees you up to work on minor or major changes to your instance in an editing environment before they go live. You can then review and publish your changes immediately, or schedule them to be published at a later time.
 
 ![Create, view and manage publications via the Publications overview Page.](./publications-overview/images/01.png)
 
