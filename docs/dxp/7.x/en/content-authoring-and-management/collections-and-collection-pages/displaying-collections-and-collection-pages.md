@@ -1,8 +1,6 @@
-# Displaying Collections
+# Displaying Collections and Collection Pages
 
-```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
-```
+> Availability: Liferay Portal 7.3 GA6, DXP 7.3 GA1+
 
 You can display a Collection using a Collection Page or a Collection Display Fragment. For more information about these display options, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md#displaying-collections).
 
@@ -38,22 +36,22 @@ A Collection Display Fragment that shows a Collection in a Content Page.
 1. If you want to create a new Content Page to show the Collection Display Fragment, click the *New Page* button (![New Page](../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
 1. If you want to add the Collection Display Fragment to an existing page, click the *Actions* (![Actions](../../images/icon-actions.png)) button next to the page and select *Edit*.
 
-  ![Edit an existing page to configure the Display Fragment.](./displaying-collections-and-collection-pages/images/09.png)
+    ![Edit an existing page to configure the Display Fragment.](./displaying-collections-and-collection-pages/images/09.png)
 
 1. Click on the *Fragments and Widgets* (![Fragment and Widgets](../../images/icon-view-type-cards.png)) button.
 1. In the *Fragments* column, under the *Content Display* section, drag the *Collection Display* fragment onto the page editor.
 
-  ![Drag and drop the Collection Display Fragment onto your page.](./displaying-collections-and-collection-pages/images/03.png)
+    ![Drag and drop the Collection Display Fragment onto your page.](./displaying-collections-and-collection-pages/images/03.png)
 
 1. Click on the *Collection Display* Fragment to access its *Configuration*.
 1. Click on the *Add* (![Add Collection](../../images/icon-plus.png)) icon next to the *Collection* field.
 
-  ![Add your Collection to the page.](./displaying-collections-and-collection-pages/images/04.png)
+    ![Add your Collection to the page.](./displaying-collections-and-collection-pages/images/04.png)
 
 1. Click the *Collection* you want to show on your page.
 1. If you want to include additional items in the Collection Page, click the *Add* button (![Add](../../images/icon-add-app.png)) on the top of the page and add the items.
 
-  ![You can add additional web content to your Collection Page.](./displaying-collections-and-collection-pages/images/10.gif)
+    ![You can add additional web content to your Collection Page.](./displaying-collections-and-collection-pages/images/10.gif)
 
 1. To show the Collection, map its content to page elements. See the [Mapping the Collection Items](#mapping-the-collection-items) section.
 
@@ -63,21 +61,21 @@ A Collection Display Fragment that shows a Collection in a Content Page.
 1. In the tools sidebar, click the *Fragments and Widgets* (![Fragment and Widgets](../../images/icon-view-type-cards.png)) button.
 1. From the *Fragments and Widgets* sidebar panel, drag and drop the elements you want to use to show the Collection items.
 
-  ![Add fragments or widgets to the Collection Display and configure the display properties.](./displaying-collections-and-collection-pages/images/06.gif)
+    ![Add fragments or widgets to the Collection Display and configure the display properties.](./displaying-collections-and-collection-pages/images/06.gif)
 
     ```note::
-       If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection automatically use the same layout settings.
+        If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection automatically use the same layout settings.
     ```
 
 1. Click the Fragment or Widget on the Collection Display.
 1. Click again to access the mapping options.
 1. In the *Mapping* column, select the *Field* that you want to map to your Collection.
 
-  ![Map the fragments and widgets to the Collection items](./displaying-collections-and-collection-pages/images/07.gif)
+    ![Map the fragments and widgets to the Collection items](./displaying-collections-and-collection-pages/images/07.gif)
 
 1. Add more Fragments or Widgets as necessary and map the content to the content Fields.
 
-  ![Add Fragments and Widgets to the Collection Display and map the content fields.](./displaying-collections-and-collection-pages/images/08.gif)
+    ![Add Fragments and Widgets to the Collection Display and map the content fields.](./displaying-collections-and-collection-pages/images/08.gif)
 
 1. Click *Publish*.
 

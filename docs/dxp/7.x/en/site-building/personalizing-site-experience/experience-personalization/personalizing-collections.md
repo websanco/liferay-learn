@@ -1,13 +1,11 @@
 # Personalizing Collections
 
-```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see ![Liferay DXP 7.2](#liferay-dxp-7.2).
-```
+> Availability: Liferay Portal 7.3 GA6, Liferay DXP 7.3+
 
 By default, any user can see all the Collection's content and is part of *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
 
 ```note::
-   To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)
+   To customize a Collection using Segments, you must define the Segments first. For more information, see `Creating and Managing User Segments <../segmentation/creating-and-managing-user-segments.md>`_.
 ```
 
 ![Collections are available for anyone, by default](./personalizing-collections/images/02.png)
@@ -27,7 +25,7 @@ Consider the following example. You want to increase sales in your online Kitche
 
 1. Under *Personalized Variations*, click *New Personalized Variation* or click the New button (![New](../../../images/icon-plus.png)).
 1. In the *New Personalized Variation* dialog, click the Segment you want to associate to this Collection.
-1. Configure the properties for the Personalized Variation. For more information, see [Creating Collections](./creating-collections.md#creating-a-dynamic-collection).
+1. Configure the properties for the Personalized Variation. For more information, see [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md).
 
     For example, if this is Manual Collection, you can select the items you want to display in the Personalized Variation. If this is a Dynamic Collection, you can add a filter to customize the content.
 

@@ -8,5 +8,17 @@ Personalizing Site Experience
    personalizing-site-experience/segmentation.rst
    personalizing-site-experience/experience_personalization.rst
 
-.. include:: /site-building/personalizing-site-experience/README.rst
-   :start-line: 2
+-  :doc:`/site-building/personalizing-site-experience/personalizing-site-experience`
+
+Segmentation
+------------
+
+-  :doc:`/site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments`
+-  :doc:`/site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments`
+-  :doc:`/site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference`
+
+Experience Personalization
+--------------------------
+
+-  :doc:`/site-building/personalizing-site-experience/experience-personalization/content-page-personalization`
+-  :doc:`/site-building/personalizing-site-experience/experience-personalization/personalizing-collections`
