@@ -97,7 +97,6 @@ Alternatively, you can configure the connector in the user interface: in the App
 
 A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`), sets the URL to each Elasticsearch node (`networkHostAddresses=["es-node:9200"]`), and identifies the connection you're configuring (`remoteClusterConnectionId="remote"`).
 
-
 1. Create the following configuration file in your `[Liferay Home]/osgi/configs` folder:
 
     ```bash
@@ -132,9 +131,6 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
    The connectors contain many configuration settings. See the `Configuration Reference <./../../configuration-reference.md>`_ for their definitions. Most of the configurations correspond to settings available in `Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html>`_.
 ```
 
-Using a Remote Cluster Connection ID value other than `remote` requires adding a connection via the `ElasticsearchConnectionsConfiguration` entry.
-<!-- NOTE: This looks like it changed since the draft was written. Needs investigating -->
-
 To refer to Elasticsearch servers by name, map each  Elasticsearch server name to its IP address in your Liferay server's `/etc/hosts` file.
 
 ```tip::
@@ -155,7 +151,7 @@ To refer to Elasticsearch servers by name, map each  Elasticsearch server name t
     # com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
     operationMode="REMOTE"
     transportAddresses="ip.of.elasticsearch.node:9300"
-    # Highly recommended for all non-prodcution usage (e.g., practice, tests, diagnostics):
+    # Highly recommended for all non-production usage (e.g., practice, tests, diagnostics):
     #logExceptionsOnly="false"
     ```
 
