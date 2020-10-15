@@ -1,6 +1,6 @@
 # Using the Sidecar or Embedded Elasticsearch
 
-The Liferay Tomcat bundles installed via a ZIP file or Docker image include an Elasticsearch node that starts with Liferay. The node in Liferay 7.3 is a runs in a separate JVM as a sidecar server and the node in Liferay 7.2 is embedded in the Liferay server.
+The Liferay Tomcat bundles installed via a ZIP file or Docker image include an Elasticsearch node that starts with Liferay. The node in Liferay 7.3 runs in a separate JVM as a sidecar server and the node in Liferay 7.2 is embedded in the Liferay server.
 
 The Elasticsearch server is accessible at these URLs:
 
