@@ -49,13 +49,13 @@ Search customization usually involves at least one of these search phases:
 
 **Searching** is sending a search query and obtaining results (a.k.a. hits) from the search engine. Queries and filters can be part of the search request, both of which specify a field to search within and the value to match against. The search engine iterates through each field within the nested queries and filters, and optionally performs special analysis prior to executing the query (search time analysis). Search time analysis can be configured for each field via the mapping definitions.
 
-Search functionality can be extended and invoked using is Service Provider Interfaces and APIs, respectively. 
+Search functionality can be extended and invoked using the Service Provider Interfaces and APIs, respectively. 
 
 * Service Provider Interfaces (SPIs) are meant to be implemented. In the source code, these are found in modules ending in `-spi` (for example, the [`portal-search-spi` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-spi)).
 
 * APIs contain methods you can call in your own code. In the source code, these are found in modules ending in `-api` (for example, the [`portal-search-api` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-api)).
 
-See the Developer Guide for details.
+See the [Developer Guide](../developer_guide.rst) for details.
 
 ## What's Next 
 

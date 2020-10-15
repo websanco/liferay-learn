@@ -39,7 +39,7 @@ Use the [`setup-passwords` command](https://www.elastic.co/guide/en/elasticsearc
 
 ## Enable Transport Layer Security
 
-Enabling Transport Layer Security (TLS) involves generating node certificates and keys, and applying them to the Elasticsearch servers and Liferay Servers (covered in [Connecting to Elasticsearch](./connecting-to-elasticsearch.md)).
+Enabling Transport Layer Security (TLS) involves generating node certificates and keys, and applying them to the Elasticsearch servers and Liferay servers (covered in [Connecting to Elasticsearch](./connecting-to-elasticsearch.md)).
 
 ### Generate Node Certificates
 
@@ -144,11 +144,11 @@ The settings on Elasticsearch 6 are slightly different than those presented abov
     xpack.security.http.ssl.enabled: true
     ```
 
-After X-Pack is installed and TLS is enabled, configure the X-Pack Security adapter in Liferay.
+After X-Pack is installed and TLS is enabled, configure the X-Pack Security adapter in Liferay (discussed below).
 
 ### Example Elasticsearch Security Configuration
 
-For copying and pasting, here is the complete Elasticsearch 7 configuration (`elasticsearch.yml`) used in this guide (with the Elasticsearch 6 example commented out):
+Here is the complete Elasticsearch 7 configuration (`elasticsearch.yml`) with the Elasticsearch 6 configuration in comments:
 
 ```yaml
 # For Elasticsearch 7.3/7.4
@@ -194,11 +194,11 @@ xpack.security.http.ssl.verification_mode: certificate
 #xpack.monitoring.collection.enabled: true
 ```
 
-## Liferay 7.2: Install the Liferay Connector to X-Pack Security
+## Liferay 7.2: Install Liferay Enterprise Search Security
 
 ```important::
-   Skip these instructions if you're using Liferay 7.3 because it the Liferay Connector to Elasticsearch 7 includes X-Pack support already.
-``
+   Skip these instructions if you're using Liferay 7.3 because it includes X-Pack support already.
+```
 
 If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, [download](https://web.liferay.com/group/customer/dxp/downloads/enterprise-search)  the Liferay Connector to X-Pack Security [Elastic Stack 6.x]. Install the LPKG file by copying it into the `Liferay Home/deploy` folder. 
 

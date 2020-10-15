@@ -89,9 +89,7 @@ docker cp ~/path/to/com.liferay.portal.search.elasticsearch7.configuration.Elast
 
 Alternatively, you can configure the connector in the user interface: in the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)), go to Control Panel &rarr; System Settings and open the _Search_ category. The entry is called Elasticsearch 7.
 
-```note::
-   Liferay 7.2: The Control Panel is in the Product Menu (![Product Menu](../../../images/icon-product-menu.png)).
-```
+> In Liferay 7.2, The Control Panel is in the Product Menu (![Product Menu](../../../images/icon-product-menu.png)).
 
 ### Configuring the Connector for 7.3
 
@@ -103,7 +101,7 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
     com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
     ```
 
-1. Specify the configuration properties in the `.config` file. Here's an example that includes [security properties](./securing-elasticsearch.md) too:
+1. Specify the configuration properties in the `.config` file. Here's an example that includes [security properties](./securing-elasticsearch.md):
 
     ```properties
     # In CE/DXP7.3, productionModeEnabled replaces operationMode (deprecated):
@@ -194,7 +192,7 @@ Now that Liferay is connected to Elasticsearch, you can start using Elasticsearc
 
 ## Related Topics
 
-[Liferay Enterprise Search](../../liferay_enterprise_search.rst) \
+Liferay Enterprise Search (Coming soon) \
 [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md) \
-[Administering and Tuning Search](../../search_administration_and_tuning.rst) \
+Administering and Tuning Search (Coming soon) \
 Search Configuration Reference Guide (Coming soon)

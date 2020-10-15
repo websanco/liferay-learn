@@ -1,10 +1,10 @@
 # Installing a Search Engine
 
-A search engine is a critical component of your Liferay installation. The [creating an example cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) documentation can get you started with the installation, but this guide demonstrates setting up a **production** environment.
+A search engine is a critical component of your Liferay installation. [Creating an Example Cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) can get you started with the installation, but this guide demonstrates setting up a **production** environment.
 
 <!-- MAKE A DIAGRAM SIMILAR TO THE CCR ONE BUT WITH JUST ONE CONNECTION -->
 
-When you start Liferay a built-in Elasticsearch server (sidecar) is started simultaneously. This default search engine provides search capabilities as a convenience for testing, but it isn't supported for use in production. [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) describes production-level Elasticsearch setup. [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) describes the default Elasticsearch server (sidecar in 7.3 and embedded in 7.2) features and limitations.
+When you start Liferay, a built-in Elasticsearch server (sidecar) starts simultaneously. This default search engine provides search capabilities as a convenience for testing, but it isn't supported for use in production. [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) describes production-level Elasticsearch setup. [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) describes the default Elasticsearch server (sidecar in 7.3 and embedded in 7.2) features and limitations.
 
 ```note::
    `Solr <http://lucene.apache.org/solr>`_ is now deprecated in 7.3. Though it can still be used, Solr is not bundled with Liferay and must be connected remotely, even for development and testing. To use Solr, see `Installing Solr <./solr/installing-solr.md>`_.
@@ -22,9 +22,8 @@ When you start Liferay a built-in Elasticsearch server (sidecar) is started simu
 
 The Java version and distribution requirement doesn't apply to Liferay 7.3 because the Elasticsearch 7 connector communicates via HTTP; there's no JVM level serialization. See the [Elastic's High-Level REST Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) for details.
 
-```note::
-   The same requirement doesn't apply to Solr as no JVM level serialization happens between the servers. Rather, all communication occurs at the HTTP level.
-```
+The same requirement doesn't apply to Solr either because the Solr connector also communicates via HTTP.
+
 ## Clustering the Search Engine
 
 A production environment's search engine should be clustered for load management and optimal performance. Both Elasticsearch and Solr can be configured successfully on multiple nodes in the remote environment.
