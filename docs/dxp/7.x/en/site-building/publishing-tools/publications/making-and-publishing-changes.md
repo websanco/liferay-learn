@@ -20,19 +20,19 @@ This redirects you to the *Create New Publication* Page, where you can set the n
 
 ## Making Changes on a Single Publication
 
-Before making changes to your instance, ensure you're working on the correct publication and not on production or a different publication. You can confirm this via the Publications bar, which displays the name of what you're currently working on.
+Before making changes to your instance, ensure you're working on the correct publication and not on production or a different publication. You can confirm this via the Publications bar, which displays the current publication name.
 
-If you're not working on the desired publication, click on *Select a Publication* and choose the correct one.  
+If you're not working on the desired publication, click *Select a Publication* and choose the correct one.
 
 ![Click on Select a Publication and choose which publication you want to work on.](./making-and-publishing-changes/images/02.png)
 
-If trackable, changes made to web content, documents, and Pages on your instance are added to your current publication's list of tracked changes. Since each publication is instance-scoped, your tracked changes can span multiple Sites. When editing different Sites in the same publication, keep in mind that all tracked changes are applied to production when the publication is published.
+If trackable, changes made to Web Content, Documents, and Pages on your instance are added to your current publication's list of tracked changes. Since each publication is instance-scoped, your tracked changes can span multiple Sites. When editing different Sites in the same publication, keep in mind that all tracked changes are applied to production when the publication is published.
 
 With Publications, multiple Users can make changes to the same publication and publish their changes together. They can also work in parallel on different publications and publish their changes to production separately.
 
 ### Adding and Editing Assets
 
-When you add, edit, or remove assets in a publication, your changes are only visible via the publication in which they're made, and the publication's *Review Changes* page. They cannot be seen by Users in production or another publication. Each application controls which parts of an asset are and are not trackable by publications.
+When you add, edit, or remove assets in a publication, your changes are only visible via the publication in which they're made and the publication's *Review Changes* page. They cannot be seen by Users in production or another publication. Each application controls what parts of an asset are trackable by publications.
 
 ### Displaying Assets
 
@@ -44,7 +44,7 @@ When you delete an asset in a publication, DXP marks the asset for deletion and 
 
 ## Making Changes on Parallel Publications
 
-When two publications are created on the same baseline, they become parallel publications. Users can make changes in these parallel publications to create alternative edit histories of your instance entities. These changes can be compatible or conflicting, depending on whether they're editing the same or related content.
+When two publications are created on the same baseline, they become parallel publications. Users can make changes in these parallel publications to create alternative edit histories of your instance entities. These changes can be compatible or conflicting, depending on whether they modify the same or related content.
 
 ### Compatible Changes
 
@@ -52,9 +52,9 @@ If parallel publications include compatible changes, they can be published witho
 
 ### Conflicting Changes
 
-If production is updated while Users are developing their changes in a publication, this may cause a conflict during the publishing process. If Users attempt to publish a publication that includes changes that are incompatible with the current version of production, they are notified of any conflicting changes. These notifications explain the cause of each conflict and whether DXP has an available automatic solution, or if a conflict requires manual resolution.
+If production is updated while Users are developing their changes in a publication, this may cause a conflict during the publishing process. If Users attempt to publish a publication that includes changes that are incompatible with the current version of production, they are notified of conflicting changes. These notifications show the cause of each conflict and it can be resolved automatically or manually.
 
-Changing production after a publication is created can lead to a conflict when attempting to publish it, whether production is changed directly or with another publication. However, when production is directly updated, these changes are not tracked as part of your instance's publication history. See [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
+When production is directly updated, these changes are not tracked as part of your instance's publication history. Changing production after a publication is created can lead to a publication conflict, whether production is changed directly or with another publication. See [Resolving Conflicts](./resolving-conflicts.md) for more information on this process.
 
 ## Reviewing Publication Changes
 
@@ -62,7 +62,7 @@ Before Publishing, review your publication's tracked changes. You can do this by
 
 ![Click on Review Changes in the Publications bar drop-down menu.](./making-and-publishing-changes/images/03.png)
 
-Alternatively, you can review any publication's tracked changes in the *Ongoing* tab of the Publications overview Page. Simply click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) for the Publication you want to review, and select *Review Changes* to see all changes included in the selected publication.
+Alternatively, you can review any publication's tracked changes in the *Ongoing* tab of the Publications overview Page. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) for the Publication you want to review and select *Review Changes* to see all changes included in the selected publication.
 
 ### Simple and Advanced Change Summaries
 
@@ -84,7 +84,7 @@ Here, you can also switch between two display styles: *Changes* and *Context*.
 
 ## Publishing Your Changes
 
-When you're finished making your changes, you can publish them immediately, or schedule them to be published at a later time. Once published, a publication cannot be edited, and no further changes can be added to it. This is to help maintain a clear audit trail and to be able to roll back only the latest changes when needed.
+When you're finished making your changes, you can publish them immediately or schedule them to be published at a later time. Once published, a publication cannot be edited, and no further changes can be added to it. This maintains a clear audit trail to be able to roll back only the latest changes when needed.
 
 However, you can easily *revert* a publication via the *History* tab of the Publications Page. From here, you can review changes included in a publication and create a new publication that already contains changes that undo those made by your selected publication. See [Reverting Changes](./reverting-changes.md) for more information.
 
@@ -96,9 +96,9 @@ To publish your changes immediately, ensure you're on the publication you want t
 
 Alternatively, you can publish a publication by going to its *Changes* page and clicking on *Publish*.
 
-DXP performs conflict detection to see if there are any conflicting changes. If there are any conflicts detected, DXP notifies you of all automatically resolved conflicts and whether any conflicts require manual resolution. You cannot move forward with publishing until all conflicts are resolved. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
+DXP performs conflict detection to see if there are any conflicting changes. If there are any conflicts detected, DXP notifies you of all automatically resolved conflicts and whether any require manual resolution. You cannot move forward with publishing until all conflicts are resolved. See [Resolving Conflicts](./resolving-conflicts.md) for more information about this process.
 
-Once all conflicts are resolved, you can click on *Publish* to make your changes live on production. Clicking on *Publish* also redirects you to the *History* tab of the Publications page, where you can see publication details, including its date, publisher, and status. Here, you can also revert changes. See [Reverting Changes](./reverting-changes.md) for more information.
+Once all conflicts are resolved, you can click on *Publish* to make your changes live on production. Clicking *Publish* also redirects you to the *History* tab of the Publications page, where you can see publication details, including its date, publisher, and status. Here, you can also revert changes. See [Reverting Changes](./reverting-changes.md) for more information.
 
 ### Scheduling for Later
 
@@ -106,13 +106,13 @@ To publish your changes at a later time, ensure you're on the publication you wa
 
 ![Click on Schedule in the Publications bar drop-down menu.](./making-and-publishing-changes/images/07.png)
 
-Alternatively, you can publish a publication by going to its *Changes* page and clicking on *Schedule*.
+Alternatively, you can publish by going to a publication's *Changes* page and clicking on *Schedule*.
 
-DXP performs a preliminary conflict detection to see if there are any existing conflicts. If there are no conflicts, or all conflicts have been resolved, you are directed to set a date and time for publishing your changes.
+DXP performs a preliminary conflict detection to see if there are any existing conflicts. If there are no conflicts or all conflicts have been resolved, you can set a date and time for publishing your changes.
 
 ![Set a date and time to publish your changes.](./making-and-publishing-changes/images/08.png)
 
-At the time of the publication, DXP will perform a second conflict detection to ensure there are no new conflicting changes. The publish fails if DXP detects new conflicts that cannot be automatically resolved. If the conflicts can be resolved automatically, DXP proceeds with publishing.
+At the time of the publication, DXP performs a second conflict detection to ensure there are no new conflicting changes. The publish fails if DXP detects new conflicts that cannot be automatically resolved. If the conflicts can be resolved automatically, DXP proceeds with publishing.
 
 ## Additional Information
 
