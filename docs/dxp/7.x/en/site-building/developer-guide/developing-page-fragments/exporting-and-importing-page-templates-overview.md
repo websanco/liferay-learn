@@ -51,7 +51,10 @@ page-templates/page-template-collection-key1/page-template-key2/thumbnail.png
 
 There are [JSON schemas](https://github.com/liferay/liferay-portal/tree/master/modules/apps/layout/layout-page-template-api/src/main/resources/com/liferay/layout/page/template/validator/dependencies) available for `display-page-template.json`, `master-page.json`, `page-template-collection.json` and `page-template.json`.
 
+To learn how to Export and Import Page Templates using the Liferay Fragment Toolkit, see the [Exporting and Importing Page Templates](./exporting-and-importing-page-templates.md) article.
+
 ## Additional Information
 
 * [Developing Fragments Intro](./developing-fragments-intro.md)
 * [Using the Fragments Toolkit](./using-the-fragments-toolkit.md)
+* [Exporting and Importing Page Templates](./exporting-and-importing-page-templates.md)
