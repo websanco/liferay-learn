@@ -47,7 +47,7 @@ To import a Page Template:
 
 1. Close the _Import_ window.
 
-The Page Template has been imported.
+The Page Template has been imported into the site.
 
 ## Additional Information
 
