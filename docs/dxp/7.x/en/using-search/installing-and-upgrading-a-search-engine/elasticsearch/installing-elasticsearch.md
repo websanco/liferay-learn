@@ -1,6 +1,6 @@
 # Installing Elasticsearch
 
-Here are the instructions for installing, configuring, and starting Elasticsearch on-premises.
+Here's how to install, configure, and start Elasticsearch on-premises.
 
 ## Environment Setup
 
@@ -12,18 +12,16 @@ sysctl -w vm.max_map_count=262144
 
 ## Install Elasticsearch
 
-Here's how to install Elasticsearch manually using an archive.
-
 1. Download an Elasticsearch archive from [Elastic's website](https://www.elastic.co).
 
     ```important::
-       Download the latest Elasticsearch archive compatible with you Liferay version.
+       Download the latest Elasticsearch archive compatible with your Liferay version.
     ```
 
 1. Extract the archive contents to a local folder where you want to run Elasticsearch. This folder is your *Elasticsearch Home*.
 
 1. Install the required Elasticsearch plugins by running these commands in your `[Elasticsearch Home]/bin` folder:
-    
+ 
    ```bash
    ./elasticsearch-plugin install analysis-icu
    ```
@@ -126,7 +124,7 @@ Elasticsearch starts, and one of its status messages includes a transport addres
 [2019-04-01T16:55:50,127][INFO ][o.e.t.TransportService   ] [HfkqdKv] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
 ```
 
-If you're running Liferay 7.2, note the `publish_address` address in the `TransportService` status message; you'll need to configure the Liferay servers to connect to Elasticsearch at this address. 
+If you're running Liferay 7.2, note the `publish_address` address in the `TransportService` status message; you must configure the Liferay servers to connect to Elasticsearch at this address. 
 
 Elasticsearch is ready for [connections from Liferay](./connecting-to-elasticsearch.md).
 
