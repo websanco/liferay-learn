@@ -30,16 +30,16 @@ Use the [`setup-passwords` command](https://www.elastic.co/guide/en/elasticsearc
 ```
 
 ```note::
-  The configurations shown below assumes all passwords are set to *liferay*. Use your own passwords for your installation.
+  The configurations shown below assume all passwords are set to *liferay*. Use your own passwords for your installation.
 ```
 
 ```note::
-  To update a build-in user's password, use Kibana's UI or the `Change Password API <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html>`_.
+  To update a built-in user's password, use Kibana's UI or the `Change Password API <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html>`_.
 ```
 
 ## Enable Transport Layer Security
 
-Enabling Transport Layer Security (TLS) involves generating node certificates and keys, and applying them to the Elasticsearch servers and Liferay servers (covered in [Connecting to Elasticsearch](./connecting-to-elasticsearch.md)).
+Enabling Transport Layer Security (TLS) involves generating node certificates and keys and applying them to the Elasticsearch servers and Liferay servers (covered in [Connecting to Elasticsearch](./connecting-to-elasticsearch.md)).
 
 ### Generate Node Certificates
 
@@ -78,7 +78,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     localhost.key
     ```
 
-1. Copy the files to each Elasticsearch and Liferay server node.
+1. Copy the files to the same folder on each Elasticsearch and Liferay server node.
 
 The certificates and keys are ready to use in your Elasticsearch configuration.
 
@@ -119,7 +119,7 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 
 ### Configure TLS for Elasticsearch 6
 
-The settings on Elasticsearch 6 are slightly different than those presented above for Elasticsearch 7. [Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#enable-ssl) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
+The settings for Elasticsearch 6 are slightly different from those presented above for Elasticsearch 7. [Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#enable-ssl) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
 
 1. Add the certificate, key and certificate authority paths to each node's `elasticsearch.yml`:
 
@@ -200,7 +200,7 @@ xpack.security.http.ssl.verification_mode: certificate
    Skip these instructions if you're using Liferay 7.3 because it includes X-Pack support already.
 ```
 
-If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, [download](https://web.liferay.com/group/customer/dxp/downloads/enterprise-search)  the Liferay Connector to X-Pack Security [Elastic Stack 6.x]. Install the LPKG file by copying it into the `Liferay Home/deploy` folder. 
+If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, [download](https://web.liferay.com/group/customer/dxp/downloads/enterprise-search) the Liferay Connector to X-Pack Security [Elastic Stack 6.x]. Install the LPKG file by copying it into the `Liferay Home/deploy` folder. 
 
 To configure the X-Pack adapter, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Find the *Search* category and click on the *X-Pack Security* entry. You can enter the property values here, but it's more common to use a configuration file deployed to `[Liferay Home]/osgi/configs`. For the X-Pack security connector, create a file called
 
@@ -250,7 +250,7 @@ When you're finished configuring X-Pack Security, restart Elasticsearch. These s
 
 Some Elasticsearch APIs used by Liferay's Elasticsearch 6 connector were deprecated as of Elasticsearch 6.6 and 6.7. This can result WARN log entries in Elasticsearch's deprecation log when Liferay is configured with Elasticsearch 6.8.x and X-Pack Security is enabled:
 
-```sh
+```
 [2019-07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
 ode_name]'y' year should be replaced with 'u'. Use 'y' for year-of-era. Prefix your date format with '8' to use the new specifier.
 [2019-07-16T14:47:06,007][WARN ][o.e.d.c.s.Settings       ] [
