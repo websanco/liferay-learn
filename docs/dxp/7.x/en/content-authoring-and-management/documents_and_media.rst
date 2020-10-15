@@ -4,7 +4,7 @@ Documents and Media
 .. toctree::
    :maxdepth: 3
 
-   documents-and-media/introduction-to-documents-and-media.md
+   documents-and-media/sharing-documents-and-media.md
    documents-and-media/uploading_and_managing.rst
    documents-and-media/publishing_and_sharing.rst
    documents-and-media/developer_guide.rst

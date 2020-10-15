@@ -1,6 +1,6 @@
 # Sharing Documents and Media
 
-The Documents and Media library stores and organizes files on the server. It accepts files of any kind and can serve as a virtual shared drive.
+The Documents and Media library stores and organizes files on the server. It accepts files of any kind and can serve as a virtual shared drive. These files are stored using the [file storage method configured](../../system-administration/file-storage/configuring-file-storage.md) for the Liferay installation.
 
 ```tip::
    Each DXP Site has its own Documents and Media library. Thus documents are scoped to that Site and are not shared between Sites.
@@ -44,3 +44,4 @@ See [Using the Media Gallery Widget](./publishing-and-sharing/publishing-documen
 * [Documents and Media UI Reference](./documents-and-media-ui-reference.md)
 * [Creating Folders](./uploading-and-managing/creating-folders.md)
 * [Uploading Files](./uploading-and-managing/uploading-files.md)
+* [Configuring File Storage](../../system-administration/file-storage/configuring-file-storage.md)
