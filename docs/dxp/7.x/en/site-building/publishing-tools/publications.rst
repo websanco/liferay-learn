@@ -1,5 +1,5 @@
 Publications
-===========
+============
 
 .. toctree::
    :maxdepth: 3
