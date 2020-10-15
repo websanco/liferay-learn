@@ -1,6 +1,6 @@
 # Search Overview
 
-Search is a fundamental component of Liferay. Elasticsearch is bundled with Liferay for testing and development purposes. Production environments require Elasticsearch running on a separate server (a side-car). [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) explains Side-car setup. You can explore the search functionality immediately, however, using the bundled Elasticsearch engine.
+Search is a fundamental component of Liferay. Elasticsearch is bundled with Liferay for testing and development purposes. Production environments require Elasticsearch running on a remote server. [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) explains remote server setup. You can explore the search functionality immediately, however, using the bundled Elasticsearch engine.
 
 Here are the search features:
 
@@ -43,7 +43,7 @@ Learn more at [Search Administration and Tuning](../search-administration-and-tu
 
 ## Custom Development in Search
 
-Search customization usually involves at least on of these search phases:
+Search customization usually involves at least one of these search phases:
 
 **Indexing** is the sending one or more documents to the search engine. The document contains fields of various types (text, keyword, etc.). The search engine processes each field and determines whether to store the field or analyze it.
 
