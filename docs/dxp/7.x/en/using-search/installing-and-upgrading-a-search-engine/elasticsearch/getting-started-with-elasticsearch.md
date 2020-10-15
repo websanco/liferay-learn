@@ -3,7 +3,7 @@
 > Latest Supported Elasticsearch Version: 7.9 \
 > Available: Liferay DXP/CE 7.3 and  Liferay DXP 7.2 SP1+
 
-The Elasticsearch stack comprises:
+The Elasticsearch stack comprises
 
 * Elasticsearch server
 * Elasticsearch connector 
@@ -17,7 +17,7 @@ Here's an overview of the setup steps:
 
 1. Connect Liferay to Elasticsearch. 
 
-1. Secure communication with Elasticsearch.
+1. Secure Liferay's communication with Elasticsearch.
 
 ## Elasticsearch and Connector Versions 
 
@@ -42,7 +42,7 @@ A connector to Elasticsearch is bundled with Liferay. The latest Liferay Connect
 
 ## Securing Elasticsearch 
 
-In production, you should secure Liferay's communication with Elasticsearch. [Securing Elasticsearch](./securing-elasticsearch.md) explains how to configure authentication and encryption, and demonstrates using PEM certificates, required for Liferay Enterprise Search Monitoring.
+In production, you should secure Liferay's communication with Elasticsearch. [Securing Elasticsearch](./securing-elasticsearch.md) explains how to configure authentication and encryption and demonstrates using PEM certificates, required for Liferay Enterprise Search Monitoring.
 
 ## What's Next 
 
