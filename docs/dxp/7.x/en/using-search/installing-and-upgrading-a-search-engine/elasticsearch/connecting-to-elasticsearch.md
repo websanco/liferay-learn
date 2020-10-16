@@ -191,4 +191,4 @@ Now that Liferay is connected to Elasticsearch, you can start using Elasticsearc
 * Liferay Enterprise Search (Coming soon)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
 * Administering and Tuning Search (Coming soon)
-* Search Configuration Reference Guide (Coming soon)
+* [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)

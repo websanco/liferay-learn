@@ -145,4 +145,4 @@ If you're running in production, [secure communication between Liferay and Elast
 * [Liferay Enterprise Search](../../liferay_enterprise_search.md)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
 * [Administering and Tuning Search](../../search_administration_and_tuning.md)
-* [Search Configuration Reference Guide](../../search-configuration-reference.md)
+* [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)
