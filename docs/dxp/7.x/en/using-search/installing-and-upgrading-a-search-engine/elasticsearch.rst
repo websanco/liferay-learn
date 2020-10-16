@@ -14,6 +14,7 @@ Elasticsearch
    elasticsearch/installing-the-elasticsearch-sidecar.md
    elasticsearch/upgrading-elasticsearch.md
    elasticsearch/elasticsearch-connector-settings.md
+   elasticsearch/upgrading-elasticsearch.md
 
 Elasticsearch is the highly scalable, full-text search engine Liferay uses by default. Elasticsearch is bundled with Liferay for non-production purposes. In production, Liferay requires Elasticsearch running on separate remote server.
 
