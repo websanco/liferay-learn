@@ -40,10 +40,6 @@ Elasticsearch is the recommended search engine for search and indexing with Life
    Always refer to the `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`_ to find the exact versions supported.
 ```
 
-```note::
-   If your installation requires a search engine besides Elasticsearch, whether as a replacement or in conjunction, you can write your own client application to provide a custom search engine connection. See the `Writing a Search Engine Adapter <../developer-guide/writing-a-search-engine-adapter.md>`_ for details.
-```
-
 ## What's Next 
 
 [Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) is recommended. If you must use Solr (deprecated), see [Installing Solr](./solr/installing-solr/installing-solr.md). 
