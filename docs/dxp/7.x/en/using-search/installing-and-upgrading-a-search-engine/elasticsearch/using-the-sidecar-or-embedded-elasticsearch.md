@@ -63,7 +63,7 @@ While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Lifera
 | Wildfly: 7.3 GA4+        | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
 | WebSphere: 7.3 GA4+      | Sidecar             | &#10008;      | &#10004;                     |
 | Weblogic: 7.3 GA4+       | Sidecar             | &#10008;      | &#10004;                     |
-| _All flavors: 7.2/7.3 GA3+_ | _Embedded_       | &#10004;      | &#10008;                     |
+| _All flavors: 7.2/7.3 GA3-_ | _Embedded_       | &#10004;      | &#10008;                     |
 
 If you downloaded a bundle for an application server besides Tomcat, when you start the server an Elasticsearch distribution is downloaded on-the-fly and started as a sidecar server.
 
