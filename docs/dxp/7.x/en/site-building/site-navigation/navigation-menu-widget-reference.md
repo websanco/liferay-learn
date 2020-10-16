@@ -54,4 +54,4 @@ This section configures which pages at what level from the menu are displayed in
 ## Additional Information
 
 * [Using Navigation Menus](./using-navigation-menus.md)
-* [Configuring Site Navigation](./configuring-site-navigation.md)
+* [Managing Site Navigation](./managing-site-navigation.md)

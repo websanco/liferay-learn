@@ -16,6 +16,10 @@ Follow these steps to add a page:
 
     ![The Pages screen lets you edit your Site pages as a whole.](./adding-a-page-to-a-site/images/02.png)
 
+    ```note::
+       Beginning in 7.3, the default home page is a Content Page; previously it was a Widget page.
+    ```
+
     ```tip::
        Alternatively, since Liferay DXP 7.3, you can click the page tree icon next to the Site name to open the Page Tree Menu. You can use the Page Tree Menu to quickly find a page by keyword in the search bar, navigate to a page by selecting it, or even add pages through the Actions Menu.
     ```
