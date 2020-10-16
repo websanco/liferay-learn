@@ -168,7 +168,7 @@ An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src cod
 
 The Open Source (OSS) version of Elasticsearch 7.9.0 (licensed under Apache 2.0) is bundled with the Liferay CE/DXP 7.3 Tomcat bundles and started simultaneously in a _sidecar_ JVM. This sidecar installation is referred to as _development mode_, and it replaces the previous _embedded_ mode (neither of which are supported for production installations). Sidecar has dedicated properties in the Elasticsearch 7 configuration in the System Settings. By default, it runs on HTTP port 9201. See [Using the Sidecar or Embedded Elasticsearch](../installing-and-upgrading-a-search-engine/using-the-sidecar-or-embedded-elasticsearch.md) for more information.
 
-The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/manually-installing-sidecar.md) if your deployment is not able to reach external sites to download resources.
+The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/elasticsearch/installing-the-elasticsearch-sidecar.md) if your deployment is not able to reach external sites to download resources.
 
 ## Upgrading to DXP 7.3
 
