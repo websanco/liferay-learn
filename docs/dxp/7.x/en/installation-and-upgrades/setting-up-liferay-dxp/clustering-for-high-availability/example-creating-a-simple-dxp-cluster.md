@@ -75,7 +75,7 @@ A DXP cluster requires a File Store accessible to all of the DXP cluster nodes. 
 
 ## Start a Search Engine Server
 
-A DXP cluster requires a search engine (running as a separate process) accessible to all of the DXP cluster nodes. Please see [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) for more information.
+A DXP cluster requires a search engine (running as a separate process) accessible to all of the DXP cluster nodes. Please see [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) for more information.
 
 Create and configure an Elasticsearch server:
 

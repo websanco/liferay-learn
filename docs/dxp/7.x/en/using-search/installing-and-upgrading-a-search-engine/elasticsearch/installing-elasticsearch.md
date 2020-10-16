@@ -15,13 +15,13 @@ sysctl -w vm.max_map_count=262144
 1. Download an Elasticsearch archive from [Elastic's website](https://www.elastic.co).
 
     ```important::
-       Download the latest Elasticsearch archive compatible with your Liferay version.
+       Download the latest Elasticsearch archive `compatible with your Liferay version <./connecting-to-elasticsearch.html#available-liferay-connector-applications.md>`_.
     ```
 
 1. Extract the archive contents to a local folder where you want to run Elasticsearch. This folder is your *Elasticsearch Home*.
 
 1. Install the required Elasticsearch plugins by running these commands in your `[Elasticsearch Home]/bin` folder:
- 
+
    ```bash
    ./elasticsearch-plugin install analysis-icu
    ```
@@ -88,17 +88,27 @@ transport.port: 9302
 # Add security settings here
 ```
 
-> **Related Elasticsearch Documentation:** 
-> - [Important Elasticsearch configuration](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html)
-> - [Security settings in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html)
-> - [Bootstrap Checks, Development vs. production mode](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html)
+```tip::
+   Related Elasticsearch Documentation:
 
-**Important:** Each Elasticsearch node's `elasticsearch.yml` file must use unique values for the following properties.
+   - `Important Elasticsearch configuration <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html>`_
 
-* `node.name`
-* `http.port`
-* `network.host`
-* `transport.port`
+   - `Security settings in Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html>`_
+
+   - `Bootstrap Checks, Development vs. production mode <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html>`_
+```
+
+```important::
+   Each Elasticsearch node's ``elasticsearch.yml`` file must use unique values for the following properties.
+
+   - ``node.name``
+
+   - ``http.port``
+
+   - ``network.host``
+
+   - ``transport.port``
+```
 
 ### Enforce Bootstrap Checks 
 
@@ -132,7 +142,7 @@ If you're running in production, [secure communication between Liferay and Elast
 
 ## Additional Topics
 
-* [Liferay Enterprise Search](../../liferay_enterprise_search.rst)
+* [Liferay Enterprise Search](../../liferay_enterprise_search.md)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
-* [Administering and Tuning Search](../../search_administration_and_tuning.rst)
+* [Administering and Tuning Search](../../search_administration_and_tuning.md)
 * [Search Configuration Reference Guide](../../search-configuration-reference.md)

@@ -123,14 +123,14 @@ On Liferay 7.2, the bundled connector application and APIs are for Elasticsearch
 When you start the Liferay server (not yet), Liferay reads this file and blocks the declared bundles from starting.
 
 ```tip::
-   **Docker:** ``Liferay Home`` and other important folders of a Liferay installation are accessed in a Docker container at ``/mnt/liferay`` as described `here <../../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-container-lifecycle-and-api.md#api>`_. You can use ``docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs`` to place configuration files into the container. Later, you can use ``docker cp`` to deploy the Liferay Connector to Elasticsearch 7 LPKG file.
+   **Docker:** ``Liferay Home`` and other important folders of a Liferay installation are accessed in a Docker container at ``/mnt/liferay`` as described `here <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md#api>`_. You can use ``docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs`` to place configuration files into the container. Later, you can use ``docker cp`` to deploy the Liferay Connector to Elasticsearch 7 LPKG file.
 ```
 
 ### Install the Elasticsearch 7 Connector
 
 1. Download the Liferay Connector to Elasticsearch 7.
 
-   Make sure the connector corresponds to your Elasticsearch version. Note, the client libraries in the connector can be for an older version of Elasticsearch (e.g., 7.3) even though the connector application supports a newer version (e.g., 7.9.x). Liferay tests the connector with every minor Elasticsearch version and creates new update connector versions when needed. As always, consult the [compatibility matrix](https://help.liferay.com/hc/sections/360002103292-Compatibility-Matrix) for connector compatibility.
+   Make sure the connector corresponds to your Elasticsearch version. Note, the client libraries in the connector can be for an older version of Elasticsearch (e.g., 7.3) even though the connector application supports a newer version (e.g., 7.9.x). Liferay tests the connector with every minor Elasticsearch version and creates new update connector versions when needed. As always, consult the [compatibility matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) for connector compatibility.
 
    * CE: [Liferay CE Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
    * DXP: [Liferay Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170390307)
@@ -169,7 +169,6 @@ On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/work
 
 Now Liferay is indexing content into your remote Elasticsearch 7 installation.
 
-
 ## Available Liferay Connector Applications
 
 The bundled connector to Elasticsearch is not always the best choice for your installation. It's important to understand the differences between the connectors you can use to communicate with Elasticsearch:
@@ -189,7 +188,7 @@ Now that Liferay is connected to Elasticsearch, you can start using Elasticsearc
 
 ## Related Topics
 
-Liferay Enterprise Search (Coming soon) \
-[Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md) \
-Administering and Tuning Search (Coming soon) \
-Search Configuration Reference Guide (Coming soon)
+* Liferay Enterprise Search (Coming soon)
+* [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
+* Administering and Tuning Search (Coming soon)
+* Search Configuration Reference Guide (Coming soon)

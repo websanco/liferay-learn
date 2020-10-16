@@ -25,7 +25,7 @@ To add search widgets to a page, click the Add button on the page, select _Widge
 
 ![There are plenty of search widgets.](./search-overview/images/07.png)
 
-To learn more, visit [Configuring Search Pages](https://help.liferay.com/hc/en-us/articles/360028821052-Configuring-Search-Pages) or [Search Pages and Widgets](../search-pages-and-widgets/README.md).
+To learn more, visit [Configuring Search Pages](../search-pages-and-widgets/working-with-search-pages/search-pages.md) or [Search Pages and Widgets](../search-pages-and-widgets/working_with_search_pages.md).
 
 ## Search Configuration and Administration
 
@@ -39,7 +39,7 @@ You can examine search connections and field mappings, and execute indexes in th
 
 ![The search admin screens are informative and useful.](./search-overview/images/08.png)
 
-Learn more at [Search Administration and Tuning](../search-administration-and-tuning/README.md).
+Learn more at [Search Administration and Tuning](../search_administration_and_tuning.md).
 
 ## Custom Development in Search
 
@@ -55,7 +55,7 @@ Search functionality can be extended and invoked using the Service Provider Inte
 
 * APIs contain methods you can call in your own code. In the source code, these are found in modules ending in `-api` (for example, the [`portal-search-api` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-api)).
 
-See the [Developer Guide](../developer_guide.rst) for details.
+See the [Developer Guide](../developer_guide.md) for details.
 
 ## What's Next 
 

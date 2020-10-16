@@ -38,7 +38,7 @@ While the bundled Elasticsearch servers are convenient for development and testi
 You wouldn't run an embedded database like HSQL in production, and you shouldn't run the bundled Elasticsearch server in production either. Instead, run Elasticsearch in remote mode, as a standalone server or cluster of server nodes.
 
 ```important::
-   Synonym Sets and Result Rankings are applications that use the search index for primary data storage. No data is stored in the Liferay database. Therefore, if you have Synonym Sets or Result Rankings configured while using the sidecar or embedded Elasticsearch, switching to a remote Elasticsearch server and reindexing does `not` restore those configurations. Instead you must manually bring the Synonym Sets and Result Rankings into the remote Elasticsearch cluster. See the `Upgrade Guide <../upgrading_elasticsearch.rst>`_ for details on using Elastic's `Snapshot and Restore <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html>`_ feature to preserve these indexes.
+   Synonym Sets and Result Rankings are applications that use the search index for primary data storage. No data is stored in the Liferay database. Therefore, if you have Synonym Sets or Result Rankings configured while using the sidecar or embedded Elasticsearch, switching to a remote Elasticsearch server and reindexing does `not` restore those configurations. Instead you must manually bring the Synonym Sets and Result Rankings into the remote Elasticsearch cluster. See the `Upgrade Guide <../elasticsearch.md>`_ for details on using Elastic's `Snapshot and Restore <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html>`_ feature to preserve these indexes.
 ```
 
 ## Bundled Elasticsearch Server Use cases
@@ -47,12 +47,12 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 
 * Testing your custom [search and indexing code](../../developer-guide/search-and-indexing.md)
 * Developing search queries by running queries directly on Elasticsearch through Kibana
-* Testing the [search tuning](../../search_administration_and_tuning.rst) functionality
-* Exploring and configuring the [search widgets](../../search_pages_and_widgets.rst)
+* Testing the [search tuning](../../search_administration_and_tuning.md) functionality
+* Exploring and configuring the [search widgets](../../search_pages_and_widgets.md)
 
 ## App Server Differences
 
-While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Liferay Portal CE 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Lifery WAR onto any supported application server.
+While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Liferay Portal CE 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Liferay WAR onto any supported application server.
 
 | Liferay DXP Flavor       | Default Elasticsearch | Pre-Installed | Requires Manual Intervention |
 | ------------------------ | ------------------- | ------------- | ---------------------------- |
@@ -63,7 +63,7 @@ While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Lifera
 | Wildfly: 7.3 GA4+        | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
 | WebSphere: 7.3 GA4+      | Sidecar             | &#10008;      | &#10004;                     |
 | Weblogic: 7.3 GA4+       | Sidecar             | &#10008;      | &#10004;                     |
-| _All flavors: 7.2/7.3 GA3-_ | _Embedded_       | &#10004;      | &#10008;                     |
+| _All flavors: 7.2/7.3 GA3+_ | _Embedded_       | &#10004;      | &#10008;                     |
 
 If you downloaded a bundle for an application server besides Tomcat, when you start the server an Elasticsearch distribution is downloaded on-the-fly and started as a sidecar server.
 
