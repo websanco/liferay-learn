@@ -2,7 +2,7 @@
 
 Liferay DXP provides powerful tools for creating and organizing pages. You can build everything from a simple, flat Site navigation to a complex hierarchy with tree of sub-pages nested down many levels.
 
-In DXP, you can create Navigation Menus separate from your page hierarchy. Here, you can create a one-off landing page, or create multiple navigation menus: a main menu, secondary menus, footer menus, and custom menus.
+By default, there is a defined page hierarchy to organize your site pages. However, you can also create a _Navigation Menu_ that is separate from your page hierarchy. Using these _Navigation Menus_, you can create a one-off landing page, or create multiple navigation menus: a main menu, secondary menus, footer menus, and custom menus.
 
 Menus can differ by page: landing pages can show a simple list of frequently visited pages, and the rest can appear in secondary navigation. You can also create specific menus for different landing pages to direct users to content that is relevant to them.
 
@@ -22,7 +22,7 @@ See [Using Navigation Menus](./using-navigation-menus.md) to learn how to create
 
 ## Using the Page Tree
 
-Users can view and configure the pages in each Site in a vertical hierarchy.
+Another way to manage a site's page hierarchy is to use the _Page Tree_. Here, users can view and configure the pages in each Site
 
 To access the Page Tree:
 
@@ -36,10 +36,6 @@ To access the Page Tree:
     ![View each Site's Page Tree.](./managing-site-navigation/images/03.png)
 
 In the Page Tree view, users can still add more pages or more child pages, configure a page, and toggle between Public and Private Pages.
-
-## Using Collections
-
-See [About Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) to learn more about Collections and how to create them.
 
 ## Additional Information
 
