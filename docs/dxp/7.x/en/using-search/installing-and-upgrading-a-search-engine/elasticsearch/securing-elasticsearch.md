@@ -1,12 +1,12 @@
 # Securing Elasticsearch 
 
-The very first thing you must do to secure Elasticsearch is enable X-Pack Security. After that you can begin configuring authentication and Transport Layer Security.
+The very first thing you must do to secure Elasticsearch is [enable X-Pack Security](#enable-x-pack-security). After that you can begin configuring authentication and Transport Layer Security.
 
 ```note::
    **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription to use X-Pack. Starting with the Liferay Connector to Elasticsearch 7 (available on `Liferay Marketplace <../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md>`_), X-Pack Security is included by default. X-Pack monitoring still requires LES.
 ```
 
-## Enabling X-Pack Security
+## Enable X-Pack Security
 
 To enable security, add this setting in each Elasticsearch node's `[Elasticsearch Home]/config/elasticsearch.yml` file:
 
