@@ -6,7 +6,7 @@ Liferay DXP's out-of-the-box navigation is organized into three major areas: the
 
 The Personal Menu is the hub for information and activities for a User that is logged in.
 
-![A view of the Liferay DXP Personal Menu.](./navigating-dxp/images/01.png)
+![The Liferay DXP Personal Menu is available by clicking the avatar icon in the top right.](./navigating-dxp/images/01.png)
 
 Users can use the personal menu to:
 
@@ -30,7 +30,7 @@ You can also navigate to other Sites available to you from either the _Applicati
 
 The _Applications Menu_ contains a variety of links to manage many different applications within your Liferay DXP server.
 
-![A view of the Applications Menu.](./navigating-dxp/images/02.png)
+![The Applications Menu contains many global settings and important functions applicable to all sites.](./navigating-dxp/images/02.png)
 
 Here are some of the applications that can be managed from the _Applications Menu_:
 
@@ -38,11 +38,27 @@ Here are some of the applications that can be managed from the _Applications Men
 * [Workflow](../process-automation/workflow/user-guide/introduction-to-workflow.md)
 * [App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md)
 
+### Commerce Menu
+
+Beginning in Portal 7.3, Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition bundle requires no additional Commerce-specific installation steps and can be used immediately on startup. Liferay Commerce Enterprise 3.0 is bundled with Liferay DXP 7.3 DXP GA1 and requires a Liferay Commerce subscription.
+
+![The Commerce Menu contains all store functions.](./navigating-dxp/images/03.png)
+
+To learn more about Liferay Commerce, see the following, see [Introduction to Liferay Commerce](https://learn.liferay.com/commerce/2.x/en/starting-a-store/introduction-to-liferay-commerce.html).
+
+Here are some functions that can be managed from the _Commerce_ menu:
+
+* [Creating a New Catalog](https://learn.liferay.com/commerce/2.x/en/managing-a-catalog/catalogs/creating-a-new-catalog.html)
+* [Creating a New Channel](https://learn.liferay.com/commerce/2.x/en/starting-a-store/channels/managing-channels.html)
+* [Manage Inventory](https://learn.liferay.com/commerce/2.x/en/managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html)
+* [Process Orders](https://learn.liferay.com/commerce/2.x/en/orders-and-fulfillment/orders/processing-an-order.html)
+* And more..
+
 ### Control Panel
 
 The _Control Panel_ contains general administrative actions and configurations that can be scoped _globally_ to the Liferay DXP installation or to a particular instance.
 
-![A view of the Control Panel.](./navigating-dxp/images/03.png)
+![The Control Panel is now part of the Global menu.](./navigating-dxp/images/04.png)
 
 The following common administrative activities can be done in the Control Panel:
 
@@ -56,7 +72,7 @@ The following common administrative activities can be done in the Control Panel:
 
 The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed. The Site Menu may be hidden until you expand it by clicking the icon ( ![Site Menu icon](../images/icon-menu.png) ) at the upper-left corner of the screen.
 
-![A view of the expanded Site Menu so that all options are visible.](./navigating-dxp/images/04.png)
+![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
 
 ```note::
    The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
@@ -74,7 +90,7 @@ The following common site building and management activities can be done in the 
 
 In Liferay DXP versions prior to 7.3, all of the contents of the Global Menu are instead contained within the Control Panel. The Control Panel itself is located above the Site Menu on the left side of the screen in these versions.
 
-![The Control Panel in DXP 7.1 and 7.2 is located above the Site Menu.](./navigating-dxp/images/05.png)
+![The Control Panel in DXP 7.1 and 7.2 is located above the Site Menu.](./navigating-dxp/images/06.png)
 
 ## What's Next
 
