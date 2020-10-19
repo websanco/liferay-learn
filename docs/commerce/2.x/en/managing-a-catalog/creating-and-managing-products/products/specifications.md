@@ -12,7 +12,7 @@ To organize specifications and make them easy to display and maintain, specifica
 
 ## Specification Groups
 
-1. Navigate to the _Global Applications_ menu → _Commerce_ → _Products_.
+1. Navigate to the _Global Menu_ (![Applications Menu icon](../../../images/icon-applications-menu.png)) → _Commerce_ → _Products_.
 1. Click the _Specifications_ tab.
 1. Click the _Specification Groups_ sub-tab. By default, there are five Specification Groups included:
 
@@ -33,7 +33,7 @@ To add a new Specification Group, click the (+) button.
 
 To create a specification label:
 
-1. Navigate to the _Global Applications_ menu → _Commerce_ → _Products_.
+1. Navigate to the _Global Menu_ (![Applications Menu icon](../../../images/icon-applications-menu.png)) → _Commerce_ → _Products_.
 1. Click the _Specifications_ tab.
 1. Click the _Specifications Labels_ sub-tab.
 1. There are nine Specification Labels included by default:

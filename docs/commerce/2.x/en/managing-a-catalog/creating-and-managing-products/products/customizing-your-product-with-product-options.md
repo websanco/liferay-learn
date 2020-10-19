@@ -10,7 +10,7 @@ An option template can be applied to any product in the catalog. This makes it e
 
 To create an option template:
 
-1. Go to the _Global Applications_ menu → _Commerce_ → _Options_.
+1. Go to the _Global Menu_ (![Applications Menu icon](../../../images/icon-applications-menu.png)) → _Commerce_ → _Options_.
 1. Click the (![Add icon](../../../images/icon-add.png)) to add an Option Template.
 1. Enter the following:
     * **Title**: Color
@@ -60,7 +60,7 @@ Once you apply a template to a product, you can make any changes to the product'
 
 To apply an option template to a product:
 
-1. Go to the _Global Applications_ → _Commerce_ → _Products_.
+1. Go to the _Global Menu_ (![Applications Menu icon](../../../images/icon-applications-menu.png)) → _Commerce_ → _Products_.
 1. Click on any product listed there. For example, if the Minium accelerator was used to create the site, one sample product is the _Torque Converters_.
 
     ![Selecting a product](./customizing-your-product-with-product-options/images/03.png)

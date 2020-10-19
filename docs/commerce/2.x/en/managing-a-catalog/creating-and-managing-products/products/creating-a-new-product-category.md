@@ -4,7 +4,7 @@ Product Categories are used to organize your products. These groupings allow mul
 
 ## Creating Product Categories
 
-1. Go to the _Global Applications_ then click _Global_ in the Sites box on the right hand side.
+1. Go to the _Global Menu_ then click _Global_ in the Sites box on the right hand side.
 1. Once on the _Global_ site, click _Categorization_ → _Categories_.
 1. Click the (![Add icon](../../../images/icon-add.png)) button to create a Vocabulary first.
 1. Enter the following:
@@ -54,7 +54,7 @@ Categories nest hierarchically. While this allows multiple categories to be grou
 
 To configure the Product Category's Hierarchy:
 
-1. Go to the _Global Applications_ → _Control Panel_ → _System Settings_.
+1. Go to the _Global Menu_ (![Applications Menu icon](../../../images/icon-applications-menu.png)) → _Control Panel_ → _System Settings_.
 1. Click _Assets_ under the Contents section.
 1. On the _Asset Categories Web_ on the left menu, select _Flattened Tree_ from the _Category Navigation Display Style_ drop-down menu.
 

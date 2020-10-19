@@ -17,9 +17,9 @@ The _Members_ tab is where administrators can add additional users to an account
 
 This user has been added to the account.
 
-## Using the Global Application Menu Control Panel
+## Using the Global Menu Control Panel
 
-1. Click _Global Applications_ &rarr; _Control Panel_ &rarr; _Accounts_.
+1. Click _Global Menu_ &rarr; _Control Panel_ &rarr; _Accounts_.
 
     ![Inviting a User to the Account](./inviting-users-to-an-account/images/04.png)
 

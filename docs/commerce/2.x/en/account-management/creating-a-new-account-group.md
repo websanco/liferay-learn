@@ -8,7 +8,7 @@ Account Groups allow accounts to be grouped based on business criteria, such as 
 
 To create an account group:
 
-1. Click _Global Applications_ &rarr; _Control Panel_ &rarr; _Account Groups_.
+1. Click _Global Menu_ (![Applications Menu icon](../images/icon-applications-menu.png)) &rarr; _Control Panel_ &rarr; _Account Groups_.
 
     ![Navigate to Account Groups in the Control Panel.](./creating-a-new-account-group/images/03.png)
 

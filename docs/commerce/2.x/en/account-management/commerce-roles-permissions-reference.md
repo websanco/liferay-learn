@@ -8,10 +8,10 @@ Liferay Commerce offers four Commerce [account roles](./account-roles.md) out of
 
 To view the permissions associated with each Commerce account role:
 
-1. Navigate to the _Global_ menu → _Control Panel_.
+1. Navigate to the _Global_ (![Global Menu](../images/icon-applications-menu.png)) menu → _Control Panel_.
 1. Click _Account Roles_.
 
-   ![Navigate to the Global Applications menu to access the Accounts menu.](./commerce-roles-permissions-reference/images/05.png)
+   ![Navigate to the Global menu to access the Accounts menu.](./commerce-roles-permissions-reference/images/05.png)
 
 1. Click the _Site Roles_ tab.
 1. Click (Commerce Role) (for example, _Account Administrator_).
@@ -83,10 +83,10 @@ The following permissions are set by default:
 
 The Sales Agent is a regular role in Liferay Commerce and assignees are able to manage any account assigned to the role without granting administrative permissions. Because it is a regular role, it is found in the _Regular Roles_ tab.
 
-1. Navigate to the _Global_ menu → _Control Panel_.
+1. Navigate to the _Global_ (![Global Menu](../images/icon-applications-menu.png)) menu → _Control Panel_.
 1. Click _Roles_.
 
-   ![Navigate to the Global Applications menu to access the Accounts menu.](./commerce-roles-permissions-reference/images/05.png)
+   ![Navigate to the Global menu to access the Accounts menu.](./commerce-roles-permissions-reference/images/05.png)
 
 1. Click the _Regular Roles_ tab.
 1. Click _Sales Agent_.

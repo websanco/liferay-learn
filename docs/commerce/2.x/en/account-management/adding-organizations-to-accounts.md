@@ -24,10 +24,10 @@ The organization has been added to the account using the Account Management Widg
 
 Users who have administrative permissions for the store or installation may create and update account information in the Control Panel.
 
-1. Navigate to the _Global_ menu → _Control Panel_.
+1. Navigate to the _Global Menu_ ![Applications Menu icon](../images/icon-applications-menu.png) → _Control Panel_.
 1. Click _Accounts_.
 
-    ![Navigate to the Global Applications menu to access the Accounts menu.](./adding-organizations-to-accounts/images/04.png)
+    ![Navigate to the Global Menu to access the Accounts menu.](./adding-organizations-to-accounts/images/04.png)
 
 1. Click _Organizations_ on the left.
 1. Click the (+) button to add a new organization.

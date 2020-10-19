@@ -8,9 +8,9 @@ Users can accept an order once it has completed the checkout process. Note that 
 
 To accept an order:
 
-1. Navigate to the _Global Applications_ &rarr; _Commerce_ &rarr; _Orders_.
+1. Navigate to the _Global Menu_ (![Global Menu](../../images/icon-applications-menu.png)) &rarr; _Commerce_ &rarr; _Orders_.
 
-    ![The Orders menu is in the Global Applications menu.](./processing-an-order/images/07.png)
+    ![The Orders menu is in the Global menu.](./processing-an-order/images/07.png)
 
 1. Click on the Order ID (for example, _42838_).
 1. Click the _Accept Order_ button.
