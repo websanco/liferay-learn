@@ -39,7 +39,7 @@ If administrators are upgrading both DXP and Commerce, upgrade DXP 7.1 to 7.2. T
 
 Once DXP has been successfully upgraded from 7.1 to 7.2, follow the steps below to upgrade Liferay Commerce.
 
-### Upgrading just Commerce
+### Upgrading Just Commerce
 
 Alternately, administrators can chose to upgrade just Liferay Commerce.
 
