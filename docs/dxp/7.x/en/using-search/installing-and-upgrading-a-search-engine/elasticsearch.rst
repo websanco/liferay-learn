@@ -8,6 +8,7 @@ Elasticsearch
    elasticsearch/installing-elasticsearch.md
    elasticsearch/connecting-to-elasticsearch.md
    elasticsearch/securing-elasticsearch.md
+   elasticsearch/upgrading-elasticsearch.md
    elasticsearch/troubleshooting-elasticsearch-installation.md
    elasticsearch/exercise-installing-elasticsearch.md
    elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md
@@ -45,7 +46,7 @@ Securing
 Upgrading
 ~~~~~~~~~
 
-Coming Soon!
+-  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch`
 
 Configuring
 ~~~~~~~~~~~
