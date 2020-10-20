@@ -1,28 +1,26 @@
 # Using a CDN
 
-A Content Delivery Network (CDN) is a network of servers that contain your static content and that are deployed in multiple data centers. When users hit your site, that static content is loaded from the server geographically closest the user, speeding up requests.
+A Content Delivery Network (CDN) stores your static content on distributed infrastructure in multiple data centers. When visitors hit your site, your static content is loaded from the server closest to them, speeding up requests.
 
-Here, you'll first discover the perks of using a CDN and learn about general guidelines for using a CDN with Liferay. Then, you'll configure a CDN. It's time to distribute your content around the world!
+Here, you'll first discover the perks of using a CDN and learn about general guidelines for using a CDN with Liferay. Then you'll configure a CDN. It's time to distribute your content around the world!
 
 ## Using CDN for Performance Enhancements
 
-A CDN serves static web resources to users. These resources (images, CSS files, JavaScript files, etc.) are stored on multiple servers around the world. When requested, the resources are retrieved from the server nearest to the user.
-
-The CDN functions as a caching proxy. This means that once static content is copied to a local server, it is stored in a cache for quick and easy retrieval. This drastically improves latency time, because browsers can download static resources from a local server down the street instead of halfway around the world. A user's content request to the CDN is directed to specific server machine based on an algorithm that finds the server closest to the user. The figure below shows a visual representation of using geographical proximity to minimize latency.
+The CDN functions as a caching proxy. This means that once static content is copied to a local server, it's stored in a cache for quick and easy retrieval. This improves latency time, because browsers can download static resources from a local server down the street instead of halfway around the world. An algorithm finds the server closest to the request. The figure below shows a visual representation of using geographical proximity to minimize latency.
 
 ![ Using CDN allows a user to request static resources from a much closer local server, improving download times.](./using-a-cdn/images/01.png)
 
 The red lines on the map represent the required distances traveled by requests from a server to the user.
 
-Because of the reduced wait time for requests and reduced load on your application server, a CDN is a great option to improve performance. Using a CDN with Liferay, however, has some restrictions.
+Because of the reduced wait time for requests and reduced load on your application server, a CDN is a great option to improve performance. Using a CDN with Liferay, however, has some requirements.
 
 ## Liferay CDN Requirements
 
-Liferay only works with CDNs that can dynamically retrieve requested resources. Dynamic resources change over time or via interaction with users and thus cannot be cached. Check with your CDN provider to make sure you don't have to upload anything manually in order for the CDN to work. The CDN must automatically fetch the content.
+Liferay only works with CDNs that can dynamically retrieve requested resources. Dynamic resources change over time or via interaction with users and thus cannot be cached. Check with your CDN provider to make sure you don't have to upload anything manually for the CDN to work. The CDN must automatically fetch the content.
 
 The CDN must work like a transparent proxy. A request first goes to the CDN. If the CDN doesn't have the requested resource, the CDN makes an identical request back to the origin (Liferay), caches the resource, then serves the resource.
 
-Once you're using a CDN (see below), it serves both portal resources and plugin resources (e.g., theme resources or JavaScript files referenced from a plugin's `liferay-portlet.xml` file). The CDN only serves resources that are included in a plugin. It does not serve resources that are dynamically loaded from external sources.
+Once you're using a CDN (see below), it serves both core resources and plugin resources (e.g., theme resources or JavaScript files referenced from a plugin's `liferay-portlet.xml` file). The CDN only serves resources that are included in a plugin. It does not serve resources that are dynamically loaded from external sources.
 
 To get the CDN URL for a resource, developers should replace the portal host in the resource path with `themeDisplay.getCDNDynamicResourcesHost()`. Prefix resources with the CDN host name. Don't manually upload any resources to the CDN or put anything on the CDN which requires permission checking or complex policy access.
 
@@ -38,7 +36,7 @@ Now that you understand what a CDN accomplishes and how it's used, it's time to 
 
 To configure your CDN via a [portal properties](../reference/portal-properties.md) file, create a `portal-ext.properties` file in your [Liferay Home](../reference/liferay-home.md) folder and set the appropriate [Content Delivery Network properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network).
 
-Once you configure your CDN host, Liferay generates URLs to the static assets that replace the old host with your new CDN host so they are automatically cached and served afterwards by the CDN.
+Once you configure your CDN host, Liferay generates static asset URLs that replace the old host with your new CDN host so they are automatically cached and served afterwards by the CDN.
 
 Here's how to configure your CDN in the Control Panel:
 
@@ -52,17 +50,15 @@ Here's how to configure your CDN in the Control Panel:
     * *CDN Host HTTPS*
     * *Enable CDN Dynamic Resources*
 
-![CDN configuration in the Control Panel.](./using-a-cdn/images/02.png)
+![Configure the CDN in the Control Panel.](./using-a-cdn/images/02.png)
 
-These fields correspond to the Content Delivery Network portal properties. Refer to the [portal.properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) document for information on how to set values for these fields.
+These fields correspond to the Content Delivery Network portal properties. Refer to the [portal.properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) document for information on how to set values for these fields.
 
-Make sure to specify your CDN host(s) with a URL that includes the protocol and domain.
-
-Examples,
+Make sure to include the protocol and domain when specifying your CDN host(s) URLs:
 
 *CDN Host HTTP:* `http://cdnhost1.liferay.com`  
 *CDN Host HTTP:* `https://cdnhost2.liferay.com`
 
-Once you're finished, click *Save* and your old host is replaced with your new CDN host for static content.
+Once you're finished, click *Save* and your new CDN host now serves your static content.
 
 Congratulations! Your new CDN can drastically reduce latency time and improve performance.
