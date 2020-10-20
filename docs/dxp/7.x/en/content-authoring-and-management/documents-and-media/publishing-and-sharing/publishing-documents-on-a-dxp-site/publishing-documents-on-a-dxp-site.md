@@ -14,7 +14,7 @@ The *Media Gallery* widget publishes your media in a simple gallery-like style. 
 
 To use the *Media Gallery* widget:
 
-1. Navigate to an existing page where you wish to add the *Media Gallery* widget by clicking on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
+1. Navigate to an existing page where you wish to add the *Media Gallery* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
 
     Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
@@ -56,7 +56,7 @@ To use the *Media Gallery* widget:
 
 The *Documents and Media* widget gives users a simple way to publish various types of files from within a site page. Unlike the *Media Gallery* widget, this widget also allows you to publish documents and other types of media.
 
-1. Navigate to an existing page where you wish to add the *Documents and Media* widget by clicking on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
+1. Navigate to an existing page where you wish to add the *Documents and Media* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
 
     Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
@@ -124,7 +124,7 @@ The *Documents and Media* widget gives users a simple way to publish various typ
 
 The *Asset Publisher* widget gives users a simple way to organize and publish different assets from within a site page. The widget also supports collections.
 
-1. Navigate to an existing page where you wish to add the *Asset Publisher* widget by clicking on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top the page.
+1. Navigate to an existing page where you wish to add the *Asset Publisher* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top the page.
 
     Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
