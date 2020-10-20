@@ -14,9 +14,9 @@ The *Media Gallery* widget publishes your media in a simple gallery-like style. 
 
 To use the *Media Gallery* widget:
 
-1. Navigate to an existing page where you wish to add the *Media Gallery* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
+1. Navigate to an existing page where you wish to add the *Media Gallery* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../../images/icon-add-app.png)) at the top of the page.
 
-    Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
+    Or [create a new page](../../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
 2. The *Media Gallery* widget is found under the Content Management section of the list of widgets. It can also be found by searching for *Media Gallery*.
 
@@ -24,7 +24,7 @@ To use the *Media Gallery* widget:
 
 3. Drag the widget onto your page. Any media files previously uploaded should already be visible. If you wish to [add additional media files](../../uploading-and-managing/uploading-files.md), they can be uploaded from the *Documents and Media* Application.
 
-4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
+4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../../images/icon-options.png)) at the top-right corner of the widget.
 
 5. Select *Configuration* and the Configuration window will appear.
 
@@ -42,7 +42,7 @@ To use the *Media Gallery* widget:
     
     ![Clicking on a media file will start a slideshow](images/03.png)
 
-7. Clicking on the *Options* button of an individual media file (![Click on the Options button of a media file more more options](../../../images/icon-options.png)) will give you different options:
+7. Clicking on the *Options* button of an individual media file (![Click on the Options button of a media file more more options](../../../../images/icon-options.png)) will give you different options:
 
     ![](images/04.png)
 
@@ -56,9 +56,9 @@ To use the *Media Gallery* widget:
 
 The *Documents and Media* widget gives users a simple way to publish various types of files from within a site page. Unlike the *Media Gallery* widget, this widget also allows you to publish documents and other types of media.
 
-1. Navigate to an existing page where you wish to add the *Documents and Media* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
+1. Navigate to an existing page where you wish to add the *Documents and Media* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../../images/icon-add-app.png)) at the top of the page.
 
-    Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
+    Or [create a new page](../../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
 2. The *Documents and Media* widget is found under the Content Management section of the list of widgets. It can also be found by searching for *Documents and Media*.
 
@@ -66,7 +66,7 @@ The *Documents and Media* widget gives users a simple way to publish various typ
 
 3. Drag the widget onto your page. Any media files previously uploaded should already be visible. If you wish to [add additional media files](../../uploading-and-managing/uploading-files.md), they can be uploaded from the *Documents and Media* Application.
 
-4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
+4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../../images/icon-options.png)) at the top-right corner of the widget.
 
 5. Select *Configuration* and the Configuration window will appear.
 
@@ -96,13 +96,13 @@ The *Documents and Media* widget gives users a simple way to publish various typ
 
         ![Click on filter and order to choose different ways to organize and sort your files.](images/08.png)
 
-    * Reverse - Click on the *Reverse* icon (![Click on the reverse icon to reverse sort direction.](../../../images/icon-sort.png)) to reverse the direction of the sorting. 
+    * Reverse - Click on the *Reverse* icon (![Click on the reverse icon to reverse sort direction.](../../../../images/icon-sort.png)) to reverse the direction of the sorting. 
 
     * Search - The search bar allows you to search through your media files by keyword.
 
-    * Information - The *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) provides details about the media files within the folder.
+    * Information - The *Information* icon (![Click on the information icon to display file info.](../../../../images/icon-information.png)) provides details about the media files within the folder.
 
-    * Display Style - Click on the *Display Style* icon (![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png))to choose how to display your media files. There are 3 display types: Cards, List and Table view
+    * Display Style - Click on the *Display Style* icon (![Click on the display style icon to choose your display option.](../../../../images/icon-view-type-cards.png))to choose how to display your media files. There are 3 display types: Cards, List and Table view
 
         ![Choose between cards, list, or table view to display your files.](images/09.png)
         
@@ -113,20 +113,20 @@ The *Documents and Media* widget gives users a simple way to publish various typ
     ![Click a checkbox for a file and access additional options.](images/10.png)
 
     * Clear - Click to clear your current selection.
-    * Information - Click the *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) to see detailed information about the file.
-    * Download - Click the *Download* icon (![Click on the download icon to download the file.](../../../images/icon-download.png)) to download the file.
-    * Move - Click the *Move* icon (![Click on the move icon to move the file.](../../../images/icon-move.png)) to move the file to a different folder.
-    * Edit Tags - Click on the *Edit Tags* icon (![Click on the edit tags icon to edit the file tags.](../../../images/icon-edit.png)) to edit the existing tags of a file.
-    * Move to Recycle Bin - Click on the *Recycle Bin* icon (![Click on the recycle bin icon to delete the file.](../../../images/icon-trash.png)) to delete a file.
-    * Actions - Clicking on the * Actions* icon (![Click on the Actions button to access more options.](../../../images/icon-actions.png)) to access more options, including *Checkin* and *Checkout*.
+    * Information - Click the *Information* icon (![Click on the information icon to display file info.](../../../../images/icon-information.png)) to see detailed information about the file.
+    * Download - Click the *Download* icon (![Click on the download icon to download the file.](../../../../images/icon-download.png)) to download the file.
+    * Move - Click the *Move* icon (![Click on the move icon to move the file.](../../../../images/icon-move.png)) to move the file to a different folder.
+    * Edit Tags - Click on the *Edit Tags* icon (![Click on the edit tags icon to edit the file tags.](../../../../images/icon-edit.png)) to edit the existing tags of a file.
+    * Move to Recycle Bin - Click on the *Recycle Bin* icon (![Click on the recycle bin icon to delete the file.](../../../../images/icon-trash.png)) to delete a file.
+    * Actions - Clicking on the * Actions* icon (![Click on the Actions button to access more options.](../../../../images/icon-actions.png)) to access more options, including *Checkin* and *Checkout*.
 
 ## Using the Asset Publisher Widget
 
 The *Asset Publisher* widget gives users a simple way to organize and publish different assets from within a site page. The widget also supports collections.
 
-1. Navigate to an existing page where you wish to add the *Asset Publisher* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top the page.
+1. Navigate to an existing page where you wish to add the *Asset Publisher* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../../images/icon-add-app.png)) at the top the page.
 
-    Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
+    Or [create a new page](../../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
 2. The *Asset Publisher* widget is found under the Content Management section of the list of widgets. It can also be found by searching for *Asset Publisher*.
 
@@ -134,7 +134,7 @@ The *Asset Publisher* widget gives users a simple way to organize and publish di
 
 3. Drag the widget onto your page. Any media files previously uploaded should already be visible. If you wish to [add additional media files](../../uploading-and-managing/uploading-files.md), they can be uploaded from the *Documents and Media* Application.
 
-4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
+4. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../../images/icon-options.png)) at the top-right corner of the widget.
 
 5. Select Configuration* and the Configuration window will appear.
 
@@ -154,7 +154,7 @@ The *Asset Publisher* widget gives users a simple way to organize and publish di
 
         ![Click Select and choose from your saved selections.](images/14.png)
 
-        To learn more, go to the [About Collections](../../collections-and-collection-pages/about-collections-and-collection-pages.md) page.
+        To learn more, go to the [About Collections](../../../collections-and-collection-pages/about-collections-and-collection-pages.md) page.
 
     * Collection Provider - This is a new feature in Liferay 7.3 that allows developers to create specific collections with more advanced criteria. 
         
@@ -168,13 +168,13 @@ It is very easy to add your documents or media files to other types of DXP asset
 
 ### In Web Content
 
-1. To be able to add documents or media to your Web Content, first [create a Structure](../..//web-content/web-content-structures/creating-structures.md) that contains a field for documents and media.
+1. To be able to add documents or media to your Web Content, first [create a Structure](../../../web-content/web-content-structures/creating-structures.md) that contains a field for documents and media.
 
 2. Go to the Structures tab of the Web Content application to create a new Structure. Drag and drop the Documents and Media field onto the Structure.
 
     ![Drag and drop the Documents and Media field onto the Structure.](images/15.png)
 
-3. Now under the Web Content tab, click on the Add icon (![Click on the New icon.](../../../images/icon-add.png)) to create new Web Content. Select the Structure you just created as your template.
+3. Now under the Web Content tab, click on the Add icon (![Click on the New icon.](../../../../images/icon-add.png)) to create new Web Content. Select the Structure you just created as your template.
 
     ![Select the new Structure you just created](images/16.png)
 
@@ -184,7 +184,7 @@ It is very easy to add your documents or media files to other types of DXP asset
 
 1. To add documents and media to your blog, first navigate to the Blog application.
 
-2. Click the the Add icon (![Click on the New icon.](../../../images/icon-add.png)) to add a new blog entry. 
+2. Click the the Add icon (![Click on the New icon.](../../../../images/icon-add.png)) to add a new blog entry. 
 
 3. Under Related Assets, click on the *Select* button and you should be able to select your documents and media to be added to your blog post.
 
