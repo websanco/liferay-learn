@@ -54,7 +54,7 @@ You can bulk convert all Widget Pages on a Site to Content Pages using the built
 
 1. Open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Server Administration* &rarr; *Script*.
 
-1. Enter this script in the script window, making sure to replace the Group ID with your own. The Groovy script uses the [`BulkLayoutConverter` interface](https://docs.liferay.com/portal/7.3-latest/apps/layout-3.0.0/javadocs/com/liferay/layout/util/BulkLayoutConverter.html) to convert all Widget Pages with the given Group ID to Content Pages:
+1. Enter this script in the script window, making sure to replace the Group ID with your own. The Groovy script uses the [`BulkLayoutConverter` interface](https://docs.liferay.com/dxp/portal/7.3-latest/apps/layout-3.0.0/javadocs/com/liferay/layout/util/BulkLayoutConverter.html) to convert all Widget Pages with the given Group ID to Content Pages:
 
     ```groovy
     import com.liferay.layout.util.BulkLayoutConverter

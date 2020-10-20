@@ -182,7 +182,7 @@ Here's how to disable it and work with it using a Portal Properties file:
     docker run -e LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
     ```
 
-    The terms of use requirement is based on your Portal Properties. The [default Portal Property setting](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html) (search for `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`) requires the terms of use:
+    The terms of use requirement is based on your Portal Properties. The [default Portal Property setting](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) (search for `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`) requires the terms of use:
 
     ```properties
     terms.of.use.required=true

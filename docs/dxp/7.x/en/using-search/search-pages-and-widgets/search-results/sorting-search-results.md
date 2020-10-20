@@ -66,7 +66,7 @@ If you really must sort by a `text` field, add a new version of the field to the
 },
 ```
 
-There's a corresponding field with the suffix `_sortable`, and of the correct type for sorting (`keyword`). The sortable field got there via a [portal property](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Lucene%20Search):
+There's a corresponding field with the suffix `_sortable`, and of the correct type for sorting (`keyword`). The sortable field got there via a [portal property](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Lucene%20Search):
 
 ```properties
 index.sortable.text.fields=firstName,jobTitle,lastName,name,screenName,title
