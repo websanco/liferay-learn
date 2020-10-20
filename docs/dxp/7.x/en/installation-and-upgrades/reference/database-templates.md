@@ -33,4 +33,4 @@ jdbc.default.username=
 jdbc.default.password=
 ```
 
-See the [default portal properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#JDBC) for more database templates.
+See the [default portal properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) for more database templates.

@@ -51,7 +51,7 @@ Most of the time, authentication requests come from the Service Provider.
 
 ### The SSO Request to the SP
 
-When the user's browser requests a protected resource or login URL on the SP, it triggers the SP initiated SSO process. When @product@ is the SAML SP, SSO is initiated either by requesting `/c/portal/login` URL or a protected resource that requires authentication (for example, a document not viewable by the Guest Role). If the user requests a protected resource, its URL is recorded in the `RelayState` parameter. If the user requested `/c/portal/login`, the `RelayState` can be set by providing the `redirect` parameter. Otherwise, if the [portal property](http://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html) `auth.forward.by.last.path` is set to `true`, the last accessed path is set as the `RelayState`. For non-@product@ SPs, consult the vendor documentation on initiating SSO.
+When the user's browser requests a protected resource or login URL on the SP, it triggers the SP initiated SSO process. When @product@ is the SAML SP, SSO is initiated either by requesting `/c/portal/login` URL or a protected resource that requires authentication (for example, a document not viewable by the Guest Role). If the user requests a protected resource, its URL is recorded in the `RelayState` parameter. If the user requested `/c/portal/login`, the `RelayState` can be set by providing the `redirect` parameter. Otherwise, if the [portal property](http://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) `auth.forward.by.last.path` is set to `true`, the last accessed path is set as the `RelayState`. For non-@product@ SPs, consult the vendor documentation on initiating SSO.
 
 ### The AuthnRequest to the IdP
 

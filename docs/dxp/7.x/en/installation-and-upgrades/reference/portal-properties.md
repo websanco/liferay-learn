@@ -1,6 +1,6 @@
 # Portal Properties
 
-Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file.
+Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file.
 
 Some properties can be changed through the user interface (UI), but others can only be changed in a properties file. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, and [changing how users authenticate](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (by screen name instead of by email address).
 
@@ -51,7 +51,7 @@ For more database configuration details, see [Database Configurations](./databas
 
 ### Setting the Liferay Home Location
 
-Some application servers (e.g., WebLogic) require [customizing the Liferay Home location](../installing-liferay-on-an-application-server/installing-dxp-on-weblogic#declare-the-liferay-home-folder) before deploying the DXP WAR file. The [`liferay.home`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Liferay%20Home) property sets the location.
+Some application servers (e.g., WebLogic) require [customizing the Liferay Home location](../installing-liferay-on-an-application-server/installing-dxp-on-weblogic#declare-the-liferay-home-folder) before deploying the DXP WAR file. The [`liferay.home`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Liferay%20Home) property sets the location.
 
 ```properties
 liferay.home=/home/jbloggs/liferay
