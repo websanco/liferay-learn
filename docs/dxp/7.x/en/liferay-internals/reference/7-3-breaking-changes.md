@@ -1,6 +1,9 @@
 # 7.3 Breaking Changes
 
-This document presents a chronological list of changes that break existing functionality, APIs, or contracts with third party Liferay developers or users. We try our best to minimize these disruptions, but sometimes they are unavoidable.
+This document presents a chronological list of changes that break existing
+functionality, APIs, or contracts with third party Liferay developers or users.
+We try our best to minimize these disruptions, but sometimes they are
+unavoidable.
 
 Here are some of the types of changes documented in this file:
 
@@ -8,9 +11,11 @@ Here are some of the types of changes documented in this file:
 * API incompatibilities: Changes to public Java or JavaScript APIs
 * Changes to context variables available to templates
 * Changes in CSS classes available to Liferay themes and portlets
-* Configuration changes: Changes in configuration files, like `portal.properties`, `system.properties`, etc.
+* Configuration changes: Changes in configuration files, like
+  `portal.properties`, `system.properties`, etc.
 * Execution requirements: Java version, J2EE Version, browser versions, etc.
-* Deprecations or end of support: For example, warning that a certain feature or API will be dropped in an upcoming version.
+* Deprecations or end of support: For example, warning that a certain
+  feature or API will be dropped in an upcoming version.
 
 ## Breaking Changes List
 
@@ -258,6 +263,28 @@ This change was made because the tag was primarily used internally.
 
 ---------------------------------------
 
+### Removed Add Action methods in Portal Vulcan API
+- **Date:** 2020-Jan-22
+- **JIRA Ticket:** [LPS-98387](https://issues.liferay.com/browse/LPS-98387)
+
+#### What changed?
+
+The `addAction` methods with signature `String, Class, GroupedModel, String, UriInfo` and `String, Class, Long, String, String, Long, UriInfo` were removed.
+
+#### Who is affected?
+
+This affects anyone using the addAction methods removed or with dependencies like `compileOnly group: "com.liferay", name: "com.liferay.portal.vulcan.api", version: "[1.0.0, 2.0.0)"`.
+
+#### How should I update my code?
+
+Use addAction methods with signature `String, Class, GroupedModel, String, Object, UriInfo` and `String, Class, Long, String, String, Object, Long, UriInfo`
+
+#### Why was this change made?
+
+This methods were removed as part of a clean up refactor.
+
+---------------------------------------
+
 ### Changed Control Menu and Product Menu Positioning
 - **Date:** 2020-Feb-04
 - **JIRA Ticket:** [LPS-107487](https://issues.liferay.com/browse/LPS-107487)
@@ -367,6 +394,28 @@ This feature has been deprecated.
 
 ---------------------------------------
 
+### ContentField value Property Name Has Changed to contentFieldValue
+- **Date:** 2020-Mar-18
+- **JIRA Ticket:** [LPS-106886](https://issues.liferay.com/browse/LPS-106886)
+
+#### What changed?
+
+The property name `value` inside ContentField schema in Headless Delivery API has changed to `contentFieldValue`
+
+#### Who is affected?
+
+This affects REST clients depending in the ContentField `value` property name
+
+#### How should I update my code?
+
+Change the property name to `contentFieldValue` in the REST client
+
+#### Why was this change made?
+
+This change restore consistency with all value property names in the Headless APIs, called `{schemaName}+Value`
+
+---------------------------------------
+
 ### Removed liferay-editor-image-uploader Plugin
 - **Date:** 2020-Mar-27
 - **JIRA Ticket:** [LPS-110734](https://issues.liferay.com/browse/LPS-110734)
@@ -381,7 +430,7 @@ This affects custom solutions that use the plugin directly.
 
 ### How should I update my code?
 
-There's no direct replacement for the `liferay-editor-image-uploader` plugin. If you have a component that relies on it, you can locate a copy of the old implementation and use it locally within your module.
+There's no direct replacement for the `liferay-editor-image-uploader` plugin. If you have a component that relies on it, you can co-locate a copy of the old implementation and use it locally within your module.
 
 #### Why was this change made?
 
@@ -662,7 +711,7 @@ The `ddmFieldArray` has several entries with following fields:
 
 #### Who is affected?
 
-This affects anyone with custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
+This affects anyone with custom developments that execute queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
 
 #### How should I update my code?
 
