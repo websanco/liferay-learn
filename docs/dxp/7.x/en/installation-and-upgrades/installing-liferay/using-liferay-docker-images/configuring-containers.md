@@ -86,9 +86,9 @@ Container [Portal Properties](../../reference/portal-properties.md) can be overr
 
 There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env properties override a Liferay Docker container's Portal Properties.
 
-1. In the [Portal Properties](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html) online description, find the property you want to override.
+1. In the [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) online description, find the property you want to override.
 
-1. Copy the `Env` variable name displayed just below the property description. For example, here's the Env variable for the [`jdbc.default.jndi.name`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) Portal Property:
+1. Copy the `Env` variable name displayed just below the property description. For example, here's the Env variable for the [`jdbc.default.jndi.name`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) Portal Property:
 
     ```properties
     Env: LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME
@@ -200,7 +200,7 @@ The container uses your property setting.
 
 ## System Properties
 
-[System Properties](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html) can be overridden using a `system-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
+[System Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/system.properties.html) can be overridden using a `system-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
 
 1. Create a host folder and subfolders to create the path `[host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes`.
 

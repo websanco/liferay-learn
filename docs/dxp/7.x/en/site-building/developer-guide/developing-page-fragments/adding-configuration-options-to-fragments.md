@@ -126,7 +126,7 @@ The example demonstrates a select configuration. See the [Configuration Types Re
 
 Malicious code can be inserted into the text field, wreaking havoc for other users of the Fragment. You must escape Fragment text values so you're protected from cross-site scripting (XSS) attacks.
 
-For generic cases, an HTML `escape()` method is available. See the [`HtmlUtil`](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html) class for more information.
+For generic cases, an HTML `escape()` method is available. See the [`HtmlUtil`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html) class for more information.
 
 ```html
 <div class="fragment_38816">

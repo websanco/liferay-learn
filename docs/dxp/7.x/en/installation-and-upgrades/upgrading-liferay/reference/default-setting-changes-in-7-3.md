@@ -12,7 +12,7 @@ Here are the changes from 7.2 to 7.3:
 | cluster.link.channel.properties.transport.0= | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | jgroups/udp_transport.xml |
 | jsonws.web.service.paths.excludes | *blank* | /user/update-password |
 | retry.data.source.max.retries | 100 | 0 |
-| admin.obfuscated.properties | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | see [value](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html) |
+| admin.obfuscated.properties | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | see [value](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) |
 | spring.configs | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | dropped META-INF/fabric-spring.xml and META-INF/asset-spring.xml |
 | session.shared.attributes | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | dropped org.apache.struts.action.LOCALE |
 | session.phishing.protected.attributes | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | added SETUP_WIZARD_PASSWORD_UPDATED |
@@ -22,7 +22,7 @@ Here are the changes from 7.2 to 7.3:
 | module.framework.web.generator.excluded.paths | see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | added WEB-INF/lib/jackson-databind.jar and WEB-INF/lib/portletmvc4spring-framework.jar; dropped WEB-INF/lib/spring-webmvc-portlet.jar |
 | admin.obfuscated.properties |  see [value](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) | dropped captcha.engine.recaptcha.key.private |
 
-The latest [portal properties reference](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html) provides property details and examples. Many properties are now replaced by OSGi configurations, which are accessible through the UI in [System Settings](../../../system-administration/system-settings/system-settings.md).
+The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) provides property details and examples. Many properties are now replaced by OSGi configurations, which are accessible through the UI in [System Settings](../../../system-administration/system-settings/system-settings.md).
 
 ## Additional Information
 

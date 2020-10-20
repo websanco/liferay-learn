@@ -87,7 +87,7 @@ The *Navigation Bars* panel includes Fragments for page headers. See [Master Pag
 See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information on how to use Widgets for your Content Page.
 
    ```note::
-   While portlets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
+   While portlets are rendered according to `render-weight <https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
 ```
 
 ## Contents

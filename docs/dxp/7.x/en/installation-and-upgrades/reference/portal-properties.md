@@ -190,7 +190,7 @@ Go to *Control Panel* at *Configuration* &rarr; *System Settings* to find System
 
 ## Additional Information
 
-* [Portal Properties](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html)
+* [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)
 
 * [System Settings](../../system-administration/system-settings/system-settings.md)
 
