@@ -21,7 +21,7 @@ Here's an overview of the setup steps:
 
 ## Elasticsearch and Connector Versions 
 
-The [compatibility matrix](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
+The [compatibility matrix](https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.3+Compatibility+Matrix.pdf) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
 
 ```warning::
    The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on `Liferay Marketplace <https://web.liferay.com/marketplace>`_.
