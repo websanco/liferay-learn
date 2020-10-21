@@ -1,6 +1,6 @@
-# Using Liferay DXP as a Headless Platform
+# Using Liferay as a Headless Platform
 
-Liferay DXP provides a suite of APIs to use for custom applications to perform the same kinds of actions available in the web interface. This option is essential when there's a need to get data in a machine-readable format, for example in writing mobile applications, custom web applications, or automated processes. While taking more effort than the out-of-the-box interface, it comes with even more power to get things done.
+Liferay provides a suite of APIs that perform the same kinds of actions available in the web interface. This is essential when you must get data in a machine-readable format, for example in writing mobile applications, custom web applications, or automated processes. While taking more effort than the out-of-the-box interface, it comes with even more power to get things done.
 
 ## Ways to Connect
 
@@ -11,35 +11,35 @@ There are three different approaches available for clients to connect to Liferay
 
 ### Headless REST APIs
 
-Liferay DXP's headless APIs allow [RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest) interaction with Liferay DXP resources. These APIs follow the [OpenAPI specification](https://swagger.io/docs/specification/about/), which defines a standard for REST interfaces, allowing for more straightforward implementation and consumption.
+Liferay's headless APIs allow [RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest) interaction with Liferay DXP resources. These APIs follow the [OpenAPI specification](https://swagger.io/docs/specification/about/), which defines a standard for REST interfaces, allowing for more straightforward implementation and consumption.
 
-You can find detailed information on these APIs by accessing the definitions on a running Liferay DXP instance at `[server][:port]/o/api` or exploring their documentation on [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/). The most relevant documentation is also available at `[server][:port]/o/[api-name]/[api-version]/openapi.[yaml or json]` in a raw format – SwaggerHub presents a more friendly interface but may not match your running version.
+You can find detailed information on these APIs by accessing the definitions on a running Liferay DXP instance at `[server][:port]/o/api`. The most relevant documentation is also available at `[server][:port]/o/[api-name]/[api-version]/openapi.[yaml or json]` in a raw format. The documentation is available on [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/), but may not match your running version.
 
 ### GraphQL API
 
-The GraphQL API is accessed using [GraphQL](https://graphql.org/), a query language that supports interactions similar to the headless REST APIs, but with slightly more flexibility. Liferay DXP exposes this API at `[server][:port]/o/graphql`.
+The [GraphQL](https://graphql.org/) API is a query language that supports interactions similar to the headless REST APIs, but with slightly more flexibility. Liferay DXP exposes this API at `[server][:port]/o/graphql`.
 
-You can find detailed information on this API by exploring the API itself or its documentation through a GraphQL client. Liferay DXP includes a built-in client that can be found on a running Liferay DXP instance at `[server][:port]/o/api` (select "GraphQL" on the top-right) and also supports [external clients](https://graphql.org/graphql-js/graphql-clients/).
+You can find detailed information by exploring the API or its documentation through a [GraphQL client](https://graphql.org/graphql-js/graphql-clients/). Liferay includes a built-in client that can be found on a running instance at `[server][:port]/o/api` (select _GraphQL_ on the top-right). 
 
 ### Plain Web/REST Services
 
-Liferay DXP's Web Services are part of an older framework, still supported by DXP but no longer recommended for complex headless operations. These APIs are closely tied to Liferay DXP's internal workings and thus lack the power and flexibility that the newer headless options provide.
+Liferay's Web Services are part of an older framework, still supported by DXP but no longer recommended for complex headless operations. These APIs are closely tied to Liferay DXP's internal workings and thus lack the power and flexibility that the newer headless options provide.
 
-However, Web Services may provide a simpler way to execute certain tasks. See [Service Builder Web Services](https://help.liferay.com/hc/en-us/articles/360017887112-Service-Builder-Web-Services) for how to use them.
+However, Web Services may provide a simpler way to execute certain tasks. See [Service Builder Web Services](../developing-applications/data-frameworks/service-builder.md) for how to use them.
 
 ## Features
 
 ### Work with Any Client
 
-Liferay DXP's headless APIs serve up data over the web, so any application capable of making web calls can serve as a client. These APIs respond with JSON content by default, but also support XML natively and allow extensions to serve content in any other way you might need. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#accept) to learn more.
+Liferay's headless APIs serve data over the web, so any application capable of making web calls can serve as a client. These APIs respond with JSON content by default, but also support XML natively. Extensions can serve content in any other way you might need. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#accept) to learn more.
 
 ### Connect Securely
 
-Just like with Liferay DXP's web interface, all interactions via headless API are made using a particular User account (or as a guest). Liferay DXP's APIs support three ways of authenticating as the appropriate User: via basic authentication, via OAuth token, and via Cookie. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#authorization) for how to make this happen. It's also possible to make API requests as a guest – see [Making Unauthenticated Requests](./content-delivery-apis/making-unauthenticated-requests.md) for more details.
+Just like with Liferay's web interface, all interactions via headless API are made using a particular User account (or as a guest). Liferay's APIs support three ways of authenticating: via basic authentication, via OAuth token, and via cookie. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#authorization) for how to make this happen. It's also possible to make API requests as a guest – see [Making Unauthenticated Requests](./content-delivery-apis/making-unauthenticated-requests.md) for more details.
 
 ### Keep Data Size Manageable
 
-Working with large sets of data can quickly become overwhelming for a client to handle; performance issues are frustrating for users; bandwidth can be expensive. So Liferay DXP's headless APIs provide ways to break down collections into manageable chunks and retrieve the exact data you want.
+Working with large sets of data can quickly become overwhelming for a client to handle; performance issues are frustrating for users, and bandwidth can be expensive. Liferay's headless APIs provide ways to break down collections into manageable chunks and retrieve the exact data you want.
 
 By passing `page` and `pageSize` parameters in a request, you can tell the API how much information you want at a time and which subset of information you want in a given request. The `sort` parameter is also effective in combination with paged responses, allowing you to indicate which elements should be returned first.
 
