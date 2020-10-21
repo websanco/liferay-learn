@@ -38,7 +38,7 @@ Health checks allow users to quickly fix any common setup issues with their stor
 
 ### Payment Methods
 
-Users can configure which [payment methods](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) to use for the channel. In addition, users can use a [custom payment engine](../../../developer-guide/tutorials/implementing-a-new-payment-method.md).
+Users can configure which [payment methods](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) to use for the channel. In addition, users can use a [custom payment engine](../../../developer-guide/implementing-a-new-payment-method.md).
 
 ![The Payment Methods section allows you to choose which payment method to use.](./channels-reference-guide/images/05.png)
 
@@ -46,7 +46,7 @@ Users can configure which [payment methods](../../../store-administration/config
 
 Users can configure the channel's shipment methods. By default, the [flat rate](../../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) is enabled. Users can also enable a [variable rate](../../../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) shipping method. Subscribers can also enable [FedEx](../../../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md).
 
-Lastly, users can use a [custom shipping engine](../../../developer-guide/tutorials/implementing-a-new-shipping-engine.md).
+Lastly, users can use a [custom shipping engine](../../../developer-guide/implementing-a-new-shipping-engine.md).
 
 ![The Shipment Methods section allows you to choose which shipment method to use.](./channels-reference-guide/images/06.png)
 

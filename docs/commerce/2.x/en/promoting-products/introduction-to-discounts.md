@@ -66,7 +66,7 @@ You can define rules that specify requirements to qualify for a discount. There 
 | Has all of these products | Orders must include all specified products in order to receive the discount. |
 | Has one of these products | Orders must contain at least one product from a list of specified products to receive the discount. |
 
-The discount rules are added on the _Rules_ tab. Developers can also [implement new discount rules](../developer-guide/tutorials/adding-a-new-discount-rule-type.md).
+The discount rules are added on the _Rules_ tab. Developers can also [implement new discount rules](../developer-guide/adding-a-new-discount-rule-type.md).
 
 ![Add a discount rule.](./introduction-to-discounts/images/04.png)
 

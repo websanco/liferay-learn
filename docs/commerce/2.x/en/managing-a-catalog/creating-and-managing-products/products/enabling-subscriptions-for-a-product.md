@@ -53,7 +53,7 @@ To enable a Delivery Subscription:
 A delivery subscription is now enabled for this product.
 
 ```tip::
-   Other payment methods can be implemented to support recurring payments. See `Implementing a New Payment Method <../../../developer-guide/tutorials/implementing-a-new-payment-method.md>`_ to learn more.
+   Other payment methods can be implemented to support recurring payments. See `Implementing a New Payment Method <../../../developer-guide/implementing-a-new-payment-method.md>`_ to learn more.
 ```
 
 ## Viewing Subscriptions in Product Details
