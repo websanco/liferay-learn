@@ -1,3 +1,3 @@
 <p>
-	<b>Hello W3E7</b>
+	<b>Hello W3E7.</b>
 </p>

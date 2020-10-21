@@ -32,7 +32,7 @@ public class C8M3Portlet extends MVCPortlet {
 		if (_log.isInfoEnabled()) {
 			String mvcPath = renderRequest.getParameter("mvcPath");
 
-			_log.info("MVC path: " + mvcPath);
+			_log.info("MVC path " + mvcPath);
 		}
 
 		super.render(renderRequest, renderResponse);
