@@ -17,7 +17,7 @@ You can display a single existing web content, blog entry, or document by adding
 1. Click the plus button next to the *Content* input and select an existing web content, blog entry, or document to display.
 
 ```note::
-   *Heading* fragments cannot have line breaks. Although both *Heading* and *Paragraph* fragments use `element-text` fields, only the latter can have multiple line texts separated by a line break.
+   *Heading* fragments cannot have line breaks. This is because *Heading* fields use `text` while *Paragraph* fragments use `rich-text` fields; only the latter can have multiple line texts separated by a line break.
 ```
 
 ## Using the Container Fragment
