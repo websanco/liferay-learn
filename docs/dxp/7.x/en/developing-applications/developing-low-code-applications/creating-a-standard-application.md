@@ -83,7 +83,7 @@ We will deploy two applications for the Time Off Request object: one is a widget
 1. From the _Apps_ tab, click the Add button (![Add](../../images/icon-add.png)).
 
    ```note::
-      If you want to create a `Workflow Powered` app for the object, you must create and deploy the app from the Apps entry in the Application Menu. See `Creating a Workflow Powered Application <./creating-a-workflow-powered-application.md>`__ for details.
+      If you want to create a `Workflow Powered` app for the object (available to DXP subscribers), you must create and deploy the app from the Apps entry in the Application Menu. See `Creating a Workflow Powered Application <./creating-a-workflow-powered-application.md>`__ for details.
    ```
 
 1. Name the app _Time Off Requester_.
@@ -95,7 +95,6 @@ We will deploy two applications for the Time Off Request object: one is a widget
 1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu (leave the defaul selection to add it to the Applications Menu).
 
     ![Here's the Time Off Request Manage entry in the Applications Menu.](./creating-a-standard-application/images/04.png)
-<!-- replace above screenshot -->
 
 Administrators can now access the _Time Off Manager_ application in the Product Menu to begin monitoring time off requests from site users.
 
@@ -136,4 +135,4 @@ To edit a field, navigate to the form view where it exists and click the field i
 ## Related Information
 
 * [App Builder Overview](./app-builder-overview.md)
-* [Creating a Workflow Powered App](./creating-a-workflow-powered-app.md)
+* [Creating a Workflow Powered App](./creating-a-workflow-powered-application.md)

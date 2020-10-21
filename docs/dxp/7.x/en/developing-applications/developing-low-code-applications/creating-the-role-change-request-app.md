@@ -22,7 +22,7 @@ A Standard app can be created from within the Object Control Panel entry, but no
 
    - Main Data Object: Select the _Role Change Request_ object.
    - Form View: Select the _Employee Request_ form.
-   - Table View: Select the _Role Change Request Master List_ (this table view won't be used for this step). <!-- Find out how this is supposed to work. Can we leave it blank? -->
+   - Table View: Select the _Role Change Request Master List_ (this table view won't be used for this step).
 
    Configure the Actions:
 

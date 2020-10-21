@@ -18,26 +18,16 @@ Why use App Builder when the [Liferay Forms](../../process-automation/forms/user
 | Control the presentation of form data |        |      &#10004;   |
 | Deploy multiple forms for one data object |        |      &#10004;   |
 | Deploy multiple data record views for one data object |        |      &#10004;   |
-<!-- update with new features like the workflow powered feature-->
 
 The ability to combine forms, data display tables, and flexible deployment options, all backed by a single data object, are what distinguish App Builder use cases from standard Forms.
 
 ## Creating an App
-<!-- Does the title need to be changed since there are now 2 flavors of app? the workflow powered app is dxp only Also need to define the workflow powered app -->
 
 There are two flavors of App Builder app: Standard and Workflow Powered. Regardless, all apps made with App builder consist of 3 components that are defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see the next article on [Creating an Application with App Builder](./creating-a-standard-application.md).
 
 ### App Builder Objects
 
-An _Object_ is at the foundation of every App Builder application. It defines the information you want the application to collect and interact with. For example, a Guestbook object would contain a _Name_ field and a _Message_ field, at least. There are two kinds of objects in App Builder:
-
-<!-- remove mention of native objects as they won't be here for 7.3 -->
-* _Custom Objects_ are created using a drag-and-drop Form Builder interface.
-* _Native Objects_ are pre-defined sets of data fields that can be used out of the box or extended to suit your needs.
-
-```note::
-   Native Objects are not present in the App Builder at the time of this writing. In future versions of the App Builder, Native Objects with default fieldsets will be bundled with Liferay DXP to jump-start your app development.
-```
+An _Object_ is at the foundation of every App Builder application. It defines the information you want the application to collect and interact with. For example, a Guestbook object would contain a _Name_ field and a _Message_ field, at least.
 
 To create applications based on an object, create at least one form view, create at least one table view, and deploy the application.
 
@@ -80,3 +70,4 @@ A Standalone or Product Menu application always includes both the form and table
 ## Next Steps
 
 * [Creating an Application with App Builder](./creating-a-standard-application.md)
+* [Creating a Workflow Powered Application](./creating-a-workflow-powered-application.md)
