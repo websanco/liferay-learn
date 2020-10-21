@@ -14,7 +14,7 @@ function copy_template {
 	do
 		cp -fr _template/* ${zip_dir_name}
 
-		local liferay_workspace_product=portal-7.3-ga3
+		local liferay_workspace_product=portal-7.3-ga6
 
 		if [[ ${zip_dir_name} == ./commerce/** ]]
 		then
