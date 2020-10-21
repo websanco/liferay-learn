@@ -1,5 +1,7 @@
 # Adding Widgets to a Page
 
+Beginning in DXP 7.3, it becomes even easier to add widgets on a site page with the introduction of a more streamlined menu. Users can search for a widget or scroll down to expand each section.
+
 Follow these steps to add a widget to a Widget Page:
 
 1. Click the *Add* button (![Add](../../../images/icon-add-app.png)) in the Control Menu.
@@ -14,3 +16,8 @@ A widget can be a wiki display or a dynamic publishing tool like the Asset Publi
 ```note::
   Portlets are rendered according to `render-weight <https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages.
 ```
+
+## Additional Information
+
+* [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
+* [Converting Widget Pages to Content Pages](./converting-widget-pages-to-content-pages.md)
