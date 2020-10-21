@@ -19,7 +19,9 @@ Name                       | Default Value              | Description      |
 You can pass MySQL flags in as environment variables. The available flags are listed in the
 [Google Cloud documentation](https://cloud.google.com/sql/docs/mysql/flags). Each flag must be prepended with `LCP_GCP_DATABASE_FLAG_` to work in Liferay DXP Cloud. Below are common flags that can be useful for debugging in a development environment, but should NOT be used in a production environment as they have significant performance costs.
 
-> **Warning:** As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's [Operational Guidelines](https://cloud.google.com/sql/docs/mysql/operational-guidelines).
+```warning::
+   As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's `Operational Guidelines <https://cloud.google.com/sql/docs/mysql/operational-guidelines>`_.
+```
 
 Name                                   | Acceptable Value | Default Value |
 -------------------------------------- | ---------------- | ------------- |
