@@ -1,5 +1,5 @@
-Content Delivery APIs
-=====================
+Consuming APIs
+==============
 
 .. toctree::
    :maxdepth: 3
