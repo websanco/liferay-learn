@@ -40,7 +40,7 @@ Installing
 Install an Older Elasticsearch Version
 ______________________________________
 
-- Elasticsearch 6 (Coming Soon!)
+- Elasticsearch 6 for Liferay 7.2 (Coming Soon!)
 
 Securing
 ~~~~~~~~

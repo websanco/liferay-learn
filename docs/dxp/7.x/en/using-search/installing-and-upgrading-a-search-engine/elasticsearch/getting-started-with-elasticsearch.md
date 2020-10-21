@@ -3,11 +3,14 @@
 > Latest Supported Elasticsearch Version: 7.9 \
 > Available: Liferay DXP/CE 7.3 and  Liferay DXP 7.2 SP1+
 
-The Elasticsearch stack comprises
+A typical Elasticsearch with Liferay system comprises
 
-* Elasticsearch server
-* Elasticsearch connector 
-* Elasticsearch monitoring (optional)
+* Elasticsearch server(s) (on-premises or Docker containers)
+* An Elasticsearch connector deployed onto Liferay and configured to fit your deployment.
+
+```tip::
+   Additional features are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
+```
 
 Here's an overview of the setup steps:
 
@@ -16,8 +19,6 @@ Here's an overview of the setup steps:
 1. Set up your Elasticsearch server(s).
 
 1. Connect Liferay to Elasticsearch. 
-
-1. Secure Liferay's communication with Elasticsearch.
 
 ## Elasticsearch and Connector Versions 
 
