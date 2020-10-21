@@ -56,7 +56,7 @@ First, deploy an example model listener for the `JournalArticle` model on your i
    Click the add ![Add](../../images/icon-add.png) button, then click _Basic Web Content_ to add a new article. Fill out a title and some content; then click _Publish_. A warning message appears in the console:
 
    ```
-   2020-03-17 23:14:56.301 WARN  [http-nio-8080-exec-5][N4G6ModelListener:23] A new web content article was added.
+   2020-03-17 23:14:56.301 WARN  [http-nio-8080-exec-5][N4G6ModelListener:23] Added journal article 20478.
    ```
 
 Congratulations! You've successfully built and deployed a new model listener that implements `ModelListener`.
