@@ -136,19 +136,19 @@ You're ready to configure the connector.
 
 1. Create the following Elasticsearch configuration file:
 
-```bash
-com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
-```
+    ```bash
+    com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
+    ```
 
 1. Specify the configuration properties in the `.config` file. Here's an example that enables remote operation mode, sets the transport address for each Elasticsearch node, and identifies the connection you're configuring:
 
-```properties
-# com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
-operationMode="REMOTE"
-transportAddresses="ip.of.elasticsearch.node:9300"
-# Highly recommended for all non-production usage (e.g., practice, tests, diagnostics):
-#logExceptionsOnly="false"
-```
+    ```properties
+    # com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
+    operationMode="REMOTE"
+    transportAddresses="ip.of.elasticsearch.node:9300"
+    # Highly recommended for all non-production usage (e.g., practice, tests, diagnostics):
+    #logExceptionsOnly="false"
+    ```
 
 1. Deploy the configuration by placing the `.config` file in your `[Liferay Home]/osgi/configs` folder.
 
