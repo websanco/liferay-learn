@@ -12,11 +12,11 @@ import org.osgi.service.component.annotations.Component;
 @Component(immediate = true, service = ModelListener.class)
 public class N4G6ModelListener extends BaseModelListener<JournalArticle> {
 
-	public void onAfterCreate(JournalArticle model)
+	public void onAfterCreate(JournalArticle journalArticle)
 		throws ModelListenerException {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn("A new journal article was added");
+			_log.warn("Added journal article " + journalArticle.getId());
 		}
 	}
 
