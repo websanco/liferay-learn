@@ -27,7 +27,7 @@ Some Site setting fields have a language flag appended to the end. These fields 
 
 ![Localizable fields are marked with a language flag.](images/04.png)
 
-To modify a localizable field,
+Follow these steps to modify a localizable field:
 
 1. Click the language flag beside the field.
 
