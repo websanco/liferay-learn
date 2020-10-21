@@ -1,4 +1,0 @@
-Site Localization
-=================
-
-Coming soon!

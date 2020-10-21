@@ -5,7 +5,7 @@ Configuring Site Languages
    :maxdepth: 3
 
    configuring-site-languages/modifying-localizable-site-fields.md
-   configuring-site-languages/site_localization.rst
+   configuring-site-languages/site_localization.md
 
-.. include:: /site-building/site-settings/configuring-site-languages/README.rst
-   :start-line: 2
+-  :doc:`/site-building/site-settings/configuring-site-languages/modifying-localizable-site-fields`
+-  :doc:`/site-building/site-settings/configuring-site-languages/site_localization`
