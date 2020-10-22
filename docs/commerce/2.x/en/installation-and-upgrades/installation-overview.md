@@ -45,7 +45,7 @@ Install Liferay Commerce using Docker. See [Using Liferay Commerce Docker Image]
 
 ### Installing Using a Bundle
 
-Install Liferay Commerce using a bundle from the [Liferay Community Downloads](https://commerce.liferay.dev/download) page. See [Using the Liferay Commerce Tomcat Bundle](./using-the-liferay-commerce-tomcat-bundle.md) for more information.
+Install Liferay Commerce using a bundle from the [Liferay Community Downloads](https://commerce.liferay.dev/download) page. See [Using the Liferay Commerce Tomcat Bundle](./installing-commerce-2.1-and-below/using-the-liferay-commerce-tomcat-bundle.md) for more information.
 
 ### Installing Using an Existing Liferay DXP Installation
 
