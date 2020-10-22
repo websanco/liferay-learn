@@ -34,7 +34,7 @@ A production environment's search engine should be clustered for load management
 
 ## Selecting a Search Engine Vendor and Version
 
-Elasticsearch is the recommended search engine for search and indexing with Liferay. Solr is deprecated and has [limitations](./solr/solr-limitations.md).
+Elasticsearch is the recommended search engine for search and indexing with Liferay. Solr is planned for deprecation and has [limitations](./solr/solr-limitations.md).
 
 ```important::
    Always refer to the `compatibility matrix <https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.3+Compatibility+Matrix.pdf>`_ to find the exact versions supported.
