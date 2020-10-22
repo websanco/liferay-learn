@@ -93,7 +93,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/css-class-wrapper`|`com.liferay.portlet.css-class-wrapper=<String>`|
 |`/liferay-portlet-app/portlet/custom-attributes-display`|[3](#three)|
 |`/liferay-portlet-app/portlet/ddm-display`|[3](#three)|
-|`/liferay-portlet-app/portlet/facebook-integration`|`com.liferay.portlet.facebook-integration=<String>`|
+|`/liferay-portlet-app/portlet/facebook-integration`|not supported|
 |`/liferay-portlet-app/portlet/footer-portal-css`|`com.liferay.portlet.footer-portal-css=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/footer-portal-javascript`|`com.liferay.portlet.footer-portal-javascript=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/footer-portlet-css`|`com.liferay.portlet.footer-portlet-css=<String>`[2](#two)|
