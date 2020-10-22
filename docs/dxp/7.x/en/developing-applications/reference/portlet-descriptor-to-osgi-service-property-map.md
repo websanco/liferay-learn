@@ -107,7 +107,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/header-request-attribute-prefix`|`com.liferay.portlet.header-request-attribute-prefix=<String>` [7](#seven)|
 |`/liferay-portlet-app/portlet/header-timeout`|`header-timeout=<int>`|
 |`/liferay-portlet-app/portlet/icon`|`com.liferay.portlet.icon=<String>`|
-|`/liferay-portlet-app/portlet/include`|not supported|
+|`/liferay-portlet-app/portlet/include`|`com.liferay.portlet.include=<boolean>`|
 |`/liferay-portlet-app/portlet/indexer-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/instanceable`|`com.liferay.portlet.instanceable=<boolean>`|
 |`/liferay-portlet-app/portlet/layout-cacheable`|`com.liferay.portlet.layout-cacheable=<boolean>`|
