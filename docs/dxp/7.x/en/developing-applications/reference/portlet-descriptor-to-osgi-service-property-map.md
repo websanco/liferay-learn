@@ -21,14 +21,14 @@ The standard portlet descriptor mappings are first.
 
 | portlet.xml XPath | OSGi Portlet Service Property|
 |-------------------|------------------------------|
-|`/portlet-app/container-runtime-option`|not supported|
+|`/portlet-app/container-runtime-option`|not supported for the portlet-app scope|
 |`/portlet-app/custom-portlet-mode`|not supported|
 |`/portlet-app/custom-window-state`|not supported|
 |`/portlet-app/default-namespace`|`javax.portlet.default-namespace=<String>`|
 |`/portlet-app/event-definition`|`javax.portlet.event-definition=<QNameLocalPart>;<QNameURI>[;<PayloadType>][,<AliasQNameLocalPart>;<AliasQNameURI>]` [2](#two)|
 |`/portlet-app/filter`<br/>`/portlet-app/filter/init-param/name`<br/>`/portlet-app/filter-mapping`|[3](#three)<br/>`javax.portlet.init-param.<name>=<value>` [3](#three), [9](#nine)<br/>[3](#three)|
 |`/portlet-app/public-render-parameter`|not supported|
-|`/portlet-app/resource-bundle`|not supported|
+|`/portlet-app/resource-bundle`|not supported for the portlet-app scope|
 |`/portlet-app/security-constraint`|not supported|
 |`/portlet-app/user-attribute`|not supported|
 |`/portlet-app/version`|`javax.portlet.version=<value>`|
