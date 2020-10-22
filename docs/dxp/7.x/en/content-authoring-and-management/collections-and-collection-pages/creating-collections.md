@@ -36,6 +36,32 @@ You can create *Manual* or *Dynamic* Collections. For information about the diff
 1. Click *Add*.
 1. If your Manual Collection includes more than one item type, repeat steps 6 to 8 for the other types.
 
+### Using Folders
+
+As indicated in the screenshots above, _Documents and Media Folders_ and _Web Content Folders_ can be added to a Collection. Create several folders first; see [Creating Folders](../documents-and-media/uploading-and-managing/creating-folders.md) to learn more.
+
+![Create DM folders before adding them to a Collection.](./creating-collections/images/25.png)
+
+Once the folders are created, follow the steps below:
+
+1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Collections*.
+1. Click on the *New* button (![Add](../../images/icon-add.png)) and select *Manual Collection*.
+1. Add a *Title* for your Manual Collection and click *Save*.
+1. In the *Item Type* drop-down menu, select the *Documents Folder*.
+1. Click *Save*.
+1. Click *Select* &rarr; *Documents Folder*.
+1. Select the desired folder.
+
+    ![Select the desired DM folder.](./creating-collections/images/26.png)
+
+1. Click *Add* when finished.
+
+The folder has been added to the collection.
+
+```warning::
+   Contents inside a folder are not displayed once they are published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and may be fixed in a future release.
+```
+
 ## Creating a Dynamic Collection
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Collections*.
