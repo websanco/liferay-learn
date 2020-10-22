@@ -16,11 +16,6 @@ function copy_template {
 
 		local liferay_workspace_product=portal-7.3-ga6
 
-		if [[ ${zip_dir_name} == ./commerce/** ]]
-		then
-			liferay_workspace_product=commerce-2.0.7-7.2
-		fi
-
 		echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
 
 		pushd ${zip_dir_name}
