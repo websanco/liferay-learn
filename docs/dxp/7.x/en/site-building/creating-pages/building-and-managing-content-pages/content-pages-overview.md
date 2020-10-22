@@ -102,7 +102,7 @@ Page Structure provides a hierarchical view of the Fragments and their content o
 
 ## Page Design Options
 
-Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-format.png)) to change the theme or manage other options for the page. These options are further explored in [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel).
+Click the *Page Design Options* icon (![Look and Feel](../../../images/icon-look-and-feel.png)) to change the theme or manage other options for the page. These options are further explored in [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel).
 
 ## Comments
 
