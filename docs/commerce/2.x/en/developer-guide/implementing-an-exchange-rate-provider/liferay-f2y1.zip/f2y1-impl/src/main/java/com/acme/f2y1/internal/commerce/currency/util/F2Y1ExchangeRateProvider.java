@@ -12,7 +12,7 @@ import java.util.Map;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true, property = "commerce.exchange.provider.key=Example",
+	immediate = true, property = "commerce.exchange.provider.key=F2Y1",
 	service = ExchangeRateProvider.class
 )
 public class F2Y1ExchangeRateProvider implements ExchangeRateProvider {
