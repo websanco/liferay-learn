@@ -29,7 +29,7 @@ Alternatively, you can configure the connector in the user interface. In the Glo
 
 > In Liferay 7.2, The Control Panel is in the Product Menu (![Product Menu](../../../images/icon-product-menu.png)).
 
-A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`), sets the URL to each Elasticsearch node (`networkHostAddresses=["es-node:9200"]`).
+A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`) and sets the URL to each Elasticsearch node (`networkHostAddresses=["https://es-node:9200"]`).
 
 1. Create the following configuration file:
 
@@ -43,18 +43,19 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
     # In CE/DXP7.3, productionModeEnabled replaces operationMode (deprecated):
     productionModeEnabled="true"
     networkHostAddresses=["http://es-node1:9200","http://es-node3:9200","http://es-node3:9200"]
-    # In CE/DXP 7.3 the HTTP security settings are included in the ElasticsearchConfiguration
-    # In CE/DXP 7.2 the Transport security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
-    # authentication
-    authenticationEnabled="true"
-    username="elastic"
-    password="liferay"
+    # In CE/DXP 7.3 the security settings are included in the ElasticsearchConfiguration
+    # In CE/DXP 7.2 the security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
+    # Authentication
+    #authenticationEnabled="true"
+    #username="elastic"
+    #password="liferay"
 
     # TLS/SSL
-    httpSSLEnabled="true"
-    truststoreType="pkcs12"
-    trustStorePath="/PATH/TO/truststore.p12"
-    trustStorePassword="secret"
+    #networkHostAddresses=["https://es-node1:9200","https://es-node3:9200","https://es-node3:9200"]
+    #httpSSLEnabled="true"
+    #truststoreType="pkcs12"
+    #trustStorePath="/PATH/TO/truststore.p12"
+    #trustStorePassword="secret"
 
     # Highly recommended for all non-prodcution usage (e.g., practice, tests, diagnostics):
     #logExceptionsOnly="false"
