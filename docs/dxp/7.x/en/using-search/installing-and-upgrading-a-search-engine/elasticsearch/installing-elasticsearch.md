@@ -2,9 +2,9 @@
 
 Here's how to install, configure, and start Elasticsearch on-premises.
 
-## Environment Setup
+## Environment Setup for Production-Like Installation
 
-### Adding Hosts in a Production-Like Local Environment
+### Adding Hosts
 
 You can skip this if you'll set up a testing environment using localhost or Docker containers. For a production-like setup on your local machine, add the hosts for Liferay and the Elasticsearch cluster. Add this information to your operating system's `path/to/etc/hosts` file:
 
@@ -17,25 +17,7 @@ You can skip this if you'll set up a testing environment using localhost or Dock
 
 Use the real IP address of your system, not the loopback address `127.0.0.1`.
 
-### Docker Containers: Add Hosts
-
-> Skip this step if your system is not using Docker containers.
-
-The Liferay container(s) must recognize the Elasticsearch IP(s) to establish a connection. Add `/etc/hosts/` entries on the Liferay nodes that map the Elasticsearch container name to the Elasticsearch server host IP address. This can be established during the `docker run` phase by passing an `--add-host elasticsearch:[IP address]` argument for each Elasticsearch node.
-
-To obtain the IP addresses of all running containers, run
-
-```bash
-docker network inspect bridge
-```
-
-The example IP value presented here is `172.17.0.2`:
-
-```bash
-docker run -it --name dxp-1 --add-host elasticsearch7:172.17.0.2 ...
-```
-
-### Adjusting mmap in Poduction Mode
+### Adjusting mmap
 
 Elasticsearch requires a higher _mmap count_ (for mapping the directory holding its indexes into memory) than the default for most operating systems. On Linux and as the root user, run
 
@@ -77,7 +59,7 @@ Each Elasticsearch server is configured by its `[Elasticsearch Home]/config/elas
 
 Here are example single-node and multi-node Elasticsearch cluster configurations.
 
-### Example: Single-Node Elasticsearch Cluster
+### Example: Single-Node Production Elasticsearch Cluster
 
 Here's an `elasticsearch.yml` configuration for a single-node cluster:
 
@@ -97,7 +79,11 @@ transport.port: 9300
 
 This cluster called `LiferayElasticsearchCluster` has one node called `es-node1`.
 
-### Example: Multi-Node Elasticsearch Cluster
+```tip::
+   If you are not configuring hosts for a production mode setup, use ``localhost`` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. Along with single node discovery, this means the Elasticsearch server is running in `development mode`.
+```
+
+### Example: Multi-Node Production Elasticsearch Cluster
 
 Here is an `elasticsearch.yml` for a node called `es-node3` of a three-node cluster:
 
@@ -122,6 +108,8 @@ transport.port: 9302
 ```
 
 ```tip::
+   If you are not configuring hosts for a production mode setup, use ``localhost`` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. This is referred to as `development mode`.
+
    Related Elasticsearch Documentation:
 
    - `Important Elasticsearch configuration <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html>`_
@@ -143,7 +131,7 @@ transport.port: 9302
    - ``transport.port``
 ```
 
-### Enforce Bootstrap Checks 
+### Enforce Bootstrap Checks for Single Server in Production Mode
 
 Elasticsearch [bootstrap checks](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html) inspect configurations on startup and logs warnings for missing or suspicious configurations. In production, you should configure bootstrap checks to halt startup on misconfiguration. 
 
