@@ -21,7 +21,7 @@ Assuming your Liferay servers are in place already, the remaining steps include
 
 1. Connecting Liferay to Elasticsearch
 
-## Elasticsearch and Connector Versions 
+## Finding Compatible Elasticsearch and Connector Versions 
 
 The [compatibility matrix](https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.3+Compatibility+Matrix.pdf) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
 

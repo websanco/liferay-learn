@@ -4,6 +4,39 @@ Here's how to install, configure, and start Elasticsearch on-premises.
 
 ## Environment Setup
 
+### Adding Hosts in a Production-Like Local Environment
+
+You can skip this if you'll set up a testing environment using localhost or Docker containers. For a production-like setup on your local machine, add the hosts for Liferay and the Elasticsearch cluster. Add this information to your operating system's `path/to/etc/hosts` file:
+
+```properties
+<your IP> es-node1
+<your IP> es-node2
+<your IP> es-node3
+<your IP> dxp.liferay.com
+```
+
+Use the real IP address of your system, not the loopback address `127.0.0.1`.
+
+### Docker Containers: Add Hosts
+
+> Skip this step if your system is not using Docker containers.
+
+The Liferay container(s) must recognize the Elasticsearch IP(s) to establish a connection. Add `/etc/hosts/` entries on the Liferay nodes that map the Elasticsearch container name to the Elasticsearch server host IP address. This can be established during the `docker run` phase by passing an `--add-host elasticsearch:[IP address]` argument for each Elasticsearch node.
+
+To obtain the IP addresses of all running containers, run
+
+```bash
+docker network inspect bridge
+```
+
+The example IP value presented here is `172.17.0.2`:
+
+```bash
+docker run -it --name dxp-1 --add-host elasticsearch7:172.17.0.2 ...
+```
+
+### Adjusting mmap in Poduction Mode
+
 Elasticsearch requires a higher _mmap count_ (for mapping the directory holding its indexes into memory) than the default for most operating systems. On Linux and as the root user, run
 
 ```bash
