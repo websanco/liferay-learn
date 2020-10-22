@@ -116,6 +116,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/maximize-help`|`com.liferay.portlet.maximize-help=<boolean>`|
 |`/liferay-portlet-app/portlet/open-search-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/parent-struts-path`|`com.liferay.portlet.parent-struts-path=<String>`|
+|`/liferay-portlet-app/portlet/partial-action-serve-resource`|`com.liferay.portlet.partial-action-serve-resource=<boolean>`|
 |`/liferay-portlet-app/portlet/permission-propagator`|[3](#three)|
 |`/liferay-portlet-app/portlet/poller-processor-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/pop-message-listener-class`|[3](#three)|
