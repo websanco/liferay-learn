@@ -86,7 +86,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/atom-collection-adapter`|[3](#three)|
 |`/liferay-portlet-app/portlet/autopropagated-parameters`|`com.liferay.portlet.autopropagated-parameters=<String>`[2](#two)|
 |`/liferay-portlet-app/portlet/configuration-action-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/configuration-path`|`com.liferay.portlet.configuration-path=<String>`|
+|`/liferay-portlet-app/portlet/configuration-path`|not supported|
 |`/liferay-portlet-app/portlet/control-panel-entry-category`|`com.liferay.portlet.control-panel-entry-category=<String>`|
 |`/liferay-portlet-app/portlet/control-panel-entry-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/control-panel-entry-weight`|`com.liferay.portlet.control-panel-entry-weight=<double>`|
