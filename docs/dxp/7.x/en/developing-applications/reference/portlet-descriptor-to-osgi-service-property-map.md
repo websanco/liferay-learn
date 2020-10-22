@@ -58,7 +58,7 @@ The standard portlet descriptor mappings are first.
 |`/portlet-app/portlet/supported-processing-event`|`javax.portlet.supported-processing-event=<QNameLocalPart>` OR `javax.portlet.supported-processing-event=<QNameLocalPart>;<QNameURI>`  [2](#two)|
 |`/portlet-app/portlet/supported-public-render-parameter`|`javax.portlet.supported-public-render-parameter=<String>`[2](#two)|
 |`/portlet-app/portlet/supported-publishing-event`|`javax.portlet.supported-publishing-event=<QNameLocalPart>` OR `javax.portlet.supported-publishing-event=<QNameLocalPart>;<QNameURI>` [2](#two)|
-|`/portlet-app/portlet/supports/mime-type`|`javax.portlet.mime-type=<mime-type>`|
+|`/portlet-app/portlet/supports/mime-type`|not supported|
 |`/portlet-app/portlet/supports/portlet-mode`|`javax.portlet.portlet-mode=<mime-type>;<portlet-mode>[,<portlet-mode>]*`|
 |`/portlet-app/portlet/supports/window-state`|`javax.portlet.window-state=<mime-type>;<window-state>[,<window-state>]*`|
 
