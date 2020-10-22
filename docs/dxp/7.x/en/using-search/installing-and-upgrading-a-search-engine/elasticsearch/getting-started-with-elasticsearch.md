@@ -3,22 +3,23 @@
 > Latest Supported Elasticsearch Version: 7.9 \
 > Available: Liferay DXP/CE 7.3 and  Liferay DXP 7.2 SP1+
 
-A typical Elasticsearch with Liferay system comprises
+A typical Liferay system's search infrastructure comprises
 
+* Liferay servers in a clustered or single node (on-premises or Docker containers)
 * Elasticsearch server(s) (on-premises or Docker containers)
-* An Elasticsearch connector deployed onto Liferay and configured to fit your deployment.
+* An Elasticsearch connector application deployed onto Liferay and configured to fit your deployment.
 
 ```tip::
-   Additional features are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
+   Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
 ```
 
-Here's an overview of the setup steps:
+Assuming your Liferay servers are in place already, the remaining steps include
 
-1. Determine the Elasticsearch server and connector to use.
+1. Determining the Elasticsearch server and connector version to use
 
-1. Set up your Elasticsearch server(s).
+1. Setting up your Elasticsearch server(s)
 
-1. Connect Liferay to Elasticsearch. 
+1. Connecting Liferay to Elasticsearch
 
 ## Elasticsearch and Connector Versions 
 
