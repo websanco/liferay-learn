@@ -35,7 +35,13 @@ public class F2Y1ExchangeRateProvider implements ExchangeRateProvider {
 		primaryCurrencyCode = StringUtil.toUpperCase(primaryCurrencyCode);
 		secondaryCurrencyCode = StringUtil.toUpperCase(secondaryCurrencyCode);
 
-		JSONArray exchangeRatesArray = _getStaticExchangeRates();
+		Class<?> clazz = getClass();
+
+		String countriesJSON = StringUtil.read(
+			clazz.getClassLoader(), _COUNTRIES_PATH, false);
+
+		JSONArray exchangeRatesArray = JSONFactoryUtil.createJSONArray(
+			countriesJSON);
 
 		List<String> codesList = JSONUtil.toStringList(
 			exchangeRatesArray, "code");
@@ -58,17 +64,8 @@ public class F2Y1ExchangeRateProvider implements ExchangeRateProvider {
 		return jsonObject.getDouble("rate");
 	}
 
-	private JSONArray _getStaticExchangeRates() throws Exception {
-		Class<?> clazz = getClass();
-
-		String countriesPath =
-			"com/acme/f2y1/internal/commerce/exchange/rates" +
-				"/exchange_rates-01-10-2019.json";
-
-		String countriesJSON = StringUtil.read(
-			clazz.getClassLoader(), countriesPath, false);
-
-		return JSONFactoryUtil.createJSONArray(countriesJSON);
-	}
+	private static final String _COUNTRIES_PATH =
+		"com/acme/f2y1/internal/commerce/exchange/rates" +
+			"/exchange_rates-01-10-2019.json";
 
 }
