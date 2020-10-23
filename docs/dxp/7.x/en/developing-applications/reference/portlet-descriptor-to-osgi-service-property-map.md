@@ -152,7 +152,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/trash-handler`|[3](#three)|
 |`/liferay-portlet-app/portlet/url-encoder-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/use-default-template`|`com.liferay.portlet.use-default-template=<boolean>`|
-|`/liferay-portlet-app/portlet/user-notification-definitions`|not supported|
+|`/liferay-portlet-app/portlet/user-notification-definitions`|[3](#three)|
 |`/liferay-portlet-app/portlet/user-notification-handler-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/user-principal-strategy`|`com.liferay.portlet.user-principal-strategy=<String>`|
 |`/liferay-portlet-app/portlet/virtual-path`|`com.liferay.portlet.virtual-path=<String>`|
