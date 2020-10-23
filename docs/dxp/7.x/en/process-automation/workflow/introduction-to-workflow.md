@@ -42,4 +42,4 @@ See the [Using Workflow Metrics](./using-workflow-metrics.md) article to learn h
 
 * [Activating Workflow](./activating-workflow.md)
 * [Managing Workflows](./managing-workflows.md)
-* [Building Workflows](./building-workflows.md)
+* [Workflow Designer Overview](./workflow-designer-overview.md)
