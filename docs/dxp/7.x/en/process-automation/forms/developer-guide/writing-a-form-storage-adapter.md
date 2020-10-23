@@ -6,7 +6,7 @@ By default, forms are stored as JSON in Liferay DXP's database. This example sho
 
 ![Use a DDM Storage Adapter to add a Storage Type to the Forms application.](./writing-a-form-storage-adapter/images/01.png)
 
-First you'll see how the [default storage adapter](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/DDMJSONStorageAdapter.java) saves form records in the Liferay DXP database as JSON content. Then you'll add logic to store each Form Record on the file system.
+First you'll see how the [default storage adapter](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/JSONDDMStorageAdapter.java) saves form records in the Liferay DXP database as JSON content. Then you'll add logic to store each Form Record on the file system.
 
 ## Examine a Running DDM Storage Adapter
 
@@ -80,7 +80,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 ## Understand the Extension Point
 
-The example contains only one class: `R2F1DDMStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The deployed example currently just wraps the default JSON implementation: `DDMJSONStorageAdapter`. Later, you'll add file system storage to the code that's already here.
+The example contains only one class: `R2F1DDMStorageAdapter`, a service implementing a `DDMStorageAdapter` to provide logic for storing Form Entries. The deployed example currently just wraps the default JSON implementation: `JSONDDMStorageAdapter`. Later, you'll add file system storage to the code that's already here.
 
 ### Register the Adapter Class with the OSGi Container
 

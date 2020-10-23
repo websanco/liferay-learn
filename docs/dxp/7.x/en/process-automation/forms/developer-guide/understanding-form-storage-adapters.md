@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP 7.3 and Liferay DXP 7.2 versions that include the fix for [LPS-97208](https://issues.liferay.com/browse/LPS-97208) (planned for Liferay DXP 7.2 SP3).
 
-When a User adds a form record, the Forms API routes the processing of the request through a storage adapter API. The same is true for the other *CRUD* operations performed on form entries (read, update, and delete). The default implementation of the storage service is called `DDMJSONStorageAdapter`, and as its name implies, it implements the `DDMStorageAdapter` interface to store form entry data in JSON format.
+When a User adds a form record, the Forms API routes the processing of the request through a storage adapter API. The same is true for the other *CRUD* operations performed on form entries (read, update, and delete). The default implementation of the storage service is called `JSONDDMStorageAdapter`, and as its name implies, it implements the `DDMStorageAdapter` interface to store form entry data in JSON format.
 
 The Dynamic Data Mapping (DDM) back-end can *adapt* to other storage formats for form records. This makes it easy to serialize form data as XML or YAML (or whatever format you like) instead of the default JSON. You can then choose to store form data anywhere, including the Liferay database.
 
@@ -12,7 +12,7 @@ The Dynamic Data Mapping (DDM) back-end can *adapt* to other storage formats for
 
 ## Saving Form Records
 
-The default JSON implementation responds differently depending on the value of a boolean stored in the save request, `isInsert`. If true, logic for adding a new form record is invoked, and if false, an update happens instead. This logic is contained in the methods `insert` and `update`. Make sure your implementation of the `DDMJSONStorageAdapter` accounts for this paradigm as well.
+The default JSON implementation responds differently depending on the value of a boolean stored in the save request, `isInsert`. If true, logic for adding a new form record is invoked, and if false, an update happens instead. This logic is contained in the methods `insert` and `update`. Make sure your implementation of the `DDMStorageAdapter` accounts for this paradigm as well.
 
 ## Serializing and Deserializing Form Records
 
