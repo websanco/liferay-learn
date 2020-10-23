@@ -130,7 +130,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/preferences-unique-per-layout`|`com.liferay.portlet.preferences-unique-per-layout=<boolean>`|
 |`/liferay-portlet-app/portlet/private-request-attributes`|`com.liferay.portlet.private-request-attributes=<boolean>`|
 |`/liferay-portlet-app/portlet/private-session-attributes`|`com.liferay.portlet.private-session-attributes=<boolean>`|
-|`/liferay-portlet-app/portlet/remoteable`|`com.liferay.portlet.remoteable=<boolean>`|
+|`/liferay-portlet-app/portlet/remoteable`|not supported|
 |`/liferay-portlet-app/portlet/render-timeout`|`com.liferay.portlet.render-timeout=<int>`|
 |`/liferay-portlet-app/portlet/render-weight`|`com.liferay.portlet.render-weight=<int>`|
 |`/liferay-portlet-app/portlet/requires-namespaced-parameters`|`com.liferay.portlet.requires-namespaced-parameters=<boolean>`|
