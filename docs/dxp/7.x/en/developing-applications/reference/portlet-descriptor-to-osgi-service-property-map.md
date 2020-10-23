@@ -81,7 +81,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/active`|`com.liferay.portlet.active=<boolean>`|
 |`/liferay-portlet-app/portlet/add-default-resource`|`com.liferay.portlet.add-default-resource=<boolean>`|
 |`/liferay-portlet-app/portlet/ajaxable`|`com.liferay.portlet.ajaxable=<boolean>`|
-|`/liferay-portlet-app/portlet/application-type`|`com.liferay.portlet.application-type=full-page-application` and/or `com.liferay.portlet.application-type=widget`|
+|`/liferay-portlet-app/portlet/application-type`|`com.liferay.portlet.application-type=full-page-application` or `com.liferay.portlet.application-type=widget`[2](#two)|
 |`/liferay-portlet-app/portlet/asset-renderer-factory`|[3](#three)|
 |`/liferay-portlet-app/portlet/atom-collection-adapter`|[3](#three)|
 |`/liferay-portlet-app/portlet/autopropagated-parameters`|`com.liferay.portlet.autopropagated-parameters=<String>`[2](#two)|
