@@ -125,6 +125,8 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/portlet-layout-listener-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/portlet-name`|not supported|
 |`/liferay-portlet-app/portlet/portlet-url-class`|[3](#three)|
+|`/liferay-portlet-app/portlet/portlet-dependency-css-enabled`|`com.liferay.portlet.portlet-dependency-css-enabled=<boolean>`|
+|`/liferay-portlet-app/portlet/portlet-dependency-javascript-enabled`|`com.liferay.portlet.dependency-javascript-enabled=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-company-wide`|`com.liferay.portlet.preferences-company-wide=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-owned-by-group`|`com.liferay.portlet.preferences-owned-by-group=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-unique-per-layout`|`com.liferay.portlet.preferences-unique-per-layout=<boolean>`|
