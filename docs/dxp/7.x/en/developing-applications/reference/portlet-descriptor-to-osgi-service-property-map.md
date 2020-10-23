@@ -157,7 +157,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/user-principal-strategy`|`com.liferay.portlet.user-principal-strategy=<String>`|
 |`/liferay-portlet-app/portlet/virtual-path`|`com.liferay.portlet.virtual-path=<String>`|
 |`/liferay-portlet-app/portlet/webdav-storage-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/webdav-storage-token`|not supported|
+|`/liferay-portlet-app/portlet/webdav-storage-token`|declared in WebDavStorage OSGi service property as `webdav-storage-token=<string>`|
 |`/liferay-portlet-app/portlet/workflow-handler`|[3](#three)|
 |`/liferay-portlet-app/portlet/xml-rpc-method-class`|[3](#three)|
 
