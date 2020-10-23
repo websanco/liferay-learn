@@ -70,13 +70,10 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
-    property = "commerce.exchange.provider.key=" + F2Y1ExchangeRateProvider.KEY,
+    immediate = true, property = "commerce.exchange.provider.key=F2Y1",
     service = ExchangeRateProvider.class
 )
 public class F2Y1ExchangeRateProvider implements ExchangeRateProvider {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the exchange rate provider so that Liferay Commerce can distinguish the new exchange rate provider from others in the [exchange rate provider registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ExchangeRateProviderRegistryImpl.java). Reusing a key that is already in use will override the existing associated exchange rate provider.
@@ -110,27 +107,54 @@ public BigDecimal getExchangeRate(
         CommerceCurrency secondaryCommerceCurrency)
     throws Exception {
 
-    String primaryCurrencyCode = primaryCommerceCurrency.getCode();
-    String secondaryCurrencyCode = secondaryCommerceCurrency.getCode();
-
-    primaryCurrencyCode = StringUtil.toUpperCase(primaryCurrencyCode);
-    secondaryCurrencyCode = StringUtil.toUpperCase(secondaryCurrencyCode);
-
-    JSONArray exchangeRatesArray = _getStaticExchangeRates();
-
-    List<String> codesList = JSONUtil.toStringList(
-        exchangeRatesArray, "code");
-
-    double primaryRate = _getRateForCode(
-        exchangeRatesArray, codesList, primaryCurrencyCode);
-    double secondaryRate = _getRateForCode(
-        exchangeRatesArray, codesList, secondaryCurrencyCode);
-
-    return new BigDecimal(secondaryRate / primaryRate);
+    return new BigDecimal(
+        _getExchangeRate(secondaryCommerceCurrency) /
+            _getExchangeRate(primaryCommerceCurrency));
 }
+
+private Double _getExchangeRate(CommerceCurrency commerceCurrency) {
+    String code = StringUtil.toUpperCase(commerceCurrency.getCode());
+
+    return _exchangeRates.get(code);
+}
+
+private Map<String, Double> _exchangeRates = new HashMap<String, Double>() {
+    {
+        put("AUD", 1.9454);
+        put("BRL", 5.15262);
+        put("CAD", 1.84981);
+        put("CHF", 1.36562);
+        put("CLP", 947.813);
+        put("CNY", 9.49073);
+        put("CZK", 31.0599);
+        put("DKK", 9.04642);
+        put("EUR", 1.21177);
+        put("GBP", 1.09733);
+        put("HKD", 10.9628);
+        put("HUF", 390.23);
+        put("IDR", 19698.8);
+        put("ILS", 5.12143);
+        put("INR", 98.562);
+        put("JPY", 150.862);
+        put("KRW", 1567.74);
+        put("MXN", 26.7972);
+        put("MYR", 5.72459);
+        put("NOK", 11.8138);
+        put("NZD", 2.05827);
+        put("PHP", 73.2097);
+        put("PKR", 194.073);
+        put("PLN", 5.22207);
+        put("RUB", 93.4562);
+        put("SEK", 12.4178);
+        put("SGD", 1.88797);
+        put("THB", 44.6128);
+        put("USD", 1.39777);
+        put("ZAR", 19.3996);
+    }
+};
 ```
 
-> This example uses a data file with a static list of exchange rates as the data source, [f2y1-exchange-rates.json](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-an-exchange-rate-provider/liferay-f2y1.zip/f2y1-impl/src/main/resources/com/acme/f2y1/internal/commerce/exchange/rates/f2y1-exchange-rates.json). See [ECBExchangeRateProvider](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java) for a more practical use case. See `_getStaticExchangeRates` and `_getRateForCode` by visiting [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-an-exchange-rate-provider/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java).
+> This example uses a map of exchange rates. See [ECBExchangeRateProvider](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java) for a more practical use case. See `_getStaticExchangeRates` and `_getRateForCode` by visiting [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-an-exchange-rate-provider/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java).
 >
 > Use the `CommerceCurrency` object for the two currencies to get the information needed, like their currency codes. See [CommerceCurrency.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrency.java) and [CommerceCurrencyModel.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrencyModel.java) to find more methods you can use with a `CommerceCurrency` object.
 
