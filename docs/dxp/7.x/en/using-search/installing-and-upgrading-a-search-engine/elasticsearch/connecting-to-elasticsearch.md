@@ -29,7 +29,7 @@ Alternatively, you can configure the connector in the user interface. In the Glo
 
 > In Liferay 7.2, The Control Panel is in the Product Menu (![Product Menu](../../../images/icon-product-menu.png)).
 
-A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`) and sets the URL to each Elasticsearch node (`networkHostAddresses=["https://es-node:9200"]`).
+A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`) and sets the URL to each Elasticsearch node (`networkHostAddresses=["http://es-node:9200"]`).
 
 1. Create the following configuration file:
 
@@ -37,7 +37,7 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
     com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
     ```
 
-1. Specify the configuration properties in the `.config` file. Here's an example that includes [security properties](./securing-elasticsearch.md):
+1. Specify the configuration properties in the `.config` file. Here's an example that includes [security properties](./securing-elasticsearch.md) commented out (not that you'd need to use `https` network host addresses when encryption is enabled):
 
     ```properties
     # In CE/DXP7.3, productionModeEnabled replaces operationMode (deprecated):
