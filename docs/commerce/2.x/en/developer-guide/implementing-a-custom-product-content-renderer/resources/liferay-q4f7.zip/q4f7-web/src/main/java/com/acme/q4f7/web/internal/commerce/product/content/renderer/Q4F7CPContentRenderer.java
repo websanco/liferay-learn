@@ -28,7 +28,7 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class Q4F7CPContentRenderer implements CPContentRenderer {
 
-	public static final String KEY = "Example";
+	public static final String KEY = "Q4F7";
 
 	@Override
 	public String getKey() {
