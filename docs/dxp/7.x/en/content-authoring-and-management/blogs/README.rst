@@ -1,6 +1,9 @@
 Blogs
 ==========
 
+User Guide
+----------
+
 -  :doc:`/content-authoring-and-management/blogs/getting-started-with-blogs`
 -  :doc:`/content-authoring-and-management/blogs/adding-blog-entries`
 -  :doc:`/content-authoring-and-management/blogs/managing-blog-entries`
