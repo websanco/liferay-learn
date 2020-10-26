@@ -1,6 +1,20 @@
 # Creating and Managing User Segments
 
-Segments use User data like the *Job Title* field and Organization membership for evaluating segments. These steps describe how to create a new User Segment:
+Using *Segments* you can create different groups of users based on a common set of properties, like user *Job Title*, or user *Language*. For a list of the properties you can use to define Segments, see [Segments Editor UI Reference](./segments-editor-ui-reference.md). In addition to the exiting properties, you can add [Custom Fields](../../../../system-administration/custom-fields/custom-fields.md) for User and Organization groups and use these fields on you Segment criteria.
+
+## Compound Segments
+
+> Available: Liferay 7.3+.
+
+You can combine existing Segments to create a new _Compound Segment_. The Compound Segment inherits the properties from the Segments it is based on, and updates the members automatically. You can further customize the Compound Segment by adding additional properties.
+
+To understand how Compound Segments work, consider the following example. To provide a more personalized experience to your website visitors in the USA and Canada, you create two Segments with different properties, one Segment for each country. Later, you create a new standard Segment for North America visitors, where you manually copy the properties of the USA and Canada Segments. In this situation, when you change the properties of the "USA" or "Canada" Segments, the "North America" Segment doesn't inherit the changes. You need to manually update the "North America" segment to reflect these changes. However, if you create the "North America" segment as a Compound Segment, this Compound Segment automatically updates its definition and members when you change the "USA" or "Canada" Segments.
+
+![Combine two or more segments to create a new Compound Segment](./creating-and-managing-user-segments/images/08.png)
+
+## Creating User Segments
+
+These steps describe how to create a new Segment:
 
 1. From the Site Menu on the left side of the screen, go to *People* &rarr; *Segments*.
 
@@ -8,25 +22,28 @@ Segments use User data like the *Job Title* field and Organization membership fo
 
 1. Click the *Add* button (![Add](../../../images/icon-add.png)).
 
-1. Click in the top text area and enter a name for your User Segment.
+1. Click in the top text area and enter a name for your Segment.
 
-1. Drag the *User*, *Organization*, and/or *Session* properties that you need to the Conditions box, and configure the fields to create the condition for the User Segment. See the [The Segments Editor UI Reference](./segments-editor-ui-reference.md) for more information on using the editor and an explanation of all the properties you can use. You can add properties to the default list by creating a Custom Field<!-- link todo --> for Users or Organizations.
+1. From the *Properties* area, select the group and property to define your Segment and drag and drop the *Property* to the *Conditions* area.
 
-    ![You can prevent typos by directly selecting Organizations through the interface.](./creating-and-managing-user-segments/images/02.png)
+1. Configure the Conditions for your segment. From the *Condition* area you can:
 
-    The example in the figure below creates a User Segment for Users that have "Engineer" as their job title.
+    - Edit the comparison criteria using the comparison drop-down menu (A).
+    - Add or remove *Conditions* from the same *Properties* group, using the buttons next to the condition's name (B).
+    - Add conditions using a different *Properties* group, by dragging and dropping the *Property* (C).
+    - Combine the *Conditions* with *AND* and *OR* operators (D and E).
 
-    ![Setting the comparator to contains includes variations of Engineer like Software Engineer in the segment.](./creating-and-managing-user-segments/images/03.png)
+        ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
 
-    As you edit, a count of members meeting the criteria appears at the top of the page. You can click on *View Members* to see the list. This helps you determine if you are correctly defining the Segment.
+1. Click *Save*.
 
-    ![You can view the list of Segment members at any time.](./creating-and-managing-user-segments/images/04.png)
+As you edit, a count of members meeting the criteria appears at the top of the *Conditions* area. You can click on *View Members* to see the list. This helps you determine if you are correctly defining the Segment.
 
-1. Click *Save* to save your User Segment.
+![You can view the list of Segment members at any time.](./creating-and-managing-user-segments/images/04.png)
 
-After you create your User Segment, you can see it in the list of User Segments on the *Segments* page. From here, you can manage the User Segment (edit it, delete it, [assign Site Roles](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md) or change the permissions (who can access the User Segment) for it) through its Actions Menu (![Actions](../../../images/icon-actions.png)). You can also click on the User Segment's name to edit it.
+After you create your User Segment, you can see it in the list of User Segments on the *Segments* page. From here, you can manage the User Segment (edit it, delete it, [assign Site Roles](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md), or change the permissions (who can access the User Segment) for it through its Actions Menu (![Actions](../../../images/icon-actions.png)). You can also click on the User Segment's name to edit it.
 
-    ![You can edit, delete or manage permissions from the actions menu.](./creating-and-managing-user-segments/images/05.png)
+![You can edit, delete or manage permissions from the actions menu.](./creating-and-managing-user-segments/images/05.png)
 
 ```note::
   You can't delete a User Segment if it's used in an experience.
