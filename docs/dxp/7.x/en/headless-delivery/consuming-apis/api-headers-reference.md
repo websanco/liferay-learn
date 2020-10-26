@@ -25,7 +25,7 @@ curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/
 
 ## `Accept-Language`
 
-For resources containing content translated into multiple languages, indicates which language the response content should be returned in 
+For resources containing content translated into multiple languages, indicates the language for the returned response content. 
 
 ### Valid Options
 
@@ -39,7 +39,7 @@ curl --header 'Accept-Language: pt-BR' 'example.com/o/headless-delivery/v1.0/sit
 
 ## `Authorization`
 
-Identifies which User is making the request, using DXP’s Authentication framework. (See also [`Cookie`](#cookie).) If both this and `Cookie` are not supplied, the request is attempted as a guest (unauthenticated) user.
+Identifies which User is making the request, using DXP's Authentication framework. (See also [`Cookie`](#cookie).) If both this and `Cookie` are not supplied, the request is attempted as a guest (unauthenticated) user.
 
 ### Valid Options
 
@@ -68,7 +68,7 @@ curl --form 'file=@myfile.txt' --header 'Content-Type: multipart/form-data; boun
 
 ## `Cookie`
 
-Identifies which User is making the request, using DXP’s Authentication framework. (See also [`Authorization`](#authorization).) If both this and `Authorization` are not supplied, the request is attempted as a guest (unauthenticated) user.
+Identifies the User making the request, using DXP's Authentication framework. (See also [`Authorization`](#authorization).) If both this and `Authorization` are not supplied, the request is attempted as a guest (unauthenticated) user.
 
 ### Valid Options
 
