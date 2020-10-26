@@ -133,10 +133,10 @@ Per the [Container Lifecycle](./container-lifecycle-and-api.md#liferay-phases), 
 If you have a new app, artifact, or `.config` file that you want to deploy to a running container, use `docker cp`. Here's an example of copying an app to the container:
 
 ```bash
-docker cp ~/my-apps/some-app.lpkg [container]:/mnt/liferay/deploy
+docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
 ```
 
-Note, applying a `.config` file requires copying it to the container's `/mnt/liferay/files/osgi/configs` folder.
+Note, applying a `.config` file requires copying it to the container's `/opt/liferay/files/osgi/configs` folder.
 
 ## Conclusion
 

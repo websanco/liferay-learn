@@ -48,7 +48,7 @@ Liferay launches and installs the artifact. The container reports a message like
 Use a `docker cp` command like this one to copy your artifact to your running container's `/mnt/liferay/deploy` folder.
 
 ```bash
-docker cp ~/my-apps/some-app.lpkg [container]:/mnt/liferay/deploy
+docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
 ```
 
 Now you know how to install apps and other artifacts to Liferay.
