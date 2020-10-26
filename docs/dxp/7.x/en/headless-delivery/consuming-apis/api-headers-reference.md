@@ -7,7 +7,6 @@ This article documents the available headers you can use when making Headless AP
 * [`Authorization`](#authorization)
 * [`Content-Type`](#content-type)
 * [`Cookie`](#cookie)
-* [`X-Accept-All-Languages`](#x-accept-all-languages)
 
 ## `Accept`
 
@@ -20,13 +19,13 @@ Indicates what format the response content should take. Defaults to `json`.
 
 ### Example
 
-```
+```bash
 curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
 
 ## `Accept-Language`
 
-Indicates which language the response content should be returned in, for resources containing content translated into multiple languages. (See also [`X-Accept-All-Languages`](#x-accept-all-languages).)
+For resources containing content translated into multiple languages, indicates which language the response content should be returned in 
 
 ### Valid Options
 
@@ -79,19 +78,4 @@ Identifies which User is making the request, using DXP’s Authentication framew
 
 ```
 curl --header 'Cookie: JSESSIONID=6349351B37C3EE1F6BA4E128107E9A34' 'example.com/o/headless-admin-user/v1.0/user-accounts'
-```
-
-## `X-Accept-All-Languages`
-
-Indicates that the server should return the requested content in all available languages. (See also [`Accept-Language`](#accept-language).)
-
-### Valid Options
-
-* `true`
-* `false`
-
-### Example
-
-```
-curl --header 'X-Accept-All-Languages: true' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
