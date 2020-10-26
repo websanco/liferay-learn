@@ -6,7 +6,7 @@ Follow these steps to add a *Blogs Aggregator* widget to a page:
 
 1. Navigate to an existing page where you wish to add the *Blogs Aggregator* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../images/icon-add-app.png)) at the top of the page.
 
-    Or [create a new page](../../site-building/creating-pages/adding-paged.md) on which to add the widget.
+    Or [create a new page](../../site-building/creating-pages/adding-pages.md) on which to add the widget.
 
 1. The *Blogs Aggregator* widget is found under the Collaboration section of the list of widgets. It can also be found by searching for *Blogs Aggregator*. Drag the widget onto your page.
 

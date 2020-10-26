@@ -6,7 +6,7 @@ Follow these steps to add a Blogs widget to a page:
 
 1. Navigate to an existing page where you wish to add the *Blogs* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../images/icon-add-app.png)) at the top of the page.
 
-    Or [create a new page](../../site-building/creating-pages/adding-paged.md) on which to add the widget.
+    Or [create a new page](../../site-building/creating-pages/adding-pages.md) on which to add the widget.
 
 1. The *Blogs* widget is found under the Collaboration section of the list of widgets. It can also be found by searching for *Blogs*. Drag the widget onto your page.
 
@@ -24,9 +24,9 @@ Follow these steps to add a Blogs widget to a page:
 
     * **Show View Count**: Enable whether to show the number views for each entry.
 
-    * **Social Bookmarks**: The social networking sites that users can share blog entries with. Only those in the Current column are displayed via the share buttons on each blog entry. To move social networking sites between the Current and Available columns, select the sites and use the arrows between those columns. Similarly, use the up/down arrows beneath the Current column to reorder the sites as they appear on each blog entry. 
+    * **Social Bookmarks**: The social networking sites that users can share blog entries with. Only those in the *Current* column are displayed via the share buttons on each blog entry. To move social networking sites between the *Current* and *Available* columns, select the sites and use the arrows between those columns. Similarly, use the up/down arrows beneath the Current column to reorder the sites as they appear on each blog entry. 
 
-    * **Display Style**: The display style for social bookmarks. Inline is the default and displays the social bookmark icons in a row. Menu hides them inside a single share menu.
+    * **Display Style**: The display style for social bookmarks. *Inline* is the default and displays the social bookmark icons in a row. *Menu* hides them inside a single share menu.
 
     * **Maximum Items to Display**: The total number of blog entries to display on the initial page. You can select up to 60 to display at once.
 
@@ -48,7 +48,7 @@ Follow these steps to add a Blogs widget to a page:
 
     * **Show Related Assets**: Enable whether to display related content from other apps/widgets in blog entries.
 
-    There are also other tabs in Configuration:
+    There are also other tabs in *Configuration*:
 
     **Communication**: Lists public render parameters the widget publishes to other widgets on the page. Other apps/widgets can read and take actions on these. For each shared parameter, you can specify whether to allow communication using the parameter and select which incoming parameter can populate it.
 
