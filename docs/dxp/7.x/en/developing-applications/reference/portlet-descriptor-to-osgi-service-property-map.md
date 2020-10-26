@@ -122,11 +122,11 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/pop-message-listener-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/pop-up-print`|`com.liferay.portlet.pop-up-print=<boolean>`|
 |`/liferay-portlet-app/portlet/portlet-data-handler-class`|[3](#three)|
+|`/liferay-portlet-app/portlet/portlet-dependency-css-enabled`|`com.liferay.portlet.portlet-dependency-css-enabled=<boolean>`|
+|`/liferay-portlet-app/portlet/portlet-dependency-javascript-enabled`|`com.liferay.portlet.dependency-javascript-enabled=<boolean>`|
 |`/liferay-portlet-app/portlet/portlet-layout-listener-class`|[3](#three)|
 |`/liferay-portlet-app/portlet/portlet-name`|not supported|
 |`/liferay-portlet-app/portlet/portlet-url-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/portlet-dependency-css-enabled`|`com.liferay.portlet.portlet-dependency-css-enabled=<boolean>`|
-|`/liferay-portlet-app/portlet/portlet-dependency-javascript-enabled`|`com.liferay.portlet.dependency-javascript-enabled=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-company-wide`|`com.liferay.portlet.preferences-company-wide=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-owned-by-group`|`com.liferay.portlet.preferences-owned-by-group=<boolean>`|
 |`/liferay-portlet-app/portlet/preferences-unique-per-layout`|`com.liferay.portlet.preferences-unique-per-layout=<boolean>`|
@@ -157,7 +157,7 @@ The standard portlet descriptor mappings are first.
 |`/liferay-portlet-app/portlet/user-principal-strategy`|`com.liferay.portlet.user-principal-strategy=<String>`|
 |`/liferay-portlet-app/portlet/virtual-path`|`com.liferay.portlet.virtual-path=<String>`|
 |`/liferay-portlet-app/portlet/webdav-storage-class`|[3](#three)|
-|`/liferay-portlet-app/portlet/webdav-storage-token`|declared in WebDavStorage OSGi service property as `webdav-storage-token=<string>`|
+|`/liferay-portlet-app/portlet/webdav-storage-token`|declared in the `webdav-storage-token=<string>` WebDavStorage OSGi service property |
 |`/liferay-portlet-app/portlet/workflow-handler`|[3](#three)|
 |`/liferay-portlet-app/portlet/xml-rpc-method-class`|[3](#three)|
 
