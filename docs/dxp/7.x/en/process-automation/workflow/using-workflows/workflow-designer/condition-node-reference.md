@@ -1,24 +1,25 @@
 # Condition Node Reference
 
-This tutorial documents how to use the _Condition_ Node.
+> Subscribers
 
-You might have a review process that requires you to determine which reviewer needs to review the asset. For example, depending on the type of document, it might require review by the legal department or the Marketing team.
+_Condition_ nodes are best used when you have multiple reviewers and must determine which reviewer is to be assigned. For example, depending on the type of document, it might require review by the Legal department or the Marketing team.
 
-In Workflow Designer, users can add a _Condition_ node to reflect this check in the workflow process. Much like [Fork and Join nodes](./using-forks-and-joins.md) node, a _Condition_ node splits the review path. However, unlike the _Fork_ node which requires the corresponding _Join_ node, the _Condition_ node checks whether certain conditions are met before determining the appropriate review path.
+Much like [Fork and Join nodes](./forks-and-joins-reference.md) node, a _Condition_ node splits the review path. However, unlike the _Fork_ node which requires the corresponding _Join_ node, the _Condition_ node stands alone. It acts as a gatekeeper by checking whether the specified conditions are met then assigning the asset to the right reviewer based on the answers.
 
-For demonstration purposes, we are using the [Category Specific Definition](../workflow-designer-overview/workflow-processes/category-specific-definition.xml). Furthermore, we are importing a sample Groovy script which checks the asset and determines the path for the desired reviewer.
+The _Condition_ node is not used in the default [Single Approver definition](../workflow-designer-overview/resources/single-approver-definition.xml). For demonstration purposes, we are using the [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml) instead.
 
-Follow the steps below:
+To view how the Condition node is configured:
 
-1. Navigate to the _Control Panel_ &rarr; _Workflow_ &rarr; _Process Builder_.
+1. Navigate to the _Global Menu_ &rarr;  _Applications_ &rarr; _Workflow_ &rarr; _Process Builder_.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. In the Workflow Designer Canvas, enter a name for the workflow.
-1. Delete the old connector between the _Start_ and _End_ node.
-1. Drag and drop the _Condition_ node.
-1. Connect the _Start_ node to the _Connection_ node.
+1. Click the _Source_ tab.
+1. Click _import a file_.
+1. Upload the [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml).
+1. Click the _Diagram_ tab.
 1. Double Click on the _Condition_ node to configure the node's properties.
 1. Click _Value_ next to _Script_.
-1. Enter the following into the dialog box:
+1. You can view the view the following script:
 
     ```java
     import com.liferay.asset.kernel.model.AssetCategory;
@@ -61,23 +62,19 @@ Follow the steps below:
 
     ```
 
-    ![Add the Groovy Script which determines the review path.](./using-the-condition-node/images/01.png)
+    ![Add the Groovy Script which determines the review path.](./condition-node-reference/images/01.png)
 
-1. Click _Save_.
-1. Add two _Task_ nodes then connect the _Condition_ node to them. Rename them as:
+1. Click _Save_ or _Cancel_ to return to the Canvas.
 
-    * Legal Review
-    * Content Review
+![The Category Specific Approval definition starts with a Condition node.](./condition-node-reference/images/02.png)
 
-1. Add a third _Task_ node; renamed this node as _Update_. This _Task_ node is the asset creator to update the asset if it is rejected.
-1. Connect the _Update_ node back to the _Condition_ node.
-1. Rename all the connectors and add any additional [actions or notifications](./configuring-workflow-actions-and-notifications.md).
+Notice how the _Condition_ node is connected to three different Task nodes:
 
-    ![The Category Specific Approval definition starts with a Condition node.](./using-the-condition-node/images/02.png)
+* The _legal-review_ node; if the document is a certain type, then the asset is sent to the Legal Department;
+* The _content-review_ node; otherwise, the asset is sent to the Marketing team;
+* The _update_ node; if the asset is rejected, it is assigned back to the original creator to make the necessary changes.
 
-1. Click _Publish_ when finished.
-
-The new workflow has been created.
+See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Task Node Reference](./task-node-reference.md) to learn how to configure Task nodes.
 
 ```tip::
    The `returnValue` variable is the variable that points from the condition to a transition, and its value must match a valid transition in the workflow definition.
@@ -86,5 +83,7 @@ The new workflow has been created.
 ## Additional Information
 
 * [Managing Workflows](../managing-workflows.md)
-* [Using Forks and Joins](./using-forks-and-joins.md)
-* [Workflow Designer Reference Guide](./workflow-designer-reference-guide.md)
+* [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
+* [Forks and Joins Reference](./forks-and-joins-reference.md)
+* [Condition Node Reference](./condition-node-reference.md)
+* [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)

@@ -75,13 +75,13 @@ This _Task_ node is now configured; it sends a notification that a submission is
 
 <!-- Justin, as you can see I've expanded the instructions above so that they are creating the Single Approver workflow, which is what I'd asked you to do. Please continue from what I've started above until the Single Approver workflow is re-created in the designer. You can use the XML file as a guide to show what to do in the designer. After this should be one or more reference documents (I'll leave the organization up to you) explaining how to use the other nodes in the designer. -Rich -->
 
-You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Workflow Task Node Reference](./workflow-task-node-reference.md).
+You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Workflow Task Node Reference](./task-node-reference.md).
 
-Create additional nodes such as an _Update_ node. You can also connect the _Task_ node to other nodes such as [Forks and Joins](./using-forks-and-joins.md) or [Conditions](./using-the-condition-node.md) nodes.
+Create additional nodes such as an _Update_ node. You can also connect the _Task_ node to other nodes such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md) nodes.
 
 ## Additional Information
 
 * [Activating Workflow](../activating-workflow.md)
+* [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
-* [Workflow Designer Nodes Reference](./workflow-designer-nodes-reference.md)
-* [Workflow Task Node Reference](./workflow-task-node-reference.md)
+* [Task Node Reference](./task-node-reference.md)

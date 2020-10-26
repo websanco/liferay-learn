@@ -2,7 +2,7 @@
 
 > Subscribers
 
-This tutorial documents how to use the _Fork_, _Join_ and _Join XOR_ nodes. These nodes are not used in the default [Single Approver](../workflow-designer-overview/resources/single-approver-definition.xml) definition.
+This reference article documents how to use the _Fork_, _Join_ and _Join XOR_ nodes. These nodes are not used in the default [Single Approver](../workflow-designer-overview/resources/single-approver-definition.xml) definition.
 
 However, these nodes are very useful for workflow processes that have multiple reviewers like the [Legal-Marketing Definition](../workflow-designer-overview/workflow-processes/legal-marketing-definition.xml) sample.
 
@@ -12,7 +12,7 @@ Furthermore, you can split the review task so that two reviewers can the asset w
 
 Follow the steps below:
 
-1. Go to the _Global_ menu &rarr; _Applications_ &rarr; _Process Builder_.
+1. Go to the _Global Menu_ &rarr; _Applications_ &rarr; _Process Builder_.
 1. Click the _Workflows_ tab.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. In the Workflow Designer Canvas, delete the old connector between the _Start_ node and _End_ node.
@@ -36,7 +36,7 @@ With a regular Join node, for the workflow to proceed beyond the join, the trans
 ## Additional Information
 
 * [Activating Workflow](../activating-workflow.md)
+* [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Using the Condition Node](./using-the-condition-node.md)
+* [Condition Node Reference](./condition-node-reference.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
-* [Workflow Designer Nodes Reference](./workflow-designer-nodes-reference.md)

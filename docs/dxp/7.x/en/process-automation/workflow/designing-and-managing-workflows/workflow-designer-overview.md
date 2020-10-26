@@ -49,7 +49,7 @@ Ready to work on workflows? Your next step is [creating workflow tasks](./workfl
 
 ## Additional Information
 
-* [Managing Workflow with Designer](./workflow-designer/managing-workflow-with-designer.md)
+* [Managing Workflows](./managing-workflows.md)
 * [Forks and Joins Reference](./workflow-designer/forks-and-joins-reference.md)
 * [Condition Node Reference](./workflow-designer/condition-node-reference.md)
 * [Creating Workflow Tasks](./workflow-designer/creating-workflow-tasks.md)
