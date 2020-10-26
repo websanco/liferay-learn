@@ -20,19 +20,17 @@ import org.osgi.service.component.annotations.Reference;
 @Component(
 	immediate = true,
 	property = {
-		"commerce.product.content.renderer.key=" + Q4F7CPContentRenderer.KEY,
-		"commerce.product.content.renderer.order=" + 1,
+		"commerce.product.content.renderer.key=q4f7",
+		"commerce.product.content.renderer.order=1",
 		"commerce.product.content.renderer.type=" + SimpleCPTypeConstants.NAME
 	},
 	service = CPContentRenderer.class
 )
 public class Q4F7CPContentRenderer implements CPContentRenderer {
 
-	public static final String KEY = "Q4F7";
-
 	@Override
 	public String getKey() {
-		return KEY;
+		return "q4f7";
 	}
 
 	@Override
@@ -40,7 +38,8 @@ public class Q4F7CPContentRenderer implements CPContentRenderer {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "example");
+		return LanguageUtil.get(
+			resourceBundle, "q4f7-commerce-product-content-renderer");
 	}
 
 	@Override
