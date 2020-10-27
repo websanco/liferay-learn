@@ -16,25 +16,23 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-		"commerce.low.stock.activity.key=" + J1E4CommerceLowStockActivity.KEY,
+		"commerce.low.stock.activity.key=J1E4",
 		"commerce.low.stock.activity.priority:Integer=9"
 	},
 	service = CommerceLowStockActivity.class
 )
 public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 
-	public static final String KEY = "Example";
-
 	@Override
 	public void execute(CPInstance cpInstance) throws PortalException {
 		if (_log.isWarnEnabled()) {
-			_log.warn("Low stock for SKU: " + cpInstance.getSku());
+			_log.warn("Low stock for SKU " + cpInstance.getSku());
 		}
 	}
 
 	@Override
 	public String getKey() {
-		return KEY;
+		return "J1E4";
 	}
 
 	@Override
