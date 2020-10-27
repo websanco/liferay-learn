@@ -32,14 +32,12 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	immediate = true,
-	property = "commerce.shipping.engine.key=" + J6X8CommerceShippingEngine.KEY,
+	property = "commerce.shipping.engine.key=J6X8",
 	service = CommerceShippingEngine.class
 )
 public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
-	public static final double DISCOUNT_RATE = 0.75;
-
-	public static final String KEY = "Example";
+	public static final BigDecimal DISCOUNT_RATE = new BigDecimal(0.75);
 
 	@Override
 	public String getCommerceShippingOptionLabel(String name, Locale locale) {
@@ -92,7 +90,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
 		CommerceShippingMethod commerceShippingMethod =
 			_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
-				groupId, KEY);
+				groupId, "J6X8");
 
 		if (commerceShippingMethod == null) {
 			return Collections.emptyList();
@@ -117,7 +115,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		for (CommerceShippingFixedOption commerceShippingFixedOption :
 				commerceShippingFixedOptions) {
 
-			if (_shippingOptionIsAddressRestricted(
+			if (_isShippingOptionRestricted(
 					commerceOrder, commerceShippingFixedOption)) {
 
 				continue;
@@ -132,7 +130,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
 			BigDecimal amount = commerceShippingFixedOption.getAmount();
 
-			amount = amount.multiply(new BigDecimal(DISCOUNT_RATE));
+			amount = amount.multiply(DISCOUNT_RATE);
 
 			commerceShippingOptions.add(
 				new CommerceShippingOption(name, name, amount));
@@ -141,7 +139,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		return commerceShippingOptions;
 	}
 
-	private boolean _shippingOptionIsAddressRestricted(
+	private boolean _isShippingOptionRestricted(
 			CommerceOrder commerceOrder,
 			CommerceShippingFixedOption commerceShippingFixedOption)
 		throws PortalException {
