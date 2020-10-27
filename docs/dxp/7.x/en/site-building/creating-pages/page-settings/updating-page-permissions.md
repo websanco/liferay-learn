@@ -1,14 +1,12 @@
 # Updating Page Permissions
 
-When a user joins a site, he is able to see all of the site's Public and Private pages. You can update each page's permissions to allow (or deny) access to that page based on the site user's assigned DXP [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
+When Users join a Site, by default they can see all of the Site's Public and Private pages. You can update each page's permissions to allow (or deny) access to that page based on the User's assigned [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
-Modifying each Page's permission overrides the site level's [Page Set's](./configuring-page-sets.md) settings.
+Modifying each Page's permission overrides the Site level's [Page Sets](./configuring-page-sets.md) settings.
 
-Lastly, only administrators can update a Page's permission.
+Only administrators can update a Page's permission.
 
-To update a site page's permissions:
-
-1. Navigate to your site where the pages are published (for example, _Site 1_).
+1. Navigate to your Site where the pages are published (for example, _Site 1_).
 1. Click the _Product Menu_ (![Product menu](../../../images/icon-product-menu.png)) icon.
 1. Click _Site Builder_ &rarr; _Pages_.
 1. Select the Page Set (_Public Pages_ or _Private Pages_) that contains the page whose permissions you are updating.
