@@ -15,3 +15,8 @@ Search Results
 .. include:: /using-search/search-pages-and-widgets/search_results.rst
    :start-line: 2
 
+Seach Facets
+------------
+
+.. include:: /using-search/search-pages-and-widgets/search_facets.rst
+   :start-line: 2
