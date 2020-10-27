@@ -48,15 +48,15 @@ For basic Widget Pages, you can select a layout template that defines row and co
 
 ### Categorization
 
-In the *Categorization* section, you can categorize page content using *Topics* and *Tags*. These tools help organize pages so users can more easily find your site's content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../../content-authoring-and-management/tags_and_categories.html).
+Here you can categorize page content using *Topics* and *Tags*. These tools help organize pages so people can more easily find your Site's content through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../../content-authoring-and-management/tags_and_categories.html).
 
 ![Categorize page content using Topics and Tags.](./configuring-individual-pages/images/06.png)
 
 ### Look and Feel
 
-Here you can determine whether to use the page set's theme settings or define a unique look and feel for your page. When you choose to customize the page's theme, you can toggle various theme settings.
+Here you can use the page set's theme settings or define a unique look and feel for your page. When you choose to customize the page's theme, you can toggle various theme settings.
 
-You can also access a *CSS* editor where you can add custom CSS code to the page. Any CSS code added to a page in this way will be loaded after the theme.
+You can also access a CSS editor where you can add custom CSS code to the page. Any CSS code added to a page in this way is loaded after the theme.
 
 ![Determine whether to use the page set's theme settings or define a unique look and feel for your page.](./configuring-individual-pages/images/07.png)
 
@@ -66,7 +66,7 @@ You can also access a *CSS* editor where you can add custom CSS code to the page
 
 ### Advanced Settings
 
-Here you can access additional settings to customize your individual page's content and features, including query strings, mobile device rules, custom fields, and embedded widgets.
+Here you can access additional settings to customize your page's content and features, including query strings, mobile device rules, custom fields, and embedded widgets.
 
 ```note::
    While Widget Pages include the Advanced tab here, Content Pages include these settings in the Edit sidebar menu under *Look and Feel*.
@@ -84,7 +84,7 @@ Here you can access additional settings to customize your individual page's cont
 
 **JavaScript**: Add JavaScript code to a page. Any added code is executed at the bottom of the page. You can also access this editor in a page set's *Configuration* page.
 
-![Add JavaScript code to a page using the provided editor](./configuring-individual-pages/images/10.png)
+![Add JavaScript code to a page using the provided editor.](./configuring-individual-pages/images/10.png)
 
 ```tip::
    If your Site's theme uses JavaScript, it’s best to add custom JavaScript code to the theme rather than an individual page or page set. This ensures your Site’s JavaScript code remains in one place. If your theme does not use JavaScript, place all of your Site's JavaScript code here.
@@ -132,7 +132,7 @@ Here you can define a page's description `<meta>` tag. This description is used 
 
 ### Custom Canonical URL
 
-Here you can set a custom URL that is used instead of the URL set in your *System* or *Instance* settings.
+Here you can set a custom URL to use instead of the URL set in your *System* or *Instance* settings.
 
 ![Set a custom URL that is used instead of the URL set in your System or Instance settings.](./configuring-individual-pages/images/15.png)
 
@@ -156,7 +156,7 @@ Here you can see a preview of your page in search engine results (SERP) based on
 
 ### Robots
 
-Here you can configure `robots.txt` rules for a page. These rules provide instructions to search engines and other tools that crawl and index your site, either blocking or granting a crawler access to a specified path.
+Here you can configure `robots.txt` rules for a page. These rules provide instructions to search engines and other tools that crawl and index your Site, either blocking or granting a crawler access to a specified path.
 
 ![Use the Robots field to configure robots.txt rules for a page.](./configuring-individual-pages/images/17.png)
 
@@ -168,7 +168,7 @@ Here you can exclude a page from your sitemap used by site crawlers. By excludin
 
 ### Page Priority
 
-Here you can set a page's priority from 0.0 to 1.0. This informs search engines and other tools how a page should be prioritized relative to other site pages.
+Here you can set a page's priority from 0.0 to 1.0. This informs search engines and other tools how a page should be prioritized relative to other pages.
 
 ![Set a page's priority from 0.0 to 1.0.](./configuring-individual-pages/images/19.png)
 
@@ -180,7 +180,7 @@ In the *Change Frequency* section, you can indicate how frequently a page is upd
 
 ## Open Graph
 
-[Open Graph](https://ogp.me/) is an Internet protocol that standardizes how a site's metadata appears in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta>` tags to define page metadata and create engaging representations of your site's content when shared online. See [Configuring Open Graph](./configuring-open-graph.md) for more information about the following settings.
+[Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta>` tags to define page metadata and create engaging representations of your content. See [Configuring Open Graph](./configuring-open-graph.md) for more information about the following settings.
 
 ```note::
    Page values defined via the Open Graph tab override values defined elsewhere in your Liferay instance.
