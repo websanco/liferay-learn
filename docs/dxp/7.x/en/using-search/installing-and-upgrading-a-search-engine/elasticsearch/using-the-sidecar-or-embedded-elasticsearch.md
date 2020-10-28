@@ -13,15 +13,15 @@ Here's example sidecar server output:
 {
   "name" : "liferay",
   "cluster_name" : "LiferayElasticsearchCluster",
-  "cluster_uuid" : "pb71L4whRS-PxTHgGdGM-Q",
+  "cluster_uuid" : "DGRDj1_DS7Km2Y_kaaNqxg",
   "version" : {
-    "number" : "7.3.0",
+    "number" : "7.9.0",
     "build_flavor" : "unknown",
     "build_type" : "unknown",
-    "build_hash" : "de777fa",
-    "build_date" : "2019-07-24T18:30:11.767338Z",
+    "build_hash" : "a479a2a7fce0389512d6a9361301708b92dff667",
+    "build_date" : "2020-08-11T21:36:48.204330Z",
     "build_snapshot" : false,
-    "lucene_version" : "8.1.0",
+    "lucene_version" : "8.6.0",
     "minimum_wire_compatibility_version" : "6.8.0",
     "minimum_index_compatibility_version" : "6.0.0-beta1"
   },
@@ -80,6 +80,8 @@ Here's a comparison between the embedded and sidecar Elasticsearch servers.
 
 | EMBEDDED           | SIDECAR           |
 | ------------------ | ----------------- |
+| Cannot configure a secure connection | Cannot configure a secure connection |
+| Uses the OSS version of Elasticsearch | Uses the OSS version of Elasticsearch |
 | Runs at <http://localhost:9200> | Runs at <http://localhost:9201> |
 | Pre-Installed on all Liferay distributions  | Not Always Pre-Installed  |
 | Not supported for production  | Not supported for production |

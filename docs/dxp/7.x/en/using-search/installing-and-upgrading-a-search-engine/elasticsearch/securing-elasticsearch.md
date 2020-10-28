@@ -5,7 +5,7 @@
 The very first thing you must do to secure Elasticsearch is [enable X-Pack Security](#enable-x-pack-security). After that you can begin configuring authentication and Transport Layer Security.
 
 ```note::
-   **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription to use X-Pack. Starting with the Liferay Connector to Elasticsearch 7 (available on `Liferay Marketplace <../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md>`_), X-Pack Security is included by default. X-Pack monitoring still requires LES.
+   **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription and the Liferay Enterprise Search Security application to use Elastic's X-Pack Security. Starting with the Liferay Connector to Elasticsearch 7 (available on `the Customer Downloads portal <https://customer.liferay.com/downloads>`_ and bundled in Liferay 7.3), support for Elastic's X-Pack security is included by default. To integrate with Elastic's X-Pack monitoring, LES is required.
 ```
 
 ### Enable X-Pack Security
@@ -20,7 +20,7 @@ Now you can set up X-Pack users.
 
 ### Set Up X-Pack Users
 
-In a system using X-Pack Security and X-Pack Monitoring, these [built-in X-Pack users](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/built-in-users.html) are important:
+In a system using X-Pack, these [built-in X-Pack users](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/built-in-users.html) are important:
 
 * `kibana`
 * `elastic`
@@ -39,7 +39,7 @@ On your Elasticsearch server, use the [`setup-passwords` command](https://www.el
   To update a built-in user's password, use Kibana's UI or the `Change Password API <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html>`_.
 ```
 
-### Enable Transport Layer Security
+### Encrypting Elasticsearch Communication
 
 Enabling Transport Layer Security (TLS) involves generating node certificates and keys and applying them to the Elasticsearch servers and Liferay servers.
 
@@ -146,14 +146,13 @@ The settings for Elasticsearch 6 are slightly different from those presented abo
     xpack.security.http.ssl.enabled: true
     ```
 
-After X-Pack is installed and TLS is enabled, configure the X-Pack Security adapter in Liferay (discussed below).
+After X-Pack is installed and encryption is enabled, configure the corresponding security settings in Liferay (discussed below).
 
 #### Example Elasticsearch Security Configuration
 
-Here is the complete Elasticsearch 7 configuration (`elasticsearch.yml`) with the Elasticsearch 6 configuration in comments:
+Here is the complete Elasticsearch 7 configuration (`elasticsearch.yml`; applies equally to Elasticsearch 6.x):
 
 ```yaml
-# For Elasticsearch 7.3/7.4
 cluster.name: LiferayElasticsearchCluster
 
 # X-Pack Security
@@ -175,38 +174,19 @@ xpack.security.http.ssl.verification_mode: certificate
 
 # Comment out when Kibana and Liferay's X-Pack Monitoring are also configured
 #xpack.monitoring.collection.enabled: true
-
-# For Elasticsearch 6.5/6.8
-#cluster.name: LiferayElasticsearchCluster
-#
-# X-Pack Security
-#xpack.security.enabled: true
-#
-# Enable TLS/SSL
-#xpack.security.transport.ssl.enabled: true # To enable Transport level SSL for internode-communication
-#xpack.security.http.ssl.enabled: true # To enable HTTP level SSL required by Kibana
-#
-## General TLS/SSL settings for both Transport and HTTP levels
-#xpack.ssl.verification_mode: certificate 
-#xpack.ssl.key: certs/localhost.key
-#xpack.ssl.certificate: certs/localhost.crt
-#xpack.ssl.certificate_authorities : [ "certs/ca.crt" ]
-#
-# Comment out when Kibana and Liferay's X-Pack Monitoring are also configured
-#xpack.monitoring.collection.enabled: true
 ```
 
-### Configure X-Pack Security on Liferay
+### Configure Liferay's Secure Connection to Elasticsearch
 
 The Elasticsearch connector bundled with Liferay 7.3 includes X-Pack Security support.
 
 ```note::
-   If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, `download <https://web.liferay.com/group/customer/dxp/downloads/enterprise-search>`_ the Liferay Connector to X-Pack Security [Elastic Stack 6.x]. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
+   If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, `download <https://web.liferay.com/group/customer/dxp/downloads/enterprise-search>`_ the Liferay Enterprise Search Security module. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
 ```
 
-On Liferay, X-Pack Security can be configured in the Control Panel or using a configuration file. Navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Find the *Search* category and click on the *X-Pack Security* entry. You can enter the property values here, but it's more common to use a configuration file deployed to `[Liferay Home]/osgi/configs`. Create a file called
+On Liferay, security can be configured in the Control Panel or using a configuration file. Navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Find the *Search* category and click on the *X-Pack Security* entry. You can enter the property values here, but it's more common to use a configuration file deployed to `[Liferay Home]/osgi/configs`. Create a file called
 
-```sh
+```bash
 com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
 ```
 
@@ -230,7 +210,7 @@ The certificate and key files referenced here are the same ones used on the Elas
 
 Enable authentication by setting `requiresAuthentication` to `true` and providing the credentials for the Elasticsearch user. For TLS, enable transport TLS, set the certificate verification mode and certificate format, and provide the path to the certificate, key, and certificate authority. Of course, the exact values depend on your X-Pack configuration. 
 
-Here's the complete list of configuration options for the X-Pack Connector:
+Here's the complete list of settings for the X-Pack Security configuration:
 
 * `sslKeyPath`
 * `sslCertificatePath`
@@ -246,11 +226,11 @@ Here's the complete list of configuration options for the X-Pack Connector:
 * `sslTruststorePath`
 * `sslTruststorePassword`
 
-When you're finished configuring X-Pack Security, restart Elasticsearch. These steps require a full Elasticsearch cluster restart.
+When you're finished configuring security, restart Elasticsearch. These steps require a full Elasticsearch cluster restart.
 
 ### Disable Elasticsearch Deprecation Logging
 
-Some Elasticsearch APIs used by Liferay's Elasticsearch 6 connector were deprecated as of Elasticsearch 6.6 and 6.7. This can result WARN log entries in Elasticsearch's deprecation log when Liferay is configured with Elasticsearch 6.8.x and X-Pack Security is enabled:
+Sometimes, Elasticsearch APIs used by Liferay's Elasticsearch connectors are deprecated. Even when there's no impact to the functionality required by Liferay, warning loge messages can result:
 
 ```
 [2019-07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
@@ -269,7 +249,6 @@ ode_name]SSL configuration [xpack.security.transport.ssl.] relies upon fallback 
 ```
 
 These warnings do not signal any functional issues, and can be disabled (see [Deprecation Logging](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/logging.html#deprecation-logging) to learn how).
-
 
 ## Securing Elasticsearch on Liferay DXP 7.3
 
