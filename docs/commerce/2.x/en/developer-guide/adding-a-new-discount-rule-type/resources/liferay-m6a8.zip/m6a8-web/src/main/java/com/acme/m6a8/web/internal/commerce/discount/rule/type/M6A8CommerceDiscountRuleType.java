@@ -18,14 +18,12 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-		"commerce.discount.rule.type.key=" + M6A8CommerceDiscountRuleType.KEY,
+		"commerce.discount.rule.type.key=m6a8",
 		"commerce.discount.rule.type.order:Integer=51"
 	},
 	service = CommerceDiscountRuleType.class
 )
 public class M6A8CommerceDiscountRuleType implements CommerceDiscountRuleType {
-
-	public static final String KEY = "Example";
 
 	@Override
 	public boolean evaluate(
@@ -56,7 +54,7 @@ public class M6A8CommerceDiscountRuleType implements CommerceDiscountRuleType {
 
 	@Override
 	public String getKey() {
-		return KEY;
+		return "m6a8";
 	}
 
 	@Override

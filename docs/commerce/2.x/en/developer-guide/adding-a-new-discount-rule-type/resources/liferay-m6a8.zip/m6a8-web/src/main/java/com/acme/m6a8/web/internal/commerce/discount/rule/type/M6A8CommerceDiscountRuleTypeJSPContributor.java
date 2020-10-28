@@ -12,13 +12,11 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	immediate = true,
-	property = "commerce.discount.rule.type.jsp.contributor.key=" + M6A8CommerceDiscountRuleTypeJSPContributor.KEY,
+	property = "commerce.discount.rule.type.jsp.contributor.key=m6a8",
 	service = CommerceDiscountRuleTypeJSPContributor.class
 )
 public class M6A8CommerceDiscountRuleTypeJSPContributor
 	implements CommerceDiscountRuleTypeJSPContributor {
-
-	public static final String KEY = "Example";
 
 	@Override
 	public void render(
