@@ -23,7 +23,8 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = CommerceDiscountRuleType.class
 )
-public class M6A8CommerceDiscountRuleType implements CommerceDiscountRuleType {
+public class M6A8CommerceDiscountRuleTypeImpl
+	implements CommerceDiscountRuleType {
 
 	@Override
 	public boolean evaluate(
