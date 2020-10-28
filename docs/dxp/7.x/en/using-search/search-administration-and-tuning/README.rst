@@ -7,8 +7,8 @@ Search Administration and Tuning
 Search Tuning
 ~~~~~~~~~~~~~
 
-- Defining Synonym Sets (Coming soon)
-- Ranking Results (Coming soon)
+-  :doc:`/using-search/search-administration-and-tuning/defining-synonym`
+-  :doc:`/using-search/search-administration-and-tuning/ranking-results`
 
 
 Troubleshooting Search
