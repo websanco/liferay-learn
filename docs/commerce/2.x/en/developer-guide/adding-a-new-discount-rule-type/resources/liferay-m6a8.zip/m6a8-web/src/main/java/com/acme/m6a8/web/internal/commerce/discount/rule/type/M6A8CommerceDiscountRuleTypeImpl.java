@@ -64,7 +64,7 @@ public class M6A8CommerceDiscountRuleTypeImpl
 			"content.Language", locale, getClass());
 
 		return LanguageUtil.get(
-			resourceBundle, "has-a-minimum-number-of-products");
+			resourceBundle, "has-a-minimum-number-of-items");
 	}
 
 }
