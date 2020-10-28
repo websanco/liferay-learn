@@ -14,7 +14,6 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"commerce.low.stock.activity.key=j1e4",
 		"commerce.low.stock.activity.priority:Integer=9"
