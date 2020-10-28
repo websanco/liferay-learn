@@ -15,7 +15,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = {
 		"commerce.checkout.step.name=" + N8N6CommerceCheckoutStep.NAME,
 		"commerce.checkout.step.order:Integer=21"
