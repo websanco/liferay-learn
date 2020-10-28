@@ -6,7 +6,7 @@ You'll use the default [Single Approver Definition](../workflow-designer-overvie
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
-Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Workflow Designer Node Reference](./workflow-designer-node-reference.md)).
+Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Task Node Reference](./task-node-reference.md)).
 
 Furthermore, task nodes also contain Notifications and Actions (defined in scripts). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
