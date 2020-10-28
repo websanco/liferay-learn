@@ -6,13 +6,13 @@ Each of the search facets are configurable, allowing you to change the look and 
 
 To add a Custom facet, follow these steps:
 
-1. Click on the Add icon (![Click on the add icon at the top of the page.](../../../images/icon-app-app.png)) at the top of the page.
+1. Click on the Add icon (![Click on the add icon at the top of the page.](../../../images/icon-add-app.png)) at the top of the page.
 
-1. Locate the Custom Facet and drag it to the collection of facets on the left. The Custom Facet is found under *Search* section of widgets.
+1. Locate the Custom Facet and drag it to the collection of facets on the left. The Custom Facet is found under the *Search* section of widgets.
 
     ![Find the custom facet under the search widgets.](custom-facet/images/01.png)
 
-1. Click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of facet and click *Configuration*.
+1. Click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
     ![Click on the Configuration option.](custom-facet/images/02.png)
 
@@ -36,7 +36,7 @@ To add a Custom facet, follow these steps:
 
 To use the Custom Facet, you must know which non-analyzed keyword field to specify. 
 
-To browse the entire list of available fields, inspect the field mappings from Control Panel &rarr; Configuration &rarr; Search. Alternatively, use your search engine's API. 
+To browse the entire list of available fields, inspect the field mappings from *Control Panel* &rarr; *Configuration* &rarr; *Search*. Alternatively, use your search engine's API. 
 
 For Elasticsearch, access the field mappings from your terminal using CURL to call the [Get Mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-get-mapping.html):
 

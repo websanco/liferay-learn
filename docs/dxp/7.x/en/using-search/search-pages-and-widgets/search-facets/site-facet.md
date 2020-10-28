@@ -24,8 +24,7 @@ To configure the search scope, follow these steps:
 
 ## Configuring the Site Facet
 
-The Site Facet contains several configuration options. 
-To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of facet and click *Configuration*.
+The Site Facet contains several configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](site-facet/images/04.png)
 

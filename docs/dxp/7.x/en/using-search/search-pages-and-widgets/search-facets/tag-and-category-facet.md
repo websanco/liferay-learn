@@ -8,7 +8,7 @@ The Tag Facet narrows search results for any assets with tags that match the sea
 
 ## Configuring the Tag Facet and the Category Facet
 
-The Tag Facet and the Category Facet contain identical configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of facet and click *Configuration*.
+The Tag Facet and the Category Facet contain identical configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](tag-and-category-facet/images/03.png)
 

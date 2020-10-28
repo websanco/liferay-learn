@@ -6,20 +6,20 @@ Enter a keyword in the Search Bar and click the Search button. The default searc
 
 A facet aggregates search results by a common characteristic. This makes it easier for users to filter through the search results. By default, Liferay DXP includes the following facets:
 
-* **Site Facet** for filtering results by their site.
-* **Type Facet** for filtering results by the Asset Type.
-* **Tag Facet** for filtering results by Tag.
-* **Category Facet** for filtering results by Category.
-* **Folder Facet** for filtering results by Folder.
-* **User Facet** for filtering results by the content creator.
-* **Modified Facet** for filtering results by the Last Modified Date.
-* **Custom Facet** for filtering results by some other indexed field. 
+* **Site Facet**: Filters results by their site.
+* **Type Facet**: Filters results by the Asset Type.
+* **Tag Facet**: Filters results by Tag.
+* **Category Facet**: Filters results by Category.
+* **Folder Facet**: Filters results by Folder.
+* **User Facet**: Filters results by the content creator.
+* **Modified Facet**: Filters results by the last modified date.
+* **Custom Facet**: Filters results by some other indexed field. 
 
 Each item in a facet (selected using the checkbox) is called a *Facet Term* (*term* for short).
 
 ## Using Facets
 
-To use facets, simply check the terms to filter your search results. For example, if you were searching for Apollo related documents, you can check a term in the Type facet.
+To use facets, simply check the terms to filter your search results. For example, if you were searching for documents related to Apollo, you can check a term in the Type facet.
 
 ![Apollo search results filtered by type.](facets/images/02.png)
 
