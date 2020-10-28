@@ -5,7 +5,7 @@ Verify that the following requirements are met before running A/B Testing on you
 - Liferay DXP is connected to Analytics Cloud. Fore information on how to set up this connection, see [Connect your Liferay DXP site to Analytics Cloud]((../../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)).
 
     ```note::
-       When setting up the connection to Analytics Cloud, you must select the Site with the content you want to test under the Liferay DXP *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings* &rarr; *Analytics Cloud* &rarr; *Analytics Cloud Connection*.
+       When setting up the connection to Analytics Cloud, you must select the Site with the content you want to test under the Liferay DXP *Control Panel* → *Configuration* → *Instance Settings* → *Analytics Cloud* → *Analytics Cloud Connection*.
     ```
 
     ![Selecting the Site in the Liferay DXP configuration for Analytics Cloud](verifying-ab-test-requirements/images/01.png)
