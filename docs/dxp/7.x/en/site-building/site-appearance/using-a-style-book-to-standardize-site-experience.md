@@ -2,7 +2,7 @@
 
 A Style Book is a set of visual rules that apply to a Site to provide a consistent experience across its pages. They determine various visual settings on the Site, including spacing between elements (such as widgets), colors, and fonts. Each of these settings applies equally to every page using the Style Book.
 
-Developers can also customize the categories with new options for configuring Style Books. See [Style Book Token Definitions](./developer-guide/style-book-token-definitions.md) for more information.
+The categories of settings available to the Style Books for your Site depends on which theme you assign to your Site's Public Pages. Developers can also customize the categories with new options for configuring Style Books. See [Style Book Token Definitions](./developer-guide/style-book-token-definitions.md) for more information.
 
 **Contents:**
 
@@ -12,7 +12,9 @@ Developers can also customize the categories with new options for configuring St
 
 ## Choosing a Style Book for a Page
 
-Follow these steps to change the Style Book in use for any page:
+If you do not choose a specific Style Book for a page, then the Style Book used for the page is the Style Book for the Master Page (or the default Style Book for the Site if neither are set).
+
+Follow these steps to set the specific Style Book in use for any page:
 
 1. Click the Edit icon (![Edit icon](../../images/icon-edit.png)) near the top of the page.
 

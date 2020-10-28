@@ -2,6 +2,8 @@
 
 Style Books gives options that are grouped into various categories that are defined per theme. Each of the options provided in each category is defined with a *token*. The collection of all tokens defined for a theme is the *token definition*.
 
+When you assign a theme to your Site's Public Pages, the token definition included with that theme is used when creating a Style Book for the Site.
+
 ## Defining Tokens for Your Style Book
 
 Since the token definition is tied to your theme, each of the token definitions must correspond to a CSS variable contained within your theme module. Specify the token definitions themselves in a `.json` file within your theme module's folder, named `frontend-token-definition.json`. 
