@@ -11,7 +11,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = "commerce.discount.rule.type.jsp.contributor.key=m6a8",
 	service = CommerceDiscountRuleTypeJSPContributor.class
 )
@@ -20,7 +19,8 @@ public class M6A8CommerceDiscountRuleTypeJSPContributor
 
 	@Override
 	public void render(
-			long l, long l1, HttpServletRequest httpServletRequest,
+			long commerceDiscountId, long commerceDiscountRuleId,
+			HttpServletRequest httpServletRequest,
 			HttpServletResponse httpServletResponse)
 		throws Exception {
 

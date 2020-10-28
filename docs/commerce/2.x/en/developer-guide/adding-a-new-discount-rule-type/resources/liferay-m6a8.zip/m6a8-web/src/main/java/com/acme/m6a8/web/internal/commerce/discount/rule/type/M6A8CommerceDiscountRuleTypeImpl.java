@@ -16,7 +16,6 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"commerce.discount.rule.type.key=m6a8",
 		"commerce.discount.rule.type.order:Integer=51"
