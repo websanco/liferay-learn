@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-		"commerce.low.stock.activity.key=J1E4",
+		"commerce.low.stock.activity.key=j1e4",
 		"commerce.low.stock.activity.priority:Integer=9"
 	},
 	service = CommerceLowStockActivity.class
@@ -32,7 +32,7 @@ public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 
 	@Override
 	public String getKey() {
-		return "J1E4";
+		return "j1e4";
 	}
 
 	@Override
