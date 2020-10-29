@@ -4,7 +4,7 @@
 
 Here you can walk through an example setup on your local machine to see how the [Rest Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) connection between Elasticsearch and Liferay DXP 7.3 is configured. The example uses two Docker containers: one Elasticsearch container and one Liferay DXP container. For more conceptual and production-like information see [Installing Elasticsearch](./getting-started-with-elasticsearch.md).
 
-Subsequent exercises secure the connection and configure monitoring (Liferay Enterprise Search only).
+Read [Securing Elasticsearch](./securing-elasticsearch.md) to enable authentication and encryption on the Elasticsearch connection.
 
 ## Create Local Folders for Bind Mounting to the Docker Containers
 
