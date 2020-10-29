@@ -10,7 +10,7 @@ Now that the page is created, it appears in the hierarchy, and you can move or o
 
 ## Organizing Pages
 
-Drag and drop pages to reorder their position in the page hierarchy (and subsequently the default navigation that users see) or to nest them as sub-pages. The page at the top of the list is the first page that users see automatically when visiting your Site. You can treat this as the site's landing page.
+You can drag and drop one more Pages to reorder their position in the page hierarchy (and subsequently the default navigation that users see) or to nest them as sub-pages. The page at the top of the list is the first page that users see automatically when visiting your Site. You can treat this as the site's landing page.
 
 ### Reordering Pages
 
