@@ -92,11 +92,11 @@ See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for m
 
 ## Contents
 
-The *Contents* panel provides a list of the web content on the page. This includes content displayed in a widget and content mapped to content fields. Click the *Contents* button (![Contents](../../../images/icon-list-ul.png)) to open the *Contents* panel. From this panel, you can perform a variety of actions to edit and manage web content. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
+The Contents panel provides a list of the web content on the page. This includes content displayed in a widget and content mapped to content fields. Click the *Contents* button (![Contents](../../../images/icon-list-ul.png)) to open the Contents panel. From this panel, you can perform a variety of actions to edit and manage web content. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
 
 ## Page Structure
 
-*Page Structure* provides a hierarchical view of the Fragments and their content on the page. Choose a field in the page structure to highlight it on the page. Headers and Footers appear in the hierarchy as well for custom [Master Page Templates](../defining-headers-and-footers/master-page-templates.md), but they're disabled because they can only be modified from the Master Page Template.
+Page Structure provides a hierarchical view of the Fragments and their content on the page. Choose a field in the page structure to highlight it on the page. Headers and Footers appear in the hierarchy as well for custom [Master Page Templates](../defining-headers-and-footers/master-page-templates.md), but they're disabled because they can only be modified from the Master Page Template.
 
 ![Page Structure shows you a hierarchy of your page and contents.](./content-pages-overview/images/08.png)
 
@@ -106,13 +106,13 @@ Click the *Look and Feel* icon (![Look and Feel](../../../images/icon-format.png
 
 ## Comments
 
-Use Page Fragment *comments* to collaborate with team members while developing your Content Page. To make a comment, begin editing a Content Page and click on the Page Fragment you want to annotate. Then click on the *Comment* icon (![Comment icon](../../../images/icon-comments-w.png)) for the Fragment. You can view and respond to open fragment comments via the *Comments* panel in the Content Page sidebar.
+Use Page Fragment comments to collaborate with team members while developing your Content Page. To make a comment, begin editing a Content Page and click on the Page Fragment you want to annotate. Then click the *Comment* icon (![Comment icon](../../../images/icon-comments-w.png)) for the Fragment. You can view and respond to open fragment comments via the Comments panel in the Content Page sidebar.
 
 If comment mentions are enabled, you can mention Users with Page update permissions as part of your comment. See [Mentioning Users](./../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) for more information.
 
 ## Liferay DXP 7.1 and 7.2
 
-Unlike Widget Pages, Content Pages can only be edited through the *Site Builder* and cannot be edited live on the page. Any edits that you make to a page are saved as a draft until you publish the page. Subsequent changes after the initial publication are again saved as a draft, without affecting the live page, until the page is published again.
+Unlike Widget Pages, Content Pages can only be edited through the Site Builder and cannot be edited live on the page. Any edits that you make to a page are saved as a draft until you publish the page. Subsequent changes after the initial publication are again saved as a draft without affecting the live page, until the page is published again.
 
 ### Creating Content Pages
 
