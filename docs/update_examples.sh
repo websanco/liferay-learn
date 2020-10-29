@@ -14,7 +14,7 @@ function copy_template {
 	do
 		cp -fr _template/* ${zip_dir_name}
 
-		local liferay_workspace_product=portal-7.3-ga6
+		local liferay_workspace_product=dxp-7.3-ga1
 
 		echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
 
