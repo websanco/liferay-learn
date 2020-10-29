@@ -2,13 +2,13 @@
 
 Users can allow guests to submit orders without first having to sign in. The Guest Checkout function can be enabled or disabled for each [Channel](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md). See [Enabling Guest Checkout](./enabling-guest-checkout.md) to learn more. Otherwise, by default, all users must login to create orders.
 
-Once Guest Checkout has been enabled, in order for their orders to be processed, guests must enter their email address during the checkout process. The email address field is now visible when entering the initial contact information.
+Once Guest Checkout has been enabled, in order for their orders to be processed, guests must enter their email address during the checkout process. (Normally, the email address field does not appear when an authenticated user goes through the checkout process.)
 
 ![Guest must enter their email address to proceed.](./guest-checkout-overview/images/01.png)
 
-Guests are then redirected to log in or create an account.
+After providing their email, Guests are then redirected to log in or create an account.
 
-![Guest must enter their email address to proceed.](./guest-checkout-overview/images/03.png)
+![Guests must either log in or create an account t proceed.](./guest-checkout-overview/images/03.png)
 
 ## Guest Checkout Process
 
@@ -16,7 +16,7 @@ If a guest user adds items to the cart then later signs in before completing the
 
 ## Processing a Guest Order
 
-When a Guest submits an order, it is processed the same as any other order. See [Processing an Order](../orders-and-fulfillment/orders/processing-an-order.md) for more information.
+When a Guest submits an order, it is processed the same as any other order. See [Processing an Order](../../orders-and-fulfillment/orders/processing-an-order.md) for more information.
 
 ```tip::
    Guests do not share order histories with other authenticated users, even if they have the same email addresses.
