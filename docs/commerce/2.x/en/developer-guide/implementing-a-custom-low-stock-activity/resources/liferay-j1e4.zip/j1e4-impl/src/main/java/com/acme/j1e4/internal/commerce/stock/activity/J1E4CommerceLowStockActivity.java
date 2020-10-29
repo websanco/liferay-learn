@@ -25,7 +25,7 @@ public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 	@Override
 	public void execute(CPInstance cpInstance) throws PortalException {
 		if (_log.isWarnEnabled()) {
-			_log.warn("Low stock for SKU " + cpInstance.getSku());
+			_log.warn("SKU " + cpInstance.getSku());
 		}
 	}
 
@@ -39,7 +39,8 @@ public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "log-a-warning-message");
+		return LanguageUtil.get(
+			resourceBundle, "j1e4-commerce-low-stock-activity");
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
