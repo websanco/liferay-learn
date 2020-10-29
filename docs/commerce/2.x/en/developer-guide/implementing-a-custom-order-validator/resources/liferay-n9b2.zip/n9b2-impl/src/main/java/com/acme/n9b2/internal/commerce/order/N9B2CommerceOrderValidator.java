@@ -17,20 +17,17 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
-		"commerce.order.validator.key=" + N9B2CommerceOrderValidator.KEY,
+		"commerce.order.validator.key=n9b2",
 		"commerce.order.validator.priority:Integer=9"
 	},
 	service = CommerceOrderValidator.class
 )
 public class N9B2CommerceOrderValidator implements CommerceOrderValidator {
 
-	public static final String KEY = "Example";
-
 	@Override
 	public String getKey() {
-		return KEY;
+		return "n9b2";
 	}
 
 	@Override
@@ -45,14 +42,18 @@ public class N9B2CommerceOrderValidator implements CommerceOrderValidator {
 
 		BigDecimal price = cpInstance.getPrice();
 
-		if ((price.doubleValue() > 100.0) && (quantity > 10)) {
+		if ((price.doubleValue() > _MAX_ITEM_PRICE) &&
+			(quantity > _MAX_ITEM_QUANTITY)) {
+
 			ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 				"content.Language", locale, getClass());
 
 			return new CommerceOrderValidatorResult(
 				false,
-				LanguageUtil.get(
-					resourceBundle, "this-item-has-a-maximum-quantity-of-10"));
+				LanguageUtil.format(
+					resourceBundle,
+					"this-expensive-item-has-a-maximum-quantity-of-x",
+					Integer.valueOf(_MAX_ITEM_QUANTITY)));
 		}
 
 		return new CommerceOrderValidatorResult(true);
@@ -65,20 +66,25 @@ public class N9B2CommerceOrderValidator implements CommerceOrderValidator {
 
 		BigDecimal price = commerceOrderItem.getUnitPrice();
 
-		if ((price.doubleValue() > 100.0) &&
-			(commerceOrderItem.getQuantity() > 10)) {
+		if ((price.doubleValue() > _MAX_ITEM_PRICE) &&
+			(commerceOrderItem.getQuantity() > _MAX_ITEM_QUANTITY)) {
 
 			ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 				"content.Language", locale, getClass());
 
 			return new CommerceOrderValidatorResult(
 				false,
-				LanguageUtil.get(
+				LanguageUtil.format(
 					resourceBundle,
-					"expensive-items-have-a-maximum-quantity-of-10"));
+					"expensive-items-have-a-maximum-order-quantity-of-x",
+					Integer.valueOf(_MAX_ITEM_QUANTITY)));
 		}
 
 		return new CommerceOrderValidatorResult(true);
 	}
+
+	private static final double _MAX_ITEM_PRICE = 100.0;
+
+	private static final int _MAX_ITEM_QUANTITY = 10;
 
 }
