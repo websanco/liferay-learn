@@ -6,9 +6,9 @@ Adding Fragment Styles often enhances the look and feel of each Page Fragment. Y
    Many of the styles correspond to CSS classes. If you know CSS, many of the fields will be familiar.
 ```
 
-To configure a _Fragment_'s style:
+To configure a Fragment's style:
 
-1. Navigate to the site where the content is published.
+1. Navigate to the Site where the content is published.
 1. Click _Edit_ on the Content page that supports fragments.
 1. Select the desired fragment (for example, a _Container Fragment_ or _HTML_).
 1. Click the _Selection_ (![Selection icon](../../../images/icon-page-tree.png)) icon.
