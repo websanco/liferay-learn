@@ -23,13 +23,17 @@ Guest customers can now add items to the cart and proceed to checkout without lo
 
 ## Adding the Continuing as Guest Option
 
-To enhance the Guest Checkout option, you can create a separate authentication page where guest customers have several options.
+To allow customers to continue their checkout process as a Guest user, you can create a separate authentication page where guest customers have several checkout options.
 
-* They can sign in if they have an account.
-* They can create a new account.
+* They can sign in if they have an account. They can view all their account information, including past orders.
+* They can create a new account if they are a new customer.
 * They can continue as a Guest, entering only the data necessary to complete the transaction. They can register later or log in now to make future orders more easily.
 
 ![Customers have a choice of signing in or continuing as Guest.](./enabling-guest-checkout/images/05.png)
+
+```tip::
+   The site page above was generated using the Speedwell accelerator. You can use other accelerators such as Minium to generate these pages and customize them later.
+```
 
 Follow the steps below to generate this authentication page:
 
@@ -41,7 +45,13 @@ Follow the steps below to generate this authentication page:
 1. Click on the desired channel (for example _Everest Portal_).
 1. On the General tab's Health Checks section, click _Fix Issue_ next to Guest Checkout Authentication. This creates a new authentication page with an option to sign in as Guest.
 
-Click Save again when finished.
+    ![Access Commerce settings in the Global Commerce menu.](./enabling-guest-checkout/images/02.png)
+
+1. Click Save again when finished.
+
+```note::
+   The new page inherits whatever default theme the site is using. For more information about how to configure pages themes and templates, see `Managing Master Page Templates <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/defining-headers-and-footers/managing-master-pages.html>`_ and `Look and Feel <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.html#look-and-feel>`_.
+```
 
 ## Commerce 2.1 and Below
 
