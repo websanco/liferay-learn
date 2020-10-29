@@ -10,7 +10,7 @@ If you're using Liferay DXP, [apply your activation key](./activating-liferay-dx
 
 ## Localize Your Instance 
 
-Configure your Liferay instance's your locale and time zone, using the [Setup Wizard](../installing-liferay/running-liferay-for-the-first-time.md) or the Control Panel. See [Initial Instance Localization](./initial-instance-localization.md) for details.
+Configure your Liferay instance's locale and time zone, using the [Setup Wizard](../installing-liferay/running-liferay-for-the-first-time.md) or the Control Panel. See [Initial Instance Localization](./initial-instance-localization.md) for details.
 
 ## Configure Mail
 
@@ -36,8 +36,8 @@ You'll want eliminate or minimize any site downtime. If a server fails or needs 
 
 Here are some additional features to consider setting up:
 
-* [User roles and permissions](../../users-and-permissions/users/understanding-users.md).
-* [External Services](../../system-administration/using-the-server-administration-panel/configuring-external-services.md) to generate previews for images, audio files, and video files.
+* [Roles and permissions](../../users-and-permissions/users/understanding-users.md)
+* [External Services](../../system-administration/using-the-server-administration-panel/configuring-external-services.md) to generate previews for images, audio files, and video files
 * CDN
 
 You may also need to import data from systems such as [LDAP](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md). Search this site for other systems you'd like to integrate.
