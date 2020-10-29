@@ -7,6 +7,7 @@ import com.liferay.commerce.model.CommerceOrder;
 import com.liferay.commerce.model.CommerceOrderItem;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
 import java.util.List;
@@ -37,15 +38,14 @@ public class M6A8CommerceDiscountRuleTypeImpl
 			return false;
 		}
 
-		String settingsProperty = commerceDiscountRule.getSettingsProperty(
-			commerceDiscountRule.getType());
-
-		int minimumProducts = Integer.valueOf(settingsProperty);
-
 		List<CommerceOrderItem> commerceOrderItems =
 			commerceOrder.getCommerceOrderItems();
 
-		if (commerceOrderItems.size() >= minimumProducts) {
+		int mininumNumberOfItems = GetterUtil.getInteger(
+			commerceDiscountRule.getSettingsProperty(
+				commerceDiscountRule.getType()));
+
+		if (commerceOrderItems.size() >= mininumNumberOfItems) {
 			return true;
 		}
 
