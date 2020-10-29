@@ -1,9 +1,9 @@
 <h1>Terms and Conditions</h1>
 
-<div class="journal-article-preview p-3">
+<p>
 	By clicking "Continue", you agree to the Terms and Conditions for each product in the order.
-</div>
+</p>
 
-<div class="journal-article-preview p-3">
+<p>
 	(Placeholder Terms and Conditions)
-</div>
+</p>

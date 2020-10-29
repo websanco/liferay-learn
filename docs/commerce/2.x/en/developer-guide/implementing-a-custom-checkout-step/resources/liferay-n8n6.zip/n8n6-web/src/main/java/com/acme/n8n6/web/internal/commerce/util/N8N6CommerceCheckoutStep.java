@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"commerce.checkout.step.name=N8N6",
+		"commerce.checkout.step.name=n8n6",
 		"commerce.checkout.step.order:Integer=21"
 	},
 	service = CommerceCheckoutStep.class
@@ -25,7 +25,7 @@ public class N8N6CommerceCheckoutStep extends BaseCommerceCheckoutStep {
 
 	@Override
 	public String getName() {
-		return "n8n6-checkout-step";
+		return "n8n6-commerce-checkout-step";
 	}
 
 	@Override
