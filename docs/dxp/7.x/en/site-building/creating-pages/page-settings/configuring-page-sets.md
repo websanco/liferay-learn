@@ -1,6 +1,6 @@
 # Configuring Page Sets
 
-Page Sets are a grouping of pages in a Site; these pages can be either Public or Private pages. Users can configure Page Set settings which apply to all its pages and thus override options at the Site level. However, [customizations to an individual page](./page-configuration-ui-reference.md) override those for the Page Set.
+[Page Sets](../understanding-pages/understanding-pages.md#page-sets) are a grouping of pages in a Site; these pages can be either Public or Private pages. Settings configured for a Page Set apply to all pages in the page set and override options at the site level. [Customizations to individual pages](./page-configuration-ui-reference.md) override those for the page set.
 
 To access the Page Sets' settings,
 
@@ -39,9 +39,9 @@ By default, the Liferay logo is used for your Site's pages. To use your own logo
 1. Browse to the location of your logo. Make sure your logo fits the space in the top left corner of the Theme you're using for your Site. If you don't, your other page elements are pushed aside to make way for the logo.
 1. Choose whether to display the Site name on the Site. When _Show Site Name_ is enabled, the Site name appears next to the logo.
 
-  ```note::
-    This option is enabled by default and can't be disabled if the *Allow Site Administrators to set their own logo* option is disabled in *Instance Settings*. Removing the Site name is not available for the default Liferay Site---you can configure this only for new Sites and User pages.
-  ```
+    ```note::
+      This option is enabled by default and can't be disabled if the *Allow Site Administrators to set their own logo* option is disabled in *Instance Settings*. Removing the Site name is not available for the default Liferay Site---you can configure this only for new Sites and User pages.
+    ```
 
 1. Click *Save* to apply the changes.
 
@@ -49,7 +49,7 @@ The Site's logo settings are now configured.
 
 ## Configuring the Page Set's Advanced Settings
 
-The _Advanced_ tab contains several options that could be impact the Site and overall performance. Administrators should proceed with caution.
+The _Advanced_ tab contains several options that can impact the Site and overall performance. Administrators should proceed with caution.
 
 ![The Advanced tab contains multiple options that enhances your Site.](./configuring-page-sets/images/03.png)
 
@@ -63,7 +63,7 @@ If you have multiple Sites, one Site is marked as the _Default Site_ that visito
 
 You can display another Site's Public Pages in the default Site's navigation by enabling the _Merge public pages_ option for that Site.
 
-```tip::
+```warning::
    Adding too many pages to the main navigation can make it become unwieldy very quickly.
 ```
 
