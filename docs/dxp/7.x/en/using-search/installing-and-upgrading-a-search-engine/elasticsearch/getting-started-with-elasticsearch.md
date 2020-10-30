@@ -7,11 +7,13 @@ A typical Liferay system's search infrastructure comprises
 
 * Liferay servers in a clustered or single node (on-premises or Docker containers)
 * Elasticsearch server(s) (on-premises or Docker containers)
-* An Elasticsearch connector application deployed onto Liferay and configured to fit your deployment.
+* An Elasticsearch connector application deployed* onto Liferay and configured to fit your deployment.
 
 ```tip::
    Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
 ```
+
+> Note: Each Liferay CE and DXP version is bundled with a _connector_ to Elasticsearch that is compatible with a specific Elasticsearch major version. To add support for newer major Elasticsearch versions for released Liferay Portal and DXP versions, Liferay can release additional connectors through Marketplace which can be used as drop-in replacements for the out-of-the-box (bundled) connectors. If you are using the bundled connector, you do not need to deploy it separately.
 
 Assuming your Liferay servers are in place already, the remaining steps include
 
@@ -23,7 +25,7 @@ Assuming your Liferay servers are in place already, the remaining steps include
 
 ## Finding Compatible Elasticsearch and Connector Versions 
 
-The [compatibility matrix](https://www.liferay.com/documents/10182/246659966/Liferay+DXP+7.3+Compatibility+Matrix.pdf) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
+The [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
 
 ```warning::
    The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on `Liferay Marketplace <https://web.liferay.com/marketplace>`_.
