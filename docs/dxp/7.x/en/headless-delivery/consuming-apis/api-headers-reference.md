@@ -79,3 +79,18 @@ Identifies the User making the request, using DXP's Authentication framework. (S
 ```
 curl --header 'Cookie: JSESSIONID=6349351B37C3EE1F6BA4E128107E9A34' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
+
+## `X-Accept-All-Languages`
+
+Indicates that the server should return the requested content in all available languages. (See also [`Accept-Language`](#accept-language).)
+
+### Valid Options
+
+* `true`
+* `false`
+
+### Example
+
+```
+curl --header 'X-Accept-All-Languages: true' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
