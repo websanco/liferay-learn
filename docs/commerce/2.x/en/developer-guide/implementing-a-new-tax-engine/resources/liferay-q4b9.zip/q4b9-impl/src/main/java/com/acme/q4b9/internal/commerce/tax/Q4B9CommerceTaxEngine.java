@@ -15,29 +15,26 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
-	property = "commerce.tax.engine.key=" + Q4B9CommerceTaxEngine.KEY,
-	service = CommerceTaxEngine.class
+	property = "commerce.tax.engine.key=q4b9", service = CommerceTaxEngine.class
 )
 public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
-
-	public static final String KEY = "Example";
 
 	@Override
 	public CommerceTaxValue getCommerceTaxValue(
 			CommerceTaxCalculateRequest commerceTaxCalculateRequest)
 		throws CommerceTaxEngineException {
 
-		BigDecimal flatTaxValue = new BigDecimal("1.50");
+		BigDecimal flatTaxValue = _ONE_POINT_FIVE_ZERO;
 
 		if (commerceTaxCalculateRequest.isPercentage()) {
-			flatTaxValue = flatTaxValue.divide(new BigDecimal(100.0));
+			flatTaxValue = _ONE_POINT_FIVE_ZERO.divide(new BigDecimal(100.0));
 
 			flatTaxValue = flatTaxValue.multiply(
 				commerceTaxCalculateRequest.getPrice());
 		}
 
-		return new CommerceTaxValue("flat-tax", KEY, flatTaxValue);
+		return new CommerceTaxValue(
+			"q4b9", "q4b9-commerce-tax-engine", flatTaxValue);
 	}
 
 	@Override
@@ -45,8 +42,8 @@ public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(
-			resourceBundle, "a-flat-tax-rate-that-does-not-adjust");
+		return LanguageUtil.format(
+			resourceBundle, "x-percent-flat-tax-rate", _ONE_POINT_FIVE_ZERO);
 	}
 
 	@Override
@@ -54,7 +51,10 @@ public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "flat-tax");
+		return LanguageUtil.get(resourceBundle, "q4b9-commerce-tax-engine");
 	}
+
+	private static final BigDecimal _ONE_POINT_FIVE_ZERO = new BigDecimal(
+		"1.50");
 
 }
