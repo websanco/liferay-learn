@@ -182,7 +182,7 @@ mail.session.jndi.name=mail/DevMailSession
 
 ## Using System Settings and Configuration Files
 
-Some properties can be set using [System Settings](../../system-administration/system-settings/system-settings.md) and [Configuration Files](../../system-administration/system-settings/using-configuration-files.md). The SAML authentication properties, for example, are properties available in System Settings.
+Some properties can be set using [System Settings](../../system-administration/configuring-liferay/system-settings.md) and [Configuration Files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md). The SAML authentication properties, for example, are properties available in System Settings.
 
 Properties stored in the DXP database are prioritized over properties set in Portal Properties files.
 
@@ -192,6 +192,6 @@ Go to *Control Panel* at *Configuration* &rarr; *System Settings* to find System
 
 * [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)
 
-* [System Settings](../../system-administration/system-settings/system-settings.md)
+* [System Settings](../../system-administration/configuring-liferay/system-settings.md)
 
-* [Understanding Configuration Files](../../system-administration/system-settings/using-configuration-files.md)
+* [Understanding Configuration Files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)

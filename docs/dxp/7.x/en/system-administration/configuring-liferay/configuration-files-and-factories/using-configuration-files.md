@@ -1,6 +1,6 @@
 # Using Configuration Files
 
-[System Settings](./system-settings.md) provides a user interface for making system-scoped configuration changes and setting default configurations for other [scopes](./understanding-configuration-scope.md). The same configurations in the UI can be made via configuration file.
+[System Settings](../system-settings.md) provides a user interface for making system-scoped configuration changes and setting default configurations for other [scopes](./understanding-configuration-scope.md). The same configurations in the UI can be made via configuration file.
 
 You can use configuration files to transfer configurations from pre-production systems to production systems or between any other Liferay DXP systems, as long as the version is identical.
 
@@ -12,7 +12,7 @@ Configuration files use the `.config` property value format defined by the [Apac
 
 ## Creating Configuration Files
 
-System Settings provides an [*Export*](./system-settings.md#exporting-and-deploying-configurations) option that becomes available once you modify a configuration entry. Exporting is the best way to create `.config` files: you download a `.config` file containing the entry's settings in a `key=value` format, then modify or distribute as you have need. All available configuration keys and values are exported, even if only one value was changed.
+System Settings provides an [*Export*](../system-settings.md#exporting-and-deploying-configurations) option that becomes available once you modify a configuration entry. Exporting is the best way to create `.config` files: you download a `.config` file containing the entry's settings in a `key=value` format, then modify or distribute as you have need. All available configuration keys and values are exported, even if only one value was changed.
 
 You can export a single configuration entry or the entire set of modified configurations.
 

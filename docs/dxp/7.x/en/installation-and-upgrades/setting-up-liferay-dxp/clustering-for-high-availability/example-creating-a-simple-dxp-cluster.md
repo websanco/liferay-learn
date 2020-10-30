@@ -105,7 +105,7 @@ Your search engine is ready to manage search indexes.
 
 ## Configure the Search Engine Server For Each Node
 
-Use [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) to configure Elasticsearch for each DXP node:
+Use [Configuration Files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) to configure Elasticsearch for each DXP node:
 
 1. Create the Configuration Files locations.
 

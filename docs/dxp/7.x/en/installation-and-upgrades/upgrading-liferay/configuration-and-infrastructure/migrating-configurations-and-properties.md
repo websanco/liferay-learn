@@ -107,7 +107,7 @@ We have not found a new property for the following old properties (check if you 
 
 ### Converting Properties to OSGi Configurations
 
-Properties in modularized features have changed and are now deployed in [OSGi configuration files](../../../system-administration/system-settings/using-configuration-files.md) (OSGi Config Admin).
+Properties in modularized features have changed and are now deployed in [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) (OSGi Config Admin).
 
 For example, in 6.2, the Simple File Store used this portal property to specify the store root directory:
 
@@ -124,7 +124,7 @@ rootDir="{document_library_path}"
 Put the `.config` files in a folder called `[Liferay Home]/osgi/configs`.
 
 ```tip::
-   The Control Panel's *System Settings* screens (under *Configuration*) manage the OSGi Config Admin values. These screens are the most accurate way to create ``.config`` files. Find the screen that configures the feature you want to configure, click *Save*, and then use the options button to `export the screen's configuration <../../../system-administration/system-settings/using-configuration-files.md>`_ to a ``.config`` file.
+   The Control Panel's *System Settings* screens (under *Configuration*) manage the OSGi Config Admin values. These screens are the most accurate way to create ``.config`` files. Find the screen that configures the feature you want to configure, click *Save*, and then use the options button to `export the screen's configuration <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ to a ``.config`` file.
 ```
 
 ### Special Property Migration Considerations

@@ -228,13 +228,13 @@ The properties are visible in the Control Panel at _Configuration_ &rarr; _Serve
 
 ## System Settings
 
-Liferay System Settings can be configured in the [Control Panel](../../../system-administration/system-settings/system-settings.md) or by providing [Configuration Files](../../../system-administration/system-settings/using-configuration-files.md) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
+Liferay System Settings can be configured in the [Control Panel](../../../system-administration/configuring-liferay/system-settings.md) or by providing [Configuration Files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) (`.config` files) to the container. You can create a `.config` file from scratch or by exporting the component configuration values from the UI.
 
 Modify the System Settings using one of these ways:
 
 * [Applying Configurations to a New Container](#applying-configurations-to-a-new-container)
 * [Applying Configuration Files at Run Time](#applying-configuration-files-at-run-time)
-* [Using the Control Panel](../../../system-administration/system-settings/system-settings.md)
+* [Using the Control Panel](../../../system-administration/configuring-liferay/system-settings.md)
 
 ### Applying Configurations to a New Container
 

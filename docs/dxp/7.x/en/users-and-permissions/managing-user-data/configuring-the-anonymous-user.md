@@ -26,7 +26,7 @@ There can only be one Anonymous User configured for each instance.
 
 ## Using a Configuration File
 
-As with all System Settings and Instance Settings, a `.config` [file](../../system-administration/system-settings/using-configuration-files.md) can be deployed to `[Liferay Home]/osgi/configs/` as an alternative to working in the Control Panel UI. To do this you'll leverage [Factory Configuration](../../system-administration/system-settings/using-factory-configuration.md) files. Create an Anonymous User for each Virtual Instance using files following the pattern
+As with all System Settings and Instance Settings, a `.config` [file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) can be deployed to `[Liferay Home]/osgi/configs/` as an alternative to working in the Control Panel UI. To do this you'll leverage [Factory Configuration](../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md) files. Create an Anonymous User for each Virtual Instance using files following the pattern
 
 ```bash
 com.liferay.user.associated.data.web.internal.configuration.AnonymousUserConfiguration.scoped-[uniqueId].config

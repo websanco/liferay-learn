@@ -1,6 +1,6 @@
 # Configuring the Liferay DXP Service
 
-There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/7.x/en/system-administration/system-settings/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
+There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/7.x/en/system-administration/configuring-liferay/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/7.x/en/system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
 
 ```
 liferay

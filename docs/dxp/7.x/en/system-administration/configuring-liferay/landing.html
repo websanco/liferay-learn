@@ -1,0 +1,88 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Understanding Configuration Scope',
+					sectionURL: 'configuring-liferay/understanding-configuration-scope.html',
+				},
+				{
+					sectionName: 'System Settings',
+					sectionURL: 'configuring-liferay/system-settings.html',
+				},
+				{
+					sectionName: 'Configuration Files and Factories',
+					sectionURL: 'configuring-liferay/configuration_files_and_factories.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using Configuration Files',
+							url: 'configuring-liferay/configuration-files-and-factories/using-configuration-files.html'
+						},
+						{
+							name: 'Using Factory Configuration',
+							url: 'configuring-liferay/configuration-files-and-factories/using-factory-configuration.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Virtual Instances',
+					sectionURL: 'configuring-liferay/virtual_instances.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Understanding Virtual Instances',
+							url: 'configuring-liferay/virtual-instances/understanding-virtual-instances.html'
+						},
+						{
+							name: 'Adding a Virtual Instance',
+							url: 'configuring-liferay/virtual-instances/adding-a-virtual-instance.html'
+						},
+						{
+							name: 'Instance Configuration',
+							url: 'configuring-liferay/virtual-instances/instance-configuration.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Security Settings (Coming Soon)',
+					sectionURL: 'configuring-liferay/security_settings.html',
+				},
+				{
+					sectionName: 'Common Tasks',
+					sectionURL: 'configuring-liferay/common-tasks.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Enabling OpenOffice/LibreOffice',
+							url: '../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.html'
+						},
+						{
+							name: 'Configuring Mail',
+							url: '../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.html'
+						},
+						{
+							name: 'Managing Email Notification Templates',
+							url: 'configuring-liferay/virtual-instances/email-settings.html'
+						},
+						{
+							name: 'Setting a Terms of Use',
+							url: 'configuring-liferay/virtual-instances/instance-configuration.html#terms-of-use'
+						},
+						{
+							name: 'Managing User Authentication',
+							url: '../installation-and-upgrades/securing-liferay/authentication-basics.html'
+						},
+						{
+							name: 'Configuring Default User Associations',
+							url: 'configuring-liferay/virtual-instances/users.html#default-user-associations'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

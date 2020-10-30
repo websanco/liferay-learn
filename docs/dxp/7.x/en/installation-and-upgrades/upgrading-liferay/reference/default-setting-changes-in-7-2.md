@@ -142,7 +142,7 @@ Here are some properties that have changed since version 6.2:
 | Ratings Tag Library | see [value](https://docs.liferay.com/ce/portal/6.2-sp17/propertiesdoc/portal.properties.html) | see [value](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) |
 
 
-The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) provides property details and examples. Many properties are now replaced by OSGi configurations, which are accessible through the UI in [System Settings](../../../system-administration/system-settings/system-settings.md).
+The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) provides property details and examples. Many properties are now replaced by OSGi configurations, which are accessible through the UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md).
 
 ## Additional Information
 

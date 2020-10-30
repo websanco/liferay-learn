@@ -15,5 +15,13 @@ Virtual Instances
    virtual-instances/infrastructure.md
    virtual-instances/third-party.md
 
-.. include:: /system-administration/virtual-instances/README.rst
-   :start-line: 2
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/adding-a-virtual-instance`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/instance-configuration`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/users`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/user-authentication`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/email-settings`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/analytics`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/localization`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/infrastructure`
+-  :doc:`/system-administration/configuring-liferay/virtual-instances/third-party`
