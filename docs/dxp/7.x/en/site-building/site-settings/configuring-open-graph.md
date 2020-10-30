@@ -50,4 +50,4 @@ When finished, click on *Save* to apply your changes.
 
 * [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
 * [Site Settings UI Reference](./site-settings-ui-reference.md)
-* [Page Configuration UI Reference](./../creating-pages/page-settings/page-configuration-ui-reference.md)
+* [Page Configuration UI Reference](./../creating-pages/page-settings/configuring-individual-pages.md)

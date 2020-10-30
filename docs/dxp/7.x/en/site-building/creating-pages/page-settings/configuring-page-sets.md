@@ -1,6 +1,6 @@
 # Configuring Page Sets
 
-[Page Sets](../understanding-pages/understanding-pages.md#page-sets) are a grouping of pages in a Site; these pages can be either Public or Private pages. Settings configured for a Page Set apply to all pages in the page set and override options at the site level. [Customizations to individual pages](./page-configuration-ui-reference.md) override those for the page set.
+[Page Sets](../understanding-pages/understanding-pages.md#page-sets) are a grouping of pages in a Site; these pages can be either Public or Private pages. Settings configured for a Page Set apply to all pages in the page set and override options at the site level. [Customizations to individual pages](./configuring-individual-pages.md) override those for the page set.
 
 To access the Page Sets' settings,
 
@@ -28,7 +28,7 @@ To change the current theme,
 
 1. Click _Save_ to apply the new Theme to the Page Set.
 
-You can enter custom CSS in the *CSS* section for modifying your theme. You can apply Themes to the entire Site (described here) or to individual pages (described in [Configuring Pages](./page-configuration-ui-reference.md#look-and-feel)).
+You can enter custom CSS in the *CSS* section for modifying your theme. You can apply Themes to the entire Site (described here) or to individual pages (described in [Configuring Pages](./configuring-individual-pages.md#look-and-feel)).
 
 ### Logo
 
@@ -97,4 +97,4 @@ In Liferay DXP 7.3, you can access the same settings from the _Page Tree_ menu:
 
 ## Additional Information
 
-* [Page Configuration UI Reference](./page-configuration-ui-reference.md)
+* [Page Configuration UI Reference](./configuring-individual-pages.md)
