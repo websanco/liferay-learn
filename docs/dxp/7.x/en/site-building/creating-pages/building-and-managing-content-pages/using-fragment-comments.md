@@ -8,7 +8,7 @@ Fragment Comments are enabled out-of-the-box in Liferay DXP 7.3, but they are di
 
 To enable comments for Fragments, follow these steps:
 
-1. Go to the Control Paneel and navigate to *Configuration* &rarr; *System Settings* &rarr; *Content and Data* &rarr; *Pages*.
+1. Go to the Control Panel and navigate to *Configuration* &rarr; *System Settings* &rarr; *Content and Data* &rarr; *Pages*.
 
 1. Select *Content Page Editor* under the Virtual Instance Scope. Check the *Comments Enabled* checkbox and click the *Save* button.
 
@@ -22,7 +22,7 @@ To enable comments for Fragments, follow these steps:
 
 To use Fragment Comments, follow these steps:
 
-1. Navigate to the Asset that contains the fragment you would like to add comment on.
+1. Navigate to the Asset that contains the fragment you would like to comment on.
 
 1. Click the *Edit* icon (![Click on the Edit icon at the top.](../../../images/icon-edit-pencil.png)) at the top of the page.
 
@@ -36,7 +36,7 @@ To use Fragment Comments, follow these steps:
 
     ![You and other users can make comments to a fragment.](using-fragment-comments/images/03.png)
 
-    Write a comment and click on the *Comment* button. To reply, simply type your reply and click on the *Reply* button.
+    Write a comment and click on the *Comment* button. To reply to a comment, simply type your reply and click on the *Reply* button.
 
 1. You can click on the *Resolve* icon, if another user has answered a question or resolved an issue. 
 
@@ -46,4 +46,4 @@ To use Fragment Comments, follow these steps:
 
     ![Place a check on the show resolved comments to show resolved comments.](using-fragment-comments/images/05.png)
 
-1. Clicking on the *Options* icon (![Click on the options icon to edit or delete a comment.](../../../images/icon-options.png)) will allow you to edit or delete a comment. To edit, click on *Edit* and make your changes and click on the *Update* button.. To delete, click on *Delete*.
+1. Clicking on the *Options* icon (![Click on the options icon to edit or delete a comment.](../../../images/icon-options.png)) will also allow you to edit or delete a comment. To edit, click on *Edit* and make your changes and click on the *Update* button. To delete a comment, click on *Delete*.
