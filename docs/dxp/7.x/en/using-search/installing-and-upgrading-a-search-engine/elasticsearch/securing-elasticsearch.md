@@ -184,10 +184,10 @@ xpack.security.http.ssl.verification_mode: certificate
 
 ### Configure Liferay's Secure Connection to Elasticsearch
 
-The Elasticsearch connector bundled with Liferay 7.3 includes X-Pack Security support.
+The Elasticsearch connector bundled with Liferay 7.3 and the [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) available as a drop-in replacement for DXP 7.1 and 7.2 includes X-Pack Security support.
 
 ```note::
-   If you are on Liferay 7.2 and have a Liferay Enterprise Search subscription, `download <https://web.liferay.com/group/customer/dxp/downloads/enterprise-search>`_ the Liferay Enterprise Search Security module. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
+   If you are on Liferay 7.2 and Elasticsearch 6.x and have a Liferay Enterprise Search subscription, download from https://customer.liferay.com/downloads the [Liferay Enterprise Search Security](https://web.liferay.com/marketplace/-/mp/application/106163963) application. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
 ```
 
 On Liferay, security can be configured in the Control Panel or using a configuration file. Navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Find the *Search* category and click on the *X-Pack Security* entry. You can enter the property values here, but it's more common to use a configuration file deployed to `[Liferay Home]/osgi/configs`. Create a file called
