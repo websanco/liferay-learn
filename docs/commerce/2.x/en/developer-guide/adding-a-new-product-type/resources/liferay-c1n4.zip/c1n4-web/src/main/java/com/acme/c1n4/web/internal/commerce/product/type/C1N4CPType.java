@@ -11,16 +11,13 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"commerce.product.type.display.order:Integer=16",
-		"commerce.product.type.name=" + C1N4CPType.NAME
+		"commerce.product.type.name=c1n4"
 	},
 	service = CPType.class
 )
 public class C1N4CPType implements CPType {
-
-	public static final String NAME = "Example";
 
 	@Override
 	public void deleteCPDefinition(long cpDefinitionId) throws PortalException {
@@ -31,12 +28,12 @@ public class C1N4CPType implements CPType {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "example");
+		return LanguageUtil.get(resourceBundle, "c1n4-commerce-product-type");
 	}
 
 	@Override
 	public String getName() {
-		return NAME;
+		return "c1n4";
 	}
 
 }

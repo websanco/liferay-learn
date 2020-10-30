@@ -30,16 +30,14 @@ import org.osgi.service.component.annotations.Reference;
 public class C1N4ScreenNavigationEntry
 	implements ScreenNavigationCategory, ScreenNavigationEntry<CPDefinition> {
 
-	public static final String KEY = "Example";
-
 	@Override
 	public String getCategoryKey() {
-		return KEY;
+		return "c1n4";
 	}
 
 	@Override
 	public String getEntryKey() {
-		return KEY;
+		return "c1n4";
 	}
 
 	@Override
@@ -47,7 +45,7 @@ public class C1N4ScreenNavigationEntry
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "example");
+		return LanguageUtil.get(resourceBundle, "c1n4-navigation-entry");
 	}
 
 	@Override
