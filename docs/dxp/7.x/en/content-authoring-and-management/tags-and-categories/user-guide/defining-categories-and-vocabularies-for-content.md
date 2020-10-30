@@ -1,11 +1,11 @@
 # Defining Categories and Vocabularies for Content
 
-Using Categories, you can group similar assets and organize your site content. Along with [Tags](./tagging-content-and-managing-tags.md), Categories help you and your users find relevant information through search or navigation. For more information about Categories in Liferay DXP and the different usage scenarios, see [Organizing Content with Categories and Tags](organizing-content-with-categories-and-tags.md).
+Using Categories, you can group similar assets and organize your content. Along with [Tags](./tagging-content-and-managing-tags.md), Categories help people find relevant information through search or navigation. For more information about Categories in Liferay DXP and the different usage scenarios, see [Organizing Content with Categories and Tags](organizing-content-with-categories-and-tags.md).
 
-You group Categories using [Vocabularies](#defining-vocabularies), and you create a hierarchy of Categories using [Subcategories](#creating-subcategories).
+You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories).
 
 ```note::
-   Only site administrators can manage Categories and Vocabularies in the Categories panel.
+   Only Site administrators can manage Categories and Vocabularies in the Categories panel.
 ```
 
 ## Defining Vocabularies
@@ -15,44 +15,45 @@ You group Categories using [Vocabularies](#defining-vocabularies), and you creat
 1. Enter a *Name* for the Vocabulary and, optionally, a *Description*.
 1. Complete the rest of the Category options:
 
-    - *Allow Multiple Categories*: When this option is enabled, you can use more than one Category from the Vocabulary to categorize the asset. When this option is disabled, you can use only one Category from the Vocabulary.
-    - *Visibility*: See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabularies-visibility) for more information.
+   **Allow Multiple Categories:** Enable this option to use more than one category from the vocabulary to categorize the asset. When disabled, you can use only one category from the vocabulary.
 
-        ```important::
-           You cannot change the Visibility after saving the Vocabulary.
-        ```
+   **Visibility:** See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabularies-visibility) for more information.
 
-    - *Associated Asset Type*: Select the type of assets where you can apply a Category from this Vocabulary. Set *Required* to *Yes* if you want this type of asset always to have a Category.
+   ```important::
+      You cannot change the Visibility after saving the Vocabulary.
+   ```
 
-        ```tip::
-           Click the *Add* button under the *Associated Asset Type* section to include more than one asset type.
-        ```
+   **Associated Asset Type:** Select the allowed asset types for applying a category from this vocabulary. Set *Required* to *Yes* if you want this type of asset always to have a category.
 
-        ![Define the category options for multiple asset types](./defining-categories-and-vocabularies-for-content/images/02.png)
+   ```tip::
+     Click the *Add* button under the *Associated Asset Type* section to include more than one asset type.
+   ```
+
+   ![Define the category options for multiple asset types.](./defining-categories-and-vocabularies-for-content/images/02.png)
 
 1. Click *Save*.
-1. To edit an existing Vocabulary, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Vocabulary name and select *Edit*.
+1. To edit an existing vocabulary, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Vocabulary name and select *Edit*.
 
-    ![Edit an existing Vocabulary using the Actions menu](./defining-categories-and-vocabularies-for-content/images/08.gif)
+    ![Edit an existing Vocabulary using the Actions menu.](./defining-categories-and-vocabularies-for-content/images/08.gif)
 
 ## Defining Categories
 
-You create and manage Categories in the open the Site Menu &rarr; *Categorization* &rarr; *Categories* panel. You can also create new Categories from the Categorization section in the Content Editor, using the Select button for each Vocabulary.
+You create and manage Categories in the Site Menu &rarr; *Categorization* &rarr; *Categories* panel. You can also create new categories from the Categorization section in the Content Editor, using the Select button for each vocabulary.
 
 ```important::
    You can create a maximum of 150 Categories in one Vocabulary.
 ```
 
-![Add new Categories from the Categorization section in the Content Editor](./defining-categories-and-vocabularies-for-content/images/04.png)
+![Add new Categories from the Categorization section in the Content Editor.](./defining-categories-and-vocabularies-for-content/images/04.png)
 
 ### Creating Categories
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
-1. Under the *Vocabularies* list, click the Vocabulary to add the new Category.
+1. Under the *Vocabularies* list, click the vocabulary to add the new category.
 1. Click *Add Category* (![Add Category](../../../images/icon-add.png)).
 1. Enter a *Name* for the Category and, optionally, a *Description*.
-1. Click *Save* or *Save and Add a New One* to add more Categories.
-1. To edit an existing Category, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Category's name.
+1. Click *Save* or *Save and Add a New One* to add more categories.
+1. To edit an existing category, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the category's name.
 
 ### Creating Subcategories
 
@@ -60,23 +61,23 @@ You can create a nested hierarchy of Categories and Subcategories:
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
 1. Under the *Vocabularies* list, click the Vocabulary you want to modify.
-1. Click the Category name where you want to create the new Subcategory.
-1. In the *Add New Subcategory* screen, enter the Subcategory's *Name* and, optionally, a *Description*.
-1. Click *Save* or *Save and Add a New One* to add more Subcategories.
+1. Click the category name where you want to create the new subcategory.
+1. In the *Add New Subcategory* screen, enter the subcategory's *Name* and, optionally, a *Description*.
+1. Click *Save* or *Save and Add a New One* to add more subcategories.
 
 ### Moving Categories
 
-You can move a Category to a different Vocabulary, or as a Subcategory in the same Vocabulary.
+You can move a category to a different vocabulary, or as a subcategory in the same vocabulary.
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
-1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Category you want to move and select *Move*.
+1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the category you want to move and select *Move*.
 
-    ![Use the Move option to organize Categories](./defining-categories-and-vocabularies-for-content/images/03.png)
+    ![Use the Move option to organize Categories.](./defining-categories-and-vocabularies-for-content/images/03.png)
 
-1. Select the *Vocabulary* and *Category* where you want to move the Category.
+1. Select the *Vocabulary* and *Category* where you want to move the category.
 
     ```note::
-       You can only move a Category into a Vocabulary of the same [Visibility type](./organizing-content-with-categories-and-tags.md#vocabulary-visibility).
+       You can only move a Category into a Vocabulary of the same `Visibility type <./organizing-content-with-categories-and-tags.md#vocabulary-visibility>_.
     ```
 
 ### Editing Additional Category Properties
@@ -90,7 +91,7 @@ After creating a Category, you can define these additional options:
 
 To access these options, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Category you want to modify and select *Edit*.
 
-![Edit the Category to define additional options](./defining-categories-and-vocabularies-for-content/images/10.png)
+![Edit the Category to define additional options.](./defining-categories-and-vocabularies-for-content/images/10.png)
 
 ## Related Information
 
