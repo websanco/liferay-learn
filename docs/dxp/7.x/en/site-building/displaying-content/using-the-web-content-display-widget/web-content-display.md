@@ -29,7 +29,7 @@ All features are implemented as simple selector buttons so you can enable or dis
   
   * *Print:* Opens a print dialog with a print-friendly version of the content.
   
-  * *Download as PDF | DOC | ODT | TXT:* Downloads the web content in the selected format. These options are only available if [Open Office integration is enabled](../../../system-administration/configuring-liferay/enabling-openoffice-libreoffice-integration.md).
+  * *Download as PDF | DOC | ODT | TXT:* Downloads the web content in the selected format. These options are only available if [Open Office integration is enabled](../../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md).
 
 * **Content Metadata**
   * *Related Assets*
@@ -65,12 +65,12 @@ You can edit published content directly from the Web Content Display widget.
 
 ### Integrating Open Office with Your Web Content Display
 
-If you have [enabled OpenOffice/LibreOffice integration](../../../system-administration/configuring-liferay/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. Then users can download your content in their format of choice. Enable the conversion options desired in the Web Content Display's configuration page under the *User Tools* list.
+If you have [enabled OpenOffice/LibreOffice integration](../../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. Then users can download your content in their format of choice. Enable the conversion options desired in the Web Content Display's configuration page under the *User Tools* list.
 
 ![Conversion options are listed for the assets.](./web-content-display/images/03.png)
 
 ## Related Information
 
-* [Content Authoring and Management](../../../content_authoring_and_management.md)
+* [Content Authoring and Management](../../../content_authoring_and_management.html)
 * Displaying Content on Display Pages
 * Displaying Content with the Asset Publisher

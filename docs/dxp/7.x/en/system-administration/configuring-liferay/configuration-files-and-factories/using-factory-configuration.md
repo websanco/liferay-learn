@@ -12,7 +12,7 @@ If a service supports factory configurations, its System Settings entry has an A
 
 ![If a System Settings entry has an ADD button, it supports factory configuration.](./using-configuration-files/images/01.png)
 
-Click the Add button ![Add](../../images/icon-add.png) to add a new set of configuration values.
+Click the Add button ![Add](../../../images/icon-add.png) to add a new set of configuration values.
 
 ## Factory Configuration Files
 
