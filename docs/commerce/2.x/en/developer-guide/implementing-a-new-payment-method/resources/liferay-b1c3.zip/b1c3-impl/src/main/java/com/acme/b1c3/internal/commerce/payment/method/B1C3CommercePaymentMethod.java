@@ -15,13 +15,10 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
-	property = "commerce.payment.engine.method.key=" + B1C3CommercePaymentMethod.KEY,
+	property = "commerce.payment.engine.method.key=b1c3",
 	service = CommercePaymentMethod.class
 )
 public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
-
-	public static final String KEY = "Example";
 
 	@Override
 	public CommercePaymentResult completePayment(
@@ -40,12 +37,12 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
 			"content.Language", locale, getClass());
 
 		return LanguageUtil.get(
-			resourceBundle, "this-is-the-example-payment-method");
+			resourceBundle, "pay-via-b1c3-commerce-payment-method");
 	}
 
 	@Override
 	public String getKey() {
-		return KEY;
+		return "b1c3";
 	}
 
 	@Override
@@ -53,7 +50,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "example");
+		return LanguageUtil.get(resourceBundle, "b1c3-commerce-payment-method");
 	}
 
 	@Override
