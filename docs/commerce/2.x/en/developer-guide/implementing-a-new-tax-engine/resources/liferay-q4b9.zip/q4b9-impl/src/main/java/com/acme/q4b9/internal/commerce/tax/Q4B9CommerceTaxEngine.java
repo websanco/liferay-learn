@@ -43,7 +43,8 @@ public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
 			"content.Language", locale, getClass());
 
 		return LanguageUtil.format(
-			resourceBundle, "x-percent-flat-tax-rate", _ONE_POINT_FIVE_ZERO);
+			resourceBundle, "this-is-a-x-percent-flat-tax-rate",
+			_ONE_POINT_FIVE_ZERO);
 	}
 
 	@Override
