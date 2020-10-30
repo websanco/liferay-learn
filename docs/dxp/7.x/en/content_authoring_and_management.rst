@@ -10,6 +10,7 @@ Content Authoring and Management
    content-authoring-and-management/documents_and_media.rst
    content-authoring-and-management/blogs.rst
    content-authoring-and-management/tags_and_categories.rst
+   content-authoring-and-management/content_dashboard.rst
    content-authoring-and-management/recycle_bin.rst
    content-authoring-and-management/collections_and_collection_pages.rst
 
