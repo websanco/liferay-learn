@@ -97,4 +97,4 @@ In Liferay DXP 7.3, you can access the same settings from the _Page Tree_ menu:
 
 ## Additional Information
 
-* [Page Configuration UI Reference](./configuring-individual-pages.md)
+* [Configuring Individual Pages](./configuring-individual-pages.md)
