@@ -44,7 +44,7 @@ public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
 
 		return LanguageUtil.format(
 			resourceBundle,
-			"this-tax-engine-servies-a-fixed-x-percent-flat-tax-rate",
+			"this-tax-engine-serves-a-fixed-x-percent-flat-tax-rate",
 			_ONE_POINT_FIVE_ZERO);
 	}
 
