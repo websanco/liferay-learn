@@ -30,13 +30,10 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
-	property = "commerce.product.data.source.name=" + M5X7CPDataSource.NAME,
+	property = "commerce.product.data.source.name=m5x7",
 	service = CPDataSource.class
 )
 public class M5X7CPDataSource implements CPDataSource {
-
-	public static final String NAME = "Example";
 
 	@Override
 	public String getLabel(Locale locale) {
@@ -49,7 +46,7 @@ public class M5X7CPDataSource implements CPDataSource {
 
 	@Override
 	public String getName() {
-		return NAME;
+		return "m5x7-commerce-product-data-source";
 	}
 
 	@Override
