@@ -1,4 +1,4 @@
-#  Email Settings
+# Email Settings
 
 The Email configuration is where you configure email notifications at the Virtual Instance scope. Open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings* and select the *Email* category under the PLATFORM section. The Email configuration contains six entries:
 
@@ -10,6 +10,10 @@ The Email configuration is where you configure email notifications at the Virtua
 | Mail Host Names | Enter mail hosts associated with the instance |
 | Password Changed Notification | Notify Users when their password has been changed |
 | Password Reset Notification | Notify Users when a request to reset their password is received |
+
+```note::
+   Your installation must have a `configured connection to a mail server <../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md>`_ in order to send email notifications.
+```
 
 ## Account Created Notification
 

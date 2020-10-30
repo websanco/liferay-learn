@@ -1,6 +1,6 @@
 # Using Configuration Files
 
-[System Settings](../system-settings.md) provides a user interface for making system-scoped configuration changes and setting default configurations for other [scopes](./understanding-configuration-scope.md). The same configurations in the UI can be made via configuration file.
+[System Settings](../system-settings.md) provides a user interface for making system-scoped configuration changes and setting default configurations for other [scopes](../understanding-configuration-scope.md). The same configurations in the UI can be made via configuration file.
 
 You can use configuration files to transfer configurations from pre-production systems to production systems or between any other Liferay DXP systems, as long as the version is identical.
 
@@ -92,7 +92,7 @@ addDefaultStructures="true"
 
 Once you have a configuration file, deploy it. It's registered and the targeted configuration values are updated automatically.
 
-To deploy the `.config` file, place it in your [Liferay Home's](../../installation-and-upgrades/reference/liferay-home.md) `osgi/configs` folder. To change the configuration further, you can edit the `.config` file directly or use System Settings.
+To deploy the `.config` file, place it in your [Liferay Home's](../../../installation-and-upgrades/reference/liferay-home.md) `osgi/configs` folder. To change the configuration further, you can edit the `.config` file directly or use System Settings.
 
 ## Configuration Files and Clustering
 

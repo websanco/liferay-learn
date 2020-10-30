@@ -3,10 +3,10 @@
 The bundle blacklist is a convenient way to uninstall or reinstall multiple apps, OSGi bundles (modules), and WAR plugins at once. It saves you the trouble of managing app, module, and plugin installations individually with the [Application Manager](./using-the-app-manager.md) or [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
 
 ```important::
-   The blacklist is an `OSGi configuration <../../system-settings/using-configuration-files.md#creating-configuration-files>`_ that DXP uses to uninstall apps. Using it will prevent any apps listed from being installed until they are removed.
+   The blacklist is an `OSGi configuration <../../configuring-liferay/system-settings/using-configuration-files.md#creating-configuration-files>`_ that DXP uses to uninstall apps. Using it will prevent any apps listed from being installed until they are removed.
 ```
 
-You can set the list [in the Control Panel](#blacklisting-via-the-control-panel) or by [using an OSGi configuration](#blacklisting-via-a-configuration-file) (`.config`) file (by [exporting](../../system-settings/using-configuration-files.md#creating-configuration-files) it from the Control Panel).
+You can set the list [in the Control Panel](#blacklisting-via-the-control-panel) or by [using an OSGi configuration](#blacklisting-via-a-configuration-file) (`.config`) file (by [exporting](../../configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) it from the Control Panel).
 
 ## Blacklisting
 

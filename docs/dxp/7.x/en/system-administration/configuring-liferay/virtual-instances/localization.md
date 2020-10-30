@@ -1,4 +1,4 @@
-#  Localization
+# Localization
 
 The Localization category contains these entries:
 
@@ -13,3 +13,7 @@ To access the Localization settings, Open the Control Panel and navigate to *Con
 ![Configure the default language and the time zone for the instance scope.](./localization/images/01.png)
 
 Use the left and right arrow buttons to move a language from Current (configured and active) to Available (not active, but can be configured) and back, depending on your needs. Use the up and down arrow buttons to sort the Current languages in the order you want them. 
+
+## Additional Information
+
+* [Initial Instance Localization](../../../installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization.md)

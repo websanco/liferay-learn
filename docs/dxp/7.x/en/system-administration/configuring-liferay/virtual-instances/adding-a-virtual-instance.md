@@ -8,7 +8,7 @@ Once the domain name is ready, create the Virtual Instance:
 
 1. Go to *Control Panel* &rarr; *Configuration* &rarr; *Virtual Instances*. 
 
-1. Click the *Add* button (![Add](../../images/icon-add.png)). This opens the *New Instance* form. 
+1. Click the *Add* button (![Add](../../../images/icon-add.png)). This opens the *New Instance* form. 
 
 1. Complete the New Instance form as follows:
 

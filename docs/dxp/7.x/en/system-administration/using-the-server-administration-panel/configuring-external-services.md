@@ -20,7 +20,7 @@ Liferay DXP Users can upload and share any type of file via the Documents and Me
 ![Enable ImageMagick, Ghostscript, and Xuggler from the External Services tab.](./configuring-external-services/images/01.png)
 
 ```note::
-   As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to `System Settings and find the OpenOffice Integration <../system-settings/enabling-openoffice-libreoffice-integration.md>`_ entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
+   As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to `System Settings and find the OpenOffice Integration <../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md>`_ entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
 ```
 
 First install ImageMagick and Xuggler on the server, then use the Server Administration app's External Services tab to configure their use with Liferay DXP. Make sure to choose the correct versions of these tools for your operating system. Install the latest stable versions, as older versions may not run properly with Liferay DXP. ImageMagick must be installed manually, but you can install Xuggler from the Control Panel.

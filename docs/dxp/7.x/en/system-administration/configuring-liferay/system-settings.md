@@ -48,4 +48,4 @@ To export all the configuration changes you've made in System Settings, click th
 
 To make these configurations active in the destination system, unzip and place the `.config` files in the [`[Liferay_Home]/osgi/configs` folder](../../installation-and-upgrades/reference/liferay-home.md).
 
-See [Using Configuration Files](./using-configuration-files.md) to learn more.
+See [Using Configuration Files](./configuration-files-and-factories/using-configuration-files.md) to learn more.

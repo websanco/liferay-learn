@@ -1,9 +1,9 @@
 # Using Factory Configuration
 
-Most Liferay DXP System Settings allow just one set of configurations for an entry. To change the configuration, you update the single configuration form, and it applies throughout the [affected configuration scope](./understanding-configuration-scope.md). Less commonly, a configuration supports multiple entries that simultaneously coexist: these are called *factory configurations*. For factory configurations, each configuration set provides a unique configuration. A common usage is for configuring system-scoped connections to third party servers (e.g., LDAP and Elasticsearch). Since each connection to these servers requires unique configuration values, a factory configuration is used to make it possible.
+Most Liferay DXP System Settings allow just one set of configurations for an entry. To change the configuration, you update the single configuration form, and it applies throughout the [affected configuration scope](../understanding-configuration-scope.md). Less commonly, a configuration supports multiple entries that simultaneously coexist: these are called *factory configurations*. For factory configurations, each configuration set provides a unique configuration. A common usage is for configuring system-scoped connections to third party servers (e.g., LDAP and Elasticsearch). Since each connection to these servers requires unique configuration values, a factory configuration is used to make it possible.
 
 ```tip::
-    Factory Configuration Example: `Adding Organization types <../../users-and-permissions/organizations/adding-a-new-organization-type.md>`_ is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
+    Factory Configuration Example: `Adding Organization types <../../../users-and-permissions/organizations/adding-a-new-organization-type.md>`_ is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
 ```
 
 ## Identifying Factory Configurations
@@ -28,7 +28,7 @@ If your service supports factory configurations, use the convention of calling t
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-default.config
 ```
 
-The next instance contains a unique *subname* (something other than *default*). It's good practice to use a descriptive name that sheds light on when this instance should be used. Following the example from [Adding a New Organization Type](../../users-and-permissions/organizations/adding-a-new-organization-type.md), you could add the _League_ type with a configuration file named 
+The next instance contains a unique *subname* (something other than *default*). It's good practice to use a descriptive name that sheds light on when this instance should be used. Following the example from [Adding a New Organization Type](../../../users-and-permissions/organizations/adding-a-new-organization-type.md), you could add the _League_ type with a configuration file named 
 
 ```bash
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-league.config
