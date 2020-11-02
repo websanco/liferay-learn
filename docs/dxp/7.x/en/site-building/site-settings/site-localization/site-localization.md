@@ -7,19 +7,19 @@ Liferay DXP allows you to set your installation's default language. You can also
 
     ![In the Site settings, click on the Languages tab.](images/01.png)
 
-2. Click on *Define a custom default language and additional available languages for this site*.
+1. Click on *Define a custom default language and additional available languages for this site*.
 
     ![Click on Define a custom default language and additional available languages for this site.](images/02.png)
 
-3. You can change the default language to any of the available languages in the drop-down list.
+1. You can change the default language to any of the available languages in the drop-down list.
 
-4. You can also choose which additional langauges are enabled or disabled.
+1. You can also choose which additional langauges are enabled or disabled.
 
     ![Choose which additional languages are enabled](images/03.png)
 
-5. Use the left and right arrows to enable or disable additional languages.
+1. Use the left and right arrows to enable or disable additional languages.
 
-6. Click on the *Save* button to save any changes.
+1. Click on the *Save* button to save any changes.
 
 ## Modifying Localizable Site Fields
 
@@ -33,7 +33,7 @@ Follow these steps to modify a localizable field:
 
     ![Click the language flag next to the localizable field to enter a new value.](images/05.png)
 
-2. Enter the new value in the selected language. The default value is displayed beneath the field for reference.
+1. Enter the new value in the selected language. The default value is displayed beneath the field for reference.
 
     ![Enter the new value for the selected language.](images/06.png)
 
