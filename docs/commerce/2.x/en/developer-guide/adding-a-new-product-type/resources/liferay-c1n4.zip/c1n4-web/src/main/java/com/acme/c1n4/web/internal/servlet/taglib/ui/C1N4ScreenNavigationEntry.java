@@ -45,7 +45,7 @@ public class C1N4ScreenNavigationEntry
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(resourceBundle, "c1n4-navigation-entry");
+		return LanguageUtil.get(resourceBundle, "c1n4-screen-navigation-entry");
 	}
 
 	@Override
