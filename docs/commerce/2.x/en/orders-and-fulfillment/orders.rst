@@ -8,7 +8,7 @@ Orders
    orders/order-information.md
    orders/orders-menu-reference-guide.md
    orders/order-life-cycle.md
-   orders/order-life-cycle-2.1.x.md
+   orders/order-life-cycle-latest.md
    orders/order-management-statuses-reference-guide.md
 
 .. include:: /orders-and-fulfillment/orders/README.rst
