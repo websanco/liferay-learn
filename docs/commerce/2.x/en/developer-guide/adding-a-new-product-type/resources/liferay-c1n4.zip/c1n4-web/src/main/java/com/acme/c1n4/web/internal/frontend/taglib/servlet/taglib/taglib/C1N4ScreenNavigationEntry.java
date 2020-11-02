@@ -1,4 +1,4 @@
-package com.acme.c1n4.web.internal.frontend.taglib.servlet;
+package com.acme.c1n4.web.internal.frontend.taglib.servlet.taglib;
 
 import com.liferay.commerce.product.model.CPDefinition;
 import com.liferay.frontend.taglib.servlet.taglib.ScreenNavigationCategory;
