@@ -8,7 +8,7 @@ The Questions App is a new UI of the Message Boards application that is more tai
 
     Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the app.
 
-2. The *Questions* app is found under the Collaboration section. It can also be found by searching for *Questions*.
+1. The *Questions* app is found under the Collaboration section. It can also be found by searching for *Questions*.
 
     ![Locate the Questions listed under the Collaboration setion.](using-the-questions-app/images/01.png)
 
@@ -18,7 +18,7 @@ The Questions App is a new UI of the Message Boards application that is more tai
 
     ![Click on the new topic button to create a new topic.](using-the-questions-app/images/02.png)
 
-2. Give your new topic a title and description and click the *Create* button.
+1. Give your new topic a title and description and click the *Create* button.
 
     ![Type a title and description for this new topic.](using-the-questions-app/images/03.png)
 
@@ -30,7 +30,7 @@ The Questions App is a new UI of the Message Boards application that is more tai
 
     ![Click on the Ask Question button to create a new question.](using-the-questions-app/images/04.png)
 
-2. A new window will pop up for your question. Fill in the title and body. Add optional tags to your question.
+1. A new window will pop up for your question. Fill in the title and body. Add optional tags to your question.
 
     ![Fill in the form with a title and body.](using-the-questions-app/images/05.png)
 
@@ -41,15 +41,15 @@ The Questions App is a new UI of the Message Boards application that is more tai
 
 1. Users can view existing questions and give their replies. To give an answer, click on an existing question.
 
-2. Type your answer into the Your Answer box and click the *Post Answer* button.
+1. Type your answer into the Your Answer box and click the *Post Answer* button.
 
     ![Type your answer and click the Post Answer button](using-the-questions-app/images/06.png)
 
-3. The answer should now be visible to everyone who views the question.
+1. The answer should now be visible to everyone who views the question.
 
     ![The answers are visible below the question.](using-the-questions-app/images/07.png)
 
-4. There are a few additional features for answers:
+1. There are a few additional features for answers:
 
     * Rating - Users can click on the up or down arrow next to an answer to give a positive or negative rating.
 
