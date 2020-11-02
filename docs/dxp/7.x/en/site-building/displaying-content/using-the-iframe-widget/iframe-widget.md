@@ -10,15 +10,15 @@ Follow these steps to add an *Iframe* widget to a Site page:
 
     Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
 
-2. The *Iframe* widget is found under the Sample section of the list of widgets. It can also be found by searching for *Iframe*. Drag the widget onto your page.
+1. The *Iframe* widget is found under the Sample section of the list of widgets. It can also be found by searching for *Iframe*. Drag the widget onto your page.
 
     ![Locate the Media Gallery widget listed under the Sample section of widgets.](iframe-widget/images/01.png)
 
-3. Click on the *Options* icon (![Click on the options icon of the widget.](../../../images/icon-app-options.png)) at the top left of the widget. Click on Configuration.
+1. Click on the *Options* icon (![Click on the options icon of the widget.](../../../images/icon-app-options.png)) at the top left of the widget. Click on Configuration.
 
     ![Click on the configuration option.](iframe-widget/images/02.png)
 
-4. Under Source URL, input the website URL you wish to embed.
+1. Under Source URL, input the website URL you wish to embed.
 
     ![Type the URL in the Source URL field.](iframe-widget/images/03.png)
 
