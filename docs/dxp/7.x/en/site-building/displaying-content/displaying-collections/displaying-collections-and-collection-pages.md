@@ -30,30 +30,11 @@ A Collection Page links a page to a Collection.
 
 ## Displaying Collections Using a Collection Display Fragment
 
-A Collection Display Fragment that shows a Collection in a Content Page.
+A Collection Display fragment shows a Collection in a Content Page. It can be configured to display a chosen Collection in any desired style or layout.
 
-1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
-1. If you want to create a new Content Page to show the Collection Display Fragment, click the *New Page* button (![New Page](../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Page*.
-1. If you want to add the Collection Display Fragment to an existing page, click the *Actions* (![Actions](../../images/icon-actions.png)) button next to the page and select *Edit*.
+![Use a Collection Display fragment to display a Collection in the desired format.](./displaying-collections-and-collection-pages/images/....png)
 
-    ![Edit an existing page to configure the Display Fragment.](./displaying-collections-and-collection-pages/images/09.png)
-
-1. Click on the *Fragments and Widgets* (![Fragment and Widgets](../../images/icon-view-type-cards.png)) button.
-1. In the *Fragments* column, under the *Content Display* section, drag the *Collection Display* fragment onto the page editor.
-
-    ![Drag and drop the Collection Display Fragment onto your page.](./displaying-collections-and-collection-pages/images/03.png)
-
-1. Click on the *Collection Display* Fragment to access its *Configuration*.
-1. Click on the *Add* (![Add Collection](../../images/icon-plus.png)) icon next to the *Collection* field.
-
-    ![Add your Collection to the page.](./displaying-collections-and-collection-pages/images/04.png)
-
-1. Click the *Collection* you want to show on your page.
-1. If you want to include additional items in the Collection Page, click the *Add* button (![Add](../../images/icon-add-app.png)) on the top of the page and add the items.
-
-    ![You can add additional web content to your Collection Page.](./displaying-collections-and-collection-pages/images/10.gif)
-
-1. To show the Collection, map its content to page elements. See the [Mapping the Collection Items](#mapping-the-collection-items) section.
+See [Displaying a Collection in a Collection Display Fragment](./collection-display-fragments.md#displaying-a-collection-in-a-collection-display-fragment) for steps on adding a Collection Display fragment and selecting a Collection with it.
 
 ## Mapping the Collection Items
 
