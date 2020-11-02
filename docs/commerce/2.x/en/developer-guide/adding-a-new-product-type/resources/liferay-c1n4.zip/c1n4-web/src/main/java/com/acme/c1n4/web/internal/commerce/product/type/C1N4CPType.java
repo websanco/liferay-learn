@@ -1,7 +1,6 @@
 package com.acme.c1n4.web.internal.commerce.product.type;
 
 import com.liferay.commerce.product.type.CPType;
-import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
@@ -20,7 +19,7 @@ import org.osgi.service.component.annotations.Component;
 public class C1N4CPType implements CPType {
 
 	@Override
-	public void deleteCPDefinition(long cpDefinitionId) throws PortalException {
+	public void deleteCPDefinition(long cpDefinitionId) {
 	}
 
 	@Override
