@@ -54,12 +54,12 @@ public class C1N4ScreenNavigationEntry
 	}
 
 	@Override
-	public boolean isVisible(User user, CPDefinition context) {
+	public boolean isVisible(User user, CPDefinition cpDefinition) {
 		if (context == null) {
 			return false;
 		}
 
-		String productTypeName = context.getProductTypeName();
+		String productTypeName = cpDefinition.getProductTypeName();
 
 		if (productTypeName.equals(getCategoryKey())) {
 			return true;
