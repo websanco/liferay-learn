@@ -11,6 +11,7 @@ import com.liferay.portal.kernel.util.ResourceBundleUtil;
 import java.io.IOException;
 
 import java.util.Locale;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import javax.servlet.ServletContext;
@@ -55,17 +56,12 @@ public class C1N4ScreenNavigationEntry
 
 	@Override
 	public boolean isVisible(User user, CPDefinition cpDefinition) {
-		if (context == null) {
+		if (cpDefinition == null) {
 			return false;
 		}
 
-		String productTypeName = cpDefinition.getProductTypeName();
-
-		if (productTypeName.equals(getCategoryKey())) {
-			return true;
-		}
-
-		return false;
+		return Objects.equals(
+			cpDefinition.getProductTypeName(), getCategoryKey());
 	}
 
 	@Override
