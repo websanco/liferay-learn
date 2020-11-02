@@ -72,7 +72,7 @@ public class C1N4ScreenNavigationEntry
 
 		_jspRenderer.renderJSP(
 			_servletContext, httpServletRequest, httpServletResponse,
-			"/edit_product.jsp");
+			"/edit_c1n4.jsp");
 	}
 
 	@Reference
