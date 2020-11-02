@@ -1,9 +1,9 @@
 # Manually Translating Web Content
 
-Liferay DXP integrates translation functionality with your web content, so you can create engaging, localized experiences for your global users. Users with the required permissions can manually translate Site content to any available language. You can also integrate the translation process with custom workflows to streamline the review and publication process for new translations.
+Liferay integrates translation functionality with your web content, so you can create engaging, localized experiences for your global users. Users with the required permissions can manually translate Site content to any available language. You can also integrate the translation process with custom workflows to streamline the review and publication process for new translations.
 
 * [Managing Permissions for Translation](#managing-permissions-for-translation)
-* [Translating Web Content in DXP](#translating-web-content-in-dxp)
+* [Translating Web Content](#translating-web-content)
 * [Integrating Translations with Custom Workflows](#integrating-translations-with-custom-workflows)
 
 ## Managing Permissions for Translation
@@ -46,7 +46,7 @@ Follow these steps to assign Translate permissions for specific languages:
 
 Users with the configured Role can now manually translate any web content into the specified languages.
 
-## Translating Web Content in DXP
+## Translating Web Content
 
 1. Open the *Product* menu, and go to *Content & Data* &rarr; *Web Content*.
 
