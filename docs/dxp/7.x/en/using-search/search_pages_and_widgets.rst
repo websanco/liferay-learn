@@ -6,6 +6,7 @@ Search Pages and Widgets
 
    search-pages-and-widgets/working_with_search_pages.rst
    search-pages-and-widgets/search_results.rst
+   search-pages-and-widgets/search_facets.rst
    search-pages-and-widgets/similar-results.md
 
 .. raw:: html
