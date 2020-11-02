@@ -4,19 +4,19 @@ Liferay DXP comes with its own built-in
 image editor. Right from your browser you can edit your images to do things such as apply filters, adjust contrast, or crop.
 
 
-In the Documents and Media application, locate the image. Click on the Action icon (![Action](../../../images/icon-options.png)) and select *Edit With Image Editor*. 
+In the Documents and Media application, locate the image. Click on the Options icon (![Click on the Options icon of the image and click on Edit with Image Editor.](../../../images/icon-options.png)) and select *Edit With Image Editor*. 
 
-![](editing-images/images/01.png)
+![Clicking on the Options icon give you a list of different options.](editing-images/images/01.png)
 
 The image editor was designed with quick editing in mind, and offers a minimal, user-friendly UI:
 
-![](editing-images/images/02.png)
+![There are different editing tools below the image.](editing-images/images/02.png)
 
-**1. Filters Tool** (Effects):
+**1. Effects Tool** (Filters):
 
 This tool allows you to apply different filters to your image to give it a different look and feel.
 
-![](editing-images/images/03.png)
+![The Effects tool brings up various filters you can apply to your image.](editing-images/images/03.png)
 
 **2. Transform Tools** (Transform Option):
 
@@ -38,6 +38,6 @@ Once you have made changes to the image in the editor, you can click the *Cancel
 
 There is also history bar at the top of the image:
 
-![](editing-images/images/04.png)
+![The history bar at the top of your image can be used to undo or redo changes.](editing-images/images/04.png)
 
 The history bar allows you to undo, redo, and reset changes that have been made to the image in the editor. Note that the reset button should be used with caution; once it has been pressed the image is reset to its original state, causing all changes made within the editor to be lost.
