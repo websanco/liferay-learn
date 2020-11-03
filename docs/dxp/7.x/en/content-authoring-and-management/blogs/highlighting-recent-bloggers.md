@@ -2,7 +2,7 @@
 
 The *Recent Bloggers* widget lets you highlight the work of your site’s most recent blog authors. This widget lists each recent author’s name, profile picture, and number of posts. 
 
-Follow these steps to add a Recent Bloggers widget to a page:
+To add a Recent Bloggers widget to a page,
 
 1. Navigate to an existing page where you wish to add the *Recent Bloggers* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../images/icon-add-app.png)) at the top of the page.
 
@@ -18,19 +18,19 @@ Follow these steps to add a Recent Bloggers widget to a page:
 
     The Setup tab contains these options:
 
-    * **Selection Method**: Set how the widget selects blog authors to highlight. You can choose *Users* or *Scope*. If you select Users, the widget aggregates every recent blogger on your system. To refine the aggregation, you can select an organization by which to filter the users. If you select Scope, the widget aggregates the recent bloggers in the current scope. This limits the entries to members of the site where the widget resides.
+    **Selection Method:** Set how the widget selects blog authors to highlight. You can choose *Users* or *Scope*. If you select Users, the widget aggregates every recent blogger on your system. To refine the aggregation, you can select an organization by which to filter the users. If you select Scope, the widget aggregates the recent bloggers in the current scope. This limits the entries to members of the site where the widget resides.
 
-    * **Organization**: Select the organization whose recent bloggers you want to aggregate.
+    **Organization:** Select the organization whose recent bloggers you want to aggregate.
 
-    * **Display Style**: Select how the widget displays recent bloggers: *User Name and Image* or *User Name*.
+    **Display Style:** Select how the widget displays recent bloggers: *User Name and Image* or *User Name*.
 
-    * **Maximum Bloggers to Display**: Select the maximum number of recent bloggers the widget displays.
+    **Maximum Bloggers to Display:** Select the maximum number of recent bloggers the widget displays.
 
 1. Here are descriptions for the other tabs in the widget’s configuration:
 
-    * **Sharing**: Embed the widget instance as a widget on any website, Facebook, Netvibes, or as an OpenSocial Gadget.
+    **Sharing:** Embed the widget instance as a widget on any website, Facebook, Netvibes, or as an OpenSocial Gadget.
 
-    * **Scope**: Specify the blog instance the widget displays: the current site’s blog (default), the global blog, or the page’s blog.
+    **Scope:** Specify the blog instance the widget displays: the current site’s blog (default), the global blog, or the page’s blog.
 
     When you’re finished setting the options, click *Save*. Then close the dialog box.
 
