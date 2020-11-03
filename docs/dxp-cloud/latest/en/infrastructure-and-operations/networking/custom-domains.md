@@ -32,6 +32,10 @@ When ready, the domain is reachable from any device and returns the standard `de
 
 Once a domain is ready, you can add it to your environment's services via the DXP Cloud console or `LCP.json` files.
 
+```important::
+   A maximum of 50 custom domains can be added to an environment's services.
+```
+
 Follow these steps to add custom domains to environment services via the DXP Cloud console:
 
 1. Navigate to the desired environment.
