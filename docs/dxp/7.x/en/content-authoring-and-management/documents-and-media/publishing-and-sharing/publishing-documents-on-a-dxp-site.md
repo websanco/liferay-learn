@@ -32,9 +32,9 @@ To use the *Media Gallery* widget:
 
     Under the Setup tab, there are a few options to configure:
 
-    * Display Settings - This allows you to show each file’s actions, filter the media types to display, and choose a display template for your media.
+    **Display Settings:** This allows you to show each file’s actions, filter the media types to display, and choose a display template for your media.
 
-    * Folders Listing - This allows you to select a Document Library folder to serve as the root folder from which to display files. The root folder you select becomes the highest-level folder the widget can access. 
+    **Folders Listing:** This allows you to select a Document Library folder to serve as the root folder from which to display files. The root folder you select becomes the highest-level folder the widget can access. 
 
     Click *Save* to save your changes. Click *Cancel* to return to the widget without saving changes.
 
@@ -74,13 +74,13 @@ The *Documents and Media* widget gives users a simple way to publish various typ
 
     Under the Setup tab, there are a few options to configure:
 
-    * Display Settings - This allows you to show each file’s actions, show the search bar, show related assets, set maxium number of files per page, and enable different view options.
+    **Display Settings:** This allows you to show each file’s actions, show the search bar, show related assets, set maxium number of files per page, and enable different view options.
 
-    * Folders Listing - This allows you to select a Document Library folder to serve as the root folder from which to display files. The root folder you select becomes the highest-level folder the widget can access. 
+    **Folders Listing:** This allows you to select a Document Library folder to serve as the root folder from which to display files. The root folder you select becomes the highest-level folder the widget can access. 
 
-    * Entries listing for table display style - This allows you to set what type of file information to display when the user selects Table view.
+    **Entries listing for table display style:** This allows you to set what type of file information to display when the user selects Table view.
 
-    * Ratings - Enabling this allows users to give a thumbs up or thumbs down rating on your media files.
+    **Ratings:** Enabling this allows users to give a thumbs up or thumbs down rating on your media files.
 
     Click *Save* to save any changes. Click *Cancel* to return to the widget without saving changes.
 
@@ -90,35 +90,41 @@ The *Documents and Media* widget gives users a simple way to publish various typ
 
     ![Access different tools from the toolbar at the top of the widget](publishing-documents-on-a-dxp-site/images/07.png)
 
-    * Checkbox - Allows you to select all the media files.
+    **Checkbox:** Allows you to select all the media files.
 
-    * Filter and Order - Allows you to filter files by document type. It also allows you to sort your files by different parameters.
+    **Filter and Order:** Allows you to filter files by document type. It also allows you to sort your files by different parameters.
 
-        ![Click on filter and order to choose different ways to organize and sort your files.](publishing-documents-on-a-dxp-site/images/08.png)
+    ![Click on filter and order to choose different ways to organize and sort your files.](publishing-documents-on-a-dxp-site/images/08.png)
 
-    * Reverse - Click on the *Reverse* icon (![Click on the reverse icon to reverse sort direction.](../../../images/icon-sort.png)) to reverse the direction of the sorting. 
+    **Reverse:** Click on the *Reverse* icon (![Click on the reverse icon to reverse sort direction.](../../../images/icon-sort.png)) to reverse the direction of the sorting. 
 
-    * Search - The search bar allows you to search through your media files by keyword.
+    **Search:** The search bar allows you to search through your media files by keyword.
 
-    * Information - The *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) provides details about the media files within the folder.
+    **Information:** The *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) provides details about the media files within the folder.
 
-    * Display Style - Click on the *Display Style* icon (![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png))to choose how to display your media files. There are 3 display types: Cards, List and Table view
+    **Display Style:** Click on the *Display Style* icon (![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png))to choose how to display your media files. There are 3 display types: Cards, List and Table view
 
-        ![Choose between cards, list, or table view to display your files.](publishing-documents-on-a-dxp-site/images/09.png)
+    ![Choose between cards, list, or table view to display your files.](publishing-documents-on-a-dxp-site/images/09.png)
         
-        Users can choose the display type of their choice.
+    Users can choose the display type of their choice.
 
 1. Once you click on the checkbox [x] of a media file, you are given different options:
 
     ![Click a checkbox for a file and access additional options.](publishing-documents-on-a-dxp-site/images/10.png)
 
-    * Clear - Click to clear your current selection.
-    * Information - Click the *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) to see detailed information about the file.
-    * Download - Click the *Download* icon (![Click on the download icon to download the file.](../../../images/icon-download.png)) to download the file.
-    * Move - Click the *Move* icon (![Click on the move icon to move the file.](../../../images/icon-move.png)) to move the file to a different folder.
-    * Edit Tags - Click on the *Edit Tags* icon (![Click on the edit tags icon to edit the file tags.](../../../images/icon-edit.png)) to edit the existing tags of a file.
-    * Move to Recycle Bin - Click on the *Recycle Bin* icon (![Click on the recycle bin icon to delete the file.](../../../images/icon-trash.png)) to delete a file.
-    * Actions - Clicking on the * Actions* icon (![Click on the Actions button to access more options.](../../../images/icon-actions.png)) to access more options, including *Checkin* and *Checkout*.
+    **Clear:** Click to clear your current selection.
+
+    **Information:** Click the *Information* icon (![Click on the information icon to display file info.](../../../images/icon-information.png)) to see detailed information about the file.
+
+    **Download:** Click the *Download* icon (![Click on the download icon to download the file.](../../../images/icon-download.png)) to download the file.
+
+    **Move:** Click the *Move* icon (![Click on the move icon to move the file.](../../../images/icon-move.png)) to move the file to a different folder.
+
+    **Edit Tags:** Click on the *Edit Tags* icon (![Click on the edit tags icon to edit the file tags.](../../../images/icon-edit.png)) to edit the existing tags of a file.
+
+    **Move to Recycle Bin:** Click on the *Recycle Bin* icon (![Click on the recycle bin icon to delete the file.](../../../images/icon-trash.png)) to delete a file.
+
+    **Actions:** Clicking on the * Actions* icon (![Click on the Actions button to access more options.](../../../images/icon-actions.png)) to access more options, including *Checkin* and *Checkout*.
 
 ## Using the Asset Publisher Widget
 
@@ -142,23 +148,23 @@ The *Asset Publisher* widget gives users a simple way to organize and publish di
 
     Under the Setup tab, there are a few sub-tabs with different options to configure. The Asset Selection sub-tab allows you to select how you would like to filter through your assets:
 
-    * Dynamic - Select this option to set parameters that will automatically include specific assets. Use the Asset Type drop-down list to select one or more types of assets to be included. Choose across your different sites in the Scope section. In the Filter section, you can also filter your assets by things such as category, keywords, or tags. As new assets are added, the widget will automatically update.
+    **Dynamic:** Select this option to set parameters that will automatically include specific assets. Use the Asset Type drop-down list to select one or more types of assets to be included. Choose across your different sites in the Scope section. In the Filter section, you can also filter your assets by things such as category, keywords, or tags. As new assets are added, the widget will automatically update.
 
-    * Manual - Select this option to set parameters and manually filter specific assets. Choose across your different sites in the Scope section. Under Asset Entries, click on the *Select* button to filter for specific types of assets. For example, if you wanted to filter for images, you could select *Images* and add a check to each image you want included.
+    **Manual:** Select this option to set parameters and manually filter specific assets. Choose across your different sites in the Scope section. Under Asset Entries, click on the *Select* button to filter for specific types of assets. For example, if you wanted to filter for images, you could select *Images* and add a check to each image you want included.
 
-        ![Here is an example of filtering for images and manually selecting items](publishing-documents-on-a-dxp-site/images/13.png)
+    ![Here is an example of filtering for images and manually selecting items](publishing-documents-on-a-dxp-site/images/13.png)
 
-        Once you are finished making your selection, click the *Add* button. A new collection will be created based on your selection.
+    Once you are finished making your selection, click the *Add* button. A new collection will be created based on your selection.
 
-    * Collection - Select this option to choose from your previously saved collections. Under Select Collection, click on the *Select* button and choose a collection.
+    **Collection:** Select this option to choose from your previously saved collections. Under Select Collection, click on the *Select* button and choose a collection.
 
-        ![Click Select and choose from your saved selections.](publishing-documents-on-a-dxp-site/images/14.png)
+    ![Click Select and choose from your saved selections.](publishing-documents-on-a-dxp-site/images/14.png)
 
-        To learn more, go to the [About Collections](../../../collections-and-collection-pages/about-collections-and-collection-pages.md) page.
+    To learn more, go to the [About Collections](../../../collections-and-collection-pages/about-collections-and-collection-pages.md) page.
 
-    * Collection Provider - This is a new feature in Liferay 7.3 that allows developers to create specific collections with more advanced criteria. 
+    **Collection Provider:** This is a new feature in Liferay 7.3 that allows developers to create specific collections with more advanced criteria. 
         
-    * *Create a collection from this configuration*: Once you have set your specific parameters, you can click this option to save this as a new collection.
+    **Create a collection from this configuration:** Once you have set your specific parameters, you can click this option to save this as a new collection.
 
     To learn more about this widget, go to the [configuring the asset publisher widget](../../../site-building/displaying-content/using-the-asset-publisher-widget) page.
 
