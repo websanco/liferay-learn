@@ -21,7 +21,7 @@ An existing Result Rankings cannot be renamed. Renaming requires recreating the 
 
 ## Creating and Managing Result Rankings
 
-To create a new Result Rankings, follow these steps:
+To create a new Result Rankings,
 
 1. Navigate to *Applications* → *Search Tuning* → *Result Rankings*.
 

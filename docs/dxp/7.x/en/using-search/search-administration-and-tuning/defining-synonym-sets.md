@@ -16,7 +16,7 @@ The [`=>` format](https://www.elastic.co/guide/en/elasticsearch/guide/current/sy
 
 Create a synonym set by adding as many synonymous keywords to a set as you like. Once the synonym set is saved, any searches in the same company scope (that’s any site from the Virtual Instance where the synonyms were configured) take effect.
 
-Follow these steps to create a new synonym set:
+To create a new synonym set,
 
 1. Navigate to *Applications* → *Search Tuning* → *Synonyms*.
 
