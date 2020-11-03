@@ -1,27 +1,27 @@
 {
-    "fieldSets": [
-        {
-            "label": "text style",
-            "fields": [
-                {
-                    "name": "textAppliedStyle",
-                    "label": "applied-style",
-                    "description": "this-is-the-style-that-will-be-applied",
-                    "type": "select",
-                    "dataType": "string",
-                    "typeOptions": {
-                        "validValues": [
-                            {
-                                "value": "dark"
-                            },
-                            {
-                                "value": "light"
-                            }
-                        ]
-                    },
-                    "defaultValue": "dark"
-                }
-            ]
-        }
-    ]
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "dark",
+					"description": "this-is-the-style-that-will-be-applied",
+					"label": "applied-style",
+					"name": "textAppliedStyle",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "dark"
+							},
+							{
+								"value": "light"
+							}
+						]
+					}
+				}
+			],
+			"label": "text style"
+		}
+	]
 }
