@@ -12,13 +12,14 @@ At the top of the editor you can set the name, view the current members of the s
 
 ![The top portion of the Segment Editor has the segment name and its members.](./segments-editor-ui-reference/images/01.png)
 
-On the right side of the page, there's a Properties menu with these options:
+On the right side of the page, there's a *Properties* menu with these options:
 
-* User
-* Organization
-* Session
+- User
+- Organization
+- Session
+- Segments
 
-  ![You use the Segment Editor to create new Segments.](./segments-editor-ui-reference/images/02.png)
+![You use the Segment Editor to create new Segments.](./segments-editor-ui-reference/images/02.png)
 
 Operations and conjunctions are combined with the properties to define criteria.
 
