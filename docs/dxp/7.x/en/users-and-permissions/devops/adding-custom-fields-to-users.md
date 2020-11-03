@@ -2,7 +2,7 @@
 
 Many of Liferay DXP’s assets and resources are designed to let you add new fields to their edit forms. This includes adding custom fields for users.
 
-To add custom fields, follow these steps:
+To add custom fields,
 
 1. Navigate to *Control Panel* → *Configuration* → *Custom Fields*.
 
@@ -22,19 +22,27 @@ To add custom fields, follow these steps:
 
     Here are the different field types to choose from:
 
-    * **Text and Numbers**
-        * **Text Area**: This field type allows you to collect longer lines of text from the user.
-        * **Input Field**: This field type allows you to collect a string of text, a decimal number, or an integer from the user. 
+    Text and Numbers includes:
 
-    * **Selection**
-        * **Dropdown**: This field type allows you to provide a dropdown list for the user to select from. The list can be text, decimal numbers, or integers.
-        * **Checkbox**: This field type allows you to give a checkbox for users to check.
-        * **Radio**: This field type allows you to give a selection of two or more radio buttons for users to toggle.
+    **Text Area:** This field type allows you to collect longer lines of text from the user.
 
-    * **Others**
-        * **Geolocation**: This field type allows you to collect geolocation information of the user.
-        * **Date**: This field type allows you to collect date and time information from the user.
-        * **True/False**: This field type allows you to give a true or false choice to the user. 
+    **Input Field:** This field type allows you to collect a string of text, a decimal number, or an integer from the user. 
+
+    Selection includes:
+
+    **Dropdown:** This field type allows you to provide a dropdown list for the user to select from. The list can be text, decimal numbers, or integers.
+
+    **Checkbox:** This field type allows you to give a checkbox for users to check.
+
+    **Radio:** This field type allows you to give a selection of two or more radio buttons for users to toggle.
+
+    Others includes:
+
+    **Geolocation:** This field type allows you to collect geolocation information of the user.
+
+    **Date:** This field type allows you to collect date and time information from the user.
+
+    **True/False:** This field type allows you to give a true or false choice to the user. 
     
     Click on the *Save* button to save your changes. 
 
