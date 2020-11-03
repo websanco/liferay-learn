@@ -4,7 +4,7 @@ The *Iframe* widget allows you to embed and display a website right from within 
 
 ## Setting Up the Iframe Widget
 
-Follow these steps to add an *Iframe* widget to a Site page:
+To add an *Iframe* widget to a Site page,
 
 1. Navigate to an existing page where you wish to add the *Iframe* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top of the page.
 
