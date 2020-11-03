@@ -26,15 +26,18 @@ The Type Facet contains several configuration options. To configure, click on th
 
 ![Click on the Configuration option.](type-facet/images/02.png)
 
-* **Display Settings**: Choose between *Default*, *Compact Layout*, and *Label Layout*. The Default layout shows checkboxes next to each term but the Compact layout does not. The Label layout shows small clickable labels for each term.
+**Display Settings:** Choose between *Default*, *Compact Layout*, and *Label Layout*. The Default layout shows checkboxes next to each term but the Compact layout does not. The Label layout shows small clickable labels for each term.
 
-* **Advanced Configuration**:
+The Advanced Configuration section contains additional options: 
 
-    * **Type Parameter Name**: Change the parameter name in the URL for the Facet. The default is *type*. 
-    * **Frequency Threshold**: Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
-    * **Display Frequencies**: Choose whether or not to display the term frequencies.
-    * **Current and Available**: Choose which asset types are visible in the facet. To remove types, select from the Current section by clicking and highlighting. Click the right arrow and move the Asset Type from *Current* to *Available*. Add Asset Types by moving them to the Current section.
+**Type Parameter Name:** Change the parameter name in the URL for the Facet. The default is *type*. 
 
-        ![Use the right and left arrows to add or remove asset types.](type-facet/images/03.png)
+**Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
 
-Click on *Save* button to save changes.
+**Display Frequencies:** Choose whether or not to display the term frequencies.
+
+**Current and Available:** Choose which asset types are visible in the facet. To remove types, select from the Current section by clicking and highlighting. Click the right arrow and move the Asset Type from *Current* to *Available*. Add Asset Types by moving them to the Current section.
+
+![Use the right and left arrows to add or remove asset types.](type-facet/images/03.png)
+
+Once finished, click the *Save* button.

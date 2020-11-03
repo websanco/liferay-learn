@@ -18,19 +18,25 @@ To add a Custom facet, follow these steps:
 
 1. The Custom Facet has several configuration options:
 
-    * **Display Settings**: Choose between *Default*, *Compact Layout*, and *Label Layout*. The Default layout shows checkboxes next to each term but the Compact layout does not. The Label layout shows small clickable labels for each term.
+    **Display Settings:** Choose between *Default*, *Compact Layout*, and *Label Layout*. The Default layout shows checkboxes next to each term but the Compact layout does not. The Label layout shows small clickable labels for each term.
 
-    * **Advanced Configuration**:
+    The Advanced Configuration section contains additional options: 
 
-        * **Aggregation Field**: Enter the name of the indexed field to aggregate results by. This must be a non-analyzed keyword field. See below for more information.
-        * **Custom Heading**: Enter the heading to display for this facet. If not set, the aggregated field name is displayed.
-        * **Custom Parameter Name**: Specify a URL parameter name for selected values. If not set, the aggregated field name is used.
-        * **Max Terms**: Set the maximum number of facet terms to display, regardless of how many matching terms are found for the facet.
-        * **Frequency Threshold**: Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
-        * **Display Frequencies**: Choose whether or not to display the term frequencies.
-        * **Federated Search Key**: Enter the key of an alternate Search this widget is participating on. If not set, this widget will participate on the default search. This value will typically be the name of an application-defined index.
+    **Aggregation Field:** Enter the name of the indexed field to aggregate results by. This must be a non-analyzed keyword field. See below for more information.
+    
+    **Custom Heading:** Enter the heading to display for this facet. If not set, the aggregated field name is displayed.
+    
+    **Custom Parameter Name:** Specify a URL parameter name for selected values. If not set, the aggregated field name is used.
+    
+    **Max Terms:** Set the maximum number of facet terms to display, regardless of how many matching terms are found for the facet.
+    
+    **Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
+    
+    **Display Frequencies:** Choose whether or not to display the term frequencies.
+    
+    **Federated Search Key:** Enter the key of an alternate Search this widget is participating on. If not set, this widget will participate on the default search. This value will typically be the name of an application-defined index.
 
-        Click on *Save* button to save changes.
+    Once finished, click the *Save* button.
 
 ## Finding Indexed Fields
 
