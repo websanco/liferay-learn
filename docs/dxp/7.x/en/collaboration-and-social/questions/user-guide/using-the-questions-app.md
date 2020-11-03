@@ -51,19 +51,19 @@ The Questions App is a new UI of the Message Boards application that is more tai
 
 1. There are a few additional features for answers:
 
-    * Rating - Users can click on the up or down arrow next to an answer to give a positive or negative rating.
+    **Rating:** Users can click on the up or down arrow next to an answer to give a positive or negative rating.
 
-    * Sort - Users can sort the different answers by clicking on the tabs: Active, Oldest, or Votes.
+    **Sort:** Users can sort the different answers by clicking on the tabs: Active, Oldest, or Votes.
 
-    * Reply - Other users can reply to a given answer.
+    **Reply:** Other users can reply to a given answer.
 
-    * Delete - A user can delete their answer.
+    **Delete:** A user can delete their answer.
 
-    * Mark as answer - The user who asked the question can mark an answer as the correct response, or the most helpful response. Simply click on Mark as answer.
+    **Mark as answer:** The user who asked the question can mark an answer as the correct response, or the most helpful response. Simply click on Mark as answer.
 
-        ![Click on mark as answer to mark a response as the correct answer.](using-the-questions-app/images/08.png)
+    ![Click on mark as answer to mark a response as the correct answer.](using-the-questions-app/images/08.png)
 
-    * Edit - A user can edit their answer.
+    **Edit:** A user can edit their answer.
 
 ## Searching Questions
 
@@ -71,38 +71,38 @@ With the Questions app, there are a few different ways to search for questions:
 
 ![There are additional features for searching for questions.](using-the-questions-app/images/09.png)
 
-* Filter By - Users can filter the different questions based on criteria such as date and most votes.
+**Filter By:** Users can filter the different questions based on criteria such as date and most votes.
 
-* Search - Users can search through different questions by typing keywords into the search bar.
+**Search:** Users can search through different questions by typing keywords into the search bar.
 
-* Tags - Users can also filter out questions based on tags. Click on the *Tags* tab to see all the available tags and their associated questions.
+**Tags:** Users can also filter out questions based on tags. Click on the *Tags* tab to see all the available tags and their associated questions.
 
-    ![Click on the tags tab to see all tags.](using-the-questions-app/images/10.png)
+![Click on the tags tab to see all tags.](using-the-questions-app/images/10.png)
 
 ## My Subscriptions and My Activity
 
 Two additional features of the Questions app is subscriptions and activity tracking.
 
-* ### Subscriptions
+### Subscriptions
 
-    Users can subscribe to both topics and questions of their choice. This makes it easy to go back to your favorite topics and favorite questions.
+Users can subscribe to both topics and questions of their choice. This makes it easy to go back to your favorite topics and favorite questions.
 
-    To subscribe to a topic, click on the *Subscribe* button below the topic title bar.
+To subscribe to a topic, click on the *Subscribe* button below the topic title bar.
 
-    ![Click on the subscribe button to subscribe to a topic.](using-the-questions-app/images/11.png)
+![Click on the subscribe button to subscribe to a topic.](using-the-questions-app/images/11.png)
 
-    To subscribe to a question, click on the subscribe bell button next to the question. Note, you are automatically subscribed when asking the question.
+To subscribe to a question, click on the subscribe bell button next to the question. Note, you are automatically subscribed when asking the question.
 
-    ![Click on the subsscribe bell button to subscribe to a question](using-the-questions-app/images/12.png)
+![Click on the subsscribe bell button to subscribe to a question](using-the-questions-app/images/12.png)
 
-    To view your subscriptions, simply click on the *My Subscriptions* tab. You will see a list of all the topics and questions you are subscribed to.
+To view your subscriptions, simply click on the *My Subscriptions* tab. You will see a list of all the topics and questions you are subscribed to.
 
-    ![Click on the My Subscriptions tab to see all the things you are subscribed to.](using-the-questions-app/images/13.png)
+![Click on the My Subscriptions tab to see all the things you are subscribed to.](using-the-questions-app/images/13.png)
 
-* ### My Activity
+### My Activity
 
-    Users can track their use of the Questions app by clicking on the *My Activity* tab. 
+Users can track their use of the Questions app by clicking on the *My Activity* tab. 
 
-    ![Click on the My Activity tab to track their use of the Questions app.](using-the-questions-app/images/14.png)
+![Click on the My Activity tab to track their use of the Questions app.](using-the-questions-app/images/14.png)
 
-    Users can see their ranking, the number of questions they have asked, and a list of each of these questions.
+Users can see their ranking, the number of questions they have asked, and a list of each of these questions.
