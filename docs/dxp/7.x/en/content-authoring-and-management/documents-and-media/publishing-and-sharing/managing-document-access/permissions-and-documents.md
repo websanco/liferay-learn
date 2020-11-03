@@ -4,7 +4,7 @@ Liferay DXP gives you different options to set permissions for your documents an
 
 ## Permissions for an Individual File
 
-To set permissions for an individual file, follow these steps:
+To set permissions for an individual file,
 
 1. Navigate to the *Documents and Media* application. 
 
@@ -20,7 +20,7 @@ To set permissions for an individual file, follow these steps:
 
 ## Permissions for an Entire Folder
 
-To set permissions for an entire folder, follow these steps:
+To set permissions for an entire folder,
 
 1. Navigate to the *Documents and Media* application. 
 
@@ -38,7 +38,7 @@ To set permissions for an entire folder, follow these steps:
 
 ## Permissions for a Specific File Type
 
-To set permissions for a specific file type, follow these steps:
+To set permissions for a specific file type,
 
 1. Navigate to the *Documents and Media* application. Click on the *Document Types* tab. 
 
