@@ -7,13 +7,11 @@ A typical Liferay system's search infrastructure comprises
 
 * Liferay servers in a clustered or single node (on-premises or Docker containers)
 * Elasticsearch server(s) (on-premises or Docker containers)
-* An Elasticsearch connector application deployed* onto Liferay and configured to fit your deployment.
+* An Elasticsearch connector application deployed onto Liferay and configured to fit your deployment.
 
 ```tip::
    Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
 ```
-
-> Note: Each Liferay CE and DXP version is bundled with a _connector_ to Elasticsearch that is compatible with a specific Elasticsearch major version. To add support for newer major Elasticsearch versions for released Liferay Portal and DXP versions, Liferay can release additional connectors through Marketplace which can be used as drop-in replacements for the out-of-the-box (bundled) connectors. If you are using the bundled connector, you do not need to deploy it separately.
 
 Assuming your Liferay servers are in place already, the remaining steps include
 
@@ -24,6 +22,8 @@ Assuming your Liferay servers are in place already, the remaining steps include
 1. Connecting Liferay to Elasticsearch
 
 ## Finding Compatible Elasticsearch and Connector Versions 
+
+Each Liferay CE/DXP version is bundled with a connector to Elasticsearch that is compatible with a specific Elasticsearch major version (e.g., 6.x or 7.x). To add support for newer major Elasticsearch versions, Liferay releases additional connectors through [Marketplace](https://web.liferay.com/marketplace). These can be used as drop-in replacements for the out-of-the-box (bundled) connector.
 
 The [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
 
