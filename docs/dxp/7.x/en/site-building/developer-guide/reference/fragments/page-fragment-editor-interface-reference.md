@@ -1,4 +1,4 @@
-# Page Fragment Editor Interface
+# Page Fragment Editor Interface Reference
 
 The Page Fragment editor's interface is organized into two tabs:
 
@@ -23,7 +23,7 @@ The code editor is split into four panes:
 
 **Preview:** provides a live preview of the component that updates as you write code. You can switch between desktop, mobile, tablet, and expanded views.
 
-![The Fragments editor provides an environment for creating all the parts of a Fragment.](./the-page-fragments-editor/images/01.png)
+![The Fragments editor provides an environment for creating all the parts of a Fragment.](./page-fragment-editor-interface-reference/images/01.png)
 
 ## Configuration
 
@@ -41,4 +41,4 @@ Configuration values are made available to the Page Fragment through the FreeMar
 
 In DXP 7.3+, you can also select a checkbox near the top of the page to make your fragment cacheable. If this option is enabled, then the fragment will be added to DXP's cache when it is added to a page, improving the performance of pages with these fragments.
 
-![Check the Cacheable option to improve the performance of your pages by caching the fragment.](./the-page-fragments-editor/images/02.png)
+![Check the Cacheable option to improve the performance of your pages by caching the fragment.](./page-fragment-editor-interface-reference/images/02.png)
