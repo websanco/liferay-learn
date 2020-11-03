@@ -5,9 +5,9 @@
 				{
 					"dataType": "string",
 					"defaultValue": "dark",
-					"description": "this-is-the-style-that-will-be-applied",
-					"label": "applied-style",
-					"name": "textAppliedStyle",
+					"description": "text-style-to-be-applied",
+					"label": "Text Style",
+					"name": "c7f8TextStyle",
 					"type": "select",
 					"typeOptions": {
 						"validValues": [
@@ -21,7 +21,7 @@
 					}
 				}
 			],
-			"label": "text style"
+			"label": "C7F8 Text Style"
 		}
 	]
 }
