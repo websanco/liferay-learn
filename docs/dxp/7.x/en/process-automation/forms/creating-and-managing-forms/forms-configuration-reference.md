@@ -37,12 +37,12 @@ On the _Email Notifications_ tab, you can configure the Forms app to send a noti
 
 | Field | Description |
 | --- | --- |
-| From Name | Specifies a user name |
-| From Address | Specifies an email address used to send the email |
-| To Address | Specifies the recipient's email address |
-| Subject | Specifies the email message, such as a confirmation |
+| From Name | The sender's name; this could be the Site name, the form name, or anything else informative to the recipient. |
+| From Address | The sender's email address; You can use `noreply@example.com` to prevent recipients from replying. |
+| To Address | The recipient's email address (e.g., `test@example.com`) |
+| Subject | An informative subject line tells the recipient what happened. |
 
-To learn more, see [Configuring Form Notifications](./configuring-form-notifications.md)
+To learn more, see [Configuring Form Notifications](./configuring-form-notifications.md).
 
 ## Form Widget Configuration
 
