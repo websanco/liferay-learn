@@ -1,0 +1,10 @@
+{
+  "generator-liferay-fragments": {
+    "promptValues": {
+      "host": "http://localhost:8080",
+      "username": "test@liferay.com",
+      "companyId": "20097",
+      "groupId": "20121"
+    }
+  }
+}
