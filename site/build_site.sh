@@ -88,7 +88,7 @@ function configure_env {
 
 		activate_venv
 
-		npm_install generator-liferay-theme yo
+		npm_install generator-liferay-fragments generator-liferay-theme yo
 	fi
 }
 
