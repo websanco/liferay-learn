@@ -1,8 +1,8 @@
 {
-  "cssPath": "index.css",
-  "configurationPath": "configuration.json",
-  "htmlPath": "index.html",
-  "jsPath": "index.js",
-  "name": "IR3 Card",
-  "type": "component"
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"htmlPath": "index.html",
+	"jsPath": "index.js",
+	"name": "I6R3 Card",
+	"type": "component"
 }
