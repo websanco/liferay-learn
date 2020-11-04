@@ -1,8 +1,8 @@
 {
-  "cssPath": "styles.css",
-  "configurationPath": "configuration.json",
-  "htmlPath": "index.html",
-  "jsPath": "main.js",
-  "name": "Marketing Card",
-  "type": "component"
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"htmlPath": "index.html",
+	"jsPath": "index.js",
+	"name": "A2F8 Card",
+	"type": "component"
 }
