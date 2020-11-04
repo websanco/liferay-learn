@@ -1,8 +1,8 @@
 {
-  "cssPath": "styles.css",
+  "cssPath": "index.css",
   "configurationPath": "configuration.json",
   "htmlPath": "index.html",
-  "jsPath": "main.js",
+  "jsPath": "index.js",
   "name": "Resources Marketing Card",
   "type": "component"
 }
