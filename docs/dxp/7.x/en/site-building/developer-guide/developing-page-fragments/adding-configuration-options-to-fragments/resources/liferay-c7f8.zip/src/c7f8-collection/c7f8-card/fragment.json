@@ -1,8 +1,8 @@
 {
 	"configurationPath": "configuration.json",
-	"cssPath": "styles.css",
+	"cssPath": "index.css",
 	"htmlPath": "index.html",
-	"jsPath": "main.js",
+	"jsPath": "index.js",
 	"name": "C7F8 Card",
 	"type": "component"
 }
