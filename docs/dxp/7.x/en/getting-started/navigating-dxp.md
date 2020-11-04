@@ -44,7 +44,7 @@ Beginning in Portal 7.3, Liferay Commerce 3.0 is now bundled with Liferay Portal
 
 ![The Commerce Menu contains all store functions.](./navigating-dxp/images/03.png)
 
-To learn more about Liferay Commerce, see the following, see [Introduction to Liferay Commerce](https://learn.liferay.com/commerce/2.x/en/starting-a-store/introduction-to-liferay-commerce.html).
+To learn more about Liferay Commerce, see [Introduction to Liferay Commerce](https://learn.liferay.com/commerce/2.x/en/starting-a-store/introduction-to-liferay-commerce.html).
 
 Here are some functions that can be managed from the _Commerce_ menu:
 
