@@ -68,7 +68,7 @@ Define all of the tokens within each token set's `frontendTokens` field. Here is
 
 * **defaultValue**: The default value displayed for the option. This field must match up with the default value used in the CSS.
 
-* **editorType**: Use this field if you want to use a color picker editor for the field. The only supported value is `"ColorPicker"`.
+* **editorType**: Use this field if you want to use a color picker editor for the field. The only supported value is `"ColorPicker"`. If no value is set, then a text input is used. If a select input is needed, then use the `validValues` property instead (the two properties cannot be used together).
 
 * **mappings**: The mapping between the token definition name to the corresponding CSS variable name (must contain `type` and `value` as nested fields). Use `"cssVariable"` as the `type`, and define the `value` as the CSS variable name.
 
@@ -78,7 +78,7 @@ Define all of the tokens within each token set's `frontendTokens` field. Here is
 
 * **type**: The type of data that the token will show. Use `"Integer"`, `"Float"`, or `"String"` to display a text field that can hold those types of values. Use `"Boolean"` to instead display a checkbox.
 
-* **validValues**: Optional property that lists available options for the User in the UI. This field must contain a nested list of `label` and `value` pairs (`value` is the field's value in CSS). This property cannot be used together with `editorType`.
+* **validValues**: Optional property that lists available options for the User in the UI. This field must contain a nested list of `label` and `value` pairs (`value` is the field's value in CSS). This property cannot be used together with `editorType`. Defining a value for `validValues` makes the input type automatically a select input.
 
 Here is an example list of tokens within a token set:
 
