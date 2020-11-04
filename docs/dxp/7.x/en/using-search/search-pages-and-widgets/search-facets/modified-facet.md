@@ -8,7 +8,7 @@ In addition to selecting a pre-configured time period, Users can select a Custom
 
 ## Configuring the Modified Facet
 
-The Modified Facet contains several configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
+To configure the Modified Facet, open the Options menu (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](modified-facet/images/02.png)
 

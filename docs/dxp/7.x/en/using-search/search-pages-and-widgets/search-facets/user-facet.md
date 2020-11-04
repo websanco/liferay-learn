@@ -6,7 +6,7 @@ The User Facet narrows search results down to those created by certain Users.
 
 ## Configuring the User Facet
 
-The User Facet contains several configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
+To configure the User Facet, open the Options menu (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](user-facet/images/02.png)
 

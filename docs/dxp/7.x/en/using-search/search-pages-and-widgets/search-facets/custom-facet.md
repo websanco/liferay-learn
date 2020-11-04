@@ -1,6 +1,6 @@
 # Custom Facet
 
-Each of the search facets are configurable, allowing you to change the look and feel of the facet. But the Custom Facet let's you create an entirely new facet with much more customization.
+The Custom Facet is unique among the out of the box search facets. Rather than group results by a single static field (like the modified date, or the asset type), the Custom Facet lets you choose which field to group results by. You can create an entirely new facet with much more customization.
 
 ## Configuring the Custom Facet
 

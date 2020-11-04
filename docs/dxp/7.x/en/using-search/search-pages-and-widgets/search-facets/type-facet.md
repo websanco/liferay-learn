@@ -22,7 +22,7 @@ By default, all available Asset Types are displayed as facet terms:
 
 ## Configuring the Type Facet
 
-The Type Facet contains several configuration options. To configure, click on the Options icon (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
+To configure the Type Facet, open the Options menu (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](type-facet/images/02.png)
 
