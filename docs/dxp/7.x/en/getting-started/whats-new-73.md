@@ -20,7 +20,7 @@ There's also a panel listing all actions performed, for quick movement to any pa
 
 ![The Collection Display fragment publishes assets using a drag and drop interface.](./whats-new-73/images/02.gif)
 
-The Collection Display fragment shows sets of assets, with drag and drop editing. When the fragment is added to the page, you link it to a collection. It then defines a space for each asset in the collection. Adjustments made to the spaces are replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping propagates to each item.
+The [Collection Display](../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md) fragment shows sets of assets, with drag and drop editing. When the fragment is added to the page, you link it to a collection. It then defines a space for each asset in the collection. Adjustments made to the spaces are replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping propagates to each item.
 
 ### Visual Responsive Layout Editor
 
@@ -52,7 +52,7 @@ A [Stylebook](../site-building/site-appearance/creating-a-style-book.md) is a gr
 
 ### Asset Libraries
 
-You can now create [dedicated libraries](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) to organize and reuse your content. Asset libraries make it easier to reuse resources across different Sites. 
+You can now create [dedicated libraries](../content-authoring-and-management/asset-libraries/asset-libraries-overview.md) to organize and reuse your content. Asset libraries make it easier to reuse resources across different Sites. 
 
 Asset Libraries aren't limited to web content: you can share any asset type and connect them to the Sites where they're needed.While creating a page or writing a blog post, content authors can access the connected asset libraries and use images, documents or content stored in them. 
 
