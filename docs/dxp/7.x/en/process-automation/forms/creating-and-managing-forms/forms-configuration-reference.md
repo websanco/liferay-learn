@@ -1,5 +1,7 @@
 # Forms Configuration Reference
 
+This article serves as a reference for all Forms and the Form application configurations.
+
 ## Forms Options
 
 You can export and import forms between Sites to save time and not have to recreate them. To access the _Export / Import_ menu, navigate to _Site Administration_ &rarr; _Content and Data_  &rarr; _Forms_. Click the ![Options](../../../images/icon-options.png) icon in the upper right then _Export / Import_.
@@ -25,7 +27,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 | Save Answers Automatically | Saves answers to the form automatically |
 | Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
 | Select a Storage Type | Sets JSON as the default storage type; not editable. |
-| Select a [Workflow](../../workflow/user-guide/introduction-to-workflow.md) | Select a workflow definition to review the form submission; workflow is deactivated by default. |
+| Select a [Workflow](./advanced-forms-usage/using-forms-with-a-workflow.md) | Select a workflow definition to review the form submission; workflow is deactivated by default. |
 
 ### Email Notifications
 
