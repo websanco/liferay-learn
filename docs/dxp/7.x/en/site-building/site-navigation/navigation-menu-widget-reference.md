@@ -1,12 +1,12 @@
 # Navigation Menu Widget Reference
 
-This reference article documents all the configurations on the _Navigation Menu_ widget that can be added to a Site Page. To access the _Configuration_ menu, click ![Options icon](../../images/icon-widget-options.png) at the top of the _Navigation Men_ widget.
+Below are all the options possible in the Navigation Menu widget. To access the Configuration menu, click ![Options icon](../../images/icon-widget-options.png) at the top of the navigation menu widget.
 
 ![Navigate to the Configuration menu.](./navigation-menu-widget-reference/images/01.png)
 
 ## Navigation Menu
 
-Select the desired navigation menu type; the desired navigation menu type will be displayed in the Preview box.
+Select the desired navigation menu type; the desired navigation menu type appears in the Preview box.
 
 | Navigation Menu Type | Description |
 | --- | --- |
@@ -14,14 +14,14 @@ Select the desired navigation menu type; the desired navigation menu type will b
 | **Primary Navigation** | Primary Navigation is the main navigation for a page. |
 | **Secondary Navigation** | Secondary Navigation is a second level of navigation, possibly a sidebar or a separate menu within a page. |
 | **Social Navigation** | Social Navigation is for menus that contain links for sharing content on social media or similar tasks. |
-  
-Alternately, users can choose a _Navigation Menu_ by clicking the _Select_ button.
+
+Alternately, you can choose a navigation menu by clicking the _Select_ button.
 
 ![Select the type of Navigation Menu.](./navigation-menu-widget-reference/images/02.png)
 
 ## Display Templates
 
-The *Display Template* option lets you select an [Widget Template](../displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) for Navigation Menus. Users can choose from one of the following:
+You can select a [Widget Template](../displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) for navigation menus:
 
 ![Select the Display Template.](./navigation-menu-widget-reference/images/03.png)
 
@@ -40,16 +40,16 @@ The *Display Template* option lets you select an [Widget Template](../displaying
 
 ## Menu Items to Show
 
-This section configures which pages at what level from the menu are displayed in the widget. You can choose the starting level, how many levels deep to display, and how to display sub-levels.
+You can configure which pages at what level from the menu appear in the widget. You can choose the starting level, how many levels deep to display, and how to display sub-levels.
 
 ![Select the Menu Items to Show.](./navigation-menu-widget-reference/images/04.png)
 
 | Field | Description |
 | --- | --- |
-| **Start with Menu Items In** | Select the type of Level: choose from _Level_, _Level Relative to the Current Menu Item_, or _Select Parent_.  |
-| **Number of Levels** | Select the level number to display, from _0_ to _4_. Level 0 represents the parent page, Level 1 represents the first level child page, and so forth. |
-| **Levels to Display:** | Select the number of levels to display in the navigation, from _1_ down to _Unlimited_. |
-| **Expand Sublevels:** | Select _Auto_ or _All_ from this dropdown menu; this determines if hovering the mouse over the navigation reveals navigation levels one at a time automatically or reveal all the levels at once. |
+| **Start with Menu Items In** | Select the type of Level: _Level_, _Level Relative to the Current Menu Item_, or _Select Parent_.  |
+| **Number of Levels** | Select the level number to display, from 0 to 4. Level 0 represents the parent page, Level 1 represents the first level child page, and so forth. |
+| **Levels to Display:** | Select the number of levels to display in the navigation, from 1 down to Unlimited. |
+| **Expand Sublevels:** | Select _Auto_ or _All_ from this dropdown menu; this determines if hovering the mouse over the navigation reveals navigation levels one at a time automatically or all the levels at once. |
 
 ## Additional Information
 
