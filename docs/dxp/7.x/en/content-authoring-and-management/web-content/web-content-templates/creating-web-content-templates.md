@@ -6,7 +6,7 @@ Structures define the available fields for creating Web Content, while Web Conte
    Web Content Templates are written in the FreeMarker Template Language (FTL).
 ```
 
-Download the [Newspaper Article Structure](./resources/newspaper-article-structure.xml) and [Template](./resources/newspaper-article-template.ftl) to follow along with the example. Unzip it to a convenient location on your system.
+Download the [Newspaper Article Structure](./creating-web-content-templates/resources/newspaper-article-structure.xml) and [Template](./creating-web-content-templates/resources/newspaper-article-template.ftl) to follow along with the example. Unzip it to a convenient location on your system.
 
 1. Open the Product Menu and go to the Site Menu &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Templates* tab.
