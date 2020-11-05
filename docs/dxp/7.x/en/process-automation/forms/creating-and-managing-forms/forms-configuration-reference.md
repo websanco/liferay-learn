@@ -1,6 +1,6 @@
 # Forms Configuration Reference
 
-This article serves as a reference for all Forms and the Form application configurations.
+Most of the time you can find documentation for Forms configuration within the articles documenting Forms features. By contrast, this article provides an overview of all the Forms configurations so you can quickly find a configuration you need.
 
 ## Forms Options
 
@@ -46,7 +46,7 @@ To learn more, see [Configuring Form Notifications](./configuring-form-notificat
 
 ## Form Widget Configuration
 
-You can configure the _Form_ widget deployed to a Site Page. To access the _Configuration_ menu, click the ![Options](../../../images/icon-options.png) icon next to the widget title then _Configuration_.
+You can configure the _Form_ widget deployed to a Site Page. To access the _Configuration_ menu, click the ![Options](../../../images/icon-app-options.png) icon next to the widget title then _Configuration_.
 
 ### Setup
 
@@ -65,6 +65,58 @@ On the _Sharing_ tab, you can embed this application on other platforms besides 
 On the _Scope_ tab, you can change the widget's [scope](https://help.liferay.com/hc/articles/360028819992-Widget-Scope) from Global, Site, or Page.
 
 ![Select the desired scope for the Form Widget.](./forms-configuration-reference/images/06.png)
+
+## Instance Settings
+
+There are several Forms configuration which can be configured across a DXP Instance.
+
+To access the Instance settings:
+
+1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
+1. Click _Instance Settings_.
+
+    ![Access Instance Settings from the Control Panel.](./forms-configuration-reference/images/09.png)
+
+1. Click _Forms_ under the _Content and Data_ section.
+
+    ![Configure Forms in the Instance Settings menu.](./forms-configuration-reference/images/07.png)
+
+| Field | Description |
+| --- | --- |
+| Autosave Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
+| CSV Export | Determines whether administrators can download Form Entries as CSVs. |
+| Default Display View | Sets how the Forms are displayed in the search container. |
+
+## System Settings
+
+There are several system-wide Forms configuration.
+
+1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
+1. Click _System Settings_.
+1. Click _Forms_ under the _Content and Data_ section.
+
+### System Scope
+
+You can configure the _Form Navigator_ under the _System Scope_. Click _Add_ to add a new _Configuration Entry_.
+
+![You can configure Form Navigator.](./forms-configuration-reference/images/10.png)
+
+| Field | Description |
+| --- | --- |
+| Form Navigator ID | Enter the Form Navigator ID |
+| Form Navigator Entry Keys | Enter the entry key; if they are multiple keys, use comma separated lists. |
+
+### Site Scope
+
+Use the Site Scope settings to manage each Form's behavior. These are the similar to those in the Instance setting.
+
+![You can configure System-wide Forms settings.](./forms-configuration-reference/images/08.png)
+
+| Field | Description |
+| --- | --- |
+| Autosave Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
+| CSV Export | Determines whether administrators can download Form Entries as CSVs. |
+| Default Display View | Sets how the Forms are displayed in the search container. |
 
 ## Additional Information
 
