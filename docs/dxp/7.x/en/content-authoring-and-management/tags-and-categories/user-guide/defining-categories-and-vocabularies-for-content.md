@@ -25,7 +25,7 @@ You group Categories using [Vocabularies](#defining-vocabularies), and you creat
     - *Associated Asset Type*: Select the type of assets where you can apply a Category from this Vocabulary. Set *Required* to *Yes* if you want this type of asset always to have a Category.
 
         ```tip::
-           Click the *Add* (![Add](../../../images/icon-plus.png)) button under the *Associated Asset Type* section to include more than one asset type.
+           Click the *Add* button under the *Associated Asset Type* section to include more than one asset type.
         ```
 
         ![Define the category options for multiple asset types](./defining-categories-and-vocabularies-for-content/images/02.png)

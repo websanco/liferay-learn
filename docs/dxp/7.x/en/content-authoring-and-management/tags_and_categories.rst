@@ -1,4 +1,4 @@
-Tags and Categories
+Categories and Tags
 ===================
 .. toctree::
    :maxdepth: 4
