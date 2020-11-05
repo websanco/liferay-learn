@@ -108,7 +108,9 @@ Perform the following steps to generate an app password:
 
 In order for DXP Cloud to be able to properly link to your branches, you must provide it with a complete list of the branch prefixes in use in your repository. Each of the branch types used in your repository has its own prefix, which is defined in the repository's settings.
 
-On https://bitbucket.org, click _Repository settings_ &rarr; _Branching model_ from the menu on the left. This brings you to the _Branching model_ page, where the prefix for each of your branches is listed. Take note of each of these prefixes to add them to the `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI environment variable.
+On [the Bitbucket website](https://bitbucket.org), click _Repository settings_ &rarr; _Branching model_ from the menu on the left. This brings you to the _Branching model_ page, where the prefix for each of your branches is listed. Take note of each of these prefixes to add them to the `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI environment variable.
+
+![The default branch types (and prefixes) for a Bitbucket repository are bugfix/, feature/, hotfix/, and release/.](./configuring-your-bitbucket-repository/images/05.png)
 
 ## Connecting BitBucket to Your Jenkins service
 
@@ -129,7 +131,7 @@ Lastly, set environment variables in the Jenkins service's to point to your new 
 | `LCP_CI_SCM_USERNAME` | [auth username] |
 | `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` | [list of prefixes] |
 
-Define `LCP_CI_SCM_USERNAME` as the user that [generated the app password](#generating-app-password-for-bitbucket). Define `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` as a list of all [prefixes used in your repository's branches](#checking-the-branch-types-and-prefixes), separated by spaces.
+Define `LCP_CI_SCM_USERNAME` as the user that [generated the app password](#generating-app-password-for-bitbucket). Define `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` as a list of all [prefixes used in your repository's branches](#checking-branch-types-and-prefixes), separated by spaces.
 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in your new repository should now trigger.
 
@@ -141,7 +143,7 @@ To use a private Bitbucket server, you must set an additional environment variab
 | ---  | ---   |
 | `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
 
-Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private Bitbucket server (for example, `http://private.bitbucket.org/`.) This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://bitbucket.org/` as the base URL for Bitbucket.
+Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private Bitbucket server (for example, `http://private.bitbucket.org/`). This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://bitbucket.org/` as the base URL for Bitbucket.
 
 ## Verifying Builds
 
@@ -179,7 +181,7 @@ Verify that new pull requests trigger Jenkins builds:
 
 1. Click the links for the branch and commit in the appropriate build.
 
-    ![Check the links for the branch and commit for your build, on the Builds page.](./configuring-your-bitbucket-repository/images/05.png)
+    ![Check the links for the branch and commit for your build, on the Builds page.](./configuring-your-bitbucket-repository/images/06.png)
 
 1. Verify that the links redirect to the correct BitBucket pages.
 

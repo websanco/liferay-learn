@@ -120,7 +120,7 @@ To use a private GitLab server, you must set an additional environment variable 
 | ---  | ---   |
 | `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
 
-Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private GitLab server (for example, `http://private.gitlab.server.com/`.) This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://gitlab.com/` as the base URL for GitLab.
+Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private GitLab server (for example, `http://private.gitlab.server.com/`). This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://gitlab.com/` as the base URL for GitLab.
 
 ## Additional GitLab Webhook Configurations
 
