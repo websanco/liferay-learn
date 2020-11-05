@@ -110,7 +110,17 @@ Lastly, set environment variables in the Jenkins service's to point to your new 
 | `LCP_CI_SCM_REPOSITORY_NAME` | [repo_name] |
 | `LCP_CI_SCM_TOKEN` | [access_token] |
 
-After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in your new repository trigger builds.
+After updating these environment variables, the Jenkins service restarts. Any pushed branches and pull requests in your new repository trigger builds.
+
+## Connecting to a Private GitLab Server
+
+To use a private GitLab server, you must set an additional environment variable in your Jenkins service:
+
+| Name | Value |
+| ---  | ---   |
+| `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
+
+Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private GitLab server (for example, `http://private.gitlab.server.com/`.) This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://gitlab.com/` as the base URL for GitLab.
 
 ## Additional GitLab Webhook Configurations
 
