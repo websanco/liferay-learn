@@ -4,7 +4,7 @@ Setting Up Liferay DXP
 .. toctree::
    :maxdepth: 3
 
-   setting-up-liferay-dxp/setting-up-liferay-dxp.md
+   setting-up-liferay-dxp/setting-up-liferay.md
    setting-up-liferay-dxp/activating-liferay-dxp.md
    setting-up-liferay-dxp/initial-instance-localization.md
    setting-up-liferay-dxp/using-a-cdn.md

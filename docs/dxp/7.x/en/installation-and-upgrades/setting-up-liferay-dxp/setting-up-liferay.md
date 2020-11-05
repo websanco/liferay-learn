@@ -2,7 +2,15 @@
 
 After installing Liferay, you can configure it to meet your needs. Here are common setup tasks. 
 
-## Activate Liferay DXP (subscribers)
+| Task | &#9745; |
+| --- | --- |
+| Activate Liferay (Subscription Required) | &#x25a2; |
+| Localize Your Instance | &#x25a2; |
+| Configure Mail | &#x25a2; |
+| Activate Liferay (Subscription Required) | &#x25a2; |
+| Activate Liferay (Subscription Required) | &#x25a2; |
+
+## Activate Liferay
 
 > Subscribers
 
@@ -14,15 +22,15 @@ Configure your Liferay instance's locale and time zone, using the [Setup Wizard]
 
 ## Configure Mail
 
-Set up a mail server to communicate with users. See [Configuring Mail](./configuring-mail.md) to learn how.
+Set up a mail server to communicate with users. See [Configuring Mail](./configuring-mail/connecting-to-a-mail-server.md) to learn how.
 
 ## Configure File Storage 
 
-Using [Documents and Media](../../content-authoring-and-management/documents-and-media/introduction-to-documents-and-media.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../../system-administration/file_storage.md) to configure it.
+Using [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../../system-administration/file-storage/configuring-file-storage.md) to configure it.
 
 ## Install a Search Engine 
 
-Empower users to search your site. Search engines such as Liferay Enterprise Search return results fast. Visit [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md).
+Empower users to search your site. Search engines such as Liferay Enterprise Search return results fast. Visit [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md).
 
 ## Install Apps From Marketplace 
 
@@ -43,7 +51,7 @@ Here are some additional features to consider setting up:
 You may also need to import data from systems such as [LDAP](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md). Search this site for other systems you'd like to integrate.
 
 ```note::
-   See `Maintaining Clustered Installations <docs/dxp/7.x/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md>`_ for guidance. 
+   See `Maintaining Clustered Installations <../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md>`_ for guidance. 
 ```
 
 ## What's Next 
