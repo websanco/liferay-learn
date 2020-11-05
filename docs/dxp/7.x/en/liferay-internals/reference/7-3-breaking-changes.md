@@ -1,9 +1,6 @@
 # 7.3 Breaking Changes
 
-This document presents a chronological list of changes that break existing
-functionality, APIs, or contracts with third party Liferay developers or users.
-We try our best to minimize these disruptions, but sometimes they are
-unavoidable.
+This document presents a chronological list of changes that break existing functionality, APIs, or contracts with third party Liferay developers or users. We try our best to minimize these disruptions, but sometimes they are unavoidable.
 
 Here are some of the types of changes documented in this file:
 
@@ -11,11 +8,9 @@ Here are some of the types of changes documented in this file:
 * API incompatibilities: Changes to public Java or JavaScript APIs
 * Changes to context variables available to templates
 * Changes in CSS classes available to Liferay themes and portlets
-* Configuration changes: Changes in configuration files, like
-  `portal.properties`, `system.properties`, etc.
+* Configuration changes: Changes in configuration files, like `portal.properties`, `system.properties`, etc.
 * Execution requirements: Java version, J2EE Version, browser versions, etc.
-* Deprecations or end of support: For example, warning that a certain
-  feature or API will be dropped in an upcoming version.
+* Deprecations or end of support: For example, warning that a certain feature or API will be dropped in an upcoming version.
 
 ## Breaking Changes List
 
@@ -711,7 +706,7 @@ The `ddmFieldArray` has several entries with following fields:
 
 #### Who is affected?
 
-This affects anyone with custom developments that execute queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
+This affects anyone with custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
 
 #### How should I update my code?
 
