@@ -9,11 +9,6 @@
 		"npm": ">= 6.0.0"
 	},
 
-	"keywords": [
-		"liferay",
-		"liferay-fragments"
-	],
-
 	"scripts": {
 		"add-collection": "yo liferay-fragments:collection",
 		"add-fragment": "yo liferay-fragments:fragment",
