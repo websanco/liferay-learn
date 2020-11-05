@@ -23,7 +23,7 @@ See the [Using the Show-Hide Rule](./form-rules/using-the-show-hide-rule.md) art
 
 Like the Show-Hide Rule, the _Enable/Disable_ Rule makes a field editable based on one or more conditions. This is useful for entering optional information or gathering data from only users who fall under a particular group. For example, a campsite or a doctor's office might ask people to list medications or allergies that might affect treatment. This field is editable only if the user selects Yes.
 
-See the [Using the Enable-Disable Rule](./form-rules/using-the-enable-disable-rule.md)
+See the [Using the Enable-Disable Rule](./form-rules/using-the-enable-disable-rule.md) article to learn more.
 
 ## Jump to Page Rule
 
@@ -33,13 +33,13 @@ See the [Using the Jump-to-Page Rule](./form-rules/using-the-jump-to-page-rule.m
 
 ## Autofill Rule
 
-The _Autofill_ Rule filters a form field's options based on pre-configured conditions. One common use is populating states and provinces, countries and regions then applying a conditional filter. For example, respondents select their geographic region (Europe, North America, Asia, etc.) then select a country (Germany, USA, Malaysia, etc.). You should first connect a [data provider](../data-providers-overview.md) enabled before using the _Autofill_ Rule. See [Using Data Providers to Populate Form Options]((../using-data-providers-to-populate-form-options.md)) to learn more.
+The _Autofill_ Rule filters a form field's options based on pre-configured conditions. One common use is populating states and provinces, countries and regions then applying a conditional filter. For example, respondents select their geographic region (Europe, North America, Asia, etc.) then select a country (Germany, USA, Malaysia, etc.). You should first connect a [data provider](./data-providers-overview.md) enabled before using the _Autofill_ Rule. See [Using Data Providers to Populate Form Options](./using-data-providers-to-populate-form-options.md) to learn more.
 
 ## Require Rule
 
 You can use a _Require_ rule to make a field required based on one or more conditions. Require Rules work in association with other Rules, such as the _Show_ Rule. For example, a car rental form has a section where respondents indicate if they are applying a discount to the rental. If the answer is _YES_, the respondents must enter the promo code in order to get the discount.
 
-See the [Using the Require Rule](./forms-rules/using-the-require-rule.md) article to learn more.
+See the [Using the Require Rule](./form-rules/using-the-require-rule.md) article to learn more.
 
 ## Calculate Rule
 
@@ -49,7 +49,7 @@ Create _Calculate_ Form rules that populate a numeric field by calculating its v
    Calculations are limited to numeric fields.
 ```
 
-See the [Using the Calculate Rule](./forms-rules/using-the-calculate-rule.md) article to learn more.
+See the [Using the Calculate Rule](./form-rules/using-the-calculate-rule.md) article to learn more.
 
 ## Additional Information
 
