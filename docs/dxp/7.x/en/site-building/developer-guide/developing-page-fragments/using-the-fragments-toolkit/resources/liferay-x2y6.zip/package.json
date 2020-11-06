@@ -1,17 +1,13 @@
 {
-	"name": "liferay-fragments-project",
-	"description": "Liferay Fragments project",
-	"version": "1.0.0",
+	"dependencies": {
+		"generator-liferay-fragments": "*",
+		"yo": ">=2.0.0"
+	},
 
 	"engines": {
 		"node": ">= 8.0.0",
 		"npm": ">= 6.0.0"
 	},
-
-	"keywords": [
-		"liferay",
-		"liferay-fragments"
-	  ],
 
 	"scripts": {
 		"add-collection": "yo liferay-fragments:collection",
