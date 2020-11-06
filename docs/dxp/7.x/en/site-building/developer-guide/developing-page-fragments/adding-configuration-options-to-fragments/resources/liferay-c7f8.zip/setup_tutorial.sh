@@ -26,4 +26,7 @@ then
     echo "Missing a dependency. Please install the tutorial dependencies by running the following command:
 
     npm install -g generator-liferay-fragments generator-liferay-js generator-liferay-theme yo"
+    exit
 fi
+
+echo "Your environment checked out fine. You're ready to start the tutorial."
