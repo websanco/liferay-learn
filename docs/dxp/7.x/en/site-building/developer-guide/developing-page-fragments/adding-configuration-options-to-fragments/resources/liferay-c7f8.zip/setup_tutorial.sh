@@ -1,32 +1,33 @@
 #!/bin/sh
 
-if [ -z "$NPM_CONFIG_PREFIX" ]
+if [ -z "${NPM_CONFIG_PREFIX}" ]
 then
-    echo "NPM_CONFIG_PREFIX not set. Please set environment variable NPM_CONFIG_PREFIX to a folder for storing Node packages.
-For example,
+    echo "The environment variable NPM_CONFIG_PREFIX is not set and needs to point to a folder for storing Node packages. Run this command:
 
     export NPM_CONFIG_PREFIX=~/.npm-global"
+
     exit
 fi
 
-if [[ "$PATH" != *"$NPM_CONFIG_PREFIX/bin"* ]]
+if [[ "${PATH}" != *"${NPM_CONFIG_PREFIX}/bin"* ]]
 then
-    echo "$NPM_CONFIG_PREFIX/bin not in PATH. Please add $NPM_CONFIG_PREFIX/bin to your PATH.
-For example,
+    echo "The environment variable PATH does not include ${NPM_CONFIG_PREFIX}/bin. Add ${NPM_CONFIG_PREFIX}/bin to your PATH. Run this command:
 
-    export PATH=\$PATH:\$NPM_CONFIG_PREFIX/bin"
+    export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
+
     exit
 fi
 
-if  [ ! -d "$NPM_CONFIG_PREFIX/lib/node_modules/yo" ] ||
-    [ ! -d "$NPM_CONFIG_PREFIX/lib/node_modules/generator-liferay-fragments" ] ||
-    [ ! -d "$NPM_CONFIG_PREFIX/lib/node_modules/generator-liferay-js" ] ||
-    [ ! -d "$NPM_CONFIG_PREFIX/lib/node_modules/generator-liferay-theme" ]
+if  [ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-fragments" ] ||
+    [ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-js" ] ||
+    [ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-theme" ] ||
+    [ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/yo" ]
 then
-    echo "Missing a dependency. Please install the tutorial dependencies by running the following command:
+    echo "A tutorial dependency is missing. Run this command:
 
     npm install -g generator-liferay-fragments generator-liferay-js generator-liferay-theme yo"
+
     exit
 fi
 
-echo "Your environment checked out fine. You're ready to start the tutorial."
+echo "Your environment is ready for the tutorial."
