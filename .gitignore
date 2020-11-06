@@ -7,6 +7,8 @@ docs/**/liferay-????.zip/gradle.properties
 docs/**/liferay-????.zip/gradle/
 docs/**/liferay-????.zip/gradlew
 docs/**/liferay-????.zip/gradlew.bat
+docs/**/liferay-????.zip/package.json
 docs/**/liferay-????.zip/settings.gradle
+docs/**/liferay-????.zip/setup_tutorial.sh
 docs/**/liferay-????.zip/source-formatter-suppressions.xml
 node_modules

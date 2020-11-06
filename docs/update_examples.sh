@@ -12,17 +12,25 @@ function copy_template {
 
 	for zip_dir_name in `find . -name ${zip_dir_name_pattern} -type d`
 	do
-		cp -fr _template/* ${zip_dir_name}
+		gradle_build_file_count=$(find ${zip_dir_name} -name build.gradle | wc -l)
 
-		local liferay_workspace_product=portal-7.3-ga6
+		if [ "${gradle_build_file_count}" -gt 0 ]
+		then
+			cp -fr _template/java/* ${zip_dir_name}
 
-		echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
+			local liferay_workspace_product=portal-7.3-ga6
 
-		pushd ${zip_dir_name}
+			echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
 
-		./gradlew classes formatSource
+			pushd ${zip_dir_name}
 
-		popd
+			./gradlew classes formatSource
+
+			popd
+		else
+			cp -fr _template/js/* ${zip_dir_name}
+		fi
+
 	done
 }
 
