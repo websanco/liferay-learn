@@ -2,7 +2,7 @@
 
 The default search page is backed by a Global scope page template. Manually created search pages can use that same template as a baseline. Out-of-the-box, the Search Page Template includes a Search Bar, Search Results, Search Suggestions, Search Options, and several Search Facet widgets:
 
-<!-- Please update image without Lunar Resort. ![The Search Page template gets you up and running.](./using-a-search-page-template/images/01.png) -->
+![The Search Page template gets you up and running.](./using-a-search-page-template/images/01.png)
 
 The template can be used in two ways: to [manage search pages](#using-a-page-template-to-manage-search-pages) created using the template, or to [create a baseline search page](#using-a-page-template-to-create-a-baseline-search-page) that is configured independently of the template.
 
@@ -56,6 +56,10 @@ The page is now created based on the template and can be further tweaked and con
 
 By default, all widgets use the _Barebone_ Application Decorator: unless there's content to render in the widget, the widget body is hidden. The header and the widget options icon are displayed if you hover over the widget with your mouse. Because of this, when you visit a search page, you won't see certain widgets fully rendered.
 
-<!-- A screenshot or two comparing/contrasting the apperaance of Barebone vs. Borderless would be helpful -->
+![Search page with barebone look and feel.](./using-a-search-page-template/images/03.png)
 
 By contrast, when you add a search widget to a page manually, they use the _Borderless_ decorator (by default), which shows more of the widget even when there is no content to display.
+
+![Search page with borderless look and feel.](./using-a-search-page-template/images/04.png)
+
+Notice when the look and feel of the page is configured with the borderless decorator, the Category facet is now visible.

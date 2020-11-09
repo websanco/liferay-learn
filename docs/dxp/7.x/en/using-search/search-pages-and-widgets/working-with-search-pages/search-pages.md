@@ -25,9 +25,9 @@ Behind the scenes, The search bar widget points to a hidden search page with the
 
 Entering a search query redirects to the default search page, where results are displayed in the Search Results widget.
 
-<!-- I think more can be said here to introduce users to how, on the default search page, multiple widgets are added to a page to provide a cohesive experience. So in this case that the default search page is comprised of a Search results widget (A), a modified facet widget, user facet widget, folder, tag, type widgets - this helps to lay the groundwork for people that a search page is a combination of widgets that provide a specific type of experience. -->
-
 ![The default search page provides a full search experience.](./search-pages/images/03.png)
+
+In addition to the search results themselves, the default search page provides various facets that can be used to further filter results. In the example above, the Type facet, User fact, and Last Modified facet can be seen in the left sidebar. Read more about the different [search facets](./search-facets.md) that are available and how they can be customized.
 
 The default search page is based on the Search page template, but it doesn't inherit changes from the template by default. That means you can customize the search page directly without changing the template's inheritance configuration.
 
