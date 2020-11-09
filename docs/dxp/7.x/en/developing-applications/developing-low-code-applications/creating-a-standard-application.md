@@ -1,17 +1,15 @@
 # Creating a Standard Application
 
-To create applications based on a custom object: create the object, create at least one form view, create at least one table view, and deploy the application.
+To create applications based on a custom object takes four steps: create the object, create at least one form view, create at least one table view, and deploy the application.
 
 * [Creating a Custom Object](#creating-a-custom-object)
 * [Creating Form Views](#creating-form-views)
 * [Creating Table Views](#creating-table-views)
 * [Deploying the Application](#deploying-the-application)
 
-Here we'll create two simple time off management applications with App Builder, backed by a custom object called Time Off Request. The first application will be a Time Off Requester widget that just shows an Add Request form. The application's users will fill out this form when they want to request time off. The second application is a Time Off Management application deployed to the Product Menu, where administrative Users can see and manage the Time Off Requests.
+Here you'll create two simple time off management applications with App Builder, backed by a custom object called Time Off Request. The first application is a Time Off Requester widget that just shows an Add Request form. Users fill out this form when they want to request time off. The second application is a Time Off Management application deployed to the Product Menu, where administrative Users can see and manage the Time Off Requests.
 
 ## Creating a Custom Object
-
-Create the Time Off Request custom object:
 
 1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Custom Objects.
 
@@ -21,19 +19,17 @@ Create the Time Off Request custom object:
 
 1. To create a form view for the object and define the data fields present in the object, leave the _Continue and Create Form View_ setting checked and click _Continue_.
 
-    ![Creating a custom object is the first step to writing an App Builder application.](./creating-a-standard-application/images/01.png)
+   ![Creating a custom object is the first step to writing an App Builder application.](./creating-a-standard-application/images/01.png)
 
 Define the data fields to include in the Time Off Request object by creating a form view.
 
 ## Creating Form Views
 
-A form view defines the visual interface that users will use to enter the data you define in your Custom Object. You may create as many form views as needed for your application. In this example, the Time Off Requester and Manager applications only need one form view between them.
-
-Create a Form View:
+A form view defines the visual interface used to enter the data defined in your Custom Object. You can create as many form views as needed for your application. The Time Off Requester and Manager applications only need one form view between them:
 
 1. Open the custom object (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
-1. From the _Form Views_ tab, click the Add button. The Form Builder is displayed.
+1. From the _Form Views_ tab, click the Add button. The Form Builder appears.
 
 1. Name the form view _Add Request_.
 
@@ -48,35 +44,35 @@ Create a Form View:
 
     ![Use the form builder embedded inside the App Builder to create form views.](./creating-a-standard-application/images/02.png)
 
-In addition to the embedded form builder, any fields included in the custom object (via the existence of other form views) are available to add to the form view in the left sidebar.
+In addition to the embedded form builder, any fields included in the custom object (via the existence of other form views) can be added to the form view in the left sidebar.
 
-To define how users will view and interact with your application's data, create a table view.
+To define how users view and interact with your application's data, create a table view.
 
 ## Creating Table Views
 
-Table views are for displaying and managing (deleting, editing) entries that have been submitted to your application. Like form views, a custom object can have one or multiple table views. The Time Off Requester and Manager applications only need one table view between them.
+Table views display and manage (deleting, editing) entries submitted to your application. Like form views, an object can have one or multiple table views. The Time Off Requester and Manager applications only need one table view between them.
 
 1. Open the Time Off Request object (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
-1. From the Table Views tab, click the Add button. The Table Builder is displayed.
+1. From the Table Views tab, click the _Add_ button. The Table Builder appears.
 
     ![Use the table builder embedded inside the App Builder to create table views.](./creating-a-standard-application/images/03.png)
 
 1. Name the table view _Time Off Requests_.
 
-1. Drag all the available fields except for the Comment field onto the table canvas.
+1. Drag all the available fields except the Comment field onto the table canvas.
 
 1. Save the table view.
 
 ```note::
-    Even though it's not in the table view, the Comment field is still visible in the Details View of an individual record. In a deployed application, click on a specific record from the table view to display the Details View of the record.
+    Even though it's not in the table view, the Comment field still appears in the Details View of an individual record. In a deployed application, click a specific record from the table view to display its Details View. 
 ```
 
 ## Deploying the Application
 
-Deploying an application is what makes it accessible to users. There are several ways you can make your application available to users. See the [App Builder Overview](./app-builder-overview.md#deployment) learn about the deployment options.
+Deploying an application makes it accessible to users. There are several deployment options. See the [App Builder Overview](./app-builder-overview.md#deployment) to learn about them. 
 
-We will deploy two applications for the Time Off Request object: one is a widget application that we can add to a site page for users to access, and the other is an administrative application in the [Product Menu](../../getting-started/navigating-dxp.md#product-menu), where the request can be managed by users with additional permissions.
+The Time Off Request has two apps to deploy: a widget application for adding to a page, and an administrative application in the [Product Menu](../../getting-started/navigating-dxp.md#product-menu), where requests can be managed by those with additional permissions.
 
 1. Open the Time Off Request (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
@@ -90,17 +86,17 @@ We will deploy two applications for the Time Off Request object: one is a widget
 
 1. Select the form view, the table view, and configure the [deployment options](./app-builder-overview.md#deployment) for the app.
 
-    For the _Time Off Requester_ application, select _Widget_ and click Deploy. The _Time Off Requester_ widget application can now be deployed to a site's page and utilized immediately by site users.
+   For the Time Off Requester application, select _Widget_ and click _Deploy_. The Time Off Requester widget application can now be deployed to a page and utilized immediately by site users.
 
-1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu (leave the defaul selection to add it to the Applications Menu).
+1. Following the same procedure, create a second app called _Time Off Request Manager_, this time choosing to deploy the app in the Product Menu (leave the default selection to add it to the Applications Menu).
 
     ![Here's the Time Off Request Manage entry in the Applications Menu.](./creating-a-standard-application/images/04.png)
 
-Administrators can now access the _Time Off Manager_ application in the Product Menu to begin monitoring time off requests from site users.
+Administrators can now access the Time Off Manager application in the Product Menu to begin monitoring time off requests from site users.
 
 ## Undeploying an Application
 
-You can undeploy and redeploy App Builder applications at any time (e.g., if a new set of time off management applications are created). If you undeploy an application, any entries already submitted are preserved, but no new entries can be added. To undeploy,
+You can undeploy and redeploy App Builder applications at any time (e.g., if a new set of time off management applications are created). If you undeploy an application, entries already submitted are preserved, but no new entries can be added: 
 
 1. Open the custom object (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
@@ -110,25 +106,25 @@ You can undeploy and redeploy App Builder applications at any time (e.g., if a n
 
 ## Editing an Object with Data Records
 
-The App Builder is designed to prevent data corruption or loss. Deleting, adding, or editing a field, even after data records have been added for it, is permitted.
+You can delete, add, or edit a field, even after data records have been added for it, and the App Builder prevents data corruption or loss. 
 
 ### Deleting Fields
 
-Deleting a field from an object that already has data records prevents the field from display in the UI, but doesn't delete the data. If you create a field with same name and type as a deleted field, the field's data will be restored for records that already hold its data.
+Deleting a field from an object with existing data records prevents the field from display in the UI, but doesn't delete the data. If you create a field with same name and type as a deleted field, the field's data is restored for records that already hold its data.
 
-To remove a field from an existing object, hover over it in the object view and click the *x*. You'll be asked for confirmation and warned about data loss.
+To remove a field from an existing object, hover over it in the object view and click the *x*. You're asked for confirmation and warned about data loss.
 
-![Deleting a field will cause data loss for existing records.](./creating-a-standard-application/images/06.png)
+![Deleting a field causes data loss for existing records.](./creating-a-standard-application/images/06.png)
 
 ### Adding and Editing Fields
 
-When you add or edit a field already being used in an object, the changes to the object will only affect records added after the add or edit. All existing records remain unaffected by the change to the object.
+When you add or edit an existing field, the changes only affect records added after the add or edit. Existing records remain unaffected by the change. 
 
-To add a field directly to an existing object, open the any of the object's form views and click the add button in the left pane of the form builder.
+To add a field to an existing object, open the any of its form views and click the _Add_ button in the left pane of the form builder.
 
 ![You can add a field directly to an existing object.](./creating-a-standard-application/images/05.png)
 
-To edit a field, navigate to the form view where it exists and click the field in the form builder. The field properties will open.
+To edit a field, navigate to its form view and click the field in the form builder to reveal its properties.
 
 ![You can edit a field from its form view.](./creating-a-standard-application/images/07.png)
 
