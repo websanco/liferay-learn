@@ -1,16 +1,13 @@
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 
-<%@ page import="com.liferay.commerce.product.catalog.CPCatalogEntry" %><%@
-page import="com.liferay.commerce.product.catalog.CPSku" %><%@
+<%@ page import="com.liferay.commerce.product.catalog.CPSku" %><%@
 page import="com.liferay.commerce.product.content.constants.CPContentWebKeys" %><%@
 page import="com.liferay.commerce.product.content.util.CPContentHelper" %>
 
 <%
 CPContentHelper cpContentHelper = (CPContentHelper)request.getAttribute(CPContentWebKeys.CP_CONTENT_HELPER);
 
-CPCatalogEntry cpCatalogEntry = cpContentHelper.getCPCatalogEntry(request);
-
-CPSku cpSku = cpContentHelper.getDefaultCPSku(cpCatalogEntry);
+CPSku cpSku = cpContentHelper.getDefaultCPSku(cpContentHelper.getCPCatalogEntry(request));
 %>
 
 <c:if test="<%= cpSku != null %>">
