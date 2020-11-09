@@ -2,13 +2,13 @@
 
 > **Subscribers**
 
-Consider a Human Resources application that allows employees to request changing Roles within the software engineering department: the Role Change Request App. This app starts with the employee submitting a request form. Processing then proceeds to the Current Manager, then to the Receiving Manager, and finally to Human Resources. At each step a different form is presented, and the object accumulates data. By the end of the process the whole data object is complete.
+Consider a Human Resources application that collects employee requests to change Roles within the software engineering department: the Role Change Request App. This app starts with the employee submitting a request form. Processing then proceeds to the Current Manager, then to the Receiving Manager, and finally to Human Resources. At each step a different form is presented, and the object accumulates data. By the end of the process the whole data object is complete.
 
 ![The Role Change Request object flows through several steps in this Workflow Powered App.](./creating-a-workflow-powered-application/drawings/role-request-app.png)
 
 Here you'll create the backing object, form views, and table views. See [Creating the Role Change Request App](./creating-the-role-change-request-app.md) to create the Workflow Powered App itself.
 
-For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is all in how you create the app from the basic elements of the App Builder framework. These instructions are for creating the Object, Form Views, and Table Views needed in the Role Change Request App. You can accomplish this from the Objects entry in the Applications Menu's (![Applications Menu](../../images/icon-applications-menu.png)) Applications &rarr; App Builder section.
+For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is in how you create the app from the elements of the App Builder framework. You can create the object, form views, and table views from the Objects entry in Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) &rarr; Applications &rarr; App Builder.
 
 #### **Object:** Create the object named _Role Change Request_.
 
