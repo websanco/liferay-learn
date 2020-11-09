@@ -2,7 +2,7 @@
 
 > **Subscribers**
 
-Workflow Powered Applications require data input from multiple stakeholders. These process-driven applications can go through multiple stages before the object's data is fully fleshed out. These apps can even send the processing back to previous stages/stakeholders.
+Workflow Powered Applications require data from multiple stakeholders. These process-driven applications can go through multiple stages before the object's data is fully fleshed out. These apps can even send the processing back to previous stages/stakeholders.
 
 To create an example application, read
 
@@ -18,8 +18,8 @@ Each step has configuration options depending on its stage in the workflow:
 | Step | Configuration Options | Description |
 | ---- | ------ | ----------- |
 | Start (Initial Step) | Step Name <br /> Main Data Object <br /> Form View <br /> Table View <br /> Action | At a minimum, choose an object, form view, and table view so that the data object can begin getting filled out. There's no assignee, because anyone who can add a record begins the processing. The action can be renamed but always proceeds to the next step. |
-| 1 (Step 1) | Step Name <br /> Assignee <br /> Form View <br /> Action | Name the step and assign it to a [Role](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md). Then choose a form view (set it to read only or editable) or create a new one, and name the action that transitions to the next step. |
-| Additional Numbered Steps (e.g., Step 2, 3, 4, etc.) | Same as for step 1, plus the _Add New Action_ option | Additional steps can do everything that Step 1 can do, plus choose to create a new action that transitions back to the previous workflow step, if necessary. |
+| 1 (Step 1) | Step Name <br /> Assignee <br /> Form View <br /> Action | Name the step and assign it to a [Role](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md). Then choose or create a form view (set it to read only or editable) and name the action that transitions to the next step. |
+| Additional Numbered Steps (e.g., Step 2, 3, 4, etc.) | Same as for step 1, plus the _Add New Action_ option | Additional steps can do everything that Step 1 can do, plus create a new action that transitions back to the previous workflow step, if necessary. |
 | End (Final Step) | Step Name | Name the last step in the workflow process |
 
 ## App Versions
@@ -30,7 +30,7 @@ Workflow Powered Apps are versioned, because [workflow processes are versioned](
 - Add, update, or remove a form view in one of the workflow steps.
 - Add, update, or remove the assignees of a workflow step.
 
-A new version of the Workflow Powered App will only apply to new submissions. The app's manager can check the version for each submission from its details view--view the record's details by clicking on it in a table view.
+A new version of the Workflow Powered App only applies to new submissions. The app's manager can check the version for each submission from its details view---view the record's details by clicking on it in a table view.
 
 ## Related Information
 
