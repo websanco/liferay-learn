@@ -12,9 +12,7 @@ function copy_template {
 
 	for zip_dir_name in `find . -name ${zip_dir_name_pattern} -type d`
 	do
-		gradle_build_file_count=$(find ${zip_dir_name} -name build.gradle | wc -l)
-
-		if [ "${gradle_build_file_count}" -gt 0 ]
+		if [ "$(find ${zip_dir_name} -name build.gradle | wc -l)" -gt 0 ]
 		then
 			cp -fr _template/java/* ${zip_dir_name}
 
@@ -30,7 +28,6 @@ function copy_template {
 		else
 			cp -fr _template/js/* ${zip_dir_name}
 		fi
-
 	done
 }
 
