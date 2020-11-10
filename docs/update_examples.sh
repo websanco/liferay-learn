@@ -2,6 +2,8 @@
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
+source ../site/tokens.sh
+
 function copy_template {
 	local zip_dir_name_pattern="liferay-*.zip"
 
@@ -16,9 +18,7 @@ function copy_template {
 		then
 			cp -fr _template/java/* ${zip_dir_name}
 
-			local liferay_workspace_product=portal-7.3-ga6
-
-			echo -ne "liferay.workspace.product=${liferay_workspace_product}" > ${zip_dir_name}/gradle.properties
+			echo -ne "liferay.workspace.product=${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
 
 			pushd ${zip_dir_name}
 
