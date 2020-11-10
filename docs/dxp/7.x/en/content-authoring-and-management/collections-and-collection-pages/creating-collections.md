@@ -12,36 +12,34 @@ You can create *Manual* or *Dynamic* Collections. For information about the diff
 1. Click on the *New* button (![Add](../../images/icon-add.png)) and select *Manual Collection*.
 1. Add a *Title* for your Manual Collection and click *Save*.
 1. In the *Item Type* drop-down menu, select the item type you want to include in the Collection.
-    - If you want to include only one item type:
+    - If you want to include only one item type
 
-        1. Select the type under *Single Item Type*.
-        1. Optionally, if your *Item Type* includes a subtype, select this in the *Item Subtype* drop-down menu.
-        1. Click *Save*.
+       1. Select the type under *Single Item Type*.
+       1. Optionally, if your *Item Type* includes a subtype, select this in the *Item Subtype* drop-down menu.
+       1. Click *Save*.
 
-         ![Configure the content Type and Subtype for the Manual Collection](./creating-collections/images/01.png)
+       ![Configure the content Type and Subtype for the Manual Collection](./creating-collections/images/01.png)
 
-    - If you want to include more than one item type:
+    - If you want to include more than one item type
 
-        1. Select *Select More Than One* under *Multiple Item Types*.
-        1. In the dual list box, add or remove the item types you want to include in your collection.
+       1. Select *Select More Than One* under *Multiple Item Types*.
+       1. In the dual list box, add or remove the item types you want to include in your collection.
 
-         ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
+       ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
 
 1. Click *Save*.
 1. Click *Select* next to *Collection Items* and select one of your item types.
 
-    ![Select the items you want to include in the Manual Collection](./creating-collections/images/03.png)
+   ![Select the items you want to include in the Manual Collection](./creating-collections/images/03.png)
 
 1. In the selection dialog, check the items you want to include.
 1. Click *Add*.
 1. If your Manual Collection includes more than one item type, repeat steps 6 to 8 for the other types.
 
-### Using Folders
-
-As indicated in the screenshots above, _Documents and Media Folders_ and _Web Content Folders_ can be added to a Collection.
+Note that Documents and Media folders and Web Content folders can be added to a Collection.
 
 ```warning::
-   Contents inside a folder are not displayed once they are published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and may be fixed in a future release.
+   Content inside a folder are not displayed when they are published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and will be fixed in a future release.
 ```
 
 ## Creating a Dynamic Collection
@@ -52,19 +50,19 @@ As indicated in the screenshots above, _Documents and Media Folders_ and _Web Co
 1. In the *Item Type* drop-down menu, select the item type you want to include in the Collection.
     - If you want to include only one item type,
 
-        1. Select the type under *Single Item Type*.
-        1. Optionally, if your *Item Type* includes a subtype, select this in the *Item Subtype* drop-down menu.
-        1. To filter you *Item Subtype* by a specific field, enable the *Filter by Field* switch, click *Select*, choose the field, and click *Apply*.
-        1. Click *Save*.
+       1. Select the type under *Single Item Type*.
+       1. Optionally, if your *Item Type* includes a subtype, select this in the *Item Subtype* drop-down menu.
+       1. To filter you *Item Subtype* by a specific field, enable the *Filter by Field* switch, click *Select*, choose the field, and click *Apply*.
+       1. Click *Save*.
 
-         ![You can filter the Item Subtype in your Collection by one of the item fields](./creating-collections/images/09.gif)
+       ![You can filter the Item Subtype in your Collection by one of the item fields](./creating-collections/images/09.gif)
 
     - If you want to include more than one item type,
 
-        1. Select *Select Types* under *Multiple Item Types*.
-        1. In the dual list box, add or remove the item types you want to include in your collection.
+       1. Select *Select Types* under *Multiple Item Types*.
+       1. In the dual list box, add or remove the item types you want to include in your collection.
 
-         ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
+       ![Select the different item Types for the Manual Collection](./creating-collections/images/02.png)
 
 1. Configure the criteria for your Dynamic Collection, based on *Scope*, *Filter*, *Content Recommendation*, or *Ordering*.
 
