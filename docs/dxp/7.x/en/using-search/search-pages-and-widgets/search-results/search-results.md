@@ -75,7 +75,7 @@ In the staged version of the Site, all content---live or staged---is searchable.
 
 A result summary condenses information from the original asset into an abstract. Asset developers choose what fields are included in the summary. A common summary includes a *title* and some of the *content*, with title displayed first. The asset type always appears on the second line, followed by a snippet of content matching the search term. Assets without content fields, like Documents and Media documents, display the description instead.
 
-Users are different. Only the User's full name and the asset type (User) appear in User result summaries:
+**Searching for Users:** When you click an asset in the search results, it's displayed in an Asset Publisher (unless the *View in Context* option is selected in the Search Results portlet). Users are different, though. Think of them as invisible assets, not intended for display in the Asset Publisher application.  While Users appear as search results with other indexed assets, when you click one you're taken to the User's profile page. If public personal pages are disabled, clicking on a User from the list of search results shows you a blank page. Only the User's full name and the asset type (User) appear in User result summaries:
 
 ![User summaries contain only the User's full name.](./search-results/images/03.png)
 

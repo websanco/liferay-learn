@@ -4,11 +4,6 @@ All indexed content (a.k.a. _assets_ in Liferay DXP) can be returned as search r
 
 ![If these apps are deployed, their content is searchable by default.](./searching-for-content/images/08.png)
 
-<!-- move to search results documentation, most likely-->
-<!--
-**Searching for Users:** When you click an asset in the search results, it's displayed in an Asset Publisher (unless the *View in Context* option is selected in the Search Results portlet). Users are different, though. Think of them as invisible assets, not intended for display in the Asset Publisher application.  While Users appear as search results with other indexed assets, when you click one you're taken to the User's profile page. If public personal pages are disabled, clicking on a User from the list of search results shows you a blank page.
--->
-
 ## Using the Search Bar
 
 Using the default Liferay DXP setup, users can engage with search by entering search terms in the Search Bar. Execute a search and you're taken to a [search page](../search-pages-and-widgets/working-with-search-pages/search-pages.md) with various search widgets deployed.
@@ -19,7 +14,7 @@ Using the default Liferay DXP setup, users can engage with search by entering se
 
 Liferay's search infrastructure supports full text search as implemented by its supported search engines ([Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/full-text-queries.html) and [Solr](http://lucene.apache.org/solr/features.html)).
 
-Full text search compares all the words entered in a search query (for example, *space vacation*) to all the words in each indexed document. A search engine like Elasticsearch calculates relevance scores to ensure the best results are returned first<!--(like a Blogs Entry titled *Is a vacation in space right for you?*) and lots of matching results are returned (anything with either the word *vacation* or *space* is returned)-->.
+Full text search compares all the words entered in a search query (for example, *stock market*) to all the words in each indexed document. A search engine like Elasticsearch calculates relevance scores to ensure the best results are returned first like a Blog Entry about a recent bull market. Anything with words like *stock* or *market* is returned.
 
 In addition to full text search, advanced search syntax is supported. The underlying search engine determines the precise behavior, so consult the [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-simple-query-string-query.html) or [Solr](https://lucene.apache.org/solr/guide/7_0/query-syntax-and-parsing.html) documentation for the details.
 
