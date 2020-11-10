@@ -60,7 +60,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
 		try {
 			commerceShippingOptions = _getCommerceShippingOptions(
-				commerceContext.getSiteGroupId(), commerceOrder, locale);
+				commerceOrder.getScopeGroupId(), commerceOrder, locale);
 		}
 		catch (PortalException pe) {
 			if (_log.isDebugEnabled()) {

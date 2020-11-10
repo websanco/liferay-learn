@@ -225,7 +225,7 @@ public List<CommerceShippingOption> getCommerceShippingOptions(
 
     try {
         commerceShippingOptions = _getCommerceShippingOptions(
-            commerceContext.getSiteGroupId(), commerceOrder, locale);
+            commerceOrder.getScopeGroupId(), commerceOrder, locale);
     }
     catch (PortalException pe) {
         if (_log.isDebugEnabled()) {
