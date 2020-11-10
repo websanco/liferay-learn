@@ -67,7 +67,7 @@ To configure a mobile device rule for a specific page:
 
 ## Adding Mobile Device Actions
 
-Once you've created some mobile device families and added some rules to them, you're ready to create some actions. The actions defined for a family determine what happens to a request when the device is detected and the family has been found to apply.
+Once you've created some mobile device families and added some rules to them, add mobile device actions. These actions defined for a family determine what happens to a request when the device is detected and the family has been found to apply.
 
 ```tip::
    The Audience Targeting application offers a *Device* rule that evaluates whether a User is accessing content using a particular device family. This rule is integrated with the Mobile Device Families app.
