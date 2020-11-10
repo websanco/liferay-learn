@@ -93,7 +93,7 @@ You can set different style options for your Content Page layout like background
     ![You can modify editable text.](./building-content-pages/images/07.png)
 
 ```note::
-   *Heading* fragments cannot have line breaks. This is because *Heading* fields use `text` while *Paragraph* fragments use `rich-text` fields; only the latter can have multiple line texts separated by a line break.
+   *Heading* fragments cannot have line breaks. This is because *Heading* fields use ``text`` while *Paragraph* fragments use ``rich-text`` fields; only the latter can have multiple line texts separated by a line break.
 ```
 
 ### Editing Hyperlinks
