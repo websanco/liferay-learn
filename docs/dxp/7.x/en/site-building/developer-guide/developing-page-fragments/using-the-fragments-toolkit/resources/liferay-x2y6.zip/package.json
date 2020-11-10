@@ -3,12 +3,10 @@
 		"generator-liferay-fragments": "*",
 		"yo": ">=2.0.0"
 	},
-
 	"engines": {
 		"node": ">= 8.0.0",
 		"npm": ">= 6.0.0"
 	},
-
 	"scripts": {
 		"add-collection": "yo liferay-fragments:collection",
 		"add-fragment": "yo liferay-fragments:fragment",
