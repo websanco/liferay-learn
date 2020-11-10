@@ -26,17 +26,17 @@ You can manage Tags under the Categorization panel in the Site Navigation menu. 
 ```
 
 1. Open the Product Menu and under the Site Menu, go to *Categorization* &rarr; *Tags*.
-1. To create a new tag, click *Add Tag* (![Add Tag](./../../../images/icon-add.png)).
+1. To create a new tag, click *Add Tag* (![Add Tag](./../../images/icon-add.png)).
 1. Type your new tag and click *Save*.
 
     ```note::
        Tags are all-lowercase.
     ```
 
-1. To edit an existing tag, click the *Actions* (![Actions](./../../../images/icon-actions.png)) menu next to the tag's name and select *Edit*.
+1. To edit an existing tag, click the *Actions* (![Actions](./../../images/icon-actions.png)) menu next to the tag's name and select *Edit*.
 1. If you want to merge one or more tags,
 
-    1. Check the box next to the tags you want to merge and click *Merge* (![Merge](../../../images/icon-merge.png)).
+    1. Check the box next to the tags you want to merge and click *Merge* (![Merge](../../images/icon-merge.png)).
     1. Select the Tag where you want to merge in the *Into This Tag* dropdown menu.
     1. Click *Save*.
 
@@ -46,4 +46,3 @@ You can manage Tags under the Categorization panel in the Site Navigation menu. 
 
 - [Organizing Content with Categories and Tags](./organizing-content-with-categories-and-tags.md)
 - [Defining Categories and Vocabularies for Content](./defining-categories-and-vocabularies-for-content.md)
-

@@ -107,10 +107,10 @@ Tags and Categories
 User Guide
 ~~~~~~~~~~
 
--  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/organizing-content-with-categories-and-tags`
--  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/tagging-content-and-managing-tags`
--  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content`
--  :doc:`/content-authoring-and-management/tags-and-categories/user-guide/geolocating-assets`
+-  :doc:`/content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content`
+-  :doc:`/content-authoring-and-management/tags-and-categories/geolocating-assets`
 
 Developer Guide
 ~~~~~~~~~~~~~~~

@@ -11,7 +11,7 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
 ## Defining Vocabularies
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
-1. Click *New Vocabulary* (![New Vocabulary](../../../images/icon-plus.png)).
+1. Click *New Vocabulary* (![New Vocabulary](../../images/icon-plus.png)).
 1. Enter a *Name* for the Vocabulary and, optionally, a *Description*.
 1. Complete the rest of the Category options:
 
@@ -32,7 +32,7 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
    ![Define the category options for multiple asset types.](./defining-categories-and-vocabularies-for-content/images/02.png)
 
 1. Click *Save*.
-1. To edit an existing vocabulary, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Vocabulary name and select *Edit*.
+1. To edit an existing vocabulary, click the *Actions* (![Actions](../../images/icon-actions.png)) menu next to the Vocabulary name and select *Edit*.
 
     ![Edit an existing Vocabulary using the Actions menu.](./defining-categories-and-vocabularies-for-content/images/08.gif)
 
@@ -50,10 +50,10 @@ You create and manage Categories in the Site Menu &rarr; *Categorization* &rarr;
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
 1. Under the *Vocabularies* list, click the vocabulary to add the new category.
-1. Click *Add Category* (![Add Category](../../../images/icon-add.png)).
+1. Click *Add Category* (![Add Category](../../images/icon-add.png)).
 1. Enter a *Name* for the Category and, optionally, a *Description*.
 1. Click *Save* or *Save and Add a New One* to add more categories.
-1. To edit an existing category, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the category's name.
+1. To edit an existing category, click the *Actions* (![Actions](../../images/icon-actions.png)) menu next to the category's name.
 
 ### Creating Subcategories
 
@@ -70,7 +70,7 @@ You can create a nested hierarchy of Categories and Subcategories:
 You can move a category to a different vocabulary, or as a subcategory in the same vocabulary.
 
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
-1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the category you want to move and select *Move*.
+1. Click the *Actions* (![Actions](../../images/icon-actions.png)) menu next to the category you want to move and select *Move*.
 
     ![Use the Move option to organize Categories.](./defining-categories-and-vocabularies-for-content/images/03.png)
 
@@ -89,7 +89,7 @@ After creating a Category, you can define these additional options:
 - Friendly URL
 - Properties (Key and Value pairs)
 
-To access these options, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu next to the Category you want to modify and select *Edit*.
+To access these options, click the *Actions* (![Actions](../../images/icon-actions.png)) menu next to the Category you want to modify and select *Edit*.
 
 ![Edit the Category to define additional options.](./defining-categories-and-vocabularies-for-content/images/10.png)
 
@@ -97,4 +97,4 @@ To access these options, click the *Actions* (![Actions](../../../images/icon-ac
 
 - [Organizing Content with Categories and Tags](./organizing-content-with-categories-and-tags.md)
 - [Tagging Content and Managing Tags](./tagging-content-and-managing-tags.md)
-- [Content Dashboard](../../content-dashboard/about-the-content-dashboard.md)
+- [Content Dashboard](../content-dashboard/about-the-content-dashboard.md)
