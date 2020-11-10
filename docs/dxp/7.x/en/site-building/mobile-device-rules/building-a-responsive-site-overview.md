@@ -14,7 +14,7 @@ Out of the box, there are several features that help make your pages look just a
 
 * When the screen width is low, Liferay combines columns so that all content remains legible.
 
-   ![Columns combine.](./building-a-responsive-site-overview/images/03.png)
+   ![Columns are combined when the width is low.](./building-a-responsive-site-overview/images/03.png)
 
 * For web developers, DXP's theme tools provide a number of tools to help ensure optimum mobile performance.
 
@@ -30,7 +30,7 @@ When creating a page or reviewing a page before it is published, one very import
 
 * **Mobile:** Puts your page in an even smaller box to demonstrate how the page looks to your average smartphone user.
 
-![The Simulation panel defines multiple screen sizes.](./building-a-responsive-site-overview/images/04.png)
+    ![The Simulation panel defines multiple screen sizes.](./building-a-responsive-site-overview/images/04.png)
 
 There are also two options available to display:
 
@@ -54,5 +54,5 @@ Once the app is deployed, whole Sites or individual pages can be configured for 
 
 ## Additional Information
 
-* [Creating Mobile Device Rules](./creating-mobile-device.rules.md)
+* [Creating Mobile Device Rules](./creating-mobile-device-rules.md)
 * [Mobile Device Actions Reference](./mobile-device-actions-reference.md)

@@ -10,7 +10,7 @@ For the features described in this article to work, you must install the Liferay
 
 ## Creating a Mobile Device Family
 
-Before creating [mobile device actions](./mobile-device-actions.md), create a Mobile Device Family; a Mobile Device Family is a group of mobile device actions based on the type of device. For example, create a group for all Android devices; if DXP detects that an Android device is accessing the web page, it redirects the site visitor to a mobile-friendly page.
+Before creating [mobile device actions](#adding-mobile-device-actions), create a Mobile Device Family; a Mobile Device Family is a group of mobile device actions based on the type of device. For example, create a group for all Android devices; if DXP detects that an Android device is accessing the web page, it redirects the site visitor to a mobile-friendly page.
 
 To create a Mobile Device Family:
 
@@ -65,7 +65,7 @@ To configure a mobile device rule for a specific page:
 
 1. Click *Save* when finished.
 
-## Mobile Device Actions
+## Adding Mobile Device Actions
 
 Once you've created some mobile device families and added some rules to them, you're ready to create some actions. The actions defined for a family determine what happens to a request when the device is detected and the family has been found to apply.
 
