@@ -124,7 +124,7 @@ The same template editor is accessible from the Widget Templates entry in the Si
 
 The first configuration options appear in a section called _Display Settings_.
 
-![](similar-results/images/07.png)
+![Configure different options in the similar results configuration.](similar-results/images/07.png)
 
 **Display Template:** Choose the widget template to configure how similar results are displayed.
 
