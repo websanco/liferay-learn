@@ -17,7 +17,7 @@ To create a document type:
     ![Drag and drop main metadata fields](./defining-document-types/images/01.png)
 
 1. Expand the _Additional Metadata Fields_.
-1. Select a metadata set to associate with the document type. To learn more, see [Setting and Defining Metadata](./setting-and-defining-metadata.md).
+1. Select a metadata set to associate with the document type. To learn more, see [Using Metadata Sets](./using-metadata-sets.md).
 
     ![Associate additional metadata sets.](./defining-document-types/images/02.png)
 
@@ -33,4 +33,4 @@ When users create new files of the document type, they're presented with metadat
 
 ## Additional Information
 
-* [Setting and Defining Metadata](./setting-and-defining-metadata.md)
+* [Using Metadata Sets](./using-metadata-sets.md)
