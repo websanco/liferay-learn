@@ -5,7 +5,6 @@
 				{
 					"dataType": "string",
 					"defaultValue": "dark",
-					"description": "text-style-to-be-applied",
 					"label": "Text Style",
 					"name": "c7f8TextStyle",
 					"type": "select",
