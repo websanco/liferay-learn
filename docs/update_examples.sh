@@ -2,7 +2,7 @@
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-source ../site/tokens.sh
+source ../_common.sh
 
 function copy_template {
 	local zip_dir_name_pattern="liferay-*.zip"

@@ -4,7 +4,7 @@ set -eo pipefail
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-source ./tokens.sh
+source ../_common.sh
 
 function activate_venv {
 	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
