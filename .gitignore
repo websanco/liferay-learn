@@ -10,4 +10,5 @@ docs/**/liferay-????.zip/gradlew.bat
 docs/**/liferay-????.zip/settings.gradle
 docs/**/liferay-????.zip/setup_tutorial.sh
 docs/**/liferay-????.zip/source-formatter-suppressions.xml
+docs/**/liferay-????.zip/.yo-rc.json
 node_modules
