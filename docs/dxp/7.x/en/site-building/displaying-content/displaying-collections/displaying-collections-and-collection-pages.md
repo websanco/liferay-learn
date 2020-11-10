@@ -34,7 +34,7 @@ A Collection Display fragment shows a Collection in a Content Page. It can be co
 
 ![Use a Collection Display fragment to display a Collection in the desired format.](./displaying-collections-and-collection-pages/images/02.png)
 
-See [Displaying a Collection in a Collection Display Fragment](./collection-display-fragments.md#displaying-a-collection-in-a-collection-display-fragment) for steps on adding a Collection Display fragment and selecting a Collection with it.
+See [Displaying a Collection in a Collection Display Fragment](./the-collection-display-fragment.md#displaying-a-collection-in-a-collection-display-fragment) for steps on adding a Collection Display fragment and selecting a Collection with it.
 
 ## Mapping the Collection Items
 
@@ -129,3 +129,4 @@ Content Sets are a powerful feature which provide one place to easily define con
 - [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md)
 - [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
 - [Personalizing Collections](../../personalizing-site-experience/experience-personalization/personalizing-collections.md)
+- [The Collection Display Fragment](./the-collection-display-fragment.md)

@@ -5,7 +5,7 @@ Displaying Collections
    :maxdepth: 2
 
    displaying-collections/displaying-collections-and-collection-pages.md
-   displaying-collections/collection-display-fragments.md
+   displaying-collections/the-collection-display-fragment.md
 
 -  :doc:`/site-building/displaying-content/displaying-collections/displaying-collections-and-collection-pages`
--  :doc:`/site-building/displaying-content/displaying-collections/collection-display-fragments`
+-  :doc:`/site-building/displaying-content/displaying-collections/the-collection-display-fragment`
