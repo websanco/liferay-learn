@@ -6,15 +6,15 @@ Out of the box, there are several features that help make your pages look just a
 
 * DXP widgets and custom widgets that use Liferay's UI frameworks automatically scale to fit the screen size.
 
-    ![Figure 1: A widget adjusts its size.](./building-a-responsive-site-overview/images/widget-adjustment.png)
+    ![Adjust the widget's size.](./building-a-responsive-site-overview/images/01.png)
 
 * UI elements like the navigation and Product Menu automatically adjust to remain usable on smaller screens.
 
-    ![Figure 2: The main navigation adjusts its size.](./building-a-responsive-site-overview/images/navigation-adjustment.png)
+    ![The main navigation adjusts its size.](./building-a-responsive-site-overview/images/02.png)
 
 * When the screen width is low, Liferay combines columns so that all content remains legible.
 
-   ![Figure 3: Columns combine.](./building-a-responsive-site-overview/images/columns-adjustment.png)
+   ![Columns combine.](./building-a-responsive-site-overview/images/03.png)
 
 * For web developers, DXP's theme tools provide a number of tools to help ensure optimum mobile performance.
 
@@ -30,7 +30,7 @@ When creating a page or reviewing a page before it is published, one very import
 
 * **Mobile:** Puts your page in an even smaller box to demonstrate how the page looks to your average smartphone user.
 
-![Figure 3: The Simulation panel defines multiple screen sizes.](./building-a-responsive-site-overview/images/device-simulation.png)
+![The Simulation panel defines multiple screen sizes.](./building-a-responsive-site-overview/images/04.png)
 
 There are also two options available to display:
 
