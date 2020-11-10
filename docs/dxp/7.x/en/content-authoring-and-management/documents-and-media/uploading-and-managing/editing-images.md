@@ -1,22 +1,24 @@
 # Editing Images
 
-Liferay DXP comes with its own built-in image editor. You can edit your images right from your browser and  apply filters, adjust contrast, or crop.
+The Documents and Media application comes with a built-in image editor. Edit images right from your browser and apply filters, adjust contrast, or crop.
 
 In the Documents and Media application, locate the image. Click the Options icon (![Options icon](../../../images/icon-options.png)) and select *Edit With Image Editor*. 
 
 ![The Options icon contains functions for sharing, editing, checking out, or changing permissions for images.](editing-images/images/01.png)
 
-The image editoroffers a minimal, user-friendly UI.
+## Image Editing Tools
+
+The image editor offers a minimal, user-friendly UI.
 
 ![There are different editing tools below the image.](editing-images/images/02.png)
 
-**1. Effects Tool** (Filters):
+### Effects Tool (Filters)
 
 This tool has filters you can apply to your image. 
 
 ![The Effects tool brings up various filters you can apply to your image.](editing-images/images/03.png)
 
-**2. Transform Tools** (Transform Option):
+### Transform Tools (Transform Option)
 
 **Rotate**: Rotates the image to the left or right, in 90 degree increments.
 
@@ -24,7 +26,7 @@ This tool has filters you can apply to your image.
 
 **Crop**: Reframes the image by removing the outer portions.
 
-**3. Adjustment Tools** (Color Adjustment)
+### Adjustment Tools (Color Adjustment)
 
 **Saturation**: Adjusts the color saturation in the image. The default value of 50 is the current saturation. The slider values range from 0 (completely desaturated) to 100 (completely saturated).
 
