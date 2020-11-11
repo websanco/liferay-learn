@@ -8,7 +8,7 @@ Sometimes it's easier to edit templates in your nice, comfortable code editor. O
 
 For more general information about the Export/Import Framework, see [Importing/ Exporting Sites and Content](../../building-sites/importing-exporting-pages-and-content.md).
 
-To export a Page Template,
+## Exporting a Page Template
 
 1. Navigate to the Site where the Page Template has been created.
 1. Click the Product Menu (![Product Menu](../../../images/icon-product-menu.png)). 
@@ -28,9 +28,22 @@ The Page Template downloads as a ZIP file to your local machine.
    You can export more than one Content Template at once. However, you cannot include Widget Templates with Content Pages in the same ZIP file.
 ```
 
-## Importing a Page Template
+The last published version of the Page Template is always exported. If the Page Template has never been published, it cannot be exported.
 
-To import a Page Template:
+The exported ZIP file contains these files: 
+
+* `page-template-collection.json`: Contains the name of the Collection where the Page Template is saved and any other metadata
+* An optional thumbnail file
+* `page-template.json`: Contains the Page Template name and any other metadata
+* `page-definition.json`: specifies the structure and content of the Page Template
+
+A [Page Definition JSON Schema file](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/layout/layout-page-template-api/src/main/resources/com/liferay/layout/page/template/validator/dependencies/page_definition_json_schema.json) describes the content of the `page-definition.json` file and can be imported into any editor supporting JSON schema validation.
+
+The ZIP file may contain different types of page templates. 
+
+There are [JSON schemas](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/layout/layout-page-template-api/src/main/resources/com/liferay/layout/page/template/validator/dependencies) available for `display-page-template.json`, `master-page.json`, `page-template-collection.json` and `page-template.json`.
+
+## Importing a Page Template
 
 1. Navigate to the Site where the _Page Template_ is to be imported.
 1. Click the Product Menu (![Product Menu](../../../images/icon-product-menu.png)). 
