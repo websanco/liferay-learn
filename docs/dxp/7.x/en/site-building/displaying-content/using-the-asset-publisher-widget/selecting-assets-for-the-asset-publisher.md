@@ -3,25 +3,15 @@
 ```note::
    This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
 ```
-Use the *Asset Publish* widget to organize and publish different assets from within a Site page. The widget also supports collections. To start using the widget,
+To select assets to publish in the *Asset Publisher* widget,
 
-1. Navigate to an existing page where you wish to add the *Asset Publisher* widget. Click on the *Add App* icon (![Click on the Add App icon to add a new widget.](../../../images/icon-add-app.png)) at the top the page.
+1. Click on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
 
-    Or [create a new page](../../../site-building/creating-pages/adding-paged.md) on which to add the widget.
-
-1. The *Asset Publisher* widget is found under the Content Management section of the list of widgets. It can also be found by searching for *Asset Publisher*.
-
-    ![Locate the Asset Publisher widget listed under the Content Management section of widgets.](selecting-assets-for-the-asset-publisher/images/01.png)
-
-1. Drag the widget onto your page. Any media files previously uploaded should already be visible. If you wish to [add additional media files](../../../uploading-and-managing/uploading-files.md), they can be uploaded from the *Documents and Media* Application.
-
-1. Configure the widget by clicking on the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
-
-1. Select Configuration* and the Configuration window will appear.
+1. Select *Configuration* and the Configuration window will appear.
 
     ![The configuration window has four different tabs.](selecting-assets-for-the-asset-publisher/images/02.png)
 
-    Under the Setup tab, there are a few sub-tabs with different options to configure. The Asset Selection sub-tab allows you to select how you would like to filter through your assets:
+    Under the Setup tab, there are a few sub-tabs with different options to configure. Under the Asset Selection section, you can select how you would like to filter through your assets:
 
     **Dynamic:** Select this option to set parameters that will automatically include specific assets. Use the Asset Type drop-down list to select one or more types of assets to be included. Choose across your different sites in the Scope section. In the Filter section, you can also filter your assets by things such as category, keywords, or tags. As new assets are added, the widget will automatically update.
 
@@ -35,11 +25,21 @@ Use the *Asset Publish* widget to organize and publish different assets from wit
 
     ![Click Select and choose from your saved selections.](selecting-assets-for-the-asset-publisher/images/04.png)
 
-    To learn more, go to the [About Collections](../../../collections-and-collection-pages/about-collections-and-collection-pages.md) page.
+    To learn more, go to the [About Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) page.
 
     **Collection Provider:** This is a new feature in Liferay 7.3 that allows developers to create specific collections with more advanced criteria. 
-        
-    **Create a collection from this configuration:** Once you have set your specific parameters, you can click this option to save this as a new collection.
+
+1. After making your choice for Asset Selection, there are additional settings you can configure,
+
+    | Setting | Description |
+    | ------- | ----------- |
+    | Source | Choose to display all asset types or just a few selected asset types |
+    | Scope | Choose to display assets from an individual Site or other Sites |
+    | Filter | Filter which assets to show by categories, keywords, or tags |
+    | Custom User Attributes | Filter assets based on custom user profile attributes |
+    | Ordering | Choose how your assets will be ordered |
+
+1. Once you've selected your assets and configured the widget, click the *Save* button. You can also click on the *Create a collection from this configuration* link to save the configuration as a new collection.
 
 ## Liferay DXP 7.2
 
