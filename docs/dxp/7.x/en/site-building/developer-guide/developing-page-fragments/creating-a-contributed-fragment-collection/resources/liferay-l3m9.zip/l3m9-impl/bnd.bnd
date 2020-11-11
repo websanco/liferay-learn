@@ -1,5 +1,5 @@
-Bundle-Name: Acme L3M9 Contributed Fragments Collection
-Bundle-SymbolicName: com.liferay.learn.fragments
+Bundle-Name: Acme L3M9 Implementation
+Bundle-SymbolicName: com.acme.l3m9.impl
 Bundle-Version: 1.0.0
-Web-ContextPath: /contributed-marketing-fragments-collection
+Web-ContextPath: /fragment-collection-contributor-l3m9
 -dsannotations-options: inherit
