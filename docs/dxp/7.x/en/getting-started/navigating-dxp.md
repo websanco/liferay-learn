@@ -40,11 +40,9 @@ Here are some of the applications that can be managed from the _Applications Men
 
 ### Commerce Menu
 
-Beginning in Portal 7.3, Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition bundle requires no additional Commerce-specific installation steps and can be used immediately on startup. Liferay Commerce Enterprise 3.0 is bundled with Liferay DXP 7.3 DXP GA1 and requires a Liferay Commerce subscription.
+Beginning in Liferay 7.3 CE GA6 and Liferay DXP 7.3 GA1, Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1.
 
 ![The Commerce Menu contains all store functions.](./navigating-dxp/images/03.png)
-
-To learn more about Liferay Commerce, see [Introduction to Liferay Commerce](https://learn.liferay.com/commerce/2.x/en/starting-a-store/introduction-to-liferay-commerce.html).
 
 Here are some functions that can be managed from the _Commerce_ menu:
 
@@ -53,6 +51,8 @@ Here are some functions that can be managed from the _Commerce_ menu:
 * [Manage Inventory](https://learn.liferay.com/commerce/2.x/en/managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html)
 * [Process Orders](https://learn.liferay.com/commerce/2.x/en/orders-and-fulfillment/orders/processing-an-order.html)
 * And more..
+
+To learn more about Liferay Commerce, see [Introduction to Liferay Commerce](https://learn.liferay.com/commerce/2.x/en/starting-a-store/introduction-to-liferay-commerce.html).
 
 ### Control Panel
 
