@@ -18,7 +18,7 @@ New pages are created on the _Site Builder_ &rarr; _Pages_ menu. Pages can be pu
 
 ## Using Navigation Menus
 
-See [Using Navigation Menus](./using-navigation-menus.md) to learn how to create Navigation Menus and deploy them on a page. See the [Navigation Menu Widget Reference](./navigation-menu-widget-reference.md) to learn more about how to configure the Navigation Menu widget.
+See [Using Navigation Menus](./using-navigation-menus.md) to learn how to create Navigation Menus and deploy them on a page. See the [Configuring Navigation Menus](./configuring-navigation-menus.md) to learn more about how to configure the Navigation Menu widget.
 
 ## Using the Page Tree
 

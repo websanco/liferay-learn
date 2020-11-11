@@ -1,6 +1,17 @@
 # Using Navigation Menus
 
-You can create _Navigation Menus_ to group desired pages. For example, a navigation menu can contain all child pages of a given page. You can display the menu using the navigation menu widget on the parent page, and you've created a mini-site containing only relevant information. 
+By default, Sites start with a _Navigation Menu_ widget that is configured to display the site's [Public Pages](../creating-pages/understanding-pages/understanding-pages.md) hierarchy. In some cases, you may want more direct control or flexibility with how your site's navigation menu is defined and displayed when the default configuration is not sufficient. In these cases you can create and configure new navigation menus.
+
+Getting started with Navigation Menus involves:
+
+1. [Creating a Navigation Menu](#creating-navigation-menus)
+1. Adding items to the menu like [existing pages](#assigning-pages-to-a-navigation-menu), adding links, or sub-menus
+1. Optionally, [marking the navigation menu](#marking-a-navigation-menu) to serve particular function on your site
+1. Adding the Navigation Menu widget (if it is not already present) to a page and [configuring it](./configuring-navigation-menus.md)
+
+For example, a navigation menu can contain all child pages of a given page. You can display the menu using the Navigation Menu widget on the parent page. This creates a navigation that only displays the child pages selected, in effect creating a mini-site.
+
+![The Navigation Menu widget can be configured to display the pages that you want.](./using-navigation-menus/images/09.png)
 
 ## Creating Navigation Menus
 
@@ -14,7 +25,7 @@ You can create _Navigation Menus_ to group desired pages. For example, a navigat
 
 The new navigation menu has been created.
 
-## Assigning Existing Pages to a Navigation Menu
+## Assigning Pages to a Navigation Menu
 
 There are two main ways to assign existing pages to a navigation menu: click the _New_ button or the _Add_ button (![Add Page](../../images/icon-add.png)).
 
@@ -31,7 +42,7 @@ There are two main ways to assign existing pages to a navigation menu: click the
 
     ![Verify that the new navigation menu has the child pages.](./using-navigation-menus/images/04.png)
 
-## Assigning New Pages to a Navigation Menu
+### Assigning New Pages to a Navigation Menu
 
 You don't have to [create any pages](../creating-pages/adding-pages/adding-a-page-to-a-site.md) before creating navigation menus. You can create a navigation menu first and then assign the pages later, when you create them. 
 
@@ -53,18 +64,20 @@ Once disabled, you're not prompted to add the page to a navigation menu.
 
 ## Marking a Navigation Menu
 
-You can mark a navigation menu as
+You can mark a navigation menus in the following ways:
 
-* Primary Navigation
-* Secondary Navigation
-* Social Navigation
+| Navigation Menu Type | Usage |
+| --- | --- |
+| **Primary Navigation** | Primary Navigation is the main navigation for a page. |
+| **Secondary Navigation** | Secondary Navigation is a second level of navigation, possibly a sidebar or a separate menu within a page. |
+| **Social Navigation** | Social Navigation is for menus that contain links for sharing content on social media or similar tasks. |
 
 1. Click the (![Options](../../images/icon-options.png)) icon next to the desired navigation menu (for example, _New Menu_)
 1. Click the desired navigation (for example, _Primary Navigation_).
 
    ![Mark the Navigation Menu as Primary.](./using-navigation-menus/images/07.png)
 
-The navigation menu type appears in the _Marked As_ field. For more information about each type, see the [Navigation Menu Widget Reference](./navigation-menu-widget-reference.md#navigation-menu).
+The navigation menu type appears in the _Marked As_ field. For more information about each type, see the [Configuring Navigation Menus](./configuring-navigation-menus.md#navigation-menu).
 
 ## Deleting a Navigation Menu
 
@@ -76,4 +89,4 @@ The Navigation Menu has been deleted.
 ## Additional Information
 
 * [Configuring Site Navigation](./configuring-site-navigation.md)
-* [Navigation Menu Widget Reference](./navigation-menu-widget-reference.md)
+* [Configuring Navigation Menus](./configuring-navigation-menus.md)

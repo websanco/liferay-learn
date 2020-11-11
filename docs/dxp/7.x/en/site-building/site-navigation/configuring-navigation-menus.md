@@ -1,8 +1,8 @@
-# Navigation Menu Widget Reference
+# Configuring Navigation Menus
 
 Below are all the options possible in the Navigation Menu widget. To access the Configuration menu, click ![Options icon](../../images/icon-widget-options.png) at the top of the navigation menu widget.
 
-![Navigate to the Configuration menu.](./navigation-menu-widget-reference/images/01.png)
+![Navigate to the Configuration menu.](./configuring-navigation-menus/images/01.png)
 
 ## Navigation Menu
 
@@ -17,13 +17,13 @@ Select the desired navigation menu type; the desired navigation menu type appear
 
 Alternately, you can choose a navigation menu by clicking the _Select_ button.
 
-![Select the type of Navigation Menu.](./navigation-menu-widget-reference/images/02.png)
+![Select the type of Navigation Menu.](./configuring-navigation-menus/images/02.png)
 
 ## Display Templates
 
 You can select a [Widget Template](../displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) for navigation menus:
 
-![Select the Display Template.](./navigation-menu-widget-reference/images/03.png)
+![Select the Display Template.](./configuring-navigation-menus/images/03.png)
 
 | Display Template | Description |
 | --- | --- |
@@ -42,7 +42,7 @@ You can select a [Widget Template](../displaying-content/customizing-widgets/sty
 
 You can configure which pages at what level from the menu appear in the widget. You can choose the starting level, how many levels deep to display, and how to display sub-levels.
 
-![Select the Menu Items to Show.](./navigation-menu-widget-reference/images/04.png)
+![Select the Menu Items to Show.](./configuring-navigation-menus/images/04.png)
 
 | Field | Description |
 | --- | --- |
