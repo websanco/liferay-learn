@@ -1,10 +1,10 @@
 # Publishing Documents
 
-Liferay makes it easy to publish and showcase documents and other types of media files. As you begin [uploading media files](../../../uploading-and-managing/uploading-files.md), you probably want to start sharing them on your site.
+Liferay makes it easy to publish and showcase documents and other types of media files. As you begin [uploading media files](../uploading-and-managing/uploading-files.md), you probably want to start sharing them on your site.
 
 The available widgets can highlight your documents and media files: *Media Gallery*, *Documents and Media*, and *Asset Publisher*. You can choose an appropriate widget based on your use case. 
 
-You can embed and display Documents and media files on other assets such as Web Content, Blogs, or Wiki pages.
+You can embed and display Documents and Media files on other assets such as Web Content, Blogs, or Wiki pages.
 
 ## Using the Media Gallery Widget 
 
@@ -16,7 +16,7 @@ To use the Media Gallery widget,
 
     ![Locate the Media Gallery widget listed under the Content Management section of widgets.](publishing-documents-on-a-dxp-site/images/01.png)
 
-1. Once the widget appears, any media files previously uploaded should already be visible. If you wish to [add additional media files](../../../uploading-and-managing/uploading-files.md), they can be uploaded from Documents and Media.
+1. Once the widget appears, any media files previously uploaded should already be visible. If you wish to [add additional media files](../uploading-and-managing/uploading-files.md), they can be uploaded from Documents and Media.
 
 The Media Gallery widget has several options you can configure by clicking *Options* (![Options icon](../../../images/icon-options.png)) &rarr; _Configuration_: 
 
@@ -46,13 +46,13 @@ This widget provides a way to publish all types of files. Unlike the Media Galle
 
 1. From the Content Management section, add the *Documents and Media* widget to a page.
 
-![Locate the Documents and Media widget listed under the Content Management section of widgets.](publishing-documents-on-a-dxp-site/images/05.png)
+    ![Locate the Documents and Media widget listed under the Content Management section of widgets.](publishing-documents-on-a-dxp-site/images/05.png)
 
-1. If you wish to [add additional media files](../../../uploading-and-managing/uploading-files.md), they can be uploaded from the Documents and Media application.
+1. If you wish to [add additional media files](../uploading-and-managing/uploading-files.md), they can be uploaded from the Documents and Media application.
 
 You can configure Documents and Media via its *Options* button (![Options button](../../../images/icon-options.png)): 
 
- ![The configuration window has four different tabs.](publishing-documents-on-a-dxp-site/images/06.png)
+![The configuration window has four different tabs.](publishing-documents-on-a-dxp-site/images/06.png)
 
 **Display Settings:** Show each file's actions, show the search bar, show related assets, set maximum number of files per page, and enable different view options.
 
@@ -104,15 +104,15 @@ Selecting a file reveals several options:
 
 ## Using the Asset Publisher Widget
 
-The [Asset Publisher](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md) widget can publish different assets and collections based on criteria. You can use it to display content from your Documents and Media library. 
+The [Asset Publisher](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md) widget can publish different assets and collections based on criteria. You can use it to display content from your Documents and Media library. 
 
 ## Using Documents in Other Assets
 
 It is easy to add your documents or media files to other types of assets: 
 
-### In Web Content
+### Web Content
 
-1. To be able to add documents or media to your Web Content, first [create a Structure](../../../web-content/web-content-structures/creating-structures.md) that contains a field for documents and media.
+1. To be able to add documents or media to your Web Content, first [create a Structure](../../web-content/web-content-structures/creating-structures.md) that contains a field for documents and media.
 
 1. Go to the Structures tab of the Web Content application to create a new Structure. Drag and drop the Documents and Media field onto the Structure.
 
@@ -124,7 +124,7 @@ It is easy to add your documents or media files to other types of assets:
 
 1. You can now select documents or media files and add them to your Web Content.
 
-### In Blogs
+### Blogs
 
 1. To add documents and media to your blog, first navigate to the Blog application.
 
@@ -134,7 +134,7 @@ It is easy to add your documents or media files to other types of assets:
 
    ![Under Related Assets, click on the select button to add your documents or media files.](publishing-documents-on-a-dxp-site/images/17.png)
 
-### In Wikis
+### Wikis
 
 1. Navigate to the Wiki node. 
 
