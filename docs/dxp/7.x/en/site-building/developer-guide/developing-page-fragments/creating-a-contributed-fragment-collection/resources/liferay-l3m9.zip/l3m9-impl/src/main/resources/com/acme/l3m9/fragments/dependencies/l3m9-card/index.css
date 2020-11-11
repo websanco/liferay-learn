@@ -1,9 +1,8 @@
-.marketing-card-fragment-01 .card {
+.component-l3m9-card .card {
   max-width: 100%;
 }
 
-.marketing-card-fragment-01 .card img {
+.component-l3m9-card .card img {
   background-color: #0000FF;
   height: 300px;
-  object-fit: cover;
 }
