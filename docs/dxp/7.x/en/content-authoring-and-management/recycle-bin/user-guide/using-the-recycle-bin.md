@@ -33,7 +33,7 @@ DXP then displays a status message indicating how many items have been moved to 
    ![DXP displays a status message with a quick access link to the Recycle bin and an Undo button. ](./using-the-recycle-bin/images/03.png)
 
 ### Drag and Drop
-<!-- This feature is not working for me -->
+
 You can also drag and drop items into the Recycle Bin:
 
 1. Use the checkboxes to select the folders or assets you want to recycle.
@@ -60,7 +60,7 @@ DXP then displays a status message indicating which items have been restored, al
 
 ## Deleting Items Permanently
 
-Follow these steps to permanently delete  one or more items in the Recycle Bin:
+Follow these steps to permanently delete one or more items in the Recycle Bin:
 
 1. Open the *Site Menu*, and go to *Recycle Bin*.
 

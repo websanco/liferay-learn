@@ -1,6 +1,6 @@
 # Introduction to the Recycle Bin
 
-Liferay DXP includes an integrated *Recycle Bin* so you can temporarily store content and data you want to remove from your instance before making that removal permanent. By default, the Recycle Bin is enabled instance-wide, though you can disable it at any time for individual Sites.
+Liferay DXP includes an integrated *Recycle Bin* so you can temporarily store content and data you want to remove from your instance before making that removal permanent. By default, the Recycle Bin is enabled instance-wide, but you can disable it at any time for individual Sites.
 
 While enabled, the *Delete* action is replaced with *Move to the Recycle Bin* for recyclable assets (i.e., folders, web content, blogs, bookmarks, documents, media, message boards, and wikis).
 
