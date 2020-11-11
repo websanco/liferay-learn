@@ -1,8 +1,8 @@
 {
 	"cssPath": "index.css",
-	"fragmentEntryKey": "marketing-jumbotron",
+	"fragmentEntryKey": "l3m9-jumbotron",
 	"htmlPath": "index.html",
 	"jsPath": "index.js",
-	"name": "Marketing Jumbotron",
+	"name": "L3M9 Jumbotron",
 	"type": "component"
 }
