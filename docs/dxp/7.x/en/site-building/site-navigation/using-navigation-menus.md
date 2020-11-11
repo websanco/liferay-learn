@@ -1,6 +1,6 @@
 # Using Navigation Menus
 
-You can create _Navigation Menus_ to group desired pages. For example, a navigation menu can contains all child pages of a given page. You can display the menu using the navigation menu widget on the parent page, and you've created a mini-site containing only relevant information. 
+You can create _Navigation Menus_ to group desired pages. For example, a navigation menu can contain all child pages of a given page. You can display the menu using the navigation menu widget on the parent page, and you've created a mini-site containing only relevant information. 
 
 ## Creating Navigation Menus
 
