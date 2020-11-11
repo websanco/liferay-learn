@@ -1,8 +1,8 @@
 # Content Pages Overview
 
-By default, Liferay DXP uses the Content Page type, which provides a convenient UI for both managing and editing Page content and design. With Content Pages, you can use configurable drag-and-drop elements right out-of-the-box, or develop your own to create the desired User experience.
+By default, Liferay DXP uses the Content Page type, which provides a convenient UI for both managing and editing page content and design. With Content Pages, you can use configurable drag-and-drop elements out-of-the-box, or develop your own to create the desired User experience.
 
-As with other Page types, you can use [widgets](./using-widgets-on-a-content-Page.md) to add dynamic functionality to a Content Page, integrating blogs, wikis, message boards, and more. However, Content Pages are primarily built using [Page Fragments](./using-fragments.md). These Fragments are extensible, reusable Page elements that include editable components, such as [text](./building-content-pages.md#editing-text), [images](./building-content-pages.md#editing-an-image), and [links](./building-content-pages.md#editing-a-hyperlink), which you can also [map](./building-content-pages.md#mapping-content) to available content. See [Using Fragments](./using-fragments.md) to learn more about DXP's out-of-the-box Fragments, or [Developing Fragments](../../developer-guide/developing-Page-fragments/developing-fragments-intro.md) to learn how to create your own.
+As with other page types, you can use [widgets](./using-widgets-on-a-content-Page.md) to add dynamic functionality to a Content Page, integrating blogs, wikis, message boards, and more. However, Content Pages are primarily built using [Page Fragments](./using-fragments.md). Page Fragments are extensible, reusable page elements that include editable components, such as [text](./building-content-pages.md#editing-text), [images](./building-content-pages.md#editing-an-image), and [links](./building-content-pages.md#editing-a-hyperlink), which you can also [map](./building-content-pages.md#mapping-content) to available content. See [Using Fragments](./using-fragments.md) to learn more about DXP's out-of-the-box Fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
 
 ![Build Content Pages using Fragments.](./content-pages-overview/images/01.png)
 
@@ -10,13 +10,13 @@ When editing Content Pages, all changes are made through a *Site Builder* and ar
 
 ![When editing Content Pages, all changes are made to Content Pages  through a Site Builder.](./content-pages-overview/images/02.png)
 
-With Content Page Fragments and widgets, you can conveniently display web content, documents, and more. You can also view, edit, and manage your content, including content mapped to Page fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
+With Content Page Fragments and widgets, you can conveniently display web content, documents, and more. You can also view, edit, and manage your content, including content mapped to page fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
 
-Create personalized Page [experiences](../personalizing-site-experience/experience-personalization/content-page-personalization.md) and manage localized translations to engage your target audiences. Also, you can further optimize user experience with DXP's Responsive Layout Editor. This tool adapts the Page content, so you can view and configure how your Content Page is displayed on desktops, tablets, and smartphones.
+Create personalized page [experiences](../personalizing-site-experience/experience-personalization/content-page-personalization.md) and manage localized translations to engage your target audiences. You can also further optimize user experience with DXP's Responsive Layout Editor. This tool adapts the page content, so you can view and configure how your Content Page is displayed on desktops, tablets, and smartphones.
 
-Finally, with [A/B Testing](./ab-testing), you can create alternative versions of a Content Page to track visitor data (e.g., bounce rate, clicks, etc.). Using algorithms, you can analyze this data to determine which Page version best achieves your goals and hone your message accordingly.
+Finally, with [A/B Testing](./ab-testing), you can create alternative versions of a Content Page to track visitor data (e.g., bounce rate, clicks, etc.). Using algorithms, you can analyze this data to determine which page version best achieves your goals and hone your message accordingly.
 
-See [Building Content Pages](./building-content-pages.md) for how to get started!
+See [Building Content Pages](./building-content-pages.md) to get started!
 
 ## Additional Information
 

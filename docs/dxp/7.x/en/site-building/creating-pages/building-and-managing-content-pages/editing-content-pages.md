@@ -13,7 +13,7 @@ Content Pages provide a convenient editing UI for displaying, managing, and deve
 
 ## Editing Toolbar
 
-Via the Content Page toolbar, you can access tools for creating unique user experiences, setting localized translations, switching between edit modes, and more.
+You can access tools for creating unique user experiences, setting localized translations, switching between edit modes, and more by using the Content Page toolbar.
 
 ![Click on Edit to access the Content Page toolbar.](./editing-content-pages/images/02.png)
 
@@ -99,11 +99,11 @@ Unlike Widget Pages, Content Pages can only be edited through the *Site Builder*
 
 3.  On the next page, select *Content Page* and provide a name for the page.
 
-    You will be brought to the Content Page management interface.
+    You are then brought to the Content Page management interface.
  
     ![Each Content Page starts as a blank page.](./editing-content-pages/images/20.png)
 
-To edit an existing Content Page,
+To edit an existing Content Page:
 
 1.  Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 
@@ -179,7 +179,7 @@ If you de-select a fragment or enter the comments UI without a fragment selected
 
 ![When creating content pages, you and your team can comment on any fragments.](./editing-content-pages/images/27.png)
 
-### The Title Bar
+### Title Bar
 
 The title bar provides navigation back to the Main Menu, a link to page configuration, and the ability to search for other pages. The title bar is covered in more detail in [Creating Pages](/dxp/7.x/en/site-building/creating_pages.html). 
 
