@@ -8,13 +8,16 @@ import javax.servlet.ServletContext;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component(service = FragmentCollectionContributor.class)
+@Component(
+	property = "fragment.collection.key=BASIC_COMPONENT",
+	service = FragmentCollectionContributor.class
+)
 public class L3M9FragmentsCollectionContributor
 	extends BaseFragmentCollectionContributor {
 
 	@Override
 	public String getFragmentCollectionKey() {
-		return "Marketing Collection";
+		return "L3M9_COLLECTION";
 	}
 
 	@Override
@@ -22,7 +25,9 @@ public class L3M9FragmentsCollectionContributor
 		return _servletContext;
 	}
 
-	@Reference(target = "(osgi.web.symbolicname=com.liferay.learn.fragments)")
+	@Reference(
+		target = "(osgi.web.symbolicname=com.acme.l3m9.impl)"
+	)
 	private ServletContext _servletContext;
 
 }
