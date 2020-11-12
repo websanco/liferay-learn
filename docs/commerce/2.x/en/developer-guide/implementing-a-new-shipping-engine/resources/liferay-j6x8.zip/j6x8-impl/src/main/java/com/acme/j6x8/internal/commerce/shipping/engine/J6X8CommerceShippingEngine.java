@@ -84,8 +84,12 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		return LanguageUtil.get(resourceBundle, "discounted-rate");
 	}
 
-	private List<CommerceShippingFixedOption> _getCommerceShippingFixedOptions(
-		long groupId) {
+	private List<CommerceShippingOption> _getCommerceShippingOptions(
+			long groupId, CommerceOrder commerceOrder, Locale locale)
+		throws PortalException {
+
+		List<CommerceShippingOption> commerceShippingOptions =
+			new ArrayList<>();
 
 		CommerceShippingMethod commerceShippingMethod =
 			_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
@@ -95,21 +99,11 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 			return Collections.emptyList();
 		}
 
-		return _commerceShippingFixedOptionLocalService.
-			getCommerceShippingFixedOptions(
-				commerceShippingMethod.getCommerceShippingMethodId(),
-				QueryUtil.ALL_POS, QueryUtil.ALL_POS);
-	}
-
-	private List<CommerceShippingOption> _getCommerceShippingOptions(
-			long groupId, CommerceOrder commerceOrder, Locale locale)
-		throws PortalException {
-
-		List<CommerceShippingOption> commerceShippingOptions =
-			new ArrayList<>();
-
 		List<CommerceShippingFixedOption> commerceShippingFixedOptions =
-			_getCommerceShippingFixedOptions(groupId);
+			_commerceShippingFixedOptionLocalService.
+				getCommerceShippingFixedOptions(
+					commerceShippingMethod.getCommerceShippingMethodId(),
+					QueryUtil.ALL_POS, QueryUtil.ALL_POS);
 
 		for (CommerceShippingFixedOption commerceShippingFixedOption :
 				commerceShippingFixedOptions) {
