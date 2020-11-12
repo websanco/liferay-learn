@@ -56,8 +56,50 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 			new ArrayList<>();
 
 		try {
-			commerceShippingOptions = _getCommerceShippingOptions(
-				commerceOrder.getScopeGroupId(), commerceOrder, locale);
+			CommerceShippingMethod commerceShippingMethod =
+				_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
+					commerceOrder.getScopeGroupId(), "J6X8");
+
+			if (commerceShippingMethod == null) {
+				return Collections.emptyList();
+			}
+
+			List<CommerceShippingFixedOption> commerceShippingFixedOptions =
+				_commerceShippingFixedOptionLocalService.
+					getCommerceShippingFixedOptions(
+						commerceShippingMethod.getCommerceShippingMethodId(),
+						QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+
+			for (CommerceShippingFixedOption commerceShippingFixedOption :
+					commerceShippingFixedOptions) {
+
+				CommerceAddress commerceAddress =
+					commerceOrder.getShippingAddress();
+
+				if (_commerceAddressRestrictionLocalService.
+						isCommerceShippingMethodRestricted(
+							commerceShippingFixedOption.
+								getCommerceShippingMethodId(),
+							commerceAddress.getCommerceCountryId())) {
+
+					continue;
+				}
+
+				String name = commerceShippingFixedOption.getName(locale);
+
+				if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
+					commerceShippingOptions.add(
+						new CommerceShippingOption(
+							name, name, BigDecimal.ZERO));
+				}
+
+				BigDecimal amount = commerceShippingFixedOption.getAmount();
+
+				amount = amount.multiply(DISCOUNT_RATE);
+
+				commerceShippingOptions.add(
+					new CommerceShippingOption(name, name, amount));
+			}
 		}
 		catch (PortalException pe) {
 			if (_log.isDebugEnabled()) {
@@ -82,60 +124,6 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 			"content.Language", locale, getClass());
 
 		return LanguageUtil.get(resourceBundle, "discounted-rate");
-	}
-
-	private List<CommerceShippingOption> _getCommerceShippingOptions(
-			long groupId, CommerceOrder commerceOrder, Locale locale)
-		throws PortalException {
-
-		CommerceShippingMethod commerceShippingMethod =
-			_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
-				groupId, "J6X8");
-
-		if (commerceShippingMethod == null) {
-			return Collections.emptyList();
-		}
-
-		List<CommerceShippingOption> commerceShippingOptions =
-			new ArrayList<>();
-
-		List<CommerceShippingFixedOption> commerceShippingFixedOptions =
-			_commerceShippingFixedOptionLocalService.
-				getCommerceShippingFixedOptions(
-					commerceShippingMethod.getCommerceShippingMethodId(),
-					QueryUtil.ALL_POS, QueryUtil.ALL_POS);
-
-		for (CommerceShippingFixedOption commerceShippingFixedOption :
-				commerceShippingFixedOptions) {
-
-			CommerceAddress commerceAddress =
-				commerceOrder.getShippingAddress();
-
-			if (_commerceAddressRestrictionLocalService.
-					isCommerceShippingMethodRestricted(
-						commerceShippingFixedOption.
-							getCommerceShippingMethodId(),
-						commerceAddress.getCommerceCountryId())) {
-
-				continue;
-			}
-
-			String name = commerceShippingFixedOption.getName(locale);
-
-			if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
-				commerceShippingOptions.add(
-					new CommerceShippingOption(name, name, BigDecimal.ZERO));
-			}
-
-			BigDecimal amount = commerceShippingFixedOption.getAmount();
-
-			amount = amount.multiply(DISCOUNT_RATE);
-
-			commerceShippingOptions.add(
-				new CommerceShippingOption(name, name, amount));
-		}
-
-		return commerceShippingOptions;
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
