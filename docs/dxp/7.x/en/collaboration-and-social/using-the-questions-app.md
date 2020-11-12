@@ -38,7 +38,7 @@ You can find the Questions app in the Add menu's Collaboration section.
 
     ![Type your answer and click the Post Answer button](using-the-questions-app/images/06.png)
 
-1. The answer should now be visible to everyone who views the question.
+1. The answer is visible to everyone who views the question.
 
     ![The answers are visible below the question.](using-the-questions-app/images/07.png)
 
