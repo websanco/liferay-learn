@@ -88,9 +88,6 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 			long groupId, CommerceOrder commerceOrder, Locale locale)
 		throws PortalException {
 
-		List<CommerceShippingOption> commerceShippingOptions =
-			new ArrayList<>();
-
 		CommerceShippingMethod commerceShippingMethod =
 			_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
 				groupId, "J6X8");
@@ -98,6 +95,9 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		if (commerceShippingMethod == null) {
 			return Collections.emptyList();
 		}
+
+		List<CommerceShippingOption> commerceShippingOptions =
+			new ArrayList<>();
 
 		List<CommerceShippingFixedOption> commerceShippingFixedOptions =
 			_commerceShippingFixedOptionLocalService.
@@ -108,8 +108,14 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		for (CommerceShippingFixedOption commerceShippingFixedOption :
 				commerceShippingFixedOptions) {
 
-			if (_isShippingOptionRestricted(
-					commerceOrder, commerceShippingFixedOption)) {
+			CommerceAddress commerceAddress =
+				commerceOrder.getShippingAddress();
+
+			if (_commerceAddressRestrictionLocalService.
+					isCommerceShippingMethodRestricted(
+						commerceShippingFixedOption.
+							getCommerceShippingMethodId(),
+						commerceAddress.getCommerceCountryId())) {
 
 				continue;
 			}
@@ -130,19 +136,6 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 		}
 
 		return commerceShippingOptions;
-	}
-
-	private boolean _isShippingOptionRestricted(
-			CommerceOrder commerceOrder,
-			CommerceShippingFixedOption commerceShippingFixedOption)
-		throws PortalException {
-
-		CommerceAddress commerceAddress = commerceOrder.getShippingAddress();
-
-		return _commerceAddressRestrictionLocalService.
-			isCommerceShippingMethodRestricted(
-				commerceShippingFixedOption.getCommerceShippingMethodId(),
-				commerceAddress.getCommerceCountryId());
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
