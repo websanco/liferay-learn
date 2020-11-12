@@ -31,7 +31,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = "commerce.shipping.engine.key=J6X8",
 	service = CommerceShippingEngine.class
 )
