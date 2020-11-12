@@ -56,7 +56,7 @@ Here's how to configure your CDN in the Control Panel:
 
 Make sure to include the protocol and domain when specifying your CDN host(s) URLs:
 
-*CDN Host HTTP:* `http://cdnhost1.liferay.com`
+*CDN Host HTTP:* `http://cdnhost1.liferay.com`  
 *CDN Host HTTP:* `https://cdnhost2.liferay.com`
 
 
