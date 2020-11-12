@@ -25,9 +25,7 @@ public class L3M9FragmentsCollectionContributor
 		return _servletContext;
 	}
 
-	@Reference(
-		target = "(osgi.web.symbolicname=com.acme.l3m9.impl)"
-	)
+	@Reference(target = "(osgi.web.symbolicname=com.acme.l3m9.impl)")
 	private ServletContext _servletContext;
 
 }
