@@ -2,6 +2,10 @@
 
 Here's how to install, configure, and start Elasticsearch on-premises.
 
+```important::
+   The Sidecar Elasticsearch server bundled with Liferay 7.3 uses the Elasticsearch OSS distribution. Do not install the OSS version for production. To run Liferay securely with Elasticsearch, you must install the Basic level of Elasticsearch at a minimum. See `Elastic's subscriptions page <https://www.elastic.co/subscriptions>`__ for more information.
+```
+
 ## Environment Setup for Production-Like Installation
 
 ### Adding Hosts
@@ -27,7 +31,7 @@ sysctl -w vm.max_map_count=262144
 
 ## Install Elasticsearch
 
-1. Download an Elasticsearch archive from [Elastic's website](https://www.elastic.co).
+1. Download an Elasticsearch archive (not the OSS version) from [Elastic's website](https://www.elastic.co).
 
     ```important::
        Download the latest Elasticsearch archive `compatible with your Liferay version <./connecting-to-elasticsearch.html#available-liferay-connector-applications.md>`_.
