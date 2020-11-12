@@ -1,10 +1,10 @@
 # Adding Validation Rules
 
-When defining Fragment [configuration options](./adding-configuration-options-to-fragments.md), you can add `validation` properties to `text` type fields that determine rules for valid entries. As part of defining these properties, specify the rule's type: `text`, `number`, `email`, `url`, or `pattern`. Also, add custom error messages to notify users of invalid entries.
+When defining Fragment [configuration options](./adding-configuration-options-to-fragments.md), you can add `validation` properties to `text` type fields that determine rules for valid entries. Determine what type of data each field accepts by specifying the rule's type: `text`, `number`, `email`, `url`, or `pattern`. You can also add custom error messages to notify users of invalid entries.
 
 ## Text Validation Rules
 
-The following code adds `text` validation rules to set the minimum and maximum number of characters used in valid entries (i.e., `minLength` and `maxLength`) for a `text` type field.
+The following JSON code adds `text` validation rules to set the minimum and maximum number of characters used in valid entries (i.e., `minLength` and `maxLength`) for a `text` type field.
 
 ```json
 {
@@ -34,7 +34,7 @@ The following code adds `text` validation rules to set the minimum and maximum n
 
 ## Number Validation Rules
 
-The following code adds `number` validation rules to define the numerical range of valid entries (i.e., `min` and `max`) for a `text` type field.
+The following JSON code adds `number` validation rules to define the numerical range of valid entries (i.e., `min` and `max`) for a `text` type field.
 
 ```json
 {
@@ -65,7 +65,7 @@ The following code adds `number` validation rules to define the numerical range 
 
 ## Email Validation Rules
 
-The following code adds `email` validation rules to require email syntax and define the character length of valid entries (i.e., `minLength` and `maxLength`) for a `text` type field.
+The following JSON code adds `email` validation rules to require email syntax and define the character length of valid entries (i.e., `minLength` and `maxLength`) for a `text` type field.
 
 ```json
 {
@@ -95,7 +95,7 @@ The following code adds `email` validation rules to require email syntax and def
 
 ## URL Validation Rules
 
-The following code adds `url` validation rules to require proper URL protocol and define the character length of valid URLs (i.e., `minLength` and `maxLength`) for a `text` type field.
+The following JSON code adds `url` validation rules to require proper URL protocol and define the character length of valid URLs (i.e., `minLength` and `maxLength`) for a `text` type field.
 
 ```json
 {
@@ -125,7 +125,7 @@ The following code adds `url` validation rules to require proper URL protocol an
 
 ## Pattern Validation Rules
 
-The following code adds `pattern` validation rules to a `text` type field using regex to define valid entries.
+The following JSON code adds `pattern` validation rules to a `text` type field using regex to define valid entries.
 
 ```note::
    When using backslashes to escape characters in regex values (e.g., ``\d``), Users must use two backslashes within ``JSON`` files to first escape the backslash (e.g., ``\\d``). See `IETF <./https://www.ietf.org/rfc/rfc4627.txt>`_ documentation for more information on JSON grammar.
