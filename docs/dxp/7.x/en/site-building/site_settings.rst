@@ -7,7 +7,7 @@ Site Settings
    site-settings/site_users.rst
    site-settings/managing_site_urls.rst
    site-settings/site_content_configurations.rst
-   site-settings/configuring_site_languages.rst
+   site-settings/site-localization.md
    site-settings/adding-a-new-analytics-service.md
    site-settings/configuring-open-graph.md
    site-settings/site-settings-ui-reference.md
