@@ -98,7 +98,7 @@ To assign the task to a User, use the _Assign To_ menu item. After that you can 
 
 Add enhancements to make the Role Change Request app fully functional:
 
-1. Create Roles for the managers and HR. Assign the appropriate steps to each Role, rather than using the Administrator Role. 
+1. [Create Roles](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for the managers and HR. Assign the appropriate steps to each Role, rather than using the Administrator Role. 
 
 2. Create a Standard app so those with proper permissions can see the master list table from the Role Change Request object. Administrators can also kick off a form for an employee since they can access the first form, _Employee Request_.
 

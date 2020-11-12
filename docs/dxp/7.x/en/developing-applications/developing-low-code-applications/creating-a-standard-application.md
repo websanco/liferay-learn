@@ -7,7 +7,7 @@ To create applications based on a custom object takes four steps: create the obj
 * [Creating Table Views](#creating-table-views)
 * [Deploying the Application](#deploying-the-application)
 
-Here you'll create two simple time off management applications with App Builder, backed by a custom object called Time Off Request. The first application is a Time Off Requester widget that just shows an Add Request form. Users fill out this form when they want to request time off. The second application is a Time Off Management application deployed to the Product Menu, where administrative Users can see and manage the Time Off Requests.
+Here you'll create two simple time off management applications with App Builder, backed by a custom object called Time Off Request. The first application is a Time Off Requester widget that shows an Add Request form. Users fill out this form when they want to request time off. The second application is a Time Off Management application deployed to the Product Menu, where administrative Users can see and manage the Time Off Requests.
 
 ## Creating a Custom Object
 

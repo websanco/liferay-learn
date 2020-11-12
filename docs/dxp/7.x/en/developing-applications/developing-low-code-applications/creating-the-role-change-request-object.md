@@ -10,9 +10,9 @@ Here you'll create the backing object, form views, and table views. See [Creatin
 
 For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is in how you create the app from the elements of the App Builder framework. You can create the object, form views, and table views from the Objects entry in Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) &rarr; Applications &rarr; App Builder.
 
-#### **Object:** Create the object named _Role Change Request_.
+## **Object:** Create the object named _Role Change Request_.
 
-#### **Form:** Create the _Employee Request_ form.
+## **Form:** Create the _Employee Request_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
    | ---------- | ----------- | ------- | -------- | ---------------- |
@@ -21,7 +21,7 @@ For detailed instructions on creating App Builder objects, form views, and table
    | Text | Current Role | NA |  &#10004; | NA |
    | Select from List | Requested Role | Support Engineer <br /> Backend Developer <br /> Frontend Developer <br /> Technical Writer <br /> IT Engineer |  &#10004; | NA |
 
-#### **Form:** Create the _Current Manager's Assessment_ form.
+## **Form:** Create the _Current Manager's Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
    | ---------- | ----------- | ------- | -------- | ---------------- |
@@ -31,7 +31,7 @@ For detailed instructions on creating App Builder objects, form views, and table
    | Text | Detail the employee's skills and characteristics that might inhibit a successful transfer | NA |  &#10008; | Multiple Lines |
    | Date | When can the transfer occur? | NA | &#10008; | NA |
 
-#### **Form:** Create the _Potential Manager's Assessment_ form.
+## **Form:** Create the _Potential Manager's Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
    | ---------- | ----------- | ------- | -------- | ---------------- |
@@ -41,14 +41,14 @@ For detailed instructions on creating App Builder objects, form views, and table
    | Single Selection | Are training resources available? | Yes <br /> Unnecessary: The employee is already proficient in the subject matter. |  &#10008; | NA |
    | Text | Comments | NA |  &#10008; | Multiple Lines | NA |
 
-#### **Form:** Create the _HR Assessment_ form.
+## **Form:** Create the _HR Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
    | ---------- | ----------- | ------- | -------- | ---------------- |
    | Single Selection | HR Representative: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
    | Single Selection | Does the transfer require a reassessment of the employee's benefits? | Yes <br /> No |  &#10004; | NA |
 
-#### **Table:** Create the _Role Change Request Master List_ table.
+## **Table:** Create the _Role Change Request Master List_ table.
 
    | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 |
    | ---------- | ----------- | ------- | -------- | ---------------- | ---- |
