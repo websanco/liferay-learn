@@ -1,7 +1,6 @@
 # Permissions and Documents
 
-You can give permissions to an individual file, to an entire folder, or to a specific file type. See [Roles and Permissions](../../../../users-and-permissions/roles_and_permissions.md) to learn more about Roles.
-
+You can give permissions to an individual file, to an entire folder, or to a specific file type. See [Understanding Roles and Permissions](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) to learn more about how Roles and Permissions work in a Liferay installation.
 
 ## Permissions for an Individual File
 
