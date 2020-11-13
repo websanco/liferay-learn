@@ -74,7 +74,7 @@ The new Content Dashboard includes a tool that makes it easier to audit your con
 
 ### Extended categorization capabilities
 
-In 7.3 we've added a new configuration to vocabularies in order to set visibility as internal or public. New out-of-the-box Audience, Stage and Topic Global Vocabularies provide a more systematic categorization throughout Sites.
+In 7.3 we've added a new configuration to vocabularies in order to [set visibility as internal or public](../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md#vocabulary-visibility). New out-of-the-box Audience, Stage and Topic Global Vocabularies provide a more systematic categorization throughout Sites.
 
 ## Publication Management
 
@@ -84,13 +84,13 @@ In 7.3 we've added a new configuration to vocabularies in order to set visibilit
 
 ### Dedicated translation experience for web content
 
-A new translation UI makes it easy to translate content in a side-by-side UI that optimizes the process. Translators can translate only into languages for which they have permission, and our workflow processes make reviewing those translations a snap. 
+A [new translation UI](../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md) makes it easy to translate content in a side-by-side UI that optimizes the process. Translators can translate only into languages for which they have permission, and our workflow processes make reviewing those translations a snap. 
 
 ![The new translation UI makes the entire translation process painless.](./whats-new-73/images/10.png)
 
 ### Import/Export of web content for translations
 
-If you use an external agency or freelancers for your translations, you can now select the content to be translated and export the needed languages in the standard format for translations (XLIFF, either in 1.2 or 2.0 versions) and send them to the translation agency. When the translations are finished, you can import the translations to have them with the original content.
+If you use an external agency or freelancers for your translations, you can now select the content to be translated and [export the needed languages in the standard format for translations](../content-authoring-and-management/web-content/translating-web-content/exporting-and-importing-translations.md) (XLIFF, either in 1.2 or 2.0 versions) and send them to the translation agency. When the translations are finished, you can import the translations to have them with the original content.
 
 ![Translations can now be exported for translation and imported when finished.](./whats-new-73/images/11.gif)
 
@@ -128,7 +128,7 @@ Now you can tell how many visitors completely read your content. Content perform
 
 ## Questions app
 
-If you use your site to support products, the new Questions app can help your users find answers to the questions they have about your products. Taking advantage of Liferay's GraphQL APIs and Message Boards infrastructure, the questions app gets users the best answers through voting and marking the most valuable information. 
+If you use your site to support products, the new [Questions app](../collaboration-and-social/using-the-questions-app.md) can help your users find answers to the questions they have about your products. Taking advantage of Liferay's GraphQL APIs and Message Boards infrastructure, the questions app gets users the best answers through voting and marking the most valuable information. 
 
 ![Users can post a question and get answers quickly.](./whats-new-73/images/17.gif)
 
@@ -154,7 +154,7 @@ Fieldsets are fields grouped together, and App Builder's fieldsets make it easy 
 
 > Subscription Required
 
-App Builder contains a workflow process for approvals. You can define the stages of the process and specify what information should be requested and/or displayed in each step of the application. You can also make use of [Workflow Metrics](#workflow-metrics-improvements) to understand the performance and health of the App's processes. 
+App Builder contains a [workflow process for approvals](../developing-applications/developing-low-code-applications/creating-a-workflow-powered-application.md). You can define the stages of the process and specify what information should be requested and/or displayed in each step of the application. You can also make use of [Workflow Metrics](#workflow-metrics-improvements) to understand the performance and health of the App's processes. 
 
 ![Process-Driven Apps](./whats-new-73/images/22.png)
 
@@ -272,7 +272,7 @@ Url patterns are now matched at the instance level first, and then at the system
 
 ## Search
 
-There are several improvements and changes to Liferay DXP 7.3's search engine connector to Elasticsearch.
+There are several improvements and changes to [Liferay DXP 7.3's search engine connector to Elasticsearch](../using-search/installing-and-upgrading-a-search-engine/elasticsearch.md).
 
 ### Elasticsearch 7 Support
 

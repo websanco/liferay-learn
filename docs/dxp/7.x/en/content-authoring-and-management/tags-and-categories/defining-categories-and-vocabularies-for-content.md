@@ -17,7 +17,7 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
 
    **Allow Multiple Categories:** Enable this option to use more than one category from the vocabulary to categorize the asset. When disabled, you can use only one category from the vocabulary.
 
-   **Visibility:** See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabularies-visibility) for more information.
+   **Visibility:** See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) for more information.
 
    ```important::
       You cannot change the Visibility after saving the Vocabulary.
@@ -77,7 +77,7 @@ You can move a category to a different vocabulary, or as a subcategory in the sa
 1. Select the *Vocabulary* and *Category* where you want to move the category.
 
     ```note::
-       You can only move a Category into a Vocabulary of the same `Visibility type <./organizing-content-with-categories-and-tags.md#vocabulary-visibility>_.
+       You can only move a Category into a Vocabulary of the same `Visibility type <./organizing-content-with-categories-and-tags.md#vocabulary-visibility>`_.
     ```
 
 ### Editing Additional Category Properties
