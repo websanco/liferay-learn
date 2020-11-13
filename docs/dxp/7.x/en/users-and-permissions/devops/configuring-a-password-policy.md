@@ -1,50 +1,42 @@
 # Configuring a Password Policy
 
-Password policies can enhance the security of Liferay DXP. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to users or organizations.
+Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations.
 
 ## Adding and Configuring Password Policies
 
-To add a new password policy,
+1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
-1. Navigate to *Control Panel* → *Security* → *Password Policies*.
+1. Click the Actions button (![Actions button](../../images/icon-actions.png)) next to an existing policy and click *Edit*. Or click the *Add* icon (![Click on the add icon to create a new policy](../../images/icon-add.png)) to add a new policy.
 
-    ![Navigate to password policies in the control panel.](configuring-a-password-policy/images/01.png)
+1. In the configuration window, provide a Name and Description for your password policy. 
 
-1. Click on the Actions button (![Click on the actions button next to a policy](../../images/icon-actions.png)) next to an existing policy and click *Edit*. Or click the *Add* icon (![Click on the add icon to create a new policy](../../images/icon-add.png)) to add a new policy.
+   ![Set specific parameters in the configuration window](configuring-a-password-policy/images/02.png)
 
-1. In the configuration window, provide a *Name* and *Description* for your password policy. 
+1. Set the parameters for the policy (see below). When finished, click _Save_. 
 
-    ![Set specific parameters in the configuration window](configuring-a-password-policy/images/02.png)
+**Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
 
-    You can set the following parameters:
+**Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
 
-    **Password Changes:** Allow or disallow users to change their passwords, and set a time limit on the validity of password reset links.
+**Password History:** Decide how many passwords to keep in the history, preventing old password use.
 
-    **Password Syntax Checking:** If enabled, require users to use a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
+**Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a _Grace Limit_: how many logins are allowed after the password is expired before forcing a password change. 
 
-    **Password History:** If enabled, decide how many passwords to keep in the history, preventing users from reusing an old password.
-
-    **Password Expiration:** Decide whether passwords will expire. If they will, specify how long passwords are valid, whether a warning will be sent, when and whether a warning will be sent, and how many times they can log in after the password is expired, before needing to set a new password (called a *Grace Limit)*.
-
-    **Lockout:** If enabled, set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
-
-    Once you configure the policy to your liking, click the *Save* button.
+**Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
 
 ## Assigning Members to a Password Policy
 
 Once you have created a new password policy, you need to assign members to it,
 
-1. Click on the Actions button (![Click on the actions button next to a policy](../../images/icon-actions.png)) next to the password policy. Click on *Assign Members*.
+1. Click the Actions button (![Actions button](../../images/icon-actions.png)) next to the password policy. Click *Assign Members*.
 
-    ![Click on the Assign Members link.](configuring-a-password-policy/images/03.png)
+   ![Click on the Assign Members link.](configuring-a-password-policy/images/03.png)
 
-1. You can choose to add individual users to the password policy or add organizations. Click on the add icon (![Click on the add icon to create a new policy](../../images/icon-add.png)) and a new window will pop up.
+1. You can add individual Users or Organizations to the password policy. Click the _add_ icon (![Add icon](../../images/icon-add.png)). 
 
-    ![Click on the add icon to add users or organizations to the policy.](configuring-a-password-policy/images/04.png)
+1. Make your selection (of Users or Organizations). When finished, click *Add*. 
 
-1. Make your selection (of users or organizations) and click on the *Add* button. 
+   ![Make your selection and click the Add button.](configuring-a-password-policy/images/05.png)
 
-    ![Make your selection and click the Add button.](configuring-a-password-policy/images/05.png)
-
-    Your users or organizations should now be associated with your password policy.
+   Your Users or Organizations are now associated with your password policy.
 
