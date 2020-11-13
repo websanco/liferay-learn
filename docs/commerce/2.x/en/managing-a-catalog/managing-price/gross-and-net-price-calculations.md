@@ -4,13 +4,27 @@ Liferay Commerce allows users use either the gross price or the net price as the
 
 ## Calculations
 
+If the price list contains gross price entries:
+
+* The product price calculation engine calculates the net price by subtracting the taxes from the gross price.
+* The net price is then used to calculate the unit price.
+* Other price modifiers are then applied.
+
+If the promotion contains gross price entries:
+
+* The product price calculation engine calculates the net price by subtracting the taxes from the gross price
+* The net price is then used to calculate the unit promo price
+* Other price modifiers are then applied
+
+
 ## Discounts
 
  If discount amount is gross, then the net amount is calculated and applied to the net price of the product.
 
 If discount amount is gross:
-Discount is a fixed amount: the taxes are removed from the discount amount before applying the discount calculation algorithm
-Discount is a percentage: the net percentage is recalculated before applying the discount. N = L - T(100-L) with T in %
+
+* Discount is a fixed amount: the taxes are removed from the discount amount before applying the discount calculation algorithm
+* Discount is a percentage: the net percentage is recalculated before applying the discount. N = L - T(100-L) with T in %
 
 Taxes are calculated on the final price
 
