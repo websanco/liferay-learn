@@ -1,53 +1,52 @@
 # Adding Custom Fields to Users
 
-Many of Liferay DXP’s assets and resources are designed to let you add new fields to their edit forms. This includes adding custom fields for users.
+Many of Liferay's assets and resources can be extended with new fields. This includes adding custom fields for Users:
 
-To add custom fields,
+1. Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Custom Fields*.
 
-1. Navigate to *Control Panel* → *Configuration* → *Custom Fields*.
+   ![Navigate to Custom Fields in the Control Panel](adding-custom-fields-to-users/images/01.png)
 
-    ![Navigate to Custom Fields in the Control Panel](adding-custom-fields-to-users/images/01.png)
+1. Scroll down and click the link for *User*.
 
-1. Scroll down and click on the link for *User*.
+1. Click *Add* (![Add icon](../../images/icon-add.png)) to add a new custom field.
 
-1. Click on the *Add* icon (![Click on the add icon to create add a custom field](../../images/icon-add.png)) to add a new custom field.
+1. Choose a field type and click _Save_. 
 
-4. There are a number of different field types you can choose from.
+![There are different field types to choose.](adding-custom-fields-to-users/images/02.png)
 
-    ![There are different field types you can choose from.](adding-custom-fields-to-users/images/02.png)
+## Field Types
 
-    For example, you can select the Dropdown field type to add a custom category for your users to select. 
+### Text and Numbers
 
-    ![For example, you can select the Dropdown field type for your users to select.](adding-custom-fields-to-users/images/03.png)
+**Text Area:** Collect longer lines of text. 
 
-    Here are the different field types to choose from:
+**Input Field:** Collect a string of text, a decimal number, or an integer. 
 
-    Text and Numbers includes:
+### Selection
 
-    **Text Area:** This field type allows you to collect longer lines of text from the user.
+**Dropdown:** Provide a dropdown list to select a single option. The list can be text, decimal numbers, or integers.
 
-    **Input Field:** This field type allows you to collect a string of text, a decimal number, or an integer from the user. 
+**Checkbox:** Provide a list of checkboxes to select one or more options. 
 
-    Selection includes:
+**Radio:** Provide a list of radio buttons to toggle a single option.
 
-    **Dropdown:** This field type allows you to provide a dropdown list for the user to select from. The list can be text, decimal numbers, or integers.
+### Other Field Types
 
-    **Checkbox:** This field type allows you to give a checkbox for users to check.
+**Geolocation:** Collect the User's geolocation information. 
 
-    **Radio:** This field type allows you to give a selection of two or more radio buttons for users to toggle.
+**Date:** Collect date and time information. 
 
-    Others includes:
+**True/False:** Provide a choice of True or False.
 
-    **Geolocation:** This field type allows you to collect geolocation information of the user.
+For example, you can select the _Dropdown_ field type to add a custom category for your users to select. 
 
-    **Date:** This field type allows you to collect date and time information from the user.
+![For example, you can select the Dropdown field type for your users to select.](adding-custom-fields-to-users/images/03.png)
 
-    **True/False:** This field type allows you to give a true or false choice to the user. 
-    
-    Click on the *Save* button to save your changes. 
+## Using Your New Field
 
-1. Navigate to *Control Panel* → *Users* → *Users and Organizations*. Click on the *Add* icon (![Click on the add icon to create add a new user](../../images/icon-add.png)) to add a new user. You should now see the newly added custom field at the bottom of the form.
+1. Navigate to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. 
 
-    ![New custom field is now visible when adding a new user](adding-custom-fields-to-users/images/04.png)
+1. Click the *Add* icon (![Add icon](../../images/icon-add.png)) to add a new User. You should now see the newly added custom field at the bottom of the form.
 
-    You can add more custom fields to suit your Site needs.
+   ![New custom field is now visible when adding a new user](adding-custom-fields-to-users/images/04.png)
+
