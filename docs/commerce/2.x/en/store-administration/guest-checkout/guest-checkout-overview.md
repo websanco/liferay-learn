@@ -6,9 +6,9 @@ Once Guest Checkout has been enabled, in order for their orders to be processed,
 
 ![Guest must enter their email address to proceed.](./guest-checkout-overview/images/01.png)
 
-After providing their email, Guests are then redirected to log in or create an account.
+After providing their email, Guests are then prompted to log in, create an account, or continue as a Guest.
 
-![Guests must either log in or create an account t proceed.](./guest-checkout-overview/images/03.png)
+![Users can sign in, create an account, or continue as guest.](./guest-checkout-overview/images/03.png)
 
 ## Guest Checkout Process
 
