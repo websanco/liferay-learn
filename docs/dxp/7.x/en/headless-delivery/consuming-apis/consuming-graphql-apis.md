@@ -50,7 +50,7 @@ After Liferay DXP initializes, you can find the service you need.
    This URL does not require authentication, but it's quite cumbersome to manage the returned schema. For this reason, it's better to use the included GraphQL client.
    ```
 
-![The included GraphQL client has a schema documentation browser.](./images/01.png)
+![The included GraphQL client has a schema documentation browser.](./consuming-graphql-apis/images/01.png)
 
 Since the API requires you to know the Site containing the Blog where the entry should be posted, you must find the Site ID first.
 
@@ -156,7 +156,7 @@ The GraphQL schema revealed the call that must be made to post a blog entry.
 
 The blog entry you added now appears in the GraphQL client's right pane:
 
-![The GraphQL client makes it easy to call GraphQL services directly from your browser.](../../images/02.png)
+![The GraphQL client makes it easy to call GraphQL services directly from your browser.](./consuming-graphql-apis/images/02.png)
 
 Liferay DXP returns a JSON representation of your blog entry that contains the fields you requested in the mutation:
 

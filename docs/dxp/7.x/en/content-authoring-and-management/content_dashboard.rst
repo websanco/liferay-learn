@@ -2,7 +2,7 @@ Content Dashboard
 =================
 
 .. toctree::
-   maxdepth: 3
+   :maxdepth: 3
 
    content-dashboard/about-the-content-dashboard.md
 

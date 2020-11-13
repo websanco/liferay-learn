@@ -1,5 +1,5 @@
 Managing User Data (GDPR)
-========================
+=========================
 
 .. toctree::
    :maxdepth: 2
