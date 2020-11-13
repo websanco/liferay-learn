@@ -38,8 +38,8 @@ You can create *Manual* or *Dynamic* Collections. For information about the diff
 
 Note that Documents and Media folders and Web Content folders can be added to a Collection.
 
-```warning::
-   Content inside a folder are not displayed when they are published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and will be fixed in a future release.
+```note::
+   While Documents and Media and Web Content folders can be added to a collection, the content is not displayed when the folder is published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and will be fixed in a future release.
 ```
 
 ## Creating a Dynamic Collection
