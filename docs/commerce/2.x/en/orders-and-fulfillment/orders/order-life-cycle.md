@@ -1,6 +1,6 @@
 # Order Life Cycle
 
-This image shows the latest order life cycle, from the moment an order is created and all the way until it is fulfilled.
+An Order stores data regarding a potential or past transaction. This article provides an overview of the order life cycle from open cart to [fulfilled order](../shipments/introduction-to-shipments.md).
 
 ![This is the latest Order Life Cycle infographic.](./order-life-cycle/images/01.png)
 
