@@ -27,7 +27,7 @@ Entering a search query redirects to the default search page, where results are 
 
 ![The default search page provides a full search experience.](./search-pages/images/03.png)
 
-In addition to the search results themselves, the default search page provides various facets that can be used to further filter results. In the example above, the Type facet, User fact, and Last Modified facet can be seen in the left sidebar. Read more about the different [search facets](./search-facets.md) that are available and how they can be customized.
+The default search page contains the Search Bar, Search Results, Search Options, and Suggestions. You will also see all the different Search Facets (except the Custom facet). In the example above, the Type facet, User fact, and Last Modified facet can be seen in the left sidebar. Read more about the different [search facets](./search-facets.md) that are available and how they can be customized.
 
 The default search page is based on the Search page template, but it doesn't inherit changes from the template by default. That means you can customize the search page directly without changing the template's inheritance configuration.
 
