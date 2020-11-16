@@ -1,4 +1,4 @@
-package com.acme.j6x8.internal.commerce.shipping.engine;
+package com.acme.j6x8.internal.commerce.model;
 
 import com.liferay.commerce.context.CommerceContext;
 import com.liferay.commerce.exception.CommerceShippingEngineException;
@@ -31,12 +31,10 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = "commerce.shipping.engine.key=J6X8",
+	property = "commerce.shipping.engine.key=j6x8",
 	service = CommerceShippingEngine.class
 )
 public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
-
-	public static final BigDecimal DISCOUNT_RATE = new BigDecimal(0.75);
 
 	@Override
 	public String getCommerceShippingOptionLabel(String name, Locale locale) {
@@ -95,7 +93,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
 				BigDecimal amount = commerceShippingFixedOption.getAmount();
 
-				amount = amount.multiply(DISCOUNT_RATE);
+				amount = amount.multiply(BigDecimal.valueOf(0.75));
 
 				commerceShippingOptions.add(
 					new CommerceShippingOption(name, name, amount));
