@@ -1,40 +1,36 @@
 # Guest Checkout Overview
 
-Users can allow guests to submit orders without first having to sign in. The Guest Checkout function can be enabled or disabled for each [Channel](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md). See [Enabling Guest Checkout](./enabling-guest-checkout.md) to learn more. Otherwise, by default, all users must login to create orders.
+Guest checkout functionality can be enabled on a per-[channel](../../starting-a-store/channels/introduction-to-channels.md) basis and allows users to submit orders without a registered account on the site. See [Enabling Guest Checkout](./enabling-guest-checkout.md) to learn more.
 
-Once Guest Checkout has been enabled, in order for their orders to be processed, guests must enter their email address during the checkout process. (Normally, the email address field does not appear when an authenticated user goes through the checkout process.)
+With Guest Checkout enabled, guest users are required to enter an email address during the checkout process.
 
 ![Guest must enter their email address to proceed.](./guest-checkout-overview/images/01.png)
 
-After providing their email, Guests are then prompted to log in, create an account, or continue as a Guest.
+After providing their email, Guests are then prompted to log in, create an account, or continue as a Guest. Guests who adds items to the cart and then later sign in prior to checking out, have their items automatically carried over to their account's cart.
 
 ![Users can sign in, create an account, or continue as guest.](./guest-checkout-overview/images/03.png)
-
-## Guest Checkout Process
-
-If a guest user adds items to the cart then later signs in before completing the checkout process, the items are automatically carried over to his account.
 
 ## Processing a Guest Order
 
 When a Guest submits an order, it is processed the same as any other order. See [Processing an Order](../../orders-and-fulfillment/orders/processing-an-order.md) for more information.
 
-```tip::
+```note::
    Guests do not share order histories with other authenticated users, even if they have the same email addresses.
 ```
 
 ## Creating a Guest Checkout Authentication Page
 
-Instead of using the Speedwell accelerator to generate your site pages, you can create a [site page](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check on the [Channels setting](../managing-a-catalog/creating-and-managing-products/channels/channels-reference-guide.md) to generate this page and widget.
+Guest checkout requires a [site page](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check function on the [Channels setting](../../starting-a-store/channels/channels-reference-guide.md) to generate this page and widget.
 
- Clicking the _Continue as a Guest_ allows customers to complete the purchase without logging in or having to create an account.
+Clicking the _Continue as a Guest_ allows customers to complete the purchase without logging in or having to create an account.
 
 ![Another option is Guest Checkout Authentication widget.](./guest-checkout-overview/images/02.png)
 
-If this authentication page does not exist, then Guests will be redirected to the page with the _Checkout_ widget.
+If this authentication page does not exist, Guests will be redirected to the page with the _Checkout_ widget.
 
 ## Additional Information
 
 * [Enabling Guest Checkout](./enabling-guest-checkout.md)
-* [Introduction to Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md)
-* [Managing Channels](../managing-a-catalog/creating-and-managing-products/channels/managing-channels.md)
-* [Channels Reference Guide](../managing-a-catalog/creating-and-managing-products/channels/channels-reference-guide.md)
+* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
+* [Managing Channels](../../starting-a-store/channels/managing-channels.md)
+* [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)

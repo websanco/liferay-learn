@@ -1,6 +1,6 @@
 # Enabling Guest Checkout
 
-Users can allow guests to submit orders without first having to sign in. The Guest Checkout function can be enabled or disabled for each [Channel](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md) (if there are more than one channel on the Commerce instance).
+Guest checkout functionality can be enabled on a per-[channel](../../starting-a-store/channels/introduction-to-channels.md) basis and allows users to submit orders without a registered account on the site.
 
 To enable Guest Checkout:
 
@@ -31,10 +31,6 @@ To allow customers to continue their checkout process as a Guest user, you can c
 
 ![Customers have a choice of signing in or continuing as Guest.](./enabling-guest-checkout/images/05.png)
 
-```tip::
-   The site page above was generated using the Speedwell accelerator. You can use other accelerators such as Minium to generate these pages and customize them later.
-```
-
 Follow the steps below to generate this authentication page:
 
 1. Navigate to the _Global Menu_ &rarr; _Commerce_.
@@ -48,10 +44,6 @@ Follow the steps below to generate this authentication page:
     ![Access Commerce settings in the Global Commerce menu.](./enabling-guest-checkout/images/02.png)
 
 1. Click Save again when finished.
-
-```note::
-   The new page inherits whatever default theme the site is using. For more information about how to configure pages themes and templates, see `Managing Master Page Templates <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/defining-headers-and-footers/managing-master-pages.html>`_ and `Look and Feel <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.html#look-and-feel>`_.
-```
 
 ## Commerce 2.1 and Below
 
@@ -75,6 +67,6 @@ They must enter their contact information including a valid email address before
 ## Additional Information
 
 * [Guest Checkout](./guest-checkout.md)
-* [Introduction to Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md)
-* [Managing Channels](../managing-a-catalog/creating-and-managing-products/channels/managing-channels.md)
-* [Channels Reference Guide](../managing-a-catalog/creating-and-managing-products/channels/channels-reference-guide.md)
+* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
+* [Managing Channels](../../starting-a-store/channels/managing-channels.md)
+* [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)
