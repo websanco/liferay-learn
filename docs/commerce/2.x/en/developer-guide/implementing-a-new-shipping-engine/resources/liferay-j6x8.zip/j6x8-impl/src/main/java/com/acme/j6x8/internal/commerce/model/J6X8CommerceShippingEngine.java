@@ -13,10 +13,7 @@ import com.liferay.commerce.shipping.engine.fixed.model.CommerceShippingFixedOpt
 import com.liferay.commerce.shipping.engine.fixed.service.CommerceShippingFixedOptionLocalService;
 import com.liferay.commerce.util.CommerceShippingHelper;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
-import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
 import java.math.BigDecimal;
@@ -50,17 +47,17 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 			Locale locale)
 		throws CommerceShippingEngineException {
 
-		List<CommerceShippingOption> commerceShippingOptions =
-			new ArrayList<>();
-
 		try {
 			CommerceShippingMethod commerceShippingMethod =
 				_commerceShippingMethodLocalService.fetchCommerceShippingMethod(
-					commerceOrder.getScopeGroupId(), "J6X8");
+					commerceOrder.getScopeGroupId(), "j6x8");
 
 			if (commerceShippingMethod == null) {
 				return Collections.emptyList();
 			}
+
+			List<CommerceShippingOption> commerceShippingOptions =
+				new ArrayList<>();
 
 			List<CommerceShippingFixedOption> commerceShippingFixedOptions =
 				_commerceShippingFixedOptionLocalService.
@@ -98,14 +95,12 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 				commerceShippingOptions.add(
 					new CommerceShippingOption(name, name, amount));
 			}
-		}
-		catch (PortalException pe) {
-			if (_log.isDebugEnabled()) {
-				_log.debug(pe, pe);
-			}
-		}
 
-		return commerceShippingOptions;
+			return commerceShippingOptions;
+		}
+		catch (Exception exception) {
+			throw new CommerceShippingEngineException(exception);
+		}
 	}
 
 	@Override
@@ -123,9 +118,6 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 
 		return LanguageUtil.get(resourceBundle, "discounted-rate");
 	}
-
-	private static final Log _log = LogFactoryUtil.getLog(
-		J6X8CommerceShippingEngine.class);
 
 	@Reference
 	private CommerceAddressRestrictionLocalService
