@@ -4,7 +4,7 @@ Displaying Content
 .. toctree::
    :maxdepth: 3
 
-   displaying-content/using_the_web_content_display_widget.rst
+   displaying-content/using-the-web-content-display-widget.md
    displaying-content/using_the_asset_publisher_widget.rst
    displaying-content/using-the-iframe-widget.md
    displaying-content/using_fragments.rst

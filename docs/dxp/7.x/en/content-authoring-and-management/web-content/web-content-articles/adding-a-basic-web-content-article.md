@@ -20,7 +20,7 @@ Use the following steps to create a _Basic Web Content_ article:
 
 1. Click _Publish_.
 
-Congratulations! You have added a basic web content article to your Site. See [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget/web-content-display.md) for more information on displaying this article on a page.
+Congratulations! You have added a basic web content article to your Site. See [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget.md) for more information on displaying this article on a page.
 
 ## Properties Tab
 
@@ -43,4 +43,4 @@ You can see and edit more details for the article you are editing by opening the
 
 * [Display Page Templates](../../../site-building/displaying-content/using-fragments/using-display-page-templates/creating-a-display-page-template.md)
 * [Introduction to Web Content Structures](../web-content-structures/understanding-web-content-structures.md)
-* [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget/web-content-display.md)
+* [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget.md)
