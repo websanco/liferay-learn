@@ -8,7 +8,7 @@ The CDN functions as a caching proxy. This means that once static content is cop
 
 The red lines on the map represent the required distances traveled by requests from a server to the user. Because of the reduced wait time for requests and reduced load on your application server, a CDN is a great option to improve performance.
 
-Here are the \resources Liferay supports serving via a CDN:
+Here are the resources Liferay supports serving via a CDN:
 
 * Files included in Liferay and custom plugins
 * Items stored in Documents and Media
@@ -56,7 +56,7 @@ Here's how to configure your CDN in the Control Panel:
 
 Make sure to include the protocol and domain when specifying your CDN host(s) URLs:
 
-*CDN Host HTTP:* `http://cdnhost1.liferay.com`  
+*CDN Host HTTP:* `http://cdnhost1.liferay.com`
 *CDN Host HTTPS:* `https://cdnhost2.liferay.com`
 
 When *CDN Dynamic Resources* is selected (the default), Liferay serves dynamically generated CSS, JavaScript, and images via the CDN. Disabling this allows you to use CDNs that do not support lazy loading of resources.
