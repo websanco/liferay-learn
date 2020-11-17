@@ -3,7 +3,7 @@ Alerts and Announcements
 
 User Guide
 ----------
-Coming soon!
+-  :doc:`/collaboration-and-social/alerts-and-annoucements/user-guide/sending-alerts-and-announcements`
 
 Developer Guide
 ---------------
