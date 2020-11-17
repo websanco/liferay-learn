@@ -57,11 +57,9 @@ Here's how to configure your CDN in the Control Panel:
 Make sure to include the protocol and domain when specifying your CDN host(s) URLs:
 
 *CDN Host HTTP:* `http://cdnhost1.liferay.com`  
-*CDN Host HTTP:* `https://cdnhost2.liferay.com`
+*CDN Host HTTPS:* `https://cdnhost2.liferay.com`
 
-
-When *CDN Dynamic Resources* is selected (the default), Liferay serves dynamically generated CSS, JavaScript, and images via the CDN. 
-Disabling this allows you to use CDNs that do not support lazy loading of resources.
+When *CDN Dynamic Resources* is selected (the default), Liferay serves dynamically generated CSS, JavaScript, and images via the CDN. Disabling this allows you to use CDNs that do not support lazy loading of resources.
 
 You've configured the CDN host. Now Liferay generates static resource URLs that replace the old host with your new CDN host so they are automatically cached and served afterwards by the CDN.
 
