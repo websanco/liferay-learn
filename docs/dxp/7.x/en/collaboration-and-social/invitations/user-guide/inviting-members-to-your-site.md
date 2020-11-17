@@ -2,13 +2,13 @@
 
 The Invite Members widget lets site administrators send invitations to users to join a Site. To start using the widget,
 
-1. Add the widget by clicking on the Add icon (![Add icon](../../../../images/icon-add-app.png)) at the top of a page. Find the Invite Members widget under the *Collaboration* section and drag it to your page.
+1. Add the widget by clicking on the Add icon (![Add icon](../../../images/icon-add-app.png)) at the top of a page. Find the Invite Members widget under the *Collaboration* section and drag it to your page.
 
     ![The Invite Members widget is found under the list of collaboration widgets](./inviting-members-to-your-site/images/01.png)
 
 1. Click on the *Invite Members* button to bring up a new form.
 
-    ![A new window pops up to select users to invite.](./inviting-members-to-your-site/images/02.png)
+    ![Select users to invite in the new window.](./inviting-members-to-your-site/images/02.png)
 
 1. Click the plus sign next to a User you would like to send an invitation to. Users that have already been invited but have not yet responded appear with a check mark next to their names. Users that have already accepted an invitation will no longer appear in the list.
 
@@ -20,6 +20,6 @@ The Invite Members widget lets site administrators send invitations to users to 
 
 1. The Site invitation shows up under the *Requests List* tab on the User's *Notifications* page. The User can then choose to *Confirm* or *Ignore* the invitation.
 
-    ![The user has a invitation request in their notifications.](./inviting-members-to-your-site/images/03.png)
+    ![The user has a invitation request in their notifications page.](./inviting-members-to-your-site/images/03.png)
 
     When the user confirms their invitation, they become a Site member assigned with the Role you defined.
