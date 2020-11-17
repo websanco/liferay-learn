@@ -3,7 +3,8 @@ Invitations
 
 User Guide
 ----------
-Coming soon!
+
+-  :doc:`/collaboration-and-social/invitations/user-guide/inviting-members-to-your-site`
 
 Developer Guide
 ---------------

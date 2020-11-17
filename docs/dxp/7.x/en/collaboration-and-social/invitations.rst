@@ -4,9 +4,9 @@ Invitations
 .. toctree::
    :maxdepth: 2
 
-   06-invitations/user_guide.rst
-   06-invitations/developer_guide.rst
-   06-invitations/apis.rst
+   invitations/user_guide.rst
+   invitations/developer_guide.rst
+   invitations/apis.rst
 
-.. include:: /collaboration-and-social/06-invitations/README.rst
+.. include:: /collaboration-and-social/invitations/README.rst
    :start-line: 2
