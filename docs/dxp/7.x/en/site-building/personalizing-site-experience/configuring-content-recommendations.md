@@ -1,84 +1,56 @@
 # Configuring Content Recommendations
 
-[Describe the process Content Recommendations are built]
+As users browse your Liferay DXP site and interact with your content, Liferay Analytics Cloud automatically generates and ranks topics of interest based on their browsing behavior. You can use these topics of interest to recommend related content that your users are more likely to buy or consume. For more information about content recommendations, see [Understanding Content Recommendations](./understanding-content-recommendations.md).
 
-Liferay Analytics Cloud generates areas of interest for your users, based no the user behavior in your Liferay DXP site. The overall process occurs as follows:
+Content recommendations work automatically as long as the following elements are in place:
 
+1. Analytics Cloud is connected to your Liferay DXP instance and the Site content is synchronized.
+2. You create a Dynamic Collection in Liferay DXP with different content.
+3. You display the Dynamic Collection for your site using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
 
-Users browse your Liferay DXP site and interact with your content. 
-Analytics Cloud automatically creates topics of interest for the user, based on user behavior.
-Using.
+## Connecting Analytics Cloud to Your Liferay DXP Instance
 
-As users visit different types of content, Analytics Cloud creates different topics of interest and assign a ranking to the. 
+You must connect Analytics Cloud to your Liferay DXP instance to provide content recommendations to your users.
 
-You create web content that includes different types of topics. To show this content to users, you use a Collections
-
-These topics of interest get associated to the user identifier in the site.
-Create web content for your site, and tag and categorize this content.
-
-(((Using a Display Page Template, we create content in our site.
-When our content is)))
-
-The more an Individual visits pages and assets that contain a topic, the higher the topic’s ranking is for that Individual’s Segments.
-
-[Describe the components in the Content Recommendations equation]
-
-
-
-[Describe how to configure each component]
-
-## Configure Analytics Cloud to Work along with Liferay DXP
-
-Analytics Cloud processes the content users interact with creating topics of interest for these users, and it's a requirement to provide content recommendations.
-
-[cross-link here]
+To learn how to connect Analytics Cloud to Liferay DXP and synchronize the site's content, see [Connecting Liferay DXP to Analytics Cloud](../../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md).
 
 ## Create a Dynamic Collection
 
-[cross-link the task here]
+To show users content recommendation based on their browsing behavior, you must use a Dynamic Collection. The Collection is the component that connects the topics of interest with the content recommendations in your site. Using a Collection, you define what type of content you want to recommend and, optionally, to what audiences.
 
-To show users content based on the interests provided by Analytics Cloud, you must use a Dynamic Collection. The  Collection is the component that connects the topics of interest with the content recommendations in your site. Using this Collection we determine what type of items we want to show and, optionally, to what audiences.
+To create the Dynamic Collection, follow the instruction in [Creating Collections](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection).
 
-1. Create the Dynamic Collection, and consider the following:
-    1. You don't need to specify a Filter.
-    1. Enable the *Content Recommendations* option. 
+Consider the following information when you create the Dynamic Collection:
 
-Note: If the *Content Recommendations* option is disabled, the Collection does not consider...    
+- You must enable the *Content Recommendation* option in the Collection. When this option is disabled, the Collection does not show recommended content.
+- The Filter criteria in your Dynamic Collection is optional. For example, if you use the "promotions" tag for your content and only want to recommend promotions, you can use this tag.
+- If you want to target content recommendations to a specific group of users (for example, "website visitors in Germany"), you can combine the Dynamic Collection with a Segment using a Personalized Variations. 
 
-1. Optionally, configure the Segment this Collection applies to by creating a Personalized Variation.
+## Display the Dynamic Collection for Your Site
 
-The filter in the Dynamic Collection works in addition to the *Content Recommendations* option. For example, if you use the "promotion" tag as a filter, a user will only see recommended content with the "promotion" tag. If you remove the filter, the user will see all the recommended content.
+In Liferay DXP 7.2, you show the Content Sets using a Display Page with an Asset Publisher. In DXP 7.3+, in addition to the Asset Publisher, you can show the Collection's content using the Collection Display Fragment and the Collection Pages.
 
-If you want to target content recommendations to a specific group of users, create a Personlized Variation.
+```note:
+Collections are named Content Sets in Liferay DXP 7.2.
+```
 
-## Configure the Display Page
+### Display the Collection or Content Set in a Display Page Using the Asset Publisher
 
-## Display the Collection using the Asset Publisher
+> Liferay DXP 7.2+
 
-dkfjkdjf
-dljfdklfj
-ldjfdlkfj
+To display the Collection using a Display Page and the Asset Publisher, you must complete the following steps:
 
-## Display the Collection using a Collection Page or Collection Display Fragment
+1. Create a Display Page Template
+1. Create a Display Page using the Template
+1. Configure an Asset Publisher with the Collection (Liferay 7.3+) or Content Set (Liferay 7.2)
+
+### Display the Collection using a Collection Page or Collection Display Fragment
 
 > Liferay DXP 7.3+
 
-[[## Categorize and Tag you Content]]
+A Collection Page is a type of page linked to a Collection. To show the Collection using a Collection page, see the [Displaying Collections Using a Collection Page](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-page) section in the [Displaying Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md) topic.
 
-Analytics Cloud creates the topics of interest based on different content elements, including Categories and Tags. Although Categories and Tags are not a requirement to create topics of interest, your content recommendations your users receive based on their behavior.
-
-[[## Map the Web Content to the Display Page]]
-
-## Display the Collection
-
-To display recommended content to users based on users' behaviour you use a Dynamic Collection. You can show a Collection using a Collection Page, a Collection Display Fragment, or an Asset Publisher. For more inforation, see
-
-
-Consider the following example. In your Kitchenware store webpage, you want to include a section in the front page that shows offers to users based on their browsing behaviour. Your site contains different web content, and part of this content are promotional items that you describe using the "promotion" tag. Your site contains promotions for different types of products, like coffee makers, glassware, cutlery, and others. 
-
-you want to include a section in the front page that shows offers to users based on their browsing behaviour.
-
-You create a Dynamic Collection using the "promotion" tag as a filter, and you display the collectio using a Collection Display Fragment or Collection Page on your website. Based on user behaviour, your website visitor receive content recommendation. In this example, a user that browse for coffee-related product will see promotions for coffee products in your store.
+A Collection Display Fragment is a type of Fragment that shows a Collection. You can use this Fragment to show your Collection on any Content Page, Page Template, or Display Page. To configure the Collection Display Fragment, see the section [Displaying Collections Using a Collection Display Fragment](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-display-fragment) in the Displaying [Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md) topic.
 
 ## Analyzing Content Recommendations
 
