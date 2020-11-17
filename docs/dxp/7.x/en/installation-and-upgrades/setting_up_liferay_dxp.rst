@@ -54,6 +54,5 @@ Clustering for High Availability
 Other Setup Topics
 ------------------
 
-* Using a Content Delivery Network (Coming soon!)
 * Tuning your JVM (Coming soon!)
 * Setting Up Remote Staging (Coming soon!)
