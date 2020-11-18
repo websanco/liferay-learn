@@ -25,15 +25,15 @@ The following summarizes some distinguishing characteristics between the `Deploy
 | **Deployment** | Stateless applications with the use of NFS | Consumes less resources and starts up faster than `StatefulSet` type | X | ✓ | X |
 | **StatefulSet** | Stateful applications | Consumes more resources and starts up slower than `Deployment` type | ✓ | X | ✓ |
 
-In general, the `Deployment` type is more lightweight and allows for faster deployments, as well as shared, persisted volumes between services (for shared files, like the document library). The `StatefulSet` type is more costly for deployments and resource usage (including the total memory and CPUs allocated for your project), but persists data through deployments and gains improved file access performance by using a dedicated SSD.
+In general, the `Deployment` type is more lightweight and allows for faster deployments, as well as shared volumes between services (for shared files, like the document library). The `StatefulSet` type is more costly for deployments and resource usage (including the total memory and CPUs allocated for your project), but persists data through deployments and gains improved file access performance by using a dedicated SSD.
 
 ### Persisted Volumes (NFS) vs SSD Storage
 
-The Network File System (NFS) is available to all `Deployment` type services. NFS will persist regardless of whether a service is re-deployed or even deleted. Any volumes stored outside of NFS, however, are lost upon the service being re-deployed.
+The Network File System (NFS) is available to all `Deployment` type services. NFS will persist regardless of whether a service is re-deployed or even deleted.
 
 The volumes stored in NFS are also available to all `Deployment` type services. NFS is used out-of-the-box for the `Liferay` and `Backup` services to share access to the document library. See [Configuring Persistent File System Volumes](./configuring-persistent-file-storage-volumes.md) for more information on configuring volumes for NFS.
 
-`StatefulSet` type services instead have a dedicated SSD for all volume storage. The dedicated SSD available to `StatefulSet` type services is not accessible to other services. Volumes stored on the SSD will persist on re-deployment, but not after service deletion.
+`StatefulSet` type services instead have a dedicated SSD for all volume storage. The dedicated SSD available to `StatefulSet` type services is not accessible to other services. Volumes stored on the SSD also persist on re-deployment and after service deletion.
 
 ## How DXP Cloud's Services are Configured
 

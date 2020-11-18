@@ -25,7 +25,7 @@ Administrators can configure the volumes for their services in DXP Cloud dependi
 
 ## Sharing Volumes Between Different Services
 
-Volumes are shared between all instances within a single service, but only volumes in `Deployment` type services may be shared with other services in the same environment using NFS. Volumes shared in this way are persisted even if the services are deleted, because they will be stored in NFS.
+Volumes are shared between all instances within a single service, but only volumes in `Deployment` type services may be shared with other services in the same environment using NFS.
 
 To share a volume:
 
@@ -62,9 +62,9 @@ The second service (`service2`) declares a volume in the same location, allowing
 
 Both services will be able to access the specified volume in NFS on the next deployment after the services are restarted.
 
-```note::
-   To delete your service volumes, you can delete the environment that your services belong to. However, volumes for ``StatefulSet`` type services can be deleted by deleting the single service.
-```
+## Removing Contents of a Volume
+
+Volumes persist in your environment even when the services are deleted. You can change the name of the volume in use for your service (or rename the existing volume) to use a new volume, but the old volume's contents will still exist (in either NFS or the service's SSD). You must also remove the contents of any volume yourself if you do not want them to persist.
 
 ## Additional Information
 
