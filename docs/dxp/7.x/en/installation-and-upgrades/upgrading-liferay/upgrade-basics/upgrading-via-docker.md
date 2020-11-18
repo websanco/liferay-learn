@@ -100,6 +100,6 @@ If the upgraded database is all you need, then enjoy using your new Liferay inst
 
 * [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) demonstrates upgrading the database while the Liferay server is offline. If the upgrade took too long, consider [tuning the database](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [pruning unneeded data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md), and [using Database Upgrade Tool](./using-the-database-upgrade-tool.md).
 
-* [Custom Code Upgrade](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2) demonstrates adapting custom plugin code to a new Liferay version.
+* [Upgrading Custom Development](../upgrading_custom_development.html) demonstrates adapting custom plugin code to a new Liferay version.
 
 * [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) describes how to upgrade in a clustered environment.

@@ -57,9 +57,9 @@ Marketplace apps should be updated to the latest version for the Liferay version
 
 After upgrading the database, install the latest app versions for your new Liferay instance.
 
-## Updating Custom Plugin Code
+## Upgrading Custom Development
 
-Plugins (e.g., themes, apps, and customizations) you've developed must be adapted to the new Liferay version. This can be as simple as updating dependencies or involve updating code to API changes. If you forgo updating your custom plugins, they may be disabled on the new Liferay version. [Upgrading Code](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2) walks through the code upgrade process.
+Plugins (e.g., themes, apps, and customizations) you've developed must be adapted to the new Liferay version. This can be as simple as updating dependencies or involve updating code to API changes. If you forgo updating your custom plugins, they may be disabled on the new Liferay version. [Upgrading Custom Development](../upgrading_custom_development.html) walks through the code upgrade process.
 
 ## Migrating and Updating Configurations and Infrastructure
 
