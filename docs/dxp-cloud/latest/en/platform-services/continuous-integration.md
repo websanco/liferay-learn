@@ -2,6 +2,10 @@
 
 DXP Cloud uses [Jenkins](https://jenkins.io/) to power its continuous integration infrastructure service. When you send a pull request or push a commit to one of your pre-configured GitHub branches, an automatic and configurable build will be triggered.
 
+```note::
+   DXP Cloud customers (using the ``customer`` login) have full permissions to manage and review their builds, but do not have full administrative privileges.
+```
+
 By default, this automated build will compile code and can be configured to execute tests. DXP Cloud will build your services and show their status on your environment's Builds page. If the tests fail, you can check the Jenkins dashboard and logs at `https://ci-companyname-infra.lfr.cloud`.
 
 ```note::
@@ -28,9 +32,9 @@ If your project is already updated to [version 4.x.x](../reference/understanding
 
 1. Deploy Jenkins service
 
-## Extending the Default Jenkinsfile
+### Extending the Default Jenkinsfile
 
-To extend the Default Jenkinsfile, you can add the following files to the `ci` folder in your project repository:
+To extend the default Jenkinsfile, you can add the following files to the `ci` folder in your project repository:
 
 - `Jenkinsfile-before-all`
 - `Jenkinsfile-before-cloud-build`
@@ -65,7 +69,21 @@ Here is a basic overview of the steps in the CI build process:
    If you are using version 3.x.x services, then these extensions to the Jenkinsfile are located in the ``lcp/ci/`` folder instead. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
-To see how they are used in the default pipeline, simply monitor the Jenkins service startup logs. The full default Jenkinsfile is printed out in the startup logs.
+To see how they are used in the default pipeline, monitor the Jenkins service startup logs. The full default Jenkinsfile is printed out in the startup logs.
+
+## Extra Pipeline Customization and External Calls
+
+It is possible to use the additional steps in your pipeline to call external services. For example, you may call a third-party monitoring service through REST API, or call a script to run during the build process.
+
+You can also create your own pipeline by defining your own `Jenkinsfile` in your repository's `ci/` folder. See the [Jenkins website](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) for more information.
+
+```warning::
+   External services or custom pipelines should be used with discretion. These are outside the scope of DXP Cloud Support. Custom Jenkins plugins are not supported.
+```
+
+```note::
+   If you are using version 3.x.x services and defining your own ``Jenkinsfile``, then you should define it at the root of your repository instead. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```
 
 ## Reusing Code Between Different Extension Points
 
