@@ -16,7 +16,7 @@ When you [open the Content Dashboard](#opening-the-content-dashboard) page, you 
 To access the Information or Performance sidebar, click the Actions Menu (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* or *View Metrics* option. Alternatively, hover over the article and click the *Info* (![Info](../../images/icon-information.png)) or *View Metrics* (![Metrics](../../images/icon-analytics.png)) icons.
 
 ```important::
-   To access the metrics for your content in the Performance panel, you must connect the Liferay DXP instance with Liferay Analytics Cloud and synchronize your site. To learn more, see `Connecting Liferay DXP to Analytics Cloud <../../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md>`__.
+   To access the metrics for your content in the Performance panel, you must connect the Liferay DXP instance with Liferay Analytics Cloud and synchronize your site. To learn more, see `Connecting Liferay DXP to Analytics Cloud <../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md>`__.
 ```
 
 ## Opening the Content Dashboard
@@ -38,7 +38,7 @@ This tool is the graphical area at the top of the Content Dashboard page. The ch
 ![Overview of the Content Audit Tool in the Content Dashboard](./content-dashboard-interface/images/10.png)
 
 ```tip::
-   If the Content Audit Tool doesn't show the expected chart, `verify your Categories <../tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md>`__ for the global Vocabularies and ensure that `your content is categorized <../tags-and-categories/user-guide/organizing-content-with-categories-and-tags.md>`__.
+   If the Content Audit Tool doesn't show the expected chart, `verify your Categories <../tags-and-categories/defining-categories-and-vocabularies-for-content.md>`__ for the global Vocabularies and ensure that `your content is categorized <../tags-and-categories/organizing-content-with-categories-and-tags.md>`__.
 ```
 
 In the Content Audit Tool interface you can find:
@@ -164,7 +164,7 @@ You can access the Content Performance sidebar for assets in the Contents list w
 
 - You have View and Edit permissions for the content.
 - The content is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) (denoted by the *Page* (![Page](../../images/icon-page.png)) icon).
-- The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) and your site is synchronized.
+- The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) and your site is synchronized.
 
 ```note::
    The *Metrics* option for your content is available when these conditions are met (2). If the *Metrics* options is missing, one or more conditions are not met (1).
