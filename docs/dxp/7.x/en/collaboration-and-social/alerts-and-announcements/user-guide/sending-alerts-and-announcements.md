@@ -16,8 +16,6 @@ These widgets have two tabs:
 
 **Read:** Alerts/announcements that have expired, or that you’ve read.
 
-Click an alert/announcement’s Actions icon ([Actions icon](../../../images/icon-actions.png)) to edit or delete it.
-
 ## Creating Alerts and Announcements
 
 To use the Alerts widget or Announcements widget,
@@ -26,17 +24,17 @@ To use the Alerts widget or Announcements widget,
 
     ![Locate the Alerts widget or the Announcements widget and add it to your page.](./sending-alerts-and-announcements/images/02.png)
 
-1. To create and alert or announcement click on *Add Alert* or *Add Announcement*. A new window will open.
+1. To create an alert or announcement click on *Add Alert* or *Add Announcement*. A new window will open.
 
     ![A new window will open for you to create your alert or announcement.](./sending-alerts-and-announcements/images/03.png)
 
 1. Use the *Title* field to give the alert or announcement a title. Add additional text in the *Content* field.
 
-1. Set additional settings in under the *Configuration* section,
+1. Set additional settings under the *Configuration* section,
 
     ![Set additional settings in the configuration section.](./sending-alerts-and-announcements/images/04.png)
 
-    **Distribution Scope:** The scope where the alert/announcement is displayed. The default *General* scope sends the alert/announcements to everyone. Alternatively, you can select your site or specific roles as the scope.
+    **Distribution Scope:** The scope where the alert/announcement is displayed. The default *General* scope sends the alert/announcements to everyone Alternatively, you can select your site or specific roles as the scope.
 
     **URL:** A URL (optional) to include with the alert/announcement. For example, an announcement about a news story could include a link to the news article. The URL must be valid and begin with `http://` or `https://`.
 
@@ -48,7 +46,7 @@ To use the Alerts widget or Announcements widget,
 
     **Expiration Date:** The date and time the alert/announcement expires. Once an alert/announcement expires, the widget displays it in the Read tab. Clicking the Expiration Date field opens the date-picker.
 
-1. Click *Save* when you’re done. Your alert/announcement then appears in the widget.
+1. Click *Save* when you’re done. Your alert/announcement now appears in the widget.
 
 ## User Configuration
 
