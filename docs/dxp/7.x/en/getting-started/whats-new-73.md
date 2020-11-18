@@ -60,7 +60,7 @@ Asset Libraries aren't limited to web content: you can share any asset type and 
 
 ### Content Dashboard
 
-For those with large databases full of content that may be going unused, Liferay has created the Content Dashboard. This is a one-stop-place where content authors can access all the content, not just for a given Site, but for all the Sites and asset libraries in a Liferay instance. To help you navigate such a large amount of content, a comprehensive set of filters provides filter and ordering capabilities for the list of content and an audit graph that helps you easily find and audit the content you need. 
+For those with large databases full of content that may be going unused, Liferay has created the [Content Dashboard](../content-authoring-and-management/content-dashboard/about-the-content-dashboard.md). This is a one-stop-place where content authors can access all the content, not just for a given Site, but for all the Sites and asset libraries in a Liferay instance. To help you navigate such a large amount of content, a comprehensive set of filters provides filter and ordering capabilities for the list of content and an audit graph that helps you easily find and audit the content you need. 
 
 You can access this content dashboard through Global Menu &rarr; Applications tab.
 
@@ -68,7 +68,7 @@ You can access this content dashboard through Global Menu &rarr; Applications ta
 
 ### Content Audit Tool
 
-The new Content Dashboard includes a tool that makes it easier to audit your content by type. Selecting vocabularies, and the Content Audit graph calculates the number of existing assets for each category in the vocabularies. You can filter by categories, tags, authors, asset subtype, Site (and more) to adjust the assets represented in the graph.
+The new Content Dashboard includes a tool that makes it easier to [audit your content by type](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md#content-audit-tool). Selecting vocabularies, and the Content Audit graph calculates the number of existing assets for each category in the vocabularies. You can filter by categories, tags, authors, asset subtype, Site (and more) to adjust the assets represented in the graph.
 
 ![The Content Audit tool helps you see the kinds of content you have.](./whats-new-73/images/08.gif)
 
@@ -122,7 +122,7 @@ Now you can easily check all [friendly URLs used in any page](../site-building/c
 
 > Subscription Required
 
-Now you can tell how many visitors completely read your content. Content performance analytics appear in context with content it relates to, to help content authors and marketers to build and assess a successful content strategy. 
+Now you can tell how many visitors completely read your content. [Content performance analytics](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md#content-performance-sidebar) appear in context with content it relates to, to help content authors and marketers to build and assess a successful content strategy. 
 
 ![Content Performance shows views versus reads, search engines' incoming traffic volume, and keyword reports by region.](./whats-new-73/images/16.gif)
 
