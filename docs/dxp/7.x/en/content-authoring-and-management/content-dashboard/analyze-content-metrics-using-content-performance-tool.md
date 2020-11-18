@@ -74,4 +74,4 @@ You can click the sources in the graphic (1) to access additional metrics about 
 
 - [About the Content Dashboard](./about-the-content-dashboard.md)
 - [Content Dashboard Interface](./content-dashboard-interface.md)
-- [Defining Categories and Vocabularies for Content](../tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md)
+- [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)

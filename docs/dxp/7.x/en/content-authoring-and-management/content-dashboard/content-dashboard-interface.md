@@ -90,7 +90,7 @@ In the list of contents, you can find the following columns:
 | --- | --- |
 | Title | Article title.* |
 | Author | Author's name. |
-| Subtype | Article's [Subcategory](../tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
+| Subtype | Article's [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
 | Site or Asset Library | Location of the article in the Liferay DXP instance. |
 | Status | Article workflow status. Articles with more than one version in different statuses show all than statuses. |
 | *First Vocabulary* | This is the first Vocabulary in the Content Audit Tool. |
@@ -108,7 +108,7 @@ For each entry in the Contents list, you can access the following options using 
 - *View* (![View](../../images/icon-preview.png)): Opens the Display Page in view mode.
 - *Edit* (![Edit](../../images/icon-edit.png)): Opens the content in edit mode.
 - *Info* (![Information](../../images/icon-information.png)): Opens the [Information sidebar](#information-sidebar).
-- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance sidebar](#the-content-performance-sidebar).
+- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance sidebar](#content-performance-sidebar).
 
     ![Access the Information and Performance sidebars from the Actions menu or the icons on each content row](./content-dashboard-interface/images/11.png)
 
