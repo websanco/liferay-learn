@@ -43,6 +43,6 @@ To learn more about how analyze your information quantitatively, see [Analyze Co
 
 ## Related Information
 
-- [Analyze Content Metrics Using the Content Performance Tool](./analyze-content-metrics-using-content-performance-tool.md)
 - [Content Dashboard Interface](./content-dashboard-interface.md)
+- [Analyze Content Metrics Using the Content Performance Tool](./analyze-content-metrics-using-content-performance-tool.md)
 - [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
