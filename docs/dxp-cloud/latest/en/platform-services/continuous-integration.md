@@ -3,7 +3,7 @@
 DXP Cloud uses [Jenkins](https://jenkins.io/) to power its continuous integration infrastructure service. When you send a pull request or push a commit to one of your pre-configured GitHub branches, an automatic and configurable build will be triggered.
 
 ```note::
-   DXP Cloud customers (using the ``customer`` login) have full permissions to manage and review their builds, but do not have full administrative privileges.
+   DXP Cloud customers (using the ``customer`` login) have permissions to manage and review their builds, but do not have full administrative privileges.
 ```
 
 By default, this automated build will compile code and can be configured to execute tests. DXP Cloud will build your services and show their status on your environment's Builds page. If the tests fail, you can check the Jenkins dashboard and logs at `https://ci-companyname-infra.lfr.cloud`.
@@ -78,7 +78,7 @@ It is possible to use the additional steps in your pipeline to call external ser
 You can also create your own pipeline by defining your own `Jenkinsfile` in your repository's `ci/` folder. See the [Jenkins website](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) for more information.
 
 ```warning::
-   External services or custom pipelines should be used with discretion. These are outside the scope of DXP Cloud Support. Custom Jenkins plugins are not supported.
+   External services or custom pipelines should be used with discretion and are outside the scope of DXP Cloud Support. Custom Jenkins plugins are not supported.
 ```
 
 ```note::
