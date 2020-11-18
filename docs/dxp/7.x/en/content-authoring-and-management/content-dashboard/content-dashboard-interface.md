@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+.
 
-In the Content Dashboard interface, you can find the following areas:
+The Content Dashboard interface has the following areas:
 
 - [Content Audit Tool](#content-audit-tool) (1)
 - [Contents list](#contents-list) (2)
@@ -11,15 +11,15 @@ In the Content Dashboard interface, you can find the following areas:
 
 ![The Content Dashboard user interface](./content-dashboard-interface/images/05.png)
 
-When you [open the Content Dashboard](#opening-the-content-dashboard) page, you can see the [Content Audit Tool](#content-audit-tool) at the top of the page and the [Contents list](#contents-list) at the button. From the Contents list, you can access the [Information](#information-sidebar) and [Content Performance](#content-performance-sidebar) sidebars. These sidebars are collapsable elements that show additional information for each item in the Contents List.
+When you [open the Content Dashboard](#accessing-the-content-dashboard) page, you can see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents list](#contents-list) (2) at the button. From the Contents list, you can access the [Information](#information-sidebar) (3) and [Content Performance](#content-performance-sidebar) (4) sidebars. These sidebars are collapsable elements that show additional information for each item in the Contents List.
 
 To access the Information or Performance sidebar, click the Actions Menu (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* or *View Metrics* option. Alternatively, hover over the article and click the *Info* (![Info](../../images/icon-information.png)) or *View Metrics* (![Metrics](../../images/icon-analytics.png)) icons.
 
 ```important::
-   To access the metrics for your content in the Performance panel, you must connect the Liferay DXP instance with Liferay Analytics Cloud and synchronize your site. To learn more, see `Connecting Liferay DXP to Analytics Cloud <../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md>`__.
+   To access the metrics for your content in the Performance panel, you must connect the Liferay DXP instance with Liferay Analytics Cloud and synchronize your site. To learn more, see `Connecting Liferay DXP to Analytics Cloud <https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html>`__.
 ```
 
-## Opening the Content Dashboard
+## Accessing the Content Dashboard
 
 1. Click on the Global Menu and, under the *Content* area, click *Content Dashboard*.
 1. If the Global Menu is disabled, open the Product Menu and, under the *Site* Menu, go to *Content* &rarr; *Content Dashboard*.
@@ -88,7 +88,7 @@ In the list of contents, you can find the following columns:
 
 | Column | Description |
 | --- | --- |
-| Title | Article title. When the article is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) (*). |
+| Title | Article title.* |
 | Author | Author's name. |
 | Subtype | Article's [Subcategory](../tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
 | Site or Asset Library | Location of the article in the Liferay DXP instance. |
@@ -164,7 +164,7 @@ You can access the Content Performance sidebar for assets in the Contents list w
 
 - You have View and Edit permissions for the content.
 - The content is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) (denoted by the *Page* (![Page](../../images/icon-page.png)) icon).
-- The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](../../../../../analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) and your site is synchronized.
+- The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) and your site is synchronized.
 
 ```note::
    The *Metrics* option for your content is available when these conditions are met (2). If the *Metrics* options is missing, one or more conditions are not met (1).
@@ -183,4 +183,4 @@ To learn how to analyze your content performance using the Performance area, see
 
 - [About the Content Dashboard](./about-the-content-dashboard.md)
 - [Analyze Content Metrics Using the Content Performance Tool](./analyze-content-metrics-using-content-performance-tool.md)
-- [Defining Categories and Vocabularies for Content](../tags-and-categories/user-guide/defining-categories-and-vocabularies-for-content.md)
+- [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
