@@ -66,7 +66,7 @@ They must enter their contact information including a valid email address before
 
 ## Additional Information
 
-* [Guest Checkout](./guest-checkout.md)
+* [Guest Checkout Overview](./guest-checkout-overview.md)
 * [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
 * [Managing Channels](../../starting-a-store/channels/managing-channels.md)
 * [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)

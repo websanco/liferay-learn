@@ -36,7 +36,7 @@ In the *Name* field, you can set a page's title, which is used for Site navigati
 
 ### Navigation Menu Widget
 
-You can determine if a page is hidden from Navigation Menu widgets configured to display the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../04-site-navigation/configuring-site-navigation.md) for more information.
+You can determine if a page is hidden from Navigation Menu widgets configured to display the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Managing Site Navigation](../../site-navigation/managing-site-navigation.md) for more information.
 
 ![Determine whether a page is hidden from Navigation Menu widgets.](./configuring-individual-pages/images/04.png)
 
@@ -94,13 +94,13 @@ Here you can access additional settings to customize your page's content and fea
 
 ![Determine whether a page uses the page set's rules for mobile devices, or is uniquely configured.](./configuring-individual-pages/images/11.png)
 
-**Customization Settings**: You can determine whether a Widget Page's columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages]() for more information.
+**Customization Settings**: You can determine whether a Widget Page's columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages](../using-widget-pages/enabling-user-personalization-of-widget-pages.md) for more information.
 
 ![Determine whether users can customize a Widget Page.](./configuring-individual-pages/images/12.png)
 
 **Custom Fields**: You can view and configure the *Custom Fields* you've defined for Site pages. See [Custom Fields](../../../installation-and-upgrades/setting-up-liferay-dxp/custom-fields.md) for more information.
 
-**Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or [Themes]().
+**Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or [Themes]().
 
 ```note::
    The *Custom Fields* and *Embedded Widget* sections only appear once you've created custom fields and embedded widgets in a page.
@@ -108,7 +108,7 @@ Here you can access additional settings to customize your page's content and fea
 
 ## SEO
 
-Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The *SEO* tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization]() for more information about the following settings. <!--Rename current placeholder, "SEO Optimization," to "Search Engine Optimization".-->
+Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The *SEO* tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization](../../optimizing_sites.html#search-engine-optimization) for more information about the following settings.
 
 ### HTML Title
 
@@ -180,7 +180,7 @@ In the *Change Frequency* section, you can indicate how frequently a page is upd
 
 ## Open Graph
 
-[Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta>` tags to define page metadata and create engaging representations of your content. See [Configuring Open Graph](./configuring-open-graph.md) for more information about the following settings.
+[Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta>` tags to define page metadata and create engaging representations of your content. See [Configuring Open Graph](../../site-settings/configuring-open-graph.md) for more information about the following settings.
 
 ```note::
    Page values defined via the Open Graph tab override values defined elsewhere in your Liferay instance.

@@ -52,4 +52,4 @@ The new warehouse is now active and available as an option in the _Shipment_ tab
 
 * [Adding Regions](../../store-administration/adding-regions.md)
 * [Deactivating a Country for Billing or Shipping](../../store-administration/deactivating-a-country-for-billing-or-shipping.md)
-* [Introduction to Channels](../creating-and-managing-products/channels/introduction-to-channels.md)
+* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)

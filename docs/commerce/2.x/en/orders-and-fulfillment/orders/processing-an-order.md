@@ -123,4 +123,4 @@ See the [Creating a New Shipment on Liferay Commerce 2.0 and Below](../shipments
 * [Orders Menu Reference Guide](./orders-menu-reference-guide.md)
 * [Managing Subscriptions](../subscriptions/managing-subscriptions.md)
 * [Introduction to Shipments](../shipments/introduction-to-shipments.md)
-* [Inventory Administration Reference Guide](../../managing-a-catalog/managing-inventory/inventory-administration-reference-guide.md)
+* [Inventory Management Reference Guide](../../managing-a-catalog/managing-inventory/inventory-management-reference-guide.md)

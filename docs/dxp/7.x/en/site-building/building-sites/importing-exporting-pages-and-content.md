@@ -10,10 +10,8 @@ LARs have these properties and requirements:
 * Some naming collisions are handled automatically. For example, if the LAR you're importing and the Site both have a page with the same friendly URL, a number is appended to the friendly URL and incremented until the collision no longer occurs. The same is true for category names that collide.
 * You can restore your Site with the latest LAR, but to do so you must delete your Site entirely and then create a new Site with the same name to import the LAR into. This avoids potential data conflicts between content that exists both in the LAR and in the Site.
 
-If you want to regularly move pages from one server to another, you should use the Changelist feature(7.2 Staging environment), instead of a LAR. See the [Changelists]() (7.2 [Staging]() <!-- TODO: Fix links --> section for more details.
-
 ```note::
-  Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the `Backing up a Liferay Portal Installation <../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md>`_ section for information on backing up Liferay Portal.
+   Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the `Backing up a Liferay Portal Installation <../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md>`_ section for information on backing up Liferay Portal.
 ```
 
 ## Importing and Exporting Pages

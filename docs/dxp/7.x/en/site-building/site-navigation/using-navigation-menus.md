@@ -88,5 +88,5 @@ The Navigation Menu has been deleted.
 
 ## Additional Information
 
-* [Configuring Site Navigation](./configuring-site-navigation.md)
+* [Managing Site Navigation](./managing-site-navigation.md)
 * [Configuring Navigation Menus](./configuring-navigation-menus.md)

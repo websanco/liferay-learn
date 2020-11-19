@@ -51,7 +51,7 @@ Removed Users lose access to the Site's Private Pages and membership in any Site
 
 ### Assigning Site Roles
 
-Roles grant permissions in Liferay Portal. Roles can be assigned for the entire instance or just for one specific Site or Organization. Site Roles assign permissions for a specific Site. Learn more about roles in [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
+Roles grant permissions in Liferay Portal. Roles can be assigned for the entire instance or just for one specific Site or Organization. Site Roles assign permissions for a specific Site. Learn more about roles in [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
 Follow these steps to assign Site Roles to Users:
 

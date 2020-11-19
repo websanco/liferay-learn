@@ -33,7 +33,7 @@ Follow these steps to add a page:
 1. Configure the remaining settings for the page, and then click *Add* to create the page.
 
     ```tip::
-       Creating a page by default also adds it to any Navigation Menus that are configured to have new pages added to them. See `Configuring Site Navigation <../../04-site-navigation/README.md>`_ for more information.
+       Creating a page by default also adds it to any Navigation Menus that are configured to have new pages added to them. See `Managing Site Navigation <../../site-navigation/README.md>`_ for more information.
     ```
 
 ## Adding a Child Page

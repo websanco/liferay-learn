@@ -42,4 +42,4 @@ Elasticsearch is the recommended search engine for search and indexing with Life
 
 ## What's Next 
 
-[Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) is recommended. If you must use Solr (deprecated), see [Installing Solr](./solr/installing-solr/installing-solr.md). 
+[Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) is recommended. If you must use Solr (deprecated), see [Installing Solr](./solr/installing-solr.md). 

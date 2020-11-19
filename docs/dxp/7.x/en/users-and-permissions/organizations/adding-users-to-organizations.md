@@ -20,10 +20,3 @@ The user has been added to the organization. To remove a User from an Organizati
     ![Removing Users from Organizations in the Control Panel](./adding-users-to-organizations/images/02.png)
 
 1. Click Save.
-
-## Additional Information
-
-* [Adding Organizations to Accounts](../account-management/adding-organizations-to-accounts.md)
-* [Introduction to Accounts](../account-management/introduction-to-accounts.md)
-* [Account Roles](../account-management/account-roles.md)
-* [Commerce Roles Permissions Reference](../account-management/commerce-roles-permissions-reference.md)

@@ -80,7 +80,7 @@ To learn more about creating and using notification templates, see [Using Notifi
 
 ## Category Display Pages
 
-The Category Display Pages tab displays the list of all Category Display pages created on the store site. A _Category Display Page_ allow users to substitute a specific DXP site page that displays all products tagged in a given Category. Users should first create [product categories](../products/organizing-your-catalog-with-product-categories.md), associate them with the desired products, and then create the pages.
+The Category Display Pages tab displays the list of all Category Display pages created on the store site. A _Category Display Page_ allow users to substitute a specific DXP site page that displays all products tagged in a given Category. Users should first create [product categories](../../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md), associate them with the desired products, and then create the pages.
 
 To learn more about creating DXP site pages, see [Creating Pages](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html). To learn more about creating Tags and Categories in general, see [Tags and Categories](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/tags_and_categories.html).
 

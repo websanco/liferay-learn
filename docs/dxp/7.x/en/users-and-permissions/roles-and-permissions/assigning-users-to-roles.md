@@ -76,7 +76,7 @@ Making Role assignments for Asset Libraries is nearly identical to making assign
 | ---------------- | --------- |
 | A single Asset Library | Organizations <br />User Groups <br /> Individual Users |
 
-1. Go to the [Asset Library](../../site-building/understanding-asset-libraries.md) Menu &rarr; People &rarr; Memberships.
+1. Go to the [Asset Library](../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md) Menu &rarr; People &rarr; Memberships.
 
 1. Click the tab for the membership type you're assigning the Role. Like Sites, Asset Libraries are assigned to Users (i.e., individual Site members), Organizations, or User Groups.
 

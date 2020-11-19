@@ -44,7 +44,7 @@ Coming soon!
 Site Navigation
 ---------------
 
--  :doc:`/site-building/site-navigation/configuring-site-navigation`
+-  :doc:`/site-building/site-navigation/managing-site-navigation`
 -  :doc:`/site-building/site-navigation/managing-page-hierarchies`
 -  :doc:`/site-building/site-navigation/using-navigation-menus`
 -  :doc:`/site-building/site-navigation/configuring-navigation-menus`

@@ -22,7 +22,6 @@ You can give permissions to an individual file, to an entire folder, or to a spe
 
 1. Set your desired permissions and click _Save_. 
 
-
 ## Permissions for a Specific File Type
 
 1. Navigate to the *Documents and Media* application. Click on the *Document Types* tab. 
@@ -34,5 +33,3 @@ You can give permissions to an individual file, to an entire folder, or to a spe
    ![In the options, click on Permissions.](permissions-and-documents/images/04.png)
 
 1. Set your desired permissions and click _Save_. 
-
-

@@ -24,7 +24,7 @@ You can determine which accounts and account groups this price list is made avai
 
 1. Click on the newly created price list.
 1. Click on the _Eligibility_ tab.
-1. Click the [Select Account Groups](../account-management/creating-a-new-account-group.md) radio button.
+1. Click the [Select Account Groups](../../account-management/creating-a-new-account-group.md) radio button.
 1. In the _Add Account Groups_ search bar, search for the desired account groups; in this example, _US Accounts East_.
 1. Click _Select_ to add the account group.
 1. Click _Publish_ when finished.
