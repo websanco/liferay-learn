@@ -62,7 +62,7 @@ To change the Vocabularies:
 
 1. Click on the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) in the Content Audit area.
 1. In the dual listbox, click the Vocabulary in the *Available* or *In Use* lists and click the selection buttons (![Angle Left](../../images/icon-angle-left.png) ![Angle right](../../images/icon-angle-right.png)) to add or remove the Vocabularies you want to show.
-1. Click the *Up* (![Up](../../images/Icon-angle-up.png)) and *Down* (![Down](../../images/Icon-angle-down.png)) buttons to order of the Vocabularies in the chart axis.
+1. Click the *Up* (![Up](../../images/icon-angle-up.png)) and *Down* (![Down](../../images/icon-angle-down.png)) buttons to order of the Vocabularies in the chart axis.
 1. Click *Save*.
 
     ![Select the Vocabularies in the Content Audit Tool](./content-dashboard-interface/images/12.png)
