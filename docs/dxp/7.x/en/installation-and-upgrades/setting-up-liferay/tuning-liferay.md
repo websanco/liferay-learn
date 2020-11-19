@@ -83,7 +83,7 @@ In Tomcat, the thread pools are configured in the `$CATALINA_HOME/conf/server.xm
 />
 ```
 
-If you're testing a CPU-based load or if you're concerned about CPU capacity,  test using approximately 75 threads for every hardware thread available. For example, if your machine has 4 hardware threads, try `maxThreads=300`. Adjust connection pool settings and test your system to find settings that meet your needs.
+If you're testing a CPU-based load or if you're concerned about CPU capacity,  test using approximately 75 threads for every hardware thread available. For example, if your machine has 4 hardware threads, set `maxThreads=300`. If you're testing an I/O-based load or you're concerned about I/O capacity, use more threads or switch to using a non-I/O blocking connector. Test your system and adjust connection pool settings to meet your needs.
 
 Additional tuning parameters around `Connector` are available, including the connector types, the connection timeouts, and TCP queue. Consult your application server's documentation for details.
 
