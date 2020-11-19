@@ -150,7 +150,7 @@ mail.session.jndi.name=mail/SomeMailSession
 
 You can add a properties file for a specific environment, such as a development environment. Then you can use a single `portal-ext.properties` for common properties, and an environment-specific configuration for others.
 
-1. Create an arbitrary extension file (e.g., `portal-development.properties`) for your environment and add environment-specific properties to it:
+1. Create an arbitrary extension file (e.g., `portal-developer.properties`) for your environment and add environment-specific properties to it:
 
     ```properties
     mail.session.jndi.name=mail/DevMailSession
@@ -159,16 +159,16 @@ You can add a properties file for a specific environment, such as a development 
 1. Include the new extension file as a properties source by adding this `include-and-override` property to the top of your `portal-ext.properties` file:
 
     ```properties
-    include-and-override=portal-development.properties
+    include-and-override=portal-developer.properties
     ```
 
 Resulting properties source order:
 
 1. `portal-impl.jar/portal.properties`
 1. `[Liferay Home]/portal-ext.properties`
-1. `[Liferay Home]/portal-development.properties`
+1. `[Liferay Home]/portal-developer.properties`
 
-The last value defined for `mail.session.jndi.name` is in `[Liferay Home]/portal-development.properties`.
+The last value defined for `mail.session.jndi.name` is in `[Liferay Home]/portal-developer.properties`.
 
 Resulting configuration:
 
