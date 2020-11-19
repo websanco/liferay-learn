@@ -15,7 +15,7 @@ These features help during development but slow down performance. They're not in
 
 ### Portal Developer Properties
 
-Liferay's [Portal Properties](../reference/portal-properties.md) includes several properties that facilitate development. The [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/7.3.5-ga6/portal-impl/src/portal-developer.properties) included in your Liferay installation declares all of the properties but is disabled by default. This file is only enabled if you referenced it in your  `portal-developer.properties` file using this setting:
+Liferay's [Portal Properties](../reference/portal-properties.md) includes several properties that facilitate development. The [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) included in your Liferay installation declares all of the properties but is disabled by default. This file is only enabled if you referenced it in your  `portal-developer.properties` file using this setting:
 
 ```properties 
 include-and-override=portal-developer.properties
