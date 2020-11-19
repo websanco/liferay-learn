@@ -32,7 +32,7 @@ For example, you may need to connect your DXP Cloud services to directories or a
 
     * **Password**: The administrator's password.
 
-    * **IKE Version**: The VPN's Internet Key Exchange version. This field only appears when _IPSec_ is selected as the protocol. The supported IKE versions are _IKEv2_ and _IKEv1-L2TP_.
+    * **IKE Version**: The VPN's Internet Key Exchange version. This field only appears when _IPSec_ is selected as the protocol. Only _IKEv2_ is supported.
 
     * **Certificate**: The certificate code.
 
