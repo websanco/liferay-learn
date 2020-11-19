@@ -62,9 +62,9 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     ```bash
     ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
     ```
-    
+
     To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and DXP servers) use
-    
+
     ```
     --dns localhost,dxp.liferay.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
     ```
@@ -116,6 +116,7 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
     ```yaml
     xpack.security.http.ssl.enabled: true
     ```
+
 1. Configure the certificate, key, and certificate authority paths to each node's `elasticsearch.yml`:
 
     ```yaml
@@ -261,5 +262,5 @@ These warnings do not signal any functional issues, and can be disabled (see [De
 Coming Soon!
 
 ```tip::
-   The `Installing Elasticsearch <./installing-elasticsearch.md>`__ and `Connecting to Elasticsearch <i./connecting-to-elasticsearch.md>`__ articles default to enabling and configuring security, so you can visit those articles for the 7.3 applicable security configurations.
+   The `Installing Elasticsearch <./installing-elasticsearch.md>`__ and `Connecting to Elasticsearch <./connecting-to-elasticsearch.md>`__ articles default to enabling and configuring security, so you can visit those articles for the 7.3 applicable security configurations.
 ```

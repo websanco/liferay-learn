@@ -5,7 +5,7 @@
 
 A typical Liferay system's search infrastructure comprises
 
-* Liferay servers in a clustered or single node (on-premises or Docker containers)
+* Liferay servers configured in a cluster or a single node (on-premises or Docker containers)
 * Elasticsearch server(s) (on-premises or Docker containers)
 * An Elasticsearch connector application deployed onto Liferay and configured to fit your deployment.
 
