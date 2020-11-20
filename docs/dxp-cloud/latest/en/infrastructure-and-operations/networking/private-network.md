@@ -19,7 +19,11 @@ variables:
 
 `external`: Whether your connection is available to external connections. The 
 default value `false` restricts the connection to internal DXP Cloud 
-connections. 
+connections.
+
+```tip::
+   If you expose the connection to external connections, then you may need to troubleshoot the connection using your service's shell. See `Shell Access <../../troubleshooting/shell-access.md>`__ for more information.
+```
 
 Here's an example configuration: 
 
@@ -54,3 +58,4 @@ Here's an example configuration:
 ## Additional Information
 
 * [Configuration via LCP JSON](../../reference/configuration-via-lcp-json.md)
+* [Shell Access](../../troubleshooting/shell-access.md)

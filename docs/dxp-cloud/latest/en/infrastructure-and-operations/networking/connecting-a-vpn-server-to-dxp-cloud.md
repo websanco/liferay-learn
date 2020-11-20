@@ -76,6 +76,10 @@ The VPN details page indicates whether or not the VPN is already connected in th
 
 The VPN attempts to connect after clicking the button. If the connection fails, then the failed attempt displays in the _Related Activities_ section of the details page.
 
+```tip::
+   You can manually test the connectivity of your services to an IP address through your VPN by using the service's `shell <../../troubleshooting/shell-access.md>`__ to run a command like the following: ``curl -v [address]``.
+```
+
 To disconnect the VPN, click _Disconnect_ from the top-right Actions menu. This takes you to the _Disconnect VPN_ page.
 
 ```warning::
@@ -84,7 +88,7 @@ To disconnect the VPN, click _Disconnect_ from the top-right Actions menu. This 
 
 ![The Disconnect VPN page asks you to confirm the impact of disconnecting before proceeding.](./connecting-a-vpn-server-to-dxp-cloud/images/07.png)
 
-Check the boxes confirming the impact of disconnecting the VPN, and then click _Disconnect VPN_ to immediately disconnect it. Once the VPN is disconnected, the configuration can be change again.
+Check the boxes confirming the impact of disconnecting the VPN, and then click _Disconnect VPN_ to immediately disconnect it. Once the VPN is disconnected, the configuration can be changed again.
 
 ### Editing the Configuration
 
@@ -98,3 +102,4 @@ To edit the configuration, go to the environment's details page, and then _Edit.
 
 * [VPN Integration Overview](./vpn-integration-overview.md)
 * [Configuring a VPN Server](./configuring-a-vpn-server.md)
+* [Shell Access](../../troubleshooting/shell-access.md)
