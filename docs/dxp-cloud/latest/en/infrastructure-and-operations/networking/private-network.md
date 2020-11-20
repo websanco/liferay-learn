@@ -1,15 +1,10 @@
 # Private Network
 
-Every environment has its own private network. This lets services from the 
-same environment communicate through multiple secure communication protocols 
-without having to interact with the public internet. 
+Every environment has its own private network. This lets services from the same environment communicate through multiple secure communication protocols without having to interact with the public internet. 
 
-For example, your project by default only exposes your web server service to 
-public connections. Connections between other services (e.g., Liferay DXP, 
-database, etc.) are routed through the private network. 
+For example, your project by default only exposes your web server service to public connections. Connections between other services (e.g., Liferay DXP, database, etc.) are routed through the private network. 
 
-For every connection configured in this private network, you must specify these 
-variables: 
+For every connection configured in this private network, you must specify these variables: 
 
 `targetPort`: The internal port of the service to expose. 
 
@@ -22,7 +17,7 @@ default value `false` restricts the connection to internal DXP Cloud
 connections.
 
 ```tip::
-   If you expose the connection to external connections, then you may need to troubleshoot the connection using your service's shell. See `Shell Access <../../troubleshooting/shell-access.md>`__ for more information.
+   If you expose a connection to external connections, then you may need to troubleshoot the connection using your service's shell. See `Shell Access <../../troubleshooting/shell-access.md>`__ for more information.
 ```
 
 Here's an example configuration: 
