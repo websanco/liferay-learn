@@ -29,7 +29,7 @@ tar zcvf database.tgz database.gz
    The ``databases`` and ``add-drop-database`` options are necessary for backup restoration to work correctly.
 ```
 
-Database dumps imported into DXP Cloud must be in MySQL format for the database service to use it. If necessary, a tool like [DBeaver](http://dbeaver.io) can be used to convert other types of databases to MySQL for the import.
+Database dumps imported into DXP Cloud must be in MySQL format for the database service to use it.
 
 ### Zip Up the Document Library
 
