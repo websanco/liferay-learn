@@ -1,1 +1,0 @@
-# Knowledge Base Display

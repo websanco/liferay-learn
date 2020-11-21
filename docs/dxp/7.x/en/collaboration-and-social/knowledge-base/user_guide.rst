@@ -9,7 +9,7 @@ User Guide
    user-guide/managing-the-knowledge-base.md
    user-guide/knowledge-base-templates.md
    user-guide/responding-to-knowledge-base-feedback.md
-   user-guide/knowledge-base-display.md
+   user-guide/knowledge-base-display-widget.md
    user-guide/other-knowledge-base-widgets.md
    user-guide/importing-knowledge-base-articles.md
    user-guide/knowledge-base-zip-file-requirements.md

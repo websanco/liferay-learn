@@ -6,7 +6,7 @@ User Guide
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/managing-the-knowledge-base`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-templates`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/responding-to-knowledge-base-feedback`
--  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-display`
+-  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-display-widget`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/other-knowledge-base-widgets`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/importing-knowledge-base-articles`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-zip-file-requirements`
