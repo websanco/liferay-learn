@@ -26,4 +26,4 @@ When you move the suggestion to a different state, an email is sent notifying th
 
 ![Configure the app to send emails for feedback.](./responding-to-knowledge-base-feedback/images/03.png)
 
-Enable and customize an email for suggestions changing through each state.
+Enable and customize the email that is sent as feedback is accepted and resolved.

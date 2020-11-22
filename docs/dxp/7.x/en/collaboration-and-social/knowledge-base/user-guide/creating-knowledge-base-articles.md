@@ -19,7 +19,7 @@ To navigate to the Knowledge Base app, click on the Menu icon (![Menu icon](../.
 
 To create a Knowledge Base article,
 
-1. In the *Articles* tab, click on the Add icon (![Add icon](../../../images/add-icon.png)) and click *Basic Article*.
+1. In the *Articles* tab, click on the Add icon (![Add icon](../../../images/icon-add.png)) and click *Basic Article*.
 
     ![A new window will pop up for you to write your article](./creating-knowledge-base-articles/images/02.png)
 
@@ -45,7 +45,7 @@ To import articles, your Role must have the permission Knowledge Base → Resour
 
 To import articles into the Knowledge Base,
 
-1. In the Articles tab, click on the Add icon (![Add icon](../../../images/add-icon.png)) and click *Import*.
+1. In the Articles tab, click on the Add icon (![Add icon](../../../images/icon-add.png)) and click *Import*.
 
     ![Upload your ZIP file on this new page.](./creating-knowledge-base-articles/images/03.png)
 

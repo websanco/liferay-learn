@@ -28,7 +28,7 @@ At the top-right of the Knowledge Base app, the Options menu (![Options icon](..
 
 ## Managing Knowledge Base Articles
 
-Each article also has a priority value that determines its position in the [Knowledge Base Display widget’s navigation](knowledge-base-display.md). Each article’s priority value appears beneath the article’s title. The Knowledge Base Display widget’s navigation arranges articles in ascending priority. Priority 1 is the highest priority. The higher an article’s priority, the higher it appears in the navigation. Articles are assigned the next lowest priority by default. This behavior can be changed via [Knowledge Base System Settings](knowledge-base-system-settings.md).
+Each article also has a priority value that determines its position in the [Knowledge Base Display widget’s navigation](knowledge-base-display-widget.md). Each article’s priority value appears beneath the article’s title. The Knowledge Base Display widget’s navigation arranges articles in ascending priority. Priority 1 is the highest priority. The higher an article’s priority, the higher it appears in the navigation. Articles are assigned the next lowest priority by default. This behavior can be changed via [Knowledge Base System Settings](knowledge-base-system-settings.md).
 
 To assign articles a new priority value, 
 

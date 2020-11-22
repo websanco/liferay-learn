@@ -5,7 +5,7 @@ The Knowledge Base app can import articles in bulk. This lets you have an offlin
 <!-- Do we need a note about permissions on every article?
 Note: To import articles, your Role must be granted the *Knowledge Base* &rarr; *Resource Permissions: Import Articles* permission. -->
 
-The Knowledge Base supports a Markdown dialect known as [[Multi-Markdown](http://fletcher.github.io/MultiMarkdown-4/). This dialect extends the original Markdown with features like table formatting, image captions, and footnotes.
+The Knowledge Base supports a Markdown dialect known as [Multi-Markdown](http://fletcher.github.io/MultiMarkdown-4/). This dialect extends the original Markdown with features like table formatting, image captions, and footnotes.
 
 For the Knowledge Base to import your Markdown articles, they must adhere to these requirements:
 
