@@ -1,12 +1,12 @@
 # Securing Elasticsearch 
 
-```note::
-   **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription and the Liferay Enterprise Search Security application to use Elastic's X-Pack Security. Starting with the Liferay Connector to Elasticsearch 7 (available on `the Customer Downloads portal <https://customer.liferay.com/downloads>`_ and bundled in Liferay 7.3), support for Elastic's X-Pack security is included by default. To integrate with Elastic's X-Pack monitoring, LES is required.
-```
-
 ## Securing Elasticsearch on Liferay DXP 7.2
 
 The very first thing you must do to secure Elasticsearch is [enable X-Pack Security](#enable-x-pack-security). After that you can begin configuring authentication and Transport Layer Security.
+
+```note::
+   **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription and the Liferay Enterprise Search Security application to use Elastic's X-Pack Security. Starting with the Liferay Connector to Elasticsearch 7 (available on `the Customer Downloads portal <https://customer.liferay.com/downloads>`_ and bundled in Liferay 7.3), support for Elastic's X-Pack security is included by default. To integrate with Elastic's X-Pack monitoring, LES is required.
+```
 
 ### Enable X-Pack Security
 
@@ -33,7 +33,9 @@ On your Elasticsearch server, use the [`setup-passwords` command](https://www.el
 
 ```note::
   The configurations shown below assume all passwords are set to *liferay*. Use your own passwords for your installation.
+```
 
+```note::
   To update a built-in user's password, use Kibana's UI or the `Change Password API <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html>`_.
 ```
 
@@ -43,40 +45,47 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
 
 #### Generate Node Certificates
 
-[Generate an X-Pack certificate](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#node-certificates) for each node. Alternatively, use a certificate authority to obtain node certificates.
+[Generate a certificate](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#node-certificates) for each node (or you can generate a certificate that is for all nodes and clients like Liferay DXP). Alternatively, use your certificate authority to obtain node certificates.
 
 1. Generate X-Pack certificate authority using the X-Pack's [`certutil`](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/certutil.html) command:
 
     ```bash
-    ./bin/elasticsearch-certutil ca --pem --ca-dn CN=elastic-ca
+    ./bin/elasticsearch-certutil ca --ca-dn CN=elastic-ca
     ```
 
-    This generates a ZIP file.
+    This generates a file called `elastic-stack-ca.p12` unless you chose a different name.
 
-1. Unzip the certificate authority ZIP file contents in the `[Elasticsearch Home]/config/certs` folder.
+1. Move `elastic-stack-ca.p12` to the `[Elasticsearch Home]/config/certs` folder.
 
-1. Generate X.509 certificates and private keys using the CA you created:
+1. Generate X.509 certificates and private keys (in `PKCS#12` format) using the CA you created:
 
     ```bash
-    ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
+    ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
     ```
 
     To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and DXP servers) use
 
     ```
-    --dns localhost,dxp.liferay.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
+    --dns localhost,example.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
     ```
 
-    This generates another ZIP file.
+    This generates another file called `elastic-nodes.p12` (you can name it differently).
 
     ```note::
-       The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in PEM format) is important if you're using X-Pack monitoring.
+       The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``.
     ```
 
-1. Extract the ZIP file contents in the `[Elasticsearch Home]/config/certs` folder.
+1. Move `elastic-nodes.p12` to the `[Elasticsearch Home]/config/certs` folder.
 
     **Checkpoint:** You now have the following files in your `[Elasticsearch Home]/config/certs` folder:
 
+    ```bash
+    elastic-nodes.p12
+    elastic-stack-ca.p12
+    ```
+    
+    or
+    
     ```bash
     ca.crt
     ca.key
@@ -88,7 +97,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
 
 The certificates and keys are ready to use in your Elasticsearch configuration.
 
-#### Configure TLS for Elasticsearch 7
+#### Configure TLS for Elasticsearch
 
 [Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#enable-ssl) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
 
@@ -101,13 +110,20 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 1. Add the certificate, key and certificate authority paths to each node's `elasticsearch.yml`:
 
     ```yaml
-    xpack.security.transport.ssl.certificate_authorities: [ "certs/ca.crt" ]
-    xpack.security.transport.ssl.certificate: certs/elastic-nodes.key
-    xpack.security.transport.ssl.key: certs/elastic-nodes.crt
+    # PKCS#12
+    xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12
+    xpack.security.transport.ssl.keystore.password: liferay
+    xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12
+    xpack.security.transport.ssl.truststore.password: liferay
+    # PEM
+    #xpack.security.transport.ssl.certificate_authorities: [ "certs/ca.crt" ]
+    #xpack.security.transport.ssl.certificate: certs/elastic-nodes.key
+    #xpack.security.transport.ssl.key: certs/elastic-nodes.crt
+    
     xpack.security.transport.ssl.verification_mode: certificate
     ```
 
-    The example paths above assume you added the certificate to `[Elasticsearch Home]/config/`. 
+    The example paths above assume you added the certificates to `[Elasticsearch Home]/config/certs`. 
 
 1. Enable TLS on the HTTP layer to encrypt client communication:
 
@@ -118,40 +134,18 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 1. Configure the certificate, key, and certificate authority paths to each node's `elasticsearch.yml`:
 
     ```yaml
-    xpack.security.http.ssl.certificate_authorities: [ "certs/ca.crt" ]
-    xpack.security.http.ssl.certificate: certs/elastic-nodes.crt
-    xpack.security.http.ssl.key: certs/elastic-nodes.key
+    # PKCS#12
+    xpack.security.http.ssl.keystore.path: certs/elastic-certificates.p12
+    xpack.security.http.ssl.keystore.password: liferay
+    xpack.security.http.ssl.truststore.path: certs/elastic-certificates.p12
+    xpack.security.http.ssl.truststore.password: liferay
+    # PEM
+    #xpack.security.http.ssl.certificate_authorities: [ "certs/ca.crt" ]
+    #xpack.security.http.ssl.certificate: certs/elastic-nodes.crt
+    #xpack.security.http.ssl.key: certs/elastic-nodes.key
+    
     xpack.security.http.ssl.verification_mode: certificate
     ```
-
-#### Configure TLS for Elasticsearch 6
-
-The settings for Elasticsearch 6 are slightly different from those presented above for Elasticsearch 7. [Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#enable-ssl) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
-
-1. Add the certificate, key and certificate authority paths to each node's `elasticsearch.yml`:
-
-    ```yaml
-    xpack.ssl.certificate_authorities: [ "certs/ca.crt" ]
-    xpack.ssl.certificate: certs/elastic-nodes.crt 
-    xpack.ssl.key: certs/elastic-nodes.key
-    xpack.ssl.verification_mode: certificate 
-    ```
-
-    The example paths above assume you added the certificate to `[Elasticsearch Home]/config/`. 
-
-1. Enable transport layer TLS with these settings in `elasticsearch.yml`:
-
-    ```yaml
-    xpack.security.transport.ssl.enabled: true
-    ```
-
-1. Enable TLS on the HTTP layer to encrypt client communication:
-
-    ```yaml
-    xpack.security.http.ssl.enabled: true
-    ```
-
-After X-Pack is installed and encryption is enabled, configure the corresponding security settings in Liferay (discussed below).
 
 #### Example Elasticsearch Security Configuration
 
@@ -163,19 +157,19 @@ cluster.name: LiferayElasticsearchCluster
 # X-Pack Security
 xpack.security.enabled: true
 
-## TLS/SSL settings for Transport layer
-xpack.security.transport.ssl.enabled: true 
-xpack.security.transport.ssl.certificate_authorities : [ "certs/ca.crt" ]
-xpack.security.transport.ssl.certificate: certs/elastic-nodes.crt
-xpack.security.transport.ssl.key: certs/elastic-nodes.key
+## TLS/SSL settings for Transport layer (PKCS#12)
+xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12
+xpack.security.transport.ssl.keystore.password: liferay
+xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12
+xpack.security.transport.ssl.truststore.password: liferay
 xpack.security.transport.ssl.verification_mode: certificate
 
-# TLS/SSL settings for HTTP layer
-xpack.security.http.ssl.enabled: true
-xpack.security.http.ssl.certificate_authorities : [ "certs/ca.crt" ]
-xpack.security.http.ssl.certificate: certs/elastic-nodes.crt
-xpack.security.http.ssl.key: certs/elastic-nodes.key
-xpack.security.http.ssl.verification_mode: certificate 
+# TLS/SSL settings for HTTP layer (PKCS#12)
+xpack.security.http.ssl.keystore.path: certs/elastic-certificates.p12
+xpack.security.http.ssl.keystore.password: liferay
+xpack.security.http.ssl.truststore.path: certs/elastic-certificates.p12
+xpack.security.http.ssl.truststore.password: liferay
+xpack.security.http.ssl.verification_mode: certificate
 
 # Comment out when Kibana and Liferay's X-Pack Monitoring are also configured
 #xpack.monitoring.collection.enabled: true
@@ -195,18 +189,33 @@ On Liferay, security can be configured in the Control Panel or using a configura
 com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
 ```
 
-The exact contents of the file depend on your X-Pack setup. To configure the adapter according to the Elasticsearch setup documented here, populate the file like this:
+The exact contents of the file depend on your X-Pack setup. To configure the adapter according to the Elasticsearch setup documented here, populate the file like this (using `PKCS#12` format):
 
 ```properties
+certificateFormat="PEM"
 sslKeyPath="/path/to/elastic-nodes.key"
 sslCertificatePath="/path/to/elastic-nodes.crt"
-certificateFormat="PEM"
 requiresAuthentication="true"
 username="elastic"
 password="liferay"
 sslCertificateAuthoritiesPaths="/path/to/ca.crt"
 transportSSLVerificationMode="certificate"
 transportSSLEnabled="true"
+```
+
+And this if you are using `PEM` format certificates:
+
+```properties
+certificateFormat="PKCS#12"
+sslKeystorePath="/path/to/elastic-certificates.p12"
+sslKeystorePassword="liferay"
+sslTruststorePath="/path/to/elastic-certificates.p12"
+sslTruststorePassword="liferay"
+requiresAuthentication=B"true"
+username="elastic"
+password="liferay"
+transportSSLVerificationMode="certificate"
+transportSSLEnabled=B"true"
 ```
 
 The `password` must match the one you set during the X-Pack user password setup above. 
