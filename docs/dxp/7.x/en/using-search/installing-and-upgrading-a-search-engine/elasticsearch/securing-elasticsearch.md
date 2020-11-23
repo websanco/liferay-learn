@@ -72,7 +72,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     This generates another file called `elastic-nodes.p12` (you can name it differently).
 
     ```note::
-       The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``.
+       The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case in a form of a ZIP file: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archives' contents in the *[Elasticsearch Home]/config/certs* folder.
     ```
 
 1. Move `elastic-nodes.p12` to the `[Elasticsearch Home]/config/certs` folder.
