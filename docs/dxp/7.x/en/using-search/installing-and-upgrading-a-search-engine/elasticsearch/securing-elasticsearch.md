@@ -192,20 +192,6 @@ com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguratio
 The exact contents of the file depend on your X-Pack setup. To configure the adapter according to the Elasticsearch setup documented here, populate the file like this (using `PKCS#12` format):
 
 ```properties
-certificateFormat="PEM"
-sslKeyPath="/path/to/elastic-nodes.key"
-sslCertificatePath="/path/to/elastic-nodes.crt"
-requiresAuthentication="true"
-username="elastic"
-password="liferay"
-sslCertificateAuthoritiesPaths="/path/to/ca.crt"
-transportSSLVerificationMode="certificate"
-transportSSLEnabled="true"
-```
-
-And this if you are using `PEM` format certificates:
-
-```properties
 certificateFormat="PKCS#12"
 sslKeystorePath="/path/to/elastic-certificates.p12"
 sslKeystorePassword="liferay"
@@ -216,6 +202,20 @@ username="elastic"
 password="liferay"
 transportSSLVerificationMode="certificate"
 transportSSLEnabled=B"true"
+```
+
+And this if you are using `PEM` format certificates:
+
+```properties
+certificateFormat="PEM"
+sslKeyPath="/path/to/elastic-nodes.key"
+sslCertificatePath="/path/to/elastic-nodes.crt"
+requiresAuthentication="true"
+username="elastic"
+password="liferay"
+sslCertificateAuthoritiesPaths="/path/to/ca.crt"
+transportSSLVerificationMode="certificate"
+transportSSLEnabled="true"
 ```
 
 The `password` must match the one you set during the X-Pack user password setup above. 
