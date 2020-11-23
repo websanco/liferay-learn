@@ -6,6 +6,10 @@ Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub reposit
 
 1. Integrate their private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
 
+```note::
+   If you are using an organization account, then you must have administrative privileges to transfer the repository to the organization.
+```
+
 ## Transferring the Repository
 
 Follow these steps to transfer the provisioned repository to your own GitHub repository:
@@ -64,6 +68,10 @@ Lastly, set environment variables in the Jenkins service to point to your new re
 | `LCP_CI_SCM_TOKEN` | [access_token] |
 
 For the `LCP_CI_SCM_TOKEN` value, use the personal access token you created for your GitHub organization. For instructions on creating and accessing this token, see [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line).
+
+```note::
+   If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See `GitHub's official documentation <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on>`__ for more information.
+```
 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.
 
