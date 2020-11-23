@@ -28,6 +28,10 @@ Consider the following information when you create the Dynamic Collection:
 
 - You must enable the *Content Recommendation* option in the Dynamic Collection. When this option is disabled, the Collection does not show the recommended content.
 
+    ```note::
+    The Content Recommendation options is available when you connect the DXP instance to Analytics Cloud.
+    ```
+
     ![Enable the Content Recommendation option for your Dynamic Collection](./configuring-content-recommendations/images/03.png)
 
 - The Filter criteria in your Dynamic Collection is optional. For example, if you use the "promotion" tag for your content and only want to recommend promotions, you can use this tag.
@@ -42,7 +46,7 @@ Consider the following information when you create the Dynamic Collection:
 
 The way you show Collections or Content Sets depends on your Liferay DXP version. In Liferay DXP 7.2, you [show the Content Sets in a Display Page](#display-the-collection-or-content-set-in-a-display-page-using-the-asset-publisher) using an Asset Publisher. In DXP 7.3+, in addition to the Asset Publisher, you can show the Collection's content [using the Collection Display Fragment or a Collection Page](#display-the-collection-using-a-collection-display-fragment-or-a-collection-page).
 
-```note:
+```note::
 Collections are named Content Sets in Liferay DXP 7.2.
 ```
 
