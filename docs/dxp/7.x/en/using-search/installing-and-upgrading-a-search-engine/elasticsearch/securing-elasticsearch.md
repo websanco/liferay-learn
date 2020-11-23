@@ -62,6 +62,11 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     ```bash
     ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
     ```
+    If you are using a `PEM` format CA certificate, run:
+    
+    ```bash
+    ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
+    ```
 
     To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and DXP servers) use
 
@@ -210,7 +215,7 @@ And this if you are using `PEM` format certificates:
 certificateFormat="PEM"
 sslKeyPath="/path/to/elastic-nodes.key"
 sslCertificatePath="/path/to/elastic-nodes.crt"
-requiresAuthentication="true"
+requiresAuthentication=B"true"
 username="elastic"
 password="liferay"
 sslCertificateAuthoritiesPaths="/path/to/ca.crt"
