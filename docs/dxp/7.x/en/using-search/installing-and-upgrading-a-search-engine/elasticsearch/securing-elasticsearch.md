@@ -298,25 +298,3 @@ Here's the complete list of settings for the X-Pack Security configuration on DX
 * `sslKeystorePassword`: Set the password to the PKCS#12 file.
 * `sslTruststorePath`: Set the path to the truststore file. Defaults to `/path/to/elastic-certificates.p12`.
 * `sslTruststorePassword`: Set the password to the truststore.
-
-### Disable Elasticsearch Deprecation Logging
-
-Sometimes, Elasticsearch APIs used by Liferay's Elasticsearch connectors are deprecated. Even when there's no impact to the functionality required by Liferay, warning loge messages can result:
-
-```
-[2019-07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
-ode_name]'y' year should be replaced with 'u'. Use 'y' for year-of-era. Prefix your date format with '8' to use the new specifier.
-[2019-07-16T14:47:06,007][WARN ][o.e.d.c.s.Settings       ] [
-ode_name][xpack.ssl.certificate] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
-[2019-07-16T14:47:06,007][WARN ][o.e.d.c.s.Settings       ] [
-ode_name][xpack.ssl.certificate_authorities] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
-[2019-07-16T14:47:06,008][WARN ][o.e.d.c.s.Settings       ] [
-ode_name][xpack.ssl.key] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
-[2019-07-16T14:47:06,463][WARN ][o.e.d.x.c.s.SSLService   ] [
-ode_name]SSL configuration [xpack.http.ssl] relies upon fallback to another configuration for [key configuration, trust configuration], which is deprecated.
-[2019-07-16T14:47:06,464][WARN ][o.e.d.x.c.s.SSLService   ] [
-ode_name]SSL configuration [xpack.security.transport.ssl.] relies upon fallback to another configuration for [key configuration, trust configuration], which is deprecated.
-1. 07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
-```
-
-These warnings do not signal any functional issues, and can be disabled (see [Deprecation Logging](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/logging.html#deprecation-logging) to learn how).
