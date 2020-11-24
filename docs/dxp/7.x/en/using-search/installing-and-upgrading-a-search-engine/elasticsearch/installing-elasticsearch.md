@@ -67,6 +67,10 @@ Each Elasticsearch server is configured by its `[Elasticsearch Home]/config/elas
 
 Here are example single-node and multi-node Elasticsearch cluster configurations.
 
+### Configure Security in Elasticsearch
+
+See the [Securing Elasticsearch](../securing-elasticsearch.md) article.
+
 ### Example: Single-Node Production Elasticsearch Cluster
 
 Here's an `elasticsearch.yml` configuration for a single-node cluster:
@@ -171,6 +175,7 @@ If you're running in production, [secure communication between Liferay and Elast
 
 ## Additional Topics
 
+* [Securing Elasticsearch](../securing-elasticsearch.md)
 * [Liferay Enterprise Search](../../liferay_enterprise_search.md)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
 * [Administering and Tuning Search](../../search_administration_and_tuning.md)
