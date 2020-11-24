@@ -6,7 +6,7 @@ Content recommendations work automatically as long as the following elements are
 
 1. [Analytics Cloud is connected to your Liferay DXP instance](#connecting-analytics-cloud-to-your-liferay-dxp-instance) and the Site content is synchronized.
 2. You [create a Dynamic Collection](#creating-a-dynamic-collection) in Liferay DXP with different content.
-3. You [display the Dynamic Collection](#displaying-the-dynamic-collection) for your site using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
+3. You [display the Dynamic Collection](#displaying-the-dynamic-collection) using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
 
 ## Connecting Analytics Cloud to Your Liferay DXP Instance
 
@@ -26,15 +26,15 @@ To create the Dynamic Collection, follow the instructions in [Creating Collectio
 
 Consider the following information when you create the Dynamic Collection:
 
-- You must enable the *Content Recommendation* option in the Dynamic Collection. When this option is disabled, the Collection does not show the recommended content.
+- You must enable the *Content Recommendation* option in the Dynamic Collection. When this option is disabled, the Collection does use content recommendations.
 
     ```note::
     The Content Recommendation options is available when you connect the DXP instance to Analytics Cloud.
     ```
 
-    ![Enable the Content Recommendation option for your Dynamic Collection](./configuring-content-recommendations/images/03.png)
+    ![Enable the Content Recommendation option for the Dynamic Collection](./configuring-content-recommendations/images/03.png)
 
-- The Filter criteria in your Dynamic Collection is optional. For example, if you use the "promotion" tag for your content and only want to recommend promotions, you can use this tag.
+- The Filter in the Dynamic Collection is optional. For example, if you use the "promotion" tag in your content and only want to recommend promotions, you can use this tag as a filter.
 
     ![You can optionally use a Filter in the Dynamic Collection for your content recommendations](./configuring-content-recommendations/images/04.png)
 
@@ -67,13 +67,9 @@ A Collection Display Fragment is a type of Fragment that shows a Collection. You
 
 A Collection Page is a type of page linked to a Collection. To show the Collection using a Collection page, see the [Displaying Collections Using a Collection Page](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md#displaying-collections-using-a-collection-page) section in the [Displaying Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md) topic.
 
-## Analyzing Content Recommendations
-
-Analytics Cloud generates the topics of interest for users, based on users' behaviour in your site. To analyze these interests, 
-
 ## Related Information
 
-- [[Categories and Tags]]()
-- [[Collections]]()
-- [[Individual Profiles]](https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/individual-profiles/individual-profiles.html)
-- [[Interests]](https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html)
+- [Understanding Content Recommendations](./understanding-content-recommendations.md)
+- [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)
+- [Creating Collections](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection)
+- [Creating a Display Page Template](../displaying-content/using-display-page-templates/creating-a-display-page-template.md)
