@@ -41,21 +41,21 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
 
     ```properties
     # In CE/DXP7.3, productionModeEnabled replaces operationMode (deprecated):
-    productionModeEnabled="true"
+    productionModeEnabled=B"true"
     networkHostAddresses=["http://es-node1:9200","http://es-node3:9201","http://es-node3:9202"]
     # In CE/DXP 7.3 the security settings are included in the ElasticsearchConfiguration
     # In CE/DXP 7.2 the security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
     # Authentication
-    #authenticationEnabled="true"
+    #authenticationEnabled=B"true"
     #username="elastic"
     #password="liferay"
 
     # TLS/SSL
     #networkHostAddresses=["https://es-node1:9200","https://es-node3:9201","https://es-node3:9202"]
-    #httpSSLEnabled="true"
+    #httpSSLEnabled=B"true"
     #truststoreType="pkcs12"
-    #trustStorePath="/PATH/TO/truststore.p12"
-    #trustStorePassword="secret"
+    #trustStorePath="/PATH/TO/elastic-nodes.p12"
+    #trustStorePassword="liferay"
 
     # Highly recommended for all non-prodcution usage (e.g., practice, tests, diagnostics):
     #logExceptionsOnly="false"

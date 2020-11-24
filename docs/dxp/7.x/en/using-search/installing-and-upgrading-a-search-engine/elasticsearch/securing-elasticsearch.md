@@ -119,9 +119,9 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 
     ```yaml
     # PKCS#12
-    xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12
+    xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
     xpack.security.transport.ssl.keystore.password: liferay
-    xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12
+    xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
     xpack.security.transport.ssl.truststore.password: liferay
     # PEM
     #xpack.security.transport.ssl.certificate_authorities: [ "certs/ca.crt" ]
@@ -143,9 +143,9 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 
     ```yaml
     # PKCS#12
-    xpack.security.http.ssl.keystore.path: certs/elastic-certificates.p12
+    xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
     xpack.security.http.ssl.keystore.password: liferay
-    xpack.security.http.ssl.truststore.path: certs/elastic-certificates.p12
+    xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
     xpack.security.http.ssl.truststore.password: liferay
     # PEM
     #xpack.security.http.ssl.certificate_authorities: [ "certs/ca.crt" ]
@@ -166,16 +166,16 @@ cluster.name: LiferayElasticsearchCluster
 xpack.security.enabled: true
 
 ## TLS/SSL settings for Transport layer (PKCS#12)
-xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12
+xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
-xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.truststore.password: liferay
 xpack.security.transport.ssl.verification_mode: certificate
 
 # TLS/SSL settings for HTTP layer (PKCS#12)
-xpack.security.http.ssl.keystore.path: certs/elastic-certificates.p12
+xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
-xpack.security.http.ssl.truststore.path: certs/elastic-certificates.p12
+xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.truststore.password: liferay
 xpack.security.http.ssl.verification_mode: certificate
 
@@ -220,7 +220,7 @@ authenticationEnabled=B"true"
 httpSSLEnabled=B"true"
 networkHostAddresses=["https://localhost:9200"]
 truststorePassword="liferay"
-truststorePath="/path/to/elastic-certificates.p12"
+truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
@@ -244,9 +244,9 @@ and populate the file like this (`PKCS#12`):
 
 ```properties
 certificateFormat="PKCS#12"
-sslKeystorePath="/path/to/elastic-certificates.p12"
+sslKeystorePath="/PATH/TO/elastic-nodes.p12"
 sslKeystorePassword="liferay"
-sslTruststorePath="/path/to/elastic-certificates.p12"
+sslTruststorePath="/PATH/TO/elastic-nodes.p12"
 sslTruststorePassword="liferay"
 requiresAuthentication=B"true"
 username="elastic"
@@ -259,12 +259,12 @@ or like this if you are using `PEM` format certificates:
 
 ```properties
 certificateFormat="PEM"
-sslKeyPath="/path/to/elastic-nodes.key"
-sslCertificatePath="/path/to/elastic-nodes.crt"
+sslKeyPath="/PATH/TO/elastic-nodes.key"
+sslCertificatePath="/PATH/TO/elastic-nodes.crt"
 requiresAuthentication=B"true"
 username="elastic"
 password="liferay"
-sslCertificateAuthoritiesPaths="/path/to/ca.crt"
+sslCertificateAuthoritiesPaths="/PATH/TO/ca.crt"
 transportSSLVerificationMode="certificate"
 transportSSLEnabled="true"
 ```
