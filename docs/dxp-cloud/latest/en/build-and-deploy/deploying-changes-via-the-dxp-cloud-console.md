@@ -2,7 +2,7 @@
 
 This tutorial walks through the process of adding a portal property to the Liferay service, triggering a CI build with a pull request, and deploying the new build to the `dev` environment via the DXP Cloud console.
 
-To get started, you'll need a code hosting service integrated with your Project's CI service and a local, working copy of your project's repository.
+To get started, you need a code hosting service integrated with your project's CI service and a local, working copy of your project's repository.
 
 ```note::
    For an alternative deployment workflow, see `Deploying Services with the CLI Tool <./deploying-services-with-the-cli-tool.md>`__ to learn how to deploy local changes to your project environments using the Liferay Cloud Platform CLI tool.
@@ -17,12 +17,12 @@ To get started, you'll need a code hosting service integrated with your Project'
 
 Begin the deployment life cycle by adding a portal property to the `dev` environment's Liferay service and committing your changes:
 
-1. Ensure your local master branch is up-to-date with the latest version of your Project's repository.
+1. Ensure your local master branch is up-to-date with the latest version of your project's repository.
 
 1. Create a new working branch based on your up-to-date master branch.
 
    ```bash
-   git checkout -b testing-branch
+   git checkout -b example-console-deployment-branch
    ```
 
 1. Go to `<project>\liferay\configs\dev\portal-env.properties`, and add the following property:
@@ -47,29 +47,29 @@ Begin the deployment life cycle by adding a portal property to the `dev` environ
 
 ## Triggering a Jenkins Build with a Pull Request
 
-Next, trigger a Jenkins build with a pull request to your Project's central Git repository:
+Next, trigger a Jenkins build with a pull request to your project's central Git repository:
 
 1. Push your new branch to the origin of your local repository.
 
    ```bash
-   git push -u origin testing-branch
+   git push -u origin example-console-deployment-branch
    ```
 
-1. Navigate to your Git repository, and trigger a Jenkins build with a new pull request to your Project's central repository.
+1. Navigate to your Git repository, and trigger a Jenkins build with a new pull request to your project's central repository.
 
-   ![Trigger a Jenkins build with a new pull request to your Project's central repository.](./deploying-changes-via-the-dxp-cloud-console/images/01.png)
+   ![Trigger a Jenkins build with a new pull request to your project's central repository.](./deploying-changes-via-the-dxp-cloud-console/images/01.png)
 
-   You can track the status of your build and view detailed logs via your Project's Jenkins page: `https://ci-<project-name>-infra.lfr.cloud`
+   You can track the status of your build and view detailed logs via your project's Jenkins page: `https://ci-<project-name>-infra.lfr.cloud`
 
-   ![Track the status of your build via your Project's Jenkins page](./deploying-changes-via-the-dxp-cloud-console/images/02.png)
+   ![Track the status of your build via your project's Jenkins page](./deploying-changes-via-the-dxp-cloud-console/images/02.png)
 
-   ![View detailed logs via your Project's Jenkins page.](./deploying-changes-via-the-dxp-cloud-console/images/03.png)
+   ![View detailed logs via your project's Jenkins page.](./deploying-changes-via-the-dxp-cloud-console/images/03.png)
 
 ## Deploying Your New Build via the DXP Cloud Console
 
-Once your new build is ready, deploy it to your Project's `dev` environment via the DXP Cloud console:
+Once your new build is ready, deploy it to your project's `dev` environment via the DXP Cloud console:
 
-1. Navigate to the *Builds* page for your Project in the DXP Cloud console. You can access this page from any Project environment.
+1. Navigate to the *Builds* page for your project in the DXP Cloud console. You can access this page from any project environment.
 
 1. Click on the *Actions* button ( ⋮ ) for the build you want to deploy, and select *Deploy Build To...*
 
@@ -95,7 +95,7 @@ Once your new build is ready, deploy it to your Project's `dev` environment via 
 
 Once your build has successfully deployed and your `dev` environment's Liferay service is *Ready*, follow these steps to verify your changes:
 
-1. Navigate to your Project's `dev` environment.
+1. Navigate to your project's `dev` environment.
 
 1. Go to the *Web Server* service's page, and click on its URL to access the `dev` environment's DXP instance: `https://webserver-<project-name>-dev.lfr.cloud/`.
 

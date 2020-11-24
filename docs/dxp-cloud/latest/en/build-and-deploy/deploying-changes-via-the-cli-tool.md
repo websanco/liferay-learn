@@ -1,14 +1,14 @@
 # Deploying Changes via the CLI Tool
 
-With the CLI tool, you can directly deploy local Project changes without triggering a Jenkins build or using the DXP Cloud Management Console. This tutorial walks through the process of adding a portal property to the Liferay service and deploying it to the `dev` using the CLI tool.
+With the CLI tool, you can directly deploy local project changes without triggering a Jenkins build or using the DXP Cloud Management Console. This tutorial walks through the process of adding a portal property to the Liferay service and deploying it to the `dev` using the CLI tool.
 
-To get started, you'll need the [CLI tool](../reference/command-line-tool.md) installed and ready to use, as well as a local copy of your Project's Git repository (e.g., [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github), [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html), [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone)).
+To get started, you first need the [CLI tool](../reference/command-line-tool.md) installed and ready to use, as well as a local copy of your project's Git repository (e.g., [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github), [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html), [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone)).
 
 ```note::
-   Although the CLI tool provides a quick way to deploy changes to your Project, it's best practice to use the CI service and DXP Cloud console for the majority of deployments. See `Deploying Changes via the DXP Cloud Console <./deploying-changes-via-the-dxp-cloud-console.md>`__ to learn how.
+   Although the CLI tool provides a quick way to deploy changes to your project, it's best practice to use the CI service and DXP Cloud console for the majority of deployments. See `Deploying Changes via the DXP Cloud Console <./deploying-changes-via-the-dxp-cloud-console.md>`__ to learn how.
 ```
 
-If you are using version 3.x.x services in your Project, you must first [prepare](#preparing-lcpjson-files-in-project-version-3) their `LCP.json` files before deploying changes with the CLI tool.
+If you are using version 3.x.x services in your project, you must first [prepare](#preparing-lcpjson-files-in-project-version-3) their `LCP.json` files before deploying changes with the CLI tool.
 
 Otherwise, you can skip this step and begin the deployment process:
 
@@ -45,12 +45,12 @@ For example, use the value from the `liferay.workspace.lcp.search.image` propert
 
 Begin the deployment life cycle by adding a portal property to the `dev` environment's Liferay service and committing your changes:
 
-1. Ensure your local master branch is up-to-date with the latest version of your Project's repository.
+1. Ensure your local master branch is up-to-date with the latest version of your project's repository.
 
 1. Create a new working branch based on your up-to-date master branch.
 
    ```bash
-   git checkout -b testing-branch
+   git checkout -b example-cli-deployment-branch
    ```
 
 1. Go to `<project>\liferay\configs\dev\`, and add the following property to the `portal-env.properties` file:
@@ -75,7 +75,7 @@ Begin the deployment life cycle by adding a portal property to the `dev` environ
 
 ## Deploying Your New Build via the CLI Tool
 
-Once you've committed your changes, follow these steps to create a build of your Liferay service with gradle, and then deploy it to your `dev` environment using the CLI tool:
+Once you've committed your changes, follow these steps to create a build of your Liferay service with Gradle, and then deploy it to your `dev` environment using the CLI tool:
 
 1. Open your terminal, and navigate to the Liferay service folder.
 
@@ -87,9 +87,9 @@ Once you've committed your changes, follow these steps to create a build of your
    If you're using version 3.x.x services, you must navigate to the ``lcp`` directory in your repository before running the CLI tool, so that it can traverse the directory and find your services' ``LCP.json`` files.
    ```
 
-1. Run `lcp login`. If you're not already logged in, you'll be prompted to authenticate your credentials via browser.
+1. Run `lcp login`. If you're not already logged in, you are prompted to authenticate your credentials via browser.
 
-1. Run the following commands in sequence to create a gradle build for your Liferay service:
+1. Run the following commands in sequence to create a Gradle build for your Liferay service:
 
    ```bash
    ./gradlew clean deploy createDockerfile
@@ -104,7 +104,7 @@ Once you've committed your changes, follow these steps to create a build of your
    ```
 
    ```important::
-      While you can directly deploy backup, CI, database, search, and webserver services, you must first create a gradle build of the Liferay service before running the ``lcp deploy`` command.
+      You must first create a Gradle build of the Liferay service before running the ``lcp deploy`` command. No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
    ```
 
 1. Run the following command to deploy the build to your `dev` environment:
@@ -115,13 +115,13 @@ Once you've committed your changes, follow these steps to create a build of your
 
    ![You can view the progress of your deployment in the terminal.](./deploying-changes-via-the-cli-tool/images/01.png)
 
-   During this process, your new build is added to your Project and deployed to the `dev` environment. At this time, the Liferay service should restart with the new portal property.
+   During this process, your new build is added to your project and deployed to the `dev` environment. At this time, the Liferay service should restart with the new portal property.
 
 ## Verifying Your Sample Deployment
 
 Once your build has successfully deployed and your `dev` environment's Liferay service is *Ready*, follow these steps to verify your changes:
 
-1. Navigate to your Project's `dev` environment.
+1. Navigate to your project's `dev` environment.
 
 1. Go to the *Web Server* service's page, and click on its URL to access the `dev` environment's DXP instance: `https://webserver-<project-name>-dev.lfr.cloud/`.
 

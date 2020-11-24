@@ -2,7 +2,7 @@
 
 You can speed up the deployment of CI builds by configuring the CI service to automatically deploy them to your Project's `dev` environment.
 
-To do so, follow these steps:
+Follow these steps to set it up:
 
 1. Navigate to the `infra` environment for your DXP Cloud Project.
 
@@ -12,9 +12,9 @@ To do so, follow these steps:
 
 1. Add the following variable to the CI service:
 
-   **Key**: `DEVELOPMENT_BRANCH_NAME`
+   * **Key**: `DEVELOPMENT_BRANCH_NAME`
 
-   **Value**: enter the name of the branch you want to use for automatic deployments.
+   * **Value**: enter the name of the branch you want to use for automatic deployments.
 
 1. Click on *Save Changes*. This causes the CI service to restart with the new variable.
 
