@@ -4,6 +4,7 @@ Reference
 .. toctree::
    :maxdepth: 1
 
+   reference/dxp-cloud-infrastructure.md
    reference/configuration-via-lcp-json.md
    reference/understanding-service-stack-versions.md
    reference/upgrading-your-dxp-cloud-stack.md
