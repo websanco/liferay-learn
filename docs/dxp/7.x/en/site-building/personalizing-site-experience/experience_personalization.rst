@@ -6,6 +6,10 @@ Experience Personalization
 
    experience-personalization/content-page-personalization.md
    experience-personalization/personalizing-collections.md
+   experience-personalization/understanding-content-recommendations.md
+   experience-personalization/configuring-content-recommendations.md
 
 -  :doc:`/site-building/personalizing-site-experience/experience-personalization/content-page-personalization`
 -  :doc:`/site-building/personalizing-site-experience/experience-personalization/personalizing-collections`
+-  :doc:`/site-building/personalizing-site-experience/experience-personalization/understanding-content-recommendations`
+-  :doc:`/site-building/personalizing-site-experience/experience-personalization/configuring-content-recommendations`
