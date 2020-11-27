@@ -79,7 +79,7 @@ Note that Documents and Media folders and Web Content folders can be added to a 
    **Content Recommendation:** Enable this option to display content based on user behavior. For more information, see [Configuring Content Recommendations](../site-building/displaying-content/configuring-content-recommendations.md).
 
    ```note::
-    The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud.
+    The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
     ```
 
    **Ordering:** Items in the collection appear using the order criteria you define here.

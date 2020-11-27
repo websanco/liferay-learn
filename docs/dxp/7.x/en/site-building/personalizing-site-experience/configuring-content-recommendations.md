@@ -5,7 +5,7 @@ As users browse your Liferay DXP site and interact with your content, Liferay An
 Content recommendations work automatically as long as the following elements are in place:
 
 1. [Analytics Cloud is connected to your Liferay DXP instance](#connecting-analytics-cloud-to-your-liferay-dxp-instance) and the Site content is synchronized.
-2. You [create a Dynamic Collection](#creating-a-dynamic-collection) in Liferay DXP with different content.
+2. You [create a Dynamic Collection](#creating-a-dynamic-collection) in Liferay DXP with different content, and enable the Content Recommendation option.
 3. You [display the Dynamic Collection](#displaying-the-dynamic-collection) using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
 
 ## Connecting Analytics Cloud to Your Liferay DXP Instance
@@ -18,7 +18,7 @@ To learn how to connect Analytics Cloud to Liferay DXP and synchronize the site'
 
 ## Creating a Dynamic Collection
 
-To show users content recommendations based on their browsing behavior, you must use a Dynamic Collection. The Collection is the component that connects the users' interest in Analytics Cloud with the content recommendations in your site. Using a Collection, you define what type of content you want to recommend and, optionally, to what audiences.
+To show users content recommendations based on their browsing behavior, you must use a Dynamic Collection. The Collection is the component that connects the users' interests in Analytics Cloud with the content recommendations in your site. Using a Collection, you define what type of content you want to recommend and, optionally, to what audiences.
 
 To create the Dynamic Collection, follow the instructions in [Creating Collections](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection).
 
@@ -26,10 +26,10 @@ To create the Dynamic Collection, follow the instructions in [Creating Collectio
 
 Consider the following information when you create the Dynamic Collection:
 
-- You must enable the *Content Recommendation* option in the Dynamic Collection. When this option is disabled, the Collection does use content recommendations.
+- You must enable the *Content Recommendation* option in the Dynamic Collection. When this option is disabled, the Collection doesn't use content recommendations.
 
     ```note::
-    The Content Recommendation options is available when you connect the DXP instance to Analytics Cloud.
+    The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
     ```
 
     ![Enable the Content Recommendation option for the Dynamic Collection](./configuring-content-recommendations/images/03.png)
