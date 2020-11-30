@@ -200,6 +200,12 @@ Name                                  | Default Value | Description  |
 `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` |  | A string with 22 characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
 `LIFERAY_JAVA_OPTS` | | JVM options that will be appended to `CATALINA_OPTS` to override the default recommended options. |
 
+## Limitations
+
+Liferay DXP has many powerful features to build, manage, and deploy content to the web. However, some of those features are unavailable on DXP Cloud:
+
+* [Remote Staging](https://learn.liferay.com/dxp/7.x/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is currently unsupported on DXP Cloud. Users migrating from an on-premises installation to DXP Cloud must convert to Local Staging in order to continue using Staging functionality.
+
 ## Additional Information
 
 * [Logging Into Your DXP Cloud Services](../getting-started/logging-into-your-dxp-cloud-services.md)
