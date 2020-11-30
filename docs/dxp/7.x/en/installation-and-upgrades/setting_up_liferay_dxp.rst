@@ -54,5 +54,6 @@ Clustering for High Availability
 Other Setup Topics
 ------------------
 
+-  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/other-setup-topics/custom-fields`
 * Tuning your JVM (Coming soon!)
 * Setting Up Remote Staging (Coming soon!)
