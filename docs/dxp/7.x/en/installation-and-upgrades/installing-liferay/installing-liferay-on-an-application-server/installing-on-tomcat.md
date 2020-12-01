@@ -98,15 +98,6 @@ Here are the steps:
     ```xml
     <Context crossContext="true" path="">
 
-        <!-- JAAS -->
-
-        <!--<Realm
-            className="org.apache.catalina.realm.JAASRealm"
-            appName="PortalRealm"
-            userClassNames="com.liferay.portal.kernel.security.jaas.PortalPrincipal"
-            roleClassNames="com.liferay.portal.kernel.security.jaas.PortalRole"
-        />-->
-
         <!--
         Uncomment the following to disable persistent sessions across reboots.
         -->
@@ -130,7 +121,7 @@ Here are the steps:
     </Context>
     ```
 
-     Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for configuring a JAAS realm, disabling persistent sessions, and disabling sessions entirely.
+     Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for disabling persistent sessions and disabling sessions entirely.
 
 1. Provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending this value to the `common.loader` property:
 

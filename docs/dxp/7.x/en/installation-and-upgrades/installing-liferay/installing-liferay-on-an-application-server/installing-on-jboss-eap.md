@@ -126,16 +126,6 @@ Make the following modifications to `$JBOSS_HOME/standalone/configuration/standa
     </subsystem>
     ```
 
-1. Add the following JAAS security domain to the security subsystem `<security-domains>` defined in element `<subsystem xmlns="urn:jboss:domain:security:2.0">`.
-
-    ```xml
-    <security-domain name="PortalRealm">
-        <authentication>
-            <login-module code="com.liferay.portal.security.jaas.PortalLoginModule" flag="required" />
-        </authentication>
-    </security-domain>
-    ```
-
 1. Remove the welcome content code snippets:
 
     ```xml
