@@ -39,6 +39,7 @@ Here are the features deprecated in 7.3:
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
 | Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html) is Dec 31, 2020. |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
+| JAAS support | Bundled | No direct replacement. |
 | JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
