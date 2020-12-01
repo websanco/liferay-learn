@@ -2,7 +2,7 @@
 
 With DXP Cloud, you can use webhooks to automatically trigger Jenkins builds for changes made to your project's Git repository (e.g., [GitHub](../getting-started/configuring-your-github-repository.md#integrating-with-the-jenkins-service), [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md#connecting-bitbucket-to-your-jenkins-service), [GitLab](../getting-started/configuring-your-gitlab-repository.md#connecting-gitlab-to-your-jenkins-service)). These builds can then be manually deployed to project environments via the DXP Cloud Console. Alternatively, you can speed up the deployment process by configuring the CI service to automatically deploy successful builds from a specific branch to your `dev` environment.
 
-To do this, follow these steps:
+Follow these steps to set up automatic deployment:
 
 1. Navigate to the `infra` environment for your DXP Cloud Project.
 
