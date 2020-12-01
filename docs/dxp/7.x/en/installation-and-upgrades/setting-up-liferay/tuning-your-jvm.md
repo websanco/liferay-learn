@@ -1,103 +1,138 @@
 # Tuning Your JVM
 
-Java Virtual Machine (JVM) tuning primarily focuses on adjusting the garbage collector and the Java memory heap. We used Oracle's 1.8 JVM for the reference architecture. You may choose other supported JVM versions and implementations. Please consult the  [Liferay DXP Compatibility Matrix](https://web.liferay.com/group/customer/dxp/support/compatibility-matrix) for additional compatible JVMs.
+Java Virtual Machine (JVM) tuning primarily focuses on adjusting Java heap and non-heap settings and configuring garbage collection. Finding settings that perform well for you depend on your system's load and your hardware. The settings discussed here can be used as a starting point for tuning your JVM. 
 
-Here are the JVM tuning topics:
+We used Oracle's 1.8 JVM for the reference architecture. You may choose other supported JVM versions and implementations. Please consult [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for additional compatible JVMs.
 
-* [Garbage Collector](#garbage-collector)
-* [Code Cache](#code-cache)
-* [Java Heap](#java-heap)
-* [JVM Advanced Options](#jvm-advanced-options)
+## Set Heap and Non-Heap Space
 
-Garbage collection is first.
+The JVM's memory comprises heap and non-heap spaces. The heap contains a space for young generation objects and a space for old generation objects. Static content and just-in-time (JIT) compiled Java code are stored in non-heap native space. Here's an example configuration.
 
-## Garbage Collector
+**Memory Settings Example**
 
-Choosing the appropriate garbage collector (GC) helps improve the responsiveness of your Liferay DXP deployment. Use the concurrent low pause collectors:
+``` 
+-Xms2560m -Xmx2560m 
+-XX:NewSize=1536m -XX:MaxNewSize=1536m 
+-XX:MetaspaceSize=768m -XX:MaxMetaspaceSize=768m 
+-XX:InitialCodeCacheSize=64m -XX:ReservedCodeCacheSize=96m 
+```
 
-```bash
--XX:+UseParNewGC -XX:ParallelGCThreads=16 -XX:+UseConcMarkSweepGC
+**Memory Settings Explained**
+
+| Memory Setting | Explanation |
+| :------ | :---------- |
+| `-Xms2560m` | Initial space for heap. |
+| `-Xmx2560m` | Maximim space for heap. |
+| `-XX:NewSize=1536m`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
+| `-XX:MaxNewSize=1536m` | Maximum new space. |
+| `-XX:MetaspaceSize=768m` | Initial space for static content. |
+| `-XX:MaxMetaspaceSize=768m` | Maximum space for static content. |
+| `-XX:InitialCodeCacheSize=64m` | Initial space for JIT-compiled code. Too small a code cache (`48m` is the default) reduces performance, as the JIT isn't able to optimize high frequency methods. |
+| `-XX:ReservedCodeCacheSize=96m` | Maximum space for JIT-compiled code. |
+
+```warning::
+   Avoid allocating more than 32g to your JVM heap. Your heap size should be commensurate with the speed and quantity of available CPU resources.
+```
+
+## Set Survivor Space
+
+In the old generation space (in the heap), large garbage collections can cause noticeable slowdowns. Avoid this by allowing more objects to stay longer in the *survivor space* before promoting them to the old generation space. The survivor space holds young generation objects that survive Eden garbage collection. Here are initial survivor space parameters to try.
+
+**Survivor Settings Example**
+
+```
+-XX:SurvivorRatio=16 -XX:TargetSurvivorRatio=50 -XX:MaxTenuringThreshold=15
+```
+
+**Survivor Settings Explained**
+
+| Survivor Setting | Explanation |
+| :------ | :---------- |
+| `-XX:SurvivorRatio=16` | Makes the survivor space 1/16 of the new space (the initial new space is `1536m`). |
+| `-XX:TargetSurvivorRatio=50` | Instructs the JVM to use 50% of the survivor space after each Eden garbage collection. |
+| `-XX:MaxTenuringThreshold=15` | Keeps survivors to stay in the survivor space for up to 15 garbage collections before promotion to the old generation space. |
+
+## Configure Garbage Collection
+
+Choosing appropriate garbage collector (GC) algorithms helps improve Liferay instance responsiveness. Start tuning using parallel throughput collectors in the new generation and concurrent mark sweep (CMS) low pause collectors in the old generation.
+
+**GC Settings Example**
+
+```
+-XX:+UseParNewGC -XX:ParallelGCThreads=16
+-XX:+UseConcMarkSweepGC
 -XX:+CMSParallelRemarkEnabled -XX:+CMSCompactWhenClearAllSoftRefs
 -XX:CMSInitiatingOccupancyFraction=85 -XX:+CMSScavengeBeforeRemark
 ```
 
-You may choose from other available GC algorithms, including parallel throughput collectors and G1 collectors. Start tuning using parallel collectors in the new generation and concurrent mark sweep (CMS) in the old generation.
+**GC Settings Explained**
 
-**Note:** the `ParallelGCThreads` value (e.g., `ParallelGCThreads=16`) varies  based on the type of CPUs available. Set the value according to CPU specification. On Linux machines, report the number of available CPUs by running `cat /proc/cpuinfo`.
-
-**Note:** There are additional "new" algorithms like G1, but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
-
-## Code Cache
-
-Java's just-in-time (JIT) compiler generates native code to improve performance. The default size is `48m`. This may not be sufficient for larger applications. Too small a code cache reduces performance, as the JIT isn't able to optimize high frequency methods. For Liferay DXP,  start with `64m` for the initial code cache size.
-
-```bash
--XX:InitialCodeCacheSize=64m -XX:ReservedCodeCacheSize=96m
-```
-
-Examine the efficacy of the parameter changes by adding the following logging parameters:
-
-```bash
--XX:+PrintCodeCache -XX:+PrintCodeCacheOnCompilation
-```
-
-## Java Heap
-
-When most people think about tuning the Java memory heap, they think of setting the maximum and minimum memory of the heap. Unfortunately, most deployments require far more sophisticated heap tuning to obtain optimal performance, including tuning the young generation size, tenuring durations, survivor spaces, and many other JVM internals.
-
-For most systems, it's best to start with at least the following memory settings:
-
-```bash
-server -XX:NewSize=700m -XX:MaxNewSize=700m -Xms2560m -Xmx2560m -XX:MetaspaceSize=512m
--XX:MaxMetaspaceSize=512m -XX:SurvivorRatio=6 -XX:TargetSurvivorRatio=9 -XX:MaxTenuringThreshold=15
-```
-
-On systems that require large heap sizes (e.g., above 4GB), it may be beneficial to use large page sizes. You can activate large page sizes like this:
-
-```bash
--XX:+UseLargePages -XX:LargePageSizeInBytes=256m
-```
-
-You may choose to specify different page sizes based on your application profile.
-
-**Note:** To use large pages in the JVM, you must configure your underlying operating system to activate them. In Linux, run `cat /proc/meminfo` and look at
-"huge page" items.
+| GC Setting | Explanation |
+| :--------- | :---------- |
+| `-XX:+UseParNewGC` | Enables parallel collectors for the new generation. |
+| `-XX:ParallelGCThreads=16` | Allocates 16 threads for parallel garbage collection. Set the number of threads based on the CPU threads available. Report this number on Linux by running `cat /proc/cpuinfo`. The threads use memory from the old generation space. |
+| `-XX:+UseConcMarkSweepGC` | Enables the concurrent mark sweep GC algorithm for the old generation. |
+| `-XX:+CMSParallelRemarkEnabled` | Enables remarking during program execution. |
+| `-XX:+CMSCompactWhenClearAllSoftRefs` | Move memory blocks closer together when using CMS with the clearl all soft refs setting . |
+| `-XX:CMSInitiatingOccupancyFraction=85` | Initiates CMS when this percent of old generation space is occupied. |
+| `-XX:+CMSScavengeBeforeRemark` | Execute Eden GCs before re-marking objects of CMS. |
 
 ```note::
-   **Caution:** Avoid allocating more than 32GB to your JVM heap. Your heap size should be commensurate with the speed and quantity of available CPU resources.
+   There are additional "new" algorithms like G1, but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
 ```
 
-## JVM Advanced Options
+## Consider Using Large Pages 
 
-The following advanced JVM options were also applied in the Liferay benchmark environment:
+On systems that require large heap sizes (e.g., above 4GB), it may be beneficial to use large page sizes.
 
-```bash
+### Configure Large Pages on Your Machine
+
+Here's how to configure large pages (aka "huge pages") on Linux:
+
+1. Determine the number of pages to use based on your hardware specification and application profile. On Linux, report your page size by executing this command:
+
+    ```bash
+	cat /proc/meminfo | grep Hugepagesize
+	```
+
+    Result:
+
+    ```properties
+	Hugepagesize = 2048 kB
+	```
+
+1. Set the number of pages to enable. On Linux, edit your `/etc/sysctl.conf` file and set `vm.nr_hugepages` to the number of pages. For example,
+
+	```properties
+	vm.nr_hugepages = 10
+	```
+1. Enable the pages. On Linux, execute this:
+
+    ```bash
+	sysctl -p
+	```
+
+1. Restart your machine.
+
+### Configure Large Pages in Your JVM 
+
+Here's how to configure your JVM to use large pages:
+
+**Large Page Settings Example**
+
+```
 -XX:+UseLargePages -XX:LargePageSizeInBytes=256m
--XX:+UseCompressedOops -XX:+DisableExplicitGC -XX:-UseBiasedLocking
--XX:+BindGCTaskThreadsToCPUs -XX:UseFastAccessorMethods
 ```
 
-Please consult your JVM documentation for additional details on advanced JVM options.
+**Large Page Settings Explained**
 
-Combining the above recommendations together, makes this configuration:
+| Large Page Setting | Explanation |
+| :------ | :---------- |
+| `-XX:+UseLargePages` | Enables large pages. |
+| `-XX:LargePageSizeInBytes=256m` | Make sure the total large page size (from `cat /proc/meminfo`, calculate `HugePages_Total * Hugepagesize`) can contain all of your JVM's memory usage. |
 
-```bash
-server -XX:NewSize=1024m -XX:MaxNewSize=1024m -Xms4096m
--Xmx4096m -XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=512m
--XX:SurvivorRatio=12 -XX:TargetSurvivorRatio=90
--XX:MaxTenuringThreshold=15 -XX:+UseLargePages
--XX:LargePageSizeInBytes=256m -XX:+UseParNewGC
--XX:ParallelGCThreads=16 -XX:+UseConcMarkSweepGC
--XX:+CMSParallelRemarkEnabled -XX:+CMSCompactWhenClearAllSoftRefs
--XX:CMSInitiatingOccupancyFraction=85 -XX:+CMSScavengeBeforeRemark
--XX:+UseLargePages -XX:LargePageSizeInBytes=256m
--XX:+UseCompressedOops -XX:+DisableExplicitGC -XX:-UseBiasedLocking
--XX:+BindGCTaskThreadsToCPUs -XX:+UseFastAccessorMethods
--XX:InitialCodeCacheSize=32m -XX:ReservedCodeCacheSize=96m
-```
+Adjust page sizes based on your hardware specification and application profile.
 
-```note::
-   **Caution:** The above JVM settings should formulate a starting point for your performance tuning. Every system's final parameters vary due to many factors, including number of current users and transaction speed.
-```
+## Conclusion 
 
-Monitor the garbage collector statistics to ensure your environment has sufficient allocations for metaspace and also for the survivor spaces. Using the configuration above in the wrong environment could result in dangerous runtime scenarios like out of memory failures. Improperly tuned survivor spaces also lead to wasted heap space.
+Now that you're familiar with the common JVM options and example configurations, start experimenting with them in your testing environment. Monitor the garbage collection statistics to ensure your environment has sufficient memory allocations. Tune your settings to minimize garbage collection effects on performance and maximize processing speed. With proper testing and tuning, you'll optimize the JVM for your Liferay instance.
