@@ -73,9 +73,9 @@ When troubleshooting issues, use the shell access tool to look inside your appli
 
 ![Figure 5: Use the shell access tool in the DXP Cloud console to see what's going on inside your application.](./troubleshooting-tools-and-resources/images/05.png)
 
-The shell is accessible in most services, including `liferay` and the `ci` services. It can be used to access the server's file system directly and run commands for troubleshooting purposes.
+The shell is accessible in most services, including the `liferay`, `search`, and `webserver` services. It can be used to access the server's file system directly and run commands for troubleshooting purposes.
 
-For example, you can run the following command from the `ci` service's shell to test connection to an address or external server:
+For example, you can run the following command from the `liferay` service's shell to test connection to an address or external server:
 
 ```bash
 curl -v [address]
