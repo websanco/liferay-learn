@@ -44,9 +44,9 @@ A Service Access Policy needs to be created to allow Guest users to view the app
 
 To create a new policy,
 
-1. Navitage to Control Panel &rarr; Service Access Policy. Click on the Add icon (![Add icon](../../../images/icon-add.png)).
+1. Navigate to *Control Panel* &rarr; *Service Access Policy*. Click on the *Add* icon (![Add icon](../../../images/icon-add.png)).
 
-1. Give the policy a *Name* and *Title*. Add the following two signatures,
+1. Give the policy a *Name* and *Title*. Click the *Switch to Advanced Mode* button at the bottom. Add the following two signatures under *Allowed Service Signatures*,
 
         com.liferay.message.boards.service.MBCategoryService#getCategoriesCount
         com.liferay.message.boards.service.MBCategoryService#getCategory

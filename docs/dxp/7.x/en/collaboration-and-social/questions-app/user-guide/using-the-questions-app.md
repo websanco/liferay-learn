@@ -32,7 +32,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 1. Users can view existing questions and give their replies. To give an answer, click on an existing question.
 
-1. Type your answer into the Your Answer box and click the *Post Answer* button.
+1. Type your answer into the *Your Answer* box and click the *Post Answer* button.
 
     ![Type your answer and click the Post Answer button](using-the-questions-app/images/05.png)
 
@@ -42,7 +42,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 Once a question has been answered, those answers can be managed:
 
-**Rating:** You can give the answer a [rating](./social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows. 
+**Rating:** You can give the answer a [rating](../../social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows. 
 
 **Sort:** You can use the tabs to sort answers by Active, Oldest, or Votes.
 
