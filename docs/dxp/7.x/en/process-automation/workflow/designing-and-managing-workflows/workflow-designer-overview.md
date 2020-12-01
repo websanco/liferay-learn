@@ -2,7 +2,7 @@
 
 > Subscription Required
 
-The Workflow Designer provides a graphical interface for creating workflows. The convenient drag and drop interface makes workflow design easier than writing XML definitions by hand; instead users can draw their workflows on a canvas.
+The Workflow Designer provides a graphical interface for creating workflows. The convenient drag and drop interface makes workflow design easier than writing XML definitions by hand. Instead, users can draw their workflows on a canvas.
 
 ![You can drag and drop nodes on the Canvas.](./workflow-designer-overview/images/04.png)
 
@@ -20,7 +20,7 @@ The Workflow Designer supports all workflow node types:
 * State
 * [Task](./workflow-designer/creating-workflow-tasks.md)
 
-Finally, you have the full power of Groovy (a supported Java-based scripting language) to perform any necessary action on assets being moved through your workflows.
+Finally, you have the full power of Groovy (a supported Java-based scripting language) to perform necessary actions on assets being moved through your workflows.
 
 ![Users can add a Groovy script to their workflow nodes.](./workflow-designer-overview/images/05.png)
 
@@ -39,7 +39,7 @@ To build a new workflow or to upload one, navigate to the Global Menu (![Global 
 
 Click the (![Add icon](../../../images/icon-add.png)) to begin.
 
-![Use the intuitive drag and drop to build a workflow.](./workflow-designer-overview/images/02.png)
+![Use drag and drop to build a workflow.](./workflow-designer-overview/images/02.png)
 
 Each Workflow Node represents a specific point in an approval process, whether it starts the review process, approves or rejects the asset, or reassigns the task.
 
