@@ -9,7 +9,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = "fragment.collection.key=L3M9",
+	property = "fragment.collection.key=l3m9",
 	service = FragmentCollectionContributor.class
 )
 public class L3M9FragmentCollectionContributor
@@ -17,7 +17,7 @@ public class L3M9FragmentCollectionContributor
 
 	@Override
 	public String getFragmentCollectionKey() {
-		return "L3M9";
+		return "l3m9";
 	}
 
 	@Override
