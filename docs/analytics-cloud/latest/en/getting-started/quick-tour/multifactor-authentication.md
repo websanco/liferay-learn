@@ -12,16 +12,19 @@ To set up MFA,
 
     ![Login to Liferay with your user account.](./multifactor-authentication/images/01.png)
 
-1. Choose from one of the five MFA options. For example, select *SMS Authentication* to receive a code by text message. Note, you must choose one of the authentication methods. 
+1. Choose from one of the five MFA options. For example, select *SMS Authentication* to receive a code by text message. 
 
     ![asdf](./multifactor-authentication/images/02.png)
 
+    ```Note::
+    If you choose to change to a different authentication type after setup, please contact support.
+    ```
 
 1. Click on the *Send Code* button and wait to receive your code. Note, you may need to check your spam folder if using the *Email Authentication* option.
 
     ![Select a authentication option and click send code.](./multifactor-authentication/images/03.png)
 
-1. Input the verification code and click on the *Verify* button. Click on the *Re-send code* button if you fail to receive the verification code.
+1. Input the verification code and click the *Verify* button. Click the *Re-send code* button if you fail to receive the verification code.
 
     ![Input and verify received code.](./multifactor-authentication/images/04.png)
 
@@ -29,7 +32,7 @@ To set up MFA,
 
     ![Check the box if you want the MFA to not expire for 30 days.](./multifactor-authentication/images/06.png)
 
-1. Click Finish to complete the authentication process.
+1. Click *Finish* to complete the authentication process.
 
     ![Click the Finish button to finish the process.](./multifactor-authentication/images/05.png)
 
