@@ -23,8 +23,7 @@ Clicking on the the Start Free Trial button from the home screen will take your 
 * North America - Oregon, USA
 * South America - São Paulo, Brazil
 * Europe - London, United Kingdom
-
-We are also currently planning a new data center in Frankfurt, Germany.
+* Europe - Frankfurt, Germany
 
 **Friendly URL** allows you to setup a friendly url for your workspace that you can share to other collaborators with ease.
 
