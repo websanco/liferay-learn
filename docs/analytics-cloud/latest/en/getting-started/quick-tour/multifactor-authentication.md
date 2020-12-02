@@ -12,9 +12,10 @@ To set up MFA,
 
     ![Login to Liferay with your user account.](./multifactor-authentication/images/01.png)
 
-1. Choose from one of the five MFA options. For example, select *SMS Authentication* to receive a code by text message.
+1. Choose from one of the five MFA options. For example, select *SMS Authentication* to receive a code by text message. Note, you must choose one of the authentication methods. 
 
     ![asdf](./multifactor-authentication/images/02.png)
+
 
 1. Click on the *Send Code* button and wait to receive your code. Note, you may need to check your spam folder if using the *Email Authentication* option.
 
@@ -32,12 +33,10 @@ To set up MFA,
 
     ![Click the Finish button to finish the process.](./multifactor-authentication/images/05.png)
 
-1. Upon authentication, you will be directed to the Analytics Cloud start page.
-
-    ![You are directed to the analytics cloud start page.](./multifactor-authentication/images/07.png)
+1. Upon authentication, you will be directed to the Analytics Cloud start page. From here, you will be able to [access your workspaces](./accessing-your-workspace.md).
 
 ## Help with MFA
 
 Secure login is a critical feature to protect our users and customer data. If you encounter an issue with MFA, we're here to help. 
 
-Contact us through [help.liferay.com](help.liferay.com) or email use at [analytics-cloud@liferay.com](mailto:analytics-cloud%40liferay.com)
+Contact support through [help.liferay.com](https://help.liferay.com/) or email us at [analytics-cloud@liferay.com](mailto:analytics-cloud%40liferay.com)

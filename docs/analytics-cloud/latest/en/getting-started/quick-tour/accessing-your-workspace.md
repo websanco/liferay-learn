@@ -1,6 +1,6 @@
 # Accessing Your Workspace
 
-Upon visiting analytics.liferay.com, you should be able to see a list of workspaces that you belong to, or can request access to. If you do not see any workspace, please make sure the workspace administrator already added you to a workspace, or you can [sign up for a new workspace](./signing-up-for-a-new-workspace.md).
+After setting up your [multifactor authentication](./multifactor-authentication.md), you will see a list of workspaces that you belong to, or can request access to. If you do not see any workspace, please make sure the workspace administrator already added you to a workspace, or you can [sign up for a new workspace](./signing-up-for-a-new-workspace.md).
 
 ![Select the workspace to access.](accessing-your-workspace/images/01.png)
 
