@@ -1,6 +1,6 @@
 # Multifactor Authentication
 
-Multifactor authentication (MFA) is now a integral feature for all Analytics Cloud users. This updated system provides multiple factors or layers of security for login. While each authentication method has strengths and weaknesses, a system that uses two or more factors are considered stronger and more robust.
+Multifactor authentication (MFA) is required for all Analytics Cloud users. This updated system provides multiple factors or layers of security for login. While each authentication method has strengths and weaknesses, a system that uses two or more factors are considered stronger and more robust.
 
 The use of MFA can protect users from different cyberattacks such as phishing and man-in-the-middle (MITM) attacks.
 
