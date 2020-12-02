@@ -8,7 +8,7 @@ The use of MFA can protect users from different cyberattacks such as phishing an
 
 To set up MFA,
 
-1. Login to your Liferay account with your email address and password.
+1. Login to [analytics.liferay.com](https://analytics.liferay.com) with your [liferay.com](https://www.liferay.com) account email address.
 
     ![Login to Liferay with your user account.](./multifactor-authentication/images/01.png)
 
@@ -16,9 +16,8 @@ To set up MFA,
 
     ![asdf](./multifactor-authentication/images/02.png)
 
-    ```Note::
-    If you choose to change to a different authentication type after setup, please contact support.
-    ```
+   Note, if you choose to change to a different authentication type after setup, please [contact support](#help-with-mfa).
+   
 
 1. Click on the *Send Code* button and wait to receive your code. Note, you may need to check your spam folder if using the *Email Authentication* option.
 
