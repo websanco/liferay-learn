@@ -12,7 +12,7 @@ import org.osgi.service.component.annotations.Reference;
 	property = "fragment.collection.key=BASIC_COMPONENT",
 	service = FragmentCollectionContributor.class
 )
-public class L3M9FragmentsCollectionContributor
+public class L3M9FragmentCollectionContributor
 	extends BaseFragmentCollectionContributor {
 
 	@Override
