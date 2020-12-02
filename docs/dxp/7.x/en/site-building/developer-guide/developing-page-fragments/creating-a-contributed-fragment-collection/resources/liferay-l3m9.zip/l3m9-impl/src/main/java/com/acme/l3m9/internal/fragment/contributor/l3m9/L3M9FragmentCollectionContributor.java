@@ -1,4 +1,4 @@
-package com.acme.l3m9.internal.fragment.collection.contributor.l3m9;
+package com.acme.l3m9.internal.fragment.contributor.l3m9;
 
 import com.liferay.fragment.contributor.BaseFragmentCollectionContributor;
 import com.liferay.fragment.contributor.FragmentCollectionContributor;
