@@ -109,5 +109,5 @@ Once your build has successfully deployed and your `dev` environment's Liferay s
 
 * [Overview of the DXP Cloud Development Workflow](./overview-of-the-dxp-cloud-deployment-workflow.md)
 * [Deploying Changes via the CLI Tool](./deploying-changes-via-the-cli-tool.md)
-* [Setting Up Automatic Deployment](./setting-up-automatic-deployment.md)
+* [Setting Up Automatic Deployment](./automatically-deploying-ci-service-builds.md)
 * [Configuring the Liferay DXP Service](../using-the-liferay-dxp-service/configuring-the-liferay-dxp-service.md)

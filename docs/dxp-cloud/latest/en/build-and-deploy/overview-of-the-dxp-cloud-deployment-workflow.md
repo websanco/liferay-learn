@@ -51,7 +51,7 @@ The DXP Cloud console is the primary way for deploying changes to your project. 
 
 ### Option 3: Automatically Deploying Builds to `dev` Environment
 
-If desired, you can set up your CI service to automatically deploy builds to your project's `dev` environment. Add an environment variable to the CI service that initiates automatic deployments for builds made from your specified branch. See [Setting Up Automatic Deployment](./setting-up-automatic-deployment) for more information.
+If desired, you can set up your CI service to automatically deploy builds to your project's `dev` environment. Add an environment variable to the CI service that initiates automatic deployments for builds made from your specified branch. See [Setting Up Automatic Deployment](./automatically-deploying-ci-service-builds) for more information.
 
 ## Additional Information
 
