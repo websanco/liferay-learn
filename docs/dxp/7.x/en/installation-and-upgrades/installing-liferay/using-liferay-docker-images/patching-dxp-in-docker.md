@@ -18,7 +18,7 @@ Here are the DXP container patching topics:
 
 ## Using Fix Pack, Security Fix Pack, and Service Pack Images
 
-Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles](../..//maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching/using-slim-bundles.md). Slim Bundles start up faster and have a smaller footprint than regular [Liferay Tomcat bundles](../installing-a-liferay-tomcat-bundle.md). Only one patch, however, can be applied to a Slim Bundle. These images, therefore, have these patching limitations:
+Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles](../../maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/using-slim-bundles.md). Slim Bundles start up faster and have a smaller footprint than regular [Liferay Tomcat bundles](../installing-a-liferay-tomcat-bundle.md). Only one patch, however, can be applied to a Slim Bundle. These images, therefore, have these patching limitations:
 
 * Fix Pack and Service Pack images can receive only one additional patch, such as a Hotfix or a Security Fix Pack.
 
@@ -26,7 +26,7 @@ Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles]
 
 Using a new Fix Pack, Security Fix Pack, or Service Pack image requires migrating to a container based on that image. Here is how to migrate from a DXP container to a new patch image.
 
-1. Stop your current DXP container.
+1. [Stop your current DXP container](./docker-container-basics.md#stopping-a-container).
 
 1. [Back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) files you've used to customize your DXP container.
 
@@ -82,7 +82,7 @@ There are two methods for installing patches to containers:
 
 Here are the steps for installing a patch to your existing container:
 
-1. [Stop your current container](./docker-container-basics.md#stopping-a-container.md).
+1. [Stop your current container](./docker-container-basics.md#stopping-a-container).
 
 1. [Download](https://customer.liferay.com/downloads) the patch and copy it to a folder in a volume or [bind mount](./providing-files-to-the-container.md) that maps to the container's `/mnt/liferay/patching` folder.
 
@@ -104,7 +104,7 @@ Here are steps for installing a patch to a new container:
    cp ~/[patch file] [host folder]/patching
    ```
 
-1. Stop your current DXP container, if it's running.
+1. [Stop your current DXP container](./docker-container-basics.md#stopping-a-container), if it's running.
 
 1. Create a container with a bind mount that maps the patch file's folder to the container's `/mnt/liferay/patching` folder. Since this example's patch file is in a folder called `patching`, you can [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) its parent folder (`[host folder]`) to the container's `/mnt/liferay` folder. This makes the patch accessible for applying to DXP.
 
@@ -132,7 +132,7 @@ If you want to revert a patch from a container or install a different patch to a
     docker stop [container]
     ```
 
-1. Back up the container's artifacts and files.
+1. [Back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) the container's artifacts and files.
 
 1. Remove the container.
 
@@ -140,7 +140,7 @@ If you want to revert a patch from a container or install a different patch to a
     docker rm [container]
     ```
 
-1. Use the `docker run` arguments you used previously to create a new container from the same image or an image that has a compatible Fix Pack Level. Apply any patch you want via a volume or [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay.md).
+1. Use the `docker run` arguments you used previously to create a new container from the same image or an image that has a compatible Fix Pack Level. Apply any patch you want via a volume or [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay).
 
 ## Updating the Patching Tool
 
@@ -166,7 +166,7 @@ If a patch requires upgrading the database, you must upgrade it using the Databa
 
 1. Install the [Liferay Tomcat Bundle installation](../installing-a-liferay-tomcat-bundle.md) of the Liferay version you're using.
 
-1. Apply the patch to the installation. Please see [Patching Liferay](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) for more information.
+1. Apply the patch to the installation. Please see [Patching Liferay](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md) for more information.
 
 1. Upgrade the database using the Database Upgrade Tool. Please see [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) for more information.
 
