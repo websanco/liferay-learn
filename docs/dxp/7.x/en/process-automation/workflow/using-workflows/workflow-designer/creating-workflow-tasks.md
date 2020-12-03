@@ -134,7 +134,7 @@ The only thing left to do is rename the end node and configure it to set the wor
 1. Double-click on the _End Node_ and rename it to _Approved_. 
 1. Click the _Publish_ button at the bottom to publish your workflow. 
 
-Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md). 
+Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md). These are covered next. 
 
 ## Additional Information
 
