@@ -1,9 +1,9 @@
-package com.acme.p9g2;
+package com.acme.k8s2;
 
 import aQute.bnd.annotation.ProviderType;
 
 @ProviderType
-public interface Greeting {
+public interface Greeter {
 
 	public void greet(String name);
 

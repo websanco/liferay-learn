@@ -1,6 +1,6 @@
 package com.acme.j1h1.osgi.commands;
 
-import com.acme.j1h1.Greeting;
+import com.acme.j1h1.Greeter;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -9,13 +9,13 @@ import org.osgi.service.component.annotations.Reference;
 	property = {"osgi.command.function=greet", "osgi.command.scope=j1h1"},
 	service = Object.class
 )
-public class GreetingOSGiCommands {
+public class GreeterOSGiCommands {
 
 	public void greet(String name) {
-		_greeting.greet(name);
+		_greeter.greet(name);
 	}
 
 	@Reference
-	private Greeting _greeting;
+	private Greeter _greeter;
 
 }
