@@ -4,7 +4,7 @@
 
 Consider a Human Resources application that collects employee requests to change Roles within the software engineering department: the Role Change Request App. This app starts with the employee submitting a request form. Processing then proceeds to the Current Manager, then to the Receiving Manager, and finally to Human Resources. At each step a different form is presented, and the object accumulates data. By the end of the process the whole data object is complete.
 
-![The Role Change Request object flows through several steps in this Workflow Powered App.](./creating-a-workflow-powered-application/drawings/role-request-app.png)
+![The Role Change Request object flows through several steps in this Workflow Powered App.](./creating-the-role-change-request-object/images/01.png)
 
 Here you'll create the backing object, form views, and table views. See [Creating the Role Change Request App](./creating-the-role-change-request-app.md) to create the Workflow Powered App itself.
 
