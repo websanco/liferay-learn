@@ -2,7 +2,7 @@
 
 > Subscribers
 
-Once you have [created a few task nodes](./creating-workflow-tasks.md), you must assign a Workflow _Task_ to someone or "entity" to complete the review; in DXP, this entity is loosely defined. You can assign the Tasks to specific Roles, multiple Roles of a [Role Type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, or regular Role types), to the Asset Creator, to Resource Actions, or to specific Users. In the example below, this task has been assigned to a Portal Content Reviewer Role.
+Once you have [created a few task nodes](./creating-workflow-tasks.md), you must assign a Workflow _Task_ to a User or "entity" to complete the review; in DXP, this entity is loosely defined. You can assign the Tasks to specific Roles, multiple Roles of a [Role Type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, or regular Role types), to the Asset Creator, to Resource Actions, or to specific Users. In the example below, this task has been assigned to a Portal Content Reviewer Role.
 
 ![You can add an Assignment to a Task node.](./task-node-reference/images/01.png)
 
@@ -10,7 +10,7 @@ Once you have [created a few task nodes](./creating-workflow-tasks.md), you must
 
 ## Resource Action Assignments
 
-Users can assign a workflow task to a Resource action. *Resource actions* are operations performed by Users on an application or entity. For example, a User might have permission to update Message Boards Messages. This is called an UPDATE resource action, because the User can update the resource. If your workflow definition specifies the UPDATE action in an assignment, anyone with permission to update the asset type being processed in the workflow is assigned to the task. You can configure multiple assignments for a task.
+You can assign a workflow task to a _Resource Action_. Resource actions are operations performed by Users on an application or entity. For example, a User might have permission to update Message Boards Messages. This is called an UPDATE resource action, because the User can update the resource. If your workflow definition specifies the UPDATE action in an assignment, anyone with permission to update the asset type being processed in the workflow is assigned to the task. You can configure multiple assignments for a task.
 
 To learn more about Resource Actions, refer to the developer tutorial on the [permission system](../../../developing-applications/permissions.md) for a more detailed explanation.
 
@@ -80,7 +80,7 @@ You can also use a script to manage the assignment. Here's the script for the Re
 
 This script assigns the task to the *Administrator* Role, then checks if the asset's *group* is an Organization. If so, it assigns it to the *Organization Content Reviewer* Role. If not, it assigns the task to the *Site Content Reviewer* Role.
 
-Note the `roles = new ArrayList<Role>();` line above. In a scripted assignment, the `roles` variable is where you specify any Roles the task is assigned to. For example, when `roles.add(adminRole);` is called, the Administrator role is added to the assignment.
+Note the `roles = new ArrayList<Role>();` line above. In a scripted assignment, the `roles` variable is where you specify any Roles the task is assigned to. For example, when `roles.add(adminRole);` is called, the Administrator Role is added to the assignment.
 
 ## Additional Information
 
