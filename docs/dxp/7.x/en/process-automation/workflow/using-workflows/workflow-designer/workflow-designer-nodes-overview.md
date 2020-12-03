@@ -2,9 +2,9 @@
 
 > Subscribers
 
-A Workflow Node represents a specific point in an approval process, whether it is starting the review process, approving or rejecting the asset, or reassigning the task.
+A Workflow Node represents a specific point in an approval process, whether it begins the review process, approves or rejects the asset, or reassigns the task.
 
-This article details the different types of nodes and the possible actions associated with each node.
+Below are the different types of nodes and the possible actions associated with each node.
 
 ## Types of Nodes
 

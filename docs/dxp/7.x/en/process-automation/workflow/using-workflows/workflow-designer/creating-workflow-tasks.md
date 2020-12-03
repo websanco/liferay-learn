@@ -2,24 +2,37 @@
 
 > Subscribers
 
-You'll use the default [Single Approver Definition](../workflow-designer-overview/workflow-processes/single-approver-definition.xml) to illustrate creating workflow tasks. It has two task nodes: _Review_ and _Update_. The _Review_ node describes the review step, where a content creator has submitted an asset for review. In response to the review, the asset can be accepted or rejected. If it's rejected, the process moves to the _Update_ task. This task gives the submitter the opportunity to modify the asset and resubmit it for review.
+The default [Single Approver Definition](../workflow-designer-overview/workflow-processes/single-approver-definition.xml) is a great introduction to creating workflow tasks. It has only two task nodes: _Review_ and _Update_. The workflow enters the _Review_ node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the _Update_ task. The submitter can then modify the asset and resubmit it for review.
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
 Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Task Node Reference](./task-node-reference.md)).
 
-Furthermore, task nodes also contain Notifications and Actions (defined in scripts). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
+Task nodes also contain Notifications and Actions (defined in scripts). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
-Once the review is finished, _Task_ nodes advance to the next node. In this case, the process moves to the _Approved_ End node.
+When the review is finished, Task nodes advance to the next node. In this case, the process moves to the _Approved_ End node.
 
-You're ready to begin creating the Single Approver workflow:
+## Creating the Single Approver Workflow
+
+You'll create the workflow in 4 steps: 
+
+* Create the workflow and give it a name
+* Create the Review node
+* Create the Update node
+* Configure the End node
+
+### Creating the Workflow
 
 1. Go to the _Global Menu_ &rarr; _Applications_ &rarr; _Process Builder_.
 1. Click the _Workflows_ tab.
-1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
+1. Click _Add_ (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. Give your workflow a descriptive name, like _My Single Approver_.
+
+### Creating the Review Node
+
 1. In the Workflow Designer Canvas, delete the old connector between the _Start_ node and _End_ node: select it with your mouse and hit the Del key on your keyboard.
-1. Drag and drop the _Task_ node onto the canvas. Connect _Start_ node to the _Task_ node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a connector from the Start node to the Task node.
+1. Drag and drop the _Task_ node onto the canvas. 
+1. Connect the Start node to the Task node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a connector from the Start node to the Task node.
 1. Select the connector and rename it _review_.
 1. Click the _Task_ node to begin updating its properties.
 1. Double click the _Name_ field to give the node a name: _review_.
@@ -29,7 +42,7 @@ You're ready to begin creating the Single Approver workflow:
     * **Name**: Review Notification
     * **Template Language**: Freemarker
     * **Template**: Enter this Freemarker notification: `${userName} sent you a ${entryType} for review in the workflow.`
-    * **Notification Type**: Use the Ctrl key to select _Email_ and _User Notification_; this is a multiple select field so you can choose more than one.
+    * **Notification Type**: Use the Ctrl key to select _Email_ and _User Notification_; this is a multiple select field.
     * **Execution Type**: On Assignment
     * **Recipient Type**: Task Assignees
 
@@ -73,11 +86,55 @@ You're ready to begin creating the Single Approver workflow:
 
 This _Task_ node is now configured; it sends a notification that a submission is ready for review to those Users assigned to a specific Role.
 
-<!-- Justin, as you can see I've expanded the instructions above so that they are creating the Single Approver workflow, which is what I'd asked you to do. Please continue from what I've started above until the Single Approver workflow is re-created in the designer. You can use the XML file as a guide to show what to do in the designer. After this should be one or more reference documents (I'll leave the organization up to you) explaining how to use the other nodes in the designer. -Rich -->
-
 You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Workflow Task Node Reference](./task-node-reference.md).
 
-Create additional nodes such as an _Update_ node. You can also connect the _Task_ node to other nodes such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md) nodes.
+### Create the Update Node
+
+1. Drag and drop another _Task_ node onto the canvas. 
+1. Connect the review node to the new Task node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a connector from the review node to the new Task node. 
+1. Select the connector and rename it _reject_. 
+1. Click the Task node to begin updating its properties. 
+1. Double-click the _Name_ field to give the node a name: _update_. 
+1. Double-click _Notifications_. 
+1. Enter this information: 
+
+   * **Name:** Creator Modification Notification
+   * **Template Language:** Freemarker
+   * **Template:** Enter this Freemarker notification: `Your submission was rejected by ${userName}; please modify and resubmit.` 
+   * **Notification Type:** Use the Ctrl key to select _Email_ and _User Notification_; this is a multiple select field. 
+   * **Execution Type:** On Assignment
+   * **Recipient Type:** Task Assignees
+
+1. Double-click _Assignments_. Select _User_ and click _Save_. 
+1. Double-click _Actions_. Enter this information: 
+
+   * **Name:** reject
+   * **Script:**  
+     ```groovy
+         import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+         import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+         WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
+         WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
+     ```
+   * Leave the rest of the defaults: (Language _groovy_, Execution type _On Assignment_)
+
+1. Click _Save_. 
+1. Make sure nothing is selected and move your mouse pointer to the edge of the _update_ node. Drag a connector from the _update_ node back to the _review_ node. 
+1. Name the new connector _resubmit_. 
+
+![Your workflow is taking shape. All that's left is to connect the end node.](./../images/04.png)
+
+### Configuring the End Node
+
+The only thing left to do is rename the end node and configure it to set the workflow status to _approved_. 
+
+1. Drag a connector from the _review_ node to the _End Node_. 
+1. Rename the connector _approve_. 
+1. Double-click on the _End Node_ and rename it to _Approved_. 
+1. Click the _Publish_ button at the bottom to publish your workflow. 
+
+Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md). 
 
 ## Additional Information
 
