@@ -12,7 +12,7 @@ Here are some commonly used commands:
 | `ds:unsatisfied` | Lists all unsatisfied Declarative Services (DS) components |
 | `ds:unsatisfied [BUNDLE_ID]` | Lists the bundle's unsatisfied DS components |
 | `headers [BUNDLE_ID]` | Lists metadata about the bundle from the bundle's `MANIFEST.MF` file |
-| `equinox:refresh [BUNDEL_ID]` | Detects available optional dependencies and reactivates the bundle. |
+| `equinox:refresh [BUNDLE_ID]` | Detects available optional dependencies and reactivates the bundle. |
 | `help` | Lists all the available Gogo shell commands. Notice that each command has two parts to its name, separated by a colon. For example, the full name of the `help` command is `felix:help`. The first part is the command scope while the second part is the command function. The scope allows commands with the same name to be disambiguated. E.g., scope allows the `felix:refresh` command to be distinguished from the `equinox:refresh` command. |
 | `help [COMMAND_NAME]` | Lists information about a specific command including a description of the command, the scope of the command, and information about any flags or parameters that can be supplied when invoking the command. |
 | `inspect capability service [BUNDLE_ID]` | Lists services exposed by a bundle |
