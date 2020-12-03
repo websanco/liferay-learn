@@ -14,11 +14,18 @@ function copy_template {
 
 	for zip_dir_name in `find . -name ${zip_dir_name_pattern} -type d`
 	do
-		if [ "$(find ${zip_dir_name} -name build.gradle | wc -l)" -gt 0 ]
+		local gradle_build_file="$(echo $(find ${zip_dir_name} -name build.gradle -print) | head -n1)"
+
+		if [ ! -z "${gradle_build_file}" ]
 		then
 			cp -fr _template/java/* ${zip_dir_name}
 
-			echo -ne "liferay.workspace.product=${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
+			if [ ! -z "$(grep release.dxp.api $(echo ${gradle_build_file}))" ]
+			then
+				echo -ne "liferay.workspace.product=${LIFERAY_LEARN_DXP_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
+			else
+				echo -ne "liferay.workspace.product=${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
+			fi
 
 			pushd ${zip_dir_name}
 
