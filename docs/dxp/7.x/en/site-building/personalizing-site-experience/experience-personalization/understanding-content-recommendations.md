@@ -8,7 +8,7 @@ When users visit your website, they interact with your content and show differen
 
 ## How Content Recommendations Work
 
-Configuring content recommendations is a two-step process. First, you track users' behavior and define topics of interest. This step requires [Analytics Cloud connected to your DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html). Based on previous user's behavior in the site, Analytics Cloud defines and ranks topics of interest, and associates these interests to the user identifier in the site. Second, you show users recommended content, based on their interests. This step requires creating a Dynamic Collection and showing this Collection on your website. Analytics Cloud sends to DXP a series of keywords based on users' interests, and these keywords work as a filter in the Collection. You need a Collection to define the type of content you want to show to your users.
+Configuring content recommendations is a two-step process. First, you track users' behavior and define topics of interest. This step requires [Analytics Cloud connected to your DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html). Based on previous user's behavior in the site, Analytics Cloud defines and ranks topics of interest, and associates these interests to the user identifier in the site. Second, you show users recommended content, based on their interests. This step requires creating a [Dynamic Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and showing this Collection on your website. Analytics Cloud sends to DXP a series of keywords based on users' interests, and these keywords work as a filter in the Collection. You need a Collection to define the type of content you want to show to your users.
 
 ```note::
     For more information on how to work with Interests in Analytics Cloud, see the `Analytics Cloud documentation <https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html>`_.
@@ -16,10 +16,10 @@ Configuring content recommendations is a two-step process. First, you track user
 
 ![Interests view in Liferay Analytics Cloud](./understanding-content-recommendations/images/01.png)
 
-Analytics Cloud creates interest based on different content elements like tile, description, [Categories](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), or [Tags](../../../content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags.md). Adding Categories and Tags to your content is not strictly required to generate content recommendations. However, when you categorize and tag your content, Analytics Cloud has more information to define user's interests and can provide better recommendations. Besides, [using Categories and Tags](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md) provides you more control about the content you want to recommend.
+Analytics Cloud creates interests based on different content elements like tile, description, [Categories](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), or [Tags](../../../content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags.md). Adding Categories and Tags to your content is not strictly required to generate content recommendations. However, when you categorize and tag your content, Analytics Cloud has more information to define user's interests and can provide better recommendations. Besides, [using Categories and Tags](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md) provides you more control about the content you want to recommend.
 
 ```note::
-    Analytics Cloud only considers titles and descriptions in English for creating users' interests.
+    Analytics Cloud currently only considers titles and descriptions in English for creating users' interests.
 ```
 
 ## Configuring Content Recommendations
@@ -27,8 +27,8 @@ Analytics Cloud creates interest based on different content elements like tile, 
 Content recommendations work automatically as long as the following elements are in place:
 
 1. [Analytics Cloud is connected to your Liferay DXP instance](./configuring-content-recommendations.md#connecting-analytics-cloud-to-your-liferay-dxp-instance) and the Site content is synchronized.
-2. You [create a Dynamic Collection](./configuring-content-recommendations#creating-a-dynamic-collection) in Liferay DXP including different content, and enable the Content Recommendation option.
-3. You [display the Dynamic Collection](./configuring-content-recommendations#displaying-the-dynamic-collection) using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
+2. You [create a Dynamic Collection](./configuring-content-recommendations.md#creating-a-dynamic-collection) in Liferay DXP including different content, and enable the Content Recommendation option.
+3. You [display the Dynamic Collection](./configuring-content-recommendations.md#displaying-the-dynamic-collection) using an Asset Publisher, a Collection Display Fragment, or a Collection Page.
 
 ```note::
     Collections are named Content Sets in Liferay DXP 7.2.
