@@ -1,0 +1,47 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Forms',
+					sectionURL: 'process-automation/forms.html',
+					subsections: [
+						{
+							name: 'Introduction to Forms',
+							url: 'process-automation/forms/user-guide/introduction-to-forms.html'
+						},
+						{
+							name: 'Creating Forms',
+							url: 'process-automation/forms/user-guide/creating-forms.html'
+						},
+						{
+							name: 'Sharing Forms',
+							url: 'process-automation/forms/user-guide/sharing-forms.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Workflow',
+					sectionURL: 'process-automation/workflow.html',
+					subsections: [
+						{
+							name: 'Introduction to Workflow',
+							url: 'process-automation/workflow/user-guide/introduction-to-workflow.html'
+						},
+						{
+							name: 'Activating Workflow',
+							url: 'process-automation/workflow/user-guide/activating-workflow.html'
+						},
+						{
+							name: 'Managing Workflows',
+							url: 'process-automation/workflow/user-guide/managing-workflows.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

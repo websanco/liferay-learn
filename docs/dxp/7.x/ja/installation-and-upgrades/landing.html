@@ -1,0 +1,119 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Installing Liferay',
+					sectionURL: 'installation-and-upgrades/installing_liferay.html',
+					subsections: [
+						{
+							name: 'Installing a Liferay Tomcat Bundle',
+							url: 'installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html'
+						},
+						{
+							name: 'Configuring a Database',
+							url: 'installation-and-upgrades/installing-liferay/configuring-a-database.html'
+						},
+						{
+							name: 'Liferay Docker Container Basics',
+							url: 'installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Setting Up Liferay',
+					sectionURL: 'installation-and-upgrades/setting_up_liferay_dxp.html',
+					subsections: [
+						{
+							name: 'Connecting to a Mail Server',
+							url: 'installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.html'
+						},
+						{
+							name: 'Configuring File Storage',
+							url: 'system-administration/file-storage/configuring-file-storage.html'
+						},
+						{
+							name: 'Clustering for High Availability',
+							url: 'installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Securing Liferay',
+					sectionURL: 'installation-and-upgrades/securing_liferay.html',
+					subsections: [
+						{
+							name: 'Introduction to Securing Liferay',
+							url: 'installation-and-upgrades/securing-liferay/introduction-to-securing-liferay.html'
+						},
+						{
+							name: 'Authentication Basics',
+							url: 'installation-and-upgrades/securing-liferay/authentication-basics.html'
+						},
+						{
+							name: 'Introduction to Using OAuth2',
+							url: 'installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Maintaining a Liferay Installation',
+					sectionURL: 'installation-and-upgrades/maintaining_a_liferay_dxp_installation.html',
+					subsections: [
+						{
+							name: 'Backing Up',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.html'
+						},
+						{
+							name: 'Maintaining Clustered Installations',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html'
+						},
+						{
+							name: 'Patching Liferay',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Upgrading Liferay',
+					sectionURL: 'installation-and-upgrades/upgrading_liferay_dxp.html',
+					subsections: [
+						{
+							name: 'Upgrade Overview',
+							url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html'
+						},
+						{
+							name: 'Upgrading via Docker',
+							url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker.html'
+						},
+						{
+							name: 'Using the Database Upgrade Tool',
+							url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'installation-and-upgrades/reference.html',
+					subsections: [
+						{
+							name: 'Liferay Home',
+							url: 'installation-and-upgrades/reference/liferay-home.html'
+						},
+						{
+							name: 'Portal Properties',
+							url: 'installation-and-upgrades/reference/portal-properties.html'
+						},
+						{
+							name: 'Database Templates',
+							url: 'installation-and-upgrades/reference/database-templates.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

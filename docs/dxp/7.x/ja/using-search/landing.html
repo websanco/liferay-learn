@@ -1,0 +1,105 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Getting Started',
+					sectionURL: 'using-search/getting_started.html',
+					subsections: [
+						{
+							name: 'Search Overview',
+							url: 'using-search/getting-started/search-overview.html'
+						},
+						{
+							name: 'Searching for Content',
+							url: 'using-search/getting-started/searching-for-content.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Search Pages and Widgets',
+					sectionURL: 'using-search/search_pages_and_widgets.html',
+					subsections: [
+						{
+							name: 'Search Pages',
+							url: 'using-search/search-pages-and-widgets/working-with-search-pages/search-pages.html'
+						},
+						{
+							name: 'Search Results',
+							url: 'using-search/search-pages-and-widgets/search-results/search-results.html'
+						},
+						{
+							name: 'Similar Results',
+							url: 'using-search/search-pages-and-widgets/similar-results.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Installing and Upgrading a Search Engine',
+					sectionURL: 'using-search/installing_and_upgrading_a_search_engine.html',
+					subsections: [
+            {
+							name: 'Introduction to Installing a Search Engine',
+							url: 'using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.html'
+						},
+						{
+							name: 'Installing Elasticsearch (Coming Soon)',
+						},
+						{
+							name: 'Installing Solr (Coming Soon)',
+						},
+					]
+				},
+				{
+					sectionName: 'Search Administration and Tuning',
+					sectionURL: 'using-search/search_administration_and_tuning.html',
+					subsections: [
+						{
+							name: 'Search Administration Panel Overview (Coming Soon)',
+						},
+						{
+							name: 'Search Tuning (Coming Soon)',
+						},
+						{
+							name: 'Troubleshooting Search (Coming Soon)',
+						},
+					]
+				},
+				{
+					sectionName: 'Liferay Enterprise Search',
+					sectionURL: 'using-search/liferay_enterprise_search.html',
+					subsections: [
+						{
+							name: 'Configuring Cross-Cluster Replication (Coming Soon)',
+						},
+						{
+							name: 'Monitoring Elasticsearch from Liferay DXP (Coming Soon)',
+						},
+						{
+							name: 'Learning to Rank (Coming Soon)',
+						},
+					]
+				},
+        {
+					sectionName: 'Developer Guide',
+					sectionURL: 'using-search/developer_guide.html',
+					subsections: [
+						{
+							name: 'Contributing Custom Content to the Similar Results Widget',
+							url: 'using-search/developer-guide/writing-a-similar-results-contributor.html'
+						},
+						{
+							name: 'Aggregations (Coming Soon)',
+						},
+						{
+							name: 'Model Entity Indexing (Coming Soon)',
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

@@ -1,0 +1,33 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Content Delivery APIs',
+					sectionURL: 'headless-delivery/content_delivery_apis.html',
+					subsections: [
+						{
+							name: 'Consuming REST Services',
+							url: 'headless-delivery/content-delivery-apis/consuming-rest-services.html'
+						},
+						{
+							name: 'Consuming GraphQL APIs',
+							url: 'headless-delivery/content-delivery-apis/consuming-graphql-apis.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Content Administration APIs (Coming Soon)',
+					sectionURL: 'headless-delivery/content_administration_apis.html',
+				},
+				{
+					sectionName: 'Data Engine APIs (Coming Soon)',
+					sectionURL: 'headless-delivery/data_engine_apis.html',
+				},
+			]
+		}
+	})
+</script>

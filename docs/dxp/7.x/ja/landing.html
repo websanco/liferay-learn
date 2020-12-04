@@ -1,0 +1,258 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Getting Started',
+					sectionURL: 'getting_started.html',
+					subsections: [
+						{
+							name: 'Starting With a Docker Image',
+							url: 'getting-started/starting-with-a-docker-image.html'
+						},
+						{
+							name: 'Introduction to the Admin Account',
+							url: 'getting-started/introduction-to-the-admin-account.html'
+						},
+						{
+							name: 'Navigating DXP',
+							url: 'getting-started/navigating-dxp.html'
+						}
+					]
+				},
+				{
+					icon: '#building-solutions-on-dxp-logo',
+					sectionName: 'Building Solutions on DXP',
+					sectionURL: 'building_solutions_on_dxp.html',
+					subsections: [
+						{
+							name: 'Building an Intranet (Coming Soon)',
+							url: 'building-solutions-on-dxp/building_an_intranet.html'
+						},
+						{
+							name: 'Building a Public Website (Coming Soon)',
+							url: 'building-solutions-on-dxp/building_a_public_website.html'
+						},
+						{
+							name: 'Building an Customer Portal (Coming Soon)',
+							url: 'building-solutions-on-dxp/building_a_customer_portal.html'
+						},
+					]
+				},
+				{
+					icon: '#site-building-logo',
+					sectionName: 'Site Building',
+					sectionURL: 'site_building.html',
+					subsections: [
+						{
+							name: 'Adding a Site',
+							url: 'site-building/building-sites/adding-a-site.html'
+						},
+						{
+							name: 'Understanding Pages',
+							url: 'site-building/creating-pages/understanding-pages/understanding-pages.html'
+						},
+						{
+							name: 'Content Pages Overview',
+							url: 'site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.html'
+						},
+					]
+				},
+				{
+					icon: '#content-authoring-and-management-logo',
+					sectionName: 'Content Authoring and Management',
+					sectionURL: 'content_authoring_and_management.html',
+					subsections: [
+						{
+							name: 'Adding a Basic Web Content Article',
+							url: 'content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html'
+						},
+						{
+							name: 'Uploading Files',
+							url: 'content-authoring-and-management/documents-and-media/uploading-and-managing/uploading-files.html'
+						},
+						{
+							name: 'Creating Content Sets (Coming Soon)',
+							url: 'content-authoring-and-management/04-content-sets/user_guide.html'
+						},
+					]
+				},
+				{
+					icon: '#process-automation-logo',
+					sectionName: 'Process Automation',
+					sectionURL: 'process_automation.html',
+					subsections: [
+						{
+							name: 'Creating Forms',
+							url: 'process-automation/forms/user-guide/introduction-to-forms.html'
+						},
+						{
+							name: 'Sharing Forms',
+							url: 'process-automation/forms/user-guide/sharing-forms.html'
+						},
+						{
+							name: 'Activating Workflow',
+							url: 'process-automation/workflow/user-guide/activating-workflow.html'
+						},
+					]
+				},
+				{
+					icon: '#using-search-logo',
+					sectionName: 'Using Search',
+					sectionURL: 'using_search.html',
+					subsections: [
+						{
+							name: 'Search Overview',
+							url: 'using-search/getting-started/search-overview.html'
+						},
+						{
+							name: 'Search Pages',
+							url: 'using-search/search-pages-and-widgets/working-with-search-pages/search-pages.html'
+						},
+						{
+							name: 'Introduction to Installing a Search Engine',
+							url: 'using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.html'
+						},
+					]
+				},
+				{
+					icon: '#collaboration-and-social-logo',
+					sectionName: 'Collaboration and Social',
+					sectionURL: 'collaboration_and_social.html',
+					subsections: [
+						{
+							name: 'Getting Started with Message Boards',
+							url: 'collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.html'
+						},
+						{
+							name: 'Using Social Tools',
+							url: 'collaboration-and-social/social_tools.html'
+						},
+						{
+							name: 'Mentioning Users',
+							url: 'collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.html'
+						},
+					]
+				},
+				{
+					icon: '#users-and-permissions-logo',
+					sectionName: 'Users and Permissions',
+					sectionURL: 'users_and_permissions.html',
+					subsections: [
+						{
+							name: 'Understanding Users',
+							url: 'users-and-permissions/users/understanding-users.html'
+						},
+						{
+							name: 'Adding and Managing Users',
+							url: 'users-and-permissions/users/adding-and-managing-users.html'
+						},
+						{
+							name: 'Understanding Organizations',
+							url: 'users-and-permissions/organizations/understanding-organizations.html'
+						},
+					]
+				},
+				{
+					icon: '#system-administration-logo',
+					sectionName: 'System Administration',
+					sectionURL: 'system_administration.html',
+					subsections: [
+						{
+							name: 'Installing and Managing Apps',
+							url: 'system-administration/installing_and_managing_apps.html'
+						},
+						{
+							name: 'Configuring File Storage',
+							url: 'system-administration/file-storage/configuring-file-storage.html'
+						},
+						{
+							name: 'Using the Script Engine',
+							url: 'system-administration/using-the-script-engine/using-the-script-engine.html'
+						},
+					]
+				},
+				{
+					icon: '#developing-applications-logo',
+					sectionName: 'Developing Applications',
+					sectionURL: 'developing_applications.html',
+					subsections: [
+						{
+							name: 'Creating Low Code Applications with App Builder',
+							url: 'developing-applications/developing-low-code-applications/app-builder-overview.html'
+						},
+						{
+							name: 'Developing a Single Page Application with React (Coming Soon)',
+							url: 'developing-applications/developing-a-single-page-application/using-react.html'
+						},
+						{
+							name: 'Understanding Service Builder (Coming Soon)',
+							url: 'developing-applications/data-frameworks/service-builder.html'
+						},
+					]
+				},
+				{
+					icon: '#liferay-internals-logo',
+					sectionName: 'Liferay Internals',
+					sectionURL: 'liferay_internals.html',
+					subsections: [
+						{
+							name: 'Creating a Model Listener',
+							url: 'liferay-internals/extending-liferay/creating-a-model-listener.html'
+						},
+						{
+							name: 'OSGi Extension Points (Coming Soon)',
+							url: 'liferay-internals/extending-liferay/osgi-extension-points.html'
+						},
+						{
+							name: 'Customizing the Liferay Core (Coming Soon)',
+							url: 'liferay-internals/customizing-the-core/customizing-the-liferay-core.html'
+						},
+					]
+				},
+				{
+					icon: '#headless-delivery-logo',
+					sectionName: 'Headless Delivery',
+					sectionURL: 'headless_delivery.html',
+					subsections: [
+						{
+							name: 'Consuming REST Services',
+							url: 'headless-delivery/content-delivery-apis/consuming-rest-services.html'
+						},
+						{
+							name: 'Consuming GraphQL APIs',
+							url: 'headless-delivery/content-delivery-apis/consuming-graphql-apis.html'
+						},
+						{
+							name: 'Using Data Administration APIs (Coming Soon)',
+							url: 'headless-delivery/data_engine_apis.html'
+						},
+					]
+				},
+				{
+					icon: '#installation-and-upgrades-logo',
+					sectionName: 'Installation and Upgrades',
+					sectionURL: 'installation_and_upgrades.html',
+					subsections: [
+						{
+							name: 'Installing a Liferay-Tomcat Bundle',
+							url: 'installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html'
+						},
+						{
+							name: 'Introduction to Securing Liferay',
+							url: 'installation-and-upgrades/securing-liferay/introduction-to-securing-liferay.html'
+						},
+						{
+							name: 'Upgrade Overview',
+							url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

@@ -1,0 +1,57 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Developer Tools Overview',
+					sectionURL: 'tooling/developer-tools-overview.html',
+				},
+				{
+					sectionName: 'Blade CLI',
+					sectionURL: 'tooling/blade_cli.html',
+					subsections: [
+						{
+							name: 'Installing and Updating Blade CLI',
+							url: 'tooling/blade-cli/installing-and-updating-blade-cli.html'
+						},
+						{
+							name: 'Generating Projects With Blade CLI',
+							url: 'tooling/blade-cli/generating-projects-with-blade-cli.html'
+						},
+						{
+							name: 'Troubleshooting Blade CLI',
+							url: 'tooling/blade-cli/troubleshooting-blade-cli.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Liferay Workspace (Coming Soon)',
+				},
+				{
+					sectionName: 'Developer Studio (Coming Soon)',
+				},
+				{
+					sectionName: 'REST Builder (Coming Soon)',
+				},
+				{
+					sectionName: 'Other Tools',
+					subsections: [
+						{
+							name: 'Liferay npm Bundler',
+							url: 'tooling/other-tools/liferay-npm-bundler/liferay-npm-bundler-intro.html'
+						},
+						{
+							name: 'Theme Generator (Coming Soon)',
+						},
+						{
+							name: 'Liferay JS Generator (Coming Soon)',
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

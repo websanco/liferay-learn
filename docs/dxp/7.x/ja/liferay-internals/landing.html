@@ -1,0 +1,109 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Fundamentals',
+					sectionURL: 'liferay-internals/fundamentals.html',
+					subsections: [
+						{
+							name: 'Fundamentals',
+							url: 'liferay-internals/fundamentals/fundamentals.html'
+						},
+						{
+							name: 'Configuring Dependencies (Coming Soon)',
+							url: 'liferay-internals/fundamentals/configuring-dependencies/configuring-dependencies.html'
+						},
+						{
+							name: 'Importing Packages (Coming Soon)',
+							url: 'liferay-internals/fundamentals/importing-packages.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Extending Liferay',
+					sectionURL: 'liferay-internals/extending_liferay.html',
+					subsections: [
+						{
+							name: 'Creating a Model Listener',
+							url: 'liferay-internals/extending-liferay/creating-a-model-listener.html'
+						},
+						{
+							name: 'Overriding Service Components (Coming Soon)',
+							url: 'liferay-internals/extending-liferay/overriding-service-components.html'
+						},
+						{
+							name: 'Creating Service Wrappers (Coming Soon)',
+							url: 'liferay-internals/extending-liferay/creating-service-wrappers.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Customizing Web APIs',
+					subsections: [
+						{
+							name: 'REST APIs (Coming Soon)',
+							url: 'liferay-internals/customizing-web-apis/customizing-rest-apis.html'
+						},
+						{
+							name: 'GraphQL APIs (Coming Soon)',
+							url: 'liferay-internals/customizing-web-apis/customizing-graphql-apis.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Customizing the Core',
+					sectionURL: 'liferay-internals/customizing_the_core.html',
+					subsections: [
+						{
+							name: 'Customizing the Liferay Core (Coming Soon)',
+							url: 'liferay-internals/customizing-the-core/customizing-the-liferay-core.html'
+						},
+						{
+							name: 'Using Hooks (Coming Soon)',
+							url: 'liferay-internals/customizing-the-core/using-hooks.html'
+						},
+						{
+							name: 'Using EXT Plugins (Coming Soon)',
+							url: 'liferay-internals/customizing-the-core/using-ext-plugins.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Contributing to Liferay Development',
+					subsections: [
+						{
+							name: 'Liferay Development Environment (Coming Soon)',
+							url: 'liferay-internals/contributing-to-liferay-development/liferay-development-environment.html'
+						},
+						{
+							name: 'Source Formatting Guidelines (Coming Soon)',
+							url: 'liferay-internals/contributing-to-liferay-development/source-formatting-guidelines.html'
+						},
+						{
+							name: 'Providing Feedback (Coming Soon)',
+							url: 'liferay-internals/contributing-to-liferay-development/providing-feedback.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'liferay-internals/reference.html',
+					subsections: [
+						{
+							name: '7.3 Breaking Changes',
+							url: 'liferay-internals/reference/7-3-breaking-changes.html'
+						},
+						{
+							name: '7.2 Breaking Changes',
+							url: 'liferay-internals/reference/7-2-breaking-changes.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
