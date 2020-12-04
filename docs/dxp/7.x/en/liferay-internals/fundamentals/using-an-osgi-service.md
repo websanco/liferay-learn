@@ -11,24 +11,24 @@ The above `_blogsEntryService` accesses a `BlogsEntryService` OSGi service.
 
 All Declarative Services components (classes annotated with [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)) can access OSGi services this way. The run time framework injects a component's `@Reference`-annotated fields with the service types they reference.
 
-The following example demonstrates using an OSGi service called `Greeting`. Three modules demonstrate the *API-Provider-Consumer* pattern used in OSGi services.
+The following example demonstrates using an OSGi service called `Greeter`. Three modules demonstrate the *API-Provider-Consumer* pattern used in OSGi services.
 
-* The **API** module defines the `Greeting` service type.
-* The implementation module **provides** the `Greeting` service.
-* The example module **consumes** the `Greeting` service.
+* The **API** module defines the `Greeter` service type.
+* The implementation module **provides** the `Greeter` service.
+* The example module **consumes** the `Greeter` service.
 
-The example module class creates a Gogo Shell command that uses the `Greeting` service to return a personalized greeting. Consider this example to be a "Hello World" for OSGi services.
+The example module class creates a Gogo Shell command that uses the `Greeter` service to return a personalized greeting. Consider this example to be a "Hello World" for OSGi services.
 
-![The example modules provide a greeting command for Gogo Shell.](./using-an-osgi-service/images/01.png)
+![The example modules provide a greeter command for Gogo Shell.](./using-an-osgi-service/images/01.png)
 
 You can use OSGi services in any Java class.
 
 Liferay service package Javadoc is available at these locations:
 
 * [Liferay DXP Apps](https://docs.liferay.com/dxp/apps/)
-* [Liferay DXP Portal](https://docs.liferay.com/dxp/portal/7.2-latest/javadocs/)
+* [Liferay DXP Portal](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/)
 * [Liferay CE Apps](https://docs.liferay.com/ce/apps/)
-* [Liferay CE Portal](https://docs.liferay.com/ce/portal/7.2-latest/javadocs/)
+* [Liferay CE Portal](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/)
 
 ```note::
    For instructions on how to create an OSGi service, please see `APIs as OSGi Services <./apis-as-osgi-services.md>`_.
@@ -120,17 +120,17 @@ The example module leverages the API and implementation modules to produce the c
 
 ### Write Your Business Logic
 
-You can implement business logic using any OSGi services you need. The code below uses `Greeting`.
+You can implement business logic using any OSGi services you need. The code below uses `Greeter`.
 
-```
+```java
 public void greet(String name) {
-    _greeting.greet(name);
+    _greeter.greet(name);
 }
 
-private Greeting _greeting;
+private Greeter _greeter;
 ```
 
-The method above invokes a `Greeting` instance's `greet` method with its `name` parameter. `Greeting` is the OSGi service type that the implementation module registers. The class must get a `Greeting` instance from the OSGi service registry.
+The method above invokes a `Greeter` instance's `greet` method with its `name` parameter. `Greeter` is the OSGi service type that the implementation module registers. The class must get a `Greeter` instance from the OSGi service registry.
 
 ### Annotate External Service References
 
@@ -138,10 +138,10 @@ Getting an OSGi service requires creating a field of that service type and addin
 
 ```java
 @Reference
-private Greeting _greeting;
+private Greeter _greeter;
 ```
 
-The `GreetingOSGiCommand` class has the above private `Greeting` field called `_greeting`. The `@Reference` annotation tells the OSGi runtime to inject the field with a `Greeting` service from the registry. If `GreetingImpl` is the only registered `Greeting` service component, the runtime injects `_greeting` with a `GreetingImpl`.
+The `GreeterOSGiCommands` class has the above private `Greeter` field called `_greeter`. The `@Reference` annotation tells the OSGi runtime to inject the field with a `Greeter` service from the registry. If `J1H1Greeter` is the only registered `Greeter` service component, the runtime injects `_greeter` with a `J1H1Greeter`.
 
 ### Make the Class a Component
 
@@ -152,16 +152,16 @@ Only Declarative Services component can use the `@Reference` annotation. Add the
 	property = {"osgi.command.function=greet", "osgi.command.scope=j1h1"},
 	service = Object.class
 )
-public class GreetingOSGiCommands {
+public class GreeterOSGiCommands {
 ```
 
-The `GreetingOSGiCommand` class is a service component of type `Object`. Unless there's a particular interface or class you need to implement, making your class a service of type `Object` is fine.
+The `GreeterOSGiCommands` class is a service component of type `Object`. Unless there's a particular interface or class you need to implement, making your class a service of type `Object` is fine.
 
 ```note::
    As in Java, where every class is a subclass of ``java.lang.Object`` (even though you don't need to specify it by default), in Declarative Services, the runtime must know the type of class to register. Because you're not implementing any particular type, your parent class is ``java.lang.Object``, so you must specify that class as the service. While Java doesn't require you to specify `Object` as the parent when you're creating a class that doesn't inherit anything, Declarative Services does.
 ```
 
-The `GreetingOSGiCommand` class' two properties define a Gogo shell command with a command function called `greet` in a scope called `j1h1`. The deployed `GreetingOSGiCommand` component provides the Gogo Shell command `j1h1:greet` that takes a `String` as input.
+The `GreeterOSGiCommands` class' two properties define a Gogo shell command with a command function called `greet` in a scope called `j1h1`. The deployed `GreeterOSGiCommands` component provides the Gogo Shell command `j1h1:greet` that takes a `String` as input.
 
 ## Conclusion
 
