@@ -22,9 +22,9 @@ Follow these steps to blacklist an app, module, and plugin:
 
 1. In the Control Panel, navigate to _Configuration_ &rarr; _System Settings_ &rarr; _Module Container_. The Bundle Blacklist screen appears.
 
-1. In the Bundle Blacklist screen, add the bundle symbolic names (see [the table below](#blacklist-bundle-symbolic-names)) for the [module](https://help.liferay.com/hc/articles/360035467532-OSGi-and-Modularity#modules) JARs, LPKG files, or WARs to uninstall. Click the _Save_ button when you're finished. DXP uninstalls the blacklisted modules immediately.
+1. In the Bundle Blacklist screen, add the bundle symbolic names for the apps, LPKG files, [module](https://help.liferay.com/hc/articles/360035467532-OSGi-and-Modularity#modules) JARs, or WARs to uninstall. For each item, click the Add button (![Add](../../../images/icon-add.png)) and enter the item's bundle symbolic name (see [the table below](#blacklist-bundle-symbolic-names)). Click the _Save_ button when you're finished. DXP uninstalls the blacklisted items immediately.
 
-    ![This blacklist uninstalls the com.liferay.docs.greeting.api module, Liferay Marketplace app LPKG, and classic-theme plugin WAR.](./blacklisting-apps/images/02.png)
+    ![This blacklist uninstalls the classic-theme plugin WAR, Liferay Collaboration - Liferay Blogs - API module, and com.acme.greeter module.](./blacklisting-apps/images/02.png)
 
 ### Blacklisting via a Configuration File
 
@@ -38,7 +38,11 @@ Use these steps to blacklist using a configuration file:
 1. To export the blacklist currently in use, click its Actions button (![Actions](./blacklisting-apps/images/03.png)) and then click _Export_. The blacklist config file then downloads (`com.liferay.portal.bundle.blacklist.internal.BundleBlacklistConfiguration.config`). Here are file contents from exporting the example blacklist:
 
     ```properties
-    blacklistBundleSymbolicNames=["com.liferay.docs.greeting.api","Liferay\ Marketplace","classic-theme"]
+    blacklistBundleSymbolicNames=[ \
+      "classic-theme", \
+      "Liferay\ Collaboration\ -\ Liferay\ Blogs\ -\ API", \
+      "com.acme.greeter", \
+    ]
     ```
 
 1. Add the bundle symbolic names of any apps, modules, or plugins not already listed that you want to uninstall and prevent from installing in subsequent DXP server startups.
@@ -53,8 +57,9 @@ Use these steps to blacklist using a configuration file:
 
 | Type       | Bundle Symbolic Name |
 | ---------- | --------------|
+| App        | App name displayed in the [App Manager](./using-the-app-manager.md) |
 | LPKG       | LPKG file name without the `.lpkg` extension |
-| Bundle/Module JAR | `Bundle-SymbolicName` in `bnd.bnd` or `MANIFEST.MF` file |
+| Module/Bundle JAR | `Bundle-SymbolicName` in `bnd.bnd` or `MANIFEST.MF` file |
 | WAR        | Servlet context name in `liferay-plugin-package.properties` file or the WAR file name (minus `.war`), if there is no servlet context name property |
 
 ## Reinstalling Blacklisted Items
