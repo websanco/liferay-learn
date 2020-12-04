@@ -4,7 +4,7 @@ DXP Cloud is a flexible platform that combines a collection of key components to
 
 ![All of the key services and components integrated with DXP Cloud are shown with their connections here.](./dxp-cloud-infrastructure/images/01.png)
 
-See the following list for an explanation of the various components.
+See the following list for a description of the various components.
 
 ## Advanced Application Monitoring
 
