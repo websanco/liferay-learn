@@ -8,10 +8,10 @@ Before creating A/B tests, remember these things:
 - You cannot create a test for an Experience that already has an active A/B Test running.
 - When you delete a Content Page or Experience that is part of an A/B Test, you also delete the test.
 
-To create the A/B test, [create the test](#creating-the-test) first, and then create one or more [test Variants](#creating-the-test-variants).
+To create the A/B test, [create the test](#creating-the-test) first, and then create one or more [test Variants](#creating-the-test-variant).
 
-```note::
-Verify that your environment `meets the requirements <./verifying-ab-test-requirements.md>`_ for A/B Testing before creating the test.
+```important::
+   Verify that your environment `meets the requirements <./verifying-ab-test-requirements.md>`_ for A/B Testing before creating the test.
 ```
 
 ## Creating the Test
@@ -40,12 +40,12 @@ A test Variant is a customization of the Experience you want to optimize with A/
 1. If you selected the *Click* goal for the A/B Test, you must also select the element you want to test:
     1. Under the *Active Test* tab and *Click Goal* section, click *Set Element*.
 
-     ![Click the Set Element to configure the element for your test](./creating-ab-tests/images/03.png)
+        ![Click the Set Element to configure the element for your test](./creating-ab-tests/images/03.png)
 
     1. Click the element you want to test on the Content Page.
     1. Click *Set Element as Click Target*. 
 
-     ![Click the Set Element as Click Target button to select it.](./creating-ab-tests/images/01.png)
+        ![Click the Set Element as Click Target button to select it.](./creating-ab-tests/images/01.png)
 
      ```note::
         Only links and buttons with an ID attribute can be selected as a target for the click goal. The click target element applies to the whole A/B Test, and must be present in all variants.

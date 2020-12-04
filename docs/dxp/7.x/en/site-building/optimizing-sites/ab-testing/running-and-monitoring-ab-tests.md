@@ -9,16 +9,16 @@ The *Estimated Time to Declare Winner* provides an estimation of the test durati
 
 ![A/B Test Run Configurations are tunable to your requirements.](running-and-monitoring-ab-tests/images/01.png)
 
-After you create the test, review the test status and the history of completed and terminated A/B Tests by clicking the *A/B Testing* button (![A/B Test icon](../../../images/icon-ab-testing.png)). Starting Liferay DXP 7.3, you can also view the A/B Test status for an experience through the [experience selection dialog](../experience-personalization/content-page-personalization.md).
+After you create the test, review the test status and the history of completed and terminated A/B Tests by clicking the *A/B Testing* button (![A/B Test icon](../../../images/icon-ab-testing.png)). Starting Liferay DXP 7.3, you can also view the A/B Test status for an experience through the [experience selection dialog](../../personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
-Liferay DXP only shows your test's status and the winning Variant when the test finishes. You can manage the other aspects of your A/B test in Analytics Cloud. For more information, see [A/B Testing Analytics](../../../../../../analytics-cloud/latest/en/touchpoints/a-b-testing.md).
+Liferay DXP only shows your test's status and the winning Variant when the test finishes. You can manage the other aspects of your A/B test in Analytics Cloud. For more information, see [A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/en/touchpoints/a-b-testing.html).
 
 When the A/B Test finishes, you can review the test results and publish the preferred test Variant. For more information, read [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md).
 
 ## Running the A/B Test
 
 ```note::
-   Before running the test, you must create the A/B Test and test Variant. For more information, read `Creating A/B Tests <./creating-ab-tests>`_.
+   Before running the test, you must create the A/B Test and test Variant. For more information, read `Creating A/B Tests <./creating-ab-tests.md>`_.
 ```
 
 1. Go to the Content Page where you want to run the A/B Test
