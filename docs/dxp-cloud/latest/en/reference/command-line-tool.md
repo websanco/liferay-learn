@@ -30,7 +30,7 @@ Download the latest version of the [Windows installer](https://cdn.liferay.cloud
 
 ## Upgrading the CLI Tool from Version 2 to 3
 
-If you're running version 2 of the CLI tool and want to upgrade to version 3, you must first uninstall your current version before you can install and use version 3. This prevent conflicts with the same binary name.
+You must first uninstall your current version before you can install and use version 3. This prevent conflicts with the same binary name.
 
 ```important::
    The following instructions are specific to uninstalling CLI version 2 and are **not** the same as those for `uninstalling version 3 of the CLI tool <#uninstalling-version-3-of-the-cli-tool>`__.
@@ -208,7 +208,7 @@ To access a service container's shell, run the following command:
 lcp shell
 ```
 
-This lists all the services in the container and prompts users you to choose
+This lists all the services in the container and prompts you to choose
 which one to access.
 
 Alternatively, access the shell of a specific service's container by adding the
