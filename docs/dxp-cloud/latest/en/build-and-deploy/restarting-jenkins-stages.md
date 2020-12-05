@@ -1,6 +1,6 @@
 # Restarting Jenkins Stages
 
-With DXP Cloud, you can configure the CI service to preserve Jenkins stashes that you can then use to restart specific stages in a Jenkins build.
+With DXP Cloud, you can configure the CI service to preserve Jenkins stashes. You can then use them to restart specific stages in a Jenkins build.
 
 ## Preserving Jenkins Stashes
 
@@ -13,7 +13,7 @@ In the following example, stashes are preserved for the last 3 builds, while art
 
 ![Use these variables to determine which artifacts are preserved.](./restarting-jenkins-stages/images/01.png)
 
-By default, the `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` value is set to `20`, while the `LCP_CI_ARTIFACT_NUM_TO_KEEP` value is set to `1`. If restarting stages isn't important to you, you can set their values to `0` to prevent the CI from retaining either stashes or artifacts.
+By default, the `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` value is set to `20`, while the `LCP_CI_ARTIFACT_NUM_TO_KEEP` value is set to `1`. If restarting stages isn't important to you, then you can set their values to `0` to prevent CI from retaining either stashes or artifacts.
 
 ```important::
    Stashes cannot be preserved for more builds than allowed by the ``LCP_CI_ARTIFACT_NUM_TO_KEEP`` variable, regardless of the number of builds set for the ``LCP_CI_PRESERVE_STASHES_BUILD_COUNT`` variable.
@@ -23,10 +23,10 @@ By default, the `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` value is set to `20`, whil
 
 Follow these steps to restart a Jenkins stage:
 
-1. Access your project's ci page (i.e., `ci-<project>-infra.lfr.cloud`), and click on the *Open Blue Ocean* plugin to view your project's pipelines.
+1. Access your project's CI service page (i.e., `ci-<project>-infra.lfr.cloud`), and click on the *Open Blue Ocean* plugin to view your project's pipelines.
 
    ```note::
-      While pipelines stages can be restarted via the __ <!--w/c--> Jenkins console, the Open Blue Ocean plugin provides a clearer and more intuitive user experience.
+      While pipelines stages can be restarted via the standard Jenkins console, the Open Blue Ocean plugin provides a clearer and more intuitive user experience when viewing or managing pipeline stages.
    ```
 
    ![Click on the Open Blue Ocean plugin to view your project's pipelines.](./restarting-jenkins-stages/images/02.png)
