@@ -3,14 +3,14 @@
 Liferay's CLI tool can be used to view and manage your DXP Cloud services. Once installed, you can run `lcp --help` in your terminal to view available actions.
 
 * [Installing the CLI Tool](#installing-the-cli-tool)
-* [Upgrading the CLI Tool from v2 to v3](#upgrading-the-cli-tool-from-v2-to-v3)
+* [Upgrading the CLI Tool from Version 2 to 3](#upgrading-the-cli-tool-from-version-2-to-3)
 * [Configuring the CLI Remote](#configuring-the-cli-remote)
 * [Showing the Service Logs](#showing-the-service-logs)
 * [Changing the Number of Service Instances](#changing-the-number-of-service-instances)
 * [Listing Projects or Services](#listing-projects-or-services)
 * [Restarting a Service](#restarting-a-service)
 * [Accessing a Service's Shell](#accessing-a-services-shell)
-* [Uninstalling v3 of the CLI Tool](#uninstalling-v3-of-the-cli-tool)
+* [Uninstalling Version 3 of the CLI Tool](#uninstalling-version-3-of-the-cli-tool)
 
 ## Installing the CLI Tool
 
@@ -28,21 +28,21 @@ If you get a permissions error, try running the same command with `sudo`.
 
 Download the latest version of the [Windows installer](https://cdn.liferay.cloud/lcp/stable/latest/lcp-install.exe), and follow the steps in the wizard.
 
-## Upgrading the CLI Tool from v2 to v3
+## Upgrading the CLI Tool from Version 2 to 3
 
-If you're running v2 of the CLI tool and want to upgrade to v3, you must first uninstall your current version before you can install and use v3. This prevent conflicts with the same binary name.
+If you're running version 2 of the CLI tool and want to upgrade to version 3, you must first uninstall your current version before you can install and use version 3. This prevent conflicts with the same binary name.
 
 ```important::
-   The following instructions are specific to uninstalling CLI v2 and are **not** the same as those for `uninstalling v3 of the CLI tool <#uninstalling-v3-of-the-cli-tool>`__.
+   The following instructions are specific to uninstalling CLI version 2 and are **not** the same as those for `uninstalling version 3 of the CLI tool <#uninstalling-version-3-of-the-cli-tool>`__.
 ```
 
-### Uninstalling v2 on MacOS or Linux
+### Uninstalling Version 2 on MacOS or Linux
 
 1. Open a terminal and run: `lcp uninstall`.
 
 1. Verify uninstall is complete by running the command `lcp`.
 
-### Uninstalling v2 on Windows
+### Uninstalling Version 2 on Windows
 
 1. In Windows 10, go to *Control Panel* &rarr; *Programs* &rarr; *Uninstall a program*. Alternatively, for Windows 7 and 8, go to *Control Panel* &rarr; *Add or Remove Programs*.
 
@@ -54,9 +54,9 @@ If you're running v2 of the CLI tool and want to upgrade to v3, you must first u
 
 Verify that CLI version 2 has been uninstalled before installing version 3.
 
-### Installing v3
+### Installing Version 3
 
-Once v2 is uninstalled, you can following the [above instructions](#installing-the-cli) to install v3 of the CLI tool.
+Once version 2 is uninstalled, you can following the [above instructions](#installing-the-cli) to install version 3 of the CLI tool.
 
 ## Configuring the CLI Remote
 
@@ -222,7 +222,7 @@ lcp shell -p <project>-<environment> -s <service>
 
 Use the `lcp docs` command to access Liferay DXP Cloud resources, including official documentation, Help Center content, and more.
 
-## Uninstalling v3 of the CLI Tool
+## Uninstalling Version 3 of the CLI Tool
 
 For Mac and Linux, run the following command:
 
