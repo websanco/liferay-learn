@@ -7,7 +7,6 @@ import pandas as pd
 import subprocess
 import sys
 
-
 def parse_mtimes(lines):
     mtimes = {}
     current_mtime = None
@@ -39,7 +38,6 @@ def parse_mtimes(lines):
             mtimes[new_file_name] = current_mtime
 
     return mtimes
-
 
 def get_mtimes(commit, folder):
     cwd = os.getcwd()
