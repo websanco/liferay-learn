@@ -7,7 +7,7 @@ Liferay APIs are readily available as OSGi services. You can access a service by
 BlogsEntryService _blogsEntryService;
 ```
 
-The above `_blogsEntryService` accesses a `BlogsEntryService` OSGi service.
+The above `_blogsEntryService` field accesses a [`BlogsEntryService`](https://docs.liferay.com/ce/apps/blogs/latest/javadocs/com/liferay/blogs/service/BlogsEntryService.html) OSGi service.
 
 All Declarative Services components (classes annotated with [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)) can access OSGi services this way. The run time framework injects a component's `@Reference`-annotated fields with the service types they reference.
 
@@ -23,7 +23,7 @@ The example module class creates a Gogo Shell command that uses the `Greeter` se
 
 You can use OSGi services in any Java class.
 
-Liferay service package Javadoc is available at these locations:
+Liferay service Javadoc is available at these locations:
 
 * [Liferay DXP Apps](https://docs.liferay.com/dxp/apps/)
 * [Liferay DXP Portal](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/)
@@ -47,7 +47,7 @@ Start using the example.
 1. Download and unzip `liferay-j1h1.zip`.
 
     ```curl
-    curl https://learn.liferay.com/dxp-7.x/liferay-internals/fundamentals/liferay-j1h1.zip -O
+    curl hhttps://learn.liferay.com/dxp/7.x/en/liferay-internals/fundamentals/liferay-j1h1.zip -O
     ```
 
     ```bash
@@ -98,7 +98,7 @@ Start using the example.
 
 1. Open the [Gogo Shell](/using-the-gogo-shell/using-the-gogo-shell.md).
 
-1. In the command field, use the `j1h1:greet` command to send a greeting.
+1. In the Gogo Shell command field, enter a `j1h1:greet` command to generate a greeting.
 
     ```groovy
     j1h1:greet "Captain Kirk"
@@ -116,36 +116,44 @@ The example module leverages the API and implementation modules to produce the c
 
 * [Write Your Business Logic](#write-your-business-logic)
 * [Annotate External Service References](#annotate-external-service-references)
-* [Make the Class a Component](#make-the-class-a-component)
+* [Make Your Class a Component](#make-your-class-a-component)
 
 ### Write Your Business Logic
 
-You can implement business logic using any OSGi services you need. The code below uses `Greeter`.
+In your class, implement business logic using the OSGi service you need. 
 
-```java
-public void greet(String name) {
-    _greeter.greet(name);
-}
+1. Import the service.
 
-private Greeter _greeter;
-```
+	```java
+	import com.acme.j1h1.Greeter;
+	```
 
-The method above invokes a `Greeter` instance's `greet` method with its `name` parameter. `Greeter` is the OSGi service type that the implementation module registers. The class must get a `Greeter` instance from the OSGi service registry.
+1. Use the service.
+
+	```java
+	public void greet(String name) {
+	    _greeter.greet(name);
+	}
+
+	private Greeter _greeter;
+	```
+
+The method above invokes a `Greeter`'s `greet` method. `com.acme.j1h1.Greeter` is the OSGi service type that the implementation module registers. Your class must get a `Greeter` instance from the OSGi service registry.
 
 ### Annotate External Service References
 
-Getting an OSGi service requires creating a field of that service type and adding a [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to the field.
+Getting an OSGi service from the registry requires adding a [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to a field of that service type. Add the `@Reference` to your service field.
 
 ```java
 @Reference
 private Greeter _greeter;
 ```
 
-The `GreeterOSGiCommands` class has the above private `Greeter` field called `_greeter`. The `@Reference` annotation tells the OSGi runtime to inject the field with a `Greeter` service from the registry. If `J1H1Greeter` is the only registered `Greeter` service component, the runtime injects `_greeter` with a `J1H1Greeter`.
+The `GreeterOSGiCommands` class has the above private `Greeter` field called `_greeter`. The `@Reference` annotation tells the OSGi runtime to inject the field with a `Greeter` service from the registry. If `J1H1Greeter` is the best matching `Greeter` service component in the registry (it's the only match in this example), the runtime injects `_greeter` with a `J1H1Greeter`.
 
-### Make the Class a Component
+### Make Your Class a Component
 
-Only Declarative Services component can use the `@Reference` annotation. Add the `@Component` annotation to the class and declare it to implement a particular service.
+Only Declarative Services component can use the `@Reference` annotation. Add the `@Component` annotation to your class and use a `service` attribute to declare your component as implementing a particular service.
 
 ```java
 @Component(
@@ -163,11 +171,26 @@ The `GreeterOSGiCommands` class is a service component of type `Object`. Unless 
 
 The `GreeterOSGiCommands` class' two properties define a Gogo shell command with a command function called `greet` in a scope called `j1h1`. The deployed `GreeterOSGiCommands` component provides the Gogo Shell command `j1h1:greet` that takes a `String` as input.
 
+### Add a Dependency on the API
+
+Your consumer module depends on the API. In your `build.gradle` file, add the API to your dependencies. Here's the `j1h1-osgi-commands` module's `build.gradle` file
+
+```groovy
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":j1h1-api")
+}
+```
+
+The `release.portal.api` artifact provides the Liferay, Bnd, and OSGi services that the module needs from current Liferay product release. The `liferay.workspace.product` in the `[project root]/gradle.properties` file specifies the release.
+
+Since the local project `j1h1-api` provides the `Greeter` service, `j1h1-osgi-commands` can depend on it as a project instead of an artifact. [Specifying Dependencies](./configuring-dependencies/specifying-dependencies.md) on external artifacts is easy too.
+
 ## Conclusion
 
-The API and Impl modules created the service and the example module used the service to create a simple Gogo Shell command. The API-Provider-Consumer contract fosters loose coupling, making your software easy to manage, enhance, and support.
+The API and Impl modules define and provided the `Greeter` service, respectively. The example `j1h1-osgi-commands` module uses the service to create a simple Gogo Shell command. The API-Provider-Consumer contract fosters loose coupling, making your software easy to manage, enhance, and support.
 
-Now that you're familiar with creating and using OSGi services, you can explore using OSGi services from other modules. [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md) demonstrates finding modules and configuring them as dependencies.
+Now that you're familiar with using OSGi services from neighboring projects, you can explore using OSGi services from external artifacts. [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md) demonstrates finding modules and configuring them as dependencies.
 
 ## Additional Information
 
