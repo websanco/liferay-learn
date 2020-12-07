@@ -98,7 +98,7 @@ Here you can access additional settings to customize your page's content and fea
 
 ![Determine whether users can customize a Widget Page.](./configuring-individual-pages/images/12.png)
 
-**Custom Fields**: You can view and configure the *Custom Fields* you've defined for Site pages. See [Custom Fields](../../../installation-and-upgrades/setting-up-liferay-dxp/adding-custom-fields.md) for more information.
+**Custom Fields**: You can view and configure the *Custom Fields* you've defined for Site pages. See [Custom Fields](../../../system-administration/configuring-liferay/adding-custom-fields.md) for more information.
 
 **Embedded Widgets**: In the *Embedded Widgets* section, you can access widgets you've embedded in a page using [Web Content Templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or [Themes]().
 
