@@ -4,10 +4,10 @@ Site Appearance
 .. toctree::
    :maxdepth: 2
 
-   site-appearance/using-a-style-book-to-standardize-site-experience.md
+   site-appearance/using-a-style-book-to-standardize-site-appearance.md
    site-appearance/developer_guide.rst
 
--  :doc:`/site-building/site-appearance/using-a-style-book-to-standardize-site-experience`
+-  :doc:`/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance`
 
 Developer Guide
 ---------------

@@ -40,13 +40,13 @@ Page authors can now save their column compositions as reusable, sharable Fragme
 
 ## Design and Theme Editor
 
-We took Themes to the next level by providing Master Pages, Templates, fragments and Stylebooks (see below) to override partially or completely the default theme look and feel. You can now use the classic Liferay theme as a base. 
+We took Themes to the next level by providing Master Pages, Templates, Fragments and Style Books (see below) to override partially or completely the default theme look and feel. You can now use the classic Liferay theme as a base. 
 
-![Themes, Stylebooks, Fragments, Master Pages, Page Templates: they're now all integrated to help you provide great UIs for your content.](./whats-new-73/images/05.png)
+![Themes, Style Books, Fragments, Master Pages, Page Templates: they're now all integrated to help you provide great UIs for your content.](./whats-new-73/images/05.png)
 
-### Stylebooks
+### Style Books
 
-A [Stylebook](../site-building/site-appearance/creating-a-style-book.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Stylebooks provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Stylebooks for the same Site and a page creator can pick the Stylebook for a particular page. Stylebooks help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
+A [Style Book](../site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Style Books provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Style Books for the same Site and a page creator can pick the Style Book for a particular page. Style Books help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
 
 ## Content Authoring and Management
 

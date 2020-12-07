@@ -1,6 +1,6 @@
 # Style Book Token Definitions
 
-Style Books have options grouped into various categories that are defined per theme. Each options is defined with a *token*. The collection of all tokens defined for a theme is the *token definition*.
+Style Books have options grouped into various categories that are defined per theme. Each option is defined with a *token*. The collection of all tokens defined for a theme is a *token definition*.
 
 When you assign a theme to your Site's Public Pages, the token definition included with that theme is used when creating a Style Book for the Site.
 
@@ -163,5 +163,5 @@ The value in the token definition's `mappings` (`font-family-base`) matches the 
 
 ## Additional Information
 
-* [Using a Style Book to Standardize Site Experience](../using-a-style-book-to-standardize-site-experience.md)
+* [Using a Style Book to Standardize Site Appearance](../using-a-style-book-to-standardize-site-appearance.md)
 <!-- Add link to token definition tutorial when available -->
