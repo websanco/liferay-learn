@@ -6,6 +6,7 @@ Configuring Liferay
 
    configuring-liferay/understanding-configuration-scope.md
    configuring-liferay/system-settings.md
+   configuring-liferay/adding-custom-fields.md
    configuring-liferay/configuration_files_and_factories.rst
    configuring-liferay/virtual_instances.rst
    configuring-liferay/security_settings.rst

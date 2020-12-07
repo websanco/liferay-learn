@@ -45,7 +45,7 @@ Here you can view a Site's Public and Private pages, if any exist. If they don't
 
 ### Custom Fields
 
-Here you can view and configure any custom fields you've defined for your pages. With these fields, you can set page metadata, such as author, date of creation, and geolocation. This section only appears once you've configured custom fields for your Site. See [Custom Fields](../../installation-and-upgrades/setting-up-liferay-dxp/custom-fields.md) for more information.
+Here you can view and configure any custom fields you've defined for your pages. With these fields, you can set page metadata, such as author, date of creation, and geolocation. This section only appears once you've configured custom fields for your Site. See [Custom Fields](../../installation-and-upgrades/setting-up-liferay-dxp/adding-custom-fields.md) for more information.
 
 ### Categorization
 

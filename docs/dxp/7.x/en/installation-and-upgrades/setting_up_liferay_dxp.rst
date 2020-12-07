@@ -13,6 +13,7 @@ Setting Up Liferay DXP
    ../../system-administration/installing_and_managing_apps.rst
    ../../using-search/installing_and_upgrading_a_search_engine.rst
    setting-up-liferay-dxp/clustering_for_high_availability.rst
+   ../../system-administration/configuring-liferay/adding-custom-fields.md
 
 -  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-liferay-dxp`
 -  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/activating-liferay-dxp`
@@ -39,8 +40,16 @@ Installing and Managing Apps
 -  :doc:`/system-administration/installing_and_managing_apps`
 
 Installing a Search Engine
-----------------------------------------
+--------------------------
+
 -  :doc:`/using-search/installing_and_upgrading_a_search_engine`
+
+Users and Permissions
+---------------------
+
+-  :doc:`/users-and-permissions/users/adding-and-managing-users`
+-  :doc:`/users-and-permissions/devops/adding-custom-fields-to-users`
+-  :doc:`/users_and_permissions`
 
 Clustering for High Availability
 --------------------------------
@@ -54,6 +63,6 @@ Clustering for High Availability
 Other Setup Topics
 ------------------
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/custom-fields`
-* Tuning your JVM (Coming soon!)
-* Setting Up Remote Staging (Coming soon!)
+-  :doc:`/system-administration/configuring-liferay/adding-custom-fields`
+- Tuning your JVM (Coming soon!)
+- Setting Up Remote Staging (Coming soon!)
