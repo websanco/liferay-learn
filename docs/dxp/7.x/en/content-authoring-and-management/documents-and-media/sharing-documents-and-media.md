@@ -23,7 +23,7 @@ Finally, you can use WebDAV to access your documents from your file manager. See
 
 ## Using Workflow with Documents and Media
 
-DXP's [Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md) can help manage publication; if Workflow is activated for Documents and Media, documents must be reviewed before they are published. To activate Workflow for Documents and Media, see [Activating Workflow](../../process-automation/workflow/user-guide/activating-workflow.md#activating-workflow-for-specific-applications) for more information.
+DXP's [Workflow](../../process-automation/workflow/introduction-to-workflow.md) can help manage publication; if Workflow is activated for Documents and Media, documents must be reviewed before they are published. To activate Workflow for Documents and Media, see [Activating Workflow](../../process-automation/workflow/using-workflows/activating-workflow.md#activating-workflow-for-specific-applications) for more information.
 
 ![You can enable workflow for DM documents.](./sharing-documents-and-media/images/04.png)
 

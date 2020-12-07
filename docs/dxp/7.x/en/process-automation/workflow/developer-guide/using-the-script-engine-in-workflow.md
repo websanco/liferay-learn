@@ -1,6 +1,6 @@
 # Using the Script Engine in Workflow
 
-Liferay's [workflow engine](../user-guide/introduction-to-workflow.md) can be scripted using Groovy scripts embedded in [XML workflow definitions](./crafting-xml-workflow-definitions.md) and run during workflow execution.
+Liferay's [workflow engine](../introduction-to-workflow.md) can be scripted using Groovy scripts embedded in [XML workflow definitions](./crafting-xml-workflow-definitions.md) and run during workflow execution.
 
 Here are the workflow scripting topics:
 
@@ -79,7 +79,7 @@ At virtually any point in a workflow, you can use Liferay's script engine to acc
 * Sending an email to the designated content approver with a list of people to contact if he is unable to review the content
 * Creating an alert to be displayed in the Alerts portlet for any User assigned to approve content
 
-The following workflow script is written using Groovy and is used with a `Condition` Node. The script uses Liferay's [asset framework](../../../developing-applications/data-frameworks/assets.html) to determine an asset's category and uses the category to determine the correct approval process automatically. If the asset is in the `legal` category, it is sent to the `Legal Review` task upon submission. Otherwise, the asset is sent to the `Default Review` task.
+The following workflow script is written using Groovy and is used with a `Condition` Node. The script uses Liferay's [asset framework](../../../developing-applications/data-frameworks/assets.md) to determine an asset's category and uses the category to determine the correct approval process automatically. If the asset is in the `legal` category, it is sent to the `Legal Review` task upon submission. Otherwise, the asset is sent to the `Default Review` task.
 
 ```xml
 <script>
@@ -196,6 +196,6 @@ Liferay's Kaleo Workflow Engine and Liferay's Script Engine makes for a powerful
 
 ## Additional Information
 
-* [Introduction to Workflow](../user-guide/introduction-to-workflow.md)
+* [Introduction to Workflow](../introduction-to-workflow.md)
 * [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console)
 * [Script Examples](../../../system-administration/using-the-script-engine/script-examples.md)

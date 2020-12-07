@@ -35,7 +35,7 @@ The comments area (below the preview area) lets you comment on and subscribe to 
 
 ### The Info Panel
 
-As mentioned above, clicking the *Info* icon (![Info](../../../images/icon-information.png)) opens the info panel. The top of the info panel displays the file's name, version, and [workflow status](../../../process-automation/workflow/user-guide/introduction-to-workflow.md).
+As mentioned above, clicking the *Info* icon (![Info](../../../images/icon-information.png)) opens the info panel. The top of the info panel displays the file's name, version, and [workflow status](../../../process-automation/workflow/introduction-to-workflow.md).
 
 There are two tabs in the info panel: Details, and Versions. Details is selected by default and shows the following:
 

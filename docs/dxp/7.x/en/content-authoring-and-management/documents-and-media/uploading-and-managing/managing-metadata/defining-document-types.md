@@ -1,6 +1,6 @@
 # Defining Document Types
 
-Document types are made of metadata fields and help users define the purpose of Document Library files. Document types also help users integrate files with other features like [search](../../../../using-search/README.md) and [workflow](../../../../process-automation/workflow/user-guide/introduction-to-workflow.md).
+Document types are made of metadata fields and help users define the purpose of Document Library files. Document types also help users integrate files with other features like [search](../../../../using-search/README.md) and [workflow](../../../../process-automation/workflow/introduction-to-workflow.md).
 
 To create a document type:
 

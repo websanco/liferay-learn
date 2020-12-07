@@ -50,7 +50,7 @@ Users can access their _Documents and Media_ repository in their file explorer o
 
 ### Edit
 
-Users can enable or disable [Workflow](../../process-automation/workflow/user-guide/activating-workflow.md) for all Document Types. To learn more about Workflows in general, see [Introduction to Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md).
+Users can enable or disable [Workflow](../../process-automation/workflow/using-workflows/activating-workflow.md) for all Document Types. To learn more about Workflows in general, see [Introduction to Workflow](../../process-automation/workflow/introduction-to-workflow.md).
 
 ![Select a Workflow definition.](./documents-and-media-ui-reference/images/07.png)
 

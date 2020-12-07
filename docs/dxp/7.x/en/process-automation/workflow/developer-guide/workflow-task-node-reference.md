@@ -67,7 +67,7 @@ Workflow tasks are completed by a User. Assignments make sure the right users ca
 * Resource actions
 * Specific Users
 
-Additionally, you can write a script to define the assignment. For an example, see the [single-approver-definition-scripted-assignment.xml](../user-guide/workflow-designer-overview/workflow-processes/single-approver-definition-scripted-assignment.xml).
+Additionally, you can write a script to define the assignment. For an example, see the [single-approver-definition-scripted-assignment.xml](../designing-and-managing-workflows/workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml).
 
 ```xml
 <assignments>

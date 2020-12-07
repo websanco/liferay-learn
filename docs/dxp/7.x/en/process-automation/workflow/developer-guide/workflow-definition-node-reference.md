@@ -47,7 +47,7 @@ If a notification or script is required in your State node, you can use an `acti
 
 _Condition nodes_ determine whether a condition is met and if so, transitions the workflow to the appropriate node. For example, if a submitted document is a contract, it must go to the Legal team; otherwise it goes to the Marketing team.
 
-Here's the `determine-branch` condition from the [Category Specific Approval](../user-guide/workflow-designer-overview/workflow-processes/category-specific-definition.xml) workflow definition:
+Here's the `determine-branch` condition from the [Category Specific Approval](../designing-and-managing-workflows/workflow-designer-overview/resources/category-specific-definition.xml) workflow definition:
 
 ```xml
 <condition>

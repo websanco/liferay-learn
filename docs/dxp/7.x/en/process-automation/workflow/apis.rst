@@ -4,5 +4,5 @@ APIs
 .. toctree::
    :maxdepth: 2
 
-.. include:: /process-automation/workflow/03-apis/README.rst
+.. include:: /process-automation/workflow/apis/README.rst
    :start-line: 2

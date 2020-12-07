@@ -26,7 +26,7 @@ To see how storage adapters work, deploy an example and then add some form data 
     docker start -i [container_name]
     ```
 
-1. Download and unzip [the DDM Storage Adapter project](./writing-a-form-storage-adapter/liferay-r2f1.zip).
+1. Download and unzip [the DDM Storage Adapter project](./writing-a-form-storage-adapter/resources/liferay-r2f1.zip).
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/process-automation/forms/developer-guide/liferay-r2f1.zip -O
@@ -64,7 +64,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 1. Under *Select a Storage Type*, choose the JSON Wrapper type and click _Done_.
 
-1. Add a [Text Field](./../user-guide/creating-forms.md) to the form, publish the form, and submit it a few times.
+1. Add a [Text Field](../creating-and-managing-forms/creating-forms.md) to the form, publish the form, and submit it a few times.
 
 1. To verify the form data were persisted, go to the Form's Records:
 
@@ -305,9 +305,9 @@ Now verify that it's working:
 
 1. From the select list field called *Select a Storage Type*, choose the File System type and click _Done_.
 
-1. Add a [Text Field](./../user-guide/creating-forms.md) to the form, publish the form, and submit it a few times.
+1. Add a [Text Field](../creating-and-managing-forms/creating-forms.md) to the form, publish the form, and submit it a few times.
 
-1. To verify the form records were written to the container's file system, check the log. You'll see messages like: 
+1. To verify the form records were written to the container's file system, check the log. You'll see messages like:
 
    ```bash
    2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Saved a file with the ID 36242

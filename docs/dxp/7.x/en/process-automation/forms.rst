@@ -4,9 +4,18 @@ Forms
 .. toctree::
    :maxdepth: 3
 
-   forms/user_guide.rst
+   forms/creating_and_managing_forms.rst
+   forms/sharing_forms_and_managing_submissions.rst
+   forms/form_rules.rst
+   forms/data_providers.rst
+   forms/dynamic_data_lists.rst
+   forms/kaleo_forms.rst
    forms/developer_guide.rst
    forms/apis.rst
 
-.. include:: /process-automation/forms/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: ../landingpage_template.html
+
+.. raw:: html
+   :file: forms/landing.html
+   

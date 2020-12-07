@@ -1,0 +1,129 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Introduction to Forms',
+					sectionURL: 'process-automation/forms/introduction-to-forms.html',
+				},
+				{
+					sectionName: 'Creating and Managing Forms',
+					sectionURL: 'process-automation/forms/creating_and_managing_forms.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Creating Forms',
+							url: 'process-automation/forms/creating-and-managing-forms/creating-forms.html'
+						},
+						{
+							name: 'Customizing Form Layouts',
+							url: 'process-automation/forms/creating-and-managing-forms/customizing-form-layouts.html'
+						},
+						{
+							name: 'Forms Field Types Reference',
+							url: 'process-automation/forms/creating-and-managing-forms/forms-field-types-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Sharing Forms and Managing Submissions',
+					sectionURL: 'process-automation/forms/sharing_forms_and_managing_submissions.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Sharing Forms',
+							url: 'process-automation/forms/sharing-forms-and-managing-submissions/sharing-forms.html'
+						},
+						{
+							name: 'Managing Form Entries',
+							url: 'process-automation/forms/sharing-forms-and-managing-submissions/managing-form-entries.html'
+						},
+						{
+							name: 'Enabling CAPTCHA on Form Submissions',
+							url: 'process-automation/forms/sharing-forms-and-managing-submissions/enabling-captcha-on-form-submissions.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Form Rules',
+					sectionURL: 'process-automation/forms/form_rules.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Form Rules Overview',
+							url: 'process-automation/forms/form-rules/form-rules-overview.html'
+						},
+						{
+							name: 'Using the Require Rule',
+							url: 'process-automation/forms/form-rules/using-the-require-rule.html'
+						},
+						{
+							name: 'Using the Autofill Rule',
+							url: 'process-automation/forms/form-rules/using-the-autofill-rule.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Data Providers',
+					sectionURL: 'process-automation/forms/data_providers.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Data Providers Overview',
+							url: 'process-automation/forms/data-providers/data-providers-overview.html'
+						},
+						{
+							name: 'Using Data Providers to Populate Form Options',
+							url: 'process-automation/forms/data-providers/using-data-providers-to-populate-form-options.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Dynamic Data Lists',
+					sectionURL: 'process-automation/forms/dynamic_data_lists.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Getting Started with Dynamic Data Lists',
+							url: 'process-automation/forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.html'
+						},
+						{
+							name: 'Using Templates to Display Forms and Lists',
+							url: 'process-automation/forms/dynamic-data-lists/using-templates-to-display-forms-and-lists.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Kaleo Forms (Coming Soon)',
+					sectionURL: 'process-automation/forms/kaleo_forms.html',
+				},
+				{
+					sectionName: 'Developer Guide',
+					sectionURL: 'process-automation/forms/developer_guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Managing Data Definitions (Coming Soon)',
+							url: 'process-automation/forms/developer-guide/managing-data-definitions.html'
+						},
+						{
+							name: 'Managing Data Records (Coming Soon)',
+							url: 'process-automation/forms/developer-guide/managing-data-records.html'
+						},
+						{
+							name: 'Managing Data Layouts (Coming Soon)',
+							url: 'process-automation/forms/developer-guide/managing-data-layouts.html'
+						},
+					]
+				},
+				{
+					sectionName: 'APIs (Coming Soon)',
+					sectionURL: 'process-automation/forms/apis.html',
+				},
+			]
+		}
+	})
+</script>

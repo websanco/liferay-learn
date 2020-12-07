@@ -184,7 +184,7 @@ Under App Builder's hood, Data Engine was improved to augment the developer expe
 
 ## Forms
 
-Since user-provided data is often collected using [web forms](../process-automation/forms/user-guide/introduction-to-forms.md), Liferay has provided a GUI and development tools to design forms that comply with GDPR requirements. 
+Since user-provided data is often collected using [web forms](../process-automation/forms/introduction-to-forms.md), Liferay has provided a GUI and development tools to design forms that comply with GDPR requirements. 
 
 ### Data Erasure (AKA GDPR Right to be Forgotten)
 

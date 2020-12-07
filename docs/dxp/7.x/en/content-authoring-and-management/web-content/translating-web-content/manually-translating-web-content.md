@@ -86,10 +86,10 @@ Once workflow is enabled, each published translation appears as an individual ta
 
 If edits are required, return to the web content translation page for article in review. When you have finished updating the your translation, resubmit it for further review.
 
-If your translation is approved, your changes are applied to the web content as with regular updates to web content. When applied, the changes cannot be reverted automatically. See [Introduction to Workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) for more information about building and using workflows.
+If your translation is approved, your changes are applied to the web content as with regular updates to web content. When applied, the changes cannot be reverted automatically. See [Introduction to Workflow](../../../process-automation/workflow/introduction-to-workflow.md) for more information about building and using workflows.
 
 ## Additional Information
 
 * [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)
 * [Exporting and Importing Translations](./exporting-and-importing-translations.md)
-* [Introduction to Workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md)
+* [Introduction to Workflow](../../../process-automation/workflow/introduction-to-workflow.md)

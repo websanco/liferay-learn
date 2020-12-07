@@ -1,6 +1,6 @@
 # Enabling or Disabling Order Workflows
 
-[Order workflows](./introduction-to-order-workflows.md) are a channel-specific setting that, if enabled, require the buyer or seller to give internal prior [approval](./approving-or-rejecting-orders-in-order-workflows.md) for an order before it can be [processed](../orders/processing-an-order.md). To learn how to enabling Workflow, see [Activating Workflow](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/user-guide/activating-workflow.html).
+[Order workflows](./introduction-to-order-workflows.md) are a channel-specific setting that, if enabled, require the buyer or seller to give internal prior [approval](./approving-or-rejecting-orders-in-order-workflows.md) for an order before it can be [processed](../orders/processing-an-order.md). To learn how to enabling Workflow, see [Activating Workflow](../../../../../dxp/7.x/en/process-automation/workflow/using-workflows/activating-workflow.md).
 
 This article documents how to enable and disable Order Workflows.
 
@@ -63,7 +63,7 @@ To disable an order workflow, select the _No Workflow_ option, and click _Save_.
 
 ## Additional Information
 
-Out-of-the-box, _Single Approver (Version 1)_ is the available order workflow. [Custom workflows](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/user-guide/introduction-to-workflow.html) can be created and may then be selected in the _Order Workflows_ tab.
+Out-of-the-box, _Single Approver (Version 1)_ is the available order workflow. [Custom workflows](../../../../../dxp/7.x/en/process-automation/workflow/introduction-to-workflow.md) can be created and may then be selected in the _Order Workflows_ tab.
 
 * [Introduction to Order Workflows](./introduction-to-order-workflows.md)
 * [Approving or Rejecting Orders in Order Workflows](approving-or-rejecting-orders-in-order-workflows.md)

@@ -1,6 +1,6 @@
 # 注文ワークフローの概要
 
-*注文ワークフロー* はチャンネル固有で設定でき、有効な場合、注文が[処理さ](../orders/processing-an-order.md)れる前に、買い手または売り手が事前[に承](./approving-or-rejecting-orders-in-order-workflows.md)認できるようにします。 DXPワークフローの詳細については、 [ワークフローの概要](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/user-guide/introduction-to-workflow.html)を参照してください。
+*注文ワークフロー* はチャンネル固有で設定でき、有効な場合、注文が[処理さ](../orders/processing-an-order.md)れる前に、買い手または売り手が事前[に承](./approving-or-rejecting-orders-in-order-workflows.md)認できるようにします。 DXPワークフローの詳細については、 [ワークフローの概要](../../../../../dxp/7.x/en/process-automation/workflow/introduction-to-workflow.md)を参照してください。
 
 ![注文ワークフロー](./introduction-to-order-workflows/images/01.png)
 

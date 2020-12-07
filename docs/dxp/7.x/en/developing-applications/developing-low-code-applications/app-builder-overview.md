@@ -6,7 +6,7 @@ App Builder is a low-code application development solution for Liferay DXP. Buil
 
 ![Two separate applications are deployed for this App Builder object.](./app-builder-overview/images/01.png)
 
-Why use App Builder when the [Liferay Forms](../../process-automation/forms/user-guide/introduction-to-forms.md) application includes similar form-building capabilities? Here's an overview of the differences:
+Why use App Builder when the [Liferay Forms](../../process-automation/forms/introduction-to-forms.md) application includes similar form-building capabilities? Here's an overview of the differences:
 
 | Capability | Liferay Forms | App Builder |
 |------------|:-------------:|:-----------:|

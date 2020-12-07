@@ -1,0 +1,76 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Introduction to Workflow',
+					sectionURL: 'process-automation/introduction-to-workflow.html',
+				},
+				{
+					sectionName: 'Designing and Managing Workflows',
+					sectionURL: 'process-automation/workflow/designing_and_managing_workflows.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Building Workflows',
+							url: 'process-automation/workflow/designing-and-managing-workflows/building-workflows.html'
+						},
+						{
+							name: 'Managing Workflows',
+							url: 'process-automation/workflow/designing-and-managing-workflows/managing-workflows.html'
+						},
+						{
+							name: 'Workflow Designer Overview',
+							url: 'process-automation/workflow/designing-and-managing-workflows/workflow-designer-overview.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using Workflows',
+					sectionURL: 'process-automation/workflow/using_workflows.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Activating Workflow',
+							url: 'process-automation/workflow/using-workflows/activating-workflow.html'
+						},
+						{
+							name: 'Reviewing Assets',
+							url: 'process-automation/workflow/using-workflows/reviewing-assets.html'
+						},
+						{
+							name: 'Using Workflow Metrics',
+							url: 'process-automation/workflow/using-workflows/using-workflow-metrics.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Developer Guide',
+					sectionURL: 'process-automation/workflow/develope_guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using the Script Engine in Workflow',
+							url: 'process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.html'
+						},
+						{
+							name: 'Crafting XML Workflow Definitions',
+							url: 'process-automation/workflow/developer-guide/crafting-xml-workflow-definitions.html'
+						},
+						{
+							name: 'Workflow Definition Node Reference',
+							url: 'process-automation/workflow/developer-guide/workflow-definition-node-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'APIs (Coming Soon)',
+					sectionURL: 'process-automation/apis.html',
+				},
+			]
+		}
+	})
+</script>

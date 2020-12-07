@@ -26,7 +26,7 @@ The _View Types_ button is to the left of the _Add_ button. Users can choose how
 
 | View Type | Description |
 | --- | --- |
-| Cards | Shows a card-like rendering of the blog entry, with the author's profile picture. Each card also contains the entry's timestamp, title, [workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md)) status (e.g., Approved, Draft, etc.), and an Actions menu. |
+| Cards | Shows a card-like rendering of the blog entry, with the author's profile picture. Each card also contains the entry's timestamp, title, [workflow](../../process-automation/workflow/introduction-to-workflow.md)) status (e.g., Approved, Draft, etc.), and an Actions menu. |
 | List | Shows the same information as the Cards view type, in a list with the author's profile picture instead of the blog entry's cover image. |
 | Table | Shows the same information as the other view types, in a list with no file renderings. |
 

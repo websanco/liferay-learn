@@ -1,6 +1,6 @@
 # Using Workflow with Documents and Media
 
-Users can [implement a Workflow](../../../process-automation/workflow/user-guide/activating-workflow.md) for their _Documents and Media_ files. (To learn more about Workflows in general, see [Introduction to Workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md).)
+Users can [implement a Workflow](../../../process-automation/workflow/using-workflows/activating-workflow.md) for their _Documents and Media_ files. (To learn more about Workflows in general, see [Introduction to Workflow](../../../process-automation/workflow/introduction-to-workflow.md).)
 
 The _Documents and Media_ application has its own separate workflow settings. For example, you can activate workflow for a specific [folder](../uploading-and-managing/creating-folders.md), so that every file uploaded into that folder must be reviewed first.
 
@@ -46,5 +46,5 @@ Users can also _disable_ workflow for specific folders (or sub-folders) even if 
 
 ## Additional Information
 
-* [Activating Workflow](../../../process-automation/workflow/user-guide/activating-workflow.md)
+* [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow.md)
 * [Documents and Media UI Reference](../documents-and-media-ui-reference.md)

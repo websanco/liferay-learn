@@ -58,5 +58,5 @@ For detailed instructions on creating App Builder objects, form views, and table
 
 * [App Builder Overview](./app-builder-overview.md)
 * [Creating a Standard Application](./creating-a-standard-application.md)
-* [Workflow](../../process-automation/workflow/user-guide/introduction-to-workflow.md)
+* [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
 * [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

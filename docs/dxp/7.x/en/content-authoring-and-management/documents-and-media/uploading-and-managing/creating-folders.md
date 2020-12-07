@@ -22,7 +22,7 @@ Upon creating the folder, it appears in the Document Library. Users can also cre
 
 ## Document Type Restrictions and Workflow
 
-After creating a folder, you can restrict what document types are allowed in it. You can also choose what [workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) (if any) to use for approving files added to or edited in the folder.
+After creating a folder, you can restrict what document types are allowed in it. You can also choose what [workflow](../../../process-automation/workflow/introduction-to-workflow.md) (if any) to use for approving files added to or edited in the folder.
 
 To change a folder's Document Type restrictions:
 
@@ -44,7 +44,7 @@ To change a folder's Document Type restrictions:
 
 ## Additional Information
 
-* [Activating Workflow](../../../process-automation/workflow/user-guide/activating-workflow.md#documents-and-media-folders)
+* [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow-workflow.md#documents-and-media-folders)
 * [Uploading Files](./uploading-files.md)
 * [Using the Media Gallery](../publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.md)
 * [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)
