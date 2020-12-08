@@ -18,7 +18,7 @@ The Advanced Configuration section contains additional options:
 
 **Max Terms:** Set the maximum number of facet terms to display, regardless of how many matching terms are found for the facet.
 
-**Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
+**Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results doesn't appear in the term result list.
 
 **Display Frequencies:** Choose whether or not to display the term frequencies.
 

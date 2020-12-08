@@ -14,9 +14,9 @@ To configure the Modified Facet, open the Options menu (![Click on the options i
 
 **Display Settings:** Choose between *Default*, *Compact Layout*, and *Label Layout*. The Default layout shows checkboxes next to each term but the Compact layout does not. The Label layout shows small clickable labels for each term.
 
-The Advanced Configuration allows you to modify, delete, or create time ranges:
+In Advanced Configuration, you can modify, delete, or create time ranges:
 
-The available time range aliases include:
+The available time range aliases include
 
     past-hour
     past-24-hours
@@ -24,7 +24,7 @@ The available time range aliases include:
     past-month
     past-year
 
-By default, all the time ranges end in `*`, which evaluates to *now*. For example, the past-week range is:
+By default, all the time ranges end in `*`, which evaluates to *now*. For example, the past-week range is
 
     [past-week TO *]
 

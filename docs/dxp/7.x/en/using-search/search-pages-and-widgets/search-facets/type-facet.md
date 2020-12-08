@@ -22,7 +22,7 @@ By default, all available Asset Types are displayed as facet terms:
 
 ## Configuring the Type Facet
 
-To configure the Type Facet, open the Options menu (![Click on the options icon of the search bar.](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
+To configure the Type Facet, open the Options menu (![options icon](../../../images/icon-app-options.png)) of the facet and click *Configuration*.
 
 ![Click on the Configuration option.](type-facet/images/02.png)
 
@@ -32,7 +32,7 @@ The Advanced Configuration section contains additional options:
 
 **Type Parameter Name:** Change the parameter name in the URL for the Facet. The default is *type*. 
 
-**Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results will not appear in the term result list.
+**Frequency Threshold:** Set the minimum frequency required for terms to appear in the list of facet terms. For example, if the frequency threshold of a facet is set to 3, a term with two matching results doesn't appear in the term result list.
 
 **Display Frequencies:** Choose whether or not to display the term frequencies.
 
