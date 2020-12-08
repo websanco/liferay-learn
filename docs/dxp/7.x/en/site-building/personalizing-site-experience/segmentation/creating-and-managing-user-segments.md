@@ -6,9 +6,9 @@ Using *Segments* you can create different groups of users based on a common set 
 
 > Available: Liferay 7.3+.
 
-You can combine existing Segments to create a new _Compound Segment_. The Compound Segment inherits the properties from the Segments it is based on, and updates the members automatically. You can further customize the Compound Segment by adding additional properties.
+You can combine existing Segments to create a new _Compound Segment_. The Compound Segment inherits the properties from the Segments it's based on and updates the members automatically. You can add additional properties to further customize the Compound Segment. 
 
-To understand how Compound Segments work, consider the following example. To provide a more personalized experience to your website visitors in the USA and Canada, you create two Segments with different properties, one Segment for each country. Later, you create a new standard Segment for North America visitors, where you manually copy the properties of the USA and Canada Segments. In this situation, when you change the properties of the "USA" or "Canada" Segments, the "North America" Segment doesn't inherit the changes. You need to manually update the "North America" segment to reflect these changes. However, if you create the "North America" segment as a Compound Segment, this Compound Segment automatically updates its definition and members when you change the "USA" or "Canada" Segments.
+To understand how Compound Segments work, consider the following example. Visitors from the USA and Canada have different needs, so you create two Segments with different properties, one Segment for each country. Later, you create a new standard Segment for North America visitors, where you manually copy the properties of the USA and Canada Segments. When you change the properties of the USA or Canada Segments, the North America Segment doesn't inherit the changes. You must manually update the North America segment to reflect these changes. However, if you create the North America segment as a Compound Segment, this Compound Segment automatically updates its definition and members when you change the USA or Canada Segments.
 
 ```important::
    You cannot use an existing Compound Segment to create a new one.
@@ -28,20 +28,22 @@ These steps describe how to create a new Segment:
 
 1. Click in the top text area and enter a name for your User Segment.
 
-1. From the *Properties* area, select the group and property to define your Segment and drag and drop the *Property* to the *Conditions* area.
+1. From the *Properties* area, select the group and property to define your Segment. Drag and drop the *Property* to the *Conditions* area.
 
-1. Configure the Conditions for your segment. From the *Condition* area you can:
+1. Configure the Conditions for your segment (see below). 
 
-    - Edit the comparison criteria using the comparison drop-down menu (A).
-    - Add or remove *Conditions* from the same *Properties* group, using the buttons next to the condition's name (B).
-    - Add conditions using a different *Properties* group, by dragging and dropping the *Property* (C).
-    - Combine the *Conditions* with *AND* and *OR* operators (D and E).
-
-        ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
+   ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
 
 1. Click *Save*.
 
-As you edit, a count of members meeting the criteria appears at the top of the *Conditions* area. You can click on *View Members* to see the list. This helps you determine if you are correctly defining the Segment.
+From the *Condition* area you have these options:
+
+- Edit the comparison criteria using the comparison drop-down menu (A).
+- Add or remove *Conditions* from the same *Properties* group, using the buttons next to the condition's name (B).
+- Add conditions using a different *Properties* group, by dragging and dropping the *Property* (C).
+- Combine the *Conditions* with *AND* and *OR* operators (D and E).
+
+As you edit, a count of members meeting the criteria appears at the top of the Conditions area. You can click on *View Members* to see the list. This helps you determine if you are correctly defining the Segment.
 
 ![You can view the list of Segment members at any time.](./creating-and-managing-user-segments/images/04.png)
 
