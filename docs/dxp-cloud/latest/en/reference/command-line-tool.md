@@ -1,6 +1,6 @@
 # Command-Line Tool
 
-Liferay's CLI tool can be used to view and manage your DXP Cloud services. Once installed, you can run `lcp --help` in your terminal to view available actions.
+The CLI tool can be used to view and manage your DXP Cloud services. Once installed, you can run `lcp --help` in your terminal to view available actions.
 
 * [Installing the CLI Tool](#installing-the-cli-tool)
 * [Upgrading the CLI Tool from Version 2 to 3](#upgrading-the-cli-tool-from-version-2-to-3)
@@ -44,7 +44,7 @@ You must first uninstall your current version before you can install and use ver
 
 ### Uninstalling Version 2 on Windows
 
-1. In Windows 10, go to *Control Panel* &rarr; *Programs* &rarr; *Uninstall a program*. Alternatively, for Windows 7 and 8, go to *Control Panel* &rarr; *Add or Remove Programs*.
+1. On Windows 10, go to *Control Panel* &rarr; *Programs* &rarr; *Uninstall a program*. Alternatively, for Windows 7 and 8, go to *Control Panel* &rarr; *Add or Remove Programs*.
 
 1. Select `lcp amd64-installer-0.3`
 
@@ -56,7 +56,7 @@ Verify that CLI version 2 has been uninstalled before installing version 3.
 
 ### Installing Version 3
 
-Once version 2 is uninstalled, you can following the [above instructions](#installing-the-cli) to install version 3 of the CLI tool.
+Once version 2 is uninstalled, you can following the [above instructions](#installing-the-cli-tool) to install version 3 of the CLI tool.
 
 ## Configuring the CLI Remote
 
