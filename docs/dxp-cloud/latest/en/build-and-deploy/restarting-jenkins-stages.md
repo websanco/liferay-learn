@@ -1,6 +1,6 @@
 # Restarting Jenkins Stages
 
-With DXP Cloud, you can configure the CI service to preserve Jenkins stashes. You can then use them to restart specific stages in a Jenkins build.
+The CI service can be configured to preserve Jenkins stashes. You can then use the stashes to restart specific stages in a Jenkins build.
 
 ## Preserving Jenkins Stashes
 
