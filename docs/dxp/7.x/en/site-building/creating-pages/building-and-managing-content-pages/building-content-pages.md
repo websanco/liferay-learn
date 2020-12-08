@@ -6,16 +6,16 @@
 
 ## Editing Options in Content Pages
 
-The Liferay DXP Page Editor includes different edit-aiding options.
+The Liferay Page Editor helps you design your pages. 
 
 ### Page Editing Modes
 
 When you open Page Editor, you can edit your content in two ways:
 
-- *Page Design*: This mode is available when you have permission to update the page and the page content.
-- *Content Edition*: This mode is available when you have permission to update the page but not the page content.
+- *Page Design*: You can design pages when you have permission to update the page and the page content.
+- *Content Edition*: You can edit content when you have permission to update the page but not the page content.
 
-    ![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
+![Choose between Page Design or Content Edition editing modes.](building-content-pages/images/18.png)
 
 The editing options available in the Content Page sidebar depend on the editing mode you choose.
 
@@ -23,13 +23,13 @@ The editing options available in the Content Page sidebar depend on the editing 
 
 1. You can revert any action using the *Undo* (![Preview](../../../images/icon-undo.png)) or *Redo* (![Preview](../../../images/icon-redo.png)) buttons, or you can return to a previous version of your edits using the *History* (![Preview](../../../images/icon-time.png)) button.
 
-    ![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
+   ![Revert your changes using the Undo, Redo, and History buttons.](./building-content-pages/images/17.png)
 
 1. To preview your Content Page, click the *Preview* button (![Preview](../../../images/icon-preview.png)).
 
 ### Screen Layout Controls
 
-You can also use the screen layout controls to target a specific screen layout. For example, if you want to optimize the page layout for phones, you can select the option to edit and preview the content using a phone screen layout. These layout controls are:
+You can also use the screen layout controls to target a specific screen layout. For example, if you want to optimize the page layout for phones, you can edit and preview the content using a phone screen layout. These layout controls include
 
 - Desktop
 - Tablet
@@ -172,7 +172,7 @@ You can also specify a background image for a layout by [setting the layout styl
 
 1. Click the Grid fragment you want to configure.
 1. In the Content Page sidebar, under the *Styles* tab, select the style options for your content.
-1. Under the *General* tab, select the *Number of Modules* (from 1 to 6) to specify the number of columns for the grid.
+1. Under the General tab, select the *Number of Modules* (from 1 to 6) to specify the number of columns for the grid.
 1. Click *Show Gutter* to show the spacing between modules.
 
 You can adjust the module's width to customize the layout:
@@ -180,7 +180,7 @@ You can adjust the module's width to customize the layout:
 1. Click on the Grid to select it. A blue dot appears between each of the modules, indicating that they can be resized.
 1. Click one of the blue dots and drag to the left or right to adjust the size of the module.
 
-    ![You can adjust the spacing of modules in a Layout.](./building-content-pages/images/16.gif)
+   ![You can adjust the spacing of modules in a Layout.](./building-content-pages/images/16.gif)
 
 ### Copying a Fragment
 
@@ -256,7 +256,7 @@ Content Pages, like Widget Pages, are built by dragging and dropping elements on
 
 ![A 3 Column and 1 Column layout stacked on top of each other.](./building-content-pages/images/21.png)
 
-**Components** are small design elements or pieces that add functionality to the page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the page inside a Layout. If you add a component outside an existing Layout, a one-column layout is automatically added to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece. 
+**Components** are small design elements or pieces that add functionality to the page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the page inside a Layout. If you add a component outside an existing Layout, a one-column layout is added automatically to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece. 
 
 ![Here are several of Liferay's out of the box components arranged in the layout you saw previously.](./building-content-pages/images/22.png)
 
