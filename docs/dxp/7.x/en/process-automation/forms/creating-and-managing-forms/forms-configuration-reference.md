@@ -1,29 +1,29 @@
 # Forms Configuration Reference
 
-Most of the time you can find documentation for Forms configuration within the articles documenting Forms features. By contrast, this article provides an overview of all the Forms configurations so you can quickly find a configuration you need.
+Here's an overview of all the Forms configurations so you can quickly find a configuration you need.
 
 ## Forms Options
 
-You can export and import forms between Sites to save time and not have to recreate them. To access the _Export / Import_ menu, navigate to _Site Administration_ &rarr; _Content and Data_  &rarr; _Forms_. Click the ![Options](../../../images/icon-options.png) icon in the upper right then _Export / Import_.
+You can export and import forms between Sites. To access the _Export / Import_ menu, navigate to _Site Administration_ &rarr; _Content and Data_  &rarr; _Forms_. Click the ![Options](../../../images/icon-options.png) icon in the upper right then _Export / Import_.
 
 ![You can export or import forms.](./forms-configuration-reference/images/01.png)
 
- See [Exporting and Importing Forms](./exporting-and-importing-forms.md) and [Importing and Exporting Pages and Content](../../../site-building/building-sites/importing-exporting-pages-and-content.md) to learn more.
+See [Exporting and Importing Forms](./exporting-and-importing-forms.md) and [Importing and Exporting Pages and Content](../../../site-building/building-sites/importing-exporting-pages-and-content.md) to learn more.
 
 ## Form Settings
 
-Each form has its own _Settings_ menu.
+Each form has its own Settings menu.
 
-To access the Settings menu, choose the desired form (for example, _Guest Survey Feedback_). Click ![Options](../../../images/icon-options.png) icon in the upper right then _Settings_.
+To access the Settings menu, choose the desired form (for example, _Guest Survey Feedback_). Click the ![Options](../../../images/icon-options.png) icon in the upper right then _Settings_.
 
 ### Form Options
 
-![Clicking the Form Options tab allows you to configure the following settings.](./forms-configuration-reference/images/02.png)
+![Clicking the Form Options contains these settings.](./forms-configuration-reference/images/02.png)
 
 | Field | Description |
 | --- | --- |
-| Require User Authentication | Requires users to sign in before submitting the form |
-| CAPTCHA | Requires users to answer CAPTCHA questions when submitting the form |
+| Require User Authentication | Requires sign in before submitting the form |
+| CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
 | Save Answers Automatically | Saves answers to the form automatically |
 | Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
 | Select a Storage Type | Sets JSON as the default storage type; not editable. |
@@ -31,7 +31,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 
 ### Email Notifications
 
-On the _Email Notifications_ tab, you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) to learn more.
+Here you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) to learn more.
 
 ![You can add notifications to a form.](./forms-configuration-reference/images/03.png)
 
@@ -46,31 +46,29 @@ To learn more, see [Configuring Form Notifications](./configuring-form-notificat
 
 ## Form Widget Configuration
 
-You can configure the _Form_ widget deployed to a Site Page. To access the _Configuration_ menu, click the ![Options](../../../images/icon-app-options.png) icon next to the widget title then _Configuration_.
+You can configure the _Form_ widget deployed to a Site Page. To access the _Configuration_ menu, click the ![Options](../../../images/icon-app-options.png) icon next to the widget title &rarr; _Configuration_.
 
 ### Setup
 
-On the _Setup_ tab, you can choose the desired Form to be used in this widget.
+Here you can choose the desired Form to be used in this widget.
 
 ![Select the desired form to be used in this widget.](./forms-configuration-reference/images/04.png)
 
 ### Sharing
 
-On the _Sharing_ tab, you can embed this application on other platforms besides DXP.
+Here you can embed this application on other platforms besides DXP.
 
 ![Select the desired platform where the Forms app can be embedded in.](./forms-configuration-reference/images/05.png)
 
 ### Scope
 
-On the _Scope_ tab, you can change the widget's [scope](https://help.liferay.com/hc/articles/360028819992-Widget-Scope) from Global, Site, or Page.
+Here you can change the widget's [scope](../../../site-building/site-settings/scope.md) from Global, Site, or Page.
 
 ![Select the desired scope for the Form Widget.](./forms-configuration-reference/images/06.png)
 
 ## Instance Settings
 
-There are several Forms configuration which can be configured across a DXP Instance.
-
-To access the Instance settings:
+There are several ways Forms can be configured across an Instance.
 
 1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
 1. Click _Instance Settings_.
@@ -83,13 +81,13 @@ To access the Instance settings:
 
 | Field | Description |
 | --- | --- |
-| Autosave Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
+| Auto-save Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
 | CSV Export | Determines whether administrators can download Form Entries as CSVs. |
 | Default Display View | Sets how the Forms are displayed in the search container. |
 
 ## System Settings
 
-There are several system-wide Forms configuration.
+There are several system-wide Forms configurations.
 
 1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
 1. Click _System Settings_.
@@ -108,7 +106,7 @@ You can configure the _Form Navigator_ under the _System Scope_. Click _Add_ to 
 
 ### Site Scope
 
-Use the Site Scope settings to manage each Form's behavior. These are the similar to those in the Instance setting.
+Use the Site Scope settings to manage each Form's behavior. These are the similar to those in Instance Settings.
 
 ![You can configure System-wide Forms settings.](./forms-configuration-reference/images/08.png)
 
@@ -121,4 +119,4 @@ Use the Site Scope settings to manage each Form's behavior. These are the simila
 ## Additional Information
 
 * [Forms Permissions Reference](./forms-permissions-reference.md)
-* [Widget Scope](https://help.liferay.com/hc/articles/360028819992-Widget-Scope)
+* [Widget Scope](../../../site-building/site-settings/scope.md)
