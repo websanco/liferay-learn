@@ -51,40 +51,52 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     ./bin/elasticsearch-certutil ca --ca-dn CN=elastic-ca
     ```
 
-    This generates a file called `elastic-stack-ca.p12`.
+   This generates a file called `elastic-stack-ca.p12`. 
 
-1. Move the `.p12` file to the `[Elasticsearch Home]/config/certs` folder.
+   To generate the certificate authority cert and private key in PEM format:
+
+   ```bash
+   ./bin/elasticsearch-certutil ca --pem --ca-dn CN=elastic-ca
+   ```
+
+1. Move the certificate authority file(s) file to the `[Elasticsearch Home]/config/certs` folder.
 
 1. Generate X.509 certificates and private keys using the CA you created:
 
 
    To generate certificates and keys in `PKCS#12` format run
 
-    ```bash
-    ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
-    ```
+   ```bash
+   ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
+   ```
 
    To generate certificates and keys in `PEM` format run
     
-    ```bash
-    ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
-    ```
+   ```bash
+   ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
+   ```
 
-    ```note::
-       On Liferay 7.3 only the following keystore types can be used in the Elasticsearch 7 connector configuration: https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types
-    ```
+   To generate `PEM` format node certificates and keys from the `PKSC#12` certificate authority, run
 
-    To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and Liferay servers) use comma-separated lists when enumerating the DNS names and IP addresses:
+   ```bash
+   ./bin/elasticsearch-certutil cert --pem --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
+   ```
 
-    ```
-    ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost,example.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
-    ```
+   ```note::
+      On Liferay 7.3 only the following keystore types can be used in the Elasticsearch 7 connector configuration: https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types
+   ```
 
-    The `elasticsearch-certutil cert` command generates another file called `elastic-nodes.p12` (feel free to name it differently).
+   To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and Liferay servers) use comma-separated lists when enumerating the DNS names and IP addresses:
 
-    ```note::
-       The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case in a form of a ZIP file: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archives' contents in the *[Elasticsearch Home]/config/certs* folder.
-    ```
+   ```bash
+   ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost,example.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
+   ```
+
+   The `elasticsearch-certutil cert` command generates another file called `elastic-nodes.p12` (feel free to name it differently).
+
+   ```note::
+      The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case in a form of a ZIP file: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archives' contents in the *[Elasticsearch Home]/config/certs* folder.
+   ```
 
 1. Move `elastic-nodes.p12` to the `[Elasticsearch Home]/config/certs` folder.
 
