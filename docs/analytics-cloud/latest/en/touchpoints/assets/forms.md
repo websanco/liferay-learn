@@ -1,6 +1,6 @@
 # Forms
 
-[Forms](../../../../../dxp/7.x/en/process-automation/forms/introduction-to-forms.md) are important direct data gathering tools for enterprises. Are your web forms providing you invaluable information or turning users away? Analytics Cloud gives you important insights.
+[Forms](https://learn.liferay.com/dxp/7.x/en/process-automation/forms/introduction-to-forms.html) are important direct data gathering tools for enterprises. Are your web forms providing you invaluable information or turning users away? Analytics Cloud gives you important insights.
 
 In Analytics Cloud, find the Touchpoints section of the menu and click Assets. There are four tabs, each displaying a paginated list of the Asset Type indicated by the tab title. Click Forms.
 
