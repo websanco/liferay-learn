@@ -4,9 +4,9 @@ Enter a keyword in the Search Bar and click the Search button. The default searc
 
 ![Example page of search results.](facets/images/01.png)
 
-A facet aggregates search results by a common characteristic. This makes it easier for users to filter through the search results. By default, Liferay DXP includes the following facets:
+A facet aggregates search results by a common characteristic. This makes it easier to filter through the search results. By default, Liferay includes the following facets:
 
-**Site Facet:** Filters results by their site.
+**Site Facet:** Filters results by their Site.
 
 **Type Facet:** Filters results by the Asset Type.
 
@@ -26,7 +26,7 @@ Each item in a facet (selected using the checkbox) is called a *Facet Term* (*te
 
 ## Using Facets
 
-To use facets, simply check the terms to filter your search results. For example, if you were searching for documents related to Apollo, you can check a term in the Type facet.
+To use facets, check the terms to filter your search results. For example, if you were searching for documents related to Apollo, you can check a term in the Type facet.
 
 ![Apollo search results filtered by type.](facets/images/02.png)
 
@@ -38,9 +38,9 @@ In this way, you can pare down your search results.
 
 ## Multiple Facet Selection
 
-As seen in the example above, selecting terms in different facets are subtractive. That is, only results that match all of the filter criteria is returned.
+As seen in the example above, selecting terms in different facets is subtractive. That is, only results that match all of the filter criteria is returned.
 
-However, selecting terms within an individual facet is additive. That is, the combined results for each term will be returned. For example, if you wanted to filter the search results for both the Apollo 11 folder and Apollo 14 folder, you could check both terms.
+However, selecting terms within an individual facet is additive. That is, the combined results for each term are returned. For example, if you wanted to filter the search results for both the Apollo 11 folder and Apollo 14 folder, you could check both terms.
 
 ![Apollo search results for both folders.](facets/images/04.png)
 
@@ -50,7 +50,7 @@ The Search functionality uses friendly search URLs for facet filtering. With def
 
     http://localhost:8080/web/guest/search?q=test
 
-Selecting a facet term adds a new parameter to the above URL. For example selecting Blogs Entry from the Type facet results in this URL:
+Selecting a facet term adds a new parameter to the above URL. For example, selecting Blogs Entry from the Type facet results in this URL:
 
     http://localhost:8080/web/guest/search?q=test&type=com.liferay.blogs.model.BlogsEntry
 
