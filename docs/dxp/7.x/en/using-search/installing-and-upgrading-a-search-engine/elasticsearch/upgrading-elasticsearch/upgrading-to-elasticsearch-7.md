@@ -32,6 +32,8 @@ To upgrade an existing Elasticsearch server (or cluster) to Elasticsearch 7,
 
 1. Re-index all search and spell check indexes.
 
+1. Restore Search Tuning indexes from the snapshot. (If you were previously using these features so you may have data stored in these indexes.)
+
 1. Verify that Search Tuning entries have been carried over.
 
 ## Upgrading Elasticsearch
