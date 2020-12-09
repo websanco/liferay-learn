@@ -1,6 +1,6 @@
 # Creating and Managing User Segments
 
-Using *Segments* you can create different groups of users based on a common set of properties, like user *Job Title*, or user *Language*. For a list of the properties you can use to define Segments, see [Segments Editor UI Reference](./segments-editor-ui-reference.md). In addition to the exiting properties, you can add [Custom Fields](../../../../system-administration/custom-fields/custom-fields.md) for User and Organization groups and use these fields on you Segment criteria.
+Using *Segments* you can create different groups of users based on a common set of properties, like user *Job Title*, or user *Language*. For a list of the properties you can use to define Segments, see [Segments Editor UI Reference](./segments-editor-ui-reference.md). In addition to the exiting properties, you can add [Custom Fields](../../../system-administration/configuring-liferay/adding-custom-fields.md) for User and Organization groups and use these fields on you Segment criteria.
 
 ## Compound Segments
 
