@@ -97,7 +97,7 @@ The renaming of apps and configurations has the following upgrade impacts:
    server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
    ```
 
-Liferay 7.3 supports only Elasticsearch 7.9.0+ via the out-of-the-box Liferay Connector to Elasticsearch 7. The matrix of pre-upgrade stacks you are migrating from is more numerous, and it's important to understand the high-level steps required to safely navigate from your existing stack to the Liferay 7.3 stack.  The most basic scenario includes
+Liferay 7.3 supports only Elasticsearch 7.9+ via the out-of-the-box Liferay Connector to Elasticsearch 7. The matrix of pre-upgrade stacks you are migrating from is more numerous, and it's important to understand the high-level steps required to safely navigate from your existing stack to the Liferay 7.3 stack.  The most basic scenario includes
 
 ## What's Next 
 
