@@ -3,7 +3,7 @@
 Structures define available fields for creating Web Content, while Web Content Templates define how a [Structure's](../web-content-structures/creating-structures.md) content is presented on a page. A Web Content Template can be associated with a Structure or even [embedded in another Web Content Template](./embedding-widgets-in-templates.md#embedding-other-templates). Changes in the Structure may require changes in the associated Web Content Template, if a Structure field name referenced in the Template is renamed or removed.
 
 ```note::
-   Web Content Templates are written in the FreeMarker Template Language (FTL). If desired, template creation can be disabled for a DXP installation. To do this, open the *Control Panel* tab in the Global Menu, and go to *Configuration* → *System Settings* → *Dynamic Data Mapping* → *Dynamic Data Mapping Web*. Then, uncheck *Enable Template Creation*, and click *Save*.
+   Web Content Templates are written in the FreeMarker Template Language (FTL). If desired, template creation can be disabled. To do this, open the *Control Panel* tab in the Global Menu and go to *Configuration* → *System Settings* → *Dynamic Data Mapping* → *Dynamic Data Mapping Web*. Then, uncheck *Enable Template Creation*, and click *Save*.
    
    Once disabled, Users can no longer access creation options for Web Content Templates. However, this does not affect existing templates.
 ```
