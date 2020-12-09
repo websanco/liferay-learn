@@ -5,7 +5,7 @@ Upgrading Liferay requires some additional steps to upgrade the search experienc
 - Backing up your Elasticsearch indexes
 - Installing Elasticsearch 7.9+ (and the plugins Liferay requires)
 - Connecting Liferay to Elasticsearch (may require a new connector)
-- Re-indexing the Workflow Metrics, Company, and System indexes from their dedicated user interfaces
+- Re-indexing the Workflow Metrics, Company, and System indexes from their dedicated user interfaces (these can be restored from the [upgraded database](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md))
 - Restoring the Search Tuning indexes from a snapshot (when upgrading from Liferay DXP 7.2 FP2+/SP1+)
 
 ## Search Upgrade Overview
