@@ -170,6 +170,10 @@ On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/work
 
 1. Click _Reindex All_.
 
+```note::
+   If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the `snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`__. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
+```
+
 Now Liferay is indexing content into your remote Elasticsearch 7 installation.
 
 ## Available Liferay Connector Applications

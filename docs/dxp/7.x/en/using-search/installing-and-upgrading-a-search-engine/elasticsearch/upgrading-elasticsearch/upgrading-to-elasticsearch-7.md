@@ -40,7 +40,7 @@ To upgrade an existing Elasticsearch server (or cluster) to Elasticsearch 7,
 
 If you are using a rolling-restart eligible version (`6.8.x`), doing a [rolling upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/rolling-upgrades.html) is the recommended way to ugprade your Elasticsearch cluster. Otherwise, follow the [full cluster restart upgrade ](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/restart-upgrade.html) guide.
 
-If you've installed a new Elasticsearch server, most Liferay indexes can be restored by triggering a [re-index](#re-index) from the UI, once the Liferay [database is upgraded](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md). However, the search tuning indexes and any custom indexes not backed by database storage must be restored from a [snapshot of the pre-upgrade indexes](./backing-up-elasticsearch.md#backing-up-and-restoring-search-tuning-indexes).
+If you've installed a new Elasticsearch server and want to index your pre-upgrade data, most Liferay indexes can be restored by triggering a [re-index](#re-index) from the UI, once the Liferay [database is upgraded](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md). However, the Search Tuning (Result Rankings and Synonyms) indexes and any custom indexes not backed by database storage must be restored from a [snapshot of the pre-upgrade indexes](./backing-up-elasticsearch.md#backing-up-and-restoring-search-tuning-indexes).
 
 ## Blacklisting Elasticsearch 6
 
