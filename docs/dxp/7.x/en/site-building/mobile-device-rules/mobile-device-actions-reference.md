@@ -16,7 +16,7 @@ By default, there are four kinds of actions that can be configured for mobile fa
 | **Site Redirect** | Sends mobile users to a different Site on your portal. In some cases, mobile content could be created on a mirror of your Site. |
 
 ```tip::
-   DXP was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves using DXP out of the box. Certain features, like URL Redirects, can be disruptive and frustrating for users if used improperly.
+   Liferay Portal/DXP was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves out-of-the-box. Certain features, like URL Redirects, can be disruptive and frustrating if used improperly.
 ```
 
 ## Additional Information
