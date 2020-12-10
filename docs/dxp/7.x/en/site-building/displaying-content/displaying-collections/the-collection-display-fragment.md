@@ -1,10 +1,8 @@
 # The Collection Display Fragment
 
-The Collection Display fragment is a convenient and flexible way out-of-the-box to display Collections on your Site. For more information about Collections, see [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
+The Collection Display fragment is a convenient and flexible out-of-the-box way to display Collections on your Site. For more information about Collections, see [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
 
 ## Displaying a Collection in a Collection Display Fragment
-
-Use the following steps to display a Collection in a Collection Display fragment on any Content Page:
 
 1. Add a collection if you don't already have one. See [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md) for more information.
 
@@ -18,7 +16,7 @@ Use the following steps to display a Collection in a Collection Display fragment
 
 1. Click the button to select a Collection for the fragment to display in the *General* section of the panel:
 
-    ![Click the button to select a Collection for the Collection Display fragment.](./the-collection-display-fragment/images/01.png)
+   ![Click the button to select a Collection for the Collection Display fragment.](./the-collection-display-fragment/images/01.png)
 
 The Collection Display fragment is now on the page and displaying the selected Collection.
 
@@ -26,7 +24,7 @@ The Collection Display fragment is now on the page and displaying the selected C
 
 After you have added a Collection Display fragment to a page, you can configure it while you are still editing the page.
 
-Selecting a Collection divides the fragment into sections for each asset in the collection. The style to display the assets in, the number of columns, and the max number of assets to display in the fragment are all configurable via new options that appear under the *General* configuration after you've selected a Collection.
+Selecting a Collection divides the fragment into sections for each asset in the collection. The style to display the assets in, the number of columns, and the max number of assets to display in the fragment are all configurable via new options that appear under the General configuration after you've selected a Collection.
 
 ![Click on a Collection Display fragment with a configured Collection to reveal more configuration options.](./the-collection-display-fragment/images/02.png)
 
