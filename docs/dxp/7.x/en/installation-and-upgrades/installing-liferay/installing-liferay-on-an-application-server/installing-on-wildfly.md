@@ -28,28 +28,16 @@ Installing Liferay DXP on WildFly requires the following steps:
 
 1. Create the folder `$WILDFLY_HOME/modules/com/liferay/portal/main` if it does not already exist and extract the Dependencies ZIP JARs here.
 1. Download a database driver `.jar` file and copy it into the same folder. For a list of supported databases, see Liferay's [Support Matrix](https://help.liferay.com/hc/en-us/articles/360049238151).
-1. Create the file `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder and declare all the dependencies:
+1. Create the file `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
 
     ```xml
     <?xml version="1.0"?>
 
     <module xmlns="urn:jboss:module:1.0" name="com.liferay.portal">
         <resources>
-            <resource-root path="com.liferay.petra.concurrent.jar" />
-            <resource-root path="com.liferay.petra.executor.jar" />
-            <resource-root path="com.liferay.petra.function.jar" />
-            <resource-root path="com.liferay.petra.io.jar" />
-            <resource-root path="com.liferay.petra.lang.jar" />
-            <resource-root path="com.liferay.petra.memory.jar" />
-            <resource-root path="com.liferay.petra.nio.jar" />
-            <resource-root path="com.liferay.petra.process.jar" />
-            <resource-root path="com.liferay.petra.reflect.jar" />
-            <resource-root path="com.liferay.petra.string.jar" />
-            <resource-root path="com.liferay.registry.api.jar" />
-            <resource-root path="hsql.jar" />
-            <resource-root path="[place your database driver here]" />
-            <resource-root path="portal-kernel.jar" />
-            <resource-root path="portlet.jar" />
+            <resource-root path="[place your database vendor's JAR file name here]" />
+            <resource-root path="[place a Liferay dependencies ZIP JAR file name here]" />
+            <!-- Add a resource-root element for each Liferay dependencies ZIP JAR -->
         </resources>
         <dependencies>
             <module name="javax.api" />
@@ -61,7 +49,13 @@ Installing Liferay DXP on WildFly requires the following steps:
     </module>
     ```
 
-    Replace the indicated `resource-root` element with the driver JAR for your database.
+    Replace `[place your database vendor's JAR file name here]` with the driver JAR for your database.
+
+    For each JAR in the Liferay dependencies ZIP, add a `resource-root` element with its `path` attribute set to the JAR name. For example, add a `resource-root` element like this for the `com.liferay.petra.concurrent.jar` file:
+
+    ```xml
+    <resource-root path="com.liferay.petra.concurrent.jar" />
+    ```
 
 1. Create an `osgi` folder in your [Liferay Home](../../reference/liferay-home.md) folder. Extract the OSGi Dependencies ZIP file that you downloaded into the `[Liferay Home]/osgi` folder.
 
