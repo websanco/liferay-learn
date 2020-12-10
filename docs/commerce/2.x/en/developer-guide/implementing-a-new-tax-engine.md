@@ -22,7 +22,7 @@ In this section, we will get an example tax engine up and running on your instan
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Tax Engine](./liferay-q4b9.zip).
+1. Download and unzip the [Acme Commerce Tax Engine](./liferay-q4b9.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-q4b9.zip -O
@@ -48,7 +48,11 @@ In this section, we will get an example tax engine up and running on your instan
     STARTED com.acme.q4b9.impl_1.0.0
     ```
 
-1. Verify that the example tax engine was added. Open your browser to `https://localhost:8080` and navigate to _Site Administration_ → _Commerce_ → _Settings_ → _Taxes_ → _Tax Calculations_. The new tax engine ("Flat Tax") will be present in the list shown.
+1. Verify that the example tax engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Channels_. Edit a channel. The new tax engine ("Q4B9 Commerce Tax Engine") will be present in the list shown.
+
+```note::
+   In Commerce 2.1 and earlier, find the tax engines by navigating to _Site Administration_ → _Commerce_ → _Settings_ → _Taxes_ → _Tax Calculations_.
+```
 
 ![New tax engine](./implementing-a-new-tax-engine/images/02.png "New tax engine")
 
@@ -64,13 +68,8 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
-    property = "commerce.tax.engine.key=" + Q4B9CommerceTaxEngine.KEY,
-    service = CommerceTaxEngine.class
+    property = "commerce.tax.engine.key=q4b9", service = CommerceTaxEngine.class
 )
-public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the tax engine so that Liferay Commerce can distinguish the new engine from others in the [tax engine registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceTaxEngineRegistryImpl.java). Reusing a key that is already in use will override the existing associated tax engine.
@@ -91,7 +90,7 @@ public CommerceTaxValue getCommerceTaxValue(
 public String getDescription(Locale locale);
 ```
 
-> This returns a brief description of our tax engine. See the implementation in [Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java) for a reference in retrieving the description with a language key.
+> This returns a brief description of our tax engine. See the implementation in [Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java) for a reference in retrieving the description with a language key.
 
 ```java
 public String getName(Locale locale);
@@ -114,28 +113,32 @@ public CommerceTaxValue getCommerceTaxValue(
         CommerceTaxCalculateRequest commerceTaxCalculateRequest)
     throws CommerceTaxEngineException {
 
-    BigDecimal flatTaxValue = new BigDecimal("1.50");
+    BigDecimal flatTaxValue = _ONE_POINT_FIVE_ZERO;
 
     if (commerceTaxCalculateRequest.isPercentage()) {
-        flatTaxValue = flatTaxValue.divide(new BigDecimal(100.0));
+        flatTaxValue = _ONE_POINT_FIVE_ZERO.divide(new BigDecimal(100.0));
 
         flatTaxValue = flatTaxValue.multiply(
             commerceTaxCalculateRequest.getPrice());
     }
 
-    return new CommerceTaxValue("flat-tax", KEY, flatTaxValue);
+    return new CommerceTaxValue(
+        "q4b9", "q4b9-commerce-tax-engine", flatTaxValue);
 }
+
+private static final BigDecimal _ONE_POINT_FIVE_ZERO = new BigDecimal(
+    "1.50");
 ```
 
 > The `CommerceTaxCalculateRequest` parameter contains information needed for making our calculation. For this example, we use the price from the `CommerceTaxCalculateRequest`, as well as a value indicating whether to apply the rate as a percentage. See [CommerceTaxCalculateRequest.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxCalculateRequest.java) to find more methods you can use with a `CommerceTaxCalculateRequest`.
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties) file within our module:
 
-```
-a-flat-tax-rate-that-does-not-adjust=A flat tax rate that does not adjust.
-flat-tax=Flat Tax
+```properties
+q4b9-commerce-tax-engine=Q4B9 Commerce Tax Engine
+this-tax-engine-serves-a-fixed-x-percent-flat-tax-rate=This tax engine serves a fixed {0} percent flat tax rate.
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

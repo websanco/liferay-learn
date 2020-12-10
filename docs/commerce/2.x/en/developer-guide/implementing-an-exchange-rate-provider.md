@@ -22,7 +22,7 @@ In this section, we will get an example exchange rate provider up and running on
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Exchange Rate Provider](./liferay-f2y1.zip).
+1. Download and unzip the [Acme Commerce Exchange Rate Provider](./liferay-f2y1.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-f2y1.zip -O
@@ -54,7 +54,11 @@ In this section, we will get an example exchange rate provider up and running on
     STARTED com.acme.f2y1.impl_1.0.0
     ```
 
-1. Verify that the example exchange rate provider was added. Open your browser to `https://localhost:8080` and navigate to _Control Panel_ → _Commerce_ → _Settings_ → _Currencies_ → _Exchange Rate_. The new exchange rate provider ("Example") will be present under the _Exchange Rate Provider_ dropdown.
+1. Verify that the example exchange rate provider was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Currencies_. The new exchange rate provider ("f2y1") will be present under the _Exchange Rate Provider_ dropdown.
+
+```note::
+   In Liferay Commerce 2.1 and earlier, find the exchange rates by navigating to _Control Panel_ → _Commerce_ → _Settings_ → _Currencies_ → _Exchange Rate_. The new exchange rate provider ("f2y1") will be present under the _Exchange Rate Provider_ dropdown.
+```
 
 ![New exchange rate provider](./implementing-an-exchange-rate-provider/images/02.png "New exchange rate provider")
 
@@ -70,7 +74,7 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true, property = "commerce.exchange.provider.key=F2Y1",
+    immediate = true, property = "commerce.exchange.provider.key=f2y1",
     service = ExchangeRateProvider.class
 )
 public class F2Y1ExchangeRateProvider implements ExchangeRateProvider {
@@ -154,7 +158,7 @@ private Map<String, Double> _exchangeRates = new HashMap<String, Double>() {
 };
 ```
 
-> This example uses a map of exchange rates. See [ECBExchangeRateProvider](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java) for a more practical use case. See `_getStaticExchangeRates` and `_getRateForCode` by visiting [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-an-exchange-rate-provider/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java).
+> This example uses a map of exchange rates. See [ECBExchangeRateProvider](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java) for a more practical use case. See `_getStaticExchangeRates` and `_getRateForCode` by visiting [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-an-exchange-rate-provider/resources/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java).
 >
 > Use the `CommerceCurrency` object for the two currencies to get the information needed, like their currency codes. See [CommerceCurrency.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrency.java) and [CommerceCurrencyModel.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrencyModel.java) to find more methods you can use with a `CommerceCurrency` object.
 

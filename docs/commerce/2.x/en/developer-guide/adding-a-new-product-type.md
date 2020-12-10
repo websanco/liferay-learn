@@ -22,7 +22,7 @@ In this section, we will get an example product type up and running on your inst
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Product Type](./liferay-c1n4.zip).
+1. Download and unzip the [Acme Commerce Product Type](./liferay-c1n4.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-c1n4.zip -O
@@ -48,7 +48,11 @@ In this section, we will get an example product type up and running on your inst
     STARTED com.acme.c1n4.web_1.0.0
     ```
 
-1. Verify that the example product type was added. Open your browser to `https://localhost:8080` and navigate to _Control Panel_ → _Commerce_ → _Products_. Then, click on the (+) icon to add a new product. The new product type ("Example") will be present in the list of types to choose from.
+1. Verify that the example product type was added. Open your browser to `https://localhost:8080`. Click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Products_. Then click on the (+) icon to add a new product. The new product type ("Example") will be present in the list of types to choose from.
+
+```note::
+   In Liferay Commerce 2.1 and earlier, find the products page by navigating to _Control Panel_ → _Commerce_ → _Products_.
+```
 
 ![New product type](./adding-a-new-product-type/images/02.png "New product type")
 
@@ -73,16 +77,13 @@ Our product type class implements the `CPType` interface:
 
 ```java
 @Component(
-    immediate = true,
     property = {
-        "commerce.product.type.display.order:Integer=16",
-        "commerce.product.type.name=" + C1N4CPType.NAME
+    "commerce.product.type.display.order:Integer=16",
+    "commerce.product.type.name=c1n4"
     },
     service = CPType.class
 )
 public class C1N4CPType implements CPType {
-
-    public static final String NAME = "Example";
 ```
 
 > The product type name must be a unique value so that Liferay Commerce can distinguish our product type from existing product types.
@@ -103,7 +104,7 @@ public void deleteCPDefinition(long cpDefinitionId) throws PortalException;
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes the product type. See the implementation in [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes the product type. See the implementation in [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) for a reference in retrieving the label with a language key.
 
 ```java
 public String getName();
@@ -118,15 +119,13 @@ Our screen navigation entry class implements both the `ScreenNavigationCategory`
 ```java
 @Component(
     property = {
-        "screen.navigation.category.order:Integer=11",
-        "screen.navigation.entry.order:Integer=11"
+    "screen.navigation.category.order:Integer=11",
+    "screen.navigation.entry.order:Integer=11"
     },
     service = {ScreenNavigationCategory.class, ScreenNavigationEntry.class}
 )
 public class C1N4ScreenNavigationEntry
     implements ScreenNavigationCategory, ScreenNavigationEntry<CPDefinition> {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the navigation screen class so that Liferay Commerce can distinguish it as a separate screen from the existing screens. Reusing a key that is already in use will override the existing associated navigation screen.
@@ -144,10 +143,10 @@ public String getCategoryKey();
 > This returns a unique identifier for the category used for the screen navigation entry.
 
 ```java
-public String getLabel(Locale var1);
+public String getLabel(Locale locale);
 ```
 
-> This returns a text label for the screen navigation entry that will be displayed in the UI. See the implementation in [C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/servlet/taglib/ui/C1N4ScreenNavigationEntry.java) for a reference in retrieving the label with a language key.
+> This returns a text label for the screen navigation entry that will be displayed in the UI. See the implementation in [C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/servlet/taglib/ui/C1N4ScreenNavigationEntry.java) for a reference in retrieving the label with a language key.
 
 ```java
 public String getScreenNavigationKey();
@@ -178,8 +177,9 @@ String getScreenNavigationKey();
 > This is the same method as `getScreenNavigationKey` for the `ScreenNavigationCategory` interface. We implemented this method by returning the string value `"cp.definition.general"`.
 
 ```java
-void render(
-        HttpServletRequest var1, HttpServletResponse var2)
+public void render(
+        HttpServletRequest httpServletRequest,
+        HttpServletResponse httpServletResponse)
     throws IOException;
 ```
 
@@ -202,12 +202,12 @@ Define the `ServletContext` in our `ScreenNavigationEntry` class using the symbo
 
 ```java
 @Reference(target = "(osgi.web.symbolicname=com.acme.c1n4.web)")
-private ServletContext _servletContext;
+private ServletContext _servletContext
 ```
 
-> The value we set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in our [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
+> The value we set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in our [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
 >
-> We declare a unique value for `Web-ContextPath` in our bnd.bnd file so the `ServletContext` is correctly generated. In our example, `Web-ContextPath` is set to `/c1n4-web`. See [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/bnd.bnd) for a reference on these values.
+> We declare a unique value for `Web-ContextPath` in our bnd.bnd file so the `ServletContext` is correctly generated. In our example, `Web-ContextPath` is set to `/c1n4-web`. See [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd) for a reference on these values.
 
 #### Implement the `ScreenNavigationEntry`'s `render` Method
 
@@ -220,28 +220,23 @@ public void render(
 
     _jspRenderer.renderJSP(
         _servletContext, httpServletRequest, httpServletResponse,
-        "/edit_product.jsp");
+        "/c1n4.jsp");
 }
 ```
 
-> Use a `JSPRenderer` to render the JSP for our product type's custom screen (in our example, [edit_product.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/edit_product.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
+> Use a `JSPRenderer` to render the JSP for our product type's custom screen (in our example, [c1n4.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/c1n4.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
 
 #### Override the `ScreenNavigationEntry`'s `isVisible` Method
 
 ```java
 @Override
-public boolean isVisible(User user, CPDefinition context) {
-    if (context == null) {
+public boolean isVisible(User user, CPDefinition cpDefinition) {
+    if (cpDefinition == null) {
         return false;
     }
 
-    String productTypeName = context.getProductTypeName();
-
-    if (productTypeName.equals(getCategoryKey())) {
-        return true;
-    }
-
-    return false;
+    return Objects.equals(
+        cpDefinition.getProductTypeName(), getCategoryKey());
 }
 ```
 
@@ -253,12 +248,10 @@ Our example does not require any logic to be added to `deleteCPDefinition`.
 
 #### Add a JSP to Render the Custom Screen
 
-In our example, we are adding a JSP with a text field.
+In our example, we are adding a JSP that prints "Hello C1N4.".
 
 ```jsp
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
-
-<aui:input name="exampleInput" type="text" />
+<h1>Hello C1N4.</h1>
 ```
 
 > Implement any other inputs or actions desired on the custom screen here, such as a form or MVC action command. See [MVC Action Command](https://help.liferay.com/hc/en-us/articles/360018165091-MVC-Action-Command) for more information on adding an MVC action command that can be accessed from the JSP.
@@ -267,8 +260,9 @@ In our example, we are adding a JSP with a text field.
 
 Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/resources/content/Language.properties) file within our module:
 
-```
-example=Example
+```properties
+c1n4-commerce-product-type=C1N4 Commerce Product Type
+c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

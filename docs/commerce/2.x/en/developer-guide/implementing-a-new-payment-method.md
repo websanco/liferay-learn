@@ -18,39 +18,43 @@ In this section, we will get an example payment method up and running on your in
 
 1. Start Liferay Commerce.
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
-    ```
+	```bash
+	docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
+	```
 
-1. Download and unzip [Acme Commerce Payment Method](./liferay-b1c3.zip).
+1. Download and unzip the [Acme Commerce Payment Method](./liferay-b1c3.zip).
 
-    ```bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-b1c3.zip -O
-    ```
+	```bash
+	curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-b1c3.zip -O
+	```
 
-    ```bash
-    unzip liferay-b1c3.zip
-    ```
+	```bash
+	unzip liferay-b1c3.zip
+	```
 
 1. Build and deploy the example.
 
-    ```bash
-    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
+	```bash
+	./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+	```
 
-    ```note::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
-    ```
+	```note::
+	   This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+	```
 
 1. Confirm the deployment in the Docker container console.
 
-    ```bash
-    STARTED com.acme.b1c3.impl_1.0.0
-    ```
+	```bash
+	STARTED com.acme.b1c3.impl_1.0.0
+	```
 
-1. Verify that the example payment method was added. Open your browser to `https://localhost:8080` and navigate to _Site Administration_ → _Commerce_ → _Settings_ → _Payment Methods_.
+1. Verify that the example payment method was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)), navigate to _Commerce_ &arr; _Channels_, and scroll to the _Payment Methods_ section.
 
-   ![New payment method](./implementing-a-new-payment-method/images/02.png "New payment method")
+```note::
+   In Liferay Commerce 2.1 and earlier, navigate to _Site Administration_ → _Commerce_ → _Settings_ → _Payment Methods_.
+```
+
+![New payment method](./implementing-a-new-payment-method/images/02.png "New payment method")
 
 Congratulations, you've successfully built and deployed a new payment method that implements `CommercePaymentMethod`.
 
@@ -64,13 +68,10 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-	immediate = true,
-	property = "commerce.payment.engine.method.key=" + B1C3CommercePaymentMethod.KEY,
+	property = "commerce.payment.engine.method.key=b1c3",
 	service = CommercePaymentMethod.class
 )
 public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
-
-	public static final String KEY = "Example";
 ```
 
 >It is important to provide a distinct key for the payment method so that Liferay Commerce can distinguish our new payment method from others in the [payment method registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-payment-service/src/main/java/com/liferay/commerce/payment/internal/method/CommercePaymentMethodRegistryImpl.java). Reusing a key that is already in use will override the existing associated payment method.
@@ -83,7 +84,7 @@ Implement the following methods:
 	public String getDescription(Locale locale);
 ```
 
-> This populates the "Description" column in the _Payment Methods_ administration page. See the implementation in [B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java) for a reference in retrieving the description with a language key.
+> This populates the "Description" column in the _Payment Methods_ administration page. See the implementation in [B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java) for a reference in retrieving the description with a language key.
 
 ```java
 	public String getKey();
@@ -182,11 +183,11 @@ Our example does not override any of these optional methods.
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties) file within our module:
 
-```
-example=Example
-this-is-the-example-payment-method=This is the Example Payment Method.
+```properties
+b1c3-commerce-payment-method=B1C3 Commerce Payment Method
+pay-via-b1c3-commerce-payment-method=Pay via B1C3 commerce payment method.
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

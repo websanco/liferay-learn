@@ -22,7 +22,7 @@ In this section, we will get an example low stock activity up and running on you
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Low Stock Activity](./liferay-j1e4.zip).
+1. Download and unzip the [Acme Commerce Low Stock Activity](./liferay-j1e4.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-j1e4.zip -O
@@ -48,9 +48,13 @@ In this section, we will get an example low stock activity up and running on you
     STARTED com.acme.j1e4.impl_1.0.0
     ```
 
-1. Verify that the example low stock activity was added. Open your browser to `https://localhost:8080` and navigate to _Control Panel_ → _Commerce_ → _Products_. Then, click _Edit_ within the menu for any product. If necessary, you can add a [product](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md).
+1. Verify that the example low stock activity was added. Open your browser to `https://localhost:8080`. Click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Products_. Then click _Edit_ within the menu for any product. If necessary, you can add a [product](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md).
 
    From there, navigate to _Configuration_. The new activity ("Log a warning message") will be present under the _Low Stock Action_ dropdown.
+
+```note::
+  In Liferay Commerce 2.1 and earlier, find the products page by navigating to _Control Panel_ → _Commerce_ → _Products_. 
+```
 
 ![New low stock activity](./implementing-a-custom-low-stock-activity/images/02.png "New low stock activity")
 
@@ -66,16 +70,13 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
     property = {
-        "commerce.low.stock.activity.key=" + J1E4CommerceLowStockActivity.KEY,
+        "commerce.low.stock.activity.key=j1e4",
         "commerce.low.stock.activity.priority:Integer=9"
     },
     service = CommerceLowStockActivity.class
 )
 public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the low stock activity so that Liferay Commerce can distinguish the new activity from others in the [low stock activity registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/internal/stock/activity/CommerceLowStockActivityRegistryImpl.java). Reusing a key that is already in use will override the existing associated activity.
@@ -102,7 +103,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes the low stock activity. See the implementation in [J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-low-stock-activity/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes the low stock activity. See the implementation in [J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java) for a reference in retrieving the label with a language key.
 
 ### Complete the Low Stock Activity
 
@@ -114,12 +115,12 @@ The low stock activity is comprised of backend logic to perform the activity its
 #### Add Business Logic to `execute`
 
 ```java
-    @Override
-    public void execute(CPInstance cpInstance) throws PortalException {
-        if (_log.isWarnEnabled()) {
-            _log.warn("Low stock for SKU: " + cpInstance.getSku());
-        }
+@Override
+public void execute(CPInstance cpInstance) throws PortalException {
+    if (_log.isWarnEnabled()) {
+        _log.warn("SKU " + cpInstance.getSku());
     }
+}
 ```
 
 > In our example, we add a warning message that is added to Liferay's logs.
@@ -128,10 +129,10 @@ The low stock activity is comprised of backend logic to perform the activity its
 
 #### Add the Language Key to `Language.properties`
 
-Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-low-stock-activity/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties) file within our module:
 
-```
-log-a-warning-message=Log a Warning Message
+```properties
+j1e4-commerce-low-stock-activity=J1E4 Commerce Low Stock Activity
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

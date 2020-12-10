@@ -24,7 +24,7 @@ In this section, we will get an example shipping engine up and running on your i
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Shipping Engine](./liferay-j6x8.zip)
+1. Download and unzip the [Acme Commerce Shipping Engine](./liferay-j6x8.zip)
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-j6x8.zip -O
@@ -50,7 +50,11 @@ In this section, we will get an example shipping engine up and running on your i
     STARTED com.acme.j6x8.impl_1.0.0
     ```
 
-1. Verify that the example shipping engine was added. Open your browser to `https://localhost:8080` and navigate to _Site Administration_ → _Commerce_ → _Settings_ → _Shipping Methods_. The new shipping method ("Discounted Rate") representing our shipping engine will be present on this screen.
+1. Verify that the example shipping engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Channels_. In the Shipping Methods section, the new shipping method ("Discounted Rate") representing our shipping engine will be present.
+
+```note::
+   In Commerce 2.1 and earlier, find the shipping methods by navigating to _Site Administration_ → _Commerce_ → _Settings_ → _Shipping Methods_.
+```
 
 ![New shipping method](./implementing-a-new-shipping-engine/images/02.png "New shipping method")
 
@@ -66,13 +70,10 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
-    property = "commerce.shipping.engine.key=" + J6X8CommerceShippingEngine.KEY,
+    property = "commerce.shipping.engine.key=j6x8",
     service = CommerceShippingEngine.class
 )
 public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the shipping engine so that Liferay Commerce can distinguish the new engine from others in the [shipping engine registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingEngineRegistryImpl.java). Reusing a key that is already in use will override the existing associated engine.
@@ -85,7 +86,7 @@ Implement the following methods:
 public String getCommerceShippingOptionLabel(String name, Locale locale);
 ```
 
-> This method returns a text label used for shipping options. See the implementation in [J6X8CommerceShippingEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-shipping-engine/liferay-j6x8.zip/j6x8-impl/src/main/java/com/acme/j6x8/internal/commerce/model/J6X8CommerceShippingEngine.java) for a reference in retrieving the description with a language key.
+> This method returns a text label used for shipping options. See the implementation in [J6X8CommerceShippingEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/java/com/acme/j6x8/internal/commerce/model/J6X8CommerceShippingEngine.java) for a reference in retrieving the description with a language key.
 >
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.
 
@@ -112,38 +113,110 @@ public String getName(Locale locale);
 
 ### Complete the Shipping Engine
 
-The shipping engine is comprised of backend logic preparing the list of shipping options to be shown to the customer. This logic is best implemented by splitting it into multiple steps. Do the following:
-
-* [Implement getting the available shipping options.](#implement-getting-the-available-shipping-options)
-* [Implement address restriction checking.](#implement-address-restriction-checking)
-* [Implement a loop to process the options.](#implement-a-loop-to-process-the-options)
-* [Call processing logic from `getCommerceShippingOptions`.](#call-processing-logic-from-getcommerceshippingoptions)
-* [Add the language keys to `Language.properties`.](#add-the-language-keys-to-languageproperties)
-
-Liferay Commerce's [fixed rate shipping engine](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java) is a good reference to see what processing steps are a good baseline to start with. Our example will follow the same steps.
-
-#### Implement Getting the Available Shipping Options
+The shipping engine method `getCommerceShippingOptions` returns the list of shipping options to show to the customer.
 
 ```java
-private List<CommerceShippingFixedOption> _getCommerceShippingFixedOptions(
-    long groupId) {
+@Override
+public List<CommerceShippingOption> getCommerceShippingOptions(
+        CommerceContext commerceContext, CommerceOrder commerceOrder,
+        Locale locale)
+    throws CommerceShippingEngineException {
 
-    CommerceShippingMethod commerceShippingMethod =
-        _commerceShippingMethodLocalService.fetchCommerceShippingMethod(
-            groupId, KEY);
+    try {
+        CommerceShippingMethod commerceShippingMethod =
+            _commerceShippingMethodLocalService.fetchCommerceShippingMethod(
+                commerceOrder.getScopeGroupId(), "j6x8");
 
-    if (commerceShippingMethod == null) {
-        return Collections.emptyList();
+        if (commerceShippingMethod == null) {
+            return Collections.emptyList();
+        }
+
+        List<CommerceShippingOption> commerceShippingOptions =
+            new ArrayList<>();
+
+        List<CommerceShippingFixedOption> commerceShippingFixedOptions =
+            _commerceShippingFixedOptionLocalService.
+                getCommerceShippingFixedOptions(
+                    commerceShippingMethod.getCommerceShippingMethodId(),
+                    QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+
+        for (CommerceShippingFixedOption commerceShippingFixedOption :
+                commerceShippingFixedOptions) {
+
+            CommerceAddress commerceAddress =
+                commerceOrder.getShippingAddress();
+
+            if (_commerceAddressRestrictionLocalService.
+                    isCommerceShippingMethodRestricted(
+                        commerceShippingFixedOption.
+                            getCommerceShippingMethodId(),
+                        commerceAddress.getCommerceCountryId())) {
+
+                continue;
+            }
+
+            String name = commerceShippingFixedOption.getName(locale);
+
+            if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
+                commerceShippingOptions.add(
+                    new CommerceShippingOption(
+                        name, name, BigDecimal.ZERO));
+            }
+
+            BigDecimal amount = commerceShippingFixedOption.getAmount();
+
+            amount = amount.multiply(BigDecimal.valueOf(0.75));
+
+            commerceShippingOptions.add(
+                new CommerceShippingOption(name, name, amount));
+        }
+
+        return commerceShippingOptions;
     }
-
-    return _commerceShippingFixedOptionLocalService.
-        getCommerceShippingFixedOptions(
-            commerceShippingMethod.getCommerceShippingMethodId(),
-            QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+    catch (Exception exception) {
+        throw new CommerceShippingEngineException(exception);
+    }
 }
 ```
 
+The method starts by getting the available shipping options and looping over them to process each one.
+
+```java
+CommerceShippingMethod commerceShippingMethod =
+    _commerceShippingMethodLocalService.fetchCommerceShippingMethod(
+        commerceOrder.getScopeGroupId(), "j6x8");
+
+if (commerceShippingMethod == null) {
+    return Collections.emptyList();
+}
+
+List<CommerceShippingOption> commerceShippingOptions =
+    new ArrayList<>();
+
+List<CommerceShippingFixedOption> commerceShippingFixedOptions =
+    _commerceShippingFixedOptionLocalService.
+        getCommerceShippingFixedOptions(
+            commerceShippingMethod.getCommerceShippingMethodId(),
+            QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+
+for (CommerceShippingFixedOption commerceShippingFixedOption :
+        commerceShippingFixedOptions) {
+    
+    //The shipping option processing logic goes here.
+```
+
 > First, use [CommerceShippingMethodLocalService](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceShippingMethodLocalServiceImpl.java) to get the "shipping method" (representing our shipping engine), and then use [CommerceShippingFixedOptionLocalService](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-shipping-engine-fixed-service/src/main/java/com/liferay/commerce/shipping/engine/fixed/service/impl/CommerceShippingFixedOptionLocalServiceImpl.java) to get the available options.
+
+> Then loop over the shipping options to process them.
+
+Here are the shipping option processing steps:
+
+* [Implement address restriction checking.](#implement-address-restriction-checking)
+* [Check for free shipping.](#check-for-free-shipping)
+* [Add custom shipping option logic.](#add-custom-shipping-option-logic)
+* [Add the processed shipping option.](#add-the-processed-shipping-option)
+
+Liferay Commerce's [fixed rate shipping engine](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java) is a good reference to see what processing steps are a good baseline to start with. Our example method uses similar steps.
 
 #### Implement Address Restriction Checking
 
@@ -166,84 +239,47 @@ private boolean _shippingOptionIsAddressRestricted(
 >
 > Use [CommerceAddressRestrictionLocalService](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceAddressRestrictionLocalServiceImpl.java) to determine if the option is restricted for the order's address. Use `CommerceOrder` to get the address information; the `CommerceOrder` object represents all kinds of information about the order being shipped. See [CommerceOrder.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) and [CommerceOrderModel.java](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) to find more methods you can use with a `CommerceOrder`.
 
-#### Implement a Loop to Process the Options
+#### Check for Free Shipping
 
 ```java
-private List<CommerceShippingOption> _getCommerceShippingOptions(
-        long groupId, CommerceOrder commerceOrder, Locale locale)
-    throws PortalException {
+String name = commerceShippingFixedOption.getName(locale);
 
-    List<CommerceShippingOption> commerceShippingOptions =
-        new ArrayList<>();
-
-    List<CommerceShippingFixedOption> commerceShippingFixedOptions =
-        _getCommerceShippingFixedOptions(groupId);
-
-    for (CommerceShippingFixedOption commerceShippingFixedOption :
-            commerceShippingFixedOptions) {
-
-        if (_shippingOptionIsAddressRestricted(
-            commerceOrder, commerceShippingFixedOption)) {
-
-            continue;
-        }
-
-        String name = commerceShippingFixedOption.getName(locale);
-
-        if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
-            commerceShippingOptions.add(
-                new CommerceShippingOption(name, name, BigDecimal.ZERO));
-        }
-
-        BigDecimal amount = commerceShippingFixedOption.getAmount();
-
-        amount = amount.multiply(new BigDecimal(DISCOUNT_RATE));
-
-        commerceShippingOptions.add(
-            new CommerceShippingOption(name, name, amount));
-    }
-
-    return commerceShippingOptions;
+if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
+    commerceShippingOptions.add(
+        new CommerceShippingOption(
+            name, name, BigDecimal.ZERO));
 }
 ```
 
-> The next step is to do most of the work in processing (using our previously defined helper methods), so we can more easily call it from the `getCommerceShippingOptions` method. In our example, we add an extra step at the end of the processing loop to multiply the amount for normally charged shipping options by a discounted rate.
->
 > Use the [CommerceShippingHelper](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingHelperImpl.java) to more easily determine if the order should be free.
 
-#### Call Processing Logic from `getCommerceShippingOptions`
+#### Add Custom Shipping Option Logic
 
 ```java
-@Override
-public List<CommerceShippingOption> getCommerceShippingOptions(
-        CommerceContext commerceContext, CommerceOrder commerceOrder,
-        Locale locale)
-    throws CommerceShippingEngineException {
+BigDecimal amount = commerceShippingFixedOption.getAmount();
 
-    List<CommerceShippingOption> commerceShippingOptions =
-        new ArrayList<>();
-
-    try {
-        commerceShippingOptions = _getCommerceShippingOptions(
-            commerceOrder.getScopeGroupId(), commerceOrder, locale);
-    }
-    catch (PortalException pe) {
-        if (_log.isDebugEnabled()) {
-            _log.debug(pe, pe);
-        }
-    }
-
-    return commerceShippingOptions;
-}
+amount = amount.multiply(BigDecimal.valueOf(0.75));
 ```
 
-> Call the processing logic defined previously from `getCommerceShippingOptions`, and handle any possible errors.
+> Here is where you can add more shipping option logic. The example shipping option reduces the standard fixed shipping option amount by 25%.
 
-#### Add the Language Keys to `Language.properties`
+#### Add the Processed Shipping Option
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-shipping-engine/liferay-j6x8.zip/j6x8-impl/src/main/resources/content/Language.properties) file within our module:
+```java
+commerceShippingOptions.add(
+    new CommerceShippingOption(name, name, amount));
+} // end of shipping option processing loop
 
+return commerceShippingOptions;
 ```
+
+> Apply the amount to the shipping option and add the shipping option to the list. Then close the for loop and return the shipping options list.
+
+### Add the Language Keys to `Language.properties`
+
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/resources/content/Language.properties) file within our module:
+
+```properties
 discounted-rate=Discounted Rate
 ship-for-a-discounted-price=Ship for a discounted price.
 ```

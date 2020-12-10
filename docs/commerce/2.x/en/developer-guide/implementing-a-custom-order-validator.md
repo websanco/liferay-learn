@@ -20,7 +20,7 @@ In this section, we will get an example order validator up and running on your i
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Order Validator](./liferay-n9b2.zip).
+1. Download and unzip the [Acme Commerce Order Validator](./liferay-n9b2.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-n9b2.zip -O
@@ -64,16 +64,13 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
     property = {
-        "commerce.order.validator.key=" + N9B2CommerceOrderValidator.KEY,
-        "commerce.order.validator.priority:Integer=9"
+    "commerce.order.validator.key=n9b2",
+    "commerce.order.validator.priority:Integer=9"
     },
     service = CommerceOrderValidator.class
 )
 public class N9B2CommerceOrderValidator implements CommerceOrderValidator {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the order validator so that Liferay Commerce can distinguish the new order validator from others in the [order validator registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-service/src/main/java/com/liferay/commerce/internal/order/CommerceOrderValidatorRegistryImpl.java). Reusing a key that is already in use will override the existing associated validator.
@@ -126,18 +123,26 @@ public CommerceOrderValidatorResult validate(
 
     BigDecimal price = cpInstance.getPrice();
 
-    if ((price.doubleValue() > 100.0) && (quantity > 10)) {
+    if ((price.doubleValue() > _MAX_ITEM_PRICE) &&
+        (quantity > _MAX_ITEM_QUANTITY)) {
+
         ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
             "content.Language", locale, getClass());
 
         return new CommerceOrderValidatorResult(
             false,
-            LanguageUtil.get(
-                resourceBundle, "this-item-has-a-maximum-quantity-of-10"));
+            LanguageUtil.format(
+                resourceBundle,
+                "this-expensive-item-has-a-maximum-quantity-of-x",
+                Integer.valueOf(_MAX_ITEM_QUANTITY)));
     }
 
     return new CommerceOrderValidatorResult(true);
 }
+
+private static final double _MAX_ITEM_PRICE = 100.0;
+
+private static final int _MAX_ITEM_QUANTITY = 10;
 ```
 
 > The main validation check for our example is to check if both the price (stored as a `BigDecimal`) is more than $100, and the quantity is greater than ten. We get the price information from the `CPInstance`, which contains information about the order the customer has added. To find more methods you can use with a `CPInstance`, see [CPInstance](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstance.java) and [CPInstanceModel](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstanceModel.java).
@@ -154,17 +159,18 @@ public CommerceOrderValidatorResult validate(
 
     BigDecimal price = commerceOrderItem.getUnitPrice();
 
-    if ((price.doubleValue() > 100.0) &&
-        (commerceOrderItem.getQuantity() > 10)) {
+    if ((price.doubleValue() > _MAX_ITEM_PRICE) &&
+        (commerceOrderItem.getQuantity() > _MAX_ITEM_QUANTITY)) {
 
         ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
             "content.Language", locale, getClass());
 
         return new CommerceOrderValidatorResult(
             false,
-            LanguageUtil.get(
+            LanguageUtil.format(
                 resourceBundle,
-                "expensive-items-have-a-maximum-quantity-of-10"));
+                "expensive-items-have-a-maximum-order-quantity-of-x",
+                Integer.valueOf(_MAX_ITEM_QUANTITY)));
     }
 
     return new CommerceOrderValidatorResult(true);
@@ -175,11 +181,11 @@ public CommerceOrderValidatorResult validate(
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-order-validator/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-order-validator/resources/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties) file within our module:
 
-```
-expensive-items-have-a-maximum-quantity-of-10=Expensive items have a maximum quantity of 10.
-this-item-has-a-maximum-quantity-of-10=This item has a maximum quantity of 10.
+```properties
+expensive-items-have-a-maximum-order-quantity-of-x=Expensive items have a maximum order quantity of {0}.
+this-expensive-item-has-a-maximum-quantity-of-x=This expensive item has a maximum order quantity of {0}.
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

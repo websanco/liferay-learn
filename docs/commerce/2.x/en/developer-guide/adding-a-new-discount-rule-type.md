@@ -22,7 +22,7 @@ First, you must deploy an example discount rule type on your instance of Liferay
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Discount Rule Type](./liferay-m6a8.zip).
+1. Download and unzip the [Acme Commerce Discount Rule Type](./liferay-m6a8.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-m6a8.zip -O
@@ -48,9 +48,13 @@ First, you must deploy an example discount rule type on your instance of Liferay
     STARTED com.acme.m6a8.web_1.0.0
     ```
 
-1. Verify that the example discount rule type was added. Open your browser to `https://localhost:8080` and navigate to _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_. Click _Edit_ within the menu for any discount, then navigate to _Rules_ at the top of the screen.
+1. Verify that the example discount rule type was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Discounts_. Click _Edit_ within the menu for any discount.
 
-    From there, click the (+) icon to add a new discount rule. The new discount rule type ("Has a minimum number of products") is present under the _Type_ dropdown.
+    Scroll down to the _Rules_ section, click the (+) icon to add a new discount rule. The new discount rule type ("Has a minimum number of products") is present under the _Type_ dropdown.
+
+```note::
+   In Liferay Commerce 2.1 and earlier, find the discounts by navigating to _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_. Click any _Edit_ within the menu for any discount and then click _Rules_ at the top of the screen.
+```
 
 ![New discount rule type](./adding-a-new-discount-rule-type/images/02.png "New discount rule type")
 
@@ -72,16 +76,14 @@ Now it's time to review the example you deployed. There are two classes: a disco
 
 ```java
 @Component(
-    immediate = true,
     property = {
-        "commerce.discount.rule.type.key=" + M6A8CommerceDiscountRuleType.KEY,
-        "commerce.discount.rule.type.order:Integer=51"
+    "commerce.discount.rule.type.key=m6a8",
+    "commerce.discount.rule.type.order:Integer=51"
     },
     service = CommerceDiscountRuleType.class
 )
-public class M6A8CommerceDiscountRuleType implements CommerceDiscountRuleType {
-
-    public static final String KEY = "Example";
+public class M6A8CommerceDiscountRuleTypeImpl
+    implements CommerceDiscountRuleType {
 ```
 
 > It is important to provide a distinct key for the discount rule type so that Liferay Commerce can distinguish the new type from others in the [discount rule type registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/CommerceDiscountRuleTypeRegistryImpl.java). Declaring a key that is already in use overrides the existing associated type.
@@ -111,20 +113,17 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleType.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleType.java) for a reference in retrieving the label with a language key.
 
 ### Annotate the JSP Contributor Class for OSGi Registration
 
 ```java
 @Component(
-    immediate = true,
-    property = "commerce.discount.rule.type.jsp.contributor.key=" + M6A8CommerceDiscountRuleTypeJSPContributor.KEY,
+    property = "commerce.discount.rule.type.jsp.contributor.key=m6a8",
     service = CommerceDiscountRuleTypeJSPContributor.class
 )
 public class M6A8CommerceDiscountRuleTypeJSPContributor
     implements CommerceDiscountRuleTypeJSPContributor {
-
-    public static final String KEY = "Example";
 ```
 
 > It is important to provide a distinct key for the JSP contributor so that Liferay Commerce can distinguish the contributor from others in the [discount rule type JSP contributor registry](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributorRegistry.java). Declaring a key that is already in use overrides the existing associated type.
@@ -161,16 +160,17 @@ Define the `ServletContext` in the JSP contributor class using the bundle's symb
 private ServletContext _servletContext;
 ```
 
-> The value set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
+> The value set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
 >
-> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
+> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
 
 #### Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` Method
 
 ```java
 @Override
 public void render(
-        long l, long l1, HttpServletRequest httpServletRequest,
+        long commerceDiscountId, long commerceDiscountRuleId,
+        HttpServletRequest httpServletRequest,
         HttpServletResponse httpServletResponse)
     throws Exception {
 
@@ -180,7 +180,7 @@ public void render(
 }
 ```
 
-> Use a `JSPRenderer` to render the JSP for the discount rule type's custom UI input (in our example, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP.
+> Use a `JSPRenderer` to render the JSP for the discount rule type's custom UI input (in our example, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP.
 
 #### Add the Evaluation Logic to `evaluate`
 
@@ -197,15 +197,14 @@ public boolean evaluate(
         return false;
     }
 
-    String settingsProperty = commerceDiscountRule.getSettingsProperty(
-        commerceDiscountRule.getType());
-
-    int minimumProducts = Integer.valueOf(settingsProperty);
-
     List<CommerceOrderItem> commerceOrderItems =
         commerceOrder.getCommerceOrderItems();
 
-    if (commerceOrderItems.size() >= minimumProducts) {
+    int mininumNumberOfItems = GetterUtil.getInteger(
+        commerceDiscountRule.getSettingsProperty(
+            commerceDiscountRule.getType()));
+
+    if (commerceOrderItems.size() >= mininumNumberOfItems) {
         return true;
     }
 
@@ -219,12 +218,12 @@ public boolean evaluate(
 
 #### Add a JSP to Render the Custom UI Input
 
-The example adds a JSP with a numeric input for a minimum number of products.
+The example uses a JSP called `view.jsp` with a numeric input for a minimum number of products.
 
 ```jsp
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<aui:input label="minimum-number-of-products" name="typeSettings" type="text">
+<aui:input label="minimum-number-of-items" name="typeSettings" type="text">
     <aui:validator name="digits" />
     <aui:validator name="min">1</aui:validator>
 </aui:input>
@@ -236,11 +235,11 @@ The example adds a JSP with a numeric input for a minimum number of products.
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties) file:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties) file:
 
-```
-has-a-minimum-number-of-products=Has a minimum number of products
-minimum-number-of-products=Minimum Number of Products
+```properties
+has-a-minimum-number-of-items=Has a Minimum Number of Items
+minimum-number-of-items=Minimum Number of Items
 ```
 
 > See [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) for more information.

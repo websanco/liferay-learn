@@ -22,7 +22,7 @@ In this section, we will get an example product data source up and running on yo
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Acme Commerce Product Data Source](./liferay-m5x7.zip).
+1. Download and unzip the [Acme Commerce Product Data Source](./liferay-m5x7.zip).
 
     ```bash
     curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-m5x7.zip -O
@@ -64,16 +64,13 @@ In this section, we will review the example we deployed. First, we will annotate
 
 ```java
 @Component(
-    immediate = true,
-    property = "commerce.product.data.source.name=" + M5X7CPDataSource.NAME,
+    property = "commerce.product.data.source.name=m5x7",
     service = CPDataSource.class
 )
 public class M5X7CPDataSource implements CPDataSource {
-
-    public static final String NAME = "Example";
 ```
 
-> The product data source name must be a unique value so that Liferay Commerce can distinguish the new datafrom existing data sources.
+> The product data source name must be a unique value so that Liferay Commerce can distinguish the new data from existing data sources.
 
 ### Review the `CPDataSource` Interface
 
@@ -83,7 +80,7 @@ Implement the following methods:
 public String getLabel(Locale locale);
 ```
 
-> This method returns a text label that describes how product data source will search for related products. See the implementation in [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java) for a reference in retrieving the label with a language key.
+> This method returns a text label that describes how product data source will search for related products. See the implementation in [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java) for a reference in retrieving the label with a language key.
 
 ```java
 public String getName();
@@ -124,36 +121,35 @@ public CPDataSourceResult getResult(
         return new CPDataSourceResult(new ArrayList<>(), 0);
     }
 
-    SearchContext searchContext = new SearchContext();
-
-    Map<String, Serializable> attributes = new HashMap<>();
-
-    attributes.put(Field.STATUS, WorkflowConstants.STATUS_APPROVED);
-    attributes.put(
-        "excludedCPDefinitionId", cpCatalogEntry.getCPDefinitionId());
-
-    searchContext.setAttributes(attributes);
-
-    searchContext.setCompanyId(_portal.getCompanyId(httpServletRequest));
-
-    searchContext.setKeywords(
-        StringPool.STAR + _getLastWordOfName(cpCatalogEntry));
-
     return _cpDefinitionHelper.search(
-        _portal.getScopeGroupId(httpServletRequest), searchContext,
+        _portal.getScopeGroupId(httpServletRequest),
+        new SearchContext() {
+            {
+                setAttributes(
+                    HashMapBuilder.<String, Serializable>put(
+                        Field.STATUS, WorkflowConstants.STATUS_APPROVED
+                    ).put(
+                        "excludedCPDefinitionId",
+                        cpCatalogEntry.getCPDefinitionId()
+                    ).build());
+                setCompanyId(_portal.getCompanyId(httpServletRequest));
+                setKeywords(
+                    StringPool.STAR + _getLastWordOfName(cpCatalogEntry));
+            }
+        },
         new CPQuery(), start, end);
 }
 ```
 
 > We use a [CPDefinitionHelper](https://github.com/liferay/com-liferay-commerce/blob/[$LIFERAY_LEARN_COMMERCE_GIT_TAG$]/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/util/CPDefinitionHelperImpl.java) to perform the search. The `CPDefinitionHelper` combines logic specific to product definitions with `BaseIndexer`'s search functionality; see [BaseIndexer.java](https://github.com/liferay/liferay-portal/blob/7.1.3-ga4/portal-kernel/src/com/liferay/portal/kernel/search/BaseIndexer.java) for more information.
 >
-> Add the product definition's ID as the value for the `"excludedCPDefinitionId"` attribute to the `SearchContext`. This will omit the original product from the results. In our example, we also specify the last word of product name to search for. See the implementation of `_getLastWordOfName` by visiting [M5X7CPDataSource](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java).
+> Add the product definition's ID as the value for the `"excludedCPDefinitionId"` attribute to the `SearchContext`. This will omit the original product from the results. In our example, we also specify the last word of the product name to search for. For details, see the search logic implementation in the example `M5X7CPDataSource.java` file's `_getLastWordOfName` method.
 
 #### Add the Language Key to `Language.properties`
 
-Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties) file within our module:
 
-```
+```properties
 products-ending-in-the-same-word=Products Ending in the Same Word
 ```
 
