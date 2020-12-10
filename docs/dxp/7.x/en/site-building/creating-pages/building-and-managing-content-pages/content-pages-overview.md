@@ -17,7 +17,7 @@ There are two editing modes: Page Design and Content Edition, and each have diff
 * ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
 * ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
 * ![Page Structure](../../../images/icon-pages-tree.png) - [Page Structure](#page-structure)
-* ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](##page-design-options)
+* ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](#page-design-options)
 * ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
 
 ## Fragments and Widgets
