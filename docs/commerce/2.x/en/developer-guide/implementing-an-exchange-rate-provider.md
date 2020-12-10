@@ -54,10 +54,10 @@ In this section, we will get an example exchange rate provider up and running on
     STARTED com.acme.f2y1.impl_1.0.0
     ```
 
-1. Verify that the example exchange rate provider was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Currencies_. The new exchange rate provider ("f2y1") will be present under the _Exchange Rate Provider_ dropdown.
+1. Verify that the example exchange rate provider was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Currencies_. The new exchange rate provider ("f2y1") will be present under the _Exchange Rate Provider_ dropdown.
 
 ```note::
-   In Liferay Commerce 2.1 and earlier, find the exchange rates by navigating to _Control Panel_ → _Commerce_ → _Settings_ → _Currencies_ → _Exchange Rate_. The new exchange rate provider ("f2y1") will be present under the _Exchange Rate Provider_ dropdown.
+   In Liferay Commerce 2.1 and earlier, find the exchange rates by navigating to *Control Panel* → *Commerce* → *Settings* → *Currencies* → *Exchange Rate*. The new exchange rate provider ("f2y1") will be present under the *Exchange Rate Provider* dropdown.
 ```
 
 ![New exchange rate provider](./implementing-an-exchange-rate-provider/images/02.png "New exchange rate provider")

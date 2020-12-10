@@ -48,12 +48,10 @@ First, you must deploy an example discount rule type on your instance of Liferay
     STARTED com.acme.m6a8.web_1.0.0
     ```
 
-1. Verify that the example discount rule type was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Discounts_. Click _Edit_ within the menu for any discount.
-
-    Scroll down to the _Rules_ section, click the (+) icon to add a new discount rule. The new discount rule type ("Has a minimum number of products") is present under the _Type_ dropdown.
+1. Verify that the example discount rule type was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Discounts_. Click _Edit_ within the menu for any discount. Scroll down to the _Rules_ section, click the (+) icon to add a new discount rule. The new discount rule type ("Has a minimum number of products") is present under the _Type_ dropdown.
 
 ```note::
-   In Liferay Commerce 2.1 and earlier, find the discounts by navigating to _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_. Click any _Edit_ within the menu for any discount and then click _Rules_ at the top of the screen.
+   In Liferay Commerce 2.1 and earlier, find the discounts by navigating to *Control Panel* → *Commerce* → *Discounts*. Click any *Edit* within the menu for any discount and then click *Rules* at the top of the screen.
 ```
 
 ![New discount rule type](./adding-a-new-discount-rule-type/images/02.png "New discount rule type")
@@ -113,7 +111,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleType.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleTypeImpl.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java) for a reference in retrieving the label with a language key.
 
 ### Annotate the JSP Contributor Class for OSGi Registration
 
@@ -162,7 +160,7 @@ private ServletContext _servletContext;
 
 > The value set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
 >
-> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
+> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
 
 #### Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` Method
 

@@ -48,10 +48,10 @@ In this section, we will get an example tax engine up and running on your instan
     STARTED com.acme.q4b9.impl_1.0.0
     ```
 
-1. Verify that the example tax engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Channels_. Edit a channel. The new tax engine ("Q4B9 Commerce Tax Engine") will be present in the list shown.
+1. Verify that the example tax engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Channels_. Edit a channel. The new tax engine ("Q4B9 Commerce Tax Engine") will be present in the list shown.
 
 ```note::
-   In Commerce 2.1 and earlier, find the tax engines by navigating to _Site Administration_ → _Commerce_ → _Settings_ → _Taxes_ → _Tax Calculations_.
+   In Commerce 2.1 and earlier, find the tax engines by navigating to *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*.
 ```
 
 ![New tax engine](./implementing-a-new-tax-engine/images/02.png "New tax engine")

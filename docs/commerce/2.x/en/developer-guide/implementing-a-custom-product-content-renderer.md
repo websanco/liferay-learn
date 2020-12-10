@@ -149,7 +149,7 @@ public void render(
 }
 ```
 
-> Use a `JSPRenderer` to render the JSP for our product content renderer (in this case, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-product-content-renderer/liferay-q4f7.zip/q4f7-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
+> Use a `JSPRenderer` to render the JSP for our product content renderer (in this case, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
 
 #### Add a JSP for the Custom View
 

@@ -48,10 +48,10 @@ In this section, we will get an example product type up and running on your inst
     STARTED com.acme.c1n4.web_1.0.0
     ```
 
-1. Verify that the example product type was added. Open your browser to `https://localhost:8080`. Click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Products_. Then click on the (+) icon to add a new product. The new product type ("Example") will be present in the list of types to choose from.
+1. Verify that the example product type was added. Open your browser to `https://localhost:8080`. Click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Products_. Then click on the (+) icon to add a new product. The new product type ("Example") will be present in the list of types to choose from.
 
 ```note::
-   In Liferay Commerce 2.1 and earlier, find the products page by navigating to _Control Panel_ → _Commerce_ → _Products_.
+   In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*.
 ```
 
 ![New product type](./adding-a-new-product-type/images/02.png "New product type")
@@ -146,7 +146,7 @@ public String getCategoryKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label for the screen navigation entry that will be displayed in the UI. See the implementation in [C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/servlet/taglib/ui/C1N4ScreenNavigationEntry.java) for a reference in retrieving the label with a language key.
+> This returns a text label for the screen navigation entry that will be displayed in the UI. See the implementation in [C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/frontend/taglib/servlet/taglib/C1N4ScreenNavigationEntry.java) for a reference in retrieving the label with a language key.
 
 ```java
 public String getScreenNavigationKey();
@@ -224,7 +224,7 @@ public void render(
 }
 ```
 
-> Use a `JSPRenderer` to render the JSP for our product type's custom screen (in our example, [c1n4.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/c1n4.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
+> Use a `JSPRenderer` to render the JSP for our product type's custom screen (in our example, [c1n4.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/c1n4.jsp)). Provide the `ServletContext` as a parameter to find the JSP we have created.
 
 #### Override the `ScreenNavigationEntry`'s `isVisible` Method
 
@@ -258,7 +258,7 @@ In our example, we are adding a JSP that prints "Hello C1N4.".
 
 #### Add the Language Key to `Language.properties`
 
-Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/liferay-c1n4.zip/c1n4-web/src/main/resources/content/Language.properties) file within our module:
+Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/content/Language.properties) file within our module:
 
 ```properties
 c1n4-commerce-product-type=C1N4 Commerce Product Type

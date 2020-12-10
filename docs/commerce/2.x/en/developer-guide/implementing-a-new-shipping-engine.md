@@ -50,10 +50,10 @@ In this section, we will get an example shipping engine up and running on your i
     STARTED com.acme.j6x8.impl_1.0.0
     ```
 
-1. Verify that the example shipping engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ &arr; _Channels_. In the Shipping Methods section, the new shipping method ("Discounted Rate") representing our shipping engine will be present.
+1. Verify that the example shipping engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Channels_. In the Shipping Methods section, the new shipping method ("Discounted Rate") representing our shipping engine will be present.
 
 ```note::
-   In Commerce 2.1 and earlier, find the shipping methods by navigating to _Site Administration_ → _Commerce_ → _Settings_ → _Shipping Methods_.
+   In Commerce 2.1 and earlier, find the shipping methods by navigating to *Site Administration* → *Commerce* → *Settings* → *Shipping Methods*.
 ```
 
 ![New shipping method](./implementing-a-new-shipping-engine/images/02.png "New shipping method")
