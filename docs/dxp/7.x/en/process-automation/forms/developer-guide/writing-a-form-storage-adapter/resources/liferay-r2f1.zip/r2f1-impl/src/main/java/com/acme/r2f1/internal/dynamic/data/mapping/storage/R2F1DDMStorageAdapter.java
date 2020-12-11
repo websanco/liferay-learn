@@ -15,7 +15,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = "ddm.storage.adapter.type=r2f1-ddm-storage-adapter",
 	service = DDMStorageAdapter.class
 )
