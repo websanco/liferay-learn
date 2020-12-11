@@ -62,7 +62,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 1. In the Form Builder view, click the *Options* button (![Options](./../../../images/icon-options.png)) and open the *Settings* window.
 
-1. Under *Select a Storage Type*, choose the JSON Wrapper type and click _Done_.
+1. Under *Select a Storage Type*, choose the *R2F1 Dynamic Data Mapping Storage Adapter* type and click _Done_.
 
 1. Add a [Text Field](../creating-and-managing-forms/creating-forms.md) to the form, publish the form, and submit it a few times.
 
@@ -75,7 +75,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 1. Additionally, logging is provided in each CRUD method to demonstrate that the sample's methods are being invoked.
 
    ```bash
-   2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Acme storage adapter's save method was invoked
+   WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:82] Acme storage adapter's save method was invoked
    ```
 
 ## Understand the Extension Point
@@ -88,10 +88,10 @@ The `DDMFileSystemStorageAdapter` implements the `DDMStorageAdapter` interface, 
 
 ```java
 @Component(
-	immediate = true, property = "ddm.storage.adapter.type=r2f1-ddm-storage-adapter",
+	property = "ddm.storage.adapter.type=r2f1-ddm-storage-adapter",
 	service = DDMStorageAdapter.class
 )
-public class R2F1StorageAdapter implements DDMStorageAdapter {
+public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 ```
 
 ```note::
@@ -148,6 +148,8 @@ private DDMContentLocalService _ddmContentLocalService;
 @Reference
 private DDMFormValuesSerializerTracker _ddmFormValuesSerializerTracker;
 ```
+
+Import `com.liferay.dynamic.data.mapping.service.DDMContentLocalService` and `com.liferay.dynamic.data.mapping.io.DDMFormValuesSerializerTracker`.
 
 ### Create a Logger
 
@@ -213,7 +215,7 @@ You'll follow the same procedure for the `get` method: create a private utility 
 	}
     ```
 
-   Import `com.liferay.portal.kernel.FileUtil` and `java.io.IOException`.
+   Import `com.liferay.portal.kernel.util.FileUtil` and `java.io.IOException`.
 
 1. In the overridden `get` method (inside the `try` block), insert the following immediately before the `return` statement, setting the `storageId` (retrieved by `ddmStorageAdapterGetRequest.getPrimaryKey()`) as the `fileId` and calling the `_getFile` utility method which prints the retrieved content to the Liferay log.
 
@@ -251,7 +253,7 @@ There are two types of save requests: 1) a new record is added or 2) an existing
    }
     ```
 
-   Import `com.liferay.dynamic.data.mapping.storage.DDMFormValues`.
+   Import `com.liferay.dynamic.data.mapping.storage.DDMFormValues` and `java.io.File`.
 
 1. Create a `_serialize` utility method to convert the `DDMFormValues` object to JSON:
 
@@ -271,6 +273,8 @@ There are two types of save requests: 1) a new record is added or 2) an existing
 		return ddmFormValuesSerializerSerializeResponse.getContent();
 	}
     ```
+    
+    Import `com.liferay.dynamic.data.mapping.io.DDMFormValuesSerializer`, `com.liferay.dynamic.data.mapping.io.DDMFormValuesSerializerSerializeRequest`, and `com.liferay.dynamic.data.mapping.io.DDMFormValuesSerializerSerializeResponse`.
 
 1. Add this logic and the call to `_saveFile` to the `save` method by replacing the existing `return` statement:
 
@@ -303,15 +307,17 @@ Now verify that it's working:
 
 1. In the Form Builder view, click the *Options* button (![Options](./../../../images/icon-options.png)) and open the *Settings* window.
 
-1. From the select list field called *Select a Storage Type*, choose the File System type and click _Done_.
+1. From the select list field called *Select a Storage Type*, choose the *R2F1 Dynamic Data Mapping Storage Adapter* type and click _Done_.
 
 1. Add a [Text Field](../creating-and-managing-forms/creating-forms.md) to the form, publish the form, and submit it a few times.
 
 1. To verify the form records were written to the container's file system, check the log. You'll see messages like:
 
    ```bash
-   2020-08-18 22:19:48.693 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:103] Saved a file with the ID 36242
-   2020-08-18 22:19:48.716 WARN  [http-nio-8080-exec-2][R2F1DDMStorageAdapter:122] Reading the file with the ID 36242: {"availableLanguageIds":["en_US"],"defaultLanguageId":"en_US","fieldValues":[{"instanceId":"62fQx5qI","name":"PetsFavoriteVehicle","value":{"en_US":"stretch limousine"}}]}
+   WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:82] Acme storage adapter's save method was invoked
+   WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:134] Saved a file with the ID42088
+   WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:61] Acme storage adapter's get method was invoked
+   WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:112] Reading the file with the ID 42088: {"availableLanguageIds":["en_US"],"defaultLanguageId":"en_US","fieldValues":[{"instanceId":"EJ5UglA1","name":"Field51665758","value":{"en_US":"Stretched limousine"}}]}
    ```
 
 ## Conclusion
