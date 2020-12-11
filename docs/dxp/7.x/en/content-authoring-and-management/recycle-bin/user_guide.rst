@@ -4,7 +4,7 @@ User Guide
 .. toctree::
    :maxdepth: 2
 
-   user-guide/introduction-to-the-recycle-bin.md
+   user-guide/the-recycle-bin.md
    user-guide/configuring-the-recycle-bin.md
    user-guide/using-the-recycle-bin.md
 
