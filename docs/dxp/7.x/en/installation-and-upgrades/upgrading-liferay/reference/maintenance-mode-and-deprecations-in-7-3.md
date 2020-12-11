@@ -47,6 +47,7 @@ Here are the features deprecated in 7.3:
 | OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). Deprecated in 7.2. |
 | Project Template: project-templates-activator | Archived [in GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) | No replacement. |
 | Project Template: project-templates-freemarker-portlet | Archived [in GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) | No replacement. |
+| Screens | Github - iOS: [5.2.0](https://github.com/liferay/liferay-screens/releases/tag/5.2.0), Android: [5.1.0](https://github.com/liferay/liferay-screens/releases/tag/5.1.0-android) |  Use the [Mobile SDK](../../../developing-applications/tooling/other-tools/mobile-sdk.md) and the [Headless APIs](../../..//headless-delivery/consuming_apis.html). |
 | Search widget (classic) in *Tools* category | Bundled | Deprecated in 7.1. Replaced by the [Search widgets](../../../using-search/search-pages-and-widgets/search-results/search-results.md) in the *Search* category. |
 | SOAP Web Services | Bundled (disabled) | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
 | Solr | Marketplace | Replaced by Elasticsearch. |
@@ -68,7 +69,7 @@ Here are the features moved to Maintenance Mode in 7.3:
 
 * Export/Import
 * Liferay Drools
-* Liferay Mobile Experience: Mobile SDK, Screens, Push
+* Liferay Mobile Experience: Mobile SDK, Push
 * Liferay Reports
 * Site Templates
 
