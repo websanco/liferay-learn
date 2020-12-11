@@ -16,9 +16,9 @@ Out-of-the-box, Liferay is designed with responsive layouts in mind:
 
    ![Columns are combined when the width is low.](./building-a-responsive-site-overview/images/03.png)
 
-* For web developers, theme tools provide a number of tools to help ensure optimum mobile performance.
+* For web developers, theme tools help ensure optimum mobile performance.
 
-If you're using the default theme, all you need to do to display pages on Mobile device is to create a page. However, you also have tools available to verify that everything displays as intended. The Device Simulator (![Simulation](../../images/icon-simulation.png)) shows you how pages look on different devices.
+If you're using the default theme, all you need to do to display pages on Mobile device is create a page. However, you also have tools available to verify that everything displays as intended. The Device Simulator (![Simulation](../../images/icon-simulation.png)) shows you how pages look on different devices.
 
 ## Using the Device Simulator
 
@@ -48,7 +48,7 @@ Building pages that provide a good experience across all kinds of devices still 
 
 Each Site has Mobile Device Families configuration settings. You can create mobile device rules that govern Site behavior on detection of a mobile device. There are many different devices, each with their own characteristics. To tell the difference between them, you need a way to find out the characteristics of the device. While some of the characteristics are provided by the device, most are not. For this reason, there are databases that contain information about thousands of devices. These databases make it possible to learn every detail about a device from the device type. Mobile Device Rules can connect to device databases so that you can use their device characteristics in your rules.
 
-Liferay offers a deployable Mobile Device Detection app. This app provides the device detection database that is required to detect which mobile devices are accessing it. You must install [the lite version of LMDD](https://web.liferay.com/marketplace/-/mp/application/92831494) before you can install [the enterprise version](https://web.liferay.com/marketplace/-/mp/application/35419014).
+Liferay offers a deployable [Mobile Device Detection Lite](https://web.liferay.com/marketplace/-/mp/application/92831494) app. This app provides the device detection database that is required to detect which mobile devices are accessing it. 
 
 Once the app is deployed, whole Sites or individual pages can be configured for mobile device families. A family describes a group of devices. You can set rules that describe categories of devices, such as all Android devices or all iOS tablets. You can define as many rules in a family as you need to classify all the devices for which you need to define actions. Families can be prioritized to determine which one applies to a given page request.
 

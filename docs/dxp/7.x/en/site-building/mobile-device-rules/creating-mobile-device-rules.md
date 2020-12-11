@@ -1,6 +1,6 @@
 # Creating Mobile Device Rules
 
-As a prerequisite, you must install the Liferay Mobile Device Detection (LMDD) app from Liferay Marketplace. This app provides the device detection database that's required to detect which mobile devices are accessing it. You must install [the lite version of LMDD](https://web.liferay.com/marketplace/-/mp/application/92831494) before you can install [the enterprise version](https://web.liferay.com/marketplace/-/mp/application/35419014).
+As a prerequisite, you must install the [Liferay Mobile Device Detection Lite (LMDD)](https://web.liferay.com/marketplace/-/mp/application/92831494) app from Liferay Marketplace. This app provides the device detection database that's required to detect which mobile devices are accessing it. 
 
 ## Creating a Mobile Device Family
 
