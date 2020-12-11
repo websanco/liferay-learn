@@ -39,6 +39,6 @@ The Configuration tab provides input for adding configuration options to the Pag
 
 Configuration values are made available to the Page Fragment through the FreeMarker context in the HTML pane. You can combine configuration options with conditional values in the HTML to create dynamic experiences for the user. You can also access these values via JavaScript. See [Making Page Fragments Configurable](../../developing-page-fragments/adding-configuration-options-to-fragments.md) for more information.
 
-In DXP 7.3+, you can also select a checkbox near the top of the page to make your fragment cacheable. If this option is enabled, then the fragment will be added to DXP's cache when it is added to a page, improving the performance of pages with these fragments.
+In DXP 7.3+, you can also select a checkbox near the top of the page to make your fragment cacheable. If this option is enabled, then the fragment is added to the cache when it is added to a page, improving the performance of pages with these fragments.
 
 ![Check the Cacheable option to improve the performance of your pages by caching the fragment.](./page-fragment-editor-interface-reference/images/02.png)

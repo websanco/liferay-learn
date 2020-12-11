@@ -12,7 +12,7 @@ Follow these steps to add a widget to a Widget Page:
 1. Drag the widget to the column and row of the page layout where you want to place it.
 
 ```tip::
-   In DXP 7.3+, you can click the eye icon at the top of any Widget Page to toggle the widget controls for all widgets. When disabled, the widget controls will not pop up when you hover your cursor over them.
+   In DXP 7.3+, you can click the eye icon at the top of any Widget Page to toggle the widget controls for all widgets. When disabled, the widget controls do not pop up when you hover your cursor over them.
 ```
 
 ```note::

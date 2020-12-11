@@ -5,7 +5,7 @@ Liferay provides powerful tools for creating and organizing pages. You can build
 By default, there is a defined page hierarchy to organize your pages. However, you can also create a _Navigation Menu_ that is separate from your page hierarchy. Using these Navigation Menus, you can create a one-off landing page or even multiple navigation menus: a main menu, secondary menus, footer menus, and custom menus.
 
 ```note::
-   In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Sites, then you can use Navigation Menus created in the Global Site. Note that Global Navigation Menus cannot include menu items that require Site-specific information (such as the "page" type).
+   In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Sites, you can use Navigation Menus created in the Global Site. Note that Global Navigation Menus cannot include menu items that require Site-specific information (such as the "page" type).
 ```
 
 Menus can differ by page: landing pages can show a simple list of frequently visited pages, and the rest can appear in secondary navigation. You can also create specific menus for different landing pages to direct visitors to relevant content.
