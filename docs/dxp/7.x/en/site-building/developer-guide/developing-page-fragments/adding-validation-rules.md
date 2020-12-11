@@ -23,14 +23,14 @@ The following JSON code adds `text` validation rules to set the minimum and maxi
 					    "maxLength": 30
 					  }
 					}
-				},
+				}
 			]
 		}
 	]
 }
 ```
 
-![Use text validation rules to set the minimum and maximum number of characters used in valid entries](./adding-validation-rules/images/01.png)
+![Use text validation rules to set the minimum and maximum number of characters used in valid entries.](./adding-validation-rules/images/01.png)
 
 ## Number Validation Rules
 
@@ -54,14 +54,14 @@ The following JSON code adds `number` validation rules to define the numerical r
 					    "max": 10
 					  }
 					}
-				},
+				}
 			]
 		}
 	]
 }
 ```
 
-![Use number validation rules to define the numerical range of valid entries](./adding-validation-rules/images/02.png)
+![Use number validation rules to define the numerical range of valid entries.](./adding-validation-rules/images/02.png)
 
 ## Email Validation Rules
 
@@ -84,14 +84,14 @@ The following JSON code adds `email` validation rules to require email syntax an
 					    "maxLength": 30
 					  }
 					}
-				},
+				}
 			]
 		}
 	]
 }
 ```
 
-![Use email validation rules to require email syntax and define the character length of valid entries](./adding-validation-rules/images/03.png)
+![Use email validation rules to require email syntax and define the character length of valid entries.](./adding-validation-rules/images/03.png)
 
 ## URL Validation Rules
 
@@ -114,21 +114,21 @@ The following JSON code adds `url` validation rules to require proper URL protoc
 					    "maxLength": 100
 					  }
 					}
-				},
+				}
 			]
 		}
 	]
 }
 ```
 
-![Use url validation rules to require proper URL protocol and define the character length of valid URLs](./adding-validation-rules/images/04.png)
+![Use url validation rules to require proper URL protocol and define the character length of valid URLs.](./adding-validation-rules/images/04.png)
 
 ## Pattern Validation Rules
 
-The following JSON code adds `pattern` validation rules to a `text` type field using regex to define valid entries.
+The following JSON code adds `pattern` validation rules to a `text` type field using regular expressions to define valid entries.
 
 ```note::
-   When using backslashes to escape characters in regex values (e.g., ``\d``), Users must use two backslashes within ``JSON`` files to first escape the backslash (e.g., ``\\d``). See `IETF <./https://www.ietf.org/rfc/rfc4627.txt>`_ documentation for more information on JSON grammar.
+   When using backslashes to escape characters in regex values (e.g., ``\d``), you must use two backslashes within ``JSON`` files to first escape the backslash (e.g., ``\\d``). See `IETF <./https://www.ietf.org/rfc/rfc4627.txt>`_ documentation for more information on JSON grammar.
 ```
 
 ```json
@@ -144,10 +144,10 @@ The following JSON code adds `pattern` validation rules to a `text` type field u
 					  "validation": {
 					    "errorMessage": "Enter a valid 10 digit phone number.",
 					    "type": "pattern",
-					    "regexp": "([0-9]{3})[.-]?([0-9]{3})[.-]?([0-9]{4})",
+					    "regexp": "([0-9]{3})[.-]?([0-9]{3})[.-]?([0-9]{4})"
 					  }
 					}
-				},
+				}
 			]
 		}
 	]
