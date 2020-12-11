@@ -9,7 +9,7 @@ import com.liferay.portal.kernel.model.ModelListener;
 
 import org.osgi.service.component.annotations.Component;
 
-@Component(immediate = true, service = ModelListener.class)
+@Component(service = ModelListener.class)
 public class N4G6ModelListener extends BaseModelListener<JournalArticle> {
 
 	public void onAfterCreate(JournalArticle journalArticle)
