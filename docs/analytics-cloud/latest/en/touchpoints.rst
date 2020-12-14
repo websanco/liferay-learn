@@ -5,12 +5,14 @@ Touchpoints
    :maxdepth: 1
 
    touchpoints/touchpoints.md
+   touchpoints/sites-dashboard.md
    touchpoints/pages.rst
    touchpoints/assets.rst
    touchpoints/a-b-testing.md
    touchpoints/content-recommendation-api.md
 
 -  :doc:`/touchpoints/touchpoints`
+-  :doc:`/touchpoints/sites-dashboard`
 -  :doc:`/touchpoints/a-b-testing`
 -  :doc:`/touchpoints/content-recommendation-api`
 
