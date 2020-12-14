@@ -27,8 +27,8 @@ Creating and Managing Forms
 -  :doc:`/process-automation/forms/creating-and-managing-forms/translating-forms`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/customizing-auto-save-behavior`
 
-References
-----------
+Reference
+---------
 
 -  :doc:`/process-automation/forms/creating-and-managing-forms/forms-field-types-reference`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/forms-configuration-reference`

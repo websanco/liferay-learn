@@ -4,6 +4,7 @@ Forms
 .. toctree::
    :maxdepth: 3
 
+   forms/introduction-to-forms.md
    forms/creating_and_managing_forms.rst
    forms/sharing_forms_and_managing_submissions.rst
    forms/form_rules.rst
