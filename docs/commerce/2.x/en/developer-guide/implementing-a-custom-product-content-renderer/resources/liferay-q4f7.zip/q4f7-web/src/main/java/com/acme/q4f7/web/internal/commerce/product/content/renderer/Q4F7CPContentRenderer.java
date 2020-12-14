@@ -18,7 +18,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = {
 		"commerce.product.content.renderer.key=q4f7",
 		"commerce.product.content.renderer.order=1",
