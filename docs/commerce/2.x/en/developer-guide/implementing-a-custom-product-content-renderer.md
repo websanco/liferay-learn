@@ -50,9 +50,13 @@ In this section, we will get an example product content renderer up and running 
 
 1. Verify that the example product content renderer was added. Open your browser to `https://localhost:8080` and navigate to any catalog with products in Liferay Commerce. Click on the product to see the Product Details widget, then click _Configuration_ for the widget.
 
-    Under the _Custom Renderer_ section, select _Simple_. Below the _Simple Commerce Product Type Renderer Key_ dropdown, the new renderer ("Q4F7 Commerce Product Content Renderer") is present.
+    Under the _Custom Renderer_ section, select _Simple_. Below the _Simple Commerce Product Type Renderer Key_ dropdown, select the new renderer ("Q4F7 Commerce Product Content Renderer").
 
-![New product content renderer](./implementing-a-custom-product-content-renderer/images/02.png "New product content renderer")
+    ![New product content renderer](./implementing-a-custom-product-content-renderer/images/02.png "New product content renderer")
+
+1. When you select a product, the new renderer shows only the product's SKU, price, availability, and stock quantity.
+
+    ![Here are a product's details shown using the new renderer.](./implementing-a-custom-product-content-renderer/images/03.png "Details shown using the new  renderer")
 
 Congratulations, you've successfully built and deployed a new custom product content renderer that implements `CPContentRenderer`.
 
