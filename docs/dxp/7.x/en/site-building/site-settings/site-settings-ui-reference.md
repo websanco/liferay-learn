@@ -49,7 +49,7 @@ Here you can view and configure any custom fields you've defined for your pages.
 
 ### Categorization
 
-Here you can categorize Site content using *Categories* and *Tags*. These tools help organize sites so users can more easily find your site's content via search and navigation widgets. See [Organizing Content with Tags and Categories](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md) for more information.
+Here you can categorize Site content using *Categories* and *Tags*. These tools help organize Sites so Users can more easily find your Site's content via search and navigation widgets. See [Organizing Content with Tags and Categories](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md) for more information.
 
 ![You can categorize Site content using Categories and Tags.](./site-settings-ui-reference/images/04.png)
 
