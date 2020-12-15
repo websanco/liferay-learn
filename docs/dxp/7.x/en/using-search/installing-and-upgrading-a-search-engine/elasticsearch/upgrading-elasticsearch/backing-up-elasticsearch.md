@@ -2,7 +2,7 @@
 
 [Elasticsearch replicas](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules.html#index-modules-settings) protect against a node going down, but they won't help you with a catastrophic failure. Only good backup practices can help you then.
 
-Before you [upgrade](./upgrading-search-for-liferay-73.md) is one good occasion to back up and test restoring your Elasticsearch indexes. In fact, the snapshot [search tuning indexes](#backing-up-and-restoring-search-tuning-indexes) can be used to reindex your previous Synonym Sets and Result Rankings when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
+One good occasion to back up and test restoring your Elasticsearch indexes is before you [upgrade](./upgrading-search-for-liferay-73.md). In fact, the snapshot [search tuning indexes](#backing-up-and-restoring-search-tuning-indexes) can be used to reindex your previous Synonym Sets and Result Rankings when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
 
 Back up your Elasticsearch cluster and test restoring the backup in three steps: 
 
@@ -67,7 +67,7 @@ A successful snapshot command returns this result:
 {"accepted":true}
 ```
 
-You can limit snapshots to specific indexes too. For example, you may have Liferay Enterprise Search Monitoring but want to exclude monitoring indexes from the snapshot. Explicitly declare the indexes to include in the snapshot. For example,
+You can limit snapshots to specific indexes too. For example, you may have Liferay Enterprise Search Monitoring but want to exclude monitoring indexes from the snapshot. You can explicitly declare the indexes to include in the snapshot. For example,
 
 ```bash
 curl -XPUT localhost:9200/_snapshot/test_backup/snapshot_2
@@ -100,7 +100,7 @@ green  open   liferay-20101-search-tuning-synonyms               pAUN8st1RmaV1Nx
    Elasticsearch uses a *smart snapshots* approach. To understand what that means, consider a single index. The first snapshot includes a copy of the entire index, while subsequent snapshots only include the delta between the first, complete index snapshot and the current state of the index.
 ```
 
-Eventually you'll end up with a lot of snapshots in your repository, and no matter how cleverly you name the snapshots, you may forget what some snapshots contain. You can get a snaptshot's description using the Elasticsearch API. For example,
+Eventually you'll end up with a lot of snapshots in your repository, and no matter how cleverly you name the snapshots, you may forget what some snapshots contain. You can get a description using the Elasticsearch API. For example,
 
 ```bash
 curl -XGET localhost:9200/_snapshot/test_backup/snapshot_1
@@ -174,7 +174,7 @@ Nobody likes catastrophic failure on a production system, but Elasticsearch's AP
 
 ## Backing up and Restoring Search Tuning Indexes
 
-Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, the Search Tuning features ([Synonym Sets](../../../search_administration_and_tuning.rst) and [Result Rankings](../../../search_administration_and_tuning.rst)). There are no records for these applications in the database.
+Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search_administration_and_tuning.rst) and [Result Rankings](../../../search_administration_and_tuning.rst). There are no records for these applications in the database.
 
 You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to back up and restore the Search Tuning indexes.
 
@@ -216,7 +216,7 @@ You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/
     }
     ```
 
-   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated form the database, like the Synonym Sets and Result Rankings indexes.
+   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated from the database, like the Synonym Sets and Result Rankings indexes.
 
 1. To [restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-restore-snapshot.html) specific indexes from a snapshot using a different name, run a `restore` API call similar to this:
 
@@ -250,7 +250,7 @@ POST _reindex/
 }
 ```
 
-Run the same command for the `liferay-20101-search-tuning-rankings` index. If you run both requests in a post-upgrade Elasticsearch installation, the Synonym Sets and Result Rankings data from the pre-upgrade system is now restored.
+Run the same command for the `liferay-20101-search-tuning-rankings` index. If you run both requests in a post-upgrade Elasticsearch installation, the Synonym Sets and Result Rankings data from the pre-upgrade system are now restored.
 
 ```tip::
    It's convenient to create and manage snapshots via the `Kibana 7.x UI <https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html>`__.
