@@ -16,7 +16,7 @@ If the Recycle Bin is disabled on a site, assets that are deleted are permanentl
 
 ## Recycle Bin and Staging
 
-If you have a Staging environment enabled for your Site, you have a separate Recycle Bin for both the Staging environment and the Live environment. This prevents staged assets and live assets from mixing.
+If you have a [Staging](../../../site-building/publishing-tools/staging/staging-overview.md) environment enabled for your Site, you have a separate Recycle Bin for both the Staging environment and the Live environment. This prevents staged assets and live assets from mixing.
 
 To move an asset to the Recycle Bin, first switch to the environment containing the asset. Click on Staging or Live.
 
@@ -27,11 +27,7 @@ To move an asset to the Recycle Bin, first switch to the environment containing 
 Note that the Recycle Bin is enabled for different asset types when the Staging environment is initially configured. See [Managing Data and Content Types in Staging](../../../site-building/publishing-tools/staging/managing-data-and-content-types-in-staging.md) to make any changes.
 
 ```warning::
-   Check your Recycle Bin before enabling a Staging environment. You may end up losing assets that are already in the Recycle Bin. 
-```
-
-```warning::
-   Likewise, check your Staging environment's Recycle Bin before disabling the Staging environment. You may end up losing assets after disabling.
+   Check your Recycle Bin before enabling or disabling a Staging environment. You may end up losing assets that are already in the Recycle Bin. 
 ```
 
 ## What's Next
