@@ -30,11 +30,11 @@ These steps describe how to create a new Segment:
 
 1. From the *Properties* area, select the group and property to define your Segment. Drag and drop the *Property* to the *Conditions* area.
 
-1. Configure the Conditions for your segment (see below). 
-
-   ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
+1. Configure the Conditions for your segment (see [Configuring Segment's Conditions](#configuring-segment-conditions) below). 
 
 1. Click *Save*.
+
+### Configuring Segment Conditions
 
 From the *Condition* area you have these options:
 
@@ -42,6 +42,10 @@ From the *Condition* area you have these options:
 - Add or remove *Conditions* from the same *Properties* group, using the buttons next to the condition's name (B).
 - Add conditions using a different *Properties* group, by dragging and dropping the *Property* (C).
 - Combine the *Conditions* with *AND* and *OR* operators (D and E).
+
+   ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
+
+For the [Session Properties](./segments-editor-ui-reference.md#session-properties), you can configure a list of predefined values using [Session Property Vocabularies](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md). This option facilitates the task of defining the segments and eliminates manual entry errors.
 
 As you edit, a count of members meeting the criteria appears at the top of the Conditions area. You can click on *View Members* to see the list. This helps you determine if you are correctly defining the Segment.
 
@@ -57,6 +61,8 @@ After you create your User Segment, you can see it in the list of User Segments 
 
 ## Related Information
 
-* [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
-* [Getting Analytics for User Segments](./getting-analytics-for-user-segments.md)
-* [Content Page Personalization](../experience-personalization/content-page-personalization.md)
+- [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
+- [Getting Analytics for User Segments](./getting-analytics-for-user-segments.md)
+- [Content Page Personalization](../experience-personalization/content-page-personalization.md)
+- [Session Property Vocabularies](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md)
+

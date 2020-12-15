@@ -2,7 +2,7 @@
 
 Using Categories, you can group similar assets and organize your content. Along with [Tags](./tagging-content-and-managing-tags.md), Categories help people find relevant information through search or navigation. For more information about Categories in Liferay DXP and the different usage scenarios, see [Organizing Content with Categories and Tags](organizing-content-with-categories-and-tags.md).
 
-You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories).
+You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories). You can use the vocabularies an categories at the Global site in any other site, but you can only create or edit Global vocabularies at the Global Site.
 
 ```note::
    Only Site administrators can manage Categories and Vocabularies in the Categories panel.
@@ -10,6 +10,7 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
 
 ## Defining Vocabularies
 
+1. Go to the Site where you want to create the vocabulary.
 1. Open the Product Menu and, under the Site Menu, go to *Categorization* &rarr; *Categories*.
 1. Click *New Vocabulary* (![New Vocabulary](../../images/icon-plus.png)).
 1. Enter a *Name* for the Vocabulary and, optionally, a *Description*.
