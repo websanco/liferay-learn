@@ -4,27 +4,24 @@ Touchpoints reflect the many different ways your users and customers interact wi
 
 Analytics Cloud's presents site-wide reporting that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for individual pages can be easily viewed as well. This includes views, visitors, and bounce rate. Path analytics let you see how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
 
-Here, you'll learn how to find the site, page, and asset analytics:
+![The Touchpoints menu provides access to information about Sites, Pages, and Assets.](touchpoints/images/01.png)
 
-* [Sites Dashboard](sites-dashboard.md)
+Navigating to Touchpoints begins with the [Sites Dashboard](sites-dashboard.md). From here, you can find additional page and asset analytics:
+
 * [Viewing Page Data](#viewing-page-data)
 * [Finding Asset Data](#finding-asset-data)
 
-The rest of the articles in this section explain these metrics in detail.
-
-![The Touchpoints menu provides access to information about Sites, Pages, and Assets.](touchpoints/images/01.png)
-
 ## Viewing Page Data
 
-Follow these steps to view the list of Pages with summary data:
+To view the list of Pages with summary data,
 
-1. Find the Touchpoints section of the menu.
-1. Click Sites.
+![The Pages tab presents pages and several columns of data over a period of time.](touchpoints/images/02.png)
+
+1. From the Touchpoints section, click Sites.
+
 1. Click the Pages tab.
 
-![The Pages tab presents pages and several columns of data over a period of time.](touchpoints/images/10.png)
-
-Order Pages in ascending or descending order based on any one of these metrics. Click the metric's heading in the table to perform the sort:
+Order Pages in ascending or descending order based on any one of the following metrics,
 
 * Average Engagement Score
 * Total Visitors
@@ -43,15 +40,17 @@ The metrics for ordering the Page list are calculated based on the time period s
 
 To view detailed metrics for a single page, click that page in the table. See [Page Analytics](pages/pages.md) for more information.
 
-![The Visitor Behavior screen shows line graphs of Engagement statistics over a period of time.](touchpoints/images/11.png)
+![The Visitor Behavior screen shows line graphs of Engagement statistics over a period of time.](touchpoints/images/03.png)
 
 ## Finding Asset Data
 
-1. Find the Touchpoints section of the menu.
-1. Click Assets for a list of Assets with summary data.
-1. Choose an Asset type: Blogs, Documents and Media, Forms, Web Content, or Custom.
+To view analytics data on your assets,
 
-![Asset Data is organized by asset type tabs.](touchpoints/images/12.png)
+![Asset Data is organized by asset type tabs.](touchpoints/images/04.png)
+
+1. From the Touchpoints section, click Assets. 
+
+1. Choose an Asset type: Blogs, Documents and Media, Forms, Web Content, or Custom.
 
 To order Assets in ascending or descending order based on any one of the Asset's metrics, click the metric's heading in the table. The metrics differ between Assets. See each Asset's documentation for more information. In addition, you can calculate the metrics over a selected time period by selecting one of the following values from the time period menu (at the top-right of the table):
 
@@ -62,6 +61,8 @@ To order Assets in ascending or descending order based on any one of the Asset's
 * Last 30 days (default)
 * Last 90 days
 
-Click an Asset in the list to see more granular detail. Remember that there are separate lists for different Asset types. More details on each Asset type's metrics are covered in the subsequent articles.
+Click an Asset in the list to see more granular detail. 
 
-![Asset specific metrics data identifies viewing trends over time.](touchpoints/images/13.png)
+![Asset specific metrics data identifies viewing trends over time.](touchpoints/images/05.png)
+
+Remember that there are separate lists for different Asset types. More details on each Asset type's metrics are covered in the subsequent articles.
