@@ -1,6 +1,13 @@
 Developer Guide
 ===============
 
+.. toctree::
+   :maxdepth: 3
+
+   developer-guide/writing-a-form-storage-adapter.md
+   developer-guide/understanding-form-storage-adapters.md
+   developer-guide/apis.rst
+
 Forms
 -----
 
@@ -16,8 +23,7 @@ Data Engine
 * Managing Data Records
 * Managing Data Layouts
 
-.. toctree::
-   :maxdepth: 3
+APIs
+----
 
-   developer-guide/writing-a-form-storage-adapter.md
-   developer-guide/understanding-form-storage-adapters.md
+Coming soon!

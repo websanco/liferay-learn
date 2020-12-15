@@ -8,7 +8,6 @@ Workflow
    workflow/designing_and_managing_workflows.rst
    workflow/using_workflows.rst
    workflow/developer_guide.rst
-   workflow/apis.rst
 
 .. raw:: html
    :file: ../landingpage_template.html

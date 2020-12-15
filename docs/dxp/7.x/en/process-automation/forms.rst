@@ -12,11 +12,9 @@ Forms
    forms/dynamic_data_lists.rst
    forms/kaleo_forms.rst
    forms/developer_guide.rst
-   forms/apis.rst
 
 .. raw:: html
    :file: ../landingpage_template.html
 
 .. raw:: html
    :file: forms/landing.html
-   

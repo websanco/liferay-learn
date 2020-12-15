@@ -10,6 +10,7 @@ Developer Guide
    developer-guide/using-the-script-engine-in-workflow.md
    developer-guide/workflow-definition-node-reference.md
    developer-guide/workflow-task-node-reference.md
+   developer-guide/apis.rst
 
 -  :doc:`/process-automation/workflow/developer-guide/implementing-workflow`
 -  :doc:`/process-automation/workflow/developer-guide/implementing-a-custom-sla-calendar`
@@ -17,3 +18,8 @@ Developer Guide
 -  :doc:`/process-automation/workflow/developer-guide/crafting-xml-workflow-definitions`
 -  :doc:`/process-automation/workflow/developer-guide/workflow-definition-node-reference`
 -  :doc:`/process-automation/workflow/developer-guide/workflow-task-node-reference`
+
+APIs
+----
+
+Coming soon!
