@@ -67,7 +67,7 @@ Each Elasticsearch server is configured by its `[Elasticsearch Home]/config/elas
 
 Here are example single-node and multi-node Elasticsearch cluster configurations.
 
-See the [Securing Elasticsearch](./securing-elasticsearch.md) to learn about authenticating and encrypting communication with the Elasticsearch server(s).
+See [Securing Elasticsearch](./securing-elasticsearch.md) to learn about authenticating and encrypting communication with the Elasticsearch server(s).
 
 ### Example: Single-Node Production Elasticsearch Cluster
 
@@ -84,7 +84,7 @@ network.host: es-node1
 node.name: es-node1
 transport.port: 9300
 
-# Additional security settings here
+# Additional security settings 
 ```
 
 This cluster called `LiferayElasticsearchCluster` has one node called `es-node1`.

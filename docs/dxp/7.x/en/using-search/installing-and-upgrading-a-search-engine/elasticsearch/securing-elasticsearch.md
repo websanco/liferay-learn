@@ -53,7 +53,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
 
    This generates a file called `elastic-stack-ca.p12`. 
 
-   To generate the certificate authority cert and private key in PEM format:
+   To generate the certificate authority cert and private key in PEM format,
 
    ```bash
    ./bin/elasticsearch-certutil ca --pem --ca-dn CN=elastic-ca
@@ -64,13 +64,13 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
 1. Generate X.509 certificates and private keys using the CA you created:
 
 
-   To generate certificates and keys in `PKCS#12` format run
+   To generate certificates and keys in `PKCS#12` format, run
 
    ```bash
    ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
    ```
 
-   To generate certificates and keys in `PEM` format run
+   To generate certificates and keys in `PEM` format, run
     
    ```bash
    ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
@@ -86,7 +86,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
       On Liferay 7.3 only the following keystore types can be used in the Elasticsearch 7 connector configuration: https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types
    ```
 
-   To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and Liferay servers) use comma-separated lists when enumerating the DNS names and IP addresses:
+   To generate a certificate that works with multiple hosts (for example to use the same certificate on all Elasticsearch and Liferay servers), use comma-separated lists when listing the DNS names and IP addresses:
 
    ```bash
    ./bin/elasticsearch-certutil cert --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost,example.com,es-node1,es-node2,es-node3 --ip 127.0.0.1,<IPv4-address-2>,<IPv4-address-3>,<IPv4-address-4>
@@ -95,7 +95,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
    The `elasticsearch-certutil cert` command generates another file called `elastic-nodes.p12` (feel free to name it differently).
 
    ```note::
-      The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This will generate you two files in each case in a form of a ZIP file: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archives' contents in the *[Elasticsearch Home]/config/certs* folder.
+      The ``certutil`` command defaults to using the *PKSC#12* format for certificate generation. Since Kibana does not work with PKSC#12 certificates, the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Kibana and *Liferay Enterprise Search Monitoring*. This generates two files in each case in a form of a ZIP file: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archives' contents in the *[Elasticsearch Home]/config/certs* folder.
    ```
 
 1. Move `elastic-nodes.p12` to the `[Elasticsearch Home]/config/certs` folder.
@@ -206,7 +206,7 @@ The exact contents of the file depend on your X-Pack setup. The `password` must 
 
 The certificate and key files referenced here are the same ones used on the Elasticsearch server nodes. Copy them to the Liferay server and update their paths in the configuration accordingly.
 
-Besides configuring TLS, we also enable authentication in the settings below by setting `authenticationEnabled`/`requiresAuthentication` to `true` and providing the credentials for the Elasticsearch user that will be used by Liferay to authenticate into Elasticsearch.
+Besides configuring TLS, you also enable authentication in the settings below by setting `authenticationEnabled`/`requiresAuthentication` to `true` and providing the credentials for the Elasticsearch user used by Liferay to authenticate into Elasticsearch.
 
 When you're finished configuring security, restart Elasticsearch. These steps require a full Elasticsearch cluster restart.
 
@@ -241,7 +241,7 @@ truststoreType="pkcs12"
 
 ### Configure a Secure Connection to Elasticsearch in Liferay 7.2
 
-All Liferay connector's to Elasticsearch 7 include X-Pack Security support.
+All Liferay connectors to Elasticsearch 7 include X-Pack Security support.
 
 ```note::
    If you are on Liferay 7.2 and Elasticsearch 6.x and have a Liferay Enterprise Search subscription, `download <https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-2>`__ the `Liferay Enterprise Search Security` application. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
@@ -288,9 +288,9 @@ transportSSLEnabled="true"
 
 Here's the complete list of security settings for the Elasticsearch 7 connector in 7.3 (default values in parentheses):
 
-`authenticationEnabled` (_true_): Enable or disable authentication to Elasticsearch with a username and password.
+`authenticationEnabled` (_true_): Enable or disable authentication to Elasticsearch with a user name and password.
 
-`username` (_elastic_): Set the username for authenticating to Elasticsearch if Authentication Enabled is checked.
+`username` (_elastic_): Set the user name for authenticating to Elasticsearch if Authentication Enabled is checked.
 
 `password`: Set the password for authenticating to Elasticsearch if Authentication Enabled is checked.
 
@@ -308,15 +308,15 @@ Here's the complete list of settings for the X-Pack Security configuration on Li
 
 `sslKeyPath` (_/path/to/instance.key_): Set the path to the PEM encoded file containing the private key.
 
-`sslCertificatePath` (_/path/to/instance.crt_): Set the path to a PEM encoded file containing the certificate (or certificate chain) that will be presented to clients when they connect. Defaults to `/path/to/instance.crt`.
+`sslCertificatePath` (_/path/to/instance.crt_): Set the path to a PEM encoded file containing the certificate (or certificate chain) that is presented to clients when they connect. Defaults to `/path/to/instance.crt`.
 
 `sslCertificateAuthoritiesPaths` (_["/path/to/ca.crt"]_): Provide a list of paths to trusted PEM encoded certificate files.
 
 `certificateFormat` (_PKCS#12_): Specify the certificate format (`PEM` or `PKCS#12`).
 
-`requiresAuthentication` (_false_): If enabled, connections with Elasticsearch/X-Pack are authenticated with the configured username and password.
+`requiresAuthentication` (_false_): If enabled, connections with Elasticsearch/X-Pack are authenticated with the configured user name and password.
 
-`username` (_elastic_): If Requires Authentication is enabled, set the username for authenticating to Elasticsearch is required.
+`username` (_elastic_): If Requires Authentication is enabled, set the user name for authenticating to Elasticsearch is required.
 
 `password`: If Requires Authentication is enabled, a password is required.
 

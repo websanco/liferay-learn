@@ -42,7 +42,7 @@ If you are experiencing any problem connecting Liferay to Elasticsearch (perhaps
 
 ## Disable Elasticsearch Deprecation Logging
 
-Sometimes, Elasticsearch APIs used by Liferay's Elasticsearch connectors are deprecated. Even when there's no impact to the functionality required by Liferay, warning loge messages can result:
+Sometimes, Elasticsearch APIs used by Liferay's Elasticsearch connectors are deprecated. Even when there's no impact to the functionality required by Liferay, warning log messages can result:
 
 ```
 [2019-07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
@@ -60,4 +60,4 @@ ode_name]SSL configuration [xpack.security.transport.ssl.] relies upon fallback 
 1. 07-16T14:47:05,779][WARN ][o.e.d.c.j.Joda           ] [
 ```
 
-These warnings do not signal any functional issues, and can be disabled (see [Deprecation Logging](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/logging.html#deprecation-logging) to learn how).
+These warnings do not signal any functional issues and can be disabled (see [Deprecation Logging](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/logging.html#deprecation-logging) to learn how).
