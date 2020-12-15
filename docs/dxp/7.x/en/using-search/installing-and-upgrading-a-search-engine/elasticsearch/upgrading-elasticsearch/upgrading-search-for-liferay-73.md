@@ -2,6 +2,12 @@
 
 After upgrading Liferay, there are additional steps to upgrade the search experience. The exact steps depend on your existing search engine installation and Liferay version, but you'll always want to start by [backing up your existing indexes](./backing-up-elasticsearch.md).
 
+```important::
+   Always consult Liferay's `Breaking Changes <../../../../liferay-internals/reference/7-3-breaking-changes.md>`__ before upgrading. One such breaking change that impacts the upgraded search experience: `Dynamic Data Mapping fields in Elasticsearch have changed to a nested document <../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document>`__. 
+
+   This change affects custom code that executes queries in the Elasticsearch index using ``ddm__keyword__*`` and ``ddm__text__*`` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
+```
+
 ## Search Upgrade Overview
 
 The list below just scratches the surface of the search upgrade picture: it doesn't cover more complicated scenarios (such as upgrading Liferay Enterprise Search modules). Find the scenario that matches your Liferay version, LES version (if using LES), and your current search engine stack. Use the *Upgrade Steps* column to guide the upgrade.

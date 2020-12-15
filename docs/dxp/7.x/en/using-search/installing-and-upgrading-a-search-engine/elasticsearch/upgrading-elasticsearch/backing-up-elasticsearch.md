@@ -4,6 +4,10 @@
 
 One good occasion to back up and test restoring your Elasticsearch indexes is before you [upgrade](./upgrading-search-for-liferay-73.md). In fact, the snapshot [search tuning indexes](#backing-up-and-restoring-search-tuning-indexes) can be used to reindex your previous Synonym Sets and Result Rankings when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
 
+```tip::
+   It's convenient to create and manage snapshots via the `Kibana 7.x UI <https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html>`__.
+```
+
 Back up your Elasticsearch cluster and test restoring the backup in three steps: 
 
 1. Create a repository
@@ -34,7 +38,7 @@ path.repo: ["path/to/shared/file/system/"]
 After registering the path to the folder hosting the repository (make sure the folder exists), create the repository with a `PUT` command. For example,
 
 ```bash
-curl -X PUT "localhost:9200/_snapshot/test_backup" -H 'Content-Type: application/json' -d'
+PUT /_snapshot/test_backup
 {
   "type": "fs",
   "settings": {
@@ -58,7 +62,7 @@ Now that the repository exists, create a snapshot.
 The easiest snapshot approach is to create a [snapshot of all the indexes in your cluster](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-take-snapshot.html). For example,
 
 ```bash
-curl -XPUT localhost:9200/_snapshot/test_backup/snapshot_1
+PUT /_snapshot/test_backup/snapshot_1
 ```
 
 A successful snapshot command returns this result:
@@ -70,14 +74,14 @@ A successful snapshot command returns this result:
 You can limit snapshots to specific indexes too. For example, you may have Liferay Enterprise Search Monitoring but want to exclude monitoring indexes from the snapshot. You can explicitly declare the indexes to include in the snapshot. For example,
 
 ```bash
-curl -XPUT localhost:9200/_snapshot/test_backup/snapshot_2
+PUT /_snapshot/test_backup/snapshot_2
 { "indices": "liferay-0,liferay-20116" }
 ```
 
 To list all indexes and index metrics, execute this command:
 
 ```bash
-curl -X GET "localhost:9200/_cat/indices?v"
+GET /_cat/indices?v
 ```
 
 Example index metrics,
@@ -103,7 +107,7 @@ green  open   liferay-20101-search-tuning-synonyms               pAUN8st1RmaV1Nx
 Eventually you'll end up with a lot of snapshots in your repository, and no matter how cleverly you name the snapshots, you may forget what some snapshots contain. You can get a description using the Elasticsearch API. For example,
 
 ```bash
-curl -XGET localhost:9200/_snapshot/test_backup/snapshot_1
+GET /_snapshot/test_backup/snapshot_1
 ```
 
 returns
@@ -137,7 +141,7 @@ The snapshot information includes the time range of the indexes.
 If you want to discard a snapshot, use the `DELETE` command.
 
 ```bash
-curl -XDELETE localhost:9200/_snapshot/test_backup/snapshot_1
+DELETE /_snapshot/test_backup/snapshot_1
 ```
 
 Including all indexes in a snapshot can consume a lot of time and storage. If you start creating a snapshot by mistake (for example, wanted to filter on specific indexes but included all indexes) you can cancel snapshot processing using a `DELETE` command. By deleting the snapshot by name, the snapshot process terminates and the partial snapshot is removed from the repository.
@@ -147,27 +151,38 @@ Including all indexes in a snapshot can consume a lot of time and storage. If yo
 If a catastrophic failure occurs, what good is a snapshot if you can't [restore your search indexes](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-restore-snapshot.html) from it? Use the `_restore` API to restore all the snapshot's indexes:
 
 ```bash
-curl -XPOST localhost:9200/_snapshot/test_backup/snapshot_1/_restore
+POST /_snapshot/test_backup/snapshot_1/_restore
 ```
 
-To restore specific indexes, use the `indices` option, and rename the indexes using the `rename_pattern` and `rename_replacement` options:
+If you need to restore the data from a snapshot index into an existing index, restore the index with a different name, then reindex the data into the existing index. To limit the restore command to specific indexes, use the `indices` option. Rename the restored index using the `rename_pattern` and `rename_replacement` options:
 
 ```bash
-curl -XPOST
-localhost:9200/_snapshot/test_backup/snapshot_1/_restore
+POST /_snapshot/test_backup/snapshot_1/_restore
 {
     "indices": "liferay-20116",
-    "rename_pattern": "liferayindex_(.+)",
-    "rename_replacement": "restored_liferayindex_$1"
+    "rename_pattern": "(.+)",
+    "rename_replacement": "restored-$1"
 }
 ```
 
-This restores only the index named `liferay-20116index_1` from the snapshot. The `rename...` settings specify to replace the beginning `liferayindex_` with `restored_liferayindex_`, so `liferay-20116index_1` becomes `restored_liferay-20116index_1`.
-
-As with the canceling a snapshot process, you can use the `DELETE` command to cancel an errant restore process:
+This restores only the index named `liferay-20116` from the snapshot, and renames it to `restored_liferay-20116`. Once restored to the cluster, it can be used to perform a `_reindex` API call that restores the backed up data into an existing `liferay-20116` index.
 
 ```bash
-curl -XDELETE localhost:9200/restored_liferay-20116index_3
+POST _reindex/
+{
+    "dest": {
+      "index": "liferay-20116"
+    },
+    "source": {
+      "index": "restored_liferay-201116"
+    }
+}
+```
+
+As with canceling a snapshot process, you can use the `DELETE` command to cancel an errant restore process:
+
+```bash
+DELETE /restored_liferay-20116index_3
 ```
 
 Nobody likes catastrophic failure on a production system, but Elasticsearch's API for taking snapshots and restoring indexes can help you rest easy knowing that your search cluster can be restored if disaster strikes. For more details and options, read Elastic's [Snapshot and Restore documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html).
@@ -251,10 +266,6 @@ POST _reindex/
 ```
 
 Run the same command for the `liferay-20101-search-tuning-rankings` index. If you run both requests in a post-upgrade Elasticsearch installation, the Synonym Sets and Result Rankings data from the pre-upgrade system are now restored.
-
-```tip::
-   It's convenient to create and manage snapshots via the `Kibana 7.x UI <https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html>`__.
-```
 
 ### Search Tuning Index Names
 
