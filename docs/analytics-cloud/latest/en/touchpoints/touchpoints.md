@@ -2,11 +2,11 @@
 
 Touchpoints reflect the many different ways your users and customers interact with your brand. Analytics Cloud presents a broad range of analytics data that combines traditional page analytics like page views, with comprehensive site, path, and asset-specific analytics data.
 
-Analytics Cloud's presents site-wide reporting that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for individual pages can be easily viewed as well. This includes views, visitors, and bounce rate. Path analytics let you see how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
+Analytics Cloud's presents [site-wide reporting dashboard](sites-dashboard.md) that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for [individual pages](pages/pages.md) can be easily viewed as well. This includes views, visitors, and bounce rate. [Path analytics](pages/paths.d) let you see how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
 
 ![The Touchpoints menu provides access to information about Sites, Pages, and Assets.](touchpoints/images/01.png)
 
-Navigating to Touchpoints begins with the [Sites Dashboard](sites-dashboard.md). From here, you can find additional page and asset analytics:
+Navigating to Touchpoints begins with the [Sites Dashboard](sites-dashboard.md). In Touchpoints, you can also find additional page and asset analytics:
 
 * [Viewing Page Data](#viewing-page-data)
 * [Finding Asset Data](#finding-asset-data)
