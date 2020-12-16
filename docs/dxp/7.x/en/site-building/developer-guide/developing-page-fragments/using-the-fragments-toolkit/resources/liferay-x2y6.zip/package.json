@@ -1,5 +1,4 @@
 {
-	"name": "x2y6",
 	"dependencies": {
 		"generator-liferay-fragments": "*",
 		"yo": ">=2.0.0"
@@ -8,6 +7,7 @@
 		"node": ">= 8.0.0",
 		"npm": ">= 6.0.0"
 	},
+	"name": "x2y6",
 	"scripts": {
 		"add-collection": "yo liferay-fragments:collection",
 		"add-fragment": "yo liferay-fragments:fragment",
