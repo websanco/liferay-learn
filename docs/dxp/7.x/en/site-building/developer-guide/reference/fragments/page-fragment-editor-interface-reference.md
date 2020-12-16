@@ -13,9 +13,9 @@ The code editor is split into four panes:
 
 **HTML:** Supports standard HTML, along with Liferay Portal specific tags and FreeMarker (using the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html)) that can be used to add dynamic behavior.
 
-    ```tip::
-       Type ``$(`` to begin using auto-completion to find variable names. Type ``[@`` to use auto-completion to find taglib names.
-    ```
+```tip::
+   Type ``$(`` to begin using auto-completion to find variable names. Type ``[@`` to use auto-completion to find taglib names.
+```
 
 **CSS:** Supports standard CSS.
 
