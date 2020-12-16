@@ -27,7 +27,7 @@ You can also manage a file from its preview. The bar above the preview contains 
 | **Checkout/Checkin** | Checkout prevents others from editing the document while you are working on it. Other users can still view the current version of the document, if they have permission. You can check in the document when you're done with it. |
 | **Move** | Relocate the file to a different parent folder. |
 | **Permissions** | Specify which actions each role can perform on the file. |
-| **Move to [Recycle Bin](../../recycle-bin/user-guide/introduction-to-the-recycle-bin.md):** | Move the file from the Documents and Media library to the Recycle Bin. |
+| **Move to [Recycle Bin](../../recycle-bin/recycle-bin-overview.md):** | Move the file from the Documents and Media library to the Recycle Bin. |
 
 The comments area (below the preview area) lets you comment on and subscribe to comments on the file.
 

@@ -8,7 +8,7 @@ The Recycle Bin supports instance-wide scope or Site-specific scope. By default,
 
 To configure the Recycle Bin,
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the _compass_ icon (![Compass](../../../images/icon-compass.png)) on the Site Administration menu.
+1. Open the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)) then click the _compass_ icon (![Compass](../../images/icon-compass.png)) on the Site Administration menu.
 1. Select the Site.
 1. Click _Configuration_ &rarr; _Settings_.
 

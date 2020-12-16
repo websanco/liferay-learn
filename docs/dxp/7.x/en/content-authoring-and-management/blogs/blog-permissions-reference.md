@@ -11,7 +11,7 @@ Navigate to the _Blogs_ widget. Next to a blog entry, click _Actions_ (![Actions
 | Permission | Description |
 | --- | --- |
 | Update Discussion | Edit another user's comment on the blog entry. |
-| Delete | Move the blog entry to the [Recycle Bin](../../recycle-bin/user-guide/introduction-to-the-recycle-bin.md). |
+| Delete | Move the blog entry to the [Recycle Bin](../recycle-bin/recycle-bin-overview.md). |
 | Permissions | View and modify the blog entry's permissions. |
 | Delete Discussion | Delete any comments on the blog entry. |
 | Update | Edit and modify the blog entry. |

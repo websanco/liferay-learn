@@ -4,5 +4,15 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-.. include:: /content-authoring-and-management/06-recycle-bin/02-developer-guide/README.rst
-   :start-line: 2
+   developer-guide/apis.rst
+
+* Enabling Recycle Bin in Service Builder
+* Restoring Entries
+* Implementing Undo
+* Moving and Restoring Parent Entities
+* Resolving Recycling Conflicts
+
+APIs
+----
+
+Coming soon!

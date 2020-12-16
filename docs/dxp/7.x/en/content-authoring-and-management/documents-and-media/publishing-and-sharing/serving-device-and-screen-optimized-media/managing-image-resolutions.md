@@ -58,7 +58,7 @@ To manually generate missing adapted images,
 
 ## The Recycle Bin and Adapted Images
 
-You can't move adapted images directly to the [Recycle Bin](../../../recycle-bin/user-guide/introduction-to-the-recycle-bin.md). But if the original image is in the Recycle Bin, the corresponding adapted images behave as if they are in the Recycle Bin and users can't view them.
+You can't move adapted images directly to the [Recycle Bin](../../../recycle-bin/recycle-bin-overview.md). But if the original image is in the Recycle Bin, the corresponding adapted images behave as if they are in the Recycle Bin and users can't view them.
 
 URLs that point to adapted images whose original image is in the Recycle Bin return an error code of `404 Not Found`.
 

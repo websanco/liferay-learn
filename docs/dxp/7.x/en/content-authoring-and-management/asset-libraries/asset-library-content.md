@@ -6,7 +6,7 @@ Asset Libraries provide a convenient way to share content across your Sites. Thi
 
 Each Library's dashboard displays its active applications and categorization tools. From here, you can view, create, and organize a Library's content, as well as initiate import/export processes. You can also enable a workflow to direct the publishing process for your Library's web content.
 
-If enabled, all removed content will be temporarily stored in the Library's [Recycle Bin](../recycle-bin/user-guide/configuring-the-recycle-bin.md), where you can manually restore it to its Library or delete it from your instance.
+If enabled, all removed content will be temporarily stored in the Library's [Recycle Bin](../recycle-bin/configuring-the-recycle-bin.md), where you can manually restore it to its Library or delete it from your instance.
 
 * [Creating Content](#creating-content)
 * [Using Content in Your Sites](#using-content-in-your-sites)
@@ -58,7 +58,7 @@ Exporting and importing Library content follows the same process as Site assets.
 
 You can move content to your Library's Recycle Bin when this feature is enabled. By default, recycled content is retained for 43200 minutes (i.e., 30 days), but you can adjust this period in each Asset Library's settings. Recycled content that has been in the Recycle Bin for more than the allotted time are automatically deleted from your instance.
 
-You can also choose to manually delete recycled content or restore it to your Asset Library by clicking on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ). See [Introduction to the Recycle Bin](../recycle-bin/user-guide/introduction-to-the-recycle-bin.md) for more information.
+You can also choose to manually delete recycled content or restore it to your Asset Library by clicking on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ). See [Recycle Bin Overview](../recycle-bin/recycle-bin-overview.md) for more information.
 
 ![Manually delete recycled content or restore it to your Asset Library.](./asset-library-content/images/05.png)
 

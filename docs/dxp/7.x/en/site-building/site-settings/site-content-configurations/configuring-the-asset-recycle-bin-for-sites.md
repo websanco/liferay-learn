@@ -1,6 +1,6 @@
 # Configuring the Asset Recycle Bin for Sites
 
-The Recycle Bin stores content and assets that have been flagged for deletion, before they are permanently removed from the system. This functionality can be enabled globally by default and can be configured on a per-site basis. See the [Recycle Bin](../../../content-authoring-and-management/recycle-bin/user-guide/introduction-to-the-recycle-bin.md) section for more information on the Recycle Bin.
+The Recycle Bin stores content and assets that have been flagged for deletion, before they are permanently removed from the system. This functionality can be enabled globally by default and can be configured on a per-site basis. See the [Recycle Bin](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md) section for more information on the Recycle Bin.
 
 ## Configuring the Recycle Bin for Sites
 
@@ -23,5 +23,5 @@ Your configuration is saved.
 
 ## Additional Information
 
-* [Introduction to the Recycle Bin](../../../content-authoring-and-management/recycle-bin/user-guide/introduction-to-the-recycle-bin.md)
-* [Configuring the Recycle Bin](../../../content-authoring-and-management/recycle-bin/user-guide/configuring-the-recycle-bin.md)
+* [Recycle Bin Overview](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)
+* [Configuring the Recycle Bin](../../../content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.md)

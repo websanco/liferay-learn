@@ -4,15 +4,15 @@ An integrated Recycle Bin can temporarily store content and data you want to rem
 
 While enabled, the Delete action is replaced with *Move to the Recycle Bin* for recyclable assets (i.e., folders, web content, blogs, bookmarks, documents, media, message boards, and wikis).
 
-![The folder is moved to Recycle Bin and not deleted immediately.](./introduction-to-the-recycle-bin/images/01.png)
+![The folder is moved to Recycle Bin and not deleted immediately.](./recycle-bin-overview/images/01.png)
 
 Once recycled, assets are retained for a specified period of time, during which Users can restore or permanently delete them. When an asset has remained in the Recycle Bin for longer than the specified retention period, it is automatically deleted from your instance. The default retention period is 43,200 minutes (i.e., 30 days).
 
-![There is an option to delete or restore a file.](./introduction-to-the-recycle-bin/images/02.png)
+![There is an option to delete or restore a file.](./recycle-bin-overview/images/02.png)
 
 If the Recycle Bin is disabled on a Site, deleted assets are permanently deleted and cannot be restored.
 
-![Delete an asset.](./introduction-to-the-recycle-bin/images/03.png)
+![Delete an asset.](./recycle-bin-overview/images/03.png)
 
 ## Recycle Bin and Staging
 
@@ -20,7 +20,7 @@ If you have a [Staging](../../../site-building/publishing-tools/staging/staging-
 
 To move an asset to the Recycle Bin, first switch to the environment containing the asset. Click on Staging or Live.
 
-![Check which environment you are working in. Click on Staging or Live to switch.](./introduction-to-the-recycle-bin/images/04.png)
+![Check which environment you are working in. Click on Staging or Live to switch.](./recycle-bin-overview/images/04.png)
 
 [Using the Recycle Bin](using-the-recycle-bin.md) has the same functionality whether you are working in a Staging environment or a Live environment.
 

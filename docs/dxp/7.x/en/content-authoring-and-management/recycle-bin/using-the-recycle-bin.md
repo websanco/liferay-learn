@@ -16,11 +16,11 @@ Recycle Bin functionality is available for the following assets:
 
 ## Moving Items to the Recycle Bin
 
-1. Open the *Site Menu* (![Product Menu](../../../images/icon-product-menu.png)) &rarr; *Content & Data* &rarr; *Web Content*.
+1. Open the *Site Menu* (![Product Menu](../../images/icon-product-menu.png)) &rarr; *Content & Data* &rarr; *Web Content*.
 
-1. Use the checkboxes to select the folders and assets you want to recycle, and then click the *Recycle Bin* button (![Recycle](../../../images/icon-app-trash.png)).
+1. Use the checkboxes to select the folders and assets you want to recycle, and then click the *Recycle Bin* button (![Recycle](../../images/icon-app-trash.png)).
 
-   Alternatively, you can click the *Actions* button (![Actions](../../../images/icon-actions.png)) for individual folders or assets and select *Move to the Recycle Bin*.
+   Alternatively, you can click the *Actions* button (![Actions](../../images/icon-actions.png)) for individual folders or assets and select *Move to the Recycle Bin*.
 
    ![Check the folders and assets you want to move to the Recycle Bin.](./using-the-recycle-bin/images/02.png)
 
@@ -44,9 +44,9 @@ You can also drag and drop items into the Recycle Bin:
 
 1. Open the *Site Menu* &rarr; *Recycle Bin*.
 
-1. Use the checkboxes to select the folders and assets you want to restore, and then click the *Restore* button (![Restore](../../../images/icon-restore.png)).
+1. Use the checkboxes to select the folders and assets you want to restore, and then click the *Restore* button (![Restore](../../images/icon-restore.png)).
 
-   Alternatively, you can click on the *Actions* button (![Actions](../../../images/icon-actions.png)) for individual folders or assets and select *Restore*.
+   Alternatively, you can click on the *Actions* button (![Actions](../../images/icon-actions.png)) for individual folders or assets and select *Restore*.
 
    ![Check the folders and assets you want to move to restore.](./using-the-recycle-bin/images/05.png)
 
@@ -58,9 +58,9 @@ A status message appears indicating which items have been restored, along with q
 
 1. Open the *Site Menu* &rarr; *Recycle Bin*.
 
-1. Use the checkboxes to select the recycled folders and assets you want to delete permanently from you instance and click the *Delete* button (![Delete](../../../images/icon-delete.png)).
+1. Use the checkboxes to select the recycled folders and assets you want to delete permanently from you instance and click the *Delete* button (![Delete](../../images/icon-delete.png)).
 
-   Alternatively, you can click on the *Actions* button (![Actions](../../../images/icon-actions.png)) for individual folders or assets and select *Delete*.
+   Alternatively, you can click on the *Actions* button (![Actions](../../images/icon-actions.png)) for individual folders or assets and select *Delete*.
 
    ![Check the recycled folders and assets you want to delete.](./using-the-recycle-bin/images/07.png)
 
@@ -72,10 +72,10 @@ A status message appears indicating whether your request was successful.
 
 ![DXP displays a status message indicating whether your request was successful.](./using-the-recycle-bin/images/08.png)
 
-To delete all recycled items, click on the *Actions* button (![Actions](../../../images/icon-actions.png)) in the Application bar, and select *Empty the Recycle Bin*.
+To delete all recycled items, click on the *Actions* button (![Actions](../../images/icon-actions.png)) in the Application bar, and select *Empty the Recycle Bin*.
 
 ## Additional Information
 
-* [Introduction to the Recycle Bin](./introduction-to-the-recycle-bin.md)
+* [Recycle Bin Overview](./recycle-bin-overview.md)
 * [Configuring the Recycle Bin](./configuring-the-recycle-bin.md)
 * [Recycle Bin and Staging](./recycle-bin-and-staging.md)
