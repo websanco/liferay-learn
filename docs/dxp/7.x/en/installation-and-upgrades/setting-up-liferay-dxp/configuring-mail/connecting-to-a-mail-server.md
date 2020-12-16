@@ -15,12 +15,12 @@ Follow these steps to configure the mail session from the Control Panel:
 1. Enter your values for the [following fields](#mail-configuration-reference):
 
     * **Incoming POP Server:** pop.gmail.com
-    * **Incoming Port:** 465
+    * **Incoming Port:** 110
     * **Use a Secure Network Connection:** Flagged
     * **User Name:** joe.bloggs
     * **Password:** *****
     * **Outgoing SMTP Server:** smtp.gmail.com
-    * **Outgoing Port:** 110
+    * **Outgoing Port:** 465
     * **Use a Secure Network Connection:** Flagged
     * **User Name:** joe.bloggs
     * **Password:** *****

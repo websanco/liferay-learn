@@ -14,12 +14,12 @@ To configure the mail session offline or before deploying DXP:
     mail.session.mail=false
     mail.session.mail.pop3.host=pop.gmail.com
     mail.session.mail.pop3.password=*******
-    mail.session.mail.pop3.port=465
+    mail.session.mail.pop3.port=110
     mail.session.mail.pop3.user=joe.bloggs
     mail.session.mail.smtp.auth=true
     mail.session.mail.smtp.host=smtp.gmail.com
     mail.session.mail.smtp.password=*******
-    mail.session.mail.smtp.port=110
+    mail.session.mail.smtp.port=465
     mail.session.mail.smtp.user=joe.bloggs
     mail.session.mail.store.protocol=pop3
     mail.session.mail.transport.protocol=smtp
