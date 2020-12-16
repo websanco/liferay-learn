@@ -74,7 +74,7 @@ A Standard app can be created from within the Object Control Panel entry, but no
 
 Now the app is ready for use. It just needs to be [deployed](./creating-a-standard-application.md#deploying-the-application) so its users can begin sending data.
 
-The Role Change Request app can be deployed as a standalone app with a dedicated link. This is the type of app that should be used after reading some procedures, perhaps in a [Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki) or a company's employee handbook [document](../../content-authoring-and-management/documents-and-media/introduction-to-documents-and-media.md). Keeping the link there ensures that employees read the appropriate documentation before kicking off a Role Change Request.
+The Role Change Request app can be deployed as a standalone app with a dedicated link. This is the type of app that should be used after reading some procedures, perhaps in a [Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki) or a company's employee handbook [document](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md). Keeping the link there ensures that employees read the appropriate documentation before kicking off a Role Change Request.
 
 ### Using the App
 

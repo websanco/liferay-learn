@@ -19,7 +19,7 @@ First, you must install the Liferay Plugin for Google Drive&trade; from Liferay 
 * [Liferay Plugin for Google Drive - CE](https://web.liferay.com/marketplace/-/mp/application/105847499)
 * [Liferay Plugin for Google Drive - DXP](https://web.liferay.com/marketplace/-/mp/application/98011653)
 
-1. Place the `LPKG` file in the `[Liferay Home]/deploy folder`. See [Liferay.Home](../../../installation-and-upgrades/reference/liferay-home.md) to learn more about Liferay.Home works.
+1. Place the `LPKG` file in the `[Liferay Home]/deploy folder`. See [Liferay.Home](../../../../installation-and-upgrades/reference/liferay-home.md) to learn more about Liferay.Home works.
 1. Start the application server.
 1. Verify the following message appears:
 
@@ -39,11 +39,11 @@ First, you must install the Liferay Plugin for Google Drive&trade; from Liferay 
 
 The plugin has been successfully deployed.
 
-If you need help installing apps from Marketplace, see [using Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
+If you need help installing apps from Marketplace, see [using Marketplace](../../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
 
 ## Configuring the Portal
 
-You must configure the portal to connect to Google Drive&trade;. See the [Enabling Document Creation and Editing with Google Drive](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md) to learn more.
+You must configure the portal to connect to Google Drive&trade;. See the [Enabling Document Creation and Editing with Google Drive](./enabling-document-creation-and-editing-with-google-drive.md) to learn more.
 
 ## Additional Information
 

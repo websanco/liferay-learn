@@ -11,7 +11,6 @@ Displaying Content
    displaying-content/using_display_page_templates.rst
    ../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md
    displaying-content/customizing_widgets.rst
-   displaying-content/configuring_content_recommendations.rst
 
 .. raw:: html
    :file: ../landingpage_template.html

@@ -72,7 +72,7 @@ You can [Export or Import](../../site-building/building-sites/importing-exportin
 
 ### Configuration
 
-Users can configure their DM email notifications settings on the _Configuration_ menu. See [Connecting to a Mail Server](../../installation-and-upgrades/setting-up-liferay-dxp-configuring-mail/connecting-to-a-mail-server.md) to set up a mail server first.
+Users can configure their DM email notifications settings on the _Configuration_ menu. See [Connecting to a Mail Server](../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) to set up a mail server first.
 
 Users can use the _Definition of Terms_: placeholders that parse information such as the system administrator, the recipient, and the name of the document.
 

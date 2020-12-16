@@ -210,7 +210,7 @@ It's now not only easier to create and manage multi-page Forms, but also to reor
 
 ### Workload by Assignee
 
-In [Workflow Metrics](../process-automation/workflow/user-guide/using-workflow-metrics.md), there's now a card to show a breakdown of the workload of the process's assignees. This new chart offers a valuable glimpse to identify overloaded assignees and better drive decisions like re-assigning tasks to remove bottlenecks.
+In [Workflow Metrics](../process-automation/workflow/using-workflows/using-workflow-metrics.md), there's now a card to show a breakdown of the workload of the process's assignees. This new chart offers a valuable glimpse to identify overloaded assignees and better drive decisions like re-assigning tasks to remove bottlenecks.
 
 ![Workload by Assignee shows you at a glance the workflow queues of various users.](./whats-new-73/images/25.png)
 

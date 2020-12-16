@@ -1,5 +1,5 @@
 Designing and Managing Workflows
-==========
+================================
 
 .. toctree::
    :maxdepth: 2

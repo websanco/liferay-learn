@@ -34,7 +34,7 @@ A Collection Display Fragment is a type of Fragment that shows a Collection. You
 
 ![You can show the Collection's content using a Collection Display Fragment](./about-collections-and-collection-pages/images/02.png)
 
-For more information, see [Displaying Collection](./displaying-collections.md).
+For more information, see [Displaying Collections](./displaying-collections-and-collection-pages.md).
 
 ## Customizing Collections
 

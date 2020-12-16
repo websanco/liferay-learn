@@ -31,7 +31,7 @@ Using a `portal-ext.properties` file to override default properties has these be
 When creating `[Liferay Home]/portal-ext.properties`, a best practice is to copy the relevant section from `portal-impl.jar/portal.properties` into your `portal-ext.properties` file, and then change the value to what you want.
 
 ```note::
-   If you use the `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_, DXP sets those properties in a file called `portal-setup-wizard.properties` in ``[Liferay Home]``.
+   If you use the `Setup Wizard <../installing-liferay/running-liferay-for-the-first-time.md>`_, DXP sets those properties in a file called `portal-setup-wizard.properties` in ``[Liferay Home]``.
 ```
 
 Here are a few configuration examples.
@@ -51,7 +51,7 @@ For more database configuration details, see [Database Configurations](./databas
 
 ### Setting the Liferay Home Location
 
-Some application servers (e.g., WebLogic) require [customizing the Liferay Home location](../installing-liferay-on-an-application-server/installing-dxp-on-weblogic#declare-the-liferay-home-folder) before deploying the DXP WAR file. The [`liferay.home`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Liferay%20Home) property sets the location.
+Some application servers (e.g., WebLogic) require [customizing the Liferay Home location](../installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md#declare-the-liferay-home-folder) before deploying the DXP WAR file. The [`liferay.home`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Liferay%20Home) property sets the location.
 
 ```properties
 liferay.home=/home/jbloggs/liferay
