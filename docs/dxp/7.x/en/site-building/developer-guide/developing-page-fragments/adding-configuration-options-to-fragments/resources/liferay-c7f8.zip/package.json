@@ -1,4 +1,5 @@
 {
+	"name": "c7f8",
 	"dependencies": {
 		"generator-liferay-fragments": "*",
 		"yo": ">=2.0.0"
