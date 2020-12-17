@@ -2,7 +2,7 @@
 
 Using Categories, you can group similar assets and organize your content. Along with [Tags](./tagging-content-and-managing-tags.md), Categories help people find relevant information through search or navigation. For more information about Categories in Liferay DXP and the different usage scenarios, see [Organizing Content with Categories and Tags](organizing-content-with-categories-and-tags.md).
 
-You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories). You can use the vocabularies an categories at the Global site in any other site, but you can only create or edit Global vocabularies at the Global Site.
+You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories). You can use the vocabularies and categories at the Global site in any other site, but you can only create or edit Global vocabularies at the Global Site.
 
 ```note::
    Only Site administrators can manage Categories and Vocabularies in the Categories panel.
