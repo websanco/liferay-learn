@@ -7,6 +7,7 @@ Tags and Categories
    tags-and-categories/tagging-content-and-managing-tags
    tags-and-categories/defining-categories-and-vocabularies-for-content.md
    tags-and-categories/geolocating-assets.md
+   tags-and-categories/session-property-vocabularies.md
    tags-and-categories/auto_tagging.rst
    tags-and-categories/developer_guide.rst
 
@@ -14,6 +15,7 @@ Tags and Categories
 -  :doc:`/content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags`
 -  :doc:`/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content`
 -  :doc:`/content-authoring-and-management/tags-and-categories/geolocating-assets`
+-  :doc:`/content-authoring-and-management/tags-and-categories/session-property-vocabularies`
 
 Auto Tagging
 ------------
