@@ -1,8 +1,8 @@
 # Creating a Contributed Fragment Collection
 
-Contributed Fragment Collections are deployable modules containing Page Fragments. Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay DXP 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
+Contributed Fragment Collections are deployable modules containing Page Fragments. Fragments in a contributed Collection can be used just like regular Fragments, but aren't contained in the database and can't be modified directly through the UI. If you're running Liferay 7.3+, it's better to use [Automatically deployed Fragments](./auto-deploying-fragments.md) created in compressed ZIP Collections. You can create these [with your own tools](./using-the-fragments-toolkit.md#collection-format-overview) or the [Liferay Fragments Toolkit](./using-the-fragments-toolkit.md), and they can be modified from the UI and can include image resources.
 
-This example runs on Liferay DXP 7.3+.
+This example runs on Liferay 7.3+.
 
 ```note::
   All Fragments added through a Contributed Fragment Collection are available globally to all Sites.
@@ -26,39 +26,39 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):
+1. Download and unzip the [example](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
     ```
 
     ```bash
-    unzip liferay-l3m9.zip
+    unzip liferay-l3m9.zip -d liferay-l3m9
     ```
 
 1. From the module root, build and deploy the contributed Collection's JAR.
 
     ```bash
-    cd liferay-l3m9\contributed-marketing-fragments-collection
+    cd liferay-l3m9
     ```
 
     ```bash
-    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with `.\gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
+      If testing on Windows, you may need to build the module first with `./gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
 
     ```bash
-    INFO  [fileinstall-/opt/liferay/osgi/modules][BundleStartStopLogger:39] STARTED com.liferay.learn.fragments_1.0.0 [1121]
+    INFO  [fileinstall-directory-watcher][BundleStartStopLogger:46] STARTED com.acme.l3m9.impl_1.0.0 [1824]
     ```
 
-1. Verify that the contributed Collection and Fragment are available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to *Site Builder* &rarr; *Page Fragments* under the Site Menu.
+1. Verify that the contributed Collection and Fragment are available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the list of *Default* Collections.
 
-    ![The contributed Collection Fragment appears with the default Fragments.](./creating-a-contributed-fragment-collection/images/01.png)
+    ![The contributed Fragment Collection appears with the default Collections.](./creating-a-contributed-fragment-collection/images/01.png)
 
 Great! You successfully deployed a contributed Fragment Collection.
 
@@ -73,7 +73,7 @@ The `getFragmentCollectionKey()` method returns the key/name of the Fragment Col
 ```java
 @Override
 public String getFragmentCollectionKey() {
-    return "Marketing Collection";
+    return "l3m9";
 }
 ```
 
@@ -109,18 +109,16 @@ Now you'll modify the project to include another Fragment in the contributed Col
 
 Follow these steps to add a new packaged Fragment to the contributed Fragment Collection:
 
-1. Move the `liferay-l3m9/marketing-jumbotron` folder in the example's ZIP file into the `/l3m9-impl/src/main/resources/com/acme/l3m9/internal/fragment/contributor/l3m9/dependencies/` folder. See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
+1. Move the example's `l3m9-impl/l3m9-jumbotron` folder into the `l3m9-impl/src/main/resources/com/acme/l3m9/internal/fragment/contributor/l3m9/dependencies` folder.
 
-    ```note::
-      Packaged Fragments go in the `dependencies` folder, and the class package name and resources package name must match (e.g. ``[class.package.path].dependencies``).
+    ```bash
+    cp -r l3m9-impl/l3m9-jumbotron l3m9-impl/src/main/resources/com/acme/l3m9/internal/fragment/contributor/l3m9/dependencies/
     ```
 
-1. Include the Fragment's entry (as defined as the `fragmentEntryKey` entry in the Fragment's `fragment.json`) in the `collection.json`:
+    See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
 
-    ```json
-    {
-        "name": "Marketing Collection"
-    }
+    ```note::
+      Packaged Fragments go in the `dependencies folder, and the class package name and resources package name must match (e.g. ``[class.package.path].dependencies``).
     ```
 
     ```note::
@@ -134,24 +132,24 @@ You can build and deploy the updated contributed Fragment Collection as you did 
 1. Build the updated contributed Collection's JAR.
 
     ```bash
-    cd contributed-marketing-fragments-collection
+    cd liferay-l3m9
     ```
 
     ```bash
-    .\gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
     ```note::
-      If testing on Windows, you may need to build the module first with `.\gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
+      If deployment fails on Windows, you may need to build the module JAR first with `.\gradlew jar` and then copy the JAR to the Liferay Docker container using Docker: `docker cp l3m9/build/libs/com.acme.l3m9.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy`.
     ```
 
-1. Verify that the updated Fragment is included in the contributed Collection. Open your browser to `https://localhost:8080`, and open the Product Menu and go to *Site Builder* &rarr; *Page Fragments* under the Site Menu.
+1. Verify that the updated Fragment is included in the contributed Collection. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The L3M9 Jumbotron Fragment appears in the L3M9 Collection.
 
-    ![The Custom Banner Fragment is included in the contributed Collection.](./creating-a-contributed-fragment-collection/images/02.png)
+    ![The custom Jumbotron Fragment is included in the contributed Collection.](./creating-a-contributed-fragment-collection/images/02.png)
 
-Congratulations! You now know how to create a contributed Fragment Collection, and have added a new contributed Fragment Collection to Liferay DXP.
+Congratulations! You now know how to create a contributed Fragment Collection, and have added a new contributed Fragment Collection to Liferay.
 
 ## Related Information
 
-* [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md)
-* [Developing Page Fragments with the Editor](./using-the-fragments-editor.md)
+* [Using the Fragments Toolkit](./using-the-fragments-toolkit.md)
+* [Using the Fragments Editor](./using-the-fragments-editor.md)
