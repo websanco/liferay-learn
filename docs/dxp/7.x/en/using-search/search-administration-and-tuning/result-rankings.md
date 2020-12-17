@@ -17,7 +17,7 @@ With Results Rankings you can
 
 ## Requirement and Limitations
 
-Result Rankings are only supported when using Elasticsearch as your search engine. If you are using Solr or need to install Elasticsearch, see [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md).
+Result Rankings are only supported when using Elasticsearch as your search engine. Learn about installing Elasticsearch in [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md).
 
 An existing ranking entry cannot be renamed. Renaming requires recreating the ranking under a different name. See [LPS-96357](https://issues.liferay.com/browse/LPS-96357) for more information.
 
