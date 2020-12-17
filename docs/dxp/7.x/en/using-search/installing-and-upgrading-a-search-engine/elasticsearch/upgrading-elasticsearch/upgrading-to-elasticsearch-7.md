@@ -73,7 +73,7 @@ Once Liferay is connected with the Elasticsearch cluster, re-index the applicabl
 
 1. Re-index the company, system, and spell check indexes. From the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Control Panel* &rarr; *Configuration* &rarr; *Search*. Click *Execute* for the *Reindex all search indexes* entry.
 
-1. Re-index the [Workflow Metrics indexes](../../../../process-automation/workflow/user-guide/workflow-metrics-reports.html#re-indexing-workflow-metrics): from the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Applications* &rarr; *Workflow---Metrics*. Open the Settings menu (![Options](../../../../images/icon-options.png) and Click *Reindex All*.
+1. Re-index the [Workflow Metrics indexes](../../../../process-automation/workflow/using-workflows/workflow-metrics-reports.md#re-indexing-workflow-metrics): from the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Applications* &rarr; *Workflow---Metrics*. Open the Settings menu (![Options](../../../../images/icon-options.png) and Click *Reindex All*.
 
 This restores the indexes built from data stored in the Liferay database. To restore indexes used as primary storage, see [Backing Up Elasticsearch](./backing-up-elasticsearch.md).
 
