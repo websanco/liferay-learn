@@ -1,6 +1,6 @@
 # Managing Data and Content Types in Staging
 
-Liferay DXP's Staging tool provides ways to manage available application data and content types during initial configuration and during the publication process. Because there can be so many relationships between applications and types of content, be sure to consider how they reference each other in your database before deciding to stage or unstage any categories.
+Liferay DXP's Staging tool provides ways to manage available application data and content types both during initial configuration and the publishing process. Because there can be so many relationships between applications and types of content, be sure to consider how they reference each other in your database before deciding to stage or unstage any categories.
 
 * [Staging Data and Content Types](#staging-data-and-content-types)
 * [Publishing Data and Content Types](#publishing-data-and-content-types)
@@ -37,17 +37,17 @@ When working with Staging, you must think about the applications you're using on
 
 ## Publishing Data and Content Types
 
-During the publication process, you can also configure which application data and content types are published from Staging to Live. From the *Advanced* tab of the *Publish to Live* menu, you can view each type with any related data and content it may have.
+During the publishing process, you can also configure which application data and content types are published from Staging to Live. From the *Advanced* tab of the *Publish to Live* menu, you can view each type with any related data and content it may have.
 
 ![Configure which application data and content types are published from Staging to Live.](./managing-data-and-content-types-in-staging/images/02.png)
 
-Here, you can exclude some data and content types during publication or export to speed up the process.
+Here, you can exclude some data and content types during publishing or export to speed up the process.
 
 ### Version History
 
-Web content tends to be updated frequently, which can result in a high number of versions and lengthy publication times. You can choose to not publish the *Version History*. If you disable this, only the last approved version of each web content article is published to Live. This can significantly speed up the publication process.
+Web content tends to be updated frequently, which can result in a high number of versions and lengthy publishing times. You can choose to not publish the *Version History*. If you disable this, only the last approved version of each web content article is published to Live. This can significantly speed up the publishing process.
 
-By default, Version History is selected for publication, so you must manually disable this setting to publish only the latest approved version of your web content. To do this, go to *Control Panel* &rarr; *Configuration* &rarr; *System Settings* &rarr; *Web Content* &rarr; *Virtual Instance Scope* &rarr; *Web Content*, and toggle the *Version History by Default Enabled* checkbox.
+By default, Version History is selected for publishing, so you must manually disable this setting to publish only the latest approved version of your web content. To do this, go to *Control Panel* &rarr; *Configuration* &rarr; *System Settings* &rarr; *Web Content* &rarr; *Virtual Instance Scope* &rarr; *Web Content*, and toggle the *Version History by Default Enabled* checkbox.
 
 ### Previews and Thumbnails
 
@@ -72,5 +72,5 @@ The Staging framework gathers deletions (including trashed entities) in a Site. 
 ## Additional Information
 
 * [Staging Overview](./staging-overview.md)
-* [Understanding the Publication Process](./understanding-the-publication-process.md)
+* [Understanding the Publishing Process](./understanding-the-publishing-process.md)
 * [Staging UI Reference](./staging-ui-reference)

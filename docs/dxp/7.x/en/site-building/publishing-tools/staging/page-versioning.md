@@ -52,7 +52,7 @@ Follow these steps to create new variations of a Page or Page set:
    ![Determine whether your new Page set variation copies Pages from existing variations](./page-versioning/images/06.png)
 
    ```note::
-      If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publication is copied.
+      If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publishing is copied.
    ```
 
 1. Click on *Add* to create your new variation.
@@ -77,7 +77,7 @@ You can merge two Page set variations. This adds Pages and Page variations to a 
 
    ![Select the variation you want to merge on top of the base variation.](./page-versioning/images/09.png)
 
-When two variations of Site Pages are merged, new Pages that don't exist in the base variation are added to it. And if a Page exists in both variations, and at least one version of the Page is marked as ready for publication, the latest version marked as ready is added as a new variation for its corresponding Page in the base variation. Older variations not marked as ready for publication are not copied.
+When two variations of Site Pages are merged, new Pages that don't exist in the base variation are added to it. And if a Page exists in both variations, and at least one version of the Page is marked as ready for publishing, the latest version marked as ready is added as a new variation for its corresponding Page in the base variation. Older variations not marked as ready for publishing are not copied.
 
 ## Managing Variation Permissions
 

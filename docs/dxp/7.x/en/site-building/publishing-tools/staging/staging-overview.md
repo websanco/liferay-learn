@@ -5,7 +5,7 @@ You can use Liferay DXP's *Staging* tool to make changes to your Site behind the
 As part of Staging configuration, determine whether to host your environments on the same server or separate servers connected by a network. You can also enable Page versioning and customize which Site content and application data is staged.
 
 * [Configuration Options](#staging-configuration-options)
-* [Understanding the Publication Process](#understanding-the-publication-process)
+* [Understanding the Publishing Process](#understanding-the-publishing-process)
 
 ## Configuration Options
 
@@ -29,15 +29,15 @@ As part of Staging, you can enable the *Page versioning* feature. With this, you
 
 As part of Staging configuration, you can select which content groups and application data is staged. If staged, the selected data and content are managed by your Staging environment. Also, when an application or content group is selected, all contained entities (e.g., application folders) are staged as well. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
 
-## Understanding the Publication Process
+## Understanding the Publishing Process
 
 From a low level perspective, staging is an equivalence relation where entities are mirrored to a different location. From a high level perspective, the staging process is executed in three sequential phases: Export, Validation, and Import.
 
-Understanding this process can improve efficiency and help you plan ahead to achieve a seamless publishing experience. See [Understanding the Publication Process](./understanding-the-publication-process.md) for more information.
+Understanding this process can improve efficiency and help you plan ahead to achieve a seamless publishing experience. See [Understanding the Publishing Process](./understanding-the-publishing-process.md) for more information.
 
 ## Additional Information
 
-* [Understanding the Publication Process](./understanding-the-publication-process.md)
+* [Understanding the Publishing Process](./understanding-the-publishing-process.md)
 * [Configuring Local Live Staging](./configuring-local-live-staging.md)
 * [Configuring Remote Live Staging](./configuring-remote-live-staging.md)
 * [Staging UI Reference](./staging-ui-reference.md)

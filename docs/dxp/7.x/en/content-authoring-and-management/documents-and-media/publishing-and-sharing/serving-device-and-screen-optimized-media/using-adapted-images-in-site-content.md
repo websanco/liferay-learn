@@ -56,7 +56,7 @@ Adaptive Media is fully integrated with DXP's [content staging](/dxp/7.x/en/cont
 
 Similarly, when content that contains adapted images is exported, Adaptive Media exports those images in the LAR file. That LAR file can then be imported to restore or transfer that content, along with its adapted images.
 
-Adaptive Media doesn't regenerate adapted images during export/import or the publication of staged content. To improve performance, Adaptive Media instead reuses the existing adapted images.
+Adaptive Media doesn't regenerate adapted images during export/import or the publishing of staged content. To improve performance, Adaptive Media instead reuses the existing adapted images.
 
 ## Additional Information
 

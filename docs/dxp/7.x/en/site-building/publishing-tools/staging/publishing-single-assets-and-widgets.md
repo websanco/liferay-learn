@@ -1,6 +1,6 @@
 # Publishing Single Assets and Widgets
 
-You can publish single assets and widgets when needed without going through the entire publication process. This is much faster than publishing all content at once.
+You can publish single assets and widgets when needed without going through the entire publishing process. This is much faster than publishing all content at once.
 
 ## Publishing Single Assets
 
@@ -12,12 +12,12 @@ To publish assets in this way, Users must have the following permissions: *Expor
 
    ![Click on the Actions button for the asset you want to publish, and select Publish to Live.](./publishing-single-assets-and-widgets/images/01.png)
 
-Once you confirm your publication, you're directed to a process page where you can see the status of your publication.
+Once you confirm, you're directed to a process page where you can see the publishing status.
 
-Similar to the standard publication process, single asset publications include associated dependencies: images, custom templates, or folders.
+Similar to the standard process, single asset publishing includes associated dependencies: images, custom templates, or folders.
 
 ```note::
-   Single asset publication is not supported for page-scoped content.
+   Single asset publishing is not supported for page-scoped content.
 ```
 
 ## Publishing Single Widgets

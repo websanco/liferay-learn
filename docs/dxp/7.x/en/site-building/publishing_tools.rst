@@ -14,7 +14,7 @@ Staging
 ~~~~~~~
 
 -  :doc:`/site-building/publishing-tools/staging/staging-overview`
--  :doc:`/site-building/publishing-tools/staging/understanding-the-publication-process`
+-  :doc:`/site-building/publishing-tools/staging/understanding-the-publishing-process`
 -  :doc:`/site-building/publishing-tools/staging/configuring-local-live-staging`
 -  :doc:`/site-building/publishing-tools/staging/configuring-remote-live-staging`
 -  :doc:`/site-building/publishing-tools/staging/managing-data-and-content-types-in-staging`

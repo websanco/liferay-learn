@@ -102,7 +102,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
       If the Remote server is a cluster, you can set the Remote Host/IP to the cluster's load balanced IP address to increase the availability of the publishing process. See the `Configuring Remote Staging in a Clustered Environment <https://help.liferay.com/hc/en-us/articles/360018175251-Configuring-Remote-Staging-in-a-Clustered-Environment>`_ for details.
    ```
 
-1. Select whether to use a secure network connection (i.e., HTTPS) for the publication of Pages from Staging to Live.
+1. Select whether to use a secure network connection (i.e., HTTPS) for publishing Pages from Staging to Live.
 
 1. Select whether to manually define the remote Site URL.
 
@@ -127,7 +127,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 Once the process is complete, you are ready to use Remote Live Staging. See [Staging UI Reference](./staging-ui-reference.md) for information about navigating the Staging environment's publishing features.
 
 ```warning::
-   Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the Remote Publication process to fail.
+   Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the remote publishing process to fail.
 ```
 
 ## Remote Live Staging Permissions
@@ -140,7 +140,7 @@ To simplify this process, you can use LDAP to copy selected User accounts from y
 
 ## Configuring Remote Staging's Buffer Size
 
-When you're using Remote Live staging and you are publishing a large amount of content, your publication could be slow and cause a large amount of network traffic. To help with this, Liferay DXP transfers data piecemeal, instead of one large data dump. You can control the size of data transactions by setting the following portal property in your `portal-ext.properties` file:
+When you're using Remote Live staging and you are publishing a large amount of content, this process can be slow and cause a large amount of network traffic. To help with this, Liferay DXP transfers data piecemeal, instead of one large data dump. You can control the size of data transactions by setting the following portal property in your `portal-ext.properties` file:
 
 ```
 staging.remote.transfer.buffer.size
