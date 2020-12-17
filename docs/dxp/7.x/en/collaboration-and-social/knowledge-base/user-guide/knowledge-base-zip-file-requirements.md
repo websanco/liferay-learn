@@ -6,8 +6,7 @@ The Knowledge Base importer supports article hierarchies, so Markdown files can 
 Imported articles are independent of the workflow settings. This means that imported articles are automatically approved.
 ```
 
-<!-- Do we need a note about permissions on every article?
-Only users with the Import Articles permission assigned to their Role are able to import articles. This permission can be assigned manually through Control Panel &rarr; Users &rarr; Roles. -->
+Only users with the Import Articles permission assigned to their Role are able to import articles. This permission can be assigned manually through Control Panel &rarr; Users &rarr; Roles. 
 
 The ZIP file’s articles are imported in file order (alphanumerically). To designate an article’s priority, add a numeric prefix to its file name. For example, the priorities for articles named `01-file.markdown` and `02-file.markdown` become `1.0` and `2.0`.
 
@@ -20,7 +19,7 @@ Here’s the underlying logic for the `00` prefix:
 
 This convention lets you specify priorities for top-level (non-child) articles in your hierarchy.
 
-When importing, keep the checkbox labeled *Apply numerical prefixes of article files as priorities* selected. If a file doesn’t have a prefix, its article gets the next available priority (the highest current priority, plus one).
+When importing, keep the checkbox labeled *Apply numerical prefixes of article files as priorities* selected. If a file doesn't have a prefix, its article gets the next available priority (the highest current priority, plus one).
 
 Below is an example ZIP file structure that demonstrates the features mentioned so far:
 
@@ -102,7 +101,7 @@ In addition to source files and images, you can configure a base source URL syst
 
     https://github.com/liferay/liferay-docs/blob/master/develop/tutorials
 
-The source URL constructed from this base URL and article source file `folder-1/some-article.markdown` would be:
+The source URL constructed from this base URL and article source file `folder-1/some-article.markdown` would be
 
     https://github.com/liferay/liferay-docs/blob/master/develop/tutorials/folder-1/some-article.markdown
 
