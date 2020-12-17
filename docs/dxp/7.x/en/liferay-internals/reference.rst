@@ -9,5 +9,7 @@ Reference
    reference/exported-third-party-packages.md
    reference/portal-developer-properties.md
 
-.. include:: /liferay-internals/reference/README.rst
-   :start-line: 2
+-  :doc:`/liferay-internals/reference/7-3-breaking-changes`
+-  :doc:`/liferay-internals/reference/7-2-breaking-changes`
+-  :doc:`/liferay-internals/reference/exported-third-party-packages`
+-  :doc:`/liferay-internals/reference/portal-developer-properties`

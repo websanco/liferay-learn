@@ -191,7 +191,6 @@ Go to *Control Panel* at *Configuration* &rarr; *System Settings* to find System
 ## Additional Information
 
 * [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)
-
+* [Portal Developer Properties](../../liferay-internals/reference/portal-developer-properties.md)
 * [System Settings](../../system-administration/configuring-liferay/system-settings.md)
-
 * [Understanding Configuration Files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
