@@ -1,34 +1,29 @@
 # Managing the Knowledge Base
 
-Users can manage the Knowledge Base from the Knowledge Base app. To navigate to the app, click on the Menu icon (![Menu icon](../../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base.*
-
-<!-- Do we need a note about permissions on every article?
-Note: To access Knowledge Base in Site Administration, a Role must have the permission *Knowledge Base* &rarr; Access in *Site Administration*. To add or act on articles, folders, or suggestions, the site administrator must grant the appropriate permissions using the Permissions window in Knowledge Base. -->
+You can manage the Knowledge Base from the Knowledge Base app. To navigate to the app, click the _Menu_ icon (![Menu icon](../../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base.*
 
 ![From the app you can manage Knowledge Base articles, templates, and suggestions](./managing-the-knowledge-base/images/01.png)
 
-## Setting the Knowledge Base’s Options
+## Setting the Knowledge Base's Options
 
-At the top-right of the Knowledge Base app, the Options menu (![Options icon](../../../images/icon-options.png)) contains different options,
-
-![There are different options for the Knowledge Base app](./managing-the-knowledge-base/images/02.png)
+   At the top-right, click the Options menu (![Options icon](../../../images/icon-options.png)) to configure the Knowledge Base: 
 
 **Subscribe:** Get notified when Knowledge Base articles are created, updated, or deleted.
 
-**Home Folder Permissions:** Define detailed permissions for the Knowledge Base app. You can choose the Roles that can perform the following tasks,
+**Home Folder Permissions:** Define detailed permissions for the Knowledge Base app. You can choose Roles to perform the following tasks:
 
 * Add/delete articles, folders, and templates
 * Change the Knowledge Base app’s permissions
 * Subscribe to articles
 * View templates and suggestions
 
-**Export/Import:** Export or import the Knowledge Base app’s configuration.
+**Export/Import:** Export or import the Knowledge Base app's configuration.
 
-**Configuration:** Configure email notifications for article subscriptions and suggestions. You can also make the Knowledge Base app’s articles available via RSS (enabled by default), and configure the RSS feed’s options.
+**Configuration:** Configure email notifications for article subscriptions and suggestions. You can also make the Knowledge Base app's articles available via RSS (enabled by default) and configure the RSS feed's options.
 
 ## Managing Knowledge Base Articles
 
-Each article also has a priority value that determines its position in the [Knowledge Base Display widget’s navigation](knowledge-base-display-widget.md). Each article’s priority value appears beneath the article’s title. The Knowledge Base Display widget’s navigation arranges articles in ascending priority. Priority 1 is the highest priority. The higher an article’s priority, the higher it appears in the navigation. Articles are assigned the next lowest priority by default. This behavior can be changed via [Knowledge Base System Settings](knowledge-base-system-settings.md).
+Articles have a priority value that determines their position in the [Knowledge Base Display widget’s navigation](knowledge-base-display-widget.md). Each article’s priority value appears beneath the article’s title. The Knowledge Base Display widget’s navigation arranges articles in ascending priority. Priority 1 is the highest priority. The higher an article’s priority, the higher it appears in the navigation. Articles are assigned the next lowest priority by default. This behavior can be changed via [Knowledge Base System Settings](knowledge-base-system-settings.md).
 
 To assign articles a new priority value, 
 
@@ -40,19 +35,19 @@ To assign articles a new priority value,
 
 To organize articles with folders,
 
-1. Click the Add icon (![Add icon](../../../images/icon-add.png)) and select *Folder*. This opens a form for creating the new folder.
+1. Click the _Add_ icon (![Add icon](../../../images/icon-add.png)) and select *Folder*. This opens a form for creating the new folder.
 
 1. Enter a name and an optional description.
 
-    By default, anyone can view the folder. You can manage this setting along with the other permissions in the form’s *Permissions* section.
+   By default, anyone can view the folder. You can manage this setting along with the other permissions in the form’s *Permissions* section.
 
-1. Click *Save*. The folder is then listed in a table in the Articles tab.
+1. Click *Save*. The folder appears in a table in the Articles tab.
 
 The text immediately below the *Filter and Order* selector at the top of the app shows your position in the folder hierarchy. Click a folder’s name in the hierarchy to navigate to it. You can also move articles into folders and create child articles. Knowledge Base also supports nested folders.
 
 ![Click the action menu of a folder for different options.](./managing-the-knowledge-base/images/03.png)
 
-Each folder’s Actions menu (![Actions icon](../../../images/icon-actions.png)) lets you perform the following actions,
+Each folder’s Actions menu (![Actions icon](../../../images/icon-actions.png)) contains these actions:
 
 **Edit:** Change the folder’s name and description.
 
