@@ -8,10 +8,12 @@ Individuals and Segments
    individuals-and-segments/individual_profiles.rst
    individuals-and-segments/segments.rst
    individuals-and-segments/accounts.md
+   individauls-and-segments/individuals-dashboard.md
    individuals-and-segments/interests.md
 
 -  :doc:`/individuals-and-segments/individuals-and-segments`
 -  :doc:`/individuals-and-segments/accounts`
+-  :doc:`/individuals-and-segments/individuals-dashboard`
 -  :doc:`/individuals-and-segments/interests`
 
 Individual Profiles
