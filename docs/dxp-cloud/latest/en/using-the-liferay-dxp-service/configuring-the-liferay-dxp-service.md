@@ -37,8 +37,6 @@ Liferay will only read properties directly from the `portal-ext.properties` file
 
 * `portal-env.properties`: Contains the properties that only affect the current environment (for example, credentials and URL endpoints for external services that differ from environment to environment)
 
-* `portal-clu.properties`: Contains the pre-configured properties for clustering Liferay DXP on DXP Cloud; see [Setting Up Clustering in DXP Cloud](./setting-up-clustering-in-dxp-cloud.md) for more information
-
 If you choose to use these other portal properties files, be sure to explicitly include them in your `portal-ext.properties` file using the `include-and-override` property. This is explained in greater detail [here](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html#portal-property-priority).
 
 You could organize your properties with the following structure:
