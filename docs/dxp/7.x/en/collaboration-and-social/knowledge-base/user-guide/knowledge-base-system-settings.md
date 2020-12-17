@@ -11,7 +11,7 @@ Administrators can use the System Settings UI to set the Knowledge Base’s glob
 The *Knowledge Base Service* section’s settings apply defaults to all the Knowledge Base widgets, and to the Knowledge Base app in Site Administration. The other sections apply to specific Knowledge Base widgets and override the *Knowledge Base Service* defaults.
 
 ```Important::
-Advanced configuration of the Knowledge Base application’s system settings should only be performed by an Liferay DXP administrator.
+Advanced configuration of the Knowledge Base application’s system settings should only be performed by a Liferay DXP administrator.
 ```
 
 The Knowledge Base has several optional features that are disabled by default, but can be enabled and configured from System Settings. These include importer file conventions, new article priority increment, source URL, and section names.
@@ -60,7 +60,7 @@ Alternatively, you can specify the label explicitly:
 
 ## Section Names Setting
 
-The section names setting lets you specify names of arbitrary topics to attribute to articles. Using the *Knowledge Base Section* widget, you can display one or more sections (groups) of articles. To use sections, you must first define them in the System Settings for the *Knowledge Base Section* widget.
+The section names setting is for specifying names of arbitrary topics to attribute to articles. Using the *Knowledge Base Section* widget, you can display one or more sections (groups) of articles. To use sections, you must first define them in the System Settings for the *Knowledge Base Section* widget.
 
 To make new sections,
 
