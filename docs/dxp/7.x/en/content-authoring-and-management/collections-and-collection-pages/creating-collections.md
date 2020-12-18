@@ -157,12 +157,12 @@ With Dynamic Content Sets, you can choose the *Source*, *Scope*, *Filter*, and *
 This will create a Content Set which will contain any items that are currently tagged as *trending* and any future items with the *trending* tag will be added to the Content Set automatically.
 
 Now that you have your Content Sets created, you can
-[display them on a page](../../site-building/displaying-content/displaying-collections/displaying-collections-and-collection-pages.md#displaying-content-sets).
+[display them on a page](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets).
 
 ### Converting Asset Publisher Configurations to Content Sets
 
 In the previous two guides in this section, you've seen [Creating Content Sets](./creating-collections.md#creating-content-sets)
-and [Displaying Content Sets](../../site-building/displaying-content/displaying-collections/displaying-collections-and-collection-pages.md#displaying-content-sets) demonstrated. Next, try out converting an existing Asset Publisher configuration to a Content Set.
+and [Displaying Content Sets](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets) demonstrated. Next, try out converting an existing Asset Publisher configuration to a Content Set.
 
 In this case, you have an Asset Publisher on a page, which is configured to display images tagged as *trending* in reverse alphabetical order by title. This might not be too hard to reproduce in the *Content Set* creator, but it's even easier to create the Content Set definition directly from the Asset Publisher.
 
@@ -182,5 +182,5 @@ Great! You converted your Asset Publisher configuration to a Content Set.
 ## Related Information
 
 - [About Collections and Collection Pages](./about-collections-and-collection-pages.md)
-- [Displaying Collections and Collection Pages](../../site-building/displaying-content/displaying-collections/displaying-collections-and-collection-pages.md)
+- [Displaying Collections](../../site-building/displaying-content/displaying-collections.md)
 - [Personalizing Collections](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md)

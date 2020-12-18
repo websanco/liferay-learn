@@ -20,7 +20,7 @@ There's also a panel listing all actions performed, for quick movement to any pa
 
 ![The Collection Display fragment publishes assets using a drag and drop interface.](./whats-new-73/images/02.gif)
 
-The [Collection Display](../content-authoring-and-management/collections-and-collection-pages/displaying-collections-and-collection-pages.md) fragment shows sets of assets, with drag and drop editing. When the fragment is added to the page, you link it to a collection. It then defines a space for each asset in the collection. Adjustments made to the spaces are replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping propagates to each item.
+The [Collection Display](../site-building/displaying-content/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) fragment shows sets of assets, with drag and drop editing. When the fragment is added to the page, you link it to a collection. It then defines a space for each asset in the collection. Adjustments made to the spaces are replicated in the rest. Editable fields can be mapped to the common fields in the collection. For example, if a Heading fragment is added, it can be mapped to the title field of a web content structure and this mapping propagates to each item.
 
 ### Visual Responsive Layout Editor
 

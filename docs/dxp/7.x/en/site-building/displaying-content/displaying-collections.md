@@ -4,7 +4,7 @@
 
 You can display a Collection by adding a Collection Page, or a Collection Display Fragment. For more information about these display options, see [About Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections).
 
-By default, any User can see a Collection's content. However, you can create *Personalized Variations* of these items using Segments. For more information, see [Customizing Collections Using Segments](../../content-authoring-and-management/collections-and-collection-pages/customizing-collections-using-segments.md).
+By default, any User can see a Collection's content. However, you can create *Personalized Variations* of these items using Segments. For more information, see [Customizing Collections Using Segments](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections).
 
 ```note::
    Before displaying a Collection, you must create one. For more information, see `Creating Collections <../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md>`_.
@@ -32,7 +32,7 @@ Follow these steps to add a Collection Page:
 
 1. Enter the *Name* of your Collection Page and click *Add*.
 
-1. To show the Collection, map its content to page elements. See the [Mapping the Collection Items](#mapping-the-collection-items-in-the-page-editor) section.
+1. To show the Collection, map its content to page elements. See the [Mapping Components](#mapping-components-to-display-a-collection-s-assets) section for more information.
 
 ```important::
    You cannot create a child page under a Collection Page.
