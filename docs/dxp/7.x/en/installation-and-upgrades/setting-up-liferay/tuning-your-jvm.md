@@ -2,7 +2,7 @@
 
 Java Virtual Machine (JVM) tuning primarily focuses on adjusting Java heap and non-heap settings and configuring garbage collection. Finding settings that perform well for you depend on your system's load and your hardware. The settings discussed here can be used as a starting point for tuning your JVM. 
 
-We used Oracle's 1.8 JVM for the reference architecture. You may choose other supported JVM versions and implementations. Please consult [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for additional compatible JVMs.
+Please consult [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for compatible JVMs.
 
 ## Set Heap and Non-Heap Space
 
@@ -22,7 +22,7 @@ The JVM's memory comprises heap and non-heap spaces. The heap contains a space f
 | Memory Setting | Explanation |
 | :------ | :---------- |
 | `-Xms2560m` | Initial space for heap. |
-| `-Xmx2560m` | Maximim space for heap. |
+| `-Xmx2560m` | Maximum space for heap. |
 | `-XX:NewSize=1536m`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
 | `-XX:MaxNewSize=1536m` | Maximum new space. |
 | `-XX:MetaspaceSize=768m` | Initial space for static content. |
@@ -50,7 +50,7 @@ In the old generation space (in the heap), large garbage collections can cause n
 | :------ | :---------- |
 | `-XX:SurvivorRatio=16` | Makes the survivor space 1/16 of the new space (the initial new space is `1536m`). |
 | `-XX:TargetSurvivorRatio=50` | Instructs the JVM to use 50% of the survivor space after each Eden garbage collection. |
-| `-XX:MaxTenuringThreshold=15` | Keeps survivors to stay in the survivor space for up to 15 garbage collections before promotion to the old generation space. |
+| `-XX:MaxTenuringThreshold=15` | Keeps survivors in the survivor space for up to 15 garbage collections before promotion to the old generation space. |
 
 ## Configure Garbage Collection
 
@@ -70,10 +70,10 @@ Choosing appropriate garbage collector (GC) algorithms helps improve Liferay ins
 | GC Setting | Explanation |
 | :--------- | :---------- |
 | `-XX:+UseParNewGC` | Enables parallel collectors for the new generation. |
-| `-XX:ParallelGCThreads=16` | Allocates 16 threads for parallel garbage collection. Set the number of threads based on the CPU threads available. Report this number on Linux by running `cat /proc/cpuinfo`. The threads use memory from the old generation space. |
+| `-XX:ParallelGCThreads=16` | Allocates 16 threads for parallel garbage collection. Set the number of threads based on the CPU threads available, which you can get on Linux by running `cat /proc/cpuinfo`. The threads use memory from the old generation space. |
 | `-XX:+UseConcMarkSweepGC` | Enables the concurrent mark sweep GC algorithm for the old generation. |
 | `-XX:+CMSParallelRemarkEnabled` | Enables remarking during program execution. |
-| `-XX:+CMSCompactWhenClearAllSoftRefs` | Move memory blocks closer together when using CMS with the clearl all soft refs setting . |
+| `-XX:+CMSCompactWhenClearAllSoftRefs` | Move memory blocks closer together when using CMS with the `ClearAllSoftRefs` setting. |
 | `-XX:CMSInitiatingOccupancyFraction=85` | Initiates CMS when this percent of old generation space is occupied. |
 | `-XX:+CMSScavengeBeforeRemark` | Execute Eden GCs before re-marking objects of CMS. |
 
