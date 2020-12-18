@@ -42,6 +42,7 @@ Here are the features deprecated in 7.3:
 | JAAS support | Bundled | No direct replacement. |
 | JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property in *System Settings* &rarr; *Third Party* &rarr; *jQuery* to `true`. |
 | Liferay Bookmarks | Archived | No direct replacement. |
+| Liferay Mobile Device Detection Lite | Archived | No direct replacement. |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
 | OpenAM / OpenSSO | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
 | OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). Deprecated in 7.2. |
@@ -52,6 +53,7 @@ Here are the features deprecated in 7.3:
 | SOAP Web Services | Bundled (disabled) | The Axis Servlet (e.g., publishes services to `http://localhost:8080/api/axis/`) can be enabled with this Portal Property setting `axis.servlet.enabled`. Liferay `*SOAP` classes are deprecated. |
 | Solr | Marketplace | Replaced by Elasticsearch. |
 | Theme: Fjord | Archived | No direct replacement. |
+| Theme: Hello World | Bundled | No direct replacement. |
 | Theme: Porygon | Archived | No direct replacement. |
 | Theme: Westeros | Archived | No direct replacement. |
 | Virtual Instance: Per-virtual instance portal property files | Archived | Replaced by virtual instance configuration in the Control Panel. |
