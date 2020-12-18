@@ -10,7 +10,7 @@ For example, a user might search for the word "US". Most likely, the user would 
 
 Synonym Sets are only supported when using Elasticsearch as your search engine. Learn about installing Elasticsearch in [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md).
 
-Synonym Sets work with fields indexed in two locales: English and Spanish. Thus, the assets supporting localization out-of-the-box work with Synonym Sets.
+Synonym Sets currently work with fields indexed in either of the following out-of-the-box locales: English or Spanish. Liferay assets with localizable fields in either of these two languages work with Synonym Sets.
 
 The [`=>` format](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html) supported in Elasticsearch is not supported through the Synonyms Set UI.
 
