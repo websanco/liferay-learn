@@ -43,7 +43,7 @@ From the *Condition* area you have these options:
 - Add conditions using a different *Properties* group, by dragging and dropping the *Property* (C).
 - Combine the *Conditions* with *AND* and *OR* operators (D and E).
 
-   ![Add and combine Conditions to define the Segment criteria](./creating-and-managing-user-segments/images/06.png)
+   ![Add and combine Conditions to define the Segment criteria.](./creating-and-managing-user-segments/images/06.png)
 
 For the [Session Properties](./segments-editor-ui-reference.md#session-properties), you can configure a list of predefined values using [Session Property Vocabularies](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md). This option facilitates the task of defining the segments and eliminates manual entry errors.
 
