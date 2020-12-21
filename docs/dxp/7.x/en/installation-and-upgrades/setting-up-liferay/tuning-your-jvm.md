@@ -2,7 +2,7 @@
 
 Java Virtual Machine (JVM) tuning primarily focuses on adjusting Java heap and non-heap settings and configuring garbage collection. Finding settings that perform well for you depend on your system's load and your hardware. The settings discussed here can be used as a starting point for tuning your JVM. 
 
-Please consult [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for compatible JVMs.
+You can adapt the example Oracle JVM settings to settings for your JVM. Please consult [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for compatible JVMs.
 
 ## Set Heap and Non-Heap Space
 
