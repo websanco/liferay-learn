@@ -1,6 +1,6 @@
 # Individuals Dashboard
 
-The Individuals dashboard provides a broad range of analytics data about the visitors to your site. View valuable information about your audience and how they interact with your site.
+The Individuals dashboard provides a broad range of analytics data about your visitors and how they interact with your site.
 
 To view the dashboard,
 
@@ -19,48 +19,53 @@ The Individuals dashboard contains the following data:
 
 The Current Totals panel presents the total number of individuals, known and anonymous, that have been tracked by Analytics Cloud. 
 
-![The Current Totals panel presents total number of visitors to your site.](./individuals-dashboard/images/01.png)
+![The Current Totals panel presents total numbers for visitors to your site.](./individuals-dashboard/images/01.png)
 
-If Analytics Cloud already has some identifiable attribute of an individual, they are considered known.
+When an individual is enriched with some identifiable attribute, they are considered known. 
 
-The Panel also displays a percentage change in total numbers compared to the previous 30 days.
+The panel also displays a percentage change in total numbers compared to the previous 30 days.
 
 ## Enriched Profiles
 
-The Enriched Profiles panel presents the total number of individuals that 
+The Enriched Profiles panel presents the total number of individuals that have been enriched within the last 30 days.
 
-![The Enriched Profiles panel presents known individuals with additional tracked properties](./individuals-dashboard/images/02.png)
+![The Enriched Profiles panel presents the total number of individuals who have been enriched.](./individuals-dashboard/images/02.png)
+
+An individual is considered enriched any time an attribute is associated with than individual. For example, when you [sync contact data from DXP](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.html#syncing-contacts-to-a-property). Or if additional contact data is added (e.g. [adding Salesforce contact data](individual-profiles/adding-a-salesforce-data-source.html)).
 
 ## Active Individuals
 
 The Active Individuals panel presents information on both known and anonymous visitors who have interacted with your site in the selected period.
 
-![The Active Individuals panel presents a chart of visitors over time who have engaged with the Site.](./individuals-dashboard/images/03.png)
+![The Active Individuals panel presents a chart of visitors over time who have interacted with the Site.](./individuals-dashboard/images/03.png)
 
-Choose to visualize the data based on day, week or month. The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click More Preset Periods to reveal additional time ranges. Click Custom Range to filter by a start date and end date of your choice.
+Choose to visualize the data based on day, week or month. The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
 
 ## Interests
 
 The Interests panel presents the top 5 topics that individuals are most interested in.
 
-![The Interests panel presents a chart of popular topics over time.](./individuals-dashboard/images/04.png)
+![The Interests panel presents a chart of popular topics.](./individuals-dashboard/images/04.png)
+
+Theses topics are derived from the title, description, and keyword tags of your pages' HTML.
 
 To view the full list of interest topics, click *View All Interests* in the panel. Alternatively, click the Interests tab at the top of the screen. 
 
 ## Breakdown
 
-The Breakdown panel presents up to 10 different distribution information based on selected attributes.
+The Breakdown panel presents distribution information based on selected attributes of individuals.
 
-![The Breakdown panel presents distribution information based on selected criteria.](./individuals-dashboard/images/05.png)
+![The Breakdown panel presents distribution information based on selected attributes.](./individuals-dashboard/images/05.png)
 
-To add a breakdown by attribute, 
+Up to 10 different attributes can be added to the panel.
+To add a new breakdown,
 
-1. Click on the plus sign at the top right of the panel. 
+1. Click the plus sign at the top right of the panel. 
 
-1. Use the drop-down menu to select an attribute.
+1. Use the drop-down menu to select an attribute. 
 
 1. Input a breakdown name and click *Save*.
 
-To view more information about each breakdown, click *Explore Breakdown*.
+To view the breakdown of additional attributes, click *Explore Breakdown*. Alternatively, click the Distribution tab at the top of the screen.
 
 
