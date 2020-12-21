@@ -31,7 +31,7 @@ The Enriched Profiles panel presents the total number of individuals that have b
 
 ![The Enriched Profiles panel presents the total number of individuals who have been enriched.](./individuals-dashboard/images/02.png)
 
-An individual is considered enriched any time an attribute is associated with than individual. For example, when you [sync contact data from DXP](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.html#syncing-contacts-to-a-property). Or if additional contact data is added (e.g. [adding Salesforce contact data](individual-profiles/adding-a-salesforce-data-source.html)).
+An individual is considered enriched any time an attribute is associated with than individual. For example, when you [sync contact data from DXP](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.md#syncing-contacts-to-a-property). Or if additional contact data is added (e.g. [adding Salesforce contact data](individual-profiles/adding-a-salesforce-data-source.md)).
 
 ## Active Individuals
 
