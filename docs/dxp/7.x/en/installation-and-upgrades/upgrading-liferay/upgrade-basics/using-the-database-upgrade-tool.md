@@ -12,11 +12,11 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
-If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the Database Upgrade Tool, you'll use that tool from a [Liferay Tomcat Bundle](../../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
+If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the Database Upgrade Tool, you'll use that tool from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
 
 ## Setting Up a New Installation
 
-1. Install the new Liferay release. If you're upgrading your database for a new Liferay Docker image, install the [Liferay Tomcat Bundle](../../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md).
+1. Install the new Liferay release. If you're upgrading your database for a new Liferay Docker image, install the [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md).
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
