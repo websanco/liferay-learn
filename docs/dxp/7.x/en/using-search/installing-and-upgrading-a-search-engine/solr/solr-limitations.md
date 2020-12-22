@@ -1,16 +1,16 @@
 # Solr Limitations 
 
 ```important::
-   Liferay's Solr support will receive one more update (to support Solr 8) before being deprecated. Please plan to migrate to `Elasticsearch <../elasticsearch/getting-started-with-Elasticsearch.md>`_.
+   Liferay's Solr support will receive one more update (to support Solr 8) before being deprecated. Please plan to migrate to `Elasticsearch <../elasticsearch/getting-started-with-elasticsearch.md>`_.
 
-   See `LPS-11013 <https://issues.liferay.com/browse/LPS-111013>`__ to follow the progress of Liferay's Solr 8 integration.
+   See `LPS-111013 <https://issues.liferay.com/browse/LPS-111013>`__ to follow the progress of Liferay's Solr 8 integration.
 ```
 
 ## End-User Feature Limitations 
 
 Liferay's Solr integration has limitations affect using Liferay Commerce and the following features. Elasticsearch is required to use the following features.
 
-* [Workflow Metrics](../../../process-automation/workflow/user-guide/using-workflow-metrics.md)
+* [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md)
 * [Custom Filter search widget](../../search-pages-and-widgets/search-results/filtering-search-results.md)
 * The Low Level Search Options widget
 * Search Tuning: Customizing Search Results
