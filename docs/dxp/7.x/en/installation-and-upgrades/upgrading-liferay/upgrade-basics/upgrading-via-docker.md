@@ -37,7 +37,7 @@ Here are the steps for upgrading with a Docker image:
 
     * `deploy`: The Docker container copies artifacts from this folder to the container's auto-deploy folder.
 
-1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the `files` folder (e.g., creating `new-version/files/data`).
+1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the `files` folder (e.g., creating `new-version/files/data`).
 
 1. Copy and merge the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key from `[Liferay Home backup]/license/` to `new-version/files/license/`. The files may include but are not limited to these:
 
