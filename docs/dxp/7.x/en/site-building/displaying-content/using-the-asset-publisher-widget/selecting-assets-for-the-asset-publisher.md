@@ -43,7 +43,7 @@ To select assets to publish in the *Asset Publisher* widget,
 
 ## Liferay DXP 7.2
 
-You can configure the Asset Publisher to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Content Sets](../../../content-authoring-and-management/content_sets.md).
+You can configure the Asset Publisher to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2).
 
 To select assets to publish in the *Asset Publisher* widget,
 
