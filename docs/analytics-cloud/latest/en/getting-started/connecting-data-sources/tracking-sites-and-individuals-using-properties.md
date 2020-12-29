@@ -52,7 +52,7 @@ To sync contacts to a property:
 
 1. Select the users or groups you want to sync and click *Save*.
 
-DXP is now sending contact data to Analytics Cloud.
+Learn more about [syncing contact data from Liferay DXP](syncing-contact-data-from-dxp.md).
 
 ## Managing Permissions for a Property
 
