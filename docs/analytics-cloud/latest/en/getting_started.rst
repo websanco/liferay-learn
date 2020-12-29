@@ -22,5 +22,6 @@ Connecting Data Sources
 -  :doc:`/getting-started/connecting-data-sources/managing-data-sources`
 -  :doc:`/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud`
 -  :doc:`/getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties`
+-  :doc:`/getting-started/connecting-data-sources/syncing-contact-data-from-dxp`
 -  :doc:`/getting-started/connecting-data-sources/connecting-liferay-dxp-using-oauth`
 -  :doc:`/getting-started/connecting-data-sources/upgrading-a-data-source-connection-from-oauth-to-token-based`
