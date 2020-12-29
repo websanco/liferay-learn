@@ -13,7 +13,7 @@ Liferay 7.0 Fix Pack 97
 ## Initial Sync of Contact Data
 To sync contact data,
 
-1.  Navigate to Control Panel &rarr; Instance Setting &rarr; Analytics Cloud in your Liferay DXP instance.
+1.  Navigate to *Control Panel* &rarr; *Instance Setting* &rarr; *Analytics Cloud* in your Liferay DXP instance.
 
 1. Click on the *Select Contacts* Button.
 
@@ -29,7 +29,7 @@ To sync contact data,
 
       ![Select the fields to sync for your contacts.](./syncing-contact-data-from-dxp/images/02.png)
 
-      Note that any custom field created for users will also be available to sync. Learn more about [adding custom fields to users](../../../../../../dxp/7.x/en/users-and-permissions/devops/adding-custom-fields-to-users.md).
+      Note that any custom field created for users will also be available to sync. Learn more about [adding custom fields to users](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/devops/adding-custom-fields-to-users.html).
 
       Click the *Save* button at the bottom of the page after making your selections.
 
@@ -37,7 +37,7 @@ To sync contact data,
 
 To modify which contact data fields you wish to sync with Analytics Cloud,
 
-1. Navigate to Control Panel &rarr; Instance Setting &rarr; Analytics Cloud &rarr; Synced Contact Data in your Liferay DXP instance. 
+1. Navigate to *Control Panel* &rarr; *Instance Setting* &rarr; *Analytics Cloud* &rarr; *Synced Contact Data* in your Liferay DXP instance. 
 
       ![Navigate to the Synced Contact Data section in the Control Panel.](./syncing-contact-data-from-dxp/images/03.png)
 
