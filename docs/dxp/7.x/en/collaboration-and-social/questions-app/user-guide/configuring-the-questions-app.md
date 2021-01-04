@@ -8,11 +8,11 @@ To configure the app,
 
     ![Click on the configuration link of the app.](./configuring-the-questions-app/images/01.png)
 
-1. Under *General Settings*, there is a *Show Cards for Topic Navigation* option. If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions.
+1. Under General Settings, there is a Show Cards for Topic Navigation option. If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions.
 
     ![The configuration window opens with different options.](./configuring-the-questions-app/images/02.png)
 
-1. By default, the app will display all existing topics. To show the questions of one specific topic, click the *Select* button under *Root Topic ID*.
+1. By default, the app will display all existing topics. To show the questions of one specific topic, click the *Select* button under Root Topic ID.
 
     ![Select an individual topic as the root topic.](./configuring-the-questions-app/images/03.png)
 
@@ -32,11 +32,11 @@ To modify permissions for the app,
 
 ## Configuration from System Settings
 
-A few additional settings are available for configuration. Navigate to *Control Panel* &rarr; *System Settings* &rarr; *Third Party*. Click on *Questions* under *Widget Scope*.
+A few additional settings are available for configuration. Navigate to *Control Panel* &rarr; *System Settings* &rarr; *Third Party*. Click on *Questions* under Widget Scope.
 
 ![Navigate to the Questions app settings in system settings.](./configuring-the-questions-app/images/05.png)
 
-If the *Enable Redirect to Login* is checked, a Guest user will be redirected to a login page when they try to click *Ask Question*.
+If the Enable Redirect to Login is checked, a Guest user will be redirected to a login page when they try to click *Ask Question*.
 
 ```Note::
 A Service Access Policy needs to be created to allow Guest users to view the app.
@@ -46,7 +46,7 @@ To create a new policy,
 
 1. Navigate to *Control Panel* &rarr; *Service Access Policy*. Click on the *Add* icon (![Add icon](../../../images/icon-add.png)).
 
-1. Give the policy a *Name* and *Title*. Click the *Switch to Advanced Mode* button at the bottom. Add the following two signatures under *Allowed Service Signatures*,
+1. Give the policy a Name and Title. Click the *Switch to Advanced Mode* button at the bottom. Add the following two signatures under Allowed Service Signatures,
 
         com.liferay.message.boards.service.MBCategoryService#getCategoriesCount
         com.liferay.message.boards.service.MBCategoryService#getCategory

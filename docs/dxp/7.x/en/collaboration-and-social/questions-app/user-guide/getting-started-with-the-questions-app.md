@@ -8,19 +8,19 @@ The Questions app is a new UI of the Message Boards application more focused in 
 
 **Answers:** An answer to a specific question
 
-When questions are created, *Tags* can also be used to help others find relevant content.
+When questions are created, Tags can also be used to help others find relevant content.
 
 ## Adding a Questions App to a Site
 
 To add the Questions app to a Site,
 
-1. Navgiate to the site page where the app will be added.
+1. Navigate to the site page where the app will be added.
 
 1. Click on the Add icon (![Add icon](../../../images/icon-add-app.png)) at the top right of the page.
 
 1. Locate the app under the Collaboration section of widgets. Drag the app to the page.
 
-    ![Locate the Questions app listed under the Collaboration setion.](getting-started-with-the-questions-app/images/01.png)
+    ![Locate the Questions app listed under the Collaboration section.](getting-started-with-the-questions-app/images/01.png)
 
 Users can now begin asking and answering questions with the app.
 

@@ -32,7 +32,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 1. Users can view existing questions and give their replies. To give an answer, click on an existing question.
 
-1. Type your answer into the *Your Answer* box and click the *Post Answer* button.
+1. Type your answer into the Your Answer box and click the *Post Answer* button.
 
     ![Type your answer and click the Post Answer button](using-the-questions-app/images/05.png)
 
