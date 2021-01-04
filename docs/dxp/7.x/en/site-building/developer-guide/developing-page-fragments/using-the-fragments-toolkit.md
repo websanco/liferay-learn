@@ -1,14 +1,10 @@
 # Using the Fragments Toolkit
 
-The Fragments Toolkit helps you package Fragments and Collections created using your own tools. Using it takes only three steps: 
-
-1. [Import a Fragment Collection](#import-a-fragment-collection)
-1. [Add a New Collection and Fragment](#add-a-new-collection-and-fragment)
-1. [Import and Test](#import-and-test)
+The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to import an example Fragment Collection and to create and import your own Fragment Collection.
 
 ## Import a Fragment Collection
 
-First, deploy an example to see what a Fragment Collection looks like:
+First, import an example Fragment Collection to see what one looks like:
 
 1. Run the command below to start the Docker container:
 
@@ -16,26 +12,34 @@ First, deploy an example to see what a Fragment Collection looks like:
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the [Marketing Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip)
+1. Download and unzip the [example](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip)
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
     ```
 
     ```bash
-    unzip liferay-x2y6.zip
+    unzip liferay-x2y6.zip -d liferay-x2y6
     ```
 
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Set up the Fragments Toolkit for the tutorial:
 
     ```bash
-    cd liferay-x2y6/marketing-fragments
+    cd liferay-x2y6
     ```
 
+    ```bash
+    ./setup_tutorial.sh
     ```
+
+    Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
+
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `npm run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+
+    ```bash
     npm run import
-    ? Liferay host & port http://localhost:8080
-    ? Username test@liferay.com
+    ? Liferay host & port (http://localhost:8080)
+    ? Username (test@liferay.com)
     ? Password [hidden]
 
     Checking connection...
@@ -43,6 +47,10 @@ First, deploy an example to see what a Fragment Collection looks like:
 
     ? Company ID liferay.com
     ? Group ID Liferay
+    Building project...
+    Importing project...
+    ✔ Fragment X2Y6 Card imported
+    Project imported
     ```
 
 1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
@@ -53,76 +61,96 @@ First, deploy an example to see what a Fragment Collection looks like:
        For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
     ```
 
-Great! You successfully deployed a zipped Fragment Collection created with the Fragments Toolkit.
+Great! You successfully deployed a Fragment Collection.
 
 ## Collection Format Overview
 
-The generated Fragment Collection has the project structure below. You can create this project structure manually and compress it into a ZIP file.
+Fragment Collections use this project structure:
 
-* `collection.json`: a text file which describes your collection with the format `{"name":"collection name>","description":"collection description"}`.
+* `collection.json`: a text file that describes the Collection.
 
-* `language.properties`: the language keys defined for the collection.
+    ```json 
+    {
+        "description": "Optional description",
+        "name": "Collection name"
+    }
+    ```
 
-    * `[fragment-name]/`: a folder containing all of the files for a Page Fragment.
+* `language.properties` (optional): language keys defined for the Collection.
 
-        * `fragment.json`: a text file that describes a Page Fragment with this format:
+* `[fragment-name]/`: a folder containing all of the files for a Fragment.
 
-          ```json
-          {
-              "cssPath": "styles.css",
-              "configurationPath": "configuration.json",
-              "htmlPath": "index.html",
-              "jsPath": "main.js",
-              "name": "fragment name",
-              "type": "fragment type",
-              "readyOnly": "false",
-              "cacheable": "false"
-           }
-           ```
+    * `configuration.json`(optional): a JSON file that defines the Fragment's configuration. See [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md) for more information.
 
-          Update the `*Path` properties in your `fragment.json` file if you change the CSS, JavaScript, or HTML file names.
+    * `fragment.json`: a text file that describes the Fragment.
 
-        * `styles.css`: the CSS source for the Fragment
+        ```json
+        {
+            "configurationPath": "configuration.json",
+            "cssPath": "styles.css",
+            "htmlPath": "index.html",
+            "jsPath": "main.js",
+            "name": "Fragment name",
+            "thumbnailPath": "thumbnail.png",
+            "type": "[component|react]"
+        }
+        ```
 
-        * `index.html`: the HTML source for the Fragment
+      Update the `*Path` properties with the names of your CSS, configuration, HTML, and JavaScript files.
 
-        * `configuration.json`: a JSON file that defines the Fragment's configuration. See [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md) for more information.
+    * `index.html`: the HTML source for the Fragment.
 
-        * `main.js`: the JavaScript source for the Fragment
+    * `main.js`: the JavaScript source for the Fragment.
 
-        * `thumbnail.png`: the thumbnail that's displayed when the Fragment is in a list
+    * `styles.css`: the CSS source for the Fragment.
 
-    * `resources/`: a folder containing any additional images or other external files needed for the Fragment. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
+    * `thumbnail.png` (optional): an image that's displayed when the fragment is in a list.
 
+* `resources/` (optional): a folder containing any additional images or files the Fragments need. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
+
+The Fragments Toolkit facilitates creating Fragment Collections.
+ 
 ## Add a New Collection and Fragment
 
-Follow these steps to add a new Fragment Collection containing a new Fragment:
+The example's `package.json` file provides the Fragments Toolkit. Follow these steps to add a new Fragment Collection and a new Fragment:
 
-1. Install the Fragments Generator using the command below. Note that you must have [NodeJS](https://nodejs.org/) 8+ and [npm](https://www.npmjs.com/) 6+ installed first.
+1. Set up the Fragments Toolkit if you haven't done so already.
 
     ```bash
-    npm install -g yo
+    cd liferay-x2y6
     ```
 
     ```bash
-    npm install -g generator-liferay-fragments
+    ./setup_tutorial.sh 
     ```
 
-1. Create a Collection for the Fragment(s) in the project with the `npm run add-collection` command and answer the prompts to provide a name and an optional description:
+1. Create a Fragment Collection with the `npm run add-collection` command and answer the prompts with your Collection's name and an optional description:
 
     ```bash
-    cd marketing-fragments
     npm run add-collection
 
-    > marketing-fragments@1.0.0 add-collection C:\Users\liferay\Desktop\projects\marketing-fragments
+    > x2y6@ add-collection /home/jhinkey/examples/liferay-x2y6
     > yo liferay-fragments:collection
 
-    ? Collection name (required) Marketing Collection 2
-    ? Collection description (optional)
-       create src\marketing-collection-2\collection.json
+    ? Collection name (required) My Collection
+    ? Collection description (optional) This is my new Fragment Collection.
+       create src/my-collection/collection.json
     ```
 
-1. Navigate to the Collection's folder and create a Fragment:
+    Resulting `collection.json` file:
+
+    ```json
+    {
+        "description": "This is my new Fragment Collection.",
+        "name": "My Collection"
+    }
+    ```
+
+1. In the Collection's folder, create a Fragment:
+
+    ```bash
+    cd src/my-collection 
+    ```
 
     ```bash
     npm run add-fragment
@@ -131,89 +159,147 @@ Follow these steps to add a new Fragment Collection containing a new Fragment:
     The CLI starts the process:
 
     ```bash
-    > my-fragments@1.0.0 add-fragment liferay-x2y6\marketing-fragments
+    > x2y6@ add-fragment ~/liferay-x2y6
     > yo liferay-fragments:fragment
     ```
 
-1. Enter a name and select a Fragment type and Collection.
+1. Name your Fragment.
 
     ```bash
-    ? Fragment name (required) Marketing Jumbotron
-    ? Fragment type Component
+    ? Fragment name (required) My Jumbotron
+    ```
+
+    
+1. Here you can choose whether to use React to process fragment JavaScript before importing the fragment to Liferay. This option requires Liferay 7.3+. If you're using Liferay version 7.2 or below, decline using React. For the purpose of this tutorial, please decline using React.
+
+    ```bash
+    ? Use React (or other JS framework)? No
+    ```
+
+1. Since you declined using React, the toolkit asks whether you want to use the new editable element syntax. This is available for Liferay 7.3+. If you're using Liferay version 7.2 or below, please decline using the new syntax.
+
+    ```bash
+    ? Use new data-lfr editable syntax? Yes
     ```
 
     ```note::
-      In versions prior to Liferay DXP 7.3, you can add a Section or a Component. In Liferay Portal 7.3+, all Page Fragments are Components.
-    ```
-
-1. Select the Collection you just created (`Marketing Collection 2`).
-
-    ```bash
-    ? Choose a collection (marketing-collection-2)
-       create src\marketing-collection-2\marketing-jumbotron\index.html
-       create src\marketing-collection-2\marketing-jumbotron\main.js
-       create src\marketing-collection-2\marketing-jumbotron\styles.css
-       create src\marketing-collection-2\marketing-jumbotron\fragment.json
-       create src\marketing-collection-2\marketing-jumbotron\configuration.json
+       If you accepted using React in your fragment, the toolkit assumes you're on Liferay 7.3+ and configures the new editable element syntax.
     ```
 
     ```note::
-        The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their path in the ``fragment.json`` to reflect the change.
+       Please see `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_ for more information on Liferay's editable data syntax.
     ```
 
-1. Write the Fragment's HTML (index.html), CSS (styles.css), JavaScript (main.js), and [configuration options](./adding-configuration-options-to-fragments.md) (configuration.json) if applicable. The example uses HTML and Bootstrap utilities for styling:
+1. Select the Collection you just created (`My Collection`).
 
-    ```html
-    <div class="marketing-jumbotron-fragment-01">
-      <div class="jumbotron">
-        <lfr-editable id="01-jumbotron-title" type="rich-text">
-          <h1 class="display-4">Editable Jumbotron headline</h1>
-        </lfr-editable>
-        <lfr-editable id="02-jumbotron-call" type="rich-text">
-          <p class="lead">Edit this text to call extra attention to featured content or information.</p>
-        </lfr-editable>
-        <hr class="my-4">
-        <lfr-editable id="03-jumbotron-more-info" type="rich-text">
-          <p>Edit this text to provide more information.</p>
-        </lfr-editable>
-        <lfr-editable id="04-jumbotron-link" type="link">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Editable link</a>
-        </lfr-editable>
-      </div>
+    ```bash
+    ? Choose a collection (my-collection)
+       create src/my-collection/my-jumbotron/index.html
+       create src/my-collection/my-jumbotron/main.js
+       create src/my-collection/my-jumbotron/styles.css
+       create src/my-collection/my-jumbotron/fragment.json
+       create src/my-collection/my-jumbotron/configuration.json
+    ```
+
+    ```note::
+        The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their paths in the ``fragment.json``.
+    ```
+
+1. Write the Fragment's HTML (`index.html`), CSS (`styles.css`), JavaScript (`main.js`), and any [configuration options](./adding-configuration-options-to-fragments.md) (`configuration.json`).
+
+Here's the generated Fragment HTML that uses the new `data-lfr` editable syntax:
+
+```html
+<div class="my-jumbotron">
+    <h1 data-lfr-editable-id="title" data-lfr-editable-type="text">
+        My Jumbotron
+    </h1>
+</div>
+```
+
+You can build off of the above HTML and use [Clay](https://clayui.com/)'s [Bootstrap](https://getbootstrap.com/)-based components to create Fragment HTML like this:
+
+```html
+<div class="component-x276-my-jumbotron">
+    <div class="jumbotron">
+        <h1
+            class="display-4"
+            data-lfr-editable-id="01-title"
+            data-lfr-editable-type="rich-text"
+        >
+            Editable Jumbotron Headline
+        </h1>
+
+        <p
+            class="lead"
+            data-lfr-editable-id="02-lead"
+            data-lfr-editable-type="rich-text"
+        >
+            Edit this text to call extra attention to featured content or information.
+        </p>
+
+        <hr />
+
+        <p
+            data-lfr-editable-id="03-text"
+            data-lfr-editable-type="rich-text"
+        >
+            Edit this text to provide more information.
+        </p>
+
+        <a
+            class="btn btn-primary btn-lg"
+            data-lfr-editable-id="04-label"
+            data-lfr-editable-type="link"
+            href="#"
+        >
+            Editable Link
+        </a>
     </div>
-    ```
+</div>
+```
 
-    ```tip::
-      Give the main wrapper element for the Component in ``index.html`` a unique ID so it doesn't conflict with other Components on the page.
-    ```
+```note::
+   If you are using Liferay 7.2 or below, remove the ``data-lfr-editable-[id|type]`` attributes and wrap the content elements in ``lfr-editable`` elements as described in `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_.
+```
 
-    You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
+The first `div` element's `class="component-x276-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page. 
 
-    ```note::
-      The Fragment and configuration object are passed in as arguments in JavaScript and are available as the parameters ``fragmentElement`` and ``configuration``.
-    ```
+```tip::
+  In your Fragment's HTML file, use the main wrapper element (the ``<div>`` in the example above) to uniquely identify the Fragment so it doesn't conflict with other components on a page.
+```
+
+Next the `<div class="jumbotron"/>` element wraps the content, applying [Bootstrap](https://getbootstrap.com/)'s jumbotron component. This component makes the content stand out. Here are the content elements:
+
+* `<h1 class="display-4" ...>Editable Jumbotron ...` creates the Fragment's heading. It uses [Bootstrap](https://getbootstrap.com/)'s `display-4` size style. The `data-lfr-editable-` attributes make the heading text [editable](../reference/fragments/fragment-specific-tags-reference.md). The `data-lfr-editable-id="03-text"` attribute identifies the element and the `data-lfr-editable-type="rich-text"` attribute declares the content type.
+* `<p class="lead" ...>Edit this text ...` is the lead body text distinguished by Clay's [`lead`](https://clayui.com/docs/css/content/typography.html#css-lead) style component. The `data-lfr-editable-` attributes make the paragraph editable.
+* The `<hr/>` and next `<p ...` elements produce a horizontal rule and another editable paragraph, respectively.
+* `<a class="btn btn-primary btn-lg" ...` specifies a modifiable link. The `btn-primary` class styles it as a main button and `btn-lg` makes it large. The `href="#"` attribute takes the user to the top of the page when the link is clicked. The `data-lfr-editable-type="link"` attribute makes the link [editable](../reference/fragments/fragment-specific-tags-reference.md).
+
+You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
+
+```note::
+  The Fragment and configuration object are passed in as arguments in JavaScript and are available as ``fragmentElement`` and ``configuration`` parameters, respectively.
+```
 
 ## Import and Test
 
-You can import the updated Fragments as you did above:
+You can import your new Fragment as you did the original example Fragment:
 
 1. Run the import command and provide your credentials:
-
-    ```bash
-    cd marketing-fragments
-    ```
 
     ```bash
     npm run import
     ```
 
-1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new Collection appears in the Collection list.
+1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
 
-    ![The Collection is available.](./using-the-fragments-toolkit/images/02.png)
+![The Collection is available.](./using-the-fragments-toolkit/images/02.png)
 
-Great! Now you know how to use the Fragments Toolkit to create Collections and Fragments for Liferay DXP.
+Great! Now you know how to use the Fragments Toolkit to create and manage Fragments. See the [Fragments Toolkit Command Reference](../reference/fragments/fragments-toolkit-command-reference.md) for more toolkit command information.
 
 ## Related Information
 
 * [Creating a Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md)
-* [Developing Page Fragments with the Editor](./using-the-fragments-editor.md)
+* [Using the Fragments Editor](./using-the-fragments-editor.md)
+* [Fragments Toolkit Command Reference](../reference/fragments/fragments-toolkit-command-reference.md)
