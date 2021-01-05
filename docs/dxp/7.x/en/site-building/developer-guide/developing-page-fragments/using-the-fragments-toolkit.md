@@ -22,7 +22,7 @@ First, import an example Fragment Collection to see what one looks like:
     unzip liferay-x2y6.zip -d liferay-x2y6
     ```
 
-1. Set up the Fragments Toolkit for the tutorial:
+1. Set up your environment for the tutorial:
 
     ```bash
     cd liferay-x2y6
@@ -33,6 +33,12 @@ First, import an example Fragment Collection to see what one looks like:
     ```
 
     Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
+
+1. If you're running Liferay 7.3+, install the Fragments Toolkit version 1.8.0:
+
+    ```bash
+    npm install -g generator-liferay-fragments@1.8.0
+    ```
 
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `npm run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
@@ -146,11 +152,11 @@ The example's `package.json` file provides the Fragments Toolkit. Follow these s
     }
     ```
 
-1. In the Collection's folder, create a Fragment:
+## Add a New Fragment
 
-    ```bash
-    cd src/my-collection 
-    ```
+The `add-fragment` command generates a Fragment per your input. The command line interface (CLI) differs between Fragments Toolkit versions. These steps demonstrate using Fragments Toolkit 1.8.0 (compatible with Liferay 7.3+). 
+
+1. Run the `add-fragment` command.
 
     ```bash
     npm run add-fragment
@@ -170,13 +176,13 @@ The example's `package.json` file provides the Fragments Toolkit. Follow these s
     ```
 
     
-1. Here you can choose whether to use React to process fragment JavaScript before importing the fragment to Liferay. This option requires Liferay 7.3+. If you're using Liferay version 7.2 or below, decline using React. For the purpose of this tutorial, please decline using React.
+1. Choose whether to use React or another JavaScript framework. React requires Liferay 7.3+. For this tutorial, please decline using React.
 
     ```bash
     ? Use React (or other JS framework)? No
     ```
 
-1. Since you declined using React, the toolkit asks whether you want to use the new editable element syntax. This is available for Liferay 7.3+. If you're using Liferay version 7.2 or below, please decline using the new syntax.
+1. Use the new editable element syntax for Liferay 7.3+. 
 
     ```bash
     ? Use new data-lfr editable syntax? Yes
