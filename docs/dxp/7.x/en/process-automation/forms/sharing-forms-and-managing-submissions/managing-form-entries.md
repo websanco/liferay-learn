@@ -94,3 +94,7 @@ There is a system level setting to determine whether administrators can export e
 1. Click the _X_ button to delete all the entries.
 
 Alternately, users can delete just one entry; check the box next to the chosen entry and then click the _X_ in the upper right corner. Click _OK_ to confirm the command.
+
+## Related Topics
+
+* [Form Metrics](./form-metrics.md)

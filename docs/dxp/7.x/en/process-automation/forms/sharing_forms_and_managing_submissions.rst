@@ -6,6 +6,7 @@ Sharing Forms and Managing Submissions
 
    sharing-forms-and-managing-submissions/sharing-forms.md
    sharing-forms-and-managing-submissions/managing-form-entries.md
+   sharing-forms-and-managing-submissions/form-metrics.md
    sharing-forms-and-managing-submissions/configuring-form-notifications.md
    sharing-forms-and-managing-submissions/using-forms-with-a-workflow.md
    sharing-forms-and-managing-submissions/enabling-captcha-on-form-submissions.md
@@ -13,6 +14,7 @@ Sharing Forms and Managing Submissions
 
 -  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/sharing-forms`
 -  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/managing-form-entries`
+-  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/form-metrics`
 -  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/configuring-form-notifications`
 -  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/using-forms-with-a-workflow`
 -  :doc:`/process-automation/forms/sharing-forms-and-managing-submissions/enabling-captcha-on-form-submissions`
