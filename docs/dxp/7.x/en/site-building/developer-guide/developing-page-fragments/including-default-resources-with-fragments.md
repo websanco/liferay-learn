@@ -1,15 +1,10 @@
 # Including Default Resources in Fragments
 
-When creating Page Fragments, you can upload image resources (e.g. `.gif`, `.jpg`, `.jpeg`, or `.png`) with your Fragment Collection to make them available from the Collection, rather than relying on resources uploaded to other applications, like Documents and Media. When your Fragment Collection is exported, the images come with it, making the Collection easier to maintain. Here's how to include resources with your Fragment Collection:
-
-1. [Import a Fragment Collection with Resources](#import-a-fragment-collection-with-resources)
-1. [Include a New Resource](#include-a-new-resource)
-
-This example uses a Docker image with a fresh install of Liferay DXP 7.3.
+You can include images (e.g. `.gif`, `.jpg`, `.jpeg`, or `.png`) in your Fragment Collections for your Fragments to use. Keeping images with your Fragments, rather than in other applications, like Documents and media, is a convenience. Here you'll learn how to include image resources in your Fragment Collections and use image resources in your Fragments.
 
 ## Import a Fragment Collection with Resources
 
-First, import an example to see how Fragment resources work:
+First, import an example Fragment Collection to see how Fragment resources work:
 
 1. Run the command below to start the Docker container:
 
@@ -20,26 +15,31 @@ First, import an example to see how Fragment resources work:
 1. Download and unzip the [example resources Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip -O
     ```
 
     ```bash
-    unzip liferay-i6r3.zip
+    unzip liferay-i6r3.zip -d liferay-i6r3
     ```
+
+1. Setup up the Fragments Toolkit:
 
     ```bash
     cd liferay-i6r3
     ```
 
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
-
     ```bash
-    cd liferay-i6r3/fragment-resources-collection
+    ./setup-tutorial.sh
     ```
+
+    Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
+
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `npm run import` command below. 
 
     ```bash
     npm run import
 
+    ...
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
     ? Password [hidden]
@@ -49,30 +49,43 @@ First, import an example to see how Fragment resources work:
 
     ? Company ID liferay.com
     ? Group ID Liferay
+
+    Importing project...
+
+    Generating zip file
+
+    build/liferay-fragments.zip file created
+    Import them to your liferay-portal to start using them
+    ✔ Fragment I6R3 Card imported
     ```
 
-1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`, open the Product Menu, and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The Collection appears with the other Collections and includes the resource in the *Resources* tab.
+1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The I6R3 Collection appears with the other Collections.
 
-    ![The Collection is available along with the included resource.](./auto-deploying-fragments/images/01.png)
+1. Click on the *I6R3 Collection*.
+
+1. Click the *Resources* tab. The `books.png` image appears in the resource list.
+
+    ![The resource is available in the Collection.](./including-default-resources-with-fragments/images/01.png)
 
 ## Resource Format Overview
 
-The image resource is included in the project's `/resources` folder:
+The image resource is included in the Collection's `resources` folder. Here's the Fragment Collection file structure:
 
-* `Collection-project-folder`
-  * `src/collection-name`
-    * `collection.json`: a text file which describes your collection with the format `{"name":"collection name>","description":"collection description"}`.
-    * `[fragment-name]/`: a folder containing all of the files for a Page Fragment.
-    * `resources/`
+* `collection.json`: a text file which describes your Collection with the format `{"name":"Collection name","description":"Collection description"}`.
+* `[fragment-name]/`: contains all of a Fragment's files.
+* `resources/`: contains files available to all the Collection's Fragments.
 
 ```tip::
   Alternatively, you can upload the image through the *Resources* tab in the `Fragments Editor <./using-the-fragments-editor.md>`_.
 ```
 
-The image is referenced in the HTML with the syntax `[resources:image-name.extension]`. The example has the configuration below:
+Image files are referenced in a Fragment's HTML with the syntax `[resources:image-name.extension]`. The example Fragment HTML has this `img` element:
 
 ```html
-<img src="[resources:card-topper-01.png]" class="card-img-top">
+<img
+    class="card-img-top"
+    src="[resources:books.png]"
+/>
 ```
 
 ```note::
@@ -85,33 +98,38 @@ The image is referenced in the HTML with the syntax `[resources:image-name.exten
 
 ## Include a New Resource
 
-Now that you know how resources are included and referenced, you can include a new resource in the Fragment Collection.
+Now that you know how to include a resource and reference it in a Fragment, you can use a new resource in the example Fragment Collection.
 
-1. Move the `card-topper-02.png` image from the `/liferay-i6r3/new-resource/` folder to the `/liferay-i6r3/fragment-resources/src/resources-marketing-collection/resources/` folder.
-1. Update the `/liferay-i6r3/fragment-resources/src/resources-marketing-collection/resource-marketing-card/index.html` file to use the new image resource:
+1. Copy an image, such as an image from <https://www.freeimages.com/>, to the `liferay-i6r3/src/i6r3-collection/resources/` folder.
 
-    ```html
-    <img src="[resources:card-topper-02.png]" class="card-img-top">
-    ```
-
-1. Import the Fragment Collection in the Docker container as you did above:
-
-    ```bash
-    cd liferay-i6r3/fragment-resources-collection
-    ```
+1. Import the Fragment Collection in the Docker container again as you did above:
 
     ```bash
     npm run import
     ```
 
-1. Verify that the Fragment Collection resource is available. Open your browser to `https://localhost:8080`, and open the Product Menu and go to Site &rarr; *Site Builder* &rarr; *Page Fragments*. The new resource is included with the Collection.
+1. Verify that the Fragment Collection includes the resource. In the *Fragments* page in the UI, select the *I6R3 Collection* and click the *Resources* tab. The new image appears in the resource listing.
 
-![Any Fragment from the Fragment Collection has access to the uploaded resources.](./including-default-resources-with-fragments/images/02.png)
+    ![The new image appears in the Collection's resource list.](./including-default-resources-with-fragments/images/02.png)
 
-Great! Now you know how to include image resources with your Fragment Collections.
+1. Open the *I6R3 Card* Fragment by selecting the Collection's *Fragments* tab and clicking the *I6R3 Card* Fragment. The Fragment source appears in the Fragments Editor.
+
+1. Update the Fragment to use the new image resource. Delete `books.png` from the `img` element's `src="[resources:books.png]"` attribute and start typing the new image file's name after `src="[resources:`. An attribute value with the image file name appears under the cursor. Select that attribute value.
+
+    ![The Fragments Editor lists the matching resources.](./including-default-resources-with-fragments/images/03.png)
+
+1. Verify that the Fragment renders the new image.
+
+![The Fragments includes the new image.](./including-default-resources-with-fragments/images/04.png)
+
+```note::
+   Any Fragment in a Fragment Collection has access to the Collection's resources.
+```
+
+Great! Now you know how to use image resources Fragment Collections.
 
 ## Related Information
 
 * [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
 * [Auto-deploying Fragments](./auto-deploying-fragments.md)
-* [Developing Page Fragments with the Fragments Editor](./using-the-fragments-editor.md)
+* [Using the Fragments Editor](./using-the-fragments-editor.md)
