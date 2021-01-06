@@ -22,6 +22,9 @@ This article documents the available elements when building a form.
 | **Grid** | Using radio buttons, users select from options laid out in rows and columns. One selection can be made per row. This is useful when the same response metric is needed for multiple questions. |
 | **Numeric** |  Users enter numeric data (integers or decimals) into numeric fields. Non-number input is not accepted. |
 | **Upload** | Users can select a file from the Documents and Media library or upload a file from their local file systems. |
+| **Image** | Users can select an image file from the Documents and Media library or upload an image file from their local file systems. |
+| **Color** | Users can select a color from the color picker, or enter a hex code. The hex code is stored by the Forms backend. |
+| **Rich Text** | Users can enter Rich Text content. |
 
 ## Additional Information
 
