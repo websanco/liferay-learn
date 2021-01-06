@@ -1,41 +1,58 @@
 # Uploading Files
 
-The _Documents and Media_ application is where users can store their files natively inside the DXP instance. Unless a certain file format is disallowed, users can upload most types of files: documents, images, and videos.
+Documents and Media provides native storage on your Liferay server for digital assets, whether documents, images, or videos. You can quickly upload any number of files by dragging and dropping them into a Documents and Media folder. Alternatively, you can initiate uploads using the application's *Add* button and manually configure file details prior to upload.
 
-Users with adequate permissions have the ability to upload a single file or multiple files simultaneously. See the [Documents and Media Permissions Reference](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) for more information. To learn more about DXP Roles and Permissions in general, see [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions).
+```note::
+   Users can also configure Liferay to automatically tag supported assets when uploaded. See `Configuring Asset Auto Tagging <../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md>`__ to learn more. 
+```
 
-## Uploading a Single File
+Once uploaded, Users with the requisite permissions can view, edit, download, or share your uploaded files. See the [Documents and Media Permissions Reference](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) and [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for more information.
 
-The quickest way to upload a file is on the _Documents and Media_ widget deployed on a site page. You can upload a file to the Root folder or inside a specific folder.
+## Quickly Uploading Files
 
-1. Navigate to the site page where the _Documents and Media_ widget is deployed.
-1. Click on the desired folder where the file is to be located.
-1. Mouse over the widget title menu and click the _Add_ icon (![Add](../../../images/icon-add.png)) and select _File Upload_.
-1. Click the _Browse..._ button and navigate to where the file is located locally.
-1. Select the file then click _Open_.
-1. By default, the _Title_ field is auto-populated with file name. Users can always change the name before publishing the file to the Site.
-1. Enter a description.
+The quickest way to upload one or more files is to drag and drop them into the Documents and Media root folder, or an existing sub-folder.
 
-    ![Upload a PDF.](./uploading-files/images/01.png)
+Follow these steps to upload files to a Site:
 
-1. Click _Publish_ when finished.
+1. Open the *Site Menu*, and go to Content & Data &rarr; *Documents and Media*.
 
-When a file is published, it is uploaded to the Site. Clicking on the file itself generates a preview inside the widget. You can download the file or share the file's URL. Depending on whatever permissions the user has, they can also lock the file to prevent others from modifying the file.  
+1. Drag and drop any number of files into the desired folder. This immediately begins the upload process.
 
-## Uploading Multiple Files
+   ![Drag and drop any number of files into the desired folder.](./uploading-files/images/01.png)
 
-To upload multiple files at once:
+Once a file had finished uploading, you can edit its details at any time by clicking on its *Actions* Button (![Actions Button](../../../images/icon-actions.png)) and selecting *Edit*.
 
-1. Select the folder where the files are to be published.
-1. Mouse over the widget title menu and click the _Add_ icon (![Add](../../../images/icon-add.png)) and select _Multiple Files Upload_.
+```note::
+   You can also follow these steps to upload files to Documents and Media in an Asset Library. See `Asset Library Content <../../asset-libraries/asset-library-content.md>`__ for more information.
+```
 
-    ![Upload Multiple Files at once](./uploading-files/images/03.png)
+## Configuring File Details at Upload
 
-1. Drag and drop the desired files. Users can update the file's Document Type before publishing. The files are not yet published to the Site.
-1. Enter a description.
-1. Click _Publish_.
+Follow these steps to configure file details at upload:
 
-The files are now published to the Site.
+1. Open the *Site Menu*, and go to Content & Data &rarr; *Documents and Media*.
+
+1. Click on the *Add* button (![Add Button](../../../images/icon-add.png)), and select either *File Upload*, or *Multiple Files Upload*.
+
+   ![Select either File Upload, or Multiple Files Upload](./uploading-files/images/02.png)
+
+1. Drag and drop any number of files into the designated drop-zone, or use the file selector to browse for your files.
+
+1. Once you've selected your files, you can determine their details before upload.
+
+   If you've selected *File Upload*, you can set the file's *Title*, *File Name*, *Description*, *Display Page Template*, *Public Categories*, *Related Assets*, and *Permissions* used for your selected file.
+
+   ![Select a file to upload and configure its details.](./uploading-files/images/03.png)
+
+   If you've selected *Multiple Files Upload*, you can set the *Description*, *Display Page Template*, *Public Categories*, and *Permissions* for all of the selected files.
+
+   ![Select multiple to upload, and configure their details.](./uploading-files/images/04.png)
+
+1. When finished, click on *Publish* to immediately begin the upload process.
+
+```note::
+   You can also follow these steps to upload files to Documents and Media in an Asset Library. See `Asset Library Content <../../asset-libraries/asset-library-content.md>`__ for more information.
+```
 
 ## Additional Information
 
