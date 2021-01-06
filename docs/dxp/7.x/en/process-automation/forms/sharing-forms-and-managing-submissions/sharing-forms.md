@@ -29,13 +29,15 @@ You must first publish a form before you can get a shareable link. Otherwise, yo
 
 ![Grayed out warning](./sharing-forms/images/07.png)
 
-Once the form has been published, you can get the link by clicking the _Copy URL_ button.
+Once the form is published, a banner containing its link appears briefly:
 
-The link is available while still viewing the _Form Builder_ in the top right.
+![The form link is shown in a banner when you click the Publish button.](./sharing-forms/images/08.png)
 
-![Get the URL from the Copy URL button](./sharing-forms/images/03.png)
+To get the link after the banner disappears, or share the form's link by email, click the _Share_ button.
 
-Once you have the URL, embed the URL in an email or other notification types. Users who click on the link receive direct access to just the form.
+![Get the URL from the Share screen.](./sharing-forms/images/03.png)
+
+You can copy the URL or configure an email to send to relevant recipients. Users who click on the link receive direct access to just the form.
 
 ## What's Next
 
