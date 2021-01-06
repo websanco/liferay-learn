@@ -5,7 +5,7 @@ This tutorial walks through the process of adding a portal property to the Lifer
 To get started, you need a code hosting service integrated with your project's CI service and a local, working copy of your project's repository.
 
 ```note::
-   For an alternative deployment workflow, see `Deploying Services with the CLI Tool <./deploying-services-with-the-cli-tool.md>`__ to learn how to deploy local changes to your project environments using the Liferay Cloud Platform CLI tool.
+   For an alternative deployment workflow, see `Deploying Changes via the CLI Tool <./deploying-changes-via-the-cli-tool.md>`__ to learn how to deploy local changes to your project environments using the Liferay Cloud Platform CLI tool.
 ```
 
 * [Adding a Portal Property to the Liferay Service](#adding-a-portal-property-to-the-liferay-service)
