@@ -4,7 +4,7 @@ Liferay Commerce is a digital commerce platform built on Liferay DXP. This artic
 
 ## Prerequisites
 
-Liferay Commerce is bundled with Liferay Portal 7.3 GA6 and Liferay DXP GA1. For an optimal installation experience, please review the Compatibility Matrix and related installation material prior to getting started.
+Liferay Commerce is bundled with Liferay Portal 7.3 GA6 and Liferay DXP 7.3 GA1. For an optimal installation experience, please review the Compatibility Matrix and related installation material prior to getting started.
 
 * [Liferay DXP 7.3 and Commerce 3.0 Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported technologies.
 <!-- * See the [Liferay DXP 7.3 Deployment Checklist]() for information about Liferay DXP architecture and performance tuning guidelines. -->
