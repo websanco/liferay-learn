@@ -12,7 +12,6 @@ Uploading and Managing
    uploading-and-managing/linking-to-files-on-google-drive.md
    uploading-and-managing/creating_documents.rst
    uploading-and-managing/managing_metadata.rst
-   uploading-and-managing/automating_document_tagging.rst
 
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/uploading-files`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/creating-folders`
@@ -32,9 +31,3 @@ Managing Metadata
 
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/defining-document-types`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets`
-
-Automating Document Tagging
----------------------------
-
--  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/automating-document-tagging/image-auto-tagging`
--  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/automating-document-tagging/document-auto-tagging`
