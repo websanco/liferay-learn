@@ -4,21 +4,23 @@ Liferay Commerce is a digital commerce platform built on Liferay DXP. This artic
 
 ## Prerequisites
 
-Liferay Commerce is bundled with Liferay Portal 7.3 GA6 and Liferay DXP 7.3 GA1. For an optimal installation experience, please review the Compatibility Matrix and related installation material prior to getting started.
+For an optimal installation experience, please review the Compatibility Matrix and related installation material prior to getting started.
 
 * [Liferay DXP 7.3 and Commerce 3.0 Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported technologies.
 <!-- * See the [Liferay DXP 7.3 Deployment Checklist]() for information about Liferay DXP architecture and performance tuning guidelines. -->
 
 ## Starting with Liferay Commerce
 
-Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition bundle requires no additional Commerce-specific installation steps and can be used immediately on startup. Liferay Commerce Enterprise 3.0 is bundled with Liferay DXP 7.3 DXP GA1 and requires a Liferay Commerce subscription. To get started, review the following options:
+Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition requires no additional Commerce-specific installation steps and can be used immediately on startup, while the Enterprise Edition requires a Liferay Commerce subscription.
+
+To get started, review the following options:
 
 | Installation Method | Purpose |
 | --- | --- |
 | [Docker image](https://learn.liferay.com/dxp/7.x/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
 | [Bundle](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
 
-To use Liferay Commerce Enterprise 3.0, [deploy your activation key](./activating-liferay-commerce-enterprise.md) and execute a search reindex to populate the data.
+To use Liferay Commerce Enterprise 3.0, [deploy your activation key](./activating-liferay-commerce-enterprise.md), and execute a search reindex to populate the data.
 
 ## Maintaining Liferay Commerce
 
