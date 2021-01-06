@@ -10,6 +10,7 @@ This article documents the available elements when building a form.
      ![There are many useful out-of-the-box form field types.](./forms-field-types-reference/images/01.png)
 
 <!-- This table is OK for starters but each of these fields has "Basic", "Advanced", and in some cases "Autocomplete" configurations. We need to document those as well eventually.  -->
+<!-- This table was worse to read than the help center content, right from the start. And now I have to reformat it so I can add details. This was abuse of tables before I exploded it. -->
 
 | Form Element | Description |
 | --- | --- |
