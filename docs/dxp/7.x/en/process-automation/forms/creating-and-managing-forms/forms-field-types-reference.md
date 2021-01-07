@@ -51,7 +51,7 @@ Users select one or more options from check boxes (or toggles, if configured).
 
 Using radio buttons, users select from options laid out in rows and columns. One selection can be made per row. This is useful when the same response metric is needed for multiple questions.
 
-![Grid fields let users respond to multiple inquries from the same list of responses options.](./forms-field-types-reference/images/08.png)
+![Grid fields let users respond to multiple inquiries from the same list of responses options.](./forms-field-types-reference/images/08.png)
 
 ### Numeric 
 
@@ -65,11 +65,19 @@ Users can select a file from the Documents and Media library or upload a file fr
 
 ![Upload fields let users upload files or select from existing Docs and Media entries.](./forms-field-types-reference/images/10.png)
 
+```important::
+   Guest Users cannot access or upload files. Avoid using this field unless only authenticated Users can access the form.
+```
+
 ### Image 
 
 Users can select an image file (`.jpg`, `.png`) from Web Content Images, the Documents and Media library, or upload an image file from their local file systems.
 
 ![Image fields let users upload images or select from existing images in Docs and Media or Web Content Images.](./forms-field-types-reference/images/11.png)
+
+```important::
+   Guest Users cannot access or upload images. Avoid using this field unless only authenticated Users can access the form.
+```
 
 ### Color 
 
@@ -79,7 +87,7 @@ Users can enter the hex code of a color by selecting it from the color picker or
 
 ### Rich Text 
 
-Users can enter Rich Text content.
+Users can enter Rich Text content (including formatted text, embedded images, attachments, etc.) into a form field.
 
 ![Rich Text fields let users write formatted text with embedded images in a form.](./forms-field-types-reference/images/12.png)
 
