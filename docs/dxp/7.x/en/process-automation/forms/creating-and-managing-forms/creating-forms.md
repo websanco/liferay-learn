@@ -66,7 +66,7 @@ To add Form Pages,
 1. Drag and drop additional elements.
 1. Add even more pages if necessary.
 
-In Liferay 7.3, you can even reorder the form pages. In the form builder, click the up or down arrows in the right corner of the page.
+In Liferay 7.3, you can reorder existing form pages. In the form builder, click the up or down arrows in the right corner of the page.
 
 ![You can reorder Form Pages.](./creating-forms/images/13.png)
 

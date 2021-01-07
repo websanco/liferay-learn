@@ -7,31 +7,31 @@ This article documents the available elements when building a form.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)). The form builder view appears.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)) one more time to display the _Add Elements_ sidebar (if it is not already opened).
 
- ![There are many useful out-of-the-box form field types.](./forms-field-types-reference/images/01.png)
+![There are many useful out-of-the-box form field types.](./forms-field-types-reference/images/01.png)
 
 ## Form Fields and Elements
 
 ### Paragraph 
 
-This is static text on the form. Users do not enter data into form text fields. The form creator enters text that form users see displayed on the form. This is useful for longer instructions.
+This is static text on the form. Users do not enter data into paragraph fields. The form creator enters text that form users see displayed on the form. This is useful for longer instructions.
 
 ![Paragraph fields can be used to provide longer instructions.](./forms-field-types-reference/images/02.png)
 
 ### Text Field 
 
-Users enter text into these fields. For example, a Full Name field is a text field. By default, a text field keeps all input on a single line of text. To accommodate longer responses, choose the multi-line setting when configuring the text field [as in this example](./creating-forms.md). You can put limits on the text users can enter (e.g., numbers from 1-10, email addresses, etc.) by using the text field's [validation options](./validating-text-and-numeric-field-entries.md).
+Users enter free-form text into these fields. For example, a Full Name field is a text field. By default, a text field keeps all input on a single line of text. To accommodate longer responses, choose the multi-line setting when configuring the text field [as in this example](./creating-forms.md). You can put limits on the text users can enter (e.g., numbers from 1-10, email addresses, etc.) by using the text field's [validation options](./validating-text-and-numeric-field-entries.md).
 
 ![Multiline text fields allow multiple lines of user input.](./forms-field-types-reference/images/03.png)
 
 ### Select from List 
 
-Users select one option (or more, if configured to allow it) from a list of choices. Choices are entered manually or are automatically populated by a data provider. For example, a Country of Residence field can be selected from list field populated by a Countries of the World data provide
+Users select one option (or more, if configured to allow it) from a list of choices. Choices are entered manually or automatically populated by a [data provider](../data-providers/data-providers-overview.md). For example, a Country of Residence field can be selected from list field populated by a Countries of the World data provider.
 
 ![Select form List fields present users with a dropdown list of options to select from.](./forms-field-types-reference/images/04.png)
 
 ### Single Selection 
 
-Using a radio button, users select one option from a list of options displayed on the form
+Using a radio button, users select one option from a list of options displayed on the form.
 
 ![Single Selection fields show users multiple options, allowing them to select just one.](./forms-field-types-reference/images/05.png)
 
@@ -55,7 +55,7 @@ Using radio buttons, users select from options laid out in rows and columns. One
 
 ### Numeric 
 
-Users enter numeric data (integers or decimals) into numeric fields. Non-number input is not accepted.
+Users enter numeric data (integers or decimals) into numeric fields. Non-numeric input is not accepted.
 
 ![Numeric fields restrict user input to numbers (integers or decimals).](./forms-field-types-reference/images/09.png)
 
