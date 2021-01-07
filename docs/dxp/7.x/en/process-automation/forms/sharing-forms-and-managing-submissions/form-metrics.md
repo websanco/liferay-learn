@@ -8,9 +8,13 @@ Once users begin submitting form entries, you can access a field-by-field report
 
 1. Click the form's _Name_ to open the form builder view.
 
-1. Click the _Entries_ tab.
+1. Click the _Entries_ tab. The first datum presented is the count of all entries currently submitted.
 
-![This Rate It Select from List field has received mostly "Good" selections.](./form-metrics/images/01.png)
+   ![The number of submitted entries is displayed at the top of the Entries screen.](./form-metrics/images/06.png)
+
+   Field-by-field metrics are presented next. Scroll through the fields, or click a specific field from the list on the right to jump to its metrics.
+
+   ![This Rate It Select from List field has received mostly "Good" selections.](./form-metrics/images/01.png)
 
 ```tip::
    Form Metrics shows you aggregated form data. To see each form entry individually, see `Managing Form Entries <./managing-form-entries.md#viewing-form-entries>`__.
@@ -29,7 +33,7 @@ The data presentation is different depending on the field type:
 
 ### Field Lists
 
-The Color, Date, Number, and Text fields accept free-form data entry from the form's users, so data can't really be tabulated for these fields. Instead, they're presented as a simple list of responses. However, since the number field includes validation to 
+The Color, Date, Number, and Text fields accept free-form data entry from the form's users, so data can't really be tabulated for these fields. Instead, they're presented as a simple list of responses. However, since the number field includes validation to ensure that only numeric data are entered, some summary statistics are compiled: average, sum, minimum value, and maximum value.
 
 ![Color field entries are displayed as a simple list of responses.](./form-metrics/images/02.png)
 
