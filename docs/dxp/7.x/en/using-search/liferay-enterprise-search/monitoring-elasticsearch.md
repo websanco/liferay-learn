@@ -26,11 +26,13 @@ Monitoring is enabled on Elasticsearch by default, but data collection isn't.  E
 xpack.monitoring.collection.enabled: true
 ```
 
-Now install Kibana.
+Requires to restart Elasticsearch. Now install Kibana.
 
 ## Install Kibana
 
-Make sure to install the correct version of Kibana. Check the [Liferay Enterprise Search compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details.
+Make sure to install the correct version of Kibana. Check the [Liferay Enterprise Search compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details. Your Kibana version must match with your Elasticsearch version.
+
+(Note for 7.2: As Elasticsearch 6.x has reached its [EOL](https://www.elastic.co/support/eol#elasticsearch), we are recommending to move to Elasticsearch 7.x.)
 
 1. [Download Kibana](https://www.elastic.co/downloads/kibana) and extract it. The root folder is referred to as *Kibana Home*.
 
@@ -85,7 +87,8 @@ Make sure to install the correct version of Kibana. Check the [Liferay Enterpris
    xpack.security.session.idleTimeout: "1h"
    xpack.security.session.lifespan: "30d"
 
-   # If using PEM-encoded certificates and keys, comment out the trust/keystore
+   # In Kibana 6.x and below Kibana 7.6.0 (https://github.com/elastic/kibana/pull/53810)
+   # only PEM format certificates and keys are supported. Comment out the trust/keystore
    # paths and passwords above and instead use:
 
    #elasticsearch.ssl.certificateAuthorities: [ "config/certs/ca.crt" ]
@@ -101,14 +104,20 @@ Make sure to install the correct version of Kibana. Check the [Liferay Enterpris
 
 1. the elastic docs don't say to use the password setting in the kibana.yml, but to use the command "./bin/kibana-keystore add server.ssl.keystore.password". Should we do the same?
 
+Later we can revisit this.
+
 2. According to the docs, you'll also need to set this in elasticsearch.yml: xpack.security.http.ssl.client_authentication: "optional" OR "required. However, I didn't need it when setting up my local test. What do we do?"
+
+`http.ssl.verification_mode` defaults to full. I believe we use `certificate` in our ES configs, which is enough.
 -->
 
-After this step you can access Kibana at `https://localhost:5601` and sign in with a Kibana user. The last step is to connect Kibana to Liferay.
+After this step you can access Kibana at `https://localhost:5601` and sign in with a Kibana user to verify it works. The last step is to connect Kibana to Liferay.
+
+Stop Kibana so you can make the rest of the configurations.
 
 ## Install and Configure the LES Monitoring App
 
-Download the LES Monitoring app and install the LPKG file by copying it into the `Liferay Home/deploy` folder. 
+Download the LES Monitoring app and install the LPKG file by copying it into the `Liferay Home/deploy` folder. If Liferay DXP is running, you may be prompted to restart your server. You can also place the LPKG file into the `Liferay Home/marketplace` folder when Liferay DXP is not running.
 
 1. Once the connector is installed and Kibana and Elasticsearch are securely configured, create a [configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named
 
@@ -116,7 +125,7 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
    com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config
    ```
 
-   If running Elasticsearch 6.x with Liferay 7.2, the file is named
+   In Liferay DXP 7.2, the file must be named as
 
    ```bash
    com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config
@@ -129,6 +138,10 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
    kibanaUserName="elastic"
    kibanaURL="https://localhost:5601"
    ```
+
+<!--
+"kibana_system" is an X-Pack user to authenticate Kibana itself into Elasticsearch. This username is for the Kibana user we want to sign-in to Kibana with. I get "Kibana is temporarily unavailable when I use "kibana_system" in the config. Are you sure it was working for you with "kibana_system"?
+-->
 
    During development and testing, enabling proxy servlet logging can be helpful:
 
@@ -153,8 +166,9 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
 
    [http://localhost:8080/o/portal-search-elasticsearch-monitoring/monitoring-proxy/app/monitoring](http://localhost:8080/o/portal-search-elasticsearch-monitoring/monitoring-proxy/app/monitoring)
 
-1. Because you're using the Monitoring portlet in Liferay as a proxy to Kibana's UI, if you are using TLS, you must configure the application server's startup JVM parameters to recognize a valid *truststore* and *password*.
+1. Because you're using the Monitoring portlet in Liferay as a proxy to Kibana's UI and you are using a self-signed certificate, you must configure the application server's startup JVM parameters to trust Kibana's certificate.
 
+<!--
    If you're currently using PEM-encoded node certificates, generate a PKCS#12 certificate, from which you'll generate a truststore:
 
     ```bash
@@ -166,11 +180,12 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
    ```bash
    keytool -importkeystore -deststorepass liferay -destkeystore /path/to/config/certs/truststore.jks -srckeystore /path/to/elastic-nodes.p12 -srcstoretype PKCS12 -srcstorepass liferay
    ```
+-->
 
-   Add the trustore path and password to your application server's startup JVM parameters. Here are example truststore and path parameters for appending to a Tomcat server's `CATALINA_OPTS`:
+   One way to do is to add the trustore path, password and type to your application server's startup JVM parameters. Here are example truststore and path parameters for appending to a Tomcat server's `CATALINA_OPTS`:
 
     ```properties
-    -Djavax.net.ssl.trustStore=/path/to/truststore.jks -Djavax.net.ssl.trustStorePassword=liferay
+    -Djavax.net.ssl.trustStore=/path/to/elastic-nodes.p12 -Djavax.net.ssl.trustStorePassword=liferay -Djavax.net.ssl.trustStoreType=pkcs12
     ```
 
 Restart Liferay and Kibana.
@@ -182,7 +197,7 @@ servers are running, add the Elasticsearch Monitoring widget to a page:
 
 1. Open the *Fragments and Widgets* menu on a Content Page, or the Add Widgets menu on a Widget Page.
 
-1. Use the widget search bar to search for *monitoring* and drag the *Elasticsearch Monitoring* widget from the Search category onto the page.
+1. Use the widget search bar to search for *monitoring* and drag the *Elasticsearch Monitoring* widget from the Search category onto the page. (It's called *X-Pack Monitoring* on Liferay DXP 7.2.)
 
 See the Elastic documentation for information on [monitoring Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/es-monitoring.html).
 
@@ -205,7 +220,7 @@ xpack.security.session.idleTimeout: "1h"
 xpack.security.session.lifespan: "30d"
 
 # If on Elasticsearch 6.5 or below, replace elasticsearch.hosts with:
-# elasticsearch.url: "http://localhost:9200"
+# elasticsearch.url: "https://localhost:9200"
 elasticsearch.hosts: [ "https://localhost:9200" ]
 
 # Enable TLS/SSL for out-bound traffic: from Kibana to Elasticsearch
@@ -227,7 +242,8 @@ server.ssl.keystore.password: "liferay"
 server.rewriteBasePath: false
 server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
 
-# If using PEM-encoded certificates and keys, comment out the trust/keystore
+# In Kibana 6.x and below Kibana 7.6.0 (https://github.com/elastic/kibana/pull/53810)
+# only PEM format certificates and keys are supported. Comment out the trust/keystore
 # paths and passwords above and instead use:
 
 #elasticsearch.ssl.certificateAuthorities: [ "config/certs/ca.crt" ]
