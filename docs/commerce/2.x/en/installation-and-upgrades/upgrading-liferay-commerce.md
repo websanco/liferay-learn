@@ -1,6 +1,6 @@
 # Upgrading Liferay Commerce
 
-This article documents how to upgrade Liferay Commerce. Users should consider regularly updating to the latest release to receive bug fixes and new features.
+To ensure and enhance the quality of your experience with Liferay Commerce, Liferay provides periodic product upgrades with bug fixes and new features. Users should consider regularly updating to the latest release.
 
 ## Upgrading to Commerce 3.0 from 2.1 and Below
 
@@ -16,53 +16,33 @@ To learn more about the DXP upgrade process, see [Upgrade Overview](https://lear
 
 After upgrading to DXP 7.3, execute a full search reindex.
 
-1. Navigate to the _Global_ menu &rarr; _Control Panel_.
-1. Click _Search_.
+1. Open the _Global Menu_, and go to _Control Panel_ &rarr; _Search_.
 
-    ![The Search feature is located inside the revamped DXP 7.3 Control Panel.](./upgrading-liferay-commerce/images/01.png)
+    ![Go to Search in the Control Panel tab.](./upgrading-liferay-commerce/images/01.png)
 
-1. Click _Execute_ next to _Reindex all search indexes_.
-1. Wait for the reindex to finish.
-1. Navigate to the _Global_ → _Commerce_ → _Products_.
-1. Verify all the products are displayed.
+1. Under the _Index Actions_ tab, click on _Execute_ for _Reindex all search indexes_.
+
+Once the the reindex has finished, verify it was successful by going to _Commerce_ &rarr; _Products_ in the Global Menu and confirming that all products are displayed.
 
 ## Upgrading to Commerce 2.1.x
 
-When upgrading to Commerce 2.1.x, users have two options:
+Liferay Commerce provides a seamless upgrade process to Commerce 2.1.x, whether from version 1.1.x or 2.0.x.
 
-* Upgrade DXP and Commerce
-* Upgrade just Commerce
-
-### Upgrading Both DXP and Commerce
-
-If administrators are upgrading both DXP and Commerce, upgrade DXP 7.1 to 7.2. To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
-
-Once DXP has been successfully upgraded from 7.1 to 7.2, follow the steps below to upgrade Liferay Commerce.
-
-### Upgrading Just Commerce
-
-Alternately, administrators can chose to upgrade just Liferay Commerce.
-
-Liferay Commerce provides a seamless upgrade process to the latest version. Users can perform either one of the following:
-
-* From 1.1.x to 2.1.x
-* From 2.0.x to 2.1.x
-
-```tip::
+```note::
    Upgrading from 1.1.x to 2.1.x does **not** require an incremental upgrade to 2.0.x.
 ```
+
+Before upgrading to Commerce 2.1.x, you must first be running the latest fix pack of Liferay DXP 7.2. For example, if upgrading to Liferay Commerce Enterprise 2.0.6 - upgrading Liferay DXP to Fix Pack 14 is required. To learn about upgrading to DXP 7.2, see [Upgrade Overview](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
 
 ### Apply the Latest Fix Pack
 
 > Subscription Required
 
-Before upgrading Liferay Commerce, update Liferay Digital Experience Platform (DXP) to the latest available fix pack release. For example, if upgrading to Liferay Commerce Enterprise 2.0.6 - upgrading Liferay DXP to Fix Pack 14 is required. The latest fix pack releases are available from [Help Center](https://customer.liferay.com/downloads).
+Liferay provides the latest fix pack releases for download at the [Help Center](https://customer.liferay.com/downloads). Once downloaded, you can apply the fix pack using the [Liferay Patching Tool](https://help.liferay.com/hc/articles/360018176551-Using-the-Patching-Tool). See [Installing Patches](https://help.liferay.com/hc/en-us/articles/360028810512-Installing-Patches) for more information.
 
-Fix Packs are applied to a Liferay DXP installation using the Liferay Patching Tool. See [Using the Patching Tool](https://help.liferay.com/hc/articles/360018176551-Using-the-Patching-Tool) and [Configuring the Patching Tool](https://help.liferay.com/hc/articles/360018176611-Configuring-the-Patching-Tool) for more information.
+If Liferay DXP was [installed manually](https://help.liferay.com/hc/articles/360017896672-Installing-Liferay-DXP-Manually-) (for example, on WebLogic), see [Installing Patches on the Liferay DXP 7.1 WAR](https://help.liferay.com/hc/articles/360018176651-Installing-patches-on-the-Liferay-DXP-7-1-WAR).
 
-Next, apply the fix pack. See [Installing Patches](https://help.liferay.com/hc/en-us/articles/360028810512-Installing-Patches) for more information. If Liferay DXP was [installed manually](https://help.liferay.com/hc/articles/360017896672-Installing-Liferay-DXP-Manually-) (for example, on WebLogic), see [Installing Patches on the Liferay DXP 7.1 WAR](https://help.liferay.com/hc/articles/360018176651-Installing-patches-on-the-Liferay-DXP-7-1-WAR).
-
-To verify Fix Pack installation do the following:
+Then, follow these step to verify the fix pack was successfully installed:
 
 1. Navigate to the `${liferay.home}/patching-tool` folder.
 
@@ -79,6 +59,8 @@ To verify Fix Pack installation do the following:
 Fix Packs are cumulative in nature and include all previously release fix packs. After patching, remove Liferay DXP's cache of deployed code by deleting the contents of the `${liferay.home}/work` folder. See the next section on how to remove other stale data.
 
 ### Download and Deploy
+
+Once you're running the latest fix pack of DXP 7.2, follow these steps to upgrade to Commerce 2.1.x upgrade Commerce.
 
 1. Download the latest Liferay Commerce.
 
