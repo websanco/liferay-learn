@@ -1,6 +1,6 @@
 # Upgrading Liferay Commerce
 
-To ensure and enhance the quality of your experience with Liferay Commerce, Liferay provides periodic product upgrades with bug fixes and new features. Users should consider regularly updating to the latest release.
+To enhance the quality of your experience with Liferay Commerce, Liferay provides periodic product upgrades with bug fixes and new features. Users should consider regularly updating to the latest release.
 
 ## Upgrading to Commerce 3.0 from 2.1 and Below
 
