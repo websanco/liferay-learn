@@ -2,10 +2,8 @@
 
 Web Content Templates use the FreeMarker Template Language (FTL) to determine how content fields are rendered on a Page. Each Template can be associated with a Web Content [Structure](../web-content-structures/creating-structures.md), or even [embedded in other Templates](./embedding-widgets-in-templates.md#embedding-other-templates).
 
-```note::
-   You can disable Template creation for a DXP installation. To do this, open the *Control Panel* tab in the Global Menu and go to *Configuration* → *System Settings* → *Dynamic Data Mapping* → *Dynamic Data Mapping Web*. Then uncheck *Enable Template Creation*, and click *Save*.
-
-   Once disabled, Users can no longer access creation options for Web Content Templates. However, this does not affect existing Templates.
+```important::
+   You must grant permission to Create or Edit templates in FreeMarker to trusted users only. See `Assigning Permissions to Web Content Structures and Templates <../../assigning-permissions-to-structures-and-templates.md>`_ for information about Web Content Templates security.
 ```
 
 ## How to Create a Web Content Template

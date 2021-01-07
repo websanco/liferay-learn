@@ -15,6 +15,22 @@ Consider the following information when you assign permissions to Structures and
 * The *View* permission only allows Users to view Structures or Web Content Templates.
 * The majority of Users should not be able to edit Structures or Web Content Templates.
 
+## Security Considerations for Web Content Templates
+
+Web Content Templates use the FreeMarker Template Language (FTL) by default. Users with permission to Create or Edit templates using FreeMarker may execute arbitrary code on your DXP instance and access sensitive information, including information about other users.
+
+```important::
+   You must grant permission to Create or Edit templates in FreeMarker to trusted users only.
+```
+
+You can disable template creation for all users. Once disabled, Users can no longer access creation options for Web Content Templates. This action does not affect existing templates.
+
+1. Open the *Control Panel* tab in the Global Menu.
+1. Go to *Configuration* → *System Settings* → *Content and Data* → *Dynamic Data Mapping*.
+1. Click *Dynamic Data Mapping Web*.
+1. Uncheck *Enable Template Creation*.
+1. Click *Save*.
+
 ## Assigning Permissions
 
 1. Go to *Site Administrator* &rarr; *Content & Data* &rarr; *Web Content*.
