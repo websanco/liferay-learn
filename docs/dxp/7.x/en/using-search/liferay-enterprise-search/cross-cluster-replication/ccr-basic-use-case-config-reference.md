@@ -52,7 +52,7 @@ File contents:
 ```properties
 active="true"
 connectionId="ccr"
-networkHostAddresses=["https://localhost:9202"]
+networkHostAddresses=["https://localhost:9201"]
 username="elastic"
 password="liferay"
 authenticationEnabled=B"true"
@@ -95,13 +95,12 @@ cluster.name: LiferayElasticsearchCluster_LEADER
 node.name: es-leader-node-1
 
 http.port: 9200
+transport.port: 9300
 
 xpack.security.enabled: true
 
 ### TLS/SSL settings for Transport layer
 xpack.security.transport.ssl.enabled: true
-
-# PKCS#12
 xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
 xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
@@ -110,8 +109,6 @@ xpack.security.transport.ssl.verification_mode: certificate
 
 ## TLS/SSL settings for HTTP layer
 xpack.security.http.ssl.enabled: true
-
-# PKCS#12
 xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
@@ -134,15 +131,13 @@ File contents:
 cluster.name: LiferayElasticsearchCluster_FOLLOWER
 node.name: es-follower-node-1
 
-http.port: 9202
+http.port: 9201
 transport.port: 9301
 
 xpack.security.enabled: true
 
 ### TLS/SSL settings for Transport layer
 xpack.security.transport.ssl.enabled: true
-
-# PKCS#12
 xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
 xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
@@ -151,8 +146,6 @@ xpack.security.transport.ssl.verification_mode: certificate
 
 ## TLS/SSL settings for HTTP layer
 xpack.security.http.ssl.enabled: true
-
-# PKCS#12
 xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
