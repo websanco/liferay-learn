@@ -31,6 +31,10 @@ Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP
 
 ![The CDN's status is visible on the Network page.](./load-balancer/images/02.png)
 
+```note::
+   The CDN is not currently supported for the Dubai/Northern UAE region.
+```
+
 ## Port
 
 You can set which internal port (`targetPort`) the load balancer's service endpoint routes to. DXP Cloud automatically configures the correct port for the services it provides.
