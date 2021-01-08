@@ -19,13 +19,12 @@ cluster.name: LiferayElasticsearchCluster_LEADER
 node.name: es-leader-node-1
 
 http.port: 9200
+transport.port: 9300
 
 xpack.security.enabled: true
 
 ### TLS/SSL settings for Transport layer
 xpack.security.transport.ssl.enabled: true
-
-# PKCS#12
 xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
 xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
@@ -34,8 +33,6 @@ xpack.security.transport.ssl.verification_mode: certificate
 
 ## TLS/SSL settings for HTTP layer
 xpack.security.http.ssl.enabled: true
-
-# PKCS#12
 xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
@@ -107,8 +104,7 @@ truststorePassword="liferay"
 truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
-
-For conceptual purposes, you'll configure the read-only follower connection in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md). For transparency, all `.config` files should be provided to each DXP node.
+Copy this remote (leader) connection `.config` file to each of your follower DXP nodes to configure the same remote (write) connection. You'll configure the read-only follower connection in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) in the local/follower DXP node in a similar fashion.
 
 Start the Liferay DXP server.
 
