@@ -97,4 +97,4 @@ Alternately, users can delete just one entry; check the box next to the chosen e
 
 ## Related Topics
 
-* [Form Metrics](./form-metrics.md)
+* [Form Reports](./form-reports.md)
