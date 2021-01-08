@@ -22,15 +22,13 @@ Configure its `elasticsearch.yml`:
 cluster.name: LiferayElasticsearchCluster_FOLLOWER
 node.name: es-follower-node-1
 
-http.port: 9202
+http.port: 9201
 transport.port: 9301
 
 xpack.security.enabled: true
 
 ### TLS/SSL settings for Transport layer
 xpack.security.transport.ssl.enabled: true
-
-# PKCS#12
 xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
 xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
@@ -39,8 +37,6 @@ xpack.security.transport.ssl.verification_mode: certificate
 
 ## TLS/SSL settings for HTTP layer
 xpack.security.http.ssl.enabled: true
-
-# PKCS#12
 xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
@@ -69,19 +65,7 @@ POST /_license/start_trial?acknowledge=true
 
 > If testing locally configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
 
-Then configure the Liferay Connector to Elasticsearch 7 by providing a configuration file in the `Liferay Home/osgi/configs` folder. Name it
-
-```bash
-com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config
-```
-
-This file configures the write-enabled connection to the remote Elasticsearch cluster with the leader indexes, including the XPack security settings. Give it these contents:
-
-```properties
-productionModeEnabled="true"
-remoteClusterConnectionId="remote"
-logExceptionsOnly="false"
-```
+Copy the `.config` files you created to configure the connection for the remote DXP cluster node in [Configuring CCR in a Remote/Leader Data Center](./configuring-ccr-in-a-local-follower-data-center.md) to the `Liferay Home/osgi/configs` folder. Again, the `remoteClusterConnectionId` must match with the `connectionId` in the two files! This configures the write connection for the local DXP cluster node.
 
 Now configure the read-only connection to the local Elasticsearch server with the follower indexes. Provide a configuration file to `Liferay Home/osgi/configs` named 
 
@@ -98,15 +82,13 @@ username="elastic"
 password="liferay"
 authenticationEnabled=B"true"
 httpSSLEnabled=B"true"
-networkHostAddresses=["https://localhost:9202"]
+networkHostAddresses=["https://localhost:9201"]
 truststorePassword="liferay"
 truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
 You can use any suffix (`-ccr` in this example) for the [configuration file name](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md), but for consistency you should make it identical to the `connectionId` property in the configuration.
-
-For conceptual purposes you configured the remote connection separately, in [Configuring CCR in a Remote/Leader Data Center](./configuring-ccr-in-a-local-follower-data-center.md). For transparency, all `.config` files should really be provided to each DXP node.
 
 Now start the Liferay DXP cluster node.
 
