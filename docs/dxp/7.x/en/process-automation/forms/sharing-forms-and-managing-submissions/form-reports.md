@@ -45,11 +45,11 @@ The Select from List and Single Selection fields accept only one entry selected 
 
 ### Bar Graphs
 
-The Multiple Selection field accepts multiple entries for one selection request (e.g., _Select the toppings for your sandwich:_). The proportion of selections is displayed in a horizontal bar graph. 
+The Multiple Selection field accepts multiple entries for one selection request (e.g., _Select the toppings for your sandwich_). The proportion of selections is displayed in a horizontal bar graph. 
 
 ![Multiple Selection entries are displayed in a horizontal bar graph.](./form-reports/images/04.png)
 
-The Grid field accepts a single entry for each of multiple related questions (e.g., _Rate these Sylvester Stallone movies as Good, Bad, or No Opinion:_). The proportion of selections is displayed in a vertical bar graph, with bars grouped by question.
+The Grid field accepts a single entry for each of multiple related questions (e.g., _Rate these Sylvester Stallone movies as Good, Bad, or No Opinion_). The proportion of selections is displayed in a vertical bar graph, with bars grouped by question.
 
 ![Grid entries are displayed in a vertical bar graph.](./form-reports/images/05.png)
 
