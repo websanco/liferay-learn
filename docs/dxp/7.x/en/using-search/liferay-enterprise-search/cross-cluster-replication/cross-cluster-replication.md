@@ -29,25 +29,33 @@ Any Liferay DXP node that will read from a local cluster's follower indexes and 
 
 ##  Liferay DXP: Decide Which Indexes to Replicate from the Remote Cluster
 
-The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change):
+The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change) where `liferay-` is the default global *Index Name Prefix* coming from the Elasticsearch 7 connector configuration (unless you configured it differently) and `20101` is the generated `companyId` of a given Company in your the database. It is displayed as "Instance ID" in the UI and represents a Virtual Instance:
 
 | Index ID                                              | Index Type    | Index Purpose |
 | ----------------------------------------------------- | ------------- | ------------- |
 | liferay-0                                             | System Index  | Searching in the System Settings application |
 | liferay-20101                                         | Company Index | Searching the indexed assets of the Liferay DXP Virtual Instance |
-| liferay-20101-search-tuning-rankings                  | App Index     | Primary data storage for the Result Rankings application (per virtual instance as of Liferay DXP 7.3) |
-| liferay-20101-search-tuning-synonyms-liferay          | App Index     | Primary data storage for the Synonym Sets application for the given virtual instance |
+| liferay-20101-search-tuning-rankings                  | App Index     | Primary data storage for the Result Rankings application |
+| liferay-20101-search-tuning-synonyms                  | App Index     | Primary data storage for the Synonym Sets application for the given virtual instance |
 | liferay-20101-workflow-metrics-instances              | App Index     | Store data about Workflow Instances for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-nodes                  | App Index     | Store data about Workflow Nodes for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-processes              | App Index     | Store data about Workflow Processes for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-sla-instance-results   | App Index     | Primary storage for SLA results per Workflow Instance for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-sla-task-results       | App Index     | Primary storage for SLA results per Workflow Task for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-tokens                 | App Index     | Store data about Workflow Tokens for the Workflow Metrics application |
-| liferay-20101-your-custom-index                       | Custom Index  | Your own storage and searching needs |
+| liferay-20101-workflow-metrics-transitions            | App Index     | Store data about Workflow Transitions for the Workflow Metrics application |
 
 ```note::
-   Liferay DXP provides APIs for creating and using (writing to and reading from) Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../../developer_guide.rst>`__ for information on using these APIs.
+   Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../../developer_guide.rst>`__ for information on using these APIs.
 ```
+
+If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you will also find indexes likes these below created out-of-the-box in Liferay DXP 7.3:
+
+| Index ID                                                     | Index Type    | Index Purpose |
+| ------------------------------------------------------------ | ------------- | ------------- |
+| liferay-20101-commerce-ml-forecast                           | App Index     | Machine Learning capabilities |
+| liferay-20101-product-content-commerce-ml-recommendation     | App Index     | Recommendation services       |
+| liferay-20101-product-interaction-commerce-ml-recommendation | App Index     | Recommendation services       |
 
 Unless your setup reveals a very compelling reason not to, you should replicate all of the Liferay DXP indexes and all of your custom indexes into the follower Elasticsearch cluster. 
 
