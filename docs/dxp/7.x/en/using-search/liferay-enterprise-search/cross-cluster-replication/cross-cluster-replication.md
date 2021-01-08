@@ -65,7 +65,7 @@ Set up the Elasticsearch clusters, using versions supported with Liferay DXP tha
 
 Make sure you Install the Elasticsearch [plugins Liferay DXP needs](https://learn.liferay.com/dxp/7.x/en/using-search/installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#install-elasticsearch) and [provide cluster names](https://learn.liferay.com/dxp/7.x/en/using-search/installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) to differentiate your follower and leader clusters.
 
-CCR requires an Elasticsearch Platinum level license, but [LES customers](./introduction-to-les.md) already have this. If you're testing locally, start a [trial license](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
+CCR requires an Elasticsearch Platinum level license, but [LES customers](../../liferay_enterprise_search.rst.) already have this. If you're testing locally, start a [trial license](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
 
 ## Connect Liferay DXP to Elasticsearch
 
