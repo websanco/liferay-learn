@@ -33,7 +33,7 @@ The Overview tab of a Page's metrics has several data presentations. The first c
 * Bounce Rate
 * Average Time on Page
 * Entrances
-* Exit Rates
+* Exit Rate
 
 Select the time period for the data displayed. There are always two trend lines displayed: Selected Period and Previous Period. This facilitates comparisons between time periods.
 
@@ -67,7 +67,7 @@ This metric is calculated like this for each 24 hour period:
 
 ### Entrances
 
-Entrances is the number visitors who arrived to your Site from this Page (as opposed to those who started on a difference page and clicked through to this Page).
+Entrances is the number visitors who arrived to your Site from the Page (as opposed to those who started on a difference page and clicked through to the Page).
 
 ### Exit Rate
 
