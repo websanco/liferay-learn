@@ -6,6 +6,7 @@ Liferay Enterprise Search
 
    liferay-enterprise-search/cross_cluster_replication.rst
    liferay-enterprise-search/learning-to-rank.md
+   liferay-enterprise-search/monitoring-elasticsearch.md
 
 A Liferay Enterprise Search (LES) subscription provides access to additional search features beyond what's available out of the box with your Liferay DXP subscription. To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in the `Liferay DXP Components resource <https://help.liferay.com/hc/en-us/articles/360014400932>`__.  
 
@@ -37,3 +38,7 @@ Learning to Rank
 
 -  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
 
+Monitoring Elasticsearch
+------------------------
+
+-  :doc:`/using-search/liferay-enterprise-search/monitoring-elasticsearch`
