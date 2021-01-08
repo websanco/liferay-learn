@@ -25,8 +25,10 @@ Order Pages in ascending or descending order based on any one of the following m
 
 * Total Visitors
 * Total Views
-* Average Bounce Rate
 * Average Time on Page
+* Average Bounce Rate
+* Entrances
+* Exit Rate
 
 The metrics for ordering the Page list are calculated based on the time period selected in the time period menu (at the top-right of the table). The following values are supported:
 

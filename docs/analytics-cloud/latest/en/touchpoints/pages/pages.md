@@ -32,6 +32,8 @@ The Overview tab of a Page's metrics has several data presentations. The first c
 * Total Views
 * Bounce Rate
 * Average Time on Page
+* Entrances
+* Exit Rates
 
 Select the time period for the data displayed. There are always two trend lines displayed: Selected Period and Previous Period. This facilitates comparisons between time periods.
 
@@ -49,7 +51,7 @@ A unique visitor has a unique IP address in Analytics Cloud. Therefore, if the s
 
 Useful with the time period filter, Page View is the number of views for a Page Page in a given period of time. It's not the same as the number of visitors, because it doesn't try to count only unique IP addresses. Over the last 30 days, one visitor (IP address) could come back to the Page 100 times. That means there are 100 Page Views, but only one visitor (assuming she used the same machine to access the Page each time. However, a unique view isn't logged for a single user unless at least 30 minutes of inactivity on the Page passes before the user interacts with the Page again.
 
-### Page Bounce Rates
+### Page Bounce Rate
 
 Bounce Rate is the percentage of visitors to the Page that navigated away from the site without any page interaction (including scrolling on the page) after the initial page load. It's calculated as a daily rate (percentage per day), and the daily rate trend line is displayed over the selected time period.
 
@@ -62,6 +64,14 @@ This metric is calculated like this for each 24 hour period:
 ```
 (view-1-time + view-2-time + ...) / total-number-views
 ```
+
+### Entrances
+
+Entrances is the number visitors who arrived to your Site from this Page (as opposed to those who started on a difference page and clicked through to this Page).
+
+### Exit Rate
+
+Exit Rate is the percentage of visitors who interacted with the Page (such as scrolling or clicking) and then left the Site.
 
 ## Audience
 
