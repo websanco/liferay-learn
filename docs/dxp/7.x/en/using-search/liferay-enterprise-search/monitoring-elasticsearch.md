@@ -177,12 +177,12 @@ Here's the complete `kibana.yml` demonstrated in this article:
 # X-Pack Security enabled (Basic Auth)
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "liferay"
+elasticsearch.hosts: [ "https://localhost:9200" ]
 
 # When TLS/SSL is enabled in X-Pack Security
 xpack.security.encryptionKey: "xsomethingxatxleastx32xcharactersx"
 xpack.security.session.idleTimeout: "1h"
 xpack.security.session.lifespan: "30d"
-
 # Enable TLS/SSL for out-bound traffic: from Kibana to Elasticsearch
 elasticsearch.ssl.truststore.path: "config/certs/elastic-stack-ca.p12"
 elasticsearch.ssl.truststore.password: "liferay"   
