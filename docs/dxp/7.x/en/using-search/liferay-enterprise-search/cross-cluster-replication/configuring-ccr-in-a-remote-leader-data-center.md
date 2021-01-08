@@ -104,6 +104,9 @@ truststorePassword="liferay"
 truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
+
+The `connectionId` and the`remoteClusterConnectionId` you set in the other config file above must match!
+
 Copy this remote (leader) connection `.config` file to each of your follower DXP nodes to configure the same remote (write) connection. You'll configure the read-only follower connection in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) in the local/follower DXP node in a similar fashion.
 
 Start the Liferay DXP server.
