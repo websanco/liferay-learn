@@ -1,6 +1,6 @@
 # Installing a Search Engine
 
-A search engine is a critical component of your Liferay installation. [Creating an Example Cluster](./../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) can get you started with the installation, but this guide demonstrates setting up a **production** environment.
+A search engine is a critical component of your Liferay installation. [Creating an Example Cluster](./../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md#prepare-a-search-engine) can get you started with the installation, but this guide demonstrates setting up a **production** environment.
 
 <!-- MAKE A DIAGRAM SIMILAR TO THE CCR ONE BUT WITH JUST ONE CONNECTION -->
 

@@ -16,4 +16,4 @@ Use the left and right arrow buttons to move a language from Current (configured
 
 ## Additional Information
 
-* [Initial Instance Localization](../../../installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization.md)
+* [Initial Instance Localization](../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md)

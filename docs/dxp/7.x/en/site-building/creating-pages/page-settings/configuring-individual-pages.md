@@ -16,7 +16,7 @@ These settings are organized into the following tabs:
 * [Custom Meta Tags](#custom-meta-tags)
 
 ```note::
-   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <../../../installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization.md>`_ and `Modifying Localizable Site Fields <../../site-settings/configuring-site-languages/modifying-localizable-site-fields.md>`_ or more information.
+   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md>`_ and `Modifying Localizable Site Fields <../../site-settings/configuring-site-languages/modifying-localizable-site-fields.md>`_ or more information.
 ```
 
 ## General

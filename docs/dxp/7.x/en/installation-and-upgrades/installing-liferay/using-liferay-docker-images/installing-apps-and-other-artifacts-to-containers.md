@@ -1,6 +1,6 @@
 # Installing Apps and Other Artifacts to Containers
 
-Applications and other artifacts (such as [DXP activation keys](../../setting-up-liferay-dxp/activating-liferay-dxp.md)) are installed to DXP Docker containers via the container's `/mnt/liferay/deploy` folder. The container entry point symbolically links the `/mnt/liferay/deploy` folder to the container's `[Liferay Home]/deploy` folder (i.e., `/opt/liferay/deploy`). Any artifacts that you provide to the `/mnt/liferay/deploy` folder are auto-deployed to Liferay.
+Applications and other artifacts (such as [DXP activation keys](../../setting-up-liferay/activating-liferay-dxp.md)) are installed to DXP Docker containers via the container's `/mnt/liferay/deploy` folder. The container entry point symbolically links the `/mnt/liferay/deploy` folder to the container's `[Liferay Home]/deploy` folder (i.e., `/opt/liferay/deploy`). Any artifacts that you provide to the `/mnt/liferay/deploy` folder are auto-deployed to Liferay.
 
 Here are two ways to install artifacts:
 

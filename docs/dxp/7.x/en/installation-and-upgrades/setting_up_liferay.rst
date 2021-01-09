@@ -4,7 +4,6 @@ Setting Up Liferay DXP
 .. toctree::
    :maxdepth: 3
 
-   setting-up-liferay-dxp/setting-up-liferay.md
    setting-up-liferay-dxp/activating-liferay-dxp.md
    setting-up-liferay-dxp/initial-instance-localization.md
    setting-up-liferay-dxp/using-a-cdn.md
@@ -15,17 +14,16 @@ Setting Up Liferay DXP
    setting-up-liferay-dxp/clustering_for_high_availability.rst
    ../../system-administration/configuring-liferay/adding-custom-fields.md
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-liferay-dxp`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/activating-liferay-dxp`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/using-a-cdn`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/activating-liferay-dxp`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/initial-instance-localization`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/using-a-cdn`
 
 Configuring Mail
 ----------------
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/configuring-default-email-senders`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/alternative-email-configuration-methods`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-mail/configuring-default-email-senders`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-mail/alternative-email-configuration-methods`
 
 File Storage
 ------------
@@ -54,11 +52,11 @@ Users and Permissions
 Clustering for High Availability
 --------------------------------
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/database-configuration-for-cluster-nodes`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/configuring-cluster-link`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/configuring-unicast-over-tcp`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/example-creating-a-simple-dxp-cluster`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/database-configuration-for-cluster-nodes`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/configuring-cluster-link`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/configuring-unicast-over-tcp`
 
 Other Setup Topics
 ------------------

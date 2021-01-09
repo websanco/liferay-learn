@@ -53,4 +53,4 @@ To enable RSS feed subscriptions for the Asset Publisher, follow these steps:
 
 ## Related Information
 
-* [Setting up Email](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)
+* [Setting up Email](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)

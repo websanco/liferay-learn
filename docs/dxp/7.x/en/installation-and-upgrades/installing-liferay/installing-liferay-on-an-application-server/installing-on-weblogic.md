@@ -166,7 +166,7 @@ Otherwise, you can configure the data source in WebLogic:
 
 ## Connect to Mail Server
 
-You can connect Liferay DXP [to a mail server](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) using its built-in mail session. You can also use WebLogic's mail session:
+You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) using its built-in mail session. You can also use WebLogic's mail session:
 
 1. Start WebLogic and log in to the Admin Server's console.
 1. Select *Services* &rarr; *Mail Sessions* from the *Domain Structure* box on the left hand side of the Admin Server's console UI.
@@ -201,7 +201,7 @@ Follow these steps to deploy the DXP WAR file:
 1. After the deployment finishes, click *Save* if the configuration is correct.
 1. Start the Managed Server where you deployed DXP. DXP precompiles all the JSPs and then launches.
 
-If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md).
+If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md).
 
 Congratulations! You're running DXP on WebLogic.
 
@@ -221,10 +221,10 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting-up-liferay-dxp/setting-up-liferay.md) topics:
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting_up_liferay.html) topics:
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing EE Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-* [Clustering for High Availability](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)

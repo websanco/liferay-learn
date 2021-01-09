@@ -255,7 +255,7 @@ If using WebSphere to manage the database connections, follow the instructions b
 
 ## Mail Configuration
 
-If using DXP's built-in mail sessions, skip this section. See the [Configuring Mail](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) article on how to use DXP's built-in mail sessions.
+If using DXP's built-in mail sessions, skip this section. See the [Configuring Mail](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) article on how to use DXP's built-in mail sessions.
 
 If you want to use WebSphere to manage the mail session, follow these steps:
 
@@ -366,7 +366,7 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 ## Next Steps
 
 * [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)
-* [Activating Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md)
+* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-* [Clustering for High Availability](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)

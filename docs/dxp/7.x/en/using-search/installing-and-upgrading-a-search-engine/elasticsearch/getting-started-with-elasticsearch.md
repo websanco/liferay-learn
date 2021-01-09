@@ -38,7 +38,7 @@ Elasticsearch can be installed using an Elasticsearch archive or Docker image. I
 * [Installing Elasticsearch from an archive](./installing-elasticsearch.md)
 * [Installing Elasticsearch using Docker](./exercise-installing-elasticsearch.md)
 
-Also the [Liferay clustering example](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md) demonstrates using a Liferay cluster with Elasticsearch.
+Also the [Liferay clustering example](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md) demonstrates using a Liferay cluster with Elasticsearch.
 
 ## Connecting Liferay to Elasticsearch 
 

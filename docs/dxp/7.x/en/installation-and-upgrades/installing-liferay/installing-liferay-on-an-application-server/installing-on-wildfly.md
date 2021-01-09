@@ -78,7 +78,7 @@ Administrators can run DXP on WildFly in domain mode, but this method is not ful
 The command line interface is recommended for domain mode deployments.
 
 ```note::
-   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## Configuring WildFly
@@ -294,7 +294,7 @@ The data source is now configured and ready to go.
 
 ## Connect to a Mail Server
 
-As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [configure the mail session](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
+As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [configure the mail session](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
 
 If you want to manage your mail session with WildFly, follow these steps:
 
@@ -344,10 +344,10 @@ current AST contains: [ES3 keywords as identifiers, getters, reserved words as p
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting-up-liferay-dxp/setting-up-liferay.md) topics:
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting_up_liferay.html) topics:
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing EE Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-* [Clustering for High Availability](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)

@@ -13,4 +13,4 @@ Liferay includes two methods for providing translations of web content:
 - `Exporting web content in XLIFF format and importing translations <translating-web-content/exporting-and-importing-translations.md>`_
 
 .. note::
-   Users who are just starting out with localizing their installation of Liferay can learn more by reviewing `Initial Instance Localization <../../installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization.md>`_ 
+   Users who are just starting out with localizing their installation of Liferay can learn more by reviewing `Initial Instance Localization <../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md>`_ 

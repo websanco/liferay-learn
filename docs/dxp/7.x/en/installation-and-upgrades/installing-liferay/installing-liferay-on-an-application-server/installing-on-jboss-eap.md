@@ -72,7 +72,7 @@ DXP supports JBoss EAP when it runs in standalone mode but not when it runs in d
 The command line interface is recommended for domain mode deployments.
 
 ```note::
-   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## Configuring JBoss
@@ -287,7 +287,7 @@ The data source is now configured and ready to be connected to the database.
 
 ## Connect to a Mail Server
 
-As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [connect DXP to a mail server](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
+As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [connect DXP to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
 
 If you want to manage the mail session with JBoss, follow these steps:
 
