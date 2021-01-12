@@ -119,6 +119,8 @@ In a production setup, you will probably want to set a different transport addre
 * *Excluded Indexes*: You can enter the index names that will be excluded from cross-cluster replication. Indexes starting with a period (.) will always be excluded. By default, all indexes in the remote cluster will be replicated to the local cluster. This setting is ignored if Automatic Replication is not enabled.
 * *Automatic Replication Enabled*: Enable or disable automatic creation of follower indexes in the local Elasticsearch clusters when Read from Local Clusters is enabled. Disable this setting if replication will be managed manually through Elasticsearch. Defaults to enabled.
 
+![CCR System Settings.](./configuring-ccr-in-a-local-follower-data-center/images/02.png)
+
 Once the connections are configured and the indexes replicated, verify the system is working properly.
 
 ## Verify the Setup
