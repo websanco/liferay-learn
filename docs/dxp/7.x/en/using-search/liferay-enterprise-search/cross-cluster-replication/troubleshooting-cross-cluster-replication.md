@@ -48,7 +48,7 @@ ElasticsearchSecurityException security_exception current license is non-complia
 
 ## Local DXP Node Doesn't Read from Follower Elasticsearch Cluster
 
-In a DXP cluster using Cross-Cluster Replication, each local DXP node can be mapped to read from a follower Elasticsearch cluster. For example, if you have 2 local DXP nodes and the `connectionId` of your follower connection is `ccr`, to match them with a follower Elasticsearch cluster, the CCR Local Cluster Connection Configurations property should be configured with values like this:
+In a DXP cluster using Cross-Cluster Replication, each local DXP node must be mapped to read from the local follower Elasticsearch cluster. For example, if you have 2 local DXP nodes and the `connectionId` of your follower connection is `ccr`, to match them with the follower Elasticsearch cluster, the CCR Local Cluster Connection Configurations property should be configured with values like this:
 
 ```properties
 localhost:9080,ccr
