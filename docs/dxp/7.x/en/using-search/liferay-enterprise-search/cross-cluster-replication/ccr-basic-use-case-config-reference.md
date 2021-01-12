@@ -75,7 +75,7 @@ Configure the LES Cross-Cluster Configuration application from the System Settin
 Set these values:
 
 * The _Read from Local Clusters_ checkbox is checked
-* The Cross-Cluster Replication Local Cluster Connection Configuration has the value _localhost:9080,ccr_
+* The _Local Cluster Configurations_ property has the value _localhost:9080,ccr_
 
 ![Configure CCR from System Settings.](./ccr-basic-use-case-config-reference/images/01.png)
 
