@@ -105,9 +105,11 @@ truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
-The `connectionId` and the`remoteClusterConnectionId` you set in the other config file above must match!
+```important::
+   The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+```
 
-Copy these two `.config` files to each of your follower DXP nodes to configure the same remote (write) connection. You'll configure the read-only follower connection in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) in the local/follower DXP node in a similar fashion.
+Copy these `.config` files to each follower DXP node, since they'll use the same remote (write) connection. The read-only follower connection is configured separately in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md).
 
 Start the Liferay DXP server.
 

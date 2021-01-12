@@ -63,9 +63,17 @@ POST /_license/start_trial?acknowledge=true
 
 ## Configure the Local Liferay DXP Cluster Node
 
-> If testing locally configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
+```tip::
+   If testing locally configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
+```
 
-Copy the `.config` files you created to configure the connection for the remote DXP cluster node in [Configuring CCR in a Remote/Leader Data Center](./configuring-ccr-in-a-local-follower-data-center.md) to the `Liferay Home/osgi/configs` folder. Again, the `remoteClusterConnectionId` must match with the `connectionId` in the two files! This configures the write connection for the local DXP cluster node.
+Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-local-follower-data-center.md#configure-the-remote-liferay-dxp-cluster-node) `*ElasticsearchConnectionConfiguration-remote.config` and the `*ElasticsearchConfiguration.config` file from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
+
+```important::
+   The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+```
+
+Once these files are provided, the write connection for the local DXP cluster node is configured.
 
 Now configure the read-only connection to the local Elasticsearch server with the follower indexes. Provide a configuration file to `Liferay Home/osgi/configs` named 
 
@@ -104,7 +112,7 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Check the box for _Enabled_.
 
-1. Set one value in _Cross-Cluster Replication Local Cluster Connection Configurations_ `localhost:9080,ccr`.
+1. Set one value in _Local Cluster Configurations_ `localhost:9080,ccr`.
 
    ```important::
       Never set the value to the remote data center here (in the example, it would be ``localhost:8080,remote``). Setting this would cause follower indexes to be created in the remote cluster, where leader indexes of the same name already reside.
@@ -114,12 +122,15 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Click _Update_.
 
-In a production setup, you will probably want to set a different transport address for the remote Elasticsearch cluster other than the default or you may need to exclude some indexes from being replicated to the follower Elasticsearch cluster. There are configuration fields for those purposes:
+In a production setup, you will probably want to set a different transport address for the remote Elasticsearch cluster (this example used the default) and/or exclude some indexes from being replicated to the follower Elasticsearch cluster. There are configuration fields for those purposes:
+
 * *Remote Cluster Seed Node Transport Address*: The transport address of a node in the remote cluster to be used for establishing a connection between the remote and local cluster. Defaults to `localhost:9300`.
+
 * *Excluded Indexes*: You can enter the index names that will be excluded from cross-cluster replication. Indexes starting with a period (.) will always be excluded. By default, all indexes in the remote cluster will be replicated to the local cluster. This setting is ignored if Automatic Replication is not enabled.
+
 * *Automatic Replication Enabled*: Enable or disable automatic creation of follower indexes in the local Elasticsearch clusters when Read from Local Clusters is enabled. Disable this setting if replication will be managed manually through Elasticsearch. Defaults to enabled.
 
-![CCR System Settings.](./configuring-ccr-in-a-local-follower-data-center/images/02.png)
+![Configure CCR in System Settings.](./configuring-ccr-in-a-local-follower-data-center/images/02.png)
 
 Once the connections are configured and the indexes replicated, verify the system is working properly.
 

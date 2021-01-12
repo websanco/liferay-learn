@@ -29,7 +29,7 @@ Any Liferay DXP node that will read from a local cluster's follower indexes and 
 
 ##  Liferay DXP: Decide Which Indexes to Replicate from the Remote Cluster
 
-The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change) where `liferay-` is the default global *Index Name Prefix* coming from the Elasticsearch 7 connector configuration (unless you configured it differently) and `20101` is the generated `companyId` of a given Company in your the database. It is displayed as "Instance ID" in the UI and represents a Virtual Instance:
+The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change). The default global *Index Name Prefix* is `liferay-`: it can be changed in the Elasticsearch 7 connector configuration. `20101` is the generated `companyId` of a given Company in your database. It is displayed as Instance ID in the UI and represents a Virtual Instance.
 
 | Index ID                                              | Index Type    | Index Purpose |
 | ----------------------------------------------------- | ------------- | ------------- |
@@ -49,7 +49,7 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
    Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../../developer_guide.rst>`__ for information on using these APIs.
 ```
 
-If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you will also find indexes likes these below created out-of-the-box in Liferay DXP 7.3:
+If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you will also have indexes likes these in your Liferay DXP 7.3 system:
 
 | Index ID                                                     | Index Type    | Index Purpose |
 | ------------------------------------------------------------ | ------------- | ------------- |
@@ -63,7 +63,7 @@ Unless your setup reveals a very compelling reason not to, you should replicate 
 
 Set up the Elasticsearch clusters, using versions supported with Liferay DXP that also support Cross-Cluster Replications. See the [LES compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details.
 
-Make sure you Install the Elasticsearch [plugins Liferay DXP needs](https://learn.liferay.com/dxp/7.x/en/using-search/installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#install-elasticsearch) and [provide cluster names](https://learn.liferay.com/dxp/7.x/en/using-search/installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) to differentiate your follower and leader clusters.
+Make sure you [install the Elasticsearch plugins Liferay DXP needs and provide cluster names](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) to differentiate your follower and leader clusters.
 
 CCR requires an Elasticsearch Platinum level license, but [LES customers](../../liferay_enterprise_search.rst.) already have this. If you're testing locally, start a [trial license](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
 
