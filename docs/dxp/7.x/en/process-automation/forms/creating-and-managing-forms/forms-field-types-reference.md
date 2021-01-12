@@ -2,7 +2,7 @@
 
 This article documents the available elements when building a form.
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu. Select the site where the form will be created.
+1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the Site Administration menu. Select the site where the form will be created.
 1. Click _Content & Data_  &rarr; _Forms_.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)). The form builder view appears.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)) one more time to display the _Add Elements_ sidebar (if it is not already opened).
@@ -92,7 +92,7 @@ Users can select a file from the Documents and Media library or upload a file fr
 
 ### Image 
 
-Users can select an image file (`.jpg`, `.png`) from Web Content Images, the Documents and Media library, or upload an image file from their local file systems.
+Users can select an image file (`.gif`, `.jpeg`, `.jpg`, or `.png`) from Web Content Images, the Documents and Media library, or upload an image file from their local file systems.
 
 ![Image fields let users upload images or select from existing images in Docs and Media or Web Content Images.](./forms-field-types-reference/images/11.png)
 
