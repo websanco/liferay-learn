@@ -104,7 +104,7 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Check the box for _Enabled_.
 
-1. Set one value in Cross-Cluster Replication Local Cluster Connection Configurations _localhost:9080,ccr_
+1. Set one value in _Cross-Cluster Replication Local Cluster Connection Configurations_ `localhost:9080,ccr`.
 
    ```important::
       Never set the value to the remote data center here (in the example, it would be ``localhost:8080,remote``). Setting this would cause follower indexes to be created in the remote cluster, where leader indexes of the same name already reside.
@@ -114,7 +114,10 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Click _Update_.
 
-The other configuration fields can be blank or fall back to the defaults if suitable for your use case. If you need to set a different transport port for the remote Elasticsearch cluster (the example here uses the default, `9300`), or exclude some indexes from being replicated to the follower Elasticsearch, there are configuration fields for those purposes.
+In a production setup, you will probably want to set a different transport address for the remote Elasticsearch cluster other than the default or you may need to exclude some indexes from being replicated to the follower Elasticsearch cluster. There are configuration fields for those purposes:
+* *Remote Cluster Seed Node Transport Address*: The transport address of a node in the remote cluster to be used for establishing a connection between the remote and local cluster. Defaults to `localhost:9300`.
+* *Excluded Indexes*: You can enter the index names that will be excluded from cross-cluster replication. Indexes starting with a period (.) will always be excluded. By default, all indexes in the remote cluster will be replicated to the local cluster. This setting is ignored if Automatic Replication is not enabled.
+* *Automatic Replication Enabled*: Enable or disable automatic creation of follower indexes in the local Elasticsearch clusters when Read from Local Clusters is enabled. Disable this setting if replication will be managed manually through Elasticsearch. Defaults to enabled.
 
 Once the connections are configured and the indexes replicated, verify the system is working properly.
 
