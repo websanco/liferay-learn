@@ -79,7 +79,7 @@ Start the nodes and if you haven't yet, install the LES app on all nodes in the 
 
 ## Enable and Configure Cross-Cluster Replication
 
-Liferay DXP contains logic to complete the CCR setup for you, but it relies on enabling the CCR functionality in the System Settings UI, and not via configuration file (`.config`). At a minimum, the `enabled` property must be triggered from the UI. Once CCR is configured, all that's left is to verify the index replication and start searching.
+Liferay DXP contains logic to complete the CCR setup for you, but it relies on enabling the CCR functionality in the System Settings UI, and not via configuration file (`.config`). At a minimum, the `readFromLocalClusters` property must be triggered from the UI. Once CCR is configured, all that's left is to verify the index replication and start searching.
 
 The first time you enable CCR (after clicking _Update_ in the configuration---see [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md)), 
 each entry in Cross-Cluster Replication Local Cluster Connection Configurations is processed. First, a [remote cluster](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-remote-clusters.html) is registered via the [Cluster Update Settings API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html). For each index in the remote cluster (excluding indexes that start with a `.` or any defined in the Excluded Indexes setting), the [Create Follower API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-put-follow.html) is then invoked to set up the follower/leader relationship with the remote indexes. 

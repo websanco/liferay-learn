@@ -110,7 +110,7 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Open _Cross-Cluster Replication_.
 
-1. Check the box for _Enabled_.
+1. Check the box for _Read from Local Clusters_.
 
 1. Set one value in _Local Cluster Configurations_ `localhost:9080,ccr`.
 

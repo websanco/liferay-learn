@@ -96,4 +96,4 @@ This may happen if you've been configuring, restarting, and re-indexing repeated
 
 1. Perform a full reindex from the Leader DXP node.
 
-1. To re-enable the CCR configuration, go to System Settings &rarr; Search &rarr; Cross-Cluster Replication on the Local DXP node. De-select _Enabled_ and click _Update_ to disable the module, then select _Enabled_ and click _Update_ again to re-enable it.
+1. To re-enable the CCR configuration, go to System Settings &rarr; Search &rarr; Cross-Cluster Replication on the Local DXP node. De-select _Read from Local Clusters_ and click _Update_ to disable the module, then select _Read from Local Clusters_ and click _Update_ again to re-enable it.
