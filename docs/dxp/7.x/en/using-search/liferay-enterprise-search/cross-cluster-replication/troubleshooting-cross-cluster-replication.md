@@ -19,7 +19,7 @@ To aid diagnosing connection issues, add an INFO log level for `com.liferay.port
 When a reindex is triggered on the Leader DXP node, the Follower Elasticsearch node may throw errors like this:
 
 ```bash
-[2020-05-25T14:49:21,478][WARN ][o.e.x.c.a.ShardFollowNodeTask] [es-follower-node-1] shard follow task encounter non-retryable error
+[2021-01-10T14:49:21,478][WARN ][o.e.x.c.a.ShardFollowNodeTask] [es-follower-node-1] shard follow task encounter non-retryable error
 org.elasticsearch.transport.RemoteTransportException: [es-leader-node-1][127.0.0.1:9300][indices:data/read/xpack/ccr/shard_changes]
 Caused by: org.elasticsearch.index.IndexNotFoundException: no such index
   at org.elasticsearch.cluster.routing.RoutingTable.shardRoutingTable(RoutingTable.java:119) ~[elasticsearch-6.8.6.jar:6.8.6]
@@ -27,7 +27,7 @@ Caused by: org.elasticsearch.index.IndexNotFoundException: no such index
 
 and this:
 ```bash
-[2020-05-25T14:49:50,750][WARN ][o.e.x.c.a.ShardFollowTasksExecutor] [es-follower-node-1] [liferay-20101][0] background management of retention lease [LiferayElasticsearchCluster_FOLLOWER/liferay-20101/3a22HGCGS9iDl5rCbutNHg-following-leader/liferay-20101/lZThZJuhTLSaNYTSxmeX8A] failed while following
+[2021-01-10T14:49:50,750][WARN ][o.e.x.c.a.ShardFollowTasksExecutor] [es-follower-node-1] [liferay-20101][0] background management of retention lease [LiferayElasticsearchCluster_FOLLOWER/liferay-20101/3a22HGCGS9iDl5rCbutNHg-following-leader/liferay-20101/lZThZJuhTLSaNYTSxmeX8A] failed while following
 org.elasticsearch.index.seqno.RetentionLeaseNotFoundException: retention lease with ID [LiferayElasticsearchCluster_FOLLOWER/liferay-20101/3a22HGCGS9iDl5rCbutNHg-following-leader/liferay-20101/lZThZJuhTLSaNYTSxmeX8A] not found
   at org.elasticsearch.index.seqno.ReplicationTracker.renewRetentionLease(ReplicationTracker.java:282) ~[elasticsearch-6.8.6.jar:6.8.6]
 ```
@@ -44,15 +44,15 @@ You may run into the following error when configuring CCR:
 ElasticsearchSecurityException security_exception current license is non-compliant for [ccr]
 ```
 
-[CCR requires](https://www.elastic.co/subscriptions#scalability-&-resiliency) a Platinum Elasticsearch license. As a LES subscriber you have access to CCR with the license provided to you by Liferay.
+[CCR requires](https://www.elastic.co/subscriptions#scalability-&-resiliency) a Platinum Elasticsearch license. As a LES subscriber you have access to CCR with the license provided to you by Liferay. If you're testing locally, you can start a [trial](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
 
-## Clustered DXP Nodes Won't Read from Multiple Local/Follower Elasticsearch Clusters
+## Local DXP Node Doesn't Read from Follower Elasticsearch Cluster
 
-In a DXP cluster using Cross-Cluster Replication, each node can be mapped to read from a dedicated local Elasticsearch cluster. To match each DXP node with an Elasticsearch cluster, the CCR Local Cluster Connection Configurations property is configured with values like this:
+In a DXP cluster using Cross-Cluster Replication, each local DXP node can be mapped to read from a follower Elasticsearch cluster. For example, if you have 2 local DXP nodes and the `connectionId` of your follower connection is `ccr`, to match them with a follower Elasticsearch cluster, the CCR Local Cluster Connection Configurations property should be configured with values like this:
 
 ```properties
-localhost:9080,follower1
-localhost:9180,follower2
+localhost:9080,ccr
+localhost:9180,ccr
 ```
 
 Even if you're not binding the DXP nodes to `localhost`, the internal clustering code continues to identify each node using it; so `localhost` should be the hostname in this property. If you want to use a hostname other than `localhost` to identify DXP nodes internally (including in the CCR configuration) you must set the following [portal properties](./../../../installation-and-upgrades/reference/portal-properties.md) on each DXP node:
@@ -62,10 +62,38 @@ portal.instance.protocol=http
 portal.instance.inet.socket.address=myhostname:9080
 ```
 
-## Follower Cluster with Status Red Indexes
+In this case, the above CCR Local Cluster Connection Configurations property modifies as follows:
 
-After you successfully set up a CCR connection and your leader indexes are replicated successfully into the follower cluster, you can see some indexes go to the [red status](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-health.html). This may happen if you've been configuring, restarting, and re-indexing repeatedly throughout the setting up procedure. If you see this happen and you are confident your connections are configured properly, delete the follower indexes, then re-enable the LES Cross-Cluster-Replication configuration to trigger a fresh replication and following of the leader indexes. 
+```properties
+myhostname:9080,ccr
+myhostname:9180,ccr
+```
+
+## Follower Elasticsearch Cluster with Red Status
+
+The follower cluster may go to [red status](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-health.html) after you successfully set up a CCR connection and you enabled CCR on the local DXP node resulting in errors like this in the follower Elasticsearch node's console:
+
+```
+[2021-01-08T15:49:25,405][INFO ][o.e.x.c.a.ShardFollowTasksExecutor] [es-follower-node1] [liferay-0][0] Starting to track leader shard [liferay-0][0]
+[2021-01-08T15:49:25,440][INFO ][o.e.x.c.a.ShardFollowNodeTask] [es-follower-node1] [liferay-0][0] following leader shard [liferay-0][0], follower global checkpoint=[-1], mapping version=[3], settings version=[2], aliases version=[1]
+[2021-01-08T15:49:25,575][WARN ][o.e.i.c.IndicesClusterStateService] [es-follower-node1] [liferay-20097][0] marking and sending shard failed due to [failed recovery]
+org.elasticsearch.indices.recovery.RecoveryFailedException: [liferay-20097][0]: Recovery failed on {es-follower-node1}{SRkirdciSGaPph5XFrWUJA}{wgPq7Q4mRPG83hQEYALRMA}{127.0.0.1}{127.0.0.1:9301}{dilmrt}{ml.machine_memory=33552576512, xpack.installed=true, transform.node=true, ml.max_open_jobs=20}
+	at org.elasticsearch.index.shard.IndexShard.lambda$executeRecovery$21(IndexShard.java:2665) [elasticsearch-7.9.3.jar:7.9.3]
+(...)
+Caused by: org.elasticsearch.index.shard.IndexShardRecoveryException: failed recovery
+	... 27 more
+Caused by: org.elasticsearch.index.snapshots.IndexShardRestoreFailedException: restore failed
+	... 25 more
+Caused by: org.elasticsearch.index.snapshots.IndexShardRestoreFailedException: failed to restore snapshot [_latest_/_latest_]
+	... 23 more
+(...)
+[2021-01-08T15:49:25,592][INFO ][o.e.c.r.a.AllocationService] [es-follower-node1] Cluster health status changed from [YELLOW] to [RED] (reason: [shards failed [[liferay-20097][0]]]).
+```
+
+This may happen if you've been configuring, restarting, and re-indexing repeatedly throughout the setting up procedure. If you see this happen and you are confident your connections are configured properly, try this:
 
 1. Delete all the follower indexes. This is most conveniently carried out in Kibana's Index Management UI.
 
-2. To re-enable the CCR configuration, go to System Settings &rarr; Search &rarr; Cross-Cluster Replication. De-select _Enabled_ and click _Update_ to disable the module, then select _Enabled_ and click _Update_ again to re-enable it. 
+1. Perform a full reindex from the Leader DXP node.
+
+1. To re-enable the CCR configuration, go to System Settings &rarr; Search &rarr; Cross-Cluster Replication on the Local DXP node. De-select _Enabled_ and click _Update_ to disable the module, then select _Enabled_ and click _Update_ again to re-enable it. 
