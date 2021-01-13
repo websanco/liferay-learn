@@ -1,6 +1,6 @@
 # Search Pages
 
-The default search page is located at [`localhost:8080/web/guest/search`](http://localhost:8080/web/guest/search). If you have a running Liferay DXP with some content in it, you can navigate there and execute a search. By default, this page is a hidden page in the default site. Users are routed to this hidden page when they enter search terms in a *Search Bar* widget. The search page is also where users browse search results.
+Access the default search page at [`localhost:8080/web/guest/search`](http://localhost:8080/web/guest/search). If you have a running Liferay DXP with some content in it, you can navigate there and execute a search. By default, this page is a hidden page in the default site. Users are routed to this hidden page when they enter search terms in a *Search Bar* widget. The search page is also where users browse search results.
 
 ![The default search page is hidden and accessible by direct URL or by using the Search Bar widget.](./search-pages/images/05.png)
 
@@ -27,7 +27,7 @@ Entering a search query redirects to the default search page, where results are 
 
 ![The default search page provides a full search experience.](./search-pages/images/03.png)
 
-The default search page contains the Search Bar, Search Results, Search Options, and Suggestions. You will also see all the different Search Facets (except the Custom facet). In the example above, the Type facet, User fact, and Last Modified facet can be seen in the left sidebar. Read more about the different [search facets](./search-facets.md) that are available and how they can be customized.
+The default search page contains the Search Bar, Search Results, Search Suggestions, Search Options, and several Search Facet widgets.. In the example above, the Type facet, User fact, and Last Modified facet can be seen in the left sidebar. Read more about the different [search facets](./search-facets.md) that are available and how they can be customized.
 
 The default search page is based on the Search page template, but it doesn't inherit changes from the template by default. That means you can customize the search page directly without changing the template's inheritance configuration.
 
@@ -37,6 +37,6 @@ If you require just a few changes to the default page, don't abandon it and crea
 
 ## Creating a Search Page
 
-You can create search pages with a page template, or use a manually configured search page for a single Site. See [Using a Search Page Template](./using-a-search-page-template.md) to learn about search page templates; see [Manually Creating a Search Page](./manually-creating-a-search-page.md) to learn about configuring a search page individually per Site.
+You can create search pages with a page template, or use a manually configured search page for a single Site. See [Using a Search Page Template](./using-a-search-page-template.md) to learn about search page templates; see [Creating a Search Page](./creating-a-search-page.md) to learn about configuring a search page individually per Site.
 
 After choosing your approach and reading here to get your search page up and running, read through the more detailed articles on the various search widgets and the configuration documentation to understand the full suite of configuration options.

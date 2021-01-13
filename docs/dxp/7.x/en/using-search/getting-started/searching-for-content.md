@@ -14,7 +14,7 @@ Using the default Liferay DXP setup, users can engage with search by entering se
 
 Liferay's search infrastructure supports full text search as implemented by its supported search engines ([Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/full-text-queries.html) and [Solr](http://lucene.apache.org/solr/features.html)).
 
-Full text search compares all the words entered in a search query (for example, *stock market*) to all the words in each indexed document. A search engine like Elasticsearch calculates relevance scores to ensure the best results are returned first like a Blog Entry about a recent bull market. Anything with words like *stock* or *market* is returned.
+Full text search compares all the words entered in a search query (for example, *stock market*) to all the words in each indexed document. A search engine like Elasticsearch calculates relevance scores to ensure the best results are returned first (like a Blogs Entry about a recent bull market). Anything with words like *stock* or *market* is returned.
 
 In addition to full text search, advanced search syntax is supported. The underlying search engine determines the precise behavior, so consult the [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-simple-query-string-query.html) or [Solr](https://lucene.apache.org/solr/guide/7_0/query-syntax-and-parsing.html) documentation for the details.
 

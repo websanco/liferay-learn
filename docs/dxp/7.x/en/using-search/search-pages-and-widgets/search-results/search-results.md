@@ -1,6 +1,6 @@
 # Search Results
 
-Search results should be easy to navigate, sort, and filter. To achieve that, you must understand all the options to give your users an optimal experience.
+Search results should be easy to navigate, sort, and filter. Give your users an optimal search experience by understanding the default search experience and the many configuration options at your disposal.
 
 Multiple factors affect search results:
 
@@ -37,7 +37,7 @@ Results relevance is configurable:
 
 ## Permissions and Search Results
 
-Search results don't appear for Users lacking View permission <!-- link placeholder for Roles and Permissions --> for them. A logged in User with the Site Administrator Role likely sees more search results than an anonymous guest.
+A search result doesn't appear for a User lacking [permission](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) to view the asset. A logged in User with the Site Administrator Role likely sees more search results than an anonymous guest.
 
 There are two rounds of permissions checks:
 
@@ -76,7 +76,7 @@ In the staged version of the Site, all content---live or staged---is searchable.
 A result summary condenses information from the original asset into an abstract. Asset developers choose what fields are included in the summary. A common summary includes a *title* and some of the *content*, with title displayed first. The asset type always appears on the second line, followed by a snippet of content matching the search term. Assets without content fields, like Documents and Media documents, display the description instead.
 
 ```note::
-Searching for Users: When you click an asset in the search results, it's displayed in an Asset Publisher (unless the *View in Context* option is selected in the Search Results portlet). Users are different, though. Think of them as invisible assets, not intended for display in the Asset Publisher application.  While Users appear as search results with other indexed assets, when you click one you're taken to the User's profile page. If public personal pages are disabled, clicking on a User from the list of search results shows you a blank page. Only the User's full name and the asset type (User) appear in User result summaries:
+Searching for Users: When you click an asset in the search results, it's displayed in an `Asset Publisher <./../../../site-building/displaying-content/using_the_asset_publisher_widget.rst>`__ (unless the *View in Context* option is selected in the Search Results portlet). Users are different, though. Think of them as invisible assets, not intended for display in the Asset Publisher application.  While Users appear as search results with other indexed assets, when you click one you're taken to the User's profile page. If public personal pages are disabled, clicking on a User from the list of search results shows you a blank page. Only the User's full name and the asset type (User) appear in User result summaries:
 ```
 
 ![User summaries contain only the User's full name.](./search-results/images/03.png)
