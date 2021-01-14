@@ -1,12 +1,12 @@
 # Creating Display Templates
 
-For every data definition, you can create as many displays as you need. If you’ve created a form template that doesn’t show all the fields of a particular data definition in the data list’s form view, you probably don’t want to display those fields in the list view, either. Modify the list view using Display Templates.
+For every data definition, you can create as many displays as you need. If you’ve created a Form Template that doesn’t show all the fields of a particular data definition in the data list’s form view, you probably don’t want to display those fields in the list view, either. Modify the list view using Display Templates.
 
-Note: If you’re familiar with [web content templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md), display templates customize the display of a list in the same way. Display templates are written in FreeMarker or Velocity, pulling data from the data definition in the same way that web content templates pull data from their structures. Also similar to web content templates, display templates can be embedded in other display templates. This allows for reusable code, JavaScript library imports, or macros imported by Velocity or FreeMarker templates in the system. Embedding display templates provides a more efficient process when you have a multitude of similar data definitions. Just import an embedded display template and work off of it for your new display template.
+Note: If you’re familiar with [web content templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md), Display Templates customize the display of a list in the same way. Display Templates are written in FreeMarker or Velocity, pulling data from the data definition in the same way that web content templates pull data from their structures. Also similar to web content templates, Display Templates can be embedded in other Display Templates. This allows for reusable code, JavaScript library imports, or macros imported by Velocity or FreeMarker templates in the system. Embedding Display Templates provides a more efficient process when you have a multitude of similar data definitions. Just import an embedded Display template and work off of it for your new Display Template.
 
-As with [form templates](./creating-form-templates.md), you can create display templates from Site Administration or the Dynamic Data Lists Display widget. 
+As with [Form Templates](./creating-form-templates.md), you can create Display Templates from Site Administration or the Dynamic Data Lists Display widget. 
 
-To create a new display template from Site Administration,
+To create a new Display Template from Site Administration,
 
 1. Navigate to *Content & Data* &rarr; *Dynamic Data Lists*. 
 
@@ -16,9 +16,9 @@ To create a new display template from Site Administration,
 
 1. Click the *Add* icon (![Add](../../../images/icon-add.png)) and click *Add Display Template*.
 
-1. Give the template a name, expand the Details section of the form, and give it a description. Also in the details section of the form, select the templating language to use from the Language selector. You can choose [FreeMarker](https://freemarker.apache.org/index.html) or [Velocity](https://velocity.apache.org/).
+1. Give the template a name, expand the Details section of the form, and give it a description. In the details section of the form, select the templating language to use from the Language selector. You can choose [FreeMarker](https://freemarker.apache.org/index.html) or [Velocity](https://velocity.apache.org/).
 
-1. In the Script section of the form, create your template in the editor using the templating language you chose in the previous step. The palette to the left of the editor contains common variables. Click a variable to insert it in the editor. The editor also autocompletes. In a FreeMarker template, type `${`, which opens an autocomplete list of common variables. Select a variable to insert it in the editor. Alternatively, you can upload a complete script file by clicking the *Choose File* button below the editor.
+1. In the Script section of the form, create your template in the editor using the templating language you chose in the previous step. The palette to the left of the editor contains common variables. Click a variable to insert it in the editor. The editor also autocompletes. In a FreeMarker template, type `${`, which opens an autocomplete list of common variables. Select a variable to insert into the editor. Alternatively, you can upload a complete script file by clicking the *Choose File* button below the editor.
 
     ![Use the script section to create your template.](./creating-display-templates/images/01.png)
 
@@ -26,7 +26,7 @@ To create a new display template from Site Administration,
 
 1. Click *Save* when you're done creating the template. 
 
-Alternatively, you can create display templates from the Dynamic Data Lists Display widget:
+Alternatively, you can create Display Templates from the Dynamic Data Lists Display widget:
 
 1. Follow the instructions in the [Creating Data List](./creating-data-lists.md) article for adding and configuring the widget in a Site page. Make sure to configure the widget to show the list you’re creating a template for.
 
@@ -97,5 +97,5 @@ Here’s a simple example template that uses a list based on the embedded Contac
 
 Here’s what it looks like:
 
-![Example of display template showing company name and email.](./creating-display-templates/images/02.png)
+![Example of Display Template showing company name and email.](./creating-display-templates/images/02.png)
 

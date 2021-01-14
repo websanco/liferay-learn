@@ -4,7 +4,7 @@
 Dynamic Data Lists are deprecated as of Liferay DXP 7.3. It is replaced by App Builder and Forms Reports.
 ```
 
-Dynamic data lists display forms created from field sets called data definitions. Data definitions consist of a form’s field types (e.g., text, boolean, date, radio buttons, selector menus, etc.) and those fields’ labels and settings. Data definitions effectively serve as data models for a dynamic data list. For example, you could create a data definition with three fields for conference registration: one for a user’s name, one for their email address, and a dropdown list for t-shirt size. This data definition could then be used for every conference form you create to gather user records.
+Dynamic data lists display forms created from field sets called data definitions. Data definitions consist of a form’s field types (e.g., text, boolean, date, radio buttons, selector menus, etc.) and those fields’ labels and settings. Data definitions effectively serve as data models for a dynamic data list. For example, you could create a data definition with three fields for conference registration: one for a user’s name, one for their email address, and a dropdown list for t-shirt size. This data definition could then be used for every conference registration form you create.
 
 ![Example of conference registration forms with data lists](./getting-started-with-dynamic-data-lists/images/01.png)
 
@@ -12,11 +12,11 @@ Dynamic data lists display forms created from field sets called data definitions
 
 **Dynamic Data Lists:** Display a form based on a data definition.
 
-You can create one or multiple dynamic data lists from a single data definition. The user data entered for each dynamic data list is kept separate, even if the data definition is shared. For instance, you could use the example data definition above to create several dynamic data lists, and then place them anywhere you need to get feedback from users. Because each dynamic data list’s form data is separate, you don’t need to worry about trying to figure out which dynamic data list the user comment came from.
+You can create one or multiple dynamic data lists from a single data definition. The user data entered for each dynamic data list is kept separate, even if the data definition is shared. For instance, you could use the example data definition above to create several dynamic data lists, and then place them anywhere you need to get feedback from users. Because each dynamic data list’s form data is separate, you don’t need to worry about trying to figure out which dynamic data list the user input came from.
 
 Dynamic data lists are flexible. You don’t have to restrict dynamic data lists to simple input. You could create something as complex as an entire data entry system for real estate listings, or any other simple list-based application you can dream up.
 
-You create data definitions and dynamic data lists in from the Site Menu’s Content &rarr; Dynamic Data Lists application. Creating data definitions and lists doesn’t require any coding. However, additional formatting can be added with [FreeMarker templates](https://freemarker.apache.org/).
+You create data definitions and dynamic data lists from the Site Menu’s Content &rarr; Dynamic Data Lists application. Creating data definitions and lists doesn’t require any coding. However, additional formatting can be added with [FreeMarker templates](https://freemarker.apache.org/).
 
 The following articles describe how to create and use data definitions and dynamic data lists:
 
@@ -27,7 +27,7 @@ The following articles describe how to create and use data definitions and dynam
 
 ## System Configuration
 
-There are two settings you can configure in *Control Pane*l &rarr; *System Settings* &rarr; *Content and Data* &rarr; *Dynamic Data Lists*: Dynamic Data Lists Service and Dynamic Data Lists.
+There are two settings you can configure in *Control Panel* &rarr; *System Settings* &rarr; *Content and Data* &rarr; *Dynamic Data Lists*: Dynamic Data Lists Service and Dynamic Data Lists.
 
 Under the Dynamic Data Lists Service setting: 
 
@@ -37,7 +37,7 @@ Under the Dynamic Data Lists setting:
 
 **Changeable Default Language:** If enabled, the default language of a data definition becomes changeable.
 
-**CSV Export:** Choose whether DDL records can be exported in CSV format with or without a warning, or disable this option. Here’s what the warning says:
+**CSV Export:** Choose whether Dynamic Data List records can be exported in CSV format with or without a warning, or disable this option. Here’s what the warning says:
 
 ```Warning::
 This CSV file contains user supplied inputs. Opening a CSV file in a spreadsheet program may be dangerous.

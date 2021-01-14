@@ -12,7 +12,7 @@ To create a data definition:
 
 1. Click the *Add* icon (![Add](../../../images/icon-add.png)) to begin creating a new data definition. This opens the New Data Definition form. 
 
-1. Give your data definition a name. Note that the definition’s name appears for any users filling out a dynamic data list that uses the definition. Then expand the Details section of the form and give it a description.
+1. Give your data definition a name. Note that the definition’s name appears for any users filling out a dynamic data list that uses the definition. Expand the Details section of the form and give it a description.
 
     ![Input a name for your data definition.](./creating-data-definitions/images/02.png)
 
@@ -20,7 +20,7 @@ To create a data definition:
 
     To choose a parent definition, click the *Select* button below the Parent Data Definition field and then select an existing definition in the dialog that appears.
 
-1. Add the data definition’s fields in the data definition designer, below the form’s Details section. The designer’s default View tab lets you create the definition in a WYSIWYG editor. You can click the Source tab to work with the definition’s underlying JSON, but it’s much easier to stick with the WYSIWYG editor.
+1. Add the data definition’s fields in the data definition designer below the form’s Details section. The designer’s default View tab lets you create the definition in a WYSIWYG editor. You can click the Source tab to work with the definition’s underlying JSON, but it’s much easier to stick with the WYSIWYG editor.
 
     ![Choose the fields to associate with your data definition.](./creating-data-definitions/images/03.png)
 

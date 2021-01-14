@@ -32,7 +32,7 @@ By default, only administrators have permission to add records to a data list. T
 
 1. Select *Add Record* for the Roles that need permissions.  To give unauthenticated Users permission to add records select *Add Record* for Guest. Click *Save* to finish.
 
-New records can be added to a list from Site Administration or from a page that has the Dynamic Data Lists Display widget. See the next section for configuring this widget.
+New records can be added to a list from Site Administration or from a page that has the Dynamic Data Lists Display widget. See the section below for configuring this widget.
 
 ![Click the add icon to add a new record.](./creating-data-lists/images/03.png)
 
@@ -42,7 +42,7 @@ To add a record from Site Administration,
 
 1. Click on the name of the data list you want to add a record to.
 
-1. Click the Add icon (![Add](../../../images/icon-add.png)) and a new form will open for to add a record.
+1. Click the Add icon (![Add](../../../images/icon-add.png)) and a new form will open to add a record.
 
 1. Fill out the necessary fields and click *Publish*.
 
@@ -50,7 +50,7 @@ To add a record from a page with the Dynamic Lists Display widget,
 
 1. Navigate to the page with the widget.
 
-1. Click the Add icon (![Add](../../../images/icon-add.png)) and a new form will open for to add a record.
+1. Click the Add icon (![Add](../../../images/icon-add.png)) and a new form will open to add a record.
 
 1. Fill out the necessary fields and click *Publish*.
 
@@ -68,13 +68,13 @@ To configure the widget,
 
     Click the *Optional Configuration* tab for additional settings: 
 
-    **Display Template:** Select the display template for the list. Learn more at [Creating Display Templates](./creating-display-templates.md).
+    **Display Template:** Select a display template to utilize. Learn more at [Creating Display Templates](./creating-display-templates.md).
 
-    **Form Template:** Select the form template for the list. Learn more at [Creating Form Templates](./creating-form-templates.md)
+    **Form Template:** Select a form template to utilize. Learn more at [Creating Form Templates](./creating-form-templates.md)
 
     **Editable:** Whether users can add records to the widget’s list.
 
-    **Form View:** Whether to display the Add Record form by default, instead of the List View. Note that even without this selected, users can still add records via the widget’s Add button (Add).
+    **Form View:** Whether to display the Add Record form by default, instead of the List View. Note that even without this selected, users can still add records via the widget’s Add icon (Add).
 
     **Spreadsheet View:** Whether the List View displays each record in a row, with columns for the record attributes.
 
