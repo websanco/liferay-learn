@@ -23,7 +23,7 @@ Follow these steps to create a new Kaleo Forms process:
 
    * To choose an existing field set, click on its *Actions* button ![Actions Button](../../../images/icon-add.png), and select *Choose*. Alternatively, you can select *Edit* to modify the field set before choosing it.
 
-   * To create a new field set, click on *Add Field Set*, and incorporate the desired elements. When finished, click on *Save* and close the dialogue window to update the list of available field sets to choose from. <!--Link to Creating Data Definitions content once ported.-->
+   * To create a new field set, click on *Add Field Set*, and incorporate the desired elements. When finished, click on *Save* and close the dialogue window to update the list of available field sets to choose from. See [Creating Data Definitions](../dynamic-data-lists/creating-data-definitions.md) for more information.
 
    Once you've chosen a field set, click *Next*.
 
@@ -75,4 +75,4 @@ From here, you can click on the process to complete your assigned task, editing,
 
 * [Introduction to Forms](../introduction-to-forms.md)
 * [Introduction to Workflow](../../workflow/introduction-to-workflow.md)
-<!-- Link to Dynamic Data List Articles once ported -->
+* [Creating Data Definitions](../dynamic-data-lists/creating-data-definitions.md)
