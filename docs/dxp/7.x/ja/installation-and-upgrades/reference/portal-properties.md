@@ -31,7 +31,7 @@
 `[Liferay Home] /portal-ext.properties`を作成する場合、ベストプラクティスは、関連するセクションを `portal-impl.jar/portal.properties` から `portal-ext.properties` ファイルにコピーし、次に変更することですあなたが望むものへの価値。
 
 ``` note::
-   `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_, DXPは、``[Liferay Home]`` の `portal-setup-wizard.properties` というファイルにこれらのプロパティを設定します。
+   `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_ , DXPは、``[Liferay Home]`` の `portal-setup-wizard.properties` というファイルにこれらのプロパティを設定します。
 ```
 
 ここにいくつかの設定例があります。

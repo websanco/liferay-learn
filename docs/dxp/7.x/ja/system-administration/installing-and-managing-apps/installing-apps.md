@@ -30,7 +30,7 @@
 DXPはそれらのサブフォルダをリッスンし、ファイルを処理して（WARの場合、またはWARを含む場合はOSGiバンドルに変換し）、OSGiバンドルをOSGiコンテナにインストールします。
 
 ``` note::
-   ソース管理リポジトリ（GitやBitBucketなど）とオーケストレーションツール（Jenkins<https://jenkins.io>`_など）を使用して、`DevOps <https://en.wikipedia.org/wiki/DevOps>`_パイプラインを通じてDXP環境をプロモートすることをお勧めします。
+   ソース管理リポジトリ（GitやBitBucketなど）とオーケストレーションツール（ `Jenkins<https://jenkins.io>`_ など）を使用して、 `DevOps <https://en.wikipedia.org/wiki/DevOps>`_ パイプラインを通じてDXP環境をプロモートすることをお勧めします。
 
    本番環境では、DevOpsパイプライン内のデプロイフォルダにアプリファイルをコミットする必要があります。
 ```

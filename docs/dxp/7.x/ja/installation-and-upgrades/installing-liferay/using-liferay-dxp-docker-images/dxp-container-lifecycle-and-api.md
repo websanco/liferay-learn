@@ -36,7 +36,7 @@
 <!-- end list -->
 
 ``` note::
-   `bind mount <https://docs.docker.com/storage/bind-mounts/>`_, `volumes <https://docs.docker.com/storage/volumes/>`_, ``docker cp`` など、これらのコンテナフォルダにファイルを渡すことができます。 詳細については、`コンテナにファイルを提供する <./providing-files-to-the-container.md>`_ を参照してください。
+   `bind mount <https://docs.docker.com/storage/bind-mounts/>`_, `volumes <https://docs.docker.com/storage/volumes/>`_, ``docker cp`` など、これらのコンテナフォルダにファイルを渡すことができます。 詳細については、 `コンテナにファイルを提供する <./providing-files-to-the-container.md>`_ を参照してください。
 ```
 
 上記の主要なフォルダーには、特定のアクション用に指定されたサブフォルダーがあります。 次のセクションでは、サブフォルダー、それらのファイルで実行されるアクション、および関連するユースケースをライフサイクルの段階順に記述します。

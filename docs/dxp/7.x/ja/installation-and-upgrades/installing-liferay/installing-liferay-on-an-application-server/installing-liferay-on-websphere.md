@@ -13,7 +13,7 @@ WebSphereにLiferay DXPをインストールするには、DXP WARファイル�
 Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11が最新）がインストールされている必要があります。 このフィックスパックについて詳しくは、[IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005)にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
 
 ``` important::
-   DXPをインストールする前に、`Installing a Liferay DXP Tomcat Bundle <../installing-a-liferay-dxp-tomcat-bundle.md>`_ および`Configuring a Database <../configuring-a-database.md>`_の記事を確認してください。
+   DXPをインストールする前に、 `Installing a Liferay DXP Tomcat Bundle <../installing-a-liferay-dxp-tomcat-bundle.md>`_ および `Configuring a Database <../configuring-a-database.md>`_ の記事を確認してください。
 ```
 
 次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から入手できます。
@@ -235,7 +235,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
     ```
 
     ``` tip::
-       URLの例については、`Database Templates <../../reference/database-templates.md>`_の`jdbc.default.url`の値を参照してください。
+       URLの例については、 `Database Templates <../../reference/database-templates.md>`_ の`jdbc.default.url`の値を参照してください。
     ```
 
 

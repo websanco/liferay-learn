@@ -3,7 +3,7 @@
 バンドルブラックリストは、複数のアプリ、OSGiバンドル（モジュール）、WARプラグインを一度にアンインストールまたは再インストールする便利な方法です。 [アプリケーションマネージャー](./using-the-app-manager.md)または[Gogoシェル](https://help.liferay.com/hc/en-us/articles/360029070351-Using-the-Felix-Gogo-Shell)を使用して、アプリ、モジュール、プラグインのインストールを個別に管理する手間を省きます。
 
 ``` important::
-   ブラックリストは、DXPがアプリのアンインストールに使用する`OSGi設定<https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings#exporting-and-importing-configurations>`_です。 これを使用すると、リストされているアプリは削除されるまでインストールされなくなります。
+   ブラックリストは、DXPがアプリのアンインストールに使用する `OSGi設定 <https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings#exporting-and-importing-configurations>`_ です。 これを使用すると、リストされているアプリは削除されるまでインストールされなくなります。
 ```
 
 リストは、[コントロールパネル](#blacklisting-via-the-control-panel)で、または[OSGi構成（`.config`）ファイル（コントロールパネルからエクスポート）を使用](#blacklisting-via-a-configuration-file)して設定できます。

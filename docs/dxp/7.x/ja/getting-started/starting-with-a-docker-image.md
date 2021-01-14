@@ -3,7 +3,7 @@
 Liferayの最新バージョンは、Dockerイメージとして入手できます。 以下の手順に従って、Liferay DXPの最新リリースをダウンロードして起動し、ツアーを開始してください。
 
 ``` important::
-    Dockerをお持ちではありませんか？ まずは`Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_に移動してください。
+    Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
 ```
 
 ## Liferayを使ってみる

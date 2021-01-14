@@ -231,7 +231,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
     ```
 
     ``` tip::
-       URLの例については、`Database Templates <../../reference/database-templates.md>`_の`jdbc.default.url`の値を参照してください。
+       URLの例については、 `Database Templates <../../reference/database-templates.md>`_ の`jdbc.default.url`の値を参照してください。
     ```
 
 

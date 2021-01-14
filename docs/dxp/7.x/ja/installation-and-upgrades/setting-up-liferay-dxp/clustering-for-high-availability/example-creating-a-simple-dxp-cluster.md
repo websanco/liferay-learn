@@ -30,7 +30,7 @@ DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ
 <!-- end list -->
 
 ``` important::
-    Dockerをお持ちではありませんか？ まずは`Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_に移動してください。
+    Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
 ```
 
 ``` note::

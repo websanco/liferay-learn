@@ -83,7 +83,7 @@ docker start [container]
 ```
 
 ``` warning::
-   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「DXPコンテナライフサイクルとAPI <./dxp-container-lifecycle-and-api.md#lifecycle>`_」を参照してください）。 あなたが実行していることを確認任意の`スクリプト作成します <./running-scripts-in-containers.md>` _は、エントリー・ポイントを経由して安全に再実行することができます。
+   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 `DXPコンテナライフサイクルとAPI <./dxp-container-lifecycle-and-api.md#lifecycle>`_ 」を参照してください）。 あなたが実行していることを確認任意の `スクリプト作成します <./running-scripts-in-containers.md>` _ は、エントリー・ポイントを経由して安全に再実行することができます。
 ```
 
 これで、DXPコンテナの開始、停止、監視の基本を理解できました。
