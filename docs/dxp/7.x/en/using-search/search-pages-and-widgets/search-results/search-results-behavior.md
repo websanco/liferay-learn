@@ -11,6 +11,7 @@ The previous [article](./configuring-the-search-results-widget.md) covered ways 
 
 
 ## Filtering Results with Facets
+
 Results are filtered using facets. Users enter a search term, are presented with a list of results and search facets, which you can think of as buckets that group results together if they share a common characteristic.
 
 Administrators can configure facets. Read about [Search facets](../search-facets/facets.md) to learn more.
@@ -18,6 +19,8 @@ Administrators can configure facets. Read about [Search facets](../search-facets
 ## Search Results Relevance
 
 The search engine decides which results appear at the top of the list using the concept of relevance. Relevance is a score calculated by the search engine. There are numerous factors contributing to the total score of a returned document, and all of the implementation details of how relevance scoring works are algorithms provided by the [search engine](https://www.elastic.co/guide/en/elasticsearch/reference/current/relevance-intro.html#relevance-intro).
+
+Liferay's [Result Rankings](../../search-administration-and-tuning/result-rankings.md) feautre lets you intervene in the order of returned search results. 
 
 ## Permissions and Search Results
 
@@ -53,9 +56,15 @@ This final round of permission checking is configurable at Control Panel &rarr; 
 
 With [staging](../../../site-building/publishing-tools/staging/managing-data-and-content-types-in-staging.md), content is placed first in a preview and testing environment before being published for consumption by end Users (on the live site). Content added to the search index is marked so that the search API can decipher whether an item is live or not. In the live version of the site, only content that's marked for the live site is searchable. In the staged version of the site, all content live or staged is searchable.
 
+## Search and Publications
+
+With [Publications](../../../site-building/publishing-tools/publications/publications-overview.md) enabled, content is associated with a specific Publication. Content added to a Publication is marked so that the search API can decipher whether an item is in production or not. In the production version of the site, only content that's been [published](../../../site-building/publishing-tools/publications/making-and-publishing-changes.md#publishing-your-changes) can be returned in search results. In an ongoing Publication, production content and content for that specific Publication can be returned.
+
+content is placed first in a preview and testing environment before being published for consumption by end Users (on the live site). Content added to the search index is marked so that the search API can decipher whether an item is live or not. In the live version of the site, only content that's marked for the live site is searchable. In the staged version of the site, all content live or staged is searchable.
+
 ## Result Summaries
 
-A result summary includes the information from a document that the asset’s developer felt is most useful to end Users searching for the asset. Each asset can have different fields included in the summary. For assets with text content, a common summary format includes the title and some of the content, with title displayed first. The asset type always appears on the second line, and a snippet of the content that matches the search term is on the last line. Assets without content fields, like Documents and Media documents, display the description instead.
+A result summary includes the information from a document that the asset's developer felt is most useful to end Users searching for the asset. Each asset can have different fields included in the summary. For assets with text content, a common summary format includes the title and some of the content, with title displayed first. The asset type always appears on the second line, and a snippet of the content that matches the search term is on the last line. Assets without content fields, like Documents and Media documents, display the description instead.
 
 ```Note 
 Users are different. Only the User’s full name and the asset type (User) appear in User result summaries.
