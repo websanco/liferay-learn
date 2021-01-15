@@ -172,11 +172,15 @@ This feature has been deprecated since 7.1.
 
 The OSGi property `autoUpgrade` defined in `com.liferay.portal.upgrade.internal.configuration.ReleaseManagerConfiguration.config` was replaced with the portal property `upgrade.database.auto.run`.
 
-Unlike the old property, which only controlled the upgrade processes in modules, the new one also affects the Core upgrade processes. The default value is `false`, so upgrade processes won't run on startup or module deployment. You can execute module upgrade processes anytime via Gogo console.
+Unlike the old property, which only controlled the upgrade processes in modules, the new one also affects the Core upgrade processes. The default value is `false`, so upgrade processes won't run on startup or module deployment. You can execute module upgrade processes anytime via the Gogo Shell console or via Database Upgrade Tool when the server is down.
+
+This property is set to `true` in the `portal-developer.properties`
 
 #### Who is affected?
 
-This affects development environments where you don't want to run the upgrade when a new process is deployed. This property can't be set to `true` in production environments. In these cases, you must use the upgrade tool to execute minor and major schema version changes.
+This change affects any environment where you're expecting to run upgrades automatically on server startup or on module deployment. Setting `upgrade.database.auto.run` to `true` is not recommended in production environments. If you must, however, upgrade on server startup, first back up your Liferay database and File Store (Document Library).
+
+If you set `upgrade.database.auto.run` to `false` (default value) but database upgrade is required, Liferay prints information about the required upgrade and halts startup. Database upgrade is typically required by major/minor Liferay releases and may be required by early CE Portal GA releases and certain Service Packs (in exceptional cases)--Fix Packs never require database upgrade. On startup, Liferay prints information about any pending micro changes. You can always use the Gogo Shell console and release notes to check such changes and then decide whether to execute them.
 
 #### How should I update my code?
 
@@ -184,7 +188,7 @@ This change doesn't affect your code.
 
 #### Why was this change made?
 
-This change was made to unify the auto-upgrade feature between the Core and modules. The default value has also changed to avoid the execution of new upgrade processes on startup in production environments.
+This change was made to unify the auto-upgrade feature between the Core and modules. The default value was also changed to avoid executing new upgrade processes on startup in production environments.
 
 ---------------------------------------
 
@@ -264,19 +268,19 @@ This change was made because the tag was primarily used internally.
 
 #### What changed?
 
-The `addAction` methods with signature `String, Class, GroupedModel, String, UriInfo` and `String, Class, Long, String, String, Long, UriInfo` were removed.
+The `addAction` methods with signatures `String, Class, GroupedModel, String, UriInfo` and `String, Class, Long, String, String, Long, UriInfo` were removed.
 
 #### Who is affected?
 
-This affects anyone using the addAction methods removed or with dependencies like `compileOnly group: "com.liferay", name: "com.liferay.portal.vulcan.api", version: "[1.0.0, 2.0.0)"`.
+This affects anyone using the removed `addAction` methods or anyone that has dependencies like `compileOnly group: "com.liferay", name: "com.liferay.portal.vulcan.api", version: "[1.0.0, 2.0.0)"`.
 
 #### How should I update my code?
 
-Use addAction methods with signature `String, Class, GroupedModel, String, Object, UriInfo` and `String, Class, Long, String, String, Object, Long, UriInfo`
+Use `addAction` methods with the signature `String, Class, GroupedModel, String, Object, UriInfo` or `String, Class, Long, String, String, Object, Long, UriInfo`.
 
 #### Why was this change made?
 
-This methods were removed as part of a clean up refactor.
+These methods were removed as part of a cleanup refactor.
 
 ---------------------------------------
 
@@ -389,25 +393,25 @@ This feature has been deprecated.
 
 ---------------------------------------
 
-### ContentField value Property Name Has Changed to contentFieldValue
+### The ContentField value Property Name Was Changed to contentFieldValue
 - **Date:** 2020-Mar-18
 - **JIRA Ticket:** [LPS-106886](https://issues.liferay.com/browse/LPS-106886)
 
 #### What changed?
 
-The property name `value` inside ContentField schema in Headless Delivery API has changed to `contentFieldValue`
+In Headless Delivery API, the property name `value` inside the ContentField schema was changed to `contentFieldValue`.
 
 #### Who is affected?
 
-This affects REST clients depending in the ContentField `value` property name
+This affects REST clients depending in the ContentField `value` property name.
 
 #### How should I update my code?
 
-Change the property name to `contentFieldValue` in the REST client
+Change the property name to `contentFieldValue` in the REST client.
 
 #### Why was this change made?
 
-This change restore consistency with all value property names in the Headless APIs, called `{schemaName}+Value`
+This change restores consistency with all value property names in the Headless APIs, called `{schemaName}+Value`.
 
 ---------------------------------------
 
@@ -706,7 +710,7 @@ The `ddmFieldArray` has several entries with following fields:
 
 #### Who is affected?
 
-This affects anyone with custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
+This affects anyone with custom developments that execute queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields.
 
 #### How should I update my code?
 
@@ -796,5 +800,41 @@ Update the path to reference `clay` instead of `lexicon`
 #### Why was this change made?
 
 This change was made to unify references to the icon sprite map.
+
+---------------------------------------
+
+### Replaced portal properties: view.count.enabled and buffered.increment.enabled
+- **Date:** 2020-Oct-01
+- **JIRA Ticket:** [LPS-120626](https://issues.liferay.com/browse/LPS-120626) and [LPS-121145](https://issues.liferay.com/browse/LPS-121145)
+
+#### What changed?
+
+Enabling and disabling view counts globally and specifically for entities has been removed from portal properties and is now configured as system settings. View counts can be configured in the UI at *System Settings* &rarr; *Infrastructure* &rarr; *View Count* or using a configuration file named `com.liferay.view.count.configuration.ViewCountConfiguration.config`.
+
+Here are the portal property changes:
+
+The `buffered.increment.enabled` portal property has been removed. Enabling and disabling view counts globally is now done using the `enabled` property on the View Count page.
+
+Disabling view count behavior for a specific entity is no longer done in portal properties, for example, by setting `view.count.enabled[SomeEntity]=false` in 7.3 or `buffered.increment.enabled[SomeEntity]=false` in 7.2, but is now done by adding the entity class name to the `Disabled Class Name` value list on the View Count page.
+
+#### Who is affected?
+
+This affects anyone who has the portal property setting `view.count.enabled=false` or `buffered.increment.enabled=false`.
+
+This affects anyone who has disabled view counts for some entity (e.g., `SomeEntity`) using portal property settings `view.count.enabled[SomeEntity]=false` in early 7.3 versions or `buffered.increment.enabled[SomeEntity]=false` in 7.2 portal.
+
+#### How should I update my code?
+
+Remove `view.count.enabled` or `buffered.increment.enabled` portal properties and entity-specific properties such as `view.count.enabled[SomeEntity]=false` or `buffered.increment.enabled[SomeEntity]=false`.
+
+Configure view count behavior in System Settings or using a configuration file:
+
+In *System Settings* &rarr; *Infrastructure* &rarr; *View Count*, set `enabled` to `false` to disable view counts globally, or set `enabled` to `true` to enable view counts globally and disable view counts for specific entities by adding the entity class names to the `Disabled Class Name` value list.
+
+To use a configuration file, configure view counts in System Settings, save the settings, and export them to a `com.liferay.view.count.configuration.ViewCountConfiguration.config` file. Then deploy the configuration by placing the file in your `[Liferay Home]/osgi/configs` folder.
+
+#### Why was this change made?
+
+This change was made to facilitate managing view count behavior.
 
 ---------------------------------------
