@@ -1,12 +1,21 @@
-Questions App
-=============
+Questions
+=========
 
 .. toctree::
    :maxdepth: 2
 
-   questions-app/user_guide.rst
-   questions-app/developer_guide.rst
-   questions-app/apis.rst
+   questions/using-the-questions-app.md
+   questions/configuring-the-questions-app.md
+   questions/developer_guide.rst
+   questions/apis.rst
 
-.. include:: /collaboration-and-social/questions-app/README.rst
-   :start-line: 2
+-  :doc:`/collaboration-and-social/questions/using-the-questions-app`
+-  :doc:`/collaboration-and-social/questions/configuring-the-questions-app`
+
+Developer Guide
+---------------
+Coming soon!
+
+APIs
+----
+Coming soon!
