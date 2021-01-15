@@ -4,9 +4,8 @@ User Guide
 .. toctree::
    :maxdepth: 2
 
-   user-guide/getting-started-with-the-questions-app.md
    user-guide/using-the-questions-app.md
    user-guide/configuring-the-questions-app.md
 
-.. include:: /collaboration-and-social/questions-app/user-guide/README.rst
-   :start-line: 2
+-  :doc:`/collaboration-and-social/questions-app/user-guide/using-the-questions-app`
+-  :doc:`/collaboration-and-social/questions-app/user-guide/configuring-the-questions-app`
