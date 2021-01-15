@@ -18,7 +18,7 @@ To add the Questions app to a Site,
 
 1. Locate the app under the Collaboration section of widgets. Drag the app to the page.
 
-    ![Locate the Questions app listed under the Collaboration section.](getting-started-with-the-questions-app/images/01.png)
+    ![Locate the Questions app listed under the Collaboration section.](using-the-questions-app/images/14.png)
 
 After adding the Questions app to a Site, topics can be created and users can begin asking and answering questions.
 
