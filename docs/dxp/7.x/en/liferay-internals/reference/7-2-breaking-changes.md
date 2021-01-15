@@ -895,33 +895,6 @@ was removed in Liferay Portal 7.2.
 
 ---------------------------------------
 
-### Removed Inner Class in DDMExpressionException
-- **Date:** 2020-Jul-14
-- **JIRA Ticket:** [LPS-81609](https://issues.liferay.com/browse/LPS-81609)
-
-#### What changed?
-
-The public inner class
-`com.liferay.dynamic.data.mapping.expression.DDMExpressionException.FunctionNotAllowed`
-was removed from the class
-`com.liferay.dynamic.data.mapping.expression.DDMExpressionException`.
-
-#### Who is affected?
-
-This affects anyone who used the removed inner class.
-
-#### How should I update my code?
-
-Use the inner class
-`com.liferay.dynamic.data.mapping.expression.DDMExpressionException.FunctionNotDefined`
-instead.
-
-#### Why was this change made?
-
-This change is part of the Expression API Refactoring on [LPS-81609](https://issues.liferay.com/browse/LPS-81609)
-
----------------------------------------
-
 ### Replaced method in DDMFormInstanceRecordLocalService
 - **Date:** 2020-Jul-14
 - **JIRA Ticket:** [LPS-81564](https://issues.liferay.com/browse/LPS-81564)
