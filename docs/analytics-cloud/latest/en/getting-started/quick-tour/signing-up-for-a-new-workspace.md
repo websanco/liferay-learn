@@ -18,17 +18,17 @@ Clicking on the the Start Free Trial button from the home screen will take your 
 
 **Workspace Name:** Give a name for your new analytics workspace.
 
-**Data Center Location:** Select a server location, which will store all of your analytics and website visitors data. Currently, Liferay Analytics Cloud offers three data center locations.
+**Data Center Location:** Select a server location, which will store all of your analytics and website visitors data. Currently, Liferay Analytics Cloud offers four data center locations:
 
 * North America - Oregon, USA
 * South America - São Paulo, Brazil
 * Europe - London, United Kingdom
 * Europe - Frankfurt, Germany
 
-**Timezone:** Set the timezone for your workspace. Analytics data presented in your workspace will be based on this timezone. 
+**Timezone:** Select a timezone for your workspace. Analytics data presented in your workspace will be based on this timezone. 
 
 ```Warning::
-The timezone cannot be changed after this setup.
+The timezone cannot be changed after this initial setup.
 ```
 
 **Friendly URL:** Set a friendly url for your workspace that you can easily share with other collaborators.
