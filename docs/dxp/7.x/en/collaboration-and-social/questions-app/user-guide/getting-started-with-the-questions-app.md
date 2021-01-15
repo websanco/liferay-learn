@@ -1,11 +1,9 @@
 # Getting Started with the Questions App
 
-The Questions app is a new UI of the Message Boards application more focused in a questions and answers format but maintaining the same elements of Message Boards. The Questions app allows the creation of,
+The Questions app is a new UI of the Message Boards application, focused on presenting a question and answer format. The Questions app allows the creation of,
 
 **Topics:** Themes where questions are categorized
-
 **Questions:** A question inside the app
-
 **Answers:** An answer to a specific question
 
 When questions are created, Tags can also be used to help others find relevant content.
@@ -14,7 +12,7 @@ When questions are created, Tags can also be used to help others find relevant c
 
 To add the Questions app to a Site,
 
-1. Navigate to the site page where the app will be added.
+1. Navigate to the site page where the app is desired.
 
 1. Click on the Add icon (![Add icon](../../../images/icon-add-app.png)) at the top right of the page.
 

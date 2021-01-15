@@ -1,12 +1,34 @@
 # Using the Questions App
 
-After [adding the Questions app to a Site](getting-started-with-the-questions-app.md#adding-a-questions-app-to-a-site), topics can be created for users to post different questions.
+The Questions app is a new UI of the Message Boards application, focused on presenting a question and answer format. The Questions app allows the creation of,
 
+**Topics:** Themes where questions are categorized
+**Questions:** A question inside the app
+**Answers:** An answer to a specific question
+
+When questions are created, Tags can also be used to help others find relevant content.
+
+## Adding a Questions App to a Site
+
+To add the Questions app to a Site,
+
+1. Navigate to the site page where the app is desired.
+
+1. Click on the Add icon (![Add icon](../../../images/icon-add-app.png)) at the top right of the page.
+
+1. Locate the app under the Collaboration section of widgets. Drag the app to the page.
+
+    ![Locate the Questions app listed under the Collaboration section.](getting-started-with-the-questions-app/images/01.png)
+
+After adding the Questions app to a Site, topics can be created and users can begin asking and answering questions.
+
+<!-- What permissions?
 Note that only users with the requisite permissions have the ability to create topics.
+-->
 
 ## Creating Topics
 
-1. Click the *New Topic* button. 
+1. Click the *New Topic* button.
 
    ![Click on the new topic button to create a new topic.](using-the-questions-app/images/01.png)
 
@@ -40,9 +62,11 @@ Note that only users with the requisite permissions have the ability to create t
 
     ![The answers are visible below the question.](using-the-questions-app/images/06.png)
 
-Once a question has been answered, those answers can be managed:
+### Managing Answers
 
-**Rating:** You can give the answer a [rating](../../social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows. 
+Once a question has been answered, those answers can be managed in the following ways:
+
+**Rating:** You can give the answer a [rating](../../social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows.
 
 **Sort:** You can use the tabs to sort answers by Active, Oldest, or Votes.
 
@@ -70,15 +94,15 @@ There are a few different ways to search for questions:
 
 ![Click on the tags tab to see all tags.](using-the-questions-app/images/09.png)
 
-## Subscriptions
+## Subscriptions to Topics and Questions
 
-You can subscribe to both topics and questions. This makes it easy to go back to your favorite topics and favorite questions.
+You can subscribe to both topics and questions to receive in-site and email notifications for updates.
 
 To subscribe to a topic, click the *Subscribe* button below the topic title bar.
 
 ![Click on the subscribe button to subscribe to a topic.](using-the-questions-app/images/10.png)
 
-To subscribe to a question, click the subscribe bell button next to the question. Note that when you ask a question, you're automatically subscribed to it. 
+To subscribe to a question, click the subscribe bell button next to the question. When you ask a question, you're automatically subscribed to it.
 
 ![Click on the subscribe bell button to subscribe to a question](using-the-questions-app/images/11.png)
 
@@ -88,8 +112,12 @@ To view your subscriptions, click on the *My Subscriptions* tab. A list of all t
 
 ## My Activity
 
-You can track your use of the Questions app by clicking on the *My Activity* tab. 
+You can track your use of the Questions app by clicking on the *My Activity* tab.
 
 ![Click on the My Activity tab to track their use of the Questions app.](using-the-questions-app/images/13.png)
 
 Here is displayed your ranking, the number of questions they have asked, and a list of each of these questions.
+
+## What's Next
+
+* [Configuring the Questions App](./configuring-the-questions-app.md)
