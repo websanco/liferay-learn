@@ -1,10 +1,10 @@
 # Configuring the Questions App
 
-There are two primary ways to configure Questions: through the app configuration and through the System Settings configuration.
+There are two primary methods for configuring the Questions app: directly through the app configuration and through the System Settings configuration.
 
 To configure through the application,
 
-1. Click on the Options icon (![Options icon](../../../images/icon-options.png)) of the app and click *Configuration*.
+1. Click on the Options icon (![Options icon](../../images/icon-options.png)) of the app and click *Configuration*.
 
     ![Click on the configuration link of the app.](./configuring-the-questions-app/images/01.png)
 
@@ -19,25 +19,35 @@ To configure through System Settings,
 
 Topics can be displayed as cards or as a list.
 
-1. Under General Settings, there is a Show Cards for Topic Navigation option. If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions.
+1. Click on the Options icon (![Options icon](../../images/icon-options.png)) of the app and click *Configuration*.
+
+    ![Click on the configuration link of the app.](./configuring-the-questions-app/images/01.png)
+
+1. Under General Settings, there is a Show Cards for Topic Navigation option.
+
+  If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions.
 
     ![The configuration window opens with different options.](./configuring-the-questions-app/images/02.png)
 
 ## Limiting Topic Display
 
-Questions default display behavior is to show all Topics. You can opt to only display certain topics by configuring a Root Topic.
+Questions default display behavior is to show all Topics. You can opt to only display certain topics by configuring a Root Topic. To only display specific sub-topics or questions do the following,
 
-1. By default, the app will display all existing topics. To show the questions of one specific topic, click the *Select* button under Root Topic ID.
+1. Click on the Options icon (![Options icon](../../images/icon-options.png)) of the app and click *Configuration*.
+
+    ![Click on the configuration link of the app.](./configuring-the-questions-app/images/01.png)
+
+1. Click the *Select* button under Root Topic ID.
 
     ![Select an individual topic as the root topic.](./configuring-the-questions-app/images/03.png)
 
-1. Select a topic and click *Save*. The app will now only show questions for the selected topic.
+1. Select a topic and click *Save*. The app will now only show sub-topics and questions for the selected topic.
 
 ## Managing App Permissions
 
 To modify permissions for the app,
 
-1. Click on the Options icon (![Options icon](../../../images/icon-options.png)) of the app and click *Permissions*.
+1. Click on the Options icon (![Options icon](../../images/icon-options.png)) of the app and click *Permissions*.
 
     ![Click on the configuration link of the app.](./configuring-the-questions-app/images/01.png)
 
@@ -67,7 +77,7 @@ To enable this functionality you must configure it through System Settings,
 
 To create a new policy,
 
-1. Navigate to *Control Panel* &rarr; *Service Access Policy*. Click on the *Add* icon (![Add icon](../../../images/icon-add.png)).
+1. Navigate to *Control Panel* &rarr; *Service Access Policy*. Click on the *Add* icon (![Add icon](../../images/icon-add.png)).
 
 1. Give the policy a Name and Title. Click the *Switch to Advanced Mode* button at the bottom. Add the following two signatures under Allowed Service Signatures,
 
@@ -80,7 +90,7 @@ To create a new policy,
 
 1. Click *Save* to save the new policy.
 
-## System Configuration Reference 
+## System Configuration Reference
 
 | Setting | Description |
 | --- | --- |

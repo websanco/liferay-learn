@@ -14,7 +14,7 @@ To add the Questions app to a Site,
 
 1. Navigate to the site page where the app is desired.
 
-1. Click on the Add icon (![Add icon](../../../images/icon-add-app.png)) at the top right of the page.
+1. Click on the Add icon (![Add icon](../../images/icon-add-app.png)) at the top right of the page.
 
 1. Locate the app under the Collaboration section of widgets. Drag the app to the page.
 
@@ -66,7 +66,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 Once a question has been answered, those answers can be managed in the following ways:
 
-**Rating:** You can give the answer a [rating](../../social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows.
+**Rating:** You can give the answer a [rating](../social-tools/user-guide/using-the-ratings-system.md) using the up or down arrows.
 
 **Sort:** You can use the tabs to sort answers by Active, Oldest, or Votes.
 
