@@ -1,24 +1,6 @@
 # Creating A Liferay Workspace
 
-You can create a Liferay Workspace with [Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) or manually. 
-
-## Creating a Liferay Workspace with Blade CLI
-
-1. At your command line interface, navigate to the folder where you want your workspace generated. 
-
-1. Run this command: 
-
-   ```bash
-   blade init -v 7.3 [workspace name]
-   ```
-
-Your workspace is created. Note that you can target any 7.x version of Liferay: 
-
-```bash
-blade init -v 7.0 [workspace name]
-```
-
-The workspace version is stored in the hidden `.blade.properties` file in the workspace's root folder, using the `liferay.version.default` property. When you create projects based on templates, the version stored here determines which template version is used. 
+You can create a Liferay Workspace manually or with [Blade CLI](../blade-cli/installing-and-updating-blade-cli.md). 
 
 ## Creating a Liferay Workspace Manually
 
@@ -59,6 +41,24 @@ To create a Liferay Workspace manually, you must have [Gradle](https://gradle.or
     ```
 
     This defines the lastest GA of Liferay Portal CE at the time of this writing. You can always get a current list using Blade CLI by typing `blade init -l`. 
+
+## Creating a Liferay Workspace with Blade CLI
+
+1. At your command line interface, navigate to the folder where you want your workspace generated. 
+
+1. Run this command: 
+
+   ```bash
+   blade init -v 7.3 [workspace name]
+   ```
+
+Your workspace is created. Note that you can target any 7.x version of Liferay: 
+
+```bash
+blade init -v 7.0 [workspace name]
+```
+
+The workspace version is stored in the hidden `.blade.properties` file in the workspace's root folder, using the `liferay.version.default` property. When you create projects based on templates, the version stored here determines which template version is used. 
 
 ## Configuring a Proxy 
 

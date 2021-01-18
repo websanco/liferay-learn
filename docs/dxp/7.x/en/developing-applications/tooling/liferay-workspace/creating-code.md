@@ -4,7 +4,7 @@ Liferay Workspace is the developer's tool for creating and managing Liferay deve
 
 ## Creating Projects
 
-[Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) makes it easy to create projects in Liferay Workspace. 
+[Blade CLI](../blade-cli/installing-and-updating-blade-cli.md) makes it easy to create projects in Liferay Workspace by providing pre-built project templates. Alternatively, you can create projects manually. 
 
 ### Creating a Project Using Blade CLI
 
@@ -32,16 +32,11 @@ You don't need Blade CLI to create projects. You can create a project folder man
    cd [my project name]
    ```
 
-1. Create a `build.gradle` script for your project. Since you're using Liferay Workspace, you need only define the dependencies you need: 
+1. Create a `build.gradle` script for your project. Since you're using Liferay Workspace, most of the time you only need one dependency: 
 
    ```groovy
    dependencies {
-       compileOnly group: "com.liferay", name: "biz.aQute.bnd.annotation", version: "4.2.0.LIFERAY-PATCHED-1"
-       compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "8.1.0"
-       compileOnly group: "com.liferay.portal", name: "release.portal.api", version: "7.3.3-ga4"
-       compileOnly group: "javax.portlet", name: "portlet-api", version: "3.0.0"
-       compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
-       compileOnly group: "org.osgi", name: "osgi.core", version: "6.0.0"
+      compileOnly group: "com.liferay.portal", name: "release.portal.api"
    }
    ```
 
@@ -88,14 +83,3 @@ If you're using the Maven version of Workspace, the steps are exactly the same, 
 
 To initialize the server, use this command: ``mvn bundle-support:init``. 
 ```
-
-### Creating a Project Using Maven
-
-1. List the archetypes and find the one that most closely matches what you want to do: 
-
-   ```bash
-   mvn archetype:generate -Dfilter=liferay
-   ```
-
-1. Choose the archetype, answer the prompts, and your project is generated. 
-
