@@ -119,6 +119,10 @@ Follow these steps to add a new packaged Fragment to the contributed Fragment Co
 
     ```json
     {
+        "fragments": [
+            "marketing-card",
+            "marketing-jumbotron"
+        ],
         "name": "Marketing Collection"
     }
     ```
