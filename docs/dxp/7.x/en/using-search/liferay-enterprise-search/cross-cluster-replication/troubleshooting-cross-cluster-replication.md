@@ -18,7 +18,7 @@ To aid diagnosing connection issues, add an INFO log level for `com.liferay.port
 
 When a reindex is triggered on the Leader DXP node, the Follower Elasticsearch node may throw errors like this:
 
-```bash
+```
 [2021-01-10T14:49:21,478][WARN ][o.e.x.c.a.ShardFollowNodeTask] [es-follower-node-1] shard follow task encounter non-retryable error
 org.elasticsearch.transport.RemoteTransportException: [es-leader-node-1][127.0.0.1:9300][indices:data/read/xpack/ccr/shard_changes]
 Caused by: org.elasticsearch.index.IndexNotFoundException: no such index
@@ -26,7 +26,8 @@ Caused by: org.elasticsearch.index.IndexNotFoundException: no such index
 ```
 
 and this:
-```bash
+
+```
 [2021-01-10T14:49:50,750][WARN ][o.e.x.c.a.ShardFollowTasksExecutor] [es-follower-node-1] [liferay-20101][0] background management of retention lease [LiferayElasticsearchCluster_FOLLOWER/liferay-20101/3a22HGCGS9iDl5rCbutNHg-following-leader/liferay-20101/lZThZJuhTLSaNYTSxmeX8A] failed while following
 org.elasticsearch.index.seqno.RetentionLeaseNotFoundException: retention lease with ID [LiferayElasticsearchCluster_FOLLOWER/liferay-20101/3a22HGCGS9iDl5rCbutNHg-following-leader/liferay-20101/lZThZJuhTLSaNYTSxmeX8A] not found
   at org.elasticsearch.index.seqno.ReplicationTracker.renewRetentionLease(ReplicationTracker.java:282) ~[elasticsearch-6.8.6.jar:6.8.6]
@@ -48,21 +49,21 @@ ElasticsearchSecurityException security_exception current license is non-complia
 
 ## Local DXP Node Doesn't Read from Follower Elasticsearch Cluster
 
-In a DXP cluster using Cross-Cluster Replication, each local DXP node must be mapped to read from the local follower Elasticsearch cluster. For example, if you have 2 local DXP nodes and the `connectionId` of your follower connection is `ccr`, to match them with the follower Elasticsearch cluster, the Local Cluster Configurations property should be configured with values like this:
+In a DXP cluster using Cross-Cluster Replication, each local DXP node must be mapped to read from the local follower Elasticsearch cluster. For example, if you have two local DXP nodes and the `connectionId` of your follower connection is `ccr`, to match them with the follower Elasticsearch cluster, the Local Cluster Configurations property should be configured with values like this:
 
 ```properties
 localhost:9080,ccr
 localhost:9180,ccr
 ```
 
-Even if you're not binding the DXP nodes to `localhost`, the internal clustering code continues to identify each node using it; so `localhost` should be the hostname in this property. If you want to use a hostname other than `localhost` to identify DXP nodes internally (including in the CCR configuration) you must set the following [portal properties](./../../../installation-and-upgrades/reference/portal-properties.md) on each DXP node:
+Even if you're not binding the DXP nodes to `localhost`, the internal clustering code continues to identify each node using it, so `localhost` should be the hostname in this property. If you want to use a hostname other than `localhost` to identify DXP nodes internally (including in the CCR configuration) you must set the following [portal properties](./../../../installation-and-upgrades/reference/portal-properties.md) on each DXP node:
 
 ```properties
 portal.instance.protocol=http
 portal.instance.inet.socket.address=myhostname:9080
 ```
 
-With these properties, the above Local Cluster Configurations property will be
+With these properties, the above Local Cluster Configurations property is
 
 ```properties
 myhostname:9080,ccr
