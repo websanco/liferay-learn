@@ -2,33 +2,33 @@
 
 > **Liferay Enterprise Search (LES) Subscribers**
 
-Configure Liferay DXP's Cross-Cluster Replication module and Elasticsearch to set up a read-write connection from one Elasticsearch cluster to one Liferay DXP cluster node, and a read connection from another Elasticsearch cluster to a second Liferay DXP cluster node:
+This example configures Liferay DXP's Cross-Cluster Replication module and Elasticsearch to set up two connections: a read-write connection from one Elasticsearch cluster to one Liferay DXP cluster node and a read connection from another Elasticsearch cluster to a second Liferay DXP cluster node.
 
 ![With Cross-Cluster Replication, disparate data centers can hold synchronized Elasticsearch clusters with Liferay DXP indexes.](./configuring-an-example-ccr-installation-replicating-between-data-centers/images/01.png)
 
-This example uses two single-node Elasticsearch clusters on `localhost`, each with a copy of the same indexes. This represents the simplest scenario you can configure to reap the data locality and disaster recovery benefits of Cross-Cluster Replication.
+You'll use two single-node Elasticsearch clusters on `localhost`, each with a copy of the same indexes. This is the simplest scenario you can configure to reap the data locality and disaster recovery benefits of Cross-Cluster Replication.
 
-A vanilla Liferay DXP installation contains the indexes presented in the introductory [Cross Cluster Replication](./cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster) article. All the Elasticsearch clusters being used by Liferay DXP (2 clusters in this example) need these indexes.
+A vanilla Liferay DXP installation contains the indexes presented in [Cross Cluster Replication](./cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster). All Elasticsearch clusters used by Liferay DXP (two clusters in this example) need these indexes.
 
-Any Elasticsearch API calls provided here are in a format that allows you to copy and paste them directly into Kibana's Dev Tools console, which can be accessed via a separate Kibana installation or through the [LES Monitoring widget](../monitoring-elasticsearch.md).
+Elasticsearch API calls provided here can be copied and pasted into Kibana's Dev Tools console, accessible via a separate Kibana installation or through the [LES Monitoring widget](../monitoring-elasticsearch.md).
 
 ```note::
-   To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The ``elasticsearch.hosts: [ "http://localhost:<port>" ]`` setting in Kibana's ``kibana.yml`` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. In this article, we assume that your leader Elasticserach cluster node is configured to use ``9200`` while the follower node is using ``9202`` as HTTP port.
+   To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The ``elasticsearch.hosts: [ "http://localhost:<port>" ]`` setting in Kibana's ``kibana.yml`` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port ``9200`` and the follower uses port ``9202``. 
 ```
 
 ## Cluster Liferay DXP 
 
-For the example here, each Liferay DXP node requires a `Liferay Home/portal-ext.properties` file with the following contents:
+Each Liferay DXP node requires a `Liferay Home/portal-ext.properties` file with the following property:
 
 ```properties
 cluster.link.enabled=true
 ```
 
-This is a simplistic clustering configuration. See the [documentation on clustering](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md) for information on how clustering works with Liferay DXP.
+This is a simplistic clustering configuration. See [clustering](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md) for a full configuration. 
 
 ## Install Required Elasticsearch Plugins
 
-Make sure you install the Elasticsearch [plugins Liferay DXP needs](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.md#install-elasticsearch):
+Make sure you install the required Elasticsearch [plugins](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.md#install-elasticsearch):
 
 - `analysis-icu`
 - `analysis-stempel`
@@ -37,17 +37,15 @@ Make sure you install the Elasticsearch [plugins Liferay DXP needs](../../instal
 
 ## Prerequisite for Security: Configure Authentication and Encryption
 
-To encrypt communication (TLS/SSL) and enable user authentication between the Liferay DXP and the Elasticsearch nodes, you must [configure security](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md).
+To encrypt communication (TLS/SSL) and enable user authentication between the Liferay DXP and the Elasticsearch nodes, you must [configure security](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md):
 
-The high level steps are,
-
-1. Configure X-Pack Security in your Elasticsearch clusters and make sure the node certificates are signed by the same CA and the security settings of the Leader and the Follower clusters match.
+1. Configure X-Pack Security in your Elasticsearch clusters. Make sure the node certificates are signed by the same CA and the security settings of the Leader and the Follower clusters match.
 
    ```note::
-      TLS/SSL must be enabled for the HTTP and Transport layers on the Follower Elasticsearch cluster nodes. Liferay DXP connects to the Follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
+      TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
    ```
 
-1. Configure the DXP nodes. Configure the production mode settings for Elasticsearch in the `ElasticsearchConfiguration.config` file,  then configure the connections separately in `ElasticsearchConnectionConfiguration-[ccr/remote].config` files. Include the security settings on each connection. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for details. The [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) article covers configuring security for the read-only CCR connection from the local DXP nodes.
+1. Configure the DXP nodes. Configure the production mode settings for Elasticsearch in the `ElasticsearchConfiguration.config` file, then configure the connections separately in `ElasticsearchConnectionConfiguration-[ccr/remote].config` files. Include the security settings on each connection. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for details. [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) covers configuring security for the read-only CCR connection from the local DXP nodes.
 
 The example configurations are provided in full [here](./ccr-basic-use-case-config-reference.md).
 
