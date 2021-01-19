@@ -109,7 +109,7 @@ Now you'll modify the project to include another Fragment in the contributed Col
 
 Follow these steps to add a new packaged Fragment to the contributed Fragment Collection:
 
-1. Move the `liferay-l3m9/marketing-jumbotron` folder in the example's ZIP file into the `/l3m9-impl/src/main/resources/com/acme/l3m9/internal/fragment/contributor/l3m9/dependencies/` folder. See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
+1. Move the `liferay-l3m9/marketing-jumbotron` folder in the example's ZIP file into the `contributed-marketing-fragment-collection/src/main/resources/com/liferay/learn/fragments/dependencies/` folder. See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
 
     ```note::
       Packaged Fragments go in the `dependencies` folder, and the class package name and resources package name must match (e.g. ``[class.package.path].dependencies``).
