@@ -83,7 +83,7 @@ After you `understand Users <../users-and-permissions/users/understanding-users.
 * Add any necessary `custom User fields <../users-and-permissions/devops/adding-custom-fields-to-users.md>`_
 * Specify whether to allow strangers to create accounts
 * Define `Users authentication <../system-administration/configuring-liferay/virtual-instances/user-authentication.md>`_
-* Configure automatic association of Users to specific Sites, `Roles </users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.>`_, and `User Groups <../users-and-permissions/user_groups.html>`_
+* Configure automatic association of Users to specific Sites, `Roles <../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_, and `User Groups <../users-and-permissions/user_groups.html>`_
 
 Visit `Users <../system-administration/configuring-liferay/virtual-instances/users.md>`_, `User Authentication <../system-administration/configuring-liferay/virtual-instances/user-authentication.md>`_, and `Adding Custom Fields For Users <../users-and-permissions/devops/adding-custom-fields-to-users.md>`_ for details.
 
@@ -102,7 +102,7 @@ Secure Liferay
 
 It's really important to secure Liferay too. Go to `Securing Liferay <./securing-liferay/securing-liferay.md>`_ to learn more.
 
-Configure Backups 
+Configure Backups
 ~~~~~~~~~~~~~~~~~
 
 As you develop your virtual instance make sure to back it up. See `Backing Up <./maintaining-a-liferay-dxp-installation/backing-up.md>`_ for guidance.
@@ -120,7 +120,7 @@ Improve your sites with `themes <../getting-started/changing-your-sites-appearan
 Configure Roles and Permissions
 -------------------------------
 
-Use `Roles </users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.>`_ to categorize all of your Users. Define `Permissions <../users-and-permissions/roles-and-permissions/defining-role-permissions.md>`_ for the activities Users perform in your Instances and Sites.
+Use `Roles <../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_ to categorize all of your Users. Define `Permissions <../users-and-permissions/roles-and-permissions/defining-role-permissions.md>`_ for the activities Users perform in your Instances and Sites.
 
 Add Custom Fields
 -----------------
