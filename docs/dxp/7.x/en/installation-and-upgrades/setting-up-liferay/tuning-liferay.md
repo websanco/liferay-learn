@@ -2,16 +2,16 @@
 
 There are several ways to tune Liferay's performance. This involves configuring the Java Virtual Machine and frameworks that support the Liferay application, monitoring performance and resources, and adjusting settings to meet your needs. Here's an overview of the tuning topics.
 
-## Disable Developer Settings
+## Disabling Developer Settings
 
-Here are some of the ways Liferay and its supporting frameworks facilitate development: 
+Some developer features aren't intended for production and must therefore be disabled to optimize performance. These include features that do these things:
 
 * Accommodate debuggers
 * Perform system checks
 * Upgrade data on startup automatically
 * Poll for code changes to apply automatically
 
-These features help during development but slow down performance. They're not intended for production environments and must therefore be disabled to optimize performance. Start with disabling all developer Portal Properties.
+Start with disabling all developer Portal Properties.
 
 ### Portal Developer Properties
 
@@ -60,7 +60,9 @@ To disable development mode and the mapped file in Tomcat, for example, update t
 
 Development mode and the mapped file are disabled.
 
-## Thread Pool 
+Now that you have disabled non-production developer features, configure the application server's thread pool.
+
+## Configuring the Thread Pool 
 
 Each request to the application server consumes a worker thread for the duration of the request. When no threads are available to process requests, the request is queued to wait for the next available worker thread. In a finely tuned system, the number of threads in the thread pool are balanced with the total number of concurrent requests. There should not be a significant amount of threads left idle to service requests.
 
@@ -87,33 +89,30 @@ If you're testing a CPU-based load or if you're concerned about CPU capacity,  t
 
 Additional tuning parameters around `Connector` are available, including the connector types, the connection timeouts, and TCP queue. Consult your application server's documentation for details.
 
-## Database Connection Pool
+## Configuring the Database Connection Pool
 
-Database connection pools manage database connections for reuse, saving you from opening new connections with every new request. Liferay can use C3PO, DBCP, HikariCP, or Tomcat for connection pooling. The connection pool provider is set using the `jdbc.default.liferay.pool.provider` [Portal Property](../reference/portal-properties.md). HikariCP is the default.
+Database connection pools manage database connections for reuse, saving you from opening new connections with every new request. The pool provides a connection whenever Liferay needs to retrieve data from the database. If the pool size is too small, requests queue in the server waiting for database connections. If the size is too large, however, idle database connections waste resources.
 
-The database connection pool should be roughly 30-40% of the thread pool size. It provides a connection whenever Liferay needs to retrieve data from the database (e.g., user login). If the pool size is too small, requests queue in the server waiting for database connections. If the size is too large, however, idle database connections waste resources. As with thread pools, monitor these settings and adjust them based on your performance tests.
+Configure the pool size slightly larger than the thread pool size, unless the thread pool size is large (e.g., 200+). Under normal usage, most worker threads use at most one JDBC connection at a time. Some threads, such as threads that have nested transactions, however, use multiple database connections. Making the connection pool size slightly larger than the thread pool size accounts for such threads.
 
-In Tomcat, the connection pools are configured in the Resource elements in `$CATALINA_HOME/conf/Catalina/localhost/ROOT.xml`. Here's an example connection pool configuration:
-
-```xml
-<Resource
-    acquireIncrement="5"
-    auth="Container"
-    description="Liferay DB Connection"
-    driverClass="[place the driver class name here]"
-    factory="org.apache.naming.factory.BeanFactory"
-    jdbcUrl="[place the URL to your database here]"
-    maxPoolSize="75"
-    minPoolSize="10"
-    name="jdbc/LiferayPool"
-    password="[place your password here]"
-    type="com.mchange.v2.c3p0.ComboPooledDataSource"
-    user="[place your user name here]"
-/>
+```note::
+   If the thread pool size is large, making the connection pool a similar size won't help performance.
 ```
 
-This configuration starts with 10 connections and increments by 5 as needed to a maximum of 75 connections in the pool.
+If the number of connections encroaches on your database connection limit, shrink your Counter data source's pool size. Since Counter database transactions are small, fast, and never nested, the Counter connection pool is a good candidate for reducing. For more information on the Counter data source, see [Database Configuration for Cluster Nodes](docs/dxp/7.x/en/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/database-configuration-for-cluster-nodes.md).
 
-## Java Virtual Machine
+Liferay can use C3PO, DBCP, HikariCP, or Tomcat for connection pooling. The connection pool provider is set using the [`jdbc.default.liferay.pool.provider`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) [Portal Property](../reference/portal-properties.md). HikariCP is the default.
+
+```properties
+jdbc.default.liferay.pool.provider=hikaricp
+jdbc.default.maximumPoolSize=85
+jdbc.default.minimumIdle=10
+```
+
+There are [JDBC connection pool Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) for all of the supported connection pools. See your connection pool vendor's information for additional configuration details.
+
+As with thread pools, monitor your connection pools and adjust them based on your performance tests.
+
+## Configuring Your Java Virtual Machine
 
 Your application server runs in a Java Virtual Machine (JVM). Memory management and garbage collection affect how fast Liferay responds to user requests. Please see [Tuning Your JVM](./tuning-your-jvm.md) for instructions next.
