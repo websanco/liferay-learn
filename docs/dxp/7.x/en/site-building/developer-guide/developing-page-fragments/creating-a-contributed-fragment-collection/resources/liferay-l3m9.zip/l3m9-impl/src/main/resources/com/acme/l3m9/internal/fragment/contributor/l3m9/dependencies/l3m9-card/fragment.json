@@ -1,6 +1,7 @@
 {
 	"configurationPath": "index.json",
 	"cssPath": "index.css",
+	"fragmentEntryKey": "L3M9-Card",
 	"htmlPath": "index.html",
 	"jsPath": "index.js",
 	"name": "L3M9 Card",
