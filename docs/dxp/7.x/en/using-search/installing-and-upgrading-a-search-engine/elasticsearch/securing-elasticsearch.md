@@ -166,8 +166,6 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
     #xpack.security.http.ssl.certificate_authorities: [ "certs/ca.crt" ]
     #xpack.security.http.ssl.certificate: certs/elastic-nodes.crt
     #xpack.security.http.ssl.key: certs/elastic-nodes.key
-    
-    xpack.security.http.ssl.verification_mode: certificate
     ```
 
 ### Example Elasticsearch Security Configuration
@@ -192,7 +190,6 @@ xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.truststore.password: liferay
-xpack.security.http.ssl.verification_mode: certificate
 
 # Comment out when Kibana and Liferay's X-Pack Monitoring are also configured
 #xpack.monitoring.collection.enabled: true
