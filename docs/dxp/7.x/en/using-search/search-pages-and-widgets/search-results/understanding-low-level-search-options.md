@@ -75,7 +75,7 @@ Liferay's native assets, and customs assets that have implemented a `ModelSummar
 * If two fields are present, the first is used as the title (large, bold text) and the second is the description field.
 * If more than two fields are present, the first is used as the title field (with large, bold text), and the rest are mashed up as a description field.
 
-SCREENSHOT of last scenario
+![The Low Level Search Framework contains logic to produce attractive result summaries on the fly.](./understanding-low-level-search-options/images/04.png)
 
 ## Low Level Search and Permission Checking
 
@@ -84,7 +84,5 @@ Permissions checking is not available via low level search. If you search even t
 ## Low Level Search and Relevance
 
 Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget.
-
-SCREENSHOT of side-by-side results
 
 Now you’re able to configure the out of the box search widgets to participate in searches against any Elasticsearch index in the cluster.
