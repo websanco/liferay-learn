@@ -28,7 +28,7 @@ Clicking on the the Start Free Trial button from the home screen will take your 
 **Timezone:** Select a timezone for your workspace. Analytics data presented in your workspace will be based on this timezone. 
 
 ```Warning::
-The timezone cannot be changed after this initial setup.
+The timezone currently cannot be changed after this initial selection.
 ```
 
 **Friendly URL:** Set a friendly url for your workspace that you can easily share with other collaborators.
