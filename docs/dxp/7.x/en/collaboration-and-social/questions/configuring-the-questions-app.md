@@ -27,7 +27,7 @@ Topics can be displayed as cards or as a list.
 
   If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions.
 
-    ![The configuration window opens with different options.](./configuring-the-questions-app/images/02.png)
+  ![The configuration window opens with different options.](./configuring-the-questions-app/images/02.png)
 
 ## Limiting Topic Display
 
