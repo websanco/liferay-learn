@@ -20,7 +20,7 @@ The categories you define on this Vocabulary (1) are the ones you can choose whe
 
 ![The available options in the session-based Segment corresponds to the Categories in the global Vocabulary.](./session-property-vocabularies/images/02.png)
 
-You can create a new global Vocabulary or use an existing one. To create a new Vocabulary or update the Categories on an existing one, see [Defining Categories and Vocabularies for Content](./defining-categories-and-vocabularies-for-content.md). You can use vocabularies with [Public or Internal Visibility](./organizing-content-with-categories-and-tags.md#vocabulary-visibility). Session Property Vocabularies only work with with global vocabularies.
+You can create a new global Vocabulary or use an existing one. To create a new Vocabulary or update the Categories on an existing one, see [Defining Categories and Vocabularies for Content](./defining-categories-and-vocabularies-for-content.md). You can use vocabularies with [Public or Internal Visibility](./organizing-content-with-categories-and-tags.md#vocabulary-visibility). Session Property Vocabularies only work with global vocabularies.
 
 ```note::
    You can only create and edit global vocabularies in the global Site.
