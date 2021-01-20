@@ -57,4 +57,4 @@ Once you've successfully purchased your Analytic Cloud workspace, our team will 
 
 Your workspace owner will receive an invitation email once the workspace is provisioned. The owner can then login to [analytics.liferay.com](https://analytics.liferay.com) and finish configuring the workspace.
 
-See the next section on how to [access your workspace](./accessing-your-workspace.md).
+See the next section on how to [access your workspace](./accessing-your-workspace.md). 
