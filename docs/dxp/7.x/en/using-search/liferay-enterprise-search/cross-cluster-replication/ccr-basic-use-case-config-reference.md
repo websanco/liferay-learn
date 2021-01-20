@@ -5,7 +5,7 @@ To help with the CCR configuration process, the example configurations from the 
 The configurations below assume you enable encrypted communications (TLS/SSL) and user authentication through X-Pack Security in your installation. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for more information.
 
 ```tip::
-   `Configuration values provided by .config files <../../../system-administration/system-settings/using-configuration-files.md>`__ are propagated throughout a DXP cluster as soon as the file is deployed to a single node. However, it's a best practice to provide identical configurations for each cluster node. 
+   `Configuration values provided by .config files <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`__ are propagated throughout a DXP cluster as soon as the file is deployed to a single node. However, it's a best practice to provide identical configurations for each cluster node. 
 ```
 
 ## Remote DXP Cluster Node Configurations

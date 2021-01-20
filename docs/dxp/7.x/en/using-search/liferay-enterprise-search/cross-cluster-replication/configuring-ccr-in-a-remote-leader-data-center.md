@@ -86,7 +86,6 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
    ```
 
 1. Configure the remote connection. Provide a configuration file in the `Liferay Home/osgi/configs` folder named `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-remote.config`: 
-```
 
    ```properties
    active=B"true"
@@ -102,7 +101,7 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
    ```
 
    ```important::
-   The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+      The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
    ```
 
 1. Copy these `.config` files to each follower DXP node, since they'll use the same remote (write) connection. The read-only follower connection is configured separately in [Configuring CCR in a Local/Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md).

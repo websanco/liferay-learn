@@ -24,7 +24,7 @@ Each Liferay DXP node requires a `Liferay Home/portal-ext.properties` file with 
 cluster.link.enabled=true
 ```
 
-This is a simplistic clustering configuration. See [clustering](../../../installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md) for a full configuration. 
+This is a simplistic clustering configuration. See [clustering](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md) for a full configuration. 
 
 ## Install Required Elasticsearch Plugins
 
@@ -53,6 +53,6 @@ The example configurations are provided in full [here](./ccr-basic-use-case-conf
 
 1. Download the Liferay DXP Cross-Cluster Replication for Elasticsearch LPKG from the [LES downloads page](https://customer.liferay.com/downloads).
 
-1. [Install the LPKG](../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) into all DXP nodes.
+1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) into all DXP nodes.
 
 If all your prerequisite tasks are completed and the Cross-Cluster Replication module is installed, continue by [configuring the servers in your remote data center](./configuring-ccr-in-a-remote-leader-data-center.md).
