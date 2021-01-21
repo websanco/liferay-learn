@@ -44,44 +44,39 @@ See Oracle's [Configuring Java Node Manager](https://docs.oracle.com/middleware/
 
 ### Configuring WebLogic's JVM
 
-Configure the JVM using variables and options in the WebLogic scripts and Managed Server.
+Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup script and in your Managed Server UI.
 
-1. Add the following variables to both your Admin Server startup script (`your-domain/startWebLogic.sh`) and Managed Server startup script (`your-domain/bin/startWebLogic.sh`)
+1. Create a `setUserOverridesLate.sh` script in `[Your Domain]/bin`.
+
+1. Add the following settings.
 
     ```bash
     export DERBY_FLAG="false"
     export JAVA_OPTIONS="${JAVA_OPTIONS} -Dfile.encoding=UTF-8 -Duser.timezone=GMT -da:org.apache.lucene... -da:org.aspectj..."
-    export MW_HOME="[/your WebLogic folder]"
+    export JAVA_PROPERTIES="-Dfile.encoding=UTF-8 ${JAVA_PROPERTIES} ${CLUSTER_PROPERTIES}"
+    export MW_HOME="[place your WebLogic Server folder path here]"
     export USER_MEM_ARGS="-Xmx2560m -Xms2560m"
+    export WLS_MEM_ARGS_64BIT="-Xms2560m -Xmx2560m"
+    export WLS_MEM_ARGS_32BIT="-Xms2560m -Xmx2560m"
     ```
 
-    The `DERBY_FLAG` setting disables the Derby server built in to WebLogic, as DXP does not require this server. The remaining settings support DXP's memory requirements, UTF-8 requirement, Lucene usage, and Aspect Oriented Programming via AspectJ.
+    The `DERBY_FLAG` setting disables the Derby server built in to WebLogic, as DXP does not require this server.
+    
+    `JAVA_OPTIONS` sets DXP's UTF-8 requirement, Lucene usage, and Aspect Oriented Programming via AspectJ.
+
+    `JAVA_PROPERTIES` also sets DXP's UTF-8 requirement.
 
     ```important::
        For DXP to work properly, the application server JVM must use the ``GMT`` time zone and ``UTF-8`` file encoding.
     ```
 
-    Also make sure to set `MW_HOME` to the folder containing the WebLogic server on the machine. For example,
+    Set `MW_HOME` to the folder containing the WebLogic server on the machine. For example,
 
     ```bash
     export MW_HOME="/Users/ray/Oracle/wls12210"
     ```
 
-1. Make sure `your-domain/bin/SetDomainEnv.sh` uses these memory settings:
-
-    ```bash
-    WLS_MEM_ARGS_64BIT="-Xms2560m -Xmx2560m"
-    export WLS_MEM_ARGS_64BIT
-
-    WLS_MEM_ARGS_32BIT="-Xms2560m -Xmx2560m"
-    export WLS_MEM_ARGS_32BIT
-    ```
-
-1. Set the Java file encoding to UTF-8 in `your-domain/bin/SetDomainEnv.sh` by appending `-Dfile.encoding=UTF-8` ahead of the other Java properties:
-
-    ```bash
-    JAVA_PROPERTIES="-Dfile.encoding=UTF-8 ${JAVA_PROPERTIES} ${CLUSTER_PROPERTIES}"
-    ```
+    The `*_MEM_ARGS` variables set DXP's starting and maximum heap memory capacity.
 
 1. Ensure that the Node Manager sets DXP's memory requirements when starting the Managed Server. In the Admin Server's console UI, navigate to the Managed Server where DXP is to be deployed and select the *Server Start* tab. Enter the following parameters into the *Arguments* field:
 
