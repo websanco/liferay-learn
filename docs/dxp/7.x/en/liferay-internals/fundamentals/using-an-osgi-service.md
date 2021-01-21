@@ -51,10 +51,14 @@ Start using the example.
     ```
 
     ```bash
-    unzip liferay-j1h1.zip
+    unzip liferay-j1h1.zip -d liferay-j1h1
     ```
 
 1. Build the example modules.
+
+    ```bash
+    cd liferay-j1h1
+    ```
 
     ```bash
     ./gradlew jar
