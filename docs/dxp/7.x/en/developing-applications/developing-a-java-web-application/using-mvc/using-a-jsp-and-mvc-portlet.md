@@ -19,7 +19,7 @@ Start with deploying the example.
    ```
 
    ```bash
-   unzip liferay-w3e7.zip
+   unzip liferay-w3e7.zip -d liferay-w3e7
    ```
 
 1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
@@ -29,6 +29,10 @@ Start with deploying the example.
    ```
 
 1. Build and deploy the example.
+
+    ```bash
+    cd liferay-w3e7
+    ```
 
     ```bash
      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
