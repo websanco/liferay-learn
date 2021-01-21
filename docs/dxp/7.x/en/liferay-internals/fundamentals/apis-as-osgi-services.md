@@ -32,10 +32,14 @@ Start up the example modules.
     ```
 
     ```bash
-    unzip liferay-p9g2.zip
+    unzip liferay-p9g2.zip -d liferay-p9g2
     ```
 
 1. From the project root folder, build the modules.
+
+    ```bash
+    cd liferay-p9g2
+    ```
 
     ```bash
     ./gradlew jar
