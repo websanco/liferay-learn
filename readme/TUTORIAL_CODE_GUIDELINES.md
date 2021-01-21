@@ -219,7 +219,7 @@ Here is example initial Bnd content for the different modules types.
 
 If you've defined APIs in your module, export their packages in your `bnd.bnd`.
 
-For example, the `k8s2-api` module publishes its com.acme.k8s2.Greeter interface by exporting the `com.acme.k8s2` package in the module's `bnd.bnd`:
+For example, the [`k8s2-api`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api) module publishes its [`com.acme.k8s2.Greeter`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java) interface by exporting the `com.acme.k8s2` package in the module's [`bnd.bnd`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd):
 
 ```properties
 Export-Package: com.acme.k8s2 
@@ -250,7 +250,7 @@ An implementation package should resemble the interface package but be *internal
 | Class Type | Fully Qualified Class Name |
 | :--------- | :------------------------- |
 | Interface | com.liferay.**dynamic.data.mapping.storage**.**DDMStorageAdapter** |
-| Implementation | com.acme.r2f1.internal.**dynamic.data.mapping.storage**.R2F1**DDMStorageAdapter** |
+| Implementation | [com.acme.r2f1.internal.**dynamic.data.mapping.storage**.R2F1**DDMStorageAdapter**](../docs/dxp/7.x/en/process-automation/forms/developer-guide/writing-a-form-storage-adapter/resources/liferay-r2f1.zip/r2f1-impl/src/main/java/com/acme/r2f1/internal/dynamic/data/mapping/storage/R2F1DDMStorageAdapter.java) |
 
 ## Classes
 
@@ -281,7 +281,7 @@ If your module uses localized content, specify the content using language proper
 
 #### Labels and Headings
 
-Include the project ID in labels and headings. For example, `c1n4` is the project ID used in these Language Keys:
+Include the project ID (in uppercase) in labels and headings. For example, `c1n4` is the project ID used in these Language Keys:
 
 ```properties
 c1n4-commerce-product-type=C1N4 Commerce Product Type
