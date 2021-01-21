@@ -10,8 +10,8 @@ public class S1J6CustomImpl implements S1J6 {
 
 	@Override
 	public String doSomething() {
-		StringBuilder sb = new StringBuilder();
 
+		StringBuilder sb = new StringBuilder();
 		sb.append("S1J6CustomImpl");
 		sb.append(", which delegates to ");
 		sb.append(_defaultService.doSomething());
@@ -20,8 +20,8 @@ public class S1J6CustomImpl implements S1J6 {
 	}
 
 	@Reference(
-		target = "(component.name=com.acme.s1j6.internal.S1J6Impl)",
 		unbind = "-"
+		target = "(component.name=com.acme.s1j6.internal.S1J6Impl)",
 	)
 	private S1J6 _defaultService;
 
