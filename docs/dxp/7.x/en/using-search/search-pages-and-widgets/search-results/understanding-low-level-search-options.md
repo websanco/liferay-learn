@@ -67,9 +67,9 @@ If you’re using *liferay-0* in your Federated Search Key and Indexes settings,
 
 ![Example of results from low level search.](./understanding-low-level-search-options/images/03.png)
 
-## Displaying Non-Liferay Results
+## Displaying Low Level Search Results
 
-Liferay's native assets, and customs assets that have implemented a `ModelSummaryContributor`, provide their own display logic that's used by the Search Results widget. Low level searches are different, since there's no summary to draw from:
+Assets indexed into the Liferay Company Index (e.g, `liferay-20097`) can implement a `ModelSummaryContributor` to provide their own display logic that's used by the Search Results widget. Low level searches use different display logic since there's no summary to draw from:
 
 * If only one field is configured, it's displayed as the title field (large, bold text is presented).
 * If two fields are present, the first is used as the title (large, bold text) and the second is the description field.
@@ -84,5 +84,22 @@ Permissions checking is not available via low level search. If you search even t
 ## Low Level Search and Relevance
 
 Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget.
+
+## Use Case: One Search Bar, Two Search Results
+
+Document the use case mentioned in the relevance section--
+
+1. Add a Low Level Search Options widget to the search page.
+
+1. Configure it by entering these settings:
+
+   **Indexes:** `liferay-0`
+   **Federated Search Key:** `liferay-0`
+
+1. Add a second Search Results widget to the search page.
+
+1. Configure the second Search Results:
+
+   **Federated Search Key:** `liferay-0`
 
 Now you’re able to configure the out of the box search widgets to participate in searches against any Elasticsearch index in the cluster.
