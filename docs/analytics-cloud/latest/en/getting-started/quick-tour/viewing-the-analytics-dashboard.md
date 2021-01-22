@@ -26,4 +26,5 @@ Most of the important settings are configured when you created the workspace. Ho
 * Workspace Usage Monitoring
 * Workspace Settings
 
-To see more about your workspace settings, see [Managing Your Analytics Project](../../administration/managing-projects.md).
+You will begin to see analytics data once your workspace is connected. For example, view Site specific analytics on the [Sites dashboard](../../touchpoints/sites-dashboard.md). To see more about your workspace settings, see [Managing Your Analytics Project](../../administration/managing-projects.md). 
+
