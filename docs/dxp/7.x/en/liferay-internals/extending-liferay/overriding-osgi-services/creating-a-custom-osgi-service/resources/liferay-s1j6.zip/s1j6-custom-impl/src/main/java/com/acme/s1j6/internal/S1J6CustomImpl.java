@@ -10,16 +10,18 @@ public class S1J6CustomImpl implements S1J6 {
 
 	@Override
 	public String doSomething() {
-
 		StringBuilder sb = new StringBuilder();
-		sb.append("S1J6CustomImpl, which delegates to " + _defaultService.doSomething());
+
+		sb.append(
+			"S1J6CustomImpl, which delegates to " +
+				_defaultService.doSomething());
 
 		return sb.toString();
 	}
 
 	@Reference(
-		unbind = "-"
 		target = "(component.name=com.acme.s1j6.internal.S1J6Impl)",
+		unbind = "-"
 	)
 	private S1J6 _defaultService;
 
