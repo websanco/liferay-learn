@@ -41,7 +41,6 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
    xpack.security.http.ssl.keystore.password: liferay
    xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
    xpack.security.http.ssl.truststore.password: liferay
-   xpack.security.http.ssl.verification_mode: certificate
 
    # For Kibana
    xpack.monitoring.collection.enabled: true
@@ -120,7 +119,11 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
 
 1. Start the Liferay DXP cluster node.
 
-Now the connection is configured. All that's left is to enable and configure CCR itself.
+Now the connection is configured. 
+
+![The CCR (READ) connection is configured and ready for use.](./configuring-ccr-in-a-local-follower-data-center/images/03.png)
+
+All that's left is to enable and configure CCR itself.
 
 ## Configure the Cross-Cluster Replication Module
 

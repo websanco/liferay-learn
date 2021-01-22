@@ -6,6 +6,10 @@ This example configures Liferay DXP's Cross-Cluster Replication module and Elast
 
 ![With Cross-Cluster Replication, disparate data centers can hold synchronized Elasticsearch clusters with Liferay DXP indexes.](./configuring-an-example-ccr-installation-replicating-between-data-centers/images/01.png)
 
+```important::
+   Differences in the configurations and procedure between Liferay DXP 7.2 and 7.3 are noted inline throughout these instructions.
+```
+
 You'll use two single-node Elasticsearch clusters on `localhost`, each with a copy of the same indexes. This is the simplest scenario you can configure to reap the data locality and disaster recovery benefits of Cross-Cluster Replication.
 
 A vanilla Liferay DXP installation contains the indexes presented in [Cross Cluster Replication](./cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster). All Elasticsearch clusters used by Liferay DXP (two clusters in this example) need these indexes.
@@ -61,5 +65,9 @@ The example configurations are provided in full [here](./ccr-basic-use-case-conf
 1. Download the Liferay DXP Cross-Cluster Replication for Elasticsearch LPKG from the [LES downloads page](https://customer.liferay.com/downloads).
 
 1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) into all DXP nodes.
+
+```tip::
+   Because multiple Elasticsearch connections are only used on Liferay DXP 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
+```
 
 If all your prerequisite tasks are completed and the Cross-Cluster Replication module is installed, continue by [configuring the servers in your remote data center](./configuring-ccr-in-a-remote-leader-data-center.md).

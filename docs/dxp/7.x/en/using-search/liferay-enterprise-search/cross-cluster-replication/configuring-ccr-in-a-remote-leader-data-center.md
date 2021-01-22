@@ -42,7 +42,7 @@ In the example setup, the first Elasticsearch cluster to configure is a producti
    xpack.monitoring.collection.enabled: true
    ```
 
-   To use the security settings (`xpack.security...`) you must set up passwords and obtain node certificates.
+   To use the security settings (`xpack.security...`) you must set up passwords and obtain node certificates. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for more information.
 
 1. Start the server. If you're in the root of the server directory, execute
 
@@ -75,7 +75,7 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
 1. Give it these contents:
 
 
-   For Liferay DXPO 7.3:
+   For Liferay DXP 7.3:
 
    ```properties
    productionModeEnabled="true"
