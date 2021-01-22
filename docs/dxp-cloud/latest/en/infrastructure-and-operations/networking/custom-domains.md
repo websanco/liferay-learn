@@ -52,7 +52,7 @@ Follow these steps to add custom domains to environment services via the DXP Clo
 
 ### Adding a Custom Domain via LCP.json
 
-Alternatively, you can add custom domains to an environment service by adding the `customDomains` property to its `LCP.json` file:
+Alternatively, you can replace the domains that an environment's service uses by adding the `customDomains` property to its `LCP.json` file. Add the property within an `environments` attribute for the specific environment:
 
 ```json
 {
@@ -71,7 +71,7 @@ Alternatively, you can add custom domains to an environment service by adding th
 ```
 
 ```important::
-   You must define a specific environment for each added custom domain, and you cannot use the same custom domain for multiple environments (except for `Disaster Recovery environments <../../troubleshooting/configuring-cross-region-disaster-recovery.md>`__ in different regions). This is necessary for DXP Cloud to properly generate certificates and route Users to the correct domian.
+   You must define a specific environment for each added custom domain, and you cannot use the same custom domain for multiple environments (except for `Disaster Recovery environments <../../troubleshooting/configuring-cross-region-disaster-recovery.md>`__ in different regions). This is necessary for DXP Cloud to properly generate certificates and route Users to the correct domain.
 ```
 
 Once a custom domain is added to your service and your changes are deployed, DXP Cloud handles the routing.
