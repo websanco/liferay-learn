@@ -1,4 +1,4 @@
-package com.acme.s1j6.internal;
+package com.acme.s1j6.internal.custom;
 
 import com.acme.s1j6.S1J6;
 
