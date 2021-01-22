@@ -12,9 +12,7 @@ public class S1J6CustomImpl implements S1J6 {
 	public String doSomething() {
 
 		StringBuilder sb = new StringBuilder();
-		sb.append("S1J6CustomImpl");
-		sb.append(", which delegates to ");
-		sb.append(_defaultService.doSomething());
+		sb.append("S1J6CustomImpl, which delegates to " + _defaultService.doSomething());
 
 		return sb.toString();
 	}
