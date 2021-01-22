@@ -4,7 +4,7 @@
 
 In a classic Liferay DXP/search engine installation, one Liferay DXP cluster talks to one Elasticsearch cluster, sending all of its read (execute a search query) and write (create a document) requests through one connection to the search engine cluster. This setup assumes all Elasticsearch cluster nodes are located in a single data center (though they can be in a different data center than the Liferay DXP servers).
 
-Addressing concerns about data locality and disaster recovery, Elasticsearch released a [Cross-Cluster Replication (CCR)](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html) feature that [LES subscribers](https://www.liferay.com/products/dxp/enterprise-search) can use with Liferay DXP, for Elasticsearch 7+ (refer to the [LES compatibility matrix](https://www.liferay.com/compatibility-matrix/liferay-enterprise-search) for version compatibility details). With the LES CCR module you can achieve an alternate form of multi-data-center deployment; it does not allow distributing an Elasticsearch cluster's nodes over multiple data centers, but does allow configuring and connecting separate Elasticsearch clusters in each data center. 
+Addressing concerns about data locality and disaster recovery, Elasticsearch released a [Cross-Cluster Replication (CCR)](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html) feature that [LES subscribers](https://www.liferay.com/products/dxp/enterprise-search) can use with Liferay DXP, for Elasticsearch 7+ (refer to the [LES compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) for version compatibility details). With the LES CCR module you can achieve an alternate form of multi-data-center deployment; it does not allow distributing an Elasticsearch cluster's nodes over multiple data centers, but does allow configuring and connecting separate Elasticsearch clusters in each data center. 
 
 The configuration assumes one cluster holding _leader_ indexes and at least one cluster holding _follower_ indexes replicated from the leader. Follower indexes are only used by Liferay DXP for reading data. Leader indexes are always used for writing, but can also be used for reading. 
 
@@ -65,7 +65,7 @@ Unless your setup reveals a very compelling reason not to, you should replicate 
 
 ## Configure the Elasticsearch Clusters
 
-Set up the Elasticsearch clusters, using versions supported with Liferay DXP that also support Cross-Cluster Replications. See the [LES compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details.
+Set up the Elasticsearch clusters, using versions supported with Liferay DXP that also support Cross-Cluster Replications. See the [LES compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) for details.
 
 Make sure you [install the Elasticsearch plugins Liferay DXP needs and provide cluster names](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) to differentiate your follower and leader clusters.
 
