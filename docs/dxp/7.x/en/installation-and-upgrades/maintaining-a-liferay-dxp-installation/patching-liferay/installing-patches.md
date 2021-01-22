@@ -35,12 +35,20 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     The output looks like this:
 
     ```
-    Running the install command...
-    Installing dxp-1
-    Installation complete!
-    Install finished!
-    Installing hotfix-123
-    Install finished!
+    There's no configuration available. Running auto-discovery in the parent folder.
+    Directory is not set in command line, using ../
+    Auto discovery looks for portal segments. The selected directory is "/home/russell/liferay-bundles/cross-cluster-replication_7.2_LRDOCS-8715/liferay-dxp-7.2.10.3-sp3".
+    Configuration has been written into the default.properties:
+    patching.mode=binary
+    war.path=../tomcat-9.0.33/webapps/ROOT/
+    global.lib.path=../tomcat-9.0.33/lib/ext/
+    liferay.home=../
+    One patch is ready to be installed. Applying dxp-10...
+    Cleaning up: [1%..10%..20%..30%..40%..50%..60%..70%..80%..90%..100%]
+    Installing patches: [1%..10%..20%..30%..40%..50%..60%..70%..80%..90%..100%]
+    Syncing...
+    The patches contain database index modification. Run the patching tool with the index-info parameter for more information.
+    The installation was successful. One patch is installed on the system.
     ```
 
 1.  Verify that the patch installed by executing the `info` command and checking the information on the currently installed patches:
@@ -54,16 +62,20 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     ```
     Loading product and patch information...
     Product information:
-      * build number: 7310
+      * installation type: binary
+      * build number: 7210
       * service pack version:
-        - available SP version: 1
-        - installable SP version: 1
-      * patching-tool version: 3.0.5
-      * time: 2020-09-01 20:26Z
-      * host: 91WRQ72 (8 cores)
-
-    Currently installed patches:
-    ...
+        - available SP version: 3
+        - installable SP version: 3
+      * patching-tool version: 2.0.15
+      * time: 2021-01-21 18:02Z
+      * host: russell-pc (8 cores)
+      * plugins: no plugins detected
+    Currently installed patches: dxp-10-7210
+    Available patches: dxp-8-7210, dxp-10-7210
+    Detailed patch list: 
+      [ -] dxp-8-7210 :: Currently not installed; Won't be installed: dxp-10 contains the fixes included in this one :: Built for LIFERAY
+      [*I] dxp-10-7210 :: Installed; Will be installed. :: Built for LIFERAY
     ```
 
 1.  If you installed a Service Pack and its release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
