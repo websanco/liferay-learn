@@ -14,9 +14,6 @@ import javax.portlet.RenderResponse;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-/**
- * @author jhinkey
- */
 @Component(
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
