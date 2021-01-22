@@ -45,6 +45,10 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
 | liferay-20101-workflow-metrics-tokens                 | App Index     | Store data about Workflow Tokens for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-transitions            | App Index     | Store data about Workflow Transitions for the Workflow Metrics application |
 
+```important::
+   The Liferay 7.2 index naming landscape is more complex, as patches were introduced that changed the index naming pattern introduced in patches. See `Multi-Tenant Index Names <../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`__ for more information.
+```
+
 ```note::
    Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../../developer_guide.html>`__ for information on using these APIs.
 ```

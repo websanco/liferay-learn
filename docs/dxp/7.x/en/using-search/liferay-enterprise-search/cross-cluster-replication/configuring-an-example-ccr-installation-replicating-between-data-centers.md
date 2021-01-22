@@ -45,7 +45,14 @@ To encrypt communication (TLS/SSL) and enable user authentication between the Li
       TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
    ```
 
-1. Configure the DXP nodes. Configure the production mode settings for Elasticsearch in the `ElasticsearchConfiguration.config` file, then configure the connections separately in `ElasticsearchConnectionConfiguration-[ccr/remote].config` files. Include the security settings on each connection. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for details. [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) covers configuring security for the read-only CCR connection from the local DXP nodes.
+1. Configure the DXP nodes. 
+
+   For Liferay DXP 7.3, configure the production mode settings for Elasticsearch in the `ElasticsearchConfiguration.config` file, then configure the connections separately in `ElasticsearchConnectionConfiguration-[ccr/remote].config` files. 
+
+
+   For Liferay DXP 7.2, configure the remote connection in `ElasticsearchConfiguration.config` and the read-only connection in the `ElasticsearchConnectionConfiguration-ccr.config` file. 
+
+   Include the security settings on each connection. See [Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) for details. [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md) covers configuring security for the read-only CCR connection from the local DXP nodes.
 
 The example configurations are provided in full [here](./ccr-basic-use-case-config-reference.md).
 

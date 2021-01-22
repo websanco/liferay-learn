@@ -12,11 +12,13 @@ The configurations below assume you enable encrypted communications (TLS/SSL) an
 
 These configuration files are deployed to `[Remote Liferay Home]/osgi/configs`.
 
-The Remote DXP cluster needs three configuration files.
+### Elasticsearch Configuration
+
+The Remote DXP cluster needs an `ElasticsearchConfiguration.config` file.
 
 File name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`
 
-File contents:
+Liferay DXP 7.3 file contents:
 
 ```properties
 productionModeEnabled="true"
@@ -24,11 +26,42 @@ remoteClusterConnectionId="remote"
 logExceptionsOnly="false"
 ```
 
+Liferay DXP 7.2 file contents:
+
+```properties
+clusterName="LiferayElasticsearchCluster_LEADER"
+operationMode="REMOTE"
+transportAddresses="localhost:9300"
+logExceptionsOnly="false"
+```
+
+Liferay DXP 7.2 requires a separate `XPackSecurityConfiguration.config` file.
+
+File name: `com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config`
+
+Liferay DXP 7.2 file content:
+
+
+```properties
+certificateFormat="PKCS#12"
+sslKeystorePath="/PATH/TO/elastic-nodes.p12"
+sslKeystorePassword="liferay"
+sslTruststorePath="/PATH/TO/elastic-nodes.p12"
+sslTruststorePassword="liferay"
+requiresAuthentication=B"true"
+username="elastic"
+password="liferay"
+transportSSLVerificationMode="certificate"
+transportSSLEnabled=B"true"
+```
+
 ```tip::
    The X-Pack security configuration file is not required on Liferay DXP 7.3. Security is configured in each connection's ``.config`` file. The values should be identical on all Liferay nodes.
 ```
 
-File name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-remote.config`
+### Elasticsearch Connection Configuration
+
+[DXP 7.3 only] Remote connection file name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-remote.config`
 
 File contents:
 
@@ -45,9 +78,13 @@ truststorePath="/PATH/to/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
-File name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+```tip::
+   For Liferay DXP 7.2, you used the ``ElasticsearchConfiguration.config`` and the ``XPackSecurityConfiguration.config`` files to configure the remote connection.
+```
 
-File contents:
+[DXP 7.3 only] Read-only connection file name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+
+File contents for Liferay DXP 7.3:
 
 ```properties
 active="true"
@@ -62,6 +99,25 @@ truststorePath="/PATH/to/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
+[DXP 7.2 only] Read-only connection file name: `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+
+File contents for Liferay DXP 7.2:
+
+```properties
+clusterName="LiferayElasticsearchCluster_FOLLOWER"
+connectionId="ccr"
+username="elastic"
+password="liferay"
+authenticationEnabled=B"true"
+transportSSLEnabled=B"true"
+networkHostAddress="https://localhost:9201"
+transportAddresses=["localhost:9301"]
+sslTruststorePassword="liferay"
+sslTruststorePath="/PATH/TO/elastic-nodes.p12"
+certificateFormat="pkcs12"
+sslKeystorePassword="liferay"
+sslKeystorePath="/PATH/TO/elastic-nodes.p12"
+```
 ## Local DXP Cluster Node Configurations
 
 These configuration files are deployed to `[Local Liferay Home]/osgi/configs`.
@@ -113,7 +169,6 @@ xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.truststore.password: liferay
-xpack.security.http.ssl.verification_mode: certificate
 
 # For Kibana
 xpack.monitoring.collection.enabled: true
@@ -150,7 +205,6 @@ xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.truststore.password: liferay
-xpack.security.http.ssl.verification_mode: certificate
 
 # For Kibana
 xpack.monitoring.collection.enabled: true

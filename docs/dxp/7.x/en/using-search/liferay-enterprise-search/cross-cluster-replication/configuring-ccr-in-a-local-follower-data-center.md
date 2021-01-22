@@ -67,15 +67,21 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
    If testing locally, configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
 ```
 
-1. Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-local-follower-data-center.md#configure-the-remote-liferay-dxp-cluster-node) `*ElasticsearchConnectionConfiguration-remote.config` and the `*ElasticsearchConfiguration.config` file from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
+1. Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-local-follower-data-center.md#configure-the-remote-liferay-dxp-cluster-node) from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
+
+   For Liferay DXP 7.3, this includes `*ElasticsearchConnectionConfiguration-remote.config` and `*ElasticsearchConfiguration.config`.
 
    ```important::
       The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
    ```
 
+   For Liferay DXP 7.2, this includes `*ElasticsearchConfiguration.config` and `*XPackSecurityConfiguration.config`.
+
    Once these files are provided, the write connection for the local DXP cluster node is configured.
 
-1. Now configure the read-only connection to the local Elasticsearch server with the follower indexes. Provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`. 
+1. Now configure the read-only connection to the local Elasticsearch server with the follower indexes. 
+
+   For Liferay DXP 7.3, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`. 
 
    Give it these contents:
 
@@ -90,6 +96,24 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
    truststorePassword="liferay"
    truststorePath="/PATH/TO/elastic-nodes.p12"
    truststoreType="pkcs12"
+   ```
+
+   For Liferay DXP 7.2, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`.
+
+   ```properties
+   clusterName="LiferayElasticsearchCluster_FOLLOWER"
+   connectionId="ccr"
+   username="elastic"
+   password="liferay"
+   authenticationEnabled=B"true"
+   transportSSLEnabled=B"true"
+   networkHostAddress="https://localhost:9201"
+   transportAddresses=["localhost:9301"]
+   sslTruststorePassword="liferay"
+   sslTruststorePath="/PATH/TO/elastic-nodes.p12"
+   certificateFormat="pkcs12"
+   sslKeystorePassword="liferay"
+   sslKeystorePath="/PATH/TO/elastic-nodes.p12"
    ```
 
    You can use any suffix (`-ccr` in this example) for the [configuration file name](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md), but for consistency you should make it identical to the `connectionId` property in the configuration.
@@ -128,11 +152,18 @@ In a production setup, you may want to set a different transport address for the
 
 ![Configure CCR in System Settings.](./configuring-ccr-in-a-local-follower-data-center/images/02.png)
 
+Log messages appear, indicating successful index replication and that the read connection is enabled
+
+```bash
+2021-01-22 02:15:11.112 INFO  [liferay/configuration-1][CrossClusterReplicationConfigurationModelListener:163] Creating follower indexes
+2021-01-22 02:15:12.864 INFO  [liferay/configuration-1][CrossClusterReplicationConfigurationModelListener:70] Read operations from local clusters are enabled
+```
+
 Once the connections are configured and the indexes replicated, verify the system is working properly.
 
 ## Verify the Setup
 
-On the follower DXP cluster node, navigate to Control Panel &rarr; Configuration &rarr; Search. Your connections look like this:
+On the follower DXP cluster node, navigate to Control Panel &rarr; Configuration &rarr; Search. On Liferay DXP 7.2, you must also click the _Connections_ tab. Your connections look like this:
 
 ![Verify the Elasticsearch 7 connections in the Search administration panel.](./configuring-ccr-in-a-local-follower-data-center/images/01.png)
 
