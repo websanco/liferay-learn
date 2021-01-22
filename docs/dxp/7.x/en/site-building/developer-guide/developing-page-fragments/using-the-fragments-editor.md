@@ -17,9 +17,9 @@ Liferay DXP includes a built-in [editor](../reference/fragments/page-fragment-ed
 
 1. Click the *Add* button (![Add Button](../../../images/icon-duplicate.png)), and enter a *name* and *description* for the new Collection. The Collection's name is displayed in the Fragments and Widgets panel of the Content Page sidebar.
 
-```tip::
-   Create Collections that group Fragments by functionality or by teams and departments.
-```
+    ```tip::
+      Create Collections that group Fragments by functionality or by teams and departments.
+    ```
 
 1. Click *Save*.
 
