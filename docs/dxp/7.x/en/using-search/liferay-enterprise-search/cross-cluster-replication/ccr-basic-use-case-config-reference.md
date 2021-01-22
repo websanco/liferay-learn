@@ -31,7 +31,7 @@ Liferay DXP 7.2 file contents:
 ```properties
 clusterName="LiferayElasticsearchCluster_LEADER"
 operationMode="REMOTE"
-transportAddresses="localhost:9300"
+transportAddresses=["localhost:9300"]
 logExceptionsOnly="false"
 ```
 

@@ -88,7 +88,7 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
    ```properties
    clusterName="LiferayElasticsearchCluster_LEADER"
    operationMode="REMOTE"
-   transportAddresses="localhost:9300"
+   transportAddresses=["localhost:9300"]
    logExceptionsOnly="false"
    ```
 

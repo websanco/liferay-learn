@@ -66,7 +66,7 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
    If testing locally, configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
 ```
 
-1. Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-local-follower-data-center.md#configure-the-remote-liferay-dxp-cluster-node) from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
+1. Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-remote-leader-data-center.md#configure-the-remote-liferay-dxp-cluster-node) from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
 
    For Liferay DXP 7.3, this includes `*ElasticsearchConnectionConfiguration-remote.config` and `*ElasticsearchConfiguration.config`.
 
