@@ -1,6 +1,6 @@
 # Upgrading to Elasticsearch 7
 
-Elasticsearch 7 is supported for Liferay 7.3 out of the box. For specific version compatibility details, refer to the [Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151).
+Elasticsearch 7 is supported for Liferay 7.3 out of the box. For specific version compatibility details, refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651).
 
 For Liferay 7.2, Elasticsearch 7 is supported via the [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) (version `3.x`). If you're upgrading to Liferay 7.3 or wanting to bring your existing 7.2 search engine to Elasticsearch 7, you must also upgrade your Elasticsearch servers. To set up a new Liferay 7.2 system, install Elasticsearch 7 and follow the [installation guide](../getting-started-with-elasticsearch.md).
 

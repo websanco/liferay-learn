@@ -25,7 +25,7 @@ Assuming your Liferay servers are in place already, the remaining steps include
 
 Each Liferay CE/DXP version is bundled with a connector to Elasticsearch that is compatible with a specific Elasticsearch major version (e.g., 6.x or 7.x). To add support for newer major Elasticsearch versions, Liferay releases additional connectors through [Marketplace](https://web.liferay.com/marketplace). These can be used as drop-in replacements for the out-of-the-box (bundled) connector.
 
-The [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
+The [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) shows the latest supported Elasticsearch component versions for each Liferay version. The Elasticsearch server and the connector to Elasticsearch are required components.
 
 ```warning::
    The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on `Liferay Marketplace <https://web.liferay.com/marketplace>`_.

@@ -111,7 +111,7 @@ On Liferay 7.2, the bundled connector application and APIs are for Elasticsearch
 
 1. Download the Liferay Connector to Elasticsearch 7.
 
-   Make sure the connector corresponds to your Elasticsearch version. Note, the client libraries in the connector can be for an older version of Elasticsearch (e.g., 7.3) even though the connector application supports a newer version (e.g., 7.9.x). Liferay tests the connector with every minor Elasticsearch version and creates new update connector versions when needed. As always, consult the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for connector compatibility.
+   Make sure the connector corresponds to your Elasticsearch version. Note, the client libraries in the connector can be for an older version of Elasticsearch (e.g., 7.3) even though the connector application supports a newer version (e.g., 7.9.x). Liferay tests the connector with every minor Elasticsearch version and creates new update connector versions when needed. As always, consult the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for connector compatibility.
 
    * CE: [Liferay CE Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
    * DXP: [Liferay Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170390307)

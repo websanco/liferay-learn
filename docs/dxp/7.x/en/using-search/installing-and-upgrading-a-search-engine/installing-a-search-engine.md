@@ -14,7 +14,7 @@ When you start Liferay, a built-in Elasticsearch server (sidecar) starts simulta
 
 * Search engines require the `JAVA_HOME` environment variable. Set it on your search engine host.
 
-* If you're using Liferay 7.2, Elasticsearch and Liferay must use the same Java version and distribution. Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and the [Liferay compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) to learn more about supported JDK distributions and versions. You can specify this in Elasticsearch:
+* If you're using Liferay 7.2, Elasticsearch and Liferay must use the same Java version and distribution. Consult the [Elasticsearch compatibility matrix](https://www.elastic.co/support/matrix#matrix_jvm) and [Liferay's Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) to learn more about supported JDK distributions and versions. You can specify this in Elasticsearch:
 
     ```properties
     [Elasticsearch Home]/bin/elasticsearch.in.sh`: `JAVA_HOME=/path/to/java`
@@ -37,7 +37,7 @@ A production environment's search engine should be clustered for load management
 Elasticsearch is the recommended search engine for search and indexing with Liferay. Solr is planned for deprecation and has [limitations](./solr/solr-limitations.md).
 
 ```important::
-   Always refer to the `compatibility matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ to find the exact versions supported.
+   Always refer to the `Search Engine Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360016511651>`_ to find the exact versions supported.
 ```
 
 ## What's Next 
