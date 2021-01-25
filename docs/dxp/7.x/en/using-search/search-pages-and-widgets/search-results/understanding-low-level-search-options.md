@@ -83,23 +83,50 @@ Permissions checking is not available via low level search. If you search even t
 
 ## Low Level Search and Relevance
 
-Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget.
+Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget. The example below  demonstrates this.
 
-## Use Case: One Search Bar, Two Search Results
+## Use Case: Search the Liferay Company Index and an Alternate Index
 
-Document the use case mentioned in the relevance section--
+To set up a [Search Page](../working-with-search-pages/search-pages.md) that displays one set of results from Liferay's Company Index (e.g, `liferay-20098`) and another from some alternate index of interest in [Liferay's Elasticsearch cluster](../../installing-and-upgrading-a-search-engine/elasticsearch.rst) (this example uses `liferay-0` for demonstration purposes):
 
-1. Add a Low Level Search Options widget to the search page.
+1. Add these widgets to a [new page]( ./../../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md): 
 
-1. Configure it by entering these settings:
+   - One Low Level Search Options
+   - Two [Search Bars](../../getting-started/searching-for-content.md#using-the-search-bar)
+   - Two [Search Results](./configuring-the-search-results-widget.md)
+   - One [Custom Filter](./filtering-search-results.md)
 
-   **Indexes:** `liferay-0`
-   **Federated Search Key:** `liferay-0`
+   ```tip::
+      The 1-2-1 Columns (50/50) page layout is convenient for this example.
+   ```
 
-1. Add a second Search Results widget to the search page.
+1. Configure the Low Level Search Options widget:
 
-1. Configure the second Search Results:
+   - **Indexes:** `liferay-0`
+   - **Federated Search Key:** `liferay-0`
 
-   **Federated Search Key:** `liferay-0`
+   This sets up the search for an alternate index. In this case it's another Liferay controlled index, for demonstration purposes only. The Federated Search Key can be any memorable key. Since this example searches only for a single additional index, it's named identically to the index itself. 
 
-Now you’re able to configure the out of the box search widgets to participate in searches against any Elasticsearch index in the cluster.
+1. Leave one Search Bar with the default configuration, but configure the second one with these unique options:
+
+   - **Invisible:** `true`. Check the _Invisible_ box. Only one Search Bar is used for user input, so this one should be invisible. 
+   - **Federated Search Key:** `liferay-0`
+
+   Importantly you left the default value for Keywords Parameter Name. This Search Bar can ingest the search terms entered by users because it shares this parameter with the other Search Bar on the page, which will be visible and accept user input.  
+
+1. One of the Search Results comes pre-configured for the Liferay Company Index. The second Search Results widget must be configured to display results from the alternate index:
+
+   - **Federated Search Key:** `liferay-0`
+
+   There are additional configurations, like controlling which fields to display. Leaving this option blank asks [Liferay to figure it out](#displaying-low-level-search-results).
+
+1. Configure the Custom Filter widget to match the title field of the `liferay-0` index:
+
+   - **Filter Field:** `title_en_US`
+   - **Occur:** `should`
+   - **Invisible:** `true`. Check the _Invisible_ box. The custom filtering should just happen, without the end user knowing about it. 
+   - **Federated Search Key:** `liferay-0`
+
+![Results from disparate indexes are best displayed in separate Search Results widgets.](./understanding-low-level-search-options/images/05.png)
+
+Now you're able to configure the out of the box search widgets to participate in searches against any Elasticsearch index in the cluster.
