@@ -46,7 +46,7 @@ To write code to run on Liferay DXP, you must have a Liferay runtime on which to
 
 ## Adding a Liferay Bundle to Workspace
 
-Workspace automates for you the download and setup of a runtime for your code. It takes only a few steps: 
+Workspace automates the download and setup of a runtime for your code. When you're ready to run your code on a server, it takes only a few steps to download one: 
 
 1. Find the Liferay release you're targeting. 
 
@@ -73,13 +73,41 @@ Workspace automates for you the download and setup of a runtime for your code. I
 1. Ready to download the bundle? Run this command: 
 
    ```bash
+   ./gradlew initBundle
+   ```
+
+Or if you prefer Blade, 
+
+   ```bash
    blade server init
    ```
 
 If on DXP, for security reasons you should remove your password from the properties file after your bundle has downloaded. 
 
-```tip::
-If you're using the Maven version of Workspace, the steps are exactly the same, except you modify your ``pom.xml`` file. The properties are exactly the same, except they're XML-formatted: ``<liferay.workspace.bundle.url>[enter url]</liferay.workspace.bundle.url>``, etc. 
+## Deploying Code via Liferay Workspace
 
-To initialize the server, use this command: ``mvn bundle-support:init``. 
+You can deploy your code to the Liferay bundle you added in the step above or to a Docker container running Liferay. 
+
+### Deploying Code to a Liferay Bundle
+
+Deploying your code to a bundle added to a Liferay Workspace is a snap. From your project folder, run this Gradle task: 
+
+```bash
+../gradlew deploy
 ```
+
+This calls the Gradle wrapper script in the Workspace root folder and deploys your project to the Liferay bundle added to Workspace. 
+
+### Deploying Code to a Liferay Docker Container
+
+If you've already [created a Liferay Docker Container](./configuring-a-liferay-docker-container.md), deploying to it is just as easy as deploying to a local bundle. Run this Gradle task: 
+
+```bash
+../gradlew deployDocker
+```
+
+## Related Topics
+
+[Configuring a Liferay Docker Container](./configuring-a-liferay-docker-container.md)
+
+[Generating Projects with Blade CLI](../blade-cli/generating-projects-with-blade-cli.md)
