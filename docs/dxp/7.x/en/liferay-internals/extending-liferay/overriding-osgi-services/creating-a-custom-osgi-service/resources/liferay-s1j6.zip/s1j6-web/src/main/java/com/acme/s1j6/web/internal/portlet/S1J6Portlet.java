@@ -17,9 +17,7 @@ import org.osgi.service.component.annotations.Reference;
 @Component(
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
-		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.display-name=S1J6 Portlet",
-		"javax.portlet.security-role-ref=power-user,user"
+		"javax.portlet.display-name=S1J6 Portlet"
 	},
 	service = Portlet.class
 )
