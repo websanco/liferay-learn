@@ -61,8 +61,6 @@ With [staging](../../../site-building/publishing-tools/staging/managing-data-and
 
 With [Publications](../../../site-building/publishing-tools/publications/publications-overview.md) enabled, content is associated with a specific Publication. Content added to a Publication is marked so that the search API can decipher whether an item is in production or not. In the production version of the site, only content that's been [published](../../../site-building/publishing-tools/publications/making-and-publishing-changes.md#publishing-your-changes) can be returned in search results. In an ongoing Publication, production content and content for that specific Publication can be returned.
 
-content is placed first in a preview and testing environment before being published for consumption by end Users (on the live site). Content added to the search index is marked so that the search API can decipher whether an item is live or not. In the live version of the site, only content that's marked for the live site is searchable. In the staged version of the site, all content live or staged is searchable.
-
 ## Result Summaries
 
 A result summary includes the information from a document that the asset's developer felt is most useful to end Users searching for the asset. Each asset can have different fields included in the summary. For assets with text content, a common summary format includes the title and some of the content, with title displayed first. The asset type always appears on the second line, and a snippet of the content that matches the search term is on the last line. Assets without content fields, like Documents and Media documents, display the description instead.
