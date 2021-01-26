@@ -1,5 +1,8 @@
+.classpath
 .gradle/
 .metadata/
+.project
+.settings/
 docs/**/build/
 docs/**/liferay-????-theme.war
 docs/**/liferay-????-theme/
