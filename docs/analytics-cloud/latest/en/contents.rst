@@ -9,6 +9,7 @@ Contents
    getting_started
    touchpoints
    individuals_and_segments
+   optimization
    apis
    administration
    troubleshooting

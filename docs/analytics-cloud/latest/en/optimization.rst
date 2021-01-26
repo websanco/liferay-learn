@@ -9,5 +9,3 @@ Optimization
 
 -  :doc:`/optimization/a-b-testing`
 -  :doc:`/optimization/content-recommendation-api`
-
-
