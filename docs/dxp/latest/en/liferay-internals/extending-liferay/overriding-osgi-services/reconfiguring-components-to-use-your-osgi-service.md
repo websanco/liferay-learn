@@ -1,6 +1,6 @@
 # Reconfiguring Components to Use Your OSGi Service
 
-Liferay DXP's OSGi container is a dynamic environment in which a service can deployed (See [Examining a OSGi Service](./examining-an-osgi-service.md)). A service can also be overridden with a configuration file (config file) to use a custom service.
+Liferay DXP's OSGi container is a dynamic environment in which a service can deployed (See [Using an OSGi Service](../fundamentals/using-an-osgi-service.md)). A service can also be overridden with a configuration file (config file) to use a custom service.
 
 ## Overview
 
@@ -21,7 +21,7 @@ Liferay DXP's OSGi container is a dynamic environment in which a service can dep
   docker start -i [container_name]
   ```
 
-  If you're running a different Liferay Portcal CE version or Liferay DXP, adjust the above command accordingly.
+  If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly.
 
 1. Download and unzip [Custom OSGi Service](./reconfiguring-components-to-use-your-osgi-service/resources/liferay-m1t1.zip).
 
