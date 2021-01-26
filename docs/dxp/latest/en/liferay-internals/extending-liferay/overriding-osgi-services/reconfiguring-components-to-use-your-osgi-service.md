@@ -1,12 +1,11 @@
 # Reconfiguring Components to Use Your OSGi Service
 
-Liferay DXP's OSGi container is a dynamic environment in which a service can deployed (See [Examining a OSGi Service](./examining-an-osgi-service.md)). A service can also be overridden by using a configuration file (config file) to use a custom service.
+Liferay DXP's OSGi container is a dynamic environment in which a service can deployed (See [Examining a OSGi Service](./examining-an-osgi-service.md)). A service can also be overridden with a configuration file (config file) to use a custom service.
 
 ## Overview
 
 1. [**Deploy an Example**](#deploy-the-example)
-1. [**Walk Through the Example**](#walk-through-the-example)
-1. [**Additional Information**](#additional-information)
+1. [**Override a Service**](#override-a-service)
 
 ## Deploy the Example
 
@@ -47,9 +46,36 @@ Liferay DXP's OSGi container is a dynamic environment in which a service can dep
 1. Confirm the deployment of each module in the Liferay Docker container console.
 
   ```bash
-  STARTED com.acme.r2f1.impl_1.0.0 [1009]
+  STARTED com.acme.m1t1.api_1.0.0 [1357]
+  STARTED com.acme.m1t1.custom.impl_1.0.0 [1358]
+  STARTED com.acme.m1t1.impl_1.0.0 [1359]
+  STARTED com.acme.m1t1.web_1.0.0 [1360]
   ```
 
-## Walk Through the Example
+## Override a Service
 
-Review the deployed example. It contains four modules: a M1T1 api, an implementation, a custom implementation, and a web app.
+The deployed example contains four modules: a M1T1 API, a M1T1 implementation, a M1T1 custom implementation, and a M1T1 web app.
+
+The M1T1 web app is a custom widget that can be added to a Site page. To add the widget,
+
+1. Navigate to a Site page.
+
+1. Click the edit icon (![edit icon](../../../images/icon-edit.png)) and find the M1T1 Portlet under the Sample section of Widgets. Drag it onto your page.
+
+  ![Find the M1T1 Portlet widget and add it to your page.](./reconfiguring-components-to-use-your-osgi-service/images/01.png)
+
+1. The M1T1 widget displays a message:
+
+  `I'm calling a service ... M1T1`
+
+  By default, the widget is utilizing the M1T1 implementation.
+
+1. To have the widget use the M1T1 custom implementation, deploy the configuration file to the Liferay Docker container:
+
+  ```bash
+  docker cp com.acme.m1t1.web.internal.portlet.M1T1Portlet.config $(docker ps -lq):/opt/liferay/deploy/osgi/configs
+  ```
+
+1. The configuration file overrides the M1T1 implementation with the M1T1 custom implementation. Refresh the page and the M1T1 Portlet widget now displays:
+
+  `I'm calling a service ... M1T1CustomImpl, which delegates to M1T1`
