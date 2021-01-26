@@ -6,6 +6,7 @@ The previous [article](./configuring-the-search-results-widget.md) covered ways 
 * [Understanding search results relevance](#search-results-relevance)
 * [The effect of permissions on search results](#permissions-and-search-results)
 * [Search results in the staging environment](#search-and-staging)
+* [Search results when Publications are enabled](#search-and-publications)
 * [Search results summaries](#result-summaries)
 * [Search results term highlighting](#highlighting)
 
@@ -77,6 +78,14 @@ For assets that contain other assets (Web Content and Documents & Media folders)
 ![Document folder showing a description in summary.](./search-results-behavior/images/04.png)
 
 The asset developer determines which fields are summary-enabled, but there’s logic invoked at search time that determines precisely the part of the summary fields to display. For example, a `content` field can have a lot of text, but the summary doesn’t show it all. Instead, it shows a relevant snippet of the field’s text. If the keyword searched for is present in the summary field, that portion of the field is used in the summary. In addition, the matching keyword is highlighted in the summary.
+
+To determine which fields to include in the result summaries, the Search Results widget takes three things into consideration:
+
+1. Asset-specific fields to include in the Summary are defined in `ModelSummaryContributor` Java classes (Liferay's own classes and those deployed by third party developers).
+
+1. Fields available for display in the Search Results summaries are defined by the Search Results own display logic.
+
+1. The [Widget Template]( ./../../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md ) used by the [Search Results](./configuring-the-search-results-widget.md) widget (_List_ by default) has the final word in all things related to Search Results display, including which of the available fields are included in the summary.
 
 ## Highlighting
 
