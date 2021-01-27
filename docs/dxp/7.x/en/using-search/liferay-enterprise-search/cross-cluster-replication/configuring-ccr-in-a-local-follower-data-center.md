@@ -157,7 +157,7 @@ In a production setup, you may want to set a different transport address for the
 
 Log messages appear, indicating successful index replication and that the read connection is enabled
 
-```bash
+```
 2021-01-22 02:15:11.112 INFO  [liferay/configuration-1][CrossClusterReplicationConfigurationModelListener:163] Creating follower indexes
 2021-01-22 02:15:12.864 INFO  [liferay/configuration-1][CrossClusterReplicationConfigurationModelListener:70] Read operations from local clusters are enabled
 ```

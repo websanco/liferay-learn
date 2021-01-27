@@ -67,7 +67,7 @@ The example configurations are provided in full [here](./ccr-basic-use-case-conf
 1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) into all DXP nodes.
 
 ```tip::
-   Because multiple Elasticsearch connections are only used on Liferay DXP 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
+   Because you only use multiple Elasticsearch connections on Liferay DXP 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
 ```
 
 If all your prerequisite tasks are completed and the Cross-Cluster Replication module is installed, continue by [configuring the servers in your remote data center](./configuring-ccr-in-a-remote-leader-data-center.md).

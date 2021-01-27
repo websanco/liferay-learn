@@ -46,7 +46,7 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
 | liferay-20101-workflow-metrics-transitions            | App Index     | Store data about Workflow Transitions for the Workflow Metrics application |
 
 ```important::
-   The Liferay 7.2 index naming landscape is more complex, as patches have introduced changes to the index naming pattern. See `Multi-Tenant Index Names <../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`__ for more information.
+   Liferay 7.2 index names are more complex, as patches have introduced changes to the index naming pattern. See `Multi-Tenant Index Names <../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`__ for more information.
 ```
 
 ```note::
