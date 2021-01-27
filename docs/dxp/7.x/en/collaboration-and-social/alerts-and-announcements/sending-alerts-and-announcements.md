@@ -18,7 +18,7 @@ These widgets have two tabs:
 
 ## Creating Alerts and Announcements
 
-1. Add the widget by clicking the _Add_ icon (![Add icon](../../../images/icon-add-app.png)) at the top of a page. Find the Alerts widget or the Announcements widget under the News section and drag it to your page.
+1. Add the widget by clicking the _Add_ icon (![Add icon](../../images/icon-add-app.png)) at the top of a page. Find the Alerts widget or the Announcements widget under the News section and drag it to your page.
 
     ![Locate the Alerts widget or the Announcements widget and add it to your page.](./sending-alerts-and-announcements/images/02.png)
 
@@ -63,13 +63,13 @@ receive alerts and announcements by email as well. Select between General, News,
 
 You can also create Roles for Users to be able manage alerts and announcements: 
 
-1. Click on the *Applications Menu* icon (![Applications Menu icon](../../../images/icon-applications-menu.png)) &rarr; *Control Panel* &rarr; *Roles*.
+1. Click on the *Applications Menu* icon (![Applications Menu icon](../../images/icon-applications-menu.png)) &rarr; *Control Panel* &rarr; *Roles*.
 
-1. With the *Regular Roles* tab selected, click the *Add* icon (![Add icon](../../../images/icon-add.png)). This opens the New Role form.
+1. With the *Regular Roles* tab selected, click the *Add* icon (![Add icon](../../images/icon-add.png)). This opens the New Role form.
 
 1. Name your Role *Announcements*, give it a title and description, and click *Save*.
 
-1. Click on the _Options_ icon (![Options icon](../../../images/icon-options.png)) of the Role and click *Edit*.
+1. Click on the _Options_ icon (![Options icon](../../images/icon-options.png)) of the Role and click *Edit*.
 
 1. Click on the *Define Permissions* tab. 
 
@@ -80,4 +80,3 @@ You can also create Roles for Users to be able manage alerts and announcements:
     Go back to the Define Permissions tab. Navigate to *Site and Asset Library Administration* &rarr; *Applications* &rarr; *Announcements*. Select all the resource permissions and click *Save*.
 
 1. Now any User assigned to this Role can manage alerts and announcements.
-
