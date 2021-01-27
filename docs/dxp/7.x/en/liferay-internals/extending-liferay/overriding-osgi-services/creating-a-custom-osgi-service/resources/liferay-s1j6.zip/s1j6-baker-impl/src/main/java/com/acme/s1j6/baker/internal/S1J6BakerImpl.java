@@ -15,8 +15,7 @@ public class S1J6BakerImpl implements S1J6 {
 	}
 
 	@Reference(
-		target = "(component.name=com.acme.s1j6.able.internal.S1J6AbleImpl)",
-		unbind = "-"
+		target = "(component.name=com.acme.s1j6.able.internal.S1J6AbleImpl)"
 	)
 	private S1J6 _s1j6;
 

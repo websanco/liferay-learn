@@ -33,7 +33,7 @@ public class S1J6Portlet extends GenericPortlet {
 		printWriter.println(_s1J6.doSomething());
 	}
 
-	@Reference(unbind = "-")
+	@Reference
 	private S1J6 _s1J6;
 
 }
