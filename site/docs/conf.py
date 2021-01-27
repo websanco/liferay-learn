@@ -1,7 +1,9 @@
 from pathlib import Path
 
+import json
 import os
 from sphinx.builders.html import StandaloneHTMLBuilder
+from sphinx.util import logging
 
 import recommonmark
 from recommonmark.transform import AutoStructify
@@ -42,6 +44,7 @@ html_theme = "basic"
 html_title = "Liferay Learn"
 language = os.path.basename(language_path)
 locale_dirs = ["_locale"]
+log = logging.getLogger(__name__)
 master_doc = "contents"
 notfound_no_urls_prefix = True
 notfound_template = "404.html"
@@ -86,3 +89,54 @@ def setup(app):
     )
 
     app.add_transform(AutoStructify)
+
+    app.connect("build-finished", write_redirects)
+
+
+def write_redirects(app, exception):
+    # inspired by https://gitlab.com/documatt/sphinx-reredirects and
+    #   https://github.com/sphinx-contrib/redirects
+    redirects_file = os.path.join(app.srcdir, "redirects.json")
+    redirects = {}
+    template = "<html><head><meta content=\"0; url={}\" http-equiv=\"refresh\"></head></html>"
+
+    if os.path.isfile(redirects_file):
+        with open(redirects_file) as file:
+            redirects = json.loads(file.read())
+
+    if not redirects:
+        log.error(
+            "No redirect info found at {}. No redirects will be written.".format(redirects_file)
+        )
+        return
+
+    if not isinstance(app.builder, StandaloneHTMLBuilder):
+        log.error(
+            "The builder type {} is unsupported. No redirects will be written.".format(
+                type(app.builder)
+            )
+        )
+        return
+
+    product = os.path.basename(product_path)
+    version = os.path.basename(cur_version)
+
+    for redirect_from, redirect_to in redirects.items():
+        cur_product, cur_version, cur_language, dummy_relpath = redirect_from.split("/", 3)
+
+        if (cur_product, cur_version, cur_language) != (product, version, language):
+            continue
+
+        target_relpath = os.path.relpath(redirect_to, os.path.dirname(redirect_from))
+
+        log.info("Redirecting '{}' to '{}'".format(redirect_from, target_relpath))
+
+        dummy_abspath = os.path.join(app.builder.outdir, dummy_relpath)
+
+        dummy_parent_dir = os.path.dirname(dummy_abspath)
+        if not os.path.exists(dummy_parent_dir):
+            os.makedirs(dummy_parent_dir)
+
+        with open(dummy_abspath, 'w') as f:
+            f.write(template.format(target_relpath))
+
