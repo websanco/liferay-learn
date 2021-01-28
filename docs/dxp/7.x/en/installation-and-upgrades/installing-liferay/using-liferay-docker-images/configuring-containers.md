@@ -84,7 +84,7 @@ Container [Portal Properties](../../reference/portal-properties.md) can be overr
 
 ### Using Liferay Env Variables
 
-There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env properties override a Liferay Docker container's Portal Properties.
+There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env variables are [Docker environment variables](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file) that override a Liferay Docker container's Portal Properties.
 
 1. In the [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) online description, find the property you want to override.
 
