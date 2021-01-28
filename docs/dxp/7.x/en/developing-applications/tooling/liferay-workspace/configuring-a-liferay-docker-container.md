@@ -8,6 +8,8 @@ Creating a container happens in three main steps:
 1. Download that container to your workspace. 
 1. Configure the container with settings and applications. 
 
+You must have Docker installed and running before following the instructions below. 
+
 ## Choose a Liferay Docker Image
 
 Liferay's Docker images are on [Docker Hub](https://hub.docker.com/r/liferay/portal/tags). They're in two categories: 
@@ -28,8 +30,36 @@ Liferay's Docker images are on [Docker Hub](https://hub.docker.com/r/liferay/por
    liferay.workspace.docker.image.liferay=liferay/portal:7.3.5-ga6
    ```
 
-1. Save the file and run this command from your workspace's root folder: 
+1. Save the file. Now you're ready to create the Docker image.
+
+## Create the Liferay Docker Image
+
+Run this command from your workspace's root folder: 
 
    ```bash
    ./gradlew createDockerContainer
    ```
+
+A Docker image based on the name of your workspace with `-liferay` appended is created. For example, if your workspace folder was `my-project`, your Docker container is called `my-project-liferay`. You can start/stop the container like any other Docker image, but you might want to configure it first. 
+
+## Configuring a Docker Image
+
+Beyond the regular Docker tools for configuring your container, building your container from the Gradle task sets up a folder pointing to [Liferay Home](../../installation-and-upgrades/reference/liferay-home.md), so you can create whatever Liferay configuration you need. You'll find this folder in `configs/docker`. 
+
+For example, you may want to enable telnet access to your container's Gogo shell. Here's how you'd do it: 
+
+1. In your `configs/docker` folder create a `portal-ext.properties` file and add this property to it: 
+
+   ```properties
+   module.framework.properties.osgi.console=0.0.0.0:11311
+   ```
+
+1. Save the file. 
+
+1. Start the container. The properties contained in the `portal-ext.properties` file you just created are applied to your running instance, and you should be able to telnet to its Gogo shell using this command: 
+
+```bash
+telnet localhost 11311
+```
+
+The Docker configuration is part of the larger [workspace configuration](configuring-liferay-workspace.md) that can handle multiple environments. If you're using that, the configurations stored in `configs/common` are merged with what you place in the `configs/docker` folder. 
