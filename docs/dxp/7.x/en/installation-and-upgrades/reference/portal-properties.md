@@ -1,10 +1,10 @@
 # Portal Properties
 
-Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file.
+Configuration options are specified using *Portal Properties*, sets of name/value pairs read from properties files and Docker environment variables on server startup. [Default values](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) are specified in the `portal-impl.jar/portal.properties` file.
 
-Some properties can be changed through the user interface (UI), but others can only be changed in a properties file. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, and [changing how users authenticate](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (by screen name instead of by email address).
+Some properties can be changed through the user interface (UI), but others can only be changed in a properties file or Docker environment variables. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, and [changing how users authenticate](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (by screen name instead of by email address).
 
-By convention, `portal-ext.properties` should be created in your `[Liferay Home](./liferay-home.md)` folder or `[USER_HOME]` folder to override default property values. You must restart DXP to apply a new or modified properties file.
+Liferay installations use properties files. By convention, `portal-ext.properties` should be created in your `[Liferay Home](./liferay-home.md)` folder or `[USER_HOME]` folder to override default property values. You must restart DXP to apply a new or modified properties file.
 
 ```warning::
    Never directly modify the ``portal-impl.jar/portal.properties`` file; instead, create a separate file to override properties you want to change. The ``portal-ext.properties`` file has been defined for this purpose.
@@ -14,7 +14,9 @@ Using a `portal-ext.properties` file to override default properties has these be
 
 * You can copy the file to other Liferay DXP environments and server nodes.
 * You can store configurations in a version control system to simplify configuration management.
-* Setting properties in the file before initial startup is the quickest way to configure DXP.
+* Setting properties in the file before initial startup is the quickest way to configure Liferay.
+
+Portal properties are applied to Liferay Docker containers with environment variables (Env variables) and properties files. Please see [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables) to configure Docker containers with portal properties.  
 
 **Contents:**
 
@@ -81,7 +83,7 @@ A special property called `include-and-override` defines property override order
 
     * The `portal-impl.jar/portal.properties` file
     * Extension properties files
-    * Liferay Docker Env variables
+    * [Env variables](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
 
 1. The last value defined for a *shared property* (a property defined multiple times) takes priority.
 
@@ -192,5 +194,6 @@ Go to *Control Panel* at *Configuration* &rarr; *System Settings* to find System
 
 * [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)
 * [Portal Developer Properties](../../liferay-internals/reference/portal-developer-properties.md)
+* [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md)
 * [System Settings](../../system-administration/configuring-liferay/system-settings.md)
 * [Understanding Configuration Files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
