@@ -96,18 +96,8 @@ Configuring analytics enables your website to send visitor browsing events to An
 
 The selected sites are now synced to Analytics Cloud.
 
-### Implementing "Do Not Track"
-
-According to GDPR and many data privacy laws, businesses are required to ask consent before collecting analytics data when visitors are browsing a website.
-
-To suppress analytics data from being sent by a particular browser, set the following window variable with javascript on your site.
-
-```
-window['ac_client_disable_tracking'] = true
-```
-
-```important::
-   You must implement your own logic to persist user consent either by using a cookie or by saving and loading from your database. Please make sure that the window variable described above is set before the client page is fully loaded.
+```note::
+   See `Do Not Track Feature <../../workspace-data/data-control-and-privacy.md#do-not-track-feature>`_ to learn more about suppressing analytics data.
 ```
 
 ### Configuring Contacts
