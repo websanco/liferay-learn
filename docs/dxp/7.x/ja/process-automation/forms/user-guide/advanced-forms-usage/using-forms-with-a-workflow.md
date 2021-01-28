@@ -2,7 +2,7 @@
 
 *フォーム*アプリケーションは*ワークフロー*アプリケーションと統合されているため、ユーザーはフォームに対しワークフロープロセスをアクティブ化できます。 つまり、フォームの入力を受け入れる前に、フォームを承認する必要があります。 フォームに対しワークフロープロセスを有効にする方法については、[Activating Workflow for Forms](../../../workflow/user-guide/activating-workflow.md#forms)を参照してください。
 
-ワークフローが有効になると、*[Submit]*ボタンが*[Submit for Publication]*に置き換わります。
+ワークフローが有効になると、*[Submit]* ボタンが*[Submit for Publication]* に置き換わります。
 
 ![[Submit for Publication]が使用されます。](./using-forms-with-a-workflow/images/02.png)
 
@@ -14,10 +14,10 @@
 
 ![レビュー担当者は、エントリを承認または拒否することができます。](./using-forms-with-a-workflow/images/04.png)
 
-フォームレコードが承認されると、*[Approved]*ステータスとともに同じフォームエントリメニューに表示されます。
+フォームレコードが承認されると、*[Approved]* ステータスとともに同じフォームエントリメニューに表示されます。
 
-1.  *[Site Adminstration]* → *[Content & Data]* → *[Forms]*に移動します。
-2.  選択したフォームの横にある*アクション*（![Actions](../../../../images/icon-actions.png)）ボタンをクリックし、*[View Entries]*を選択します。
+1.  *[Site Adminstration]* → *[Content & Data]* → *[Forms]* に移動します。
+2.  選択したフォームの横にある*アクション*（![Actions](../../../../images/icon-actions.png)）ボタンをクリックし、*[View Entries]* を選択します。
 
 ![フォームレコードが承認されました](./using-forms-with-a-workflow/images/05.png)
 

@@ -22,13 +22,13 @@ Advanced File System Store方式を使用するには、次の手順に従いま
 
 2.  DXPを再起動します。
 
-3.  コントロールパネルで、*[Configuration]* → *[System Settings]* → *[File Storage]*に移動します。
+3.  コントロールパネルで、*[Configuration]* → *[System Settings]* → *[File Storage]* に移動します。
 
-4.  *[Advanced File System Store]*画面で、*[Root Directory]*を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
+4.  *[Advanced File System Store]* 画面で、*[Root Directory]* を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
 
     ![Advanced File System Store画面](./configuring-file-storage/images/02.png)
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 DXPがAdvanced File System Storeを使用してファイルを保存するようになりました。
 

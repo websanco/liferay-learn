@@ -26,8 +26,8 @@ Liferay DXP Tomcatバンドルには、次のフォルダにアップグレー�
 
 | DXP版                   | ダウンロード手順                                                                                                                                                                  |
 |:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Liferay DXP（サブスクリプション） | [*ダウンロード*ページ](https://customer.liferay.com/group/customer/downloads)に移動し、DXPバージョンと*製品/サービスパック*のファイルタイプを選択します。 表示されるリストで、*Liferay DXPアップグレードクライアント*用の*[Download]*をクリックします。 |
-| LiferayポータルCE          | [*ダウンロード*ページ](https://www.liferay.com/downloads-community)に移動し、*Liferay Portal Tools for 7.x*の*[Download]*を選択します。                                                         |
+| Liferay DXP（サブスクリプション） | [*ダウンロード*ページ](https://customer.liferay.com/group/customer/downloads)に移動し、DXPバージョンと*製品/サービスパック*のファイルタイプを選択します。 表示されるリストで、*Liferay DXPアップグレードクライアント*用の*[Download]* をクリックします。 |
+| LiferayポータルCE          | [*ダウンロード*ページ](https://www.liferay.com/downloads-community)に移動し、*Liferay Portal Tools for 7.x*の*[Download]* を選択します。                                                         |
 
 ツールのコマンドラインインターフェイスを使用して実行するか、[プロパティファイルを使用](../reference/database-upgrade-tool-reference.md#manual-configuration)して、アップグレードツールを設定します。
 

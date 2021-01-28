@@ -6,7 +6,7 @@
 
 1.  ブラウザで`http://localhost:8080`を開きます。
 
-2.  *[Sign In]*リンクをクリックします。
+2.  *[Sign In]* リンクをクリックします。
 
     ![サインインリンク](./introduction-to-the-admin-account/images/01.png "サインインリンク")
 
@@ -29,7 +29,7 @@
 
 ### ログインパスワードの変更
 
-1.  *ユーザーのアバター*をクリックして、*[Account Settings]* → *[Password]*に移動します。
+1.  *ユーザーのアバター*をクリックして、*[Account Settings]* → *[Password]* に移動します。
 
 2.  *現在のパスワード*を入力し、新しいパスワードを入力します。
 
@@ -37,11 +37,11 @@
 
 ### アカウント情報の変更
 
-1.  *ユーザーのアバター*→ *[Account Settings]*の順にクリックします。
+1.  *ユーザーのアバター*→ *[Account Settings]* の順にクリックします。
 
     ![アカウント設定](./introduction-to-the-admin-account/images/02.png "アカウント設定")
 
-2.  *[Information]*タブで、必要に応じてユーザー情報を変更または追加します。
+2.  *[Information]* タブで、必要に応じてユーザー情報を変更または追加します。
 
     ![アカウント情報](./introduction-to-the-admin-account/images/03.png "アカウント情報")
 
@@ -49,7 +49,7 @@
 
 アカウントからログアウトするには：
 
-1.  *ユーザーのアバター*→ *[Sign Out]*の順にクリックします。
+1.  *ユーザーのアバター*→ *[Sign Out]* の順にクリックします。
 
     ![ログアウト](./introduction-to-the-admin-account/images/05.png "ログアウト")
 
@@ -60,8 +60,8 @@
 新しい管理者アカウントを作成するには、次の手順に従います。
 
 1.  新しいユーザーを作成します。 方法については、[Adding Users](../users-and-permissions/users/adding-and-managing-users.md)を参照してください。
-2.  左側のナビゲーションペイン（*[Edit User]*ページの*[General]*タブ）で*[Roles]*リンクをクリックします。
-3.  [Regular Roles]の下にある*[Select]*をクリックします。 リストから[Administrator]ロールを選択します（*[Choose]*をクリック）。 ダイアログボックスが閉じ、ロールがアカウントに関連付けられているロールのリストに追加されます。
+2.  左側のナビゲーションペイン（*[Edit User]* ページの*[General]* タブ）で*[Roles]* リンクをクリックします。
+3.  [Regular Roles]の下にある*[Select]* をクリックします。 リストから[Administrator]ロールを選択します（*[Choose]* をクリック）。 ダイアログボックスが閉じ、ロールがアカウントに関連付けられているロールのリストに追加されます。
 
 ユーザーがポータル管理者になりました。 ログアウトしてから、新しいユーザーアカウントで再度ログインします。
 

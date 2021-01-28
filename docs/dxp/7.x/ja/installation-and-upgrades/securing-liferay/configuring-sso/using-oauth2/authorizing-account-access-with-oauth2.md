@@ -87,13 +87,13 @@ OAuth 2.0は、資格情報を共有せずに、ユーザがクライアント�
 
 ![図1：ユーザーは、自分のアカウントプロファイル内のデータにアクセスできるアプリケーションを完全に制御できます。](./authorizing-account-access-with-oauth2/images/01.png)
 
-ユーザーは自分のアカウント領域で、*[OAuth2 Connected Applications]*をクリックして、自分のアカウントへのアクセスを許可したアプリケーションのリストを表示できます。 ここから、アクションメニューの*[Remove Access]*アイテムまたはアプリケーションの詳細画面の*[Remove Access]*ボタンをクリックして、アクセスを取り消すことができます。
+ユーザーは自分のアカウント領域で、*[OAuth2 Connected Applications]* をクリックして、自分のアカウントへのアクセスを許可したアプリケーションのリストを表示できます。 ここから、アクションメニューの*[Remove Access]* アイテムまたはアプリケーションの詳細画面の*[Remove Access]* ボタンをクリックして、アクセスを取り消すことができます。
 
-管理者は、*[Control Panel]* → *[Configuration]* → *[OAuth2 Administration]*で任意のアプリの[Authorizations]タブをクリックして承認内容を表示できます。
+管理者は、*[Control Panel]* → *[Configuration]* → *[OAuth2 Administration]* で任意のアプリの[Authorizations]タブをクリックして承認内容を表示できます。
 
 ![図2：アプリのすべての承認内容は、アプリの[Authorizations]タブに表示されます。](./authorizing-account-access-with-oauth2/images/02.png)
 
-リストされている承認の*[Revoke]*ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
+リストされている承認の*[Revoke]* ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
 
 ## まとめ
 

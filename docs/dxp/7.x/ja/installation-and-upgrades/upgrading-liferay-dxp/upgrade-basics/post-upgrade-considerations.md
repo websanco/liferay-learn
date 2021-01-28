@@ -14,7 +14,7 @@ DXPデータベースのアップグレードが完了したら、本番環境�
 rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
 ```
 
-コントロールパネルで*[Search]* → *[Index Actions]*に移動し、*[Reindex All Search Indexes]*の*[Execute]*をクリックして、サーチインデックスのインデックスを再作成します。
+コントロールパネルで*[Search]* → *[Index Actions]* に移動し、*[Reindex All Search Indexes]* の*[Execute]* をクリックして、サーチインデックスのインデックスを再作成します。
 
 ![コントロールパネルでサーチインデックスのインデックスを再作成できます。](./post-upgrade-considerations/images/01.png)
 
@@ -52,7 +52,7 @@ commit -a -m "New version of xyz app"
 
 DXP 7.1より前は、すべてのユーザーがデフォルトでWebコンテンツの記事を表示できました。 現在は、表示権限がデフォルトでチェックされるようになりました。 表示権限を開くための主なオプションは次のとおりです。
 
-**オプション1：***[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Web Content]* → *[Virtual Instance Scope]* → *[Web Content]*に移動し、*[Article view permissions check enabled]*の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
+**オプション1：***[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Web Content]* → *[Virtual Instance Scope]* → *[Web Content]* に移動し、*[Article view permissions check enabled]* の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
 
 ![[System Settings]の[Web Content]メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/02.png)
 

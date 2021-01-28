@@ -4,11 +4,11 @@
 
 ## フォルダを追加する
 
-フォルダを追加する最も簡単な方法は、サイトページにデプロイされた*[Documents and Media]*ウィジェットを使用することです。
+フォルダを追加する最も簡単な方法は、サイトページにデプロイされた*[Documents and Media]* ウィジェットを使用することです。
 
-1.  *[Documents and Media]*ウィジェットがデプロイされているサイトページに移動します。
+1.  *[Documents and Media]* ウィジェットがデプロイされているサイトページに移動します。
 
-2.  ウィジェットのタイトルメニューの上にマウスを置き、*追加*アイコン（![Add](../../../images/icon-add.png)）をクリックして*[Folder]*を選択します。
+2.  ウィジェットのタイトルメニューの上にマウスを置き、*追加*アイコン（![Add](../../../images/icon-add.png)）をクリックして*[Folder]* を選択します。
 
     ![ウィジェットにフォルダを追加する](./creating-folders/images/01.png)
 
@@ -18,7 +18,7 @@
 
     ![ウィジェットにフォルダを追加する](./creating-folders/images/02.png)
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 フォルダを作成すると、ドキュメントライブラリに表示されます。 ユーザーはサブフォルダを作成することもできます。 サブフォルダを作成するには、親フォルダとして指定されているフォルダをクリックして、この手順を繰り返します。
 
@@ -30,25 +30,25 @@
 
 1.  サイトの*サイト管理*メニューに移動します。
 
-2.  *[Content & Data]* → *[Documents and Media]*の順にクリックします。
+2.  *[Content & Data]* → *[Documents and Media]* の順にクリックします。
 
-3.  フォルダの*アクション*メニュー（![Actions](../../../images/icon-actions.png)）をクリックし、*[Edit]*を選択します。
+3.  フォルダの*アクション*メニュー（![Actions](../../../images/icon-actions.png)）をクリックし、*[Edit]* を選択します。
 
-4.  *[Document Type Restrictions and Workflow]*セクションを展開します。
+4.  *[Document Type Restrictions and Workflow]* セクションを展開します。
 
-5.  *[Define Specific Document Type Restrictions and Workflow for this Folder（現在のフォルダ）]*をクリックします。
+5.  *[Define Specific Document Type Restrictions and Workflow for this Folder（現在のフォルダ）]* をクリックします。
 
-6.  *[Select Document Type]*をクリックします。
+6.  *[Select Document Type]* をクリックします。
 
     ![ドキュメントタイプの設定](./creating-folders/images/03.png)
 
-7.  このフォルダに関連付けるドキュメントタイプの横にある*[Choose]*をクリックします。
+7.  このフォルダに関連付けるドキュメントタイプの横にある*[Choose]* をクリックします。
 
 8.  このフォルダに関連付けるワークフローを選択します。
 
     ![ドキュメントタイプを選択](./creating-folders/images/04.png)
 
-9.  完了したら、*[保存]*をクリックします。
+9.  完了したら、*[保存]* をクリックします。
 
 ## 追加情報
 

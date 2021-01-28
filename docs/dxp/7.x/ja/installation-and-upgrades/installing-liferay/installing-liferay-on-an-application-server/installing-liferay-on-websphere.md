@@ -42,13 +42,13 @@ WebSphereにDXPをインストールするための基本的な手順は次の�
 
 アプリケーションサーバーのバイナリがインストールされたら、*プロファイル管理ツール*を起動して、DXPに適したプロファイルを作成します。
 
-1.  *[Create...]*をクリックし、*[Application Server]*を選択して、*[Next]*をクリックします。
+1.  *[Create...]* をクリックし、*[Application Server]* を選択して、*[Next]* をクリックします。
 
-2.  *アドバンスト*プロファイルの作成オプションをクリックし、*[Next]*をクリックします。 アドバンスト プロファイルを使用して、プロファイルの場所やプロファイルの名前、ノードとホストなどの設定値を指定したり、特定のポートを割り当てたり、オプションで管理コンソールとサンプルアプリケーションをデプロイするかどうか、またWeb IBM HTTP ServerのWebサーバー定義を追加するかどうかを選択します。 これらのオプションの詳細については、WebSphereのドキュメントを参照してください。
+2.  *アドバンスト*プロファイルの作成オプションをクリックし、*[Next]* をクリックします。 アドバンスト プロファイルを使用して、プロファイルの場所やプロファイルの名前、ノードとホストなどの設定値を指定したり、特定のポートを割り当てたり、オプションで管理コンソールとサンプルアプリケーションをデプロイするかどうか、またWeb IBM HTTP ServerのWebサーバー定義を追加するかどうかを選択します。 これらのオプションの詳細については、WebSphereのドキュメントを参照してください。
 
     ![図1：アドバンストプロファイルオプションを選択して、独自の設定を指定します。](./installing-liferay-on-websphere/images/01.png)
 
-3.  *[Deploy the administrative console]*ボックスをオンにします。 これにより、アプリケーションサーバーを操作するためのWebベースのUIが有効になります。 デフォルトのアプリケーションをスキップします。 （これらは開発マシンにのみインストールしてください。）*[Next]*をクリックします。
+3.  *[Deploy the administrative console]* ボックスをオンにします。 これにより、アプリケーションサーバーを操作するためのWebベースのUIが有効になります。 デフォルトのアプリケーションをスキップします。 （これらは開発マシンにのみインストールしてください。）*[Next]* をクリックします。
 
 4.  プロファイル名と場所を設定します。 環境に適したパフォーマンス調整設定を指定します。
 
@@ -58,19 +58,19 @@ WebSphereにDXPをインストールするための基本的な手順は次の�
 
 5.  サーバーのノード、サーバー、およびホスト名を選択します。 これらはユーザーの環境に固有です。 *[Next]* をクリックします。
 
-6.  WebSphereの管理セキュリティは、管理ツールへのアクセス権を持つユーザーを制限する方法です。 管理者は環境でこの方法を有効にすることで、WebSphereサーバーを管理するにはユーザー名とパスワードが必要となるようにできます。 詳細については、WebSphereのドキュメントを参照してください。 *[Next]*をクリックします。
+6.  WebSphereの管理セキュリティは、管理ツールへのアクセス権を持つユーザーを制限する方法です。 管理者は環境でこの方法を有効にすることで、WebSphereサーバーを管理するにはユーザー名とパスワードが必要となるようにできます。 詳細については、WebSphereのドキュメントを参照してください。 *[Next]* をクリックします。
 
-7.  各プロファイルには、ウィザードの次に表示されるセキュリティ証明書が必要です。 証明書をまだ生成していない場合は、個人証明書と署名証明書を生成するオプションを選択し、*[Next]*をクリックします。
+7.  各プロファイルには、ウィザードの次に表示されるセキュリティ証明書が必要です。 証明書をまだ生成していない場合は、個人証明書と署名証明書を生成するオプションを選択し、*[Next]* をクリックします。
 
-8.  証明書が生成されたら、キーストアのパスワードを設定します。 *[Next]*をクリックします。
+8.  証明書が生成されたら、キーストアのパスワードを設定します。 *[Next]* をクリックします。
 
 9.  管理者は、このサーバープロファイルが使用するポートをカスタマイズできます。 マシンで開いているポートを選択してください。 ポートを選択すると、ウィザードは既存のWebSphereインストールを自動的に検出し、アクティビティが見つかると、ポートを1つ増やします。
 
-10. マシンの起動時にこのプロファイルを開始するかどうかを選択します。 *[Next]*をクリックします。
+10. マシンの起動時にこのプロファイルを開始するかどうかを選択します。 *[Next]* をクリックします。
 
-11. WebSphereにはIBM HTTP Serverが付属しています。 このJVMがHTTPサーバーから転送された要求を受信できるように、Webサーバー定義が必要かどうかを選択します。 詳細については、WebSphereのドキュメントを参照してください。 完了したら、* [Next]*をクリックします。
+11. WebSphereにはIBM HTTP Serverが付属しています。 このJVMがHTTPサーバーから転送された要求を受信できるように、Webサーバー定義が必要かどうかを選択します。 詳細については、WebSphereのドキュメントを参照してください。 完了したら、* [Next]* をクリックします。
 
-12. ウィザードに選択された内容の概要が表示され、管理者は選択内容を保持したり、前の画面に戻って内容を変更したりできます。 完了したら、* [Next]*をクリックします。
+12. ウィザードに選択された内容の概要が表示され、管理者は選択内容を保持したり、前の画面に戻って内容を変更したりできます。 完了したら、* [Next]* をクリックします。
 
 WebSphereはプロファイルを作成し、プロファイルが正常に作成されたことを示すメッセージで終了します。
 
@@ -194,39 +194,39 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
 
 2.  管理コンソールを開き、ログインします。
 
-3.  *[Resources] → [JDBC Providers]*をクリックします。
+3.  *[Resources] → [JDBC Providers]* をクリックします。
 
-4.  スコープを選択し、*[New]*をクリックします。
+4.  スコープを選択し、*[New]* をクリックします。
 
-5.  データベースの種類、プロバイダーの種類、実装の種類を選択します。 事前定義されたデータベースを選択すると、ウィザードによって名前と説明のフィールドが自動的に入力されます。 目的のデータベースがリストにない場合は、*[Database type]*フィールドから*[User-defined]*を選択して、*[Implementation Class Name]*を入力します。 たとえば、MySQLを使用している場合は、*[Database type]* → *[User-defined]*を選択し、*[Implementation Class Name]*に`com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource`と入力します。 *[Next]*をクリックします。
+5.  データベースの種類、プロバイダーの種類、実装の種類を選択します。 事前定義されたデータベースを選択すると、ウィザードによって名前と説明のフィールドが自動的に入力されます。 目的のデータベースがリストにない場合は、*[Database type]* フィールドから*[User-defined]* を選択して、*[Implementation Class Name]* を入力します。 たとえば、MySQLを使用している場合は、*[Database type]* → *[User-defined]* を選択し、*[Implementation Class Name]* に`com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource`と入力します。 *[Next]* をクリックします。
 
-6.  クラスパス設定のテキストをすべてクリアします。 必要なJARは、サーバーのクラスパス上の場所にすでにコピーされています。 *[Next]*をクリックします。
+6.  クラスパス設定のテキストをすべてクリアします。 必要なJARは、サーバーのクラスパス上の場所にすでにコピーされています。 *[Next]* をクリックします。
 
-7.  設定を確認し、*[Finish]*をクリックします。 最終的な構成は次のようになります。
+7.  設定を確認し、*[Finish]* をクリックします。 最終的な構成は次のようになります。
 
     ![図4：完成したJDBCプロバイダーの構成。](./installing-liferay-on-websphere/images/04.png)
 
 8.  新しいプロバイダー構成が表に表示されたらクリックします。
 
-9.  *[Additional Properties]*の下の*[Data Sources]*をクリックします。
+9.  *[Additional Properties]* の下の*[Data Sources]* をクリックします。
 
-10. *[New]*をクリックします。
+10. *[New]* をクリックします。
 
-11. *[Data source name]*フィールドに`liferaydatabasesource`と入力し、*[JNDI name]*フィールドに`jdbc/LiferayPool`と入力します。 *[Next]*をクリックします。
+11. *[Data source name]* フィールドに`liferaydatabasesource`と入力し、*[JNDI name]* フィールドに`jdbc/LiferayPool`と入力します。 *[Next]* をクリックします。
 
-12. ウィザードの残りの画面で*[Next]*をクリックして、デフォルト値を受け入れます。 次にすべての変更を確認し、*[Finish]*をクリックします。
+12. ウィザードの残りの画面で*[Next]* をクリックして、デフォルト値を受け入れます。 次にすべての変更を確認し、*[Finish]* をクリックします。
 
-13. データソースが表に表示されたらクリックし、*[Custom Properties]*をクリックします。
+13. データソースが表に表示されたらクリックし、*[Custom Properties]* をクリックします。
 
-14. *[Show Filter Function]*ボタンをクリックします。 このボタンは、*[New]*ボタンと*[Delete]*ボタンの下にある小さいアイコンの最後から2番目です。
+14. *[Show Filter Function]* ボタンをクリックします。 このボタンは、*[New]* ボタンと*[Delete]* ボタンの下にある小さいアイコンの最後から2番目です。
 
-15. *user*を検索語句に入力し、*[Go]*をクリックします。
+15. *user*を検索語句に入力し、*[Go]* をクリックします。
 
     ![図5：WebSphereでのデータソースプロパティの変更](././installing-liferay-on-websphere/images/05.png)
 
 16. *user*プロパティを選択し、ユーザー名の値をデータベースに付与します。
 
-17. *[OK]*をクリックして、マスター構成に保存します。
+17. *[OK]* をクリックして、マスター構成に保存します。
 
 18. *url*プロパティに対して別のフィルター検索を実行します。 このプロパティに、データベースを指す値を指定します。 たとえば、MySQLのURLは次のようになります。
 
@@ -241,9 +241,9 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
 
     [*OK*]をクリックして、マスター構成に保存します。
 
-19. *password*プロパティに対して別のフィルター検索を実行します。 このプロパティの値として、前に追加したユーザーIDのパスワードを入力します。 *[OK]*をクリックして、マスター構成に保存します。
+19. *password*プロパティに対して別のフィルター検索を実行します。 このプロパティの値として、前に追加したユーザーIDのパスワードを入力します。 *[OK]* をクリックして、マスター構成に保存します。
 
-20. パンくずリストでデータソースページをクリックして、そのページに戻ります。 *[Test Connection]*ボタンを使用して、この時点までの構成を検証します。
+20. パンくずリストでデータソースページをクリックして、そのページに戻ります。 *[Test Connection]* ボタンを使用して、この時点までの構成を検証します。
 
 ## メール設定
 
@@ -253,21 +253,21 @@ WebSphereを使用してメールセッションを管理する場合は、次�
 
 ### WebSphere管理のメールセッションの作成
 
-1.  *[Resources] → [Mail] → [Mail Providers]*をクリックします。
+1.  *[Resources] → [Mail] → [Mail Providers]* をクリックします。
 
 2.  ノードとサーバーの組み込みメールプロバイダーをクリックします。
 
-3.  *[Mail Sessions]*をクリックし、*[New]*ボタンをクリックします。
+3.  *[Mail Sessions]* をクリックし、*[New]* ボタンをクリックします。
 
-4.  メールセッションに`liferaymail`の名前と`mail/MailSession`のJNDI名を付けます。 *[Outgoing Mail Properties]*セクションと*[Incoming Mail Properties]*セクションにメールサーバーの正しい情報を入力します。 *[OK]*をクリックして、マスター構成に保存します。
+4.  メールセッションに`liferaymail`の名前と`mail/MailSession`のJNDI名を付けます。 *[Outgoing Mail Properties]* セクションと*[Incoming Mail Properties]* セクションにメールサーバーの正しい情報を入力します。 *[OK]* をクリックして、マスター構成に保存します。
 
-5.  表に表示されたメールセッションをクリックし、*[Additional Properties]*セクションの下で*[Custom Properties]*を選択します。 プロトコル、ポート、SSLを使用するかどうかなど、メールサーバーに必要なその他のJavaMailプロパティを設定します。
+5.  表に表示されたメールセッションをクリックし、*[Additional Properties]* セクションの下で*[Custom Properties]* を選択します。 プロトコル、ポート、SSLを使用するかどうかなど、メールサーバーに必要なその他のJavaMailプロパティを設定します。
 
-6.  *[Security] → [Global Security]*をクリックし、*[Use Java 2 security to restrict application access to local resources]*が選択されている場合は選択を解除します。
+6.  *[Security] → [Global Security]* をクリックし、*[Use Java 2 security to restrict application access to local resources]* が選択されている場合は選択を解除します。
 
     ![図6：メールセッションでのJavaセキュリティの適用](./installing-liferay-on-websphere/images/06.png)
 
-7.  *[Apply]*をクリックします。
+7.  *[Apply]* をクリックします。
 
 メールサーバーからSSL証明書を取得し、それをWebSphereのトラストストアに追加する必要がある場合があることに注意してください。 この手順については、WebSphereのドキュメントを参照してください。
 
@@ -286,41 +286,41 @@ User 0 is not allowed to access URL http://localhost:9081/web/guest/home and por
 
 これは、HTTPの使用時にDXPがHTTPS Cookieを使用できないために発生します。 その結果、ページが更新されるたびに新しいセッションが作成されます。 WebSphereでこの問題を解決するには、以下の手順に従ってください。
 
-1.  *[Application Servers]* → *[server1]* → *[Session Management]* → *[Enable Cookies]*の順にクリックします。
-2.  *[Restrict cookies to HTTPS sessions]*の選択を解除します。
-3.  *[Apply]*をクリックします。
-4.  *[保存]*をクリックします。
+1.  *[Application Servers]* → *[server1]* → *[Session Management]* → *[Enable Cookies]* の順にクリックします。
+2.  *[Restrict cookies to HTTPS sessions]* の選択を解除します。
+3.  *[Apply]* をクリックします。
+4.  *[保存]* をクリックします。
 
 ## UTF-8を有効にする
 
 `server.xml`に`-Dfile.encoding=UTF-8`プロパティを追加してもUTF-8が有効になっていない場合、管理者は管理コンソールでも有効にすることができます。
 
-1.  *[Application Servers]* → *[server1]* → *[Process definition]*の順にクリックします。
-2.  *[Additional Properties]*の下の*[Java Virtual Machine]*をクリックします。
-3.  *[Generic JVM arguments]*フィールドに`-Dfile.encoding=UTF-8`と入力します。
-4.  *[Apply]*をクリックしてから、*[保存]*をクリックしてマスター構成に保存します。
+1.  *[Application Servers]* → *[server1]* → *[Process definition]* の順にクリックします。
+2.  *[Additional Properties]* の下の*[Java Virtual Machine]* をクリックします。
+3.  *[Generic JVM arguments]* フィールドに`-Dfile.encoding=UTF-8`と入力します。
+4.  *[Apply]* をクリックしてから、*[保存]* をクリックしてマスター構成に保存します。
 
 変更が保存されると、ローカライズされたコンテンツがある場合、DXPは特殊文字を解析できます。
 
 ## DXP `.war`ファイルのデプロイ
 
-1.  WebSphereの管理コンソールで、*[Applications]* → *[New Application]* → *[New Enterprise Application]*の順にクリックします。
+1.  WebSphereの管理コンソールで、*[Applications]* → *[New Application]* → *[New Enterprise Application]* の順にクリックします。
 
-2.  DXP `.war`ファイルを参照して選択し、*[Next]*をクリックします。
+2.  DXP `.war`ファイルを参照して選択し、*[Next]* をクリックします。
 
-3.  *[Fast Path]*を選択したままにして、*[Next]*をクリックします。 *[Distribute Application]*がオンになっていることを確認し、もう一度*[Next]*をクリックします。
+3.  *[Fast Path]* を選択したままにして、*[Next]* をクリックします。 *[Distribute Application]* がオンになっていることを確認し、もう一度*[Next]* をクリックします。
 
-4.  DXPをデプロイするWebSphereランタイムまたはクラスター、あるいはその両方を選択します。 *[Next]*をクリックします。
+4.  DXPをデプロイするWebSphereランタイムまたはクラスター、あるいはその両方を選択します。 *[Next]* をクリックします。
 
-5.  DXPをデプロイする仮想ホストを選択し、*[Next]*をクリックします。
+5.  DXPをデプロイする仮想ホストを選択し、*[Next]* をクリックします。
 
-6.  DXPをルートコンテキスト（`/`）にマップし、*[Next]*をクリックします。
+6.  DXPをルートコンテキスト（`/`）にマップし、*[Next]* をクリックします。
 
-7.  目的の*metadata-complete属性*設定を選択し、*[Next]*をクリックします。
+7.  目的の*metadata-complete属性*設定を選択し、*[Next]* をクリックします。
 
-8.  設定が正しいことを確認し、*[Finish]*をクリックします。
+8.  設定が正しいことを確認し、*[Finish]* をクリックします。
 
-9.  DXPがインストールされたら、*[Save to Master Configuration]*をクリックします。
+9.  DXPがインストールされたら、*[Save to Master Configuration]* をクリックします。
 
     ![図7：デプロイする前に、デプロイオプションを確認します。](./installing-liferay-on-websphere/images/07.png)
 
@@ -354,9 +354,9 @@ DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ�
 
 2.  アプリケーションサーバーを起動します。
 
-3.  WebSphere管理コンソールで、*[Enterprise Applications]*に移動し、DXPアプリケーションを選択して、*[Start]*をクリックします。 DXPの起動中、WebSphereには回転する図が表示されます。
+3.  WebSphere管理コンソールで、*[Enterprise Applications]* に移動し、DXPアプリケーションを選択して、*[Start]* をクリックします。 DXPの起動中、WebSphereには回転する図が表示されます。
 
-4.  DXPのセットアップウィザードで、データベースの種類を選択して設定します。 *[Finish]*をクリックします。 DXPは、データベースに必要なテーブルを作成します。
+4.  DXPのセットアップウィザードで、データベースの種類を選択して設定します。 *[Finish]* をクリックします。 DXPは、データベースに必要なテーブルを作成します。
 
 DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような警告やログメッセージが過剰になることがあります。 これらは良性なので無視することができます。 このようなログメッセージを回避するために、必ずアプリケーションサーバーのログレベルまたはログフィルターを調整してください。
 

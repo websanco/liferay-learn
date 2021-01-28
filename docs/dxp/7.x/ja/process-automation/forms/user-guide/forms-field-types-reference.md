@@ -4,11 +4,11 @@
 
 1.  *製品メニュー*（![Product Menu](../../../images/icon-product-menu.png)）を開き、*サイト管理*メニューのコンパスアイコン（![Compass](../../../images/icon-compass.png)）をクリックします。 フォームを作成するサイトを選択します。
 
-2.  *[Content & Data]* → *[Forms]*の順にクリックします。
+2.  *[Content & Data]* → *[Forms]* の順にクリックします。
 
 3.  *追加*ボタン（![Add](../../../images/icon-add.png)）をクリックします。 フォームビルダービューが表示されます。
 
-4.  *追加*ボタン（![Add](../../../images/icon-add.png)）をもう一度クリックして、*[Add Elements]*サイドバーを表示します（まだ開いていない場合）。
+4.  *追加*ボタン（![Add](../../../images/icon-add.png)）をもう一度クリックして、*[Add Elements]* サイドバーを表示します（まだ開いていない場合）。
 
     ![すぐに使用できる便利なフォーム項目のタイプが多数あります。](./form-field-types-reference/images/01.png)
 

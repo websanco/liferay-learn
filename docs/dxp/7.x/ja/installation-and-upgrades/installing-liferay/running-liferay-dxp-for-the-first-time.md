@@ -19,11 +19,11 @@
     
     ![[起動が完了すると、DXPはWebブラウザを起動し、[Basic Configuration]ページを表示します。]（./running-liferay-dxp-for-the-first-time/images/01.png）
 
-2.  ポータルの*[Name]*、*[Default Language]*および*[Time Zone]*を設定します。
+2.  ポータルの*[Name]*、*[Default Language]* および*[Time Zone]* を設定します。
 
 3.  *管理者ユーザー*の名、姓、メールアドレスを設定します。
 
-4.  *[Database]*セクションで、*[Change]*をクリックしてデータベースフォームを表示します。
+4.  *[Database]* セクションで、*[Change]* をクリックしてデータベースフォームを表示します。
 
     ``` warning::
        本番環境グレードのLiferay DXPインスタンスではHSQLを使用しないでください。
@@ -42,7 +42,7 @@
 
      6. *サンプルデータ*について：本番環境グレードのDXPインスタンスを作成している場合、またはデータが不要な場合は、サンプルデータフィールドを選択しないでください。 サンプルデータには、デモンストレーション用のユーザー、サイト、組織が含まれています。
 
-     7. *[Finish Configuration]*をクリックします。
+     7. *[Finish Configuration]* をクリックします。
 
 セットアップウィザードは、設定値を[Liferay Home](../reference/liferay-home.md)の`portal-setup-wizard.properties`ファイルに保存します。
 

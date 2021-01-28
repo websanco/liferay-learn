@@ -36,7 +36,7 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
 コントロールパネルには、よく使用されるLDAP属性のデフォルトのマッピングが用意されています。 独自のマッピングを追加することもできます。
 
-**Test LDAP Users：**属性マッピングを設定した後（上記を参照）、*[Test LDAP Users]*ボタンをクリックすると、LiferayはLDAPユーザーをプルし、プレビューとしてマッピングと照合します。
+**Test LDAP Users：**属性マッピングを設定した後（上記を参照）、*[Test LDAP Users]* ボタンをクリックすると、LiferayはLDAPユーザーをプルし、プレビューとしてマッピングと照合します。
 
 ![[Test LDAP Users]ボタンをクリックすると、ユーザーのリストが表示されます。](./configuring-user-import-and-export/images/01.png)
 
@@ -48,13 +48,13 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
     (objectClass=groupOfNames)
 
-このマッピングで取得するLDAPグループ属性を入力します。 以下の属性をマップできます。 *[Group Name]*および*[User]*フィールドは必須です。*[Description]*はオプションです。
+このマッピングで取得するLDAPグループ属性を入力します。 以下の属性をマップできます。 *[Group Name]* および*[User]* フィールドは必須です。*[Description]* はオプションです。
 
   - *Group Name*（例`cn`または`o`）
   - *Description*（例：`description`）
   - *User*（例`member`）
 
-**Test LDAP Groups：***[Test LDAP Groups]*ボタンをクリックすると、検索フィルターによって返されたグループのリストが表示されます。
+**Test LDAP Groups：***[Test LDAP Groups]* ボタンをクリックすると、検索フィルターによって返されたグループのリストが表示されます。
 
 ## エクスポート
 
@@ -68,7 +68,7 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
 **Group Default Object Classes：**グループがエクスポートされると、そのグループはリストされたデフォルトのオブジェクトクラスで作成されます。 デフォルトのオブジェクトクラスを確認するには、[Apache Directory Studio](https://directory.apache.org/studio)などのLDAPブラウザーツールを使用してグループを検索し、LDAPに保存されているそのグループのオブジェクトクラス属性を表示します。
 
-すべてのオプションを設定して接続をテストしたら、*[保存]*をクリックします。
+すべてのオプションを設定して接続をテストしたら、*[保存]* をクリックします。
 
 ``` note::
    ユーザーがLiferayのパスワードのような値を変更した場合、Liferayが変更を行うのに十分なスキーマアクセスを持っている限り、その変更はLDAPサーバーに渡されます。

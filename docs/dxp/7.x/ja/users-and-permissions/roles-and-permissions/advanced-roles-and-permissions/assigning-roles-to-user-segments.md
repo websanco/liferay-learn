@@ -6,17 +6,17 @@
 
 ロールをユーザーセグメントに割り当てるには、次の手順に従います。
 
-1.  製品メニューを開き、 *[Control Panel]* → *[Users]* → *[Roles]*に移動します。
+1.  製品メニューを開き、 *[Control Panel]* → *[Users]* → *[Roles]* に移動します。
 
-2.  ロールの横にあるアクションメニューを開き、*[Edit]*を選択します。
+2.  ロールの横にあるアクションメニューを開き、*[Edit]* を選択します。
 
     ![ロールを編集して、ユーザーセグメントを割り当てます。](./assigning-roles-to-user-segments/images/01.png)
 
-3.  *[Assignees]* → *[Segments]*タブを選択し、（![Add Button](../../../images/icon-add.png)）をクリックしてユーザーセグメントを選択します。
+3.  *[Assignees]* → *[Segments]* タブを選択し、（![Add Button](../../../images/icon-add.png)）をクリックしてユーザーセグメントを選択します。
 
     ![[Assignees]の下の[Segments]タブに移動して、ロールを割り当てます。](./assigning-roles-to-user-segments/images/02.png)
 
-4.  既存のユーザーセグメントの横にあるチェックボックスをオンにし、*[Add]*をクリックしてロールを割り当てます。 ユーザーセグメントが存在しない場合は、（![Add Button](../../../images/icon-add.png)）をクリックして新しいユーザーセグメントを作成できます。
+4.  既存のユーザーセグメントの横にあるチェックボックスをオンにし、*[Add]* をクリックしてロールを割り当てます。 ユーザーセグメントが存在しない場合は、（![Add Button](../../../images/icon-add.png)）をクリックして新しいユーザーセグメントを作成できます。
 
     ![ロールを割り当てるユーザーセグメントの横にあるチェックボックスをオンにします。](./assigning-roles-to-user-segments/images/03.png)
 

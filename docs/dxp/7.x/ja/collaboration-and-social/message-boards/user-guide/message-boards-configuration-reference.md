@@ -2,8 +2,8 @@
 
 この記事では、*メッセージボード*アプリで使用できる構成設定について説明します。 *メッセージボード*アプリの[Configuration]画面を表示するには：
 
-1.  *[Site Administration]* → *[Content & Data]* → *[Message Boards]*に移動します。
-2.  *[Options]*メニュー → *[Configuration]*の順にクリックします。
+1.  *[Site Administration]* → *[Content & Data]* → *[Message Boards]* に移動します。
+2.  *[Options]* メニュー → *[Configuration]* の順にクリックします。
 
 ## [General]タブ
 
@@ -31,27 +31,27 @@
 | Address     | フォーラムの所有者またはモデレーターのメールアドレス |
 | HTML Format | メールの形式を選択するためのチェックボックス     |
 
-各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]*メニューを展開してください。
+各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]* メニューを展開してください。
 
 ![[Email From]の用語の定義](./message-boards-configuration-reference/images/08.png)
 
 ## Message Added Email
 
-*[Message Added Email]*タブには、メッセージボードのスレッドが作成されるたびに送信される電子メールのテンプレートが含まれています。
+*[Message Added Email]* タブには、メッセージボードのスレッドが作成されるたびに送信される電子メールのテンプレートが含まれています。
 
 ![Message Added Email](./message-boards-configuration-reference/images/03.png)
 
-変数を使用して各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]*メニューを展開してください。
+変数を使用して各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]* メニューを展開してください。
 
 ![[Message Added Email]の用語の定義](./message-boards-configuration-reference/images/09.png)
 
 ## Message Updated Email
 
-*[Message Added Email]*タブには、メッセージボードのスレッドがアップデートされるたびに送信される電子メールのテンプレートが含まれています。
+*[Message Added Email]* タブには、メッセージボードのスレッドがアップデートされるたびに送信される電子メールのテンプレートが含まれています。
 
 ![Message Updated Email](./message-boards-configuration-reference/images/04.png)
 
-各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]*メニューを展開してください。
+各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細については、*[Definition of Terms]* メニューを展開してください。
 
 ![[Message Added Email]の用語の定義](./message-boards-configuration-reference/images/09.png)
 

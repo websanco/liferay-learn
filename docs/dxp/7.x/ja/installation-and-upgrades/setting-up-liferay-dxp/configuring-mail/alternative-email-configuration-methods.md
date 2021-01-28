@@ -37,13 +37,13 @@ DXPは次回の起動時にメールセッションに接続します。
 
 1.  アプリケーションサーバーでメールセッションを作成します。アプリケーションサーバーのドキュメントを参照してください。
 
-2.  *コントロールパネル*を使用している場合は、*[Control Panel] → [Configuration] → [Server Administration] → [Mail]*に移動します。
+2.  *コントロールパネル*を使用している場合は、*[Control Panel] → [Configuration] → [Server Administration] → [Mail]* に移動します。
 
-3.  *[JavaMail Properties]*フィールドに値を入力します。
+3.  *[JavaMail Properties]* フィールドに値を入力します。
 
     ![JavaMail](./alternative-email-configuration-methods/images/01.png)
 
-4.  *[保存]*をクリックします。 DXPがアプリケーションサーバー上のメールセッションを指すようになります。
+4.  *[保存]* をクリックします。 DXPがアプリケーションサーバー上のメールセッションを指すようになります。
 
 メールサーバーがDXPに接続され、通知を送信する準備ができました。
 

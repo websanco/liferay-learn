@@ -23,7 +23,7 @@
 
 ## トークンベースの認証の構成
 
-トークンベースの認証はデフォルトで無効になっています。 トークンベースのSSO認証を管理するには、コントロールパネル → *[System Settings]* → *[Security]* → *[SSO]*に移動します。
+トークンベースの認証はデフォルトで無効になっています。 トークンベースのSSO認証を管理するには、コントロールパネル → *[System Settings]* → *[Security]* → *[SSO]* に移動します。
 
 ![SSO設定は、システム設定のセキュリティセクションにあります。](token-based-authentication/images/01.png)
 
@@ -38,7 +38,7 @@
 | **Authentication cookies** | ログアウト後に削除する必要があるCookie名に設定します。 （例：`SMIDENTITY`、`SMSESSION`）           |
 | **Logout redirect URL**    | ユーザーがLiferay Portalからログアウトすると、ユーザーはこのURLにリダイレクトされます。                  |
 
-*[保存]*をクリックして、トークンベースのSSOをアクティブにしてください。
+*[保存]* をクリックして、トークンベースのSSOをアクティブにしてください。
 
 ## 必要なSiteMinder構成
 

@@ -6,7 +6,7 @@
 
 ## デフォルトのサービスアクセスポリシー
 
-サービスアクセスポリシーを表示および管理するには、*[Control Panel]* → *[Configuration]* → *[Service Access Policy]*に移動します。
+サービスアクセスポリシーを表示および管理するには、*[Control Panel]* → *[Configuration]* → *[Service Access Policy]* に移動します。
 
 ![サービスアクセスポリシービュー](./setting-service-access-policies/images/01.png)
 
@@ -58,19 +58,19 @@
 
 新しいサービスアクセスポリシーを作成するには：
 
-1.  コントロールパネルの*[Configuration]* → *[Service Access Policy]*セクションに移動します。
+1.  コントロールパネルの*[Configuration]* → *[Service Access Policy]* セクションに移動します。
 
 2.  *追加*（![add](../../../images/icon-add.png)）をクリックします。
 
 3.  ポリシーに名前を付けます。
 
-4.  *[Enabled]*を反転して、ポリシーを有効にします。
+4.  *[Enabled]* を反転して、ポリシーを有効にします。
 
-5.  認証されていない要求と認証されている要求にポリシーを適用する場合は、*[Default]*というラベルの付いたトグルを切り替えます。
+5.  認証されていない要求と認証されている要求にポリシーを適用する場合は、*[Default]* というラベルの付いたトグルを切り替えます。
 
 6.  ポリシーにローカライズされたタイトルを付けます。
 
-7.  *[Allowed Service Signatures]*で、インストールされているサービスクラスの完全修飾名を入力します。
+7.  *[Allowed Service Signatures]* で、インストールされているサービスクラスの完全修飾名を入力します。
 
 8.  [Method Name]で、サービスメソッド呼び出しの入力を開始します。
 
@@ -80,7 +80,7 @@
 
 9.  別のサービスまたはメソッドを指定するには、プラスアイコンをクリックして別のエントリを追加します。
 
-10. 完了したら、* [保存]*をクリックします。
+10. 完了したら、* [保存]* をクリックします。
 
 ``` tip::
    すべてのメソッドシグネチャが事前にわかっている場合は、[*Switch to Advanced Mode*]をクリックして、すべてを1つのフィールドの別々の行に入力します。
@@ -107,7 +107,7 @@ Liferayのサービスアクセスポリシーモジュールは、ソースコ�
 
 ## サービスアクセスポリシーモジュールの構成
 
-1.  *[Control Panel]* → *[System Settings]* → *[API Authentication]*に移動します。 ![サービスアクセスポリシーモジュールの場所](./setting-service-access-policies/images/02.png)
+1.  *[Control Panel]* → *[System Settings]* → *[API Authentication]* に移動します。 ![サービスアクセスポリシーモジュールの場所](./setting-service-access-policies/images/02.png)
 2.  [Security]セクションの*[Service Access Policies]* モジュールをクリックします。 名前をクリックして編集します。
 3.  デフォルトのサービスアクセスポリシー設定は編集できます。 `AuthVerifier`によってポリシーが適用されていない場合でも、デフォルトのポリシーを強制的に適用することもできます。
 

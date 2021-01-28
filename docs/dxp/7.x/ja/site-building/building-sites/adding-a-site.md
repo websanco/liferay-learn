@@ -2,7 +2,7 @@
 
 新しいサイトをLiferay Portalインスタンスに追加するには：
 
-1.  [製品メニュー](../../getting-started/navigating-dxp.md)を開き、コントロールパネルに移動して、*[Sites]* → *[Sites]*の順に選択します。
+1.  [製品メニュー](../../getting-started/navigating-dxp.md)を開き、コントロールパネルに移動して、*[Sites]* → *[Sites]* の順に選択します。
 
     ![サイトのコントロールパネルの場所。](./adding-a-site/images/02.png)
 
@@ -12,13 +12,13 @@
 
 4.  サイトの名前を入力し、オプションで説明を入力します。
 
-5.  *[Membership Type]*を設定します。 次のメンバーシップタイプが利用可能です。 <!-- What does it mean for a user to be a member of a site? What abilities/permissions does that typically confer? To answer that question it probably doesn't make sense here, but should link to another article, potentially, "Understanding Site Membership" -->
+5.  *[Membership Type]* を設定します。 次のメンバーシップタイプが利用可能です。 <!-- What does it mean for a user to be a member of a site? What abilities/permissions does that typically confer? To answer that question it probably doesn't make sense here, but should link to another article, potentially, "Understanding Site Membership" -->
     
       - **Open：**ユーザーはいつでもサイトのメンバーになることができます。
       - **Restricted：**ユーザーはサイトメンバーシップを要求できますが、サイト管理者がユーザーがメンバーになるための要求を承認する必要があります。
       - **Private：**ユーザーはサイトに参加したり、サイトのメンバーシップを要求したりできません。 サイト管理者は手動でユーザーを選択し、サイトメンバーとして割り当てる必要があります。
 
-6.  残りの設定を構成し、*[保存]*をクリックします。
+6.  残りの設定を構成し、*[保存]* をクリックします。
 
     ![[General]セクションには、サイトの基本情報が示されます。](./adding-a-site/images/01.png)
 

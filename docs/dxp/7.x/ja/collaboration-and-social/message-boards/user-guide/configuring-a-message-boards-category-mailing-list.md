@@ -10,17 +10,17 @@
 
 メッセージボードカテゴリにメーリングリストを追加するには：
 
-1.  *[Message Boards]*ウィジェットで、カテゴリ（この例では*Category 1*）の隣にある*アクション*（![Actions](../../../images/icon-actions.png)）アイコンをクリックします。
+1.  *[Message Boards]* ウィジェットで、カテゴリ（この例では*Category 1*）の隣にある*アクション*（![Actions](../../../images/icon-actions.png)）アイコンをクリックします。
 
     ![カテゴリの編集](./configuring-a-message-boards-category-mailing-list/images/02.png)
 
-2.  既存のカテゴリを変更するには、*[Edit]*をクリックします。
+2.  既存のカテゴリを変更するには、*[Edit]* をクリックします。
 
-3.  *[Mailing List]*セクションを展開します。
+3.  *[Mailing List]* セクションを展開します。
 
-4.  *[Active]* トグルを *[YES]*に切り替えます。
+4.  *[Active]* トグルを *[YES]* に切り替えます。
 
-5.  *[Allow Anonymous Emails]*トグルは *[NO]*のままにします。
+5.  *[Allow Anonymous Emails]* トグルは *[NO]* のままにします。
 
     ![カテゴリメーリングリストの設定](./configuring-a-message-boards-category-mailing-list/images/01.png)
 
@@ -37,7 +37,7 @@
       - **Email Address (Outgoing)**：ユーザーがメールを使用してカテゴリに返信するようにする場合は、同じメールを使用します
       - **Use Custom Outgoing Server**：グローバルデフォルト以外のメールサーバーを使用する場合は空白のままにします
 
-7.  *[保存]*をクリックします。
+7.  *[保存]* をクリックします。
 
 メーリングリストがこのカテゴリでアクティブになりました。 このカテゴリに登録したユーザーは、カテゴリ内の新しいスレッドに関する電子メール通知を受け取るようになりました。
 

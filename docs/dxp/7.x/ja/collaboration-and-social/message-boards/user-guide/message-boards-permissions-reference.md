@@ -1,6 +1,6 @@
 # メッセージボードの権限リファレンス
 
-この記事では、*[Message Boards]*ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細については、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
+この記事では、*[Message Boards]* ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細については、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
 
 ## ホームカテゴリの権限
 
@@ -8,9 +8,9 @@
 
 1.  ホストサイトの*サイト管理*に移動します（たとえば、Liferay DXPのゲストサイト）。
 
-2.  *[Content & Data]* → *[Message Boards]*の順にクリックします。
+2.  *[Content & Data]* → *[Message Boards]* の順にクリックします。
 
-3.  *オプション*アイコン（![Options](./message-boards-permissions-reference/images/01.png)）、*[Home Category Permissions]*の順にクリックします。
+3.  *オプション*アイコン（![Options](./message-boards-permissions-reference/images/01.png)）、*[Home Category Permissions]* の順にクリックします。
 
     ![権限をサイトロールに割り当てる](./message-boards-permissions-reference/images/03.png)
 
@@ -32,7 +32,7 @@
 
 ## ウィジェットの権限
 
-[Message Boards]ウィジェットをページに追加した後、管理者はそのウィジェットインスタンスの一般的な権限にアクセスできます。 これを行うには、ウィジェットの*オプション*メニュー（![Options](./message-boards-permissions-reference/images/02.png)）を選択し、*[Permissions]*を選択します。
+[Message Boards]ウィジェットをページに追加した後、管理者はそのウィジェットインスタンスの一般的な権限にアクセスできます。 これを行うには、ウィジェットの*オプション*メニュー（![Options](./message-boards-permissions-reference/images/02.png)）を選択し、*[Permissions]* を選択します。
 
 ![ウィジェット権限を割り当てる](./message-boards-permissions-reference/images/04.png)
 

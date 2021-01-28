@@ -4,17 +4,17 @@
 
 時間を変更するには：
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]*に移動します。
+1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
 
-2.  *[Content and Data]*の下で、*[Forms]*をクリックします。
+2.  *[Content and Data]* の下で、*[Forms]* をクリックします。
 
-3.  左側のメニューで、*[Site Scope]*の*[Forms]*をクリックします。
+3.  左側のメニューで、*[Site Scope]* の*[Forms]* をクリックします。
 
     ![フォームシステム設定のカスタマイズ](./customizing-auto-save-behavior/images/01.png)
 
 4.  別の自動保存間隔の値を入力して、間隔を増やします。 自動保存を無効にするには、0を入力します。
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 ## 追加情報
 

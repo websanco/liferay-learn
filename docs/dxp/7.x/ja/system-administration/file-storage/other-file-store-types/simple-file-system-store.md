@@ -34,15 +34,15 @@ Simple File System Storeを構成するには、次の手順に従います。
 
 1.  *メニュー*（![Menu](./simple-file-system-store/images/02.png)）ボタンをクリックして、*コントロールパネル*にアクセスします。
 
-2.  *[Control Panel]* → *[Configuration]* → *[System Settings]*に移動します。
+2.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
 
-3.  *[Platform]*セクションで、*[File Storage]*をクリックします。
+3.  *[Platform]* セクションで、*[File Storage]* をクリックします。
 
-4.  *[Simple File System Store]*画面で、*[Root directory]*を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
+4.  *[Simple File System Store]* 画面で、*[Root directory]* を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
 
     ![システム設定の[File Storage]ページでは、ドキュメントリポジトリストレージを設定できます。](./simple-file-system-store/images/03.png)
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 ファイルストアがすぐに新しいフォルダに切り替わります。
 

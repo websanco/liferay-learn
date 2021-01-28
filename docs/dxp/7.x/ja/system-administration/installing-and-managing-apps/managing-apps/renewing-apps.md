@@ -6,15 +6,15 @@
 
 1.  <https://web.liferay.com/marketplace>に移動します。
 
-2.  右上隅のプロフィール画像をクリックし、*[Purchased Apps]*を選択します。 [Purchased Apps]ページが表示され、購入したアプリのアイコンがプロジェクト別に整理されて表示されます。
+2.  右上隅のプロフィール画像をクリックし、*[Purchased Apps]* を選択します。 [Purchased Apps]ページが表示され、購入したアプリのアイコンがプロジェクト別に整理されて表示されます。
 
     ![購入したアプリは、マーケットプレイスとliferay.comアカウントのホームページで管理できます。](./renewing-apps/images/01.png)
 
 3.  アプリのアイコンをクリックします。 アプリの詳細が表示されます。
 
-4.  *[Manage Licenses]*をクリックします。
+4.  *[Manage Licenses]* をクリックします。
 
-5.  *[Register New Server]*を選択します。
+5.  *[Register New Server]* を選択します。
 
 6.  最新の*[Order ID]*（通常は登録済みサーバーがないオーダー）を選択します。
 

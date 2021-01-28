@@ -54,7 +54,7 @@ Liferayの[ワークフローエンジン](../user-guide/introduction-to-workflo
 
 次の変数は、ワークフロースクリプトを実行できる場所であればどこからでも利用できます。
 
-`kaleoInstanceToken`（[`KaleoInstanceToken`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoInstanceToken.java)）：ユーザーが*[Submit for Publication]*をクリックするたびに、ワークフローインスタンスと対応するインスタンストークン（`KaleoInstanceToken`）が作成されます。 挿入されたトークンを使用してIDを取得するには、`kaleoInstanceToken.getKaleoInstanceTokenId()`を呼び出します。 これは多くの場合、スクリプトのメソッドパラメータとして渡されます。
+`kaleoInstanceToken`（[`KaleoInstanceToken`](https://github.com/liferay/liferay-portal/blob/7.2.0-ga1/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoInstanceToken.java)）：ユーザーが*[Submit for Publication]* をクリックするたびに、ワークフローインスタンスと対応するインスタンストークン（`KaleoInstanceToken`）が作成されます。 挿入されたトークンを使用してIDを取得するには、`kaleoInstanceToken.getKaleoInstanceTokenId()`を呼び出します。 これは多くの場合、スクリプトのメソッドパラメータとして渡されます。
 
 `userId`：返される`userId`はコンテキストに依存します。 技術的には、ロジックは次のように機能します：`KaleoTaskInstanceToke.getcompletionUserId()`がnullの場合、`KaloeTaskInstanceToken.getUserId()`を確認します。 それもnullの場合は、`KaleoInstanceToken.getUserId()`を呼び出します。 これは、スクリプトの実行時にワークフローに介入する最後のユーザーのIDです。 `created`ノードでは、これは*Submit for Publication*をクリックしたユーザーですが、単一の承認者定義の`review`ノードの終了時はレビューアのIDになります。
 

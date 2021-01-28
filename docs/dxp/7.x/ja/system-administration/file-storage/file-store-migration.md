@@ -16,9 +16,9 @@
 
 移行手順は次のとおりです。
 
-1.  *[System Settings]* → *[File Storage]*で新しいファイルストアを設定します。
+1.  *[System Settings]* → *[File Storage]* で新しいファイルストアを設定します。
 
-2.  *[Server Administration]* → *[Data Migration]*で、リポジトリフック（ストア実装クラス）を選択し、*[Execute]*をクリックします。
+2.  *[Server Administration]* → *[Data Migration]* で、リポジトリフック（ストア実装クラス）を選択し、*[Execute]* をクリックします。
 
     ![データ移行ユーティリティ](./file-store-migration/images/01.png)
 

@@ -13,9 +13,9 @@ UIと構成ファイルを使用してコンポーネントをブラックリス
 
 OSGiコンポーネントを無効にするには、次の手順に従います。
 
-1.  コントロールパネルで、*[Configuration]* → *[System Settings]* → *[Module Container]*に移動します。 [Component Blacklist]画面が表示されます。
+1.  コントロールパネルで、*[Configuration]* → *[System Settings]* → *[Module Container]* に移動します。 [Component Blacklist]画面が表示されます。
 
-2.  [Component Blacklist]画面で、無効にするコンポーネントの名前を追加し、*[保存]*ボタンをクリックします。 コンポーネントはすぐに無効になります。
+2.  [Component Blacklist]画面で、無効にするコンポーネントの名前を追加し、*[保存]* ボタンをクリックします。 コンポーネントはすぐに無効になります。
 
     ![このブラックリストは、コンポーネントcom.liferay.portal.security.ldap.internal.authenticator.LDAPAuthおよびcom.liferay.ip.geocoder.sample.web.internal.portlet.IPGeocoderSamplePortletを無効にします。](./blacklisting-osgi-components/images/01.png)
 

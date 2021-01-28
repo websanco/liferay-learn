@@ -4,7 +4,7 @@
 
 ## ブログエントリの権限
 
-*[Blogs]*ウィジェットに移動します。 ブログエントリの横にある*アクション*（![Actions](../../images/icon-actions.png)）をクリックし、次に*[Permissions]*をクリックします。
+*[Blogs]* ウィジェットに移動します。 ブログエントリの横にある*アクション*（![Actions](../../images/icon-actions.png)）をクリックし、次に*[Permissions]* をクリックします。
 
 ![ブログエントリの権限](./blog-permissions-reference/images/01.png)
 

@@ -1,6 +1,6 @@
 # 認証の基本
 
-デフォルトでは、Liferay DXPは*[Sign In]*ウィジェットを使用してユーザーを認証します。
+デフォルトでは、Liferay DXPは*[Sign In]* ウィジェットを使用してユーザーを認証します。
 
 ``` note::
    [Sign In]ウィジェットは、``http[s]://[server-name:port]/web/guest/home``のデフォルトのホームページに表示されます。 [Sign In]ウィジェットがどのページでも使用できない場合は、URL``http[s]://[server-name:port]/c/portal/login``から直接アクセスできます。
@@ -41,9 +41,9 @@
 
 1.  コントロールパネルに移動します。
 
-2.  *[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]*の順にクリックします。
+2.  *[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]* の順にクリックします。
 
-3.  *[How do users authenticate?]*セレクタでオプションを選択します。
+3.  *[How do users authenticate?]* セレクタでオプションを選択します。
 
     ![図1：3種類の認証から選択できます。](./authentication-basics/images/03.png)
 
@@ -65,9 +65,9 @@ company.security.auth.type=emailAddress
 
 ゲストユーザーが新しいユーザーアカウントを作成できないようにするには：
 
-1.  コントロールパネルに移動して、*[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]*をクリックします。
+1.  コントロールパネルに移動して、*[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]* をクリックします。
 
-2.  *[Allow strangers to create accounts?]*をオフにします。
+2.  *[Allow strangers to create accounts?]* をオフにします。
 
 3.  *[保存]* をクリックします。
 
@@ -77,15 +77,15 @@ company.security.auth.type=emailAddress
 
 ユーザーが自分のパスワードをリセットできないようにする必要がある場合は、同じ画面から設定できます。
 
-1.  コントロールパネルに移動して、*[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]*をクリックします。
-2.  *[Allow users to request password reset links?]*をオフにします。
-3.  *[保存]*をクリックします。
+1.  コントロールパネルに移動して、*[Configuration]* → *[Instance Settings]* → *[Platform]* → *[User Authentication]* をクリックします。
+2.  *[Allow users to request password reset links?]* をオフにします。
+3.  *[保存]* をクリックします。
 
 ### CAPTCHAまたはreCAPTCHAの構成
 
 CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウントの作成およびログインを防止します。
 
-1.  コントロールパネルに移動して、*[Configuration]* → *[System Settings]* → *[Security Tools]* → *[CAPTCHA]*をクリックします。
+1.  コントロールパネルに移動して、*[Configuration]* → *[System Settings]* → *[Security Tools]* → *[CAPTCHA]* をクリックします。
 
     ![CAPTCHAの構成画面。](./authentication-basics/images/02.png)
 
@@ -97,7 +97,7 @@ CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウント�
 
 3.  その他のオプションを使用すると、開発者はSimple CAPTCHAエンジンをカスタマイズできます。
 
-4.  完了したら、*[保存]*をクリックします。
+4.  完了したら、*[保存]* をクリックします。
 
 ## 追加情報
 

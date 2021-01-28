@@ -9,9 +9,9 @@ Webコンテンツは、DXPでサイトコンテンツを作成するための�
 
 次の手順を使用して、*基本的なWebコンテンツ*の記事を作成します。
 
-1.  [Site]メニューを開き、 *[Content & Data]* → *[Web Content]*に移動します。
+1.  [Site]メニューを開き、 *[Content & Data]* → *[Web Content]* に移動します。
 
-2.  *[Web Content]*画面で、![Add icon](../../../../images/icon-add.png)ボタンをクリックし、表示されるメニューで*[Basic Web Content]*をクリックします。
+2.  *[Web Content]* 画面で、![Add icon](../../../../images/icon-add.png)ボタンをクリックし、表示されるメニューで*[Basic Web Content]* をクリックします。
 
     ![Webコンテンツ管理ページ。](./adding-a-basic-web-content-article/images/01.png).
 
@@ -19,12 +19,12 @@ Webコンテンツは、DXPでサイトコンテンツを作成するための�
 
     ![新しいWebコンテンツ記事の編集画面。](./adding-a-basic-web-content-article/images/02.png).
 
-4.  *[Publish]*をクリックします。
+4.  *[Publish]* をクリックします。
 サイトに基本的なWebコンテンツの記事を追加しました。 <!-- TODO: See [Using the Web Content Display Widget](../../../../site-building/displaying-content/using-the-web-content-display-widget.md) for more information on displaying this article on a page. -->
 
 ## [Properties]タブ
 
-画面右側の *[Properties]*タブを開くと、編集中の記事の詳細を表示して編集できます。 ここでは次のプロパティを使用できます。
+画面右側の *[Properties]* タブを開くと、編集中の記事の詳細を表示して編集できます。 ここでは次のプロパティを使用できます。
 
 | **プロパティ**                 | **目的**                                                | **その他の注意事項**                                                                                                                                                    |
 | ------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |

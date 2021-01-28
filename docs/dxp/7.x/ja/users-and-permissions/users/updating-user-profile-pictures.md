@@ -6,9 +6,9 @@
 
 ユーザーのプロフィール画像を更新するには、次の手順に従います。
 
-1.  [User]メニューの*[My Profile]*をクリックするか、管理者の場合は*[Control Panel]* → *[Users and Organizations]*に移動して、プロフィール画像が必要なユーザーを見つけます。
-2.  一般的なプロフィール画像の下にある*[Change]*ボタンをクリックします。
-3.  コンピューターから画像を選択し、必要に応じてトリミングして、*[Done]*をクリックします。
+1.  [User]メニューの*[My Profile]* をクリックするか、管理者の場合は*[Control Panel]* → *[Users and Organizations]* に移動して、プロフィール画像が必要なユーザーを見つけます。
+2.  一般的なプロフィール画像の下にある*[Change]* ボタンをクリックします。
+3.  コンピューターから画像を選択し、必要に応じてトリミングして、*[Done]* をクリックします。
 
 ![ユーザーの編集フォームでユーザーのアバターの画像をアップロードします。](./updating-user-profile-pictures/images/01.png)
 
@@ -22,9 +22,9 @@
 
 ### デフォルトのユーザープロフィール画像でイニシャルの使用を無効にする
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]*に移動します。
-2.  [Platform]セクションで、*[Users]* → *[User Images]*をクリックします。
-3.  *[Use Initials for Default User Portrait]*の選択を解除します。
+1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
+2.  [Platform]セクションで、*[Users]* → *[User Images]* をクリックします。
+3.  *[Use Initials for Default User Portrait]* の選択を解除します。
 
 ![デフォルトのイニシャルベースのプロフィール画像を無効にすると、代わりにこのアイコンが使用されます。](./updating-user-profile-pictures/images/03.png)
 

@@ -25,7 +25,7 @@ Liferay組織は、実際の組織階層を反映したユーザーおよびサ�
   - 必要に応じて、ユーザーを組織に割り当てます（[portal-ext.propertiesの`[Organizations]`セクション](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Organizations)を参照）。
   - サイト管理者と同じように、組織のサイトを管理します。
 
-組織管理者は、デフォルトではコントロールパネルにアクセスできません。 代わりに、*[My Organizations]*リンクをクリックして、管理している組織にアクセスできます。
+組織管理者は、デフォルトではコントロールパネルにアクセスできません。 代わりに、*[My Organizations]* リンクをクリックして、管理している組織にアクセスできます。
 
 ![組織管理者は、プロファイルから組織にアクセスできます。](./understanding-organizations/images/03.png)
 

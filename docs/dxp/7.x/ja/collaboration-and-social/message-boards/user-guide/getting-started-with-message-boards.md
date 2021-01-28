@@ -10,17 +10,17 @@ Liferay DXPのメッセージボードアプリは、任意のDXPサイトペー
 
     ![新しいフォーラムページ](./getting-started-with-message-boards/images/03.png)
 
-2.  *[Add]*ボタンをクリックします。
+2.  *[Add]* ボタンをクリックします。
 
-3.  *[Widgets]*をクリックし、次に*[Collaboration]*をクリックしてメニューを展開します。
+3.  *[Widgets]* をクリックし、次に*[Collaboration]* をクリックしてメニューを展開します。
 
     ![[Add Application]メニューを使用して、[Message Boards]ウィジェットを追加する。](./getting-started-with-message-boards/images/06.png)
 
-4.  *[Message Boards]*ウィジェットをページ上の目的の場所にドラッグアンドドロップします。
+4.  *[Message Boards]* ウィジェットをページ上の目的の場所にドラッグアンドドロップします。
 
     ![メッセージボードアプリをフォーラムページにデプロイする。](./getting-started-with-message-boards/images/04.png)
 
-サイトのメンバーは、*[Message Boards]*ウィジェットを使用してフォーラム投稿を作成できます。 1ページあたりに設定できる*[Message Boards]*ウィジェットの数は1つだけであることに注意してください。
+サイトのメンバーは、*[Message Boards]* ウィジェットを使用してフォーラム投稿を作成できます。 1ページあたりに設定できる*[Message Boards]* ウィジェットの数は1つだけであることに注意してください。
 
 ## 次のステップ
 

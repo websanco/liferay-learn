@@ -12,7 +12,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
 1.  管理ユーザー（[[Basic Configuration]ページ](../../../getting-started/using-the-setup-wizard.md)で指定されたユーザー）としてサインインします。
 
-2.  *[Control Panel] → [Configuration] → [Server Administration] → [Mail]*に移動します。
+2.  *[Control Panel] → [Configuration] → [Server Administration] → [Mail]* に移動します。
 
 3.  [次のフィールド](#mail-configuration-reference)に値を入力します。
 
@@ -40,7 +40,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
         ![メールサーバーの構成](./connecting-to-a-mail-server/images/01.png)
 
-4.  *[保存]*をクリックします。
+4.  *[保存]* をクリックします。
 
 DXPがすぐにメールセッションに接続します。
 

@@ -22,17 +22,17 @@
 
 通常のロールは、グローバルスコープで作成されたユーザーセグメントに割り当てることができます。 通常のロールをユーザーセグメントに割り当てるには、
 
-1.  製品メニューを開き、 *[Control Panel]* → *[Users]* → *[Roles]*に移動します。
+1.  製品メニューを開き、 *[Control Panel]* → *[Users]* → *[Roles]* に移動します。
 
 2.  通常のロールの横にあるアクションメニュー（![Actions](../../images/icon-actions.png)）を開き、[ *Edit*を選択します。
    
    ![ロールを編集して、ユーザーセグメントを割り当てます。](./assigning-roles-to-user-segments/images/01.png)
 
-3.  *[Assignees]* → *[Segments]*タブを選択し、（![Add Button](../../images/icon-add.png)）をクリックしてユーザーセグメントを選択します。
+3.  *[Assignees]* → *[Segments]* タブを選択し、（![Add Button](../../images/icon-add.png)）をクリックしてユーザーセグメントを選択します。
    
    ![[Assignees]の下の[Segments]タブに移動して、ロールを割り当てます。](./assigning-roles-to-user-segments/images/02.png)
 
-4.  既存のユーザーセグメントの横にあるチェックボックスをオンにし、*[Add]*をクリックしてロールを割り当てます。 ユーザーセグメントが存在しない場合は、（![Add Button](../../images/icon-add.png)）をクリックして新しいユーザーセグメントを作成します。
+4.  既存のユーザーセグメントの横にあるチェックボックスをオンにし、*[Add]* をクリックしてロールを割り当てます。 ユーザーセグメントが存在しない場合は、（![Add Button](../../images/icon-add.png)）をクリックして新しいユーザーセグメントを作成します。
    
    ![ロールを割り当てるユーザーセグメントの横にあるチェックボックスをオンにします。](./assigning-roles-to-user-segments/images/03.png)
 

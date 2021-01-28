@@ -29,13 +29,13 @@ OpenAMをLiferay DXPと同じサーバーにインストールする場合は、
 
 1.  同じブラウザウィンドウで、管理ユーザーとして（以前の管理者の電子メールアドレスを使用して）Liferay DXPにログインします。
 
-2.  コントロールパネルに移動し、*[Configuration]* → *[Instance Settings]* → *[Security]* → *[SSO]*の順にクリックします。 次に、左側のリストで*[OpenSSO]*を選択します。
+2.  コントロールパネルに移動し、*[Configuration]* → *[Instance Settings]* → *[Security]* → *[SSO]* の順にクリックします。 次に、左側のリストで*[OpenSSO]* を選択します。
 
     ![統合を機能させるには、LiferayのOpenSSO設定を有効にする必要があります。](./using-openam/images/01.png)
 
-3.  OpenAMサーバーを指すように3つのURLフィールド（[Login URL]、[Logout URL]、および[Service URL]）を変更し（つまり、URLのホスト名部分のみを変更）、*[Enabled]* チェックボックスをオンにして、*[保存]*をクリックします。
+3.  OpenAMサーバーを指すように3つのURLフィールド（[Login URL]、[Logout URL]、および[Service URL]）を変更し（つまり、URLのホスト名部分のみを変更）、*[Enabled]* チェックボックスをオンにして、*[保存]* をクリックします。
 
-Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、*[Sign In]*リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
+Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、*[Sign In]* リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
 
 ## 別のLiferayスコープでOpenAMを構成する
 
@@ -45,7 +45,7 @@ Liferay DXPのOpenAM構成は、システムスコープでもインスタンス
 
 1.  コントロールパネルに移動します。
 
-2.  *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]* → *[OpenSSO]*の順にクリックします。 以下の設定が表示されます。 ここで設定されている値は、すべてのポータルインスタンスのデフォルト値です。 リテラル値を使用してJavaプリミティブ型を初期化する場合と同じ形式で入力します。
+2.  *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]* → *[OpenSSO]* の順にクリックします。 以下の設定が表示されます。 ここで設定されている値は、すべてのポータルインスタンスのデフォルト値です。 リテラル値を使用してJavaプリミティブ型を初期化する場合と同じ形式で入力します。
 
 | プロパティラベル                    | プロパティキー            | 説明                                                                                                         | タイプ       |
 | --------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------- | --------- |
@@ -60,4 +60,4 @@ Liferay DXPのOpenAM構成は、システムスコープでもインスタンス
 | **First Name Attribute**    | `firstNameAttr`    | ユーザーの名を表すOpenAM上の属性の名前                                                                                     | `String`  |
 | **Last Name Attribute**     | `lastNameAttr`     | ユーザーの姓を表すOpenAM上の属性の名前                                                                                     | `String`  |
 
-特定のポータルインスタンスのこれらのデフォルト設定を上書きするには、コントロールパネルに移動し、*[Configuration]* → *[Instance Settings]* → *[Security]* → *[SSO]*をクリックします。 次に、左側のリストで*[OpenSSO]*を選択します。
+特定のポータルインスタンスのこれらのデフォルト設定を上書きするには、コントロールパネルに移動し、*[Configuration]* → *[Instance Settings]* → *[Security]* → *[SSO]* をクリックします。 次に、左側のリストで*[OpenSSO]* を選択します。

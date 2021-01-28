@@ -24,13 +24,13 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 ## OpenID Connectプロバイダー接続の構成
 
-*[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]*に移動して、*[System Scope]*の下で***[OpenID Connect Provider]***を選択します。
+*[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]* に移動して、*[System Scope]* の下で***[OpenID Connect Provider]***を選択します。
 
 ![[System Settings]メニューでOpenID構成を検索する。](using-openid-connect/images/01.png)
 
 次の手順を実行します：
 
-1.  *[Add]*ボタンをクリックしてプロバイダーを追加します。
+1.  *[Add]* ボタンをクリックしてプロバイダーを追加します。
 
 2.  プロバイダーから受け取った情報を使用して、フォームに記入します。
 
@@ -65,7 +65,7 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 -->
 
-フォームに入力し、*[保存]*をクリックすると、OpenID Connect認証を有効にする準備が整います。
+フォームに入力し、*[保存]* をクリックすると、OpenID Connect認証を有効にする準備が整います。
 
 エクスポートされた構成は、次のシステム設定の構成ファイルになります。
 
@@ -75,11 +75,11 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 ## OpenID Connect認証の有効化
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]*に移動して、*[Virtual Instance Scope]*の下で***[OpenID Connect]***を選択します。
+1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Security]* → *[SSO]* に移動して、*[Virtual Instance Scope]* の下で***[OpenID Connect]***を選択します。
 
     ![インスタンス設定でOpenID Connect認証を有効にする。](using-openid-connect/images/02.png)
 
-2.  *[Enabled]*チェックボックスをオンにして、*[保存]*をクリックします。
+2.  *[Enabled]* チェックボックスをオンにして、*[保存]* をクリックします。
 
 エクスポートされた構成は、次のシステム設定の構成ファイルになります。
 
@@ -93,7 +93,7 @@ OpenID Connectでサインインするための新しいリンクがサインイ
 
 1.  サインインポートレットの下部にあるOpenID Connectリンクをクリックします。
 
-2.  プロバイダーを選択して、*[Sign In]*をクリックします。
+2.  プロバイダーを選択して、*[Sign In]* をクリックします。
 
 3.  プロバイダーのサインインページが表示されます。 資格情報を入力してログインします。
 

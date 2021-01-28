@@ -42,7 +42,7 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 
 1.  デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
 2.  [Control Panel] → [Sites] → [Sites]に移動します。
-3.  [Actions]ボタンをクリックし、*[Go to Site Settings]*を選択します。
+3.  [Actions]ボタンをクリックし、*[Go to Site Settings]* を選択します。
 
 サイトIDが[Details]セクションの上部に表示されます。 `20122`のような整数になります。
 

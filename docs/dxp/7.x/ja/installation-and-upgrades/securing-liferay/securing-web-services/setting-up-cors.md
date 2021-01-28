@@ -10,9 +10,9 @@ CORSは、クロスオリジンリソース共有（Cross-Origin Resource Sharin
 
 設定は、[Configuration] → [System Settings] → [Security] → [Security Tools] → [Portal Cross Resource Origin Sharing (CORS)]にあります。
 
-1.  *[Add]*をクリックして構成エントリを作成します。
+1.  *[Add]* をクリックして構成エントリを作成します。
 
-2.  フォームのフィールドに入力します。 完了したら、* [保存]*をクリックします。
+2.  フォームのフィールドに入力します。 完了したら、* [保存]* をクリックします。
 
     ![図1：CORSのシステム設定は、LiferayサービスのCORSヘッダーを構成する方法を提供します。](./setting-up-cors/images/01.png)
 
@@ -30,9 +30,9 @@ CORS を設定するには、設定ファイルを使用することもできま
 
 設定は、[Configuration] → [System Settings] → [Security] → [Security Tools] → [Web Contexts Resource Origin Sharing (CORS)]にあります。
 
-1.  *[Add]*をクリックして構成エントリを作成します。
+1.  *[Add]* をクリックして構成エントリを作成します。
 
-2.  フォームのフィールドに入力します。 完了したら、* [保存]*をクリックします。
+2.  フォームのフィールドに入力します。 完了したら、* [保存]* をクリックします。
 
     ![図2：CORS Webコンテキストには、個別のシステム設定カテゴリがあります。](./setting-up-cors/images/02.png)
 

@@ -6,9 +6,9 @@
 
 スレッドまたはカテゴリをサブスクライブするには：
 
-1.  *[Message Boards]*ウィジェット（サイトページ上）で、カテゴリまたはスレッド（この例では、*Category 1* ）の横にある*アクション*アイコンをクリックします
+1.  *[Message Boards]* ウィジェット（サイトページ上）で、カテゴリまたはスレッド（この例では、*Category 1* ）の横にある*アクション*アイコンをクリックします
 
-2.  *[Subscribe]*をクリックします。
+2.  *[Subscribe]* をクリックします。
 
     ![カテゴリーのサブスクライブ](./subscribing-to-a-message-board/images/01.png)
 
@@ -16,7 +16,7 @@
 
 サブスクライブしているカテゴリとスレッドを確認するには：
 
-1.  *[Message Boards]*ウィジェット（サイトページ上）で、*[My Subscriptions]*をクリックします。
+1.  *[Message Boards]* ウィジェット（サイトページ上）で、*[My Subscriptions]* をクリックします。
 
     ![サブスクリプションの管理](./subscribing-to-a-message-board/images/03.png)
 

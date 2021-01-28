@@ -84,7 +84,7 @@ Xugglerをインストールして構成するには、
    
    ![XugglerをインストールしてLiferay DXPを再起動すると、[有効]チェックボックスが表示されます。](./configuring-external-services/images/02.png)
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 
 

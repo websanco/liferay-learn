@@ -6,17 +6,17 @@ Lightweight Directory Access Protocol （LDAP）サーバーは、Liferay DXPの
 
 インスタンスレベルでLDAP構成設定にアクセスするには、
 
-1.  *[Control Panel] → [Configuration]* → *[Instance Settings]*に移動します。
+1.  *[Control Panel] → [Configuration]* → *[Instance Settings]* に移動します。
 
     ![LDAPは、インスタンスレベルとシステムレベルで設定できます。](./connecting-to-an-ldap-directory/images/01.png)
 
-2.  *[LDAP]*をクリックし、*[Servers]*をクリックします。
+2.  *[LDAP]* をクリックし、*[Servers]* をクリックします。
 
-3.  *[Add]*ボタンをクリックして、LDAPサーバー接続を追加します。
+3.  *[Add]* ボタンをクリックして、LDAPサーバー接続を追加します。
 
 4.  LDAPサーバーの構成値を入力します。 詳細については、[構成リファレンス](#ldap-server-configuration-reference)を参照してください。
 
-ただし、デフォルト値を修正するには、場合によって「最適値」を表す残りの設定をカスタマイズする必要があります。 通常、デフォルトの属性マッピングは、ユーザがログインしようとしたときにLiferayデータベースに再同期するのに十分なデータを提供します。 LDAPサーバーへの接続をテストするには、*[Test LDAP Connection]*ボタンをクリックします。
+ただし、デフォルト値を修正するには、場合によって「最適値」を表す残りの設定をカスタマイズする必要があります。 通常、デフォルトの属性マッピングは、ユーザがログインしようとしたときにLiferayデータベースに再同期するのに十分なデータを提供します。 LDAPサーバーへの接続をテストするには、*[Test LDAP Connection]* ボタンをクリックします。
 
 LDAPサーバーが複数ある場合は、上/下矢印を使用して、優先順位に従ってサーバーを配置できます。 追加するLDAPサーバーの数に関係なく、各サーバーには同じ設定オプションがあります。
 
@@ -62,7 +62,7 @@ LiferayのLDAP接続の微調整に進む前に、次の手順が実行されて
 
 2.  *エクスポート/インポート*：クラスター環境のユーザーの場合は、起動時に各ノードに大量のインポートが発生しないように、[Enable Import/Export on Startup]を無効にする必要があります。
 
-3.  LDAPサーバーを追加するとき、*[Server Name]*、*[Default Values]*、*[Connection]*の値が正しい。 保存する前に、*[Test LDAP Connection]*をクリックすることをお勧めします。
+3.  LDAPサーバーを追加するとき、*[Server Name]*、*[Default Values]*、*[Connection]* の値が正しい。 保存する前に、*[Test LDAP Connection]* をクリックすることをお勧めします。
 
 ## SSLを使用してLDAPサーバーに接続する
 
@@ -70,13 +70,13 @@ LDAPディレクトリをSSLモードで実行してネットワーク上の資�
 
 たとえば、LDAPディレクトリがWindows Server 2003上のMicrosoft Active Directoryの場合、次のように証明書を共有します。
 
-1.  *[Start]* → *[Administrative Tools]* → *[Certificate Authority]*をクリックします。
+1.  *[Start]* → *[Administrative Tools]* → *[Certificate Authority]* をクリックします。
 
-2.  証明機関であるマシンを強調表示し、それを右クリックして、*[Properties]*をクリックします。
+2.  証明機関であるマシンを強調表示し、それを右クリックして、*[Properties]* をクリックします。
 
-3.  [General ]メニューの*[View Certificate]*をクリックします。
+3.  [General ]メニューの*[View Certificate]* をクリックします。
 
-4.  詳細ビューを選択し、*[Copy To File]*をクリックします。 表示されるウィザードを使用して、証明書をファイルとして保存します。
+4.  詳細ビューを選択し、*[Copy To File]* をクリックします。 表示されるウィザードを使用して、証明書をファイルとして保存します。
 
 5.  次のように、証明書を*cacerts keystore*にインポートします。
 

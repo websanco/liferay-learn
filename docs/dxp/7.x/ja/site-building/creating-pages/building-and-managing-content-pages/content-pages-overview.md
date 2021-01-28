@@ -50,7 +50,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` -->
 
 > 利用可能：Liferay DXP 7.3以降;以前は *Sections* パネルに含まれていました。
-*[Footers]*パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
+*[Footers]* パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
 ### ナビゲーションバー
 
 <!-- ```note::
@@ -58,7 +58,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` -->
 
 > 利用可能：Liferay DXP 7.3以降;以前は *Sections* パネルに含まれていました。
-*[Navigation Bars]*パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
+*[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
 ### コンテンツ表示
 
 <!-- ```note::

@@ -146,7 +146,7 @@ Windows™サーバーでKerberosとActive Directoryをセットアップする�
 
 3.  接続をテストし、構成を保存して有効にします。
 
-4.  最後に、[Configuration] → [System Settings] → [Security] → [SSO] → [Token Based SSO]で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと*正確に*一致していることを確認します。 *[Enabled]*および*[Import from LDAP]*ボックスをクリックし、*[保存]*をクリックします。
+4.  最後に、[Configuration] → [System Settings] → [Security] → [SSO] → [Token Based SSO]で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと*正確に*一致していることを確認します。 *[Enabled]* および*[Import from LDAP]* ボックスをクリックし、*[保存]* をクリックします。
 
     ![[Instance Settings]メニューでSSOを有効にする。](authenticating-with-kerberos/images/02.png)
 

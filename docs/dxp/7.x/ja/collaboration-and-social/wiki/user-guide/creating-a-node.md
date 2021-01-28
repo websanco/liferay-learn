@@ -8,12 +8,12 @@
 
 1.  Wikiが配置されているサイトに移動します（たとえば、*Liferay DXP* ）。
 2.  *製品メニュー*（![Product Menu](../../../images/icon-product-menu.png)）を展開してから、*サイト管理*メニューを展開します。
-3.  *[Content & Data]* → *[Wiki]*の順にクリックします。
+3.  *[Content & Data]* → *[Wiki]* の順にクリックします。
 4.  *Wikiの追加*（![Add](../../../images/icon-add.png)）ボタンをクリックします。
 5.  次のように入力します：
       - **Name**：新規ノード
       - **Description**：これはDXPゲストのwikiサイトの新しいノードです。
-6.  *[保存]*をクリックします。
+6.  *[保存]* をクリックします。
 
 新しいノードが作成されました。 同じサイトに複数のノードを作成できます。
 
@@ -23,14 +23,14 @@
 
 新しいノードに新しいWikiページを作成するには：
 
-1.  *サイト管理*メニューから、*[Go to Site]*をクリックします 。
-2.  *[Wiki]*ウィジェットがデプロイされているページに移動します（たとえば、*Liferay DXP*の*[Wiki]*ページ）。
-3.  *[New Node]*が*[Wiki]*ウィジェット内に表示されることを確認します。
+1.  *サイト管理*メニューから、*[Go to Site]* をクリックします 。
+2.  *[Wiki]* ウィジェットがデプロイされているページに移動します（たとえば、*Liferay DXP*の*[Wiki]* ページ）。
+3.  *[New Node]* が*[Wiki]* ウィジェット内に表示されることを確認します。
 4.  *[New Node]* をクリックします。
 
 ![新しいノードを選択する](./creating-a-node/images/02.png)
 
-新しいノードで、*[This page is empty. Edit it to add some text.]*をクリックして、現在のノードの*[FrontPage]*ページを編集します。
+新しいノードで、*[This page is empty. Edit it to add some text.]* をクリックして、現在のノードの*[FrontPage]* ページを編集します。
 
 ## 追加情報
 

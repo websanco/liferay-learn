@@ -8,7 +8,7 @@
 
 2.  フォームを作成するサイトを選択します。
 
-3.  *[Content & Data]* → *[Documents and Media]*の順にクリックします。
+3.  *[Content & Data]* → *[Documents and Media]* の順にクリックします。
 
 4.  *[Document Types]* タブをクリックします。
 
@@ -18,21 +18,21 @@
 
 7.  説明を入力します。
 
-8.  *[Main Metadata Fields]*セクションを展開します。
+8.  *[Main Metadata Fields]* セクションを展開します。
 
 9.  メタデータフィールドをエディターにドラッグアンドドロップします。
 
     ![メインのメタデータフィールドをドラッグアンドドロップする](./defining-document-types/images/01.png)
 
-10. *[Additional Metadata Fields]*を展開します。
+10. *[Additional Metadata Fields]* を展開します。
 
 11. ドキュメントタイプに関連付けるメタデータセットを選択します。 詳細については、[メタデータの設定と定義をご覧ください。 ](./setting-and-defining-metadata.md) 。
 
     ![追加のメタデータセットを関連付けます。](./defining-document-types/images/02.png)
 
-12. *[保存]*をクリックします。
+12. *[保存]* をクリックします。
 
-[Documents and Media]の*[Add]*メニューからドキュメントを追加するときに、新しいドキュメントタイプを使用できるようになりました。
+[Documents and Media]の*[Add]* メニューからドキュメントを追加するときに、新しいドキュメントタイプを使用できるようになりました。
 
 ![新しいドキュメントタイプが利用可能になりました。](./defining-document-types/images/03.png)
 
