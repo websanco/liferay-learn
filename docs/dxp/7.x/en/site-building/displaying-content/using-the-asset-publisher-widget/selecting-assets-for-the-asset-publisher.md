@@ -1,8 +1,5 @@
 # Selecting Assets for the Asset Publisher
 
-```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
-```
 To select assets to publish in the *Asset Publisher* widget,
 
 1. Click the *Options* button (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the widget.
@@ -31,17 +28,15 @@ To select assets to publish in the *Asset Publisher* widget,
 
 1. Choosing Dynamic for Asset Selection gives additional settings to configure.
 
-    | Setting | Description |
-    | ------- | ----------- |
-    | Source | Choose to display all asset types or just a few selected asset types |
-    | Scope | Choose to display assets from an individual Site or other Sites |
-    | Filter | Filter which assets to show by categories, keywords, or tags |
-    | Custom User Attributes | Filter assets based on custom user profile attributes |
-    | Ordering | Choose how your assets will be ordered |
+    * **Source:** Choose to display all asset types or just a few selected asset types
+    * **Scope:** Choose to display assets from an individual Site or other Sites
+    * **Filter:** Filter which assets to show by categories, keywords, or tags
+    * **Custom User Attributes:**  Filter assets based on custom user profile attributes
+    * **Ordering:** Choose how your assets will be ordered
 
 1. Once you've selected your assets and configured the widget, click the *Save* button. You can also click on the *Create a collection from this configuration* link to save the configuration as a new collection.
 
-## Liferay DXP 7.2
+<!-- ## Liferay DXP 7.2
 
 You can configure the Asset Publisher to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2).
 
@@ -92,4 +87,4 @@ To select assets to publish in the *Asset Publisher* widget,
   * Changing the value of the *Asset Selection* option
   * Changing the value of the *Scope* option
   * Selecting, adding, sorting or deleting asset entries (only when selecting assets manually)
-```
+``` -->
