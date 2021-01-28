@@ -105,7 +105,7 @@ def write_redirects(app, exception):
             redirects = json.loads(file.read())
 
     if not redirects:
-        log.error(
+        log.info(
             "No redirect info found at {}. No redirects will be written.".format(redirects_file)
         )
         return
