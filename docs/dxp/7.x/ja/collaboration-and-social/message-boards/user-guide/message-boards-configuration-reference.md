@@ -16,7 +16,7 @@
 | Allow Anonymous Posting             | ゲスト（認証されていない）ユーザーがスレッドを投稿できるようにします。                                                      |
 | Subscribe by Default                | デフォルトで、ユーザーが参加しているスレッドにユーザーをサブスクライブします。                                                  |
 | Message Format                      | エディターとしてBBCodeまたはHTMLを選択するためのドロップダウンメニュー                                                 |
-| Enable Report Inappropriate Content | ユーザーが利用規約違反のスレッドを報告できるようにします<!-- ここにサイトのToSを定義する方法についての記事へのリンクを作成すると便利です-->|
+| Enable Report Inappropriate Content | ユーザーが利用規約違反のスレッドを報告できるようにします <!-- ここにサイトのToSを定義する方法についての記事へのリンクを作成すると便利です--> |
 | Enable Ratings                      | ユーザーがスレッドを評価できるようにします                                                                    |
 | Thread as Question by Default       | 有効にすると、最初のスレッドは常に質問になり、後続のスレッドを回答としてマークできます。デフォルトでは無効になっています                             |
 | Show Recent Posts from Last         | 時間に基づいて以前の投稿の表示数を選択するためのドロップダウンメニュー（*[24 Hours]*、*[7 Days]*、*[30 Days]*、または*[365 Days]*） |

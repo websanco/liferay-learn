@@ -84,7 +84,7 @@
 
 ``` tip::
    すべてのメソッドシグネチャが事前にわかっている場合は、[*Switch to Advanced Mode*]をクリックして、すべてを1つのフィールドの別々の行に入力します。
-```<!-- The following two paragraphs feel out of place; not sure where they should go. -->Liferayアプリケーションは、独自のデフォルトポリシーを宣言できます。 このポリシーは、管理者が変更または無効にすることができます。 この場合でも、プラグインはポリシーが存在することを確認できるため、ポリシーを再定義したり更新する必要はありません。
+``` <!-- The following two paragraphs feel out of place; not sure where they should go. -->Liferayアプリケーションは、独自のデフォルトポリシーを宣言できます。 このポリシーは、管理者が変更または無効にすることができます。 この場合でも、プラグインはポリシーが存在することを確認できるため、ポリシーを再定義したり更新する必要はありません。
 
 デフォルトでは、Liferayのトンネリングサーブレットは`SYSTEM_USER_PASSWORD`サービスアクセスポリシーを使用します。 ただし、トンネリングサーブレット用に独自のポリシーを作成し、`TunnelingServletAuthVerifier`の`service.access.policy.name`プロパティを使用して、代わりに自分のポリシーを使用するように指定できます。
 

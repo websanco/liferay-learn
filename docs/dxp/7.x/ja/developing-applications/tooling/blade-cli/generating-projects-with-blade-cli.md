@@ -1,5 +1,5 @@
 # Blade CLIを使用したプロジェクトの生成
-Blade CLIは、Liferayプロジェクトを作成、構築、展開するために存在します。 Liferayの「プロジェクト」とは何ですか？ Liferayワークスペースとどのように関連していますか？ -->. 作成したら、これらのプロジェクト（スタンドアロンでもLiferayワークスペースでも）をIDEにインポートするか、直接作業できます。 ここでは、Liferayプロジェクトを作成および管理するさまざまな方法を学びます。
+Blade CLIは、Liferayプロジェクトを作成、構築、展開するために存在します。 Liferayの「プロジェクト」とは何ですか？ Liferayワークスペースとどのように関連していますか？ --> . 作成したら、これらのプロジェクト（スタンドアロンでもLiferayワークスペースでも）をIDEにインポートするか、直接作業できます。 ここでは、Liferayプロジェクトを作成および管理するさまざまな方法を学びます。
 
 ## Liferayワークスペースの作成
 Liferayワークスペースは、プロジェクトとDevOps構成を保存するマシン上の一連のフォルダーです。 詳細は、[Liferayワークスペース](../../tooling/liferay-workspace.md)を参照してください。 --> for further information. Liferayワークスペースを作成するには、次の手順に従います。
@@ -10,7 +10,7 @@ Liferayワークスペースは、プロジェクトとDevOps構成を保存す�
 
     ``` bash
     blade init -v 7.3 [workspace name]
-    ```<!-- Let's ask the blade team to add some sort of success message to this command. Also - when I ran this to test (it was my first time) I thought that the brackets were required - but I ended up creating a workspace with brackets in the folder path. would it be clearer to say `blade init -v 7.3 your-workspace-name` ? -->## プロジェクトを作成する
+    ``` <!-- Let's ask the blade team to add some sort of success message to this command. Also - when I ran this to test (it was my first time) I thought that the brackets were required - but I ended up creating a workspace with brackets in the folder path. would it be clearer to say `blade init -v 7.3 your-workspace-name` ? --> ## プロジェクトを作成する
 ほとんどの場合、プロジェクトは、 Liferayワークスペースに存在します。 ワークスペース内でもスタンドアロンでも、プロジェクトの作成は同じ方法で行われます。 覚えておくべき重要なオプションは次のとおりです。
 
 **-t：** 使用するプロジェクトテンプレートを指定します。 これらのリストを取得するには、 `blade create -l`と入力します。
@@ -73,8 +73,8 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
 
     ``` bash
     blade convert -s [path to old Plugins SDK] [name of Plugins SDK project to convert]
-    ```<!-- end list -->- Service Builderサービスを含むプロジェクトを変換すると、Blade CLIは個別のAPIおよびサービスOSGiモジュールを作成します。 ポートレットはWARのままで、 `wars` フォルダーに移動します。
+    ``` <!-- end list --> - Service Builderサービスを含むプロジェクトを変換すると、Blade CLIは個別のAPIおよびサービスOSGiモジュールを作成します。 ポートレットはWARのままで、 `wars` フォルダーに移動します。
   - テーマは、Liferay 7.xテーマのようにNodeJSを活用するように変換されます。 Javaベースのテーマを変換するには、代わりにTheme Builder Gradleプラグインを使用する `-t` オプションを追加します。
 
 ## 関連トピック
-[Liferayワークスペース](../../tooling/liferay-workspace.md)<!-- Placeholder until Workspace articles come through. -->
+[Liferayワークスペース](../../tooling/liferay-workspace.md) <!-- Placeholder until Workspace articles come through. -->

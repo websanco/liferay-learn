@@ -62,7 +62,7 @@ WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマ�
 ### HTTPトンネルエクステンダー
 
 Liferayではモジュール性を採用したため、このエクステンダーはモジュールを`TunnelServlet`の一部にすることができるように作成されました。 `TunnelServlet`および`TunnelingServletAuthVerifier`がモジュールサーブレットコンテキストにマップされます。 マニフェストに`Http-Tunnel`が含まれるモジュールは、トンネルサーブレットを利用でき、`/o/_module_/api/liferay/do`を介してAPIを公開できます。
-トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、以下を参照してください [プロパティ文書](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) と同様にリモートのステージングを<!-- future link required -->。
+トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、以下を参照してください [プロパティ文書](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) と同様にリモートのステージングを <!-- future link required --> 。
 
 これはリモートAPIをエクスポートする方法としてはお勧めできません。JAX-RSまたはLiferay JSON Web Serviceテクノロジーを使用してリモートサービスを公開する方がはるかに優れています。
 

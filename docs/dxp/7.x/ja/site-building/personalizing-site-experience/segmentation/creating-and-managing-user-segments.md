@@ -10,7 +10,7 @@
 
 3.  上部のテキスト領域をクリックして、ユーザーセグメントの名前を入力します。
 
-4.  必要な*[User]*、*[Organization]*、*[Session]* プロパティを[Conditions]ボックスにドラッグし、フィールドを構成してユーザーセグメントの条件を作成します。 エディターの使用の詳細と使用できるすべてのプロパティの説明については、[The Segments Editor UI Reference](./segments-editor-ui-reference.md)をご覧ください。 カスタムフィールドを作成することにより、デフォルトのリストにプロパティを追加できます<!-- link todo --> ユーザーまたは組織向け。
+4.  必要な*[User]*、*[Organization]*、*[Session]* プロパティを[Conditions]ボックスにドラッグし、フィールドを構成してユーザーセグメントの条件を作成します。 エディターの使用の詳細と使用できるすべてのプロパティの説明については、[The Segments Editor UI Reference](./segments-editor-ui-reference.md)をご覧ください。 カスタムフィールドを作成することにより、デフォルトのリストにプロパティを追加できます <!-- link todo --> ユーザーまたは組織向け。
 
     ![インターフェイスを介して組織を直接選択することにより、タイプミスを防ぐことができます。](./creating-and-managing-user-segments/images/02.png)
 

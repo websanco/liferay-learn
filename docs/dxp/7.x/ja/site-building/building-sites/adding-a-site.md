@@ -32,7 +32,7 @@
 
   - [Introduction to Site Building](../introduction-to-site-building.md)
   - [Building Sites with Site Templates](./building-sites-with-site-templates.md)
-  - [Adding Members to Sites](./adding-members-to-sites.md)<!-- ### The Default Site
+  - [Adding Members to Sites](./adding-members-to-sites.md) <!-- ### The Default Site
 
 @Michael Williams - This information feels out of place here.
 

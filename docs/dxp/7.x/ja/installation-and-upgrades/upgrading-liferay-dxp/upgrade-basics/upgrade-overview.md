@@ -56,7 +56,7 @@ DXPデータベースをアップグレードした後、新しいDXPインス�
 
 開発したプラグイン（テーマ、アプリ、カスタマイゼーションなど）は、新しいDXPバージョンに適合させる必要があります。 これは、依存関係の更新と同じくらい簡単な場合もあれば、APIの変更に合わせたコードの更新が必要な場合もあります。 カスタムプラグインの更新をしないと、新しいDXPバージョンで無効になる場合があります。 [コードアップグレード](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2)はコードアップグレードプロセスを歩きます。
 
-## 構成とインフラストラクチャの移行と更新<!-- New DXP installations use your configurations at run time and during database upgrade.-->構成と対応するインフラストラクチャを、以前のインストールから新しいインストールに移行して更新する必要があります。
+## 構成とインフラストラクチャの移行と更新 <!-- New DXP installations use your configurations at run time and during database upgrade.--> 構成と対応するインフラストラクチャを、以前のインストールから新しいインストールに移行して更新する必要があります。
 
 ``` important::
    6.2以前からアップグレードする場合は、ファイルストアの構成を更新します。 詳細については、Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>を参照してください。

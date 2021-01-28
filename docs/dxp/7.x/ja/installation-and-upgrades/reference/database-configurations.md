@@ -9,7 +9,7 @@
 
 ``` note::
    `Liferay DXP互換性マトリックス <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7>`_ には、サポートされているデータベースとバージョンがリストされています。
-```<!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->Liferay DXPをデータベースに接続するには、次の手順が必要です。
+``` <!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->Liferay DXPをデータベースに接続するには、次の手順が必要です。
 
   - [データベース設定](#database-configuration)
   - [JDBCコネクタのインストール](#installing-a-jdbc-connector)

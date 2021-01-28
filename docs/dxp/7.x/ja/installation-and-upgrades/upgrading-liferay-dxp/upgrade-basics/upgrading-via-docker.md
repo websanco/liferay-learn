@@ -1,7 +1,7 @@
 # Dockerによるアップグレード
 
 DXP Dockerイメージは、イメージを実行するコマンドに自動アップグレードパラメータが渡されると、すべてのDXPアップグレードプロセスを呼び出します。 アップグレードプロセスが完了すると、DXPはアップグレードされたデータベースで起動します。
-Dockerデスクトップは[こちら](https://www.docker.com/products/docker-desktop)から入手できます 。 Liferay Portal Community Edition (CE) Docker イメージは [ここ](https://hub.docker.com/r/liferay/portal)です。<!-- Add DXP link once the 7.3 image is ready - jhinkey -->
+Dockerデスクトップは[こちら](https://www.docker.com/products/docker-desktop)から入手できます 。 Liferay Portal Community Edition (CE) Docker イメージは [ここ](https://hub.docker.com/r/liferay/portal)です。 <!-- Add DXP link once the 7.3 image is ready - jhinkey -->
 
 ``` important::
    重要なインストールとサブスクライバーの場合は、データベースアップグレードツールを使用してください。 詳細については、Using the Liferay Upgrade Tool <./using-the-database-upgrade-tool.md>を参照してください。

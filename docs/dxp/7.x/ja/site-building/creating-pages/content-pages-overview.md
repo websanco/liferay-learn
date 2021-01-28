@@ -64,7 +64,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` note::
    Liferay DXP 7.3以降で利用できます。
 ```
-*[Content Display]* セクションでは、コンテンツ表示フラグメントを追加して、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。<!--Including this doc in the Page Fragments section-->
+*[Content Display]* セクションでは、コンテンツ表示フラグメントを追加して、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。 <!--Including this doc in the Page Fragments section-->
 
 ## ウィジェット
 

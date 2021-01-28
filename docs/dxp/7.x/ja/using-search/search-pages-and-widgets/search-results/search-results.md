@@ -26,7 +26,7 @@
 
 ![Typeファセットは、箱から出して提供されるファセットの1つです。](./search-results/images/02.png)
 
-ファセットは構成可能です。 ファセットの構成について読む<!-- Future link to facets article --> 詳しく知ることができ。
+ファセットは構成可能です。 ファセットの構成について読む <!-- Future link to facets article --> 詳しく知ることができ。
 
 
 
