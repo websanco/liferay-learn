@@ -156,7 +156,7 @@ Though not explicitly linked to the Liferay CE/DXP 7.3 release, these apps were 
 
 > Availability: Liferay CE 7.3 GA6+, Liferay DXP 7.3 GA1+
 
-An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src code here)](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_DXP_GIT_TAG$]/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/settings/IndexSettingsContributor.java):
+An Elasticsearch-version agnostic `IndexSettingsContributor` was added ([src code here)](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/settings/IndexSettingsContributor.java):
 
 * `com.liferay.portal.search.spi.settings.IndexSettingsContributor`
 * `com.liferay.portal.search.spi.settings.IndexSettingsHelper.java`
