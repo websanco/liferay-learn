@@ -119,7 +119,7 @@ def write_redirects(app, exception):
         return
 
     product = os.path.basename(product_path)
-    version = os.path.basename(cur_version)
+    version = os.path.basename(version_path)
 
     for redirect_from, redirect_to in redirects.items():
         cur_product, cur_version, cur_language, dummy_relpath = redirect_from.split("/", 3)
