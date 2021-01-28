@@ -60,7 +60,7 @@ default.logout.page.path=
 company.default.home.url=
 ```
 
-All Virtual Instances share the values specified in the properties file. Changes made in Instance Settings override the values set in the properties file. For more information, see the [Portal Properties documentation](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html).
+All Virtual Instances share the values specified in the properties file. Changes made in Instance Settings override the values set in the properties file. For more information, see the [Portal Properties documentation](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html).
 
 **Additional Information:** Specify a Legal name, ID, company type, SIC code, ticker symbol, industry and industry type for the owner of the virtual instance. 
 
