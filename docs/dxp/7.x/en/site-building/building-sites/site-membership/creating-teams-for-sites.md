@@ -3,7 +3,7 @@
 If you have an *ad hoc* group of Users who perform the same set of tasks in a Site (moderating a site's Wiki content, managing Message Boards threads, writing blogs, editing a specific page in the Site, etc.), you can organize them into Site Teams, and then assign the team permissions for various Site-specific functions. Site Teams are the preferred method for administering permissions within a single Site. The permissions assigned to a Site Team only apply to that Site.
 
 ```note::
-  To create and apply permissions for a group of Users to use across multiple Sites or Organizations in your Liferay Portal instance, consider aggregating the Users into a `User Group <../../../users-and-permissions/user-groups/creating-and-managing-user-groups.md>`_ and assigning the User Group permissions via `Roles <../../../users-and-permissions/roles-and-permissions/README.rst>`_.
+  To create and apply permissions for a group of Users to use across multiple Sites or Organizations in your Liferay Portal instance, consider aggregating the Users into a `User Group <../../../users-and-permissions/user-groups/creating-and-managing-user-groups.md>`_ and assigning the User Group permissions via `Roles <../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_.
 ```
 
 The steps below cover these topics:
@@ -21,7 +21,7 @@ The steps below cover these topics:
     ![Create Teams through the People heading the Product Menu.](./creating-teams-for-sites/images/01.png)
 
     ```note::
-      You can configure other Site membership groupings, such as *Users*, *Organizations*, and *User Groups* in the *Site Memberships* app, which is also in the *Members* tab. See [Changing Site Membership Type](../../site-settings/site-users/changing-site-membership-type.md) for more information on how Site memberships work.
+      You can configure other Site membership groupings, such as *Users*, *Organizations*, and *User Groups* in the *Site Memberships* app, which is also in the *Members* tab. See `Changing Site Membership Type <../../site-settings/site-users/changing-site-membership-type.md>`_ for more information on how Site memberships work.
     ```
 
 1. Click the *Add Team* icon (![Add Team](../../../images/icon-add.png)).
