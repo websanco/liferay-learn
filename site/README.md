@@ -1,6 +1,6 @@
 # Generating the Site
 
-The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `/site/homepage/` directory and propagated to the `/site/docs/` directory via the [build script](#build-resources). The final project is compiled into static html pages using the `build_site.sh` script.
+The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `site/homepage/` directory and propagated to the `site/docs/` directory via the [build script](#build-resources). The final project is compiled into static html pages using the `build_site.sh` script.
 
 ## Getting Started
 
@@ -10,13 +10,13 @@ The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-d
 
 ## Minify and Build Resources
 
-To minify and build `main.min.css` and propagate assets (templates, javascript, and images), run `npm run build` in the `/site/homepage/` directory.
+To minify and build `main.min.css` and propagate assets (templates, javascript, and images), run `npm run build` in the `site/homepage/` directory.
 
 To leverage live update for theme changes, run `sphinx-autobuild ${path/to/site/homepage/directory} build/output/homepage`. The output will be served on `http://127.0.0.1:8000/`.
 
 ## Project Structure
 
-There is a conscious effort to organize the project into `/docs` and `/site` directories at the root to create a separation between documentation material and its website source.
+There is a conscious effort to organize the project into `docs/` and `site/` directories at the root to create a separation between documentation material and its website source.
 
 ### Docs
 
@@ -30,7 +30,7 @@ The product and section landing pages are achieved via [Vue](https://vuejs.org/)
 
 Most of the site generation related logic and assets (e.g. templates, css) are stored under the `site` directory following the Sphinx convention.
 
-Inside the `/site` folder there are two subfolders: `/docs` and `/homepage`. The `docs` folder corresponds to the `docs` directory at the root and contains site templates and assets for generating each of the documentation pages. The `homepage` directory similiarly has the single responsibility of generating the homepage for the site.
+Inside the `site/` folder there are two subfolders: `docs/` and `homepage/`. The `docs` folder corresponds to the `docs` directory at the root and contains site templates and assets for generating each of the documentation pages. The `homepage` directory similiarly has the single responsibility of generating the homepage for the site.
 
 Add entries to `redirects.json` inside `site/docs/` to create automatic redirects in case of moved documents, or to avoid broken links from other causes. Each entry defines a single redirect: the key (left side) defining where the redirect should start, and the value (right side) defining where the redirect should land (i.e. the key will redirect to the value).
 
@@ -51,7 +51,7 @@ Add entries to `redirects.json` inside `site/docs/` to create automatic redirect
 >
 >     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:\$PATH"
 
-Sphinx projects are typically built with a `Makefile`. This project is built with a shell script instead. Once executed it generates a `build/output` directory inside `/site`. The final static html pages are there.
+Sphinx projects are typically built with a `Makefile`. This project is built with a shell script instead. Once executed it generates a `build/output` directory inside `site/`. The final static html pages are there.
 
 The Build script has two flavors: build for production or build for development. Usage and behavior is as follows:
 
