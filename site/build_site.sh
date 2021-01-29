@@ -66,7 +66,7 @@ function configure_env {
 
 	activate_venv
 
-	check_utils pip3 zip
+	check_utils 7z pip3
 
 	pip_install \
 		nodeenv recommonmark wheel \
@@ -182,7 +182,7 @@ function generate_static_html {
 
 			local zip_file_name=$(basename "${zip_dir_name}")
 
-			zip -r ${zip_file_name} .
+			7z a ${zip_file_name} ../${zip_file_name}\
 
 			local output_dir_name=$(dirname "${zip_dir_name}")
 
