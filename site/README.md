@@ -32,6 +32,8 @@ Most of the site generation related logic and assets (e.g. templates, css) are s
 
 Inside the `/site` folder there are two subfolders: `/docs` and `/homepage`. The `docs` folder corresponds to the `docs` directory at the root and contains site templates and assets for generating each of the documentation pages. The `homepage` directory similiarly has the single responsibility of generating the homepage for the site.
 
+Add entries to `redirects.json` inside `site/docs/` to create automatic redirects in case of moved documents, or to avoid broken links from other causes. Each entry defines a single redirect: the key (left side) defining where the redirect should start, and the value (right side) defining where the redirect should land (i.e. the key will redirect to the value).
+
 ## Building the Site
 
 > **MacOS--Replace the `find` and `sed` tools:**
