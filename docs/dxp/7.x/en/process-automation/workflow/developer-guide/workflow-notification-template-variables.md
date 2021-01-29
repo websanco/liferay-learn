@@ -1,5 +1,7 @@
 # Workflow Notification Template Variables
 
+> Availability: Liferay CE/DXP 7.3+
+
 There are a number of variables auto-injected into the workflow notification context.
 
 These are handy to use in your workflow notification templates.
