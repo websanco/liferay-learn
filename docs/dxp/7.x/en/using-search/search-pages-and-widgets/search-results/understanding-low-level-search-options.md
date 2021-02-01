@@ -24,7 +24,7 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
    **Connection ID:** Select the Connection ID of the connection that will be used to perform the search.
 
-   **Indexes:** Enter the comma-separated names of the alternative indexes to search. Do not enter the standard Liferay index name.
+   **Indexes:** Enter the comma-separated names of the alternative indexes to search. Do not enter the standard Liferay company index name.
 
    **Fields to Return:** Enter the names of the stored fields to be returned from the search engine in a comma-separated list. Leave it blank to return all stored fields.
 
