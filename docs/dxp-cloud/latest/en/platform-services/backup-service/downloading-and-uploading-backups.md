@@ -2,9 +2,9 @@
 
 The DXP Cloud backup service creates backups of an environment's database and the full contents of the `LIFERAY_HOME/data` folder. This content is stored as `.tgz` files and can be downloaded via the DXP Cloud console.
 
-Users can also download or upload environment backups using backup service APIs.
+Users can also download or upload environment backups [using the DXP Cloud Console](#uploading-backups-via-the-console), or through [Backup APIs](#backup-service-apis).
 
-## Downloading Backups via the DXP Cloud Console
+## Downloading Backups via the Console
 
 Follow these steps to download a backup from the *Backups* page in your `prd` environment:
 
@@ -12,25 +12,53 @@ Follow these steps to download a backup from the *Backups* page in your `prd` en
 
 1. Click on *Download*.
 
-   ![Figure 1: Click on the Actions button, and then click Download.](./downloading-and-uploading-backups/images/01.png)
+   ![Click on the Actions button, and then click Download.](./downloading-and-uploading-backups/images/01.png)
 
 1. Click on the *Database* or *Liferay* `.tgz` file to start downloading. Together, these zip archives comprise the environment backup.
 
-   ![Figure 2: Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
+   ![Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
 
 ```note::
    Only production environment administrators can download backups from the Backups page.
 ```
 
+## Uploading Backups via the Console
+
+You can also upload a backup to your project through the *Backups* page in your `prd` environment. You must have a MySQL database dump (as a `.sql` script) and a copy of the document library from the environment you are uploading as a backup.
+
+```warning::
+   When you initiate the upload, the Backup service will be unavailable to generate or restore other backups until it is finished.
+```
+
+Follow these steps from the *Backups* page:
+
+1. Click *Upload Backup...* near the top of the screen.
+
+1. On the Upload Backup page, expand the appropriate production environment, and then click the `+` icons for both the database and document library to upload them.
+
+    ![Click the icons to upload both the database and document library as .tgz archives.](./downloading-and-uploading-backups/images/03.png)
+
+    ```note::
+       The database dump and the document library must each be compressed into a ``.tgz`` archive.
+    ```
+
+1. When both the database dump and document library are uploaded, click *Initiate Upload*.
+
+DXP Cloud begins using the files you uploaded to generate a backup and add it to the list you can restore to your environments. While the backup is being generated, other backups cannot be generated or restored.
+
+A success message appears on the page when the backup is generated and the service resumes normal operation.
+
+![When the backup is finished being added to the list in your environment, a success message appears.](./downloading-and-uploading-backups/images/04.png)
+
 ## Backup Service APIs
 
-The backup service has APIs that you can use to download and upload backups. You can invoke these APIs using a command line tool such as `curl`.
+The backup service has APIs that you can also use to download and upload backups. You can invoke these APIs using a command line tool such as `curl`.
 
 ### Getting the Host Name
 
 To invoke the backup APIs, you need the backup service's host name. You can find this on the *Services* page.
 
-![Figure 3: view the backup service's host name from the Services page.](./downloading-and-uploading-backups/images/03.png)
+![View the backup service's host name from the Services page.](./downloading-and-uploading-backups/images/05.png)
 
 The backup service's host name is a combination of the service, project, and environment names.
 
