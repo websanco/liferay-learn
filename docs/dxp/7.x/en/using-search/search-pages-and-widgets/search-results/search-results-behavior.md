@@ -19,7 +19,10 @@ Administrators can configure facets. Read about [Search facets](../search-facets
 
 ## Search Results Relevance
 
-The search engine decides which results appear at the top of the list using the concept of relevance. Relevance is a score calculated by the search engine. There are numerous factors contributing to the total score of a returned document, and all of the implementation details of how relevance scoring works are algorithms provided by the [search engine](https://www.elastic.co/guide/en/elasticsearch/reference/current/relevance-intro.html#relevance-intro).
+The search engine decides which results appear at the top of the list using the concept of relevance. Relevance is a score calculated by the search engine. There are numerous factors contributing to the total score of a returned document, and all of the implementation details of how relevance scoring works are algorithms provided by the search engine:
+
+* [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/relevance-intro.html#relevance-intro)
+* [Solr](https://lucene.apache.org/solr/guide/8_0/relevance.html)
 
 Liferay's [Result Rankings](../../search-administration-and-tuning/result-rankings.md) feautre lets you intervene in the order of returned search results. 
 
@@ -37,7 +40,7 @@ This initial permission checking is configurable at Control Panel &rarr; Configu
 
 ![Set permissions term limits in the permission checker setting.](./search-results-behavior/images/01.png)
 
-Permissions Term Limit: Limits the number of permission search clauses added to the search query before this level of permission checking is aborted. Permission checking then relies solely on the final permission filtering described below.
+**Permissions Term Limit:** Limits the number of permission search clauses added to the search query before this level of permission checking is aborted. Permission checking then relies solely on the final permission filtering described below.
 
 The only reason to limit permissions terms is performance. Users with administrative access to lots of sites and organizations generate many permissions terms added to the query. Too many terms in a query can make the search engine time out.
 
@@ -49,9 +52,9 @@ This final round of permission checking is configurable at Control Panel &rarr; 
 
 ![Set additional permissions in the default search result permission filter setting.](./search-results-behavior/images/02.png)
 
-1. The first setting, Permission Filtered Search Result Accurate Count Threshold, specifies the maximum number of search results to permissions-filter before results are counted. A higher threshold increases count accuracy, but decreases performance. Since results in the currently displayed page are always checked, any value below the search results pagination delta effectively disables this behavior.
+**Permission Filtered Search Result Accurate Count Threshold:** Specifies the maximum number of search results to permissions-filter before results are counted. A higher threshold increases count accuracy, but decreases performance. Since results in the currently displayed page are always checked, any value below the search results pagination delta effectively disables this behavior.
 
-1. The second setting, Search Query Result Window Limit, sets the maximum batch size for each permission checking request. . This is again impacted by pagination. For example, if there are 100 results per page, and a User wants to jump all the way to page 200 of the search results, all results between page one and 200 must be checked to ensure the User has permission. That’s 20,000 results to permissions check. Doing this in one trip to and form the search engine can result in performance issues. Set the maximum batch size for each permission checking request.
+**Search Query Result Window Limit:** Sets the maximum batch size for each permission checking request. . This is again impacted by pagination. For example, if there are 100 results per page, and a User wants to jump all the way to page 200 of the search results, all results between page one and 200 must be checked to ensure the User has permission. That’s 20,000 results to permissions check. Doing this in one trip to and form the search engine can result in performance issues. Set the maximum batch size for each permission checking request.
 
 ## Search and Staging
 
@@ -79,9 +82,9 @@ The asset developer determines which fields are summary-enabled, but there’s l
 
 To determine which fields to include in the result summaries, the Search Results widget takes three things into consideration:
 
-1. Asset-specific fields to include in the Summary are defined in `ModelSummaryContributor` Java classes (Liferay's own classes and those deployed by third party developers).
+1. Asset-specific fields to include in the Summary are defined in `ModelSummaryContributor` Java classes (Liferay's own classes and those deployed by third party developers). Older implementations of this logic were provided by `Indexer.getSummary`
 
-1. Fields available for display in the Search Results summaries are defined by the Search Results own display logic.
+1. Fields available for display in the Search Results summaries are defined by the Search Results own display logic ([`SearchResultsSummaryDisplayBuilder`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-web/src/main/java/com/liferay/portal/search/web/internal/result/display/builder/SearchResultSummaryDisplayBuilder.java) and [`SearchResultsSummaryDisplayContext`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-web/src/main/java/com/liferay/portal/search/web/internal/result/display/context/SearchResultSummaryDisplayContext.java)).
 
 1. The [Widget Template]( ./../../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md ) used by the [Search Results](./configuring-the-search-results-widget.md) widget (_List_ by default) has the final word in all things related to Search Results display, including which of the available fields are included in the summary.
 

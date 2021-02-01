@@ -38,7 +38,25 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
    **Federated Search Key:** Enter the key of an alternate search this widget is participating in. If not set, this widget participates in the default search. This value is usually the name of an application-defined index.
 
-## Example: Searching an Alternate Index
+## Displaying Low Level Search Results
+
+Assets indexed into a Liferay company index (e.g, `liferay-20097`) can implement a `ModelSummaryContributor` to provide their own display logic that's used by the Search Results widget. Low level searches use different display logic since there's no summary to draw from:
+
+* If only one field is configured, it's displayed as the title field (large, bold text is presented).
+* If two fields are present, the first is used as the title (large, bold text) and the second is the description field.
+* If more than two fields are present, the first is used as the title field (with large, bold text), and the rest are mashed up as a description field.
+
+![The Low Level Search Framework contains logic to produce attractive result summaries on the fly.](./understanding-low-level-search-options/images/04.png)
+
+## Low Level Search and Permission Checking
+
+Permissions checking is not available via low level search. If you search even a company index using low level search, important [permission checking](../search-results/search-results-behavior.md#permissions-and-search-results) is circumvented. You almost always want the benefits of permission checking, but one possible use case for intentionally bypassing the permission checks is an admin-only search page where any users accessing the search page must have access to all results in the company index.
+
+## Low Level Search and Relevance
+
+Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget. The example below  demonstrates this.
+
+## Example 1: Searching an Alternate Index
 
 1. Whether testing on the default search page or creating a new [Search Page](../working-with-search-pages/search-pages.md), include the following widgets (removing extra widgets simplifies the exercise, but is not required for it to work):
 
@@ -49,7 +67,7 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
 1. Configure all the widgets to participate in an alternate search, by clicking on the Options icon (![Options icon](../../../images/icon-app-options.png)) and clicking *Configuration*. For each, enter *liferay-0* in the Federated Search Key setting.
 
-   All the search widgets expected to react appropriately to the alternate search must be configured with the Federated Search Key. The following steps detail additional configuration.
+   All the search widgets expected to react appropriately to the alternate search must be configured with the Federated Search Key.
     
 1. Make an additional configuration in the Low Level Search Options widget, adding the index name of the alternate index:
 
@@ -57,37 +75,21 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
 1. Configure the Custom Filter to use the search bar’s default query parameter (*q*) and add a query to the search:
 
-   Enter title under field name to add the title field to the query.
+   Enter _q_ in the Custom Parameter Name field.
 
-   Choose a Filter Query Type (e.g., Match) for the field.
+   Enter _title_ under Filter Field to add the title field to the query.
 
-   Since you’re overriding the default query to search an alternate index, there’s nothing in the query by default. Add any query clauses using the Custom Filter widget(s).
+   Choose _Match_ under Filter Query Type.
 
-If you’re using *liferay-0* in your Federated Search Key and Indexes settings, search for *dynamic* in the search bar. You’ll see results like this:
+   Since you’re overriding the default query to search an alternate index, there’s nothing in the query by default. Any query clauses you wish to be sent to the search engine must be added manually using [Custom Filter](./filtering-search-results.m) widget(s).
+
+If you’re following the example here to search *liferay-0*, search for *dynamic* in the search bar. You’ll see results like this:
 
 ![Example of results from low level search.](./understanding-low-level-search-options/images/03.png)
 
-## Displaying Low Level Search Results
+## Example 2: Searching the Liferay Company Index and an Additional Index
 
-Assets indexed into the Liferay Company Index (e.g, `liferay-20097`) can implement a `ModelSummaryContributor` to provide their own display logic that's used by the Search Results widget. Low level searches use different display logic since there's no summary to draw from:
-
-* If only one field is configured, it's displayed as the title field (large, bold text is presented).
-* If two fields are present, the first is used as the title (large, bold text) and the second is the description field.
-* If more than two fields are present, the first is used as the title field (with large, bold text), and the rest are mashed up as a description field.
-
-![The Low Level Search Framework contains logic to produce attractive result summaries on the fly.](./understanding-low-level-search-options/images/04.png)
-
-## Low Level Search and Permission Checking
-
-Permissions checking is not available via low level search. If you search even the Company Index using low level search, important [permission checking](../search-results/search-results-behavior.md#permissions-and-search-results) is circumvented. You almost always want the benefits of permission checking, but one possible use case for intentionally bypassing the permission checks is an admin-only search page where any users accessing the search page must have access to all results in the Company Index.
-
-## Low Level Search and Relevance
-
-Relevance scoring only makes sense within an index. Results coming from separate indexes cannot be accurately scored relative to each other. Therefore, it's best to display the results from each index in a separate Search Results widget. The example below  demonstrates this.
-
-## Use Case: Search the Liferay Company Index and an Alternate Index
-
-To set up a [Search Page](../working-with-search-pages/search-pages.md) that displays one set of results from Liferay's Company Index (e.g, `liferay-20098`) and another from some alternate index of interest in [Liferay's Elasticsearch cluster](../../installing-and-upgrading-a-search-engine/elasticsearch.rst) (this example uses `liferay-0` for demonstration purposes):
+To set up a [Search Page](../working-with-search-pages/search-pages.md) that displays one set of results from Liferay's company index (e.g, `liferay-20098`) and another from some alternate index of interest in [Liferay's Elasticsearch cluster](../../installing-and-upgrading-a-search-engine/elasticsearch.rst) (this example uses `liferay-0` for demonstration purposes):
 
 1. Add these widgets to a [new page called _Low Level Search_]( ./../../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md): 
 
@@ -105,9 +107,9 @@ To set up a [Search Page](../working-with-search-pages/search-pages.md) that dis
    |Search Widget|Widget Configuration|Explanation|
    |-------------|---------------------|-----------|
    | Low Level Search Options | **Indexes:** `liferay-0`<br />**Federated Search Key:** `liferay-0` | This sets up the search for an alternate index. In this case it's another Liferay controlled index, for demonstration purposes only. The Federated Search Key can be any memorable string. Since this example searches only for a single additional index, it's named identically to the index itself. |
-   | Search Results (first) | - | Out of the box, the Search Results widget is pre-configured for the Liferay Company Index, so this one can be left with all the defaults. |
+   | Search Results (first) | - | Out of the box, the Search Results widget is pre-configured for the Liferay company index, so this one can be left with all the defaults. |
    | Search Results (second) | **Federated Search Key:** `liferay-0` | There are additional configurations, like controlling which fields to display. Leaving this option blank asks [Liferay to figure it out](#displaying-low-level-search-results). |
-   | Search Bar (first) | - | Leave the defaults in the first Search Bar, since it's configured to search the Company Index out of the box. |
+   | Search Bar (first) | - | Leave the defaults in the first Search Bar, since it's configured to search the company index out of the box. |
    | Search Bar (second) | **Invisible:** `true`.<br />**Federated Search Key:** `liferay-0` | Only one Search Bar is used for user input, so this one should be invisible. Importantly you left the default value for Keywords Parameter Name, in both Search Bar widgets. This Search Bar can ingest the search terms entered by users because it shares the parameter with the visible Search Bar on the page. |
    | Custom Filter | **Filter Field:** `title_en_US`<br />**Occur:** `should`<br />**Invisible:** `true` | The Custom Filter widget should match the title field of the `liferay-0` index. If you want more filters, add more Custom Filter widgets to the page. |
 
