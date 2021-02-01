@@ -15,4 +15,3 @@ Reducing the width of an element frees up space on the row, potentially for othe
 ![Drag other elements onto the same row.](customizing-form-layouts/images/03.png)
 
 Move your cursor toward the label of another element. Drag the element onto the same row as the previous element.
-
