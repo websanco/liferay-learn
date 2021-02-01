@@ -203,7 +203,7 @@ Here's the `content-review` task from the Category Specific Approval workflow, w
                     <name></name>
                     <template></template>
                     <template-language>text</template-language>
-                    <notification-type>im</notification-type>
+                    <notification-type>user-notification</notification-type>
                 </timer-notification>
             </timer-actions>
         </task-timer>

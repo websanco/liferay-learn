@@ -198,7 +198,7 @@ Task timers trigger an action after a specified time period passes. Timers are u
                 <name></name>
                 <template></template>
                 <template-language>text</template-language>
-                <notification-type>im</notification-type>
+                <notification-type>user-notification</notification-type>
             </timer-notification>
         </timer-actions>
     </task-timer>
