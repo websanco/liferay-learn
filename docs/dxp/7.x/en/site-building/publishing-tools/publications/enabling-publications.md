@@ -33,5 +33,5 @@ Once enabled, you can disable Publications at any time, via the Publications *Se
 ## Additional Information
 
 * [Publications Overview](./publications-overview.md)
-* [Creating and Managing Your Publications](./creating-and-managing-your-publications.md)
+* [Creating and Managing Publications](./creating-and-managing-publications.md)
 * [Making and Publishing Changes](./making-and-publishing-changes.md)
