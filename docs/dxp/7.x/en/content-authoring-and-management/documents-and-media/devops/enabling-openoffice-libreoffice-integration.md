@@ -14,6 +14,8 @@ Once you've set up the OpenOffice/LibreOffice server, follow these steps to enab
       Alternatively, you can adjust these settings by deploying a ``com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config`` file to your ``[Liferay Home]/osgi/configs`` folder. 
    ```
 
+   ![Open the Global Menu and ](./enabling-openoffice-libreoffice-integration/images/01.png)
+
 1. Check the *Server Enabled* box.
 
 1. Enter the desired *Server Host* and *Server Port*.
