@@ -2,7 +2,7 @@
 
 [OpenOffice](https://www.openoffice.org/) and [LibreOffice](https://www.libreoffice.org/) are open source productivity suites that you can integrate with Liferay DXP. By default, Liferay includes [PDFBox](https://pdfbox.apache.org/), which generates some automatic previews for limited file types, but you can integrate either of these suits to achieve additional functionalities, such as document conversion.
 
-```important
+```important::
    While both OpenOffice and LibreOffice are capable of integration, some of their features may not be compatible with all Liferay products. View `Liferay's Integrated Technologies Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360016294272-Liferay-DXP-Integrated-Technologies-Compatibility-Matrix>`_ for a list of supported technologies. 
 ```
 
