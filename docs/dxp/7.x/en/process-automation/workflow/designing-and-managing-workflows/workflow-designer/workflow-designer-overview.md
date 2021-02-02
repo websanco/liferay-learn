@@ -7,7 +7,7 @@ The Workflow Designer provides a graphical interface for creating workflows. The
 ![You can drag and drop nodes on the Canvas.](./workflow-designer-overview/images/04.png)
 
 ```tip::
-   Alternately, you can upload XML scripts and modify the definition using the graphical interface. To learn more about uploading an XML script, see `Managing Workflows <./managing-workflows.md#uploading-a-new-workflow-definition>`_.
+   Alternately, you can upload XML scripts and modify the definition using the graphical interface. To learn more about uploading an XML script, see `Managing Workflows <../managing-workflows.md#uploading-a-new-workflow-definition>`_.
 ```
 
 ![Use the Source tab to upload an XML file.](./workflow-designer-overview/images/03.png)
@@ -15,10 +15,10 @@ The Workflow Designer provides a graphical interface for creating workflows. The
 The Workflow Designer supports all workflow node types:
 
 * _Start_ and _End_ Nodes
-* [_Fork_ and _Join_](./workflow-designer/using-forks-joins-and-conditions.md) Nodes
-* [Condition](./workflow-designer/using-forks-joins-and-conditions.md)
+* [_Fork_ and _Join_](./using-forks-and-joins.md) Nodes
+* [Condition](./using-condition-nodes.md)
 * State
-* [Task](./workflow-designer/creating-workflow-tasks.md)
+* [Task](./creating-workflow-tasks.md)
 
 Finally, you have the full power of Groovy (a supported Java-based scripting language) to perform necessary actions on assets being moved through your workflows.
 
@@ -33,11 +33,11 @@ By default, only one workflow definition is installed: the Single Approver Workf
 
 ## Building Workflows
 
-To build a new workflow or to upload one, navigate to the Global Menu (![Global Menu](../../../images/icon-applications-menu.png)) &rarr; _Process Builder_.
+To build a new workflow or to upload one, navigate to the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)) &rarr; _Process Builder_.
 
 ![Navigate to the Process Builder to manage workflows.](./workflow-designer-overview/images/01.png)
 
-Click the (![Add icon](../../../images/icon-add.png)) to begin.
+Click the (![Add icon](../../../../images/icon-add.png)) to begin.
 
 ![Use drag and drop to build a workflow.](./workflow-designer-overview/images/02.png)
 
@@ -45,13 +45,13 @@ Each Workflow Node represents a specific point in an approval process, whether i
 
 Workflow transitions link each node to create the desired flow in the review process. On exiting the first node, processing continues to the next node indicated by the transition.
 
-Ready to work on workflows? Your next step is [creating workflow tasks](./workflow-designer/creating-workflow-tasks.md).
+Ready to work on workflows? Your next step is [creating workflow tasks](./creating-workflow-tasks.md).
 
 ## Additional Information
 
 * [Managing Workflows](./managing-workflows.md)
-* [Workflow Designer Nodes Overview](./workflow-designer/workflow-designer-nodes-overview.md)
-* [Forks and Joins Reference](./workflow-designer/forks-and-joins-reference.md)
-* [Condition Node Reference](./workflow-designer/condition-node-reference.md)
-* [Creating Workflow Tasks](./workflow-designer/creating-workflow-tasks.md)
-* [Configuring Workflow Actions and Notifications](./workflow-designer/configuring-workflow-actions-and-notifications.md)
+* [Workflow Nodes](./workflow-nodes.md)
+* [Using Forks and Joins](./using-forks-and-joins.md)
+* [Using Condition Nodes](./using-condition-nodes.md)
+* [Creating Workflow Tasks](./creating-workflow-tasks.md)
+* [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)

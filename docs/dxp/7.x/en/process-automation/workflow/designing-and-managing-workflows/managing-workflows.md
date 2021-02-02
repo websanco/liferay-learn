@@ -20,7 +20,7 @@ This only applies to Virtual Instances that have been added to the system. The D
 
 ## Uploading a New Workflow Definition
 
-Workflow process definitions can be [built in Liferay](./building-workflows.md) or uploaded in `XML` format. DXP workflow definitions are written in `XML` format; see the [Introduction to Crafting XML Workflow Definitions](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions) to learn more.
+Workflow process definitions can be [built in Liferay](./building-workflows.md) or uploaded in `XML` format. DXP workflow definitions are written in `XML` format; see the [Introduction to Crafting XML Workflow Definitions](../developer-guide/crafting-xml-workflow-definitions.md) to learn more.
 
 To upload a new definition:
 

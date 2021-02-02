@@ -1,10 +1,10 @@
-# Condition Node Reference
+# Using Condition Nodes
 
 > Subscribers
 
 _Condition_ nodes are best used when you have multiple reviewers and must determine which reviewer should be assigned. For example different documents might require review by the Legal department or the Marketing team.
 
-Much like [Fork and Join nodes](./forks-and-joins-reference.md), a _Condition_ node splits the review path. However, unlike the _Fork_ node which requires the corresponding _Join_ node, the _Condition_ node stands alone. It acts as a gatekeeper by checking whether the specified conditions are met, and then assigns the asset to the right reviewer based on those conditions.
+Much like [Fork and Join nodes](./using-forks-and-joins.md), a _Condition_ node splits the review path. However, unlike the _Fork_ node which requires the corresponding _Join_ node, the _Condition_ node stands alone. It acts as a gatekeeper by checking whether the specified conditions are met, and then assigns the asset to the right reviewer based on those conditions.
 
 The [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Conditions node:
 
@@ -60,13 +60,13 @@ The [Category Specific Definition](../workflow-designer-overview/resources/categ
 
     ```
 
-    ![Add the Groovy Script which determines the review path.](./condition-node-reference/images/01.png)
+    ![Add the Groovy Script which determines the review path.](./using-condition-nodes/images/01.png)
 
    The script loops through the asset's categories looking for the string `legal`. If it's found, workflow continues along the Legal Review path. Otherwise, it continues along the Content Review path. 
 
 1. Click _Save_ or _Cancel_ to return to the Canvas.
 
-![The Category Specific Approval definition starts with a Condition node.](./condition-node-reference/images/02.png)
+![The Category Specific Approval definition starts with a Condition node.](./using-condition-nodes/images/02.png)
 
 Notice how the _Condition_ node is connected to three different Task nodes:
 
@@ -74,11 +74,11 @@ Notice how the _Condition_ node is connected to three different Task nodes:
 * Otherwise, the asset is sent to the Marketing team.
 * The _update_ node assigns the asset back to the original creator to make changes if the asset was rejected.
 
-See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Task Node Reference](./task-node-reference.md) to learn how to configure Task nodes.
+See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./using-task-nodes.md) to learn how to configure Task nodes.
 
 ## Additional Information
 
 * [Managing Workflows](../managing-workflows.md)
-* [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
-* [Forks and Joins Reference](./forks-and-joins-reference.md)
+* [Workflow Nodes](./workflow-nodes.md)
+* [Using Forks and Joins](./using-forks-and-joins.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)

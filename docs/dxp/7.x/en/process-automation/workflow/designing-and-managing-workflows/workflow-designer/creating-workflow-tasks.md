@@ -6,7 +6,7 @@ The default [Single Approver Definition](./workflow-designer-overview/resources/
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
-Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Task Node Reference](./task-node-reference.md)).
+Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Using Task Nodes](./using-task-nodes.md)).
 
 Task nodes also contain Notifications and Actions (defined in scripts). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
@@ -86,7 +86,7 @@ You'll create the workflow in 4 steps:
 
 This _Task_ node is now configured; it sends a notification that a submission is ready for review to those Users assigned to a specific Role.
 
-You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Workflow Task Node Reference](./task-node-reference.md).
+You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Using Task Nodes](./using-task-nodes.md).
 
 ### Create the Update Node
 
@@ -123,7 +123,7 @@ You can also assign the _Task_ node to a Resource Action instead of another user
 1. Make sure nothing is selected and move your mouse pointer to the edge of the _update_ node. Drag a connector from the _update_ node back to the _review_ node. 
 1. Name the new connector _resubmit_. 
 
-![Your workflow is taking shape. All that's left is to connect the end node.](./../images/04.png)
+![Your workflow is taking shape. All that's left is to connect the end node.](./creating-workflow-tasks/images/04.png)
 
 ### Configuring the End Node
 
@@ -134,11 +134,11 @@ The only thing left to do is rename the end node and configure it to set the wor
 1. Double-click on the _End Node_ and rename it to _Approved_. 
 1. Click the _Publish_ button at the bottom to publish your workflow. 
 
-Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./forks-and-joins-reference.md) or [Conditions](./condition-node-reference.md). These are covered next. 
+Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./using-forks-and-joins.md) or [Conditions](./using-condition-nodes.md). These are covered next. 
 
 ## Additional Information
 
 * [Activating Workflow](../../using-workflows/activating-workflow.md)
-* [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
+* [Workflow Nodes](./workflow-nodes.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
-* [Task Node Reference](./task-node-reference.md)
+* [Using Task Nodes](./using-task-nodes.md)

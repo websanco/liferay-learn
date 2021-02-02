@@ -56,16 +56,16 @@ Give the definition a name, description, and version:
 Each workflow definition begins and ends with a _State Node_. Create a _Start_ node like this one from the [Single Approver](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/single-approver-definition.xml):
 
 ```xml
-	<state>
-		<name>created</name>
-		<initial>true</initial>
-		<transitions>
-			<transition>
-				<name>review</name>
-				<target>review</target>
-			</transition>
-		</transitions>
-	</state>
+<state>
+	<name>created</name>
+	<initial>true</initial>
+	<transitions>
+		<transition>
+			<name>review</name>
+			<target>review</target>
+		</transition>
+	</transitions>
+</state>
 ```
 
 In this example, the _Start_ node has the following properties:

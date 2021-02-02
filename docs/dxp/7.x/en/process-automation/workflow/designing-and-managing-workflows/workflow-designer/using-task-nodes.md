@@ -85,4 +85,4 @@ Note the `roles = new ArrayList<Role>();` line above. In a scripted assignment, 
 ## Additional Information
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Workflow Designer Nodes Reference](./workflow-nodes.md)
+* [Using Task Nodes](./workflow-nodes.md)

@@ -84,5 +84,6 @@ Notifications on the Update node have been added.
 ## Additional Information
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Using Forks, Joins, and Conditions](./forks-and-joins-reference.md)
-* [Workflow Designer Nodes Reference](./task-node-reference.md)
+* [Using Forks and Joins](./using-forks-and-joins.md)
+* [Using Condition Nodes](./using-condition-nodes.md)
+* [Workflow Nodes](./using-task-nodes.md)
