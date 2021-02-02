@@ -24,7 +24,9 @@ Follow these steps to download a backup from the *Backups* page in your `prd` en
 
 ## Uploading Backups via the Console
 
-You can also upload a backup to your project through the *Backups* page in your `prd` environment. You must have a MySQL database dump (as a `.sql` script) and a copy of the document library from the environment you are uploading as a backup.
+You can also upload a backup to your project through the *Backups* page in your `prd` environment.
+
+Before you can upload a backup to DXP Cloud, you must compress the database dump and document library in separate archives. See [Preparing the Database and Document Library for Upload](#preparing-the-database-and-document-library-for-upload) for more information on preparing for the upload for an on-premises environment.
 
 ```warning::
    When you initiate the upload, the Backup service will be unavailable to generate or restore other backups until it is finished.
@@ -37,10 +39,6 @@ Follow these steps from the *Backups* page:
 1. On the Upload Backup page, expand the appropriate production environment, and then click the `+` icons for both the database and document library to upload them.
 
     ![Click the icons to upload both the database and document library as .tgz archives.](./downloading-and-uploading-backups/images/03.png)
-
-    ```note::
-       The database dump and the document library must each be compressed into a ``.tgz`` archive.
-    ```
 
 1. When both the database dump and document library are uploaded, click *Initiate Upload*.
 
@@ -138,9 +136,35 @@ Follow these steps to upload a backup to DXP Cloud with the upload backup API:
 
 1. [Invoke the backup API](#invoking-the-backup-api) with the database and volume files.
 
-#### Creating the Database File
+Before you can use the upload API, you must compress the database dump and document library in separate archives. See [Preparing the Database and Document Library for Upload](#preparing-the-database-and-document-library-for-upload) for more information on preparing for the upload for an on-premises environment.
 
-To create a MySQL dump and compress it into a `.tgz` archive, run the following commands:
+#### Invoking the Backup API
+
+**Parameters**
+
+Name       | Type   | Required |
+---------- | ------ | -------- |
+`database` | `File` | Yes      |
+`volume`   | `File` | Yes      |
+
+**curl Example**
+
+```bash
+curl -X POST \
+  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'database=@/my-folder/database.tgz' \
+  -F 'volume=@/my-folder/volume.tgz' \
+  -u user@domain.com:password
+```
+
+## Preparing the Database and Document Library for Upload
+
+To upload a backup of your environment to DXP Cloud, you must have the database and document library from that environment prepared in separate `.tgz` archive files.
+
+### Creating the Database File
+
+To create a MySQL dump (as a `.sql` script) and compress it into a `.tgz` archive, run the following commands:
 
 ```bash
 mysqldump -uroot -ppassword --databases --add-drop-database lportal | gzip -c | cat > database.gz
@@ -166,32 +190,12 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `lportal` /*!40100 DEFAULT CHARACTER SE
 USE `lportal`;
 ```
 
-#### Creating the Volume File
+### Creating the Volume File
 
 Run this command to compress the data volume:
 
 ```bash
 cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
-```
-
-#### Invoking the Backup API
-
-**Parameters**
-
-Name       | Type   | Required |
----------- | ------ | -------- |
-`database` | `File` | Yes      |
-`volume`   | `File` | Yes      |
-
-**curl Example**
-
-```bash
-curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'database=@/my-folder/database.tgz' \
-  -F 'volume=@/my-folder/volume.tgz' \
-  -u user@domain.com:password
 ```
 
 ## Additional Information
