@@ -10,7 +10,7 @@ When attempting to override an OSGi service, follow these steps:
 
 1. Reconfigure existing Liferay components to use your custom service (if needed).
 
-The following tutorial uses [sample modules](https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/overriding-osgi-services/resources/liferay-s1j6.zip)<!--fix link--> to demonstrate how to override an OSGi service. These modules include an api for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that uses the initial implementation. Also included are a second implementation for overriding the initial one and a config file for reconfiguring the portlet to use the new implementation.
+The following tutorial uses [sample modules](https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-s1j6.zip) to demonstrate how to override an OSGi service. These modules include an api for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that uses the initial implementation. Also included are a second implementation for overriding the initial one and a config file for reconfiguring the portlet to use the new implementation.
 
 ## Deploy Sample Modules for Overriding
 
@@ -25,7 +25,7 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
 1. Download and unzip the example modules.
 
    ```bash
-   curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/overriding-osgi-services/resources/liferay-s1j6.zip -O
+   curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-s1j6.zip -O
    ```
 
    ```bash
@@ -44,14 +44,6 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
 
    ```bash
    docker cp s1j6-api/build/libs/com.acme.s1j6.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-   ```
-
-   ```bash
-   docker cp s1j6-able-impl/build/libs/com.acme.s1j6.able.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-   ```
-
-   ```bash
-   docker cp s1j6-web/build/libs/com.acme.s1j6.web-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
    ```
 
    Log messages indicate when Liferay begins processing and successfully starts each module. These Logs also provide each service's bundle id.
@@ -79,7 +71,7 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
 
    The provided `api` defines an OSGi service type that is then implemented by the `able.impl` module, which in turn is used by the provided `portlet`.
 
-## Gather OSGi Service and Reference Details
+## Gathering OSGi Service and Reference Details
 
 Once you've identified the service you want to override, use Gogo Shell commands to gather the following details:
 
@@ -138,7 +130,7 @@ Together, these details indicate the portlet will require reconfiguration to use
 
 After gathering the requisite service and reference details, you can use them to override an existing service.
 
-## Create an OSGi Service with the Gathered Details
+## Creating an OSGi Service with the Gathered Details
 
 Follow these steps to create an OSGi service for overriding an existing service:
 
@@ -184,7 +176,7 @@ Here, `S1J6BakerImpl` implements the same service type as `S1J6AbleImpl` (i.e., 
 
 However, getting components to adopt your custom service immediately can require reconfiguring their references.
 
-## Reconfigure Other Components to Use Your New Service
+## Reconfiguring Other Components to Use Your New Service
 
 Together, a service's [Reference Policy](https://docs.osgi.org/javadoc/r5/enterprise/org/osgi/service/component/annotations/ReferencePolicy.html) (i.e., `static` or `dynamic`), [Reference Policy Option](https://docs.osgi.org/javadoc/r5/enterprise/org/osgi/service/component/annotations/ReferencePolicyOption.html) (i.e., `reluctant` or `greedy`) and [Cardinality](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-reference.cardinality) (i.e., unary or multiple, and optional or mandatory) determine a component's conditions for adopting new services. See the above links for detailed explanations of each category.
 
@@ -194,7 +186,7 @@ However, if the policy is `static` and its policy option is `reluctant`, the ref
 
 Follow these steps:
 
-1. Create a [system configuration file]() named after the referencing component. Follow the name convention `[component].config`. <!--Add path to Understanding System Configuration Files once it is ported-->
+1. Create a system configuration file named after the referencing component. Follow the name convention `[component].config`. <!--Link to Understanding System Configuration Files once ported-->
 
 1. Add configuration information to the file using the following format:
 
@@ -216,7 +208,7 @@ Follow these steps:
 
 Once your configuration file is prepared, deploy it to your Liferay instance to ensure your new service is used in place of the old.
 
-The root folder of the sample project includes a configuration file for reconfiguring the `portlet` service to use `baker.impl` in place of `able.impl`. It contains the following script:
+The root folder of the sample project includes a configuration file for reconfiguring the `portlet` service to use `baker.impl` in place of `able.impl`. The file's name is `com.acme.m1t1.web.internal.portlet.S1J6Portlet.config`, and it contains the following script:
 
 ```
 _s1J6.target="(component.name\=com.acme.s1j6.baker.internal.S1J6BakerImpl)" 
@@ -237,7 +229,7 @@ Follow these steps to deploy the second `impl` and system `config` file to overr
 1. Deploy the system configuration file to ensure the deployed portlet uses the `baker.impl` component to override and delegate to `able.impl`.
 
    ```bash
-   docker cp com.acme.s1j6.web.internal.portlet.S1J6Portlet.config $(docker ps -lq):/opt/liferay/deploy/osgi/configs
+   docker cp com.acme.s1j6.web.internal.portlet.S1J6Portlet.config $(docker ps -lq):/opt/liferay/osgi/configs
    ```
 
 1. Confirm both `baker.impl` and the `config` file have successfully deployed to your instance via the Gogo Shell.
@@ -254,3 +246,9 @@ Follow these steps to deploy the second `impl` and system `config` file to overr
       target=(*) scope=bundle (1 binding):
       * Bound to [4518] from bundle 1360 (com.acme.s1j6.baker.impl:1.0.0)
    ```
+
+## Additional Information
+
+* [Module Projects](../fundamentals/module-projects.md)
+* [Using an OSGi Service](../fundamentals/using-an-osgi-service.md)
+* [APIs as OSGi Services](../fundamentals/apis-as-osgi-services.md)
