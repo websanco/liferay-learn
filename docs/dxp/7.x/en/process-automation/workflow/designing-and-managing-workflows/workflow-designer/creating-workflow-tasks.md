@@ -2,7 +2,7 @@
 
 > Subscribers
 
-The default [Single Approver Definition](../workflow-designer-overview/workflow-processes/single-approver-definition.xml) is a great introduction to creating workflow tasks. It has only two task nodes: _Review_ and _Update_. The workflow enters the _Review_ node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the _Update_ task. The submitter can then modify the asset and resubmit it for review.
+The default [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml) is a great introduction to creating workflow tasks. It has only two task nodes: _Review_ and _Update_. The workflow enters the _Review_ node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the _Update_ task. The submitter can then modify the asset and resubmit it for review.
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
@@ -111,11 +111,11 @@ You can also assign the _Task_ node to a Resource Action instead of another user
    * **Name:** reject
    * **Script:**  
      ```groovy
-         import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
-         import com.liferay.portal.kernel.workflow.WorkflowConstants;
+      import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+      import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
-         WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
-         WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
+      WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
+      WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
      ```
    * Leave the rest of the defaults: (Language _groovy_, Execution type _On Assignment_)
 
@@ -138,7 +138,7 @@ Nice job! You've created your first workflow and learned how the workflow design
 
 ## Additional Information
 
-* [Activating Workflow](../activating-workflow.md)
+* [Activating Workflow](../../using-workflows/activating-workflow.md)
 * [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
 * [Task Node Reference](./task-node-reference.md)

@@ -25,10 +25,10 @@ Start and end nodes kick off workflow processing and bring the asset to its fina
 End nodes have a default action that sets the workflow status to Approved using the Groovy scripting language:
 
 ```java
-    import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
-    import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
-    WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("approved"), workflowContext);
+WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("approved"), workflowContext);
 ```
 
 ### State Nodes
@@ -36,17 +36,17 @@ End nodes have a default action that sets the workflow status to Approved using 
 State nodes can have [Actions and Notifications](./configuring-workflow-actions-and-notifications.md). For example, you can create a node that sets the status to _Expired_, using this Groovy script:
 
 ```java
-    import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
-    import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
-    WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("expired"), workflowContext);
+WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("expired"), workflowContext);
 ```
 
 ### Condition Nodes
 
 A _Condition_ node checks an asset or its execution context, and depending on the result, sends it to the appropriate transition. This node requires a script that sets a value to one of the transitions.
 
-In the [Category Specific Definition](../workflow-designer-overview/workflow-processes/category-specific-definition.xml) is a script that looks up the asset in question, retrieves its [asset category](../../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the *legal* category. If not it goes through *Content Review* (the content-review task in the workflow), and if it does it goes through *Legal Review* (the legal-review task in the workflow).
+In the [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml) is a script that looks up the asset in question, retrieves its [asset category](../../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the *legal* category. If not it goes through *Content Review* (the content-review task in the workflow), and if it does it goes through *Legal Review* (the legal-review task in the workflow).
 
 ### Task Nodes
 
@@ -55,7 +55,7 @@ _Task_ nodes represent where all the work is done. See [Creating Workflow Tasks]
 ## Additional Information
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Workflow Task Node Reference](./workflow-task-node-reference.md)
-* [Kaleo Forms](../../../user-guide/advanced-forms-usage/kaleo-forms/kaleo-forms.md)
+* [Workflow Task Node Reference](./task-node-reference.md)
+* [Kaleo Forms](../../../forms/kaleo_forms.md)
 * [Introduction to the Workflow Framework](https://help.liferay.com/hc/en-us/articles/360028727112-Introduction-to-The-Workflow-Framework)
-* [Dynamic Data Lists](../../../user-guide/advanced-forms-usage/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)
+* [Dynamic Data Lists](../../../forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)

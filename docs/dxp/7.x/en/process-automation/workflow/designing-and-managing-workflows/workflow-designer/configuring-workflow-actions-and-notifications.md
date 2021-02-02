@@ -36,11 +36,11 @@ Follow the steps below:
 1. Enter the script in the _Script_ field. The Single Approver workflow contains an Update task with an action written in Groovy that sets the status of the asset as _denied_, then sets it to _pending_.
 
     ```java
-        import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
-        import com.liferay.portal.kernel.workflow.WorkflowConstants;
+    import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+    import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
-        WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
-        WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
+    WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
+    WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
     ```
 
     ![Add the reject action.](./configuring-workflow-actions-and-notifications/images/05.png)
@@ -84,5 +84,5 @@ Notifications on the Update node have been added.
 ## Additional Information
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Using Forks, Joins, and Conditions](./using-forks-joins-and-conditions.md)
-* [Workflow Designer Nodes Reference](./workflow-designer-nodes-reference.md)
+* [Using Forks, Joins, and Conditions](./forks-and-joins-reference.md)
+* [Workflow Designer Nodes Reference](./task-node-reference.md)

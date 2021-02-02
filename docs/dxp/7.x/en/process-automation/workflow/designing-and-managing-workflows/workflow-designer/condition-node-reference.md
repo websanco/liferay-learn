@@ -81,5 +81,4 @@ See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Task Node Refer
 * [Managing Workflows](../managing-workflows.md)
 * [Workflow Designer Nodes Overview](./workflow-designer-nodes-overview.md)
 * [Forks and Joins Reference](./forks-and-joins-reference.md)
-* [Condition Node Reference](./condition-node-reference.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
