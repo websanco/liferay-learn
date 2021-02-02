@@ -32,19 +32,13 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
    unzip liferay-s1j6.zip -d liferay-s1j6
    ```
 
-1. Run the following command in the project's root folder (i.e., `liferay-s1j6`) to build `jar` files for the sample modules.
+1. Run the following `gradlew` command from the `s1j6-api`, `s1j6-able-impl`, and `s1j6-web` subfolders to build and deploy a JAR file for each module to your new Docker container:
 
    ```bash
-   ./gradlew jar
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
    Each module's JAR is generated in its `build/libs` folder (e.g., `s1j6-api/build/libs/com.acme.s1j6.api-1.0.0.jar`).
-
-1. Deploy the `api`, `able.impl`, and `portlet` JARs to your Docker container.
-
-   ```bash
-   docker cp s1j6-api/build/libs/com.acme.s1j6.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-   ```
 
    Log messages indicate when Liferay begins processing and successfully starts each module. These Logs also provide each service's bundle id.
 
@@ -218,12 +212,12 @@ _s1J6.target="(component.name\=com.acme.s1j6.baker.internal.S1J6BakerImpl)"
 
 Follow these steps to deploy the second `impl` and system `config` file to override :
 
-1. Navigate to the project's root folder in your console (i.e., `liferay-s1j6`).
+1. Open the `s1j6-baker-impl` folder in your console.
 
-1. Deploy the `baker.impl` JAR to your Docker container.
+1. Run the following `gradlew` command to build and deploy a JAR file for the module to your most latest Docker container:
 
    ```bash
-   docker cp s1j6-baker-impl/build/libs/com.acme.s1j6.baker.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
 1. Deploy the system configuration file to ensure the deployed portlet uses the `baker.impl` component to override and delegate to `able.impl`.
