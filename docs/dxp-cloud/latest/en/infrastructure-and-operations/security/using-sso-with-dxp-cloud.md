@@ -1,10 +1,10 @@
 # Using SSO with DXP Cloud
 
-Customers may use their SAML 2.0 compliant Single Sign-On Identity Providers to authenticate users to the DXP Cloud platform. This document will detail the process to enable this integration.
+Customers may use their SAML 2.0 compliant Single Sign-On Identity Providers to authenticate Users to the DXP Cloud platform. This document will detail the process to enable this integration.
 
-Using SAML to execute SSO requires three agents, the Client, the Service Provider (SP), and the Identity Provider (IdP). When the client tries to connect to the Service Provider, the Service Provider will redirect the client to the Identity Provider. After the client is authenticated by the Identity Provider, the Identity Provider will grant the access to the client’s credentials to the Service Provider.
+Using SAML to execute SSO requires three agents: the Client, the Service Provider (SP), and the Identity Provider (IdP). When the client tries to connect to the Service Provider, the Service Provider will redirect the client to the Identity Provider. After the client is authenticated by the Identity Provider, the Identity Provider will grant the access to the client’s credentials to the Service Provider.
 
-In this scenario, DXP Cloud functions as the Service Provider; the customer trying to log into DXP Cloud is the client; and the Identity Provider is an enterprise directory solution managed by the customer.
+In this scenario, DXP Cloud functions as the Service Provider, the customer trying to log into DXP Cloud is the client, and the Identity Provider is an enterprise directory solution managed by the customer.
 
 ## Enabling SSO for a DXP Cloud Project
 
@@ -78,6 +78,6 @@ To log into DXP Cloud using SSO:
 1. Enter the **Password** in the _Password_ field. This must be the same password associated with the email address stored in the company's database or directory service.
 1. Click _Log in_.
 
-Once logged in, the user should see all of his or her projects and environments.
+Once logged in, the User should see all of his or her projects and environments.
 
 ![projects page](./using-sso-with-dxp-cloud/images/02.png)
