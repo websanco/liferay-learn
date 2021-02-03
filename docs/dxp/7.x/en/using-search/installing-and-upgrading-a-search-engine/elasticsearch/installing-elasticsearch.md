@@ -38,7 +38,7 @@ sysctl -w vm.max_map_count=262144
 1. Download an Elasticsearch archive (not the OSS version) from [Elastic's website](https://www.elastic.co).
 
     ```important::
-       Download the latest Elasticsearch archive `compatible with your Liferay version <./connecting-to-elasticsearch.html#available-liferay-connector-applications.md>`_.
+       Download the latest Elasticsearch archive `compatible with your Liferay version <./connecting-to-elasticsearch.html#available-liferay-connector-applications>`_.
     ```
 
 1. Extract the archive contents to a local folder where you want to run Elasticsearch. This folder is your *Elasticsearch Home*.

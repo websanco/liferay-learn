@@ -1,6 +1,6 @@
 # Troubleshooting Cross-Cluster Replication
 
-Known common pitfalls encountered during the CCR setup are covered here, as well as general troubleshooting techniques. For further troubleshooting, look at [Elastic's CCR documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-overview.html) or visit [Elastic's forum](https://discuss.elastic.co/tag/cross-cluster-replication).
+Known common pitfalls encountered during the CCR setup are covered here, as well as general troubleshooting techniques. For further troubleshooting, look at [Elastic's CCR documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-overview.html) or visit [Elastic's forum](https://discuss.elastic.co/tag/ccr-cross-cluster-replication).
 
 ## Investigating Index Replication Issues
 

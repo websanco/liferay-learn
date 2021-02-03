@@ -189,7 +189,7 @@ Nobody likes catastrophic failure on a production system, but Elasticsearch's AP
 
 ## Backing up and Restoring Search Tuning Indexes
 
-Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../../search_administration_and_tuning.html) and [Result Rankings](../../../../search_administration_and_tuning.html). There are no records for these applications in the database.
+Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-ranking). There are no records for these applications in the database.
 
 You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to back up and restore the Search Tuning indexes.
 

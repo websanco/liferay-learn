@@ -1,6 +1,6 @@
 # Connecting to Elasticsearch
 
-After [setting up Elasticsearch](./getting-started-with-elasticsearch.md#installing-elasticsearch), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-connector-applications) you're configuring:
+After [setting up Elasticsearch](./installing-elasticsearch.md), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-connector-applications) you're configuring:
 
 * Liferay 7.3: Liferay Connector to Elasticsearch is included in the Liferay DXP 7.3 and CE 7.3 GA4+. It's also available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
 * Liferay 7.2: Liferay Connector to Elasticsearch is available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
@@ -162,7 +162,7 @@ If Elasticsearch is [installed and running](./installing-elasticsearch.md), star
 
 Re-index your search indexes and spell check indexes. Invoke both of these actions in the Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
 
-On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/workflow/user-guide/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
+On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
 
 1. From the Global Menu (![Applications Menu](../../../images/icon-applications-menu.png)) navigate to Applications &rarr; Workflow Metrics. 
 

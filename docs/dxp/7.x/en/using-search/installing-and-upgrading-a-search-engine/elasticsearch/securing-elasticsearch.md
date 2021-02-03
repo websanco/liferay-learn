@@ -122,7 +122,7 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
 
 ### Configure TLS for Elasticsearch
 
-[Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html#enable-ssl) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
+[Enable TLS](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html) on each node via its `[Elasticsearch Home]/config/elasticsearch.yml` file.
 
 1. Enable transport layer TLS with these settings in `elasticsearch.yml` for inter-node communication:
 
