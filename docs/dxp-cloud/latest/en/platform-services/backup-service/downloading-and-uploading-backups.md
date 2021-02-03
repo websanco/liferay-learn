@@ -1,6 +1,6 @@
 # Downloading and Uploading Backups
 
-The DXP Cloud backup service creates backups of an environment's database and the full contents of the `LIFERAY_HOME/data` folder. This content is stored as `.tgz` files and can be downloaded via the DXP Cloud console.
+The DXP Cloud backup service creates backups of an environment's database and the full contents of the `LIFERAY_HOME/data` folder. This content is stored as archive files (`.gz` and `.tgz` respectively) and can be downloaded via the DXP Cloud console.
 
 Users can also download or upload environment backups [using the DXP Cloud Console](#uploading-backups-via-the-console), or through [Backup APIs](#backup-service-apis).
 
@@ -14,9 +14,13 @@ Follow these steps to download a backup from the *Backups* page in your `prd` en
 
    ![Click on the Actions button, and then click Download.](./downloading-and-uploading-backups/images/01.png)
 
-1. Click on the *Database* or *Liferay* `.tgz` file to start downloading. Together, these zip archives comprise the environment backup.
+1. Click on the *Database* (`.gz`) or *Liferay* (`.tgz`) file to start downloading. Together, these zip archives comprise the environment backup.
 
-   ![Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
+    ```note::
+       If your Backup service is not yet updated to version ``4.2`` or above, then the Database volume is downloaded as a ``.tgz`` archive instead of ``.gz``.
+    ```
+
+    ![Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
 
 ```note::
    Only production environment administrators can download backups from the Backups page.
@@ -38,7 +42,7 @@ Follow these steps from the *Backups* page:
 
 1. On the Upload Backup page, expand the appropriate production environment, and then click the `+` icons for both the database and document library to upload them.
 
-    ![Click the icons to upload both the database and document library as .tgz archives.](./downloading-and-uploading-backups/images/03.png)
+    ![Click the icons to upload both the database and document library as .gz archives.](./downloading-and-uploading-backups/images/03.png)
 
 1. When both the database dump and document library are uploaded, click *Initiate Upload*.
 
@@ -71,7 +75,7 @@ Consider this example:
 
 You can authenticate your request with basic authentication or a user access token.
 
-Note that token authentication is required if SSO is enabled You can retrieve this token from the cookie `access_token` and use it with the `dxpcloud-authorization` header.
+Note that token authentication is required if SSO is enabled. You can retrieve this token from the cookie `access_token` and use it with the `dxpcloud-authorization` header.
 
 Here's an example that uses token authentication with the upload API:
 
@@ -80,7 +84,7 @@ curl -X POST \
   https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -H 'dxpcloud-authorization: Bearer <USER_TOKEN>' \
-  -F 'database=@/my-folder/database.tgz' \
+  -F 'database=@/my-folder/database.gz' \
   -F 'volume=@/my-folder/volume.tgz'
 ```
 
@@ -90,7 +94,7 @@ curl -X POST \
 
 ### Download Database API
 
-The API for downloading a database contains an endpoint that returns a `.tgz` file. The `id` parameter represents the backup ID, which you can find on the Backups page. This ID is comprised of three strings separated by two dashes (e.g., `dxpcloud-lqgqnewltbexuewymq-201910031723`).
+The API for downloading a database contains an endpoint that returns a `.gz` file. The `id` parameter represents the backup ID, which you can find on the Backups page. This ID is comprised of three strings separated by two dashes (e.g., `dxpcloud-lqgqnewltbexuewymq-201910031723`).
 
 #### Parameters
 
@@ -104,7 +108,11 @@ Name | Type     | Required |
 curl -X GET \
   https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/download/database/id \
   -u user@domain.com:password \
-  --output database.tgz
+  --output database.gz
+```
+
+```note::
+   If your Backup service is not yet updated to version ``4.2`` or above, then the Database volume is downloaded as a ``.tgz`` archive instead of ``.gz``.
 ```
 
 ### Download Data Volume API
@@ -153,25 +161,25 @@ Name       | Type   | Required |
 curl -X POST \
   https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
-  -F 'database=@/my-folder/database.tgz' \
+  -F 'database=@/my-folder/database.gz' \
   -F 'volume=@/my-folder/volume.tgz' \
   -u user@domain.com:password
 ```
 
 ## Preparing the Database and Document Library for Upload
 
-To upload a backup of your environment to DXP Cloud, you must have the database and document library from that environment prepared in separate `.tgz` archive files.
+To upload a backup of your environment to DXP Cloud, you must have the database and document library from that environment prepared in separate archive files.
 
 ### Creating the Database File
 
-To create a MySQL dump (as a `.sql` script) and compress it into a `.tgz` archive, run the following commands:
+To create a MySQL dump (as a `.sql` script) and compress it into a `.gz` archive, run the following commands:
 
 ```bash
-mysqldump -uroot -ppassword --databases --add-drop-database lportal | gzip -c | cat > database.gz
+mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | cat > database.gz
 ```
 
-```bash
-tar zcvf database.tgz database.gz
+```note::
+   If your Backup service is not updated to at least version ``4.2``, then you must also run the following command to convert the archive to a ``.tgz`` file: ``tar zcvf database.tgz database.gz``. Then use the resulting ``.tgz`` archive to upload.
 ```
 
 The `databases` and `add-drop-database` options are necessary for backup restoration to work correctly. You can also use the `/backup/download` API to see how the backup service creates its MySQL dump file.
