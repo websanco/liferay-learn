@@ -40,8 +40,8 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
 | liferay-20101-workflow-metrics-instances              | App Index     | Store data about Workflow Instances for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-nodes                  | App Index     | Store data about Workflow Nodes for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-processes              | App Index     | Store data about Workflow Processes for the Workflow Metrics application |
-| liferay-20101-workflow-metrics-sla-instance-results   | App Index     | Primary storage for SLA results per Workflow Instance for the Workflow Metrics application |
-| liferay-20101-workflow-metrics-sla-task-results       | App Index     | Primary storage for SLA results per Workflow Task for the Workflow Metrics application |
+| liferay-20101-workflow-metrics-sla-instance-results   | App Index     | Storage for SLA results per Workflow Instance for the Workflow Metrics application |
+| liferay-20101-workflow-metrics-sla-task-results       | App Index     | Storage for SLA results per Workflow Task for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-tokens                 | App Index     | Store data about Workflow Tokens for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-transitions            | App Index     | Store data about Workflow Transitions for the Workflow Metrics application |
 
