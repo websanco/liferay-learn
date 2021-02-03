@@ -1,8 +1,10 @@
 # Understanding Low Level Search Options
 
-Low level search is a search that doesn’t go through the Search and Indexing Framework, which is infrastructure used for searching documents in the Liferay Index.
+> Low level search works only with [Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch.html).
 
-A common use case for a low level search is to query an index other than the Liferay DXP index. By default, [Search Pages](../working-with-search-pages/search-pages.md) search the Liferay DXP index, but you can also search another index, as long as it’s in the same Elasticsearch cluster (this feature does not work with Solr).
+Low level search is a search that doesn’t go through the Search and Indexing Framework, which is infrastructure used for searching documents in a Liferay search index.
+
+A common use case for a low level search is to query an index other than the Liferay DXP index. By default, [Search Pages](../working-with-search-pages/search-pages.md) search the Liferay DXP index, but you can also search another index, as long as it’s in the same Elasticsearch cluster.
 
 Add the Low Level Search Options widget to a search page and configure it to direct the search to the alternate index. To search multiple indexes from the same page, you can add multiple Low Level Search Options widgets and configure each one with its own Index Name and Federated Search Key.
 
@@ -22,9 +24,9 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
    The widget has different options to configure,
 
-   **Connection ID:** Select the Connection ID of the connection that will be used to perform the search.
+   **[Liferay 7.3] Connection ID:** Select the Connection ID of the connection that will be used to perform the search.
 
-   **Indexes:** Enter the comma-separated names of the alternative indexes to search. Do not enter the standard Liferay company index name.
+   **Indexes:** Enter the comma-separated names of the alternative indexes to search. Usually, you shouldn't enter a Liferay company index name.
 
    **Fields to Return:** Enter the names of the stored fields to be returned from the search engine in a comma-separated list. Leave it blank to return all stored fields.
 
