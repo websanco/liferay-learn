@@ -31,7 +31,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 
 ### Email Notifications
 
-Here you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) to learn more.
+Here you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to learn more.
 
 ![You can add notifications to a form.](./forms-configuration-reference/images/03.png)
 
@@ -42,7 +42,7 @@ Here you can configure the Forms app to send a notification email each time a fo
 | To Address | The recipient's email address (e.g., `test@example.com`) |
 | Subject | An informative subject line tells the recipient what happened. |
 
-To learn more, see [Configuring Form Notifications](./configuring-form-notifications.md).
+To learn more, see [Configuring Form Notifications](../sharing-forms-and-managing-submissions/configuring-form-notifications.md).
 
 ## Form Widget Configuration
 
@@ -62,7 +62,7 @@ Here you can embed this application on other platforms besides DXP.
 
 ### Scope
 
-Here you can change the widget's [scope](../../../site-building/site-settings/scope.md) from Global, Site, or Page.
+Here you can change the widget's scope from Global, Site, or Page.
 
 ![Select the desired scope for the Form Widget.](./forms-configuration-reference/images/06.png)
 
@@ -119,4 +119,3 @@ Use the Site Scope settings to manage each Form's behavior. These are the simila
 ## Additional Information
 
 * [Forms Permissions Reference](./forms-permissions-reference.md)
-* [Widget Scope](../../../site-building/site-settings/scope.md)
