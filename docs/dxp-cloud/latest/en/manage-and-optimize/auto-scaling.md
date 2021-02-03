@@ -9,7 +9,7 @@ Using this feature, a service can automatically increase (upscale) the number of
 ```
 
 ```note::
-   Auto-scaling is only available for the Liferay DXP service in production environments. For more information on how auto-scaling is charged, see `How Auto-scaling is Charged <https://help.liferay.com/hc/en-us/articles/360030843592-How-Auto-Scaling-is-charged->`_.
+   Auto-scaling is only available for the Liferay DXP service in production environments. Once auto-scaling is enabled, each extra instance of the service will incur an hourly charge. For more information on how auto-scaling is charged, see `How Auto-scaling is Charged <https://help.liferay.com/hc/en-us/articles/360030843592-How-Auto-Scaling-is-charged->`_.
 ```
 
 ## JVM Memory Configuration
