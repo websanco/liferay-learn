@@ -54,6 +54,12 @@ Once the SP metadata has been received from the DXP Cloud team, enter the SP met
 
 ## Using SSO
 
+Once SSO is enabled, Users with the appropriate identity provider(s) may use it to authenticate.
+
+```warning::
+   Once a User authenticates with SSO for the first time, that User account will be changed and they must authenticate using SSO from then on.
+```
+
 To log into DXP Cloud using SSO:
 
 1. Navigate to <https://console.liferay.cloud/login>.
