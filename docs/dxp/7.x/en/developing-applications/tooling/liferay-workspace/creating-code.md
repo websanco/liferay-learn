@@ -44,6 +44,30 @@ You don't need Blade CLI to create projects. You can create a project folder man
 
 To write code to run on Liferay DXP, you must have a Liferay runtime on which to deploy it. Your first task, therefore, after installing Liferay Workspace should be to add a Liferay bundle to your workspace. 
 
+## Using the Themes Generator with Liferay Workspace
+
+The [Liferay Themes Generator](../other-tools/theme-generator.md) is a node.js-based tool for creating themes to change the look and feel of your site. These projects can also be managed by Liferay Workspace. You create a themes project in Workspace the same way you create it outside of Workspace: 
+
+1. Assuming you've installed the themes generator, navigate to your Liferay Workspace. Like other projects, you can place your theme projects anywhere. Run the following command to create a theme project: 
+
+   ```bash
+   yo liferay-theme
+   ```
+
+1. Navigate into your new theme folder and run 
+
+   ```bash
+   ../gradlew build
+   ```
+
+   The above command assumes you're one folder down from the Workspace root; if you've nested your project (perhaps in a `themes` folder), adjust the call to `gradlew` accordingly. This command builds the front-end theme using Liferay's Node Gradle Plugin. 
+
+If you want to make sure Workspace recognizes your project, use this command to display all the projects: 
+
+```bash
+./gradlew projects
+```
+
 ## Adding a Liferay Bundle to Workspace
 
 Workspace automates the download and setup of a runtime for your code. When you're ready to run your code on a server, it takes only a few steps to download one: 
