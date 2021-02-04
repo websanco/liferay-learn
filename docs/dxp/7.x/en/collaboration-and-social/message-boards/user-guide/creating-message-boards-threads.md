@@ -27,6 +27,10 @@ Users can attach files to forum posts.
 
     ![Figure 2. Uploading an attachment](./creating-message-boards-threads/images/03.png)
 
+```important::
+   Antivirus scanning for files on upload requires enabling antivirus scanning. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```
+
 ### Using _Tags_ and _Related Assets_ to Organize Threads
 
 Besides using _Categories_ to organize the threads, users can add a tag to a forum post. If searching for content using this tag (for example, _Toyota_), all posts with the _Toyota_ will be returned faster.

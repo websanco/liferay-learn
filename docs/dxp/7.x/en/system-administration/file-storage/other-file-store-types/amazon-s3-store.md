@@ -46,6 +46,10 @@ Configure the store following these steps:
 
 Your DXP instance is now using the Amazon S3 store.
 
+```important::
+   Make sure to `enable antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```
+
 ## Using the Store in a Clustered Environment
 
 Follow these steps to use S3 Store in a clustered environment:

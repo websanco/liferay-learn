@@ -27,6 +27,10 @@ Users can attach files to wiki pages.
 
     ![Uploading an attachment](./creating-wiki-pages/images/03.png)
 
+```important::
+   Antivirus scanning for files on upload requires enabling antivirus scanning. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```
+
 ### Using Tags and Related Assets to Organize Wiki Pages
 
 Users can add a tag to a page. If searching for content using this tag (for example, _Toyota_), all posts with the _Toyota_ will be returned faster.

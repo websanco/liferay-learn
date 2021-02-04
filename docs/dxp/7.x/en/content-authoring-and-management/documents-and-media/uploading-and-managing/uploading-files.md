@@ -8,6 +8,10 @@ Documents and Media provides native storage on your Liferay server for digital a
 
 Once uploaded, Users with the requisite permissions can view, edit, download, or share your uploaded files. See the [Documents and Media Permissions Reference](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) and [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for more information.
 
+```important::
+   Antivirus scanning for files on upload requires enabling antivirus scanning. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```
+
 ## Quickly Uploading Files
 
 The quickest way to upload one or more files is to drag and drop them into the Documents and Media root folder, or an existing sub-folder.
