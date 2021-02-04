@@ -12,6 +12,7 @@ Creating and Managing Forms
    creating-and-managing-forms/validating-text-and-numeric-field-entries.md
    creating-and-managing-forms/translating-forms.md
    creating-and-managing-forms/customizing-auto-save-behavior.md
+   creating-and-managing-forms/exporting-and-importing-forms.md
    creating-and-managing-forms/forms-field-types-reference.md
    creating-and-managing-forms/forms-configuration-reference.md
    creating-and-managing-forms/validation-conditions-reference.md
@@ -26,6 +27,7 @@ Creating and Managing Forms
 -  :doc:`/process-automation/forms/creating-and-managing-forms/validating-text-and-numeric-field-entries`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/translating-forms`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/customizing-auto-save-behavior`
+-  :doc:`/process-automation/forms/creating-and-managing-forms/exporting-and-importing-forms`
 
 Reference
 ---------
