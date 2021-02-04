@@ -4,9 +4,22 @@ File Storage
 .. toctree::
    :maxdepth: 4
 
-   file-storage/configuring-file-storage.md
-   file-storage/other_file_store_types.rst
-   file-storage/file-store-migration.md
+   /system-administration/file-storage/configuring-file-storage.md
+   /system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
+   /system-administration/file-storage/other_file_store_types.rst
+   /system-administration/file-storage/file-store-migration.md
 
-.. include:: /system-administration/file-storage/README.rst
-   :start-line: 2
+-  :doc:`/system-administration/file-storage/configuring-file-storage`
+-  :doc:`/system-administration/file-storage/file-store-migration`
+
+Antivirus
+~~~~~~~~~
+
+-  :doc:`/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files`
+
+Other File Store Types
+~~~~~~~~~~~~~~~~~~~~~~
+
+-  :doc:`/system-administration/file-storage/other-file-store-types/simple-file-system-store`
+-  :doc:`/system-administration/file-storage/other-file-store-types/amazon-s3-store`
+-  :doc:`/system-administration/file-storage/other-file-store-types/dbstore`
