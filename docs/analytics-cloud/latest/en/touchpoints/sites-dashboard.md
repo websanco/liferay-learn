@@ -1,14 +1,14 @@
 # Sites Dashboard
 
-Liferay Analytics Cloud provides a single Site dashboard for each connected data source. For example, if you connect Analytics Cloud to one DXP instance and configure analytics for two subsites, one Sites dashboard aggregating both subsites is created.
+Liferay Analytics Cloud provides a Sites dashboard for each Property in your Workspace. For example, when [Creating a Property](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.md#creating-a-property) each Property can be associated with one site or can be set to aggregate data from multiple sub-sites.
 
 To view the dashboard,
 
-1. Click Sites in the Touchpoints section of the menu.
+1. Click *Sites* in the Touchpoints section of the menu.
 
-1. Click the Overview tab (this tab is selected by default when you click Sites). 
+1. Click the *Overview* tab (this tab is selected by default when you click Sites). 
 
-The dashboard contains the following data:
+The dashboard contains the following data panels:
 
 * [Site Activities](#site-activities)
 * [Top Pages](#top-pages)
@@ -19,7 +19,21 @@ The dashboard contains the following data:
 * [Session Technology](#session-technology)
 * [Cohort Analysis](#cohort-analysis)
 
-### Site Activities
+Each panel in the dashboard has a time period selector that recalculates the metrics for the selected time period. The following are available:
+
+**Last 24 hours:** Displays data generated over the last 24 hours.
+
+**Last 7 days:** Displays data generated for the previous seven full days (the current day is excluded), in daily increments.
+
+**Last 30 days (default):** Displays data generated for the previous 30 full days (the current day is excluded), in weekly increments.
+
+**Last 90 days:** Displays data generated for the previous 90 full days (the current day is excluded), in 15 day increments.
+
+**More Preset Periods:** Clicking this leads to additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
+
+**Custom Range:** Use this option to select a start date and end date of your choice.
+
+## Site Metrics
 
 The Site Activities panel presents a summary of how visitors interact with your Site. This panel contains the following metrics:
 
@@ -33,9 +47,9 @@ The Site Activities panel presents a summary of how visitors interact with your 
 
 ![Site Activities include a visualization of data points over a period of time.](./sites-dashboard/images/01.png)
 
-Clicking each metric changes the visualization in the panel to display the selected metric. The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
+Clicking each metric changes the visualization in the panel to display the selected metric. 
 
-### Top Pages
+## Top Pages
 
 The Top Pages panel shows visited pages, entrance pages, and exit pages:
 
@@ -47,21 +61,23 @@ The Top Pages panel shows visited pages, entrance pages, and exit pages:
 
 **Exit Pages:** The most common pages that visitors view when leaving your Site and the exit percentage for each. The exit percentage is the percentage of visitors for which the page is the last page in their session.
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
-
-To view more detailed page analytics, click *View Pages* in the panel. Alternatively, click the Pages tab at the top of the screen. Both take you to the page analytics discussed in [Viewing Page Data](touchpoints.md#viewing-page-data).
+To view more detailed page analytics, click *View Pages* at the bottom of the panel. Alternatively, click the *Pages* tab at the top of the screen. Both take you to the page analytics discussed in [Viewing Page Data](touchpoints.md#viewing-page-data).
 
 ## Acquisitions
 
-The Acquisitions panel shows how visitors arrive at your Site. It shows data for the channels, source/medium, and referrers. 
+The Acquisitions panel shows how visitors arrive to your Site. It shows data for the channels, source/medium, and referrers. 
 
 ![The Acquisitions panel allows you to easily see what sites refer the most traffic to your site.](./sites-dashboard/images/03.png)
 
+**Channels:** A channel is a grouping of similar traffic sources or mediums. For example, organic search would be all traffic that came through organic searches from various search engines. Other possible channels are: direct, social, email, affiliates, referral, paid search, display, and other advertising.
+
+**Source | Medium:** The source is where the traffic originated from (e.g. search engine, domain, etc.). The medium is a general category for the type of link the traffic came from (e.g. organic, ppc, referral, email, social, etc.).
+
+**Referrers:** For traffic that comes from another webpage, the webpage URL is passed along as a referrer from the user's web browser. 
+
 This report works best if your marketing campaign uses UTM parameters. UTM parameters allow Analytics Cloud to determine where visitors arrive from (e.g., the specific referrer or ad campaign).
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
-
-### Visitors by Day and Time
+## Visitors by Day and Time
 
 The Visitors by Day and Time panel visualizes the days and times when visitors come to your Site. This helps you understand when your Site is most active. You can use this information, for example, to know when to release important information or launch an advertising campaign.
 
@@ -69,35 +85,33 @@ The Visitors by Day and Time panel visualizes the days and times when visitors c
 
 The panel contains a grid with the days of the week on one axis and the time of day on the other axis. Darker cells in the grid indicate heavier Site traffic at the corresponding day and time. Tooltips for each cell show the number of visitors for that day and time.
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice. 
+```Note::
+This panel is not affected by the timezone setting but is based on the Analytics Cloud user's timezone.
+```
 
-### Search Terms and Interests
+## Search Terms and Interests
 
 The Search Terms and Interests panels show your visitors' most common search terms and the topics they're interested in, respectively. Search terms are collected from the search query parameter in your Site's URL. Interest topics are derived from the keyword metadata of the pages that visitors view. 
 
 ![Commonly used search terms are presented over a period time.](./sites-dashboard/images/05.png)
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
+Note that the Search Terms panel is based on the search query parameters that can be customized in settings.
 
-To view the full list of interest topics, click *All Interests* in the Interests panel. Alternatively, click the Interests tab at the top of the screen.
+To view the full list of interest topics, click *All Interests* at the bottom of the panel. Alternatively, click the *Interests* tab at the top of the screen.
 
-### Sessions by Location
+## Sessions by Location
 
 The Sessions by Location panel shows the countries from which visitors access your Site. Countries with more visitors are shaded darker on the map. The country names appear below the map along with the number and percentage of visitors for each.
 
 ![Colored shading on a map diagram quickly identifies your users' country of origin.](./sites-dashboard/images/06.png)
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
-
-### Session Technology
+## Session Technology
 
 The Session Technology panel shows the devices, operating systems, and browsers visiting your Site. Tooltips for each graph element display more detailed data for that element. On the Devices tab, for example, mouse over each bar on the bar graph to see the operating system data for that device.
 
 ![You can use this screen to identify the distribution of users across operating systems.](./sites-dashboard/images/07.png)
 
-The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
-
-### Cohort Analysis
+## Cohort Analysis
 
 The Cohort Analysis panel shows a [cohort analysis](https://en.wikipedia.org/wiki/Cohort_analysis) based on visitors from a specific acquisition date (the cohort) and whether they return to your Site over a given time period. 
 
