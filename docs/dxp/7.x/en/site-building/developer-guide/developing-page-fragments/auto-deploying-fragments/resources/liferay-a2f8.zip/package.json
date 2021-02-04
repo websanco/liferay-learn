@@ -1,11 +1,12 @@
 {
 	"dependencies": {
 		"generator-liferay-fragments": "*",
-		"yo": ">=2.0.0"
+		"yo": ">= 2.0.0"
 	},
 	"engines": {
-		"node": ">= 8.0.0",
-		"npm": ">= 6.0.0"
+		"node": "^12 || ^14",
+		"npm": ">= 6.0.0",
+		"yarn": "^1.22.5"
 	},
 	"name": "a2f8",
 	"scripts": {
