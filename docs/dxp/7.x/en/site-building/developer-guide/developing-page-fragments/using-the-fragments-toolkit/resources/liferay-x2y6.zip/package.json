@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"generator-liferay-fragments": "*",
+		"generator-liferay-fragments": ">= 1.8.2",
 		"yo": ">= 2.0.0"
 	},
 	"engines": {
