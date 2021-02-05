@@ -61,10 +61,12 @@ Back up your [file store (Document Library)](../../system-administration/file-st
 ## Search Indexes
 
 ```important::
-   If you've placed your search index into a database (not recommended; see the `DXP Clustering <../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`_ article for information on using Cluster Link or Solr), you should back up that database too.
+   If you've placed your search index into a database (not recommended; see the `DXP Clustering <../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md#installing-a-search-engine>`_ article for more information), you should back up that database too.
 ```
 
-Users with large data sets may want to avoid re-indexing all of their content and assets when restoring from a backup. In this case we recommend backing up your search indexes. This is easiest to do if you have a separate [Elasticsearch or Solr](https://help.liferay.com/hc/en-us/articles/360028711092-Introduction-to-Installing-a-Search-Engine) environment on which your index is stored. If you're in a clustered configuration and you're replicating indexes, you must back up each index replica.
+Always [back up your search indexes](./../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md). Although most Liferay data can be restored from the database by a full re-index, search indexes are used as [primary storage by some applications](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md#backing-up-and-restoring-search-tuning-indexes). A failure to back up indexes can result in total data loss for these applications.
+
+In addition, users with large data sets can avoid re-indexing all of their content and assets when restoring from a backup. Backing up search data is easiest to do if you have a separate [Elasticsearch or Solr](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) environment storing the search indexes. If you're in a clustered configuration and you're replicating indexes, you must back up each index replica.
 
 ## Source Code
 
@@ -72,4 +74,4 @@ If you have extended DXP or have written any plugins, they should be stored in a
 
 ## Conclusion
 
-Restoring your application server, your Liferay Home folder, the locations of any file system-based media repositories, and your database from a backup system should give you a functioning portal. Restoring search indexes should avoid the need to re-index when you bring your site back up after a catastrophic failure. Exercising good, consistent backup procedures such as these, are key to recovering successfully from a hardware failure.
+Backing up and restoring Liferay's data is essential to reviving an installation, whether you're recovering from unexpected system failure or performing a routine upgrade. Exercising good, consistent backup procedures on the areas covered here ensures that you can recover the important data your installation requires.
