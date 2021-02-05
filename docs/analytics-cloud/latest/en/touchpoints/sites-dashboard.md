@@ -65,17 +65,17 @@ To view more detailed page analytics, click *View Pages* at the bottom of the pa
 
 ## Acquisitions
 
-The Acquisitions panel shows how visitors arrive to your Site. It shows data for the channels, source/medium, and referrers. 
+The Acquisitions panel gives a comprehensive overview of how visitors arrive to your Site. The data is presented from a more high level view (i.e. Channels) down to a more granular level (i.e. Referrers). Having an understanding at these different levels leads to more informed business decisions. 
 
-![The Acquisitions panel allows you to easily see what sites refer the most traffic to your site.](./sites-dashboard/images/03.png)
+![See the different sources of traffic to your site with this Acquisitions panel.](./sites-dashboard/images/03.png)
 
-**Channels:** A channel is a grouping of similar traffic sources or mediums. For example, organic search would be all traffic that came through organic searches from various search engines. Other possible channels are: direct, social, email, affiliates, referral, paid search, display, and other advertising.
+**Channels:** A channel is a broad grouping of sources where users come from. For example, traffic coming from different search engines would all be grouped as organic search. Other possible channels are: direct, social, email, affiliates, referral, paid search, display, and other advertising. After identifying these different channels AC users can apply the data in different ways. For example, channel data on organic search could be applied to SEO efforts to improve search rankings.
 
-**Source | Medium:** The source is where the traffic originated from (e.g. search engine, domain, etc.). The medium is a general category for the type of link the traffic came from (e.g. organic, ppc, referral, email, social, etc.).
+**Source | Medium:** The source is the starting point of the visitor (e.g. search engine, website, etc.). The medium is a general category for the type of link the traffic came from (e.g. organic, ppc, referral, email, social, etc.). Having this data breakdown is very useful. For example seeing what traffic comes from paid advertising could validate your return on ad spend.
 
 **Referrers:** For traffic that comes from another webpage, the webpage URL is passed along as a referrer from the user's web browser. 
 
-This report works best if your marketing campaign uses UTM parameters. UTM parameters allow Analytics Cloud to determine where visitors arrive from (e.g., the specific referrer or ad campaign).
+The reporting works best if your marketing campaign uses UTM parameters. UTM parameters allow Analytics Cloud to determine where visitors arrive from (e.g., the specific referrer or ad campaign).
 
 ## Visitors by Day and Time
 
