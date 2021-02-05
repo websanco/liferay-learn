@@ -21,9 +21,9 @@ DXP Cloud's [CDN](../networking/load-balancer.md#cdn) acts as a proxy between th
 
 In the event of a DDoS attack for cacheable content, the requests are sent to POPs all over the globe instead of the origin servers, thereby providing a larger set of locations to absorb the attack.
 
-## IP Blacklist and Whitelist
+## IP Allow and Deny Lists
 
-The ability to permit or block incoming traffic based on IP addresses or ranges using allow lists and deny lists is available through the [Nginx service](../../platform-services/web-server-service.md) that DXP Cloud provides.
+The ability to permit or block incoming traffic based on IP addresses or ranges using allow lists and deny lists is available through the [Webserver (Nginx) service](../../platform-services/web-server-service.md) that DXP Cloud provides.
 
 Users can leverage the `allow` and `deny` directives inside the `stream` context or `server` block in the `nginx.conf` file:
 
