@@ -60,13 +60,9 @@ Back up your [file store (Document Library)](../../system-administration/file-st
 
 ## Search Indexes
 
-```important::
-   If you've placed your search index into a database (not recommended; see the `DXP Clustering <../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md#installing-a-search-engine>`_ article for more information), you should back up that database too.
-```
-
 Always [back up your search indexes](./../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md). Although most Liferay data can be restored from the database by a full re-index, search indexes are used as [primary storage by some applications](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md#backing-up-and-restoring-search-tuning-indexes). A failure to back up indexes can result in total data loss for these applications.
 
-In addition, users with large data sets can avoid re-indexing all of their content and assets when restoring from a backup. Backing up search data is easiest to do if you have a separate [Elasticsearch or Solr](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) environment storing the search indexes. If you're in a clustered configuration and you're replicating indexes, you must back up each index replica.
+In addition, users with large data sets can avoid re-indexing all of their content and assets when restoring from a backup. Backing up search data is easiest to do if you have a separate [Elasticsearch or Solr](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) environment storing the search indexes. Follow the search engine's backup/restore documentation for the details (for example, see Elasticsearch's [Snapshot and Restore documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html)).
 
 ## Source Code
 
