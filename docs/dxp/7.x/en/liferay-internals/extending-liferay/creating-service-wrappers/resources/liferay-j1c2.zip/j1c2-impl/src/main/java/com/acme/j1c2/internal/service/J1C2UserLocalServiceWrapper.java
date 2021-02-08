@@ -11,7 +11,6 @@ import com.liferay.portal.kernel.service.UserLocalServiceWrapper;
 import java.util.Map;
 
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 
 @Component(service = ServiceWrapper.class)
 public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
@@ -49,11 +48,6 @@ public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
 		}
 
 		return super.getUser(userId);
-	}
-
-	@Reference(unbind = "-")
-	private void _serviceSetter(UserLocalService userLocalService) {
-		setWrappedService(userLocalService);
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
