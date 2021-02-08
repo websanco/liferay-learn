@@ -130,13 +130,21 @@ Per the [Container Lifecycle](./container-lifecycle-and-api.md#liferay-phases), 
 
 ## Using `docker cp`
 
-If you have a new app, artifact, or `.config` file that you want to deploy to a running container, use `docker cp`. Here's an example of copying an app to the container:
+If you're developing in a Liferay Workspace, deploy your modules using `gradlew deploy`. As an alternative, you can use `docker cp`.
 
 ```bash
-docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
+docker cp some-app.lpkg [container]:/opt/liferay/deploy
 ```
 
-Note, applying a `.config` file requires copying it to the container's `/opt/liferay/files/osgi/configs` folder.
+Bind mounts or volumes are the most robust way to deploy `.config` files. As an alternative, however, you can use `docker cp`.
+
+```bash
+docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config [container]:/opt/liferay/osgi/configs
+```
+
+```note::
+   Some operating systems have file permission issues using ``docker cp``. In such cases, use ``gradlew deploy`` for deploying apps in Workspace or use bind mounts (discussed above this section) or volumes.
+```
 
 ## Conclusion
 
