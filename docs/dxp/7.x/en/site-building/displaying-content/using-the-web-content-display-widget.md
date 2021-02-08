@@ -4,92 +4,93 @@ Once you've created a [Web Content Article](../../content-authoring-and-manageme
 
 ## Adding Web Content Display to a Page
 
-1. Under the Site Menu, go to *Site Builder* *Pages*.
-1. Click the Actions Menu of an existing Content Page and select *Edit* (alternatively, create a new pageSelect the Page where you want to add the Web Content Display, or [create a new Content Page]().
-1. From the Content Page sidebar, select the Fragments and Widgets button.
-1. Select the *Fragments* tab and drag-and-drop the Web Content Display widget onto the page.
+1. Under the Site Menu, go to *Site Builder* &rarr; *Pages*.
+1. Click the *Actions* (![Actions](../../images/icon-actions.png)) button next to the page you want to edit and select *Edit* (alternatively, [create a new Content Page](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
+1. From the Content Page sidebar, select the *Fragments and Widgets* button.
+1. Select the *Fragments* tab and drag-and-drop the *Web Content Display* widget onto the page.
+
+    ![Drag-and-drop the Web Content Display widget onto the page](./using-the-web-content-display-widget/images/04.png)
+
+1. Hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../images/icon-widget-options.png)) menu, select *Configuration*.
+
+    ![Open the configuration options for the Web Content Display widget](./using-the-web-content-display-widget/images/05.gif)
+
 1. In the *Web Content Display Configuration*, click *Select* under the *Setup* tab.
-1. In the *Select Web Content* dialog, select the web content you want to add.
-1. Setup the different Web Content Display options.
-1. Click *Save*
-1. Close the *Web Content Display Configuration* dialog.
+1. In the *Select Web Content* dialog, click the web content you want to add.
+1. Setup optional [Web Content Display options](#web-content-display-setup-options).
+1. Click *Save* and close the *Web Content Display Configuration* dialog.
 1. If you want to publish the Content Page, click *Publish*.
 
 ## Web Content Display Setup Options
 
+You can configure other options in the Web Content Display widget. To access the widget's configuration, hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../images/icon-widget-options.png)) menu, select *Configuration*. You can find the configuration options under the *Setup* tab.
 
+![Configuration options for the Web Content Display](./using-the-web-content-display-widget/images/07.png)
 
-<!--
-Follow these steps to add a Web Content Display widget to a page and configure it:
+### Template
 
-1. Enter Edit ( ![Edit icon](../../images/icon-edit.png) ) mode (if you are using a content page), and then [add the Web Content Display widget to the page](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
+| Option | Description |
+| --- | --- |
+| Use default template | Use the default template to display the widget. You can see the default template's name in use here. |
+| Use a specified template | Select this option to display the widget using a different template. You must select the new template. |
 
-    ![Add the Web Content Display app to a page to begin displaying your new web content article.](./using-the-web-content-display-widget/images/01.png)
+### User Tools
 
-1. [Open the Web Content Display widget's configuration menu](TODO:adding-widgets#configuration-menu).
+| Option | Description |
+| --- | --- |
+| Translations | Shows additional translations for your content. If you have your content translated to different languages, use this option to show the desired translation. |
+| Print | Provides a print dialog with a print-friendly version of the content. |
+| Download as PDF, DOC, ODT, TXT | Downloads the selected widget content in the format of your choice. This option is only available after configuring [Open Office integration](#integrating-open-office-with-the-web-content-display). |
 
-1. Click the *Select* button to select a piece of web content.
+### Content Metadata
 
-1. Search for and click on the article that you want to display.
+| Option | Description |
+| --- | --- |
+| Related Assets | Set this option to show links to other related content. You configure the related content in the *Related Assets* property for your content (see the image below for an example on a Basic Web Content asset.) |
+| Ratings | Shows a clickable option where users can rate the content in different ways (likes, stars, thumbs up). To configure this rating option for different content types, see [Configuring Content Rating Type](../../site-building/site-settings/site-content-configurations/configuring-content-rating-type.md). |
+| Comments | Allows users to enter comments for the Web Content Display widget's content. By default, guests can't leave comments. See [Enabling Comments for Guest](#enabling-comments-for-guests) to change the default option. |
+| Comment Ratings | Shows a rating option for comments. |
 
-1. [Configure the options](#using-the-web-content-display-widget-configuration-options) you want to enable for the widget.
+![Configuring Related Assets for a Basic Web Content entry](./using-the-web-content-display-widget/images/06.png)
 
-1. Click *Save* to apply the changes, and close the configuration window. If you are using a content page, then click *Publish* to publish the page with the widget.
+### View Count Increment
 
-## Web Content Display Configuration Options
+Enable the *View Count Increment* option to add a view counter to this Web Content Display widget.
 
-All features are implemented as simple selector buttons so you can enable or disable them as you need. These features are available:
+## Additional Options for the Web Content Display Widget
 
-* **User Tools**
-  * *Translations:* Shows the available locales for your content. If you're working on the page for a particular language, you can select the translation of your content that goes with your locale.
-  
-  * *Print:* Opens a print dialog with a print-friendly version of the content.
-  
-  * *Download as PDF | DOC | ODT | TXT:* Downloads the web content in the selected format. These options are only available if [Open Office integration is enabled](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md).
-
-* **Content Metadata**
-  * *Related Assets*
-  * *Ratings*
-  * *Comments*
-  * *Comment Ratings*
-
-![Publishing web content is a snap. At a minimum, you only have to select the content you wish to publish. You can also enable lots of optional features to let your users interact with your content.](./using-the-web-content-display-widget/images/02.png)
+In addition to the [Configuration options](#configuration-options-for-the-web-content-display), you can configure additional settings for the Web Content Display Widget.
 
 ### Enabling Comments for Guests
 
 By default, guests can't leave comments on web content. If you want to allow guests to comment on your web content article, follow these steps:
 
-1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Roles*.
-
-1. Select *Guest* &rarr; *Define Permissions*.
-
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
+1. Click the *Guest* Rol.
+1. Click the *Define Permissions* column.
 1. From the left menu, select *Site and Asset Library Administration* &rarr; *Content & Data* &rarr; *Web Content*.
-
-1. Navigate down to the Web Content Article heading and check the *Add Discussion* checkbox.
-
+1. Under the *Web Content Article* section, check *Add Discussion*.
 1. Click *Save*.
-
-Guests can now post comments on your web content article.
 
 ### Editing Content from the Web Content Display Widget
 
 You can edit published content directly from the Web Content Display widget.
 
-1. Hover over the Web Content Display widget.
-1. Open the Actions Menu (![Options](../../images/icon-app-options.png)) inside the widget container.
-1. Select *Edit Web Content* to launch the editor, or select *Edit Template* to launch the template editor for the web content article's template if it has one.
+1. Click the Web Content Display widget.
+1. On the sidebar panel, click the *Contents* (![Contents]()) button.
+1. Under *Contents* click the Action Menu for the content you want to edit.
+1. Select *Edit*.
 
-### Integrating Open Office with Your Web Content Display
+    ![Open the editing options for the Web Content Display widget](./using-the-web-content-display-widget/images/08.png)
 
-If you have [enabled OpenOffice/LibreOffice integration](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. Then users can download your content in their format of choice. Enable the conversion options desired in the Web Content Display's configuration page under the *User Tools* list.
+### Integrating Open Office with the Web Content Display
 
-![Conversion options are listed for the assets.](./using-the-web-content-display-widget/images/03.png)
+If you [enable OpenOffice/LibreOffice integration](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. With this integration, user can download the content in different formats. You must select the available formats under the [*User Tools*](#user-tools) configuration for the Web Content Display Widget.
 
 ## Related Information
 
 - [Adding a Basic Web Content Article](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)
+- [Building Contente Pages](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md)
+- [Displaying Content on Display Pages Templates](./using-display-page-templates/displaying-content-with-display-page-templates.md)
+- [Displaying Assets](./using-the-asset-publisher-widget/displaying-assets-intro.md)
 
-
-* [Content Authoring and Management](../../content_authoring_and_management.html)
-* [Displaying Content on Display Pages Templates](./using-display-page-templates/displaying-content-with-display-page-templates.md)
-* [Displaying Assets](./using-the-asset-publisher-widget/displaying-assets-intro.md)
