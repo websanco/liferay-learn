@@ -9,6 +9,10 @@ Antivirus scanning is available for files uploaded to Liferay. When you enable t
 Liferay DXP 7.2 Fix Pack 9+ integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd) running on a separate server.
 
 ```note::
+   This integration is not yet available on DXP 7.3.
+```
+
+```note::
    Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. Now DXP delegates antivirus scanning to a separate server.
 ```
 
