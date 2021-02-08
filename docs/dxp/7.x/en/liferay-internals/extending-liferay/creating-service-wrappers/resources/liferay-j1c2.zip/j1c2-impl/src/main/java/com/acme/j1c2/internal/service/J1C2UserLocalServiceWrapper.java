@@ -14,9 +14,9 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(service = ServiceWrapper.class)
-public class J1C2UserLocalServiceOverride extends UserLocalServiceWrapper {
+public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
 
-	public J1C2UserLocalServiceOverride() {
+	public J1C2UserLocalServiceWrapper() {
 		super(null);
 	}
 
@@ -53,6 +53,6 @@ public class J1C2UserLocalServiceOverride extends UserLocalServiceWrapper {
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		J1C2UserLocalServiceOverride.class);
+		J1C2UserLocalServiceWrapper.class);
 
 }
