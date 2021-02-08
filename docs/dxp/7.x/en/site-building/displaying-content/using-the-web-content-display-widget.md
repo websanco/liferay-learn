@@ -4,6 +4,22 @@ Once you've created a [Web Content Article](../../content-authoring-and-manageme
 
 ## Adding Web Content Display to a Page
 
+1. Under the Site Menu, go to *Site Builder* *Pages*.
+1. Click the Actions Menu of an existing Content Page and select *Edit* (alternatively, create a new pageSelect the Page where you want to add the Web Content Display, or [create a new Content Page]().
+1. From the Content Page sidebar, select the Fragments and Widgets button.
+1. Select the *Fragments* tab and drag-and-drop the Web Content Display widget onto the page.
+1. In the *Web Content Display Configuration*, click *Select* under the *Setup* tab.
+1. In the *Select Web Content* dialog, select the web content you want to add.
+1. Setup the different Web Content Display options.
+1. Click *Save*
+1. Close the *Web Content Display Configuration* dialog.
+1. If you want to publish the Content Page, click *Publish*.
+
+## Web Content Display Setup Options
+
+
+
+<!--
 Follow these steps to add a Web Content Display widget to a page and configure it:
 
 1. Enter Edit ( ![Edit icon](../../images/icon-edit.png) ) mode (if you are using a content page), and then [add the Web Content Display widget to the page](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
@@ -70,6 +86,9 @@ If you have [enabled OpenOffice/LibreOffice integration](../../content-authoring
 ![Conversion options are listed for the assets.](./using-the-web-content-display-widget/images/03.png)
 
 ## Related Information
+
+- [Adding a Basic Web Content Article](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)
+
 
 * [Content Authoring and Management](../../content_authoring_and_management.html)
 * [Displaying Content on Display Pages Templates](./using-display-page-templates/displaying-content-with-display-page-templates.md)
