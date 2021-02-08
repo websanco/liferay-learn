@@ -20,6 +20,10 @@ public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
 		super(null);
 	}
 
+	public J1C2UserLocalServiceWrapper(UserLocalService userLocalService) {
+		super(userLocalService);
+	}
+
 	@Override
 	public int authenticateByEmailAddress(
 			long companyId, String emailAddress, String password,
