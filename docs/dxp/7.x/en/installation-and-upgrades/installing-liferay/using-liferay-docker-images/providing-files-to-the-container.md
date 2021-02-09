@@ -136,13 +136,13 @@ The [`docker cp`](https://docs.docker.com/engine/reference/commandline/cp/) comm
 docker cp [file] [container]:[folder path]
 ```
 
-Application:
+Deploying an application:
 
 ```bash
 docker cp some_app.lpkg my_container:/opt/liferay/deploy
 ```
 
-Configuration:
+Deploying a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md):
 
 ```bash
 docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config my_container:/opt/liferay/osgi/configs
