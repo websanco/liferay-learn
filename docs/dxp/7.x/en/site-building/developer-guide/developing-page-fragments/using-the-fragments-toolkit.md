@@ -19,13 +19,13 @@ First, import an example Fragment Collection to see what one looks like:
     ```
 
     ```bash
-    unzip liferay-x2y6.zip -d liferay-x2y6
+    unzip liferay-x2y6.zip
     ```
 
 1. Set up your environment for the tutorial:
 
     ```bash
-    cd liferay-x2y6
+    cd liferay-x2y6.zip
     ```
 
     ```bash
@@ -34,16 +34,10 @@ First, import an example Fragment Collection to see what one looks like:
 
     Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
 
-1. If you're running Liferay 7.3+, install the Fragments Toolkit version 1.8.0:
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `yarn run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
     ```bash
-    npm install -g generator-liferay-fragments@1.8.0
-    ```
-
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `npm run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
-
-    ```bash
-    npm run import
+    yarn run import
     ? Liferay host & port (http://localhost:8080)
     ? Username (test@liferay.com)
     ? Password [hidden]
@@ -123,19 +117,18 @@ The example's `package.json` file provides the Fragments Toolkit. Follow these s
 1. Set up the Fragments Toolkit if you haven't done so already.
 
     ```bash
-    cd liferay-x2y6
+    cd liferay-x2y6.zip
     ```
 
     ```bash
     ./setup_tutorial.sh 
     ```
 
-1. Create a Fragment Collection with the `npm run add-collection` command and answer the prompts with your Collection's name and an optional description:
+1. Create a Fragment Collection with the `yarn run add-collection` command and answer the prompts with your Collection's name and an optional description:
 
     ```bash
-    npm run add-collection
+    yarn run add-collection
 
-    > x2y6@ add-collection /home/jhinkey/examples/liferay-x2y6
     > yo liferay-fragments:collection
 
     ? Collection name (required) My Collection
@@ -154,18 +147,18 @@ The example's `package.json` file provides the Fragments Toolkit. Follow these s
 
 ## Add a New Fragment
 
-The `add-fragment` command generates a Fragment per your input. The command line interface (CLI) differs between Fragments Toolkit versions. These steps demonstrate using Fragments Toolkit 1.8.0 (compatible with Liferay 7.3+). 
+The `add-fragment` command generates a Fragment per your input. The command line interface (CLI) differs between Fragments Toolkit versions.
 
 1. Run the `add-fragment` command.
 
     ```bash
-    npm run add-fragment
+    yarn run add-fragment
     ```
 
     The CLI starts the process:
 
     ```bash
-    > x2y6@ add-fragment ~/liferay-x2y6
+
     > yo liferay-fragments:fragment
     ```
 
@@ -295,7 +288,7 @@ You can import your new Fragment as you did the original example Fragment:
 1. Run the import command and provide your credentials:
 
     ```bash
-    npm run import
+    yarn run import
     ```
 
 1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
