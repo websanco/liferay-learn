@@ -33,13 +33,13 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     ```
 
     ```bash
-    unzip liferay-l3m9.zip -d liferay-l3m9
+    unzip liferay-l3m9.zip
     ```
 
 1. From the module root, build and deploy the contributed Collection's JAR.
 
     ```bash
-    cd liferay-l3m9
+    cd liferay-l3m9.zip
     ```
 
     ```bash
@@ -132,7 +132,7 @@ You can build and deploy the updated contributed Fragment Collection as you did 
 1. Build the updated contributed Collection's JAR.
 
     ```bash
-    cd liferay-l3m9
+    cd liferay-l3m9.zip
     ```
 
     ```bash
@@ -140,7 +140,7 @@ You can build and deploy the updated contributed Fragment Collection as you did 
     ```
 
     ```note::
-      If deployment fails on Windows, you may need to build the module JAR first with `.\gradlew jar` and then copy the JAR to the Liferay Docker container using Docker: `docker cp l3m9/build/libs/com.acme.l3m9.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy`.
+      If deployment fails on Windows, you may need to `bind mount Liferay in the container <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md>`_, build the module JAR with ``.\gradlew jar``, and copy the JAR to the appropriate bind-mounted folder.
     ```
 
 1. Verify that the updated Fragment is included in the contributed Collection. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The L3M9 Jumbotron Fragment appears in the L3M9 Collection.
