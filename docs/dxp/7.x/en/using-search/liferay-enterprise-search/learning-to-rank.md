@@ -63,7 +63,7 @@ A useful trained model is produced when a good judgment list and a good feature 
 
 - A _judgment list_, containing a graded list of search results. The algorithm is designed to produce a model that honors the ordering of the judgment list.
 
-- A feature set, containing all the _features_ you're handing to the Learning to Rank algorithm, which it uses in conjunction with the judgment list to produce a reliable model. An example feature set for @product@ data is shown in the next article.
+- A feature set, containing all the _features_ you're handing to the Learning to Rank algorithm, which it uses in conjunction with the judgment list to produce a reliable model. An example feature set for Liferay is shown in the example.
 
 
 [Judgment lists](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#judgments-expression-of-the-ideal-ordering) are lists of graded search results.
@@ -181,6 +181,6 @@ Enable Learning to Rank from Control Panel &rarr; Configuration &rarr; System Se
 
 The model in the previous step was named `linearregression`, so that's what you'd enter. 
 
-![Figure 1: Enable Learning to Rank in @product@ from the System Settings entry.](../../../../images-dxp/search-learning-to-rank.png)
+![Figure 1: Enable Learning to Rank in Liferay from the System Settings entry.](../../../../images-dxp/search-learning-to-rank.png)
 
-That's all the configuration required to get the Elasticsearch Learning to Rank plugin ingesting a trained model, a feature set, and search queries from @product@.
+That's all the configuration required to get the Elasticsearch Learning to Rank plugin ingesting a trained model, a feature set, and search queries from Liferay.
