@@ -32,38 +32,17 @@ Start up the example modules.
     ```
 
     ```bash
-    unzip liferay-p9g2.zip -d liferay-p9g2
+    unzip liferay-p9g2.zip
     ```
 
-1. From the project root folder, build the modules.
+1. From the project root folder, deploy the modules.
 
     ```bash
-    cd liferay-p9g2
+    cd liferay-p9g2.zip
     ```
 
     ```bash
-    ./gradlew jar
-    ```
-
-    Each module JAR file generates to that module's `build/libs` folder.
-
-     ```
-     p9g2-api/build/libs/com.acme.p9g2.api-1.0.0.jar
-     p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar
-     ```
-
-1. Deploy the module JARs.
-
-    API:
-
-    ```bash
-    docker cp p9g2-api/build/libs/com.acme.p9g2.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-    ```
-
-    Implementation:
-
-    ```bash
-    docker cp p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
 1. Confirm module startup in the Docker container console.
