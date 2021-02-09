@@ -21,25 +21,21 @@ First, deploy an example to see how Fragment Configuration options work:
 1. Download and unzip the [example configurable Fragment Collection](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip
+    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip -O
     ```
 
     ```bash
     unzip liferay-c7f8.zip
     ```
 
-    ```bash
-    cd liferay-c7f8
-    ```
-
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md) instead.
 
     ```bash
-    cd liferay-c7f8/configurable-marketing-fragment
+    cd liferay-c7f8.zip/configurable-marketing-fragment
     ```
 
     ```bash
-    npm run import
+    yarn run import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
     ? Password [hidden]
