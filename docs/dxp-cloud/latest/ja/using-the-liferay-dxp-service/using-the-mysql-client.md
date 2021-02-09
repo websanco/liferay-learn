@@ -1,0 +1,75 @@
+# MySQLクライアントの使用
+
+アプリケーションの問題のトラブルシューティングやカスタム開発を行うために、データベース内のデータを表示することが必要になる場合があります。 データベースにアクセスするには、組み込みのMySQLクライアントを使用して、データベースと直接やり取りする必要があります。 この機能は、DXP Cloudの最新バージョンで利用でき、いくつかの短い手順でアクセスできます。
+
+``` note::
+   管理者*と貢献者*の権限を持つDXPクラウドユーザーのみがMySQLクライアントを使用することができます。
+```
+
+## 前提条件
+
+Liferayサービスを通じてMySQLクライアントを使用する前に、サービスを少なくとも以下のサポートされているイメージバージョンにアップグレードする必要があります。
+
+| **Service**      | **サポートされる最小イメージバージョン**                          |
+| ---------------- | ----------------------------------------------- |
+| **データベース**       | liferaycloud/database:3.2.8                     |
+| **DXP (7.0を使用)** | liferaycloud/liferay-dxp:7.0.10-ga1-fp90-3.0.19 |
+| **DXP（7.1を使用）**  | liferaycloud/liferay-dxp-7.1.10-ga1-fp17-3.0.19 |
+| **DXP（7.2を使用）**  | liferaycloud/liferay-dxp-7.2.10-sp1-fp4-3.0.19  |
+
+``` warning::
+   データベースイメージを MySQL クライアントをサポートするバージョンにアップグレードすると、データベースの読み取り専用ユーザが初期化されます。 アップグレード前にこのユーザーのパスワードを設定しなかった場合、デフォルトのパスワードが使用され、後で変更することはできません。 詳細は `Changing the Read-Only Database Password <#changing the read-only-database-password>`_ を参照してください。
+```
+
+## MySQLクライアントへのアクセス
+
+1.  DXP Cloudコンソールにログインします。
+
+2.  正しい環境に移動し、[ *Services*]をクリックします。
+
+    ![サービスに移動して、ご使用の環境のすべてのサービスを表示します。](./using-the-mysql-client/images/01.png)
+
+3.  **liferay** サービスをクリックします。
+
+4.  この変数は、 *環境変数* タブ内から追加できます。
+
+    ![[シェル] タブをクリックして、MySQLクライアントが使用可能なシェルにアクセスします。](./using-the-mysql-client/images/03.png)
+
+5.  この画面のシェルに `mysql` と入力します。 これにより、MySQLクライアントにログインし、読み取り専用のクエリを実行できます。 たとえば、 `show tablesを実行すると、すべてのテーブルを表示できます。</p>
+
+<p spaces-before="4"><img src="./using-the-mysql-client/images/04.png" alt="![mysqlコマンドとshow tablesコマンドを実行します](./using-the-mysql-client/images/04.png)&lt;/ol&gt;" /></p></li>
+</ol>
+
+<p spaces-before="0">利用可能なすべてのコマンドについては、公式の <a href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html">MySQL Client ドキュメント</a> を参照してください。</p>
+
+<h3 spaces-before="0">読み取りおよび書き込み権限でのログイン</h3>
+
+<p spaces-before="0">デフォルトのユーザーは、データベースに対して読み取りクエリのみを実行でき、データを操作することはできません。 しかし、データベース内のデータを操作できるようにするために <0>重要な</0> であれば、シェルにこのコマンドを入力することで、データベースの認証情報を使用してログインすることができます（ <1>mysql</1>とだけ入力するのではなく）。</p>
+
+<p spaces-before="0">However, if it is <em x-id="3">critical</em> to be able to manipulate data in the database, you can login using the database credentials by typing this command into the shell (instead of only typing <code>mysql`):
+
+``` bash
+mysql -u <user_name> -p <database_name>
+```
+
+データベース名、ユーザー名、パスワードは、 `portal.properties` ファイルで確認できます。
+
+### 読み取り専用データベースのパスワードの変更
+
+If you have not yet deployed the database service on a supported version, then you can set your own password for the default user by setting the `LCP_DATABASE_READONLY_USER_PASSWORD` environment variable in the database service's `LCP.json`.
+
+``` important::
+   MySQL クライアントをサポートするバージョンを使用してデータベースサービスをデプロイしている場合、デフォルトユーザーはすでにデフォルトパスワードで初期化されています。 このパスワードは後で変更することはできないので、データベースサービスをデプロイする前に ``LCP_DATABASE_READONLY_USER_PASSWORD`` 環境変数を追加してください(初めてデプロイする場合や、上記よりも古いバージョンのイメージから更新する場合など)。 それ以外の場合は、デフォルトの生成されたパスワードを使用する必要があります。
+```
+
+次に、適切なDockerイメージバージョン（またはそれ以降）に更新し、 [を使用してサービス](../build-and-deploy/walking-through-the-deployment-life-cycle.md) 再デプロイし、MySQLクライアントが使用できるようにします。
+
+`LCP_DATABASE_READONLY_USER_PASSWORD`でデフォルトユーザーのパスワードを設定した場合、同じ環境変数を `liferay` サービスに追加します。 それ以外の場合は、この変数を追加しないでください。 これにより、サービスはデフォルトのパスワードを使用します。
+
+この変数は、 *環境変数* タブ内から追加できます。
+
+![[環境変数] タブをクリックして、必要に応じてパスワードを設定します。](./using-the-mysql-client/images/02.png)
+
+## 関連情報
+
+  - [データベースサービス](../platform-services/database-service.md)
