@@ -2,7 +2,7 @@ Using Display Page Templates
 ============================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    using-display-page-templates/displaying-content-with-display-page-templates.md
    using-display-page-templates/creating-and-managing-display-page-templates.md
