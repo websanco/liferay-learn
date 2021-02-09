@@ -58,7 +58,13 @@ Prior to 7.1, all users could view Web Content articles by default. Now view per
 
 ### Check Web Content Images
 
-Upgrading to 7.2 moves Web Content images to the Document Library and then deletes their former table, `JournalArticleImage`. To ensure the process succeeded, check your Web Content articles and verify that their images still show correctly.
+Upgrading to 7.2 moves Web Content images to the [File Store](../../../system-administration/file-storage/configuring-file-storage.md) (also known as the Document Library) and then deletes their former table, `JournalArticleImage`. If an image can't be added to the File Store, Liferay reports the failure.
+
+```
+Unable to add the journal article image {filename} into the file repository
+```
+
+If there aren't any such messages, all of your images should now be in your File Store. You can verify the images render in your Web Content articles.
 
 ### Account for Deprecations and Features in Maintenance Mode
 
