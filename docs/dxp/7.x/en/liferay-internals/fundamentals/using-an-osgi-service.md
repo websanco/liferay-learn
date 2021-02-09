@@ -51,45 +51,17 @@ Start using the example.
     ```
 
     ```bash
-    unzip liferay-j1h1.zip -d liferay-j1h1
+    unzip liferay-j1h1.zip
     ```
 
-1. Build the example modules.
+1. Deploy the example modules.
 
     ```bash
-    cd liferay-j1h1
+    cd liferay-j1h1.zip
     ```
 
     ```bash
-    ./gradlew jar
-    ```
-
-    Each module JAR file is generated to that module's `build/libs` folder.
-
-     ```
-     j1h1-api/build/libs/com.acme.j1h1.api-1.0.0.jar
-     j1h1-impl/build/libs/com.acme.j1h1.impl-1.0.0.jar
-     j1h1-osgi-commands/build/libs/com.acme.j1h1.osgi.commands-1.0.0.jar
-     ```
-
-1. Deploy the example module JARs.
-
-    API module:
-
-    ```bash
-    docker cp j1h1-api/build/libs/com.acme.j1h1.api-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-    ```
-
-    Implementation module:
-
-    ```bash
-    docker cp j1h1-impl/build/libs/com.acme.j1h1.impl-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
-    ```
-
-    Example module:
-
-    ```bash
-    docker cp j1h1-osgi-commands/build/libs/com.acme.j1h1.osgi.commands-1.0.0.jar $(docker ps -lq):/opt/liferay/deploy
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
 1. Confirm the deployments in the Docker container console.
