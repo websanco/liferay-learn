@@ -1,0 +1,3 @@
+Bundle-Name: Acme B4K8 Stats Portlet Filter
+Bundle-SymbolicName: com.acme.b4k8.stats.web
+Bundle-Version: 1.0.0

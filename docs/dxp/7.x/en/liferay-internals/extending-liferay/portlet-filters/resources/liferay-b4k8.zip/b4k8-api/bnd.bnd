@@ -1,0 +1,4 @@
+Bundle-Name: Acme B4K8 Model
+Bundle-SymbolicName: com.acme.b4k8.model
+Bundle-Version: 1.0.0
+Export-Package: com.acme.b4k8.model

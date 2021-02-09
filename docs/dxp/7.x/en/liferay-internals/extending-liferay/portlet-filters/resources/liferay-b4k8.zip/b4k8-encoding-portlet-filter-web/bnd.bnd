@@ -1,0 +1,3 @@
+Bundle-Name: Acme B4K8 Encoding Portlet Filter
+Bundle-SymbolicName: com.acme.b4k8.encoding.web
+Bundle-Version: 1.0.0
