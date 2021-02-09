@@ -82,7 +82,7 @@ The UID (or `id`) of index documents now has 1-to-1 parity with the database row
 
 > Availability: Liferay CE 7.3 GA4+, Liferay DXP 7.3 GA1+
 
-The Search widgets now support [Widget Templates]( ./../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) (previously known as Application Display Templates) for customizing the visual look and feel of each widget using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like `author` or `modified date` can be shown or hidden. Some default templates are provided out of the box for each supported search widget.
+The Search widgets now support [Widget Templates]( ./../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md) (previously known as Application Display Templates) for customizing the visual look and feel of each widget using Freemarker or Velocity templates. For example, the Search Results widget can be configured to display a card layout, and an asset's properties like `author` or `modified date` can be shown or hidden. Some default templates are provided out of the box for each supported search widget.
 
 ### Similar Results
 

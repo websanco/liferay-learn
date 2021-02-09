@@ -21,7 +21,7 @@ Alternately, you can choose a navigation menu by clicking the _Select_ button.
 
 ## Display Templates
 
-You can select a [Widget Template](../displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) for navigation menus:
+You can select a [Widget Template](../displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md) for navigation menus:
 
 ![Select the Display Template.](./configuring-navigation-menus/images/03.png)
 

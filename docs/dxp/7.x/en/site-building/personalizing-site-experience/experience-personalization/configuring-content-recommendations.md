@@ -54,9 +54,9 @@ The way you show Collections or Content Sets depends on your Liferay DXP version
 
 > Liferay DXP 7.3+
 
-A Collection Display Fragment is a type of Fragment that shows a Collection. You can use this Fragment to show your Collection on any Content Page, Page Template, or Display Page. To configure the Collection Display Fragment, see the section [Configuring a Collection Display Fragment](../../displaying-content/displaying-collections.md#configuring-a-collection-display-fragment).
+A Collection Display Fragment is a type of Fragment that shows a Collection. You can use this Fragment to show your Collection on any Content Page, Page Template, or Display Page. To configure the Collection Display Fragment, see the section [Configuring a Collection Display Fragment](../../displaying-content/additional-content-display-options/displaying-collections.md#configuring-a-collection-display-fragment).
 
-A Collection Page is a type of page linked to a Collection. To show the Collection using a Collection page, see the [Displaying Collections on a Collection Page](../../displaying-content/displaying-collections.md#displaying-collections-on-a-collection-page) section in the [Displaying Collections](../../displaying-content/displaying-collections.md) topic.
+A Collection Page is a type of page linked to a Collection. To show the Collection using a Collection page, see the [Displaying Collections on a Collection Page](../../displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page) section in the [Displaying Collections](../../displaying-content/additional-content-display-options/displaying-collections.md) topic.
 
 ### Display the Collection or Content Set in a Display Page Using the Asset Publisher
 
@@ -64,8 +64,13 @@ A Collection Page is a type of page linked to a Collection. To show the Collecti
 
 To display the Collection using a Display Page and the Asset Publisher, you must complete the following steps:
 
+<<<<<<< HEAD
 1. [Create a Display Page Template](../../displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md).
 1. Configure an Asset Publisher with the Collection (Liferay 7.3+) or Content Set (Liferay 7.2). See [Displaying Collections](../../displaying-content/displaying-collections.md) for more information.
+=======
+1. [Create a Display Page Template](../../displaying-content/using-display-page-templates/creating-a-display-page-template.md).
+1. Configure an Asset Publisher with the Collection (Liferay 7.3+) or Content Set (Liferay 7.2). See [Displaying Collections](../../displaying-content/additional-content-display-options/displaying-collections.md) for more information.
+>>>>>>> ed9402257 (LRDOCS-8259 Update cross-links for the files that were moved. - Fix merge conflict)
 
 ## Related Information
 

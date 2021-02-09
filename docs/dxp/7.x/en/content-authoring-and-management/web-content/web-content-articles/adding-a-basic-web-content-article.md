@@ -1,6 +1,10 @@
 # Adding a Basic Web Content Article
 
+<<<<<<< HEAD
 Web content is one of the most practical and essential methods for creating site content. Web content articles can be displayed through [Fragments](../../../site-building/displaying-content/using_fragments.html), [Display Pages](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md), or [widgets](../../../site-building/displaying-content/using-the-web-content-display-widget.md).
+=======
+Web content is one of the most practical and essential methods for creating site content. Web content articles can be displayed through [widgets](../../../site-building/displaying-content/additional-content-display-options/using-the-web-content-display-widget.md), [Fragments](../../../site-building/displaying-content/using_fragments.html), or [display pages](../../../site-building/displaying-content/using-display-page-templates/creating-a-display-page-template.md).
+>>>>>>> ed9402257 (LRDOCS-8259 Update cross-links for the files that were moved. - Fix merge conflict)
 
 Each web content article is based on a structure that defines its available fields. Liferay includes the _Basic Web Content_ structure out-of-the-box, but you can create your own. See [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md) for more information.
 
@@ -18,7 +22,7 @@ Each web content article is based on a structure that defines its available fiel
 
 1. When finished, click _Publish_.
 
-Congratulations! You have added a basic web content article to your Site. See [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget.md) for more information on displaying this article on a page.
+Congratulations! You have added a basic web content article to your Site. See [Using the Web Content Display Widget](../../../site-building/displaying-content/additional-content-display-options/using-the-web-content-display-widget.md) for more information on displaying this article on a page.
 
 ## Properties Tab
 
@@ -41,4 +45,4 @@ When creating or editing a _Basic Web Content_ article, you can access the follo
 
 * [Creating and Managing Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md)
 * [Introduction to Web Content Structures](../web-content-structures/understanding-web-content-structures.md)
-* [Using the Web Content Display Widget](../../../site-building/displaying-content/using-the-web-content-display-widget.md)
+* [Using the Web Content Display Widget](../../../site-building/displaying-content/additional-content-display-options/using-the-web-content-display-widget.md)

@@ -14,7 +14,7 @@ You can display [content](../../content_authoring_and_management.md) in various 
 
 ## Web Content Display Widget
 
-The Web Content Display widget displays individual web content articles. It provides customizable features that you can enable for users, such as comments and print options. Read [Using the Web Content Display Widget](./using-the-web-content-display-widget.md) to learn more.
+The Web Content Display widget displays individual web content articles. It provides customizable features that you can enable for users, such as comments and print options. Read [Using the Web Content Display Widget](./additional-content-display-options/using-the-web-content-display-widget.md) to learn more.
 
 ## Asset Publisher
 

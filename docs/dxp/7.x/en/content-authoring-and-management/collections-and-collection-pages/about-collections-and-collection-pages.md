@@ -24,7 +24,7 @@ For information about how to create Manual or Dynamic Collections, see [Creating
 
 ## Displaying Collections
 
-You can display Collections using a [Collection Page](../../site-building/displaying-content/displaying-collections.md#displaying-collections-on-a-collection-page) or a [Collection Display Fragment](../../site-building/displaying-content/displaying-collections.md#adding-a-collection-display-fragment-to-a-page).
+You can display Collections using a [Collection Page](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page) or a [Collection Display Fragment](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page).
 
 A Collection Page is a type of page linked to a Collection. Collection Pages ease the task of showing and customizing Collections. For example, you can quickly add new items to your Collection using a Collection page.
 
@@ -34,7 +34,7 @@ A Collection Display Fragment is a type of Fragment that shows a Collection. You
 
 ![You can show the Collection's content using a Collection Display Fragment](./about-collections-and-collection-pages/images/02.png)
 
-For more information, see [Displaying Collections](../../site-building/displaying-content/displaying-collections.md).
+For more information, see [Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md).
 
 ## Customizing Collections
 
@@ -62,7 +62,7 @@ A Content Set is exactly what it sounds like: a set of content items. In short, 
 
 Content Sets are created through the Site Administration interface. All the features for creating and managing Content Sets are contained here. They are displayed using Liferay's widgets or your own custom applications. Read our
 guides for information on [Creating Content Sets](./creating-collections.md#creating-content-sets) and
-[Displaying Content Sets](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets).
+[Displaying Content Sets](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-content-sets).
 
 ### Content Set Personalization
 
@@ -75,5 +75,5 @@ You may have already gone through a great deal of work to create a perfect, cura
 ## Related Information
 
 - [Creating Collections](./creating-collections.md)
-- [Displaying Collections](../../site-building/displaying-content/displaying-collections.md)
+- [Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)
 - [Personalizing Collections](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md)

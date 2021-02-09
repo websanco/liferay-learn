@@ -8,7 +8,7 @@ Settings can be conceptually divided into display, pagination, and federated sea
 
 ## Displaying Search Results
 
-**Display Template:** Select the [Widget Template](./../../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) that styles the returned search results. The default display style is a paginated list. Each list item is a summarized hit to a search query. Click the _Manage Templates_ link to add a new Widget Template for the Search Results widget.
+**Display Template:** Select the [Widget Template](./../../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md) that styles the returned search results. The default display style is a paginated list. Each list item is a summarized hit to a search query. Click the _Manage Templates_ link to add a new Widget Template for the Search Results widget.
 
 ![The Card layout is an alternative to the default search experience. ](./configuring-the-search-results-widget/images/01.png)
 
