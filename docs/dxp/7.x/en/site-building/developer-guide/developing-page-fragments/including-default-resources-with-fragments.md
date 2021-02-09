@@ -19,13 +19,13 @@ First, import an example Fragment Collection to see how Fragment resources work:
     ```
 
     ```bash
-    unzip liferay-i6r3.zip -d liferay-i6r3
+    unzip liferay-i6r3.zip
     ```
 
 1. Setup up the Fragments Toolkit:
 
     ```bash
-    cd liferay-i6r3
+    cd liferay-i6r3.zip
     ```
 
     ```bash
@@ -34,10 +34,10 @@ First, import an example Fragment Collection to see how Fragment resources work:
 
     Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
 
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `npm run import` command below. 
+1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `yarn run import` command below. 
 
     ```bash
-    npm run import
+    yarn run import
 
     ...
     ? Liferay host & port http://localhost:8080
@@ -100,12 +100,12 @@ Image files are referenced in a Fragment's HTML with the syntax `[resources:imag
 
 Now that you know how to include a resource and reference it in a Fragment, you can use a new resource in the example Fragment Collection.
 
-1. Copy an image, such as an image from <https://www.freeimages.com/>, to the `liferay-i6r3/src/i6r3-collection/resources/` folder.
+1. Copy an image, such as an image from <https://www.freeimages.com/>, to the `liferay-i6r3.zip/src/i6r3-collection/resources/` folder.
 
 1. Import the Fragment Collection in the Docker container again as you did above:
 
     ```bash
-    npm run import
+    yarn run import
     ```
 
 1. Verify that the Fragment Collection includes the resource. In the *Fragments* page in the UI, select the *I6R3 Collection* and click the *Resources* tab. The new image appears in the resource listing.
