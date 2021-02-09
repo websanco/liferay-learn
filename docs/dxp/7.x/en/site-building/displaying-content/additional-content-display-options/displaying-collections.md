@@ -22,7 +22,7 @@ Follow these steps to add a Collection Page:
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 
-1. Click the *New Page* button (![New Page](../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Collection Page*.
+1. Click the *New Page* button (![New Page](../../../images/icon-plus.png)) at the level where you want to add the new page, and select *Add Collection Page*.
 
    ![Create a new Collection Page from the Pages Administration.](./displaying-collections/images/01.png)
 
@@ -48,9 +48,9 @@ A Collection Display fragment shows a Collection in a Content Page. It can be co
 
 To add an existing Collection to a Collection Display Fragment: 
 
-1. Click the Edit icon (![Edit icon](../../images/icon-edit.png)) on a Content Page.
+1. Click the Edit icon (![Edit icon](../../../images/icon-edit.png)) on a Content Page.
 
-1. Click the icon (![Add widget icon](../../images/icon-cards2.png)) to open the Fragments and Widgets panel.
+1. Click the icon (![Add widget icon](../../../images/icon-cards2.png)) to open the Fragments and Widgets panel.
 
 1. Under the *Content Display* category in the Fragments menu, drag the *Collection Display* fragment to a place on the page.
 
@@ -91,7 +91,7 @@ Map these elements to the assets in the Collection Display Fragment by dragging 
 
 1. In the Page Editor, click the *Collection Display* representing your Collection.
 
-1. In the tools sidebar, click the *Fragments and Widgets* (![Fragment and Widgets](../../images/icon-view-type-cards.png)) button.
+1. In the tools sidebar, click the *Fragments and Widgets* (![Fragment and Widgets](../../../images/icon-view-type-cards.png)) button.
 
 1. From the *Fragments and Widgets* sidebar panel, drag and drop the components you want to use to show the Collection items.
 
@@ -120,7 +120,7 @@ Map these elements to the assets in the Collection Display Fragment by dragging 
 You can find usage statistics for the Collections on your site.
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Collections*.
-1. Under the *Collections* tab, click on the Actions (![Actions Menu](../../images/icon-actions.png)) menu next to the Collection you want to review and select *View Usages*.
+1. Under the *Collections* tab, click on the Actions (![Actions Menu](../../../images/icon-actions.png)) menu next to the Collection you want to review and select *View Usages*.
 
   ![Select View Usages to understand how your Collections are being used through the Site](./displaying-collections/images/05.png)
 
@@ -136,7 +136,7 @@ To display the Content Sets, start with a blank page, and then add the necessary
 
 1. Create a new *Home* page for your site as a Widget Page with a 1 column layout. If you're using a fresh Liferay DXP bundle, you can just remove the *Hello World* widget from the sample *Home* page.
 2. Open the *Add* menu and add two *Content Management* &rarr; *Asset Publishers* to the page stacked vertically.
-3. Click ![Options](../../images/icon-app-options.png) &rarr; *Configuration* for the top Asset Publisher.
+3. Click ![Options](../../../images/icon-app-options.png) &rarr; *Configuration* for the top Asset Publisher.
 4. Under *Asset Selection* choose *Content Set*.
 
     ![The Asset Publisher has a number of options available for selecting its source for content.](./displaying-collections/images/20.png)
@@ -149,7 +149,7 @@ Now the images will appear at the top of the page. You can manage the way the co
 
 Now configure the bottom Asset Publisher with the other Content Set.
 
-1. Click ![Options](../../images/icon-app-options.png) &rarr; *Configuration* for the bottom Asset Publisher.
+1. Click ![Options](../../../images/icon-app-options.png) &rarr; *Configuration* for the bottom Asset Publisher.
 2. Under *Asset Selection* choose *Content Set*.
 3. Open *Select Content Set* and click *Select*.
 4. Click on the *Trending* Content Set.
@@ -172,7 +172,7 @@ To demonstrate both the management of both static and dynamic Content Sets, uplo
     ![The result is dynamically added to the Content List wherever it is displayed.](./displaying-collections/images/23.png)
 
 3. To add it to the manual set, go back to *Site Administration* &rarr; *Content & Data* &rarr; *Site Builder*.
-4. Click on *Space Program Images* or select ![Options](../../images/icon-options.png) &rarr; *Edit* next to *Space Program Images*.
+4. Click on *Space Program Images* or select ![Options](../../../images/icon-options.png) &rarr; *Edit* next to *Space Program Images*.
 5. Next to *Asset Entries* click *Select* &rarr; *Basic Document*.
 6. Select the new image and click *Add*.
 7. Navigate back to the *Home* page to see your image added to the list.

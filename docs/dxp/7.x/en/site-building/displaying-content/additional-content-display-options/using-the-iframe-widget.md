@@ -6,7 +6,7 @@ The *Iframe* widget creates an [iframe](https://www.w3schools.com/html/html_ifra
 
 1. Add the iFrame widget to a page. 
 
-1. Click on the *Options* icon (![Click on the options icon of the widget.](../../images/icon-app-options.png)) at the top left of the widget. Click _Configuration_.
+1. Click on the *Options* icon (![Click on the options icon of the widget.](../../../images/icon-app-options.png)) at the top left of the widget. Click _Configuration_.
 
     ![Click on the configuration option.](iframe-widget/images/02.png)
 

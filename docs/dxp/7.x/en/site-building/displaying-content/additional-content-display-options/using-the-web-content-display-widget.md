@@ -6,13 +6,13 @@ Content Article is displayed, content updates appear immediately, unless you con
 ## Adding Web Content Display to a Page
 
 1. Under the Site Menu, go to *Site Builder* &rarr; *Pages*.
-1. Click the *Actions* (![Actions](../../images/icon-actions.png)) button next to the page you want to edit and select *Edit* (alternatively, [create a new Content Page](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
+1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) button next to the page you want to edit and select *Edit* (alternatively, [create a new Content Page](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
 1. From the Content Page sidebar, select the *Fragments and Widgets* button.
 1. Select the *Fragments* tab and drag-and-drop the *Web Content Display* widget onto the page.
 
     ![Drag-and-drop the Web Content Display widget onto the page](./using-the-web-content-display-widget/images/04.png)
 
-1. Hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../images/icon-widget-options.png)) menu, select *Configuration*.
+1. Hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../../images/icon-widget-options.png)) menu, select *Configuration*.
 
     ![Open the configuration options for the Web Content Display widget](./using-the-web-content-display-widget/images/05.gif)
 
@@ -24,7 +24,7 @@ Content Article is displayed, content updates appear immediately, unless you con
 
 ## Web Content Display Setup Options
 
-You can configure other options in the Web Content Display widget. To access the widget's configuration, hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../images/icon-widget-options.png)) menu, select *Configuration*. You can find the configuration options under the *Setup* tab.
+You can configure other options in the Web Content Display widget. To access the widget's configuration, hover over the Web Content Display widget and from the widget's *Actions* (![Actions](../../../images/icon-widget-options.png)) menu, select *Configuration*. You can find the configuration options under the *Setup* tab.
 
 ![Configuration options for the Web Content Display](./using-the-web-content-display-widget/images/07.png)
 
@@ -66,7 +66,7 @@ In addition to the [setup options](#web-content-display-setup-options), you can 
 
 By default, guests can't leave comments on web content. If you want to allow guests to comment on your web content article, follow these steps:
 
-1. Open the [Global Menu](../../getting-started/navigating-dxp.md) (![Global Menu icon](../../images/icon-applications-menu.png)) and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
+1. Open the [Global Menu](../../getting-started/navigating-dxp.md) (![Global Menu icon](../../../images/icon-applications-menu.png)) and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
 1. Click the *Guest* Rol.
 1. Click the *Define Permissions* column.
 1. From the left menu, select *Site and Asset Library Administration* &rarr; *Content & Data* &rarr; *Web Content*.
@@ -78,8 +78,8 @@ By default, guests can't leave comments on web content. If you want to allow gue
 You can edit published content directly from the Web Content Display widget when you work with the Content Page in Edit mode.
 
 1. Click the Web Content Display widget.
-1. On the sidebar panel, click the *Contents* (![Contents](../../images/icon-list-ul.png)) button.
-1. Under *Contents*, click the *Actions* (![Actions](../../images/icon-actions.png)) button for the content you want to edit.
+1. On the sidebar panel, click the *Contents* (![Contents](../../../images/icon-list-ul.png)) button.
+1. Under *Contents*, click the *Actions* (![Actions](../../../images/icon-actions.png)) button for the content you want to edit.
 1. Select *Edit*.
 
     ![Open the editing options for the Web Content Display widget](./using-the-web-content-display-widget/images/08.png)
