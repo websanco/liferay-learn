@@ -5,6 +5,12 @@ Liferay Enterprise Search
    :maxdepth: 4
 
    liferay-enterprise-search/cross_cluster_replication.rst
+   liferay-enterprise-search/learning-to-rank.md
+
+Learning to Rank
+----------------
+
+-  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
 
 Cross Cluster Replication
 -------------------------
