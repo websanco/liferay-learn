@@ -181,6 +181,6 @@ Enable Learning to Rank from Control Panel &rarr; Configuration &rarr; System Se
 
 The model in the previous step was named `linearregression`, so that's what you'd enter. 
 
-![Figure 1: Enable Learning to Rank in Liferay from the System Settings entry.](../../../../images-dxp/search-learning-to-rank.png)
+![Enable Learning to Rank in Liferay from the System Settings entry.](./learning-to-rank/images/01.png)
 
 That's all the configuration required to get the Elasticsearch Learning to Rank plugin ingesting a trained model, a feature set, and search queries from Liferay.
