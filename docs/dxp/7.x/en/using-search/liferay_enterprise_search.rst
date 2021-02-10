@@ -7,11 +7,6 @@ Liferay Enterprise Search
    liferay-enterprise-search/cross_cluster_replication.rst
    liferay-enterprise-search/learning-to-rank.md
 
-Learning to Rank
-----------------
-
--  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
-
 Cross Cluster Replication
 -------------------------
 
@@ -21,3 +16,9 @@ Cross Cluster Replication
 -  :doc:`/using-search/liferay-enterprise-search/cross-cluster-replication/configuring-ccr-in-a-local-follower-data-center`
 -  :doc:`/using-search/liferay-enterprise-search/cross-cluster-replication/ccr-basic-use-case-config-reference`
 -  :doc:`/using-search/liferay-enterprise-search/cross-cluster-replication/troubleshooting-cross-cluster-replication`
+
+Learning to Rank
+----------------
+
+-  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
+

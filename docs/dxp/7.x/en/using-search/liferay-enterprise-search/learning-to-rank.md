@@ -1,5 +1,7 @@
 # Learning to Rank
 
+> **Liferay Enterprise Search (LES) Subscribers**
+
 Search engines like Elasticsearch have well-tuned relevance algorithms, good for general search purposes.
 
 LES Learning to Rank harnesses machine learning to improve search result rankings. It combines the expertise of data scientists with machine learning to produce a smarter scoring function that's applied to search queries.
@@ -10,7 +12,7 @@ LES Learning to Rank requires a Liferay Enterprise Search subscription. It's imp
 
 Learning to Rank does not work with the [Sort widget](../search-pages-and-widgets/search-results/sorting-search-results.md).
 
-If you must use Learning to Rank in your Liferay instance, but must disable it on a particular Search page (perhaps to use the Sort widget),
+If LES Learning to Rank is deployed, but you must disable it on a particular Search page (perhaps to use the Sort widget),
 
 1. Add a [Low Level Search Options](../search-pages-and-widgets/understanding-low-level-search-options.md) widget to the Search page.
 
@@ -36,7 +38,7 @@ There are some prerequisites for using Learning to Rank to re-score Liferay quer
 
 - A [trained model](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/training-models.html) uploaded into the Learning to Rank plugin. 
 
-### Technical Overview
+## Technical Overview
 
 In a normal search, the User sends a query to the search engine via Liferay DXP's [Search Bar](../getting-started/searching-for-content.md). The order of returned results is dictated by the search engine's [relevance scoring algorithm](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules-similarity.html#bm25).
 
@@ -50,12 +52,11 @@ Here's where Learning to Rank intervenes and makes that process different:
 
 1. The results are re-scored by the [SLTR query](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/searching-with-your-model.html), which includes the keywords and the trained model to use for re-scoring.
 
-1. Once the trained model re-ranks the results, they're returned in Liferay's [Search Results](
-../search-pages-and-widgets/search-results/search-results.md) in their new order.
+1. Once the trained model re-ranks the results, they're returned in Liferay's [Search Results]( ../search-pages-and-widgets/search-results/search-results.md) in their new order.
 
 Though it's just a sub-bullet point in the ordered list above, much of the work in this paradigm is in creating and honing the trained model. That's beyond the scope of Liferay's role, but we'll help you get all the pieces in place to orchestrate the magic of machine learning on your Liferay queries. Here's a brief overview of what constitutes _model training_.
 
-### Model Training
+## Model Training
 
 A useful trained model is produced when a good judgment list and a good feature set are fed to a Learning to Rank algorithm (this is the machine learning part of the puzzle). Therefore, it's incumbent on you to assemble
 
@@ -68,7 +69,7 @@ A useful trained model is produced when a good judgment list and a good feature 
 
 [Judgment lists](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#judgments-expression-of-the-ideal-ordering) are lists of graded search results.
 
-[Features](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#features-the-raw-material-of-relevance) are the variables that the algorithm uses to create a function that can score results in a smarter way. If you don't give enough, or the correct, relevant features, your model will not be "smart" enough to provide improved results.
+[Features](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#features-the-raw-material-of-relevance) are the variables that the algorithm uses to create a function that can score results in a smarter way. If you don't give enough, or the correct, relevant features, your model won't be "smart" enough to provide improved results.
 
 Before beginning, you must have a remote [Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html) cluster communicating with Liferay. See the [Search Engine Compatibility Matrix for more information](https://help.liferay.com/hc/en-us/articles/360016511651).
 
@@ -83,7 +84,7 @@ See [the Elasticsearch Learning to Rank plugin documentation](https://elasticsea
 You'll be running a command like this one, depending on the plugin version you're installing:
 
 ```bash
-./bin/elasticsearch-plugin install http://es-learn-to-rank.labs.o19s.com/ltr-1.1.0-es6.5.4.zip
+./bin/elasticsearch-plugin install http://es-learn-to-rank.labs.o19s.com/ltr-plugin-v1.5.3-es7.9.3.zip
 ```
 
 If using [X-Pack security in your Elasticsearch cluster](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md), there [may be additional steps.](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/x-pack.html)
@@ -92,7 +93,7 @@ If using [X-Pack security in your Elasticsearch cluster](../installing-and-upgra
 
 Detailed instructions on training models is outside the scope of this guide. This requires the intervention of data scientists, who can recommend appropriate tools and models. Use what works for you. In doing so, you'll almost certainly be compiling [Judgment lists](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#judgments-expression-of-the-ideal-ordering) and [feature sets](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/building-features.html) that can be used by the training tool you select to generate a model that produces good search results. Once you have a model, upload it to the Learning to Rank plugin.
 
-### Step 3: Upload the Model to the Learning to Rank Plugin
+## Step 3: Upload the Model to the Learning to Rank Plugin
 
 You'll upload the model using a `POST` request, but first you need to make sure you have a `_ltr` index and a feature set uploaded to the Learning to Rank plugin. Use Kibana (via the [LES Monitoring widget](./monitoring-elasticsearch.md)), to make these tasks easier.
 
@@ -179,7 +180,7 @@ This is a very high level set of instructions, because there's not much to do in
 
 Enable Learning to Rank from Control Panel &rarr; Configuration &rarr; System Settings &rarr; Search &rarr; Learning to Rank. There's a simple on/off configuration and a text field where you must enter the name of the trained model to apply to search queries.
 
-The model in the previous step was named `linearregression`, so that's what you'd enter. 
+The model in the previous step was named `linearregression`, so that's what you'd enter.
 
 ![Enable Learning to Rank in Liferay from the System Settings entry.](./learning-to-rank/images/01.png)
 
