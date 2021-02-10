@@ -64,7 +64,7 @@ Upgrading to 7.2 moves Web Content images to the [File Store](../../../system-ad
 Unable to add the journal article image {filename} into the file repository
 ```
 
-If there aren't any such messages, all of your images should now be in your File Store. You can verify the images render in your Web Content articles.
+If there aren't any such messages, all of your images should now be in your File Store. You can preview your Web Content articles to verify the images.
 
 ### Account for Deprecations and Features in Maintenance Mode
 
