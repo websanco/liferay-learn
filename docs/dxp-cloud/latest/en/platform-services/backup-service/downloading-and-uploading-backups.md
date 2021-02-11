@@ -33,7 +33,7 @@ You can also upload a backup to your project through the *Backups* page in your 
 Before you can upload a backup to DXP Cloud, you must compress the database dump and document library in separate archives. See [Preparing the Database and Document Library for Upload](#preparing-the-database-and-document-library-for-upload) for more information on preparing for the upload for an on-premises environment.
 
 ```warning::
-   When you initiate the upload, the Backup service will be unavailable to generate or restore other backups until it is finished.
+   Once an upload is initiated, the Backup service is unavailable to generate or restore other backups until the upload is completed.
 ```
 
 Follow these steps from the *Backups* page:
