@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(property = "language.id=en_US", service = ResourceBundle.class)
-public class X8F3ResourceBundle extends ResourceBundle {
+public class X8F3EnUsResourceBundle extends ResourceBundle {
 
 	@Override
 	public Enumeration<String> getKeys() {
