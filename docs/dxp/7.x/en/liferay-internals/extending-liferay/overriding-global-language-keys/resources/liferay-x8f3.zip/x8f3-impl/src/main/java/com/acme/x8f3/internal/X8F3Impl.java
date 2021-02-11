@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 
 import org.osgi.service.component.annotations.Component;
 
-@Component(property = "language.id=Override", service = ResourceBundle.class)
+@Component(property = "language.id=en_US", service = ResourceBundle.class)
 public class X8F3Impl extends ResourceBundle {
 
 	@Override
@@ -21,6 +21,6 @@ public class X8F3Impl extends ResourceBundle {
 	}
 
 	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_Override", UTF8Control.INSTANCE);
+		"content.Language_en_US", UTF8Control.INSTANCE);
 
 }
