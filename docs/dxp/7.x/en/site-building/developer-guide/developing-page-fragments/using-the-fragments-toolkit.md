@@ -1,6 +1,6 @@
 # Using the Fragments Toolkit
 
-The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to import an example Fragment Collection and to create and import your own Fragment Collection.
+The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to generate a Fragments Project with sample Fragments, deploy it, and add your own Fragments Collection to it.
 
 ## Setting Up the Toolkit
 
@@ -13,7 +13,7 @@ The toolkit requires this software:
 
 Node installers such as [Node.js LTS](https://nodejs.org/en/download/) include NPM and Node.js.
 
-Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) script provides commands for setting up Yeoman, Yarn, and the toolkit and verifies successful setup. The script is available in our example JavaScript project ZIP files.
+Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) script provides commands for setting up Yeoman, Yarn, and the toolkit. The script is available in the example ZIP file and all of our example JavaScript project ZIP files.
 
 1. Download and unzip the example ZIP file.
 
@@ -45,76 +45,66 @@ The Fragments Toolkit's `yo liferay-fragments` command launches an interface for
    Don't nest Fragments projects. Make sure to create new Fragments projects in their own location, outside of any existing Fragments projects.
 ```
 
-If you're in the liferay-x2y6.zip project folder, exit it. For example,
+If you're in the `liferay-x2y6.zip` project folder, exit it (e.g., `cd ..`).
 
-```bash
-cd ..
-```
-
-Here's how to generate a Fragments Project with sample data:
+Here's how to generate a Fragments Project:
 
 1. Launch the project generator by executing the `yo liferay-fragments` command:
 
     ```
-     yo liferay-fragments 
-
-        __    ____________________  _____  __
-       / /   /  _/ ____/ ____/ __ \/   \ \/ /
-      / /    / // /_  / __/ / /_/ / /| |\  /
-     / /____/ // __/ / /___/ _, _/ ___ |/ /
-    /_____/___/_/   /_____/_/ |_/_/  |_/_/
+    yo liferay-fragments 
     ```
 
-1. Accept the default project name by clicking enter.
+1. Name your project. For this example, accept the default project name by clicking enter.
 
     ```
     ? Project name (Sample Liferay Fragments)
     ```
 
-1. Add sample content by entering `Yes`.
+1. Indicate whether to add sample content. For this example, enter `Yes`.
 
     ```
     ? Add sample content? Yes
+    Creating directory
+       force .yo-rc.json
+      create src/.gitkeep
+      create .editorconfig
+      create .gitignore
+      create liferay-npm-bundler.config.js
+      create package.json
+      create README.md
+    Adding sample content...
+    Warning: some of these fragments are not compatible all
+    portal versions, please check the generator documentation before using them:
+    https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
+    Running yarn...
+    Done!
+    You're ready to create fragments.
+      create src/sample-collection/collection.json
+      create src/sample-collection/sample-fragment/index.html
+      create src/sample-collection/sample-fragment/main.js
+      create src/sample-collection/sample-fragment/styles.css
+      create src/sample-collection/sample-fragment/fragment.json
+      create src/sample-collection/sample-fragment/configuration.json
+      create src/sample-collection/sample-fragment-with-new-editables/index.html
+      create src/sample-collection/sample-fragment-with-new-editables/main.js
+      create src/sample-collection/sample-fragment-with-new-editables/styles.css
+      create src/sample-collection/sample-fragment-with-new-editables/fragment.json
+      create src/sample-collection/sample-fragment-with-new-editables/configuration.json
+      create src/sample-collection/sample-fragment-with-react/index.html
+      create src/sample-collection/sample-fragment-with-react/main.js
+      create src/sample-collection/sample-fragment-with-react/styles.css
+      create src/sample-collection/sample-fragment-with-react/fragment.json
+      create src/sample-collection/sample-fragment-with-react/configuration.json
     ```
-The generator creates your project in a folder called `sample-liferay-fragments`, derived from your project name `Sample Liferay Fragments`.
 
-```bash
-Creating directory
-   force .yo-rc.json
-  create src/.gitkeep
-  create .editorconfig
-  create .gitignore
-  create liferay-npm-bundler.config.js
-  create package.json
-  create README.md
-Adding sample content...
-Warning: some of these fragments are not compatible all
-portal versions, please check the generator documentation before using them:
-https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
-Running yarn...
-Done!
-You're ready to create fragments.
-  create src/sample-collection/collection.json
-  create src/sample-collection/sample-fragment/index.html
-  create src/sample-collection/sample-fragment/main.js
-  create src/sample-collection/sample-fragment/styles.css
-  create src/sample-collection/sample-fragment/fragment.json
-  create src/sample-collection/sample-fragment/configuration.json
-  create src/sample-collection/sample-fragment-with-new-editables/index.html
-  create src/sample-collection/sample-fragment-with-new-editables/main.js
-  create src/sample-collection/sample-fragment-with-new-editables/styles.css
-  create src/sample-collection/sample-fragment-with-new-editables/fragment.json
-  create src/sample-collection/sample-fragment-with-new-editables/configuration.json
-  create src/sample-collection/sample-fragment-with-react/index.html
-  create src/sample-collection/sample-fragment-with-react/main.js
-  create src/sample-collection/sample-fragment-with-react/styles.css
-  create src/sample-collection/sample-fragment-with-react/fragment.json
-  create src/sample-collection/sample-fragment-with-react/configuration.json
-```
+Congratulations on generating your Fragments Project!
+
+The generator creates each project in a folder derived from the project name. For example, since you named the project `Sample Liferay Fragments`, the generator created a project folder called `sample-liferay-fragments`.
 
 ## Import the Sample Collection
 
-Import the sample Fragment Collection to see what it looks like:
+Import the sample Fragment Collection to Liferay to view the Fragments:
 
 1. Run the command below to start the Docker container:
 
@@ -207,28 +197,28 @@ The Fragments Toolkit facilitates creating Fragment Collections.
 
 Create a Fragment Collection in your existing project with the `yarn run add-collection` command and answer the prompts with your Collection's name and an optional description:
 
-    ```bash
-    yarn run add-collection
+```bash
+yarn run add-collection
 
-    > yo liferay-fragments:collection
+> yo liferay-fragments:collection
 
-    ? Collection name (required) My Collection
-    ? Collection description (optional) This is my new Fragment Collection.
-       create src/my-collection/collection.json
-    ```
+? Collection name (required) My Collection
+? Collection description (optional) This is my new Fragment Collection.
+   create src/my-collection/collection.json
+```
 
-    Resulting `collection.json` file:
+Resulting `collection.json` file:
 
-    ```json
-    {
-        "description": "This is my new Fragment Collection.",
-        "name": "My Collection"
-    }
-    ```
+```json
+{
+    "description": "This is my new Fragment Collection.",
+    "name": "My Collection"
+}
+```
 
-## Add a New Fragment
+## Create a New Fragment
 
-The `add-fragment` command generates a Fragment per your input. The command line interface (CLI) differs between Fragments Toolkit versions.
+The `add-fragment` command generates a Fragment per your input.
 
 1. Run the `add-fragment` command.
 
@@ -296,6 +286,8 @@ Here's the generated Fragment HTML that uses the new `data-lfr` editable syntax:
 </div>
 ```
 
+## Edit Your Fragment 
+
 You can build off of the above HTML and use [Clay](https://clayui.com/)'s [Bootstrap](https://getbootstrap.com/)-based components to create Fragment HTML like this:
 
 ```html
@@ -361,7 +353,7 @@ You can also include resources in your Fragments. See [Including Default Resourc
   The Fragment and configuration object are passed in as arguments in JavaScript and are available as ``fragmentElement`` and ``configuration`` parameters, respectively.
 ```
 
-## Import and Test
+## Import Your New Fragment
 
 You can import your new Fragment as you did the original example Fragment:
 
