@@ -15,7 +15,7 @@ Node installers such as [Node.js LTS](https://nodejs.org/en/download/) include N
 
 Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) script provides commands for setting up Yeoman, Yarn, and the toolkit and verifies successful setup. The script is available in our example JavaScript project ZIP files.
 
-1. Download and unzip the example project.
+1. Download and unzip the example ZIP file.
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
@@ -182,12 +182,11 @@ Fragment Collections use this project structure:
 
         ```json
         {
-            "configurationPath": "configuration.json",
             "cssPath": "styles.css",
+            "configurationPath": "configuration.json",
             "htmlPath": "index.html",
             "jsPath": "main.js",
             "name": "Fragment name",
-            "thumbnailPath": "thumbnail.png",
             "type": "[component|react]"
         }
         ```
@@ -200,27 +199,13 @@ Fragment Collections use this project structure:
 
     * `styles.css`: the CSS source for the Fragment.
 
-    * `thumbnail.png` (optional): an image that's displayed when the fragment is in a list.
-
 * `resources/` (optional): a folder containing any additional images or files the Fragments need. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
 
 The Fragments Toolkit facilitates creating Fragment Collections.
  
 ## Add a New Collection and Fragment
 
-The example's `package.json` file provides the Fragments Toolkit. Follow these steps to add a new Fragment Collection and a new Fragment:
-
-1. Set up the Fragments Toolkit if you haven't done so already.
-
-    ```bash
-    cd liferay-x2y6.zip
-    ```
-
-    ```bash
-    ./setup_tutorial.sh 
-    ```
-
-1. Create a Fragment Collection with the `yarn run add-collection` command and answer the prompts with your Collection's name and an optional description:
+Create a Fragment Collection in your existing project with the `yarn run add-collection` command and answer the prompts with your Collection's name and an optional description:
 
     ```bash
     yarn run add-collection
@@ -264,7 +249,6 @@ The `add-fragment` command generates a Fragment per your input. The command line
     ? Fragment name (required) My Jumbotron
     ```
 
-    
 1. Choose whether to use React or another JavaScript framework. React requires Liferay 7.3+. For this tutorial, please decline using React.
 
     ```bash
@@ -315,7 +299,7 @@ Here's the generated Fragment HTML that uses the new `data-lfr` editable syntax:
 You can build off of the above HTML and use [Clay](https://clayui.com/)'s [Bootstrap](https://getbootstrap.com/)-based components to create Fragment HTML like this:
 
 ```html
-<div class="component-x276-my-jumbotron">
+<div class="component-my-jumbotron">
     <div class="jumbotron">
         <h1
             class="display-4"
@@ -358,7 +342,7 @@ You can build off of the above HTML and use [Clay](https://clayui.com/)'s [Boots
    If you are using Liferay 7.2 or below, remove the ``data-lfr-editable-[id|type]`` attributes and wrap the content elements in ``lfr-editable`` elements as described in `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_.
 ```
 
-The first `div` element's `class="component-x276-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page. 
+The first `div` element's `class="component-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page. 
 
 ```tip::
   In your Fragment's HTML file, use the main wrapper element (the ``<div>`` in the example above) to uniquely identify the Fragment so it doesn't conflict with other components on a page.
