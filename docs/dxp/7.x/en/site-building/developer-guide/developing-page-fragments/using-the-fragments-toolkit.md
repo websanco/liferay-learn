@@ -274,9 +274,7 @@ The `add-fragment` command generates a Fragment per your input.
         The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their paths in the ``fragment.json``.
     ```
 
-1. Write the Fragment's HTML (`index.html`), CSS (`styles.css`), JavaScript (`main.js`), and any [configuration options](./adding-configuration-options-to-fragments.md) (`configuration.json`).
-
-Here's the generated Fragment HTML that uses the new `data-lfr` editable syntax:
+Here is the Fragment's `index.html`:
 
 ```html
 <div class="my-jumbotron">
@@ -286,9 +284,18 @@ Here's the generated Fragment HTML that uses the new `data-lfr` editable syntax:
 </div>
 ```
 
+The Fragment HTML uses the new `data-lfr` editable syntax.
+
 ## Edit Your Fragment 
 
-You can build off of the above HTML and use [Clay](https://clayui.com/)'s [Bootstrap](https://getbootstrap.com/)-based components to create Fragment HTML like this:
+Modify any part of your Fragment.
+
+* HTML (`index.html`)
+* CSS (`styles.css`)
+* JavaScript (`main.js`)
+* [Configuration options](./adding-configuration-options-to-fragments.md) (`configuration.json`).
+
+For example, you can build off of the above HTML and use [Clay](https://clayui.com/)'s [Bootstrap](https://getbootstrap.com/)-based components to create Fragment with an attention-getting headline and description, as demonstrated in this `index.html`:
 
 ```html
 <div class="component-my-jumbotron">
