@@ -5,11 +5,11 @@ Individuals and Segments
    :maxdepth: 1
 
    individuals-and-segments/individuals-and-segments.md
+   individuals-and-segments/accounts.md
+   individuals-and-segments/individuals-dashboard.md
+   individuals-and-segments/interests.md
    individuals-and-segments/individual_profiles.rst
    individuals-and-segments/segments.rst
-   individuals-and-segments/accounts.md
-   individauls-and-segments/individuals-dashboard.md
-   individuals-and-segments/interests.md
 
 -  :doc:`/individuals-and-segments/individuals-and-segments`
 -  :doc:`/individuals-and-segments/accounts`
