@@ -37,9 +37,84 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
 
 Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
 
-## Import a Fragment Collection
+## Create a Fragments Project 
 
-First, import an example Fragment Collection to see what one looks like:
+The Fragments Toolkit's `yo liferay-fragments` command launches an interface for generating a Fragments Project.
+
+```warning::
+   Don't nest Fragments projects. Make sure to create new Fragments projects in their own location, outside of any existing Fragments projects.
+```
+
+If you're in the liferay-x2y6.zip project folder, exit it. For example,
+
+```bash
+cd ..
+```
+
+Here's how to generate a Fragments Project with sample data:
+
+1. Launch the project generator by executing the `yo liferay-fragments` command:
+
+    ```
+     yo liferay-fragments 
+
+        __    ____________________  _____  __
+       / /   /  _/ ____/ ____/ __ \/   \ \/ /
+      / /    / // /_  / __/ / /_/ / /| |\  /
+     / /____/ // __/ / /___/ _, _/ ___ |/ /
+    /_____/___/_/   /_____/_/ |_/_/  |_/_/
+    ```
+
+1. Accept the default project name by clicking enter.
+
+    ```
+    ? Project name (Sample Liferay Fragments)
+    ```
+
+1. Add sample content by entering `Yes`.
+
+    ```
+    ? Add sample content? Yes
+    ```
+The generator creates your project in a folder called `sample-liferay-fragments`, derived from your project name `Sample Liferay Fragments`.
+
+```bash
+Creating directory
+   force .yo-rc.json
+  create src/.gitkeep
+  create .editorconfig
+  create .gitignore
+  create liferay-npm-bundler.config.js
+  create package.json
+  create README.md
+Adding sample content...
+Warning: some of these fragments are not compatible all
+portal versions, please check the generator documentation before using them:
+https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
+Running yarn...
+Done!
+You're ready to create fragments.
+  create src/sample-collection/collection.json
+  create src/sample-collection/sample-fragment/index.html
+  create src/sample-collection/sample-fragment/main.js
+  create src/sample-collection/sample-fragment/styles.css
+  create src/sample-collection/sample-fragment/fragment.json
+  create src/sample-collection/sample-fragment/configuration.json
+  create src/sample-collection/sample-fragment-with-new-editables/index.html
+  create src/sample-collection/sample-fragment-with-new-editables/main.js
+  create src/sample-collection/sample-fragment-with-new-editables/styles.css
+  create src/sample-collection/sample-fragment-with-new-editables/fragment.json
+  create src/sample-collection/sample-fragment-with-new-editables/configuration.json
+  create src/sample-collection/sample-fragment-with-react/index.html
+  create src/sample-collection/sample-fragment-with-react/main.js
+  create src/sample-collection/sample-fragment-with-react/styles.css
+  create src/sample-collection/sample-fragment-with-react/fragment.json
+  create src/sample-collection/sample-fragment-with-react/configuration.json
+```
+
+## Import the Sample Collection
+
+Import the sample Fragment Collection to see what it looks like:
 
 1. Run the command below to start the Docker container:
 
@@ -47,23 +122,27 @@ First, import an example Fragment Collection to see what one looks like:
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `yarn run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Collection to your Liferay instance using the `yarn run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
     ```bash
     yarn run import
-    ? Liferay host & port (http://localhost:8080)
-    ? Username (test@liferay.com)
+    yarn run v1.22.10
+    warning package.json: No license field
+    $ yo liferay-fragments:import
+    ? Liferay host & port http://localhost:8080
+    ? Username test@liferay.com
     ? Password [hidden]
-
     Checking connection...
     Connection successful
 
     ? Company ID liferay.com
-    ? Group ID Liferay
+    ? Group ID Liferay DXP
     Building project...
     Importing project...
-    ✔ Fragment X2Y6 Card imported
     Project imported
+        force .yo-rc.json
+        force ../../.yo-rc-global.json
+    Done in 21.43s.
     ```
 
 1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
@@ -73,6 +152,10 @@ First, import an example Fragment Collection to see what one looks like:
     ```note::
        For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
     ```
+
+1. Select a Fragment to view it in the Fragments Editor. 
+
+    ![Here is the sample Fragment with React.](./using-the-fragments-toolkit/images/02.png)
 
 Great! You successfully deployed a Fragment Collection.
 
@@ -306,7 +389,7 @@ You can import your new Fragment as you did the original example Fragment:
 
 1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
 
-![The Collection is available.](./using-the-fragments-toolkit/images/02.png)
+![The Collection is available.](./using-the-fragments-toolkit/images/03.png)
 
 Great! Now you know how to use the Fragments Toolkit to create and manage Fragments. See the [Fragments Toolkit Command Reference](../reference/fragments/fragments-toolkit-command-reference.md) for more toolkit command information.
 
