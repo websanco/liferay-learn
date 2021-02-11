@@ -1,6 +1,16 @@
 # Hosting Liferay
 
-Liferay runs on an application server. Hosting Liferay on premises allows you to use any supported application server and manage your Liferay instance's server hardware, networking infrastructure, and storage. You exercise complete control over all aspects of your environment. Here you'll learn about the different ways to host Liferay on-premises.
+Liferay runs on an application server. There are three ways to host Liferay: 
+
+- Using a Docker container
+- Using a Liferay Tomcat bundle, on premises
+- On a supported application server of your choice, on premises 
+
+The fastest way to host Liferay is with a pre-configured Docker image on the cloud. Use the image with any cloud provider and [configure it](./using-liferay-docker-images/docker-container-basics.md) by using environment variables. 
+
+The Liferay Tomcat bundle is an archive you can extract onto any server, configure, and run. It's a lightweight Tomcat application server with Liferay already installed and ready to configure. 
+
+Of course, you can always install Liferay on any supported application server, on premises. 
 
 ```note::
    Enterprise subscribers can `deploy Liferay DXP as a service <../../../../../dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md>`_ on Liferay DXP Cloud. DXP Cloud reduces infrastructure costs (hardware, electricity bills), scales fast to handle more customers, provides a faster time to market, and is easy use.
@@ -12,17 +22,6 @@ If you want to develop on Liferay on your own machine, consider these convenient
 
 * [Liferay Docker Image](#docker-image)
 * [Liferay Tomcat Bundle](#liferay-tomcat-bundle)
-
-If you want to set up Liferay in a DevOps or production environment, or use an application server other than Tomcat, read on.
-
-## Installing Liferay on an Application Server
-
-You can install Liferay on any [supported application server](https://help.liferay.com/hc/en-us/articles/360049238151). This is typically the most practical installation type to use in DevOps and high availability environments.
-
-To get started,
-
-1. Choose a supported application server from the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151).
-1. Follow the instructions for installing Liferay on that [application server](./installing_liferay_on_an_application_server.html).
 
 ## Docker Image
 
@@ -37,6 +36,15 @@ To get started with a bundle, see [Installing a Liferay Tomcat Bundle](./install
 ```warning::
    In the Docker image and Tomcat bundle, Liferay is configured to use an embedded HSQL database by default. Beyond demonstration purposes, we recommend using a full-featured, `supported RDBMS <https://help.liferay.com/hc/en-us/articles/360049238151>`_. See `Database Configurations <../reference/database-configurations.md>`_ for configuration instructions.
 ```
+## Installing Liferay on an Application Server
+
+You can install Liferay on any [supported application server](https://help.liferay.com/hc/en-us/articles/360049238151). This is typically the most practical installation type to use in DevOps and high availability environments.
+
+To get started,
+
+1. Choose a supported application server from the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151).
+1. Follow the instructions for installing Liferay on that [application server](./installing_liferay_on_an_application_server.html).
+
 
 ## What's Next 
 
