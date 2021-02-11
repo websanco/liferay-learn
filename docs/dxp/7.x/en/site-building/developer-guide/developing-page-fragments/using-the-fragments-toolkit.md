@@ -2,17 +2,20 @@
 
 The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to import an example Fragment Collection and to create and import your own Fragment Collection.
 
-## Import a Fragment Collection
+## Setting Up the Toolkit
 
-First, import an example Fragment Collection to see what one looks like:
+The toolkit requires this software:
 
-1. Run the command below to start the Docker container:
+* [NPM](https://www.npmjs.com/)
+* [NodeJS](https://nodejs.org/)
+* [Yeoman](https://yeoman.io/)
+* [Yarn](https://classic.yarnpkg.com/)
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
+Node installers such as [Node.js LTS](https://nodejs.org/en/download/) include NPM and Node.js.
 
-1. Download and unzip the [example](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip)
+Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) script provides commands for setting up Yeoman, Yarn, and the toolkit and verifies successful setup. The script is available in our example JavaScript project ZIP files.
+
+1. Download and unzip the example project.
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
@@ -22,17 +25,27 @@ First, import an example Fragment Collection to see what one looks like:
     unzip liferay-x2y6.zip
     ```
 
-1. Set up your environment for the tutorial:
+1. Set up the Fragments Toolkit.
 
-    ```bash
+    ```bash 
     cd liferay-x2y6.zip
-    ```
+    ``` 
 
-    ```bash
+    ```bash 
     ./setup_tutorial.sh
     ```
 
-    Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
+Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
+
+## Import a Fragment Collection
+
+First, import an example Fragment Collection to see what one looks like:
+
+1. Run the command below to start the Docker container:
+
+    ```bash
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    ```
 
 1. Import the Fragment Collection in the Docker container with the Fragments Toolkit using the `yarn run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
