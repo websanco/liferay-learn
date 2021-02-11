@@ -39,14 +39,18 @@ Advanced Configuration contains additional options:
 
 ## Finding Indexed Fields
 
-To use the Custom Facet, you must know which non-analyzed keyword field to specify. 
+To use the Custom Facet, you must know which non-analyzed keyword field to use in the configuration. 
 
-To browse the entire list of available fields, inspect the field mappings from *Control Panel* &rarr; *Configuration* &rarr; *Search*. Alternatively, use your search engine's API. 
+To browse the entire list of available fields, inspect the field mappings from *Control Panel* &rarr; *Configuration* &rarr; *Search* (click the *Field Mappings* tab). Here you'll see numerous indexes. The Liferay Assets you're likely interested in are indexed to the [company index](../../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster), which looks is named similarly to `liferay-20101` (`20101` is the Company ID).
 
-For Elasticsearch, access the field mappings from your terminal using cURL to call the [Get Mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-get-mapping.html):
+Alternatively, use your search engine's API to browse the mappings. In Elasticsearch you can access the field mappings from your terminal using cURL to call the [Get Mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-get-mapping.html):
+
+```tip::
+   `Kibana's <../../liferay-enterprise-search/monitoring-elasticsearch.md>`__ Dev Tools console is more convenient for making Elasticsearch API calls than cURL.
+```
 
  ```bash
- curl -X GET "localhost:9200/_mapping/LiferayDocumentType"?pretty
+curl -X GET "localhost:9200/_mapping/LiferayDocumentType"?pretty
  ```
 
 Solr uses the [ListFields API](https://lucene.apache.org/solr/guide/6_6/schema-api.html#SchemaAPI-ListFields):
