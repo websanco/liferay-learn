@@ -1,4 +1,4 @@
-package com.acme.x8f3.internal;
+package com.acme.x8f3.internal.lang;
 
 import com.liferay.portal.kernel.language.UTF8Control;
 
@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(property = "language.id=en_US", service = ResourceBundle.class)
-public class X8F3Impl extends ResourceBundle {
+public class X8F3ResourceBundle extends ResourceBundle {
 
 	@Override
 	public Enumeration<String> getKeys() {
