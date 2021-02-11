@@ -6,7 +6,7 @@ The available widgets can highlight your documents and media files: *Media Galle
 
 You can embed and display Documents and Media files on other assets such as Web Content, Blogs, or Wiki pages.
 
-## Using the Media Gallery Widget 
+## Using the Media Gallery Widget
 
 This widget publishes your media in a simple gallery-like style. It shows a large thumbnail of each file, offers file downloads, and has slideshow capabilities. A common way to use the Media Gallery is to have a separate page for displaying media and add a Media Gallery widget to it. The widget displays only audio or video files. 
 
