@@ -1,29 +1,24 @@
 # Introduction to Product Pricing Methods
 
-Liferay Commerce allows store managers to set different prices for the same product using a pricing hierarchy. Each type of pricing method works together to allow managers to offer different pricing methods based on specific sets of conditions. This article explains the pricing hierarchy and each pricing method.
+Liferay Commerce provides a variety of pricing methods that you can use to set different prices for a product that are applied under specified conditions. Most of these methods apply prices within a [pricing hierarchy](#pricing-hierarchy), where some prices supersede others. Though you can also apply *discounts* to modify a product's unit or promo price without superseding it.
 
 ## Pricing Hierarchy
 
-The pricing hierarchy determines which price applies for any given combination of product, quantity, buyer, date/time, order total, etc. If more than one price applies to a given transaction, then the price nearest to the top of the hierarchy supersedes others.
+Commerce's pricing hierarchy determines the price applied to a product based on a variety of specified factors (e.g, the combination of products, product quantity, buyer profile, or order total). If more than one price applies to a given transaction, then the price with the highest ranking supersedes the others.
 
-The hierarchy consists of these levels:
+The hierarchy consists of the following levels:
 
-**Base Price**: This is the starting price of the product which is [set](./setting-a-products-base-price.md) in the product SKU sub-tab.
+**Base Price**: This is the starting price of the product which is [set](./setting-a-products-base-price.md) in the product SKU sub-tab. Base prices are stored in the catalogs Base Price List generated at catalog creation. It serves as the standard price for the product when no overrides (e.g., other Price Lists or Promotions) are applied to it.
 
-**Price List**: This price applies to specific products for buyers in selected [Accounts](../../account-management/creating-a-new-account.md) and [Account Groups](../../account-management/creating-a-new-account-group.md). Prices in the price list can be _higher_ or _lower_ than the base price. If a price list applies to a transaction, it supersedes the base price.
+**Custom Price List**: Prices in a custom Price List can be *higher* or *lower* than the product's base price and are applies to specified products for buyers in selected [Accounts](../../account-management/creating-a-new-account.md) and [Account Groups](../../account-management/creating-a-new-account-group.md). If a custom price list applies to a transaction, it supersedes the base price. See [Creating a Price List](./creating-a-price-list.md) for more information.
 
-**Tiered Price**: This price applies to orders that meet specified minimum quantity requirements (bulk orders). It is only available in the context of a [price list](./creating-a-price-list.md) and it supersedes the list's price.
+**Tiered Price**: This price applies to orders that meet specified minimum quantity requirements. It is only available in the context of a [Price List](./creating-a-price-list.md) and supersedes the list's price. See [Adding Tiered Pricing](./adding-tiered-pricing.md) for more information.
 
-**Promo Price**: This price can be applied to a base price, a price list price, and to a tiered price. Once applied, the promo price supersedes each of them. When a base price is superseded by a price list or tiered price, its promo price is superseded as well. _The applicable price and promo price appear together on the product page so that buyers see the markdown._
+**Promo Price**: This price can be applied to base prices, list prices, or tiered prices and supersedes the price to which it is applied. However, if a price is superseded by another list or tiered price, the promo price is also superseded. When active, both the original and promo price appear together on the product page so that buyers see the markdown.
 
-**Discount**: A discount _operates outside the price hierarchy and modifies a price_ rather than superseding it. Unlike a price list, a discount always reduces the base price. There are two types of discounts: a flat amount or a percentage. A discount can be applied in the following ways:
+**Discount**: Discounts operate outside the price hierarchy and modify prices instead of superseding them. They are applied on top of the best price, whether unit or promo. See [Introduction to Discounts](./../../promoting-products/introduction-to-discounts.md) to learn more.
 
-* By product (individually, by category, or the entire catalog)
-* To an order’s subtotal, shipping costs, or to an order total
-* To all buyers, or buyers in selected Accounts and Account Groups
-* To a select group of customers that meet certain qualifications such as minimum order total or purchase of a required product.
-
-The pricing hierarchy can be visualized in the following diagram:
+The following diagram visualizes the pricing hierarchy:
 
    ![Pricing hierarchy](./introduction-to-product-pricing-methods/images/01.png)
 

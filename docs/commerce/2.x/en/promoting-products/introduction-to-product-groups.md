@@ -1,3 +1,3 @@
-Introduction to Product Groups
+# Introduction to Product Groups
 
 Coming soon!

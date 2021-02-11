@@ -1,99 +1,112 @@
 # Creating a Price List
 
-Price Lists are an easy way to set alternate prices (higher or lower than the base price) for a given product or allow use of a currency other than the store’s default for selected Accounts and Account Groups.
+Price Lists provide a convenient way to set alternate prices for a product, as well as alternate currencies for selected Accounts and Account Groups.
 
-To create a new price list:
+Follow these steps to create a new Price List:
 
-1. Go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Price Lists_.
-1. Click the (![Add icon](../../images/icon-add.png)) button.
-1. Enter the following:
+1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
 
-    * **Name**: VIP Customers
-    * **Catalog**: Sahara.com
-    * **Currency**: USD
+1. Click on the *Add* button (![Add icon](../../images/icon-add.png)).
 
-1. Click _Submit_ when finished.
+1. Enter a *Name*, *Catalog*, and *Currency* for the new Price List. While its name and currency can be changed at any time after creation, its catalog cannot be changed.
 
-The new price list has been created. Once the price list has been created, determine the price list's eligibility, populate the items, and set the Price Modifiers.
+   ```note::
+      Creating a Price List requires your Commerce instance to have at least one `Catalog <../catalogs/creating-a-new-catalog.html>`_.
+   ```
+
+1. Click on *Submit*.
+
+Once created, you can configure its general details, including the list's relative priority, parent Price List, and price type (i.e., net or gross). You can also determine The Price List's associated Accounts and Account Groups, populate its entries, and set its Price Modifiers. When finished, click on *Publish* to make your changes live, or *Save as Draft* to publish them at a later time.
 
 ![Configure the newly created price list.](./creating-a-price-list/images/02.png)
 
+```note::
+   When a catalog is first created, a Base Price List is automatically created to store the base price for each of its entries. For these Price Lists, only the *Details* and *Entries* tabs are available. Eligibility and price modifier settings are only available to subsequently created Price Lists.
+```
+
 ## Determining the Price List's Eligibility
 
-You can determine which accounts and account groups this price list is made available to.
+Follow these steps to determine the Accounts and Account Groups to which the Price List is made available:
 
-1. Click on the newly created price list.
-1. Click on the _Eligibility_ tab.
-1. Click the [Select Account Groups](../../account-management/creating-a-new-account-group.md) radio button.
-1. In the _Add Account Groups_ search bar, search for the desired account groups; in this example, _US Accounts East_.
-1. Click _Select_ to add the account group.
-1. Click _Publish_ when finished.
+1. Click on the *Price List* you want to configure, and go to the *Eligibility* tab.
 
-This price list will be available for these account groups.
+1. Use the radio buttons to determine *Account* and *Channel* eligibility.
 
-You can also determine which channels this price list is made available to.
+   * Account Eligibility: choose from *All Accounts*,*Specific Accounts*, and *Specific Account Groups*.
 
-While on the _Eligibility_ tab,
+   * Channel Eligibility: choose from *All Channels* and *Specific Channels*.
 
-1. Click the _Specific Channels_ radio button.
-1. In the _Add Channels_ search bar, search for the desired channels.
-1. Click _Select_ to add the channel.
-1. Click _Publish_ when finished.
+1. If you restrict Price List eligibility, use the provided search bar to locate the desired Accounts, Account Groups, or Channels, and click on *Select*.
 
-This price list is now available to these channels.
+1. Click on *Publish* when finished.
+
+Once configured, the Price List is accessible for your selected accounts, account groups, and channels.
 
 ## Populating the Price List's Entries
 
-Enter the products that are to be sold in this price list.
+Follow these steps to add products to the Price List:
 
-1. Click the _Entries_ tab inside the new price list.
-1. In the _Add SKUs_ search bar, search for the items that are to be included in this list. You do not have to use the SKU if you do not know the SKU's ID. Using a keyword or phrase will return all the applicable products by SKU.
+1. Click on the *Price List* you want to configure, and go to the *Entries* tab.
 
-    ![Search for your products by a keyword or phrase if you do not know the SKU.](./creating-a-price-list/images/03.png)
+1. Use the provided search bar to locate the desired products, and then click on *Select* to add them to the selected Price List.
 
-1. Click _Select_ next to the applicable products.
-1. Click _Publish_ when finished.
+   When searching for products, you can use an SKU or keywords and phrases. Using a keyword or phrase returns all the applicable products by their SKU.
 
-The price list is now populated.
+   ![Search for your products by SKU, keyword, or phrase.](./creating-a-price-list/images/03.png)
+
+1. Click on *Publish* to populate the Price List.
 
 ## Adding Price Modifiers
 
-To add a new price modifier:
+Follow these steps to add a new price modifier to a Price List:
 
-1. Click the _Price Modifiers_ tab.
-1. Click the (![Add icon](../../images/icon-add.png)) button.
-1. Enter the following:
+1. Click on the *Price List* you want to configure, and go to the *Price Modifiers* tab.
 
-    * **Name**: Brakes
-    * **Target**: Products
-    * **Modifier**: Fixed Amount
+1. Click on the *Add* button (![Add icon](../../images/icon-add.png)).
 
-1. Click _Submit_ when finished.
+1. Enter a *Name*, *Target*, and type of price *Modifier* you want to apply (i.e., Percentage, Replace, Fixed Amount).
 
-You can finish configuring the Price Modifier.
+1. Click on *Submit* when finished.
 
-1. Click the newly created Price Modifier.
-1. On the _Info_ tab, enter the following:
+Once created, you can finish configuring the modifier by clicking on it in the Price Modifiers tab.
 
-    * **Amount**: 5.00 USD
-    * **Priority**: 1.0
+```note::
+   Available configuration options vary depending on the selected target for your modifier.
+```
 
-1. Slide the _Active_ toggle to _YES_.
+### Configuring a Modifier's General Information
 
-    ![Configure the price modifier.](./creating-a-price-list/images/05.png)
+Follow these steps to configure a Price Modifier's general details:
 
-1. Click Save when finished.
+1. Click on the *Price Modifier* you want to edit, and go to the *Info* tab.
 
-Next, add the products subject to this price modifier.
+1. Enter an *Amount* to use for the selected type of modifier.
 
-1. Click the newly created price modifier.
-1. Click the _Products_ tab.
-1. In the _Add Products_ search bar, search for all the products in this price modifier. These products can be different from in the main list (see _Populating the Price List's Entries_) above.
+1. Optionally, manually enter the Price Modifier's Priority, which is used as a tie breaker in the case of multiple matches.
 
-    ![Add the entries in the price modifier.](./creating-a-price-list/images/04.png)
+1. Slide the *Active* toggle to *YES*.
 
-1. Close the _Price Modifier_ window to return to the main menu.
-1. Click the _Info_ tab then _Save_ when finished.
+1. Optionally, you can *schedule* when the Price Modifier takes effect, as well as if and when it expires.
+
+1. Click on *Save* when finished.
+
+   ![Configure the price modifier.](./creating-a-price-list/images/05.png)
+
+### Configuring a Modifier's Target Details
+
+Once you've determined a Price Modifier's general details, additional configuration options are available depending on the modifier's selected target. These settings are located in a dedicated tab of the Price Modifier editing window. 
+
+In this tab, follow these steps to select the specific *Categories*, *Products*, or *Product Groups* that are affected by the modifier:
+
+1. Click on the *Price List* you want to configure, and go to the *Price Modifiers* tab.
+
+1. Click on the additional editing tab (e.g., *Categories*, *Products*, or *Product Groups*).
+
+1. Use the provided search bar to locate the desired target for the modifier, and then click on *Select* to make them subject to the price modifier.
+
+   ![Click on Select to add them to the price modifier.](./creating-a-price-list/images/04.png)
+
+1. After selecting the desired targets, return to the *Info* tab, and click on *Save*.
 
 ## Commerce 2.1 and Below
 
