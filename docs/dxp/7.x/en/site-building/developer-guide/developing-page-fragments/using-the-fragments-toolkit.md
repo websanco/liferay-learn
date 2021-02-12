@@ -11,11 +11,13 @@ The toolkit requires this software:
 * [Yeoman](https://yeoman.io/)
 * [Yarn](https://classic.yarnpkg.com/)
 
-Node installers such as [Node.js LTS](https://nodejs.org/en/download/) include NPM and Node.js.
+NPM and Yarn are package managers that you'll use to install the the toolkit and modules it depends on.
 
 Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) script provides commands for setting up Yeoman, Yarn, and the toolkit. The script is available in the example ZIP file and all of our example JavaScript project ZIP files.
 
-1. Download and unzip the example ZIP file.
+1. Start with installing an NPM and Node.js via a [Node.js LTS](https://nodejs.org/en/download/).
+
+1. Download and unzip the example JavaScript project ZIP file.
 
     ```bash
     curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
@@ -25,11 +27,11 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
     unzip liferay-x2y6.zip
     ```
 
-1. Set up the Fragments Toolkit.
+1. Set up the Fragments Toolkit and its dependencies using the `setup_tutorial.sh` script.
 
     ```bash 
     cd liferay-x2y6.zip
-    ``` 
+    ```
 
     ```bash 
     ./setup_tutorial.sh
@@ -37,7 +39,7 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
 
 Resolve all unmet requirements reported by the script and rerun the script until it reports that your environment is ready.
 
-## Create a Fragments Project 
+## Create a Fragments Project
 
 The Fragments Toolkit's `yo liferay-fragments` command launches an interface for generating a Fragments Project.
 
@@ -52,7 +54,7 @@ Here's how to generate a Fragments Project:
 1. Launch the project generator by executing the `yo liferay-fragments` command:
 
     ```
-    yo liferay-fragments 
+    yo liferay-fragments
     ```
 
 1. Name your project. For this example, accept the default project name by clicking enter.
@@ -112,7 +114,7 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Import the Fragment Collection to your Liferay instance using the `yarn run import` command below. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Collection to your Liferay instance invoking the `yarn run import` command in your `sample-liferay-fragments` project folder. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
     ```bash
     yarn run import
@@ -143,7 +145,7 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
        For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
     ```
 
-1. Select a Fragment to view it in the Fragments Editor. 
+1. Select a Fragment to view it in the Fragments Editor.
 
     ![Here is the sample Fragment with React.](./using-the-fragments-toolkit/images/02.png)
 
@@ -229,7 +231,6 @@ The `add-fragment` command generates a Fragment per your input.
     The CLI starts the process:
 
     ```bash
-
     > yo liferay-fragments:fragment
     ```
 
@@ -245,7 +246,7 @@ The `add-fragment` command generates a Fragment per your input.
     ? Use React (or other JS framework)? No
     ```
 
-1. Use the new editable element syntax for Liferay 7.3+. 
+1. Use the new editable element syntax for Liferay 7.3+.
 
     ```bash
     ? Use new data-lfr editable syntax? Yes
@@ -341,7 +342,7 @@ For example, you can build off of the above HTML and use [Clay](https://clayui.c
    If you are using Liferay 7.2 or below, remove the ``data-lfr-editable-[id|type]`` attributes and wrap the content elements in ``lfr-editable`` elements as described in `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_.
 ```
 
-The first `div` element's `class="component-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page. 
+The first `div` element's `class="component-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page.
 
 ```tip::
   In your Fragment's HTML file, use the main wrapper element (the ``<div>`` in the example above) to uniquely identify the Fragment so it doesn't conflict with other components on a page.
