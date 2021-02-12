@@ -1,6 +1,6 @@
 # Data Control and Privacy
 
-Analytics Cloud provides different administrative tools for managing individual data and privacy. To access the tools, click &rarr; *Settings* &rarr; *Data Control & Privacy*.
+Analytics Cloud provides different administrative tools for managing individual data and privacy. To access the tools, click *Settings* &rarr; *Data Control & Privacy*.
 
 ![Different tools are found in the data control and privacy section of settings.](./data-control-and-privacy/images/01.png)
 
@@ -10,11 +10,11 @@ By default, event data and inactive anonymous individuals are retained for 13 mo
 
 1. Use the drop-down menu to select 7 months.
 
-    ![A pop-up window will give a warning when changing period.](./data-control-and-privacy/images/02.png)
+    ![A pop-up window shows a warning when changing retention.](./data-control-and-privacy/images/02.png)
 
-1. A warning window will pop-up to confirm your change.
+1. A warning window appears to confirm your change.
 
-1. Click *Change Period *to save.
+1. Click *Change Period* to save.
 
 ```Warning
 You will permanently lose analytics data that has been recorded over 7 months ago when you make this change.
@@ -22,13 +22,13 @@ You will permanently lose analytics data that has been recorded over 7 months ag
 
 ## Request Log
 
-Manage and control collected data of individuals with this tool. New requests can be made to access individual data, delete individual data, or suppress individual data. For example, an individual may contact you requesting data collected on them to be shared or to be deleted.
+Manage and control collected data of individuals with this tool. New requests can be made to access individual data, delete individual data, or suppress individual data. For example, someone may contact you requesting their collected data be shared or deleted.
 
 To create a new request or view previous requests, click the *Manage* button.
 
 ![Create a new request or view previous requests.](./data-control-and-privacy/images/03.png)
 
-A log of previous requests is presented. Use the filter function or search function to find a particular request. To download a ZIP file of a request, click the *Download* button of the request. 
+A log of previous requests appears. Use the filter function or search function to find a particular request. To download a ZIP file of a request, click the *Download* button of the request. 
 
 To create a new request,
 
@@ -36,11 +36,11 @@ To create a new request,
 
     ![A new window opens to create a new request.](./data-control-and-privacy/images/04.png)
 
-1. Select the Job Type. Selecting Access creates a downloadable file of all data collected related to the individual. Selecting Delete removes all Personally Identifiable Information (PII) of an individual and places them on the suppressed list. Selecting Suppress stops further data collection of the individual.
+1. Select the Job Type. Selecting Access creates a downloadable file of all data collected related to the individual. Selecting Delete removes the Personally Identifiable Information (PII) and places that individual on the suppressed list. Selecting Suppress stops further data collection of the individual.
 
 1. Input an email for the new request. A list of emails in a CSV file can also be uploaded.
 
-1. Click *Save* and the request will be processed. 
+1. Click *Save* to process the request. 
 
 A log of previous requests can be downloaded by clicking on the *Export Log* button on the main page.
 
@@ -54,7 +54,7 @@ Suppressing a user stops further data collection of an individual. To view a lis
 
 ![View suppressed individuals or unsuppress individuals.](./data-control-and-privacy/images/06.png)
 
-Search the list of suppressed individuals by inputting a particular email address. 
+Search the list of suppressed individuals by entering an email address. 
 
 To unsuppress, locate the individual and click the *Unsuppress* button.
 
@@ -68,7 +68,7 @@ Select a start date and an end date and click the *Download* button for a CSV li
 
 According to GDPR and many data privacy laws, businesses are required to ask consent before collecting analytics data when visitors are browsing a website.
 
-To suppress analytics data from being sent by a particular browser, set the following window variable with javascript on your site.
+To suppress analytics data from being sent by a particular browser, set the following window variable with JavaScript on your site.
 
 ```
 window['ac_client_disable_tracking'] = true
