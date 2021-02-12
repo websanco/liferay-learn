@@ -99,6 +99,10 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
 
    For Liferay DXP 7.2, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`.
 
+   ```warning::
+      On Liferay 7.2, do not deploy the configuration file for the CCR connection (e.g., ``ElasticsearchConnectionConfiguration-ccr.config``) simultaneously with the LES Cross-Cluster Replication LPKG's initial deployment. There's a known bug (`LPS-127821 <https://issues.liferay.com/browse/LPS-127821>`__) that breaks Liferay's search functionality if the configuration file is deployed before the module is fully started. If you've already encounterd this, see `Troubleshooting Cross-Cluster Replication <./troubleshooting-cross-cluster-replication.md#liferay-7-2-after-deploying-the-ccr-lpkg-and-the-elasticsearchconnectionconfiguration-file-search-is-broken>`__ for the workaround.
+   ```
+
    ```properties
    clusterName="LiferayElasticsearchCluster_FOLLOWER"
    connectionId="ccr"
