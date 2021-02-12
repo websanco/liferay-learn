@@ -1,5 +1,9 @@
 # Custom Facet
 
+7.3 FP1+ and the new GA for CE will fix DDM fields so we should document this, how to use DDM fields with the custom facet for Web Content
+7.2: By default it's legacy mode so DDM works, only if you switch to the newer nested field style (using the configuration) you will need to use the nested fields as well.
+7.2: enable Nested Fields Storage, now custom facet doesn't work FP8+ (unless the fix is backported)
+
 The Custom Facet is unique among the out-of-the-box search facets. Rather than group results by a single static field (like the modified date or the asset type), you use a Custom Facet to choose which field to group results by. You can create an entirely new facet with much more customization.
 
 ## Configuring the Custom Facet
@@ -40,6 +44,10 @@ Advanced Configuration contains additional options:
 ## Finding Indexed Fields
 
 To use the Custom Facet, you must know which non-analyzed keyword field to use in the configuration. 
+
+```tip::
+   Elasticsearch supports indexing fields in multiple ways. Some text fields can be used as keyword fields if they're nested ``raw`` `multi-fields <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/multi-fields.html>`__ in the mapping, or if the filed is mapped in an additional separate field mapping as ``fieldName_sortable`` (as a ``keyword``).
+```
 
 To browse the entire list of available fields, inspect the field mappings from *Control Panel* &rarr; *Configuration* &rarr; *Search* (click the *Field Mappings* tab). Here you'll see numerous indexes. The Liferay Assets you're likely interested in are indexed to the [company index](../../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster), which looks is named similarly to `liferay-20101` (`20101` is the Company ID).
 
@@ -84,5 +92,10 @@ Here's a snippet of output from the Elasticsearch example:
   "type": "keyword"
 },
 ```
+
+## Example: Creating a Facet for a Custom Field
+
+When you create a [Custom Field]()
+
 
 Use Custom Fields to aggregate facet terms by shared non-analyzed keyword field values.
