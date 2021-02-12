@@ -23,6 +23,7 @@
         * [Component Annotations](#component-annotations)
     * [Logic](#logic)
         * [Localization](#localization)
+            * [Adding to or Overriding Existing Localized Content](#adding-to-or-overriding-existing-localized-content)
             * [Labels and Headings](#labels-and-headings)
         * [Logging Output](#logging-output)
     * [Templates](#templates)
@@ -277,6 +278,15 @@ Don't use the `immediate = true` property. Use it only if testing shows that you
 If your module uses localized content, specify the content using language property files (*Language Keys*). Put your default Language Keys in this file:
 
 `src/main/resources/content/Language.properties`
+
+#### Adding to or Overriding Existing Localized Content
+
+If your module overrides or extends a Liferay module (target module) and you want to add language keys or override any of the target module language keys, do these two things:
+
+1. [Write Your Custom Language Keys](https://help.liferay.com/hc/en-us/articles/360028808452-Overriding-a-Module-s-Language-Keys#write-custom-language-key-values)
+2. [Prioritize Your Module's Resource Bundle](https://help.liferay.com/hc/en-us/articles/360028808452-Overriding-a-Module-s-Language-Keys#prioritize-your-modules-resource-bundle) 
+
+Follow the instructions in the above links (especially 2) carefully.
 
 #### Labels and Headings
 
