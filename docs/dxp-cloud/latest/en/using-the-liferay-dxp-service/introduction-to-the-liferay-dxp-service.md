@@ -11,7 +11,6 @@ The Liferay DXP service in DXP Cloud can be used in many of the same ways as an 
 * [Configuration](#configuration)
 * [Hot Deploy](#hot-deploy)
 * [Enabling Clustering](#enabling-clustering)
-* [Environment Variables](#environment-variables-reference)
 * [Running Scripts](#running-scripts)
 
 ## Choosing a Version
@@ -157,6 +156,8 @@ Behind the scenes, XML licenses are copied to `$LIFERAY_HOME/deploy`, and AATF l
 
 Applying configurations to the Liferay service, like `portal.properties` changes, requires adding them to the Git repository and pushing the changes to Git. For more information on adding these configuration files, see [Configuring the Liferay DXP Service](./configuring-the-liferay-dxp-service.md).
 
+Environment variables are also used to configure the Liferay service and, in some cases, override portal properties. See [Liferay Service Environment Variables](./liferay-service-environment-variables.md) for more information.
+
 ## Hot Deploy
 
 Hot deploy can be done via the Liferay DXP UI. To do so, navigate to the Control Panel → Apps → App Manager. Then, click the dots in the upper-right corner, and click "Upload." From this screen, you can choose a file from your local file system to deploy and install.
@@ -190,15 +191,6 @@ liferay
 ```note::
    If you are using version 3.x.x services, then scripts instead belong in the ``lcp/liferay/script/`` folder in the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
-
-## Environment Variables Reference
-
-Name                                  | Default Value | Description  |
-------------------------------------- | ------------- | ------------ |
-`LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` | `true` | Whether to enable clustering and communication between nodes. |
-`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` |  | A string with eight characters. It's part of the URL (prefix) of your Dynatrace SaaS account. |
-`LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` |  | A string with 22 characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
-`LIFERAY_JAVA_OPTS` | | JVM options that will be appended to `CATALINA_OPTS` to override the default recommended options. |
 
 ## Limitations
 
