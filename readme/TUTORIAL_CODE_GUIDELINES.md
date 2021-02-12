@@ -24,7 +24,6 @@
     * [Logic](#logic)
         * [Localization](#localization)
             * [Labels and Headings](#labels-and-headings)
-            * [Using Language Keys](#using-language-keys)
         * [Logging Output](#logging-output)
     * [Templates](#templates)
 * [Review Process](#review-process)
@@ -287,19 +286,6 @@ Include the project ID (in uppercase) in labels and headings. For example, `c1n4
 c1n4-commerce-product-type=C1N4 Commerce Product Type
 c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 ```
-
-#### Using Language Keys
-
-Access Language Keys with resource bundles. Here's an example of returning a Language Key.
-
-```java 
-ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
-    "content.Language", locale, getClass());
-
-return LanguageUtil.get(resourceBundle, "c1n4-commerce-product-type");
-```
-
-For an example, see [M6A8CommerceDiscountRuleTypeImpl.java](../docs/commerce/2.x/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java) in `liferay-m6a8.zip`.
 
 ### Logging Output
 
