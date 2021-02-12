@@ -10,19 +10,31 @@ function main {
 		exit
 	fi
 
-	if [[ "${PATH}" != *"${NPM_CONFIG_PREFIX}/bin"* ]]
-	then
-		echo "The environment variable PATH does not include ${NPM_CONFIG_PREFIX}/bin. Add ${NPM_CONFIG_PREFIX}/bin to your PATH. Run this command:
+    local npm_executables_dir_name="${NPM_CONFIG_PREFIX}"/bin
+    local npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/lib/node_modules
+    local path_export_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
+    
+    if  [[ "$OSTYPE" == "cygwin" ]] &&
+        [[ "$OSTYPE" == "msys" ]]
+    then
+        npm_executables_dir_name="${NPM_CONFIG_PREFIX}"
+        npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/node_modules
+        path_export_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}"
+    fi
 
-		export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
+	if [[ "${PATH}" != *"${npm_executables_dir_name}"* ]]
+	then
+		echo "The environment variable PATH does not include ${npm_executables_dir_name}. Add it to your PATH. Run this command:
+
+		${path_export_command}"
 
 		exit
 	fi
 
-	if  [ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-fragments" ] ||
-		[ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-js" ] ||
-		[ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/generator-liferay-theme" ] ||
-		[ ! -d "${NPM_CONFIG_PREFIX}/lib/node_modules/yo" ]
+	if  [ ! -d "${npm_node_modules_dir_name}/generator-liferay-fragments" ] ||
+		[ ! -d "${npm_node_modules_dir_name}/generator-liferay-js" ] ||
+		[ ! -d "${npm_node_modules_dir_name}/generator-liferay-theme" ] ||
+		[ ! -d "${npm_node_modules_dir_name}/yo" ]
 	then
 		echo "A tutorial dependency is missing. Run this command:
 
