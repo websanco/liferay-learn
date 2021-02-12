@@ -148,6 +148,8 @@ Name                          | Default Value              | Description |
 `LCP_BACKUP_RETENTION_PERIOD` | `30`                       | This variable determines which backups are removed during scheduled cleanups. Select the number of days backups are retained before being removed by cleanups. The maximum retention period is 30 days. |
 `LCP_DATABASE_SERVICE`        | `database`                 | The database service's ID. |
 `LCP_DBNAME`                  | `lportal`                  | The database name. |
+`LCP_DEBUG_LOG`               | `false`                    | Enables debug logging for the Backup service. Set to `true` or `false`. |
+`LCP_EXTERNAL_PROJECT_ID`     |                            | Used with Disaster Recovery to indicate the external project. Must be the ID of a production type environment. |
 `LCP_MASTER_USER_NAME`        | `dxpcloud`                 | The master username. |
 `LCP_MASTER_USER_PASSWORD`    | `LCP_PROJECT_MASTER_TOKEN` | The master password. |
 
