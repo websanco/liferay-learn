@@ -1,28 +1,28 @@
 # Building a Responsive Site Overview
 
-More than half of all page views in the world come from mobile devices like phones and tablets. Any site should look as good when viewed by a mobile device as it does on a Desktop. Liferay DXP can help you provide the best experience possible no matter what device you're using.
+More than half of all page views in the world come from mobile devices like phones and tablets. Any site should look as good when viewed by a mobile device as it does on a desktop. Liferay DXP can help you provide the best experience possible no matter what device visits your site.
 
-Out-of-the-box, Liferay is designed with responsive layouts in mind: 
+Out-of-the-box, Liferay uses responsive layouts: 
 
 * DXP widgets and custom widgets that use Liferay's UI frameworks automatically scale to fit the screen size.
 
-    ![Adjust the widget's size.](./building-a-responsive-site-overview/images/01.png)
+    ![Adjust the widget's size.](./building-a-responsive-site/images/01.png)
 
 * UI elements like the navigation and Product Menu automatically adjust to remain usable on smaller screens.
 
-    ![The main navigation adjusts its size.](./building-a-responsive-site-overview/images/02.png)
+    ![The main navigation adjusts its size.](./building-a-responsive-site/images/02.png)
 
 * When the screen width is low, Liferay combines columns so that all content remains legible.
 
-   ![Columns are combined when the width is low.](./building-a-responsive-site-overview/images/03.png)
+   ![Columns are combined when the width is low.](./building-a-responsive-site/images/03.png)
 
 * For web developers, theme tools help ensure optimum mobile performance.
 
-If you're using the default theme, all you need to do to display pages on mobile devices is create a page. However, you also have tools available to verify that everything displays as intended. The Device Simulator (![Simulation](../../images/icon-simulation.png)) shows you how pages look on different devices.
+If you're using the default theme, all you need to do to display pages on mobile devices is create a page. There are also tools to verify that everything displays as intended. The Device Simulator (![Simulation](../../images/icon-simulation.png)) shows you how pages look on different devices.
 
 ## Using the Device Simulator
 
-When creating a page or reviewing a page before it is published, it's important to test it using the Device Simulator found in the top right corner of every page. The simulator shows you the current page in a number of resolutions based on different display types. There are three predefined options:
+When creating a page or reviewing a page before it is published, you should test it using the Device Simulator found in the top right corner of every page. The simulator shows you the current page in a number of resolutions based on different display types. There are three predefined options:
 
 **Desktop:** Fixes the width to display the page at full size.
 
@@ -30,7 +30,7 @@ When creating a page or reviewing a page before it is published, it's important 
 
 **Mobile:** Puts your page in a smartphone-sized box.
 
-![The Simulation panel defines multiple screen sizes.](./building-a-responsive-site-overview/images/04.png)
+![The Simulation panel defines multiple screen sizes.](./building-a-responsive-site/images/04.png)
 
 There are also two options available to display:
 
@@ -38,7 +38,7 @@ There are also two options available to display:
 
 **Custom:** Enter a specific size for testing your page.
 
-Because modern mobile browsers are built on the same technology as desktop browsers, the behavior you see in the simulator should match the experience of those on mobile devices. In addition to making sure the basic layout looks good and that all functionality remains, it's also important to make sure that automatic features---like how columns are combined at lower resolutions---don't have unintended effects.
+Because modern mobile browsers are built on the same technology as desktop browsers, the behavior you see in the simulator should match the experience of those on mobile devices. In addition to making sure the layout looks good and that all functionality remains, it's also important to make sure that automatic features---like how columns are combined at lower resolutions---don't have unintended effects.
 
 ## Designing Mobile Friendly Pages
 
