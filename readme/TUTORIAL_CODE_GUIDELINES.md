@@ -1,4 +1,4 @@
-# Example Code Guidelines
+# Tutorial Code Guidelines
 
 ## Table of Contents
 
@@ -34,7 +34,7 @@
 
 ## Purpose
 
-Here are guidelines for tutorial code. It demonstrates starting an example project, describes tutorial code rules, and explains the code review process.
+Here are guidelines for tutorial code. They demonstrate starting an example project, describe tutorial code rules, and explain the code review process.
 
 ## Creating an Example Project
 
