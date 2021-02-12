@@ -101,7 +101,7 @@ This may happen if you've been configuring, restarting, and re-indexing repeated
 
 ## Liferay 7.2: After Deploying the CCR LPKG and the ElasticsearchConnectionConfiguration File, Search is Broken
 
-If you see errors in the log like those below, and experience a broken search engine connection, after deploying the CCR LPKG file simultaneously with the `ElasticsearchConnectionConfiguration-ccr.config` file, you have encountered a known bug, [LPS-127821](https://issues.liferay.com/browse/LPS-127821). To work around this bug and fix the search engine connection, you can restart Liferay or else duplicate the configuration using a different file subname (e.g., `-ccr2.config`).
+If you see errors in the log like those below, and experience a broken search engine connection, after deploying the CCR LPKG file simultaneously with the `ElasticsearchConnectionConfiguration-ccr.config` file, you have encountered a known bug, [LPS-127821](https://issues.liferay.com/browse/LPS-127821). To work around this bug and fix the search engine connection, you can restart Liferay or else duplicate the configuration using a different file subname (e.g., `-ccr2.config`; update the `connectionId` setting as well).
 
 ```bash
 2021-02-11 22:08:45.402 ERROR [main][CCRElasticsearchConnection:93] bundle com.liferay.portal.search.elasticsearch7.impl:4.0.10 (207)[com.liferay.portal.search.elasticsearch7.internal.connection.CCRElasticsearchConnection(386)] : The activate method has thrown an exception 
