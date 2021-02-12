@@ -26,7 +26,7 @@ The page is published using the new Style Book.
 
 ## Creating a New Style Book
 
-1. Navigate to the *Site Menu* &rarr; *Style Books*.
+1. Navigate to the *Site Menu* &rarr; *Design* &rarr; *Style Books*.
 
 1. Click the Add icon (![Add icon](../../images/icon-add.png)) near the top of the page.
 
