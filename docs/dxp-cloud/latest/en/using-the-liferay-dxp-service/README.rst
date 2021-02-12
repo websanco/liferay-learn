@@ -14,6 +14,7 @@ Configuration
 -------------
 
 -  :doc:`/using-the-liferay-dxp-service/configuring-the-liferay-dxp-service`
+-  :doc:`/using-the-liferay-dxp-service/liferay-service-environment-variables`
 
 Scalability and Performance
 ---------------------------
