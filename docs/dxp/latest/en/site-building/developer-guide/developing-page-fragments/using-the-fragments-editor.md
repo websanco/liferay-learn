@@ -40,6 +40,14 @@ Once you've made your first Collection, you can begin creating new Fragments.
     ![Enter a name for the new Component.](./using-the-fragments-editor/images/02.png)
 
 1. In the Code tab, use the CSS, HTML, and JavaScript fields to add your Fragment's resources. Here, you can also see a live preview of your Fragment's appearance in different device contexts.
+
+    Here are some HTML editing shortcuts:
+
+    * Enter an open angle bracket (`<`) to access standard HTML tags and Liferay's Fragment-specific tags.
+
+    * Start an element attribute with `data` to access Liferay's [editable Fragment attributes](../reference/fragments/fragment-specific-tags-reference.md) .
+
+    ![Liferay's editable Fragment attributes are available in the editor.](./using-the-fragments-editor/images/03.png)
     
     The example below adds a Card component with editable text:
 
@@ -70,15 +78,15 @@ Once you've made your first Collection, you can begin creating new Fragments.
     }
     ```
 
-    ![Add CSS, HTML, and Javascript resources to the Fragment and see a live preview.](./using-the-fragments-editor/images/03.png)
+    ![Add CSS, HTML, and Javascript resources to the Fragment and see a live preview.](./using-the-fragments-editor/images/04.png)
 
 1. In the Configuration tab, use the `JSON` field to add [configuration options](./adding-configuration-options-to-fragments.md)) to a Page Fragment.
 
-   ![Add configuration options to a Page Fragment.](./using-the-fragments-editor/images/04.png)
+   ![Add configuration options to a Page Fragment.](./using-the-fragments-editor/images/05.png)
 
 1. Click *Publish* to save your Fragment and make it available for use in [Content Pages](../../creating-pages/understanding-pages/understanding-pages.md#content-pages).
 
-    ![The Fragment can be used on a Content Page.](./using-the-fragments-editor/images/05.png)
+    ![The Fragment can be used on a Content Page.](./using-the-fragments-editor/images/06.png)
 
 While developing a Fragment, changes are automatically saved as a draft until your Fragment is published. Once added to a collection, you can copy, export, edit, and remove a Fragment at any time in the Fragments editor. See [Managing Page Fragments](../../displaying-content/using-fragments/managing-page-fragments.md) for more information on available actions for Page Fragments.
 
