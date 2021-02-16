@@ -7,7 +7,12 @@ Liferay Enterprise Search
    liferay-enterprise-search/cross_cluster_replication.rst
    liferay-enterprise-search/learning-to-rank.md
 
-A Liferay Enterprise Search (LES) subscription gets you additional features beyond what's available out of the box with your Liferay DXP subscription. It includes
+A Liferay Enterprise Search (LES) subscription provides access to additional search features beyond what's available out of the box with your Liferay DXP subscription. To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in the `Liferay DXP Components resource <https://help.liferay.com/hc/en-us/articles/360014400932>`__.  
+
+.. note::
+   LES customers receive a production X-Pack license from Liferay. There can be a delay between your subscription and receipt of the license, but you can enable a `30-day trial <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html>`__ to work with in the meantime.  
+
+Detailed installation and usage instructions are available in the article for each LES feature, including
 
 -  :doc:`/using-search/liferay-enterprise-search/cross_cluster_replication`
 -  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
@@ -16,13 +21,6 @@ A Liferay Enterprise Search (LES) subscription gets you additional features beyo
 
 .. important::
    Always check the `LES compatibility matrix <https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search>`__ for compatibility information.
-
-To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in `Liferay's DXP Components resource Liferay Enterprise Search <https://help.liferay.com/hc/en-us/articles/360014400932>`__.  
-
-Detailed installation and usage instructions are available in the article for each LES feature.
-
-.. note::
-   Out of the box, X-Pack comes with a `30-day trial <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html>`__.  This can be useful if there's a delay between your subscription and receipt of your production X-Pack license.
 
 Cross Cluster Replication
 -------------------------
