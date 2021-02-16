@@ -186,11 +186,7 @@ function generate_static_html {
 
 			local output_dir_name=$(dirname "${zip_dir_name}")
 
-			if [[ "${output_dir_name}" == *"/resources" ]]
-			then
-				output_dir_name=$(dirname "${output_dir_name}")
-			fi
-
+			output_dir_name=$(dirname "${output_dir_name}")
 			output_dir_name=$(dirname "${output_dir_name}")
 			output_dir_name=${output_dir_name/input/output}
 
