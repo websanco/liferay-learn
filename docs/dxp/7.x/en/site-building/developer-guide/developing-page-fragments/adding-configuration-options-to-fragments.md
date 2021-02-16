@@ -130,7 +130,7 @@ Open the configuration file.
 }
 ```
 
-The configuration file above, specifies a selector for applying a *dark* or *light* text style to the Fragment. The configuration has a field named `c7f8TextStyle`. The field's `type` is `select`, which makes it a selector component. See [Fragment Configuration Types](../../reference/fragments/fragment-configuration-types-reference.md) for details. The selector's valid values are `dark` or `light`. The `"dataType": "string"` property means that the selector operates on string data. 
+The configuration file above, specifies a selector for applying a *dark* or *light* text style to the Fragment. The configuration has a field named `c7f8TextStyle`. The field's `type` is `select`, which makes it a selector component. See [Fragment Configuration Types](../reference/fragments/fragment-configuration-types-reference.md) for details. The selector's valid values are `dark` or `light`. The `"dataType": "string"` property means that the selector operates on string data. 
 
 This selector is a part of a field set labeled *C7F8* (the label is optional). In the UI, this selector is found in the Fragment's configuration section labeled *C7F8*. The selector is labeled `Text Style` per the field's `label` property. The figure below shows the selector.
 
