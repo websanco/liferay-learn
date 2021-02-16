@@ -30,14 +30,14 @@ Order Pages in ascending or descending order based on any one of the following m
 * Entrances
 * Exit Rate
 
-The metrics for ordering the Page list are calculated based on the time period selected in the time period menu (at the top-right of the table). The following values are supported:
+The metrics for ordering the Page list are calculated based on the time period selected in the time period menu (at the top-right of the table). The following are available:
 
 * Last 24 hours
-* Yesterday
 * Last 7 days
-* Last 28 days
 * Last 30 days (default)
 * Last 90 days
+* More Preset Periods (Yesterday, Last 28 days, Last 180 days, Last Year)
+* Custom Range
 
 ```Note::
 Page data is based on canonical URL. Learn more about `canonicalization <https://moz.com/learn/seo/canonicalization>`_ or `how to set a custom canonical URL in DXP <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/page-settings/configuring-individual-pages.html#seo>`_

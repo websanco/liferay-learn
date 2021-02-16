@@ -8,21 +8,19 @@ Analytics Cloud does the following for pages:
 
 ## Data Time Periods
 
-All Page data in Analytics Cloud appears for a specified time period. The time period selector recalculates the metrics for the selected time period. You must specify a time period to view the metrics. The default is 30 days, but this is configurable. The following values are supported:
+All Page data in Analytics Cloud appears for a specified time period. The time period selector recalculates the metrics for the selected time period. You must specify a time period to view the metrics. The default is 30 days, but this is configurable. The following are available:
 
 **Last 24 hours:** Displays data generated over the last 24 hours.
 
-**Yesterday:** Displays all data generated yesterday, beginning at 12:00 AM and ending at 11:59 PM.
-
 **Last 7 days:** Displays data generated for the previous seven full days (the current day is excluded), in daily increments.
-
-**Last 28 days:** Displays data generated for the previous 28 full days (the current day is excluded), in weekly increments.
 
 **Last 30 days (default):** Displays data generated for the previous 30 full days (the current day is excluded), in weekly increments.
 
-**Last 90 days:** Displays data generated over a 13 week period beginning 90 days prior to the end of the current week. The time period always begins on a Sunday, and ends with the current, incomplete week (unless viewed on a Saturday approaching midnight).
+**Last 90 days:** Displays data generated for the previous 90 full days (the current day is excluded), in 15 day increments.
 
-Note that the first Sunday of the 90 day time period is not included.
+**More Preset Periods:** Clicking this leads to additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
+
+**Custom Range:** Use this option to select a start date and end date of your choice.
 
 ## Visitor Behavior
 
