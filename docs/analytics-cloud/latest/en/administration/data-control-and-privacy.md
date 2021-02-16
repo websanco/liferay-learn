@@ -1,6 +1,6 @@
 # Data Control and Privacy
 
-Analytics Cloud provides different administrative tools for managing individual data and privacy. To access the tools, click *Settings* &rarr; *Data Control & Privacy*.
+Analytics Cloud provides administrative tools for managing individual data and privacy. To access the tools, click *Settings* &rarr; *Data Control & Privacy*.
 
 ![Different tools are found in the data control and privacy section of settings.](./data-control-and-privacy/images/01.png)
 
@@ -16,8 +16,8 @@ By default, event data and inactive anonymous individuals are retained for 13 mo
 
 1. Click *Change Period* to save.
 
-```Warning
-You will permanently lose analytics data that has been recorded over 7 months ago when you make this change.
+```warning::
+   You will permanently lose analytics data that has been recorded over 7 months ago when you make this change.
 ```
 
 ## Request Log
