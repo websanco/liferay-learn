@@ -12,28 +12,14 @@ A Liferay Enterprise Search (LES) subscription gets you additional features beyo
 -  :doc:`/using-search/liferay-enterprise-search/cross_cluster_replication`
 -  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
 -  Monitoring Elasticsearch
+-  `Securing Elasticsearch <./installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md>`__ [Free without LES for Liferay CE and DXP with Elasticsearch 7] 
 
 .. important::
    Always check the `LES compatibility matrix <https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search>`__ for compatibility information.
 
-X-Pack is an `Elasticsearch extension <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-xpack.html>`__ for securing and monitoring Elasticsearch clusters. If you use Elasticsearch, you should `secure it with X-Pack <./installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md>`__. Elasticsearch 7 bundles these security features, and Liferay has followed suit. Therefore, security is bundled with the Liferay Connector to Elasticsearch 7, and no LES subscription is necessary. Contact `Liferay's Sales department for more information <https://www.liferay.com/contact-us#contact-sales>`__.
+To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in `Liferay's DXP Components resource Liferay Enterprise Search <https://help.liferay.com/hc/en-us/articles/360014400932>`__.  
 
-To use the LES applications with Liferay,
-
-#. Get an `Enterprise Search subscription <https://help.liferay.com/hc/en-us/articles/360014400932>`__.
-
-#. You'll receive a license for X-Pack monitoring. Install it on your Elasticsearch servers.
-
-   **Note:** If using Elasticsearch 6, you'll also need a LES subscription for X-Pack security.
-
-#. Download and install the LES apps you purchased. Find them in the `Help Center Downloads page <https://customer.liferay.com/downloads>`__, choosing Enterprise Search from the Product drop-down menu.
-
-#. Configure the connectors with the proper credentials, encryption information, and settings.
-
-#. Restart Elasticsearch. These steps require a full cluster restart.
-
-More detailed installation instructions are available in the article for each
-LES feature.
+Detailed installation and usage instructions are available in the article for each LES feature.
 
 .. note::
    Out of the box, X-Pack comes with a `30-day trial <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html>`__.  This can be useful if there's a delay between your subscription and receipt of your production X-Pack license.
