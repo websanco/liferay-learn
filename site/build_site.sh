@@ -184,6 +184,8 @@ function generate_static_html {
 
 			7z a ${zip_file_name} ../${zip_file_name}\
 
+			7z rn ${zip_file_name} ${zip_file_name} ${zip_file_name%.*}
+
 			local output_dir_name=$(dirname "${zip_dir_name}")
 
 			output_dir_name=$(dirname "${output_dir_name}")
