@@ -10,6 +10,7 @@ Touchpoints
    touchpoints/assets.rst
 
 -  :doc:`/touchpoints/touchpoints`
+-  :doc:`/touchpoints/sites-dashboard`
 
 Pages
 -----
