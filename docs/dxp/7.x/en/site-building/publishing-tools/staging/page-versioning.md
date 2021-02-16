@@ -1,6 +1,10 @@
 # Page Versioning
 
-With Page Versioning enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages via the Staging bar. Page versioning also maintains a history that you can use to revert changes made to your staged Pages to earlier versions if needed.
+With Page Versioning enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages and Content Pages via the Staging bar. Page versioning also maintains a history that you can use to revert changes made to your staged Pages to earlier versions if needed.
+
+```note::
+   Starting Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you can create variations only in Widget Pages. To learn more about variations in these type of pages, see `Types of Variations <#types-of-variations>`_.
+```
 
 You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
 
@@ -13,9 +17,13 @@ You can enable Page versioning for your Private and Public Pages during initial 
 
 When you enable *Page versioning* for a Page set, you can create and manage two types of variations in each Widget Page's Staging bar:
 
-* **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set.
+* **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set. You can create Site Page Variations in Widget Pages and Content Pages.
 
-* **Page Variations**: Single Page variations that exist within Page set variations.
+    ```note::
+       Site Page Variations for Content Pages are available in Liferay 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11.
+    ```
+
+* **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations in Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
 Both variation types only affect Pages and do not affect your Site's content, since all variations in your staging Site share the same content. That said, each variation can use and configure the same content and applications in different ways, and each variation of a Page set can have different Pages.
 
@@ -29,7 +37,7 @@ However, modifying the *layout type* or *friendly URL* of a Page does affect eve
 
 Follow these steps to create new variations of a Page or Page set:
 
-1. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar, and select *Site Pages Variation* or *Page Variations*.
+1. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar, and select *Site Pages Variation* (for Widget Pages or Content Pages) or *Page Variations* (for Widget Pages only.)
 
    ![Click on the Actions button in the Staging bar and select the variation type you want to create.](./page-versioning/images/03.png)
 
@@ -57,7 +65,7 @@ Follow these steps to create new variations of a Page or Page set:
 
 1. Click on *Add* to create your new variation.
 
-Once created, you can switch between each version of a Page or Page set via the drop-down menus in the Staging bar.
+Once created, you can switch between each version of a Page or Page set via the drop-down menus in the Staging bar. The *Page Variations* drop-down menu is available for Widget Pages only. For Content Pages, you create different versions usig [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). For more information, see [Staging UI Reference](./staging-ui-reference.md).
 
 ![You can switch between each version of a Page or Page set via the drop-down menus in the Staging bar](./page-versioning/images/02.png)
 

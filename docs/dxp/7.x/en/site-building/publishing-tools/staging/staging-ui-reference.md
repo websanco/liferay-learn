@@ -16,15 +16,15 @@ When Staging is enabled for a Site, you can access additional options via the St
 
 You can also access the following options for Widget Pages in your Staging environment via the Staging bar:
 
-* **Site Pages Variation**: You can toggle between variations of Page sets in your staged Site using the drop-down menu. You can also manage and create Page set variations by clicking on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar and selecting *Site Pages Variation*. See [Page Versioning](./page-versioning.md) for more information.
+| Option | Widget Page | Content Page |
+| --- | --- | --- |
+| _Site Pages Variation_ | <ul><li>Toggle between variations of Page sets in your staged Site using the drop-down menu.</li><li>Manage and create Page set variations by clicking on the *Actions* button in the Staging bar and selecting *Site Pages Variation* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Same as Widget Pages |
+| _Page Variations_ | <ul><li>Toggle between variations of a single Page in your staged Site using the drop-down menu.</li><li>Manage and create Page variations by clicking on the *Actions* button in the Staging bar and selecting *Page Variations* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Not available. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). |
+| _Undo/Redo_ | <ul><li>Clic on the *Actions* button  in the Staging bar and select *Undo*/*Redo*.</li><li>Once you've marked a Page as *Ready for Publish Process*, you can't undo or redo recent changes.</li></ul> | From the Content Page editor, revert any action using the *Undo* or *Redo* buttons. |
+| History | <ul><li>Manage the Page revision history by clicking on the *Actions* button in the Staging bar and selecting *History*.</li><li>Revert a Page to an earlier version by clicking on the *Actions* button for the Page version you want to restore and selecting *Mark as Ready for Publishing Process*.</li></ul> | Return to a previous version of your edits using the *History* button. |
+| _Ready for Publish Process_ | <ul><li>Click on *Ready for Publish Process* to change the Page's status from *Draft* to *Ready for Publish Process*.</li><li>Click *Publish to Live* to configure and initiate publishing for your changes.</li><li>When you publish a Page to Live, only the version marked as *Ready for Publish Process* is published.</li></ul> | ?????? |
 
-* **Page Variations**: You can toggle between variations of a single Page in your staged Site using the drop-down menu. You can also manage and create Page variations by clicking on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar and selecting *Page Variations*. See [Page Versioning](./page-versioning.md) for more information.
 
-* **Undo/Redo**: You can undo or redo recent changes to a Page by clicking on the *Actions* button (![Actions button](../../../images/icon-actions.png)) in the Staging bar and selecting *Undo*/*Redo*. Once you've marked a Page as *Ready for Publish Process*, you can't undo or redo recent changes.
-
-* **History**: You can view and manage the Page revision history by clicking on the *Actions* button (![Actions button](../../../images/icon-actions.png)) in the Staging bar and selecting *History*. From here, you can also revert a Page to an earlier version by clicking on the *Actions* button (![Actions button](../../../images/icon-actions.png)) for the Page version you want to restore and selecting *Mark as Ready for Publishing Process*.
-
-* **Ready for Publish Process**: When you have finished making your changes, click on *Ready for Publish Process* to change the Page's status from *Draft* to *Ready for Publish Process*. You can then click *Publish to Live* to configure and initiate publishing for your changes. When you publish a Page to Live, only the version marked as *Ready for Publish Process* is published.
 
 ## Publish to Live
 

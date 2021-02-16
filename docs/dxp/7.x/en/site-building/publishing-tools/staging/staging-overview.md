@@ -22,7 +22,7 @@ While both options use the same interface for managing and publishing staged Pag
 As part of Staging, you can enable the *Page versioning* feature. With this, you and your team can simultaneously develop and work in variations of both your Private and Public Pages. You can see the complete history of Page versions and revert Pages to an earlier version if needed. See [Page Versioning](./page-versioning.md) to learn how to create and manage variations and [Managing Staging Permissions](./managing-staging-permissions.md) to learn about managing permissions for each variation.
 
 ```note::
-   Page versioning is only supported for Widget Pages.
+   Starting Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can use page versioning in Widget Pages and Content Pages. In previous Liferay DXP versions, you can create variations only in Widget Pages. To learn more about variations in these type of pages, see [Types of Variations](./page-versioning.md/#types-of-variations).
 ```
 
 ### Staged Data and Content Types
