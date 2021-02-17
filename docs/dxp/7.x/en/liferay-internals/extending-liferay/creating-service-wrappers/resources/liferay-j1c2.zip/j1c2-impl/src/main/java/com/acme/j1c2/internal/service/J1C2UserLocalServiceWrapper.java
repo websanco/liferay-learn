@@ -31,9 +31,7 @@ public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
 		throws PortalException {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn(
-				"This is the J1C2 Implementation authenticateByEmailAddress " +
-					"method");
+			_log.warn("Invoke the authenticateByEmailAddress method");
 		}
 
 		return super.authenticateByEmailAddress(
@@ -44,7 +42,7 @@ public class J1C2UserLocalServiceWrapper extends UserLocalServiceWrapper {
 	@Override
 	public User getUser(long userId) throws PortalException {
 		if (_log.isWarnEnabled()) {
-			_log.warn("This is the J1C2 Implementation getUser method");
+			_log.warn("Invoke the getUser method");
 		}
 
 		return super.getUser(userId);
