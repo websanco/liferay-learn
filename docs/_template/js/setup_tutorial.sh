@@ -10,31 +10,31 @@ function main {
 		exit
 	fi
 
-    local npm_executables_dir_name="${NPM_CONFIG_PREFIX}"/bin
-    local npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/lib/node_modules
-    local path_export_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
+    local npm_bin_dir="${NPM_CONFIG_PREFIX}"/bin
+    local npm_modules_dir="${NPM_CONFIG_PREFIX}"/lib/node_modules
+    local export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
 
     if [[ "${OSTYPE}" == "cygwin" ]] &&
        [[ "${OSTYPE}" == "msys" ]]
     then
-        npm_executables_dir_name="${NPM_CONFIG_PREFIX}"
-        npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/node_modules
-        path_export_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}"
+        npm_bin_dir="${NPM_CONFIG_PREFIX}"
+        npm_modules_dir="${NPM_CONFIG_PREFIX}"/node_modules
+        export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}"
     fi
 
-	if [[ "${PATH}" != *"${npm_executables_dir_name}"* ]]
+	if [[ "${PATH}" != *"${npm_bin_dir}"* ]]
 	then
-		echo "The environment variable PATH does not include ${npm_executables_dir_name}. Add it to your PATH. Run this command:
+		echo "The environment variable PATH does not include ${npm_bin_dir}. Add it to your PATH. Run this command:
 
-		${path_export_command}"
+		${export_path_command}"
 
 		exit
 	fi
 
-	if  [ ! -d "${npm_node_modules_dir_name}/generator-liferay-fragments" ] ||
-		[ ! -d "${npm_node_modules_dir_name}/generator-liferay-js" ] ||
-		[ ! -d "${npm_node_modules_dir_name}/generator-liferay-theme" ] ||
-		[ ! -d "${npm_node_modules_dir_name}/yo" ]
+	if  [ ! -d "${npm_modules_dir}/generator-liferay-fragments" ] ||
+		[ ! -d "${npm_modules_dir}/generator-liferay-js" ] ||
+		[ ! -d "${npm_modules_dir}/generator-liferay-theme" ] ||
+		[ ! -d "${npm_modules_dir}/yo" ]
 	then
 		echo "A tutorial dependency is missing. Run this command:
 
