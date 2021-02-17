@@ -13,9 +13,9 @@ function main {
     local npm_executables_dir_name="${NPM_CONFIG_PREFIX}"/bin
     local npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/lib/node_modules
     local path_export_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
-    
-    if  [[ "$OSTYPE" == "cygwin" ]] &&
-        [[ "$OSTYPE" == "msys" ]]
+
+    if [[ "$OSTYPE" == "cygwin" ]] &&
+       [[ "$OSTYPE" == "msys" ]]
     then
         npm_executables_dir_name="${NPM_CONFIG_PREFIX}"
         npm_node_modules_dir_name="${NPM_CONFIG_PREFIX}"/node_modules
