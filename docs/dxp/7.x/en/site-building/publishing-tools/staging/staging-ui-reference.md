@@ -8,23 +8,38 @@ Also, once staging is enabled, you can access additional options in your Staging
 * [Publish to Live](#publish-to-live)
 * [Staging Page](#staging-page)
 
-## Staging Bar
+## Staging Bar and Editing Tools
 
 When Staging is enabled for a Site, you can access additional options via the Staging bar on each of your Site's Pages. In this bar you can toggle between Staging and Live environments, as well as click on *Publish to Live* for your staged Pages.
 
 ![When Staging is enabled for a Site, you can access the Staging bar on each of your Site's Pages](./staging-ui-reference/images/02.png)
 
-You can also access the following options for Widget Pages in your Staging environment via the Staging bar:
+To edit your staged content, select the variation you want to update and use the editing tools in the Liferay DXP application bar. For Widget Pages, use the *Add* (![Add](../../../images/icon-add-widget.png)) button to edit your Widgets (see [Adding Widgets to a Page](../../creating-pages/using-widget-pages/adding-widgets-to-a-page.md) for more information.) For Content Pages, use the *Edit* (![Edit](../../../images/icon-edit.png)) button to modify your content (see [Building Content Pages](../../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md) for more information.)
 
-| Option | Widget Page | Content Page |
-| --- | --- | --- |
-| _Site Pages Variation_ | <ul><li>Toggle between variations of Page sets in your staged Site using the drop-down menu.</li><li>Manage and create Page set variations by clicking on the *Actions* button in the Staging bar and selecting *Site Pages Variation* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Same as Widget Pages |
-| _Page Variations_ | <ul><li>Toggle between variations of a single Page in your staged Site using the drop-down menu.</li><li>Manage and create Page variations by clicking on the *Actions* button in the Staging bar and selecting *Page Variations* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Not available. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). |
-| _Undo/Redo_ | <ul><li>Clic on the *Actions* button  in the Staging bar and select *Undo*/*Redo*.</li><li>Once you've marked a Page as *Ready for Publish Process*, you can't undo or redo recent changes.</li></ul> | From the Content Page editor, revert any action using the *Undo* or *Redo* buttons. |
-| History | <ul><li>Manage the Page revision history by clicking on the *Actions* button in the Staging bar and selecting *History*.</li><li>Revert a Page to an earlier version by clicking on the *Actions* button for the Page version you want to restore and selecting *Mark as Ready for Publishing Process*.</li></ul> | Return to a previous version of your edits using the *History* button. |
-| _Ready for Publish Process_ | <ul><li>Click on *Ready for Publish Process* to change the Page's status from *Draft* to *Ready for Publish Process*.</li><li>Click *Publish to Live* to configure and initiate publishing for your changes.</li><li>When you publish a Page to Live, only the version marked as *Ready for Publish Process* is published.</li></ul> | ?????? |
+```tip::
+   There are differences in the way you work with Widget Pages and Content Pages in a Staged site. To simplify your workflow with Staging, use either Widget Pages or Content Pages.
+```
 
+The following table and pictures describe the staging bar options and editing tools:
 
+| Option | Widget Page | Content Page | # |
+| --- | --- | --- | --- |
+| _Site Pages Variation_ | <ul><li>Toggle between variations of Page sets in your staged Site using the drop-down menu.</li><li>Manage and create Page set variations by clicking on the *Actions* button in the Staging bar and selecting *Site Pages Variation* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Same as Widget Pages | 1 |
+| _Page Variations_ | <ul><li>Toggle between variations of a single Page in your staged Site using the drop-down menu.</li><li>Manage and create Page variations by clicking on the *Actions* button in the Staging bar and selecting *Page Variations* (See [Page Versioning](./page-versioning.md) for more information.)</li></ul> | Not available. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). | 2 |
+| _Undo/Redo_ | <ul><li>Clic on the *Actions* button  in the Staging bar and select *Undo*/*Redo*.</li><li>Once you've marked a Page as *Ready for Publish Process*, you can't undo or redo recent changes.</li></ul> | <ul><li>From the Content Page editor, revert any action using the *Undo* or *Redo* buttons.</li><li>Once you publish a Page, you can't undo or redo recent changes.</li></ul> | 3 |
+| _History_ | <ul><li>Manage the Page revision history by clicking on the *Actions* button in the Staging bar and selecting *History*.</li><li>Revert a Page to an earlier version by clicking on the *Actions* button for the Page version you want to restore and selecting *Mark as Ready for Publishing Process*.</li></ul> | Return to a previous version of your edits using the *History* button. | 4 |
+| _Ready for Publish Process_ | <ul><li>Click on *Ready for Publish Process* to change the Page's status from *Draft* to *Ready for Publish Process*.</li><li>Click *Publish to Live* to configure and initiate publishing for your changes.</li><li>When you publish a Page to Live, only the version marked as *Ready for Publish Process* is published.</li></ul> | <ul><li>Not available. Use the *Publish* button of the Content Page editor.</li><li>Click *Publish to Live* to configure and initiate publishing for your changes.</li><li>When you publish a Page to Live, the last published version becomes active.</li></ul> | 5 |
+| Edit Content | Use the *Add* button in the Liferay application bar to edit your Widgets. | Use the *Edit* button in the Liferay application bar to open the Content Page editor. | 6 |
+
+- Staging Bar and Editing Tools in Widget Pages:
+
+   ![Staging bar and editing tools working with Widget Pages](./staging-ui-reference/images/18.png)
+
+- Staging Bar and Editing Tools in Content Pages:
+
+   ![Staging bar working with Content Pages](./staging-ui-reference/images/19.png)
+
+   ![Editing tools working with Widget Pages](./staging-ui-reference/images/20.png)
 
 ## Publish to Live
 

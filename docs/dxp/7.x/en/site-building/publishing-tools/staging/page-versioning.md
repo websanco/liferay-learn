@@ -3,7 +3,7 @@
 With Page Versioning enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages and Content Pages via the Staging bar. Page versioning also maintains a history that you can use to revert changes made to your staged Pages to earlier versions if needed.
 
 ```note::
-   Starting Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you can create variations only in Widget Pages. To learn more about variations in these type of pages, see `Types of Variations <#types-of-variations>`_.
+   Starting Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you can create variations only on Widget Pages. To learn more about variations in these types of pages, see `Types of Variations <#types-of-variations>`_.
 ```
 
 You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
@@ -17,13 +17,13 @@ You can enable Page versioning for your Private and Public Pages during initial 
 
 When you enable *Page versioning* for a Page set, you can create and manage two types of variations in each Widget Page's Staging bar:
 
-* **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set. You can create Site Page Variations in Widget Pages and Content Pages.
+* **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set. You can create Site Page Variations on Widget Pages and Content Pages.
 
-    ```note::
-       Site Page Variations for Content Pages are available in Liferay 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11.
-    ```
+* **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations on Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
-* **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations in Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
+```tip::
+   There are differences in the way you work with Widget Pages and Content Pages in a Staged site. To simplify your workflow with Staging, use either Widget Pages or Content Pages.
+```
 
 Both variation types only affect Pages and do not affect your Site's content, since all variations in your staging Site share the same content. That said, each variation can use and configure the same content and applications in different ways, and each variation of a Page set can have different Pages.
 
