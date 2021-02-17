@@ -55,5 +55,5 @@ When the unit, promo and final prices are shown in the channel, the system adds 
 ## Additional Information
 
 * [Introduction to Discounts](../../promoting-products/introduction-to-discounts.md)
-* [Creating a Price List](../creating-a-price-list.md)
+* [Creating a Price List](./creating-a-price-list.md)
 * [Managing Channels](../../starting-a-store/channels/managing-channels.md)
