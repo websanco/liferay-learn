@@ -299,7 +299,7 @@ c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 
 ### Logging Output
 
-If you want to print messages, use a logger.
+If you want to print messages, use a logger. Give context by referencing the method you're in using Javadoc-style syntax.
 
 Import:
 
@@ -311,18 +311,23 @@ Field:
 
 ```java 
 private static final Log _log = LogFactoryUtil.getLog(
-		R2F1DDMStorageAdapter.class);
+		YourClass.class);
 ``` 
 
 Logging Logic:
 
 ```java
+getUser(long userId) throws PortalException {
     if (_log.isWarnEnabled()) {
-		_log.warn("Acme storage adapter's save method was invoked");
-	}
+        _log.warn("Invoke #getUser(long)");
+    }
+    ... 
+}
 ```
 
-For an example, see [R2F1DDMStorageAdapter.java](../docs/dxp/7.x/en/process-automation/forms/developer-guide/writing-a-form-storage-adapter/resources/liferay-r2f1.zip/r2f1-impl/src/main/java/com/acme/r2f1/internal/dynamic/data/mapping/storage/R2F1DDMStorageAdapter.java) in `liferay-r2f1.zip`.
+**Note:** The log message automatically includes the class name. For example, `WARN [http-nio-8080-exec-1][J1C2UserLocalServiceWrapper:line-number]`.
+
+For an example, see [J1C2UserLocalServiceWrapper.java](../docs/dxp/7.x/en/liferay-internals/extending-liferay/creating-service-wrappers/resources/liferay-j1c2.zip/j1c2-impl/src/main/java/com/acme/j1c2/internal/service/J1C2UserLocalServiceWrapper.java).
 
 ## Templates
 
