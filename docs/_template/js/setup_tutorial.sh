@@ -10,16 +10,16 @@ function main {
 		exit
 	fi
 
+    local export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
     local npm_bin_dir="${NPM_CONFIG_PREFIX}"/bin
     local npm_modules_dir="${NPM_CONFIG_PREFIX}"/lib/node_modules
-    local export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}/bin"
 
     if [[ "${OSTYPE}" == "cygwin" ]] &&
        [[ "${OSTYPE}" == "msys" ]]
     then
+        export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}"
         npm_bin_dir="${NPM_CONFIG_PREFIX}"
         npm_modules_dir="${NPM_CONFIG_PREFIX}"/node_modules
-        export_path_command="export PATH=\${PATH}:\${NPM_CONFIG_PREFIX}"
     fi
 
 	if [[ "${PATH}" != *"${npm_bin_dir}"* ]]
