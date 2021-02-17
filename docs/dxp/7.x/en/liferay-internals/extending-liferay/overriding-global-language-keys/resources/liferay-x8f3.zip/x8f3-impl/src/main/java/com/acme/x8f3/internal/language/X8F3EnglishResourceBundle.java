@@ -1,4 +1,4 @@
-package com.acme.x8f3.internal.lang;
+package com.acme.x8f3.internal.language;
 
 import com.liferay.portal.kernel.language.UTF8Control;
 
