@@ -20,14 +20,14 @@ public class Y4A2AntivirusScanner implements AntivirusScanner {
 	@Override
 	public void scan(byte[] bytes) throws AntivirusScannerException {
 		if (_log.isWarnEnabled()) {
-			_log.warn("Y4A2AntivirusScanner's scan(byte[]) method was invoked");
+			_log.warn("Invoke #scan(byte)");
 		}
 	}
 
 	@Override
 	public void scan(File file) throws AntivirusScannerException {
 		if (_log.isWarnEnabled()) {
-			_log.warn("Y4A2AntivirusScanner's scan(File) method was invoked");
+			_log.warn("Invoke #scan(File)");
 		}
 	}
 
