@@ -2,11 +2,11 @@
 
 > LES Subscribers
 
-If you have a Liferay Enterprise Search (LES) [subscription](https://www.liferay.com/products/dxp/enterprise-search), you can integrate Elastic's [Kibana monitoring UI](https://www.elastic.co/guide/en/kibana/7.x/introduction.html) with Liferay DXP, so that your monitoring activities can be done within Liferay itself.
+If you have a Liferay Enterprise Search (LES) [subscription](https://www.liferay.com/products/dxp/enterprise-search), you can integrate Elastic's [Kibana monitoring UI](https://www.elastic.co/guide/en/kibana/7.x/introduction.html) with Liferay DXP, so your monitoring activities can be done within Liferay itself.
 
 ![With LES Monitoring, you can monitor Liferay's indexes from Liferay's UI.](./monitoring-elasticsearch/images/01.png)
 
-To monitor the [secured](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) Elasticsearch cluster where Liferay's data is indexed,
+Monitoring the [secured](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) Elasticsearch cluster where Liferay's data is indexed takes only five steps: 
 
 1. Tell Elasticsearch to enable data collection.
 
@@ -20,7 +20,7 @@ To monitor the [secured](../installing-and-upgrading-a-search-engine/elasticsear
 
 ## Enable Data Collection
 
-Monitoring is enabled on Elasticsearch by default, but data collection isn't.  Enable data collection by adding this line to `elasticsearch.yml`.
+Monitoring is enabled on Elasticsearch by default, but data collection isn't. Enable data collection by adding this line to `elasticsearch.yml`.
 
 ```yaml
 xpack.monitoring.collection.enabled: true
@@ -33,7 +33,7 @@ Restart Elasticsearch, then install Kibana.
 Make sure the Kibana version matches the Elasticsearch version. Check the [Liferay Enterprise Search compatibility matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details.
 
 ```note:: 
-   Elasticsearch 6.x has reached [end of life](https://www.elastic.co/support/eol#elasticsearch). Liferay 7.2 systems still using Elasticsearch 6.x should be upgraded to Elasticsearch 7.x. See  `Upgrading to Elasticsearch 7 <./../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md>`__ for details.
+   Elasticsearch 6.x has reached `end of life <https://www.elastic.co/support/eol#elasticsearch>`_. Liferay 7.2 systems still using Elasticsearch 6.x should be upgraded to Elasticsearch 7.x. See  `Upgrading to Elasticsearch 7 <./../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md>`__ for details.
 ```
 
 1. [Download Kibana](https://www.elastic.co/downloads/kibana) and extract it. The root folder is referred to as *Kibana Home*.
@@ -61,7 +61,7 @@ Make sure the Kibana version matches the Elasticsearch version. Check the [Lifer
 
    To reuse the files [created for Elasticsearch itself](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md#generate-node-certificates), copy the `[Elasticsearch Home]/config/certs` folder into the `[Kibana Home]/config/` folder.
 
-   If you wish to generate a separate certificate for your Kibana instance, make sure it is signed by the same CA as the Elasticsearch node certificates.
+   If you wish to generate a separate certificate for your Kibana instance, make sure it's signed by the same CA as the Elasticsearch node certificates.
 
 1. Add these settings to `kibana.yml`:
 
@@ -101,19 +101,11 @@ Stop Kibana before continuing.
 
 ## Install and Configure the LES Monitoring App
 
-Download the LES Monitoring app and install the LPKG file by copying it into the `Liferay Home/deploy` folder. If Liferay DXP is running, you may be prompted to restart your server. Alternatively, you can also place the LPKG file into the `Liferay Home/marketplace` folder while Liferay is not running.
+Download the LES Monitoring app and install the LPKG file by copying it into the `[Liferay Home]/deploy` folder. If Liferay DXP is running, you may be prompted to restart your server. Alternatively, you can also place the LPKG file into the `[Liferay Home]/marketplace` folder while Liferay is not running.
 
-1. Once the connector is installed and Kibana and Elasticsearch are securely configured, create a [configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named
+1. Once the connector is installed and Kibana and Elasticsearch are securely configured, create a [configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config`.
 
-   ```bash
-   com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config
-   ```
-
-   In Liferay DXP 7.2, name the file
-
-   ```bash
-   com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config
-   ```
+   In Liferay DXP 7.2, name the file `com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config`
 
 1. Place these settings in the `.config` file:
 
@@ -148,9 +140,9 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
 
 1. Because you're using the Monitoring portlet in Liferay as a proxy to Kibana's UI and you are using a self-signed certificate, you must configure the application server's startup JVM parameters to trust Kibana's certificate.
 
-   One approach is to add the trustore path, password and type to your application server's startup JVM parameters. Here are example truststore and path parameters for appending to a Tomcat server's `CATALINA_OPTS`:
+   One approach is to add the truststore path, password and type to your application server's startup JVM parameters. Here are example truststore and path parameters for appending to a Tomcat server's `CATALINA_OPTS`:
 
-    ```properties
+    ```bash
     -Djavax.net.ssl.trustStore=/path/to/elastic-nodes.p12 -Djavax.net.ssl.trustStorePassword=liferay -Djavax.net.ssl.trustStoreType=pkcs12
     ```
 
@@ -158,12 +150,12 @@ Restart Liferay and Kibana.
 
 ## Monitoring in Liferay
 
-Once Kibana and LES Monitoring are successfully installed and configured and all the
+Once you have Kibana and LES Monitoring installed, configured, and all the
 servers are running, add the Elasticsearch Monitoring widget to a page:
 
 1. Open the *Fragments and Widgets* menu on a Content Page, or the Add Widgets menu on a Widget Page.
 
-1. Use the widget search bar to search for *monitoring* and drag the *Elasticsearch Monitoring* widget from the Search category onto the page If on Liferay DXP 7.2, the widget is called *X-Pack Monitoring*.
+1. Use the widget search bar to search for *monitoring* and drag the *Elasticsearch Monitoring* widget from the Search category onto the page. If on Liferay DXP 7.2, the widget is called *X-Pack Monitoring*.
 
 > For more information, see the related Elasticsearch documentation:
 > * [Monitoring a cluster](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/es-monitoring.html)
@@ -171,7 +163,7 @@ servers are running, add the Elasticsearch Monitoring widget to a page:
 
 ## Example Kibana Configuration
 
-Here's the complete `kibana.yml` demonstrated in this article:
+Here's the complete `kibana.yml` demonstrated above:
 
 ```yaml
 # X-Pack Security enabled (Basic Auth)
