@@ -17,7 +17,7 @@ Detailed installation and usage instructions are available in the article for ea
 
 -  :doc:`/using-search/liferay-enterprise-search/cross_cluster_replication`
 -  :doc:`/using-search/liferay-enterprise-search/learning-to-rank`
--  Monitoring Elasticsearch
+-  :doc:`/using-search/liferay-enterprise-search/monitoring-elasticsearch`
 -  `Securing Elasticsearch <./installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md>`__ [Free without LES for Liferay CE and DXP with Elasticsearch 7] 
 
 .. important::

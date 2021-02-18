@@ -210,6 +210,6 @@ server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
 ## Related Topics
 
 * [Securing Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)
-* [Cross-Cluster Replication](./cross_cluster_replication.rst)
-* [Search Tuning](../search_administration_and_tuning.rst)
-* [Liferay Installation and Upgrades](../../installation_and_upgrades.rst)
+* [Cross-Cluster Replication](./cross_cluster_replication.html)
+* [Search Tuning](../search_administration_and_tuning.html)
+* [Liferay Installation and Upgrades](../../installation_and_upgrades.html)
