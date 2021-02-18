@@ -1,6 +1,6 @@
 # IBM Cloud Object Storage
 
-IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) is a cloud-based storage solution that DXP’s IBM Cloud Object Storage Store uses to seamlessly store files to the cloud. It's implemented using the S3 compatibility layer so that it uses the same configuration as the AWS S3 store. Once you have an IBM Cloud Object Storage account and have created a bucket, you're ready to configure your instance's *S3 Store*.
+Liferay DXP implements IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) store with the S3 compatibility layer so that it uses the same configuration as the AWS S3 store. Once you've set up your IBM account and have created a bucket, you're ready to configure your instance's S3 Store.
 
 ## Configuring the Store
 
