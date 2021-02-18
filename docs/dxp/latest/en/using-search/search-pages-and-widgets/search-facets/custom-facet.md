@@ -46,7 +46,7 @@ Advanced Configuration contains additional options:
 To use the Custom Facet, you must know which non-analyzed keyword field to use in the configuration. 
 
 ```tip::
-   Elasticsearch supports indexing fields in multiple ways. Some text fields can be used as keyword fields if they're nested ``raw`` `multi-fields <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/multi-fields.html>`__ in the mapping, or if the filed is mapped in an additional separate field mapping as ``fieldName_sortable`` (as a ``keyword``).
+   Elasticsearch supports indexing fields in multiple ways. Some text fields can be used as keyword fields if they're nested ``raw`` `multi-fields <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/multi-fields.html>`__ in the mapping, or if the field is mapped in an additional separate field mapping as ``fieldName_sortable`` (as a ``keyword``). See the example below on creating facets for Custom Fields, as it leverages the Elasticsearch multi-field concept.
 ```
 
 To browse the entire list of available fields, inspect the field mappings from *Control Panel* &rarr; *Configuration* &rarr; *Search* (click the *Field Mappings* tab). Here you'll see numerous indexes. The Liferay Assets you're likely interested in are indexed to the [company index](../../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md#liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster), which looks is named similarly to `liferay-20101` (`20101` is the Company ID).
@@ -93,9 +93,51 @@ Here's a snippet of output from the Elasticsearch example:
 },
 ```
 
+```tip::
+   ```
+
 ## Example: Creating a Facet for a Custom Field
 
-When you create a [Custom Field]()
+When you create a [Custom Field](./../../../system-administration/configuring-liferay/adding-custom-fields.md), it's _Searchable as Keyword_ by default. After re-indexing you can see the field. The field itself is a text field, called something like `expando__keyword__custom_fields__Enabled` (if you name the field _Enabled_ in the Custom Fields UI), but it contains a nested field mapping for creating a separate `raw` keyword field. Here's the query you can run in Kibana to inspect the text field's mapping (replace the Company Id in the index name):
+
+```bash 
+GET /liferay-20097/_mapping/field/expando__keyword__custom_fields__Enabled
+```
+
+The returned JSON looks like 
+
+```json
+{
+  "liferay-20097" : {
+    "mappings" : {
+      "expando__keyword__custom_fields__Enabled" : {
+        "full_name" : "expando__keyword__custom_fields__Enabled",
+        "mapping" : {
+          "expando__keyword__custom_fields__Enabled" : {
+            "type" : "text",
+            "store" : true,
+            "fields" : {
+              "raw" : {
+                "type" : "keyword"
+              }
+            },
+            "analyzer" : "keyword_lowercase"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+To see all the raw fields, query the index for `*.raw` fields:
+
+```bash 
+GET /liferay-20097/_mapping/field/*.raw
+```
+
+
+Setting a custom field to searchable means that the value of the field is indexed when the entity (such as User) is modified. Only java.lang.String fields can be made searchable. Note that when an field is newly made searchable, the indexes must be updated before the data is available to search. 
 
 
 Use Custom Fields to aggregate facet terms by shared non-analyzed keyword field values.
