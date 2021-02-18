@@ -6,21 +6,29 @@ The Liferay service has a [range of environment variables](#environoment-variabl
 
 You can use environment variables in the Liferay service to override configurations normally defined in portal properties files.
 
+Check the [portal properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) to find the environment variable name ("Env") for each corresponding portal property. For example, you can override the portal property `company.default.time.zone` with the environment variable, `LIFERAY_COMPANY_PERIOD_DEFAULT_PERIOD_TIME_PERIOD_ZONE`.
+
+See [Defining Environment Variables](../reference/defining-environment-variables.md) for more information on adding them to the Liferay service.
+
+### Converting Portal Property Names to Environment Variables
+
+If the [portal properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) does not have a direct translation of a portal property, then you can also convert the property to an overriding environment variable yourself.
+
 Environment variables overriding portal properties:
 
 * Must not start with a digit.
 
 * Must have the prefix `LIFERAY_` added in front of them.
 
-* Must only consist of uppercase letters, digits, and the underscore (`_`) character. Any character that does not fit this constraint must be converted to its corresponding [`CharPool`](https://docs.liferay.com/dxp/digital-enterprise/7.0-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/CharPool.html) or [Unicode](https://unicode-table.com/en/) endpoint.
+* Must only consist of uppercase letters, digits, and the underscore (`_`) character. Any character that does not fit this constraint must be converted to its corresponding [`CharPool`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/modules/core/petra/com.liferay.petra.string/) or [Unicode](https://unicode-table.com/en/) endpoint (converted to decimal).
 
 To meet these requirements, you must convert any portal properties to this format. This allows DXP Cloud to properly recognize the full name and match it to its corresponding portal property.
 
-Use these steps to do convert a portal property name to an environment variable name:
+Use these steps to convert a portal property name to an environment variable name:
 
-1. Convert any characters contained in the name that are not a letter, digit or underscore (including periods) to a corresponding endpoint surrounded with underscores. Convert using either Liferay's [set of `CharPool` constants](https://docs.liferay.com/dxp/digital-enterprise/7.0-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/CharPool.html) (more readable but longer names), or the [Unicode endpoint](https://unicode-table.com/en/) (converted to decimal), and surround them in underscores.
+1. Convert any characters contained in the name that are not a letter, digit or underscore (including periods) to a corresponding [`CharPool`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/modules/core/petra/com.liferay.petra.string/) or Unicode endpoint, and surround them in underscores.
 
-    For example, convert the period character (`.`) to `_PERIOD_` or `_46_`.
+    For example, convert the period character (`.`) to `_PERIOD_`, or `_46_` (if using Unicode).
 
 1. Add the prefix `LIFERAY_` to the start of the variable name.
 
