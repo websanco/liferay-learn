@@ -93,10 +93,7 @@ Here's a snippet of output from the Elasticsearch example:
 },
 ```
 
-```tip::
-   ```
-
-## Example: Creating a Facet for a Custom Field
+## Accessing Custom Field Labels 
 
 When you create a [Custom Field](./../../../system-administration/configuring-liferay/adding-custom-fields.md), it's _Searchable as Keyword_ by default. After re-indexing you can see the field. The field itself is a text field, called something like `expando__keyword__custom_fields__Enabled` (if you name the field _Enabled_ in the Custom Fields UI), but it contains a nested field mapping for creating a separate `raw` keyword field. Here's the query you can run in Kibana to inspect the text field's mapping (replace the Company Id in the index name):
 
@@ -104,7 +101,7 @@ When you create a [Custom Field](./../../../system-administration/configuring-li
 GET /liferay-20097/_mapping/field/expando__keyword__custom_fields__Enabled
 ```
 
-The returned JSON looks like 
+JSON is returned: 
 
 ```json
 {
@@ -136,8 +133,51 @@ To see all the raw fields, query the index for `*.raw` fields:
 GET /liferay-20097/_mapping/field/*.raw
 ```
 
+Setting a custom field to searchable means that the value of the field is indexed when the entity is modified, or when a re-index is triggered. Only `java.lang.String` fields can be made searchable.
 
-Setting a custom field to searchable means that the value of the field is indexed when the entity (such as User) is modified. Only java.lang.String fields can be made searchable. Note that when an field is newly made searchable, the indexes must be updated before the data is available to search. 
+## Accessing Nested DDM Fields
 
+As documented in the [7.3 Breaking Changes document](../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document), the way Liferay Dynamic Data Mapping framework indexes some fields has changed. This change affects Liferay 7.3 and Liferay 7.2 SP3/FP8+. On the latest Fix Pack and GA release of 7.3, this change is accounted for in Liferay's Search API and no configuration updates are necessary. Therefore, if you have Custom Facet widgets that relied on fields named `ddm__text__*` or `ddm__keyword__*` that were at the root of the Elasticsearch document, continue to use these fields as usual in your Custom Filter's _Aggregation Field_ configuration, even though they're no longer at the root of the document.
 
-Use Custom Fields to aggregate facet terms by shared non-analyzed keyword field values.
+To find DDM fields in existing documents in the index,
+
+```json
+GET liferay-20097/_search
+{
+  "query": {
+    "nested": {
+      "path": "ddmFieldArray",
+      "query": {
+        "wildcard":  { "ddmFieldArray.ddmFieldName": "ddm__keyword*" }
+      }
+    }
+  }
+}
+
+```
+The document returned will have a `ddmFieldArray` object with nested content:
+
+```json
+ "ddmFieldArray" : [
+    {
+      "ddmFieldName" : "ddm__keyword__40806__Textb5mx_en_US",
+      "ddmValueFieldName" : "ddmFieldValueKeyword_en_US",
+      "ddmFieldValueKeyword_en_US_String_sortable" : "some text has been entered",
+      "ddmFieldValueKeyword_en_US" : "some text has been entered"
+    },
+    {
+      "ddmFieldName" : "ddm__keyword__40806__Selectjdw0_en_US",
+      "ddmValueFieldName" : "ddmFieldValueKeyword_en_US",
+      "ddmFieldValueKeyword_en_US_String_sortable" : "option 3",
+      "ddmFieldValueKeyword_en_US" : "value 3"
+    },
+    {
+      "ddmFieldName" : "ddm__keyword__40806__Boolean15cg_en_US",
+      "ddmValueFieldName" : "ddmFieldValueKeyword_en_US",
+      "ddmFieldValueKeyword_en_US" : "true",
+      "ddmFieldValueKeyword_en_US_String_sortable" : "true"
+    }
+  ],
+```
+
+To use one of these fields in a Custom Facet, enter the `ddmFieldName` value (e.g., `ddm__keyword__40806__Testb5mx_en_US`) in the _Aggregation Field_ of the Custom Facet configuration.

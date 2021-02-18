@@ -173,3 +173,7 @@ The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please 
 ## Upgrading to DXP 7.3
 
 Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult the [upgrade documentation](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md) for important information to assist your upgrade journey.
+
+## Related Topics
+
+[7.3 Breaking Changes: DDM Field Indexing](../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document)
