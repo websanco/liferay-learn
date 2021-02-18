@@ -12,7 +12,7 @@ Follow these steps to set the price type for a Price List:
 
 1. In the *Details* tab, use the *Price Type* drop-down menu to select either *Net Price* or *Gross Price*.
 
-    ![Select either Gross or Net Price.](./setting-gross-and-net-price/images/01.png)
+    ![Select either Gross or Net Price.](./using-gross-and-net-price-types/images/01.png)
 
 1. Click on *Publish* when finished.
 
@@ -30,7 +30,7 @@ You can also set the price type for a Channel. To do so, follow these step:
 
 1. Click on *Save* when finished.
 
-    ![Select the desired price types, and click on Save when finished.](./setting-gross-and-net-price/images/03.png)
+    ![Select the desired price types, and click on Save when finished.](./using-gross-and-net-price-types/images/03.png)
 
 ## Understanding Gross and Net Price Calculations
 
