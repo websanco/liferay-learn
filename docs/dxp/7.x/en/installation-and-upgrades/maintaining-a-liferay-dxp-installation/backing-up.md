@@ -20,7 +20,7 @@ The Liferay Home folder is important to back up because it contains the followin
 
 * **Portal properties and system properties:** The Liferay Home folder stores DXP [portal properties files](../reference/portal-properties.md) (e.g., `portal-ext.properties`, `portal-setup-wizard.properties`, etc.) and DXP [system properties files](../reference/system-properties.md) (e.g., `system-ext.properties`).
 
-* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Assets uploaded to the [Documents and Media repository](https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration) are also stored in the `/data` folder, if you're using the default storage configuration (File System store or the Advanced File System store).
+* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Note, the `/data` folder is the default default storage configuration location for the Advanced File System Store and the Simple File System Store [file storage types](../../system-administration/file-storage/configuring-file-storage.md).
 
 * **`/license` folder (Subscription):** Holds the activation key for the Liferay Enterprise Subscription.
 
@@ -53,6 +53,10 @@ mysqldump --databases my-liferay-database > my-liferay-database-backup.sql
 ```
 
 This file can then be backed up. On restoring the database you can import this file into the database to recreate the database state to that of the time you exported the database.
+
+## File Store
+
+Back up your [file store (Document Library)](../../system-administration/file-storage/configuring-file-storage.md). When you upgrade to a new version of DXP, you must either refer to your existing Document Library or copy the Document Library to your new DXP environment.
 
 ## Search Indexes
 

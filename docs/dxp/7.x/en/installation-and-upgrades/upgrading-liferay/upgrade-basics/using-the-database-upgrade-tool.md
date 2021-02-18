@@ -20,6 +20,8 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
+1. Set up the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by copying it from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the new installation and or configuring the new installation to use it via a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
+
 1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.

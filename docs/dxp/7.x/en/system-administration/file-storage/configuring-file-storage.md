@@ -6,6 +6,10 @@ Widgets that store files (for example, [Documents and Media](../../../collaborat
    If you are going to production, we highly recommend reviewing the various File Store configuration options and choosing the one that best fits your needs, **before** going live. Doing so can avoid painful file store migrations later in a project's life.
 ```
 
+```note::
+   The file store is also known as the Document Library.
+```
+
 ## Configuring Advanced File System Store
 
 The Advanced File System Store programmatically creates a folder structure that can expand to millions of files, by alphabetically nesting the files in folders. This allows more files to be stored and helps to avoid the limitation that some operating system have on the number of files that can be stored per folder. Storing fewer files per folder also improves file lookup performance.
@@ -20,7 +24,7 @@ To use the Advanced File System store method, following these steps:
     dl.store.impl=com.liferay.portal.store.file.system.AdvancedFileSystemStore
     ```
 
-1. Restart DXP.
+1. Restart Liferay.
 
 1. In the Control Panel, navigate to _Configuration_ &rarr; _System Settings_ &rarr; _File Storage_.
 
@@ -30,7 +34,7 @@ To use the Advanced File System store method, following these steps:
 
 1. Click _Save_.
 
-DXP is now saving files using Advanced File System Store.
+Liferay is now saving files using Advanced File System Store.
 
 ```important::
    Optionally `enable automatic antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
@@ -44,7 +48,7 @@ In a [clustered environment](../../../installation-and-upgrades/setting-up-lifer
 
 ### Other File Storage Methods
 
-Liferay DXP also ships with several other file storage methods that can be configured, depending on your project's needs.
+There are other built-in file storage methods available.
 
 * [Simple File System Store](./other-file-store-types/simple-file-system-store.md) uses the file system (local or a mounted share) to store files. This is the *default* file store.
 
