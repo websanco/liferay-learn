@@ -8,10 +8,12 @@ With Page Versioning enabled, you and your team can work in parallel on multiple
 
 You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
 
-* [Types of Variations](#types-of-variations)
-* [Creating Variations](#creating-variations)
-* [Merging Variations](#merging-variations)
-* [Managing Variation Permissions](#managing-variation-permissions)
+- [Page Versioning](#page-versioning)
+  - [Types of Variations](#types-of-variations)
+  - [Creating Variations](#creating-variations)
+  - [Merging Variations](#merging-variations)
+  - [Managing Variation Permissions](#managing-variation-permissions)
+  - [Additional Information](#additional-information)
 
 ## Types of Variations
 
@@ -21,9 +23,9 @@ When you enable *Page versioning* for a Page set, you can create and manage two 
 
 * **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations on Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
-```tip::
-   There are differences in the way you work with Widget Pages and Content Pages in a Staged site. To simplify your workflow with Staging, use either Widget Pages or Content Pages.
-```
+   ```tip::
+      Page variations in Content Pages use `Experiences <../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md>`_ and do not require the Staging tool. 
+   ```
 
 Both variation types only affect Pages and do not affect your Site's content, since all variations in your staging Site share the same content. That said, each variation can use and configure the same content and applications in different ways, and each variation of a Page set can have different Pages.
 
@@ -37,7 +39,7 @@ However, modifying the *layout type* or *friendly URL* of a Page does affect eve
 
 Follow these steps to create new variations of a Page or Page set:
 
-1. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar, and select *Site Pages Variation* (for Widget Pages or Content Pages) or *Page Variations* (for Widget Pages only.)
+1. Click on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) in the Staging bar, and select *Site Pages Variation* (for Widget Pages or Content Pages) or *Page Variations* (for Widget Pages only).
 
    ![Click on the Actions button in the Staging bar and select the variation type you want to create.](./page-versioning/images/03.png)
 
@@ -65,7 +67,7 @@ Follow these steps to create new variations of a Page or Page set:
 
 1. Click on *Add* to create your new variation.
 
-Once created, you can switch between each version of a Page or Page set via the drop-down menus in the Staging bar. The *Page Variations* drop-down menu is available for Widget Pages only. For Content Pages, you create different versions usig [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). For more information, see [Staging UI Reference](./staging-ui-reference.md).
+Once created, you can switch between each version of a Page or Page set via the drop-down menus in the Staging bar. The *Page Variations* drop-down menu is available for Widget Pages only. For Content Pages, you create different versions using [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). For more information, see [Staging UI Reference](./staging-ui-reference.md).
 
 ![You can switch between each version of a Page or Page set via the drop-down menus in the Staging bar](./page-versioning/images/02.png)
 
