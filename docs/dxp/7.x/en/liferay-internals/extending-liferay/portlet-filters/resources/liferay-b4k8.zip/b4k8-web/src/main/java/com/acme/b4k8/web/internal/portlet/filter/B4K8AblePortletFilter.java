@@ -1,7 +1,8 @@
-package com.acme.b4k8.encoding.web.internal.portlet.filter;
+package com.acme.b4k8.web.internal.portlet.filter;
 
+import com.acme.b4k8.constants.B4K8PortletKeys;
 import com.acme.b4k8.model.Person;
-import com.acme.b4k8.web.internal.portlet.B4K8Portlet;
+import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
 
 import java.io.IOException;
 
@@ -20,14 +21,13 @@ import javax.portlet.filter.RenderFilter;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
-		"javax.portlet.name=" + B4K8Portlet.B4K8_PORTLET_NAME,
+		"javax.portlet.name=" + B4K8PortletKeys.B4K8,
 		"service.ranking:Integer=1"
 	},
 	service = PortletFilter.class
 )
-public class EncodingPersonEmailsPortletFilter implements RenderFilter {
+public class B4K8AblePortletFilter implements RenderFilter {
 
 	@Override
 	public void destroy() {
@@ -39,10 +39,10 @@ public class EncodingPersonEmailsPortletFilter implements RenderFilter {
 		throws IOException, PortletException {
 
 		Optional.ofNullable(
-			(List<Person>)request.getAttribute(B4K8Portlet.MEMBERLIST_ATTRIBUTE)
+			(List<Person>)request.getAttribute(B4K8WebConstants.MEMBERS)
 		).ifPresent(
 			personList -> request.setAttribute(
-				B4K8Portlet.MEMBERLIST_ATTRIBUTE, _obfuscateEmails(personList))
+				B4K8WebConstants.MEMBERS, _obfuscateEmails(personList))
 		);
 
 		chain.doFilter(request, response);
