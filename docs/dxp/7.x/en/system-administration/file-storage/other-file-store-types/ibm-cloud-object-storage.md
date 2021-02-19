@@ -1,12 +1,10 @@
 # IBM Cloud Object Storage
 
-Liferay DXP implements IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) store with the S3 compatibility layer so that it uses the same configuration as the AWS S3 store. Once you've set up your IBM account and have created a bucket, you're ready to configure your instance's S3 Store.
+Liferay DXP implements IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) store with the S3 compatibility layer so that it uses the same configuration as the AWS S3 store. Once you've set up your IBM account and created a bucket, you're ready to configure your instance's S3 Store.
 
 ## Configuring the Store
 
-Follow these steps to configure the store:
-
-1. Open the *Control Panel* tab in the *Global Menu*, and go to *System Settings* &rarr; *File Storage* &rarr; *S3 Store*.
+1. Open the *Control Panel* tab in the Global Menu and go to *System Settings* &rarr; *File Storage* &rarr; *S3 Store*.
 
 1. At minimum, fill in the following configuration values:
 
@@ -20,11 +18,11 @@ Follow these steps to configure the store:
       Currently, the store only supports *HMAC credentials*. See official `IBM Cloud Object Storage documentation <https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main>`_ for more information.
    ```
 
-1. Click on *Save* when finished.
+1. Click *Save* when finished.
 
-Once you have the System Settings configuration in place, you'll need to set the IBM Cloud Object Storage store as default. To do this, set the following property in the `portal-ext.properties` file:
+Once you have the System Settings configuration in place, you must set the IBM Cloud Object Storage store as default. To do this, set the following property in the `portal-ext.properties` file:
 
-```
+```properties
 dl.store.impl=com.liferay.portal.store.s3.S3Store
 ```
 
@@ -34,9 +32,9 @@ To use the IBM Cloud Object Storage store in a clustered environment, the config
 
 ## Database Rollback Limitation
 
-If a database transaction rollback occurs in a Document Library, the transaction’s file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except DBStore are vulnerable to this limitation.
+If a database transaction rollback occurs in a Document Library, the transaction's file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All DXP stores except DBStore are vulnerable to this limitation.
 
-Please consult official IBM Cloud Object Storage documentation for additional details on using IBM’s service.
+Please consult official IBM Cloud Object Storage documentation for additional details on using IBM's service.
 
 ## Additional Information
 
