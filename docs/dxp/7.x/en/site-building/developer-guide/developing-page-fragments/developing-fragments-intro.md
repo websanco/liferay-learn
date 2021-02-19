@@ -24,7 +24,7 @@ Fragments can be enhanced using the below resources, making them much more power
 * [FreeMarker](https://freemarker.apache.org/): FreeMarker is a templating language that enhances HTML with variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
 
 ```important::
-   You must grant permission to Create or Edit templates in FreeMarker to trusted users only. See `Assigning Permissions to Web Content Structures and Templates <../../assigning-permissions-to-structures-and-templates.md>`_ for information about Web Content Templates security.
+   Grant permission to Create or Edit templates in FreeMarker to trusted users only. See `Assigning Permissions to Web Content Structures and Templates <../../assigning-permissions-to-structures-and-templates.md>`_ for information about Web Content Templates security.
 ```
 
 ## Best Practices

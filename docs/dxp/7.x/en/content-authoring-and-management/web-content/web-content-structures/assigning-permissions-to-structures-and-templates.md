@@ -20,10 +20,10 @@ Consider the following information when you assign permissions to Structures and
 Web Content Templates use the FreeMarker Template Language (FTL) by default. Users with permission to Create or Edit templates using FreeMarker may execute arbitrary code on your DXP instance and access sensitive information, including information about other users.
 
 ```important::
-   You must grant permission to Create or Edit templates in FreeMarker to trusted users only.
+   Grant permission to Create or Edit templates in FreeMarker to trusted users only.
 ```
 
-You can disable template creation for all users. Once disabled, Users can no longer access creation options for Web Content Templates. This action does not affect existing templates.
+You can disable template creation completely. Once disabled, Users can no longer access creation options for Web Content Templates. This action does not affect existing templates.
 
 1. Open the *Control Panel* tab in the Global Menu.
 1. Go to *Configuration* → *System Settings* → *Content and Data* → *Dynamic Data Mapping*.
