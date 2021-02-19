@@ -12,6 +12,9 @@ Contents
    optimization
    apis
    administration
+   workspace_data
+   workspace_settings
+   administration
    troubleshooting
 
 Indices and tables
