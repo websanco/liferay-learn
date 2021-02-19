@@ -38,7 +38,7 @@ If you do not meet the requirements and are not able to upgrade to the minimum f
 When the connection is successful, the message, `Your DXP instance is connected to Analytics Cloud.` is shown.
 
 ```note::
-   See `Do Not Track Feature <../../administration/data-control-and-privacy.md#do-not-track-feature>`_ to learn more about suppressing analytics data.
+   See `Do Not Track Feature <../../workspace-data/data-control-and-privacy.md#do-not-track-feature>`_ to learn more about suppressing analytics data.
 ```
 
 ![A success message confirms correctly configuring a connection between DXP and Analytics Cloud.](connecting-liferay-dxp-to-analytics-cloud/images/04.png)
