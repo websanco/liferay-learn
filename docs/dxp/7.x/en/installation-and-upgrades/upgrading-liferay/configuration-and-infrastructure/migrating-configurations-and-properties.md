@@ -21,7 +21,7 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your backup.
 
-1. Set up the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by copying it from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the new installation and or configuring the new installation to use it via a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
+1. Set up the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by copying it from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md) to the new installation and or configuring the new installation to use it via a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files).
 
 ## Updating Settings For the Database Upgrade
 

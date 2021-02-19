@@ -20,7 +20,7 @@ The Liferay Home folder is important to back up because it contains the followin
 
 * **Portal properties and system properties:** The Liferay Home folder stores DXP [portal properties files](../reference/portal-properties.md) (e.g., `portal-ext.properties`, `portal-setup-wizard.properties`, etc.) and DXP [system properties files](../reference/system-properties.md) (e.g., `system-ext.properties`).
 
-* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Note, the `/data/document_library` folder is the default storage configuration location for the Simple File System Store. The Advanced File System Store requires you to define the storage location [file storage types](../../system-administration/file-storage/configuring-file-storage.md).
+* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Note, the `/data/document_library` folder is the default storage configuration location for the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md). The [Advanced File System Store](../../system-administration/file-storage/configuring-file-storage.md) requires setting the storage location explicitly.
 
 * **`/license` folder (Subscription):** Holds the activation key for the Liferay Enterprise Subscription.
 
@@ -35,7 +35,7 @@ The Liferay Home folder is important to back up because it contains the followin
 Using a source control repository such as Git, BitBucket, Subversion, or CVS, is a great way to back up your Liferay Home folder.
 
 ```important::
-   If you configured your `Documents and Media repository <https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration>`_ to a location other than the default location, back up that location.
+   If you configured your File Store (Document Library) to a location other than a ``[Liferay Home]/data`` subfolder, back up that location.
 ```
 
 ## Application Server

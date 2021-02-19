@@ -45,7 +45,7 @@ Here are the steps for upgrading with a Docker image:
 
     * `/log/*`: Log files.
 
-    * `/osgi/configs/*.config`: [OSGi configuration files](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
+    * `/osgi/configs/*.config`: [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md).
 
     * `portal-*.properties`: [Portal properties](../../reference/portal-properties.md) files, such as `portal-ext.properties`.
 
@@ -53,7 +53,15 @@ Here are the steps for upgrading with a Docker image:
 
     * `web.xml`: Portal web application descriptor.
 
-1. Configure the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by exporting it's settings to a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) to use in your `new-version/osgi` folder. This is only required when using Advanced File System Store or when you modified the storage location.
+1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or if you're using [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your `new-version/osgi/configs` folder.
+
+    ```important::
+       If you're using `Advanced File System Store <../../../system-administration/file-storage/configuring-file-storage.md>`_, you must configure it with a ``.config`` file in the new installation before upgrading the database.
+
+       Here's an example  ``com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config`` file with the required ``rootDir`` parameter:
+
+       ``rootDir="data/document_library"``
+    ```
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
