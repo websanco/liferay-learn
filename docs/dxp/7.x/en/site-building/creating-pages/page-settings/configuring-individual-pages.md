@@ -66,7 +66,7 @@ You can also access a CSS editor where you can add custom CSS code to the page. 
 
 ### Advanced Settings
 
-Here you can access additional settings to customize your page's content and features, including query strings, mobile device rules, custom fields, and embedded widgets.
+Here you can access additional settings to customize your page's content and features, including query strings, [mobile device rules](../../optimizing-sites/building-a-responsive-site/creating-mobile-device-rules.md), custom fields, and embedded widgets.
 
 ```note::
    While Widget Pages include the Advanced tab here, Content Pages include these settings in the Edit sidebar menu under *Look and Feel*.

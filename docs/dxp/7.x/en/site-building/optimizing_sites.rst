@@ -5,6 +5,7 @@ Optimizing Sites
    :maxdepth: 3
 
    optimizing-sites/ab_testing.rst
+   optimizing-sites/building_a_responsive_site.rst
 
 Search Engine Optimization
 --------------------------
@@ -19,8 +20,15 @@ Search Engine Optimization
 
 A/B Testing
 -----------
+
 -  :doc:`/site-building/optimizing-sites/ab-testing/ab-testing`
 -  :doc:`/site-building/optimizing-sites/ab-testing/verifying-ab-test-requirements`
 -  :doc:`/site-building/optimizing-sites/ab-testing/creating-ab-tests`
 -  :doc:`/site-building/optimizing-sites/ab-testing/running-and-monitoring-ab-tests`
 -  :doc:`/site-building/optimizing-sites/ab-testing/reviewing-ab-test-results-and-publishing-test-variants`
+
+Building a Responsive Site
+--------------------------
+
+-  :doc:`/site-building/optimizing-sites/building-a-responsive-site/building-a-responsive-site`
+-  :doc:`/site-building/optimizing-sites/building-a-responsive-site/creating-mobile-device-rules`

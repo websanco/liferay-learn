@@ -11,9 +11,9 @@ A Mobile Device Family is a group of mobile device actions based on the type of 
 To create a Mobile Device Family,
 
 1. Navigate to the desired Site. 
-1. Click the (![Menu](../../images/icon-menu.png)) icon.
+1. Click the (![Menu](../../../images/icon-menu.png)) icon.
 1. Go to *Configuration* &rarr; *Mobile Device Families*.
-1. Click *Add* button (![Add Family](../../images/icon-add.png)) to add a *New Device Family*.
+1. Click *Add* button (![Add Family](../../../images/icon-add.png)) to add a *New Device Family*.
 1. Enter a *Name* and *Description*.
 1. Click *Save*.
 
@@ -21,12 +21,12 @@ The Mobile Device Families page lists the defined families.
 
 ![Create a Mobile Device Family so you can create rules.](./creating-mobile-device-rules/images/01.png)
 
-To add families for all Sites, go to the Global site by clicking the Site Selector (![Go to Site](../../images/icon-compass.png)) &rarr; *My Sites* &rarr; *Global* and then add a new device family.
+To add families for all Sites, go to the Global site by clicking the Site Selector (![Go to Site](../../../images/icon-compass.png)) &rarr; *My Sites* &rarr; *Global* and then add a new device family.
 
 The rules defined for a family, along with the priorities of the families selected for a particular Site or page, determine which family's actions are applied to a given request. New rules can specify an operating system, rule type, physical screen size, and screen resolution. You can add as many rules to a family as you need in order to classify the devices on which you'd like to take actions.
 
 1. In the *Mobile Device Families* page, click on the name of the Mobile Device Family. The Classification Rules page appears.
-1. Click the *Add* button (![Add Classification Rule](../../images/icon-add.png)) to add a new rule.
+1. Click the *Add* button (![Add Classification Rule](../../../images/icon-add.png)) to add a new rule.
 1. Enter a *Name* and *Description*.
 1. Select the classifications you want for this rule from *Operating System and Type*, *Physical Screen Size*, and *Screen Resolution*.
 
@@ -39,7 +39,7 @@ The rules defined for a family, along with the priorities of the families select
 You can add families to a Site, individual page, or page set from their respective configuration pages. To do it for a Page Set,
 
 1. Go to *Site Builder* &rarr; *Pages* in your Site.
-1. Click the (![Configure](../../images/icon-cog.png)) icon for the Public Pages.
+1. Click the (![Configure](../../../images/icon-cog.png)) icon for the Public Pages.
 1. Click the *Advanced* tab.
 1. Expand the *Mobile Device Rules* section.
 1. Click *Select* to open the list of families.
@@ -56,7 +56,7 @@ You can configure each page to inherit the mobile device rules from the parent S
 To configure a mobile device rule for a specific page,
 
 1. Go to *Site Builder* &rarr; *Pages* in your Site.
-1. Click on the ![Options](../../images/icon-options.png) icon next to the desired page then *Configure*.
+1. Click on the ![Options](../../../images/icon-options.png) icon next to the desired page then *Configure*.
 1. Click the *Advanced* tab.
 1. Expand the *Mobile Device Rules* section.
 1. Slide the toggle to *NO* to choose a different mobile device rule from the parent site.
@@ -81,10 +81,10 @@ To add actions to a Mobile Device Rule on a Site,
 
 1. Open the *Site Administration* menu for the Liferay Guest Site.
 1. Click *Site Builder* &rarr; *Pages*.
-1. Click the (![Gear icon](../../images/icon-cog.png)) icon next to *Public Pages*.
+1. Click the (![Gear icon](../../../images/icon-cog.png)) icon next to *Public Pages*.
 1. Click the *Advanced* tab.
 1. Expand the *Mobile Device Rules* section.
-1. Click *Options* (![Options](../../images/icon-actions.png)) &rarr; *Manage Actions* next to the device family that you wish to add an action for.
+1. Click *Options* (![Options](../../../images/icon-actions.png)) &rarr; *Manage Actions* next to the device family that you wish to add an action for.
 1. Click *Add Action*.
 1. Enter a *Name* and *Description*.
 1. Select a *Type* (for example, *Redirect to Site*). See the [Mobile Device Actions Reference](#mobile-device-actions-reference) next to learn about the Types.
