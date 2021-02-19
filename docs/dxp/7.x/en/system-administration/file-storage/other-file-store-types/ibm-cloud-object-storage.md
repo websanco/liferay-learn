@@ -9,10 +9,10 @@ Liferay DXP implements IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs
 1. At minimum, fill in the following configuration values:
 
    * **Bucket Name**: Set the bucket name used by S3 to store files.
-   * **Access Key**: Set the AWS account access key.
-   * **Secret Key**: Set the AWS account secret key.
+   * **Access Key**: Set the account access key.
+   * **Secret Key**: Set the account secret key.
    * **S3 Endpoint**: Set the default endpoint to use to connect to S3.
-   * **S3 Region**: Set the Amazon S3 Region, which represents a geographical region where Amazon S3 stores the user-created buckets.
+   * **S3 Region**: Set the S3 Region, which represents a geographical region where S3 stores the user-created buckets.
 
    ```important::
       Currently, the store only supports *HMAC credentials*. See official `IBM Cloud Object Storage documentation <https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main>`_ for more information.
