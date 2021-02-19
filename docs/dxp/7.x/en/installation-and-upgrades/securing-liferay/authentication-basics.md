@@ -33,7 +33,7 @@ Users can be configured to log in using one of three authentication types:
    Only one authentication type can be used at a time.
 ```
 
-Regardless of the authentication type, users must always enter a password. You can create [Password Policies](../../users-and-permissions/devops/README.md) to define password length, password format, expiration periods, and more.
+Regardless of the authentication type, users must always enter a password. You can create [Password Policies](../../users-and-permissions/devops/configuring-a-password-policy.md) to define password length, password format, expiration periods, and more.
 
 _Authentication Type_ can be configured through the Control Panel or a properties file.
 
@@ -97,3 +97,4 @@ Prevent bots from creating and logging into accounts by enabling CAPTCHA or reCA
 
 * [Securing Liferay](./introduction-to-securing-liferay.md)
 * [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md)
+* [Configuring a Password Policy](../../users-and-permissions/devops/configuring-a-password-policy.md)

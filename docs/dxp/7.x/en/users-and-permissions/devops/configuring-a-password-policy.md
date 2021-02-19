@@ -40,3 +40,6 @@ Once you have created a new password policy, you need to assign members to it,
 
    Your Users or Organizations are now associated with your password policy.
 
+## Additional Information
+
+* [Authentication Basics](../../installation-and-upgrades/securing-liferay/authentication-basics.md)
