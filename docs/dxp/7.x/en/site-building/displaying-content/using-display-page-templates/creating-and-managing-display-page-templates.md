@@ -10,17 +10,15 @@ A Display Page Template specifies the layout and formatting for your content and
 
 ## Creating a Display Page Template
 
-Follow these steps to create a Display Page Template:
+1. Open the Product Menu and click *Design* &rarr; *Page Templates*.
 
-1. Open the Product Menu, and go to *Design* &rarr; *Page Templates*.
-
-1. Click on the *Display Page Templates* tab.
+1. Click the *Display Page Templates* tab.
 
    ![Go to Page Templates, and click on the Display Page Templates tab.](./creating-and-managing-display-page-templates/images/02.png)
 
-1. Click the *Add* button (![Add](./../../../images/icon-add.png)).
+1. Click *Add* (![Add](./../../../images/icon-add.png)).
 
-1. Enter a name for your template and select a content type and subtype, if applicable. Then, click on *Save*. This will redirect you to a new, blank Display Page template.
+1. Enter a name for your template and select a content type and subtype, if applicable. Then click *Save*. This redirects you to a new, blank Display Page template.
 
    ![Select the content type and subtype for your new template.](./creating-and-managing-display-page-templates/images/03.png)
 
@@ -34,7 +32,7 @@ Follow these steps to create a Display Page Template:
 
    See [Configuring SEO and Open Graph](./configuring-seo-and-open-graph.md) to learn about using these mapped structure fields when configuring SEO and Open Graph settings for your Display Page.
 
-1. When finished, click on *Publish* to save your work.
+1. When finished, click *Publish* to save your work.
 
 Now that your Display Page Template is created, you can [publish your content with it](./publishing-content-with-display-pages.md).
 
@@ -42,7 +40,7 @@ Now that your Display Page Template is created, you can [publish your content wi
 
 > Liferay 7.4+
 
-You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of the site content that is using a specific Display Page Template.
+You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of content that uses a specific Display Page Template.
 
 ```note::
    The *View Usages* option does not provide the usage of content assigned to the default Display Page Template.
@@ -50,16 +48,16 @@ You can manage the different Display Page Templates using the *Actions* menu (![
 
 ![Managing your Display Page Template using the Actions menu](./creating-and-managing-display-page-templates/images/06.png)
 
-Before you delete a Display Page Template in use by some of your site content, you must unassign the Display Page Template from the content using one of these options:
+Before you delete a Display Page Template in use by some of your content, you have two ways to unassign the Display Page Template from the content: 
 
-- Assign to Default --- Your content is unassigned from the current Display Page Template and assigned to the default Display Page Template for the content type and subtype (if applicable.)
-- Unassign --- Your content is not assigned to any Display Page Template.
+- Assign to Default: Your content is unassigned from the current Display Page Template and assigned to the default Display Page Template for the content type and subtype (if applicable.)
+- Unassign: Your content is not assigned to any Display Page Template.
 
-To view your Display Page Template usage and unassign your content:
+To view your Display Page Template usage and unassign your content,
 
-1. Open the Product Menu, and go to *Design* &rarr; *Page Templates*.
-1. Click on the *Display Page Templates* tab.
-1. Click on the *Actions* menu (![Actions](../../../images/icon-actions.png)) of the Display Page Template and select *View Usages*.
+1. Open the Product Menu and go to *Design* &rarr; *Page Templates*.
+1. Click the *Display Page Templates* tab.
+1. Click the Display Page Template's *Actions* menu (![Actions](../../../images/icon-actions.png)) and select *View Usages*.
 1. From the list of content using the Display Page Template, select one or more elements.
 1. Click the *Actions* menu (![Actions](../../../images/icon-actions.png)) in the top-right corner and select *Assign to Default* or *Unassigned*.
 1. Click *OK*.
