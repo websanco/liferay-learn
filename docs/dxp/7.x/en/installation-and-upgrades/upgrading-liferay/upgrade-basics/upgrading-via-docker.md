@@ -45,7 +45,7 @@ Here are the steps for upgrading with a Docker image:
 
     * `/log/*`: Log files.
 
-    * `/osgi/*.config`: [OSGi configuration files](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
+    * `/osgi/configs/*.config`: [OSGi configuration files](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
 
     * `portal-*.properties`: [Portal properties](../../reference/portal-properties.md) files, such as `portal-ext.properties`.
 
@@ -53,7 +53,7 @@ Here are the steps for upgrading with a Docker image:
 
     * `web.xml`: Portal web application descriptor.
 
-1. Configure the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by exporting it's settings to a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) to use in your `new-version/osgi` folder.
+1. Configure the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by exporting it's settings to a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) to use in your `new-version/osgi` folder. This is only required when using Advanced File System Store or when you modified the storage location.
 
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
