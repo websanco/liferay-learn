@@ -33,7 +33,7 @@ Once the form is published, a banner containing its link appears briefly:
 
 ![The form link is shown in a banner when you click the Publish button.](./sharing-forms/images/08.png)
 
-To get the link after the banner disappears, or share the form's link by email, click the _Share_ button.
+To get the link after the banner disappears or share the form's link by email, click the _Share_ button.
 
 ![Get the URL from the Share screen.](./sharing-forms/images/03.png)
 

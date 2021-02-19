@@ -12,7 +12,7 @@ Once users begin submitting form entries, you can access a field-by-field report
 
    ![The number of submitted entries is displayed at the top of the Entries screen.](./form-reports/images/06.png)
 
-   Field-by-field metrics are presented next. Scroll through the fields, or click a specific field from the list on the right to jump to its metrics.
+   Field-by-field metrics are presented next. Scroll through the fields or click a specific field from the list on the right to jump to its metrics.
 
    ![This Rate It Select from List field has received mostly "Good" selections.](./form-reports/images/01.png)
 
