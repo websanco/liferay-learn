@@ -40,6 +40,22 @@ Once you have created a new password policy, you need to assign members to it,
 
    Your Users or Organizations are now associated with your password policy.
 
+## Default Policy Properties
+
+The Default Password Policy is set as the default and configured in Liferay's [portal.properties](@platform-ref@/7.3-latest/propertiesdoc/portal.properties.html#Passwords)
+file. Find the properties that start with `passwords.default.policy`. To make changes, including changing the default policy, add whichever properties and values you choose to modify in your `portal-ext.properties` file, as usual.
+Restart the application server and your changes take effect.
+
+```properties
+#
+# Set the properties of the default password policy.
+#
+
+...
+passwords.default.policy.name=Default Password Policy
+...
+```
+
 ## Additional Information
 
 * [Authentication Basics](../../installation-and-upgrades/securing-liferay/authentication-basics.md)
