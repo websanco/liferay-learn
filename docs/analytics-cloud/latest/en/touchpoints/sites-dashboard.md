@@ -33,7 +33,7 @@ Each panel in the dashboard has a time period selector that recalculates the met
 
 **Custom Range:** Use this option to select a start date and end date of your choice.
 
-## Site Metrics
+## Site Activities
 
 The Site Activities panel presents a summary of how visitors interact with your Site. This panel contains the following metrics:
 
