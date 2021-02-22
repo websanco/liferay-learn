@@ -90,6 +90,10 @@ On Liferay 7.3 (DXP FP1+ and CE GA2+), you can allow unauthenticated Guest Users
 
 Configure the Guest upload behavior in the Control Panel: System Settings &rarr; Forms (Content and Data) &rarr; Forms, or by creating a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named `com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config`.
 
+```tip::
+   To configure the Forms application at the `instance scope <../../../system-administration/configuring-liferay/understanding-configuration-scope.md#scope-definitions>`__, use the Forms entry in Instance Settings.
+```
+
 **Guest Upload File Extensions (`guestUploadFileExtensions`):** Enter the comma-separated list of accepted file extensions. By default the following list is supported: `doc`, `docx`, `jpeg`, `jpg`, `pdf`, `png`, `ppt`, `pptx`, `tiff`, `txt`, `xls`, and `xlsx`.
 
 **Guest Upload Maximum file Size (`guestUploadMaximumFileSize`):** Set the maximum file size Guest User can upload via the Upload field. This is configured for authenticated Users in the Documents and Media application's configuration, and system-wide limits are defined in the Upload Servlet Request System Settings entry, in the field named Overall Maximum Upload Request Size. By default the limit is 25 MB.
