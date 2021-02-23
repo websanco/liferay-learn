@@ -31,7 +31,7 @@ Start with deploying the example.
 1. Build and deploy the example.
 
     ```bash
-    cd liferay-w3e7.zip
+    cd liferay-w3e7
     ```
 
     ```bash
