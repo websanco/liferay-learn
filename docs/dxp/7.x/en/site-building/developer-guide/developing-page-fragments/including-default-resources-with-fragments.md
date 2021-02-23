@@ -25,7 +25,7 @@ First, import an example Fragment Collection to see how Fragment resources work:
 1. Setup up the Fragments Toolkit:
 
     ```bash
-    cd liferay-i6r3.zip
+    cd liferay-i6r3
     ```
 
     ```bash

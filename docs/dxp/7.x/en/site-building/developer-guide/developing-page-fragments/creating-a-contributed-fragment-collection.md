@@ -39,7 +39,7 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
 1. From the module root, build and deploy the contributed Collection's JAR.
 
     ```bash
-    cd liferay-l3m9.zip
+    cd liferay-l3m9
     ```
 
     ```bash
@@ -132,7 +132,7 @@ You can build and deploy the updated contributed Fragment Collection as you did 
 1. Build the updated contributed Collection's JAR.
 
     ```bash
-    cd liferay-l3m9.zip
+    cd liferay-l3m9
     ```
 
     ```bash

@@ -30,7 +30,7 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
 1. Set up the Fragments Toolkit and its dependencies using the `setup_tutorial.sh` script.
 
     ```bash 
-    cd liferay-x2y6.zip
+    cd liferay-x2y6
     ```
 
     ```bash 
@@ -47,7 +47,7 @@ The Fragments Toolkit's `yo liferay-fragments` command launches an interface for
    Don't nest Fragments projects. Make sure to create new Fragments projects in their own location, outside of any existing Fragments projects.
 ```
 
-If you're in the `liferay-x2y6.zip` project folder, exit it (e.g., `cd ..`).
+If you're in the `liferay-x2y6` project folder, exit it (e.g., `cd ..`).
 
 Here's how to generate a Fragments Project:
 

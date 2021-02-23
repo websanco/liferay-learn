@@ -32,7 +32,7 @@ First, deploy an example to see how Fragment configuration options work:
 1. Set up the Fragments Toolkit:
 
     ```bash
-    cd liferay-c7f8.zip
+    cd liferay-c7f8
     ```
 
     ```bash
