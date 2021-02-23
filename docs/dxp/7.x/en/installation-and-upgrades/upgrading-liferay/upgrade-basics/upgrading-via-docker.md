@@ -53,7 +53,7 @@ Here are the steps for upgrading with a Docker image:
 
     * `web.xml`: Portal web application descriptor.
 
-1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or if you're using [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your `new-version/osgi/configs` folder.
+1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your `new-version/osgi/configs` folder.
 
     ```important::
        If you're using `Advanced File System Store <../../../system-administration/file-storage/configuring-file-storage.md>`_, you must configure it with a ``.config`` file in the new installation before upgrading the database.
