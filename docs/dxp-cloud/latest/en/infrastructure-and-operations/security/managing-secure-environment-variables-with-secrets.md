@@ -72,6 +72,30 @@ This is the page shown when a User (with the permission to view) clicks the _Vie
 
 ![The view page for an existing secret.](./managing-secure-environment-variables-with-secrets/images/10.png)
 
+## Referencing Secrets from Environment Variables
+
+*Secret variables* are environment variables that securely reference secrets for their value. Like normal environment variables, secret variables can be defined either through a services `LCP.json` file, or through the Environment Variables page. The secret must [already be added](#adding-a-new-secret) previously so that the secret variable can reference the secret's key.
+
+![Secrets may be added using the Secret variables section of the Environment Variables page.](./managing-secure-environment-variables-with-secrets/images/11.png)
+
+To reference a secret, navigate to the chosen service's Environment Variables page. Scroll down to the *Secret variables* section and click *Add variables*. Then, choose a name for any new secret variables (under *Key*) and select the secrets for them to reference.
+
+![Add secret variables through the UI to reference specific secrets.](./managing-secure-environment-variables-with-secrets/images/12.png)
+
+### Adding Secret Variables via LCP.json
+
+You can also reference secrets from environment variables added in your service's `LCP.json` file. Reference the secret's key in the variable's value by adding the `@` character in front of the key:
+
+```json
+{
+    "env": {
+        "VARIABLE_NAME": "@secret-key"
+    }
+}
+```
+
+When you deploy the file to your service, the secret variable appears with any others on the Environment Variables page.
+
 ## Additional Information
 
 * [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md)

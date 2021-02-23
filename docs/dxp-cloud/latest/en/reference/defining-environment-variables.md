@@ -81,7 +81,7 @@ When you are finished editing the service's `LCP.json` file, save and deploy you
 
 Normal environment variables do not have special security measures. Any Users that can access your DXP Cloud project can also see the variable values for your services.
 
-To store sensitive variable values (such as login credentials), you can use Secrets. Secrets are encrypted in the backend and are hidden from Users without the *Admin* role. See [Managing Secure Environment Variables with Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
+To store sensitive variable values (such as login credentials), you can use secrets. Secrets are encrypted in the backend and are hidden from Users without the *Admin* role. Regular environment variables may also [reference secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md#referencing-secrets-from-environment-variables) to secure their values. See [Managing Secure Environment Variables with Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for more information.
 
 ## Additional Information
 
