@@ -38,7 +38,7 @@ Start up the example modules.
 1. From the project root folder, deploy the modules.
 
     ```bash
-    cd liferay-p9g2.zip
+    cd liferay-p9g2
     ```
 
     ```bash
