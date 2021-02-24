@@ -100,11 +100,11 @@ To see an example of overriding a global language key:
 
 1. Verify that the example module is working. Open your browser to `https://localhost:8080`
 
-1. Navigate to a page to see a publish button. For example, click the edit icon (![Edit](../../images/icon-edit.png)) of a Site page. 
+1. Navigate to a page to see a publish button. For example, click the edit icon (![Edit](../../images/icon-edit.png)) of a Site page. The publish button is now showing the custom language key.
 
     ![Liferay is now using the custom language key for the publish button.](./overriding-global-language-keys/images/01.png)
 
-1. The tutorial code also includes examples for other locales. For example, use the language selector to select Brazilian Portuguese or Japanese. The module overrides language keys for each locale you provide a language property file for.
+1. The tutorial code also includes examples for other locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
 
     ![A custom language key is also used for Portugueses and Japanese](./overriding-global-language-keys/images/02.png)
 
@@ -175,4 +175,4 @@ Resource bundle assignment:
 
 ## Related Information
 
-* [Overriding A Modules Language Keys](/overriding-a-modules-language-keys.md)
+* [Overriding A Modules Language Keys](./overriding-a-modules-language-keys.md)
