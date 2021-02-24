@@ -173,6 +173,20 @@ function generate_static_html {
 		sed -i 's/README"/index"/g' build/output/"${product_version_language_dir_name}"/searchindex.js
 
 		#
+		# Include unbuilt resources in the built site.
+		#
+
+		for resources_dir in $(find build/input/"${product_version_language_dir_name}" -name resources -type d -prune)
+		do
+			if [[ -n $(find ${resources_dir} -maxdepth 1 -type f) ]]
+			then
+				mkdir -p ${resources_dir/input/output}
+
+				find ${resources_dir} -maxdepth 1 -type f -exec cp {} ${resources_dir/input/output} \;
+			fi
+		done
+
+		#
 		# Make ZIP files.
 		#
 
