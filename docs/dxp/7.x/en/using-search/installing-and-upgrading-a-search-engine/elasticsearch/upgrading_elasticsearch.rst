@@ -2,11 +2,11 @@ Upgrading Elasticsearch
 =======================
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
+   :maxdepth: 1
 
-   upgrading-elasticsearch/*
-
+   upgrading-elasticsearch/upgrading-search-for-liferay-73.md
+   upgrading-elasticsearch/upgrading-to-elasticsearch-7.md
+   upgrading-elasticsearch/backing-up-elasticsearch.md
 
 Liferay 7.3 brings `new improvements <../../getting-started/whats-new-in-search-for-73.md>`__ for search,including built-in support for Elasticsearch 7. The `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ provides the latest support details.
 

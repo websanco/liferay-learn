@@ -3,10 +3,15 @@ Elasticsearch
 
 .. toctree::
    :maxdepth: 2
-   :glob:
 
-   elasticsearch/*
-
+   elasticsearch/getting-started-with-elasticsearch.md
+   elasticsearch/installing-elasticsearch.md
+   elasticsearch/connecting-to-elasticsearch.md
+   elasticsearch/exercise-installing-elasticsearch.md
+   elasticsearch/troubleshooting-elasticsearch-installation.md
+   elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md
+   elasticsearch/upgrading_elasticsearch.rst
+   
 Elasticsearch is the highly scalable, full-text search engine Liferay uses by default. Elasticsearch is bundled with Liferay for non-production purposes. In production, Liferay requires Elasticsearch running on a separate remote server.
 
 .. important::
