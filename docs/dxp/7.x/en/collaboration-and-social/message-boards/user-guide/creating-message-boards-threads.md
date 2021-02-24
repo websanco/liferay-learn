@@ -28,7 +28,7 @@ Users can attach files to forum posts.
     ![Figure 2. Uploading an attachment](./creating-message-boards-threads/images/03.png)
 
 ```important::
-   Antivirus scanning for files on upload requires enabling antivirus scanning. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+   You must enable antivirus scanning to scan files for viruses on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 
 ### Using _Tags_ and _Related Assets_ to Organize Threads
