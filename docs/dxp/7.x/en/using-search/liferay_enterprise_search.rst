@@ -11,7 +11,7 @@ Liferay Enterprise Search
 A Liferay Enterprise Search (LES) subscription provides access to additional search features beyond what's available out of the box with your Liferay DXP subscription. To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in the `Liferay DXP Components resource <https://help.liferay.com/hc/en-us/articles/360014400932>`__.  
 
 .. note::
-   LES customers receive a production X-Pack license from Liferay. There can be a delay between your subscription and receipt of the license, but you can enable a `30-day trial <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html>`__ to work with in the meantime.  
+   LES customers receive a `platinum Elasticsearch license <https://www.elastic.co/subscriptions>`__ from Liferay. There can be a delay between your subscription and receipt of the license, but you can enable a `30-day trial <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html>`__ to work with in the meantime.  
 
 Detailed installation and usage instructions are available in the article for each LES feature, including
 
