@@ -3,7 +3,7 @@
 Liferay utilizes language keys for user interface messages. Whether the default language or a language for another locale, the global keys can be overridden by using a custom language module.
 
 ```Note
-Most of Liferay's language keys are found in the global language key files. But some may be located in a specific application's module. The process of `overriding a module's language keys <./overriding-a-modules-language-keys.md>`_ is different from overriding the global keys.
+Most of Liferay's language keys are found in the global language key files. But some may be located in a specific application's module. The process of `overriding module language keys <./overriding-module-language-keys.md>`_ is different from overriding the global keys.
 ```
 
 ## Overview
@@ -175,4 +175,4 @@ Resource bundle assignment:
 
 ## Related Information
 
-* [Overriding A Modules Language Keys](./overriding-a-modules-language-keys.md)
+* [Overriding Module Language Keys](./overriding-module-language-keys.md)
