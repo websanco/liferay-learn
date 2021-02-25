@@ -26,8 +26,8 @@ The Knowledge Base Article widget shares the same UI as the Knowledge Base Displ
 
 ## Knowledge Base Section Widget
 
-```Note:: 
-As of Knowledge Base 3.0.0, the Knowledge Base Sections widget is deprecated and replaced by [categories](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md).
+```note::
+   As of Knowledge Base 3.0.0, the Knowledge Base Sections widget is deprecated and replaced by `categories <../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md>`_.
 ```
 
 The Knowledge Base Section widget can publish articles associated with a specific topic (section). For example, a Site about the Summer Olympics might have the sections Team Sports, Water Sports and Martial Arts.

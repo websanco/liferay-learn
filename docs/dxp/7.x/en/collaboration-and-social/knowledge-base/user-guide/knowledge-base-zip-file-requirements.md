@@ -2,8 +2,8 @@
 
 The Knowledge Base importer supports article hierarchies, so Markdown files can be specified anywhere in the ZIP file’s directory structure. They can be nested in any number of folders. Image files are the only files supported for attachments.
 
-```Note: 
-Imported articles are independent of the workflow settings. This means that imported articles are automatically approved.
+```note::
+   Imported articles are independent of the workflow settings. This means that imported articles are automatically approved.
 ```
 
 Only users with the Import Articles permission assigned to their Role are able to import articles. This permission can be assigned manually through Control Panel &rarr; Users &rarr; Roles. 
@@ -89,7 +89,7 @@ Once you have your article ZIP file, it’s time to import it. To import your ZI
 
 1. Click on the Menu icon (![Menu icon](../../../images/icon-menu.png)) and navigate to Content and Data &rarr; Knowledge Base &rarr; Articles. 
 
-1. Click on the Add icon (![Add icon](../../../images/add-icon.png)) and click *Import*.
+1. Click on the Add icon (![Add icon](../../../images/icon-add.png)) and click *Import*.
 
     ![Upload your ZIP file on this new page.](./knowledge-base-zip-file-requirements/images/01.png)
 

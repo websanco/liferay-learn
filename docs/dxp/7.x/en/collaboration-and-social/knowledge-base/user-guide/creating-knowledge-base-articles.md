@@ -3,7 +3,7 @@
 The Knowledge Base app contains everything you need to create a repository of articles. You can create articles by authoring them in the app's WYSIWYG editor or by importing them from Markdown files (`.markdown`, `.md`) in a ZIP archive. The sections below cover both ways of creating articles.
 
 ```note::
-Note: To access Knowledge Base in Site Administration, a Role must have the permission *Knowledge Base* &rarr; Access in *Site Administration*. To add or act on articles, folders, or suggestions, the Site administrator must grant the appropriate permissions using the Permissions window in Knowledge Base. 
+   To access Knowledge Base in Site Administration, a Role must have the permission *Knowledge Base* > Access in *Site Administration*. To add or act on articles, folders, or suggestions, the Site administrator must grant the appropriate permissions using the Permissions window in Knowledge Base. 
 ```
 
 To navigate to the Knowledge Base app, click the _Menu_ icon (![Menu icon](../../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base*. The Knowledge Base app has three tabs:
