@@ -1,25 +1,14 @@
 # Connecting Liferay DXP to Analytics Cloud
 
-Your Liferay DXP instances are rich with web analytics data and visitor data from Users and. In order to monitor and collect website visitor information, you need to setup a connection between your Liferay DXP site with Analytics Cloud by adding a Data Source.
+Your Liferay DXP instances are rich with web analytics data and visitor data. In order to monitor and collect website visitor information you need to setup a connection between your Liferay DXP site with Analytics Cloud by adding a Data Source.
 
-There are two ways to connect:
-
-* Connect using the Access Token (recommended)
-* Connect using OAuth
-
-## Using an Access Token
-
-To connect using an Access Token, your Liferay DXP installation must meet the following fixpack requirements:
+Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your Liferay DXP installation must meet the following fixpack minimum requirements:
 
 * 7.2 Fix Pack 5/SP2
 * 7.1 Fix Pack 18/SP4
 * 7.0 Fix Pack 90/SP13
 
-If you do not meet the requirements and are not able to upgrade to the minimum fixpack requirement, you can [connect using OAuth](./connecting-liferay-dxp-using-oauth.md) instead.
-
-![Connecting a DXP Site to Analytics Cloud can be done using a token or with OAuth.](connecting-liferay-dxp-to-analytics-cloud/images/01.png)
-
-### Adding a Data Source
+## Adding a Data Source
 
 1. Create a data source by navigating to *Setting* > *Data Sources* > *Add Data Source*. You must have the Admin role to perform this action.
 
@@ -48,4 +37,3 @@ Congratulation, your DXP is now connected to your AC workspace!
 ## Next Steps
 
 * [Tracking Sites and Individuals with Properties](./tracking-sites-and-individuals-using-properties.md)
-* [Connecting Liferay DXP Using OAuth](./connecting-liferay-dxp-using-oauth.md)
