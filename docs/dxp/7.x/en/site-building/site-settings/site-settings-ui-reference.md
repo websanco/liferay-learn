@@ -37,7 +37,7 @@ General settings range from core configuration, like a Site's Membership Type, t
 
 ### Pages
 
-View a Site's Public and Private Pages, if any exist, and enable or disable the propagation of changes from the selected Site template. If they don't exist, a *Site Templates* selector appears for creating pages with a template.
+View a Site's Public and Private Pages, if any exist, and enable or disable the propagation of changes from the selected Site template. If they don't exist, a Site Templates selector appears for creating pages with a template.
 
 ![In the Pages section, you can view a Site's Public and Private Pages.](./site-settings-ui-reference/images/03.png)
 
@@ -47,19 +47,19 @@ View and configure any custom fields you've defined for your pages. With these f
 
 ### Categorization
 
-Use *Categories* and *Tags* to categorize a Site's content so users can more easily find it. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md).
+Use Categories and Tags to categorize a Site's content so users can more easily find it. For more information on using tags and categories, see [Organizing Content with Tags and Categories](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md).
 
 ### Site URL
 
 **Friendly URL**: Set a custom URL for both public and private Site pages. See [Configuring Your Site's Friendly URL](./managing-site-urls/configuring-your-sites-friendly-url.md) for more information.
 
-**Public and Private Virtual Host**: Set public and private *Virtual Hosts* to map to a Site's Public and Private Pages. See [Configuring Virtual Hosts Site URLs](./managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information.
+**Public and Private Virtual Host**: Set public and private Virtual Hosts to map to a Site's Public and Private Pages. See [Configuring Virtual Hosts Site URLs](./managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information.
 
 ![In the Site URL section, you can configure your Site's Friendly URL, as well as Virtual Hosts for your Public and Private Pages.](./site-settings-ui-reference/images/05.png)
 
 ### Documents and Media
 
-Determine whether to enable *Directory Indexing* for a Site. When enabled, a User with view permission can browse the Site's document library files and folders.
+Determine whether to enable Directory Indexing for a Site. When enabled, a User with view permission can browse the Site's document library files and folders.
 
 ### Site Template
 
@@ -71,7 +71,7 @@ If you created your Site using a *Site Template*, it's displayed here, along wit
 
 **Enable Open Graph**: Determine whether to embed [Open Graph](https://ogp.me/) `<meta>` tags in the `<head>` of your Site's pages. These tags define page metadata to create engaging representations of your Site's content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter.
 
-**Image**: Use the *Image* field to define the following Open Graph `<meta>` properties for a page:
+**Image**: Use the Image field to define the following Open Graph `<meta>` properties for a page:
 
    ```html
       <meta property="og:image" content="http://example.com/ogp.jpg" />
@@ -141,7 +141,7 @@ Select which maps API provider to use when displaying geolocalized assets in you
 
 ### Recycle Bin
 
-Determine whether to enable the Recycle Bin for a Site, and specify the number of minutes an asset remains in the Recycle Bin before being automatically deleted. By default, the max age for recycled items is 43200 minutes (i.e., 30 days). See [Configuring the Asset Recycle Bin for Sites](./site-content-configurations/configuring-the-asset-recycle-bin-for-sites.md) for more information.
+Determine whether to enable the Recycle Bin for a Site. You can specify the number of minutes an asset remains in the Recycle Bin before being automatically deleted. By default, the max age for recycled items is 43200 minutes (i.e., 30 days). See [Configuring the Asset Recycle Bin for Sites](./site-content-configurations/configuring-the-asset-recycle-bin-for-sites.md) for more information.
 
 ![You can configure a Site's Recycle Bin.](./site-settings-ui-reference/images/17.png)
 

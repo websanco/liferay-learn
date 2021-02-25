@@ -25,18 +25,18 @@ Here you can configure the basic information and design of a page, including its
 
 ### Name and Friendly URL
 
-Use the *Name* field to set a page's title used for Site navigation and displayed in a browser's title bar. Use the *Friendly URL* field to set a new URL for a page, or click the *Restore* icon ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) to see and restore a previously used URL. See [Configuring Your Page's Friendly URL](./configuring-your-pages-friendly-url.md) for more information.
+Use the Name field to set a page's title used for Site navigation and displayed in a browser's title bar. Use the Friendly URL field to set a new URL for a page, or click the *Restore* icon ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) to see and restore a previously used URL. See [Configuring Your Page's Friendly URL](./configuring-your-pages-friendly-url.md) for more information.
 
 ![Use the Name field to set a page's title.](./configuring-individual-pages/images/02.png)
 ![Use the Friendly URL field to set a page's custom URL.](./configuring-individual-pages/images/03.png)
 
 ```tip::
-   While a page's name and friendly URL are initially defined together at page creation, they are defined independently afterwards. It is best practice to update them together so that they match.
+   While a page's name and friendly URL are initially defined together at page creation, they are configured independently afterwards. It is best practice to update them together so that they match.
 ```
 
 ### Navigation Menu Widget
 
-Determine whether a page is hidden from Navigation Menu widgets that are configured to display the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../04-site-navigation/configuring-site-navigation.md) for more information.
+You can hide a page from Navigation Menu widgets that show the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../04-site-navigation/configuring-site-navigation.md) for more information.
 
 ### Page Layout
 
@@ -52,7 +52,7 @@ Use *Topics* and *Tags* to categorize a page's content so users can more easily 
 
 Here you can use the page set's theme settings or define a unique look and feel for your page. When you choose to customize the page's theme, you can toggle various theme settings.
 
-You can also access a *CSS* editor where you can add custom CSS code to the page. Any CSS code added to a page in this way is loaded after the theme.
+You can also access a CSS editor where you can add custom CSS code to the page. Any CSS code added to a page in this way is loaded after the theme.
 
 ![Determine whether to use the page set's theme settings or define a unique look and feel for your page.](./configuring-individual-pages/images/07.png)
 
@@ -80,7 +80,7 @@ Access additional settings to customize a page's content and features, including
    If your Site's theme uses JavaScript, it’s best to add custom JavaScript code to the theme rather than an individual page or Page Set. This ensures your Site’s JavaScript code remains in one place. If your theme does not use JavaScript, place all of your Site's JavaScript code here.
 ```
 
-**Mobile Device Rules**: Determine whether a page uses its Page Set's rules for mobile devices or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. <!--Link to "Mobile Device Rules" article when ready-->
+**Mobile Device Rules**: Determine whether a page uses its Page Set's rules for mobile devices or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. 
 
 **Customization Settings**: Determine whether a Widget Page's columns are *Customizable* for users. If customization is enabled, specify the columns users can customize. See [Personalizing Pages](../using-widget-pages/enabling-user-personalization-of-widget-pages.md) for more information.
 
@@ -96,19 +96,19 @@ Access additional settings to customize a page's content and features, including
 
 ## SEO
 
-Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The *SEO* tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization](../../optimizing-sites/search_engine_optimization.rst) for more information about the following settings.
+Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The SEO tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization](../../optimizing-sites/search_engine_optimization.rst) for more information about the following settings.
 
 ### HTML Title
 
-Use the *HTML Title* field to define a page's `<title>` tag. This title is used by search engines to rank your page and serves as the page's heading in search engine results, though without replacing a page's [Name](#name-and-friendly-url). The recommended length for an HTML title is under 60 characters.
+Use the HTML Title field to define a page's `<title>` tag. This title is used by search engines to rank your page and serves as the page's heading in search engine results, though without replacing a page's [Name](#name-and-friendly-url). The recommended length for an HTML title is under 60 characters.
 
 ### Description
 
-Use the *Description* field to define a page's `<description>` tag. This description is used by search engines to rank your page and also appears in search result previews of your page. The recommended length for a description is under 155 characters.
+Use the Description field to define a page's `<description>` tag. This description is used by search engines to rank your page and also appears in search result previews of your page. The recommended length for a description is under 155 characters.
 
 ### Custom Canonical URL
 
-Set a custom canonical URL for a page. Custom URLs set in this way take precedent over the global and instance level settings.
+Set a custom canonical URL for a page. Custom URLs set in this way take precedence over the global and instance level settings.
 
 ### Keywords
 
@@ -150,7 +150,7 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 
 ### Image
 
-Use the *Image* field to define the following Open Graph `<meta>` properties for a page:
+Use the Image field to define the following Open Graph `<meta>` properties for a page:
 
    ```html
       <meta property="og:image" content="http://example.com/ogp.jpg" />
@@ -166,7 +166,7 @@ Use the Image Alt Description field to define the `og:image:alt` property for a 
 
 ### Custom Title and Description
 
-Use the *Title* and *Description* fields to define the `og:title` and `og:description` properties. These properties create custom text used for rich previews in place of a page's HTML title and description. You can also localize these values via their *Language Flag* buttons.
+Use the Title and Description fields to define the `og:title` and `og:description` properties. These properties create custom text used for rich previews in place of a page's HTML title and description. You can also localize these values via their *Language Flag* buttons.
 
 ### Preview Open Graph Page Representation
 
