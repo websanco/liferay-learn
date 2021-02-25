@@ -1,7 +1,7 @@
 # About Collections and Collection Pages
 
 ```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
+   This information applies to Liferay DXP 7.3+. In previous Liferay versions, Collections were called Content Sets. For information on Content Sets, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
 ```
 
 Collections are sets of content items that you can use to group and filter information. Consider the following example. You plan to create a new section in your product web page with customer success stories. You want this section to show new success stories automatically as these stories are published. In this case, you can create a Collection that groups all your success stories, with a Collection Page that shows the Collection's content. In addition to Collection Pages, you can show this Collection in other Content Pages using a Collection Display Fragment (for more information, see [Building Content Pages](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
