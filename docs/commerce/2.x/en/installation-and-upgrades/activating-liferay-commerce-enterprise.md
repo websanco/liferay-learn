@@ -2,7 +2,7 @@
 
 > Subscription Required
 
-Liferay Commerce Enterprise is built on Liferay DXP and requires both/active<!--w/c--> DXP and Commerce licenses for use. Licenses are provided as XML (`.xml`) activation keys that must be copied to your DXP instance's `deploy` folder to activate Commerce Enterprise features. If you've already [purchased](https://www.liferay.com/contact-sales) a Commerce subscription, then you can obtain your activation key as a download in one of the following ways:
+Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and Commerce licenses for use. Licenses are provided as XML (`.xml`) activation keys that must be copied to your DXP instance's `deploy` folder to activate Commerce Enterprise features. If you've already [purchased](https://www.liferay.com/contact-sales) a Commerce subscription, then you can obtain your activation key as a download in one of the following ways:
 
 * Open a [Help Center](https://liferay-support.zendesk.com/agent/) ticket with the *Activation Key/Project Administration* component.
 
@@ -18,7 +18,7 @@ Commerce licenses use many of the same parameters as DXP licenses, including `pr
    *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
 ```
 
-Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay relocates it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder. <!--see documentation on updating license-->
+Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay relocates it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder.
 
 * [Deploying to a Bundle](#deploying-to-a-bundle)
 * [Deploying to a Docker Container](#deploying-to-a-docker-container)
