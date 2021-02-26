@@ -10,7 +10,7 @@ The console also display an error message during server restart:
    ERROR [main][LicenseManager:?] Liferay Commerce license is expired
    ```
 
-In order to reactivate Liferay Commerce Enterprise, remove any expired keys from the server, and deploy the new key to the `liferay.home/deploy` folder. <!--If the expired licenses are not removed,-->
+In order to reactivate Liferay Commerce Enterprise, remove any expired keys from the server, and deploy the new key.
 
 * [Updating the Commerce License in a Bundle](#updating-the-commerce-license-in-a-bundle)
 * [Updating the Commerce License in a Docker Container](#updating-the-commerce-license-in-a-docker-container)
@@ -18,26 +18,61 @@ In order to reactivate Liferay Commerce Enterprise, remove any expired keys from
 
 ## Updating the Commerce License in a Bundle
 
-Follow these steps to update your Liferay Commerce license:
+Follow these steps to update your Liferay Commerce license in a Bundle:
 
-1. Navigate to the following folders, and remove any expired licenses activation keys:
+1. Download your new `.xml` activation key.
 
-    * `${liferay.home}/data/license`
-    * `${liferay.home}/osgi/modules`
+1. Remove the expired `.xml` key from the `${liferay.home}/osgi/modules` folder, and remove the expired license (`.li`) from the `${liferay.home}/data/license` folder.
     
     ```warning::
        While removing expired licenses, be careful **not** to delete any valid ones.
     ```
 
-1. Deploy your new activation key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder.
+1. Add your new activation key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder.
 
-    ```tip::
-      You do not have to shut down the application server to deploy or remove activation keys.
-    ```
+   ```tip::
+      You can add and remove activation keys while the server is running.
+   ```
 
-1. Verify your new activation key has successfully deployed via the console.
+1. Verify your key has successfully deployed to your bundle via the console:
+
+   ```log
+   INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
+   ...
+   INFO  [fileinstall-directory-watcher][LicenseManager:?] Commerce Subscription Development license validation passed
+   INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
+   ```
 
 ## Updating the Commerce License in a Docker Container
+
+Follow these steps to update your Liferay Commerce license in a Docker Container:
+
+1. Download your new `.xml` activation key.
+
+1. Remove the expired `.xml` key from the `opt/liferay/osgi/modules` folder, and remove the expired license (`.li`) from the `opt/liferay/data/licenses` folder.
+    
+    ```warning::
+       While removing expired licenses, be careful **not** to delete any valid ones.
+    ```
+
+1. Use the `docker cp` command to add your new activation key to the `/opt/liferay/deploy` folder in your container:
+
+   ```bash
+   docker cp [key-name.xml] [container-name]:/opt/liferay/deploy
+   ```
+
+   ```tip::
+      You can add and remove activation keys while the server is running.
+   ```
+
+1. Verify your key has successfully deployed to your container via the console:
+
+   ```log
+   INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
+   ...
+   INFO  [fileinstall-directory-watcher][LicenseManager:?] Commerce Subscription Development license validation passed
+   INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
+   ```
 
 <!--## Updating the Commerce License in a DXP Cloud Project-->
 
