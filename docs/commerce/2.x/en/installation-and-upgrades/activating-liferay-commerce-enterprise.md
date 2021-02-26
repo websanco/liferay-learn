@@ -20,10 +20,6 @@ Commerce licenses use many of the same parameters as DXP licenses, including `pr
 
 Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay relocates it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder. <!--see documentation on updating license-->
 
-```tip::
-   If you're deploying DXP and Commerce licenses together, you can simplify deployment using Commerce's `License Merger tool <https://office.liferay.hu/commerce-license/>`_ to combine them into a single key. After processing, the combined activation key is processed into two separate license files.
-```
-
 * [Deploying to a Bundle](#deploying-to-a-bundle)
 * [Deploying to a Docker Container](#deploying-to-a-docker-container)
 * [Deploying to DXP Cloud](#deploying-to-dxp-cloud)
@@ -85,6 +81,8 @@ Follow the steps to deploy a Commerce activation key to your Liferay service:
    ```
 
 1. Build and deploy your Liferay service using either Jenkins or the CLI tool. See [Overview of the DXP Cloud Deployment Workflow](https://learn.liferay.com/dxp-cloud/latest/en/build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.html) for more information.
+
+   When processed, the key is relocated to the `opt/liferay/osgi/modules` folder, and Liferay generates a corresponding license file in the `opt/liferay/data/license` folder.
 
 1. Verify your key has successfully deployed to your Project's Liferay service via the service logs:
 
