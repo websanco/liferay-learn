@@ -96,7 +96,7 @@ Access additional settings to customize a page's content and features, including
 
 ## SEO
 
-Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The SEO tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization](../../optimizing-sites/search_engine_optimization.rst) for more information about the following settings.
+Search engine optimization (SEO) refers to the methods used to improve your page's ranking in search engine results pages (SERP). The SEO tab provides easy access to settings you can use to optimize your page's content. See [Search Engine Optimization](../../optimizing-sites.html#search-engine-optimization) for more information about the following settings.
 
 ### HTML Title
 

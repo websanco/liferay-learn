@@ -10,7 +10,7 @@ To view a Site's settings, open the Site Menu (![Site Menu](../../images/icon-pr
 ![Site Settings are organized into four tabs.](./site-settings-ui-reference/images/01.png)
 
 ```note::
-   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./configuring-site-languages/modifying-localizable-site-fields.md>`_ or more information.
+   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./site-localization.md#modifying-localizable-site-fields>`_ or more information.
 ```
 
 ## General
@@ -93,7 +93,7 @@ Determine whether to enable document sharing between Site Users. When enabled, U
 
 ### Asset Auto Tagging
 
-Determine whether to enable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/web-content/auto_tagging.md) for more information. 
+Determine whether to enable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at instance level. See [Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md) for more information. 
 
 ## Social
 
@@ -153,5 +153,5 @@ Determine whether child Sites can display content from this Site, including stru
 
 ## Additional Information
 
-* [Page Configuration UI Reference](../creating-pages/page-settings/page-configuration-ui-reference.md)
+* [Page Configuration UI Reference](../creating-pages/page-settings/configuring-individual-pages.md)
 * [Configuring Page Sets](../creating-pages/page-settings/configuring-page-sets.md)
