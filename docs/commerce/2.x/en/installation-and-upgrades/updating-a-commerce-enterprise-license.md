@@ -1,6 +1,6 @@
 # Updating a Commerce Enterprise License
 
-Commerce Enterprise licenses are only valid for a set period of time based on the terms of a user's subscription. When a license is near to expiration (i.e., < 30 days for most licenses, < 7 days for a 30 day license), a warning message is displayed in Commerce applications for Administrators. A license has a 2 day grace period after its given expiration date before it expires.
+Commerce Enterprise licenses are only valid for a set period of time based on the terms of a user's subscription. When a license nears expiration (i.e., < 30 days for most licenses, < 7 days for a 30 day license), a warning message is displayed in Commerce applications for Administrators. A license has a 2 day grace period after its given expiration date before it expires.
 
 If a license expires, the Commerce modules remain activated, though it is no longer usable in the UI and does not allow API calls until the license is updated. A notification is displayed on Commerce applications for all users, indicating the Commerce application is unavailable. Administrators are asked to update the license, while other users are asked to contact their administrator.
 
@@ -12,11 +12,15 @@ The console also display an error message during server restart:
 
 In order to reactivate Liferay Commerce Enterprise, remove any expired keys from the server, and deploy the new key.
 
-* [Updating the Commerce License in a Bundle](#updating-the-commerce-license-in-a-bundle)
-* [Updating the Commerce License in a Docker Container](#updating-the-commerce-license-in-a-docker-container)
-* [Updating the Commerce License in a DXP Cloud Project](#updating-the-commerce-license-in-a-dxp-cloud-project)
+   ```tip::
+      You can remove and add activation keys while the server is running.
+   ```
 
-## Updating the Commerce License in a Bundle
+* [Updating Your License in a Bundle](#updating-your-license-in-a-bundle)
+* [Updating Your License in a Docker Container](#updating-your-license-in-a-docker-container)
+<!-- * [Updating Your License in a DXP Cloud Project](#updating-your-license-in-a-dxp-cloud-project) -->
+
+## Updating Your License in a Bundle
 
 Follow these steps to update your Liferay Commerce license in a Bundle:
 
@@ -30,10 +34,6 @@ Follow these steps to update your Liferay Commerce license in a Bundle:
 
 1. Add your new activation key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder.
 
-   ```tip::
-      You can add and remove activation keys while the server is running.
-   ```
-
 1. Verify your key has successfully deployed to your bundle via the console:
 
    ```log
@@ -43,7 +43,7 @@ Follow these steps to update your Liferay Commerce license in a Bundle:
    INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
    ```
 
-## Updating the Commerce License in a Docker Container
+## Updating Your License in a Docker Container
 
 Follow these steps to update your Liferay Commerce license in a Docker Container:
 
@@ -61,10 +61,6 @@ Follow these steps to update your Liferay Commerce license in a Docker Container
    docker cp [key-name.xml] [container-name]:/opt/liferay/deploy
    ```
 
-   ```tip::
-      You can add and remove activation keys while the server is running.
-   ```
-
 1. Verify your key has successfully deployed to your container via the console:
 
    ```log
@@ -74,7 +70,7 @@ Follow these steps to update your Liferay Commerce license in a Docker Container
    INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
    ```
 
-<!--## Updating the Commerce License in a DXP Cloud Project-->
+<!--## Updating Your License in a DXP Cloud Project-->
 
 ## Additional Information
 
