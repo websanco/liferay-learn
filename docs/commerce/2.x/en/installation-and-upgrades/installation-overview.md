@@ -11,7 +11,7 @@ For an optimal installation experience, please review the Compatibility Matrix a
 
 ## Starting with Liferay Commerce
 
-Liferay Commerce 3.0 is now bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition requires no additional Commerce-specific installation steps and can be used immediately on startup, while the Enterprise Edition requires a Liferay Commerce subscription.
+Liferay Commerce 3.0 comes bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition requires no additional Commerce-specific installation steps and can be used immediately on startup, while the Enterprise Edition requires a Liferay Commerce subscription.
 
 To get started, review the following options:
 
@@ -20,7 +20,16 @@ To get started, review the following options:
 | [Docker image](https://learn.liferay.com/dxp/7.x/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
 | [Bundle](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
 
+In Liferay Portal CE release bundles, no license is required. All Commerce modules that do not have `dxp.only=true` in their `bnd.bnd/manifest` are available on Portal startup.
+
+In DXP installations, all Commerce modules are deactivated by default on portal startup. After both DXP and Commerce licenses are deployed and validated, all Commerce modules are started and become available for use immediately. No server restart is required.
+
 To use Liferay Commerce Enterprise 3.0, [deploy your activation key](./activating-liferay-commerce-enterprise.md), and execute a search reindex to populate the data.
+
+| Release Type | Default Behavior | License Required | `dxp.only` Modules |
+|---|---|---|---|
+| Portal CE | Commerce enabled | No | No |
+| DXP | Commerce disabled | Yes | Yes |
 
 ## Maintaining Liferay Commerce
 
