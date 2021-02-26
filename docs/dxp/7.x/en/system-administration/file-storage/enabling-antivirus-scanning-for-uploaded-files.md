@@ -2,7 +2,7 @@
 
 > Subscription Required
 
-You can automatically scan any file uploaded to Liferay for viruses. When you enable the antivirus scanner, it checks files on upload to Liferay applications, such as [Documents and Media](../sharing-documents-and-media.md), [Message Boards](../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md), and more. If a virus is found, it's reported for users to reject.
+You can automatically scan any file uploaded to Liferay for viruses. When you enable the antivirus scanner, it checks files on upload to Liferay applications, such as [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), [Message Boards](../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md), and more. If a virus is found, it's reported for users to reject.
 
 ![The scanner detects virus-infected files on upload to Documents and Media and other Liferay applications.](./enabling-antivirus-scanning-for-uploaded-files/images/01.png)
 
@@ -28,11 +28,11 @@ Here's how to enable the Clamd antivirus scanner:
 
     Portal property:
 
-    ```propertie
+    ```properties
     dl.store.antivirus.enabled=true
     ```
 
-    Environment variable:
+    Docker environment variable:
 
     ```properties
     -e LIFERAY_DL_PERIOD_STORE_PERIOD_ANTIVIRUS_PERIOD_ENABLED=true
@@ -62,8 +62,6 @@ Now files are scanned on upload to Liferay applications. If a virus is detected 
 
 ## Additional Information
 
-[Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md)
-
-[Configuring Liferay](../../../system-administration/configuring_liferay.html)
-
-[System Settings](../../../system-administration/configuring-liferay/system-settings.md)
+* [Configuring File Storage](./configuring-file-storage.md)
+* [Configuring Liferay](../configuring_liferay.html)
+* [System Settings](../configuring-liferay/system-settings.md)

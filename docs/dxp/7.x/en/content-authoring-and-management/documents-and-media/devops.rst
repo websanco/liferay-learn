@@ -16,7 +16,6 @@ DevOps
 -  :doc:`/content-authoring-and-management/documents-and-media/devops/enabling-optimization-of-animated-gifs`
 -  :doc:`/content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration`
 -  :doc:`/content-authoring-and-management/documents-and-media/devops/enabling-document-creation-and-editing-with-microsoft-office-365`
--  Enabling Asset Auto-Tagging (Coming soon)
 
 Google Drive Integration
 ------------------------

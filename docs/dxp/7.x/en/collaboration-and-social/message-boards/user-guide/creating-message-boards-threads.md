@@ -13,7 +13,7 @@ To create a new thread:
 1. Create your thread's content in the **Body** field.
 
     ```note::
-      This field uses the same editor as the Blogs app, except that it uses BBCode instead of HTML. For further instructions, see the documentation on [using the editor](https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor-).
+      This field uses the same editor as the Blogs app, except that it uses BBCode instead of HTML. For further instructions, see the documentation on `using the editor <https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor->`_.
     ```
 
     ![Figure 1. Creating the first post](./creating-message-boards-threads/images/01.png)
@@ -28,7 +28,7 @@ Users can attach files to forum posts.
     ![Figure 2. Uploading an attachment](./creating-message-boards-threads/images/03.png)
 
 ```important::
-   You must enable antivirus scanning to scan files for viruses on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+   You can enable automatic antivirus scanning to scan files on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 
 ### Using _Tags_ and _Related Assets_ to Organize Threads

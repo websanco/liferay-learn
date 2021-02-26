@@ -33,7 +33,7 @@ To use the Advanced File System store method, following these steps:
 DXP is now saving files using Advanced File System Store.
 
 ```important::
-   Make sure to `enable antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+   Optionally `enable automatic antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 
 ### File Storage in a Clustered Environment

@@ -52,7 +52,7 @@ dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 ```
 
 ```important::
-   Make sure to `enable antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+   Consider `enabling antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 
 ## Using the Store in a Clustered Environment
