@@ -2,7 +2,7 @@
 
 Page *Fragments* are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Each Fragment is built using CSS, HTML, and JavaScript. Together, Fragments define your page's design and provide functionality along with widgets. Though you can [create your own](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), Liferay DXP includes a number of Fragments out-of-the-box.
 
-To access available Fragments, go to a Content Page, and click on the *Edit* icon (![Edit](../../../images/icon-edit.png)) in the Application Bar. Ensure your edit mode is set to *Page Design*, and click on *Fragment and Widgets* (![Fragments and Widgets](../../../images/icon-cards2.png)) in the editing Sidebar Menu.
+To access available Fragments, go to a Content Page, and click on the *Edit* icon (![Edit](../../../images/icon-edit.png)) in the Application Bar. Ensure your edit mode is set to *Page Design* and click on *Fragment and Widgets* (![Fragments and Widgets](../../../images/icon-cards2.png)) in the editing Sidebar Menu.
 
 * [Adding Fragments](#adding-fragments)
 * [Configuring Fragments](#configuring-fragments)
@@ -15,8 +15,6 @@ To access available Fragments, go to a Content Page, and click on the *Edit* ico
 
 ## Adding Fragments
 
-Follow these steps to add a Fragment to a Content Page:
-
 1. While editing a Content Page, open the *Fragment and Widgets* (![Fragments and Widgets](../../../images/icon-cards2.png)) panel in the editing Sidebar Menu.
 
 1. Drag and drop a Fragment to the desired location in your page layout.
@@ -25,27 +23,27 @@ Once added, you can change its placement at any time. You can also view its plac
 
 ## Configuring Fragments
 
-DXP provides options for configuring individual Fragments as well as their sub-elements. These options can vary, though some are common to all. You can view available configuration options in the *Selection* panel (![Selection](../../../images/icon-pages-tree.png)) of the Sidebar Menu. Simply click on a Fragment or element, and select which options you'd like to configure from the available tabs.
+DXP provides options for configuring individual Fragments as well as their sub-elements. These options can vary, though some are common to all. You can view available configuration options in the *Selection* panel (![Selection](../../../images/icon-pages-tree.png)) of the Sidebar Menu. Click on a Fragment or element and select which options you'd like to configure from the available tabs.
 
 ### General
 
-In the *General* tab, you can configure Fragment specific options (e.g., heading level, video URL, button type).
+Here you can configure Fragment specific options (e.g., heading level, video URL, button type).
 
 ### Styles
 
-In the *Styles* tab, you can configure standard Fragment options (e.g., dimensions, background, borders), as well as Fragment specific options on occasion. With DXP's Responsive Layout Editor, you can also configure these settings for different devices. See [Configuring Fragment Styles](./configuring-fragment-styles.md) and [Fragment Styles Reference](./fragment-styles-reference.md) for more information.
+Here you can configure standard Fragment options (e.g., dimensions, background, borders), as well as Fragment specific options on occasion. With DXP's Responsive Layout Editor, you can also configure these settings for different devices. See [Configuring Fragment Styles](./configuring-fragment-styles.md) and [Fragment Styles Reference](./fragment-styles-reference.md) for more information.
 
 ### Image
 
-In the *Image* tab, you can select an element's image, view its resolution, and provide its alt text.
+Here you can select an element's image, view its resolution, and provide its alt text.
 
 ### Link
 
-In the *Link* tab, you can either manually add a URL to a page element, or select from an available content field. You can also specify the desired target (e.g., self, parent).
+Here you can either manually add a URL to a page element, or select from an available content field. You can also specify the desired target (e.g., self, parent).
 
 ### Mapping
 
-In the *Mapping* tab, you can map page elements to available assets by selecting the desired item (e.g., web content article, document, blog) and specifying which of its fields to display in the element (e.g., title, author, name).
+Here you can map page elements to available assets by selecting the desired item (e.g., web content article, document, blog) and specifying which of its fields to display in the element (e.g., title, author, name).
 
 ## Layout Elements
 
@@ -57,7 +55,7 @@ In the *Mapping* tab, you can map page elements to available assets by selecting
 
 ### Container
 
-Use *container* Fragments to add drop zones to a Content Page. In addition to standard style options, this field can be configured to maintain a fixed width or to adapt to fill the width of its page section. You can also set a container's *Link* field to add either internal or external links. Once published, clicking on the name of the fragment redirects users to your specified destination.
+Use *container* Fragments to add drop zones to a Content Page. In addition to standard style options, this field can be configured to maintain a fixed width or to adapt to fill the width of its page section. You can also set a container's Link field to add either internal or external links. Once published, clicking on the name of the fragment redirects users to your specified destination.
 
 ### Grid
 
@@ -65,7 +63,7 @@ Use *grid* Fragments to add multiple drop zone modules to a Content Page. These 
 
 ## Basic Components
 
-*Basic Components* are simple design elements that add basic functionality to a page. Examples include buttons, headings, and tabs. With these Components, you can build your page piece by piece. DXP includes the following Basic Components.
+These are simple design elements that add basic functionality to a page. Examples include buttons, headings, and tabs. With these Components, you can build your page piece by piece. DXP includes the following Basic Components.
 
 ### Button
 
@@ -93,7 +91,7 @@ Use *HTML* Fragments to add an editable HTML element to a Content Page. Double-c
 
 ### Image
 
-Use *image* Fragments to add a configurable `image-square` element to a Content Page. As part of configuration, determine whether to use the image's original size, or if you want it to adjust to fit its context. To select an image, determine its resolution, and set its alt text, go to the `image-square` element's *Image* tab.
+Use *image* Fragments to add a configurable `image-square` element to a Content Page. As part of configuration, determine whether to use the image's original size, or adjust it to fit its context. To select an image, determine its resolution, and set its alt text, go to the `image-square` element's *Image* tab.
 
 ### Paragraph
 
@@ -127,13 +125,13 @@ Use the *tabs* Fragment to add multiple tabs with individual drop zones for widg
 
 ### Video
 
-Use *video* Fragments to embed videos in your Content Page. To select a video, enter a valid URL, either to YouTube or video file. As part of configuration, you can set the video to autoplay, loop, or mute. You can also determine whether video controls are hidden from users.
+Use *video* Fragments to embed videos in your Content Page. To select a video, enter a valid URL, either to YouTube or video file. As part of configuration, you can set the video to autoplay, loop, or mute. You can also choose to hide video controls.
 
 ## Content Display
 
 > Available: Liferay DXP 7.3+
 
-Use *Content Display* Fragments to display Site content individually or as part of a collection. Examples include web content, blog entires, and documents. You can also add page elements for rating or flagging page content. DXP includes the following Content Display Fragments.
+Use *Content Display* Fragments to display Site content individually or as part of a collection. Examples include web content, blog entries, and documents. You can also add page elements for rating or flagging page content. DXP includes the following Content Display Fragments.
 
 ### Content Display
 
@@ -163,7 +161,7 @@ Use *banner* Fragments to add text and link elements to a Content Page for creat
 
 ### Features
 
-Use the *features* Fragment to add text, images, and link elements to a Content Page for promoting key features. DXP includes the following layout.
+Use the *features* Fragment to add text, images, and link elements to a Content Page for promoting key features. DXP includes the following layout:
 
 ![Add text, image, and link elements to a Content Page for promoting key features](./using-fragments/images/11.png)
 
@@ -177,7 +175,7 @@ Use the *highlights* Fragment to add image, text, and link elements to a Content
 
 > Available: Liferay DXP 7.3+; previously included in the *Sections* panel.
 
-Use *Footer* Fragments to add a custom footer to [Master Page Templates](../defining-headers-and-footers/master-page-templates.md) for Content Pages. Each footer includes a navigation menu, sign-in link, image element, and copyright text. DXP includes the following layouts for Footer Fragments.
+Use *Footer* Fragments to add a custom footer to [Master Page Templates](../defining-headers-and-footers/master-page-templates.md) for Content Pages. Each footer includes a navigation menu, sign-in link, image element, and copyright text. DXP includes the following layouts for Footer Fragments:
 
 ![Add a custom footer to Master Page Templates for Content Page.](./using-fragments/images/13.png)
 
@@ -185,7 +183,7 @@ Use *Footer* Fragments to add a custom footer to [Master Page Templates](../defi
 
 > Available: Liferay DXP 7.3+; previously included in the *Sections* panel.
 
-Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates](../defining-headers-and-footers/master-page-templates.md) for Content Pages. Each navigation bar includes a navigation menu, sign-in link, and image element for your logo. DXP includes the following layouts for Navigation Bar Fragments
+Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates](../defining-headers-and-footers/master-page-templates.md) for Content Pages. Each navigation bar includes a navigation menu, sign-in link, and image element for your logo. DXP includes the following layouts for Navigation Bar Fragments:
 
 ![Add a custom header to Master Page Templates for Content Page.](./using-fragments/images/14.png)
 

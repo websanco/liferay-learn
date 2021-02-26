@@ -10,7 +10,7 @@ To manage a Master Page Template, follow these steps:
 
 1. Open the Actions Menu for a Master Page Template and select one of the options listed below:
 
-    * **Edit:** Configure the Master Page Template. Alternatively, you can edit the Master Page Template for a page through the page's [*Look and Feel* Menu](../building-and-managing-content-pages/editing-content-pages.md#look-and-feel), by clicking the *Edit Master* button.
+    * **Edit:** Configure the Master Page Template. Alternatively, you can edit a page's Master Page Template through the page's [Look and Feel Menu](../building-and-managing-content-pages/editing-content-pages.md#look-and-feel), by clicking the *Edit Master* button.
 
     * **Change Thumbnail:** Select a thumbnail image to display for the Master Page Template's card in the *Masters* tab
 
