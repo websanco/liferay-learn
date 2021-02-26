@@ -8,7 +8,7 @@ There are other Knowledge Base widgets you can add to pages besides the [Knowled
 
 **Knowledge Base Search widget:** Search for articles.
 
-You can add these widgets from *Add* (![Add icon](../../../images/icon-add.png)) &rarr; *Widgets* &rarr; *Content Management*.
+You can add these widgets from *Add* (![Add icon](../../images/icon-add.png)) &rarr; *Widgets* &rarr; *Content Management*.
 
 ## Knowledge Base Article Widget
 
@@ -16,7 +16,7 @@ The Knowledge Base Article widget displays a single article’s content. It even
 
 After adding the Knowledge Base Article widget to a Site page,
 
-1. Click _Options_ (![Options icon](../../../images/icon-options.png)) &rarr; click *Configuration*.
+1. Click _Options_ (![Options icon](../../images/icon-options.png)) &rarr; click *Configuration*.
 
 1. In the *Setup* &rarr; *General* tab, click *Select*. Choose an article, click *Save*, and close the Configuration window.
 
@@ -44,7 +44,7 @@ You can add multiple instances of the Knowledge Base Section widget to a page. E
 
 To configure the Knowledge Base Section widget,
 
-1. Select *Configuration* from the Knowledge Base Section widget’s *Options* menu (![Options icon](../../../images/icon-options.png)). This opens the widget’s Configuration window.
+1. Select *Configuration* from the Knowledge Base Section widget’s *Options* menu (![Options icon](../../images/icon-options.png)). This opens the widget’s Configuration window.
 
     ![Customize the widget in this configuration window.](./other-knowledge-base-widgets/images/04.png)
 
@@ -74,7 +74,7 @@ Enter your search term and press the *Search* button. The results are displayed 
 
 After adding the widget to a page,
 
-1. Click _Options_ (![Options icon](../../../images/icon-options.png)) &rarr; *Configuration*.
+1. Click _Options_ (![Options icon](../../images/icon-options.png)) &rarr; *Configuration*.
 
    ![Choose the criteria to display for the search results.](./other-knowledge-base-widgets/images/06.png)
 

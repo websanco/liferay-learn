@@ -2,13 +2,13 @@
 
 The Knowledge Base Display widget shows your published Knowledge Base articles on a page. You can customize how this widget displays articles and which ones it displays. To add the widget to a Site page,
 
-1. Navigate to the page and click _Add_ (![Add icon](../../../images/icon-add.png)) at the top right of the page.
+1. Navigate to the page and click _Add_ (![Add icon](../../images/icon-add.png)) at the top right of the page.
 
 1. The Knowledge Base Display widget is in the *Content Management* section. Add the widget to your page.
 
 By default, the Knowledge Base Display widget displays articles from the Knowledge Base’s Home folder. To change the to a different folder,
 
-1. Click the widget’s _Options_ icon (![Options icon](../../../images/icon-options.png)) and select *Configuration*. 
+1. Click the widget’s _Options_ icon (![Options icon](../../images/icon-options.png)) and select *Configuration*. 
 
 1. In the *Setup* tab, select the *General* tab then click *Select* in the Article or Folder field. This brings up the Select Entry form.
 
@@ -63,7 +63,7 @@ Follow these steps to set up content folders:
 
 1. Add articles to each content folder.
 
-1. Select *Configuration* from Knowledge Base Display’s *Options* menu (![Options icon](../../../images/icon-options.png)). In the *Setup* &rarr; *General* tab, select the content folders’ parent folder and click *Save*.
+1. Select *Configuration* from Knowledge Base Display’s *Options* menu (![Options icon](../../images/icon-options.png)). In the *Setup* &rarr; *General* tab, select the content folders’ parent folder and click *Save*.
 
 The content selector’s values reflect the names of your content folders. Select one to view its articles.
 
@@ -71,6 +71,6 @@ The content selector’s values reflect the names of your content folders. Selec
 
 You can also add a common prefix to the names shown in the selector:
 
-1. Select *Configuration* from Knowledge Base Display’s *Options* menu (![Options icon](../../../images/icon-options.png)). In the Configuration dialog, select the *Setup* &rarr; *Display Settings* tab.
+1. Select *Configuration* from Knowledge Base Display’s *Options* menu (![Options icon](../../images/icon-options.png)). In the Configuration dialog, select the *Setup* &rarr; *Display Settings* tab.
 
 1. Enter the prefix into the *Content Root Prefix* field and click *Save*.

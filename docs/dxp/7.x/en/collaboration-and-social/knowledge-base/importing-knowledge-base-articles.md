@@ -18,7 +18,7 @@ Here’s Markdown source text for a simple example article:
 
     # Modern Pentathlon [](id=modern-pentathlon)
 
-    The modern pentathlon is a competition across five differnt sport disciplines.
+    The modern pentathlon is a competition across five different sport disciplines.
 
     Each athlete must compete in fencing, shooting, swimming, horseback riding, and running.
 

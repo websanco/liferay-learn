@@ -6,7 +6,7 @@ The Knowledge Base app contains everything you need to create a repository of ar
    To access Knowledge Base in Site Administration, a Role must have the permission *Knowledge Base* > Access in *Site Administration*. To add or act on articles, folders, or suggestions, the Site administrator must grant the appropriate permissions using the Permissions window in Knowledge Base. 
 ```
 
-To navigate to the Knowledge Base app, click the _Menu_ icon (![Menu icon](../../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base*. The Knowledge Base app has three tabs:
+To navigate to the Knowledge Base app, click the _Menu_ icon (![Menu icon](../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base*. The Knowledge Base app has three tabs:
 
 **Articles:** Create and manage articles and folders.
 
@@ -18,7 +18,7 @@ To navigate to the Knowledge Base app, click the _Menu_ icon (![Menu icon](../..
 
 ## Authoring Articles in the Editor
 
-1. In the Articles tab, click the _Add_ icon (![Add icon](../../../images/icon-add.png)) and click *Basic Article*.
+1. In the Articles tab, click the _Add_ icon (![Add icon](../../images/icon-add.png)) and click *Basic Article*.
 
     ![A new window pops up for you to write your article](./creating-knowledge-base-articles/images/02.png)
 
@@ -44,7 +44,7 @@ To import articles, your Role must have the permission Knowledge Base → Resour
 
 To import articles into the Knowledge Base,
 
-1. In the Articles tab, click the *Add* icon (![Add icon](../../../images/icon-add.png)) and click *Import*.
+1. In the Articles tab, click the *Add* icon (![Add icon](../../images/icon-add.png)) and click *Import*.
 
     ![Upload your ZIP file on this new page.](./creating-knowledge-base-articles/images/03.png)
 

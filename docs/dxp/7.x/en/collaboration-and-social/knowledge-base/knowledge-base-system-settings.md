@@ -73,4 +73,3 @@ To make new sections,
 1. Enter a name for each new section and click *Save*.
 
 Once your sections are added, you can follow the steps in the [Knowledge Base Section documentation](other-knowledge-base-widgets.md#knowledge-base-section-widget) to learn how to use them.
-

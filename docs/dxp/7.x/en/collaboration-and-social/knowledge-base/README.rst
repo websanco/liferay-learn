@@ -1,8 +1,5 @@
-Knowledge Base
-==============
-
 User Guide
-----------
+==========
 
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/using-the-knowledge-base`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/creating-knowledge-base-articles`
@@ -15,11 +12,3 @@ User Guide
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-zip-file-requirements`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-importer-faq`
 -  :doc:`/collaboration-and-social/knowledge-base/user-guide/knowledge-base-system-settings`
-
-Developer Guide
----------------
-Coming soon!
-
-APIs
-----
-Coming soon!

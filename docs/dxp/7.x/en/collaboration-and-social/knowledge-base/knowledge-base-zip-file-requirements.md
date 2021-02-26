@@ -87,9 +87,9 @@ ZIP files must meet the following requirements:
 
 Once you have your article ZIP file, it’s time to import it. To import your ZIP file,
 
-1. Click on the Menu icon (![Menu icon](../../../images/icon-menu.png)) and navigate to Content and Data &rarr; Knowledge Base &rarr; Articles. 
+1. Click on the Menu icon (![Menu icon](../../images/icon-menu.png)) and navigate to Content and Data &rarr; Knowledge Base &rarr; Articles. 
 
-1. Click on the Add icon (![Add icon](../../../images/icon-add.png)) and click *Import*.
+1. Click on the Add icon (![Add icon](../../images/icon-add.png)) and click *Import*.
 
     ![Upload your ZIP file on this new page.](./knowledge-base-zip-file-requirements/images/01.png)
 

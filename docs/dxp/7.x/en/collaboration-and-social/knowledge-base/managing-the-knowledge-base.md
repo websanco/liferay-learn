@@ -1,12 +1,12 @@
 # Managing the Knowledge Base
 
-You can manage the Knowledge Base from the Knowledge Base app. To navigate to the app, click the _Menu_ icon (![Menu icon](../../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base.*
+You can manage the Knowledge Base from the Knowledge Base app. To navigate to the app, click the _Menu_ icon (![Menu icon](../../images/icon-menu.png)) and navigate to *Content and Data* &rarr; *Knowledge Base.*
 
 ![From the app you can manage Knowledge Base articles, templates, and suggestions](./managing-the-knowledge-base/images/01.png)
 
 ## Setting the Knowledge Base's Options
 
-   At the top-right, click the Options menu (![Options icon](../../../images/icon-options.png)) to configure the Knowledge Base: 
+   At the top-right, click the Options menu (![Options icon](../../images/icon-options.png)) to configure the Knowledge Base: 
 
 **Subscribe:** Get notified when Knowledge Base articles are created, updated, or deleted.
 
@@ -27,7 +27,7 @@ Articles have a priority value that determines their position in the [Knowledge 
 
 To assign articles a new priority value, 
 
-1. Select *Move* from the Actions menu (![Actions icon](../../../images/icon-actions.png)) next to the article.
+1. Select *Move* from the Actions menu (![Actions icon](../../images/icon-actions.png)) next to the article.
 
 1. Enter a new priority value for the article.
 
@@ -35,7 +35,7 @@ To assign articles a new priority value,
 
 To organize articles with folders,
 
-1. Click the _Add_ icon (![Add icon](../../../images/icon-add.png)) and select *Folder*. This opens a form for creating the new folder.
+1. Click the _Add_ icon (![Add icon](../../images/icon-add.png)) and select *Folder*. This opens a form for creating the new folder.
 
 1. Enter a name and an optional description.
 
@@ -47,7 +47,7 @@ The text immediately below the *Filter and Order* selector at the top of the app
 
 ![Click the action menu of a folder for different options.](./managing-the-knowledge-base/images/03.png)
 
-Each folder’s Actions menu (![Actions icon](../../../images/icon-actions.png)) contains these actions:
+Each folder’s Actions menu (![Actions icon](../../images/icon-actions.png)) contains these actions:
 
 **Edit:** Change the folder’s name and description.
 
@@ -57,4 +57,4 @@ Each folder’s Actions menu (![Actions icon](../../../images/icon-actions.png))
 
 **Permissions:** Grant or revoke the following permissions: add an article to the folder, add a sub-folder to the folder, delete the folder, move the folder, set permissions on the folder, edit (update) the folder, and view the folder.
 
-You can also delete multiple articles or folders at once. To do this, select the checkbox for each item that you want to delete and click the X button that appears in the Management Bar. You can also see the info for selected items by clicking the Info icon (![Info icon](../../../images/icon-information.png)) in the Management Bar.
+You can also delete multiple articles or folders at once. To do this, select the checkbox for each item that you want to delete and click the X button that appears in the Management Bar. You can also see the info for selected items by clicking the Info icon (![Info icon](../../images/icon-information.png)) in the Management Bar.
