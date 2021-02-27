@@ -76,11 +76,21 @@ This is the page shown when a User (with the permission to view) clicks the _Vie
 
 *Secret variables* are environment variables that securely reference secrets for their value. Like normal environment variables, secret variables can be defined either through a services `LCP.json` file, or through the Environment Variables page. The secret must [already be added](#adding-a-new-secret) previously so that the secret variable can reference the secret's key.
 
-![Secrets may be added using the Secret variables section of the Environment Variables page.](./managing-secure-environment-variables-with-secrets/images/11.png)
+To reference a secret:
 
-To reference a secret, navigate to the chosen service's Environment Variables page. Scroll down to the *Secret variables* section and click *Add variables*. Then, choose a name for any new secret variables (under *Key*) and select the secrets for them to reference.
+1. Navigate to the chosen service's Environment Variables page.
 
-![Add secret variables through the UI to reference specific secrets.](./managing-secure-environment-variables-with-secrets/images/12.png)
+1. Scroll down to the *Secret variables* section.
+
+    ![Secrets may be added using the Secret variables section of the Environment Variables page.](./managing-secure-environment-variables-with-secrets/images/11.png)
+
+1. Click *Add variables*.
+
+1. Choose a name for any new secret variables (under *Key*), and select the secrets for them to reference.
+
+    ![Add secret variables through the UI to reference specific secrets.](./managing-secure-environment-variables-with-secrets/images/12.png)
+
+The new environment variable now references the chosen secret for its value.
 
 ### Adding Secret Variables via LCP.json
 
