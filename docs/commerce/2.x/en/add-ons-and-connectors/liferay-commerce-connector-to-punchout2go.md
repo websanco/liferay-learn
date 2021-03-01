@@ -2,14 +2,22 @@
 
 > Subscription Required
 
-The Liferay Commerce Connector to PunchOut2Go enables integration with a user's existing PunchOut2Go infrastructure.
+Liferay provides a PunchOut2Go connector that enables Commerce integration with a user's existing PunchOut2Go infrastructure. You can download this connector from the [Liferay Help Center](http://customer.liferay.com/downloads) as an LPKG file.
 
 <!--![Punch Out Flow Diagram](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
+```important::
+   The PunchOut2Go connector requires Liferay Commerce 2.1.2 and Liferay DXP 7.1 FP18+ or 7.2 FP6+.
+```
+
 ## Deploy the PunchOut2Go Connector
 
-1. Download the connector from the [Liferay Help Center](http://customer.liferay.com/downloads).
-1. Copy the _PunchOut2Go Connector_ `LPKG` into the `${liferay.home}/deploy` folder. See the [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) article to learn more.
+Before deploying the PunchOut2Go connector, ensure Commerce is already deployed to your Liferay server to avoid conflicts. Then, follow these steps to deploy the PunchOut2Go LPKG connector:
+
+1. Download the *Commerce Connector to PunchOut2Go* from the [Liferay Help Center](http://customer.liferay.com/downloads).
+
+1. Copy the *PunchOut2Go Connector* `LPKG` into the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder.
+
 1. Verify that the following message displays in the application server console:
 
     ```
@@ -26,7 +34,7 @@ The Liferay Commerce Connector to PunchOut2Go enables integration with a user's 
     ```
 -->
 
-The connector is now active.
+Once the server finishes restarting, the connector is active and ready for configuration.
 
 ## Configure the Connector
 
