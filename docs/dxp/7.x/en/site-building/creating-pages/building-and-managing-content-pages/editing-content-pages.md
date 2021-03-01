@@ -23,7 +23,7 @@ Using the *Experience* drop-down menu, you can create copies of the current page
 
 ### Translations
 
-Click on the *language flag* to access the translation drop-down menu. Here, you can view the status of active languages for a Page, as well as switch between languages to view and edit translations directly. See [Configuring Site Languages](../../site-settings/configuring_site_languages.html) for more information.
+Click on the *language flag* to access the translation drop-down menu. Here, you can view the status of active languages for a Page, as well as switch between languages to view and edit translations directly. See [Configuring Site Languages](../../site-settings/site-localization.md) for more information.
 
 ### Device Display
 
