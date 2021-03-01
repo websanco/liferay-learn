@@ -23,7 +23,7 @@ Liferay DXP implements IBM’s [Cloud Object Storage](https://cloud.ibm.com/docs
 Once you have the System Settings configuration in place, you must set the IBM Cloud Object Storage store as default. To do this, set the following property in the `portal-ext.properties` file:
 
 ```properties
-dl.store.impl=com.liferay.portal.store.s3.S3Store
+dl.store.impl=com.liferay.portal.store.s3.IBMS3Store
 ```
 
 ## Using the Store in a Clustered Environment
