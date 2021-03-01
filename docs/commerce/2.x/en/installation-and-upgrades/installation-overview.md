@@ -20,9 +20,9 @@ To get started, review the following options:
 | [Docker image](https://learn.liferay.com/dxp/7.x/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
 | [Bundle](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
 
-In Liferay Portal CE release bundles and images, no license is required. All Commerce modules that do not have `dxp.only=true` in their `bnd.bnd/manifest` are available on Portal startup.
+Liferay Portal CE release bundles and images do not require a license. All Commerce modules that do not have `dxp.only=true` in their `bnd.bnd/manifest` are available on Portal startup.
 
-By contrast, all Commerce modules are deactivated by default in DXP installations on portal startup. After both DXP and Commerce licenses are deployed and validated, all Commerce modules are started and become immediately available for use. No server restart is required.
+By contrast, all Commerce modules are deactivated by default in DXP installations on portal startup. After both DXP and Commerce licenses are deployed and validated, all Commerce modules are started and are immediately available for use. No server restart is required.
 
 | Release Type | Default Behavior | License Required | `dxp.only` Modules |
 |---|---|---|---|

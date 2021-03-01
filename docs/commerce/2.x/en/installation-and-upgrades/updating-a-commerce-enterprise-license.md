@@ -4,7 +4,7 @@ Commerce Enterprise licenses are only valid for a set period of time based on th
 
 If a license expires, the Commerce modules remain activated, though it is no longer usable in the UI and does not allow API calls until the license is updated. A notification is displayed on Commerce applications for all users, indicating the Commerce application is unavailable. Administrators are asked to update the license, while other users are asked to contact their administrator.
 
-The console also display an error message during server restart:
+The console also displays an error message during server restart:
 
    ```log
    ERROR [main][LicenseManager:?] Liferay Commerce license is expired

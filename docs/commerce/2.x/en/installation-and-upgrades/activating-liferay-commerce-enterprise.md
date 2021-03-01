@@ -8,7 +8,7 @@ Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and 
 
 * Send a request by email to your regional Provisioning team (i.e., provisioning-[region]@liferay.com).
 
-* Download a Commerce developer key from [here](https://customer.liferay.com/en_US/activation-key).
+* Download a Commerce activation key from [here](https://customer.liferay.com/en_US/activation-key).
 
 Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. Restrictions based on System resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
 
@@ -18,7 +18,7 @@ Commerce licenses use many of the same parameters as DXP licenses, including `pr
    *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
 ```
 
-Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay relocates it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder.
+Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay moves it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder.
 
 * [Deploying to a Bundle](#deploying-to-a-bundle)
 * [Deploying to a Docker Container](#deploying-to-a-docker-container)
@@ -28,9 +28,9 @@ Once you've acquired your XML activation key, copy it to the `${liferay.home}/de
 
 Follow these steps to deploy a Commerce activation key to your DXP bundle:
 
-1. Download your provisioned `.xml` key.
+1. Download the provisioned `.xml` key.
 
-1. Copy your key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder for your DXP instance. If the instance is already running, the key is processed and stored in the `${liferay.home}/osgi/modules` folder, and Liferay generates a license file in the `${liferay.home}/data/license` folder. Otherwise, the activation key is deployed and processed during the next startup.
+1. Copy the key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder for your DXP instance. If the instance is already running, the key is processed and stored in the `${liferay.home}/osgi/modules` folder, and Liferay generates a license file in the `${liferay.home}/data/license` folder. Otherwise, the activation key is deployed and processed during the next startup.
 
 1. Verify your key has successfully deployed to your bundle via the console:
 
@@ -49,7 +49,7 @@ Follow these steps to deploy the key to a Docker container using the `docker cp`
 
 1. Download your provisioned `.xml` key.
 
-1. Copy your key to the `/opt/liferay/deploy` folder in your container using the following syntax:
+1. Copy the key to the `/opt/liferay/deploy` folder in your container using the following syntax:
 
    ```bash
    docker cp [key-name.xml] [container-name]:/opt/liferay/deploy
@@ -68,7 +68,7 @@ Follow these steps to deploy the key to a Docker container using the `docker cp`
 
 ## Deploying to DXP Cloud
 
-If you've purchased Commerce through a DXP Cloud contract, then the DXP Cloud team manages your activation key through the cloud infrastructure, and there is no need for you to manually deploy<!--or manage?--> the key for yourself. However, if you've added Commerce to an existing DXP Cloud project without going through the DXP Cloud team, then you'll need to manually deploy<!--and manage?--> the licence yourself.
+If you've purchased Commerce through a DXP Cloud contract, then the DXP Cloud team manages the activation key through the cloud infrastructure, and there is no need to manage the key yourself. However, if you are adding Commerce to an existing DXP Cloud project, you must manually deploy the licence yourself.
 
 Follow the steps to deploy a Commerce activation key to your Liferay service:
 
