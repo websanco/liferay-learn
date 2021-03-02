@@ -36,7 +36,7 @@ A Display Page Template specifies the layout and formatting for your content and
 
 Now that your Display Page Template is created, you can [publish your content with it](./publishing-content-with-display-pages.md).
 
-## Viewing Display Page Template Usage
+<!-- ## Viewing Display Page Template Usage
 
 > Liferay 7.4+
 
@@ -62,7 +62,7 @@ To view your Display Page Template usage and unassign your content,
 1. Click the *Actions* menu (![Actions](../../../images/icon-actions.png)) in the top-right corner and select *Assign to Default* or *Unassigned*.
 1. Click *OK*.
 
-If you assign your content to a new Display Page Template, review that the content displays as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md).
+If you assign your content to a new Display Page Template, review that the content displays as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md). -->
 
 ## Additional Information
 
