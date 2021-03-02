@@ -21,6 +21,8 @@ Setting Up Liferay
    ../../system-administration/installing_and_managing_apps.rst
    setting-up-liferay/using-a-cdn.md
    setting-up-liferay/clustering_for_high_availability.rst
+   setting-up-liferay/tuning-liferay.md
+   setting-up-liferay/tuning-your-jvm.md
 
 After `installing Liferay <./installing_liferay.html>`_, configure it to meet your needs. Here are common setup tasks.
 
@@ -153,7 +155,7 @@ You'll want eliminate or minimize any site downtime. If a server fails or needs 
 Tune Liferay
 ------------
 
-Tune Liferay's JVM, connection pools, and more for optimal performance. See *Tuning Liferay* (coming soon) and *Tuning Your JVM* (coming soon) for details.
+Tune Liferay's JVM, connection pools, and more for optimal performance. See `Tuning Liferay <./setting-up-liferay/tuning-liferay.md>`_ and `Tuning Your JVM <./setting-up-liferay/tuning-your-jvm.md>`_ for details.
 
 What's Next
 ~~~~~~~~~~~
