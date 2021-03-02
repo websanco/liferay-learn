@@ -144,7 +144,7 @@ The Widgets section functions just like the *Add* menu on a Widget Page. The ful
 
 ![The Widgets section provides a list of Widgets that can be added inside of a Layout.](./editing-content-pages/images/24.png)
 
-The main difference is that only the main configuration options for widgets on Content Pages. Various other configurations like *Look and Feel* are only available for widgets on Widget Pages.
+The main difference is that only the main configuration options are available for widgets on Content Pages. Various other configurations like *Look and Feel* are only available for widgets on Widget Pages.
 
 ### Page Structure
 
