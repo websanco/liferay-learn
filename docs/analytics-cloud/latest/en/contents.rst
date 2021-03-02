@@ -8,7 +8,7 @@ Contents
 
    getting_started
    touchpoints
-   individuals_and_segments
+   people
    optimization
    apis
    workspace_data

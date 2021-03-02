@@ -24,11 +24,11 @@ These are just some ways you benefit from using Analytics Cloud. Before getting 
 
 Analytics Cloud helps you understand people, their interaction with your sites, and the paths (or channels) that draw them to your sites in these ways:
 
-* [Individuals and Segments](../../individuals-and-segments/individuals-and-segments.md)
+* [People](../../people/people.md)
 * [Touchpoints](../../touchpoints/touchpoints.md)
 * [Paths](../../touchpoints/pages/paths.md)
 
-## Individuals and Segments
+## People
 
 Existing and prospective customers interact with your company in person, on your websites, and via email and messaging. On Liferay DXP sites, people are registered users or visitors. Analytics Cloud integrates contacts (people) from multiple sources, including Liferay DXP sites, into a single view. It merges contact data into rich profiles of Individuals—unique contacts. You can name contact fields your way, making them most useful to you and your company.
 

@@ -21,8 +21,8 @@ The Data Sources page appears and lists all existing data sources.
 Unless a teammate has already added a data source, the list is empty. To add a new data source, see the following tutorials:
 
 * [Adding a Liferay DXP Data Source](./connecting-liferay-dxp-to-analytics-cloud.md)
-* [Adding a CSV Data Source](../../individuals-and-segments/individual-profiles/adding-a-csv-data-source.md)
-* [Adding a Salesforce Data Source](../../individuals-and-segments/individual-profiles/adding-a-salesforce-data-source.md)
+* [Adding a CSV Data Source](../../people/individuals/adding-a-csv-data-source.md)
+* [Adding a Salesforce Data Source](../../people/individuals/adding-a-salesforce-data-source.md)
 
 Once you’ve created your data sources, you might need to modify them from time to time.
 
@@ -31,7 +31,7 @@ Once you’ve created your data sources, you might need to modify them from time
 The Data Sources page shows all of the Data Sources added to Analytics Cloud and can be searched by keyword. You can edit data sources in the following ways:
 
 * Name of the data source
-* [Contact mapping](../../individuals-and-segments/individual-profiles/mapping-contact-data.md)
+* [Contact mapping](../../people/individuals/mapping-contact-data.md)
 * Enable/Disable Contact or Analytics sync
 
 Here’s how to delete a data source:
