@@ -176,7 +176,7 @@ function generate_static_html {
 		# Include unbuilt resources (root level files only) in the built site.
 		#
 
-		for resources_dir in $(find build/input/"${product_version_language_dir_name}" -name resources -type d -prune)
+		for resources_dir in $(find build/input/"${product_version_language_dir_name}" -name resources -prune -type d)
 		do
 			if [[ -n $(find "${resources_dir}" -maxdepth 1 -type f) ]]
 			then
