@@ -16,6 +16,3 @@ To delete a keyword from the block list, click that keyword's trash icon (![Dele
 
 ![The keyword management screen.](managing-interest-topics/images/01.png)
 
-## Additional Information
-
-* [Interests](../individuals-and-segments/interests.md)

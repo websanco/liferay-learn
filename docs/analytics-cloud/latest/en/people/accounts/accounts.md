@@ -45,7 +45,7 @@ The Activities tab shows the activities of the individuals in the account. A his
 
 ## Interests
 
-The Interests tab shows the topics of interest for the account’s individuals. Analytics Cloud identifies these topics via the same methodology it uses for individuals. For more information, see [Interests](./interests.md).
+The Interests tab shows the topics of interest for the account’s individuals. Analytics Cloud identifies these topics via the same methodology it uses for individuals. 
 
 ## Segments
 
