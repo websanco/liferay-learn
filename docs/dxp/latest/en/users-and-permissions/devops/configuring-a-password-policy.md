@@ -1,38 +1,52 @@
 # Configuring a Password Policy
 
-Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations.
+Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations. 
+
+Note: New users are assigned to the Default Password Policy by default. If you wish to associate a user with a custom password policy they must be assigned as members of that policy. See below.
 
 ## Overview
 
-1. [Modifying the Default Policy](#modifying-the-default-policy)
+1. [Modifying the Default Password Policy](#modifying-the-default-password-policy)
 1. [Creating a Custom Password Policy](#Creating-a-custom-password-policy)
 1. [Assigning Members to a Password Policy](#assigning-members-to-a-password-policy)
 1. [Utilizing the Properties File](#utilizing-the-properties-file)
 1. [Password Properties Reference](#password-properties-reference)
 
-## Modifying the Default Policy
-
-## Creating a Custom Password Policy
+## Modifying the Default Password Policy
 
 1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
-1. Click the Actions button (![Actions button](../../images/icon-actions.png)) next to an existing policy and click *Edit*. Or click the *Add* icon (![Click on the add icon to create a new policy](../../images/icon-add.png)) to add a new policy.
+1. Click the Actions button (![Actions](../../images/icon-actions.png)) next to the Default Password Policy and click *Edit*.
+
+   ![Click edit to make changes to the policy.](./configuring-a-password-policy/images/01.png)
+
+1. Make your desired changes in the configuration window.
+
+   ![Make your desired changes in the configuration window.](configuring-a-password-policy/images/02.png)
+
+   **Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
+
+   **Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
+
+   **Password History:** Decide how many passwords to keep in the history, preventing old passwords to be reused.
+
+   **Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a *Grace Limit*: how many logins are allowed after the password is expired before forcing a password change. 
+
+   **Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
+
+1. When finished, click *Save*. 
+
+## Creating a Custom Password Policy
+
+There are some scenarios where utilizing a custom password policy would be useful. For example, if you needed to require certain users or user groups of your Site to have stricter password rules. 
+
+1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
+
+1.  Click the *Add* icon (![Add](../../images/icon-add.png)) to add a new policy.
 
 1. In the configuration window, provide a Name and Description for your password policy. 
 
-   ![Set specific parameters in the configuration window](configuring-a-password-policy/images/02.png)
-
-1. Set the parameters for the policy (see below). When finished, click _Save_. 
-
-**Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
-
-**Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
-
-**Password History:** Decide how many passwords to keep in the history, preventing old password use.
-
-**Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a _Grace Limit_: how many logins are allowed after the password is expired before forcing a password change. 
-
-**Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
+1. Set the parameters for the policy (see above). When finished, click *Save*. 
 
 ## Assigning Members to a Password Policy
 
