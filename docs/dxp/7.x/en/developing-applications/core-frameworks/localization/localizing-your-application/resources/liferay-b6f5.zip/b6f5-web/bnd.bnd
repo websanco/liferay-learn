@@ -1,0 +1,6 @@
+Bundle-Name: Acme B6F5 Web
+Bundle-SymbolicName: com.acme.b6f5.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /language-web
+-liferay-aggregate-resource-bundles: com.acme.b6f5.web
+-sources: true
