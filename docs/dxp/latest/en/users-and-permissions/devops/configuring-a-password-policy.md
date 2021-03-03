@@ -14,6 +14,8 @@ Note: New users are assigned to the Default Password Policy by default. If you w
 
 ## Modifying the Default Password Policy
 
+To change the default policy,
+
 1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
 1. Click the Actions button (![Actions](../../images/icon-actions.png)) next to the Default Password Policy and click *Edit*.
@@ -38,7 +40,7 @@ Note: New users are assigned to the Default Password Policy by default. If you w
 
 ## Creating a Custom Password Policy
 
-There are some scenarios where utilizing a custom password policy would be useful. For example, if you needed to require certain users or user groups of your Site to have stricter password rules. 
+Utilizing a custom password policy might be useful in some scenarios. For example, if you required certain users or user groups of your Site to have stricter password rules. To create a custom policy,
 
 1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
@@ -46,39 +48,50 @@ There are some scenarios where utilizing a custom password policy would be usefu
 
 1. In the configuration window, provide a Name and Description for your password policy. 
 
-1. Set the parameters for the policy (see above). When finished, click *Save*. 
+1. Set the properties for your policy (see above). When finished, click *Save*. 
 
 ## Assigning Members to a Password Policy
 
-Once you have created a new password policy, you need to assign members to it,
+To assign members to your new password policy,
 
 1. Click the Actions button (![Actions button](../../images/icon-actions.png)) next to the password policy. Click *Assign Members*.
 
    ![Click on the Assign Members link.](configuring-a-password-policy/images/03.png)
 
-1. You can add individual Users or Organizations to the password policy. Click the _add_ icon (![Add icon](../../images/icon-add.png)). 
+1. You can add individual Users or Organizations to the password policy. Click the _add_ icon (![Add icon](../../images/icon-add.png)) and a new form will pop up.
 
 1. Make your selection (of Users or Organizations). When finished, click *Add*. 
 
-   ![Make your selection and click the Add button.](configuring-a-password-policy/images/05.png)
+   ![Make your selection and click the Add button.](configuring-a-password-policy/images/04.png)
 
    Your Users or Organizations are now associated with your password policy.
 
 ## Utilizing the Properties File
 
 The Default Password Policy is set as the default and configured in Liferay's [portal.properties](@platform-ref@/7.3-latest/propertiesdoc/portal.properties.html#Passwords)
-file. Find the properties that start with `passwords.default.policy`. To make changes, including changing the default policy, add whichever properties and values you choose to modify in your `portal-ext.properties` file, as usual.
-Restart the application server and your changes take effect.
+file. Find the properties that start with `passwords.default.policy`. Note, that the Default Password Policy can only be modified from the UI in settings.
+
+A new password policy can also be set up with the `portal-ext.properties` file. Add the properties and values you want to customize into the file. Make sure to add the custom policy name to this properties file. 
+
+For example, if you wanted to have a custom password policy that required a minimum length, numbers, symbols you might have values set as follows:
 
 ```properties
 #
-# Set the properties of the default password policy.
+# Properties for a Custom Password Policy
 #
 
 ...
-passwords.default.policy.name=Default Password Policy
+passwords.default.policy.name=Custom Password Policy
+passwords.default.policy.check.syntax=true
+passwords.default.policy.min.length=10
+passwords.default.policy.min.numbers=1
+passwords.default.policy.min.symbols=1
 ...
 ```
+
+See the reference below for a full list of properties that can be used to customize your password policy.
+
+Once you've have your `portal-ext.properties` file, it needs to be placed in the `liferay/configs` folder. Learn more about [portal properties](../../using-the-liferay-dxp-service/configuring-the-liferay-dxp-service.md#portal-properties)
 
 ## Password Properties Reference
 
