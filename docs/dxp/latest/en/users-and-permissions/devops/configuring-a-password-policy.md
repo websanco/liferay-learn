@@ -91,7 +91,7 @@ passwords.default.policy.min.symbols=1
 
 See the reference below for a full list of properties that can be used to customize your password policy.
 
-Once you've have your `portal-ext.properties` file, it needs to be placed in the `liferay/configs` folder. Learn more about [portal properties](../../using-the-liferay-dxp-service/configuring-the-liferay-dxp-service.md#portal-properties)
+Once you have your `portal-ext.properties` file, place it in the `[Liferay Home]` folder. Learn more about [portal properties](../../installation-and-upgrades/reference/portal-properties.md) or if using Docker, [configuring a Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md).
 
 ## Password Properties Reference
 
