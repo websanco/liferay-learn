@@ -9,6 +9,8 @@ Personalizing your Content Page for different users is a two-step process:
 
 ## Understanding How Experiences Work
 
+> Some Experiences functionality is available in Liferay 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+ only.
+
 You can create multiple experiences for the same Content Page, each experience covering a particular need. For example, you can create different experiences for users who log in to your site and for users who browse the site anonymously. Each experience contains the content and layout that is most appropriate for each Segment.
 
 Consider the following information when you create multiple experiences for the same Content Page:
@@ -55,6 +57,11 @@ In this example:
 
     ![Select an existing Segment for the Experience or create a new Segment.](./content-page-personalization/images/02.png)
 
+
+    ```note::
+       New Experiences are assigned to the *Anyone* Segment by default, and target all website visitors.
+    ```
+
 6. Edit your Content Page with the information and layout you want to show to the selected Segment.
 7. Using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls, move the experience in the list to set its preference (see [Understanding How Experiences Work](#understanding-how-experiences-work) for more information).
 8. Click *Publish*.
@@ -73,7 +80,7 @@ When you edit a Content Page, you can click on the *Experience* to manage the op
 
    - Set the Experience Priority, using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
    - Edit (![Edit](../../../images/icon-edit.png)) the Experience's name or the selected Segment.
-   - Duplicate (![Duplicate](../../../images/icon-copy.png)) the Experience.
+   - Duplicate (![Duplicate](../../../images/icon-copy.png)) the Experience (available in Liferay DXP 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+.).
    - Delete (![Delete](../../../images/icon-delete.png)) the Experience.
 
 ## Content Page Experiences and A/B Testing
