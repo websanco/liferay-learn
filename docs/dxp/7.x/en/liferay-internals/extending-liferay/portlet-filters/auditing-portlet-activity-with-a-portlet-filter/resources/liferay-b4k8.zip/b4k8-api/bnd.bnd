@@ -1,6 +1,0 @@
-Bundle-Name: Acme B4K8 API
-Bundle-SymbolicName: com.acme.b4k8.api
-Bundle-Version: 1.0.0
-Export-Package:\
-	com.acme.b4k8.constants,\
-	com.acme.b4k8.model
