@@ -129,9 +129,16 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
 
 1. Add two more settings to Kibana itself. The first forbids Kibana from rewriting requests prefixed with `server.basePath`. The second sets Kibana's base path for the Monitoring portlet to act as a proxy for Kibana's monitoring UI. Add this to `kibana.yml`:
 
+   [Liferay DXP 7.3]
    ```yaml
    server.rewriteBasePath: false
    server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
+   ```
+
+   [Liferay DXP 7.2]
+   ```yaml
+   server.rewriteBasePath: false
+   server.basePath: "/o/portal-search-elasticsearch-xpack-monitoring/xpack-monitoring-proxy"
    ```
 
    Once you set the `server.basePath`, you cannot access the Kibana UI through Kibana's URL (e.g., `https://localhost:5601`). All access to the Kibana UI is through the Monitoring portlet, which is only accessible to signed in Liferay users. Navigate directly to the portlet using the URL
