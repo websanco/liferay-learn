@@ -1,7 +1,5 @@
 package com.acme.b4k8.internal.portlet.filter;
 
-import com.acme.b4k8.constants.B4K8PortletKeys;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 
@@ -21,12 +19,12 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"javax.portlet.name=" + B4K8PortletKeys.B4K8,
+		"javax.portlet.name=com_liferay_blogs_web_portlet_BlogsPortlet",
 		"service.ranking:Integer=100"
 	},
 	service = PortletFilter.class
 )
-public class B4K8BakerPortletFilter implements RenderFilter {
+public class B4K8PortletFilter implements RenderFilter {
 
 	@Override
 	public void destroy() {
@@ -51,11 +49,10 @@ public class B4K8BakerPortletFilter implements RenderFilter {
 			long averageRenderTimeNs =
 				_accumulatedTimeMs.longValue() / totalHits;
 
-			_log.warn(
-				B4K8PortletKeys.B4K8 + " rendered in " + renderTime + " ms");
+			_log.warn(_PORTLET_NAME + " rendered in " + renderTime + " ms");
 
 			_log.warn(
-				B4K8PortletKeys.B4K8 + " rendered " + totalHits +
+				_PORTLET_NAME + " rendered " + totalHits +
 					" times with an average " + averageRenderTimeNs +
 						" ms render time");
 		}
@@ -65,8 +62,11 @@ public class B4K8BakerPortletFilter implements RenderFilter {
 	public void init(FilterConfig filterConfig) throws PortletException {
 	}
 
+	private static final String _PORTLET_NAME =
+		"com_liferay_blogs_web_portlet_BlogsPortlet";
+
 	private static final Log _log = LogFactoryUtil.getLog(
-		B4K8BakerPortletFilter.class);
+		B4K8PortletFilter.class);
 
 	private final LongAdder _accumulatedTimeMs = new LongAdder();
 	private final LongAdder _hits = new LongAdder();
