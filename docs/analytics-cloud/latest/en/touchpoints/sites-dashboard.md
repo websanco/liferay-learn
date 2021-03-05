@@ -21,7 +21,11 @@ The dashboard contains the following data panels:
 
 Each panel in the dashboard has a time period selector that recalculates the metrics for the selected time period. The following are available:
 
-**Last 24 hours:** Displays data generated over the last 24 hours.
+```Note::
+Note - Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’s session to end (30 minutes of inactivity or signing out) to be calculated. Therefore analytics data within the last 24 hours is displayed after the end of a session.
+```
+
+**Last 24 hours:** Displays data generated over the last 24 hours. 
 
 **Last 7 days:** Displays data generated for the previous seven full days (the current day is excluded), in daily increments.
 
