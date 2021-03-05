@@ -50,6 +50,10 @@ See the [Database Templates](../../reference/database-templates.md) for more dri
 
 ## Migrating Portal Properties
 
+```important::
+   If you've overridden the ``locales`` `Portal Property <../../../installation-and-upgrades/reference/portal-properties.md>`_, override it in the new installation before upgrading. This assures upgrading data for all of your locales.
+```
+
 The properties discussed here can be updated after database upgrade. Migrating properties involves these actions:
 
 * Updating your `liferay.home` property, if you changed it

@@ -69,6 +69,10 @@ Configurations and supporting infrastructure must be migrated and updated from y
    If you're upgrading from 6.2 or earlier, update your file store configuration. See the `Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>`_ for more information.
 ```
 
+```important::
+   If you've overridden the ``locales`` `Portal Property <../../../installation-and-upgrades/reference/portal-properties.md>`_, override it in the new installation before upgrading. This assures upgrading data for all of your locales.
+```
+
 You can wait until after database upgrade to update your other settings. See these [Migrating Configurations and Properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md) for more information.
 
 ## Improving Upgrade Performance
