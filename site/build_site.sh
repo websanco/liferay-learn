@@ -92,7 +92,7 @@ function generate_sphinx_input {
 
 		git clean -dfx .
 
-		./update_examples.sh && ./update_permissions.sh
+		./update_examples.sh "${1}" && ./update_permissions.sh
 
 		pushd ../site
 	fi

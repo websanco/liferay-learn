@@ -7,7 +7,7 @@ source ../_common.sh
 function copy_template {
 	local zip_dir_name_pattern="liferay-*.zip"
 
-	if [ -n "${1}" ]
+	if [ -n "${1}" ] && [ "${1}" != "prod" ]
 	then
 		zip_dir_name_pattern="liferay-${1}.zip"
 	fi
@@ -30,6 +30,13 @@ function copy_template {
 			pushd ${zip_dir_name}
 
 			./gradlew classes formatSource
+
+			if [ "${1}" == "prod" ]
+			then
+				git clean -d -e "gradle.properties" -fx .
+
+				cp -fr $(git rev-parse --show-toplevel)/docs/_template/java/* .
+			fi
 
 			popd
 		else
