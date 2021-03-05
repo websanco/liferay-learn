@@ -40,7 +40,7 @@ The Details tab shows all of the person's attributes, the data sources they came
 
 Click on the Interests tab.
 
-Depending on the web pages or assets a user interacts with, Analytics Cloud uses an advanced algorithm to find out what an individual's interests are with your brand. This helps you prepare for conversations with the individual or create campaigns based on the interests. 
+Depending on the web pages or assets a user interacts with, Analytics Cloud uses an advanced algorithm to find out what an individual's interests are with your brand. This helps you prepare for conversations with the individual or create campaigns based on the interests. For more information, see [Understanding Interests](../../workspace-data/managing-interest-topics.md#understanding-interests).
 
 ## Segments
 
