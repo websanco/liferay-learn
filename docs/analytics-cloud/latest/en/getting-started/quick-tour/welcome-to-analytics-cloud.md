@@ -24,7 +24,7 @@ These are just some ways you benefit from using Analytics Cloud. Before getting 
 
 Analytics Cloud helps you understand people, their interaction with your sites, and the paths (or channels) that draw them to your sites in these ways:
 
-* [People](../../people/people.md)
+* [People](../../people/understanding-your-audience.md)
 * [Touchpoints](../../touchpoints/touchpoints.md)
 * [Paths](../../touchpoints/pages/paths.md)
 
