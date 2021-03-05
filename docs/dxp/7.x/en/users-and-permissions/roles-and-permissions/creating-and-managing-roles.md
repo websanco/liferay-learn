@@ -30,7 +30,7 @@ To update a Role, click into its Actions menu (![Actions](../../images/icon-acti
 
 ## Deleting Roles
 
-To delete a Role, click into its Actions menu (![Actions](../../images/icon-actions.png)) and select _Delete_. After you confirm the deletion, the Role is deleted immediately, along with any [workflow task assignments](../../process-automation/workflow/user-guide/reviewing-assets.md) associated to the Role.
+To delete a Role, click into its Actions menu (![Actions](../../images/icon-actions.png)) and select _Delete_. After you confirm the deletion, the Role is deleted immediately, along with any [workflow task assignments](../../process-automation/workflow/using-workflows/reviewing-assets.md) associated to the Role.
 
 ![Delete a Role by clicking OK if you're willing to accept the outcome.](./creating-and-managing-roles/images/03.png)
 

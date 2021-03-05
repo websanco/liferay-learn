@@ -18,7 +18,7 @@ Out-of-the-box, Liferay uses responsive layouts:
 
 * For web developers, theme tools help ensure optimum mobile performance.
 
-If you're using the default theme, all you need to do to display pages on mobile devices is create a page. There are also tools to verify that everything displays as intended. The Device Simulator (![Simulation](../../images/icon-simulation.png)) shows you how pages look on different devices.
+If you're using the default theme, all you need to do to display pages on mobile devices is create a page. There are also tools to verify that everything displays as intended. The Device Simulator (![Simulation](../../../images/icon-simulation.png)) shows you how pages look on different devices.
 
 ## Using the Device Simulator
 

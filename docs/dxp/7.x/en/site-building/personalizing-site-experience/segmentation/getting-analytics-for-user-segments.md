@@ -29,4 +29,4 @@ When you click on the Analytics Cloud Segment, you are directed to Analytics Clo
 
 * [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
 * [Creating User Segments](./creating-and-managing-user-segments.md)
-* [Content Set Personalization](../experience-personalization/content-set-personalization.md)
+* [Personalizing Collections](../experience-personalization/personalizing-collections.md)

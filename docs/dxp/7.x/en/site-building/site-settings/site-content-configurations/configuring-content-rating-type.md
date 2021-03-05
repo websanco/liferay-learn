@@ -1,6 +1,6 @@
 # Configuring Content Rating Type
 
-[Ratings]() <!-- TODO: Fix link --> can be represented by different types of icons/labels (like, stacked stars, stars, and thumbs ups). These rating types can be configured for each application listed below:
+[Ratings](../../../collaboration-and-social/social-tools/user-guide/using-the-ratings-system.md) can be represented by different types of icons/labels (like, stacked stars, stars, and thumbs ups). These rating types can be configured for each application listed below:
 
 * Blogs
 * Comments

@@ -13,7 +13,6 @@ Site Building
    site-building/personalizing_site_experience.rst
    site-building/publishing_tools.rst
    site-building/optimizing_sites.rst
-   site-building/building_a_responsive_site.rst
    site-building/site_settings.rst
    site-building/developer_guide.rst
    

@@ -12,7 +12,7 @@ Setting Up Liferay
    ../../system-administration/configuring-liferay/virtual-instances/instance-configuration.md
    setting-up-liferay/initial-instance-localization.md
    setting-up-liferay/configuring_mail.rst
-   ../..system-administration/configuring-liferay/virtual-instances/users.md
+   ../../system-administration/configuring-liferay/virtual-instances/users.md
    ../../system-administration/file_storage.rst
    ../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
    ../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md

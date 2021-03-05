@@ -11,10 +11,8 @@ Contents
    individuals_and_segments
    optimization
    apis
-   administration
    workspace_data
    workspace_settings
-   administration
    troubleshooting
 
 Indices and tables

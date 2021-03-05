@@ -48,9 +48,9 @@ The more the user visits and interacts with coffee-related content, the higher "
 
 ## Content Recommendations and Segments
 
-Showing recommended content based on users' behavior is not the same as personalizing users' experience using [Segments](./segmentation/creating-and-managing-user-segments.md). When you use Segments, you categorize users into groups and target content for these particular groups. In Segment-based personalization, you target specific content to a specific group of users. In content recommendations, you don't need to define a group because the content is automatically recommended to users based on their previous behavior on your site.
+Showing recommended content based on users' behavior is not the same as personalizing users' experience using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use Segments, you categorize users into groups and target content for these particular groups. In Segment-based personalization, you target specific content to a specific group of users. In content recommendations, you don't need to define a group because the content is automatically recommended to users based on their previous behavior on your site.
 
-However, you can leverage the ability to [customize Collections with Segments](./experience-personalization/personalizing-collections.md) to provide content recommendations to specific groups of users. For example, you can combine the Dynamic Collection for content recommendations with a Segment that includes only visitors from Germany. In this case, only visitors to your site from Germany receive content recommendations from this Collection.
+However, you can leverage the ability to [customize Collections with Segments](./personalizing-collections.md) to provide content recommendations to specific groups of users. For example, you can combine the Dynamic Collection for content recommendations with a Segment that includes only visitors from Germany. In this case, only visitors to your site from Germany receive content recommendations from this Collection.
 
 ## Related Information
 

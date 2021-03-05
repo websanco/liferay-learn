@@ -8,7 +8,6 @@ Recycle Bin
    recycle-bin/configuring-the-recycle-bin.md
    recycle-bin/using-the-recycle-bin.md
    recycle-bin/developer_guide.rst
-   recycle-bin/apis.rst
 
 -  :doc:`/content-authoring-and-management/recycle-bin/recycle-bin-overview`
 -  :doc:`/content-authoring-and-management/recycle-bin/configuring-the-recycle-bin`

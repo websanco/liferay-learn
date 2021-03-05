@@ -49,16 +49,16 @@ From here you have three options:
 
 ## Content Page Personalization and A/B Testing
 
-When you [create an A/B Test](../ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one, or any other you have created.
+When you [create an A/B Test](../../optimizing-sites/ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one, or any other you have created.
 
 To avoid changes in the Experience that can interfere with the A/B Test results, you cannot edit an Experience that is part of a running A/B Test.
 
 ![You cannot edit Experiences that are part of a running A/B Test](./content-page-personalization/images/05.png)
 
-For more information about A/B Testing in Liferay DXP and Liferay Analytics, see [A/B Testing](../ab-testing/ab-testing.md).
+For more information about A/B Testing in Liferay DXP and Liferay Analytics, see [A/B Testing](../../optimizing-sites/ab-testing/ab-testing.md).
 
 ## Related Information
 
-* [Personalizing Collections](./personalizing-collection.md)
+* [Personalizing Collections](./personalizing-collections.md)
 * [Getting Analytics for User Segments](../segmentation/getting-analytics-for-user-segments.md)
 * [Creating User Segments](../segmentation/creating-and-managing-user-segments.md)

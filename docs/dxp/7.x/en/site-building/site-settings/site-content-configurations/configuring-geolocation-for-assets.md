@@ -12,4 +12,4 @@
 
 1. Scroll down and click *Save* to apply the changes.
 
-[Geolocalized assets](../../../content-authoring-and-management/05-tags-and-categories/01-user-guide/01-geolocating-assets/README.md) can be displayed for documents, web content articles, DDL records, etc.
+[Geolocalized assets](../../../content-authoring-and-management/tags-and-categories/geolocating-assets.md) can be displayed for documents, web content articles, DDL records, etc.
