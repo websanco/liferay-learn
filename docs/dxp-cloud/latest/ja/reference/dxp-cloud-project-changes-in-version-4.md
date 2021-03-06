@@ -89,7 +89,7 @@ bin/elasticsearch-plugin list
 | 静的コンテンツ   | lcp/webserver/deploy/{ENV}/ | webserver/configs/{ENV}/public/  |
 
 ``` note::
-   Files in ``/webserver/configs/{ENV}/`` will be copied as overrides into ``/etc/nginx/`` in the webserver container in DXP Cloud. ``/webserver/configs/{ENV}/public/``` のファイルはオーバーライドとして ``var/www/html/`` にコピーされます。
+   webserver/configs/{ENV}/``内のファイルは、DXPクラウドのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 ``/webserver/configs/{ENV}/public/``` のファイルはオーバーライドとして ``var/www/html/`` にコピーされます。
 ```
 
 ### Webサーバー設定の上書き

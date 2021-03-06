@@ -31,7 +31,7 @@ Liferay DXP Cloudの自動スケーリング機能は、パフォーマンスを
 | 64 GB        | \-Xms16384m -Xmx49152m              |
 
 ``` note::
-   The ``LIFERAY_JAVA_OPTS`` variable may sometimes be used with other flags, in addition to ``-Xms`` and ``-Xmx``. 他のフラグが存在する場合は、他のフラグを削除せずにメモリ引数で環境変数を更新します。
+   変数 ``LIFERAY_JAVA_OPTS`` は ``-Xms``, ``-Xmx`` の他にも、他のフラグと一緒に使われることがあります。 他のフラグが存在する場合は、他のフラグを削除せずにメモリ引数で環境変数を更新します。
 ```
 
 この環境変数を `liferay` サービスに追加するためのヘルプについては [環境変数の定義](../reference/defining-environment-variables.md) を参照してください。
