@@ -1,4 +1,7 @@
 {
 	"dxp/7.x/en/content-authoring-and-management/recycle-bin/user-guide/configuring-the-recycle-bin.html": "dxp/7.x/en/content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.html",
-	"dxp/7.x/en/content-authoring-and-management/tags_and_categories/user-guide/defining-categories-and-vocabularies-for-content.html": "dxp/7.x/en/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.html"
+	"dxp/7.x/en/content-authoring-and-management/tags_and_categories/user-guide/defining-categories-and-vocabularies-for-content.html": "dxp/7.x/en/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.html",
+	"dxp/7.x/en/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/7.x/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html",
+	"dxp/7.x/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/7.x/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
+	"dxp/7.x/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/7.x/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html"
 }
