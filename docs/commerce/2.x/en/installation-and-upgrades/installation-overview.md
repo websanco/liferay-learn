@@ -11,25 +11,16 @@ For an optimal installation experience, please review the Compatibility Matrix a
 
 ## Starting with Liferay Commerce
 
-Liferay Commerce 3.0 comes bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition requires no additional Commerce-specific installation steps and can be used immediately on startup, while the Enterprise Edition requires a Liferay Commerce subscription.
-
-To get started, review the following options:
+Liferay Commerce 3.0 comes bundled with Liferay Portal 7.3 CE GA6 and Liferay DXP 7.3 GA1. The Community Edition comes bundled with a basic version of Commerce, while the Enterprise Edition comes with a full featured Enterprise Commerce. Both CE and Enterprise versions are available as Docker images and downloadable bundles:
 
 | Installation Method | Purpose |
 | --- | --- |
 | [Docker image](https://learn.liferay.com/dxp/7.x/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
 | [Bundle](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
 
-Liferay Portal CE release bundles and images do not require a license. All Commerce modules that do not have `dxp.only=true` in their `bnd.bnd/manifest` are available on Portal startup.
+Liferay Portal CE bundles and images require no additional, Commerce-specific installation steps. Basic Commerce features come activated and can be used immediately on startup.
 
-By contrast, all Commerce modules are deactivated by default in DXP installations on portal startup. After both DXP and Commerce licenses are deployed and validated, all Commerce modules are started and are immediately available for use. No server restart is required.
-
-| Release Type | Default Behavior | License Required | `dxp.only` Modules |
-|---|---|---|---|
-| Portal CE | Commerce enabled | No | No |
-| DXP | Commerce disabled | Yes | Yes |
-
-To use Liferay Commerce Enterprise 3.0, learn how to [deploy your activation key](./activating-liferay-commerce-enterprise.md), and execute a search reindex to populate the data.
+By contrast, in DXP installations, both basic and enterprise Commerce modules are deactivated by default and require activation for use. Once both DXP and Commerce licenses are deployed and validated, all Commerce modules are started and become immediately available; no server restart is required. See [Activating Liferay Commerce Enterprise](./activating-liferay-commerce-enterprise.md) to learn more.
 
 ## Maintaining Liferay Commerce
 
