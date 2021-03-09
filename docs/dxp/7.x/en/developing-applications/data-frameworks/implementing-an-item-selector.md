@@ -1,8 +1,8 @@
 # Implementing an Item Selector
 
-Item selectors are pop-up dialogs for selecting assets, such as documents, videos, Users, Roles, and Sites.
+Item selectors are pop-up dialogs for selecting assets, such as documents, videos, or users.
 
-By configuring the item selector's criteria and defining its usage, you have full flexibility in how to use the item selector dialog for your own application.
+By configuring the Item Selector's criteria and defining its usage, you can create Item Selector dialogs for your own application.
 
 ![Item selectors pop up so users can select assets.](./implementing-an-item-selector/images/01.png)
 
@@ -10,9 +10,9 @@ Here you'll learn how to create an Item Selector.
 
 ## Start with a Sample Module
 
-To implement an item selector, you must embed it in an application, such as a module for a widget. This example uses an [MVC Portlet](../developing-a-java-web-application/using-mvc/creating-an-application-with-mvcportlet.md) with a JSP view. The item selector displays a list of Roles to be selected. 
+To implement an Item Selector, you must embed it in an application, such as a module for a widget. This example uses an [MVC Portlet](../developing-a-java-web-application/using-mvc/creating-an-application-with-mvcportlet.md) with a JSP view. The Item Selector displays a list of Roles to be selected. 
 
-To begin, download the sample module:
+1. Download the sample module:
 
 ```bash
 curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
@@ -21,8 +21,6 @@ curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-framework
 ```bash
 unzip liferay-f5d5.zip
 ```
-
-Now you can deploy the sample module: 
 
 1. Start a Liferay DXP Docker container with the following command:
 
@@ -46,15 +44,15 @@ Now you can deploy the sample module:
     STARTED com.acme.f5d5.web_1.0.0 [1017]
     ```
 
-The example portlet module is deployed. When you add it to a page, you'll see it's a simple portlet with one button: 
+   The example portlet module is deployed. When you add it to a page, it's a simple portlet with one button: 
 
 ![The portlet has one button that opens the Item Selector.](./images/02.png)
 
-Click the _Select_ button and the Item Selector appears: 
+1. Click the _Select_ button and the Item Selector appears: 
 
 ![The Item Selector shows items that can be selected by checking the box.](./images/03.png)
 
-Select an item and that item's value appears in a JavaScript alert box. Since this Item Selector selects Roles, the value is the primary key of the Role selected. 
+1. Select an item and that item's value appears in a JavaScript alert box. Since this Item Selector selects Roles, the value is the primary key of the Role selected. 
 
 Now you can see how this works. 
 
@@ -95,7 +93,11 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
 
    This example uses a reference to [`UUIDItemSelectorReturnType`](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.html) to define the selected Roles' `UUID` value as the crucial data to return. If multiple Roles are selected, they are returned as a comma-delimited list.
 
-   Define the return type by adding an instance of the class to a list and then registering it with the item criterion:
+   ```note::
+   If a UUID is not available, the primary key is returned.
+   ```
+
+1.  Define the return type by adding an instance of the class to a list and then registering it with the item criterion:
 
    ```java
     ItemSelectorReturnType[] returnTypeArray =
@@ -116,9 +118,9 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
        If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java>`__ implementation.
    ```
 
-The item selector uses these two classes to decide what selection views of items (presented as tabs) to show and how to identify each item.
+   The item selector uses these two classes to decide what selection views of items (presented as tabs) to show and how to identify each item.
 
-1. Now you can use the criteria to generate a URL for the item selector. This URL creates the item selector dialog in your front-end code.
+1. Now you can use the criteria to generate a URL for the Item Selector. This URL creates the Item Selector dialog in your front-end code.
 
    The [`RequestBackedPortletURLFactory` class](http://docs.liferay.com/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.html) can quickly generate an item selector URL using the criteria:
 
@@ -132,7 +134,7 @@ The item selector uses these two classes to decide what selection views of items
    ```
 
 ```important::
-   The String you use to generate the URL (in this example, ``selectItem``) is the dialog's event name. This must match a value you'll use later when creating the dialog in your front-end code.
+   The String you use to generate the URL (in this example, ``selectRole``) is the dialog's event name. This must match a value you'll use later when creating the dialog in your front-end code.
 ```
 
 1. Add the item selector URL to the `renderRequest` so that it's available in the JSP:
@@ -165,7 +167,7 @@ You must retrieve the item selector and define a way to use it in your front-end
 
    Once you have the URL, you must provide a way to open the item selector and then define how to use the result.
 
-1. A button is a simple UI element you can use to open an item selector. You can use a [Clay button](https://clayui.com/docs/components/button.html) tag to create a button to open your item selector: 
+1. You can use a [Clay button](https://clayui.com/docs/components/button.html) tag to create a button to open your item selector: 
 
    ```jsp
    <clay:button
@@ -203,7 +205,7 @@ You must retrieve the item selector and define a way to use it in your front-end
    </script>
    ```
 
-This snippet of JavaScript first retrieves the "Select Role" button through its identifier (`portlet:namespace />selectRole`). Then it adds an event listener to create the item selector dialog when clicked.
+This snippet of JavaScript first retrieves the Select Role button through its identifier (`portlet:namespace />selectRole`). Then it adds an event listener to create the item selector dialog when clicked.
 
 The `Liferay.Util.openSelectionModal` method creates the dialog.
 
@@ -259,4 +261,4 @@ When you use an item selector, you want the selected value inserted into a form.
 
 ## Conclusion
 
-Congratulations! You now know the basics for implementing an item selector!
+Congratulations! You now know how to implement an item selector!
