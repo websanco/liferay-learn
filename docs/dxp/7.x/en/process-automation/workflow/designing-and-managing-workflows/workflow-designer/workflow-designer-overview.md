@@ -1,45 +1,37 @@
 # Workflow Designer Overview
 
-> Subscription Required
+> Subscribers
 
-The Workflow Designer provides a graphical interface for creating workflows. The convenient drag and drop interface makes workflow design easier than writing XML definitions by hand. Instead, users can draw their workflows on a canvas.
+The Process Builder's workflow designer is a graphical interface for creating workflow process definitions. The convenient drag and drop interface makes workflow design easier than writing XML definitions by hand. It's accessed in the Control Panel &rarr; Workflow &rarr; Process Builder.
 
-![You can drag and drop nodes on the Canvas.](./workflow-designer-overview/images/04.png)
+![Drag and drop nodes onto the designer canvas.](./workflow-designer-overview/images/01.png)
 
 ```tip::
-   Alternately, you can upload XML scripts and modify the definition using the graphical interface. To learn more about uploading an XML script, see `Managing Workflows <../managing-workflows.md#uploading-a-new-workflow-definition>`_.
+   Alternately, you can write or upload XML definitions from the Source tab in the Process Builder. See `Managing Workflows <../managing-workflows.md#uploading-a-new-workflow-definition>`_.
 ```
 
-![Use the Source tab to upload an XML file.](./workflow-designer-overview/images/03.png)
+The Workflow Designer supports all [workflow node](./workflow-nodes.md) types:
 
-The Workflow Designer supports all workflow node types:
+* [Start and End nodes](./workflow-nodes.md#start-and-end-nodes)
+* [Fork and Join nodes](./using-forks-and-joins.md)
+* [Condition nodes](./using-condition-nodes.md)
+* [State nodes](./workflow-nodes.md#state-nodes)
+* [Task nodes](./creating-workflow-tasks.md)
 
-* _Start_ and _End_ Nodes
-* [_Fork_ and _Join_](./using-forks-and-joins.md) Nodes
-* [Condition](./using-condition-nodes.md)
-* State
-* [Task](./creating-workflow-tasks.md)
-
-Finally, you have the full power of Groovy (a supported Java-based scripting language) to perform necessary actions on assets being moved through your workflows.
-
-![Users can add a Groovy script to their workflow nodes.](./workflow-designer-overview/images/05.png)
+In addition to the functionality provided by the drag and drop interface, you have the full power of Groovy (a Java-based scripting language) to perform [programmatic actions](./../../developer-guide/using-the-script-engine-in-workflow.md) on assets being moved through your workflows.
 
 By default, only one workflow definition is installed: the Single Approver Workflow definition. You can download additional definitions here:
 
-* [Category-Specific Definition](./workflow-designer-overview/category-specific-definition.xml)
-* [Legal Marketing Definition](./workflow-designer-overview/legal-marketing-definition.xml)
-* [Single Approver Definition with Scripted Assignment](./workflow-designer-overview/single-approver-definition-scripted-assignment.xml)
-* [Single Approver Definition](./workflow-designer-overview/single-approver-definition.xml)
+* [Category-Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml)
+* [Legal Marketing Definition](./workflow-designer-overview/resources/legal-marketing-definition.xml)
+* [Single Approver Definition with Scripted Assignment](./workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml)
+* [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml)
 
 ## Building Workflows
 
-To build a new workflow or to upload one, navigate to the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)) &rarr; _Process Builder_.
-
-![Navigate to the Process Builder to manage workflows.](./workflow-designer-overview/images/01.png)
+To build a workflow, navigate to the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)) &rarr; Control Panel &rarr; Process Builder.
 
 Click the (![Add icon](../../../../images/icon-add.png)) to begin.
-
-![Use drag and drop to build a workflow.](./workflow-designer-overview/images/02.png)
 
 Each Workflow Node represents a specific point in an approval process, whether it starts the review process, approves or rejects the asset, or reassigns the task.
 
