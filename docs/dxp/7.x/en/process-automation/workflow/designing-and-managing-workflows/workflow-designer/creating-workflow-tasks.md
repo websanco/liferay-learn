@@ -2,15 +2,15 @@
 
 > Subscribers
 
-The default [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml) is a great introduction to creating workflow tasks. It has only two task nodes: _Review_ and _Update_. The workflow enters the _Review_ node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the _Update_ task. The submitter can then modify the asset and resubmit it for review.
+The default [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml) offers a simple introduction to workflow tasks. It has only two task nodes: Review and Update. The workflow enters the Review node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the Update task. The submitter can then modify the asset and resubmit it for review.
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
 Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Using Task Nodes](./using-task-nodes.md)).
 
-Task nodes also contain Notifications and Actions (defined in scripts). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
+Task nodes also contain Notifications and Actions--to which complexity can be added with [scripts](../../developer-guide/using-the-script-engine-in-workflow.md). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
-When the review is finished, Task nodes advance to the next node. In this case, the process moves to the _Approved_ End node.
+When the review is finished and the approved transition is triggered, the workflow advances to the next node. In th Single Approver process, it simply moves to the Approved End node.
 
 ## Creating the Single Approver Workflow
 
@@ -23,19 +23,19 @@ You'll create the workflow in 4 steps:
 
 ### Creating the Workflow
 
-1. Go to the _Global Menu_ &rarr; _Applications_ &rarr; _Process Builder_.
+1. Go to the Global Menu &rarr; Applications &rarr; Process Builder.
 1. Click the _Workflows_ tab.
-1. Click _Add_ (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
-1. Give your workflow a descriptive name, like _My Single Approver_.
+1. Click _Add_ (![Add icon](../../../../images/icon-add.png)).
+1. Give your workflow a descriptive name, like My Single Approver.
 
 ### Creating the Review Node
 
-1. In the Workflow Designer Canvas, delete the old connector between the _Start_ node and _End_ node: select it with your mouse and hit the Del key on your keyboard.
-1. Drag and drop the _Task_ node onto the canvas. 
-1. Connect the Start node to the Task node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a connector from the Start node to the Task node.
-1. Select the connector and rename it _review_.
-1. Click the _Task_ node to begin updating its properties.
-1. Double click the _Name_ field to give the node a name: _review_.
+1. In the workflow designer Canvas, delete the old transition (connector line) between the Start node and End node: select it with your mouse and hit the Delete key on your keyboard.
+1. Drag and drop a Task node onto the canvas. 
+1. Connect the Start node to the Task node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a transition from the Start node to the Task node.
+1. Select the transition and rename it _review_.
+1. Click the Task node to begin updating its properties.
+1. Double click the Name field and give the node a name: _review_.
 1. Double click _Notifications_.
 1. Enter this information:
 
@@ -46,7 +46,7 @@ You'll create the workflow in 4 steps:
     * **Execution Type**: On Assignment
     * **Recipient Type**: Task Assignees
 
-    ![Configure the Task Node's notifications settings to send an email and user notification that an asset is ready for review.](./creating-workflow-tasks/images/02.png)
+    ![Configure the Task node's notification settings to send an email and user notification that an asset is ready for review.](./creating-workflow-tasks/images/02.png)
 
     Click _Add Section_.
 
@@ -76,21 +76,21 @@ You'll create the workflow in 4 steps:
 
    For more information about Roles and Permissions, see [Understanding Roles and Permissions](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) and [Assigning Users to Roles](../../../../users-and-permissions/roles-and-permissions/assigning-users-to-roles.md).
 
-   ![Configure the Task Node's notifications settings to send an email and user notification that an asset is ready for review.](./creating-workflow-tasks/images/03.png)
+   ![Configure the Task Node's notification settings to send an email and user notification that an asset is ready for review.](./creating-workflow-tasks/images/03.png)
 
 1. Click _Save_ when finished.
 
 1. Click the End node and rename it to _Approved_.
 
-1. Connect the _Review_ node to the _Approved_ End node. Name the connector _approve_.
+1. Connect the Review node to the Approved End node. Name the connector _approve_.
 
-This _Task_ node is now configured; it sends a notification that a submission is ready for review to those Users assigned to a specific Role.
+This Task node is now configured; it sends a notification that a submission is ready for review to those Users assigned to a specific Role.
 
-You can also assign the _Task_ node to a Resource Action instead of another user or a Role Type. To learn more see [Using Task Nodes](./using-task-nodes.md).
+You can also assign the Task node to a Resource Action instead of another user or a Role Type. To learn more see [Using Task Nodes](./using-task-nodes.md).
 
 ### Create the Update Node
 
-1. Drag and drop another _Task_ node onto the canvas. 
+1. Drag and drop another Task node onto the canvas. 
 1. Connect the review node to the new Task node by making sure no nodes are selected and then moving your pointer to the edge of the start node. When the cursor changes shape, you can click and drag a connector from the review node to the new Task node. 
 1. Select the connector and rename it _reject_. 
 1. Click the Task node to begin updating its properties. 
@@ -127,14 +127,14 @@ You can also assign the _Task_ node to a Resource Action instead of another user
 
 ### Configuring the End Node
 
-The only thing left to do is rename the end node and configure it to set the workflow status to _approved_. 
+The only thing left to do is rename the end node and configure it to set the workflow status to approved. 
 
-1. Drag a connector from the _review_ node to the _End Node_. 
+1. Drag a connector from the review node to the End Node. 
 1. Rename the connector _approve_. 
 1. Double-click on the _End Node_ and rename it to _Approved_. 
 1. Click the _Publish_ button at the bottom to publish your workflow. 
 
-Nice job! You've created your first workflow and learned how the workflow designer works. You can create much more powerful workflows with other node types, such as [Forks and Joins](./using-forks-and-joins.md) or [Conditions](./using-condition-nodes.md). These are covered next. 
+Now that you've walked through a workflow creation and learned how to use the workflow designer, look into adding node types that can take your workflow processes to the next level; such as [Forks and Joins](./using-forks-and-joins.md) or [Conditions](./using-condition-nodes.md).
 
 ## Additional Information
 

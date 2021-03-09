@@ -40,7 +40,7 @@ Use all upper case letters for resource action names. Here are some common resou
 
 You can determine the probable resource action name from the permissions screen for that resource. For example, in Message Boards, one of the permissions displayed on that screen is *Add Discussion*. Convert that to all uppercase and replace the space with an underscore, and you have the action name.
 
-### Scripted Assignments
+## Scripted Assignments
 
 You can also use a script to manage the assignment. Here's the script for the Review task assignment in the Scripted Single Approver workflow definition (`single-approver-definition-scripted-assignment.xml`):
 

@@ -2,7 +2,7 @@
 
 > Subscribers
 
-Using the Workflow Designer, users can configure Workflow Actions and notifications for each node.
+Using the workflow designer, users can configure Workflow Actions and notifications for each node.
 
 Actions are very adaptable and you can specify when the Action occurs: before entering the node, after exiting a node, or once a task node is assigned. For example, when a reviewer rejects an Web Content article, a Workflow Action sets the asset's status as _Pending_ and automatically reassigns the article to the original author.
 

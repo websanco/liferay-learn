@@ -11,7 +11,7 @@ You can split the review task so that two reviews can happen at the same time. I
 1. Go to the _Global Menu_ &rarr; _Applications_ &rarr; _Process Builder_.
 1. Click the _Workflows_ tab.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
-1. In the Workflow Designer Canvas, delete the old connector between the _Start_ node and _End_ node.
+1. In the workflow designer Canvas, delete the old connector between the _Start_ node and _End_ node.
 1. Drag and drop the _Fork_ node onto the canvas then connect _Start_ node to the _Fork_ node. You can rename the nodes and connectors later.
 1. Drag and drop two _Task_ nodes. Connect the _Fork_ node to the two _Task_ nodes.
 
