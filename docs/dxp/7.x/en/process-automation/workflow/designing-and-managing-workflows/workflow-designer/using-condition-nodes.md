@@ -2,11 +2,11 @@
 
 > Subscribers
 
-_Condition_ nodes are best used when you have multiple reviewers and must determine which reviewer should be assigned. For example different documents might require review by the Legal department or the Marketing team.
+_Condition_ nodes are useful for acting  (transitioning, assigning, etc.) conditionally in the workflow. Perhaps you have multiple reviewers and must determine which reviewer should be assigned a task. For example, different documents might require review by the Legal department or the Marketing team.
 
-Much like [Fork and Join nodes](./using-forks-and-joins.md), a _Condition_ node splits the review path. However, unlike the _Fork_ node which requires the corresponding _Join_ node, the _Condition_ node stands alone. It acts as a gatekeeper by checking whether the specified conditions are met, and then assigns the asset to the right reviewer based on those conditions.
+Conditions act as a gatekeeper by checking whether the specified conditions are met, and then acting on the asset---assigning the right reviewer, or transitioning to a certain task, based on those conditions.
 
-The [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Conditions node:
+The [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Condition node:
 
 1. Navigate to the _Global Menu_ &rarr;  _Applications_ &rarr; _Workflow_ &rarr; _Process Builder_.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
@@ -74,7 +74,7 @@ Notice how the _Condition_ node is connected to three different Task nodes:
 * Otherwise, the asset is sent to the Marketing team.
 * The _update_ node assigns the asset back to the original creator to make changes if the asset was rejected.
 
-See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./assigning-task-nodes.md) to learn how to configure Task nodes.
+See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Assigning Task Nodes](./assigning-task-nodes.md) to learn how to configure Task nodes.
 
 ## Additional Information
 

@@ -2,7 +2,7 @@
 
 > Subscribers
 
-Here you'll learn how to use the _Fork_, _Join_ and _Join XOR_ nodes. These nodes are useful for workflow processes that have multiple reviewers like the [Legal-Marketing Definition](../workflow-designer-overview/resources/legal-marketing-definition.xml) sample.
+Here you'll learn how to use the _Fork_, _Join_ and _Join XOR_ nodes. These nodes are useful for workflow processes that have multiple reviewers like the [Legal-Marketing Definition](./workflow-designer-overview/resources/legal-marketing-definition.xml) sample.
 
 You can split the review task so that two reviews can happen at the same time. In the Legal-Marketing example workflow, the process is linear: the workflow goes from Marketing to Legal before publication, but you can use _Fork_ and _Join_ (or Join XOR) to build a concurrent workflow process.
 

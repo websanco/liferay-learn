@@ -3,7 +3,7 @@
 _Node_ elements and their sub-elements are fundamental building blocks making up workflow definitions. Nodes often reflect the real life stages of the review process. This is a guide describing the different types of nodes and how to use them.
 
 * [State Nodes](#state-nodes)
-* [Condition Nodes](#condition-nodes)
+* [Condition Nodes](#conditions)
 * [Forks and Joins](#forks-and-joins)
 
 ## State Nodes
