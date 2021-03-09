@@ -46,7 +46,7 @@ WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("expired
 
 A _Condition_ node checks an asset or its execution context, and depending on the result, sends it to the appropriate transition. This node requires a script that sets a value to one of the transitions.
 
-In the [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml) is a script that looks up the asset in question, retrieves its [asset category](../../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the *legal* category. If not it goes through *Content Review* (the content-review task in the workflow), and if it does it goes through *Legal Review* (the legal-review task in the workflow).
+In the [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml) is a script that looks up the asset in question, retrieves its [asset category](../../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md), and sets an initial `returnValue`. Then it checks to see if the asset has been marked with the *legal* category. If not it goes through *Content Review* (the content-review task in the workflow), and if it does it goes through *Legal Review* (the legal-review task in the workflow).
 
 ### Task Nodes
 

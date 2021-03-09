@@ -13,7 +13,7 @@ The [Category Specific Definition](./workflow-designer-overview/resources/catego
 1. In the workflow designer Canvas, enter a name for the workflow.
 1. Click the _Source_ tab.
 1. Click _Import A File_.
-1. Upload the [Category Specific Definition](../workflow-designer-overview/resources/category-specific-definition.xml).
+1. Upload the [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml).
 1. Click the _Diagram_ tab.
 1. Double Click on the _Condition_ node to configure the node's properties.
 1. Click _Value_ next to _Script_.
