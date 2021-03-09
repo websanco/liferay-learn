@@ -74,7 +74,7 @@ Notice how the _Condition_ node is connected to three different Task nodes:
 * Otherwise, the asset is sent to the Marketing team.
 * The _update_ node assigns the asset back to the original creator to make changes if the asset was rejected.
 
-See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./using-task-nodes.md) to learn how to configure Task nodes.
+See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./assigning-task-nodes.md) to learn how to configure Task nodes.
 
 ## Additional Information
 

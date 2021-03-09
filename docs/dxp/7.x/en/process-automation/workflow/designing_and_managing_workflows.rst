@@ -18,6 +18,6 @@ Workflow Designer
 -  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-nodes`
 -  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/creating-workflow-tasks`
 -  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/configuring-workflow-actions-and-notifications`
--  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/using-task-nodes`
+-  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/assigning-task-nodes`
 -  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/using-condition-nodes`
 -  :doc:`/process-automation/workflow/designing-and-managing-workflows/workflow-designer/using-forks-and-joins`

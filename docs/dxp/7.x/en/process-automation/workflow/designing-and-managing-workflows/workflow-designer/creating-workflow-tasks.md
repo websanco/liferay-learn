@@ -6,7 +6,7 @@ The default [Single Approver Definition](./workflow-designer-overview/resources/
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
-Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Using Task Nodes](./using-task-nodes.md)).
+Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Using Task Nodes](./assigning-task-nodes.md)).
 
 Task nodes also contain Notifications and Actions--to which complexity can be added with [scripts](../../developer-guide/using-the-script-engine-in-workflow.md). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
@@ -86,7 +86,7 @@ You'll create the workflow in 4 steps:
 
 This Task node is now configured; it sends a notification that a submission is ready for review to those Users assigned to a specific Role.
 
-You can also assign the Task node to a Resource Action instead of another user or a Role Type. To learn more see [Using Task Nodes](./using-task-nodes.md).
+You can also assign the Task node to a Resource Action instead of another user or a Role Type. To learn more see [Using Task Nodes](./assigning-task-nodes.md).
 
 ### Create the Update Node
 
@@ -141,4 +141,4 @@ Now that you've walked through a workflow creation and learned how to use the wo
 * [Activating Workflow](../../using-workflows/activating-workflow.md)
 * [Workflow Nodes](./workflow-nodes.md)
 * [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md)
-* [Using Task Nodes](./using-task-nodes.md)
+* [Using Task Nodes](./assigning-task-nodes.md)

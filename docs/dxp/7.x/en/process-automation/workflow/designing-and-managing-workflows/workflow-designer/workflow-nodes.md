@@ -50,12 +50,12 @@ In the [Category Specific Definition](../workflow-designer-overview/resources/ca
 
 ### Task Nodes
 
-_Task_ nodes represent where all the work is done. See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./using-task-nodes.md).
+_Task_ nodes represent where all the work is done. See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Using Task Nodes](./assigning-task-nodes.md).
 
 ## Additional Information
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
-* [Using Task Nodes](./using-task-nodes.md)
+* [Using Task Nodes](./assigning-task-nodes.md)
 * [Kaleo Forms](../../../forms/kaleo_forms.md)
 * [Introduction to the Workflow Framework](https://help.liferay.com/hc/en-us/articles/360028727112-Introduction-to-The-Workflow-Framework)
 * [Dynamic Data Lists](../../../forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)
