@@ -48,13 +48,33 @@ In the example above, this blog article about a lunar rover does not contain the
 
 ## Creating New Synonym Language Filters
 
-Out of the box, Synonyms Sets supports synonyms in [English and Spanish only](#requirements-and-limitations). 
+> **Supported in DXP 7.3 FP2+ and DXP 7.2 FP12+.**
 
-[LET'S DESCRIBE: WHAT DOES A LANGUAGE FILTER DO, AT A HIGH LEVEL?]
+Out of the box, Synonyms Sets supports synonyms in [English and Spanish only](#requirements-and-limitations), To add synonyms support for other languages through configuration, please follow the steps below. In this example, we are adding the necessary setting for _French_.
+
+The process consists of the following steps:
+1. Creating a [custom analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/analysis-custom-analyzer.html) by re-implementing the default [french](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/analysis-lang-analyzer.html#french-analyzer) analyzer with the necessary changes (including an extra [Synonym graph token filter](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/analysis-synonym-graph-tokenfilter.html) in the pipeline)
+1. Adding this custom analyzer definition to the index settings through the _Additional Index Configurations_ of the connector config.
+1. Applying this custom analyzer on the desired fields by overriding Liferay DXP's default type mappings. For this purpose, we are leveraging the _Override Type Mappings_ setting of the connector.
+1. Reindexing to apply the new settings
+
+**Prerequisites**: you need to obtain the default mappings JSON that is included with the Elasticsearch connector in order to customize it through the _Override Type Mappings_.
+* To get it from your bundle:
+   * Go to `[Liferay Home]/osgi/marketplace`
+   * Look for `Liferay Foundation - Liferay Connector to Elasticsearch 6/7 - Impl.lpkg`
+   * Open with an archive manager and extract `com.liferay.portal.search.elasticsearch6/7-x.y.z.jar`
+   * Open the newly extracted JAR file again with an archive manager and go to `META-INF/mappings`
+   * Here you will find a file called `liferay-type-mappings.json`. This is the resource you need.
+* To get it from a source: the easiest way is if you have [Liferay DXP Source Code Access](https://help.liferay.com/hc/en-us/articles/36004538929) so you can browse and find it in the specified repository in GitHub.
+   * Once you have access to this repo, follow the steps from the article above to find the tag for your fix pack level.
+   * Navigate to `modules/apps/portal-search-elasticsearch(6 or 7)/portal-search-elasticsearch(6 or 7)-impl/src/main/resources/META-INF/mappings`
+   * Here you will find the mentioned JSON file (`liferay-type-mappings.json`).
+
+Now that you have the default mapping file, let's make the necessary changes:
 
 1. Go to the Elasticsearch connection's System Settings entry---Elasticsearch 6/7.
 
-1. Add an `analysis` block to the Additional Index Configurations field:
+1. Add an `analysis` block to the _Additional Index Configurations_ field:
 
    ```json
    {
@@ -101,41 +121,20 @@ Out of the box, Synonyms Sets supports synonyms in [English and Spanish only](#r
    [DESCRIBE WHAT THIS DOES AT A HIGH LEVEL]
 
    ```
-   Adding settings in this configuration augments those available in the out of the box [index settings](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search-elasticsearch7/portal-search-elasticsearch7-impl/src/main/resources/META-INF/index-settings.json).
+   Adding settings in this configuration augments those available in the out of the box index settings. (You can find the related JSON in the source code as `index-settings.json`).
+   Here we are creating a new analyzer called `custom_liferay_analyzer_fr` which uses a new filter `my-synonym-filter-fr`. The `synonyms` array is empty now: Synonym Sets created through the UI will appear here.
 
-1. Using  the Override Type Mappings field, override the default `template_fr` to use the custom language filter:
+1. Using  the _Override Type Mappings_ field, change the analyzer for the `template_fr` dynamic field to use the custom analyzer (`custom_liferay_analyzer_fr`):
    
    ```important::
-      This example is clipped for brevity. Override Type Mappings completely overrides and ignores Liferay's default type mappings, so you must provide a complete mappings file, not just the overridden portion. The fastest way to do this is to copy the `entire mappings file <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search-elasticsearch7/portal-search-elasticsearch7-impl/src/main/resources/META-INF/mappings/liferay-type-mappings.json>`__ and overwrite the existing ``template_fr`` with the new one.   
+      This example is clipped for brevity. Override Type Mappings completely overrides and ignores Liferay's default type mappings, so you must provide a complete mappings file, not just the overridden portion.   
    ```
    ```json
    {
    	"LiferayDocumentType": {
    		"date_detection": false,
    		"dynamic_templates": [
-   			{
-   				"template_ddmFieldArray_ddmFieldValue_Number_sortable": {
-   					"mapping": {
-   						"scaling_factor": 1000,
-   						"store": true,
-   						"type": "scaled_float"
-   					},
-   					"path_match": "ddmFieldArray.ddmFieldValue*Number_sortable"
-   				}
-   			},
-   			{
-   				"template_fi": {
-   					"mapping": {
-   						"analyzer": "finnish",
-   						"store": true,
-   						"term_vector": "with_positions_offsets",
-   						"type": "text"
-   					},
-   					"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
-   					"match_mapping_type": "string",
-   					"match_pattern": "regex"
-   				}
-   			},
+            // (...)
    			{
    				"template_fr": {
    					"mapping": {
@@ -148,10 +147,10 @@ Out of the box, Synonyms Sets supports synonyms in [English and Spanish only](#r
    					"match_mapping_type": "string",
    					"match_pattern": "regex"
    				}
-   			},
+           // (...)
    ```
 
-   [DESCRIBE WHAT THIS DOES AT A HIGH LEVEL]
+   The important change here is that we replaced the default assigned analyzer (`french`) with our custom one (`custom_liferay_analyzer_fr`).
 
 
 1. Save the changes to the configuration.
@@ -162,20 +161,21 @@ Out of the box, Synonyms Sets supports synonyms in [English and Spanish only](#r
 
 1. Now go to System Settings &rarr; Search &rarr; Synonyms.
 
-1. Add the filter name (e.g., `custom-synonym-filter-fr`) to the Filter Names setting and save the configuration.
+1. Add the custom filter name (e.g., `custom-synonym-filter-fr`) you created to the _Filter Names_ setting and save the configuration.
 
 1. Perform a full re-index: in Control Panel &rarr; Search &rarr; Index Actions, click _Reindex all search indexes._
 
-   [SHOULD WE ADD AN API CALL TO FETCH THE INDEX SETTINGS, AND THE MAPPINGS, TO SEE THAT THEY'RE "PERSISTED"?]
+   To verify that the custom mapping has been applied successfully, go to the Field Mappings tab, choose your index (for example `liferay-20101`) and look for `template_fr` in the right panel.
+   To verify that the additional index settings including your custom analyzer has also been added, make the following API call to Elasticsearch: `http://<host>:<port>/liferay-20101/_settings` and look for your analyzer name in the response.
 
 To verify the new filter is working, 
 
 1. Go to the Synonyms application: from the Global menu's Applications tab, click _Synonyms_ (under Search Tuning).
 
-1. Create a new Synonym Set: `SP1, FP2`.
+1. Create a new Synonym Set: `maison, logement`.
 
-1. Create a Web Content Article with English and French translations. Add _SP1_ to the French title.
+1. Create a Web Content Article with English and French translations. Add _maison_ to the French title.
 
-1. Create another Web Content Article with English and French translations. Add _FP2_ to the French title.
+1. Create another Web Content Article with English and French translations. Add _logement_ to the French title.
 
-1. Switch to the French locale and search for _FP2_. Both articles are returned.
+1. Switch to the French locale and search for _maison_. Both articles are returned.
