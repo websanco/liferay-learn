@@ -278,6 +278,15 @@ In most cases, prefix class names with the project ID (capitalized).
 | Implementation | XXXX*InterfaceName* (e.g., `C3P0Greeter`) |
 | Portlet | XXXXPortlet (e.g., `C3P0Portlet`)|
 
+### Javadoc 
+
+Most tutorial code shouldn't need Javadoc. There are some Javadoc items that you should never include.
+
+Never include Javadoc for these things:
+
+* author 
+* copyright
+
 ### Component Annotations
 
 #### immediate = true
