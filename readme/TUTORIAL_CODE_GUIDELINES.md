@@ -289,9 +289,33 @@ Never include Javadoc for these things:
 
 ### Component Annotations
 
-#### immediate = true
+The general rule is to only use `@Component` properties that are necessary. Only use a property if testing shows that your component needs it.
+
+#### Avoid Using immediate=true
 
 Don't use the `immediate = true` property. Use it only if testing shows that you need it. You should only need it if the class must perform an initialization before it's used.
+
+#### Avoid Using javax.portlet.init-param.template-path=/ 
+
+Only use it if testing shows that your portlet needs it.
+
+#### Avoid Using the javax.portlet.security-role-ref Property
+
+Only use it if testing shows that your portlet needs it.
+
+#### Don't Use com.liferay.portlet.instanceable=true
+
+The default is already `com.liferay.portlet.instanceable=true`. Don't specify it in your portlet.
+
+#### Portlet Display Name 
+
+Use this pattern for your portlet display names:
+
+```properties
+javax.portlet.display-name=XXXX Portlet
+```
+
+If your project has multiple portlets, distinguish their display names by adding another name between `XXXX` and `Portlet`.
 
 ## Logic
 
