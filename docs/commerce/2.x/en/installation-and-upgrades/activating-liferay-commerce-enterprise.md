@@ -2,7 +2,23 @@
 
 > Subscription Required
 
-Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and Commerce licenses for use. Licenses are provided as XML (`.xml`) activation keys that must be copied to your DXP instance's `deploy` folder to activate Commerce Enterprise features. If you've already [purchased](https://www.liferay.com/contact-sales) a Commerce subscription, then you can obtain your activation key as a download in one of the following ways:
+Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and Commerce licenses for use. These licenses are provided as XML (`.xml`) activation keys that must be deployed to your DXP instance to activate all Commerce features.
+
+Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. However, restrictions based on System resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
+
+```important::
+   In order to activate Commerce Enterprise, both the DXP and Commerce activation keys must be of the same ``license-type`` (e.g., Production, Developer, or Enterprise). A warning is thrown in the server startup log if the license types do not match.
+   
+   *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
+```
+
+* [Obtaining Commerce Activation Keys](#obtaining-commerce-activation-keys)
+* [Deploying Commerce Activation Keys](#deploying-commerce-activation-keys)
+* [Updating your Commerce Enterprise License](#updating-you-commerce-enterprise-license)
+
+## Obtaining Commerce Activation Keys
+
+If you've already [purchased](https://www.liferay.com/contact-sales) a Commerce subscription, you can obtain your activation key as a download in one of the following ways:
 
 * Open a [Help Center](https://liferay-support.zendesk.com/agent/) ticket with the *Activation Key/Project Administration* component.
 
@@ -10,29 +26,29 @@ Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and 
 
 * Download a Commerce activation key from [here](https://customer.liferay.com/en_US/activation-key).
 
-Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. Restrictions based on System resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
+## Deploying Commerce Activation Keys
+
+Once you've acquired your XML activation key, you can activate Commerce Enterprise by copying it to your DXP instance's `deploy` folder. This process is the same as activating Liferay DXP.
+
+### Deploying to DXP Bundles
+
+Copy your XML file to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder for your DXP instance. While processing the activation key, Liferay relocates this file to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder. See [Activating Liferay DXP](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/setting-up-liferay/activating-liferay-dxp.html) for more information.
+
+### Deploying to Docker Containers
+
+Copy your XML file to the container's `/opt/liferay/deploy` folder. While processing the activation key, Liferay relocates this file to the `opt/liferay/osgi/modules` folder, and generates a license file (`.li`) in the `opt/liferay/data/license` folder. See [Providing Files to a Container](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.html?highlight=opt) for more information about deploying files to Docker containers.
+
+### Deploying to DXP Cloud
+
+Copy your key to the [`liferay/configs/{ENV}/deploy/`](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.html#licenses) folder in your Project's central Git repository, and commit your changes. Then, trigger a Jenkins build for your Liferay service, and deploy it to the desired Project environment. See [Overview of the DXP Cloud Deployment Workflow](https://learn.liferay.com/dxp-cloud/latest/en/build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.html) for more information about deploying files to an environment's Liferay service.
 
 ```important::
-   In order to activate Commerce Enterprise, both the DXP and Commerce activation keys must be of the same `license-type` (i.e., Production, Developer, or Enterprise). A warning is thrown in the server startup log if the license types do not match.
-   
-   *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
+   If you've purchased Commerce through a DXP Cloud contract, then the DXP Cloud team manages the activation key through the cloud infrastructure, and there is no need to manage the key yourself. However, if you are adding Commerce to an existing DXP Cloud project, you must manually deploy the licence yourself.
 ```
 
-Once you've acquired your XML activation key, copy it to the `${liferay.home}/deploy` folder for your DXP instance. While processing the activation key, Liferay moves it to the `${liferay.home}/osgi/modules` folder and generates a license file (`.li`) in the `${liferay.home}/data/license` folder.
+### Verifying Deployment
 
-* [Deploying to a Bundle](#deploying-to-a-bundle)
-* [Deploying to a Docker Container](#deploying-to-a-docker-container)
-* [Deploying to DXP Cloud](#deploying-to-dxp-cloud)
-
-## Deploying to a Bundle
-
-Follow these steps to deploy a Commerce activation key to your DXP bundle:
-
-1. Download the provisioned `.xml` key.
-
-1. Copy the key to the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder for your DXP instance. If the instance is already running, the key is processed and stored in the `${liferay.home}/osgi/modules` folder, and Liferay generates a license file in the `${liferay.home}/data/license` folder. Otherwise, the activation key is deployed and processed during the next startup.
-
-1. Verify your key has successfully deployed to your bundle via the console:
+Verify your key has successfully deployed via the console:
 
    ```log
    INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
@@ -41,58 +57,38 @@ Follow these steps to deploy a Commerce activation key to your DXP bundle:
    INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
    ```
 
-## Deploying to a Docker Container
+## Updating You Commerce Enterprise License
 
-You can deploy your Commerce activation key to a Docker Container using bind mounts, volumes, or the `docker cp` command. See [Providing Files to a Container](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.html?highlight=opt) to learn more.
+Commerce Enterprise licenses are only valid for a set period of time based on the terms of a user's subscription. When a license nears expiration (i.e., < 30 days for most licenses, < 7 days for a 30 day license), a warning message is displayed in Commerce applications for Administrators. A license has a 2 day grace period after its given expiration date before it expires.
 
-Follow these steps to deploy the key to a Docker container using the `docker cp` command:
+If a license expires, the Commerce modules remain activated, though it is no longer usable in the UI and does not allow API calls until the license is updated. A notification is displayed on Commerce applications for all users, indicating the Commerce application is unavailable. Administrators are asked to update the license, while other users are asked to contact their administrator.
 
-1. Download your provisioned `.xml` key.
-
-1. Copy the key to the `/opt/liferay/deploy` folder in your container using the following syntax:
-
-   ```bash
-   docker cp [key-name.xml] [container-name]:/opt/liferay/deploy
-   ```
-
-   If the instance is already running, the key is processed and stored in the `opt/liferay/osgi/modules` folder, and Liferay generates a license file in the `opt/liferay/data/license` folder. Otherwise, the activation key is deployed and processed during the next startup.
-
-1. Verify your key has successfully deployed to your container via the console:
+The console also displays an error message during server restart:
 
    ```log
-   INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
-   ...
-   INFO  [fileinstall-directory-watcher][LicenseManager:?] Commerce Subscription Development license validation passed
-   INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
+   ERROR [main][LicenseManager:?] Liferay Commerce license is expired
    ```
 
-## Deploying to DXP Cloud
+In order to reactivate Liferay Commerce Enterprise, first remove the expired files from the server, and then [deploy](#deploying-commerce-activation-keys) your new key.
 
-If you've purchased Commerce through a DXP Cloud contract, then the DXP Cloud team manages the activation key through the cloud infrastructure, and there is no need to manage the key yourself. However, if you are adding Commerce to an existing DXP Cloud project, you must manually deploy the licence yourself.
-
-Follow the steps to deploy a Commerce activation key to your Liferay service:
-
-1. Download your provisioned `.xml` key.
-
-1. Copy your key to the [`liferay/configs/{ENV}/deploy/`](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.html#licenses) folder in your Project's central Git repository, and commit your changes.
-
-   ```note::
-      If you're using version 3.x.x services, then licenses belong in the ``lcp/liferay/license/{ENV}/`` folder of your repository.
+   ```tip::
+      You can remove and add activation keys while the server is running.
    ```
 
-1. Build and deploy your Liferay service using either Jenkins or the CLI tool. See [Overview of the DXP Cloud Deployment Workflow](https://learn.liferay.com/dxp-cloud/latest/en/build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.html) for more information.
+### Updating DXP Bundles
 
-   When processed, the key is relocated to the `opt/liferay/osgi/modules` folder, and Liferay generates a corresponding license file in the `opt/liferay/data/license` folder.
+Remove the expired XML key from the `${liferay.home}/osgi/modules` folder and the expired license file from the `${liferay.home}/data/license` folder. Then, add your new activation key to the `${liferay.home}/deploy` folder.
 
-1. Verify your key has successfully deployed to your Project's Liferay service via the service logs:
+### Updating Docker Containers
 
-   ```log
-   INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
-   ...
-   INFO  [fileinstall-directory-watcher][LicenseManager:?] Commerce Subscription Development license validation passed
-   INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
-   ```
+Remove the expired XML key from the `opt/liferay/osgi/modules` folder and the expired license file from the `opt/liferay/data/licenses` folder. Then add your new activation key to the `/opt/liferay/deploy` folder in your container.
+
+### Updating the Liferay Service in DXP Cloud Projects
+
+The DXP Cloud team manages both DXP and Commerce licenses, and there is no need for users to manually update them for themselves.
 
 ## Additional Information
 
+* [Installation Overview](./installation-overview.md)
+* [Upgrading Liferay Commerce](./upgrading-liferay-commerce.md)
 * [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391)

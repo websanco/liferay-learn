@@ -7,7 +7,6 @@ Installation and Upgrades
    installation-and-upgrades/installation-overview.md
    installation-and-upgrades/activating-liferay-commerce-enterprise.md
    installation-and-upgrades/upgrading-liferay-commerce.md
-   installation-and-upgrades/updating-a-commerce-enterprise-license.md   
    installation-and-upgrades/maintenance-versions.md
    installation-and-upgrades/3.0-release-notes
    installation-and-upgrades/3-0-breaking-changes.md
@@ -16,7 +15,6 @@ Installation and Upgrades
 -  :doc:`/installation-and-upgrades/installation-overview`
 -  :doc:`/installation-and-upgrades/activating-liferay-commerce-enterprise`
 -  :doc:`/installation-and-upgrades/upgrading-liferay-commerce`
--  :doc:`/installation-and-upgrades/updating-a-commerce-enterprise-license`
 -  :doc:`/installation-and-upgrades/maintenance-versions`
 -  :doc:`/installation-and-upgrades/3.0-release-notes`
 -  :doc:`/installation-and-upgrades/3-0-breaking-changes`
