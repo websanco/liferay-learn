@@ -84,7 +84,12 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
     > **Tip:** Make sure your ID is unique by searching your `liferay-learn` branch for any project folders that use the ID. For example, `find . -name liferay-c3p0.zip`
 
-    > **Important:** Make sure your ID appears to be random. Avoid these things in an ID: Using your initials in multiple IDs (e.g., `j0h1`, `j2h3`), duplicating characters (e.g., `b1b5` or `a1z1`), using sequential characters (e.g., `a1b2`), and repeating part of an ID (e.g., `a8q1`, `a8q2`).
+    Avoid these things in your ID:
+
+    * Using your initials (e.g., `j2b3` if your name is Joe Bloggs)
+    * Duplicating characters (e.g., `b1b5` duplicates `b`, `a1z1` duplicates `1`)
+    * Using sequential characters (e.g., `a1b2` has sequential characters `a` and `b`, and `1` and `2`)
+    * Repeating part of another ID (e.g., `a8q1` and `a8q2` repeat `a8q`).
 
 1. Create your `liferay-xxxx.zip` project folder in a `[tutorial-name]/resources/` folder that's in the same location (shown as `[tutorial path]` below) that you will eventually put the tutorial article Markdown file.
 
