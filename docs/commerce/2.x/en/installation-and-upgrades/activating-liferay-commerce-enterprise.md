@@ -6,10 +6,12 @@ Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and 
 
 Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. However, restrictions based on System resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
 
-```important::
-   In order to activate Commerce Enterprise, both the DXP and Commerce activation keys must be of the same ``license-type`` (e.g., Production, Developer, or Enterprise). A warning is thrown in the server startup log if the license types do not match.
+Both the DXP and Commerce activation keys must be of the same `license-type` (e.g., `production`, `developer`, or `enterprise`). A warning is thrown in the server startup log if the license types do not match. *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
+
+```note::
+   As of Liferay 7.3 SP1, only LCS can be used to activate Commerce `enterprise` or `production` licenses. The same is not true of `developer` licenses. 
    
-   *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
+   Also, users are no longer required to re-index their instance after activating Commerce.
 ```
 
 * [Obtaining Commerce Activation Keys](#obtaining-commerce-activation-keys)
