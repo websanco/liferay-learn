@@ -257,6 +257,14 @@ An implementation package should resemble the interface package but be *internal
 | Interface | com.liferay.**dynamic.data.mapping.storage**.**DDMStorageAdapter** |
 | Implementation | [com.acme.r2f1.internal.**dynamic.data.mapping.storage**.R2F1**DDMStorageAdapter**](../docs/dxp/7.x/en/process-automation/forms/developer-guide/writing-a-form-storage-adapter/resources/liferay-r2f1.zip/r2f1-impl/src/main/java/com/acme/r2f1/internal/dynamic/data/mapping/storage/R2F1DDMStorageAdapter.java) |
 
+### Portlet Package Names 
+
+Portlets use this package name pattern:
+
+```java
+package com.acme.xxxx.web.internal; 
+````
+
 ## Classes
 
 ### Class Names
