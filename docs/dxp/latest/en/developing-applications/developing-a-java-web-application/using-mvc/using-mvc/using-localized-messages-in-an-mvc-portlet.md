@@ -79,6 +79,14 @@ The example project includes a `view.jsp` file with a simple welcome header that
 <h1><liferay-ui:message key="b6f5-portlet-welcome" /></h1>
 ```
 
+Note that there is an extra `liferay-ui:message` that is included in the example jsp file: 
+
+```jsp
+<liferay-ui:message key="supercalifragilisticexpialidocious" />
+```
+
+This demonstrates that if no such key is found in the `Language.properties` file, simply the label will be displayed.
+
 Learn more about taglibs in our [Liferay Tag Library Documentation](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/). 
 Each taglib has a list of attributes that can be passed to the tag.
 
