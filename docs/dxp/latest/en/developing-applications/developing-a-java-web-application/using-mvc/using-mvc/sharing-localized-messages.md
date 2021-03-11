@@ -102,4 +102,4 @@ Note that you can still choose to place some language keys within an individual 
 
 ## Related Topics
 
-* [Aggregating Resource Bundles](../../reference/aggregating-resource-bundles.md)
+* [Aggregating Resource Bundles](../../core-frameworks/localization/reference/aggregating-resource-bundles.md)
