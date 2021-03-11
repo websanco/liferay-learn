@@ -78,7 +78,7 @@ Begin by creating `impl` and `api` modules in your Liferay workspace project. Yo
 ```
 buildscript {
     dependencies {
-        classpath group: "com.liferay", name: "com.liferay.gradle.plugins.rest.builder", version: "1.0.125"
+        classpath group: "com.liferay", name: "com.liferay.gradle.plugins.rest.builder", version: "1.1.32"
     }
 
     repositories {
@@ -91,7 +91,7 @@ buildscript {
 apply plugin: "com.liferay.portal.tools.rest.builder"
 ```
 
-Your `build.gradle` files in both modules must also declare dependencies on the portal release and the Vulcan API. 
+Your `build.gradle` files in both modules must also declare dependencies on the portal release. 
 
 ## YAML configuration
 
@@ -113,7 +113,7 @@ REST Builder configuration belongs in the `rest-config.yaml` file. It defines th
 
 Define these fields using this structure:
 
-```
+```yaml
 apiDir: "../r3b2-api/src/main/java"
 apiPackagePath: "com.acme.r3b2.product.catalog"
 application:
@@ -129,7 +129,7 @@ Next, open the `rest-openapi.yaml` file to begin configuring your APIs.
 
 The first section to add is the information block: 
 
-```
+```yaml
 info:
   description: "EAPI to return a product from a catalog."
   license:
@@ -150,7 +150,7 @@ Next, in the `components` block, define schemas for your entities. REST Builder 
 
 Define a `schema` block for each entity you want to represent: 
 
-```
+```yaml
 components:
     schemas:
         Product:
@@ -180,7 +180,7 @@ Your schema definition determines the names of the classes REST Builder generate
 
 Finally, add the `paths` block. This must include all APIs that you plan to implement with REST Builder. Add each API to a path:
 
-```
+```yaml
 paths:
     "/entities/{productId}":
         get:
@@ -194,7 +194,7 @@ paths:
 ```
 
 ```tip::
-   Paths can be added for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
+   You can add paths for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
 ```
 
 The path (`entities/{productId}`) specifies that this API (`getProduct`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/product-catalog/v1.0/entities/{productId}`.
@@ -203,7 +203,7 @@ The value you substitute in for `productId` is used as the parameter with the ma
 
 Beneath the `parameters` block (and within the `get` block), add in a `responses` block to define at least the response for a successful call (indicated by a `200` response):
 
-```
+```yaml
 responses:
     200:
         content:
@@ -220,7 +220,7 @@ This `responses` block specifies that a successful call returns a `Product`. The
 
 Lastly, add a `tags` definition for this path, beneath the `responses` block:
 
-```
+```yaml
 tags: ["Product"]
 ```
 
@@ -243,22 +243,25 @@ REST Builder uses your configuration and populates both your `api` and `impl` cl
 The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `ProductResourceImpl.java`).
 
 ```tip::
-   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` within your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/``.
+   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` in your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/``.
 ```
 
-The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class and add the implementation of your API as an overridden method:
+The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class. Since this is just an example, this implementation uses a pre-populated `LinkedHashMap`, and the `getProduct` method returns the product from the `LinkedHashMap` with the matching `productId`. See [`ProductResourceImpl.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/headless-delivery/producting-apis-with-rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip/r3b2-impl/src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/ProductResourceImpl.java) for the full implementation.
 
 ```java
 @Override
-    public Product getProduct(Integer productId) {
+public Product getProduct(Integer productId) {
+   if (_productMap == null) {
+      _initProductMap();
+   }
 
-    return null;
+   return _productMap.get(productId);
 }
 ```
 
-This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if a `Product` is not found (see below).
+This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if a `Product` is not found.
 
-Finally, add the business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema, so you must create an empty object and then add your values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
+You can add any business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema. This example business logic creates an empty object and then adds values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
 
 ```java
 Product chair = new Product();
@@ -268,7 +271,6 @@ chair.setName("Folding Chair");
 chair.setPrice(Integer.valueOf(15));
 ```
 
-In this example, a simple `LinkedHashMap` is populated with a few products, and the `getProduct` method returns the product from the `LinkedHashMap` with the matching `productId`. See [`ProductResourceImpl.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/headless-delivery/producting-apis-with-rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip/r3b2-impl/src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/ProductResourceImpl.java) for the full implementation.
 
 ## Conclusion
 
