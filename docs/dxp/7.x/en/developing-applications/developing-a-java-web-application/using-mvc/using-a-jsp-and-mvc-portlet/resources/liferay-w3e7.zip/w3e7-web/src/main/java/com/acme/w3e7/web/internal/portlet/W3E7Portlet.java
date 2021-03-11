@@ -10,7 +10,6 @@ import org.osgi.service.component.annotations.Component;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=W3E7 Portlet",
-		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp"
 	},
 	service = Portlet.class
