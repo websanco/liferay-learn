@@ -21,21 +21,28 @@ import org.osgi.service.component.annotations.Component;
 )
 public class U8T2Portlet extends MVCPortlet {
 
-	@ProcessAction(name = "action1")
-	public void action1(
+	@ProcessAction(name = "action2")
+	public void handleSomeActionB(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #action1(ActionRequest, ActionResponse)");
+			_log.warn("Invoke #handleActionB(ActionRequest, ActionResponse)");
 		}
 	}
 
-	@ProcessAction(name = "action2")
-	public void action2(
+	public void processAction1(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #action2(ActionRequest, ActionResponse)");
+			_log.warn("Invoke #processAction1(ActionRequest, ActionResponse)");
+		}
+	}
+
+	public void processAction3(
+		ActionRequest actionRequest, ActionResponse actionResponse) {
+
+		if (_log.isWarnEnabled()) {
+			_log.warn("Invoke #processAction3(ActionRequest, ActionResponse)");
 		}
 	}
 
