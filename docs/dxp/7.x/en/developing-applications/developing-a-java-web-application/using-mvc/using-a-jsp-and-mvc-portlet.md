@@ -99,7 +99,6 @@ A `@Component` annotation configures the portlet.
    property = {
        "com.liferay.portlet.display-category=category.sample",
        "javax.portlet.display-name=W3E7 Portlet",
-       "javax.portlet.init-param.template-path=/",
        "javax.portlet.init-param.view-template=/view.jsp"
    },
    service = Portlet.class
@@ -112,7 +111,7 @@ The `service = Portlet.class` attribute registers the class as a `Portlet`.
 
 The display property values describe the portlet web application. The `com.liferay.portlet.display-category=category.sample` property adds the app to the sample widget category. The `javax.portlet.display-name=W3E7 Portlet` property specifies the app's name.
 
-The template path initialization parameter `javax.portlet.init-param.template-path` declares the starting location in the `resources/META-INF/resources` for finding the view templates. `javax.portlet.init-param.template-path=/` means the view template path root is the module's `resources/META-INF/resources/` folder. The `javax.portlet.init-param.view-template=/view.jsp` property declares the portlet's view template `resources/META-INF/resources/view.jsp`. When you add the portlet to a page, the view template renders.
+The template path initialization parameter `javax.portlet.init-param.template-path` declares the starting location in the `resources/META-INF/resources` for finding the view templates. The `javax.portlet.init-param.view-template=/view.jsp` property declares the portlet's view template `resources/META-INF/resources/view.jsp`. When you add the portlet to a page, the view template renders.
 
 ```note::
    The `Portlet Descriptor to OSGi Service Property Map <../../reference/portlet-descriptor-to-osgi-service-property-map.md>`_ specifies how OSGi component property values map to traditional portlet descriptors.
