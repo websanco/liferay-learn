@@ -32,29 +32,29 @@ public class B4K8PortletFilter implements RenderFilter {
 
 	@Override
 	public void doFilter(
-			RenderRequest request, RenderResponse response, FilterChain chain)
+			RenderRequest renderRequest, RenderResponse renderResponse,
+			FilterChain filterChain)
 		throws IOException, PortletException {
 
-		long startTime = System.nanoTime();
+		long startTime = System.currentTimeMillis();
 
-		chain.doFilter(request, response);
+		filterChain.doFilter(renderRequest, renderResponse);
 
-		long renderTime = (System.nanoTime() - startTime) / 1000;
-		_hits.increment();
-		_accumulatedTimeMs.add(renderTime);
+		long renderTime = (System.currentTimeMillis() - startTime) / 1000;
+
+		_totalTime.add(renderTime);
+
+		_count.increment();
 
 		if (_log.isWarnEnabled()) {
-			long totalHits = _hits.longValue();
+			long count = _count.longValue();
 
-			long averageRenderTimeNs =
-				_accumulatedTimeMs.longValue() / totalHits;
-
-			_log.warn(_PORTLET_NAME + " rendered in " + renderTime + " ms");
+			long averageRenderTime = _totalTime.longValue() / count;
 
 			_log.warn(
-				_PORTLET_NAME + " rendered " + totalHits +
-					" times with an average " + averageRenderTimeNs +
-						" ms render time");
+				"Blogs portlet rendered in " + renderTime +
+					" ms with an average of " + averageRenderTime +
+						" ms out of " + count + " renders.");
 		}
 	}
 
@@ -62,13 +62,10 @@ public class B4K8PortletFilter implements RenderFilter {
 	public void init(FilterConfig filterConfig) throws PortletException {
 	}
 
-	private static final String _PORTLET_NAME =
-		"com_liferay_blogs_web_portlet_BlogsPortlet";
-
 	private static final Log _log = LogFactoryUtil.getLog(
 		B4K8PortletFilter.class);
 
-	private final LongAdder _accumulatedTimeMs = new LongAdder();
-	private final LongAdder _hits = new LongAdder();
+	private final LongAdder _count = new LongAdder();
+	private final LongAdder _totalTime = new LongAdder();
 
 }
