@@ -46,12 +46,12 @@ Here you'll learn how to create an example project for a tutorial. It will be a 
 
 ### Example Project Structure
 
-Here's the structure for an example project that has the ID `c3p0` (more on project IDs shortly). The project is for a tutorial article whose Markdown file will be `implementing-something.md`:
+Here's the structure for an example project that has the ID `c3p1` (more on project IDs shortly). The project is for a tutorial article whose Markdown file will be `implementing-something.md`:
 
 ```
 [tutorial path] // This is the same folder your article will go in later.
-└── implementing-something/resources/liferay-c3p0.zip/
-    └── c3p0-impl // Module
+└── implementing-something/resources/liferay-c3p1.zip/
+    └── c3p1-impl // Module
         ├── bnd.bnd
         ├── build.gradle
         └── src/main/java/ // Your Java code goes here
@@ -69,26 +69,27 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
    ID Pattern:
    ```
-   [a-z][0-9][a-z][0-9]
+   [a-z][1-9][a-z][1-9]
    ```
    
-   Example: `c3p0`
+   Example: `c3p1`
 
     For convenience, these guidelines use `xxxx` as an ID placeholder--replace it with your unique ID.
 
     Here's a way of generating an ID that fits the pattern. 
 
     ```bash
-    tr -cd a-z0-9 < /dev/urandom | head -c 1000 | sed 's/.*\([a-z]\).*\([0-9]\).*\([a-z]\).*\([0-9]\).*/\1\2\3\4\n/'
+    tr -cd a-z1-9 < /dev/urandom | head -c 1000 | sed 's/.*\([a-z]\).*\([1-9]\).*\([a-z]\).*\([1-9]\).*/\1\2\3\4\n/'
     ```
 
-    > **Tip:** Make sure your ID is unique by searching your `liferay-learn` branch for any project folders that use the ID. For example, `find . -name liferay-c3p0.zip`
+    > **Tip:** Make sure your ID is unique by searching your `liferay-learn` branch for any project folders that use the ID. For example, `find . -name liferay-c3p1.zip`
 
     Avoid these things in your ID:
 
-    * Using your initials (e.g., `j2b3` if your name is Joe Bloggs)
+    * Zeros. Zeros are easy to confuse with alphabetical `o` and `O`.
+    * Your initials (e.g., `j2b3` if your name is Joe Bloggs)
     * Duplicating characters (e.g., `b1b5` duplicates `b`, `a1z1` duplicates `1`)
-    * Using sequential characters (e.g., `a1b2` has sequential characters `a` and `b`, and `1` and `2`)
+    * Sequential characters (e.g., `a1b2` has sequential characters `a` and `b`, and `1` and `2`)
     * Repeating part of another ID (e.g., `a8q1` and `a8q2` repeat `a8q`).
 
 1. Create your `liferay-xxxx.zip` project folder in a `[tutorial-name]/resources/` folder that's in the same location (shown as `[tutorial path]` below) that you will eventually put the tutorial article Markdown file.
@@ -123,7 +124,7 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 1. Copy our Java Workspace template to your project and build your project by running the `update_examples.sh` script from the `liferay-learn/docs` folder. For example,
 
     ```bash
-    ./update_examples.sh c3p0
+    ./update_examples.sh c3p1
     ```
     
     Here's the file structure with the files added by `update_examples.sh`.
@@ -131,13 +132,13 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
 ```
 [tutorial path]
-└── implementing-something/resources/liferay-c3p0.zip/
+└── implementing-something/resources/liferay-c3p1.zip/
     ├── gradle.properties // Specifies the Liferay product/version to build against
     ├── gradlew // Gradle wrapper
     ├── gradlew.bat // Gradle wrapper (Windows)
     ├── settings.gradle // Specifies the artifact repository
     ├── source-formatter-suppressions.xml // Suppresses unneeded code format checks
-    └── c3p0-impl // Module
+    └── c3p1-impl // Module
         ├── bnd.bnd
         └── build.gradle
 ```
@@ -275,8 +276,8 @@ In most cases, prefix class names with the project ID (capitalized).
 | Class Type | Class Name |
 | :--------- | :------------------------- |
 | Interface | *DescribeWhatItIs* (e.g., `Greeter`) |
-| Implementation | XXXX*InterfaceName* (e.g., `C3P0Greeter`) |
-| Portlet | XXXXPortlet (e.g., `C3P0Portlet`)|
+| Implementation | XXXX*InterfaceName* (e.g., `C3P1Greeter`) |
+| Portlet | XXXXPortlet (e.g., `C3P1Portlet`)|
 
 ### Javadoc 
 
