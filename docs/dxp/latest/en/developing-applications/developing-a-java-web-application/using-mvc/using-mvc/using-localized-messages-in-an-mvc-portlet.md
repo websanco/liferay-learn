@@ -22,7 +22,7 @@ To see the example:
 1. Download and unzip [Using Localized Messages](./liferay-b6f5.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-b6f5.zip -O
+    curl https://learn.liferay.com/dxp/7.x/en/developing-applications/developing-a-java-web-application/using-mvc/using-localized-messages-in-an-mvc-portlet/resources/liferay-b6f5.zip -O
     ```
 
     ```bash
