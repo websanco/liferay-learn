@@ -68,7 +68,7 @@ Create a separate project module that will hold all the shared language keys. In
 
 Create a `Language.properties` file and add it to the module's `src/main/resources/content` folder. In the file define the keys that wish to share with the other modules. 
 
-The example project has a list of six colors:
+The example project has a list of six colors that is utilized by the `Acme U8T2 Web` module:
 
 ```properties
 blue=Blue
@@ -83,7 +83,7 @@ Language property files for other locales can also be included in the folder. Fo
 
 ### Add the bnd Instruction
 
-For each module that you wish to use your shared language keys, you must specify the resource in the bnd header. 
+For each module that you wish to share language keys with, you must specify the resource in the bnd header. 
 
 ```properties
 Bundle-Name: Acme U8T2 Web
@@ -98,7 +98,7 @@ The example project has a web portlet that uses the color language keys from `Ac
 -liferay-aggregate-resource-bundles: com.acme.u8t2.impl
 ```
 
-Note that language keys can still exist within an individual module. For example, the welcome message in the example project comes from the `Acme U8T2 Web` module and not the shared keys of `Acme U8T2 Impl`. Language keys of an individual module takes priority over any shared keys specified by `-liferay-aggregate-resource-bundles`. 
+Note that you can still choose to place some language keys within an individual module. For example, the welcome message in the example project comes from the `Acme U8T2 Web` module's language keys and not the shared keys of `Acme U8T2 Impl`. Language keys of an individual module takes priority over any shared keys specified by `-liferay-aggregate-resource-bundles`. 
 
 ## Related Topics
 
