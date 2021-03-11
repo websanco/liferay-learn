@@ -1,6 +1,6 @@
 # Sharing Localized Messages
 
-As you work on an application you might have multiple modules, each of which has its own language keys. Instead of maintaining various language properties files in different places, consolidate them into one place. This example project will demonstrate how to language keys can be shared across different modules.
+As you work on an application you might have multiple modules, each of which has its own language keys. Instead of maintaining various language properties files in different places, consolidate them into one place. This example project will demonstrate how language keys can be shared across different modules.
 
 ## Overview
 
@@ -22,7 +22,7 @@ To see the example:
 1. Download and unzip [Sharing Localized Messages](./liferay-u8t2.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-u8t2.zip -O
+    curl https://learn.liferay.com/dxp/7.x/en/developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages/resources/liferay-u8t2.zip -O
     ```
 
     ```bash
@@ -71,12 +71,12 @@ Create a `Language.properties` file and add it to the module's `src/main/resourc
 The example project has a list of six colors:
 
 ```properties
-blue=blue
-green=green
-orange=orange
-purple=purple
-red=red
-yellow=yellow 
+blue=Blue
+green=Green
+orange=Orange
+purple=Purple
+red=Red
+yellow=Yellow 
 ```
 
 Language property files for other locales can also be included in the folder. For example, to include language keys for Japanese, add a `Language_ja.properties` file to the folder.
