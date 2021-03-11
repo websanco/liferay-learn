@@ -2,4 +2,10 @@
 
 <h1><liferay-ui:message key="b6f5-portlet-welcome" /></h1>
 
-<liferay-ui:message key="success" />
+<p>
+	<liferay-ui:message key="success" />
+</p>
+
+<p>
+	<liferay-ui:message key="supercalifragilisticexpialidocious" />
+</p>
