@@ -39,7 +39,7 @@ Perhaps you need to exclude GIF files from appearing in the search results. Conf
 
 **Occur:** `must_not`
 
-This configuration leverages the presence of the `extension` field indexed from the Documents and Media [`DLFileEntry` model](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/document-library/document-library-service/src/main/java/com/liferay/document/library/internal/search/spi/model/index/contributor/DLFileEntryModelDocumentContributor.java#L158). It ensures that search documents containing an `extension` field with the value `gif` are not returned in the search results.
+This configuration leverages the presence of the `extension` field indexed from the Documents and Media [`DLFileEntry` model](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/document-library/document-library-service/src/main/java/com/liferay/document/library/internal/search/spi/model/index/contributor/DLFileEntryModelDocumentContributor.java). It ensures that search documents containing an `extension` field with the value `gif` are not returned in the search results.
 
 ## Boosting Fields
 
