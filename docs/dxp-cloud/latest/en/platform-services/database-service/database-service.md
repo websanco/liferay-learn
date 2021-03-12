@@ -4,6 +4,8 @@ The database service (MySQL) is a distributed relational database service that s
 
 ![Figure 1: The database service is one of several services available in DXP Cloud.](./database-service/images/01.png)
 
+See the [Database service limitations](../../reference/dxp-cloud-limitations.md#database-service) section for more information.
+
 ## Environment Variables
 
 You can set these environment variables to configure the database service. When setting `LCP_MASTER_USER_NAME`, `LCP_MASTER_USER_PASSWORD`, and `LCP_DBNAME`, make sure to use the same values for other services that depend on the database service (e.g., the backup and Liferay DXP services). You should set these variables before the first deployment. If a build is generated with new values for these variables, subsequent deployments will fail. It may be viable in a development environment to delete services and update the `LCP.json` file with new values for these variables, but this isn't viable in a production environment.
@@ -31,5 +33,6 @@ Name                                   | Acceptable Value | Default Value |
 ## Related Information
 
 * [Changing Your Database Username](./changing-your-database-username.md)
-* [Changing your Database Password](./changing-your-database-password.md)
+* [Changing Your Database Password](./changing-your-database-password.md)
+* [Database Service Limitations](../../reference/dxp-cloud-limitations.md#database-service)
 * [Using the MySQL Client](../../using-the-liferay-dxp-service/using-the-mysql-client.md)

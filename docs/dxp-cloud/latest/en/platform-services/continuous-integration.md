@@ -12,6 +12,8 @@ By default, this automated build will compile code and can be configured to exec
    Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
 ```
 
+See the [CI service limitations](../reference/dxp-cloud-limitations.md#continuous-integration-service) for more information.
+
 ## Using the Default Jenkinsfile
 
 Starting with CI service version `liferaycloud/jenkins:2.222.1-3.2.0`, a default Jenkinsfile is available when it is not overridden. The default Jenkinsfile is always available for use for projects [using version 4.x.x services](../reference/understanding-service-stack-versions.md).

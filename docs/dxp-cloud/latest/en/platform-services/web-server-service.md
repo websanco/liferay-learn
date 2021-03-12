@@ -6,6 +6,8 @@ high-performance web server.
 
 ![Figure 1: The web server is one of several services available in DXP Cloud.](./web-server-service/images/01.png)
 
+See the [Web server service limitations](../dxp-cloud-limitations.md#web-server-service) section for more information.
+
 ## Configurations
 
 Although DXP Cloud's services are fine-tuned to work well by default, you may 

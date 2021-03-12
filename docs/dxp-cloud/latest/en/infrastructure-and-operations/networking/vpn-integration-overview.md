@@ -6,6 +6,8 @@ Liferay DXP Cloud provides a VPN client-to-site connection that has port forward
 
 Subscribers can use redundant VPN tunnels by mapping their connections between their DXP Cloud services to their corresponding VPN server's IP addresses. The redundancy is placed in different availability zones to provide resiliency. The client-to-site approach covers connecting to a service running on the company network. This model is recommended for the containerized architecture and Kubernetes network layer provided.
 
+See the [VPN server limitations](../../reference/dxp-cloud-limitations.md#vpn-servers) section for more information.
+
 ## Configuration
 
 The client to site VPN feature supports the following protocols:
