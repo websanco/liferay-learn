@@ -179,3 +179,5 @@ To verify the new filter is working,
 1. Create another Web Content Article with English and French translations. Add _logement_ to the French title.
 
 1. Switch to the French locale and search for _maison_. Both articles are returned.
+
+**Disclaimer**: Just like other default configurations, the index mappings and settings can change between versions and, sometimes in Fix Packs/Service Packs. Therefore, customizations like this should be reviewed and adapted, if needed, when upgrading or moving to a new patch level. In addition, Liferay's Search team plans to add support for more languages out-of-the-box in future verisons which can make the customization unnecessary.
