@@ -11,6 +11,7 @@ Reference
    reference/dxp-cloud-project-changes-in-version-4.md
    reference/command-line-tool.md
    reference/defining-environment-variables.md
+   reference/dxp-cloud-limitations.md
 
 .. include:: /reference/README.rst
 	:start-line: 2

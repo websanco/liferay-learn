@@ -98,7 +98,7 @@ These limitations apply to the [Backup service](../platform-services/backup-serv
 
 ## Web Server Service
 
-These limitations apply to the [Web server service](../platform-service/web-server-service.md) in each DXP Cloud environment:
+These limitations apply to the [Web server service](../platform-services/web-server-service.md) in each DXP Cloud environment:
 
 * **Plugins**: Installing additional plugins for the web server is not supported.
 
