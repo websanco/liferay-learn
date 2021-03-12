@@ -4,19 +4,17 @@
 
 Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and Commerce licenses for use. These licenses are provided as XML (`.xml`) activation keys that must be deployed to your DXP instance to activate all Commerce features.
 
-Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. However, restrictions based on System resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
+Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. However, restrictions based on system resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
 
-Both the DXP and Commerce activation keys must be of the same `license-type` (e.g., `production`, `developer`, or `enterprise`). A warning is thrown in the server startup log if the license types do not match. *Production* licenses also require a matching hostname, matching IP address or matching mac address for validation.
-
-```note::
-   As of Liferay 7.3 SP1, only LCS can be used to activate Commerce `enterprise` or `production` licenses. The same is not true of `developer` licenses. 
+```important::
+   Both the DXP and Commerce activation keys must be of the same `license-type` (e.g., `production`, `developer`, or `enterprise`). A warning is thrown in the server startup log if the license types do not match. 
    
-   Also, users are no longer required to re-index their instance after activating Commerce.
+   *Production* licenses also require a matching hostname, IP address, or mac address for validation.
 ```
 
 * [Obtaining Commerce Activation Keys](#obtaining-commerce-activation-keys)
 * [Deploying Commerce Activation Keys](#deploying-commerce-activation-keys)
-* [Updating your Commerce Enterprise License](#updating-you-commerce-enterprise-license)
+* [Updating an Expired Commerce Enterprise License](#updating-an-expired-commerce-enterprise-license)
 
 ## Obtaining Commerce Activation Keys
 
@@ -31,6 +29,10 @@ If you've already [purchased](https://www.liferay.com/contact-sales) a Commerce 
 ## Deploying Commerce Activation Keys
 
 Once you've acquired your XML activation key, you can activate Commerce Enterprise by copying it to your DXP instance's `deploy` folder. This process is the same as activating Liferay DXP.
+
+```note::
+   As of Liferay 7.3 SP1, users are no longer required to re-index their instance after activating Commerce.
+```
 
 ### Deploying to DXP Bundles
 
@@ -59,7 +61,7 @@ Verify your key has successfully deployed via the console:
    INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for Commerce Subscription Development
    ```
 
-## Updating You Commerce Enterprise License
+## Updating an Expired Commerce Enterprise License
 
 Commerce Enterprise licenses are only valid for a set period of time based on the terms of a user's subscription. When a license nears expiration (i.e., < 30 days for most licenses, < 7 days for a 30 day license), a warning message is displayed in Commerce applications for Administrators. A license has a 2 day grace period after its given expiration date before it expires.
 
