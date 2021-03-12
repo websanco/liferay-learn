@@ -6,6 +6,7 @@ Search Administration and Tuning
    
    search-administration-and-tuning/synonym-sets.md
    search-administration-and-tuning/result-rankings.md
+   search-administration-and-tuning/index-reference.md
 
 - Search Administration Panel Overview (Coming Soon)
 - Understanding Localized Search (Coming Soon)
@@ -22,3 +23,8 @@ Troubleshooting Search
 
 - Search Insights (Coming soon)
 - Adjusting Elasticsearch Logging (Coming soon)
+
+Reference
+~~~~~~~~~
+
+-  :doc:`/using-search/search-administration-and-tuning/index-reference`

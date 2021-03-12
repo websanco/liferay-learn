@@ -1,9 +1,5 @@
 # Custom Facet
 
-7.3 FP1+ and the new GA for CE will fix DDM fields so we should document this, how to use DDM fields with the custom facet for Web Content
-7.2: By default it's legacy mode so DDM works, only if you switch to the newer nested field style (using the configuration) you will need to use the nested fields as well.
-7.2: enable Nested Fields Storage, now custom facet doesn't work FP8+ (unless the fix is backported)
-
 The Custom Facet is unique among the out-of-the-box search facets. Rather than group results by a single static field (like the modified date or the asset type), you use a Custom Facet to choose which field to group results by. You can create an entirely new facet with much more customization.
 
 ## Configuring the Custom Facet
@@ -143,7 +139,7 @@ Setting a custom field to searchable means that the value of the field is indexe
 
 ## Accessing Nested DDM Fields
 
-As documented in the [7.3 Breaking Changes document](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document), the way Liferay Dynamic Data Mapping framework indexes some fields has changed---where they were previously indeed at the root of the search engine document, they're now nested fields. This change affects Liferay 7.3 and Liferay 7.2 SP3/FP8+. On the latest Fix Pack and GA release of 7.3, this change is accounted for in Liferay's Search API and no configuration updates are necessary. Therefore, if you have Custom Facet widgets that relied on fields named `ddm__text__*` or `ddm__keyword__*` that were at the root of the Elasticsearch document, continue to use these fields as usual in your Custom Facet's _Aggregation Field_ configuration, even though they're no longer at the root of the document.
+As documented in the [7.3 Breaking Changes document](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document), the way Liferay Dynamic Data Mapping framework indexes some fields has changed---where they were previously at the root of the search engine document, they're now nested fields. This change affects Liferay 7.3 and Liferay 7.2 SP3/FP8+ (but only if the _Enable Legacy Dynamic Data Mapping Index Fields_ setting is disabled in System Settings &rarr; Dynamic Data Mapping Indexer). On the latest Fix Pack and GA release of 7.3, this change is accounted for in Liferay's Search API and no configuration updates are necessary. Therefore, if you have Custom Facet widgets that relied on fields named `ddm__text__*` or `ddm__keyword__*` that were at the root of the Elasticsearch document, continue to use these fields as usual in your Custom Facet's _Aggregation Field_ configuration, even though they're no longer at the root of the document.
 
 To find DDM fields in existing documents in the index,
 
