@@ -23,8 +23,8 @@ public class B4D8DataProvider implements DDMDataProvider {
 		DDMDataProviderResponse.Builder builder = DDMDataProviderResponse.Builder.newBuilder();
 		
 		System.out.println("hi from the B4D8 data provider, beep boop");
-
-		return builder.withStatus(DDMDataProviderResponseStatus.OK).build();
+		
+		return builder.withOutput("hello", builder).withStatus(DDMDataProviderResponseStatus.OK).build();
 	}
 
 	@Override
