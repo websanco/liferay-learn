@@ -20,11 +20,11 @@ Follow these steps to set up a display page for your products:
 
 1. Click on *Save* when finished.
 
-   This immediately establishes a relationship between the product and the selected Page. Now whenever users click on the product in your store, they'll be redirected to the product's display page.
+This immediately establishes a relationship between the product and the selected Page. Now whenever users click on the product in your store, they'll be redirected to the product's display page.
 
-   You can view and manage all saved configurations via the Product Display Pages tab.
+You can view and manage all saved configurations via the Product Display Pages tab.
 
-   ![View and manage all saved configurations via the Product Display Pages tab.](./creating-product-display-pages/images/04.png)
+![View and manage all saved configurations via the Product Display Pages tab.](./creating-product-display-pages/images/04.png)
 
 ```note::
    When there are two layouts with the product details or category content widget on them, Liferay defaults to the first one listed in the layout list.

@@ -86,7 +86,7 @@ To learn more about creating DXP site pages, see [Creating Pages](https://learn.
 
 ## Product Display Pages
 
-Product Display Pages operate on a similar premise to Category Display Pages; users can create a specific site page to highlight a specific product instead of the default Catalog page. On the _Product Display Pages_ tab, users can view the list of all Product Display Pages created on the site.
+Product Display Pages operate on a similar premise to Category Display Pages; users can create a specific site page to highlight a specific product instead of the default Catalog page. On the _Product Display Pages_ tab, users can view the list of all Product Display Pages created on the site. See [Creating Product Display Pages](../../creating-store-content/creating-product-display-pages.md) for more information.
 
 ## Payment Restrictions
 
