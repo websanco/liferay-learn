@@ -6,6 +6,7 @@ Pages
 
 -  :doc:`/creating-store-content/creating-your-storefront`
 -  :doc:`/creating-store-content/creating-a-catalog-page`
+-  :doc:`/creating-store-content/creating-product-display-pages`
 -  :doc:`/creating-store-content/widget-reference`
 
 Commerce Storefront Pages
