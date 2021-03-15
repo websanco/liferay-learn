@@ -20,7 +20,7 @@ Follow these steps to set up a display page for your products:
 
 1. Click on *Save* when finished.
 
-This immediately establishes a relationship between the product and the selected Page. Now whenever users click on the product in your store, they'll be redirected to the product's display page.
+This immediately establishes a relationship between the product and the selected Page. Now, when users click on the product in your store, they'll be redirected to the product's display page.
 
 You can view and manage all saved configurations via the Product Display Pages tab.
 
