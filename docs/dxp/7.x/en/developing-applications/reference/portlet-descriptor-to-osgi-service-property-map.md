@@ -1,6 +1,6 @@
 # Portlet Descriptor to OSGi Service Property Map
 
-Here portlet XML descriptor values are mapped to OSGi service properties for publishing OSGi Portlets. The properties centralize and simplify portlet configuration. They are typically represented as key-value pairs or, more generally, as a Map-like object.
+Here's a map of portlet XML descriptor values to OSGi service properties for publishing OSGi Portlets. The properties centralize and simplify portlet configuration. They are typically represented as key-value pairs or, more generally, as a Map-like object.
 
 The property keys essentially flatten the XML descriptors but resemble the descriptor names. 
 
@@ -215,7 +215,7 @@ The standard portlet descriptor mappings are first.
     	...
     </portlet>
     ```
-    
+
     *New:* 
 
     ```java
@@ -276,7 +276,7 @@ The standard portlet descriptor mappings are first.
     }
     ```
 
-* [<a name="ten">10</a>] Liferay creates each portlet's ID based on the portlet's name (i.e., the `portlet-name` descriptor in `liferay-portlet.xml` or the `javax.portlet.name` OSGi service property). Dashes, periods, and spaces are allowed in the portlet name, but they and all other JavaScript unsafe characters are stripped from the name value that's used for the portlet ID. Therefore, make your portlet name unique in light of the characters that are removed. Otherwise, if you try to deploy a portlet whose ID is the same as a portlet that's already deployed, your portlet deployment fails and Liferay logs a message like this:
+* [<a name="ten">10</a>] Liferay creates each portlet's ID based on the portlet's name (i.e., the `portlet-name` descriptor in `liferay-portlet.xml` or the `javax.portlet.name` OSGi service property). Dashes, periods, and spaces are allowed in the portlet name, but they and all other JavaScript unsafe characters are stripped from the name value that's used for the portlet ID. Therefore, make your portlet name unique in light of the characters that are removed. Otherwise, if you try to deploy a portlet whose ID is the same as a portlet that's already deployed, your portlet deployment fails and Liferay logs this message:
 
     ```
     Portlet id [portletId] is already in use
