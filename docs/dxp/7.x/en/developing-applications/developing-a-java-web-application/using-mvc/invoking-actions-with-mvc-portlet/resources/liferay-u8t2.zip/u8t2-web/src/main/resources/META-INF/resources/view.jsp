@@ -1,15 +1,15 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
-<portlet:actionURL name="doSomething" var="action1URL" />
+<portlet:actionURL name="doSomething" var="actionURL" />
 
 <p>
-	<a href="<%= action1URL %>">Invoke Action 1</a>
+	<a href="<%= actionURL %>">Do Something</a>
 </p>
 
 <p>
-	<a href="<portlet:actionURL name="doSomethingElse" />">Invoke Action 2</a>
+	<a href="<portlet:actionURL name="doSomethingElse" />">Do Something Else</a>
 </p>
 
 <p>
-	<a href="<portlet:actionURL><portlet:param name="javax.portlet.action" value="doSomethingMore" /></portlet:actionURL>">Invoke Action 3</a>
+	<a href="<portlet:actionURL><portlet:param name="javax.portlet.action" value="doSomethingMore" /></portlet:actionURL>">Do Something More</a>
 </p>
