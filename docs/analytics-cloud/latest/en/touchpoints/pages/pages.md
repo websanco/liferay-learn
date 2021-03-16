@@ -28,7 +28,6 @@ Note that the first Sunday of the 90 day time period is not included.
 
 The Overview tab of a Page's metrics has several data presentations. The first chart, called Visitor Behavior, contains these metrics:
 
-* Average Engagement Score
 * Unique Visitors
 * Total Views
 * Bounce Rate
@@ -39,18 +38,6 @@ Select the time period for the data displayed. There are always two trend lines 
 ![Trends can be identified over selected periods of time.](pages/images/01.png)
 
 So what are these metrics in the Visitor Behavior chart?
-
-### Engagement Score
-
-Engagement, or average Page Engagement is an aggregation of metrics into one overall score. It incorporates these factors:
-
-* Depth of scroll on the Page
-* Number of clicks
-* Time spent on the Page
-
-Use the engagement score as a high level view of the Page's overall performance, as compared with other Pages. It might not tell you specifically what's so effective (or weak) about a Page, but it can tell you if the Page is performing as desired over the selected time period.
-
-Page Engagement is useful to combine time period filtering and comparative time period features. Comparing the engagement score from different periods is the best way to determine how your Page's performance changes over time.
 
 ### Unique Visitors
 

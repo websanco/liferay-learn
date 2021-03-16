@@ -10,7 +10,7 @@ To view the dashboard,
 
 The dashboard contains the following data:
 
-* [Site Metrics](#site-metrics)
+* [Site Activities](#site-activities)
 * [Top Pages](#top-pages)
 * [Acquisitions](#acquisitions)
 * [Visitors by Day and Time](#visitors-by-day-and-time)
@@ -19,9 +19,9 @@ The dashboard contains the following data:
 * [Session Technology](#session-technology)
 * [Cohort Analysis](#cohort-analysis)
 
-### Site Metrics
+### Site Activities
 
-The Site Metrics panel presents a summary of how visitors interact with your Site. This panel contains the following metrics:
+The Site Activities panel presents a summary of how visitors interact with your Site. This panel contains the following metrics:
 
 **Visitors:** Total unique visitors.
 
@@ -31,9 +31,7 @@ The Site Metrics panel presents a summary of how visitors interact with your Sit
 
 **Bounce Rate:** The percentage of visitors who view your Site's first page, but do nothing else before the session ends.
 
-**Engagement:** A proprietary metric that Analytics Cloud calculates to determine how engaged a visitor is with your Site. This is derived from session duration, pages visited, scroll depth, time on page, and more.
-
-![Site Metrics include a visualization of data points over a period of time.](./sites-dashboard/images/01.png)
+![Site Activities include a visualization of data points over a period of time.](./sites-dashboard/images/01.png)
 
 Clicking each metric changes the visualization in the panel to display the selected metric. The data can be filtered by ranges of time: Last 24 hours, Last 7 days, Last 30 days, Last 90 days. Click *More Preset Periods* to reveal additional time ranges. Click *Custom Range* to filter by a start date and end date of your choice.
 

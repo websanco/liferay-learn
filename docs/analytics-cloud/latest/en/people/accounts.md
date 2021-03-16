@@ -7,7 +7,6 @@ To view account analytics, select Accounts from the left navigation panel. The a
 * Account Type
 * Individuals
 * Total Activities
-* 30-Day Engagement Score
 
 ![The Accounts tab lists the Salesforce accounts imported in Analytics Cloud.](accounts/images/01.png)
 
@@ -39,7 +38,7 @@ If more information is available for each tab, you can access it via its link. F
 
 ## Activities
 
-The Activities tab shows the activities of the individuals in the account. A histogram shows the number of activities by date and the average engagement score for the account’s individuals. A searchable table below the histogram shows more detail about the activities.
+The Activities tab shows the activities of the individuals in the account. A histogram shows the number of activities by date. A searchable table below the histogram shows more detail about the activities.
 
 ![The Activities tab displays data on activities of the account’s individuals.](accounts/images/03.png)
 

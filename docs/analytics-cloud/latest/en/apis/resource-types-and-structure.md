@@ -9,7 +9,6 @@ Account represents a company or organization that is interacting with your websi
    "activeIndividualsCount":0,
    "dateCreated":"2019-12-27T19:17:49.924Z",
    "dateModified":"2019-12-27T19:17:49.924Z",
-   "engagementScore":0.0,
    "id":"386700295379617992",
    "individualsCount":5,
    "properties":{ 
@@ -50,7 +49,6 @@ Account represents a company or organization that is interacting with your websi
 * `activeIndividualsCount` (Number): Number of active individuals belonging to the account.
 * `dateCreated` (Date): Date the account was created in the system.
 * `dateModified` (Date): Date of the last modification of the account properties.
-* `engamentScore` (Number): Number that averages the engagement score of each individual that belongs to the account.
 * `ID` (String): Unique identifier of the account;
 * `individualsCount` (Number): Number of individuals belonging to the account, active or inactive individuals are considered in this metric. 
 * `Properties`: Key/Value (String) map of the account dynamic properties, examples might include industry, fax, phone, etc.
@@ -127,7 +125,7 @@ Segments are a group of individuals that share similar characteristics. Segments
 
 ## Pages
 
-Pages information represents aggregated interaction data with any tracked page. Each page URL will contain properties such as engagement score, number of views for a page, etc. All the properties can be seen below.
+Pages information represents aggregated interaction data with any tracked page. Each page URL will contain properties such as time on page, number of views for a page, etc. All the properties can be seen below.
 
 ```json
 { 
@@ -148,14 +146,6 @@ Pages information represents aggregated interaction data with any tracked page. 
              "trendClassification":"NEUTRAL"
          },
          "value":264283.0
-      },
-      "engagementMetric":{ 
-         "previousValue":0.0,
-            "trend":{ 
-               "percentage":null,
-               "trendClassification":"NEUTRAL"
-            },
-            "value":0.13333333333333333
       },
       "exitRateMetric":{ 
          "previousValue":0.0,

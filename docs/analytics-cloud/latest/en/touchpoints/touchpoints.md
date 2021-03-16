@@ -23,7 +23,6 @@ To view the list of Pages with summary data,
 
 Order Pages in ascending or descending order based on any one of the following metrics,
 
-* Average Engagement Score
 * Total Visitors
 * Total Views
 * Average Bounce Rate
@@ -40,7 +39,7 @@ The metrics for ordering the Page list are calculated based on the time period s
 
 To view detailed metrics for a single page, click that page in the table. See [Page Analytics](pages/pages.md) for more information.
 
-![The Visitor Behavior screen shows line graphs of Engagement statistics over a period of time.](touchpoints/images/03.png)
+![The Visitor Behavior panel shows detailed statistics over a period of time.](touchpoints/images/03.png)
 
 ## Finding Asset Data
 

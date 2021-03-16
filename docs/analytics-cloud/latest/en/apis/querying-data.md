@@ -161,5 +161,5 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `page` (Integer): results page number.
 * `keywords` (String): keywords to be matched with the pages title or url information.
 * `rangeKey` (Integer): range to be used to group data. Possible values are 0 ( data from the last 24 hours), 1 (data from yesterday), 7 (data from the last 7 days), 28 (data from the last 28 days), 30 (default value, data from the last 30 days), 90 (data from the last 90 days.
-* `sortMetric` (String): defined what metric to sort the results, default to viewsMetrics; possible values are ctrMetric, engagementMetric, timeOnPageMetric, exitRateMetric, ctpMetric, sessionsMetric, avgTimeOnPageMetric, bounceMetric, maxScrollDepthMetric, visitorsMetric, viewsMetric, bounceRateMetric, indirectAccessMetric, entrancesMetric, directAccessMetric
+* `sortMetric` (String): defined what metric to sort the results, default to viewsMetrics; possible values are ctrMetric, timeOnPageMetric, exitRateMetric, ctpMetric, sessionsMetric, avgTimeOnPageMetric, bounceMetric, maxScrollDepthMetric, visitorsMetric, viewsMetric, bounceRateMetric, indirectAccessMetric, entrancesMetric, directAccessMetric
 * `sortOrder` (String), possible values are *asc* or *desc*. Orders the results according to the sortMetric in ascending or descending order. Default is desc.
