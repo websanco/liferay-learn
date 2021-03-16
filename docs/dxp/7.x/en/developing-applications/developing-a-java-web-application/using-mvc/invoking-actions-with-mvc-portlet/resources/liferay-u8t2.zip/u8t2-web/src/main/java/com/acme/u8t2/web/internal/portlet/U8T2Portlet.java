@@ -37,7 +37,7 @@ public class U8T2Portlet extends MVCPortlet {
 		}
 	}
 
-	@ProcessAction(name = "action3")
+	@ProcessAction(name = "nameForTheDoSomethingMoreMethod")
 	public void doSomethingMore(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 

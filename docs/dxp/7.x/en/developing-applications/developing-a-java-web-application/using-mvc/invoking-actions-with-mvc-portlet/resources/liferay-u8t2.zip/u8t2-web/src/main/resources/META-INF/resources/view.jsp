@@ -11,5 +11,5 @@
 </p>
 
 <p>
-	<a href="<portlet:actionURL><portlet:param name="javax.portlet.action" value="doSomethingMore" /></portlet:actionURL>">Do Something More</a>
+	<a href="<portlet:actionURL><portlet:param name="javax.portlet.action" value="nameForTheDoSomethingMoreMethod" /></portlet:actionURL>">Do Something More</a>
 </p>
