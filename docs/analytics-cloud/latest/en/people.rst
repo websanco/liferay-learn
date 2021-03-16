@@ -6,7 +6,7 @@ People
 
    people/understanding-your-audience.md
    people/individuals.rst
-   people/accounts.rst
+   people/accounts.md
    people/segments.rst
 
 -  :doc:`/people/understanding-your-audience`
@@ -23,7 +23,7 @@ Individual
 Accounts
 --------
 
-- :doc:`people/accounts/accounts`
+- :doc:`people/accounts`
 
 Segments
 --------
@@ -31,6 +31,3 @@ Segments
 -  :doc:`/people/segments/segments`
 -  :doc:`/people/segments/creating-segments`
 -  :doc:`/people/segments/personalizing-content-with-segments`
-
-
-
