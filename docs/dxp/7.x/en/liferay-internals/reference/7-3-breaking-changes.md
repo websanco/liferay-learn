@@ -692,6 +692,33 @@ This change was made because these properties are not useful for an entity.
 
 ---------------------------------------
 
+### Renamed portal properties "module.framework.properties.felix.fileinstall.\*" to "module.framework.properties.file.install.\*"
+- **Date:** 2020-Jul-13
+- **JIRA Ticket:** [LPS-115016](https://issues.liferay.com/browse/LPS-115016)
+
+#### What changed?
+
+Portal properties beginning with "module.framework.properties.felix.fileinstall"
+have been renamed to begin with "module.framework.properties.file.install".
+
+#### Who is affected?
+
+This affects anyone who has the portal property settings
+`module.framework.properties.felix.fileinstall.*`.
+
+#### How should I update my code?
+
+Existing usage of the `module.framework.properties.felix.fileinstall.*`
+properties can be renamed to `module.framework.properties.file.install.*`
+
+#### Why was this change made?
+
+This change was made to reflect the inlining of Apache Felix Fileinstall.
+Moving forward this functionality will be managed and maintained by Liferay
+and the properties should be appropriately named.
+
+---------------------------------------
+
 ### Dynamic Data Mapping fields in Elasticsearch have changed to a nested document
 - **Date:** 2020-Jul-27
 - **JIRA Ticket:** [LPS-103224](https://issues.liferay.com/browse/LPS-103224)
@@ -836,5 +863,36 @@ To use a configuration file, configure view counts in System Settings, save the 
 #### Why was this change made?
 
 This change was made to facilitate managing view count behavior.
+
+---------------------------------------
+
+### Removed portal property "module.framework.properties.file.install.optionalImportRefreshScope"
+- **Date:** 2020-Oct-11
+- **JIRA Ticket:** [LPS-122008](https://issues.liferay.com/browse/LPS-122008)
+
+#### What changed?
+
+Portal property
+`module.framework.properties.file.install.optionalImportRefreshScope` has been
+removed. File install will now always only check managed bundles when scanning
+for bundles with optional packages that need to be refreshed.
+
+#### Who is affected?
+
+This affects anyone who has the portal property settings
+`module.framework.properties.file.install.optionalImportRefreshScope`.
+
+#### How should I update my code?
+
+Remove property
+`module.framework.properties.file.install.optionalImportRefreshScope`. File
+install cannot be configured to use other behavior.
+
+#### Why was this change made?
+
+There were very few cases where alternate behavior was desireable. File install
+is the primary way the bundles are installed into Liferay, so all bundles are
+managed by it by default. Removing various branching logic supporting this
+feature improves code maintainability and readability.
 
 ---------------------------------------
