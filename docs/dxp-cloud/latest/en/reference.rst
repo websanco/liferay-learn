@@ -13,5 +13,11 @@ Reference
    reference/defining-environment-variables.md
    reference/platform-limitations.md
 
-.. include:: /reference/README.rst
-	:start-line: 2
+-  :doc:`/reference/dxp-cloud-infrastructure`
+-  :doc:`/reference/configuration-via-lcp-json`
+-  :doc:`/reference/understanding-service-stack-versions`
+-  :doc:`/reference/upgrading-your-dxp-cloud-stack`
+-  :doc:`/reference/dxp-cloud-project-changes-in-version-4`
+-  :doc:`/reference/command-line-tool`
+-  :doc:`/reference/defining-environment-variables`
+-  :doc:`/reference/platform-limitations`
