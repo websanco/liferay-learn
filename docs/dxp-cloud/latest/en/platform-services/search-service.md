@@ -24,6 +24,10 @@ correct folder:
     │           └── elasticsearch.yml
     └── LCP.json
 
+```important::
+   You must use the ``elasticsearch.yml`` configuration file to configure Elasticsearch. Configuring Elasticsearch through the UI will be overwritten on each deployment.
+```
+
 ```note::
    If you are using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/search/config/{ENV}/`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
