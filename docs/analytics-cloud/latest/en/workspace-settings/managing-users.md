@@ -1,32 +1,32 @@
 # Managing Users
 
-If you are the project Owner or have been assigned the Admin permission, you can invite and manage users. Here’s how to bring up the User Management page:
+If you are the workspace Owner or have been assigned the Admin permission, you can invite and manage users. Here’s how to bring up the User Management page:
 
 1. Click on Settings in the navigation panel. The default Settings page appears.
 
-1. Click on User Management in the navigation area. The User Management page appears, listing all the project’s users.
+1. Click on User Management in the navigation area. The User Management page appears, listing all the workspace’s users.
 
 From the User Management page, an Admin user (or Owner) can invite users, edit their permissions, and delete them.
 
-If your project is new, you’ll want to invite your teammates to the project.
+If your workspace is new, you’ll want to invite your teammates to the workspace.
 
 ## Inviting Users
 
-To invite new users to your Analytics Cloud project, perform these steps:
+To invite new users to your Analytics Cloud workspace, perform these steps:
 
 1. In the User Management page, click on the Invite Users button. The Invite Users dialog appears.
 
-1. Enter the email addresses (separated by a space or comma) of the people to invite to the project.
+1. Enter the email addresses (separated by a space or comma) of the people to invite to the workspace.
 
 1. Click the Send button. The invitation is sent to your lucky teammates.
 
-![The invitation email provides the project number.](managing-users/images/01.png)
+![The invitation email provides the workspace number.](managing-users/images/01.png)
 
 You can set the user’s permissions when their invitation acceptance is pending.
 
 ## Managing Permissions
 
-Analytics Cloud projects have the following Roles:
+Analytics Cloud workspaces have the following Roles:
 
 **Owner:** Can do all things, but cannot be deleted.
 
