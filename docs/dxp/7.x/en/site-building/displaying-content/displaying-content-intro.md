@@ -24,7 +24,7 @@ You can specify which assets to display. For instance you can specify to only di
 
 ## Display Page Template
 
-A Display Page Template defines how your web content is organized and formatted on a page. When the full web content is viewed, either through an app like the Asset Publisher or directly via the friendly URL for the web content, it's displayed on its own page, based on the Display Page Template. Read [Using Display Pages](./using-fragments/using-display-page-templates/displaying-content-with-display-page-templates.md) to learn more.
+A Display Page Template defines how your web content is organized and formatted on a page. When the full web content is viewed, either through an app like the Asset Publisher or directly via the friendly URL for the web content, it's displayed on its own page, based on the Display Page Template. Read [Using Display Pages](./using-display-page-templates/displaying-content-with-display-page-templates.md) to learn more.
 
 ## Other Methods
 

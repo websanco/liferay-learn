@@ -38,7 +38,7 @@ Consider the following information when you create the Dynamic Collection:
 
     ![You can optionally use a Filter in the Dynamic Collection for your content recommendations](./configuring-content-recommendations/images/04.png)
 
-- If you want to target content recommendations to a specific group of users (for example, "website visitors in Germany"), you can combine the Dynamic Collection with a Segment [using Personalized Variations](./experience-personalization/personalizing-collections.md).
+- If you want to target content recommendations to a specific group of users (for example, "website visitors in Germany"), you can combine the Dynamic Collection with a Segment [using Personalized Variations](./personalizing-collections.md).
 
     ![Customize your content recommendations Collection for a specific user Segment](./configuring-content-recommendations/images/05.png)
 

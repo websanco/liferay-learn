@@ -17,11 +17,11 @@ To learn more, see the [Activating Workflow](./activating-workflow.md) and [send
 Workflow allows users to build more complex workflows that can have multiple reviewers and approvers. Learn how to build an effective workflow:
 
 * [Crafting Review Processes in XML](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)
-* [Visually Designing Review Processes](https://help.liferay.com/hc/articles/360028821892-Workflow-Designer) (Subscriber)
-* [Uploading Workflow Definitions](./managing-workflows.md#uploading-a-new-workflow-definitions)
-* [Managing Workflow Definitions](./managing-workflows.md)
+* [Visually Designing Review Processes](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md) (Subscriber)
+* [Uploading Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definitions)
+* [Managing Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md)
 
-To start building your own workflows, see [Building Workflows](./building-workflows.md).
+To start building your own workflows, see [Building Workflows](./designing-and-managing-workflows/building-workflows.md).
 
 ### Using Workflow Metrics to Implement SLAs
 
@@ -36,10 +36,10 @@ Once an SLA is set, workflow submissions that trigger the SLA timer are automati
 
 ![See Workflow Reports generated based on your SLAs.](./introduction-to-workflow/images/02.png)
 
-See the [Using Workflow Metrics](./using-workflow-metrics.md) article to learn how to add SLAs into your workflows.
+See the [Using Workflow Metrics](./using-workflows/using-workflow-metrics.md) article to learn how to add SLAs into your workflows.
 
 ## What's Next
 
-* [Activating Workflow](./activating-workflow.md)
-* [Managing Workflows](./managing-workflows.md)
-* [Workflow Designer Overview](./workflow-designer-overview.md)
+* [Activating Workflow](./using-workflows/activating-workflow.md)
+* [Managing Workflows](./designing-and-managing-workflows/managing-workflows.md)
+* [Workflow Designer Overview](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)

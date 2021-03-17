@@ -64,5 +64,4 @@ After creating your test and test variant, you can [run the test](./running-and-
 
 - [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
 - [A/B Testing](./ab-testing.md)
-- [Configuring A/B Testing](./configuring-ab-testing.md)
 - [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
