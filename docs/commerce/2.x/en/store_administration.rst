@@ -10,7 +10,6 @@ Store Administration
    store-administration/guest_checkout.rst
    store-administration/deactivating-a-country-for-billing-or-shipping.md
 
-   
    store-administration/sending_emails.rst
    store-administration/currencies.rst
    store-administration/configuring_taxes.rst
