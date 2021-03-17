@@ -9,6 +9,7 @@ docs/**/build/
 docs/**/bundles/
 docs/**/liferay-????-theme.war
 docs/**/liferay-????-theme/
+docs/**/liferay-????.zip/**/*.jar
 docs/**/liferay-????.zip/.yo-rc.json
 docs/**/liferay-????.zip/gradle.properties
 docs/**/liferay-????.zip/gradle/
