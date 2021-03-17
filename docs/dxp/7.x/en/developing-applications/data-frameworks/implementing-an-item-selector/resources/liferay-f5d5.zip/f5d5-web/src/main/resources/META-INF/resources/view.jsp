@@ -1,3 +1,5 @@
+<%@page import="com.acme.f5d5.web.internal.constants.F5D5WebKeys" %>
+
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
 <%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
@@ -5,7 +7,7 @@
 <portlet:defineObjects />
 
 <%
-String itemSelectorURL = String.valueOf(request.getAttribute("itemSelectorURL"));
+String itemSelectorURL = String.valueOf(request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL));
 %>
 
 <clay:button

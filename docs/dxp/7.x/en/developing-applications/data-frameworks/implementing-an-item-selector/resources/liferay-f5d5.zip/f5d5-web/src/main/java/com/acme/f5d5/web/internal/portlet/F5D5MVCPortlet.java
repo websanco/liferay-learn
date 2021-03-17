@@ -1,5 +1,6 @@
 package com.acme.f5d5.web.internal.portlet;
 
+import com.acme.f5d5.web.internal.constants.F5D5WebKeys;
 import com.liferay.item.selector.ItemSelector;
 import com.liferay.item.selector.ItemSelectorReturnType;
 import com.liferay.item.selector.criteria.UUIDItemSelectorReturnType;
@@ -66,7 +67,7 @@ public class F5D5MVCPortlet extends MVCPortlet {
 			requestBackedPortletURLFactory, "selectRole",
 			itemSelectorCriterion);
 
-		renderRequest.setAttribute("itemSelectorURL", itemSelectorURL);
+		renderRequest.setAttribute(F5D5WebKeys.ITEM_SELECTOR_URL, itemSelectorURL);
 
 		super.render(renderRequest, renderResponse);
 	}

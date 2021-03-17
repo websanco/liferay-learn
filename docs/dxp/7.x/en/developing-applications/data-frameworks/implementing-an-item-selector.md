@@ -140,10 +140,10 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
 1. Add the item selector URL to the `renderRequest` so that it's available in the JSP:
 
    ```java
-   renderRequest.setAttribute("itemSelectorURL", itemSelectorURL);
+   renderRequest.setAttribute(F5D5WebKeys.ITEM_SELECTOR_URL, itemSelectorURL);
    ```
 
-   The `view.jsp` file is where the front-end code is defined. The `renderRequest` object in your Java class's `render` method is passed to the JSP file later.
+   The `view.jsp` file is where the front-end code is defined. The `renderRequest` object in your Java class's `render` method is passed to the JSP file later. Use a constant to make sure you identify the URL consistently in both the controller (portlet class) and the view (JSP). 
 
 1. Finally, call `MVCPortlet`'s `render` method to continue the rendering process once your code is executed:
 
@@ -157,11 +157,11 @@ That's the controller code. Execution now passes to the view layer (the V in MVC
 
 You must retrieve the item selector and define a way to use it in your front-end code Open `view.jsp` from the example. 
 
-1. You begin by retrieving the item selector URL from the request where the controller stored it:
+1. You begin by retrieving the item selector URL from the request where the controller stored it, using the same constant to identify it:
 
    ```jsp
    <%
-   String itemSelectorURL = String.valueOf(request.getAttribute("itemSelectorURL"));
+      String itemSelectorURL = String.valueOf(request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL));
    %>
    ```
 
