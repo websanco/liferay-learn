@@ -1,6 +1,6 @@
 # Managing Workspaces
 
-Workspace administrators connect data sources to the workspace, manage workspace users, and track workspace usage against the current plan limits.
+Workspace administrators connect data sources to the workspace, manage users, and track usage against the current plan limits.
 
 <!-- management screenshot -->
 
