@@ -1,0 +1,3 @@
+dependencies {
+	runtimeClasspath group: "com.liferay", name: "release.portal.api", version: "3.0.9"
+}
