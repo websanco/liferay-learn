@@ -182,12 +182,13 @@ The bundled connector to Elasticsearch is not always the best choice for your in
 
 | Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Operation Modes |
 | ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | --------------- |
-| CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar <br /> Remote (Production)* |
-| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\** (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded <br /> Remote |
-| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | Marketplace: [CE](https://web.liferay.com/marketplace/-/mp/application/170642090), [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; |  Embedded <br /> Remote |
+| CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)* |
+| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\** (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded / Remote |
+| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | Marketplace: [CE](https://web.liferay.com/marketplace/-/mp/application/170642090), [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; |  Embedded / Remote |
 
 \* Property _Operation Mode_ (`operationMode`) of the connector config has been deprecated and replaced with _Production Mode Enabled_ (`productionModeEnabled`).
-\** Through the [Liferay Enterprise Search Security]](https://web.liferay.com/marketplace/-/mp/application/106163963) application.
+
+\** Through the [Liferay Enterprise Search Security](https://web.liferay.com/marketplace/-/mp/application/106163963) application.
 
 For detailed compatibility information including the compatible Elasticsearch versions and required patch levels, see the Search Engine Compatibility Matrix: https://help.liferay.com/hc/en-us/articles/360016511651.
 
@@ -198,7 +199,8 @@ Now that Liferay is connected to Elasticsearch, you can start using Elasticsearc
 ## Related Topics
 
 * [Securing Elasticsearch](./securing-elasticsearch.md)
-* Liferay Enterprise Search (Coming soon)
-* [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
-* Administering and Tuning Search (Coming soon)
 * [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)
+* [Using the Sidecar or Embedded Elasticsearch](./using-the-sidecar-or-embedded-elasticsearch.md)
+* [Liferay Enterprise Search](../../liferay_enterprise_search.rst)
+* [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
+* [Administering and Tuning Search](../../search_administration_and_tuning.rst)
