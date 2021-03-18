@@ -88,6 +88,12 @@ On Liferay 7.3 (DXP FP1+ and CE GA7+), you can allow unauthenticated Guest Users
 
 ![You can choose whether Guests are allowed to upload files.](./forms-field-types-reference/images/16.png)
 
+Uploaded documents are stored in a hidden folder in the [Documents and Media repository]( ./../../../system-administration/file-storage/configuring-file-storage.md). To display them in the Documents and Media application, set the following [portal property](../../../installation-and-upgrades/reference/portal-properties.md ) in a `portal-ext.properties` file:
+
+```properties
+dl.show.hidden.mount.folders=true
+```
+
 Configure the Guest upload behavior in the Control Panel: System Settings &rarr; Forms (Content and Data) &rarr; Forms, or by creating a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named `com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config`.
 
 ```tip::
