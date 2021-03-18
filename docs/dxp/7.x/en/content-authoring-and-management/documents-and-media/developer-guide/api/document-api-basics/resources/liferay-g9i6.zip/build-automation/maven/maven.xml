@@ -1,5 +1,0 @@
-<dependency>
-	<groupId>com.liferay</groupId>
-	<artifactId>com.liferay.headless.delivery.client</artifactId>
-	<version>3.0.9</version>
-</dependency>
