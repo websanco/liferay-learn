@@ -11,7 +11,7 @@ Notable installation and configuration procedure differences are presented here.
    Stop each Liferay server node before configuring the connection.
 ```
 
-If you're on Liferay 7.2, skip to [Liferay 7.2: Installing Elasticsearch 7 Connector](#liferay-7.2-installing-elasticsearch-7-connector).
+If you're on Liferay 7.2, skip to [Liferay 7.2: Installing Elasticsearch 7 Connector](#liferay-7-2-installing-elasticsearch-7-connector).
 
 ## Configuring the Connector
 
@@ -113,8 +113,8 @@ On Liferay 7.2, the bundled connector application and APIs are for Elasticsearch
 
    Make sure the connector corresponds to your Elasticsearch version. Note, the client libraries in the connector can be for an older version of Elasticsearch (e.g., 7.3) even though the connector application supports a newer version (e.g., 7.9.x). Liferay tests the connector with every minor Elasticsearch version and creates new update connector versions when needed. As always, consult the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for connector compatibility.
 
-   * CE: [Liferay CE Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
-   * DXP: [Liferay Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170390307)
+   * CE: [Liferay CE Connector to Elasticsearch 7](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
+   * DXP: [Liferay Connector to Elasticsearch 7](https://web.liferay.com/en/marketplace/-/mp/application/170390307)
 
 1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) by placing it in the folder
 
@@ -176,20 +176,20 @@ On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/work
 
 Now Liferay is indexing content into your remote Elasticsearch 7 installation.
 
-## Available Liferay Connector Applications
+## Available Liferay Elasticsearch Connectors
 
 The bundled connector to Elasticsearch is not always the best choice for your installation. It's important to understand the differences between the connectors you can use to communicate with Elasticsearch:
 
-| Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Compatible Elasticsearch Version | Recommended Elasticsearch Version | Operation Modes |
-| ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | ---------------------- | -------------------------- |--------------- |
-| CE 7.3 GA4+ <br /><br /> DXP 7.3 GA1+ | Liferay Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | 7.9+ | 7.9+ | Sidecar <br /> Remote |
-| 7.2, GA1 through FP4 | Liferay Connector to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.5/transport-client.html) | &#10004;\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | 6.5.x-6.8.x | 6.8.x | Embedded <br /> Remote |
-| 7.2, SP2+/FP5+ | Liferay Connector to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.8/transport-client.html) | &#10004;\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | 6.8.x | 6.8.x | Embedded <br /> Remote |
-| DXP 7.2 SP3/FP8+ | Liferay Connector to Elasticsearch 7 (3.1.0+) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x-7.9.x | 7.9.x | Embedded <br /> Remote |
-| DXP 7.2 FP9+ | Liferay Connector to Elasticsearch 7 (3.2.0+) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.9.x | 7.9.x | Embedded <br /> Remote |
-| CE 7.2 GA2+ | Liferay CE Connector to Elasticsearch 7 (3.0.0) | [Marketplace](https://web.liferay.com/marketplace/-/mp/application/170642090) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; | 7.3.x -7.9.x | 7.9.x| Embedded <br /> Remote |
+| Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Operation Modes |
+| ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | --------------- |
+| CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar <br /> Remote (Production)* |
+| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\** (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded <br /> Remote |
+| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | Marketplace: [CE](https://web.liferay.com/marketplace/-/mp/application/170642090), [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; |  Embedded <br /> Remote |
 
-\* Through the [Liferay Connector to X-Pack Security [Elastic Stack 6.x]](https://web.liferay.com/marketplace/-/mp/application/106163963).
+\* Property _Operation Mode_ (`operationMode`) of the connector config has been deprecated and replaced with _Production Mode Enabled_ (`productionModeEnabled`).
+\** Through the [Liferay Enterprise Search Security]](https://web.liferay.com/marketplace/-/mp/application/106163963) application.
+
+For detailed compatibility information including the compatible Elasticsearch versions and required patch levels, see the Search Engine Compatibility Matrix: https://help.liferay.com/hc/en-us/articles/360016511651.
 
 ## What's Next 
 
