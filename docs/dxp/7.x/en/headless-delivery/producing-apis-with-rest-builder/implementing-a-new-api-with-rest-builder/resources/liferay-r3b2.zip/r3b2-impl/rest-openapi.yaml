@@ -1,50 +1,50 @@
-components: 
-   schemas: 
-      Foo:
-         description: 
-            A dummy object that has no meaning.
-         properties: 
-            bar: 
-               description: 
-                  A field called bar, because this has no meaning.
-               type: string
-            baz: 
-               description: 
-                  A field called baz to go with bar. 
-               type: string
-            fooId: 
-               description:
-                  The Foo's ID
-               type: integer
-         type: object
+components:
+    schemas:
+        Foo:
+            description:
+                A dummy object that has no meaning.
+            properties:
+                bar:
+                    description:
+                        A field called bar, because this has no meaning.
+                    type: string
+                baz:
+                    description:
+                        A field called baz to go with bar.
+                    type: string
+                fooId:
+                    description:
+                        The Foo's ID
+                    type: integer
+            type: object
 info:
-   description:       "API to return a Foo." 
-   license:
+    description:
+        "API to return a Foo."
+    license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-   title: "Foo API"
-   version: v1.0
+    title: "Foo API"
+    version: v1.0
 openapi: 3.0.1
-paths: 
-   "/stuff/{fooId}":
-      get:
-         operationId: getFoo
-         parameters: 
-            - in: path
-              name: fooId
-              required: true
-              schema:
-                type: integer
-         responses:
-            200:
-               content:
-                  application/json:
-                     schema:
-                        $ref: "#/components/schemas/Foo"
-                  application/xml: 
-                     schema:
-                        $ref: "#/components/schemas/Foo"
-               description: 
-                  "Returns the Foo matching the given product ID."
-         tags: ["Foo"]
-
+paths:
+    "/stuff/{fooId}":
+        get:
+            operationId: getFoo
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        "Returns the Foo matching the given product ID."
+            tags: ["Foo"]

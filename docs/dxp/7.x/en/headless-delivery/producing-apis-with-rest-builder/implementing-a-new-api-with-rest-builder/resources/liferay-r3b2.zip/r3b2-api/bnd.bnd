@@ -1,3 +1,6 @@
 Bundle-Name: Acme R3B2 Foo API
 Bundle-SymbolicName: com.acme.r3b2.api
 Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.r3b2.foo.dto.v1_0,\
+	com.acme.r3b2.foo.resource.v1_0
