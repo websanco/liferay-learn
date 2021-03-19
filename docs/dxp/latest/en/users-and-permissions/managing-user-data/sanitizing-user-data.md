@@ -59,4 +59,12 @@ Now the User's data is anonymized or deleted, and the User is also deleted.
 
 ## Manual Anonymization
 
-Anonymizing just the User's identification fields and deleting the User is often not enough. If a User named John Smith writes a Message Boards Message and signs the post with "_The John Smith_", anonymizing the user would remove the User's name (John Smith) and replace it with Anonymous Anonymous. However, the _content_ of the Message Boards Message can still be searched for and discovered because of John Smith's signature. Application content like this must be manually identified and edited to remove personally identifying information.
+Anonymizing just the User's identification fields and deleting the User is often not enough. For example, if a User named John Smith inputs personally identifiable information into a form, the text input fields are not anonymized by the UAD framework. 
+
+![A user inputs identifiable information into an input text field.](./sanitizing-user-data/images/05.png)
+
+After anonymization, notice the *Author* field has been sanitized but the user input text remains and must be manually removed.
+
+![User input text is not anonymized.](./sanitizing-user-data/images/06.png)
+
+User generated content like this must be manually identified and edited to remove personally identifying information.
