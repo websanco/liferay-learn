@@ -44,7 +44,8 @@ public class F5D5Portlet extends MVCPortlet {
 
 		PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
 			RequestBackedPortletURLFactoryUtil.create(renderRequest),
-			"selectRole", itemSelectorCriterion);
+			renderResponse.getNamespace() + "selectRole",
+			itemSelectorCriterion);
 
 		renderRequest.setAttribute(
 			F5D5WebKeys.ITEM_SELECTOR_URL, itemSelectorURL);

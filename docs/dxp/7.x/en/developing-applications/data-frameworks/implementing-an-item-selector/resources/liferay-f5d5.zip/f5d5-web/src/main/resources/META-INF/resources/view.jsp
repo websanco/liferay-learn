@@ -6,32 +6,25 @@
 
 <portlet:defineObjects />
 
-<%
-String itemSelectorURL = String.valueOf(request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL));
-%>
-
 <clay:button
-	id='<%= liferayPortletResponse.getNamespace() + "selectRole" %>'
+	id='<%= liferayPortletResponse.getNamespace() + "selectRoleButton" %>'
 	label="Select"
 />
 
 <script>
-	var selectRoleButton = document.getElementById('<portlet:namespace />selectRole');
+	var selectRoleButton = document.getElementById('<portlet:namespace />selectRoleButton');
 
 	selectRoleButton.addEventListener(
 		'click',
 		function(event) {
-			var itemSelectorDialog = new Liferay.Util.openSelectionModal(
+			new Liferay.Util.openSelectionModal(
 				{
-					onSelect: function (selectedItem) {
-						if (selectedItem) {
-							// Use the selected item value(s) here.
-							alert (selectedItem.value);
-						}
+					onSelect: function (event) {
+						alert(event.value);
 					},
-					selectEventName: 'selectRole',
+					selectEventName: '<portlet:namespace />selectRole',
 					title: 'Select Role',
-					url: '<%= itemSelectorURL %>'
+					url: '<%= request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL) %>'
 				}
 			);
 		}
