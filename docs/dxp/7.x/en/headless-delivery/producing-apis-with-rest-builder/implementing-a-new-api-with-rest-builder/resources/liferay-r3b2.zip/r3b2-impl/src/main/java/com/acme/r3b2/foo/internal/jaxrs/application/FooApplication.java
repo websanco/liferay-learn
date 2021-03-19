@@ -1,4 +1,4 @@
-package com.acme.r3b2.product.catalog.internal.jaxrs.application;
+package com.acme.r3b2.foo.internal.jaxrs.application;
 
 import javax.annotation.Generated;
 
@@ -12,12 +12,12 @@ import org.osgi.service.component.annotations.Component;
  */
 @Component(
 	property = {
-		"liferay.jackson=false", "osgi.jaxrs.application.base=/product-catalog",
+		"liferay.jackson=false", "osgi.jaxrs.application.base=/foo",
 		"osgi.jaxrs.extension.select=(osgi.jaxrs.name=Liferay.Vulcan)",
-		"osgi.jaxrs.name=R3B2.Acme.Product.Catalog"
+		"osgi.jaxrs.name=R3B2.Acme.Foo"
 	},
 	service = Application.class
 )
 @Generated("")
-public class ProductCatalogApplication extends Application {
+public class FooApplication extends Application {
 }

@@ -1,4 +1,4 @@
-package com.acme.r3b2.product.catalog.internal.resource.v1_0;
+package com.acme.r3b2.foo.internal.resource.v1_0;
 
 import com.liferay.portal.vulcan.resource.OpenAPIResource;
 
@@ -33,7 +33,7 @@ import org.osgi.service.component.annotations.Reference;
 )
 @Generated("")
 @OpenAPIDefinition(
-	info = @Info(description = "", license = @License(name = "Apache 2.0", url = "http://www.apache.org/licenses/LICENSE-2.0.html"), title = "Product Catalog API", version = "v1.0")
+	info = @Info(description = "API to return a Foo.", license = @License(name = "Apache 2.0", url = "http://www.apache.org/licenses/LICENSE-2.0.html"), title = "Foo API", version = "v1.0")
 )
 @Path("/v1.0")
 public class OpenAPIResourceImpl {
@@ -66,7 +66,7 @@ public class OpenAPIResourceImpl {
 
 	private final Set<Class<?>> _resourceClasses = new HashSet<Class<?>>() {
 		{
-			add(ProductResourceImpl.class);
+			add(FooResourceImpl.class);
 
 			add(OpenAPIResourceImpl.class);
 		}

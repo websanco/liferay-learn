@@ -1,4 +1,4 @@
-package com.acme.r3b2.product.catalog.dto.v1_0;
+package com.acme.r3b2.foo.dto.v1_0;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,6 +11,8 @@ import com.liferay.portal.vulcan.graphql.annotation.GraphQLName;
 import com.liferay.portal.vulcan.util.ObjectMapperUtil;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+
+import java.io.Serializable;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -26,28 +28,28 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @generated
  */
 @Generated("")
-@GraphQLName("Product")
+@GraphQLName("Foo")
 @JsonFilter("Liferay.Vulcan")
-@XmlRootElement(name = "Product")
-public class Product {
+@XmlRootElement(name = "Foo")
+public class Foo implements Serializable {
 
-	public static Product toDTO(String json) {
-		return ObjectMapperUtil.readValue(Product.class, json);
+	public static Foo toDTO(String json) {
+		return ObjectMapperUtil.readValue(Foo.class, json);
 	}
 
-	@Schema(description = "The product's name")
-	public String getName() {
-		return name;
+	@Schema(description = "A field called bar, because this has no meaning.")
+	public String getBar() {
+		return bar;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBar(String bar) {
+		this.bar = bar;
 	}
 
 	@JsonIgnore
-	public void setName(UnsafeSupplier<String, Exception> nameUnsafeSupplier) {
+	public void setBar(UnsafeSupplier<String, Exception> barUnsafeSupplier) {
 		try {
-			name = nameUnsafeSupplier.get();
+			bar = barUnsafeSupplier.get();
 		}
 		catch (RuntimeException re) {
 			throw re;
@@ -57,25 +59,25 @@ public class Product {
 		}
 	}
 
-	@GraphQLField(description = "The product's name")
+	@GraphQLField(
+		description = "A field called bar, because this has no meaning."
+	)
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected String name;
+	protected String bar;
 
-	@Schema(description = "The product's price, in dollars")
-	public Integer getPrice() {
-		return price;
+	@Schema(description = "A field called baz to go with bar.")
+	public String getBaz() {
+		return baz;
 	}
 
-	public void setPrice(Integer price) {
-		this.price = price;
+	public void setBaz(String baz) {
+		this.baz = baz;
 	}
 
 	@JsonIgnore
-	public void setPrice(
-		UnsafeSupplier<Integer, Exception> priceUnsafeSupplier) {
-
+	public void setBaz(UnsafeSupplier<String, Exception> bazUnsafeSupplier) {
 		try {
-			price = priceUnsafeSupplier.get();
+			baz = bazUnsafeSupplier.get();
 		}
 		catch (RuntimeException re) {
 			throw re;
@@ -85,25 +87,25 @@ public class Product {
 		}
 	}
 
-	@GraphQLField(description = "The product's price, in dollars")
+	@GraphQLField(description = "A field called baz to go with bar.")
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected Integer price;
+	protected String baz;
 
-	@Schema(description = "The product's ID")
-	public Integer getProductId() {
-		return productId;
+	@Schema(description = "The Foo's ID")
+	public Integer getFooId() {
+		return fooId;
 	}
 
-	public void setProductId(Integer productId) {
-		this.productId = productId;
+	public void setFooId(Integer fooId) {
+		this.fooId = fooId;
 	}
 
 	@JsonIgnore
-	public void setProductId(
-		UnsafeSupplier<Integer, Exception> productIdUnsafeSupplier) {
+	public void setFooId(
+		UnsafeSupplier<Integer, Exception> fooIdUnsafeSupplier) {
 
 		try {
-			productId = productIdUnsafeSupplier.get();
+			fooId = fooIdUnsafeSupplier.get();
 		}
 		catch (RuntimeException re) {
 			throw re;
@@ -113,9 +115,9 @@ public class Product {
 		}
 	}
 
-	@GraphQLField(description = "The product's ID")
+	@GraphQLField(description = "The Foo's ID")
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected Integer productId;
+	protected Integer fooId;
 
 	@Override
 	public boolean equals(Object object) {
@@ -123,13 +125,13 @@ public class Product {
 			return true;
 		}
 
-		if (!(object instanceof Product)) {
+		if (!(object instanceof Foo)) {
 			return false;
 		}
 
-		Product product = (Product)object;
+		Foo foo = (Foo)object;
 
-		return Objects.equals(toString(), product.toString());
+		return Objects.equals(toString(), foo.toString());
 	}
 
 	@Override
@@ -144,38 +146,42 @@ public class Product {
 
 		sb.append("{");
 
-		if (name != null) {
+		if (bar != null) {
 			if (sb.length() > 1) {
 				sb.append(", ");
 			}
 
-			sb.append("\"name\": ");
+			sb.append("\"bar\": ");
 
 			sb.append("\"");
 
-			sb.append(_escape(name));
+			sb.append(_escape(bar));
 
 			sb.append("\"");
 		}
 
-		if (price != null) {
+		if (baz != null) {
 			if (sb.length() > 1) {
 				sb.append(", ");
 			}
 
-			sb.append("\"price\": ");
+			sb.append("\"baz\": ");
 
-			sb.append(price);
+			sb.append("\"");
+
+			sb.append(_escape(baz));
+
+			sb.append("\"");
 		}
 
-		if (productId != null) {
+		if (fooId != null) {
 			if (sb.length() > 1) {
 				sb.append(", ");
 			}
 
-			sb.append("\"productId\": ");
+			sb.append("\"fooId\": ");
 
-			sb.append(productId);
+			sb.append(fooId);
 		}
 
 		sb.append("}");
@@ -184,8 +190,7 @@ public class Product {
 	}
 
 	@Schema(
-		defaultValue = "com.acme.r3b2.product.catalog.dto.v1_0.Product",
-		name = "x-class-name"
+		defaultValue = "com.acme.r3b2.foo.dto.v1_0.Foo", name = "x-class-name"
 	)
 	public String xClassName;
 

@@ -1,6 +1,6 @@
-package com.acme.r3b2.product.catalog.resource.v1_0;
+package com.acme.r3b2.foo.resource.v1_0;
 
-import com.acme.r3b2.product.catalog.dto.v1_0.Product;
+import com.acme.r3b2.foo.dto.v1_0.Foo;
 
 import com.liferay.portal.kernel.service.GroupLocalService;
 import com.liferay.portal.kernel.service.RoleLocalService;
@@ -20,20 +20,20 @@ import org.osgi.annotation.versioning.ProviderType;
 /**
  * To access this resource, run:
  *
- *     curl -u your@email.com:yourpassword -D - http://localhost:8080/o/product-catalog/v1.0
+ *     curl -u your@email.com:yourpassword -D - http://localhost:8080/o/foo/v1.0
  *
  * @author Liferay
  * @generated
  */
 @Generated("")
 @ProviderType
-public interface ProductResource {
+public interface FooResource {
 
 	public static Builder builder() {
 		return FactoryHolder.factory.create();
 	}
 
-	public Product getProduct(Integer productId) throws Exception;
+	public Foo getFoo(Integer fooId) throws Exception;
 
 	public default void setContextAcceptLanguage(
 		AcceptLanguage contextAcceptLanguage) {
@@ -69,7 +69,7 @@ public interface ProductResource {
 	@ProviderType
 	public interface Builder {
 
-		public ProductResource build();
+		public FooResource build();
 
 		public Builder checkPermissions(boolean checkPermissions);
 

@@ -1,7 +1,7 @@
-package com.acme.r3b2.product.catalog.internal.resource.v1_0;
+package com.acme.r3b2.foo.internal.resource.v1_0;
 
-import com.acme.r3b2.product.catalog.dto.v1_0.Product;
-import com.acme.r3b2.product.catalog.resource.v1_0.ProductResource;
+import com.acme.r3b2.foo.dto.v1_0.Foo;
+import com.acme.r3b2.foo.resource.v1_0.FooResource;
 
 import com.liferay.petra.function.UnsafeFunction;
 import com.liferay.portal.kernel.model.GroupedModel;
@@ -56,40 +56,40 @@ import javax.ws.rs.core.UriInfo;
  */
 @Generated("")
 @Path("/v1.0")
-public abstract class BaseProductResourceImpl
-	implements ProductResource, EntityModelResource,
-			   VulcanBatchEngineTaskItemDelegate<Product> {
+public abstract class BaseFooResourceImpl
+	implements EntityModelResource, FooResource,
+			   VulcanBatchEngineTaskItemDelegate<Foo> {
 
 	/**
 	 * Invoke this method with the command line:
 	 *
-	 * curl -X 'GET' 'http://localhost:8080/o/product-catalog/v1.0/entities/{productId}'  -u 'test@liferay.com:test'
+	 * curl -X 'GET' 'http://localhost:8080/o/foo/v1.0/stuff/{fooId}'  -u 'test@liferay.com:test'
 	 */
-	@Override
 	@GET
-	@Parameters(value = {@Parameter(in = ParameterIn.PATH, name = "productId")})
-	@Path("/entities/{productId}")
+	@Override
+	@Parameters(value = {@Parameter(in = ParameterIn.PATH, name = "fooId")})
+	@Path("/stuff/{fooId}")
 	@Produces({"application/json", "application/xml"})
-	@Tags(value = {@Tag(name = "Product")})
-	public Product getProduct(
-			@NotNull @Parameter(hidden = true) @PathParam("productId") Integer
-				productId)
+	@Tags(value = {@Tag(name = "Foo")})
+	public Foo getFoo(
+			@NotNull @Parameter(hidden = true) @PathParam("fooId")
+				Integer fooId)
 		throws Exception {
 
-		return new Product();
+		return new Foo();
 	}
 
 	@Override
 	@SuppressWarnings("PMD.UnusedLocalVariable")
 	public void create(
-			java.util.Collection<Product> products,
+			java.util.Collection<Foo> foos,
 			Map<String, Serializable> parameters)
 		throws Exception {
 	}
 
 	@Override
 	public void delete(
-			java.util.Collection<Product> products,
+			java.util.Collection<Foo> foos,
 			Map<String, Serializable> parameters)
 		throws Exception {
 	}
@@ -110,7 +110,7 @@ public abstract class BaseProductResourceImpl
 	}
 
 	@Override
-	public Page<Product> read(
+	public Page<Foo> read(
 			Filter filter, Pagination pagination, Sort[] sorts,
 			Map<String, Serializable> parameters, String search)
 		throws Exception {
@@ -142,7 +142,7 @@ public abstract class BaseProductResourceImpl
 
 	@Override
 	public void update(
-			java.util.Collection<Product> products,
+			java.util.Collection<Foo> foos,
 			Map<String, Serializable> parameters)
 		throws Exception {
 	}

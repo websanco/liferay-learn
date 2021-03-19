@@ -1,8 +1,8 @@
-package com.acme.r3b2.product.catalog.internal.graphql.servlet.v1_0;
+package com.acme.r3b2.foo.internal.graphql.servlet.v1_0;
 
-import com.acme.r3b2.product.catalog.internal.graphql.mutation.v1_0.Mutation;
-import com.acme.r3b2.product.catalog.internal.graphql.query.v1_0.Query;
-import com.acme.r3b2.product.catalog.resource.v1_0.ProductResource;
+import com.acme.r3b2.foo.internal.graphql.mutation.v1_0.Mutation;
+import com.acme.r3b2.foo.internal.graphql.query.v1_0.Query;
+import com.acme.r3b2.foo.resource.v1_0.FooResource;
 
 import com.liferay.portal.vulcan.graphql.servlet.ServletData;
 
@@ -25,8 +25,8 @@ public class ServletDataImpl implements ServletData {
 
 	@Activate
 	public void activate(BundleContext bundleContext) {
-		Query.setProductResourceComponentServiceObjects(
-			_productResourceComponentServiceObjects);
+		Query.setFooResourceComponentServiceObjects(
+			_fooResourceComponentServiceObjects);
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class ServletDataImpl implements ServletData {
 
 	@Override
 	public String getPath() {
-		return "/product-catalog-graphql/v1_0";
+		return "/foo-graphql/v1_0";
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class ServletDataImpl implements ServletData {
 	}
 
 	@Reference(scope = ReferenceScope.PROTOTYPE_REQUIRED)
-	private ComponentServiceObjects<ProductResource>
-		_productResourceComponentServiceObjects;
+	private ComponentServiceObjects<FooResource>
+		_fooResourceComponentServiceObjects;
 
 }

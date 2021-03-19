@@ -1,4 +1,4 @@
-package com.acme.r3b2.product.catalog.internal.graphql.mutation.v1_0;
+package com.acme.r3b2.foo.internal.graphql.mutation.v1_0;
 
 import com.liferay.petra.function.UnsafeConsumer;
 import com.liferay.petra.function.UnsafeFunction;

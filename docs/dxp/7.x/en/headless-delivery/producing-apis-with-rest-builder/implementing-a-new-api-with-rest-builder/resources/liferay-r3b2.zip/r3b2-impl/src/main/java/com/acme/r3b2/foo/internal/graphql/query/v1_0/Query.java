@@ -1,7 +1,7 @@
-package com.acme.r3b2.product.catalog.internal.graphql.query.v1_0;
+package com.acme.r3b2.foo.internal.graphql.query.v1_0;
 
-import com.acme.r3b2.product.catalog.dto.v1_0.Product;
-import com.acme.r3b2.product.catalog.resource.v1_0.ProductResource;
+import com.acme.r3b2.foo.dto.v1_0.Foo;
+import com.acme.r3b2.foo.resource.v1_0.FooResource;
 
 import com.liferay.petra.function.UnsafeConsumer;
 import com.liferay.petra.function.UnsafeFunction;
@@ -33,47 +33,44 @@ import org.osgi.service.component.ComponentServiceObjects;
 @Generated("")
 public class Query {
 
-	public static void setProductResourceComponentServiceObjects(
-		ComponentServiceObjects<ProductResource>
-			productResourceComponentServiceObjects) {
+	public static void setFooResourceComponentServiceObjects(
+		ComponentServiceObjects<FooResource>
+			fooResourceComponentServiceObjects) {
 
-		_productResourceComponentServiceObjects =
-			productResourceComponentServiceObjects;
+		_fooResourceComponentServiceObjects =
+			fooResourceComponentServiceObjects;
 	}
 
 	/**
 	 * Invoke this method with the command line:
 	 *
-	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {product(productId: ___){productId, name, price}}"}' -u 'test@liferay.com:test'
+	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {foo(fooId: ___){bar, baz, fooId}}"}' -u 'test@liferay.com:test'
 	 */
 	@GraphQLField
-	public Product product(@GraphQLName("productId") Integer productId)
-		throws Exception {
-
+	public Foo foo(@GraphQLName("fooId") Integer fooId) throws Exception {
 		return _applyComponentServiceObjects(
-			_productResourceComponentServiceObjects,
-			this::_populateResourceContext,
-			productResource -> productResource.getProduct(productId));
+			_fooResourceComponentServiceObjects, this::_populateResourceContext,
+			fooResource -> fooResource.getFoo(fooId));
 	}
 
-	@GraphQLName("ProductPage")
-	public class ProductPage {
+	@GraphQLName("FooPage")
+	public class FooPage {
 
-		public ProductPage(Page productPage) {
-			actions = productPage.getActions();
+		public FooPage(Page fooPage) {
+			actions = fooPage.getActions();
 
-			items = productPage.getItems();
-			lastPage = productPage.getLastPage();
-			page = productPage.getPage();
-			pageSize = productPage.getPageSize();
-			totalCount = productPage.getTotalCount();
+			items = fooPage.getItems();
+			lastPage = fooPage.getLastPage();
+			page = fooPage.getPage();
+			pageSize = fooPage.getPageSize();
+			totalCount = fooPage.getTotalCount();
 		}
 
 		@GraphQLField
 		protected Map<String, Map> actions;
 
 		@GraphQLField
-		protected java.util.Collection<Product> items;
+		protected java.util.Collection<Foo> items;
 
 		@GraphQLField
 		protected long lastPage;
@@ -108,21 +105,21 @@ public class Query {
 		}
 	}
 
-	private void _populateResourceContext(ProductResource productResource)
+	private void _populateResourceContext(FooResource fooResource)
 		throws Exception {
 
-		productResource.setContextAcceptLanguage(_acceptLanguage);
-		productResource.setContextCompany(_company);
-		productResource.setContextHttpServletRequest(_httpServletRequest);
-		productResource.setContextHttpServletResponse(_httpServletResponse);
-		productResource.setContextUriInfo(_uriInfo);
-		productResource.setContextUser(_user);
-		productResource.setGroupLocalService(_groupLocalService);
-		productResource.setRoleLocalService(_roleLocalService);
+		fooResource.setContextAcceptLanguage(_acceptLanguage);
+		fooResource.setContextCompany(_company);
+		fooResource.setContextHttpServletRequest(_httpServletRequest);
+		fooResource.setContextHttpServletResponse(_httpServletResponse);
+		fooResource.setContextUriInfo(_uriInfo);
+		fooResource.setContextUser(_user);
+		fooResource.setGroupLocalService(_groupLocalService);
+		fooResource.setRoleLocalService(_roleLocalService);
 	}
 
-	private static ComponentServiceObjects<ProductResource>
-		_productResourceComponentServiceObjects;
+	private static ComponentServiceObjects<FooResource>
+		_fooResourceComponentServiceObjects;
 
 	private AcceptLanguage _acceptLanguage;
 	private com.liferay.portal.kernel.model.Company _company;
