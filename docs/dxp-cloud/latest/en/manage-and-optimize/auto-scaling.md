@@ -72,7 +72,7 @@ If the `autoscale` property isn't set, the target average utilization defaults t
 
 ## Setting the Maximum Number of Instances
 
-The default number of instances that auto-scaling can scale up to is 10. However, you can override this default to use more instances if necessary. You must override the default in two places to allow services to use more than the default 10 instances.
+By default, auto-scaling can increase the number of instances for a service up to 10. However, you can override this default to use more instances if necessary. You must override the default in two places to allow services to use more than the default 10 instances.
 
 First, set the `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` [environment variable](../reference/defining-environment-variables.md) in your [web server service](../platform-services/web-server-service.md) to the highest value needed across your services. No services can use more instances than the maximum defined in `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM`.
 
