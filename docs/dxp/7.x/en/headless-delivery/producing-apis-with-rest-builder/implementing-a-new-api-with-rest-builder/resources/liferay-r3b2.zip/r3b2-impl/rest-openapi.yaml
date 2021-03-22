@@ -8,10 +8,6 @@ components:
                     description:
                         A field called bar, because this has no meaning.
                     type: string
-                baz:
-                    description:
-                        A field called baz to go with bar.
-                    type: string
                 fooId:
                     description:
                         The Foo's ID
@@ -27,7 +23,7 @@ info:
     version: v1.0
 openapi: 3.0.1
 paths:
-    "/stuff/{fooId}":
+    "/foo/{fooId}":
         get:
             operationId: getFoo
             parameters:

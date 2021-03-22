@@ -30,20 +30,18 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		Foo truth = new Foo();
 
 		truth.setFooId(Integer.valueOf(1));
-		truth.setBar("Truth is defined transcendentally.");
-		truth.setBaz("Human beings seek truth.");
+		truth.setBar("Universal truth must be transcendental.");
 
 		Foo beauty = new Foo();
 
 		beauty.setFooId(Integer.valueOf(2));
-		beauty.setBar("Beauty is defined transcendentally.");
-		beauty.setBaz("Thus, beauty is not in the eye of the beholder.");
+		beauty.setBar("Beauty is guided by a transcendental aesthetic.");
 
 		Foo goodness = new Foo();
 
 		goodness.setFooId(Integer.valueOf(3));
-		goodness.setBar("Goodness is defined transcendentally.");
-		goodness.setBaz("Good must be defined from outside humanity.");
+		goodness.setBar(
+			"Goodness is defined transcendentally from outside humanity.");
 
 		_fooMap = new LinkedHashMap<>();
 

@@ -65,32 +65,6 @@ public class Foo implements Serializable {
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
 	protected String bar;
 
-	@Schema(description = "A field called baz to go with bar.")
-	public String getBaz() {
-		return baz;
-	}
-
-	public void setBaz(String baz) {
-		this.baz = baz;
-	}
-
-	@JsonIgnore
-	public void setBaz(UnsafeSupplier<String, Exception> bazUnsafeSupplier) {
-		try {
-			baz = bazUnsafeSupplier.get();
-		}
-		catch (RuntimeException re) {
-			throw re;
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	@GraphQLField(description = "A field called baz to go with bar.")
-	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected String baz;
-
 	@Schema(description = "The Foo's ID")
 	public Integer getFooId() {
 		return fooId;
@@ -156,20 +130,6 @@ public class Foo implements Serializable {
 			sb.append("\"");
 
 			sb.append(_escape(bar));
-
-			sb.append("\"");
-		}
-
-		if (baz != null) {
-			if (sb.length() > 1) {
-				sb.append(", ");
-			}
-
-			sb.append("\"baz\": ");
-
-			sb.append("\"");
-
-			sb.append(_escape(baz));
 
 			sb.append("\"");
 		}

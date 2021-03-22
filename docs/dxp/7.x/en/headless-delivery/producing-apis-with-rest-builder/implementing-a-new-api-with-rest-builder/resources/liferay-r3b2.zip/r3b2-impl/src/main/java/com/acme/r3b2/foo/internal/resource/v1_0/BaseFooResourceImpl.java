@@ -63,12 +63,12 @@ public abstract class BaseFooResourceImpl
 	/**
 	 * Invoke this method with the command line:
 	 *
-	 * curl -X 'GET' 'http://localhost:8080/o/foo/v1.0/stuff/{fooId}'  -u 'test@liferay.com:test'
+	 * curl -X 'GET' 'http://localhost:8080/o/foo/v1.0/foo/{fooId}'  -u 'test@liferay.com:test'
 	 */
 	@GET
 	@Override
 	@Parameters(value = {@Parameter(in = ParameterIn.PATH, name = "fooId")})
-	@Path("/stuff/{fooId}")
+	@Path("/foo/{fooId}")
 	@Produces({"application/json", "application/xml"})
 	@Tags(value = {@Tag(name = "Foo")})
 	public Foo getFoo(
