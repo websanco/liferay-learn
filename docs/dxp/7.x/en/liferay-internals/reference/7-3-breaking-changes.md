@@ -76,6 +76,80 @@ The `liferay.frontend.ProgressBar` component was deprecated in 7.2 and is no lon
 
 ---------------------------------------
 
+### AssetCategory's Tree Path Replaces Left/Right Category IDs
+- **Date:** 2019-Oct-08
+- **JIRA Ticket:** [LPS-102671](https://issues.liferay.com/browse/LPS-102671)
+
+#### What changed?
+
+Left and right category IDs in an `AssetCategory` have been removed and replaced with a single tree path.
+
+#### Who is affected?
+
+This affects anyone who uses left and right category IDs in `AssetCategory` and associated APIs.
+
+Left and right category IDs were primarily used for `AssetCategory`'s internal hierarchical tree.
+
+Existing `AssetCategory` service APIs remain the same, except `AssetCategoryLocalService::rebuildTree(long groupId, boolean force)`, which has been removed.
+
+These methods have been removed from `AssetCategoryUtil`:
+
+- `countAncestors`
+- `countDescendants`
+- `getAncestors`
+- `getDescendants`
+
+Methods related to left and right category IDs have been removed from `AssetEntryQuery`. 
+
+Finder methods ending in `G_P_N_V` have been replaced with methods ending in `P_N_V`.
+
+#### How should I update my code?
+
+##### For left and right category IDs
+
+If you're using left and right category IDs, consider these options:
+
+- Adapt your code to use the new tree path
+- Explore whether a service API can be used to accomplish the same goal
+
+For example, instead of working with the category IDs via `category.getLeftCategoryId()` and `category.getRightCategoryId()`, you can get the tree path via `category.getTreePath()`. Then use the tree path. 
+
+As a reference, this snippet `AssetCategoryLocalService` sets the tree path when adding a category:
+```
+if (parentCategory == null) {
+    category.setTreePath("/" + categoryId + "/");
+}
+else {
+    category.setTreePath(
+        parentCategory.getTreePath() + categoryId + "/");
+}
+```
+
+See [7.3.0-ga1 - AssetCategoryLocalServiceImpl.java#L122-L128](https://github.com/liferay/liferay-portal/blob/7.3.0-ga1/portal-impl/src/com/liferay/portlet/asset/service/impl/AssetCategoryLocalServiceImpl.java#L122-L128).
+
+##### For AssetCategoryLocalService#rebuildTree(long, boolean)
+
+Calls to `AssetCategoryLocalService#rebuildTree(long, boolean)` may be unnecessary. This method was mainly used to help maintain the internal hierarchical tree implmentation that has now been replaced. 
+
+Consider re-evaluating your existing code to confirm whether your call to the `rebuildTree` method is still needed.
+
+##### For AssetCategoryUtil and AssetEntryQuery
+
+If you use methods removed from `AssetCategoryUtil` and `AssetEntryQuery`, consider these suggestions:
+
+- Re-evaluate your existing code
+- Explore whether an existing service API can accomplish the same goal
+
+##### For Finder Methods Involving G_P_N_V
+
+If you use `AssetCategory` finder methods that end in `G_P_N_V`, use the methods ending in `P_N_V` instead.
+
+#### Why was this change made?
+
+This change was made to improve the hierarchical tree implementation for AssetCategory.
+
+---------------------------------------
+
 ### Removed liferay.frontend.Slider
 - **Date:** 2019-Oct-10
 - **JIRA Ticket:** [LPS-100124](https://issues.liferay.com/browse/LPS-100124)
@@ -752,6 +826,28 @@ This change was made to avoid the *Limit of total fields has been exceeded* Elas
 
 ---------------------------------------
 
+### Moving Lexicon icons path
+- **Date:** 2020-Aug-17
+- **JIRA Ticket:** [LPS-115812](https://issues.liferay.com/browse/LPS-115812)
+
+### What changed?
+
+The path for the Lexicon icons has been changed from `themeDisplay.getPathThemeImages() + "/lexicon/icons.svg` to `themeDisplay.getPathThemeImages() + "/clay/icons.svg`
+
+### Who is affected
+
+This affects custom solutions that use the Lexicon icons path directly. The Gradle task for building the icons on the `lexicon` path will be removed.
+
+### How should I update my code?
+
+Update the path to reference `clay` instead of `lexicon`
+
+#### Why was this change made?
+
+This change was made to unify references to the icon sprite map.
+
+---------------------------------------
+
 ### Removed classNameId related methods from DDM Persistence classes
 - **Date:** 2020-Aug-18
 - **JIRA Ticket:** [LPS-108525](https://issues.liferay.com/browse/LPS-108525)
@@ -800,28 +896,6 @@ You can use `isShowAddButton(Group scopeGroup)` method instead of this method.
 #### Why was this change made?
 
 This method was removed as part of a clean up refactor.
-
----------------------------------------
-
-### Moving Lexicon icons path
-- **Date:** 2020-Aug-17
-- **JIRA Ticket:** [LPS-115812](https://issues.liferay.com/browse/LPS-115812)
-
-### What changed?
-
-The path for the Lexicon icons has been changed from `themeDisplay.getPathThemeImages() + "/lexicon/icons.svg` to `themeDisplay.getPathThemeImages() + "/clay/icons.svg`
-
-### Who is affected
-
-This affects custom solutions that use the Lexicon icons path directly. The Gradle task for building the icons on the `lexicon` path will be removed.
-
-### How should I update my code?
-
-Update the path to reference `clay` instead of `lexicon`
-
-#### Why was this change made?
-
-This change was made to unify references to the icon sprite map.
 
 ---------------------------------------
 
