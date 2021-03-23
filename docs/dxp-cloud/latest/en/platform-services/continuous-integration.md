@@ -127,6 +127,7 @@ Name                                          | Default Value   | Description |
 `LCP_CI_EMAIL_NOTIFICATIONS_FORM`     |                 | Email address that Jenkins emails are sent from. |
 `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}`   |                 | Comma-delimited list of hotfixes for CI to apply automatically when deploying the Liferay service. Replace `{ENV}` with the environment name (in all-caps), or `COMMON`. |
 `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` | `20`            | Set the number of recent builds for which *stashes* are preserved. Stashes cannot be preserved for more builds than allowed by the `LCP_CI_ARTIFACT_NUM_TO_KEEP` variable. |
+`LCP_CI_SCM_MANAGE_HOOKS`             | `true`          | Option to enable or disable [automatic web hook management](../getting-started/configuring-your-github-repository.md#personal-access-token-usage) for code hosting platforms (such as GitHub). |
 `LCP_CI_SCM_PROVIDER`                 | `github`        | Sets which source control management service is used for retrieving builds. Accepted values are [`bitbucket`](../getting-started/configuring-your-bitbucket-repository.md), [`github`](../getting-started/configuring-your-github-repository.md), and [`gitlab`](../getting-started/configuring-your-gitlab-repository.md). |
 `LCP_CI_SCM_REPOSITORY_NAME`          |                 | Sets the repository name used to retrieve builds (from GitHub, Bitbucket, or GitLab). |
 `LCP_CI_SCM_REPOSITORY_OWNER`         |                 | The repository owner used to retrieve builds. |
