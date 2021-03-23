@@ -1,0 +1,115 @@
+components:
+    schemas:
+        Bar:
+            description:
+                Another dummy object to go with Foo.
+            properties:
+                description:
+                    description:
+                        Say something about your Bar.
+                    type: string
+                fooId:
+                    description:
+                        The associated Foo's ID.
+                    type: integer
+                id:
+                    description:
+                        The Bar's ID
+                    type: integer
+                name:
+                    description:
+                        The title of your Bar.
+                    type: string
+        Foo:
+            description:
+                A dummy object that has no meaning.
+            properties:
+                description:
+                    description:
+                        Say something about your Foo.
+                    type: string
+                id:
+                    description:
+                        The Foo's ID
+                    type: integer
+                name:
+                    description:
+                        The title of your Foo.
+                    type: string
+            type: object
+info:
+    description:
+        "API to return a Foo."
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "Foo API"
+    version: v1.0
+openapi: 3.0.1
+paths:
+    "/bar/{barId}":
+        get:
+            operationId: getBar
+            parameters:
+                - in: path
+                  name: barId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                    description:
+                        "Returns the Bar matching the given product ID."
+    "/foo/{fooId}":
+        get:
+            operationId: getFoo
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        "Returns the Foo matching the given product ID."
+            tags: ["Foo"]
+    "/foo/{fooId}/bars":
+        get:
+            operationId: getFooBars
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Bar"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Bar"
+                                type: array
+                    description:
+                        "Gets all Bars related to a Foo."
+            tags: ["Bar"]

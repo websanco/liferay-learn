@@ -1,0 +1,3 @@
+Bundle-Name: Acme R3B2 Foo Implementation
+Bundle-SymbolicName: com.acme.headless.r3b2.impl
+Bundle-Version: 1.0.0

@@ -1,0 +1,6 @@
+Bundle-Name: Acme R3B2 Foo API
+Bundle-SymbolicName: com.acme.headless.r3b2.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.headless.r3b2.resource.v1_0,\
+	com.acme.headless.r3b2.dto.v1_0

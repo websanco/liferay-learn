@@ -1,7 +1,0 @@
-apiDir: "../r3b2-api/src/main/java"
-apiPackagePath: "com.acme.r3b2.foo"
-application:
-    baseURI: "/foo"
-    className: "FooApplication"
-    name: "R3B2.Acme.Foo"
-author: "Liferay"
