@@ -11,6 +11,19 @@ public class Document_Add {
 	public static void main(String[] args) throws Exception {
 		String id = System.getProperty("site.id", "20121");
 
+		if (id.isEmpty()) {
+			StringBuilder sb = new StringBuilder(4);
+
+			sb.append("Usage: java -classpath ");
+			sb.append(".:com.liferay.headless.delivery.client.jar ");
+			sb.append("-Dsite.id=[id] ");
+			sb.append(Document_Add.class.getName());
+
+			System.err.println(sb.toString());
+
+			System.exit(1);
+		}
+
 		DocumentResource.Builder builder = DocumentResource.builder();
 
 		DocumentResource documentResource = builder.authentication(
