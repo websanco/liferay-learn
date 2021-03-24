@@ -12,7 +12,7 @@ Here’s how to integrate contact data from a CSV file:
 
 1. Select the *CSV File* icon. The *CSV file* upload page appears.
 
-1. Upload your *CSV file* by dragging it into the upload area or browsing and selecting it from your file system. Click Next to upload the file. The CSV configuration page appears.
+1. Upload your *CSV file* by dragging it into the upload area or browsing and selecting it from your file system. 
 
 1. Enter a name for your data source and click *Next*.
 
