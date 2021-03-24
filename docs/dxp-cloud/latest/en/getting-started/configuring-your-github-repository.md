@@ -81,10 +81,10 @@ After updating these environment variables, the Jenkins service will restart. An
 
 ### Personal Access Token Usage
 
-The personal access token referenced by the `LCP_CI_SCM_TOKEN` value is needed for DXP Cloud to successfully integrate with your repository.
+The personal access token referenced by the `LCP_CI_SCM_TOKEN` value is needed for DXP Cloud to integrate with your repository.
 
 ```warning::
-   If the personal access token belongs to a personal user account, then builds will fail to complete if the user is removed from the organization. Instead, use an account specifically belonging to the organization. See `GitHub's official documentation <https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access>`__ for more information.
+   If the personal access token belongs to a personal user account and that user is removed from the organization, all builds will fail to complete. Instead, use an account specifically belonging to the organization. See `GitHub's official documentation <https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access>`__ for more information.
 ```
 
 By default, the GitHub organization's [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) must have the `admin:repo_hook` permissions in order for the CI service to successfully integrate using the default web hook.
@@ -93,7 +93,7 @@ However, it is recommended to set the `LCP_CLI_SCM_MANAGE_HOOKS` [environment va
 
 ![You can remove the admin:repo_hook permissions from the personal access token if you disable automatic web hook management.](./configuring-your-github-repository/images/05.png)
 
-Removing these permissions from the web hook allows you to adhere to tighter security standards by reducing the access given to your repository.
+Removing these permissions from the web hook improves security by minimizing access given to your repository.
 
 ## Verifying Builds
 
