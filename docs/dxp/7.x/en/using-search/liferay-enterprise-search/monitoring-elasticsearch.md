@@ -153,6 +153,8 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
     -Djavax.net.ssl.trustStore=/path/to/elastic-nodes.p12 -Djavax.net.ssl.trustStorePassword=liferay -Djavax.net.ssl.trustStoreType=pkcs12
     ```
 
+1. If your stack includes Kibana 7.11 and JDK 11, you must disable TLS version 1.3.Disable TLS 1.3 in Kibana itself by adding `--tls-max-v1.2` to `KIBANA_HOME/config/node.options`. See [Troubleshooting the Monitoring Setup](#troubleshooting-the-monitoring-setup) for details and an alternative solution.
+
 Restart Liferay and Kibana.
 
 ## Monitoring in Liferay
@@ -213,6 +215,20 @@ server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
 #server.ssl.certificate: config/certs/elastic-nodes.crt
 #server.ssl.key: config/certs/elastic-nodes.key
 ```
+
+## Troubleshooting the Monitoring Setup
+
+When Liferay DXP is configured to use JDK version 11 and communicate with Kibana version 7.11, the following error can result:
+
+```bash
+SSLException: No PSK available. Unable to resume
+```
+
+The error is caused by Kibana 7.11's reliance on TLS version 1.3. The recommended solution is to disable TLS 1.3 in your Liferay DXP-Kibana stack using one of the following methods:
+
+1. Disable TLS 1.3 for outbound connections in Tomcat. Set `-Dhttps.protocols=TLSv1.1,TLSv1.2` in Tomcat's `setenv.bat/sh` (add to `CATALINA_OPTS`).
+1. Disable TLS 1.3 in Kibana by adding `--tls-max-v1.2` to `KIBANA_HOME/config/node.options`.
+1. Switch to a JDK 11 version where the root issue ([JDK-8213202](https://bugs.openjdk.java.net/browse/JDK-8213202)) is already fixed.
 
 ## Related Topics
 
