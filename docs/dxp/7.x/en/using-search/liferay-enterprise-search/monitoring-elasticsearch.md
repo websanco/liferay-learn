@@ -228,7 +228,7 @@ The error is caused by Kibana 7.11+'s reliance on TLS version 1.3. The recommend
 
 1. Disable TLS 1.3 for outbound connections in Tomcat. Set `-Dhttps.protocols=TLSv1.1,TLSv1.2` in Tomcat's `setenv.bat/sh` (add to `CATALINA_OPTS`).
 1. Disable TLS 1.3 in Kibana by adding `--tls-max-v1.2` to `KIBANA_HOME/config/node.options`.
-1. Switch to a [supported JDK version](https://help.liferay.com/hc/en-us/articles/360016511651) where the root issue ([JDK-8213202](https://bugs.openjdk.java.net/browse/JDK-8213202)) is already fixed.
+1. Switch to a [compatible JDK version](https://help.liferay.com/hc/en-us/articles/360016511651) where the root issue ([JDK-8213202](https://bugs.openjdk.java.net/browse/JDK-8213202)) is already fixed.
 
 ## Related Topics
 
