@@ -16,18 +16,20 @@ Clicking on the the Start Free Trial button from the home screen will take your 
 
 ![The workspace configuration screen gets you started.](signing-up-for-a-new-workspace/images/02.png)
 
-**Workspace Name** allows you to create your own analytics workspace name.
+**Workspace Name:** Give your new analytics workspace a name.
 
-**Data Center Location** allows you to select the location of your server, which will store all of your analytics and website visitors data. Currently, Liferay Analytics Cloud offers three data center locations.
+**Data Center Location:** Select a server location to store all of your analytics and website visitors data. Currently, Liferay Analytics Cloud offers four data center locations:
 
 * North America - Oregon, USA
 * South America - São Paulo, Brazil
 * Europe - London, United Kingdom
 * Europe - Frankfurt, Germany
 
-**Friendly URL** allows you to setup a friendly url for your workspace that you can share to other collaborators with ease.
+**Timezone:** Select a timezone for your workspace. Analytics data presented in your workspace is based on this timezone. 
 
-**Allowable Email Domain** allows other users with the the same email domain to find and access this workspace. For example, if you set @mycompany.com for this configuration, other users with the same email domain will be able to see and request to join this workspace after logging in to Analytics Cloud.
+**Friendly URL:** Set a friendly URL so you can easily share your workspace with other collaborators.
+
+**Allowable Email Domain:** Allow other users with the same email domain to find and access this workspace. For example, if you set @mycompany.com for this configuration, other users with the same email domain can see and request to join this workspace after logging in to Analytics Cloud.
 
 Finally, accept the terms and conditions and privacy policy before finishing.
 
@@ -51,4 +53,4 @@ Once you've successfully purchased your Analytic Cloud workspace, our team will 
 
 Your workspace owner will receive an invitation email once the workspace is provisioned. The owner can then login to [analytics.liferay.com](https://analytics.liferay.com) and finish configuring the workspace.
 
-See the next section on how to [access your workspace](./accessing-your-workspace.md).
+See the next section on how to [access your workspace](./accessing-your-workspace.md). 

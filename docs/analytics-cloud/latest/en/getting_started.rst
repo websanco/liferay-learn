@@ -4,22 +4,14 @@ Getting Started
 .. toctree::
    :maxdepth: 1
 
-   getting-started/quick_tour.rst
-   getting-started/connecting_data_sources.rst
+   getting-started/welcome-to-analytics-cloud.md
+   getting-started/signing-up-for-a-new-workspace.md
+   getting-started/multi-factor-authentication.md
+   getting-started/accessing-your-workspace.md
+   getting-started/viewing-the-analytics-dashboard.md
 
-Quick Tour
-----------
-
--  :doc:`/getting-started/quick-tour/welcome-to-analytics-cloud`
--  :doc:`/getting-started/quick-tour/signing-up-for-a-new-workspace`
--  :doc:`/getting-started/quick-tour/multi-factor-authentication`
--  :doc:`/getting-started/quick-tour/accessing-your-workspace`
--  :doc:`/getting-started/quick-tour/viewing-the-analytics-dashboard`
-
-Connecting Data Sources
------------------------
-
--  :doc:`/getting-started/connecting-data-sources/managing-data-sources`
--  :doc:`/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud`
--  :doc:`/getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties`
--  :doc:`/getting-started/connecting-data-sources/syncing-contact-data-from-dxp`
+-  :doc:`/getting-started/welcome-to-analytics-cloud`
+-  :doc:`/getting-started/signing-up-for-a-new-workspace`
+-  :doc:`/getting-started/multi-factor-authentication`
+-  :doc:`/getting-started/accessing-your-workspace`
+-  :doc:`/getting-started/viewing-the-analytics-dashboard`

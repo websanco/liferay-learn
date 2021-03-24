@@ -31,7 +31,7 @@ Once you’ve created your data sources, you might need to modify them from time
 The Data Sources page shows all of the Data Sources added to Analytics Cloud and can be searched by keyword. You can edit data sources in the following ways:
 
 * Name of the data source
-* [Contact mapping](../../people/individuals/mapping-contact-data.md)
+* [Contact mapping](../../people/individuals/adding-a-csv-data-source.md#mapping-contact-data)
 * Enable/Disable Contact or Analytics sync
 
 Here’s how to delete a data source:
