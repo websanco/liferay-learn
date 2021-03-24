@@ -51,14 +51,28 @@ function copy_template {
 }
 
 function update_examples {
-	for update_example_script_name in `find . -name "update_example.sh" -type f`
-	do
-		pushd $(dirname "${update_example_script_name}")
+	if [ -n "${1}" ] && [ "${1}" != "prod" ]
+	then
+		local zip_dir_name=`find . -name "liferay-${1}.zip" -type d`
 
-		./$(basename "${update_example_script_name}")
+		if [ -n "${zip_dir_name}" ]
+		then
+			pushd "${zip_dir_name}/.."
 
-		popd
-	done
+			./update_example.sh
+
+			popd
+		fi
+	else
+		for update_example_script_name in `find . -name "update_example.sh" -type f`
+		do
+			pushd $(dirname "${update_example_script_name}")
+
+			./$(basename "${update_example_script_name}")
+
+			popd
+		done
+	fi
 }
 
 function main {
@@ -66,7 +80,7 @@ function main {
 
 	copy_template ${1}
 
-	update_examples
+	update_examples ${1}
 }
 
 main "${@}"
