@@ -1,9 +1,5 @@
 # Installing Solr 
 
-> **Availability:** 
->   - Liferay 7.2 all patches
->   - Liferay 7.3 (DXP 7.3 FP1+; CE 7.3 GA7+)
-
 The instructions here default to installing Solr 8 for Liferay 7.3. They apply equally to installing Solr 7 for Liferay 7.2, but some adjustments for version name may be necessary.
 
 ```important::
@@ -80,8 +76,8 @@ To use the [Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-
 
 To install and properly configure Solr for Liferay:
 
-1. Download a [supported](https://help.liferay.com/hc/en-us/articles/360016511651) Solr and unzip it.
-   - Liferay 7.3: [Solr 8.6.3](https://archive.apache.org/dist/lucene/solr/8.6.3/))
+1. Download a [compatible](https://help.liferay.com/hc/en-us/articles/360016511651) Solr and unzip it. The below links are for convenience only and represent the latest compatible Solr version at the time of writing. See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) to make sure that newer compatible versions are not available.
+   - Liferay 7.3: [Solr 8.6.3](https://archive.apache.org/dist/lucene/solr/8.6.3/)) 
    - Liferay 7.2: [Solr 7.5.0](http://archive.apache.org/dist/lucene/solr/7.5.0/)
 
 1. Navigate to Solr Home (`solr-[version]/server/solr`) and create a new folder called `liferay`.
@@ -159,7 +155,7 @@ To install the Liferay Connector to Solr [7 or 8], navigate to [Liferay Marketpl
 
    - **Liferay DXP:** [Liferay Connector to Solr 8](https://web.liferay.com/marketplace/-/mp/application/181462183)
 
-The default connector configuration works for a test installation because the default configurations in the Liferay Connector to Solr match Solr's own defaults. See the [Configuration Reference](#solr-connector-configuration-reference) for the complete list of available settings.
+The default connector configuration works for a test installation because the default configurations in the Liferay Connector to Solr match Solr's own defaults. See the [Configuration Reference](#solr-connector-configuration-reference) for the complete list of available settings. At a minimum, the read and write URLs must be configured for the connector in production environments.
 
 In production deployments it's most common to make your edits to the Solr connector's default configurations using a configuration file deployed to the `Liferay_Home/osgi/configs` folder. Name the file 
 
