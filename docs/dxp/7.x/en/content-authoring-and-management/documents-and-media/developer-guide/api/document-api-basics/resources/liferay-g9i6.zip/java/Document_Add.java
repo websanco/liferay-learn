@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class Document_Add {
 
 	/**
-	 * java -classpath ".:*" -DsiteId=1234 Document_Add
+	 * java -classpath .:* -DsiteId=1234 Document_Add
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();

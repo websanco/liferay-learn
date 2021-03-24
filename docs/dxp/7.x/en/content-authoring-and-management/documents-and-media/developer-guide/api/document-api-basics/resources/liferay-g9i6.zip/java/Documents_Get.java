@@ -6,7 +6,7 @@ import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 public class Documents_Get {
 
 	/**
-	 * java -classpath ".:*" -DsiteId=1234 Documents_Get
+	 * java -classpath .:* -DsiteId=1234 Documents_Get
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
