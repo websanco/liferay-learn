@@ -53,7 +53,11 @@ function copy_template {
 function update_examples {
 	for update_example_script_name in `find . -name "update_example.sh" -type f`
 	do
-		echo ${update_example_script_name}
+		pushd $(dirname "${update_example_script_name}")
+
+		./$(basename "${update_example_script_name}")
+
+		popd
 	done
 }
 
