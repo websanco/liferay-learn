@@ -19,7 +19,7 @@ public class Documents_Get {
 			Long.valueOf(System.getProperty("siteId")), null, null, null, null,
 			Pagination.of(1, 2), null);
 
-		System.out.println(page.getItems());
+		System.out.println(page);
 	}
 
 }
