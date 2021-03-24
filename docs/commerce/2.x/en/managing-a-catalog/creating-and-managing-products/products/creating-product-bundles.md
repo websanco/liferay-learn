@@ -20,7 +20,7 @@ Follow these steps to create a Product bundle:
       Alternatively, you can create an Option Template via the *Options* page in the Commerce tab of the Global Menu. This method is best for commonly used types of bundles. See `Customizing Your Product with Product Options <./customizing-your-product-with-product-options.md>`_ for more information.
    ```
 
-   <!--TASK: Add image ![Go to the Product's Options tab.]() -->
+   ![Go to the Product's Options tab, and create a new Option for your bundle.](./creating-product-bundles/images/01.png)
 
 1. Click on the new *Option* to edit its details and values.
 
@@ -40,6 +40,8 @@ Follow these steps to create a Product bundle:
       Also, since Product Bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
    ```
 
+   ![Configure the Option's settings](./creating-product-bundles/images/02.png)
+
 1. Scroll down to Values, click the *Add* button (![Add Button](../../../images/icon-add.png)), and enter the following details for your value:
 
    * **Name**: Set the display name used for the value. If SKU Contributor is enabled, this name is used for the value's SKU.
@@ -47,6 +49,8 @@ Follow these steps to create a Product bundle:
    * **Key**: This field is auto-generated to match the Name field, though you can set it independently.
 
    Repeat this process until you've added all the desired values.
+
+   ![Add values to the Product.](./creating-product-bundles/images/03.png)
 
 1. Once created, click on a value to access these additional settings:
 
@@ -66,7 +70,7 @@ Follow these steps to create a Product bundle:
 
 1. Verify your Product bundle appears in the Product's Display Page.  
 
-<!--TASK: Insert img-->
+![Customers can select from Product bundle Options in the Product's Display Page](./creating-product-bundles/images/04.png)
 
 ## Additional Information
 
