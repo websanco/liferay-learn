@@ -11,8 +11,8 @@ People
 
 -  :doc:`/people/understanding-your-audience`
 
-Individual
-----------
+Individuals
+-----------
 
 -  :doc:`/people/individuals/individuals-dashboard`
 -  :doc:`/people/individuals/individual-profiles`
