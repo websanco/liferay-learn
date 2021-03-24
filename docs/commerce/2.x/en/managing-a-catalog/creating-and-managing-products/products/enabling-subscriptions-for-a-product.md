@@ -1,56 +1,41 @@
 # Enabling Subscriptions for a Product
 
-Liferay Commerce allows store users to create and manage subscriptions for products. Examples of subscriptions include (but are not limited to) magazines, service contracts with options to renew, and items consumed on a regular basis.
+With Liferay Commerce, you can create and manage subscriptions for [Simple](../product-types/creating-a-simple-product.md), [Grouped](../product-types/creating-a-grouped-product.md), and [Virtual](../product-types/creating-a-virtual-product.md) Products. Examples of subscriptions include magazines, renewable service contracts, and automatic ordering for regularly consumed items. Commerce provides *Payment* and *Delivery* subscriptions out of the box.
 
 ## Prerequisites
 
-In order to enable subscriptions for a product, store administrators must activate a payment method that supports recurring payments. By default, Liferay Commerce supports [Paypal](../../../store-administration/configuring-payment-methods/paypal.md) as a recurring payment method.
+In order to enable subscriptions for a Product, store administrators must activate a payment method that supports recurring payments. By default, Liferay Commerce supports [Paypal](../../../store-administration/configuring-payment-methods/paypal.md) as a recurring payment method.
 
-## Enabling a Payment Subscription
+## Enabling Product Subscriptions
+<!--TASK: Explain the difference between Payment and Delivery Subscriptions-->
+Follow these steps to enable subscriptions for a Product:
 
-Subscriptions can be enabled for [Simple](../product-types/creating-a-simple-product.md), [Grouped](../product-types/creating-a-grouped-product.md), or [Virtual](../product-types/creating-a-virtual-product.md) products. In this example, we are using a Simple Product.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Products*.
 
-1. Create a [Simple Product](../product-types/creating-a-simple-product.md), if you don't already have one.
-1. Enter the following:
+1. Click on the *Subscription* tab.
 
-    * **Catalog**: Sahara.com
-    * **Name**: Multi-Vitamins
+    ![Click on the Product's Subscription tab.](./enabling-subscriptions-for-a-product/images/02.png)
 
-    ![Creating a simple product](./enabling-subscriptions-for-a-product/images/01.png)
+1. Use the toggle switch to enable *Payment Subscription* and/or *Delivery Subscription*.
 
-1. Click the _Subscription_ tab when you have finished creating the product.
+1. Use the *Subscription Type* field to select the subscription's time unit:
 
-    ![Creating a simple product](./enabling-subscriptions-for-a-product/images/02.png)
+   * Day
+   * Week
+   * Month
+   * Year
 
-1. Switch the toggle to _Enable_ in the Payment Subscription.
-1. Select the _Month_ from the _Subscription Type_ dropdown menu.
-1. Select _Order Date_ from the _Mode_ dropdown menu.
-1. Enter _1_ from the _Subscription Length_ dropdown menu.
-1. Switch the _Never Ends_ to _YES_.
+   If you select Week, Month, or Year, you'll also have to determine the day on which each unit begins.
+
+1. Use the *Subscription Length* field to determine the length of a subscription period.
+
+1. Use the toggle switch to determine whether the subscription automatically ends.
 
     ![Configure payment subscription](./enabling-subscriptions-for-a-product/images/03.png)
 
-1. Click the _Publish_ button.
+1. Click on *Publish* when finished.
 
-A payment subscription is now enabled for this product.
-
-Once you have enabled a payment subscription, you can continue on to enable a Delivery Subscription.
-
-## Enabling a Delivery Subscription
-
-To enable a Delivery Subscription:
-
-1. Switch the toggle to _Enable_ in the Delivery Subscription.
-1. Select the _Month_ from the _Subscription Type_ dropdown menu.
-1. Select _Order Date_ from the _Mode_ dropdown menu.
-1. Enter _1_ from the _Subscription Length_ dropdown menu.
-1. Switch the _Never Ends_ to _YES_.
-
-    ![Configure delivery subscription](./enabling-subscriptions-for-a-product/images/04.png)
-
-1. Click the _Publish_ button.
-
-A delivery subscription is now enabled for this product.
+The subscription is now enabled for the selected Product.
 
 ```tip::
    Other payment methods can be implemented to support recurring payments. See `Implementing a New Payment Method <../../../developer-guide/implementing-a-new-payment-method.md>`_ to learn more.
@@ -58,7 +43,7 @@ A delivery subscription is now enabled for this product.
 
 ## Viewing Subscriptions in Product Details
 
-If a product has Subscriptions enabled, users can view the payment and subscription details on the Product Details widget in the catalog.
+Subscription details are displayed in a Product's display page via the Product Details widget.
 
 ![Payment and Delivery Subscription details are displayed in the Product Detail widget.](./enabling-subscriptions-for-a-product/images/05.png)
 
