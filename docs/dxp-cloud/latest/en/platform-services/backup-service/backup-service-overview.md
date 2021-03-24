@@ -8,7 +8,7 @@ From the Backups page in `prd` environments, you can create backups, view or dow
 
 You can also configure the backup service to meet your project's needs via the DXP Cloud console or the backup service's `LCP.json` file.
 
-See the [Backup service limitations](../../reference/dxp-cloud-limitations.md#backup-service) section for more information.
+See the [Backup service limitations](../../reference/platform-limitations.md#backup-service) section for more information.
 
 ## The Backups Page
 
