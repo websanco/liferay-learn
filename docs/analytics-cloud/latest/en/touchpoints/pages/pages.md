@@ -8,7 +8,7 @@ Analytics Cloud does the following for pages:
 
 ## Data Time Periods
 
-All Page data in Analytics Cloud appears for a specified time period. The time period selector recalculates the metrics for the selected time period. You must specify a time period to view the metrics. The default is 30 days, but this is configurable. The following are available:
+All Page data in Analytics Cloud appears for a specified time period. The time period selector recalculates the metrics for the selected time period. You must specify a time period to view the metrics. The default is 30 days, but this is configurable. The following time periods are available:
 
 **Last 24 hours:** Displays data generated over the last 24 hours.
 
@@ -18,9 +18,9 @@ All Page data in Analytics Cloud appears for a specified time period. The time p
 
 **Last 90 days:** Displays data generated for the previous 90 full days (the current day is excluded), in 15 day increments.
 
-**More Preset Periods:** Clicking this leads to additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
+**More Preset Periods:** Shows additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
 
-**Custom Range:** Use this option to select a start date and end date of your choice.
+**Custom Range:** Select a start date and end date of your choice.
 
 ## Visitor Behavior
 
@@ -65,11 +65,11 @@ This metric is calculated like this for each 24 hour period:
 
 ### Entrances
 
-Entrances is the number visitors who arrived to your Site from the Page (as opposed to those who started on a difference page and clicked through to the Page).
+_Entrances_ is the number visitors who arrived at your Site from the page (as opposed to those who started on a different page and clicked through to the page).
 
 ### Exit Rate
 
-Exit Rate is the percentage of visitors who interacted with the Page (such as scrolling or clicking) and then left the Site.
+Exit Rate is the percentage of visitors who interacted with the page (such as scrolling or clicking) and then left the site.
 
 ## Audience
 

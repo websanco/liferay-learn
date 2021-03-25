@@ -30,7 +30,7 @@ Order Pages in ascending or descending order based on any one of the following m
 * Entrances
 * Exit Rate
 
-The metrics for ordering the Page list are calculated based on the time period selected in the time period menu (at the top-right of the table). The following are available:
+The metrics for ordering the Page list are calculated based on the time period selected in the time period menu (at the top-right of the table). The following time periods are available:
 
 * Last 24 hours
 * Last 7 days
