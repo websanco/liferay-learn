@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ../../../../../../../../../../_common.sh
+source $(git rev-parse --show-toplevel)/_common.sh
 
 download_nexus_jar "com.liferay.headless.delivery.client"
