@@ -2,9 +2,10 @@ package com.acme.headless.r3b2.internal.resource.v1_0;
 
 import com.acme.headless.r3b2.dto.v1_0.Bar;
 import com.acme.headless.r3b2.resource.v1_0.BarResource;
+
 import com.liferay.portal.vulcan.pagination.Page;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -20,36 +21,35 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 
 	@Override
 	public Page<Bar> getFooBars(Integer fooId) {
-
 		if (_barList == null) {
-			initBarList();
+			_initBarList();
 		}
 
-		ArrayList<Bar> bars = getBarsByFoo(fooId);
-		
-		Page<Bar>pageBars = new Page(new HashMap(), bars);
+		ArrayList<Bar> bars = _getBarsByFoo(fooId);
 
-		return pageBars;
-
+		return Page.of(bars);
 	}
-	private ArrayList<Bar> getBarsByFoo(int fooId) {
-		ArrayList<Bar>bars = new ArrayList();
 
-		for (int i=0; i<_barList.size(); i++) {
-			Bar check = _barList.get(i);
+	private ArrayList<Bar> _getBarsByFoo(int fooId) {
+		ArrayList<Bar> bars = new ArrayList();
+
+		for (Bar check : _barList) {
 			if (check.getFooId() == fooId) {
 				bars.add(check);
 			}
 		}
+
 		return bars;
 	}
-	private void initBarList() {
+
+	private void _initBarList() {
 		Bar faith = new Bar();
 
 		faith.setId(1);
 		faith.setFooId(1);
 		faith.setName("Faith");
-		faith.setDescription("Faith is the substance of things hoped for, the evidence of things not seen.");
+		faith.setDescription(
+			"Faith is the substance of things hoped for, the evidence of things not seen.");
 
 		Bar hope = new Bar();
 
@@ -63,7 +63,8 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		love.setId(3);
 		love.setFooId(3);
 		love.setName("Love");
-		love.setDescription("Now abide faith, hope, love, these three; but the greatest of these is love.");
+		love.setDescription(
+			"Now abide faith, hope, love, these three; but the greatest of these is love.");
 
 		Bar joy = new Bar();
 
@@ -87,6 +88,7 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		patience.setDescription("Faith produces patience.");
 
 		_barList = new ArrayList();
+
 		_barList.add(faith);
 		_barList.add(hope);
 		_barList.add(love);
@@ -96,4 +98,5 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 	}
 
 	private ArrayList<Bar> _barList;
+
 }

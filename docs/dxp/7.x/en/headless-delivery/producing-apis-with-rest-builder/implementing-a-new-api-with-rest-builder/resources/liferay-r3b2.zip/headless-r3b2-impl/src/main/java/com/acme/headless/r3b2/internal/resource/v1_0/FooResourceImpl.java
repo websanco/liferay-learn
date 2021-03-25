@@ -1,9 +1,8 @@
 package com.acme.headless.r3b2.internal.resource.v1_0;
 
-import com.acme.headless.r3b2.dto.v1_0.Bar;
 import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.acme.headless.r3b2.resource.v1_0.FooResource;
-import java.util.ArrayList;
+
 import java.util.LinkedHashMap;
 
 import org.osgi.service.component.annotations.Component;
@@ -27,8 +26,6 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		return _fooMap.get(fooId);
 	}
 
-
-
 	private void _initFooMap() {
 		Foo truth = new Foo();
 
@@ -40,7 +37,8 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 		beauty.setId(2);
 		beauty.setName("Beauty");
-		beauty.setDescription("Beauty is guided by a transcendental aesthetic.");
+		beauty.setDescription(
+			"Beauty is guided by a transcendental aesthetic.");
 
 		Foo goodness = new Foo();
 
@@ -54,10 +52,8 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		_fooMap.put(truth.getId(), truth);
 		_fooMap.put(beauty.getId(), beauty);
 		_fooMap.put(goodness.getId(), goodness);
-
-
 	}
 
 	private LinkedHashMap<Integer, Foo> _fooMap;
-	
+
 }
