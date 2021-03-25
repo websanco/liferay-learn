@@ -19,10 +19,10 @@ The dashboard contains the following data panels:
 * [Session Technology](#session-technology)
 * [Cohort Analysis](#cohort-analysis)
 
-Each panel in the dashboard has a time period selector that recalculates the metrics for the selected time period. The following are available:
+Each panel in the dashboard has a time period selector that recalculates the metrics for the selected time period. The following time periods are available:
 
 ```Note::
-Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’s session to end (30 minutes of inactivity or signing out) to be calculated. Therefore analytics data within the last 24 hours is displayed after the end of a session.
+Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’s session end (30 minutes of inactivity or signing out) to be calculated. Therefore analytics data within the last 24 hours is displayed after the end of a session.
 ```
 
 **Last 24 hours:** Displays data generated over the last 24 hours. 
@@ -33,9 +33,9 @@ Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’
 
 **Last 90 days:** Displays data generated for the previous 90 full days (the current day is excluded), in 15 day increments.
 
-**More Preset Periods:** Clicking this leads to additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
+**More Preset Periods:** Shows additional time periods: Yesterday, Last 28 days, Last 180 days, Last Year.
 
-**Custom Range:** Use this option to select a start date and end date of your choice.
+**Custom Range:** Select a start date and end date of your choice.
 
 ## Site Activities
 
