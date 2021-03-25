@@ -153,7 +153,7 @@ Download the LES Monitoring app and install the LPKG file by copying it into the
     -Djavax.net.ssl.trustStore=/path/to/elastic-nodes.p12 -Djavax.net.ssl.trustStorePassword=liferay -Djavax.net.ssl.trustStoreType=pkcs12
     ```
 
-1. If your stack includes Kibana 7.11+ and JDK 11, you must disable TLS version 1.3.Disable TLS 1.3 in Kibana itself by adding `--tls-max-v1.2` to `KIBANA_HOME/config/node.options`. See [Troubleshooting the Monitoring Setup](#troubleshooting-the-monitoring-setup) for details and an alternative solution.
+1. If your stack includes Kibana 7.11+ and JDK 11, you must disable TLS version 1.3. Disable TLS 1.3 in Kibana itself by adding `--tls-max-v1.2` to `KIBANA_HOME/config/node.options`. See [Troubleshooting the Monitoring Setup](#troubleshooting-the-monitoring-setup) for details and an alternative solution.
 
 Restart Liferay and Kibana.
 
