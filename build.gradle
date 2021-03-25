@@ -1,6 +1,7 @@
 buildscript {
 	dependencies {
 		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.python", version: "latest.release"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.source.formatter", version: "latest.release"
 	}
 
 	repositories {
@@ -13,3 +14,12 @@ buildscript {
 }
 
 apply plugin: "com.liferay.python"
+apply plugin: "com.liferay.source.formatter"
+
+repositories {
+	mavenLocal()
+
+	maven {
+		url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+	}
+}
