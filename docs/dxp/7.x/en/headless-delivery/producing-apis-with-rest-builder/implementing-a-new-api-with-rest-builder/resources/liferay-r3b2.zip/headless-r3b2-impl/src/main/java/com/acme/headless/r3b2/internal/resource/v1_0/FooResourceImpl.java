@@ -27,27 +27,27 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		{
 			Foo truth = new Foo();
 
+			truth.setDescription("Universal truth must be transcendental.");
 			truth.setId(1);
 			truth.setName("Truth");
-			truth.setDescription("Universal truth must be transcendental.");
 
 			put(truth.getId(), truth);
 
 			Foo beauty = new Foo();
 
-			beauty.setId(2);
-			beauty.setName("Beauty");
 			beauty.setDescription(
 				"Beauty is guided by a transcendental aesthetic.");
+			beauty.setId(2);
+			beauty.setName("Beauty");
 
 			put(beauty.getId(), beauty);
 
 			Foo goodness = new Foo();
 
-			goodness.setId(3);
-			goodness.setName("Goodness");
 			goodness.setDescription(
 				"Goodness is defined transcendentally from outside humanity.");
+			goodness.setId(3);
+			goodness.setName("Goodness");
 
 			put(goodness.getId(), goodness);
 		}
