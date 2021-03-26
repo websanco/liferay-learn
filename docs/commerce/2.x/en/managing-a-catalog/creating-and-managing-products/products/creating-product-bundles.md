@@ -68,6 +68,10 @@ Follow these steps to create a Product bundle:
 
    This generates a new SKU for each Option value, which you can edit in the SKUs tab.
 
+   ```important::
+      When enabled, customers *must* select a value, even if Required is not enabled for the Option.
+   ```
+
 1. Verify your Product bundle appears in the Product's Display Page.  
 
 ![Customers can select from Product bundle Options in the Product's Display Page](./creating-product-bundles/images/04.png)
