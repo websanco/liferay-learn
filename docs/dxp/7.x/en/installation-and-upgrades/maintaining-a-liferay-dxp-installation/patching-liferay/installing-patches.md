@@ -78,14 +78,6 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
       [*I] dxp-10-7210 :: Installed; Will be installed. :: Built for LIFERAY
     ```
 
-1.  If you installed a Service Pack and its release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
-
-    ```important::
-       If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
-    ```
-
-1.  If you are installing DXP 7.3+ back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
-
 1.  Clean up DXP cache.
 
     Delete the `[Liferay Home]/osgi/state` folder.
@@ -111,6 +103,12 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
        If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next DXP startup ensures that such modules reinstall with the appropriate state.
     ```
 
+1.  If you installed a Service Pack and its release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
+
+    ```important::
+       If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
+    ```
+
 1.  If you customized DXP's `web.xml` file, merge your customizations into the new `web.xml` file that the Fix Pack includes. Fix Packs always overwrite the existing `web.xml` file.
 
 1.  If the patch has any index updates, configure DXP to update the indexes on startup.
@@ -129,6 +127,8 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     ```
 
     Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure that your custom indexes do not use this naming convention.
+
+1.  If you are installing DXP 7.3+ back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
 
 1.  Start the application server again.
 
