@@ -1,14 +1,10 @@
 import com.liferay.headless.delivery.client.dto.v1_0.Document;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 
-import java.io.File;
-
-import java.util.HashMap;
-
-public class Document_Add {
+public class Document_GetById {
 
 	/**
-	 * java -classpath .:* -DsiteId=1234 Document_Add
+	 * java -classpath .:* -DdocumentId=1234 Document_GetById
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
@@ -17,13 +13,8 @@ public class Document_Add {
 			"test@liferay.com", "test"
 		).build();
 
-		Document document = documentResource.postSiteDocument(
-			Long.valueOf(System.getProperty("siteId")), new Document(),
-			new HashMap<String, File>() {
-				{
-					put("file", new File("Document_Add.java"));
-				}
-			});
+		Document document = documentResource.getDocument(
+			Long.valueOf(System.getProperty("documentId")));
 
 		System.out.println(document);
 	}

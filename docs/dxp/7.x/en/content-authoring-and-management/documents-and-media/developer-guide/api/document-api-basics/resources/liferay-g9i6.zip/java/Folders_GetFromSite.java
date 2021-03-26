@@ -3,10 +3,10 @@ import com.liferay.headless.delivery.client.pagination.Page;
 import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 
-public class Folders_Get {
+public class Folders_GetFromSite {
 
 	/**
-	 * java -classpath .:* -DsiteId=1234 Folders_Get
+	 * java -classpath .:* -DsiteId=1234 Folders_GetFromSite
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentFolderResource.Builder builder =

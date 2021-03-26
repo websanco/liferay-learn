@@ -1,9 +1,9 @@
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 
-public class Folder_Delete {
+public class Folder_DeleteById {
 
 	/**
-	 * java -classpath .:* -DdocumentFolderId=1234 Folder_Delete
+	 * java -classpath .:* -DdocumentFolderId=1234 Folder_DeleteById
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentFolderResource.Builder builder =
