@@ -19,7 +19,7 @@ public class DocumentFolder_PUT_ToSite {
 				Long.valueOf(System.getProperty("siteId")),
 				new DocumentFolder() {
 					{
-						name = "foo";
+						name = "Foo";
 					}
 				});
 
