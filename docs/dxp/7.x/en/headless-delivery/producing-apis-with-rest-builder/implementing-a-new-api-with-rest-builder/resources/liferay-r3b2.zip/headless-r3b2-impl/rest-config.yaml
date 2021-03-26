@@ -1,4 +1,4 @@
-apiDir: "../r3b2-api/src/main/java"
+apiDir: "../headless-r3b2-api/src/main/java"
 apiPackagePath: "com.acme.headless.r3b2"
 application:
     baseURI: "/headless-r3b2"
