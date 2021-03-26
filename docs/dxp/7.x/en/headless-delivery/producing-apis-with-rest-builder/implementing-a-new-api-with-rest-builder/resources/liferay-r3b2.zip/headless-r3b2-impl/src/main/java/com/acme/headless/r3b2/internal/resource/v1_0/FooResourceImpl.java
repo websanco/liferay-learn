@@ -4,6 +4,7 @@ import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.acme.headless.r3b2.resource.v1_0.FooResource;
 
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -19,41 +20,37 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 	@Override
 	public Foo getFoo(Integer fooId) {
-		if (_foos == null) {
-			_initFooMap();
-		}
-
 		return _foos.get(fooId);
 	}
 
-	private void _initFooMap() {
-		Foo truth = new Foo();
+	private Map<Integer, Foo> _foos = new LinkedHashMap<>() {
+		{
+			Foo truth = new Foo();
 
-		truth.setId(1);
-		truth.setName("Truth");
-		truth.setDescription("Universal truth must be transcendental.");
+			truth.setId(1);
+			truth.setName("Truth");
+			truth.setDescription("Universal truth must be transcendental.");
 
-		Foo beauty = new Foo();
+			put(truth.getId(), truth);
 
-		beauty.setId(2);
-		beauty.setName("Beauty");
-		beauty.setDescription(
-			"Beauty is guided by a transcendental aesthetic.");
+			Foo beauty = new Foo();
 
-		Foo goodness = new Foo();
+			beauty.setId(2);
+			beauty.setName("Beauty");
+			beauty.setDescription(
+				"Beauty is guided by a transcendental aesthetic.");
 
-		goodness.setId(3);
-		goodness.setName("Goodness");
-		goodness.setDescription(
-			"Goodness is defined transcendentally from outside humanity.");
+			put(beauty.getId(), beauty);
 
-		_foos = new LinkedHashMap<>();
+			Foo goodness = new Foo();
 
-		_foos.put(truth.getId(), truth);
-		_foos.put(beauty.getId(), beauty);
-		_foos.put(goodness.getId(), goodness);
-	}
+			goodness.setId(3);
+			goodness.setName("Goodness");
+			goodness.setDescription(
+				"Goodness is defined transcendentally from outside humanity.");
 
-	private LinkedHashMap<Integer, Foo> _foos;
+			put(goodness.getId(), goodness);
+		}
+	};
 
 }
