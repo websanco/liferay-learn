@@ -22,7 +22,7 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 
 	@Override
 	public Page<Bar> getFooBars(Integer fooId) {
-		if (_barList == null) {
+		if (_bars == null) {
 			_initBarList();
 		}
 
@@ -34,7 +34,7 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 	private List<Bar> _getBarsByFoo(int fooId) {
 		List<Bar> bars = new ArrayList();
 
-		for (Bar check : _barList) {
+		for (Bar check : _bars) {
 			if (check.getFooId() == fooId) {
 				bars.add(check);
 			}
@@ -90,16 +90,16 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		patience.setName("Patience");
 		patience.setDescription("Faith produces patience.");
 
-		_barList = new ArrayList();
+		_bars = new ArrayList();
 
-		_barList.add(faith);
-		_barList.add(hope);
-		_barList.add(love);
-		_barList.add(joy);
-		_barList.add(peace);
-		_barList.add(patience);
+		_bars.add(faith);
+		_bars.add(hope);
+		_bars.add(love);
+		_bars.add(joy);
+		_bars.add(peace);
+		_bars.add(patience);
 	}
 
-	private List<Bar> _barList;
+	private List<Bar> _bars;
 
 }

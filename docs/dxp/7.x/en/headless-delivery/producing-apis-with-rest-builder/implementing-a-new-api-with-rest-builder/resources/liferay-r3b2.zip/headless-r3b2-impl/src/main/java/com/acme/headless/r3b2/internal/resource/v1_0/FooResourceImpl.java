@@ -19,11 +19,11 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 	@Override
 	public Foo getFoo(Integer fooId) {
-		if (_fooMap == null) {
+		if (_foos == null) {
 			_initFooMap();
 		}
 
-		return _fooMap.get(fooId);
+		return _foos.get(fooId);
 	}
 
 	private void _initFooMap() {
@@ -47,13 +47,13 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		goodness.setDescription(
 			"Goodness is defined transcendentally from outside humanity.");
 
-		_fooMap = new LinkedHashMap<>();
+		_foos = new LinkedHashMap<>();
 
-		_fooMap.put(truth.getId(), truth);
-		_fooMap.put(beauty.getId(), beauty);
-		_fooMap.put(goodness.getId(), goodness);
+		_foos.put(truth.getId(), truth);
+		_foos.put(beauty.getId(), beauty);
+		_foos.put(goodness.getId(), goodness);
 	}
 
-	private LinkedHashMap<Integer, Foo> _fooMap;
+	private LinkedHashMap<Integer, Foo> _foos;
 
 }
