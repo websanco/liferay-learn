@@ -3,7 +3,7 @@ package com.acme.headless.r3b2.internal.resource.v1_0;
 import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.acme.headless.r3b2.resource.v1_0.FooResource;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.osgi.service.component.annotations.Component;
@@ -23,7 +23,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		return _foos.get(fooId);
 	}
 
-	private Map<Integer, Foo> _foos = new LinkedHashMap<Integer, Foo>() {
+	private Map<Integer, Foo> _foos = new HashMap<Integer, Foo>() {
 		{
 			Foo truth = new Foo() {
 				{
@@ -49,7 +49,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 			Foo goodness = new Foo() {
 				{
 					description =
-						"Goodness is defined transcendentally from outside " + 
+						"Goodness is defined transcendentally from outside " +
 							"humanity.";
 					id = 3;
 					name = "Goodness";
