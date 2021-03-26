@@ -6,6 +6,7 @@ import com.acme.headless.r3b2.resource.v1_0.BarResource;
 import com.liferay.portal.vulcan.pagination.Page;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -25,13 +26,13 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 			_initBarList();
 		}
 
-		ArrayList<Bar> bars = _getBarsByFoo(fooId);
+		List<Bar> bars = _getBarsByFoo(fooId);
 
 		return Page.of(bars);
 	}
 
-	private ArrayList<Bar> _getBarsByFoo(int fooId) {
-		ArrayList<Bar> bars = new ArrayList();
+	private List<Bar> _getBarsByFoo(int fooId) {
+		List<Bar> bars = new ArrayList();
 
 		for (Bar check : _barList) {
 			if (check.getFooId() == fooId) {
@@ -99,6 +100,6 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		_barList.add(patience);
 	}
 
-	private ArrayList<Bar> _barList;
+	private List<Bar> _barList;
 
 }
