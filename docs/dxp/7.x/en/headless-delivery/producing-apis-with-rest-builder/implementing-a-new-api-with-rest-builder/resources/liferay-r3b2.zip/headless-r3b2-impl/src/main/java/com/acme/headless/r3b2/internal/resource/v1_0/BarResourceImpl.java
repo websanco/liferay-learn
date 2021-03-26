@@ -49,7 +49,8 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		faith.setFooId(1);
 		faith.setName("Faith");
 		faith.setDescription(
-			"Faith is the substance of things hoped for, the evidence of things not seen.");
+			"Faith is the substance of things hoped for, the evidence of " +
+				"things not seen.");
 
 		Bar hope = new Bar();
 
@@ -64,7 +65,8 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		love.setFooId(3);
 		love.setName("Love");
 		love.setDescription(
-			"Now abide faith, hope, love, these three; but the greatest of these is love.");
+			"Now abide faith, hope, love, these three; but the greatest of " +
+				"these is love.");
 
 		Bar joy = new Bar();
 
