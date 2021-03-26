@@ -39,8 +39,8 @@ The metrics for ordering the Page list are calculated based on the time period s
 * More Preset Periods (Yesterday, Last 28 days, Last 180 days, Last Year)
 * Custom Range
 
-```Note::
-Page data is based on canonical URL. Learn more about `canonicalization <https://moz.com/learn/seo/canonicalization>`_ or `how to set a custom canonical URL in DXP <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/page-settings/configuring-individual-pages.html#seo>`_
+```note::
+   Page data is based on canonical URL. Learn more about `canonicalization <https://moz.com/learn/seo/canonicalization>`_ or `how to set a custom canonical URL in DXP <https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/page-settings/configuring-individual-pages.html#seo>`_
 ```
 
 To view detailed metrics for a single page, click that page in the table. See [Page Analytics](pages/pages.md) for more information.
