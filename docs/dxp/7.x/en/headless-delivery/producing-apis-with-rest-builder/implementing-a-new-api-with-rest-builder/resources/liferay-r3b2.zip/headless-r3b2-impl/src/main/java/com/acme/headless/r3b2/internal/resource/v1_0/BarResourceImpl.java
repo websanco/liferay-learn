@@ -71,7 +71,7 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		},
 		new Bar() {
 			{
-				description = "Enter into the joy of your lord.";
+				description = "Enter into the joy of your master.";
 				fooId = 1;
 				id = 4;
 				name = "Joy";
