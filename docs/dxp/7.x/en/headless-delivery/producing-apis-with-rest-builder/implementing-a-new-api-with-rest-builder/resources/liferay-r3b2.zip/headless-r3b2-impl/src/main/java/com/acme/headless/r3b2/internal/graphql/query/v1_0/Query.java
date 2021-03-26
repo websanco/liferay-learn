@@ -57,8 +57,8 @@ public class Query {
 	 *
 	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {bar(barId: ___){description, fooId, id, name}}"}' -u 'test@liferay.com:test'
 	 */
-	@GraphQLField
-	public Bar bar(@GraphQLName("barId") Integer barId) throws Exception {
+	@GraphQLField(description = "")
+	public Bar bar(@GraphQLName("barId") Long barId) throws Exception {
 		return _applyComponentServiceObjects(
 			_barResourceComponentServiceObjects, this::_populateResourceContext,
 			barResource -> barResource.getBar(barId));
@@ -69,13 +69,23 @@ public class Query {
 	 *
 	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {fooBars(fooId: ___){items {__}, page, pageSize, totalCount}}"}' -u 'test@liferay.com:test'
 	 */
-	@GraphQLField
-	public BarPage fooBars(@GraphQLName("fooId") Integer fooId)
-		throws Exception {
-
+	@GraphQLField(description = "")
+	public BarPage fooBars(@GraphQLName("fooId") Long fooId) throws Exception {
 		return _applyComponentServiceObjects(
 			_barResourceComponentServiceObjects, this::_populateResourceContext,
-			barResource -> new BarPage(barResource.getFooBars(fooId)));
+			barResource -> new BarPage(barResource.getFooBarsPage(fooId)));
+	}
+
+	/**
+	 * Invoke this method with the command line:
+	 *
+	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {foo{items {__}, page, pageSize, totalCount}}"}' -u 'test@liferay.com:test'
+	 */
+	@GraphQLField(description = "")
+	public FooPage foo() throws Exception {
+		return _applyComponentServiceObjects(
+			_fooResourceComponentServiceObjects, this::_populateResourceContext,
+			fooResource -> new FooPage(fooResource.getFooPage()));
 	}
 
 	/**
@@ -83,8 +93,8 @@ public class Query {
 	 *
 	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {foo(fooId: ___){description, id, name}}"}' -u 'test@liferay.com:test'
 	 */
-	@GraphQLField
-	public Foo foo(@GraphQLName("fooId") Integer fooId) throws Exception {
+	@GraphQLField(description = "")
+	public Foo foo(@GraphQLName("fooId") Long fooId) throws Exception {
 		return _applyComponentServiceObjects(
 			_fooResourceComponentServiceObjects, this::_populateResourceContext,
 			fooResource -> fooResource.getFoo(fooId));
@@ -97,7 +107,7 @@ public class Query {
 			_bar = bar;
 		}
 
-		@GraphQLField
+		@GraphQLField(description = "")
 		public Foo foo() throws Exception {
 			return _applyComponentServiceObjects(
 				_fooResourceComponentServiceObjects,
@@ -110,19 +120,19 @@ public class Query {
 	}
 
 	@GraphQLTypeExtension(Foo.class)
-	public class GetFooBarsTypeExtension {
+	public class GetFooBarsPageTypeExtension {
 
-		public GetFooBarsTypeExtension(Foo foo) {
+		public GetFooBarsPageTypeExtension(Foo foo) {
 			_foo = foo;
 		}
 
-		@GraphQLField
+		@GraphQLField(description = "")
 		public BarPage bars() throws Exception {
 			return _applyComponentServiceObjects(
 				_barResourceComponentServiceObjects,
 				Query.this::_populateResourceContext,
 				barResource -> new BarPage(
-					barResource.getFooBars(_foo.getId())));
+					barResource.getFooBarsPage(_foo.getId())));
 		}
 
 		private Foo _foo;

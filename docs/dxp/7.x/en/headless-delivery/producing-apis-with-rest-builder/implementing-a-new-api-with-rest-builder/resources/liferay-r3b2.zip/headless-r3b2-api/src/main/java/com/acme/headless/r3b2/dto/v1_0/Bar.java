@@ -66,18 +66,16 @@ public class Bar implements Serializable {
 	protected String description;
 
 	@Schema(description = "The associated Foo's ID.")
-	public Integer getFooId() {
+	public Long getFooId() {
 		return fooId;
 	}
 
-	public void setFooId(Integer fooId) {
+	public void setFooId(Long fooId) {
 		this.fooId = fooId;
 	}
 
 	@JsonIgnore
-	public void setFooId(
-		UnsafeSupplier<Integer, Exception> fooIdUnsafeSupplier) {
-
+	public void setFooId(UnsafeSupplier<Long, Exception> fooIdUnsafeSupplier) {
 		try {
 			fooId = fooIdUnsafeSupplier.get();
 		}
@@ -91,19 +89,19 @@ public class Bar implements Serializable {
 
 	@GraphQLField(description = "The associated Foo's ID.")
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected Integer fooId;
+	protected Long fooId;
 
 	@Schema(description = "The Bar's ID")
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
 	@JsonIgnore
-	public void setId(UnsafeSupplier<Integer, Exception> idUnsafeSupplier) {
+	public void setId(UnsafeSupplier<Long, Exception> idUnsafeSupplier) {
 		try {
 			id = idUnsafeSupplier.get();
 		}
@@ -117,7 +115,7 @@ public class Bar implements Serializable {
 
 	@GraphQLField(description = "The Bar's ID")
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected Integer id;
+	protected Long id;
 
 	@Schema(description = "The title of your Bar.")
 	public String getName() {

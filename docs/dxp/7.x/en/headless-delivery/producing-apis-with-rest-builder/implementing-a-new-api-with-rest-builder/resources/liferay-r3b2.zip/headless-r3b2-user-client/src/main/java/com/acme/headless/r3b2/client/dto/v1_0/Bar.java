@@ -41,17 +41,15 @@ public class Bar implements Cloneable, Serializable {
 
 	protected String description;
 
-	public Integer getFooId() {
+	public Long getFooId() {
 		return fooId;
 	}
 
-	public void setFooId(Integer fooId) {
+	public void setFooId(Long fooId) {
 		this.fooId = fooId;
 	}
 
-	public void setFooId(
-		UnsafeSupplier<Integer, Exception> fooIdUnsafeSupplier) {
-
+	public void setFooId(UnsafeSupplier<Long, Exception> fooIdUnsafeSupplier) {
 		try {
 			fooId = fooIdUnsafeSupplier.get();
 		}
@@ -60,17 +58,17 @@ public class Bar implements Cloneable, Serializable {
 		}
 	}
 
-	protected Integer fooId;
+	protected Long fooId;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public void setId(UnsafeSupplier<Integer, Exception> idUnsafeSupplier) {
+	public void setId(UnsafeSupplier<Long, Exception> idUnsafeSupplier) {
 		try {
 			id = idUnsafeSupplier.get();
 		}
@@ -79,7 +77,7 @@ public class Bar implements Cloneable, Serializable {
 		}
 	}
 
-	protected Integer id;
+	protected Long id;
 
 	public String getName() {
 		return name;

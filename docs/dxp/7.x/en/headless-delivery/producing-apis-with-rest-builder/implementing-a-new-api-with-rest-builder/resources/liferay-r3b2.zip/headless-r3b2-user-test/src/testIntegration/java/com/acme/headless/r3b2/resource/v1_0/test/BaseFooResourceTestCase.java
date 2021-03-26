@@ -16,6 +16,7 @@ import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 
 import com.liferay.petra.reflect.ReflectionUtil;
 import com.liferay.petra.string.StringBundler;
+import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.json.JSONUtil;
@@ -32,6 +33,8 @@ import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.odata.entity.EntityField;
 import com.liferay.portal.odata.entity.EntityModel;
+import com.liferay.portal.test.log.CaptureAppender;
+import com.liferay.portal.test.log.Log4JLoggerTestUtil;
 import com.liferay.portal.test.rule.Inject;
 import com.liferay.portal.test.rule.LiferayIntegrationTestRule;
 import com.liferay.portal.vulcan.resource.EntityModelResource;
@@ -55,6 +58,7 @@ import javax.annotation.Generated;
 import javax.ws.rs.core.MultivaluedHashMap;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
+import org.apache.log4j.Level;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -180,6 +184,82 @@ public abstract class BaseFooResourceTestCase {
 	}
 
 	@Test
+	public void testGetFooPage() throws Exception {
+		Assert.assertTrue(false);
+	}
+
+	@Test
+	public void testPostFoo() throws Exception {
+		Foo randomFoo = randomFoo();
+
+		Foo postFoo = testPostFoo_addFoo(randomFoo);
+
+		assertEquals(randomFoo, postFoo);
+		assertValid(postFoo);
+	}
+
+	protected Foo testPostFoo_addFoo(Foo foo) throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testDeleteFoo() throws Exception {
+		@SuppressWarnings("PMD.UnusedLocalVariable")
+		Foo foo = testDeleteFoo_addFoo();
+
+		assertHttpResponseStatusCode(
+			204, fooResource.deleteFooHttpResponse(foo.getId()));
+
+		assertHttpResponseStatusCode(
+			404, fooResource.getFooHttpResponse(foo.getId()));
+
+		assertHttpResponseStatusCode(404, fooResource.getFooHttpResponse(0L));
+	}
+
+	protected Foo testDeleteFoo_addFoo() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testGraphQLDeleteFoo() throws Exception {
+		Foo foo = testGraphQLFoo_addFoo();
+
+		Assert.assertTrue(
+			JSONUtil.getValueAsBoolean(
+				invokeGraphQLMutation(
+					new GraphQLField(
+						"deleteFoo",
+						new HashMap<String, Object>() {
+							{
+								put("fooId", foo.getId());
+							}
+						})),
+				"JSONObject/data", "Object/deleteFoo"));
+
+		try (CaptureAppender captureAppender =
+				Log4JLoggerTestUtil.configureLog4JLogger(
+					"graphql.execution.SimpleDataFetcherExceptionHandler",
+					Level.WARN)) {
+
+			JSONArray errorsJSONArray = JSONUtil.getValueAsJSONArray(
+				invokeGraphQLQuery(
+					new GraphQLField(
+						"foo",
+						new HashMap<String, Object>() {
+							{
+								put("fooId", foo.getId());
+							}
+						},
+						new GraphQLField("id"))),
+				"JSONArray/errors");
+
+			Assert.assertTrue(errorsJSONArray.length() > 0);
+		}
+	}
+
+	@Test
 	public void testGetFoo() throws Exception {
 		Foo postFoo = testGetFoo_addFoo();
 
@@ -217,7 +297,7 @@ public abstract class BaseFooResourceTestCase {
 
 	@Test
 	public void testGraphQLGetFooNotFound() throws Exception {
-		Integer irrelevantFooId = RandomTestUtil.randomInt();
+		Long irrelevantFooId = RandomTestUtil.randomLong();
 
 		Assert.assertEquals(
 			"Not Found",
@@ -233,6 +313,52 @@ public abstract class BaseFooResourceTestCase {
 						getGraphQLFields())),
 				"JSONArray/errors", "Object/0", "JSONObject/extensions",
 				"Object/code"));
+	}
+
+	@Test
+	public void testPatchFoo() throws Exception {
+		Foo postFoo = testPatchFoo_addFoo();
+
+		Foo randomPatchFoo = randomPatchFoo();
+
+		@SuppressWarnings("PMD.UnusedLocalVariable")
+		Foo patchFoo = fooResource.patchFoo(postFoo.getId(), randomPatchFoo);
+
+		Foo expectedPatchFoo = postFoo.clone();
+
+		_beanUtilsBean.copyProperties(expectedPatchFoo, randomPatchFoo);
+
+		Foo getFoo = fooResource.getFoo(patchFoo.getId());
+
+		assertEquals(expectedPatchFoo, getFoo);
+		assertValid(getFoo);
+	}
+
+	protected Foo testPatchFoo_addFoo() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testPutFoo() throws Exception {
+		Foo postFoo = testPutFoo_addFoo();
+
+		Foo randomFoo = randomFoo();
+
+		Foo putFoo = fooResource.putFoo(postFoo.getId(), randomFoo);
+
+		assertEquals(randomFoo, putFoo);
+		assertValid(putFoo);
+
+		Foo getFoo = fooResource.getFoo(putFoo.getId());
+
+		assertEquals(randomFoo, getFoo);
+		assertValid(getFoo);
+	}
+
+	protected Foo testPutFoo_addFoo() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
 	}
 
 	protected Foo testGraphQLFoo_addFoo() throws Exception {
@@ -573,7 +699,7 @@ public abstract class BaseFooResourceTestCase {
 			{
 				description = StringUtil.toLowerCase(
 					RandomTestUtil.randomString());
-				id = RandomTestUtil.randomInt();
+				id = RandomTestUtil.randomLong();
 				name = StringUtil.toLowerCase(RandomTestUtil.randomString());
 			}
 		};

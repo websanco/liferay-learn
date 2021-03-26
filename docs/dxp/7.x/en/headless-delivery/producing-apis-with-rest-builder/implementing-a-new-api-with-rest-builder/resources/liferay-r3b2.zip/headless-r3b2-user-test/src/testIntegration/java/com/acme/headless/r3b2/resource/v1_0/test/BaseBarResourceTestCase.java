@@ -16,6 +16,7 @@ import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 
 import com.liferay.petra.reflect.ReflectionUtil;
 import com.liferay.petra.string.StringBundler;
+import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.json.JSONUtil;
@@ -32,6 +33,8 @@ import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.odata.entity.EntityField;
 import com.liferay.portal.odata.entity.EntityModel;
+import com.liferay.portal.test.log.CaptureAppender;
+import com.liferay.portal.test.log.Log4JLoggerTestUtil;
 import com.liferay.portal.test.rule.Inject;
 import com.liferay.portal.test.rule.LiferayIntegrationTestRule;
 import com.liferay.portal.vulcan.resource.EntityModelResource;
@@ -55,6 +58,7 @@ import javax.annotation.Generated;
 import javax.ws.rs.core.MultivaluedHashMap;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
+import org.apache.log4j.Level;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -180,6 +184,62 @@ public abstract class BaseBarResourceTestCase {
 	}
 
 	@Test
+	public void testDeleteBar() throws Exception {
+		@SuppressWarnings("PMD.UnusedLocalVariable")
+		Bar bar = testDeleteBar_addBar();
+
+		assertHttpResponseStatusCode(
+			204, barResource.deleteBarHttpResponse(bar.getId()));
+
+		assertHttpResponseStatusCode(
+			404, barResource.getBarHttpResponse(bar.getId()));
+
+		assertHttpResponseStatusCode(404, barResource.getBarHttpResponse(0L));
+	}
+
+	protected Bar testDeleteBar_addBar() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testGraphQLDeleteBar() throws Exception {
+		Bar bar = testGraphQLBar_addBar();
+
+		Assert.assertTrue(
+			JSONUtil.getValueAsBoolean(
+				invokeGraphQLMutation(
+					new GraphQLField(
+						"deleteBar",
+						new HashMap<String, Object>() {
+							{
+								put("barId", bar.getId());
+							}
+						})),
+				"JSONObject/data", "Object/deleteBar"));
+
+		try (CaptureAppender captureAppender =
+				Log4JLoggerTestUtil.configureLog4JLogger(
+					"graphql.execution.SimpleDataFetcherExceptionHandler",
+					Level.WARN)) {
+
+			JSONArray errorsJSONArray = JSONUtil.getValueAsJSONArray(
+				invokeGraphQLQuery(
+					new GraphQLField(
+						"bar",
+						new HashMap<String, Object>() {
+							{
+								put("barId", bar.getId());
+							}
+						},
+						new GraphQLField("id"))),
+				"JSONArray/errors");
+
+			Assert.assertTrue(errorsJSONArray.length() > 0);
+		}
+	}
+
+	@Test
 	public void testGetBar() throws Exception {
 		Bar postBar = testGetBar_addBar();
 
@@ -217,7 +277,7 @@ public abstract class BaseBarResourceTestCase {
 
 	@Test
 	public void testGraphQLGetBarNotFound() throws Exception {
-		Integer irrelevantBarId = RandomTestUtil.randomInt();
+		Long irrelevantBarId = RandomTestUtil.randomLong();
 
 		Assert.assertEquals(
 			"Not Found",
@@ -236,19 +296,66 @@ public abstract class BaseBarResourceTestCase {
 	}
 
 	@Test
-	public void testGetFooBars() throws Exception {
-		Page<Bar> page = barResource.getFooBars(testGetFooBars_getFooId());
+	public void testPatchBar() throws Exception {
+		Bar postBar = testPatchBar_addBar();
+
+		Bar randomPatchBar = randomPatchBar();
+
+		@SuppressWarnings("PMD.UnusedLocalVariable")
+		Bar patchBar = barResource.patchBar(postBar.getId(), randomPatchBar);
+
+		Bar expectedPatchBar = postBar.clone();
+
+		_beanUtilsBean.copyProperties(expectedPatchBar, randomPatchBar);
+
+		Bar getBar = barResource.getBar(patchBar.getId());
+
+		assertEquals(expectedPatchBar, getBar);
+		assertValid(getBar);
+	}
+
+	protected Bar testPatchBar_addBar() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testPutBar() throws Exception {
+		Bar postBar = testPutBar_addBar();
+
+		Bar randomBar = randomBar();
+
+		Bar putBar = barResource.putBar(postBar.getId(), randomBar);
+
+		assertEquals(randomBar, putBar);
+		assertValid(putBar);
+
+		Bar getBar = barResource.getBar(putBar.getId());
+
+		assertEquals(randomBar, getBar);
+		assertValid(getBar);
+	}
+
+	protected Bar testPutBar_addBar() throws Exception {
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	@Test
+	public void testGetFooBarsPage() throws Exception {
+		Page<Bar> page = barResource.getFooBarsPage(
+			testGetFooBarsPage_getFooId());
 
 		Assert.assertEquals(0, page.getTotalCount());
 
-		Integer fooId = testGetFooBars_getFooId();
-		Integer irrelevantFooId = testGetFooBars_getIrrelevantFooId();
+		Long fooId = testGetFooBarsPage_getFooId();
+		Long irrelevantFooId = testGetFooBarsPage_getIrrelevantFooId();
 
-		if (irrelevantFooId != null) {
-			Bar irrelevantBar = testGetFooBars_addBar(
+		if ((irrelevantFooId != null)) {
+			Bar irrelevantBar = testGetFooBarsPage_addBar(
 				irrelevantFooId, randomIrrelevantBar());
 
-			page = barResource.getFooBars(irrelevantFooId);
+			page = barResource.getFooBarsPage(irrelevantFooId);
 
 			Assert.assertEquals(1, page.getTotalCount());
 
@@ -257,33 +364,50 @@ public abstract class BaseBarResourceTestCase {
 			assertValid(page);
 		}
 
-		Bar bar1 = testGetFooBars_addBar(fooId, randomBar());
+		Bar bar1 = testGetFooBarsPage_addBar(fooId, randomBar());
 
-		Bar bar2 = testGetFooBars_addBar(fooId, randomBar());
+		Bar bar2 = testGetFooBarsPage_addBar(fooId, randomBar());
 
-		page = barResource.getFooBars(fooId);
+		page = barResource.getFooBarsPage(fooId);
 
 		Assert.assertEquals(2, page.getTotalCount());
 
 		assertEqualsIgnoringOrder(
 			Arrays.asList(bar1, bar2), (List<Bar>)page.getItems());
 		assertValid(page);
+
+		barResource.deleteBar(bar1.getId());
+
+		barResource.deleteBar(bar2.getId());
 	}
 
-	protected Bar testGetFooBars_addBar(Integer fooId, Bar bar)
+	protected Bar testGetFooBarsPage_addBar(Long fooId, Bar bar)
 		throws Exception {
 
+		return barResource.postFooBar(fooId, bar);
+	}
+
+	protected Long testGetFooBarsPage_getFooId() throws Exception {
 		throw new UnsupportedOperationException(
 			"This method needs to be implemented");
 	}
 
-	protected Integer testGetFooBars_getFooId() throws Exception {
-		throw new UnsupportedOperationException(
-			"This method needs to be implemented");
-	}
-
-	protected Integer testGetFooBars_getIrrelevantFooId() throws Exception {
+	protected Long testGetFooBarsPage_getIrrelevantFooId() throws Exception {
 		return null;
+	}
+
+	@Test
+	public void testPostFooBar() throws Exception {
+		Bar randomBar = randomBar();
+
+		Bar postBar = testPostFooBar_addBar(randomBar);
+
+		assertEquals(randomBar, postBar);
+		assertValid(postBar);
+	}
+
+	protected Bar testPostFooBar_addBar(Bar bar) throws Exception {
+		return barResource.postFooBar(testGetFooBarsPage_getFooId(), bar);
 	}
 
 	protected Bar testGraphQLBar_addBar() throws Exception {
@@ -645,8 +769,8 @@ public abstract class BaseBarResourceTestCase {
 			{
 				description = StringUtil.toLowerCase(
 					RandomTestUtil.randomString());
-				fooId = RandomTestUtil.randomInt();
-				id = RandomTestUtil.randomInt();
+				fooId = RandomTestUtil.randomLong();
+				id = RandomTestUtil.randomLong();
 				name = StringUtil.toLowerCase(RandomTestUtil.randomString());
 			}
 		};

@@ -5,6 +5,7 @@ import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.liferay.portal.kernel.service.GroupLocalService;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.vulcan.accept.language.AcceptLanguage;
+import com.liferay.portal.vulcan.pagination.Page;
 
 import java.util.Locale;
 
@@ -13,6 +14,7 @@ import javax.annotation.Generated;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import org.osgi.annotation.versioning.ProviderType;
@@ -33,7 +35,26 @@ public interface FooResource {
 		return FactoryHolder.factory.create();
 	}
 
-	public Foo getFoo(Integer fooId) throws Exception;
+	public Page<Foo> getFooPage() throws Exception;
+
+	public Foo postFoo(Foo foo) throws Exception;
+
+	public Response postFooBatch(String callbackURL, Object object)
+		throws Exception;
+
+	public void deleteFoo(Long fooId) throws Exception;
+
+	public Response deleteFooBatch(String callbackURL, Object object)
+		throws Exception;
+
+	public Foo getFoo(Long fooId) throws Exception;
+
+	public Foo patchFoo(Long fooId, Foo foo) throws Exception;
+
+	public Foo putFoo(Long fooId, Foo foo) throws Exception;
+
+	public Response putFooBatch(String callbackURL, Object object)
+		throws Exception;
 
 	public default void setContextAcceptLanguage(
 		AcceptLanguage contextAcceptLanguage) {

@@ -159,18 +159,21 @@ public class BarSerDes {
 			}
 			else if (Objects.equals(jsonParserFieldName, "fooId")) {
 				if (jsonParserFieldValue != null) {
-					bar.setFooId(Integer.valueOf((String)jsonParserFieldValue));
+					bar.setFooId(Long.valueOf((String)jsonParserFieldValue));
 				}
 			}
 			else if (Objects.equals(jsonParserFieldName, "id")) {
 				if (jsonParserFieldValue != null) {
-					bar.setId(Integer.valueOf((String)jsonParserFieldValue));
+					bar.setId(Long.valueOf((String)jsonParserFieldValue));
 				}
 			}
 			else if (Objects.equals(jsonParserFieldName, "name")) {
 				if (jsonParserFieldValue != null) {
 					bar.setName((String)jsonParserFieldValue);
 				}
+			}
+			else if (jsonParserFieldName.equals("status")) {
+				throw new IllegalArgumentException();
 			}
 		}
 

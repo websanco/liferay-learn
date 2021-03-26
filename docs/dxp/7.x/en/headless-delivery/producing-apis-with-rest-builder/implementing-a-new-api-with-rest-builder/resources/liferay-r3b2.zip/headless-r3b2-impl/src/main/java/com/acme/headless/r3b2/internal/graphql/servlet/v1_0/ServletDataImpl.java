@@ -26,6 +26,11 @@ public class ServletDataImpl implements ServletData {
 
 	@Activate
 	public void activate(BundleContext bundleContext) {
+		Mutation.setBarResourceComponentServiceObjects(
+			_barResourceComponentServiceObjects);
+		Mutation.setFooResourceComponentServiceObjects(
+			_fooResourceComponentServiceObjects);
+
 		Query.setBarResourceComponentServiceObjects(
 			_barResourceComponentServiceObjects);
 		Query.setFooResourceComponentServiceObjects(

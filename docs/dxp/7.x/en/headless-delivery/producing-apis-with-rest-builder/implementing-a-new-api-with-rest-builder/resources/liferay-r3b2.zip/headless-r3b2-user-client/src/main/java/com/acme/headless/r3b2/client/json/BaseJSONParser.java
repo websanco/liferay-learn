@@ -363,7 +363,7 @@ public abstract class BaseJSONParser<T> {
 		else if (_lastChar == '"') {
 			return _readValueAsString();
 		}
-		else if (parseMaps && (_lastChar == '{')) {
+		else if (parseMaps && _lastChar == '{') {
 			try {
 				Class<? extends BaseJSONParser> clazz = getClass();
 

@@ -14,6 +14,7 @@ import javax.annotation.Generated;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import org.osgi.annotation.versioning.ProviderType;
@@ -34,9 +35,27 @@ public interface BarResource {
 		return FactoryHolder.factory.create();
 	}
 
-	public Bar getBar(Integer barId) throws Exception;
+	public void deleteBar(Long barId) throws Exception;
 
-	public Page<Bar> getFooBars(Integer fooId) throws Exception;
+	public Response deleteBarBatch(String callbackURL, Object object)
+		throws Exception;
+
+	public Bar getBar(Long barId) throws Exception;
+
+	public Bar patchBar(Long barId, Bar bar) throws Exception;
+
+	public Bar putBar(Long barId, Bar bar) throws Exception;
+
+	public Response putBarBatch(String callbackURL, Object object)
+		throws Exception;
+
+	public Page<Bar> getFooBarsPage(Long fooId) throws Exception;
+
+	public Bar postFooBar(Long fooId, Bar bar) throws Exception;
+
+	public Response postFooBarBatch(
+			Long fooId, String callbackURL, Object object)
+		throws Exception;
 
 	public default void setContextAcceptLanguage(
 		AcceptLanguage contextAcceptLanguage) {
