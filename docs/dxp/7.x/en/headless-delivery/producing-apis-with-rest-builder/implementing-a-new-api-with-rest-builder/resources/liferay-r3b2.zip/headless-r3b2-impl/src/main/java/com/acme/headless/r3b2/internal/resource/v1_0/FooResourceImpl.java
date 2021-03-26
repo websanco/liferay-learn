@@ -3,8 +3,8 @@ package com.acme.headless.r3b2.internal.resource.v1_0;
 import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.acme.headless.r3b2.resource.v1_0.FooResource;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -23,7 +23,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		return _foos.get(fooId);
 	}
 
-	private Map<Integer, Foo> _foos = new HashMap<Integer, Foo>() {
+	private Map<Integer, Foo> _foos = new ConcurrentHashMap<Integer, Foo>() {
 		{
 			Foo foo1 = new Foo() {
 				{
