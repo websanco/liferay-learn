@@ -25,7 +25,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 	private Map<Integer, Foo> _foos = new HashMap<Integer, Foo>() {
 		{
-			Foo truth = new Foo() {
+			Foo foo1 = new Foo() {
 				{
 					description = "Universal truth must be transcendental.";
 					id = 1;
@@ -33,9 +33,9 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 				}
 			};
 
-			put(truth.getId(), truth);
+			put(foo1.getId(), foo1);
 
-			Foo beauty = new Foo() {
+			Foo foo2 = new Foo() {
 				{
 					description =
 						"Beauty is guided by a transcendental aesthetic.";
@@ -44,9 +44,9 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 				}
 			};
 
-			put(beauty.getId(), beauty);
+			put(foo2.getId(), foo2);
 
-			Foo goodness = new Foo() {
+			Foo foo3 = new Foo() {
 				{
 					description =
 						"Goodness is defined transcendentally from outside " +
@@ -56,7 +56,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 				}
 			};
 
-			put(goodness.getId(), goodness);
+			put(foo3.getId(), foo3);
 		}
 	};
 
