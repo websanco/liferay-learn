@@ -3,10 +3,10 @@ import com.liferay.headless.delivery.client.pagination.Page;
 import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 
-public class Documents_GetFromSite {
+public class Documents_GET_FromSite {
 
 	/**
-	 * java -classpath .:* -DsiteId=1234 Documents_GetFromSite
+	 * java -classpath .:* -DsiteId=1234 Documents_GET_FromSite
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();

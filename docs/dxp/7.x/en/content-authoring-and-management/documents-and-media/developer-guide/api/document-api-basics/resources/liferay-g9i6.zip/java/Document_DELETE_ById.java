@@ -1,10 +1,9 @@
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 
-public class Document_GetById {
+public class Document_DELETE_ById {
 
 	/**
-	 * java -classpath .:* -DdocumentId=1234 Document_GetById
+	 * java -classpath .:* -DdocumentId=1234 Document_DELETE_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
@@ -13,10 +12,8 @@ public class Document_GetById {
 			"test@liferay.com", "test"
 		).build();
 
-		Document document = documentResource.getDocument(
+		documentResource.deleteDocument(
 			Long.valueOf(System.getProperty("documentId")));
-
-		System.out.println(document);
 	}
 
 }

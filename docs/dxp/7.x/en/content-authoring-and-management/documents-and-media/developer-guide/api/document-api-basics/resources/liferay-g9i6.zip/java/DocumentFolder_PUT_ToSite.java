@@ -1,10 +1,10 @@
 import com.liferay.headless.delivery.client.dto.v1_0.DocumentFolder;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 
-public class DocumentFolder_GetById {
+public class DocumentFolder_PUT_ToSite {
 
 	/**
-	 * java -classpath .:* -DdocumentFolderId=1234 DocumentFolder_GetById
+	 * java -classpath .:* -DsiteId=1234 DocumentFolder_PUT_ToSite
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentFolderResource.Builder builder =
@@ -15,8 +15,13 @@ public class DocumentFolder_GetById {
 		).build();
 
 		DocumentFolder documentFolder =
-			documentFolderResource.getDocumentFolder(
-				Long.valueOf(System.getProperty("documentFolderId")));
+			documentFolderResource.postSiteDocumentFolder(
+				Long.valueOf(System.getProperty("siteId")),
+				new DocumentFolder() {
+					{
+						name = "foo";
+					}
+				});
 
 		System.out.println(documentFolder);
 	}

@@ -5,10 +5,10 @@ import java.io.File;
 
 import java.util.HashMap;
 
-public class Document_AddToDocumentFolder {
+public class Document_PUT_ToSite {
 
 	/**
-	 * java -classpath .:* -DdocumentFolderId=1234 Document_AddToDocumentFolder
+	 * java -classpath .:* -DsiteId=1234 Document_PUT_ToSite
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
@@ -17,12 +17,11 @@ public class Document_AddToDocumentFolder {
 			"test@liferay.com", "test"
 		).build();
 
-		Document document = documentResource.postDocumentFolderDocument(
-			Long.valueOf(System.getProperty("documentFolderId")),
-			new Document(),
+		Document document = documentResource.postSiteDocument(
+			Long.valueOf(System.getProperty("siteId")), new Document(),
 			new HashMap<String, File>() {
 				{
-					put("file", new File("Document_AddToDocumentFolder.java"));
+					put("file", new File("Document_PUT_ToSite.java"));
 				}
 			});
 
