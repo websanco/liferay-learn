@@ -5,10 +5,10 @@ import java.io.File;
 
 import java.util.HashMap;
 
-public class Document_AddToFolder {
+public class Document_AddToDocumentFolder {
 
 	/**
-	 * java -classpath .:* -DdocumentFolderId=1234 Document_AddToFolder
+	 * java -classpath .:* -DdocumentFolderId=1234 Document_AddToDocumentFolder
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
@@ -22,7 +22,7 @@ public class Document_AddToFolder {
 			new Document(),
 			new HashMap<String, File>() {
 				{
-					put("file", new File("Document_AddToFolder.java"));
+					put("file", new File("Document_AddToDocumentFolder.java"));
 				}
 			});
 

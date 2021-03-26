@@ -1,6 +1,6 @@
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 
-public class Document_DeleteByIdById {
+public class Document_DeleteById {
 
 	/**
 	 * java -classpath .:* -DdocumentId=1234 Document_DeleteById

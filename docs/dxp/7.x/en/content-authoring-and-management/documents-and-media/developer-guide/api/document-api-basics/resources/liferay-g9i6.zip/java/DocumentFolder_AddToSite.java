@@ -1,10 +1,10 @@
 import com.liferay.headless.delivery.client.dto.v1_0.DocumentFolder;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 
-public class Folder_AddToSite {
+public class DocumentFolder_AddToSite {
 
 	/**
-	 * java -classpath .:* -DsiteId=1234 Folder_AddToSite
+	 * java -classpath .:* -DsiteId=1234 DocumentFolder_AddToSite
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentFolderResource.Builder builder =
