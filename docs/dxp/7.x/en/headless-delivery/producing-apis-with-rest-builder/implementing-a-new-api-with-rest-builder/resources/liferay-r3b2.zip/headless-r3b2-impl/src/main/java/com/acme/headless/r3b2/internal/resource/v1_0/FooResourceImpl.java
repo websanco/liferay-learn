@@ -3,6 +3,8 @@ package com.acme.headless.r3b2.internal.resource.v1_0;
 import com.acme.headless.r3b2.dto.v1_0.Foo;
 import com.acme.headless.r3b2.resource.v1_0.FooResource;
 
+import com.liferay.portal.vulcan.pagination.Page;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -19,45 +21,85 @@ import org.osgi.service.component.annotations.ServiceScope;
 public class FooResourceImpl extends BaseFooResourceImpl {
 
 	@Override
-	public Foo getFoo(Integer fooId) {
+	public void deleteFoo(Long fooId) {
+		_foos.remove(fooId);
+	}
+
+	@Override
+	public Foo getFoo(Long fooId) {
 		return _foos.get(fooId);
 	}
 
-	private Map<Integer, Foo> _foos = new ConcurrentHashMap<Integer, Foo>() {
-		{
-			Foo foo1 = new Foo() {
-				{
-					description = "Universal truth must be transcendental.";
-					id = 1;
-					name = "Truth";
-				}
-			};
+	@Override
+	public Page<Foo> getFooPage() {
+		return Page.of(_foos.values());
+	}
 
-			put(foo1.getId(), foo1);
+	@Override
+	public Foo patchFoo(Long fooId, Foo foo) {
+		Foo oldFoo = _foos.get(fooId);
 
-			Foo foo2 = new Foo() {
-				{
-					description =
-						"Beauty is guided by a transcendental aesthetic.";
-					id = 2;
-					name = "Beauty";
-				}
-			};
-
-			put(foo2.getId(), foo2);
-
-			Foo foo3 = new Foo() {
-				{
-					description =
-						"Goodness is defined transcendentally from outside " +
-							"humanity.";
-					id = 3;
-					name = "Goodness";
-				}
-			};
-
-			put(foo3.getId(), foo3);
+		if (foo.getName() != null) {
+			oldFoo.setName(foo.getName());
 		}
-	};
+
+		if (foo.getDescription() != null) {
+			oldFoo.setDescription(foo.getDescription());
+		}
+
+		return oldFoo;
+	}
+
+	@Override
+	public Foo postFoo(Foo foo) {
+		_foos.put((long)_foos.size(), foo);
+
+		return foo;
+	}
+
+	@Override
+	public Foo putFoo(Long fooId, Foo foo) {
+		_foos.put(fooId, foo);
+
+		return foo;
+	}
+
+	private static final Map<Long, Foo> _foos =
+		new ConcurrentHashMap<Long, Foo>() {
+			{
+				Foo foo1 = new Foo() {
+					{
+						description = "Universal truth must be transcendental.";
+						id = 1L;
+						name = "Truth";
+					}
+				};
+
+				put(foo1.getId(), foo1);
+
+				Foo foo2 = new Foo() {
+					{
+						description =
+							"Beauty is guided by a transcendental aesthetic.";
+						id = 2L;
+						name = "Beauty";
+					}
+				};
+
+				put(foo2.getId(), foo2);
+
+				Foo foo3 = new Foo() {
+					{
+						description =
+							"Goodness is defined transcendentally from " +
+								"outside humanity.";
+						id = 3L;
+						name = "Goodness";
+					}
+				};
+
+				put(foo3.getId(), foo3);
+			}
+		};
 
 }
