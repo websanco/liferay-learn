@@ -12,10 +12,10 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the `.zip` archive containing the [Acme Product Catalog API](./implementing-a-new-api-with-rest-builder/liferay-r3b2.zip):
+1. Download and unzip the `.zip` archive containing the [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/headless-delivery/producing-apis-with-rest-builder/rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip -O
+    curl https://learn.liferay.com/dxp/7.x/en/headless-delivery/producing-apis-with-rest-builder/liferay-r3b2.zip -O
     ```
 
     ```bash
@@ -35,8 +35,8 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
 1. Confirm the deployment in the Docker container console for both the `api` and `impl` bundles:
 
     ```
-    STARTED com.acme.r3b2.api_1.0.0
-    STARTED com.acme.r3b2.impl_1.0.0
+    STARTED com.acme.headless.r3b2.api_1.0.0 
+    STARTED com.acme.headless.r3b2.impl_1.0.0
     ```
 
 1. Log into your DXP instance and navigate to the _Global Menu_ ( ![Global Menu icon](../../images/icon-applications-menu.png) ) &rarr; _Control Panel_ &rarr; _Gogo Shell._
@@ -47,24 +47,24 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     jaxrs:check
     ```
 
-    The page lists all of the installed JAX-RS bundles, including the newly deployed API, `R3B2.Acme.Product.Catalog`. The API is now deployed and ready for you to call.
+    The page lists all of the installed JAX-RS bundles, including the newly deployed API, `Liferay.Headless.R3B2`. The API is now deployed and ready for you to call.
 
-    ![The newly deployed API (named R3B2.Acme.Product.Catalog) is listed as a result from the command, and ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
+    ![The newly deployed API (named Liferay.Headless.R3B2) is listed as a result from the command and is ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
 
 1. Test the API by running the following command from your terminal:
 
     ```bash
-    curl -u 'test@liferay.com:test' "localhost:8080/o/product-catalog/v1.0/entities/{productId}"
+    curl -u 'test@liferay.com:test' "http://localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}"
     ```
 
-    Substitute a number between 1 and 3 for `{productId}`. The query returns a corresponding product's ID, name, and price wrapped in a JSON object:
+    Substitute a number between 1 and 3 for `{fooId}`. The query returns a corresponding product's ID, name, and description wrapped in a JSON object:
 
     ```json
-    {
-        "name" : "Folding Chair",
-        "price" : 15,
-         "productId" : 1
-    }
+   {
+     "description": "Universal truth must be transcendental.",
+     "id": 1,
+     "name": "Truth"
+   }
     ```
 
 Congratulations, you've successfully deployed and used a new REST API.
@@ -115,12 +115,14 @@ Define these fields using this structure:
 
 ```yaml
 apiDir: "../r3b2-api/src/main/java"
-apiPackagePath: "com.acme.r3b2.product.catalog"
+apiPackagePath: "com.acme.headless.r3b2"
 application:
-    baseURI: "/product-catalog"
-    className: "ProductCatalogApplication"
-    name: "R3B2.Acme.Product.Catalog"
-author: "Liferay"
+    baseURI: "/headless-r3b2"
+    className: "HeadlessR3B2Application"
+    name: "Liferay.Headless.R3B2"
+author: "Jonah the son of Amittai"
+clientDir: "../headless-r3b2-user-client/src/main/java"
+testDir: "../headless-r3b2-user-test/src/testIntegration/java"
 ```
 
 ### Add an Information Block to the OpenAPI Configuration
@@ -131,12 +133,13 @@ The first section to add is the information block:
 
 ```yaml
 info:
-  description: "EAPI to return a product from a catalog."
-  license:
+    description:
+        "API to return a Foo."
+    license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-  title: "Product Catalog API"
-  version: v1.0
+    title: "Foo API"
+    version: v1.0
 openapi: 3.0.1
 ```
 
@@ -153,28 +156,48 @@ Define a `schema` block for each entity you want to represent:
 ```yaml
 components:
     schemas:
-        Product:
+        Bar:
             description:
-                A product with an ID, name, and price.
+                Another dummy object to go with Foo.
             properties:
+                description:
+                    description:
+                        Say something about your Bar.
+                    type: string
+                fooId:
+                    description:
+                        The associated Foo's ID.
+                    type: integer
+                id:
+                    description:
+                        The Bar's ID
+                    type: integer
                 name:
                     description:
-                        The product's name
+                        The title of your Bar.
                     type: string
-                price:
+        Foo:
+            description:
+                A dummy object that has no meaning.
+            properties:
+                description:
                     description:
-                        The product's price, in dollars
-                    type: integer
-                productId:
+                        Say something about your Foo.
+                    type: string
+                id:
                     description:
-                        The product's ID
+                        The Foo's ID
                     type: integer
+                name:
+                    description:
+                        The title of your Foo.
+                    type: string
             type: object
 ```
 
-In this example, a schema called `Product` represents the important data for the use of this API. The `Product` entity contains one string value and two integers as fields (or `properties`), which this API returns. See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
+In this example, a schema called `Foo` represents the important data for the use of this API. The `Bar` entity is linked to `Foo` by use of the `fooId`.  See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
 
-Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schema is called `Product`, the implementation logic belongs in the `ProductResourceImpl` class.
+Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schemas are called `Foo` and `Bar`, the implementation logic belongs in the `FooResourceImpl` and `BarResourceImpl` classes.
 
 ### Define Your APIs
 
@@ -182,51 +205,97 @@ Finally, add the `paths` block. This must include all APIs that you plan to impl
 
 ```yaml
 paths:
-    "/entities/{productId}":
+    "/bar/{barId}":
         get:
-            operationId: getProduct
+            operationId: getBar
             parameters:
                 - in: path
-                  name: productId
+                  name: barId
                   required: true
                   schema:
                       type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                    description:
+                        "Returns the Bar matching the given product ID."
+    "/foo/{fooId}":
+        get:
+            operationId: getFoo
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        "Returns the Foo matching the given product ID."
+            tags: ["Foo"]
+    "/foo/{fooId}/bars":
+        get:
+            operationId: getFooBars
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Bar"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Bar"
+                                type: array
+                    description:
+                        "Gets all Bars related to a Foo."
+            tags: ["Bar"]
 ```
 
 ```tip::
    You can add paths for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
 ```
 
-The path (`entities/{productId}`) specifies that this API (`getProduct`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/product-catalog/v1.0/entities/{productId}`.
+The path (`entities/{fooId}`) specifies that this API (`getFoo`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}`.
 
-The value you substitute in for `productId` is used as the parameter with the matching name.
+The value you substitute for `fooId` is used as the parameter with the matching name.
 
-Beneath the `parameters` block (and within the `get` block), add in a `responses` block to define at least the response for a successful call (indicated by a `200` response):
+Each path has a `responses` block beneath the `parameters` block (and within the `get` block) that defines at least the response for a successful call (indicated by a `200` response).
 
-```yaml
-responses:
-    200:
-        content:
-            application/json:
-                schema:
-                    $ref: "#/components/schemas/Product"
-            application/xml:
-                schema:
-                    $ref: "#/components/schemas/Product"
-        description: "Returns the product matching the given product ID."
-```
-
-This `responses` block specifies that a successful call returns a `Product`. The string `#/components/schemas/Product` references the schema defined earlier in the same file, allowing REST Builder to use the `Product` schema as the return type for this API.
+This `responses` block specifies that a successful call returns a `Product`. The string `#/components/schemas/Foo` references the schema defined earlier in the same file, allowing REST Builder to use the `Foo` schema as the return type for this API.
 
 Lastly, add a `tags` definition for this path, beneath the `responses` block:
 
 ```yaml
-tags: ["Product"]
+tags: ["Foo"]
 ```
 
 The tag specifies information that is added to the generated documentation when REST Builder annotates your scaffolding code. The tag name should reflect the name of your schema.
 
 See the `rest-openapi.yaml` file you downloaded earlier for a complete reference.
+
+There's also a `Bar` object to show how you might do relationships: Bars are related to Foos in the sense that they are associated with a `fooId`. 
 
 ## Run REST Builder
 
@@ -240,7 +309,7 @@ REST Builder uses your configuration and populates both your `api` and `impl` cl
 
 ## Add Your Implementation Logic
 
-The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `ProductResourceImpl.java`).
+The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `FooResourceImpl.java` and `BarResourceImpl.java`).
 
 ```tip::
    The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` in your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/``.
@@ -249,28 +318,41 @@ The last step is to define the logic for each API you have defined. Within your 
 The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class. Since this is just an example, this implementation uses a pre-populated `LinkedHashMap`, and the `getProduct` method returns the product from the `LinkedHashMap` with the matching `productId`. See [`ProductResourceImpl.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/headless-delivery/producting-apis-with-rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip/r3b2-impl/src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/ProductResourceImpl.java) for the full implementation.
 
 ```java
-@Override
-public Product getProduct(Integer productId) {
-   if (_productMap == null) {
-      _initProductMap();
-   }
-
-   return _productMap.get(productId);
-}
+	@Override
+	public Foo getFoo(Integer fooId) {
+		return _foos.get(fooId);
+	}
 ```
 
-This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. The method returns `null` if a `Product` is not found.
+This method overrides the base method defined in the base class (`Base[SchemaName]ResourceImpl`), which is defined using special JAX-RS annotations. 
 
-You can add any business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema. This example business logic creates an empty object and then adds values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
+You can add any business logic to complete the request. REST Builder only creates a default constructor for the object you defined in your schema. This example business logic creates an object and adds values to it (based on how you defined its `parameters` in `rest-openapi.yaml`):
 
 ```java
-Product chair = new Product();
-
-chair.setProductId(Integer.valueOf(1));
-chair.setName("Folding Chair");
-chair.setPrice(Integer.valueOf(15));
+   Foo foo1 = new Foo() {
+      {
+         description = "Universal truth must be transcendental.";
+         id = 1;
+         name = "Truth";
+      }
+   };
 ```
 
+The `Bar` logic is similar, except in this case multiple `Bars` are returned because `Foo` objects can contain multiple `Bar`s. When returning a collection of objects, you must use a pagination-friendly object called a `Page`: 
+
+```java
+	@Override
+	public Page<Bar> getFooBars(Integer fooId) {
+		List<Bar> bars = new ArrayList<>();
+
+		for (Bar bar : _bars.values()) {
+			if (bar.getFooId() == fooId) {
+				bars.add(bar);
+			}
+		}
+
+		return Page.of(bars);
+```
 
 ## Conclusion
 
