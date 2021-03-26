@@ -25,29 +25,36 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 	private Map<Integer, Foo> _foos = new LinkedHashMap<Integer, Foo>() {
 		{
-			Foo truth = new Foo();
-
-			truth.setDescription("Universal truth must be transcendental.");
-			truth.setId(1);
-			truth.setName("Truth");
+			Foo truth = new Foo() {
+				{
+					description = "Universal truth must be transcendental.";
+					id = 1;
+					name = "Truth";
+				}
+			};
 
 			put(truth.getId(), truth);
 
-			Foo beauty = new Foo();
-
-			beauty.setDescription(
-				"Beauty is guided by a transcendental aesthetic.");
-			beauty.setId(2);
-			beauty.setName("Beauty");
+			Foo beauty = new Foo() {
+				{
+					description =
+						"Beauty is guided by a transcendental aesthetic.";
+					id = 2;
+					name = "Beauty";
+				}
+			};
 
 			put(beauty.getId(), beauty);
 
-			Foo goodness = new Foo();
-
-			goodness.setDescription(
-				"Goodness is defined transcendentally from outside humanity.");
-			goodness.setId(3);
-			goodness.setName("Goodness");
+			Foo goodness = new Foo() {
+				{
+					description =
+						"Goodness is defined transcendentally from outside " + 
+							"humanity.";
+					id = 3;
+					name = "Goodness";
+				}
+			};
 
 			put(goodness.getId(), goodness);
 		}
