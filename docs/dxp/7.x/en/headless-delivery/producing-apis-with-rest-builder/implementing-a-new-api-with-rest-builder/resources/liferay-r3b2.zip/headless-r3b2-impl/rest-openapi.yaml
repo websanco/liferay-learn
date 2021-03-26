@@ -11,10 +11,12 @@ components:
                 fooId:
                     description:
                         The associated Foo's ID.
+                    format: int64
                     type: integer
                 id:
                     description:
                         The Bar's ID
+                    format: int64
                     type: integer
                 name:
                     description:
@@ -31,6 +33,7 @@ components:
                 id:
                     description:
                         The Foo's ID
+                    format: int64
                     type: integer
                 name:
                     description:
@@ -48,13 +51,35 @@ info:
 openapi: 3.0.1
 paths:
     "/bar/{barId}":
+        delete:
+            description:
+                ""
+            operationId: deleteBar
+            parameters:
+                - in: path
+                  name: barId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                204:
+                    content:
+                        application/json: { }
+                        application/xml: { }
+                    description:
+                        ""
+            tags: [ "Bar" ]
         get:
+            description:
+                ""
             operationId: getBar
             parameters:
                 - in: path
                   name: barId
                   required: true
                   schema:
+                      format: int64
                       type: integer
             responses:
                 200:
@@ -67,14 +92,144 @@ paths:
                                 $ref: "#/components/schemas/Bar"
                     description:
                         "Returns the Bar matching the given product ID."
-    "/foo/{fooId}":
+            tags: [ "Bar" ]
+        patch:
+            description:
+                ""
+            operationId: patchBar
+            parameters:
+                - in: path
+                  name: barId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                    description:
+                        ""
+            tags: [ "Bar" ]
+        put:
+            description:
+                ""
+            operationId: putBar
+            parameters:
+                - in: path
+                  name: barId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                    description:
+                        ""
+            tags: [ "Bar" ]
+    "/foo":
         get:
+            description:
+                ""
+            operationId: getFooPage
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Foo"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Foo"
+                                type: array
+                    description:
+                        "Returns the Foo matching the given product ID."
+            tags: [ "Foo" ]
+        post:
+            description:
+                ""
+            operationId: postFoo
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        ""
+            tags: ["Foo"]
+    "/foo/{fooId}":
+        delete:
+            description:
+                ""
+            operationId: deleteFoo
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                204:
+                    content:
+                        application/json: { }
+                        application/xml: { }
+                    description:
+                        ""
+            tags: [ "Foo" ]
+        get:
+            description:
+                ""
             operationId: getFoo
             parameters:
                 - in: path
                   name: fooId
                   required: true
                   schema:
+                      format: int64
                       type: integer
             responses:
                 200:
@@ -88,14 +243,79 @@ paths:
                     description:
                         "Returns the Foo matching the given product ID."
             tags: ["Foo"]
-    "/foo/{fooId}/bars":
-        get:
-            operationId: getFooBars
+        patch:
+            description:
+                ""
+            operationId: patchFoo
             parameters:
                 - in: path
                   name: fooId
                   required: true
                   schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        ""
+            tags: [ "Foo" ]
+        put:
+            description:
+                ""
+            operationId: putFoo
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Foo"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Foo"
+                    description:
+                        ""
+            tags: [ "Foo" ]
+    "/foo/{fooId}/bars":
+        get:
+            description:
+                ""
+            operationId: getFooBarsPage
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      format: int64
                       type: integer
             responses:
                 200:
@@ -113,3 +333,34 @@ paths:
                     description:
                         "Gets all Bars related to a Foo."
             tags: ["Bar"]
+        post:
+            description:
+                ""
+            operationId: postFooBar
+            parameters:
+                - in: path
+                  name: fooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Bar"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Bar"
+                    description:
+                        ""
+            tags: [ "Bar" ]
