@@ -23,7 +23,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		return _foos.get(fooId);
 	}
 
-	private Map<Integer, Foo> _foos = new LinkedHashMap<>() {
+	private Map<Integer, Foo> _foos = new LinkedHashMap<Integer, Foo>() {
 		{
 			Foo truth = new Foo();
 
