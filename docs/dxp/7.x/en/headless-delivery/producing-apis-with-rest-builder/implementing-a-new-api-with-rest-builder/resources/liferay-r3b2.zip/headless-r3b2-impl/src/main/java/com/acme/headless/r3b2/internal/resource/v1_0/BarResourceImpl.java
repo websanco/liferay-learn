@@ -23,21 +23,15 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 
 	@Override
 	public Page<Bar> getFooBars(Integer fooId) {
-		List<Bar> bars = _getBarsByFoo(fooId);
-
-		return Page.of(bars);
-	}
-
-	private List<Bar> _getBarsByFoo(int fooId) {
 		List<Bar> bars = new ArrayList<>();
 
-		for (Bar check : _bars) {
-			if (check.getFooId() == fooId) {
-				bars.add(check);
+		for (Bar bar : _bars) {
+			if (bar.getFooId() == fooId) {
+				bars.add(bar);
 			}
 		}
 
-		return bars;
+		return Page.of(bars);
 	}
 
 	private List<Bar> _bars = Arrays.asList(
