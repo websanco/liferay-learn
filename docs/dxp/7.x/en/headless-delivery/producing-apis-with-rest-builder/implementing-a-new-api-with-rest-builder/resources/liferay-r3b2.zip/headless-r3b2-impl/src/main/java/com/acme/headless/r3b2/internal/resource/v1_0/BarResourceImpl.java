@@ -8,6 +8,7 @@ import com.liferay.portal.vulcan.pagination.Page;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.osgi.service.component.annotations.Component;
@@ -37,7 +38,7 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		List<Bar> bars = new ArrayList<>();
 
 		for (Bar bar : _bars.values()) {
-			if (fooId.equals(bar.getFooId())) {
+			if (Objects.equals(fooId, bar.getFooId())) {
 				bars.add(bar);
 			}
 		}
