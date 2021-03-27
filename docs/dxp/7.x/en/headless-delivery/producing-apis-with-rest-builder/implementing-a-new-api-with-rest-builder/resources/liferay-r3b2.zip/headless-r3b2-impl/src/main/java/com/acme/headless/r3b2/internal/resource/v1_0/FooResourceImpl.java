@@ -39,12 +39,12 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 	public Foo patchFoo(Long fooId, Foo foo) {
 		Foo oldFoo = _foos.get(fooId);
 
-		if (foo.getName() != null) {
-			oldFoo.setName(foo.getName());
-		}
-
 		if (foo.getDescription() != null) {
 			oldFoo.setDescription(foo.getDescription());
+		}
+
+		if (foo.getName() != null) {
+			oldFoo.setName(foo.getName());
 		}
 
 		return oldFoo;

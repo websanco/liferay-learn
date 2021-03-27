@@ -49,12 +49,12 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 	public Bar patchBar(Long barId, Bar bar) {
 		Bar oldBar = _bars.get(barId);
 
-		if (bar.getName() != null) {
-			oldBar.setName(bar.getName());
-		}
-
 		if (bar.getDescription() != null) {
 			oldBar.setDescription(bar.getDescription());
+		}
+
+		if (bar.getName() != null) {
+			oldBar.setName(bar.getName());
 		}
 
 		return oldBar;
