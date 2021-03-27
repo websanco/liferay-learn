@@ -52,7 +52,7 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 
 	@Override
 	public Foo postFoo(Foo foo) {
-		_foos.put((long)_foos.size(), foo);
+		_foos.put(foo.getId(), foo);
 
 		return foo;
 	}
