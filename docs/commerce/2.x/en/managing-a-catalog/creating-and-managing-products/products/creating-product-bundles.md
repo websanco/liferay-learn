@@ -2,7 +2,7 @@
 
 With Liferay Commerce, you can create *Product bundles* using [Product Options](./customizing-your-product-with-product-options.md). Bundles are combinations of goods or services that customers can purchase together as a single package.
 
-For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of selected value to the Product's base price. <!--TASK: Improve example-->
+For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the Product's base price.
 
 <!--TASK: Insert admonition delineating the difference between Grouped Products and Product bundles.-->
 

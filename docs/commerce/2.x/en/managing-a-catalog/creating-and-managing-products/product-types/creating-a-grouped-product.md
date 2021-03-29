@@ -1,10 +1,10 @@
 # Creating a Grouped Product
 
-In Liferay Commerce, a Grouped Product consists of two or more Products from a Catalog that are sold together as a pre-defined set, either for customer convenience or to offer a special price. Grouped Products are tracked in inventory and can include any type of Products (i.e., Simple, Grouped, Virtual). For example, consider a wholesale furniture distributor. While furniture items can be purchased separately, the distributor can group related products together into a furniture set, either for customer convenience, or to offer special deals. <!--TASK: Clarify how inventory works for Grouped Products-->
+In Liferay Commerce, a Grouped Product consists of two or more Products from a Catalog that are sold together as a pre-defined set, either for customer convenience or to offer a special price. Grouped Products are tracked in inventory and can include any type of Products (i.e., Simple, Grouped, Virtual). For example, consider a wholesale furniture distributor. While furniture items can be purchased separately, the distributor can group related products together into a furniture set, either for customer convenience, or to offer special deals.
 
 To get started, [create](#create-a-grouped-product) a Grouped Product and [add](#adding-product-entries) new Product entries to it. Then, configure the Grouped Product and SKU.
 
-<!-- Insert admonition delineating the difference between Grouped Products and Product bundles. -->
+<!--TASK: Insert admonition delineating the difference between Grouped Products and Product bundles. -->
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ The selected Product entries are immediately associated with the Grouped Product
 
 ![View associated Product entries in the Grouped tab, and determine their quantity and priority.](./creating-a-grouped-product/images/02.png)
 
-Once you've created the Grouped Product and associated other Products with it, set a base price for the default [SKU](./../products/adding-skus-to-your-products.md) to make it available for purchase. This price is used in place of each Product's individual price. As long as each individual product has enough stock in the inventory, buyers can select the Grouped Product for purchase.
+Once you've created the Grouped Product and associated other Products with it, set a base price for the default [SKU](./../products/adding-skus-to-your-products.md) to make it available for purchase. This price is used in place of each Product's individual price.
 
 ![Each Product's inventory determines the availability of the Grouped Product](./creating-a-grouped-product/images/05.png)
 

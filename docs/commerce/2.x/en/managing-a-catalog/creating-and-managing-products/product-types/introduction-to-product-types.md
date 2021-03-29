@@ -4,8 +4,7 @@ Commerce Catalogs provides three out-of-the-box Product types: Simple, Grouped, 
 
 **[Simple Product](./creating-a-simple-product.md)**: Any physical product for which inventory is tracked.
 
-**[Grouped Product](./creating-a-grouped-product.md)**: Two or more Products from the Catalog that are packaged together and sold as a single item. Grouped Products are tracked in inventory and can contain Simple Products, other Grouped Products, or Virtual Products.
-<!--True? Doesn't it use each individual Product's inventory-->
+**[Grouped Product](./creating-a-grouped-product.md)**: Two or more Products from the Catalog that are packaged together and sold as a single item. Grouped Products are tracked in your inventory and can contain Simple Products, other Grouped Products, or Virtual Products.
 
 **[Virtual Products](./creating-a-virtual-product.md)**: Any non-tangible Product, such as music files, electronic publications, services, and warranties.
 
