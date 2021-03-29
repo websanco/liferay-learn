@@ -4,7 +4,7 @@ Product SKUs are created without a set base price. So, you'll need to add one be
 
 ## Setting a Product's Base Price
 
-Follow these steps to assign a price to an SKU:
+Follow these steps to assign a price to a SKU:
 
 1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
 

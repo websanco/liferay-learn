@@ -34,11 +34,11 @@ Follow these steps to create a Product bundle:
    * **Field Type**: Choose the type of field used for the Option.
    * **Price Type**: Choose whether to use *Static* or *Dynamic* pricing for Option values.
 
-   ```note::
-      *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the Product's base price.
-      
-      Also, since Product Bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
-   ```
+      ```note::
+         *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the Product's base price.
+
+         Also, since Product Bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
+      ```
 
    ![Configure the Option's settings](./creating-product-bundles/images/02.png)
 
