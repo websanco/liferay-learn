@@ -34,6 +34,8 @@ When the connection is successful, the message, `Your DXP instance is connected 
 
 Congratulation, your DXP is now connected to your AC workspace!
 
+Note - Whenever a new data source is added, a property is automatically created with the same name. In case of duplicates, an incremental suffix will be appended (e.g. Liferay DXP (1)). Both the name of the data source and property can always be renamed afterwards.
+
 ## Next Steps
 
 * [Scoping Sites and Individuals with Properties](./scoping-sites-and-individuals-using-properties.md)
