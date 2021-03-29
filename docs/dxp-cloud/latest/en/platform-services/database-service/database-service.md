@@ -4,7 +4,7 @@ The database service (MySQL) is a distributed relational database service that s
 
 ![Figure 1: The database service is one of several services available in DXP Cloud.](./database-service/images/01.png)
 
-See the [Database service limitations](../../reference/dxp-cloud-limitations.md#database-service) section for more information.
+See the [Database service limitations](../../reference/platform-limitations.md#database-service) section for more information.
 
 ## Environment Variables
 
@@ -34,5 +34,5 @@ Name                                   | Acceptable Value | Default Value |
 
 * [Changing Your Database Username](./changing-your-database-username.md)
 * [Changing Your Database Password](./changing-your-database-password.md)
-* [Database Service Limitations](../../reference/dxp-cloud-limitations.md#database-service)
+* [Database Service Limitations](../../reference/platform-limitations.md#database-service)
 * [Using the MySQL Client](../../using-the-liferay-dxp-service/using-the-mysql-client.md)

@@ -48,7 +48,7 @@ Users can view allocated resources from the DXP Cloud console.
 
 With Liferay DXP Cloud, you can integrate [Dynatrace's](https://www.dynatrace.com/) advanced performance monitoring with your production environments.
 
-See the [Dynatrace limitations](../reference/dxp-cloud-limitations.md#dynatrace) for more information.
+See the [Dynatrace limitations](../reference/platform-limitations.md#dynatrace) for more information.
 
 ### Integrating Dynatrace with Production Environments
 

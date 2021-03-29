@@ -6,7 +6,7 @@ services in your application, not with the outside internet.
 
 ![Figure 1: The Elasticsearch service is one of several services available in DXP Cloud.](./search-service/images/01.png)
 
-See the [Search service limitations](../reference/dxp-cloud-limitations.md#search-service) section for more information.
+See the [Search service limitations](../reference/platform-limitations.md#search-service) section for more information.
 
 ## Configurations
 

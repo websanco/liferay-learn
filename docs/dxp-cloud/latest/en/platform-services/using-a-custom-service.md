@@ -8,7 +8,7 @@ DXP Cloud allows you to run more than just the standard set of services provided
 
 DXP Cloud uses Docker images as the basis for its services. If you want to run these services locally, [install Docker](https://docs.docker.com/get-docker/) on your local system.
 
-See the [custom services limitations](../reference/dxp-cloud-limitations.md#custom-services) for more information.
+See the [custom services limitations](../reference/platform-limitations.md#custom-services) for more information.
 
 ## Adding a Custom Service
 

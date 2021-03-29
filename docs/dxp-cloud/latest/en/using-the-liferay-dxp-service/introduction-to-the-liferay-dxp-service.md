@@ -6,7 +6,7 @@ The Liferay DXP service is the heartbeat of any project. It runs the application
 
 The Liferay DXP service in DXP Cloud can be used in many of the same ways as an on-premise instance of Liferay DXP. However, there are also several differences in configuration and development workflow when working with an instance in DXP Cloud.
 
-See the [Liferay service limitations](../reference/dxp-cloud-limitations.md#liferay-service) for more information.
+See the [Liferay service limitations](../reference/platform-limitations.md#liferay-service) for more information.
 
 * [Choosing a Version](#choosing-a-version)
 * [Deployment (Customization, Patching, and Licensing)](#deployment-customization-patching-and-licensing)

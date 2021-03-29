@@ -12,7 +12,7 @@ By default, this automated build will compile code and can be configured to exec
    Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
 ```
 
-See the [CI service limitations](../reference/dxp-cloud-limitations.md#continuous-integration-service) for more information.
+See the [CI service limitations](../reference/platform-limitations.md#continuous-integration-service) for more information.
 
 ## Using the Default Jenkinsfile
 
