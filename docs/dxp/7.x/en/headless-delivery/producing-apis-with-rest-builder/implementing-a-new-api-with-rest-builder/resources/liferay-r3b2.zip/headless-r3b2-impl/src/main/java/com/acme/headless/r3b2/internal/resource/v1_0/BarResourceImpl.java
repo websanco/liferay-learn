@@ -6,10 +6,10 @@ import com.acme.headless.r3b2.resource.v1_0.BarResource;
 import com.liferay.portal.vulcan.pagination.Page;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -75,76 +75,74 @@ public class BarResourceImpl extends BaseBarResourceImpl {
 		return bar;
 	}
 
-	private static final Map<Long, Bar> _bars =
-		new ConcurrentHashMap<Long, Bar>() {
-			{
-				Bar bar1 = new Bar() {
-					{
-						description =
-							"Faith is the substance of things hoped for.";
-						fooId = 1L;
-						id = 1L;
-						name = "Faith";
-					}
-				};
+	private static final Map<Long, Bar> _bars = new Hashtable<Long, Bar>() {
+		{
+			Bar bar1 = new Bar() {
+				{
+					description = "Faith is the substance of things hoped for.";
+					fooId = 1L;
+					id = 1L;
+					name = "Faith";
+				}
+			};
 
-				put(bar1.getId(), bar1);
+			put(bar1.getId(), bar1);
 
-				Bar bar2 = new Bar() {
-					{
-						description = "Lay hold of the hope set before us.";
-						fooId = 2L;
-						id = 2L;
-						name = "Hope";
-					}
-				};
+			Bar bar2 = new Bar() {
+				{
+					description = "Lay hold of the hope set before us.";
+					fooId = 2L;
+					id = 2L;
+					name = "Hope";
+				}
+			};
 
-				put(bar2.getId(), bar2);
+			put(bar2.getId(), bar2);
 
-				Bar bar3 = new Bar() {
-					{
-						description = "The greatest of these is love.";
-						fooId = 3L;
-						id = 3L;
-						name = "Love";
-					}
-				};
+			Bar bar3 = new Bar() {
+				{
+					description = "The greatest of these is love.";
+					fooId = 3L;
+					id = 3L;
+					name = "Love";
+				}
+			};
 
-				put(bar3.getId(), bar3);
+			put(bar3.getId(), bar3);
 
-				Bar bar4 = new Bar() {
-					{
-						description = "Enter into the joy of your master.";
-						fooId = 1L;
-						id = 4L;
-						name = "Joy";
-					}
-				};
+			Bar bar4 = new Bar() {
+				{
+					description = "Enter into the joy of your master.";
+					fooId = 1L;
+					id = 4L;
+					name = "Joy";
+				}
+			};
 
-				put(bar4.getId(), bar4);
+			put(bar4.getId(), bar4);
 
-				Bar bar5 = new Bar() {
-					{
-						description = "Peace to you!";
-						fooId = 2L;
-						id = 5L;
-						name = "Peace";
-					}
-				};
+			Bar bar5 = new Bar() {
+				{
+					description = "Peace to you!";
+					fooId = 2L;
+					id = 5L;
+					name = "Peace";
+				}
+			};
 
-				put(bar5.getId(), bar5);
+			put(bar5.getId(), bar5);
 
-				Bar bar6 = new Bar() {
-					{
-						description = "Faith produces patience.";
-						fooId = 3L;
-						id = 6L;
-						name = "Patience";
-					}
-				};
+			Bar bar6 = new Bar() {
+				{
+					description = "Faith produces patience.";
+					fooId = 3L;
+					id = 6L;
+					name = "Patience";
+				}
+			};
 
-				put(bar6.getId(), bar6);
-			}
-		};
+			put(bar6.getId(), bar6);
+		}
+	};
 
 }

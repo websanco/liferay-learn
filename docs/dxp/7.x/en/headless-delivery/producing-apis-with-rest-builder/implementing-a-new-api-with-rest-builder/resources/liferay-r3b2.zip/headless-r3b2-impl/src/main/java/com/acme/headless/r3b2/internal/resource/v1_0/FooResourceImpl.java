@@ -5,8 +5,8 @@ import com.acme.headless.r3b2.resource.v1_0.FooResource;
 
 import com.liferay.portal.vulcan.pagination.Page;
 
+import java.util.Hashtable;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -64,42 +64,41 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 		return foo;
 	}
 
-	private static final Map<Long, Foo> _foos =
-		new ConcurrentHashMap<Long, Foo>() {
-			{
-				Foo foo1 = new Foo() {
-					{
-						description = "Universal truth must be transcendental.";
-						id = 1L;
-						name = "Truth";
-					}
-				};
+	private static final Map<Long, Foo> _foos = new Hashtable<Long, Foo>() {
+		{
+			Foo foo1 = new Foo() {
+				{
+					description = "Universal truth must be transcendental.";
+					id = 1L;
+					name = "Truth";
+				}
+			};
 
-				put(foo1.getId(), foo1);
+			put(foo1.getId(), foo1);
 
-				Foo foo2 = new Foo() {
-					{
-						description =
-							"Beauty is guided by a transcendental aesthetic.";
-						id = 2L;
-						name = "Beauty";
-					}
-				};
+			Foo foo2 = new Foo() {
+				{
+					description =
+						"Beauty is guided by a transcendental aesthetic.";
+					id = 2L;
+					name = "Beauty";
+				}
+			};
 
-				put(foo2.getId(), foo2);
+			put(foo2.getId(), foo2);
 
-				Foo foo3 = new Foo() {
-					{
-						description =
-							"Goodness is defined transcendentally from " +
-								"outside humanity.";
-						id = 3L;
-						name = "Goodness";
-					}
-				};
+			Foo foo3 = new Foo() {
+				{
+					description =
+						"Goodness is defined transcendentally from outside " +
+							"humanity.";
+					id = 3L;
+					name = "Goodness";
+				}
+			};
 
-				put(foo3.getId(), foo3);
-			}
-		};
+			put(foo3.getId(), foo3);
+		}
+	};
 
 }
