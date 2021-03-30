@@ -1,5 +1,23 @@
 components:
     schemas:
+        Foo:
+            description:
+                A dummy object that has no meaning.
+            properties:
+                description:
+                    description:
+                        Say something about your Foo.
+                    type: string
+                id:
+                    description:
+                        The Foo's ID
+                    format: int64
+                    type: integer
+                name:
+                    description:
+                        The title of your Foo.
+                    type: string
+            type: object
         Goo:
             description:
                 Another dummy object to go with Foo.
@@ -22,24 +40,6 @@ components:
                     description:
                         The title of your Goo.
                     type: string
-        Foo:
-            description:
-                A dummy object that has no meaning.
-            properties:
-                description:
-                    description:
-                        Say something about your Foo.
-                    type: string
-                id:
-                    description:
-                        The Foo's ID
-                    format: int64
-                    type: integer
-                name:
-                    description:
-                        The title of your Foo.
-                    type: string
-            type: object
 info:
     description:
         "API to return a Foo."
@@ -50,111 +50,6 @@ info:
     version: v1.0
 openapi: 3.0.1
 paths:
-    "/goo/{gooId}":
-        delete:
-            description:
-                ""
-            operationId: deleteGoo
-            parameters:
-                - in: path
-                  name: gooId
-                  required: true
-                  schema:
-                      format: int64
-                      type: integer
-            responses:
-                204:
-                    content:
-                        application/json: { }
-                        application/xml: { }
-                    description:
-                        ""
-            tags: [ "Goo" ]
-        get:
-            description:
-                ""
-            operationId: getGoo
-            parameters:
-                - in: path
-                  name: gooId
-                  required: true
-                  schema:
-                      format: int64
-                      type: integer
-            responses:
-                200:
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                        application/xml:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                    description:
-                        "Returns the Goo matching the given product ID."
-            tags: [ "Goo" ]
-        patch:
-            description:
-                ""
-            operationId: patchGoo
-            parameters:
-                - in: path
-                  name: gooId
-                  required: true
-                  schema:
-                      format: int64
-                      type: integer
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: "#/components/schemas/Goo"
-                    application/xml:
-                        schema:
-                            $ref: "#/components/schemas/Goo"
-            responses:
-                200:
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                        application/xml:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                    description:
-                        ""
-            tags: [ "Goo" ]
-        put:
-            description:
-                ""
-            operationId: putGoo
-            parameters:
-                - in: path
-                  name: gooId
-                  required: true
-                  schema:
-                      format: int64
-                      type: integer
-            requestBody:
-                content:
-                    application/json:
-                        schema:
-                            $ref: "#/components/schemas/Goo"
-                    application/xml:
-                        schema:
-                            $ref: "#/components/schemas/Goo"
-            responses:
-                200:
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                        application/xml:
-                            schema:
-                                $ref: "#/components/schemas/Goo"
-                    description:
-                        ""
-            tags: [ "Goo" ]
     "/foo":
         get:
             description:
@@ -340,6 +235,111 @@ paths:
             parameters:
                 - in: path
                   name: fooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Goo"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Goo"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                    description:
+                        ""
+            tags: [ "Goo" ]
+    "/goo/{gooId}":
+        delete:
+            description:
+                ""
+            operationId: deleteGoo
+            parameters:
+                - in: path
+                  name: gooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                204:
+                    content:
+                        application/json: { }
+                        application/xml: { }
+                    description:
+                        ""
+            tags: [ "Goo" ]
+        get:
+            description:
+                ""
+            operationId: getGoo
+            parameters:
+                - in: path
+                  name: gooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                    description:
+                        "Returns the Goo matching the given product ID."
+            tags: [ "Goo" ]
+        patch:
+            description:
+                ""
+            operationId: patchGoo
+            parameters:
+                - in: path
+                  name: gooId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Goo"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Goo"
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Goo"
+                    description:
+                        ""
+            tags: [ "Goo" ]
+        put:
+            description:
+                ""
+            operationId: putGoo
+            parameters:
+                - in: path
+                  name: gooId
                   required: true
                   schema:
                       format: int64
