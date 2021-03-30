@@ -1,7 +1,7 @@
 headless-r3b2-api/src
 headless-r3b2-client/src
 headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/graphql
-headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/jaxrs
+headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/jaxrs/application
 headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/Base*.java
 headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/OpenAPIResourceImpl.java
 headless-r3b2-impl/src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/factory
