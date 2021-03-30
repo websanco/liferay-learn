@@ -14,13 +14,16 @@ See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/a
 
 As you proceed, remember these terms: 
 
-*Solr Home*: The center of the Solr system (pun intended). This directory is `solr-[version]/server/solr`.
+*Solr Home*: Refers to `solr-[version]/server/solr/`, the main Solr configuration directory. This is where the Liferay core will be configured.
 
 *Liferay Home*: The root folder of your Liferay installation. It contains the `osgi`, `deploy`, `data`, and `license` folders, among others.
 
 ## Disabling Elasticsearch-Only Features
 
-Before installing the Liferay Connector to Solr, you must [blacklist](../../../system-administration/installing-and-managing-apps/managing-apps/blacklisting-apps.md) certain DXP [features that only work with Elasticsearch](./solr-limitations.md).
+Before installing the Liferay Connector to Solr, you must blacklist or otherwise disable
+
+- the modules for certain DXP features that only work with Elasticsearch
+- the Liferay Connector to Elasticsearch's modules
 
 ```tip::
    Use the Gogo shell command ``lb [substring-to-search] -s`` to search for modules deployed to the OSGi runtime and list them by their Symbolic Name. The Symbolic Name is the value to enter in the ``blacklistBundleSymbolicNames`` property.
@@ -29,6 +32,10 @@ Before installing the Liferay Connector to Solr, you must [blacklist](../../../s
 
    ``lb -s | grep 'search' | grep 'elasticsearch|tuning'``
 ```
+
+### Blacklisting Elasticsearch-Only Features
+
+If you're a Liferay DXP customer you should use the blacklist feature to disable the Elasticsearch-only features. CE users can also use this approach:
 
 1. Create a configuration file named
 
@@ -54,7 +61,9 @@ Before installing the Liferay Connector to Solr, you must [blacklist](../../../s
    - `com.liferay.portal.search.tuning.rankings.web`
    - `com.liferay.portal.search.tuning.synonyms.web`
 
-If you're a Liferay DXP customer you should use the blacklist feature as described above. The App Manager and Gogo shell rely on the `osgi/state` folder to "remember" the state of the bundle. If you delete this folder (recommended during patching) the Elasticsearch connector is reinstalled and started automatically. Liferay CE users can use the blacklist approach or disable the Elasticsearch and search tuning modules in the App Manager or the Gogo shell. 
+### Stopping the Modules with Elasticsearch-Only Features
+
+The App Manager and Gogo shell rely on the `osgi/state` folder to "remember" the state of the bundle. If you delete this folder (recommended during [patching Liferay DXP](../../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)) the Elasticsearch connector is reinstalled and started automatically. Liferay CE users can use the blacklist approach or disable the Elasticsearch and search tuning modules in the App Manager or the Gogo shell. 
 
 To disable via App Manager,
 
@@ -70,9 +79,9 @@ To use the [Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-
 
 1. For each bundle listed enter `stop [bundle ID]`.
 
-**Stop the Liferay instance.**
-
 ## Installing and Configuring Solr
+
+**Before proceeding, stop the Liferay instance.**
 
 To install and properly configure Solr for Liferay:
 
