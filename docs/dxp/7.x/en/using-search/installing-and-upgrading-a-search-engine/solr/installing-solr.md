@@ -52,7 +52,7 @@ If you're a Liferay DXP customer you should use the blacklist feature to disable
 1. Place the file in `Liferay Home/osgi/configs`. 
 
    Here's the complete list of apps and bundles you're disabling:
-   
+
    - `com.liferay.portal.search.elasticsearch7.api`
    - `com.liferay.portal.search.elasticsearch7.impl`
    - `com.liferay.portal.search.elasticsearch7.spi`
@@ -69,7 +69,7 @@ To disable via App Manager,
 
 1. Navigate to Control Panel &rarr; Apps &rarr; App Manager.
 
-1. Once in the App Manager, search for *elasticsearch*. Find the Liferay Connector to Elasticsearch 7 modules and open the Actions ((![Actions](../../../images/icon-actions.png))) menu. Choose _Deactivate_.  This leaves the bundle installed, but stops it in the OSGi runtime. Do the same for the search tuning modules.
+1. Once in the App Manager, search for *elasticsearch*. Find the Liferay Connector to Elasticsearch 7 modules and open the Actions (![Actions](../../../images/icon-actions.png)) menu. Choose _Deactivate_.  This leaves the bundle installed, but stops it in the OSGi runtime. Do the same for the search tuning modules.
 
 To use the [Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to stop the Elasticsearch and search tuning modules,
 
@@ -146,11 +146,11 @@ To install and properly configure Solr for Liferay:
    └── data
    ```
 
-1. Start the Solr server by entering
+1. Start the Solr server by entering the following from the top-level folder of your Solr installation (`solr-[version]`):
 
+   ```bash
    ./bin/solr start -f
-
-   from the top-level folder of your Solr installation (`solr-[version]`).
+   ```
 
 1. The Solr server listens on port `8983` by default. Navigate to <http://localhost:8983/solr/#/~cores> (assuming you're testing locally with `localhost` as your host), and confirm that the `liferay` core is available.
 
