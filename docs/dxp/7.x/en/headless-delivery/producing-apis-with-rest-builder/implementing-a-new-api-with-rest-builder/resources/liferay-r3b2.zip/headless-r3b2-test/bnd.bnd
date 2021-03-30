@@ -1,0 +1,4 @@
+Bundle-Name: Acme Headless R3B2 Test
+Bundle-SymbolicName: com.acme.headless.r3b2.test
+Bundle-Version: 1.0.0
+-includeresource: com.acme.headless.r3b2.client.jar=com.acme.headless.r3b2.client-*.jar;lib:=true

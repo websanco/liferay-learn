@@ -1,0 +1,3 @@
+Bundle-Name: Acme Headless R3B2 Client
+Bundle-SymbolicName: com.acme.headless.r3b2.client
+Bundle-Version: 1.0.0
