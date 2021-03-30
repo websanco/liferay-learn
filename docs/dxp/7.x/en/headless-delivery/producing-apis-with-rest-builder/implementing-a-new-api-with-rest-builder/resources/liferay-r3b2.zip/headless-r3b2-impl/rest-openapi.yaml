@@ -1,12 +1,12 @@
 components:
     schemas:
-        Bar:
+        Goo:
             description:
                 Another dummy object to go with Foo.
             properties:
                 description:
                     description:
-                        Say something about your Bar.
+                        Say something about your Goo.
                     type: string
                 fooId:
                     description:
@@ -15,12 +15,12 @@ components:
                     type: integer
                 id:
                     description:
-                        The Bar's ID
+                        The Goo's ID
                     format: int64
                     type: integer
                 name:
                     description:
-                        The title of your Bar.
+                        The title of your Goo.
                     type: string
         Foo:
             description:
@@ -50,14 +50,14 @@ info:
     version: v1.0
 openapi: 3.0.1
 paths:
-    "/bar/{barId}":
+    "/goo/{gooId}":
         delete:
             description:
                 ""
-            operationId: deleteBar
+            operationId: deleteGoo
             parameters:
                 - in: path
-                  name: barId
+                  name: gooId
                   required: true
                   schema:
                       format: int64
@@ -69,14 +69,14 @@ paths:
                         application/xml: { }
                     description:
                         ""
-            tags: [ "Bar" ]
+            tags: [ "Goo" ]
         get:
             description:
                 ""
-            operationId: getBar
+            operationId: getGoo
             parameters:
                 - in: path
-                  name: barId
+                  name: gooId
                   required: true
                   schema:
                       format: int64
@@ -86,20 +86,20 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                         application/xml:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                     description:
-                        "Returns the Bar matching the given product ID."
-            tags: [ "Bar" ]
+                        "Returns the Goo matching the given product ID."
+            tags: [ "Goo" ]
         patch:
             description:
                 ""
-            operationId: patchBar
+            operationId: patchGoo
             parameters:
                 - in: path
-                  name: barId
+                  name: gooId
                   required: true
                   schema:
                       format: int64
@@ -108,29 +108,29 @@ paths:
                 content:
                     application/json:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
                     application/xml:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
             responses:
                 200:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                         application/xml:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                     description:
                         ""
-            tags: [ "Bar" ]
+            tags: [ "Goo" ]
         put:
             description:
                 ""
-            operationId: putBar
+            operationId: putGoo
             parameters:
                 - in: path
-                  name: barId
+                  name: gooId
                   required: true
                   schema:
                       format: int64
@@ -139,22 +139,22 @@ paths:
                 content:
                     application/json:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
                     application/xml:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
             responses:
                 200:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                         application/xml:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                     description:
                         ""
-            tags: [ "Bar" ]
+            tags: [ "Goo" ]
     "/foo":
         get:
             description:
@@ -305,11 +305,11 @@ paths:
                     description:
                         ""
             tags: [ "Foo" ]
-    "/foo/{fooId}/bars":
+    "/foo/{fooId}/goos":
         get:
             description:
                 ""
-            operationId: getFooBarsPage
+            operationId: getFooGoosPage
             parameters:
                 - in: path
                   name: fooId
@@ -323,20 +323,20 @@ paths:
                         application/json:
                             schema:
                                 items:
-                                    $ref: "#/components/schemas/Bar"
+                                    $ref: "#/components/schemas/Goo"
                                 type: array
                         application/xml:
                             schema:
                                 items:
-                                    $ref: "#/components/schemas/Bar"
+                                    $ref: "#/components/schemas/Goo"
                                 type: array
                     description:
-                        "Gets all Bars related to a Foo."
-            tags: ["Bar"]
+                        "Gets all Goos related to a Foo."
+            tags: ["Goo"]
         post:
             description:
                 ""
-            operationId: postFooBar
+            operationId: postFooGoo
             parameters:
                 - in: path
                   name: fooId
@@ -348,19 +348,19 @@ paths:
                 content:
                     application/json:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
                     application/xml:
                         schema:
-                            $ref: "#/components/schemas/Bar"
+                            $ref: "#/components/schemas/Goo"
             responses:
                 200:
                     content:
                         application/json:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                         application/xml:
                             schema:
-                                $ref: "#/components/schemas/Bar"
+                                $ref: "#/components/schemas/Goo"
                     description:
                         ""
-            tags: [ "Bar" ]
+            tags: [ "Goo" ]
