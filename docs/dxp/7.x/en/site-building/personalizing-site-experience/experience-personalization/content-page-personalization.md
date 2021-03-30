@@ -16,8 +16,8 @@ You can create multiple experiences for the same Content Page, each experience c
 Consider the following information when you create multiple experiences for the same Content Page:
 
 - Every Content Page includes a *Default* experience. When you create a new Experience, *Default* is used as a template.
-- You can modify the *Default* experience, but existing experiences based on *Default* don't change.
-- You can duplicate any experience except *Default*.
+- You can modify the Default experience, but existing experiences based on Default don't change.
+- You can duplicate any experience except Default.
 - You can reorder Experiences in the selection dialog using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
 - When you have multiple experiences in the same Content Page, their order determines their preference:
   
@@ -40,7 +40,7 @@ To better understand how the Experiences' preference works, consider this exampl
 
 In this example:
 
-- A non-authenticated user sees the Experience *Anonymous User* (the one with the _Active_ label). This users doesn't see the *Anonymous User Promotions* Experience because it's listed below *Anonymous User*.
+- A non-authenticated user sees the Experience *Anonymous User* (the one with the _Active_ label). This user doesn't see the *Anonymous User Promotions* Experience because it appears below *Anonymous User*.
 - Authenticated users don't see the *Authenticated user* Experience, because the *No customization* Experience applies to the *Anyone* Segment and it's listed first.
 - Anyone not in the *Anonymous User* or *Authenticated User* Segments sees the *No customization* Experience because it targets *Anyone*.
 
@@ -53,7 +53,7 @@ In this example:
     ![Click on the current experience to create a new one or select a different existing experience.](./content-page-personalization/images/01.png)
 
 4. Click on *New Experience*.
-5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a *New Segment*](../segmentation/creating-and-managing-user-segments.md) (available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.)
+5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a New Segment](../segmentation/creating-and-managing-user-segments.md) (available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.)
 
     ![Select an existing Segment for the Experience or create a new Segment.](./content-page-personalization/images/02.png)
 
@@ -76,7 +76,7 @@ When you edit a Content Page, you can click on the *Experience* to manage the op
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 2. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
-3. Click on the Experience you want to manage. From here you can:
+3. Click on the Experience you want to manage. From here you can
 
    - Set the Experience Priority, using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
    - Edit (![Edit](../../../images/icon-edit.png)) the Experience's name or the selected Segment.
@@ -85,7 +85,7 @@ When you edit a Content Page, you can click on the *Experience* to manage the op
 
 ## Content Page Experiences and A/B Testing
 
-When you [create an A/B Test](../../optimizing-sites/ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one, or any other you have created.
+When you [create an A/B Test](../../optimizing-sites/ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one or any other you have created.
 
 To avoid changes in the Experience that can interfere with the A/B Test results, you cannot edit an Experience that is part of a running A/B Test. In this situation, the Experience shows a locker icon (![locker](../../../images/icon-lock.png)) next to its name.
 
