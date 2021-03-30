@@ -53,7 +53,8 @@ public class FooResourceImpl extends BaseFooResourceImpl {
 	@Override
 	public Foo postFoo(Foo foo) {
 		if (_foos.containsKey(foo.getId())) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException(
+				"Duplicate foo ID " + foo.getId());
 		}
 
 		_foos.put(foo.getId(), foo);

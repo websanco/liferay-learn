@@ -64,8 +64,11 @@ public class GooResourceImpl extends BaseGooResourceImpl {
 	@Override
 	public Goo postFooGoo(Long fooId, Goo goo) {
 		if (_goos.containsKey(goo.getId())) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException(
+				"Duplicate goo ID " + goo.getId());
 		}
+
+		goo.setFooId(fooId);
 
 		_goos.put(goo.getId(), goo);
 

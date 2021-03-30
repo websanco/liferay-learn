@@ -15,11 +15,11 @@ import org.osgi.service.component.annotations.Component;
 	property = {
 		"osgi.jaxrs.application.select=(osgi.jaxrs.name=Acme.Headless.R3B2)",
 		"osgi.jaxrs.extension=true",
-		"osgi.jaxrs.name=Acme.Headless.R3B2.DuplicatedResourceExceptionMapper"
+		"osgi.jaxrs.name=Acme.Headless.R3B2.IllegalArgumentExceptionExceptionMapper"
 	},
 	service = ExceptionMapper.class
 )
-public class DuplicatedResourceExceptionMapper
+public class IllegalArgumentExceptionExceptionMapper
 	extends BaseExceptionMapper<IllegalArgumentException> {
 
 	@Override
