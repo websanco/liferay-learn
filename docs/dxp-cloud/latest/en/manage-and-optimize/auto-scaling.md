@@ -72,19 +72,21 @@ If the `autoscale` property isn't set, the target average utilization defaults t
 
 ## Setting the Maximum Number of Instances
 
-By default, auto-scaling can increase the number of instances for a service up to 10. However, you can override this default to use more instances if necessary. You must override the default in two places to allow services to use more than the default 10 instances.
+By default, auto-scaling can increase the number of instances for the `liferay` service up to 10. However, you can override this default to use more instances if necessary. You must override the default in two places to allow services to use more than the default 10 instances:
 
-Before you can increase the maximum number of instances for any service, you set the `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` [environment variable](../reference/defining-environment-variables.md) in your [web server service](../platform-services/web-server-service.md) to the highest value needed. Services may not scale beyond the maximum number of instances defined in `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` (10 by default).
+1. Set the `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` [environment variable](../reference/defining-environment-variables.md) in your [web server service](../platform-services/web-server-service.md) to the highest value needed. The `liferay` service may not scale beyond the maximum number of instances defined in `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` (10 by default).
 
-For each individual service, specify the desired maximum instances if it needs more than the default 10. In the service's corresponding `LCP.json` file, set the `maxInstances` field within the [`autoscale` object](#specifying-target-average-utilization):
+1. Within the `liferay` service's `LCP.json` file, specify the desired maximum instances if it needs more than the default 10. Set the `maxInstances` field within the [`autoscale` object](#specifying-target-average-utilization):
 
-```json
-"autoscale": {
-    "cpu": 80,
-    "memory": 80,
-    "maxInstances": 15
-}
-```
+    ```json
+    "autoscale": {
+        "cpu": 80,
+        "memory": 80,
+        "maxInstances": 15
+    }
+    ```
+
+Once you have updated both of these configurations, then auto-scaling can your `liferay` service's instances up to your newly defined maximum.
 
 ## Auto-scaling and DXP Activation Keys
 
