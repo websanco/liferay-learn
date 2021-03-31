@@ -15,7 +15,7 @@ Next, use the `get-countries` JSON web service (there are two---use either one).
 1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
 1. Search for "get-countries".
 
-    ![Search for the get-countries web service.](./using-data-providers-to-populate-form-options/images/01.png)
+    ![Search for the get-countries web service.](./using-data-providers-to-populate-form-options/images/02.png)
 
 1. Click _Invoke_.
 
@@ -31,7 +31,7 @@ To enable local network access from data providers:
 1. Click _Data Providers_ (under Content & Data).
 1. Check the _Access Local Network_ checkbox.
 
-    ![Grant access to the local network.](./using-data-providers-to-populate-form-options/images/02.png)
+    ![Grant access to the local network.](./using-data-providers-to-populate-form-options/images/01.png)
 
 1. Click _Save_ when finished.
 
@@ -94,7 +94,7 @@ To configure the data provider's permissions:
 1. Click the Data Providers tab.
 1. Click the Actions button (![Actions](../../../images/icon-actions.png)), then _Permissions_ next to the data provider.
 
-    ![Grant Guest View Permissions.](./using-data-providers-to-populate-form-options/images/06.png)
+    ![Grant Guest View Permissions.](./using-data-providers-to-populate-form-options/images/05.png)
 
 1. Grant the necessary permissions.
 1. Click _Save_ when finished.
@@ -109,7 +109,7 @@ Once the Data Provider is configured, use it to populate a Select from List fiel
 1. Select _Countries of the World_ from the Choose a Data Provider dropdown menu.
 1. Select _Country Name_ from the Choose an Output Parameter dropdown menu.
 
-    ![Configure the Data Provider values on the Select from List field.](./using-data-providers-to-populate-form-options/images/05.png)
+    ![Configure the Data Provider values on the Select from List field.](./using-data-providers-to-populate-form-options/images/06.png)
 
 1. Click _Save Form_ when finished.
 
@@ -121,12 +121,11 @@ The Data Provider is now being used to populate a select field.
 
 To uncover errors arising from Data Provider failures, [configure log levels](../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for these services:
 
-1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Server Administration_.
+1. Navigate to the _Control Panel_ &rarr; _System_ &rarr; _Server Administration_.
 1. Click the _Log Levels_ tab.
-1. Search for `com.liferay.dynamic.data.mapping.data.provider.web.internal.DDMDataProviderPortlet` in the Category field.
-1. Select _WARN_ in the Level field.
-1. Click _Save_ when finished.
-
+1. Add the logging category `com.liferay.dynamic.data.mapping.data.provider.internal.DDMDataProviderInvokerImpl` and configure it to log at the _WARN_ level. _Save_ when finished.
+1. Add the logging category `com.liferay.dynamic.data.mapping.form.field.type.internal.DDMFormFieldOptionsFactoryImpl` and configure it to log at the _WARN_ level. _Save_ when finished.
+ 
 The console now sends warning messages whenever there are errors in the Data Provider.
 
 ## Additional Information
