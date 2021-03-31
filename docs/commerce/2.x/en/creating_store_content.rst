@@ -12,6 +12,8 @@ Creating Store Content
    creating-store-content/commerce_storefront_pages.rst
    creating-store-content/using_web_experience_management.rst
    creating-store-content/design_and_theme.rst
+   creating-store-content/liferay-commerce-widgets.rst
+
 
 .. raw:: html
    :file: landingpage_template.html

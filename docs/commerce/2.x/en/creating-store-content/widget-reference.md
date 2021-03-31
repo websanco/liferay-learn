@@ -18,6 +18,7 @@ The following article documents all the Liferay Commerce Widgets and their funct
 | Option Facet | Allows users to search using all the Product Options associated with this product  |
 | Orders | Displays a list of a placed orders |
 | Organization Management | Displays a list of all organizations |
+| Price Range Facet | Allows users to specify a price range for their search |
 | Product Comparison Bar | Displays selected products for future comparison  |
 | Product Comparison Table | Displays selected products' specifications side by side |
 | Product Details | Displays information about a product and adds the product to the cart |
