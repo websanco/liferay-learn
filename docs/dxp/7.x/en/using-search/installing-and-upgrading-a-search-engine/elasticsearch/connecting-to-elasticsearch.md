@@ -1,6 +1,6 @@
 # Connecting to Elasticsearch
 
-After [setting up Elasticsearch](./installing-elasticsearch.md), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-connector-applications) you're configuring:
+After [setting up Elasticsearch](./installing-elasticsearch.md), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-elasticsearch-connectors) you're configuring:
 
 * Liferay 7.3: Liferay Connector to Elasticsearch is included in the Liferay DXP 7.3 and CE 7.3 GA4+. It's also available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
 * Liferay 7.2: Liferay Connector to Elasticsearch is available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
@@ -182,15 +182,15 @@ The bundled connector to Elasticsearch is not always the best choice for your in
 
 | Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Operation Modes |
 | ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | --------------- |
-| CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)* |
-| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\** (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded / Remote |
+| CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)\* |
+| CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\*\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded / Remote |
 | CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | Marketplace: [CE](https://web.liferay.com/marketplace/-/mp/application/170642090), [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; |  Embedded / Remote |
 
-\* Property _Operation Mode_ (`operationMode`) of the connector config has been deprecated and replaced with _Production Mode Enabled_ (`productionModeEnabled`).
+\* The connector configuration's _Operation Mode_ (`operationMode`) setting is  deprecated and replaced with _Production Mode Enabled_ (`productionModeEnabled`).
 
-\** Through the [Liferay Enterprise Search Security](https://web.liferay.com/marketplace/-/mp/application/106163963) application.
+\*\* Through the [Liferay Enterprise Search Security](https://web.liferay.com/marketplace/-/mp/application/106163963) application.
 
-For detailed compatibility information including the compatible Elasticsearch versions and required patch levels, see the Search Engine Compatibility Matrix: https://help.liferay.com/hc/en-us/articles/360016511651.
+For detailed compatibility information, including the compatible Elasticsearch versions and required patch levels, see the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651).
 
 ## What's Next 
 
