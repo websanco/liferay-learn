@@ -4,11 +4,11 @@ Workspace Data
 .. toctree::
    :maxdepth: 1
 
-   workspace-data/managing-apis.md
+   workspace-data/managing-api-access.md
    workspace-data/data-control-and-privacy.md
    workspace-data/definitions.rst
 
--  :doc:`/workspace-data/managing-apis`
+-  :doc:`/workspace-data/managing-apis-access`
 -  :doc:`/workspace-data/data-control-and-privacy`
 
 Definitions
