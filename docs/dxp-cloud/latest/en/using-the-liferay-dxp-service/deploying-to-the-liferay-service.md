@@ -57,7 +57,7 @@ liferay
           └── portal-ext.properties
 ```
 
-Once deployed, any files within the `configs/{ENV}/deploy/` directory are copied to the `deploy/` folder in the Liferay bundle in your Liferay service's container.
+Once deployed, any files within the `configs/{ENV}/deploy/` directory are copied to the `$LIFERAY_HOME/deploy/` folder in your Liferay service's container.
 
 ```note::
    If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate ``lcp/liferay/deploy/{ENV}`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
@@ -76,6 +76,8 @@ A CI build will compile source code within these folders:
 ```note::
    If you are using version 3.x.x services, then these subfolders are located at the root of the repository instead of in the ``liferay/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
+
+Once deployed, the deployable `.jar` or `.war` files are copied to the `$LIFERAY_HOME/deploy/` folder in your Liferay service's container. This occurs whether the build in CI compiles your code, or you generate it yourself using the available [Gradle command](#cli-tool-deployment) before deployment.
 
 ## Deploying Hotfixes
 
