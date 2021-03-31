@@ -44,7 +44,7 @@ Copy your XML file to the container's `/opt/liferay/deploy` folder. While proces
 
 ### Deploying to DXP Cloud
 
-Copy your key to the [`liferay/configs/{ENV}/deploy/`](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.html#licenses) folder in your Project's central Git repository, and commit your changes. Then, trigger a Jenkins build for your Liferay service, and deploy it to the desired Project environment. See [Overview of the DXP Cloud Deployment Workflow](https://learn.liferay.com/dxp-cloud/latest/en/build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.html) for more information about deploying files to an environment's Liferay service.
+Copy your key to the [`liferay/configs/{ENV}/deploy/`](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/deploying-to-the-liferay-service.html#deploying-licenses) folder in your Project's central Git repository, and commit your changes. Then, trigger a Jenkins build for your Liferay service, and deploy it to the desired Project environment. See [Overview of the DXP Cloud Deployment Workflow](https://learn.liferay.com/dxp-cloud/latest/en/build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.html) for more information about deploying files to an environment's Liferay service.
 
 ```important::
    If you've purchased Commerce through a DXP Cloud contract, then the DXP Cloud team manages the activation key through the cloud infrastructure, and there is no need to manage the key yourself. However, if you are adding Commerce to an existing DXP Cloud project, you must manually deploy the licence yourself.

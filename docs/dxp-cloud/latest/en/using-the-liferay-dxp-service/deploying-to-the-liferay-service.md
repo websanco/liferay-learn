@@ -2,7 +2,7 @@
 
 As with other services, deploying custom additions involves adding your configurations or files to the appropriate locations in your Git repository. However, deploying the Liferay service slightly differs from deploying other services.
 
-The Liferay service makes use of a Liferay workspace <!-- Add link when available-->to give you more options to add [deployable files](#themes-portlets-and-osgi-modules), [source code](#source-code), and more. These are easily included with a [CI build](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md), but if you are using the [CLI tool](../reference/command-line-tool.md), then some [extra steps](#cli-tool-deployment) are necessary specifically for the Liferay service.
+The Liferay service makes use of a Liferay workspace <!-- Add link when available-->to give you more options to add [deployable files](#deploying-themes-portlets-and-osgi-modules), [source code](#building-and-deploying-source-code), and more. These are easily included with a [CI build](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md), but if you are using the [CLI tool](../reference/command-line-tool.md), then some [extra steps](#cli-tool-deployment) are necessary specifically for the Liferay service.
 
 ## Defining the Liferay DXP Docker Image
 
@@ -18,7 +18,7 @@ Check the [Liferay DXP Docker tags](https://hub.docker.com/r/liferay/dxp/tags) t
 
 Deploying with the [CLI tool](../reference/command-line-tool.md) requires extra steps to deploy with your customizations and configurations. These must be included in a special `Dockerfile` image that is generated before you deploy.
 
-[Deployable files](#deploying-themes-portlets-and-osgi-modules), [built source code](#building-and-deploying-source-code), [hotfixes](#deploying-hotfixes), and [licenses](#deploying-licenses) require extra steps to include with your deployment if you are using the CLI tool. These extra steps are not necessary if you are using the [CI service](../reference/continuous-integration.md) to generate a build from your repository.
+[Deployable files](#deploying-themes-portlets-and-osgi-modules), [built source code](#building-and-deploying-source-code), [hotfixes](#deploying-hotfixes), and [licenses](#deploying-licenses) require extra steps to include with your deployment if you are using the CLI tool. These extra steps are not necessary if you are using the [CI service](../platform-services/continuous-integration.md) to generate a build from your repository.
 
 If you deploy the Liferay service with the CLI normally (when deploying all services at once, or from the `liferay/` directory), then a **default version** of the DXP (using the major version defined in `LCP.json`) will deploy, that does not contain your customizations. This happens because you must specifically build and deploy any customizations with the service for them to be included.
 
