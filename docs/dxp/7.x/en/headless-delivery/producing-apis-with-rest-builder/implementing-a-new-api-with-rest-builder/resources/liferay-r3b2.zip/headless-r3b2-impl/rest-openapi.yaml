@@ -48,7 +48,7 @@ paths:
                                 items:
                                     $ref: "#/components/schemas/Foo"
                                 type: array
-            tags: [ "Foo" ]
+            tags: ["Foo"]
         post:
             operationId: postFoo
             requestBody:
@@ -84,7 +84,7 @@ paths:
                     content:
                         application/json: { }
                         application/xml: { }
-            tags: [ "Foo" ]
+            tags: ["Foo"]
         get:
             operationId: getFoo
             parameters:
@@ -130,7 +130,7 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Foo"
-            tags: [ "Foo" ]
+            tags: ["Foo"]
         put:
             operationId: putFoo
             parameters:
@@ -157,7 +157,7 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Foo"
-            tags: [ "Foo" ]
+            tags: ["Foo"]
     "/foo/{fooId}/goos":
         get:
             operationId: getFooGoosPage
@@ -208,7 +208,7 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Goo"
-            tags: [ "Goo" ]
+            tags: ["Goo"]
     "/goo/{gooId}":
         delete:
             operationId: deleteGoo
@@ -224,7 +224,7 @@ paths:
                     content:
                         application/json: { }
                         application/xml: { }
-            tags: [ "Goo" ]
+            tags: ["Goo"]
         get:
             operationId: getGoo
             parameters:
@@ -243,7 +243,7 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Goo"
-            tags: [ "Goo" ]
+            tags: ["Goo"]
         patch:
             operationId: patchGoo
             parameters:
@@ -270,7 +270,7 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Goo"
-            tags: [ "Goo" ]
+            tags: ["Goo"]
         put:
             operationId: putGoo
             parameters:
@@ -297,4 +297,4 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Goo"
-            tags: [ "Goo" ]
+            tags: ["Goo"]
