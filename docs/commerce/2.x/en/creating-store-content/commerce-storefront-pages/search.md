@@ -10,5 +10,5 @@ In this example, the sample Search page contains Knowledge Base articles.
 
 ## Additional Information
 
-* [Widget Reference Guide](../widget-reference.md)
+* [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
 * [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)

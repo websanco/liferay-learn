@@ -24,4 +24,4 @@ Once you've added the Price Range Facet widget to a page, you can configure its 
 
 1. Click on *Save*.
 
-See [Widget Reference](../widget-reference.md) to learn about other Commerce widgets.
+See [Widget Reference](../liferay-commerce-widgets/widget-reference.md) to learn about other Commerce widgets.

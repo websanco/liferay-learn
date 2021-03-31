@@ -18,6 +18,6 @@ If [Order Workflows](../../orders-and-fulfillment/order-workflows/introduction-t
 
 ## Additional Information
 
-* [Widget Reference Guide](../widget-reference.md)
+* [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
 * [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
 * [Order Workflows](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)
