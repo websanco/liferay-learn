@@ -109,6 +109,10 @@ You can also install hotfixes as part of the CI build process instead of directl
 
 Add a comma-delimited list of hotfixes to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
 
+```note::
+   If you add this environment variable to the ``LCP.json`` for your ``ci`` service, then you must deploy the ``ci`` service to your **infra environment** to complete the update.
+```
+
 See the following example of defining hotfixes through in the `LCP.json` file:
 
 ```
