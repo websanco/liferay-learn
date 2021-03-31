@@ -1,6 +1,8 @@
 dependencies {
 	testIntegrationCompile group: "com.liferay", name: "com.liferay.arquillian.extension.junit.bridge", version: "1.0.19"
 	testIntegrationCompile group: "com.liferay.portal", name: "release.portal.api"
+	testIntegrationCompile group: "commons-beanutils", name: "commons-beanutils", version: "1.9.4"
+	testIntegrationCompile group: "junit", name: "junit", version: "4.13.1"
 	testIntegrationCompile project(":headless-r3b2-api")
 	testIntegrationCompile project(":headless-r3b2-client")
 }
