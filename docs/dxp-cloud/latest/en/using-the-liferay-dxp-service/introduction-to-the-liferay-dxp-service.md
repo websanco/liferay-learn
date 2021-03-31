@@ -45,6 +45,29 @@ With the exception of the `common/` directory, changes added to an environment-s
 
 See [Overview of the Deployment Workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) for more information on how the deployment workflow. For a tutorial on deploying to DXP Cloud, see [Deploying Changes via the DCP Cloud Console](../build-and-deploy/deploying-changes-via-the-dxp-cloud-console.md).
 
+### General Deployment information (rephrase . . .)
+
+As with other services, deploying custom additions involves adding your configurations or files to the appropriate locations in your Git repository. However, deploying the Liferay service slightly differs from deploying other services. The Liferay service makes use of a Liferay workspace <!-- Add link when available-->to give you more options to add [deployable files](#themes-portlets-and-osgi-modules), [source code](#source-code), and more.
+
+The Liferay service image (defined in the `LCP.json` file, like other services) is not the same as the Liferay DXP Docker image. The Liferay DXP Docker image determines the exact version (including the fix pack) of Liferay that runs in your Liferay service. This is defined in your repository's `liferay/gradle.properties` file, with the `liferay.workspace.docker.image.liferay` property.
+
+```important::
+   The major version number of DXP defined in the ``image`` property of the Liferay service's ``LCP.json`` file **must match** the major version in the ``liferay.workspace.docker.image.liferay`` property in ``liferay/gradle.properties``. The Liferay service may fail to start up if the two are different. (For example, if the ``LCP.json`` uses an ``image`` of ``liferaycloud/liferay-dxp:7.3-4.2.1``, then the ``liferay.workspace.docker.image.liferay`` property must have ``7.3.x``).
+```
+
+#### CLI Tool Deployment
+
+Deploying with the [CLI tool](../reference/command-line-tool.md) requires extra steps to deploy with your customizations and configurations. These must be included in a special `Dockerfile` image that is generated before you deploy.
+
+Follow these steps to deploy the Liferay service with your customizations:
+
+1. Ensure that the  . . . If you deploy all of your services at once, or from the `liferay/` folder in your repository, then a **default** version of the service's Docker image (defined in the `LCP.json` file) is deployed. To include all of your customizations 
+
+< mention:
+  -  making sure the Gradle properties major version matches LCP.json version
+>  - procedure of running the Gradle task, copying LCP.json, etc., when using CLI
+
+
 ### Themes, Portlets, and OSGi Modules
 
 To install themes, portlets, or OSGi modules, include a WAR or JAR file into a `configs/{ENV}/deploy/` folder in your Liferay DXP service directory.
@@ -63,6 +86,8 @@ liferay
           ├── scripts
           └── portal-ext.properties
 ```
+
+Once deployed, any files within the `configs/{ENV}/deploy/` directory are copied to the `deploy/` folder in the Liferay bundle in your Liferay service's container.
 
 ```note::
    If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate ``lcp/liferay/deploy/{ENV}`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.

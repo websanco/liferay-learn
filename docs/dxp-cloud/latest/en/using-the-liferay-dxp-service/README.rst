@@ -24,8 +24,9 @@ Scalability and Performance
 Customizations
 --------------
 
--  `Deploying Apps, Themes, and Modules <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#themes-portlets-and-osgi-modules>`__
--  `Deploying Customizations from Source <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#source-code>`__
+-  :doc:`/using-the-liferay-dxp-service/deploying-to-the-liferay-service`
+-  `Deploying Apps, Themes, and Modules <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#deploying-themes-portlets-and-osgi-modules>`__
+-  `Deploying Customizations from Source <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#building-and-deploying-source-code>`__
 
 Liferay Service Shell
 ---------------------
