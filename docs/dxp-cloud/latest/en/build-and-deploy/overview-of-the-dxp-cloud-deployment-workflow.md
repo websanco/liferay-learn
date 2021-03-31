@@ -40,7 +40,7 @@ Using the CLI tool is the quickest way to deploy local changes to a service. Wit
 To do this, log in to the CLI tool in your terminal, and navigate to the folder for the service you want to deploy. Then, initiate the deployment process by running `lcp deploy`, and select which project and environment to deploy to (e.g., `dev`, `uat`, `prd`). For the deployment to be successful, you must have permissions to deploy to the chosen environment. See [Deploying Changes via the CLI Tool](./deploying-changes-via-the-cli-tool.md) for a walk through of this deployment workflow.
 
 ```important::
-   While you can directly deploy backup, CI, database, search, and webserver services, you must first create a gradle build of the Liferay service before running the ``lcp deploy`` command.
+   While you can directly deploy backup, CI, database, search, and webserver services, you must first create a gradle build of the Liferay service before running the ``lcp deploy`` command. See `Deploying to the Liferay Service <../using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#cli-tool-deployment>`__ for more information.
 ```
 
 ### Option 2: Deploying From the DXP Cloud Console
