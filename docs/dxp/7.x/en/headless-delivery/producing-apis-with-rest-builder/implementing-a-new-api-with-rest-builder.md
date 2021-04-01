@@ -51,13 +51,13 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
 
     ![The newly deployed API (named Liferay.Headless.R3B2) is listed as a result from the command and is ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
 
-1. Test the API by running the following command from your terminal:
+1. Test the API by running the following command from your terminal, substituting a number between 1 and 3 for `{fooId}`:
 
     ```bash
     curl -u 'test@liferay.com:test' "http://localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}"
     ```
 
-    Substitute a number between 1 and 3 for `{fooId}`. The query returns a corresponding product's ID, name, and description wrapped in a JSON object:
+    The query returns a corresponding product's ID, name, and description wrapped in a JSON object:
 
     ```json
    {
@@ -89,6 +89,11 @@ buildscript {
 }
 
 apply plugin: "com.liferay.portal.tools.rest.builder"
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":headless-r3b2-api")
+}
 ```
 
 Your `build.gradle` files in both modules must also declare dependencies on the portal release. 
@@ -114,15 +119,15 @@ REST Builder configuration belongs in the `rest-config.yaml` file. It defines th
 Define these fields using this structure:
 
 ```yaml
-apiDir: "../r3b2-api/src/main/java"
+apiDir: "../headless-r3b2-api/src/main/java"
 apiPackagePath: "com.acme.headless.r3b2"
 application:
     baseURI: "/headless-r3b2"
     className: "HeadlessR3B2Application"
     name: "Liferay.Headless.R3B2"
 author: "Jonah the son of Amittai"
-clientDir: "../headless-r3b2-user-client/src/main/java"
-testDir: "../headless-r3b2-user-test/src/testIntegration/java"
+clientDir: "../headless-r3b2-client/src/main/java"
+testDir: "../headless-r3b2-test/src/testIntegration/java"
 ```
 
 ### Add an Information Block to the OpenAPI Configuration
@@ -138,7 +143,7 @@ info:
     license:
         name: "Apache 2.0"
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-    title: "Foo API"
+    title: "Headless R3B2"
     version: v1.0
 openapi: 3.0.1
 ```
@@ -156,84 +161,51 @@ Define a `schema` block for each entity you want to represent:
 ```yaml
 components:
     schemas:
-        Bar:
-            description:
-                Another dummy object to go with Foo.
-            properties:
-                description:
-                    description:
-                        Say something about your Bar.
-                    type: string
-                fooId:
-                    description:
-                        The associated Foo's ID.
-                    type: integer
-                id:
-                    description:
-                        The Bar's ID
-                    type: integer
-                name:
-                    description:
-                        The title of your Bar.
-                    type: string
         Foo:
-            description:
-                A dummy object that has no meaning.
             properties:
                 description:
-                    description:
-                        Say something about your Foo.
                     type: string
                 id:
-                    description:
-                        The Foo's ID
+                    format: int64
                     type: integer
                 name:
-                    description:
-                        The title of your Foo.
                     type: string
             type: object
+        Goo:
+            properties:
+                description:
+                    type: string
+                fooId:
+                    format: int64
+                    type: integer
+                id:
+                    format: int64
+                    type: integer
+                name:
+                    type: string
 ```
 
-In this example, a schema called `Foo` represents the important data for the use of this API. The `Bar` entity is linked to `Foo` by use of the `fooId`.  See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
+In this example, a schema called `Foo` represents the important data for the use of this API. The `Goo` entity is linked to `Foo` by use of the `fooId`.  See the [OpenAPI specification](https://swagger.io/docs/specification/data-models/data-types/) for a list of supported data types for schemas.
 
-Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schemas are called `Foo` and `Bar`, the implementation logic belongs in the `FooResourceImpl` and `BarResourceImpl` classes.
+Your schema definition determines the names of the classes REST Builder generates, including the scaffolding and templates in the resources files. Because the above schemas are called `Foo` and `Bar`, the implementation logic belongs in the `FooResourceImpl` and `GooResourceImpl` classes.
 
 ### Define Your APIs
 
-Finally, add the `paths` block. This must include all APIs that you plan to implement with REST Builder. Add each API to a path:
+Finally, add the `paths` block. This must include all APIs that you plan to implement with REST Builder. Here's a small snippet of the paths block: 
 
 ```yaml
+
 paths:
-    "/bar/{barId}":
+    "/foo":
         get:
-            operationId: getBar
-            parameters:
-                - in: path
-                  name: barId
-                  required: true
-                  schema:
-                      type: integer
-            responses:
-                200:
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/Bar"
-                        application/xml:
-                            schema:
-                                $ref: "#/components/schemas/Bar"
-                    description:
-                        "Returns the Bar matching the given product ID."
+        # operations for get and post go here. See the project for full source code.
+        # ...
+
     "/foo/{fooId}":
         get:
             operationId: getFoo
-            parameters:
-                - in: path
-                  name: fooId
-                  required: true
-                  schema:
-                      type: integer
+            # ...
+
             responses:
                 200:
                     content:
@@ -243,41 +215,27 @@ paths:
                         application/xml:
                             schema:
                                 $ref: "#/components/schemas/Foo"
-                    description:
-                        "Returns the Foo matching the given product ID."
-            tags: ["Foo"]
-    "/foo/{fooId}/bars":
+        # Place other operations, such as get, patch, and put here. See the project for full source code.
+
+    "/foo/{fooId}/goos":
         get:
-            operationId: getFooBars
-            parameters:
-                - in: path
-                  name: fooId
-                  required: true
-                  schema:
-                      type: integer
-            responses:
-                200:
-                    content:
-                        application/json:
-                            schema:
-                                items:
-                                    $ref: "#/components/schemas/Bar"
-                                type: array
-                        application/xml:
-                            schema:
-                                items:
-                                    $ref: "#/components/schemas/Bar"
-                                type: array
-                    description:
-                        "Gets all Bars related to a Foo."
-            tags: ["Bar"]
+            operationId: getFooGoosPage
+            # This is the relationship between Foos and Goos. 
+            # Place your get and post operations here. 
+            # ...
+
+    "/goo/{gooId}":
+        delete:
+            operationId: deleteGoo
+
+            # Place operations on other entities as needed.
 ```
 
 ```tip::
    You can add paths for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
 ```
 
-The path (`entities/{fooId}`) specifies that this API (`getFoo`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}`.
+The path (`foo/{fooId}`) specifies that this API (`getFoo`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}`.
 
 The value you substitute for `fooId` is used as the parameter with the matching name.
 
@@ -295,7 +253,7 @@ The tag specifies information that is added to the generated documentation when 
 
 See the `rest-openapi.yaml` file you downloaded earlier for a complete reference.
 
-There's also a `Bar` object to show how you might do relationships: Bars are related to Foos in the sense that they are associated with a `fooId`. 
+There's also a `Goo` object to show how you might do relationships: Goos are related to Foos in the sense that they are associated with a `fooId`. 
 
 ## Run REST Builder
 
@@ -309,13 +267,13 @@ REST Builder uses your configuration and populates both your `api` and `impl` cl
 
 ## Add Your Implementation Logic
 
-The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `FooResourceImpl.java` and `BarResourceImpl.java`).
+The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `FooResourceImpl.java` and `GooResourceImpl.java`).
 
 ```tip::
-   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` in your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/``.
+   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` in your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/``.
 ```
 
-The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class. Since this is just an example, this implementation uses a pre-populated `LinkedHashMap`, and the `getProduct` method returns the product from the `LinkedHashMap` with the matching `productId`. See [`ProductResourceImpl.java`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/7.x/en/headless-delivery/producting-apis-with-rest-builder/implementing-a-new-api-with-rest-builder/resources/liferay-r3b2.zip/r3b2-impl/src/main/java/com/acme/r3b2/product/catalog/internal/resource/v1_0/ProductResourceImpl.java) for the full implementation.
+The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class. Since this is just an example, this implementation uses a pre-populated `HashTable`, and the `getFoo` method returns the product from the `HashTable` with the matching `fooId`. See `FooResourceImpl.java` in the project for the full implementation.
 
 ```java
 	@Override
@@ -332,26 +290,27 @@ You can add any business logic to complete the request. REST Builder only create
    Foo foo1 = new Foo() {
       {
          description = "Universal truth must be transcendental.";
-         id = 1;
+         id = 1L;
          name = "Truth";
       }
    };
 ```
 
-The `Bar` logic is similar, except in this case multiple `Bars` are returned because `Foo` objects can contain multiple `Bar`s. When returning a collection of objects, you must use a pagination-friendly object called a `Page`: 
+The `Goo` logic is similar, except in this case multiple `Goo`s are returned because `Foo` objects can contain multiple `Goo`s. When returning a collection of objects, you must use a pagination-friendly object called a `Page`: 
 
 ```java
 	@Override
-	public Page<Bar> getFooBars(Integer fooId) {
-		List<Bar> bars = new ArrayList<>();
+	public Page<Goo> getFooGoosPage(Long fooId) {
+		List<Goo> goos = new ArrayList<>();
 
-		for (Bar bar : _bars.values()) {
-			if (bar.getFooId() == fooId) {
-				bars.add(bar);
+		for (Goo goo : _goos.values()) {
+			if (Objects.equals(fooId, goo.getFooId())) {
+				goos.add(goo);
 			}
 		}
 
-		return Page.of(bars);
+		return Page.of(goos);
+	}
 ```
 
 ## Conclusion
