@@ -26,9 +26,9 @@ Follow these steps to deploy the Liferay service with your customizations:
 
 1. From the command-line in the `liferay/` directory, run:
 
-  ```bash
-  gw clean createDockerfile deploy
-  ```
+   ```bash
+   gw clean createDockerfile deploy
+   ```
 
   This builds all of your customizations, and arranges them into a `build/liferay/` subfolder. It also adds a `Dockerfile` specifically for a customized version of DXP.
 
@@ -148,7 +148,7 @@ liferay
 Behind the scenes, XML licenses are copied to `$LIFERAY_HOME/deploy`, and AATF licenses are copied to `$LIFERAY_HOME/data`.
 
 ```note::
-   If you are using version 3.x.x services, then licenses instead belong in the ``lcp/liferay/license/{ENV}/ folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+   If you are using version 3.x.x services, then licenses instead belong in the ``lcp/liferay/license/{ENV}/`` folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
 ## Additional Information
