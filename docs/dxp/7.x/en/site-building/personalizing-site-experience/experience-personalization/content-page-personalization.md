@@ -1,6 +1,6 @@
-# Content Page Personalization and Management
+# Content Page Personalization
 
-You can tailor your Content Page to different groups of users, providing each group a personalized experience, rather than a generic one. You can also leverage Content Page personalization to conduct A/B Testing (for more information, see [Content Page Experiences and A/B Testing](#content-page-experiences-and-ab-testing)).
+You can tailor your Content Page to different groups of users, providing each group a personalized experience, rather than a generic one. You can also leverage Content Page personalization to conduct A/B Testing (for more information, see [Content Page Experiences and A/B Testing](#content-page-experiences-and-a-b-testing)).
 
 Personalizing your Content Page for different users is a two-step process:
 
@@ -56,7 +56,6 @@ In this example:
 5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a New Segment](../segmentation/creating-and-managing-user-segments.md) (available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.)
 
     ![Select an existing Segment for the Experience or create a new Segment.](./content-page-personalization/images/02.png)
-
 
     ```note::
        New Experiences are assigned to the *Anyone* Segment by default, and target all website visitors.
