@@ -86,7 +86,7 @@ By default, auto-scaling can increase the number of instances for the `liferay` 
     }
     ```
 
-Once you have updated both of these configurations, then auto-scaling can your `liferay` service's instances up to your newly defined maximum.
+Once you have updated both of these configurations, auto-scaling increases your `liferay` service's instances up to your newly defined maximum as needed.
 
 ## Auto-scaling and DXP Activation Keys
 
