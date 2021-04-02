@@ -3,12 +3,12 @@
 When users visit your website, they interact with your content and show different behaviors depending on their interests. Liferay DXP, in combination with [Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html), can analyze this browsing behavior and show relevant content for your users. This can be useful to promote certain products or content that your users are more likely to buy or consume. For example, when a user visits your online store and shows interest in a particular type of product, you can use content recommendations to show the user similar products or related product promotions.
 
 ```important::
-    You must `connect Analytics Cloud to your Liferay DXP instance <https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html>`_ to provide content recommendations to your users.
+    You must `connect Analytics Cloud to your Liferay DXP instance <https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html>`_ to provide content recommendations to your users.
 ```
 
 ## How Content Recommendations Work
 
-Configuring content recommendations is a two-step process. First, you track users' behavior and define topics of interest. This step requires [Analytics Cloud connected to your DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html). Based on previous user's behavior in the site, Analytics Cloud defines and ranks topics of interest, and associates these interests to the user identifier in the site. Second, you show users recommended content, based on their interests. This step requires creating a [Dynamic Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and showing this Collection on your website. Analytics Cloud sends to DXP a series of keywords based on users' interests, and these keywords work as a filter in the Collection. You need a Collection to define the type of content you want to show to your users.
+Configuring content recommendations is a two-step process. First, you track users' behavior and define topics of interest. This step requires [Analytics Cloud connected to your DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html). Based on previous user's behavior in the site, Analytics Cloud defines and ranks topics of interest, and associates these interests to the user identifier in the site. Second, you show users recommended content, based on their interests. This step requires creating a [Dynamic Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and showing this Collection on your website. Analytics Cloud sends to DXP a series of keywords based on users' interests, and these keywords work as a filter in the Collection. You need a Collection to define the type of content you want to show to your users.
 
 ```note::
     For more information on how to work with Interests in Analytics Cloud, see the `Analytics Cloud documentation <https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html>`_.
@@ -54,7 +54,7 @@ However, you can leverage the ability to [customize Collections with Segments](.
 
 ## Related Information
 
-- [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)
+- [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)
 - [Configuring Content Recommendations](./configuring-content-recommendations.md)
 - [Interests (Analytics Cloud)](https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html)
 - [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)

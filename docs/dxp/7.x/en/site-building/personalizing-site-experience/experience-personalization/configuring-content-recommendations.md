@@ -12,7 +12,7 @@ Content recommendations work automatically as long as the following elements are
 
 You must connect Analytics Cloud to your Liferay DXP instance to provide content recommendations to your users.
 
-To learn how to connect Analytics Cloud to Liferay DXP and synchronize the site's content, see [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html).
+To learn how to connect Analytics Cloud to Liferay DXP and synchronize the site's content, see [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html).
 
 ![Connecting Liferay DXP to Analytics Cloud](./configuring-content-recommendations/images/02.png)
 
@@ -70,6 +70,6 @@ To display the Collection using a Display Page and the Asset Publisher, you must
 ## Related Information
 
 - [Understanding Content Recommendations](./understanding-content-recommendations.md)
-- [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)
+- [Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)
 - [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection)
 - [Creating and Managing Display Page Templates](../../displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md)
