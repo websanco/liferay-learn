@@ -1,10 +1,10 @@
 # APIs as OSGi Services
 
-After you've learned what a [module](./module-projects.md) is and how to deploy one, you can use modules to define APIS and implement them. Liferay APIs are [OSGi services](https://enroute.osgi.org/): capabilities defined by Java interfaces and implemented by concrete Java classes.
+After you've learned what a [module](./module-projects.md) is and how to deploy one, you can use modules to define APIs and implement them. Liferay APIs are [OSGi services](https://enroute.osgi.org/), defined by Java interfaces and implemented by concrete Java classes.
 
-Liferay represents APIs, implementations, and clients as components. [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) annotations facilitate defining components and their relationships.
+Liferay exposes APIs, implementations, and clients as components. [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) annotations define components and their relationships.
 
-* `@ProviderType` defines an interface as a capability that components can provide (implement) or consume.
+* `@ProviderType` defines an interface that components can provide (implement) or consume.
 * `@Component` declares the class a component, providing a particular capability.
 * `@Reference` wires another component to a class member (typically a field).
 
@@ -13,11 +13,11 @@ You can separate API and implementation concerns into different modules.
 * **API** modules *define* capabilities using Java interfaces. The modules export the interface packages.
 * **Implementation** modules *provide* capabilities using concrete Java classes.
 
-Here you'll deploy an API module and implementation module that create a simple greeter OSGi service. You'll also examine the implementation module and its JAR to learn how the implementation provides the greeter service capability. In the next tutorial, you'll create the client--the part that you can invoke in the UI.
+Here you'll deploy API and implementation modules that create a simple greeter OSGi service. You'll also examine the implementation module and its JAR to learn how the implementation provides the greeter service capability. In the next tutorial, you'll create the client---the part that you can invoke in the UI.
 
 ## Deploy a Simple API and Implementation
 
-Start up the example modules.
+Start the example modules.
 
 1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
@@ -176,7 +176,7 @@ The example `greet` method prints an enthusiastic greeting using the given name.
 
 ### Add a Dependency on the API
 
-Here is the implementation module `build.Gradle` file.
+Here is the implementation module `build.gradle` file.
 
 ```groovy
 dependencies {
@@ -190,28 +190,6 @@ It includes a compile-time dependency on the `p9g2-api` module project because i
 ### Examine the Module JAR
 
 When you built the `p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar` implementation module JAR, [Bnd](http://bnd.bndtools.org/) generated the JAR's `/META-INF/MANIFEST.MF` file.
-
-```properties
-Manifest-Version: 1.0
-Bnd-LastModified: 1600290335650
-Bundle-ManifestVersion: 2
-Bundle-Name: Acme P9G2 Implementation
-Bundle-SymbolicName: com.acme.p9g2.impl
-Bundle-Version: 1.0.0
-Created-By: 1.8.0_252 (Oracle Corporation)
-Import-Package: com.acme.p9g2;version="[1.0,2)"
-Javac-Debug: on
-Javac-Deprecation: off
-Javac-Encoding: UTF-8
-Private-Package: com.acme.p9g2.internal
-Provide-Capability: osgi.service;objectClass:List<String>="com.acme.p9
- g2.Greeter";uses:="com.acme.p9g2"
-Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
- nent)(version>=1.3.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
- e=JavaSE)(version=1.8))"
-Service-Component: OSGI-INF/com.acme.p9g2.internal.P9G2Greeter.xml
-Tool: Bnd-4.3.0.201909301554
-```
 
 Here are key service-related headers that Bnd generates in the manifest:
 
