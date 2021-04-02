@@ -1,0 +1,18 @@
+[
+    {
+        "Condition": {
+            "KeyPrefixEquals": "commerce/2.x/"
+        },
+        "Redirect": {
+            "ReplaceKeyPrefixWith": "commerce/latest/"
+        }
+    },
+    {
+        "Condition": {
+            "KeyPrefixEquals": "dxp/7.x/"
+        },
+        "Redirect": {
+            "ReplaceKeyPrefixWith": "dxp/latest/"
+        }
+    }
+]
