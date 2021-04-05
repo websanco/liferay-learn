@@ -32,6 +32,8 @@ Look up your current Liferay DXP/Portal version in this table to determine your 
 | Liferay Portal 6.1.x &rarr; DXP/Portal 7.1 &rarr; DXP 7.3 | Support life ended for Liferay Portal 6.1 |
 | Liferay Portal 5.x and 6.0.x &rarr; Liferay Portal 6.2 &rarr; Liferay DXP 7.3 | Support life ended for Liferay Portal 5.0, 5.1, 5.2, and 6.0 |
 
+If you're upgrading Liferay Portal to a new GA for the same minor version (for example, upgrading from 7.3 GA1 to GA2) you can start using the new GA immediately. If the schema changed in the new GA, a startup message reports the new data schema version. Data schema changes require [upgrading the database](#executing-the-database-upgrade) (for example, using a [Docker image](./upgrading-via-docker.md)).
+
 If your path includes upgrading to Liferay Portal 6.2, follow the [Liferay Portal 6.2 upgrade instructions](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay) first.
 
 ### Review Deprecations and Changes to Default Settings
