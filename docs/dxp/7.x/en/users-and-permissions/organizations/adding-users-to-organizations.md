@@ -12,7 +12,7 @@ Follow these steps to assign existing Users to an Organization:
 
 1. Open the *Global Menu*, and go to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. Then, click on the *Organizations* tab.
 
-    ```note:
+    ```note::
        To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
     ```
 
@@ -34,7 +34,7 @@ Follow these steps to add a new portal User to an Organization:
 
 1. Open the *Global Menu*, and go to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. Then, click on the *Organizations* tab.
 
-    ```note:
+    ```note::
        To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
     ```
 

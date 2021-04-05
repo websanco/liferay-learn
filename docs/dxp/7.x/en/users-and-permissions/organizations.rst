@@ -6,6 +6,7 @@ Organizations
 
    organizations/understanding-organizations.md
    organizations/creating-and-managing-organizations.md
+   organizations/adding-users-to-organizations.md
    organizations/organization-roles.md
    organizations/organization-sites.md
    organizations/adding-a-new-organization-type.md
