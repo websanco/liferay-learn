@@ -155,8 +155,6 @@ There are resources for migrating properties related to specific environments, L
       You can build image sprites using any framework you like and deploy them in your plugins.
    ```
 
-1. As of 7.3, cache is solely configured using Ehcache XML files. Cache is no longer enabled or configured using portal properties. If you have configured cache using portal properties, configure the cache using Ehcache XML files in a module. Please see [Cache Configuration](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration) for more information.
-
 ## Next Steps
 
 Your Liferay settings are ready to use in your new DXP instance. Next, [update the file store](./updating-the-file-store.md).
