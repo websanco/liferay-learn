@@ -78,37 +78,23 @@ The `blade upgradeProps` command format:
 blade upgradeProps -p {old_liferay_home_path}/portal-ext.properties -d {new_liferay_home_path}
 ```
 
-Here are example output samples from running the `blade upgradeProps` command:
+Here is example output from running the `blade upgradeProps` command:
 
 ```
-Checking the location for old properties in the new version
------------------------------------------------------------
-Following portal properties present an exception:
-        asset.categories.navigation.display.templates.config has been removed.  Overwrite the method in the ADT handler. Se
-e LPS-67466
-        asset.publisher.display.templates.config has been removed.  Overwrite the method in the ADT handler. See LPS-67466
-        ...
+...
+index.search.query.suggestion.dictionary
+	MODULARIZE AS OSGI - This property matches with the following OSGI config, select the most appropriate:
+		- searchQueryResultWindowLimit from com.liferay.portal.search.configuration.DefaultSearchResultPermissionFilterConfiguration
 
-Some properties have been moved to a module portlet.properties:
-        asset.publisher.search.with.index can match with the following portlet properties:
-                search.with.database from osgi/marketplace/Liferay CE Web Experience - Liferay CE Asset - Impl.lpkg/com.lif
-eray.asset.browser.web-4.0.4.jar/portlet.properties
-        dynamic.data.lists.error.template[ftl] can match with the following portlet properties:
-                dynamic.data.lists.error.template[ftl] from osgi/marketplace/Liferay CE Forms and Workflow - Liferay CE Dyn
-amic Data Lists - Impl.lpkg/com.liferay.dynamic.data.lists.web-5.0.4.jar/portlet.properties
-        ...
+index.search.spell.checker.dictionary
+	KEEP - This property is still present in the new portal.properties.
 
-Properties moved to OSGI configuration:
-        asset.publisher.check.interval can match with the following OSGI properties:
-                checkInterval from com.liferay.asset.publisher.web.internal.configuration.AssetPublisherWebConfiguration
-        asset.publisher.display.style.default can match with the following OSGI properties:
-                defaultDisplayStyle from com.liferay.asset.publisher.web.internal.configuration.AssetPublisherPortletInstanceConfiguration
-        ...
+sites.friendly.url.page.not.found
+	KEEP - This property is still present in the new portal.properties.
 
-We have not found a new property for the following old properties (check if you still need them or check the documentation to find a replacement):
-        admin.email.password.sent.body
-        admin.email.password.sent.subject
-        ...
+web.server.protocol
+	KEEP - This property is still present in the new portal.properties.
+...
 ```
 
 ### Converting Properties to OSGi Configurations
@@ -143,7 +129,7 @@ There are resources for migrating properties related to specific environments, L
 
 1. If you have a sharded environment, [configure your upgrade to generate a non-sharded environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md).
 
-1. Examine the [default setting changes](../reference/default-setting-changes-in-7-3.md).
+1. Examine the default portal property changes in [7.3](../reference/default-setting-changes-in-7-3.md) and [7.2](../reference/default-setting-changes-in-7-2.md).
 
 1. Liferay's image sprite framework is deprecated as of 7.2 and is disabled by default. The framework requires scanning plugins for image sprites. If you don't use the framework, there's no need for it to scan for images sprites. If you use the framework yourself, enable it by overriding the default `sprite.enabled` portal property (since 7.2) value with the following setting in your [`portal-ext.properties`](../../reference/portal-properties.md) file.
 
