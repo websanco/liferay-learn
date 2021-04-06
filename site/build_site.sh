@@ -68,10 +68,9 @@ function configure_env {
 
 	check_utils 7z pip3
 
-	pip_install \
-		nodeenv recommonmark wheel \
-		\
-		sphinx sphinx-copybutton sphinx-intl sphinx-markdown-tables sphinx-notfound-page
+	pip install pipenv --force-reinstall
+
+	pipenv install
 
 	if [ "${1}" == "prod" ]
 	then
@@ -253,16 +252,6 @@ function npm_install {
 		if [[ -z $(npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep ${package_name}) ]]
 		then
 			npm install -g ${package_name}
-		fi
-	done
-}
-
-function pip_install {
-	for package_name in "${@}"
-	do
-		if [[ -z $(pip3 list --disable-pip-version-check --format=columns | grep ${package_name}) ]]
-		then
-			pip3 install --disable-pip-version-check ${package_name}
 		fi
 	done
 }

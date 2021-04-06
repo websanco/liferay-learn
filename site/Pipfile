@@ -4,14 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-sphinx = "*"
+docutils = "==0.16"
 nodeenv = "*"
 recommonmark = "*"
-wheel = "*"
+sphinx = "==3.3.1"
 sphinx-copybutton = "*"
 sphinx-intl = "*"
 sphinx-markdown-tables = "*"
 sphinx-notfound-page = "*"
+wheel = "*"
 
 [dev-packages]
 
