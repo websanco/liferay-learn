@@ -1,12 +1,12 @@
 # Using a JSP and MVC Portlet
 
-An easy way to start developing a web application is to add markup to a JSP file, and render it using a portlet Java class.
+An easy way to start developing a web application is to add markup to a JSP file and render it using a portlet Java class.
 
 The W3E7 example application demonstrates this approach. 
 
 ![Here is the example portlet application.](./using-a-jsp-and-mvc-portlet/images/01.png)
 
-The application has a JSP with markup content and an `MVCPortlet` class that renders the JSP. Here you will deploy the example and examine it to learn how to create an application using a JSP with an MVC portlet. 
+The application has a JSP with markup content and an `MVCPortlet` class that renders the JSP. Deploy the example and examine it to learn how to create an application using a JSP with an MVC portlet. 
 
 ## Deploy a Simple MVC Portlet Module
 
@@ -54,11 +54,11 @@ Start with deploying the example.
 
 Congratulations, you've successfully built and deployed a new application.
 
-Next, learn how to create this portlet.
+Next, you'll learn how to create this portlet.
 
 ## How to Create an Application Using MVC Portlet
 
-Here you will examine the two steps for building the example portlet. 
+There are two steps for building the example portlet:
 
 1. Create the view using a JSP.
 2. Create an [`MVCPortlet`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html) to register the application and render it.
@@ -109,7 +109,7 @@ public class W3E7Portlet extends MVCPortlet {
 
 The `service = Portlet.class` attribute registers the class as a `Portlet`.
 
-The display property values describe the portlet web application. The `com.liferay.portlet.display-category=category.sample` property adds the app to the sample widget category. The `javax.portlet.display-name=W3E7 Portlet` property specifies the app's name.
+The property values describe the portlet web application. The `com.liferay.portlet.display-category=category.sample` property adds the app to the sample widget category. The `javax.portlet.display-name=W3E7 Portlet` property specifies the app's name.
 
 The template path initialization parameter `javax.portlet.init-param.template-path` declares the starting location in the `resources/META-INF/resources` for finding the view templates. The `javax.portlet.init-param.view-template=/view.jsp` property declares the portlet's view template `resources/META-INF/resources/view.jsp`. When you add the portlet to a page, the view template renders.
 
