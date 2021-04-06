@@ -58,15 +58,16 @@ Follow these steps to integrate Dynatrace:
 
 1. Generate the Dynatrace secret `token` and `tenant` values.
 
-1. Add Dynatrace environment variables to the `LCP.json` file in the Liferay service's production environment. For example:
+1. Add the Dynatrace `token` value as a [Secret](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for the Liferay service.
+
+1. Add the Dynatrace `tenant` Dynatrace environment variables to the `LCP.json` file in the Liferay service's production environment. For example:
 
 ```json
 {
 	"environments": {
 	  "prd": {
 	    "env": {
-	      "LCP_PROJECT_MONITOR_DYNATRACE_TENANT": "tot02934",
-	      "LCP_PROJECT_MONITOR_DYNATRACE_TOKEN": "dDKSowkdID8dKDkCkepW"
+	      "LCP_PROJECT_MONITOR_DYNATRACE_TENANT": "tot02934"
 	    }
 	  }
 	}
