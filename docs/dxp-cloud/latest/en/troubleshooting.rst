@@ -12,6 +12,7 @@ Troubleshooting
    troubleshooting/self-healing.md
    troubleshooting/support-access.md
    troubleshooting/liferay-cloud-platform-status.md
+   troubleshooting/troubleshooting-services.md
 
 .. include:: /troubleshooting/README.rst
 	:start-line: 2

@@ -9,4 +9,5 @@ Troubleshooting
 -  :doc:`/troubleshooting/self-healing`
 -  :doc:`/troubleshooting/support-access`
 -  :doc:`/troubleshooting/liferay-cloud-platform-status`
+-  :doc:`/troubleshooting/troubleshooting-services`
 
