@@ -6,7 +6,7 @@ Configure the Search Results widget by opening its options menu (![Options](../.
 
 Settings can be conceptually divided into display, pagination, and federated search settings. In addition, during development and testing, you can inspect the search engine document for each result by checking _Display Results in Document Form_.
 
-## Displaying Search Results 
+## Displaying Search Results
 
 **Display Template:** Select the [Widget Template](./../../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md) that styles the returned search results. The default display style is a paginated list. Each list item is a summarized hit to a search query. Click the _Manage Templates_ link to add a new Widget Template for the Search Results widget.
 
@@ -34,13 +34,17 @@ Results pagination appears at the bottom of the search results:
 
 **Pagination Start Parameter Name:** Set the name of the URL parameter for the results page. If the default value *start* is preserved (and the search is for *test*), you can see the parameter when the User navigates to the second results page:
 
-        http://localhost:8080/web/guest/search?q=test&start=2
+```
+http://localhost:8080/web/guest/search?q=test&start=2
+```
 
 **Pagination Delta:** Set the number of results to display per results page. Defaults to *20* unless you customized the `search.container.page.default.delta` [property](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Search%20Container) in your `portal-ext.properties` file.
 
 **Pagination Delta Parameter Name:** Set the name of the URL parameter that stores the Pagination Delta value (`delta` by default). This parameter is visible in the browser if the User changes the number. If the User selects 10 results per page and searches for *test*, the Search Page is reloaded with this URL:
 
-        http://localhost:8080/web/guest/search?q=test&delta=10
+```
+http://localhost:8080/web/guest/search?q=test&delta=10
+```
 
 ## Displaying Results from Alternate Indexes
 

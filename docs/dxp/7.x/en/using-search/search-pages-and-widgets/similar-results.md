@@ -99,7 +99,6 @@ The List Layout:
 
 ![The list layout shows a list of results and their summary.](similar-results/images/05.png)
 
-
 The Card Layout:
 
 ![The card layout shows each result as a card.](similar-results/images/06.png)
