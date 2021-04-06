@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sphinx = "*"
+nodeenv = "*"
+recommonmark = "*"
+wheel = "*"
+sphinx-copybutton = "*"
+sphinx-intl = "*"
+sphinx-markdown-tables = "*"
+sphinx-notfound-page = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
