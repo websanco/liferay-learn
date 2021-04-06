@@ -5,10 +5,10 @@ import java.io.File;
 
 import java.util.HashMap;
 
-public class Document_PUT_ToDocumentFolder {
+public class Document_POST_ToDocumentFolder {
 
 	/**
-	 * java -classpath .:* -DdocumentFolderId=1234 Document_PUT_ToDocumentFolder
+	 * java -classpath .:* -DdocumentFolderId=1234 Document_POST_ToDocumentFolder
 	 */
 	public static void main(String[] args) throws Exception {
 		DocumentResource.Builder builder = DocumentResource.builder();
@@ -22,7 +22,7 @@ public class Document_PUT_ToDocumentFolder {
 			new Document(),
 			new HashMap<String, File>() {
 				{
-					put("file", new File("Document_PUT_ToDocumentFolder.java"));
+					put("file", new File("Document_POST_ToDocumentFolder.java"));
 				}
 			});
 
