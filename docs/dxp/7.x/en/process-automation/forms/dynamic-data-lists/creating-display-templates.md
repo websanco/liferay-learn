@@ -50,34 +50,43 @@ Inside a template, these variables give the ID for the record set as well as the
 
 Display the list of records by retrieving them and assigning them to the handy `records` variable. Retrieve the list's records from `DDLDisplayTemplateHelper`, which contains these functions:
 
-    getDocumentLibraryPreviewURL
+```
+getDocumentLibraryPreviewURL
 
-    getHTMLContent
+getHTMLContent
 
-    getLayoutFriendlyURL
+getLayoutFriendlyURL
 
-    getRecords
+getRecords
 
-    renderRecordFieldValue
+renderRecordFieldValue
+```
 
 `DDLDisplayTemplateHelper` performs common tasks. Use the `getRecords` method to access a data definition's entries and assign them to a `records` variable: 
 
-    <#assign records = ddlDisplayTemplateHelper.getRecords(reserved_record_set_id)>
+```
+<#assign records = ddlDisplayTemplateHelper.getRecords(reserved_record_set_id)>
+```
 
 This fetches the records of the associated data list. You haven’t done anything with them yet, so your display is still empty. To list all the records, use the Data List Records helper in the sidebar of the template editor. Remember to place your cursor in the proper place in the template editor window, then click Data List Records. This code appears at the cursor:
 
-    <#if records?has_content>
-        <#list records as cur_record>
-            ${cur_record}
-        </#list>
-    </#if>
+```
+<#if records?has_content>
+    <#list records as cur_record>
+        ${cur_record}
+    </#list>
+</#if>
+```
 
 This default code snippet spits out everything in the database for the given data definition, which is not very human readable:
 
-    {uuid=52c4ac1c-afe7-963c-49c6-5279b7030a99, recordId=35926, groupId=20126, companyId=20099, userId=20139, userName=Test Test, versionUserId=20139, versionUserName=Test Test, createDate=2018-07-26 14:31:51.056, modifiedDate=2018-07-26 14:31:51.058, DDMStorageId=35927, recordSetId=35922, recordSetVersion=1.0, version=1.0, displayIndex=0, lastPublishDate=null}
+```
+{uuid=52c4ac1c-afe7-963c-49c6-5279b7030a99, recordId=35926, groupId=20126, companyId=20099, userId=20139, userName=Test Test, versionUserId=20139, versionUserName=Test Test, createDate=2018-07-26 14:31:51.056, modifiedDate=2018-07-26 14:31:51.058, DDMStorageId=35927, recordSetId=35922, recordSetVersion=1.0, version=1.0, displayIndex=0, lastPublishDate=null}
+```
 
 Here’s a simple example template that uses a list based on the embedded Contacts data definition, and only displays the Company Name and Email fields in a bulleted list:
 
+```
     <#assign records = ddlDisplayTemplateHelper.getRecords(reserved_record_set_id)>
 
     <h1>Here are contacts by company name and email address.</h1>
@@ -94,8 +103,8 @@ Here’s a simple example template that uses a list based on the embedded Contac
             </ul> 
         </#list> 
     </#if>
+```
 
 Here’s what it looks like:
 
 ![Example of Display Template showing company name and email.](./creating-display-templates/images/02.png)
-
