@@ -4,7 +4,9 @@ Services are the core of a DXP Cloud environment. This article covers troublesho
 
 ## A Service is Continually Restarting 
 
-Services repeatedly restarting may signal an issue with the [liveness or readiness probes](./self-healing.md) for that service. When this happens, you may notice it in the *General* tab of the *Activities* panel, on the Overview for one environment. Services that are continuously restarting due to a recurring *liveness probe failure*, may not complete start up before the liveness probe triggers a restart. If there is a *readiness probe failure*, then the readiness probe has failed to get the appropriate response a number of times in a row (possibly after the service has already fully started).
+Services repeatedly restarting may signal an issue with the [liveness or readiness probes](./self-healing.md) for that service. When this happens, you may notice it in the *General* tab of the *Activities* panel, on the Overview for one environment. <!-- Add screenshot if a way to easily reproduce this is available.-->
+
+Services that are continuously restarting due to a recurring *liveness probe failure*, may not complete start up before the liveness probe triggers a restart. If there is a *readiness probe failure*, then the readiness probe has failed to get the appropriate response a number of times in a row (possibly after the service has already fully started).
 
 To diagnose a service that is continually restarting, we recommend the following steps:
 
