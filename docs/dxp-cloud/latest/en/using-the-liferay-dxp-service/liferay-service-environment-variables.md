@@ -46,14 +46,14 @@ Name                                  | Default Value | Description  |
 `LCP_LIFERAY_JDBC_CONNECTION_URL` |  | The URL used to make the database connection. This may be used to directly set the database name and host. The value should start with `jdbc:mysql://`. |
 `LCP_LIFERAY_JDBC_DRIVER` |  | Allows for specifying the MySQL driver the Liferay service uses. In DXP versions 7.0 and 7.1, this is also used for the cluster configuration. |
 `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` | `true` | Whether to enable clustering and communication between nodes. |
-`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` |  | A string with eight characters. It's part of the URL (prefix) of your Dynatrace SaaS account. |
-`LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` |  | A string with 22 characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
+`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` |  | A string of characters that is part of the URL (prefix) of your Dynatrace SaaS account. Use this together with the `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` secret. |
 `LIFERAY_JAVA_OPTS` | | JVM options that will be appended to `CATALINA_OPTS` to override the default recommended options. |
 
 These variables must instead be [defined as Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for the Liferay service:
 
 Name                                  | Default Value | Description  |
 ------------------------------------- | ------------- | ------------ |
+`LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` |  | A string of characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
 `LCP_SECRET_DATABASE_NAME` |   | The database name used for database connections (jdbc, jdbc ping, and read-only user connections). |
 `LCP_SECRET_DATABASE_PASSWORD` |  |  The database password used only for the jdbc (and jdbc ping) configurations. |
 `LCP_SECRET_DATABASE_READONLY_USER` |  | The read-only user's username. |

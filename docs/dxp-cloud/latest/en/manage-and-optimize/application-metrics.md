@@ -76,8 +76,10 @@ Follow these steps to integrate Dynatrace:
 
 | Name | Description |
 | --- | --- |
-`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | A string with eight characters. It is part of the URL (prefix) of your Dynatrace SaaS account. |
-`LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` | A string with 22 characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
+`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | A string of characters that is part of the URL (prefix) of your Dynatrace SaaS account. |
+`LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` | A string of characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
+
+See the [official Dynatrace documentation](https://www.dynatrace.com/support/help/dynatrace-api/basics/dynatrace-api-authentication/) for more information about these values.
 
 ### Accessing Dynatrace
 
