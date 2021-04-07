@@ -2,9 +2,7 @@
 
 > Availability: Liferay CE/DXP 7.3+
 
-There are a number of variables auto-injected into the workflow notification context.
-
-These are handy to use in your workflow notification templates.
+Some variables are auto-injected into the workflow notification context. These are handy to use in your workflow notification templates.
 
 Normally in Freemarker, you must declare variables explicitly:
 
@@ -12,17 +10,17 @@ Normally in Freemarker, you must declare variables explicitly:
 <#assign variableName = "Variable Name" />
 ```
 
-The injected variables let you skip this declaration and move directly to using the variable in the template.
+Injected variables are already declared and can be used directly in the template.
 
 ```markup
 ${variableName}
 ```
 
-To use these variables you must know which are available in your workflow notification context. The precise variables available change depending on the workflow definition details and the asset being operated on in the workflow. The method presented here shows you how to get the list of variables for your specific context, so you don't have to do any guesswork.
+To use these variables, you must know which are available in your workflow notification context. The variables available change depending on the workflow definition details and the asset in the workflow. The method presented here shows you how to get the list of variables for your specific context, so you don't have to do any guesswork.
 
 ## Discovering the Workflow Notification Template Variables
 
-Definitively discover the variables available in your workflow notification context by enabling DEBUG level [logging]( ./../../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md) for the `TemplateNotificationMessageGenerator` class:
+Enable DEBUG level [logging]( ./../../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md) for the `TemplateNotificationMessageGenerator` class to display the variables available in your workflow notification context:
 
 1. Go to Control Panel &rarr; Configuration &rarr; Server Administration.
  
@@ -35,9 +33,9 @@ Definitively discover the variables available in your workflow notification cont
 
 1. [Activate a workflow definition]( ./../using-workflows/activating-workflow.md) (e.g., the Single Approver definition) on an asset (e.g., Blogs Entry).
 
-1. Submit a test entry, and you'll see log messages appear that reveal what workflow notification template variables are available in the notification context of the workflow you're interested in.
+1. Submit a test entry and log messages appear that reveal the workflow available notification template variables in the context of your workflow. 
 
-When you do this for the Single Approver on initial submission of an asset, Liferay DXP prints log messages exposing the list of available variables:
+For example, the Single Approver workflow shows these variables on initial submission of an asset:
 
 ```bash
 2020-03-30 14:21:42.089 DEBUG [liferay/kaleo_graph_walker-2][TemplateNotificationMessageGenerator:94] saxReaderUtil (class com.sun.proxy.$Proxy447)
@@ -52,13 +50,13 @@ When you do this for the Single Approver on initial submission of an asset, Life
 ...
 ```
 
-The snippet of output above shows that `saxReaderUtil`, `getterUtil`, `portalPermission`, `entryClassPK`, `layoutPermission`, `expandoTableLocalService`, `localeUtil`, `groupId`, and `portalUtil` are available to the context that caused these messages to be printed in the log.
+The snippet of output above shows that `saxReaderUtil`, `getterUtil`, `portalPermission`, `entryClassPK`, `layoutPermission`, `expandoTableLocalService`, `localeUtil`, `groupId`, and `portalUtil` are available in the context that caused these messages to be printed in the log.
 
 ### Using the Workflow Notification Template Variables
 
 The contextually injected notification variables can be categorized into two main types:
 
-1. **Value** variables provide a single value. If a variable provides a single value, it's mainly useful for displaying that value in the notification, or passing as a parameter to an operation that retrieves some other useful information (that will be displayed in the notification message).
+1. **Value** variables provide a single value. If a variable provides a single value, you can use it to display that value in the notification, or you can pass it as a parameter to an operation that retrieves some other useful information to be displayed in the notification message.
 
    _Example:_ The Single Approver definition provides this notification in a FreeMarker template:
 
@@ -81,7 +79,7 @@ The contextually injected notification variables can be categorized into two mai
 
    _Your submission was reviewed_
 
-1. **Operation** variables expose a Liferay DXP Java class, so you can access its operations in the notification template. For these variables, you must familiarize yourself with the [Javadoc](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/) of the class or look into the [source code](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) to understand operations you have access to.
+1. **Operation** variables expose a Liferay DXP Java class, so you can access its operations in the notification template. For these variables, you must familiarize yourself with the class's [Javadoc](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/) or look into the [source code](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) to understand its operations. 
 
    _Example:_ This FreeMarker gets you the current date, using the default locale, in a specific pattern (_Month/Day/Year, Hour:Minute_): 
 
