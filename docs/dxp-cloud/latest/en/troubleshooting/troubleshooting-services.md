@@ -1,20 +1,19 @@
 # Troubleshooting Services
 
-The services you have running are the core of your DXP Cloud environment. Some common issues that arise can potentially be investigated or addressed with some simple troubleshooting techniques.
-
-See here for help identifying and addressing common issues that may pop up for your services.
+Services are the core of a DXP Cloud environment. This article covers troubleshooting techniques that can be used to investigate and address issues that may arise with DXP Cloud services.
 
 ## A Service is Continually Restarting 
 
-Services repeatedly restarting may signal an issue with the [liveness or readiness probes](./self-healing.md) for that service. When this happens, you may notice it in the *General* tab of the *Activities* panel, on the Overview for one environment.
+Services repeatedly restarting may signal an issue with the [liveness or readiness probes](./self-healing.md) for that service. When this happens, you may notice it in the *General* tab of the *Activities* panel, on the Overview for one environment. Services that are continuously restarting due to a recurring *liveness probe failure*, may not complete start up before the liveness probe triggers a restart. If there is a *readiness probe failure*, then the readiness probe has failed to get the appropriate response a number of times in a row (possibly after the service has already fully started).
 
-If the service is repeatedly restarting because of a recurring *liveness probe failure*, then this means the service never fully starts up before the liveness probe triggers a restart. If it is because of a *readiness probe failure*, then this means the readiness probe failed to get the appropriate response a number of times in a row (possibly after the service has already fully started).
+To diagnose a service that is continually restarting, we recommend the following steps:
 
-Follow the strategy outlined here to help determine whether the probes themselves are the cause of the problem.
+1. Review Service Logs for Liveness or Readiness Probe Failures
+2. Review Probe Configurations
+3. Review Service Logs for Startup Errors
+4. Adjust Probe Configurations
 
-### Identify Probe Failure Logs
-
-First, confirm that a liveness (or readiness) probe failure is causing the service restarts.
+### Review Service Logs for Liveness or Readiness Probe Failures
 
 Navigate to the service's page to see the logs on the first tab. Scan the recent logs to find any that indicate a probe failure.
 
@@ -24,11 +23,11 @@ For example, a liveness probe failure message may look like:
 Liveness probe failed: HTTP probe failed with statuscode: 500
 ```
 
-### Check the Probe Configurations
+### Review Probe Configurations
 
-If you have customized your probe configurations for your environment, then it is possible that incorrect probe configuration causes the probe failures. To rule this out as the cause of probe failures, check the configurations of your liveness and readiness probes and make sure they match what they must be for your environment.
+If you have customized your probe configurations for your environment, then it is possible that incorrect probe configuration causes the probe failures. To rule this out as the cause of probe failures, check the configurations of your liveness and readiness probes and make sure they match your environment.
 
-Check the probe configurations by navigating to the service having problems, and hovering your cursor over the status icon (the ellipsis or "Ready" icon):
+Navigate to the service having problems, and hovering your cursor over the status icon (the ellipsis or "Ready" icon):
 
 ![Hover the cursor over the service status indicator to see a popup where you can access the probe configurations.](./troubleshooting-services/images/01.png)
 
@@ -75,11 +74,9 @@ If your service's `LCP.json` file does not already have the probe configurations
 }
 ```
 
-```note::
-   The default probe configurations should normally work for your environment. If you have not changed the probe configurations at all, then the issue is likely not a matter of incorrect configuration.
-```
+The default probe configurations should work for most environments. If you have not changed the probe configurations at all, then the issue is likely not a matter of incorrect configuration.
 
-### Analyze the Service's Startup Logs
+### Review Service Logs for Startup Errors
 
 If your probe configurations are correct, then the probes failing may be a sign of a problem with the service itself.
 
@@ -91,7 +88,7 @@ Check the logs to look for any error messages that may indicate a failed startup
 
 [Contact Support](https://help.liferay.com/hc/en-us) if you need assistance in handling Liferay startup errors.
 
-### Try Adjusting Probe Configuration
+### Adjust Probe Configurations
 
 If there are no obvious errors or problems in the startup logs for your service causing the probe failures, but the service is still restarting, then an adjustment to the probe configurations may be necessary.
 
