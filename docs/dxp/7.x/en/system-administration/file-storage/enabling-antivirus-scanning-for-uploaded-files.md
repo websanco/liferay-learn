@@ -6,17 +6,13 @@ You can automatically scan any file uploaded to Liferay for viruses. When you en
 
 ![The scanner detects virus-infected files on upload to Documents and Media and other Liferay applications.](./enabling-antivirus-scanning-for-uploaded-files/images/01.png)
 
-Liferay DXP 7.2 Fix Pack 9+ integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd) running on a separate server.
+Liferay DXP integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd). For best performance, run Clamd on a separate server.
 
 ```note::
-   This integration is not yet available on DXP 7.3.
+   Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. 
 ```
 
-```note::
-   Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. Now DXP delegates antivirus scanning to a separate server.
-```
-
-Here's how to enable the Clamd antivirus scanner:
+Here's how to enable the antivirus scanning:
 
 1. On a separate server, [configure and start Clamd](https://www.clamav.net/documents/scanning#clamd).
 
