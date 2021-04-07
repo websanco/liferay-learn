@@ -8,12 +8,12 @@ Services repeatedly restarting may signal an issue with the [liveness or readine
 
 To diagnose a service that is continually restarting, we recommend the following steps:
 
-1. Review Service Logs for Liveness or Readiness Probe Failures
-2. Review Probe Configurations
-3. Review Service Logs for Startup Errors
-4. Adjust Probe Configurations
+1. [Check Service Logs for Liveness or Readiness Probe Failures](#check-service-logs-for-liveness-or-readiness-probe-failures)
+1. [Review Probe Configurations](#review-probe-configurations)
+1. [Review Service Logs for Startup Errors](#review-service-logs-for-startup-errors)
+1. [Adjust Probe Configurations](#adjust-probe-configurations)
 
-### Review Service Logs for Liveness or Readiness Probe Failures
+### Check Service Logs for Liveness or Readiness Probe Failures
 
 Navigate to the service's page to see the logs on the first tab. Scan the recent logs to find any that indicate a probe failure.
 
