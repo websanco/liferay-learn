@@ -20,7 +20,7 @@ To use these variables, you must know which are available in your workflow notif
 
 ## Discovering the Workflow Notification Template Variables
 
-Enable DEBUG level [logging]( ./../../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md) for the `TemplateNotificationMessageGenerator` class to display the variables available in your workflow notification context:
+Enable DEBUG level [logging]( ./../../../system-administration/using-the-server-administration-panel/configuring-logging.md) for the `TemplateNotificationMessageGenerator` class to display the variables available in your workflow notification context:
 
 1. Go to Control Panel &rarr; Configuration &rarr; Server Administration.
  
