@@ -10,10 +10,13 @@ Services that are continuously restarting due to a recurring *liveness probe fai
 
 To diagnose a service that is continually restarting, we recommend the following steps:
 
-1. [Check Service Logs for Liveness or Readiness Probe Failures](#check-service-logs-for-liveness-or-readiness-probe-failures)
-1. [Review Probe Configurations](#review-probe-configurations)
-1. [Review Service Logs for Startup Errors](#review-service-logs-for-startup-errors)
-1. [Adjust Probe Configurations](#adjust-probe-configurations)
+- [Troubleshooting Services](#troubleshooting-services)
+  - [A Service is Continually Restarting](#a-service-is-continually-restarting)
+    - [Check Service Logs for Liveness or Readiness Probe Failures](#check-service-logs-for-liveness-or-readiness-probe-failures)
+    - [Review Probe Configurations](#review-probe-configurations)
+    - [Review Service Logs for Startup Errors](#review-service-logs-for-startup-errors)
+    - [Adjust Probe Configurations](#adjust-probe-configurations)
+    - [Contact Cloud Support](#contact-cloud-support)
 
 ### Check Service Logs for Liveness or Readiness Probe Failures
 
@@ -94,7 +97,7 @@ Check the logs to look for any error messages that may indicate a failed startup
 
 If there are no obvious errors or problems in the startup logs for your service causing the probe failures, but the service is still restarting, then an adjustment to the probe configurations may be necessary.
 
-It is possible that your service takes enough time to start up that the liveness probe times out too soon, and triggers a service restart. This is likely the case if the normal startup logs have not all appeared yet by the time the probes fail and trigger a restart. This is not as likely to be the case if it is the *readiness* probe failing after the service has already fully started.
+Services that take a long time to start up can lead to the liveness probe timing out early, triggering a service restart. This is likely the case if the normal startup logs have not all appeared by the time the probes fail and trigger a restart. This is not as likely to be the case if it is the *readiness* probe failing after the service has already fully started.
 
 If this is happening for your service, then try one of the following:
 
