@@ -10,7 +10,6 @@ Previously, you [learned](./configuring-the-search-results-widget.md) how to dis
 * [Search results summaries](#result-summaries)
 * [Search results term highlighting](#highlighting)
 
-
 ## Filtering Results with Facets
 
 Results are filtered using facets. Users enter a search term and see a list of results and search facets, which you can think of as buckets that group results together if they share a common characteristic.
@@ -68,8 +67,8 @@ With [Publications](../../../site-building/publishing-tools/publications/publica
 
 A result summary includes the information from a document that the asset's developer felt is most useful to those searching for the asset. Each asset can have different fields included in the summary. For assets with text content, a common summary format includes the title and some of the content, with title displayed first. The asset type always appears on the second line, and a snippet of the content that matches the search term is on the last line. Assets without content fields, like Documents and Media documents, display the description instead.
 
-```Note 
-Users are different. Only the User's full name and the asset type (User) appear in User result summaries.
+```note::
+   Users are different. Only the User's full name and the asset type (User) appear in User result summaries.
 ```
 
 ![For users, only the user's full name appears for summary.](./search-results-behavior/images/03.png)
@@ -91,7 +90,7 @@ To determine which fields to include in the result summaries, the Search Results
 ## Highlighting
 
 Search terms appearing in the summary are <mark>highlighted</mark> by default. If this is undesirable, disable it in the
-widget configuration screen. 
+[widget configuration screen](./configuring-the-search-results-widget.md#displaying-search-results). 
 
 ![Search keyword is highlighted in the list of results.](./search-results-behavior/images/05.png)
 
