@@ -49,4 +49,3 @@ For example, you can select the _Dropdown_ field type to add a custom category f
 1. Click the *Add* icon (![Add icon](../../images/icon-add.png)) to add a new User. You should now see the newly added custom field at the bottom of the form.
 
    ![New custom field is now visible when adding a new user](adding-custom-fields-to-users/images/04.png)
-

@@ -1,6 +1,6 @@
-# Migrating from Audience Targeting to Segmentation and Personalization
+# Migrating to Segmentation and Personalization
 
-Starting Liferay DXP 7.2, Liferay integrates all the Segmentation and Personalization functionality in the core product. You don't longer need to use the Audience Targeting app's functionality, but you must migrate the Audience Targeting segments into the core Liferay Segmentation.
+Starting with Liferay 7.2, Segmentation and Personalization functionality was integrated into the core product. Users of Audience Targeting must migrate their Audience Targeting segments to the core Liferay Segmentation.
 
 There are three steps in this migration:
 
@@ -12,13 +12,13 @@ First, upgrade to the latest version of Liferay DXP following the [upgrade guide
 
 Next, migrate the Audience Targeting custom rules considering the following information:
 
-- Re-evaluate the Audience Targeting custom rules taking into account the Liferay [Segmentation functionality](../segmentation/creating-and-managing-user-segments.md). 
-- Some custom rules may have an equivalent. See [Migrating User Segments](./migrating-user-segments.md) for more information.
+- Re-evaluate the need for any Audience Targeting custom rules, taking into account the Liferay [Segmentation functionality](../segmentation/creating-and-managing-user-segments.md). 
+  - Some custom rules may have an equivalent. See [Migrating User Segments](./migrating-user-segments.md) for more information.
 - For Audience Targeting rules with no equivalent, you need to [migrate these rules manually](./manually-migrating-from-audience-targeting.md).
-- If you need to reimplement a rule entirely, follow the information in [Introduction to Segmentation Development](../developer-guide/introduction-to-segmentation-development.md).
+- If you need to re-implement a rule entirely, follow the information in [Introduction to Segmentation Development](../developer-guide/introduction-to-segmentation-development.md).
 - You must also [migrate the display widgets](./manually-migrating-from-audience-targeting.md#migrating-display-properties) since the new Personalization features in Liferay DXP 7.2+ use different tools.  
 
-Finally, you must migrate the behavior-based functionality in Audience Targeting. Starting Liferay DXP 7.2+, you manage behavior-based rules using Analytics Cloud. For more information, see the [Analytics Cloud documentation](https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/segments/segments.html).
+Finally, you must migrate the behavior-based functionality in Audience Targeting. Starting with Liferay DXP 7.2+, behavior-based rules are managed using Liferay Analytics Cloud. For more information, see the [Analytics Cloud documentation](https://learn.liferay.com/analytics-cloud/latest/en/people/segments/segments.html).
 
 ## Related Information
 

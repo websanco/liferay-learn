@@ -7,7 +7,8 @@ Personalizing Site Experience
    personalizing-site-experience/personalizing-site-experience.md
    personalizing-site-experience/segmentation.rst
    personalizing-site-experience/experience_personalization.rst
-   personalizing-site-experience/migration-from-audience-targeting.rst
+   personalizing-site-experience/migration_from_audience_targeting.rst
+   personalizing-site-experience/developer_guide.rst
 
 -  :doc:`/site-building/personalizing-site-experience/personalizing-site-experience`
 
@@ -32,3 +33,8 @@ Migration from Audience Targeting
 -  :doc:`/site-building/personalizing-site-experience/migration-from-audience-targeting/migrating-to-segmentation-and-personalization`
 -  :doc:`/site-building/personalizing-site-experience/migration-from-audience-targeting/migrating-user-segments`
 -  :doc:`/site-building/personalizing-site-experience/migration-from-audience-targeting/manually-migrating-from-audience-targeting`
+
+Developer Guide
+---------------
+
+-  :doc:`/site-building/personalizing-site-experience/developer-guide/introduction-to-segmentation-development`

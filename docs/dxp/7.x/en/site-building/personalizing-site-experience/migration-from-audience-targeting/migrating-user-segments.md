@@ -1,6 +1,6 @@
 # Migrating User Segments
 
-A user segment represents a subset of users with a common set of properties. [Segmentation](../segmentation/creating-and-managing-user-segments.md) in Liferay DXP 7.2+ works similarly to Audience Targeting in previous Liferay DXP versions. In Audience Targeting, you create *rules* that users must match to belong to a user segment. In Segmentation, you create *conditions* that can be combined in different ways to define complex filters. For more information on how to create user Segments, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
+A user segment represents a subset of users with a common set of properties. [Segmentation](../segmentation/creating-and-managing-user-segments.md) in Liferay 7.2+ works similarly to Audience Targeting in previous Liferay DXP versions. In Audience Targeting, you create *rules* that users must match in order to belong to a user segment. In Segmentation, you create *conditions* that can be combined in different ways to define complex filters. For more information on how to create user Segments, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
 
 ## Upgrade Paths for Audience Targeting Rules
 
