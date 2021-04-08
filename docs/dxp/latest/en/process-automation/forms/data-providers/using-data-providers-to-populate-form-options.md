@@ -1,10 +1,10 @@
 # Using the REST Data Provider to Populate Form Options
 
-_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Data Providers Overview](./data-providers-overview.md). This article walks users on how to invoke a JSON web service, configure the data provider, and add the data provider to a form.
+_Select from List_ fields can hold many options. Those options can be automatically supplied by using the JSON web services registered in Liferay DXP or any other third party REST web service. To learn more about data providers in general, see [Data Providers Overview](./data-providers-overview.md). To apply a REST data provider to a form, you'll learn how to invoke a JSON web service, configure the data provider to pull from it, and use the data provider in a form.
 
 ## Prerequisites
 
-One example is to populate a Select field for a user's "Country" when collecting personal information on a form.
+A common need is to populate a Select field with a list of options: for example, a user's "Country" is needed when collecting personal information on a form.
 
 [Create a form](../creating-and-managing-forms/creating-forms.md) that includes the following:
 
@@ -12,7 +12,7 @@ One example is to populate a Select field for a user's "Country" when collecting
 
 Next, use the `get-countries` JSON web service (there are two---use either one).
 
-1. Navigate to [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws).
+1. If you're running Liferay locally, navigate to <http://localhost:8080/api/jsonws>.
 1. Search for "get-countries".
 
     ![Search for the get-countries web service.](./using-the-rest-data-provider-to-populate-form-options/images/02.png)
@@ -35,9 +35,9 @@ To enable local network access from data providers:
 
 1. Click _Save_ when finished.
 
-## Adding a Basic Data Provider
+## Adding a Basic REST Data Provider
 
-To add a _Countries of the World_ Data Provider:
+To add a _Countries of the World_ data provider:
 
 1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) then click the compass icon (![Compass](../../../images/icon-compass.png)) on the _Site Administration_ menu.
 1. Select the site where the form is to be created.
@@ -46,7 +46,7 @@ To add a _Countries of the World_ Data Provider:
 
     ![Navigate to the data providers tab.](./using-the-rest-data-provider-to-populate-form-options/images/03.png)
 
-1. Click the Add button (![Add](../../../images/icon-add.png)).
+1. Click the Add button (![Add](../../../images/icon-add.png)) and add a REST Data Provider.
 1. Enter the following:
 
     * **Name**: Countries of the World
@@ -66,7 +66,7 @@ To add a _Countries of the World_ Data Provider:
    ``$..`` before ``nameCurrentValue`` is the JsonPath syntax to navigate the JSON data structure and specify the path to the output. Learn more about `JsonPath <https://github.com/json-path/JsonPath>`_ and `here <http://goessner.net/articles/JsonPath/>`_.
 ```
 
-## Using Inputs as Filters
+## Using Inputs as Filters for the REST Data Provider
 
 The above example is simple which uses only an Output to populate a _Select from List field_. Often the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
 
@@ -82,7 +82,7 @@ For example, to apply a region (for example, Americas, Europe, or Oceania) filte
    * **Outputs Path**: `*$..name*`
    * **Output Type**: List
 
-    To understand more about these values, read the [Data Provider documentation](./data-providers-overview.md).
+   To understand more about these values, see [Data Providers Overview](./data-providers-overview.md).
 
 ## Granting Data Provider Permissions
 
@@ -113,7 +113,7 @@ Once the Data Provider is configured, use it to populate a Select from List fiel
 
 1. Click _Save Form_ when finished.
 
-The Data Provider is now being used to populate a select field.
+The Data Provider is now being used to populate a select field for any users accessing the form with the correct permissions.
 
 ![Form users select an option form the list populated by the Data Provider.](./using-the-rest-data-provider-to-populate-form-options/images/07.png)
 
