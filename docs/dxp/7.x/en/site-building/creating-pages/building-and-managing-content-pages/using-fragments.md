@@ -147,7 +147,7 @@ Use the *content ratings* Fragment to add a page element for rating content. As 
 
 ### Collection Display
 
-Use the *collection display* Fragment to display asset collections on Content Pages. With it, you can choose from both manually and dynamically defined collections, as well as those defined by a Collection Provider. You can then choose whether a collection is displayed in a *grid* or with a list *template* (i.e., bordered, bulleted, inline, numbered, and unstyled). See [Collection Display Fragments](../../displaying-content/displaying-collections-and-collection-pages/collection-display-fragments.md) for more information.
+Use the *collection display* Fragment to display asset collections on Content Pages. With it, you can choose from both manually and dynamically defined collections, as well as those defined by a Collection Provider. You can then choose whether a collection is displayed in a *grid* or with a list *template* (i.e., bordered, bulleted, inline, numbered, and unstyled). See [Displaying Collections](../../displaying-content/additional-content-display-options/displaying-collections.md) for more information.
 
 ## Featured Content
 

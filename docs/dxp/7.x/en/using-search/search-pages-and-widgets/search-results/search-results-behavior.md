@@ -85,7 +85,7 @@ To determine which fields to include in the result summaries, the Search Results
 
 1. Fields available for display in the Search Results summaries are defined by the Search Results display logic ([`SearchResultsSummaryDisplayBuilder`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-web/src/main/java/com/liferay/portal/search/web/internal/result/display/builder/SearchResultSummaryDisplayBuilder.java) and [`SearchResultsSummaryDisplayContext`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-web/src/main/java/com/liferay/portal/search/web/internal/result/display/context/SearchResultSummaryDisplayContext.java)).
 
-1. The [Widget Template]( ./../../../site-building/displaying-content/customizing-widgets/styling-widgets-with-widget-templates.md ) used by the [Search Results](./configuring-the-search-results-widget.md) widget (_List_ by default) has the final word in all things related to Search Results display, including which of the available fields are included in the summary.
+1. The [Widget Template]( ./../../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md ) used by the [Search Results](./configuring-the-search-results-widget.md) widget (_List_ by default) has the final word in all things related to Search Results display, including which of the available fields are included in the summary.
 
 ## Highlighting
 

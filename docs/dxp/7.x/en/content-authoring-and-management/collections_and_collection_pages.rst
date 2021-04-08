@@ -11,5 +11,5 @@ Collections and Collection Pages
 
 -  :doc:`/content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages`
 -  :doc:`/content-authoring-and-management/collections-and-collection-pages/creating-collections`
--  :doc:`/site-building/displaying-content/displaying-collections`
+-  :doc:`/site-building/displaying-content/additional-content-display-options/displaying-collections`
 -  :doc:`../site-building/personalizing-site-experience/experience-personalization/personalizing-collections`

@@ -1,12 +1,12 @@
 # Using the Web Content Display Widget
 
-After you create a [Web Content Article](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md), the quickest way to display it on a page is the Web Content Display widget. Once a Web 
-Content Article is displayed, content updates appear immediately, unless you configure a [workflow](../../process-automation/workflow/introduction-to-workflow.md) to review and approve the updates.
+After you create a [Web Content Article](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md), the quickest way to display it on a page is the Web Content Display widget. Once a Web 
+Content Article is displayed, content updates appear immediately, unless you configure a [workflow](../../../process-automation/workflow/introduction-to-workflow.md) to review and approve the updates.
 
 ## Adding Web Content Display to a Page
 
 1. Under the Site Menu, go to *Site Builder* &rarr; *Pages*.
-1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) button next to the page you want to edit and select *Edit* (alternatively, [create a new Content Page](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
+1. Click the *Actions* (![Actions](../../../images/icon-actions.png)) button next to the page you want to edit and select *Edit* (alternatively, [create a new Content Page](../../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md).)
 1. From the Content Page sidebar, select the *Fragments and Widgets* button.
 1. Select the *Fragments* tab and drag-and-drop the *Web Content Display* widget onto the page.
 
@@ -48,7 +48,7 @@ You can configure other options in the Web Content Display widget. To access the
 | Option | Description |
 | --- | --- |
 | Related Assets | Set this option to show links to other related content. You configure the related content in the *Related Assets* property for your content (see the image below for an example on a Basic Web Content asset.) |
-| Ratings | Shows a clickable option where users can rate the content in different ways (likes, stars, thumbs up). To configure this rating option for different content types, see [Configuring Content Rating Type](../../site-building/site-settings/site-content-configurations/configuring-content-rating-type.md). |
+| Ratings | Shows a clickable option where users can rate the content in different ways (likes, stars, thumbs up). To configure this rating option for different content types, see [Configuring Content Rating Type](../../../site-building/site-settings/site-content-configurations/configuring-content-rating-type.md). |
 | Comments | Allows users to enter comments for the Web Content Display widget's content. By default, guests can't leave comments. See [Enabling Comments for Guest](#enabling-comments-for-guests) to change the default option. |
 | Comment Ratings | Shows a rating option for comments. |
 
@@ -66,7 +66,7 @@ In addition to the [setup options](#web-content-display-setup-options), you can 
 
 By default, guests can't leave comments on web content. If you want to allow guests to comment on your web content article, follow these steps:
 
-1. Open the [Global Menu](../../getting-started/navigating-dxp.md) (![Global Menu icon](../../../images/icon-applications-menu.png)) and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
+1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) (![Global Menu icon](../../../images/icon-applications-menu.png)) and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
 1. Click the *Guest* Rol.
 1. Click the *Define Permissions* column.
 1. From the left menu, select *Site and Asset Library Administration* &rarr; *Content & Data* &rarr; *Web Content*.
@@ -86,11 +86,11 @@ You can edit published content directly from the Web Content Display widget when
 
 ### Integrating OpenOffice or LibreOffice with the Web Content Display
 
-If you [enable the OpenOffice or LibreOffice integration](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. With this integration, users can download the content in different formats. You must select the available formats under the [*User Tools*](#user-tools) configuration for the Web Content Display Widget.
+If you [enable the OpenOffice or LibreOffice integration](../../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) with your Liferay Portal instance, you can enable document conversion for your content. With this integration, users can download the content in different formats. You must select the available formats under the [*User Tools*](#user-tools) configuration for the Web Content Display Widget.
 
 ## Related Information
 
-- [Adding a Basic Web Content Article](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)
-- [Building Content Pages](../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md)
-- [Displaying Content on Display Pages Templates](./using-display-page-templates/displaying-content-with-display-page-templates.md)
-- [Displaying Assets](./using-the-asset-publisher-widget/displaying-assets-intro.md)
+- [Adding a Basic Web Content Article](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)
+- [Building Content Pages](../../../site-building/creating-pages/building-and-managing-content-pages/building-content-pages.md)
+- [Displaying Content on Display Pages Templates](../using-display-page-templates/displaying-content-with-display-page-templates.md)
+- [Displaying Assets](../using-the-asset-publisher-widget/displaying-assets-intro.md)

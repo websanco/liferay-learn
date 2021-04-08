@@ -28,4 +28,4 @@ A Display Page Template defines how your web content is organized and formatted 
 
 ## Other Methods
 
-If you need to embed content from another URL, you can [use the IFrame widget](TODO:using-widgets). For instance, you can include multimedia (videos, interactive elements, etc.) or display advertisements in the iframe.
+If you need to embed content from another URL, you can [use the IFrame widget](./additional-content-display-options/using-the-iframe-widget.md). For instance, you can include multimedia (videos, interactive elements, etc.) or display advertisements in the iframe.

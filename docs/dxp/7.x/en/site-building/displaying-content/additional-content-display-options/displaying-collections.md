@@ -2,12 +2,12 @@
 
 > Availability: Liferay Portal 7.3 GA6, DXP 7.3 GA1+
 
-You can display a Collection by adding a Collection Page, or a Collection Display Fragment. For more information about these display options, see [About Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections).
+You can display a Collection by adding a Collection Page, or a Collection Display Fragment. For more information about these display options, see [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections).
 
-By default, any User can see a Collection's content. However, you can create *Personalized Variations* of these items using Segments. For more information, see [Customizing Collections Using Segments](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections).
+By default, any User can see a Collection's content. However, you can create *Personalized Variations* of these items using Segments. For more information, see [Customizing Collections Using Segments](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections).
 
 ```note::
-   Before displaying a Collection, you must create one. For more information, see `Creating Collections <../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md>`_.
+   Before displaying a Collection, you must create one. For more information, see `Creating Collections <../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md>`_.
 ```
 
 ## Displaying Collections on a Page
@@ -128,7 +128,7 @@ You can find usage statistics for the Collections on your site.
 
 ### Displaying Content Sets
 
-Content Sets are primarily displayed through the Asset Publisher. It is currently the only method to display them out of the box, but you can develop your own external applications or widgets to utilize Content Sets. In [Creating Content Sets](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets) you created two Content Sets. Now display them on a page.
+Content Sets are primarily displayed through the Asset Publisher. It is currently the only method to display them out of the box, but you can develop your own external applications or widgets to utilize Content Sets. In [Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets) you created two Content Sets. Now display them on a page.
 
 #### Configuring the Asset Publisher for Content Sets
 
@@ -181,6 +181,6 @@ Content Sets are a powerful feature which provide one place to easily define con
 
 ## Related Information
 
-- [Creating Collections](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md)
-- [About Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
-- [Personalizing Collections](../personalizing-site-experience/experience-personalization/personalizing-collections.md)
+* [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md)
+* [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
+* [Personalizing Collections](../../personalizing-site-experience/experience-personalization/personalizing-collections.md)
