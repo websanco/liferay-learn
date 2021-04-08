@@ -10,13 +10,10 @@ Services that are continuously restarting due to a recurring *liveness probe fai
 
 To diagnose a service that is continually restarting, we recommend the following steps:
 
-- [Troubleshooting Services](#troubleshooting-services)
-  - [A Service is Continually Restarting](#a-service-is-continually-restarting)
-    - [Check Service Logs for Liveness or Readiness Probe Failures](#check-service-logs-for-liveness-or-readiness-probe-failures)
-    - [Review Probe Configurations](#review-probe-configurations)
-    - [Review Service Logs for Startup Errors](#review-service-logs-for-startup-errors)
-    - [Adjust Probe Configurations](#adjust-probe-configurations)
-    - [Contact Cloud Support](#contact-cloud-support)
+1. [Check Service Logs for Liveness or Readiness Probe Failures](#check-service-logs-for-liveness-or-readiness-probe-failures)
+1. [Review Probe Configurations](#review-probe-configurations)
+1. [Review Service Logs for Startup Errors](#review-service-logs-for-startup-errors)
+1. [Adjust Probe Configurations](#adjust-probe-configurations)
 
 ### Check Service Logs for Liveness or Readiness Probe Failures
 
