@@ -2,7 +2,7 @@
 
 Data providers serve data that can be consumed by the Forms application. The REST Data Provider is included with the Forms application, and it serves a lot of needs: it allows you to consume data from [REST web services](https://en.wikipedia.org/wiki/Representational_state_transfer) to autofill form fields.
 
-* [Use the REST Data Provider to populate form options.](./using-data-providers-to-populate-form-options.md)
+* [Use the REST Data Provider to populate form options.](./using-the-rest-data-provider-to-populate-form-options.md)
 * [Auto-populate form fields with a REST Data Provider and the Autofill rule.](../form-rules/using-the-autofill-rule.md)
 
 One common example is using a REST Data Provider to populate a Select from List field's options with a list of countries.
@@ -12,7 +12,7 @@ One common example is using a REST Data Provider to populate a Select from List 
 Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services. If you are running a local server, see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for a list. If populating a list of countries, you'll find two `get-countries` JSON web services: either one will work. Click _Invoke_ to generate the results.
 
 ```warning::
-   To test using Liferay's web services with data providers in a local testing environment, you must enable local network access. See `Enabling Access to Data on the Local Network <./using-data-providers-to-populate-form-options.md#enabling-access-to-data-on-the-local-network>`__.  
+   To test using Liferay's web services with data providers in a local testing environment, you must enable local network access. See `Enabling Access to Data on the Local Network <./using-the-rest-data-provider-to-populate-form-options.md#enabling-access-to-data-on-the-local-network>`__.  
 ```
 
 The _Result_ tab shows a list of countries using JSON syntax, like this record for Afghanistan:
@@ -95,5 +95,5 @@ If using the `restcountries.eu` data provider, the name of the country appears f
 
 ## What's Next
 
-* [Using Data Providers to Populate Form Options](./using-data-providers-to-populate-form-options.md)
+* [Using Data Providers to Populate Form Options](./using-the-rest-data-provider-to-populate-form-options.md)
 * [Using the Autofill Rule](../form-rules/using-the-autofill-rule.md)

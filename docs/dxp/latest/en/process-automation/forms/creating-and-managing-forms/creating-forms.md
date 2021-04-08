@@ -24,7 +24,7 @@ The sample below is a hotel guest feedback survey form.
     * **Label**: _Rate your visit to the hotel._
     * **Help Text**: Leave this blank for now. If you want a subheading for your field to provide additional guidance, this would be useful.
     * Switch the Toggle to _YES_ in the **Required Field** selector.
-    * Leave the manual option checked for creating-forms the list of selections. To learn about populating the field with a data provider, read the [Data Providers](../data-providers/using-data-providers-to-populate-form-options.md) article.
+    * Leave the manual option checked for creating-forms the list of selections. To learn about populating the field with a data provider, read the [Data Providers](../data-providers/using-the-rest-data-provider-to-populate-form-options.md) article.
 
 1. In the _Options_ section, enter the values for the survey question:
 

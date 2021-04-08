@@ -1,12 +1,12 @@
 # Using the Autofill Rule
 
-The _Autofill_ Rule filters a form field's options based on pre-configured conditions. If you already have a [data provider](../data-providers/data-providers-overview.md) enabled, the _Autofill_ Rule is the next step in enhancing your form. See [Using Data Providers to Populate Form Options](../data-providers/using-data-providers-to-populate-form-options.md) to learn more.
+The _Autofill_ Rule filters a form field's options based on pre-configured conditions. If you already have a [data provider](../data-providers/data-providers-overview.md) enabled, the _Autofill_ Rule is the next step in enhancing your form. See [Using Data Providers to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md) to learn more.
 
 The sample form below asks the respondent to select either a cash reward or a vacation. If the respondent selects the latter, she must then choose the geographical region and then a country. The form uses an Autofill Rule to filter countries based on a geographic region.
 
 Follow the steps below:
 
-1. Configure a [data provider which imports the countries of the world with regional filters.](../data-providers/using-data-providers-to-populate-form-options.md)
+1. Configure a [data provider which imports the countries of the world with regional filters.](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)
 1. [Create a form](../creating-and-managing-forms/creating-forms.md) with these fields: 
 
     * A Single Select field called _Rewards_ with two options: *Cash* or *All expenses paid trip*
@@ -51,4 +51,4 @@ Users can now search for a region then the countries in the form.
 
 * [Creating Forms](../creating-and-managing-forms/creating-forms.md)
 * [Data Providers Overview](../data-providers/data-providers-overview.md)
-* [Using Data Providers to Populate Form Options](../data-providers/using-data-providers-to-populate-form-options.md)
+* [Using Data Providers to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)

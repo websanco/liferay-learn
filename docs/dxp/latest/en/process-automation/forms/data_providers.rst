@@ -5,7 +5,7 @@ Data Providers
    :maxdepth: 2
 
    data-providers/data-providers-overview.md
-   data-providers/using-data-providers-to-populate-form-options.md
+   data-providers/using-the-rest-data-provider-to-populate-form-options.md
 
 -  :doc:`/process-automation/forms/data-providers/data-providers-overview`
--  :doc:`/process-automation/forms/data-providers/using-data-providers-to-populate-form-options`
+-  :doc:`/process-automation/forms/data-providers/using-the-rest-data-provider-to-populate-form-options`
