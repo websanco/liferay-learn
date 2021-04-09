@@ -2,7 +2,7 @@
 
 Liferay DXP can scale to serve everything from the smallest to the largest web sites. Out-of-the-box, it's configured optimally for a single server environment. If you expect to have high traffic or want to improve the overall fault tolerance of your site, consider clustering DXP.
 
-![Liferay DXP is designed to scale to as large an installation as you need.](./clustering-for-high-availability/images/01.png) <!-- I know this image is an oldie but I find the diagram presented in the "example creating a dxp cluster" article a lot clearer. -->
+![Liferay DXP is designed to scale to as large an installation as you need.](./clustering-for-high-availability/images/01.png)
 
 Liferay DXP works well in clusters of multiple machines (horizontal cluster) or in clusters of multiple VMs on a single machine (vertical cluster), or any combination.
 

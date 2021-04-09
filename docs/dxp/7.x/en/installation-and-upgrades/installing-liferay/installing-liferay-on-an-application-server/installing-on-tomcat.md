@@ -19,7 +19,7 @@ In addition to copying dependencies, scripts, and configurations from the Lifera
 Liferay DXP requires a Java JDK 8 or 11.
 
 ```note::
-   Please see `the compatibility matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ for information on supported JDKs, databases, and environments.  See [JVM Configuration](../../reference/jvm-configuration.md) for recommended JVM settings.
+   Please see `the compatibility matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ for information on supported JDKs, databases, and environments.  See `JVM Configuration <../../reference/jvm-configuration.md>`_ for recommended JVM settings.
 ```
 
 Here are the basic steps for installing DXP on Tomcat:
@@ -307,10 +307,10 @@ Congratulations! You're running DXP on Tomcat.
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting_up_liferay.html) topics:
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building_solutions_on_dxp.html. Or you can explore [additional Liferay DXP setup](../../setting_up_liferay.html) topics:
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
-* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
+* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)
