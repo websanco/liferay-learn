@@ -22,6 +22,7 @@ public class Document_PUT_ById {
 			new Document() {
 				{
 					description = "Goo";
+					title = "Document_PUT_ById.java";
 				}
 			},
 			new HashMap<String, File>() {
