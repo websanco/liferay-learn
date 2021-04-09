@@ -19,7 +19,7 @@ public class DocumentFolder_PUT_ById {
 				Long.valueOf(System.getProperty("documentFolderId")),
 				new DocumentFolder() {
 					{
-						name = "Bar";
+						name = "Goo";
 					}
 				});
 
