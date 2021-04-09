@@ -1,6 +1,6 @@
 # Configuring the Liferay DXP Service
 
-There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/7.x/en/system-administration/configuring-liferay/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/7.x/en/system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
+There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
 
 ```
 liferay
@@ -21,7 +21,7 @@ With the exception of the `common/` directory, changes added to an environment-s
 
 ## Portal Properties
 
-[Portal properties](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html) are properties saved in a `portal-ext.properties` file. They are used to configure your Liferay DXP environment.
+[Portal properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html) are properties saved in a `portal-ext.properties` file. They are used to configure your Liferay DXP environment.
 
 For an on-premises Liferay DXP instance, this file belongs inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place portal properties file into the appropriate `configs/{ENV}/` folder(s) for them to be copied into `$LIFERAY_HOME` for the Liferay DXP instance on deployment.
 
@@ -65,7 +65,7 @@ liferay
 └── LCP.json
 ```
 
-The `portal-ext.properties` and `portal-all.properties` files are shared across all environments. You can add any shared properties there and add environment specific properties in each respective `portal-env.properties` file. For more information, see [Portal Property Priority](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html#portal-property-priority).
+The `portal-ext.properties` and `portal-all.properties` files are shared across all environments. You can add any shared properties there and add environment specific properties in each respective `portal-env.properties` file. For more information, see [Portal Property Priority](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html#portal-property-priority).
 
 ```note::
    Portal properties may also be defined as environment variables. See `the environment variables reference <./introduction-to-the-liferay-dxp-service.md#environment-variables-reference>`_ for more information.
@@ -85,4 +85,4 @@ These configuration files belong in the `osgi/configs/` folder inside of `$LIFER
 
 * [Introduction to the Liferay DXP Service](./introduction-to-the-liferay-dxp-service.md)
 * [Enabling Clustering in DXP Cloud](./setting-up-clustering-in-dxp-cloud.md)
-* [Portal Properties](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/portal-properties.html)
+* [Portal Properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html)

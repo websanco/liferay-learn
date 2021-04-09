@@ -28,7 +28,7 @@ After connecting your [Liferay DXP instance to Analytics Cloud](connecting-lifer
 
       ![Select the fields to sync for your contacts.](./syncing-contact-data-from-dxp/images/02.png)
 
-      Note that any custom field created for users is available to sync. Learn more about [adding custom fields to users](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/devops/adding-custom-fields-to-users.html).
+      Note that any custom field created for users is available to sync. Learn more about [adding custom fields to users](https://learn.liferay.com/dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html).
 
       Click the *Save* button at the bottom of the page after making your selections.
 

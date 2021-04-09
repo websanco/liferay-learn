@@ -17,7 +17,7 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
 1. Download the WAR containing the [Acme Sample Blue Theme](./liferay-5b2v-theme.war):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O
+    curl https://learn.liferay.com/dxp/latest/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O
     ```
 
 1. Deploy the WAR containing the theme:

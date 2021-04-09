@@ -73,8 +73,8 @@
                         </button>
                         <ul class="dropdown-menu" id="productDropdown">
                             <li data-producturl="/analytics-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Analytics Cloud{% endtrans %}</li>
-                            <li data-producturl="/commerce/2.x/{{ language }}/{{ pathto('search') }}">{% trans %}Commerce{% endtrans %}</li>
-                            <li data-producturl="/dxp/7.x/{{ language }}/{{ pathto('search') }}">{% trans %}DXP{% endtrans %}</li>
+                            <li data-producturl="/commerce/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Commerce{% endtrans %}</li>
+                            <li data-producturl="/dxp/latest/{{ language }}/{{ pathto('search') }}">{% trans %}DXP{% endtrans %}</li>
                             <li data-producturl="/dxp-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}DXP Cloud{% endtrans %}</li>
                         </ul>
                     </div>
@@ -86,7 +86,7 @@
                     const productToggleWrapper = document.querySelector('.product-toggle-wrapper');
                     const searchForm = document.querySelector('.search-form');
 
-                    searchForm.action = '/dxp/7.x/{{ language }}/' + `{{ pathto('search') }}`;
+                    searchForm.action = '/dxp/latest/{{ language }}/' + `{{ pathto('search') }}`;
 
                     const toggleProductDropdown = show => productDropdown.classList.toggle('show', show);
 
@@ -122,11 +122,11 @@
                     </div>
 
                     <div class="col-lg-4">
-                        {{ productCard(href="/commerce/2.x/" + language + "/index.html", iconId="#commerce-logo", title="Commerce") }}
+                        {{ productCard(href="/commerce/latest/" + language + "/index.html", iconId="#commerce-logo", title="Commerce") }}
                     </div>
 
                     <div class="col-lg-4">
-                        {{ productCard(href="/dxp/7.x/" + language + "/index.html", iconId="#dxp-logo", title="DXP") }}
+                        {{ productCard(href="/dxp/latest/" + language + "/index.html", iconId="#dxp-logo", title="DXP") }}
                     </div>
 
                     <div class="col-lg-4">

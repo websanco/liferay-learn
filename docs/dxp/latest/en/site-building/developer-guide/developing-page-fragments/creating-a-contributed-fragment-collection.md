@@ -26,10 +26,10 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the [example](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):
+1. Download and unzip the [example](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
     ```
 
     ```bash
@@ -101,7 +101,7 @@ The `bnd.bnd` file includes a few properties that must be defined for the Collec
 * The `Web-ContextPath` Header indicates the module folder that contains the Collection, so the `ServletContext` is correctly generated.
 * The `-dsannotations-options` enables the Declarative Service annotations found in the class hierarchy of the Component class.
 
-See the example project's [`bnd.bnd`](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) for a reference of these values.
+See the example project's [`bnd.bnd`](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) for a reference of these values.
 
 Now you'll modify the project to include another Fragment in the contributed Collection.
 

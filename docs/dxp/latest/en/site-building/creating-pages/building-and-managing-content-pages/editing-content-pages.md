@@ -156,7 +156,7 @@ Choosing a field in Page Structure highlights it on the page. On large complicat
 
 ### Look and Feel
 
-Click the *Page Design Options* icon (![Look and Feel](../../../images/icon-look-and-feel.png)) to change the theme or manage other options for the page. These options are fully documented in [Creating Pages](/dxp/7.x/en/site-building/creating_pages.html). 
+Click the *Page Design Options* icon (![Look and Feel](../../../images/icon-look-and-feel.png)) to change the theme or manage other options for the page. These options are fully documented in [Creating Pages](/dxp/latest/en/site-building/creating_pages.html). 
 
 ### Comments
 
@@ -181,7 +181,7 @@ If you de-select a fragment or enter the comments UI without a fragment selected
 
 ### Title Bar
 
-The title bar provides navigation back to the Main Menu, a link to page configuration, and the ability to search for other pages. The title bar is covered in more detail in [Creating Pages](/dxp/7.x/en/site-building/creating_pages.html). 
+The title bar provides navigation back to the Main Menu, a link to page configuration, and the ability to search for other pages. The title bar is covered in more detail in [Creating Pages](/dxp/latest/en/site-building/creating_pages.html). 
 
 ![The title bar has several tools built into it.](./editing-content-pages/images/28.png)
 

@@ -1,6 +1,6 @@
 # A/B Testing
 
-A/B Testing evaluates the effectiveness of Content Pages by testing multiple versions/layouts of the Page at once. This is done by creating Page Variants of the original Page, testing the Page with a goal (e.g., clicks), and publishing the most effective Variant. You can learn more about creating an A/B test and configuring it for a Content Page in Liferay DXP's [A/B Testing documentation](https://learn.liferay.com/dxp/7.x/en/site-building/optimizing-sites/ab-testing/ab-testing.html).
+A/B Testing evaluates the effectiveness of Content Pages by testing multiple versions/layouts of the Page at once. This is done by creating Page Variants of the original Page, testing the Page with a goal (e.g., clicks), and publishing the most effective Variant. You can learn more about creating an A/B test and configuring it for a Content Page in Liferay DXP's [A/B Testing documentation](https://learn.liferay.com/dxp/latest/en/site-building/optimizing-sites/ab-testing/ab-testing.html).
 
 All results from an A/B test running in Liferay DXP are tracked by Analytics Cloud. An A/B test is synced with Analytics Cloud once it's created. From there, you can manage the A/B test from Analytics Cloud. To view all drafted, running, terminated, and completed A/B tests, go to the Tests menu from the left column.
 
@@ -16,7 +16,7 @@ For a drafted A/B test, you can manage the following:
 
 ![The A/B testing setup process.](a-b-testing/images/02.png)
 
-See [Liferay DXP's A/B Testing documentation](https://learn.liferay.com/dxp/7.x/en/site-building/optimizing-sites/ab-testing/ab-testing.html) for more information on an A/B test's setup.
+See [Liferay DXP's A/B Testing documentation](https://learn.liferay.com/dxp/latest/en/site-building/optimizing-sites/ab-testing/ab-testing.html) for more information on an A/B test's setup.
 
 Once your A/B test is running, Analytics Cloud offers several reports to keep you up-to-date on your A/B test's progress:
 

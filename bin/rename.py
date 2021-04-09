@@ -14,8 +14,8 @@ if __name__ == "__main__":
     if (len(sys.argv) < 3):
         print(Fore.BLUE + "Usage:" + Fore.YELLOW + "\n\t$ python rename.py oldName newName")
         print(Fore.BLUE + "Description: Does 2 major tasks that are required when renaming an article:" + Fore.YELLOW + "\n\tReplaces 'oldName' with 'newName' in the text of .md, .html, and .rst files (with constraints to avoid unintended over-replacement)\n\tRenames the file and the resource folder for the file")
-        print(Fore.BLUE + "Example:" + Fore.YELLOW + "\n\t$ cd liferay-learn/docs/dxp/7.x/en/\n\t$ python ../../../../bin/rename.py introduction-to-liferay liferay")
-        print(Fore.BLUE + "Tips:" + Fore.YELLOW + "\n\t- Always run on a git clean index to avoid tedious manual recovery if something unexpected happens.\n\t- Run it in a product's root folder (e.g., docs/dxp/7.x/en) to replace all links to the file.")
+        print(Fore.BLUE + "Example:" + Fore.YELLOW + "\n\t$ cd liferay-learn/docs/dxp/latest/en/\n\t$ python ../../../../bin/rename.py introduction-to-liferay liferay")
+        print(Fore.BLUE + "Tips:" + Fore.YELLOW + "\n\t- Always run on a git clean index to avoid tedious manual recovery if something unexpected happens.\n\t- Run it in a product's root folder (e.g., docs/dxp/latest/en) to replace all links to the file.")
 
         sys.exit()
 

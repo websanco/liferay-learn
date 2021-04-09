@@ -1,6 +1,6 @@
 # Blogs
 
-[Blogs Entries](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/blogs/getting-started-with-blogs.html) are important content on websites. They attract readers who return to view new blog posts and interact in discussion.
+[Blogs Entries](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/blogs/getting-started-with-blogs.html) are important content on websites. They attract readers who return to view new blog posts and interact in discussion.
 
 Analytics Cloud gives you important insights into how engaged readers are with your blog posts.
 

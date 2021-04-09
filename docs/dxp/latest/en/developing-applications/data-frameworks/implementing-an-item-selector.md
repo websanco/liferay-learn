@@ -15,7 +15,7 @@ To implement an Item Selector, you must embed it in an application, such as a mo
 1. Download the sample module:
 
 ```bash
-curl https://learn.liferay.com/dxp/7.x/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
+curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
 ```
 
 ```bash

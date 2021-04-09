@@ -12,7 +12,7 @@ To make changes to a Property,
 
 ## Renaming a Property
 
-To change the name of the Property click the edit icon (![edit icon](https://learn.liferay.com/dxp/7.x/en/_images/icon-edit.png)) and input the changes. Clicking outside the text box commits the changes.
+To change the name of the Property click the edit icon (![edit icon](https://learn.liferay.com/dxp/latest/en/_images/icon-edit.png)) and input the changes. Clicking outside the text box commits the changes.
 
 ![Click the edit icon to change the Property name.](./managing-properties/images/02.png)
 

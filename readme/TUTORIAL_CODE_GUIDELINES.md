@@ -155,10 +155,10 @@ Here are some examples that demonstrate example project types.
 
 | Example Type | Reference |
 | :----------- | :-------- |
-| API Implementation | [writing-a-similar-results-contributor/resources/liferay-r1s1.zip](../docs/dxp/7.x/en/using-search/developer-guide/writing-a-similar-results-contributor/resources/liferay-r1s1.zip) |
-| API & OSGi Services | [using-an-osgi-service/resources/liferay-j1h1.zip](../docs/dxp/7.x/en/liferay-internals/fundamentals/using-an-osgi-service/resources/liferay-j1h1.zip) |
-| Portlet | [using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip](../docs/dxp/7.x/en/developing-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip) |
-| Fragment (JS project) | [adding-configuration-options-to-fragments/resources/liferay-c7f8.zip](../docs/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/adding-configuration-options-to-fragments/resources/liferay-c7f8.zip) |
+| API Implementation | [writing-a-similar-results-contributor/resources/liferay-r1s1.zip](../docs/dxp/latest/en/using-search/developer-guide/writing-a-similar-results-contributor/resources/liferay-r1s1.zip) |
+| API & OSGi Services | [using-an-osgi-service/resources/liferay-j1h1.zip](../docs/dxp/latest/en/liferay-internals/fundamentals/using-an-osgi-service/resources/liferay-j1h1.zip) |
+| Portlet | [using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip](../docs/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip) |
+| Fragment (JS project) | [adding-configuration-options-to-fragments/resources/liferay-c7f8.zip](../docs/dxp/latest/en/site-building/developer-guide/developing-page-fragments/adding-configuration-options-to-fragments/resources/liferay-c7f8.zip) |
 
 
 ### Module Structure
@@ -225,7 +225,7 @@ Here is example initial Bnd content for the different modules types.
 
 If you've defined APIs in your module, export their packages in your `bnd.bnd`.
 
-For example, the [`k8s2-api`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api) module publishes its [`com.acme.k8s2.Greeter`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java) interface by exporting the `com.acme.k8s2` package in the module's [`bnd.bnd`](../docs/dxp/7.x/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd):
+For example, the [`k8s2-api`](../docs/dxp/latest/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api) module publishes its [`com.acme.k8s2.Greeter`](../docs/dxp/latest/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java) interface by exporting the `com.acme.k8s2` package in the module's [`bnd.bnd`](../docs/dxp/latest/en/liferay-internals/fundamentals/module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd):
 
 ```properties
 Export-Package: com.acme.k8s2 
@@ -256,7 +256,7 @@ An implementation package should resemble the interface package but be *internal
 | Class Type | Fully Qualified Class Name |
 | :--------- | :------------------------- |
 | Interface | com.liferay.**dynamic.data.mapping.storage**.**DDMStorageAdapter** |
-| Implementation | [com.acme.r2f1.internal.**dynamic.data.mapping.storage**.R2F1**DDMStorageAdapter**](../docs/dxp/7.x/en/process-automation/forms/developer-guide/writing-a-form-storage-adapter/resources/liferay-r2f1.zip/r2f1-impl/src/main/java/com/acme/r2f1/internal/dynamic/data/mapping/storage/R2F1DDMStorageAdapter.java) |
+| Implementation | [com.acme.r2f1.internal.**dynamic.data.mapping.storage**.R2F1**DDMStorageAdapter**](../docs/dxp/latest/en/process-automation/forms/developer-guide/writing-a-form-storage-adapter/resources/liferay-r2f1.zip/r2f1-impl/src/main/java/com/acme/r2f1/internal/dynamic/data/mapping/storage/R2F1DDMStorageAdapter.java) |
 
 ### Portlet Package Names 
 
@@ -374,7 +374,7 @@ getUser(long userId) throws PortalException {
 
 **Note:** The log message automatically includes the class name. For example, `WARN [http-nio-8080-exec-1][J1C2UserLocalServiceWrapper:line-number]`.
 
-For an example, see [J1C2UserLocalServiceWrapper.java](../docs/dxp/7.x/en/liferay-internals/extending-liferay/creating-service-wrappers/resources/liferay-j1c2.zip/j1c2-impl/src/main/java/com/acme/j1c2/internal/service/J1C2UserLocalServiceWrapper.java).
+For an example, see [J1C2UserLocalServiceWrapper.java](../docs/dxp/latest/en/liferay-internals/extending-liferay/creating-service-wrappers/resources/liferay-j1c2.zip/j1c2-impl/src/main/java/com/acme/j1c2/internal/service/J1C2UserLocalServiceWrapper.java).
 
 ## Templates
 
@@ -410,8 +410,8 @@ Verify and validate your example on your target Liferay version. If it only work
 Testing against a Liferay Docker image is typically easiest. Here are some references:
 
 * [Install Docker CLI](https://docs.docker.com/engine/reference/commandline/docker/) (i.e, `docker`)
-* [Get and start the latest DXP image](../docs/dxp/7.x/en/getting-started/starting-with-a-docker-image.md#get-started-with-liferay-dxp)
-* Read [Docker Container Basics](../docs/dxp/7.x/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)
+* [Get and start the latest DXP image](../docs/dxp/latest/en/getting-started/starting-with-a-docker-image.md#get-started-with-liferay-dxp)
+* Read [Docker Container Basics](../docs/dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)
 
 ### Code Changes Only 
 

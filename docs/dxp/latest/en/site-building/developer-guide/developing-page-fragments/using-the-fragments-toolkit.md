@@ -20,7 +20,7 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
 1. Download and unzip the example JavaScript project ZIP file.
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
     ```
 
     ```bash

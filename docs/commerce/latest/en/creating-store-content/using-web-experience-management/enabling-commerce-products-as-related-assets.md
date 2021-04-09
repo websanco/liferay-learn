@@ -8,7 +8,7 @@ Commerce Products can be connected to other assets in Liferay Commerce by using 
 
 ## Configure the Asset Browser to Search the Database
 
-1. Navigate to `[Liferay Home]\osgi\marketplace\`. For more information about `Liferay Home` folder, see [Liferay Home](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html).
+1. Navigate to `[Liferay Home]\osgi\marketplace\`. For more information about `Liferay Home` folder, see [Liferay Home](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html).
 1. Find the `Liferay Web Experience - Liferay Asset - Impl.lpkg` then open it with an archive manager.
 1. In the archive manager window, open the `com.liferay.asset.browser.web.jar`.
 1. Using a text editor, open the `portlet.properties` file.
@@ -45,4 +45,4 @@ Commerce Products are now available as Related Assets.
 ## Additional Information
 
 * [Defining Content Relationships](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships)
-* [Adding a Basic Web Content Article](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html)
+* [Adding a Basic Web Content Article](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html)

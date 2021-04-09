@@ -14,4 +14,4 @@ Here's a comparison of Segments in Liferay DXP and Analytics Cloud.
 | Can't include anonymous users | Includes anonymous users |
 | Good for limited, short-term personalization | Good for expansive, long-term personalization |
 
-For information on using Analytics Cloud Segments in Liferay DXP, see [Using Analytics Cloud with User Segments](https://learn.liferay.com/dxp/7.x/en/site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments.html). For information on personalization in Liferay DXP, see [Personalizing Experiences](https://learn.liferay.com/dxp/7.x/en/site-building/personalizing_site_experience.html#).
+For information on using Analytics Cloud Segments in Liferay DXP, see [Using Analytics Cloud with User Segments](https://learn.liferay.com/dxp/latest/en/site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments.html). For information on personalization in Liferay DXP, see [Personalizing Experiences](https://learn.liferay.com/dxp/latest/en/site-building/personalizing_site_experience.html#).

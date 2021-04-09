@@ -35,9 +35,9 @@ Here are the changes from 7.2 to 7.3:
 | dl.file.entry.preview.fork.process.jvm.options | *NA* | *blank*. See [Document Library Service](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Document%20Library%20Service). |
 | editor.wysiwyg.portal-web.docroot.html.portlet.message_boards.edit_message.bb_code.jsp | alloyeditor_bbcode | Removed |
 | editor.wysiwyg.portal-web.docroot.html.portlet.message_boards.edit_message.html.jsp | alloyeditor | Removed |
-| ehcache.blocking.cache.allowed | false | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
-| ehcache.bootstrap.cache.loader.enabled | false | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
-| ehcache.bootstrap.cache.loader.properties.default | *blank* | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
+| ehcache.blocking.cache.allowed | false | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
+| ehcache.bootstrap.cache.loader.enabled | false | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
+| ehcache.bootstrap.cache.loader.properties.default | *blank* | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
 | image.io.use.disk.cache | true | false |
 | include-and-override | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Properties%20Override) | Removed portal-companyID.properties overrides |
 | index.on.upgrade | false | Removed |
@@ -47,7 +47,7 @@ Here are the changes from 7.2 to 7.3:
 | jsonws.web.service.paths.excludes | *blank* | /user/update-password |
 | jsonws.web.service.parameter.type.whitelist.class.names | *NA* | New. See [JSON Web Service](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JSON%20Web%20Service). |
 | jsp.servlet.init.param.enablePooling | *NA* | false |
-| layout.parallel.render.* properties | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Layouts) | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#server-side-parallel-rendering-is-no-longer-supported). |
+| layout.parallel.render.* properties | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Layouts) | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#server-side-parallel-rendering-is-no-longer-supported). |
 | Layout settings for panel layouts, embedded layouts, and URL layouts | See the [properties](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Layouts). | Removed |
 | mail.send.blacklist | *NA* | New. See [Mail](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Mail). |
 | mail.session.mail.smtp.starttls.enable | *NA* | true. See [Mail](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Mail). |
@@ -65,7 +65,7 @@ Here are the changes from 7.2 to 7.3:
 | module.framework.web.servlet.annotation.scanning.blacklist | *NA* | See [Module Framework Web Application Bundles](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) |
 | module.framework.web.servlet.annotation.scanning.whitelist | *NA* | com/liferay/faces/ |
 | module.framework.web.start.level | *NA* | 15. See [Module Framework](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Module%20Framework).
-| permissions.object.blocking.cache | false | Removed. See this [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
+| permissions.object.blocking.cache | false | Removed. See this [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
 | portal.resiliency.* | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Portal%20Resiliency) | Removed |
 | retry.data.source.max.retries | 100 | 0 |
 | session.phishing.protected.attributes | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Session) | added SETUP_WIZARD_PASSWORD_UPDATED |
@@ -74,16 +74,16 @@ Here are the changes from 7.2 to 7.3:
 | spring.configs | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Spring) | dropped META-INF/fabric-spring.xml and META-INF/asset-spring.xml |
 | spring.remoting.servlet.* | Removed in a 7.2 follow-up release | Removed |
 | system.role.Analytics.Administrator.description | *NA* | See [Groups and Roles](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Groups%20and%20Roles) |
-| upgrade.database.auto.run | *NA* | false. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#replaced-osgi-configuration-property-autoupgrade). |
-| user.groups.copy.layouts.to.user.personal.site | false | Removed the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#removed-portal-property-user-groups-copy-layouts-to-user-personal-site). |
-| value.object.entity.blocking.cache | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
-| value.object.entity.cache.enabled.com.liferay.portal.kernel.model.Layout | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
-| value.object.entity.cache.enabled.com.liferay.portal.kernel.model.User | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
-| value.object.finder.cache.enabled.* | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Value%20Object) | Removed. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
+| upgrade.database.auto.run | *NA* | false. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#replaced-osgi-configuration-property-autoupgrade). |
+| user.groups.copy.layouts.to.user.personal.site | false | Removed the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#removed-portal-property-user-groups-copy-layouts-to-user-personal-site). |
+| value.object.entity.blocking.cache | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-blocking-cache). |
+| value.object.entity.cache.enabled.com.liferay.portal.kernel.model.Layout | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
+| value.object.entity.cache.enabled.com.liferay.portal.kernel.model.User | true | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
+| value.object.finder.cache.enabled.* | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Value%20Object) | Removed. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html#remove-support-for-setting-cache-properties-for-each-entity-model). |
 | verify.processes | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Verify) | Removed |
 | verify.frequency | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Verify) | Removed |
 | verify.database.transactions.disabled | See [here](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Verify) | Removed |
-| view.count.enabled | *NA* | true. See the [breaking change](https://learn.liferay.com/dxp/7.x/en/liferay-internals/reference/7-3-breaking-changes.html). |
+| view.count.enabled | *NA* | true. See the [breaking change](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-3-breaking-changes.html). |
 | work.dir.override.enabled | *NA* | false. See [Work Directory](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Work%20Directory). |
 
 ## Additional Information

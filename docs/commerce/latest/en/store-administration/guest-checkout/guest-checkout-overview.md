@@ -20,7 +20,7 @@ When a Guest submits an order, it is processed the same as any other order. See 
 
 ## Creating a Guest Checkout Authentication Page
 
-Guest checkout requires a [site page](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check function on the [Channels setting](../../starting-a-store/channels/channels-reference-guide.md) to generate this page and widget.
+Guest checkout requires a [site page](https://learn.liferay.com/dxp/latest/en/site-building/creating_pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check function on the [Channels setting](../../starting-a-store/channels/channels-reference-guide.md) to generate this page and widget.
 
 Clicking the _Continue as a Guest_ allows customers to complete the purchase without logging in or having to create an account.
 

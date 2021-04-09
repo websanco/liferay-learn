@@ -15,8 +15,8 @@ Liferay Commerce 3.0 comes bundled with Liferay Portal 7.3 CE GA6 and Liferay DX
 
 | Installation Method | Purpose |
 | --- | --- |
-| [Docker image](https://learn.liferay.com/dxp/7.x/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
-| [Bundle](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
+| [Docker image](https://learn.liferay.com/dxp/latest/en/getting-started/starting-with-a-docker-image.html#get-started-with-liferay) | Getting started with a Docker image is the fastest way to begin touring Liferay Commerce |
+| [Bundle](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html) | Liferay Commerce pre-bundled with an application server. The most common way to get started running a Liferay installation. |
 
 Liferay Portal CE bundles and images require no additional, Commerce-specific installation steps. Basic Commerce features come activated and can be used immediately on startup.
 

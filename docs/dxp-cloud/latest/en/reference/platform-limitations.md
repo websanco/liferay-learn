@@ -49,7 +49,7 @@ These limitations apply to every service in a DXP Cloud environment:
 
 These limitations apply to the [Liferay service](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md) in each DXP Cloud environment:
 
-* **Remote Staging**: [Remote Staging](https://learn.liferay.com/dxp/7.x/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is not available with DXP Cloud. Local Staging is still available and supported.
+* **Remote Staging**: [Remote Staging](https://learn.liferay.com/dxp/latest/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is not available with DXP Cloud. Local Staging is still available and supported.
 
 * **Autoscaling**: When enabled, autoscaling may only add new instances up to a maximum of 10.
 

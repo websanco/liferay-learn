@@ -16,7 +16,7 @@ Before deploying the PunchOut2Go connector, ensure Commerce is already deployed 
 
 1. Download the *Commerce Connector to PunchOut2Go* from the [Liferay Help Center](http://customer.liferay.com/downloads).
 
-1. Copy the *PunchOut2Go Connector* `LPKG` into the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) folder.
+1. Copy the *PunchOut2Go Connector* `LPKG` into the [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html) folder.
 
 1. Verify that the following message displays in the application server console:
 
@@ -86,7 +86,7 @@ The Auto Login _Punch Out_ Token is configured.
 
 ## Create a Punch Out Buyer Role
 
-As best practice, users should create a Role for vendors using Punch Out. To learn more about Commerce Roles, see [Account Roles](../account-management/account-roles.md) and [Creating a Custom Account Role](../account-management/creating-a-custom-account-role.md). For more information about Roles and Permissions in DXP, see [Understanding Roles and Permissions](https://learn.liferay.com/dxp/7.x/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
+As best practice, users should create a Role for vendors using Punch Out. To learn more about Commerce Roles, see [Account Roles](../account-management/account-roles.md) and [Creating a Custom Account Role](../account-management/creating-a-custom-account-role.md). For more information about Roles and Permissions in DXP, see [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
 
 1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
 1. Click the _Site Roles_ tab.

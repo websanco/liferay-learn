@@ -89,7 +89,7 @@ liferay
 
 Liferay DXP has many powerful features to build, manage, and deploy content to the web. However, some of those features are unavailable on DXP Cloud:
 
-* [Remote Staging](https://learn.liferay.com/dxp/7.x/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is currently unsupported on DXP Cloud. Users migrating from an on-premises installation to DXP Cloud must convert to Local Staging in order to continue using Staging functionality.
+* [Remote Staging](https://learn.liferay.com/dxp/latest/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is currently unsupported on DXP Cloud. Users migrating from an on-premises installation to DXP Cloud must convert to Local Staging in order to continue using Staging functionality.
 
 ## Additional Information
 

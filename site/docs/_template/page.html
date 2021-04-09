@@ -6,9 +6,9 @@
 
         {# hardcode version values for now #}
         {% if product == "commerce" %}
-            {% set version = "2.x" %}
+            {% set version = "latest" %}
         {% elif product == "dxp" %}
-            {% set version = "7.x" %}
+            {% set version = "latest" %}
         {% else %}
             {% set version = "latest" %}
         {% endif %}
@@ -269,11 +269,11 @@
                 if (target === 'analytics-cloud') {
                     window.location.pathname = '/analytics-cloud/latest/en/index.html';
                 } else if (target === 'commerce') {
-                    window.location.pathname = '/commerce/2.x/en/index.html';
+                    window.location.pathname = '/commerce/latest/en/index.html';
                 } else if (target === 'dxp-cloud') {
                     window.location.pathname = '/dxp-cloud/latest/en/index.html';
                 } else {
-                    window.location.pathname = '/dxp/7.x/en/index.html';
+                    window.location.pathname = '/dxp/latest/en/index.html';
                 }
             }
         });
