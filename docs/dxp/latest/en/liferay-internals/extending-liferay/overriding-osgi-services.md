@@ -2,15 +2,15 @@
 
 Liferay's OSGi container is a dynamic environment in which services can be added, removed, or overridden as needed. This framework registers Liferay components with the OSGi service registry, each with their own availability, ranking, and attributes. Together, these details determine whether components referring to a service bind to it or not.
 
-When attempting to override an OSGi service, follow these steps:
+To override an OSGi service, follow these steps:
 
-1. Identify the service you want to override, and gather its essential service and reference details.
+1. Identify the service you want to override and gather its essential service and reference details.
 
-1. Use these details to create a custom service for overriding the existing service.
+1. Use these details to create a custom service that fulfills the existing service's requirements.
 
 1. Reconfigure existing Liferay components to use your custom service (if needed).
 
-The following tutorial uses [sample modules](https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-s1j6.zip) to demonstrate how to override an OSGi service. These modules include an api for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that uses the initial implementation. Also included are a second implementation for overriding the initial one and a config file for reconfiguring the portlet to use the new implementation.
+The following tutorial uses [sample modules](./liferay-s1j6.zip) to demonstrate how to override an OSGi service. These modules include an api for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that uses the initial implementation. Also included are a second implementation for overriding the initial one and a config file for reconfiguring the portlet to use the new implementation.
 
 ## Deploy Sample Modules for Overriding
 
@@ -40,7 +40,7 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
 
    Each module's JAR is generated in its `build/libs` folder (e.g., `s1j6-api/build/libs/com.acme.s1j6.api-1.0.0.jar`).
 
-   Log messages indicate when Liferay begins processing and successfully starts each module. These Logs also provide each service's bundle id.
+   Log messages indicate when Liferay begins processing and successfully starts each module. These logs also provide each service's bundle id.
 
    ```
    STARTED com.acme.s1j6.api_1.0.0 [1357]
@@ -63,7 +63,7 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
    true
    ```
 
-   The provided `api` defines an OSGi service type that is then implemented by the `able.impl` module, which in turn is used by the provided `portlet`.
+The provided `api` defines an OSGi service type that is then implemented by the `able.impl` module, which in turn is used by the provided `portlet`. Now that everything's deployed, for the purposes of learning how to do this, you can go through the process of discovering the details of a service you want to override. 
 
 ## Gathering OSGi Service and Reference Details
 
@@ -85,7 +85,7 @@ Once you've identified the service you want to override, use Gogo Shell commands
 
   * **Cardinality**: the number of service instances to which the reference can and must bind
 
-The following example runs the `scr:info` Gogo Shell command for the sample `portlet` to gather details for overriding `able.impl`.
+Run the `scr:info` Gogo Shell command for the sample `portlet` to gather details for overriding `able.impl`.
 
 ```shell
 scr:info com.acme.s1j6.web.internal.portlet.S1J6Portlet
@@ -106,7 +106,7 @@ References:   (total 1)
     * Bound to [4516] from bundle 1358 (com.acme.s1j6.able.impl:1.0.0)
 ```
 
-In the above output, `S1J6Portlet` has an `_s1J6` field that references and is bound to a component of the `S1J6` service type in the `com.acme.s1j6.able.impl` bundle. Searching this bundle's id in the Gogo Shell by running `bundle 1358` reveals the full service class name of the component used by the portlet: `com.acme.s1j6.able.internal.S1J6AbleImpl`.
+In the above output, `S1J6Portlet` has an `_s1J6` field that's bound to a component of the `S1J6` service type in the `com.acme.s1j6.able.impl` bundle because of its `@Reference`. Searching this bundle's id in the Gogo Shell by running `bundle 1358` reveals the full service class name of the component used by the portlet: `com.acme.s1j6.able.internal.S1J6AbleImpl`.
 
 Finally, the full reference configuration details for `S1J6Portlet` are as follows:
 
@@ -120,13 +120,11 @@ Finally, the full reference configuration details for `S1J6Portlet` are as follo
 
 * **Cardinality**: mandatory and unary (i.e., `1..1`)
 
-Together, these details indicate the portlet will require reconfiguration to use a new `impl` in place of `S1J6AbleImpl`.
+Together, these details indicate the portlet requires reconfiguration to use a new `impl` in place of `S1J6AbleImpl`.
 
 After gathering the requisite service and reference details, you can use them to override an existing service.
 
 ## Creating an OSGi Service with the Gathered Details
-
-Follow these steps to create an OSGi service for overriding an existing service:
 
 1. Implement the same service type as the target OSGi service.
 
@@ -176,7 +174,7 @@ Together, a service's [Reference Policy](https://docs.osgi.org/javadoc/r5/enterp
 
 In cases where the reference's policy option is `greedy`, the reference does not need to be reconfigured to adopt your new service, provided its ranking is higher than the service you want to override.
 
-However, if the policy is `static` and its policy option is `reluctant`, the referencing service requires reconfiguration.
+However, if the policy is `static` and its policy option is `reluctant`, the referencing service requires reconfiguration, unless you want to restart your server.
 
 Follow these steps:
 
@@ -202,7 +200,7 @@ Follow these steps:
 
 Once your configuration file is prepared, deploy it to your Liferay instance to ensure your new service is used in place of the old.
 
-The root folder of the sample project includes a configuration file for reconfiguring the `portlet` service to use `baker.impl` in place of `able.impl`. The file's name is `com.acme.m1t1.web.internal.portlet.S1J6Portlet.config`, and it contains the following script:
+The root folder of the sample project includes a configuration file for reconfiguring the `portlet` service to use `baker.impl` in place of `able.impl`. The file's name is `com.acme.s1j6.web.internal.portlet.S1J6Portlet.config`, and it contains the following configuration:
 
 ```
 _s1J6.target="(component.name\=com.acme.s1j6.baker.internal.S1J6BakerImpl)" 
