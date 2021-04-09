@@ -21,8 +21,7 @@ public class Document_PATCH_ById {
 			Long.valueOf(System.getProperty("documentId")),
 			new Document() {
 				{
-					description = "Bar.java";
-					title = "Bar.java";
+					description = "Bar";
 				}
 			},
 			new HashMap<String, File>() {

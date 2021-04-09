@@ -21,7 +21,7 @@ public class Document_PUT_ById {
 			Long.valueOf(System.getProperty("documentId")),
 			new Document() {
 				{
-					title = "Goo.java";
+					description = "Goo";
 				}
 			},
 			new HashMap<String, File>() {

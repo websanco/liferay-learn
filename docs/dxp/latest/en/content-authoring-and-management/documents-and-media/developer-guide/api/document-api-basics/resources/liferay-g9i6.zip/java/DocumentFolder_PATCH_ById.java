@@ -20,7 +20,6 @@ public class DocumentFolder_PATCH_ById {
 				new DocumentFolder() {
 					{
 						description = "Bar";
-						name = "Bar";
 					}
 				});
 
