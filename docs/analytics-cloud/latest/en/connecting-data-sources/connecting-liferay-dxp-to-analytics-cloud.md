@@ -16,7 +16,7 @@ Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your 
 
       ![Analytics Cloud provides a token to copy.](connecting-liferay-dxp-to-analytics-cloud/images/02.png)
 
-1. Copy the token and navigate to the Liferay DXP instance. In the *Control Panel* under *Configuration* > *Instance Setting* > *Analytics Cloud*. Paste the Access Token in the Analytics Cloud Token field as shown in the image below, then press Connect.
+1. Copy the token and navigate to the Liferay DXP instance. In the *Control Panel* under *Configuration* > *Instance Setting* and, under the *Platform* section, click *Analytics Cloud*. Paste the Access Token in the Analytics Cloud Token field as shown in the image below, then press *Connect*.
 
       ![Adding the Analytics Cloud token to a Liferay DXP installations Instance Settings configuration.](connecting-liferay-dxp-to-analytics-cloud/images/03.png)
 
