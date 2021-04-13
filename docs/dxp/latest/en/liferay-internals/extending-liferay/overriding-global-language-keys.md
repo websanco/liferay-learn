@@ -1,20 +1,14 @@
 # Overriding Global Language Keys
 
-Liferay utilizes language keys for user interface messages. Whether the default language or a language for another locale, the global keys can be overridden by using a custom language module.
+Liferay uses language keys for user interface messages. Whether the default language or a language for another locale, the global keys can be overridden by using a custom language module.
 
 ```Note
 Most of Liferay's language keys are found in the global language key files. But some may be located in a specific application's module. The process of `overriding module language keys <./overriding-module-language-keys.md>`_ is different from overriding the global keys.
 ```
 
-## Overview
-
-1. [Examining the Global Language Keys](#examining-the-global-language-keys)
-1. [Deploy the Example](#deploy-the-example)
-1. [Walk Through the Example](#walk-through-the-example)
-
 ## Examining the Global Language Keys
 
-Liferay's global language keys are located in the source code or your bundle.
+Liferay's global language keys are in the source code or your bundle.
 
 From the source: 
 
@@ -24,15 +18,11 @@ From a bundle:
 
 `portal-impl.jar`
 
-You can also view the different language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/master/portal-impl/src/content). Note that the language keys for different languages can be identified by the filename ending. For example `Language_ja.properties` would be for Japanese.
+You can also view the different language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/master/portal-impl/src/content). You can identify the different languages by the language code in the filename suffix. For example `Language_ja.properties` is for Japanese.
 
 These language key files contain properties that you can override, like the language settings properties: 
 
 ```properties
-##
-## Language settings
-##
-
 ...
 lang.user.name.field.names=prefix,first-name,middle-name,last-name,suffix
 lang.user.name.prefix.values=Dr,Mr,Ms,Mrs
@@ -41,14 +31,9 @@ lang.user.name.suffix.values=II,III,IV,Jr,Phd,Sr
 ...
 ```
 
-There are also many simple keys you can override to update default messages and
-labels.
+There are also many simple keys you can override to update default messages and labels.
 
 ```properties
-##
-## Category titles
-##
-
 category.admin=Admin
 category.alfresco=Alfresco
 category.christianity=Christianity
@@ -56,9 +41,11 @@ category.cms=Content Management
 ...
 ```
 
-In our example code we will change the default `publish` language key to a custom key. 
-    
-    `publish=Publish`
+The example code changes the default `publish` language key to a custom key. 
+
+ ```properties
+ publish=Publish
+ ```
 
 ## Deploy the Example
 
@@ -110,17 +97,15 @@ To see an example of overriding a global language key:
 
 Now that you've seen the example, let's see how it works. 
 
-## Walk Through the Example
-
-### Create the Language Properties File
+## Create the Language Properties File
 
 First select which keys you wish to override. For example, the tutorial code overrides the `Publish` language key.
 
-Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the keys your way. Make sure the filename of your language properties file matches the locale you wish to overrides. For example, if Japanese `Language_ja.properties`.
+Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the keys your way. Make sure the filename of your language properties file matches the locale you wish to override. For example, if overriding Japanese, use `Language_ja.properties`.
 
-### Create the Language Resource Bundle
+## Create the Language Resource Bundle
 
-In your module, create a class that extends `java.util.ResourceBundle` for the local you're overriding. Here's an example resource bundle class for the `en_US` locale:
+In your module, create a class that extends `java.util.ResourceBundle` for the locale you're overriding. Here's an example resource bundle class for the `en_US` locale:
 
 ```java
 @Component(property = "language.id=en_US", service = ResourceBundle.class)
@@ -144,7 +129,7 @@ public class X8F3EnglishResourceBundle extends ResourceBundle {
 
 The class's `_resourceBundle` field is assigned a `ResourceBundle`. The call to `ResourceBundle.getBundle` needs two parameters. The `content.Language_en_US` parameter is the language file's qualified name with respect to the module's `src/main/resources/content` folder. The second parameter is a `control` that sets the language syntax of the resource bundle. To use language syntax identical to Liferay's syntax, import Liferay's `com.liferay.portal.kernel.language.UTF8Control` class and set the second parameter to `UTF8Control.INSTANCE`. 
 
-The class's `@Component` annotation declares it an OSGi `ResourceBundle` service component. It's `language.id` property designates it for the `en_US` locale. 
+The class's `@Component` annotation declares it an OSGi `ResourceBundle` service component. Its `language.id` property designates it for the `en_US` locale. 
 
 ```java
 @Component(property = "language.id=en_US", service = ResourceBundle.class)
