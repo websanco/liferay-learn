@@ -1,0 +1,1 @@
+curl -F "document={\"title\":\"Goo.sh\"}" -H  "Content-Type: multipart/form-data;boundary=PART" -X PUT "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" -u "test@liferay.com:test"
