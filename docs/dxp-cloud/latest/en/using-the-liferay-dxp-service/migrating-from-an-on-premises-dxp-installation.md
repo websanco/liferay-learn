@@ -123,4 +123,4 @@ When the restore process finishes, the chosen environment has your migrated inst
 
 ## Use a VPN to Connect External Services
 
-External services that do not readily map to existing services in DXP Cloud (like SSO or LDAP integrations) may be connected using a VPN. See [Connecting a VPN to DXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-to-dxp-cloud.md) for more information on configuring the VPN.
+External services that do not readily map to existing services in DXP Cloud (like SSO or LDAP integrations) may be connected using a VPN. See [Connecting a VPN to DXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md) for more information on configuring the VPN.
