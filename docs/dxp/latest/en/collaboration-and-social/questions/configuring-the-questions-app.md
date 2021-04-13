@@ -69,7 +69,7 @@ To enable this functionality you must configure it through System Settings,
 1. Check *Enable Redirect to Login*
 1. Guests user are now redirected to a login page when they try to click *Ask Question*.
 
-```Note::
+```note::
    A Service Access Policy needs to be created to allow Guest users to view the app.
 ```
 

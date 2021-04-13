@@ -47,5 +47,5 @@ JAX-RS<!-- future link required --> developers can use the `@CORS` annotation to
 
 ## Additional Information
 
-* [Securing Liferay](../introduction-to-securing-liferay.md)
+* [Securing Liferay](../securing-liferay.md)
 * [Introduction to Securing Web Services](./introduction-to-securing-web-services.md)

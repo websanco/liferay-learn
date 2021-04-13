@@ -33,7 +33,7 @@ There are two different ways to migrate the Documents and Media thumbnails to Ad
 
 ### Running the Migration Process
 
-The migration process is a set of [Gogo console commands](/dxp/latest/en/liferay-internals/fundamentals/using-felix-gogo-shell.md). 
+The migration process is a set of [Gogo console commands](../../../../liferay-internals/fundamentals/using-the-gogo-shell/gogo-shell-commands.md). 
 
 1. Navigate to the _Global Menu_ &rarr; _Control Panel_ &rarr; _Gogo Shell_.
 

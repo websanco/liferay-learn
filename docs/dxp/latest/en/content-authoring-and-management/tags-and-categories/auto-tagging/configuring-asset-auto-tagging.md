@@ -69,4 +69,4 @@ Auto Tagging had been enabled at the instance level.
 
 ## Additional Information
 
-* [Tagging Content](../tagging-content.md)
+* [Tagging Content and Managing Tags](../tagging-content-and-managing-tags.md)

@@ -56,8 +56,8 @@ The matching articles are displayed in the app beneath their section heading.
 
 ## Knowledge Base Search Widget
 
-```Note:: 
-As of Knowledge Base 3.0.0, the Knowledge Base Search widget is deprecated and replaced by Liferay Search.
+```note::
+   As of Knowledge Base 3.0.0, the Knowledge Base Search widget is deprecated and replaced by Liferay Search.
 ```
 
 Even though the Knowledge Base can show the structure of its articles, it may be difficult to find exactly what you’re looking for by browsing. For this, you can use the Knowledge Base Search widget.

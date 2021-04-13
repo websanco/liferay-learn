@@ -283,7 +283,7 @@ Modules leverage each other's capabilities via APIs like the `Greeter` API. Life
 ## Additional Information
 
 * [APIs as OSGi Services](./apis-as-osgi-services.md)
-* [Using an OSGi Service](./using-an-osgi-servce.md)
+* [Using an OSGi Service](./using-an-osgi-service.md)
 * [Configure Dependencies](./configuring-dependencies/configuring-dependencies.md)
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)

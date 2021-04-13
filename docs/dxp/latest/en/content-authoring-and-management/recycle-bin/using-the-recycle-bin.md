@@ -78,4 +78,3 @@ To delete all recycled items, click on the *Actions* button (![Actions](../../im
 
 * [Recycle Bin Overview](./recycle-bin-overview.md)
 * [Configuring the Recycle Bin](./configuring-the-recycle-bin.md)
-* [Recycle Bin and Staging](./recycle-bin-and-staging.md)

@@ -2,7 +2,7 @@
 
 Most new versions of Liferay DXP include changes to the default settings. If you rely on the defaults from your old version, you should review the changes and decide to keep the defaults from your old version or accept the defaults of the new.
 
-The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) describes the properties and provides examples. Many properties are now replaced by [OSGi configuration files](../../../system-administration/system-settings/using-configuration-files.md), which are accessible through the UI in [System Settings](../../../system-administration/system-settings/system-settings.md).
+The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) describes the properties and provides examples. Many properties are now replaced by [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md), which are accessible through the UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md).
 
 Here are the changes from 7.2 to 7.3:
 

@@ -36,7 +36,7 @@ Use the Name field to set a page's title used for Site navigation and displayed 
 
 ### Navigation Menu Widget
 
-You can hide a page from Navigation Menu widgets that show the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../04-site-navigation/configuring-site-navigation.md) for more information.
+You can hide a page from Navigation Menu widgets that show the Public Pages Hierarchy. When enabled, a hidden page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
 
 ### Page Layout
 

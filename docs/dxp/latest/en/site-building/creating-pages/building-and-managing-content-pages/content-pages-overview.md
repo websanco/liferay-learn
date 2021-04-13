@@ -19,5 +19,5 @@ See [Building Content Pages](./building-content-pages.md) to get started!
 ## Additional Information
 
 * [Building Content Pages](./building-content-pages.md)
-* [Using Page Fragments](../../displaying-content/using-fragments/using-Page-fragments.md)
-* [Using Fragment Comments](./using-Fragment-comments.md)
+* [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
+* [Using Fragment Comments](./using-fragment-comments.md)

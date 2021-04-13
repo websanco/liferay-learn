@@ -10,13 +10,13 @@ When a workflow is activated for a particular asset, the _Publish_ button is rep
 
 The out-of-the-box workflow process is called _Single Approver_; that means one person is required to review and approve submissions before publication.
 
-To learn more, see the [Activating Workflow](./activating-workflow.md) and [sending assets through review](./reviewing-assets.md) articles.
+To learn more, see the [Activating Workflow](./using-workflows/activating-workflow.md) and [sending assets through review](./using-workflows/reviewing-assets.md) articles.
 
 ## Building a Workflow
 
 Workflow allows users to build more complex workflows that can have multiple reviewers and approvers. Learn how to build an effective workflow:
 
-* [Crafting Review Processes in XML](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)
+* [Crafting Review Processes in XML](./developer-guide/crafting-xml-workflow-definitions.md)
 * [Visually Designing Review Processes](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md) (Subscriber)
 * [Uploading Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definitions)
 * [Managing Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md)

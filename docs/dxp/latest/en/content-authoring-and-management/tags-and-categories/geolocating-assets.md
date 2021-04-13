@@ -63,7 +63,7 @@ To create a data list that uses the new data definition:
 
 1. Click _Save_ when finished.
 
-Now that your data list is complete, you can use the [Data List Display portlet](../../process-automation/forms/user-guide/advanced-forms-usage/dynamic-data-lists/getting-started-with-dynamic-data-lists.md) to display it.
+Now that your data list is complete, you can use the [Data List Display portlet](../../process-automation/forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md) to display it.
 
 ## Geolocating Documents and Media
 

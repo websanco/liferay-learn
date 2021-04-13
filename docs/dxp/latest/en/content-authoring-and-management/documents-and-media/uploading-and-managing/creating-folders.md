@@ -44,5 +44,5 @@ After creating a folder, you can restrict it to allow only certain document type
 
 * [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow-workflow.md#documents-and-media-folders)
 * [Uploading Files](./uploading-files.md)
-* [Using the Media Gallery](../publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.md)
+* [Publishing Documents](../publishing-and-sharing/publishing-documents.md)
 * [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

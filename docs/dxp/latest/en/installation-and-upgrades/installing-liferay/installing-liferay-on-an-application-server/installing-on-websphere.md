@@ -154,7 +154,7 @@ Note that although a Hypersonic database is bundled with DXP and is fine for tes
 
 ## Installing Elasticsearch Archives
 
-When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-built-in-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
+When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
 
 1. Download the following archives:
 
@@ -367,6 +367,6 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 
 * [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)
 * [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
-* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
+* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)

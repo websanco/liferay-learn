@@ -17,19 +17,19 @@ You should [create a form](./creating-forms.md) that has all the fields first be
 
 Use the _Show-Hide_ Rule if you want respondents to answer additional questions. For example, a camp registration form has the question whether the camp participant is over 18 years old. If the answer is _NO_, the form displays an additional field asking for the guardian's name. Otherwise, the field asking for the guardian's name is hidden if the participant answers _YES_.
 
-See the [Using the Show-Hide Rule](./form-rules/using-the-show-hide-rule.md) article to learn more.
+See the [Using the Show-Hide Rule](../form-rules/using-the-show-hide-rule.md) article to learn more.
 
 ## Enable-Disable Rule
 
 Like the Show-Hide Rule, the _Enable/Disable_ Rule makes a field editable based on one or more conditions. This is useful for entering optional information or gathering data from only users who fall under a particular group. For example, a campsite or a doctor's office might ask people to list medications or allergies that might affect treatment. This field is editable only if the user selects Yes.
 
-See the [Using the Enable-Disable Rule](./form-rules/using-the-enable-disable-rule.md) article to learn more.
+See the [Using the Enable-Disable Rule](../form-rules/using-the-enable-disable-rule.md) article to learn more.
 
 ## Jump to Page Rule
 
 Another option is to use the _Jump to Page_ Form Rule. As its name indicates, respondents can jump to a different page in the Form based on their answers. This is useful if some pages do not apply to all the form's users.
 
-See the [Using the Jump-to-Page Rule](./form-rules/using-the-jump-to-page-rule.md) article to learn more.
+See the [Using the Jump-to-Page Rule](../form-rules/using-the-jump-to-page-rule.md) article to learn more.
 
 ## Autofill Rule
 

@@ -109,4 +109,4 @@ Now that you know the patch types Liferay provides for delivering fixes, you can
 
 * [Installing Patches](./installing-patches.md)
 * [Installing the Patching Tool](./installing-the-patching-tool.md)
-* [Upgrading to a New Liferay Portal CE Rolling Release](../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-to-a-new-liferay-portal-ce-rolling-release.md)
+* [Upgrading Via Docker](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md)

@@ -10,7 +10,7 @@ Here you'll learn how to create an Item Selector.
 
 ## Start with a Sample Module
 
-To implement an Item Selector, you must embed it in an application, such as a module for a widget. This example uses an [MVC Portlet](../developing-a-java-web-application/using-mvc/creating-an-application-with-mvcportlet.md) with a JSP view. The Item Selector displays a list of Roles to be selected. 
+To implement an Item Selector, you must embed it in an application, such as a module for a widget. This example uses an [MVC Portlet](../developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet.md) with a JSP view. The Item Selector displays a list of Roles to be selected. 
 
 1. Download the sample module:
 

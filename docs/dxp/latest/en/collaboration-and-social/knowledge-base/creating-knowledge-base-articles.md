@@ -38,8 +38,8 @@ You can also create new Knowledge Base articles by importing them from a ZIP arc
 * [Knowledge Base ZIP File Requirements](knowledge-base-zip-file-requirements.md)
 * [Knowledge Base Importer FAQs](knowledge-base-importer-faq.md)
 
-```Note:: 
-To import articles, your Role must have the permission Knowledge Base → Resource Permissions: Import Articles.
+```note::
+   To import articles, your Role must have the permission Knowledge Base → Resource Permissions: Import Articles.
 ```
 
 To import articles into the Knowledge Base,

@@ -254,7 +254,7 @@ Initiate indexing DXP content:
     * *Reindex all search indexes*
     * *Reindex all spell check indexes*
 
-Content indexes into the search engine. Please see [Search Overview](../../../using-search/getting-started/search-overview.html) for more information.
+Content indexes into the search engine. Please see [Search Overview](../../../using-search/getting-started/search-overview.md) for more information.
 
 ## Test the DXP Cluster
 

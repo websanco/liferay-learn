@@ -85,13 +85,13 @@ Here are the steps:
        DXP requires that the application server JVM use the GMT time zone and UTF-8 file encoding.
     ```
 
-    ```Note::
+    ```note::
        On JDK 11, it's recommended to add this JVM argument to display four-digit years: ``-Djava.locale.providers=JRE,COMPAT,CLDR``
     ```
 
     After installation, these configurations (including these JVM options) can be further tuned for improved performance.
 
-1. If you have a DXP Tomcat bundle, copy its `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` file to the corresponding location in the application server. Create the file path if it doesn't exist and the `ROOT.xml` file.
+2. If you have a DXP Tomcat bundle, copy its `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` file to the corresponding location in the application server. Create the file path if it doesn't exist and the `ROOT.xml` file.
 
     The `ROOT.xml` file specifies a web application context for DXP which looks like this:
 
@@ -123,13 +123,13 @@ Here are the steps:
 
      Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for disabling persistent sessions and disabling sessions entirely.
 
-1. Provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending this value to the `common.loader` property:
+3. Provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending this value to the `common.loader` property:
 
     ```
     ,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
     ```
 
-1. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
+4. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
 
     Old:
 
@@ -155,7 +155,7 @@ Here are the steps:
     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />
     ```
 
-1. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
+5. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
 
     ```xml
     <!-- <Valve className="org.apache.catalina.valves.AccessLogValve"
@@ -164,7 +164,7 @@ Here are the steps:
            pattern="%h %l %u %t &quot;%r&quot; %s %b" /> -->
     ```
 
-1. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
+6. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
 
     ```properties
     org.apache.catalina.startup.Catalina.level=INFO
@@ -173,7 +173,7 @@ Here are the steps:
     org.apache.level=WARNING
     ```
 
-1. In `$CATALINA_HOME/conf/web.xml`, set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool. Add the following elements above the `jsp` servlet element's `<load-on-startup>` element.
+7. In `$CATALINA_HOME/conf/web.xml`, set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool. Add the following elements above the `jsp` servlet element's `<load-on-startup>` element.
 
     ```xml
     <init-param>
@@ -190,9 +190,9 @@ Here are the steps:
     </init-param>
     ```
 
-1. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. This configuration improves application server startup performance. The default is to check for extra metadata.
+8. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. This configuration improves application server startup performance. The default is to check for extra metadata.
 
-1. If using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
+9. If using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
 
     ```bash
     chmod a+x *.sh

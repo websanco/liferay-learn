@@ -86,7 +86,7 @@ Hre are the steps:
 
 1. Designate a folder on your host to serve as a base folder.
 
-1. In the base host folder, create subfolders that correspond to all of the `/mnt/liferay` subfolders that the container acts on. Please see [Container Lifecycle and API](./dxp-container-lifecycle) for container folder details.
+1. In the base host folder, create subfolders that correspond to all of the `/mnt/liferay` subfolders that the container acts on. Please see [Container Lifecycle and API](./container-lifecycle-and-api.md) for container folder details.
 
     ```bash
     cd [host folder]

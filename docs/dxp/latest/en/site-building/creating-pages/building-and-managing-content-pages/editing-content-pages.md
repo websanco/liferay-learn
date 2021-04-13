@@ -39,7 +39,7 @@ Click on the edit mode drop-down menu to select between *Content Edition* and *P
 
 ### Preview and Publish
 
-After making your changes, click on the *Preview* icon (![Preview](../../../images/icon-preview.png) to show the published view of your Page. While previewing your changes, you can select which experience, language, and device layout to view. When finished, click *Publish*. By default, publishing makes your changes live immediately. However, if you've enabled a custom [Workflow](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) to direct the review and publishing process, clicking Publish initiates your defined procedure.
+After making your changes, click on the *Preview* icon (![Preview](../../../images/icon-preview.png) to show the published view of your Page. While previewing your changes, you can select which experience, language, and device layout to view. When finished, click *Publish*. By default, publishing makes your changes live immediately. However, if you've enabled a custom [Workflow](../../../process-automation/workflow/introduction-to-workflow.md) to direct the review and publishing process, clicking Publish initiates your defined procedure.
 
 ## Editing Sidebar
 
@@ -57,7 +57,7 @@ Depending on your selected editing mode, you can access these options in the edi
 
 In the Fragments and Widgets sidebar panel ( ![Fragments and Widgets icon](../../../images/icon-cards2.png) ), you can access both out-of-the-box and custom Page elements for building your Page.
 
-* **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Fragments](./using-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-Page-fragments/developing-fragments-intro.md) to learn how to create your own.
+* **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Fragments](./using-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
 
 * **Widgets**: As in other DXP contexts, widgets are [applications](../../../developing_applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
 

@@ -8,7 +8,7 @@ You can create Document Library files that link to Google Drive&trade; files and
 
 Next you'll complete these steps.
 
-```Important::
+```important::
    The Liferay Plugin for Google Drive is a Labs application available for Liferay CE Portal and Liferay DXP. Labs apps are experimental and not supported by Liferay. They're released to accelerate the availability of useful and cutting-edge features. This status may change without notice. Use Labs apps at your own discretion.
 ```
 

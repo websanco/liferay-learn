@@ -15,7 +15,7 @@ You can perform these actions from the Structure's Actions Menu (![Action Menu](
 
 **Edit Default Values:** Opens a form to set default values for the Structure's fields. See [below](#editing-default-values) for more information.
 
-**Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](../web-content-templates/managing-templates.md) for more information.
+**Manage Templates:** Opens the *Templates* tab with a filtered set of Web Content Templates that use the Structure. From here you can manage (edit, copy, delete, and set permissions for) the Web Content Templates. See [Managing Templates](../web-content-templates/creating-web-content-templates.md) for more information.
 
 **Permissions:** Opens the permissions configuration dialog for the Structure. See [Assigning Permissions to Web Content Structures and Templates](./assigning-permissions-to-structures-and-templates.md) for more information.
 

@@ -95,6 +95,6 @@ Prevent bots from creating and logging into accounts by enabling CAPTCHA or reCA
 
 ## Additional Information
 
-* [Securing Liferay](./introduction-to-securing-liferay.md)
+* [Securing Liferay](./securing-liferay.md)
 * [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md)
 * [Configuring a Password Policy](../../users-and-permissions/devops/configuring-a-password-policy.md)

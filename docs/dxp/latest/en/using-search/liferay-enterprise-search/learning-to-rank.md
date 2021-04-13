@@ -14,7 +14,7 @@ Learning to Rank does not work with the [Sort widget](../search-pages-and-widget
 
 If LES Learning to Rank is deployed, but you must disable it on a particular Search page (perhaps to use the Sort widget),
 
-1. Add a [Low Level Search Options](../search-pages-and-widgets/understanding-low-level-search-options.md) widget to the Search page.
+1. Add a [Low Level Search Options](../search-pages-and-widgets/search-results/understanding-low-level-search-options.md) widget to the Search page.
 
 1. Open the widget's Configuration screen by clicking 
 
