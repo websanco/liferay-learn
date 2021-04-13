@@ -6,7 +6,7 @@ Portlet Filters
 
    portlet-filters/auditing-portlet-activity-with-portlet-filters.md
 
--  :doc:`/liferay-internals/extending-liferay/portlet-filters/auditing-portlet-activity-with-portlet-filters`
+-  :doc:`/liferay-internals/extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter`
 
 .. include:: extending-liferay/README.rst
    :start-line: 2
