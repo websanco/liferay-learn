@@ -20,7 +20,7 @@ Follow these steps to create portlet filters for auditing portlet activities:
    ```note::
       Portlet filters are `OSGi Declarative Service (DS) Component <https://enroute.osgi.org/FAQ/300-declarative-services.html>`_. Filters can also be applied to a portlet using a ``portlet.xml`` descriptor or a ``@PortletLifecycleFilter`` annotation. See Portlet 3.0 Specification for details.
    ```
-   <!--TASK: Reconsider admonition link-->
+
 1. Enter the following properties into the `@Component` declaration.
 
    * `"javax.portlet.name=[portlet_Name]"`: This property sets the filter's target portlet.
@@ -43,9 +43,9 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
 1. Download and unzip the example module.
 
    ```bash
-   curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-b4k8.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-b4k8.zip -O
    ```
-   <!--TASK: fix following path once 7.x is removed-->
+
    ```bash
    unzip liferay-b4k8.zip -d liferay-b4k8
    ```
