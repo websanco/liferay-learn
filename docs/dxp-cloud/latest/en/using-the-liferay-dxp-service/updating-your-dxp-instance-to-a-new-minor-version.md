@@ -3,7 +3,7 @@
 Regularly updating your Liferay DXP installation is an important of maintaining your DXP Cloud environment. Use the available tags on the [Liferay DXP Docker Hub page](https://hub.docker.com/r/liferay/dxp/tags) to update and deploy your service as explained here.
 
 ```note::
-   Upgrading to a new major version (such as Liferay DXP 7.3) requires a different procedure from a smaller version update. See <./upgrading-your-liferay-dxp-instance.md>`__ for more information.
+   Upgrading to a new major version (such as Liferay DXP 7.3) requires a different procedure from a smaller version update. See `Upgrading Your Liferay DXP Instance <./upgrading-your-liferay-dxp-instance.md>`__ for more information.
 ```
 
 ```note::
