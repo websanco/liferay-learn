@@ -1,6 +1,6 @@
 # Creating A/B Tests
 
-Before creating A/B tests, remember these things: 
+Before creating A/B tests, remember these things:
 
 - You can create a test for a default Experience or a personalized Experience mapped to a Segment.
 - You can only create an A/B Test for one page or Experience at a time.
@@ -47,12 +47,12 @@ A test Variant is a customization of the Experience you want to optimize with A/
          - To highlight the Page element selected, click the Preview (![Preview](../../../images/icon-preview.png)) icon.
          - While the [test is running](./running-and-monitoring-ab-tests.md), the *Change Clickable Element* button is unavailable and the *Element ID* cannot be changed.
 
-        ![Click the Set Element to configure the element for your test](./creating-ab-tests/images/03.png)
+         ![Click the Set Element to configure the element for your test](./creating-ab-tests/images/03.png)
 
     1. Click the element you want to test on the Content Page.
     1. Click *Set Element as Click Target*.
 
-        ![Click the Set Element as Click Target button to select it.](./creating-ab-tests/images/01.png)
+        ![Click the Set Element as Click Target button to select it](./creating-ab-tests/images/01.png)
 
          ```note::
             Only links and buttons with an Element ID can be selected as a target for the Click Goal. The click target element applies to the whole A/B Test and must be present in all Variants.

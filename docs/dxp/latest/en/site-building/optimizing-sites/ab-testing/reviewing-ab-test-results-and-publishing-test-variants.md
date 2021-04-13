@@ -11,7 +11,7 @@ To review the A/B Test results and publish your Variant,
 1. Go to the Content Page where the A/B Test is running.
 
     ```tip::
-    You receive a notification in Liferay when the A/B Test finishes.
+       You receive a notification in Liferay when the A/B Test finishes.
     ```
 
 1. In the Control Menu, click the *A/B Testing* flask icon (![A/B Test icon](../../../images/icon-ab-testing.png)). Starting Liferay DXP 7.3, you can also access the A/B Test panel (via the flask icon) and view the test status for an experience through the [experience selection dialog](../../personalizing-site-experience/experience-personalization/content-page-personalization.md).
@@ -21,7 +21,7 @@ To review the A/B Test results and publish your Variant,
     * *Winner Declared*: One of the test variants met the Confidence Level Required.
     * *No Winner*: None of the test variants met the Confidence Level Required for the duration of the test.
 
-        ![Review A/B Test Results from the A/B Test panel.](reviewing-ab-test-results-and-publishing-test-variants/images/01.png)
+        ![Review A/B Test Results from the A/B Test panel](reviewing-ab-test-results-and-publishing-test-variants/images/01.png)
 
 1. Under the *Variants* section, you have these options:
 
@@ -31,11 +31,11 @@ To review the A/B Test results and publish your Variant,
 
         ![You can publish the winning Variant or discard the A/B Test results.](reviewing-ab-test-results-and-publishing-test-variants/images/02.png)
 
-You can click the *View Data in Analytics Cloud* button from the A/B Tests panel to go to the Analytics Cloud dashboard and view other test statistics. For more information, see [A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/en/touchpoints/a-b-testing.html#summary).
+You can click the *View Data in Analytics Cloud* button from the A/B Tests panel to go to the Analytics Cloud dashboard and view other test statistics. For more information, see [A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/en/optimization/a-b-testing.html).
 
 ## Related Information
 
-* [A/B Testing](./ab-testing.md)
-* [Creating A/B Tests](./creating-ab-tests.md)
-* [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
-* [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
+- [A/B Testing](./ab-testing.md)
+- [Creating A/B Tests](./creating-ab-tests.md)
+- [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
+- [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)

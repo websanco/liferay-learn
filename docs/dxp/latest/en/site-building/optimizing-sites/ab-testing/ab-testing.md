@@ -20,7 +20,7 @@ For more information about working with A/B Testing in Analytics Cloud, [A/B Tes
 
 ## Related Information
 
-* [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
-* [Creating A/B Tests](./creating-ab-tests.md)
-* [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
-* [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
+- [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
+- [Creating A/B Tests](./creating-ab-tests.md)
+- [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
+- [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
