@@ -17,6 +17,7 @@ Extending Liferay
    extending-liferay/overriding-service-components.md
    extending-liferay/overriding-global-language-keys.md
    extending-liferay/overriding-module-language-keys.md
+   extending-liferay/portlet-filters.rst
 
 -  :doc:`/liferay-internals/extending-liferay/adding-a-language`
 -  :doc:`/liferay-internals/extending-liferay/application-lists`
