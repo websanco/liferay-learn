@@ -4,7 +4,7 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-Coming soon!
+   developer-guide/apis.rst
 
 APIs
 ----

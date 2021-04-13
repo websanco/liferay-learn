@@ -44,13 +44,13 @@ unzip liferay-f5d5.zip
     STARTED com.acme.f5d5.web_1.0.0 [1017]
     ```
 
-   The example portlet module is deployed. When you add it to a page, it's a simple portlet with one button: 
+    The example portlet module is deployed. When you add it to a page, it's a simple portlet with one button: 
 
-![The portlet has one button that opens the Item Selector.](./images/02.png)
+    ![The portlet has one button that opens the Item Selector.](./implementing-an-item-selector/images/02.png)
 
 1. Click the _Select_ button and the Item Selector appears: 
 
-![The Item Selector shows items that can be selected by checking the box.](./images/03.png)
+    ![The Item Selector shows items that can be selected by checking the box.](./implementing-an-item-selector/images/03.png)
 
 1. Select an item and that item's value appears in a JavaScript alert box. Since this Item Selector selects Roles, the value is the primary key of the Role selected. 
 

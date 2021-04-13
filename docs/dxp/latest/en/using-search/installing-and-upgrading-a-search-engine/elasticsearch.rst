@@ -7,6 +7,7 @@ Elasticsearch
    elasticsearch/getting-started-with-elasticsearch.md
    elasticsearch/installing-elasticsearch.md
    elasticsearch/connecting-to-elasticsearch.md
+   elasticsearch/securing-elasticsearch.md
    elasticsearch/exercise-installing-elasticsearch.md
    elasticsearch/troubleshooting-elasticsearch-installation.md
    elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md

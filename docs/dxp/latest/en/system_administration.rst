@@ -9,8 +9,6 @@ System Administration
    system-administration/configuring_liferay.rst
    system-administration/using_the_script_engine.rst
    system-administration/using_the_server_administration_panel.rst
-   system-administration/security_settings.rst
-   system-administration/virtual_instances.rst
 
 .. raw:: html
    :file: landingpage_template.html

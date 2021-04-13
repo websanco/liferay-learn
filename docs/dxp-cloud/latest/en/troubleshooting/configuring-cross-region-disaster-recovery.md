@@ -41,7 +41,7 @@ To ensure the two environments are connected:
 1. Click *Connect VPN*.
 
 For more information on connecting to a VPN, see
-[VPN Connection](../infrastructure-and-operations/networking/connecting-a-vpn-to-dxp-cloud.md).
+[VPN Connection](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md).
 
 ### Deploy the Latest Stable Build from Production to the DR Environment
 
