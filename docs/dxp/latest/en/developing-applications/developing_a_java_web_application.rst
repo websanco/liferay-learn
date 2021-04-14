@@ -5,11 +5,10 @@ Developing a Java Web Application
    :maxdepth: 3
 
    developing-a-java-web-application/using_mvc.rst
+   developing-a-java-web-application/reference.rst
 
-   developing-a-java-web-application/using-spring.md
-   developing-a-java-web-application/using-jsf.md
-   developing-a-java-web-application/developing-a-bean-portlet.md
+.. raw:: html
+   :file: ../landingpage_template.html
 
--  :doc:`/developing-applications/developing-a-java-web-application/using-spring`
--  :doc:`/developing-applications/developing-a-java-web-application/using-jsf`
--  :doc:`/developing-applications/developing-a-java-web-application/developing-a-bean-portlet`
+.. raw:: html
+   :file: developing-a-java-web-application/landing.html

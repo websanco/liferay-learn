@@ -1,0 +1,61 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Using MVC',
+					sectionURL: 'developing-a-java-web-application/using_mvc.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using a JSP and MVC Portlet',
+							url: 'developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet.html'
+						},
+						{
+							name: 'MVC Action Command (Coming soon!)',
+							url: 'developing-a-java-web-application/using-mvc/mvc-action-command.html'
+						},
+						{
+							name: 'MVC Render Command (Coming soon!)',
+							url: 'developing-a-java-web-application/using-mvc/mvc-render-command.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'developing-a-java-web-application/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Portlets',
+							url: 'developing-a-java-web-application/reference/portlets.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using Spring (Coming soon!)'
+				},
+				{
+					sectionName: 'Using JSF (Coming soon!)'
+				},
+				{
+					sectionName: 'Using Bean Portlet (Coming soon!)'
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'developing-a-java-web-application/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Portlets',
+							url: 'developing-a-java-web-application/reference/portlets.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
