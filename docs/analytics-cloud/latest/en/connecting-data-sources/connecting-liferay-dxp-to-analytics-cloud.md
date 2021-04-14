@@ -36,4 +36,4 @@ Congratulation, your DXP is now connected to your AC workspace!
 
 ## Next Steps
 
-* [Tracking Sites and Individuals with Properties](./tracking-sites-and-individuals-using-properties.md)
+* [Scoping Sites and Individuals with Properties](./scoping-sites-and-individuals-using-properties.md)

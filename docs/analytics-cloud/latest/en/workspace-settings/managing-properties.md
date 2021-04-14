@@ -1,6 +1,6 @@
 # Managing Properties
 
-After [Creating a Property](../connecting-data-sources/tracking-sites-and-individuals-using-properties.md#creating-a-property) it can be managed and modified from the Workspace Settings section of Analytics Cloud. Navigate to *Settings* &rarr; *Workspace Settings* &rarr; *Properties*.
+After [Creating a Property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#creating-a-property) it can be managed and modified from the Workspace Settings section of Analytics Cloud. Navigate to *Settings* &rarr; *Workspace Settings* &rarr; *Properties*.
 
 ![Navigate to the Properties section in Settings.](./managing-properties/images/01.png)
 

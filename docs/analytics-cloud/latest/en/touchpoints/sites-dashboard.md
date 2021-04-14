@@ -1,6 +1,6 @@
 # Sites Dashboard
 
-Liferay Analytics Cloud provides a Sites dashboard for each Property in your Workspace. For example, when [Creating a Property](../connecting-data-sources/tracking-sites-and-individuals-using-properties.md#creating-a-property) each Property can be associated with one site or can be set to aggregate data from multiple sub-sites.
+Liferay Analytics Cloud provides a Sites dashboard for each Property in your Workspace. For example, when [Creating a Property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#creating-a-property) each Property can be associated with one site or can be set to aggregate data from multiple sub-sites.
 
 To view the dashboard,
 

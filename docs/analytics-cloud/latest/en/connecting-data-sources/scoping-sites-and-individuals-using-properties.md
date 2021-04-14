@@ -1,4 +1,4 @@
-# Tracking Sites and Individuals Using Properties
+# Scoping Sites and Individuals Using Properties
 
 A Property allows you to define and associate a label to a single or multiple sites. This allows you to aggregate the analytics data for all associated sites with the Property on a single dashboard. This is particularly useful if you have multiple sites in your DXP instance and would like to analyze them as a single site.
 
@@ -12,11 +12,11 @@ In each Analytics Cloud workspace, you can create and track multiple properties.
 
 To create a new property, go to your Analytics Cloud Workspace. Then go to *Settings* -> *Properties*, and click *New Property* in the top right corner.
 
-![Adding a new property.](tracking-sites-and-individuals-using-properties/images/01.png)
+![Adding a new property.](scoping-sites-and-individuals-using-properties/images/01.png)
 
 Give a name to the property and click *Save*. Next, you will see the setting page for the property you just created. Initially, no sites are associated with property. Learn how to add sites to this property next.
 
-![A new property has been created.](tracking-sites-and-individuals-using-properties/images/02.png)
+![A new property has been created.](scoping-sites-and-individuals-using-properties/images/02.png)
 
 ## Syncing Sites to a Property
 
@@ -30,11 +30,11 @@ You have to sync sites to a property in order to see their data on Analytics Clo
 
 1. In your Analytics Cloud workspace, click on *Synced Sites*. A list of available properties that you created on Analytics Cloud appears. Create a new property here for the sites you would like to track.
 
-    ![Creating a new property to track sites.](tracking-sites-and-individuals-using-properties/images/03.png)
+    ![Creating a new property to track sites.](scoping-sites-and-individuals-using-properties/images/03.png)
 
 1. Select the property you created. A list of sites on your Liferay DXP instance appears. Select the sites you wish to sync to this property and click *Save*. Your sites are now synced to Analytics Cloud using the selected property.
 
-    ![Selecting sites to sync with a property.](tracking-sites-and-individuals-using-properties/images/04.png)
+    ![Selecting sites to sync with a property.](scoping-sites-and-individuals-using-properties/images/04.png)
 
     ```important::
        You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
@@ -46,7 +46,7 @@ To sync contacts to a property:
 
 1. In your Analytics Cloud Workspace settings, click on *Select Contacts*.
 
-    ![You can choose to sync all or select groups of users as contacts in Analytics Cloud.](tracking-sites-and-individuals-using-properties/images/05.png)
+    ![You can choose to sync all or select groups of users as contacts in Analytics Cloud.](scoping-sites-and-individuals-using-properties/images/05.png)
 
     You can sync all of your users in your DXP, or sync only by user groups or organization
 
@@ -70,13 +70,13 @@ To assign property permissions, do the following:
 
 Users who are added now have access to the property.
 
-![Adding users to a property.](tracking-sites-and-individuals-using-properties/images/06.png)
+![Adding users to a property.](scoping-sites-and-individuals-using-properties/images/06.png)
 
 ## Navigating Between Different Properties
 
 To alternate between viewing different properties on your Analytics Cloud workspace, click on the property name on the top left corner in the navigation bar. A list of properties that you have permission to view will display in a menu. Click on a derided property to switch.
 
-![Changing views from one property to another.](tracking-sites-and-individuals-using-properties/images/07.png)
+![Changing views from one property to another.](scoping-sites-and-individuals-using-properties/images/07.png)
 
 When viewing a property. **All** the analytics data is scoped to this property. For example:
 
