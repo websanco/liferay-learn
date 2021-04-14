@@ -4,7 +4,7 @@ Better understanding individual users and users in aggregate is key to offering 
 
 ![The Individual Profile overview provides a robust view into user behavior.](understanding-your-audience/images/01.png)
 
-[Segments](./segments/segments.md) allow you to look at your users in aggregate by creating and defining groupings based on common properties and behaviors. You can create Segments that contain users who are interested in a given topic, work in a specific industry, or both. The Segmentation tools in Analytics Cloud integrate directly with the [Personalization options in Liferay DXP](./segments/personalizing-content-with-segments.md). This lets you know only understand your users, but tailor your site's experience to your users' needs.
+[Segments](./segments/segments.md) allow you to look at your users in aggregate by creating and defining groupings based on common properties and behaviors. You can create Segments that contain users who are interested in a given topic, work in a specific industry, or both. The Segmentation tools in Analytics Cloud integrate directly with the [Personalization options in Liferay DXP](../optimization/personalizing-content-with-segments.md). This lets you know only understand your users, but tailor your site's experience to your users' needs.
 
 ![Creating Segments is intuitive and powerful.](understanding-your-audience/images/02.png)
 

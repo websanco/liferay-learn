@@ -44,3 +44,7 @@ The Distribution tab breaks down the Segment by a demographic property.
 For example, select a property such as Job Title to dissect your Segment further. A bar chart appears, displaying a distribution of the Segment member population by Job Title. As a marketer, you could use this information to identify a subset of the Segment to focus a marketing campaign on.
 
 You’ve completed touring Segment profiles. Creating Segments and analyzing their profiles is key to learning more about your customers.
+
+## Related Information
+
+[Personalizing Content with Segments](../optimization/personalizing-content-with-segments.md)
