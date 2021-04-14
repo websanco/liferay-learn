@@ -1,7 +1,7 @@
 Developing Applications
 =======================
 
-Developing a Single Page Application
+Developing a JavaScript Application
 ------------------------------------
 
 * Using React
