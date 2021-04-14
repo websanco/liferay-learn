@@ -7,7 +7,7 @@ Liferay periodically releases new minor and major versions of Liferay DXP that i
 ```
 
 ```note::
-   To update to new minor versions or service packs, instead see [Updating to a New Version of Liferay DXP](./updating-your-dxp-instance-to-a-new-minor-version.md).
+   To update to new minor versions or service packs, instead see `Updating to a New Version of Liferay DXP <./updating-your-dxp-instance-to-a-new-minor-version.md>`_.
 ```
 
 ```important::

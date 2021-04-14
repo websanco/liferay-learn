@@ -1,6 +1,6 @@
 # Updating Your DXP Instance to a New Minor Version
 
-Regularly updating your Liferay DXP installation is an important of maintaining your DXP Cloud environment. Use the available tags on the [Liferay DXP Docker Hub page](https://hub.docker.com/r/liferay/dxp/tags) to update and deploy your service as explained here.
+Regularly updating your Liferay DXP installation is an important part of maintaining your DXP Cloud environment. Use the available tags on the [Liferay DXP Docker Hub page](https://hub.docker.com/r/liferay/dxp/tags) to update and deploy your service.
 
 ```note::
    Upgrading to a new major version (such as Liferay DXP 7.3) requires a different procedure from a smaller version update. See `Upgrading Your Liferay DXP Instance <./upgrading-your-liferay-dxp-instance.md>`__ for more information.
@@ -12,15 +12,15 @@ Regularly updating your Liferay DXP installation is an important of maintaining 
 
 ## Updating and Deploying a New Version of DXP
 
-Updates to the version of Liferay DXP running in any of your environments requires a change to your project's repository.
+Minor version updates to Liferay DXP require a change to your project's repository.
 
-If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled) to ensure that all nodes of your cluster are updated to the new version correctly.
+If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
 
 Otherwise, perform these steps to update the version of your DXP installation:
 
-1. Find the appropriate tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
+1. Find the tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
 
-1. Change the value of the `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties`:
+1. Change the value of the `liferay.workspace.docker.image.liferay` property in [`liferay/gradle.properties`](./introduction-to-the-liferay-dxp-service.md#choosing-a-version):
 
     ```properties
     liferay.workspace.docker.image.liferay=liferay/dxp:7.3.10-ga1
@@ -28,13 +28,13 @@ Otherwise, perform these steps to update the version of your DXP installation:
 
 1. [Deploy the change](./deploying-to-the-liferay-service.md) to the desired environment's `liferay` service.
 
-Once you have deployed the changes, the `liferay` service restarts. Your DXP installation automatically begins any upgrade steps necessary to complete the update while it is starting up.
+Once you have deployed the changes, the `liferay` service restarts and begins any upgrade steps necessary to complete the update.
 
 ## Updating to a New Service Pack with Clustering Enabled
 
-If you are updating to a version of Liferay DXP that changes the database schema, then your clustered `liferay` service requires some temporary changes during the update procedure to ensure all nodes are updated correctly.
+If you are updating to a version of Liferay DXP that changes the database schema, then your clustered `liferay` service requires temporary changes during the update procedure to ensure all nodes update correctly.
 
-Follow these steps to ensure a successful update:
+Follow these steps:
 
 1. Set the `scale` property in your repository's `liferay/LCP.json` file to `1`:
 
@@ -46,7 +46,7 @@ Follow these steps to ensure a successful update:
 
 1. [Deploy the change](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) to the `liferay` service.
 
-1. Find the appropriate tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
+1. Find the tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
 
 1. Change the value of the `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties`:
 
