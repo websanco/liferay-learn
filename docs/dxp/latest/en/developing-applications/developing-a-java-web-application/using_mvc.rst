@@ -12,8 +12,8 @@ Using MVC
    using-mvc/mvc-resource-command.md
 
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-mvc`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/handling-requests-i-mvc-portlet`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-action-command`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-render-command`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-resource-command`
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-mvc` (Coming soon!)
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/handling-requests-in-mvc-portlet` (Coming soon!)
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-action-command` (Coming soon!)
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-render-command` (Coming soon!)
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/mvc-resource-command` (Coming soon!)
