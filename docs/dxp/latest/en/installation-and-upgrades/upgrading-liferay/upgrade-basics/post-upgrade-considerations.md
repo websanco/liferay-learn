@@ -30,17 +30,7 @@ Prior to upgrading the database, you may have tuned it for upgrade (see [Databas
 
 ## Installing the Latest Marketplace Apps
 
-If you were using any Marketplace apps in the previous Liferay version, you should use the version of each app that's compatible with the _new_ DXP version. Download the latest compatible version of each [Marketplace app](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md) and install it.
-
-```bash
-cp [new-app-version].lpkg /new-version/liferay-home/deploy
-```
-
-If your Liferay Home is in source control, commit the new app deployment.
-
-```bash
-commit -a -m "New version of xyz app"
-```
+If you haven't already installed the latest version of your [Marketplace apps](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md) for your new Liferay version, install them and use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to check for and execute any database upgrades they require.
 
 ## Accounting for Feature Changes
 

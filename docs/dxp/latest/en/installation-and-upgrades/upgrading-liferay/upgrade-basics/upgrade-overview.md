@@ -51,13 +51,17 @@ If you have a Liferay DXP subscription, update to the latest fix pack and/or req
 
 ### Update Marketplace Apps
 
-Marketplace apps should be updated to the latest version for the Liferay version you're currently on before upgrading the Liferay database. Skipping app updates can be problematic and prevent the apps from enabling on the new Liferay version.
+Update your Marketplace apps to the latest version for the Liferay version you're currently on and validate them before upgrading the Liferay database. Skipping app updates can be problematic and prevent the apps from enabling on the new Liferay version.
 
 ```important::
-   Do this on your current installation before upgrading.
+   Do this on your current installation before database upgrade.
 ```
 
-After upgrading the database, install the latest app versions for your new Liferay instance.
+The latest version of each app targeted for your new Liferay version may have database schema changes. For this reason, you must eventually upgrade the app data too.
+
+**Option 1:** If you plan to use the Database Upgrade Tool (described in below in [Executing the Database Upgrade](#executing-the-database-upgrade)), install the apps on the new Liferay version *before* using the tool. The Database Upgrade Tool automatically upgrades app data too.
+
+**Option 2:** Otherwise install the apps on the new Liferay version *after* upgrading the database (using Docker or the Database Upgrade Tool) and then use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to check for and execute any required app data upgrades. This option is mentioned again in [Post Upgrade Considerations](./post-upgrade-considerations.md).
 
 ## Upgrading Custom Development
 
