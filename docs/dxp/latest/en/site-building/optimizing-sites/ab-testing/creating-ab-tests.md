@@ -7,6 +7,9 @@ Before creating A/B tests, remember these things:
 - You cannot edit an Experience that is part of a running A/B Test.
 - You cannot create a test for an Experience that already has an active A/B Test running.
 - When you delete a Content Page or Experience that is part of an A/B Test, you also delete the test.
+- If you close the A/B Test side panel without [running the test](./running-and-monitoring-ab-tests.md), the test is saved as a draft.
+
+   ![When you configure a test without running it, the test is saved as a draft](./creating-ab-tests/images/05.png)
 
 To create the A/B test, [create the test](#creating-the-test) first, and then create one or more [test Variants](#creating-the-test-variant).
 
@@ -43,11 +46,12 @@ A test Variant is a customization of the Experience you want to optimize with A/
 1. If you selected the *Click* goal for the A/B Test, you must also select the element you want to test:
     1. Under the *Active Test* tab and *Click Goal* section, click *Select Clickable Element*.
 
+         - You can target links, buttons, and input fields with an Element ID for the *Click* goal.
          - You can also enter the *Element ID* of the element you want to test.
          - To highlight the Page element selected, click the Preview (![Preview](../../../images/icon-preview.png)) icon.
          - While the [test is running](./running-and-monitoring-ab-tests.md), the *Change Clickable Element* button is unavailable and the *Element ID* cannot be changed.
 
-         ![Click the Set Element to configure the element for your test](./creating-ab-tests/images/03.png)
+            ![Click the Content Page Element you want to test or enter its Element ID in the Click Goal section](./creating-ab-tests/images/03.png)
 
     1. Click the element you want to test on the Content Page.
     1. Click *Set Element as Click Target*.
@@ -55,7 +59,7 @@ A test Variant is a customization of the Experience you want to optimize with A/
         ![Click the Set Element as Click Target button to select it](./creating-ab-tests/images/01.png)
 
          ```note::
-            Only links and buttons with an Element ID can be selected as a target for the Click Goal. The click target element applies to the whole A/B Test and must be present in all Variants.
+            The click target element applies to the whole A/B Test and must be present in all Variants.
          ```
 
 1. Under the *Variants* section, click *Create Variant*.

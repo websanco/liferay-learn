@@ -2,17 +2,13 @@
 
 When the A/B Test finishes, you can find the test results in Analytics Cloud and Liferay DXP. Analytics Cloud declares a winning variant when the *Confidence Level Required* is achieved during the duration of the test. To understand how to configure the *Confidence Level Required* for your test, see [Creating A/B Tests](./creating-ab-tests.md).
 
-```note::
-   When you publish one of the A/B Test Variants, the Variant becomes active for all users visiting the Content Page.
-```
+    ```tip::
+       You receive a `notification in Liferay <../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md>`_ when the A/B Test finishes.
+    ```
 
 To review the A/B Test results and publish your Variant,
 
 1. Go to the Content Page where the A/B Test is running.
-
-    ```tip::
-       You receive a notification in Liferay when the A/B Test finishes.
-    ```
 
 1. In the Control Menu, click the *A/B Testing* flask icon (![A/B Test icon](../../../images/icon-ab-testing.png)). Starting Liferay DXP 7.3, you can also access the A/B Test panel (via the flask icon) and view the test status for an experience through the [experience selection dialog](../../personalizing-site-experience/experience-personalization/content-page-personalization.md).
 1. If you have other Experiences for the Content Page, select the *Experience*.
@@ -30,6 +26,10 @@ To review the A/B Test results and publish your Variant,
     * *Discard Test*, to ignore the A/B Test recommendations and keep the current Content Page.
 
         ![You can publish the winning Variant or discard the A/B Test results.](reviewing-ab-test-results-and-publishing-test-variants/images/02.png)
+
+        ```note::
+        When you publish one of the A/B Test Variants, the Variant becomes active for all users visiting the Content Page.
+        ```
 
 You can click the *View Data in Analytics Cloud* button from the A/B Tests panel to go to the Analytics Cloud dashboard and view other test statistics. For more information, see [A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/en/optimization/a-b-testing.html).
 
