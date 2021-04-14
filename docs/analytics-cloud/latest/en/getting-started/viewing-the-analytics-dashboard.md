@@ -8,7 +8,7 @@ The Dashboard is also the starting point for a variety of workspace management a
 
 ## Connecting a DXP Site to Analytics Cloud
 
-The first task for a new workspace is to connect it to a Data Source. Analytics Cloud is built to use Liferay DXP Sites as a key data source. See [Connecting Liferay DXP Sites to Analytics Cloud](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) to learn more. You can also bring in data from [CSV files](../../people/individuals/adding-a-csv-data-source.md) and [Salesforce](../../people/individuals/adding-a-salesforce-data-source.md) to supplement your existing user data.
+The first task for a new workspace is to connect it to a Data Source. Analytics Cloud is built to use Liferay DXP Sites as a key data source. See [Connecting Liferay DXP Sites to Analytics Cloud](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) to learn more. You can also bring in data from [CSV files](../connecting-data-sources/adding-a-csv-data-source.md) and [Salesforce](../connecting-data-sources/adding-a-salesforce-data-source.md) to supplement your existing user data.
 
 ## Inviting Others to Your Workspace
 

@@ -16,8 +16,6 @@ Individuals
 
 -  :doc:`/people/individuals/individuals-dashboard`
 -  :doc:`/people/individuals/individual-profiles`
--  :doc:`/people/individuals/adding-a-salesforce-data-source`
--  :doc:`/people/individuals/adding-a-csv-data-source`
 
 Accounts
 --------
