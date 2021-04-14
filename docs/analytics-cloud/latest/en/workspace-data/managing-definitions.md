@@ -1,3 +1,0 @@
-# Managing Definitions
-
-Coming soon!
