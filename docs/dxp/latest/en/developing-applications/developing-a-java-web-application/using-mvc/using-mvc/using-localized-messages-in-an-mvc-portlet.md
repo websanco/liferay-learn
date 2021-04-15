@@ -2,12 +2,7 @@
 
 Liferay's localization framework helps you create and use localized messages in your MVC Portlet. Follow the steps below to see an example project that demonstrates this. 
 
-## Overview
-
-1. [Deploy the Example](#deploy-the-example)
-1. [Walk Through the Example](#walk-through-the-example)
-
-## Deploy the Example
+## Deploy the Sample Code
 
 To see the example:
 
@@ -53,21 +48,19 @@ To see the example:
 
     You should see the welcome message header from the example.
 
-1. This example project also includes locales for Portuguese and Japanese. For example, use the language selector to select Brazilian Portuguese or Japanese to see the welcome message.
+1. The example project also includes locales for Portuguese and Japanese. For example, use the language selector to select Brazilian Portuguese or Japanese to see the welcome message.
 
     ![The example shows locales for Portuguese and Japanese.](./using-localized-messages-in-an-mvc-portlet/images/02.png)
 
 Now that you've seen the example, let's see how it works.
 
-## Walk Through the Example
-
-### Create the Language Properties File
+## Create the Language Properties File
 
 Create a `Language.properties` file and add it to your module's `src/main/resources/content` folder. In the file define the keys you will use in your MVC portlet. 
 
 Language property files for other locales can also be included in the folder. For example, to include language keys for Japanese, add a `Language_ja.properties` file to the folder.
 
-### Create the JSP File
+## Create the JSP File
 
 Create your JSP file and add it to your module's `/src/main/resources/META-INF/resources` folder.
 
@@ -90,7 +83,7 @@ This demonstrates that if no such key is found in the `Language.properties` file
 Learn more about taglibs in our [Liferay Tag Library Documentation](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/). 
 Each taglib has a list of attributes that can be passed to the tag.
 
-### Add the Component Definition
+## Add the Component Definition
 
 As you create your custom MVC Portlet, make sure to include the language resource bundle property in the class's `@Component` definition.
 
