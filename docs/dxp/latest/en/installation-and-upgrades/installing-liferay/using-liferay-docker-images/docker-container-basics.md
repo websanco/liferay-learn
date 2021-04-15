@@ -21,11 +21,7 @@ The containers listens on port `8080` and starts like all Docker containers.
 1. [Run a container](https://docs.docker.com/engine/reference/commandline/run/) that maps a host port (e.g., `8080`) to the container's `8080` port.
 
     ```bash
-    docker run -it --name [some name] -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-    ```note::
-       Naming your container is optional but can facilitate managing the container.
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
     The container runs and prints log messages, including this Tomcat startup completion message:
@@ -40,13 +36,13 @@ The containers listens on port `8080` and starts like all Docker containers.
 
 Liferay is ready to use.
 
+```note::
+   ``docker container ls`` lists each running container, including its ID and name. ``docker container ls -a`` lists all of your containers, including ones that aren't running.
+```
+
 ## Viewing Logs
 
 Liferay log messages and log files are available to view live and to copy to your host.
-
-```tip::
-   The ``[container]`` value is the name you entered via ``--name [some name]`` in your ``run`` command.
-```
 
 ### `docker logs` commands
 
@@ -85,6 +81,10 @@ docker start [container]
 
 ```warning::
    When a container is restarted, its entry point runs again (Please see `Container Lifecycle and API <./container-lifecycle-and-api.md#lifecycle>`_). Make sure any `scripts you're executing <./running-scripts-in-containers.md>`_ via the entry point can run again safely.
+```
+
+```tip::
+   Run ``docker container ls -a`` to look up your container's name or ID.
 ```
 
 Now you know the basics of starting, stopping, and monitoring a Liferay container.
