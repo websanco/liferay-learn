@@ -2,7 +2,7 @@
 
 Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations. 
 
-Note: New users are assigned to the Default Password Policy by default. If you wish to associate a user with a custom password policy they must be assigned as members of that policy. See below.
+Note: New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy. See below.
 
 ## Overview
 
@@ -26,21 +26,21 @@ To change the default policy,
 
    ![Make your desired changes in the configuration window.](configuring-a-password-policy/images/02.png)
 
-   **Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
-
-   **Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
-
-   **Password History:** Decide how many passwords to keep in the history, preventing old passwords to be reused.
-
-   **Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a *Grace Limit*: how many logins are allowed after the password is expired before forcing a password change. 
-
-   **Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
-
 1. When finished, click *Save*. 
+
+**Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
+
+**Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
+
+**Password History:** Decide how many passwords to keep in the history, preventing old passwords from being reused.
+
+**Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a *Grace Limit*: how many logins are allowed after the password is expired before forcing a password change. 
+
+**Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
 
 ## Creating a Custom Password Policy
 
-Utilizing a custom password policy might be useful in some scenarios. For example, if you required certain users or user groups of your Site to have stricter password rules. To create a custom policy,
+A custom password policy might be useful in some scenarios. For example, you may want certain Users or User Groups to have stricter password rules. To create a custom policy,
 
 1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
@@ -51,8 +51,6 @@ Utilizing a custom password policy might be useful in some scenarios. For exampl
 1. Set the properties for your policy (see above). When finished, click *Save*. 
 
 ## Assigning Members to a Password Policy
-
-To assign members to your new password policy,
 
 1. Click the Actions button (![Actions button](../../images/icon-actions.png)) next to the password policy. Click *Assign Members*.
 
@@ -66,14 +64,13 @@ To assign members to your new password policy,
 
    Your Users or Organizations are now associated with your password policy.
 
-## Utilizing the Properties File
+## Using the Properties File
 
-The Default Password Policy is set as the default and configured in Liferay's [portal.properties](@platform-ref@/7.3-latest/propertiesdoc/portal.properties.html#Passwords)
-file. Find the properties that start with `passwords.default.policy`. Note, that the Default Password Policy can only be modified from the UI in settings.
+The Default Password Policy can only be modified from the UI in settings.
 
-A new password policy can also be set up with the `portal-ext.properties` file. Add the properties and values you want to customize into the file. Make sure to add the custom policy name to this properties file. 
+A new password policy can be created in the UI or in the `portal-ext.properties` file. Add the properties and values you want to customize into the file. Make sure to add the custom policy name. 
 
-For example, if you wanted to have a custom password policy that required a minimum length, numbers, symbols you might have values set as follows:
+For example, if you wanted to have a custom password policy that required a minimum length, numbers, symbols you might have these values set: 
 
 ```properties
 #
