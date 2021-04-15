@@ -2,12 +2,7 @@
 
 As you work on an application you might have multiple modules, each of which has its own language keys. Instead of maintaining various language properties files in different places, consolidate them into one place. This example project will demonstrate how language keys can be shared across different modules.
 
-## Overview
-
-1. [Deploy the Example](#deploy-the-example)
-1. [Walk Through the Example](#walk-through-the-example)
-
-## Deploy the Example
+## Run the Tutorial Code
 
 To see the example:
 
@@ -60,9 +55,7 @@ To see the example:
 
 Now that you've seen the example, let's see how it works.
 
-## Walk Through the Example
-
-### Create the Language Properties File
+## Create the Language Properties File
 
 Create a separate project module that will hold all the shared language keys. In the example project, the shared keys are in the `Acme U8T2 Impl` module. 
 
@@ -81,7 +74,7 @@ yellow=Yellow
 
 Language property files for other locales can also be included in the folder. For example, to include language keys for Japanese, add a `Language_ja.properties` file to the folder.
 
-### Add the bnd Instruction
+## Add the bnd Instruction
 
 For each module that you wish to share language keys with, you must specify the resource in the bnd header. 
 
