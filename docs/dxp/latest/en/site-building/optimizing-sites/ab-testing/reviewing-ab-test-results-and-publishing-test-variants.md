@@ -2,9 +2,9 @@
 
 When the A/B Test finishes, you can find the test results in Analytics Cloud and Liferay DXP. Analytics Cloud declares a winning variant when the *Confidence Level Required* is achieved during the duration of the test. To understand how to configure the *Confidence Level Required* for your test, see [Creating A/B Tests](./creating-ab-tests.md).
 
-    ```tip::
-       You receive a `notification in Liferay <../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md>`_ when the A/B Test finishes.
-    ```
+```tip::
+    You receive a `notification in Liferay <../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md>`_ when the A/B Test finishes.
+```
 
 To review the A/B Test results and publish your Variant,
 
