@@ -1,8 +1,6 @@
 # SAML Configuration Reference
 
-Coming soon!
-
-<!-- You can configure the SAML plugin outside the UI through OSGi configuration files and by uploading metadata XML to configure how connections are negotiated.
+You can configure the SAML plugin outside the UI through OSGi configuration files and by uploading metadata XML to configure how connections are negotiated.
 
 ## OSGi Configuration Properties
 
@@ -41,7 +39,7 @@ If you used Liferay 6.2, please note that the following system wide properties w
 
 The latter two properties were replaced with the single property `com.liferay.saml.runtime.configuration.SamlConfiguration.getMetadataRefreshInterval()`.
 
-Note also the introduction of the *SAML KeyStoreManager Implementation Configuration* in *Control Panel* &rarr; *System Settings* &rarr; Security &rarr; SSO. The options for this configuration are explained above in [Setting up Liferay DXP as a SAML Identity Provider](./02-setting-up-identity-provider.md).
+Note also the introduction of the *SAML KeyStoreManager Implementation Configuration* in *Control Panel* &rarr; *System Settings* &rarr; Security &rarr; SSO. The options for this configuration are explained above in [Setting up Liferay DXP as a SAML Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md).
 
 In the latest version of the plugin, the `SHA256` algorithm is the default encryption algorithm used in the configuration and to generate keys. The default configuration tries `SHA256`, then `SHA384`, then `SHA512` before falling back to `SHA1`. Because `SHA1` is potentially vulnerable, you can blacklist it using this property:
 
@@ -101,4 +99,4 @@ Notice that in the configuration above, the `<md:Extensions>` block has only one
    Since the default configuration falls back to `SHA1`, you shouldn't need to do this unless your legacy system can't negotiate via the fallback mechanism. Also note that if you blacklisted `SHA1`, this won't work. Due to `vulnerabilities in SHA1 <https://en.wikipedia.org/wiki/SHA-1>`__, it's best to avoid using it altogether if possible.
 ```
 
-If you've changed your metadata configuration, you can go back to the default configuration if you saved it before making the change. If you didn't, you can provide a URL instead of an uploaded XML file to one of your peers' metadata configurations. -->
+If you've changed your metadata configuration, you can go back to the default configuration if you saved it before making the change. If you didn't, you can provide a URL instead of an uploaded XML file to one of your peers' metadata configurations.

@@ -1,8 +1,6 @@
 # SAML Authentication Process Overview
 
-Coming soon!
-
-<!--Both the IdP and the SP can initiate the Single Sign On process, and the SSO flow is different depending on each one. Regardless of how it's initiated, SSO is configured for HTTPS between the SP and IdP, so all transport-level communication is encrypted. SAML requests are signed using certificates configured in Liferay DXP, using the SAML Web Browser SSO profile as defined in the [SAML 2.0 specification](http://saml.xml.org/saml-specifications). In all cases, responses are sent using HTTP-POST or HTTP-Redirect. HTTP-POST is preferred because it reduces the risk that the URL is too long for a browser to handle.
+Both the IdP and the SP can initiate the Single Sign On process, and the SSO flow is different depending on each one. Regardless of how it's initiated, SSO is configured for HTTPS between the SP and IdP, so all transport-level communication is encrypted. SAML requests are signed using certificates configured in Liferay DXP, using the SAML Web Browser SSO profile as defined in the [SAML 2.0 specification](http://saml.xml.org/saml-specifications). In all cases, responses are sent using HTTP-POST or HTTP-Redirect. HTTP-POST is preferred because it reduces the risk that the URL is too long for a browser to handle.
 
 Consider IdP initiated SSO first.
 
@@ -26,7 +24,7 @@ If the IdP determines that the user isn't authenticated, it prompts the user wit
 
 ### The SSO Response from the IdP
 
-Upon successful authentication, the IdP constructs a SAML Response. It includes attribute statements configured in the designated Service Provider Connection (SPC; see [Setting Up Liferay as an Identity Provider](./02-setting-up-identity-provider.md) on setting up the SPC in Liferay's SAML adapter).
+Upon successful authentication, the IdP constructs a SAML Response. It includes attribute statements configured in the designated Service Provider Connection (SPC; see [Setting Up Liferay as an Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md) on setting up the SPC in Liferay's SAML adapter).
 
 The IdP sends the response to the Assertion Consumer Service URL. The request contains two parameters: `SAMLResponse` and `RelayState`.
 
@@ -113,9 +111,9 @@ For other SPs, consult the vendor's documentation on initiating SLO.
 
 A SAML `LogoutRequest` is sent to the Single Log Out service URL of the IdP.
 
-*  If Liferay serves as the SP, the `LogoutRequest` is sent to the IdP configured by the IdP Connections tab of the SAML provider (see [Setting Up Liferay as an Identity Provider](./02-setting-up-identity-provider.md) to set up the IdP Connection) and the SLO service URL defined in the SAML metadata.
+* If Liferay serves as the SP, the `LogoutRequest` is sent to the IdP configured by the IdP Connections tab of the SAML provider (see [Setting Up Liferay as an Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md) to set up the IdP Connection) and the SLO service URL defined in the SAML metadata.
 
-*  When Liferay is the IdP, if the user has logged on to other SPs, the user is presented with a single logout screen with the status of each SP logout, flagging any that can't be logged out of (some SPs might not support SLO or are currently down). If there are no other SPs to log out of, the SAML session terminates and the IdP destroys its session.
+* When Liferay is the IdP, if the user has logged on to other SPs, the user is presented with a single logout screen with the status of each SP logout, flagging any that can't be logged out of (some SPs might not support SLO or are currently down). If there are no other SPs to log out of, the SAML session terminates and the IdP destroys its session.
 
 ### The SLO Response from the SP
 
@@ -125,4 +123,4 @@ Each SP delivers its `LogoutResponse` to the IdP. When Liferay is the SP, the `L
 
 After all additional SPs deliver their `LogoutResponse`s to the IdP, the IdP destroys its SSO session. When Liferay is the IdP, once the last SP has delivered its `LogoutResponse` or has timed out, the IdP destroys the Liferay session, logging out the user.
 
-Finally, the IdP sends a `LogoutResponse` to the SP that initiated SLO. The initiating SP terminates its SAML session and logs the user out. -->
+Finally, the IdP sends a `LogoutResponse` to the SP that initiated SLO. The initiating SP terminates its SAML session and logs the user out.

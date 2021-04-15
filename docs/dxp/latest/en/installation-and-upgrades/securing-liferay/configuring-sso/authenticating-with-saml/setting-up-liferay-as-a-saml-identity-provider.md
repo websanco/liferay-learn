@@ -1,8 +1,6 @@
 # Setting up Liferay as a SAML Identity Provider
 
-Coming soon!
-
-<!-- Your Liferay DXP instance can be an Identity Provider or a Service Provider, but not both. If you don't have an existing SAML Identity Provider, follow these instructions to define your Liferay DXP installation as one.
+Your Liferay DXP instance can be an Identity Provider or a Service Provider, but not both. If you don't have an existing SAML Identity Provider, follow these instructions to define your Liferay DXP installation as one.
 
 Before you start, review the prerequisites: setting up your Keystore and knowing the important SAML paths.
 
@@ -19,7 +17,7 @@ The file system keystore manager is used by default, and the default location is
 
 To use Documents and Media library storage for your keystore instead of file system storage, go to *Control Panel* &rarr; *System Settings* &rarr; *Security* &rarr; *SSO* &rarr; *SAML KeyStoreManager Implementation Configuration*. Select from the two options: *Filesystem Keystore Manager* or *Document Library Keystore Manager*.
 
-If you use Document Library storage, you can use any of the [back-end file stores](../../../content-authoring-and-management/02-documents-and-media/01-managing-documents.md). These are protected not only by the system where the key is stored, but also by Liferay DXP's permissions system.
+If you use Document Library storage, you can use any of the [back-end file stores](../../../../system-administration/file-storage/configuring-file-storage.md). These are protected not only by the system where the key is stored, but also by Liferay DXP's permissions system.
 
 ### Important SAML Paths
 
@@ -122,4 +120,4 @@ Before adding a Service Provider (SP), verify you've completed these tasks:
 
 If this URL does not display correctly, then the SAML instance has not been enabled. Use the URL or click *Save* in the browser to generate an `XML` file.
 
-Your Identity Provider is now set up. Next, you must register a Service Provider. -->
+Your Identity Provider is now set up. Next, you must register a Service Provider.

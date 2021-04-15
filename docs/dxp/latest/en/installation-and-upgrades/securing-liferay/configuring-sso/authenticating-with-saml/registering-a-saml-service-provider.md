@@ -1,8 +1,6 @@
 # Registering a SAML Service Provider
 
-Coming soon!
-
-<!-- Making Liferay DXP a SAML Identity Provider is only useful if you can connect to one or more SAML Service Providers.
+Making Liferay DXP a SAML Identity Provider is only useful if you can connect to one or more SAML Service Providers.
 
 ## Adding a New Service Provider
 
@@ -68,4 +66,4 @@ Note that the full namespace depends on the attribute name. Attribute namespaces
 
 ## Conclusion
 
-In the next section, you'll learn how to set Liferay DXP up as a SAML Service Provider. The same instance can't be both, but after you set up another Liferay DXP instance as a Service Provider, come back to this one and add the Service Provider according to the instructions above. -->
+In the next section, you'll learn how to set Liferay DXP up as a SAML Service Provider. The same instance can't be both, but after you set up another Liferay DXP instance as a Service Provider, come back to this one and add the Service Provider according to the instructions above.

@@ -1,8 +1,6 @@
 # Configuring Service Provider and Identity Provider Connections
 
-Coming soon!
-
-<!-- To change the SAML Service Provider Settings, navigate to the Service Provider tab.
+To change the SAML Service Provider Settings, navigate to the Service Provider tab.
 
 The Service Provider tab includes these options:
 
@@ -66,4 +64,4 @@ Make the above configurations through the SAML Control Panel interface and not v
 <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portal.domain.com/c/portal/saml/acs" index="1" isDefault="true" />
 ...
 </md:SPSSODescriptor>
-</md:EntityDescriptor> -->
+</md:EntityDescriptor>

@@ -1,8 +1,6 @@
 # Single Sign-On with SAML
 
-Coming soon!
-
-<!-- The SAML (Security Assertion Markup Language) adapter provides Single Sign On (SSO) and Single Log Off (SLO) in your deployment. SAML works by using Identity Providers (IdP) and Service Providers (SP):
+The SAML (Security Assertion Markup Language) adapter provides Single Sign On (SSO) and Single Log Off (SLO) in your deployment. SAML works by using Identity Providers (IdP) and Service Providers (SP):
 
 **Identity Provider:** A trusted system that provides single sign-on for users to access other websites.
 
@@ -16,12 +14,12 @@ Liferay DXP instances can serve as either Service Provider (SP) or Identity Prov
 
 You can jump right to configuring SAML or learn how it works:
 
-* [Setting Up Liferay as an Identity Provider](./02-setting-up-identity-provider.md)
-* [Registering a Service Provider with your Identity Provider](./03-registering-a-service-provider.md)
-* [Setting Up SAML as a Service Provider](04-setting-up-service-provider.md)
-* [Configuring SP and IdP Connections](05-configuring-sp-and-idp-connections.md)
-* [Setting SAML Options](06-configuring-saml.md)
-* [How SAML Works](07-how-saml-works.md)
+* [Setting Up Liferay as an Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md)
+* [Registering SAML Service Provider](./registering-a-saml-service-provider.md)
+* [Setting Up Liferay as a SAML Service Provider](./setting-up-liferay-as-a-saml-service-provider.md)
+* [Configuring SP and IdP Connections](./configuring-service-provider-and-identity-provider-connections.md)
+* [SAML Configuration Reference](./saml-configuration-reference.md)
+* [SAML Authentication Process Overview](./saml-authentication-process-overview.md)
 
 Visit the Liferay Marketplace to install the [SAML adapter](https://web.liferay.com/marketplace/-/mp/application/15188711).
 
@@ -35,5 +33,5 @@ The `5.0.0` version of the application brings the following improvements:
 * Signature method algorithm URLs can now be blacklisted from the metadata (for example, disabling `SHA-1`: `http://www.w3.org/2000/09/xmldsig#rsa-sha1`)
 
 ```important::
-   If you're upgrading from a Liferay SAML adapter prior to version 3.1.0, your portal properties are automatically migrated to System Settings configurations. Please see the [Setting SAML Options](./06-configuring-saml.md) article for details on settings.
-``` -->
+   If you're upgrading from a Liferay SAML adapter prior to version 3.1.0, your portal properties are automatically migrated to System Settings configurations. Please see the `SAML Configuration Reference <./saml-configuration-reference.md>`_ article for details on settings.
+```
