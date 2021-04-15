@@ -1,10 +1,8 @@
 # Sharing Localized Messages
 
-As you work on an application you might have multiple modules, each of which has its own language keys. Instead of maintaining various language properties files in different places, consolidate them into one place. This example project will demonstrate how language keys can be shared across different modules.
+As you work on an application you might have multiple modules, each of which has its own language keys. Instead of maintaining various language properties files in different places, consolidate them into one place. This example project demonstrates how language keys can be shared across different modules.
 
 ## Run the Tutorial Code
-
-To see the example:
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
@@ -17,7 +15,7 @@ To see the example:
 1. Download and unzip [Sharing Localized Messages](./liferay-u8t2.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages/resources/liferay-u8t2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
     ```
 
     ```bash
@@ -47,21 +45,21 @@ To see the example:
 
     ![Add the U8T2 Portlet to a page.](./sharing-localized-messages/images/01.png)
 
-    You should see the welcome message header and a list of colors. Note that the language keys for colors come from the shared language keys. And the language key `colors` comes from Liferay's global language keys.
+    You see the welcome message header and a list of colors. Note that the language keys for colors come from the shared language keys. The language key `colors` comes from Liferay's global language keys.
 
 1. This example project also includes locales for Portuguese and Japanese. For example, use the language selector to select Brazilian Portuguese or Japanese to see the welcome message and list of colors.
 
     ![The example shows locales for Portuguese and Japanese.](./sharing-localized-messages/images/02.png)
 
-Now that you've seen the example, let's see how it works.
+Now it's time to learn how it works.
 
 ## Create the Language Properties File
 
-Create a separate project module that will hold all the shared language keys. In the example project, the shared keys are in the `Acme U8T2 Impl` module. 
+Create a separate project module to hold all the shared language keys. In the example project, the shared keys are in the `Acme U8T2 Impl` module. 
 
-Create a `Language.properties` file and add it to the module's `src/main/resources/content` folder. In the file define the keys that wish to share with the other modules. 
+Create a `Language.properties` file and add it to the module's `src/main/resources/content` folder. In the file define the keys you want to share with the other modules. 
 
-The example project has a list of six colors that is utilized by the `Acme U8T2 Web` module:
+The example project has a list of six colors used by the `Acme U8T2 Web` module:
 
 ```properties
 blue=Blue
@@ -76,7 +74,7 @@ Language property files for other locales can also be included in the folder. Fo
 
 ## Add the bnd Instruction
 
-For each module that you wish to share language keys with, you must specify the resource in the bnd header. 
+For each module that you want to share language keys with, you must specify the resource in the bnd header. 
 
 ```properties
 Bundle-Name: Acme U8T2 Web
@@ -91,7 +89,7 @@ The example project has a web portlet that uses the color language keys from `Ac
 -liferay-aggregate-resource-bundles: com.acme.u8t2.impl
 ```
 
-Note that you can still choose to place some language keys within an individual module. For example, the welcome message in the example project comes from the `Acme U8T2 Web` module's language keys and not the shared keys of `Acme U8T2 Impl`. Language keys of an individual module takes priority over any shared keys specified by `-liferay-aggregate-resource-bundles`. 
+Note that you can still choose to place some language keys in an individual module. For example, the welcome message in the example project comes from the `Acme U8T2 Web` module's language keys and not the shared keys of `Acme U8T2 Impl`. Language keys of an individual module take priority over any shared keys specified by `-liferay-aggregate-resource-bundles`. 
 
 ## Related Topics
 
