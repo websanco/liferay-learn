@@ -46,7 +46,7 @@ Modifying a Data Source
 * Name of the data source
 * `Contact mapping`_
 * Enable/Disable Contact or Analytics sync
-.. _`Contact mapping`: ./connecting-data-sources/adding-a-csv-data-source.md#mapping-contact-data
+.. _`Contact mapping`: ./connecting-data-sources/adding-a-csv-data-source.html#mapping-contact-data
 
 Here’s how to delete a data source:
 

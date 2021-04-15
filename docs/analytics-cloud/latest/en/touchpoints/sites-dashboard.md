@@ -65,7 +65,7 @@ The Top Pages panel shows visited pages, entrance pages, and exit pages:
 
 **Exit Pages:** The most common pages that visitors view when leaving your Site and the exit percentage for each. The exit percentage is the percentage of visitors for which the page is the last page in their session.
 
-To view more detailed page analytics, click *View Pages* at the bottom of the panel. Alternatively, click the *Pages* tab at the top of the screen. Both take you to the page analytics discussed in [Viewing Page Data](touchpoints.md#viewing-page-data).
+To view more detailed page analytics, click *View Pages* at the bottom of the panel. Alternatively, click the *Pages* tab at the top of the screen. Both take you to the page analytics discussed in [Viewing Page Data](../touchpoints.md#viewing-page-data).
 
 ## Acquisitions
 
