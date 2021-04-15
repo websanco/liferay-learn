@@ -24,6 +24,8 @@ Deprecated features have different availability:
 
 **Marketplace:** The feature is included in a Marketplace app final version.
 
+**Final:** The final version of the Marketplace app is released for this Liferay version.
+
 **Archived:** The feature is unavailable, but its code is available in a sources artifact on Liferay's repository at <https://repository.liferay.com/nexus/index.html#welcome>.
 
 **Removed:** The feature and its code are unavailable.
