@@ -1,0 +1,1 @@
+IFS=':' read -ra CONTENT <<< $(curl "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}?nestedFields=contentValue&fields=contentValue" -u "test@liferay.com:test" | grep contentValue); echo ${CONTENT[1]} | tr -d '"' | base64 -d
