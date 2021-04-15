@@ -37,7 +37,7 @@ These are just some ways you benefit from using Analytics Cloud. Before getting 
 Analytics Cloud helps you understand people, their interaction with your sites, and the paths (or channels) that draw them to your sites in these ways:
 
 -  :doc:`/people`
--  :doc:`/touchpoints/touchpoints`
+-  :doc:`/touchpoints`
 -  :doc:`/touchpoints/pages/paths`
 
 
