@@ -8,7 +8,7 @@ Workspace administrators connect data sources to the workspace, manage users, an
 
 To learn about connecting and managing data sources:
 
-* [Managing Data Sources](../connecting-data-sources/managing-data-sources.md)
+* [Connecting Data Sources](../connecting_data_sources.md)
 * [Connecting Liferay DXP Sites to Analytics Cloud](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
 * [Connecting Salesforce](../people/individuals/adding-a-salesforce-data-source.md)
 * [Importing CSV Data](../people/individuals/adding-a-csv-data-source.md)
