@@ -91,7 +91,7 @@ Here's a snippet of output from the Elasticsearch example:
 
 ## Accessing Custom Fields 
 
-When you create a [Custom Field](./../../../system-administration/configuring-liferay/adding-custom-fields.md) with the setting _Searchable as Keyword_ enabled, the custom field is indexed with the backing asset (Blogs Entries, for example). After re-indexing it's also applied to existing entries. The field itself is a text field, called something like `expando__keyword__custom_fields__Enabled` (if you name the field _Enabled_ in the Custom Fields UI), but it contains a nested field mapping for creating a separate `raw` keyword field. 
+When you create a [Custom Field](./../../../system-administration/configuring-liferay/adding-custom-fields.md) with the setting _Searchable as Keyword_ enabled, the custom field is indexed with the backing asset (Blogs Entries, for example). After re-indexing it's also applied to existing entries. The field itself is a text field, named like `expando__keyword__custom_fields__Enabled` (if you name the field _Enabled_ in the Custom Fields UI), but it contains a nested field mapping for creating a separate `raw` keyword field. 
 
 To use the raw field in the Custom Facet, append `.raw` to the Custom Field name in the _Aggregation Field_:
 
@@ -135,11 +135,11 @@ To see all the raw fields, query the index for `*.raw` fields:
 GET /liferay-20097/_mapping/field/*.raw
 ```
 
-Setting a custom field to searchable means that the value of the field is indexed when the entity is modified, or when a re-index is triggered. Only `java.lang.String` fields can be made searchable.
+Setting a custom field to searchable means that the value of the field is indexed when the entity is modified or when a re-index is triggered. Only `java.lang.String` fields can be made searchable.
 
 ## Accessing Nested DDM Fields
 
-As documented in the [7.3 Breaking Changes document](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document), the way Liferay Dynamic Data Mapping framework indexes some fields has changed---where they were previously at the root of the search engine document, they're now nested fields. This change affects Liferay 7.3 and Liferay 7.2 SP3/FP8+ (but only if the _Enable Legacy Dynamic Data Mapping Index Fields_ setting is disabled in System Settings &rarr; Dynamic Data Mapping Indexer). On the latest Fix Pack and GA release of 7.3, this change is accounted for in Liferay's Search API and no configuration updates are necessary. Therefore, if you have Custom Facet widgets that relied on fields named `ddm__text__*` or `ddm__keyword__*` that were at the root of the Elasticsearch document, continue to use these fields as usual in your Custom Facet's _Aggregation Field_ configuration, even though they're no longer at the root of the document.
+As documented in the [7.3 Breaking Changes document](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document), the way Liferay Dynamic Data Mapping framework indexes some fields has changed. They were previously at the root of the search engine document; now they're nested fields. This change affects Liferay 7.3 and Liferay 7.2 SP3/FP8+ (but only if the _Enable Legacy Dynamic Data Mapping Index Fields_ setting is disabled in System Settings &rarr; Dynamic Data Mapping Indexer). On the latest Fix Pack and GA release of 7.3, this change is accounted for in Liferay's Search API and no configuration updates are necessary. Therefore, if you have Custom Facet widgets that relied on fields named `ddm__text__*` or `ddm__keyword__*` that were at the root of the Elasticsearch document, continue to use these fields as usual in your Custom Facet's _Aggregation Field_ configuration, even though they're no longer at the root of the document.
 
 To find DDM fields in existing documents in the index,
 
@@ -159,7 +159,7 @@ GET liferay-20097/_search
 
 Replace the Company Id---`20097`---in the index name parameter to match your instance's value.
 
-The document returned will have a `ddmFieldArray` object with nested content:
+The document returned has a `ddmFieldArray` object with nested content:
 
 ```json
  "ddmFieldArray" : [
