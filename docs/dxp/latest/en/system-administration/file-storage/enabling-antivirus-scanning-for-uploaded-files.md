@@ -1,18 +1,18 @@
 # Enabling Antivirus Scanning for Uploaded Files
 
+> Available: DXP 7.3 SP 1+, Portal CE 7.3 GA7+, and DXP 7.2 FP 9+
+
+```note::
+   This feature is not currently available on Portal CE 7.2 and earlier versions.
+```
+
+<!-- TODO: LRDOCS-9341 - Antivirus can be enabled for older versions (7.2 and below) but requires use of portal properties and a local install of ClamAV server which we do not recommend. -->
+
 You can automatically scan any file uploaded to Liferay for viruses. When you enable the antivirus scanner, it checks files on upload to Liferay applications, such as [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), [Message Boards](../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md), and more. If a virus is found, it's reported for users to reject.
 
 ![The scanner detects virus-infected files on upload to Documents and Media and other Liferay applications.](./enabling-antivirus-scanning-for-uploaded-files/images/01.png)
 
 Liferay integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd). For best performance, run Clamd on a separate server.
-
-```note::
-   This feature was first made available in DXP 7.3 Service Pack 1, Portal CE 7.3 GA7, and DXP 7.2 Fix Pack 9.
-
-   This feature is unavailable on Portal CE 7.2 GA2 (and earlier).
-
-   On DXP 7.2 Fix Pack 8 (and earlier) and Portal CE 7.2 GA2 (and earlier), the ClamAV antivirus scanner must run locally.
-```
 
 Here's how to enable the antivirus scanning:
 
