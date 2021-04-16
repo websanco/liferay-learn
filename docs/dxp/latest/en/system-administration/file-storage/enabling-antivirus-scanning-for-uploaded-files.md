@@ -1,15 +1,17 @@
 # Enabling Antivirus Scanning for Uploaded Files
 
-> Subscription Required
-
 You can automatically scan any file uploaded to Liferay for viruses. When you enable the antivirus scanner, it checks files on upload to Liferay applications, such as [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), [Message Boards](../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md), and more. If a virus is found, it's reported for users to reject.
 
 ![The scanner detects virus-infected files on upload to Documents and Media and other Liferay applications.](./enabling-antivirus-scanning-for-uploaded-files/images/01.png)
 
-Liferay DXP integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd). For best performance, run Clamd on a separate server.
+Liferay integrates with the [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (Clamd). For best performance, run Clamd on a separate server.
 
 ```note::
-   Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. 
+   This feature was first made available in DXP 7.3 Service Pack 1, Portal CE 7.3 GA7, and DXP 7.2 Fix Pack 9.
+
+   This feature is unavailable on Portal CE 7.2 GA2 (and earlier).
+
+   On DXP 7.2 Fix Pack 8 (and earlier) and Portal CE 7.2 GA2 (and earlier), the ClamAV antivirus scanner must run locally.
 ```
 
 Here's how to enable the antivirus scanning:
@@ -38,11 +40,9 @@ Here's how to enable the antivirus scanning:
 
 1. Go to *Control Panel* &rarr; *System Settings* and select *Antivirus* in the Security category.
 
-    ![Antivirus is in the Security category in System Settings.](./enabling-antivirus-scanning-for-uploaded-files/images/02.png)
-
 1. Select *Antivirus Clamd Scanner* in the menu.
 
-    ![Antivirus Clamd Scanner configuration](./enabling-antivirus-scanning-for-uploaded-files/images/03.png)
+    ![Antivirus Clamd Scanner configuration](./enabling-antivirus-scanning-for-uploaded-files/images/02.png)
 
 1. Enter the Clamd server's hostname or IP address, port, and a connection timeout time (milliseconds).
 
@@ -50,7 +50,7 @@ Here's how to enable the antivirus scanning:
 
 Now files are scanned on upload to Liferay applications. If a virus is detected in a file you're uploading, the scanner reports the infected file, and you should decline saving the file.
 
-![Here's the virus detection message.](./enabling-antivirus-scanning-for-uploaded-files/images/04.png)
+![Here's the virus detection message.](./enabling-antivirus-scanning-for-uploaded-files/images/03.png)
 
 ```important::
    Never save a virus-infected file. Reject the file by canceling the current operation.
