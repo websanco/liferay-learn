@@ -2,14 +2,16 @@
 
 Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations. 
 
-Note: New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy. See below.
+```note::
+   New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy.
+```
 
 ## Overview
 
 1. [Modifying the Default Password Policy](#modifying-the-default-password-policy)
-1. [Creating a Custom Password Policy](#Creating-a-custom-password-policy)
+1. [Creating a Custom Password Policy](#creating-a-custom-password-policy)
 1. [Assigning Members to a Password Policy](#assigning-members-to-a-password-policy)
-1. [Utilizing the Properties File](#utilizing-the-properties-file)
+1. [Utilizing the Properties File](#using-the-properties-file)
 1. [Password Properties Reference](#password-properties-reference)
 
 ## Modifying the Default Password Policy
@@ -28,6 +30,8 @@ To change the default policy,
 
 1. When finished, click *Save*. 
 
+### Policy Configuration Reference
+
 **Password Changes:** Allow or prevent password changes, and set a time limit on the validity of password reset links.
 
 **Password Syntax Checking:** Require a certain syntax when choosing a password. You can disallow dictionary words, set a minimum length, and more in this section.
@@ -44,7 +48,7 @@ A custom password policy might be useful in some scenarios. For example, you may
 
 1. Navigate to *Control Panel* &rarr; *Security* &rarr; *Password Policies*.
 
-1.  Click the *Add* icon (![Add](../../images/icon-add.png)) to add a new policy.
+1. Click the *Add* icon (![Add](../../images/icon-add.png)) to add a new policy.
 
 1. In the configuration window, provide a Name and Description for your password policy. 
 
@@ -68,7 +72,7 @@ A custom password policy might be useful in some scenarios. For example, you may
 
 The Default Password Policy can only be modified from the UI in settings.
 
-A new password policy can be created in the UI or in the `portal-ext.properties` file. Add the properties and values you want to customize into the file. Make sure to add the custom policy name. 
+A new password policy can be created in the UI or added via the [`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md) file. Add the properties and values you want to customize into the file. Make sure to add a name for the custom password policy. 
 
 For example, if you wanted to have a custom password policy that required a minimum length, numbers, symbols you might have these values set: 
 
@@ -88,7 +92,7 @@ passwords.default.policy.min.symbols=1
 
 See the reference below for a full list of properties that can be used to customize your password policy.
 
-Once you have your `portal-ext.properties` file, place it in the `[Liferay Home]` folder. Learn more about [portal properties](../../installation-and-upgrades/reference/portal-properties.md) or if using Docker, [configuring a Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md).
+Once you have your `portal-ext.properties` file, place it in the [`[Liferay Home]`](../../installation-and-upgrades/reference/liferay-home.md) folder. Learn more about [portal properties](../../installation-and-upgrades/reference/portal-properties.md) or if using Docker, [configuring a Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md).
 
 ## Password Properties Reference
 
