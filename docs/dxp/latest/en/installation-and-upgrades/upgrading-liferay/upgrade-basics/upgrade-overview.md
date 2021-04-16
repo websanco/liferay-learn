@@ -57,13 +57,11 @@ Update your Marketplace apps to the latest version for the Liferay version you'r
    Do this on your current installation before database upgrade.
 ```
 
-The latest version of each app targeted for your new Liferay version may have database schema changes. For this reason, you must eventually upgrade the app data too.
+The latest version of each app targeted for your new Liferay version may have database schema changes. For this reason, you must eventually upgrade the app data too. You can upgrade the app data *during* your database upgrade or *after* your database upgrade.
 
-**Option 1:** If you plan to use the Database Upgrade Tool (described in below in [Executing the Database Upgrade](#executing-the-database-upgrade)), install the apps on the new Liferay version *before* using the tool. The Database Upgrade Tool automatically upgrades app data too.
+**Option 1:** Install the latest apps *before* database upgrade and upgrade the app data automatically as part of your database upgrade. Each database upgrade path describes app setup details.
 
-**Option 2:** If you plan to [Upgrade via Docker](./upgrading-via-docker.md), install the apps on the *deploy* folder *before* running the docker image.
-
-**Option 3:** Otherwise install the apps on the new Liferay version anytime *after* upgrading the database and then use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to check for and execute any required app data upgrades. This option is mentioned again in [Post Upgrade Considerations](./post-upgrade-considerations.md).
+**Option 2:** Install the latest apps *after* database upgrade and use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to upgrade the app data. The [Post Upgrade Considerations](./post-upgrade-considerations.md) describes app setup details.
 
 ## Upgrading Custom Development
 
