@@ -66,7 +66,7 @@ A test Variant is a customization of the Experience you want to optimize with A/
 1. Enter a name for the Variant and click *Save*.
 1. Click the *Edit* (![Edit icon](../../../images/icon-edit.png)) button next to the variant's name. The current Content Page opens in editing mode as the baseline for the Variant.
 
-1. Edit the Variant with the changes you want to test. For example, if you want to test a different call-to-action text, update the button with the new text.
+1. Edit the Variant with the changes you want to test. For example, if you want to test different call-to-action text, update the button with the new text.
 1. Click *Save Variant*.
 
 After creating your test and test Variant, you can [run the test](./running-and-monitoring-ab-tests).

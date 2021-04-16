@@ -7,7 +7,7 @@ You can configure these parameters when you run the A/B Test:
 
 The *Estimated Time to Declare Winner* provides an estimation of the test duration. This estimation is based on the *Traffic Split* and *Confidence Level Required* configurations, as well as on the estimated page traffic (based on the traffic history provided by Analytics Cloud.)
 
-![A/B Test Run Configurations are tunable to your requirements](running-and-monitoring-ab-tests/images/01.png)
+![A/B Test Run Configurations are tunable to your requirements.](running-and-monitoring-ab-tests/images/01.png)
 
 After you create the test, review the test status and the history of completed and terminated A/B Tests by clicking the *A/B Testing* button (![A/B Test icon](../../../images/icon-ab-testing.png)). Starting Liferay DXP 7.3, you can also view the A/B Test status for an experience through the [experience selection dialog](../../personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
