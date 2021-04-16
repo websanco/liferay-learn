@@ -61,7 +61,9 @@ The latest version of each app targeted for your new Liferay version may have da
 
 **Option 1:** If you plan to use the Database Upgrade Tool (described in below in [Executing the Database Upgrade](#executing-the-database-upgrade)), install the apps on the new Liferay version *before* using the tool. The Database Upgrade Tool automatically upgrades app data too.
 
-**Option 2:** Otherwise install the apps on the new Liferay version *after* upgrading the database (using Docker or the Database Upgrade Tool) and then use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to check for and execute any required app data upgrades. This option is mentioned again in [Post Upgrade Considerations](./post-upgrade-considerations.md).
+**Option 2:** If you plan to [Upgrade via Docker](./upgrading-via-docker.md), install the apps on the *deploy* folder *before* running the docker image.
+
+**Option 3:** Otherwise install the apps on the new Liferay version anytime *after* upgrading the database and then use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to check for and execute any required app data upgrades. This option is mentioned again in [Post Upgrade Considerations](./post-upgrade-considerations.md).
 
 ## Upgrading Custom Development
 
