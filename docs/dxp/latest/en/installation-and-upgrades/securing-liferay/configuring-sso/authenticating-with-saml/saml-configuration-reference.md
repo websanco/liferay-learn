@@ -1,6 +1,6 @@
 # SAML Configuration Reference
 
-You can configure the SAML plugin outside the UI through OSGi configuration files and by uploading metadata XML to configure how connections are negotiated.
+You can configure the SAML plugin outside the UI through [OSGi configuration files](../../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) and by uploading metadata XML to configure how connections are negotiated.
 
 ## OSGi Configuration Properties
 
@@ -35,7 +35,9 @@ Note that there is also a system wide configuration, represented by the `SamlCon
 
 If you used Liferay 6.2, please note that the following system wide properties were removed:
 
-    `saml.metadata.paths` (served no purpose after removal of SP connection defaults) `saml.runtime.metadata.max.refresh.delay` `saml.runtime.metadata.min.refresh.delay`
+* `saml.metadata.paths` (served no purpose after removal of SP connection defaults)
+* `saml.runtime.metadata.max.refresh.delay`
+* `saml.runtime.metadata.min.refresh.delay`
 
 The latter two properties were replaced with the single property `com.liferay.saml.runtime.configuration.SamlConfiguration.getMetadataRefreshInterval()`.
 

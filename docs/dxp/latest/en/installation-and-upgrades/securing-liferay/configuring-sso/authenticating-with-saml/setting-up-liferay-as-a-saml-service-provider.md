@@ -1,8 +1,6 @@
 # Setting up Liferay as a SAML Service Provider
 
-Coming soon!
-
-<!-- Many of these steps are similar to configuring Liferay DXP as a SAML Identity Provider. As a reminder, a single Liferay DXP installation can be configured as a SAML Identify Provider *or* as a SAML Service Provider but not as both. If your installation is already a SAML Identity Provider, use a *different* Liferay installation as a SAML Service Provider.
+Many of these steps are similar to configuring Liferay DXP as a SAML Identity Provider. As a reminder, a single Liferay DXP installation can be configured as a SAML Identify Provider *or* as a SAML Service Provider but not as both. If your installation is already a SAML Identity Provider, use a *different* Liferay installation as a SAML Service Provider.
 
 ```note::
    If you have a third party IdP with Liferay DXP as the SP, all messages coming from the IdP must be signed. If they're not, an error message appears and communication between the IdP and Liferay fails.
@@ -41,7 +39,7 @@ Coming soon!
     * Entity ID: [ID of IdP]
     * Clock Skew: Set the tolerance in milliseconds between SP and IdP.
     * Force Authn: Whether the IdP should force re-authentication regardless of context.
-    * Metadata URL: http://localhost:8080/c/portal/saml/metadata (test this URL first)
+    * Metadata URL: `http://localhost:8080/c/portal/saml/metadata` (test this URL first)
     * Name Identifier Format: See settings.
     * Attribute Mapping: See settings.
     * Keep Alive URL: See settings.
@@ -84,7 +82,7 @@ You can use the Liferay Connector to SAML 2.0 app as an SSO solution for a clust
 
 If using the Filesystem Keystore Manager (the default):
 
-1. Configure each node of your [Liferay cluster](../../../02-setting-up/07-performance/01-clustering.md) as a SAML service provider as above.
+1. Configure each node of your [Liferay cluster](../../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md) as a SAML service provider as above.
 
 1. Copy the keystore file (`[Liferay Home]/data/keystore.jks`, by default) from the first node to the remaining nodes. This file is the Java keystore that's created by the SAML Provider app. The keystore contains the valid or self-signed certificate managed by the SAML connector app.
 
@@ -94,4 +92,4 @@ If using the Filesystem Keystore Manager (the default):
 
 If using the Document Library Keystore Manager, skip step 2 because the keystore file is stored in the database shared by all the nodes.
 
-Now you know how to configure Liferay DXP either as a SAML identity provider or a service provider. You also know how to configure SAML in a clustered environment. -->
+Now you know how to configure Liferay DXP either as a SAML identity provider or a service provider. You also know how to configure SAML in a clustered environment.
