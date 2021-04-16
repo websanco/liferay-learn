@@ -50,6 +50,10 @@ Follow these steps to add custom domains to environment services via the DXP Clo
 
 1. Click *Update Custom Domains* to finalize the addition.
 
+```note::
+   Adding custom domains via the DXP Cloud console automatically uses a certificate provided by `Let's Encrypt <https://letsencrypt.org/>`__ for all of them. If you want to use `custom SSL certificates <./load-balancer.md#custom-ssl>`__ for your custom domains, then you must add them via the web server's ``LCP.json`` file instead.
+```
+
 ### Adding a Custom Domain via LCP.json
 
 Alternatively, you can replace the domains that an environment's service uses by adding the `customDomains` property to its `LCP.json` file. Add the property within an `environments` attribute for the specific environment:
@@ -97,7 +101,7 @@ It may take some time to be able to verify a custom domain after configuration d
 
 Once backend processes are complete, DXP Cloud's load balancer is updated with the SSL server certificate, and the service is reachable and secure.
 
-See [Load Balancer](./load-balancer.md) to learn more about SSL certificates in Liferay DXP Cloud, including how to set up a custom SSL certificate.
+See [Load Balancer](./load-balancer.md) to learn more about SSL certificates in Liferay DXP Cloud, including how to set up one or more custom SSL certificates.
 
 ## Additional Information
 

@@ -55,22 +55,57 @@ Domains created by DXP Cloud's infrastructure at `.lfr.cloud` are covered by a w
 
 For all custom domains added through the console or `LCP.json`, Liferay DXP Cloud reaches out to [Let's Encrypt](https://letsencrypt.org/) for a certificate that renews automatically and covers all custom domains you create.
 
-### Custom SSL Certificates
+### Adding Custom SSL Certificates
 
-You can also add your own SSL certificate to cover any custom domains you create. However, only one certificate can be used at a time for a service's custom domains: either the one provided by Let's Encrypt, or the custom one specified in its `LCP.json`. If both certificates exist, the custom certificate takes precedent.
+You can also add your own SSL certificate to cover any custom domains you create. You can either use the SSL certificate provided by Let's Encrypt (for any custom domains added through the DXP Cloud console), or you can define one or more custom certificates in your `webserver` service's `LCP.json` file. If certificates exist in both places, then any custom certificates defined in the `LCP.json` file take precedent.
 
-When creating custom certificates, note that DXP Cloud only accepts keys and certificates that are in the proper PEM format with [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoding, which must include encapsulation boundaries:
+When creating custom certificates, note that DXP Cloud only accepts keys and certificates that are in the proper PEM format with [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoding, which must include encapsulation boundaries.
+
+To add a single SSL certificate to the `LCP.json` file, add an `ssl` object with certificates `key` and `crt` values inside of the [`loadbalancer` object](./custom-domains.md#adding-a-custom-domain-via-lcp-json):
 
 ```json
-"ssl": {
-  "key": "...",
-  "crt": "..."
+{
+    "loadbalancer": {
+        "ssl": {
+            "key": "...",
+            "crt": "..."
+        }
+    }
 }
 ```
 
-```important::
-   The ``ssl`` property (containing the ``key`` and ``crt`` properties) must be contained within the ``loadbalancer`` property to work properly.
+Using the `ssl` object in your `LCP.json` creates a single custom SSL certificate that maps to all custom domains used in this environment.
+
+### Mapping Multiple SSL Certificates to Custom Domains
+
+You can also map different SSL certificates to multiple custom domains by using the `certs` property instead of the `ssl` object.
+
+Use the `certs` property in your web server's `LCP.json` file to create a list of certificates that you can use. Group the `key` and `crt` values for each certificate together with the custom domains they will map to:
+
+```json
+{
+    "loadbalancer": {
+        "certs": [
+            {
+                "customDomains": ["acme.liferay.cloud"],
+                "key": "...",
+                "crt": "..."
+            },
+            {
+                "customDomains": ["acme2.liferay.cloud"],
+                "key": "...",
+                "crt": "..."
+            }
+        ]
+    }
+}
 ```
+
+```note::
+   Mapping multiple SSL certificates to your custom domains requires adding the ``certs`` property to the ``webserver`` service's ``LCP.json`` file. Adding custom domains through the DXP Cloud console instead maps all of the custom domains to a single certificate.
+```
+
+### Generating an SSL Certificate
 
 When generating a key, you must use either RSA-2048 or ECDSA P-256 encryption algorithms and avoid using passphrase protected keys.
 
@@ -131,8 +166,8 @@ The Network page shows any custom certificates, with a maximum of one per servic
 | `cdn` | false | CDN is disabled by default; can be enabled by setting to `true` |
 | `customDomains` | ["example.com", "www.example.com"] | Name of the custom domain; can list more than one |
 | `targetPort` | 3000 | Port number for the load balancer |
-| `key` | | SSL certificate's key in Base64 format |
-| `crt` | | SSL certificate's crt in Base64 format |
+| `key` | | SSL certificate's key in Base64 format. Group this in an [`ssl`](#adding-custom-ssl-certificates) object, or a [`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) object (to list multiple certificates). |
+| `crt` | | SSL certificate's crt in Base64 format. Group this in an [`ssl`](#adding-custom-ssl-certificates) object, or a [`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) object (to list multiple certificates). |
 
 ## Additional Information
 
