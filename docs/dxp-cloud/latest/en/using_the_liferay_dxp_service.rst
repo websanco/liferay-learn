@@ -26,7 +26,7 @@ Maintenance and Upgrades
 -  `Applying Patches <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-hotfixes>`__
 -  `Activating Products <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-licenses>`__
 -  :doc:`/using-the-liferay-dxp-service/upgrading-your-liferay-dxp-instance`
--  :doc:`/updating-your-dxp-instance-to-a-new-minor-version`
+-  :doc:`/using-the-liferay-dxp-service/updating-your-dxp-instance-to-a-new-minor-version`
 
 Configuration
 -------------
