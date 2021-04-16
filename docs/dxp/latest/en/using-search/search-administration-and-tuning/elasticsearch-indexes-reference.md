@@ -24,7 +24,7 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
    Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../developer_guide.html>`__ for information on using these APIs.
 ```
 
-If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you also have indexes like these:
+If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you also have these indexes:
 
 | Index ID                                                     | Index Type    | Index Purpose |
 | ------------------------------------------------------------ | ------------- | ------------- |
