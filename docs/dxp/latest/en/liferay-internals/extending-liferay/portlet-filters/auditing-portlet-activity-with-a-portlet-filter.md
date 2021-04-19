@@ -1,12 +1,12 @@
 # Auditing Portlet Activity with Portlet Filters
 
-Portlet filters provide a way to add custom functionality to portlets by intercepting requests and responses at the start of each [portlet request processing phase](https://github.com/sez11a/liferay-learn/pull/215/files). This makes them useful for auditing portlet activities during its render, action, event, and resource serving phases.
+Portlet filters intercept requests and responses at the start of each [portlet request processing phase](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) so you can add functionality there. This makes them useful for auditing portlet activities during their render, action, event, and resource serving phases.
 
 Follow these steps to create portlet filters for auditing portlet activities:
 
 1. Identify the target portlet by its full name (e.g., `com_liferay_blogs_web_portlet_BlogsPortlet`).
 
-1. Determine the portlet phase you want to audit, and implement the corresponding portlet filter interface from the [`javax.portlet.filter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/package-summary.html) package.
+1. Determine the portlet phase you want to audit and implement the corresponding portlet filter interface from the [`javax.portlet.filter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/package-summary.html) package.
 
    * Action Phase - [`ActionFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/ActionFilter.html)
    * Event Phase - [`EventFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/EventFilter.html)
@@ -15,10 +15,10 @@ Follow these steps to create portlet filters for auditing portlet activities:
 
    See [Portlets](../../../developing-applications/developing-a-java-web-application/portlets.md) for more information about each portlet phase.
 
-1. Declare the portlet filter a Component within the OSGi framework using the `@Component` annotation, and identify it as a `PortletFilter.class` service.
+1. Declare the portlet filter a Component within the OSGi framework using the `@Component` annotation and identify it as a `PortletFilter.class` service.
 
    ```note::
-      Portlet filters are `OSGi Declarative Service (DS) Component <https://enroute.osgi.org/FAQ/300-declarative-services.html>`_. Filters can also be applied to a portlet using a ``portlet.xml`` descriptor or a ``@PortletLifecycleFilter`` annotation. See Portlet 3.0 Specification for details.
+      Portlet filters are `OSGi Declarative Service (DS) Components <https://enroute.osgi.org/FAQ/300-declarative-services.html>`_. Filters can also be applied to a portlet using a ``portlet.xml`` descriptor or a ``@PortletLifecycleFilter`` annotation. See Portlet 3.0 Specification for details.
    ```
 
 1. Enter the following properties into the `@Component` declaration.
@@ -28,7 +28,7 @@ Follow these steps to create portlet filters for auditing portlet activities:
 
 1. Override the filter's `doFilter` method to audit the desired aspects of the portlet phase.
 
-The following tutorial uses a `RenderFilter` to audit the render phase for the Blogs portlet.
+The following example uses a `RenderFilter` to audit the render phase for the Blogs portlet.
 
 ## Deploy the Sample Portlet Filter
 
@@ -67,7 +67,7 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
 
 1. Verify the portlet filter is working by adding the Blogs widget to a Site Page.
 
-   Whenever a render request is made to the Blogs portlet, the container console should display a warning message with an audit of its render time, average render time, and total number of renders.
+   Whenever a render request is made to the Blogs portlet, the container console shows a warning message with an audit of its render time, average render time, and total number of renders.
 
    ```log
    WARN [http-nio-8080-exec-2][B4K8PortletFilter:54] Blogs portlet rendered in 3 ms with an average of 3 ms out of 1 renders.
@@ -137,11 +137,11 @@ In this code, the filter is first declared an OSGi DS Component and identified a
 
 The portlet filter proceeds to implement the [`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html) interface, which extends the [`PortletFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/PortletFilter.html) interface. This interface includes three methods (i.e., `init`, `destroy`, `doFilter`) and performs its filtering tasks on both the render request to the Blogs portlet and its response.
 
-* `init`: This method is only called when the portlet filter is first deployed to Liferay and initialized within the portlet container.
+* `init`: Called when the portlet filter is first deployed to Liferay and initialized within the portlet container.
 
-* `destroy`: This method can be called to remove the portlet filter from service.
+* `destroy`: Called to remove the portlet filter from service.
 
-* `doFilter`: This method is called by the portlet container each time a render request/response pair is passed through the chain due to a client request.
+* `doFilter`: Called by the portlet container each time a render request/response pair is passed through the chain due to a client request.
 
    In this example, `doFilter` audits the Blogs portlet in the following ways:
 
@@ -175,7 +175,7 @@ The portlet filter proceeds to implement the [`RenderFilter`](http://docs.lifera
       _count.increment();
       ```
 
-   1. Uses the LongAdder utility to store the portlet's average render time and total number of renders, and then uses the Log utility to display these values along with the portlet's current render time.
+   1. Uses the `LongAdder` utility to store the portlet's average render time and total number of renders, and then uses the Log utility to display these values along with the portlet's current render time.
 
       ```java
       if (_log.isWarnEnabled()) {
