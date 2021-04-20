@@ -1,6 +1,6 @@
 # Configuring Cross-Region Disaster Recovery
 
-DXP Cloud provides two ways for customers to take advantage of the Disaster Recovery (DR) procedure in the case of major incidents: Automatic Disaster Recovery and Cross-Region Disaster Recovery. DXP Cloud's approaches to disaster recovery scenarios can be reviewed in greater detail in the [Disaster Recovery Overview](./configuring-cross-region-disaster-recovery-overview.md).
+DXP Cloud provides two ways for customers to take advantage of the Disaster Recovery (DR) procedure in the case of major incidents: Automatic Disaster Recovery and Cross-Region Disaster Recovery. DXP Cloud's approaches to disaster recovery scenarios can be reviewed in greater detail in the [Disaster Recovery Overview](./disaster-recovery-overview.md).
 
 This article documents the steps required to help a customer recover data manually during a cross-region disaster. These steps are required only when there is a compromise in all three zones in the same geographic region at the same time.
 
