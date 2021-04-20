@@ -11,7 +11,7 @@ Personalizing your Content Page for different users is a two-step process:
 
 > Some Experiences functionality is available in Liferay 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+ only.
 
-You can create multiple experiences for the same Content Page, each Experience covering a particular need. For example, you can create different experiences for users who log in to your site and for users who browse the site anonymously. Each Experience contains the content and layout that is most appropriate for each Segment.
+You can create multiple experiences for the same Content Page, each Experience covering a particular need. For example, you can create different experiences for users who log in to your Site and for users who browse the Site anonymously. Each Experience contains the content and layout that is most appropriate for each Segment.
 
 Consider the following information when you create multiple experiences for the same Content Page:
 
@@ -46,7 +46,11 @@ In this example:
 
 ## Managing Experience Localization
 
+> Available: Liferay 7.4+.
+
 When you create a new Experience, you define the target language or languages for the Experience, in addition to the default language. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide users an Experience personalized on their own language. For example, if a user with the browser configured in the es-ES locale visits a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language that the user sees is es-ES.
+
+You can configure the Experience using the languages available for your Site. To change the available Site languages, see [Site Localization](../../site-settings/site-localization.md).
 
 ![In addition to the default language, you can define additional languages for the Experience.](./content-page-personalization/images/02.png)
 
