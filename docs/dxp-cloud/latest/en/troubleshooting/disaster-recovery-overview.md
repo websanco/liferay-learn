@@ -4,7 +4,7 @@ Liferay DXP Cloud offers two strategies for disaster recovery: Automatic and Cro
 
 ## Automatic Disaster Recovery Strategy
 
-DXP Cloud performs automatic disaster recovery protocols by replicating services between three Availability Zones in different geographic locations within the same Region. In case any of the Availability Zones become unavailable, the Load Balancer will automatically route to the remaining Availability Zones without requiring DNS changes on the customer side. In this situation, *no action is required from the customer during an incident*.
+DXP Cloud performs automatic disaster recovery protocols by replicating services between three zones in different geographic locations within the same region. In case any of the zones become unavailable, the Load Balancer will automatically route to the remaining zones without requiring DNS changes on the customer side. In this situation, *no action is required from the customer during an incident*.
 
 ## Cross-Region Disaster Recovery Strategies
 

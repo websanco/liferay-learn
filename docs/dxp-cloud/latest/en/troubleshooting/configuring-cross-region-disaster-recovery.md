@@ -2,7 +2,7 @@
 
 DXP Cloud provides two ways for customers to take advantage of the Disaster Recovery (DR) procedure in the case of major incidents: Automatic Disaster Recovery and Cross-Region Disaster Recovery. DXP Cloud's approaches to disaster recovery scenarios can be reviewed in greater detail in the [Disaster Recovery Overview](./disaster-recovery-overview.md).
 
-This article documents the steps required to help a customer recover data manually during a cross-region disaster. These steps are required only when there is a compromise in all three Availability Zones in the same region at the same time.
+This article documents the steps required to help a customer recover data manually during a cross-region disaster. These steps are required only when there is a compromise in all three zones in the same geographic region at the same time.
 
 * [Initial Setup](#initial-setup)
 * [During an Incident](#during-an-incident)
@@ -20,7 +20,7 @@ DXP Cloud systems administrators must have full administrative rights on both th
 
 ### Verify VPN Settings in the DR environment
 
-If VPN is enabled on the Production environment, verify that the DR environment's VPN has also been enabled.
+If a VPN is enabled on the Production environment, verify that the DR environment's VPN has also been enabled.
 
 To ensure the two environments are connected:
 
@@ -40,8 +40,7 @@ To ensure the two environments are connected:
 
 1. Click *Connect VPN*.
 
-For more information on connecting to a VPN, see
-[VPN Connection](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md).
+For more information on connecting to a VPN, see [VPN Connection](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md).
 
 ### Deploy the Latest Stable Build from Production to the DR Environment
 
