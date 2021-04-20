@@ -1,6 +1,6 @@
 # Configuring Cross-Region Disaster Recovery
 
-DXP Cloud provides two ways for customers to take advantage of the Disaster Recovery (DR) procedure in the case of major incidents: Automatic Disaster Recovery and Cross-Region Disaster Recovery. DXP Cloud's approaches to disaster recovery scenarios can be reviewed in greater detail in the [Disaster Recovery Overview](./disaster-recovery-overview.md).
+DXP Cloud provides two ways for customers to take advantage of the Disaster Recovery (DR) procedure in the case of major incidents: Automatic Disaster Recovery and Cross-Region Disaster Recovery. DXP Cloud's approaches to disaster recovery scenarios can be reviewed in greater detail in the [Disaster Recovery Overview](./configuring-cross-region-disaster-recovery-overview.md).
 
 This article documents the steps required to help a customer recover data manually during a cross-region disaster. These steps are required only when there is a compromise in all three zones in the same geographic region at the same time.
 
@@ -14,7 +14,7 @@ Liferay offers a dedicated DXP Cloud environment to manage a cross region disast
 
 DXP Cloud customers wishing to set up a Disaster Recovery environment must first contact their sales representative in order for the DR environment to be provisioned. This new environment is listed with the other available environments (e.g., `dev`, `infra`, `uat`, and `prd`).
 
-![Figure 1: Once you have a disaster recovery environment, you can select it like you would any other environment.](./disaster-recovery/images/01.png)
+![Figure 1: Once you have a disaster recovery environment, you can select it like you would any other environment.](./configuring-cross-region-disaster-recovery/images/01.png)
 
 DXP Cloud systems administrators must have full administrative rights on both the DR environment and the Production environment.
 
@@ -61,9 +61,9 @@ Follow these steps to restore the latest stable backup of Production to the DR e
        The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
-1. Click the *Actions* button (![Actions](./disaster-recovery/images/02.png)), for the latest stable backup in the Production environment,  then select *Restore*.
+1. Click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/02.png)), for the latest stable backup in the Production environment,  then select *Restore*.
 
-    ![Figure 2: Restore the latest stable backup from the Production environment to the DR environment.](./disaster-recovery/images/03.png)
+    ![Figure 2: Restore the latest stable backup from the Production environment to the DR environment.](./configuring-cross-region-disaster-recovery/images/03.png)
 
 ### Direct Custom Domain Traffic to the DR Environment
 
@@ -77,7 +77,7 @@ The web server service's custom domain in the DR environment must match that of 
 
 This will result in all traffic being directed to the DR environment.
 
-![Figure 3: For the webserver service, configure the DR environment's custom domains to match those of the Production environment.](./disaster-recovery/images/04.png)
+![Figure 3: For the webserver service, configure the DR environment's custom domains to match those of the Production environment.](./configuring-cross-region-disaster-recovery/images/04.png)
 
 ## Post-incident Recovery
 
@@ -94,7 +94,7 @@ During the incident, the DR environment functions as the Production environment 
 1. In the DR environment, click *Backups* in the menu on the left.
 1. Click *Backup Now*.
 
-![Figure 4: Create a manual backup of the DR environment.](./disaster-recovery/images/05.png)
+![Figure 4: Create a manual backup of the DR environment.](./configuring-cross-region-disaster-recovery/images/05.png)
 
 ### Copy Latest DR Environment Data to Production
 
@@ -105,10 +105,10 @@ During the incident, the DR environment functions as the Production environment 
        The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
-1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./disaster-recovery/images/02.png)) then select *Restore*.
+1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/02.png)) then select *Restore*.
 1. Select the Production environment and click *Deploy Build*.
 
-![Figure 5: Deploy the backup to the Production environment.](./disaster-recovery/images/06.png)
+![Figure 5: Deploy the backup to the Production environment.](./configuring-cross-region-disaster-recovery/images/06.png)
 
 ### Restore Server Custom Traffic to Production
 
@@ -118,7 +118,7 @@ Because the webserver service redirected all traffic to the DR environment durin
 1. Click on _webserver_ in the list of Services.
 1. Click the _Custom Domains_ tab.
 
-    ![Remove custom domain](./disaster-recovery/images/07.png)
+    ![Remove custom domain](./configuring-cross-region-disaster-recovery/images/07.png)
 
 1. Remove the custom domain from the Production environment.
 1. Update the DNS records. For more information, see the [Custom Domain](https://help.liferay.com/hc/en-us/articles/360032856292) article.
