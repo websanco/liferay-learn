@@ -10,8 +10,8 @@ To learn about connecting and managing data sources:
 
 * [Connecting Data Sources](../connecting_data_sources.md)
 * [Connecting Liferay DXP Sites to Analytics Cloud](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
-* [Connecting Salesforce](../people/individuals/adding-a-salesforce-data-source.md)
-* [Importing CSV Data](../people/individuals/adding-a-csv-data-source.md)
+* [Connecting Salesforce](../connecting-data-sources/adding-a-salesforce-data-source.md)
+* [Importing CSV Data](../connecting-data-sources/adding-a-csv-data-source.md)
 * [Scoping Sites Using Properties](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md)
 
 ## Managing Workspace Users
