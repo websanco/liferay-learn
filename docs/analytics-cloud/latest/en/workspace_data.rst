@@ -8,7 +8,7 @@ Workspace Data
    workspace-data/data-control-and-privacy.md
    workspace-data/definitions.rst
 
--  :doc:`/workspace-data/managing-apis-access`
+-  :doc:`/workspace-data/managing-api-access`
 -  :doc:`/workspace-data/data-control-and-privacy`
 
 Definitions
