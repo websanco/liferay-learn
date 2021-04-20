@@ -121,7 +121,7 @@ Because the webserver service redirected all traffic to the DR environment durin
     ![Remove custom domain](./configuring-cross-region-disaster-recovery/images/07.png)
 
 1. Remove the custom domain from the Production environment.
-1. Update the DNS records. For more information, see the [Custom Domain](https://help.liferay.com/hc/en-us/articles/360032856292) article.
+1. Update the DNS records. For more information, see the [Custom Domain](../infrastructure-and-operations/networking/custom-domains.md) article.
 1. Click _Update Custom Domain_.
 
 Traffic should now be directed back to the original Production environment and the disaster recovery process concluded.
