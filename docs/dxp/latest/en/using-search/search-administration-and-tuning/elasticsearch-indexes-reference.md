@@ -1,6 +1,6 @@
 # Elasticsearch Indexes Reference
 
-The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change). The default global *Index Name Prefix* is `liferay-`: it can be changed in the Elasticsearch 7 connector configuration. `20101` is the generated `companyId` of a given Company in your database. It is displayed as Instance ID in the UI and represents a [Virtual Instance](../../system-administration/configuring-liferay/virtual_instances.md).
+The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change). The default global *Index Name Prefix* is `liferay-`: it can be changed in the Elasticsearch 7 connector configuration. `20101` is the generated `companyId` of a given Company in your database. It is displayed as Instance ID in the UI and represents a [Virtual Instance](../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
 | Index ID                                              | Index Type    | Index Purpose |
 | ----------------------------------------------------- | ------------- | ------------- |
