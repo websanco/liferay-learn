@@ -90,7 +90,7 @@ The Liferay Commerce Catalog supports storing and managing a wide variety of pro
 
 There are several ways to price products and these methods are related to one another in a pricing hierarchy: base price, price list, tiered price, promo price and discount. Pricing is managed per SKU.
 
-* [Pricing](../managing-a-catalog/managing-price/introduction-to-product-pricing-methods.md)
+* [Pricing](../managing-a-catalog/managing-price/introduction-to-pricing.md)
 * [Price Lists](../managing-a-catalog/managing-price/creating-a-price-list.md)
 * [Discounts](../promoting-products/introduction-to-discounts.md)
 

@@ -40,7 +40,7 @@ After the SKUs have been generated, set the base price and quantities in the inv
 1. Click _Publish_.
 1. Close the configuration
 
-To learn more about pricing, see: [Introduction to Product Pricing Methods](../../managing-price/introduction-to-product-pricing-methods.md)
+To learn more about pricing, see: [Introduction to Pricing](../../managing-price/introduction-to-pricing.md)
 
 To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md).
 
