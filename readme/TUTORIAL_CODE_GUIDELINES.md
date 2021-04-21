@@ -36,6 +36,8 @@
 
 Here are guidelines for tutorial code. They demonstrate starting an example project, describe tutorial code rules, and explain the code review process.
 
+If you're specifically creating a REST API project, see [REST API Project Guidelines](./REST_API_PROJECT_GUIDELINES.md).
+
 ## Creating an Example Project
 
 Here you'll learn how to create an example project for a tutorial. It will be a Java project that uses Liferay Workspace.
