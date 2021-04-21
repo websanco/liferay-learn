@@ -51,17 +51,17 @@ If you have a Liferay DXP subscription, update to the latest fix pack and/or req
 
 ### Update Marketplace Apps
 
-Update your Marketplace apps to the latest version for the Liferay version you're currently on and validate them before upgrading the Liferay database. Skipping app updates can be problematic and prevent the apps from enabling on the new Liferay version.
+Before upgrading the Liferay database, update your Marketplace apps for the Liferay version you're currently on and test the updated apps. Skipping app updates can be problematic and can prevent the apps from enabling on the new Liferay version.
 
 ```important::
    Do this on your current installation before database upgrade.
 ```
 
-The latest version of each app targeted for your new Liferay version may have database schema changes. For this reason, you must eventually upgrade the app data too. You can upgrade the app data *during* your database upgrade or *after* your database upgrade.
+Your app's latest version for your new Liferay version may have database schema changes that require data upgrades. You can upgrade the app data *during* or *after* your Liferay database upgrade.
 
-**Option 1:** Install the latest apps *before* database upgrade and upgrade the app data automatically as part of your database upgrade. Each database upgrade path describes app setup details.
+**Option 1:** Install the latest apps *before* database upgrade and upgrade the app data automatically, as part of your database upgrade. Each database upgrade path describes app setup details.
 
-**Option 2:** Install the latest apps *after* database upgrade and use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to upgrade the app data. The [Post Upgrade Considerations](./post-upgrade-considerations.md) describes app setup details.
+**Option 2:** Install the latest apps *after* database upgrade and then use [Gogo shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to upgrade the app data. The [Post Upgrade Considerations](./post-upgrade-considerations.md) describes app setup details.
 
 ## Upgrading Custom Development
 
