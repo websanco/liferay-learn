@@ -8,6 +8,9 @@ import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutPage;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutRow;
 import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSettings;
 
+/**
+ * @author Carolina Barbosa
+ */
 @DDMForm
 @DDMFormLayout(
 	{
@@ -16,10 +19,7 @@ import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSe
 				@DDMFormLayoutRow(
 					{
 						@DDMFormLayoutColumn(
-							size = 12,
-							value = {
-								"b4d8Boolean"
-							}
+							size = 12, value = {"url", "outputParameters"}
 						)
 					}
 				)
@@ -31,8 +31,10 @@ public interface B4D8DataProviderSettings
 	extends DDMDataProviderParameterSettings {
 
 	@DDMFormField(
-		label = "%b4d8-boolean",
-		properties = "showAsSwitcher=true"
+		label = "%url", required = true,
+		validationErrorMessage = "%please-enter-a-valid-url",
+		validationExpression = "isURL(url)"
 	)
-	public boolean b4d8Boolean();
+	public String url();
+
 }

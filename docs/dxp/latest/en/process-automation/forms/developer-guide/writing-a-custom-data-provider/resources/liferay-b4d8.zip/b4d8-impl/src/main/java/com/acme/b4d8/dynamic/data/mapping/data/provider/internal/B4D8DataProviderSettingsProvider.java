@@ -1,9 +1,12 @@
 package com.acme.b4d8.dynamic.data.mapping.data.provider.internal;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.dynamic.data.mapping.data.provider.settings.DDMDataProviderSettingsProvider;
 
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * @author Carolina Barbosa
+ */
 @Component(
 	immediate = true, property = "ddm.data.provider.type=b4d8",
 	service = DDMDataProviderSettingsProvider.class
