@@ -11,6 +11,8 @@ Here are the things to consider as you're creating REST API client projects.
 * [Opening access to a service](#opening-access-to-a-service)
 * [Developing curl commands](#developing-curl-commands)
 * [Developing Java clients](#developing-java-clients)
+    * [Researching resource usage](#researching-resource-usage)
+    * [Example: Posting a DocumentFolder](#example-posting-a-documentfolder)
     * [Configuring dependencies](#configuring-dependencies)
     * [Compiling classes](#compiling-classes)
     * [Running classes](#running-classes)
@@ -154,7 +156,7 @@ The curl command and Java command files should follow this naming format:
 [Resource(s)]_[ACTION]_[By|From|To][Something].[java|sh]
 ```
 
-Here are examples for the [DocumentFolder and Document resources](https://github.com/jhinkey/liferay-learn/tree/lrdocs-9156-document-put/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip/curl).
+Here are examples for the [DocumentFolder resources](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip/curl).
 
 | Curl | Java | Description |
 | :--- | :--- | :---------- |
@@ -220,7 +222,7 @@ Remove non-essential options that you might get from the API Explorer curl comma
 
 You must call the REST API using Java too.
 
-### Researching Examples of Using Resource 
+### Researching Resource Examples
 
 The test case classes in <https://github.com/liferay/liferay-portal/blob/master/modules/apps/headless/headless-delivery/headless-delivery-test/src/testIntegration/java/com/liferay/headless/delivery/resource/v1_0/test/> are a good place to start learning a resource's Java interface.
 
@@ -293,7 +295,7 @@ You must make sure the user can compile and run your client classes from the com
 
 Your client's dependencies must be in your `java/` folder for you to test your clients and for packaging in the in the `liferay-[xxxx].zip` file at site build time. You'll set up your dependencies using a `liferay-[xxxx].zip/../resources/update_example.sh` script.
 
-Example script:
+Example [`update_example.sh`](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/update_example.sh):
 
 ```bash
 #!/bin/bash
@@ -303,9 +305,9 @@ source $(git rev-parse --show-toplevel)/_common.sh
 download_nexus_jar "com.liferay.headless.delivery.client"
 ```
 
-The script above calls the `/_common.sh#download_nexus_jar` function to download the headless delivery REST application client JAR from Liferay's Nexus repository to the current project's `java/` folder.
+The script above calls the `liferay-learn/_common.sh#download_nexus_jar` function to download the headless delivery REST application client JAR from Liferay's Nexus repository to the current project's `java/` folder.
 
-Create your `update_example.sh` script:
+Create an `update_example.sh` script:
 
 1. Create a script at `resources/update_example.sh`.
 1. Copy the content above into your script.
