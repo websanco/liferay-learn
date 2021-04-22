@@ -52,64 +52,23 @@ Use the curl command in `curl/Document_POST_ToSite.sh` to upload that file (i.e.
 
     ![The new file in Documents and Media.](./document-api-basics/images/01.png)
 
-    The command response looks like this:
+    The response object includes key fields like these:
 
     ```bash 
     {
-      "actions" : {
-        "get" : {
-          "method" : "GET",
-          "href" : "http://localhost:8080/o/headless-delivery/v1.0/documents/{documentId}"
-        },
-        "replace" : {
-          "method" : "PUT",
-          "href" : "http://localhost:8080/o/headless-delivery/v1.0/documents/{documentId}"
-        },
-        "update" : {
-          "method" : "PATCH",
-          "href" : "http://localhost:8080/o/headless-delivery/v1.0/documents/{documentId}"
-        },
-        "delete" : {
-          "method" : "DELETE",
-          "href" : "http://localhost:8080/o/headless-delivery/v1.0/documents/{documentId}"
-        }
-      },
-      "adaptedImages" : [ ],
-      "contentUrl" : "/documents/20121/0/Document_POST_ToSite.sh/f56e88a6-0cae-c67f-dd14-6e891837b5b9?version=1.0&t=1617977639864",
-      "creator" : {
-        "additionalName" : "",
-        "contentType" : "UserAccount",
-        "familyName" : "Test",
-        "givenName" : "Test",
-        "id" : 20125,
-        "name" : "Test Test"
-      },
-      "customFields" : [ ],
+      ...
       "dateCreated" : "2021-04-09T14:13:59Z",
       "dateModified" : "2021-04-09T14:13:59Z",
       "description" : "",
-      "documentFolderId" : 0,
-      "documentType" : {
-        "availableLanguages" : [ ],
-        "contentFields" : [ ],
-        "description" : "",
-        "name" : "Basic Document"
-      },
-      "encodingFormat" : "application/x-sh",
-      "fileExtension" : "sh",
+      ...
       "id" : 38301,
-      "keywords" : [ ],
-      "numberOfComments" : 0,
-      "relatedContents" : [ ],
-      "siteId" : 20121,
-      "sizeInBytes" : 183,
-      "taxonomyCategoryBriefs" : [ ],
+      ...
       "title" : "Document_POST_ToSite.sh"
     }
     ```
 
     ```note:: 
-     The response includes ``Document_POST_ToSite.sh`` document's newly assigned `id`. Note the ID for later commands.
+     The response includes ``Document_POST_ToSite.sh`` document's creation date, description, newly assigned ID, and more. Note the ID for later commands.
      ```
 
 Next use the `Document_POST_ToSite` class to upload its source file `Document_POST_ToSite.java`.
