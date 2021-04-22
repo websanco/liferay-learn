@@ -353,6 +353,7 @@ If you want to print messages, use a logger. Give context by referencing the met
 Import:
 
 ```java 
+import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 ```
 
@@ -360,7 +361,7 @@ Field:
 
 ```java 
 private static final Log _log = LogFactoryUtil.getLog(
-		YourClass.class);
+	YourClass.class);
 ``` 
 
 Logging Logic:
