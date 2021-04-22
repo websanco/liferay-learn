@@ -29,18 +29,26 @@ Start with uploading documents using an example curl command and Java class.
     ```bash
     unzip liferay-g9i6.zip
     ```
+Curl commands are in the project's `curl` folder and Java source files are in the `java` folder.
 
-    The example curl commands are in the `curl` folder and the Java classes are in the `java` folder.
+Use the curl command in `curl/Document_POST_ToSite.sh` to upload that file (i.e., `Document_POST_ToSite.sh`) to your site's Documents and Media. 
 
-1. On the command line, navigate to the `curl` folder. Copy the curl command from the `Document_POST_ToSite.sh` file to your command line. Replace `${1)` with your site ID and replace the user credentials with your own. For example,
+1. On the command line, navigate to the `curl` folder. 
+
+1. Copy the `Document_POST_ToSite.sh` file contents to the command line. Then replace `${1)` with your site ID and replace the user credentials with your own. For example,
 
     ```bash 
-    curl -F "file=@Document_POST_ToSite.sh" -H "Content-Type: multipart/form-data" -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/20121/documents" -u "test@liferay.com:test"
+    curl \
+        -F "file=@Document_POST_ToSite.sh" \
+        -H "Content-Type: multipart/form-data" \
+        -X POST \
+        "http://localhost:8080/o/headless-delivery/v1.0/sites/20121/documents" \
+        -u "test@liferay.com:test"
     ```
 
 1. Execute the curl command.
 
-    The `Document_POST_ToSite.sh` file uploaded to your site's Documents and Media.
+    The `Document_POST_ToSite.sh` file uploads to your site's Documents and Media.
 
     ![The new file in Documents and Media.](./document-api-basics/images/01.png)
 
@@ -104,9 +112,9 @@ Start with uploading documents using an example curl command and Java class.
      The response includes ``Document_POST_ToSite.sh`` document's newly assigned `id`. Note the ID for later commands.
      ```
 
-    Next you'll upload a file using Java.
+Next use the `Document_POST_ToSite` class to upload its source file `Document_POST_ToSite.java`.
 
-1. Compile the Java source files.
+1. Go to the `java` folder and compile the Java source files.
 
     ```bash
     cd ../java
@@ -116,29 +124,29 @@ Start with uploading documents using an example curl command and Java class.
     javac -classpath .:* *.java
     ```
 
-1. Upload the `Document_POST_ToSite.java` file to Documents and Media by running the `Document_POST_ToSite` class, replacing the `siteId` value below with your site's ID.
+1. Upload the `Document_POST_ToSite.java` file to Documents and Media by running the `Document_POST_ToSite` class, replacing the `siteId` system property value below with your site's ID.
 
     ```bash
     java -classpath .:* -DsiteId=1234 Document_POST_ToSite
     ```
 
-    ```note::note 
-    If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class.
+    The `Document_POST_ToSite.java` document uploads to Documents and Media.
+
+    ```note:: 
+    If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class before running it.
     ```
 
-    ```tip::tip 
+    ```tip:: 
     A comment at the top of each example Java class includes a command to run the class.
     ```
 
-The `Document_POST_ToSite.java` document was added to your site's Documents and Media.
+![The Java class uploaded the the Java source file.](./document-api-basics/images/02.png)
 
-![The Java class uploaded the document.](./document-api-basics/images/02.png)
-
-Take a closer look at the REST service call code, starting with the curl command. 
+Look at the REST service call code, starting with the curl command. 
 
 ## Examine the CURL Command
 
-The curl command in the `Document_POST_ToSite.sh` file posts itself to a site via a REST call to the `headless-delivery` application.
+The curl command in the `Document_POST_ToSite.sh` posts the  `Document_POST_ToSite.sh` to a site via this `headless-delivery` application REST service call.
 
 ```bash 
 curl -F "file=@Document_PUT_ToSite.sh" -H "Content-Type: multipart/form-data" -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" -u "test@liferay.com:test"
@@ -149,11 +157,12 @@ Here are the command's arguments:
 | Arguments | Description |
 | :--- | :---------- |
 | `-F "file=@Document_POST_ToSite.sh"` | The file to post. |
-| `-H "Content-Type: multipart/form-data"` | The file's [MIME type](https://en.wikipedia.org/wiki/Media_type). |
-| `-X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The POST action to invoke at the specified endpoint.  |
+| `-H "Content-Type: multipart/form-data"` | The media type ([MIME type](https://en.wikipedia.org/wiki/Media_type)) being posted. |
+| `-X POST` | The HTTP method to invoke at the specified endpoint. |
+| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. |
 | `-u "test@liferay.com:test"` | User credentials. |
 
-Other curl commands for Documents and Media document and document folder REST services use similar arguments.
+Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
 
 Next, examine the Java code in `Document_POST_ToSite.java`.
 
@@ -162,36 +171,25 @@ Next, examine the Java code in `Document_POST_ToSite.java`.
 Here's the code from `Document_POST_ToSite.java`:
 
 ```java
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+/**
+ * java -classpath .:* -DsiteId=1234 Document_POST_ToSite
+ */
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-import java.io.File;
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-import java.util.HashMap;
+	Document document = documentResource.postSiteDocument(
+		Long.valueOf(System.getProperty("siteId")), new Document(),
+		new HashMap<String, File>() {
+			{
+				put("file", new File("Document_POST_ToSite.java"));
+			}
+		});
 
-public class Document_POST_ToSite {
-
-	/**
-	 * java -classpath .:* -DsiteId=1234 Document_POST_ToSite
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
-
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		Document document = documentResource.postSiteDocument(
-			Long.valueOf(System.getProperty("siteId")), new Document(),
-			new HashMap<String, File>() {
-				{
-					put("file", new File("Document_POST_ToSite.java"));
-				}
-			});
-
-		System.out.println(document);
-	}
-
+	System.out.println(document);
 }
 ```
 
@@ -211,7 +209,7 @@ The other example Java classes are similar to this one, but call different `Docu
 See `DocumentResource <https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html>`_ for service details.
 ```
 
-The following sections demonstrate calling other common document and document folder REST services using curl and Java.
+The following sections demonstrate calling other common `Document` and `DocumentFolder` REST services using curl and Java.
 
 ## Listing Your Site's Documents
 
@@ -220,7 +218,9 @@ You can list a site's documents by executing the following curl or Java command.
 ### Documents_GET_FromSite.sh
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" -u "test@liferay.com:test"
+curl \
+    "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
+    -u "test@liferay.com:test"
 ```
 
 ### Documents_GET_FromSite.java
@@ -234,47 +234,37 @@ java -classpath .:* -DsiteId=1234 Documents_GET_FromSite
 Code:
 
 ```java
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
-import com.liferay.headless.delivery.client.pagination.Page;
-import com.liferay.headless.delivery.client.pagination.Pagination;
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-public class Documents_GET_FromSite {
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-	/**
-	 * java -classpath .:* -DsiteId=1234 Documents_GET_FromSite
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
+	Page<Document> page = documentResource.getSiteDocumentsPage(
+		Long.valueOf(System.getProperty("siteId")), null, null, null, null,
+		Pagination.of(1, 2), null);
 
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		Page<Document> page = documentResource.getSiteDocumentsPage(
-			Long.valueOf(System.getProperty("siteId")), null, null, null, null,
-			Pagination.of(1, 2), null);
-
-		System.out.println(page);
-	}
-
+	System.out.println(page);
 }
 ```
 
-The site's documents are listed as objects in JSON.
+The site's `Document` objects are listed in JSON.
 
 ## Getting a Document's Fields
 
-You can get a document's fields by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the document's ID.
+You can get a `Document`'s fields by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
-```tip::tip 
-Use ``Documents_GET_FromSite.[sh|java]`` to get site document IDs.
+```tip:: 
+Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
 ```
 
 ### Document_GET_ByID.sh
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" -u "test@liferay.com:test"
+curl \
+    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+    -u "test@liferay.com:test"
 ```
 
 ### Document_GET_ByID.java
@@ -288,43 +278,39 @@ java -classpath .:* -DdocumentId=1234 Document_GET_ById
 Code:
 
 ```java
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-public class Document_GET_ById {
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-	/**
-	 * java -classpath .:* -DdocumentId=1234 Document_GET_ById
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
+	Document document = documentResource.getDocument(
+		Long.valueOf(System.getProperty("documentId")));
 
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		Document document = documentResource.getDocument(
-			Long.valueOf(System.getProperty("documentId")));
-
-		System.out.println(document);
-	}
-
+	System.out.println(document);
 }
 ```
 
-The documents fields are listed in JSON.
+The `Document` fields are listed in JSON.
 
 ## Updating a Document
 
-Document's PATCH services update a document and its fields. You can update a document by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the document's ID.
+`Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
 ### Document_PATCH_ById.sh
 
 ```bash 
-curl -F "document={\"description\": \"Bar\"}" -F "file=@Document_POST_ToSite.sh" -H  "Content-Type: multipart/form-data; boundary=ARBITRARY" -X PATCH "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" -u "test@liferay.com:test"
+curl \
+    -F "document={\"description\": \"Bar\"}" \
+    -F "file=@Document_POST_ToSite.sh" \
+    -H  "Content-Type: multipart/form-data; boundary=ARBITRARY" \
+    -X PATCH \
+    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+    -u "test@liferay.com:test"
 ```
 
-The first form data part specifies a new value for the document's `description` field. The second form data part sets the updated file to upload.
+The first form data part specifies a new value for the `Document`'s `description` field. The second form data part specifies the updated file to upload.
 
 ### Document_PATCH_ById.java
 
@@ -337,61 +323,53 @@ java -classpath .:* -DdocumentId=1234 Document_PATCH_ById
 Code:
 
 ```java 
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-import java.io.File;
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-import java.util.HashMap;
+	Document document = documentResource.patchDocument(
+		Long.valueOf(System.getProperty("documentId")),
+		new Document() {
+			{
+				description = "Bar";
+			}
+		},
+		new HashMap<String, File>() {
+			{
+				put("file", new File("Document_POST_ToSite.java"));
+			}
+		});
 
-public class Document_PATCH_ById {
-
-	/**
-	 * java -classpath .:* -DdocumentId=1234 Document_PATCH_ById
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
-
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		Document document = documentResource.patchDocument(
-			Long.valueOf(System.getProperty("documentId")),
-			new Document() {
-				{
-					description = "Bar";
-				}
-			},
-			new HashMap<String, File>() {
-				{
-					put("file", new File("Document_POST_ToSite.java"));
-				}
-			});
-
-		System.out.println(document);
-	}
-
+	System.out.println(document);
 }
 ```
 
-The Java code above calls `DocumentResource`'s `patchDocument` method, passing in the document's ID, a document object that includes a field to update, and the updated file to upload.
+The Java code above calls `DocumentResource`'s `patchDocument` method, passing in the `Document`'s ID, a `Document` object that includes a field to update, and the updated file to upload.
 
-The above commands update the document's description to "Bar".
+The above commands update the `Document`'s description to "Bar".
 
 ![The curl command changed the document's description.](./document-api-basics/images/03.png)
 
 ## Replacing a Document
 
-Document's PUT services replace the document and its fields entirely. You can replace a document by executing the following curl or Java command. Set the command's `${1}` or `documentId` to your document's ID.
+`Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following curl or Java command. Set the command's `${1}` or `documentId` to your `Document`'s ID.
 
 ### Document_PUT_ById.sh 
 
 ```bash 
-curl -F "document={\"description\": \"Goo\", \"title\": \"Document_PUT_ById.sh\"}" -F "file=@Document_PUT_ById.sh" -H "Content-Type: multipart/form-data; boundary=ARBITRARY" -X PUT "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" -u "test@liferay.com:test"
+curl \
+    -F "document={\"description\": \"Goo\", \"title\": \"Document_PUT_ById.sh\"}" \
+    -F "file=@Document_PUT_ById.sh" \
+    -H "Content-Type: multipart/form-data; boundary=ARBITRARY" \
+    -X PUT \
+    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+    -u "test@liferay.com:test"
 ``` 
 
-The first form data part specifies new values for the document's `description` and `title` fields. The second form data part sets replacement file to upload.
+The first form data part specifies new `description` and `title` field values. The second form data part sets replacement file to upload.
 
 ### Document_PUT_ById.java
 
@@ -404,63 +382,52 @@ java -classpath .:* -DdocumentId=1234 Document_PUT_ById
 Code:
 
 ```java
-import com.liferay.headless.delivery.client.dto.v1_0.Document;
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-import java.io.File;
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-import java.util.HashMap;
+	Document document = documentResource.putDocument(
+		Long.valueOf(System.getProperty("documentId")),
+		new Document() {
+			{
+				description = "Goo";
+				title = "Document_PUT_ById.java";
+			}
+		},
+		new HashMap<String, File>() {
+			{
+				put("file", new File("Document_PUT_ById.java"));
+			}
+		});
 
-public class Document_PUT_ById {
-
-	/**
-	 * java -classpath .:* -DdocumentId=1234 Document_PUT_ById
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
-
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		Document document = documentResource.putDocument(
-			Long.valueOf(System.getProperty("documentId")),
-			new Document() {
-				{
-					description = "Goo";
-    				title = "Document_PUT_ById.java";
-				}
-			},
-			new HashMap<String, File>() {
-				{
-					put("file", new File("Document_PUT_ById.java"));
-				}
-			});
-
-		System.out.println(document);
-	}
-
+	System.out.println(document);
 }
 ```
 
-The Java code above calls `DocumentResource`'s `putDocument` method, passing in the document's ID, a document object that includes values for the document's `description` and `title` fields, and a replacement file to upload.
+The Java code above calls `DocumentResource`'s `putDocument` method, passing in the `Document`'s ID, a `Document` object that includes values for the `Document`'s `description` and `title` fields, and a replacement file to upload.
 
-The above commands replace the document with a completely new document that has a new title and the description "Goo".
+The above commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", and the description "Goo".
 
 ```warning::
-   Unless you want to use the current document's title, make sure to specify the ``title`` value you want for the replacement document.
+   Unless you want to use the current ``Document``'s title, make sure to specify the ``title`` value you want for the replacement ``Document``.
 ```
 
 ![The curl command replaced the document.](./document-api-basics/images/04.png)
 
 ## Deleting a Document
 
-You can delete a document by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the document's ID.
+You can delete a `Document` by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
 ### Document_DELETE_ById.sh
 
 ```bash
-curl -X DELETE "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" -u "test@liferay.com:test"
+curl \
+    -X DELETE \
+    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+    -u "test@liferay.com:test"
 ```
 
 ### Document_DELETE_ById.java 
@@ -474,54 +441,37 @@ java -classpath .:* -DdocumentId=1234 Document_DELETE_ById
 Code:
 
 ```java
-import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
 
-public class Document_DELETE_ById {
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
 
-	/**
-	 * java -classpath .:* -DdocumentId=1234 Document_DELETE_ById
-	 */
-	public static void main(String[] args) throws Exception {
-		DocumentResource.Builder builder = DocumentResource.builder();
-
-		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
-
-		documentResource.deleteDocument(
-			Long.valueOf(System.getProperty("documentId")));
-	}
-
+	documentResource.deleteDocument(
+		Long.valueOf(System.getProperty("documentId")));
 }
 ```
 
-The document is removed from Documents and Media.
+The `Document`s are removed from Documents and Media.
 
 ## More Document and Document Folder Services
 
-The following curl commands and Java classes demonstrate more document services and document folder services.
+The following curl commands and Java classes demonstrate more `Document` services and `DocumentFolder` services.
 
 | File | Description |
 | :--- | :---------- |
-| `DocumentFolder_POST_ToSite.[sh\|java]` | Posts a document folder to a site. |
-| `DocumentFolder_GET_FromSite.[sh\|java]` | Lists the site's folders. |
-| `DocumentFolder_GET_ById.[sh\|java]` | Lists a folder's fields. |
+| `Document_GET_ById_ContentValue.[sh\|java]` | Returns a document's content. |
 | `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
+| `DocumentFolder_GET_ById.[sh\|java]` | Lists a folder's fields. |
+| `DocumentFolder_GET_FromSite.[sh\|java]` | Lists the site's folders. |
 | `DocumentFolder_PATCH_ById.[sh\|java]` | Updates a folder and its fields. |
+| `DocumentFolder_POST_ToSite.[sh\|java]` | Posts a document folder to a site. |
 | `DocumentFolder_PUT_ById.[sh\|java]` | Replaces a folder and its fields entirely. |
 
-Liferay's API Explorer lists all of the headless services and schemas, and provides an interface to try out each one.
+The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` or `DocumentFolder` services and provides an interface to try out each service. It provides the `Document` or `DocumentFolder` schemas too.
 
-1. Open your browser to `http://localhost:8080/o/api`.
-1. From *REST Applications*, select *headless-delivery/v1.0*.
-
-The Headless Delivery REST services appear.
-
-To see the API for Document or DocumentFolder, click the row with its name. To try an action (e.g., GET, PATCH, POST, PUT, DELETE) on an endpoint, click its row and click *Try it out*.
-
-To view the schema for Document or DocumentFolder, click *Schemas* at the bottom of the page (near the WikiPage API) and click Document or DocumentFolder to view its schema.
-
-For Javadoc, see [DocumentResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html)  and [DocumentFolderResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentFolderResource.html).
+For Javadoc, see [DocumentResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html) and [DocumentFolderResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentFolderResource.html).
 
 ## Additional Information
 
