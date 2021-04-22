@@ -1,4 +1,4 @@
-package com.acme.s7a3.dispatch.executor.web.internal;
+package com.acme.s7a3.internal.dispatch.executor;
 
 import com.liferay.dispatch.executor.BaseDispatchTaskExecutor;
 import com.liferay.dispatch.executor.DispatchTaskExecutor;
