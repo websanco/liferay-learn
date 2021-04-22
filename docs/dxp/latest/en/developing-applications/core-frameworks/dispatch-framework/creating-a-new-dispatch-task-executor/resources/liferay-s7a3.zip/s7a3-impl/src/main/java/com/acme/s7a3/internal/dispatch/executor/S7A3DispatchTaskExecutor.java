@@ -11,14 +11,15 @@ import java.io.IOException;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
-		"dispatch.task.executor.name=s7a3-hello-world",
-		"dispatch.task.executor.type=helloWorld"
+		"dispatch.task.executor.name=" + S7A3DispatchTaskExecutor.S7A3,
+		"dispatch.task.executor.type=" + S7A3DispatchTaskExecutor.S7A3
 	},
 	service = DispatchTaskExecutor.class
 )
 public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
+
+	public static final String S7A3 = "s7a3";
 
 	@Override
 	public void doExecute(
