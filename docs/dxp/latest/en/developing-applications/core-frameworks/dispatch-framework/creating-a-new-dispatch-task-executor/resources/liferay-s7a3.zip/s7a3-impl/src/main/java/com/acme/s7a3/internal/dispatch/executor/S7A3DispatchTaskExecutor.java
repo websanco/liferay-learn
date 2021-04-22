@@ -30,7 +30,9 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 		throws IOException, PortalException {
 
 		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)");
+			_log.warn(
+				"Invoke #doExecute(DispatchTrigger, " +
+					"DispatchTaskExecutorOutput)");
 		}
 	}
 
@@ -41,4 +43,5 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 
 	private static final Log _log = LogFactoryUtil.getLog(
 		S7A3DispatchTaskExecutor.class);
+
 }
