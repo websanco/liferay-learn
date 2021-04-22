@@ -4,20 +4,19 @@ _Select from List_ fields can hold many options. Those options can be automatica
 
 ## Prerequisites
 
-A common need is to populate a Select field with a list of options: for example, a user's "Country" is needed when collecting personal information on a form.
+A common need is to populate a Select field with a list of options: for example, a user's Country is needed when collecting personal information on a form.
 
-[Create a form](../creating-and-managing-forms/creating-forms.md) that includes the following:
+1. [Create a form](../creating-and-managing-forms/creating-forms.md) that includes a Single Select field called **Country**.
 
-* **Country**: a Single Select field.
 
-Next, use the `get-countries` JSON web service (there are two---use either one).
+2. Next, use the `get-countries` JSON web service (there are two---use either one).
 
-1. If you're running Liferay locally, navigate to <http://localhost:8080/api/jsonws>.
-1. Search for "get-countries".
+   * If you're running Liferay locally, navigate to <http://localhost:8080/api/jsonws>.
+   * Search for "get-countries".
 
-    ![Search for the get-countries web service.](./using-the-rest-data-provider-to-populate-form-options/images/02.png)
+   ![Search for the get-countries web service.](./using-data-providers-to-populate-form-options/images/02.png)
 
-1. Click _Invoke_.
+   * Click _Invoke_.
 
 The list of countries are now ready for use.
 
@@ -31,7 +30,7 @@ To enable local network access from data providers:
 1. Click _Data Providers_ (under Content & Data).
 1. Check the _Access Local Network_ checkbox.
 
-    ![Grant access to the local network.](./using-the-rest-data-provider-to-populate-form-options/images/01.png)
+    ![Grant access to the local network.](./using-data-providers-to-populate-form-options/images/01.png)
 
 1. Click _Save_ when finished.
 
@@ -44,10 +43,10 @@ To add a _Countries of the World_ data provider:
 1. Click _Content & Data_ &rarr; _Forms_.
 1. Click the _Data Providers_ tab.
 
-    ![Navigate to the data providers tab.](./using-the-rest-data-provider-to-populate-form-options/images/03.png)
+    ![Navigate to the data providers tab.](./using-data-providers-to-populate-form-options/images/03.png)
 
 1. Click the Add button (![Add](../../../images/icon-add.png)) and add a REST Data Provider.
-1. Enter the following:
+1. Enter this data:
 
     * **Name**: Countries of the World
     * **URL**: `http://localhost:8080/api/jsonws/country/get-countries/`
@@ -72,7 +71,7 @@ The above example is simple which uses only an Output to populate a _Select from
 
 For example, to apply a region (for example, Americas, Europe, or Oceania) filter for the countries of the world:
 
-1. Enter the following:
+1. Enter this data:
    * **Name**: `restcountries`
    * **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`(using a different REST provider)
    * **Input Label**: Region
@@ -94,7 +93,7 @@ To configure the data provider's permissions:
 1. Click the Data Providers tab.
 1. Click the Actions button (![Actions](../../../images/icon-actions.png)), then _Permissions_ next to the data provider.
 
-    ![Grant Guest View Permissions.](./using-the-rest-data-provider-to-populate-form-options/images/05.png)
+    ![Grant Guest View Permissions.](./using-data-providers-to-populate-form-options/images/05.png)
 
 1. Grant the necessary permissions.
 1. Click _Save_ when finished.
@@ -109,11 +108,11 @@ Once the Data Provider is configured, use it to populate a Select from List fiel
 1. Select _Countries of the World_ from the Choose a Data Provider dropdown menu.
 1. Select _Country Name_ from the Choose an Output Parameter dropdown menu.
 
-    ![Configure the Data Provider values on the Select from List field.](./using-the-rest-data-provider-to-populate-form-options/images/06.png)
+    ![Configure the Data Provider values on the Select from List field.](./using-data-providers-to-populate-form-options/images/06.png)
 
 1. Click _Save Form_ when finished.
 
-The Data Provider is now being used to populate a select field for any users accessing the form with the correct permissions.
+The Data Provider now populates a select field for any users accessing the form with the correct permissions.
 
 ![Form users select an option form the list populated by the Data Provider.](./using-the-rest-data-provider-to-populate-form-options/images/07.png)
 

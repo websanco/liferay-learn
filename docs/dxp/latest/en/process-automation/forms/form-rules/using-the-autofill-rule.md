@@ -6,7 +6,7 @@ The sample form below asks the respondent to select either a cash reward or a va
 
 Follow the steps below:
 
-1. Configure a [data provider which imports the countries of the world with regional filters.](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)
+1. Configure a [data provider which imports the countries of the world with regional filters.](../data-providers/using-data-providers-to-populate-form-options.md)
 1. [Create a form](../creating-and-managing-forms/creating-forms.md) with these fields: 
 
     * A Single Select field called _Rewards_ with two options: *Cash* or *All expenses paid trip*
@@ -51,4 +51,4 @@ Users can now search for a region then the countries in the form.
 
 * [Creating Forms](../creating-and-managing-forms/creating-forms.md)
 * [Data Providers Overview](../data-providers/data-providers-overview.md)
-* [Using Data Providers to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)
+* [Using Data Providers to Populate Form Options](../data-providers/using-data-providers-to-populate-form-options.md)
