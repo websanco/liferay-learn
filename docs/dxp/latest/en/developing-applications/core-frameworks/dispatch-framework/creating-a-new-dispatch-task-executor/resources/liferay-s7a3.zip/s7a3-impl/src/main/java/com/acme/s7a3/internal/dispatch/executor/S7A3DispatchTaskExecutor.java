@@ -5,6 +5,8 @@ import com.liferay.dispatch.executor.DispatchTaskExecutor;
 import com.liferay.dispatch.executor.DispatchTaskExecutorOutput;
 import com.liferay.dispatch.model.DispatchTrigger;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 import java.io.IOException;
 
@@ -27,7 +29,9 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 			DispatchTaskExecutorOutput dispatchTaskExecutorOutput)
 		throws IOException, PortalException {
 
-		System.out.println("Hello World!");
+		if (_log.isWarnEnabled()) {
+			_log.warn("Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)");
+		}
 	}
 
 	@Override
@@ -35,4 +39,6 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 		return null;
 	}
 
+	private static final Log _log = LogFactoryUtil.getLog(
+		S7A3DispatchTaskExecutor.class);
 }
