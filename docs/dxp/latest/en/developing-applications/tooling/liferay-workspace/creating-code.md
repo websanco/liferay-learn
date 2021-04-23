@@ -17,10 +17,10 @@ Liferay Workspace is the developer's tool for creating and managing Liferay deve
 1. Once you've identified the template you want to use, generate your project. For example, to create a MVC Portlet, use this command: 
 
    ```bash
-   blade create -t mvc-portlet -p com.liferay.docs.myproject.portlet -c MyPortlet myproject-web
+   blade create -t mvc-portlet -p com.acme.z3x1.portlet -c MyPortlet myproject-web
    ```
 
-   This creates a project using the MVC Portlet template (`-t mvc-portlet`), generates the portlet class in the Java package you specify (`-p com.liferay.docs.myproject.portlet`), specifies the name of the portlet class (`-c MyPortlet`), and names the project `myproject-web`. 
+   This creates a project using the MVC Portlet template (`-t mvc-portlet`), generates the portlet class in the Java package you specify (`-p com.acme.z3x1.portlet`), specifies the name of the portlet class (`-c MyPortlet`), and names the project `myproject-web`. 
 
 ### Creating Projects Manually
 
@@ -62,7 +62,7 @@ The [Liferay Themes Generator](../other-tools/theme-generator.md) is a node.js-b
 
    The above command assumes you're one folder down from the Workspace root; if you've nested your project (perhaps in a `themes` folder), adjust the call to `gradlew` accordingly. This command builds the front-end theme using Liferay's Node Gradle Plugin. 
 
-If you want to make sure Workspace recognizes your project, use this command to display all the projects: 
+To verify Workspace recognizes your project, use this command to display all the projects: 
 
 ```bash
 ./gradlew projects
@@ -100,7 +100,7 @@ Workspace automates the download and setup of a runtime for your code. When you'
    ./gradlew initBundle
    ```
 
-Or if you prefer Blade, 
+   Or if you prefer Blade, 
 
    ```bash
    blade server init
