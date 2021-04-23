@@ -279,7 +279,7 @@ In most cases, prefix class names with the project ID (capitalized).
 | :--------- | :------------------------- |
 | Interface | *DescribeWhatItIs* (e.g., `Greeter`) |
 | Implementation | XXXX*InterfaceName* (e.g., `C3P1Greeter`) |
-| Portlet | XXXXPortlet (e.g., `C3P1Portlet`)|
+| Portlet | XXXXPortlet (e.g., `C3P1Portlet`) |
 
 ### Javadoc 
 
@@ -289,6 +289,24 @@ Never include Javadoc for these things:
 
 * author 
 * copyright
+
+### Avoid Using Constants
+
+In the interest in minimizing lines of code, avoid defining constants---use a literal value.
+
+For example, if you're specifying a name for a `@Component` property value or `getName` method return value, use a literal String. If you're specifying a localized value, use a literal language key name. 
+
+Component property:
+
+```properties 
+some.property.name=XXXX
+```
+
+`getName` method:
+
+```java 
+return "XXXX";
+```
 
 ### Component Annotations
 
