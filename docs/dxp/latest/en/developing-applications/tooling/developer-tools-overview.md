@@ -6,7 +6,7 @@ Liferay's developer tools run the gamut from standard build scripting, to lightw
 
 If you're an experienced developer or prefer integrating Liferay development into an existing toolset, our CLI and file system-based tools can help. 
 
-[**Liferay Workspace**](./liferay-workspace/what-is-liferay-workspace.md) is a Gradle-based environment in your file system that holds your projects and their configurations. You can deploy to Liferay DXP, create and store Docker configurations, and perform all your DevOps from this single environment. It's flexible enough to enable developers of all stripes to integrate it with existing tools and workflows. 
+[**Liferay Workspace**](./liferay-workspace/what-is-liferay-workspace.md) is a Gradle-based environment that holds your projects and their configurations. You can deploy to Liferay DXP, create and store Docker configurations, and perform all your DevOps from this single environment. It's flexible enough to enable developers of all stripes to integrate it with existing tools and workflows. 
 
 [**Blade CLI**](./blade-cli/installing-and-updating-blade-cli.md) makes it easy to create and build both standalone projects and Liferay Workspaces from your command line interface. Experienced developers can make use of this small, simple CLI tool to integrate Liferay projects into their existing workflows. 
 
