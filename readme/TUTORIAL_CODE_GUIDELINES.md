@@ -348,7 +348,7 @@ c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 
 ### Logging Output
 
-If you want to print messages, use a logger. Give context by referencing the method you're in using Javadoc-style syntax.
+If you want to print messages, log them as `INFO` messages. Give context by referencing the method you're in using Javadoc-style syntax.
 
 Import:
 
@@ -368,14 +368,14 @@ Logging Logic:
 
 ```java
 getUser(long userId) throws PortalException {
-    if (_log.isWarnEnabled()) {
-        _log.warn("Invoke #getUser(long)");
+    if (_log.isInfoEnabled()) {
+        _log.info("Invoke #getUser(long)");
     }
     ... 
 }
 ```
 
-**Note:** The log message automatically includes the class name. For example, `WARN [http-nio-8080-exec-1][J1C2UserLocalServiceWrapper:line-number]`.
+**Note:** The log message automatically includes the class name. For example, `INFO [http-nio-8080-exec-1][J1C2UserLocalServiceWrapper:line-number]`.
 
 For an example, see [J1C2UserLocalServiceWrapper.java](../docs/dxp/latest/en/liferay-internals/extending-liferay/creating-service-wrappers/resources/liferay-j1c2.zip/j1c2-impl/src/main/java/com/acme/j1c2/internal/service/J1C2UserLocalServiceWrapper.java).
 
