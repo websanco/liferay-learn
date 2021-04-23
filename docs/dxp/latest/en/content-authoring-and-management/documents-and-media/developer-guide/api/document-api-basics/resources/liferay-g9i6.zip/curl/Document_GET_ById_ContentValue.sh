@@ -3,5 +3,5 @@ curl \
 	-u "test@liferay.com:test" \
 	| sed -n "2 p" \
 	| awk -F ":" '{print $2}' \
-	| tr -d ' "' \
+	| tr -d " \"" \
 	| base64 -d
