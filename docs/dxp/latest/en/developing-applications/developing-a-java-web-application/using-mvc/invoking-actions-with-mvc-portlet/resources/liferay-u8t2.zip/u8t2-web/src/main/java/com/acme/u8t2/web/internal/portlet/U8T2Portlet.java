@@ -24,16 +24,16 @@ public class U8T2Portlet extends MVCPortlet {
 	public void doSomething(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #doSomething(ActionRequest, ActionResponse)");
+		if (_log.isInfoEnabled()) {
+			_log.info("Invoke #doSomething(ActionRequest, ActionResponse)");
 		}
 	}
 
 	public void doSomethingElse(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #doSomethingElse(ActionRequest, ActionResponse)");
+		if (_log.isInfoEnabled()) {
+			_log.info("Invoke #doSomethingElse(ActionRequest, ActionResponse)");
 		}
 	}
 
@@ -41,8 +41,8 @@ public class U8T2Portlet extends MVCPortlet {
 	public void doSomethingMore(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		if (_log.isWarnEnabled()) {
-			_log.warn("Invoke #doSomethingMore(ActionRequest, ActionResponse)");
+		if (_log.isInfoEnabled()) {
+			_log.info("Invoke #doSomethingMore(ActionRequest, ActionResponse)");
 		}
 	}
 

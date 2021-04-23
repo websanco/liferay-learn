@@ -24,8 +24,8 @@ public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 
 	@Override
 	public void execute(CPInstance cpInstance) throws PortalException {
-		if (_log.isWarnEnabled()) {
-			_log.warn("SKU " + cpInstance.getSku());
+		if (_log.isInfoEnabled()) {
+			_log.info("SKU " + cpInstance.getSku());
 		}
 	}
 

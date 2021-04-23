@@ -15,8 +15,8 @@ public class N4G6ModelListener extends BaseModelListener<JournalArticle> {
 	public void onAfterCreate(JournalArticle journalArticle)
 		throws ModelListenerException {
 
-		if (_log.isWarnEnabled()) {
-			_log.warn("Added journal article " + journalArticle.getId());
+		if (_log.isInfoEnabled()) {
+			_log.info("Added journal article " + journalArticle.getId());
 		}
 	}
 

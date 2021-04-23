@@ -46,12 +46,12 @@ public class B4K8PortletFilter implements RenderFilter {
 
 		_count.increment();
 
-		if (_log.isWarnEnabled()) {
+		if (_log.isInfoEnabled()) {
 			long count = _count.longValue();
 
 			long averageRenderTime = _totalTime.longValue() / count;
 
-			_log.warn(
+			_log.info(
 				"Blogs portlet rendered in " + renderTime +
 					" ms with an average of " + averageRenderTime +
 						" ms out of " + count + " renders.");
