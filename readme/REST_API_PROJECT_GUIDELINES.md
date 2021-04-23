@@ -11,7 +11,7 @@ Here are the things to consider as you're creating REST API client projects.
 * [Opening access to a service](#opening-access-to-a-service)
 * [Developing curl commands](#developing-curl-commands)
 * [Developing Java clients](#developing-java-clients)
-    * [Researching resource usage](#researching-resource-usage)
+    * [Researching resource methods](#researching-resource-methods)
     * [Example: Posting a DocumentFolder](#example-posting-a-documentfolder)
     * [Configuring dependencies](#configuring-dependencies)
     * [Compiling classes](#compiling-classes)
@@ -220,13 +220,11 @@ Remove non-essential options that you might get from the API Explorer curl comma
 
 ## Developing Java Clients
 
-You must call the REST API using Java too.
+You must call the REST API using Java too. Each resource (e.g., DocumentFolder, Document BlogPosting, etc.) has a resource class--it ends in `Resource`. For example, `DocumentFolder`'s resource class is `DocumentFolderResource`. The resource class provides the REST API Java methods. Calling the API in Java requires understanding how to initialize the resource, how to invoke the resource methods, and how to use the returned value (if any). Start with learning how to initialize the resource.
 
-### Researching Resource Examples
+### Initializing a Resource
 
-The test case classes in <https://github.com/liferay/liferay-portal/blob/master/modules/apps/headless/headless-delivery/headless-delivery-test/src/testIntegration/java/com/liferay/headless/delivery/resource/v1_0/test/> are a good place to start learning a resource's Java interface.
-
-#### Initializing a Resource
+The test case classes in <https://github.com/liferay/liferay-portal/blob/master/modules/apps/headless/headless-delivery/headless-delivery-test/src/testIntegration/java/com/liferay/headless/delivery/resource/v1_0/test/> demonstrate initializing resources and using them.
 
 A test case's `setup` method initializes the resource. For example, the [BaseDocumentFolderResourceTestCase#setup](https://github.com/liferay/liferay-portal/blob/master/modules/apps/headless/headless-delivery/headless-delivery-test/src/testIntegration/java/com/liferay/headless/delivery/resource/v1_0/test/BaseDocumentFolderResourceTestCase.java) method creates a builder and then uses the builder to create a resource instance.
 
@@ -239,11 +237,11 @@ documentFolderResource = builder.authentication(
 )
 ```
 
-#### Calling Resource Services 
+### Calling Resource Services 
 
-All resources services are represented by Java methods. Examine your resource's Javadoc in the [REST API Javadoc](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/). For example, the headless delivery resource Javadoc is at <https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/package-summary.html>.
+All resources services are represented by Java methods. Examine your resource class Java methods in the [REST API Javadoc](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/). For example, the headless delivery resource Javadoc is at <https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/package-summary.html>.
 
-In the test case class, examine the methods that call services that interests you, or piece together a call using parts of calls that you see in the test case class.
+> **Tip:** Search your resource's test case class for calls to the resource methods.
 
 ### Example: Posting a DocumentFolder
 
