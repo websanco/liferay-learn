@@ -27,8 +27,8 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 			DispatchTaskExecutorOutput dispatchTaskExecutorOutput)
 		throws IOException, PortalException {
 
-		if (_log.isWarnEnabled()) {
-			_log.warn(
+		if (_log.isInfoEnabled()) {
+			_log.info(
 				"Invoke #doExecute(DispatchTrigger, " +
 					"DispatchTaskExecutorOutput)");
 		}
@@ -36,7 +36,7 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 
 	@Override
 	public String getName() {
-		return null;
+		return "s7a3";
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
