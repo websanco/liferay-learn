@@ -95,5 +95,5 @@ If using the `restcountries.eu` data provider, the name of the country appears f
 
 ## What's Next
 
-* [Using Data Providers to Populate Form Options](./using-the-rest-data-provider-to-populate-form-options.md)
+* [Using the REST Data Provider to Populate Form Options](./using-the-rest-data-provider-to-populate-form-options.md)
 * [Using the Autofill Rule](../form-rules/using-the-autofill-rule.md)

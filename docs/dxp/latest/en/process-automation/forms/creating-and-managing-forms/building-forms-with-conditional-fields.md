@@ -33,7 +33,7 @@ See the [Using the Jump-to-Page Rule](../form-rules/using-the-jump-to-page-rule.
 
 ## Autofill Rule
 
-The _Autofill_ Rule filters a form field's options based on pre-configured conditions. One common use is populating states and provinces, countries and regions, and then applying a conditional filter. For example, respondents select their geographic region (Europe, North America, Asia, etc.), then select a country (Germany, USA, Malaysia, etc.). You should first connect a [data provider](../data-providers/data-providers-overview.md) before using the _Autofill_ Rule. See [Using Data Providers to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md) to learn more.
+The _Autofill_ Rule filters a form field's options based on pre-configured conditions. One common use is populating states and provinces, countries and regions, and then applying a conditional filter. For example, respondents select their geographic region (Europe, North America, Asia, etc.), then select a country (Germany, USA, Malaysia, etc.). You should first connect a [data provider](../data-providers/data-providers-overview.md) before using the _Autofill_ Rule. See [Using the REST Data Provider to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md) to learn more.
 
 ## Require Rule
 

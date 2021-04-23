@@ -55,7 +55,7 @@ The following Actions are available:
 | **Enable** | Use a predefined condition to enable or disable a field. |
 | **Require** | Use a predefined condition to make a field required. |
 | [Jump to Page](./using-the-jump-to-page-rule.md) | Based on user input, skip over some form pages directly to a relevant page. _This rule doesn't appear in the rule builder until a second page is added to the form_. |
-| **Autofill with Data Provider** | Use a [data provider](../using-data-providers-to-populate-form-options.md) to populate fields when a condition is met in another field. |
+| **Autofill with Data Provider** | Use a [data provider](../using-the-rest-data-provider-to-populate-form-options.md) to populate fields when a condition is met in another field. |
 | **Calculate** | Populate a field with a calculated value using data entered in other fields. |
 
 ## Additional Information
