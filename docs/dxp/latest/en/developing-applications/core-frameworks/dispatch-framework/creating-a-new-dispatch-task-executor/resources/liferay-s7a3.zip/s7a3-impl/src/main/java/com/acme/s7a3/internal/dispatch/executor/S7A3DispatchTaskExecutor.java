@@ -14,14 +14,12 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"dispatch.task.executor.name=" + S7A3DispatchTaskExecutor.S7A3,
-		"dispatch.task.executor.type=" + S7A3DispatchTaskExecutor.S7A3
+		"dispatch.task.executor.name=s7a3",
+		"dispatch.task.executor.type=s7a3"
 	},
 	service = DispatchTaskExecutor.class
 )
 public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
-
-	public static final String S7A3 = "s7a3";
 
 	@Override
 	public void doExecute(
