@@ -37,10 +37,10 @@ To create a Liferay Workspace manually, you must have [Gradle](https://gradle.or
 1.  Create a file called `gradle.properties` containing this: 
 
     ```properties
-    liferay.workspace.product=portal-7.3-ga3
+    liferay.workspace.product=$LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN$
     ```
 
-    This defines the lastest GA of Liferay Portal CE at the time of this writing. You can always get a current list using Blade CLI by typing `blade init -l`. 
+    This defines the lastest GA of Liferay Portal CE. You can always get a current list using Blade CLI by typing `blade init -l`. 
 
 ## Creating a Liferay Workspace with Blade CLI
 
