@@ -292,7 +292,7 @@ Never include Javadoc for these things:
 
 ### Avoid Using Constants
 
-In the interest in minimizing lines of code, avoid defining constants---use a literal value.
+In the interest in minimizing lines of code, avoid defining constants. Use literal values instead.
 
 For example, if you're specifying a name for a `@Component` property value or `getName` method return value, use a literal String. If you're specifying a localized value, use a literal language key name. 
 
