@@ -37,9 +37,6 @@ import org.w3c.dom.NodeList;
 
 import org.xml.sax.InputSource;
 
-/**
- * @author Carolina Barbosa
- */
 @Component(
 	immediate = true, property = "ddm.data.provider.type=b4d8",
 	service = DDMDataProvider.class

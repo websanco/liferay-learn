@@ -4,9 +4,6 @@ import com.liferay.dynamic.data.mapping.data.provider.settings.DDMDataProviderSe
 
 import org.osgi.service.component.annotations.Component;
 
-/**
- * @author Carolina Barbosa
- */
 @Component(
 	immediate = true, property = "ddm.data.provider.type=b4d8",
 	service = DDMDataProviderSettingsProvider.class

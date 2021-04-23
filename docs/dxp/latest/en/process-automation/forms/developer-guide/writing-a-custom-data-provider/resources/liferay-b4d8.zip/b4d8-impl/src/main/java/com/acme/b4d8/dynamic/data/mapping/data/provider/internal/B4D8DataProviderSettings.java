@@ -8,9 +8,6 @@ import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutPage;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutRow;
 import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSettings;
 
-/**
- * @author Carolina Barbosa
- */
 @DDMForm
 @DDMFormLayout(
 	{
