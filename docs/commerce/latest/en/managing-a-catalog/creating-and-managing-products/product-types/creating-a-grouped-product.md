@@ -31,7 +31,7 @@ Follow these steps to create a Grouped Product:
 
 This creates a new Grouped Product entity in the selected Catalog with a single SKU, *default*. Grouped Products can be configured in the same way as other Product types (e.g., SEO, Options, Inventory Rules). See [Product Configuration Reference](../products/product-configuration-reference.md) for more information about general Product settings.
 
-![Configure the Grouped Product, and add individual Products to it](./creating-a-grouped-product/images/01.png)
+![Configure the Grouped Product.](./creating-a-grouped-product/images/01.png)
 
 ## Adding Product Entries
 
@@ -48,8 +48,6 @@ The selected Product entries are immediately associated with the Grouped Product
 ![View associated Product entries in the Grouped tab, and determine their quantity and priority.](./creating-a-grouped-product/images/02.png)
 
 Once you've created the Grouped Product and associated other Products with it, set a base price for the default [SKU](./../products/adding-skus-to-your-products.md) to make it available for purchase. This price is used in place of each Product's individual price.
-
-![Each Product's inventory determines the availability of the Grouped Product](./creating-a-grouped-product/images/05.png)
 
 ## Commerce 2.1 and Below
 
@@ -69,21 +67,21 @@ Once the Grouped Product entity has been initially created, store administrators
 
 1. Click the _Grouped_ sub-tab.
 
-   ![Grouped Sub-Tab](./creating-a-grouped-product/images/01.png)
+   ![Grouped Sub-Tab](./creating-a-grouped-product/images/03.png)
 
 1. Click the (![Add icon](../../../images/icon-add.png)) button to add a Grouped Entry.
 1. Select the following products: _Brake Fluid_, _Brake Pads_, and _Brake Rotors_.
 1. Click _Add_.
 
-    ![Grouped Sub-Tab](./creating-a-grouped-product/images/02.png)
+    ![Grouped Sub-Tab](./creating-a-grouped-product/images/04.png)
 
 Next, specify the priority (the order in which they are displayed), and the quantity sold in each package. Click the _3-dot_ icon then _Edit_ next to any of the products.
 
-![Adding a Product to a Grouped Product](./creating-a-grouped-product/images/03.png)
+![Adding a Product to a Grouped Product](./creating-a-grouped-product/images/05.png)
 
 In the image above, the product has been given priority 1.0 which means it will be listed first. Assign incremental values to the other products.
 
-![Grouped Product Priority](./creating-a-grouped-product/images/04.png)
+![Grouped Product Priority](./creating-a-grouped-product/images/06.png)
 
 Once the products have been grouped, follow the sections above to add Product Options, Generate SKUs, and set the prices. In addition, see the above sections on how to add Product Options, Specifications or upload Product Images.
 
@@ -99,7 +97,7 @@ To set product prices and quantities for a Grouped product:
     * **Promo Price**: 0.00
     * **Cost**: 0.00
 
-        ![Grouped Product Pricing](./creating-a-grouped-product/images/06.png)
+        ![Grouped Product Pricing](./creating-a-grouped-product/images/08.png)
 
 1. Click _Save_. (If Promo Price and Cost fields are left as 0.00, no discounts or promotions are applied at this point.)
 1. Click _Price List_ to apply this product to any existing [Price Lists](../../managing-price/adding-products-to-a-price-list.md).

@@ -54,7 +54,7 @@ Copy your key to the [`liferay/configs/{ENV}/deploy/`](https://learn.liferay.com
 
 Verify your key has successfully deployed via the console:
 
-   ```log
+   ```
    INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:271] Processing activation-key-commercesubscriptiondevelopment-1-developeractivationkeys.xml
    ...
    INFO  [fileinstall-directory-watcher][LicenseManager:?] Commerce Subscription Development license validation passed
@@ -69,7 +69,7 @@ If a license expires, the Commerce modules remain activated, though it is no lon
 
 The console also displays an error message during server restart:
 
-   ```log
+   ```
    ERROR [main][LicenseManager:?] Liferay Commerce license is expired
    ```
 

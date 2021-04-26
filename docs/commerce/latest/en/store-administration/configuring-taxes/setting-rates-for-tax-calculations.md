@@ -26,13 +26,13 @@ The *By Address* engine applies specific rates based on the buyer's location and
 
 Follow these steps to configure a tax calculation type:
 
-1. Open the *Global Menu* [Global Menu](../../images/icon-applications-menu.png), click on the *Commerce* tab, and go to *Channels*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Channels*.
 
 1. Click on the *Channel* you want to configure.
 
 1. Scroll down to *Tax Calculations* in the *General* tab, and click *Edit* for the type of calculation you want to configure: *By Address* or *Fixed Tax Rate*.
 
-    ![Under Tax Calculations, click Edit for the type of calculation you want to configure. ](./setting-rates-for-tax-calculations/images/01.png)
+    ![Under Tax Calculations, click Edit for the type of calculation you want to configure.](./setting-rates-for-tax-calculations/images/01.png)
 
 1. In the *Details* tab, configure the following details for the selected tax calculation:
 
@@ -58,7 +58,7 @@ Once activated, you can access additional settings for the selected type of Tax 
 
 Follow these steps to add tax rates to a Tax Category:
 
-1. Open the *Global Menu* [Global Menu](../../images/icon-applications-menu.png), click on the *Commerce* tab, and go to *Channels*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Channels*.
 
 1. Click on the desired *Channel*.
 
@@ -70,7 +70,7 @@ Follow these steps to add tax rates to a Tax Category:
 
 1. (*By Address*) Use the dropdown menu to determine whether tax rates are applied to a buyer's *Billing* or *Shipping* address.
 
-1. Click on the *Add* button ([Add Button](../../images/icon-add.png)) to create a new tax rate.
+1. Click on the *Add* button (![Add Button](../../images/icon-add.png)) to create a new tax rate.
 
 1. Select a *Tax Category* for your tax rate.
 

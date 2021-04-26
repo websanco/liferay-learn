@@ -150,4 +150,4 @@ Congratulations! You now know the basics for implementing the `CommerceTaxEngine
 ## Additional Information
 
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [Setting Rates for Tax Calculations](./setting-rates-for-tax-calculations.md)
+* [Setting Rates for Tax Calculations](../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)

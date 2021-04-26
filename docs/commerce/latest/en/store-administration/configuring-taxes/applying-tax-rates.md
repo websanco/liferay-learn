@@ -6,7 +6,7 @@ Once you've [added tax rates](./setting-rates-for-tax-calculations.md) to a Tax 
 
 Follow these steps to apply tax rates to Products:
 
-1. Open the *Global Menu* [Global Menu](../../images/icon-applications-menu.png), click on the *Commerce* tab, and go to *Products*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
 
 1. Click on the *Product* you want to configure, and go to the *Configuration* tab.
 
@@ -20,7 +20,7 @@ Follow these steps to apply tax rates to Products:
 
 Follow these steps to apply tax rates to a Channel's shipping costs:
 
-1. Open the *Global Menu* [Global Menu](../../images/icon-applications-menu.png), click on the *Commerce* tab, and go to *Channels*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Channels*.
 
 1. Click on the *Channel* you want to configure.
 

@@ -115,7 +115,7 @@ See [Virtual Product Reference](./../product-types/virtual-product-reference.md)
 
 ## Additional Information
 
-* [Creating a Simple Product](./creating-a-simple-product.md)
-* [Creating a Grouped Product](./creating-a-grouped-product.md)
-* [Creating a Virtual Product](./creating-a-virtual-product.md)
-* [Virtual Product Reference](./virtual-product-reference.md)
+* [Creating a Simple Product](../product-types/creating-a-simple-product.md)
+* [Creating a Grouped Product](../product-types/creating-a-grouped-product.md)
+* [Creating a Virtual Product](../product-types/creating-a-virtual-product.md)
+* [Virtual Product Reference](../product-types/virtual-product-reference.md)
