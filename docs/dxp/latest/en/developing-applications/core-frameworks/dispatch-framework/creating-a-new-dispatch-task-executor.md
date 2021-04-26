@@ -68,16 +68,16 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-   The JAR is generated in the `build/libs` folder (i.e., `s7a3-web/build/libs/com.acme.s7a3.dispatch.executor.web-1.0.0.jar`).
+   The JAR is generated in the `build/libs` folder (i.e., `s7a3-impl/build/libs/com.acme.s7a3.impl-1.0.0`).
 
 1. Confirm the module was successfully deployed and started via the container console.
 
    ```log
-   Processing com.acme.s7a3.dispatch.executor.web-1.0.0.jar
-   STARTED com.acme.s7a3.dispatch.executor.web_1.0.0 [1656]
+   Processing com.acme.s7a3.impl-1.0.0.jar
+   STARTED com.acme.s7a3.impl-1.0.0 [1656]
    ```
 
-1. Verify the module is working by using it to [add a new Dispatch Task](./using-dispatch.md#adding-a-new-dspatch-task) to your Liferay instance.
+1. Verify the module is working by using it to [add a new Dispatch Task](./using-dispatch.md#adding-a-new-dispatch-task) to your Liferay instance.
 
    ![Add a new Dispatch Task using the new template.](./creating-a-new-dispatch-task-executor/images/01.png)
 
@@ -88,7 +88,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    If successful, it should print "Hello World!" to the console when executed.
 
    ```log
-      Hello World!
+   INFO [liferay/dispatch/executor-2][S7A3DispatchTaskExecutor:30] Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)
    ```
 
    You can also click on the Dispatch Task and go to the *Logs* tab to see a list of all previous runs.
@@ -99,35 +99,41 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
 
 ```java
 @Component(
-    immediate = true,
-    property = {
-        "dispatch.task.executor.name=s7a3-hello-world",
-        "dispatch.task.executor.type=helloWorld"
-    },
-    service = DispatchTaskExecutor.class
+   property = {
+      "dispatch.task.executor.name=s7a3",
+      "dispatch.task.executor.type=s7a3"
+   },
+   service = DispatchTaskExecutor.class
 )
 public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 
-    @Override
-    public void doExecute(
-            DispatchTrigger dispatchTrigger,
-            DispatchTaskExecutorOutput dispatchTaskExecutorOutput)
-        throws IOException, PortalException {
+   @Override
+   public void doExecute(
+         DispatchTrigger dispatchTrigger,
+         DispatchTaskExecutorOutput dispatchTaskExecutorOutput)
+      throws IOException, PortalException {
 
-        System.out.println("Hello World!");
-    }
+      if (_log.isInfoEnabled()) {
+         _log.info(
+            "Invoke #doExecute(DispatchTrigger, " +
+               "DispatchTaskExecutorOutput)");
+      }
+   }
 
-    @Override
-    public String getName() {
-        return null;
-    }
+   @Override
+   public String getName() {
+      return "s7a3";
+   }
+
+   private static final Log _log = LogFactoryUtil.getLog(
+      S7A3DispatchTaskExecutor.class);
 
 }
 ```
 
 The module is declared an OSGi `@Component` and defines two properties: `dispatch.task.executor.name` and `dispatch.task.executor.type`. It then identifies the module as a `DispatchTaskExecutor.class` service.
 
-Following the `@Component` annotation, the module extends the `BaseDispatchTaskExecutor` abstract class and overrides the `doExecute` method to print "Hello World!"
+Following the `@Component` annotation, the module extends the `BaseDispatchTaskExecutor` abstract class and overrides the `doExecute` method. This method uses the `LogFactoryUtil` to display an INFO message in the console's logs.
 
 ## Additional Information
 
