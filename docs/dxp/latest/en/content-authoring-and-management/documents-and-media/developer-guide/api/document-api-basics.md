@@ -118,7 +118,7 @@ Here are the command's arguments:
 | `-F "file=@Document_POST_ToSite.sh"` | The file to post. |
 | `-H "Content-Type: multipart/form-data"` | The media type ([MIME type](https://en.wikipedia.org/wiki/Media_type)) being posted. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint. |
-| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. |
+| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Replace `${1}` with your site ID. |
 | `-u "test@liferay.com:test"` | User credentials. |
 
 Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
@@ -170,7 +170,7 @@ See `DocumentResource <https://docs.liferay.com/dxp/apps/headless/latest/javadoc
 
 The following sections demonstrate calling other common `Document` and `DocumentFolder` REST services using curl and Java.
 
-## Listing Your Site's Documents
+## Listing Site Documents
 
 You can list a site's documents by executing the following curl or Java command. Make sure to enter your site ID in place of `${1}` in the curl command or in place of the `siteId` value in the Java command.
 
@@ -210,7 +210,7 @@ public static void main(String[] args) throws Exception {
 
 The site's `Document` objects are listed in JSON.
 
-## Getting a Document's Fields
+## Getting a Document Fields
 
 You can get a `Document`'s fields by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
@@ -253,19 +253,48 @@ public static void main(String[] args) throws Exception {
 
 The `Document` fields are listed in JSON.
 
-## Getting a Document's Content
+## Getting a Document Content
 
-You can get a `Document`'s content by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+`Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
 ### Document_GET_ById_ContentValue.sh 
 
-TODO 
+```bash 
+curl \
+	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}?nestedFields=contentValue&fields=contentValue" \
+	-u "test@liferay.com:test" \
+	| sed -n "2 p" \
+	| awk -F ":" '{print $2}' \
+	| tr -d " \"" \
+	| base64 -d
+```
 
-### Document Document_GET_ById_ContentValue.java 
+The URL and `-u` option specify the service endpoint and authentication credentials, respectively. The URL's `http://localhost:8080/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID--this URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the URL and `-u ...` option returns this: 
+
+```bash
+{
+  "contentValue" : "Y3VybCBcCgktRiAiZmlsZT1ARG9jdW1lbnRfUE9TVF9Ub1NpdGUuc2giIFwKCS1IICJDb250ZW50LVR5cGU6IG11bHRpcGFydC9mb3JtLWRhdGEiIFwKCS1YIFBPU1QgXAoJImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9vL2hlYWRsZXNzLWRlbGl2ZXJ5L3YxLjAvc2l0ZXMvJHsxfS9kb2N1bWVudHMiIFwKCS11ICJ0ZXN0QGxpZmVyYXkuY29tOnRlc3Qi"
+}
+```
+
+The `Document` content value above is encoded in Base64 and wrapped in JSON. The complete command in `Document_GET_ById_ContentValue.sh` isolates `Document` content value with `sed`, `awk`, and `tr` to and decodes it with `base64`. The full command returns the decoded document content. Here's content returned for the `Document_POST_ToSite.sh` `Document`:
+
+```bash
+curl \
+	-F "file=@Document_POST_ToSite.sh" \
+	-H "Content-Type: multipart/form-data" \
+	-X POST \
+	"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
+	-u "test@liferay.com:test"
+```
+
+### Document Document_GET_ById_ContentValue.java
+
+The Java code to get `Document` content and decode it is simpler than the previous curl command.
 
 Command:
 
-```curl
+```bash
 java -classpath .:* -DdocumentId=1234 Document_GET_ById_ContentValue
 ```
 
@@ -291,7 +320,13 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-TODO
+The following line adds the `contentValue` nested field as a request parameter.
+
+```java
+builder.parameter("nestedFields", "contentValue");
+```
+
+After getting the `Document` by its ID, a `Base64.Decoder` decodes the `Document`'s content.
 
 ## Updating a Document
 
@@ -460,13 +495,12 @@ The following curl commands and Java classes demonstrate more `Document` service
 
 | File | Description |
 | :--- | :---------- |
-| `Document_GET_ById_ContentValue.[sh\|java]` | Returns a document's content. |
-| `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
 | `DocumentFolder_GET_ById.[sh\|java]` | Lists a folder's fields. |
 | `DocumentFolder_GET_FromSite.[sh\|java]` | Lists the site's folders. |
 | `DocumentFolder_PATCH_ById.[sh\|java]` | Updates a folder and its fields. |
 | `DocumentFolder_POST_ToSite.[sh\|java]` | Posts a document folder to a site. |
 | `DocumentFolder_PUT_ById.[sh\|java]` | Replaces a folder and its fields entirely. |
+| `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
 
 The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` or `DocumentFolder` services and provides an interface to try out each service. It provides the `Document` or `DocumentFolder` schemas too.
 
