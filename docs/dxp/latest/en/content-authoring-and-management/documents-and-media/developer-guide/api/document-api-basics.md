@@ -253,6 +253,46 @@ public static void main(String[] args) throws Exception {
 
 The `Document` fields are listed in JSON.
 
+## Getting a Document's Content
+
+You can get a `Document`'s content by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+
+### Document_GET_ById_ContentValue.sh 
+
+TODO 
+
+### Document Document_GET_ById_ContentValue.java 
+
+Command:
+
+```curl
+java -classpath .:* -DdocumentId=1234 Document_GET_ById_ContentValue
+```
+
+Code:
+
+```java
+public static void main(String[] args) throws Exception {
+	DocumentResource.Builder builder = DocumentResource.builder();
+
+	builder.parameter("nestedFields", "contentValue");
+
+	DocumentResource documentResource = builder.authentication(
+		"test@liferay.com", "test"
+	).build();
+
+	Document document = documentResource.getDocument(
+		Long.valueOf(System.getProperty("documentId")));
+
+	Base64.Decoder decoder = Base64.getDecoder();
+
+	System.out.println(
+		new String(decoder.decode(document.getContentValue())));
+}
+```
+
+TODO
+
 ## Updating a Document
 
 `Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
