@@ -178,8 +178,8 @@ You can list a site's documents by executing the following curl or Java command.
 
 ```bash
 curl \
-    "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
-    -u "test@liferay.com:test"
+		"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
+		-u "test@liferay.com:test"
 ```
 
 ### Documents_GET_FromSite.java
@@ -222,8 +222,8 @@ Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
 
 ```bash
 curl \
-    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-    -u "test@liferay.com:test"
+	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+	-u "test@liferay.com:test"
 ```
 
 ### Document_GET_ByID.java
@@ -257,9 +257,9 @@ The `Document` fields are listed in JSON.
 
 `Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
 
-### Document_GET_ById_ContentValue.sh 
+### Document_GET_ById_ContentValue.sh
 
-```bash 
+```bash
 curl \
 	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}?nestedFields=contentValue&fields=contentValue" \
 	-u "test@liferay.com:test" \
@@ -269,7 +269,7 @@ curl \
 	| base64 -d
 ```
 
-The URL and `-u` option specify the service endpoint and authentication credentials, respectively. The URL's `http://localhost:8080/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID--this URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the URL and `-u ...` option returns this: 
+The URL and `-u` option specify the service endpoint and authentication credentials, respectively. The URL's `http://localhost:8080/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID--this URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the URL and `-u ...` option returns this:	
 
 ```bash
 {
@@ -336,12 +336,12 @@ After getting the `Document` by its ID, a `Base64.Decoder` decodes the `Document
 
 ```bash 
 curl \
-    -F "document={\"description\": \"Bar\"}" \
-    -F "file=@Document_POST_ToSite.sh" \
-    -H  "Content-Type: multipart/form-data; boundary=ARBITRARY" \
-    -X PATCH \
-    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-    -u "test@liferay.com:test"
+	-F "document={\"description\": \"Bar\"}" \
+	-F "file=@Document_POST_ToSite.sh" \
+	-H  "Content-Type: multipart/form-data; boundary=ARBITRARY" \
+	-X PATCH \
+	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+	-u "test@liferay.com:test"
 ```
 
 The first form data part specifies a new value for the `Document`'s `description` field. The second form data part specifies the updated file to upload.
@@ -395,12 +395,12 @@ The above commands update the `Document`'s description to "Bar".
 
 ```bash 
 curl \
-    -F "document={\"description\": \"Goo\", \"title\": \"Document_PUT_ById.sh\"}" \
-    -F "file=@Document_PUT_ById.sh" \
-    -H "Content-Type: multipart/form-data; boundary=ARBITRARY" \
-    -X PUT \
-    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-    -u "test@liferay.com:test"
+	-F "document={\"description\": \"Goo\", \"title\": \"Document_PUT_ById.sh\"}" \
+	-F "file=@Document_PUT_ById.sh" \
+	-H "Content-Type: multipart/form-data; boundary=ARBITRARY" \
+	-X PUT \
+	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+	-u "test@liferay.com:test"
 ``` 
 
 The first form data part specifies new `description` and `title` field values. The second form data part sets replacement file to upload.
@@ -459,9 +459,9 @@ You can delete a `Document` by executing the following curl or Java command. Rep
 
 ```bash
 curl \
-    -X DELETE \
-    "http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-    -u "test@liferay.com:test"
+	-X DELETE \
+	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
+	-u "test@liferay.com:test"
 ```
 
 ### Document_DELETE_ById.java 
