@@ -1,37 +1,62 @@
 
 # Enabling Automated Live Chat Systems
 
-This feature gives easier access to communiation between you and your clients. Here you learn how to access and use *Click To Chat*.
+<!-- > Available: Liferay 7.4 GA2? -->
+
+Liferay now offers integration with a number of live support chat platforms. Enabling this integration adds a familiar chat window to sites on your Liferay instance and can be used as to enable improved support and site experience for your users.
+
+Here you learn how to access and use *Click To Chat*.
 
 ## Enabling Click To Chat
 
 To enable Click To Chat go to *Instance Settings*.
 
-1. Open the Global Menu on the top right corner ( ![](./images/icon-applications-menu.png) );
-1. Click *Instance Settings* in the Control Panel;
-    ![Instance Settings](./images/02.png)
-1. Now go to Click To Chat under Content and Data;
-    ![Click To Chat under Content and Data](./images/03.png)
-1. This is Click To Chat's configuration screen, click the *Enable Click to Chat* switch to turn it on;
-    ![Click to chat enable switch](./images/04.png)
-1. Select the proper Site Settings Strategy: 
-        ![Site Settings Strategy](./images/05.png)
+1. Go to the *Global Menu* (![icon](../../../images/icon-applications-menu.png)) &rarr; *Control Panel* &rarr; *Instance Settings*.
 
+    ![Instance Settings](./enabling-automated-live-chat-systems/images/02.png)
 
-**Always Inherit**: Click To Chat always inherits this configuration completely ignoring Site Settings.
+1. Under the *Content and Data* section, click *Click To Chat*.
 
-**Always Override**: 
-Click To Chat always overrides Instance Settings, applying configuration from Site Settings instead.
+    ![Click To Chat under Content and Data](./enabling-automated-live-chat-systems/images/03.png)
 
-**Inherit or Override**: 
-Click to Chat inherits configuration from Instance Settings, unless something else is configured on Site Settings then it is overriden. 
+1. Click the *Enable Click to Chat* toggle, to enable Click to Chat for your instance.
 
-6. Choose one among the available Chat Provider options;
+    ![Click to chat enable switch](./enabling-automated-live-chat-systems/images/04.png)
 
-![Chat provider options](./images/06.png)
+1. Once enabled, you must select a [Site Settings](../../site_settings.html) Strategy. Site Settings Strategy determines how the Click to Chat feature is enabled across sites that exist on a given [Liferay instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
-7. Input the Account ID from the selected Chat Provider on the Chat Provider Account ID field. Information on how to get this from each Chat Provider available is found in the next sections;
+    ![Site Settings Strategy](./enabling-automated-live-chat-systems/images/05.png)
 
--  The Guest Users Allowed toggle button tells Click To Chat if users that are not logged in have access to the feature on your website;
+   **Always Inherit**: Click To Chat is enabled for all sites on the instance and ignores configurations made in Site Settings.
 
-8. Once finished, click *save*, then Click To Chat is set up.
+   **Always Override**: Configuration for Click to Chat configured in Site Settings will always take priority over configurations made in Instance Settings.
+
+   **Inherit or Override**: Sites inherit configuration from Instance Settings, unless configured otherwise in the site's Site Settings.
+
+1. Select your Chat Provider and input the [Account ID or token](#getting-the-chat-provider-account-id-or-token) given to you from your Chat Provider.
+
+    ![Chat provider options](./enabling-automated-live-chat-systems/images/06.png)
+
+1. (Optional) Click the *Guest Users Allowed* toggle to configure whether you want guest users (unauthenticated users) to have access to the Click to Chat feature for your sites.
+
+1. Click *Save*
+
+<!-- @Fabio/Evelyn - please add a new screenshot here of the feature enabled on a site so users can know what to expect it to look like when properly configured. -->
+
+Click To Chat integration with your Live Chat provider is now configured.
+
+## Getting The Chat Provider Account ID or Token
+
+If you are unsure how to get the Account ID or Token for your chat provider see the following articles for available Chat Providers:
+
+* [Chatwoot]() 
+* [Crisp]()
+* [Hubspot]()
+* [Jivochat]() 
+* [LiveChat]() 
+* [LivePerson]() 
+* [Smartsupp]()
+* [Tawk.to]()
+* [Tidio]()
+* [Tolvnow]()
+* [Zendesk]()
