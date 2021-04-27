@@ -125,7 +125,9 @@ public class B4D8DataProvider implements DDMDataProvider {
 				ddmDataProviderInstance.get(), B4D8DataProviderSettings.class);
 
 		HttpRequest httpRequest = HttpRequest.get(
-			b4d8DataProviderSettings.url());
+			"https://api.geodatasource.com/cities?" +
+				"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
+					"&format=xml&lat=37.3861&lng=-122.084");
 
 		httpRequest.trustAllCerts(true);
 
