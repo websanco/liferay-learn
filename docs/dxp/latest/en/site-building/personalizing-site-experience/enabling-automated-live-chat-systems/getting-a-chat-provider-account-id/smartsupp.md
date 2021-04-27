@@ -1,9 +1,17 @@
 # Smartsupp
 
-1. To get your chat provider token from *Smartsupp* you must go to the Settings Menu by clicking on the *gear icon* on the side navigation bar and then selecting *Chat box* as indicated below.
+[Smartsupp](https://www.smartsupp.com/) is multi-channel customer communication platform. This article documents how to locate your Smartsupp account ID in order to [enable integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
-    ![Chat Box](./images/25.png)
+## Locating Your Smartsupp Account ID
 
-1. Your Smartsupp key can be found on this page (as highlighted below). This is your Chat Provider Account ID for Smartsupp, now you copy it to your Portal Instance Click to Chat Settings. 
+1. Log in to your [Smartsupp account](https://app.smartsupp.com/app/sign/in).
 
-    ![Smartsupp Key](./images/26.png)
+1. Click on the *Gear Icon* &rarr; *Chat box*.
+
+    ![Chat Box](./smartsupp/images/01.png)
+
+1. Your Smartsupp key is found on this page and is highlighted in the screenshot below. This is your Chat Provider Account ID for Smartsupp.
+
+    ![Smartsupp Key](./smartsupp/images/02.png)
+
+Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

@@ -1,11 +1,23 @@
 # Chatwoot
 
-1. Get the Account ID from an *Inbox* on your account dashboard. In order to find it, click the *Inboxes*; option on the side navigation bar.
+[Chatwoot](https://www.chatwoot.com/) is an open-source customer communication platform. This article documents how to locate your Chatwoot account ID in order to [enable integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
-    ![Inboxes side navigation bar](./images/07.png)
+## Locating your Chatwoot Account ID
 
-1. Go to the settings of your chosen Inbox by clicking the *Settings* button with a *gear icon*.
-    ![Settings](./images/08.png)
+1. Log in to your [Chatwoot account](https://app.chatwoot.com/app/login).
 
-1. On the top right corner, click on *Configuration* and you can find the Account ID. The ID is highlighted as the picture shows. This is your Chat Provider Account ID for *Chatwoot*, now you can copy it to your Portal Instance Click to Chat Settings.
-    ![Configuration and Account Id](./images/09.png)
+1. Click *Inboxes* on the side navigation bar.
+
+    ![Inboxes side navigation bar](./chatwoot/images/01.png)
+
+1. Click *Settings* to view Inbox configurations.
+
+    ![Settings](./chatwoot/images/02.png)
+
+1. Click the *Configuration* menu tab.  
+
+    Look for the field value for `websiteToken`. The value is highlighted in the screenshot and can be used as your Chat Provider Account ID.
+
+    ![Configuration and Account Id](./chatwoot/images/03.png)
+
+Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

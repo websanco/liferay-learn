@@ -1,13 +1,23 @@
-# Jivochat
+# JivoChat
 
-1. On your *Jivochat* dashboard home, after configuring a channel, click on the *Manage* button on the left corner.
+[JivoChat](https://jivochat.com/) is a messaging platform that connects teams to users across platforms. This article documents how to locate your JivoChat account ID in order to [enable integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
-    ![Manage button](./images/17.png)
+## Locating Your JivoChat Account ID
 
-1. On the left top corner, inside your channel infos, click on *Settings*. 
+1. Log in to your [JivoChat account](https://app.jivosite.com/).
 
-    ![Settings](./images/18.png)
+1. Go to configure your channel then click on *Manage* in the bottom left corner. <!-- @Fabio - this step is unclear to me and the related screenshot is too narrow and doesn't give enough context. -->
 
-1. Click on *installation* on the list on the left side of the page. Copy the token info after the Widget as you see above (without the quote marks).
+    ![Manage button](./jivochat/images/01.png)
 
-    ![Installlation](./images/19.png)
+1. Click on *Channels* &rarr; *Settings*
+
+    ![Settings](./jivochat/images/02.png)
+
+1. Click on *Installation*.
+
+    Copy the selected portion of the snippet. In the screenshot below, the portion that is higlighted is the Account ID.
+
+    ![Installation](./jivochat/images/03.png)
+
+Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

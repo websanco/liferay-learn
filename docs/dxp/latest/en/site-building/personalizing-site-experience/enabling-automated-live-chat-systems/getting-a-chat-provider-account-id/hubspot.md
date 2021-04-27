@@ -1,23 +1,33 @@
 # Hubspot
 
-For Hubspot you need two tokens, the chat provider token and the hubspot API Token.
+[Hubspot](https://www.hubspot.com/) is a CRM platform that includes Live Chat functionality. Enabling integration with Hubspot requires two tokens: the Chat Provider Token and the Hubspot API Token.
 
- ### 1. **Chat Provider Token:**
+## Locating the Chat Provider Token
 
-On your home page, go to your profile name on the top right corner, select the *id-token* of the channel and add it to Liferay Portal.
+1. Log in to your [Hubspot Account](https://app.hubspot.com/login).
 
-  ![Id token](./images/13.png)
+1. Go to your profile in the top right corner.
 
-### 1.2 **Hubspot API TOKEN**
+    Copy the account number that corresponds to the channel you want to use. This number corresponds with the Account ID used when enabling Click to Chat on Liferay Portal.
 
-On your Hubspot homepage, click the *Settings* button on the right top corner.
+    ![Id token](./hubspot/images/01.png)
 
-  ![Settings](./images/14.png)
+## Getting the Hubspot API Token
 
-Click on the dropdown *Integrations* on the Account Setup section on the left side of the page. And click on the *Api key* button inside the dropdown.
+Coming soon!
 
-  ![Api Key](./images/15.png)
+<!-- @Fabio: Commented out until we know what a user is supposed to do with this API token.
 
-See that your Api key is hidden by a security pattern. Click on the *show* button and pass the reCaptcha test to know your key and get access to it. (At the first time on this page you need to generate that key, just agree with the terms and conditions and pass the reCaptcha test when necessary).
+While logged in to your Hubspot account:
 
-  ![Show Api Key](./images/16.png)
+1. Click the *Settings* button.
+
+    ![Settings](./hubspot/images/02.png)
+
+1. Click on *Integrations* &rarr; *API Key* on the left side of the page.
+
+    ![Api Key](./hubspot/images/03.png)
+
+1. Click *Show* to reveal your API token key.
+
+    ![Show Api Key](./hubspot/images/04.png) -->
