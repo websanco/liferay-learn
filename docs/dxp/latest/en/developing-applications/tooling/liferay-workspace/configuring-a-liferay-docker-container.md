@@ -18,7 +18,7 @@ Liferay's Docker images are on [Docker Hub](https://hub.docker.com/r/liferay/por
 - [Liferay/DXP](https://hub.docker.com/r/liferay/dxp)
 
 1. Using the links above, find the version of the Liferay container you need. 
-1. Note the `docker pull` command that lists the full tag name for your container. The tag name looks like this: `liferay/dxp:7.3.10-ga1` or this: `liferay/portal:7.3.5-ga6`. 
+1. Note the `docker pull` command that lists the full tag name for your container. The tag name looks like this: `liferay/dxp:7.3.10-ga1` or this: `liferay/portal:7.3.6-ga7`. 
 1. Open `gradle.properties` in your Liferay Workspace. 
 1. Specify the Docker tag using the property `liferay.workspace.docker.image.liferay`. Here are some examples: 
 
@@ -27,7 +27,7 @@ Liferay's Docker images are on [Docker Hub](https://hub.docker.com/r/liferay/por
    ```
 
    ```properties
-   liferay.workspace.docker.image.liferay=liferay/portal:7.3.5-ga6
+   liferay.workspace.docker.image.liferay=liferay/portal:7.3.6-ga7
    ```
 
 1. Save the file. Now you're ready to create the Docker image.

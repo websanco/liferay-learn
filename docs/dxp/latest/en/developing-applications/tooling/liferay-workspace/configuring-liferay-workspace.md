@@ -6,7 +6,6 @@ Here are the topics covered:
 
 - Updating Liferay Workspace and Bundled Plugins
 - Using Development, UAT, and production environments
-- Creating Docker Containers
 - Managing the Target Platform
 
 ## Updating Liferay Workspace and Bundled Plugins
@@ -43,7 +42,7 @@ But what if you need a new feature in the [Source Formatter plugin](https://repo
    com.liferay.source.formatter.version=1.0.1085
    ```
 
-   If you want target the newest version, set the above property to `latest.release`, and you'll be upgraded to the latest available version. 
+   If you want to target the latest version, set the above property to `latest.release` to be upgraded to the latest available version. 
 
 1. Run any Gradle task, such as `./gradlew tasks` to perform the upgrade. 
 
@@ -173,3 +172,34 @@ You can use the ``distBundleZip`` command if you would rather have a .zip archiv
 ```
 
 Follow the above steps to test and build each environment. 
+
+## Managing the Target Platform
+
+Normally when defining Gradle dependencies, you must provide versions of those dependencies, like this: 
+
+```groovy
+dependencies {
+   compileOnly group: "javax.portlet", name: "portlet-api", version: "3.0.1"
+   compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "4.0.1"
+}
+```
+
+Since any application written on Liferay's platform targets that platform, Liferay has made it easy for you to specify all dependencies in one shot by declaring the version of Liferay and then inheriting other dependencies from Liferay. That way, you don't have the mess shown above. 
+
+Target platform is enabled by default; you don't have to do anything extra to use it. Here's what most dependencies look like now: 
+
+```groovy
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+```
+
+This brings in all the dependencies that come with Liferay. If for some reason you must specify a particular dependency, you still can: 
+
+```groovy
+dependencies {
+        compileOnly group: "com.liferay.portal", name: "release.portal.api"
+        cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+}
+```
+
