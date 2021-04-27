@@ -35,7 +35,7 @@ Click on the History icon (![Time](./../../../images/icon-time.png)) to view cha
 
 ### Edit Mode Selector
 
-Click on the edit mode drop-down menu to select between *Content Edition* and *Page Design* modes. Each mode determines which panels you can access in the editing sidebar menu. When in Content Edition, you can access the [Selection](#selection) (![Selection](../../../images/icon-pages-tree.png)), [Contents](#contents) (![Contents](../../../images/icon-list-ul.png)), and [Comments](#comments) (![Comments](../../../images/icon-comments-w.png)) panels. While in Page Design, you can also access [Fragments and Widgets](#fragments-and-widgets) (![Fragments and Widgets](../../../images/icon-cards2.png)) and [Page Design Options](#page-design-options) (![Page Design Options](../../../images/icon-format.png)).
+Click on the edit mode drop-down menu to select between *Content Editing* and *Page Design* modes. Each mode determines which panels you can access in the editing sidebar menu. When in Content Edition, you can access the [Selection](#selection) (![Selection](../../../images/icon-pages-tree.png)), [Contents](#contents) (![Contents](../../../images/icon-list-ul.png)), and [Comments](#comments) (![Comments](../../../images/icon-comments-w.png)) panels. While in Page Design, you can also access [Fragments and Widgets](#fragments-and-widgets) (![Fragments and Widgets](../../../images/icon-cards2.png)) and [Page Design Options](#page-design-options) (![Page Design Options](../../../images/icon-format.png)).
 
 ### Preview and Publish
 
