@@ -1,8 +1,8 @@
 # Troubleshooting Upgrades
 
-If you skip an upgrade step or have customized your interaction with Liferay's database, you can have issues. The following questions and answers address these issue types.
+Skipping an upgrade step or creating custom references to the Liferay database, can cause upgrade issue. The following questions and answers address address these situations.
 
-## How should I handle a foreign key constraint upgrade exception? 
+## How should I handle an upgrade exception caused by a foreign key constraint? 
 
 In Liferay 7.3, some Liferay tables (for example, the `user_` table) have an additional primary key called `ctCollectionId`. If you have a custom table that has a foreign key mapped to one of these Liferay tables, the new primary key breaks the foreign key. For example, upgrading a custom table that has a foreign key to the `user_` table fails with messages like these:
 
@@ -33,5 +33,12 @@ Here's how to do the replacement:
 
 Your Model Listener updates your new custom table based on the model events it's listening for.
 
-## How should I handle an UpgradeException involving virtual columns?
+## How should I handle an upgrade process warning about renaming a JournalArticle table column used by a virtual column expression?
 
+In Liferay 7.0, the `JournalArticle` table's `structureId` and `templateId` columns were renamed `DDMStructureKey` and `DDMTemplateKey`. If you're upgrading from Liferay Portal 6.2 and you have associated [virtual columns](https://en.wikipedia.org/wiki/Virtual_column) with the `JournalArticle` table, you must remove them before upgrading. In an Oracle database, for example, you can check for virtual columns with a query like this:
+
+```sql
+select column_name, data_default, hidden_column from user_tab_cols where table_name = 'JOURNALARTICLE';
+```
+
+After you've upgraded the table, you can add new virtual columns to it.

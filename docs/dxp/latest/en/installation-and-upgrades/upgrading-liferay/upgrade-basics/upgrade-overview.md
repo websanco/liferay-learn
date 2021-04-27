@@ -36,6 +36,8 @@ If you're upgrading Liferay Portal to a new GA for the same minor version (for e
 
 If your path includes upgrading to Liferay Portal 6.2, follow the [Liferay Portal 6.2 upgrade instructions](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay) first.
 
+If you're upgrading from Liferay Portal 6.2 and you have associated [virtual columns](https://en.wikipedia.org/wiki/Virtual_column) with the `JournalArticle` table, remove them before upgrading the database. You can add them back afterwards. See [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md) for details.
+
 ### Review Deprecations and Changes to Default Settings
 
 Features and configuration defaults may change in new versions of Liferay. See the reference section or the following articles for the most recent deprecations and changes to features and to settings:
