@@ -194,5 +194,5 @@ The portlet filter proceeds to implement the [`RenderFilter`](http://docs.lifera
 
 ## Additional Information
 
-* [Portlets](../../../developing-applications/developing-a-java-web-application/portlets.md)
+* [Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md)
 <!--TASK: Add link to Using Portlet Filters article when finished -->
