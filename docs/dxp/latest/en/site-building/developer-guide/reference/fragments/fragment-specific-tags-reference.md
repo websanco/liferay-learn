@@ -99,7 +99,7 @@ For Liferay Portal CE 7.3 GA2 and below, use this syntax:
 </lfr-editable>
 ```
 
-After you add the `lfr-editable` tag with the type `image` to a Fragment, when you add that Fragment to a page, you can then click on the editable image to select an image or configure content mapping for the image.
+After you add the `lfr-editable` tag with the type `image` to a Fragment, when you add that Fragment to a page, you can then click on the editable image and configure the image source and other properties from the Content Page editor sidebar.
 
 ![You have several options for defining an image on a Content Page.](./fragment-specific-tags-reference/images/02.png)
 
@@ -138,7 +138,7 @@ For Liferay Portal CE 7.3 GA2 and below, use this syntax:
 </lfr-editable>
 ```
 
-You can edit the link text, target URL, and basic link styling---primary button, secondary button, link.
+You can edit the type of link, target URL, and link mapping from the Content Page editor sidebar.
 
 ![You have several options for defining a link's appearance and behavior.](./fragment-specific-tags-reference/images/03.png)
 
@@ -161,8 +161,6 @@ For Liferay Portal CE 7.3 GA2 and below, use this syntax:
   <h1>Placeholder</h1>
 </lfr-editable>
 ```
-
-<!-- Image not in repo. ![You have several options for defining an HTML element on a Content Page.](./fragment-specific-tags-reference/images/04.png) -->
 
 For more information on editable HTML, see [Editable HTML](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-an-html-element).
 
