@@ -54,7 +54,11 @@ In the old generation space (in the heap), large garbage collections can cause n
 
 ## Configure Garbage Collection
 
-Choosing appropriate garbage collector (GC) algorithms helps improve Liferay instance responsiveness. Start tuning using parallel throughput collectors in the new generation and concurrent mark sweep (CMS) low pause collectors in the old generation.
+Choosing appropriate garbage collector (GC) algorithms helps improve Liferay instance responsiveness.
+
+### Garbage Collection on Java 8
+
+Start tuning using parallel throughput collectors in the new generation (ParNew) and concurrent mark sweep (CMS) low pause collectors in the old generation.
 
 **GC Settings Example**
 
@@ -78,8 +82,12 @@ Choosing appropriate garbage collector (GC) algorithms helps improve Liferay ins
 | `-XX:+CMSScavengeBeforeRemark` | Execute Eden GCs before re-marking objects of CMS. |
 
 ```note::
-   There are additional "new" algorithms like G1, but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
+   There are additional "new" algorithms like Garbage-First (G1), but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
 ```
+
+### Garbage Collection on Java 11
+
+Since CMS and ParNew algorithms are deprecated in Java 11, use the Garbage-First (G1) algorithm. It's enabled by default. Start testing with G1's default settings.
 
 ## Consider Using Large Pages 
 
