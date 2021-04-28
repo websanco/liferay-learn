@@ -47,4 +47,4 @@ You’ve completed touring Segment profiles. Creating Segments and analyzing the
 
 ## Related Information
 
-[Personalizing Content with Segments](../optimization/personalizing-content-with-segments.md)
+[Personalizing Content with Segments](../../optimization/personalizing-content-with-segments.md)

@@ -13,7 +13,7 @@ Follow these steps to create portlet filters for auditing portlet activities:
    * Render Phase - [`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html)
    * Resource Serving Phase - [`ResourceFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/ResourceFilter.html)
 
-   See [Portlets](../../../developing-applications/developing-a-java-web-application/portlets.md) for more information about each portlet phase.
+   See [Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) for more information about each portlet phase.
 
 1. Declare the portlet filter a Component within the OSGi framework using the `@Component` annotation and identify it as a `PortletFilter.class` service.
 
@@ -34,7 +34,7 @@ The following example uses a `RenderFilter` to audit the render phase for the Bl
 
 Follow these steps to download, build, and deploy the sample Portlet Filter to a new docker container:
 
-1. Start a new [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a new [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
    ```bash
    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]

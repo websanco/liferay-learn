@@ -1,8 +1,8 @@
 # Managing Interest Topics
 
-Analytics Cloud's [Recommendation API](../optimization/content-recommendation-api.md) suggests topics of interest based on user interactions with content in Liferay DXP. Administrators can exclude certain keywords from the recommendation API, therefore preventing Analytics Cloud from suggesting content based on those keywords. This is useful for further curating suggested content.
+Analytics Cloud's [Recommendation API](../../optimization/content-recommendation-api.md) suggests topics of interest based on user interactions with content in Liferay DXP. Administrators can exclude certain keywords from the recommendation API, therefore preventing Analytics Cloud from suggesting content based on those keywords. This is useful for further curating suggested content.
 
-## Understanding Interests
+## Understanding Interestsd
 
 Finding out topics people are interested in helps you relate your products and services to them. Analytics Cloud's Interests insight empowers you with rich, easy-to-understand visuals that provide this information.
 
@@ -31,7 +31,6 @@ Follow these steps to add a keyword to the block list:
 
 1. Click Send when you're finished. Your keywords then appear in the table.
 
-To delete a keyword from the block list, click that keyword's trash icon (![Delete](../images/icon-delete.png)). To delete multiple keywords at once, select the checkbox for each and click the trash icon that appears at the top of the table. You can select all keywords via the checkbox at the top of the table.
+To delete a keyword from the block list, click that keyword's trash icon (![Delete](../../images/icon-delete.png)). To delete multiple keywords at once, select the checkbox for each and click the trash icon that appears at the top of the table. You can select all keywords via the checkbox at the top of the table.
 
 ![The keyword management screen.](managing-interest-topics/images/01.png)
-
