@@ -179,24 +179,24 @@ To include a widget, you must know its registered name. For example, the Site Na
 
 These are the widgets that can be embedded and their accompanying tags:
 
-| Widget Name    | Tag |
-| -------- | --- |
-|DDL Display	|`<lfr-widget-dynamic-data-list>`|
-|Form           |`<lfr-widget-form>`|
-|Asset Publisher|`<lfr-widget-asset-list>`|
-|Breadcrumb	    |`<lfr-widget-breadcrumb>`|
-|Categories Navigation |`<lfr-widget-categories-nav>`|
-|Flash	|`<lfr-widget-flash>`|
-|Media Gallery	|`<lfr-widget-media-gallery>`|
-|Navigation Menu	|`<lfr-widget-nav>`|
-|Polls Display	|`<lfr-widget-polls>`|
-|Related Assets	|`<lfr-widget-related-assets>`|
-|Site Map	|`<lfr-widget-site-map>`|
-|Tag Cloud	|`<lfr-widget-tag-cloud>`|
-|Tags Navigation	|`<lfr-widget-tags-nav>`|
-|Web Content Display	|`<lfr-widget-web-content>`|
-|RSS Publisher (Deprecated)	|`<lfr-widget-rss>`|
-|Iframe	|`<lfr-widget-iframe>`|
+| Widget Name                | Tag                              |
+|----------------------------|----------------------------------|
+| DDL Display                | `<lfr-widget-dynamic-data-list>` |
+| Form                       | `<lfr-widget-form>`              |
+| Asset Publisher            | `<lfr-widget-asset-list>`        |
+| Breadcrumb                 | `<lfr-widget-breadcrumb>`        |
+| Categories Navigation      | `<lfr-widget-categories-nav>`    |
+| Flash                      | `<lfr-widget-flash>`             |
+| Media Gallery              | `<lfr-widget-media-gallery>`     |
+| Navigation Menu            | `<lfr-widget-nav>`               |
+| Polls Display              | `<lfr-widget-polls>`             |
+| Related Assets             | `<lfr-widget-related-assets>`    |
+| Site Map                   | `<lfr-widget-site-map>`          |
+| Tag Cloud                  | `<lfr-widget-tag-cloud>`         |
+| Tags Navigation            | `<lfr-widget-tags-nav>`          |
+| Web Content Display        | `<lfr-widget-web-content>`       |
+| RSS Publisher (Deprecated) | `<lfr-widget-rss>`               |
+| Iframe                     | `<lfr-widget-iframe>`            |
 
 ### Enabling Embedding for Your Widget
 
@@ -216,3 +216,9 @@ When you deploy your widget, it's available to add. The name you specify in the 
 ```note::
     According to the W3C HTML standards, custom elements can't be self closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self closing notation for the tag.
 ```
+
+## Related Information
+
+- [Fragment Configuration Types Reference](./fragment-configuration-types-reference.md)
+- [Fragments Toolkit Command Reference](./fragments-toolkit-command-reference.md)
+- [Page Fragment Editor Interface Reference](./page-fragment-editor-interface-reference.md)
