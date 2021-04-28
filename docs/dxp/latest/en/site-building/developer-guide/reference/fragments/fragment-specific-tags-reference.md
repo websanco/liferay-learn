@@ -4,11 +4,11 @@ Along with standard HTML, CSS, and JavaScript, you can use Liferay-specific tags
 
 Page Fragments have access to these types of liferay-specific tags and attributes that add these features:
 
-* Editable Text
-* Editable Images
-* Editable Links
-* Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)
-* Embedded Widgets
+- Editable Text
+- Editable Images
+- Editable Links
+- Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)
+- Embedded Widgets
 
 ```note::
   When you start typing the name of a tag, the `HTML editor <../../developing-page-fragments/using-the-fragments-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
@@ -212,7 +212,7 @@ When you deploy your widget, it's available to add. The name you specify in the 
 ```
 
 ```note::
-    According to the W3C HTML standards, custom elements can't be self closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self closing notation for the tag.
+    According to the W3C HTML standards, custom elements can't be self-closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self-closing notation for the tag.
 ```
 
 ## Related Information
