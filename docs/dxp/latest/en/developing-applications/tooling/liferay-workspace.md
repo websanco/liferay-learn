@@ -1,3 +1,0 @@
-# Liferay Workspace
-
-Coming soon!

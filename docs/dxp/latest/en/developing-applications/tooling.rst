@@ -5,7 +5,7 @@ Tooling
    :maxdepth: 3
 
    tooling/developer-tools-overview.md
-   tooling/liferay-workspace.md
+   tooling/liferay_workspace.rst
    tooling/blade_cli.rst
    tooling/developer-studio.md
    tooling/rest-builder.md
