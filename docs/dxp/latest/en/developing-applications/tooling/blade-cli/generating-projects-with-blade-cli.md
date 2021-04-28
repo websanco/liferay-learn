@@ -4,7 +4,7 @@ Blade CLI exists to create, build, and deploy Liferay projects in Liferay Worksp
 
 ## Creating a Liferay Workspace
 
-Liferay Workspace is a set of folders on your machine where you store projects and DevOps configurations. See [Liferay Workspace](../../tooling/liferay-workspace.md) <!-- Placeholder until Workspace articles come through. --> for further information. To create a Liferay Workspace follow these steps,
+Liferay Workspace is a set of folders on your machine where you store projects and DevOps configurations. See [Liferay Workspace](../liferay-workspace/what-is-liferay-workspace.md) for further information. To create a Liferay Workspace follow these steps,
 
 1. In your CLI, navigate to the folder where you want to create a Liferay Workspace.
 
@@ -13,8 +13,6 @@ Liferay Workspace is a set of folders on your machine where you store projects a
    ```bash
    blade init -v 7.3 [workspace name]
    ```
-
-<!-- Let's ask the blade team to add some sort of success message to this command. Also - when I ran this to test (it was my first time) I thought that the brackets were required - but I ended up creating a workspace with brackets in the folder path. would it be clearer to say `blade init -v 7.3 your-workspace-name` ? -->
 
 ## Creating a Project
 
@@ -26,19 +24,19 @@ Projects exist in a Liferay Workspace. Here are the important options to remembe
 
 **-c:** Specify your class name.
 
-**-v:** Specify the Liferay version; for example, `7.1`, `7.2`, or `7.3`.
+**-v:** Specify the Liferay version; for example, `7.1`, `7.2`, `7.3`, or `7.4`.
 
 Putting these together, if you want to create a Liferay MVC Portlet called "guestbook," use this command:
 
 ```bash
-blade create -t mvc-portlet -p com.liferay.docs.portlet -c GuestbookPortlet -v 7.3 guestbook
+blade create -t mvc-portlet -p com.acme.z3x1.portlet -c GuestbookPortlet -v 7.4 guestbook
 ```
 
-This creates a project using the MVC Portlet template, a default package called `com.liferay.docs.portlet`, a portlet class called `GuestbookPortlet`, for Liferay 7.3, called *guestbook*. Liferay Workspaces can be imported into any IDE, because they are Gradle projects. The Liferay IntelliJ plugin or the Eclipse plugins in Liferay Developer Studio provide enhanced support.
+This creates a project using the MVC Portlet template, a default package called `com.acme.z3x1.portlet`, a portlet class called `GuestbookPortlet`, for Liferay 7.4, called *guestbook*. Liferay Workspaces can be imported into any IDE, because they are Gradle projects. The Liferay IntelliJ plugin or the Eclipse plugins in Liferay Developer Studio provide enhanced support.
 
 ## Creating Sample Projects
 
-Liferay maintains a GitHub repository of [sample projects](https://github.com/liferay/liferay-blade-samples/tree/7.3). These are fully-implemented samples of various Liferay technologies you can use as a starting point for your projects. Rather than clone the repository to get access to them, however, you can create them locally using Blade CLI.
+Liferay maintains a GitHub repository of [sample projects](https://github.com/liferay/liferay-blade-samples/tree/7.4). These are fully-implemented samples of various Liferay technologies you can use as a starting point for your projects. Rather than clone the repository to get access to them, however, you can create them locally using Blade CLI.
 
 1. Find the sample project you want:
 
