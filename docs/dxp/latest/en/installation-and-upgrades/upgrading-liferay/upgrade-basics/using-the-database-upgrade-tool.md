@@ -124,6 +124,8 @@ You've upgraded your Liferay database using the Database Upgrade Tool.
 
 If this was a trial upgrade and you want to shorten the upgrade time, tune your database for upgrade (if you haven't already) and [remove unnecessary data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md) from the database. Repeat this article's steps as necessary.
 
+If you run into issues, see [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md).
+
 ## Next Steps
 
 Revisit the [Upgrade Overview](./upgrade-overview.md) to see what's left to upgrade.

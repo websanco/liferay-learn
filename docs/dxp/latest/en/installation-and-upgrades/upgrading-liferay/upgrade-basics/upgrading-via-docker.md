@@ -115,3 +115,5 @@ If the upgraded database is all you need, then enjoy using your new Liferay inst
 * [Upgrading Custom Development](../upgrading_custom_development.html) demonstrates adapting custom plugin code to a new Liferay version.
 
 * [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) describes how to upgrade in a clustered environment.
+
+* [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md)
