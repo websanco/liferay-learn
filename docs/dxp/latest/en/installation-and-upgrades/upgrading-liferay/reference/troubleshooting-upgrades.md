@@ -33,12 +33,14 @@ Here's how to do the replacement:
 
 Your Model Listener updates your new custom table based on the model events it's listening for.
 
-## How should I handle an upgrade process warning about renaming a JournalArticle table column used by a virtual column expression?
+## How should I handle an upgrade process warning about renaming a table column used by a virtual column expression?
 
-In Liferay 7.0, the `JournalArticle` table's `structureId` and `templateId` columns were renamed `DDMStructureKey` and `DDMTemplateKey`. If you're upgrading from Liferay Portal 6.2 and you have associated [virtual columns](https://en.wikipedia.org/wiki/Virtual_column) with the `JournalArticle` table, you must remove them before upgrading. In an Oracle database, for example, you can check for virtual columns with a query like this:
+Some new Liferay versions rename table columns. Any [virtual columns](https://en.wikipedia.org/wiki/Virtual_column) associated with these columns inhibit database upgrade and must be removed before the upgrade. After the upgrade, you can add equivalent virtual columns.
+
+For example, Liferay 7.0 renamed the `JournalArticle` table's `structureId` and `templateId` columns to `DDMStructureKey` and `DDMTemplateKey`, respectively. If you're upgrading from Liferay Portal 6.2 and you have associated virtual columns with the `JournalArticle` table, remove them before upgrading. In an Oracle database, for example, you can check for virtual columns with a query like this:
 
 ```sql
 select column_name, data_default, hidden_column from user_tab_cols where table_name = 'JOURNALARTICLE';
 ```
 
-After you've upgraded the table, you can add new virtual columns to it.
+After you've upgraded the table, you can add equivalent virtual columns to your database.
