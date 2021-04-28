@@ -170,11 +170,11 @@ When Liferay DXP is started, the archives are unpackaged and installed, and the 
 
 ### Installing the DXP portlet.jar
 
-DXP's `portlet.jar` (version 3) is backwards-compatible with version 2.0. It is included with the Dependencies ZIP that you unzipped above. WebSphere contains `portlet.jar` version 2.0 that must be overridden.
+DXP's `portlet.jar` (version 3) is backwards-compatible with version 2.0. The DXP 7.4 `.war` includes the `portlet.jar` and the Dependencies ZIP for earlier DXP versions include it too. WebSphere's `portlet.jar` version 2.0 must be overridden.
 
 1. In your `[Install Location]/WebSphere/AppServer/profiles/your-profile/` folder, create a folder called `app_shared_libraries`.
 
-1. Move DXP's `portlet.jar` from the `[Install Location]/WebSphere/AppServer/lib/ext` folder to the `app_shared_libraries` folder you created.
+1. Copy the DXP `portlet.jar` from the DXP `.war` (in DXP 7.4) or from the `[Install Location]/WebSphere/AppServer/lib/ext` folder (in earlier DXP versions) to the `app_shared_libraries` folder you created.
 
 1. Follow IBM's steps for [using a server-associated shared library](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver); make sure to choose *Classes loaded with local class loader first (parent_Last)* on step 4d.
 
