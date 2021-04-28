@@ -7,7 +7,6 @@ Personalizing Site Experience
    personalizing-site-experience/personalizing-site-experience.md
    personalizing-site-experience/segmentation.rst
    personalizing-site-experience/experience_personalization.rst
-   personalizing-site-experience/enabling_automated_live_chat_systems.rst
    personalizing-site-experience/migration_from_audience_targeting.rst
    personalizing-site-experience/developer_guide.rst
 

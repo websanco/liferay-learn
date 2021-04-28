@@ -16,14 +16,14 @@ Getting a Chat Provider Account ID
    getting-a-chat-provider-account-id/tolvnow.md
    getting-a-chat-provider-account-id/zendesk.md
 
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/chatwoot`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/crisp`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/hubspot`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/jivochat`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/livechat`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/liveperson`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/smartsupp`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/tawk-to`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/tidio`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/tolvnow`
--  :doc:`/site-building/personalizing-site-experience/enabling-automated-life-chat-systems/getting-a-chat-provider-account-id/zendesk`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/chatwoot`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/crisp`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/hubspot`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/jivochat`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/livechat`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/liveperson`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/smartsupp`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/tawk-to`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/tidio`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/tolvnow`
+-  :doc:`/site-building/personalizing-site-experience/enabling-automated-live-chat-systems/getting-a-chat-provider-account-id/zendesk`
