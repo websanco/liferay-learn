@@ -2,14 +2,15 @@
 
 To access available Fragments, go to a Content Page, and click on the *Edit* icon (![Edit](../../../images/icon-edit.png)) in the Application Bar. Ensure your edit mode is set to *Page Design* and click on *Fragment and Widgets* (![Fragments and Widgets](../../../images/icon-cards2.png)) in the editing Sidebar Menu.
 
-* [Adding Fragments](#adding-fragments)
-* [Configuring Fragments](#configuring-fragments)
-* [Using Layout Elements](#layout-elements)
-* [Using Basic Components](#basic-components)
-* [Using Content Display Fragments](#content-display)
-* [Using Featured Content Components](#featured-content)
-* [Using Footers](#footers)
-* [Using Navigation Bars](#navigation-bars)
+- [Adding Fragments](#adding-fragments)
+- [Configuring Fragments](#configuring-fragments)
+- [Using Layout Elements](#layout-elements)
+- [Using Basic Components](#basic-components)
+- [Using Content Display Fragments](#content-display)
+- [Using Featured Content Components](#featured-content)
+- [Using Footers](#footers)
+- [Using Navigation Bars](#navigation-bars)
+- [Localizing the Fragment Configuration](#localizing-the-fragment-configuration)
 
 ## Adding Fragments
 
@@ -184,6 +185,37 @@ Use *Footer* Fragments to add a custom footer to [Master Page Templates](../defi
 Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates](../defining-headers-and-footers/master-page-templates.md) for Content Pages. Each navigation bar includes a navigation menu, sign-in link, and image element for your logo. DXP includes the following layouts for Navigation Bar Fragments:
 
 ![Add a custom header to Master Page Templates for Content Page.](./page-fragments-user-interface-reference/images/14.png)
+
+## Localizing the Fragment Configuration
+
+> Available: Liferay DXP 7.4+
+
+You can localize the following Fragment settings for the target audience's language:
+
+- [Image Description (*alt text*)](#localizing-alternative-text-for-images)
+- [Editable URLs](#localizing-editable-urls)
+
+Additionally, you can change the Fragment configuration fields depending on the Page's target language using the `localizable` attribute. For more information, read the [Fragment Specific Tags and Attributes Reference](../../developer-guide/reference/fragments/fragment-specific-tags-reference.md).
+
+### Localizing Alternative Text for Images
+
+You can add localization in different languages for the image description (also known as *alternative text* or *alt text*) in built-in and custom Fragments. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can edit the *Image Description* adapting the text for the target language (B).
+
+![You can localize the Image Description in the Content Page editor](./page-fragments-user-interface-reference/images/15.png)
+
+```tip::
+    The flag icon next to the Image Description indicates the field as localizable.
+```
+
+If the Image Description doesn't have a translation, the description shows the default Content Page language.
+
+### Localizing Editable URLs
+
+When you localize a URL or link in your Content Page, you can redirect the users to different URLs and content, based on their target language. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can update the *URL* to the link of your choice (B).
+
+![You can localize the link in the Content Page editor](./page-fragments-user-interface-reference/images/16.png)
+
+You can localize links you enter manually and links from a content field. If the link doesn't have a translation, the active URL is the one for the default Content Page language.
 
 ## Additional Information
 

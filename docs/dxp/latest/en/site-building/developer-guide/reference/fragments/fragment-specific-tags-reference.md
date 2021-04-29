@@ -4,11 +4,12 @@ Along with standard HTML, CSS, and JavaScript, you can use Liferay-specific tags
 
 Page Fragments have access to these types of liferay-specific tags and attributes that add these features:
 
-- Editable Text
-- Editable Images
-- Editable Links
-- Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)
-- Embedded Widgets
+- [Editable Text](#making-text-editable)
+- [Editable Images](#making-images-editable)
+- [Editable Links](#creating-editable-links)
+- [Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)](#creating-editable-html)
+- [Embedded Widgets](#including-widgets-within-a-fragment)
+- [Localizable Fragment Fields](#localizing-fragment-configuration-fields)
 
 ```note::
   When you start typing the name of a tag, the `HTML editor <../../developing-page-fragments/using-the-fragments-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
@@ -213,8 +214,65 @@ When you deploy your widget, it's available to add. The name you specify in the 
     According to the W3C HTML standards, custom elements can't be self-closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self-closing notation for the tag.
 ```
 
-## Related Information
+## Localizing Fragment Configuration Fields
 
-- [Fragment Configuration Types Reference](./fragment-configuration-types-reference.md)
+> Available: Liferay DXP 7.4+
+
+You can change the Fragment configuration fields depending on the Page's target language. For example, for a Button Fragment, you can define a button type when the page language is en-US, and a different button type when the page language is es-ES. To localize a Fragment configuration field, use the `localizable` attribute.
+
+```note::
+    The `localizable` attribute is not available for Fragment configuration fields where the `configurationRole` property is set to `style`. 
+```
+
+In the following code excerpt, the Button Fragment configuration includes the `localizable` attribute set to `true` for the `fields` section under `fieldSets`. The `localizable` attribute is set at the field level. In the example, there is only one `buttonType` field. If you have a fragment with multiple fields, you can set the `localizable` attribute for each one of them:
+
+```markup
+"fieldSets": [
+  {
+    "fields": [
+      {
+        "dataType": "string",
+        "defaultValue": "primary",
+        "label": "type",
+        "name": "buttonType",
+        "type": "select",
+        "localizable": true,
+        "typeOptions": {
+          "validValues": [
+            {
+              "value": "primary"
+            },
+            {
+              "value": "secondary"
+            },
+            {
+              "value": "link"
+            },
+            {
+              "value": "outline-primary"
+            },
+            {
+              "value": "outline-secondary"
+            }
+          ]
+        }
+      }
+    ]
+  }
+```
+
+You can use this sample code to change the button type depending on the Page's target language. In the following example, the 'Contact Us'/'Contacto' Button Fragment incorporates the `localizable` attribute set to `true` for the `buttonType` field. The example uses this attribute to configure the _Primary_ button type when the Page uses the en-US language (A) and the _Outline Primary_ type when the Page uses es-ES (B).
+
+![Localizable elements in the Fragment show the flag icon under the General tab and support different configurations for different languages](./fragment-specific-tags-reference/images/04.png)
+
+```tip::
+    The flag icon under the Fragment's General settings indicates the configuration field as localizable. 
+```
+
+Fragments with the `localizable` attribute that do not specify a custom configuration for a language use the default Page language's configuration.
+
+## Additional Information
+
 - [Fragments Toolkit Command Reference](./fragments-toolkit-command-reference.md)
 - [Page Fragment Editor Interface Reference](./page-fragment-editor-interface-reference.md)
+- [Fragment Configuration Types Reference](./fragment-configuration-types-reference.md)
