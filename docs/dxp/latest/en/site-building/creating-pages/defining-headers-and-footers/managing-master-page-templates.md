@@ -42,8 +42,6 @@ You can change the Master Page Template of a Page through the Page's [*Look and 
 
 1. Select a new Master Page Template and click *Done*. Click *save* to apply the changes.
 
-    ![Select a new Master Page Template from the available options.](./managing-master-page-templates/images/04.png)
-
 ## Changing a Master Page Template's Theme
 
 When you apply a custom Master Page Template to a Page, the Theme is not defined through the Page but through the Master Page Template. Follow these steps to update the Theme for the Master Page Template:
