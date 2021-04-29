@@ -42,7 +42,7 @@ Since Liferay Portal CE 7.3 GA2, you can configure permissions for widgets from 
 ![You can configure widget permissions on Content Pages through their Options Menu.](./using-widgets-on-a-content-page/images/02.png)
 
 ```note::
-  When you create a page based on a `page template <../adding-pages/creating-a-page-template.md>`_, the permissions are copied too. Permissions for a Master Page are set in the `Master Page <../defining-headers-and-footers/managing-master-pages.md>`_, not in the pages.
+  When you create a page based on a `page template <../adding-pages/creating-a-page-template.md>`_, the permissions are copied too. Permissions for a Master Page are set in the `Master Page <../defining-headers-and-footers/managing-master-page-templates.md>`_, not in the pages.
 ```
 
 ## Content Page Limitations for Widgets

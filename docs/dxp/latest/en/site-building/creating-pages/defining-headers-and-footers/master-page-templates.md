@@ -13,4 +13,4 @@ Building a Master Page Template is very similar to the process of creating a Con
 ## Additional Information
 
 - [Creating a Master Page Template](./creating-a-master-page-template.md)
-- [Managing Master Pages](./managing-master-pages.md)
+- [Managing Master Page Templates](./managing-master-page-templates.md)
