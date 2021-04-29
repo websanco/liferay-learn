@@ -1,6 +1,6 @@
 # Using a Style Book to Standardize Site Appearance
 
-A Style Book is a set of visual rules that apply to a Site to provide a consistent experience across its pages. They determine various visual settings on the Site, including spacing between elements (such as widgets), colors, and fonts. Each of these settings applies equally to every page using the Style Book.
+A *Style Book* is a set of visual rules that apply to a Site to provide a consistent experience across its pages. They determine various visual settings on the Site, including spacing between elements (such as widgets), colors, and fonts. Each of these settings applies equally to every page using the Style Book.
 
 The theme you assign to your Site's Public Pages determines the categories of settings available to the Style Books for your Site. Developers can customize the categories with new options for configuring Style Books. See [Style Book Token Definitions](./developer-guide/style-book-token-definitions.md) for more information.
 
@@ -10,9 +10,9 @@ If you do not choose a specific Style Book for a page, the page uses the Style B
 
 Follow these steps to set any page's Style Book: 
 
-1. Click the Edit icon (![Edit icon](../../images/icon-edit.png)) near the top of the page.
+1. Click the *Edit* icon (![Edit icon](../../images/icon-edit.png)) near the top of the page.
 
-1. Click the icon (![Page Design Options](../../images/icon-format.png)) on the right side of the screen to open the *Page Design Options* menu.
+1. Click the *Page Design Options* icon (![Page Design Options](../../images/icon-format.png)) on the sidebar.
 
 1. Click to open the *Style Book* tab.
 
@@ -28,7 +28,7 @@ The page is published using the new Style Book.
 
 1. Navigate to the *Site Menu* &rarr; *Design* &rarr; *Style Books*.
 
-1. Click the Add icon (![Add icon](../../images/icon-add.png)) near the top of the page.
+1. Click the *Add* icon (![Add icon](../../images/icon-add.png)) near the top of the page.
 
 1. Enter a name for the Style Book and click *Save*.
 
@@ -61,7 +61,7 @@ The colors used for fonts and visual elements defined in your theme are customiz
 ![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
 
 ```note::
-   Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. In order to fully customize the color of alerts, you must define a variety of customizable colors and use them in your own theme's categories.
+   Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. To fully customize the color of alerts, you must define customizable colors and use them in your own theme's categories.
 ```
 
 ### Spacing
