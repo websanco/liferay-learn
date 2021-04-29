@@ -211,9 +211,9 @@ If the Image Description doesn't have a translation, the description shows the d
 
 ### Localizing Editable URLs
 
-When you localize a URL or link in your Content Page, you can redirect the users to different URLs and content, based on their target language. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can update the *URL* to the link of your choice (B).
+When you localize a URL or link in your Content Page, you can redirect to different URLs and content, based on the target language. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can update the *URL* to the link of your choice (B).
 
-![You can localize the link in the Content Page editor](./page-fragments-user-interface-reference/images/16.png)
+![You can localize the link in the Content Page editor.](./page-fragments-user-interface-reference/images/16.png)
 
 You can localize links you enter manually and links from a content field. If the link doesn't have a translation, the active URL is the one for the default Content Page language.
 

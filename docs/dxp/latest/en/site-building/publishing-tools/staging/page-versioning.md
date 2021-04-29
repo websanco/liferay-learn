@@ -9,17 +9,17 @@ With Page Versioning enabled, you and your team can work in parallel on multiple
 You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
 
 - [Page Versioning](#page-versioning)
-  - [Types of Variations](#types-of-variations)
-  - [Creating Variations](#creating-variations)
-  - [Merging Variations](#merging-variations)
-  - [Managing Variation Permissions](#managing-variation-permissions)
-  - [Additional Information](#additional-information)
+- [Types of Variations](#types-of-variations)
+- [Creating Variations](#creating-variations)
+- [Merging Variations](#merging-variations)
+- [Managing Variation Permissions](#managing-variation-permissions)
+- [Additional Information](#additional-information)
 
 ## Types of Variations
 
 When you enable *Page versioning* for a Page set, you can create and manage two types of variations in each Widget Page's Staging bar:
 
-- **Site Pages Variation**: You can use these variations of your Site's Page sets to modify multiple Pages while keeping them together as a set on Widget Pages and Content Pages.
+- **Site Pages Variation**: You can use variations of your Site's Page sets to modify multiple Pages while keeping them together as a set. You can create Site Page Variations on Widget Pages and Content Pages.
 
 - **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations on Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
 

@@ -8,21 +8,20 @@ You can customize your Content Page to different groups of users using *Experien
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 
-2. On the Content Page you want to edit, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *Edit*, or [create a new Content Page](../../creating-pages/adding-pages/adding-a-page-to-a-site.md).
+2. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*, or [create a new Content Page](../../creating-pages/adding-pages/adding-a-page-to-a-site.md).
 
-3. At the top of the page, click on *Default* Experience to open the Experience selection dialog.
-
-4. Click *New Experience*.
+3. At the top of the page, for the Experience click *Default* to open the Experience selection dialog.
 
     ![Click on Experience to select your experience or click New Experience to create a new one.](./creating-and-managing-experiences/images/01.png)
+4. Click on *New Experience*.
 
-5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a New Segment](../segmentation/creating-and-managing-user-segments.md).
+5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a New Segment](../segmentation/creating-and-managing-user-segments.md) (available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.)
 
     ```note::
-       By default, new Experiences are assigned to the *Anyone* Segment and targeted to all website visitors.
+       New Experiences are assigned to the *Anyone* Segment by default, and target all website visitors.
     ```
 
-1. On the *New Experience* dialog, under the Languages section, select [additional languages](./content-page-personalization.md#managing-experience-localization) you want to target with the Experience. For example, if your default Content Page language is en-US and you want to provide personalization for es-ES speakers, select this language as well. See [Managing Experience Localization](./content-page-personalization.md#managing-experience-localization) for more information.
+1. On the *New Experience* dialog, under the *Languages* section, select any additional language you want to target with your experience. For example, if your default Content Page language is en-US and you want to create an Experience for es-ES speakers, select this language as well.
 
     ![Select an existing Segment for the Experience and, opitonally, an additional language](./creating-and-managing-experiences/images/02.png)
 
@@ -32,17 +31,17 @@ You can customize your Content Page to different groups of users using *Experien
 
 8. Click *Publish*.
 
-After setting the Experience precedence, Members of the target Segment see the Page version customized for that Segment. All other users see the *Default* version.
+The Default version of the page appears for everyone except for members of the selected Segment, who see a version of the site for their defined Segment.
 
 ## Managing Content Page Experiences
 
-When you edit a Content Page, you can click on the *Experience* selector to manage the options for that page.
+When you edit a Content Page, you can click on the Experience to manage the options for that page.
 
 ![You can add, edit, delete, or change priority for Experiences.](./creating-and-managing-experiences/images/04.png)
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 
-2. On the Content Page you want to edit, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
+2. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
 
 3. Click on the Experience you want to manage. From here you can
 

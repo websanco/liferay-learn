@@ -11,7 +11,7 @@ Personalizing your Content Page for different users is a two-step process:
 
 > Some Experiences functionality is available in Liferay 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+ only.
 
-You can create multiple experiences for the same Content Page, each Experience covering a particular need. For example, you can create different experiences for users who log in to your Site and for users who browse the Site anonymously. Each Experience contains the content and layout that is most appropriate for each Segment.
+You can create multiple experiences for the same Content Page---each Experience covering a particular need. For example, you can create different experiences for those who log in and for those who browse the site anonymously. Each Experience contains the content and layout that is most appropriate for each Segment.
 
 Consider the following information when you create multiple experiences for the same Content Page:
 
