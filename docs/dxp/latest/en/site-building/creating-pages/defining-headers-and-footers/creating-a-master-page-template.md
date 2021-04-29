@@ -2,21 +2,18 @@
 
 > Available: Liferay DXP 7.3+
 
-Although Portal includes default Master Page Templates that you can use to define the look and feel of the Headers and Footers for your site's pages, you may want a more custom solution. You can create custom Master Page Templates for this.
+Although Portal includes default Master Page Templates that you can use to define the look and feel of the Headers and Footers for your Site's pages, you may want a more custom solution. You can create custom Master Page Templates for this.
 
 Follow these steps to create a Master Page Template:
 
 1. Open Product Menu and go to Site &rarr; *Design* &rarr; *Page Templates*.
-1. Under the *Masters* tab, click the *Add* (![Add](../../../images/icon-add.png)) button to create a new Master Page Template.
-
-    ![Create a Master Page Template under the Masters tab.](./creating-a-master-page-template/images/01.png)
-
-1. Type the *Name* of your new Master Page Template and click *Save*.
-1. Click the *Fragments and Widgets* (![Fragments and Widgets](../../../images/icon-cards2.png)) button and add Fragments for common elements like the footer or navigation bar.
+1. Under the *Masters* tab, click *Add* (![Add](./../../../images/icon-add.png) to create a new Master Page Template.
+1. Enter the *Name* of your new Master Page Template.
+1. Click *Fragments and Widgets* (![Fragments and Widgets](./../../../images/icon-add-widget.png)) on the sidebar and add Fragments for the common elements that you require.
 
     ![Add the Master Page Template's common elements from the Footers and Navigation Bars sections.](./creating-a-master-page-template/images/02.png)
 
-1. Optionally drag and drop the Drop Zone to a new location in the layout. For example, you can add a row with two columns and move the Drop Zone to one column, so users can only add Page Fragments to that portion of the page.
+1. Optionally drag and drop the Drop Zone to a new location in the layout. For example, you can add a Grid with two Modules and move the Drop Zone to one Module, so users can only add Page Fragments to that portion of the Grid.
 
     ![You can move the Drop Zone to control where users can add Page Fragments.](./creating-a-master-page-template/images/03.gif)
 
@@ -37,8 +34,7 @@ You can revert any action using the *Undo* (![Preview](../../../images/icon-undo
   If a custom Master Page Template is used for a page, the Theme for the page is defined through the Master Page Template and can't be changed through the page's settings. See `Changing a Master Page Template's Theme <./managing-master-pages.md#changing-a-master-page-template-s-theme>`_ for more information.
 ```
 
-## Related Information
+## Additional Information
 
-- [Master Page Templates](./master-page-templates.md)
-- [Managing Master Page Templates](./managing-master-pages.md)
-- [Understanding Pages](../understanding-pages/understanding-pages.md)
+- [Managing Master Pages](./managing-master-pages.md)
+- [Master Pages Templates](./master-page-templates.md)
