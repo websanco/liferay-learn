@@ -10,7 +10,7 @@ int fontSize = (int)request.getAttribute("fontSize");
 	style="font-family: <%= fontFamily %>; color: <%= fontColor %>; font-size: <%= fontSize %>pt;"
 >
 	<liferay-ui:message key="e3q3-porlet-welcome" /><br />
-  color: <%= fontColor %><br />
+	color: <%= fontColor %><br />
 	font-family: <%= fontFamily %><br />
 	font-size: <%= fontSize %>
 </p>
