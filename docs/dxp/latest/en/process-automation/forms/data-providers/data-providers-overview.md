@@ -1,6 +1,6 @@
 # Data Providers Overview
 
-Data providers serve data that can be consumed by the Forms application. The REST Data Provider is included with the Forms application, and it serves a lot of needs. You can consume data from [REST web services](https://en.wikipedia.org/wiki/Representational_state_transfer) to autofill form fields.
+Data providers serve data that can be consumed by the Forms application. The REST Data Provider is included with the Forms application. With it, you can consume data from [REST web services](https://en.wikipedia.org/wiki/Representational_state_transfer) to autofill form fields.
 
 * [Use the REST Data Provider to populate form options.](./using-the-rest-data-provider-to-populate-form-options.md)
 * [Auto-populate form fields with a REST Data Provider and the Autofill rule.](../form-rules/using-the-autofill-rule.md)
@@ -9,7 +9,7 @@ One common example is using a REST Data Provider to populate a Select from List 
 
 ## Registered JSON Web Services
 
-Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services. If you are running a local server, see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for a list. If populating a list of countries, you'll find two `get-countries` JSON web services: either one works. Click _Invoke_ to generate the results.
+Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services. If you are running a local server, see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for a list. If populating a list of countries, you'll find two `get-countries` JSON web services; either one works. Click _Invoke_ to generate the results.
 
 ```warning::
    To test using Liferay's web services with data providers in a local testing environment, you must enable local network access. See `Enabling Access to Data on the Local Network <./using-the-rest-data-provider-to-populate-form-options.md#enabling-access-to-data-on-the-local-network>`__.  
