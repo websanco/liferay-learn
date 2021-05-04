@@ -1,8 +1,8 @@
 # Setting the Order of Elements in a Fragment
 
-> Available in Liferay DXP 7.4+.
+> Availability: Liferay 7.4+.
 
-You typically use the [Slider](../../creating-pages/building-and-managing-content-pages/using-fragments.md#slider) or [Tab](../../creating-pages/building-and-managing-content-pages/using-fragments.md#tabs) Fragment to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
+The [Slider](../../creating-pages/building-and-managing-content-pages/using-fragments.md#slider) or [Tab](../../creating-pages/building-and-managing-content-pages/using-fragments.md#tabs) fragments are typically used to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
 
 When you edit your Slider or Tab Fragment in the [Content Page Editor](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md), the sidebar selection (![Selection](../../../images/icon-pages-tree.png)) button shows the list of elements in your Fragment. Before Liferay DXP 7.4, these elements were not presented in order. This made it difficult to identify how the Slider or Tab elements were grouped, especially for Fragments with many elements.
 
@@ -10,7 +10,7 @@ When you edit your Slider or Tab Fragment in the [Content Page Editor](../../cre
 
 Starting with Liferay DXP 7.4, the Slider and Tab Fragments show their elements in order. Additionally, Liferay DXP 7.4 includes the new `data-lfr-priority` HTML attribute to set the order of elements in a Fragment. Elements with a lower `data-lfr-priority` value have precedence in the Selection list, independently of their order in the HTML code.
 
-## Customize the Order of Elements in the Slider Fragment
+## Customizing the Order of Elements in the Slider Fragment
 
 1. Go to *Site Administration* &rarr; *Design* &rarr; *Fragments*.
 
@@ -66,7 +66,7 @@ Starting with Liferay DXP 7.4, the Slider and Tab Fragments show their elements 
        You don't need to edit other parts of the Fragment's code, like JavaScript, CSS, or configuration.
     ```
 
-## Verify the New Order of Elements in the Content Page Editor
+## Verifying the New Order of Elements in the Content Page Editor
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 
