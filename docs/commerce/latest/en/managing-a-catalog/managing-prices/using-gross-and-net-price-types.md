@@ -1,6 +1,6 @@
 # Using Gross and Net Price Types
 
-With Liferay Commerce, you can use either the Gross or Net price type for calculating promotions and [discounts](../../promoting-products/introduction-to-discounts.md). This setting is configured for [Price Lists](../managing-price/creating-a-price-list.md) and [Channels](../../starting-a-store/channels/introduction-to-channels.md).
+With Liferay Commerce, you can use either the Gross or Net price type for calculating promotions and discounts. This setting is configured for [Price Lists](../managing-prices/creating-a-price-list.md) and [Channels](../../starting-a-store/channels/introduction-to-channels.md).
 
 ## Setting the Price List's Price Type
 

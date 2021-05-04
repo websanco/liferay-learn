@@ -26,7 +26,7 @@ The Base Promotion List stores base promotional price entries for all Product SK
 
 ### Price Lists
 
-Custom Price Lists store price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and can include all or only some of a Catalog's Products. Price List entries override an SKU's base price for eligible customers. You also define [Price Modifiers]() to modify specific price entries. See [Creating a Price List](./creating-a-price-list.md) for more information.
+Custom Price Lists store price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and can include all or only some of a Catalog's Products. Price List entries override an SKU's base price for eligible customers. You also define [Price Modifiers](./using-price-modifiers.md) to modify specific price entries. See [Creating a Price List](./creating-a-price-list.md) for more information.
 
    ![Use custom Price Lists to store more targeted price entries.](./introduction-to-pricing/images/04.png)
 

@@ -1,6 +1,6 @@
-# Adding Tiered Pricing
+# Using Price Tiers
 
-With Liferay Commerce, you can use *Tiered Pricing* to offer price reductions based on the quantity of a product ordered. Prices set in this way take precedence for associated users if the specified minimum quantity is met.
+With Liferay Commerce, you can use *Price Tiers* to offer price reductions based on the quantity of a product ordered. Prices set in this way take precedence for associated users if the specified minimum quantity is met.
 
 Follow these steps to add tiered pricing to an existing Price List:
 
@@ -8,12 +8,12 @@ Follow these steps to add tiered pricing to an existing Price List:
 
 1. Click on the desired *Price List*, and go to the *Entries* tab.
 
-1. Click on the desired entry.
+1. Click on the desired price entry.
 
 1. Use the radio button in the *Price Tiers* section to select either *Bulk Pricing* or *Tiered Pricing*.
 
    ```note::
-      While both tier price options are configured in the same way, they apply prices differently. *Bulk Pricing* applies the same tier price to all items in qualifying bulk orders, while *Tiered Pricing* applies different prices to order items according to defined pricing tiers.      
+      While both price tier options are configured in the same way, they apply prices differently. *Bulk Pricing* applies the same tier price to all items in qualifying bulk orders, while *Tiered Pricing* applies different prices to order items according to defined pricing tiers.      
    ```
 
 1. Click the *Add* button (![Add icon](../../images/icon-add.png)).
@@ -28,13 +28,13 @@ Follow these steps to add tiered pricing to an existing Price List:
       You can set different discount levels that are applied on top of each other and modify the price. If there are two discounts on the same level (e.g., L1), the algorithm applies the better of the two. However, if there are two discounts on different levels (e.g., L1 and L2) the algorithm applies both.
    ```
 
-   ![Add a tiered pricing entry.](./adding-tiered-pricing/images/02.png)
+   ![Add a tiered pricing entry.](./using-price-tiers/images/02.png)
 
 1. Determine when the new price tier takes effect, as well as if and when it expires.
 
 1. Click on *Submit*, and then click on *Save* in the *Edit Price* window.
 
-   ![Add a tiered pricing entry.](./adding-tiered-pricing/images/03.png)
+   ![Add a tiered pricing entry.](./using-price-tiers/images/03.png)
 
 When finished, click on *Publish* for the selected Price List to make your changes live, or click on *Save as Draft* to publish them at a later time.
 
@@ -51,7 +51,7 @@ When finished, click on *Publish* for the selected Price List to make your chang
     * **Promo Price**: (leave it blank)
     * *Minimum Quantity*: 20 (This is the minimum quantity needed to receive the price for bulk quantity.)
 
-        ![Add a tiered pricing entry](./adding-tiered-pricing/images/01.png)
+        ![Add a tiered pricing entry](./using-price-tiers/images/01.png)
 
 1. Click Save.
 

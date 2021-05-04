@@ -1,10 +1,26 @@
 # Adding Products to a Price List
 
-> Commerce 2.1 and Below
+Once you've created a [Price List](./creating-a-price-list.md), create price entries to add Product SKUs to it. These entries are used when determining a Product's unit price and override an SKU's base price for eligible customers.
+
+Follow these steps to add price entries to a Price List for Product SKUs:
+
+1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
+
+1. Click on the *Price List* you want to configure, and go to the *Entries* tab.
+
+1. Use the provided search bar to locate the desired products, and then click on *Select* to add them to the selected Price List.
+
+   When searching for products, you can use an SKU or keywords and phrases. Using a keyword or phrase returns all the applicable products by their SKU.
+
+   ![Search for your products by SKU, keyword, or phrase.](./adding-products-to-a-price-list/images/04.png)
+
+1. Click on *Publish* to populate the Price List.
+
+## Commerce 2.1 and Below
 
 Once you have a [price list](./creating-a-price-list.md) created, you can add products to it. This article describes two ways to add products to a price list. Prices that are set via a Price List will take precedence over prices set directly against a given SKU for the associated users.
 
-## Adding Products to a Price List Through the Price Lists Menu
+### Adding Products to a Price List Through the Price Lists Menu
 
 When adding a large number of existing products to a new price list, populate the price list quickly using the following method:
 
@@ -25,7 +41,7 @@ When adding a large number of existing products to a new price list, populate th
 
 The product is now added to the price list. Repeat as necessary.
 
-## Adding Products to a Price List Through the Products Menu
+### Adding Products to a Price List Through the Products Menu
 
 When creating a new product, you can easily add it to an existing price list using this method:
 
@@ -50,4 +66,4 @@ The product (_Premium Brake Fluid_) is now added to the price list (_VIP Custome
 ## Additional Information
 
 * [Creating a Price List](./creating-a-price-list.md)
-* [Adding Tiered Pricing](./adding-tiered-pricing.md)
+* [Using Price Tiers](./using-price-tiers.md)
