@@ -5,8 +5,8 @@ Drop zones are integral to building your Content Pages. With them, you can creat
 Follow these steps to define a drop zone:
 
 1. Go to *Site Administration* &rarr; *Design* &rarr; *Fragments*.
-1. Under the *Collections* area, select the Collection with the Fragment you want to edit.
-1. Click on the Fragment's *Actions* (![Action](./../../../images/icon-actions.png)) button and select *Edit* to open the [Fragments Editor](./using-the-fragments-editor.md).
+1. Under Collections, select the Collection with the Fragment you want to edit.
+1. Click the Fragment's *Actions* (![Action](./../../../images/icon-actions.png)) button and select *Edit* to open the [Fragments Editor](./using-the-fragments-editor.md).
 1. In the HTML code area, add the `<lfr-drop-zone></lfr-drop-zone>` label to define a drop zone within a Fragment.
 
    ```important::
@@ -27,7 +27,7 @@ The following code excerpt shows how to use this label to define drop zones with
 
 This image shows the result in the Content Page editor sidebar:
 
-![The Tab Fragment shows four different drop zones in the Content Page editor](./defining-fragment-drop-zones/images/04.png)
+![The Tab Fragment shows four different drop zones in the Content Page editor.](./defining-fragment-drop-zones/images/04.png)
 
 Once defined, you can drag and drop any Fragment or widget into the drop zone.
 
@@ -37,9 +37,9 @@ Once defined, you can drag and drop any Fragment or widget into the drop zone.
 
 If you want to identify the drop zones, include the `data-lfr-drop-zone-id` HTML attribute in the `<lfr-drop-zone></lfr-drop-zone>` label. The Fragments you create in Liferay DXP 7.4+ include the `data-lfr-drop-zone-id` HTML attribute by default.
 
-![Comparison between the drop zones layout in the Content Page Editor between Liferay DXP 7.3 and Liferay DXP 7.4+](./defining-fragment-drop-zones/images/03.png)
+![The drop zones layout in the Content Page Editor is different in Liferay DXP 7.3 and Liferay DXP 7.4+.](./defining-fragment-drop-zones/images/03.png)
 
-The following code excerpt shows how to use the `data-lfr-drop-zone-id` attribute to identify drop zones within the Tabs Fragment:
+The following example demonstrates how to use the `data-lfr-drop-zone-id` attribute to identify drop zones within the Tabs Fragment:
 
    ```html
       <div class="tab-panel">
@@ -52,7 +52,7 @@ The following code excerpt shows how to use the `data-lfr-drop-zone-id` attribut
    ```
 
    ```tip::
-      You can configure the order of the drop zones and other elements in the Fragment. For more information, read `Setting the Order of Elements in a Fragment <./setting-the-order-of-elements-in-a-fragment.md>`_.
+      You can configure the order of the drop zones and other elements in the Fragment. For more information, see `Setting the Order of Elements in a Fragment <./setting-the-order-of-elements-in-a-fragment.md>`_.
    ```
 
 ## Additional Information
