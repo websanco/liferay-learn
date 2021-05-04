@@ -21,6 +21,7 @@ To access your Personal Site pages, follow these steps:
     ![You access your Personal Site pages from the Personal Menu.](./managing-personal-sites/images/03.png)
 
 1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under the Site Menu.
+
 1. Manage the pages as you would any other [Widget Page](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
 
     ```tip::
