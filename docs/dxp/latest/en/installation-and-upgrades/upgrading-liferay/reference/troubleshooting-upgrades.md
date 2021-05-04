@@ -1,6 +1,6 @@
 # Troubleshooting Upgrades
 
-Skipping an upgrade step or creating custom references to the Liferay database, can cause upgrade issue. The following questions and answers address address these situations.
+Skipping an upgrade step or creating custom references to the Liferay database, can cause upgrade issues. The following questions and answers address some common situations.
 
 ## How should I handle an upgrade exception caused by a foreign key constraint? 
 
@@ -17,7 +17,7 @@ com.liferay.portal.kernel.upgrade.UpgradeException: com.liferay.portal.kernel.up
 
 The last `UpgradeException` message indicates that the upgrade can't rename a foreign key constraint to the `user_` table.
 
-If you have custom tables that use foreign keys associated with Liferay tables, replace the foreign keys with [Model Listeners](https://help.liferay.com/hc/en-us/articles/360029122631-Model-Listeners) that update your custom tables based on Liferay model changes. For example, if your custom table currently has a foreign key referencing the `user_` table, create a Model Listener that updates your custom table when `User` instances are added or deleted.
+If you have custom tables that use foreign keys associated with Liferay tables, replace the foreign keys with [Model Listeners](../../../liferay-internals/extending-liferay/creating-a-model-listener.md) that update your custom tables based on Liferay model changes. For example, if your custom table currently has a foreign key referencing the `user_` table, create a Model Listener that updates your custom table when `User` instances are added or deleted.
 
 Here's how to do the replacement:
 
