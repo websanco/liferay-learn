@@ -4,9 +4,9 @@
 
 ![View, create, and manage Dispatch Tasks.](./dispatch-reference/images/01.png)
 
-The *Dispatch Triggers* tab lists all Dispatch Tasks added to the Liferay instance.
+The Dispatch Triggers tab lists all Dispatch Tasks added to the Liferay instance.
 
-Click the *Add* button (![Add Button](../../images/icon-add.png)) to create a Dispatch Task using a Dispatch Task Executor template.
+Click *Add* (![Add Button](../../images/icon-add.png)) to create a Dispatch Task using a Dispatch Task Executor template.
 
 Once created, the following fields are displayed for each Dispatch Task:
 
@@ -20,7 +20,7 @@ Once created, the following fields are displayed for each Dispatch Task:
 | Status | The Status of the Dispatch Task's most recent execution (e.g., *Successful*, *Failed*) |
 | Run Now | Button for manually executing the Dispatch Task |
 
-From here, click on a Dispatch task to access the following details and configuration options.
+From here, click a Dispatch task to access the following details and configuration options.
 
 ### Details Tab
 
@@ -51,7 +51,7 @@ Includes *Start Date*, *Runtime*, *Trigger*, and *Status*.
 | Trigger | The name of the Dispatch Task that was executed |
 | Status | The status of the execution (e.g., *Successful*, *Failed*) |
 
-Click on a Log entry to also see any *Errors* and *Output* from the execution.
+Click on a Log entry to also see any errors and output from the execution.
 
 ### Dispatch Trigger Tab
 
