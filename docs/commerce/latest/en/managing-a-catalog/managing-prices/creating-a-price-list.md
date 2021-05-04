@@ -1,6 +1,6 @@
 # Creating a Price List
 
-Price Lists provide a convenient way to set alternate prices for a product, as well as alternate currencies for selected Accounts, Account Groups, and Channels.
+Price Lists are entities for creating and storing SKU price entries that target specific Accounts and Channels. These entries are used when determining a Product's unit price and override or modify Base Price List entries for eligible customers. You can also define custom [Price Modifiers](./using-price-modifiers.md) for each Price List.
 
 Follow these steps to create a new Price List:
 
@@ -8,7 +8,7 @@ Follow these steps to create a new Price List:
 
 1. Click on the *Add* button (![Add icon](../../images/icon-add.png)).
 
-1. Enter a *Name*, *Catalog*, and *Currency* for the new Price List. While its name and currency can be changed at any time after creation, its catalog cannot be changed.
+1. Enter a *Name*, *Catalog*, and *Currency* for the new Price List. While its name and currency can be changed at any time after creation, its Catalog cannot be changed.
 
    ```note::
       Creating a Price List requires your Commerce instance to have at least one `Catalog <../catalogs/creating-a-new-catalog.html>`_.
@@ -20,11 +20,11 @@ Once created, you can [add Product price entries](./adding-products-to-a-price-l
 
 When finished, click on *Publish* to make your changes live, or *Save as Draft* to publish them at a later time.
 
-![Configure the newly created price list.](./creating-a-price-list/images/02.png)
-
 ```note::
-   When a catalog is first created, a Base Price List is automatically created to store the base price for each of its entries. For these Price Lists, only the *Details* and *Entries* tabs are available. Eligibility and price modifier settings are only available to subsequently created Price Lists.
+   When a Catalog is first created, a Base Price List is automatically created to store the base price for each of its entries. For these Price Lists, only the Details and Entries tabs are available. The Eligibility and Price Modifier tabs are only available to subsequently created Price Lists.
 ```
+
+![Configure the newly created price list.](./creating-a-price-list/images/02.png)
 
 ## Commerce 2.1 and Below
 
