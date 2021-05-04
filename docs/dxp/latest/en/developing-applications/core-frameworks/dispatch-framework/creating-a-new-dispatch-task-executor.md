@@ -1,6 +1,6 @@
 # Creating a New Dispatch Task Executor
 
-Liferay Dispatch is a flexible framework built on top of Liferay's Scheduler Engine that you can use to add, execute, and schedule tasks across a Liferay instance. Each Dispatch Task is created using an implementation of the `DispatchTaskExecutor` interface and can be customized to execute any logic. While Liferay DXP provides multiple out-of-the-box executors, you can create your own. Once created and deployed, you can use it to add Dispatch Tasks to a Liferay instance.
+Each Dispatch Task is created by implementing the `DispatchTaskExecutor` interface and can execute any logic. While Liferay DXP provides multiple out-of-the-box executors, you can create your own. Once created and deployed, you can add Dispatch Tasks to a Liferay instance.
 
 Follow these steps to create your own implementation of the `DispatchTaskExecutor` interface:
 
@@ -10,27 +10,27 @@ Follow these steps to create your own implementation of the `DispatchTaskExecuto
 
 1. **OSGi Properties**: Add the following properties to the `@Component` annotation.
 
-   * `dispatch.task.executor.name`: this property defines the string used for the executor's name in the Dispatch UI. language key value that is used to resolve Dispatch Task Executor type localized name in the Dispatch UI.
+   * `dispatch.task.executor.name`: defines the string used for the executor's name in the Dispatch UI. You can use a language key value to resolve Dispatch Task Executor type localized name in the Dispatch UI.
 
       ```note::
          If you want your Dispatch Task to use localized names, add a language key value for the ``dispatch.task.executor.name`` property to the module’s ``resources/content/Language.properties`` file.
       ```
 
-   * `dispatch.task.executor.type`: this property defines a unique `type` value used to match the right Dispatch Task Executor and Dispatch Trigger.
+   * `dispatch.task.executor.type`: defines a unique `type` value to match the right Dispatch Task Executor and Dispatch Trigger.
 
       ```note::
-         Each value must be unique to ensure the correct executor is used. If a value is not unique, an error is displayed in the log on startup indicating which executors have the same property value.
+         Values must be unique to ensure the correct executor matches. If a value is not unique, the log displays an error on startup indicating which executors have the same property value.
       ```
 
-1. [**`DispatchTaskExecutor`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java): Implement the `DispatchTaskExecutor` interface, or extend an implementation of it (e.g., ``BaseDispatchTaskExecutor``).
+1. [**`DispatchTaskExecutor`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java): Implement the `DispatchTaskExecutor` interface or extend an implementation of it (e.g., ``BaseDispatchTaskExecutor``).
 
       ```important::
-         Any implementation of the `DispatchTaskExecutor` interface must handle status logs for Dispatch tasks. This is because the Dispatch framework depends on those logs to control the concurrent execution of tasks.
+         Implementations of the `DispatchTaskExecutor` interface must handle status logs for Dispatch tasks, because the Dispatch framework depends on those logs to control the concurrent execution of tasks.
          
          For your convenience, Liferay provides the ``BaseDispatchTaskExecutor`` abstract `class <https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/BaseDispatchTaskExecutor.java>`_ that logs the Dispatch task's status as ``IN PROGRESS``, ``SUCCESSFUL``, or ``FAILED``.
       ```
 
-1. **Methods**: If you're implementing the `DispatchTaskExecutor` interface directly, override its `execute()` method to implement custom logic. However, if you're extending the ``BaseDispatchTaskExecutor`` abstract class, override its `doExecute()` method.
+1. **Methods**: If you're implementing the `DispatchTaskExecutor` interface directly, override its `execute()` method to implement custom logic. If instead you're extending the ``BaseDispatchTaskExecutor`` abstract class, override its `doExecute()` method.
 
    ```note::
       The ``getName()`` method is deprecated and replaced by the ``dispatch.task.executor.name`` property.
@@ -40,7 +40,7 @@ Follow these steps to create your own implementation of the `DispatchTaskExecuto
       You can use the ``dispatchTrigger.getDispatchTaskSettings()`` method to fetch properties set in the Dispatch Task's Settings editor.
    ```
 
-The following tutorial uses a sample module to demonstrate how to create and deploy a custom Dispatch Task Executor to a Liferay instance.
+The following sample module demonstrates how to create and deploy a custom Dispatch Task Executor to a Liferay instance.
 
 ## Deploying the Sample Dispatch Task Executor
 
@@ -62,7 +62,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    unzip liferay-s7a3.zip -d liferay-s7a3
    ```
 
-1. Run the following `gradlew` command to build the JAR file and deploy it to your new Docker container:
+1. Run this `gradlew` command to build the JAR file and deploy it to your new Docker container:
 
    ```bash
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
@@ -91,7 +91,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    INFO [liferay/dispatch/executor-2][S7A3DispatchTaskExecutor:30] Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)
    ```
 
-   You can also click on the Dispatch Task and go to the *Logs* tab to see a list of all previous runs.
+   You can also click the Dispatch Task and go to the *Logs* tab to see a list of all previous runs.
 
    ![View and manage logs for your Dispatch Task.](./creating-a-new-dispatch-task-executor/images/03.png)
 
