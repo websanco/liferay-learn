@@ -1,14 +1,18 @@
 # Introduction to Pricing
 
-Liferay Commerce provides a robust pricing system that you can use to fine-tune Product prices. With it, you can define multiple price entries for a single Product SKU and determine which Accounts, Account Groups, and Channels are eligible to receive each price. If multiple price entities exist for the same SKU, Commerce uses the highest ranking, applicable entities for price calculations. The following article provides an overview of Commerce pricing and how Product and order prices are determined for customers.
+Liferay Commerce provides a robust pricing system that you can use to fine-tune Product prices. With it, you can define multiple price entries for a single Product SKU and determine which Accounts, Account Groups, and Channels are eligible to receive each price. If multiple price entities exist for the same SKU, Commerce's pricing engine calculates which entities should be used for each Channel customer.
+
+The following article provides an overview of Commerce pricing and how Product and order prices are determined for customers.
 
 * [Components of Commerce's Pricing System](#components-of-commerces-pricing-system)
 * [How Commerce Calculates Product Prices](#how-commerce-calculates-product-prices)
 * [How Commerce Calculates Order Prices](#how-commerce-calculates-order-prices)
 
-## Components of Commerce's Pricing System
+```note::
+   The following overview describes the Commerce Pricing Engine v2.0+. This engine version is the default algorithm used for Commerce 3.0+ and DXP 7.3.x+. However, Commerce 2.1.x and earlier versions use Commerce's `Pricing Engine v1.0 <#pricing-engine-v10-reference>`_ by default. If desired, you can `change the Pricing Engine version <#enabling-pricing-engine-v20-in-commerce-21x>`_ used for the instance.
+```
 
-> For Pricing Engine v2.0
+## Components of Commerce's Pricing System
 
 In Commerce, every Product is stored in a Catalog, and each Catalog has its own default [Base Price List](#base-price-list) and [Base Promotion List](#base-promotion-list). These lists are used to store base price entries for all Product SKUs contained in a Catalog and are made available to all customers. You can also create custom [Price Lists](#price-lists) and [Promotion Lists](#promotion-lists) to define more targeted and configurable price entities. As part of each entry, you can also define [Price Tiers](#price-tiers) that set special prices for Products based on quantity. Finally, create [Discounts](#discounts) that are applied on top of price entries without overriding them.
 
@@ -32,7 +36,7 @@ Custom Price Lists store price entries for specific Products and are made availa
 
 ### Promotion Lists
 
-Custom Promotion Lists store sale price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and only include manually selected Products. When applied, they override an SKU's other price entries (e.g., base prices, tiered prices) for eligible users. In these lists, you also define [Price Modifiers]() to modify specific price entries. While active, both the original price and promotional price appear together on the Product page so that buyers see the markdown. See [Creating a Promotion](./../../promoting-products/creating-a-promotion.md) for more information.
+Custom Promotion Lists store sale price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and only include manually selected Products. When applied, they override an SKU's other price entries (e.g., base prices, tiered prices) for eligible users. In these lists, you also define [Price Modifiers](./using-price-modifiers.md) to modify specific price entries. While active, both the original price and promotional price appear together on the Product page so that buyers see the markdown. See [Creating a Promotion](./../../promoting-products/creating-a-promotion.md) for more information.
 
    ![Use custom Promotion Lists to store targeted sale price entries.](./introduction-to-pricing/images/05.png)
 
@@ -48,10 +52,8 @@ Discounts are applied on top a price and modify it without superseding it. They 
 
 ## How Commerce Calculates Product Prices
 
-> For Pricing Engine v2.0
-
 Commerce's pricing algorithm determines how each pricing component contributes to an SKU's price in a Channel. When the algorithm receives a price request, Commerce first calculates the Product's *unit price* and *promo price*. These prices are then used to determine the *final price* made available to the Channel customer.
-<!--TASK: Add details about net/gross price types and how taxes are calculated-->
+<!--TASK: Consider adding details about net/gross price types and how taxes are calculated-->
 
 ### Calculating an SKU's Unit Price
 
@@ -59,9 +61,9 @@ When calculating an SKU's unit price, Commerce first searches for any Price List
 
 * If an applicable Price List exists, then Commerce searches its price entries for the Product SKU.
 
-  * If an entry for the SKU exists, the algorithm applies any existing price modifiers to it and uses the total/result<!--w/c--> for the SKU's unit price.
+  * If an entry for the SKU exists, the algorithm applies any existing price modifiers to it and uses the total for the SKU's unit price.
 
-  * If no entry for the SKU exists, the algorithm applies any existing price modifiers to the SKU's Base Price List entry and uses the total/result<!--w/c--> for the SKU's unit price.
+  * If no entry for the SKU exists, the algorithm applies any existing price modifiers to the SKU's Base Price List entry and uses the total for the SKU's unit price.
 
 * If no applicable Price List exists, the SKU's Base Price List entry is used for the SKU's unit price.
 
@@ -73,17 +75,15 @@ When calculating an SKU's unit price, Commerce first searches for any Price List
 
 After calculating the SKU's unit Price, Commerce calculates the SKU's promo price. This calculation is essentially the same as the process for calculating the unit price with two exceptions:
 
-* If an applicable Promotion List does not have a price entry for the SKU, any existing price modifiers are applied to the unit price, and the total/result<!--w/c--> is used for the promo price.
+* If an applicable Promotion List does not have a price entry for the SKU, any existing price modifiers are applied to the unit price, and the total is used for the promo price.
 
 * If there is not applicable Promotion List and the Base Promotion List is set to 0, the promo price
 
 ### Calculating an SKU's Final Price
 
-Once the unit and promo prices have been calculated, Commerce compares the two prices and selects the better of the two. The pricing algorithm then searches for all applicable discounts and applies them to the best SKU price. The total/result<!--w/c--> is the SKU's final price--the SKU price used by the customer to purchase the product.
+Once the unit and promo prices have been calculated, Commerce compares the two prices and selects the better of the two. The pricing algorithm then searches for all applicable discounts and applies them to the best SKU price. The total is the SKU's final price--the price used by the customer to purchase the product.
 
 ## How Commerce Calculates Order Prices
-
-> For Pricing Engine v2.0
 
 When calculating order prices, Commerce first retrieves the shipping costs and applies any discounts that target shipping.
 
