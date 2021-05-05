@@ -2,17 +2,17 @@
 
 > Availability: Liferay DXP 7.3+.
 
-Liferay DXP [uses responsive design](./building-a-responsive-site.md) by default, but there are situations where you want additional and more granular control of the content layout. Using the [Grid Fragment](../../creating-pages/building-and-managing-content-pages/building-content-pages.md#configuring-the-grid-fragment) in your Content Page, you have a precise control of the content layout for the different screen sizes in desktop and mobile devices. When you [edit a Content Page](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md), you can use the Grid Fragment (A) to outline your content and define customized layout styles (B) for the different target devices in the Device Display section (C). For example, you can customize the number of modules per row or the grid padding options for smartphone-size screens only.
+Liferay DXP [uses responsive design](./building-a-responsive-site.md) by default, but there are situations where you want additional and more granular control of the content layout. By using the [Grid Fragment](../../creating-pages/building-and-managing-content-pages/building-content-pages.md#configuring-the-grid-fragment) in your Content Page, you gain precise control of the content layout for the different screen sizes in desktop and mobile devices. When you [edit a Content Page](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md), you can use the Grid Fragment (A) to outline your content and define customized layout styles (B) for the different target devices in the Device Display section (C). For example, you can customize the number of modules per row or the grid padding options for smartphone-size screens only.
 
 ![Using the Grid Fragment you can customize the layout options for different screen sizes.](./building-responsive-layouts-with-the-grid-fragment/images/04.png)
 
-Consider the following example. The 'Services' section of your insurance company website provides potential customers an overview of the services you offer. This section uses a series of Card Fragments (A) inside a three-modules Grid Fragment (B), with information for the three different services in this example.
+Consider the following example. The 'Services' section of your insurance company website provides potential customers an overview of the services you offer. This section uses a series of Card Fragments (A) inside a three-modules Grid Fragment (B), with information for three different services. 
 
 ![You can customize your content layout combining the Grid Fragments with other Fragments.](./building-responsive-layouts-with-the-grid-fragment/images/01.png)
 
-When you access this 'Services' Content Page from your computer, the grid layout shows the expected result. However, when you access the page from your smartphone, the result is not optimal because of the amount of text on each Card Fragment (C) and the grid's padding size (D). Using the Grid Fragment Styles, you can now customize the number of cards you want to show on each module and modify other style properties for the best viewing experience on different screen sizes.
+When you access this 'Services' Content Page from your computer, the grid layout shows the expected result. However, when you access the page from your smartphone, the result is not optimal because of the amount of text on each Card Fragment (C) and the grid's padding size (D). Using the Grid Fragment Styles, you can customize the number of cards to show on each module and modify styles for the best viewing experience on different screen sizes.
 
-![The default grid layout style in our example is not optimized for the smartphone-size screen.](./building-responsive-layouts-with-the-grid-fragment/images/02.png)
+![The default grid layout style is not optimized for a smartphone-sized screen.](./building-responsive-layouts-with-the-grid-fragment/images/02.png)
 
 ## Modifying the Layout of the Grid Fragment
 
@@ -23,7 +23,7 @@ When you access this 'Services' Content Page from your computer, the grid layout
 
     ![Select the screen size you want to customize in the Device Display section.](./building-responsive-layouts-with-the-grid-fragment/images/06.png)
 
-1. In the Editing Sidebar, under the *Styles* column, select the preferred layout options for the screen size. For example, you may decide to use one module per row for the *Portrait Phone* layout option.
+1. In the Editing Sidebar, under the *Styles* column, select the preferred layout options for the screen size. For example, one module per row works much better for the *Portrait Phone* layout option.
 1. Click *Publish*.
 1. Optionally, click on the Simulation (![Simulation](../../../images/icon-simulation.png)) button on the main toolbar to see your changes on the target device.
 

@@ -260,7 +260,7 @@ Content Pages, like Widget Pages, are built by dragging and dropping elements on
 
 ![A 3 Column and 1 Column layout stacked on top of each other.](./building-content-pages/images/21.png)
 
-**Components** are small design elements or pieces that add functionality to the Page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the Page inside a Layout. If you add a component outside an existing Layout, a one-column layout is added automatically to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece. 
+**Components** are small design elements that add functionality to the Page. A component might be an image with formatting or a block of text with styling pre-applied. Components must be added to the Page inside a Layout. If you add a component outside an existing Layout, a one-column layout is added automatically to contain the Component. While Sections should be complete by themselves, Components work together to build pages piece by piece. 
 
 ![Here are several of Liferay's out of the box components arranged in the layout you saw previously.](./building-content-pages/images/22.png)
 
