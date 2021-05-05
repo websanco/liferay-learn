@@ -20,14 +20,14 @@ Here’s how to view Segment profiles:
 
     * Membership: Population fluctuation over time.
     * Topics of interest: Topics mentioned in the pages and assets the Segment visits most.
-    * Distribution: Demographics based on Individual properties
+    * Distribution: Based on Individual attributes.
     * The Segment’s profile appears, showing its Overview panel.
 
 ## Overview Tab
 
 The Overview tab’s main area shows membership growth. As a marketer, you might want to generate more customer prospects in a specific industry. If you create a Dynamic Segment with that industry as criterion, you can view its membership histogram to monitor customer growth in that industry.
 
-The Overview tab also gives you a glimpse of the Segment’s criteria, interests, and demographics. Each one links to more details, or you can click on their respective tabs.
+The Overview tab also gives you a glimpse of the Segment’s criteria, interests, and distribution. Each one links to more details, or you can click on their respective tabs.
 
 ### Segment Membership Panel
 
@@ -35,7 +35,7 @@ The Segment Membership panel displays the breakdown of the segment for known and
 
 ![The Segment Membership panel shows a breakdown of your segment for the past 30 days.](./segments/images/02.png)
 
-To see a list of known individuals of the segment click on the *View Members* link at the bottom of the panel. Or click on the *Membership* tab at the top of the page.
+To see a list of known individuals of the segment click on the *View Members* link at the bottom of the panel. Alternatively, click on the *Membership* tab at the top of the page.
 
 ### Segment Composition Panel
 
@@ -59,7 +59,7 @@ The Top Interests panel shows a list of the most popular topics of interest in t
 
 ![The Top Interests panel shows a list of most popular topics.](./segments/images/05.png)
 
-To see the full list of interest topics click on the *View All Interests* link at the bottom of the panel. Or click on the *Interests* tab at the top of the page.
+To see the full list of interest topics click on the *View All Interests* link at the bottom of the panel. Alternatively, click on the *Interests* tab at the top of the page.
 
 ### Breakdown Panel
 
@@ -67,7 +67,7 @@ The Breakdown panel displays distribution information based on selected attribut
 
 ![The Breakdown panel shows the distribution of the segment members based on selected attributes.](./segments/images/06.png)
 
-Up to 10 different attributes are shown on this panel. To see the fill list of breakdowns click on the *Explore Breakdown* link.
+Up to 10 different attributes are shown on this panel. To see the fill list of breakdowns click on the *Explore Breakdown* link at the bottom of the panel. Alternatively, click the *Distribution* tab at the top of the page.
 
 ## Membership Tab
 
@@ -85,7 +85,7 @@ See Customer Insights for details on the Interests insight.
 
 ## Distribution Tab
 
-The Distribution tab breaks down the Segment by a demographic property.
+The Distribution tab breaks down the Segment by an individual attribute.
 
 For example, select a property such as Job Title to dissect your Segment further. A bar chart appears, displaying a distribution of the Segment member population by Job Title. As a marketer, you could use this information to identify a subset of the Segment to focus a marketing campaign on.
 
