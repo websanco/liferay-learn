@@ -16,7 +16,7 @@ const TRUNCATE_LENGTH = 50;
  * https://github.com/sphinx-doc/sphinx/blob/9e1b4a8f1678e26670d34765e74edf3a3be3c62c/sphinx/themes/basic/static/doctools.js#L261-L267
  */
 function hideSearchWords() {
-	Documentation.hideSearchWords();
+	Documentation.hideSearchWords(); // eslint-disable-line
 }
 
 function initHighlightingAlert() {
@@ -28,6 +28,7 @@ function initHighlightingAlert() {
 		);
 
 		if (highlightAlertElement) {
+
 			// Add text being highlighted
 
 			const textMatchElement = document.getElementById(
