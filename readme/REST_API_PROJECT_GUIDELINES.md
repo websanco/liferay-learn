@@ -119,7 +119,7 @@ REST API client projects are similar to `liferay-learn` Java projects except the
     ```bash
     tr -cd a-z1-9 < /dev/urandom \
      | head -c 1000 \
-     | sed 's/.*\([a-z]\).*\([1-9]\).*\([a-z]\).*\([1-9]\).*/\1\2\3\4\n/
+     | sed 's/.*\([a-z]\).*\([1-9]\).*\([a-z]\).*\([1-9]\).*/\1\2\3\4\n/'
     ```
 
     Check the branch for any existing projects that already use the name. For example,
