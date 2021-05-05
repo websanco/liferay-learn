@@ -27,21 +27,55 @@ Here’s how to view Segment profiles:
 
 The Overview tab’s main area shows membership growth. As a marketer, you might want to generate more customer prospects in a specific industry. If you create a Dynamic Segment with that industry as criterion, you can view its membership histogram to monitor customer growth in that industry.
 
-![The Segments Profile overview.](segments/images/02.png)
-
 The Overview tab also gives you a glimpse of the Segment’s criteria, interests, and demographics. Each one links to more details, or you can click on their respective tabs.
 
 ### Segment Membership Panel
 
+The Segment Membership panel displays the breakdown of the segment for known and anonymous individuals. It shows data for the previous 30 days. Place your mouse over the graph to see the breakdown at specific dates in the 30 days. 
+
+![The Segment Membership panel shows a breakdown of your segment for the past 30 days.](./segments/images/02.png)
+
+To see a list of known individuals of the segment click on the *View Members* link at the bottom of the panel. Or click on the *Membership* tab at the top of the page.
+
 ### Segment Composition Panel
+
+The Segment Composition panel shows the breakdown of active and known members versus the total individuals in the segment. For example, if the segment was created for interest in a specific topic this panel would show what percent of the segment was active in the past 30 days and what percent of the segment was known.
+
+![The Segment Composition panel shows a breakdown of your segment versus active and known.](./segments/images/03.png)
+
+Note, this panel is only displayed for dynamic segments.
 
 ### Segment Criteria Panel
 
+The Segment Criteria panel displays the criteria that was used to configure the segment. For example, a segment might be a dynamic segment of visitors who viewed a particular blog on your Site.
+
+![The Segment Criteria panel displays the configured criteria of the segment](./segments/images/04.png)
+
+To learn more about different segment criteria see [Creating Segments](./creating-segments.md).
+
 ### Top Interests Panel
+
+The Top Interests panel shows a list of the most popular topics of interest in the segment. This is based on the pages and assets that get the most visits. 
+
+![The Top Interests panel shows a list of most popular topics.](./segments/images/05.png)
+
+To see the full list of interest topics click on the *View All Interests* link at the bottom of the panel. Or click on the *Interests* tab at the top of the page.
 
 ### Breakdown Panel
 
+The Breakdown panel displays distribution information based on selected attributes of segment members.
+
+![The Breakdown panel shows the distribution of the segment members based on selected attributes.](./segments/images/06.png)
+
+Up to 10 different attributes are shown on this panel. To see the fill list of breakdowns click on the *Explore Breakdown* link.
+
 ## Membership Tab
+
+The Membership tab displays the same chart as the Segment Membership panel. It also presents a list of all known individuals in the segment.
+
+![The Membership tab shows a list of known individuals.](./segments/images/07.png)
+
+The name, email address, account name, and first seen date is given for known individuals. Use the search bar to search for specific individuals. 
 
 ## Interests Tab
 
