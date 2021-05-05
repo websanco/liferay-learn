@@ -19,7 +19,7 @@ Using *Experiences* you can customize your Content Page to different groups of u
        New Experiences are assigned to the *Anyone* Segment by default, and target all website visitors.
     ```
 
-1. On the *New Experience* dialog, under the *Languages* section, select [additional languages](./content-page-personalization.md#managing-experience-localization) you want to target with the Experience. For example, if your default Content Page language is en-US and you want to provide personalization for es-ES speakers, select this language as well.
+1. On the *New Experience* dialog, under the *Languages* section, select [additional languages](./content-page-personalization.md#managing-experience-localization) you want to target with the Experience. For example, if your default Content Page language is en-US and you want to provide a personalization for es-ES speakers, select this language as well.
 
     ![Select an existing Segment for the Experience and, opitonally, an additional language](./content-page-personalization/images/02.png)
 

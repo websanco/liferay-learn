@@ -44,6 +44,20 @@ In this example:
 - Authenticated users don't see the *Authenticated user* Experience, because the *No customization* Experience applies to the *Anyone* Segment and it's listed first.
 - Anyone not in the *Anonymous User* or *Authenticated User* Segments sees the *No customization* Experience because it targets *Anyone*.
 
+## Managing Experience Localization
+
+When you create a new Experience, you define the target language or languages for the Experience, in addition to the default language. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide users an Experience personalized on their own language. For example, if a user with the browser configured in the es-ES locale visits a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language that the user sees is es-ES.
+
+![In addition to the default language, you can define additional languages for the Experience.](./content-page-personalization/images/02.png)
+
+```note::
+   When a user visits a Page and there is an Experience targeted to the user's Segment but not localized into the user's language, the user sees the Experience in the default language.
+```
+
+You can add or remove languages from the Experience using the [Edit Experience](./creating-and-managing-experiences.md#managing-content-page-experiences) (![Edit Experience](../../../images/icon-edit.png)) button, except for the default language that is always selected. The language selector button for the Experience only shows the languages configured for that particular Experience.
+
+  ![The language selector button only shows the languages selected for the Experience.](./content-page-personalization/images/03.png)
+
 ## Content Page Experiences and A/B Testing
 
 When you [create an A/B Test](../../optimizing-sites/ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one or any other you have created.
