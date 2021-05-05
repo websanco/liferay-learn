@@ -146,7 +146,7 @@ By this point, the following steps should be completed:
 1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). This is typically `[Install Location]/WebSphere/AppServer/profiles/your-profile/liferay/osgi`.
 
 ```note::
-   A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
+   A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ## Installing Elasticsearch Archives
