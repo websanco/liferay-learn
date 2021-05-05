@@ -36,11 +36,11 @@ To better understand how the Experiences' precedence works, consider this exampl
 - *Authenticated User*: Applies to the *Authenticated User* Segment.
 - *No Customization*: Applies to the *Anyone* Segment.
 
-  ![The order of the experiences in the user interface determines their preference.](./content-page-personalization/images/06.png)
+  ![The order of the experiences in the user interface determines their precedence.](./content-page-personalization/images/06.png)
 
 In this example:
 
-- A non-authenticated user sees the Experience *Anonymous User* (the one with the _Active_ label). This user doesn't see the *Anonymous User Promotions* Experience because it appears below *Anonymous User*.
+- A non-authenticated user sees the *Anonymous User* Experience (the one with the *Active* label). This user doesn't see the *Anonymous User Promotions* Experience because it appears below *Anonymous User*.
 - Authenticated users don't see the *Authenticated user* Experience, because the *No customization* Experience applies to the *Anyone* Segment and it's listed first.
 - Anyone not in the *Anonymous User* or *Authenticated User* Segments sees the *No customization* Experience because it targets *Anyone*.
 
@@ -48,7 +48,11 @@ In this example:
 
 > Available: Liferay 7.4+.
 
-When you create a new Experience, you define the target language or languages for the Experience, in addition to the default language. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide users an Experience personalized on their own language. For example, if a user with the browser configured in the es-ES locale visits a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language that the user sees is es-ES.
+When you create a new Experience, you define its target language or languages, in addition to the default language. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide users an Experience personalized on their own language. For example, if the user language is configured as es-ES and they visit a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language they see is es-ES.
+
+  ```note::
+     Liferay DXP uses the user-configured language for authenticated users and, by default, the default Portal language for anonymous users.
+  ```
 
 You can configure the Experience using the languages available for your Site. To change the available Site languages, see [Site Localization](../../site-settings/site-localization.md).
 
