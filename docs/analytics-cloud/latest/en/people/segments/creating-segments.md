@@ -6,26 +6,27 @@ Follow these steps to create a Dynamic Segment:
 
 1. Click *Segments* in the navigation panel. A table with existing Segments appears.
 
-1. Click *Create Segment* → *Dynamic Segment*. The Create Individuals Segment screen appears for creating a Dynamic Segment.
+1. Click *Create Segment* &rarr; *Dynamic Segment*. The Create Individuals Segment screen appears for creating a Dynamic Segment.
 
 1. Click the *Edit* icon next to *Unnamed Segment*, and give your segment a name.
 
+    ![Give your new segment a name and begin selecting criteria.](creating-segments/images/01.png)
+
 1. To create your Segment's criteria, drag and drop them from the panel on the right to the canvas on the center of the screen. The selector menu at the top of the panel lets you select from these criteria types:
 
-    * **Individual Properties:** Properties that belong to a person (e.g., age, country, industry, etc.).
-    * **Account Properties:** Properties that belong to a Salesforce Account (e.g., account name, industry, website, etc.).
-    * **Interests:** Topics and content types that interest the person. For more information on interests in Analytics Cloud, see Customer Insights.
-    * **Session Properties:** Properties that belong to a person's web session (e.g., browser, geolocation, etc.).
     * **Web Behaviors:** Actions taken by a person (e.g., submitted a form, viewed a blog, etc.).
+    * **Individual Attributes:** Attributes that belong to a person (e.g., age, country, industry, etc.).
+    * **Account Attributes:** Attributes that belong to a Salesforce Account (e.g., account name, industry, website, etc.).
+    * **Interests:** Topics and content types that interest the person. For more information on interests in Analytics Cloud, see Customer Insights.
+    * **Session Attributes:** Attributes that belong to a person's web session (e.g., browser, geolocation, etc.).
+    * **Organization Attributes:** Attributes that belong to an organization (e.g. name, hierarchy, type, etc.).
 
-    ![By default anonymous users are not included in Segments.](creating-segments/images/01.png)
+    ![By default anonymous users are not included in Segments.](creating-segments/images/02.png)
 
     ```note::
-       Anonymous users are excluded from Segments by default. To include them, enable the Include Anonymous toggle. Note, however, that criteria with individual and/or account properties will exclude anonymous users regardless of your setting here. Such properties only apply to known users.
+       Anonymous users are excluded from Segments by default. To include them, enable the Include Anonymous toggle. Note, however, that criteria with individual and/or account attributes will exclude anonymous users regardless of your setting here. Such attributes only apply to known users.
        
     ```
-
-1. Click Save Segment when you're finished.
 
 ### Creating Criteria
 
@@ -56,7 +57,7 @@ Each criterion that you add contains fields that let you customize it to your ne
 
 For example, the `birthDate` criterion's first field is a selector menu that contains the options is before, is, and is after. The second field is a date field. You can therefore, for example, specify a criterion in which only Individuals with a birthday after 31 December 1980 are part of the Segment.
 
-![Configuring criteria for a segment.](creating-segments/images/02.png)
+![Configuring criteria for a segment.](creating-segments/images/03.png)
 
 You can also control the way adjacent criteria interact with each other. For example, if you place criteria next to each other, a small box appears between them with the text `AND`. This means that the two criteria are joined by a logical *And*. Clicking the box changes it to `OR`, which represents a logical *Or*. Selecting *And* narrows the Segment's selection of Individuals; *Or* broadens it.
 
@@ -68,7 +69,9 @@ For example, joining two `birthDate` criteria with the following conditions crea
 
 You can also form subgroups of criteria by dragging and dropping criteria onto each other. An AND/OR box then appears between the subgroup and any adjacent criteria. Together, these tools let you build complex criteria for your Segment.
 
-![Defining multiple criteria for a segment.](creating-segments/images/03.png)
+![Defining multiple criteria for a segment.](creating-segments/images/04.png)
+
+Once you are finished configuring the segment click *Save Segment*.
 
 ## Creating Static Segments
 
@@ -76,11 +79,13 @@ Follow these steps to create a Static Segment:
 
 1. Click *Segments* in the navigation panel. A table with existing Segments appears.
 
-1. Click *Create Segment* → *Static Segment*. The Create Individuals Segment screen appears for creating a Static Segment.
+1. Click *Create Segment* &rarr; *Static Segment*. The Create Individuals Segment screen appears for creating a Static Segment.
 
 1. Name the Segment.
 
 1. Click *Add Members* to bring up the Add Members screen, which contains a searchable list of all Individuals.
+
+    ![Select the individuals to add to the segment.](./creating-segments/images/05.png)
 
 1. Select the *Individuals* to add to the Segment, then click *Add*.
 
