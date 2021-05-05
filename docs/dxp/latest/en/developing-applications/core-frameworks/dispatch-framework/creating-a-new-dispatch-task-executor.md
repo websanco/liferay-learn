@@ -10,7 +10,7 @@ Follow these steps to create your own implementation of the `DispatchTaskExecuto
 
 1. **OSGi Properties**: Add the following properties to the `@Component` annotation.
 
-   * `dispatch.task.executor.name`: defines the string used for the executor's name in the Dispatch UI. You can use a language key value to resolve Dispatch Task Executor type localized name in the Dispatch UI.
+   * `dispatch.task.executor.name`: defines the string used for the executor's name in the Dispatch UI.
 
       ```note::
          If you want your Dispatch Task to use localized names, add a language key value for the ``dispatch.task.executor.name`` property to the module’s ``resources/content/Language.properties`` file.
@@ -85,7 +85,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
 
    ![Click Run Now for your new Dispatch Task.](./creating-a-new-dispatch-task-executor/images/02.png)
 
-   If successful, it should print "Hello World!" to the console when executed.
+   If successful, it should print the following message to the console when executed.
 
    ```log
    INFO [liferay/dispatch/executor-2][S7A3DispatchTaskExecutor:30] Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)
