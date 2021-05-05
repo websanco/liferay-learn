@@ -7,7 +7,7 @@ Although Portal includes default Master Page Templates that you can use to defin
 Follow these steps to create a Master Page Template:
 
 1. Open Product Menu and go to Site &rarr; *Design* &rarr; *Page Templates*.
-1. Under the *Masters* tab, click *Add* (![Add](./../../../images/icon-add.png) to create a new Master Page Template.
+1. Under the Masters tab, click *Add* (![Add](./../../../images/icon-add.png) to create a new Master Page Template.
 1. Enter the *Name* of your new Master Page Template.
 1. Click *Fragments and Widgets* (![Fragments and Widgets](./../../../images/icon-add-widget.png)) on the sidebar and add Fragments for the common elements that you require.
 

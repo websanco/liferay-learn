@@ -10,9 +10,9 @@ If you do not choose a specific Style Book for a page, the page uses the Style B
 
 Follow these steps to set any page's Style Book: 
 
-1. Click the *Edit* icon (![Edit icon](../../images/icon-edit.png)) near the top of the page.
+1. Click *Edit* (![Edit icon](../../images/icon-edit.png)) near the top of the page.
 
-1. Click the *Page Design Options* icon (![Page Design Options](../../images/icon-format.png)) on the sidebar.
+1. Click *Page Design Options* (![Page Design Options](../../images/icon-format.png)) on the sidebar.
 
 1. Click to open the *Style Book* tab.
 
@@ -28,7 +28,7 @@ The page is published using the new Style Book.
 
 1. Navigate to the *Site Menu* &rarr; *Design* &rarr; *Style Books*.
 
-1. Click the *Add* icon (![Add icon](../../images/icon-add.png)) near the top of the page.
+1. Click *Add* (![Add icon](../../images/icon-add.png)) near the top of the page.
 
 1. Enter a name for the Style Book and click *Save*.
 
