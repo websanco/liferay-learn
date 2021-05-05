@@ -23,7 +23,7 @@ Here’s how to view Segment profiles:
     * Distribution: Demographics based on Individual properties
     * The Segment’s profile appears, showing its Overview panel.
 
-### Overview
+## Overview Tab
 
 The Overview tab’s main area shows membership growth. As a marketer, you might want to generate more customer prospects in a specific industry. If you create a Dynamic Segment with that industry as criterion, you can view its membership histogram to monitor customer growth in that industry.
 
@@ -31,13 +31,25 @@ The Overview tab’s main area shows membership growth. As a marketer, you might
 
 The Overview tab also gives you a glimpse of the Segment’s criteria, interests, and demographics. Each one links to more details, or you can click on their respective tabs.
 
-### Interests
+### Segment Membership Panel
+
+### Segment Composition Panel
+
+### Segment Criteria Panel
+
+### Top Interests Panel
+
+### Breakdown Panel
+
+## Membership Tab
+
+## Interests Tab
 
 As a Segment’s members interact with your site pages and assets, Analytics Cloud’s interests algorithm determines the level of interest the Segment has with your site’s topics. Knowing these topics helps you prepare for conversing with the Segment members and create content that interests them.
 
 See Customer Insights for details on the Interests insight.
 
-### Distribution
+## Distribution Tab
 
 The Distribution tab breaks down the Segment by a demographic property.
 
