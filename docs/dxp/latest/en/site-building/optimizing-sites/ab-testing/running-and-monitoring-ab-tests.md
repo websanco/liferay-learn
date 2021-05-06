@@ -22,16 +22,20 @@ When the A/B Test finishes, you can review the test results and publish the pref
 ```
 
 1. Go to the Content Page where you want to run the A/B Test
+
 1. In the Control Menu, click the *A/B Testing* button (![A/B Test icon](../../../images/icon-ab-testing.png)).
+
 1. If you have other Experiences for the Content Page, select the Experience.
-1. Under the *Active Test* section, click *Review and Run Test*.
+
+1. Under the Active Test section, click *Review and Run Test*.
+
 1. Optionally, configure the *Traffic Split* and *Confidence Level Required* settings for your test.
+
 1. Click *Run* and then click *OK*.
 
-You can cancel a running test at any time using the *Terminate Test* button. A record of the tests completed or canceled is available under the *History* tab. To delete an A/B Test, you must cancel the test first.
+You can cancel a running test at any time using the *Terminate Test* button. A record of the tests completed or canceled is available under the History tab. To delete an A/B Test, you must terminate the test first.
 
-   ![You can cancel a running A/B Test using the Terminate Test button](./running-and-monitoring-ab-tests/images/02.png)
-
+   ![You can cancel a running A/B Test using the Terminate Test button.](./running-and-monitoring-ab-tests/images/02.png)
 
 ## Related Information
 

@@ -29,6 +29,7 @@ You can customize your Content Page to different groups of users using *Experien
 6. Edit your Content Page with the information and layout you want to show to the selected Segment.
 
 7. Using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls, move the Experience in the list to set its precedence (see [Understanding How Experiences Work](#understanding-how-experiences-work) for more information).
+
 8. Click *Publish*.
 
 After setting the Experience precedence, Members of the target Segment see the Page version customized for that Segment. All other users see the *Default* version.
@@ -40,12 +41,17 @@ When you edit a Content Page, you can click on the *Experience* selector to mana
 ![You can add, edit, delete, or change priority for Experiences.](./content-page-personalization/images/04.png)
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
+
 2. On the Content Page you want to edit, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
+
 3. Click on the Experience you want to manage. From here you can:
 
    - Set the Experience Priority, using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
+
    - Edit (![Edit](../../../images/icon-edit.png)) the Experience's name, selected Segment or Language.
+
    - Duplicate (![Duplicate](../../../images/icon-copy.png)) the Experience.
+
    - Delete (![Delete](../../../images/icon-delete.png)) the Experience.
 
     ```important::

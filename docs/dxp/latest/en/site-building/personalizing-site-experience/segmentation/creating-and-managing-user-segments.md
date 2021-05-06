@@ -29,7 +29,7 @@ These steps describe how to create a new Segment:
 1. Click in the top text area and enter a name for your User Segment.
 
    ```tip::
-      You can use the flag selector icon next to the Segment's name to translate the name of your Segment.
+      You can use the flag selector next to the Segment's name to translate the name of your Segment.
    ```
 
 1. From the *Properties* area, select the group and property to define your Segment. Drag and drop the *Property* to the *Conditions* area.
