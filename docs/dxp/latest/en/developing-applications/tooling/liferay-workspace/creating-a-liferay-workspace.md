@@ -31,7 +31,7 @@ To create a Liferay Workspace manually, you must have [Gradle](https://gradle.or
 1.  Now add the Gradle wrapper to your project using this command: 
 
     ```bash
-    gradle wrapper --gradle-version 5.6.4
+    gradle wrapper --gradle-version 6.6.1
     ```
 
 1.  Create a file called `gradle.properties` containing this: 
@@ -46,16 +46,28 @@ To create a Liferay Workspace manually, you must have [Gradle](https://gradle.or
 
 1. At your command line interface, navigate to the folder where you want your workspace generated. 
 
-1. Run this command: 
+1. Find the version of Liferay you want to target by listing the available versions: 
 
    ```bash
-   blade init -v 7.3 [workspace name]
+   blade init -l
+   ```
+
+1. Now you're ready to create your workspace. Run this command: 
+
+   ```bash
+   blade init -v [Liferay version] [workspace name]
+   ```
+
+   For example, 
+
+   ```bash
+   blade init -v portal-7.4-ga1 my-workspace
    ```
 
 Your workspace is created. Note that you can target any 7.x version of Liferay: 
 
 ```bash
-blade init -v 7.0 [workspace name]
+blade init -v portal-7.0-ga7 [workspace name]
 ```
 
 The workspace version is stored in the hidden `.blade.properties` file in the workspace's root folder, using the `liferay.version.default` property. When you create projects based on templates, the version stored here determines which template version is used. 

@@ -30,24 +30,6 @@ Liferay Workspace is constantly updated to help developers be more productive, a
 
 Congratulations! Your Workspace is now upgraded. 
 
-But what if you need a new feature in the [Source Formatter plugin](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.source.formatter/) or another plugin Workspace relies on, but the latest version of Workspace doesn't yet include it? You can still upgrade it! 
-
-1. In the version of the Liferay Portal source you're targeting, open the `portal-tools.properties` file from `modules/sdk/gradle-plugins/src/main/resources/com/liferay/gradle/plugins/dependencies`. This file shows the Bundle Symbolic Names (BSNs) for Workspace plugins. 
-
-1. Find the plugin you want to update. For example, the Source Formatter's BSN is `com.liferay.source.formatter`. 
-
-1. Open your Workspace's `build.gradle` file and provide the BSN followed by `.version` in a property. For the value, specify the version from `portal-tools.properties`: 
-
-   ```properties
-   com.liferay.source.formatter.version=1.0.1085
-   ```
-
-   If you want to target the latest version, set the above property to `latest.release` to be upgraded to the latest available version. 
-
-1. Run any Gradle task, such as `./gradlew tasks` to perform the upgrade. 
-
-Excellent! You've now upgraded your plugin. 
-
 ## Creating Deployment Environments
 
 There comes a point when your code is ready to share with somebody. For that, you must build an environment. In the corporate world, there are usually three environments: 

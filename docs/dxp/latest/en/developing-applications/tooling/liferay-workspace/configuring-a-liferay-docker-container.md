@@ -12,6 +12,8 @@ You must have Docker installed and running before following the instructions bel
 
 ## Choose a Liferay Docker Image
 
+Most of the time you don't need to choose a Liferay Docker image, because the image version is inherited from your Workspace version. If, however, you must install an image version other than the one specified by your Workspace, you can set the version explicitly. If you don't need to do this, skip to the next section. 
+
 Liferay's Docker images are on [Docker Hub](https://hub.docker.com/r/liferay/portal/tags). They're in two categories: 
 
 - [Liferay/Portal](https://hub.docker.com/r/liferay/portal)

@@ -46,7 +46,17 @@ To write code to run on Liferay DXP, you must have a Liferay runtime on which to
 
 ## Using the Themes Generator with Liferay Workspace
 
-The [Liferay Themes Generator](../other-tools/theme-generator.md) is a node.js-based tool for creating themes to change the look and feel of your site. These projects can also be managed by Liferay Workspace. You create a themes project in Workspace the same way you create it outside of Workspace: 
+The [Liferay Themes Generator](../other-tools/theme-generator.md) is a node.js-based tool for creating themes to change the look and feel of your site. These projects can also be managed by Liferay Workspace. You can create theme projects with Blade or manually. 
+
+To create a Theme Generator project with Blade, use this command: 
+
+```bash
+blade create -t js-theme [project-name]
+```
+
+This downloads Node.JS and `yo` for you, and then executes `yo liferay-theme` to get you started. 
+
+You can also create a themes project in Workspace the same way you create it outside of Workspace: 
 
 1. Assuming you've installed the themes generator, navigate to your Liferay Workspace. Like other projects, you can place your theme projects anywhere. Run the following command to create a theme project: 
 
@@ -76,7 +86,7 @@ Workspace automates the download and setup of a runtime for your code. When you'
 
    **DXP:** Go to the [Liferay Workspace Target Versions](https://help.liferay.com/hc/en-us/articles/360041818312) page and copy the Bundle URL to your clipboard. 
 
-   **CE:** Browse [releases-cdn.liferay.com](https://releases-cdn.liferay.com), find the bundle you need, and copy its URL to your clipboard. 
+   **CE:** Browse [releases-cdn.liferay.com/portal](https://releases-cdn.liferay.com/portal), find the bundle you need, and copy its URL to your clipboard. 
 
 1. Open `gradle.properties` from the root folder of your workspace and set the bundle URL property: 
 
@@ -124,10 +134,10 @@ This calls the Gradle wrapper script in the Workspace root folder and deploys yo
 
 ### Deploying Code to a Liferay Docker Container
 
-If you've already [created a Liferay Docker Container](./configuring-a-liferay-docker-container.md), deploying to it is just as easy as deploying to a local bundle. Run this Gradle task: 
+If you've already [created a Liferay Docker Container](./configuring-a-liferay-docker-container.md), deploying to it is just as easy as deploying to a local bundle. Run the same Gradle task: 
 
 ```bash
-../gradlew deployDocker
+../gradlew deploy
 ```
 
 ## Related Topics
