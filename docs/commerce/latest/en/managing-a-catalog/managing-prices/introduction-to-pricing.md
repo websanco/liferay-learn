@@ -1,6 +1,6 @@
 # Introduction to Pricing
 
-Liferay Commerce provides a robust pricing system that you can use to fine-tune Product prices. With it, you can define multiple price entries for a single Product SKU and determine which Accounts, Account Groups, and Channels are eligible to receive each price. If multiple price entities exist for the same SKU, Commerce's pricing engine calculates which entities should be used for each Channel customer.
+Liferay Commerce provides a robust pricing system to fine-tune Product prices. You can define multiple price entries for a single Product SKU and determine which Accounts, Account Groups, and Channels are eligible to receive each price. If multiple price entities exist for the same SKU, Commerce's pricing engine calculates which entities should be used for each Channel customer.
 
 The following article provides an overview of Commerce pricing and how Product and order prices are determined for customers.
 
@@ -9,7 +9,7 @@ The following article provides an overview of Commerce pricing and how Product a
 * [How Commerce Calculates Order Prices](#how-commerce-calculates-order-prices)
 
 ```note::
-   The following overview describes the Commerce Pricing Engine v2.0+. This engine version is the default algorithm used for Commerce 3.0+ and DXP 7.3.x+. However, Commerce 2.1.x and earlier versions use Commerce's `Pricing Engine v1.0 <#pricing-engine-v10-reference>`_ by default. If desired, you can `change the Pricing Engine version <#enabling-pricing-engine-v20-in-commerce-21x>`_ used for the instance.
+   The following overview describes the Commerce Pricing Engine v2.0+. This engine version is the default algorithm used for Commerce 3.0+ and Portal/DXP 7.3+. Commerce 2.1.x and earlier versions use Commerce's `Pricing Engine v1.0 <#pricing-engine-v1-0-reference>`_ by default. If desired, you can `change the Pricing Engine version <#enabling-pricing-engine-v2-0-in-commerce-2-1-x>`_ used for the instance.
 ```
 
 ## Components of Commerce's Pricing System
