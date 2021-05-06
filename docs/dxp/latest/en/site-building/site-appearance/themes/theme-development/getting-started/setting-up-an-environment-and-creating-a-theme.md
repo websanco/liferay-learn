@@ -7,7 +7,7 @@ Creating a theme is the first step in theme development. Once you have your own 
 Themes are created using the Liferay Theme Generator. Liferay DXP 7.3 uses version 10.x.x of the Theme Generator.
 
 ```note::
-   Older versions of the Liferay Theme Generator can be used to generate themes for older versions of Liferay DXP. . . . 
+   Older versions of the Liferay Theme Generator can be used to generate themes for older versions of Liferay DXP. To create themes for DXP 7.0 or 7.1, install version 8.x.x of the Theme Generator.
 ```
 
 ### Installation
@@ -79,7 +79,7 @@ The theme is then generated and placed inside of a folder named after the ID you
 ## Using blade to create a theme
 
 Coming soon!
-<!-- Link to the (ported version of) https://help.liferay.com/hc/en-us/articles/360029146851-Theme-Template -->
+<!-- Link to Theme Templates documentation when available-->
 
 ## Additional Information
 

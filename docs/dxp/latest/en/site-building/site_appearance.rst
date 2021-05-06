@@ -9,6 +9,8 @@ Site Appearance
    site-appearance/themes.rst
    site-appearance/style_books.rst
 
+-  :doc:`/site-building/site-appearance/site-appearance`
+
 Themes
 ------
 
@@ -18,7 +20,7 @@ Themes
 Theme Development
 ~~~~~~~~~~~~~~~~~
 
--  :doc:`/site-building/site-appearance/themes/theme-development/getting-started/setting-up-the-environment-and-creating-a-theme`
+-  :doc:`/site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme`
 -  :doc:`/site-building/site-appearance/themes/theme-development/bundling-resources/bundling-a-thumbnail-preview-into-your-theme`
 
 
