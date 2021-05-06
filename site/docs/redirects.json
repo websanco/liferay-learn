@@ -7,6 +7,8 @@
 	"dxp/latest/en/developing-applications/developing-a-single-page-application/using-react/using-react.html": "dxp/latest/en/developing-applications/developing-a-javascript-application/using-react/using-react.html",
 	"dxp/latest/en/developing-applications/developing-a-single-page-application/using-vuejs.html": "dxp/latest/en/developing-applications/developing-a-javascript-application/using-vuejs.html",
 	"dxp/latest/en/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html",
+	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
+	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
 	"dxp/latest/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
 	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html"
 }
