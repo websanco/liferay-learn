@@ -1,4 +1,4 @@
-# Creating a Thumbnail for Your Theme
+# Bundling a Thumbnail Preview into Your Theme
 
 A theme's thumbnail is the visual representation of how the theme looks when it is applied to a Site. The thumbnail is shown in the theme selection menu when you choose a theme for a Site's Public Pages. A custom theme with no thumbnail set has a placeholder image.
 

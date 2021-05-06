@@ -1,4 +1,4 @@
-# Setting Up the Environment and Creating a Theme
+# Setting Up an Environment and Creating a Theme
 
 Creating a theme is the first step in theme development. Once you have your own theme, you can deploy it to your Liferay DXP instance, and use it for [various Site customizations](../introduction-to-themes.md#developing-themes).
 
