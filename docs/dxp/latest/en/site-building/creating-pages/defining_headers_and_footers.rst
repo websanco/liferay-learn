@@ -8,5 +8,6 @@ Defining Headers and Footers
    defining-headers-and-footers/creating-a-master-page-template.md
    defining-headers-and-footers/managing-master-page-templates.md
 
-.. include:: /site-building/creating-pages/defining-headers-and-footers/README.rst
-   :start-line: 2
+-  :doc:`/site-building/creating-pages/defining-headers-and-footers/master-page-templates`
+-  :doc:`/site-building/creating-pages/defining-headers-and-footers/creating-a-master-page-template`
+-  :doc:`/site-building/creating-pages/defining-headers-and-footers/managing-master-page-templates`
