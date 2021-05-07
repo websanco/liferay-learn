@@ -6,7 +6,7 @@
 
 1. Log in to your [Hubspot Account](https://app.hubspot.com/login).
 
-1. Go to your profile in the top right corner.
+2. Go to your profile in the top right corner.
 
     Copy the account number that corresponds to the channel you want to use. This number corresponds with the Account ID used when enabling Click to Chat on Liferay Portal.
 
@@ -14,20 +14,25 @@
 
 ## Getting the Hubspot API Token
 
-Coming soon!
-
-<!-- @Fabio: Commented out until we know what a user is supposed to do with this API token.
 
 While logged in to your Hubspot account:
 
-1. Click the *Settings* button.
+3. Click the *Settings* button.
 
     ![Settings](./hubspot/images/02.png)
 
-1. Click on *Integrations* &rarr; *API Key* on the left side of the page.
+4. Click on *Integrations* &rarr; *API Key* on the left side of the page.
 
     ![Api Key](./hubspot/images/03.png)
 
-1. Click *Show* to reveal your API token key.
+5. Click *Show* to reveal your API token key.
 
-    ![Show Api Key](./hubspot/images/04.png) -->
+    ![Show Api Key](./hubspot/images/04.png) 
+
+    5.1 Note: the first time you do this process click *Actions* &rarr; *Generate*, and pass the catch test.
+
+    ![Catch test](./hubspot/images/05.png) 
+
+6. Your *Chat Provider Account ID* are your **Chat Provider Token**/**API Tolken**
+
+   ![Account ID](./hubspot/images/06.png) 
