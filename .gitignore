@@ -1,4 +1,5 @@
 .DS_Store
+.gradle
 docs/**/build/
 docs/**/bundles/
 docs/**/liferay-????-theme.war
