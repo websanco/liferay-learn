@@ -33,7 +33,7 @@ Congratulations! Your Workspace is now upgraded.
 ## Using JDK 11
 
 ```Note::
-If you compile under JDK 11, you must run under JDK 11. Make sure your app servers are running JDK 11 before making any changes to Workspace. Note that Liferay's Docker images use JDK 8.
+If you compile under JDK 11, you must run under JDK 11. Make sure your app servers are running JDK 11 before making any changes to Workspace. Note that Liferay's Docker images use JDK 8 by default. To override this, create your Docker image using the ``-e JAVA_VERSION=zulu11`` environment variable.
 ```
 
 **Prerequisite:** If you're using an older version of Workspace, you must upgrade two things: 
