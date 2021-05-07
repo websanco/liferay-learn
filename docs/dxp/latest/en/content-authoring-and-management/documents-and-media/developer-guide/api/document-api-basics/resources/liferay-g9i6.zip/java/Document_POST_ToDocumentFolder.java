@@ -22,7 +22,9 @@ public class Document_POST_ToDocumentFolder {
 			new Document(),
 			new HashMap<String, File>() {
 				{
-					put("file", new File("Document_POST_ToDocumentFolder.java"));
+					put(
+						"file",
+						new File("Document_POST_ToDocumentFolder.java"));
 				}
 			});
 

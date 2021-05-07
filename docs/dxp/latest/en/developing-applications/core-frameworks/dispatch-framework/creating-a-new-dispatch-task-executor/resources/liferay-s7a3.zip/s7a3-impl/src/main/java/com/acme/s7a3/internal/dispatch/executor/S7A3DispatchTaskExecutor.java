@@ -14,8 +14,7 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"dispatch.task.executor.name=s7a3",
-		"dispatch.task.executor.type=s7a3"
+		"dispatch.task.executor.name=s7a3", "dispatch.task.executor.type=s7a3"
 	},
 	service = DispatchTaskExecutor.class
 )
