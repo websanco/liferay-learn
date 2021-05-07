@@ -15,7 +15,7 @@ Once purchased, you can [download]() and [deploy]() the Salesforce Connector to 
 
 ## Supported Entities
 
-The following chart While some entity data can be transferred both ways (e.g., Account, Order), some Salesforce entity data can only be transferred to Liferay (e.g., Account Contact, Price Book).
+The following chart lists supported Salesforce entities with their Liferay counterparts. While some entity data can be transferred bidirectionally, some Liferay data cannot be transferred to Salesforce.
 
 | Salesforce | Liferay | From Salesforce to Liferay | From Liferay to Salesforce |
 | --- | --- | --- | --- |
