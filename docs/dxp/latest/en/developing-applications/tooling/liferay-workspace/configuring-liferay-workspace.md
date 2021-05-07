@@ -30,6 +30,60 @@ Liferay Workspace is constantly updated to help developers be more productive, a
 
 Congratulations! Your Workspace is now upgraded. 
 
+## Using JDK 11
+
+```Note::
+If you compile under JDK 11, you must run under JDK 11. Make sure your app servers are running JDK 11 before making any changes to Workspace. Note that Liferay's Docker images use JDK 8.
+```
+
+**Prerequisite:** If you're using an older version of Workspace, you must upgrade two things: 
+
+1. Update Gradle to at least version 6.6.1
+1. Update your Workspace version to at least 3.4.2 (see above for upgrade procedure). 
+
+To upgrade Gradle, edit the `gradle/wrapper/gradle-wrapper.properties` file in your Workspace: 
+
+```properties
+distributionUrl=https\://services.gradle.org/distributions/gradle-6.6.1-all.zip
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStorePath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+```
+
+If you upgraded your Workspace too, make sure you have the `liferay.workspace.product` property set. Remember, you can always get a current list for this property using Blade CLI by typing `blade init -l`.
+
+If you upgraded an older workspace, make sure the Liferay CDN is declared in your Workspace's `settings.gradle` file: 
+
+```groovy
+maven {
+	url "http://repository.liferay.com/nexus/content/groups/public"
+}
+```
+Great! You're now ready to use JDK 11 with your Liferay projects. If you have existing projects, there are additional steps you may need to take. 
+
+### Service Builder Projects
+
+If you upgraded an older Workspace with Service Builder projects, add this configuration to the `build.gradle` file in the Service Builder `-service` module: 
+
+```groovy
+tasks.withType(JavaCompile) {
+
+	// Generated classes using Jodd library are unable to be read when compiled against JDK 11
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+```
+### JAX-WS Projects
+
+If you have any JAX-WS projects, they require classes from `javax.xml.soap` which were removed from JDK 11. Now you must specify them as a dependency manually: 
+
+
+```groovy
+compile 'com.sun.xml.ws:jaxws-ri:2.3.2'
+```
+
 ## Creating Deployment Environments
 
 There comes a point when your code is ready to share with somebody. For that, you must build an environment. In the corporate world, there are usually three environments: 
