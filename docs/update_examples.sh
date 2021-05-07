@@ -47,6 +47,15 @@ function copy_template {
 		then
 			cp -fr _template/js/* ${zip_dir_name}
 		fi
+
+		if [ -z "${gradle_build_file_name}" ] && [ -z "${package_json_file_name}" ]
+		then
+			pushd $(git rev-parse --show-toplevel)
+
+			./gradlew formatSource -DformatSource.source.base.dir=./docs/${zip_dir_name}
+
+			popd
+		fi
 	done
 }
 
