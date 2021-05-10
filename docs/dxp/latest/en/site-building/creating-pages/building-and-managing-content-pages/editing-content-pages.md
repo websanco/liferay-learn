@@ -57,13 +57,13 @@ Depending on your selected editing mode, you can access these options in the edi
 
 In the Fragments and Widgets sidebar panel ( ![Fragments and Widgets icon](../../../images/icon-cards2.png) ), you can access both out-of-the-box and custom Page elements for building your Page.
 
-* **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Fragments](./using-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
+* **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Fragments](../../displaying-content/using-fragments/using-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
 
 * **Widgets**: As in other DXP contexts, widgets are [applications](../../../developing_applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
 
 ### Selection
 
-In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Fragments](./using-fragments.md) for more information.
+In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Fragments](../../displaying-content/using-fragments/using-fragments.md) for more information.
 
 ![Selection shows you a hierarchy of your page and contents.](./editing-content-pages/images/08.png)
 
@@ -190,5 +190,5 @@ Great! Now you know how to use the content page interface!
 ## Additional Information
 
 * [Building Content Pages](./building-content-pages.md)
-* [Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
+* [Using Fragments](../../displaying-content/using-fragments/using-fragments.md)
 * [Using Fragment Comments](../../displaying-content/using-fragments/using-fragment-comments.md)

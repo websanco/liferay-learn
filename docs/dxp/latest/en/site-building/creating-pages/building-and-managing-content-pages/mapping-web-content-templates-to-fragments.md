@@ -37,6 +37,6 @@ You can map the single-value Content field directly to a Fragment, but you need 
 
 ## Additional Information
 
-- [Using Fragments](./using-fragments.md)
+- [Using Fragments](../../displaying-content/using-fragments/using-fragments.md)
 - [Understanding Web Content Structures](../../../content-authoring-and-management/web-content/web-content-structures/understanding-web-content-structures.md)
 - [Creating Web Content Templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md)

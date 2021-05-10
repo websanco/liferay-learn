@@ -2,7 +2,7 @@
 
 > Availability: Liferay 7.4+.
 
-The [Slider](../../creating-pages/building-and-managing-content-pages/using-fragments.md#slider) or [Tab](../../creating-pages/building-and-managing-content-pages/using-fragments.md#tabs) fragments are typically used to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
+The [Slider](../../displaying-content/using-fragments/using-fragments.md#slider) or [Tab](../../displaying-content/using-fragments/using-fragments.md#tabs) fragments are typically used to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
 
 When you edit your Slider or Tab Fragment in the [Content Page Editor](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md), the sidebar selection (![Selection](../../../images/icon-pages-tree.png)) button shows the list of elements in your Fragment. Before Liferay DXP 7.4, these elements were not presented in order. This made it difficult to identify how the Slider or Tab elements were grouped, especially for Fragments with many elements.
 
