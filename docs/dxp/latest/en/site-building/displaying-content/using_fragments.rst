@@ -8,12 +8,14 @@ Using Fragments
    using-fragments/managing-page-fragments.md
    using-fragments/propagating-page-fragment-changes.md
    using-fragments/configuring-fragment-styles.md
+   using-fragments/fragment-styles-reference.md
    using-fragments/using_fragment_renderers.rst
 
 -  :doc:`/site-building/displaying-content/using-fragments/using-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/managing-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/propagating-page-fragment-changes`
 -  :doc:`/site-building/displaying-content/using-fragments/configuring-fragment-styles`
+-  :doc:`/site-building/displaying-content/using-fragments/fragment-styles-reference`
 
 Using Fragment Renderers
 ------------------------
