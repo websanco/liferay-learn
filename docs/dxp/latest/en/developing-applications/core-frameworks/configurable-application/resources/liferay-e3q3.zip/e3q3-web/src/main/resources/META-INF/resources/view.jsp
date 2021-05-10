@@ -1,16 +1,16 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
+<%@ page import="com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration" %>
+
 <%
-String fontFamily = (String)request.getAttribute("fontFamily");
-String fontColor = (String)request.getAttribute("fontColor");
-int fontSize = (int)request.getAttribute("fontSize");
+E3Q3WebConfiguration configuration = (E3Q3WebConfiguration)request.getAttribute(E3Q3WebConfiguration.class.getName());
 %>
 
 <p
-	style="font-family: <%= fontFamily %>; color: <%= fontColor %>; font-size: <%= fontSize %>pt;"
+	style="color: <%= fontColor %>; font-family: <%= fontFamily %>; font-size: <%= fontSize %>pt;"
 >
 	<liferay-ui:message key="e3q3-porlet-welcome" /><br />
-	color: <%= fontColor %><br />
-	font-family: <%= fontFamily %><br />
-	font-size: <%= fontSize %>
+	color: <%= configuration.fontColor() %><br />
+	font-family: <%= configuration.fontFamily() %><br />
+	font-size: <%= configuration.fontSize() %>
 </p>

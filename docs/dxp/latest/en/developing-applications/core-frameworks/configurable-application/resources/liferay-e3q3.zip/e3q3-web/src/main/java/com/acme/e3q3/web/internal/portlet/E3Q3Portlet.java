@@ -36,11 +36,7 @@ public class E3Q3Portlet extends MVCPortlet {
 		throws IOException, PortletException {
 
 		renderRequest.setAttribute(
-			"fontColor", _e3q3WebConfiguration.fontColor());
-		renderRequest.setAttribute(
-			"fontFamily", _e3q3WebConfiguration.fontFamily());
-		renderRequest.setAttribute(
-			"fontSize", _e3q3WebConfiguration.fontSize());
+			E3Q3WebConfiguration.class.getName(), _e3q3WebConfiguration);
 
 		super.render(renderRequest, renderResponse);
 	}
