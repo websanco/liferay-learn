@@ -191,4 +191,4 @@ Great! Now you know how to use the content page interface!
 
 * [Building Content Pages](./building-content-pages.md)
 * [Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
-* [Using Fragment Comments](./using-fragment-comments.md)
+* [Using Fragment Comments](../../displaying-content/using-fragments/using-fragment-comments.md)
