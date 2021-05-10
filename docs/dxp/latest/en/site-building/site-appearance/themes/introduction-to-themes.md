@@ -4,14 +4,14 @@ Themes customize the default look and feel of your Site. They allow you to defin
 
 ## Themes and Site Design
 
-Themes are available and used out-of-the-box on any Site you create. There are also a number of other ways (such as [Style Books](../style-books/creating-a-style-book.md)) to define the look and feel of your Site, but themes provide the most flexibility when you need a fully customized solution.
+Themes are available and used out-of-the-box on any Site you create. There are also a number of other ways (such as [Style Books](../style-books/using-a-style-book-to-standardize-site-appearance.md)) to define the look and feel of your Site, but themes provide the most flexibility when you need a fully customized solution.
 
 ![Site Design hierarchy](./introduction-to-themes/images/01.png)
 
-Themes are one of the most broad and flexible ways to add customizations, in the hierarchy of ways to design your Site's appearance. Themes are used for providing the most foundational basis for your Site that more specific tools (such as [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md) and [Style Books](../style-books/creating-a-style-book.md)) can build on top of. However, you may also use themes to add more customizations that are not possible with those other methods.
+Themes are one of the most broad and flexible ways to add customizations, in the hierarchy of ways to design your Site's appearance. Themes are used for providing the most foundational basis for your Site that more specific tools (such as [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md) and [Style Books](../style-books/using-a-style-book-to-standardize-site-appearance.md)) can build on top of. However, you may also use themes to add more customizations that are not possible with those other methods.
 
 ```warning::
-   Adding customizations to your site through a theme can come with increased maintenance when upgrading from one version of Liferay to another. When possible, manage your site's appearance through the use of `Master Pages Templates <../../creating-pages/defining-headers-and-footers/master-page-templates.md>`_ and `Style Books <../style-books/creating-a-style-book.md>`_.
+   Adding customizations to your site through a theme can come with increased maintenance when upgrading from one version of Liferay to another. When possible, manage your site's appearance through the use of `Master Pages Templates <../../creating-pages/defining-headers-and-footers/master-page-templates.md>`_ and `Style Books <../style-books/using-a-style-book-to-standardize-site-appearance.md>`_.
 ```
 
 ## Developing Themes
@@ -22,7 +22,7 @@ Themes can be used to customize your Site in a variety of ways, including stylin
 
 Themes provide the basis for styling on any Site. You can define the UI details for your Site's pages, customized portlet decorators<!--Add link when available-->, and define the color scheme<!--Add link when available--> for your Site.
 
-You can also configure a custom [Style Book Token Definition](../style-books/style-book-token-definitions.md) based on your theme. <!--Add link when available: See Hooking Style Book Tokens into Your Theme for more information.-->
+You can also configure a custom [Style Book Token Definition](../style-books/developer-guide/style-book-token-definitions.md) based on your theme. <!--Add link when available: See Hooking Style Book Tokens into Your Theme for more information.-->
 
 ### Designing Pages
 
@@ -56,7 +56,7 @@ Themes are also a powerful tool for modifying the behavior of different parts of
 
 * You can set variable values<!--Add link when available--> with your theme to influence the behavior of existing functionality in DXP.
 
-* You can add [token definitions](../style-books/style-book-token-definitions.md) that are used to define categories for styling with [Style Books](../style-books/creating-a-style-book.md).
+* You can add [token definitions](../style-books/developer-guide/style-book-token-definitions.md) that are used to define categories for styling with [Style Books](../style-books/using-a-style-book-to-standardize-site-appearance.md).
 
 ## Upgrading Themes
 
