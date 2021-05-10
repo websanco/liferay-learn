@@ -9,3 +9,8 @@ for file_name in `find . -type f -name "gradlew"`
 do
 	chmod 744 ${file_name}
 done
+
+for file_name in `find . -type f -name "update_example.sh"`
+do
+	chmod 744 ${file_name}
+done
