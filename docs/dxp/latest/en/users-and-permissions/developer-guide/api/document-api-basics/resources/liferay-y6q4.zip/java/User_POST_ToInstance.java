@@ -1,7 +1,7 @@
 import com.liferay.headless.admin.user.client.dto.v1_0.UserAccount;
 import com.liferay.headless.admin.user.client.resource.v1_0.UserAccountResource;
 
-public class User_POST {
+public class User_POST_ToInstance {
 
 	/**
 	 * java -classpath .:* User_POST
