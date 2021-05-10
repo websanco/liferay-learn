@@ -11,6 +11,7 @@ Using Fragments
    using-fragments/configuring-fragment-styles.md
    using-fragments/fragment-styles-reference.md
    using-fragments/using-fragment-comments.md
+   using-fragments/mapping-web-content-templates-to-fragments.md
    using-fragments/using_fragment_renderers.rst
 
 -  :doc:`/site-building/displaying-content/using-fragments/using-fragments`
@@ -20,6 +21,7 @@ Using Fragments
 -  :doc:`/site-building/displaying-content/using-fragments/configuring-fragment-styles`
 -  :doc:`/site-building/displaying-content/using-fragments/fragment-styles-reference`
 -  :doc:`/site-building/displaying-content/using-fragments/using-fragment-comments`
+-  :doc:`/site-building/displaying-content/using-fragments/mapping-web-content-templates-to-fragments`
 
 Using Fragment Renderers
 ------------------------
