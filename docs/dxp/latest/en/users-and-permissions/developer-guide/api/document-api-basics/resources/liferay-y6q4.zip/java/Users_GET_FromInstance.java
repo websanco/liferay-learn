@@ -3,7 +3,7 @@ import com.liferay.headless.admin.user.client.pagination.Page;
 import com.liferay.headless.admin.user.client.pagination.Pagination;
 import com.liferay.headless.admin.user.client.resource.v1_0.UserAccountResource;
 
-public class Users_GET {
+public class Users_GET_FromInstance {
 
 	/**
 	 * java -classpath .:* Users_GET
