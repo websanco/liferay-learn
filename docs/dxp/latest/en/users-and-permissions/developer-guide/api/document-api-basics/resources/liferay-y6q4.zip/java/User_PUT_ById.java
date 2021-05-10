@@ -17,10 +17,10 @@ public class User_PUT_ById {
 			Long.valueOf(System.getProperty("userId")),
 			new UserAccount() {
 				{
-					alternateName = "Bar";
-					emailAddress = "bar@liferay.com";
-					familyName = "Liferay";
-					givenName = "Bar";
+					alternateName = "Baker";
+					emailAddress = "baker@liferay.com";
+					familyName = "Goo";
+					givenName = "Baker";
 				}
 			});
 

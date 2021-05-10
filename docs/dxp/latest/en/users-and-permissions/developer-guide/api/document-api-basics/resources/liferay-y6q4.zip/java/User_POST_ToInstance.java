@@ -16,10 +16,10 @@ public class User_POST_ToInstance {
 		UserAccount userAccount = userAccountResource.postUserAccount(
 			new UserAccount() {
 				{
-					alternateName = "Foo";
-					emailAddress = "foo@liferay.com";
-					familyName = "Liferay";
-					givenName = "Foo";
+					alternateName = "Baker";
+					emailAddress = "baker@liferay.com";
+					familyName = "Foo";
+					givenName = "Baker";
 				}
 			});
 

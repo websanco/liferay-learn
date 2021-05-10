@@ -17,10 +17,7 @@ public class User_PATCH_ById {
 			Long.valueOf(System.getProperty("userId")),
 			new UserAccount() {
 				{
-					alternateName = "Bar";
-					emailAddress = "bar@liferay.com";
-					familyName = "Liferay";
-					givenName = "Bar";
+					familyName = "Bar";
 				}
 			});
 
