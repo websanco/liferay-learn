@@ -24,7 +24,7 @@ Follow these steps to create a thumbnail and bundle it in your theme:
     STARTED my-liferay-theme_1.0.0
     ```
 
-1. Once the theme is deployed, navigate to the Site Menu &rarr; *Site Builder* &rarr; *Pages*, then click on the configuration icon (![Configuration icon](../../../../images/icon-settings.png)) to configure the Site's Public Pages.
+1. Once the theme is deployed, navigate to the Site Menu &rarr; *Site Builder* &rarr; *Pages*, then click on the configuration icon (![Configuration icon](../.././../../../images/icon-settings.png)) to configure the Site's Public Pages.
 
 1. Click the *Change Current Theme* button to view all available themes with their thumbnails and verify the change.
 

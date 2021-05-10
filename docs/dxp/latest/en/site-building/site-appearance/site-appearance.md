@@ -1,6 +1,6 @@
 # Site Appearance
 
-The design and functionality of a Liferay site can be adjusted and customized through a variety of complementary mechanisms. The following table summarizes and contrasts how certain tasks can be achieved:
+The design and functionality of a Liferay site can be adjusted and customized through a variety of complementary mechanisms. This table summarizes and contrasts which Liferay functions and tools can be used to achieve common tasks and goals:
 
 | Features                                | Style Books | Master Page Templates | Themes |
 |-----------------------------------------|:-----------:|:---------------------:|:------:|

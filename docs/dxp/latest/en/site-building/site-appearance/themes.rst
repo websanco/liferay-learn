@@ -9,22 +9,8 @@ Themes
 
    themes/theme_development.rst
 
-Theme Development
------------------
+.. raw:: html
+   :file: ../../landingpage_template.html
 
-- :doc:`/site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme`
-- :doc:`/site-building/site-appearance/themes/theme-development/bundling-resources/bundling-a-thumbnail-preview-into-your-theme`
-
-Styling
-~~~~~~~
-Coming soon!
-
-Templating
-~~~~~~~~~~
-
--  :doc:`/site-building/site-appearance/themes/theme-development/templating/embedding-widgets-via-templates`
-
-Bundling Resources
-~~~~~~~~~~~~~~~~~~
-
--  :doc:`/site-building/site-appearance/themes/theme-development/bundling-resources/bundling-and-installing-resources-into-your-theme-via-themelets`
+.. raw:: html
+   :file: themes/landing.html

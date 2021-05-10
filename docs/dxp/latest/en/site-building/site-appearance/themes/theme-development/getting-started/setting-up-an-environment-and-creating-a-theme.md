@@ -1,6 +1,6 @@
 # Setting Up an Environment and Creating a Theme
 
-Creating a theme is the first step in theme development. Once you have your own theme, you can deploy it to your Liferay DXP instance, and use it for [various Site customizations](../introduction-to-themes.md#developing-themes).
+Creating a theme is the first step in theme development. Once you have your own theme, you can deploy it to your Liferay DXP instance, and use it for [various Site customizations](../../introduction-to-themes.md#developing-themes).
 
 ## Using the Liferay Theme Generator
 
@@ -76,11 +76,11 @@ Run the Liferay Theme Generator with these steps:
 
 The theme is then generated and placed inside of a folder named after the ID you have chosen. You can now build and deploy it to your DXP instance by running `gulp deploy` from the theme's base folder.
 
-## Using blade to create a theme
+## Using Blade to Create a Theme
 
 Coming soon!
 <!-- Link to Theme Templates documentation when available-->
 
 ## Additional Information
 
-* [Changing Your Site's Appearance](../../../../getting-started/changing-your-sites-appearance.md)
+* [Changing Your Site's Appearance](../../../../../getting-started/changing-your-sites-appearance.md)

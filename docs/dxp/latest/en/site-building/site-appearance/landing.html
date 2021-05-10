@@ -1,0 +1,64 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Site Appearance',
+					sectionURL: 'site-appearance/site-appearance.html',
+				},
+				{
+					sectionName: 'Master Page Templates',
+					sectionURL: 'creating-pages/defining-headers-and-footers/master-page-templates.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Creating a Master Page Template',
+							url: 'creating-pages/defining-headers-and-footers/creating-a-master-page-template.html'
+						},
+						{
+							name: 'Managing Master Page Templates',
+							url: 'creating-pages/defining-headers-and-footers/managing-master-page-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Themes',
+					sectionURL: 'site-appearance/themes.html',
+					showAll: false,
+					subsections: [
+            {
+              name: 'Introduction to Themes',
+              url: 'site-appearance/themes/introduction-to-themes.html'
+            },
+            {
+							name: 'Setting up an Environment and Creating a Theme',
+							url: 'site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.html'
+						},
+						{
+							name: 'Upgrading a Theme',
+							url: 'site-appearance/themes/upgrading-a-theme.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Style Books',
+					sectionURL: 'site-appearance/style_books.html',
+					showAll: false,
+					subsections: [
+            {
+              name: 'Using a Style Book to Standardize Site Appearance',
+              url: 'site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html'
+            },
+            {
+							name: 'Style Book Token Definitions',
+							url: 'site-appearance/style-books/developer-guide/style-book-token-definitions.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

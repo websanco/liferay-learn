@@ -1,0 +1,53 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Getting Started',
+					sectionURL: 'theme-development/getting_started.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Setting Up an Environment and Creating a Theme',
+							url: '/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.html'
+						},
+					]
+        },
+				{
+					sectionName: 'Styling (Coming Soon)',
+					sectionURL: 'theme-development/styling.html',
+					showAll: false,
+				},
+				{
+					sectionName: 'Working with Templates',
+					sectionURL: 'theme-development/working_with_templates.html',
+          showAll: false,
+					subsections: [
+						{
+							name: 'Embedding Widgets Via Templates',
+							url: 'theme-development/working-with-templates/embedding-widgets-via-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Bundling Resources',
+					sectionURL: 'theme-development/bundling_resources.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Bundling a Thumbnail Preview into Your',
+							url: 'theme-development/bundling-resources/bundling-a-thumbnail-preview-into-your-theme.html'
+						},
+						{
+							name: 'Bundling and Installing Resources into Your Theme Via Themelets',
+							url: 'theme-development/theme-development/bundling-resources/bundling-and-installing-resources-into-your-theme-via-themelets.html'
+						},
+          ]
+				},
+      ]
+		}
+	})
+</script>

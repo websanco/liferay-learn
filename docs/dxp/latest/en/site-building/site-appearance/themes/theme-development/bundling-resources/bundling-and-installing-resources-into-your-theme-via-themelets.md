@@ -4,7 +4,7 @@ Themelets are small, modular pieces of code that you can reuse in multiple theme
 
 ## Prerequisites
 
-Themelets are created using the Liferay Theme Generator (like [creating a theme](../getting-started/setting-up-the-environment-and-creating-a-theme.md)). If you have not already done so, then install it with this command:
+Themelets are created using the Liferay Theme Generator (like [creating a theme](../getting-started/setting-up-an-environment-and-creating-a-theme.md)). If you have not already done so, then install it with this command:
 
 ```bash
 npm install -g generator-liferay-theme@10.x.x
@@ -58,7 +58,7 @@ This command globally installs the themelet so that you can select it when exten
 Once you have a themelet installed globally, you can add it to any theme.
 
 ```note::
-   If you do not have a theme to add your themelet to, then see `Creating a Theme <../getting-started/setting-up-the-environment-and-creating-a-theme.md>`__ for steps to create one.
+   If you do not have a theme to add your themelet to, then see `Creating a Theme <../getting-started/setting-up-an-environment-and-creating-a-theme.md>`__ for steps to create one.
 ```
 
 Add your themelet to any theme with the `gulp extend` command:
@@ -98,4 +98,4 @@ The themelet is installed to the theme, and the changes are present the next tim
 
 ## Additional Information
 
-* [Creating a Theme](../getting-started/setting-up-the-environment-and-creating-a-theme.md)
+* [Creating a Theme](../getting-started/setting-up-an-environment-and-creating-a-theme.md)
