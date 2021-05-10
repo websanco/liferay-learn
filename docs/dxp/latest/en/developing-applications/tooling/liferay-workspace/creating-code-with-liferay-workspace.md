@@ -142,6 +142,5 @@ If you've already [created a Liferay Docker Container](./configuring-a-liferay-d
 
 ## Related Topics
 
-[Configuring a Liferay Docker Container](./configuring-a-liferay-docker-container.md)
-
-[Generating Projects with Blade CLI](../blade-cli/generating-projects-with-blade-cli.md)
+* [Configuring a Liferay Docker Container](./configuring-a-liferay-docker-container.md)
+* [Generating Projects with Blade CLI](../blade-cli/generating-projects-with-blade-cli.md)
