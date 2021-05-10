@@ -1,6 +1,8 @@
 div.admonition.hilighting-alert {
+	border-left: 0;
 	font-size: 0.875rem;
-	margin: 0 16px;
+	margin: 0 16px 8px;
+	padding: $spacing-sm $spacing-default $spacing-sm 2.625rem;
 
 	&.hide {
 		display: none;
