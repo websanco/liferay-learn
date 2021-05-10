@@ -44,7 +44,7 @@ Account represents a company or organization that is interacting with your websi
 } 
 ```
 
-### Properties
+**Properties**
 
 * `activeIndividualsCount` (Number): Number of active individuals belonging to the account.
 * `dateCreated` (Date): Date the account was created in the system.
@@ -84,7 +84,7 @@ Individual represents any user who accessed your portal. The individual can be k
 }
 ```
 
-### Properties
+**Properties**
 
 * `Demographics` Key/Value (String:) Map of the individuals demographics dynamic properties; Examples might include gender, birthDate, email, etc.
 * `ID` (String): Unique identifier of the individual.
@@ -113,7 +113,7 @@ Segments are a group of individuals that share similar characteristics. Segments
 }
 ```
 
-### Properties
+**Properties**
 
 * `dateCreated` (Date): Date the segment was created in the system.
 * `ID` (String): Unique identifier of the segment.
@@ -253,7 +253,7 @@ Pages information represents aggregated interaction data with any tracked page. 
 }
 ```
 
-### Properties
+**Properties**
 
 * `title` (String): The page title.
 * `metrics` (Metric): The list of metric values of the page; Each page is uniquely identified by the title, url pair.
@@ -264,3 +264,675 @@ Pages information represents aggregated interaction data with any tracked page. 
     * `Value` (Number): metric value, depends on the rangeKey, if the selected rangeKey is 30, value will represent the aggregated data from the last 30 days.
     * `previousValue` (Number): previous metric value. It also depends on the requested rangeKey, if the selected rangeKey is 30, previous value will aggregate data from today - 60days until today - 30days.
 * `url` (String): The page URL
+
+## Assets 
+
+Asset information represents aggregated interaction data with any tracked asset page. Each page URL might contain multiple assets. Asset metrics is a complement to the page report and it offers a more in depth view of page interactions. There are four assets available: blogs, documents and media, forms and web content. Each of these assets have a specific endpoint:
+
+* Blogs - [https://analytics.liferay.com/api/reports/blogs](https://analytics.liferay.com/api/reports/blogs)
+* Documents And Media - [https://analytics.liferay.com/api/reports/documents-and-media](https://analytics.liferay.com/api/reports/documents-and-media)
+* Forms - [https://analytics.liferay.com/api/reports/forms](https://analytics.liferay.com/api/reports/forms)
+* Web Content - [https://analytics.liferay.com/api/reports/web-contents](https://analytics.liferay.com/api/reports/web-contents)
+
+Each asset contains its own set of properties:
+
+### Blogs
+
+```json
+ {
+      "id": "107694635",
+      "title": "16 Awesome Web Portal Examples",
+      "metrics": {
+        "readingTimeMetric": {
+          "value": 71788.99821937321
+        },
+        "clicksMetric": {
+          "value": 1969.0
+        },
+        "viewsMetric": {
+          "value": 3253.0
+        },
+        "ratingsMetric": {
+          "value": 0.0
+        },
+        "commentsMetric": {
+          "value": 0.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/blogs/107694635?blogTitle=16%20Awesome%20Web%20Portal%20Examples&rangeKey=30"
+        }
+      }
+```
+
+**Properties**
+
+* `ID` (String): Unique identifier of the blog.
+* `Title` (String) : Title used for the blog.
+* `Reading Time Metric` (Double): Time user spent reading the blog asset.
+* `Clicks Metric` (Double): Sum of users clicks on the blog.
+* `Views Metric` (Double): Sum of users visualizations of the blog.
+* `Ratings Metric` (Double): Average rating (1-5 range) of the blogs over that selection period.
+* `Comments Metric` (Double): Sum of comments that happened on the blog.
+
+### Documents and Media
+
+```json
+{
+      "id": "320981007",
+      "title": "Cinco Principios Útiles para Mejorar su Comunicación De E-commerce B2B Durante (y Después) una Crisis",
+      "metrics": {
+        "downloadsMetric": {
+          "value": 6.0
+        },
+        "ratingsMetric": {
+          "value": 0.0
+        },
+        "commentsMetric": {
+          "value": 0.0
+        },
+        "previewsMetric": {
+          "value": 286.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/documents-and-media/320981007?documentTitle=Cinco%20Principios%20%C3%9Atiles%20para%20Mejorar%20su%20Comunicaci%C3%B3n%20De%20E-commerce%20B2B%20Durante%20(y%20Despu%C3%A9s)%20una%20Crisis&rangeKey=30"
+      }
+}
+```
+
+### Forms
+
+```json
+{
+      "id": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
+      "title": "Opt-in: Liferay Blog Subscription",
+      "metrics": {
+        "viewsMetric": {
+          "value": 20409.0
+        },
+        "abandonmentsMetric": {
+          "value": 0.9989710421872703
+        },
+        "submissionsMetric": {
+          "value": 22.0
+        },
+        "completionTimeMetric": {
+          "value": 33645.77272727273
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+        },
+        "pages": {
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+        }
+      }
+```
+
+You can also follow the pages link and see the form page metrics information; It will show form metrics by page and form fields:
+
+```json
+{
+  "formId": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
+  "formTitle": "Opt-in: Liferay Blog Subscription",
+  "formPages": [
+    {
+      "id": "0",
+      "title": "",
+      "fields": {
+        "blog_en_ua_digital_strategy": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 6.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 3.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 3.0
+            }
+          }
+        },
+        "please_leave_blank_qjug_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 1.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 3.0
+            },
+            "fieldRefilledMetric": {
+              "value": 0.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_ypgg_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_tibp_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 1.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 5.0
+            },
+            "fieldRefilledMetric": {
+              "value": 0.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "blog_en_us_products_technology": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 8.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 4.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 4.0
+            }
+          }
+        },
+        "please_leave_blank_ztya_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_tjzj_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_dwnv_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_glcj_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_gdai_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "blog_en_us_customer_experience": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 1.0
+            }
+          }
+        },
+        "blog_en_us_digital_strategy": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 22.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 11.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 11.0
+            }
+          }
+        },
+        "please_leave_blank_rhzm_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_advw_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "email": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 86.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 223983.0
+            },
+            "fieldRefilledMetric": {
+              "value": 34.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 10.0
+            }
+          }
+        },
+        "blog_pt_br_digital_strategy": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 1.0
+            }
+          }
+        },
+        "please_leave_blank_cfsb_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_qvzy_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_imod_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_ceez_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_uyhx_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_snws_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "recent_conversion_type": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 40.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 20.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_vebn_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_vahv_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_tjtq_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_ekhi_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_rjsd_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "blog_default_blog_subscription": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 40.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 20.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "please_leave_blank_sqpo_": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 2.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 1.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        },
+        "hsSubmitBtn": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 62.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 4096.0
+            },
+            "fieldRefilledMetric": {
+              "value": 20.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 1.0
+            }
+          }
+        },
+        "lifecyclestage": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 40.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 20.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 0.0
+            }
+          }
+        }
+      },
+      "metrics": {
+        "pageViewsMetric": {
+          "value": 20409.0
+        },
+        "pageAbandonmentsMetric": {
+          "value": 20388.0
+        }
+      }
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+    },
+    "parent": {
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+    }
+  }
+}
+```
+
+### Web Content
+
+```json
+ {
+      "id": "231976097",
+      "title": "Component Styles",
+      "metrics": {
+        "viewsMetric": {
+          "value": 280756.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/web-contents/231976097?webContentTitle=Component%20Styles&rangeKey=30"
+        }
+      }
+    }
+```
