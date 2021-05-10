@@ -64,7 +64,7 @@ function update_examples {
 	then
 		local zip_dir_name=`find . -name "liferay-${1}.zip" -type d`
 
-		if [ -n "${zip_dir_name}" ]
+		if [[ -n "${zip_dir_name}" ]] && [[ -f ${zip_dir_name}/../update_example.sh ]]
 		then
 			pushd "${zip_dir_name}/.."
 
