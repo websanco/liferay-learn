@@ -107,7 +107,7 @@ Read on to see how the curl command and Java class work.
 
 ## Examine the CURL Command
 
-The curl command in the `Document_POST_ToSite.sh` posts the  `Document_POST_ToSite.sh` to a site via this `headless-delivery` application REST service call.
+The `Document_POST_ToSite.sh` script uploads itself by calling a `headless-delivery` application REST service with curl.
 
 ```bash 
 curl -F "file=@Document_PUT_ToSite.sh" -H "Content-Type: multipart/form-data" -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" -u "test@liferay.com:test"
@@ -121,7 +121,7 @@ Here are the command's arguments:
 | `-H "Content-Type: multipart/form-data"` | The media type ([MIME type](https://en.wikipedia.org/wiki/Media_type)) being posted. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint. |
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Replace `${1}` with your site ID. |
-| `-u "test@liferay.com:test"` | User credentials. |
+| `-u "test@liferay.com:test"` | Basic authentication user credentials. |
 
 Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
 
@@ -154,7 +154,7 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-This class invokes a service using only three lines of code: 
+This class invokes a `headless-delivery` application REST service using only three lines of code: 
 
 1. Get a `DocumentResource.Builder`.
 1. Use the `DocumentResource.Builder` to authenticate a user with a `DocumentResource` instance.
@@ -167,7 +167,7 @@ The ``main`` method's comment demonstrates running the class.
 The other example Java classes are similar to this one, but call different `DocumentResource` methods.
 
 ```important::
-See `DocumentResource <https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html>`_ for service details.
+See `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ for service details.
 ```
 
 The following sections demonstrate calling other `Document` and `DocumentFolder` REST services using curl and Java.
@@ -506,7 +506,7 @@ The following curl commands and Java classes demonstrate more `Document` service
 
 The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` or `DocumentFolder` services and provides an interface to try out each service. It provides the `Document` or `DocumentFolder` schemas too.
 
-For Javadoc, see [DocumentResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html) and [DocumentFolderResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentFolderResource.html).
+See the [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java) and [DocumentFolderResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentFolderResource.java) Java interfaces too.
 
 ## Additional Information
 
