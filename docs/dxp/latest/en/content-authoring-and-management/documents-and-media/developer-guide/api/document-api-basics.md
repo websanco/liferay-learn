@@ -1,6 +1,6 @@
 # Document API Basics
 
-Liferay's headless delivery application provides REST services for [Documents and Media](../../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using curl commands and Java classes. 
+Liferay's headless delivery application provides REST services for [Documents and Media](../../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using curl commands and Java classes.
 
 Start with uploading documents using an example curl command and Java class.
 
@@ -109,12 +109,9 @@ Read on to see how the curl command and Java class work.
 
 The `Document_POST_ToSite.sh` script uploads itself by calling a `headless-delivery` application REST service with curl.
 
-.. literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
-   :caption: Document_POST_ToSite.sh
-   :name: Document_POST_ToSite.sh
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
    :language: bash
-   :linenos:
-   :lines: 10-29
+```
 
 Here are the command's arguments:
 
@@ -134,12 +131,11 @@ Next, you'll see how similar the Java call is.
 
 Here's the code from `Document_POST_ToSite.java`:
 
-.. literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
-   :caption: Document_POST_ToSite.java
-   :name: Document_POST_ToSite.java
-   :language: bash
-   :linenos:
-   :lines: 
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
+   :dedent: 1
+   :language: java
+   :lines: 10-29
+```
 
 This class invokes a `headless-delivery` application REST service using only three lines of code: 
 
@@ -173,10 +169,8 @@ Command:
 
 Code:
 
-```bash
-curl \
-		"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
-		-u "test@liferay.com:test"
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Documents_GET_FromSite.sh
+   :language: bash
 ```
 
 ### Documents_GET_FromSite.java
@@ -189,25 +183,15 @@ java -classpath .:* -DsiteId=1234 Documents_GET_FromSite
 
 Code:
 
-```java
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Page<Document> page = documentResource.getSiteDocumentsPage(
-		Long.valueOf(System.getProperty("siteId")), null, null, null, null,
-		Pagination.of(1, 2), null);
-
-	System.out.println(page);
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Documents_GET_FromSite.java
+   :dedent: 1
+   :language: java
+   :lines: 11-23
 ```
 
 The site's `Document` objects are listed in JSON.
 
-## Getting a Document Fields
+## Getting Document Fields
 
 You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -215,50 +199,39 @@ You can get a `Document`'s fields by executing the following curl or Java comman
 Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
 ```
 
-### Document_GET_ByID.sh
+### Document_GET_ById.sh
 
 Command:
 
 ```bash
-./Document_GET_ByID.sh 1234
+./Document_GET_ById.sh 1234
 ```
 
 Code:
 
-```bash
-curl \
-	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-	-u "test@liferay.com:test"
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById.sh
+   :language: bash
 ```
 
-### Document_GET_ByID.java
+### Document_GET_ById.java
 
 Command: 
 
-```bash 
+```bash
 java -classpath .:* -DdocumentId=1234 Document_GET_ById
 ```
 
 Code:
 
-```java
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Document document = documentResource.getDocument(
-		Long.valueOf(System.getProperty("documentId")));
-
-	System.out.println(document);
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-20
 ```
 
 The `Document` fields are listed in JSON.
 
-## Getting a Document Content
+## Getting Document Content
 
 `Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -270,14 +243,10 @@ Command:
 ./Document_GET_ById_ContentValue.sh 1234
 ```
 
-```bash
-curl \
-	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}?nestedFields=contentValue&fields=contentValue" \
-	-u "test@liferay.com:test" \
-	| sed -n "2 p" \
-	| awk -F ":" '{print $2}' \
-	| tr -d " \"" \
-	| base64 -d
+Code:
+
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
+   :language: bash
 ```
 
 The URL and `-u` option specify the service endpoint and authentication credentials, respectively. The URL's `/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID. This URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the URL and `-u ...` option returns this:	
@@ -290,16 +259,11 @@ The URL and `-u` option specify the service endpoint and authentication credenti
 
 The `Document` content value above is encoded in Base64 and wrapped in JSON. The complete command in `Document_GET_ById_ContentValue.sh` isolates the `Document` content value with `sed`, `awk`, and `tr` to and decodes it with `base64`. The full command returns the decoded document content. Here's content returned for the `Document_POST_ToSite.sh` `Document` that you uploaded previously:
 
-```bash
-curl \
-	-F "file=@Document_POST_ToSite.sh" \
-	-H "Content-Type: multipart/form-data" \
-	-X POST \
-	"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
-	-u "test@liferay.com:test"
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
+   :language: bash
 ```
 
-### Document Document_GET_ById_ContentValue.java
+### Document_GET_ById_ContentValue.java
 
 The Java code to get `Document` content and decode it is simpler than the previous curl command.
 
@@ -311,24 +275,10 @@ java -classpath .:* -DdocumentId=1234 Document_GET_ById_ContentValue
 
 Code:
 
-```java
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	builder.parameter("nestedFields", "contentValue");
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Document document = documentResource.getDocument(
-		Long.valueOf(System.getProperty("documentId")));
-
-	Base64.Decoder decoder = Base64.getDecoder();
-
-	System.out.println(
-		new String(decoder.decode(document.getContentValue())));
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById_ContentValue.java
+   :dedent: 1
+   :language: java
+   :lines: 11-27
 ```
 
 The following line adds the `contentValue` nested field as a request parameter.
@@ -351,16 +301,8 @@ Command:
 ./Document_PATCH_ById.sh 1234
 ```
 
-Code:
-
-```bash 
-curl \
-	-F "document={\"description\": \"Bar\"}" \
-	-F "file=@Document_POST_ToSite.sh" \
-	-H  "Content-Type: multipart/form-data; boundary=ARBITRARY" \
-	-X PATCH \
-	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-	-u "test@liferay.com:test"
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PATCH_ById.sh
+   :language: bash
 ```
 
 The first form data part specifies a new value for the `Document`'s `description` field. The second form data part specifies the updated file to upload.
@@ -375,29 +317,10 @@ java -classpath .:* -DdocumentId=1234 Document_PATCH_ById
 
 Code:
 
-```java 
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Document document = documentResource.patchDocument(
-		Long.valueOf(System.getProperty("documentId")),
-		new Document() {
-			{
-				description = "Bar";
-			}
-		},
-		new HashMap<String, File>() {
-			{
-				put("file", new File("Document_POST_ToSite.java"));
-			}
-		});
-
-	System.out.println(document);
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PATCH_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 13-34
 ```
 
 The Java code above calls `DocumentResource`'s `patchDocument` method, passing in the `Document`'s ID, a `Document` object that includes a field to update, and the updated file to upload.
@@ -420,15 +343,9 @@ Command:
 
 Code:
 
-```bash 
-curl \
-	-F "document={\"description\": \"Goo\", \"title\": \"Document_PUT_ById.sh\"}" \
-	-F "file=@Document_PUT_ById.sh" \
-	-H "Content-Type: multipart/form-data; boundary=ARBITRARY" \
-	-X PUT \
-	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-	-u "test@liferay.com:test"
-``` 
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PUT_ById.sh
+   :language: bash
+```
 
 The first form data part sets new `description` and `title` field values. The second form data part specifies a replacement file to upload.
 
@@ -442,30 +359,10 @@ java -classpath .:* -DdocumentId=1234 Document_PUT_ById
 
 Code:
 
-```java
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Document document = documentResource.putDocument(
-		Long.valueOf(System.getProperty("documentId")),
-		new Document() {
-			{
-				description = "Goo";
-				title = "Document_PUT_ById.java";
-			}
-		},
-		new HashMap<String, File>() {
-			{
-				put("file", new File("Document_PUT_ById.java"));
-			}
-		});
-
-	System.out.println(document);
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PUT_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 13-35
 ```
 
 The Java code above calls `DocumentResource`'s `putDocument` method, passing in the `Document`'s ID, a `Document` object that includes values for the `Document`'s `description` and `title` fields, and a replacement file to upload.
@@ -492,11 +389,8 @@ Command:
 
 Code:
 
-```bash
-curl \
-	-X DELETE \
-	"http://localhost:8080/o/headless-delivery/v1.0/documents/${1}" \
-	-u "test@liferay.com:test"
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_DELETE_ById.sh
+   :language: bash
 ```
 
 ### Document_DELETE_ById.java 
@@ -509,17 +403,10 @@ java -classpath .:* -DdocumentId=1234 Document_DELETE_ById
 
 Code:
 
-```java
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	documentResource.deleteDocument(
-		Long.valueOf(System.getProperty("documentId")));
-}
+```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_DELETE_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 8-17
 ```
 
 The `Document`s are removed from Documents and Media.
