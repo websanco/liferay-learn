@@ -12,15 +12,17 @@ Start with uploading documents using an example curl command and Java class.
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Sign in to Liferay.
+1. After Liferay initializes, visit it with your browser at `http://localhost:8080`.
 
-    ```tip::
-    Using basic authentication while signed into Liferay is an easy way to test services.
-    ```
+1. Sign in using the default credentials:
+
+    **User Name:** `test@liferay.com`
+
+    **Password:** `test`
 
 1. [Find your site's ID](../../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
 
-1. Download and unzip the [example command code](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
+1. Download and unzip the [example command project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip -O
@@ -29,36 +31,38 @@ Start with uploading documents using an example curl command and Java class.
     ```bash
     unzip liferay-g9i6.zip
     ```
-Curl commands are in the project's `curl` folder and Java source files are in the `java` folder.
 
-Use the curl command in `curl/Document_POST_ToSite.sh` to upload that file (i.e., `Document_POST_ToSite.sh`) to your site's Documents and Media. 
+Here's the project's folder structure:
+
+```
+liferay-g9i6.zip/
+├── curl // curl command scripts
+└── java // Java classes
+```
+
+Use a curl script to upload a file to [Documents and Media](../../sharing-documents-and-media.md). 
 
 1. On the command line, navigate to the `curl` folder. 
 
-1. Copy the `Document_POST_ToSite.sh` file contents to the command line. Then replace `${1)` with your site ID and replace the user credentials with your own. For example,
+1. Upload a file by executing the `Document_POST_ToSite.sh` script with your site ID as a parameter. For example,
 
-    ```bash 
-    curl \
-        -F "file=@Document_POST_ToSite.sh" \
-        -H "Content-Type: multipart/form-data" \
-        -X POST \
-        "http://localhost:8080/o/headless-delivery/v1.0/sites/20121/documents" \
-        -u "test@liferay.com:test"
+    ```bash
+    ./Document_POST_ToSite.sh 1234
+	```
+
+    ```note:: 
+    If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.sh`` script before running it.
     ```
 
-1. Execute the curl command.
-
-    The `Document_POST_ToSite.sh` file uploads to your site's Documents and Media.
+    The script uploads itself to your site's Documents and Media.
 
     ![The new file in Documents and Media.](./document-api-basics/images/01.png)
 
-    The response object includes key fields like these:
+    The command response describes the new Documents and Media file using JSON, like this:
 
     ```bash 
     {
       ...
-      "dateCreated" : "2021-04-09T14:13:59Z",
-      "dateModified" : "2021-04-09T14:13:59Z",
       "description" : "",
       ...
       "id" : 38301,
@@ -67,37 +71,39 @@ Use the curl command in `curl/Document_POST_ToSite.sh` to upload that file (i.e.
     }
     ```
 
-     The response includes `Document_POST_ToSite.sh`'s creation date, description, newly assigned ID, and more. Note the ID for later commands.
+     The response includes the file's description, newly assigned ID, title, and more. Note the ID for later commands.
 
-Next use the `Document_POST_ToSite` class to upload its source file `Document_POST_ToSite.java`.
+Next you'll use a Java class to upload a file.
 
 1. Go to the `java` folder and compile the Java source files.
 
     ```bash
     cd ../java
+	```
 
+	```bash
     javac -classpath .:* *.java
     ```
 
-1. Upload the `Document_POST_ToSite.java` file to Documents and Media by running the `Document_POST_ToSite` class, replacing the `siteId` system property value below with your site's ID.
+1. Upload a file to Documents and Media by running the `Document_POST_ToSite` class below, replacing the `siteId` system property value with your site's ID.
 
     ```bash
     java -classpath .:* -DsiteId=1234 Document_POST_ToSite
     ```
 
-    The `Document_POST_ToSite.java` file uploads to Documents and Media.
+    The class uploads its source file `Document_POST_ToSite.java` to Documents and Media.
 
     ```note:: 
     If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class before running it.
     ```
 
     ```tip:: 
-    A comment at the top of each example Java class includes a command to run the class.
+    A command in each example Java class's ``main`` method commment demonstrates running the class.
     ```
 
 ![The Java class uploaded the Java source file.](./document-api-basics/images/02.png)
 
-Read on to see how these work. 
+Read on to see how the curl command and Java class work. 
 
 ## Examine the CURL Command
 
