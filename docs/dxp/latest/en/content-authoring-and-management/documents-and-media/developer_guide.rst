@@ -5,15 +5,11 @@ Developer Guide
    :maxdepth: 2
 
    developer-guide/adaptive-media-modules-reference.md
+   developer-guide/api.rst
 
-* Getting Files and Folders
-* Creating Files, Folders, and Shortcuts
-* Deleting Files
-* Deleting File Versions
-* Deleting File Shortcuts
-* Deleting Folders
-* Moving Media to the Recycle Bin
-* Updating Media
-* File Check In and Check Out
-* Copying and Moving Files and Folders
 -  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/adaptive-media-modules-reference`
+
+API
+---
+
+-  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics`
