@@ -48,6 +48,6 @@ public class E3Q3Portlet extends MVCPortlet {
 			E3Q3WebConfiguration.class, properties);
 	}
 
-	private volatile E3Q3WebConfiguration _e3q3WebConfiguration;
+	private E3Q3WebConfiguration _e3q3WebConfiguration;
 
 }
