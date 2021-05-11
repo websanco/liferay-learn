@@ -6,7 +6,7 @@ import com.liferay.headless.admin.user.client.resource.v1_0.UserAccountResource;
 public class Users_GET_FromInstance {
 
 	/**
-	 * java -classpath .:* Users_GET
+	 * java -classpath .:* Users_GET_FromInstance
 	 */
 	public static void main(String[] args) throws Exception {
 		UserAccountResource.Builder builder = UserAccountResource.builder();
