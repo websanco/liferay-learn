@@ -20,10 +20,10 @@ Start with uploading documents using an example curl command and Java class.
 
 1. [Find your site's ID](../../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
 
-1. Download and unzip the [example command code](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
+1. Download and unzip the [example command code](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip -O
     ```
 
     ```bash
