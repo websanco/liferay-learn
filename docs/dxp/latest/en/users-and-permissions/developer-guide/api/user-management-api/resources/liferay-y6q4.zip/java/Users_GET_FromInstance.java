@@ -15,11 +15,10 @@ public class Users_GET_FromInstance {
 			"test@liferay.com", "test"
 		).build();
 
-		Page<UserAccount> userAccounts =
-			userAccountResource.getUserAccountsPage(
-				null, null, Pagination.of(1, 2), null);
+		Page<UserAccount> page = userAccountResource.getUserAccountsPage(
+			null, null, Pagination.of(1, 2), null);
 
-		System.out.println(userAccounts);
+		System.out.println(page);
 	}
 
 }
