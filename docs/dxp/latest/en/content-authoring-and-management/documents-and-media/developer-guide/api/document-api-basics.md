@@ -174,9 +174,17 @@ The following sections demonstrate calling other `Document` and `DocumentFolder`
 
 ## Listing Site Documents
 
-You can list a site's documents by executing the following curl or Java command. As above, all calls require a site ID in place of `${1}` in the curl command or in place of the `siteId` value in the Java command.
+You can list a site's documents by executing the following curl or Java command. As above, replace `1234` with your site's ID.
 
 ### Documents_GET_FromSite.sh
+
+Command:
+
+```bash
+./Documents_GET_FromSite.sh 1234
+```
+
+Code:
 
 ```bash
 curl \
@@ -214,13 +222,21 @@ The site's `Document` objects are listed in JSON.
 
 ## Getting a Document Fields
 
-You can get a `Document`'s fields by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ```tip:: 
 Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
 ```
 
 ### Document_GET_ByID.sh
+
+Command:
+
+```bash
+./Document_GET_ByID.sh 1234
+```
+
+Code:
 
 ```bash
 curl \
@@ -257,9 +273,15 @@ The `Document` fields are listed in JSON.
 
 ## Getting a Document Content
 
-`Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+`Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_GET_ById_ContentValue.sh
+
+Command:
+
+```bash
+./Document_GET_ById_ContentValue.sh 1234
+```
 
 ```bash
 curl \
@@ -279,7 +301,7 @@ The URL and `-u` option specify the service endpoint and authentication credenti
 }
 ```
 
-The `Document` content value above is encoded in Base64 and wrapped in JSON. The complete command in `Document_GET_ById_ContentValue.sh` isolates `Document` content value with `sed`, `awk`, and `tr` to and decodes it with `base64`. The full command returns the decoded document content. Here's content returned for the `Document_POST_ToSite.sh` `Document`:
+The `Document` content value above is encoded in Base64 and wrapped in JSON. The complete command in `Document_GET_ById_ContentValue.sh` isolates the `Document` content value with `sed`, `awk`, and `tr` to and decodes it with `base64`. The full command returns the decoded document content. Here's content returned for the `Document_POST_ToSite.sh` `Document` that you uploaded previously:
 
 ```bash
 curl \
@@ -332,9 +354,17 @@ After getting the `Document` by its ID, a `Base64.Decoder` decodes the `Document
 
 ## Updating a Document
 
-`Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+`Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_PATCH_ById.sh
+
+Command:
+
+```bash
+./Document_PATCH_ById.sh 1234
+```
+
+Code:
 
 ```bash 
 curl \
@@ -391,9 +421,17 @@ The above commands update the `Document`'s description to "Bar".
 
 ## Replacing a Document
 
-`Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following curl or Java command. Set the command's `${1}` or `documentId` to your `Document`'s ID.
+`Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
-### Document_PUT_ById.sh 
+### Document_PUT_ById.sh
+
+Command:
+
+```bash
+./Document_PUT_ById.sh 1234
+```
+
+Code:
 
 ```bash 
 curl \
@@ -405,7 +443,7 @@ curl \
 	-u "test@liferay.com:test"
 ``` 
 
-The first form data part specifies new `description` and `title` field values. The second form data part sets replacement file to upload.
+The first form data part sets new `description` and `title` field values. The second form data part specifies a replacement file to upload.
 
 ### Document_PUT_ById.java
 
@@ -455,9 +493,17 @@ The above commands replace `Document` instances with completely new ones that ha
 
 ## Deleting a Document
 
-You can delete a `Document` by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the `Document`'s ID.
+You can delete a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_DELETE_ById.sh
+
+Command:
+
+```bash
+./Document_DELETE_ById.sh 1234
+```
+
+Code:
 
 ```bash
 curl \
@@ -498,13 +544,13 @@ The following curl commands and Java classes demonstrate more `Document` service
 | File | Description |
 | :--- | :---------- |
 | `DocumentFolder_GET_ById.[sh\|java]` | Lists a folder's fields. |
-| `DocumentFolder_GET_FromSite.[sh\|java]` | Lists the site's folders. |
+| `DocumentFolder_GET_FromSite.[sh\|java]` | Lists a site's folders. |
 | `DocumentFolder_PATCH_ById.[sh\|java]` | Updates a folder and its fields. |
 | `DocumentFolder_POST_ToSite.[sh\|java]` | Posts a document folder to a site. |
 | `DocumentFolder_PUT_ById.[sh\|java]` | Replaces a folder and its fields entirely. |
 | `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
 
-The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` or `DocumentFolder` services and provides an interface to try out each service. It provides the `Document` or `DocumentFolder` schemas too.
+The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` and `DocumentFolder` services and schemas, and has an interface to try out each service.
 
 See the [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java) and [DocumentFolderResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentFolderResource.java) Java interfaces too.
 
