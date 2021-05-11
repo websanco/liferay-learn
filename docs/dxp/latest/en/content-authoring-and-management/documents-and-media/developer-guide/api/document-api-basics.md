@@ -109,9 +109,12 @@ Read on to see how the curl command and Java class work.
 
 The `Document_POST_ToSite.sh` script uploads itself by calling a `headless-delivery` application REST service with curl.
 
-```bash 
-curl -F "file=@Document_PUT_ToSite.sh" -H "Content-Type: multipart/form-data" -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" -u "test@liferay.com:test"
-```
+.. literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
+   :caption: Document_POST_ToSite.sh
+   :name: Document_POST_ToSite.sh
+   :language: bash
+   :linenos:
+   :lines: 10-29
 
 Here are the command's arguments:
 
@@ -131,28 +134,12 @@ Next, you'll see how similar the Java call is.
 
 Here's the code from `Document_POST_ToSite.java`:
 
-```java
-/**
- * java -classpath .:* -DsiteId=1234 Document_POST_ToSite
- */
-public static void main(String[] args) throws Exception {
-	DocumentResource.Builder builder = DocumentResource.builder();
-
-	DocumentResource documentResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	Document document = documentResource.postSiteDocument(
-		Long.valueOf(System.getProperty("siteId")), new Document(),
-		new HashMap<String, File>() {
-			{
-				put("file", new File("Document_POST_ToSite.java"));
-			}
-		});
-
-	System.out.println(document);
-}
-```
+.. literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
+   :caption: Document_POST_ToSite.java
+   :name: Document_POST_ToSite.java
+   :language: bash
+   :linenos:
+   :lines: 
 
 This class invokes a `headless-delivery` application REST service using only three lines of code: 
 
