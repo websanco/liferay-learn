@@ -10,6 +10,8 @@ import com.liferay.dynamic.data.mapping.data.provider.settings.DDMDataProviderSe
 import com.liferay.dynamic.data.mapping.model.DDMDataProviderInstance;
 import com.liferay.dynamic.data.mapping.service.DDMDataProviderInstanceService;
 import com.liferay.portal.kernel.security.xml.SecureXMLFactoryProviderUtil;
+import com.liferay.portal.kernel.util.Http;
+import com.liferay.portal.kernel.util.HttpUtil;
 import com.liferay.portal.kernel.util.KeyValuePair;
 import com.liferay.portal.kernel.util.Validator;
 
@@ -24,9 +26,6 @@ import java.util.Optional;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import jodd.http.HttpRequest;
-import jodd.http.HttpResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -62,7 +61,7 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 	}
 
 	protected DDMDataProviderResponse createDDMDataProviderResponse(
-			B4D8DataProviderSettings b4d8DataProviderSettings,
+			B4D8DDMDataProviderSettings b4d8DataProviderSettings,
 			Document document)
 		throws Exception {
 
@@ -120,23 +119,21 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 			fetchDDMDataProviderInstance(
 				ddmDataProviderRequest.getDDMDataProviderId());
 
-		B4D8DataProviderSettings b4d8DataProviderSettings =
+		B4D8DDMDataProviderSettings b4d8DataProviderSettings =
 			ddmDataProviderInstanceSettings.getSettings(
-				ddmDataProviderInstance.get(), B4D8DataProviderSettings.class);
+				ddmDataProviderInstance.get(),
+				B4D8DDMDataProviderSettings.class);
 
-		HttpRequest httpRequest = HttpRequest.get(
+		Http.Options options = new Http.Options();
+
+		options.setLocation(
 			"https://api.geodatasource.com/cities?" +
 				"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
 					"&format=xml&lat=37.3861&lng=-122.084");
 
-		httpRequest.trustAllCerts(true);
+		String responseJSON = HttpUtil.URLtoString(options);
 
-		HttpResponse httpResponse = httpRequest.send();
-
-		httpResponse.charset("UTF-8");
-
-		Document document = _convertXMLStringToDocument(
-			httpResponse.bodyText());
+		Document document = _convertXMLStringToDocument(responseJSON);
 
 		return createDDMDataProviderResponse(
 			b4d8DataProviderSettings, document);
