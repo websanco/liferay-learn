@@ -15,9 +15,9 @@ public class Organization_POST_ToInstance {
 
 		Organization organization = organizationResource.postOrganization(
 			new Organization() {
-					{
-						name = "Dog";
-					}
+				{
+					name = "Dog";
+				}
 			});
 
 		System.out.println(organization);

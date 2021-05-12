@@ -16,7 +16,7 @@ public class Organization_GET_ById {
 		Organization organization = organizationResource.getOrganization(
 			String.valueOf(System.getProperty("organizationId")));
 
-		System.out.println(organization);	
+		System.out.println(organization);
 	}
 
 }

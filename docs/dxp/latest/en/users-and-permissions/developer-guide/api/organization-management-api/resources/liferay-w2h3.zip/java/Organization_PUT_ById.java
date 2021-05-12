@@ -16,9 +16,9 @@ public class Organization_PUT_ById {
 		Organization organization = organizationResource.putOrganization(
 			String.valueOf(System.getProperty("organizationId")),
 			new Organization() {
-					{
-						name = "Fox";
-					}
+				{
+					name = "Fox";
+				}
 			});
 
 		System.out.println(organization);

@@ -16,9 +16,9 @@ public class Organization_PATCH_ById {
 		Organization organization = organizationResource.patchOrganization(
 			String.valueOf(System.getProperty("organizationId")),
 			new Organization() {
-					{
-						name = "Easy";
-					}
+				{
+					name = "Easy";
+				}
 			});
 
 		System.out.println(organization);
