@@ -8,12 +8,12 @@ import org.osgi.service.component.annotations.Component;
 	immediate = true, property = "ddm.data.provider.type=b4d8",
 	service = DDMDataProviderSettingsProvider.class
 )
-public class B4D8DataProviderSettingsProvider
+public class B4D8DDMDataProviderSettingsProvider
 	implements DDMDataProviderSettingsProvider {
 
 	@Override
 	public Class<?> getSettings() {
-		return B4D8DataProviderSettings.class;
+		return B4D8DDMDataProviderSettings.class;
 	}
 
 }

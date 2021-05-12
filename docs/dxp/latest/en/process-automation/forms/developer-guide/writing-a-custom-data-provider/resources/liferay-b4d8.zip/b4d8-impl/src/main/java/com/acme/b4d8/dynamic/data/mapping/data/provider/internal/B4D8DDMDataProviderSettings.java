@@ -23,6 +23,6 @@ import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSe
 		)
 	}
 )
-public interface B4D8DataProviderSettings
+public interface B4D8DDMDataProviderSettings
 	extends DDMDataProviderParameterSettings {
 }

@@ -41,7 +41,7 @@ import org.xml.sax.InputSource;
 	immediate = true, property = "ddm.data.provider.type=b4d8",
 	service = DDMDataProvider.class
 )
-public class B4D8DataProvider implements DDMDataProvider {
+public class B4D8DDMDataProvider implements DDMDataProvider {
 
 	@Override
 	public DDMDataProviderResponse getData(
