@@ -1,6 +1,6 @@
 # Document API Basics
 
-Liferay's headless delivery application provides REST services for [Documents and Media](../../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using curl commands and Java classes.
+Liferay's headless delivery application provides REST services for [Documents and Media](../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using curl commands and Java classes.
 
 Start with uploading documents using an example curl command and Java class.
 
@@ -20,7 +20,7 @@ Start with uploading documents using an example curl command and Java class.
 
     **Password:** `test`
 
-1. [Find your site's ID](../../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
+1. [Find your site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
 
 1. Download and unzip the [example project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
 
@@ -40,7 +40,7 @@ liferay-g9i6.zip/
 └── java // Java classes
 ```
 
-Use a curl script to upload a file to [Documents and Media](../../sharing-documents-and-media.md). 
+Use a curl script to upload a file to [Documents and Media](../sharing-documents-and-media.md). 
 
 1. On the command line, navigate to the `curl` folder.
 
@@ -434,13 +434,13 @@ The following curl commands and Java classes demonstrate more `Document` service
 | `DocumentFolder_POST_ToSite.[java|sh]` | Posts a document folder to a site. |
 | `DocumentFolder_PUT_ById.[java|sh]` | Replaces a folder and its fields entirely. |
 
-The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` and `DocumentFolder` services and schemas, and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` and `DocumentFolder` services and schemas, and has an interface to try out each service.
 
 See the [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java) and [DocumentFolderResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentFolderResource.java) Java interfaces too.
 
 ## Additional Information
 
-* [Sharing Documents and Media](../../sharing-documents-and-media.md)
-* [Consuming REST Services](../../../../headless-delivery/consuming-apis/consuming-rest-services.md)
-* [API Headers Reference](../../../../headless-delivery/consuming-apis/api-headers-reference.md)
-* [Consuming GraphQL APIs](../../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)
+* [Sharing Documents and Media](../sharing-documents-and-media.md)
+* [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md)
+* [API Headers Reference](../../../headless-delivery/consuming-apis/api-headers-reference.md)
+* [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)
