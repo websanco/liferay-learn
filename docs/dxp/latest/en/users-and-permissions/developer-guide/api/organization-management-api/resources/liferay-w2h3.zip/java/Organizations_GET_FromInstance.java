@@ -1,7 +1,7 @@
-import com.liferay.headless.admin.user.dto.v1_0.Organization;
+import com.liferay.headless.admin.user.client.dto.v1_0.Organization;
 import com.liferay.headless.admin.user.client.pagination.Page;
 import com.liferay.headless.admin.user.client.pagination.Pagination;
-import com.liferay.headless.admin.user.resource.v1_0.OrganizationResource;
+import com.liferay.headless.admin.user.client.resource.v1_0.OrganizationResource;
 
 public class Organizations_GET_FromInstance {
 
@@ -15,11 +15,11 @@ public class Organizations_GET_FromInstance {
  			"test@liferay.com", "test"
  		).build();
 
- 		Page<Organization> organizations =
+ 		Page<Organization> page =
  			organizationResource.getOrganizationsPage(
- 				null, null, Pagination.of(1, 2), null);
+ 				null, null, null, Pagination.of(1, 2), null);
 
- 		System.out.println(organizations);
+ 		System.out.println(page);
  	}
 
  }

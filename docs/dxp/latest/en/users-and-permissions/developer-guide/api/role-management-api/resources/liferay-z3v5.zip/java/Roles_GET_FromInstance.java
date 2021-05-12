@@ -1,7 +1,7 @@
-import com.liferay.headless.admin.user.dto.v1_0.Role;
+import com.liferay.headless.admin.user.client.dto.v1_0.Role;
 import com.liferay.headless.admin.user.client.pagination.Page;
 import com.liferay.headless.admin.user.client.pagination.Pagination;
-import com.liferay.headless.admin.user.resource.v1_0.RoleResource;
+import com.liferay.headless.admin.user.client.resource.v1_0.RoleResource;
 
 public class Roles_GET_FromInstance {
 
@@ -16,8 +16,8 @@ public class Roles_GET_FromInstance {
 		).build();
 
 		Page<Role> role =
-			roleResource.getRolessPage(
-				null, null, Pagination.of(1, 2), null);
+			roleResource.getRolesPage(
+				Pagination.of(1, 2));
 
 		System.out.println(role);
 	}
