@@ -80,13 +80,17 @@ The VPN attempts to connect after clicking the button. If the connection fails, 
    You can manually test the connectivity of your services to an IP address through your VPN by using the service's `shell <../../troubleshooting/shell-access.md>`__ to run a command like the following: ``curl -v [address]``.
 ```
 
-To disconnect the VPN, click _Disconnect_ from the top-right Actions menu. This takes you to the _Disconnect VPN_ page.
+While the connection is being established, the message "VPN connection attempt initiated" pops up on the screen, and you cannot perform other management operations for your VPN until it completes. If you need to cancel the connection (for example, because an error is causing the connection to hang), then click "Cancel" on the pop-up.
+
+![Click the Cancel button on the message pop-up if you need to stop a connection before it is established.](./connecting-a-vpn-server-to-dxp-cloud/images/07.png)
+
+To disconnect the VPN any time after the connection is established, click _Disconnect_ from the top-right Actions menu. This takes you to the _Disconnect VPN_ page.
 
 ```warning::
    Disconnecting the VPN will interrupt communications with any external services with DXP Cloud.
 ```
 
-![The Disconnect VPN page asks you to confirm the impact of disconnecting before proceeding.](./connecting-a-vpn-server-to-dxp-cloud/images/07.png)
+![The Disconnect VPN page asks you to confirm the impact of disconnecting before proceeding.](./connecting-a-vpn-server-to-dxp-cloud/images/08.png)
 
 Check the boxes confirming the impact of disconnecting the VPN, and then click _Disconnect VPN_ to immediately disconnect it. Once the VPN is disconnected, the configuration can be changed again.
 
@@ -96,7 +100,7 @@ You can change any details of the VPN configuration (including forwarding ports)
 
 To edit the configuration, go to the environment's details page, and then _Edit..._ from the top-right Actions menu. This displays the same screen as creating the VPN configuration for the first time.
 
-![Click the Edit button from the Actions menu when the VPN is not connected to change the configuration.](./connecting-a-vpn-server-to-dxp-cloud/images/08.png)
+![Click the Edit button from the Actions menu when the VPN is not connected to change the configuration.](./connecting-a-vpn-server-to-dxp-cloud/images/09.png)
 
 ## Additional Information
 
