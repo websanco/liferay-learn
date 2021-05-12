@@ -48,7 +48,28 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		throws DDMDataProviderException {
 
 		try {
-			return doGetData(ddmDataProviderRequest);
+			Optional<DDMDataProviderInstance> ddmDataProviderInstance =
+				fetchDDMDataProviderInstance(
+					ddmDataProviderRequest.getDDMDataProviderId());
+
+			B4D8DDMDataProviderSettings b4d8DataProviderSettings =
+				ddmDataProviderInstanceSettings.getSettings(
+					ddmDataProviderInstance.get(),
+					B4D8DDMDataProviderSettings.class);
+
+			Http.Options options = new Http.Options();
+
+			options.setLocation(
+				"https://api.geodatasource.com/cities?" +
+					"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
+						"&format=xml&lat=37.3861&lng=-122.084");
+
+			String responseJSON = HttpUtil.URLtoString(options);
+
+			Document document = _convertXMLStringToDocument(responseJSON);
+
+			return createDDMDataProviderResponse(
+				b4d8DataProviderSettings, document);
 		}
 		catch (Exception exception) {
 			throw new DDMDataProviderException(exception);
@@ -109,34 +130,6 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		}
 
 		return builder.build();
-	}
-
-	protected DDMDataProviderResponse doGetData(
-			DDMDataProviderRequest ddmDataProviderRequest)
-		throws Exception {
-
-		Optional<DDMDataProviderInstance> ddmDataProviderInstance =
-			fetchDDMDataProviderInstance(
-				ddmDataProviderRequest.getDDMDataProviderId());
-
-		B4D8DDMDataProviderSettings b4d8DataProviderSettings =
-			ddmDataProviderInstanceSettings.getSettings(
-				ddmDataProviderInstance.get(),
-				B4D8DDMDataProviderSettings.class);
-
-		Http.Options options = new Http.Options();
-
-		options.setLocation(
-			"https://api.geodatasource.com/cities?" +
-				"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
-					"&format=xml&lat=37.3861&lng=-122.084");
-
-		String responseJSON = HttpUtil.URLtoString(options);
-
-		Document document = _convertXMLStringToDocument(responseJSON);
-
-		return createDDMDataProviderResponse(
-			b4d8DataProviderSettings, document);
 	}
 
 	protected Optional<DDMDataProviderInstance> fetchDDMDataProviderInstance(
