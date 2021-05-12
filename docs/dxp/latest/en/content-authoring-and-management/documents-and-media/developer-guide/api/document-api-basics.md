@@ -4,7 +4,7 @@ Liferay's headless delivery application provides REST services for [Documents an
 
 Start with uploading documents using an example curl command and Java class.
 
-## Uploading Documents With REST Services
+## Uploading Documents
 
 1.  Start the Liferay Docker image:
 
@@ -22,7 +22,7 @@ Start with uploading documents using an example curl command and Java class.
 
 1. [Find your site's ID](../../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
 
-1. Download and unzip the [example command project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
+1. Download and unzip the [example project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/liferay-g9i6.zip -O
@@ -42,7 +42,11 @@ liferay-g9i6.zip/
 
 Use a curl script to upload a file to [Documents and Media](../../sharing-documents-and-media.md). 
 
-1. On the command line, navigate to the `curl` folder. 
+1. On the command line, navigate to the `curl` folder.
+
+    ```bash
+	cd liferay-g9i6.zip/curl
+	```
 
 1. Upload a file by executing the `Document_POST_ToSite.sh` script with your site ID as a parameter. For example,
 
@@ -51,27 +55,27 @@ Use a curl script to upload a file to [Documents and Media](../../sharing-docume
 	```
 
     ```note:: 
-    If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.sh`` script before running it.
+       If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.sh`` script before running it.
     ```
 
-    The script uploads itself to your site's Documents and Media.
+The script uploads itself to your site's Documents and Media.
 
-    ![The new file in Documents and Media.](./document-api-basics/images/01.png)
+![The file uploaded to Documents and Media.](./document-api-basics/images/01.png)
 
-    The command response describes the new Documents and Media file using JSON, like this:
+The command response describes the new Documents and Media file in JSON, like this:
 
-    ```bash 
-    {
-      ...
-      "description" : "",
-      ...
-      "id" : 38301,
-      ...
-      "title" : "Document_POST_ToSite.sh"
-    }
-    ```
+```bash 
+{
+	...
+	"description" : "",
+	...
+	"id" : 38301,
+	...
+	"title" : "Document_POST_ToSite.sh"
+}
+```
 
-     The response includes the file's description, newly assigned ID, title, and more. Note the ID for later commands.
+The response includes the file's description, newly assigned ID, title, and more. Note the `id` value for later commands.
 
 Next you'll use a Java class to upload a file.
 
@@ -91,15 +95,11 @@ Next you'll use a Java class to upload a file.
     java -classpath .:* -DsiteId=1234 Document_POST_ToSite
     ```
 
-    The class uploads its source file `Document_POST_ToSite.java` to Documents and Media.
-
     ```note:: 
-    If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class before running it.
+       If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class before running it.
     ```
 
-    ```tip:: 
-    A command in each example Java class's ``main`` method commment demonstrates running the class.
-    ```
+The class uploads its source file `Document_POST_ToSite.java` to Documents and Media.
 
 ![The Java class uploaded the Java source file.](./document-api-basics/images/02.png)
 
@@ -107,7 +107,7 @@ Read on to see how the curl command and Java class work.
 
 ## Examine the CURL Command
 
-The `Document_POST_ToSite.sh` script uploads itself by calling a `headless-delivery` application REST service with curl.
+The `Document_POST_ToSite.sh` script uploads a file by calling a `headless-delivery` application REST service with curl.
 
 ```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
    :language: bash
@@ -116,12 +116,12 @@ The `Document_POST_ToSite.sh` script uploads itself by calling a `headless-deliv
 Here are the command's arguments:
 
 | Arguments | Description |
-| :--- | :---------- |
+| :-------- | :---------- |
 | `-F "file=@Document_POST_ToSite.sh"` | The file to post. |
 | `-H "Content-Type: multipart/form-data"` | The media type ([MIME type](https://en.wikipedia.org/wiki/Media_type)) being posted. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint. |
-| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Replace `${1}` with your site ID. |
-| `-u "test@liferay.com:test"` | Basic authentication user credentials. |
+| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Your site ID parameter replaces `${1}`. |
+| `-u "test@liferay.com:test"` | Basic authentication credentials. |
 
 Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
 
@@ -129,7 +129,7 @@ Next, you'll see how similar the Java call is.
 
 ## Examine the Java Service Call
 
-Here's the code from `Document_POST_ToSite.java`:
+The `Document_POST_ToSite.java` class uploads a file by calling a `headless-delivery` application REST service.
 
 ```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
    :dedent: 1
@@ -137,20 +137,22 @@ Here's the code from `Document_POST_ToSite.java`:
    :lines: 10-29
 ```
 
-This class invokes a `headless-delivery` application REST service using only three lines of code: 
+This class invokes the REST service using only three lines of code: 
 
-1. Get a `DocumentResource.Builder`.
-1. Use the `DocumentResource.Builder` to authenticate a user with a `DocumentResource` instance.
-1. Call the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object for the uploaded, and a hash map that specifies the file to upload. The file is arbitrary--this example uses local file `Document_POST_ToSite.java` for convenience.
+| Line (abbreviated) | Description |
+| :----------------- | :---------- |
+| `DocumentResource.Builder builder = ...` | Gets a `Builder` for generating a `DocumentResource` service instance. |
+| `DocumentResource documentResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `DocumentResource` service instance. |
+| `Document document = documentResource.postSiteDocument(...);` | Calls the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `Document_POST_ToSite.java` for convenience. |
 
 ```note::
-The ``main`` method's comment demonstrates running the class.
+   The ``main`` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `DocumentResource` methods.
 
 ```important::
-See `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ for service details.
+   See `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ for service details.
 ```
 
 The following sections demonstrate calling other `Document` and `DocumentFolder` REST services using curl and Java.
@@ -196,7 +198,7 @@ The site's `Document` objects are listed in JSON.
 You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ```tip:: 
-Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
+   Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
 ```
 
 ### Document_GET_ById.sh
@@ -249,7 +251,7 @@ Code:
    :language: bash
 ```
 
-The URL and `-u` option specify the service endpoint and authentication credentials, respectively. The URL's `/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID. This URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the URL and `-u ...` option returns this:	
+The first argument line specifies the service endpoint and authentication credentials, respectively. The URL's `/o/headless-delivery/v1.0/documents/${1}` part is the REST service endpoint to get the `Document` by its ID. This URL is the same as the `Document_GET_ById.sh` script's URL. The `?nestedFields=contentValue` part requests the `contentValue` embedded in the `Document`'s `nestedFields`. Lastly the `&fields=contentValue` part filters on the `contentValue` field, so that the content field alone is returned. Invoking only the service, however, returns Base64-endocded content wrapped in JSON, like this: 
 
 ```bash
 {
@@ -257,7 +259,7 @@ The URL and `-u` option specify the service endpoint and authentication credenti
 }
 ```
 
-The `Document` content value above is encoded in Base64 and wrapped in JSON. The complete command in `Document_GET_ById_ContentValue.sh` isolates the `Document` content value with `sed`, `awk`, and `tr` to and decodes it with `base64`. The full command returns the decoded document content. Here's content returned for the `Document_POST_ToSite.sh` `Document` that you uploaded previously:
+The routines following the service invocation process the encoded content. The `sed` and `awk` routines isolate the `Document` content value and the `tr` routine decodes it. Here's the decoded content returned for the `Document_POST_ToSite.sh` `Document` that you uploaded:
 
 ```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
    :language: bash
@@ -281,6 +283,8 @@ Code:
    :lines: 11-27
 ```
 
+Most of the code resembles the code in `Document_POST_ToSite.java`. There are a couple key differences.
+
 The following line adds the `contentValue` nested field as a request parameter.
 
 ```java
@@ -288,6 +292,10 @@ builder.parameter("nestedFields", "contentValue");
 ```
 
 After getting the `Document` by its ID, a `Base64.Decoder` decodes the `Document`'s content.
+
+```java
+Base64.Decoder decoder = Base64.getDecoder();
+```
 
 ## Updating a Document
 
@@ -301,11 +309,13 @@ Command:
 ./Document_PATCH_ById.sh 1234
 ```
 
+Code:
+
 ```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PATCH_ById.sh
    :language: bash
 ```
 
-The first form data part specifies a new value for the `Document`'s `description` field. The second form data part specifies the updated file to upload.
+The first form data part (following `-F`) specifies a new value for the `Document`'s `description` field. The second form data part specifies the updated file to upload.
 
 ### Document_PATCH_ById.java
 
@@ -367,7 +377,7 @@ Code:
 
 The Java code above calls `DocumentResource`'s `putDocument` method, passing in the `Document`'s ID, a `Document` object that includes values for the `Document`'s `description` and `title` fields, and a replacement file to upload.
 
-The above commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", and the description "Goo."
+The above curl and Java commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
 
 ```warning::
    Unless you want to use the current ``Document``'s title, make sure to specify the ``title`` value you want for the replacement ``Document``.
@@ -417,12 +427,12 @@ The following curl commands and Java classes demonstrate more `Document` service
 
 | File | Description |
 | :--- | :---------- |
-| `DocumentFolder_GET_ById.[sh\|java]` | Lists a folder's fields. |
-| `DocumentFolder_GET_FromSite.[sh\|java]` | Lists a site's folders. |
-| `DocumentFolder_PATCH_ById.[sh\|java]` | Updates a folder and its fields. |
-| `DocumentFolder_POST_ToSite.[sh\|java]` | Posts a document folder to a site. |
-| `DocumentFolder_PUT_ById.[sh\|java]` | Replaces a folder and its fields entirely. |
-| `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
+| `Document_POST_ToDocumentFolder.[sh|java]` | Posts a document to a folder. |
+| `DocumentFolder_GET_ById.[sh|java]` | Lists a folder's fields. |
+| `DocumentFolder_GET_FromSite.[sh|java]` | Lists a site's folders. |
+| `DocumentFolder_PATCH_ById.[sh|java]` | Updates a folder and its fields. |
+| `DocumentFolder_POST_ToSite.[sh|java]` | Posts a document folder to a site. |
+| `DocumentFolder_PUT_ById.[sh|java]` | Replaces a folder and its fields entirely. |
 
 The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` and `DocumentFolder` services and schemas, and has an interface to try out each service.
 
