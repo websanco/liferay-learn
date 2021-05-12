@@ -123,6 +123,10 @@ Here are the command's arguments:
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Your site ID parameter replaces `${1}`. |
 | `-u "test@liferay.com:test"` | Basic authentication credentials. |
 
+```note::
+   Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
+```
+
 Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
 
 Next, you'll see how similar the Java call is.
