@@ -352,14 +352,14 @@ In the comment, use `1234` in place of any required ID value. If there are multi
 
 ## Formatting Source Code 
 
-We're still working on a way to format source code in these projects.
+Our Source Formatter reports formatting issues and automatically fixes many of them. The `liferay-learn/docs/update_examples.sh` script runs the Source Formatter. You can run the script on all examples or on a single project. To run the script on your project, execute the command below, replacing `xxxx` with your project ID.
 
-For now, format them in another project: 
+```bash
+./update_examples.sh xxxx
+```
 
-1. Copy your classes to another lifeary-learn Java project (e.g., copy it to a Java module's `src/main/java` folder). 
-1. Run `../gradlew formatSource` as you normally would in that module.
-1. Resolve any source formatting issues.
-1. Copy your formatted classes back to your REST API project.
+Resolve any reported formatting issues and commit your modified files.
+
 
 ## Sending Code For Review 
 
