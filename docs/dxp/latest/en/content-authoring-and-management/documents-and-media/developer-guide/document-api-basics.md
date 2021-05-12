@@ -155,7 +155,7 @@ The other example Java classes are similar to this one, but call different `Docu
    See `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ for service details.
 ```
 
-The following sections demonstrate calling other `Document` and `DocumentFolder` REST services using curl and Java.
+The following sections demonstrate calling other `Document` REST services using curl and Java.
 
 ## Listing Site Documents
 
@@ -198,7 +198,7 @@ The site's `Document` objects are listed in JSON.
 You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
 ```tip:: 
-   Use ``Documents_GET_FromSite.[sh|java]`` to get site ``Document`` IDs.
+   Use ``Documents_GET_FromSite.[java|sh]`` to get site ``Document`` IDs.
 ```
 
 ### Document_GET_ById.sh
@@ -427,12 +427,12 @@ The following curl commands and Java classes demonstrate more `Document` service
 
 | File | Description |
 | :--- | :---------- |
-| `Document_POST_ToDocumentFolder.[sh|java]` | Posts a document to a folder. |
-| `DocumentFolder_GET_ById.[sh|java]` | Lists a folder's fields. |
-| `DocumentFolder_GET_FromSite.[sh|java]` | Lists a site's folders. |
-| `DocumentFolder_PATCH_ById.[sh|java]` | Updates a folder and its fields. |
-| `DocumentFolder_POST_ToSite.[sh|java]` | Posts a document folder to a site. |
-| `DocumentFolder_PUT_ById.[sh|java]` | Replaces a folder and its fields entirely. |
+| `Document_POST_ToDocumentFolder.[java|sh]` | Posts a document to a folder. |
+| `DocumentFolder_GET_ById.[java|sh]` | Lists a folder's fields. |
+| `DocumentFolder_GET_FromSite.[java|sh]` | Lists a site's folders. |
+| `DocumentFolder_PATCH_ById.[java|sh]` | Updates a folder and its fields. |
+| `DocumentFolder_POST_ToSite.[java|sh]` | Posts a document folder to a site. |
+| `DocumentFolder_PUT_ById.[java|sh]` | Replaces a folder and its fields entirely. |
 
 The [API Explorer](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Document` and `DocumentFolder` services and schemas, and has an interface to try out each service.
 
