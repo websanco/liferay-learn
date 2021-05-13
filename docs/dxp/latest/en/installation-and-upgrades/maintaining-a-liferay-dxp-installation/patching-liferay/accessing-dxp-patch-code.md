@@ -1,8 +1,12 @@
 # Accessing DXP Patch Code
 
-Liferay DXP Fix Pack and Hotfix source code is available in a private GitHub repository called `liferay-dxp`. There is a tagged branch for each Fix Pack and Hotfix. The source code facilitates identifying and understanding changes that may affect your project or your custom code. The figure below shows the GitHub Tags interface.
+Liferay DXP Fix Pack and Hotfix source code is available in a private GitHub repository called `liferay-dxp`. The source code facilitates identifying and understanding changes that may affect your project or your custom code. Fix Packs and Hotfixes have tags that you can access on GitHub.
 
 ![Fix Pack and Hotfix Tags.](./accessing-dxp-patch-code/images/01.png)
+
+```note::
+   Fix Packs are tagged in their respective DXP version branch (i.e., ``7.0.x``, ``7.1.x``, etc.). Hotfixes have their own branches tagged at the branch head. Since the code at the hotfix branch head and hotfix tag are the same, fetching the branch or tag accesses the same code.
+```
 
 Here's what you can do with the code:
 
@@ -16,7 +20,7 @@ The figure below shows file diffs between two hotfixes.
 ![Tag comparison.](./accessing-dxp-patch-code/images/02.png)
 
 ```note::
-   Tagged branches for Liferay DXP 7.0 and 7.1 patch source code are only available starting from these Fix Pack baselines: 
+   Tagged branches for Liferay DXP 7.0 and 7.1 patch source code are available starting from these Fix Pack baselines: 
 
    * Liferay DXP 7.1 Fix Pack 19
    * Liferay DXP 7.0 Fix Pack 96
