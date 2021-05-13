@@ -68,53 +68,37 @@ Here you can change the widget's scope from Global, Site, or Page.
 
 ## Instance Settings
 
-There are several ways Forms can be configured across an Instance.
+The Forms configuration entry in Instance Settings is identical to the Forms entry in System Settings (below); the instance settings override the system settings, which will set the default values across the system. See [Understanding Configuration Scope](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) for more information.
 
-1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
-1. Click _Instance Settings_.
-
-    ![Access Instance Settings from the Control Panel.](./forms-configuration-reference/images/09.png)
-
-1. Click _Forms_ under the _Content and Data_ section.
-
-    ![Configure Forms in the Instance Settings menu.](./forms-configuration-reference/images/07.png)
-
-| Field | Description |
-| --- | --- |
-| Auto-save Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
-| CSV Export | Determines whether administrators can download Form Entries as CSVs. |
-| Default Display View | Sets how the Forms are displayed in the search container. |
+For a description of each configuration property, see [System Settings](#system-settings).
 
 ## System Settings
 
-There are several system-wide Forms configurations.
+There is currently only one system level Forms configuration entry. To configure the properties in the Liferay UI,
 
 1. Go to the _Global Menu_ (![global icon](../../../images/icon-applications-menu.png)) &rarr; _Control Panel_.
 1. Click _System Settings_.
 1. Click _Forms_ under the _Content and Data_ section.
 
-### System Scope
+![Configure Forms in the System Settings menu.](./forms-configuration-reference/images/07.png)
 
-You can configure the _Form Navigator_ under the _System Scope_. Click _Add_ to add a new _Configuration Entry_.
+Alternatively, configure the backing `DDMFormWebConfiguration` service with a `.config` file named
 
-![You can configure Form Navigator.](./forms-configuration-reference/images/10.png)
+```
+com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config
+```
 
-| Field | Description |
-| --- | --- |
-| Form Navigator ID | Enter the Form Navigator ID |
-| Form Navigator Entry Keys | Enter the entry key; if they are multiple keys, use comma separated lists. |
-
-### Site Scope
-
-Use the Site Scope settings to manage each Form's behavior. These are the similar to those in Instance Settings.
-
-![You can configure System-wide Forms settings.](./forms-configuration-reference/images/08.png)
+Place the file in `Liferay Home/osgi/configs`. See [Using Configuration Files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) for more information.
 
 | Field | Description |
 | --- | --- |
-| Autosave Interval | Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
-| CSV Export | Determines whether administrators can download Form Entries as CSVs. |
-| Default Display View | Sets how the Forms are displayed in the search container. |
+| Autosave Interval (`autosaveInterval`)| Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
+| CSV Export (`csvExport`) | Determines whether administrators can download Form Entries as CSVs. |
+| Default Display View (`defaultDisplayView`) | Sets how the Forms are displayed in the search container. |
+| Guest Upload File Extensions (`guestUploadFileExtensions`) | Enter the comma-separated list of accepted file extensions. By default the following list is supported: `doc`, `docx`, `jpeg`, `jpg`, `pdf`, `png`, `ppt`, `pptx`, `tiff`, `txt`, `xls`, and `xlsx`. |
+| Guest Upload Maximum file Size (`guestUploadMaximumFileSize`) | Set the maximum file size Guest User can upload via the Upload field. This is configured for authenticated Users in the Documents and Media application's configuration, and system-wide limits are defined in the Upload Servlet Request System Settings entry, in the field named Overall Maximum Upload Request Size. By default the limit is 25 MB. |
+| Maximum Repetitions for Upload Fields (`maximumRepetitionsForUploadFields`) | If the field is configured as repeatable, set maximum number of times the field can be added to the form by the User (applies equally to Guest Users and logged in Users). By default the limit is 5. |
+| Maximum Submissions for Guest Upload Fields (`maximumSubmissionsForGuestUploadFields`) | Set the maximum number of times a Guest User can submit a form that includes a Guest-enabled Upload field. The Guest User's IP address is used to keep track of submissions. By default the limit is 5. |
 
 ## Additional Information
 
