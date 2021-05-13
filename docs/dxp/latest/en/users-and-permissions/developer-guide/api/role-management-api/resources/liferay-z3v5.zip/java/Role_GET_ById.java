@@ -1,12 +1,10 @@
 import com.liferay.headless.admin.user.client.dto.v1_0.Role;
-import com.liferay.headless.admin.user.client.pagination.Page;
-import com.liferay.headless.admin.user.client.pagination.Pagination;
 import com.liferay.headless.admin.user.client.resource.v1_0.RoleResource;
 
-public class Roles_GET_FromInstance {
+public class Role_GET_ById {
 
 	/**
-	 * java -classpath .:* Roles_GET_FromInstance
+	 * java -classpath .:* -DroleId=1234 Role_GET_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		RoleResource.Builder builder = RoleResource.builder();
@@ -15,7 +13,8 @@ public class Roles_GET_FromInstance {
 			"test@liferay.com", "test"
 		).build();
 
-		Page<Role> role = roleResource.getRolesPage(Pagination.of(1, 2));
+		Role role = roleResource.getRole(
+			Long.valueOf(System.getProperty("roleId")));
 
 		System.out.println(role);
 	}
