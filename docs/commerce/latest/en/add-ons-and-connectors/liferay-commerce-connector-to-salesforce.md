@@ -19,15 +19,15 @@ The following chart lists supported Salesforce entities with their Liferay count
 
 | Salesforce | Liferay | From Salesforce to Liferay | From Liferay to Salesforce |
 | --- | --- | --- | --- |
-| Account | Account | ✔️ | ✔️ |
-| Account Address | Account | ✔️ | ✔️ |
-| Account Contact | User | ✔️ |  |
-| Price Book | Price List | ✔️ |  |
-| Price Book Entry | Price Entry | ✔️ |  |
-| Product | Product | ✔️ |  |
-| Order | Order | ✔️ | ✔️ |
-| OrderItem | Order Item | ✔️ | ✔️ |
-| OrderNote | Order Note | ✔️ | ✔️ |
+| Account | Account | &#10004; | &#10004; |
+| Account Address | Account | &#10004; | &#10004; |
+| Account Contact | User | &#10004; |  |
+| Price Book | Price List | &#10004; |  |
+| Price Book Entry | Price Entry | &#10004; |  |
+| Product | Product | &#10004; |  |
+| Order | Order | &#10004; | &#10004; |
+| OrderItem | Order Item | &#10004; | &#10004; |
+| OrderNote | Order Note | &#10004; | &#10004; |
 
 ```note::
    Salesforce has no equivalent entity to Liferay Commerce Catalogs. 
