@@ -80,7 +80,7 @@ The VPN attempts to connect after clicking the button. If the connection fails, 
    You can manually test the connectivity of your services to an IP address through your VPN by using the service's `shell <../../troubleshooting/shell-access.md>`__ to run a command like the following: ``curl -v [address]``.
 ```
 
-While the connection is being established, the message "VPN connection attempt initiated" pops up on the screen, and you cannot perform other management operations for your VPN until it completes. If you need to cancel the connection (for example, because an error is causing the connection to hang), then click "Cancel" on the pop-up.
+While the connection is being established, the message "VPN connection attempt initiated" appears, and you cannot perform other management operations for your VPN until it completes. If you need to cancel the connection (for example, because an error is causing the connection to hang), then click "Cancel" on the pop-up.
 
 ![Click the Cancel button on the message pop-up if you need to stop a connection before it is established.](./connecting-a-vpn-server-to-dxp-cloud/images/07.png)
 
