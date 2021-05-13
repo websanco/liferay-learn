@@ -49,11 +49,11 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 
 		try {
 			Optional<DDMDataProviderInstance> ddmDataProviderInstance =
-				fetchDDMDataProviderInstance(
+				_fetchDDMDataProviderInstance(
 					ddmDataProviderRequest.getDDMDataProviderId());
 
 			B4D8DDMDataProviderSettings b4d8DataProviderSettings =
-				ddmDataProviderInstanceSettings.getSettings(
+				_ddmDataProviderInstanceSettings.getSettings(
 					ddmDataProviderInstance.get(),
 					B4D8DDMDataProviderSettings.class);
 
@@ -68,7 +68,7 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 
 			Document document = _convertXMLStringToDocument(responseJSON);
 
-			return createDDMDataProviderResponse(
+			return _createDDMDataProviderResponse(
 				b4d8DataProviderSettings, document);
 		}
 		catch (Exception exception) {
@@ -78,10 +78,23 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 
 	@Override
 	public Class<?> getSettings() {
-		return ddmDataProviderSettingsProvider.getSettings();
+		return _ddmDataProviderSettingsProvider.getSettings();
 	}
 
-	protected DDMDataProviderResponse createDDMDataProviderResponse(
+	private Document _convertXMLStringToDocument(String xmlString)
+		throws Exception {
+
+		DocumentBuilderFactory documentBuilderFactory =
+			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
+
+		DocumentBuilder documentBuilder =
+			documentBuilderFactory.newDocumentBuilder();
+
+		return documentBuilder.parse(
+			new InputSource(new StringReader(xmlString)));
+	}
+
+	private DDMDataProviderResponse _createDDMDataProviderResponse(
 			B4D8DDMDataProviderSettings b4d8DataProviderSettings,
 			Document document)
 		throws Exception {
@@ -132,19 +145,19 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		return builder.build();
 	}
 
-	protected Optional<DDMDataProviderInstance> fetchDDMDataProviderInstance(
+	private Optional<DDMDataProviderInstance> _fetchDDMDataProviderInstance(
 			String ddmDataProviderInstanceId)
 		throws Exception {
 
 		DDMDataProviderInstance ddmDataProviderInstance =
-			ddmDataProviderInstanceService.fetchDataProviderInstanceByUuid(
+			_ddmDataProviderInstanceService.fetchDataProviderInstanceByUuid(
 				ddmDataProviderInstanceId);
 
 		if ((ddmDataProviderInstance == null) &&
 			Validator.isNumber(ddmDataProviderInstanceId)) {
 
 			ddmDataProviderInstance =
-				ddmDataProviderInstanceService.fetchDataProviderInstance(
+				_ddmDataProviderInstanceService.fetchDataProviderInstance(
 					Long.valueOf(ddmDataProviderInstanceId));
 		}
 
@@ -152,25 +165,12 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 	}
 
 	@Reference
-	protected DDMDataProviderInstanceService ddmDataProviderInstanceService;
+	private DDMDataProviderInstanceService _ddmDataProviderInstanceService;
 
 	@Reference
-	protected DDMDataProviderInstanceSettings ddmDataProviderInstanceSettings;
+	private DDMDataProviderInstanceSettings _ddmDataProviderInstanceSettings;
 
 	@Reference(target = "(ddm.data.provider.type=b4d8)")
-	protected DDMDataProviderSettingsProvider ddmDataProviderSettingsProvider;
-
-	private Document _convertXMLStringToDocument(String xmlString)
-		throws Exception {
-
-		DocumentBuilderFactory documentBuilderFactory =
-			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
-
-		DocumentBuilder documentBuilder =
-			documentBuilderFactory.newDocumentBuilder();
-
-		return documentBuilder.parse(
-			new InputSource(new StringReader(xmlString)));
-	}
+	private DDMDataProviderSettingsProvider _ddmDataProviderSettingsProvider;
 
 }
