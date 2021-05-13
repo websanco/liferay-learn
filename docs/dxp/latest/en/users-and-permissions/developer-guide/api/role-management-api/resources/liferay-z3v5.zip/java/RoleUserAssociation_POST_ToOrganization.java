@@ -1,9 +1,9 @@
 import com.liferay.headless.admin.user.client.resource.v1_0.RoleResource;
 
-public class Role_POST_ToOrganizationRole {
+public class RoleUserAssociation_POST_ToOrganization {
 
 	/**
-	 * java -classpath .:* -DorganizationId=1234 -DroleId=5678 -DuserAccountId=9012 Role_POST_ToOrganizationRole
+	 * java -classpath .:* -DorganizationId=1234 -DroleId=5678 -DuserAccountId=9012 RoleUserAssociation_POST_ToOrganization
 	 */
 	public static void main(String[] args) throws Exception {
 		RoleResource.Builder builder = RoleResource.builder();

@@ -1,9 +1,9 @@
 import com.liferay.headless.admin.user.client.resource.v1_0.RoleResource;
 
-public class Role_DELETE_FromSiteRole {
+public class RoleUserAssociation_DELETE_FromOrganization {
 
 	/**
-	 * java -classpath .:* -DroleId=1234 -DsiteId=5678 -DuserAccountId=9012 Role_DELETE_FromSiteRole
+	 * java -classpath .:* -DorganizationId=1234 -DroleId=5678 -DuserAccountId=9012 RoleUserAssociation_DELETE_FromOrganization
 	 */
 	public static void main(String[] args) throws Exception {
 		RoleResource.Builder builder = RoleResource.builder();
@@ -12,10 +12,10 @@ public class Role_DELETE_FromSiteRole {
 			"test@liferay.com", "test"
 		).build();
 
-		roleResource.deleteSiteRoleUserAccountAssociation(
+		roleResource.deleteOrganizationRoleUserAccountAssociation(
 			Long.valueOf(System.getProperty("roleId")),
 			Long.valueOf(System.getProperty("userAccountId")),
-			Long.valueOf(System.getProperty("siteId")));
+			Long.valueOf(System.getProperty("organizationId")));
 	}
 
 }

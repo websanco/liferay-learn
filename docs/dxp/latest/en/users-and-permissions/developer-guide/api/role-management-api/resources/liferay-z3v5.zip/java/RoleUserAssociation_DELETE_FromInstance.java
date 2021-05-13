@@ -1,9 +1,9 @@
 import com.liferay.headless.admin.user.client.resource.v1_0.RoleResource;
 
-public class Role_POST_ToSiteRole {
+public class RoleUserAssociation_DELETE_FromInstance {
 
 	/**
-	 * java -classpath .:* -DroleId=1234 -DsiteId=5678 -DuserAccountId=9012 Role_POST_ToSiteRole
+	 * java -classpath .:* -DroleId=1234 -DuserAccountId=5678 RoleUserAssociation_DELETE_FromInstance
 	 */
 	public static void main(String[] args) throws Exception {
 		RoleResource.Builder builder = RoleResource.builder();
@@ -12,10 +12,9 @@ public class Role_POST_ToSiteRole {
 			"test@liferay.com", "test"
 		).build();
 
-		roleResource.postSiteRoleUserAccountAssociation(
+		roleResource.deleteRoleUserAccountAssociation(
 			Long.valueOf(System.getProperty("roleId")),
-			Long.valueOf(System.getProperty("userAccountId")),
-			Long.valueOf(System.getProperty("siteId")));
+			Long.valueOf(System.getProperty("userAccountId")));
 	}
 
 }
