@@ -80,17 +80,14 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		return _ddmDataProviderSettingsProvider.getSettings();
 	}
 
-	private Document _convertXMLStringToDocument(String xmlString)
-		throws Exception {
-
+	private Document _convertXMLStringToDocument(String xml) throws Exception {
 		DocumentBuilderFactory documentBuilderFactory =
 			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
 
 		DocumentBuilder documentBuilder =
 			documentBuilderFactory.newDocumentBuilder();
 
-		return documentBuilder.parse(
-			new InputSource(new StringReader(xmlString)));
+		return documentBuilder.parse(new InputSource(new StringReader(xml)));
 	}
 
 	private DDMDataProviderResponse _createDDMDataProviderResponse(
