@@ -191,11 +191,12 @@ The standard portlet descriptor mappings are first.
 
     ```java
     @Component(
-        immediate = true, property = {
-            "javax.portlet.name=my_portlet",
-            "javax.portlet.display-name=my-portlet",
+        ...
+        property = {
+            ...
             "javax.portlet.dependency=jquery;com.jquery;2.1.1",
-            "javax.portlet.dependency=jsutil;com.mycompany;1.0.0"
+            "javax.portlet.dependency=jsutil;com.mycompany;1.0.0",
+            ...
         }, service = Portlet.class
     )
     public class MyPortlet extends GenericPortlet {
@@ -220,12 +221,11 @@ The standard portlet descriptor mappings are first.
 
     ```java
     @Component(
-        immediate = true, property = {
-            "javax.portlet.name=my_portlet",
-            "javax.portlet.display-name=my-portlet",
-            "javax.portlet.dependency=jquery;com.jquery;2.1.1",
+        property = {
+            ...
             "javax.portlet.dependency=jsutil;com.mycompany;1.0.0",
-            "com.liferay.portlet.header-request-attribute-prefix=com.mycompany"
+            "com.liferay.portlet.header-request-attribute-prefix=com.mycompany",
+            ...
         }, service = Portlet.class
     )
     public class MyPortlet extends GenericPortlet {
@@ -252,9 +252,10 @@ The standard portlet descriptor mappings are first.
 
     ```java
     @Component(
-        immediate = true,
-        property = {"javax.portlet.name=myPortlet",
-            "javax.portlet.listener=com.mycompany.MyPortletURLGenerationListener;1"
+        property = {
+            ...
+            "javax.portlet.listener=com.mycompany.MyPortletURLGenerationListener;1",
+            ...
         }, service = Portlet.class
     )
     public class MyPortlet extends GenericPortlet {
@@ -266,10 +267,12 @@ The standard portlet descriptor mappings are first.
 
     ```java
     @Component(
-        immediate = true,
-        property = {"javax.portlet.name=myPortlet", 
-            "javax.portlet.init-param.myInitParam=1234"},
-        service = PortletFilter.class
+        ...
+        property = {
+            ...
+            "javax.portlet.init-param.myInitParam=1234",
+            ...
+        }, service = PortletFilter.class
     )
     public class MyFilter implements RenderFilter {
         ...
