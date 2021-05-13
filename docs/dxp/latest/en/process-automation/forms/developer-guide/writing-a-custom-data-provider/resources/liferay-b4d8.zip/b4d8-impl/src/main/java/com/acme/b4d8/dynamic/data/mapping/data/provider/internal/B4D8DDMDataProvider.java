@@ -37,8 +37,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 @Component(
-	immediate = true, property = "ddm.data.provider.type=b4d8",
-	service = DDMDataProvider.class
+	property = "ddm.data.provider.type=b4d8", service = DDMDataProvider.class
 )
 public class B4D8DDMDataProvider implements DDMDataProvider {
 
