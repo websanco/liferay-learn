@@ -60,17 +60,17 @@ Now see how it works.
 
 ## Determine the Destination
 
-APIs define names for Message Bus destinations. For example, the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class lists Liferay's built-in destinations. The example `MessageListener` listens on the following destination name:
+APIs define names for Message Bus destinations. For example, the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class lists Liferay's built-in destinations. The example `MessageListener` listens on the following destination name:
 
 ```java
 DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
-Search the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class or other APIs for the name of the destination you want to listen on. You'll specify the name in your `MessageListener` implementation.
+Search the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class or other APIs for the name of the destination you want to listen on. You'll specify the name in your `MessageListener` implementation.
 
 ## Implement the `MessageListener` Interface
 
-In the class you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
+In the class you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
 
 ```java
 public class W3A4MessageListener implements MessageListener {
@@ -94,7 +94,7 @@ private static final Log _log = LogFactoryUtil.getLog(
     W3A4MessageListener.class);
 ```
 
-The above implementation logs the message payload and destination name. See the [`Message`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) class for details on its other methods.
+The above implementation logs the message payload and destination name. See the [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) class for details on its other methods.
 
 ## Register Your MessageListener With the Destination
 
