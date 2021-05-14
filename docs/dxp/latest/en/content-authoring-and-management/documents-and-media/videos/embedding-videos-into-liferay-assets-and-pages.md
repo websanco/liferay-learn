@@ -1,6 +1,6 @@
 # Embedding Videos Into Liferay Assets and Pages
 
-With Liferay, you can use URLs and [video shortcuts](./using-external-video-shortcuts.md) to embed videos into Web Content, Knowledge Base articles, Forms, Blog entries, and Site Pages.
+With Liferay, you can use URLs and [video shortcuts](./creating-external-video-shortcuts.md) to embed videos into Web Content, Knowledge Base articles, Forms, Blog entries, and Site Pages.
 
 ## Embedding Videos Into Assets
 
@@ -41,5 +41,5 @@ Liferay provides two out-of-the-box fragments specifically for embedding videos 
 
 ## Additional Information
 
-* [Using External Video Shortcuts](./using-external-video-shortcuts.md)
+* [Creating External Video Shortcuts](./creating-external-video-shortcuts.md)
 <!-- * [Creating Custom Video Shortcut Providers](./creating-custom-video-shortcut-providers.md) -->
