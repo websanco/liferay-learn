@@ -2,7 +2,7 @@
 
 > Some Experiences functionality is available in Liferay 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+ only.
 
-You can customize your Content Page to different groups of users using *Experiences*. To learn about Liferay DXP Experiences and understand how Experiences work, see [Content Page Personalization](./content-page-personalization.md).
+You can customize your Content Page to different groups of users using *Experiences*. To learn about Liferay DXP Experiences, see [Content Page Personalization](./content-page-personalization.md).
 
 ## Creating a New Content Page Experience
 
@@ -12,7 +12,7 @@ You can customize your Content Page to different groups of users using *Experien
 
 3. At the top of the page, click on *Default* Experience to open the Experience selection dialog.
 
-4. Click on *New Experience*.
+4. Click *New Experience*.
 
     ![Click on Experience to select your experience or click New Experience to create a new one.](./content-page-personalization/images/01.png)
 
@@ -44,7 +44,7 @@ When you edit a Content Page, you can click on the *Experience* selector to mana
 
 2. On the Content Page you want to edit, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
 
-3. Click on the Experience you want to manage. From here you can:
+3. Click on the Experience you want to manage. From here you can
 
    - Set the Experience Priority, using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
 
@@ -55,7 +55,7 @@ When you edit a Content Page, you can click on the *Experience* selector to mana
    - Delete (![Delete](../../../images/icon-delete.png)) the Experience.
 
     ```important::
-       The order of your Experiences in the Experience selector determines the Experience precedence. See the *Understanding How Experiences Work* section in the `Content Page Personalization topic <./content-page-personalization.md>`__ for more information.
+       The order of your Experiences in the Experience selector determines the Experience precedence. See *Understanding How Experiences Work* in `Content Page Personalization <./content-page-personalization.md>`__ for more information.
     ```
 
 ## Related Information

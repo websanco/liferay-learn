@@ -48,7 +48,7 @@ In this example:
 
 > Available: Liferay 7.4+.
 
-When you create a new Experience, you define its target language or languages, in addition to the default language. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide users an Experience personalized on their own language. For example, if the user language is configured as es-ES and they visit a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language they see is es-ES.
+When you create a new Experience, you define its target language(s), along with a default. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide Experiences in users' own languages. For example, if the user language is configured as es-ES and users visit a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language they see is es-ES.
 
   ```note::
      Liferay DXP uses the user-configured language for authenticated users and, by default, the default Portal language for anonymous users.

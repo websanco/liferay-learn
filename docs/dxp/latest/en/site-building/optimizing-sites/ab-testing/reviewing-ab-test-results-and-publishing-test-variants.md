@@ -18,7 +18,7 @@ To review the A/B Test results and publish your Variant,
 
         ![Review A/B Test Results from the A/B Test panel](reviewing-ab-test-results-and-publishing-test-variants/images/01.png)
 
-1. From the Variants section, you can:
+1. From the Variants section, you can
 
     - *Publish* the winning Variant, which is highlighted with the check mark.
     - *Publish* a non-winning variant.
