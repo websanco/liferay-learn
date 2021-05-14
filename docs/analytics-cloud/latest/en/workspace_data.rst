@@ -32,7 +32,7 @@ Next Steps
 ----------
 
 -  :doc:`/workspace-data/managing-api-access`
--  :doc:`/workspace-data/data-control-and-privacy
+-  :doc:`/workspace-data/data-control-and-privacy`
 -  :doc:`/workspace-data/managing-data-sources`
 
 Definitions

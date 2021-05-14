@@ -8,7 +8,7 @@ After [signing up for a new workspace](../getting-started/signing-up-for-a-new-w
 
 **Data Center Location:** The server location that stores your analytics data. This cannot be changed.
 
-**Timezone:** Analytics reporting is based on the specified timezone. To change the timezone simply select your country and appropriate timezone and click *Save*.
+**Timezone:** Analytics reporting is based on the specified timezone. To change the timezone select your country and appropriate timezone and click *Save*.
 
 ![Select and save a new timezone for your analytics reporting.](./managing-workspaces/images/01.png)
 

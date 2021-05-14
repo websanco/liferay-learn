@@ -12,7 +12,7 @@ To view or make changes to your Liferay DXP data source, click on the name of th
 
 ![Click on the data source name to open a new page.](./managing-data-sources/images/02.png)
 
-The *Current Status* panel on the right shows the status of the data source. Active for a data source that is connected and syncing data. Connected for a data source that is connected but does not have Sites and Contacts configured. Disconnected for a data sources that is no longer connected.
+The *Current Status* panel on the right shows the status of the data source. **Active** for a data source that is connected and syncing data. **Connected** for a data source that is connected but does not have Sites and Contacts configured. **Disconnected** for a data source that is no longer connected.
 
 **Name:** The name of the data source. To rename, click the edit icon (![Edit](../images/icon-edit.png)) and input a new name. Click the checkmark to save.
 
