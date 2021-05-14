@@ -9,7 +9,7 @@ Follow these steps to create an external video shortcut:
 1. Navigate to the Documents and Media application in a Site or Asset Library.
 
    ```note::
-      Shortcuts created in a Site are scoped to that Site, while shortcuts created in an Asset Library can be shared across multiple Sites. See `Asset Libraries Overview <>`_ for more information.
+      Shortcuts created in a Site are scoped to that Site, while shortcuts created in an Asset Library can be shared across multiple Sites. See `Asset Libraries Overview <../../asset-libraries/asset-libraries-overview.md>`_ for more information.
    ```
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)), and select *External Video Shortcut*.
@@ -55,4 +55,4 @@ Once created, External Video Shortcuts can be embedded inside most Liferay asset
 ## Additional Information
 
 * [Embedding Videos into Liferay Assets and Pages](./embedding-videos-into-liferay-assets-and-pages.md)
-* [Creating Custom Video Shortcut Providers](./creating-custom-video-shortcut-providers.md)
+<!-- * [Creating Custom Video Shortcut Providers](./creating-custom-video-shortcut-providers.md) -->
