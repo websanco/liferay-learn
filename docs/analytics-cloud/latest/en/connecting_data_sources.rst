@@ -37,24 +37,8 @@ Unless a teammate has already added a data source, the list is empty. To add a n
 -  :doc:`/connecting-data-sources/adding-a-salesforce-data-source`
 -  :doc:`/connecting-data-sources/adding-a-csv-data-source`
 
-Once you’ve created your data sources, you might need to modify them from time to time.
-
-
-Modifying a Data Source
------------------------
-
-* Name of the data source
-* `Contact mapping`_
-* Enable/Disable Contact or Analytics sync
-.. _`Contact mapping`: ./connecting-data-sources/adding-a-csv-data-source.html#mapping-contact-data
-
-Here’s how to delete a data source:
-
-#. Click on the listed data source. The data source’s page appears.
-
-#. Click *Delete Data Source*.
-
-The Data Source is deleted.
+Once you’ve created your data sources, you might need to modify them from time to time. See `Managing Data Sources`_
+.. _`Managing Data Sources`: ./workspace-data/managing-data-sources.html
 
 
 Next Steps
