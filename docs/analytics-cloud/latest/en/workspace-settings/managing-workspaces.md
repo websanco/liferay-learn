@@ -1,27 +1,21 @@
 # Managing Workspaces
 
-Workspace administrators connect data sources to the workspace, manage users, and track usage against the current plan limits.
+After [signing up for a new workspace](../getting-started/signing-up-for-a-new-workspace.md), you can view and change your workspace settings from the settings page. To access the page navigate to *Settings* &rarr; *Workspace Settings* &rarr; *Workspace*.
 
-<!-- management screenshot -->
+**Workspace Name:** The name of your analytics workspace. To change your workspace name simply input a new name and click *Save*.
 
-## Connecting Data Sources
+**Workspace Owner Email:** The email address that the workspace is registered with. This cannot be changed.
 
-To learn about connecting and managing data sources:
+**Data Center Location:** The server location that stores your analytics data. This cannot be changed.
 
-* [Connecting Data Sources](../connecting_data_sources.md)
-* [Connecting Liferay DXP Sites to Analytics Cloud](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
-* [Connecting Salesforce](../connecting-data-sources/adding-a-salesforce-data-source.md)
-* [Importing CSV Data](../connecting-data-sources/adding-a-csv-data-source.md)
-* [Scoping Sites Using Properties](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md)
+**Timezone:** Analytics reporting is based on the specified timezone. To change the timezone simply select your country and appropriate timezone and click *Save*.
 
-## Managing Workspace Users
+![Select and save a new timezone for your analytics reporting.](./managing-workspaces/images/01.png)
 
-As you’re starting your workspace and new people join your team, you’ll want to invite teammates to participate in your workspace. This article shows you how to invite users and assign them appropriate permission Roles.
+Note, please allow 1-2 days for the data reporting to adjust to the new timezone.
 
-* [Managing Users](./managing-users.md)
+**Friendly URL:** A friendly URL can be set to easily share your workspace with others.
 
-## Tracking Workspace Usage
+**Allowable Email Domains:** An email domain can be specified here to allow other users with the same email domain to see and request to join the workspace.
 
-As you sync contact and web analytics data from data sources, you must keep an eye on your workspace's usage compared to the Liferay Analytics Cloud plan you purchased. The Usage page shows your current usage and describes available plan upgrades and add-ons to address your analytics needs.
-
-* [Tracking Usage](./tracking-usage.md)
+**Add Incident Report Contacts:** Additional email addresses can be added to be contacted in case of interruptions or incidents. Input additional email addresses and click *Save*.
