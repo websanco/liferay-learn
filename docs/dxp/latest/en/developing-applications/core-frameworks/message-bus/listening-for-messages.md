@@ -66,7 +66,7 @@ Message destinations are referenced by their names. APIs specify destination nam
 DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
-Search the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class or other APIs for the name of the destination you want to listen on. You'll specify the destination name in your message listener.
+Search Liferay's `*DestinationNames` classes in the [source code](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) or search other APIs for the name of the destination you want to listen on. You'll specify the destination name in your message listener.
 
 ## Implement the `MessageListener` Interface
 
