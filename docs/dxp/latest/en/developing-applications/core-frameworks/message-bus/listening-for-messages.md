@@ -2,7 +2,7 @@
 
 You can listen for messages sent to any registered Message Bus destination. Destinations can be built-in to DXP/Portal, defined by third-parties, or created by you. Messages sent to the same destination typically have something in common, such as a similar event type or topic. Here you'll deploy a class that listens for messages received at a destination called `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`. Documents and Media sends a message to this destination after processing every uploaded PDF file.
 
-# Run the Example Message Listener
+## Run the Example Message Listener
 
 1.  Start the Liferay Docker image:
 
@@ -60,13 +60,13 @@ Now see how it works.
 
 ## Determine the Destination
 
-APIs define names for Message Bus destinations. For example, the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class lists Liferay's built-in destinations. The example `MessageListener` listens on the following destination name:
+Message destinations are referenced by their names. APIs specify destination names. For example, the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class lists Liferay's built-in destinations. The example `MessageListener` listens for messages sent to the Liferay destination named by the following `String` constant:
 
 ```java
 DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
-Search the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class or other APIs for the name of the destination you want to listen on. You'll specify the name in your `MessageListener` implementation.
+Search the [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) class or other APIs for the name of the destination you want to listen on. You'll specify the destination name in your message listener.
 
 ## Implement the `MessageListener` Interface
 
@@ -116,4 +116,4 @@ When you deploy your project, the OSGi Runtime registers your `MessageListener` 
 
 ## Additional Information
 
-* [Message Bus](./message-bus.md)
+* [Message Bus](./message_bus.html)
