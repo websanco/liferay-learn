@@ -26,4 +26,6 @@ If you choose to disconnect the DXP instance from the workspace click the *Disco
 
 Note that this manage page will look different for a Salesforce data source or a CSV data source.
 
-If you choose to delete the data source, click the *Delete Data Source* button at the top right of the page. A new form will pop up to confirm your decision. Note, deleting the data source will delete all synced data.
+## Deleting a Data Source
+
+If you choose to delete the data source, click the *Delete Data Source* button at the top right of the page. A new form will pop up to confirm your decision. Note, deleting the data source will remove the connection and delete all synced data.

@@ -37,7 +37,8 @@ Unless a teammate has already added a data source, the list is empty. To add a n
 -  :doc:`/connecting-data-sources/adding-a-salesforce-data-source`
 -  :doc:`/connecting-data-sources/adding-a-csv-data-source`
 
-Once you’ve created your data sources, you might need to modify them from time to time. See `Managing Data Sources`_
+Once you’ve created your data sources, you might need to modify them from time to time. See `Managing Data Sources`_ to learn more.
+
 .. _`Managing Data Sources`: ./workspace-data/managing-data-sources.html
 
 
