@@ -4,7 +4,7 @@
 
 Liferay DXP provides integration with Google's Cloud Storage (GCS) service. With GCS integration, you can seamlessly store and access your Liferay instance files in the cloud.
 
-Before enabling this connection, you must first prepare your GCS account. When ready, configure the Liferay instance to use GCS via the control panel, and set the `dl.store.impl` portal property to use GCS as the default store.
+Before enabling this connection, you must first prepare your GCS account. When ready, configure the Liferay instance to use GCS via the Control Panel, and set the `dl.store.impl` portal property to use GCS as the default store.
 
 ```important::
    If a database transaction rollback occurs in a Document Library, the transaction’s file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. This is a limitation of all DXP stores besides DBStore.
@@ -46,7 +46,7 @@ Follow these steps to configure the GCS Store:
 
    ![Enter an AES-256 encryption Key.](./google-cloud-storage/images/04.png)
 
-1. Click on *Save* when finished.
+1. Click *Save* when finished.
 
 Once you've configured the GCS Store, you can set GCS as your default file storage system.
 
@@ -60,7 +60,7 @@ Follow these steps to use GCS as the default Store for the Liferay instance:
    dl.store.impl=com.liferay.portal.store.gcs.GCSStore
    ```
 
-   If a `portal-ext.properties` file doesn't exist, create a new one with the above value, and add it to the instance's [`[LIFERAY_HOME]`](../../../installation-and-upgrades/reference/liferay-home.md) or `[USER_HOME]` folder.
+   If a `portal-ext.properties` file doesn't exist, create a new one with the above value and add it to the instance's [`[LIFERAY_HOME]`](../../../installation-and-upgrades/reference/liferay-home.md) or `[USER_HOME]` folder.
 
    This overrides the default value for `dl.store.impl` in the `portal.properties` file.
 
