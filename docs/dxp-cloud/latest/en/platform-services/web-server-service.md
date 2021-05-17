@@ -36,6 +36,10 @@ These environment variables are available for the web server service:
 
 | Name | Default value | Description |
 | --- | --- | --- |
+| `LCP_HAPROXY_RESOLVER_HOLD_TIME` | `10` | Configures the [`hold` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-hold) for the HAProxy load balancer. This configuration is for the `valid` status.|
+| `LCP_HAPROXY_RESOLVER_RETRIES` | `3` | Configures the [`resolve_retries` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-resolve_retries) for the HAProxy load balancer (the number of retries the session will attempt to connect to the server before giving up).|
+| `LCP_HAPROXY_RESOLVER_TIMEOUT_RESOLVE` | `1` | Configures the [`timeout` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-timeout) for the HAProxy load balancer (the number of seconds for an event timeout). This configuration is for the `resolve` event.|
+| `LCP_HAPROXY_RESOLVER_TIMEOUT_RETRY` | `1` | Configures the [`timeout` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-timeout) for the HAProxy load balancer (the number of seconds for an event timeout). This configuration is for the `retry` event.|
 | `LCP_HAPROXY_SERVER_TEMPLATE_BACKEND_NUM` | `10` | Overrides the maximum number of instances for any service. If you plan to use [auto-scaling](../manage-and-optimize/auto-scaling.md), then set this to the highest value needed. |
 | `LCP_WEBSERVER_LOG_FORMAT` |   | Customizes the format for Nginx logging. See the [official Nginx documentation](https://docs.nginx.com/nginx/admin-guide/monitoring/logging/#setting-up-the-access-log). |
 
