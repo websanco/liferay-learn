@@ -84,7 +84,7 @@ Users can select a file from the Documents and Media library or upload a file fr
 
 ![Upload fields let users upload files or select from existing Docs and Media entries.](./forms-field-types-reference/images/10.png)
 
-On Liferay 7.3 (DXP FP1+ and CE GA7+), you can allow unauthenticated Guest Users to upload files. Enable Guest uploads within the Form Field's configuration:
+Beginning with Liferay 7.3 (DXP FP1+ and CE GA7+), you can allow unauthenticated Guest Users to upload files. Enable Guest uploads within the Form Field's configuration:
 
 ![You can choose whether Guests are allowed to upload files.](./forms-field-types-reference/images/16.png)
 
