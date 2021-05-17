@@ -30,7 +30,7 @@ After you [create a Content Page](../adding-pages/adding-a-page-to-a-site.md), y
        In progress work on a Content Page is automatically saved.
     ```
 
-1. Click the *Publish* button in the top right to make the updates available to the live page.
+1. Click the *Publish* button in the top right to make the updates available to the live Page.
 
 ## Related Information
 
