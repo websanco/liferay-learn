@@ -30,6 +30,16 @@ Liferay Workspace is constantly updated to help developers be more productive, a
 
 Congratulations! Your Workspace is now upgraded. 
 
+## Updating Your Liferay Version
+
+You may want to update the version of Liferay that Workspace compiles for. This is handled by a single property: 
+
+```properties
+liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN$]
+```
+
+Update the property's value to the version of Liferay for which you're developing code. Your workspace's dependencies are then automatically updated to the new version. 
+
 ## Using JDK 11
 
 ```Note::
