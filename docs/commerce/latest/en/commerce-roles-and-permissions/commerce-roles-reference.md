@@ -1,8 +1,10 @@
 # Commerce Roles
 
-User roles are used to group together the permissions necessary for accessing and using Liferay applications and resources. Each role can be scoped to an instance, Site, Organization, Asset Library, or Account. See [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) for more details.
+User roles group together necessary permissions for accessing and using Liferay applications and resources. Each role can be scoped to an instance, Site, Organization, Asset Library, or Account. This scope determines which permissions can be assigned to the role. Each permission also has its own scope, which determines the context in which the applications and resources can be accessed and used. See [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) for more details.
 
 Commerce includes four out-of-the-box Commerce roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your business/Commerce needs, other common roles include: Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
+
+Each Commerce role groups together , to address needs in specific use cases.
 
 ```note::
    For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
@@ -45,11 +47,11 @@ The following Accounts permissions pertain to the Account Administrator's abilit
 
 | Permissions | Description |
 | --- | --- |
-| Accounts > Account: Add Account Entry | |
-| Accounts > Account Entry: Manage Users | |
-| Accounts > Account Entry: Update | |
-| Accounts > Account Entry: View | |
-| Accounts > Account Entry: View Users | |
+| Accounts > Account: Add Account Entry | <!--FINISH--> |
+| Accounts > Account Entry: Manage Users | <!--FINISH--> |
+| Accounts > Account Entry: Update | <!--FINISH--> |
+| Accounts > Account Entry: View | <!--FINISH--> |
+| Accounts > Account Entry: View Users | <!--FINISH--> |
 | Accounts > Commerce Account: Manage Addresses | Ability to add a new billing, a shipping, or a combined address |
 | Accounts > Commerce Account: Manage Members | Ability to invite a new member or an organization and modify his or her credentials |
 | Accounts > Commerce Account: Update | Ability to modify Accounts |
@@ -91,16 +93,16 @@ Users assigned this role can view, create, and check out orders.
 
 > Custom role
 
-Catalog Managers can access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Note that Catalog Managers cannot manage inventory.
+The Catalog Manager role allows users to access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Note that Catalog Managers cannot manage inventory. For this responsibility, see [Inventory Manager](#inventory-manager)
 
 | Permissions | Description |
 | --- | --- |
-| Catalogs: Access in Control Panel | |
-| Catalogs: View | |
-| Currencies > Commerce Currencies: Manage Currencies | |
-| Portal: View Control Panel Menu | |
-| Products: Access in Control Panel | |
-| Products: View | |
+| Catalogs: Access in Control Panel | <!--FINISH--> |
+| Catalogs: View | <!--FINISH--> |
+| Currencies > Commerce Currencies: Manage Currencies | <!--FINISH--> |
+| Portal: View Control Panel Menu | <!--FINISH--> |
+| Products: Access in Control Panel | <!--FINISH--> |
+| Products: View | <!--FINISH--> |
 
 In addition to the above permissions, you must also assign *View* and *Update* permissions for the individual Catalog you want the role will manage.
 
@@ -118,26 +120,26 @@ The Discount Manager role allows users to create, update, and delete Discounts i
 
 | Permissions | Description |
 | --- | --- |
-| Account Groups: View | |
-| Catalogs: View | |
-| Catalogs > Commerce Catalogs: View Commerce Catalogs | |
-| Channels: View | |
-| Channels > Commerce Channels: View Commerce Channels | |
-| Discounts: Access in Control Panel | |
-| Discounts: Permissions | |
-| Discounts: View | |
-| Discounts > Commerce Discount: Delete | |
-| Discounts > Commerce Discount: Permissions | |
-| Discounts > Commerce Discount: Update | |
-| Discounts > Commerce Discount: View | |
-| Discounts > Commerce Discounts: Add Discount | |
-| Discounts > Commerce Discounts: View Discounts | |
-| Account Groups > Commerce Accounts: Manage All Accounts | |<!--Accurate? or Shipments > Commerce Shipments: Manage All Accounts?-->
-| Currencies > Commerce Currencies: Manage Currencies | |
-| Account Groups > Commerce Accounts: View Commerce Account Groups | | <!--accurate?-->
-| Portal: View Control Panel Menu | |
-| Price Lists: Access in Control Panel | |
-| Product Groups: View | |
+| Account Groups: View | <!--FINISH--> |
+| Catalogs: View | <!--FINISH--> |
+| Catalogs > Commerce Catalogs: View Commerce Catalogs | <!--FINISH--> |
+| Channels: View | <!--FINISH--> |
+| Channels > Commerce Channels: View Commerce Channels | <!--FINISH--> |
+| Discounts: Access in Control Panel | <!--FINISH--> |
+| Discounts: Permissions | <!--FINISH--> |
+| Discounts: View | <!--FINISH--> |
+| Discounts > Commerce Discount: Delete | <!--FINISH--> |
+| Discounts > Commerce Discount: Permissions | <!--FINISH--> |
+| Discounts > Commerce Discount: Update | <!--FINISH--> |
+| Discounts > Commerce Discount: View | <!--FINISH--> |
+| Discounts > Commerce Discounts: Add Discount | <!--FINISH--> |
+| Discounts > Commerce Discounts: View Discounts | <!--FINISH--> |
+| Account Groups > Commerce Accounts: Manage All Accounts | <!--FINISH--> |<!--Accurate? or Shipments > Commerce Shipments: Manage All Accounts?-->
+| Currencies > Commerce Currencies: Manage Currencies | <!--FINISH--> |
+| Account Groups > Commerce Accounts: View Commerce Account Groups | <!--FINISH--> | <!--accurate?-->
+| Portal: View Control Panel Menu | <!--FINISH--> |
+| Price Lists: Access in Control Panel | <!--FINISH--> |
+| Product Groups: View | <!--FINISH--> |
 
 ## Inventory Manager
 
@@ -147,10 +149,10 @@ The Inventory Manager role allows users to view and manage inventory in all Ware
 
 | Permissions | Description |
 | --- | --- |
-| Inventory: Access in Control Panel | |
-| Inventory: View | |
-| Warehouses > Commerce Inventories: Manage Inventory | |
-| Portal: View Control Panel Menu | |
+| Inventory: Access in Control Panel | <!--FINISH--> |
+| Inventory: View | <!--FINISH--> |
+| Warehouses > Commerce Inventories: Manage Inventory | <!--FINISH--> |
+| Portal: View Control Panel Menu | <!--FINISH--> |
 
 ## Order Manager (Site Role)
 
@@ -176,20 +178,20 @@ This Order Manager role grants additional permissions that allow users to manage
 
 | Permissions | Description |
 | --- | --- |
-| Open Carts > Commerce Order: Add Order | Allows order managers to add an order |
-| Open Carts > Commerce Order: Approve Open Orders | Allow order managers to approve orders if workflow has been enabled |
+| Open Carts > Commerce Order: Add Order | Ability to add an order |
+| Open Carts > Commerce Order: Approve Open Orders | Ability to approve orders if workflow has been enabled |
 | Open Carts > Commerce Order: Check Out Open Orders | Ability to complete the checkout process for new, incomplete orders |
-| Open Carts > Commerce Order: Delete Orders | Allow order managers to delete orders |
-| Open Carts > Commerce Order: Manage Order Notes | |
-| Open Carts > Commerce Order: Manage Order Restricted Notes | |
-| Open Carts > Commerce Order: Manage Orders | Change Order details such as mailing and billing addresses; ability to add a note to the order |
-| Open Carts > Commerce Order: View Open Orders | Ability to view all open orders |
+| Open Carts > Commerce Order: Delete Orders | Ability to delete orders |
+| Open Carts > Commerce Order: Manage Order Notes | Ability to change general order notes |
+| Open Carts > Commerce Order: Manage Order Restricted Notes | Ability to change restricted order notes |
+| Open Carts > Commerce Order: Manage Orders | Ability to change order details, such as mailing and billing addresses, adding an order note, and more |
+| Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view all orders regardless of their statuses |
-| Orders: Access in Control Panel | |
-| Orders: Permissions | |
-| Orders: View | |
-| Account Groups > Commerce Accounts: Manage All Accounts | | <!--accurate? OR: Shipments > Commerce Shipments: Manage All Accounts?-->
-| Portal: View Control Panel Menu | |
+| Orders: Access in Control Panel | <!--FINISH--> |
+| Orders: Permissions | <!--FINISH--> |
+| Orders: View | <!--FINISH--> |
+| Account Groups > Commerce Accounts: Manage All Accounts | <!--FINISH--> | <!--accurate? OR: Shipments > Commerce Shipments: Manage All Accounts?-->
+| Portal: View Control Panel Menu | <!--FINISH--> |
 
 ## Shipments Manager
 
@@ -199,14 +201,14 @@ The Shipment Manager role allows a user to process shipments. This includes the 
 
 | Permissions | Description |
 | --- | --- |
-| Open Carts > Commerce Order: View Orders | |
-| Account Groups > Commerce Accounts: Manage All Accounts | | <!--accurate? OR Shipments > Commerce Shipments: Manage All Accounts?-->
-| Warehouses > Commerce Inventories: Manage Inventory | |
-| Shipments > Commerce Shipments: Manage Shipments | |
-| Portal: View Control Panel Menu | |
-| Shipments: Access in Control Panel | |
-| Shipments: View | |
-| Shipments > Commerce Warehouse: View | |
+| Open Carts > Commerce Order: View Orders | <!--FINISH--> |
+| Account Groups > Commerce Accounts: Manage All Accounts | <!--FINISH--> | <!--accurate? OR Shipments > Commerce Shipments: Manage All Accounts?-->
+| Warehouses > Commerce Inventories: Manage Inventory | <!--FINISH--> |
+| Shipments > Commerce Shipments: Manage Shipments | <!--FINISH--> |
+| Portal: View Control Panel Menu | <!--FINISH--> |
+| Shipments: Access in Control Panel | <!--FINISH--> |
+| Shipments: View | <!--FINISH--> |
+| Shipments > Commerce Warehouse: View | <!--FINISH--> |
 
 ## Liferay 7.3 and Earlier
 
@@ -226,9 +228,9 @@ The Sales Agent is a regular role in Liferay Commerce and assignees are able to 
 ## Additional Information
 
 * [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
-* [Order Management Permissions Reference]()
-* [Inventory Management Permissions Reference]()
-* [Pricing Permissions Reference]()
-* [Product Management Permissions Reference]()
-* [Store Management Permissions Reference]()
-* [Settings Permissions Reference]()
+* [Order Management Permissions Reference](./order-management-permissions-reference.md)
+* [Inventory Management Permissions Reference](./inventory-management-permissions-reference.md)
+* [Pricing Permissions Reference](./pricing-permissions-reference.md)
+* [Product Management Permissions Reference](./product-management-permissions-reference.md)
+* [Store Management Permissions Reference](./store-management-permissions-reference.md)
+* [Settings Permissions Reference](./settings-permissions-reference.md)
