@@ -41,7 +41,7 @@ Each panel in the dashboard has a time period selector that recalculates the met
 
 The Site Activities panel presents a summary of how visitors interact with your Site. This panel contains the following metrics:
 
-**Visitors:** Total unique visitors.
+**Unique Visitors:** Total unique visitors.
 
 **Sessions per Visitor:** An average of the number of sessions for each unique visitor. A single visitor can open multiple sessions. A session ends after 30 minutes of inactivity, or at midnight.
 
@@ -52,6 +52,8 @@ The Site Activities panel presents a summary of how visitors interact with your 
 ![Site Activities include a visualization of data points over a period of time.](./sites-dashboard/images/01.png)
 
 Clicking each metric changes the visualization in the panel to display the selected metric. 
+
+Note the legend at the bottom right shows a breakdown of the unique visitors between known visitors and anonymous visitors.
 
 ## Top Pages
 
