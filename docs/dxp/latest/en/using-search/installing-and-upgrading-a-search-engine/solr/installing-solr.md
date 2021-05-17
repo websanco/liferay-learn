@@ -18,7 +18,7 @@ As you proceed, remember these terms:
 
 ## Compatibility
 
-See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for detailed information on the compatible Solr and Liferay versions, patch levels.
+See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for detailed information on the compatible Solr and Liferay versions by patch level.
 
 ## Disabling Elasticsearch-Only Features
 
@@ -304,7 +304,7 @@ There's only one thing left to do: specify the client type as *CLOUD* in Liferay
 ## Solr Connector Configuration Reference
 
 ```note::
-   The following properties apply equally to the Solr 7 connector, just use `solr7` as the version in the config file name (instead of `solr8`) or look for entries starting with _Solr 7_ in the System Settings.
+   The Solr Connector properties apply equally to the Solr 7 and Solr 8 connectors. Substitue `solr7` in the config file name (instead of `solr8`). In System Settings, see the entries starting with _Solr 7_.
 ```
 
 Below are the default configurations along with settings that become available (in the System Settings Search category, or configurable by `.config` file) when you install the Solr connector application. These settings accept a limited set of values: 
