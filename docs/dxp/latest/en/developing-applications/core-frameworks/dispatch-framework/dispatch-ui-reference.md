@@ -6,7 +6,7 @@
 
 The Dispatch Triggers tab lists all Dispatch Tasks added to the Liferay instance.
 
-Click *Add* (![Add Button](../../../images/icon-add.png)) to create a Dispatch Task using a Dispatch Task Executor template.
+Click *Add* (![Add Button](../../images/icon-add.png)) to create a Dispatch Task using a Dispatch Task Executor template.
 
 Once created, the following fields are displayed for each Dispatch Task:
 

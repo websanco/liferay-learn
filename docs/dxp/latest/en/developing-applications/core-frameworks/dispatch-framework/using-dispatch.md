@@ -1,10 +1,10 @@
 # Using Dispatch
 
-[Dispatch](https://github.com/liferay/liferay-portal/tree/master/modules/apps/dispatch) is a flexible framework built on top of Liferay's scheduler engine that you can use to run and schedule any type of logic. This framework uses the `DispatchTaskExecutor` interface to define templates with custom logic that you can use to [create tasks](#adding-a-new-dispatch-task) via the Control Panel. Once a Dispatch Task is created, you can configure its behavior and [schedule](#scheduling-the-dispatch-task) when it executes.
+[Dispatch](https://github.com/liferay/liferay-portal/tree/master/modules/apps/dispatch) is a flexible framework built on top of Liferay's scheduler engine that you can use to run and schedule any type of logic. This framework uses the `DispatchTaskExecutor` interface to define templates with custom logic that you can use to [create tasks](#adding-a-new-dispatch-task) via the Control Panel. Once a Dispatch Task is created, you can configure its behavior and execution [schedule](#scheduling-the-dispatch-task).
 
 ![Add and manage Dispatch Tasks via the Dispatch page.](./using-dispatch/images/01.png)
 
-Dispatch also provides a convenient UI for viewing and managing all instance [jobs scheduled using the `MessageListener` interface](#viewing-and-managing-scheduled-jobs).
+Dispatch provides a convenient UI for viewing and managing all instance [jobs scheduled using the `MessageListener` interface](#viewing-and-managing-scheduled-jobs).
 
 ```note::
    When deciding whether to use Dispatch or ``MessageListener`` to schedule instance jobs, consider the following Dispatch benefits.
@@ -14,9 +14,9 @@ Dispatch also provides a convenient UI for viewing and managing all instance [jo
 
 ## Adding a New Dispatch Task
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click *Control Panel*, and go to *Configuration* &rarr; *Dispatch*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click *Control Panel*, and go to *Configuration* &rarr; *Dispatch*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)) and select the desired template for your Dispatch Task. The selected template defines the Task's essential logic.
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)) and select the desired template for your Dispatch Task. The selected template defines the Task's essential logic.
 
    Each template is an implementation of the `DispatchTaskExecutor` interface, and each Dispatch Task is an instance of the selected template. See [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md) for more information about how it works.
 
@@ -76,7 +76,7 @@ The Dispatch Task now automatically starts and stops at your specified date/time
 
 ## Setting Up a Talend Dispatch Task
 
-Talend is open source data integration software for defining custom data integration jobs. These jobs can then be exported as a `.zip` archive and uploaded to any Dispatch Task that uses the Talend executor template. Once uploaded, the Talend data integration job is executed whenever the Dispatch Task is run.
+Talend is open source data integration software for defining custom data integration jobs. These jobs can be exported as a `.zip` archive and uploaded to any Dispatch Task that uses the Talend executor template. Once uploaded, the Talend data integration job is executed whenever the Dispatch Task is run.
 
 Follow these steps to upload a Talend *Job Archive* to a Dispatch Task:
 
@@ -100,6 +100,6 @@ The Dispatch Page's *Scheduled Jobs* tab also lists all jobs scheduled on the Li
 
 ## Additional Information
 
-* [Dispatch Reference](./dispatch-reference.md)
+* [Dispatch UI Reference](./dispatch-ui-reference.md)
 * [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
 * [Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md)

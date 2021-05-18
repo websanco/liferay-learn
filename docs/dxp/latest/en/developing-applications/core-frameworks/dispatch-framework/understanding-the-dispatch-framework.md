@@ -38,5 +38,5 @@ The [`DispatchConfigurator`](https://github.com/liferay/liferay-portal/blob/mast
 ## Additional Information
 
 * [Using Dispatch](./using-dispatch.md)
-* [Dispatch Reference](./dispatch-reference.md)
+* [Dispatch UI Reference](./dispatch-ui-reference.md)
 * [Creating a New Dispatch Executor](./creating-a-new-dispatch-task-executor.md)

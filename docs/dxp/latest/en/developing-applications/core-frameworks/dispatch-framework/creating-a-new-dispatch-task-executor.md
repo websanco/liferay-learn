@@ -97,38 +97,9 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
 
 ## Code for the Sample Dispatch Task Executor
 
-```java
-@Component(
-   property = {
-      "dispatch.task.executor.name=s7a3",
-      "dispatch.task.executor.type=s7a3"
-   },
-   service = DispatchTaskExecutor.class
-)
-public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
-
-   @Override
-   public void doExecute(
-         DispatchTrigger dispatchTrigger,
-         DispatchTaskExecutorOutput dispatchTaskExecutorOutput)
-      throws IOException, PortalException {
-
-      if (_log.isInfoEnabled()) {
-         _log.info(
-            "Invoke #doExecute(DispatchTrigger, " +
-               "DispatchTaskExecutorOutput)");
-      }
-   }
-
-   @Override
-   public String getName() {
-      return "s7a3";
-   }
-
-   private static final Log _log = LogFactoryUtil.getLog(
-      S7A3DispatchTaskExecutor.class);
-
-}
+```literalinclude:: creating-a-new-dispatch-task-executor/resources/liferay-s7a3.zip/s7a3-impl/src/main/java/com/acme/s7a3/internal/dispatch/executor/S7A3DispatchTaskExecutor.java
+   :language: java
+   :lines: 15-44
 ```
 
 The module is declared an OSGi `@Component` and defines two properties: `dispatch.task.executor.name` and `dispatch.task.executor.type`. It then identifies the module as a `DispatchTaskExecutor.class` service.
@@ -139,4 +110,4 @@ Following the `@Component` annotation, the module extends the `BaseDispatchTaskE
 
 * [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
 * [Using Dispatch](./using-dispatch.md)
-* [Dispatch Reference](./dispatch-reference.md)
+* [Dispatch UI Reference](./dispatch-ui-reference.md)

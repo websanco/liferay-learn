@@ -1,0 +1,61 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Background Tasks',
+					sectionURL: 'core-frameworks/background-tasks.html',
+				},
+				{
+					sectionName: 'Locks',
+					sectionURL: 'core-frameworks/locks.html',
+				},
+				{
+					sectionName: 'Message Bus',
+					sectionURL: 'core-frameworks/message-bus.html',
+				},
+				{
+					sectionName: 'Scheduler',
+					sectionURL: 'core-frameworks/scheduler.html',
+				},
+				{
+					sectionName: 'Dispatch Framework',
+					sectionURL: 'core-frameworks/dispatch_framework.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using Dispatch',
+							url: 'core-frameworks/dispatch-framework/using-dispatch.html'
+						},
+						{
+							name: 'Understanding the Dispatch Framework',
+							url: 'core-frameworks/dispatch-framework/understanding-the-dispatch-framework.html'
+						},
+						{
+							name: 'Creating a New Dispatch Task Executor',
+							url: 'core-frameworks/dispatch-framework/creating-a-new-dispatch-task-executor.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Template Engine',
+					sectionURL: 'core-frameworks/template-engine.html',
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'core-frameworks/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Aggregating Resource Bundles',
+							url: 'core-frameworks/reference/localization/aggregating-resource-bundles.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
