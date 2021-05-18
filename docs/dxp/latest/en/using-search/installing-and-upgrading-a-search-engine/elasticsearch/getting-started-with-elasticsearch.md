@@ -1,7 +1,6 @@
 # Getting Started with Elasticsearch
 
-> Latest Supported Elasticsearch Version: 7.9 \
-> Available: Liferay DXP/CE 7.3 and  Liferay DXP 7.2 SP1+
+> Please refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details on the compatible Elasticsearch versions, available connectors and required patch levels.
 
 A typical Liferay system's search infrastructure comprises
 
