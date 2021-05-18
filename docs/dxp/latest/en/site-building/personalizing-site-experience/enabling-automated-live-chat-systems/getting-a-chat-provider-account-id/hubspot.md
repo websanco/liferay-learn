@@ -2,6 +2,10 @@
 
 [Hubspot](https://www.hubspot.com/) is a CRM platform that includes Live Chat functionality. Enabling integration with Hubspot requires two tokens: the Chat Provider Token and the Hubspot API Token.
 
+## Important 
+
+The **Chat Provider Account ID** for Hubspot is a combination of two different values that are available from your Hubspot account: Your Hubspot user account number and your Hubspot API token.
+
 ## Locating the Chat Provider Token
 
 1. Log in to your [Hubspot Account](https://app.hubspot.com/login).
