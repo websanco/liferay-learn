@@ -4,7 +4,6 @@ Using Fragments
 .. toctree::
    :maxdepth: 3
 
-   using-fragments/using-fragments.md
    using-fragments/using-page-fragments.md
    using-fragments/managing-page-fragments.md
    using-fragments/propagating-page-fragment-changes.md
@@ -14,7 +13,6 @@ Using Fragments
    using-fragments/mapping-web-content-templates-to-fragments.md
    using-fragments/using_fragment_renderers.rst
 
--  :doc:`/site-building/displaying-content/using-fragments/using-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/using-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/managing-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/propagating-page-fragment-changes`
