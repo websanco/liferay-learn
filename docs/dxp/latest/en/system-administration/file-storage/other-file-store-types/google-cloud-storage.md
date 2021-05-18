@@ -14,7 +14,7 @@ Before enabling this connection, you must first prepare your GCS account. When r
 
 Enabling Liferay's GCS integration requires an active GCS account and project. This project must have a [storage bucket](https://cloud.google.com/storage/docs/creating-buckets) and a [service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts) to enable server-to-server, app-level authentication. You must also create a JSON [security key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) for the service account. See official [Google Cloud Storage](https://cloud.google.com/storage/docs) documentation for more information.
 
-```important:
+```important::
    The service account's security key must use the JSON key type.
 ```
 
