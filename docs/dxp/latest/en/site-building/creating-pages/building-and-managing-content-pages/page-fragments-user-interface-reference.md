@@ -29,7 +29,7 @@ Here you can configure Fragment specific options (e.g., heading level, video URL
 
 ### Styles
 
-Here you can configure standard Fragment options (e.g., dimensions, background, borders), as well as Fragment specific options on occasion. With DXP's Responsive Layout Editor, you can also configure these settings for different devices. See [Configuring Fragment Styles](./configuring-fragment-styles.md) and [Fragment Styles Reference](./fragment-styles-reference.md) for more information.
+Here you can configure standard Fragment options (e.g., dimensions, background, borders), as well as Fragment specific options on occasion. With DXP's Responsive Layout Editor, you can also configure these settings for different devices. See [Configuring Fragment Styles](../../displaying-content/using-fragments/configuring-fragment-styles.md) and [Fragment Styles Reference](../../displaying-content/using-fragments/fragment-styles-reference.md) for more information.
 
 ### Image Source
 
@@ -57,7 +57,7 @@ Use *container* Fragments to add drop zones to a Content Page. In addition to st
 
 ### Grid
 
-Use *grid* Fragments to add multiple drop zone modules to a Content Page. These modules can be arranged into rows and columns. In addition to standard style options, you can determine the number of modules for each grid, the number of modules per row, and the vertical alignment of each module's content. You can also manually [adjust the width](./building-content-pages.md#configuring-a-row-s-columns) of each module.
+Use *grid* Fragments to add multiple drop zone modules to a Content Page. These modules can be arranged into rows and columns. In addition to standard style options, you can determine the number of modules for each grid, the number of modules per row, and the vertical alignment of each module's content. You can also manually [adjust the width](./configuring-elements-on-content-pages.md#configuring-the-grid-fragment) of each module.
 
 ## Basic Components
 

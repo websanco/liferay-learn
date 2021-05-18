@@ -54,10 +54,8 @@ The editing options available in the Content Page sidebar depend on the editing 
 
 | Edit Mode | Description | Available Options |
 | --- | --- | --- |
-| Page Design | You can design pages when you have permission to update the page and the page content. |
-<ul><li>[Selection](#selection) (![Selection](../../../images/icon-pages-tree.png))</li><li>[Contents](#contents) (![Contents](../../../images/icon-list-ul.png))</li><li>[Comments](#comments) (![Comments](../../../images/icon-comments-w.png))</li></ul> |
-| Content Editing | You can edit content when you have permission to update the page but not the page content. | All options in Page Design mode plus:
-<ul><li>Fragments and Widgets](#fragments-and-widgets) (![Fragments and Widgets](../../../images/icon-cards2.png))</li><li>[Page Design Options](#page-design-options) (![Page Design Options](../../../images/icon-format.png))</li></ul> |
+| Page Design | You can design pages when you have permission to update the page and the page content. | <ul><li>[Selection](#selection)</li><li>[Contents](#contents)</li><li>[Comments](#comments)</li></ul> |
+| Content Editing | You can edit content when you have permission to update the page but not the page content. | All options in Page Design mode plus: <ul><li>Fragments and Widgets](#fragments-and-widgets)</li><li>[Page Design Options](#page-design-options)</li></ul> |
 
 ![Choose between Page Design or Content Editing editing modes.](content-page-editor-user-interface-reference/images/18.png)
 
@@ -87,7 +85,7 @@ In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../
 
 ### Selection
 
-In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Fragments](../../displaying-content/using-fragments/using-fragments.md) for more information.
+In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) for more information.
 
 ![Selection shows you a hierarchy of your Page and contents.](./content-page-editor-user-interface-reference/images/08.png)
 
@@ -113,8 +111,7 @@ Use Page Fragment comments to collaborate with team members while developing you
 
 ## Additional Information
 
-- [Content Pages Overivew](./content-pages-overview.md)
+- [Content Pages Overview](./content-pages-overview.md)
 - [Adding Elements to Content Pages](./adding-elements-to-content-pages.md)
-- [Configuring Elements on Content Pages](./configuring-elements-on-a-content-pages)
+- [Configuring Elements on Content Pages](./configuring-elements-on-content-pages.md)
 - [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
-

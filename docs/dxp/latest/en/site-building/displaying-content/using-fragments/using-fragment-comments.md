@@ -48,5 +48,6 @@ To enable comments for Fragments, follow these steps:
 
 ## Additional Information
 
-* [Content Pages Overview](./content-pages-overview.md)
-* [Using Fragments](./using-fragments.md)
+- [Using Page Fragments](./using-page-fragments.md)
+- [Managing Page Fragments](./managing-page-fragments.md)
+- [Propagating Page Fragment Changes](./propagating-page-fragment-changes.md)

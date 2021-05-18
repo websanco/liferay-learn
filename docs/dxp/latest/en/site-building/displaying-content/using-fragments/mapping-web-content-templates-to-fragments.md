@@ -26,9 +26,9 @@ You can map the single-value Content field directly to a Fragment, but you need 
 
     ![Create the Web Content based on the Template with the multi-value field.](./mapping-web-content-templates-to-fragments/images/01.png)
 
-1. On the Fragment-supported page (Content Page, Display Page Template, etc.) [add the Fragment](./building-content-pages.md#adding-elements-to-a-content-page).
+1. On the Fragment-supported page (Content Page, Display Page Template, etc.) [add the Fragment](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md).
 1. On the sidebar panel, click the *Selection* (![Selection](../../../images/icon-pages-tree.png)) button and choose the element in the Fragment you want to map.
-1. Under the *Mapping* section, [select and map](./building-content-pages.md#mapping-content) the Web Content Article that contains the value you want to map.
+1. Under the *Mapping* section, [select and map](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content) the Web Content Article that contains the value you want to map.
 1. Click the *Field* dropdown menu and select the Web Content Template you created before.
 
     ![Map the field in the Web Content Template to your Fragment.](./mapping-web-content-templates-to-fragments/images/04.png)
@@ -37,6 +37,6 @@ You can map the single-value Content field directly to a Fragment, but you need 
 
 ## Additional Information
 
-- [Using Fragments](../../displaying-content/using-fragments/using-fragments.md)
+- [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
 - [Understanding Web Content Structures](../../../content-authoring-and-management/web-content/web-content-structures/understanding-web-content-structures.md)
 - [Creating Web Content Templates](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md)

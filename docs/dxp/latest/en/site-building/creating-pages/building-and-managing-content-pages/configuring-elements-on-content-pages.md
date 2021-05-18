@@ -4,7 +4,7 @@ After [adding adding elements to your Content Page](./adding-elements-to-content
 
 Because [Content Pages](./content-pages-overview.md) are primarily built using Fragments, configuring with your Pages requires working with Fragments. For a description of the Fragments user interface in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
 
-To configure elements on a Content Page, click the element and select your options in the Content Page editor sidebar. For a description of the sidebar options, see [Content Pages User Interface Reference](./content-pages-user-interface-reference.md).
+To configure elements on a Content Page, click the element and select your options in the Content Page editor sidebar. For a description of the sidebar options, see [Content Page Editor User Interface Reference](./content-page-editor-user-interface-reference.md).
 
 ![The Content Page sidebar reveals the different style and configuration options when you click the Page elements](./configuring-elements-on-content-pages/images/06.png)
 
@@ -176,4 +176,4 @@ To map your elements to existing content,
 
 - [Adding Elements to Content Pages](./adding-elements-to-content-pages.md)
 - [Content Pages Overview](./content-pages-overview.md)
-- [Content Pages User Interface Reference](./content-pages-user-interface-reference.md)
+- [Content Pages User Interface Reference](./content-page-editor-user-interface-reference.md)

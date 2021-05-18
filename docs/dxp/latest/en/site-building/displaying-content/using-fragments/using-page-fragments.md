@@ -10,7 +10,7 @@ You can [embed Liferay widgets](../../developer-guide/reference/fragments/fragme
 
 ![You can provide your own content in Fragments.](./using-page-fragments/images/02.png)
 
-Page Fragments are organized into Collections. Collections group related Fragments together so you can manage them easily. Fragments are accessible through these Collections when [building a Content Page](../../creating-pages/building-and-managing-content-pages/building-content-pages.md). You can include resources in Page Fragment Collections and reference them from your Page Fragment's code without worrying about their availability. This is helpful when moving Page Fragments. See [Including Default Resources in Page Fragments](../../developer-guide/developing-page-fragments/including-default-resources-with-fragments.md) for more information.
+Page Fragments are organized into Collections. Collections group related Fragments together so you can manage them easily. Fragments are accessible through these Collections when [building a Content Page](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md). You can include resources in Page Fragment Collections and reference them from your Page Fragment's code without worrying about their availability. This is helpful when moving Page Fragments. See [Including Default Resources in Page Fragments](../../developer-guide/developing-page-fragments/including-default-resources-with-fragments.md) for more information.
 
 ![Collections provide an easy way to organize, manage, and share Fragments.](./using-page-fragments/images/03.png)
 
@@ -18,4 +18,4 @@ Page Fragments are organized into Collections. Collections group related Fragmen
 
 - [Content Pages Overview](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
 - [Page Fragments User Interface Reference](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md)
-- [Developing Fragements](developing-../../developer-guide/developing-page-fragments/developing-fragments-intro.md)
+- [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)

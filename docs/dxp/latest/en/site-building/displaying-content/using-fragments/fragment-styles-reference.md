@@ -4,7 +4,7 @@ This reference documents all the Fragment Styles available. To access the Styles
 
 ## Container Width
 
-If you use a [Container Fragment](./using-fragments.md#using-the-container-fragment), you can configure the Container Width to determine whether the Container Fragment's width is static, especially if the browser window changes size.
+If you use a [Container Fragment](./using-page-fragments.md#layout-elements), you can configure the Container Width to determine whether the Container Fragment's width is static, especially if the browser window changes size.
 
 ![You can configure the container to be either Fluid or Fixed Width.](./fragment-styles-reference/images/01.png)
 
@@ -17,7 +17,7 @@ If you use a [Container Fragment](./using-fragments.md#using-the-container-fragm
    Many of the styles correspond to CSS classes. If you know CSS, many of the following fields will be familiar.
 ```
 
-Many of the following styles have defined tokens; see [Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md) and [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md) for more information.
+Many of the following styles have defined tokens; see [Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md) and [Style Book Token Definitions](../../site-appearance/style-books/developer-guide/style-book-token-definitions.md) for more information.
 
 ## Margin
 
@@ -104,8 +104,8 @@ This property specifies whether to clip content or to add scrollbars when an ele
 
 ## Additional Information
 
-* [Configuring Fragment Styles](./configuring-fragment-styles.md)
-* [Content Pages Overview](./content-pages-overview.md)
-* [Using Fragments](./using-fragments.md)
-* [Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)
-* [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)
+- [Configuring Fragment Styles](./configuring-fragment-styles.md)
+- [Content Pages Overview](./content-pages-overview.md)
+- [Using Page Fragments](./using-page-fragments.md)
+- [Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)
+- [Style Book Token Definitions](../../site-appearance/style-books/developer-guide/style-book-token-definitions.md)
