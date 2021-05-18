@@ -2,11 +2,11 @@
 
 After [adding adding elements to your Content Page](./adding-elements-to-content-pages.md), you can configure and customize these elements in different ways.
 
-Because [Content Pages](./content-pages-overview.md) are primarily built using Fragments, configuring with your Pages requires working with Fragments. For a description of the Fragments user interface in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
-
 To configure elements on a Content Page, click the element and select your options in the Content Page editor sidebar. For a description of the sidebar options, see [Content Page Editor User Interface Reference](./content-page-editor-user-interface-reference.md).
 
-![The Content Page sidebar reveals the different style and configuration options when you click the Page elements](./configuring-elements-on-content-pages/images/06.png)
+Because [Content Pages](./content-pages-overview.md) are primarily built using Fragments, configuring with your Pages requires working with Fragments. For a description of the Fragments user interface in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
+
+![The Content Page sidebar reveals the different style and configuration options when you click the Page elements.](./configuring-elements-on-content-pages/images/06.png)
 
 The following list describes common configuration options:
 
@@ -102,12 +102,12 @@ You can also specify a background image for a layout by [setting the layout styl
 You can adjust the module's width to customize the layout:
 
 1. Click on the Grid to select it. A blue dot appears between each of the modules, indicating that they can be resized.
-1. Click one of the blue dots and drag to the left or right to adjust the size of the module.
+1. Click one of the blue dots and drag to the left or right to adjust the module size.
 
    ![You can adjust the spacing of modules in a Layout.](./configuring-elements-on-content-pages/images/16.gif)
 
    ```tip::
-      You can use the Grid Fragment to customize the content layout for the different screen sizes in desktop and mobile devices. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_
+      You can use the Grid Fragment to customize the content layout for the different screenn desktop and mobile devices. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_
    ```
 
 ## Copying a Page Fragment

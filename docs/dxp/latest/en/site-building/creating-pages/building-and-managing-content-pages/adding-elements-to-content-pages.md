@@ -12,7 +12,7 @@ After you [create a Content Page](../adding-pages/adding-a-page-to-a-site.md), y
 
 1. In the Add Page dialog, type your Page's *Name*.
 
-1. Alternatively, click the Actions Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
+1. Alternatively, click the *Actions* Menu (![Actions](../../../images/icon-actions.png)) of an existing Content Page and select *Edit*.
 
     ![Edit an existing Content Page by dropping Fragments or Widgets in the edit area.](adding-elements-to-content-pages/images/02.png)
 

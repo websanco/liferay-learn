@@ -1,9 +1,9 @@
 # Content Page Editor User Interface Reference
 
-Using the Content Page Editor, you can [add](./adding-elememnts-to-content-pages.md) and [configure](./configuring-elements-on-content-pages.md) elements in your [Content Page](./content-pages-overview.md). To open the Content Page Editor, click the *Edit* icon (![Edit icon](../../../images/icon-edit.png)) at the top right of the *Application Bar*. This reveals the editing toolbar and sidebar, which contain tools and components for building your Content Pages.
+Using the Content Page Editor, you can [add](./adding-elements-to-content-pages.md) and [configure](./configuring-elements-on-content-pages.md) elements in your [Content Page](./content-pages-overview.md). To open the Content Page Editor, click the *Edit* icon (![Edit icon](../../../images/icon-edit.png)) at the top right of the *Application Bar*. This reveals the editing toolbar and sidebar, which contain tools and components for building your Content Pages.
 
-* [Editing Toolbar](#editing-toolbar)
-* [Editing Sidebar](#editing-sidebar)
+- [Editing Toolbar](#editing-toolbar)
+- [Editing Sidebar](#editing-sidebar)
 
 ![Click on Edit to access a Content Page's editing toolbar and sidebar.](./content-page-editor-user-interface-reference/images/01.png)
 
@@ -55,7 +55,7 @@ The editing options available in the Content Page sidebar depend on the editing 
 | Edit Mode | Description | Available Options |
 | --- | --- | --- |
 | Page Design | You can design pages when you have permission to update the page and the page content. | <ul><li>[Selection](#selection)</li><li>[Contents](#contents)</li><li>[Comments](#comments)</li></ul> |
-| Content Editing | You can edit content when you have permission to update the page but not the page content. | All options in Page Design mode plus: <ul><li>Fragments and Widgets](#fragments-and-widgets)</li><li>[Page Design Options](#page-design-options)</li></ul> |
+| Content Editing | You can edit content when you have permission to update the page but not the page content. | All options in Page Design mode plus: <ul><li>[Fragments and Widgets](#fragments-and-widgets)</li><li>[Page Design Options](#page-design-options)</li></ul> |
 
 ![Choose between Page Design or Content Editing editing modes.](content-page-editor-user-interface-reference/images/18.png)
 
@@ -67,11 +67,11 @@ After making your changes, click on the *Preview* icon (![Preview](../../../imag
 
 Depending on your selected editing mode, you can access these options in the edit sidebar:
 
-* ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
-* ![Selection](../../../images/icon-pages-tree.png) - [Selection](#selection)
-* ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
-* ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](#page-design-options)
-* ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
+- ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
+- ![Selection](../../../images/icon-pages-tree.png) - [Selection](#selection)
+- ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
+- ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](#page-design-options)
+- ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
 
 ![Click on Edit to access the Content Page sidebar menu.](content-page-editor-user-interface-reference/images/03.png)
 
