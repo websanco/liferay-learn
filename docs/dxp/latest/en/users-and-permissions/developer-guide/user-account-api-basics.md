@@ -1,6 +1,6 @@
 # User Account API Basics
 
-[Adding and managing Users](../users/adding-and-managing-users.md) can be done from the Control Panel but it can also be done using Liferay's REST APIs. Curl commands and Java classes can be used to add, edit, delete Users.
+[Adding and managing Users](../users/adding-and-managing-users.md) can be done from the Control Panel but it can also be done using Liferay's REST APIs. cURL commands and Java classes can call these services to add, edit, delete Users.
 
 Let's start with an example for adding a new User.
 
@@ -25,11 +25,11 @@ Let's start with an example for adding a new User.
 
     ```
     liferay-y6q4.zip/
-    ├── curl // curl command scripts
+    ├── curl // cURL command scripts
     └── java // Java classes
     ```
 
-1. Use the curl script to add a new User to your Liferay instance. On the command line, navigate to the `curl` folder. Execute the `User_POST_ToInstance.sh` script.
+1. Use the cURL script to add a new User to your Liferay instance. On the command line, navigate to the `curl` folder. Execute the `User_POST_ToInstance.sh` script.
 
     ```bash
     ./User_POST_ToInstance.sh
@@ -84,7 +84,7 @@ Let's start with an example for adding a new User.
 
     ![See the added User in Control Panel.](./user-account-api-basics/images/01.png)
 
-1. The API call can also be made with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+1. The service call can also be made with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
@@ -100,19 +100,14 @@ Let's start with an example for adding a new User.
 
     ![In Control Panel, another User has been added.](user-account-api-basics/images/02.png)
 
-Now let's take a closer look at the curl command and Java class.
+Now let's take a closer look at the cURL command and Java class.
 
-## API CURL Command
+## Examine the cURL Command
 
-The `User_POST_ToInstance.sh` script calls the REST service with a curl command. 
+The `User_POST_ToInstance.sh` script calls the REST service with a cURL command. 
 
-```bash
-curl \
-	-H "Content-Type: application/json" \
-	-X POST \
-	"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts" \
-	-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}" \
-	-u "test@liferay.com:test"
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_POST_ToInstance.sh
+    :language: bash
 ```
 
 Here are the command's arguments:
@@ -129,32 +124,16 @@ Here are the command's arguments:
    Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
 ```
 
-The other curl commands use similar JSON arguments.
+The other cURL commands use similar JSON arguments.
 
-## API Java Class
+## Examine the Java Class
 
-The `User_POST_ToInstance.java` class adds a User by calling REST service.
+The `User_POST_ToInstance.java` class adds a User by calling the user related service.
 
-```java
-public static void main(String[] args) throws Exception {
-	UserAccountResource.Builder builder = UserAccountResource.builder();
-
-	UserAccountResource userAccountResource = builder.authentication(
-		"test@liferay.com", "test"
-	).build();
-
-	UserAccount userAccount = userAccountResource.postUserAccount(
-		new UserAccount() {
-			{
-				alternateName = "Baker";
-				emailAddress = "baker@liferay.com";
-				familyName = "Foo";
-				givenName = "Baker";
-			}
-		});
-
-	System.out.println(userAccount);
-}
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_POST_ToInstance.java
+   :dedent: 1
+   :language: java
+   :lines: 9-27
 ```
 
 The class calls the REST service with only three lines of code:
@@ -169,4 +148,180 @@ The class calls the REST service with only three lines of code:
    The ``main`` method's comment demonstrates running the class.
 ```
 
-The other example Java classes are similar to this one but call different `userAccountResource` methods.
+The other example Java classes are similar to this one but call different `UserAccountResource` methods.
+
+```important::
+   See `UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_ for service details.
+```
+
+The sections below demonstrate calling other User REST services using cURL and Java.
+
+## Get Instance Users
+
+Get a list of all Users with the following cURL and Java commands.
+
+### Users_GET_FromInstance.sh
+
+Command:
+
+```bash
+./Users_GET_FromInstance.sh
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/Users_GET_FromInstance.sh
+   :language: bash
+```
+
+### Users_GET_FromInstance.java
+
+Command:
+
+```bash 
+java -classpath .:* Users_GET_FromInstance
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/Users_GET_FromInstance.java
+   :dedent: 1
+   :language: java
+   :lines: 11-22
+```
+
+## Get a User
+
+Get a specific User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
+
+### User_GET_ById.sh
+
+Command:
+
+```bash
+./User_GET_ById.sh 1234
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_GET_ById.sh
+   :language: bash
+```
+
+### User_GET_ById.java
+
+Command:
+
+```bash 
+java -classpath .:* -DuserId=1234 User_GET_ById
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_GET_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-20
+```
+
+## Patch a User
+
+Do a partial edit of an existing User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
+
+### User_PATCH_ById.sh
+
+Command:
+
+```bash
+./User_PATCH_ById.sh 1234
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PATCH_ById.sh
+   :language: bash
+```
+
+### User_PATCH_ById.java
+
+Command:
+
+```bash 
+java -classpath .:* -DuserId=1234 User_PATCH_ById
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PATCH_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-25
+```
+
+## Put a User
+
+Do a complete overwrite of an existing User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
+
+### User_PUT_ById.sh
+
+Command:
+
+```bash
+./User_PUT_ById.sh 1234
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PUT_ById.sh
+   :language: bash
+```
+
+### User_PUT_ById.java
+
+Command:
+
+```bash 
+java -classpath .:* -DuserId=1234 User_PUT_ById
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PUT_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-28
+```
+
+## Delete a User
+
+Delete an existing User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
+
+### User_DELETE_ById.sh
+
+Command:
+
+```bash
+./User_DELETE_ById.sh 1234
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_DELETE_ById.sh
+   :language: bash
+```
+
+### User_DELETE_ById.java
+
+Command:
+
+```bash 
+java -classpath .:* -DuserId=1234 User_DELETE_ById
+```
+
+Code:
+
+```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_DELETE_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 8-17
+```
