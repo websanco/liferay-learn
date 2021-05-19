@@ -1,6 +1,6 @@
 # Getting Started with Elasticsearch
 
-> Please refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details on the compatible Elasticsearch versions, available connectors and required patch levels.
+> **Compatibility:** See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for details on the compatible Elasticsearch versions, available Liferay connectors, and required Liferay patch levels.
 
 A typical Liferay system's search infrastructure comprises
 
