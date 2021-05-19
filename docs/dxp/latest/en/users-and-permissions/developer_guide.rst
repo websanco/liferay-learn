@@ -6,4 +6,4 @@ Developer Guide
 
    developer-guide/user-account-api-basics.md
 
--  :doc:`/user-and-permissions/developer-guide/user-account-api-basics`
+-  :doc:`/users-and-permissions/developer-guide/user-account-api-basics`

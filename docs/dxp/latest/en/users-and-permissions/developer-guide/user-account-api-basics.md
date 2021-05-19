@@ -84,7 +84,7 @@ Let's start with an example for adding a new User.
 
     ![See the added User in Control Panel.](./user-account-api-basics/images/01.png)
 
-1. The service call can also be made with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+1. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
@@ -141,7 +141,7 @@ The class calls the REST service with only three lines of code:
 | Line (abbreviated) | Description |
 | ------------------ | ----------- |
 | `UserAccountResource.Builder builder = ...` | Gets a `Builder` for generating a `UserAccountResource` service instance. |
-| `UserAccountResource userAccountResource = builder.authentication(...).build()` | Specified basic authentication and generates a `UserAccountResources` service instance. |
+| `UserAccountResource userAccountResource = builder.authentication(...).build()` | Specifies basic authentication and generates a `UserAccountResources` service instance. |
 | `UserAccount userAccount = userAccountResource.postUserAccount(...)` | Calls the `userAccountResource.postUserAccount` method and passes the data to post. |
 
 ```note::
@@ -190,6 +190,8 @@ Code:
    :lines: 11-22
 ```
 
+All the Users of the instance are listed in the JSON response.
+
 ## Get a User
 
 Get a specific User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
@@ -223,6 +225,8 @@ Code:
    :language: java
    :lines: 9-20
 ```
+
+The User is returned in the JSON response.
 
 ## Patch a User
 
@@ -258,6 +262,8 @@ Code:
    :lines: 9-25
 ```
 
+Note that in the example Able and Baker's last name has now changed from Foo to Bar.
+
 ## Put a User
 
 Do a complete overwrite of an existing User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
@@ -292,6 +298,10 @@ Code:
    :lines: 9-28
 ```
 
+Note that in the example the previous data has now been replaced with Able Goo and Baker Goo.
+
+![The previous user data has been replaced with the Patch service.](./user-account-api-basics/images/03.png)
+
 ## Delete a User
 
 Delete an existing User with the following cURL and Java commands. Note, replace `1234` with your User's ID.
@@ -325,3 +335,9 @@ Code:
    :language: java
    :lines: 8-17
 ```
+
+The Users Able Goo and Baker Goo have now been deleted.
+
+## Additional Information
+
+Check out the [API Explorer](../../headless-delivery/consuming-apis/consuming-rest-services.md) to see the list of all User related REST services.
