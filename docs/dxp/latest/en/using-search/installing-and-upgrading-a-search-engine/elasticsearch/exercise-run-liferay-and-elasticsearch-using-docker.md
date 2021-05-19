@@ -80,7 +80,7 @@ Specify the properties Liferay DXP needs to connect with Elasticsearch, then run
 
 1. **Checkpoint:** Verify that the Elasticsearch connection is active in Control Panel &rarr; Configuration &rarr; Search.
 
-   ![An active connection is displayed in the Search administrative panel.](./exercise-installing-elasticsearch/images/01.png)
+   ![An active connection is displayed in the Search administrative panel.](./exercise-run-liferay-and-elasticsearch-using-docker/images/01.png)
 
 Re-index your search and spell check indexes. Both re-index actions are carried out from the Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
 
