@@ -1,4 +1,6 @@
-package com.acme.b4d8.dynamic.data.mapping.data.provider.internal;
+package com.acme.b4d8.dynamic.data.mapping.data.provider.internal.settings;
+
+import com.acme.b4d8.dynamic.data.mapping.data.provider.internal.B4D8DDMDataProviderSettings;
 
 import com.liferay.dynamic.data.mapping.data.provider.settings.DDMDataProviderSettingsProvider;
 
