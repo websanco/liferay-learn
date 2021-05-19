@@ -81,13 +81,12 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 				ddmDataProviderOutputParametersSettings :
 					b4d8DataProviderSettings.outputParameters()) {
 
+			NodeList nodeList = document.getElementsByTagName(
+				ddmDataProviderOutputParametersSettings.outputParameterPath());
 			String outputParameterId =
 				ddmDataProviderOutputParametersSettings.outputParameterId();
 			String outputParameterType =
 				ddmDataProviderOutputParametersSettings.outputParameterType();
-
-			NodeList nodeList = document.getElementsByTagName(
-				ddmDataProviderOutputParametersSettings.outputParameterPath());
 
 			if (Objects.equals(outputParameterType, "list")) {
 				List<KeyValuePair> keyValuePairs = new ArrayList<>();
