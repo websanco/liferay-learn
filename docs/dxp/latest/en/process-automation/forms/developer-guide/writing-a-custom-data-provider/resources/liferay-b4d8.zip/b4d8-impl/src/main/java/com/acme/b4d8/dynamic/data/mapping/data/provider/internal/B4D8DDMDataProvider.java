@@ -63,9 +63,9 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 					"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
 						"&format=xml&lat=37.3861&lng=-122.084");
 
-			String responseJSON = HttpUtil.URLtoString(options);
+			String xml = HttpUtil.URLtoString(options);
 
-			Document document = _convertXMLStringToDocument(responseJSON);
+			Document document = _convertXMLStringToDocument(xml);
 
 			return _createDDMDataProviderResponse(
 				b4d8DataProviderSettings, document);
