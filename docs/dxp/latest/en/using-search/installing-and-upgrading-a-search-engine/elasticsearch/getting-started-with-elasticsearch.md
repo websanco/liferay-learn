@@ -49,4 +49,4 @@ In production, you should secure Liferay's communication with Elasticsearch. [Se
 
 ## What's Next 
 
-[Installing Elasticsearch](./installing-elasticsearch.md) explains each manual installation and configuration step. These steps are helpful to understand, even if you're running on Docker. If you'd rather start with running Elasticsearch and Liferay on Docker, visit [Exercise Installing Elasticsearch](./exercise-run-liferay-and-elasticsearch-using-docker.md).
+[Installing Elasticsearch](./installing-elasticsearch.md) explains each manual installation and configuration step. These steps are helpful to understand, even if you're running on Docker. If you'd rather start with running Elasticsearch and Liferay on Docker, visit [Exercise: Run Liferay and Elasticsearch Using Docker](./exercise-run-liferay-and-elasticsearch-using-docker.md).

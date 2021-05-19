@@ -1,4 +1,4 @@
-# Exercise: Run Liferay and Elasticsearch using Docker
+# Exercise: Run Liferay and Elasticsearch Using Docker
 
 > Applies to: Liferay DXP 7.3, Liferay Portal CE 7.3 GA4+
 
