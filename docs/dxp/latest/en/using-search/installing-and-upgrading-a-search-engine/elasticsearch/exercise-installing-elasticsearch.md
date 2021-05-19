@@ -1,8 +1,8 @@
-# Exercise: Install Elasticsearch
+# Exercise: Run Liferay and Elasticsearch using Docker
 
-> Availability: Liferay DXP 7.3, Liferay Portal CE 7.3 GA4+
+> Applies to: Liferay DXP 7.3, Liferay Portal CE 7.3 GA4+
 
-Here you can walk through an example setup on your local machine to see how the [Rest Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) connection between Elasticsearch and Liferay DXP 7.3 is configured. The example uses two Docker containers: one Elasticsearch container and one Liferay DXP container. For more conceptual and production-like information see [Installing Elasticsearch](./getting-started-with-elasticsearch.md).
+Here you can walk through an example, minimum setup on your local machine to see how the [Rest Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) connection between Elasticsearch and Liferay DXP 7.3 is configured. The example uses two Docker containers: one Elasticsearch container and one Liferay DXP container. For more conceptual and production-like information see [Installing Elasticsearch](./getting-started-with-elasticsearch.md).
 
 Read [Securing Elasticsearch](./securing-elasticsearch.md) to enable authentication and encryption on the Elasticsearch connection.
 
@@ -75,7 +75,7 @@ Specify the properties Liferay DXP needs to connect with Elasticsearch, then run
 1. Once the configuration files are in place, start the DXP container with 
 
    ```bash
-   docker run -it --name dxp73  --add-host elasticsearch771:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+   docker run -it --name dxp73  --add-host elasticsearch790:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
    ```
 
 1. **Checkpoint:** Verify that the Elasticsearch connection is active in Control Panel &rarr; Configuration &rarr; Search.
