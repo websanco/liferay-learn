@@ -10,7 +10,7 @@ import com.liferay.dynamic.data.mapping.data.provider.settings.DDMDataProviderSe
 import com.liferay.dynamic.data.mapping.model.DDMDataProviderInstance;
 import com.liferay.dynamic.data.mapping.service.DDMDataProviderInstanceService;
 import com.liferay.portal.kernel.security.xml.SecureXMLFactoryProviderUtil;
-import com.liferay.portal.kernel.util.Http;
+import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.HttpUtil;
 import com.liferay.portal.kernel.util.KeyValuePair;
 import com.liferay.portal.kernel.util.Validator;
@@ -22,7 +22,6 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -47,28 +46,18 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		throws DDMDataProviderException {
 
 		try {
-			Optional<DDMDataProviderInstance> ddmDataProviderInstance =
-				_fetchDDMDataProviderInstance(
-					ddmDataProviderRequest.getDDMDataProviderId());
+			String key = "LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA";
 
-			B4D8DDMDataProviderSettings b4d8DataProviderSettings =
-				_ddmDataProviderInstanceSettings.getSettings(
-					ddmDataProviderInstance.get(),
-					B4D8DDMDataProviderSettings.class);
-
-			Http.Options options = new Http.Options();
-
-			options.setLocation(
-				"https://api.geodatasource.com/cities?" +
-					"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
-						"&format=xml&lat=37.3861&lng=-122.084");
-
-			String xml = HttpUtil.URLtoString(options);
-
-			Document document = _convertXMLStringToDocument(xml);
+			String url =
+				"https://api.geodatasource.com/cities?key=" + key +
+					"&format=xml&lat=37.3861&lng=-122.084";
 
 			return _createDDMDataProviderResponse(
-				b4d8DataProviderSettings, document);
+				_ddmDataProviderInstanceSettings.getSettings(
+					_getDDMDataProviderInstance(
+						ddmDataProviderRequest.getDDMDataProviderId()),
+					B4D8DDMDataProviderSettings.class),
+				_toDocument(HttpUtil.URLtoString(url)));
 		}
 		catch (Exception exception) {
 			throw new DDMDataProviderException(exception);
@@ -80,16 +69,6 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		return _ddmDataProviderSettingsProvider.getSettings();
 	}
 
-	private Document _convertXMLStringToDocument(String xml) throws Exception {
-		DocumentBuilderFactory documentBuilderFactory =
-			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
-
-		DocumentBuilder documentBuilder =
-			documentBuilderFactory.newDocumentBuilder();
-
-		return documentBuilder.parse(new InputSource(new StringReader(xml)));
-	}
-
 	private DDMDataProviderResponse _createDDMDataProviderResponse(
 			B4D8DDMDataProviderSettings b4d8DataProviderSettings,
 			Document document)
@@ -98,50 +77,51 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		DDMDataProviderResponse.Builder builder =
 			DDMDataProviderResponse.Builder.newBuilder();
 
-		for (DDMDataProviderOutputParametersSettings outputParameterSettings :
-				b4d8DataProviderSettings.outputParameters()) {
+		for (DDMDataProviderOutputParametersSettings
+				ddmDataProviderOutputParametersSettings :
+					b4d8DataProviderSettings.outputParameters()) {
 
-			String id = outputParameterSettings.outputParameterId();
-			String type = outputParameterSettings.outputParameterType();
+			String outputParameterId =
+				ddmDataProviderOutputParametersSettings.outputParameterId();
+			String outputParameterType =
+				ddmDataProviderOutputParametersSettings.outputParameterType();
 
 			NodeList nodeList = document.getElementsByTagName(
-				outputParameterSettings.outputParameterPath());
+				ddmDataProviderOutputParametersSettings.outputParameterPath());
 
-			if (Objects.equals(type, "list")) {
+			if (Objects.equals(outputParameterType, "list")) {
 				List<KeyValuePair> keyValuePairs = new ArrayList<>();
 
 				for (int i = 0; i < nodeList.getLength(); i++) {
 					Node node = nodeList.item(i);
 
-					String nodeTextContent = node.getTextContent();
-
 					keyValuePairs.add(
-						new KeyValuePair(nodeTextContent, nodeTextContent));
+						new KeyValuePair(
+							node.getTextContent(), node.getTextContent()));
 				}
 
-				builder = builder.withOutput(id, keyValuePairs);
+				builder.withOutput(outputParameterId, keyValuePairs);
 			}
-			else if (Objects.equals(type, "number")) {
+			else if (Objects.equals(outputParameterType, "number")) {
 				Node node = nodeList.item(0);
 
 				NumberFormat numberFormat = NumberFormat.getInstance();
 
-				builder = builder.withOutput(
-					id, numberFormat.parse(node.getTextContent()));
+				builder.withOutput(
+					outputParameterId,
+					numberFormat.parse(node.getTextContent()));
 			}
-			else if (Objects.equals(type, "text")) {
+			else if (Objects.equals(outputParameterType, "text")) {
 				Node node = nodeList.item(0);
 
-				String nodeTextContent = node.getTextContent();
-
-				builder = builder.withOutput(id, nodeTextContent);
+				builder.withOutput(outputParameterId, node.getTextContent());
 			}
 		}
 
 		return builder.build();
 	}
 
-	private Optional<DDMDataProviderInstance> _fetchDDMDataProviderInstance(
+	private DDMDataProviderInstance _getDDMDataProviderInstance(
 			String ddmDataProviderInstanceId)
 		throws Exception {
 
@@ -149,15 +129,26 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 			_ddmDataProviderInstanceService.fetchDataProviderInstanceByUuid(
 				ddmDataProviderInstanceId);
 
-		if ((ddmDataProviderInstance == null) &&
-			Validator.isNumber(ddmDataProviderInstanceId)) {
-
-			ddmDataProviderInstance =
-				_ddmDataProviderInstanceService.fetchDataProviderInstance(
-					Long.valueOf(ddmDataProviderInstanceId));
+		if (ddmDataProviderInstance != null) {
+			return ddmDataProviderInstance;
 		}
 
-		return Optional.ofNullable(ddmDataProviderInstance);
+		if (Validator.isNumber(ddmDataProviderInstanceId)) {
+			return _ddmDataProviderInstanceService.fetchDataProviderInstance(
+				GetterUtil.getLong(ddmDataProviderInstanceId));
+		}
+
+		return null;
+	}
+
+	private Document _toDocument(String xml) throws Exception {
+		DocumentBuilderFactory documentBuilderFactory =
+			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
+
+		DocumentBuilder documentBuilder =
+			documentBuilderFactory.newDocumentBuilder();
+
+		return documentBuilder.parse(new InputSource(new StringReader(xml)));
 	}
 
 	@Reference
