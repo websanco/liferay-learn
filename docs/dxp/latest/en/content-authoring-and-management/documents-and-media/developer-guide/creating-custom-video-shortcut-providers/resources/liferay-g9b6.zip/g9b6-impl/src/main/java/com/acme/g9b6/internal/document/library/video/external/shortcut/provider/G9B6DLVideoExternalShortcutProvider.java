@@ -1,4 +1,4 @@
-package com.acme.g9b6.document.library.internal.video.external.shortcut.provider;
+package com.acme.g9b6.internal.document.library.video.external.shortcut.provider;
 
 import com.liferay.document.library.video.external.shortcut.DLVideoExternalShortcut;
 import com.liferay.document.library.video.external.shortcut.provider.DLVideoExternalShortcutProvider;
@@ -17,7 +17,7 @@ public class G9B6DLVideoExternalShortcutProvider
 
 	@Override
 	public DLVideoExternalShortcut getDLVideoExternalShortcut(String url) {
-		Matcher matcher = _urlPattern.matcher(url);
+		Matcher matcher = _pattern.matcher(url);
 
 		if (!matcher.matches()) {
 			return null;
@@ -45,7 +45,7 @@ public class G9B6DLVideoExternalShortcutProvider
 		};
 	}
 
-	private static final Pattern _urlPattern = Pattern.compile(
+	private static final Pattern _pattern = Pattern.compile(
 		"https?:\\/\\/(?:www\\.)?dai\\.ly\\/(\\S*)$");
 
 }
