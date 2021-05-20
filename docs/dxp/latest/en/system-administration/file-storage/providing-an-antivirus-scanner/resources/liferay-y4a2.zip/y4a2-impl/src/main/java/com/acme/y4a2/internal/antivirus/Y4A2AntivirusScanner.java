@@ -1,4 +1,4 @@
-package com.acme.antivirus.y4a2.scanner.internal;
+package com.acme.y4a2.internal.antivirus;
 
 import com.liferay.document.library.kernel.antivirus.AntivirusScanner;
 import com.liferay.document.library.kernel.antivirus.AntivirusScannerException;
