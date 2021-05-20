@@ -68,12 +68,12 @@ function configure_env {
 
 	check_utils 7z pip3
 
+	pip install pipenv
+
+	pipenv install
+
 	if [ "${1}" == "prod" ]
 	then
-		pip install pipenv --force-reinstall
-
-		pipenv install
-
 		nodeenv -p --node=15.14.0
 
 		activate_venv
