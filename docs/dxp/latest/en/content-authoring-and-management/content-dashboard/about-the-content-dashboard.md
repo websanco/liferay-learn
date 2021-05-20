@@ -20,15 +20,15 @@ The Content Dashboard shows information based on the Categories you assign to co
 
 To access the Content Dashboard, click on the Global Menu and, under the *Content* area, click *Content Dashboard*.
 
-![Open the Content Dashboard from the Global Menu](./about-the-content-dashboard/images/02.png)
+![Open the Content Dashboard from the Global Menu.](./about-the-content-dashboard/images/02.png)
 
 ```note::
    If the Global Menu is disabled, open the Product Menu and, under the *Site* Menu, go to *Content* → *Content Dashboard*.
 ```
 
-You can see different areas in the Content Dashboard page.
+You can see different areas on the Content Dashboard page.
 
-![Components of the Content Dashboard Interface](./about-the-content-dashboard/images/01.png)
+![Components of the Content Dashboard Interface.](./about-the-content-dashboard/images/01.png)
 
 The [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool) (1) is the graphical area at the top of the page. It shows metrics for the Vocabularies and Categories you define in Liferay. You can include and combine your global Vocabularies here, and filter the Categories to analyze your data in different ways.
 
