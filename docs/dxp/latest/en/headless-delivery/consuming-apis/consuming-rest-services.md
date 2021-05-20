@@ -56,7 +56,7 @@ The Site ID appears at the top of the Details section. It's an Integer, like `20
 
 Now you have everything you need to make the call. All web services must be accessed using credentials that have access to the data you're requesting. The simplest way is to use Basic Auth, which passes credential data in the URL. Since this is insecure, you should only use this method during development. For production, your application should authorize users via [OAuth2](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 
-The examples below use [curl](https://curl.haxx.se).
+The examples below use [cURL](https://curl.haxx.se).
 
 ### Calling a Service Using Basic Auth (During Development Only)
 
