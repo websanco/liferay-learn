@@ -1,8 +1,8 @@
 # Document API Basics
 
-Liferay's headless delivery application provides REST services for [Documents and Media](../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using curl commands and Java classes.
+Liferay's headless delivery application provides REST services for [Documents and Media](../sharing-documents-and-media.md) that add documents and folders, list their information, modify them, delete them and more. Here you'll call those services using cURL commands and Java classes.
 
-Start with uploading documents using an example curl command and Java class.
+Start with uploading documents using an example cURL command and Java class.
 
 ## Post a Document
 
@@ -32,7 +32,7 @@ Start with uploading documents using an example curl command and Java class.
     unzip liferay-g9i6.zip
     ```
 
-Use a curl script to upload a file to [Documents and Media](../sharing-documents-and-media.md). 
+Use a cURL script to upload a file to [Documents and Media](../sharing-documents-and-media.md). 
 
 1. On the command line, navigate to the `curl` folder.
 
@@ -95,11 +95,11 @@ The class uploads its source file `Document_POST_ToSite.java` to Documents and M
 
 ![The Java class uploaded the Java source file.](./document-api-basics/images/02.png)
 
-Read on to see how the curl command and Java class work. 
+Read on to see how the cURL command and Java class work. 
 
 ## Examine the cURL Command
 
-The `Document_POST_ToSite.sh` script uploads a file by calling a `headless-delivery` application REST service with curl.
+The `Document_POST_ToSite.sh` script uploads a file by calling a `headless-delivery` application REST service with cURL.
 
 ```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
    :language: bash
@@ -119,7 +119,7 @@ Here are the command's arguments:
    Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
 ```
 
-Other curl commands for the `Document` and `DocumentFolder` REST services use similar arguments.
+Other cURL commands for the `Document` and `DocumentFolder` REST services use similar arguments.
 
 Next, you'll see how similar the Java call is.
 
@@ -155,7 +155,7 @@ Below are examples of calling other `Document` REST services using cURL and Java
 
 ## Get Site Documents
 
-You can list a site's documents by executing the following curl or Java command. As above, replace `1234` with your site's ID.
+You can list a site's documents by executing the following cURL or Java command. As above, replace `1234` with your site's ID.
 
 ### Documents_GET_FromSite.sh
 
@@ -191,7 +191,7 @@ The site's `Document` objects are listed in JSON.
 
 ## Get a Document
 
-You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
+You can get a `Document`'s fields by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
 ```tip:: 
    Use ``Documents_GET_FromSite.[java|sh]`` to get site ``Document`` IDs.
@@ -231,7 +231,7 @@ The `Document` fields are listed in JSON.
 
 ## Get Document Content
 
-`Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
+`Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_GET_ById_ContentValue.sh
 
@@ -263,7 +263,7 @@ The routines following the service invocation process the encoded content. The `
 
 ### Document_GET_ById_ContentValue.java
 
-The Java code to get `Document` content and decode it is simpler than the previous curl command.
+The Java code to get `Document` content and decode it is simpler than the previous cURL command.
 
 Command:
 
@@ -295,7 +295,7 @@ Base64.Decoder decoder = Base64.getDecoder();
 
 ## Patch a Document
 
-`Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
+`Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_PATCH_ById.sh
 
@@ -333,11 +333,11 @@ The Java code above calls `DocumentResource`'s `patchDocument` method, passing i
 
 The above commands update the `Document`'s description to "Bar".
 
-![The curl command changed the document's description.](./document-api-basics/images/03.png)
+![The cURL command changed the document's description.](./document-api-basics/images/03.png)
 
 ## Put a Document
 
-`Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
+`Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_PUT_ById.sh
 
@@ -373,17 +373,17 @@ Code:
 
 The Java code above calls `DocumentResource`'s `putDocument` method, passing in the `Document`'s ID, a `Document` object that includes values for the `Document`'s `description` and `title` fields, and a replacement file to upload.
 
-The above curl and Java commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
+The above cURL and Java commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
 
 ```warning::
    Unless you want to use the current ``Document``'s title, make sure to specify the ``title`` value you want for the replacement ``Document``.
 ```
 
-![The curl command replaced the document.](./document-api-basics/images/04.png)
+![The cURL command replaced the document.](./document-api-basics/images/04.png)
 
 ## Delete a Document
 
-You can delete a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
+You can delete a `Document` by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
 ### Document_DELETE_ById.sh
 
@@ -419,7 +419,7 @@ The `Document`s are removed from Documents and Media.
 
 ## More Document and Document Folder Services
 
-The following curl commands and Java classes demonstrate more `Document` services and `DocumentFolder` services.
+The following cURL commands and Java classes demonstrate more `Document` services and `DocumentFolder` services.
 
 | Files | Description |
 | :---- | :---------- |
