@@ -116,7 +116,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials. |
 
 ```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth 2.0 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
 ```
 
 Other cURL commands for the `Document` and `DocumentFolder` REST services use similar arguments.
@@ -373,7 +373,7 @@ Code:
 
 The Java code above calls `DocumentResource`'s `putDocument` method, passing in the `Document`'s ID, a `Document` object that includes values for the `Document`'s `description` and `title` fields, and a replacement file to upload.
 
-The above cURL and Java commands replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
+The above cURL command and Java class replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
 
 ```warning::
    Unless you want to use the current ``Document``'s title, make sure to specify the ``title`` value you want for the replacement ``Document``.
