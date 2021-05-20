@@ -1,8 +1,8 @@
 # Setting and Accessing Configurations
 
-Liferay's configuration interface provides a simple method to add a configuration UI to your application. 
+Liferay's configuration framework can be used to add a settings UI for a MVC Portlet.
 
-## See the Sample Project for a MVC Portlet
+## See the Example Portlet
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
@@ -40,73 +40,90 @@ Liferay's configuration interface provides a simple method to add a configuratio
 
     ![Add the E3Q3 Portlet to a page.](./setting-and-accessing-configurations/images/01.png)
 
-    You should see a welcome message along with the 3 attributes that can be configured: font color, font family, and font size.
+    The UI shows a welcome message along with the 3 attributes that are configurable: font color, font family, and font size.
 
 1. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under *Platform* click *Third Party*. Click the name of the sample application on the left.
 
     ![Click the name of the application in the Third Party list.](./setting-and-accessing-configurations/images/02.png)
 
-    Try a different font color, font family, and font size. Click the *Update* button and go back to your page with the published widget. Verify that the attributes have changed.
+    Try inputting a different font color, font family, and font size. Click the *Update* button and go back to your page with the published widget. Verify that the attributes have changed.
 
-Now let's see how the configuration interface works.
+Now let's see how the configuration framework works.
 
 ## Creating the Configuration Interface
 
-Creating a configuration interface adds a UI in settings. It also defines the attributes that are configurable.
+Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). It also defines the attributes that are configurable.
 
-In the sample project, the E3Q3WebConfiguration.java file is the configuration interface. 
+In the sample project, the `E3Q3WebConfiguration.java` file is the configuration interface. 
 
-```java
-@Meta.OCD(id = "com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration")
-public interface E3Q3WebConfiguration {
-
-	@Meta.AD(deflt = "blue", required = false)
-	public String fontColor();
-
-	@Meta.AD(deflt = "serif", required = false)
-	public String fontFamily();
-
-	@Meta.AD(deflt = "16", required = false)
-	public int fontSize();
-
-}
+```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/configuration/E3Q3WebConfiguration.java
+   :language: java
+   :lines: 5-17
 ```
 
-For this interface there is no scope defined so the configuration scope is automatically set to `SYSTEM`.
+Note, for this interface there is no scope defined so the configuration scope is automatically set to `SYSTEM`.
 
 The interface has three attributes that are configurable: font color, font family, and font size. Note that color and family are type `string` and size is type `int`.
 
-`Meta.OCD` registers this class as a configuration with a specific id. Note that the id must be the fully qualified configuration class name.
+`Meta.OCD` registers this class as a configuration with a specific id. 
+
+```important::
+    Note that the id must be the fully qualified class name (FQCN) of the configuration interface.
+```
 
 `Meta.AD` specifies [optional metadata](http://bnd.bndtools.org/chapters/210-metatype.html) about the attribute such as a default value or whether the attribute is a required field. Note that if an attribute value is required but a default is not set, an administrator must set a value in settings for the application to work properly.
 
-### Categorizing the Configuration
+Next, see how the configuration is read by the MVC Portlet.
 
-By default, the configuration UI for your app is generated in *System Settings* &rarr; *Platform* &rarr; *Third Party*. The categorization of the UI can be easily changed.
+## Reading the Configuration from the Application
 
-All available categories are nested beneath these sections:
+1. In the `@Component` annotation, the configuration interface class is specified with the `configurationPid`:
 
-* Commerce
-* Platform
-* Security
-* Content and Data
-* Other
+    ```java
+    configurationPid = "com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration"
+    ```
 
-Specify the category for your UI by placing an `@ExtendedObjectClassDefinition` annotation in your configuration interface. For example, if you wanted to place the UI under blogs, add the following line above the `@Meta.OCD` annotation:
+1. The `activate()` method has an `@Activate` annotation that is used to invoke the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
 
-```java
-@ExtendedObjectClassDefinition(category = "blogs")
-```
+    ```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
+        :language: java
+        :lines: 44-51
+    ```
 
-The fully qualified class name of `@ExtendedObjectClassDefinition` class is `com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition`.
+    The `activate()` method calls the `ConfigurableUtil.createConfigurable()` method to convert a map of the configuration's attributes to a typed class. The configuration is stored in a private field. Now this field can be used to retrieve configuration values or set values.
 
-Redeploy the example module and the configuration UI is now located in *System Settings* &rarr; *Content and Data* &rarr; *Blogs*.
+1. A configuration object is added to the request object so its values can be read from a JSP. 
 
-### Implement a Dropdown Selection UI
+    ```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
+        :language: java
+        :lines: 33-42
+    ``` 
 
-The sample project has 3 attributes that can be configured. An administrator must input values for each attribute. The UI can be further customized to present a dropdown list instead of a text input field.
+    The configuration can now be read from the request of the application's JSP.
 
-For example, a dropdown list can be used for the font family attribute. Replace the `@Meta.AD` annotation with the following:
+## Accessing the Configuration from a JSP
+
+1. The configuration interface is added to the JSP with the following import statement:
+
+    ```markup
+    <%@ page import="com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration" %>
+    ```
+
+1. The configuration object from the request object is obtained and the configuration values are read.
+
+    ```markup
+    <%
+    E3Q3WebConfiguration e3q3WebConfiguration = (E3Q3WebConfiguration)request.getAttribute(E3Q3WebConfiguration.class.getName());
+    %>
+    ```
+
+1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` are now available to be used in the JSP. 
+
+## Implementing a Dropdown Selection UI
+
+The sample project has 3 attributes that can be configured. Currently the attributes must be manually inputted into a text input field but this can be further customized.
+
+For example, a dropdown list can be used for the font family attribute instead of an input field. Replace the `@Meta.AD` annotation with the following:
 
 ```java
 @Meta.AD(
@@ -121,62 +138,6 @@ Redeploy the example module.
 
 Now the font family attribute is a dropdown selection.
 
-## Reading the Configuration from the Application
+## Further Customization
 
-Next we'll see how the configuration is read by the MVC Portlet.
-
-1. In the `@Component` annotation, specify the configuration interface class name with `configurationPid`:
-
-    ```java
-    configurationPid = "com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration"
-    ```
-
-1. The `activate()` method has an `@Activate` annotation that is used to invoke the method as soon as the app is started. The `@Modified` annotation is invoked whenever the configuration is modified.
-
-    ```java
-    @Activate
-	@Modified
-	protected void activate(Map<Object, Object> properties) {
-		_e3q3WebConfiguration = ConfigurableUtil.createConfigurable(
-			E3Q3WebConfiguration.class, properties);
-	}
-
-	private E3Q3WebConfiguration _e3q3WebConfiguration;
-    ```
-
-    The `activate()` method calls the `ConfigurableUtil.createConfigurable()` method to convert a map of the configuration's attributes to a typed class. The configuration is stored in a private field. Now this field can be used to retrieve configuration values or set values.
-
-1. A configuration object is added to the request object so its values can be read from a JSP. 
-
-    ```java
-    @Override
-	public void render(
-			RenderRequest renderRequest, RenderResponse renderResponse)
-		throws IOException, PortletException {
-
-		renderRequest.setAttribute(
-			E3Q3WebConfiguration.class.getName(), _e3q3WebConfiguration);
-
-		super.render(renderRequest, renderResponse);
-	}    
-    ```
-
-    The configuration can now be read from the request by the application's JSP.
-
-## Accessing the Configuration from a JSP
-
-1. Add the import for the configuration interface.
-
-    ```markup
-    <%@ page import="com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration" %>
-    ```
-
-1. Obtain the configuration object from the request object and read the configuration values.
-
-    ```markup
-    <%
-    E3Q3WebConfiguration e3q3WebConfiguration = (E3Q3WebConfiguration)request.getAttribute(E3Q3WebConfiguration.class.getName());
-    %>
-    ```
-
-1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` are now available to use in the JSP. 
+* [Categorizing a Configuration](./categorizing-a-configuration.md)
