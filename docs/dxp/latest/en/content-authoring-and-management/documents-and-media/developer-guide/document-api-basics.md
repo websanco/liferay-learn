@@ -4,7 +4,7 @@ Liferay's headless delivery application provides REST services for [Documents an
 
 Start with uploading documents using an example curl command and Java class.
 
-## Uploading Documents
+## Post a Document
 
 1.  Start the Liferay Docker image:
 
@@ -97,7 +97,7 @@ The class uploads its source file `Document_POST_ToSite.java` to Documents and M
 
 Read on to see how the curl command and Java class work. 
 
-## Examine the CURL Command
+## Examine the cURL Command
 
 The `Document_POST_ToSite.sh` script uploads a file by calling a `headless-delivery` application REST service with curl.
 
@@ -123,7 +123,7 @@ Other curl commands for the `Document` and `DocumentFolder` REST services use si
 
 Next, you'll see how similar the Java call is.
 
-## Examine the Java Service Call
+## Examine the Java Class
 
 The `Document_POST_ToSite.java` class uploads a file by calling a `headless-delivery` application REST service.
 
@@ -153,7 +153,7 @@ The other example Java classes are similar to this one, but call different `Docu
 
 Below are examples of calling other `Document` REST services using cURL and Java.
 
-## Listing Site Documents
+## Get Site Documents
 
 You can list a site's documents by executing the following curl or Java command. As above, replace `1234` with your site's ID.
 
@@ -189,7 +189,7 @@ Code:
 
 The site's `Document` objects are listed in JSON.
 
-## Getting Document Fields
+## Get a Document
 
 You can get a `Document`'s fields by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -229,7 +229,7 @@ Code:
 
 The `Document` fields are listed in JSON.
 
-## Getting Document Content
+## Get Document Content
 
 `Document` content is encoded in Base64 and embedded in the `Document`'s `nestedFields`. You can get the content by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -293,7 +293,7 @@ After getting the `Document` by its ID, a `Base64.Decoder` decodes the `Document
 Base64.Decoder decoder = Base64.getDecoder();
 ```
 
-## Updating a Document
+## Patch a Document
 
 `Document`'s PATCH services update a `Document` and its fields. You can update a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -335,7 +335,7 @@ The above commands update the `Document`'s description to "Bar".
 
 ![The curl command changed the document's description.](./document-api-basics/images/03.png)
 
-## Replacing a Document
+## Put a Document
 
 `Document`'s PUT services replace the `Document` and its fields entirely. You can replace a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
@@ -381,7 +381,7 @@ The above curl and Java commands replace `Document` instances with completely ne
 
 ![The curl command replaced the document.](./document-api-basics/images/04.png)
 
-## Deleting a Document
+## Delete a Document
 
 You can delete a `Document` by executing the following curl or Java command. Replace `1234` with the `Document`'s ID.
 
