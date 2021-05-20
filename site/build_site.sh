@@ -28,21 +28,14 @@ function check_args {
 		return
 	fi
 
-	#if [[ ${#} -eq 1 ]]
-	#then
-	#	if [ "${1}" != "prod" ]
-	#	then
-	#		echo "Invalid Argument: Pass no arguments to build for dev, or pass \"prod\" to build for production."
-
-	#		exit 1
-	#	fi
-	#fi
-
-	if [[ ${#} -gt 1 ]]
+	if [[ ${#} -ge 1 ]]
 	then
-		echo "Too Many Arguments: Pass no arguments to build for dev, or pass \"prod\" to build for production."
+		if [[ "${1}" != "prod" ]] && [[ "${1}" != *".md" ]] || [[ ${#} -gt 1 ]]
+		then
+			echo "Invalid Arguments: Pass no arguments to build for dev. Pass \"prod\" to build for production. Pass the file name of a markdown article to build a single-article preview."
 
-		exit 1
+			exit 1
+		fi
 	fi
 }
 
