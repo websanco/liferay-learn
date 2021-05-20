@@ -11,19 +11,19 @@ Workspace Data
 
 In settings view, and manage the data sources that sync with Analytics Cloud. Click the settings link at the bottom left of the UI.
 
-Manage API access by creating or revoking access tokens in the `APIs`_ settings section.
+Manage API access by creating or revoking access tokens. 
 
 .. _`APIs`: ./workspace-data/managing-api-access.md
 
-Manage how data is modeled and defined for individuals, search, and interests in the `Definitions`_ settings section.
+Manage how data is modeled and defined for individuals, search, and interests. 
 
 .. _`Definitions`: ./workspace-data/definitions.md
 
-Manage the data and privacy of individuals in the `Data Control and Privacy`_ settings section.
+Manage the data and privacy of individuals. 
 
 .. _`Data Control and Privacy`: ./workspace-data/data-control-and-privacy.md
 
-View and manage the different data sources that are connected to your workspace in the `Data Sources`_ settings section.
+View and manage the different data sources that are connected to your workspace. 
 
 .. _`Data Sources`: ./workspace-data/managing-data-sources.md
 
