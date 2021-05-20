@@ -10,7 +10,7 @@ Follow these steps to create your own video shortcut provider:
 
 1. [**`DLVideoExternalShortcutProvider`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-api/src/main/java/com/liferay/document/library/video/external/shortcut/provider/DLVideoExternalShortcutProvider.java): Implement the `DLVideoExternalShortcutProvider` interface.
 
-1. **Override the Interface's Method**: Override the interface's `getDLVideoExternalShortcut()` method. This method creates an instance of the [`DLVideoExternalShortcut`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-api/src/main/java/com/liferay/document/library/video/external/shortcut/DLVideoExternalShortcut.java) interface and receives a URL String from user. Ensure your implementation also has the following functionalities.
+1. **Override the Interface's Method**: Override the interface's `getDLVideoExternalShortcut()` method. This method creates an instance of the [`DLVideoExternalShortcut`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-api/src/main/java/com/liferay/document/library/video/external/shortcut/DLVideoExternalShortcut.java) interface and receives a URL String from the user. Ensure your implementation also has the following functionalities.
 
    * Check whether the received URL matches any defined URL patterns.
    * If the URL does not match any patterns, the program should return `null`. Liferay will then call any other available providers in search of a match.
@@ -28,7 +28,7 @@ The following tutorial uses a [sample external video shortcut provider](https://
 
 ## Deploying the Sample Video Provider
 
-Follow these steps to download, build, and deploy the sample Dispatch Task Executor to a new docker container:
+Follow these steps to download, build, and deploy the sample custom video shortcut provider to a new docker container:
 
 1. Start a new [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
@@ -46,7 +46,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    unzip liferay-g9b6.zip -d liferay-g9b6
    ```
 
-1. Run this `gradlew` command to build the JAR file and deploy it to your new Docker container:
+1. Run the `gradlew deploy` command to build the JAR file and deploy it to your new Docker container:
 
    ```bash
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
@@ -61,7 +61,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    STARTED com.acme.G9B6.impl-1.0.0 [1356]
    ```
 
-1. Verify the module is working by creating a new external video shortcut<!--TASK: add link once article is merged--> with a short Dailymotion URL (e.g., https://dai.ly/x7yzqjx).
+1. Verify the module is working by creating a new external video shortcut<!--TASK: add link once article is merged--> with a short Dailymotion URL (e.g., https://dai.ly/x7szh28).
 
    If successful, Liferay should recognize Dailymotion as a supported platform.
 
@@ -69,49 +69,10 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
 
 ## Code for the Sample Video Provider
 
-```java
-@Component(service = DLVideoExternalShortcutProvider.class)
-public class G9B6DLVideoExternalShortcutProvider
-    implements DLVideoExternalShortcutProvider {
-
-    @Override
-    public DLVideoExternalShortcut getDLVideoExternalShortcut(String url) {
-        String dailymotionVideoId;
-        Pattern urlPattern = Pattern.compile(
-            "https?:\\/\\/(?:www\\.)?dai\\.ly\\/(\\S*)$");
-            Matcher matcher = urlPattern.matcher(url);
-
-        if (matcher.matches()) {
-            dailymotionVideoId = matcher.group(1);
-        } else {
-            dailymotionVideoId = null;
-        }
-
-        if (Validator.isNull(dailymotionVideoId)) {
-            return null;
-        }
-
-        return new DLVideoExternalShortcut() {
-
-            @Override
-            public String getURL() {
-                return url;
-            }
-
-            @Override
-            public String renderHTML(HttpServletRequest httpServletRequest) {
-                String iframeSrc =
-                    "https://www.dailymotion.com/embed/video/" + dailymotionVideoId +
-                        "?rel=0";
-
-                return StringBundler.concat(
-                    "<iframe allow=\"autoplay; encrypted-media\" ",
-                    "allowfullscreen height=\"315\" frameborder=\"0\" ",
-                    "src=\"", iframeSrc, "\" width=\"560\"></iframe>");
-            }
-        };
-    }
-}
+```literalinclude:: ./creating-custom-video-shortcut-providers/resources/liferay-g9b6.zip/g9b6-impl/src/main/java/com/acme/g9b6/internal/document/library/video/external/shortcut/provider/G9B6DLVideoExternalShortcutProvider.java
+   :dedent: 1
+   :language: java
+   :lines: 14-51
 ```
 
 ### OSGi Component Annotation
@@ -120,26 +81,18 @@ The provider is declared a component within the OSGi framework and identified as
 
 ### `DLVideoExternalShortcutProvider` Implementation
 
-The provider implements the `DLVideoExternalShortcutProvider`, which includes a single method that returns a `DLVideoExternalShortcut` if a valid URL is received:
-
-```java
-public interface DLVideoExternalShortcutProvider {
-	public DLVideoExternalShortcut getDLVideoExternalShortcut(String url);
-}
-```
+The provider implements the `DLVideoExternalShortcutProvider` interface. This interface includes a single method, `getDLVideoExternalShortcut`, which returns a `DLVideoExternalShortcut` if a valid URL is received.
 
 ### Override `getDLVideoExternalShortcut`
 
-The provider overrides the interface's `getDLVideoExternalShortcut` method, which contains all of the provider's essential logic. First, it receives a URL from the user, and then checks whether the URL matches a defined regex pattern. If it does, then it is used for the `dailymotionVideoID` variable. Otherwise, it returns `null`, and Liferay will call any other available providers in search of a match.
+The provider overrides the interface's `getDLVideoExternalShortcut` method, which contains all of the provider's essential logic. First, it receives a URL from the user, and then checks whether it matches the defined regex pattern. If no match is found, then it returns `null`, and Liferay proceeds to call other available providers in search of a match. However, if it does match, then it returns a new `DLVideoExternalShortcut` object for embedding the video into the Liferay Page or asset.
 
-When the URL matches a defined pattern, returns a new `DLVideoExternalShortcut` object for embedding the video into the Liferay Page or asset.
+### Overrides `DLVideoExternalShortcut`'s Methods
 
-## Overrides `DLVideoExternalShortcut`'s Methods
-
-The `DLVideoExternalShortcut` returned by the provider overrides the `getURL()` and `renderHTML()` methods, and uses the default `null` value for the `getDescription()`, `getThumbnailURL()`, and `getTitle()` methods.
-
-First, the `getURL()` returns the URL entered by the user. Then, the `renderHTML()` receives a `HttpServletRequest` parameter and returns an `iframe` string thats used with a `div` expression to embed the video into a Liferay Page or asset.
+When the provider returns a `DLVideoExternalShortcut` object, it overrides the object's `getURL()` and `renderHTML()` methods. First, `getURL()` returns the URL entered by the user. Then, `renderHTML()` receives a `HttpServletRequest` parameter and returns an `iframe` string that's used with a `div` expression to embed the video into a Liferay Page or asset. Consider the following example.
 
 ```html
 <div class="embed-responsive embed-responsive-16by9" data-embed-id="https://www.dailymotion.com/embed/video/x7szh28" data-styles="{&quot;width&quot;:&quot;59%&quot;}" style="width:59%"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.dailymotion.com/embed/video/x7szh28" width="560"></iframe></div>
 ```
+
+By not overriding the `getDescription()`, `getThumbnailURL()`, and `getTitle()` methods, it uses their default `null` values.
