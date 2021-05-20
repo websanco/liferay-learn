@@ -24,7 +24,7 @@ Import the `@ExtendedObjectClassDefinition` class with:
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition
 ```
 
-Redeploy your application and the configuration UI will not be located under *Content and Data* &rarr; *Blogs*.
+Redeploy your application and the configuration UI will now be located under *Content and Data* &rarr; *Blogs*.
 
 ## Creating New Sections and Categories
 
@@ -73,7 +73,7 @@ category.foobar=Foobar
 category-section.foobar=Foobar
 ```
 
-Redeploy the application to see the new settings section and category.
+Redeploy the application to see the change.
 
 ![The configuration UI is now in the custom category](./categorizing-a-configuration/images/01.png)
 
