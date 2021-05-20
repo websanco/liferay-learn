@@ -28,15 +28,15 @@ function check_args {
 		return
 	fi
 
-	if [[ ${#} -eq 1 ]]
-	then
-		if [ "${1}" != "prod" ]
-		then
-			echo "Invalid Argument: Pass no arguments to build for dev, or pass \"prod\" to build for production."
+	#if [[ ${#} -eq 1 ]]
+	#then
+	#	if [ "${1}" != "prod" ]
+	#	then
+	#		echo "Invalid Argument: Pass no arguments to build for dev, or pass \"prod\" to build for production."
 
-			exit 1
-		fi
-	fi
+	#		exit 1
+	#	fi
+	#fi
 
 	if [[ ${#} -gt 1 ]]
 	then
@@ -68,12 +68,12 @@ function configure_env {
 
 	check_utils 7z pip3
 
-	pip install pipenv --force-reinstall
-
-	pipenv install
-
 	if [ "${1}" == "prod" ]
 	then
+		pip install pipenv --force-reinstall
+
+		pipenv install
+
 		nodeenv -p --node=15.14.0
 
 		activate_venv
@@ -100,15 +100,33 @@ function generate_sphinx_input {
 	do
 		local product_version_language_dir_name=$(get_product_version_language_dir_name)
 
-		mkdir -p build/input/"${product_version_language_dir_name}"/docs
+		mkdir -p build/input/"${product_version_language_dir_name}"
 
 		local product_version_english_dir_name=$(get_product_version_language_dir_name | sed 's@/[^/]*$@/en@')
 
-		rsync -a --exclude '*.md' --exclude '*.rst' --ignore-existing ../docs/"${product_version_english_dir_name}"/* build/input/"${product_version_language_dir_name}"/
-
 		cp -R docs/* build/input/"${product_version_language_dir_name}"
 
-		cp -R ../docs/"${product_version_language_dir_name}"/* build/input/"${product_version_language_dir_name}"
+		if [[ "${1}" == *".md" ]]
+		then
+			pushd ../docs
+
+			for article_path in $(find "${product_version_language_dir_name}" -name "${1}")
+			do
+				rsync -a "${product_version_language_dir_name}"/*.* ../site/build/input/"${product_version_language_dir_name}"
+
+				mkdir -p ../site/build/input/$(dirname "${article_path}")
+
+				cp ${article_path} ../site/build/input/$(dirname "${article_path}")/
+
+				find "${product_version_english_dir_name}"/ -name $(basename ${article_path%.*}) -type d -exec rsync -a {} ../site/build/input/$(dirname "${article_path}")/ \;
+			done
+
+			pushd ../site
+		else
+			rsync -a --exclude '*.md' --exclude '*.rst' --ignore-existing ../docs/"${product_version_english_dir_name}"/* build/input/"${product_version_language_dir_name}"/
+
+			cp -R ../docs/"${product_version_language_dir_name}"/* build/input/"${product_version_language_dir_name}"
+		fi
 	done
 
 	rsync -a homepage/* build/input/homepage --exclude={'*.json','node_modules'}
