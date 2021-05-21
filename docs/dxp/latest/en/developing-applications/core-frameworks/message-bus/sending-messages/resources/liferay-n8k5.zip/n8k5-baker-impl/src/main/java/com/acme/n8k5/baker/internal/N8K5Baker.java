@@ -21,7 +21,7 @@ public class N8K5Baker {
 		Message message = new Message();
 
 		message.setPayload(
-			"Invoke N8K5Baker#activate(BundleContext) from " +
+			"Invoke N8K5Baker#_activate(BundleContext) from " +
 				bundle.getSymbolicName());
 
 		_messageBus.sendMessage(
