@@ -136,7 +136,7 @@ REST API client projects are similar to `liferay-learn` Java projects except the
 
     For example, here is the project path for the *Document API Basics* tutorial:
 
-    [`documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip)
+    [`documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip)
 
 1. In your `liferay-[xxxx].zip` folder, create a `curl` folder for curl commands and a `java` folder for Java client classes.
 
@@ -156,7 +156,7 @@ The curl command and Java command files should follow this naming format:
 [Resource(s)]_[ACTION]_[By|From|To][Something].[java|sh]
 ```
 
-Here are examples for the [DocumentFolder resources](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip/curl).
+Here are examples for the [DocumentFolder resources](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl).
 
 | Curl | Java | Description |
 | :--- | :--- | :---------- |
@@ -216,7 +216,7 @@ curl \
 | *\<tab\>* `-d "..." \` | The lower-case flags and their values are listed alphabetically. |
 | *\<tab\>* `-u "..."` | The last line has no backslash. |
 
-Remove non-essential options that you might get from the API Explorer curl commands. See the Document API Basics [curl commands](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/liferay-g9i6.zip/curl) for examples.
+Remove non-essential options that you might get from the API Explorer curl commands. See the Document API Basics [curl commands](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl) for examples.
 
 ## Developing Java Clients
 
@@ -293,7 +293,7 @@ You must make sure the user can compile and run your client classes from the com
 
 Your client's dependencies must be in your `java/` folder for you to test your clients and for packaging in the in the `liferay-[xxxx].zip` file at site build time. You'll set up your dependencies using a `liferay-[xxxx].zip/../resources/update_example.sh` script.
 
-Example [`update_example.sh`](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/api/document-api-basics/resources/update_example.sh):
+Example [`update_example.sh`](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/update_example.sh):
 
 ```bash
 #!/bin/bash
