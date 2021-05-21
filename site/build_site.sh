@@ -120,7 +120,9 @@ function generate_sphinx_input {
 
 				cp ${article_path} ../site/build/input/$(dirname "${article_path}")/
 
-				find "${product_version_english_dir_name}"/ -name $(basename ${article_path%.*}) -type d -exec rsync -a {} ../site/build/input/$(dirname "${article_path}")/ \;
+				en_article_dir=$(dirname $article_path | sed "s,$product_version_language_dir_name,$product_version_english_dir_name,g")
+
+				find "${en_article_dir}"/. -name $(basename ${article_path%.*}) -type d -exec rsync -a {} ../site/build/input/$(dirname "${article_path}")/ \;
 			done
 
 			pushd ../site
