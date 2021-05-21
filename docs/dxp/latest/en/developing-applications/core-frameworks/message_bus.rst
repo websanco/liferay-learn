@@ -6,4 +6,8 @@ Message Bus
 
    message-bus/listening-for-messages.md
 
--  :doc:`/developing-applications/core-frameworks/message-bus/listening-for-messages`
+.. raw:: html
+   :file: ../../landingpage_template.html
+
+.. raw:: html
+   :file: message-bus/landing.html
