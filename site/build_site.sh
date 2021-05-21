@@ -75,6 +75,15 @@ function configure_env {
 	fi
 }
 
+function echo_path {
+	if [[ "${1}" == *".md" ]]
+	then
+		echo "$(find build/output -name "${1%.*}".html)"
+	else
+		echo "$(find build/output -maxdepth 4 -mindepth 2 -name index.html)"
+	fi
+}
+
 function generate_sphinx_input {
 	rm -fr build
 
@@ -253,6 +262,8 @@ function main {
 	generate_static_html
 
 	upload_to_server
+
+	echo_path ${1}
 }
 
 function npm_install {
