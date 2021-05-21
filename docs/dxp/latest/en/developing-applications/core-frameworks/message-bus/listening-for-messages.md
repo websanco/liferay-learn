@@ -1,6 +1,6 @@
 # Listening for Messages
 
-You can listen for messages sent to any registered Message Bus destination. Destinations can be built-in to DXP/Portal, defined by third-parties, or created by you. Messages sent to the same destination typically have something in common, such as a similar event type or topic. Here you'll deploy a class that listens for messages received at a destination called `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`. Documents and Media sends a message to this destination after processing every uploaded PDF file.
+You can listen for messages sent to any registered Message Bus destination, whether it's built-in to DXP/Portal, defined by third-parties, or created by you. Messages sent to the same destination typically have something in common, such as a similar event type or topic. Here you'll deploy a class that listens for messages received at a destination called `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`. Documents and Media sends a message to this destination after processing every uploaded PDF file.
 
 ## Run the Example Message Listener
 
@@ -50,13 +50,13 @@ You can listen for messages sent to any registered Message Bus destination. Dest
 
 1. In the UI, [upload a PDF file](../../../content-authoring-and-management/documents-and-media/uploading-and-managing/uploading-files.md) to Documents and Media.
 
-After Documents and Media completes generating the PDF file preview, it sends a message to the destination that the example project's `MessageListener` is listening on. The Message Bus relays the message to all `MessageListener`'s that are registered with the destination. On receiving the relayed message, the project's `MessageListener` logs the message's payload and destination.
+After Documents and Media completes generating the PDF file preview, it sends a message to the destination where the example project's `MessageListener` is listening. The Message Bus relays the message to all `MessageListener`'s registered with the destination. On receiving the relayed message, the project's `MessageListener` logs the message's payload and destination.
 
 ```bash
 [liferay/document_library_pdf_processor-2][W3A4MessageListener:22] Received message payload [Ljava.lang.Object;@6df886c1 at destination liferay/document_library_pdf_processor
 ```
 
-Now see how it works.
+Here's how it works. 
 
 ## Determine the Destination
 
@@ -66,11 +66,11 @@ Message destinations are referenced by their names. APIs specify destination nam
 DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
-Search Liferay's `*DestinationNames` classes in the [source code](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) or search other APIs for the name of the destination you want to listen on. You'll specify the destination name in your message listener.
+Search Liferay's `*DestinationNames` classes in the [source code](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) or search other APIs for destinations to which you can add listeners. You'll specify the destination name in your message listener.
 
 ## Implement the `MessageListener` Interface
 
-In the class you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
+In the class where you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
 
 ```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :language: java
@@ -96,7 +96,7 @@ Use a `Component` annotation to register your class to listen for messages at th
    :lines: 11-15
 ```
 
-The above annotation, registers the class as a `MessageListener` service component for receiving messages at a destination named `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`.
+The above annotation registers the class as a `MessageListener` service component for receiving messages at a destination named `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`.
 
 Set your component's `destination.name` property value to your destination's name.
 
