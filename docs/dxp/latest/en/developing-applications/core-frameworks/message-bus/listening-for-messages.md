@@ -72,26 +72,17 @@ Search Liferay's `*DestinationNames` classes in the [source code](https://github
 
 In the class you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
 
-```java
-public class W3A4MessageListener implements MessageListener {
+```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+   :language: java
+   :lines: 15
 ```
 
 Override the `receive` method with logic for processing messages. Here's the example `receive` method implementation:
 
-```java
-@Override
-public void receive(Message message) {
-    if (_log.isInfoEnabled()) {
-        Object payload = message.getPayload();
-
-        _log.info(
-            "Received message payload " + payload.toString() +
-                " at destination " + message.getDestinationName());
-    }
-}
-
-private static final Log _log = LogFactoryUtil.getLog(
-    W3A4MessageListener.class);
+```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+   :dedent: 1
+   :language: java
+   :lines: 17-29
 ```
 
 The above implementation logs the message payload and destination name. See the [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) class for details on its other methods.
@@ -100,12 +91,9 @@ The above implementation logs the message payload and destination name. See the 
 
 Use a `Component` annotation to register your class to listen for messages at the desired destination. For example,
 
-```java
-@Component(
-	property = "destination.name=" + DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR,
-	service = MessageListener.class
-)
-public class W3A4MessageListener implements MessageListener {
+```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+   :language: java
+   :lines: 11-15
 ```
 
 The above annotation, registers the class as a `MessageListener` service component for receiving messages at a destination named `DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`.
@@ -116,4 +104,4 @@ When you deploy your project, the OSGi Runtime registers your `MessageListener` 
 
 ## Additional Information
 
-* [Message Bus](./message_bus.html)
+* [Message Bus](../message_bus.html)
