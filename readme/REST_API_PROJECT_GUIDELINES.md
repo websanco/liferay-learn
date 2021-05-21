@@ -9,7 +9,7 @@ Here are the things to consider as you're creating REST API client projects.
 * [Setting up a project](#setting-up-a-project)
 * [Client filename format](#client-filename-format)
 * [Opening access to a service](#opening-access-to-a-service)
-* [Developing curl commands](#developing-curl-commands)
+* [Developing cURL commands](#developing-cURL-commands)
 * [Developing Java clients](#developing-java-clients)
     * [Researching resource methods](#researching-resource-methods)
     * [Example: Posting a DocumentFolder](#example-posting-a-documentfolder)
@@ -78,9 +78,9 @@ The API Explorer is a UI for browsing Liferay REST APIs and trying them. Here's 
 
     ![Site DocumentFolders Response](./REST_API_PROJECT_GUIDELINES/images/site-document-folders-response.png)
 
-    The *Curl* field shows the curl command that was executed.
+    The *cURL* field shows the cURL command that was executed.
     
-    > **Note:** You can base your curl commands off of ones like these.
+    > **Note:** You can base your cURL commands off of ones like these.
 
     The service response *Response body* shows the site's DocumentFolder listing. In this example, the site has one DocumentFolder (i.e., `"totalCount": 1`) and the DocumentFolder's name is `Foo`  (i.e., `"name": "Foo"`).
 
@@ -138,7 +138,7 @@ REST API client projects are similar to `liferay-learn` Java projects except the
 
     [`documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip`](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip)
 
-1. In your `liferay-[xxxx].zip` folder, create a `curl` folder for curl commands and a `java` folder for Java client classes.
+1. In your `liferay-[xxxx].zip` folder, create a `curl` folder for cURL commands and a `java` folder for Java client classes.
 
 Here's the resulting project structure:
 
@@ -150,7 +150,7 @@ liferay-[xxxx].zip/
 
 ## Client Filename Format 
 
-The curl command and Java command files should follow this naming format:
+The cURL command and Java command files should follow this naming format:
 
 ```
 [Resource(s)]_[ACTION]_[By|From|To][Something].[java|sh]
@@ -158,7 +158,7 @@ The curl command and Java command files should follow this naming format:
 
 Here are examples for the [DocumentFolder resources](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl).
 
-| Curl | Java | Description |
+| cURL | Java | Description |
 | :--- | :--- | :---------- |
 | `DocumentFolder_POST_ToSite.sh` | `DocumentFolder_POST_ToSite.java` | Create the DocumentFolder in the site. |
 | `DocumentFolders_GET_FromSite.sh` | `DocumentFolders_GET_FromSite.java` | List a site's DocumentFolders. Note, the resource name is plural. |
@@ -180,11 +180,11 @@ In case the service is also tied to the session, sign in to Liferay with that us
 
 See [Consuming Rest Services](https://learn.liferay.com/dxp/latest/en/headless-delivery/consuming-apis/consuming-rest-services.html#make-the-service-call-using-credentials-with-access-to-the-data) for details on using credentials or see [Making Unauthenticated Requests](https://learn.liferay.com/dxp/latest/en/headless-delivery/consuming-apis/making-unauthenticated-requests.html).
 
-It's time to develop your REST commands. Start with curl commands.
+It's time to develop your REST commands. Start with cURL commands.
 
-## Developing Curl Commands 
+## Developing cURL Commands 
 
-The API Browser's *Try it out* feature is a great way to see the services in action and to gather information about curl commands. See the previous section [Exploring the API](#exploring-the-api) for details.
+The API Browser's *Try it out* feature is a great way to see the services in action and to gather information about cURL commands. See the previous section [Exploring the API](#exploring-the-api) for details.
 
 A good service type t    o try first is one that gives you a listing of resource instances for your site (or instances for some other scope). For example, this command lists DocumentFolder instances for a site that has the ID `20121`.
 
@@ -209,14 +209,14 @@ curl \
 
 | Line | Description |
 | :--- | :---------- |
-| `curl \` | The curl command has its own line. |
+| `curl \` | The cURL command has its own line. |
 | *\<tab\>* `-H "..." \` | The upper-case flags and their values are listed first alphabetically. |
 | *\<tab\>* `-X POST \` | The HTTP action has its own line. |
 | *\<tab\>* `"http://..." \` | The endpoint URL has its own line. |
 | *\<tab\>* `-d "..." \` | The lower-case flags and their values are listed alphabetically. |
 | *\<tab\>* `-u "..."` | The last line has no backslash. |
 
-Remove non-essential options that you might get from the API Explorer curl commands. See the Document API Basics [curl commands](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl) for examples.
+Remove non-essential options that you might get from the API Explorer cURL commands. See the Document API Basics [cURL commands](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl) for examples.
 
 ## Developing Java Clients
 
