@@ -4,27 +4,25 @@ With Liferay, you can use URLs and [video shortcuts](./creating-external-video-s
 
 ## Embedding Videos Into Assets
 
-Follow these steps to embed videos into supported Liferay assets:
-
-1. Navigate to the desired asset, and click on the *Video* button (![Video Button](../../../images/icon-video.png)).
+1. Navigate to the desired asset and click the *Video* button (![Video Button](../../../images/icon-video.png)).
 
    For Web Content, Knowledge Base, and Forms, this button is located in the toolbar.
 
-      ![Click on the Video button in the toolbar.](./embedding-videos-into-liferay-assets-and-pages/images/01.png)
+   ![Click on the Video button in the toolbar.](./embedding-videos-into-liferay-assets-and-pages/images/01.png)
 
-   For Blogs, click on the *Add* button (![Add Button](../../../images/icon-plus.png)) for the Content field to access the Video button.
+   For Blogs, click on the *Add* button (![Add Button](../../../images/icon-plus.png)) in the Content field to access the Video button.
 
-      ![Click the Add button to access the Video button.](./embedding-videos-into-liferay-assets-and-pages/images/02.png)
+   ![Click the Add button to access the Video button.](./embedding-videos-into-liferay-assets-and-pages/images/02.png)
 
-   Clicking on the Video button (![Video Button](../../../images/icon-video.png)) opens a modal window where you can either enter a video URL or select from video files and external video shortcuts in Documents and Media.
+   A window opens for entering a video URL or selecting video files and external video shortcuts in Documents and Media.
 
-1. (Video URL tab) To embed a video using a URL, click on the *Video URL* tab, enter a YouTube, Vimeo, Facebook, or Twitch link, and click on *Add*.
+1. (Video URL tab) To embed a video using a URL, click the *Video URL* tab, enter a YouTube, Vimeo, Facebook, or Twitch link, and click *Add*.
 
    Unlike external video shortcuts, videos embedded in this way are not saved in Documents and Media for later use.
 
-1. (Documents and Media tab) To embed a video using an external video shortcut, click on the *Documents and Media* tab, and select the desired video file or external video shortcut.
+1. (Documents and Media tab) To embed a video using an external video shortcut, click the *Documents and Media* tab and select the desired video file or external video shortcut.
 
-1. When finished, click on *Publish*.
+1. When finished, click *Publish*.
 
 ## Embedding Videos Into Pages
 
@@ -32,12 +30,15 @@ Liferay provides two out-of-the-box fragments specifically for embedding videos 
 
 **Video URL**: Use the Video URL fragment to display internal video files or external YouTube videos. Once a URL is added to the fragment, you can configure the following settings:
 
-* Autoplay: Determine whether the video plays automatically when the page is loaded.
-* Loop: Determine whether the video restarts once it's finished.
-* Mute: Determine whether the video is muted by default.
-* Hide Video Controls: Determine whether users can access video controls.
+   * **Autoplay:** Determine whether the video plays automatically when the page is loaded.
 
-**External Video**: Use the eternal video shortcut to embed YouTube, Vimeo, Facebook, and Twitch videos into a page. Adding a video opens a modal window where you can either enter a video URL or select from videos and external video shortcuts in Documents and Media.
+   * **Loop:** Determine whether the video restarts once it's finished.
+
+   * **Mute:** Determine whether the video is muted by default.
+
+   * **Hide Video Controls:** Determine whether users can access video controls.
+
+**External Video**: Use the eternal video shortcut to embed YouTube, Vimeo, Facebook, and Twitch videos into a page. Adding a video opens a window for entering a video URL or selecting videos and external video shortcuts in Documents and Media.
 
 ## Additional Information
 
