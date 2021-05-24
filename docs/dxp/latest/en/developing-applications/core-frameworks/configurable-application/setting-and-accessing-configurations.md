@@ -125,7 +125,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 The sample project has 3 attributes that can be configured. Currently the attributes must be manually inputted into a text input field but this can be further customized.
 
-For example, a dropdown list can be used for the font family attribute instead of an input field. Replace the `@Meta.AD` annotation with the following:
+For example, a dropdown list can be used for the font family attribute instead of an input field. In the project's configuration interface, replace the `@Meta.AD` annotation with the following:
 
 ```java
 @Meta.AD(
