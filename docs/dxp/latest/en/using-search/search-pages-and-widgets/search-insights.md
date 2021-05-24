@@ -3,7 +3,7 @@
 > **This feature is intended for testing and development only** \
 > **Works with Elasticsearch only**
 
-Add the Search Insights Widget to the Search Page to inspect two things: 
+The Search Insights Widget, when added to a Search Page, is for inspecting two things: 
 
 - The query string that's constructed by the back-end search code when the User enters a keyword
 
@@ -15,7 +15,7 @@ Add the Search Insights Widget to the Search Page to inspect two things:
 
 With the _Enable Score Explanation_ option (enabled by default), the Insights widget also prints a relevance score explanation for each returned result.
 
-When a search query is processed, results are returned. The concept of _Relevance_ determines how well results match the query. The Score explanation for returned search documents helps clarify seemingly odd results, letting you adjust the relevancy scoring process by making matches in certain fields count for more (_boosting_ the fields is the term for this).
+When Elasticsearch processes a search query, it returns results. The concept of _Relevance_ determines how well results match the query. The Score explanation for returned search documents helps clarify seemingly odd results, letting you adjust the relevancy scoring process by _boosting_ results---making matches in certain fields count for more.
 
 ## Inspecting The Search Query String
 
@@ -25,7 +25,7 @@ To see the Search Insights widget in action, navigate to a Search Page in your t
 
 Once you search for keywords that return Search Results, the Search Insights portlet displays the returned query string in all its glory. 
 
-![The full query string isn't for the faint of heart. This example is clipped to spare the reader.](./search-insights/images/search-insights-test-search.png)
+![The full query string isn't for the faint of heart. This example is clipped to spare the reader.](./search-insights/images/02.png)
 
 ## Explaining Search Results
 
@@ -33,9 +33,9 @@ To enable or disable the Explain option,
 
 1. Open the Search Insight widget's Configuration screen.
 
-1. There's just one option: Enable Score Explanation.  It's a boolean field that's enabled by default.  De-select it to disable the explanation of each result's relevance score.
+1. There's just one boolean field enabled by default: Enable Score Explanation. De-select it to disable the explanation of each result's relevance score.
 
-Under the hood, the Explain option in the Search Insights widget is exposing an Elasticsearch API: [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/search-explain.html).  See the Elasticsearch documentation for more details.
+Under the hood, the Explain option in the Search Insights widget exposes an Elasticsearch API: [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/search-explain.html). See the Elasticsearch documentation for more details.
 
 Here's an abbreviated portion of the scoring explanation for the Search Document of the Test Test User when the searched keyword was _test_:
 
@@ -93,4 +93,4 @@ _explanation":{
 }}]}
 ```
 
-Now you're able to see the entire query string, the response string, and how each returned Search Document was scored.
+Now you can see the entire query string, the response string, and how each returned Search Document was scored.
