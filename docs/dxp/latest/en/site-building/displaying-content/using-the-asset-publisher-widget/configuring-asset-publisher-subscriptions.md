@@ -53,4 +53,6 @@ To enable RSS feed subscriptions for the Asset Publisher, follow these steps:
 
 ## Related Information
 
-* [Setting up Email](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)
+- [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)
+- [Displaying Assets Using the Asset Publisher Widget](./displaying-assets-using-the-asset-publisher-widget.md)
+- [Configuring the Asset Publisher Display Settings](./configuring-asset-publisher-display-settings.md)

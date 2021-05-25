@@ -17,7 +17,9 @@ The Asset Publisher Widget supports these asset types by default:
 * Web Content Folder
 * Wiki Page
 
-You can define custom asset types that use the [asset framework](TODO), which provides support for tags, categories, vocabularies, comments, ratings, and asset relationships.
+```note::
+    Starting with Liferay DXP 7.2, developers can use the `Info Framework <https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework>`_ to display Assets from `Information Lists <https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider>`_.
+```
 
 Manual selection gives you control over what assets are displayed, but maintaining the list can be tedious if you find yourself updating the list on a regular basis. In this case, it's more convenient to use the Asset Publisher Widget to select content dynamically.
 
@@ -33,6 +35,6 @@ Since the Asset Publisher Widget publishes assets, it excels at publishing mixed
 
 ## Additional Information
 
-* [Selecting Assets for the Asset Publisher Widget](./selecting-assets-in-the-asset-publisher-widget.md)
+* [Selecting Assets in the Asset Publisher Widget](./selecting-assets-in-the-asset-publisher-widget.md)
 * [Configuring the Asset Publisher Display Settings](./configuring-asset-publisher-display-settings.md)
 * [Configuring Asset Publisher Subscriptions](./configuring-asset-publisher-subscriptions.md)

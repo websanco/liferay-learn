@@ -1,12 +1,12 @@
 # Selecting Assets in the Asset Publisher Widget
 
-You can configure the Asset Publisher Widget to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
+You can configure the Asset Publisher Widget to select Assets dynamically based on specific criteria, or you can select Assets manually, specifying exactly what assets to display. You can also display Assets from [Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
 
 ```note::
    For users on Liferay 7.2 and below, Collections are referred to as `Content Sets <../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2>`_.
 ```
 
-To select assets to publish in the *Asset Publisher* widget,
+To select Assets to publish in the *Asset Publisher* widget,
 
 1. Click the *Actions* menu (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the Asset Publisher Widget.
 
@@ -14,13 +14,13 @@ To select assets to publish in the *Asset Publisher* widget,
 
 1. Select *Configuration* to display the Configuration dialog.
 
-    Under the  the *Asset Selection* section, select how you want to filter through your assets. For a description of these options, see [Asset Collection Options](#asset-selection-options).
+    Under the  the *Asset Selection* section, select how you want to filter through your Assets. For a description of these options, see [Asset Selection Options](#asset-selection-options).
 
     ![The configuration window has different Asset Selection options under the Setup tab.](selecting-assets-in-the-asset-publisher-widget/images/02.png)
 
-1. Optionally click on the *Create a collection from this configuration* link to save the configuration as a new [Collection]((../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)). This option is available for the [Dynamic](#dynamic) and [Manual](#manual) [Asset selection options](#asset-selection-options).
+1. Optionally, click on the *Create a collection from this configuration* link to save the configuration as a new [Collection]((../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)). This option is available for the [Dynamic](#dynamic) and [Manual](#manual) Asset selection options.
 
-1. Once you've selected your assets and configured the widget, click *Save*.
+1. Once you've selected your Assets and configured the widget, click *Save*.
 
 ## Asset Selection Options
 
@@ -45,7 +45,7 @@ Using the Dynamic asset selection, you can include Assets in the Asset Publisher
 
 ### Manual
 
-Here you can set parameters and manually filter specific assets:
+Here you can set parameters and manually filter specific Assets:
 
  1. In the *Scope* section, choose to display assets from an individual Site or other Sites.
  1. In the *Asset Entries* section, use the *Select* button to filter for specific types of assets.
@@ -70,7 +70,7 @@ Select this option to choose from your previously saved Collections. To learn mo
 
 ### Collection Provider
 
-This is a new feature in Liferay 7.3 that allows developers to create specific collections with more advanced criteria.
+This is a new feature in Liferay DXP 7.3 that allows developers to create specific collections with more advanced criteria. To learn more, read the information about [Creating an Information List Provider](https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider) in the [Info Framework](https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework) developer documentation.
 
 ## Related Information
 
