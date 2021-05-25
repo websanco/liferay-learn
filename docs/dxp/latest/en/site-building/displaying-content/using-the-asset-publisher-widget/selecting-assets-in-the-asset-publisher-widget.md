@@ -1,4 +1,4 @@
-# Selecting Assets for the Asset Publisher
+# Selecting Assets in the Asset Publisher Widget
 
 You can configure the Asset Publisher Widget to select assets dynamically based on specific criteria, or you can select assets manually, specifying exactly what assets to display. You can also display assets from [Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
 
@@ -10,13 +10,13 @@ To select assets to publish in the *Asset Publisher* widget,
 
 1. Click the *Actions* menu (![Click on the Options button at the top-right corner of the widget for configuration.](../../../images/icon-options.png)) at the top-right corner of the Asset Publisher Widget.
 
-    ![Click the Actions menu to access the Asset Publisher Configuration options.](./selecting-assets-for-the-asset-publisher/images/01.png)
+    ![Click the Actions menu to access the Asset Publisher Configuration options.](./selecting-assets-in-the-asset-publisher-widget/images/01.png)
 
 1. Select *Configuration* to display the Configuration dialog.
 
     Under the  the *Asset Selection* section, select how you want to filter through your assets. For a description of these options, see [Asset Collection Options](#asset-selection-options).
 
-    ![The configuration window has different Asset Selection options under the Setup tab.](selecting-assets-for-the-asset-publisher/images/02.png)
+    ![The configuration window has different Asset Selection options under the Setup tab.](selecting-assets-in-the-asset-publisher-widget/images/02.png)
 
 1. Optionally click on the *Create a collection from this configuration* link to save the configuration as a new [Collection]((../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)). This option is available for the [Dynamic](#dynamic) and [Manual](#manual) [Asset selection options](#asset-selection-options).
 
@@ -41,7 +41,7 @@ Using the Dynamic asset selection, you can include Assets in the Asset Publisher
   1. Include a *Custom User Attribute* if you have defined one.
   1. In the *Ordering* section, choose the presentation order of Assets in the Asset Publisher Widget.
 
- ![Define the options for the Dynamic Asset collection, including Source, Scope, Filter, Custom User Attribute, and Ordering.](selecting-assets-for-the-asset-publisher/images/05.png)
+ ![Define the options for the Dynamic Asset collection, including Source, Scope, Filter, Custom User Attribute, and Ordering.](selecting-assets-in-the-asset-publisher-widget/images/05.png)
 
 ### Manual
 
@@ -52,7 +52,7 @@ Here you can set parameters and manually filter specific assets:
  1. For the type of asset you select, check the assets you want to include.
  1. Click *Add*.
 
- ![Here is an example of filtering for Basic Web Content and manually selecting items](selecting-assets-for-the-asset-publisher/images/03.png)
+ ![Here is an example of filtering for Basic Web Content and manually selecting items](selecting-assets-in-the-asset-publisher-widget/images/03.png)
 
  ```note::
     A new Collection is created based on your selection.
@@ -66,7 +66,7 @@ Select this option to choose from your previously saved Collections. To learn mo
  1. Choose one of your exiting Collections.
  1. Click *Save*.
 
- ![Click Select and choose from your saved Collections.](selecting-assets-for-the-asset-publisher/images/04.png)
+ ![Click Select and choose from your saved Collections.](selecting-assets-in-the-asset-publisher-widget/images/04.png)
 
 ### Collection Provider
 
@@ -74,4 +74,6 @@ This is a new feature in Liferay 7.3 that allows developers to create specific c
 
 ## Related Information
 
+- [Displaying Assets Using the Asset Publisher Widget](./displaying-assets-using-the-asset-publisher-widget.md)
+- [Configuring the Asset Publisher Display Settings](./configuring-asset-publisher-display-settings.md)
 - [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)

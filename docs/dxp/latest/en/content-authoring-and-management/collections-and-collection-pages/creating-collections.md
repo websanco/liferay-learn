@@ -88,7 +88,7 @@ Note that Documents and Media folders and Web Content folders can be added to a 
 
 ## Creating a Collection from an Asset Publisher
 
-You can create a new Collection from an [Asset Publisher Widget](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md). This is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages.
+You can create a new Collection from an [Asset Publisher Widget](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md). This is useful when you have an Asset Publisher customization that you want to use as a Collection in other pages.
 
 ![You can transform an Asset Publisher widget into a Collection.](./creating-collections/images/06.png)
 
@@ -114,7 +114,7 @@ You can create a new Collection from an [Asset Publisher Widget](../../site-buil
 
 ### Creating Content Sets
 
-Content Sets are created by content administrators through the Content Sets interface in Site Administration. Content Sets can use either Manual or Dynamic selection, and you can create any number of Content Sets, and display them through the Asset Publisher or custom applications. Content Sets can also have [personalized variations](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization) which provide different experiences for different users based on criteria that you specify. The criteria management is shared with the Asset Publisher, so for more  information on each option, see the official [Asset Publisher Documentation](../../site-building/displaying-content/using-the-asset-publisher-widget/selecting-assets-for-the-asset-publisher.md).
+Content Sets are created by content administrators through the Content Sets interface in Site Administration. Content Sets can use either Manual or Dynamic selection, and you can create any number of Content Sets, and display them through the Asset Publisher or custom applications. Content Sets can also have [personalized variations](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization) which provide different experiences for different users based on criteria that you specify. The criteria management is shared with the Asset Publisher, so for more  information on each option, see the official [Asset Publisher Documentation](../../site-building/displaying-content/using-the-asset-publisher-widget/selecting-assets-in-the-asset-publisher-widget.md).
 
 #### Creating a Manual Content Set
 

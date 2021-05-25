@@ -20,7 +20,7 @@ The Web Content Display widget displays individual web content articles. It prov
 
 The Asset Publisher displays multiple pieces of content at a time. It can display any kind of asset.
 
-You can specify which assets to display. For instance you can specify to only display the assets that meet specific conditions, such as specific tags or keywords. You can manually select the assets to create a static collection of assets, or you can configure it to dynamically select content on the fly. Read [Using the Asset Publisher Widget](./using-the-asset-publisher-widget/displaying-assets-intro.md) to learn more.
+You can specify which assets to display. For instance you can specify to only display the assets that meet specific conditions, such as specific tags or keywords. You can manually select the assets to create a static collection of assets, or you can configure it to dynamically select content on the fly. Read [Using the Asset Publisher Widget](./using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) to learn more.
 
 ## Display Page Template
 

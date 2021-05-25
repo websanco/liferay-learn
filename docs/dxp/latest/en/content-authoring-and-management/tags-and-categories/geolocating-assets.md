@@ -123,7 +123,7 @@ Follow the steps below:
 
 1. Click _Publish_ when finished.
 
-Once your assets are geolocation enabled, you can use the [Asset Publisher](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md) to display the location of the assets on a map, using the map display template. Check out the [Configuring Display Settings](../../site-building/displaying-content/using-the-asset-publisher-widget/configuring-display-settings.md) section to learn more.
+Once your assets are geolocation enabled, you can use the [Asset Publisher](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) to display the location of the assets on a map, using the map display template. Check out the [Configuring the Asset Publisher Display Settings](../../site-building/displaying-content/using-the-asset-publisher-widget/configuring-asset-publisher-display-settings.md) section to learn more.
 
 ![The Asset Publisher can display your geolocated assets on a map.](./geolocating-assets/images/14.png)
 

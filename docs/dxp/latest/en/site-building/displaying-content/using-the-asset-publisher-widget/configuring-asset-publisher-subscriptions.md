@@ -12,7 +12,7 @@ Users can subscribe to the Asset Publisher to receive email notifications when n
 
     ![An email subscription notifies users when new assets are published.](./configuring-asset-publisher-subscriptions/images/01.png)
 
-1. Enable the *Subscribe* feature under the *Display Settings* tab &rarr; [*Set and Enable* section](./configuring-display-settings.md#set-and-enable-options) if it's not enabled. Users can click the *subscribe* button to receive email notifications of newly published assets.
+1. Enable the *Subscribe* feature under the *Display Settings* tab if it's not enabled. Users can click the *subscribe* button to receive email notifications of newly published assets.
 
 ![Enabling Email Subscription adds a Subscribe link to the Asset Publisher.](./configuring-asset-publisher-subscriptions/images/02.png)
 
@@ -47,7 +47,7 @@ To enable RSS feed subscriptions for the Asset Publisher, follow these steps:
 
     ![An RSS subscription sends RSS feeds to subscribers' RSS readers.](./configuring-asset-publisher-subscriptions/images/05.png)
 
-1. Enable the *Subscribe* feature under the *Display Settings* tab &rarr; [*Set and Enable* section](./configuring-display-settings.md#set-and-enable-options) if it's not enabled. Users can click the *RSS* link to subscribe to the RSS feed.
+1. Enable the *Subscribe* feature under the *Display Settings* tab if it's not enabled. Users can click the *RSS* link to subscribe to the RSS feed.
 
 ![Enabling RSS Subscription adds a RSS link to the Asset Publisher.](./configuring-asset-publisher-subscriptions/images/06.png)
 

@@ -1,6 +1,6 @@
-# Configuring Display Settings
+# Configuring the Asset Publisher Display Settings
 
-Once you've [selected your assets](./selecting-assets-for-the-asset-publisher.md) for the Asset Publisher, you can configure several display settings to specify how users view your content. Follow these steps:
+Once you've [selected your assets](./selecting-assets-in-the-asset-publisher-widget.md) for the Asset Publisher, you can configure several display settings to specify how users view your content. Follow these steps:
 
 1. Hover over the Asset Publisher and click the Options icon (![Options](../../../images/icon-app-options.png)) in the widget's menu and select *Configuration*.
 1. With the *Setup* tab selected, click on the *Display Settings* tab.
@@ -9,7 +9,7 @@ Once you've [selected your assets](./selecting-assets-for-the-asset-publisher.md
 1. Expand the *Set and Enable* panel and check the boxes for the options you want to enable.
 1. Expand the *Metadata* panel and move options from the Available box to the Current box to display the metadata for each asset. For example, you can select tags and categories for display. Then users can click on the tags and categories to filter the displayed assets manually. 
 
-  ![You can configure the Asset Publisher to display various kinds of metadata about the displayed assets.](./configuring-display-settings/images/04.png)
+  ![You can configure the Asset Publisher to display various kinds of metadata about the displayed assets.](./configuring-asset-publisher-display-settings/images/04.png)
 
 1. Expand the *Grouping* panel and optionally establish grouping rules.
 1. Click *Save* to apply your display settings.
@@ -18,7 +18,7 @@ Once you've [selected your assets](./selecting-assets-for-the-asset-publisher.md
 
 ### Display Settings
 
-![Several Display Settings are available for the Asset Publisher.](./configuring-display-settings/images/01.png)
+![Several Display Settings are available for the Asset Publisher.](./configuring-asset-publisher-display-settings/images/01.png)
 
 These templates are in every site by default:
 
@@ -44,9 +44,9 @@ These are the remaining settings for the *Display Settings* section:
 
 Many of these, such as printing, flags, ratings, comments, comment ratings, and social bookmarks work the same way they do in other applications. 
 
-![There are several options that you can enable.](./configuring-display-settings/images/03.png)
+![There are several options that you can enable.](./configuring-asset-publisher-display-settings/images/03.png)
 
-![You can display social bookmarks in the Asset Publisher.](./configuring-display-settings/images/02.png)
+![You can display social bookmarks in the Asset Publisher.](./configuring-asset-publisher-display-settings/images/02.png)
 
 These options are available:
 
@@ -69,14 +69,20 @@ These options are available:
 
 This section specifies what metadata to display with the asset entry. Move metadata from the Available box to the Current box to include it.
 
-![You can display several different types of metadata with the asset.](./configuring-display-settings/images/04.png)
+![You can display several different types of metadata with the asset.](./configuring-asset-publisher-display-settings/images/04.png)
 
 ### Grouping
 
 The *Grouping* section specifies what groups to divide the displayed assets into. You can group assets by type or by vocabulary (if you have defined some). 
 
-![You can separate assets into different groups.](./configuring-display-settings/images/05.png)
+![You can separate assets into different groups.](./configuring-asset-publisher-display-settings/images/05.png)
 
-For example, suppose you have a vocabulary called *Membership Type* with two categories: *Premium* and *Regular*. If you group assets by Membership Type, all assets with the Premium category appear in one group and all assets with the Regular category appear in another group. Grouping rules are applied before any [ordering rules](./selecting-assets-for-the-asset-publisher.md#configuring-asset-display-ordering). The ordering rules are applied separately to each group of assets. The example in the figure below groups assets by type; The image is listed after the web content articles.
+For example, suppose you have a vocabulary called *Membership Type* with two categories: *Premium* and *Regular*. If you group assets by Membership Type, all assets with the Premium category appear in one group and all assets with the Regular category appear in another group. Grouping rules are applied before any [ordering rules](./selecting-assets-in-the-asset-publisher-widget.md#configuring-asset-display-ordering). The ordering rules are applied separately to each group of assets. The example in the figure below groups assets by type; The image is listed after the web content articles.
 
-![You can group assets by type.](./configuring-display-settings/images/06.png)
+![You can group assets by type.](./configuring-asset-publisher-display-settings/images/06.png)
+
+## Related Information
+
+- [Displaying Assets Using the Asset Publisher Widget](./displaying-assets-using-the-asset-publisher-widget.md)
+- [Selecting Assets for the Asset Publisher Widget](./selecting-assets-in-the-asset-publisher-widget.md)
+- [Geo-Localized Assets](../../site-settings/site-content-configurations/configuring-geolocation-for-assets.md)

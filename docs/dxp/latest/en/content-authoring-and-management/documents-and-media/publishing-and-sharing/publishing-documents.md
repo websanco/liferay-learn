@@ -104,7 +104,7 @@ Selecting a file reveals several options:
 
 ## Using the Asset Publisher Widget
 
-The [Asset Publisher](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.md) widget can publish different assets and collections based on criteria. You can use it to display content from your Documents and Media library. 
+The [Asset Publisher](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) widget can publish different assets and collections based on criteria. You can use it to display content from your Documents and Media library. 
 
 ## Using Documents in Other Assets
 
