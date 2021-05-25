@@ -1,0 +1,3 @@
+Bundle-Name: Acme M4Q7 Baker Implementation
+Bundle-SymbolicName: com.acme.m4q7.baker.impl
+Bundle-Version: 1.0.0
