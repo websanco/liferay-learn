@@ -70,7 +70,7 @@ WebSphere then creates the profile and finishes with a message indicating that t
 
 ![Figure 2: Example of the settings before creating the profile.](./installing-on-websphere/images/02.png)
 
-Lastly , shut down the application server.
+Lastly, shut down the application server.
 
 ### Configuring the WebSphere Application Server
 
