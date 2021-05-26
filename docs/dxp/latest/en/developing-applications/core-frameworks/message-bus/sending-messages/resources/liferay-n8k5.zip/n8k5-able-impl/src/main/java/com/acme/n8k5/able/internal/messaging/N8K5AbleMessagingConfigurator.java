@@ -17,12 +17,9 @@ public class N8K5AbleMessagingConfigurator {
 
 	@Activate
 	private void _activate(BundleContext bundleContext) {
-		DestinationConfiguration destinationConfiguration =
-			DestinationConfiguration.createSerialDestinationConfiguration(
-				"acme/n8k5_able");
-
 		Destination destination = _destinationFactory.createDestination(
-			destinationConfiguration);
+			DestinationConfiguration.createSerialDestinationConfiguration(
+				"acme/n8k5_able"));
 
 		_serviceRegistration = bundleContext.registerService(
 			Destination.class, destination,

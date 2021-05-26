@@ -8,7 +8,8 @@ import com.liferay.portal.kernel.messaging.MessageListener;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	property = "destination.name=acme/n8k5_able", service = MessageListener.class
+	property = "destination.name=acme/n8k5_able",
+	service = MessageListener.class
 )
 public class N8K5CharlieMessageListener implements MessageListener {
 
