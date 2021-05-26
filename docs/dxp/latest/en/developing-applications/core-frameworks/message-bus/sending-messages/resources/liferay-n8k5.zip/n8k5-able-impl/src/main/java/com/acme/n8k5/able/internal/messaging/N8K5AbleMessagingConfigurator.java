@@ -1,7 +1,5 @@
 package com.acme.n8k5.able.internal.messaging;
 
-import com.acme.n8k5.able.constants.N8K5AbleDestinationNames;
-
 import com.liferay.portal.kernel.messaging.Destination;
 import com.liferay.portal.kernel.messaging.DestinationConfiguration;
 import com.liferay.portal.kernel.messaging.DestinationFactory;
@@ -21,7 +19,7 @@ public class N8K5AbleMessagingConfigurator {
 	private void _activate(BundleContext bundleContext) {
 		DestinationConfiguration destinationConfiguration =
 			DestinationConfiguration.createSerialDestinationConfiguration(
-				N8K5AbleDestinationNames.N8K5_ABLE_DESTINATION);
+				"acme/n8k5_able");
 
 		Destination destination = _destinationFactory.createDestination(
 			destinationConfiguration);

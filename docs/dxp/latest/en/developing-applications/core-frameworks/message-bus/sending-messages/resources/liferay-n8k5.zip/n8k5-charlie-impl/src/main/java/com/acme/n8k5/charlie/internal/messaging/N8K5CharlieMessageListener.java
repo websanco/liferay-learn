@@ -1,7 +1,5 @@
 package com.acme.n8k5.charlie.internal.messaging;
 
-import com.acme.n8k5.able.constants.N8K5AbleDestinationNames;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.messaging.Message;
@@ -10,8 +8,7 @@ import com.liferay.portal.kernel.messaging.MessageListener;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	property = "destination.name=" + N8K5AbleDestinationNames.N8K5_ABLE_DESTINATION,
-	service = MessageListener.class
+	property = "destination.name=acme/n8k5_able", service = MessageListener.class
 )
 public class N8K5CharlieMessageListener implements MessageListener {
 

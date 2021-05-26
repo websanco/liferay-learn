@@ -1,7 +1,5 @@
 package com.acme.n8k5.baker.internal;
 
-import com.acme.n8k5.able.constants.N8K5AbleDestinationNames;
-
 import com.liferay.portal.kernel.messaging.Message;
 import com.liferay.portal.kernel.messaging.MessageBus;
 
@@ -24,8 +22,7 @@ public class N8K5Baker {
 			"Invoke N8K5Baker#_activate(BundleContext) from " +
 				bundle.getSymbolicName());
 
-		_messageBus.sendMessage(
-			N8K5AbleDestinationNames.N8K5_ABLE_DESTINATION, message);
+		_messageBus.sendMessage("acme/n8k5_able", message);
 	}
 
 	@Reference
