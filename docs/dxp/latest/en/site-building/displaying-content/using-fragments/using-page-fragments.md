@@ -1,6 +1,6 @@
 # Using Page Fragments
 
-Page *Fragments* are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Each Fragment is built using CSS, HTML, and JavaScript. Together, Fragments define your page's design and provide functionality along with widgets. You can [create your own Fragment](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) or use a number of Fragments that are available out-of-the-box.
+Page *Fragments* are extensible, reusable, drag-and-drop elements that are the primary building blocks for [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Each Fragment is built using CSS, HTML, and JavaScript. Together, Fragments define your page's design and provide functionality along with widgets. You can [create your own Fragment](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) or use a number of Fragments that are available out-of-the-box.
 
 ![You can quickly build a page with Fragments.](./using-page-fragments/images/01.png)
 

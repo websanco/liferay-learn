@@ -10,21 +10,21 @@ To manage a Master Page Template, follow these steps:
 
 1. Open the *Actions* (![Actions](./../../../images/icon-actions.png)) Menu for a Master Page Template and select one of the options. 
 
-   - **Edit:** Configure the Master Page Template.
+**Edit:** Configure the Master Page Template.
 
-   - **Change Thumbnail:** Select a thumbnail image to display for the Master Page Template's card in the *Masters* tab.
+**Change Thumbnail:** Select a thumbnail image to display for the Master Page Template's card in the *Masters* tab.
 
-   - **Rename:** Change the name of the Master Page Template.
+**Rename:** Change the name of the Master Page Template.
 
-   - **Make a Copy:** Duplicate the Master Page Template. The copy uses the same name with "Copy" appended to the end.
+**Make a Copy:** Duplicate the Master Page Template. The copy uses the same name with "Copy" appended to the end.
 
-   - **Export:** Export and download the Master Page Template definition. This option is available when the Master Page Template is in the *Approved* status.
+**Export:** Export and download the Master Page Template definition. This option is available when the Master Page Template is in the *Approved* status.
 
-   - **Permissions:** Define permissions for the Master Page Template.
+**Permissions:** Define permissions for the Master Page Template.
 
-   - **Delete:** Remove the Master Page Template. You can also delete multiple Master Page Templates at once by checking the box for each template and clicking the `X`, or selecting the *Delete* action from the Management Toolbar.
+**Delete:** Remove the Master Page Template. You can also delete multiple Master Page Templates at once by checking the box for each template and clicking the `X`, or selecting the *Delete* action from the Management Toolbar.
 
-   - **Discard Draft:** Discard the Master Page Draft. This option is available when the Master Page Template is in the *Draft* status.
+**Discard Draft:** Discard the Master Page Draft. This option is available when the Master Page Template is in the *Draft* status.
 
 ```note::
    After changes are made and published, they are propagated to all pages that use the Master Page Template.
@@ -36,7 +36,7 @@ You can change the Master Page Template of a Page in the [Content Page Editor](.
 
 1. Navigate to the Page where you want to change the Master Page Template.
 1. Click the *Page Design* menu (![Page Design menu](../../../images/icon-format.png)).
-1. Under the *Masters* section, click the Master Page Template you want to use.
+1. Under the Masters section, click the *Master Page Template* you want to use.
 
    ![Click the Master Page Template you want to use through the Page Design menu.](./managing-master-page-templates/images/03.png)
 

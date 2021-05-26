@@ -1,14 +1,14 @@
 # Configuring Elements on Content Pages
 
-After [adding adding elements to your Content Page](./adding-elements-to-content-pages.md), you can configure and customize these elements in different ways.
+After [adding elements to your Content Page](./adding-elements-to-content-pages.md), you can configure and customize these elements in different ways.
 
 To configure elements on a Content Page, click the element and select your options in the Content Page editor sidebar. For a description of the sidebar options, see [Content Page Editor User Interface Reference](./content-page-editor-user-interface-reference.md).
 
-Because [Content Pages](./content-pages-overview.md) are primarily built using Fragments, configuring with your Pages requires working with Fragments. For a description of the Fragments user interface in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
+Because [Content Pages](./content-pages-overview.md) are built using Fragments, configuring your Pages requires working with Fragments. For a description of the Fragments user interface in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
 
 ![The Content Page sidebar reveals the different style and configuration options when you click the Page elements.](./configuring-elements-on-content-pages/images/06.png)
 
-The following list describes common configuration options:
+These are common configuration options:
 
 - [Setting the Layout Style](#setting-the-layout-style)
 - [Editing Text In-Line](#editing-text-in-line)
@@ -21,7 +21,7 @@ The following list describes common configuration options:
 
 ## Setting the Layout Style
 
-You can set different style options for your Content Page layout like background color, background image, margins, and opacity.
+You can set different style options like background color, background image, margins, and opacity for your Content Page layout.
 
 1. Click the layout element you want to change.
 1. In the Content Page sidebar, under the *Styles* tab, configure the style options for your content:
@@ -40,14 +40,14 @@ You can set different style options for your Content Page layout like background
 
 ## Editing Text In-Line
 
-1. Double-click the page element containing your text to enter into edit mode.
+1. Double-click the page element containing your text to enter edit mode.
 1. Select the text that you want to edit.
 1. Use the inline text editor to update the text styles, typographical emphasis, alignment, and other text formatting options.
 
     ![You can modify editable text.](./configuring-elements-on-content-pages/images/07.png)
 
 ```note::
-   *Heading* fragments cannot have line breaks. This is because *Heading* fields use ``text`` while *Paragraph* fragments use ``rich-text`` fields; only the latter can have multiple line texts separated by a line break.
+   Heading fragments cannot have line breaks. This is because Heading fields use ``text`` while Paragraph fragments use ``rich-text`` fields; only the latter can have multiple line texts separated by a line break.
 ```
 
 ## Editing Hyperlinks
@@ -61,10 +61,10 @@ You can set different style options for your Content Page layout like background
 
    ![You can modify editable links.](./configuring-elements-on-content-pages/images/08.png)
 
-   When you choose the *From Content Field* option for your link, you can configure the following options:
+   When you choose the *From Content Field* option for your link, you can configure these options:
 
    - *Content:* Set the content type.
-   - *Field:* Set the field to display for the selected content. Some of the available content fields are:
+   - *Field:* Set the field to display for the selected content. Here are some of the field types:
 
        - Categories
        - Tags
@@ -107,7 +107,7 @@ You can adjust the module's width to customize the layout:
    ![You can adjust the spacing of modules in a Layout.](./configuring-elements-on-content-pages/images/16.gif)
 
    ```tip::
-      You can use the Grid Fragment to customize the content layout for the different screenn desktop and mobile devices. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_
+      You can use the Grid Fragment to customize the content layout for the different screens on desktop and mobile devices. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_
    ```
 
 ## Copying a Page Fragment
@@ -161,7 +161,7 @@ Compositions can be exported or imported between Sites just as any other Fragmen
 
 ## Mapping Content
 
-You can also map these elements to existing content. You can set the *Content* for the element (web content article, document, or blog) and choose its applicable *Field* to display (e.g., title, author name, tags, etc.).
+You can also map these elements to existing content. You can set the Content for the element (web content article, document, or blog) and choose its applicable Field to display (e.g., title, author name, tags, etc.).
 
 To map your elements to existing content,
 
