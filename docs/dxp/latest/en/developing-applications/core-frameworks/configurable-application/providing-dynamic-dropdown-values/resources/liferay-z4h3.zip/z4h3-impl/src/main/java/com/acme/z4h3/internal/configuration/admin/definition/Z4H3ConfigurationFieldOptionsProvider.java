@@ -1,4 +1,4 @@
-package com.acme.z4h3.internal.configuration;
+package com.acme.z4h3.internal.configuration.admin.definition;
 
 import com.liferay.asset.auto.tagger.text.extractor.TextExtractor;
 import com.liferay.asset.auto.tagger.text.extractor.TextExtractorTracker;
@@ -17,7 +17,7 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"configuration.field.name=entryList2",
+		"configuration.field.name=dynamicallyPopulatedAssetTypes",
 		"configuration.pid=com.acme.z4h3.internal.configuration.Z4H3Configuration"
 	},
 	service = ConfigurationFieldOptionsProvider.class
