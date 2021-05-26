@@ -1,33 +1,26 @@
 # User Account API Basics
 
-[Adding and managing Users](../users/adding-and-managing-users.md) can be done from the Control Panel but it can also be done using Liferay's REST APIs. cURL commands and Java classes can call these services to add, edit, delete Users.
+You can [Add and manage Users](../users/adding-and-managing-users.md) from the Control Panel, but you can also use Liferay's REST APIs. You can call these services to add, edit, delete Users.
 
-Let's start with an example for adding a new User.
+Start with adding a new User.
 
 ## Adding Users
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
+   ```bash
+   docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+   ```
+
 1. Download and unzip [User Account API Basics](./liferay-y6q4.zip).
 
-    ```bash
-    curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-y6q4.zip -O
-    ```
+   ```bash
+   curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-y6q4.zip -O
+   ```
 
-    ```bash
-    unzip liferay-y6q4.zip
-    ```
-
-    Here's the project's folder structure:
-
-    ```
-    liferay-y6q4.zip/
-    ├── curl // cURL command scripts
-    └── java // Java classes
-    ```
+   ```bash
+   unzip liferay-y6q4.zip
+   ```
 
 1. Use the cURL script to add a new User to your Liferay instance. On the command line, navigate to the `curl` folder. Execute the `User_POST_ToInstance.sh` script.
 
@@ -100,7 +93,7 @@ Let's start with an example for adding a new User.
 
     ![In Control Panel, another User has been added.](user-account-api-basics/images/02.png)
 
-Now let's take a closer look at the cURL command and Java class.
+Read on to see how the cURL command and Java class work. 
 
 ## Examine the cURL Command
 
@@ -115,10 +108,10 @@ Here are the command's arguments:
 | Arguments | Description |
 | --------- | ----------- |
 | `-H "Content-Type: application/json"` | Indicates that the request body format is JSON. |
-| `-X POST` | The HTTP method to invoke at the specified endpoint. |
-| `"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts"` | The REST service endpoint. |
-| `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | The data you are requesting to post. |
-| `-u "test@liferay.com:test"` | Basic authentication credentials. |
+| `-X POST` | The HTTP method to invoke at the specified endpoint |
+| `"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts"` | The REST service endpoint |
+| `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | The data you are requesting to post |
+| `-u "test@liferay.com:test"` | Basic authentication credentials |
 
 ```note::
    Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
@@ -154,7 +147,7 @@ The other example Java classes are similar to this one but call different `UserA
    See `UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_ for service details.
 ```
 
-The sections below demonstrate calling other User REST services using cURL and Java.
+Below are examples of calling the other User REST services using cURL and Java.
 
 ## Get Instance Users
 
