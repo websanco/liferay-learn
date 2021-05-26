@@ -5,7 +5,6 @@ import com.liferay.configuration.admin.definition.ConfigurationDDMFormDeclaratio
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = "configurationPid=com.acme.v1d9.internal.configuration.V1D9Configuration",
 	service = ConfigurationDDMFormDeclaration.class
 )
