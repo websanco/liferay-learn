@@ -122,9 +122,25 @@ Use the *tabs* Fragment to add multiple tabs with individual drop zones for widg
 
 ![Add multiple tabs with individual drop zones for widgets and other Fragments.](./page-fragments-user-interface-reference/images/09.png)
 
-### Video
+### Video URL
 
-Use *video* Fragments to embed videos in your Content Page. To select a video, enter a valid URL, either to YouTube or video file. As part of configuration, you can set the video to autoplay, loop, or mute. You can also choose to hide video controls.
+> The Video URL Fragment is called Video Fragment in Liferay versions previous to Liferay DXP 7.4.
+
+Use the *Video URL* Fragment to embed videos in your Content Page. To select a video, enter a valid URL, either to YouTube or a video file. As part of the Fragment configuration, you can set the video to autoplay, loop, or mute. You can also choose to hide video controls.
+
+![The Video URL Fragment supports any valid URL and provides video controls.](./page-fragments-user-interface-reference/images/17.png)
+
+### External Video
+
+> Available: Liferay DXP 7.4+.
+
+Use the *External Video* Fragment to embed additional video sources in your Content Page. You can use a valid URL or videos in [Documents and Media](../../../content-authoring-and-management/documents-and-media.html). The supported sources include YouTube, Facebook, Twitch, Vimeo, and videos stored in Documents and Media.
+
+![The External Video Fragment supports video sources in a valid video URL and Documents and Media](./page-fragments-user-interface-reference/images/16.gif)
+
+```note::
+   The External Video Fragment does not support video controls for autoplay, loop, or mute. If you need to provide these controls in the Content Page, use the `Video URL Fragment <#video-url>`_ instead.
+```
 
 ## Content Display
 
