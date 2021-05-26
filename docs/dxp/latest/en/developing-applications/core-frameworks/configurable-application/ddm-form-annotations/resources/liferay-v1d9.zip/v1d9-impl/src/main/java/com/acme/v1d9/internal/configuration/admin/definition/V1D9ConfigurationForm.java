@@ -1,4 +1,4 @@
-package com.acme.v1d9.internal.configuration;
+package com.acme.v1d9.internal.configuration.admin.definition;
 
 import com.liferay.dynamic.data.mapping.annotations.DDMForm;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormField;
@@ -41,16 +41,16 @@ public interface V1D9ConfigurationForm {
 	public String date();
 
 	@DDMFormField(
-		label = "Numeric", properties = "placeholder=%seconds",
+		label = "Numeric", properties = "placeholder=%Seconds",
 		type = "numeric",
-		validationErrorMessage = "%Please enter an integer between 0 and 60 seconds",
+		validationErrorMessage = "Please enter an integer between 0 and 60 seconds",
 		validationExpression = "(numeric >= 0) && (numeric <= 60)"
 	)
 	public String numeric();
 
 	@DDMFormField(
 		label = "Select", optionLabels = {"Foo", "Bar"},
-		optionValues = {"foo", "bar"}, type = "select"
+		optionValues = {"Foo", "Bar"}, type = "select"
 	)
 	public String select();
 

@@ -4,7 +4,7 @@ import aQute.bnd.annotation.metatype.Meta;
 
 @Meta.OCD(
 	id = "com.acme.v1d9.internal.configuration.V1D9Configuration",
-	localization = "content/Language", name = "v1d9-configuration"
+	localization = "content/Language", name = "v1d9-configuration-name"
 )
 public @interface V1D9Configuration {
 

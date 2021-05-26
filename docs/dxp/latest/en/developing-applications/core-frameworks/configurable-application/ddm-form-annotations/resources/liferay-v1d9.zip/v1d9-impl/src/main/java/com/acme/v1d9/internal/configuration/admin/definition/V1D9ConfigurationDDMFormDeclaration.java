@@ -1,4 +1,4 @@
-package com.acme.v1d9.internal.configuration;
+package com.acme.v1d9.internal.configuration.admin.definition;
 
 import com.liferay.configuration.admin.definition.ConfigurationDDMFormDeclaration;
 
