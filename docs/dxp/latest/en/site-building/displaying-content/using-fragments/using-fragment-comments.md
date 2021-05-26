@@ -50,4 +50,4 @@ To enable comments for Fragments, follow these steps:
 
 - [Using Page Fragments](./using-page-fragments.md)
 - [Managing Page Fragments](./managing-page-fragments.md)
-- [Propagating Page Fragment Changes](./propagating-page-fragment-changes.md)
+- [Propagating Fragment Changes](./propagating-fragment-changes.md)

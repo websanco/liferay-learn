@@ -49,7 +49,7 @@ When creating a page from a Widget Page Template, changes are inherited from the
 
 ### Propagating Changes for Content Pages
 
-Changes for Content Pages **are not automatically propagated** when created using a Content Page Template. However, you can propagate changes to Fragments used on a Content Page. See [Propagating Fragment Changes](../../displaying-content/using-fragments/propagating-page-fragment-changes.md) for more information.
+Changes for Content Pages **are not automatically propagated** when created using a Content Page Template. However, you can propagate changes to Fragments used on a Content Page. See [Propagating Fragment Changes](../../displaying-content/using-fragments/propagating-fragment-changes.md) for more information.
 
 ### Sharing Page Templates With Other Sites
 

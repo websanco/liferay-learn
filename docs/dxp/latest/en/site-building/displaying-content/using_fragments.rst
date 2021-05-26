@@ -6,7 +6,7 @@ Using Fragments
 
    using-fragments/using-page-fragments.md
    using-fragments/managing-page-fragments.md
-   using-fragments/propagating-page-fragment-changes.md
+   using-fragments/propagating-fragment-changes.md
    using-fragments/configuring-fragment-styles.md
    using-fragments/fragment-styles-reference.md
    using-fragments/using-fragment-comments.md
@@ -15,7 +15,7 @@ Using Fragments
 
 -  :doc:`/site-building/displaying-content/using-fragments/using-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/managing-page-fragments`
--  :doc:`/site-building/displaying-content/using-fragments/propagating-page-fragment-changes`
+-  :doc:`/site-building/displaying-content/using-fragments/propagating-fragment-changes`
 -  :doc:`/site-building/displaying-content/using-fragments/configuring-fragment-styles`
 -  :doc:`/site-building/displaying-content/using-fragments/fragment-styles-reference`
 -  :doc:`/site-building/displaying-content/using-fragments/using-fragment-comments`
