@@ -34,17 +34,11 @@ import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutRow;
 )
 public interface V1D9ConfigurationForm {
 
-	@DDMFormField(label = "%text")
-	public String[] text();
-
 	@DDMFormField(label = "%checkbox", properties = "showAsSwitcher=true")
 	public boolean checkbox();
 
-	@DDMFormField(
-		label = "%select", optionLabels = {"%foo", "%bar"},
-		optionValues = {"foo", "bar"}, type = "select"
-	)
-	public String select();
+	@DDMFormField(label = "%date", type = "date")
+	public String date();
 
 	@DDMFormField(
 		label = "%numeric", properties = "placeholder=%seconds",
@@ -54,7 +48,13 @@ public interface V1D9ConfigurationForm {
 	)
 	public String numeric();
 
-	@DDMFormField(label = "%date", type = "date")
-	public String date();
+	@DDMFormField(
+		label = "%select", optionLabels = {"%foo", "%bar"},
+		optionValues = {"foo", "bar"}, type = "select"
+	)
+	public String select();
+
+	@DDMFormField(label = "%text")
+	public String[] text();
 
 }
