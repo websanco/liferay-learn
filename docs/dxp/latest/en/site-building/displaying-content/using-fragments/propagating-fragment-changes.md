@@ -8,10 +8,10 @@ By default, [changes to the Fragment's configuration](../../developer-guide/deve
 
 You can propagate the Fragment changes in two different ways:
 
-- [For a single Fragment](#propagating-the-fragment-changes-for-a-single-fragment)
-- [For all Fragments](#propagating-the-fragment-changes-for-all-the-fragments)
+- [Manually, for a single Fragment](#propagating-changes-manually-for-a-single-fragment)
+- [Automatically, for all Fragments](#propagating-changes-automatically-for-all-the-fragments)
 
-## Propagating the Fragment Changes for a Single Fragment
+## Propagating Changes Manually for a Single Fragment
 
 You can update all elements where you use a Fragment with the most recent Fragment configuration. Use this procedure after [updating the Fragment](../../developer-guide/developing-page-fragments/using-the-fragments-editor.md) with the desired changes.
 
@@ -27,7 +27,7 @@ You can update all elements where you use a Fragment with the most recent Fragme
        If the *View Usages* option is unavailable, the Fragment is not in use.
     ```
 
-1. The Usages and Propagation list shows the elements containing the Fragment (A). Check the element or elements you want to update with the latest configuration. If you want to select all the elements, click *All* under *Usages* and check the box in the list header (B). The Using column (C) provides information about the Fragment configuration in use:
+1. The Usages and Propagation list shows the elements containing the Fragment (A). Check the element or elements you want to update with the latest configuration. If you want to select all the elements, click *All* under *Usages* and check the box in the list header (B). The *Using* column (C) provides information about the Fragment configuration in use:
 
 **Latest Version:** The element uses already the latest Fragment changes. You don't need to propagate changes to these elements.
 
@@ -37,7 +37,7 @@ You can update all elements where you use a Fragment with the most recent Fragme
 
     ![Select the elements where you want to propagate the latest Fragment changes.](./propagating-fragment-changes/images/03.png)
 
-## Propagating the Fragment Changes for All the Fragments
+## Propagating Changes Automatically for All the Fragments
 
 Using this option, any [Fragment change](../../developer-guide/developing-page-fragments/using-the-fragments-editor.md) propagates automatically to all elements where the Fragment exists. You need access to the Liferay DXP [System Settings](../../../system-administration/configuring-liferay/system-settings.md) to configure this option.
 
