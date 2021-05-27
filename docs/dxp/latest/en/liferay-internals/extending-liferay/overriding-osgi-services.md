@@ -1,8 +1,8 @@
 # Overriding OSGi Services
 
-Liferay's OSGi container is a dynamic environment in which services can be added, removed, or overridden as needed. This framework registers Liferay components with the OSGi service registry, each with their own availability, ranking, and attributes. Together, these details determine whether components referring to a service bind to it or not.
+Liferay's OSGi container is a dynamic environment in which services can be added, removed, or overridden as needed. This framework registers Liferay components with the OSGi service registry, each with their own availability, ranking, and attributes. Together, these details determine how components bind to the services they reference.
 
-To override an OSGi service, follow these steps:
+To override an OSGi service, you'll follow these steps:
 
 1. Identify the service you want to override, as well as any components that reference it.
 
@@ -16,7 +16,7 @@ To override an OSGi service, follow these steps:
 
    * **Component Name**: the full name of a component that references the service you're overriding
 
-   * **Reference Name**: the field name that references to the target service.
+   * **Reference Name**: the field name that references to the target service
 
    * **Reference Policy**: whether the reference is `static` or `dynamic`
 
@@ -26,17 +26,15 @@ To override an OSGi service, follow these steps:
 
    Together, a service's [Reference Policy](https://docs.osgi.org/javadoc/r5/enterprise/org/osgi/service/component/annotations/ReferencePolicy.html), [Reference Policy Option](https://docs.osgi.org/javadoc/r5/enterprise/org/osgi/service/component/annotations/ReferencePolicyOption.html), and [Cardinality](https://docs.osgi.org/javadoc/r5/enterprise/org/osgi/service/component/annotations/ReferenceCardinality.html) determine a component's conditions for adopting new services.
 
-1. Create a custom service that uses the same interface implemented by the service you're overriding.
+1. Create a new service that uses the same interface implemented by the service you're overriding.
 
-1. Give the custom service a higher ranking than the service it's overriding.
+1. Give your service a higher ranking than the service it's overriding.
 
-1. (Optional) If desired, reference and invoke the service you're overriding in your custom service.
+1. (Optional) If necessary, reference and invoke the service you're overriding in your service.
 
-The following tutorial uses [sample modules](./liferay-s1j6.zip) to demonstrate how to override an OSGi service. These modules include an API for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that references the initial implementation. Also included are alternate implementations of the API to demonstrate how to override the initial implementation.
+The [sample modules](./liferay-s1j6.zip) demonstrate how to override an OSGi service. These modules include an API for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that references the initial implementation. Also included are alternate implementations of the API to demonstrate how to override the initial implementation.
 
 ## Deploy Sample Modules for Overriding
-
-Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, and `s1j6-web`:
 
 1. Start a new [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
@@ -85,13 +83,13 @@ Follow these steps to download, build, and deploy `s1j6-api`, `s1j6-able-impl`, 
    true
    ```
 
-The provided `api` defines an OSGi service type that is implemented by the `able.impl` module, which in turn is used by the provided `portlet`. Now that everything's deployed, for the purposes of learning how to do this, you can go through the process of discovering the details of a service you want to override.
+The provided `api` defines an OSGi service type that is implemented by the `able.impl` module, which in turn is used by the provided `portlet`. Now that everything's deployed, you can experiment with how overrides work.
 
 ## Gathering OSGi Service and Reference Details
 
 Once you've identified the service you want to override, use the `scr:info` Gogo Shell command to gather its essential service and reference details. In this example, we want to override the `able.impl` service.
 
-To gather its service details run the following command:
+To gather its service details, run the following command:
 
 ```shell
 scr:info com.acme.s1j6.able.internal.S1J6AbleImpl
@@ -121,7 +119,7 @@ This abbreviated output lists the following service details for `S1J6AbleImpl`:
 
 * **Service's Class Name**: The service's full name is `com.acme.s1j6.able.internal.S1J6AbleImpl`.
 
-It also indicates that the service is used by a component within the `com.acme.s1j6.web:1.0.0` bundle. To view the component's reference configuration details, you'll need to run the `scr:info` command with the component's full name:
+It also indicates that the service is used by a component within the `com.acme.s1j6.web:1.0.0` bundle. To view the component's reference configuration details, run the `scr:info` command with the component's full name:
 
 ```shell
 scr:info com.acme.s1j6.web.internal.portlet.S1J6Portlet
@@ -145,13 +143,13 @@ References:   (total 1)
 
 This abbreviated output lists the following reference configuration details:
 
-* **Reference Name**: The name of the field that references the `S1J6AbleImpl` service is `_s1J6`.
+**Reference Name**: The name of the field that references the `S1J6AbleImpl` service is `_s1J6`.
 
-* **Reference Policy**: The component's reference policy is `static` (default).
+**Reference Policy**: The component's reference policy is `static` (default).
 
-* **Reference Policy-Option**: Since no `policy-option` is explicitly defined, it uses the default configuration, `reluctant`.
+**Reference Policy-Option**: Since no `policy-option` is explicitly defined, it uses the default configuration, `reluctant`.
 
-* **Cardinality**: Its Cardinality is both mandatory and unary (i.e., `1..1`).
+**Cardinality**: Its Cardinality is both mandatory and unary (i.e., `1..1`).
 
 While some reference configurations automatically bind to a new or higher ranking service, some require a server restart. Since `S1J6Portlet`'s reference configuration is static, reluctant, mandatory, and unary, a server restart is required before it binds to a new, higher ranking service. See [OSGi documentation](http://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-policy.option.action) for more information about how different reference configurations affect a component's behavior when new or higher ranking services become available.
 
@@ -159,15 +157,13 @@ While some reference configurations automatically bind to a new or higher rankin
 
 Once you've gathered the requisite service and reference details, you can use them to create a custom service for overriding and invoking the target service.
 
-Follow these steps:
-
 1. Declare the service a component within the OSGi framework using the `@Component` annotation.
 
-1. Implement the same interface as the target OSGi service, and identify its `service` type within the `@Component` annotation.
+1. Implement the same interface as the target OSGi service and identify its `service` type within the `@Component` annotation.
 
 1. Override the interface's methods.
 
-1. Include the `service.ranking:Integer` property within the `@Component` annotation. Ensure it's ranking is higher than the existing service.
+1. Include the `service.ranking:Integer` property within the `@Component` annotation. Ensure its ranking is higher than the existing service.
 
 1. (Optional) Reference the existing service's `component.name` to invoke it.
 
@@ -215,7 +211,7 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
    scr:info com.acme.s1j6.web.internal.portlet.S1J6Portlet
    ```
 
-   If successful, `S1J6Portlet` should be bound to `S1J6BakerImpl`, since it outranks `S1J6AbleImpl`.
+   If successful, `S1J6Portlet` is bound to `S1J6BakerImpl`, since it outranks `S1J6AbleImpl`.
 
    ```
    References:   (total 1)
