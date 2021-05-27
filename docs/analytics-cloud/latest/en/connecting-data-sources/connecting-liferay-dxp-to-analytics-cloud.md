@@ -2,11 +2,12 @@
 
 Your Liferay DXP instances are rich with web analytics data and visitor data. In order to monitor and collect website visitor information you need to setup a connection between your Liferay DXP site with Analytics Cloud by adding a Data Source.
 
-Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your Liferay DXP installation must meet the following fixpack minimum requirements:
+Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your Liferay DXP installation must meet the following fix pack minimum requirements:
 
-* 7.2 Fix Pack 5/SP2
-* 7.1 Fix Pack 18/SP4
-* 7.0 Fix Pack 90/SP13
+* 7.3 Fix Pack 1
+* 7.2 Fix Pack 11
+* 7.1 Fix Pack 21
+* 7.0 Fix Pack 97
 
 ## Adding a Data Source
 

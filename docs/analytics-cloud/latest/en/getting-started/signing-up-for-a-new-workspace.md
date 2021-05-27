@@ -2,6 +2,14 @@
 
 To start using Liferay Analytics Cloud, visit [analytics.liferay.com](https://analytics.liferay.com) and sign in with your [liferay.com](https://www.liferay.com) account email address. If you do not have a [liferay.com](https://www.liferay.com) account, you can also sign up for one from the login page. If you have not already set up multi-factor authentication for your account you are prompted to. See [Multi-Factor Authentication for more information](./multi-factor-authentication.md).
 
+```important::
+   Your Liferay DXP installation must meet the following fix pack minimum requirements:
+     * 7.3 Fix Pack 1
+     * 7.2 Fix Pack 11
+     * 7.1 Fix Pack 21
+     * 7.0 Fix Pack 97
+```
+
 Once logged in, you can either sign up for a **free trial** workspace or purchase a **paid tier** workspace by contacting sales. If you already have a workspace, you will also see your workspace listed after login.
 
 ![Sign up with a Business or Enterprise plan or begin with a Free Trial.](signing-up-for-a-new-workspace/images/01.png)

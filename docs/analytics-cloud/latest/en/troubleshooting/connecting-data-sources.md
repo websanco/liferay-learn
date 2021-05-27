@@ -71,6 +71,14 @@ Individual Profiles take longer to process and become available over time.
 
 **Error Message:** `Unsupported version. This method of connection does not support the data source Liferay version. Make sure you are connecting to Liferay 7.0/7.1 instance or try a different method of connection.`
 
+```important::
+   Your Liferay DXP installation must meet the following fix pack minimum requirements:
+     * 7.3 Fix Pack 1
+     * 7.2 Fix Pack 11
+     * 7.1 Fix Pack 21
+     * 7.0 Fix Pack 97
+```
+
 **Resolution:**
 
 1. Make sure to [connect with a Liferay DXP 7.0 or 7.1 instance].
