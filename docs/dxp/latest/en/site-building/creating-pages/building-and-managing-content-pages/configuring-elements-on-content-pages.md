@@ -92,6 +92,31 @@ You can set different style options like background color, background image, mar
 
 You can also specify a background image for a layout by [setting the layout style](#setting-the-layout-style) or provide a link for your image by [editing hyperlinks](#editing-hyperlinks).
 
+### Configuring Image Resolution with Adaptive Media
+
+> Available: Liferay DXP 7.4+.
+
+Starting with Liferay DXP 7.4, you can use [Adaptive Media](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md) to adjust the image resolution dynamically, based on the target screen size.
+
+```note::
+   Adaptive Media is enabled by default in Liferay DXP. 
+```
+
+After you [enable an image resolution](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/managing-image-resolutions.md) in Adaptive Media, the resolution is available in the Resolution drop-down menu for your Content Page image.
+
+![You can use the different image resolutions from Adaptive Media in the Content Page.](./configuring-elements-on-content-pages/images/18.gif)
+
+Consider the following when setting the image resolution in Content Pages:
+
+- When you set the image resolution to Auto, Adaptive Media selects the best resolution for the target screen size automatically.
+
+   ![When you set the image resolution to Auto, Adaptive Media selects the best resolution for the screen size.](./configuring-elements-on-content-pages/images/14.png)
+
+- You can define a fixed Resolution for a specific screen size using the [Device Display controls](./content-page-editor-user-interface-reference.md#device-display) of the Editing Toolbar and choosing the desired resolution.
+- If Adaptive Media cannot find an appropriate resolution for the target screen, the Content Page shows the original image resolution.
+
+To learn more about how to use Adaptive Media, read [Using Adapted Images in Site Content](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/using-adapted-images-in-site-content.md).
+
 ## Configuring the Grid Fragment
 
 1. Click the Grid fragment you want to configure.
@@ -177,3 +202,4 @@ To map your elements to existing content,
 - [Adding Elements to Content Pages](./adding-elements-to-content-pages.md)
 - [Content Pages Overview](./content-pages-overview.md)
 - [Content Pages User Interface Reference](./content-page-editor-user-interface-reference.md)
+- [Adaptive Media](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md)
