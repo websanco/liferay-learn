@@ -82,11 +82,11 @@ You can set different style options like background color, background image, mar
 ## Editing Images
 
 1. Click the image you want to edit.
-1. In the Content Page sidebar, you can configure the image using three different options:
+1. In the Content Page sidebar, you can configure:
 
-    - *Link*: enter the URL for your image.
+    - *Image Source*: select *Direct* to use an image from your computer or from the Documents and Media library, or choose *Mapping* to [map the image from existing content](#mapping-content). Optionally, set an [image *Resolution*](#configuring-image-resolution-with-adaptive-media) (available in Liferay DXP 7.4+) and *Image Description*.
+    - *Link*: Select the URL or Page to open when you click the image.
     - *Image*: select an image from your computer or from the Documents and Media library.
-    - *Mapping*: select an image by [mapping content](#mapping-content).
 
     ![When editing an image, you can enter a URL, select an image from Documents and Media, or set a link for the image.](./configuring-elements-on-content-pages/images/09.png)
 
