@@ -50,7 +50,7 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 
 			String url =
 				"https://api.geodatasource.com/cities?key=" + key +
-					"&format=xml&lat=37.3861&lng=-122.084";
+					"&format=xml&lat=33.9977&lng=-117.8145";
 
 			return _createDDMDataProviderResponse(
 				_ddmDataProviderInstanceSettings.getSettings(
