@@ -19,7 +19,13 @@ The client to site VPN feature supports the following protocols:
 * IPsec (IKEv2)
 * OpenVPN
 
-Subscribers can choose one of the protocols (IPSec or OpenVPN) to perform the connection from DXP Cloud console settings page for the desired environment. Any number of forwarding ports can be configured for the connection in the console UI. See [Connecting a VPN Server to DXP Cloud](./connecting-a-vpn-server-to-dxp-cloud.md) for more information.
+Subscribers can choose one of the protocols (IPSec or OpenVPN) to perform the connection from DXP Cloud console settings page for the desired environment. Any number of forwarding ports can be configured for the connection in the console UI.
+
+```note::
+   Using the ``IKEv2`` protocol with an IPsec server, you can either use ``MSCHAPv2`` or ``TLS``authentication protocols. See `Basic Setup for an IPsec Server <./configuring-a-vpn-server.md#basic-setup-for-an-ipsec-server>`__ for more information.
+```
+
+See [Connecting a VPN Server to DXP Cloud](./connecting-a-vpn-server-to-dxp-cloud.md) for more information.
 
 ## Connecting DXP Cloud to an IPSec VPN Server
 
