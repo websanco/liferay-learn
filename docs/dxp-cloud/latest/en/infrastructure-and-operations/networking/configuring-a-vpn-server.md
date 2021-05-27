@@ -6,6 +6,8 @@ The following scenario walks through how to set up an IPsec or OpenVPN VPN serve
    Configuration commands and values are subject to change and should be adapted for your specific environment.
 ```
 
+`EAP-TLS` and `EAP-MSCHAPV2` network protocols are both supported for VPN connections.
+
 ## Basic Setup for an IPsec Server
 
 To configure an IPsec test server:
@@ -41,6 +43,12 @@ To configure an IPsec test server:
       eap_identity=%identity
     ```
 
+    If you want to use the `EAP-TLS` protocol instead of only `EAP-MSCHAPv2`, add `eap-tls` to the `rightauth` line of the configuration:
+
+    ```
+    rightauth=eap-mschapv2,eap-tls!
+    ```
+
 1. On your server, replace the `SERVER_EXTERNAL_IP` with your VPN server's external IP and `USERNAME/PASSWORD` with your values:
 
     ```properties
@@ -54,9 +62,12 @@ To configure an IPsec test server:
     ```bash
     sudo apt-get update
     sudo apt install -y strongswan strongswan-pki
+    sudo apt install -y libstrongswan-extra-plugins
     ```
 
-1. Set up the security certificates and keys:
+1. Set up the security certificates and keys.
+
+    If you want to use `EAP-MSCHAPV2`, then run these commands to generate the certificate:
 
     ```bash
     mkdir -p ~/pki/{cacerts,certs,private}
@@ -76,6 +87,47 @@ To configure an IPsec test server:
     >  ~/pki/certs/server-cert.pem
 
     sudo cp -r ~/pki/* /etc/ipsec.d/
+    ```
+
+    Otherwise, to use `EAP-TLS`, run these commands:
+
+    ```bash
+    mkdir -p ~/pki/certs
+    chmod 700 ~/pki
+    cd ~/pki/certs
+
+    ipsec pki --gen --outform pem > caKey.pem
+    ipsec pki --self --in caKey.pem --dn "CN=VPN CA" --ca --outform pem > caCert.pem
+
+    openssl x509 -in caCert.pem -outform der | base64 -w0 ; echo
+
+    export PASSWORD="password"
+    export USER_NAME="client"
+
+    ipsec pki --gen --outform pem > "${USER_NAME}Key.pem"
+    ipsec pki --pub --in "${USER_NAME}Key.pem" \
+    | ipsec pki --issue --cacert caCert.pem \
+      --cakey caKey.pem \
+      --dn "CN=${USER_NAME}" \
+      --san "${USER_NAME}" \
+      --flag clientAuth \
+      --outform pem \
+    > "${USER_NAME}Cert.pem"
+
+    openssl pkcs12 -in "${USER_NAME}Cert.pem" \
+      -inkey "${USER_NAME}Key.pem" \
+      -certfile caCert.pem \
+      -export -out "${USER_NAME}.p12" \
+      -password "pass:${PASSWORD}"
+
+    cd ..
+    sudo cp -r ./certs/* /etc/ipsec.d/ 
+    ```
+
+1. If you are using `EAP-TLS` for your VPN connection, then add this to your `/etc/ipsec.secrets` file (using your VPN password):
+
+    ```
+    : P12 client.p12 'password' # key filename inside /etc/ipsec.d/private directory
     ```
 
 1. Configure [StrongSwan](https://www.strongswan.org/) (see the `server.conf` file described above).
