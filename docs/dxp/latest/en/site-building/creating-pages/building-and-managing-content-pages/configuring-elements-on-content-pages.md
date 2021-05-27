@@ -86,7 +86,6 @@ You can set different style options like background color, background image, mar
 
     - *Image Source*: select *Direct* to use an image from your computer or from the Documents and Media library, or choose *Mapping* to [map the image from existing content](#mapping-content). Optionally, set an [image *Resolution*](#configuring-image-resolution-with-adaptive-media) (available in Liferay DXP 7.4+) and *Image Description*.
     - *Link*: Select the URL or Page to open when you click the image.
-    - *Image*: select an image from your computer or from the Documents and Media library.
 
     ![When editing an image, you can enter a URL, select an image from Documents and Media, or set a link for the image.](./configuring-elements-on-content-pages/images/09.png)
 

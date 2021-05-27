@@ -24,8 +24,12 @@ When you access this 'Services' Content Page from your computer, the grid layout
     ![Select the screen size you want to customize in the Device Display section.](./building-responsive-layouts-with-the-grid-fragment/images/06.png)
 
 1. In the Editing Sidebar, under the *Styles* column, select the preferred layout options for the screen size. For example, one module per row works much better for the *Portrait Phone* layout option.
+1. Configure the image *Resolution* for the target screen size (available in Liferay DXP 7.4+), or leave the default *Auto* option to use [Adaptive Media](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md) .
+
+    ![Select the image resolution for the target screen size or leave the Auto option to use Adaptive Media.](./building-responsive-layouts-with-the-grid-fragment/images/05.png)
+
 1. Click *Publish*.
-1. Optionally, click on the Simulation (![Simulation](../../../images/icon-simulation.png)) button on the main toolbar to see your changes on the target device.
+1. Optionally, click on the *Simulation* (![Simulation](../../../images/icon-simulation.png)) button on the main toolbar to see your changes on the target device.
 
     ![Use the Device Display and Styles options in the Content Page editor to customize the Grid Fragment's layout.](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 

@@ -1,14 +1,14 @@
 # Using Adapted Images in Site Content
 
-Adaptive Media works behinds the scenes so that when blog and web content creators upload an image for their content, the app automatically adapts the image. Adaptive Media identifies each adapted image in the content's HTML with a `data-fileentryid` attribute that is replaced with the latest adapted image when the user views the content. This lets Adaptive Media deliver the latest adapted images to your content, even if the content existed prior to those images.
+Adaptive Media works in the background creating different resolutions for the images you upload to Liferay DXP. When Blog, Web Content, and Content Page creators use these images, Adaptive Media chooses the best resolution for the target screen size automatically. Adaptive Media identifies each adapted image in the content's HTML with a `data-fileentryid` attribute that is replaced with the latest adapted image when the user views the content. This lets Adaptive Media deliver the latest adapted images to your content, even if the content existed prior to those images.
 
-```tip::
-   If Adaptive Media is uninstalled, the original images are displayed in the blog entries and web content articles.
+```note::
+   If you `disable Adaptive Media for an image <./managing-image-resolutions.md>`_, the original image is displayed in the Blog entries, Web Content articles, and Content Pages.
 ```
 
 ## Including Adapted Images in Content
 
-When uploading images in a blog or web content, Adaptive Media works only with images added from the _Blog Images_, _Documents and Media_, and _Upload_ tabs. Additionally, adapted images can only be applied to a blog entry's content, not cover images. Adaptive Media works for images added to a blog entry via drag and drop, as the image is automatically uploaded to the Blog Images repository, adapted, and then included in the blog entry's content. You can see this by inspecting the HTML and checking that the image contains the `<img>` tag and `data-fileentryid` attribute.
+When [adding images to Content Pages](../../../../site-building/creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md), Adaptive Media works for images you select directly and mapped images. When uploading images in a Blog or Web Content Adaptive Media works only with images added from the _Blog Images_, _Documents and Media_, and _Upload_ tabs. . Additionally, adapted images can only be applied to a blog entry's content, not cover images. Adaptive Media works for images added to a blog entry via drag and drop, as the image is automatically uploaded to the Blog Images repository, adapted, and then included in the blog entry's content. You can see this by inspecting the HTML and checking that the image contains the `<img>` tag and `data-fileentryid` attribute.
 
 For web content articles, Adaptive Media works only with images added from the file selector's _Documents and Media_ tab. Unlike blogs, Adaptive Media doesn't deliver adapted images for images added to web content articles via drag and drop.
 
