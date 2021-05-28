@@ -102,4 +102,3 @@ Log in with your Dynatrace credentials to check log trails and create custom das
 * [Introduction to the Liferay DXP Service](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md)
 * [Real-Time Alerts](./real-time-alerts.md)
 * [Quotas](./quotas.md)
-* [Advanced Monitoring: APM Tools - Dynatrace](https://help.liferay.com/hc/en-us/articles/360017896452-Advanced-Monitoring-APM-Tools-Dynatrace)
