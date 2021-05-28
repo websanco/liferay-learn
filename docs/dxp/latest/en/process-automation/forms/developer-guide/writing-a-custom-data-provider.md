@@ -2,10 +2,10 @@
 
 Liferay Forms fields can be populated using a [Data Provider](../data-providers/data-providers-overview.md). Out of the box, there's a REST Data Provider that provides a flexible way to consume data from most REST endpoints. See [Using the REST Data Provider to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md) to learn more.
 
-If the out of the box data provider doesn't serve your purpose, use the `DDMDataProvider` extension point to create your own.
+If the REST Data Provider doesn't serve your purpose, use the `DDMDataProvider` extension point to create your own.
 
 ```note::
-   The example Data Provider demonstrated here consumes data from the `GeoDataSource™ Location Search Web Service <https://www.geodatasource.com/web-service/location-search>`__. The API key of a Liferay employee is hard-coded into this sample; please do not overuse the sample. Never use it in production environments.
+   The example Data Provider demonstrated here consumes XML data from the `GeoDataSource™ Location Search Web Service <https://www.geodatasource.com/web-service/location-search>`__. The API key of a Liferay employee is hard-coded into this sample; please do not overuse the sample. Never use it in production environments.
 ```
 
 ## Deploy a Custom Data Provider
@@ -85,11 +85,103 @@ To use the data provider in a form,
    1. Publish the form and verify that the list is populated from the data provider:
 
    ![The Data Provider returns a list of cities within 20 km of Liferay.](./writing-a-custom-data-provider/images/03.png)
+
 This is a nice example, but it hard codes the URL for the data provider. If you allow the URL to be configurable, you can use this same data provider for other cities, or any other URL that serves XML. 
+
+## Understanding the B4D8 DDM Data Provider
+
+The `Acme B4D8 Implementation` project contains a custom data provider for returning XML from a specific URL. It contains three classes: `B4D8DDMDataProvider`, `B4D8DDMDataProviderSettingsProovider`, and `B4D8DDMDataProviderSettings`.
+
+### Understanding the `DDMDataProvider`
+
+The data provider class implements the `com.liferay.dynamic.data.mapping.data.provider.DDMDataProvider` interface, overriding two methods: `getData` and `getSettings`. These method names capture the essence of a data provider: it provides data based on settings (settings are optional though).
+
+Implementing the interface's methods and providing two `@Component` settings is enough to register the data provider with the Liferay Forms application, so it appears naturally in the forms UI alongside Liferay's default data provider.
+
+```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+   :language: java
+   :lines: 38-41,43-46,65-66,67-68,70-71
+```
+
+The `getData` method does most of the work: it must return a `DDMDaProviderResponse` that the Forms framework understands. For the B4D8 data provider, these are the highlights:
+
+1. The URL to our XML data source is constructed:
+
+   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+      :dedent: 3
+      :language: java
+      :lines: 49-53
+   ```
+
+1. The `_createDDMDataProviderResponse` method is called. This is where the construction of the response object happens. To call this method, give it two parameters: the data provider settings and the XML document returned from the remote API. The logic for both is in separate private utility methods. Importantly, `HttpUtil.URLtoString(url)` is the call that executes the URL to retrieve the XML. 
+
+1. Now the pieces are in place to conditionally (based on the output parameter settings of the data provider instance) build the response. The logic involves 
+   - Begin building  the response using a static inner `Builder` class's `newBuilder` method:
+
+      ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+         :dedent: 2
+         :language: java
+         :lines: 77-78
+      ```
+
+   - Loop through the data provider's output parameter settings. In [Test the Data Provider](#test-the-data-provider) you added only one set of outputs (with three nested fields); if you create a data provider with additional outputs, by clicking the plus button in the data provider settings form, this loop will parse each one.
+
+   - For each output, get the XML nodes from the returned XML document, the output parameter ID, and the type of output data requested (in the example above you chose List).
+
+   - Check the output parameter type and call the `withOutput` method of the response builder. Each call provides the output parameter ID and the content of the matching node (or nodes, if a list is requested). 
+
+      ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+         :dedent: 2
+         :language: java
+         :lines: 80-118
+      ```
+
+
+   - At the end of the method, return the response: `return builder.build()`.
+
+### Understanding the `DDMDataProviderSettings`
+
+The data provider settings class defines the settings that this data provider needs, in two parts:
+
+1. The layout of the settings form itself is defined using `@DDMForm*` class-level annotations:
+
+   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
+      :language: java
+      :lines: 10-25
+   ```
+
+   Any fields that configure your data provider must be added to the settings form in this `@DDMForm`. This snippet currently uses only the inherited `outputParameters` field which is accessible because the `B4D8DDMDataProviderSettings` class extends `DDMDataProviderParameterSettings`. See [Add Data Provider Settings](writing-a-custom-data-provider.md#add-data-provider-settings) to learn about adding more settings to the form.
+
+1. The class declaration and body determines what fields are available. Currently no additional settings are needed, so the class body is blank.
+
+   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
+      :language: java
+      :lines: 26-28
+   ```
+
+   ```note:: 
+      In addition to the ``outputParameters`` field, an ``inputParameters`` field is also provided in `DDMDataProviderParameterSettings <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/data/provider/DDMDataProviderParameterSettings.java>`__ 
+   ```
+
+![The data provider settings form is ready for work.](./writing-a-custom-data-provider/images/05.png)
+
+The settings form currently contains some default fields needed by all data providers that appear in the Forms UI: Name, Description, and a section for defining its permissions. You get these simply by adding your settings with the `_ddmDataProviderInstanceSettings.getSettings(...)` call. The Outputs field is the inherited `outputParameters` field you added to the layout, which is really a nested field consisting of a Label, Path, and Type.
+
+### Understanding the `DDMDataProviderSettingsProvider`
+
+The settings provider class contains one method, `getSettings`, which returns the `DDMDataProviderSettings` class for a given data provider. It's used to instantiate a settings class in the data provider, so you can get the settings values and configure the data provider accordingly.
+
+Get a reference to the `B4D8DDMDataProviderSettingsProvider` and then call its `getSettings` method from the data provider class's identically named `getSettings` method:
+
+```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+   :dedent: 1
+   :language: java
+   :lines: 67-70,158-160
+```
 
 ## Add Data Provider Settings
 
-To add Data Provider Settings, edit the `DataProviderSettings` and the `DataProvider`. 
+To add Data Provider Settings, add a field to the `DataProviderSettings` and update the `DataProvider`. 
 
 ### Add a URL Field to the Settings
 
@@ -124,7 +216,7 @@ Now the settings are ready to be used in the `DataProvider` class.
 
 Now you need a few updates to the `DataProvider` class: 
 
-- Validate that a valid URL is passed
+- Validate the URL added in the settings form.
 - Instantiate a `DataProviderSettings` object
 - Set the URL into the response
 
@@ -158,8 +250,7 @@ Now you need a few updates to the `DataProvider` class:
         _toDocument(HttpUtil.URLtoString(options)));
     ```
 
-
-Feel free to copy in this new `try` block in the `getData` method, instead of making the above replacements one by one:
+Feel free to overwrite the entire `try` block in the `getData` method, instead of making the above replacements one by one:
 
 ```java
 try {
@@ -189,7 +280,6 @@ To use the data provider in a form,
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-<!-- -8.0342896,-34.9239708 -->
 1. Add an instance of the Data Provider:
       - **Name:** Cites Near Recife, Pernambuco (Brazil)
       - **Description:** GeoDataSource Location Search--Fetch the cities within 20 km of Liferay's Brazil office.
