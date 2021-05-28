@@ -35,7 +35,7 @@ See the further sections below for more details.
 
 These limitations apply to every service in a DXP Cloud environment:
 
-* **Access to Old Logs**: A maximum of 10,000 lines of logs from the last 30 days are available for each service. [Submit a Support request](https://help.liferay.com/) to access older logs (up to a year old).
+* **Access to Old Logs**: By default, logs are only available from the last 30 days are available for each service. [Submit a Support request](https://help.liferay.com/) to access older logs (up to a year old).
 
 * **Additional Instances per Service**: Your subscription plan determines the allowed [`scale` setting](../manage-and-optimize/auto-scaling.md) for your services. By default, all services will have only one additional instance (the Search service must use an odd number of additional instances). The `scale` setting will begin already configured to use the purchased number of instances for your subscription plan.
 
@@ -119,7 +119,7 @@ These limitations apply to the [CI service](../platform-services/continuous-inte
 
 * **Resource Allocation**: The RAM and number of vCPUs allocated to the CI service are determined by your subscription plan. The default allocation is 4 vCPUs and 8 GB of RAM for the service.
 
-* **Server capacity**: Your subscription plan determines the size of the data volume for the CI server.  The default size is 10 GB.
+* **Server capacity**: Your subscription plan determines the size of the data volume for the CI server.  The default size is 100 GB.
 
 ### Builds
 
