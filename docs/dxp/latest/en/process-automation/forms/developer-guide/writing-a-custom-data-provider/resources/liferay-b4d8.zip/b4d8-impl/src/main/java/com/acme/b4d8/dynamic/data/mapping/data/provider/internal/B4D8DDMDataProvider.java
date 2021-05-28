@@ -11,6 +11,7 @@ import com.liferay.dynamic.data.mapping.model.DDMDataProviderInstance;
 import com.liferay.dynamic.data.mapping.service.DDMDataProviderInstanceService;
 import com.liferay.portal.kernel.security.xml.SecureXMLFactoryProviderUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.util.Http;
 import com.liferay.portal.kernel.util.HttpUtil;
 import com.liferay.portal.kernel.util.KeyValuePair;
 import com.liferay.portal.kernel.util.Validator;
@@ -46,18 +47,19 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 		throws DDMDataProviderException {
 
 		try {
-			String key = "LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA";
-
-			String url =
-				"https://api.geodatasource.com/cities?key=" + key +
-					"&format=xml&lat=33.9977&lng=-117.8145";
-
-			return _createDDMDataProviderResponse(
+			B4D8DDMDataProviderSettings b4d8DDMDataProviderSettings =
 				_ddmDataProviderInstanceSettings.getSettings(
 					_getDDMDataProviderInstance(
 						ddmDataProviderRequest.getDDMDataProviderId()),
-					B4D8DDMDataProviderSettings.class),
-				_toDocument(HttpUtil.URLtoString(url)));
+					B4D8DDMDataProviderSettings.class);
+
+			Http.Options options = new Http.Options();
+
+			options.setLocation(b4d8DDMDataProviderSettings.url());
+
+			return _createDDMDataProviderResponse(
+				b4d8DDMDataProviderSettings,
+				_toDocument(HttpUtil.URLtoString(options)));
 		}
 		catch (Exception exception) {
 			throw new DDMDataProviderException(exception);

@@ -1,6 +1,7 @@
 package com.acme.b4d8.dynamic.data.mapping.data.provider.internal;
 
 import com.liferay.dynamic.data.mapping.annotations.DDMForm;
+import com.liferay.dynamic.data.mapping.annotations.DDMFormField;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormLayout;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutColumn;
 import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutPage;
@@ -15,7 +16,7 @@ import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSe
 				@DDMFormLayoutRow(
 					{
 						@DDMFormLayoutColumn(
-							size = 12, value = "outputParameters"
+							size = 12, value = {"url", "outputParameters"}
 						)
 					}
 				)
@@ -25,4 +26,12 @@ import com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderParameterSe
 )
 public interface B4D8DDMDataProviderSettings
 	extends DDMDataProviderParameterSettings {
+
+	@DDMFormField(
+		label = "%url", required = true,
+		validationErrorMessage = "%please-enter-a-valid-url",
+		validationExpression = "isURL(url)"
+	)
+	public String url();
+
 }
