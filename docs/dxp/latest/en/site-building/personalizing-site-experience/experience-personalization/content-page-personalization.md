@@ -5,7 +5,7 @@ You can tailor your Content Page to different groups of users, providing each gr
 Personalizing your Content Page for different users is a two-step process:
 
 1. [Define a Segment](../segmentation/creating-and-managing-user-segments.md) for the users you want to provide a personalized experience.
-2. [Create a Experience](#creating-a-new-content-page-experience) with customized content for your Segment.
+2. [Create a Experience](./creating-and-managing-experiences.md) with customized content for your Segment.
 
 ## Understanding How Experiences Work
 
