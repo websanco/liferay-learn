@@ -5,7 +5,7 @@
 The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access all of the content generated across Sites and Asset Libraries and audit this content in the [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool).
 
 ```note::
-   For analyzing performance metrics of your content, use the `Content Performance Tool <../content-performance-tool/about-the-content-performance-tool.md>`_ .
+   For analyzing performance metrics of your content, use the `Content Performance panel <../content-performance-panel/about-the-content-performance-panel.md>`_ .
 ```
 
 Using the Content Dashboard, content authors and marketers can analyze their content in different ways:
@@ -34,12 +34,12 @@ The [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool) (1
 
 The [Contents List](./content-dashboard-interface.md#contents-list) (2) shows content across all Sites and Asset Libraries. From here, you can sort and filter your information using built-in or custom filters. The Content Audit Tool chart changes dynamically based on the filters that you set.
 
-From the Contents List, you can access the [Information sidebar](./content-dashboard-interface.md#information-sidebar) and the [Content Performance tool](../content-performance-tool/about-the-content-performance-tool.md). The Information sidebar provides different metadata for each asset, while the Content Performance tool gathers statistics for your content, like the number of reads and views or the traffic channels.
+From the Contents List, you can access the [Information sidebar](./content-dashboard-interface.md#information-sidebar) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar provides different metadata for each asset, while the Content Performance panel gathers statistics for your content, like the number of reads and views or the traffic channels.
 
 To learn more about the Content Dashboard interface and how to customize the information for your needs, see the [Content Dashboard Interface](./content-dashboard-interface.md) topic.
 
 ## Related Information
 
 - [Content Dashboard Interface](./content-dashboard-interface.md)
-- [About the Content Performance Tool](../content-performance-tool/about-the-content-performance-tool.md)
+- [About the Content Performance Panel](../content-performance-panel/about-the-content-performance-panel.md)
 - [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)

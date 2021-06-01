@@ -10,9 +10,9 @@ The Content Dashboard interface has the following areas:
 
 ![The Content Dashboard user interface.](./content-dashboard-interface/images/05.png)
 
-When you [open the Content Dashboard](#accessing-the-content-dashboard) page, you can see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents List](#contents-list) (2) at the button. From the Contents list, you can access the [Information sidebar](#information-sidebar) (3) and the [Content Performance Tool](../content-performance-tool/about-the-content-performance-tool.md). The Information sidebar and the Content Performance Tool are collapsable elements that show additional details for each item in the Contents List.
+When you [open the Content Dashboard](#accessing-the-content-dashboard) page, you can see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents List](#contents-list) (2) at the button. From the Contents list, you can access the [Information sidebar](#information-sidebar) (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar and the Content Performance panel are collapsable elements that show additional details for each item in the Contents List.
 
-To access the Information sidebar, click the Actions Menu (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* or *View Metrics* option. Alternatively, hover over the article and click the *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Tool](../content-performance-tool/about-the-content-performance-tool.md).
+To access the Information sidebar, click the Actions Menu (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* or *View Metrics* option. Alternatively, hover over the article and click the *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Panel](../content-performance-panel/about-the-content-performance-panel.md).
 
 ## Accessing the Content Dashboard
 
@@ -103,9 +103,9 @@ For each entry in the Contents list, you can access the following options using 
 - *View* (![View](../../images/icon-preview.png)): Opens the Display Page in view mode.
 - *Edit* (![Edit](../../images/icon-edit.png)): Opens the content in edit mode.
 - *Info* (![Information](../../images/icon-information.png)): Opens the [Information sidebar](#information-sidebar).
-- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance Tool](../content-performance-tool/about-the-content-performance-tool.md).
+- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md).
 
-    ![Access the Information sidebar and Content Performance Tool from the Actions menu or the icons on each content row.](./content-dashboard-interface/images/11.png)
+    ![Access the Information sidebar and Content Performance panel from the Actions menu or the icons on each content row.](./content-dashboard-interface/images/11.png)
 
 ```note::
    You can use the *View*, *Info*, and *View Metrics* options for content based on a Display Page Template. You can use the *Edit* option when you have Edit permission for the content.
@@ -121,7 +121,7 @@ To filter the content:
 
 The Filter Editor area shows your filters and the total number of results. To remove one or more filters, click the *Close* (![Close](../../images/icon-times.png)) button next to the filter's name, or click *Clear* to remove all the filters and reset the Contents list. In addition to the predefined and custom filters, you can search and filter the assets in the Content View using keywords in the Search field.
 
-![Use the filter editor to remove a specific filter or all of them from the filter area](./content-dashboard-interface/images/01.png)
+![Use the filter editor to remove a specific filter or all of them from the filter area.](./content-dashboard-interface/images/01.png)
 
 To sort the content:
 
@@ -152,5 +152,5 @@ To open the Information sidebar:
 ## Related Information
 
 - [About the Content Dashboard](./about-the-content-dashboard.md)
-- [About the Content Performance Tool](../content-performance-tool/about-the-content-performance-tool.md)
+- [About the Content Performance Panel](../content-performance-panel/about-the-content-performance-panel.md)
 - [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
