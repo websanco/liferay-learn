@@ -177,16 +177,16 @@ function generate_static_html {
 		done
 
 		#
-		# Include unbuilt resources (root level files only) in the built site.
+		# Include an article-name/images folder in the output folder if there's a *.mp4 file in the input folder.
 		#
 
-		for resources_dir in $(find build/input/"${product_version_language_dir_name}" -name resources -prune -type d)
+		for images_dir in $(find build/input/"${product_version_language_dir_name}" -name images -prune -type d)
 		do
-			if [ -n $(find "${resources_dir}" -maxdepth 1 -type f) ]
+			if [[ -n $(find "${images_dir}" -name "*.mp4" -type f) ]]
 			then
-				mkdir -p "${resources_dir/input/output}"
+				mkdir -p "${images_dir/input/output}"
 
-				find "${resources_dir}" -maxdepth 1 -type f -exec cp {} "${resources_dir/input/output}" \;
+				find "${images_dir}" -name "*.mp4" -type f -exec cp {} "${images_dir/input/output}" \;
 			fi
 		done
 
