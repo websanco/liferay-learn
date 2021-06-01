@@ -1,6 +1,6 @@
 # Categorizing a Configuration
 
-When you register a configuration interface, the UI for your app is generated in *System Settings* &rarr; *Platform* &rarr; *Third Party*. This default categorization can easily be changed.
+When you register a configuration interface, the UI for your app is generated in *System Settings* &rarr; *Platform* &rarr; *Third Party*. You can easily change this. 
 
 ## Specifying an Existing Category
 
@@ -18,19 +18,19 @@ Specify the category for your UI by placing an `@ExtendedObjectClassDefinition` 
 @ExtendedObjectClassDefinition(category = "blogs")
 ```
 
-Import the `@ExtendedObjectClassDefinition` class with:
+Import the `@ExtendedObjectClassDefinition` class:
 
 ```java
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition
 ```
 
-Redeploy your application and the configuration UI will now be located under *Content and Data* &rarr; *Blogs*.
+Redeploy your application and the configuration UI is now under *Content and Data* &rarr; *Blogs*.
 
 ## Creating New Sections and Categories
 
 If you prefer your own section and category, you can create them by implementing the `ConfigurationCategory` interface.
 
-If you followed the example project in [Setting and Accessing Configurations](./setting-and-accessing-configurations), this code can be added to the `configuration` folder of the application. This is the same folder that holds the configuration interface Java file. The code below creates a foobar section and a foobar category:
+If you followed the example project in [Setting and Accessing Configurations](./setting-and-accessing-configurations), this code can be added to the application's `configuration` folder. This is the same folder that holds the configuration interface Java file. The code below creates a foobar section and a foobar category:
 
 ```java
 package com.acme.e3q3.web.internal.configuration;
