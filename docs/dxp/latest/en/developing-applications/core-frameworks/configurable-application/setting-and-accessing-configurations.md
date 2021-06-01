@@ -1,6 +1,6 @@
 # Setting and Accessing Configurations
 
-Liferay's configuration framework can be used to add a settings UI for a MVC Portlet.
+You can use Liferay's configuration framework to add a settings UI for a MVC Portlet.
 
 ## See the Example Portlet
 
@@ -31,8 +31,9 @@ Liferay's configuration framework can be used to add a settings UI for a MVC Por
 
 1. Confirm the deployment in the Liferay Docker container console.
 
-    ```bash
+    ```
     STARTED com.acme.e3q3.web.0.0 [1650]
+    ```
 
 1. Verify that the example module is working. Open your browser to `https://localhost:8080`
 
@@ -40,19 +41,19 @@ Liferay's configuration framework can be used to add a settings UI for a MVC Por
 
     ![Add the E3Q3 Portlet to a page.](./setting-and-accessing-configurations/images/01.png)
 
-    The UI shows a welcome message along with the 3 attributes that are configurable: font color, font family, and font size.
+    The UI shows a welcome message along with the three configurable attributes: font color, font family, and font size.
 
-1. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under *Platform* click *Third Party*. Click the name of the sample application on the left.
+1. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Platform click *Third Party*. Click the name of the sample application on the left.
 
     ![Click the name of the application in the Third Party list.](./setting-and-accessing-configurations/images/02.png)
 
-    Try inputting a different font color, font family, and font size. Click the *Update* button and go back to your page with the published widget. Verify that the attributes have changed.
+    Try entering a different font color, font family, and font size. Click the *Update* button and go back to your page with the published widget. Verify that the attributes have changed.
 
-Now let's see how the configuration framework works.
+Here's how the configuration framework works.
 
 ## Creating the Configuration Interface
 
-Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). It also defines the attributes that are configurable.
+Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). It also defines the configurable attributes. 
 
 In the sample project, the `E3Q3WebConfiguration.java` file is the configuration interface. 
 
@@ -61,14 +62,14 @@ In the sample project, the `E3Q3WebConfiguration.java` file is the configuration
    :lines: 5-17
 ```
 
-Note, for this interface there is no scope defined so the configuration scope is automatically set to `SYSTEM`.
+Note, for this interface no scope is defined, so the configuration scope is set automatically to `SYSTEM`.
 
-The interface has three attributes that are configurable: font color, font family, and font size. Note that color and family are type `string` and size is type `int`.
+The interface has three configurable attributes: font color, font family, and font size. Note that color and family are type `string` and size is type `int`.
 
-`Meta.OCD` registers this class as a configuration with a specific id. 
+`Meta.OCD` registers this class as a configuration with a specific ID. 
 
 ```important::
-    Note that the id must be the fully qualified class name (FQCN) of the configuration interface.
+    Note that the ID must be the fully qualified class name (FQCN) of the configuration interface.
 ```
 
 `Meta.AD` specifies [optional metadata](http://bnd.bndtools.org/chapters/210-metatype.html) about the attribute such as a default value or whether the attribute is a required field. Note that if an attribute value is required but a default is not set, an administrator must set a value in settings for the application to work properly.
@@ -83,7 +84,7 @@ Next, see how the configuration is read by the MVC Portlet.
     configurationPid = "com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration"
     ```
 
-1. The `activate()` method has an `@Activate` annotation that is used to invoke the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
+1. The `activate()` method has an `@Activate` annotation that invokes the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
 
     ```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
         :dedent: 1
@@ -105,7 +106,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 ## Accessing the Configuration from a JSP
 
-1. The configuration interface is added to the JSP with the following import statement:
+1. The following import statement adds the configuration interface to the JSP: 
 
     ```markup
     <%@ page import="com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration" %>
@@ -119,13 +120,13 @@ Next, see how the configuration is read by the MVC Portlet.
     %>
     ```
 
-1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` are now available to be used in the JSP. 
+1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` can now be used in the JSP. 
 
 ## Implementing a Dropdown Selection UI
 
-The sample project has 3 attributes that can be configured. Currently the attributes must be manually inputted into a text input field but this can be further customized.
+The sample project has three attributes that can be configured. Currently the attributes must be manually entered into a text input field, but this can be further customized.
 
-For example, a dropdown list can be used for the font family attribute instead of an input field. In the project's configuration interface, replace the `@Meta.AD` annotation with the following:
+For example, you can use a dropdown list for the font family attribute instead of an input field. In the project's configuration interface, replace the `@Meta.AD` annotation with this:
 
 ```java
 @Meta.AD(
