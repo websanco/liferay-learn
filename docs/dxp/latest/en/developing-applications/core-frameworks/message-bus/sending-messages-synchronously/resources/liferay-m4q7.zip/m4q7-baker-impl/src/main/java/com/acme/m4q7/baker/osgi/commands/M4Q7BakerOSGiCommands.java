@@ -20,15 +20,12 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"destination.name=" + M4Q7BakerOSGiCommands.M4Q7_BAKER_DESTINATION,
-		"osgi.command.function=sendPayload", "osgi.command.scope=m4q7.baker"
+		"destination.name=acme/m4q7_baker", "osgi.command.function=sendMessage",
+		"osgi.command.scope=m4q7.baker"
 	},
 	service = MessageListener.class
 )
 public class M4Q7BakerOSGiCommands implements MessageListener {
-
-	public static final String M4Q7_BAKER_DESTINATION =
-		"acme/m4q7_baker_destination";
 
 	@Override
 	public void receive(Message message) {
@@ -37,12 +34,12 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 		}
 	}
 
-	public void sendPayload(String payload) {
+	public void sendMessage(String payload) {
 		try {
 			Message message = new Message();
 
 			message.setPayload(payload);
-			message.setResponseDestinationName(M4Q7_BAKER_DESTINATION);
+			message.setResponseDestinationName("acme/m4q7_baker");
 
 			_synchronousMessageSender.send(
 				"acme/m4q7_able_destination", message, 10000);
@@ -54,12 +51,9 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 
 	@Activate
 	private void _activate(BundleContext bundleContext) {
-		DestinationConfiguration destinationConfiguration =
-			DestinationConfiguration.createSerialDestinationConfiguration(
-				M4Q7_BAKER_DESTINATION);
-
 		Destination destination = _destinationFactory.createDestination(
-			destinationConfiguration);
+			DestinationConfiguration.createSerialDestinationConfiguration(
+				"acme/m4q7_baker"));
 
 		_serviceRegistration = bundleContext.registerService(
 			Destination.class, destination,
