@@ -36,6 +36,12 @@ This tool is the graphical area at the top of the Content Dashboard page. The ch
    If the Content Audit Tool doesn't show the expected chart, `verify your Categories <../tags-and-categories/defining-categories-and-vocabularies-for-content.md>`__ for the global Vocabularies and ensure that `your content is categorized <../tags-and-categories/organizing-content-with-categories-and-tags.md>`__.
 ```
 
+The following video shows and overview of the Content Audit tool:
+
+<video width="100%" height="100%" controls>
+    <source src="./content-dashboard-interface/images/14.mp4" type="video/mp4">
+</video>
+
 In the Content Audit Tool interface you can find:
 
 - Chart legend (1)

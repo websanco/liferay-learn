@@ -44,6 +44,12 @@ When you [create a new Vocabulary](./defining-categories-and-vocabularies-for-co
 
 The visibility option is useful when you need to separate internal and external categorization. For example, your Marketing department may want to create Internal categories for organizing web content according to a specific target audience or criteria (for example, "USA visitors", or "High-Margin"), without exposing these categories to consumers. At the same time, you may want to use public categories to provide relevant search results.
 
+The following video shows and overview of the Vocabularies visibility and the built-in [Global Vocabularies](#default-vocabularies):
+
+<video width="100%" height="100%" controls>
+    <source src="./organizing-content-with-categories-and-tags/images/10.mp4" type="video/mp4">
+</video>
+
 Before configuring your vocabulary's visibility, consider these things:
 
 - Existing vocabularies from upgraded Liferay installations default to public visibility.
