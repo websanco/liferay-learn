@@ -6,7 +6,7 @@ Liferay DXP [uses responsive design](./building-a-responsive-site.md) by default
 
 ![Using the Grid Fragment you can customize the layout options for different screen sizes.](./building-responsive-layouts-with-the-grid-fragment/images/04.png)
 
-Consider the following example. The 'Services' section of your insurance company website provides potential customers an overview of the services you offer. This section uses a series of Card Fragments (A) inside a three-modules Grid Fragment (B), with information for three different services. 
+Consider the following example. The 'Services' section of your insurance company website provides potential customers an overview of the services you offer. This section uses a series of Card Fragments (A) inside a three-modules Grid Fragment (B), with information for three different services.
 
 ![You can customize your content layout combining the Grid Fragments with other Fragments.](./building-responsive-layouts-with-the-grid-fragment/images/01.png)
 
@@ -33,8 +33,13 @@ When you access this 'Services' Content Page from your computer, the grid layout
 
     ![Use the Device Display and Styles options in the Content Page editor to customize the Grid Fragment's layout.](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 
+```tip::
+    You can save and reuse the Grid Fragment configuration of your choice in other Content Pages. For more information, see `Saving a Fragment Composition <../../displaying-content/using-fragments/saving-a-fragment-composition.md>`_.
+```
+
 ## Additional Information
 
 - [Building a Responsive Site Overview](./building-a-responsive-site.md)
 - [Adding Elements to Content Pages](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md).
 - [Configuring the Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment)
+- [Saving a Fragment Composition](../../displaying-content/using-fragments/saving-a-fragment-composition.md)
