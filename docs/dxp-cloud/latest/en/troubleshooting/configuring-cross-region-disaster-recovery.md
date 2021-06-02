@@ -67,9 +67,9 @@ Follow these steps to disable the restoration schedule while it is accessible to
 
 1. On the DXP Cloud Console, navigate to your DR environment &rarr; Backup service page &rarr; Environment Variables.
 
-1. Click the icon to reveal the value for your `LCP_BACKUP_RESTORE_SCHEDULE` variable:
+1. Click the eye icon to reveal the value for your `LCP_BACKUP_RESTORE_SCHEDULE` variable:
 
-    ![Click the eye icon to reveal the schedule configuration.](./configuring-cross-region-disaster-recovery/images/??.png)
+    ![Click the eye icon to reveal the schedule configuration.](./configuring-cross-region-disaster-recovery/images/02.png)
 
 1. Make a note of the value for `LCP_BACKUP_RESTORE_SCHEDULE` so that you can quickly replace it after the incident.
 
@@ -92,9 +92,9 @@ Follow these steps to restore the latest stable backup of Production to the DR e
        The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
-1. Click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/02.png)), for the latest stable backup in the Production environment,  then select *Restore*.
+1. Click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/03.png)), for the latest stable backup in the Production environment,  then select *Restore*.
 
-    ![Figure 2: Restore the latest stable backup from the Production environment to the DR environment.](./configuring-cross-region-disaster-recovery/images/03.png)
+    ![Figure 2: Restore the latest stable backup from the Production environment to the DR environment.](./configuring-cross-region-disaster-recovery/images/04.png)
 
 ### Verify the DR Environment's VPN Status and Reindex
 
@@ -102,13 +102,13 @@ Next, follow these steps to ensure your DR environment is ready for incoming tra
 
 1. Verify that your VPN is connected to the DR environment by navigating to the _Settings_ &rarr; _VPN_ page for your DR environment.
 
-    ![Check the VPN status for your DR environment to confirm that it is properly connected.](./configuring-cross-region-disaster-recovery/images/??.png)
+    ![Check the VPN status for your DR environment to confirm that it is properly connected.](./configuring-cross-region-disaster-recovery/images/05.png)
 
     If the appropriate VPN is not connected, then set up the connection. See [Connecting a VPN Server to DXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md) for more information.
 
 1. Log onto your DXP instance (directly using the IP address, since the custom domain does not yet point to the DR environment).
 
-1. Navigate to the *Global Menu* &rarr; *Control Panel* &rarr; *Search*.
+1. Navigate to the *Global Menu* (![Applications Menu icon](./configuring-cross-region-disaster-recovery/images/06.png)) &rarr; *Control Panel* &rarr; *Search*.
 
 1. Click *Reindex all search indexes*.
 
@@ -126,7 +126,7 @@ The web server service's custom domain in the DR environment must match that of 
 
 This will result in all traffic being directed to the DR environment.
 
-![Figure 3: For the webserver service, configure the DR environment's custom domains to match those of the Production environment.](./configuring-cross-region-disaster-recovery/images/04.png)
+![Figure 3: For the webserver service, configure the DR environment's custom domains to match those of the Production environment.](./configuring-cross-region-disaster-recovery/images/07.png)
 
 ## Post-incident Recovery
 
@@ -150,7 +150,7 @@ During the incident, the DR environment functions as the Production environment 
 1. In the DR environment, click *Backups* in the menu on the left.
 1. Click *Backup Now*.
 
-![Figure 4: Create a manual backup of the DR environment.](./configuring-cross-region-disaster-recovery/images/05.png)
+![Figure 4: Create a manual backup of the DR environment.](./configuring-cross-region-disaster-recovery/images/08.png)
 
 ### Restore the Manual Backup to Production
 
@@ -163,10 +163,10 @@ Restore the data from your DR environment back to your normal production environ
        The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
-1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/02.png)) then select *Restore*.
+1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/03.png)) then select *Restore*.
 1. Select the Production environment and click *Deploy Build*.
 
-![Figure 5: Deploy the backup to the Production environment.](./configuring-cross-region-disaster-recovery/images/06.png)
+![Figure 5: Deploy the backup to the Production environment.](./configuring-cross-region-disaster-recovery/images/09.png)
 
 ### Verify VPN Status and Reindex
 
@@ -192,7 +192,7 @@ Because the webserver service redirected all traffic to the DR environment durin
 1. Click on _webserver_ in the list of Services.
 1. Click the _Custom Domains_ tab.
 
-    ![Remove custom domain](./configuring-cross-region-disaster-recovery/images/07.png)
+    ![Remove the custom domain from the DR environment.](./configuring-cross-region-disaster-recovery/images/10.png)
 
 1. Remove the custom domain from the DR environment.
 
