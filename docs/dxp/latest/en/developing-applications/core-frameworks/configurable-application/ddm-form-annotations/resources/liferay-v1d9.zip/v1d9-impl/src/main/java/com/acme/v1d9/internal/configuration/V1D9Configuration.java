@@ -6,7 +6,7 @@ import aQute.bnd.annotation.metatype.Meta;
 	id = "com.acme.v1d9.internal.configuration.V1D9Configuration",
 	localization = "content/Language", name = "v1d9-configuration-name"
 )
-public @interface V1D9Configuration {
+public interface V1D9Configuration {
 
 	@Meta.AD(required = false)
 	public String[] text();
