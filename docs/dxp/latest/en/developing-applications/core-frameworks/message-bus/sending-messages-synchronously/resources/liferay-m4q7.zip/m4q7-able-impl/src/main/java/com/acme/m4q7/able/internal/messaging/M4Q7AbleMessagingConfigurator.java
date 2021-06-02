@@ -1,7 +1,5 @@
 package com.acme.m4q7.able.internal.messaging;
 
-import com.acme.m4q7.able.constants.M4Q7AbleDestinationNames;
-
 import com.liferay.portal.kernel.messaging.Destination;
 import com.liferay.portal.kernel.messaging.DestinationConfiguration;
 import com.liferay.portal.kernel.messaging.DestinationFactory;
@@ -21,7 +19,7 @@ public class M4Q7AbleMessagingConfigurator {
 	private void _activate(BundleContext bundleContext) {
 		DestinationConfiguration destinationConfiguration =
 			DestinationConfiguration.createSerialDestinationConfiguration(
-				M4Q7AbleDestinationNames.M4Q7_ABLE_DESTINATION);
+				"acme/m4q7_able_destination");
 
 		Destination destination = _destinationFactory.createDestination(
 			destinationConfiguration);

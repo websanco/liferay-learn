@@ -1,4 +1,3 @@
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
-	compileOnly project(":m4q7-able-api")
 }

@@ -1,7 +1,5 @@
 package com.acme.m4q7.charlie.internal.messaging;
 
-import com.acme.m4q7.able.constants.M4Q7AbleDestinationNames;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.messaging.Message;
@@ -12,7 +10,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = "destination.name=" + M4Q7AbleDestinationNames.M4Q7_ABLE_DESTINATION,
+	property = "destination.name=acme/m4q7_able_destination",
 	service = MessageListener.class
 )
 public class M4Q7CharlieMessageListener implements MessageListener {

@@ -1,7 +1,5 @@
 package com.acme.m4q7.baker.osgi.commands;
 
-import com.acme.m4q7.able.constants.M4Q7AbleDestinationNames;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.messaging.Destination;
@@ -47,7 +45,7 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 			message.setResponseDestinationName(M4Q7_BAKER_DESTINATION);
 
 			_synchronousMessageSender.send(
-				M4Q7AbleDestinationNames.M4Q7_ABLE_DESTINATION, message, 10000);
+				"acme/m4q7_able_destination", message, 10000);
 		}
 		catch (MessageBusException messageBusException) {
 			messageBusException.printStackTrace();
