@@ -61,7 +61,7 @@ During a cross-region incident, follow these steps:
 
 Since the DR environment becomes the main environment accessible to Users for the duration of the incident, your normal database restoration schedule may overwrite data after you switch production over to it.
 
-If you are using the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable to regularly restore data to your DR environment, then temporarily disable the restoration schedule by removing the variable. This prevents data created during the incident from being overwritten by a scheduled restore.
+If you are using the [`LCP_BACKUP_RESTORE_SCHEDULE` environment variable](../platform-services/backup-service/backup-service-overview.md#environment-variables-reference) to regularly restore data to your DR environment, then temporarily disable the restoration schedule by removing the variable. This prevents data created during the incident from being overwritten by a scheduled restore.
 
 Follow these steps to disable the restoration schedule while it is accessible to Users:
 
