@@ -1,30 +1,57 @@
 # Saving a Fragment Composition
 
-You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages:
+You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages.
 
-1. Click the Row or Section composition you want to save.
-1. Click the Options Menu (![Image Properties](../../../images/icon-app-options.png)) for the container and select *Save Composition*.
+To save the composition,
 
-      ![Click the Row or Section to save your composition.](./saving-a-fragment-composition/images/01.png)
+1. Open the [Content Page](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) with the Fragment configuration you want to save.
 
-1. In the Save as Fragment dialog that appears, provide a name and other optional information:
+1. On the Content Page editor, click *Selection* (![Selection](../../../images/icon-pages-tree.png)) to open the [Selection panel](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md#selection).
+
+1. Select the Fragment composition you want to save.
+
+1. Click the *Options* menu (![Image Properties](../../../images/icon-app-options.png)) for the selection and choose *Save Composition*.
+
+      ![Save the Fragment composition using the Save Composition option in the Options menu.](./saving-a-fragment-composition/images/04.png)
+
+1. In the *Save as Fragment* dialog, provide a *Name* and other optional information:
 
     - Fragment *Description* and *Thumbnail*.
     - *Save Inline Content* option, for including inline content such as fragment entries (links, images, text, etc.)
-    - *Save Mapping Configuration* option, for including [mapped content](#mapping-content).
-    - *Collection* to save the Fragment.
+    - *Save Mapping Configuration* option, for including [mapped content](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content).
+    - *Collection* where you want to save the Fragment composition.
 
       ![Provide the information for the Fragment composition in the dialog that appears.](./saving-a-fragment-composition/images/02.png)
 
+    ```note::
+    If no Site-specific Fragment Collection exists, the saved Fragment composition is saved automatically to a new Fragment Collection called Saved Fragments.
+    ```
+
+## Using Saved Fragment Compositions
+
+Your can use a saved Fragment composition from the Content Page editor:
+  
+1. Open the Content Page where you want to use the composition.
+
+1. Click *Edit* (![Edit icon](../../../images/icon-edit.png)) at the top right.
+
+1. Click the *Fragments and Widgets* icon (![Fragments and Widgets icon](../../../images/icon-cards2.png)).
+
+1. Under the *Fragments* section, find your Fragment composition at the bottom of the Fragments list.
+
+1. Add the Fragment composition to your page.
+
+    ![The saved Fragment composition can be used immediately.](./saving-a-fragment-composition/images/06.png)
+
+## Managing Saved Fragment Compositions
+
+Your Fragment compositions are saved in the Fragments page, under the *Site Menu* &rarr; *Design* &rarr; *Fragments*. From here, you can manage your composition in the same way you manage other Fragments. For more information, read [Managing Page Fragments](./managing-page-fragments.md). Compositions can be exported or imported between Sites just as any other Fragment.
+
 ```note::
-   If no Site-specific Fragment Collection exists, the saved Fragment composition is saved automatically to a new Fragment Collection called Saved Fragments.
+    In Liferay DXP 7.1 and 7.2, open the *Product Menu*, and go to *Site* → *Site Builder* → *Page Fragments*.
 ```
 
-You can use the saved Fragment composition immediately using the Fragments sidebar or through the Page Fragments administrative application.
-
-![The saved Fragment composition can be used immediately.](./saving-a-fragment-composition/images/03.png)
-
-Compositions can be exported or imported between Sites just as any other Fragment.
+![The saved Fragment composition can be used immediately.](./saving-a-fragment-composition/images/05.png)
 
 ```note::
   The latest version of the `Liferay Fragments Toolkit <../../developer-guide/developing-page-fragments/using-the-fragments-editor.md>`_ supports creation, export/import, and preview of Fragment compositions.
@@ -32,6 +59,6 @@ Compositions can be exported or imported between Sites just as any other Fragmen
 
 ## Related Information
 
-- [Adding Elements to Content Pages](./adding-elements-to-content-pages.md)
-- [Content Pages Overview](./content-pages-overview.md)
-- [Content Pages User Interface Reference](./content-page-editor-user-interface-reference.md)
+- [Managing Page Fragments](./managing-page-fragments.md)
+- [Content Page Editor User Interface Reference](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
+- [Content Pages Overview](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
