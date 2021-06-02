@@ -1,3 +1,0 @@
-# Managing Individuals
-
-Coming soon!

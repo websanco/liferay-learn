@@ -14,6 +14,6 @@ Workspace Data
 Definitions
 -----------
 
--  :doc:`/workspace-data/definitions/managing-individuals`
+-  :doc:`/workspace-data/definitions/definitions-for-individuals`
 -  :doc:`/workspace-data/definitions/setting-a-search-query`
 -  :doc:`/workspace-data/definitions/managing-interest-topics`
