@@ -9,18 +9,18 @@ import aQute.bnd.annotation.metatype.Meta;
 public interface V1D9Configuration {
 
 	@Meta.AD(required = false)
-	public String[] text();
-
-	@Meta.AD(required = false)
 	public boolean checkbox();
 
 	@Meta.AD(required = false)
-	public String select();
+	public String date();
 
 	@Meta.AD(required = false)
 	public String numeric();
 
 	@Meta.AD(required = false)
-	public String date();
+	public String select();
+
+	@Meta.AD(required = false)
+	public String[] text();
 
 }
