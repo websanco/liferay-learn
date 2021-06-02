@@ -50,7 +50,38 @@ Now you must deploy the latest stable build on Production to the DR environment.
 
 Continuing the example above, assume that the Production environment hosted in the *europe-west2* region is scheduled to be backed up hourly at 2:00 PM local time. In this scenario, the region is then compromised at 2:30 PM local time. Because no backups have been generated in the intervening half hour, it is necessary to restore a backup of the database and documents from the Production environment to the Disaster Recovery environment. The last stable environment is the version created at 2:00 PM.
 
+During a cross-region incident, follow these steps:
+
+* [Disable the Database Restoration Schedule](#disable-the-database-restoration-schedule)
+* [Copy Latest Production Data to the DR Environment](#copy-latest-production-data-to-the-dr-environment)
+* [Verify the DR Environment's VPN Status and Reindex](#verify-the-dr-environment-s-vpn-status-and-reindex)
+* [Direct Custom Domain Traffic to the DR Environment](#direct-custom-domain-traffic-to-the-dr-environment)
+
+### Disable the Database Restoration Schedule
+
+Since the DR environment becomes the main environment accessible to Users for the duration of the incident, your normal database restoration schedule may overwrite data after you switch production over to it.
+
+If you are using the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable to regularly restore data to your DR environment, then temporarily disable the restoration schedule by removing the variable. This prevents data created during the incident from being overwritten by a scheduled restore.
+
+Follow these steps to disable the restoration schedule while it is accessible to Users:
+
+1. On the DXP Cloud Console, navigate to your DR environment &rarr; Backup service page &rarr; Environment Variables.
+
+1. Click the icon to reveal the value for your `LCP_BACKUP_RESTORE_SCHEDULE` variable:
+
+    ![Click the eye icon to reveal the schedule configuration.](./configuring-cross-region-disaster-recovery/images/??.png)
+
+1. Make a note of the value for `LCP_BACKUP_RESTORE_SCHEDULE` so that you can quickly replace it after the incident.
+
+1. Remove the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable and save changes.
+
 ### Copy Latest Production Data to the DR Environment
+
+Next, restore a backup from your Production environment to ensure your DR environment has the most recent updates.
+
+```important::
+   If you were using the ``LCP_BACKUP_RESTORE_SCHEDULE`` environment variable to regularly restore to your DR environment, then you may already have a more recent stable backup restored and ready (depending on your configured frequency). If you had a backup automatically restored more recently, then skip manually restoring the backup.
+```
 
 Follow these steps to restore the latest stable backup of Production to the DR environment:
 
@@ -65,6 +96,24 @@ Follow these steps to restore the latest stable backup of Production to the DR e
 
     ![Figure 2: Restore the latest stable backup from the Production environment to the DR environment.](./configuring-cross-region-disaster-recovery/images/03.png)
 
+### Verify the DR Environment's VPN Status and Reindex
+
+Next, follow these steps to ensure your DR environment is ready for incoming traffic:
+
+1. Verify that your VPN is connected to the DR environment by navigating to the _Settings_ &rarr; _VPN_ page for your DR environment.
+
+    ![Check the VPN status for your DR environment to confirm that it is properly connected.](./configuring-cross-region-disaster-recovery/images/??.png)
+
+    If the appropriate VPN is not connected, then set up the connection. See [Connecting a VPN Server to DXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md) for more information.
+
+1. Log onto your DXP instance (directly using the IP address, since the custom domain does not yet point to the DR environment).
+
+1. Navigate to the *Global Menu* &rarr; *Control Panel* &rarr; *Search*.
+
+1. Click *Reindex all search indexes*.
+
+Allow some time for the reindex to complete.
+
 ### Direct Custom Domain Traffic to the DR Environment
 
 The web server service's custom domain in the DR environment must match that of the original Production environment. You must also delete that configuration from the Production environment. Follow these steps to do so:
@@ -73,7 +122,7 @@ The web server service's custom domain in the DR environment must match that of 
 1. Click *webserver* in the list of Services.
 1. Click the *Custom Domains* tab and configure the custom domain to match that of the Production environment.
 1. Navigate to the same settings in the Production environment, and remove the custom domain configuration.
-1. Update the DNS records. For more information, see [Custom Domains](../infrastructure-and-operations/networking/custom-domains.md).
+1. Update the DNS records and add the custom domain to the DR environment. For more information, see [Custom Domains](../infrastructure-and-operations/networking/custom-domains.md).
 
 This will result in all traffic being directed to the DR environment.
 
@@ -81,11 +130,18 @@ This will result in all traffic being directed to the DR environment.
 
 ## Post-incident Recovery
 
-Once the regional incident is over, you must shift back to the original region's Production environment (*europe-west2* in this example). Follow these steps:
+Once the regional incident is over, you must shift back to the original region's Production environment (*europe-west2* in the example). Follow these steps:
 
-* [Create a Manual Backup in the DR Environment](#create-a-manual-backup-in-the-dr-environment)
-* [Restore the Manual Backup from DR to Production](#restore-the-manual-backup-from-dr-to-Production)
-* [Update the Web Server Custom Domain in Production](#update-the-web-server-custom-domain-in-Production)
+* [Put a Freeze on Data Creation](#put-a-freeze-on-data-creation)
+* [Create a Manual Backup of the DR Environment](#create-a-manual-backup-of-the-dr-environment)
+* [Restore the Manual Backup to Production](#restore-the-manual-backup-to-production)
+* [Verify VPN Status and Reindex](#verify-vpn-status-and-reindex)
+* [Restore Server Custom Traffic to Production](#restore-server-custom-traffic-to-production)
+* [Restore the Database Restoration Schedule](#restore-the-database-restoration-schedule)
+
+### Put a Freeze on Data Creation
+
+In order to prevent data loss from recent changes when you switch back to your normal production environment, you must freeze all content creation in the DR environment. When you are ready to make the switch back to your production environment, work with your database administrator to arrange 
 
 ### Create a Manual Backup of the DR Environment
 
@@ -96,7 +152,9 @@ During the incident, the DR environment functions as the Production environment 
 
 ![Figure 4: Create a manual backup of the DR environment.](./configuring-cross-region-disaster-recovery/images/05.png)
 
-### Copy Latest DR Environment Data to Production
+### Restore the Manual Backup to Production
+
+Restore the data from your DR environment back to your normal production environment:
 
 1. In the DR environment, click *Backups* in the menu on the left.
 1. Click the tab corresponding to the DR environment.
@@ -110,6 +168,22 @@ During the incident, the DR environment functions as the Production environment 
 
 ![Figure 5: Deploy the backup to the Production environment.](./configuring-cross-region-disaster-recovery/images/06.png)
 
+### Verify VPN Status and Reindex
+
+Next, follow these steps to ensure your production environment is ready for incoming traffic:
+
+1. Verify that your VPN is connected to the production environment by navigating to the _Settings_ &rarr; _VPN_ page for your production environment.
+
+    If the appropriate VPN is not connected, then set up the connection. See [Connecting a VPN Server to DXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-server-to-dxp-cloud.md) for more information.
+
+1. Log onto your DXP instance (directly using the IP address, since the custom domain still points to the DR environment).
+
+1. Navigate to the *Global Menu* &rarr; *Control Panel* &rarr; *Search*.
+
+1. Click *Reindex all search indexes*.
+
+Allow some time for the reindex to complete.
+
 ### Restore Server Custom Traffic to Production
 
 Because the webserver service redirected all traffic to the DR environment during the incident, these settings must be updated again so that all traffic is redirected back to the original Production environment.
@@ -120,8 +194,25 @@ Because the webserver service redirected all traffic to the DR environment durin
 
     ![Remove custom domain](./configuring-cross-region-disaster-recovery/images/07.png)
 
-1. Remove the custom domain from the Production environment.
-1. Update the DNS records. For more information, see the [Custom Domain](../infrastructure-and-operations/networking/custom-domains.md) article.
+1. Remove the custom domain from the DR environment.
+
+    ```warning::
+       Removing the custom domain creates downtime until your Production environment is receiving traffic again.
+    ```
+
+1. Update the DNS records and add the custom domain back to the Production environment. For more information, see the [Custom Domains](../infrastructure-and-operations/networking/custom-domains.md) article.
 1. Click _Update Custom Domain_.
 
-Traffic should now be directed back to the original Production environment and the disaster recovery process concluded.
+Traffic should now be directed back to the original Production environment. If you do not use automatically scheduled database restores to your DR environment, then the disaster recovery process is complete.
+
+### Restore the Database Restoration Schedule
+
+If you were using the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable to regularly restore to your DR environment before the incident, then restore this variable again to resume the restoration schedule:
+
+1. On the DXP Cloud console, navigate to your DR environment &rarr; Backup service page &rarr; Environment Variables.
+
+1. Add the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable, and restore the value that you noted previously [when you removed it](#disable-the-database-restoration-schedule).
+
+1. Save the changes.
+
+Your DXP Cloud environments can now resume their normal operations.
