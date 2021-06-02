@@ -22,7 +22,7 @@ function activate_venv {
 	fi
 }
 
-function check_args {
+function check_usage {
 	if [[ ${#} -eq 0 ]]
 	then
 		return
@@ -32,7 +32,7 @@ function check_args {
 	then
 		if [[ "${1}" != "prod" ]] && [[ "${1}" != *".md" ]] || [[ ${#} -gt 1 ]]
 		then
-			echo "Invalid Arguments: Pass no arguments to build for dev. Pass \"prod\" to build for production. Pass the file name of a markdown article to build a single-article preview."
+			echo "Usage: Pass no arguments to build for development. Pass \"prod\" to build for production. Pass the file name of a markdown article to build a single article preview."
 
 			exit 1
 		fi
@@ -112,22 +112,22 @@ function generate_sphinx_input {
 		then
 			pushd ../docs
 
-			for article_path in $(find "${product_version_language_dir_name}" -name "${1}")
+			for article_file_name in $(find "${product_version_language_dir_name}" -name "${1}")
 			do
 				rsync -a "${product_version_language_dir_name}"/*.* ../site/build/input/"${product_version_language_dir_name}"
 
-				mkdir -p ../site/build/input/$(dirname "${article_path}")
+				mkdir -p ../site/build/input/$(dirname "${article_file_name}")
 
-				cp ${article_path} ../site/build/input/$(dirname "${article_path}")/
+				cp ${article_file_name} ../site/build/input/$(dirname "${article_file_name}")
 
-				en_article_dir=$(dirname $article_path | sed "s,$product_version_language_dir_name,$product_version_english_dir_name,g")
+				en_article_dir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},${product_version_english_dir_name},g")
 
-				find "${en_article_dir}"/. -name $(basename ${article_path%.*}) -type d -exec rsync -a {} ../site/build/input/$(dirname "${article_path}")/ \;
+				find "${en_article_dir_name}"/. -name $(basename ${article_file_name%.*}) -type d -exec rsync -a {} ../site/build/input/$(dirname "${article_file_name}")/ \;
 			done
 
 			pushd ../site
 		else
-			rsync -a --exclude '*.md' --exclude '*.rst' --ignore-existing ../docs/"${product_version_english_dir_name}"/* build/input/"${product_version_language_dir_name}"/
+			rsync -a --exclude "*.md" --exclude "*.rst" --ignore-existing ../docs/"${product_version_english_dir_name}"/* build/input/"${product_version_language_dir_name}"/
 
 			cp -R ../docs/"${product_version_language_dir_name}"/* build/input/"${product_version_language_dir_name}"
 		fi
@@ -255,7 +255,7 @@ function get_product_version_language_dir_name {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	check_args "${@}"
+	check_usage ${@}
 
 	configure_env ${1}
 
