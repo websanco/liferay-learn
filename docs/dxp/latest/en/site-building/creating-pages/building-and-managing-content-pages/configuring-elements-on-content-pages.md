@@ -82,7 +82,7 @@ You can set different style options like background color, background image, mar
 ## Editing Images
 
 1. Click the image you want to edit.
-1. In the Content Page sidebar, you can configure:
+1. In the Content Page sidebar, you can configure
 
     - *Image Source*: select *Direct* to use an image from your computer or from the Documents and Media library, or choose *Mapping* to [map the image from existing content](#mapping-content). Optionally, set an [image *Resolution*](#configuring-image-resolution-with-adaptive-media) (available in Liferay DXP 7.4+) and *Image Description*.
     - *Link*: Select the URL or Page to open when you click the image.
@@ -105,13 +105,13 @@ After you [enable an image resolution](../../../content-authoring-and-management
 
 ![You can use the different image resolutions from Adaptive Media in the Content Page.](./configuring-elements-on-content-pages/images/18.gif)
 
-Consider the following when setting the image resolution in Content Pages:
+Consider these items when setting the image resolution in Content Pages:
 
 - When you set the image resolution to Auto, Adaptive Media selects the best resolution for the target screen size automatically.
 
    ![When you set the image resolution to Auto, Adaptive Media selects the best resolution for the screen size.](./configuring-elements-on-content-pages/images/14.png)
 
-- You can define a fixed Resolution for a specific screen size using the [Device Display controls](./content-page-editor-user-interface-reference.md#device-display) of the Editing Toolbar and choosing the desired resolution.
+- You can define a fixed Resolution for a specific screen size using the Editing Toolbar's [Device Display controls](./content-page-editor-user-interface-reference.md#device-display) and choosing the desired resolution.
 - If Adaptive Media cannot find an appropriate resolution for the target screen, the Content Page shows the original image resolution.
 
 To learn more about how to use Adaptive Media, read [Using Adapted Images in Site Content](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/using-adapted-images-in-site-content.md).

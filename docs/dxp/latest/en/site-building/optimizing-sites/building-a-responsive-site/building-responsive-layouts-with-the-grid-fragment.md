@@ -29,7 +29,7 @@ When you access this 'Services' Content Page from your computer, the grid layout
     ![Select the image resolution for the target screen size or leave the Auto option to use Adaptive Media.](./building-responsive-layouts-with-the-grid-fragment/images/05.png)
 
 1. Click *Publish*.
-1. Optionally, click on the *Simulation* (![Simulation](../../../images/icon-simulation.png)) button on the main toolbar to see your changes on the target device.
+1. Optionally, click the *Simulation* (![Simulation](../../../images/icon-simulation.png)) button on the main toolbar to see your changes on the target device.
 
     ![Use the Device Display and Styles options in the Content Page editor to customize the Grid Fragment's layout.](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 

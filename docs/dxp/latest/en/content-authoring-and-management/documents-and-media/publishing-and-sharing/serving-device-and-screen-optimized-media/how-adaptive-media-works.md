@@ -4,7 +4,7 @@ Media providers must consider differences between devices (phones, laptops, tabl
 
 Adaptive Media integrates with Documents and Media, Blogs, Web Content, and Content Pages (starting with Liferay DXP 7.4+). It generates a set of images for use on various screens. When the content is accessed, Adaptive Media checks the screen type and resolution and selects the appropriate image. Adaptive Media comes pre-installed in DXP.
 
-The Adaptive Media functionality is installed in DXP by default. Here, you'll learn about Adaptive Media and how to prepare Adaptive Media to handle images.
+Here, you'll learn about Adaptive Media and how to prepare it to handle images.
 
 To use Adaptive Media, you must first define the resolutions for the images delivered to users' devices. Adaptive Media then generates new images scaled to fit those resolutions, while maintaining the original aspect ratio. See [Adding Image Resolutions](./adding-image-resolutions.md) to learn more about creating new Image Resolutions.
 
