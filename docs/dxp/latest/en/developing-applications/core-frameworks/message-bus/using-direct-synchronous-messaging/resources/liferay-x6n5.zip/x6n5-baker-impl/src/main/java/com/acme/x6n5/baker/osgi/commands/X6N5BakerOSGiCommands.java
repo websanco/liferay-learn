@@ -46,10 +46,10 @@ public class X6N5BakerOSGiCommands implements MessageListener {
 
 			message.setResponseDestinationName("acme/x6n5_baker");
 
-			_directSynchronousMessageSender.send("acme/x6n5_able", message);
+			Object response = _directSynchronousMessageSender.send("acme/x6n5_able", message);
 
 			if (_log.isInfoEnabled()) {
-				_log.info("Invoked SynchronousMessageSender#sent(String, Message) in DIRECT mode");
+				_log.info("SynchronousMessageSender#send(String, Message) returned " + response);
 			}
 		}
 		catch (MessageBusException messageBusException) {

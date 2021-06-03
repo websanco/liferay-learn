@@ -24,17 +24,18 @@ public class X6N5CharlieMessageListener implements MessageListener {
 			_log.info("Received message payload " + payload.toString());
 		}
 
-		//TODO uncomment these lines if you want to send a response
-		// Message responseMessage = new Message();
+		// message.setResponse("X6N5CharlieMessageListener");
 
-		// responseMessage.setDestinationName(
-		// 	message.getResponseDestinationName());
-		// responseMessage.setPayload(
-		// 	"X6N5CharlieMessageListener#receive(Message)");
-		// responseMessage.setResponseId(message.getResponseId());
+		Message responseMessage = new Message();
 
-		// _messageBus.sendMessage(
-		// 	message.getResponseDestinationName(), responseMessage);
+		responseMessage.setDestinationName(
+			message.getResponseDestinationName());
+		responseMessage.setPayload(
+			"X6N5CharlieMessageListener");
+		responseMessage.setResponseId(message.getResponseId());
+
+		_messageBus.sendMessage(
+			message.getResponseDestinationName(), responseMessage);
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
