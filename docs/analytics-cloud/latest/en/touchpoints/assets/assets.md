@@ -9,11 +9,12 @@ Assets are individual pieces of content that exist on Site Pages in your Liferay
 
 Metrics for these Assets are currently reported in Analytics Cloud:
 
-* [Forms](./forms.md)
 * [Blogs](./blogs.md)
 * [Documents and Media](./documents-and-media.md)
+* [Forms](./forms.md)
 * [Web Content](./tracking-custom-assets.md)
+* [Custom](./tracking-custom-assets.md)
 
 ![Each Asset has its own table.](assets/images/01.png)
 
-[Custom assets](./tracking-custom-assets.md) can also be defined and tracked by Analytics Cloud.
+Clicking an individual asset leads to an overview page showing analytics data for the asset. Clicking on the Known Individuals tab shows a list of known visitors who have interacted with the asset.

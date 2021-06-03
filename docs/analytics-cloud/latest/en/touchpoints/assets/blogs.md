@@ -49,13 +49,15 @@ The Audience report uses charts to present information about the audience intera
 
 Here are the charts in the Audience report:
 
-**Unique Visitors:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center of the chart shows the total number of unique visitors. Tooltips on each chart section show the number of users for that section (e.g, the number of known or anonymous users).
+**View:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center of the chart shows the total number of unique visitors. Tooltips on each chart section show the number of users for that section (e.g, the number of known or anonymous users).
 
-**Known Individuals:** A donut chart that presents the percentage of known individuals who belong or do not belong to one or more Analytics Cloud Segment. The center of the chart shows the total number of known individuals. Tooltips on each chart section show the number of users for that section (e.g, the number of users belonging to one or more Segments). Click the chart title (Known Individuals) to view a list of all the known individuals who comprise the chart's data.
+**Segmented Views:** A donut chart that presents the percentage of individuals who belong or do not belong to one or more Analytics Cloud Segment. The center of the chart shows the total number of known individuals. Note that the total number may include some anonymous individuals depending on the segmentation criteria. Tooltips on each chart section show the number of users for that section (e.g, the number of users belonging to one or more Segments). 
 
-**Known Individuals Segments:** A bar chart that shows the percentage of known individuals that comprise each Segment. The chart shows a bar for each of the top five Segments, and then aggregates the remaining Segments into the last bar. A tooltip on the last bar shows the values for each of the remaining Segments.
+**Viewer Segments:** A bar chart that shows the percentage of known individuals that comprise each Segment. The chart shows a bar for each of the top five Segments, and then aggregates the remaining Segments into the last bar. A tooltip on the last bar shows the values for each of the remaining Segments.
 
 ![Charts help to identify unique visitors, logged in users, and users who fall into particular segments.](blogs/images/03.png)
+
+Note that the segmentation data presented about your audience is based on an individual belonging to a segment at the time of their visit.
 
 ## Views by Location
 

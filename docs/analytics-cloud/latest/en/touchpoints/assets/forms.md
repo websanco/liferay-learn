@@ -52,13 +52,15 @@ The Audience report uses charts to present information about the audience intera
 
 Here are the charts in the Audience report:
 
-**Unique Visitors:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center of the chart shows the total number of unique visitors. Tooltips on each chart section show the number of users for that section (e.g, the number of known or anonymous users).
+**Submissions:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center of the chart shows the total number of unique visitors. Tooltips on each chart section show the number of users for that section (e.g, the number of known or anonymous users).
 
-**Known Individuals:** A donut chart that presents the percentage of known individuals who belong or do not belong to one or more Analytics Cloud Segment. The center of the chart shows the total number of known individuals. Tooltips on each chart section show the number of users for that section (e.g, the number of users belonging to one or more Segments). Click the chart title (Known Individuals) to view a list of all the known individuals who comprise the chart's data.
+**Segmented Submissions:** A donut chart that presents the percentage of known individuals who belong or do not belong to one or more Analytics Cloud Segment. The center of the chart shows the total number of known individuals. Note that the total number may include some anonymous individuals depending on the segmentation criteria. Tooltips on each chart section show the number of users for that section (e.g, the number of users belonging to one or more Segments). 
 
-**Known Individuals Segments:** A bar chart that shows the percentage of known individuals that comprise each Segment. The chart shows a bar for each of the top five Segments, and then aggregates the remaining Segments into the last bar. A tooltip on the last bar shows the values for each of the remaining Segments.
+**Viewer Segments:** A bar chart that shows the percentage of known individuals that comprise each Segment. The chart shows a bar for each of the top five Segments, and then aggregates the remaining Segments into the last bar. A tooltip on the last bar shows the values for each of the remaining Segments.
 
 ![Forms audience metrics are visually presented with a variety of charts identifying unique visitors, known individuals, and known individual segments.](forms/images/03.png)
+
+Note that the segmentation data presented about your audience is based on an individual belonging to a segment at the time of their visit.
 
 ## Submissions by Location
 
@@ -74,22 +76,22 @@ View a stacked bar graph of the Page's submissions by operating system (grouped 
 
 Click Web Browser to see a donut chart displaying up to the top eight web browsers over the selected time period. If applicable, remaining web browsers are aggregated in the ninth donut segment.
 
-## Field Analysis
+## Form Abandonment
 
-The Field Analysis chart is unique to Forms.
+The Form Abandonment chart is unique to Forms.
 
-Field analysis appears as a bar graph. The height of the first bar shows the total number of people (Views) who have interacted with the form in any way, even just scrolling past it on the page. The rest of the bars show the percentage of those people that interacted with a specific field by clicking into it. The gross numbers on the right y-axis are the number of people who interacted with the field by clicking into it.
+Form Abandonment appears as a bar graph. The height of the first bar shows the total number of people (Views) who have interacted with the form in any way, even just scrolling past it on the page. The rest of the bars show the percentage of those people that interacted with a specific field by clicking into it. The gross numbers on the right y-axis are the number of people who interacted with the field by clicking into it.
 
-Field Analysis gives you these metrics on each form field:
+Form Abandonment gives you these metrics on each form field:
 
 * Number of clicks into the field
 * Percentage of Users who abandoned the form at this field.
 * The time spent interacting with the field (includes abandonments)
 * The refill percent for the field. Out of the total number that filled out the field, this answers the question, "What percentage had to edit or enter new information into the field after moving on in the form?"
 
-![Field Analysis charts help to breakdown user interactions with specific elements on a form.](forms/images/06.png)
+![Form Abandonment charts help to breakdown user interactions with specific elements on a form.](forms/images/06.png)
 
-Field Analysis helps you get down to the field level in diagnosing potential issues with your forms. For example, in your Newsletter Sign-Up form, if you included a required field that asked for users to provide their first child's full name, you may see a lot of form abandonment on that field, not only because some form users don't have children. If you make that field not required, you'll get less abandonment on that field, and if you remove that field from the form entirely, you'll eliminate all abandonment from offended parents.
+Form Abandonment helps you get down to the field level in diagnosing potential issues with your forms. For example, in your Newsletter Sign-Up form, if you included a required field that asked for users to provide their first child's full name, you may see a lot of form abandonment on that field, not only because some form users don't have children. If you make that field not required, you'll get less abandonment on that field, and if you remove that field from the form entirely, you'll eliminate all abandonment from offended parents.
 
 ## Asset Appears On
 
