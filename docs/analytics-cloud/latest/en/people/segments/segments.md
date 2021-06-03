@@ -1,12 +1,12 @@
 # Segments
 
-Segments aggregate Individuals based on common properties and behavior. For example, you can create a Segment that contains users who are interested in a given topic, work in a specific industry, or both. Analytics Cloud then analyzes and profiles Segments. You can then integrate your Analytics Cloud Segments with personalization in Liferay DXP. This lets you deliver content of interest to each Segment via Liferay DXP.
+Segments aggregate Individuals based on common attributes and behavior. For example, you can create a Segment that contains users who are interested in a given topic, work in a specific industry, or both. Analytics Cloud then analyzes and profiles Segments. You can then integrate your Analytics Cloud Segments with personalization in Liferay DXP. This lets you deliver content of interest to each Segment via Liferay DXP.
 
 ![Segments in the navigation menu.](segments/images/01.png)
 
 There are two types of Segments:
 
-**Dynamic Segments:** Individuals aggregated automatically based on criteria that you specify. Criteria can be based on Individuals' properties and interaction with your Liferay DXP Site pages and assets. For example, you can use an industry property as criteria. Analytics on industry Segments show which industries engage with you the most, and what content they're interested in.
+**Dynamic Segments:** Individuals aggregated automatically based on criteria that you specify. Criteria can be based on Individuals' attributes and interaction with your Liferay DXP Site pages and assets. For example, you can use an industry attribute as criteria. Analytics on industry Segments show industries that engage with you the most, and what content they're interested in.
 
 **Static Segments:** Individuals aggregated manually. Static Segments are therefore comprised of hand-selected individuals.
 
@@ -87,7 +87,7 @@ See Customer Insights for details on the Interests insight.
 
 The Distribution tab breaks down the Segment by an individual attribute.
 
-For example, select a property such as Job Title to dissect your Segment further. A bar chart appears, displaying a distribution of the Segment member population by Job Title. As a marketer, you could use this information to identify a subset of the Segment to focus a marketing campaign on.
+For example, select a attribute such as Job Title to dissect your Segment further. A bar chart appears, displaying a distribution of the Segment member population by Job Title. As a marketer, you could use this information to identify a subset of the Segment to focus a marketing campaign on.
 
 You’ve completed touring Segment profiles. Creating Segments and analyzing their profiles is key to learning more about your customers.
 
