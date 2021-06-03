@@ -7,13 +7,13 @@ readonly CURRENT_DIR_NAME=$(dirname "$0")
 source ../_common.sh
 
 function activate_venv {
-	if [[ "$(uname)" == "Darwin" || "$(uname)" == "Linux" ]]
+	if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ]
 	then
 		python3 -m venv venv
 
 		source venv/bin/activate
 	else
-		if [[ -z $(find ${PWD} -maxdepth 1 -mindepth 1 -name venv -type d) ]]
+		if [ -z $(find "${PWD}" -maxdepth 1 -mindepth 1 -name venv -type d) ]
 		then
 			python -m venv ${PWD}/venv
 		fi
@@ -23,14 +23,14 @@ function activate_venv {
 }
 
 function check_usage {
-	if [[ ${#} -eq 0 ]]
+	if [ "${#}" -eq 0 ]
 	then
 		return
 	fi
 
-	if [[ ${#} -ge 1 ]]
+	if [ "${#}" -ge 1 ]
 	then
-		if [[ "${1}" != "prod" ]] && [[ "${1}" != *".md" ]] || [[ ${#} -gt 1 ]]
+		if [ "${1}" != "prod" ]  &&  [[ ${1} != *".md" ]]
 		then
 			echo "Usage: Pass no arguments to build for development. Pass \"prod\" to build for production. Pass the file name of a markdown article to build a single article preview."
 
@@ -78,7 +78,7 @@ function configure_env {
 function echo_path {
 	if [[ "${1}" == *".md" ]]
 	then
-		echo "$(find build/output -name "${1%.*}".html)"
+		echo "$(find build/output -name ${1%.*}.html)"
 	else
 		echo "$(find build/output -maxdepth 4 -mindepth 2 -name index.html)"
 	fi
@@ -182,7 +182,7 @@ function generate_static_html {
 
 		for resources_dir in $(find build/input/"${product_version_language_dir_name}" -name resources -prune -type d)
 		do
-			if [[ -n $(find "${resources_dir}" -maxdepth 1 -type f) ]]
+			if [ -n $(find "${resources_dir}" -maxdepth 1 -type f) ]
 			then
 				mkdir -p "${resources_dir/input/output}"
 
@@ -271,7 +271,7 @@ function main {
 function npm_install {
 	for package_name in "${@}"
 	do
-		if [[ -z $(npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep ${package_name}) ]]
+		if [ -z $(npm list --depth=0 --global --loglevel=silent --no-versions --parseable | grep "${package_name}") ]
 		then
 			npm install -g ${package_name}
 		fi
