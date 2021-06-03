@@ -6,7 +6,7 @@ The following scenario walks through how to set up an IPsec or OpenVPN VPN serve
    Configuration commands and values are subject to change and should be adapted for your specific environment.
 ```
 
-`EAP-TLS` and `EAP-MSCHAPV2` network protocols are both supported for VPN connections.
+`EAP-TLS` and `EAP-MSCHAPV2` authentication protocols are both supported for VPN connections.
 
 ## Basic Setup for an IPsec Server
 
