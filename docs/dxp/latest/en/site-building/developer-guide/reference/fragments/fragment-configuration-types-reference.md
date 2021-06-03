@@ -2,13 +2,14 @@
 
 This reference list the available configuration types for Fragments. See [Adding Configuration Options to Fragments](../../developing-page-fragments/adding-configuration-options-to-fragments.md) for more information on how to make a Fragment configurable.
 
-There are five configurable Fragment types available to implement:
+These are the configurable Fragment types available to implement:
 
-* `checkbox`
-* `colorPalette`
-* `itemSelector` (Available Liferay DXP 7.3)
-* `select`
-* `text`
+- `checkbox`
+- `colorPalette`
+- `itemSelector` (Available Liferay DXP 7.3+)
+- `select`
+- `text`
+- `videoSelector` (Available Liferay DXP 7.4+)
 
 ```note::
   Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
@@ -83,16 +84,16 @@ This configuration creates a selector that lets you select one existing piece of
 
 ```json
 {
-	"fieldSets": [{
-		"fields": [{
-			"label": "select-content",
-			"name": "itemSelector1",
-			"type": "itemSelector",
-			"typeOptions": {
-				"enableSelectTemplate": true
-			}
-		}]
-	}]
+"fieldSets": [{
+    "fields": [{
+        "label": "select-content",
+        "name": "itemSelector1",
+        "type": "itemSelector",
+        "typeOptions": {
+            "enableSelectTemplate": true
+        }
+    }]
+}]
 }
 ```
 
@@ -100,17 +101,17 @@ You can provide a more advanced configuration that lets authors select only a sp
 
 ```json
 {
-	"fieldSets": [{
-		"fields": [{
-			"label": "select-content",
-			"name": "itemSelector1",
-			"type": "itemSelector",
-			"typeOptions": {
-        "itemType" : "com.liferay.journal.model.JournalArticle",
-        "itemSubtype": "article-structure-key-15"
-			}
-		}]
-	}]
+"fieldSets": [{
+    "fields": [{
+        "label": "select-content",
+        "name": "itemSelector1",
+        "type": "itemSelector",
+        "typeOptions": {
+    "itemType" : "com.liferay.journal.model.JournalArticle",
+    "itemSubtype": "article-structure-key-15"
+        }
+    }]
+}]
 }
 ```
 
@@ -118,18 +119,18 @@ This example specifies that only a document with the `img` or `jpg` MIME type th
 
 ```json
 {
-	"fieldSets": [{
-		"fields": [{
-			"label": "select-content",
-			"name": "itemSelector1",
-			"type": "itemSelector",
-			"typeOptions": {
-        "itemType" : "com.liferay.portal.kernel.repository.model.FileEntry",
-        "itemSubtype": "metadataset-structure-key-2",
-        "mimeTypes": ["img/jpg"]
-			}
-		}]
-	}]
+"fieldSets": [{
+    "fields": [{
+        "label": "select-content",
+        "name": "itemSelector1",
+        "type": "itemSelector",
+        "typeOptions": {
+    "itemType" : "com.liferay.portal.kernel.repository.model.FileEntry",
+    "itemSubtype": "metadataset-structure-key-2",
+    "mimeTypes": ["img/jpg"]
+        }
+    }]
+}]
 }
 ```
 
@@ -137,16 +138,16 @@ This example specifies that only blog entries can be selected:
 
 ```json
 {
-	"fieldSets": [{
-		"fields": [{
-			"label": "select-content",
-			"name": "itemSelector1",
-			"type": "itemSelector",
-			"typeOptions": {
-        "itemType" : "com.liferay.blogs.model.BlogsEntry",
-			}
-		}]
-	}]
+"fieldSets": [{
+    "fields": [{
+        "label": "select-content",
+        "name": "itemSelector1",
+        "type": "itemSelector",
+        "typeOptions": {
+    "itemType" : "com.liferay.blogs.model.BlogsEntry",
+        }
+    }]
+}]
 }
 ```
 
@@ -236,3 +237,79 @@ This JSON configuration creates an input text field you can implement for cases 
 ```
 
 ![The Text configuration is useful when an input text option is necessary.](./fragment-configuration-types-reference/images/05.png)
+
+## Video Selector
+
+> Available: Liferay 7.4+.
+
+Using the `videoSelector` type, you can create a video selector to incorporate a [External Video](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video) Fragment in another Fragment.
+
+```json
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "label": "My Video Selector",
+          "name": "myVideoConfig",
+          "type": "videoSelector"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This is useful when you want a Fragment that has an embedded video by default. The following JSON configuration sample shows how to incorporate a External Video selector in a Card Fragment:
+
+```json
+{
+"fieldSets": [
+    {
+        "fields": [
+            {
+                "label": "Video",
+                "name": "video",
+                "type": "videoSelector"
+            }
+        ]
+    },
+    {
+        "configurationRole": "style",
+        "fields": [
+            {
+                "dataType": "string",
+                "defaultValue": "w-100",
+                "label": "image-size",
+                "name": "imageSize",
+                "type": "select",
+                "typeOptions": {
+                    "validValues": [
+                        {
+                            "label": "fit",
+                            "value": "w-100"
+                        },
+                        {
+                            "label": "original-size",
+                            "value": "w-0"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+}
+```
+
+![With the Video Selector you can include External Videos in Fragments](./fragment-configuration-types-reference/images/06.png)
+
+```note::
+   The `videoSelector` type is compatible with the `External Video <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video>`_ Fragment, but not with the `Video URL <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url>`_ Fragment.
+```
+
+## Additional Information
+
+- [Developing Fragments](../developing-page-fragments/developing-fragments-intro.md)
+- [Fragment Specific Tags Reference](./fragment-specific-tags-reference.md)
+- [Page Fragment Editor Interface Reference](./page-fragment-editor-interface-reference.md)

@@ -2,8 +2,8 @@
 
 The Page Fragment editor's interface is organized into two tabs:
 
-* [Code Editor](#code-editor)
-* [Configuration](#configuration)
+- [Code Editor](#code-editor)
+- [Configuration](#configuration)
 
 The sections below cover how to use these portions of the interface. See [Developing Page Fragments](../../developing-page-fragments/developing-fragments-intro.md) to learn how to develop Page Fragments.
 
@@ -42,3 +42,9 @@ Configuration values are made available to the Page Fragment through the FreeMar
 In DXP 7.3+, you can also select a checkbox near the top of the page to make your fragment cacheable. If this option is enabled, then the fragment is added to the cache when it is added to a page, improving the performance of pages with these fragments.
 
 ![Check the Cacheable option to improve the performance of your pages by caching the fragment.](./page-fragment-editor-interface-reference/images/02.png)
+
+## Additional Information
+
+- [Developing Fragments](../../developing-page-fragments/developing-fragments-intro.md)
+- [Adding Configuration Options to Fragments](../../developing-page-fragments/adding-configuration-options-to-fragments.md)
+- [Fragment Configuration Type Reference](./fragment-configuration-types-reference.md)
