@@ -7,6 +7,7 @@
 	<source-check>
 		<suppress checks="CopyrightCheck" files=".*" />
 		<suppress checks="JavaClassNameCheck" files=".*" />
+        <suppress checks="JavaExceptionCheck" files=".*" />
 		<suppress checks="JavaPackagePathCheck" files=".*" />
 	</source-check>
 </suppressions>
