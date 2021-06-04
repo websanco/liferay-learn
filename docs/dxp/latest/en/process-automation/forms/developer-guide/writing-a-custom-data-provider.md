@@ -266,7 +266,7 @@ try {
 }
 ```
 
-Import Lifery's `Http` class.
+Import Liferay's `Http` class.
 
 ```java
 import com.liferay.portal.kernel.util.Http;
