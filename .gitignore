@@ -1,5 +1,6 @@
 .DS_Store
 .gradle
+.vscode
 docs/**/build/
 docs/**/bundles/
 docs/**/liferay-????-theme.war
@@ -10,7 +11,6 @@ docs/**/liferay-????.zip/**/.classpath
 docs/**/liferay-????.zip/**/.metadata/
 docs/**/liferay-????.zip/**/.project
 docs/**/liferay-????.zip/**/.settings/
-docs/**/liferay-????.zip/**/.vscode/
 docs/**/liferay-????.zip/.gradle/
 docs/**/liferay-????.zip/.yo-rc.json
 docs/**/liferay-????.zip/gradle.properties
