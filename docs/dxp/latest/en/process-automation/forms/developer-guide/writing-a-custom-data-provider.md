@@ -92,7 +92,7 @@ This is a nice example, but it hard codes the URL for the data provider. If you 
 
 The `Acme B4D8 Implementation` project contains a custom data provider for returning XML from a specific URL. It contains three classes: `B4D8DDMDataProvider`, `B4D8DDMDataProviderSettingsProovider`, and `B4D8DDMDataProviderSettings`.
 
-### Understanding the `DDMDataProvider`
+### Implementing a `DDMDataProvider`
 
 The data provider class implements the `com.liferay.dynamic.data.mapping.data.provider.DDMDataProvider` interface, overriding two methods: `getData` and `getSettings`. These method names capture the essence of a data provider: it provides data based on settings (settings are optional though).
 
@@ -139,7 +139,7 @@ The `getData` method does most of the work: it must return a `DDMDaProviderRespo
 
    - At the end of the method, return the response: `return builder.build()`.
 
-### Understanding the `DDMDataProviderSettings`
+### Defining the Settings with `DDMDataProviderSettings`
 
 The data provider settings class defines the settings that this data provider needs, in two parts:
 
@@ -167,7 +167,7 @@ The data provider settings class defines the settings that this data provider ne
 
 The settings form currently contains some default fields needed by all data providers that appear in the Forms UI: Name, Description, and a section for defining its permissions. You get these simply by adding your settings with the `_ddmDataProviderInstanceSettings.getSettings(...)` call. The Outputs field is the inherited `outputParameters` field you added to the layout, which is really a nested field consisting of a Label, Path, and Type.
 
-### Understanding the `DDMDataProviderSettingsProvider`
+### Implementing the `DDMDataProviderSettingsProvider`
 
 The settings provider class contains one method, `getSettings`, which returns the `DDMDataProviderSettings` class for a given data provider. It's used to instantiate a settings class in the data provider, so you can get the settings values and configure the data provider accordingly.
 
@@ -181,7 +181,7 @@ Get a reference to the `B4D8DDMDataProviderSettingsProvider` and then call its `
 
 ## Add Data Provider Settings
 
-To add Data Provider Settings, add a field to the `DataProviderSettings` and update the `DataProvider`. 
+To add a Data Provider Setting, add an annotated field to the `DataProviderSettings` interface and update the `DataProvider` class to react to the setting's value. 
 
 ### Add a URL Field to the Settings
 
@@ -212,13 +212,15 @@ To add Data Provider Settings, add a field to the `DataProviderSettings` and upd
 
 Now the settings are ready to be used in the `DataProvider` class. 
 
-### Update the Data Provider
+### Handle the Setting in the Data Provider's `getData` Method
 
-Now you need a few updates to the `DataProvider` class: 
+Now the `B4D8DDMDataProvider#getData` method must be updated: 
 
-- Validate the URL added in the settings form.
-- Instantiate a `DataProviderSettings` object
-- Set the URL into the response
+- Remove the hardcoded String `url` variable.
+- Refactor the method to Instantiate `B4D8DDMDataProviderSettings` earlier, and retrieve the URL setting.
+- Set the URL into the response.
+
+If you're making these edits locally, copy the complete `try` block provided below these descriptive steps:
 
 1. To make sure you get a valid URL, now that user input is allowed:
 
@@ -229,12 +231,6 @@ Now you need a few updates to the `DataProvider` class:
     ```
 
 1. Replace the `String` variable defining the URL with `Http.Options` populated by the data provider setting field.
-
-    Import Lifery's `Http` class.
-
-    ```java
-    import com.liferay.portal.kernel.util.Http;
-    ```
 
     ```java
     Http.Options options = new Http.Options();
@@ -250,7 +246,7 @@ Now you need a few updates to the `DataProvider` class:
         _toDocument(HttpUtil.URLtoString(options)));
     ```
 
-Feel free to overwrite the entire `try` block in the `getData` method, instead of making the above replacements one by one:
+The above steps omit the refactoring of the method. To compile and test these steps, overwrite the entire `try` block in the `getData` method:
 
 ```java
 try {
@@ -270,9 +266,17 @@ try {
 }
 ```
 
-## Deploy and Test the Data Provider
+Import Lifery's `Http` class.
 
-To use the data provider in a form,
+```java
+import com.liferay.portal.kernel.util.Http;
+```
+
+Now you're ready to test the update data provider.
+
+## Deploy and Test the Updated Data Provider
+
+To use the updated data provider in a form,
 
 1. From the module root, rebuild and redeploy.
 
