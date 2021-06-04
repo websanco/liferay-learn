@@ -2,17 +2,17 @@
 
 > Available: Liferay 7.3+.
 
-The *Content Performance* panel is a global application for analyzing performance metrics of your content, like traffic channels or the number of views and reads over time. Using the Content Performance panel, content teams can periodically assess and adapt the content strategy execution.
+The *Content Performance* panel is a global application for analyzing performance metrics of your content, like traffic channels or the number of views and reads over time. Using the Content Performance panel, content teams can periodically assess and adapt their content strategy.
 
 To learn how to analyze your content performance quantitatively using the Content Performance panel, see [Analyze Content Metrics Using the Content Performance panel](./analyze-content-metrics-using-content-performance-panel.md).
 
 ```note::
-   For managing and audit your content across Sites and Asset Libraries, use the `Content Dashboard <../content-dashboard/about-the-content-dashboard.md>`_.
+   To manage and audit your content across Sites and Asset Libraries, use the `Content Dashboard <../content-dashboard/about-the-content-dashboard.md>`_.
 ```
 
 ## Accessing the Content Performance Panel
 
-You can open the Content Performance panel from [Web Content](#accessing-the-content-performance-panel-from-web-content) or from the [Content Dashboard](#accessing-the-content-performance-panel-from-the-content-dashboard) using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) option.
+You can open the Content Performance panel from [Web Content](#accessing-the-content-performance-panel-from-web-content) or from the [Content Dashboard](#accessing-the-content-performance-panel-from-the-content-dashboard) using *View Metrics* (![View Metrics](../../images/icon-analytics.png)).
 
 You can access the Content Performance panel when the following conditions are met:
 
@@ -36,7 +36,7 @@ You can access the Content Performance panel when the following conditions are m
 ### Accessing the Content Performance Panel from the Content Dashboard
 
 1. Open the [Content Dashboard](../content-dashboard/content-dashboard-interface.md#accessing-the-content-dashboard).
-1. On the [Contents list](../content-dashboard/content-dashboard-interface.md#contents-list), click the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) next to the content you want to review and select *View Metrics*.
+1. On the [Contents list](../content-dashboard/content-dashboard-interface.md#contents-list), click the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) next to the content you want to review, and select *View Metrics*.
 1. Alternatively, hover over the content and click the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) icon.
 
 ![Access the Performance sidebar from the assets in the Contents list.](./about-the-content-performance-panel/images/02.png)

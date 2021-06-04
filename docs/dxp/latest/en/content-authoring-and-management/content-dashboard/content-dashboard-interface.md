@@ -8,9 +8,9 @@ The Content Dashboard interface has the following areas:
 - [Contents list](#contents-list) (2)
 - [Information sidebar](#information-sidebar) (3)
 
-![The Content Dashboard user interface.](./content-dashboard-interface/images/05.png)
+![The Content Dashboard user interface contains three areas of information.](./content-dashboard-interface/images/05.png)
 
-When you [open the Content Dashboard](#accessing-the-content-dashboard) page, you can see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents List](#contents-list) (2) at the button. From the Contents list, you can access the [Information sidebar](#information-sidebar) (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar and the Content Performance panel are collapsable elements that show additional details for each item in the Contents List.
+When you [open the Content Dashboard](#accessing-the-content-dashboard), you see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents List](#contents-list) (2) at the button. From the Contents list, you can access the [Information sidebar](#information-sidebar) (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar and the Content Performance panel are collapsible elements that show additional details for each item in the Contents List.
 
 To access the Information sidebar, click the Actions Menu (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* or *View Metrics* option. Alternatively, hover over the article and click the *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Panel](../content-performance-panel/about-the-content-performance-panel.md).
 
@@ -23,10 +23,10 @@ To access the Information sidebar, click the Actions Menu (![Action Menu](../../
 
 ## Content Audit Tool
 
-This tool is the graphical area at the top of the Content Dashboard page. The chart in this area represents the total number of assets for the combination of categories in the global Vocabularies you select. This chart takes into account:
+This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for the combination of categories in the global Vocabularies you select. This chart takes into account:
 
 - Web content articles exclusively, across all Sites and Asset Libraries.
-- Content you have access.
+- Content you can access.
 - The existing [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
 - A maximum of two global Vocabularies (for the *x* and *y* axes.)
 
@@ -77,7 +77,7 @@ In the Contents list you can find the following elements:
 - Search field (3)
 - List of contents (4)
 
-![Overview of the Contents list user interface.](./content-dashboard-interface/images/06.png)
+![The Contents list contains several elements to help you find content.](./content-dashboard-interface/images/06.png)
 
 In the list of contents, you can find the following columns:
 
@@ -108,12 +108,10 @@ For each entry in the Contents list, you can access the following options using 
     ![Access the Information sidebar and Content Performance panel from the Actions menu or the icons on each content row.](./content-dashboard-interface/images/11.png)
 
 ```note::
-   You can use the *View*, *Info*, and *View Metrics* options for content based on a Display Page Template. You can use the *Edit* option when you have Edit permission for the content.
+   Use the *View*, *Info*, and *View Metrics* options for content based on a Display Page Template. Use the *Edit* option when you have Edit permission for the content.
 ```
 
 ### Filtering and Sorting Content in the Contents List
-
-To filter the content:
 
 1. Click the *Filter and Order* drop-down menu.
 1. Select one of the predefined filters or a custom filter (denoted by three dots) to create your own filter criteria.
@@ -123,7 +121,7 @@ The Filter Editor area shows your filters and the total number of results. To re
 
 ![Use the filter editor to remove a specific filter or all of them from the filter area.](./content-dashboard-interface/images/01.png)
 
-To sort the content:
+To sort the content,
 
 1. Click the *Filter and Order* drop-down menu.
 1. Under the *Order By* section, select the order for the items.
@@ -142,7 +140,7 @@ This sidebar provides access to different metadata for the asset selected in the
    You can open the Information Sidebar for assets with a Content Display Page associated. You can identify these assets in the Contents list by the Page icon next to the asset name.
 ```
 
-To open the Information sidebar:
+To open the Information sidebar,
 
 1. Click the Actions Menu (![Actions Menu](../../images/icon-actions.png)) next to the asset and select *Info*.
 1. Alternatively, hover over the asset and click the *Info* (![Information icon](../../images/icon-information.png)) icon.

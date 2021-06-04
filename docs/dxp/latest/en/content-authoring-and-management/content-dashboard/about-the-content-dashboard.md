@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+.
 
-The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access all of the content generated across Sites and Asset Libraries and audit this content in the [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool).
+The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries in the [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool).
 
 ```note::
    For analyzing performance metrics of your content, use the `Content Performance panel <../content-performance-panel/about-the-content-performance-panel.md>`_ .
@@ -10,7 +10,7 @@ The *Content Dashboard* is a global application for managing your content. From 
 
 Using the Content Dashboard, content authors and marketers can analyze their content in different ways:
 
-- Find and filter content across sites and Asset Libraries using built-in or custom filters.
+- Find and filter content across Sites and Asset Libraries using built-in or custom filters.
 - Analyze existing content by audience or phase in a customer journey.
 - Audit content areas with enough content or content gaps to improve your content strategy.
 
@@ -18,7 +18,7 @@ The Content Dashboard shows information based on the Categories you assign to co
 
 ## Content Dashboard Components
 
-To access the Content Dashboard, click on the Global Menu and, under the *Content* area, click *Content Dashboard*.
+To access the Content Dashboard, click the Global Menu and, under the *Content* area, click *Content Dashboard*.
 
 ![Open the Content Dashboard from the Global Menu.](./about-the-content-dashboard/images/02.png)
 
@@ -28,13 +28,13 @@ To access the Content Dashboard, click on the Global Menu and, under the *Conten
 
 You can see different areas on the Content Dashboard page.
 
-![Components of the Content Dashboard Interface.](./about-the-content-dashboard/images/01.png)
+![The Content Dashboard contains several components to put lots of information at your fingertips.](./about-the-content-dashboard/images/01.png)
 
 The [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool) (1) is the graphical area at the top of the page. It shows metrics for the Vocabularies and Categories you define in Liferay. You can include and combine your global Vocabularies here, and filter the Categories to analyze your data in different ways.
 
 The [Contents List](./content-dashboard-interface.md#contents-list) (2) shows content across all Sites and Asset Libraries. From here, you can sort and filter your information using built-in or custom filters. The Content Audit Tool chart changes dynamically based on the filters that you set.
 
-From the Contents List, you can access the [Information sidebar](./content-dashboard-interface.md#information-sidebar) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar provides different metadata for each asset, while the Content Performance panel gathers statistics for your content, like the number of reads and views or the traffic channels.
+From the Contents List, you can access the [Information sidebar](./content-dashboard-interface.md#information-sidebar) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar shows different metadata for each asset, while the Content Performance panel gathers statistics for your content, like the number of reads and views or the traffic channels.
 
 To learn more about the Content Dashboard interface and how to customize the information for your needs, see the [Content Dashboard Interface](./content-dashboard-interface.md) topic.
 
