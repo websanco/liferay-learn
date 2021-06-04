@@ -239,7 +239,7 @@ Now you need a few updates to the `DataProvider` class:
     ```java
     Http.Options options = new Http.Options();
 
-    options.setLocation(_b4d8DataProviderSettings.url()));
+    options.setLocation(b4d8DDMDataProviderSettings.url()));
     ```
 
 1. Use the new `options` in place of `url` in the return statement's call to `_createdDDMDataProviderResponse`. Replace the existing return statement.

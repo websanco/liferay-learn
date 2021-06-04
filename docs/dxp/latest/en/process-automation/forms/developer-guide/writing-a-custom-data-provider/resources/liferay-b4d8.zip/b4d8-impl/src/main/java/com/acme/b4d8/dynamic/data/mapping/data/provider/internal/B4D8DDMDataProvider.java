@@ -70,7 +70,7 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 	}
 
 	private DDMDataProviderResponse _createDDMDataProviderResponse(
-			B4D8DDMDataProviderSettings b4d8DataProviderSettings,
+			B4D8DDMDataProviderSettings b4d8DDMDataProviderSettings,
 			Document document)
 		throws Exception {
 
@@ -79,7 +79,7 @@ public class B4D8DDMDataProvider implements DDMDataProvider {
 
 		for (DDMDataProviderOutputParametersSettings
 				ddmDataProviderOutputParametersSettings :
-					b4d8DataProviderSettings.outputParameters()) {
+					b4d8DDMDataProviderSettings.outputParameters()) {
 
 			NodeList nodeList = document.getElementsByTagName(
 				ddmDataProviderOutputParametersSettings.outputParameterPath());
