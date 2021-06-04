@@ -21,19 +21,19 @@ public class M4Q7CharlieMessageListener implements MessageListener {
 			Object payload = message.getPayload();
 
 			_log.info("Received message payload " + payload.toString());
-
-			message.setResponse("M4Q7CharlieMessageListener");
-
-			Message responseMessage = new Message();
-
-			responseMessage.setDestinationName(
-				message.getResponseDestinationName());
-			responseMessage.setPayload("M4Q7CharlieMessageListener");
-			responseMessage.setResponseId(message.getResponseId());
-
-			_messageBus.sendMessage(
-				message.getResponseDestinationName(), responseMessage);
 		}
+
+		message.setResponse("M4Q7CharlieMessageListener");
+
+		Message responseMessage = new Message();
+
+		responseMessage.setDestinationName(
+			message.getResponseDestinationName());
+		responseMessage.setPayload("M4Q7CharlieMessageListener");
+		responseMessage.setResponseId(message.getResponseId());
+
+		_messageBus.sendMessage(
+			message.getResponseDestinationName(), responseMessage);
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
