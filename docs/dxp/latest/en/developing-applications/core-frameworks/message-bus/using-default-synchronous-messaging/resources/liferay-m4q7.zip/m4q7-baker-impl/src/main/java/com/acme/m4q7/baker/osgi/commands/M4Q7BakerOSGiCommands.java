@@ -34,24 +34,19 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 		_log.info("Received message payload " + payload.toString());
 	}
 
-	public void sendMessage(String payload) {
-		try {
-			Message message = new Message();
+	public void sendMessage(String payload) throws MessageBusException {
+		Message message = new Message();
 
-			message.setPayload(payload);
-			message.setResponseDestinationName("acme/m4q7_baker");
+		message.setPayload(payload);
+		message.setResponseDestinationName("acme/m4q7_baker");
 
-			Object response = _synchronousMessageSender.send(
-				"acme/m4q7_able", message, 10000);
+		Object response = _synchronousMessageSender.send(
+			"acme/m4q7_able", message, 10000);
 
-			if (_log.isInfoEnabled()) {
-				_log.info(
-					"SynchronousMessageSender#send(String, Message, long) " +
-						"returned " + response);
-			}
-		}
-		catch (MessageBusException messageBusException) {
-			messageBusException.printStackTrace();
+		if (_log.isInfoEnabled()) {
+			_log.info(
+				"SynchronousMessageSender#send(String, Message, long) " +
+					"returned " + response);
 		}
 	}
 
