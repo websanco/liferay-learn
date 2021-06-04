@@ -20,32 +20,39 @@ import org.osgi.service.component.annotations.Component;
 public class Z4H3ConfigurationFieldOptionsProvider
 	implements ConfigurationFieldOptionsProvider {
 
-		public List<Option> getOptions() {
-        return _colors.stream()
-        .filter( color -> (color._label != null) )
-        .map(
-            color -> new Option() {
-                    @Override
-                    public String getLabel(Locale locale) {
-                        return color._label;
-                    }
-                    @Override
-                    public String getValue() {
-                        return color._value;
-                    }
-                }
-        ).collect(Collectors.toList());
-    }
+	public List<Option> getOptions() {
+		Stream<Color> stream = _colors.stream();
+
+		return stream.filter(
+			color -> color.label != null
+		).map(
+			color -> new Option() {
+
+				@Override
+				public String getLabel(Locale locale) {
+					return color.label;
+				}
+
+				@Override
+				public String getValue() {
+					return color.value;
+				}
+
+			}
+		).collect(
+			Collectors.toList()
+		);
+	}
 
 	public class Color {
 
 		public Color(String label, String value) {
-			_label = label;
-			_value = value;
+			this.label = label;
+			this.value = value;
 		}
 
-		public String _label;
-		public String _value;
+		public String label;
+		public String value;
 
 	}
 
