@@ -78,20 +78,11 @@ Click Web Browser to see a donut chart displaying up to the top eight web browse
 
 ## Form Abandonment
 
-The Form Abandonment chart is unique to Forms.
-
-Form Abandonment appears as a bar graph. The height of the first bar shows the total number of people (Views) who have interacted with the form in any way, even just scrolling past it on the page. The rest of the bars show the percentage of those people that interacted with a specific field by clicking into it. The gross numbers on the right y-axis are the number of people who interacted with the field by clicking into it.
-
-Form Abandonment gives you these metrics on each form field:
-
-* Number of clicks into the field
-* Percentage of Users who abandoned the form at this field.
-* The time spent interacting with the field (includes abandonments)
-* The refill percent for the field. Out of the total number that filled out the field, this answers the question, "What percentage had to edit or enter new information into the field after moving on in the form?"
+Form Abandonment chart displays a bar graph. For the first row Step 1, the blue bar represents the portion of your visitors that abandoned the form without any interaction. Note that if your form has multiple steps there will be a new row for each step followed by the input fields in that step.
 
 ![Form Abandonment charts help to breakdown user interactions with specific elements on a form.](forms/images/06.png)
 
-Form Abandonment helps you get down to the field level in diagnosing potential issues with your forms. For example, in your Newsletter Sign-Up form, if you included a required field that asked for users to provide their first child's full name, you may see a lot of form abandonment on that field, not only because some form users don't have children. If you make that field not required, you'll get less abandonment on that field, and if you remove that field from the form entirely, you'll eliminate all abandonment from offended parents.
+For each input field, the blue bar represents the portion of visitors that abandoned the form at that particular field. This is useful information to have to diagnose potential issues with your forms. For example, in the image above, no visitor abandoned the form when inputting their first and last name. But some abandoned the form when inputting their email. With your own forms, use this analytics data to remove any input fields that seem to cause frequent form abandonment.
 
 ## Asset Appears On
 
