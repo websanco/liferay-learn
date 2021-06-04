@@ -10,7 +10,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = "destination.name=acme/m4q7_able_destination",
+	property = "destination.name=acme/m4q7_able",
 	service = MessageListener.class
 )
 public class M4Q7CharlieMessageListener implements MessageListener {
@@ -22,12 +22,13 @@ public class M4Q7CharlieMessageListener implements MessageListener {
 
 			_log.info("Received message payload " + payload.toString());
 
+			message.setResponse("M4Q7CharlieMessageListener");
+
 			Message responseMessage = new Message();
 
 			responseMessage.setDestinationName(
 				message.getResponseDestinationName());
-			responseMessage.setPayload(
-				"Payload from M4Q7CharlieMessageListener");
+			responseMessage.setPayload("M4Q7CharlieMessageListener");
 			responseMessage.setResponseId(message.getResponseId());
 
 			_messageBus.sendMessage(

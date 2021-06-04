@@ -29,9 +29,9 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 
 	@Override
 	public void receive(Message message) {
-		if (_log.isInfoEnabled()) {
-			_log.info("Received message " + message.toString());
-		}
+		Object payload = message.getPayload();
+
+		_log.info("Received message payload " + payload.toString());
 	}
 
 	public void sendMessage(String payload) {
@@ -41,8 +41,14 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 			message.setPayload(payload);
 			message.setResponseDestinationName("acme/m4q7_baker");
 
-			_synchronousMessageSender.send(
-				"acme/m4q7_able_destination", message, 10000);
+			Object response = _synchronousMessageSender.send(
+				"acme/m4q7_able", message, 10000);
+
+			if (_log.isInfoEnabled()) {
+				_log.info(
+					"SynchronousMessageSender#send(String, Message, long) " +
+						"returned " + response);
+			}
 		}
 		catch (MessageBusException messageBusException) {
 			messageBusException.printStackTrace();

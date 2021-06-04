@@ -19,7 +19,7 @@ public class M4Q7AbleMessagingConfigurator {
 	private void _activate(BundleContext bundleContext) {
 		DestinationConfiguration destinationConfiguration =
 			DestinationConfiguration.createSerialDestinationConfiguration(
-				"acme/m4q7_able_destination");
+				"acme/m4q7_able");
 
 		Destination destination = _destinationFactory.createDestination(
 			destinationConfiguration);
