@@ -1,23 +1,18 @@
 package com.acme.z4h3.internal.configuration.admin.definition;
 
-import com.liferay.asset.auto.tagger.text.extractor.TextExtractor;
-import com.liferay.asset.auto.tagger.text.extractor.TextExtractorTracker;
-import com.liferay.asset.kernel.AssetRendererFactoryRegistryUtil;
-import com.liferay.asset.kernel.model.AssetRendererFactory;
 import com.liferay.configuration.admin.definition.ConfigurationFieldOptionsProvider;
-import com.liferay.portal.kernel.security.auth.CompanyThreadLocal;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"configuration.field.name=dynamicallyPopulatedAssetTypes",
+		"configuration.field.name=dynamicallyPopulatedColorTypes",
 		"configuration.pid=com.acme.z4h3.internal.configuration.Z4H3Configuration"
 	},
 	service = ConfigurationFieldOptionsProvider.class
@@ -25,43 +20,37 @@ import org.osgi.service.component.annotations.Reference;
 public class Z4H3ConfigurationFieldOptionsProvider
 	implements ConfigurationFieldOptionsProvider {
 
-	@Override
-	public List<Option> getOptions() {
-		List<AssetRendererFactory<?>> assetRendererFactories =
-			AssetRendererFactoryRegistryUtil.getAssetRendererFactories(
-				CompanyThreadLocal.getCompanyId());
+		public List<Option> getOptions() {
+        return _colors.stream()
+        .filter( color -> (color._label != null) )
+        .map(
+            color -> new Option() {
+                    @Override
+                    public String getLabel(Locale locale) {
+                        return color._label;
+                    }
+                    @Override
+                    public String getValue() {
+                        return color._value;
+                    }
+                }
+        ).collect(Collectors.toList());
+    }
 
-		Stream<AssetRendererFactory<?>> stream =
-			assetRendererFactories.stream();
+	public class Color {
 
-		return stream.filter(
-			assetRendererFactory -> {
-				TextExtractor<?> textExtractor =
-					_textExtractorTracker.getTextExtractor(
-						assetRendererFactory.getClassName());
+		public Color(String label, String value) {
+			_label = label;
+			_value = value;
+		}
 
-				return textExtractor != null;
-			}
-		).map(
-			assetRendererFactory -> new Option() {
+		public String _label;
+		public String _value;
 
-				@Override
-				public String getLabel(Locale locale) {
-					return assetRendererFactory.getTypeName(locale);
-				}
-
-				@Override
-				public String getValue() {
-					return assetRendererFactory.getClassName();
-				}
-
-			}
-		).collect(
-			Collectors.toList()
-		);
 	}
 
-	@Reference
-	private TextExtractorTracker _textExtractorTracker;
+	private final List<Color> _colors = Arrays.asList(
+		new Color("Blue", "blue"), new Color("Red", "red"),
+		new Color("Yellow", "yellow"));
 
 }

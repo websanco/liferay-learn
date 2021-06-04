@@ -6,21 +6,21 @@ import aQute.bnd.annotation.metatype.Meta;
 	id = "com.acme.z4h3.internal.configuration.Z4H3Configuration",
 	localization = "content/Language", name = "z4h3-configuration-name"
 )
-public @interface Z4H3Configuration {
+public interface Z4H3Configuration {
 
 	@Meta.AD(
-		description = "this-list-is-manually-populated", name = "asset-types",
-		optionLabels = {"Asset1", "Asset2", "Asset3"},
-		optionValues = {"Asset1", "Asset2", "Asset3"}, required = false
+		description = "this-list-is-manually-populated", name = "color-types",
+		optionLabels = {"Color1", "Color2", "Color3"},
+		optionValues = {"Color1", "Color2", "Color3"}, required = false
 	)
-	String assetTypes();
+	public String colorTypes();
 
 	@Meta.AD(
 		description = "this-list-is-dynamically-populated",
-		name = "dynamically-populated-asset-types",
-		optionLabels = {"Asset1", "Asset2", "Asset3"},
-		optionValues = {"Asset1", "Asset2", "Asset3"}, required = false
+		name = "dynamically-populated-color-types",
+		optionLabels = {"Color1", "Color2", "Color3"},
+		optionValues = {"Color1", "Color2", "Color3"}, required = false
 	)
-	String dynamicallyPopulatedAssetTypes();
+	public String dynamicallyPopulatedColorTypes();
 
 }
