@@ -1,6 +1,6 @@
 # Message Bus
 
-The Message Bus facilitates exchanging messages while keeping sender and receiver concerns separate. Sender classes invoke the Message Bus to send messages to destinations, while *listener* classes receive messages sent to destinations; listeners are transparent to senders and vice-versa.
+The Message Bus provides a loosely coupled way to exchange messages. A class sending a message invokes the Message Bus to send the message to a destination, while other classes (*listeners*) registered at that destination receive the message. The listeners are transparent to senders and vice-versa.
 
 Here are the main messaging components:
 
@@ -18,9 +18,9 @@ The figure below demonstrates component interaction.
 
 ![Example Messaging Component Interaction](./message-bus/images/01.png)
 
-Here is the sequence of interactions:
+Here is an example interaction sequence:
 
-1. `Destination` *D1* registers with the Message Bus.
+1. `Destination` *D1* is registered with the Message Bus. Any class can register a `Destination`.
 1. `MessageListener`s *ML1* and *ML2* register with `Destination` *D1*.
 1. Arbitrary class *Foo* creates `Message` *M1*.
 1. *Foo* invokes the Message Bus to send `Message` *M1* to `Destination` *D1*.
@@ -32,7 +32,7 @@ Here is the sequence of interactions:
 
 Message Bus sends messages synchronously and asynchronously.
 
-**Synchronous Messaging:** The sender blocks after sending a message. When the specified condition is met, the sender unblocks and continues processing.
+**Synchronous Messaging:** The sender blocks after sending a message. When the sender's condition (determined by the sender type) is met, the sender unblocks and continues processing.
 
 **Asynchronous Messaging:** The sender immediately continues processing after sending a message.
 
@@ -42,15 +42,15 @@ The following topics cover both ways of messaging:
 
 * *Using Direct Synchronous Messaging* (coming soon) demonstrates a message sender blocking on sending a message until *all* listeners receive the message.
 
-* *Using Default Synchronous Messaging* (coming soon) shows a message sender blocking until one listener responds to the message *or*, if no listener receives the message, until the message times out.
+* *Using Default Synchronous Messaging* (coming soon) shows a message sender blocking until one listener responds to the message *or*, if no listener response, until the message times out.
 
 ## Messaging in a Cluster
 
-In a Liferay clustering, you must configure a bridge to message listeners on all cluster nodes. See *Sending Messages in a Cluster* (coming soon) for details.
+In a Liferay cluster, you must configure a bridge to message listeners on all cluster nodes. See *Sending Messages in a Cluster* (coming soon) for details.
 
 ## Performance
 
-The Message Bus API facilitates monitoring registration events, destinations, destination message listeners, and message queues. You can configure Message Bus components to meet your needs by trying different destination types, adjusting message queue parameters, and setting different message processing thread parameters. See *Managing Message Bus Performance* (coming soon) for more information.
+The Message Bus API facilitates monitoring registration events, destinations, destination message listeners, and message queues. You can configure Message Bus components to meet your needs by adjusting destination types, message queue parameters, and thread parameters. See *Managing Message Bus Performance* (coming soon) for more information.
 
 ## What's Next
 
