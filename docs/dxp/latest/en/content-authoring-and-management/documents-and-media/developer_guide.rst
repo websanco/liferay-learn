@@ -6,8 +6,8 @@ Developer Guide
 
    developer-guide/document-api-basics.md
    developer-guide/adaptive-media-modules-reference.md
-   developer-guide/creating-custom-video-shortcut-providers.md
+   developer-guide/creating-video-shortcut-providers.md
 
 -  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics`
 -  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/adaptive-media-modules-reference`
--  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/creating-custom-video-shortcut-providers`
+-  :doc:`/content-authoring-and-management/documents-and-media/developer-guide/creating-video-shortcut-providers`
