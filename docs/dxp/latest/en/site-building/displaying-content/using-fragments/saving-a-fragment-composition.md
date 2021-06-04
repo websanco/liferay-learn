@@ -14,7 +14,7 @@ To save the Fragment composition,
 
       ![Save the Fragment composition using the Save Composition option in the Options menu.](./saving-a-fragment-composition/images/04.png)
 
-1. In the *Save as Fragment* dialog, provide a *Name* and other optional information:
+1. In the Save as Fragment dialog, provide a *Name* and other optional information:
 
     - Fragment *Description* and *Thumbnail*.
     - *Save Inline Content* option, for including inline content such as fragment entries (links, images, text, etc.)
