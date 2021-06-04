@@ -177,7 +177,7 @@ function generate_static_html {
 		done
 
 		#
-		# Include an article-name/images folder in the output folder if there's a *.mp4 file in the input folder.
+		# Include MP4 files in the output.
 		#
 
 		for images_dir in $(find build/input/"${product_version_language_dir_name}" -name images -prune -type d)
