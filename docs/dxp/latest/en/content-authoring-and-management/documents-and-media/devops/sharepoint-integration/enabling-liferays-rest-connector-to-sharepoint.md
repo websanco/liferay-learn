@@ -2,7 +2,7 @@
 
 > Requires DXP Subscription; Compatible with SharePoint 2016 and SharePoint Online
 
-Liferay's REST Connector for SharePoint provides Documents and Media integration with SharePoint libraries. With it, you can create Documents and Media repositories for mounting a SharePoint library. You can then read/write SharePoint documents and folders, perform document check-in/check-out, download documents, and more. Each action performed in one context is propagated in the other.
+Liferay's REST Connector to SharePoint provides Documents and Media integration with SharePoint libraries. With it, you can create Documents and Media repositories for mounting a SharePoint library. You can then read/write SharePoint documents and folders, perform document check-in/check-out, download documents, and more. Each action performed in one context is propagated in the other.
 
 ## Integration Limitations
 
@@ -23,9 +23,9 @@ For more information on how the REST connector works, see the [javadocs API refe
 
 ## Installing the REST Connector
 
-Follow these steps to install the Liferay REST Connector for SharePoint.
+Follow these steps to install the Liferay REST Connector to SharePoint.
 
-1. Download the [Liferay REST Connector for SharePoint](https://web.liferay.com/marketplace/-/mp/application/105406871) as an LPKG file via the Liferay Marketplace.
+1. Download the [Liferay REST Connector to SharePoint](https://web.liferay.com/marketplace/-/mp/application/105406871) as an LPKG file via the Liferay Marketplace.
 
 1. Copy the file to the instance's [`[LIFERAY_HOME]/deploy`](../../../../installation-and-upgrades/reference/liferay-home.md) folder to deploy it.
 
