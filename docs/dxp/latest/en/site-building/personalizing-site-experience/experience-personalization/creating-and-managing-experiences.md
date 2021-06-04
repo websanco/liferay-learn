@@ -13,12 +13,12 @@ You can customize your Content Page to different groups of users using *Experien
 3. At the top of the page, for the Experience click *Default* to open the Experience selection dialog.
 
     ![Click on Experience to select your experience or click New Experience to create a new one.](./creating-and-managing-experiences/images/01.png)
-4. Click on *New Experience*.
+4. Click *New Experience*.
 
 5. Enter a name for the Experience and select the Segment for the audience you want to target, or [create a New Segment](../segmentation/creating-and-managing-user-segments.md) (available in Liferay DXP 7.2 Fix Pack 1+ and Liferay Portal 7.2 CE GA2+.)
 
     ```note::
-       New Experiences are assigned to the *Anyone* Segment by default, and target all website visitors.
+       New Experiences are assigned to the *Anyone* Segment by default and target all website visitors.
     ```
 
 1. On the *New Experience* dialog, under the *Languages* section, select any additional language you want to target with your experience. For example, if your default Content Page language is en-US and you want to create an Experience for es-ES speakers, select this language as well.

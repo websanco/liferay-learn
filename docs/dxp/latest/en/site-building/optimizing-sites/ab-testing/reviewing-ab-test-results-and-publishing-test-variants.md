@@ -16,7 +16,7 @@ To review the A/B Test results and publish your Variant,
     * *Winner Declared*: One of the test variants met the Confidence Level Required.
     * *No Winner*: None of the test variants met the Confidence Level Required for the duration of the test.
 
-        ![Review A/B Test Results from the A/B Test panel](reviewing-ab-test-results-and-publishing-test-variants/images/01.png)
+    ![Review A/B Test Results from the A/B Test panel](reviewing-ab-test-results-and-publishing-test-variants/images/01.png)
 
 1. From the Variants section, you can
 
