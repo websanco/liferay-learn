@@ -14,9 +14,9 @@ When editing an image in Documents and Media, the following options are availabl
 
 **Ratio**: Select a fixed preset ratio for cropping the image (i.e., 16:10, 16:9, 4:3, 1:1, 2:3), or select *Free* to create a custom image ratio.
 
-**Rotate**: Rotate image counter clockwise.
+**Rotate**: Rotate image clockwise.
 
-**Zoom**: Adjust image zoom within the cropped area; maximum zoom is 200% and minimum is 12.5%.
+**Zoom**: Adjust image zoom without changing aspect ratio; maximum zoom is 200% and minimum is 12.5%.
 
 **Cancel**: Undo all unsaved changes and exit image edit mode.
 
@@ -65,3 +65,9 @@ There is also history bar at the top of the image:
 ![The history bar at the top of your image can be used to undo or redo changes.](editing-images/images/07.png)
 
 The history bar can undo, redo, or reset changes that have been made to the image in the editor. Use the reset button with caution: once it has been pressed the image is reset to its original state, causing all changes made within the editor to be lost.
+
+## Additional Information
+
+* [Sharing Documents and Media](../sharing-documents-and-media.md)
+* [Uploading Files](./uploading-files.md)
+* [Previewing Files](./previewing-files.md)
