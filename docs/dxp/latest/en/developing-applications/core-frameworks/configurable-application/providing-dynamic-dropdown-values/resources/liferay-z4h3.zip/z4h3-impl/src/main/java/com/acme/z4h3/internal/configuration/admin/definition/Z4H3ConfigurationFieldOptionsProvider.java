@@ -1,10 +1,13 @@
 package com.acme.z4h3.internal.configuration.admin.definition;
 
 import com.liferay.configuration.admin.definition.ConfigurationFieldOptionsProvider;
+import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,13 +27,17 @@ public class Z4H3ConfigurationFieldOptionsProvider
 		Stream<Color> stream = _colors.stream();
 
 		return stream.filter(
-			color -> color.label != null
+			color -> color.value != null
 		).map(
 			color -> new Option() {
 
 				@Override
 				public String getLabel(Locale locale) {
-					return color.label;
+					ResourceBundle resourceBundle =
+						ResourceBundleUtil.getBundle(
+							"content.Language", locale, getClass());
+
+					return LanguageUtil.get(resourceBundle, color.value);
 				}
 
 				@Override
@@ -46,18 +53,15 @@ public class Z4H3ConfigurationFieldOptionsProvider
 
 	public class Color {
 
-		public Color(String label, String value) {
-			this.label = label;
+		public Color(String value) {
 			this.value = value;
 		}
 
-		public String label;
 		public String value;
 
 	}
 
 	private final List<Color> _colors = Arrays.asList(
-		new Color("Blue", "blue"), new Color("Red", "red"),
-		new Color("Yellow", "yellow"));
+		new Color("blue"), new Color("red"), new Color("yellow"));
 
 }
