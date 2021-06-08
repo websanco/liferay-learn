@@ -123,6 +123,8 @@ Your repository is now reorganized into a structure where the `liferay` folder i
 
 The environment variables within your project's `ci/LCP.json` file may now behave differently after you have completed the service stack upgrade. Before continuing with your upgraded project, make sure that your `ci` service's environment variables reflect the correct configuration.
 
+### Verify Repository Integration Variables
+
 Verify that the following properties are set up correctly for your project's integration with version control (in this example, using GitHub):
 
 ```json
@@ -133,6 +135,10 @@ Verify that the following properties are set up correctly for your project's int
     "LCP_CI_SCM_TOKEN": "AUTH_TOKEN",
 }
 ```
+
+See the [GitHub](../getting-started/configuring-your-github-repository.md#setting-environment-variables), [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md#connecting-bitbucket-to-your-jenkins-service), or [GitLab](../getting-started/configuring-your-gitlab-repository.md#connecting-gitlab-to-your-jenkins-service) integration references for more information.
+
+### Verify Jenkinsfile Configuration Variables
 
 Since a default Jenkinsfile is [no longer required](./dxp-cloud-project-changes-in-version-4.md#ci-service-changes) in your project, the Jenkinsfile at the root of your project may also be removed after the upgrade. If you intend to use the default Jenkinsfile for your project, ensure that the `ci` services environment variables reflect this:
 
@@ -158,7 +164,15 @@ If you are defining your own Jenkinsfile within your `ci` service directory to o
 
 ## Next Steps
 
-After your local repository has changed, use the [CLI tool](./command-line-tool.md)'s `lcp deploy` command to deploy your `ci` service to the `infra` environment. This ensures that the changes to the `ci` service are deployed first, which will allow further changes to deploy correctly.
+After your local repository has changed, deploy the `ci` service to the `infra` environment. Deploying to the `infra` environment before any others ensures that the changes to the `ci` service are deployed first, which will allow further changes to deploy correctly.
+
+The quickest way to deploy only the `ci` service is to [use the CLI tool](../build-and-deploy/deploying-changes-via-the-cli-tool.md). Navigate to the `ci/` folder of your project's repository and run the `lcp deploy` command:
+
+```bash
+    lcp deploy --project=<project-name> --environment=infra
+```
+
+Alternatively, you can also follow the [development workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) and deploy the changes as a build from the DXP Cloud console.
 
 You may then want to [deploy the new service versions](../build-and-deploy/deploying-changes-via-the-dxp-cloud-console.md) to a development environment, or explore some of the new functionality in the new versions of your DXP Cloud services. See the [explanation of the changes](./dxp-cloud-project-changes-in-version-4.md) to learn more.
 
