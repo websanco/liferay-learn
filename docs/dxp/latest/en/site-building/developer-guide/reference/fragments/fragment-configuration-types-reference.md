@@ -356,7 +356,7 @@ You can use this Fragment configuration with the following HTML code sample to l
 
 ![You can develop a Fragment with a Collection selector using the Collection configuration.](./fragment-configuration-types-reference/images/07.png)
 
-You can further customize the Collection by including only a certain type of assets. For example, if your Collection includes Web Content and Blogs, you can restrict the `collectionSelector` configuration to show Web Content only using the `itemType`:
+You can further customize the Collection to select only a certain type of assets in the Collection. For example, if your Collection includes Web Content and Blogs, you can restrict the `collectionSelector` configuration to select only Blog entries using the `itemType`:
 
 ```json
 { 
@@ -368,7 +368,7 @@ You can further customize the Collection by including only a certain type of ass
      "name": "collection",                    
      "type": "collectionSelector",
      "typeOptions": {
-      "itemType": "com.liferay.journal.model.JournalArticle"
+      "itemType": "com.liferay.blogs.model.BlogsEntry"
                }
     }            
    ]        
