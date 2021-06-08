@@ -10,6 +10,7 @@ These are the configurable Fragment types available to implement:
 - `select`
 - `text`
 - `videoSelector` (Available Liferay DXP 7.4+)
+- `collectionSelector` (Available Liferay DXP 7.3+)
 
 ```note::
   Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
@@ -306,6 +307,78 @@ This is useful when you want a Fragment that has an embedded video by default. T
 
 ```note::
    The `videoSelector` type is compatible with the `External Video <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video>`_ Fragment, but not with the `Video URL <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url>`_ Fragment.
+```
+
+## Collection Configuration
+
+> Available: Liferay DXP 7.4+.
+
+Using the `collectionSelector` configuration type, you can develop a Fragment that includes a [Collection](../../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) or Collection Provider. You can use the `collectionSelector` with both Manual and Dynamic Collections.
+
+```note::
+   Collection Providers are a new feature in Liferay DXP 7.3 that allows developers to create specific collections with more advanced criteria. To learn more, read the information about `Creating an Information List Provider <https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider>`_ in the `Info Framework <https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework>`_ developer documentation..
+```
+
+The following JSON configuration shows how to use the `collectionSelector`:
+
+```json
+{ 
+    "fieldSets": [   
+        {            
+        "label": "Collection",            
+        "fields": [                
+            {                    
+                "name": "collection",                    
+                "type": "collectionSelector"                
+            }            
+        ]        
+        } 
+    ]
+}
+```
+
+You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md). To reference this Collection in the HMTL, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
+
+```html
+<div class="fragment_310">
+ <h1>
+  List of Items:
+ </h1>
+  <ul>
+  [#if collectionObjectList??]
+   [#list collectionObjectList as item]
+    <li>${item.title}</li>
+   [/#list]
+  [/#if]
+  </ul>
+</div>
+```
+
+![You can develop a Fragment with a Collection selector using the Collection configuration.](./fragment-configuration-types-reference/images/07.png)
+
+You can further customize the Collection by including only a certain type of assets. For example, if your Collection includes Web Content and Blogs, you can restrict the `collectionSelector` configuration to show Web Content only using the `itemType`:
+
+```json
+{ 
+ "fieldSets": [   
+  {            
+   "label": "Collection",            
+   "fields": [                
+    {                    
+     "name": "collection",                    
+     "type": "collectionSelector",
+     "typeOptions": {
+      "itemType": "com.liferay.journal.model.JournalArticle"
+               }
+    }            
+   ]        
+  } 
+ ]
+}
+```
+
+```tip::
+   In addition to the `itemTime`, you can specify the `itemSubtype` in the configuration. The `itemSubtype` corresponds to the Asset `classPK`.
 ```
 
 ## Additional Information
