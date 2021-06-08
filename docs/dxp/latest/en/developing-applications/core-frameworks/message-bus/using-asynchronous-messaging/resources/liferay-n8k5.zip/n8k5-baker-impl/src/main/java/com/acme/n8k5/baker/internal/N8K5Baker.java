@@ -14,7 +14,7 @@ public class N8K5Baker {
 	private void _activate() {
 		Message message = new Message();
 
-		message.setPayload("N8K5Baker#_activate");
+		message.setPayload("N8K5Baker");
 
 		_messageBus.sendMessage("acme/n8k5_able", message);
 	}
