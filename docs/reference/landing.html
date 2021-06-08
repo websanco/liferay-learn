@@ -1,0 +1,51 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#dxp-logo',
+					sectionName: 'DXP',
+					sectionURL: 'http://docs.liferay.com/dxp/portal/7.3-latest',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Apps',
+							url: 'http://docs.liferay.com/dxp/portal/7.3-latest/apps'
+						},
+						{
+							name: 'Javadocs',
+							url: 'http://docs.liferay.com/dxp/portal/7.3-latest/javadocs'
+						},
+						{
+							name: 'Definitions',
+							url: 'http://docs.liferay.com/dxp/portal/7.3-latest/definitions'
+						},
+						{
+							name: 'Properties',
+							url: 'http://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc'
+						},
+						{
+							name: 'Taglibs',
+							url: 'http://docs.liferay.com/dxp/portal/7.3-latest/taglibs'
+						}
+					]
+				},
+				{
+					icon: '#site-building-logo',
+					sectionName: 'Faces',
+					sectionURL: 'https://docs.liferay.com/faces/3.2/vdldoc',
+					showAll: false,
+				},
+				{
+					icon: '#content-authoring-and-management-logo',
+					sectionName: 'Portlet API',
+					sectionURL: 'https://docs/liferay.com/portlet-api/3.0/javadocs',
+					showAll: false,
+				}
+			]
+		}
+	})
+</script>
