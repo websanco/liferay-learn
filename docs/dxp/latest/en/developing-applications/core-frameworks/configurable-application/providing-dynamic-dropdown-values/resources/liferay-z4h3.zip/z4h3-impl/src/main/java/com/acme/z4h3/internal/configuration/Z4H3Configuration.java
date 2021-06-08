@@ -20,6 +20,6 @@ public interface Z4H3Configuration {
 		name = "provider-populated-colors",
     required = false
 	)
-	public String providerPopulatedColor();
+	public String providerPopulatedColors();
 
 }
