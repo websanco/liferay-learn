@@ -29,9 +29,11 @@ public class M4Q7MessageSenderOSGiCommands implements MessageListener {
 
 	@Override
 	public void receive(Message message) {
-		Object payload = message.getPayload();
+		if (_log.isInfoEnabled()) {
+			Object payload = message.getPayload();
 
-		_log.info("Received message payload " + payload.toString());
+			_log.info("Received message payload " + payload.toString());
+		}
 	}
 
 	public void sendMessage(String payload) {
