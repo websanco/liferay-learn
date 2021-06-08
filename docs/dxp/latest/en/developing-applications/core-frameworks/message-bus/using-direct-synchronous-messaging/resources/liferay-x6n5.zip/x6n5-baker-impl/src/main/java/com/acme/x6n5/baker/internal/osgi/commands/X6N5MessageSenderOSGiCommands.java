@@ -1,4 +1,4 @@
-package com.acme.x6n5.baker.osgi.commands;
+package com.acme.x6n5.baker.internal.osgi.commands;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -11,9 +11,9 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"osgi.command.function=sendMessage", "osgi.command.scope=x6n5.baker"
+		"osgi.command.function=sendMessage", "osgi.command.scope=x6n5"
 	},
-	service = Object.class
+	service = X6N5MessageSenderOSGiCommands.class
 )
 public class X6N5MessageSenderOSGiCommands {
 
@@ -23,17 +23,15 @@ public class X6N5MessageSenderOSGiCommands {
 
 			message.setPayload(payload);
 
-			Object response = _directSynchronousMessageSender.send(
+			Object response = _synchronousMessageSender.send(
 				"acme/x6n5_able", message);
 
 			if (_log.isInfoEnabled()) {
-				_log.info(
-					"SynchronousMessageSender#send(String, Message) returned " +
-						response);
+				_log.info("Response: " + response);
 			}
 		}
 		catch (MessageBusException messageBusException) {
-			messageBusException.printStackTrace();
+			_log.error(messageBusException, messageBusException);
 		}
 	}
 
@@ -41,6 +39,6 @@ public class X6N5MessageSenderOSGiCommands {
 		X6N5MessageSenderOSGiCommands.class);
 
 	@Reference(target = "(mode=DIRECT)")
-	private SynchronousMessageSender _directSynchronousMessageSender;
+	private SynchronousMessageSender _synchronousMessageSender;
 
 }
