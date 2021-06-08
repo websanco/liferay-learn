@@ -9,18 +9,17 @@ import aQute.bnd.annotation.metatype.Meta;
 public interface Z4H3Configuration {
 
 	@Meta.AD(
-		description = "this-list-is-manually-populated", name = "color-types",
+		description = "this-list-is-manually-populated", name = "colors",
 		optionLabels = {"Color1", "Color2", "Color3"},
 		optionValues = {"Color1", "Color2", "Color3"}, required = false
 	)
-	public String colorTypes();
+	public String colors();
 
 	@Meta.AD(
-		description = "this-list-is-dynamically-populated",
-		name = "dynamically-populated-color-types",
-		optionLabels = {"Color1", "Color2", "Color3"},
-		optionValues = {"Color1", "Color2", "Color3"}, required = false
+		description = "this-list-is-provider-populated",
+		name = "provider-populated-colors",
+    required = false
 	)
-	public String dynamicallyPopulatedColorTypes();
+	public String providerPopulatedColor();
 
 }

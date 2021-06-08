@@ -15,7 +15,7 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"configuration.field.name=dynamicallyPopulatedColorTypes",
+		"configuration.field.name=providerPopulatedColor",
 		"configuration.pid=com.acme.z4h3.internal.configuration.Z4H3Configuration"
 	},
 	service = ConfigurationFieldOptionsProvider.class
