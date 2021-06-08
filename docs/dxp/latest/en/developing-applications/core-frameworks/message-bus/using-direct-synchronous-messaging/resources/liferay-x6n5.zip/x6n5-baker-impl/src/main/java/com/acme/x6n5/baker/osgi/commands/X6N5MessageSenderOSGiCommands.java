@@ -15,7 +15,7 @@ import org.osgi.service.component.annotations.Reference;
 	},
 	service = Object.class
 )
-public class X6N5BakerOSGiCommands {
+public class X6N5MessageSenderOSGiCommands {
 
 	public void sendMessage(String payload) {
 		try {
@@ -38,7 +38,7 @@ public class X6N5BakerOSGiCommands {
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		X6N5BakerOSGiCommands.class);
+		X6N5MessageSenderOSGiCommands.class);
 
 	@Reference(target = "(mode=DIRECT)")
 	private SynchronousMessageSender _directSynchronousMessageSender;
