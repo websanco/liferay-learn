@@ -6,6 +6,7 @@ Message Bus
 
    message-bus/message-bus.md
    message-bus/listening-for-messages.md
+   message-bus/using-asynchronous-messaging.md
 
 .. raw:: html
    :file: ../../landingpage_template.html
