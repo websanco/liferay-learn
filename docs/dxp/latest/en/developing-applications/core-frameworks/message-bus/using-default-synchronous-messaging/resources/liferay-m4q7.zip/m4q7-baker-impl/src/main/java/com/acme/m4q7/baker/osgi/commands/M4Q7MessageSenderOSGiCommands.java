@@ -25,7 +25,7 @@ import org.osgi.service.component.annotations.Reference;
 	},
 	service = MessageListener.class
 )
-public class M4Q7BakerOSGiCommands implements MessageListener {
+public class M4Q7MessageSenderOSGiCommands implements MessageListener {
 
 	@Override
 	public void receive(Message message) {
@@ -75,7 +75,7 @@ public class M4Q7BakerOSGiCommands implements MessageListener {
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		M4Q7BakerOSGiCommands.class);
+		M4Q7MessageSenderOSGiCommands.class);
 
 	@Reference
 	private DestinationFactory _destinationFactory;
