@@ -1,5 +1,5 @@
-Content Performance Tool
-========================
+Content Performance Panel
+=========================
 
 .. toctree::
    :maxdepth: 3
