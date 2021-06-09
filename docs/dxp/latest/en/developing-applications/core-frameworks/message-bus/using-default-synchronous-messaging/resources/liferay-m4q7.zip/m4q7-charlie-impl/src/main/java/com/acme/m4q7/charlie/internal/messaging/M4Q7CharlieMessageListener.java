@@ -27,7 +27,6 @@ public class M4Q7CharlieMessageListener implements MessageListener {
 			message.getResponseDestinationName(),
 			new Message() {
 				{
-					setDestinationName(message.getResponseDestinationName());
 					setPayload("M4Q7CharlieMessageListener");
 					setResponseId(message.getResponseId());
 				}
