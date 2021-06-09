@@ -170,7 +170,7 @@ function generate_static_html {
 
 		for html_file_name in $(find build/output/"${product_version_language_dir_name}" -name *.html -type f)
 		do
-			sed -i 's/.md"/.html"/g' ${html_file_name}
+			sed -i '/github\.com\/liferay\/liferay\-learn/ ! s/.md"/.html"/g' ${html_file_name}
 			sed -i 's/.md#/.html#/g' ${html_file_name}
 			sed -i 's/README.html"/index.html"/g' ${html_file_name}
 			sed -i 's/README.html#/index.html#/g' ${html_file_name}
