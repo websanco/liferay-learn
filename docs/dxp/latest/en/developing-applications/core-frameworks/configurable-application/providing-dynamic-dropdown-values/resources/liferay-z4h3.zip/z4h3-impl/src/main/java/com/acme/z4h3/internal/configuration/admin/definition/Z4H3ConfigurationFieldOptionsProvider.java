@@ -4,7 +4,7 @@ import com.liferay.configuration.admin.definition.ConfigurationFieldOptionsProvi
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -22,33 +22,27 @@ public class Z4H3ConfigurationFieldOptionsProvider
 	implements ConfigurationFieldOptionsProvider {
 
 	public List<Option> getOptions() {
-		List<Option> options = new ArrayList<>();
-
-		for (String color : _colors) {
-			Option option = new Option() {
-
-				@Override
-				public String getLabel(Locale locale) {
-					ResourceBundle resourceBundle =
-						ResourceBundleUtil.getBundle(
-							"content.Language", locale, getClass());
-
-					return LanguageUtil.get(resourceBundle, color);
-				}
-
-				@Override
-				public String getValue() {
-					return color;
-				}
-
-			};
-
-			options.add(option);
-		}
-
-		return options;
+		return Arrays.asList(
+			_getOption("green"), _getOption("orange"), _getOption("purple"));
 	}
 
-	private final String[] _colors = {"green", "orange", "purple"};
+	private Option _getOption(String color) {
+		return new Option() {
+
+			@Override
+			public String getLabel(Locale locale) {
+				ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
+					"content.Language", locale, getClass());
+
+				return LanguageUtil.get(resourceBundle, color);
+			}
+
+			@Override
+			public String getValue() {
+				return color;
+			}
+
+		};
+	}
 
 }
