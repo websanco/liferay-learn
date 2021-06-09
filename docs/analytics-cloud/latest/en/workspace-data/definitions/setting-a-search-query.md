@@ -1,6 +1,6 @@
 # Setting a Search Query
 
-The search query parameter can vary from site to site. For example, a URL might look like `www.example.com/?s=test` where `s` is the parameter. Or `maybe www.example.com/?search=test` where `search` is the parameter. You can define up to five search query parameters in settings.
+The search query parameter can vary from site to site. For example, a URL might look like `www.example.com/?s=test` where `s` is the parameter. Or maybe `www.example.com/?search=test` where `search` is the parameter. You can define up to five search query parameters in settings.
 
 ![Add up to five search query parameters.](./setting-a-search-query/images/01.png)
 
