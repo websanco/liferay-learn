@@ -4,6 +4,7 @@ import com.liferay.configuration.admin.definition.ConfigurationFieldOptionsProvi
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -23,45 +24,35 @@ import org.osgi.service.component.annotations.Component;
 public class Z4H3ConfigurationFieldOptionsProvider
 	implements ConfigurationFieldOptionsProvider {
 
-	public List<Option> getOptions() {
-		Stream<Color> stream = _colors.stream();
+		 public List<Option> getOptions() {
 
-		return stream.filter(
-			color -> color.value != null
-		).map(
-			color -> new Option() {
+			 List<Option> options = new ArrayList<>();
 
-				@Override
-				public String getLabel(Locale locale) {
-					ResourceBundle resourceBundle =
-						ResourceBundleUtil.getBundle(
-							"content.Language", locale, getClass());
+			 for (int i = 0; i < _colors.size(); i++){
+				 Option option = new Option() {
 
-					return LanguageUtil.get(resourceBundle, color.value);
-				}
+					 @Override
+					 public String getLabel(Locale locale) {
+	 				 		ResourceBundle resourceBundle =
+		 					ResourceBundleUtil.getBundle(
+			 				"content.Language", locale, getClass());
 
-				@Override
-				public String getValue() {
-					return color.value;
-				}
+	 						return LanguageUtil.get(resourceBundle, _colors.get(i));
+ 					  }
 
-			}
-		).collect(
-			Collectors.toList()
-		);
-	}
+						@Override
+							public String getValue() {
 
-	public class Color {
+							return _colors.get(i);
+						}
+				 };
+				 options.add(option);
+			 }
+			 return options;
+		 }
 
-		public Color(String value) {
-			this.value = value;
-		}
 
-		public String value;
+	private final List<String> _colors = Arrays.asList("blue", "red", "yellow");
 
-	}
-
-	private final List<Color> _colors = Arrays.asList(
-		new Color("blue"), new Color("red"), new Color("yellow"));
 
 }
