@@ -4,6 +4,7 @@ This reference list the available configuration types for Fragments. See [Adding
 
 These are the configurable Fragment types available to implement:
 
+<<<<<<< HEAD
 - `checkbox`
 - `colorPalette`
 - `itemSelector` (Available Liferay DXP 7.3+)
@@ -11,6 +12,14 @@ These are the configurable Fragment types available to implement:
 - `text`
 - `videoSelector` (Available Liferay DXP 7.4+)
 - `collectionSelector` (Available Liferay DXP 7.3+)
+=======
+* `checkbox`
+* `colorPalette`
+* `itemSelector` (Available Liferay DXP 7.3+)
+* `select`
+* `text`
+* `collectionSelector` (Available Liferay DXP 7.3+)
+>>>>>>> 99c2e0514 (LRDOCS-9154 add SME review comments)
 
 ```note::
   Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
@@ -311,7 +320,7 @@ This is useful when you want a Fragment that has an embedded video by default. T
 
 ## Collection Configuration
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP 7.3+.
 
 Using the `collectionSelector` configuration type, you can develop a Fragment that includes a [Collection](../../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) or Collection Provider. You can use the `collectionSelector` with both Manual and Dynamic Collections.
 
@@ -356,7 +365,7 @@ You can use this Fragment configuration with the following HTML code sample to l
 
 ![You can develop a Fragment with a Collection selector using the Collection configuration.](./fragment-configuration-types-reference/images/07.png)
 
-You can further customize the Collection to select only a certain type of assets in the Collection. For example, if your Collection includes Web Content and Blogs, you can restrict the `collectionSelector` configuration to select only Blog entries using the `itemType`:
+You can also limit the type of assets to select as part of the Collection using `itemType` in the `collectionSelector` configuration. For example, if your Collection includes Web Content and Blogs, you can restrict the Collection selector to show only Blog entries. This JSON configuration sample illustrates this configuration:
 
 ```json
 { 
