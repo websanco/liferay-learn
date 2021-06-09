@@ -11,9 +11,9 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {"osgi.command.function=sendMessage", "osgi.command.scope=m4q7"},
-	service = M4Q7MessageSenderOSGiCommands.class
+	service = M4Q7BakerOSGiCommands.class
 )
-public class M4Q7MessageSenderOSGiCommands {
+public class M4Q7BakerOSGiCommands {
 
 	public void sendMessage(String payload) {
 		try {
@@ -35,7 +35,7 @@ public class M4Q7MessageSenderOSGiCommands {
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		M4Q7MessageSenderOSGiCommands.class);
+		M4Q7BakerOSGiCommands.class);
 
 	@Reference(target = "(mode=DEFAULT)")
 	private SynchronousMessageSender _synchronousMessageSender;
