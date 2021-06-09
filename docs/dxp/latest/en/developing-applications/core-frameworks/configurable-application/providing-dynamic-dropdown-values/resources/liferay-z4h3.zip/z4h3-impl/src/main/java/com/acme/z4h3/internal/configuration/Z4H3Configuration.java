@@ -17,8 +17,7 @@ public interface Z4H3Configuration {
 
 	@Meta.AD(
 		description = "this-list-is-provider-populated",
-		name = "provider-populated-colors",
-    required = false
+		name = "provider-populated-colors", required = false
 	)
 	public String providerPopulatedColors();
 
