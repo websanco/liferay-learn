@@ -1,4 +1,4 @@
-package com.acme.j1h1.osgi.commands;
+package com.acme.j1h1.internal.osgi.commands;
 
 import com.acme.j1h1.Greeter;
 
