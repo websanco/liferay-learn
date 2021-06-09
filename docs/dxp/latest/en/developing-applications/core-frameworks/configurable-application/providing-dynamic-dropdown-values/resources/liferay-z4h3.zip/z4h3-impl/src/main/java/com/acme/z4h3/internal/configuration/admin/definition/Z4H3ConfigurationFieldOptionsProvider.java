@@ -25,24 +25,25 @@ public class Z4H3ConfigurationFieldOptionsProvider
 		List<Option> options = new ArrayList<>();
 
 		for (String color : _colors) {
-			options.add(
-				new Option() {
+			Option option = new Option() {
 
-					@Override
-					public String getLabel(Locale locale) {
-						ResourceBundle resourceBundle =
-							ResourceBundleUtil.getBundle(
-								"content.Language", locale, getClass());
+				@Override
+				public String getLabel(Locale locale) {
+					ResourceBundle resourceBundle =
+						ResourceBundleUtil.getBundle(
+							"content.Language", locale, getClass());
 
-						return LanguageUtil.get(resourceBundle, color);
-					}
+					return LanguageUtil.get(resourceBundle, color);
+				}
 
-					@Override
-					public String getValue() {
-						return color;
-					}
+				@Override
+				public String getValue() {
+					return color;
+				}
 
-				});
+			};
+
+			options.add(option);
 		}
 
 		return options;
