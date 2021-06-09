@@ -2,7 +2,7 @@
 
 Maintaining regular backups is vital to protecting your project's data. The DXP Cloud backup service stores iterations of environment data that can be used to restore your environments if needed. These backups include both the Liferay DXP Database and the full contents of the `LIFERAY_HOME/data` folder.
 
-![Figure 1: The backup service is one of several services available in DXP Cloud.](./backup-service-overview/images/01.png)
+![The backup service is one of several services available in DXP Cloud.](./backup-service-overview/images/01.png)
 
 From the Backups page in `prd` environments, you can create backups, view or download retained backups, and restore an environment from a backup.
 
@@ -24,7 +24,7 @@ Follow these steps to access the Backups page:
 
 1. Click on *Backups* in the environment menu.
 
-![Figure 2: View backup history, create manual backups, and more from the Backups page in prd environments.](./backup-service-overview/images/02.png)
+![View backup history, create manual backups, and more from the Backups page in prd environments.](./backup-service-overview/images/02.png)
 
 From here, you can perform the following tasks:
 
@@ -40,7 +40,7 @@ From the Backups page, environment administrators also have access to the Action
 
 For more information and instructions on how to perform these actions, see [Downloading and Uploading Backups](./downloading-and-uploading-backups.md) and [Restoring Data from a Backup](./restoring-data-from-a-backup.md).
 
-![Figure 3: Production environment administrators can download backups or restore an environment from the Backups page.](./backup-service-overview/images/03.png)
+![Production environment administrators can download backups or restore an environment from the Backups page.](./backup-service-overview/images/03.png)
 
 ## Creating a Manual Backup
 
@@ -48,7 +48,7 @@ To manually backup your `prd` environment from the Backups page, click on *Backu
 
 Once started, the backup service icon will indicate a backup is in progress, and a new backup will appear in the *Backup history*.
 
-![Figure 4: The backup service icon will indicate a backup is in progress, and a new backup will appear in the Backup history.](./backup-service-overview/images/04.png)
+![The backup service icon will indicate a backup is in progress, and a new backup will appear in the Backup history.](./backup-service-overview/images/04.png)
 
 Clicking *View logs* redirects you to the Logs page, where you can view the backup stages in real-time. You can also view backup logs in the *Logs* tab of the backup service's page.
 
@@ -76,7 +76,7 @@ Follow these steps to configure the backup service via the DXP Cloud Console:
 
 1. Click on the *Environment Variables* tab.
 
-   ![Figure 5: Navigate to the backup service's variables tab in your production environment.](./backup-service-overview/images/05.png)
+   ![Navigate to the backup service's variables tab in your production environment.](./backup-service-overview/images/05.png)
 
    You can also access the backup service's page by clicking on *Backup* in the environment *Overview* page.
 
