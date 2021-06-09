@@ -28,7 +28,7 @@ public class Z4H3ConfigurationFieldOptionsProvider
 
 			 List<Option> options = new ArrayList<>();
 
-			 for (int i = 0; i < _colors.size(); i++){
+			 for (String i : _colors){
 				 Option option = new Option() {
 
 					 @Override
@@ -37,13 +37,13 @@ public class Z4H3ConfigurationFieldOptionsProvider
 		 					ResourceBundleUtil.getBundle(
 			 				"content.Language", locale, getClass());
 
-	 						return LanguageUtil.get(resourceBundle, _colors.get(i));
+	 						return LanguageUtil.get(resourceBundle, i);
  					  }
 
 						@Override
-							public String getValue() {
+						public String getValue() {
 
-							return _colors.get(i);
+							return i;
 						}
 				 };
 				 options.add(option);
@@ -52,7 +52,7 @@ public class Z4H3ConfigurationFieldOptionsProvider
 		 }
 
 
-	private final List<String> _colors = Arrays.asList("blue", "red", "yellow");
+String[] _colors = {"blue", "red", "yellow"};
 
 
 }
