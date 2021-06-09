@@ -1,9 +1,9 @@
 # Using Staging in Asset Libraries
 
-With Liferay, you can enable [Local Live](./configuring-local-live-staging.md) or [Remote Live](./configuring-remote-live-staging.md) Staging for individual Asset Libraries. This provides a working environment for adding, removing, and editing assets in Web Content or Documents and Media applications before making those changes live.
+You can enable [Local Live](./configuring-local-live-staging.md) or [Remote Live](./configuring-remote-live-staging.md) Staging for individual Asset Libraries. This provides a working environment for adding, removing, and editing assets in the Web Content or Documents and Media applications before making those changes live.
 
 ```note::
-   Asset Libraries support Staging as of Liferay DXP 7.3.10 FP1 and 7.4.
+   Staging is supported for Asset Libraries since Liferay DXP 7.4 and 7.3.10 FP1.
 ```
 
 Once Staging is enabled for an Asset Library, you can toggle between Live and Staging environments within it via the Staging bar at the top of the page. While in the Staging environment, you can also access *Publish to Live* to initiate a new publishing process.

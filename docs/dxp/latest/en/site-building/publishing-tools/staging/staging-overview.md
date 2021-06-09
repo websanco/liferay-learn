@@ -1,12 +1,12 @@
 # Staging Overview
 
-You can use Liferay DXP's *Staging* tool to make changes to your Site or Asset Library behind the scenes in a *Staging environment* and then publish your changes to a local or remote *Live environment*, while the Live environment handles incoming User traffic.
-
-```note::
-   Asset Libraries support Staging as of Liferay DXP 7.3.10 FP1 and 7.4.
-```
+Liferay's Staging application provides a working environment for making changes to a Site or Asset Library before publishing your changes to your live environment. With it, you can modify staged application data and Pages behind the scenes and then publish your changes when ready, whether individually or altogether, while the Live environment handles incoming user traffic.
 
 When setting up Staging, determine whether to host your Site or Asset Library locally (i.e., on the same server) or remotely (i.e., on separate servers connected by a network). Then customize which application data is staged. For Sites, you can also enable Page versioning for Widget Pages and Content Pages.
+
+```note::
+   Staging is supported for Asset Libraries since Liferay DXP 7.4 and 7.3.10 FP1.
+```
 
 * [Configuration Options](#staging-configuration-options)
 * [Understanding the Publishing Process](#understanding-the-publishing-process)
@@ -24,7 +24,6 @@ While both options use the same interface for managing and publishing staged Pag
 ### Staged Data and Content Types
 
 As part of Staging configuration, you can select which content groups and application data is staged. If staged, the selected data and content are managed by your Staging environment. Also, when an application or content group is selected, all contained entities (e.g., application folders) are staged as well. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
-
 
 ### Page Versioning
 
