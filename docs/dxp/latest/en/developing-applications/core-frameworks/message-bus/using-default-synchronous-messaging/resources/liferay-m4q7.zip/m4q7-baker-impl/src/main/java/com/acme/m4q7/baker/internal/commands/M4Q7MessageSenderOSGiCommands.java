@@ -1,4 +1,4 @@
-package com.acme.m4q7.baker.osgi.commands;
+package com.acme.m4q7.baker.internal.osgi.commands;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
