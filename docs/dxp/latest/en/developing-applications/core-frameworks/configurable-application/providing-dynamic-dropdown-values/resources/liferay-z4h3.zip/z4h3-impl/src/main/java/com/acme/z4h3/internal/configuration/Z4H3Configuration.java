@@ -10,8 +10,8 @@ public interface Z4H3Configuration {
 
 	@Meta.AD(
 		description = "this-list-is-manually-populated", name = "colors",
-		optionLabels = {"Color1", "Color2", "Color3"},
-		optionValues = {"Color1", "Color2", "Color3"}, required = false
+		optionLabels = {"blue", "red", "yellow"},
+		optionValues = {"blue", "red", "yellow"}, required = false
 	)
 	public String colors();
 

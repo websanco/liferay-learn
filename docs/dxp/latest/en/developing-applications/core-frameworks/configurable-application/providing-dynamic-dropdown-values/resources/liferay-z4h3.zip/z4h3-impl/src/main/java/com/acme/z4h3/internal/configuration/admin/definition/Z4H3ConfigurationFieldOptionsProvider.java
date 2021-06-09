@@ -48,6 +48,6 @@ public class Z4H3ConfigurationFieldOptionsProvider
 		return options;
 	}
 
-	private final String[] _colors = {"blue", "red", "yellow"};
+	private final String[] _colors = {"green", "orange", "purple"};
 
 }
