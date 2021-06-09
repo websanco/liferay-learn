@@ -15,21 +15,16 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class X6N5BakerOSGiCommands {
 
-	public void sendMessage(String payload) {
-		try {
-			Message message = new Message();
+	public void sendMessage(String payload) throws MessageBusException {
+		Message message = new Message();
 
-			message.setPayload(payload);
+		message.setPayload(payload);
 
-			Object response = _synchronousMessageSender.send(
-				"acme/x6n5_able", message);
+		Object response = _synchronousMessageSender.send(
+			"acme/x6n5_able", message);
 
-			if (_log.isInfoEnabled()) {
-				_log.info("Response: " + response);
-			}
-		}
-		catch (MessageBusException messageBusException) {
-			_log.error(messageBusException, messageBusException);
+		if (_log.isInfoEnabled()) {
+			_log.info("Response: " + response);
 		}
 	}
 

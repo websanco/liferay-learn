@@ -15,22 +15,17 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class M4Q7BakerOSGiCommands {
 
-	public void sendMessage(String payload) {
-		try {
-			Message message = new Message();
+	public void sendMessage(String payload) throws MessageBusException {
+		Message message = new Message();
 
-			message.setPayload(payload);
-			message.setResponseDestinationName("acme/m4q7_baker");
+		message.setPayload(payload);
+		message.setResponseDestinationName("acme/m4q7_baker");
 
-			Object response = _synchronousMessageSender.send(
-				"acme/m4q7_able", message, 10000);
+		Object response = _synchronousMessageSender.send(
+			"acme/m4q7_able", message, 10000);
 
-			if (_log.isInfoEnabled()) {
-				_log.info("Response: " + response);
-			}
-		}
-		catch (MessageBusException messageBusException) {
-			_log.error(messageBusException, messageBusException);
+		if (_log.isInfoEnabled()) {
+			_log.info("Response: " + response);
 		}
 	}
 
