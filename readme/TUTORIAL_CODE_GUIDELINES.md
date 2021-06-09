@@ -28,7 +28,7 @@
             * [Adding to or Overriding Existing Localized Content](#adding-to-or-overriding-existing-localized-content)
             * [Labels and Headings](#labels-and-headings)
         * [Logging Output](#logging-output)
-            * [Logging an Exception] (#logging-an-exception)
+            * [Logging an Exception](#logging-an-exception)
     * [Templates](#templates)
 * [Review Process](#review-process)
     * [Test Your Code](#test-your-code)
