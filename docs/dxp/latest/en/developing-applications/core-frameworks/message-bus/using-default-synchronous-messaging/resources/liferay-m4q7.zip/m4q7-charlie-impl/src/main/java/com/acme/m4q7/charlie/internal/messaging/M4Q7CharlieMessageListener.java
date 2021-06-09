@@ -23,15 +23,15 @@ public class M4Q7CharlieMessageListener implements MessageListener {
 			_log.info("Received message payload " + payload.toString());
 		}
 
-		Message responseMessage = new Message();
-
-		responseMessage.setDestinationName(
-			message.getResponseDestinationName());
-		responseMessage.setPayload("M4Q7CharlieMessageListener");
-		responseMessage.setResponseId(message.getResponseId());
-
 		_messageBus.sendMessage(
-			message.getResponseDestinationName(), responseMessage);
+			message.getResponseDestinationName(),
+			new Message() {
+				{
+					setDestinationName(message.getResponseDestinationName());
+					setPayload("M4Q7CharlieMessageListener");
+					setResponseId(message.getResponseId());
+				}
+			});
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
