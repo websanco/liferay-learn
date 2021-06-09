@@ -28,6 +28,7 @@
             * [Adding to or Overriding Existing Localized Content](#adding-to-or-overriding-existing-localized-content)
             * [Labels and Headings](#labels-and-headings)
         * [Logging Output](#logging-output)
+            * [Logging an Exception] (#logging-an-exception)
     * [Templates](#templates)
 * [Review Process](#review-process)
     * [Test Your Code](#test-your-code)
@@ -403,6 +404,19 @@ getUser(long userId) throws PortalException {
 **Note:** The log message automatically includes the class name. For example, `INFO [http-nio-8080-exec-1][J1C2UserLocalServiceWrapper:line-number]`.
 
 For an example, see [J1C2UserLocalServiceWrapper.java](../docs/dxp/latest/en/liferay-internals/extending-liferay/creating-service-wrappers/resources/liferay-j1c2.zip/j1c2-impl/src/main/java/com/acme/j1c2/internal/service/J1C2UserLocalServiceWrapper.java).
+
+#### Logging an Exception
+
+If you want to log an exception, use the [`Log#error(Object, Throwable)`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/log/Log.java) method. For example,
+
+```java
+try {
+	// code throws MessageBusException
+}
+catch (MessageBusException messageBusException) {
+	_log.error(messageBusException, messageBusException);
+}
+```
 
 ## Templates
 
