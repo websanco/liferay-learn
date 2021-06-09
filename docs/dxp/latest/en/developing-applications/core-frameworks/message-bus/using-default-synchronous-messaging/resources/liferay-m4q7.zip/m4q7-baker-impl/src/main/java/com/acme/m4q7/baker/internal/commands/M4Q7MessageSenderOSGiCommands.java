@@ -47,13 +47,11 @@ public class M4Q7MessageSenderOSGiCommands implements MessageListener {
 				"acme/m4q7_able", message, 10000);
 
 			if (_log.isInfoEnabled()) {
-				_log.info(
-					"SynchronousMessageSender#send(String, Message, long) " +
-						"returned " + response);
+				_log.info("Response: " + response);
 			}
 		}
 		catch (MessageBusException messageBusException) {
-			messageBusException.printStackTrace();
+			_log.error(messageBusException, messageBusException);
 		}
 	}
 
