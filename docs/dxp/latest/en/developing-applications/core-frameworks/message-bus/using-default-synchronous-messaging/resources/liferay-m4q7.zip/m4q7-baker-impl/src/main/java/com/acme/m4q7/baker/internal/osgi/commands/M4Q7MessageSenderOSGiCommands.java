@@ -10,9 +10,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = {
-		"osgi.command.function=sendMessage", "osgi.command.scope=m4q7.baker"
-	},
+	property = {"osgi.command.function=sendMessage", "osgi.command.scope=m4q7"},
 	service = M4Q7MessageSenderOSGiCommands.class
 )
 public class M4Q7MessageSenderOSGiCommands {
