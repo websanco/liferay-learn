@@ -7,9 +7,9 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {"osgi.command.function=greet", "osgi.command.scope=j1h1"},
-	service = GreeterOSGiCommands.class
+	service = J1H1OSGiCommands.class
 )
-public class GreeterOSGiCommands {
+public class J1H1OSGiCommands {
 
 	public void greet(String name) {
 		_greeter.greet(name);
