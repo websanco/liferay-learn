@@ -6,7 +6,7 @@ This data center holds Liferay DXP cluster nodes with a read-write connection to
 
 The example shown here consists of a single Liferay DXP node and a single Elasticsearch node. The example configurations can also be found in the [CCR configuration reference](./ccr-basic-use-case-config-reference.md), including the security configuration settings.
 
-### Configure the Remote Leader Elasticsearch Cluster
+## Configure the Remote Leader Elasticsearch Cluster
 
 In the example setup, the first Elasticsearch cluster to configure is a production-mode cluster with no CCR-specific configuration: it accepts reads and writes from its local Liferay DXP node, along with write requests from the Liferay DXP nodes that are in a separate data center.
 

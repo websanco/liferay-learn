@@ -26,7 +26,7 @@ remoteClusterConnectionId="remote"
 logExceptionsOnly="false"
 ```
 
-Liferay DXP 7.2 file contents:
+Liferay DXP 7.1/7.2 file contents:
 
 ```properties
 clusterName="LiferayElasticsearchCluster_LEADER"
@@ -35,11 +35,11 @@ transportAddresses=["localhost:9300"]
 logExceptionsOnly="false"
 ```
 
-Liferay DXP 7.2 requires a separate `XPackSecurityConfiguration.config` file.
+Liferay DXP 7.1/7.2 requires a separate `XPackSecurityConfiguration.config` file.
 
 File name: `com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config`
 
-Liferay DXP 7.2 file content:
+Liferay DXP 7.1/7.2 file content:
 
 
 ```properties
@@ -79,7 +79,7 @@ truststoreType="pkcs12"
 ```
 
 ```tip::
-   For Liferay DXP 7.2, you used the ``ElasticsearchConfiguration.config`` and the ``XPackSecurityConfiguration.config`` files to configure the remote connection.
+   For Liferay DXP 7.1/7.2, you used the ``ElasticsearchConfiguration.config`` and the ``XPackSecurityConfiguration.config`` files to configure the remote connection.
 ```
 
 [DXP 7.3 only] Read-only connection file name: `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`
@@ -99,9 +99,9 @@ truststorePath="/PATH/to/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
-[DXP 7.2 only] Read-only connection file name: `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+[DXP 7.1/7.2 only] Read-only connection file name: `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`
 
-File contents for Liferay DXP 7.2:
+File contents for Liferay DXP 7.1/7.2:
 
 ```properties
 clusterName="LiferayElasticsearchCluster_FOLLOWER"

@@ -47,6 +47,7 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
 
 ```important::
    Liferay 7.2 index names are more complex, as patches have introduced changes to the index naming pattern. See `Multi-Tenant Index Names <../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`__ for more information.
+   Liferay 7.1 installations contain just company and system indexes.
 ```
 
 ```note::

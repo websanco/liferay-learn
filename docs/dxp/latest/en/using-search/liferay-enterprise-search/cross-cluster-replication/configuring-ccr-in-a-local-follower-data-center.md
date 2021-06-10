@@ -6,7 +6,7 @@ The local/follower data center holds Liferay DXP cluster nodes with a read-only 
 
 The example configurations are also provided in full in the [CCR configuration reference guide](./ccr-basic-use-case-config-reference.md).
 
-### Configure the Follower Elasticsearch Cluster 
+## Configure the Follower Elasticsearch Cluster 
 
 The local Elasticsearch cluster must hold follower (replicated; read-only) indexes and acts as the local search engine co-located Liferay DXP nodes can read from.
 
@@ -74,7 +74,7 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
       The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
    ```
 
-   For Liferay DXP 7.2, this includes `*ElasticsearchConfiguration.config` and `*XPackSecurityConfiguration.config`.
+   For Liferay DXP 7.1 and 7.2, this includes `*ElasticsearchConfiguration.config` and `*XPackSecurityConfiguration.config`.
 
    Once these files are provided, the write connection for the local DXP cluster node is configured.
 
@@ -97,7 +97,7 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
    truststoreType="pkcs12"
    ```
 
-   For Liferay DXP 7.2, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`.
+   For Liferay DXP 7.1 and 7.2, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`.
 
    ```warning::
       On Liferay 7.2, do not deploy the configuration file for the CCR connection (e.g., ``ElasticsearchConnectionConfiguration-ccr.config``) simultaneously with the LES Cross-Cluster Replication LPKG's initial deployment. There's a known bug (`LPS-127821 <https://issues.liferay.com/browse/LPS-127821>`__) that breaks Liferay's search functionality if the configuration file is deployed before the module is fully started. If you've already encounterd this, see `Troubleshooting Cross-Cluster Replication <./troubleshooting-cross-cluster-replication.md#liferay-7-2-after-deploying-the-ccr-lpkg-and-the-elasticsearchconnectionconfiguration-file-search-is-broken>`__ for the workaround.
