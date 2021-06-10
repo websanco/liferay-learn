@@ -42,7 +42,7 @@ The page is published using the new Style Book.
 
 The Style Book can now be selected as an option for any page when editing.
 
-To make this Style Book the new default for your Site, open the Actions menu (![Actions icon](../../images/icon-actions.png)) beside the newly created Style Book and click *Mark as Default*.
+To make this Style Book the new default for your Site, open the Actions menu (![Actions icon](../../../images/icon-actions.png)) beside the newly created Style Book and click *Mark as Default*.
 
 ## Default Classic Theme Categories
 
