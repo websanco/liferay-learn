@@ -1,0 +1,163 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Getting Started',
+					sectionURL: 'getting-started/quick-tour/welcome-to-analytics-cloud.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Signing Up For a New Workspace',
+							url: 'getting-started/quick-tour/signing-up-for-a-new-workspace.html'
+						},
+						{
+							name: 'Managing Data Sources',
+							url: 'getting-started/connecting-data-sources/managing-data-sources.html'
+						},
+						{
+							name: 'Connecting Liferay DXP Sites to Analytics Cloud',
+							url: 'getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html'
+						}
+					]
+				},
+				{
+					icon: '#system-administration-logo',
+					sectionName: 'Touchpoints',
+					sectionURL: 'touchpoints/touchpoints.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Pages',
+							url: 'touchpoints/pages/pages.html'
+						},
+						{
+							name: 'Paths',
+							url: 'touchpoints/pages/paths.html'
+						},
+						{
+							name: 'Assets',
+							url: 'touchpoints/assets/assets.html'
+						},
+					]
+				},
+				{
+					icon: '#users-and-permissions-logo',
+					sectionName: 'People',
+					sectionURL: 'people/understanding-your-audience.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Individuals',
+							url: 'people/individuals/individuals-dashboard.html'
+						},
+						{
+							name: 'Accounts',
+							url: 'people/accounts/accounts.html'
+						},
+						{
+							name: 'Segments',
+							url: 'people/segments/segments.html'
+						},
+					]
+				},
+				{
+					icon: '#manage-and-optimize-logo',
+					sectionName: 'Optimization',
+					sectionURL: 'optimization.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'A/B Testing',
+							url: 'optimization/a-b-testing.html'
+						},
+						{
+							name: 'Content Recommendation API',
+							url: 'optimization/content-recommendation-api.html'
+						},
+					]
+				},
+				{
+					icon: '#developing-applications-logo',
+					sectionName: 'APIs',
+					sectionURL: 'apis/apis.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Authentication',
+							url: 'apis/authentication.html'
+						},
+						{
+							name: 'Querying Data',
+							url: 'apis/querying-data.html'
+						},
+						{
+							name: 'Exporting Data',
+							url: 'apis/exporting-data.html'
+						},
+					]
+				},
+				{
+					icon: '#site-building-logo',
+					sectionName: 'Workspace Data',
+					sectionURL: 'workspace_data.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Managing APIs',
+							url: 'workspace-data/managing-apis.html'
+						},
+						{
+							name: 'Managing Definitions',
+							url: 'workspace-data/managing-definitions.html'
+						},
+						{
+							name: 'Data Control and Privacy',
+							url: 'workspace-data/data-control-and-privacy.html'
+						},
+					]
+				},
+				{
+					icon: '#installation-and-upgrades-logo',
+					sectionName: 'Workspace Settings',
+					sectionURL: 'workspace_settings.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Managing Users',
+							url: 'workspace-settings/managing-users.html'
+						},
+						{
+							name: 'Managing Properties',
+							url: 'workspace-settings/managing-properties.html'
+						},
+						{
+							name: 'Tracking Usage',
+							url: 'workspace-settings/tracking-usage.html'
+						},
+					]
+				},
+				{
+					icon: '#building-solutions-on-dxp-logo',
+					sectionName: 'Troubleshooting',
+					sectionURL: 'troubleshooting.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Connecting Data Sources',
+							url: 'troubleshooting/connecting-data-sources.html'
+						},
+						{
+							name: 'Activation',
+							url: 'troubleshooting/activation.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
