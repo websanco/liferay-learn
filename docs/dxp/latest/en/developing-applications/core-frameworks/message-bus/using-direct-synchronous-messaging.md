@@ -1,10 +1,10 @@
 # Using Direct Synchronous Messaging
 
-Direct synchronous messaging is the easiest way to block processing until all listeners receive a message. You invoke a `SynchronousMessageSender` `send` method, passing in a destination name, message instance, and optionally a timeout. The `SynchronousMessageSender` uses the current thread to process message reception directly in each of the destination's registered message listeners. When listener processing completes, execution continues in the class where you invoked the `SynchronousMessageSender`. The following example demonstrates using direct synchronous messaging.
+Direct synchronous messaging is the easiest way to block processing until all listeners receive a message. You call the `SynchronousMessageSender`'s `send(String, Message)` method, passing in a destination name and message instance. The `SynchronousMessageSender` uses the current thread to process message reception directly in each of the destination's registered message listeners. When listener processing completes, execution continues in the class that called the `send(String, Message)` method. The following example demonstrates using direct synchronous messaging.
 
 ## Send a Direct Synchronous Message
 
-In an example project, you'll use a `SynchronousMessageSender` to send a message two listeners directly.
+In an example project, you'll use a `SynchronousMessageSender` to send a message directly to two listeners.
 
 1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
@@ -80,9 +80,9 @@ Example Classes:
 
 Here's the event flow:
 
-1. When a user executes the `x6n5:sendMessage` Gogo shell command, the `X6N5BakerOSGiCommands` `sendMessage(String)` method to sends the command arguments in a message payload to the `"acme/x6n5_able"` destination.
+1. When a user executes the `x6n5:sendMessage` Gogo shell command, `X6N5BakerOSGiCommands` sends the command arguments in a message payload to the `"acme/x6n5_able"` destination.
 1. The current thread processes message reception for each listener (i.e., `X6N5CharlieMessageListener` and `X6N5DogMessageListener`) in succession. The listeners log the message payload and set a response on the message. The response from the latest listener processed supercedes previous responses.
-1. Processing returns to the `X6N5BakerOSGiCommands``sendMessage(String)` method, where the message response is logged.
+1. Processing returns to `X6N5BakerOSGiCommands`, where it logs the message response.
 
 Examine each class, starting with the destination configurator 
 
