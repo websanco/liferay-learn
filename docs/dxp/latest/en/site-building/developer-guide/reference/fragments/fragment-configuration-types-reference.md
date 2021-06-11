@@ -4,7 +4,6 @@ This reference list the available configuration types for Fragments. See [Adding
 
 These are the configurable Fragment types available to implement:
 
-<<<<<<< HEAD
 - `checkbox`
 - `colorPalette`
 - `itemSelector` (Available Liferay DXP 7.3+)
@@ -12,14 +11,6 @@ These are the configurable Fragment types available to implement:
 - `text`
 - `videoSelector` (Available Liferay DXP 7.4+)
 - `collectionSelector` (Available Liferay DXP 7.3+)
-=======
-* `checkbox`
-* `colorPalette`
-* `itemSelector` (Available Liferay DXP 7.3+)
-* `select`
-* `text`
-* `collectionSelector` (Available Liferay DXP 7.3+)
->>>>>>> 99c2e0514 (LRDOCS-9154 add SME review comments)
 
 ```note::
   Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
