@@ -1,0 +1,3 @@
+Bundle-Name: Acme W3R2 Baker Implementation
+Bundle-SymbolicName: com.acme.w3r2.baker.impl
+Bundle-Version: 1.0.0
