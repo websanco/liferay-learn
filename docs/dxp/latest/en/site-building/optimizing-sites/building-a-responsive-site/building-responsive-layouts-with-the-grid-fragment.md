@@ -40,6 +40,6 @@ When you access this 'Services' Content Page from your computer, the grid layout
 ## Additional Information
 
 - [Building a Responsive Site Overview](./building-a-responsive-site.md)
-- [Adding Elements to Content Pages](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md).
+- [Creating Content Page Compositions Using the Container Fragment](../../creating-pages/building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment.md).
 - [Configuring the Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment)
 - [Saving a Fragment Composition](../../displaying-content/using-fragments/saving-a-fragment-composition.md)

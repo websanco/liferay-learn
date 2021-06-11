@@ -10,6 +10,7 @@ Building and Managing Content Pages
    building-and-managing-content-pages/content-page-editor-user-interface-reference.md
    ../../site-building/displaying-content/using-fragments/using-page-fragments.md
    building-and-managing-content-pages/page-fragments-user-interface-reference.md
+   building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment.md
    building-and-managing-content-pages/using-widgets-on-a-content-page.md
    building-and-managing-content-pages/managing-web-content-on-content-pages.md
 
@@ -19,5 +20,6 @@ Building and Managing Content Pages
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference`
 -  :doc:`../../site-building/displaying-content/using-fragments/using-page-fragments`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference`
+-  :doc:`/site-building/creating-pages/building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/managing-web-content-on-content-pages`
