@@ -96,8 +96,6 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
    **Remote Site ID**/**Remote Asset Library ID**: Enter the *Site ID*/*Asset Library ID* for the desired target.
 
-   ![Use the Remote Live Connection Settings fields to enter information for your remote DXP instance](./configuring-remote-live-staging/images/03.png)
-
    ```note::
       If you're configuring an IPv6 address, it must contain brackets when entered into the *Remote Host/IP* field (e.g., [0:0:0:0:0:0:0:1]).
 
@@ -110,7 +108,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
 1. (For Sites only) Select whether you want *Page Versioning* enabled on Public and/or Private Pages.
 
-   ![Enable Page Versioning for your Private and Public Page sets.](./configuring-remote-live-staging/images/04.png)
+   ![Enable Page Versioning for your Private and Public Page sets.](./configuring-remote-live-staging/images/03.png)
 
 1. Select the *data* and *content* types you want to stage.
 
@@ -118,7 +116,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
    With Sites, you can stage data for any of the following applications.
 
-   ![Select the data and content types you want to stage.](./configuring-remote-live-staging/images/05.png)
+   ![Select the data and content types you want to stage.](./configuring-remote-live-staging/images/04.png)
 
    ```warning::
        When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
@@ -170,7 +168,7 @@ Follow these steps to disable Remote Live Staging:
 
 1. Click the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) located in the Application bar, and select *Staging Configuration*.
 
-   ![Click the Actions button in the Application bar, and select Staging Configuration](./configuring-local-live-staging/images/06.png)
+   ![Click the Actions button in the Application bar, and select Staging Configuration](./configuring-remote-live-staging/images/05.png)
 
 1. Select *None* for your Staging configuration, and click *Save*.
 
