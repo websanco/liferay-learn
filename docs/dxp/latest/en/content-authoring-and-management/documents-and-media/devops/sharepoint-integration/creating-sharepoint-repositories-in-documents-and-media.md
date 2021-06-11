@@ -6,23 +6,23 @@ Follow these steps:
 
 1. Open the Documents and Media application in a Site or Asset Library.
 
-1. Click the *Add* button (![Add Button](../../../../images/icon-add.png)), and select *Repository*.
+1. Click *Add* (![Add Button](../../../../images/icon-add.png)) and select *Repository*.
 
 1. Enter a name and description for the repository.
 
-1. Use the following fields to configure the repository.
-
-   * **Repository Type**: Select the desired SharePoint Repository Configuration.
-   * **Site Absolute URL**: Enter an absolute URL to resolve relative URLs (e.g., `https://[your-site-name].sharepoint.com` for SharePoint Online).
-   * **Library Path**: Enter a relative path from the Site Absolute URL that points to the SharePoint Document Library you want to mount in Documents and Media.
+1. Fill out the fields on the form (see below).
 
 1. Define permissions for the new Documents and Media SharePoint repository.
 
-   ![Define permissions for the new Documents and Media SharePoint repository.](./creating-sharepoint-repositories-in-documents-and-media/images/01.png)
+1. Click *Save* when finished.
 
-1. Click on *Save* when finished.
+**Repository Type**: Select the desired SharePoint Repository Configuration.
 
-Users with the proper permissions can then read/write SharePoint documents and folders, perform document check-in/check-out, download documents, and more. Each action performed in one context is propagated in the other.
+**Site Absolute URL**: Enter an absolute URL to resolve relative URLs (e.g., `https://[your-site-name].sharepoint.com` for SharePoint Online).
+
+**Library Path**: Enter a relative path from the Site Absolute URL that points to the SharePoint Document Library you want to mount in Documents and Media.
+
+Users with the proper permissions can read/write SharePoint documents and folders, perform document check-in/check-out, download documents, and more. Each action performed in one context is propagated in the other.
 
 ## Additional Information
 

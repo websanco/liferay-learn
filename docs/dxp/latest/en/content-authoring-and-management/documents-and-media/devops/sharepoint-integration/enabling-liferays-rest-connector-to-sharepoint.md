@@ -9,17 +9,15 @@ Liferay's REST Connector to SharePoint provides Documents and Media integration 
 This application uses SharePoint's API and has the following limitations:
 
 * Version history is lost when moving or renaming a file without first checking it out.
-* You can’t change file extensions; you can only change file names.
-* A file’s current name propagates to all previous versions.
-* The user who checks out a file is the only one who can see the version number of that file’s working copy.
+* You can't change file extensions; you can only change file names.
+* A file's current name propagates to all previous versions.
+* The user who checks out a file is the only one who can see the version number of that file's working copy.
 * Queries for suffixes or intermediate wildcards convert to queries for containment.
 * Comments, ratings, and using a SharePoint folder as a Documents and Media root folder are unsupported.
 
 For more information on how the REST connector works, see the [javadocs API reference](https://docs.liferay.com/dxp/apps/sharepoint-rest/latest/javadocs/).
 
-```note::
-   This application was previously named Liferay Connector for SharePoint. If you're running an earlier version, see `this article <https://help.liferay.com/hc/en-us/articles/360018233992>`_ for how to install the latest version.
-```
+<!-- The sidebar was here. I removed it, and I assume you'll put the old installation instructions here in its place. -Rich -->
 
 ## Installing the REST Connector
 
@@ -54,19 +52,27 @@ Follow these steps to add a new SharePoint OAuth2 configuration via the Liferay 
 
 1. Click *Add* to create a new SharePoint OAuth2 configuration entry.
 
-1. Enter the following information for the new entry.
+1. Fill out the form (see below). 
 
-   * **Name**: The configuration's name
-   * **Authorization Grant Endpoint**: The URL used to request OAuth2 authorization grants (e.g., `https://[your-site-name]/sharepoint.com/_layouts/oauthauthorize.aspx` for SharePoint Online)
-   * **Authorization Token Endpoint**: The ACS URL (e.g., `https://accounts.accesscontrol.windows.net/[App ID]/tokens/OAuth/2` for SharePoint Online)
-   * **Client ID**: The client ID
-   * **Client Secret**: The client secret
-   * **Scope**: The permission set required for your tokens; valid scopes are configured during the REST Connector's registration
-   * **Tenant ID**: The Tenant ID
-   * **Site Domain**: The site domain registered for your application
-   * **Resource**: This value depends on the ACS service you use (e.g., `00000003-0000-0ff1-ce00-000000000000/[your-site-name].sharepoint.com@[tenant ID]` for SharePoint Online).
+1. Click *Save* when finished.
 
-1. Click on *Save* when finished.
+**Name**: The configuration's name
+
+**Authorization Grant Endpoint**: The URL used to request OAuth2 authorization grants (e.g., `https://[your-site-name]/sharepoint.com/_layouts/oauthauthorize.aspx` for SharePoint Online)
+
+**Authorization Token Endpoint**: The ACS URL (e.g., `https://accounts.accesscontrol.windows.net/[App ID]/tokens/OAuth/2` for SharePoint Online)
+
+**Client ID**: The client ID
+
+**Client Secret**: The client secret
+
+**Scope**: The permission set required for your tokens; valid scopes are configured during the REST Connector's registration
+
+**Tenant ID**: The Tenant ID
+
+**Site Domain**: The site domain registered for your application
+
+**Resource**: This value depends on the ACS service you use (e.g., `00000003-0000-0ff1-ce00-000000000000/[your-site-name].sharepoint.com@[tenant ID]` for SharePoint Online).
 
 Once saved, the SharePoint configuration can be used to create repositories in Documents and Media that are mounted to SharePoint libraries.
 
@@ -74,15 +80,15 @@ Once saved, the SharePoint configuration can be used to create repositories in D
 
 With SharePoint, you can define custom source IDs to restrict and fine-tune search results. By default, the connector uses the Documents source ID.
 
-Follow these steps to create SharePoint Search configuration with an different source ID.
+Follow these steps to create SharePoint Search configuration with an different source ID:
 
 1. Open the *Global Menu* (![Global Menu](../../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *System Settings* &rarr; *Documents & Media* &rarr; *SharePoint Search*.
 
    ![Go to System Settings > Documents & Media > SharePoint OAuth 2 in the Control Panel.](./enabling-liferays-rest-connector-to-sharepoint/images/02.png)
 
-1. Click on *Add* to create a new SharePoint Search configuration entry.
+1. Click *Add* to create a new SharePoint Search configuration entry.
 
-   ![Click on Add to create a new SharePoint Search configuration entry.](./enabling-liferays-rest-connector-to-sharepoint/images/03.png)
+   ![Click Add to create a new SharePoint Search configuration entry.](./enabling-liferays-rest-connector-to-sharepoint/images/03.png)
 
 1. Enter a custom SharePoint Results SourceID for the new entry.
 
