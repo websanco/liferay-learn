@@ -309,7 +309,7 @@ This is useful when you want a Fragment that has an embedded video by default. T
    The `videoSelector` type is compatible with the `External Video <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video>`_ Fragment, but not with the `Video URL <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url>`_ Fragment.
 ```
 
-## Collection Configuration
+## Collection Selector
 
 > Available: Liferay DXP 7.3+.
 
@@ -337,7 +337,9 @@ The following JSON configuration shows how to use the `collectionSelector`:
 }
 ```
 
-You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md). To reference this Collection in the HMTL, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
+You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
+
+To reference this Collection in the HMTL, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
 
 ```html
 <div class="fragment_310">
@@ -356,7 +358,7 @@ You can use this Fragment configuration with the following HTML code sample to l
 
 ![You can develop a Fragment with a Collection selector using the Collection configuration.](./fragment-configuration-types-reference/images/07.png)
 
-You can also limit the type of assets to select as part of the Collection using `itemType` in the `collectionSelector` configuration. For example, if your Collection includes Web Content and Blogs, you can restrict the Collection selector to show only Blog entries. This JSON configuration sample illustrates this configuration:
+You can also filter the Collection selector using `itemType` in the `collectionSelector` configuration. For example, if you have different Collections including Web Content and Blogs, you can restrict the Collection selector to show only Blog Collections. This JSON sample illustrates this configuration:
 
 ```json
 { 
@@ -376,6 +378,10 @@ You can also limit the type of assets to select as part of the Collection using 
  ]
 }
 ```
+
+Using this sample configuration, Collections including both Web Content and Blogs are filtered out of the Collection selector because the Collection type is Asset.
+
+![A Collection including Web Content and Blog entries corresponds to the Asset type.](./fragment-configuration-types-reference/images/08.png)
 
 ```tip::
    In addition to the `itemTime`, you can specify the `itemSubtype` in the configuration. The `itemSubtype` corresponds to the Asset `classPK`.
