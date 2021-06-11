@@ -38,11 +38,11 @@ Message Bus sends messages synchronously and asynchronously.
 
 The following topics cover both ways of messaging:
 
-* *Sending Messages Asynchronously* (coming soon) shows how to configure a destination and send messages asynchrounously to it. This is the simplest way to send messages.
+* *Sending Messages Asynchronously* (coming soon) shows how to configure a destination and send messages asynchronously to it. This is the simplest way to send messages.
 
 * *Using Direct Synchronous Messaging* (coming soon) demonstrates a message sender blocking on sending a message until *all* listeners receive the message.
 
-* *Using Default Synchronous Messaging* (coming soon) shows a message sender blocking until one listener responds to the message *or*, if no listener response, until the message times out.
+* *Using Default Synchronous Messaging* (coming soon) shows a message sender blocking until one listener responds to the message *or*, if no listener responds, until the message times out.
 
 ## Messaging in a Cluster
 
