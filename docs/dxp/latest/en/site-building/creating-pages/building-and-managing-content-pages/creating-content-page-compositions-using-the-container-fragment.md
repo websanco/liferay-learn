@@ -8,7 +8,7 @@ Layout and composition are the foundation of your [Content Page](./content-pages
 
 When you [create a new Content Page](../adding-pages/adding-a-page-to-a-site.md), you are presented with a by-default drop zone. You can add any Fragment to this area, but using the Container Fragment as the first element in your composition has important advantages:
 
-- Greater layout control over the rest of the elements on your Content Page design, including the *Flex* Display Properties for [advanced compositions](#creating-advanced-composition-with-the-container-fragment) (Liferay DXP 7.4+.)
+- Greater layout control over the rest of the elements on your Content Page design, including the *Flex* Display Properties for [advanced compositions](#creating-advanced-compositions-with-the-container-fragment) (Liferay DXP 7.4+.)
 - Ability to create a Fragment composition that you can [save and reuse](../../displaying-content/using-fragments/saving-a-fragment-composition.md) in other Content Pages.
 - Redirect users to another Page or URL when they click on the Fragment composition.
 - Leverage the [Style Books functionality](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) to standardize your Site appearance.
@@ -126,7 +126,7 @@ By default, the Container Fragment uses a *Fluid* width configuration. You can c
 
 1. Click *Publish* to update your Style Book with the new configuration.
 
-## Creating Advanced Composition with the Container Fragment
+## Creating Advanced Compositions with the Container Fragment
 
 > Available: Liferay DXP 7.4+.
 
