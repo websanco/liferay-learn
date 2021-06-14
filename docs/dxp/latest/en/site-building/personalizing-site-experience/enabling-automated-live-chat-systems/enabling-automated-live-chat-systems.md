@@ -41,8 +41,6 @@ To enable Click To Chat go to *Instance Settings*.
 
 1. Click *Save*
 
-<!-- @Fabio/Evelyn - please add a new screenshot here of the feature enabled on a site so users can know what to expect it to look like when properly configured. -->
-
 Click To Chat integration with your Live Chat provider is now configured.
 
 ## Getting The Chat Provider Account ID or Token
@@ -58,5 +56,4 @@ If you are unsure how to get the Account ID or Token for your chat provider see 
 * [Smartsupp](./getting-a-chat-provider-account-id/smartsupp.md)
 * [Tawk.to](./getting-a-chat-provider-account-id/tawk-to.md)
 * [Tidio](./getting-a-chat-provider-account-id/tidio.md)
-* [Tolvnow](./getting-a-chat-provider-account-id/tolvnow.md)
 * [Zendesk](./getting-a-chat-provider-account-id/zendesk.md)
