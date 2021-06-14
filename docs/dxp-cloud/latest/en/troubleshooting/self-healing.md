@@ -19,13 +19,17 @@ Each probe can be configured with the following options:
 | `successThreshold` | Minimum consecutive successes for the probe to be considered successful following a failure. The default and minimum is `1`. Must be `1` for liveness. |
 | `failureThreshold` | The number of times DXP Cloud repeats a failed probe before giving up. For a liveness probe, giving up means the service will restart. For a readiness probe, giving up means the probe will be marked as Failed. The default is `3`; the minimum is `1`. |
 
-When a probe detects a failure (not returning the success message in a status check), the probe will restart the service automatically. The liveness and readiness probes are deployed to all services regardless of the environment. Typically, customers do not have to make any changes to the probes unless they would like to adjust their values based on their needs. For example, a system administrator may increase the `initialDelaySeconds` value to account for a longer startup process.
+When a probe detects a failure (i.e., it does not return the success message in a status check), the probe automatically takes action to address it (restarting the service or redirecting traffic away from the instance). The probes themselves *do not cause* outages, but they instead attempt to automatically detect and respond to them.
+
+The liveness and readiness probes are deployed to all services regardless of the environment. Typically, customers do not have to make any changes to the probes unless they would like to adjust their values based on their needs. For example, a system administrator may increase the `initialDelaySeconds` value to account for a longer startup process.
 
 To change the default values, modify the `lcp.json` file. See the [Configuration via LCP.json](../reference/configuration-via-lcp-json.md) article.
 
 ### Liveness Probe
 
-The liveness probe uses a URL Request (path/port) to validate that a service is running. Often, it is a lightweight HTTP server inside the application to respond to the liveness probe. The probe pings a path and if it gets an HTTP response in the 200 or 300 range, it marks the application as healthy.
+The liveness probe uses a URL Request (path/port) to validate that a service is running. This probe repeatedly pings a configurable path (by default, `/c/portal/layout`). Often, the liveness probe is a lightweight HTTP server inside the application to respond to the liveness probe.
+
+If the probe gets an HTTP response in the 200 or 300 range, it marks the application as healthy. It fails if the instance is no longer live (for example, due to a crash). If the probe pings the path a number of times (configurable via the probe's `failureThreshold` field in `LCP.json`) and cannot get a valid response, then the service automatically restarts.
 
 Each service's `LCP.json` file contains the following:
 
@@ -46,6 +50,8 @@ Each service's `LCP.json` file contains the following:
 ### Readiness Probe
 
 The readiness probe uses an executable command. If the command returns with the correct exit code, then the container is marked as healthy. Otherwise, it is marked unhealthy.
+
+As soon as the readiness probe detects that the service is ready, then the service may receive traffic. If the probe detects that the service is no longer ready, then it will stop receiving new traffic. However, the readiness probe will not restart the service on its own.
 
 Each service's `LCP.json` file contains the following:
 
