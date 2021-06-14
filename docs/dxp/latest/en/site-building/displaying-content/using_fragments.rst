@@ -13,6 +13,7 @@ Using Fragments
    using-fragments/mapping-web-content-templates-to-fragments.md
    using-fragments/saving-a-fragment-composition.md
    using-fragments/using_fragment_renderers.rst
+   using-fragments/localizing-the-fragment-configuration.md
 
 -  :doc:`/site-building/displaying-content/using-fragments/using-page-fragments`
 -  :doc:`/site-building/displaying-content/using-fragments/managing-page-fragments`
@@ -22,6 +23,7 @@ Using Fragments
 -  :doc:`/site-building/displaying-content/using-fragments/using-fragment-comments`
 -  :doc:`/site-building/displaying-content/using-fragments/saving-a-fragment-composition`
 -  :doc:`/site-building/displaying-content/using-fragments/mapping-web-content-templates-to-fragments`
+-  :doc:`/site-building/displaying-content/using-fragments/localizing-the-fragment-configuration`
 
 Using Fragment Renderers
 ------------------------

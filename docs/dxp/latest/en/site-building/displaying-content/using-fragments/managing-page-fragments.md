@@ -67,3 +67,9 @@ Default Page Fragments cannot be directly edited. However, you can copy the defa
 1. Navigate to the default Page Fragment Collection.
 1. Open the Page Fragment's *Actions* (![Actions](../../../images/icon-actions.png)) Menu and select *Copy To*.
 1. Select the Collection where you want to copy the default Page Fragment.
+
+## Additional Information
+
+- [Using Page Fragments](./using-page-fragments.md)
+- [Configuring Fragment Styles](./configuring-fragment-styles.md)
+- [Localizing the Fragment Configuration](./localizing-the-fragment-configuration.md)

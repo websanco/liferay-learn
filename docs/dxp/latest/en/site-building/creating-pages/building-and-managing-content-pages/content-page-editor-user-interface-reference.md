@@ -81,6 +81,10 @@ In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../
 
 - **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
 
+   ```note::
+      For a description of the different Page Fragments in the Content Page editor, see `Page Fragments User Interface Reference <./page-fragments-user-interface-reference.md>`_.
+   ```
+
 - **Widgets**: As in other DXP contexts, widgets are [applications](../../../developing_applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
 
 ### Selection
