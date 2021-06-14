@@ -52,9 +52,9 @@ The Audience report uses charts to present information about the audience intera
 
 Here are the charts in the Audience report:
 
-**Submissions:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center of the chart shows the total number of unique visitors. Tooltips on each chart section show the number of users for that section (e.g, the number of known or anonymous users).
+**Submissions:** A donut chart that presents the percentage of total unique visitors who are known or anonymous. The center shows the total number of unique visitors. Tooltips show the number of users for that section (e.g, the number of known or anonymous users).
 
-**Segmented Submissions:** A donut chart that presents the percentage of known individuals who belong or do not belong to one or more Analytics Cloud Segment. The center of the chart shows the total number of known individuals. Note that the total number may include some anonymous individuals depending on the segmentation criteria. Tooltips on each chart section show the number of users for that section (e.g, the number of users belonging to one or more Segments). 
+**Segmented Submissions:** A donut chart that presents the percentage of known individuals who belong or do not belong to one or more Analytics Cloud Segment. The center shows the total number of known individuals. Note that the total number may include some anonymous individuals depending on the segmentation criteria. Tooltips show the number of users for that section (e.g, the number of users belonging to one or more Segments). 
 
 **Viewer Segments:** A bar chart that shows the percentage of known individuals that comprise each Segment. The chart shows a bar for each of the top five Segments, and then aggregates the remaining Segments into the last bar. A tooltip on the last bar shows the values for each of the remaining Segments.
 
@@ -78,11 +78,11 @@ Click Web Browser to see a donut chart displaying up to the top eight web browse
 
 ## Form Abandonment
 
-Form Abandonment chart displays a bar graph. For the first row Step 1, the blue bar represents the portion of your visitors that abandoned the form without any interaction. Note that if your form has multiple steps there will be a new row for each step followed by the input fields in that step.
+Form Abandonment chart displays a bar graph. For the first row Step 1, the blue bar represents the portion of your visitors that abandoned the form without any interaction. Note that if your form has multiple steps there is a new row for each step followed by the input fields in that step.
 
 ![Form Abandonment charts help to breakdown user interactions with specific elements on a form.](forms/images/06.png)
 
-For each input field, the blue bar represents the portion of visitors that abandoned the form at that particular field. This is useful information to have to diagnose potential issues with your forms. For example, in the image above, no visitor abandoned the form when inputting their first and last name. But some abandoned the form when inputting their email. With your own forms, use this analytics data to remove any input fields that seem to cause frequent form abandonment.
+For each input field, the blue bar represents the portion of visitors that abandoned the form at that particular field. This is useful information to have to diagnose potential issues with your forms. For example, in the image above, no visitor abandoned the form when entering their first and last name. But some abandoned the form when entering their email. With your own forms, use this analytics data to remove any input fields that seem to cause frequent form abandonment.
 
 ## Asset Appears On
 
