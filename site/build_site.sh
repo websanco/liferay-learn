@@ -116,17 +116,15 @@ function generate_sphinx_input {
 			do
 				rsync -a "${product_version_language_dir_name}"/*.* ../site/build/input/"${product_version_language_dir_name}"
 
-				# the path to the file's dirname, but without product/version/lang
-				local article_file_basedir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},,g")
+				local article_dir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},,g")
 
-				mkdir -p ../site/build/input/${product_version_language_dir_name}/${article_file_basedir_name}
+				mkdir -p ../site/build/input/${product_version_language_dir_name}/${article_dir_name}
 
-				cp ${article_file_name} ../site/build/input/${product_version_language_dir_name}/${article_file_basedir_name}
+				cp ${article_file_name} ../site/build/input/${product_version_language_dir_name}/${article_dir_name}
 
-				# the path to the prod/ver/en/whatever/article-name folder must fully match (aside form the language bit) the path to the translated article, otherwise we shouldn't try to sync it
-				if [[ -n $(find ${product_version_english_dir_name}/${article_file_basedir_name} -name $(basename -s .md ${article_file_name}) -type d) ]]
+				if [[ -n $(find ${product_version_english_dir_name}/${article_dir_name} -name $(basename -s .md ${article_file_name}) -type d) ]]
 				then
-					rsync -a ${product_version_english_dir_name}${article_file_basedir_name}/$(basename -s .md ${article_file_name})/* ../site/build/input/${product_version_language_dir_name}/${article_file_basedir_name}/$(basename -s .md ${article_file_name})
+					rsync -a ${product_version_english_dir_name}${article_dir_name}/$(basename -s .md ${article_file_name})/* ../site/build/input/${product_version_language_dir_name}/${article_dir_name}/$(basename -s .md ${article_file_name})
 				fi
 			done
 
