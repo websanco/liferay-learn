@@ -117,7 +117,7 @@ function generate_sphinx_input {
 				rsync -a "${product_version_language_dir_name}"/*.* ../site/build/input/"${product_version_language_dir_name}"
 
 				# the path to the file's dirname, but without product/version/lang
-				article_file_basedir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},,g")
+				local article_file_basedir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},,g")
 
 				mkdir -p ../site/build/input/${product_version_language_dir_name}/${article_file_basedir_name}
 
