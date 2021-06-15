@@ -9,7 +9,7 @@ Translating Web Content
    translating-web-content/automatically-translating-web-content.md
 
 
-Liferay includes three methods for providing translations of web content:
+Liferay includes three methods for translating web content:
 
 - `Manual translation of web content through the UI <./translating-web-content/manually-translating-web-content.md>`_
 - `Exporting web content in XLIFF format and importing translations <./translating-web-content/exporting-and-importing-translations.md>`_
