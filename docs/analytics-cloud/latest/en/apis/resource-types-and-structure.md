@@ -281,7 +281,7 @@ Each asset contains its own set of properties:
 ```json
  {
       "id": "107694635",
-      "title": "16 Awesome Web Portal Examples",
+      "title": "Awesome Web Portal Examples",
       "metrics": {
         "readingTimeMetric": {
           "value": 71788.99821937321
@@ -310,10 +310,10 @@ Each asset contains its own set of properties:
 
 * `ID` (String): Unique identifier of the blog.
 * `Title` (String) : Title used for the blog.
-* `Reading Time Metric` (Double): Time user spent reading the blog asset.
+* `Reading Time Metric` (Double): Average user time spent reading the blog.
 * `Clicks Metric` (Double): Sum of users clicks on the blog.
-* `Views Metric` (Double): Sum of users visualizations of the blog.
-* `Ratings Metric` (Double): Average rating (1-5 range) of the blogs over that selection period.
+* `Views Metric` (Double): Sum of users views of the blog.
+* `Ratings Metric` (Double): Average rating (1-5 range) of the blog over that selection period.
 * `Comments Metric` (Double): Sum of comments that happened on the blog.
 
 ### Documents and Media
@@ -321,7 +321,7 @@ Each asset contains its own set of properties:
 ```json
 {
       "id": "320981007",
-      "title": "Cinco Principios Útiles para Mejorar su Comunicación De E-commerce B2B Durante (y Después) una Crisis",
+      "title": "My Awesome Document",
       "metrics": {
         "downloadsMetric": {
           "value": 6.0
@@ -338,17 +338,26 @@ Each asset contains its own set of properties:
       },
       "_links": {
         "self": {
-          "href": "https://analytics.liferay.com/api/reports/documents-and-media/320981007?documentTitle=Cinco%20Principios%20%C3%9Atiles%20para%20Mejorar%20su%20Comunicaci%C3%B3n%20De%20E-commerce%20B2B%20Durante%20(y%20Despu%C3%A9s)%20una%20Crisis&rangeKey=30"
+          "href": "https://analytics.liferay.com/api/reports/documents-and-media/320981007?documentTitle=My%20Awesome%20Document&rangeKey=30"
       }
 }
 ```
+
+**Properties**
+
+* `ID` (String): Unique identifier of the document or media.
+* `Title` (String) : Title used for the document or media.
+* `Downloads Metric` (Double): Sum of user downloads of the document or media.
+* `Ratings Metric` (Double): Average rating (1-5 range) of the document or media over that selection period.
+* `Comments Metric` (Double): Sum of comments that happened on the document or media.
+* `Previews Metric` (Double): Sum of user previews of the document or media.
 
 ### Forms
 
 ```json
 {
       "id": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
-      "title": "Opt-in: Liferay Blog Subscription",
+      "title": "Blog Subscription",
       "metrics": {
         "viewsMetric": {
           "value": 20409.0
@@ -365,26 +374,35 @@ Each asset contains its own set of properties:
       },
       "_links": {
         "self": {
-          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Blog%20Subscription&rangeKey=30"
         },
         "pages": {
-          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Blog%20Subscription&rangeKey=30"
         }
       }
 ```
 
-You can also follow the pages link and see the form page metrics information; It will show form metrics by page and form fields:
+**Properties**
+
+* `ID` (String): Unique identifier of the form.
+* `Title` (String): Title used for the form.
+* `Views Metric` (Double): Sum of user views of the form.
+* `Abandonments Metric` (Double): Rate of abandonment of form (0-1 range).
+* `Submissions Metric` (Double): Sum of submissions of the form.
+* `Completion Time Metric` (Double): Average user time for completion of the form.
+
+You can also follow the pages link and see the form page metrics information. It will show form metrics by page and form fields:
 
 ```json
 {
   "formId": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
-  "formTitle": "Opt-in: Liferay Blog Subscription",
+  "formTitle": "Blog Subscription",
   "formPages": [
     {
       "id": "0",
       "title": "",
       "fields": {
-        "blog_en_ua_digital_strategy": {
+        "name_field": {
           "metrics": {
             "fieldInteractionsMetric": {
               "value": 6.0
@@ -400,215 +418,7 @@ You can also follow the pages link and see the form page metrics information; It
             }
           }
         },
-        "please_leave_blank_qjug_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 1.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 3.0
-            },
-            "fieldRefilledMetric": {
-              "value": 0.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_ypgg_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_tibp_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 1.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 5.0
-            },
-            "fieldRefilledMetric": {
-              "value": 0.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "blog_en_us_products_technology": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 8.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 4.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 4.0
-            }
-          }
-        },
-        "please_leave_blank_ztya_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_tjzj_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_dwnv_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_glcj_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_gdai_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "blog_en_us_customer_experience": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 1.0
-            }
-          }
-        },
-        "blog_en_us_digital_strategy": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 22.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 11.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 11.0
-            }
-          }
-        },
-        "please_leave_blank_rhzm_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_advw_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "email": {
+        "email_field": {
           "metrics": {
             "fieldInteractionsMetric": {
               "value": 86.0
@@ -623,279 +433,7 @@ You can also follow the pages link and see the form page metrics information; It
               "value": 10.0
             }
           }
-        },
-        "blog_pt_br_digital_strategy": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 1.0
-            }
-          }
-        },
-        "please_leave_blank_cfsb_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_qvzy_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_imod_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_ceez_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_uyhx_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_snws_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "recent_conversion_type": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 40.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 20.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_vebn_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_vahv_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_tjtq_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_ekhi_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_rjsd_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "blog_default_blog_subscription": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 40.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 20.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "please_leave_blank_sqpo_": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 2.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 1.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        },
-        "hsSubmitBtn": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 62.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 4096.0
-            },
-            "fieldRefilledMetric": {
-              "value": 20.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 1.0
-            }
-          }
-        },
-        "lifecyclestage": {
-          "metrics": {
-            "fieldInteractionsMetric": {
-              "value": 40.0
-            },
-            "fieldInteractionsDurationMetric": {
-              "value": 0.0
-            },
-            "fieldRefilledMetric": {
-              "value": 20.0
-            },
-            "fieldAbandonmentsMetric": {
-              "value": 0.0
-            }
-          }
-        }
+        }       
       },
       "metrics": {
         "pageViewsMetric": {
@@ -909,21 +447,31 @@ You can also follow the pages link and see the form page metrics information; It
   ],
   "_links": {
     "self": {
-      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Blog%20Subscription&rangeKey=30"
     },
     "parent": {
-      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Opt-in:%20Liferay%20Blog%20Subscription&rangeKey=30"
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Blog%20Subscription&rangeKey=30"
     }
   }
 }
 ```
+
+**Properties**
+
+* `Form ID` (String): Unique identifier of the form.
+* `Form Title` (String): Title used for the form.
+* `Field Interactions Metric` (Double): Sum of user interaction of the form field.
+* `Field Interactions Duration Metric` (Double): Average interaction time of the form field.
+* `Field Abandonments Metric` (Double): Sum of user abandonment of the form at this field.
+* `Page Views Metric` (Double): Sum of user views of the form page.
+* `Page Abandonments Metric` (Double): Sum of user abandonment of the form at this page.
 
 ### Web Content
 
 ```json
  {
       "id": "231976097",
-      "title": "Component Styles",
+      "title": "My Web Content",
       "metrics": {
         "viewsMetric": {
           "value": 280756.0
@@ -931,8 +479,14 @@ You can also follow the pages link and see the form page metrics information; It
       },
       "_links": {
         "self": {
-          "href": "https://analytics.liferay.com/api/reports/web-contents/231976097?webContentTitle=Component%20Styles&rangeKey=30"
+          "href": "https://analytics.liferay.com/api/reports/web-contents/231976097?webContentTitle=My%20Web%20Content&rangeKey=30"
         }
       }
     }
 ```
+
+**Properties**
+
+* `ID` (String): Unique identifier of the web content.
+* `Title` (String): Title used for the web content.
+* `Views Metric` (Double): Sum of user views of the web content.
