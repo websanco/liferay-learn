@@ -10,6 +10,7 @@ To access available Fragments, go to a Content Page, and click on the *Edit* ico
 - [Using Featured Content Components](#featured-content)
 - [Using Footers](#footers)
 - [Using Navigation Bars](#navigation-bars)
+- [Using Menu Displays](#menu-display)
 
 ## Adding Fragments
 
@@ -81,7 +82,27 @@ Use *card* Fragments to add an image with title, paragraph, and link elements to
 
 ### Dropdown
 
+> Available: Liferay DXP 7.4+.
 
+This Fragment defines a drop zone where you can add other Fragments and create advanced drop-down menus (A). For example, you can drag-and-drop a Card Fragment on the Dropdown Fragment's drop zone so the Card content appears when the user clicks or hovers over the Dropdown.
+
+![The Dropdown Fragment defines a drop zone where you can add other fragments.](./page-fragments-user-interface-reference/images/01.png)
+
+In this table you can see a description of the Dropdown Fragment General options (B):
+
+| Option | Description |
+| --- | --- |
+| *Type* | Controls the Dropdown Fragment style. |
+| *Size* | Sets the Dropdown Fragment size. |
+| *Panel Type* | Defines the drop zone size:</br><ul><li>*Regular:* Standard drop zone size.</li><li>*Full Width:* The drop zone size corresponds to the Module's width containing the Fragment.</li><li>*Mega Menu:* The drop zone size corresponds to the Page's width.</li></ul> |
+| *Display on Hover* | When you check this option, the Dropdown Fragment opens when the user hovers the mouse over. |
+| *Keep Panel Open in Edit Mode* | Check this option to keep the drop-zone open while you edit the Dropdown Fragment content. |
+
+![You can define the drop zone size in the Dropdown panel using the Panel Type options.](./page-fragments-user-interface-reference/images/18.gif)
+
+```tip::
+   Place the Dropdown Fragment inside a Grid Fragment to observer the differences between the *Full Width* and *Mega Menu* panel types.
+```
 
 ### External Video
 
@@ -209,8 +230,17 @@ Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates]
 
 ![Add a custom header to Master Page Templates for Content Page.](./page-fragments-user-interface-reference/images/14.png)
 
+## Menu Display
+
+> Available: Liferay DXP 7.4+.
+
+Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP  [Navigation Menus](../../site-navigation/using-navigation-menus.md). To learn more about how to configure the Menu Display Fragment for your Site navigation, read [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
+
+![The Menu Display Fragment is available under the Fragments and Widget section of your Content Page.](./page-fragments-user-interface-reference/images/15.png)
+
 ## Additional Information
 
 - [Content Pages Overview](./content-pages-overview.md)
 - [Content Page Editor User Interface Reference](./content-page-editor-user-interface-reference.md)
 - [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)
+- [Managing Site Navigation](../../site-navigation/managing-site-navigation.md)

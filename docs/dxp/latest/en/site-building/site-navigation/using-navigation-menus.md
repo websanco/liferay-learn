@@ -6,7 +6,7 @@ Getting started with Navigation Menus involves:
 
 1. [Creating a Navigation Menu](#creating-navigation-menus)
 1. Adding items to the menu like [existing pages](#assigning-pages-to-a-navigation-menu), adding links, or sub-menus
-1. Optionally, [marking the navigation menu](#marking-a-navigation-menu) to serve particular function on your site
+1. Optionally, [categorize the navigation menu](#categorize-a-navigation-menu) to serve particular function on your site
 1. Adding the Navigation Menu widget (if it is not already present) to a page and [configuring it](./configuring-navigation-menus.md)
 
 For example, a navigation menu can contain all child pages of a given page. You can display the menu using the Navigation Menu widget on the parent page. This creates a navigation that only displays the child pages selected, in effect creating a mini-site.
@@ -67,9 +67,9 @@ Once disabled, you're not prompted to add the page to a navigation menu.
 
 ![Disable the setting where pages are automatically added to this Navigation Menu.](./using-navigation-menus/images/08.png)
 
-## Marking a Navigation Menu
+## Categorize a Navigation Menu
 
-You can mark a navigation menus in the following ways:
+You can categorize a navigation menu in the following ways:
 
 | Navigation Menu Type | Usage |
 | --- | --- |
