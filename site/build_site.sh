@@ -114,7 +114,7 @@ function generate_sphinx_input {
 
 			for article_file_name in $(find "${product_version_language_dir_name}" -name "${1}")
 			do
-				rsync -a "${product_version_language_dir_name}"/*.* ../site/build/input/"${product_version_language_dir_name}"
+				rsync -a ${product_version_language_dir_name}/*.* ${product_version_english_dir_name}/images ../site/build/input/${product_version_language_dir_name}
 
 				local article_dir_name=$(dirname ${article_file_name} | sed "s,${product_version_language_dir_name},,g")
 
