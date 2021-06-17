@@ -28,9 +28,7 @@ public class W3R2CharlieOSGiCommands {
 
 			_log.info(
 				StringBundler.concat(
-					"acme/w3r2_able message listener count ",
-					destination.getMessageListenerCount(),
-					", active thread count ",
+					"acme/w3r2_able active thread count ",
 					destinationStatistics.getActiveThreadCount(),
 					", current thread count ",
 					destinationStatistics.getCurrentThreadCount(),
@@ -38,6 +36,8 @@ public class W3R2CharlieOSGiCommands {
 					destinationStatistics.getLargestThreadCount(),
 					", max thread pool size ",
 					destinationStatistics.getMaxThreadPoolSize(),
+					", message listener count ",
+					destination.getMessageListenerCount(),
 					", min thread pool size ",
 					destinationStatistics.getMinThreadPoolSize(),
 					", pending message count ",
