@@ -2,15 +2,13 @@
 
 Liferay's Documents and Media includes a built-in image editor for cropping and rotating images without switching contexts.
 
-To use the image editor, open the Documents and Media application in a Site of Asset Library, click on the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired image, and select *Edit Image*.
+To use the image editor, open Documents and Media, click the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired image, and select *Edit Image*.
 
 ![Click Edit Image to use Documents and Media's image editor.](./editing-images/images/01.png)
 
-When editing an image in Documents and Media, the following options are available.
+When editing an image in Documents and Media, you have these options:
 
-![Crop and rotate images.](./editing-images/images/02.png)
-
-**Crop**: Manually adust the cropping frame; click and drag the image to reposition it within the cropping frame.
+**Crop**: Manually adjust the cropping frame; click and drag the image to reposition it within the cropping frame.
 
 **Ratio**: Select a fixed preset ratio for cropping the image (i.e., 16:10, 16:9, 4:3, 1:1, 2:3), or select *Free* to create a custom image ratio.
 
@@ -22,7 +20,7 @@ When editing an image in Documents and Media, the following options are availabl
 
 **Save**: Save all changes made to the image; this overwrites the existing image file.
 
-![All saved changes overwrite the existing image file](./editing-images/images/03.png)
+![Crop and rotate images.](./editing-images/images/02.png)
 
 ## For Liferay 7.3.x and Earlier
 
