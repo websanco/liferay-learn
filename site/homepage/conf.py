@@ -10,6 +10,7 @@ extensions = [
     "notfound.extension",
     "recommonmark",
     "sphinx_copybutton",
+    "sphinxext.opengraph",
     "sphinx_markdown_tables",
 ]
 html_additional_pages = {"index": "index.html"}
@@ -28,6 +29,8 @@ locale_dirs = ["_locale"]
 master_doc = "contents"
 notfound_no_urls_prefix = True
 notfound_template = "404.html"
+ogp_site_url = "https://learn.liferay.com/"
+ogp_image = "https://learn.liferay.com/_static/liferay-waffle.svg"
 project = "Liferay Learn"
 release = "1.0"
 source_suffix = [".md", ".rst"]

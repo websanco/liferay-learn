@@ -7,8 +7,10 @@ verify_ssl = true
 
 [packages]
 docutils = "==0.16"
+jinja2 = "==2.11.3"
 nodeenv = "*"
 recommonmark = "*"
+sphinxext-opengraph = "*"
 sphinx = "==3.3.1"
 sphinx-copybutton = "*"
 sphinx-intl = "*"
