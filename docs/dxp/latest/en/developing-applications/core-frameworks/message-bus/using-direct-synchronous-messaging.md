@@ -73,22 +73,22 @@ Example Classes:
 
 | Class | Module | Description |
 | :---- | :----- | :---------- |
-| `X6N5AbleMessagingConfigurator` | `x6n5-able-impl` | Creates a message destination named `"acme/x6n5_able"` and registers it with the Message Bus. |
-| `X6N5BakerOSGiCommands` | `x6n5-baker-impl` | Sends a message to the `"acme/x6n5_able"` destination and logs the response. |
-| `X6N5CharlieMessageListener` | `x6n5-charlie-impl` | Listens for messages sent to the `"acme/x6n5_able"` destination. It logs the message payload and sets a response on the message. |
-| `X6N5DogMessageListener` | `x6n5-dog-impl` |Listens for messages sent to the `"acme/x6n5_able"` destination. It logs the message payload and sets a response on the message. |
+| `X6N5AbleMessagingConfigurator` | `x6n5-able-impl` | Creates a message destination named `acme/x6n5_able` and registers it with the Message Bus. |
+| `X6N5BakerOSGiCommands` | `x6n5-baker-impl` | Sends a message to the `acme/x6n5_able` destination and logs the response. |
+| `X6N5CharlieMessageListener` | `x6n5-charlie-impl` | Listens for messages sent to the `acme/x6n5_able` destination. It logs the message payload and sets a response on the message. |
+| `X6N5DogMessageListener` | `x6n5-dog-impl` |Listens for messages sent to the `acme/x6n5_able` destination. It logs the message payload and sets a response on the message. |
 
 Here's the event flow:
 
-1. When a user executes the `x6n5:sendMessage` Gogo shell command, `X6N5BakerOSGiCommands` sends the command arguments in a message payload to the `"acme/x6n5_able"` destination.
+1. When a user executes the `x6n5:sendMessage` Gogo shell command, `X6N5BakerOSGiCommands` sends the command arguments in a message payload to the `acme/x6n5_able` destination.
 1. The current thread processes message reception for each listener (i.e., `X6N5CharlieMessageListener` and `X6N5DogMessageListener`) in succession. The listeners log the message payload and set a response on the message. The response from the latest listener processed supercedes previous responses.
 1. Processing returns to `X6N5BakerOSGiCommands`, where it logs the message response.
 
-Examine each class, starting with the destination configurator 
+Now you can examine each class, starting with the destination configurator 
 
 ## Examine the Destination Configurator
 
-The `x6n5-able-impl` module's `X6N5AbleMessagingConfigurator` class creates and configures a destination named `"acme/x6n5_able"`. Here's the code:
+The `x6n5-able-impl` module's `X6N5AbleMessagingConfigurator` class creates and configures a destination named `acme/x6n5_able`. Here's the code:
 
 ```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-able-impl/src/main/java/com/acme/x6n5/able/internal/messaging/X6N5AbleMessagingConfigurator.java
    :language: java
@@ -97,13 +97,13 @@ The `x6n5-able-impl` module's `X6N5AbleMessagingConfigurator` class creates and 
 
 This configurator is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) class. It uses the [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to inject a `DestinationFactory` instance.
 
-The `_activate(BundleContext)` method uses the [`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java) and a [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) to create a *synchronous* destination named `"acme/x6n5_able"`. Synchronous destinations are optimized for synchronous messaging. Lastly, the method registers the [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) in an OSGi service using the `BundleContext`. 
+The `_activate(BundleContext)` method uses the [`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java) and a [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) to create a *synchronous* destination named `acme/x6n5_able`. Synchronous destinations are optimized for synchronous messaging. Lastly, the method registers the [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) in an OSGi service using the `BundleContext`. 
 
 When `X6N5AbleMessagingConfigurator` deactivates, its `_deactivate()` method unregisters the destination service.
 
 ## Examine the Sender
 
-The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class below provides an OSGi Command that sends messages to the destination mentioned above.
+The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class below provides an OSGi Command that sends messages to the destination.
 
 ```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-baker-impl/src/main/java/com/acme/x6n5/baker/internal/osgi/commands/X6N5BakerOSGiCommands.java
    :language: java
@@ -118,11 +118,11 @@ The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class below provides an O
 
 `X6N5BakerOSGiCommands`'s `@Component` properties define a Gogo shell command function called `sendMessage` and in the `x6n5` scope. The command and maps to the `sendMessage(String)` method and takes an input `String`.
 
-The `sendMessage(String)` method creates a [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java) with the Gogo shell command's `String` as a payload. The `SynchronousMessageSender` `send(String, Message)` method uses the current thread to deliver the message to `"acme/x6n5_able"` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) message listeners. Execution blocks in the `X6N5BakerOSGiCommands` class until the thread processes the message in all the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)s. Then execution continues in the `X6N5BakerOSGiCommands` `sendMessage(String)` method, where it logs the message response.
+The `sendMessage(String)` method creates a [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java) with the Gogo shell command's `String` as a payload. The `SynchronousMessageSender` `send(String, Message)` method uses the current thread to deliver the message to `acme/x6n5_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) message listeners. Execution blocks in the `X6N5BakerOSGiCommands` class until the thread processes the message in all the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)s. Then execution continues in the `X6N5BakerOSGiCommands` `sendMessage(String)` method, where it logs the message response.
 
 ## Examine the Listeners
 
-The `x6n5-charlie-impl` module's `X6N5CharlieMessageListener` class and `x6n5-dog-impl` module's `X6N5DogMessageListener` class listen for messages sent to the `"acme/x6n5_able"` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java). They register the same way [Listening for Messages](./listening-for-messages.md) demonstrates. 
+The `x6n5-charlie-impl` module's `X6N5CharlieMessageListener` class and `x6n5-dog-impl` module's `X6N5DogMessageListener` class listen for messages sent to the `acme/x6n5_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java). They register the same way [Listening for Messages](./listening-for-messages.md) demonstrates. 
 
 `X6N5CharlieMessageListener` class:
 
