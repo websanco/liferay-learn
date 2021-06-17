@@ -23,30 +23,27 @@ public class W3R2CharlieOSGiCommands {
 			Destination destination = _messageBus.getDestination(
 				"acme/w3r2_able");
 
-			StringBundler sb = new StringBundler(16);
-
-			sb.append("acme/w3r2_able message listener count ");
-			sb.append(destination.getMessageListenerCount());
-
 			DestinationStatistics destinationStatistics =
 				destination.getDestinationStatistics();
 
-			sb.append(", active thread count ");
-			sb.append(destinationStatistics.getActiveThreadCount());
-			sb.append(", current thread count ");
-			sb.append(destinationStatistics.getCurrentThreadCount());
-			sb.append(", largest thread count ");
-			sb.append(destinationStatistics.getLargestThreadCount());
-			sb.append(", max thread pool size ");
-			sb.append(destinationStatistics.getMaxThreadPoolSize());
-			sb.append(", min thread pool size ");
-			sb.append(destinationStatistics.getMinThreadPoolSize());
-			sb.append(", pending message count ");
-			sb.append(destinationStatistics.getPendingMessageCount());
-			sb.append(", sent message count ");
-			sb.append(destinationStatistics.getSentMessageCount());
-
-			_log.info(sb.toString());
+			_log.info(
+				StringBundler.concat(
+					"acme/w3r2_able message listener count ",
+					destination.getMessageListenerCount(),
+					", active thread count ",
+					destinationStatistics.getActiveThreadCount(),
+					", current thread count ",
+					destinationStatistics.getCurrentThreadCount(),
+					", largest thread count ",
+					destinationStatistics.getLargestThreadCount(),
+					", max thread pool size ",
+					destinationStatistics.getMaxThreadPoolSize(),
+					", min thread pool size ",
+					destinationStatistics.getMinThreadPoolSize(),
+					", pending message count ",
+					destinationStatistics.getPendingMessageCount(),
+					", sent message count ",
+					destinationStatistics.getSentMessageCount()));
 		}
 	}
 
