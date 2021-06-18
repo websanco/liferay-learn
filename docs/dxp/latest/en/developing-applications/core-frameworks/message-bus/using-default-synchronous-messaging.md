@@ -91,7 +91,7 @@ Here's the event flow:
 1. A Message Bus thread delivers the message to `M4Q7CharlieMessageListener`.
 1. `M4Q7CharlieMessageListener` logs the message payload and sends its own class name in a response message to the original message's response destination `acme/m4q7_baker`.
 1. `M4Q7BakerMessageListener` receives the response message and logs its payload.
-1. Processing returns to `M4Q7BakerOSGiCommands`, where it logs the response to sending the original message.
+1. Processing returns to `M4Q7BakerOSGiCommands`, where it logs the response to the original message.
 
 Now examine each class, starting with the destination configurators.
 
@@ -162,7 +162,7 @@ The `m4q7-baker-impl` module's `M4Q7BakerOSGiCommands` class provides an OSGi Co
    :lines: 12-42
 ```
 
-`M4Q7BakerOSGiCommands` is a service `Component` of its own class type. It uses a `@Reference` annotation to inject a `SynchronousMessageSender` that's set to *default* mode (specified by the annotation's `target = "(mode=DEFAULT)"` attribute). 
+`M4Q7BakerOSGiCommands` is a service `Component` of its own class type. It uses an `@Reference` annotation to inject a `SynchronousMessageSender` that's set to *default* mode (specified by the annotation's `target = "(mode=DEFAULT)"` attribute). 
 
 ```note::
    In *default* mode, the ``SynchronousMessageSender``'s ``send`` method blocks the calling class until a response message is received or until the sender times out.
@@ -178,7 +178,7 @@ The `sendMessage(String)` method sends the message by calling `SynchronousMessag
    In default synchronous messaging, response messages must use the original message's response ID *and* must be sent to the response destination.
 ```
 
-Now that you've seen a message listener reply with a response message, let's test the response timeout.
+Now that you've seen a message listener reply with a response message, you can test the response timeout.
 
 ## Demonstrate the Response Timeout
 
@@ -236,4 +236,3 @@ Congratulations on sending messages synchronously with a timeout.
 
 * [Message Bus](./message-bus.md)
 * [Listening for Messages](./listening-for-messages.md)
->>>>>>> 3ca9ff452 (LRDOCS-8961 Article 'Using Default Synchronous Messaging')
