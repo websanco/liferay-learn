@@ -1,6 +1,6 @@
 # Field Options Provider
 
-A [dropdown list can be populated manually](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `Meta.AD` annotation of the configuration interface. But the option labels and values can also be populated automatically with the `ConfigurationFieldOptionsProvider` class.
+A [dropdown list can be populated manually](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `@Meta.AD` annotation of the configuration interface. But option labels and values can also be populated automatically with the `ConfigurationFieldOptionsProvider` class.
 
 ## Deploy the Tutorial Code
 
@@ -40,7 +40,7 @@ A [dropdown list can be populated manually](https://learn.liferay.com/dxp/latest
 
     ![The settings UI shows two dropdown lists.](./field-options-provider/images/01.png)
 
-The first dropdown list is manually populated and the second dropdown list is provider populated.
+The first dropdown list is manually populated with the `@Meta.AD` annotation. The second dropdown list is populated with the field options provider.
 
 ## Setting the Configuration Interface
 
@@ -63,7 +63,7 @@ Create a new class that implements the `ConfigurationFieldOptionsProvider` class
    :lines: 14-20
 ```
 
-Use an `@Component` annotation to register the service. Include the `configuration.field.name` from the previous section. Set the `configuration.pid` with the fully qualified class name of the configuration interface.
+Use the `@Component` annotation to register the service. Include the `configuration.field.name` from the previous step. Set the `configuration.pid` to the fully qualified class name of the configuration interface.
 
 ```literalinclude:: ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
    :dedent: 1
@@ -73,4 +73,6 @@ Use an `@Component` annotation to register the service. Include the `configurati
 
 Add a `getOptions` method to return a list of `Option`s. The sample project includes an array that sets the `optionValue` as a string of a color and sets the `optionLabel` as the string stored in the `Langauge.properties` file of that color.
 
-The tutorial code uses a simple example of a string array but a more complex use case could also be employed. For example, get a list of objects for a selection from another module or even iterate through a database to dynamically populate a list.
+The tutorial code uses a simple example of a string array but more complex use cases are also possible. For example, get a list of objects from a web service or even iterate through a database to dynamically populate a list.
+
+See a real Liferay example with [`EnabledClassNamesConfigurationFieldOptionsProvider.java`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-auto-tagger-service/src/main/java/com/liferay/asset/auto/tagger/internal/configuration/admin/definition/EnabledClassNamesConfigurationFieldOptionsProvider.java). This code gets a list of `AssetRendererFactory` objects and iterates through the list, populating a new list of `Option`s, using the asset’s type name as the label and the class name as the value.

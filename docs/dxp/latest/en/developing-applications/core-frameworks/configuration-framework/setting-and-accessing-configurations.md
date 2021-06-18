@@ -146,3 +146,4 @@ Now the font family attribute is a dropdown selection.
 
 * [Categorizing a Configuration](./categorizing-a-configuration.md)
 * [Scoping Configurations](./scoping-configurations)
+* [Field Options Provider](./field-options-provider.md)
