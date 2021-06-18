@@ -8,8 +8,6 @@ With Local Live Staging, both your Staging and Live environments are hosted on t
 
 ## Setting Up Local Live Staging for Sites
 
-Follow these steps to set up Local Live Staging for a Site:
-
 1. Go to *Site Menu* &rarr; *Publishing* &rarr; *Staging*.
 
    ![Go to Staging in the Site Menu.](./configuring-local-live-staging/images/01.png)
@@ -40,11 +38,9 @@ Once the process is complete, you are ready to use Local Live Staging. See [Site
 
 ## Setting Up Staging for Asset Libraries
 
-Follow these steps to set up Local Live Staging for an Asset Library:
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)) and click *Asset Libraries* in the Applications tab.
 
-1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), and click on *Asset Libraries* in the Applications tab.
-
-1. Open the desired Asset Library, and click on *Staging* under Publishing.
+1. Open the desired Asset Library and click *Staging* under Publishing.
 
 1. Select *Local Live*.
 
@@ -56,7 +52,7 @@ Follow these steps to set up Local Live Staging for an Asset Library:
 
    ![Select the application data you want to stage.](./configuring-local-live-staging/images/06.png)
 
-1. Click on *Save* to initiate the cloning process. The duration of this process depends on the size of the Asset Library.
+1. Click *Save* to initiate the cloning process. The duration of this process depends on the size of the Asset Library.
 
    Once the process is complete, you are ready to use Local Live Staging in your Asset Library.
 
@@ -72,7 +68,7 @@ Follow these steps to disable Local Live Staging:
 
 1. Open the Staging application in your Site or Asset Library.
 
-1. Click the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) located in the Application bar, and select *Staging Configuration*.
+1. Click *Actions* ( ![Actions button](../../../images/icon-actions.png) ) in the Application bar and select *Staging Configuration*.
 
    ![Click the Actions button in the Application bar, and select Staging Configuration](./configuring-local-live-staging/images/07.png)
 

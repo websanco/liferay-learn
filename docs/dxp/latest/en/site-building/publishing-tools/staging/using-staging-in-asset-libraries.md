@@ -6,7 +6,7 @@ You can enable [Local Live](./configuring-local-live-staging.md) or [Remote Live
    Staging is supported for Asset Libraries since Liferay DXP 7.4 and 7.3.10 FP1.
 ```
 
-Once Staging is enabled for an Asset Library, you can toggle between Live and Staging environments within it via the Staging bar at the top of the page. While in the Staging environment, you can also access *Publish to Live* to initiate a new publishing process.
+Once Staging is enabled for an Asset Library, you can toggle between Live and Staging environments via the Staging bar at the top of the page. While in the Staging environment, you can also access *Publish to Live* to initiate a new publishing process.
 
 ![Navigate to the Asset Library to access the Staging bar.](./using-staging-in-asset-libraries/images/01.png)
 

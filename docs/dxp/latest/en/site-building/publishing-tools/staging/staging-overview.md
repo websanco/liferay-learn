@@ -23,7 +23,7 @@ While both options use the same interface for managing and publishing staged Pag
 
 ### Staged Data and Content Types
 
-As part of Staging configuration, you can select which content groups and application data is staged. If staged, the selected data and content are managed by your Staging environment. Also, when an application or content group is selected, all contained entities (e.g., application folders) are staged as well. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
+As part of Staging configuration, you can select which content groups and application data are staged. If staged, the selected data and content are managed by your Staging environment. Also, when an application or content group is selected, all contained entities (e.g., application folders) are staged as well. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
 
 ### Page Versioning
 

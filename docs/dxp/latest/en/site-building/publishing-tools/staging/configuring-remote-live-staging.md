@@ -1,6 +1,6 @@
 # Configuring Remote Live Staging
 
-With *Remote Live Staging*, your Staging and Live environments are hosted on separate Liferay servers. When enabled, the Site or Asset Library used to configure Staging becomes your Staging environment, while the remote server becomes your Live environment.
+With *Remote Live Staging*, your Staging and Live environments are hosted on separate Liferay servers. When enabled, the Site or Asset Library used to configure Staging becomes your Staging environment, and the remote server becomes your Live environment.
 
 Before enabling Remote Live Staging, you must configure the Liferay servers you want to use for your Staging and Live environments. You must also create a new blank Site or Asset Library on your Remote server and use its ID during Staging configuration.
 
@@ -80,7 +80,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
    For Sites, go to *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) &rarr; *Publishing* &rarr; *Staging*.
 
-   For Asset Libraries, go to *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)) &rarr; *Applications tab* &rarr; *Asset Libraries*. Then, open the desired Asset Library, and click on *Staging* under Publishing.
+   For Asset Libraries, go to *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)) &rarr; *Applications tab* &rarr; *Asset Libraries*. Then open the desired Asset Library and click on *Staging* under Publishing.
 
 1. Select *Remote Live*. This reveals additional configuration fields.
 
@@ -104,7 +104,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
 1. Determine whether to use a secure network connection (i.e., HTTPS) for publishing Pages from Staging to Live.
 
-1. Determine whether to manually define the remote URL used for the Site or Asset Library.
+1. Determine whether to define manually the remote URL used for the Site or Asset Library.
 
 1. (For Sites only) Select whether you want *Page Versioning* enabled on Public and/or Private Pages.
 
@@ -122,7 +122,7 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
        When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
    ```
 
-1. Click on *Save* to initiate the Staging process. The duration of this process depends on the size of your Site or Asset Library.
+1. Click *Save* to initiate the Staging process. The duration of this process depends on the size of your Site or Asset Library.
 
    ```note::
       If your attempt to enable Remote Live Staging fails, please verify that you've properly prepared your servers.
@@ -166,11 +166,11 @@ Follow these steps to disable Remote Live Staging:
 
 1. Open the Staging application in your Site or Asset Library.
 
-1. Click the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) located in the Application bar, and select *Staging Configuration*.
+1. Click the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) located in the Application bar and select *Staging Configuration*.
 
    ![Click the Actions button in the Application bar, and select Staging Configuration](./configuring-remote-live-staging/images/05.png)
 
-1. Select *None* for your Staging configuration, and click *Save*.
+1. Select *None* for your Staging configuration and click *Save*.
 
 ## Additional Information
 

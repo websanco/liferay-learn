@@ -19,7 +19,7 @@ During Validation, everything is checked to determine whether it's possible to s
 
 If anything is not verified during the publish process, the transactional database reverts the Site or Asset Library back to its original state, discarding the current publish process. This is necessary to safeguard against publishing incomplete information.
 
-However, if the Document Library's file system is not database-stored (e.g., [DBStore](../../../system-administration/file-storage/other-file-store-types/dbstore.md)), it's not transactional and isn't reverted if a staging failure occurs. This could cause a discrepancy between a file and its reference in the database. To preserve data integrity, ensure that regular backups of both the database and file system are maintained before staging the document library.
+If, however, the Document Library's file system is not database-stored (e.g., [DBStore](../../../system-administration/file-storage/other-file-store-types/dbstore.md)), it's not transactional and isn't reverted if a staging failure occurs. This could cause a discrepancy between a file and its reference in the database. To preserve data integrity, ensure that regular backups of both the database and file system are maintained before staging the document library.
 
 ### Import Phase
 
