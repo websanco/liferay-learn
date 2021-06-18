@@ -1,6 +1,6 @@
 # DDM Form Annotations
 
-The configuration UI that is automatically generated after [creating a configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) may be too simplistic for some configurations. Use the Dynamic Data Mapping (DDM) form annotations to customize the layout of your UI.
+The auto-generated [configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) UI may be too simplistic for some configurations. You can use the Dynamic Data Mapping (DDM) form annotations to customize your layout's UI.
 
 ## See a Sample Configuration UI
 
@@ -61,7 +61,7 @@ After annotating each form field, define the layout of the form right above the 
    :lines: 10-34
 ```
 
-Use the `DDMFormLayoutRow` annotation and the `DDMFormLayoutColumn` to lay out your form fields in the rows and columns you need for your UI.
+Use the `DDMFormLayoutRow` annotation and the `DDMFormLayoutColumn` to arrange your form fields in the rows and columns you need for your UI.
 
 ## Write the Form Declaration
 
