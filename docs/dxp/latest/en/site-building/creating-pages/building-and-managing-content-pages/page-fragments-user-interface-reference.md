@@ -98,10 +98,10 @@ In this table you can see a description of the Dropdown Fragment General options
 | *Display on Hover* | When you check this option, the Dropdown Fragment opens when the user hovers the mouse over. |
 | *Keep Panel Open in Edit Mode* | Check this option to keep the drop-zone open while you edit the Dropdown Fragment content. |
 
-![You can define the drop zone size in the Dropdown panel using the Panel Type options.](./page-fragments-user-interface-reference/images/18.gif)
+![You can define the drop zone size in the Dropdown panel using the Panel Type options.](./page-fragments-user-interface-reference/images/18.png)
 
 ```tip::
-   Place the Dropdown Fragment inside a Grid Fragment to observer the differences between the *Full Width* and *Mega Menu* panel types.
+   Place the Dropdown Fragment inside a Grid Fragment to observe the differences between the *Full Width* and *Mega Menu* panel types.
 ```
 
 ### External Video
