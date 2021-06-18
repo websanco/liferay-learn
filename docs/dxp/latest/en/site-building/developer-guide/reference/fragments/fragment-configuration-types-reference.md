@@ -316,7 +316,7 @@ This is useful when you want a Fragment that has an embedded video by default. T
 Using the `collectionSelector` configuration type, you can develop a Fragment that includes a [Collection](../../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) or Collection Provider. You can use the `collectionSelector` with both Manual and Dynamic Collections.
 
 ```note::
-   Collection Providers are a new feature in Liferay DXP 7.3 that allows developers to create specific collections with more advanced criteria. To learn more, read the information about `Creating an Information List Provider <https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider>`_ in the `Info Framework <https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework>`_ developer documentation..
+   Collection Providers allow developers to create specific collections with more advanced criteria. To learn more, read the information about `Creating an Information List Provider <https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider>`_ in the `Info Framework <https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework>`_ developer documentation..
 ```
 
 The following JSON configuration shows how to use the `collectionSelector`:
@@ -339,7 +339,7 @@ The following JSON configuration shows how to use the `collectionSelector`:
 
 You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
 
-To reference this Collection in the HMTL, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
+To reference this Collection in the HTML, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
 
 ```html
 <div class="fragment_310">
