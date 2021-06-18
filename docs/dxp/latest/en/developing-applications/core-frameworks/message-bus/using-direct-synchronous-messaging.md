@@ -1,6 +1,6 @@
 # Using Direct Synchronous Messaging
 
-Direct synchronous messaging is the easiest way to block processing until all listeners receive a message. You call the `SynchronousMessageSender`'s `send(String, Message)` method, passing in a destination name and message instance. The `SynchronousMessageSender` uses the current thread to process message reception directly in each of the destination's registered message listeners. When listener processing completes, execution continues in the class that called the `send(String, Message)` method. The following example demonstrates using direct synchronous messaging.
+Direct synchronous messaging is the easiest way to block processing until all listeners receive a message. You call the `SynchronousMessageSender`'s `send(String, Message)` method and pass in a destination name and message instance. The `SynchronousMessageSender` uses the current thread to process message reception directly in each of the destination's registered message listeners. When listener processing completes, execution continues in the class that called the `send(String, Message)` method. This example demonstrates using direct synchronous messaging.
 
 ## Send a Direct Synchronous Message
 
@@ -81,7 +81,7 @@ Example Classes:
 Here's the event flow:
 
 1. When a user executes the `x6n5:sendMessage` Gogo shell command, `X6N5BakerOSGiCommands` sends the command arguments in a message payload to the `acme/x6n5_able` destination.
-1. The current thread processes message reception for each listener (i.e., `X6N5CharlieMessageListener` and `X6N5DogMessageListener`) in succession. The listeners log the message payload and set a response on the message. The response from the latest listener processed supercedes previous responses.
+1. The current thread processes message reception for each listener (i.e., `X6N5CharlieMessageListener` and `X6N5DogMessageListener`) in succession. The listeners log the message payload and set a response on the message. The response from the latest listener processed supersedes previous responses.
 1. Processing returns to `X6N5BakerOSGiCommands`, where it logs the message response.
 
 Now you can examine each class, starting with the destination configurator 
@@ -103,7 +103,7 @@ When `X6N5AbleMessagingConfigurator` deactivates, its `_deactivate()` method unr
 
 ## Examine the Sender
 
-The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class below provides an OSGi Command that sends messages to the destination.
+The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class provides an OSGi Command that sends messages to the destination:
 
 ```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-baker-impl/src/main/java/com/acme/x6n5/baker/internal/osgi/commands/X6N5BakerOSGiCommands.java
    :language: java
