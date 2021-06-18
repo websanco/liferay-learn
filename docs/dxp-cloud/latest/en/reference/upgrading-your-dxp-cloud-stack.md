@@ -132,7 +132,7 @@ Verify that the following properties are set up correctly for your project's int
     "LCP_CI_SCM_PROVIDER": "github",
     "LCP_CI_SCM_REPOSITORY_OWNER": "OWNER_NAME",
     "LCP_CI_SCM_REPOSITORY_NAME": "PROJECT_NAME",
-    "LCP_CI_SCM_TOKEN": "AUTH_TOKEN",
+    "LCP_CI_SCM_TOKEN": "AUTH_TOKEN"
 }
 ```
 
@@ -158,15 +158,15 @@ If you are defining your own Jenkinsfile within your `ci` service directory to o
 ```json
 {
     "LCP_CI_USE_DEFAULT_JENKINSFILE": "false",
-    "LCP_CI_SCM_JENKINSFILE_PATH": "ci/Jenkinsfile",
+    "LCP_CI_SCM_JENKINSFILE_PATH": "ci/Jenkinsfile"
 }
 ```
 
 ## Next Steps
 
-After your local repository has changed, deploy the `ci` service to the `infra` environment. Deploying to the `infra` environment before any others ensures that the changes to the `ci` service are deployed first, which will allow further changes to deploy correctly.
+After your local repository has changed, deploy the `ci` service to the `infra` environment. Deploying to the `infra` environment before any others ensures that the changes to the `ci` service are deployed first, which allows further changes to deploy correctly.
 
-The quickest way to deploy only the `ci` service is to [use the CLI tool](../build-and-deploy/deploying-changes-via-the-cli-tool.md). Navigate to the `ci/` folder of your project's repository and run the `lcp deploy` command:
+The quickest way to deploy only the `ci` service is to [use the CLI tool](../build-and-deploy/deploying-changes-via-the-cli-tool.md). Navigate to your project repository's `ci/` folder and run the `lcp deploy` command:
 
 ```bash
     lcp deploy --project=<project-name> --environment=infra
