@@ -7,6 +7,7 @@
    :maxdepth: 3
 
    getting_started
+   connecting_data_sources
    touchpoints
    people
    optimization
