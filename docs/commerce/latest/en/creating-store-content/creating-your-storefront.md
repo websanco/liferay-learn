@@ -13,7 +13,7 @@ The following types of pages may be created:
 | [Cart](./commerce-storefront-pages/cart.md) | Displays all items in the shopping cart | _Cart_, _Cart Summary_, _Mini Cart_ |
 | [Checkout](./commerce-storefront-pages/checkout.md) | Displays a summary of all selected goods for purchase | _Checkout_ |
 | [Compare](./commerce-storefront-pages/compare.md) | Displays a side by side comparison of the different selected products | _Cart_ |
-| [List](./commerce-storefront-pages/list.md) | Displays the customer's Wish Lists | _Wish Lists_ and _Wish List Contents_ |
+| [Lists](./commerce-storefront-pages/lists.md) | Displays the customer's Wish Lists | _Wish Lists_ and _Wish List Contents_ |
 | [Pending Orders](./commerce-storefront-pages/pending-orders.md) | Displays a list of all pending orders | _Open Carts_ |
 | [Placed Orders](./commerce-storefront-pages/placed-orders.md) | Displays a list of all orders in all statuses | _Orders_ |
 | [Product Details](./commerce-storefront-pages/product-details.md) | Displays information about the product and related products | _Product Details_ and _Product Publisher_ |

@@ -9,7 +9,7 @@ Commerce Storefront Pages
    commerce-storefront-pages/cart.md
    commerce-storefront-pages/checkout.md
    commerce-storefront-pages/compare.md
-   commerce-storefront-pages/list.md
+   commerce-storefront-pages/lists.md
    commerce-storefront-pages/pending-orders.md
    commerce-storefront-pages/placed-orders.md
    commerce-storefront-pages/product-details.md
