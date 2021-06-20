@@ -1,4 +1,4 @@
-# [アカウント]
+# アカウント
 
 [Salesforceデータソース](../individuals/adding-a-salesforce-data-source.md)をお持ちの場合、Analytics CloudはSalesforceのアカウントデータをインポートして分析することができます。 Analytics Cloud は、Salesforce のアカウントデータと他のソースからのデータを組み合わせることで、アカウントとその中にいる人の全体像を提示します。
 
