@@ -10,6 +10,7 @@
    touchpoints/assets.rst
 
 -  :doc:`/touchpoints/touchpoints`
+-  :doc:`/touchpoints/sites-dashboard`
 
 ページ
 -----
