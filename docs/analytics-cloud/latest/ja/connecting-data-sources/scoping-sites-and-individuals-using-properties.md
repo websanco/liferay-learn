@@ -12,11 +12,11 @@
 
 新しいプロパティを作成するには、Analytics Cloud Workspaceに移動します。 次に、 *設定* -&gt; *プロパティ*に移動し、右上の *新規プロパティ* をクリックします。
 
-![新規プロパティを追加しました。](tracking-sites-and-individuals-using-properties/images/01.png)
+![新規プロパティを追加しました。](scoping-sites-and-individuals-using-properties/images/01.png)
 
 プロパティに名前を付けて、 *をクリックして*を保存します。 次に、先ほど作成したプロパティの設定画面が表示されます。 当初、プロパティに関連するサイトはありません。 次にこのプロパティにサイトを追加する方法をご紹介します。
 
-![新しいプロパティができました。](tracking-sites-and-individuals-using-properties/images/02.png)
+![新しいプロパティができました。](scoping-sites-and-individuals-using-properties/images/02.png)
 
 ## サイトをプロパティに同期する
 
@@ -30,11 +30,11 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 
 2.  Analytics Cloud ワークスペースで、 *Synced Sites*をクリックします。 Analytics Cloudで作成した利用可能なプロパティのリストが表示されます。 追跡したいサイトのために、ここに新しいプロパティを作成します。
 
-    ![サイトを追跡するための新しいプロパティを作成します。](tracking-sites-and-individuals-using-properties/images/03.png)
+    ![サイトを追跡するための新しいプロパティを作成します。](scoping-sites-and-individuals-using-properties/images/03.png)
 
 3.  作成したプロパティを選択します。 Liferay DXPインスタンス上のサイトのリストが表示されます。 このプロパティに同期するサイトを選択し、 *保存*をクリックします。 選択したプロパティを使用して、サイトがAnalytics Cloudに同期されるようになりました。
 
-    ![プロパティと同期するサイトの選択](tracking-sites-and-individuals-using-properties/images/04.png)
+    ![プロパティと同期するサイトの選択](scoping-sites-and-individuals-using-properties/images/04.png)
 
     ``` important::
        You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
@@ -46,7 +46,7 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 
 1.  Analytics Cloud Workplaceの設定で *Select Contacts*をクリックします。
 
-    ![Analytics Cloudで連絡先として、すべてのユーザーを同期するか、選択したグループを同期するかを選択できます。](tracking-sites-and-individuals-using-properties/images/05.png)
+    ![Analytics Cloudで連絡先として、すべてのユーザーを同期するか、選択したグループを同期するかを選択できます。](scoping-sites-and-individuals-using-properties/images/05.png)
 
     DXP内のすべてのユーザーを同期することも、ユーザーグループや組織のみを同期することもできます。
 
@@ -70,13 +70,13 @@ Liferay DXPからコンタクトデータを同期する についての詳細�
 
 追加されたユーザーはプロパティにアクセスできるようになりました。
 
-![プロパティにユーザーを追加します。](tracking-sites-and-individuals-using-properties/images/06.png)
+![プロパティにユーザーを追加します。](scoping-sites-and-individuals-using-properties/images/06.png)
 
 ## 異なるプロパティ間の移動
 
 Analytics Cloud ワークスペースで異なるプロパティを交互に表示するには、ナビゲーション バーの左上隅にあるプロパティ名をクリックします。 閲覧許可を得ているプロパティの一覧がメニューに表示されます。 削除されたプロパティをクリックして切り替えます。
 
-![プロパティごとに表示を変える。](tracking-sites-and-individuals-using-properties/images/07.png)
+![プロパティごとに表示を変える。](scoping-sites-and-individuals-using-properties/images/07.png)
 
 プロパティを見るときに **すべての** アナリティクス データはこのプロパティにスコープされます。 たとえば、
 

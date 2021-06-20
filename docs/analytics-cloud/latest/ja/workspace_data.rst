@@ -1,5 +1,5 @@
-Workspace Data
-==============
+ワークスペース データ
+=================
 
 .. toctree::
    :maxdepth: 1

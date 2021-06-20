@@ -1,4 +1,4 @@
-# Individuals Dashboard
+# 個人ダッシュボード
 
 Individuals dashboardでは、訪問者やサイトの利用状況に関する幅広い分析データを提供しています。
 
