@@ -1,8 +1,8 @@
 # Creating a Catalog Page
 
-The [Catalog](./commerce-storefront-pages/catalog.md) page is the primary entry point for users to browse products that are being offered in a store. It includes the following widgets: _Search Bar_, _Options Facets_, _Specification Facet_, _Category Facet_ and _Search Results_. To learn more about Commerce widgets see the [Widget Reference](./liferay-commerce-widgets/widget-reference.md).
+The [Catalog](./commerce-storefront-pages/catalog.md) page is the primary way for customers to browse, search, and select Channel Products. The following widgets are recommended for the Catalog page: _Search Bar_, _Options Facets_, _Specification Facet_, _Category Facet_, _Sort_, and _Search Results_. To learn more about these and other Commerce widgets, see [Widget Reference](./liferay-commerce-widgets/widget-reference.md).
 
-This article documents an example of how to build a Catalog page without the use of an [accelerator](../starting-a-store/accelerators.md).
+This article documents an example of how to build a Catalog page without using an [accelerator](../starting-a-store/accelerators.md).
 
 ## Prerequisites
 
@@ -31,18 +31,19 @@ After creating and configuring the page with the widgets, a basic Catalog page m
 
 The _Search Bar_ widget must be configured to display data from the Global site scope. This is because all products are stored at the global level and not the site level.
 
-1. Click the _3-dot icon_ then _Configuration_ on the _Search Bar_ widget.
+1. Click on the _Actions_ button (![Actions Button](../images/icon-actions.png)) for the Search Bar widget, and select _Configuration_.
 
-    ![Search Bar Configuration](./creating-a-catalog-page/images/03.png)
+    ![Click on the Actions button for the Search Bar widget, and select Configuration.](./creating-a-catalog-page/images/03.png)
 
-1. Select _Everything_ from the _Scope_ drop down menu.
+1. Set the widget's Scope to _Everything_.
 
-    ![Everything scope](./creating-a-catalog-page/images/04.png)
+   This is essential because Products are created in Catalogs at the global level and are not Site-scoped.
+
+    ![Set the widget's Scope to Everything.](./creating-a-catalog-page/images/04.png)
 
 1. Click _Save_.
-1. Close the _Configuration_ window.
 
-The _Search Bar_ widget is now configured to display the content from the entire instance.
+The _Search Bar_ widget is now configured to display all Channel content.
 
 ## Displaying the Full Catalog Without a Search (Optional)
 
