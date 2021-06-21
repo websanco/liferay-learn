@@ -6,7 +6,6 @@ Securing Liferay
 
    securing-liferay/securing-liferay.md
    securing-liferay/authentication-basics.md
-
    securing-liferay/configuring_sso.rst
    securing-liferay/multi_factor_authentication.rst
    securing-liferay/securing_web_services.rst

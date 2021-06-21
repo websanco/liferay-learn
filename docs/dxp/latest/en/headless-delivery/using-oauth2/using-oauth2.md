@@ -1,4 +1,4 @@
-# Introduction to Using OAuth 2.0
+# Using OAuth 2.0
 
 OAuth 2.0 is an industry-standard authorization protocol. Users can seamlessly share select credentials from your Liferay-based website with various clients. OAuth 2.0 works by authorizing password-less access to portions of user-owned resources (such as an email address, a user profile picture, or something else from your account) and other permissioned resources. OAuth 2.0's design encrypts all authorization transport through HTTPS, which prevents data passed between the systems from being intercepted.
 
@@ -14,7 +14,7 @@ OAuth 2.0 takes advantage of web standards wherever possible: transport is encry
 
 Here's how OAuth 2.0 works:
 
-![Figure 1: OAuth 2.0 takes advantage of web standards.](./introduction-to-using-oauth2/images/01.png)
+![OAuth 2.0 takes advantage of web standards.](./using-oauth2/images/01.png)
 
 1. A user accesses a third-party application that supports authorization via credentials from a Liferay-based website. In the application (web or mobile), the user requests authorization via OAuth, sending the browser or app to the Liferay-based website. When using _PKCE_ (explained below), the application also generates a code verifier and sends a code challenge that is created by applying a transformation to it.
 
