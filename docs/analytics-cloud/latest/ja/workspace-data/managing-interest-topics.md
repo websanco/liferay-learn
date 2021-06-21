@@ -33,4 +33,4 @@ Analytics Cloudの [Recommendation API](../optimization/content-recommendation-a
 
 ブロックリストからキーワードを削除するには、そのキーワードのゴミ箱アイコンをクリックします（![Delete](../images/icon-delete.png)）。 複数のキーワードを一度に削除するには、それぞれのチェックボックスを選択し、表の上部に表示されるゴミ箱のアイコンをクリックします。 表の上部にあるチェックボックスですべてのキーワードを選択することができます。
 
-![キーワード管理画面です。](managing-interest-topics/images/01.png)
+![キーワード管理画面です。](./definitions/managing-interest-topics/images/01.png)

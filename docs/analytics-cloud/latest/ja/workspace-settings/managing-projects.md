@@ -10,7 +10,7 @@
 
 -   [データソースの管理](../connecting-data-sources/managing-data-sources.md)
 -   [Liferay DXPサイトとAnalytics Cloudの接続](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
--   [Salesforceの接続](../connecting-data-sources/dding-a-salesforce-data-source.md)
+-   [Salesforceの接続](../connecting-data-sources/adding-a-salesforce-data-source.md)
 -   [CSVデータの読み込み](../connecting-data-sources/adding-a-csv-data-source.md)
 -   [プロパティを使ったサイトの追跡](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md)
 
