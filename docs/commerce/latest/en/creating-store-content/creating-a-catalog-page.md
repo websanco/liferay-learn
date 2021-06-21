@@ -29,15 +29,13 @@ After creating and configuring the page with the widgets, a basic Catalog page m
 
 ## Configure the _Search Bar_ Widget
 
-The _Search Bar_ widget must be configured to display data from the Global site scope. This is because all products are stored at the global level and not the site level.
+The _Search Bar_ widget must be configured to display data from the Global site scope. This is because all Products are stored at the global level and not the site level.
 
 1. Click on the _Actions_ button (![Actions Button](../images/icon-actions.png)) for the Search Bar widget, and select _Configuration_.
 
     ![Click on the Actions button for the Search Bar widget, and select Configuration.](./creating-a-catalog-page/images/03.png)
 
 1. Set the widget's Scope to _Everything_.
-
-   This is essential because Products are created in Catalogs at the global level and are not Site-scoped.
 
     ![Set the widget's Scope to Everything.](./creating-a-catalog-page/images/04.png)
 
@@ -47,19 +45,18 @@ The _Search Bar_ widget is now configured to display all Channel content.
 
 ## Displaying the Full Catalog Without a Search (Optional)
 
-Liferay Commerce allows store managers to display all the products in a catalog in the _Search Results_ widget without having buyers first enter a search query. This is done by configuring the _Search Options_ widget.
+Using the _Search Options_ widget, you can configure the _Search Results_ widget to display all Channel Products without requiring a search query. This allows customers to easily browse and filter all Products visible to the Channel.
 
 1. Click the _Configure additional search options in this page_ in the _Search Options_ widget.
+
 1. Check the checkbox for _Allow Empty Searches_.
+
 1. Click _Save_.
+
 1. Close the _Configuration_ window.
 
-Once this option has been enabled, all the products in this catalog are displayed in the _Search Results_ widget.
+Once this option has been enabled, all Channel Products are displayed in the _Search Results_ widget.
 
-![Empty Search](./creating-a-catalog-page/images/01.png)
+![When enabled, all Channel Products are displayed in the Search Results widget.](./creating-a-catalog-page/images/01.png)
 
-## Configure Product Channel Filters (Optional)
-
-If there is more than one store site that is housed on the Liferay Commerce instance, the entire catalog becomes searchable on every store site.
-
-To scope product to specific sites, see [Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md).
+By default, Products are visible across all Channels. However, visibility can be limited to specific Channels. See [Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md) to learn more.
