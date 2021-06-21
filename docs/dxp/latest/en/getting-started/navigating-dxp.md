@@ -2,6 +2,56 @@
 
 Liferay DXP's out-of-the-box navigation is organized into three major areas: the _Personal Menu_, _Global Menu_, and _Site Menu_.
 
+## Site Menu
+
+The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed. The Site Menu may be hidden until you expand it by clicking the icon ( ![Site Menu icon](../images/icon-menu.png) ) at the upper-left corner of the screen.
+
+![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
+
+```note::
+   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
+```
+
+The following common site building and management activities can be done in the _Site Menu_:
+
+* [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
+* [Creating Content](../content_authoring_and_management.html)
+* [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
+* [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
+* And more...
+
+## Applications Bar
+
+The _Application Bar_ appears across the different pages and applications in the [Site Menu](#site-menu). The Application Bar shows an Actions (![Actions](../images/icon-actions.png)) menu with different options, depending on the application that is open at the moment.
+
+![The actions available in the Application Bar depend on the application open at the moment.](./navigating-dxp/images/07.png)
+
+When you open a Page in view mode, the available tools in the Applications Bar change depending on the Page type.
+
+![Content Pages and Widget Pages show a different set of tools in the Application Bar.](./navigating-dxp/images/08.png)
+
+For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are:
+
+- Edit (![Edit](../images/icon-edit.png))
+- Configure Page (![Configure Page](../images/icon-settings.png))
+- Simulation (![Simulation](../images/icon-simulation.png))
+- Content Performance (![Performance](../images/icon-analytics.png))
+- A/B Test (![A/B Test](../images/icon-ab-testing.png))
+- Page Audit (![Page Audit](../images/icon-information.png))
+
+For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are:
+
+- Configure Page (![Configure Page](../images/icon-settings.png))
+- Toggle Controls (![Toggle Controls](../images/icon-preview.png))
+- Add (![Add](../images/icon-plus.png))
+- Simulation (![Simulation](../images/icon-simulation.png))
+- Content Performance (![Performance](../images/icon-analytics.png))
+- Page Audit (![Page Audit](../images/icon-information.png))
+
+```note::
+   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-panel/about-the-content-performance-panel.md>`_ is available for Content Pages starting with Liferay DXP 7.3, and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
+```
+
 ## Personal Menu
 
 The Personal Menu is the hub for information and activities for a User that is logged in.
@@ -68,24 +118,6 @@ The following common administrative activities can be done in the Control Panel:
 * Add new Custom Fields to applications on the site
 * And more...
 
-## Site Menu
-
-The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed. The Site Menu may be hidden until you expand it by clicking the icon ( ![Site Menu icon](../images/icon-menu.png) ) at the upper-left corner of the screen.
-
-![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
-
-```note::
-   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
-```
-
-The following common site building and management activities can be done in the _Site Menu_:
-
-* [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
-* [Creating Content](../content_authoring_and_management.html)
-* [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
-* [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
-* And more...
-
 ## DXP 7.1 and 7.2
 
 In Liferay DXP versions prior to 7.3, all of the contents of the Global Menu are instead contained within the Control Panel. The Control Panel itself is located above the Site Menu on the left side of the screen in these versions.
@@ -95,3 +127,8 @@ In Liferay DXP versions prior to 7.3, all of the contents of the Global Menu are
 ## What's Next
 
 Continue our Getting Started walkthrough and learn about [Creating Your First Site](./creating-your-first-site.md).
+
+## Related Information
+
+- [Creating your first Site](./creating-your-first-site.md)
+- [Changing your Site's Appearance](./changing-your-sites-appearance.md)
