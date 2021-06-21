@@ -10,11 +10,12 @@ Individuals dashboardでは、訪問者やサイトの利用状況に関する�
 
 Individuals ダッシュボードには、以下のパネルがあります。
 
--   [Current Totals](#current-totals)
--   [Enriched Profiles](#enriched-profiles)
--   [Active Individuals](#active-individuals)
--   [Interests](#interests)
--   [Breakdown](#breakdown)
+- [個人ダッシュボード](#個人ダッシュボード)
+  - [Current Totals](#current-totals)
+  - [Enriched Profiles](#enriched-profiles)
+  - [Active Individuals](#active-individuals)
+  - [Interests](#interests)
+  - [Breakdown](#breakdown)
 
 ## Current Totals
 
@@ -34,7 +35,7 @@ Enriched Profiles］パネルには、過去30日以内にエンリッチされ�
 
 例えば、DXPからコンタクトデータを
 
-同期させた場合や、コンタクトデータを追加した場合（例：Salesforceのコンタクトデータを[追加した場合](../individuals/adding-a-salesforce-data-source.md)）など、属性がその個人に関連付けられた時に、その個人はエンリッチされたとみなされます。</p> 
+同期させた場合や、コンタクトデータを追加した場合（例：Salesforceのコンタクトデータを[追加した場合](../../connecting-data-sources/adding-a-salesforce-data-source.md)）など、属性がその個人に関連付けられた時に、その個人はエンリッチされたとみなされます。</p> 
 
 
 

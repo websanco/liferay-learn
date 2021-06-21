@@ -48,4 +48,4 @@ Analytics Cloudのプロジェクトには、次のような役割がありま�
 
 ## 追加情報
 
--   [Analytics Cloud ワークスペースへのアクセス](../getting-started/quick-tour/accessing-your-workspace.md)
+-   [Analytics Cloud ワークスペースへのアクセス](../getting-started/accessing-your-workspace.md)

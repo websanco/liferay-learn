@@ -8,7 +8,7 @@
 
 ## DXPサイトをAnalytics Cloudに接続する
 
-新しいワークスペースの最初のタスクは、ワークスペースをデータ ソースに接続することです。 Analytics Cloudは、Liferay DXP Sitesをキーデータソースとして利用するために構築されています。 詳細については、 [Liferay DXPサイトをAnalytics Cloudに接続する](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) を参照してください。 また、 [CSVファイル](../../people/individuals/adding-a-csv-data-source.md) や [のSalesforce](../../people/individuals/adding-a-salesforce-data-source.md) からデータを持ち込んで、既存のユーザーデータを補完することもできます。
+新しいワークスペースの最初のタスクは、ワークスペースをデータ ソースに接続することです。 Analytics Cloudは、Liferay DXP Sitesをキーデータソースとして利用するために構築されています。 詳細については、 [Liferay DXPサイトをAnalytics Cloudに接続する](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) を参照してください。 また、 [CSVファイル](../connecting-data-sources/adding-a-csv-data-source.md) や [のSalesforce](../connecting-data-sources/adding-a-salesforce-data-source.md) からデータを持ち込んで、既存のユーザーデータを補完することもできます。
 
 ## 自分のワークスペースにユーザーを招待する
 

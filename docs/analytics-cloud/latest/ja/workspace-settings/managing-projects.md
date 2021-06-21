@@ -8,11 +8,11 @@
 
 データソースの接続と管理については、こちらをご覧ください。
 
--   [データソースの管理](../getting-started/connecting-data-sources/managing-data-sources.md)
--   [Liferay DXPサイトとAnalytics Cloudの接続](../getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
--   [Salesforceの接続](../people/individuals/adding-a-salesforce-data-source.md)
--   [CSVデータの読み込み](../people/individuals/adding-a-csv-data-source.md)
--   [プロパティを使ったサイトの追跡](../getting-started/connecting-data-sources/tracking-sites-and-individuals-using-properties.md)
+-   [データソースの管理](../connecting-data-sources/managing-data-sources.md)
+-   [Liferay DXPサイトとAnalytics Cloudの接続](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
+-   [Salesforceの接続](../connecting-data-sources/dding-a-salesforce-data-source.md)
+-   [CSVデータの読み込み](../connecting-data-sources/adding-a-csv-data-source.md)
+-   [プロパティを使ったサイトの追跡](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md)
 
 ## プロジェクトユーザーの管理
 

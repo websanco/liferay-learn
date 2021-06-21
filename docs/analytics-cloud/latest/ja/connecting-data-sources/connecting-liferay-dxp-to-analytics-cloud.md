@@ -36,4 +36,4 @@ Analytics Cloudはアクセストークンを使用してLiferay DXPと接続し
 
 ## 次のステップ
 
--   [プロパティでサイトや個人を追跡](./tracking-sites-and-individuals-using-properties.md)
+-   [プロパティでサイトや個人を追跡](./scoping-sites-and-individuals-using-properties.md)

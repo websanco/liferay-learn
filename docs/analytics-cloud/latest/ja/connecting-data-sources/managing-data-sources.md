@@ -21,8 +21,8 @@ Liferay Analytics Cloudには2種類のデータが必要です。 1つ目は、
 チームメイトがすでにデータソースを追加していない限り、リストは空です。 新しいデータソースを追加するには、以下のチュートリアルを参照してください。
 
 -   [Liferay DXPデータソースの追加](./connecting-liferay-dxp-to-analytics-cloud.md)
--   [CSVデータソースを追加する](../../people/individuals/adding-a-csv-data-source.md)
--   [Salesforce データソースの追加](../../people/individuals/adding-a-salesforce-data-source.md)
+-   [CSVデータソースを追加する](./adding-a-csv-data-source.md)
+-   [Salesforce データソースの追加](./adding-a-salesforce-data-source.md)
 
 データ ソースを作成したら、時々修正する必要があるかもしれません。
 
