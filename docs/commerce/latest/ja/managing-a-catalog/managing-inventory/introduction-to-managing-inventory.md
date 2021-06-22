@@ -10,7 +10,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 倉庫の管理方法の詳細については、[Warehouse Reference Guide](./warehouse-reference-guide.md)および記事[「Adding a New Warehouse」](./adding-a-new-warehouse.md)を参照してください。
 
-ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../creating-and-managing-products/channels/introduction-to-channels.md)を参照してください。
+ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../../starting-a-store/channels/introduction-to-channels.md)を参照してください。
 
 ## 入荷見積り
 
@@ -31,6 +31,6 @@ Liferay Commerceでは、在庫管理は商品SKUごとに行われます。 詳
 ## 追加情報
 
   - [Creating a New Shipment](../../orders-and-fulfillment/shipments/creating-a-shipment.md)
-  - [在庫管理リファレンスガイド](./inventory-administration-reference-guide.md)
+  - [在庫管理リファレンスガイド](./inventory-management-reference-guide.md)
   - [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
   - [Order Life Cycle](../../orders-and-fulfillment/orders/order-life-cycle.md)

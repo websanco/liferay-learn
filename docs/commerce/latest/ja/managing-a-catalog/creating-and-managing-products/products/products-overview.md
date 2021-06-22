@@ -52,7 +52,7 @@ SKUを追加するには、「 [商品へのSKUの追加](./adding-skus-to-your-
 
 ## 可視性
 
-カタログ内の商品を表示するには、カタログをチャネルに関連付ける必要があります。 カタログは、複数の [チャネルに関連付けることができます](../channels/introduction-to-channels.md)。 さらに、ユーザーは特定の [アカウントグループ](../../../account-management/creating-a-new-account-group.md)商品を宣伝できます。
+カタログ内の商品を表示するには、カタログをチャネルに関連付ける必要があります。 カタログは、複数の [チャネルに関連付けることができます](../../../starting-a-store/channels/introduction-to-channels.md)。 さらに、ユーザーは特定の [アカウントグループ](../../../account-management/creating-a-new-account-group.md)商品を宣伝できます。
 
 ![商品の可視性の管理](./products-overview/images/08.png)
 

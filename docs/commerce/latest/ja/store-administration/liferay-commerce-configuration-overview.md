@@ -8,7 +8,7 @@ Liferay Commerceの設定は、Liferay*商品メニュー*のいくつかの場�
 
 ![グローバルCommerce設定](./liferay-commerce-configuration-overview/images/01.png)
 
-  - [チャネル](../managing-a-catalog/creating-and-managing-products/channels/managing-channels.md)
+  - [チャネル](../starting-a-store/channels/managing-channels.md)
   - [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
   - [注文](../orders-and-fulfillment/orders/orders-menu-reference-guide.md)
 

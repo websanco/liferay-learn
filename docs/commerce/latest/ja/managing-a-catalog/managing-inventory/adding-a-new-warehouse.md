@@ -40,4 +40,4 @@
 
   - [リージョンの追加](../../store-administration/adding-regions.md)
   - [請求先または配送先として国を無効にする](../../store-administration/deactivating-a-country-for-billing-or-shipping.md)
-  - [Introduction to Channels](../creating-and-managing-products/channels/introduction-to-channels.md)
+  - [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)

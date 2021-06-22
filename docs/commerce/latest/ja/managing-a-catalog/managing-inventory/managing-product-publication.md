@@ -55,7 +55,7 @@ Liferay Commerceは、ストアマネージャーが商品を**期限切れに�
 ## 追加情報
 
   - [商品タイプについて](../creating-and-managing-products/product-types/introduction-to-product-types.md)
-  - [チャネルを使用した商品の可視性の構成](../creating-and-managing-products/channels/configuring-product-visibility-using-channels.md)
+  - [チャネルを使用した商品の可視性の構成](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
   - [シンプル商品を作成する](../creating-and-managing-products/product-types/creating-a-simple-product.md)
   - [Creating a Grouped Product](../creating-and-managing-products/product-types/creating-a-grouped-product.md)
   - [仮想製品の作成](../creating-and-managing-products/product-types/creating-a-virtual-product.md)

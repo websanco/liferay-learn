@@ -26,7 +26,7 @@ Liferay Commerceには、さまざまな [商品タイプ](../managing-a-catalog
 
 ![商品カタログ](./introduction-to-liferay-commerce/images/02.png)
 
-[チャネル](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md) は、カタログおよび商品を、商品が販売される任意の場所に接続します。LiferayCommerceベースのストアフロント、サードパーティのマーケットプレイス、またはバックオフィスの電話販売です。
+[チャネル](./channels/introduction-to-channels.md) は、カタログおよび商品を、商品が販売される任意の場所に接続します。LiferayCommerceベースのストアフロント、サードパーティのマーケットプレイス、またはバックオフィスの電話販売です。
 
 ![商品に対して有効なチャネル](./introduction-to-liferay-commerce/images/03.png)
 

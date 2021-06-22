@@ -91,7 +91,7 @@ Liferay Commerceは、さまざまなイベントによってトリガーされ�
 
 ## カテゴリ表示ページ
 
-[カテゴリ表示ページ]タブには、ストアサイトで作成されたすべてのカテゴリ表示ページのリストが表示されます。 *カテゴリー表示ページ* 使用すると、ユーザーは、特定のカテゴリーでタグ付けされたすべての商品を表示する特定のDXPサイトページを置き換えることができます。 ユーザーは最初に [商品カテゴリ](../products/organizing-your-catalog-with-product-categories.md)を作成し、それらを目的の商品に関連付けてから、ページを作成する必要があります。
+[カテゴリ表示ページ]タブには、ストアサイトで作成されたすべてのカテゴリ表示ページのリストが表示されます。 *カテゴリー表示ページ* 使用すると、ユーザーは、特定のカテゴリーでタグ付けされたすべての商品を表示する特定のDXPサイトページを置き換えることができます。 ユーザーは最初に [商品カテゴリ](../../../store-administration/configuring-payment-methods/managing-payment-methods.md)を作成し、それらを目的の商品に関連付けてから、ページを作成する必要があります。
 
 DXPサイトページの作成の詳細については、 [ページの作成](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html)を参照してください。 タグとカテゴリの作成の詳細については、 [タグとカテゴリ](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/tags_and_categories.html)を参照してください。
 

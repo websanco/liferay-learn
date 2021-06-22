@@ -26,7 +26,7 @@ Liferay Commerceのグローバル設定には、ストアのタイムゾーン�
   - [Setting Locale Options](../store-administration/locale-options.md)
   - [Adding Regions](../store-administration/adding-regions.md)
   - [Setting up Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
-  - [Creating Channels](../managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels.md)
+  - [Creating Channels](./channels/introduction-to-channels.md)
 
 ### ストアサイトを作成する
 

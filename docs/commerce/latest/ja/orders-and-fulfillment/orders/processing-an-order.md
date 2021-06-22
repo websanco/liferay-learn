@@ -84,4 +84,4 @@ Liferay Commerceでの注文の処理は、注文の受け入れと注文の処�
   - [注文メニューリファレンスガイド](./orders-menu-reference-guide.md)
   - [サブスクリプションの管理](../subscriptions/managing-subscriptions.md)
   - [Introduction to Shipments](../shipments/introduction-to-shipments.md)
-  - [在庫管理リファレンスガイド](../../managing-a-catalog/managing-inventory/inventory-administration-reference-guide.md)
+  - [在庫管理リファレンスガイド](../../managing-a-catalog/managing-inventory/inventory-management-reference-guide.md)

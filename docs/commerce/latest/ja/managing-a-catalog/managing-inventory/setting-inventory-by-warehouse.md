@@ -53,4 +53,4 @@
 ## 追加情報
 
   - [Adding A New Warehouse](./adding-a-new-warehouse.md)
-  - [在庫管理リファレンスガイド](./inventory-administration-reference-guide.md)
+  - [在庫管理リファレンスガイド](./inventory-management-reference-guide.md)
