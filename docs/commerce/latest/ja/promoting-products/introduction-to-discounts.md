@@ -10,7 +10,7 @@
 <!-- end list -->
 
 ``` tip::
-   割引は*価格表*とは異なります。 価格設定の詳細については、 `商品の価格設定方法の概要 <../managing-a-catalog/managing-price/introduction-to-product-pricing-methods.md>`_ 、 `価格リストの作成 <../managing-a-catalog/managing-price/creating-a-price-list.md>`_ 、および `Adding Tiered Pricing <../managing-a-catalog/managing-price/adding-tiered-pricing.md>`_ を参照してください
+   割引は*価格表*とは異なります。 価格設定の詳細については、 `商品の価格設定方法の概要 <../managing-a-catalog/managing-prices/introduction-to-product-pricing-methods.md>`_ 、 `価格リストの作成 <../managing-a-catalog/managing-prices/creating-a-price-list.md>`_ 、および `Adding Tiered Pricing <../managing-a-catalog/managing-prices/adding-tiered-pricing.md>`_ を参照してください
 ```
 
 ## 割引タイプ

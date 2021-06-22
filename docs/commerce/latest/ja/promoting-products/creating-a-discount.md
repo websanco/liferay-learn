@@ -59,5 +59,5 @@
 
   - [割引について](./introduction-to-discounts.md)
   - [新規アカウントグループの作成](../account-management/creating-a-new-account-group.md)
-  - [価格表の作成](../managing-a-catalog/managing-price/creating-a-price-list.md)
-  - [階層型価格設定の追加](../managing-a-catalog/managing-price/adding-tiered-pricing.md)
+  - [価格表の作成](../managing-a-catalog/managing-prices/creating-a-price-list.md)
+  - [階層型価格設定の追加](../managing-a-catalog/managing-prices/adding-tiered-pricing.md)

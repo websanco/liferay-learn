@@ -66,7 +66,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 2.  *[Publish]*をクリックします。
 
-価格設定の詳細については、[Introduction to Product Pricing Methods](../../managing-price/introduction-to-product-pricing-methods.md)を参照してください。
+価格設定の詳細については、[Introduction to Product Pricing Methods](../../managing-prices/introduction-to-product-pricing-methods.md)を参照してください。
 
 商品の在庫を設定する方法については、[Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
@@ -90,7 +90,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 4.  *[Save]*をクリックします。 （[Promo Price]および[Cost]フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
 
-5.  *[Price List]*をクリックして、この商品を既存の[[Price Lists]](../../managing-price/adding-products-to-a-price-list.md)に適用します。
+5.  *[Price List]*をクリックして、この商品を既存の[[Price Lists]](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
 
 ## 商品の仕様を設定する
 

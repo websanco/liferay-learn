@@ -22,7 +22,7 @@ Liferay Commerceには、ストアフロントをセットアップするため�
 
 ## マルチチャネルカタログと商品情報管理
 
-Liferay Commerceには、さまざまな [商品タイプ](../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md) をサポートし、幅広い商品データを格納するカタログ管理システムが含まれています。 [商品オプション](../managing-a-catalog/creating-and-managing-products/products/customizing-your-product-with-product-options.md)、 [価格](../managing-a-catalog/managing-price/introduction-to-product-pricing-methods.md)、 [画像](../managing-a-catalog/creating-and-managing-products/products/product-images.md)、及び [仕様](../managing-a-catalog/creating-and-managing-products/products/specifications.md) いくつかの例です。 その後、商品は選択した流通チャネルですぐに利用できます。
+Liferay Commerceには、さまざまな [商品タイプ](../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md) をサポートし、幅広い商品データを格納するカタログ管理システムが含まれています。 [商品オプション](../managing-a-catalog/creating-and-managing-products/products/customizing-your-product-with-product-options.md)、 [価格](../managing-a-catalog/managing-prices/introduction-to-product-pricing-methods.md)、 [画像](../managing-a-catalog/creating-and-managing-products/products/product-images.md)、及び [仕様](../managing-a-catalog/creating-and-managing-products/products/specifications.md) いくつかの例です。 その後、商品は選択した流通チャネルですぐに利用できます。
 
 ![商品カタログ](./introduction-to-liferay-commerce/images/02.png)
 
@@ -34,7 +34,7 @@ Liferay Commerceには、さまざまな [商品タイプ](../managing-a-catalog
 
 ![商品詳細と関連商品](./introduction-to-liferay-commerce/images/04.png)
 
-[価格表](../managing-a-catalog/managing-price/creating-a-price-list.md) と [段階的価格設定](../managing-a-catalog/managing-price/adding-tiered-pricing.md) 使用することにより、商品の価格設定を柔軟に管理できます。これらはすべて、固有の顧客のニーズに合わせて調整できます。
+[価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md) と [段階的価格設定](../managing-a-catalog/managing-prices/adding-tiered-pricing.md) 使用することにより、商品の価格設定を柔軟に管理できます。これらはすべて、固有の顧客のニーズに合わせて調整できます。
 
 ## B2Bに焦点を当てたアカウント管理と購入ワークフロー
 

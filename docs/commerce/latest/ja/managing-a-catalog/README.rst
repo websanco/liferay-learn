@@ -10,13 +10,6 @@
 商品の作成と管理
 ------------------------------
 
-チャンネル
-~~~~~~~~
-
--  :doc:`/managing-a-catalog/creating-and-managing-products/channels/introduction-to-channels`
--  :doc:`/managing-a-catalog/creating-and-managing-products/channels/managing-channels`
--  :doc:`/managing-a-catalog/creating-and-managing-products/channels/configuring-product-visibility-using-channels`
-
 商品タイプ
 ~~~~~~~~~~~~~
 
@@ -46,7 +39,7 @@
 -  :doc:`/managing-a-catalog/managing-inventory/low-stock-action`
 -  :doc:`/managing-a-catalog/managing-inventory/availability-estimates`
 -  :doc:`/managing-a-catalog/managing-inventory/managing-product-publication`
--  :doc:`/managing-a-catalog/managing-inventory/inventory-administration-reference-guide`
+-  :doc:`/managing-a-catalog/managing-inventory/inventory-management-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/warehouse-reference-guide`
 -  :doc:`/managing-a-catalog/managing-inventory/product-inventory-configuration-reference`
 

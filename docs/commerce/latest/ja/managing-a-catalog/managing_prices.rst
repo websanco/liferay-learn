@@ -10,5 +10,5 @@
    managing-prices/adding-products-to-a-price-list.md
    managing-prices/adding-tiered-pricing.md
 
-.. include:: /managing-a-catalog/managing-price/README.rst
+.. include:: /managing-a-catalog/managing-prices/README.rst
    :start-line: 2
