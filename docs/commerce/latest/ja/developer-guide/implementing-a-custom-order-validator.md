@@ -23,7 +23,7 @@
 2.  [Acme Commerce Order Validator](./liferay-n9b2.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-n9b2.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-n9b2.zip -O
     ```
 
     ``` bash
@@ -176,7 +176,7 @@ public CommerceOrderValidatorResult validate(
 
 #### 言語キーを追加します `Language.properties`
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-order-validator/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-order-validator/resources/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
     expensive-items-have-a-maximum-quantity-of-10=Expensive items have a maximum quantity of 10.
     this-item-has-a-maximum-quantity-of-10=This item has a maximum quantity of 10.

@@ -33,4 +33,4 @@
 ## 追加情報
 
   - [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
-  - [Implementing a Custom Low Stock Action](../../developer-guide/tutorials/implementing-a-custom-low-stock-activity.md)
+  - [Implementing a Custom Low Stock Action](../../developer-guide/implementing-a-custom-low-stock-activity.md)

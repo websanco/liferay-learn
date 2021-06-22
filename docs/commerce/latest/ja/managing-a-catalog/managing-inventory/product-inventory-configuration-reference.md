@@ -30,5 +30,5 @@
 
 ## 追加情報
 
-  - [Implementing a Custom Low Stock Activity](../../developer-guide/tutorials/implementing-a-custom-low-stock-activity.md)
+  - [Implementing a Custom Low Stock Activity](../../developer-guide/implementing-a-custom-low-stock-activity.md)
   - [Low Stock Action](./low-stock-action.md)

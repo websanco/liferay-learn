@@ -10,7 +10,7 @@
 
 1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
 
-2.  （![Add icon](../../../images/icon-add.png)）ボタンをクリックします。
+2.  （![Add icon](../../images/icon-add.png)）ボタンをクリックします。
 
 3.  新しいチャネルの名前を入力します。
 
@@ -51,7 +51,7 @@
 サイトアクセラレータによって作成されたチャネルを含め、チャネルを削除できます。 チャネルを削除しても、DXPサイトは削除されないことに注意してください。 チャンネルを削除するには：
 
 1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
-2.  （![3-dot icon](../../../images/icon-actions.png)）をクリックし、次に *削除*クリックします。
+2.  （![3-dot icon](../../images/icon-actions.png)）をクリックし、次に *削除*クリックします。
 
 これでチャンネルが削除されました。
 
@@ -61,7 +61,7 @@
 
 1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
 
-2.  （![Add icon](../../../images/icon-add.png)）ボタンをクリックします。
+2.  （![Add icon](../../images/icon-add.png)）ボタンをクリックします。
 
 3.  新しいチャネルの名前を入力します。
 

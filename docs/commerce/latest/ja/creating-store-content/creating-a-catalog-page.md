@@ -62,4 +62,4 @@ Liferay Commerceでは、ストアマネージャーは、購入者に最初に�
 
 Liferay Commerceインスタンスに格納されているストアサイトが複数ある場合、カタログ全体がすべてのストアサイトで検索可能になります。
 
-商品の範囲を特定のサイトに限定するには、 [チャネルを使用した商品の表示設定](../managing-a-catalog/creating-and-managing-products/channels/configuring-product-visibility-using-channels.md)を参照してください。
+商品の範囲を特定のサイトに限定するには、 [チャネルを使用した商品の表示設定](../starting-a-store/channels/configuring-product-visibility-using-channels.md)を参照してください。

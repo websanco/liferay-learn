@@ -25,7 +25,7 @@
 2.  [Acme Commerce Tax Engine](./liferay-q4b9.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-q4b9.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-q4b9.zip -O
     ```
 
     ``` bash
@@ -91,7 +91,7 @@ public CommerceTaxValue getCommerceTaxValue(
 public String getDescription(Locale locale);
 ```
 
-> これは、税エンジンの簡単な説明を返します。 言語キーで説明を取得する際のリファレンスについては、[Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-new-tax-engine/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java)の実装を参照してください。
+> これは、税エンジンの簡単な説明を返します。 言語キーで説明を取得する際のリファレンスについては、[Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java)の実装を参照してください。
 
 ``` java
 public String getName(Locale locale);
@@ -131,7 +131,7 @@ public CommerceTaxValue getCommerceTaxValue(
 
 #### 言語キーを追加します `Language.properties`
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-new-tax-engine/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
     a-flat-tax-rate-that-does-not-adjust=A flat tax rate that does not adjust.
     flat-tax=Flat Tax

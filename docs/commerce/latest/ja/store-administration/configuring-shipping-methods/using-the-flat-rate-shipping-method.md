@@ -66,4 +66,4 @@
   - [Using the Variable Rate Shipping Method](./using-the-variable-rate-shipping-method.md)
   - [Using FedEx as a Carrier Method](./using-the-fedex-shipping-method.md)
   - [配送方法の制限の適用](./applying-shipping-method-restrictions.md)
-  - [新しい配送エンジンの実装](../../developer-guide/tutorials/implementing-a-new-shipping-engine.md)
+  - [新しい配送エンジンの実装](../../developer-guide/implementing-a-new-shipping-engine.md)

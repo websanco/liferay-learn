@@ -38,7 +38,7 @@
 
 ### 支払い方法
 
-ユーザーは、チャネルに使用する [支払方法](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) を構成できます。 さらに、ユーザーは [カスタム支払いエンジン](../../../developer-guide/tutorials/implementing-a-new-payment-method.md)使用できます。
+ユーザーは、チャネルに使用する [支払方法](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) を構成できます。 さらに、ユーザーは [カスタム支払いエンジン](../../../developer-guide/implementing-a-new-payment-method.md)使用できます。
 
 ![[お支払い方法]セクションでは、使用するお支払い方法を選択できます。](./channels-reference-guide/images/05.png)
 
@@ -47,7 +47,7 @@
 ユーザーはチャネルの配送方法を設定できます。 デフォルトでは、 [フラットレート](../../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) が有効になっています。 ユーザーは [可変レート](../../../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) 配送方法を有効にすることもできます。 加入者は [FedEx](../../../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)有効にすることもでき
  。</p> 
 
-最後に、ユーザーは [カスタム配送エンジン](../../../developer-guide/tutorials/implementing-a-new-shipping-engine.md)使用できます。
+最後に、ユーザーは [カスタム配送エンジン](../../../developer-guide/implementing-a-new-shipping-engine.md)使用できます。
 
 ![[配送方法]セクションでは、使用する配送方法を選択できます。](./channels-reference-guide/images/06.png)
 

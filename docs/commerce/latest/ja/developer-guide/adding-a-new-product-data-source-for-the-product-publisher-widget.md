@@ -25,7 +25,7 @@
 2.  [Acme Commerce Product Data Source](./liferay-m5x7.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-m5x7.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m5x7.zip -O
     ```
 
     ``` bash
@@ -83,7 +83,7 @@ public class M5X7CPDataSource implements CPDataSource {
 public String getLabel(Locale locale);
 ```
 
-> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)の実装を参照してください。
+> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)の実装を参照してください。
 
 ``` java
 public String getName();
@@ -147,11 +147,11 @@ public CPDataSourceResult getResult(
 
 > [CPDefinitionHelper](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/util/CPDefinitionHelperImpl.java)を使用して検索を実行します。 `CPDefinitionHelper`は、商品定義に固有のロジックと`BaseIndexer`の検索機能を組み合わせたものです。詳細は、[BaseIndexer.java](https://github.com/liferay/liferay-portal/blob/7.1.3-ga4/portal-kernel/src/com/liferay/portal/kernel/search/BaseIndexer.java)を参照してください。
 > 
-> `"excludedCPDefinitionId"`属性の値として商品定義のIDを`SearchContext`に追加します。 これにより、結果から元の商品が除外されます。 この例では、検索する商品名の最後の単語も指定しています。 [M5X7CPDataSource](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)にアクセスして、`_getLastWordOfName`の実装を参照してください。
+> `"excludedCPDefinitionId"`属性の値として商品定義のIDを`SearchContext`に追加します。 これにより、結果から元の商品が除外されます。 この例では、検索する商品名の最後の単語も指定しています。 [M5X7CPDataSource](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)にアクセスして、`_getLastWordOfName`の実装を参照してください。
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/adding-a-new-product-data-source-for-the-product-publisher-widget/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
     products-ending-in-the-same-word=Products Ending in the Same Word
 

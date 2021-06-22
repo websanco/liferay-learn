@@ -22,7 +22,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 在庫不足アクションは、販売可能な商品在庫が指定されたしきい値に達したときに自動アクションを実行するように設定できます。 在庫が最小しきい値に達したときに実行されるアクションを設定する方法については、[Low Stock Action](./low-stock-action.md)を参照してください。
 
-独自のカスタムの在庫不足アクションの作成に興味のある開発者は、[Implementing a Custom Low Stock Activity](../../developer-guide/tutorials/implementing-a-custom-low-stock-activity.md)を参照してください。
+独自のカスタムの在庫不足アクションの作成に興味のある開発者は、[Implementing a Custom Low Stock Activity](../../developer-guide/implementing-a-custom-low-stock-activity.md)を参照してください。
 
 ## 倉庫ごとの在庫の設定
 

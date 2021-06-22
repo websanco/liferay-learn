@@ -25,7 +25,7 @@
 2.  [Acme Commerce Low Stock Activity](./liferay-j1e4.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/tutorials/liferay-j1e4.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-j1e4.zip -O
     ```
 
     ``` bash
@@ -102,7 +102,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> これは、在庫不足アクティビティを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-low-stock-activity/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java)の実装を参照してください。
+> これは、在庫不足アクティビティを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java)の実装を参照してください。
 
 ### 在庫不足アクティビティを完了する
 
@@ -128,7 +128,7 @@ public String getLabel(Locale locale);
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/tutorials/implementing-a-custom-low-stock-activity/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
     log-a-warning-message=Log a Warning Message
 

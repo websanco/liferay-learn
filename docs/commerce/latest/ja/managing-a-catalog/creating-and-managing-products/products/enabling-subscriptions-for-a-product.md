@@ -62,7 +62,7 @@ Liferay Commerceでは、ストアユーザーが商品のサブスクリプシ�
 この商品の配信サブスクリプションが有効になりました。
 
 ``` tip::
-   定期的な支払いをサポートするために、他の支払い方法を実装できます。 詳細については、 `新しい支払い方法の実装 <../../../developer-guide/tutorials/implementing-a-new-payment-method.md>`_ を参照してください。
+   定期的な支払いをサポートするために、他の支払い方法を実装できます。 詳細については、 `新しい支払い方法の実装 <../../../developer-guide/implementing-a-new-payment-method.md>`_ を参照してください。
 ```
 
 ## 商品の詳細でのサブスクリプションの表示

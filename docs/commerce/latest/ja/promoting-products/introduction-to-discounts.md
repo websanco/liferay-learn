@@ -71,7 +71,7 @@ The devs inadvertently added Pricing Class as a new discount type which adds a t
 | これらのすべての商品を持っています | 割引を受けるには、注文に特定のすべての商品が含まれている必要があります。                  |
 | これらの商品の1つを持っている   | 注文には、割引を受けるために、指定された商品のリストから少なくとも1つの商品が含まれている必要があります。 |
 
-割引ルールは、[ *ルール* ]タブに追加されます。 また、開発者は可能 [新しい割引ルール実装](../developer-guide/tutorials/adding-a-new-discount-rule-type.md)することも可能です。
+割引ルールは、[ *ルール* ]タブに追加されます。 また、開発者は可能 [新しい割引ルール実装](../developer-guide/adding-a-new-discount-rule-type.md)することも可能です。
 
 ![割引ルールを追加します。](./introduction-to-discounts/images/04.png)
 
