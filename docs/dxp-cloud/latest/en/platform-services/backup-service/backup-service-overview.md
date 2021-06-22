@@ -116,6 +116,10 @@ See [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md) 
 
 Determining how frequently backups are created and removed can help protect your data and optimize storage.
 
+```warning::
+   Scheduled backups created while your Liferay instance is running and data is actively changing risk creating inconsistent data. Configure your backup schedule to create backups during times with reduced activity to mitigate the risk of data inconsistency. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a `manual backup <./backup-service-overview.md#creating-a-manual-backup>`__.
+```
+
 Use the following variables to customize when backups are created and removed:
 
 * **Automated Backups**: Add the `LCP_BACKUP_CREATE_SCHEDULE` variable with a [cron scheduling](https://crontab.guru/) value to set the frequency of automated backups.

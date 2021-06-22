@@ -91,7 +91,7 @@ These limitations apply to the [Search service](../platform-services/search-serv
 
 These limitations apply to the [Backup service](../platform-services/backup-service/backup-service-overview.md) in each DXP Cloud environment:
 
-* **Backup Consistency**: Consistency between data in the database and document library is not guaranteed if a backup is created while the Liferay instance is running.
+* **Backup Consistency**: As with any process copying from a database with changing data, consistency between data in the database and document library cannot be guaranteed if a backup is created while updates are occurring. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a [manual backup](../platform-services/backup-service/backup-service-overview.md#creating-a-manual-backup).
 
 * **Backup Size**: Before DXP Cloud version 4.2.0, backups used [ephemeral storage](#file-storage). The size of backups in these versions is limited to the remaining space on a shared ephemeral disk, which may vary.
 
