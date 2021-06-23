@@ -1,8 +1,8 @@
 # About the Content Performance Panel
 
-> Available: Liferay 7.3+.
+> Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-The *Content Performance* panel is a global application for analyzing performance metrics of your content, like traffic channels or the number of views and reads over time. Using the Content Performance panel, content teams can periodically assess and adapt their content strategy.
+The *Content Performance* panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Using the Content Performance panel, content teams can periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) Pages.
 
 To learn how to analyze your content performance quantitatively using the Content Performance panel, see [Analyze Content Metrics Using the Content Performance panel](./analyze-content-metrics-using-content-performance-panel.md).
 
@@ -10,36 +10,55 @@ To learn how to analyze your content performance quantitatively using the Conten
    To manage and audit your content across Sites and Asset Libraries, use the `Content Dashboard <../content-dashboard/about-the-content-dashboard.md>`_.
 ```
 
-## Accessing the Content Performance Panel
-
-You can open the Content Performance panel from [Web Content](#accessing-the-content-performance-panel-from-web-content) or from the [Content Dashboard](#accessing-the-content-performance-panel-from-the-content-dashboard) using *View Metrics* (![View Metrics](../../images/icon-analytics.png)).
-
 You can access the Content Performance panel when the following conditions are met:
 
-- You have View and Edit permissions for the content.
-- The content is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 - The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) and your site is synchronized.
+- You have View or Edit permissions for the content.
+- The content is in a Content Page, Widget Page, or is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 
-```note::
-   The *Metrics* option for your content is available when these conditions are met (2). If the *Metrics* option is unavailable, one or more conditions are not met (1).
-```
+## Accessing the Content Performance Panel
 
-![Ensure that your configuration meets the conditions for showing the content metrics.](./about-the-content-performance-panel/images/01.png)
+You can open the Content Performance panel using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) button from:
+
+- [Web Content](#accessing-the-content-performance-panel-from-web-content) based on a Display Page Template.
+- [Content or Widget Pages](#accessing-the-content-performance-panel-from-content-or-widget-pages) (Liferay DXP 7.4+).
+- [The Content Dashboard](#accessing-the-content-performance-panel-from-the-content-dashboard).
 
 ### Accessing the Content Performance Panel from Web Content
 
-1. Open the Web Content you want to analyze.
-1. In view mode, click the *View Metrics* icon in the application toolbar.
+You typically display Web Content in the context of a Fragment or Widget using a Display Page Template. When you use a Display Page Template, you can also Display the Web Content using its unique URL.
 
-![Access the Content Performance metrics from the View Metrics button.](./analyze-content-metrics-using-content-performance-panel/images/08.png)
+1. Go to *Site Administration* &rarr; *Content & Data* &rarr; *Web Content*.
+1. Click the *Web Content* tab.
+1. For the Web Content you want to review, click the *Actions* (![Actions](../../images/icon-actions.png)) menu and choose *View Content*.
+
+   ```note::
+      If the *View Content* option is not available, the Web Content is not using a Display Page Template.
+   ```
+
+   ![Access the Content Performance metrics in Web Content.](./about-the-content-performance-panel/images/04.png)
+
+1. In view mode, click the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) icon in the [Applications toolbar](../../getting-started/navigating-dxp.md#applications-bar).
+
+### Accessing the Content Performance Panel from Content or Widget Pages
+
+1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
+1. For the Page you want to review, click the *Actions* (![Actions](../../images/icon-actions.png)) menu and choose *View*.
+1. Click the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) icon in the Application toolbar.
+
+   ![Access the Content Performance metrics in Content or Widget Pages.](./about-the-content-performance-panel/images/03.png)
 
 ### Accessing the Content Performance Panel from the Content Dashboard
 
 1. Open the [Content Dashboard](../content-dashboard/content-dashboard-interface.md#accessing-the-content-dashboard).
 1. On the [Contents list](../content-dashboard/content-dashboard-interface.md#contents-list), click the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) next to the content you want to review, and select *View Metrics*.
-1. Alternatively, hover over the content and click the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) icon.
+1. Alternatively, hover over the content and click the *Content Performance* (![View Metrics](../../images/icon-analytics.png)) icon.
 
-![Access the Performance sidebar from the assets in the Contents list.](./about-the-content-performance-panel/images/02.png)
+![Access the Content Performance metrics from the Content Dashboard.](./about-the-content-performance-panel/images/05.png)
+
+```note::
+   If the *Content Performance* option is not available, your content does not meet one or more conditions. See the `About the Content Performance Panel <#about-the-content-performance-panel>`_ section for more information.
+```
 
 ## Related Information
 

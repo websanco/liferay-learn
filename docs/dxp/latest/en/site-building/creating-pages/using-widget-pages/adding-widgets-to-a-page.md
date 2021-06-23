@@ -21,5 +21,7 @@ Follow these steps to add a widget to a Widget Page:
 
 ## Additional Information
 
-* [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
-* [Converting Widget Pages to Content Pages](./converting-widget-pages-to-content-pages.md)
+- [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
+- [Converting Widget Pages to Content Pages](./converting-widget-pages-to-content-pages.md)
+- [Analyze Content Metrics Using the Content Performance Panel](../../../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md)
+
