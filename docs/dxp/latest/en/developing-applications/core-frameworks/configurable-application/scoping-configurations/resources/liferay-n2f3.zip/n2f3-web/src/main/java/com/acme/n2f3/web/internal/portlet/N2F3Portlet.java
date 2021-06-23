@@ -6,7 +6,7 @@ import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
 import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-import com.liferay.portal.kernel.security.auth.CompanyThreadLocal;
+import com.liferay.portal.kernel.util.Portal;
 
 import java.io.IOException;
 
@@ -39,7 +39,7 @@ public class N2F3Portlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
-		long companyId = CompanyThreadLocal.getCompanyId();
+		long companyId = _portal.getCompanyId(renderRequest);
 
 		try {
 			_n2f3WebConfiguration =
@@ -65,6 +65,9 @@ public class N2F3Portlet extends MVCPortlet {
 
 	@Reference
 	private ConfigurationProvider _configurationProvider;
+
+	@Reference
+	private Portal _portal;
 
 	private N2F3WebConfiguration _n2f3WebConfiguration;
 
