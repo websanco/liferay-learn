@@ -38,19 +38,15 @@ Message Bus sends messages synchronously and asynchronously.
 
 The following topics cover both ways of messaging:
 
-* *Sending Messages Asynchronously* (coming soon) shows how to configure a destination and send messages asynchronously to it. This is the simplest way to send messages.
+* [Using Asynchronous Messaging](./using-asynchronous-messaging.md) shows how to configure a destination and send messages asynchronously to it. This is the simplest way to send messages.
 
-* *Using Direct Synchronous Messaging* (coming soon) demonstrates a message sender blocking on sending a message until *all* listeners receive the message.
+* [Using Default Synchronous Messaging](./using-default-synchronous-messaging.md) demonstrates a message sender blocking until one listener responds to the message *or*, if no listener responds, until the message times out.
 
-* *Using Default Synchronous Messaging* (coming soon) shows a message sender blocking until one listener responds to the message *or*, if no listener responds, until the message times out.
+* [Using Direct Synchronous Messaging](./using-default-synchronous-messaging.md) shows a message sender blocking on sending a message until *all* listeners receive the message.
 
-## Messaging in a Cluster
+## Tuning Performance
 
-In a Liferay cluster, you must configure a bridge to message listeners on all cluster nodes. See *Sending Messages in a Cluster* (coming soon) for details.
-
-## Performance
-
-The Message Bus API facilitates monitoring registration events, destinations, destination message listeners, and message queues. You can configure Message Bus components to meet your needs by adjusting destination types, message queue parameters, and thread parameters. See *Managing Message Bus Performance* (coming soon) for more information.
+The Message Bus API facilitates monitoring registration events, destinations, destination message listeners, and message queues. You can configure Message Bus components to meet your needs by adjusting destination types, message queue parameters, and thread parameters. See [Tuning Messaging Performance](./tuning-messaging-performance.md) for more information.
 
 ## What's Next
 
