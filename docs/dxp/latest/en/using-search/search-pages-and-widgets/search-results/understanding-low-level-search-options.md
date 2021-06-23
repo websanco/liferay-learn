@@ -69,7 +69,7 @@ Relevance scoring only makes sense within an index. Results coming from separate
 
 1. Configure all the widgets to participate in an alternate search by clicking the Options icon (![Options icon](../../../images/icon-app-options.png)) and selecting *Configuration*. For each, enter *liferay-0* in the Federated Search Key setting.
 
-   All the search widgets expected to react appropriately to the alternate search must be configured with the Federated Search Key. If there's a page header Search Bar (as there is in the default Liferay theme), you must configure this Search Bar with the Federated Search Key.
+   All the search widgets expected to react appropriately to the alternate search must be configured with the Federated Search Key.
 
 1. Make an additional configuration in the Low Level Search Options widget, adding the index name of the alternate index:
 
