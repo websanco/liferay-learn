@@ -14,7 +14,7 @@ Extending Liferay
    extending-liferay/fragment-osgi-modules.md
    extending-liferay/osgi-extension-points.md
    extending-liferay/overriding-mvc-commands.md
-   extending-liferay/overriding-service-components.md
+   extending-liferay/overriding-osgi-services.md
    extending-liferay/overriding-global-language-keys.md
    extending-liferay/overriding-module-language-keys.md
    extending-liferay/portlet-filters.rst
@@ -29,6 +29,6 @@ Extending Liferay
 -  :doc:`/liferay-internals/extending-liferay/fragment-osgi-modules`
 -  :doc:`/liferay-internals/extending-liferay/osgi-extension-points`
 -  :doc:`/liferay-internals/extending-liferay/overriding-mvc-commands`
--  :doc:`/liferay-internals/extending-liferay/overriding-service-components`
+-  :doc:`/liferay-internals/extending-liferay/overriding-osgi-services`
 -  :doc:`/liferay-internals/extending-liferay/overriding-global-language-keys`
 -  :doc:`/liferay-internals/extending-liferay/overriding-module-language-keys`
