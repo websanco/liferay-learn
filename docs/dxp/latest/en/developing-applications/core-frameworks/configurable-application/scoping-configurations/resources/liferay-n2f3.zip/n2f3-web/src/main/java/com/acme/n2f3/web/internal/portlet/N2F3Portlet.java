@@ -66,9 +66,9 @@ public class N2F3Portlet extends MVCPortlet {
 	@Reference
 	private ConfigurationProvider _configurationProvider;
 
+	private N2F3WebConfiguration _n2f3WebConfiguration;
+
 	@Reference
 	private Portal _portal;
-
-	private N2F3WebConfiguration _n2f3WebConfiguration;
 
 }
