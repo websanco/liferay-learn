@@ -232,7 +232,15 @@ Here's how to turn off the message response logic to force the timeout.
 
 Congratulations on sending messages synchronously with a timeout.
 
+## What's Next
+
+If you want to explore synchronous messaging using *direct* mode, see [Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md).
+
+If you want to continue processing immediately after sending a message, see [Using Asynchronous Messaging](./using-asynchronous-messaging.md).
+
 ## Additional Information
 
 * [Message Bus](./message-bus.md)
 * [Listening for Messages](./listening-for-messages.md)
+* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
+* [Listening for Registration Events](./listening-for-registration-events.md)

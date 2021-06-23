@@ -142,7 +142,15 @@ Each listener's `receive(Message)` method logs the message payload and then sets
 
 Congratulations! You know how to use direct synchronous messaging.
 
+## What's Next
+
+If you want to explore synchronous messaging using *default* mode, see [Using Default Synchronous Messaging](./using-default-synchronous-messaging.md).
+
+If you want to continue processing immediately after sending a message, see [Using Asynchronous Messaging](./using-asynchronous-messaging.md).
+
 ## Additional Information
 
 * [Message Bus](./message-bus.md)
 * [Listening for Messages](./listening-for-messages.md)
+* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
+* [Listening for Registration Events](./listening-for-registration-events.md)
