@@ -34,7 +34,7 @@ The [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool) (1
 
 The [Contents List](./content-dashboard-interface.md#contents-list) (2) shows content across all Sites and Asset Libraries. From here, you can sort and filter your information using built-in or custom filters. The Content Audit Tool chart changes dynamically based on the filters that you set.
 
-From the Contents List, you can access the [Information sidebar](./content-dashboard-interface.md#information-sidebar) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar shows different metadata for each asset, while the Content Performance panel gathers statistics for your content, like the number of reads and views or the traffic channels.
+From the Contents List, you can access the [Content info](./content-dashboard-interface.md#content-info-sidebar) sidebar (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Information sidebar shows different metadata for each asset, while the Content Performance panel gathers statistics for your content, like the number of views or the traffic acquisition channels.
 
 To learn more about the Content Dashboard interface and how to customize the information for your needs, see the [Content Dashboard Interface](./content-dashboard-interface.md) topic.
 
