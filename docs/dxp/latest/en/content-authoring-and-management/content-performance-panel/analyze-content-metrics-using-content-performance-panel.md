@@ -22,7 +22,6 @@ The top area in the Content Performance panel provides general information about
 | URL | Represent the URL of the Content Page, Widget Page, or Web Content associated with a Display Page Template. |
 | Author | Author's name. This information is only available for Web Content using a Display Page Template. |
 | Publication date | Shows the publication date. Note that when you link the asset to a Display Page Template that is newer than the asset publication date, the publication date corresponds to the Display Page Template creation date. |
-| Languages Translated Into | Shows all the languages available for your site, as well as the default content language. |
 
 The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance panel show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
 
