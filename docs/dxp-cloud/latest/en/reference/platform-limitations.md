@@ -53,7 +53,7 @@ These limitations apply to the [Liferay service](../using-the-liferay-dxp-servic
 
 * **Autoscaling**: When enabled, autoscaling may only add new instances up to a maximum of 10.
 
-* **Session Replication**: Replicating sessions between multiple Liferay instances in DXP Cloud may impact your instances' performance, and is not supported. Instead, use sticky sessions, or avoid using session storage entirely in your custom applications.
+* **Session Replication**: Replicating sessions between multiple Liferay instances in DXP Cloud may impact your instances' performance, and is not supported. <!-- Instead, use sticky sessions, or avoid using session storage entirely in your custom applications. -->
 
 ### Dynatrace
 

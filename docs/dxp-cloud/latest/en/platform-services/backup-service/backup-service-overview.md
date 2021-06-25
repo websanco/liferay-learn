@@ -50,6 +50,10 @@ Once started, the backup service icon will indicate a backup is in progress, and
 
 ![The backup service icon will indicate a backup is in progress, and a new backup will appear in the Backup history.](./backup-service-overview/images/04.png)
 
+```warning::
+   Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a manual backup.
+```
+
 Clicking *View logs* redirects you to the Logs page, where you can view the backup stages in real-time. You can also view backup logs in the *Logs* tab of the backup service's page.
 
 See [Log Management](../../troubleshooting/log-management.md) for more information about viewing service logs.
@@ -117,7 +121,7 @@ See [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md) 
 Determining how frequently backups are created and removed can help protect your data and optimize storage.
 
 ```warning::
-   Scheduled backups created while your Liferay instance is running and data is actively changing risk creating inconsistent data. Configure your backup schedule to create backups during times with reduced activity to mitigate the risk of data inconsistency. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a `manual backup <./backup-service-overview.md#creating-a-manual-backup>`__.
+   Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. Configure your backup schedule to create backups during times with reduced activity to mitigate the risk of data inconsistency. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a `manual backup <./backup-service-overview.md#creating-a-manual-backup>`__.
 ```
 
 Use the following variables to customize when backups are created and removed:
