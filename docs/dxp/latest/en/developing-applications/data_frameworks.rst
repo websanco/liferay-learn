@@ -18,5 +18,8 @@ Data Frameworks
    data-frameworks/workflow.md
    data-frameworks/info-framework.md
 
-.. include:: /developing-applications/data-frameworks/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: ../landingpage_template.html
+
+.. raw:: html
+   :file: data-frameworks/landing.html

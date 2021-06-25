@@ -11,15 +11,15 @@ Developing a JavaScript Application
 Using React
 ~~~~~~~~~~~
 
--  :doc:`/developing-applications/developing-a-javascript-application/using-react/using-react`
+-  :doc:`/developing-applications/developing-a-javascript-application/using-react/using-react` (Coming soon!)
 -  :doc:`/developing-applications/developing-a-javascript-application/using-react/react-component-utilities-reference`
 
 Using Angular
 ~~~~~~~~~~~~~
 
--  :doc:`/developing-applications/developing-a-javascript-application/using-angular`
+-  :doc:`/developing-applications/developing-a-javascript-application/using-angular` (Coming soon!)
 
 Using VueJS
 ~~~~~~~~~~~
 
--  :doc:`/developing-applications/developing-a-javascript-application/using-vuejs`
+-  :doc:`/developing-applications/developing-a-javascript-application/using-vuejs` (Coming soon!)
