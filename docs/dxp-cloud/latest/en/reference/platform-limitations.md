@@ -53,6 +53,8 @@ These limitations apply to the [Liferay service](../using-the-liferay-dxp-servic
 
 * **Autoscaling**: When enabled, autoscaling may only add new instances up to a maximum of 10.
 
+* **Session Replication**: Replicating sessions between multiple Liferay instances in DXP Cloud may impact your instances' performance, and it is not supported. Instead, make use of sticky sessions, or avoid using session storage entirely in your custom applications.
+
 ### Dynatrace
 
 [Dynatrace](../manage-and-optimize/application-metrics.md#advanced-application-metrics-production-only) is not included in the Standard setup for DXP Cloud environments, but it can be purchased separately to use with it. Dynatrace is included in the High Availability setup, but only for Production or UAT environments.
