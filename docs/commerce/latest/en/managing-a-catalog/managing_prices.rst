@@ -1,5 +1,5 @@
 Managing Prices
-==============
+===============
 
 .. toctree::
    :maxdepth: 1
