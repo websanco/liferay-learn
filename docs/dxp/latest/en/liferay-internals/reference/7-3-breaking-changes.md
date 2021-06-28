@@ -9,7 +9,7 @@ Here are some of the types of changes documented in this file:
 * Changes to context variables available to templates
 * Changes in CSS classes available to Liferay themes and portlets
 * Configuration changes: Changes in configuration files, like `portal.properties`, `system.properties`, etc.
-* Execution requirements: Java version, J2EE Version, browser versions, etc.
+* Execution requirements: Java version, Java EE Version, browser versions, etc.
 * Deprecations or end of support: For example, warning that a certain feature or API will be dropped in an upcoming version.
 
 ## Breaking Changes List
@@ -99,7 +99,7 @@ These methods have been removed from `AssetCategoryUtil`:
 - `getAncestors`
 - `getDescendants`
 
-Methods related to left and right category IDs have been removed from `AssetEntryQuery`. 
+Methods related to left and right category IDs have been removed from `AssetEntryQuery`.
 
 Finder methods ending in `G_P_N_V` have been replaced with methods ending in `P_N_V`.
 
@@ -112,9 +112,10 @@ If you're using left and right category IDs, consider these options:
 - Adapt your code to use the new tree path
 - Explore whether a service API can be used to accomplish the same goal
 
-For example, instead of working with the category IDs via `category.getLeftCategoryId()` and `category.getRightCategoryId()`, you can get the tree path via `category.getTreePath()`. Then use the tree path. 
+For example, instead of working with the category IDs via `category.getLeftCategoryId()` and `category.getRightCategoryId()`, you can get the tree path via `category.getTreePath()`. Then use the tree path.
 
 As a reference, this snippet `AssetCategoryLocalService` sets the tree path when adding a category:
+
 ```
 if (parentCategory == null) {
     category.setTreePath("/" + categoryId + "/");
@@ -129,7 +130,7 @@ See [7.3.0-ga1 - AssetCategoryLocalServiceImpl.java#L122-L128](https://github.co
 
 ##### For AssetCategoryLocalService#rebuildTree(long, boolean)
 
-Calls to `AssetCategoryLocalService#rebuildTree(long, boolean)` may be unnecessary. This method was mainly used to help maintain the internal hierarchical tree implmentation that has now been replaced. 
+Calls to `AssetCategoryLocalService#rebuildTree(long, boolean)` may be unnecessary. This method was mainly used to help maintain the internal hierarchical tree implmentation that has now been replaced.
 
 Consider re-evaluating your existing code to confirm whether your call to the `rebuildTree` method is still needed.
 
@@ -274,9 +275,9 @@ This change was made to unify the auto-upgrade feature between the Core and modu
 
 The cache bootstrap feature has been removed. These properties can no longer be used to enable/configure cache bootstrap:
 
-`ehcache.bootstrap.cache.loader.enabled`,
-`ehcache.bootstrap.cache.loader.properties.default`,
-`ehcache.bootstrap.cache.loader.properties.${specific.cache.name}`.
+- `ehcache.bootstrap.cache.loader.enabled`
+- `ehcache.bootstrap.cache.loader.properties.default`
+- `ehcache.bootstrap.cache.loader.properties.${specific.cache.name}`
 
 #### Who is affected?
 
