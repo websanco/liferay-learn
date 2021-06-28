@@ -101,3 +101,30 @@ In a clustered environment, each node needs the same configuration values for ea
 ```important::
    If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
 ```
+
+## Specifying a Read-Only Value
+
+If you need to specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md). 
+
+Here's the property syntax:
+
+```properties
+configuration.override.${pid}_${key}=${value}{code}
+```
+
+For example,
+
+```properties
+configuration.override.com.liferay.journal.configuration.JournalServiceConfiguration_indexAllArticleVersionsEnabled=B"false"
+configuration.override.com.liferay.journal.configuration.JournalServiceConfiguration_journalArticleMaxVersionCount=I"5"{code}
+```
+
+```important::
+   Configuration properties must specify type markers.
+```
+
+Property configurations are applied on server restart. Property configurations take highest priority; they're prioritized over configuration files and database persisted configurations. The UI distinguishes all read-only configuration settings. If you need to change a read-only configuration value, use a portal property.
+
+```note::
+   Read-only `factory configuration values <./using-factory-configuration.md>`_ are not supported.
+```
