@@ -255,6 +255,10 @@ function get_product_version_language_dir_name {
 	echo "${product}"/"${version}"/"${language}"
 }
 
+#function publish_reference_docs {
+	
+#}
+
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
