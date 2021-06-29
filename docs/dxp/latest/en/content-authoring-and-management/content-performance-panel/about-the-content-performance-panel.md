@@ -13,20 +13,20 @@ To learn how to analyze your content performance quantitatively using the Conten
 You can access the Content Performance panel when the following conditions are met:
 
 - The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) and your site is synchronized.
-- You have View or Edit permissions for the content.
+- You have Edit permissions for the Page or content.
 - The content is in a Content Page, Widget Page, or is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 
 ## Accessing the Content Performance Panel
 
-You can open the Content Performance panel using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) button from:
+You can open the Content Performance panel using the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) button from:
 
-- [Web Content](#accessing-the-content-performance-panel-from-web-content) based on a Display Page Template.
+- [Content based on a Display Page Template](#accessing-the-content-performance-panel-from-content-based-on-a-display-page-template), like Web Content, Documents, or Blog entries.
 - [Content or Widget Pages](#accessing-the-content-performance-panel-from-content-or-widget-pages) (Liferay DXP 7.4+).
 - [The Content Dashboard](#accessing-the-content-performance-panel-from-the-content-dashboard).
 
-### Accessing the Content Performance Panel from Web Content
+### Accessing the Content Performance Panel from Content Based on a Display Page Template
 
-You typically display Web Content in the context of a Fragment or Widget using a Display Page Template. When you use a Display Page Template, you can also Display the Web Content using its unique URL.
+Using a Display Page Template, you can display Web Content, Documents, or Blog entries in a Display Page using a unique URL. For more information, read [Displaying Content with Display Page Templates](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 
 1. Go to *Site Administration* &rarr; *Content & Data* &rarr; *Web Content*.
 1. Click the *Web Content* tab.
