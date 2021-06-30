@@ -29,19 +29,19 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 5.  [ *シークレット* ]フィールドを空白のままにし、[ *SSL検証を有効にする* ]が選択されていることを確認します。
 
-    ![図1：ペイロードURLとコンテンツタイプを指定し、SSL検証を有効にします。](./configuring-your-github-repository/images/webhook-1.png)
+    ![図1：ペイロードURLとコンテンツタイプを指定し、SSL検証を有効にします。](./configuring-your-github-repository/images/01.png)
 
 6.  *このウェブフックをトリガーにしたいイベントはどれですか？*の下にある、*個々のイベントを選択させてください*を選択してください。 イベントのリストが表示されます。
 
 7.  イベントのリストから「 *プッシュ* 」および「 *プルリクエスト* 」を選択します。
 
-    ![図2：このWebhookの個々のイベントを選択する必要があります。](./configuring-your-github-repository/images/webhook-2.png)
+    ![図2：このWebhookの個々のイベントを選択する必要があります。](./configuring-your-github-repository/images/02.png)
 
-    ![図3：プッシュとプルリクエストを選択します。](./configuring-your-github-repository/images/webhook-3.png)
+    ![図3：プッシュとプルリクエストを選択します。](./configuring-your-github-repository/images/03.png)
 
 8.  *Active* が選択されていることを確認してから、 *Add webhook*をクリックします。
 
-    ![図4：WebhookをActiveに設定し、作成を完了します。](./configuring-your-github-repository/images/webhook-4.png)
+    ![図4：WebhookをActiveに設定し、作成を完了します。](./configuring-your-github-repository/images/04.png)
 
 ### 環境変数の設定
 

@@ -14,7 +14,7 @@ DXP Cloudは、大規模なインシデントの場合にお客様が障害復�
 
 障害復旧環境のセットアップを希望するDXP Cloudのお客様は、DR環境をプロビジョニングするために、まず営業担当者に連絡する必要があります。 この新しい環境は、他の利用可能な環境 (例えば、 `dev`、 `infra`、 `uat`、および `prd`) と一緒にリストアップされています。
 
-![図1：障害復旧環境を作成したら、他の環境と同じようにそれを選択できます。](./disaster-recovery/images/01.png)
+![図1：障害復旧環境を作成したら、他の環境と同じようにそれを選択できます。](./configuring-cross-region-disaster-recovery/images/01.png)
 
 DXP Cloudシステム管理者は、DR環境と本番環境の両方に対する完全な管理権限を持っている必要があります。
 
@@ -60,9 +60,9 @@ VPNへの接続の詳細については、 [VPN接続](../infrastructure-and-ope
 
     > 注：バックアップ履歴では、バックアップが2つのタブに一覧表示されます。 1つはDR環境用、もう1つは本番環境用です。
 
-3.  [ *アクション* ]ボタン（![Actions](./disaster-recovery/images/02.png)）をクリックして、本番環境の最新の安定したバックアップを取得し、[ *復元*]を選択します。
+3.  [ *アクション* ]ボタン（![Actions](./configuring-cross-region-disaster-recovery/images/03.png)）をクリックして、本番環境の最新の安定したバックアップを取得し、[ *復元*]を選択します。
 
-    ![図2：最新の安定したバックアップを本番環境からDR環境に復元します。](./disaster-recovery/images/03.png)
+    ![図2：最新の安定したバックアップを本番環境からDR環境に復元します。](./configuring-cross-region-disaster-recovery/images/04.png)
 
 ### カスタムドメイントラフィックをDR環境に送信する
 
@@ -76,7 +76,7 @@ DR環境でのWebサーバーサービスのカスタムドメインは、元の
 
 これにより、すべてのトラフィックがDR環境に送られます。
 
-![図3：webserverサービスの場合、DR環境のカスタムドメインを設定して、本番環境のカスタムドメインと一致させます。](./disaster-recovery/images/04.png)
+![図3：webserverサービスの場合、DR環境のカスタムドメインを設定して、本番環境のカスタムドメインと一致させます。](./configuring-cross-region-disaster-recovery/images/07.png)
 
 ## 事故後の回復
 
@@ -93,7 +93,7 @@ DR環境でのWebサーバーサービスのカスタムドメインは、元の
 1.  DR環境では、左側のメニューで[ *Backups* ]をクリックします。
 2.  *[Backup Now]* をクリックします。
 
-![図4：DR環境の手動バックアップを作成します。](./disaster-recovery/images/05.png)
+![図4：DR環境の手動バックアップを作成します。](./configuring-cross-region-disaster-recovery/images/08.png)
 
 ### 最新のDR環境データを本番環境にコピー
 
@@ -103,11 +103,11 @@ DR環境でのWebサーバーサービスのカスタムドメインは、元の
 
     > **注：** バックアップ履歴では、バックアップが2つのタブに一覧表示されます。 1つはDR環境用で、もう1つは本番環境用です。
 
-3.  最新のバックアップ（作成したばかりのバックアップ）の場合は、[ *アクション* ]ボタン（![Actions](./disaster-recovery/images/02.png)）をクリックし、[ *復元*]を選択します。
+3.  最新のバックアップ（作成したばかりのバックアップ）の場合は、[ *アクション* ]ボタン（![Actions](./configuring-cross-region-disaster-recovery/images/03.png)）をクリックし、[ *復元*]を選択します。
 
 4.  本番環境を選択し、[ *Deploy Build*]をクリックします。
 
-![図5：バックアップを運用環境に展開します。](./disaster-recovery/images/06.png)
+![図5：バックアップを運用環境に展開します。](./configuring-cross-region-disaster-recovery/images/09.png)
 
 ### サーバーのカスタムトラフィックを運用環境に復元する
 
@@ -119,7 +119,7 @@ DR環境でのWebサーバーサービスのカスタムドメインは、元の
 
 3.  [ *Custom Domains* ]タブをクリックします。
 
-    ![カスタムドメインを削除](./disaster-recovery/images/07.png)
+    ![カスタムドメインを削除](./configuring-cross-region-disaster-recovery/images/10.png)
 
 4.  本番環境からカスタムドメインを削除します。
 

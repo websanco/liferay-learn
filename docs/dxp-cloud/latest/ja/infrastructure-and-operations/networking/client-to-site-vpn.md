@@ -2,7 +2,7 @@
 
 Liferay DXP Cloudは、ポート転送と冗長トンネルサポートを備えたVPNクライアントからサイトへの接続を提供します。 この機能は、通常、DXP Cloud上のサブスクライバーの運用環境を内部ネットワークに接続するために使用されます。 セキュリティと信頼性のために、これらのVPN接続は環境ごと（運用、ステージング、または開発）に分離されています。
 
-![トポロジー1 - DXP Cloud VPNクライアントからサイトへのトポロジーについて](./client-to-site-vpn/images/01.png)
+![トポロジー1 - DXP Cloud VPNクライアントからサイトへのトポロジーについて](./vpn-integration-overview/images/01.png)
 
 加入者は、DXP Cloudサービス間の接続を対応するVPNサーバーのIPアドレスにマッピングすることにより、冗長VPNトンネルを使用できます。 冗長性はさまざまなアベイラビリティーゾーンに配置され、回復力を提供します。 クライアントからサイトへのアプローチには、企業ネットワークで実行されているサービスへの接続が含まれます。 このモデルは、コンテナ化されたアーキテクチャーと、提供されるKubernetesネットワークレイヤーに推奨されます。
 
@@ -15,17 +15,17 @@ Liferay DXP Cloudは、ポート転送と冗長トンネルサポートを備え
 
 サブスクライバーは、プロトコル（IPSecまたはOpenVPN）のいずれかを選択して、目的の環境のDXP Cloudコンソール設定ページから接続を実行できます。 詳細については、「 [VPNをDXP Cloud](./connecting-a-vpn-to-dxp-cloud.md) 接続する」を参照してください。
 
-![VPN設定](./client-to-site-vpn/images/02.png)
+![VPN設定](./vpn-integration-overview/images/02.png)
 
 以下の画像は、VPNサーバーとDXP Cloud間でアドレスとポートがどのようにマッピングされるかを示しています。
 
-![転送ポート](./connecting-a-vpn-to-dxp-cloud/images/03.png)
+![転送ポート](./vpn-integration-overview/images/03.png)
 
 ## DXP CloudをIPSec VPNサーバーに接続する
 
 この使用例では、DXP Cloud内で実行されているDXPポータルインスタンスがあり、内部ネットワーク内で実行されているHTTPサービスにアクセスする必要があると想定します。
 
-![トポロジ2-顧客の企業ネットワーク内のHTTPサービスにアクセスするポータルインスタンス](./client-to-site-vpn/images/03.png)
+![トポロジ2-顧客の企業ネットワーク内のHTTPサービスにアクセスするポータルインスタンス](./vpn-integration-overview/images/03.png)
 
 次の点に注意してください。
 

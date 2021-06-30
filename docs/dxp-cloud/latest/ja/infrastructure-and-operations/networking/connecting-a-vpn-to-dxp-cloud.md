@@ -26,7 +26,7 @@ DXP CloudのVPN機能を使用して、DXP Cloudサービスをプライベー�
 
 接続後にVPNからサービスを切断するには、[ *切断* ]ボタンをクリックします。
 
-![図1：[設定]タブからVPNに接続できます。](./connecting-a-vpn-to-dxp-cloud/images/01.png)
+![図1：[設定]タブからVPNに接続できます。](./connecting-a-vpn-server-to-dxp-cloud/images/01.png)
 
 ## ポート設定
 
@@ -42,4 +42,4 @@ VPNに接続すると、リクエストを転送するポートを選択でき�
 
 ポートを削除するには、その *アクション* ボタン（![Actions](./connecting-a-vpn-to-dxp-cloud/images/02.png)）をクリックし、 *削除*を選択します。
 
-![図2：ポート転送を設定することもできます。](./connecting-a-vpn-to-dxp-cloud/images/03.png)
+![図2：ポート転送を設定することもできます。](./connecting-a-vpn-server-to-dxp-cloud/images/03.png)
