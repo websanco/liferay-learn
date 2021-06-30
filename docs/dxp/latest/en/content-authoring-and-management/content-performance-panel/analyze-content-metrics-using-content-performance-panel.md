@@ -4,6 +4,10 @@
 
 You can use the Content Performance panel to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance panel, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 
+```important::
+   Content Performance metrics are only available for the `Default Experience <../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md>`_.
+```
+
 Access the Content Performance panel using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) option for your content. You can find this option in the [Applications toolbar](../../getting-started/navigating-dxp.md#applications-bar) and the [Content Dashboard](../content-dashboard/about-the-content-dashboard.md). For more information, see [About the Content Performance Panel](./about-the-content-performance-panel.md).
 
 The Content Performance panel contains three different areas:
