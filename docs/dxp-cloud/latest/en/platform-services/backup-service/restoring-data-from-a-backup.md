@@ -7,14 +7,14 @@ You can also use custom SQL scripts to perform additional updates to a database 
 See [Backup Service](./backup-service-overview.md) and [Downloading and Uploading Backups](./downloading-and-uploading-backups.md) for more information about the Backups page.
 
 ```important::
-   The Backups page is only available for production (``prd``) environments. Only users with the Admin role for the prod environment can manually restore environments via the DXP Cloud console.
+   Only users with the Admin role for the chosen environment can manually restore environments via the DXP Cloud console.
 ```
 
 ## Restoring an Environment from the Backups Page
 
 Follow these steps to restore an environment from a backup:
 
-1. Navigate to your project's `prd` environment.
+1. Navigate to your project's chosen environment.
 
 1. Click on *Backups* in the environment menu.
 
@@ -29,7 +29,7 @@ Follow these steps to restore an environment from a backup:
    ![Figure 2: Select the environment you want to restore.](./restoring-data-from-a-backup/images/02.png)
 
    ```note::
-      Production environment administrators can only restore environments to which they have access.
+      Administrators can only restore environments to which they have access.
    ```
 
 1. Click all *checkboxes* that appear below. You must check these boxes to enable the button to initiate the restore.

@@ -206,8 +206,10 @@ Upload the database and document library archives to the `backup` service by cal
 1. Run the following command to call the upload API after modifying it for your project:
 
     ```bash
-    curl -X POST https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload -H 'Content-Type: multipart/form-data' -H 'Authorization: Bearer <USER-TOKEN>' -F 'database=@/path/to/folder/database.tgz' -F 'volume=@/path/to/folder/volume.tgz'
+    curl -X POST https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload -H 'Content-Type: multipart/form-data' -H 'Authorization: Bearer <USER-TOKEN>' -F 'database=@/path/to/folder/database.tgz' -F 'volume=@/path/to/folder/volume.tgz'
     ```
+
+    Replace `<PROJECT-NAME>` with the name of your project, and `/path/to/folder/` with the path your `.tgz` archives are located. Replace `<ENV>` with the abbreviation for the environment you want to upload the upgraded backup to (such as `dev`).
 
 When the call is complete, a new backup appears from your upload, on the _Backups_ page in the DXP Cloud console.
 
@@ -217,7 +219,7 @@ Follow these steps to restore a backup to your chosen environment:
 
 1. Log into the DXP Cloud console, if you are not already logged in.
 
-1. Navigate to your production environment, then click _Backups_ from the side menu.
+1. Navigate to the environment [you uploaded your backup to](#call-the-upload-api), then click _Backups_ from the side menu.
 
 1. Choose a backup from the list, and then click _Restore to_ from the Actions menu for that backup.
 

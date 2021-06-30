@@ -64,7 +64,7 @@ By default, the Web Server, Liferay DXP, and Backup services store volumes using
 
 ## Backups
 
-DXP Cloud stores a copy of the Database service and volumes from Liferay DXP within its private network. Backups are generated specifically for production environents, but customers can choose to restore a backup from production to any environment. By default, backups are accessible to public web traffic through HTTP(S) connections.
+DXP Cloud stores a copy of the Database service and volumes from Liferay DXP within its private network. Customers can manually create a backup from any environment, and restore that backup to any other environment. By default, backups are accessible to public web traffic through HTTP(S) connections.
 
 Backups are offered as one of DXP Cloud's main services, and its rules of operation (such as backup frequency and retention) can be freely configured. See the [Backup Service Overview](../platform-services/backup-service/backup-service-overview.md) for more information.
 

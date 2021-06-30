@@ -10,9 +10,9 @@ Changing the MySQL password for your [`database` service](./database-service.md)
 
 If you are changing the password for a production environment, then you must ensure you have an up-to-date backup so you can restore it after the update.
 
-To create a backup, navigate to your production (`prd`) environment and click _Backups_ from the menu on the left:
+To create a backup for any environment, click _Backups_ from the menu on the left:
 
-![Navigate to your production environment's Backups page.](./changing-your-database-password/images/01.png)
+![Navigate to your chosen environment's Backups page.](./changing-your-database-password/images/01.png)
 
 Then, click _Backup Now_ on the _Backups_ page:
 
@@ -86,7 +86,7 @@ When you are ready, follow these steps to change your database password:
 
     The database service starts up using the updated password. The `liferay` and `backup` services restart to reconnect to the database service with the correct password, as well.
 
-1. If you [prepared a backup](#creating-a-backup), then navigate to your **production** environment's _Backups_ page, and [restore the backup](../backup-service/restoring-data-from-a-backup.md).
+1. If you [prepared a backup](#creating-a-backup), then navigate to your chosen environment's _Backups_ page, and [restore the backup](../backup-service/restoring-data-from-a-backup.md).
 
 Your `database` service is now updated with a new password, and your other services are synchronized to connect to it properly.
 

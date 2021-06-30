@@ -53,19 +53,19 @@ Run this command to invoke the API and upload the zipped files:
 
 ```bash
 curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -F 'database=@/my-folder/database.tgz' \
   -F 'volume=@/my-folder/volume.tgz' \
   -u user@domain.com:password
 ```
 
-Substitute `<PROJECT-NAME>` with the appropriate name for your DXP Cloud project. Substitute `/my-folder` with the correct path to the zipped files.
+Substitute `<PROJECT-NAME>` with the appropriate name for your DXP Cloud project. Substitute `<ENV>` with the abbreviation corresponding to your chosen environment (such as `dev` or `prd`). Substitute `/my-folder` with the correct path to the zipped files.
 
 Once these are uploaded, the backup service will initialize a DXP Cloud backup.
 
 ```note::
-   The backup will appear on the `Backups` page in your ``prd`` environment, but it will not apply to any of your environments until you choose to restore it.
+   The backup will appear on the `Backups` page in your chosen environment, but it will not apply to any of your environments until you choose to restore it.
 ```
 
 ## Copy Liferay DXP Configurations
@@ -103,7 +103,7 @@ Now that the backup has been uploaded and your service configurations are applie
 
 1. Log into the DXP Cloud console, if you are not already logged in.
 
-1. Navigate to your production environment, then click _Backups_ from the side menu.
+1. Navigate to the environment you [uploaded your backup to](#invoke-backup-service-api), then click _Backups_ from the side menu.
 
 1. Choose the newly uploaded backup on the list, and then click _Restore to_ from the Actions menu for that backup.
 

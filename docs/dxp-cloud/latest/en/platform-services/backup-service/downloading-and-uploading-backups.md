@@ -4,9 +4,13 @@ The DXP Cloud backup service creates backups of an environment's database and th
 
 Users can also download or upload environment backups [using the DXP Cloud Console](#uploading-backups-via-the-console), or through [Backup APIs](#backup-service-apis).
 
+```note::
+   The Backups page is only available in production environments for backup service versions older than 4.3.5.
+```
+
 ## Downloading Backups via the Console
 
-Follow these steps to download a backup from the *Backups* page in your `prd` environment:
+Follow these steps to download a backup from the *Backups* page in your chosen environment:
 
 1. Click on the *Actions* button ( ⋮ ) for the backup you want to download.
 
@@ -23,12 +27,12 @@ Follow these steps to download a backup from the *Backups* page in your `prd` en
     ![Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
 
 ```note::
-   Only production environment administrators can download backups from the Backups page.
+   Only administrators for the chosen environment can download backups from the Backups page.
 ```
 
 ## Uploading Backups via the Console
 
-You can also upload a backup to your project through the *Backups* page in your `prd` environment.
+You can also upload a backup to your project through the *Backups* page in your chosen environment.
 
 Before you can upload a backup to DXP Cloud, you must compress the database dump and document library in separate archives. See [Preparing the Database and Document Library for Upload](#preparing-the-database-and-document-library-for-upload) for more information on preparing for the upload for an on-premises environment.
 
@@ -40,7 +44,7 @@ Follow these steps from the *Backups* page:
 
 1. Click *Upload Backup...* near the top of the screen.
 
-1. On the Upload Backup page, expand the appropriate production environment, and then click the `+` icons for both the database and document library to upload them.
+1. On the Upload Backup page, expand the appropriate environment, and then click the `+` icons for both the database and document library to upload them.
 
     ![Click the icons to upload both the database and document library as .gz archives.](./downloading-and-uploading-backups/images/03.png)
 
@@ -81,7 +85,7 @@ Here's an example that uses token authentication with the upload API:
 
 ```bash
 curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -H 'dxpcloud-authorization: Bearer <USER_TOKEN>' \
   -F 'database=@/my-folder/database.gz' \
@@ -106,7 +110,7 @@ Name | Type     | Required |
 
 ```bash
 curl -X GET \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/download/database/id \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/download/database/id \
   -u user@domain.com:password \
   --output database.gz
 ```
@@ -129,7 +133,7 @@ Name | Type     | Required |
 
 ```bash
 curl -X GET \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/download/volume/id \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/download/volume/id \
   -u user@domain.com:password \
   --output volume.tgz
 ```
@@ -159,7 +163,7 @@ Name       | Type   | Required |
 
 ```bash
 curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -F 'database=@/my-folder/database.gz' \
   -F 'volume=@/my-folder/volume.tgz' \

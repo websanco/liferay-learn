@@ -31,12 +31,12 @@ Besides having different prices and computing power, these environment types dif
 
 **Production**
 
-* Backup: Data can be backed up and restored into any environment.
+* Backup: Data backups are automatically created on a regular schedule by default.
 * Database: Data is replicated in multiple availability zones and contains enhanced IOPS.
 
 **Non-production**
 
-* Backup: Data can only be restored to these environments.
+* Backup: Data backups are not created automatically by default.
 * Database: Data is present in a single availability zone and contains regular IOPS.
 
 ![Figure 3: Your environment's type appears in Settings.](./understanding-dxp-cloud-environments/images/03.png)
