@@ -6,7 +6,7 @@ import com.liferay.portal.kernel.settings.definition.ConfigurationBeanDeclaratio
 
 import org.osgi.service.component.annotations.Component;
 
-@Component
+@Component(service = ConfigurationBeanDeclaration.class)
 public class G8V3AbleConfigurationBeanDeclaration
 	implements ConfigurationBeanDeclaration {
 
