@@ -34,15 +34,12 @@ public class N2F3Portlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
-		long companyId = _portal.getCompanyId(renderRequest);
-
 		try {
-			N2F3WebConfiguration n2f3WebConfiguration =
-				_configurationProvider.getCompanyConfiguration(
-					N2F3WebConfiguration.class, companyId);
-
 			renderRequest.setAttribute(
-				N2F3WebConfiguration.class.getName(), n2f3WebConfiguration);
+				N2F3WebConfiguration.class.getName(),
+				_configurationProvider.getCompanyConfiguration(
+					N2F3WebConfiguration.class,
+					_portal.getCompanyId(renderRequest)));
 		}
 		catch (ConfigurationException configurationException) {
 			throw new PortletException(configurationException);
