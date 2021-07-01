@@ -1,12 +1,10 @@
 # Automatically Translating Web Content
 
-Liferay provides integration with the Google Cloud Translation API for generating automatic translations of Web Content. To enable this feature, you must have an active Google Cloud project with Cloud Translation API enabled. This project must also have a service account with a JSON account key. See official [Google Cloud Translation documentation](https://cloud.google.com/translate/docs/setup) for more information.
+Liferay integrates with the Google Cloud Translation API to generate automatic translations of Web Content. To enable this feature, you must have an active Google Cloud project with Cloud Translation API enabled. This project must also have a service account with a JSON account key. See official [Google Cloud Translation documentation](https://cloud.google.com/translate/docs/setup) for more information.
 
 ## Enabling Automatic Translation
 
-Follow these steps to enable automatic translation for a Liferay instance.
-
-1. Open the *Global Menu*(![Global Menu]()), click on the *Control Panel* tab, and go to *System Settings* &rarr; *Translation*.
+1. Open the *Global Menu*(![Global Menu]()). Click the *Control Panel* tab and go to *System Settings* &rarr; *Translation*.
 
    ![Go to Translation under System Settings.](./automatically-translating-web-content/images/01.png)
 
@@ -14,17 +12,17 @@ Follow these steps to enable automatic translation for a Liferay instance.
 
 1. Enter a valid Google Cloud service account key in JSON format.
 
-1. Click on *Save*.
+1. Click *Save*.
 
 ## Using Automatic Translation
 
 Once Google Cloud Translation is enabled, auto translate buttons are added to the translation interface for Web Content.
 
-Follow these steps to automatically translate all or only individual Web Content fields.
+Follow these steps to automatically translate all or only individual Web Content fields:
 
 1. Open the Web Content application in a Site or Asset Library.
 
-1. Click the *Actions* button (![Actions Button]()) for the content you want to translate, and select *Translate*.
+1. Click *Actions* (![Actions Button]()) for the content you want to translate and select *Translate*.
 
    ![Open the Web Content translation interface.](./automatically-translating-web-content/images/02.png)
 
