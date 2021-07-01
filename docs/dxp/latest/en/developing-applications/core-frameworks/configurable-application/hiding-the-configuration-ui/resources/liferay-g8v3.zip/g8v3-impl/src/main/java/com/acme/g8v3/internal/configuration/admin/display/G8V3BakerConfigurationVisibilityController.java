@@ -26,14 +26,14 @@ public class G8V3BakerConfigurationVisibilityController
 			_g8v3AbleConfiguration =
 				_configurationProvider.getSystemConfiguration(
 					G8V3AbleConfiguration.class);
+
+			return _g8v3AbleConfiguration.enableG8V3BakerConfiguration();
 		}
 		catch (ConfigurationException configurationException) {
 			_log.error(configurationException, configurationException);
 
 			return false;
 		}
-
-		return _g8v3AbleConfiguration.enableG8V3BakerConfiguration();
 	}
 
 	@Override
