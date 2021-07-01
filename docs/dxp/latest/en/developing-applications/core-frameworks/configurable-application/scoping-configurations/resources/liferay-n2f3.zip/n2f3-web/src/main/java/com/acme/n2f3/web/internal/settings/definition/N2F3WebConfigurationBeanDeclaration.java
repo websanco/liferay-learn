@@ -6,8 +6,8 @@ import com.liferay.portal.kernel.settings.definition.ConfigurationBeanDeclaratio
 
 import org.osgi.service.component.annotations.Component;
 
-@Component
-public class N2F3ConfigurationBeanDeclaration
+@Component(service = ConfigurationBeanDeclaration.class)
+public class N2F3WebConfigurationBeanDeclaration
 	implements ConfigurationBeanDeclaration {
 
 	@Override
