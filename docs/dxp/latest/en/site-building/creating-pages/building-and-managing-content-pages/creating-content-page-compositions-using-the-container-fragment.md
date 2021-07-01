@@ -3,7 +3,7 @@
 Layout and composition are the foundation of your [Content Page](./content-pages-overview.md) design. When you get this right, your Content Page is easier to read and navigate, resulting in a richer and more consistent user experience. Using the [Container Fragment](./page-fragments-user-interface-reference.md#container) in Liferay DXP, you can define drop zones for other Fragments, create Page compositions with a high degree of customization, and reuse these compositions across your Site Pages.
 
 ```tip::
-   In addition to the Container Fragment, you can use the `Grid Fragment <./page-fragments-user-interface-reference.md#grid>`_ to customize the Content Page layout and create a responsive design. For more information, see `Building Responsive Layouts with the Grid Fragment <../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_.
+   In addition to the Container Fragment, you can use the `Grid Fragment <./page-fragments-user-interface-reference.md#grid>`_ to customize the Content Page layout and create a responsive design. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_.
 ```
 
 When you [create a new Content Page](../adding-pages/adding-a-page-to-a-site.md), a default drop zone appears. You can add any Fragment to this area, but using the Container Fragment as the first element in your composition has important advantages:
