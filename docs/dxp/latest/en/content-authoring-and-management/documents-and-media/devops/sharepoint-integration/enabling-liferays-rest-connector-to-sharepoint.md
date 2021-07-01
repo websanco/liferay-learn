@@ -42,13 +42,13 @@ Once the connector is successfully deployed and installed, you can add SharePoin
 
 ## Updating to the Latest Version
 
-Previously, the Liferay REST Connector to SharePoint was named Liferay Connector for SharePoint. If the older version of the application is installed on your Liferay Server, follow these steps to install the latest version.
+Previously, the Liferay REST Connector to SharePoint was named Liferay Connector for SharePoint. If the older version of the application is installed on your Liferay server, follow these steps to install the latest version.
 
 1. Download the [Liferay REST Connector to SharePoint](https://web.liferay.com/marketplace/-/mp/application/105406871) as an LPKG file via the Liferay Marketplace.
 
 1. Stop the Liferay DXP server.
 
-1. Navigate to the [`[LIFERAY_HOME]/osgi/marketplace`](../../../../installation-and-upgrades/reference/liferay-home.md) folder, and replace the old LPKG file with the new one.
+1. Navigate to the [`[LIFERAY_HOME]/osgi/marketplace`](../../../../installation-and-upgrades/reference/liferay-home.md) folder and replace the old LPKG file with the new one.
 
 1. Restart the Liferay DXP server.
 
