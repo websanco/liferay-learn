@@ -267,14 +267,14 @@ Pages information represents aggregated interaction data with any tracked page. 
 
 ## Assets 
 
-Asset information represents aggregated interaction data with any tracked asset page. Each page URL might contain multiple assets. Asset metrics is a complement to the page report and it offers a more in depth view of page interactions. There are four assets available: blogs, documents and media, forms and web content. Each of these assets have a specific endpoint:
+Asset information represents aggregated interaction data with any tracked asset page. Any page URL could contain multiple assets. Asset metrics is a complement to the page report, and it offers a more in-depth view of page interactions. There are four assets available: blogs, documents and media, forms, and web content. Each of these assets has a specific endpoint:
 
 * Blogs - [https://analytics.liferay.com/api/reports/blogs](https://analytics.liferay.com/api/reports/blogs)
 * Documents And Media - [https://analytics.liferay.com/api/reports/documents-and-media](https://analytics.liferay.com/api/reports/documents-and-media)
 * Forms - [https://analytics.liferay.com/api/reports/forms](https://analytics.liferay.com/api/reports/forms)
 * Web Content - [https://analytics.liferay.com/api/reports/web-contents](https://analytics.liferay.com/api/reports/web-contents)
 
-Each asset contains its own set of properties:
+Each asset contains its own set of properties.
 
 ### Blogs
 
@@ -311,10 +311,10 @@ Each asset contains its own set of properties:
 * `ID` (String): Unique identifier of the blog.
 * `Title` (String) : Title used for the blog.
 * `Reading Time Metric` (Double): Average user time spent reading the blog.
-* `Clicks Metric` (Double): Sum of users clicks on the blog.
-* `Views Metric` (Double): Sum of users views of the blog.
+* `Clicks Metric` (Double): Sum of user clicks on the blog.
+* `Views Metric` (Double): Sum of user views of the blog.
 * `Ratings Metric` (Double): Average rating (1-5 range) of the blog over that selection period.
-* `Comments Metric` (Double): Sum of comments that happened on the blog.
+* `Comments Metric` (Double): Sum of comments added to the blog.
 
 ### Documents and Media
 
@@ -349,7 +349,7 @@ Each asset contains its own set of properties:
 * `Title` (String) : Title used for the document or media.
 * `Downloads Metric` (Double): Sum of user downloads of the document or media.
 * `Ratings Metric` (Double): Average rating (1-5 range) of the document or media over that selection period.
-* `Comments Metric` (Double): Sum of comments that happened on the document or media.
+* `Comments Metric` (Double): Sum of comments added to the document or media.
 * `Previews Metric` (Double): Sum of user previews of the document or media.
 
 ### Forms
@@ -391,7 +391,7 @@ Each asset contains its own set of properties:
 * `Submissions Metric` (Double): Sum of submissions of the form.
 * `Completion Time Metric` (Double): Average user time for completion of the form.
 
-You can also follow the pages link and see the form page metrics information. It will show form metrics by page and form fields:
+You can also follow the pages link and see the form page metrics information. It shows form metrics by page and form fields:
 
 ```json
 {
