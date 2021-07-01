@@ -37,24 +37,22 @@ public class N2F3Portlet extends MVCPortlet {
 		long companyId = _portal.getCompanyId(renderRequest);
 
 		try {
-			_n2f3WebConfiguration =
+			N2F3WebConfiguration n2f3WebConfiguration =
 				_configurationProvider.getCompanyConfiguration(
 					N2F3WebConfiguration.class, companyId);
+
+			renderRequest.setAttribute(
+				N2F3WebConfiguration.class.getName(), n2f3WebConfiguration);
 		}
 		catch (ConfigurationException configurationException) {
 			throw new PortletException(configurationException);
 		}
-
-		renderRequest.setAttribute(
-			N2F3WebConfiguration.class.getName(), _n2f3WebConfiguration);
 
 		super.render(renderRequest, renderResponse);
 	}
 
 	@Reference
 	private ConfigurationProvider _configurationProvider;
-
-	private N2F3WebConfiguration _n2f3WebConfiguration;
 
 	@Reference
 	private Portal _portal;
