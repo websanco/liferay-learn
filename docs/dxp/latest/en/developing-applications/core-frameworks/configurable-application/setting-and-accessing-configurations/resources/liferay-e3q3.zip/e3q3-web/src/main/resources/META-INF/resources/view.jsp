@@ -9,7 +9,7 @@ E3Q3WebConfiguration e3q3WebConfiguration = (E3Q3WebConfiguration)request.getAtt
 <p
 	style="color: <%= e3q3WebConfiguration.fontColor() %>; font-family: <%= e3q3WebConfiguration.fontFamily() %>; font-size: <%= e3q3WebConfiguration.fontSize() %>pt;"
 >
-	<liferay-ui:message key="e3q3-porlet-welcome" /><br />
+	<liferay-ui:message key="e3q3-portlet-welcome" /><br />
 	color: <%= e3q3WebConfiguration.fontColor() %><br />
 	font-family: <%= e3q3WebConfiguration.fontFamily() %><br />
 	font-size: <%= e3q3WebConfiguration.fontSize() %>

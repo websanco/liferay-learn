@@ -9,7 +9,7 @@ N2F3WebConfiguration n2f3WebConfiguration = (N2F3WebConfiguration)request.getAtt
 <p
 	style="color: <%= n2f3WebConfiguration.fontColor() %>; font-family: <%= n2f3WebConfiguration.fontFamily() %>; font-size: <%= n2f3WebConfiguration.fontSize() %>pt;"
 >
-	<liferay-ui:message key="n2f3-porlet-welcome" /><br />
+	<liferay-ui:message key="n2f3-portlet-welcome" /><br />
 	color: <%= n2f3WebConfiguration.fontColor() %><br />
 	font-family: <%= n2f3WebConfiguration.fontFamily() %><br />
 	font-size: <%= n2f3WebConfiguration.fontSize() %>
