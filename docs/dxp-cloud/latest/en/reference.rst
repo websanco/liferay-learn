@@ -6,6 +6,7 @@ Reference
 
    reference/dxp-cloud-infrastructure.md
    reference/configuration-via-lcp-json.md
+   reference/reading-logs-in-dxp-cloud.md
    reference/understanding-service-stack-versions.md
    reference/upgrading-your-dxp-cloud-stack.md
    reference/dxp-cloud-project-changes-in-version-4.md
@@ -15,6 +16,7 @@ Reference
 
 -  :doc:`/reference/dxp-cloud-infrastructure`
 -  :doc:`/reference/configuration-via-lcp-json`
+-  :doc:`/reference/reading-logs-in-dxp-cloud`
 -  :doc:`/reference/understanding-service-stack-versions`
 -  :doc:`/reference/upgrading-your-dxp-cloud-stack`
 -  :doc:`/reference/dxp-cloud-project-changes-in-version-4`
