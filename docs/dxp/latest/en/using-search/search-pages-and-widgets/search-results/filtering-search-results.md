@@ -79,7 +79,9 @@ To find the fields you can filter by in the Custom Filter widget, Users with the
 
 ## Finding and Using Nested Fields
 
-As described in [Accessing Nested DDM Fields](../search-facets/custom-facet.md#accessing-nested-ddm-fields) (in the Custom Facets article), DDM Fields have become [nested fields](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document). On the latest Fix Pack and GA release of 7.3, the [Elasticsearch Nested query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-nested-query.html) is supported to account for these nested fields.
+> Availability: 7.2 FP10+, 7.3 FP1/SP1+
+
+As described in [Accessing Nested DDM Fields](../search-facets/custom-facet.md#accessing-nested-ddm-fields) (in the Custom Facets article), DDM Fields became [nested fields](../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document) as of Liferay 7.2 SP3+/FP8+ (and on all Liferay 7.3 versions). On the latest Fix Pack and GA release of 7.2 and 7.3, the [Elasticsearch Nested query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-nested-query.html) is supported to account for these nested fields.
 
 To find DDM fields in existing documents in the index,
 
@@ -128,7 +130,7 @@ Using one of these fields in a Custom Filter configuration requires three custom
 
 See [Boosting Matches to Nested Fields](custom-filter-examples.md#boosting-matches-to-nested-fields) for an example showing the use of a DDM Structure field with the Custom Filter widget.
 
-# Related Content
+## Related Content
 
 - [Custom Filter Examples](./custom-filter-examples.md)
 - [Result Rankings](../../search-administration-and-tuning/result-rankings.md)
