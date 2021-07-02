@@ -50,7 +50,7 @@ Select a start date and an end date and click the *Download* button for a CSV lo
 
 ## Suppressed Users
 
-Suppressing a user stops further data collection of an individual. To view a list of suppressed individuals or to unsuppress an individual, click the *Manage* button.
+Suppressing a user excludes them from further identity resolution activities. Note, a suppressed user is still considered an anonymous user and is still included in individual or segmented data. To view a list of suppressed individuals or to unsuppress an individual, click the *Manage* button.
 
 ![View suppressed individuals or unsuppress individuals.](./data-control-and-privacy/images/06.png)
 
