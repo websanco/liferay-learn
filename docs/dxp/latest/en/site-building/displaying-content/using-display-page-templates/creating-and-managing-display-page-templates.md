@@ -1,11 +1,9 @@
 # Creating and Managing Display Page Templates
 
-A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL.
-
-![A Display Page Template displays your content at a friendly URL with the formatting and design you create.](./creating-and-managing-display-page-templates/images/01.png)
+A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./displaying-content-with-display-page-templates.md).
 
 ```note::
-   Display Page Templates are only supported for web content, documents, and blog entries.
+   Display Page Templates are only supported for Web Content, Documents, Blog Entries, and Segments (starting with Liferay DXP 7.4.)
 ```
 
 ## Creating a Display Page Template
@@ -36,9 +34,9 @@ A Display Page Template specifies the layout and formatting for your content and
 
 Now that your Display Page Template is created, you can [publish your content with it](./publishing-content-with-display-pages.md).
 
-<!-- ## Viewing Display Page Template Usage
+## Viewing Display Page Template Usage
 
-> Liferay 7.4+
+> Available: Liferay DXP 7.4+
 
 You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of content that uses a specific Display Page Template.
 
@@ -48,7 +46,7 @@ You can manage the different Display Page Templates using the *Actions* menu (![
 
 ![Managing your Display Page Template using the Actions menu](./creating-and-managing-display-page-templates/images/06.png)
 
-Before you delete a Display Page Template in use by some of your content, you have two ways to unassign the Display Page Template from the content: 
+Before you delete a Display Page Template in use by some of your content, you have two ways to unassign the Display Page Template from the content:
 
 - Assign to Default: Your content is unassigned from the current Display Page Template and assigned to the default Display Page Template for the content type and subtype (if applicable.)
 - Unassign: Your content is not assigned to any Display Page Template.
@@ -62,7 +60,7 @@ To view your Display Page Template usage and unassign your content,
 1. Click the *Actions* menu (![Actions](../../../images/icon-actions.png)) in the top-right corner and select *Assign to Default* or *Unassigned*.
 1. Click *OK*.
 
-If you assign your content to a new Display Page Template, review that the content displays as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md). -->
+If you assign your content to a new Display Page Template, review that the content displays as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md).
 
 ## Additional Information
 
