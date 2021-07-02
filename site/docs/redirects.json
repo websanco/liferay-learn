@@ -10,5 +10,6 @@
 	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
 	"dxp/latest/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
-	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html"
+	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
+	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }

@@ -5,7 +5,7 @@ Troubleshooting
    :maxdepth: 1
 
    troubleshooting/troubleshooting-tools-and-resources.md
-   troubleshooting/log-management.md
+   troubleshooting/reading-dxp-cloud-service-logs.md
    troubleshooting/shell-access.md
    troubleshooting/troubleshooting-services.md
    troubleshooting/disaster-recovery-overview.md
@@ -15,7 +15,7 @@ Troubleshooting
    troubleshooting/liferay-cloud-platform-status.md
 
 -  :doc:`/troubleshooting/troubleshooting-tools-and-resources`
--  :doc:`/troubleshooting/log-management`
+-  :doc:`/troubleshooting/reading-dxp-cloud-service-logs`
 -  :doc:`/troubleshooting/shell-access`
 -  :doc:`/troubleshooting/troubleshooting-services`
 -  :doc:`/troubleshooting/disaster-recovery-overview`

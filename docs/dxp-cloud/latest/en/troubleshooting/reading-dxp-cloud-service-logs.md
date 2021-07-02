@@ -1,4 +1,4 @@
-# Log Management
+# Reading DXP Cloud Service Logs
 
 Environment logs are crucial for diagnosing and resolving technical issues in a project. Liferay DXP Cloud provides a variety of environment logs that users can access and download via the DXP Cloud console or OS terminal.
 
@@ -32,7 +32,7 @@ Additionally, these components are always present in any log message in DXP Clou
 
 The instance ID associated with a log message corresponds to one of the instances of your service. You can see (and filter by) all of the active instances in your service from the Logs page by clicking on the instances dropdown menu above the logs:
 
-![Click on the instances dropdown menu to see all of the instances](./log-management/images/01.png)
+![Click on the instances dropdown menu to see all of the instances](./reading-dxp-cloud-service-logs/images/01.png)
 
 The format of the instance ID depends on what deployment type (deployment or stateful set) the service is configured as. See [Understanding Deployment Types](../build-and-deploy/understanding-deployment-types.md) for more information.
 
@@ -80,11 +80,11 @@ View application, status, and build logs across all environment services, or fil
 
 To download logs, click the *Download Logs* button.
 
-![Figure 1: View environment logs form the Logs page.](./log-management/images/02.png)
+![Figure 1: View environment logs form the Logs page.](./reading-dxp-cloud-service-logs/images/02.png)
 
 Individual service logs are also available under the *Logs* tab in each service's dedicated page.
 
-![Figure 2: Access and download individual service logs under the Logs tab in each service's dedicated page.](./log-management/images/03.png)
+![Figure 2: Access and download individual service logs under the Logs tab in each service's dedicated page.](./reading-dxp-cloud-service-logs/images/03.png)
 
 ## Accessing Logs via the Terminal
 
