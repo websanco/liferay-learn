@@ -6,6 +6,7 @@
 touchpoints/sites-dashboard.md
 touchpoints/pages.md
 touchpoints/assets.md
+touchpoints/events.md
 ```
 
 Touchpoints reflect the many different ways your users and customers interact with your brand. Analytics Cloud presents a broad range of analytics data that combines traditional page analytics like page views, with comprehensive site, path, and asset-specific analytics data.
@@ -94,3 +95,7 @@ Remember that there are separate lists for different Asset types. More details o
 - [Forms](./touchpoints/assets/forms.md)
 - [Document and Media](./touchpoints/assets/documents-and-media.md)
 - [Tracking Custom Assets](./touchpoints/assets/tracking-custom-assets.md)
+
+### Events
+
+- [Events Analysis](./touchpoints/events/event-analysis.md)
