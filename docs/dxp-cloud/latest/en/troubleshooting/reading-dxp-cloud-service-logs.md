@@ -2,7 +2,7 @@
 
 Environment logs are crucial for diagnosing and resolving technical issues in a project. Liferay DXP Cloud provides a variety of environment logs that users can access and download via the DXP Cloud console or OS terminal.
 
-## Types of Logs
+## Log Types
 
 Liferay DXP Cloud provides three types of logs for environment services:
 
@@ -12,7 +12,7 @@ Liferay DXP Cloud provides three types of logs for environment services:
 
 * **Application Logs**: These logs list runtime information generated after the application is running and accessed by users.
 
-## General Log Structure
+## Log Structure
 
 Logs in DXP Cloud conform to a specific structure that gives extra, contextual information. See this log message as an example:
 
