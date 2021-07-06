@@ -29,7 +29,7 @@ When you create a Display Page Template, you choose among the following types of
 
 Consider the following when creating and managing Display Page Templates:
 
-- You can create different Display Page Templates for the same content type but you can set only one default template for the same content type.
+- You can create different Display Page Templates for the same content type, but you can set only one default template for the same content type.
 - You can associate the content to the default Display Page Template or you can use a specific Display Page Template (see [Publishing Content With Display Pages](./publishing-content-with-display-pages.md) for more information.)
 - The Display Page renders your content using a unique [friendly URL](../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md).
 - To update your Display Page layout and mappings, update the Display Page Template under Site Administration &rarr; *Design* &rarr; *Page Templates*.
@@ -42,7 +42,7 @@ Consider the following example to better understand how you can implement Displa
 
 In your insurance website, you want to showcase the different types of insurances your business offers to prospective customers. You have different Web Content Articles in Liferay DXP describing each one of these insurances. You start with a landing page where visitors can see all the insurances at a glance, and click on each insurance (1 to 4, in this example) to access a new page with the corresponding insurance details.
 
-![Configure the Display Page Template on the Web Content Article.](./displaying-content-with-display-page-templates/images/02.png)
+![You can apply the same layout to different content of the same type using a single Display Page Template.](./displaying-content-with-display-page-templates/images/02.png)
 
 ```tip::
    `Content Pages <../../creating-pages/building-and-managing-content-pages/content-pages-overview.md>`_ give you the tools to create stunning landing pages.
