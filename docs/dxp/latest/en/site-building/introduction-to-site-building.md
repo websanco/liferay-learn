@@ -18,7 +18,7 @@ Liferay DXP's Content Management System (CMS) is intuitive and user-friendly, of
 
 You can create and edit content inline with [Fragments](./displaying-content/using-fragments/using-page-fragments.md). Fragments are individual pieces of code (CSS, HTML, and JavaScript) that you can arrange and combine to build a page. Several Fragments are included out-of-the-box that you can modify to create your content. If you require a more custom solution, you can [create your own](./developer-guide/developing-page-fragments/developing-fragments-intro.md).
 
-Each piece of content (asset) has a default page that's displayed when you view it, but you can provide a customized landing page for it by creating a [Display Page Template](./displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md). A Display Page Template maps portions of the Web Content (title, main body, image, etc.) to Fragments, so you can create the look you desire.
+Each piece of content (asset) has a default page that's displayed when you view it, but you can provide a customized landing page for it by creating a [Display Page Template](./displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). A Display Page Template maps portions of the Web Content (title, main body, image, etc.) to Fragments, so you can create the look you desire.
 
 ![Display Page Templates let you map Web Content to Page Fragments to display your content with the design and layout you want.](./introduction-to-site-building/images/02.png)
 

@@ -1,6 +1,6 @@
 # Publishing Content With Display Pages
 
-To create a Display Page, create a Display Page Template first and then display the content using the Display Page unique URL. Display Pages are always associated to a certain type of content. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./displaying-content-with-display-page-templates.md).
+To create a Display Page, create a Display Page Template first and then display the content using the Display Page unique URL. Display Pages are always associated to a certain type of content. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./about-display-page-templates-and-display-pages.md).
 
 To publish your content using a Display Page:
 
@@ -38,5 +38,5 @@ To publish your content using a Display Page:
 
 ## Additional Information
 
-- [Displaying Content with Display Page Templates](./displaying-content-with-display-page-templates.md)
+- [About Display Page Templates and Display Pages](./about-display-page-templates-and-display-pages.md)
 - [Creating and Managing Display Page Templates](./creating-and-managing-display-page-templates.md)

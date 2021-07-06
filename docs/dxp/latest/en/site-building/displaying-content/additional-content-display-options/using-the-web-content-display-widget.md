@@ -92,5 +92,5 @@ If you [enable the OpenOffice or LibreOffice integration](../../../content-autho
 
 - [Adding a Basic Web Content Article](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)
 - [Content Pages Overview](../../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md)
-- [Displaying Content on Display Pages Templates](../using-display-page-templates/displaying-content-with-display-page-templates.md)
+- [Displaying Content on Display Pages Templates](../using-display-page-templates/about-display-page-templates-and-display-pages.md)
 - [Displaying Assets](../using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)
