@@ -29,8 +29,8 @@ When you create a Display Page Template, you choose among the following types of
 
 Consider the following when creating and managing Display Page Templates:
 
-- You can create different Display Page Templates for the same content type, but you can set only one default template for the same content type.
-- You can associate the content to the default Display Page Template or you can use a specific Display Page Template (see [Publishing Content With Display Pages](./publishing-content-with-display-pages.md) for more information.)
+- You can create more than one Display Page Template for the same content type, but you can set only one by default.
+- You can publish the content with the default Display Page Template or you can choose a specific Display Page Template (see [Publishing Content With Display Pages](./publishing-content-with-display-pages.md) for more information.)
 - The Display Page renders your content using a unique [friendly URL](../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md).
 - To update your Display Page layout and mappings, update the Display Page Template under Site Administration &rarr; *Design* &rarr; *Page Templates*.
 
