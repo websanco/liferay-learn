@@ -16,23 +16,42 @@ Display Page Templates are only supported for Web Content, Documents, Blog Entri
 
 1. Click *Add* (![Add](./../../../images/icon-add.png)).
 
-1. Enter a name for your template and select a content type and subtype, if applicable. Then click *Save*. This redirects you to a new, blank Display Page template.
+1. Enter a *Name* for your template and select a *Content Type* and *Subtype*, if applicable. Then click *Save*.
 
    ![Select the content type and subtype for your new template.](./creating-and-managing-display-page-templates/images/03.png)
 
-1. Begin editing your template using the same editing interface and page elements as [Content Pages](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
+1. Add element in the Display Page Template editor using the same interface and page elements as [Content Pages](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
 
-   ![Build your template using Content Page elements.](./creating-and-managing-display-page-templates/images/04.png)
+   ![Build your template using Fragments and Widgets.](./creating-and-managing-display-page-templates/images/04.png)
 
-1. Once you've added Page elements, you can [map](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content) them to content structure fields (e.g., title, description) by double-clicking on an editable field. Mapped fields are outlined in purple.
+1. Once you've added Page elements, you can [map](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content) them to content structure fields (e.g., title, description) by double-clicking on an editable field.
+
+   ```tip::
+      Mapped fields are outlined in purple color.
+   ```
 
    ![Map Page elements to structure fields.](./creating-and-managing-display-page-templates/images/05.png)
 
    See [Configuring SEO and Open Graph](./configuring-seo-and-open-graph.md) to learn about using these mapped structure fields when configuring SEO and Open Graph settings for your Display Page.
 
+1. Before publishing, you can preview your editable fields mappings with existing content using the [preview function](#preview-the-display-page-template-content-mappings) (available in Liferay DXP 7.4+.)
+
 1. When finished, click *Publish* to save your work.
 
-Now that your Display Page Template is created, you can [publish your content with it](./publishing-content-with-display-pages.md).
+You can now [publish your content](./publishing-content-with-display-pages.md) with the Display Page Template.
+
+### Preview the Display Page Template Content Mappings
+
+> Available: Liferay DXP 7.4+.
+
+1. From the Product Menu, click the *Preview With* drop-down menu and choose *Select Other Item*.
+
+   ![Choose the content you want to use to preview your Display Page Template.](./creating-and-managing-display-page-templates/images/07.png)
+
+1. In the Select dialog, click the content you want to use to preview the Display Page Template.
+1. Alternatively, from the Display Page Template editor, click the *Preview* (![Preview](../../../images/icon-preview.png)) button and choose the content you want to preview.
+
+   ![Click the Preview button to preview your Display Page Template mappings.](./creating-and-managing-display-page-templates/images/08.png)
 
 ## Viewing Display Page Template Usage
 
