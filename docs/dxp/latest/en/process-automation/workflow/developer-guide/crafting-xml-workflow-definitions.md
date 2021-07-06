@@ -18,10 +18,10 @@ Once you publish your workflow, it becomes available to be applied everywhere wo
 
 Only one workflow definition is installed by default: Single Approver. Several more are embedded in the Liferay source code. These definitions provide good examples of all the features described here.
 
-* [Category Specific](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml)
-* [Legal Marketing](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/legal-marketing-definition.xml)
-* [Single Approver](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/single-approver-definition.xml)
-* [Single Approver Scripted Assignment](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml)
+* [Category Specific](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)
+* [Legal Marketing](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/legal-marketing-definition.xml)
+* [Single Approver](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)
+* [Single Approver Scripted Assignment](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)
 Below you'll learn the basics by using the simplest workflow, Single Approver. The Single Approver workflow contains two required States: Start and End, which are named _created_ and _approved_. It also contains two Tasks: _review_ and _update_. These Tasks define _Actions_, such as _approve_, _reject_, and _resubmit_. 
 
 When breaking down your workflow into its components, then, think about your States, Tasks, and Actions. Once you have them defined, you're ready to get to work. Now you're ready to put it all together by seeing how the Single Approver workflow works. 
@@ -53,7 +53,7 @@ Give the definition a name, description, and version:
 
 ## Start and End Nodes
 
-Each workflow definition begins and ends with a _State Node_. Create a _Start_ node like this one from the [Single Approver](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/single-approver-definition.xml):
+Each workflow definition begins and ends with a _State Node_. Create a _Start_ node like this one from the [Single Approver](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml):
 
 ```xml
 <state>

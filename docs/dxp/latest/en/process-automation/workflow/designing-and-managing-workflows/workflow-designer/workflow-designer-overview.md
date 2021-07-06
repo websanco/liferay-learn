@@ -20,12 +20,12 @@ The workflow designer supports all [workflow node](./workflow-nodes.md) types:
 
 In addition to the functionality provided by the drag and drop interface, you have the full power of Groovy (a Java-based scripting language) to perform [programmatic actions](./../../developer-guide/using-the-script-engine-in-workflow.md) on assets being moved through your workflows.
 
-By default, only one workflow definition is installed: the Single Approver Workflow definition. You can download additional definitions here:
+By default, only one workflow definition is installed: the Single Approver Workflow definition. You can see additional examples in the Liferay source code:
 
-* [Category-Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml)
-* [Legal Marketing Definition](./workflow-designer-overview/resources/legal-marketing-definition.xml)
-* [Single Approver Definition with Scripted Assignment](./workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml)
-* [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml)
+* [Category-Specific Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)
+* [Legal Marketing Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/legal-marketing-definition.xml)
+* [Single Approver Definition with Scripted Assignment](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)
+* [Single Approver Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)
 
 ## Building Workflows
 

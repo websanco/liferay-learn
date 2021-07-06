@@ -67,7 +67,7 @@ Workflow tasks are completed by a User. Assignments make sure the right users ca
 * Resource actions
 * Specific Users
 
-Additionally, you can write a script to define the assignment. For an example, see the [single-approver-definition-scripted-assignment.xml](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml).
+Additionally, you can write a script to define the assignment. For an example, see the [single-approver-definition-scripted-assignment.xml](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml).
 
 ```xml
 <assignments>

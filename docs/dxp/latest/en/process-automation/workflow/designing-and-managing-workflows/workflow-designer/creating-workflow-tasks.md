@@ -2,7 +2,7 @@
 
 > Subscribers
 
-The default [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml) offers a simple introduction to workflow tasks. It has only two task nodes: Review and Update. The workflow enters the Review node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the Update task. The submitter can then modify the asset and resubmit it for review.
+The default [Single Approver Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml) offers a simple introduction to workflow tasks. It has only two task nodes: Review and Update. The workflow enters the Review node when a content creator submits an asset for review. In review, the asset can be accepted or rejected. If it's rejected, the process moves to the Update task. The submitter can then modify the asset and resubmit it for review.
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
