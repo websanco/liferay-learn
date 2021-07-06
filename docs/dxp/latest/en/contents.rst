@@ -6,7 +6,7 @@ Contents
    :includehidden:
    :maxdepth: 6
 
-   getting_started
+   getting_started.md
    site_building
    content_authoring_and_management
    process_automation

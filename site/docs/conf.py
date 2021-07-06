@@ -23,8 +23,9 @@ author = "Liferay"
 copybutton_image_path = "img/paste.svg"
 copyright = "2020, Liferay"
 extensions = [
+    "myst_parser",
     "notfound.extension",
-    "recommonmark",
+    # "recommonmark",
     "sphinx_copybutton",
     "sphinxext.opengraph",
     "sphinx_markdown_tables",
@@ -41,7 +42,8 @@ html_short_title = "Documentation"
 html_show_copyright = False
 html_show_sphinx = False
 html_static_path = ["_static"]
-html_theme = "basic"
+html_theme = "classic"
+# html_theme = "basic"
 html_title = "Liferay Learn"
 language = os.path.basename(language_path)
 locale_dirs = ["_locale"]
