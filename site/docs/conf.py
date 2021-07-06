@@ -51,6 +51,7 @@ notfound_no_urls_prefix = True
 notfound_template = "404.html"
 ogp_site_url = "https://learn.liferay.com/"
 ogp_image = "https://learn.liferay.com/_static/liferay-waffle.svg"
+ogp_site_name = "Liferay Learn"
 project = "Liferay Learn"
 release = "1.0"
 source_suffix = [".md", ".rst"]
