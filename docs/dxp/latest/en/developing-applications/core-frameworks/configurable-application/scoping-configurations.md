@@ -32,10 +32,10 @@ This class has one method that returns the configuration interface class of your
 
 The Configuration Provider is an API that provides an easy way to retrieve configuration. Use the specific method for your application needs:
 
-* `getSystemConfiguration()`: Used to obtain system scoped configuration. The applications configuration is found 
+* `getSystemConfiguration()`: Used to obtain system scoped configuration. The application's system level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*.
 
-* `getCompanyConfiguration()`: Used to obtain instance scoped configuration. Use an instance of `Portal` to retrieve `companyId`. For example, `_portal.getCompanyId(renderRequest)`.
+* `getCompanyConfiguration()`: Used to obtain instance scoped configuration. Use an instance of `Portal` to retrieve `companyId`. For example, `_portal.getCompanyId(renderRequest)`. The application's instance level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*.
 
-* `getGroupConfiguration()`: Used to get site scoped configuration. Use an instance of `Portal` to retrieve `groupId`. For example, `_portal.getScopeGroupId(renderRequest)`.
+* `getGroupConfiguration()`: Used to get site scoped configuration. Use an instance of `Portal` to retrieve `groupId`. For example, `_portal.getScopeGroupId(renderRequest)`. The application's site level configuration is found in *Product Menu* &rarr; *Configuration* &rarr; *Site Settings*. Note, this is available in Liferay 7.4.
 
 For portlet scoped configuration see [Portlet Level Configuration](./portlet-level-configuration.md).
