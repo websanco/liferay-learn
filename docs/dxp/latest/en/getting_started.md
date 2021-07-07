@@ -1,7 +1,4 @@
-Getting Started
-===============
-
-Hello this is content.
+# Getting Started
 
 ```{toctree}
 :maxdepth: 3
