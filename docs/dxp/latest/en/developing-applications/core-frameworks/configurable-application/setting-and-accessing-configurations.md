@@ -9,7 +9,6 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
     ```bash
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
-
 1. Download and unzip [Setting and Accessing Configurations](./liferay-e3q3.zip).
 
     ```bash
@@ -17,7 +16,7 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
     ```
 
     ```bash
-    unzip liferay-e3q3.zip
+    unzip liferay-n2f3.zip
     ```
 
 1. From the module root, build and deploy.
@@ -33,20 +32,20 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
 1. Confirm the deployment in the Liferay Docker container console.
 
     ```
-    STARTED com.acme.e3q3.web.0.0 [1650]
+    STARTED com.acme.n2f3.web.0.0 [1650]
     ```
 
 1. Verify that the example module is working. Open your browser to `https://localhost:8080`
 
-1. Add the E3Q3 Portlet to a page. You can find the example portlet under Sample Widgets.
+1. Add the N2F3 Portlet to a page. You can find the example portlet under Sample Widgets.
 
-    ![Add the E3Q3 Portlet to a page.](./setting-and-accessing-configurations/images/01.png)
+    ![Add the N2F3 Portlet to a page.](./setting-and-accessing-configurations/images/01.png)
 
     The UI shows a welcome message along with the three configurable attributes: font color, font family, and font size.
 
-1. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Platform click *Third Party*. Click the name of the sample application on the left.
+2. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Other click *category.n2f3*.
 
-    ![Click the name of the application in the Third Party list.](./setting-and-accessing-configurations/images/02.png)
+    ![Click category.n2f3 under the Other category.](./setting-and-accessing-configurations/images/02.png)
 
     Try entering a different font color, font family, and font size. Click the *Update* button and go back to your page with the published widget. Verify that the attributes have changed.
 
@@ -56,14 +55,14 @@ Here's how the configuration framework works.
 
 Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). It also defines the configurable attributes. 
 
-In the sample project, the `E3Q3WebConfiguration.java` file is the configuration interface. 
+In the sample project, the `N2F3WebConfiguration.java` file is the configuration interface. 
 
 ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/configuration/E3Q3WebConfiguration.java
 :language: java
 :lines: 5-17
 ```
 
-Note, for this interface no scope is defined, so the configuration scope is set automatically to `SYSTEM`.
+Note, for this example interface the scope is set to `Scope.COMPANY`. See [Scoping Configurations](./scoping-configurations.md) for more information.
 
 The interface has three configurable attributes: font color, font family, and font size. Note that color and family are type `string` and size is type `int`.
 
@@ -82,7 +81,7 @@ Next, see how the configuration is read by the MVC Portlet.
 1. In the `@Component` annotation, the configuration interface class is specified with the `configurationPid`:
 
     ```java
-    configurationPid = "com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration"
+    configurationPid = "com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration"
     ```
 
 1. The `activate()` method has an `@Activate` annotation that invokes the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
@@ -110,14 +109,14 @@ Next, see how the configuration is read by the MVC Portlet.
 1. The following import statement adds the configuration interface to the JSP: 
 
     ```markup
-    <%@ page import="com.acme.e3q3.web.internal.configuration.E3Q3WebConfiguration" %>
+    <%@ page import="com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration" %>
     ```
 
 1. The configuration object from the request object is obtained and the configuration values are read.
 
     ```markup
     <%
-    E3Q3WebConfiguration e3q3WebConfiguration = (E3Q3WebConfiguration)request.getAttribute(E3Q3WebConfiguration.class.getName());
+    N2F3WebConfiguration n2f3WebConfiguration = (N2F3WebConfiguration)request.getAttribute(N2F3WebConfiguration.class.getName());
     %>
     ```
 
@@ -145,3 +144,4 @@ Now the font family attribute is a dropdown selection.
 ## Further Customization
 
 * [Categorizing a Configuration](./categorizing-a-configuration.md)
+* [Scoping Configurations](./scoping-configurations)
