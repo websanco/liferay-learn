@@ -44,4 +44,4 @@ This page lists all activities that have occurred on the DXP Cloud instance.
 
 * [Environment Teams and Roles](./environment-teams-and-roles.md)
 * [Overview of the DXP Cloud Deployment Workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md)
-* [Log Management](../troubleshooting/log-management.md)
+* [Log Management](../troubleshooting/reading-dxp-cloud-service-logs.md)

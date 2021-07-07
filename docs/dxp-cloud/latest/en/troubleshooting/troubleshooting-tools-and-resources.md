@@ -63,7 +63,7 @@ Application, status, and build logs are provided for each DXP Cloud Service:
 
 ![Figure 4: View logs via the Logs page in the DXP Cloud console](./troubleshooting-tools-and-resources/images/04.png)
 
-See [Log Management](./log-management.md) for more information.
+See [Log Management](./reading-dxp-cloud-service-logs.md) for more information.
 
 ## Shell Access
 

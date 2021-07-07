@@ -40,4 +40,4 @@ DXP Cloud also sends an email to all team members when the Support Access settin
 
 * [Troubleshooting Tools and Resources](./troubleshooting-tools-and-resources.md)
 * [Help Center](https://help.liferay.com/hc/en-us)
-* [Log Management](./log-management.md)
+* [Log Management](./reading-dxp-cloud-service-logs.md)

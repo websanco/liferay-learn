@@ -56,7 +56,7 @@ These robust systems enable the creation of fault tolerant processes to meet org
 
 ## Application Development Tools
 
-Keep track of application deployments and performance with real-time build and [deployment logs](../troubleshooting/log-management.md). Teams can analyze stack traces and troubleshoot bugs by [accessing the shell](../troubleshooting/shell-access.md) via the web console or terminal, and/or by downloading the logs.
+Keep track of application deployments and performance with real-time build and [deployment logs](../troubleshooting/reading-dxp-cloud-service-logs.md). Teams can analyze stack traces and troubleshoot bugs by [accessing the shell](../troubleshooting/shell-access.md) via the web console or terminal, and/or by downloading the logs.
 
 ![Figure 8: Real-time build and deployment logs help you solve problems with your applications.](./introduction-to-dxp-cloud/images/06.png)
 
