@@ -22,7 +22,7 @@ There is a conscious effort to organize the project into `docs/` and `site/` dir
 
 The `docs` directory contains all of the written documentation related to a product in markdown. All the images referenced throughout the documentation are also stored there, under its respective section name.
 
-At the root of each product directory, there is a set of `rst` files that serve as a table of contents for navigating the site. These `rst` files are compiled to be the site's side navigation with the rendering logic stored in `site/docs/templates/page.html`.
+Previously, the use of `.rst` files was required to be created in order to define the a table of contents for navigating the site for every section. The [`myst-parser`](https://myst-parser.readthedocs.io/en/latest/index.html) is currently Sphinx's default markdown parser and no longer requires Table of Contents directives (`toc` directives) to be defined only in `.rst`. Site navigation can now be included in markdown natively, alongside other traditional markdown content. These table of contents files (writtten in `.rst` or `.md`) are compiled to be the site's side navigation with the rendering logic stored in `site/docs/templates/page.html`.
 
 The product and section landing pages are achieved via [Vue](https://vuejs.org/) templates. The template logic is defined in `landingpage_template.html` and the data supplied are in respective `landing.html` files. Both the template and the data are required on the specific `rst` file that renders the landing page.
 
@@ -37,19 +37,20 @@ Add entries to `redirects.json` inside `site/docs/` to create automatic redirect
 ## Building the Site
 
 > **MacOS--Replace the `find` and `sed` tools:**
-> This script requires the `gnu` versions of `find` and `sed`. You can install these and replace the default versions:
->
-> 1. Use `brew` to install the tools:
->
->     brew install findutils
->
->     brew install gnu-sed
->
-> 2. Prepend the PATH with the path to the new tools, so they will be used in place of the native `find` and `sed`:
->
->     export PATH="/usr/local/opt/findutils/libexec/gnubin:\$PATH"
->
->     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:\$PATH"
+
+This script requires the `gnu` versions of `find` and `sed`. You can install these and replace the default versions:
+
+1. Use `brew` to install the tools:
+
+    brew install findutils
+
+    brew install gnu-sed
+
+2. Prepend the PATH with the path to the new tools, so they will be used in place of the native `find` and `sed`:
+
+    export PATH="/usr/local/opt/findutils/libexec/gnubin:\$PATH"
+
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:\$PATH"
 
 Sphinx projects are typically built with a `Makefile`. This project is built with a shell script instead. Once executed it generates a `build/output` directory inside `site/`. The final static html pages are there.
 
