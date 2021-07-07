@@ -98,7 +98,7 @@ The data provider class implements the `com.liferay.dynamic.data.mapping.data.pr
 
 Implementing the interface's methods and providing two `@Component` settings is enough to register the data provider with the Liferay Forms application, so it appears naturally in the forms UI alongside Liferay's default data provider.
 
-```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
    :language: java
    :lines: 38-41,43-46,65-66,67-68,70-71
 ```
@@ -107,7 +107,7 @@ The `getData` method does most of the work. It must return a `DDMDaProviderRespo
 
 1. The URL to our XML data source is constructed:
 
-   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+   ```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
       :dedent: 3
       :language: java
       :lines: 49-53
@@ -118,7 +118,7 @@ The `getData` method does most of the work. It must return a `DDMDaProviderRespo
 1. Now the pieces are in place to (based on the output parameter settings of the data provider instance) build the response conditionally. The logic involves 
    - Begin building the response using a static inner `Builder` class's `newBuilder` method:
 
-      ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+      ```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
          :dedent: 2
          :language: java
          :lines: 77-78
@@ -130,7 +130,7 @@ The `getData` method does most of the work. It must return a `DDMDaProviderRespo
 
    - Check the output parameter type and call the response builder's `withOutput` method. Each call provides the output parameter ID and the content of the matching node (or nodes, if a list is requested). 
 
-      ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+      ```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
          :dedent: 2
          :language: java
          :lines: 80-118
@@ -145,7 +145,7 @@ The data provider settings class defines the settings that this data provider ne
 
 1. The layout of the settings form itself is defined using `@DDMForm*` class-level annotations:
 
-   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
+   ```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
       :language: java
       :lines: 10-25
    ```
@@ -154,7 +154,7 @@ The data provider settings class defines the settings that this data provider ne
 
 1. The class declaration and body determines what fields are available. Currently no additional settings are needed, so the class body is blank.
 
-   ```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
+   ```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProviderSettings.java
       :language: java
       :lines: 26-28
    ```
@@ -173,7 +173,7 @@ The settings provider class contains one method, `getSettings`, which returns th
 
 Get a reference to the `B4D8DDMDataProviderSettingsProvider` and then call its `getSettings` method from the data provider class's identically named `getSettings` method:
 
-```literalinclude:: ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
+```{literalinclude} ./writing-a-custom-data-provider/resources/liferay-b4d8.zip/b4d8-impl/src/main/java/com/acme/b4d8/dynamic/data/mapping/data/provider/internal/B4D8DDMDataProvider.java
    :dedent: 1
    :language: java
    :lines: 67-70,158-160

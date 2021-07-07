@@ -97,7 +97,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
 
 ## Code for the Sample Dispatch Task Executor
 
-```literalinclude:: creating-a-new-dispatch-task-executor/resources/liferay-s7a3.zip/s7a3-impl/src/main/java/com/acme/s7a3/internal/dispatch/executor/S7A3DispatchTaskExecutor.java
+```{literalinclude} creating-a-new-dispatch-task-executor/resources/liferay-s7a3.zip/s7a3-impl/src/main/java/com/acme/s7a3/internal/dispatch/executor/S7A3DispatchTaskExecutor.java
    :language: java
    :lines: 15-44
 ```

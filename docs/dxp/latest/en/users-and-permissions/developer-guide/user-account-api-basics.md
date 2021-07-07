@@ -99,7 +99,7 @@ Read on to see how the cURL command and Java class work.
 
 The `User_POST_ToInstance.sh` script calls the REST service with a cURL command. 
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_POST_ToInstance.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_POST_ToInstance.sh
     :language: bash
 ```
 
@@ -123,7 +123,7 @@ The other cURL commands use similar JSON arguments.
 
 The `User_POST_ToInstance.java` class adds a User by calling the user related service.
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_POST_ToInstance.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_POST_ToInstance.java
    :dedent: 1
    :language: java
    :lines: 9-27
@@ -163,7 +163,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/Users_GET_FromInstance.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/Users_GET_FromInstance.sh
    :language: bash
 ```
 
@@ -177,7 +177,7 @@ java -classpath .:* Users_GET_FromInstance
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/Users_GET_FromInstance.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/Users_GET_FromInstance.java
    :dedent: 1
    :language: java
    :lines: 11-22
@@ -199,7 +199,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_GET_ById.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_GET_ById.sh
    :language: bash
 ```
 
@@ -213,7 +213,7 @@ java -classpath .:* -DuserId=1234 User_GET_ById
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_GET_ById.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_GET_ById.java
    :dedent: 1
    :language: java
    :lines: 9-20
@@ -235,7 +235,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PATCH_ById.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PATCH_ById.sh
    :language: bash
 ```
 
@@ -249,7 +249,7 @@ java -classpath .:* -DuserId=1234 User_PATCH_ById
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PATCH_ById.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PATCH_ById.java
    :dedent: 1
    :language: java
    :lines: 9-25
@@ -271,7 +271,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PUT_ById.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_PUT_ById.sh
    :language: bash
 ```
 
@@ -285,7 +285,7 @@ java -classpath .:* -DuserId=1234 User_PUT_ById
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PUT_ById.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_PUT_ById.java
    :dedent: 1
    :language: java
    :lines: 9-28
@@ -309,7 +309,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_DELETE_ById.sh
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/curl/User_DELETE_ById.sh
    :language: bash
 ```
 
@@ -323,7 +323,7 @@ java -classpath .:* -DuserId=1234 User_DELETE_ById
 
 Code:
 
-```literalinclude:: ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_DELETE_ById.java
+```{literalinclude} ./user-account-api-basics/resources/liferay-y6q4.zip/java/User_DELETE_ById.java
    :dedent: 1
    :language: java
    :lines: 8-17

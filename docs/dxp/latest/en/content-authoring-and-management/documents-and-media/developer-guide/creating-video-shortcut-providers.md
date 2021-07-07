@@ -70,7 +70,7 @@ Below is a [sample external video shortcut provider](liferay-g9b6.zip) that demo
 
 ## Code for the Sample Video Provider
 
-```literalinclude:: ./creating-custom-video-shortcut-providers/resources/liferay-g9b6.zip/g9b6-impl/src/main/java/com/acme/g9b6/internal/document/library/video/external/shortcut/provider/G9B6DLVideoExternalShortcutProvider.java
+```{literalinclude} ./creating-custom-video-shortcut-providers/resources/liferay-g9b6.zip/g9b6-impl/src/main/java/com/acme/g9b6/internal/document/library/video/external/shortcut/provider/G9B6DLVideoExternalShortcutProvider.java
    :dedent: 1
    :language: java
    :lines: 14-51

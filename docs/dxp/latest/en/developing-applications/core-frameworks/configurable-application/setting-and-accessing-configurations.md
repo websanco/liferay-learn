@@ -57,7 +57,7 @@ Defining configurable attributes in a configuration interface is enough to gener
 
 In the sample project, the `E3Q3WebConfiguration.java` file is the configuration interface. 
 
-```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/configuration/E3Q3WebConfiguration.java
+```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/configuration/E3Q3WebConfiguration.java
    :language: java
    :lines: 5-17
 ```
@@ -86,7 +86,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 1. The `activate()` method has an `@Activate` annotation that invokes the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
 
-    ```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
+    ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
         :dedent: 1
         :language: java
         :lines: 44-51
@@ -96,7 +96,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 1. A configuration object is added to the request object so its values can be read from a JSP. 
 
-    ```literalinclude:: ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
+    ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
         :dedent: 1
         :language: java
         :lines: 33-42

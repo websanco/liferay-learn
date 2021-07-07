@@ -72,14 +72,14 @@ Search Liferay's `*DestinationNames` classes in the [source code](https://github
 
 In the class where you want to receive messages, implement the [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) interface. 
 
-```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+```{literalinclude} ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :language: java
    :lines: 15
 ```
 
 Override the `receive` method with logic for processing messages. Here's the example `receive` method implementation:
 
-```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+```{literalinclude} ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :dedent: 1
    :language: java
    :lines: 17-29
@@ -91,7 +91,7 @@ The above implementation logs the message payload and destination name. See the 
 
 Use a `Component` annotation to register your class to listen for messages at the desired destination. For example,
 
-```literalinclude:: ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
+```{literalinclude} ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :language: java
    :lines: 11-15
 ```

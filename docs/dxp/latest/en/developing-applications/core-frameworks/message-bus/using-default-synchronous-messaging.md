@@ -101,14 +101,14 @@ The `m4q7-able-impl` module and `m4q7-baker-impl` module have destination config
 
 The `M4Q7AbleMessagingConfigurator` class configures the `acme/m4q7_able` destination:
 
-```literalinclude:: ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-able-impl/src/main/java/com/acme/m4q7/able/internal/messaging/M4Q7AbleMessagingConfigurator.java
+```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-able-impl/src/main/java/com/acme/m4q7/able/internal/messaging/M4Q7AbleMessagingConfigurator.java
    :language: java
    :lines: 15-45
 ```
 
 The `M4Q7BakerMessagingConfigurator` class configures the `acme/m4q7_baker` destination:
 
-```literalinclude:: ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/messaging/M4Q7BakerMessagingConfigurator.java
+```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/messaging/M4Q7BakerMessagingConfigurator.java
    :language: java
    :lines: 15-45
 ```
@@ -131,7 +131,7 @@ The `m4q7-charlie-impl` module's `M4Q7CharlieMessageListener` class listens for 
 
 `M4Q7CharlieMessageListener` class:
 
-```literalinclude:: ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-charlie-impl/src/main/java/com/acme/m4q7/charlie/internal/messaging/M4Q7CharlieMessageListener.java
+```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-charlie-impl/src/main/java/com/acme/m4q7/charlie/internal/messaging/M4Q7CharlieMessageListener.java
    :language: java
    :lines: 12-42
 ```
@@ -146,7 +146,7 @@ The `m4q7-baker-impl` module's `M4Q7BakerMessageListener` class listens for mess
 
 `M4Q7BakerMessageListener` class:
 
-```literalinclude:: ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/messaging/M4Q7BakerMessageListener.java
+```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/messaging/M4Q7BakerMessageListener.java
    :language: java
    :lines: 10-28
 ```
@@ -157,7 +157,7 @@ When `M4Q7BakerMessageListener` receives a message, its `receive(Message)` metho
 
 The `m4q7-baker-impl` module's `M4Q7BakerOSGiCommands` class provides an OSGi Command that triggers sending the command arguments in a message to the `"acme/m4q7_able"` destination.
 
-```literalinclude:: ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/osgi/commands/M4Q7BakerOSGiCommands.java
+```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/osgi/commands/M4Q7BakerOSGiCommands.java
    :language: java
    :lines: 12-42
 ```

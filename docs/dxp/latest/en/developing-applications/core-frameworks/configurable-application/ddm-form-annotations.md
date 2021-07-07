@@ -46,7 +46,7 @@ Here's how the DDM form annotations work.
 
 Create a configuration form interface that includes all the form fields in your settings UI. For each field use a `@DDMFormField` annotation. Define attributes such as `label`, `properties`, and `type` for each field.
 
-```literalinclude:: ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationForm.java
+```{literalinclude} ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationForm.java
    :dedent: 1
    :language: java
    :lines: 37-58
@@ -56,7 +56,7 @@ Visit [Form Field Types Reference](../../../process-automation/forms/creating-an
 
 After annotating each form field, define the layout of the form right above the class declaration with the `DDMFormLayout` annotation.
 
-```literalinclude:: ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationForm.java
+```{literalinclude} ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationForm.java
    :language: java
    :lines: 10-34
 ```
@@ -67,7 +67,7 @@ Use the `DDMFormLayoutRow` annotation and the `DDMFormLayoutColumn` to arrange y
 
 Create a new implementation of `ConfigurationDDMFormDeclaration` to register your new configuration form class. 
 
-```literalinclude:: ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationDDMFormDeclaration.java
+```{literalinclude} ./ddm-form-annotations/resources/liferay-v1d9.zip/v1d9-impl/src/main/java/com/acme/v1d9/internal/configuration/admin/definition/V1D9ConfigurationDDMFormDeclaration.java
    :language: java
    :lines: 7-19
 ```

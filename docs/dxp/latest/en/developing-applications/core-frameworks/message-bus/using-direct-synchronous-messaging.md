@@ -90,7 +90,7 @@ Now you can examine each class, starting with the destination configurator
 
 The `x6n5-able-impl` module's `X6N5AbleMessagingConfigurator` class creates and configures a destination named `acme/x6n5_able`. Here's the code:
 
-```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-able-impl/src/main/java/com/acme/x6n5/able/internal/messaging/X6N5AbleMessagingConfigurator.java
+```{literalinclude} ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-able-impl/src/main/java/com/acme/x6n5/able/internal/messaging/X6N5AbleMessagingConfigurator.java
    :language: java
    :lines: 15-42
 ```
@@ -105,7 +105,7 @@ When `X6N5AbleMessagingConfigurator` deactivates, its `_deactivate()` method unr
 
 The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class provides an OSGi Command that sends messages to the destination:
 
-```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-baker-impl/src/main/java/com/acme/x6n5/baker/internal/osgi/commands/X6N5BakerOSGiCommands.java
+```{literalinclude} ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-baker-impl/src/main/java/com/acme/x6n5/baker/internal/osgi/commands/X6N5BakerOSGiCommands.java
    :language: java
    :lines: 12-42
 ```
@@ -126,14 +126,14 @@ The `x6n5-charlie-impl` module's `X6N5CharlieMessageListener` class and `x6n5-do
 
 `X6N5CharlieMessageListener` class:
 
-```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-charlie-impl/src/main/java/com/acme/x6n5/charlie/internal/messaging/X6N5CharlieMessageListener.java
+```{literalinclude} ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-charlie-impl/src/main/java/com/acme/x6n5/charlie/internal/messaging/X6N5CharlieMessageListener.java
    :language: java
    :lines: 10-30
 ```
 
 `X6N5DogMessageListener` class:
 
-```literalinclude:: ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-dog-impl/src/main/java/com/acme/x6n5/dog/internal/messaging/X6N5DogMessageListener.java
+```{literalinclude} ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-dog-impl/src/main/java/com/acme/x6n5/dog/internal/messaging/X6N5DogMessageListener.java
    :language: java
    :lines: 10-30
 ```

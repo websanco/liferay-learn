@@ -101,7 +101,7 @@ Read on to see how the cURL command and Java class work.
 
 The `Document_POST_ToSite.sh` script uploads a file by calling a `headless-delivery` application REST service with cURL.
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_POST_ToSite.sh
    :language: bash
 ```
 
@@ -127,7 +127,7 @@ Next, you'll see how similar the Java call is.
 
 The `Document_POST_ToSite.java` class uploads a file by calling a `headless-delivery` application REST service.
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_POST_ToSite.java
    :dedent: 1
    :language: java
    :lines: 10-29
@@ -167,7 +167,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Documents_GET_FromSite.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Documents_GET_FromSite.sh
    :language: bash
 ```
 
@@ -181,7 +181,7 @@ java -classpath .:* -DsiteId=1234 Documents_GET_FromSite
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Documents_GET_FromSite.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Documents_GET_FromSite.java
    :dedent: 1
    :language: java
    :lines: 11-23
@@ -207,7 +207,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById.sh
    :language: bash
 ```
 
@@ -221,7 +221,7 @@ java -classpath .:* -DdocumentId=1234 Document_GET_ById
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById.java
    :dedent: 1
    :language: java
    :lines: 9-20
@@ -243,7 +243,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
    :language: bash
 ```
 
@@ -257,7 +257,7 @@ The first argument line specifies the service endpoint and authentication creden
 
 The routines following the service invocation process the encoded content. The `sed` and `awk` routines isolate the `Document` content value and the `tr` routine decodes it. Here's the decoded content returned for the `Document_POST_ToSite.sh` `Document` that you uploaded:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_GET_ById_ContentValue.sh
    :language: bash
 ```
 
@@ -273,7 +273,7 @@ java -classpath .:* -DdocumentId=1234 Document_GET_ById_ContentValue
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById_ContentValue.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_GET_ById_ContentValue.java
    :dedent: 1
    :language: java
    :lines: 11-27
@@ -307,7 +307,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PATCH_ById.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PATCH_ById.sh
    :language: bash
 ```
 
@@ -323,7 +323,7 @@ java -classpath .:* -DdocumentId=1234 Document_PATCH_ById
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PATCH_ById.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PATCH_ById.java
    :dedent: 1
    :language: java
    :lines: 13-34
@@ -349,7 +349,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PUT_ById.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_PUT_ById.sh
    :language: bash
 ```
 
@@ -365,7 +365,7 @@ java -classpath .:* -DdocumentId=1234 Document_PUT_ById
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PUT_ById.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_PUT_ById.java
    :dedent: 1
    :language: java
    :lines: 13-35
@@ -395,7 +395,7 @@ Command:
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_DELETE_ById.sh
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/curl/Document_DELETE_ById.sh
    :language: bash
 ```
 
@@ -409,7 +409,7 @@ java -classpath .:* -DdocumentId=1234 Document_DELETE_ById
 
 Code:
 
-```literalinclude:: ./document-api-basics/resources/liferay-g9i6.zip/java/Document_DELETE_ById.java
+```{literalinclude} ./document-api-basics/resources/liferay-g9i6.zip/java/Document_DELETE_ById.java
    :dedent: 1
    :language: java
    :lines: 8-17

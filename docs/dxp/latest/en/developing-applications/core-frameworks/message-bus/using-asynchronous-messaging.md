@@ -110,7 +110,7 @@ We'll examine the destination configuration and sender classes. The listener cla
 
 The `n8k5-able-impl` module's `N8K5AbleMessagingConfigurator` class creates and configures the destination. Here's the code:
 
-```literalinclude:: ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-able-impl/src/main/java/com/acme/n8k5/able/internal/messaging/N8K5AbleMessagingConfigurator.java
+```{literalinclude} ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-able-impl/src/main/java/com/acme/n8k5/able/internal/messaging/N8K5AbleMessagingConfigurator.java
    :language: java
    :lines: 15-42
 ```
@@ -123,7 +123,7 @@ In the `_activate` method, `N8K5AbleMessagingConfigurator` uses the [`Destinatio
 
 The `N8K5Baker` class below sends a message with the payload `"N8K5Baker#_activate"` to the destination named `acme/n8k5_able`.
 
-```literalinclude:: ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-baker-impl/src/main/java/com/acme/n8k5/baker/internal/N8K5Baker.java
+```{literalinclude} ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-baker-impl/src/main/java/com/acme/n8k5/baker/internal/N8K5Baker.java
    :language: java
    :lines: 12-23
 ```

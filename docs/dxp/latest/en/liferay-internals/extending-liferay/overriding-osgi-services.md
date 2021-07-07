@@ -169,7 +169,7 @@ Once you've gathered the requisite service and reference details, you can use th
 
 The sample `S1J6BakerImpl` module is provided to override `S1J6AbleImpl`.
 
-```literalinclude:: overriding-osgi-services/resources/liferay-s1j6.zip/s1j6-baker-impl/src/main/java/com/acme/s1j6/baker/internal/S1J6BakerImpl.java
+```{literalinclude} overriding-osgi-services/resources/liferay-s1j6.zip/s1j6-baker-impl/src/main/java/com/acme/s1j6/baker/internal/S1J6BakerImpl.java
    :language: java
    :lines: 8-22
 ```
