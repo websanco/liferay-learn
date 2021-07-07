@@ -77,6 +77,8 @@ These limitations apply to the [Database service](../platform-services/database-
 
 * **Downtime**: Database maintenance may cause downtime every few months. This downtime usually lasts about two minutes. This may not come with a notification in advance.
 
+* **Read/write splits**: Configuring a read/write split in your database service is not supported in DXP Cloud.
+
 ## Search Service
 
 These limitations apply to the [Search service](../platform-services/search-service.md) in each DXP Cloud environment:
