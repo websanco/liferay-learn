@@ -139,9 +139,13 @@ if __name__ == "__main__":
     print(Fore.YELLOW + "------------")
     for renamefile in renamelist[0]:
 
-        newfilename = re.sub(oldName, newName, renamefile, 1, 0)
+        oldpathend = os.path.split(os.path.relpath(renamefile))[1]
 
-        os.rename(renamefile, newfilename)
+        newpathend = re.sub(oldName, newName, oldpathend)
+
+        newfilename = os.path.join(os.path.split(os.path.relpath(renamefile))[0],newpathend)
+
+        os.rename(os.path.relpath(renamefile), newfilename)
 
         print(Fore.BLUE + renamefile + "\n" + Fore.WHITE + " was renamed to " +
               "\n" + Fore. BLUE + newfilename)
