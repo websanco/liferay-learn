@@ -33,14 +33,14 @@ If you prefer your own section and category, you can create them by implementing
 If you followed the example project in [Setting and Accessing Configurations](./setting-and-accessing-configurations), this code can be added to the application's `configuration` folder. This is the same folder that holds the configuration interface Java file. The code below creates a foobar section and a foobar category:
 
 ```java
-package com.acme.e3q3.web.internal.configuration;
+package com.acme.n2f3.web.internal.configuration;
 
 import com.liferay.configuration.admin.category.ConfigurationCategory;
 
 import org.osgi.service.component.annotations.Component;
 
 @Component(service = ConfigurationCategory.class)
-public class E3Q3WebConfigurationCategory implements ConfigurationCategory {
+public class N2F3WebConfigurationCategory implements ConfigurationCategory {
 
 	@Override
 	public String getCategoryIcon() {
@@ -66,6 +66,8 @@ public class E3Q3WebConfigurationCategory implements ConfigurationCategory {
 }
 ```
 
+Change the `@ExtendedObjectClassDefinition` annotation in the configuration interface of the sample project from `category = "n2f3"` to `category = "foobar"`. 
+
 The language keys for the custom section and category must also be specified in the localization file. For the example above, add the following keys to the `Language.properties` file in the portlet's `src/main/resources/content/` folder.
 
 ```properties
@@ -73,7 +75,7 @@ category.foobar=Foobar
 category-section.foobar=Foobar
 ```
 
-Redeploy the application to see the change.
+Redeploy the sample projject to see the change.
 
 ![The configuration UI is now in the custom category](./categorizing-a-configuration/images/01.png)
 
