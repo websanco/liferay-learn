@@ -1,0 +1,4 @@
+Bundle-Name: Acme R9U2 API
+Bundle-SymbolicName: com.acme.r9u2.api
+Bundle-Version: 1.0.0
+Export-Package: com.acme.r9u2
