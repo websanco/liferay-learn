@@ -4,7 +4,7 @@ Liferay integrates with the Google Cloud Translation API to generate automatic t
 
 ## Enabling Automatic Translation
 
-1. Open the *Global Menu*(![Global Menu]()). Click the *Control Panel* tab and go to *System Settings* &rarr; *Translation*.
+1. Open the *Global Menu*(![Global Menu](../../../images/icon-applications-menu.png)). Click the *Control Panel* tab and go to *System Settings* &rarr; *Translation*.
 
    ![Go to Translation under System Settings.](./automatically-translating-web-content/images/01.png)
 
@@ -22,7 +22,7 @@ Follow these steps to automatically translate all or only individual Web Content
 
 1. Open the Web Content application in a Site or Asset Library.
 
-1. Click *Actions* (![Actions Button]()) for the content you want to translate and select *Translate*.
+1. Click *Actions* (![Actions Button](../../../images/icon-actions.png)) for the content you want to translate and select *Translate*.
 
    ![Open the Web Content translation interface.](./automatically-translating-web-content/images/02.png)
 
@@ -30,7 +30,7 @@ Follow these steps to automatically translate all or only individual Web Content
 
    ![Click the top left Auto Translate button to translate all Web Content fields.](./automatically-translating-web-content/images/03.png)
 
-   Alternatively, click a field's individual *Auto Translate* button (![Auto Translate Button]()) to only translate its text.
+   Alternatively, click a field's individual *Auto Translate* button (![Auto Translate Button](../../../images/icon-translate.png)) to only translate its text.
 
    ![Click a field's individual Auto Translate button to only translate its text.](./automatically-translating-web-content/images/04.png)
 
