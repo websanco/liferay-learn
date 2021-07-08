@@ -1,12 +1,12 @@
 # Adding SKUs to Products
 
-In Liferay Commerce, stock-keeping units (SKUs) represent purchaseable versions of a Product. Each Product is created with a single default SKU, but you can use Product [Options](../products/using-product-options.md) to manually or automatically create multiple active SKUs for a Product. This provides a convenient way to inventory and price Product variants. Once created, these variants are displayed to customers in the Product Details widget.
+In Liferay Commerce, stock-keeping units (SKUs) represent purchaseable versions of a Product. Each Product is created with a single default SKU, but you can use Product [Options](../products/using-product-options.md) to manually or automatically create multiple active SKUs for a Product. To use a Product Option in this way, it must have *SKU Contributor* enabled. Otherwise, only one SKU can be active for a Product at a time.
+
+Once created, each Product variant is displayed to customers in the Product Details widget.
 
 ![Product variants are displayed in the PRoduct Details widget.](./adding-skus-to-products/images/01.png)
 
-```important::
-   A Product must have at least one Option with SKU Contributor enabled to create and activate multiple SKUs for it. Otherwise, only one SKU can be active for a Product at a time.
-   
+```tip::
    It’s highly recommended that Product Option values are finalized before using them to create SKUs. See `Using Product Options <./using-product-options.md`>_ for more information.
 ```
 
@@ -105,4 +105,6 @@ These fields override Product-level specifications for individual SKUs and are u
 
 ## Additional Information
 
+* [Products Overview](./products-overview.md)
+* [Using Product Options](./using-product-options.md)
 * [Overriding Product Level Information](./overriding-product-level-information.md)
