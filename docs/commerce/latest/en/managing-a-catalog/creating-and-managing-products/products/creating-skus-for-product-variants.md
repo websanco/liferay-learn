@@ -1,10 +1,12 @@
-# Adding SKUs to Products
+# Creating SKUs for Product Variants
 
-In Liferay Commerce, stock-keeping units (SKUs) represent purchaseable versions of a Product. Each Product is created with a single default SKU, but you can use Product [Options](../products/using-product-options.md) to manually or automatically create multiple active SKUs for a Product. To use a Product Option in this way, it must have *SKU Contributor* enabled. Otherwise, only one SKU can be active for a Product at a time.
+With Liferay Commerce, you can add multiple SKUs to a Product to represent Product variants. To do this, the Product must have at least one [Option](../products/using-product-options.md) with *SKU Contributor* enabled. You can then manually or automatically create multiple active SKUs for a Product using the Option's defined values. Once created, each SKU represents a purchasable version of the Product that's displayed in the Product Details widget.
 
-Once created, each Product variant is displayed to customers in the Product Details widget.
+![Product variants are displayed in the PRoduct Details widget.](./creating-skus-for-product-variants/images/01.png)
 
-![Product variants are displayed in the PRoduct Details widget.](./adding-skus-to-products/images/01.png)
+```note::
+   Without Product Options, only one SKU can be active for a Product at a time.
+```
 
 ```tip::
    It’s highly recommended that Product Option values are finalized before using them to create SKUs. See `Using Product Options <./using-product-options.md`>_ for more information.
@@ -20,11 +22,11 @@ Follow these steps to generate and activate multiple SKUs for a Product:
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)), and select *Generate All SKU Combinations*.
 
-   ![Select Generate All SKU Combinations.](./adding-skus-to-products/images/02.png)
+   ![Select Generate All SKU Combinations.](./creating-skus-for-product-variants/images/02.png)
 
    SKUs are automatically generated for each Option value. These SKUs use the value's name and are created without Base Price or inventory. To configure an SKU, click its *Actions* button (![Actions Button](../../../images/icon-actions.png)), and select *Edit*. See [SKU Fields Reference](#sku-fields-reference) for more information.
 
-   ![Edit the generated SKUs.](./adding-skus-to-products/images/03.png)
+   ![Edit the generated SKUs.](./creating-skus-for-product-variants/images/03.png)
 
 1. When finished, click on *Publish*.
 
@@ -42,11 +44,11 @@ Follow these steps to manually create a Product SKU for individual Option values
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)), and select *Add SKU*.
 
-   ![Select Add SKU.](./adding-skus-to-products/images/04.png)
+   ![Select Add SKU.](./creating-skus-for-product-variants/images/04.png)
 
 1. Configure the SKU fields. See [SKU Fields Reference](#sku-fields-reference) for more information.
 
-   ![Configure the SKU.](./adding-skus-to-products/images/05.png)
+   ![Configure the SKU.](./creating-skus-for-product-variants/images/05.png)
 
 1. When finished, click on *Publish*.
 
@@ -54,7 +56,7 @@ Follow these steps to manually create a Product SKU for individual Option values
 
 If Allow Back Orders is enabled for the Product, all published SKUs with a set base price are immediately available to Customers for purchase in the Product Details widget. However, if Allow Back Orders is disabled, you must first add inventory to the SKUs to make them available for purchase. See [Introduction to Managing Inventory](../../managing-inventory/introduction-to-managing-inventory.md) for more information.
 
-![Add inventory for each Product SKU.](./adding-skus-to-products/images/06.png)
+![Add inventory for each Product SKU.](./creating-skus-for-product-variants/images/06.png)
 
 ```note::
    If all SKU inventory is 0 and Allow Back Orders is disabled, then none of the Product variants are listed in the Product Details widget. However, if only one SKU reaches 0, then all variants are listed. 
