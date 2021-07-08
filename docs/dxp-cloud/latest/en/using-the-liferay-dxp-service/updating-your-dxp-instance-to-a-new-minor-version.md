@@ -12,21 +12,41 @@ Regularly updating your Liferay DXP installation is an important part of maintai
 
 ## Updating and Deploying a New Version of DXP
 
-Minor version updates to Liferay DXP require a change to your project's repository.
+First, if you are updating a 7.3+ version of DXP, then set an environment variable to allow modules to upgrade:
+
+1. In the DXP Cloud console, click on the Liferay service in the desired environment.
+
+1. Click the *Environment Variables* tab.
+
+1. Add the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` variable to the list with a value of `true`.
+
+1. Click the Save Changes button.
+
+Minor version updates to Liferay DXP also require a change to your project's repository.
 
 If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
 
-Otherwise, perform these steps to update the version of your DXP installation:
+Otherwise, perform these steps to update and deploy changes in your project repository:
 
 1. Find the tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
 
-1. Change the value of the `liferay.workspace.docker.image.liferay` property in [`liferay/gradle.properties`](./introduction-to-the-liferay-dxp-service.md#choosing-a-version):
+1. In your repository, change the value of the `liferay.workspace.docker.image.liferay` property in [`liferay/gradle.properties`](./introduction-to-the-liferay-dxp-service.md#choosing-a-version) to the new version's tag:
 
     ```properties
     liferay.workspace.docker.image.liferay=liferay/dxp:7.3.10-ga1
     ```
 
+1. Add this environment variable to the `env` block in your repository's `liferay/LCP.json` file:
+
+    ```json
+    {
+        "LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN": "true"
+    }
+    ```
+
 1. [Deploy the change](./deploying-to-the-liferay-service.md) to the desired environment's `liferay` service.
+
+1. If you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable you previously added to the Liferay service's Environment Variables page.
 
 Once you have deployed the changes, the `liferay` service restarts and begins any upgrade steps necessary to complete the update.
 
@@ -48,7 +68,7 @@ Follow these steps:
 
 1. Find the tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
 
-1. Change the value of the `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties`:
+1. Change the value of the `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties` to the new version's tag:
 
     ```properties
     liferay.workspace.docker.image.liferay=liferay/dxp:7.3.10-ga1
@@ -79,6 +99,8 @@ Follow these steps:
 1. Reset the deployment strategy in `liferay/LCP.json` to its former value (or remove the property if it was only added for the version update).
 
 1. [Deploy the changes](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) one more time.
+
+1. If you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable [you previously added](#updating-and-deploying-a-new-version-of-dxp) to the Liferay service's Environment Variables page.
 
 The updated `liferay` service starts back up with the desired number of nodes after the final deployment.
 
