@@ -10,9 +10,9 @@ Regularly updating your Liferay DXP installation is an important part of maintai
    If you want to install a `hotfix <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#hotfixes>`__, then follow `these steps <./deploying-to-the-liferay-service.md#deploying-hotfixes>`__ instead.
 ```
 
-## Updating and Deploying a New Version of DXP
+## Enabling Module Upgrades for DXP 7.3+
 
-First, if you are updating a 7.3+ version of DXP, then set an environment variable to allow modules to upgrade:
+First, if you are updating a 7.3+ version of DXP, then set an environment variable to allow modules to upgrade as needed:
 
 1. In the DXP Cloud console, click on the Liferay service in the desired environment.
 
@@ -21,6 +21,10 @@ First, if you are updating a 7.3+ version of DXP, then set an environment variab
 1. Add the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` variable to the list with a value of `true`.
 
 1. Click the Save Changes button.
+
+This allows your modules to perform the necessary upgrades for the new minor version of DXP. If you intend to allow modules to upgrade any time you are updating your version of DXP to a new fix pack or service pack, then you can keep this environment variable after the update.
+
+## Updating and Deploying a New Version of DXP
 
 Minor version updates to Liferay DXP also require a change to your project's repository.
 
@@ -46,7 +50,7 @@ Otherwise, perform these steps to update and deploy changes in your project repo
 
 1. [Deploy the change](./deploying-to-the-liferay-service.md) to the desired environment's `liferay` service.
 
-1. If you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable you previously added to the Liferay service's Environment Variables page.
+1. For versions 7.3+ of DXP, if you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable [you previously added](#enabling-module-upgrades-for-dxp) to the Liferay service's Environment Variables page.
 
 Once you have deployed the changes, the `liferay` service restarts and begins any upgrade steps necessary to complete the update.
 
@@ -100,7 +104,7 @@ Follow these steps:
 
 1. [Deploy the changes](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) one more time.
 
-1. If you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable [you previously added](#updating-and-deploying-a-new-version-of-dxp) to the Liferay service's Environment Variables page.
+1. For versions 7.3+ of DXP, if you do not intend to allow modules to upgrade when upgrading to new fix packs or service packs in the future, then remove the `LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN` environment variable [you previously added](#enabling-module-upgrades-for-dxp) to the Liferay service's Environment Variables page.
 
 The updated `liferay` service starts back up with the desired number of nodes after the final deployment.
 
