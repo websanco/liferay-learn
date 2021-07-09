@@ -2,7 +2,7 @@
 
 With Liferay Commerce, you can add multiple SKUs to a Product to represent Product variants. To do this, the Product must have at least one [Option](../products/using-product-options.md) with *SKU Contributor* enabled. You can then manually or automatically create multiple active SKUs for a Product using the Option's defined values. Once created, each SKU represents a purchasable version of the Product that's displayed in the Product Details widget.
 
-![Product variants are displayed in the PRoduct Details widget.](./creating-skus-for-product-variants/images/01.png)
+![Product variants are displayed in the Product Details widget.](./creating-skus-for-product-variants/images/01.png)
 
 ```note::
    Without Product Options, only one SKU can be active for a Product at a time.
