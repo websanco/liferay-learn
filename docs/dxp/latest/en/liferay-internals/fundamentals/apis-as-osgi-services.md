@@ -4,9 +4,9 @@ After you've learned what a [module](./module-projects.md) is and how to deploy 
 
 Liferay exposes APIs, implementations, and clients as components. [OSGi Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html) (DS) annotations define components and their relationships.
 
-* `@ProviderType` defines an interface that components can provide (implement) or consume.
-* `@Component` declares the class a component, providing a particular capability.
-* `@Reference` wires another component to a class member (typically a field).
+* [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) defines an interface that components can provide (implement) or consume.
+* [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) declares the class a component, providing a particular capability.
+* [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) wires another component to a class member (typically a field).
 
 You can separate API and implementation concerns into different modules.
 
@@ -105,17 +105,19 @@ An API is created in just two steps:
 
 The example API module `Greeter` class is a Java interface.
 
-```java
-@ProviderType
-public interface Greeter {
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-api/src/main/java/com/acme/p9g2/Greeter.java
+   :language: java
+   :lines: 5-6
 ```
 
 The [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation registers `Greeter` as a type that a component can implement or consume.
 
 The `greet` method takes a name `String` as input.
 
-```java
-public void greet(String name);
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-api/src/main/java/com/acme/p9g2/Greeter.java
+   :dedent: 1
+   :language: java
+   :lines: 8
 ```
 
 The `Greeter` capability is defined.
@@ -124,11 +126,7 @@ The `Greeter` capability is defined.
 
 The API module `bnd.bnd` file describes the module and exports the `com.acme.p9g2` interface package.
 
-```properties
-Bundle-Name: Acme P9G2 API
-Bundle-SymbolicName: com.acme.p9g2.api
-Bundle-Version: 1.0.0
-Export-Package: com.acme.p9g2
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-api/bnd.bnd
 ```
 
 The [package export](./exporting-packages.md) shares the `Greeter` interface with other modules.
@@ -148,28 +146,21 @@ The example implementation module contains a concrete Java class that provides t
 
 The `P9G2Greeter` class implements the `Greeter` interface:
 
-```java
-package com.acme.p9g2.internal;
-
-import com.acme.p9g2.Greeter;
-
-import org.osgi.service.component.annotations.Component;
-
-@Component(service = Greeter.class)
-public class P9G2Greeter implements Greeter {
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-impl/src/main/java/com/acme/p9g2/internal/P9G2Greeter.java
+   :language: java
+   :lines: 7-8
 ```
 
-The `@Component` annotation and its `service = Greeter.class` attribute make the `P9G2Greeter` class a `Greeter` service provider.
+The [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation and its `service = Greeter.class` attribute make the `P9G2Greeter` class a `Greeter` service provider.
 
 ### Implement the Interface
 
 The `Greeter` interface defines a method `greet(String)` with a `void` return value.
 
-```java
-@Override
-public void greet(String name) {
-    System.out.println("Hello " + name + "!");
-}
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-impl/src/main/java/com/acme/p9g2/internal/P9G2Greeter.java
+   :dedent: 1
+   :language: java
+   :lines: 10-13
 ```
 
 The example `greet` method prints an enthusiastic greeting using the given name.
@@ -178,11 +169,8 @@ The example `greet` method prints an enthusiastic greeting using the given name.
 
 Here is the implementation module `build.gradle` file.
 
-```groovy
-dependencies {
-	compileOnly group: "com.liferay.portal", name: "release.portal.api"
-	compileOnly project(":p9g2-api")
-}
+```literalinclude:: ./apis-as-osgi-services/resources/liferay-p9g2.zip/p9g2-impl/build.gradle
+   :language: groovy
 ```
 
 It includes a compile-time dependency on the `p9g2-api` module project because it requires the module's `Greeter` class.

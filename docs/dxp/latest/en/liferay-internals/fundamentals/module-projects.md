@@ -190,17 +190,9 @@ The `k8s2-api` module folder contains a `bnd.bnd` metadata file, a `build.gradle
 
 The example module has only one Java class: an interface called `Greeter`.
 
-```java
-package com.acme.k8s2;
-
-import aQute.bnd.annotation.ProviderType;
-
-@ProviderType
-public interface Greeter {
-
-	public void greet(String name);
-
-}
+```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java
+   :language: java
+   :lines: 5-10
 ```
 
 The [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation tells the service registry that anything implementing the interface provides it (i.e., a `Greeter`). The interface's one method called `greet` asks for a `String` and doesn't return anything.
@@ -211,10 +203,8 @@ Add your own Java code and resources in your module's `src/main/java` folder and
 
 The `build.gradle` file specifies the module's dependencies.
 
-```groovy
-dependencies {
-	compileOnly group: "com.liferay.portal", name: "release.portal.api"
-}
+```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/build.gradle
+   :language: groovy
 ```
 
 It depends on one artifact: the Liferay release API JAR. It is a large JAR packed with Liferay, Bnd, and OSGi artifacts associated with the Liferay product release.
@@ -239,11 +229,7 @@ The module JAR's `META-INF/MANIFEST.MF` file describes the module. The manifest 
 
 The `bnd.bnd` file describes and configures the module.
 
-```properties
-Bundle-Name: Acme K8S2 API
-Bundle-SymbolicName: com.acme.k8s2.api
-Bundle-Version: 1.0.0
-Export-Package: com.acme.k8s2
+```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd
 ```
 
 The module's name is *Acme K8S2 API*. Its symbolic name---a name that ensures uniqueness---is `com.acme.k8s2.api`. Its [semantic version](./semantic-versioning.md) is declared next. Lastly, the module [*exports*](./exporting-packages.md) the Java package `com.acme.k8s2`, making the package available to other modules. You confirmed the package export above when you executed the `b [bundle ID]` Gogo Shell command.
