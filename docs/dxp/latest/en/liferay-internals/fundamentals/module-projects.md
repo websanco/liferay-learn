@@ -1,6 +1,6 @@
 # Module Projects
 
-Liferay applications and customizations are [OSGi modules](https://www.osgi.org/developer/what-is-osgi/): `.jar` files containing Java code and some extra configuration for publishing and consuming APIs.
+Liferay applications and customizations are [OSGi modules](https://www.osgi.org/resources/what-is-osgi/): `.jar` files containing Java code and some extra configuration for publishing and consuming APIs.
 
 A module project comprises three things:
 
