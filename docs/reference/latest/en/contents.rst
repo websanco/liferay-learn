@@ -7,8 +7,6 @@ Contents
    :maxdepth: 6
 
    dxp
-   portlet-api
-   faces
 
 Indices and tables
 ==================

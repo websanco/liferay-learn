@@ -1,0 +1,84 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Definitions',
+					sectionURL: 'definitions/index.html',
+					showAll: true,
+				},
+				{
+					sectionName: 'DXP',
+					sectionURL: 'dxp/dxp.html',
+					showAll: true,
+					subsections: [
+						{
+							name: 'Portal-Impl',
+							url: 'javadocs/portal-impl/index.html'
+						},
+						{
+							name: 'Portal-Kernel',
+							url: 'javadocs/portal-kernel/index.html'
+						},
+						{
+							name: 'Portal-Test',
+							url: 'javadocs/portal-test/index.html'
+						},
+						{
+							name: 'Util-Bridges',
+							url: 'javadocs/util-bridges/index.html'
+						},
+						{
+							name: 'Core/Service Tracker Collections',
+							url: 'javadocs/modules/core/com.liferay.service.tracker.collections/index.html
+						},
+						{
+							name: 'Core/Liferay Registry API',
+							url: 'javadocs/modules/core/com.liferay.registry.api/index.html'
+						},
+						{
+							name: 'Petra',
+							url: 'javadocs/petra/index.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Utility Classes',
+					sectionURL: 'dxp/utility-classes.html',
+					showAll: true,
+					subsections: [
+						{
+							name: 'Util-Bridges',
+							url: 'javadocs/util-bridges/index.html'
+						},
+						{
+							name: 'Util-Java',
+							url: 'javadocs/util-java/index.html'
+						},
+						{
+							name: 'Util-slf4j',
+							url: 'javadocs/util-slf4j/index.html'
+						},
+						{
+							name: 'Util-Taglib',
+							url: 'taglibs/util-taglib/index.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Portlet API',
+					sectionURL: 'portlet-api/index.html',
+					showAll: true,
+				},
+				{
+					sectionName: 'Properties Documentation',
+					sectionURL: 'propertiesdoc/index.html',
+					showAll: true,
+				},
+			]
+		}
+	})
+</script>
