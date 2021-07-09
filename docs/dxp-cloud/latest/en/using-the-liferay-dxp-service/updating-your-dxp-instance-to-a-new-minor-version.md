@@ -28,9 +28,11 @@ This allows your modules to perform the necessary upgrades for the new minor ver
 
 Minor version updates to Liferay DXP also require a change to your project's repository.
 
-If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
+```important::
+   If you are using `clustered services <./setting-up-clustering-in-dxp-cloud.md>`_ and updating to any version that changes the Liferay database schema (such as a `service pack <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs>`_), then follow `these steps <#updating-to-a-new-service-pack-with-clustering-enabled>`_.
+```
 
-Otherwise, perform these steps to update and deploy changes in your project repository:
+Perform these steps to update and deploy changes in your project repository:
 
 1. Find the tag for the version of Liferay you are updating to on [Docker Hub](https://hub.docker.com/r/liferay/dxp/tags).
 
