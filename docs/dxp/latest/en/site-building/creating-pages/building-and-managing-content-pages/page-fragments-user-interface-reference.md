@@ -95,7 +95,7 @@ In this table you can see a description of the Dropdown Fragment General options
 | *Type* | Controls the Dropdown Fragment style. |
 | *Size* | Sets the Dropdown Fragment size. |
 | *Panel Type* | Defines the drop zone size:</br><ul><li>*Regular:* Standard drop zone size.</li><li>*Full Width:* The drop zone size corresponds to the Module's width containing the Fragment.</li><li>*Mega Menu:* The drop zone size corresponds to the Page's width.</li></ul> |
-| *Display on Hover* | When you check this option, the Dropdown Fragment opens when the user hovers the mouse over. |
+| *Display on Hover* | When you check this option, the Dropdown Fragment opens on mouse-over. |
 | *Keep Panel Open in Edit Mode* | Check this option to keep the drop-zone open while you edit the Dropdown Fragment content. |
 
 ![You can define the drop zone size in the Dropdown panel using the Panel Type options.](./page-fragments-user-interface-reference/images/18.png)

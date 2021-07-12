@@ -51,7 +51,7 @@ You can set different style options like background color, background image, mar
 
 Starting with Liferay DXP 7.4, you can configure a link to a URL or Page in editable text elements.
 
-![You can configure a link in editable text elements starting with Liferay DXP 7.4](./configuring-elements-on-content-pages/images/01.png)
+![You can configure a link in editable text elements starting with Liferay DXP 7.4.](./configuring-elements-on-content-pages/images/01.png)
 
 ## Editing Hyperlinks
 

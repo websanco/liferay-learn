@@ -11,19 +11,19 @@ Additionally, you can change the Fragment configuration fields depending on the 
 
 ## Localizing Alternative Text for Images
 
-You can add localization in different languages for the image description (also known as *alternative text* or *alt text*) in built-in and custom Fragments. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can edit the *Image Description* adapting the text for the target language (B).
+You can add localization in different languages for the image description (also known as *alternative text* or *alt text*) in built-in and custom Fragments. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can edit the Image Description, adapting the text for the target language (B).
 
-![You can localize the Image Description in the Content Page editor](./localizing-the-fragment-configuration/images/01.png)
+![You can localize the Image Description in the Content Page editor.](./localizing-the-fragment-configuration/images/01.png)
 
 ```tip::
-    The flag icon next to the Image Description indicates the field as localizable.
+    Localizable fields show a flag icon next to their Image Descriptions. 
 ```
 
 If the Image Description doesn't have a translation, the description shows the default Content Page language.
 
 ## Localizing Editable URLs
 
-When you localize a URL or link in your Content Page, you can redirect to different URLs and content, based on the target language. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can update the *URL* to the link of your choice (B).
+When you localize a URL or link in your Content Page, you can redirect to different URLs and content, based on the target language. When you change the target language for your Content Page using the language selector in the editor toolbar (A), you can update the URL to the link of your choice (B).
 
 ![You can localize the link in the Content Page editor.](./localizing-the-fragment-configuration/images/02.png)
 
