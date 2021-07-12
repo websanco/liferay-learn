@@ -4,7 +4,7 @@ There are several external services that can be added on to a Liferay DXP instal
 
 ## Enabling Document Previews
 
-Liferay DXP Users can upload and share any type of file via the Documents and Media library, a customizable and permissions-enabled online repository for files (see [Publishing and Sharing](./../../content-authoring-and-management/documents-and-media/publishing-and-sharing/README.md) for more information).
+Liferay DXP Users can upload and share any type of file via the Documents and Media library, a customizable and permissions-enabled online repository for files (see [Publishing and Sharing](./../../content-authoring-and-management/documents-and-media/publishing_and_sharing.html) for more information).
 
 [PDFBox](https://pdfbox.apache.org/) by default generates Liferay DXP's automatic previews for certain file types (mostly PDFs). You can install two additional tools to generate previews for other file types:
 
