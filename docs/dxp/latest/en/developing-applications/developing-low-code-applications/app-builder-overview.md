@@ -1,6 +1,6 @@
 # App Builder Overview
 
-> Available: Liferay CE/DXP 7.3+
+> Available: Liferay CE/DXP 7.3 ([deprecated and removed in 7.4](../../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md#features-deprecated-in-7-4))
 
 App Builder is a low-code application development solution for Liferay DXP. Build a data model, define the application's forms (for entering data) and tables (for viewing and managing data records), then deploy your application to a Site or as a completely standalone application. With App Builder, you can create functional business applications with dedicated user interfaces and data separation without a single line of code.
 
