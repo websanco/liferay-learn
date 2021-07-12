@@ -37,6 +37,7 @@ Here are the features deprecated in 7.4:
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | EXT Plugin Support | Removed | Replaced by configuration settings and standard [extension points](../../../liferay-internals/extending_liferay.html). |
+| App Builder | Removed | To be relaunched as Liferay Objects in Liferay 7.4. |
 
 Features deprecated in earlier Liferay versions may also need to be considered, if you are upgrading from an earlier version.
 
