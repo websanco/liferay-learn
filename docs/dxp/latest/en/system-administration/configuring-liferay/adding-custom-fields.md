@@ -93,4 +93,4 @@ The configuration options you have will also depend on the field type you choose
 
 ## Additional Information
 
-* [Adding Custom Fields for Users](../../users-and-permissions/devops/adding-custom-fields-to-users.md)
+* [Adding Custom Fields for Users](../../users-and-permissions/users/adding-custom-fields-to-users.md)

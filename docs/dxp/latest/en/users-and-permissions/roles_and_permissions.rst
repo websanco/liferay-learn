@@ -9,7 +9,13 @@ Roles and Permissions
    roles-and-permissions/defining-role-permissions.md
    roles-and-permissions/assigning-users-to-roles.md
    roles-and-permissions/assigning-roles-to-user-segments.md
+   roles-and-permissions/configuring-a-password-policy.md
    roles-and-permissions/default-roles-reference.md
 
-.. include:: /users-and-permissions/roles-and-permissions/README.rst
-   :start-line: 2
+-  :doc:`/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions`
+-  :doc:`/users-and-permissions/roles-and-permissions/creating-and-managing-roles`
+-  :doc:`/users-and-permissions/roles-and-permissions/defining-role-permissions`
+-  :doc:`/users-and-permissions/roles-and-permissions/assigning-users-to-roles`
+-  :doc:`/users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments`
+-  :doc:`/users-and-permissions/roles-and-permissions/configuring-a-password-policy`
+-  :doc:`/users-and-permissions/roles-and-permissions/default-roles-reference`

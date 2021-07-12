@@ -83,12 +83,12 @@ Configure Users
 After you `understand Users <../users-and-permissions/users/understanding-users.md>`_, configure them for your instance.
 
 * Enable/disable User fields
-* Add any necessary `custom User fields <../users-and-permissions/devops/adding-custom-fields-to-users.md>`_
+* Add any necessary `custom User fields <../users-and-permissions/users/adding-custom-fields-to-users.md>`_
 * Specify whether to allow strangers to create accounts
 * Define `User authentication <./securing-liferay/authentication-basics.md>`_
 * Configure automatic association of Users to specific Sites, `Roles <../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_, and `User Groups <../users-and-permissions/user_groups.html>`_
 
-Visit `Users <../system-administration/configuring-liferay/virtual-instances/users.md>`_, `User Authentication <../system-administration/configuring-liferay/virtual-instances/user-authentication.md>`_, and `Adding Custom Fields For Users <../users-and-permissions/devops/adding-custom-fields-to-users.md>`_ for details.
+Visit `Users <../system-administration/configuring-liferay/virtual-instances/users.md>`_, `User Authentication <../system-administration/configuring-liferay/virtual-instances/user-authentication.md>`_, and `Adding Custom Fields For Users <../users-and-permissions/users/adding-custom-fields-to-users.md>`_ for details.
 
 Configure File Storage
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -130,7 +130,7 @@ Use `Roles <../users-and-permissions/roles-and-permissions/understanding-roles-a
 Add Custom Fields
 -----------------
 
-Entities in your Instances and applications can be customized with additional fields. This may include adding fields for Users. For details, see `Adding Custom Fields <../system-administration/configuring-liferay/adding-custom-fields.md>`_ and `Adding Custom Fields For Users <../users-and-permissions/devops/adding-custom-fields-to-users.md>`_.
+Entities in your Instances and applications can be customized with additional fields. This may include adding fields for Users. For details, see `Adding Custom Fields <../system-administration/configuring-liferay/adding-custom-fields.md>`_ and `Adding Custom Fields For Users <../users-and-permissions/users/adding-custom-fields-to-users.md>`_.
 
 Integrate with Existing Systems
 -------------------------------

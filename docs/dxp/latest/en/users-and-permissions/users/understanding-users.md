@@ -30,7 +30,7 @@ See [Configuring Authentication](../../installation-and-upgrades/securing-lifera
 
 #### Configuring a User Directory
 
-Organizations that manage users with LDAP can sync their LDAP server with Liferay to import users. See [this article](../devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to learn more.
+Organizations that manage users with LDAP can sync their LDAP server with Liferay to import users. See [this article](../connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to learn more.
 
 <!-- #### Other Methods
 

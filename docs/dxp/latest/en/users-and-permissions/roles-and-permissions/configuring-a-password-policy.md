@@ -1,6 +1,6 @@
 # Configuring a Password Policy
 
-Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations. 
+Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations.
 
 ```note::
    New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy.
@@ -28,7 +28,7 @@ To change the default policy,
 
    ![Make your desired changes in the configuration window.](configuring-a-password-policy/images/02.png)
 
-1. When finished, click *Save*. 
+1. When finished, click *Save*.
 
 ### Policy Configuration Reference
 
@@ -38,7 +38,7 @@ To change the default policy,
 
 **Password History:** Decide how many passwords to keep in the history, preventing old passwords from being reused.
 
-**Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a *Grace Limit*: how many logins are allowed after the password is expired before forcing a password change. 
+**Password Expiration:** If passwords expire, specify how long passwords are valid, when and whether a warning is sent, and a *Grace Limit*: how many logins are allowed after the password is expired before forcing a password change.
 
 **Lockout:** Set a maximum number of failed authentication attempts before the account is locked, how long the number of attempts is stored, and how long the lockout lasts.
 
@@ -120,7 +120,7 @@ Once you have your `portal-ext.properties` file, place it in the [`[Liferay Home
 | `passwords.default.policy.name` | Default Password Policy | Name of your password policy |
 | `passwords.default.policy.regex` | (?=.{4})(?:[a-zA-Z0-9]*) | If using the RegExpToolkit to generate passwords, set the regular expression pattern to be used to generate and validate passwords |
 | `passwords.default.policy.reset.failure.count` | 600 | The amount of time that a record of failed logins is kept for the user. Time is in seconds |
-| `passwords.default.policy.reset.ticket.max.age `| 86400 | How long a password reset link is valid for. Time is in seconds |
+| `passwords.default.policy.reset.ticket.max.age` | 86400 | How long a password reset link is valid for. Time is in seconds |
 | `passwords.default.policy.warning.time` | 86400 | How long before a password expires that the user will be notified. Time is in seconds |
 
 ## Additional Information

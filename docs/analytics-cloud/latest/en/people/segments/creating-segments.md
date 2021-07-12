@@ -13,7 +13,7 @@
 1. Drag and drop Segment criteria from the panel on the right to the canvas on the center of the screen. The selector menu at the top of the panel shows you the criteria types you can select:
 
     * **Web Behaviors:** Actions taken by a person (e.g., submitted a form, viewed a blog, etc.).
-    * **Individual Attributes:** Attributes that belong to a person (e.g., age, country, industry, etc.). Note that DXP custom fields can also be selected under Individual Attributes. Learn more about [adding custom fields to Users in DXP](/dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html).
+    * **Individual Attributes:** Attributes that belong to a person (e.g., age, country, industry, etc.). Note that DXP custom fields can also be selected under Individual Attributes. Learn more about [adding custom fields to Users in DXP](https://learn.liferay.com/dxp/latest/en/users-and-permissions/users/adding-custom-fields-to-users.html).
     * **Account Attributes:** Attributes that belong to a Salesforce Account (e.g., account name, industry, website, etc.).
     * **Interests:** Topics and content types that interest the person. For more information on interests in Analytics Cloud, see Customer Insights.
     * **Session Attributes:** Attributes that belong to a person's web session (e.g., browser, geo-location, etc.).

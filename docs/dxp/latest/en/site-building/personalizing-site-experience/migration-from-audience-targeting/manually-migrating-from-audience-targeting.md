@@ -4,7 +4,7 @@ Due to the similarities between Audience Targeting user segments and Liferay 7.2
 
 ## User Attribute Rules
 
-Some User Attributes, like Gender or Age, do not have a direct equivalent in Liferay 7.2+. User Attributes retrieved from external sources like Facebook also do not have a replacement. To replace these, you must [create a custom user field](../../../users-and-permissions/devops/adding-custom-fields-to-users.md) and use that to define your new Segment.
+Some User Attributes, like Gender or Age, do not have a direct equivalent in Liferay 7.2+. User Attributes retrieved from external sources like Facebook also do not have a replacement. To replace these, you must [create a custom user field](../../../users-and-permissions/users/adding-custom-fields-to-users.md) and use that to define your new Segment.
 
 ## Session Rules
 
@@ -39,7 +39,7 @@ In addition, the [Content Page personalization](../../../site-building/personali
 
 ## Related Information
 
-- [Create a Custom User Field](../../../users-and-permissions/devops/adding-custom-fields-to-users.md)
+- [Create a Custom User Field](../../../users-and-permissions/users/adding-custom-fields-to-users.md)
 - [Segments Editor UI Reference](../segmentation/segments-editor-ui-reference.md)
 - [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md)
 - [Analytics Cloud Segments](https://learn.liferay.com/analytics-cloud/latest/en/people/segments/segments.html)
