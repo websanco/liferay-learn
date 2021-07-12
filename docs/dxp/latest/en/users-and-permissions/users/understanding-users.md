@@ -38,7 +38,7 @@ Are there other methods of adding users? -->
 
 ## Managing User Access
 
-User access is controlled by Roles and Permissions. Permissions define what a User can and cannot do. Roles are groupings of permissions. Permissions are configured by defining permissions for a Role and assigning Users to pre-set Roles. To learn more about managing access for Users, see [Roles and Permissions](../../roles_and_permissions.html).
+User access is controlled by Roles and Permissions. Permissions define what a User can and cannot do. Roles are groupings of permissions. Permissions are configured by defining permissions for a Role and assigning Users to pre-set Roles. To learn more about managing access for Users, see [Roles and Permissions](../roles_and_permissions.html).
 
 ## Organizing Users
 
