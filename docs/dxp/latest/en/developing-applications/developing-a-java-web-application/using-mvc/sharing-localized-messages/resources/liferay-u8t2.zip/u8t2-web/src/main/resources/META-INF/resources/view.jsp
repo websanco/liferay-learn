@@ -1,6 +1,6 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<h1><liferay-ui:message key="u8t2-porlet-welcome" /></h1>
+<h1><liferay-ui:message key="u8t2-portlet-welcome" /></h1>
 
 <p>
 	<liferay-ui:message key="colors" />:
