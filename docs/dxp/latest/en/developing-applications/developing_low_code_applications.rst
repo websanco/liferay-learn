@@ -30,5 +30,3 @@ Workflow Powered Applications with App Builder
    developing-low-code-applications/creating-the-role-change-request-object.md
    developing-low-code-applications/creating-the-role-change-request-app.md
 
-.. include:: /developing-applications/developing-low-code-applications/README.rst
-   :start-line: 2

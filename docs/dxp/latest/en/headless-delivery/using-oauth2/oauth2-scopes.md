@@ -38,7 +38,7 @@ This step is optional. Users need an interface to authorize access to their acco
 
 3. If you have customized the name and URL of your default site, make the appropriate change here so the URL matches the page you'll create in that site next. Click *Save*.
 
-4. Go to your Site's *Build* &rarr; *Pages* screen. Click the (![add](../../../../images/icon-add.png)) button and choose *Private Page*. This forces users to log in.
+4. Go to your Site's *Build* &rarr; *Pages* screen. Click the (![add](../../images/icon-add.png)) button and choose *Private Page*. This forces users to log in.
 
 5. Choose the *Full Page Application* type.
 

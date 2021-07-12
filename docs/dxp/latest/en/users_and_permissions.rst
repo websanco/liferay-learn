@@ -10,7 +10,6 @@ Users and Permissions
    users-and-permissions/managing_user_data.rst
    users-and-permissions/roles_and_permissions.rst
    users-and-permissions/connecting_to_a_user_directory.rst
-   users-and-permissions/devops.rst
    users-and-permissions/developer_guide.rst
 
 .. raw:: html

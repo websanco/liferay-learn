@@ -2,6 +2,6 @@ Styling
 =======
 
 .. toctree::
-   :madepth: 1
+   :maxdepth: 1
 
 Coming soon!
