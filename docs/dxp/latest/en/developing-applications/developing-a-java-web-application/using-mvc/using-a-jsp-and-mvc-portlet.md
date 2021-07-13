@@ -75,21 +75,19 @@ There are two steps for building the example portlet:
 
 In the module's `src/main/resources/META-INF/resources` folder, create a JSP file to be your view template. The file name is arbitrary; the example JSP file is `view.jsp`. Here is the JSP content.
 
-```javascript
-<h4>W3E7 Portlet</h4>
-
-<h5>Hello W3E7</h5>
+```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/resources/META-INF/resources/view.jsp
+   :language: jsp
 ```
 
-The markup above displays "Hello W3E7" in bold.
+The markup above displays the heading "Hello W3E7."
 
 ### Create an MVCPortlet
 
 In the module's `src/main/java` folder, create a package called `com.acme.w3e7.web.internal.portlet`. In that package, add a class called `W3E7Portlet` that extends [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java).
 
-```java
-public class W3E7Portlet extends MVCPortlet {
-}
+```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
+   :language: java
+   :lines: 17
 ```
 
 ```note::
@@ -102,17 +100,9 @@ This extension doesn't require any additional methods; `MVCPortlet`'s built-in m
 
 A [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)) annotation configures the portlet.
 
-```java
-@Component(
-   property = {
-       "com.liferay.portlet.display-category=category.sample",
-       "javax.portlet.display-name=W3E7 Portlet",
-       "javax.portlet.init-param.view-template=/view.jsp"
-   },
-   service = Portlet.class
-)
-public class W3E7Portlet extends MVCPortlet {
-}
+```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
+   :language: java
+   :lines: 9-18
 ```
 
 The `service = Portlet.class` attribute registers the class as a `Portlet`.
