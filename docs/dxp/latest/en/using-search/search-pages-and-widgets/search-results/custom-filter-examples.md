@@ -223,7 +223,7 @@ This example demonstrates adding a boost for matches to a certain DDM Structure 
 1. Go to the search page and add three Custom Filters using the Elasticsearch response data:
 
     - Filter 1, the parent nested query:
-        - **Filter Field:** `ddmFielArray`
+        - **Filter Field:** `ddmFieldArray`
         - **Filter Query Type:** `Nested`
         - **Occur:** `should`
         - **Query Name:** `parent_query`
