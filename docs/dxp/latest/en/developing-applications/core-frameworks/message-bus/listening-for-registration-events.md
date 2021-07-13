@@ -4,14 +4,14 @@ The messaging API supports listening for destination and message listener regist
 
 * Messages that interest you may be sent to the new destinations
 * Messaging at the destinations may require tuning
-* You may dependend on a destination that's been unregistered
+* You may depend on a destination that's been unregistered
 * Unregistrations free up resources that can reallocated
 
-The example following project demonstrates listening for these registration events. Start with running the example. Then examine the event listener implementations. Lastly, trigger the unregistration events.
+The example project demonstrates listening for these registration events. Start with running the example. Then examine the event listener implementations. Lastly, trigger the unregistration events.
 
 ## Trigger the Events in an Example
 
-These deploy a destination registation listener, a message listener registration listener, and classes that trigger the events they're listening for.
+These deploy a destination registration listener, a message listener registration listener, and classes that trigger the events they're listening for.
 
 1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
