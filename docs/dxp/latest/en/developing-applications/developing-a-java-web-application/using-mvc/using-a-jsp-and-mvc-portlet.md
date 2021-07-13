@@ -125,9 +125,9 @@ The `javax.portlet.init-param.view-template=/view.jsp` property declares the vie
    The `Portlet Descriptor to OSGi Service Property Map <../../reference/portlet-descriptor-to-osgi-service-property-map.md>`_ specifies how OSGi component property values map to traditional portlet descriptors.
 ```
 
-## Conclusion
+## What's Next
 
-Congratulations! You've created a web application using a JSP and one simple Java class. There are lots of directions you can go from here. To add actions to your application, see [MVC Action Command](./mvc-action-command.md). Or implement a back-end data model using [Service Builder](../../data-frameworks/service-builder.md).
+Congratulations! You've created a web application using a JSP and one simple Java class. There are lots of directions you can go from here. To add more views, see [Rendering Views with MVC Portlet](./rendering-views-with-mvc-portlet.md). To add actions to your application, see [MVC Action Command](./mvc-action-command.md). Or implement a back-end data model using [Service Builder](../../data-frameworks/service-builder.md).
 
 ## Additional Information
 
