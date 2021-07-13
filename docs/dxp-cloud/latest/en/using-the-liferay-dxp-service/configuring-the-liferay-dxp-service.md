@@ -81,6 +81,18 @@ These configuration files belong in the `osgi/configs/` folder inside of `$LIFER
    If you are using version 3.x.x services, then OSGi configuration files instead belong in the appropriate ``config/{ENV}/`` folder within the Liferay service directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
 
+## Tomcat Configurations
+
+Configure your Liferay service's Tomcat server by deploying files in the appropriate environment's `liferay/configs/{ENV}` folder to override the configuration files. For example, you can override the `{TOMCAT HOME}/conf/web.xml` file in your Liferay container's file system by placing the customized file in the appropriate `liferay/configs/{ENV}/tomcat/conf/` folder in your repository and deploying the changes.
+
+```note::
+   Two tomcat folders exist in the Liferay container in DXP Cloud: a generic ``tomcat`` folder, and a versioned folder (``tomcat-x.x.x``). The ``tomcat`` folder has a symbolic link to the versioned ``tomcat-x.x.x`` folder, so overriding a file in the generic ``tomcat`` folder ensures the new file reflects in both folders.
+```
+
+```warning::
+   Keep in mind when overriding the default Tomcat configuration that the Liferay service in DXP Cloud exists in a closed network on the Cloud platform. Some network configurations that can be changed in an on-premises Liferay installation cannot be changed from the default values in a Cloud environment, or it may cause issues in your environment.
+```
+
 ## Additional Information
 
 * [Introduction to the Liferay DXP Service](./introduction-to-the-liferay-dxp-service.md)
