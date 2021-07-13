@@ -94,16 +94,9 @@ You've made the round trip between the portlet views. Next, learn how the portle
 
 A portlet's default view renders when users first land on the portlet's page. An initiallization param in the portlet class sets the default view. The `C8M3Portlet.java` example class sets the default view in its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) annotation.
 
-```java
-@Component(
-	property = {
-		"com.liferay.portlet.display-category=category.sample",
-		"javax.portlet.display-name=C8M3 Portlet",
-		"javax.portlet.init-param.view-template=/view_1.jsp"
-	},
-	service = Portlet.class
-)
-public class C8M3Portlet extends MVCPortlet {
+```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
+   :language: java
+   :lines: 16-24
 ```
 
 The [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) property `"javax.portlet.init-param.view-template=/view1.jsp"` specifies `/view1.jsp` as the default view template. The template path is relative to the portlet's `src/main/resources/META-INF/resources` folder.
@@ -114,16 +107,8 @@ Next, learn how View 1 links to View 2.
 
 View 1 has only a heading called *View 1* and a link labeled *Go to View 2*. Here's the `view1.jsp` code:
 
-```javascript
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-
-<h1>View 1</h1>
-
-<portlet:renderURL var="view2URL">
-	<portlet:param name="mvcPath" value="/view_2.jsp" />
-</portlet:renderURL>
-
-<a href="<%= view2URL %>">Go to View 2</a>
+```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_1.jsp
+   :language: jsp
 ```
 
 The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. The render URL above is assigned to the variable `view2URL`. The render URL declares the `portlet:param` named `mvcPath` the value `/view_2.jsp`. When the portlet renders, the `mvcPath` parameter is added to the portlet's [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) object. On processing portlet requests, [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) renders the template assigned to `mvcPath`.
@@ -136,22 +121,10 @@ When a user clicks on the *Go to View 2* hyperlink, a portlet request that inclu
 
 When a portlet receives the request object, it can respond to the request object parameters. `C8M3Portlet`'s `render` method response to render requests.
 
-```java
-	@Override
-	public void render(
-			RenderRequest renderRequest, RenderResponse renderResponse)
-		throws IOException, PortletException {
-
-		if (_log.isInfoEnabled()) {
-			String mvcPath = renderRequest.getParameter("mvcPath");
-
-			_log.info("MVC path " + mvcPath);
-		}
-
-		super.render(renderRequest, renderResponse);
-	}
-
-	private static final Log _log = LogFactoryUtil.getLog(C8M3Portlet.class);
+```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
+   :dedent: 1
+   :language: java
+   :lines: 26-40
 ```
 
 `C8M3Portlet`'s `render` method logs the `mvcPath` parameter value and then delegates rendering the portlet to the superclass `MVCPortlet`. [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) renders the view assigned to the `mvcPath` portlet request parameter.
@@ -162,16 +135,8 @@ When a portlet receives the request object, it can respond to the request object
 
 The View 2 template `view2.jsp` maps back to `view1.jsp` using a portlet render URL too.
 
-```javascript
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-
-<h1>View 2</h1>
-
-<portlet:renderURL var="view1URL">
-	<portlet:param name="mvcPath" value="/view_1.jsp" />
-</portlet:renderURL>
-
-<a href="<%= view1URL %>">Go to View 1</a>
+```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_2.jsp
+   :language: jsp
 ```
 
 It implements the round trip back to View 1.
