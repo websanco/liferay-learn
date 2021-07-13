@@ -1,6 +1,8 @@
-# Hubspot
+# Hubspot 
 
-[Hubspot](https://www.hubspot.com/) is a CRM platform that includes Live Chat functionality. Enabling integration with Hubspot requires a combination of two values that can be retrieved from your Hubspot account: your Hubspot User Account ID and the Hubspot API Token.
+[Hubspot](https://www.hubspot.com/) is a CRM platform that includes Live Chat functionality. Enabling integration with Hubspot requires the creation of a live chat, and a combination of two values that can be retrieved from your Hubspot account: your Hubspot User Account ID and the Hubspot API Token.
+
+To create a live chat and decide its options follow the steps in [Hubspot's Knowledge Base](https://knowledge.hubspot.com/chatflows/create-a-live-chat). 
 
 ## Locating Your Hubspot User Account ID
 
