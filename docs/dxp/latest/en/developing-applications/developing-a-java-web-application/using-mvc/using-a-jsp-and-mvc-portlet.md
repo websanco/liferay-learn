@@ -98,7 +98,7 @@ This extension doesn't require any additional methods; `MVCPortlet`'s built-in m
 
 ### Configure the Portlet With Annotations
 
-A [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)) annotation configures the portlet.
+A [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation configures the portlet.
 
 ```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
    :language: java
