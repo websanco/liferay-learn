@@ -120,7 +120,7 @@ The method above invokes a `Greeter`'s `greet` method. `com.acme.j1h1.Greeter` i
 
 Getting an OSGi service from the registry requires adding an [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to a field of that service type. Add the `@Reference` to your service field.
 
-```literalinclude:: ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
+```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
    :dedent: 1
    :language: java
    :lines: 18-19
@@ -132,7 +132,7 @@ The `J1H1OSGiCommands` class has the above private `Greeter` field called `_gree
 
 Only Declarative Services components can use the `@Reference` annotation. Add the `@Component` annotation to your class and use a `service` attribute to declare your component as implementing a particular service.
 
-```literalinclude:: ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
+```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
    :language: java
    :lines: 8-12
 ```
@@ -143,7 +143,7 @@ The `J1H1OSGiCommands` class provides an OSGi service of its own type. The two p
 
 Your consumer module depends on the API. In your `build.gradle` file, add the API to your dependencies. Here's the `j1h1-osgi-commands` module's `build.gradle` file:
 
-```literalinclude:: ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/build.gradle
+```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/build.gradle
    :language: groovy
 ```
 

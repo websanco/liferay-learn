@@ -124,7 +124,7 @@ The example's three modules configured a destination, registered 10 message list
 
 When `W3R2AbleMessagingConfigurator` in `w3r2-able-impl` activates, it configures the `acme/w3r2_able` destination and logs the `DestinationConfiguration`'s `toString()` value.
 
-```literalinclude:: ./tuning-messaging-performance/resources/liferay-w3r2.zip/w3r2-able-impl/src/main/java/com/acme/w3r2/able/internal/messaging/W3R2AbleMessagingConfigurator.java
+```{literalinclude} ./tuning-messaging-performance/resources/liferay-w3r2.zip/w3r2-able-impl/src/main/java/com/acme/w3r2/able/internal/messaging/W3R2AbleMessagingConfigurator.java
    :dedent: 1
    :language: java
    :lines: 20-37
@@ -132,7 +132,7 @@ When `W3R2AbleMessagingConfigurator` in `w3r2-able-impl` activates, it configure
 
 `W3R2CharlieOSGiCommands` in the `w3r2-charlie-impl` module logs the destination statistics using the `w3r2:listDestinationStats` Gogo shell command it provides. Examine how `W3R2CharlieOSGiCommands`'s `listDestinationStats()` method gets destination statistics.
 
-```literalinclude:: ./tuning-messaging-performance/resources/liferay-w3r2.zip/w3r2-charlie-impl/src/main/java/com/acme/w3r2/charlie/internal/osgi/commands/W3R2CharlieOSGiCommands.java
+```{literalinclude} ./tuning-messaging-performance/resources/liferay-w3r2.zip/w3r2-charlie-impl/src/main/java/com/acme/w3r2/charlie/internal/osgi/commands/W3R2CharlieOSGiCommands.java
    :language: java
    :lines: 13-56
 ```

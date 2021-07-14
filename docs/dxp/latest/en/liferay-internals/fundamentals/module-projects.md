@@ -190,7 +190,7 @@ The `k8s2-api` module folder contains a `bnd.bnd` metadata file, a `build.gradle
 
 The example module has only one Java class: an interface called `Greeter`.
 
-```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java
+```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java
    :language: java
    :lines: 5-10
 ```
@@ -203,7 +203,7 @@ Add your own Java code and resources in your module's `src/main/java` folder and
 
 The `build.gradle` file specifies the module's dependencies.
 
-```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/build.gradle
+```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/build.gradle
    :language: groovy
 ```
 
@@ -229,7 +229,7 @@ The module JAR's `META-INF/MANIFEST.MF` file describes the module. The manifest 
 
 The `bnd.bnd` file describes and configures the module.
 
-```literalinclude:: ./module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd
+```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd
 ```
 
 The module's name is *Acme K8S2 API*. Its symbolic name---a name that ensures uniqueness---is `com.acme.k8s2.api`. Its [semantic version](./semantic-versioning.md) is declared next. Lastly, the module [*exports*](./exporting-packages.md) the Java package `com.acme.k8s2`, making the package available to other modules. You confirmed the package export above when you executed the `b [bundle ID]` Gogo Shell command.
