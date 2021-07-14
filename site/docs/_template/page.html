@@ -67,6 +67,9 @@
                             <option value="dxp-cloud">
                                 {% trans %}DXP Cloud{% endtrans %}
                             </option>
+                            <option value="reference">
+                                {% trans %}Reference{% endtrans %}
+                            </option>
                         </select>
                     </label>
                 </div>
@@ -276,6 +279,8 @@
                     window.location.pathname = '/commerce/latest/en/index.html';
                 } else if (target === 'dxp-cloud') {
                     window.location.pathname = '/dxp-cloud/latest/en/index.html';
+                } else if (target === 'reference') {
+                    window.location.pathname = '/reference/latest/en/index.html';
                 } else {
                     window.location.pathname = '/dxp/latest/en/index.html';
                 }

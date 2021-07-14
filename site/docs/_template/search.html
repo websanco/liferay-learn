@@ -116,6 +116,19 @@
                                     <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
                                 </label>
                             </div>
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="reference"
+                                    />
+
+                                    <span class="custom-control-label">{% trans %}Reference{% endtrans %}</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -188,6 +201,10 @@
             name: 'dxp-cloud',
             pathname: '/dxp-cloud/latest/en/search.html'
         }
+        {
+            name: 'reference',
+            pathname: '/reference/latest/en/search.html'
+        }
     ];
 
     let currentDocProduct = 'dxp'
@@ -198,6 +215,8 @@
         currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('analytics-cloud')) {
         currentDocProduct = 'analytics-cloud'
+    } else if (pathname.includes('reference')) {
+        currentDocProduct = 'reference'
     }
 
     const productSelect = document.querySelectorAll('[name="productName"]');
