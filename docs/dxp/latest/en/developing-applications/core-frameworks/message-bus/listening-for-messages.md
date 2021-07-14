@@ -104,4 +104,4 @@ When you deploy your project, the OSGi Runtime registers your `MessageListener` 
 
 ## Additional Information
 
-* [Message Bus](../message_bus.html)
+* [Message Bus](../message-bus.md)
