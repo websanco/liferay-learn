@@ -1,6 +1,6 @@
 # Tuning Messaging Performance
 
-Messaging performance is tuned at the destinations. It depends on the destination type, the amount of processing the message listeners require, and the thread pool available to process messages.
+Messaging performance is tuned at the destinations. Performance depends on the destination type, the amount of processing the message listeners require, and the thread pool available to process messages.
 
 Here are the three destination types:
 
@@ -16,11 +16,11 @@ Here are the three destination types:
 * Messages sent here are directly delivered to message listeners.
 * The thread sending the message also delivers the message to all message listeners.
 
-You can sending messages different ways using the applicable destination types. 
+You can send messages in different ways using the applicable destination types. 
 
 **Destination Type Compatibility**
 
-This table shows destination type's compatbility with [asynchronous messaging](./using-asynchronous-messaging.md), [default synchronous messaging](./using-default-synchronous-messaging.md), and [direct synchronous messaging](./using-direct-synchronous-messaging.md).
+Below is each destination type's compatibility with [asynchronous messaging](./using-asynchronous-messaging.md), [default synchronous messaging](./using-default-synchronous-messaging.md), and [direct synchronous messaging](./using-direct-synchronous-messaging.md).
 
 | Destination Type | Asynchronous Messaging | Default Synchronous Messaging | Direct Synchronous Messaging |
 | :---| :--- | :---- | :--- |
@@ -79,10 +79,10 @@ The example project creates a destination, registers message listeners, and list
 
 1. Open the [Script console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md).
 
-1. In the script field, send a message by executing the following Groovy code.
+1. In the script field, send a message by executing the following Groovy code:
 
     ```groovy
-    import com.liferay.portal.kernel.messaging.*;
+   import com.liferay.portal.kernel.messaging.*;
 
 	MessageBusUtil.sendMessage(
 		"acme/w3r2_able",
@@ -195,7 +195,7 @@ Each serial and parallel destination has a message queue and a dedicated thread 
 
 If a message arrives when the queue is full, the destination's `RejectedExecutionHandler` handles the message. The default handler discards the message and logs a warning. The default maximum message queue size is Java's maximum integer value, but you can reduce it if you like.
 
-The Message Bus draws message listener processing threads from the destination's thread pool. The pool has a starting size and a maximum size it can grow to.
+The Message Bus draws message listener processing threads from the destination's thread pool. The pool has a starting size and a maximum size.
 
 You can change the maximum message queue size, rejected execution handler, thread pool starting size (core size), and thread pool maximum size using these [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) methods:
 
@@ -212,11 +212,11 @@ Here you'll reconfigure the example's `acme/w3r2_able` destination with these se
 
 * Destination type: `parallel`
 * Starting thread pool size: `10`
-* Maximim thread pool size: `20`
+* Maximum thread pool size: `20`
 
 Here are the steps:
 
-1. Use a different `DestinationConfiguration` by replacing `W3R2AbleMessagingConfigurator`'s `_activate(BundleContext)` method, with this code:
+1. Use a different `DestinationConfiguration` by replacing `W3R2AbleMessagingConfigurator`'s `_activate(BundleContext)` method with this code:
 
 	```java
 	@Activate
