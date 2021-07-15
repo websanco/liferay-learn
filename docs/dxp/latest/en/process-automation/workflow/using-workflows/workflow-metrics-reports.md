@@ -120,20 +120,6 @@ The top of the Item Detail view is important. It shows you the information about
 
 **Resolved**: The defined SLA goals are completed. Resolved items can be of status Overdue or On Time.
 
-## Re-Indexing Workflow Metrics
-
-A _Re-Index_ action in Liferay DXP completely deletes, then recreates, search indexes based on mapping files. Because metrics are also stored in the database, there's no danger of data loss when re-indexing. To Re-index Workflow Metrics,
-
-1. From the Metrics application, open the Options menu (![Options](../../../images/icon-options.png)) and click _Settings_.
-
-2. Now in the Workflow Index Actions screen, click _Reindex All_ for the Workflow Indexes entry.
-
-   This option acts on every index in the Workflow Metrics application. More granular options are available as well.
-
-A re-index of Workflow Metrics is required when the [search engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) is first configured and each time it's upgraded. A good rule of thumb is that Workflow Metrics should be re-indexed each time Liferay DXP's main search indexes are re-indexed.
-
-From the overall metrics of a workflow process down to the details on a single item in the workflow, the new Workflow Metrics functionality gives you insights into the time it takes to _get things done_ in Liferay DXP.
-
 ## Additional Information
 
 * [Using Workflow Metrics](./using-workflow-metrics.md)

@@ -45,7 +45,7 @@ Upgrade scenarios for systems not including LES apps include these steps:
 
 1. [Re-index the search and spell check indexes.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/post-upgrade-considerations.md)
 
-1. [Re-index the Workflow Metrics indexes.](../../../../process-automation/workflow/using-workflows/workflow-metrics-reports.md#re-indexing-workflow-metrics)
+1. [Re-index the Workflow Metrics indexes.](../../../../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics)
 
 1. Test the search experience in the upgraded system to ensure everything is working as expected.
 

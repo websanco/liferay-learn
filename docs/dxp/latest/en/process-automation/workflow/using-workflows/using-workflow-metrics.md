@@ -101,6 +101,20 @@ Workflow Metrics data is read from the search engine to calculate metrics. When 
 - A long time between metrics recalculation events corresponds with more search documents being read during each recalculation.
 - A short time between metrics recalculation events corresponds with a higher frequency of read requests to the search engine.
 
+## Re-Indexing Workflow Metrics
+
+A _Re-Index_ action in Liferay DXP completely deletes, then recreates, search indexes based on mapping files. Because metrics are also stored in the database, there's no danger of data loss when re-indexing. To Re-index Workflow Metrics,
+
+1. From the Metrics application, open the Options menu (![Options](../../../images/icon-options.png)) and click _Settings_.
+
+2. Now in the Workflow Index Actions screen, click _Reindex All_ for the Workflow Indexes entry.
+
+   This option acts on every index in the Workflow Metrics application. More granular options are available as well.
+
+A re-index of Workflow Metrics is required when the [search engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) is first configured and each time it's upgraded. A good rule of thumb is that Workflow Metrics should be re-indexed each time Liferay DXP's main search indexes are re-indexed.
+
+From the overall metrics of a workflow process down to the details on a single item in the workflow, the new Workflow Metrics functionality gives you insights into the time it takes to _get things done_ in Liferay DXP.
+
 ## Additional Information
 
 * [Creating Tasks in the Workflow Designer](https://help.liferay.com/hc/articles/360028821932-Creating-Tasks-in-the-Workflow-Designer)
