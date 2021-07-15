@@ -2,8 +2,8 @@
 
 The latest versions of Liferay are available as Docker images. Follow these steps to download, launch, and begin touring the latest releases of Liferay.
 
-```important::
-    Don't have Docker? Go here first: `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_
+```{important}
+Don't have Docker? Go here first: [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/)
 ```
 
 ## Get Started with Liferay
@@ -22,8 +22,8 @@ Liferay Portal CE is the open source and community supported platform for buildi
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-    ```tip::
-       Wait until you see ``org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`` to indicate startup completion.
+    ```{tip}
+    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds` to indicate startup completion.
     ```
 
 1. Open your browser to `https://localhost:8080`.
