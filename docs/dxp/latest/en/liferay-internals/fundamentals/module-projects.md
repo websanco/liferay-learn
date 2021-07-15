@@ -266,6 +266,10 @@ Now you know what module projects look like, how to build and deploy them, and h
 
 Modules leverage each other's capabilities via APIs like the `Greeter` API. Liferay uses OSGi Services to define, implement, and consume APIS. Next, [APIs as OSGi Services](./apis-as-osgi-services.md) demonstrates *implementing* the `Greeter` API using OSGi services.
 
+```note::
+   For details about the module lifecycle, see `Module Lifecycle <../architecture/module-lifecycle.md>`_.
+```
+
 ## Additional Information
 
 * [APIs as OSGi Services](./apis-as-osgi-services.md)
@@ -273,3 +277,4 @@ Modules leverage each other's capabilities via APIs like the `Greeter` API. Life
 * [Configure Dependencies](./configuring-dependencies/configuring-dependencies.md)
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)
+* [Module Lifecycle](../architecture/module-lifecycle.md)

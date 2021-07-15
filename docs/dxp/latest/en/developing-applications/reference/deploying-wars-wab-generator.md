@@ -86,3 +86,4 @@ Awesome! You can deploy your WAR plugin as a WAB and you know how to save a copy
 
 * [JARs Excluded from WABs](./jars-excluded-from-wabs.md)
 * [Resolving Third Party Library Package Dependencies](../../liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
+* [Module Lifecycle](../../liferay-internals/architecture/module-lifecycle.md)

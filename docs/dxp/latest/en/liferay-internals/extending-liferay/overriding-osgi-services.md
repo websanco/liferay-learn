@@ -264,3 +264,4 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
 * [Module Projects](../fundamentals/module-projects.md)
 * [Using an OSGi Service](../fundamentals/using-an-osgi-service.md)
 * [APIs as OSGi Services](../fundamentals/apis-as-osgi-services.md)
+* [Module Lifecycle](../architecture/module-lifecycle.md)
