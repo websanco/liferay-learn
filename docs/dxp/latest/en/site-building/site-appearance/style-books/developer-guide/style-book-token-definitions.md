@@ -124,7 +124,7 @@ Here is an example list of tokens within a token set:
 
 ## Matching CSS Variables to Style Book Tokens
 
-The `frontend-token-definition.json` file containing your token definition must be in the src/WEB-INF folder of your theme module folder. Every token defined in your token definition must represent a style (color, spacing, font, etc.) in the CSS of your theme.
+The `frontend-token-definition.json` file containing your token definition must be in the `src/WEB-INF` folder of your theme module folder. Every token defined in your token definition must represent a style (color, spacing, font, etc.) in the CSS of your theme.
 
 All styles that your tokens represent must be coded as CSS variables. For example, take this definition of a token (giving an option to configure a font):
 
