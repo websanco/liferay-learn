@@ -73,7 +73,7 @@ Once Liferay is connected with the Elasticsearch cluster, restart Liferay and re
 
 1. Restart Liferay.
 
-1. Re-index the company, system, and spell check indexes. From the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Control Panel* &rarr; *Configuration* &rarr; *Search*. Click *Execute* for the *Reindex all search indexes* entry.
+1. Re-index the company, system, and spell check indexes. In each Virtual Instance, from the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Control Panel* &rarr; *Configuration* &rarr; *Search*. Click *Execute* for the *Reindex all search indexes* entry.
 
 1. Re-index the [Workflow Metrics indexes](../../../../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics): from the Global Menu (![Global Menu](../../../../images/icon-applications-menu.png)), navigate to *Applications* &rarr; *Workflow---Metrics*. Open the Settings menu (![Options](../../../../images/icon-options.png) and Click *Reindex All*.
 

@@ -103,13 +103,15 @@ Workflow Metrics data is read from the search engine to calculate metrics. When 
 
 ## Re-Indexing Workflow Metrics
 
-A _Re-Index_ action in Liferay DXP completely deletes, then recreates, search indexes based on mapping files. Because metrics are also stored in the database, there's no danger of data loss when re-indexing. To Re-index Workflow Metrics,
+A _Re-Index_ action in Liferay DXP completely deletes, then recreates, search indexes based on mapping files. Because metrics are also stored in the database, there's no danger of data loss when re-indexing. To Re-index Workflow Metrics on Liferay 7.3,
 
 1. From the Metrics application, open the Options menu (![Options](../../../images/icon-options.png)) and click _Settings_.
 
 2. Now in the Workflow Index Actions screen, click _Reindex All_ for the Workflow Indexes entry.
 
    This option acts on every index in the Workflow Metrics application. More granular options are available as well.
+
+On Liferay 7.2, Workflow Metrics are re-indexed from the Search administrative panel (Control Panel &rarr; Configuration &rarr; Search).
 
 A re-index of Workflow Metrics is required when the [search engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) is first configured and each time it's upgraded. A good rule of thumb is that Workflow Metrics should be re-indexed each time Liferay DXP's main search indexes are re-indexed.
 

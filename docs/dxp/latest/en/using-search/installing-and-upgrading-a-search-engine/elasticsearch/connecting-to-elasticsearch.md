@@ -160,7 +160,7 @@ If Elasticsearch is [installed and running](./installing-elasticsearch.md), star
 
 ![An active connection is displayed in the Search administrative panel.](./getting-started-with-elasticsearch/images/01.png)
 
-Re-index your search indexes and spell check indexes. Invoke both of these actions in the Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
+Re-index the search indexes and spell check indexes for each Virtual Instance. Invoke both of these actions in the Virtual Instance's Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
 
 On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
 
