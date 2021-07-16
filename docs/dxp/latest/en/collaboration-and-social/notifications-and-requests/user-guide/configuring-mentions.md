@@ -1,39 +1,50 @@
 # Configuring Mentions
 
-Mentions are enabled by the _Mentions_ app. By default, the _Mentions_ app is enabled globally. However, this can be enabled or disabled either globally or per site.
+Mentions are enabled by the _Mentions_ app. By default, the _Mentions_ app is enabled globally. However, this can be enabled or disabled either globally or per Site.
 
 ## Configuring Mentions on a Global Scope
 
 To access the global Mentions settings for your Virtual Instance:
 
-1. Open the *Menu* (![Menu](../../../images/icon-product-menu.png)).
-1. Navigate to _Control Panel_ &rarr; _Configuration_.
-1. Click _Instance Settings_.
-1. Click _Community Tools_.
+1. Click the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)) and click *Control Panel*.
+1. Under Configuration, click *Instance Settings*.
+1. Under Content and Data, click *Community Tools*.
 
    ![Community Tools](./configuring-mentions/images/01.png)
 
-1. Click _Mentions_ on the left menu.
-1. By default, all users are allowed to mention fellow site members and friends. To fine tune these options, select *Define Mentions Capability for Users* and specify the settings you want.
+1. In the Virtual Instance Scope section, click *Mentions*.
+1. By default, all users can mention fellow Site members and friends. To configure this option, select *Define Mentions Capability for Users* and specify the settings you want.
 
-    ![You can enable or disable the Mentions feature for all of the Virtual Instance's sites.](./configuring-mentions/images/02.png)
+    ![You can enable or disable the Mentions feature for all of the Virtual Instance's Sites.](./configuring-mentions/images/02.png)
 
-1. Click _Save_.
+1. Click *Save*.
 
-The _Mentions_ app has been configured globally.
+## Configuring Mentions on a Site Scope
 
-## Configuring Mentions in a Site
+Site administrators can enable or disable *Mentions* for a Site.
 
-Site administrators can enable or disable _Mentions_ for a site.
+1. Access the Mentions option:
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)), then click the compass icon (![Compass](../../../images/icon-compass.png)) on the Site Administration menu. This opens the Select Site dialog.
-1. Click on _[your site name]_ &rarr; _Configuration_.
-1. Click _Settings_.
-1. In the _Social_ tab, expand the _Mentions_ section.
-1. Switch the toggle to _YES_ or _NO_ under _Allow Users to Mention Other Users_.
+    - In Liferay DXP 7.4+:
 
-    ![Mentions can also be enabled or disabled per site.](./configuring-mentions/images/03.png)
+      1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
+      1. In the Content and Data section, click *Community Tools* and then click *Mentions*.
 
-1. Click _Save_ when finished.
+            ![In Liferay DXP 7.4+, change the Mentions setting from the Site Settings section.](./configuring-mentions/images/04.png)
 
-_Mentions_ has been configured at the site scope.
+   - In previous Liferay DXP versions:
+
+      1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
+      1. Under the Social area, expand the *Mentions* option.
+
+            ![In previous Liferay DXP versions, change the Mentions setting from the Settings section.](./configuring-mentions/images/03.png)
+
+1. In the *Allow Users to Mention Other Users* option, toggle the switch to set your preferred setting.
+
+1. Click *Save*.
+
+## Related Information
+
+- [Site Settings UI Reference](../../../site-building/site-settings/site-settings-ui-reference.md)
+- [Managing Notifications and Requests](./managing-notifications-and-requests.md)
+- [Mentioning Users](./mentioning-users.md)

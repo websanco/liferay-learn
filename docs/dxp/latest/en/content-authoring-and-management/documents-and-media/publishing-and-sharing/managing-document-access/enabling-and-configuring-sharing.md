@@ -1,62 +1,77 @@
 # Enabling and Configuring Sharing
 
-You can choose to enable [file sharing](./sharing-documents-with-other-users.md) at the global, instance, and Site levels.
+The Sharing configuration allows users to [share files](./sharing-documents-with-other-users.md) with each other. You can enable file sharing at the Global, Virtual Instance, and Site scopes.
 
-## Global Configuration
+```note::
+    Sharing is enabled globally by default.
+```
 
-Sharing is enabled globally by default. 
+## Global Sharing Configuration
 
-1. Click the _Application Menu_ &rarr; _Control Panel_.
-1. Click _System Settings_.
-1. Click _Sharing_ under _Content and Data_.
+1. Click the *Global Menu* (![Global Menu](../../../../images/icon-applications-menu.png)) and click *Control Panel*.
+1. Click *System Settings*.
+1. Under the *Content and Data* section, click *Sharing*.
 
     ![The Sharing link leads to the settings for sharing.](./enabling-and-configuring-sharing/images/02.png)
 
-1. Under *SYSTEM SCOPE*, select *Sharing*.
-1. Enter the following values:
+1. Under *System Scope*, select *Sharing*.
+1. Configure the following options:
 
-    * **Expired Sharing Entries Check Interval:** The interval in minutes for how often expired sharing entries are checked for deletion.
+    - **Expired Sharing Entries Check Interval:** The interval in minutes for how often expired sharing entries are checked for deletion.
 
-    * **Enabled:** Whether sharing is enabled globally.
+    - **Enabled:** Check this box to enable sharing globally.
 
-   ![Configure sharing globally.](./enabling-and-configuring-sharing/images/03.png)
+1. Under *Virtual Instance Scope*, select *Sharing*.
+1. Check the *Enable* box to enable sharing for all the Virtual Instances on your system, or uncheck this box to configure sharing for each Virtual Instance.
 
-1. Click _Save_ when finished.
+    ```note::
+       When you enable sharing at the System scope, you enable sharing for all the Virtual Instances on your system. To change this behavior and enable sharing on a per-instance basis, uncheck the Sharing option under the Virtual Instance scope section.
+    ```
 
-When sharing is enabled globally, it is also enabled by default for all portal instances. You can disable this feature so that sharing is enabled on a per-instance basis: 
+    ![Configure sharing globally.](./enabling-and-configuring-sharing/images/03.png)
 
-1. Click _Sharing_ under _Virtual Instance Scope_.
-1. Check or uncheck the _Enabled_ box.
-1. Click _Save_ when finished.
+1. Click *Save*.
 
-Sharing at the Virtual Instance Scope has been configured.
+## Virtual Instance Sharing Configuration
 
-## Instance Configuration
+1. Click the *Global Menu* (![Global Menu](../../../../images/icon-applications-menu.png)) and click *Control Panel*.
+1. Click *Instance Settings*.
+1. Under *Content and Data*, click *Sharing*.
 
-1. Click the _Application Menu_ &rarr; _Control Panel_.
-1. Click _Instance Settings_.
-1. Click _Sharing_ under _Content and Data_.
-1. Select *Sharing* under *VIRTUAL INSTANCE SCOPE*.
-1. Check or uncheck the *Enabled* checkbox to enable or disable sharing, respectively.
+    ```note::
+       The Sharing option is unavailable when Sharing is disabled at the System Scope. See `Global Sharing Configuration <#global-sharing-configuration>`_ to modify the System Scope settings.
+    ```
+
+1. Under *Virtual Instance Scope*, select *Sharing*.
+1. Check the *Enabled* box to enable sharing on this Virtual Instance.
 
    ![You can enable or disable sharing for each instance.](./enabling-and-configuring-sharing/images/04.png)
 
-1. Click _Save_ when finished.
+1. Click *Save*.
 
-## Site Configuration
+## Site Sharing Configuration
 
-1. To access the _Site Administration_, open the _Menu_ (![Product Menu](../../../../images/icon-menu.png)) and click your Site's name.
-1. Click _Configuration_ &rarr; _Settings_.
+```note::
+    The Site Sharing option is unavailable when Sharing is disabled at the System or Virtual Instance scopes. See `Global Sharing Configuration <#global-sharing-configuration>`_ and `Virtual Instance Sharing Configuration <#virtual-instance-sharing-configuration>`_ to modify these settings.
+```
 
-    ![Navigate to the Site Settings.](./enabling-and-configuring-sharing/images/05.png)
+1. Access the Site Sharing setting.
 
-1. Click on the _Advanced_ tab.
-1. Expand the _Content Sharing_ section and select the desired option from the dropdown menu.
+   - In Liferay DXP 7.4+:
 
-    ![Configure the Site Setting.](./enabling-and-configuring-sharing/images/06.png)
+      1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
+      1. In the Content and Data section, click *Sharing*.
 
-1. Click _Save_ when finished.
+   - In previous Liferay DXP versions:
 
-## Additional Information
+      1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
+      1. Under the Advanced area, expand the *Content Sharing* section.
 
-* [Sharing Documents with Other Users](./sharing-documents-with-other-users.md)
+1. Toggle the *Enable Sharing* option to enable or disable sharing files for your site.
+
+1. Click *Save* when finished.
+
+## Related Information
+
+- [Sharing Documents with Other Users](./sharing-documents-with-other-users.md)
+- [Site Settings UI Reference](../site-../../../site-building/site-settings/site-settings-ui-reference.md)

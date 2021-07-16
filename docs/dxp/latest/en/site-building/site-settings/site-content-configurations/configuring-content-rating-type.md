@@ -1,25 +1,38 @@
 # Configuring Content Rating Type
 
-[Ratings](../../../collaboration-and-social/social-tools/user-guide/using-the-ratings-system.md) can be represented by different types of icons/labels (like, stacked stars, stars, and thumbs ups). These rating types can be configured for each application listed below:
+[Ratings](../../../collaboration-and-social/social-tools/user-guide/using-the-ratings-system.md) can be represented by different types of icons/labels (like, stacked stars, stars, and thumbs ups). You can configure these rating types for the following applications:
 
-* Blogs
-* Comments
-* Documents and Media
-* Knowledge Base
-* Message Boards
-* Web Content
-* Wiki
+- Blogs
+- Comments
+- Documents and Media
+- Knowledge Base
+- Message Boards
+- Web Content
+- Wiki
 
 ## Configuring Content Rating Types for Site Applications
 
-To configure the ratings type used by a site application, follow these steps:
+To configure the rating type used by a Site application, follow these steps:
 
-1. Open the Product Menu and go to *Configuration* &rarr; *Settings* (previously *Site Settings*).
-1. Select the *Social* tab and scroll down to the *Ratings* sub-heading.
-1. Use the selector for each application to choose the desired ratings type.
+1. Access the Ratings option:
 
-    ![You can set the ratings type for several applications from the Site's Social settings.](./configuring-content-ratings-type/images/01.png)
+   - In Liferay DXP 7.4+:
 
-1. Scroll down and click *Save* to apply the changes.
+      1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
+      1. In the Content and Data section, click *Community Tolls* and then click *Ratings*.
 
-The applications now use the configured ratings type.
+   - In previous Liferay DXP versions:
+
+      1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
+      1. Under the Social area, expand the *Ratings* option.
+
+1. Use the selector for each application to choose the desired rating type.
+
+    ![You can set the rating type for several applications from the Site's Social settings.](./configuring-content-ratings-type/images/01.png)
+
+1. Click *Save*.
+
+## Related Information
+
+- [Configuring the Asset Recyle Bin for Sites](./configuring-the-asset-recycle-bin-for-sites.md)
+- [Site Settings UI Reference](../site-settings-ui-reference.md)
