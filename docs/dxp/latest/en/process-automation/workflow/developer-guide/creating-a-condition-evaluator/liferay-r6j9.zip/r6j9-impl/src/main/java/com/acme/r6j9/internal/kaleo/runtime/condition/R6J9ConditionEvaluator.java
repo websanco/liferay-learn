@@ -18,8 +18,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true, property = "scripting.language=java",
-	service = ConditionEvaluator.class
+	property = "scripting.language=java", service = ConditionEvaluator.class
 )
 public class R6J9ConditionEvaluator implements ConditionEvaluator {
 
@@ -27,9 +26,6 @@ public class R6J9ConditionEvaluator implements ConditionEvaluator {
 	public String evaluate(
 			KaleoCondition kaleoCondition, ExecutionContext executionContext)
 		throws PortalException {
-
-		// check if the user is a regular administrator, and approve
-		// automatically if so.
 
 		Map<String, Serializable> workflowContext =
 			executionContext.getWorkflowContext();
