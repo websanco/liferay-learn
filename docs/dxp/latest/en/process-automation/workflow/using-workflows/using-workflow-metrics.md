@@ -109,7 +109,7 @@ A _Re-Index_ action in Liferay DXP completely deletes, then recreates, search in
 
 2. Now in the Workflow Index Actions screen, click _Reindex All_ for the Workflow Indexes entry.
 
-   This option acts on every index in the Workflow Metrics application. More granular options are available as well.
+   This option acts on every index in the Workflow Metrics application. More granular options are available as well. If you have multiple Virtual Instances, you must reindex each one's Workflow Metrics separately.
 
 On Liferay 7.2, Workflow Metrics are re-indexed from the Search administrative panel (Control Panel &rarr; Configuration &rarr; Search).
 
