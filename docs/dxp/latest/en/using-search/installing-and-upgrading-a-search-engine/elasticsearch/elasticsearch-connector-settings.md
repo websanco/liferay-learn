@@ -30,7 +30,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | ----------------------------- | ------------------------------------------------------------------------------ | ------------ | 
 | | <a href="#general-connection-settings" id="general-connection-settings">GENERAL CONNECTION SETTINGS</a> |
 | Track Total Hits | `trackTotalHits=B"true"`<details><summary>Description</summary>If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.</details> | Liferay 7.2+<br />(Connector to Elasticsearch 7) |
-| Production Mode Enabled | `productionModeEnabled=B"false"` | Liferay 7.3+ |
+  | Production Mode Enabled | `productionModeEnabled=B"false"`<details><summary>Description</summary>Enable production mode. In Liferay 7.3, <code>productionModeEnabled</code> replaces the deprecated setting <code>operationMode</code>. If this is checked, production mode is enabled and the Operation Mode configuration is ignored. Enabling production mode requires connecting to a remote standalone Elasticsearch cluster. If left disabled, the Operation Mode configuration is used.</details> | Liferay 7.3+ |
 | Index Name Prefix | `indexNamePrefix="liferay-"` | Liferay 7.2+ |
 | 7.3.x&rarr;Number of Company and System Index Replicas<br />7.2.x&rarr;Index Number of Replicas | `indexNumberOfReplicas="0-all"`<details><summary>Description</summary>Set the number of replicas for each Liferay company and system index. If unset, no replicas are used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
 | 7.3.x&rarr;Number of Company and System Index Shards<br />7.2.x&rarr;Index Number of Shards | `indexNumberOfShards="1"`<details><summary>Description</summary>Set the number of shards to use when a Liferay company and system index is created. If unset, a single shard will be used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
@@ -105,9 +105,6 @@ Many of the connection settings are only found in the Elasticsearch 7 configurat
 
 #### Defining the Remote Connection
 
-**Production Mode Enabled, `productionModeEnabled="false"`** \
-Enable production mode. In Liferay 7.3, `productionModeEnabled` replaces the deprecated setting `operationMode`. If this is checked, production mode is enabled and the Operation Mode configuration is ignored. Enabling production mode requires connecting to a remote standalone Elasticsearch cluster. If left disabled, the Operation Mode configuration is used.
-
 **Operation Mode, `operationMode="EMBEDDED"`** \
 There are two operation modes you can choose from: EMBEDDED or REMOTE. Set to REMOTE to connect to a remote standalone Elasticsearch cluster. Set to EMBEDDED to start Liferay with an internal Elasticsearch instance. EMBEDDED operation mode is unsupported for production environments and can be considered a "development mode" feature.
 
@@ -128,12 +125,6 @@ Set the String values for custom mappings for the `LiferayDocumentType`, in JSON
 **Override Type Mappings, `overrideTypeMappings=`** \
 Settings here override Liferay's default type mappings. This is an advanced feature that should be used only if strictly necessary. If you set this value, the default mappings used to define the Liferay Document Type in Liferay source code (for example, `liferay-type-mappings.json`) are ignored entirely, so include the whole mappings definition in this property, not just the segment you're modifying.
 
-**Number of Company and System Index Replicas, `indexNumberOfReplicas=""`** \
-Set the number of replicas for each Liferay company and system index. If unset, no replicas are used. Changing this value requires a full re-index.
-
-**Number of Company and System Index Shards, `indexNumberOfShards=""`** \
-Set the number of shards to use when a Liferay company and system index is created. If unset, a single shard will be used. Changing this value requires a full re-index.
-
 [7.2-] **Transport Addresses, `transportAddresses="localhost:9300"`** \
 Set the String values for the addresses of the remote Elasticsearch nodes to connect to. This value is required when Operation Mode is set to remote (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information). Specify as many or few nodes as you see fit.
 
@@ -151,9 +142,6 @@ Set this String value to instruct the client node on how often to sample / ping 
 
 **Log Exceptions Only, `logExceptionsOnly="true"`** \
 A boolean setting that, when set to true, only logs exceptions from Elasticsearch, and does not re-throw them.
-
-**Track Total Hits, `trackTotalHits="true"** \
-If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.
 
 #### Configuring the Development Mode Server
 
