@@ -1,20 +1,8 @@
-# Elasticsearch Connector Reference
+# Elasticsearch Connector Configuration Reference
 
-> The configuration information here applies to the latest available (bundled or through Marketplace) version of the Elasticsearch 6 and Elasticsearch 7 connectors for Liferay Portal 7.3 CE and for Liferay DXP 7.2 and 7.3. Appropriate information about the exact GA/Service Pack/Fix Pack and Marketplace versions are provided where needed.
+> The configuration information here applies to the latest available (bundled or through Marketplace) version of the Elasticsearch 6 and Elasticsearch 7 connectors for Liferay Portal 7.3 & 7.4 CE and for Liferay DXP 7.2 & 7.3. Appropriate information about the exact GA/Service Pack/Fix Pack and Marketplace versions are provided where needed.
 
-## Introduction
-Elasticsearch is Liferay's default search engine. Each Liferay Portal CE and Liferay DXP version is **bundled** with a connector to Elasticsearch that is compatible with a specific Elasticsearch major version:
-
-    Liferay DXP 7.2 & Liferay Portal 7.2 CE => Elasticsearch 6
-    Liferay DXP 7.3 & Liferay Portal 7.3 CE => Elasticsearch 7
-    
-To add support for newer major Elasticsearch versions for released DXP versions, Liferay releases **new connectors through Marketplace**. These connectors can be used as drop-in replacements for the out-of-the-box (bundled) connectors:
-
-    Liferay DXP 7.2 => Liferay Connector to Elasticsearch 7
-
-Most of the time, the last released connector on Marketplace for one DXP version becomes the out-of-the-box bundled connector in the next DXP version. For example, DXP 7.3 comes with the Liferay Connector to Elasticsearch 7 bundled, and this connector is available for Liferay 7.2 on Marketplace.
-
-## Configuration Overview
+## Overview
 
 The connection to Elasticsearch is primarily defined in the _Elasticsearch 6/7_ configuration entry in System Settings (or via [corresponding configuration file](#elasticsearch-connection-configuration-entries)). Liferay 7.3 introduced the possibility to define multiple connections to Elasticsearch, through the [factory configuration](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md) _Elasticsearch Connections_ configuration. Both configuration entries are configurable through [System Settings](../../../system-administration/configuring-liferay/system-settings.md) or an [OSGi configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) (recommended: use config files). 
 
@@ -279,3 +267,5 @@ Set the password for connecting to the proxy.
 - [What's New in Search for 7.3?](../../getting-started/whats-new-in-search-for-73.md)
 - [Securing Elasticsearch](securing-elasticsearch.md)
 - [Connecting to Elasticsearch](connecting-to-elasticsearch.md)
+- [Liferay DXP Elasticsearch Connectors: Technical Data Sheet (KB Reference)](https://help.liferay.com/hc/en-us/articles/360046478452)
+- [Understanding Liferay DXP's compatibility with Elasticsearch (KB Reference)](https://help.liferay.com/hc/en-us/articles/360051492032)
