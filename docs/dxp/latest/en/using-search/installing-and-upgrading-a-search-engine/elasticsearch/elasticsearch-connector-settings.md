@@ -87,7 +87,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Sidecar Heartbeat Interval | `sidecarHeartbeatInterval="10000"` | Liferay 7.3+ |
 | Sidecar Home | `sidecarHome="elasticsearch7"` | Liferay 7.3+ |
 | Sidecar HTTP Port | `sidecarHttpPort="9200"` | Liferay 7.3+ |
-| Sidecar JVM Options | `sidecarJVMOptions="-Xms1g|-Xmx1g|-XX:+AlwaysPreTouch"` | Liferay 7.3+ |
+| Sidecar JVM Options | `sidecarJVMOptions="-Xms1g\|-Xmx1g\|-XX:+AlwaysPreTouch"` | Liferay 7.3+ |
 | Sidecar Shutdown Timeout | `sidecarShutdownTimeout="10000"` | Liferay 7.3+ |
 | Transport Tcp Port | `transportTcpPort=""` | Liferay 7.2+ |
 | Zen Discovery Unicast Hosts Port | `discoveryZenPingUnicastHostsPort="9300-9400"` | Liferay 7.2+ |
