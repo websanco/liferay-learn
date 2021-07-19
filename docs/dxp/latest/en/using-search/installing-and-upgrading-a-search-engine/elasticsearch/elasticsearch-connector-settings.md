@@ -48,10 +48,10 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Index Name Prefix | `indexNamePrefix="liferay-"` | Liferay 7.2+ |
 | 7.3.x&rarr;Number of Company and System Index Replicas<br />7.2.x&rarr;Index Number of Replicas | `indexNumberOfReplicas="0-all"`<details><summary>Description</summary>Set the number of replicas for each Liferay company and system index. If unset, no replicas are used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
 | 7.3.x&rarr;Number of Company and System Index Shards<br />7.2.x&rarr;Index Number of Shards | `indexNumberOfShards="1"`<details><summary>Description</summary>Set the number of shards to use when a Liferay company and system index is created. If unset, a single shard will be used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
-| Log Exceptions Only | `logExceptionsOnly="true"` | Liferay 7.2+ |
+| Log Exceptions Only | `logExceptionsOnly=B"true"` | Liferay 7.2+ |
 | Retry On Conflict | `retryOnConflict="5"` | Liferay 7.2- |
 | | *SECURITY SETTINGS* |
-| Authentication Enabled | `authenticationEnabled="false"` | Liferay 7.3+ |
+| Authentication Enabled | `authenticationEnabled=B"false"` | Liferay 7.3+ |
 | Username | `username="elastic"` | Liferay 7.3+ |
 | Password | `password=""` | Liferay 7.3+ |
 | Http SSL Enabled | `httpSSLEnabled="false"` | Liferay 7.3+ |
@@ -77,12 +77,12 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Bootstrap Mlock All | `bootstrapMlockAll="false"` | Liferay 7.2+ |
 | Http CORS Allow Origin | `httpCORSAllowOrigin="/https?:\\/\\/localhost(:[0-9]+)?/"` | Liferay 7.2+ |
 | Http CORS Configurations | `httpCORSConfigurations=` | Liferay 7.2+ |
-| Http CORS Enabled | `httpCORSEnabled="true"` | Liferay 7.2+ |
+| Http CORS Enabled | `httpCORSEnabled=B"true"` | Liferay 7.2+ |
 | Network Host | `networkHost=""` | Liferay 7.2+  |
 | Network Bind Host | `networkBindHost=""` | Liferay 7.2+ |
 | Network Publish Host | `networkPublishHost=""` | Liferay 7.2+ |
 | Node Name | `nodeName=` | Liferay 7.3+ |
-| Sidecar Debug | `sidecarDebug="false"` | Liferay 7.3+ |
+| Sidecar Debug | `sidecarDebug=B"false"` | Liferay 7.3+ |
 | Sidecar Debug Settings | `sidecarDebugSettings="-agentlib:jdwp=transport=dt_socket,address=8001,server=y,suspend=y,quiet=y"` | Liferay 7.3+ |
 | Sidecar Heartbeat Interval | `sidecarHeartbeatInterval="10000"` | Liferay 7.3+ |
 | Sidecar Home | `sidecarHome="elasticsearch7"` | Liferay 7.3+ |
@@ -103,7 +103,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | | *DEPRECATED* |
 | Operation Mode | `operationMode="EMBEDDED"` | Deprecated in Liferay 7.3, replaced with _Production Mode Enabled_  |
 | Embedded HTTP Port | `embeddedHttpPort="9201"` | Deprecated in Liferay 7.3.x |
-| Http Enabled | `httpEnabled="true"` | Deprecated in Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
+| Http Enabled | `httpEnabled=B"true"` | Deprecated in Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
 
 ## Property Descriptions
 
