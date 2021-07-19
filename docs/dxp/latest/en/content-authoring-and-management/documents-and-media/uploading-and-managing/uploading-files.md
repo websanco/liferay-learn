@@ -1,58 +1,48 @@
 # Uploading Files
 
-Documents and Media provides native storage on your Liferay server for digital assets: documents, images, or videos. You can upload files by dragging and dropping them into a Documents and Media folder or by using the application's *Add* button to manually configure file details prior to upload.
+With Documents and Media, you can upload any type of file to your Liferay instance's [file store](../../../system-administration/file-storage/configuring-file-storage.md) or connected repositories. Once uploaded, Users with the requisite [permissions](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) can view, edit, download, or share uploaded files.
 
 ```note::
-   Users can also configure Liferay to tag supported assets automatically when uploaded. See `Configuring Asset Auto Tagging <../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md>`__ to learn more. 
+   Users can configure Liferay to tag supported assets automatically when uploaded. See `Configuring Asset Auto Tagging <../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md>`_ to learn more. 
 ```
-
-Once uploaded, Users with the requisite permissions can view, edit, download, or share your uploaded files. See the [Documents and Media Permissions Reference](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) and [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for more information.
 
 ```important::
    You can enable automatic antivirus scanning to scan files on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 
-## Quickly Uploading Files
+In order to upload files, first navigate to the Documents and Media application in a Site or Asset Library.
 
-The quickest way to upload one or more files is to drag and drop them into the Documents and Media root folder, or an existing sub-folder.
+To access Documents and Media in a Site, open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Content & Data* &rarr; *Documents and Media*.
 
-1. Open the *Site Menu* and go to Content & Data &rarr; *Documents and Media*.
+![Click on Documents and Media under Content & Data in the Site Menu.](./uploading-files/images/01.png)
 
-1. Drag and drop files into the desired folder. This immediately begins the upload process.
+To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
 
-   ![Drag and drop any number of files into the desired folder.](./uploading-files/images/01.png)
+![Click on Documents and Media in the Asset Library.](./uploading-files/images/02.png)
 
-Once a file finishes uploading, you can edit its details by clicking its *Actions* Button (![Actions Button](../../../images/icon-actions.png)) and selecting *Edit*.
+Once you've opened the application, the quickest way to upload files is to drag and drop them into the desired folder. This immediately begins uploading your files without prompting you to configure your upload before they're published. Once a file finishes uploading, you can edit its details by clicking its *Actions* button and selecting *Edit*.
 
-```note::
-   You can also follow these steps to upload files to Documents and Media in an Asset Library. See `Asset Library Content <../../asset-libraries/asset-library-content.md>`__ for more information.
-```
+![Drag and drop any number of files into the desired folder.](./uploading-files/images/03.png)
 
-## Configuring File Details at Upload
-
-1. Open the *Site Menu* and go to Content & Data &rarr; *Documents and Media*.
+However, if you would like to define file details before uploading them, follow these steps:
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)) and select either *File Upload*, or *Multiple Files Upload*.
 
-   ![Select either File Upload, or Multiple Files Upload](./uploading-files/images/02.png)
+   ![Select either File Upload, or Multiple Files Upload.](./uploading-files/images/04.png)
 
 1. Drag and drop files into the designated drop-zone or use the file selector to browse for your files.
 
-1. Once you've selected your files, you can determine their details before upload.
+1. Configure file details before upload.
 
-   If you've selected *File Upload*, you can set the file's *Title*, *File Name*, *Description*, *Display Page Template*, *Public Categories*, *Related Assets*, and *Permissions* used for your selected file.
+   If you've selected *File Upload*, you can set the file's Title, File Name, Description, Display Page Template, Public Categories, Related Assets, and Permissions used for your selected file.
 
-   ![Select a file to upload and configure its details.](./uploading-files/images/03.png)
+   ![Select a file to upload and configure its details.](./uploading-files/images/05.png)
 
-   If you selected *Multiple Files Upload*, you can set the *Description*, *Display Page Template*, *Public Categories*, and *Permissions* for all of the selected files.
+   If you've selected *Multiple Files Upload*, you can set the following fields: Description, Document Type, Display Page Template, Public Categories, and Permissions. for all of the selected files.
 
-   ![Select multiple to upload, and configure their details.](./uploading-files/images/04.png)
+   ![Select multiple to upload, and configure their details.](./uploading-files/images/06.png)
 
-1. When finished, click *Publish* to immediately begin the upload process.
-
-```note::
-   You can also follow these steps to upload files to Documents and Media in an Asset Library. See `Asset Library Content <../../asset-libraries/asset-library-content.md>`__ for more information.
-```
+1. When finished, click *Publish* to begin the upload process.
 
 ## Additional Information
 
