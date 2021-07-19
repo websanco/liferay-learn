@@ -25,7 +25,7 @@ public class BlogPostingImage_POST_ToSite {
 				new BlogPostingImage(),
 				new HashMap<String, File>() {
 					{
-						put("file", new File("grin.png"));
+						put("file", new File("liferay.png"));
 					}
 				});
 
