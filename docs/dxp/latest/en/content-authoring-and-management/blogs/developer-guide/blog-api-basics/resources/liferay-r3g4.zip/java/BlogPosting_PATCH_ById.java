@@ -7,21 +7,19 @@ public class BlogPosting_PATCH_ById {
 	 * java -classpath .:* -DblogPostingId=1234 BlogPosting_PATCH_ById
 	 */
 	public static void main(String[] args) throws Exception {
-		BlogPostingResource.Builder builder =
-			BlogPostingResource.builder();
+		BlogPostingResource.Builder builder = BlogPostingResource.builder();
 
 		BlogPostingResource blogPostingResource = builder.authentication(
 			"test@liferay.com", "test"
 		).build();
 
-		BlogPosting blogPosting =
-			blogPostingResource.patchBlogPosting(
-				Long.valueOf(System.getProperty("BlogPostingId")),
-				new BlogPosting() {
-					{
-						articleBody = "Bar";
-					}
-				});
+		BlogPosting blogPosting = blogPostingResource.patchBlogPosting(
+			Long.valueOf(System.getProperty("blogPostingId")),
+			new BlogPosting() {
+				{
+					articleBody = "Bar";
+				}
+			});
 
 		System.out.println(blogPosting);
 	}

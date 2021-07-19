@@ -10,9 +10,10 @@ public class BlogPostingImage_GET_ById {
 		BlogPostingImageResource.Builder builder =
 			BlogPostingImageResource.builder();
 
-		BlogPostingImageResource blogPostingImageResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		BlogPostingImageResource blogPostingImageResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		BlogPostingImage blogPostingImage =
 			blogPostingImageResource.getBlogPostingImage(

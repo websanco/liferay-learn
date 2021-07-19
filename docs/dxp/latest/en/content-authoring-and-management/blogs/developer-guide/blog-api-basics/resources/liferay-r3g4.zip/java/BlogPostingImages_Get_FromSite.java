@@ -12,14 +12,15 @@ public class BlogPostingImages_GET_FromSite {
 		BlogPostingImageResource.Builder builder =
 			BlogPostingImageResource.builder();
 
-		BlogPostingImageResource blogPostingImageResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		BlogPostingImageResource blogPostingImageResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		Page<BlogPostingImage> page =
 			blogPostingImageResource.getSiteBlogPostingImagesPage(
 				Long.valueOf(System.getProperty("siteId")), null, null, null,
-				null, Pagination.of(1, 2), null);
+				Pagination.of(1, 2), null);
 
 		System.out.println(page);
 	}

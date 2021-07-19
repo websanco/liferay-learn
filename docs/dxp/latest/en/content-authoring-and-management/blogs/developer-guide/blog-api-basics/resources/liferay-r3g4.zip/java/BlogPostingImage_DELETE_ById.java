@@ -9,9 +9,10 @@ public class BlogPostingImage_DELETE_ById {
 		BlogPostingImageResource.Builder builder =
 			BlogPostingImageResource.builder();
 
-		BlogPostingImageResource blogPostingImageResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		BlogPostingImageResource blogPostingImageResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		blogPostingImageResource.deleteBlogPostingImage(
 			Long.valueOf(System.getProperty("blogPostingImageId")));
