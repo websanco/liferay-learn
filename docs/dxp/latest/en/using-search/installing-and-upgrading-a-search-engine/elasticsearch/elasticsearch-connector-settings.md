@@ -70,7 +70,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Client Transport Ping Timeout | `clientTransportPingTimeout=""` | Liferay 7.2- |
 | Client Transport Nodes Sampler Interval | `clientTransportNodesSamplerInterval=""` | Liferay 7.2- |
 | | <a href="#other-settings" id="other-settings">OTHER SETTINGS</a> |
-| Remote Cluster Connection ID | `remoteClusterConnectionId=` | Liferay 7.3+ when using LES Cross-Cluster Replication |
+| Remote Cluster Connection ID | `remoteClusterConnectionId=` | Liferay 7.3+ when using [LES Cross-Cluster Replication](../../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md)) |
 | | <a href="#development-mode-settings" id="development-mode-settings">DEVELOPMENT MODE SETTINGS</a> | 
 | Bootstrap Mlock All | `bootstrapMlockAll="false"` | Liferay 7.2+ |
 | Http CORS Allow Origin | `httpCORSAllowOrigin="/https?:\\/\\/localhost(:[0-9]+)?/"` | Liferay 7.2+ |
