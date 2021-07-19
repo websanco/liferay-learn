@@ -1,98 +1,112 @@
 # Documents and Media UI Reference
 
-Navigate to the _Site Administration_ &rarr; _Content & Data_ &rarr; _Documents and Media_.
+The Documents and Media application is used to store, view, and manage files for your Liferay DXP instance. It's available in all Sites and can be enabled for [Asset Libraries](../asset-libraries/asset-libraries-overview.md).
 
-![The Documents and Media menu is found in the Site Administration.](./documents-and-media-ui-reference/images/01.png)
+To access Documents and Media in a Site, open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) and go to *Content & Data* &rarr; *Documents and Media*.
 
-There are three tabs: _Documents and Media_, _Document Types_, and _Metadata Sets_.
+![Click on Documents and Media under Content & Data in the Site Menu.](./documents-and-media-ui-reference/images/01.png)
+
+To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
+
+![Click on Documents and Media in the Asset Library.](./documents-and-media-ui-reference/images/02.png)
+
+The Documents and Media application has three main tabs: [*Documents and Media*](#documents-and-media-tab), [*Document Types*](#document-types-tab), and [*Metadata Sets*](#metadata-sets-tab).
+
+You can also access additional settings by clicking on the *Actions* button (![Actions Button](../../images/icon-actions.png)) in the [Application Bar](#application-bar-settings).
+
+```note::
+   The Documents and Media UI is the same for Asset Libraries and Sites.
+```
 
 ## Documents and Media Tab
 
-The _Documents and Media_ Tab's Home screen displays the selected Site's folders and documents. This is the Root folder. Here, users can upload a single document or multiple documents, add a new folder, add a new Repository (for example, Sharepoint), or a new shortcut.
+![The Documents and Media tab provides access to the application's primary features.](./documents-and-media-ui-reference/images/03.png)
 
-Click the (![Add icon](../../images/icon-add.png)) to begin using the _Documents and Media_ application.
+The *Documents and Media* tab provides access to the application's primary features. Here you can view, search, add, and manage all digital assets, folders, and connected repositories.
 
-![Click the add icon then a selection to begin populating the Documents and Media app.](./documents-and-media-ui-reference/images/04.png)
+```note::
+   The Home folder serves as the root folder for the Documents and Media application.
+```
+
+Click the *Add* button (![Add Button](../../images/icon-add.png)) to access the following  default actions. See [Creating Folders](./uploading-and-managing/creating-folders.md) and [Uploading Files](./uploading-and-managing/uploading-files.md) for more information.
+
+![Click the Add button to create a new folder or digital asset.](./documents-and-media-ui-reference/images/04.png)
+
+If you've created any custom [Document Types](#document-types-tab), they are listed here as available options.
+
+Click the *Actions* button (![Actions Button](../../images/icon-actions.png)) for any file or folder to download, edit, move, or remove it. You can also *Checkout* or *Checkin* files to create file versions.
 
 ## Document Types Tab
 
-_Document Types_ are made of metadata fields that help define the purpose of Document Library files. They provide additional, searchable information about uploaded documents.
+![Create custom templates for file uploads in the Document Types tab.](./documents-and-media-ui-reference/images/05.png)
 
-![The Document Types Tab contains all Document Types which contain metadata sets.](./documents-and-media-ui-reference/images/02.png)
+In the *Document Types* tab, you can create and manage custom templates used for adding new files to Documents and Media. These templates are created using metadata fields and provide additional, searchable information for uploaded files.
 
-Click the (![Add icon](../../images/icon-add.png)) to create a new Document Type.
+To compose a new Document Type, drag and drop configurable metadata fields into the drop zone. You can also add a description, include custom [Metadata Sets](#metadata-sets-tab), and manage permissions.
 
-To learn more about using Document Types, see [Defining Document Types](./uploading-and-managing/managing-metadata/defining-document-types.md).
+![Create and configure custom Document Types.](./documents-and-media-ui-reference/images/06.png)
 
-## Metadata Set Tab
+Once created, you can use a template to add new digital assets in the Documents and Media tab. See [Defining Document Types](./uploading-and-managing/managing-metadata/defining-document-types.md) for more information.
 
-Metadata Sets are groups of fields that can be added to Document Types.
+## Metadata Sets Tab
 
-Metadata Sets can be grouped in a hierarchy and can become the foundation of another metadata set (an *extension*). A child metadata set is displayed on the same level as the parent.
+![Create custom groups of data fields in the Metadata Sets tab.](./documents-and-media-ui-reference/images/07.png)
 
-![The Metadata Set Tab contains all Metadata Sets.](./documents-and-media-ui-reference/images/03.png)
+In the *Metadata Sets* tab, you can create groups of fields that can be added to Document Types. These Metadata Sets can be grouped in a hierarchy and can be used to create more complex Metadata Sets.
 
-Click the (![Add icon](../../images/icon-add.png)) to create a new Metadata Set.
+![Use fields to create reusable Metadata Sets.](./documents-and-media-ui-reference/images/08.png)
 
-To learn more about Metadata Sets, see [Using Metadata Sets](./uploading-and-managing/managing-metadata/using-metadata-sets.md).
+Once created, these sets can be used when creating or editing custom Document Types. See [Using Metadata Sets](./uploading-and-managing/managing-metadata/using-metadata-sets.md) for more information.
 
-## Documents and Media Settings
+## Application Bar Settings
 
-You can access the application's settings from any of the three tabs by clicking the (![Options icon](../../images/icon-options.png)) to access the _Options_ menu.
+![Access these Documents and Media settings in the Application Bar.](./documents-and-media-ui-reference/images/09.png)
 
-![Click the Options menu in the top right to access the application settings.](./documents-and-media-ui-reference/images/05.png)
+You can access the following Documents and Media settings in the Application Bar.
 
 ### Access from Desktop
 
-Users can access their _Documents and Media_ repository in their file explorer on their desktop using WebDAV. Click on _Access from Desktop_ to generate the WebDAV URL.
+Generate a WebDAV URL for accessing *Documents and Media* resources in your file explorer.
 
-![Generate the WebDAV URL.](./documents-and-media-ui-reference/images/06.png)
+![Generate the WebDAV URL.](./documents-and-media-ui-reference/images/10.png)
 
 ### Edit
 
-Users can enable or disable [Workflow](../../process-automation/workflow/using-workflows/activating-workflow.md) for all Document Types. To learn more about Workflows in general, see [Introduction to Workflow](../../process-automation/workflow/introduction-to-workflow.md).
+Enable or disable [Workflow](../../process-automation/workflow/using-workflows/activating-workflow.md) for all Document Types. To learn more about Workflows in general, see [Introduction to Workflow](../../process-automation/workflow/introduction-to-workflow.md).
 
-![Select a Workflow definition.](./documents-and-media-ui-reference/images/07.png)
-
-Workflows for Documents and Media are managed only here.
+![Select a Workflow definition.](./documents-and-media-ui-reference/images/11.png)
 
 ### Home Folder Permissions
 
-Users can manage the permissions for the _Documents and Media_ Home folder.
+Manage permissions for the Documents and Media *Home folder*. To learn more about permissions in general, see [Understanding Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
-![Configure the permissions.](./documents-and-media-ui-reference/images/08.png)
+![Manage Permissions for the Documents and Media Home folder.](./documents-and-media-ui-reference/images/12.png)
 
-See [Understanding Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) to learn more.
+### Export/Import
 
-### Export/ Import
+Initiate [Export or Import](../../site-building/building-sites/importing-exporting-pages-and-content.md) operations for Documents and Media content. Content is exported as an `LAR` (Liferay Archive) file. You can also view current and previous exports.
 
-You can [Export or Import](../../site-building/building-sites/importing-exporting-pages-and-content.md) Documents and Media `LAR` (Liferay Archive) files. There are two primary places Export/Import is used: Sites and apps. Here, you can export the contents of your DM application or import an existing one.
-
-![Export or Import a DM LAR.](./documents-and-media-ui-reference/images/12.png)
+![Initiate Export or Import operations for Documents and Media.](./documents-and-media-ui-reference/images/13.png)
 
 ### Configuration
 
-Users can configure their DM email notifications settings on the _Configuration_ menu. See [Connecting to a Mail Server](../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to set up a mail server first.
+Configure email notifications for Documents and Media. When configuring email notifications, you can use default placeholders for parsing information (e.g., `[$COMPANY_ID$]`, `[$DOCUMENT_TYPE$]`, `[$TO_NAME$]`). Available placeholders are listed in each tab under *Definition of Terms*.
 
-Users can use the _Definition of Terms_: placeholders that parse information such as the system administrator, the recipient, and the name of the document.
+```note::
+   Using email notifications requires a connected mail server. See `Connecting to a Mail Server <../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md>`_ for more information.
+```
 
-#### Email From Tab
+**Email From Tab**: Enter a name and email address to use for the email's sender.
 
-Users can enter a name and email address.
+![Enter a name and email address for the sender.](./documents-and-media-ui-reference/images/14.png)
 
-![Enter the name and email address.](./documents-and-media-ui-reference/images/09.png)
+**Document Added Email**: Enable/Disable email notifications for when documents are added, and compose the email used.
 
-#### Document Added Email
+![Compose the email sent when a document is added.](./documents-and-media-ui-reference/images/15.png)
 
-If a new document has been added, this is the email notification sent to the desired persons.
+**Document Updated Email**: Enable/Disable email notifications for when existing documents are updated, and compose the email used.
 
-![Enter the name and contents of the email notification.](./documents-and-media-ui-reference/images/10.png)
-
-#### Document Updated Email
-
-If an existing document has been updated, this is the email notification sent to the desired persons.
-
-![Enter the name and contents of the email notification.](./documents-and-media-ui-reference/images/11.png)
+![Compose the email sent when existing documents are updated.](./documents-and-media-ui-reference/images/16.png)
 
 ## Additional Information
 
