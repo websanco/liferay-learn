@@ -18,7 +18,7 @@ Most of the time, the last released connector on Marketplace for one DXP version
 
 The connection to Elasticsearch is primarily defined in the _Elasticsearch 6/7_ configuration entry in System Settings (or via [corresponding configuration file](#elasticsearch-connection-configuration-entries)). Liferay 7.3 introduced the possibility to define multiple connections to Elasticsearch, through the [factory configuration](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md) _Elasticsearch Connections_ configuration. Both configuration entries are configurable through [System Settings](../../../system-administration/configuring-liferay/system-settings.md) or an [OSGi configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) (recommended: use config files). 
 
-## Configuration Files and System Settings Entries
+## System Settings Entries & Config Files
 
 | Connecting Servers | <div style="width:380px">System Settings Entry/Configuration File</div> |
 | --------------- | -------------------------------------- | 
@@ -38,11 +38,9 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 
 ## System Settings & Config File Properties
 
-[**Click here to jump to the property descriptions.**](#property-descriptions)
-
-| System Settings UI Field Name | <div style="width:280px">Configuration File Property Name, Default Value & Description | Available in |
-| ----------------------------- | -------------------------------------------------------------------------------------- | ------------ | 
-| | GENERAL CONNECTION SETTINGS |
+| System Settings UI Field Name | <div style="width:280px">Configuration File Usage, Default Value & Description | Available in |
+| ----------------------------- | ------------------------------------------------------------------------------ | ------------ | 
+| | <a href="#general-connection-settings" id="general-connection-settings">GENERAL CONNECTION SETTINGS</a> |
 | Track Total Hits | `trackTotalHits=B"true"`<details><summary>Description</summary>If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.</details> | Liferay 7.2+<br />(Connector to Elasticsearch 7) |
 | Production Mode Enabled | `productionModeEnabled=B"false"` | Liferay 7.3+ |
 | Index Name Prefix | `indexNamePrefix="liferay-"` | Liferay 7.2+ |
@@ -50,7 +48,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | 7.3.x&rarr;Number of Company and System Index Shards<br />7.2.x&rarr;Index Number of Shards | `indexNumberOfShards="1"`<details><summary>Description</summary>Set the number of shards to use when a Liferay company and system index is created. If unset, a single shard will be used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
 | Log Exceptions Only | `logExceptionsOnly=B"true"` | Liferay 7.2+ |
 | Retry On Conflict | `retryOnConflict="5"` | Liferay 7.2- |
-| | *SECURITY SETTINGS* |
+| | <a href="#security-settings" id="security-settings">SECURITY SETTINGS</a> |
 | Authentication Enabled | `authenticationEnabled=B"false"` | Liferay 7.3+ |
 | Username | `username="elastic"` | Liferay 7.3+ |
 | Password | `password=""` | Liferay 7.3+ |
@@ -58,22 +56,22 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Truststore Type | `truststoreType="pkcs12"` | Liferay 7.3+ |
 | Truststore Path | `truststorePath="/path/to/localhost.p12"` | Liferay 7.3+ |
 | Truststore Password | `truststorePassword=""` | Liferay 7.3+ |
-| | *ELASTICSEARCH CONNECTIONS SETTINGS* |
+| | <a href="#elasticsearch-connections-settings" id="elasticsearch-connections-settings">ELASTICSEARCH CONNECTIONS SETTINGS</a> |
 | Active | `active=B"false"` | Liferay 7.3+ |
 | Connection ID | `connectionId=""` | Liferay 7.3+ |
-| | *CONNECTION DECLARATION SETTINGS* |
-| Remote Cluster Connection ID | `remoteClusterConnectionId=` | Liferay 7.3+ if using the `ElasticsearchConnectionConfiguration` |
-| | *REST CLIENT SETTINGS* |
+| | <a href="#rest-client-settings" id="rest-client-settings">REST CLIENT SETTINGS</a> |
 | Network Host Addresses | `networkHostAddresses="[http://localhost:9200]"` | Liferay 7.3+ |
 | REST Client Logger Level | `RESTClientLoggerLevel="ERROR"` | Liferay 7.3+ |
-| | *TRANSPORT CLIENT SETTINGS* |
+| | <a href="#transport-client-settings" id="transport-client-settings">TRANSPORT CLIENT SETTINGS</a> |
 | Cluster Name | `clusterName="LiferayElasticsearchCluster"` | Liferay 7.2-<br />On 7.3+, applies to development mode |
 | Transport Addresses | `transportAddresses=["localhost:9300"]` | Liferay 7.2- |
 | Client Transport Sniff | `clientTransportSniff=B"true"` | Liferay 7.2- |
 | Client Transport Ignore Cluster Name | `clientTransportIgnoreClusterName=B"false"` | Liferay 7.2- |
 | Client Transport Ping Timeout | `clientTransportPingTimeout=""` | Liferay 7.2- |
 | Client Transport Nodes Sampler Interval | `clientTransportNodesSamplerInterval=""` | Liferay 7.2- |
-| | *DEVELOPMENT MODE SETTINGS* | 
+| | <a href="#other-settings" id="other-settings">OTHER SETTINGS</a> |
+| Remote Cluster Connection ID | `remoteClusterConnectionId=` | Liferay 7.3+ when using LES Cross-Cluster Replication |
+| | <a href="#development-mode-settings" id="development-mode-settings">DEVELOPMENT MODE SETTINGS</a> | 
 | Bootstrap Mlock All | `bootstrapMlockAll="false"` | Liferay 7.2+ |
 | Http CORS Allow Origin | `httpCORSAllowOrigin="/https?:\\/\\/localhost(:[0-9]+)?/"` | Liferay 7.2+ |
 | Http CORS Configurations | `httpCORSConfigurations=` | Liferay 7.2+ |
@@ -91,7 +89,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Sidecar Shutdown Timeout | `sidecarShutdownTimeout="10000"` | Liferay 7.3+ |
 | Transport Tcp Port | `transportTcpPort=""` | Liferay 7.2+ |
 | Zen Discovery Unicast Hosts Port | `discoveryZenPingUnicastHostsPort="9300-9400"` | Liferay 7.2+ |
-| | ADVANCED CONFIGURATION |
+| | <a href="#advanced-settings" id="advanced-settings">ADVANCED SETTINGS</a> |
 | Additional Configurations | `additionalConfigurations=""` | Liferay 7.2+ |
 | Additional Index Configurations | `additionalIndexConfigurations=""` | Liferay 7.2+ |
 | Additional Type Mappings | `additionalTypeMappings=""` | Liferay 7.2+ |
@@ -100,10 +98,10 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Proxy Port | `proxyPort="0"` | Liferay DXP 7.3 FP1+/SP1+ and Liferay Portal CE GA7+ |
 | Proxy Username | `proxyUserName=""` | Liferay DXP 7.3 FP1+/SP1+ and Liferay Portal CE GA7+ |
 | Proxy Password | `proxyPassword=""` | Liferay DXP 7.3 FP1+/SP1+ and Liferay Portal CE GA7+ |
-| | *DEPRECATED* |
-| Operation Mode | `operationMode="EMBEDDED"` | Deprecated in Liferay 7.3, replaced with _Production Mode Enabled_  |
-| Embedded HTTP Port | `embeddedHttpPort="9201"` | Deprecated in Liferay 7.3.x |
-| Http Enabled | `httpEnabled=B"true"` | Deprecated in Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
+| | <a href="#deprecated-settings" id="deprecated-settings">DEPRECATED</a> |
+| Operation Mode | `operationMode="EMBEDDED"` | Deprecated as of Liferay 7.3, replaced with _Production Mode Enabled_  |
+| Embedded HTTP Port | `embeddedHttpPort="9201"` | Deprecated as of Liferay 7.3.x |
+| Http Enabled | `httpEnabled=B"true"` | Deprecated as of Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
 
 ## Property Descriptions
 
