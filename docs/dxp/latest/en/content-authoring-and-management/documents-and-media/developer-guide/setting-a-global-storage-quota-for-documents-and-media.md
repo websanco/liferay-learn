@@ -36,5 +36,5 @@ Under normal circumstances, the system dynamically updates the storage quota. Ho
 
 ## Additional Information
 
-* [Sharing Documents and Media](../sharing-documents-and-media.md)
+* [Documents and Media Overview](../documents-and-media-overview.md)
 * [Portal Properties](../../../installation-and-upgrades/reference/portal-properties.md)

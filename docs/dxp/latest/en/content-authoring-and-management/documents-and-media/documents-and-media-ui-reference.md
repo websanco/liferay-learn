@@ -52,11 +52,11 @@ Once created, you can use a template to add new digital assets in the Documents 
 
 ![Create custom groups of data fields in the Metadata Sets tab.](./documents-and-media-ui-reference/images/07.png)
 
-In the *Metadata Sets* tab, you can create groups of fields that can be added to Document Types. These Metadata Sets can be grouped in a hierarchy and can be used to create more complex Metadata Sets.
+In the *Metadata Sets* tab, you can define reusable groups of metadata fields that can be added to custom Document Types. These Metadata Sets are composed in the same way as Document Types, by dragging and dropping metadata fields into the designated drop zone.
 
 ![Use fields to create reusable Metadata Sets.](./documents-and-media-ui-reference/images/08.png)
 
-Once created, these sets can be used when creating or editing custom Document Types. See [Using Metadata Sets](./uploading-and-managing/managing-metadata/using-metadata-sets.md) for more information.
+Once created, Metadata Sets can be added to custom Document Types. See [Using Metadata Sets](./uploading-and-managing/managing-metadata/using-metadata-sets.md) for more information.
 
 ## Application Bar Settings
 
@@ -110,5 +110,5 @@ Configure email notifications for Documents and Media. When configuring email no
 
 ## Additional Information
 
-* [Sharing Documents and Media](./sharing-documents-and-media.md)
+* [Documents and Media Overview](./documents-and-media-overview.md)
 * [Importing/Exporting Sites and Contents](../../site-building/building-sites/importing-exporting-pages-and-content.md)
