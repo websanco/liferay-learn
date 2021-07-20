@@ -1,10 +1,12 @@
 import com.liferay.headless.delivery.client.dto.v1_0.NavigationMenu;
+import com.liferay.headless.delivery.client.pagination.Page;
+import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.NavigationMenuResource;
 
-public class NavigationMenu_PATCH_ById {
+public class NavigationMenus_GET_FromSite {
 
 	/**
-	 * java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_PATCH_ById
+	 * java -classpath .:* -DsiteId=1234 NavigationMenus_GET_FromSite
 	 */
 	public static void main(String[] args) throws Exception {
 		NavigationMenuResource.Builder builder =
@@ -14,16 +16,12 @@ public class NavigationMenu_PATCH_ById {
 			"test@liferay.com", "test"
 		).build();
 
-		NavigationMenu navigationMenu =
-			navigationMenuResource.patchNavigationMenu(
-				Long.valueOf(System.getProperty("NavigationMenuId")),
-				new NavigationMenu() {
-					{
-						name = "Bar";
-					}
-				});
+		Page<NavigationMenu> page =
+			navigationMenuResource.getSiteNavigationMenusPage(
+				Long.valueOf(System.getProperty("siteId")),
+				Pagination.of(1, 2));
 
-		System.out.println(navigationMenu);
+		System.out.println(page);
 	}
 
 }

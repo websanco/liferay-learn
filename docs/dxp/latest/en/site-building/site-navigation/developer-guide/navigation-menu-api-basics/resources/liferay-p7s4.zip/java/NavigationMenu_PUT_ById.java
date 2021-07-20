@@ -16,10 +16,10 @@ public class NavigationMenu_PUT_ById {
 
 		NavigationMenu navigationMenu =
 			navigationMenuResource.putNavigationMenu(
-				Long.valueOf(System.getProperty("NavigationMenuId")),
+				Long.valueOf(System.getProperty("navigationMenuId")),
 				new NavigationMenu() {
 					{
-						name = "Goo";
+						name = "Bar";
 					}
 				});
 
