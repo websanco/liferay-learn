@@ -150,6 +150,7 @@ function generate_sphinx_input {
 		sed -i "s/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
 		sed -i "s/${LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN}/${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/g" "${md_file_name}"
 	done
+
 }
 
 function generate_static_html {
@@ -255,9 +256,26 @@ function get_product_version_language_dir_name {
 	echo "${product}"/"${version}"/"${language}"
 }
 
-#function publish_reference_docs {
-	
-#}
+function publish_reference_docs {
+	#
+	# Download and extract Javadoc
+	#
+
+	curl https://docs.liferay.com/portal/7.4-latest/liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip -O
+
+	7z x liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip
+
+	mv liferay-ce-portal-doc-7.4.1-ga2/* ./build/output/reference/latest/en/dxp
+	rmdir liferay-ce-portal-doc-7.4.1-ga2
+	rm -f liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip
+
+	curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
+
+	mkdir ../site/build/output/reference/latest/en/dxp/portlet-api
+
+	7z x -o../site/build/output/reference/latest/en/portlet-api portlet-api-3.0.1-javadoc.jar
+	rm -f portlet-api-3.0.1-javadoc.jar
+}
 
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
@@ -269,6 +287,8 @@ function main {
 	generate_sphinx_input ${1}
 
 	generate_static_html
+
+	publish_reference_docs
 
 	upload_to_server
 
