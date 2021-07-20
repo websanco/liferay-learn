@@ -13,6 +13,9 @@ readonly LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_VALUE=liferay\\/portal\\:7.4.2-ga3
 readonly LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN=\\[\$LIFERAY_LEARN_PORTAL_GIT_TAG\$\\]
 readonly LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE=7.4.2-ga3
 readonly LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN=portal-7.4-ga2
+readonly LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE=7.4.1-ga2
+readonly LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE=liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip
+readonly LIFERAY_LEARN_DXP_REF_DOCS_DIR=liferay-ce-portal-doc-7.4.1-ga2
 
 function download_nexus_jar {
 	curl -L "https://repository-cdn.liferay.com/nexus/service/local/artifact/maven/redirect?a=${1}&g=com.liferay&r=liferay-public-releases&v=LATEST" -o $(ls -d liferay*.zip | head -n1)/java/${1}.jar

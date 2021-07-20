@@ -261,13 +261,13 @@ function publish_reference_docs {
 	# Download and extract Javadoc
 	#
 
-	curl https://docs.liferay.com/portal/7.4-latest/liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip -O
+	curl https://docs.liferay.com/portal/7.4-latest/${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE} -O
 
-	7z x liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip
+	7z x ${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE}
 
-	mv liferay-ce-portal-doc-7.4.1-ga2/* ./build/output/reference/latest/en/dxp
+	mv ${LIFERAY_LEARN_DXP_REF_DOCS_DIR}/* ./build/output/reference/latest/en/dxp
 	rmdir liferay-ce-portal-doc-7.4.1-ga2
-	rm -f liferay-ce-portal-doc-7.4.1-ga2-20210609223456272.zip
+	rm -f ${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE}
 
 	curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
 
