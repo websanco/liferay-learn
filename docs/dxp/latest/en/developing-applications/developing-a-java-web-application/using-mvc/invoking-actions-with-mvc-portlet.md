@@ -17,7 +17,7 @@ The example MVC Portlet has three portlet action URLs that map to separate portl
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp-7.x/developing-applications/using-mvc/liferay-u8t2.zip -O
+   curl https://learn.liferay.com/dxp/latest/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
    ```
 
    ```bash
