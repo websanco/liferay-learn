@@ -4,4 +4,6 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-Coming soon!
+   developer-guide/blog-api-basics.md
+
+-  :doc:`/content-authoring-and-management/blogs/developer-guide/blog-api-basics`

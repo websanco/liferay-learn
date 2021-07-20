@@ -13,9 +13,7 @@ Blogs
    blogs/highlighting-recent-bloggers.md
    blogs/blog-entry-editor-reference.md
    blogs/blog-permissions-reference.md
-
    blogs/developer_guide.rst
-   blogs/apis.rst
 
 -  :doc:`/content-authoring-and-management/blogs/getting-started-with-blogs`
 -  :doc:`/content-authoring-and-management/blogs/adding-blog-entries`
@@ -27,13 +25,9 @@ Blogs
 -  :doc:`/content-authoring-and-management/blogs/blog-entry-editor-reference`
 -  :doc:`/content-authoring-and-management/blogs/blog-permissions-reference`
 
-   
+
 Developer Guide
 ---------------
 
-Coming soon!
+-  :doc:`/content-authoring-and-management/blogs/developer-guide/blog-api-basics`
 
-APIs
-----
-
-Coming soon!
