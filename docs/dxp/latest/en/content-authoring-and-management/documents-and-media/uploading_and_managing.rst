@@ -32,4 +32,4 @@ Managing Metadata
 -----------------
 
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/defining-document-types`
--  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets`
+-  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/defining-metadata-sets`

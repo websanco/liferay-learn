@@ -71,7 +71,7 @@ When the Document Type is selected, users are presented with your configured met
     ![Drag and drop main metadata fields](./defining-document-types/images/10.png)
 
 1. Expand the _Additional Metadata Fields_.
-1. Select a metadata set to associate with the document type. To learn more, see [Using Metadata Sets](./using-metadata-sets.md).
+1. Select a metadata set to associate with the document type. To learn more, see [Defining Metadata Sets](./defining-metadata-sets.md).
 
     ![Associate additional metadata sets.](./defining-document-types/images/11.png)
 
@@ -88,4 +88,4 @@ When users create new files of the document type, they're presented with metadat
 ## Additional Information
 
 * [Documents and Media Overview](../../documents-and-media-overview.md)
-* [Using Metadata Sets](./using-metadata-sets.md)
+* [Defining Metadata Sets](./defining-metadata-sets.md)

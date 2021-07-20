@@ -1,4 +1,4 @@
-# Using Metadata Sets
+# Defining Metadata Sets
 
 With Documents and Media, you can define reusable groups of metadata fields that can be added to custom Document Types. Once created, these Metadata Sets can be selected while [creating or editing a Document Type](./defining-document-types.md) and are added after any fields defined directly in the Document Type form.
 
@@ -22,7 +22,7 @@ Follow these steps to define a new Metadata Set.
 
 1. In the *Builder* tab, drag and drop the desired fields into the designated drop zone.
 
-   ![Add fields in the Builder tab.](./defining-document-types/images/03.png)
+   ![Add fields in the Builder tab.](./defining-metadata-sets/images/03.png)
 
    Each field is highly configurable, with Basic and Advanced options. If desired, you can create field groups by dragging and dropping fields on top of one another. These groups can also be configured.
 

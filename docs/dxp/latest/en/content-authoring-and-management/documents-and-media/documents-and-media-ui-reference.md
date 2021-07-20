@@ -56,7 +56,7 @@ In the *Metadata Sets* tab, you can define reusable groups of metadata fields th
 
 ![Use fields to create reusable Metadata Sets.](./documents-and-media-ui-reference/images/08.png)
 
-Once created, Metadata Sets can be added to custom Document Types. See [Using Metadata Sets](./uploading-and-managing/managing-metadata/using-metadata-sets.md) for more information.
+Once created, Metadata Sets can be added to custom Document Types. See [Defining Metadata Sets](./uploading-and-managing/managing-metadata/defining-metadata-sets.md) for more information.
 
 ## Application Bar Settings
 

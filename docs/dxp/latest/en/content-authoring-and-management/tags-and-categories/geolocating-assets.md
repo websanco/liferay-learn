@@ -1,6 +1,6 @@
 # Geolocating Assets
 
-Geolocation adds the geographic coordinates where an asset was created as metadata to an asset. This feature is provided as an optional field which can be included in a [Web Content structure](../web-content/web-content-structures/understanding-web-content-structures.md), Dynamic Data List field, or a Documents and Media [Document Type](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md) or a [Metadata Set](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md).
+Geolocation adds the geographic coordinates where an asset was created as metadata to an asset. This feature is provided as an optional field which can be included in a [Web Content structure](../web-content/web-content-structures/understanding-web-content-structures.md), Dynamic Data List field, or a Documents and Media [Document Type](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md) or a [Metadata Set](../documents-and-media/uploading-and-managing/managing-metadata/defining-metadata-sets.md).
 
 ## Geolocating Web Content
 
@@ -67,7 +67,7 @@ Now that your data list is complete, you can use the [Data List Display portlet]
 
 ## Geolocating Documents and Media
 
-To enable geolocation in Documents and Media, you must first create a [Document Type](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md) that includes geolocation metadata. Alternately, you can add geolocation metadata as part of a [Metadata Set](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md). Once you have created that Metadata Set, it can be included as part of a Document Type.
+To enable geolocation in Documents and Media, you must first create a [Document Type](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md) that includes geolocation metadata. Alternately, you can add geolocation metadata as part of a [Metadata Set](../documents-and-media/uploading-and-managing/managing-metadata/defining-metadata-sets.md). Once you have created that Metadata Set, it can be included as part of a Document Type.
 
 ### Adding Geolocation in a Metadata Set
 
@@ -132,4 +132,4 @@ Once your assets are geolocation-enabled, the [Asset Publisher](../../site-build
 * [Configuring Asset Auto Tagging](./auto-tagging/configuring-asset-auto-tagging.md)
 * [Tagging Content and Managing Tags](./tagging-content-and-managing-tags.md)
 * [Defining Document Types](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md)
-* [Using Metadata Sets](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md)
+* [Defining Metadata Sets](../documents-and-media/uploading-and-managing/managing-metadata/defining-metadata-sets.md)
