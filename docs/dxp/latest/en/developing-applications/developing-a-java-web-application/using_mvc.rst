@@ -18,7 +18,7 @@ Using MVC
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-mvc` (Coming soon!)
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet`
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/rendering-views-with-mvc-portlet`
--  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet` (Coming soon!)
+-  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet`
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/handling-requests-in-mvc-portlet` (Coming soon!)
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/using-localized-messages-in-an-mvc-portlet`
 -  :doc:`/developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages`
