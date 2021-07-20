@@ -17,6 +17,7 @@ Here are the things to consider as you're creating REST API client projects.
     * [Compiling classes](#compiling-classes)
     * [Running classes](#running-classes)
 * [Formatting source code](#formatting-source-code)
+* [Updating permissions](#updating-permissions)
 * [Sending code for review](#sending-code-for-review)
 * [Appendix](#appendix)
     * [POST using JSON data](#post-using-json-data)
@@ -353,11 +354,26 @@ In the comment, use `1234` in place of any required ID value. If there are multi
 Our Source Formatter reports formatting issues and automatically fixes many of them. The `liferay-learn/docs/update_examples.sh` script runs the Source Formatter. You can run the script on all examples or on a single project. To run the script on your project, execute the command below, replacing `xxxx` with your project ID.
 
 ```bash
+cd liferay-learn/docs
+```
+
+```bash
 ./update_examples.sh xxxx
 ```
 
 Resolve any reported formatting issues and commit your modified files.
 
+## Updating Permissions
+
+Open execute permissions on your cURL scripts by running the `liferay-learn/docs/update_permissions.sh` script. To run the script on your project, execute the command below, replacing `xxxx` with your project ID.
+
+```bash
+cd liferay-learn/docs
+```
+
+```bash
+./update_permissions.sh xxxx
+```
 
 ## Sending Code For Review 
 
