@@ -21,7 +21,7 @@ Here's how to deploy the example portlet and navigate between its views. For lea
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp-7.x/developing-applications/using-mvc/liferay-c8m3.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-c8m3.zip -O
    ```
 
    ```bash
