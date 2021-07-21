@@ -10,7 +10,7 @@ The connection to Elasticsearch is primarily defined in the _Elasticsearch 6/7_ 
 | --------------- | -------------------------------------- | 
 | Liferay 7.2.x<br />Elasticsearch 6.x  | Elasticsearch 6<br />`com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config` |
 | Liferay 7.2.x<br />Elasticsearch 7.x  | Elasticsearch 7<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config` |
-| Liferay 7.3.x<br />Elasticsearch 7.x  | Elasticsearch 7<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`<br /><br />Elasticsearch Connections (factory)<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[key].config` |
+| Liferay 7.3.x<br />Elasticsearch 7.x  | Elasticsearch 7<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`<br /><br />Elasticsearch Connections (factory)<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[connectionId].config` |
 
 In Liferay 7.3 and beyond, there's an additional connection configuration entry, Elasticsearch Connections. You can use this to define any connection to Elasticsearch, but if you are only configuring one connection you can still use the main Elasticsearch 7 configuration entry. If using multiple connections in 7.3+, define connections with files named accordingly:
 
