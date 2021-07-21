@@ -86,13 +86,19 @@ System scoped search configurations are primarily found in [System Settings](../
 
 ![There are numerous system scoped entries for search in System Settings.](./search-configuration-reference/images/01.png)
 
+System Settings can also be configured via [OSGi configuration file](../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md). The file names re included here.
+
 ### Default Keyword Query
+
+**Configuration File:** `com.liferay.portal.search.configuration.DefaultKeywordQueryConfiguration.config`
 
 The Default Keyword Query entry contains one setting:
 
 **`disabledEntryClassNames`**: The `DefaultKeywordQueryContributor` code automatically adds `description`, `userName`, and `title` fields to the keyword search query. Specify the entry class names `DefaultKeywordQueryContributor` should ignore.
 
 ### Default Search Result Permission Filter
+
+**Configuration File:** `com.liferay.portal.search.configuration.DefaultSearchResultPermissionFilterConfiguration.config`
 
 The Default Search Result Permission Filter entry allows configuration of *post-filtering permission checking* (database permission checking that occurs after the results are returned from the search index). Read [Final Permissions Checking](../search-pages-and-widgets/search-results/search-results-behavior.md#final-permissions-checking) for more information on these settings:
 
@@ -102,17 +108,23 @@ The Default Search Result Permission Filter entry allows configuration of *post-
 
 ### Index Status Manager
 
+**Configuration File:** `com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config`
+
 The Index Status Manager entry has one setting:
 
 **`indexReadOnly`**: Enable this to suspend all indexing operations and writes to the search engine. Searches return only the documents already indexed. This is useful for speeding up large data imports, but it should be disabled and a full re-index executed once the import is finished.
 
 ### Indexer Writer Helper
 
+**Configuration File:** `com.liferay.portal.search.configuration.IndexWriterHelperConfiguration.config`
+
 The Index Writer Helper entry contains one entry:
 
 **`indexCommitImmediately`**: When *true* (the default), each write request forces the search engine to refresh the index reader, potentially flushing transactions to disk. This may negatively impact search engine performance. The default behavior is to commit immediately for index writing on individual assets (e.g. add blog, update blog) but delay commits for bulk index writing operations (e.g.  index all users, index all form entries) until all entries have been sent to the search engine. Setting this to false changes the behavior for individual index operations, and may cause applications like Asset Publisher to exhibit a delayed response when showing newly added content. See the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/near-real-time.html) for more information.
 
-### Index Registry
+### Indexer Registry
+
+**Configuration File:** `com.liferay.portal.search.configuration.IndexerRegistryConfiguration.config`
 
 Configure the buffering of index requests:
 
@@ -126,17 +138,23 @@ Configure the buffering of index requests:
 
 ### Index Query Preprocessor
 
+**Configuration File:** `com.liferay.portal.search.configuration.QueryPreProcessConfiguration.config`
+
 This entry has one repeatable property (use array syntax if you're defining via [OSGi configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)):
 
 **`fieldNamePatterns`**: Fields with names matching the patterns set here are treated as non-analyzed keyword fields. Instead of scored full text queries, matching is performed by non-scored wildcard queries. This is a resource intensive operation that degrades search engine performance as indexes grow larger. For substring matching, relying on the [ngram tokenizer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-ngram-tokenizer.html) usually performs better.
 
 ### Reindex
 
+**Configuration File:** `com.liferay.portal.search.configuration.ReindexConfiguration.config`
+
 This entry contains only one property:
 
 **`indexingBatchSizes`**: Set the number of documents (the default value is 1000) indexed per batch for model types that support batch indexing. For models with large documents, decreasing this value may improve stability when executing a full re-index.
 
 ### Reindexer
+
+**Configuration File:** `com.liferay.portal.search.configuration.ReindexerConfiguration.config`
 
 These properties configure the Reindexer service in the Search framework. They are experimental and only useful when troubleshooting certain specific scenarios under the direction of Liferay's support personnel. Never use these configurations in production systems. 
 
@@ -146,6 +164,8 @@ These properties configure the Reindexer service in the Search framework. They a
 
 ### Engine Helper
 
+**Configuration File:** `com.liferay.portal.search.configuration.SearchEngineHelperConfiguration.config`
+
 This entry has one repeatable property (use array syntax if you're defining via
 [OSGi configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)):
 
@@ -153,11 +173,15 @@ This entry has one repeatable property (use array syntax if you're defining via
 
 ### Permission Checker
 
+**Configuration File:** `com.liferay.portal.search.configuration.SearchPermissionCheckerConfiguration.config`
+
 This entry has one configuration option in Liferay DXP 7.3:
 
 **`permissionTermsLimit`**: Limits the number of permission search clauses added to the search query before this level of permission checking is aborted. Permission checking then relies solely on the final permission filtering described in the [Default Search Result Permission Filter](#default-search-result-permission-filter) section.
 
 ### Title Field Query Builder
+
+**Configuration File:** `com.liferay.portal.search.configuration.TitleFieldQueryBuilderConfiguration.config`
 
 Configure how search responds to matches on the Title field of a document.
 
@@ -167,29 +191,49 @@ Configure how search responds to matches on the Title field of a document.
 
 ### Cross-Cluster Replication
 
+**Configuration File:** `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.CrossClusterReplicationConfiguration.config`
+
 You'll only see this entry if you have deployed the Cross-Cluster Replication module, which is available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Cross-Cluster Replication](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
 
 ### Elasticsearch Monitoring
+
+**Configuration File:** `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config`
 
 You can use the Elasticsearch Monitoring configuration if you have deployed the Liferay Enterprise Search Monitoring module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Monitoring Elasticsearch](../liferay-enterprise-search/monitoring-elasticsearch.md) documentation.
 
 ### Elasticsearch 7
 
+**Configuration File:** `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`
+
 Configure the connection between Liferay and Elasticsearch 7. See [Configuring the Connector](../installing-and-upgrading-a-search-engine/elasticsearch/connecting-to-elasticsearch.md#configuring-the-connector) for detailed coverage of these properties.
 
 ### Elasticsearch Connections
+
+**Configuration File:** `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[connectionId].config`
 
 Liferay 7.3 can connect to multiple Elasticsearch clusters. Connections are defined in the Elasticsearch Connections entry. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. It's also demonstrated in the [Cross-Cluster Replication](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
 
 ### Learning to Rank
 
+**Configuration File:** `com.liferay.portal.search.learning.to.rank.configuration.LearningToRankConfiguration.config`
+
 You can use the Learning to Rank configuration if you have deployed the Liferay Enterprise Search Learning to Rank module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Learning to Rank](../liferay-enterprise-search/learning-to-rank.md) documentation.
 
 ### Search Web
 
+**Configuration File:** `com.liferay.portal.search.web.internal.configuration.SearchWebConfiguration.config`
+
 This entry contains one property:
 
 **`classicSearchPortletInFrontPage`**: Revert the default search experience from using the new Search Widgets to the deprecated classic Search Portlet that was standard in past releases.
+
+### Synonyms
+
+**Configuration File:** `com.liferay.portal.search.tuning.synonyms.web.internal.configuration.SynonymsConfiguration.config`
+
+This entry has one repeatable property (use array syntax if you're defining via [OSGi configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)):
+
+**`synyonymFilterNames`**: Set the synonym filter names to apply. These filters must be defined in the Elasticsearch Index Settings. See [Creating New Synonym Language Filters](./search-administration-and-tuning/synonym-sets.md#creating-new-synonym-language-filters).
 
 ### Search Administration
 
@@ -204,7 +248,6 @@ Information about the search engine connection(s) is displayed here. For example
 ```bash
 Search Engine Vendor: Elasticsearch (Embedded), Client Version: 6.5.0, Nodes: A0D6GlN (6.5.0)
 ```
-
 
 #### Index Actions
 
