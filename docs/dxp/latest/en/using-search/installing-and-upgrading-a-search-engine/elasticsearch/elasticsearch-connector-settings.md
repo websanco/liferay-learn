@@ -27,7 +27,6 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | System Settings Field Name | <div style="width:290px">Configuration File Syntax and Default Value<br />Description (Click to Expand) | Availability |
 | ----------------------------- | ------------------------------------------------------------------------------ | ------------ | 
 | | <a href="#general-connection-settings" id="general-connection-settings">GENERAL CONNECTION SETTINGS</a> |
-| Track Total Hits | <details><summary><code>trackTotalHits=B"true"</code></summary>If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.</details> | Liferay 7.2+<br />(Connector to Elasticsearch 7) |
 | Track Total Hits | <details><summary>`trackTotalHits=B"true"`</summary>If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.</details> | Liferay 7.2+<br />(Connector to Elasticsearch 7) |
 | Production Mode Enabled | <details><summary>`productionModeEnabled=B"false"`</summary>Enable production mode. In Liferay 7.3, <code>productionModeEnabled</code> replaces the deprecated setting <code>operationMode</code>. If this is checked, production mode is enabled and the Operation Mode configuration is ignored. Enabling production mode requires connecting to a remote standalone Elasticsearch cluster. If left disabled, the Operation Mode configuration is used.</details> | Liferay 7.3+ |
 | Index Name Prefix | <details><summary>`indexNamePrefix="liferay-"`</summary>Set a String value to use as the prefix for the search index name. The default value should not be changed under normal conditions. If you change it, you must also perform a *re-index all* operation for the portal and then manually delete the old index using the Elasticsearch administration console.</details> | Liferay 7.2+ |
@@ -91,3 +90,9 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Embedded HTTP Port | <details><summary>`embeddedHttpPort="9201"`</summary>This configuration only applies to EMBEDDED mode. Set the HTTP port of the embedded Elasticsearch node that is created when Operation Mode is set to EMBEDDED.</details> | Deprecated as of Liferay 7.3.x |
 | Http Enabled | <details><summary>`httpEnabled=B"true"`</summary>If this is checked, the HTTP layer is enabled. If unchecked, the HTTP layer is disabled on nodes which are not meant to serve REST requests directly.</details> | Deprecated as of Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
 
+## Related Topics
+- [What's New in Search for 7.3?](../../getting-started/whats-new-in-search-for-73.md)
+- [Securing Elasticsearch](securing-elasticsearch.md)
+- [Connecting to Elasticsearch](connecting-to-elasticsearch.md)
+- [Liferay DXP Elasticsearch Connectors: Technical Data Sheet (KB Reference)](https://help.liferay.com/hc/en-us/articles/360046478452)
+- [Understanding Liferay DXP's compatibility with Elasticsearch (KB Reference)](https://help.liferay.com/hc/en-us/articles/360051492032)
