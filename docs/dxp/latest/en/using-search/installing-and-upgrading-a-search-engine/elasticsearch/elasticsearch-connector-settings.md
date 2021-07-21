@@ -34,7 +34,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | 7.3.x&rarr;Number of Company and System Index Replicas<br />7.2.x&rarr;Index Number of Replicas | <details><summary>`indexNumberOfReplicas="0-all"`</summary>Set the number of replicas for each Liferay company and system index. If unset, no replicas are used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
 | 7.3.x&rarr;Number of Company and System Index Shards<br />7.2.x&rarr;Index Number of Shards | <details><summary>`indexNumberOfShards="1"`</summary>Set the number of shards to use when a Liferay company and system index is created. If unset, a single shard will be used. Changing this value requires a full re-index. The default value is defined in a file called "index-settings-defaults.json" shipped with the connector.</details> | Liferay 7.2+ |
 | Log Exceptions Only | <details><summary>`logExceptionsOnly=B"true"`</summary>A boolean setting that, when set to true, only logs exceptions from Elasticsearch, and does not re-throw them.</details> | Liferay 7.2+ |
-| Retry On Conflict | <details><summary>`retryOnConflict="5"`</summary></details> | Liferay 7.2- |
+| Retry On Conflict | <details><summary>`retryOnConflict="5"`</summary>Set an int value for the number of retries to attempt if a version conflict occurs because the document was updated between getting it and updating it (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/docs-update.html#docs-update-api-query-params) for more information.</details> | Liferay 7.2- |
 | | <a href="#security-settings" id="security-settings">SECURITY SETTINGS</a> |
 | Authentication Enabled | <details><summary>`authenticationEnabled=B"false"`</summary>Enable or disable authentication to Elasticsearch with a user name and password.</details> | Liferay 7.3+ |
 | Username | <details><summary>`username="elastic"`</summary>Set the user name for authenticating to Elasticsearch if Authentication Enabled is checked.</details> | Liferay 7.3+ |
@@ -48,7 +48,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Connection ID | <details><summary>`connectionId=""`</summary>Set a unique ID for the connection. If active, this connection becomes available to select in the Elasticsearch 7 configuration's Remote Cluster Connection ID property.</details> | Liferay 7.3+ |
 | | <a href="#rest-client-settings" id="rest-client-settings">REST CLIENT SETTINGS</a> |
 | Network Host Addresses | <details><summary>`networkHostAddresses="[http://localhost:9200]"`</summary>Set the remote HTTP hosts to connect to. This is required in Liferay 7.3 as it configures the REST client connection.</details> | Liferay 7.3+ |
-| REST Client Logger Level | <details><summary>`RESTClientLoggerLevel="ERROR"`</summary></details> | Liferay 7.3+ |
+| REST Client Logger Level | <details><summary>`RESTClientLoggerLevel="ERROR"`</summary>Set the logging level for the Elasticsearch REST client.</details> | Liferay 7.3+ |
 | | <a href="#transport-client-settings" id="transport-client-settings">TRANSPORT CLIENT SETTINGS</a> |
 | Cluster Name | <details><summary>`clusterName="LiferayElasticsearchCluster"`</summary>The cluster name is only needed for the Transport Client in Liferay 7.2. Set a String value to declare the cluster to integrate with. In Liferay 7.3+, where the connection is managed through the REST client, this property is only used for naming the embedded cluster when in development mode.</details> | Liferay 7.2-<br />On 7.3+, applies to development mode |
 | Transport Addresses | <details><summary>`transportAddresses=["localhost:9300"]`</summary>Set the String values for the addresses of the remote Elasticsearch nodes to connect to. This value is required when Operation Mode is set to remote (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information). Specify as many or few nodes as you see fit.</details> | Liferay 7.2- |
@@ -66,6 +66,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Network Host | <details><summary>`networkHost=""`</summary>Set this String value to instruct the node to bind to this hostname or IP address and publish (advertise) this host to other nodes in the cluster. This is a shortcut which sets the bind host and the publish host at the same time (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#common-network-settings) for more information).</details> | Liferay 7.2+  |
 | Network Bind Host | <details><summary>`networkBindHost=""`</summary>Set the String value of the network interface(s) a node should bind to in order to listen for incoming requests (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#advanced-network-settings) for more information).</details> | Liferay 7.2+ |
 | Network Publish Host | <details><summary>`networkPublishHost=""`</summary>Set the String value of a single interface that the node advertises to other nodes in the cluster, so that those nodes can connect to it (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#advanced-network-settings) for more information).</details> | Liferay 7.2+ |
+| | <a href="#sidecar-settings" id="sidecar-settings">SIDECAR SETTINGS</a> | 
 | Node Name | <details><summary>`nodeName=`</summary>Name the embedded Elasticsearch server's node. A remote Elasticsearch server's node name is configured in its `elasticsearch.yml`.</details> | Liferay 7.3+ |
 | Sidecar Debug | <details><summary>`sidecarDebug=B"false"`</summary>Set this to true to enable debug mode for the sidecar process.</details> | Liferay 7.3+ |
 | Sidecar Debug Settings | <details><summary>`sidecarDebugSettings="-agentlib:jdwp=transport=dt_socket,address=8001,server=y,suspend=y,quiet=y"`</summary>Set the JVM options used to debug the sidecar process.</details> | Liferay 7.3+ |
@@ -87,175 +88,6 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 | Proxy Password | <details><summary>`proxyPassword=""`</summary>Set the password for connecting to the proxy.</details> | Liferay DXP 7.3 FP1+/SP1+ and Liferay Portal CE GA7+ |
 | | <a href="#deprecated-settings" id="deprecated-settings">DEPRECATED</a> |
 | Operation Mode | <details><summary>`operationMode="EMBEDDED"`</summary>There are two operation modes you can choose from: EMBEDDED or REMOTE. Set to REMOTE to connect to a remote standalone Elasticsearch cluster. Set to EMBEDDED to start Liferay with an internal Elasticsearch instance. EMBEDDED operation mode is unsupported for production environments and can be considered a "development mode" feature.</details> | Deprecated as of Liferay 7.3, replaced with _Production Mode Enabled_  |
-| Embedded HTTP Port | <details><summary>`embeddedHttpPort="9201"`</summary></details> | Deprecated as of Liferay 7.3.x |
-| Http Enabled | <details><summary>`httpEnabled=B"true"`</summary></details> | Deprecated as of Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
+| Embedded HTTP Port | <details><summary>`embeddedHttpPort="9201"`</summary>This configuration only applies to EMBEDDED mode. Set the HTTP port of the embedded Elasticsearch node that is created when Operation Mode is set to EMBEDDED.</details> | Deprecated as of Liferay 7.3.x |
+| Http Enabled | <details><summary>`httpEnabled=B"true"`</summary>If this is checked, the HTTP layer is enabled. If unchecked, the HTTP layer is disabled on nodes which are not meant to serve REST requests directly.</details> | Deprecated as of Liferay 7.1.x<br />Deprecated Elasticsearch 6.3.x |
 
-
-<!-- 
-## Property Descriptions
-
-The configuration settings are categorized by where they appear: those unique to the Elasticsearch 7 entry, those unique to the Elasticsearch connections entry, and those common to both. The Elasticsearch 7 and Elasticsearch Connections entries are found under System Settings &rarr; Search.
-
-### Properties Unique to the Elasticsearch 7 Configuration
-
-Many of the connection settings are only found in the Elasticsearch 7 configuration entry. They can be categorized according to 
-
-- production mode settings for defining the connection mode and declaring which connection to use (if you have multiple connections defined in an Elasticsearch Connections entry)
-- development mode settings to configure the embedded or sidecar Elasticsearch (e.g., naming the server node)
-- Settings that are not specific to the connection, but that configure Liferay's search infrastructure or behavior (e.g., index name prefixes)
-
-#### Defining the Remote Connection
-
-**Operation Mode, `operationMode="EMBEDDED"`** \
-There are two operation modes you can choose from: EMBEDDED or REMOTE. Set to REMOTE to connect to a remote standalone Elasticsearch cluster. Set to EMBEDDED to start Liferay with an internal Elasticsearch instance. EMBEDDED operation mode is unsupported for production environments and can be considered a "development mode" feature.
-
-**Remote Cluster Connection ID, `remoteClusterConnectionId`** \
-Choose the connection ID for a connection to the remote Elasticsearch cluster. The available connections are defined in the Elasticsearch Connections System Settings entry. If this value is not set then the connection configurations in the Elasticsearch 7 entry are used for the remote cluster connection.
-
-#### Configuring Liferay's Search Infrastructure
-
-**Index Name Prefix, `indexNamePrefix="liferay-"`** \
-Set a String value to use as the prefix for the search index name. The default value should not be changed under normal conditions. If you change it, you must also perform a *re-index all* operation for the portal and then manually delete the old index using the Elasticsearch administration console.
-
-**Additional Index Configurations, `additionalIndexConfigurations=`** \
-Set the String values for custom settings for the Liferay index, in JSON or YML format (refer to the Elasticsearch Create Index API for more information).  See: Adding Settings to the Liferay Elasticsearch Connector
-
-**Additional Type Mappings, `additionalTypeMappings=`** \
-Set the String values for custom mappings for the `LiferayDocumentType`, in JSON format (refer to the Elasticsearch Put Mapping API for more information) See: Adding Settings to the Liferay Elasticsearch Connector
-
-**Override Type Mappings, `overrideTypeMappings=`** \
-Settings here override Liferay's default type mappings. This is an advanced feature that should be used only if strictly necessary. If you set this value, the default mappings used to define the Liferay Document Type in Liferay source code (for example, `liferay-type-mappings.json`) are ignored entirely, so include the whole mappings definition in this property, not just the segment you're modifying.
-
-[7.2-] **Transport Addresses, `transportAddresses="localhost:9300"`** \
-Set the String values for the addresses of the remote Elasticsearch nodes to connect to. This value is required when Operation Mode is set to remote (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information). Specify as many or few nodes as you see fit.
-
-[7.2-] **Client Transport Sniff, `clientTransportSniff="true"`** \
-Set this boolean to true to enable cluster sniffing and dynamically discover available data nodes in the cluster (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information).
-
-[7.2-] **Client Transport Ignore Cluster Name, `clientTransportIgnoreClusterName="false"`** \
-Set this boolean to true to ignore cluster name validation of connected nodes (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information).
-
-[7.2-] **Client Transport Ping Timeout, `clientTransportPingTimeout=`** \
-Set the time (in seconds) the client node waits for a ping response from a node. If unset, the default Elasticsearch `client.transport.ping_timeout` is used.
-
-[7.2-] **Client Transport Nodes Sampler Interval, `clientTransportNodesSamplerInterval=`** \
-Set this String value to instruct the client node on how often to sample / ping the nodes listed and connected (see [here](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) for more information).
-
-**Log Exceptions Only, `logExceptionsOnly="true"`** \
-A boolean setting that, when set to true, only logs exceptions from Elasticsearch, and does not re-throw them.
-
-#### Configuring the Development Mode Server
-
-**Cluster Name, `clusterName="LiferayElasticsearchCluster"`** \
-The cluster name is only needed for the Transport Client in Liferay 7.2. Set a String value to declare the cluster to integrate with. In Liferay 7.3+, where the connection is managed through the REST client, this property is only used for naming the embedded cluster when in development mode.
-
-**Node Name, `nodeName=`** \
-Name the embedded Elasticsearch server's node. A remote Elasticsearch server's node name is configured in its `elasticsearch.yml`.
-
-**Additional Configurations, `additionalConfigurations=`** \
-Set the String values for custom settings for embedded Elasticsearch, in YML format. See: Adding Settings to the Liferay Elasticsearch Connector
-
-**Bootstrap Mlock All, `bootstrapMlockAll="false"`**
-A boolean setting that, when set to `true`, tries to lock the process address space into RAM, preventing any Elasticsearch memory from being swapped out (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-configuration-memory.html#bootstrap-memory_lock)) for more information)
-
-**Http CORS Allow Origin, `httpCORSAllowOrigin="/https?:\\/\\/localhost(:[0-9]+)?/"** \
-Set the String origins to allow when HTTP CORS is enabled (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-http.html#_settings) for more information).
-
-**Http CORS Configurations, `httpCORSConfigurations=** \
-Set the String values for custom settings for HTTP CORS, in YML format (`elasticsearch.yml`) (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-http.html#_settings) for more information).
-
-**Http CORS Enabled, `httpCORSEnabled="true"** \
-Set this boolean to false to disable cross-origin resource sharing. When set to `false`, a browser on another origin cannot make requests to Elasticsearch. Web front end tools like Elasticsearch Head may be unable to connect (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-http.html#_settings) for more information).
-
-**Network Host, `networkHost=""** \
-Set this String value to instruct the node to bind to this hostname or IP address and publish (advertise) this host to other nodes in the cluster. This is a shortcut which sets the bind host and the publish host at the same time (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#common-network-settings) for more information).
-
-**Network Bind Host, `networkBindHost=""** \
-Set the String value of the network interface(s) a node should bind to in order to listen for incoming requests (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#advanced-network-settings) for more information).
-
-**Network Publish Host, `networkPublishHost=""** \
-Set the String value of a single interface that the node advertises to other nodes in the cluster, so that those nodes can connect to it (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-network.html#advanced-network-settings) for more information).
-
-**Sidecar Debug, `sidecarDebug="false"** \
-Set this to true to enable debug mode for the sidecar process.
-
-**Sidecar Debug Settings, `sidecarDebugSettings="-agentlib:jdwp=transport=dt_socket,address=8001,server=y,suspend=y,quiet=y"** \
-Set the JVM options used to debug the sidecar process.
-
-**Sidecar Heartbeat Interval, `sidecarHeartbeatInterval="10000"** \
-Set the heartbeat interval in milliseconds used to detect the health of the sidecar process.
-
-**Sidecar Home, `sidecarHome="elasticsearch7"** \
-Set the path of the sidecar base folder used to start the sidecar process.
-
-**Sidecar HTTP Port, `sidecarHttpPort="9200"** \
-This configuration only applies to Liferay 7.3 with the sidecar Elasticsearch. Set the HTTP port range of the sidecar Elasticsearch node. Set to AUTO to automatically find a port in the 9201-9300 range. If unset, the value of Embedded HTTP port (`9201` by default) is used.
-
-**Sidecar JVM Options, `sidecarJVMOptions="-Xms1g|-Xmx1g|-XX:+AlwaysPreTouch"** \
-Set the JVM options used by the sidecar process.
-
-**Sidecar Shutdown Timeout, `sidecarShutdownTimeout="10000"** \
-Set the time in milliseconds to wait before the sidecar process is forcibly shut down.
-
-**Transport Tcp Port, `transportTcpPort=""** \
-Set the String value for the port to bind for communication between nodes.  Accepts a single value or a range (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-transport.html#_tcp_transport) for more information).
-
-**Zen Discovery Unicast Hosts Port, `discoveryZenPingUnicastHostsPort="9300-9400"** \
-Set a String value for the range of ports to use when building the value for `discovery.zen.ping.unicast.hosts`. Multiple Elasticsearch nodes on a range of ports can act as gossip routers at the same computer (see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-discovery-hosts-providers.html) for more information).
-
-### Properties Unique to the Elasticsearch Connections Configuration
-
-**Active, `active="false"`** \
-Activate or deactivate the connection as needed. Do not deactivate a connection if it's selected in the Elasticsearch 7 configuration's Remote Cluster Connection ID setting.
-
-**Connection ID, `connectionId=`** \
-Set a unique ID for the connection. If active, this connection becomes available to select in the Elasticsearch 7 configuration's Remote Cluster Connection ID property.
-
-### Properties Shared Between the Elasticsearch 7 and Elasticsearch Connections Configurations
-
-Configuration that would be unique depending on the defined connection are available from both the Elasticsearch 7 and the Elasticsearch Connections configurations.
-
-**Network Host Addresses, `networkHostAddresses="http://localhost:9200"** \
-Set the remote HTTP hosts to connect to. This is required in Liferay 7.3 as it configures the REST client connection.
-
-**Authentication Enabled, `authenticationEnabled="false"** \
-Enable or disable authentication to Elasticsearch with a user name and password.
-
-**Username, `username="elastic"** \
-Set the user name for authenticating to Elasticsearch if Authentication Enabled is checked.
-
-**Password, `password=** \
-Set the password for authenticating to Elasticsearch if Authentication Enabled is checked.
-
-**Http SSL Enabled, `httpSSLEnabled="false"** \
-Enable or disable TLS/SSL.
-
-**Truststore Type, `truststoreType="pkcs12"** \
-Set the truststore type if HTTP SSL Enabled is checked.
-
-**Truststore Path, `truststorePath="/path/to/localhost.p12"** \
-Set the path to the truststore file if HTTP SSL Enabled is checked.
-
-**Truststore Password, `truststorePassword=** \
-Set the password to the truststore if HTTP SSL Enabled is checked.
-
-**Proxy Host, `proxyHost=`** \
-Set the proxy host for the client connection.
-
-**Proxy Port, `proxyPort="0"`** \
-Set the proxy port for the client connection.
-
-**Proxy Username, `proxyUserName=`** \
-Set the proxy user name for a proxy connection.
-
-**Proxy Password, `proxyPassword=`** \
-Set the password for connecting to the proxy.
-
-## Related Topics
-
-- [What's New in Search for 7.3?](../../getting-started/whats-new-in-search-for-73.md)
-- [Securing Elasticsearch](securing-elasticsearch.md)
-- [Connecting to Elasticsearch](connecting-to-elasticsearch.md)
-- [Liferay DXP Elasticsearch Connectors: Technical Data Sheet (KB Reference)](https://help.liferay.com/hc/en-us/articles/360046478452)
-- [Understanding Liferay DXP's compatibility with Elasticsearch (KB Reference)](https://help.liferay.com/hc/en-us/articles/360051492032)
-    -->
