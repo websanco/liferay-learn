@@ -39,6 +39,32 @@ Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP
    The CDN is not currently supported for the Dubai/Northern UAE region.
 ```
 
+### Clearing the CDN Cache
+
+The CDN improves performance by reducing latency for delivering static content to Users. However, it is possible that some of this content is delivered to Users before the cache is updated, when the content is no longer valid.
+
+If it is necessary to clear the CDN cache to force the content to be retrieved again, then you can manually clear it from the DXP Cloud console:
+
+1. Log into the DXP Cloud console and navigate to the appropriate environment.
+
+1. Click *Network* from the menu on the left.
+
+1. Under the *CDN* section, click *Clear CDN Cache...*
+
+    ![Click the Clear CDN Cache button on the Network page for your environment.](./load-balancer/images/03.png)
+
+1. On the Clear CDN cache page, select all the checkboxes to confirm that you understand the consequences of clearing the cache, and that it applies to all services with CDN enabled.
+
+    ![The Clear CDN cache page.](./load-balancer/images/04.png)
+
+1. Click *Request Cache Clearance*.
+
+The request is sent to clear the cache when you click the button. As the page indicates, it may take up to 30 minutes for the cache to be cleared with your request.
+
+```warning::
+   Clearing the CDN cache too frequently may impact server performance, because it may cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
+```
+
 ## Port
 
 You can set which internal port (`targetPort`) the load balancer's service endpoint routes to. DXP Cloud automatically configures the correct port for the services it provides.
