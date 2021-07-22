@@ -346,6 +346,20 @@ javax.portlet.display-name=XXXX Portlet
 
 If your project has multiple portlets, distinguish their display names by adding another name between `XXXX` and `Portlet`.
 
+#### Portlet Name
+
+Use this pattern for portlet names:
+
+```properties
+javax.portlet.name=com_acme_xxxx_web_internal_portlet_XXXXPortlet
+```
+
+For example, since `L6Y9Portlet`'s package is `com.acme.l6y9.web.internal.portlet`, its portlet name property is this:
+
+```properties
+javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet
+```
+
 ## Logic
 
 ### Localization 
