@@ -12,7 +12,7 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"javax.portlet.name=com_acme_l6y9_web_portlet_L6Y9Portlet",
+		"javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet",
 		"mvc.command.name=/l6y9/do_l6y9_able"
 	},
 	service = MVCActionCommand.class

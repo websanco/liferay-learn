@@ -11,7 +11,7 @@ import org.osgi.service.component.annotations.Component;
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=L6Y9 Portlet",
 		"javax.portlet.init-param.view-template=/view.jsp",
-		"javax.portlet.name=com_acme_l6y9_web_portlet_L6Y9Portlet"
+		"javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet"
 	},
 	service = Portlet.class
 )
