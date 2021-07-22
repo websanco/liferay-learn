@@ -50,7 +50,7 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-3.  [コンテナを停止します](./dxp-docker-container-basics.md#stopping-a-container)。
+3.  [コンテナを停止します](./docker-container-basics.md#stopping-a-container)。
 
 4.  `setenv.sh` のコピーで JVM オプションを設定します。
 
@@ -74,7 +74,7 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 ```
 
 ``` note::
-   See `DXP Docker Container Basics <./dxp-docker-container-basics.md>`_ for details on starting and operating DXP containers.
+   See `DXP Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating DXP containers.
 ```
 
 ## ポータルプロパティ
@@ -105,7 +105,7 @@ DXPコンテナ [ポータルプロパティ](../../reference/portal-properties.
     ```
 
     ``` note::
-       See `DXP Docker Container Basics <./dxp-docker-container-basics.md>`_ for details on starting and operating the containers.
+       See `DXP Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating the containers.
     ```
 
 プロパティは *構成* → *サーバー管理* → *プロパティ* → *ポータルプロパティ* で表示されます。
@@ -276,8 +276,8 @@ DXPコンテナのJVMオプション、ポータルプロパティ、DXPイメ�
 
 ## 追加情報
 
-  - [DXP Dockerコンテナの基本](./dxp-docker-container-basics.md)
-  - [DXPコンテナのライフサイクルとAPI](./dxp-container-lifecycle-and-api.md)
+  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
+  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
   - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
   - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

@@ -4,9 +4,9 @@ Liferay DXP Dockerイメージの使用
 .. toctree::
    :maxdepth: 3
 
-   using-liferay-docker-images/dxp-docker-container-basics.md
-   using-liferay-docker-images/dxp-container-lifecycle-and-api.md
-   using-liferay-docker-images/configuring-dxp-containers.md
+   using-liferay-docker-images/docker-container-basics.md
+   using-liferay-docker-images/container-lifecycle-and-api.md
+   using-liferay-docker-images/configuring-containers.md
    using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers.md
    using-liferay-docker-images/patching-dxp-in-docker.md
    using-liferay-docker-images/running-scripts-in-containers.md

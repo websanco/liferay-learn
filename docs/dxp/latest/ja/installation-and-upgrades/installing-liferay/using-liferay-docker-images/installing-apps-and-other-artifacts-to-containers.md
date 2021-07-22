@@ -57,8 +57,8 @@ docker cp ~/my-apps/some-app.lpkg [container]:/mnt/liferay/deploy
 
 ## 追加情報
 
-  - [DXP Dockerコンテナの基本](./dxp-docker-container-basics.md)
+  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-  - [DXPコンテナのライフサイクルとAPI](./dxp-container-lifecycle-and-api.md)
-  - [DXPコンテナの構成](./configuring-dxp-containers.md)
+  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+  - [DXPコンテナの構成](./configuring-containers.md)
   - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

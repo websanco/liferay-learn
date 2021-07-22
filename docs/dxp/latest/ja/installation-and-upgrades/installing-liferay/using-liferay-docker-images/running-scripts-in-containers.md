@@ -1,6 +1,6 @@
 # コンテナでのスクリプトの実行
 
-TomcatおよびDXPファイルの設定、アーティファクトの展開、およびパッチの適用以外に、DXPコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./dxp-container-lifecycle-and-api.md)いくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
+TomcatおよびDXPファイルの設定、アーティファクトの展開、およびパッチの適用以外に、DXPコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./container-lifecycle-and-api.md)いくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
 
 | ライフサイクルフェーズ | 説明                                 | ターゲットコンテナフォルダー                             |
 |:----------- |:---------------------------------- |:------------------------------------------ |
@@ -13,7 +13,7 @@ TomcatおよびDXPファイルの設定、アーティファクトの展開、�
 
 ## 構成フェーズでのスクリプトの実行
 
-TomcatとDXPを構成する方法が、構成フェーズが提供する方法以外にもある場合は、それらを構成フェーズスクリプトに実装します。 構成フェーズの詳細については、 [DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md#lifecycle) を参照してください。
+TomcatとDXPを構成する方法が、構成フェーズが提供する方法以外にもある場合は、それらを構成フェーズスクリプトに実装します。 構成フェーズの詳細については、 [DXP Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) を参照してください。
 
 ここでは、バインドマウントを使用して構成フェーズスクリプトを設定する手順を示します。
 
@@ -122,6 +122,6 @@ inside some-pre-configure-script.sh
 
 ## 追加情報
 
-  - [DXP Dockerコンテナの基本](./dxp-docker-container-basics.md)
-  - [DXPコンテナのライフサイクルとAPI](./dxp-container-lifecycle-and-api.md)
+  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
+  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)

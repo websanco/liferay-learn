@@ -132,7 +132,7 @@ DXPは新しいフィックスパックまたはサービスパックで起動�
 ## 追加情報
 
   - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
-  - [DXP Dockerコンテナの基本](./dxp-docker-container-basics.md)
+  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-  - [DXPコンテナのライフサイクルとAPI](./dxp-container-lifecycle-and-api.md)
+  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [データベースアップグレードツールの使用](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md)

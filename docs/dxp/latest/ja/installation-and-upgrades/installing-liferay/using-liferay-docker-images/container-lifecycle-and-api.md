@@ -16,8 +16,8 @@
 
 1.  **事前設定：** [TomcatおよびDXPを構成する前に、ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
 2.  **設定：** TomcatでDXPを実行する準備をします。
-    1.  [TomcatのJavaランタイム環境の設定](./configuring-dxp-containers.md#jvm-options)。
-    2.  [ユーザが提供したファイル](./configuring-dxp-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
+    1.  [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options)。
+    2.  [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
     3.  [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
     4.  [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
     5.  [パッチツール](./patching-dxp-in-docker.md#updating-the-patching-tool) をユーザー指定のバージョンで更新します。
@@ -58,7 +58,7 @@
 
 | ファイルの場所                 | 操作                                                                                                                                                                                                                                                                                             | ユースケース                                                                                                                   |
 |:----------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------ |
-| `/mnt/liferay/files`    | Liferay Home (`/opt/liferay` ) の下にあるフォルダにファイルをコピーする                                                                                                                                                                                                                                            | [DXPコンテナの構成](./configuring-dxp-containers.md)<br><br>[Tomcat構成](./configuring-dxp-containers.md#jvm-options) |
+| `/mnt/liferay/files`    | Liferay Home (`/opt/liferay` ) の下にあるフォルダにファイルをコピーする                                                                                                                                                                                                                                            | [DXPコンテナの構成](./configuring-containers.md)<br><br>[Tomcat構成](./configuring-containers.md#jvm-options) |
 | `/mnt/liferay/scripts`  | スクリプトをアルファベット順に実行する                                                                                                                                                                                                                                                                            | [構成中にスクリプトを実行](./running-scripts-in-containers.md)                                                                       |
 | `/mnt/liferay/deploy`   | DXP起動時にアーティファクトを自動展開するために、 `/mnt/liferay/deploy` を `/opt/ liferay/deploy` にシンボリックリンクします。<br><br>実行時、`/mnt/liferay/deploy`、 `/opt/liferay/deploy`、またはいずれかのフォルダに取り付けられたフォルダにコピーされたアーティファクトを自動デプロイします。<br><br>注：自動デプロイされたアーティファクトは、 `/opt/liferay/osgi`下の適切なフォルダーに移動されます。 | [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)                                  |
 | `/mnt/liferay/patching` | パッチツールが提供されている場合は、それをインストールします。 提供されているパッチをインストールします。                                                                                                                                                                                                                                          | [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)                                                                       |
@@ -79,6 +79,6 @@
 
 コンテナのライフサイクルと API いついて学習できました。これで、 [コンテナに](./providing-files-to-the-container.md) ファイルを提供する最良の方法を決定できます。 または、上記の表に記載されているユースケースの実行を開始できます。 それらはあなたの便宜のためにここにリストされています：
 
-  - [DXPコンテナの構成](./configuring-dxp-containers.md)
+  - [DXPコンテナの構成](./configuring-containers.md)
   - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
   - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

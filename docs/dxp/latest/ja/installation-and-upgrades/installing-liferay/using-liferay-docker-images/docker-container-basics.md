@@ -35,7 +35,7 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
 
 2.  DXP UIを`https://localhost:8080` でブラウザで開きます。
 
-    ![Liferay DXPの最初のランディングページ。](./dxp-docker-container-basics/images/01.png)
+    ![Liferay DXPの最初のランディングページ。](./docker-container-basics/images/01.png)
 
 DXPを使用する準備が整いました。
 
@@ -71,8 +71,8 @@ docker cp [container]:/opt/liferay/logs/liferay.[timestamp].log .
 
 | 方法                                                                                                                                                                                                        | 利点:                                                                                                                                           | 欠点:                                                                                                                                                                     |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `docker exec [container] /opt/liferay/tomcat/bin/shutdown.sh`                                                                                                                                             | DXP、Tomcat、およびその他のアプリがリソースを解放できるようにします。 コンテナエントリポイントは、 [シャットダウン後のスクリプト](./dxp-container-lifecycle-and-api.md#post-shutdown-phase-api) を実行します。 |                                                                                                                                                                         |
-| `i `引数を指定して実行しているターミナルセッションで `Ctrl-C` を実行します。<br><br>注意：これは SIGINT または [`SIGKILL` シグナルをアタッチされたコンテナに送信します。](https://docs.docker.com/engine/reference/commandline/attach/#extended-description) | コンテナを停止する最速の方法。                                                                                                                               | DXP、Tomcat、およびコンテナエントリポイントは、リソースを解放せずにすぐに停止します。 エントリポイントの [シャットダウン後フェーズ](./dxp-container-lifecycle-and-api.md#post-shutdown-phase-api) はスキップされます。 本番環境ではこの方法を使用しないでください |
+| `docker exec [container] /opt/liferay/tomcat/bin/shutdown.sh`                                                                                                                                             | DXP、Tomcat、およびその他のアプリがリソースを解放できるようにします。 コンテナエントリポイントは、 [シャットダウン後のスクリプト](./container-lifecycle-and-api.md#post-shutdown-phase-api) を実行します。 |                                                                                                                                                                         |
+| `i `引数を指定して実行しているターミナルセッションで `Ctrl-C` を実行します。<br><br>注意：これは SIGINT または [`SIGKILL` シグナルをアタッチされたコンテナに送信します。](https://docs.docker.com/engine/reference/commandline/attach/#extended-description) | コンテナを停止する最速の方法。                                                                                                                               | DXP、Tomcat、およびコンテナエントリポイントは、リソースを解放せずにすぐに停止します。 エントリポイントの [シャットダウン後フェーズ](./container-lifecycle-and-api.md#post-shutdown-phase-api) はスキップされます。 本番環境ではこの方法を使用しないでください |
 
 ## コンテナの再起動
 
@@ -83,16 +83,16 @@ docker start [container]
 ```
 
 ``` warning::
-   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 `DXPコンテナライフサイクルとAPI <./dxp-container-lifecycle-and-api.md#lifecycle>`_ 」を参照してください）。 あなたが実行していることを確認任意の `スクリプト作成します <./running-scripts-in-containers.md>` _ は、エントリー・ポイントを経由して安全に再実行することができます。
+   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 `DXPコンテナライフサイクルとAPI <./container-lifecycle-and-api.md#lifecycle>`_ 」を参照してください）。 あなたが実行していることを確認任意の `スクリプト作成します <./running-scripts-in-containers.md>` _ は、エントリー・ポイントを経由して安全に再実行することができます。
 ```
 
 これで、DXPコンテナの開始、停止、監視の基本を理解できました。
 
 ## 次のステップ
 
-コンテナのエントリーポイントが何をするのか知りたい、コンテナのAPIを知りたい場合は、[DXP Container Lifecycle and API](./dxp-container-lifecycle-and-api.md)を参照してください。 コンテナの使用を開始する場合は、次のいずれかの使用例を実行してください。
+コンテナのエントリーポイントが何をするのか知りたい、コンテナのAPIを知りたい場合は、[DXP Container Lifecycle and API](./container-lifecycle-and-api.md)を参照してください。 コンテナの使用を開始する場合は、次のいずれかの使用例を実行してください。
 
-  - [DXPコンテナの構成](./configuring-dxp-containers.md)
+  - [DXPコンテナの構成](./configuring-containers.md)
   - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
   - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
