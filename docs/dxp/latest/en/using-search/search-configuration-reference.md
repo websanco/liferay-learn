@@ -191,8 +191,6 @@ Configure how search responds to matches on the Title field of a document.
 
 ### Cross-Cluster Replication
 
-**Configuration File:** `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.CrossClusterReplicationConfiguration.config`
-
 You'll only see this entry if you have deployed the Cross-Cluster Replication module, which is available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Cross-Cluster Replication](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
 
 ### Elasticsearch Monitoring
