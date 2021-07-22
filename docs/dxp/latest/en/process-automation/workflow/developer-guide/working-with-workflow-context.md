@@ -7,25 +7,18 @@ For example, with workflow context you can
 - Access any of the existing attributes for use in workflow scripts, custom code, or Freemarker templates.
 - Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or Freemarker templates.
 - Set new `workflowContext` attributes in the service layer of custom entities, to be accessed in workflow definition nodes.
+- Set `serviceContext` attributes, access them in workflow scripts and notification templates.
 
 <!-- For Rafael: are these the main ways workflow context is used? Should we add, edit, or remove anything? -->
 <!-- For Russ and Rafael: probably good to add concrete examples of each use case we identify -->
 
 There are some important things to be aware of when working with `workflowContext`:
 
-- It must be modifiable, therefore it isn't threadsafe.
-- Its first type parameter (the `key` for the attribute) is a String.
-- Its second type parameter (the `value`for each attribute) is a `Serializable`, so it can be accessed at each step of the workflow.
-
-<!-- For Rafael: the third bullet came from Olaf's community blog, which I included below). I don't understand why the serializable parameter implies that workflow context is available at each workflow step. -->
-
-<!-- For Rafael: are there things that we want to tell customers to avoid doing with workflow context?  -->
-
-<!-- For Rafael: are there things customers might expect they can do, but really can't? -->
+- It must be modifiable, therefore it isn't thread safe. Caution is advised in parallel execution contexts.
+- Its first type parameter (the `key` for the attribute) is a String. This is used to look up the value stored in the second attribute.
+- Its second type parameter (the `value` for each attribute) is a `Serializable` because it's stored in the database. This ensures that it's accessible at every step of the workflow.
 
 To print the workflow context keys and values in any workflow node, you can add a script action like this one:
-
-<!-- Tested on the created node of single approver -->
 ```xml
 <actions>
     <action>
