@@ -41,7 +41,7 @@ Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP
 
 ### Clearing the CDN Cache
 
-The CDN improves performance by reducing latency for delivering static content to Users. However, it is possible that some of this content is delivered to Users before the cache is updated, when the content is no longer valid.
+The CDN improves performance by reducing latency for delivering static content to users. However, it is possible that some of this content is delivered to users before the cache is updated, when the content is no longer valid.
 
 If it is necessary to clear the CDN cache to force the content to be retrieved again, then you can manually clear it from the DXP Cloud console:
 
@@ -59,10 +59,10 @@ If it is necessary to clear the CDN cache to force the content to be retrieved a
 
 1. Click *Request Cache Clearance*.
 
-The request is sent to clear the cache when you click the button. As the page indicates, it may take up to 30 minutes for the cache to be cleared with your request.
+The request is sent to clear the cache when you click the button. Allow up to 30 minutes for the cache to be cleared.
 
 ```warning::
-   Clearing the CDN cache too frequently may impact server performance, because it may cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
+   Clearing the CDN cache too frequently can negatively impact server performance, because it can cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
 ```
 
 ## Port
