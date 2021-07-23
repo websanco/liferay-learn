@@ -116,7 +116,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials. |
 
 ```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth 2.0 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth 2.0 <../../../headless-delivery/using-oauth2/using-oauth2.md>`_.
 ```
 
 Other cURL commands for the `Document` and `DocumentFolder` REST services use similar arguments.
