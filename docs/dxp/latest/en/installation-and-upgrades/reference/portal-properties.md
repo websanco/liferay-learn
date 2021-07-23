@@ -4,7 +4,7 @@ Configuration options are specified using *Portal Properties*, sets of name/valu
 
 Some properties can be changed through the user interface (UI), but others can only be changed in a properties file or Docker environment variables. These include connecting to a database, declaring the location of the [Liferay Home](./liferay-home.md) folder, and [changing how users authenticate](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (by screen name instead of by email address).
 
-Liferay installations use properties files. By convention, `portal-ext.properties` should be created in your `[Liferay Home](./liferay-home.md)` folder or `[USER_HOME]` folder to override default property values. You must restart DXP to apply a new or modified properties file.
+Liferay installations use properties files. By convention, `portal-ext.properties` should be created in your [`[Liferay Home]`](./liferay-home.md) folder or `[USER_HOME]` folder to override default property values. You must restart DXP to apply a new or modified properties file.
 
 ```warning::
    Never directly modify the ``portal-impl.jar/portal.properties`` file; instead, create a separate file to override properties you want to change. The ``portal-ext.properties`` file has been defined for this purpose.
