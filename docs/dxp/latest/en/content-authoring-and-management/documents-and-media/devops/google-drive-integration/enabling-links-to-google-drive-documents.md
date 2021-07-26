@@ -36,11 +36,37 @@ Follow these steps to configure the Documents and Media application.
 
 1. Click on *Save*.
 
-Once enabled, users can create Documents and Media links to Google assets.
+Once enabled, users can create Documents and Media shortcuts to Google assets.
 
 ```note::
    To disable this feature, click on the *Actions* button for Google Drive, and select *Reset Default Values*.
 ```
+
+## Creating Google Drive Shortcuts
+
+Follow these steps to create Documents and Media shortcuts for Google Drive files.
+
+1. Open the Documents and Media application in a Site Asset Library.
+
+1. Click on the *Add* button (![Add Button](../../../../images/icon-add.png)) in the Documents and Media tab and select *Google Drive Shortcut*.
+
+   ![Click the Add button and select Google Drive Shortcut.](./enabling-links-to-google-drive-documents/images/02.png)
+
+1. Click on *Select File*.
+
+   ![Click on Select File.](./enabling-links-to-google-drive-documents/images/03.png)
+
+1. Select the desired Google account.
+
+1. Select the desired Google Drive file.
+
+   ![Select the desired Google Drive file.](./enabling-links-to-google-drive-documents/images/04.png)
+
+1. Enter a *name* and *description* for the shortcut.
+
+1. Click on *Publish* when finished.
+
+Once published, the Google Drive file can now be accessed and used in Liferay via the Documents and Media application.
 
 ## Additional Information
 
