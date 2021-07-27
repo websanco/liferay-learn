@@ -6,17 +6,17 @@ Before you enable digital signatures in Liferay, make sure you've generated and 
 
 ## Enabling Digital Signatures
 
-1. Open the Global menu on the top right corner. ![Global Menu](../../../images/icon-applications-menu.png)
+1. Open the Global menu in the top right corner. ![Global Menu](../../../images/icon-applications-menu.png)
 
 1. Click *Control Panel* &rarr; *Instance Settings* &rarr; *Digital Signature*. 
 
     ![The Digital Signature link appears in either Instance Settings or Site Settings.](./enabling-docusign-digital-signature/images/01.png)
  
-1. Switch the *toggle* to Enable.
+1. Switch the toggle to *Enabled*.
 
     ![Switch the toggle.](./enabling-docusign-digital-signature/images/02.png)
 
-1. You must choose a *Site Settings Strategy* (see below).
+1. Choose a *Site Settings Strategy* (see below).
 
     ![Your Site Settings Strategy defines the scope of your digital signatures.](./enabling-docusign-digital-signature/images/03.png)
 
@@ -28,13 +28,13 @@ You have three options for your Site settings strategy:
 
 **Always Override:** Every site must provide its own configuration.
 
-**Inherit or Override:** Can be defined in both Site Settings and Instance Settings. If defined in both, the Site Settings will override those of the Instance.
+**Inherit or Override:** Can be defined in both Site Settings and Instance Settings. If defined in both, the Site Settings override those of the Instance.
 
-You now must add your digital keys from DocuSign at the proper scope in Liferay. 
+You must now add your digital keys from DocuSign at the proper scope in Liferay. 
 
 ## Adding Digital Keys
 
-Depending on what you chose for your Site Settings strategy, you must add your digital keys at the proper scope: 
+Depending on what you chose for your Site Settings strategy, add your digital keys at the proper scope: 
 
 - If you chose Always Inherit, add the keys in Instance Settings. 
 - If you chose Always Override, add the keys in Site Settings. 
@@ -54,7 +54,7 @@ Depending on what you chose for your Site Settings strategy, you must add your d
 
     ![You can see the Actions and Collect Digital Signatures buttons.](./enabling-docusign-digital-signature/images/04.png) 
 
-1. For multiple documents, select the documents where you want to collect the signatures and click on *Collect Digital Signature* ![Collect Digital Signature](../../../images/icon-digital-signature.png). 
+1. For multiple documents, select the documents where you want to collect the signatures and click *Collect Digital Signature* (![Collect Digital Signature](../../../images/icon-digital-signature.png)). 
 
    ![You can see multiple selected files and the Collect Digital Signature button.](./enabling-docusign-digital-signature/images/05.png)
 
