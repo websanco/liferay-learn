@@ -2,7 +2,7 @@
 
 Changing the site logo, favicon, and theme are some of first look and feel areas you may want to change. Themes are used to set the overall look and feel for your Site. A Site's Pages can be configured to use any theme that has been deployed to your DXP instance.
 
-The DXP Docker image has the _Classic_ theme available by default. In this example, we will deploy a new simple theme and then show you how to switch from one theme to another.
+The DXP Docker image has the _Classic_ theme available by default. In this example, we deploy a new simple theme and then show you how to switch from one theme to another.
 
 ## Changing Your Site's Theme
 
@@ -58,16 +58,18 @@ Configure the Pages for your Site to use the deployed theme:
 
 Your Site's theme has been updated.
 
-### Theme Resources
+### What's Next
+
+For a full length overview of how you can manage your Site's appearance, see [Managing Your Site's Appearance](../site-building/site-appearance/site-appearance.md).
 
 There are many themes available on the [Liferay Marketplace](../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md) that can be used to quickly achieve a professional look and feel.
 
-You can also learn how to [create your own theme](https://help.liferay.com/hc/en-us/articles/360035353731-Introduction-to-Creating-a-Theme).
+You can also learn how to [create your own theme](../site-building/site-appearance/themes/introduction-to-themes.md).
 
-## Changing Your Site's Logo
+<!-- ## Changing Your Site's Logo
 
 Coming soon!
 
 ## Changing Your Site's Favicon
 
-Coming soon!
+Coming soon! -->

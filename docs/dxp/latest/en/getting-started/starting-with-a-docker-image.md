@@ -6,7 +6,7 @@ The latest versions of Liferay are available as Docker images. Follow these step
 Don't have Docker? Go here first: [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/)
 ```
 
-## Get Started with Liferay
+## Get Started with Liferay Portal CE
 
 Liferay Portal CE is the open source and community supported platform for building compelling and flexible web experiences.
 
@@ -30,7 +30,7 @@ Liferay Portal CE is the open source and community supported platform for buildi
 
     ![The Liferay Portal initial landing page.](./starting-with-a-docker-image/images/01.png)
 
-### Get Started With Liferay DXP
+## Get Started With Liferay DXP
 
 Liferay DXP is the commercially supported and enterprise ready platform used around the world, built on the foundation of Liferay Portal. Starting with the Docker image is simple and includes a trial license.
 

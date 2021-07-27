@@ -98,13 +98,13 @@ To deploy the `.config` file, place it in your [Liferay Home's](../../../install
 
 In a clustered environment, each node needs the same configuration values for each entry. For example, all nodes should use the same Blogs configuration settings. To accomplish this, deploy a `.config` file. For transparency and maintainability, deploy the `.config` file to all nodes in the cluster. However, an internal system applies the change to all nodes in the cluster even if the configuration file is only deployed to a single node.
 
-```important::
-   If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
+```{important}
+If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
 ```
 
 ## Specifying a Read-Only Value
 
-If you must specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md). 
+If you must specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md).
 
 Here's the property syntax:
 
@@ -119,12 +119,12 @@ configuration.override.com.liferay.journal.configuration.JournalServiceConfigura
 configuration.override.com.liferay.journal.configuration.JournalServiceConfiguration_journalArticleMaxVersionCount=I"5"{code}
 ```
 
-```important::
-   Configuration properties must specify type markers.
+```{important}
+Configuration properties must specify type markers.
 ```
 
 Property configurations are applied on server restart. Property configurations take highest priority; they're prioritized over configuration files and database-persisted configurations. The UI distinguishes all read-only configuration settings. If you must change a read-only configuration value, use a portal property.
 
-```note::
-   Read-only `factory configuration values <./using-factory-configuration.md>`_ are not supported.
+```{note}
+Read-only [factory configuration values](./using-factory-configuration.md) are not supported.
 ```
