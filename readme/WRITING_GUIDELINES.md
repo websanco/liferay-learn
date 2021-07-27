@@ -110,7 +110,7 @@ Developers tend to mangle even their own terminology. As a documentation team, w
 
 ### Liferay-specific Examples
 
-We also must have standards for our own terminology. Liferay uses terminology that’s fairly common to refer to Liferay-centric concepts. To differentiate the general use of these terms from the Liferay-specific use, we capitalize these terms when we refer to the Liferay-specific variant. 
+We also must have standards for our own terminology. Liferay uses terminology that’s fairly common to refer to Liferay-centric concepts. To differentiate the general use of these terms from the Liferay-specific use, we capitalize these terms when we refer to the Liferay-specific variant.
 
 * Site
   * Generic: Liferay provides some great tools for designing your site.
@@ -143,7 +143,7 @@ _This action will create a new record in the database._
 
 This sentence uses the future tense when there’s no need to use the future tense. Make it a goal to remove the future tense from all your Liferay writing. Instead, use the present tense:
 
-_This action creates a new record in the database. _
+_This action creates a new record in the database._
 
 ### Must
 
@@ -352,7 +352,7 @@ _Use the dialog to configure…_
 
 ### Image Alt Text
 
-Every image should have alt text, and it should be at least one descriptive, complete sentence. In other words, alt text comprised of simple labels isn't enough. DON'T do this for alt text: 
+Every image should have alt text, and it should be at least one descriptive, complete sentence. In other words, alt text comprised of simple labels isn't enough. DON'T do this for alt text:
 
 _The Liferay setup wizard._
 
@@ -366,7 +366,7 @@ Each article should be as standalone as possible. Never assume the reader has (o
 
 _You may have noticed this thing when [doing this other thing in this other article]. Here’s how it works._
 
-Instead, do this: 
+Instead, do this:
 
 _At the bottom of the [form](link) is this other function. Here’s how to use it._
 
@@ -473,11 +473,11 @@ An example of using numeric annotations:
 
 ## Article Naming
 
-
+Coming soon.
 
 ## Videos
 
-
+Coming soon.
 
 ## Working with Multiple Software Versions
 
@@ -536,7 +536,7 @@ If you need to copy content from Help Center into Learn or add new content in th
 * Format of the content you paste. When copying and pasting content, you may find unexpected line endings or additional spaces between words or paragraphs.
 * If porting content from Help Center:
   * Remove any formatting options from the alt text in images. In Help Center, alt text contains formatting options like bold or italics. This is not supported in Learn and will cause your local Liferay Learn build to fail with an error similar to img_node['alt'] = ''.join(content).
-  * Copy all the screenshots from the Help Center folder into the corresponding images folder in Learn. Rename the screenshots to use the Learn naming convention (01.png, 02.png, and so on.) 
+  * Copy all the screenshots from the Help Center folder into the corresponding images folder in Learn. Rename the screenshots to use the Learn naming convention (01.png, 02.png, and so on.)
   * Update all the image links in the Markdown content you're porting, so images display correctly.
 * Always create the local Liferay Learn build and ensure that the content you're porting or updating renders as expected.
 
@@ -564,7 +564,7 @@ editor:
 showInvisibles: true
 ```
 
-Setting showInvisibles: true helps to call out unwanted whitespace.
+Setting `showInvisibles: true` helps to call out unwanted whitespace.
 
 ### Editor Settings
 
@@ -572,10 +572,12 @@ You can set these for all scopes “*” or as overrides in the Markdown scope  
 
 “*”
 
-  editor:
+editor:
 
-    atomicSoftTabs: false
+```
+atomicSoftTabs: false
 
-    softWrap: true
+softWrap: true
 
-    tabLength: 4
+tabLength: 4
+```
