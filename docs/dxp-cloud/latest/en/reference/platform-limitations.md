@@ -89,6 +89,8 @@ These limitations apply to the [Search service](../platform-services/search-serv
 
 * **OS Packages**: Installing additional OS packages for the Search service is not supported.
 
+* **Pod Management Policy**: Elasticsearch nodes in a cluster must connect to each other in order to start successfully. For search services with multiple instances, the `podManagementPolicy` value in the service's `LCP.json` file must be set to `parallel` to avoid issues with the service starting up.
+
 ## Backup Service
 
 These limitations apply to the [Backup service](../platform-services/backup-service/backup-service-overview.md) in each DXP Cloud environment:

@@ -28,6 +28,10 @@ correct folder:
    You must use the ``elasticsearch.yml`` configuration file to configure Elasticsearch. Configuring Elasticsearch through the UI will be overwritten on each deployment.
 ```
 
+```warning::
+   The search service's ``LCP.json`` file contains this value by default: ``"podManagementPolicy": "Parallel"``. Removing this value from the ``LCP.json`` can cause the search service to fail to start when there are multiple clustered instances, because Elasticsearch nodes must connect to each other to start up successfully.
+```
+
 ```note::
    If you are using version 3.x.x services, then these configuration files instead belong in the appropriate ``lcp/search/config/{ENV}/`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
 ```
