@@ -7,23 +7,21 @@ public class WikiPage_PUT_ById {
 	 * java -classpath .:* -DwikiPageId=1234 WikiPage_PUT_ById
 	 */
 	public static void main(String[] args) throws Exception {
-		WikiPageResource.Builder builder =
-			WikiPageResource.builder();
+		WikiPageResource.Builder builder = WikiPageResource.builder();
 
 		WikiPageResource wikiPageResource = builder.authentication(
 			"test@liferay.com", "test"
 		).build();
 
-		WikiPage wikiPage =
-			wikiPageResource.putWikiPage(
-				Long.valueOf(System.getProperty("wikiPageId")),
-				new WikiPage() {
-					{
-						content = "This is an updated Wiki page.";
-						encodingFormat = "text/x-wiki";
-						headline = "Updated Sample Page";
-					}
-				});
+		WikiPage wikiPage = wikiPageResource.putWikiPage(
+			Long.valueOf(System.getProperty("wikiPageId")),
+			new WikiPage() {
+				{
+					content = "This is an updated Wiki Page.";
+					encodingFormat = "text/x-wiki";
+					headline = "Updated Wiki Page";
+				}
+			});
 
 		System.out.println(wikiPage);
 	}
