@@ -73,7 +73,7 @@ You can set which internal port (`targetPort`) the load balancer's service endpo
 "targetPort": 3000
 ```
 
-![The load balancer shows your port configurations.](./load-balancer/images/03.png)
+![The load balancer shows your port configurations.](./load-balancer/images/05.png)
 
 ## Custom SSL
 
@@ -187,7 +187,7 @@ The `key` and `cert` values are now encoded and usable in your web server config
 
 The Network page shows any custom certificates, with a maximum of one per service. For more information, see [Custom Domains](./custom-domains.md).
 
-![DXP Cloud shows the status of SSL certificates that cover custom domains.](./load-balancer/images/04.png)
+![DXP Cloud shows the status of SSL certificates that cover custom domains.](./load-balancer/images/06.png)
 
 ## Environment Variables Reference
 
