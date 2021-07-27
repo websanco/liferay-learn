@@ -104,7 +104,7 @@ In a clustered environment, each node needs the same configuration values for ea
 
 ## Specifying a Read-Only Value
 
-If you need to specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md). 
+If you must specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md). 
 
 Here's the property syntax:
 
@@ -123,7 +123,7 @@ configuration.override.com.liferay.journal.configuration.JournalServiceConfigura
    Configuration properties must specify type markers.
 ```
 
-Property configurations are applied on server restart. Property configurations take highest priority; they're prioritized over configuration files and database persisted configurations. The UI distinguishes all read-only configuration settings. If you need to change a read-only configuration value, use a portal property.
+Property configurations are applied on server restart. Property configurations take highest priority; they're prioritized over configuration files and database-persisted configurations. The UI distinguishes all read-only configuration settings. If you must change a read-only configuration value, use a portal property.
 
 ```note::
    Read-only `factory configuration values <./using-factory-configuration.md>`_ are not supported.
