@@ -1,6 +1,6 @@
 # Creating Video Shortcut Providers
 
-* Available for Liferay DXP 7.4+
+> Available for Liferay DXP 7.4+
 
 By default, Liferay's external video shortcuts support [YouTube](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-video/src/main/java/com/liferay/document/library/video/internal/video/external/shortcut/provider/YouTubeDLVideoExternalShortcutProvider.java), [Vimeo](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-video/src/main/java/com/liferay/document/library/video/internal/video/external/shortcut/provider/VimeoDLVideoExternalShortcutProvider.java), [Facebook](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-video/src/main/java/com/liferay/document/library/video/internal/video/external/shortcut/provider/FacebookDLVideoExternalShortcutProvider.java), and [Twitch](https://github.com/liferay/liferay-portal/blob/master/modules/apps/document-library/document-library-video/src/main/java/com/liferay/document/library/video/internal/video/external/shortcut/provider/TwitchDLVideoExternalShortcutProvider.java). However, you can extend this feature to support other video sources.
 
@@ -93,3 +93,7 @@ The provider overrides the interface's `getDLVideoExternalShortcut` method, whic
 When the provider returns a `DLVideoExternalShortcut` object, it overrides the object's `getURL()` and `renderHTML()` methods. `getURL()` returns the URL entered by the user. `renderHTML()` receives a `HttpServletRequest` parameter and returns an `iframe` string to be embedded into a Liferay Page or asset. Consider the following example.
 
 Since `getDescription()`, `getThumbnailURL()`, and `getTitle()` are not overridden, `null` is returned. 
+
+## Additional Information
+
+* [Creating External Video Shortcuts](../videos/creating-external-video-shortcuts.md)

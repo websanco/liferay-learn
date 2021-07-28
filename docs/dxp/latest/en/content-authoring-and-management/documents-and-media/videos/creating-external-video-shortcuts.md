@@ -49,4 +49,4 @@ Once created, External Video Shortcuts can be embedded inside most Liferay asset
 ## Additional Information
 
 * [Embedding Videos into Liferay Assets and Pages](./embedding-videos-into-liferay-assets-and-pages.md)
-<!-- * [Creating Custom Video Shortcut Providers](./creating-custom-video-shortcut-providers.md) -->
+* [Creating Custom Video Shortcut Providers](../developer-guide/creating-video-shortcut-providers.md)
