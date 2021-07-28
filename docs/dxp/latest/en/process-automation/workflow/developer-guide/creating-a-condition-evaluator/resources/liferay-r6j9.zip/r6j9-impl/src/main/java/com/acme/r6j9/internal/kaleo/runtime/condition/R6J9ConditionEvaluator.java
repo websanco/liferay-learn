@@ -18,7 +18,6 @@ import com.liferay.portal.workflow.kaleo.runtime.ExecutionContext;
 import com.liferay.portal.workflow.kaleo.runtime.condition.ConditionEvaluator;
 import com.liferay.portal.workflow.kaleo.service.KaleoDefinitionLocalService;
 
-import java.io.InputStream;
 import java.io.Serializable;
 
 import java.util.Map;
@@ -56,24 +55,18 @@ public class R6J9ConditionEvaluator implements ConditionEvaluator {
 
 	@Activate
 	protected void activate() throws Exception {
-		Class<?> clazz = getClass();
-
-		ClassLoader classLoader = clazz.getClassLoader();
-
-		InputStream inputStream = classLoader.getResourceAsStream(
-			"definitions/r6j9-workflow-definition.xml");
+		User defaultUser = _userLocalService.getDefaultUser(
+			_portal.getDefaultCompanyId());
 
 		String localizedTitle = LocalizationUtil.updateLocalization(
 			StringPool.BLANK, "title", "R6J9 Conditional Approver",
 			LocaleUtil.toLanguageId(LocaleUtil.getDefault()));
 
-		long companyId = _portal.getDefaultCompanyId();
-
-		User defaultUser = _userLocalService.getDefaultUser(companyId);
-
 		_workflowDefinitionManager.deployWorkflowDefinition(
-			companyId, defaultUser.getUserId(), localizedTitle,
-			"R6J9 Conditional Approver", FileUtil.getBytes(inputStream));
+			_portal.getDefaultCompanyId(), defaultUser.getUserId(),
+			localizedTitle, "R6J9 Conditional Approver",
+			FileUtil.getBytes(
+				getClass(), "definitions/r6j9-workflow-definition.xml"));
 	}
 
 	@Reference
