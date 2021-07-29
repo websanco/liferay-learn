@@ -12,7 +12,7 @@ Commerce includes four out-of-the-box Commerce roles: Account Administrator, Acc
 
 Follow these steps to view and manage permissions associated with a Commerce role:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Users* &rarr; *Roles*.
+1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Users* &rarr; *Roles*.
 
    ![Click on Roles in the Control Panel.](./commerce-roles-reference/images/01.png)
 
