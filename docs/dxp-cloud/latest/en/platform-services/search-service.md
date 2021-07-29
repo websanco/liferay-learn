@@ -18,11 +18,11 @@ Although DXP Cloud's services are fine-tuned to work well by default, you may ne
     └── LCP.json
 
 ```{important}
-You must use the ``elasticsearch.yml`` configuration file to configure Elasticsearch. Configuring Elasticsearch through the UI will be overwritten on each deployment.
+You must use the `elasticsearch.yml` configuration file to configure Elasticsearch. Configuring Elasticsearch through the UI will be overwritten on each deployment.
 ```
 
 ```{warning}
-The search service's ``LCP.json`` file contains this value by default: ``"podManagementPolicy": "Parallel"``. Removing this value from the ``LCP.json`` can cause the search service to fail to start when there are multiple clustered instances, because Elasticsearch nodes must connect to each other to start up successfully.
+The search service's `LCP.json` file contains this value by default: `"podManagementPolicy": "Parallel"`. Removing this value from the `LCP.json` can cause the search service to fail to start when there are multiple clustered instances, because Elasticsearch nodes must connect to each other to start up successfully.
 ```
 
 ```{note}
