@@ -1,23 +1,12 @@
 # Web Content API Basics
 
-Using the Liferay DXP REST services, you can create and manage Structured Content on your Site. Structured Content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) using a Web Content Structure. With a Structure, you define the information you want to include in a Web Content article. Structures facilitate creating and managing Web Content while ensuring that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
+Using the Liferay DXP REST services, you can create and manage structured content on your Site. Structured content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) that uses a Web Content Structure. A Structure defines the information, such as author(s), a summary, and the content included in a Web Content article. Structures ensure that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
-```note::
-   You can use a Structure with a `Web Content Template <../web-content-templates/creating-web-content-templates.md>`_ to render the Structure content, but a Template is not required to create Structured Content.
+```{note}
+   You can use a Structure with a [Web Content Template](../web-content-templates/creating-web-content-templates.md) to render the Structure content, but a Template is not required to create Structured Content.
 ```
 
-In this article, you use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and Structured Content. For more advanced examples managing Structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
-
-You can learn about the following topics:
-
-- [Setting Up Your Environment](#setting-up-your-environment)
-- [Getting the Web Content Articles](#getting-the-web-content-articles)
-- [Getting the Web Content Structure by Id](#getting-the-web-content-structure-by-id)
-- [Posting a Basic Web Content Article](#posting-a-basic-web-content-article)
-- [Updating the Web Content Article](#updating-the-web-content-article)
-- [Replacing the Web Content Article](#replacing-the-web-content-article)
-- [Deleting the Web Content Article](#deleting-the-web-content-article)
-- [More Web Content and Web Content Folder Services](#more-web-content-and-web-content-folder-services)
+Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and Structured Content. For more advanced examples managing Structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
 ## Setting Up Your Environment
 
