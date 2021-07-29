@@ -65,8 +65,7 @@ public class R6J9ConditionEvaluator implements ConditionEvaluator {
 		_workflowDefinitionManager.deployWorkflowDefinition(
 			_portal.getDefaultCompanyId(), defaultUser.getUserId(),
 			localizedTitle, "R6J9 Conditional Approver",
-			FileUtil.getBytes(
-				getClass(), "definitions/r6j9-workflow-definition.xml"));
+			FileUtil.getBytes(getClass(), "r6j9-workflow-definition.xml"));
 	}
 
 	@Reference
