@@ -25,13 +25,16 @@ You must use the `elasticsearch.yml` configuration file to configure Elasticsear
 The search service's `LCP.json` file contains this value by default: `"podManagementPolicy": "Parallel"`. Removing this value from the `LCP.json` can cause the search service to fail to start when there are multiple clustered instances, because Elasticsearch nodes must connect to each other to start up successfully.
 ```
 
-```{note}
-If you are using version 3.x.x services, then these configuration files instead belong in the appropriate `lcp/search/config/{ENV}/` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
-```
+Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your configuration file to if it is not yet upgraded to version `4.x.x`:
+
+| **Service Stack Version** | **Configuration Folder** |
+| --- | --- |
+| **3.x.x** | `lcp/search/config/{ENV}/` |
+| **4.x.x** | `search/configs/{ENV}/config/` |
 
 ## Scripts
 
-You can use scripts for more extensive customizations. However, use caution when doing so. This is the most powerful way to customize the search service and can cause undesired side effects. Any `.sh` files found in a `scripts/{ENV}/scripts/` folder are run prior to starting your service. For example, to include a script that removes all log files, you could place it in this directory structure:
+You can use scripts for more extensive customizations. However, use caution when doing so. This is the most powerful way to customize the search service and can cause undesired side effects. Any `.sh` files found in a `scripts/configs/{ENV}/scripts/` folder are run prior to starting your service. For example, to include a script that removes all log files, you could place it in this directory structure:
 
     search
     ├── configs
@@ -40,17 +43,23 @@ You can use scripts for more extensive customizations. However, use caution when
     │           └── elasticsearch.yml
     └── LCP.json
 
-```{note}
-If you are using version 3.x.x services, then these scripts instead belong in the appropriate `lcp/search/script/{ENV}/` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
-```
+Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your scripts to if it is not yet upgraded to version `4.x.x`:
+
+| **Service Stack Version** | **Scripts Folder** |
+| --- | --- |
+| **3.x.x** | `lcp/search/script/{ENV}/` |
+| **4.x.x** | `search/configs/{ENV}/scripts/` |
 
 ## Deploying a License to the Search Service
 
 To deploy a license to the search service, you must create the path `search/configs/{ENV}/license/` and put your license file there.
 
-```{note}
-If you are using version 3.x.x services, then instead put your license file in a `lcp/search/license/common/` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
-```
+Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your license files to if it is not yet upgraded to version `4.x.x`:
+
+| **Service Stack Version** | **License Folder** |
+| --- | --- |
+| **3.x.x** | `lcp/search/license/{ENV}/` |
+| **4.x.x** | `search/configs/{ENV}/license/` |
 
 ## Environment Variables Reference
 
