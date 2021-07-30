@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-The *Content Performance* panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Using the Content Performance panel, content teams can periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) Pages.
+The Content Performance panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance panel to periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) Pages.
 
 To learn how to analyze your content performance quantitatively using the Content Performance panel, see [Analyze Content Metrics Using the Content Performance panel](./analyze-content-metrics-using-content-performance-panel.md).
 
@@ -18,7 +18,7 @@ You can access the Content Performance panel when the following conditions are m
 
 ## Accessing the Content Performance Panel
 
-You can open the Content Performance panel using the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) button from:
+You can open the Content Performance panel using the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) button from
 
 - [Content based on a Display Page Template](#accessing-the-content-performance-panel-from-content-based-on-a-display-page-template), like Web Content, Documents, or Blog entries.
 - [Content or Widget Pages](#accessing-the-content-performance-panel-from-content-or-widget-pages) (Liferay DXP 7.4+).
@@ -57,7 +57,7 @@ Using a Display Page Template, you can display Web Content, Documents, or Blog e
 ![Access the Content Performance metrics from the Content Dashboard.](./about-the-content-performance-panel/images/05.png)
 
 ```note::
-   If the *Content Performance* option is not available, your content does not meet one or more conditions. See the `About the Content Performance Panel <#about-the-content-performance-panel>`_ section for more information.
+   If the Content Performance option is not available, your content does not meet one or more conditions. See `About the Content Performance Panel <#about-the-content-performance-panel>`_ for more information.
 ```
 
 ## Related Information

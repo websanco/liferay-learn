@@ -9,7 +9,7 @@ The DXP _Site Menu_ on the left side of the screen contains actions, content, an
 ![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
 
 ```note::
-   The *Site Menu* indicates which site you are working with when using the Site Menu. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
+   The *Site Menu* indicates the selected Site. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
 ```
 
 The following common site building and management activities can be done in the _Site Menu_:
@@ -30,7 +30,7 @@ When you open a Page in view mode, the available tools in the Applications Bar c
 
 ![Content Pages and Widget Pages show a different set of tools in the Application Bar.](./navigating-dxp/images/08.png)
 
-For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are:
+For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are
 
 - Edit (![Edit](../images/icon-edit.png))
 - Configure Page (![Configure Page](../images/icon-settings.png))
@@ -39,7 +39,7 @@ For [Content Pages](../site-building/creating-pages/building-and-managing-conten
 - A/B Test (![A/B Test](../images/icon-ab-testing.png))
 - Page Audit (![Page Audit](../images/icon-information.png))
 
-For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are:
+For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are
 
 - Configure Page (![Configure Page](../images/icon-settings.png))
 - Toggle Controls (![Toggle Controls](../images/icon-preview.png))
@@ -49,7 +49,7 @@ For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-wid
 - Page Audit (![Page Audit](../images/icon-information.png))
 
 ```note::
-   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-panel/about-the-content-performance-panel.md>`_ is available for Content Pages starting with Liferay DXP 7.3, and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
+   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-panel/about-the-content-performance-panel.md>`_ is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
 ```
 
 ## Personal Menu

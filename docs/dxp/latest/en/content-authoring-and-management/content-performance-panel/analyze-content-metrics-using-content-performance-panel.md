@@ -25,7 +25,7 @@ The top area in the Content Performance panel provides general information about
 | Content Name | Content or Widget Page's name or name of the asset based on a Display Page Template. |
 | URL | Represent the URL of the Content Page, Widget Page, or Web Content associated with a Display Page Template. |
 | Author | Author's name. This information is only available for Web Content using a Display Page Template. |
-| Publication date | Shows the publication date. Note that when you link the asset to a Display Page Template that is newer than the asset publication date, the publication date corresponds to the Display Page Template creation date. |
+| Publication date | Shows the publication date. Note that when you link the asset to a Display Page Template newer than the asset publication date, the publication date corresponds to the Display Page Template creation date. |
 
 The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance panel show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
 
@@ -37,7 +37,7 @@ The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzin
 
 ## Analyzing Content Engagement
 
-This area shows the number of views for the content or Page URL and how this number changes over time. The number of views is a key value to understand your content performance and discover content insights. For Web Content based on a Display Page Template, the Engagement area shows the number of reads as well. A visitor accessing the Web Content may or may not read it. To distinguish the audience that only visits the content (number of Views) from the audience engaging with the content (number of Reads), Liferay uses a specialized algorithm that considers parameters like article length, language, or scroll behavior, among others.
+This area shows the number of views for the content or Page URL and how this number changes over time. The number of views is key to understanding content performance and discovering content insights. For Web Content based on a Display Page Template, the Engagement area also shows the number of reads. A visitor accessing the Web Content may or may not read it. To distinguish the audience that only visits the content (number of Views) from the audience engaging with the content (number of Reads), Liferay uses a specialized algorithm that considers parameters like article length, language, and scroll behavior, among others.
 
 By default, the Engagement area shows the total number of views for the content, along with the number of views in the last seven days. You can change this period in the drop-down time selector and analyze trends over time using the backward and forward buttons (![Arrow left](../../images/icon-angle-left.png) ![Arrow right](../../images/icon-angle-right.png)). Hover over any part of the line chart to show views for a specific time.
 
