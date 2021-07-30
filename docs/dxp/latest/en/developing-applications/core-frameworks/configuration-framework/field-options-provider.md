@@ -46,7 +46,7 @@ The first dropdown list is manually populated with the `@Meta.AD` annotation. Th
 
 [Create a configuration interface](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#creating-the-configuration-interface) and set the configuration field name to be populated.
 
-```literalinclude:: ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/Z4H3Configuration.java
+```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/Z4H3Configuration.java
    :dedent: 1
    :language: java
    :lines: 11-22
@@ -58,14 +58,14 @@ In the sample project, `providerPopulatedColors` is the configuration field name
 
 Create a new class that implements the `ConfigurationFieldOptionsProvider` class. 
 
-```literalinclude:: ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
+```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
    :language: java
    :lines: 14-20
 ```
 
 Use the `@Component` annotation to register the service. Include the `configuration.field.name` from the previous step. Set the `configuration.pid` to the fully qualified class name of the configuration interface.
 
-```literalinclude:: ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
+```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
    :dedent: 1
    :language: java
    :lines: 24-46
