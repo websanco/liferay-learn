@@ -10,7 +10,7 @@ Note, portlet scoped configuration takes a different approach. See [Portlet Leve
 
 Scoping a configuration requires a few different steps. First, specify the scope in your configuration interface. Use the `@ExtendedObjectClassDefinition` annotation to set your scope. Use `Scope.SYSTEM` for system scope. Use `Scope.COMPANY` for instance scope. Use `Scope.GROUP` for site scope. Use `Scope.PORTLET_INSTANCE` for the portlet scope.
 
-```literalinclude:: ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/configuration/N2F3WebConfiguration.java
+```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/configuration/N2F3WebConfiguration.java
    :language: java
    :lines: 7-9
 ```
@@ -21,7 +21,7 @@ Notice the sample tutorial configuration interface is set with a instance scoped
 
 To enable retrieval of a scoped configuration, the application's configuration must be registered with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
 
-```literalinclude:: ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/settings/definition/N2F3WebConfigurationBeanDeclaration.java
+```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/settings/definition/N2F3WebConfigurationBeanDeclaration.java
    :language: java
    :lines: 9-18
 ```
