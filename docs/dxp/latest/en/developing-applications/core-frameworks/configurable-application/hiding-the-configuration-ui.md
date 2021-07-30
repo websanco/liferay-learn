@@ -61,7 +61,7 @@ The `ConfigurationVisibilityController` is an interface that can be used to sele
 
 Create the configuration visibility interface for your application. 
 
-```literalinclude:: ./hiding-the-configuration-ui/resources/liferay-g8v3.zip/g8v3-impl/src/main/java/com/acme/g8v3/internal/configuration/admin/display/G8V3BakerConfigurationVisibilityController.java
+```{literalinclude} ./hiding-the-configuration-ui/resources/liferay-g8v3.zip/g8v3-impl/src/main/java/com/acme/g8v3/internal/configuration/admin/display/G8V3BakerConfigurationVisibilityController.java
    :language: java
    :lines: 17-48
 ```
