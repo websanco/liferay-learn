@@ -34,8 +34,8 @@ The example MVC Portlet has three portlet action URLs that map to separate portl
      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -88,7 +88,7 @@ These actions are trivial, but they demonstrate different ways to map UI compone
 
 The `U8T2Portlet` class is a standard [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) that has three action-handling methods.
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
    :language: java
    :lines: 22-51
 ```
@@ -103,7 +103,7 @@ The JSP (discussed next) maps to the example methods using portlet action URLs. 
 
 The `view.jsp` binds UI components to the portlet's action-handling methods using portlet action URLs. Here's the `view.jsp` code:
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
    :language: javascript
 ```
 
@@ -113,14 +113,14 @@ The first line makes the Portlet 2.0 tag library available via the `portlet` pre
 
 The `view.jsp` declares the following portlet action URL.
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
    :language: javascript
    :lines: 3
 ```
 
 A `portlet:actionURL`'s `name` attribute maps to the `doSomething` portlet method. The `var` attribute assigns the portlet action URL to an arbitrary variable. This JSP binds the action URL to a hyperlink labeled `Do Something` by referencing the `actionURL` variable.
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
    :dedent: 1
    :language: javascript
    :lines: 6
@@ -132,7 +132,7 @@ Clicking this link invokes the portlet's `doSomething` method. You can bind the 
 
 The JSP declares another action URL directly in an anchor component.
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
    :dedent: 1
    :language: javascript
    :lines: 10
@@ -146,7 +146,7 @@ Lastly, in the following anchor, the JSP declares an action URL that maps to an 
 
 JSP action URL:
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
    :dedent: 1
    :language: javascript
    :lines: 14
@@ -154,7 +154,7 @@ JSP action URL:
 
 Portlet method:
 
-```literalinclude:: ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
+```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
    :dedent: 1
    :language: java
    :lines: 40-42
