@@ -104,12 +104,12 @@ The `r9u2-api` module folder contains a `bnd.bnd` metadata file, a `build.gradle
 
 Very simple, right? Beyond the Java source file, there are only two other files: a Gradle build script (though you can use any build system you want), and a configuration file called `bnd.bnd`. The `bnd.bnd` file describes and configures the module:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/bnd.bnd
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/bnd.bnd
 ```
 
 The `build.gradle` file specifies the module's dependencies.
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/build.gradle
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/build.gradle
    :language: groovy
 ```
 
@@ -119,7 +119,7 @@ The module's name is *Acme R9U2 API*. Its symbolic name--a name that ensures uni
 
 Finally, there's the Java class, which in this case is an interface:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/src/main/java/com/acme/r9u2/Greeter.java
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-api/src/main/java/com/acme/r9u2/Greeter.java
    :language: java
    :lines: 5-10
 ```
@@ -148,7 +148,7 @@ An interface only defines an API; to do something, it must be implemented. This 
 
 It has the same structure as the API module: a build script, a `bnd.bnd` configuration file, and an implementation class. The only differences are the file contents. The `bnd.bnd` file is a little different:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/bnd.bnd
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/bnd.bnd
 ```
 
 The bundle name, symbolic name, and version are all set similarly to the API. 
@@ -159,7 +159,7 @@ Pretty cool, eh?
 
 All that's left, then, is the class that provides the implementation:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/src/main/java/com/acme/r9u2/internal/R9U2Greeter.java
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/src/main/java/com/acme/r9u2/internal/R9U2Greeter.java
    :language: java
    :lines: 7-15
 ```
@@ -168,7 +168,7 @@ The example `greet` method prints an enthusiastic greeting using the given name.
 
 Here is the implementation module `build.gradle` file.
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/build.gradle
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-impl/build.gradle
    :language: groovy
 ```
 
@@ -198,20 +198,20 @@ A consumer module has the same structure as the other module types:
 
 Again, you have a build script, a `bnd.bnd` file, and a Java class. This module's `bnd.bnd` file is almost the same as the provider's:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/bnd.bnd
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/bnd.bnd
 ```
 
 There's nothing new here: you declare the same things you declared for the provider. 
 
 The client module depends on the API module and the `release.portal.api` artifact. Here's the `r9u2-osgi-commands` module's `build.gradle` file:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/build.gradle
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/build.gradle
    :language: groovy
 ```
 
 Your Java class has a little bit more going on:
 
-```literalinclude:: ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/src/main/java/com/acme/r9u2/internal/osgi/commands/R9U2OSGiCommands.java
+```{literalinclude} ./osgi-and-modularity/resources/liferay-r9u2.zip/r9u2-osgi-commands/src/main/java/com/acme/r9u2/internal/osgi/commands/R9U2OSGiCommands.java
    :language: java
    :lines: 8-21
 ```
