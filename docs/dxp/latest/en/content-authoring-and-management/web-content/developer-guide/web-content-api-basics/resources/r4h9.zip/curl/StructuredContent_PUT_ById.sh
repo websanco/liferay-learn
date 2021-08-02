@@ -2,5 +2,5 @@ curl \
 	-H "Content-Type: application/json" \
 	-X PUT \
 	"http://localhost:8080/o/headless-delivery/v1.0/structured-contents/${1}" \
-	-d "{\"contentStructureId\": \"${2}\", \"title\": \"Updated Web Content article\"}" \
+	-d "{\"contentFields\": [{\"contentFieldValue\": {\"data\": \"<p>Goo</p>\"}, \"dataType\": \"string\", \"name\": \"content\"}], \"contentStructureId\": \"${2}\", \"title\": \"Baker\"}" \
 	-u "test@liferay.com:test"
