@@ -34,8 +34,8 @@ The example portlet's two actions log messages that indicate the MVC Action Comm
      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -88,8 +88,8 @@ Its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/comp
 * Initial view template: `view.jsp`
 * Name: `com_acme_l6y9_web_internal_portlet_L6Y9Portlet`
 
-```note::
-   An ``MVCActionCommand`` binds to a portlet by the portlet's name (e.g., the portlet's ``javax.portlet.name`` property value).
+```{note}
+   An `MVCActionCommand` binds to a portlet by the portlet's name (e.g., the portlet's `javax.portlet.name` property value).
 ```
 
 The example portlet renders `view.jsp` by default. The portlet's MVC Action Command classes are next.
@@ -105,8 +105,8 @@ MVC Action Command classes can implement [`MVCActionCommand`](https://github.com
 
 `DoL6Y9AbleMVCActionCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides an `MVCActionCommand` service. `DoL6Y9AbleMVCActionCommand`'s component properties apply the component to the portlet that has the property `javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet` and map the component to an MVC command named `/l6y9/do_l6y9_able`. When a user triggers an action bound to that command name, `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method executes. For demonstration purposes, the `doProcessAction` method above logs a message that identifies itself.
 
-```note::
-   You can associate an ``MVCActionCommand`` component with multiple portlets by declaring a ``javax.portlet.name`` property for each portlet.
+```{note}
+You can associate an `MVCActionCommand` component with multiple portlets by declaring a `javax.portlet.name` property for each portlet.
 ```
 
 `DoL6Y9BakerMVCActionCommand` is similar to `DoL6Y9MVCAbleActionCommand` except its names contain `Baker` or `baker` instead `Able` or `able`.
