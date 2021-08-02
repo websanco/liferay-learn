@@ -106,6 +106,10 @@ If storing your Liferay DXP configuration (e.g., Liferay Home) in a source contr
 
 If you must specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md).
 
+```{note}
+DXP supports this feature in 7.4+, in 7.3 since FP1/SP1, and in 7.2 since FP14/SP5.
+```
+
 Here's the property syntax:
 
 ```properties
