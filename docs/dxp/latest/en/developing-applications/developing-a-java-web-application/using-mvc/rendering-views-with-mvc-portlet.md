@@ -38,8 +38,8 @@ Here's how to deploy the example portlet and navigate between its views. For lea
      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -94,7 +94,7 @@ You've made the round trip between the portlet views. Next, learn how the portle
 
 A portlet's default view renders when users first land on the portlet's page. An initiallization param in the portlet class sets the default view. The `C8M3Portlet.java` example class sets the default view in its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) annotation.
 
-```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
+```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :language: java
    :lines: 16-24
 ```
@@ -107,7 +107,7 @@ Next, learn how View 1 links to View 2.
 
 View 1 has only a heading called *View 1* and a link labeled *Go to View 2*. Here's the `view1.jsp` code:
 
-```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_1.jsp
+```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_1.jsp
    :language: jsp
 ```
 
@@ -121,7 +121,7 @@ When a user clicks on the *Go to View 2* hyperlink, a portlet request that inclu
 
 When a portlet receives the request object, it can respond to the request object parameters. `C8M3Portlet`'s `render` method response to render requests.
 
-```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
+```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :dedent: 1
    :language: java
    :lines: 26-40
@@ -129,13 +129,13 @@ When a portlet receives the request object, it can respond to the request object
 
 `C8M3Portlet`'s `render` method logs the `mvcPath` parameter value and then delegates rendering the portlet to the superclass `MVCPortlet`. [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) renders the view assigned to the `mvcPath` portlet request parameter.
 
-```note::
-   In the absence of an ``mvcPath`` request parameter, ``MVCPortlet`` displays its default template (i.e., the template that the ``javax.portlet.init-param.view-template`` component property specifies).
+```{note}
+In the absence of an `mvcPath` request parameter, `MVCPortlet` displays its default template (i.e., the template that the `javax.portlet.init-param.view-template` component property specifies).
 ```
 
 The View 2 template `view2.jsp` maps back to `view1.jsp` using a portlet render URL too.
 
-```literalinclude:: ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_2.jsp
+```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_2.jsp
    :language: jsp
 ```
 

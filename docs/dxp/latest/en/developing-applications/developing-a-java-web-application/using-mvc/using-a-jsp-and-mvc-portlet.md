@@ -38,8 +38,8 @@ Start with deploying the example.
      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -75,7 +75,7 @@ There are two steps for building the example portlet:
 
 In the module's `src/main/resources/META-INF/resources` folder, create a JSP file to be your view template. The file name is arbitrary; the example JSP file is `view.jsp`. Here is the JSP content.
 
-```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/resources/META-INF/resources/view.jsp
    :language: jsp
 ```
 
@@ -85,13 +85,13 @@ The markup above displays the heading "Hello W3E7."
 
 In the module's `src/main/java` folder, create a package called `com.acme.w3e7.web.internal.portlet`. In that package, add a class called `W3E7Portlet` that extends [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java).
 
-```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
+```{literalinclude} ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
    :language: java
    :lines: 17
 ```
 
-```note::
-   The ``*.web.internal.portlet`` part of the package name is a convention: `web` for the web module type, ``internal`` because a portlet implementation is private, and ``portlet`` because the class is a portlet.
+```{note}
+The `*.web.internal.portlet` part of the package name is a convention: `web` for the web module type, `internal` because a portlet implementation is private, and `portlet` because the class is a portlet.
 ```
 
 This extension doesn't require any additional methods; `MVCPortlet`'s built-in methods use component annotations (added next) to render the `view.jsp` template.
@@ -100,7 +100,7 @@ This extension doesn't require any additional methods; `MVCPortlet`'s built-in m
 
 A [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation configures the portlet.
 
-```literalinclude:: ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
+```{literalinclude} ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
    :language: java
    :lines: 9-18
 ```
@@ -111,8 +111,8 @@ The `property` attribute's value describes the portlet web application. The `com
 
 The `javax.portlet.init-param.view-template=/view.jsp` property declares the view template path with respect to the application's `resources/META-INF/resources` folder. When you add the portlet to a page, the `resources/META-INF/resources/view.jsp` view template renders.
 
-```note::
-   The `Portlet Descriptor to OSGi Service Property Map <../../reference/portlet-descriptor-to-osgi-service-property-map.md>`_ specifies how OSGi component property values map to traditional portlet descriptors.
+```{note}
+The [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md) specifies how OSGi component property values map to traditional portlet descriptors.
 ```
 
 ## What's Next
