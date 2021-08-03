@@ -19,7 +19,7 @@ If the REST Data Provider doesn't serve your purpose, use the `DDMDataProvider` 
 1. Download and unzip the Acme XML Data Provider.
 
    ```bash
-   curl https://learn.liferay.com/dxp/7.x/en/process-automation/forms/developer-guide/liferay-b4d8.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/process-automation/forms/developer-guide/liferay-b4d8.zip -O
    ```
 
    ```bash
