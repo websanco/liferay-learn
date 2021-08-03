@@ -2,7 +2,6 @@
 	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
 
 	const page = new Vue({
-		el: '#landingPage',
 		data: {
 			cards: [
 				{
@@ -33,9 +32,67 @@
 							name: 'Liferay Registry API',
 							url: 'dxp/javadocs/modules/core/com.liferay.registry.api/index.html'
 						},
+					]
+				},
+				{
+					sectionName: 'Petra',
+					showAll: true,
+					subsections: [
 						{
-							name: 'Petra',
-							url: 'dxp/javadocs/modules/core/petra/index.html'
+							name: 'Concurrent',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.concurrent/index.html'
+						},
+						{
+							name: 'Executor',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.executor/index.html'
+						},
+						{
+							name: 'Function',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.function/index.html'
+						},
+						{
+							name: 'IO',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.io/index.html'
+						},
+						{
+							name: 'Lang',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.lang/index.html'
+						},
+						{
+							name: 'Memory',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.memory/index.html'
+						},
+						{
+							name: 'NIO',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.nio/index.html'
+						},
+						{
+							name: 'Process',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.process/index.html'
+						},
+						{
+							name: 'Reflect',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.reflect/index.html'
+						},
+						{
+							name: 'SQL DSL API',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.sql.dsl.api/index.html'
+						},
+						{
+							name: 'SQL DSL SPI',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.sql.dsl.spi/index.html'
+						},
+						{
+							name: 'String',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.string/index.html'
+						},
+						{
+							name: 'Test Util',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.test.util/index.html'
+						},
+						{
+							name: 'URL Pattern Mapper',
+							url: 'dxp/javadocs/modules/core/petra/com.liferay.petra.url.pattern.mapper/index.html'
 						},
 					]
 				},
@@ -72,6 +129,7 @@
 					showAll: true,
 				},
 			]
-		}
+		},
+		el: '#landingPage',
 	})
 </script>

@@ -257,17 +257,13 @@ function get_product_version_language_dir_name {
 }
 
 function publish_reference_docs {
-	#
-	# Download and extract Javadoc
-	#
+	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/liferay-ce-portal-doc-"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"-"${LIFERAY_LEARN_DXP_REF_DOCS_TIMESTAMP}".zip > docs-latest.zip
 
-	curl https://docs.liferay.com/portal/7.4-latest/${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE} -O
+	7z x docs-latest.zip
 
-	7z x ${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE}
-
-	mv ${LIFERAY_LEARN_DXP_REF_DOCS_DIR}/* ./build/output/reference/latest/en/dxp
-	rmdir liferay-ce-portal-doc-7.4.1-ga2
-	rm -f ${LIFERAY_LEARN_DXP_REF_DOCS_ZIP_FILE}
+	mv liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/* ./build/output/reference/latest/en/dxp
+	rmdir liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}
+	rm -f docs-latest.zip
 
 	curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
 
