@@ -70,7 +70,7 @@ Here are the steps for upgrading with a Docker image:
 1. Run the Docker image [mounted](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
 
     ```bash
-    docker run -it -p 8080:8080 \
+    docker run -it -m 8g -p 8080:8080 \
      -v $(pwd)/new-version:/mnt/liferay \
      -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true \
      liferay/[place image name here]:[place tag here]

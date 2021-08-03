@@ -9,7 +9,7 @@ Start with uploading documents using an example cURL command and Java class.
 1.  Start the Liferay Docker image:
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. After Liferay initializes, visit it with your browser at `http://localhost:8080`.

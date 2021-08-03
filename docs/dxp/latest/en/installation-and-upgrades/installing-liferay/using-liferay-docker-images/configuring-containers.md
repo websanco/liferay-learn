@@ -23,7 +23,7 @@ Tomcat's JVM options can be appended or replaced.
 JVM options can be appended to Tomcat's `CATALINA_OPTS` variable by specifying them in a `LIFERAY_JVM_OPTS` environment variable when you create the container.
 
 ```bash
-docker run -it -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
+docker run -it -m 8g -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
 ```
 
 ```warning::
@@ -62,7 +62,7 @@ Another method of configuring JVM options involves overriding Tomcat's `setenv.s
 1. Run a new container with a `-v` option that bind mounts to your host folder:
 
     ```bash
-    docker run -it -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
 The container uses your `setenv.sh` script's JVM options.
@@ -97,7 +97,7 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
 1. Create a container, passing in your Env variable assignments using `-e` options following the pattern `-e VARIABLE_A=value -e VARIABLE_B=value ...`. For example,
 
     ```
-    docker run -it -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
     ```
 
     ```warning::
@@ -129,7 +129,7 @@ You can override a container's Portal Properties using a `portal-ext.properties`
 1. Create a container, that includes a bind mount that maps your `portal-ext.properties` file's folder to the container's `/mnt/liferay/files` folder. Since this example's `portal-ext.properties` is in a folder called `files`, you can [bind mount to the container's `/mnt/liferay` folder](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay).
 
     ```bash
-    docker run -it -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _Portal Properties_.
@@ -217,7 +217,7 @@ The container uses your property setting.
 1. Run a new container with a `-v` option that bind mounts to your host folder:
 
     ```bash
-    docker run -it -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
     ```note::
@@ -255,7 +255,7 @@ If you have not yet created a container, follow these steps to provide a `.confi
 1. Run the container with a `-v` option that bind mounts your host folder:
 
     ```bash
-    docker run -it -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
     ```note::

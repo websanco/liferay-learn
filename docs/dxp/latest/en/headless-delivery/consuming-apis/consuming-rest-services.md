@@ -13,7 +13,7 @@ This example uses Docker image with a fresh install of Liferay DXP.
 You need a running Liferay DXP to call its REST services. To obtain one using Docker, run this command:
 
 ```bash
-docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 ```
 
 Liferay DXP's REST services are published at this URL:

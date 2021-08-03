@@ -111,7 +111,7 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
 1. Run the command below to start the Docker container:
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Import the Fragment Collection to your Liferay instance invoking the `yarn run import` command in your `sample-liferay-fragments` project folder. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).

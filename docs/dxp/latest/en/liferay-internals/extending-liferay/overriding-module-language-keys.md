@@ -71,7 +71,7 @@ The example changes the default `Add Blog Entry` language key to a custom key. N
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip [Overriding Module Language Keys](./liferay-e6u7.zip).

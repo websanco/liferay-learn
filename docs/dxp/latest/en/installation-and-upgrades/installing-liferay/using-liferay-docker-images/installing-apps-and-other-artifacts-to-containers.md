@@ -30,7 +30,7 @@ Here are the steps:
 1. Create a container, that includes a bind mount that maps your artifact's folder to the container's `/mnt/liferay/deploy` folder. Since this example's artifact is in a folder called `deploy`, you can [bind mount to the container's `/mnt/liferay` folder](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay).
 
     ```bash
-    docker run -it -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
 Liferay launches and installs the artifact. The container reports a message like this:

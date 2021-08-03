@@ -54,7 +54,7 @@ To see an example of overriding a global language key:
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
     If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly. 

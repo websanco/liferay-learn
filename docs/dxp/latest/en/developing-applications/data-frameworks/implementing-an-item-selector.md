@@ -25,7 +25,7 @@ unzip liferay-f5d5.zip
 1. Start a Liferay DXP Docker container with the following command:
 
     ```bash
-    docker run -it -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
+    docker run -it -m 8g -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
     ```
 
 1. Run the following commands from the root of the module to build and deploy to your Docker container:
