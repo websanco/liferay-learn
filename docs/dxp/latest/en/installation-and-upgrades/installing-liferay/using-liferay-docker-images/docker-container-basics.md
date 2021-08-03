@@ -21,13 +21,17 @@ The containers listens on port `8080` and starts like all Docker containers.
 1. [Run a container](https://docs.docker.com/engine/reference/commandline/run/) that maps a host port (e.g., `8080`) to the container's `8080` port.
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
     The container runs and prints log messages, including this Tomcat startup completion message:
 
     ```
     INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [xx,xxx] milliseconds
+    ```
+
+    ```{note}
+    Memory, CPUs, and other Docker container resources are configurable. The `-m 8g` command arguments above set the container's memory limit to eight gigabytes. See the [Docker runtime options](https://docs.docker.com/config/containers/resource_constraints/) for details.
     ```
 
 1. Open the Liferay UI in your browser at `https://localhost:8080`.
