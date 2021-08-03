@@ -40,8 +40,8 @@ The containers listens on port `8080` and starts like all Docker containers.
 
 Liferay is ready to use.
 
-```note::
-   ``docker container ls`` lists each running container, including its ID and name. ``docker container ls -a`` lists all of your containers, including ones that aren't running.
+```{note}
+`docker container ls` lists each running container, including its ID and name. `docker container ls -a` lists all of your containers, including ones that aren't running.
 ```
 
 ## Viewing Logs
@@ -83,12 +83,12 @@ The containers can be restarted like all Docker containers.
 docker start [container]
 ```
 
-```warning::
-   When a container is restarted, its entry point runs again (Please see `Container Lifecycle and API <./container-lifecycle-and-api.md#lifecycle>`_). Make sure any `scripts you're executing <./running-scripts-in-containers.md>`_ via the entry point can run again safely.
+```{warning}
+When a container is restarted, its entry point runs again (Please see [Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle)). Make sure any [scripts you're executing](./running-scripts-in-containers.md) via the entry point can run again safely.
 ```
 
-```tip::
-   Run ``docker container ls -a`` to look up your container's name or ID.
+```{tip}
+Run `docker container ls -a` to look up your container's name or ID.
 ```
 
 Now you know the basics of starting, stopping, and monitoring a Liferay container.
