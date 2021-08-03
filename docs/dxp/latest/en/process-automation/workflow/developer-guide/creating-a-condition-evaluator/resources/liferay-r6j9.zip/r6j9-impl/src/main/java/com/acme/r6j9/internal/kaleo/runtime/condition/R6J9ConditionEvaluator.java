@@ -55,17 +55,17 @@ public class R6J9ConditionEvaluator implements ConditionEvaluator {
 
 	@Activate
 	protected void activate() throws Exception {
-		User defaultUser = _userLocalService.getDefaultUser(
+		User user = _userLocalService.getDefaultUser(
 			_portal.getDefaultCompanyId());
 
-		String localizedTitle = LocalizationUtil.updateLocalization(
-			StringPool.BLANK, "title", "R6J9 Conditional Approver",
-			LocaleUtil.toLanguageId(LocaleUtil.getDefault()));
-
 		_workflowDefinitionManager.deployWorkflowDefinition(
-			_portal.getDefaultCompanyId(), defaultUser.getUserId(),
-			localizedTitle, "R6J9 Conditional Approver",
-			FileUtil.getBytes(getClass(), "r6j9-workflow-definition.xml"));
+			_portal.getDefaultCompanyId(), user.getUserId(),
+			LocalizationUtil.updateLocalization(
+				StringPool.BLANK, "title", "R6J9 Conditional Approver",
+				LocaleUtil.toLanguageId(LocaleUtil.getDefault())),
+			"R6J9 Conditional Approver",
+			FileUtil.getBytes(
+				getClass(), "dependencies/r6j9-workflow-definition.xml"));
 	}
 
 	@Reference
