@@ -45,7 +45,7 @@ The [sample modules](./liferay-s1j6.zip) demonstrate how to override an OSGi ser
 1. Download and unzip the example modules.
 
    ```bash
-   curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-s1j6.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-s1j6.zip -O
    ```
 
    ```bash

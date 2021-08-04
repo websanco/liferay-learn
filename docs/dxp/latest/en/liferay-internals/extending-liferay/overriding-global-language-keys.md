@@ -62,7 +62,7 @@ To see an example of overriding a global language key:
 1. Download and unzip [Overriding Global Language Keys](./liferay-x8f3.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/7.x/en/liferay-internals/extending-liferay/liferay-x8f3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-x8f3.zip -O
     ```
 
     ```bash
