@@ -8,8 +8,8 @@ You can manage Product Management permissions for user roles under *Commerce* &r
 
 ![Manage Product Management permissions for user roles in the Define Permissions tab.](./product-management-permissions-reference/images/02.png)
 
-```note::
-   The following article does not document permissions for related widgets.
+```{note}
+The following article does not document permissions for related widgets.
 ```
 
 ## Application Permissions

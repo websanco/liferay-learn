@@ -13,7 +13,7 @@ Commerce Roles and Permissions
    commerce-roles-and-permissions/settings-permissions-reference.md
 
 .. raw:: html
-   :file: ../landingpage_template.html
+   :file: landingpage_template.html
 
 .. raw:: html
    :file: commerce-roles-and-permissions/landing.html

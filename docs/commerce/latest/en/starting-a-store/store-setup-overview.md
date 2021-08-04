@@ -108,7 +108,7 @@ See [Creating Your Storefront](../creating-store-content/creating-your-storefron
 
 To learn more about how accounts, inviting users accounts, account roles, and more, read the following articles:
 
-* [Introduction to Accounts](../account-management/introduction-to-accounts.md)
+* [Introduction to Accounts](../account-management.md)
 * [Creating a New Account](../account-management/creating-a-new-account.md)
 * [Inviting Users to an Account](../account-management/inviting-users-to-an-account.md)
 * [Adding Addresses to an Account](../account-management/adding-addresses-to-an-account.md)

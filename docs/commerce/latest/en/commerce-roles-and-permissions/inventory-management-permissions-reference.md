@@ -8,8 +8,8 @@ You can manage Inventory Management permissions for user roles under *Commerce* 
 
 ![Manage Inventory Management permissions for user roles in the Define Permissions tab.](./inventory-management-permissions-reference/images/02.png)
 
-```note::
-   The following article does not document permissions for related widgets.
+```{note}
+The following article does not document permissions for related widgets.
 ```
 
 ## Application Permissions

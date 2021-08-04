@@ -4,8 +4,8 @@ User roles group permissions necessary for accessing and using Liferay applicati
 
 Commerce includes four out-of-the-box Commerce roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your Commerce needs, other common roles you may want to add include: Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
 
-```note::
-   For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
+```{note}
+For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
 ```
 
 ## Viewing Permissions
@@ -23,8 +23,8 @@ Follow these steps to view and manage permissions associated with a Commerce rol
    * *Buyer* (Site Role)
    * *Order Manager* (Site Role)
 
-   ```note::
-      In Liferay 7.3 and earlier versions, the Account Administrator is a Site Role, and the Account Member role is not a default role. 
+   ```{note}
+   In Liferay 7.3 and earlier versions, the Account Administrator is a Site Role, and the Account Member role is not a default role. 
    ```
 
 1. Click on the *Define Permissions* tab.
@@ -39,7 +39,7 @@ Follow these steps to view and manage permissions associated with a Commerce rol
 
 > Out-of-the-box
 
-Account Administrators can modify their Account, invite or add users to it, and assign roles to other Account members. Note that Account Administrators cannot create or delete Accounts. This permission is reserved for instance administrators.
+Account Administrators can modify their Account, invite or add users to it, and assign roles to other Account members. Account Administrators cannot create or delete Accounts. This permission is reserved for instance administrators.
 
 The following Accounts permissions pertain to the Account Administrator's ability to modify accounts in a B2B setting, while the Open Carts permissions pertain to the administrator's ability to modify Channel orders regardless of the store type.
 
@@ -91,7 +91,7 @@ Users assigned this role can view, create, and check out orders.
 
 > Custom role
 
-The Catalog Manager role allows users to access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Note that Catalog Managers cannot manage inventory. For this responsibility, see [Inventory Manager](#inventory-manager)
+The Catalog Manager role grants permissions to access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Catalog Managers cannot manage inventory. For this responsibility, see [Inventory Manager](#inventory-manager)
 
 | Permissions | Description |
 | --- | --- |
@@ -104,17 +104,17 @@ The Catalog Manager role allows users to access, create, edit, and manage Produc
 
 In addition to the above permissions, you must also assign *View* and *Update* permissions for the individual Catalogs you want the role will manage.
 
-To do this, open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Catalog*. Then, click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Catalog, and select *Permissions*. Use the check boxes to assign the role *View* and *Update* permissions.
+To do this, open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Catalog*. Then, click on the *Actions* button (![Actions Button](../images/icon-actions.png)) for the desired Catalog, and select *Permissions*. Use the check boxes to assign the role *View* and *Update* permissions.
 
-```note::
-   If you'd like your Catalog Manager to manage Products within a Catalog without the ability to modify the Catalog itself, remove the ``Catalogs: Access in Control Panel`` and ``Catalogs: View`` permissions.
+```{note}
+If you'd like your Catalog Manager to manage Products within a Catalog without the ability to modify the Catalog itself, remove the `Catalogs: Access in Control Panel` and `Catalogs: View` permissions.
 ```
 
 ## Discount Manager
 
 > Custom role
 
-The Discount Manager role allows users to create, update, and delete Discounts in Liferay Commerce. Since Commerce Discounts can target different parts of an order and use different eligibility rules, there are a lot of possible permission configurations for a Discount Manager. The following configuration grants access to all Discount options.
+The Discount Manager role grants permissions to create, update, and delete Discounts in Liferay Commerce. Since Commerce Discounts can target different parts of an order and use different eligibility rules, there are a lot of possible permission configurations for a Discount Manager. The following configuration grants access to all Discount options.
 
 | Permissions | Description |
 | --- | --- |

@@ -8,8 +8,8 @@ You can manage Settings permissions for user roles under *Commerce* &rarr; *Sett
 
 ![Manage Settings permissions for user roles in the Define Permissions tab.](./settings-permissions-reference/images/02.png)
 
-```note::
-   The following article does not document permissions for related widgets.
+```{note}
+The following article does not document permissions for related widgets.
 ```
 
 ## Application Permissions

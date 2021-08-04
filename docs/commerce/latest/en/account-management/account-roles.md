@@ -33,5 +33,5 @@ Sales agents can access any account within any of their associated organizations
 
 * [Creating a New Account](./creating-a-new-account.md)
 * [Creating a New Account Group](./creating-a-new-account-group.md)
-* [Introduction to Accounts](./introduction-to-accounts.md)
-* [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions).
+* [Account Management](../account-management.md)
+* [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)

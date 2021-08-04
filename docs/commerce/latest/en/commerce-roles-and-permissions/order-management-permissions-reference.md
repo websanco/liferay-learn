@@ -8,8 +8,8 @@ You can manage Order Management permissions for user roles under *Commerce* &rar
 
 ![Manage Order Management permissions for user roles in the Define Permissions tab.](./order-management-permissions-reference/images/02.png)
 
-```note::
-   The following article does not document permissions for related widgets.
+```{note}
+The following article does not document permissions for related widgets.
 ```
 
 ## Application Permissions
@@ -57,8 +57,8 @@ Order Management applications reference the following resources:
 | View Open Orders | Ability to view all open Orders |
 | View Orders | Ability to view all Orders, regardless of status |
 
-```note::
-   In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were listed under Control Panel > General Permissions.
+```{note}
+In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were listed under Control Panel > General Permissions.
 ```
 
 **Commerce Shipments** (listed under Shipments; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform operations for Shipping entities used to track Product deliveries.

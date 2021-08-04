@@ -8,8 +8,8 @@ You can manage Pricing permissions for user roles under *Commerce* &rarr; *Prici
 
 ![Manage Pricing permissions for user roles in the Define Permissions tab.](./pricing-permissions-reference/images/02.png)
 
-```note::
-   The following article does not document permissions for related widgets.
+```{note}
+The following article does not document permissions for related widgets.
 ```
 
 ## Application Permissions

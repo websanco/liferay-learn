@@ -1,4 +1,5 @@
 {
+	"commerce/latest/en/account-management/introduction-to-accounts.html": "commerce/latest/en/account-management.html",
 	"dxp/latest/en/content-authoring-and-management/recycle-bin/user-guide/configuring-the-recycle-bin.html": "dxp/latest/en/content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.html",
 	"dxp/latest/en/content-authoring-and-management/tags_and_categories/user-guide/defining-categories-and-vocabularies-for-content.html": "dxp/latest/en/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.html",
 	"dxp/latest/en/developing-applications/developing-a-java-web-application/portlets.html" : "dxp/latest/en/developing-applications/developing-a-java-web-application/reference/portlets.html",

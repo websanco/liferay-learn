@@ -4,7 +4,7 @@ By default, all products are visible in a Catalog. However, users can limit a pr
 
 ## Prerequisites
 
-1. One or more [Accounts](../../../account-management/introduction-to-accounts.md) have been created.
+1. One or more [Accounts](../../../account-management.md) have been created.
 1. One or more [Account Groups](../../../account-management/creating-a-new-account-group.md) have been created.
 1. Products have been added to a catalog.
 
