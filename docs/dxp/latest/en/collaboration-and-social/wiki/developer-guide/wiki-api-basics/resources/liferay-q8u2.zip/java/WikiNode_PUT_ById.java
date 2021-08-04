@@ -17,7 +17,8 @@ public class WikiNode_PUT_ById {
 			Long.valueOf(System.getProperty("wikiNodeId")),
 			new WikiNode() {
 				{
-					name = "Updated Wiki Node";
+					description = "Goo";
+					name = "Baker Node";
 				}
 			});
 

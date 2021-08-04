@@ -17,9 +17,9 @@ public class WikiPage_PUT_ById {
 			Long.valueOf(System.getProperty("wikiPageId")),
 			new WikiPage() {
 				{
-					content = "This is an updated Wiki Page.";
+					content = "Goo";
 					encodingFormat = "text/x-wiki";
-					headline = "Updated Wiki Page";
+					headline = "Baker Page";
 				}
 			});
 

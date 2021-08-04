@@ -3,10 +3,10 @@ import com.liferay.headless.delivery.client.pagination.Page;
 import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.WikiNodeResource;
 
-public class WikiNode_GET_FromSite {
+public class WikiNodes_GET_FromSite {
 
 	/**
-	 * java -classpath .:* -DsiteId=1234 WikiNode_GET_FromSite
+	 * java -classpath .:* -DsiteId=1234 WikiNodes_GET_FromSite
 	 */
 	public static void main(String[] args) throws Exception {
 		WikiNodeResource.Builder builder = WikiNodeResource.builder();

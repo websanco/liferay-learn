@@ -1,6 +1,4 @@
 import com.liferay.headless.delivery.client.dto.v1_0.WikiPage;
-import com.liferay.headless.delivery.client.pagination.Page;
-import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.WikiPageResource;
 
 public class WikiPage_GET_ById {
@@ -19,7 +17,6 @@ public class WikiPage_GET_ById {
 			Long.valueOf(System.getProperty("wikiPageId")));
 
 		System.out.println(wikiPage);
-
 	}
 
 }

@@ -1,10 +1,10 @@
 import com.liferay.headless.delivery.client.dto.v1_0.WikiPage;
 import com.liferay.headless.delivery.client.resource.v1_0.WikiPageResource;
 
-public class WikiPage_POST_ByNodeId {
+public class WikiPage_POST_ToParent {
 
 	/**
-	 * java -classpath .:* -DwikiNodeId=1234 WikiPage_POST_ByNodeId
+	 * java -classpath .:* -DparentWikiPageId=1234 WikiPage_POST_ToParent
 	 */
 	public static void main(String[] args) throws Exception {
 		WikiPageResource.Builder builder = WikiPageResource.builder();
@@ -13,13 +13,13 @@ public class WikiPage_POST_ByNodeId {
 			"test@liferay.com", "test"
 		).build();
 
-		WikiPage wikiPage = wikiPageResource.postWikiNodeWikiPage(
-			Long.valueOf(System.getProperty("wikiNodeId")),
+		WikiPage wikiPage = wikiPageResource.postWikiPageWikiPage(
+			Long.valueOf(System.getProperty("parentWikiPageId")),
 			new WikiPage() {
 				{
-					content = "This is a Wiki Page.";
+					content = "Foo";
 					encodingFormat = "text/x-wiki";
-					headline = "Wiki Page";
+					headline = "Baker Child";
 				}
 			});
 

@@ -17,7 +17,8 @@ public class WikiNode_POST_ToSite {
 			Long.valueOf(System.getProperty("siteId")),
 			new WikiNode() {
 				{
-					name = "Wiki Node";
+					description = "Foo";
+					name = "Baker Node";
 				}
 			});
 
