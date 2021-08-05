@@ -1,20 +1,23 @@
 # Working with Workflow Context
 
-Workflows in Liferay are used as approval processes. At each step of the process, the workflow has certain data that's available in a `Map<String, Serializable>` object referred to in your scripts and custom code as `workflowContext`. The workflow context information is important to the proper functionality of Liferay's workflow engine. Understanding it can help you determine how best to use it in your custom code and workflow scripts.
+[Workflows](../introduction-to-workflow.md) in Liferay are used as approval processes. At each step of the process, the workflow has certain data that's available in a `Map<String, Serializable>` object referred to in your scripts and custom code as `workflowContext`. The workflow context information is important to the proper functionality of Liferay's workflow engine. Understanding it can help you determine how best to use it in your custom code and workflow scripts.
 
 For example, with workflow context you can
 
-- Access any of the existing attributes for use in workflow scripts, custom code, or Freemarker templates.
-- Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or Freemarker templates.
-- Set new `workflowContext` attributes in the service layer of custom entities, to be accessed in workflow definition nodes.
-- Set `serviceContext` attributes, access them in workflow scripts and notification templates.
+- [Access any of the existing attributes for use in workflow scripts, custom code, or Freemarker templates.](#accessing-workflow-context-attributes-in-workflow-definitions)
+- [Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or Freemarker templates.](#setting-workflow-context-attributes-in-a-workflow-process-definition)
+- [Set new `workflowContext` attributes in the service layer of custom entities, to be accessed in workflow definition nodes.](#setting-workflow-context-attributes-in-the-service-layer)
+- [Set `ServiceContext` attributes, access them in workflow scripts and notification templates.](#setting-service-context-attributes-for-access-in-workflow-definitions)
 
-<!-- For Rafael: are these the main ways workflow context is used? Should we add, edit, or remove anything? -->
-<!-- For Russ and Rafael: probably good to add concrete examples of each use case we identify -->
-
+```note::
+   Use ``ServiceContext`` to set attributes in contexts where a ``workflowContext`` is not available. For example, if your custom code calls ``BlogsEntryLocalService#addEntry``, you must provide a ``ServiceContext`` object to it. You can use ``ServiceContext#setAttribute`` to pass in data that you want to access in the workflow. 
+```
 There are some important things to be aware of when working with `workflowContext`:
 
 - It must be modifiable, therefore it isn't thread safe. Caution is advised in parallel execution contexts.
+
+   For example, in a workflow with a fork node, updating the  ``workflowContext`` in both forks of the workflow is not recommended.
+
 - Its first type parameter (the `key` for the attribute) is a String. This is used to look up the value stored in the second attribute.
 - Its second type parameter (the `value` for each attribute) is a `Serializable` because it's stored in the database. This ensures that it's accessible at every step of the workflow.
 
@@ -37,7 +40,7 @@ To print the workflow context keys and values in any workflow node, you can add 
 </actions>
 ```
 
-When the node is entered, output will be printed to the log:
+When the node is entered, output is printed to the log:
 
 ```bash
 entryType, Blogs Entry
@@ -53,21 +56,33 @@ url, http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay
 userURL, http://localhost:8080/web/test
 ```
 
---------
-Everything below is from Olaf's Blog post
-https://liferay.dev/blogs/-/blogs/context-is-everything
+## Examples
 
-If you've ever looked at a Liferay workflow implementation and its scripts, you might have seen workflowContext being referenced in the scripts that are executed in the individual tasks and states.
+### Accessing Workflow Context Attributes in Workflow Definitions
 
-I've recently had my first scripting contact with Workflow, and wanted to look at this context, and what it can do for me. Digging a bit, you’ll find out that workflowContext is a Map<String, Serializable> - interesting: Serializable hints at it being available in later steps of the workflow again, when filled in the beginning. And indeed, that's the case.
+To access `workflowContext` attributes form a [`<script>`](using-the-script-engine-in-workflow.md), retrieve them with the `get` method:
 
-Here's a very simple example for how it can be useful:
+```groovy
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
-First of all: The dynamic portion of a workflow is a mixture of Freemarker (for notifications) and Groovy (for scripts).
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+```
 
-The default Single Approver Workflow sends mail without any subject. That's ugly, but can be changed easily: Notifications have a Description and a Template. Their description turns into the email subject - and by default it's empty. So you'll just need to fill it: Static text is fine ("Please review a workflow submission"), but you can do better with workflowContext:
+The above example retrieves a String, but some of the `workflowContext` attributes must be used as `long`s (for example, when passed as method parameters). The `GetterUtil` utility class helps with this:
 
-Before making the email more personal, we'll have to go into scripting: Look at Single Approver's initial state, "created": It doesn't have any action, but you can add one. Let's make it extremely simple and just cater for JournalArticle (that's a Web Content Article on the UI - other types are left as an API exercise for the reader): onExit, enter this script:
+```groovy
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
+```
+
+Using the [`WorkflowConstants`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) object fields helps avoid error-prone String literals. The `workflowContext` fields are all prefixed with `CONTEXT` (e.g., `CONTEXT_COMPANY_ID`).
+
+
+### Setting Workflow Context Attributes in A Workflow Process Definition
+
+To set attributes into the `workflowContext`, use the `Map#put` method. This example sets the `assetTitle`:
 
 ```groovy
 import com.liferay.asset.kernel.model.AssetRenderer;
@@ -75,31 +90,51 @@ import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.kernel.workflow.WorkflowHandler;
 import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
-import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+
+String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
+
+WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
 
 long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_PK));
-String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
-WorkflowHandler workflowHandler = WorkflowHandlerRegistryUtil.getWorkflowHandler(className);
+
 AssetRenderer assetRenderer = workflowHandler.getAssetRenderer(classPK);
-String assetTitle = "none";
-try {
-  assetTitle = assetRenderer.getAssetObject().getTitle();
-} catch ( java.lang.Exception e) {
-  // ignore. Note: Above code works for JournalArticle, but
-  // not every asset has a getTitle method. Those will fail, 
-  // but we ignore this in the quick sample here.
-}
+
+String assetTitle = assetRenderer.getAssetObject().getTitle();
+
 workflowContext.put("assetTitle", assetTitle);
-WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
 ```
 
-The magic words are the last two lines: From now on, any time in the workflow, we can reference workflowContext.get("assetTitle") in scripts, or ${assetTitle} in Freemarker-enabled fields.
+```tip::
+   The above code works only if the asset has a ``getTitle`` method (for example, ``JournalArticle``).
+```
 
-Go ahead and change the description of this workflow's "Review Notification" to "please review ${assetTitle}" and provide your reviewers with more meaningful notifications.
+### Setting Workflow Context Attributes in the Service Layer
 
-Extend this with anything you want to store in the workflowContext. Well, not anything - don't overdo it. But it can simplify your other workflow scripts tremendously, and provide personalized and meaningful notifications to your customers.
+In the service layer of your custom entity, you can set `workflowContext` attributes that must be accessible in the workflow definition.
 
-Need some icing on the cake?
+<!-- Need a good fake example -->
 
-Description is a single line and turns into the subject of an E-Mail, while Template can be multi-line and will be the body of the email (e.g. insert <br/> or other HTML markup). However, if you're creating a User Notification, Template will be single line, with HTML tags escaped, and the only content shown (no Description) - it will be the title of the UI Notification. You might want to split up the current single notification into two, to cater for each of the channels individually.
+### Setting Service Context Attributes for Access in Workflow Definitions
+
+Sometimes in your custom Java code, you'll need to pass information to the workflow definition but there's no `workflowContext` to pass through. For example, if you're writing code that adds Blogs Entries, you can call one of the [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) methods. Even though `workflowContext` isn't a parameter in these methods, `ServiceContext` is. Add a new attribute to the service context:
+
+```java
+serviceContext.setAttribute("customAttributeKey", "customAttributeValue");
+```
+
+To get the attribute in the workflow definition, retrieve the `ServioceContext` from the `workflowcontext`, the get the attribute using its key:
+
+```groovy
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+
+ServiceContext serviceContext = (ServiceContext)workflowContext.get(WorkflowConstants.CONTEXT_SERVICE_CONTEXT);
+
+serviceContext.getAttribute("customAttributeKey");
+```
+
+## Related Information
+
+- [Workflow Notification Template Variables](./workflow-notification-template-variables.md)
+- [Using the Script Engine in Workflow](./using-the-script-engine-in-workflow.md)
 
