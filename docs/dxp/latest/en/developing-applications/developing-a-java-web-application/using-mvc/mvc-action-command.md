@@ -103,7 +103,7 @@ MVC Action Command classes can implement [`MVCActionCommand`](https://github.com
    :lines: 13-34
 ```
 
-`DoL6Y9AbleMVCActionCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides an `MVCActionCommand` service. `DoL6Y9AbleMVCActionCommand`'s component properties apply the component to the portlet that has the property `javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet` and map the component to an MVC command named `/l6y9/do_l6y9_able`. When a user triggers an action bound to that command name, `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method executes. For demonstration purposes, the `doProcessAction` method above logs a message that identifies itself.
+`DoL6Y9AbleMVCActionCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides an `MVCActionCommand` service. `DoL6Y9AbleMVCActionCommand`'s component properties apply the component to the portlet that has the property `javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet` and map the component to an MVC command named `/do_l6y9_able`. When a user triggers an action bound to that command name, `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method executes. For demonstration purposes, the `doProcessAction` method above logs a message that identifies itself.
 
 ```{note}
 You can associate an `MVCActionCommand` component with multiple portlets by declaring a `javax.portlet.name` property for each portlet.
@@ -123,8 +123,8 @@ The portlet's `view.jsp` file renders links for invoking the portlet's MVC Actio
 
 The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Each tag maps the UI component to an MVC command by assigning the MVC Action Command's `mvc.command.name` property value to the tag's `name` attribute.
 
-* `<portlet:actionURL name="/l6y9/do_l6y9_able" />` maps to `DoL6Y9MVCAbleActionCommand`.
-* `<portlet:actionURL name="/l6y9/do_l6y9_baker" />` maps to `DoL6Y9BakerMVCActionCommand`.
+* `<portlet:actionURL name="/do_l6y9_able" />` maps to `DoL6Y9MVCAbleActionCommand`.
+* `<portlet:actionURL name="/do_l6y9_baker" />` maps to `DoL6Y9BakerMVCActionCommand`.
 
 Clicking on the *Do L6Y9 Able* link, for example, invokes `DoL6Y9MVCAbleActionCommand`'s `doProcessAction` method.
 
