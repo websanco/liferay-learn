@@ -1,12 +1,12 @@
-# Store Management Permissions Reference
+# Store Management Permissions
 
 With Liferay Commerce, you can use permissions to control access to Store Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
-![Control access to Store Management applications and resources.](./store-management-permissions-reference/images/01.png)
+![Control access to Store Management applications and resources.](./store-management-permissions/images/01.png)
 
 You can manage Store Management permissions for user roles under *Commerce* &rarr; *Store Management* in the Define Permissions tab.  Assign permissions individually, or check *Action* to assign all permissions for an application or resource.
 
-![Manage Store Management permissions for user roles in the Define Permissions tab.](./store-management-permissions-reference/images/02.png)
+![Manage Store Management permissions for user roles in the Define Permissions tab.](./store-management-permissions/images/02.png)
 
 ## Application Permissions
 

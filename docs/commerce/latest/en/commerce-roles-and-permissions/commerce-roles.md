@@ -2,7 +2,7 @@
 
 User roles group permissions necessary for accessing and using Liferay applications and resources. Each role can be scoped to an instance, Site, Organization, Asset Library, or Account. This scope determines which permissions can be assigned to the role. Each permission also has its own scope that determines which applications and resources can be accessed and used. See [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) for more details.
 
-Commerce includes four out-of-the-box Commerce roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your needs, you may want to create additional Commerce roles. Some common custom roles include Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
+Commerce includes four out-of-the-box roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your needs, you may want to create additional Commerce roles to better mirror your institutional structure. Some common custom roles include Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
 
 ```{note}
 For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
@@ -35,9 +35,9 @@ Follow these steps to view and manage permissions associated with a Commerce rol
 
    ![Click on the Define Permissions tab to view and manage role permissions.](./commerce-roles/images/02.png)
 
-## Account Administrator (Account Role)
+## Account Administrator
 
-> Out-of-the-box
+> Account Role
 
 Account Administrators can modify their Account, invite or add users to it, and assign roles to other Account members. Account Administrators cannot create or delete Accounts. This permission is reserved for instance administrators.
 
@@ -64,9 +64,9 @@ The following Accounts permissions pertain to the Account Administrator's abilit
 | Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 
-## Account Member (Account Role)
+## Account Member
 
-> Out-of-the-box for Liferay 7.4+
+> Account Role (included in Liferay 7.4+)
 
 This role is automatically assigned to all users within an account and grants basic view permissions.
 
@@ -74,9 +74,9 @@ This role is automatically assigned to all users within an account and grants ba
 | --- | --- |
 | Accounts > Account Entry: View | Ability to view an Account |
 
-## Buyer (Site Role)
+## Buyer
 
-> Out-of-the-box
+> Site Role
 
 Users assigned this role can view, create, and check out orders.
 
@@ -87,9 +87,27 @@ Users assigned this role can view, create, and check out orders.
 | Open Carts > Commerce Order: View Open Orders | Ability to view open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 
-## Catalog Manager
+## Order Manager
 
-> Custom role
+> Site Role
+
+This Order Manager role grants users all the permissions of Buyers and allows them to also manage, delete, and approve orders in a specific Channel Site.
+
+| Permissions | Description |
+| --- | --- |
+| Open Carts > Commerce Order: Add Order | Ability to add an Order to a buyer's Account |
+| Open Carts > Commerce Order: Approve Open Orders | Ability to approve Orders when workflow is enabled |
+| Open Carts > Commerce Order: Check Out Open Orders | Ability to complete the checkout process for Orders |
+| Open Carts > Commerce Order: Delete Orders | Ability to delete Orders |
+| Open Carts > Commerce Order: Manage Orders | Ability to change Order details, such as mailing and billing addresses; ability to add a note to the Order |
+| Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
+| Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
+
+## Common Custom Roles
+
+### Catalog Manager
+
+> Regular Role
 
 The Catalog Manager role grants permissions to access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Catalog Managers cannot manage inventory. For this responsibility, see [Inventory Manager](#inventory-manager)
 
@@ -110,9 +128,9 @@ To do this, open the *Global Menu* (![Global Menu](../images/icon-applications-m
 If you'd like your Catalog Manager to manage Products within a Catalog without the ability to modify the Catalog itself, remove the `Catalogs: Access in Control Panel` and `Catalogs: View` permissions.
 ```
 
-## Discount Manager
+### Discount Manager
 
-> Custom role
+> Regular Role
 
 The Discount Manager role grants permissions to create, update, and delete Discounts in Liferay Commerce. Since Commerce Discounts can target different parts of an order and use different eligibility rules, there are a lot of possible permission configurations for a Discount Manager. The following configuration grants access to all Discount options.
 
@@ -139,9 +157,9 @@ The Discount Manager role grants permissions to create, update, and delete Disco
 | Price Lists: Access in Control Panel | Ability to access the Price Lists application in the Global Menu |
 | Product Groups: View | Ability to view Product Group entities  |
 
-## Inventory Manager
+### Inventory Manager
 
-> Custom role
+> Regular Role
 
 The Inventory Manager role allows users to view and manage inventory in all Warehouses. Users with the role can add incoming shipments, update inventory levels, transfer between Warehouses, and view the changelog.
 
@@ -152,27 +170,11 @@ The Inventory Manager role allows users to view and manage inventory in all Ware
 | Warehouses > Commerce Inventories: Manage Inventory | Ability to access and modify Inventory entities linked to a Warehouse |
 | Portal: View Control Panel Menu | Ability to access the Global Menu |
 
-## Order Manager (Site Role)
+### Instance Order Manager
 
-> Out-of-the-box
+> Regular Role
 
-This Order Manager role grants users all the permissions of Buyers and allows them to also manage, delete, and approve orders in a specific Channel Site.
-
-| Permissions | Description |
-| --- | --- |
-| Open Carts > Commerce Order: Add Order | Ability to add an Order to a buyer's Account |
-| Open Carts > Commerce Order: Approve Open Orders | Ability to approve Orders when workflow is enabled |
-| Open Carts > Commerce Order: Check Out Open Orders | Ability to complete the checkout process for Orders |
-| Open Carts > Commerce Order: Delete Orders | Ability to delete Orders |
-| Open Carts > Commerce Order: Manage Orders | Ability to change Order details, such as mailing and billing addresses; ability to add a note to the Order |
-| Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
-| Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
-
-## Order Manager (Regular Role)
-
-> Custom role
-
-This Order Manager role grants additional permissions that allow users to manage orders for one or more Channels.
+The Order Manager role grants users the necessary permissions for managing orders across multiple Channels and is not limited to a single Site.
 
 | Permissions | Description |
 | --- | --- |
@@ -191,9 +193,9 @@ This Order Manager role grants additional permissions that allow users to manage
 | Account Groups > Commerce Accounts: Manage All Accounts | Necessary to access the Account Groups application |
 | Portal: View Control Panel Menu | Ability to access the Global Menu |
 
-## Shipments Manager
+### Shipments Manager
 
-> Custom role
+> Regular Role
 
 The Shipment Manager role allows a user to process shipments. This includes the ability to add shipping details, shipping dates, add items to the shipment and update shipment status. In Commerce 3.0+ and Liferay 7.3+, users create shipments via the Orders application. If you only want the Shipment Manager to fill and process the shipment, then the following permissions are sufficient. Otherwise, you may want to add additional [Order Manager](#order-manager-regular-role) permissions.
 
@@ -216,7 +218,7 @@ The Shipment Manager role allows a user to process shipments. This includes the 
 
 The Sales Agent is a regular role in Liferay Commerce and assignees are able to manage any account assigned to the role without granting administrative permissions. Because it is a regular role, it is found in the *Regular Roles* tab.
 
-![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles/images/04.png)
+![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles/images/06.png)
 
 | Permissions | Description |
 | --- | --- |
@@ -226,9 +228,9 @@ The Sales Agent is a regular role in Liferay Commerce and assignees are able to 
 ## Additional Information
 
 * [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
-* [Order Management Permissions Reference](./order-management-permissions-reference.md)
-* [Inventory Management Permissions Reference](./inventory-management-permissions-reference.md)
-* [Pricing Permissions Reference](./pricing-permissions-reference.md)
-* [Product Management Permissions Reference](./product-management-permissions-reference.md)
-* [Store Management Permissions Reference](./store-management-permissions-reference.md)
-* [Settings Permissions Reference](./settings-permissions-reference.md)
+* [Order Management Permissions Reference](./order-management-permissions.md)
+* [Inventory Management Permissions Reference](./inventory-management-permissions.md)
+* [Pricing Permissions Reference](./pricing-permissions.md)
+* [Product Management Permissions Reference](./product-management-permissions.md)
+* [Store Management Permissions Reference](./store-management-permissions.md)
+* [Settings Permissions Reference](./settings-permissions.md)
