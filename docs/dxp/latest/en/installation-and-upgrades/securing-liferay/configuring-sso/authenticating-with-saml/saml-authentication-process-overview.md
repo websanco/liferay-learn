@@ -8,7 +8,7 @@ Consider IdP initiated SSO first.
 
 Sometimes a user enters the SSO cycle by sending a request directly from the browser to the IdP.
 
-![Identity Provider Initiated SSO](./images/saml-idp-initiated-sso.png)
+![Identity Provider Initiated SSO authenticates directly.](./images/saml-idp-initiated-sso.png)
 
 ### The SSO Request to the IdP
 
@@ -29,7 +29,7 @@ Upon successful authentication, the IdP constructs a SAML Response. It includes 
 The IdP sends the response to the Assertion Consumer Service URL. The request contains two parameters: `SAMLResponse` and `RelayState`.
 
 ```note::
-   The method for sending the SAML response (for example, HTTP-POST) and the Assertion Consumer Service URL are usually imported as part of the SAML metadata XML provided by the SP. In @product@, you import the SP's metadata in the SAML Adapter's Service Provider Connections tab.
+   The method for sending the SAML response (for example, HTTP-POST) and the Assertion Consumer Service URL are usually imported as part of the SAML metadata XML provided by the SP. In Liferay DXP, you import the SP's metadata in the SAML Adapter's Service Provider Connections tab.
 ```
 
 ### The SP Processes the SSO Response
@@ -49,7 +49,7 @@ Most of the time, authentication requests come from the Service Provider.
 
 ### The SSO Request to the SP
 
-When the user's browser requests a protected resource or login URL on the SP, it triggers the SP initiated SSO process. When @product@ is the SAML SP, SSO is initiated either by requesting `/c/portal/login` URL or a protected resource that requires authentication (for example, a document not viewable by the Guest Role). If the user requests a protected resource, its URL is recorded in the `RelayState` parameter. If the user requested `/c/portal/login`, the `RelayState` can be set by providing the `redirect` parameter. Otherwise, if the [portal property](http://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) `auth.forward.by.last.path` is set to `true`, the last accessed path is set as the `RelayState`. For non-@product@ SPs, consult the vendor documentation on initiating SSO.
+When the user's browser requests a protected resource or login URL on the SP, it triggers the SP initiated SSO process. When Liferay DXP is the SAML SP, SSO is initiated either by requesting `/c/portal/login` URL or a protected resource that requires authentication (for example, a document not viewable by the Guest Role). If the user requests a protected resource, its URL is recorded in the `RelayState` parameter. If the user requested `/c/portal/login`, the `RelayState` can be set by providing the `redirect` parameter. Otherwise, if the [portal property](http://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) `auth.forward.by.last.path` is set to `true`, the last accessed path is set as the `RelayState`. For non-Liferay SPs, consult the vendor documentation on initiating SSO.
 
 ### The AuthnRequest to the IdP
 

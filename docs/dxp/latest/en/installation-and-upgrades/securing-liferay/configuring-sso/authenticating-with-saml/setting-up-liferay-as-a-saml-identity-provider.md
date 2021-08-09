@@ -39,7 +39,15 @@ You can change this path in _System Settings_ &rarr; _SSO_ &rarr; _SAML Configur
 
 ## Configuring Liferay DXP as a SAML Identity Provider
 
-1. To access the SAML Admin interface, click on *Control Panel* &rarr; *Configuration* and then on *SAML Admin*.
+1. To access the SAML Admin interface, click on *Control Panel* &rarr; *Instance Settings* &rarr; *Security* &rarr; *SSO* &rarr; *SAML Provider Configuration*.
+
+1. Choose a password for your keystore credential and your keystore encryption credential, and type these into the appropriate fields. Your keystore credential gets you access to the keystore. The keystore encryption credential protects this SAML provider configuration in the keystore. 
+
+1. Check the _Require Assertion Signature?_ box to require SAML assertions to be individually signed in addition to the entire SAML message.
+
+1. Next is a check box labeled _Require Authn Request Signature?_; if checked, each Authn Request must be signed by the sending Service Provider. In most cases, this should be enabled.
+
+---
 
 1. To begin configuring Liferay DXP to use SAML, select the _Identity Provider_ role for your installation and enter your entity ID.
 
@@ -88,7 +96,6 @@ To configure Liferay DXP's SAML Identity Provider Settings, navigate to the *Ide
 
 **SSL Required:** Check this box to reject SAML messages *not* sent over SSL. This affects URLs in the generated metadata.
 
-**Require Authn Request Signature?:** If checked, each Authn Request must be signed by the sending Service Provider. In most cases, this should be enabled.
 
 **Session Maximum Age:** Specify the maximum duration of the SAML SSO session in seconds. If this property is not set or is set to `0`, the SSO session has an unlimited duration. The SSO session maximum duration can be longer than the portal session maximum duration. If the portal session expires before the SSO session expires, the user is logged back in automatically. SSO session expiration does not trigger a single logout from all service providers. You can use the session maximum age, for example, to force users to sign in again after a certain period of time.
 

@@ -1,4 +1,16 @@
-# Single Sign-On with SAML
+# Authenticating with SAML
+
+```{toctree}
+:maxdepth: 3
+
+authentication-with-saml/saml-authentication-process-overview.md
+authentication-with-saml/configuring-saml-at-the-system-level.md
+authenticating-with-saml/setting-up-liferay-as-a-saml-identity-provider.md
+authenticating-with-saml/setting-up-liferay-as-a-saml-service-provider.md
+authenticating-with-saml/registering-a-saml-service-provider.md
+authenticating-with-saml/configuring-service-provider-and-identity-provider-connections.md
+authenticating-with-saml/saml-configuration-reference.md
+```
 
 The SAML (Security Assertion Markup Language) adapter provides Single Sign On (SSO) and Single Log Off (SLO) in your deployment. SAML works by using Identity Providers (IdP) and Service Providers (SP):
 
@@ -14,12 +26,12 @@ Liferay DXP instances can serve as either Service Provider (SP) or Identity Prov
 
 You can jump right to configuring SAML or learn how it works:
 
-* [Setting Up Liferay as an Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md)
-* [Registering SAML Service Provider](./registering-a-saml-service-provider.md)
-* [Setting Up Liferay as a SAML Service Provider](./setting-up-liferay-as-a-saml-service-provider.md)
-* [Configuring SP and IdP Connections](./configuring-service-provider-and-identity-provider-connections.md)
-* [SAML Configuration Reference](./saml-configuration-reference.md)
-* [SAML Authentication Process Overview](./saml-authentication-process-overview.md)
+* [Setting Up Liferay as an Identity Provider](./authentication-with-saml/setting-up-liferay-as-a-saml-identity-provider.md)
+* [Registering SAML Service Provider](./authentication-with-saml/registering-a-saml-service-provider.md)
+* [Setting Up Liferay as a SAML Service Provider](./authentication-with-saml/setting-up-liferay-as-a-saml-service-provider.md)
+* [Configuring SP and IdP Connections](./authentication-with-saml/configuring-service-provider-and-identity-provider-connections.md)
+* [SAML Configuration Reference](./authentication-with-saml/saml-configuration-reference.md)
+* [SAML Authentication Process Overview](./authentication-with-saml/saml-authentication-process-overview.md)
 
 Visit the Liferay Marketplace to install the [SAML adapter](https://web.liferay.com/marketplace/-/mp/application/15188711).
 
@@ -34,4 +46,3 @@ The `5.0.0` version of the application brings the following improvements:
 
 ```important::
    If you're upgrading from a Liferay SAML adapter prior to version 3.1.0, your portal properties are automatically migrated to System Settings configurations. Please see the `SAML Configuration Reference <./saml-configuration-reference.md>`_ article for details on settings.
-```

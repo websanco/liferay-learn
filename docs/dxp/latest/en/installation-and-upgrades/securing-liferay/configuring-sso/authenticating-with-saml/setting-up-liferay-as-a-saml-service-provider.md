@@ -62,7 +62,7 @@ You can add multiple IdP connections. To add another Identity Provider, click *A
 
     a. *Name*: generic name for the IdP.
 
-    b. *Entity ID*: the same name of the IdP. If the IdP is another @product@ instance, then it is the same name as the above example.
+    b. *Entity ID*: the same name of the IdP. If the IdP is another Liferay DXP instance, then it is the same name as the above example.
 
     c. *Metadata URL*: The IdP's metadata as a URL or as an XML file.
 
@@ -78,7 +78,7 @@ You can add multiple IdP connections. To add another Identity Provider, click *A
 
 ## Setting Up Liferay DXP as a SAML Service Provider in a Clustered Environment
 
-You can use the Liferay Connector to SAML 2.0 app as an SSO solution for a clustered @product@ environment. If your multi-node cluster is behind a load balancer, you must enable all the nodes as SPs, and they must share the same keystore manager.
+You can use the Liferay Connector to SAML 2.0 app as an SSO solution for a clustered Liferay DXP environment. If your multi-node cluster is behind a load balancer, you must enable all the nodes as SPs, and they must share the same keystore manager.
 
 If using the Filesystem Keystore Manager (the default):
 
