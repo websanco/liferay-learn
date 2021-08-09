@@ -1,16 +1,12 @@
-# Product Management Permissions Reference
+# Product Management Permissions
 
 With Liferay Commerce, you can use permissions to control access to Product Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
-![Control access to Product Management applications and resources.](./product-management-permissions-reference/images/01.png)
+![Control access to Product Management applications and resources.](./product-management-permissions/images/01.png)
 
 You can manage Product Management permissions for user roles under *Commerce* &rarr; *Product Management* in the Define Permissions tab. Assign permissions individually, or check *Action* to assign all permissions for an application or resource.
 
-![Manage Product Management permissions for user roles in the Define Permissions tab.](./product-management-permissions-reference/images/02.png)
-
-```{note}
-The following article does not document permissions for related widgets.
-```
+![Manage Product Management permissions for user roles in the Define Permissions tab.](./product-management-permissions/images/02.png)
 
 ## Application Permissions
 

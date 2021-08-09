@@ -1,16 +1,12 @@
-# Order Management Permissions Reference
+# Order Management Permissions
 
 With Liferay Commerce, you can use permissions to control access to Order Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
-![Control access to Order Management applications and resources.](./order-management-permissions-reference/images/01.png)
+![Control access to Order Management applications and resources.](./inventory-management-permissions/images/01.png)
 
 You can manage Order Management permissions for user roles under *Commerce* &rarr; *Order Management* in the Define Permissions tab. Assign permissions individually, or check *Action* to assign all permissions for an application or resource.
 
-![Manage Order Management permissions for user roles in the Define Permissions tab.](./order-management-permissions-reference/images/02.png)
-
-```{note}
-The following article does not document permissions for related widgets.
-```
+![Manage Order Management permissions for user roles in the Define Permissions tab.](./inventory-management-permissions/images/02.png)
 
 ## Application Permissions
 
@@ -69,7 +65,7 @@ In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were
 | Manage Shipments | Ability to access and modify Shipment entities |
 | Permissions | Ability to view and manage permissions for Shipment entities |
 
-**Commerce Warehouse** (listed under Warehouses, [Shipments](./order-management-permissions-reference.md), and [Products](./product-management-permissions-reference.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
+**Commerce Warehouse** (listed under Warehouses, [Shipments](./inventory-management-permissions.md), and [Products](./product-management-permissions-reference.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
 
 | Permission | Description |
 |---|---|

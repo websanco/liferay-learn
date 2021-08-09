@@ -1,16 +1,12 @@
-# Settings Permissions Reference
+# Settings Permissions
 
 With Liferay Commerce, you can use permissions to control access to Settings applications in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
-![Control access to Settings applications.](./settings-permissions-reference/images/01.png)
+![Control access to Settings applications.](./settings-permissions/images/01.png)
 
 You can manage Settings permissions for user roles under *Commerce* &rarr; *Settings* in the Define Permissions tab. Assign permissions individually, or check *Action* to assign all permissions for an application or resource.
 
-![Manage Settings permissions for user roles in the Define Permissions tab.](./settings-permissions-reference/images/02.png)
-
-```{note}
-The following article does not document permissions for related widgets.
-```
+![Manage Settings permissions for user roles in the Define Permissions tab.](./settings-permissions/images/02.png)
 
 ## Application Permissions
 

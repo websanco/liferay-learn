@@ -8,10 +8,6 @@ You can manage Store Management permissions for user roles under *Commerce* &rar
 
 ![Manage Store Management permissions for user roles in the Define Permissions tab.](./store-management-permissions-reference/images/02.png)
 
-```{note}
-The following article does not document permissions for related widgets.
-```
-
 ## Application Permissions
 
 Application permissions grant abilities for an application itself, but do not include [related resource permissions](#resource-permissions).

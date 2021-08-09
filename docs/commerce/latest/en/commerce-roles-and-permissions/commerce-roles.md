@@ -1,8 +1,8 @@
-# Commerce Roles Reference
+# Commerce Roles
 
 User roles group permissions necessary for accessing and using Liferay applications and resources. Each role can be scoped to an instance, Site, Organization, Asset Library, or Account. This scope determines which permissions can be assigned to the role. Each permission also has its own scope that determines which applications and resources can be accessed and used. See [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) for more details.
 
-Commerce includes four out-of-the-box Commerce roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your Commerce needs, other common roles you may want to add include: Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
+Commerce includes four out-of-the-box Commerce roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your needs, you may want to create additional Commerce roles. Some common custom roles include Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
 
 ```{note}
 For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
@@ -14,7 +14,7 @@ Follow these steps to view and manage permissions associated with a Commerce rol
 
 1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Users* &rarr; *Roles*.
 
-   ![Click on Roles in the Control Panel.](./commerce-roles-reference/images/01.png)
+   ![Click on Roles in the Control Panel.](./commerce-roles/images/01.png)
 
 1. Click on the desired role:
 
@@ -33,7 +33,7 @@ Follow these steps to view and manage permissions associated with a Commerce rol
 
    You can also remove or add permissions.
 
-   ![Click on the Define Permissions tab to view and manage role permissions.](./commerce-roles-reference/images/02.png)
+   ![Click on the Define Permissions tab to view and manage role permissions.](./commerce-roles/images/02.png)
 
 ## Account Administrator (Account Role)
 
@@ -216,7 +216,7 @@ The Shipment Manager role allows a user to process shipments. This includes the 
 
 The Sales Agent is a regular role in Liferay Commerce and assignees are able to manage any account assigned to the role without granting administrative permissions. Because it is a regular role, it is found in the *Regular Roles* tab.
 
-![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles-reference/images/04.png)
+![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles/images/04.png)
 
 | Permissions | Description |
 | --- | --- |
