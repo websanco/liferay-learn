@@ -16,8 +16,7 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 	property = "javax.portlet.name=P1Z2Portlet",
 	service = ConfigurationAction.class
 )
-public class P1Z2ConfigurationAction
-	extends DefaultConfigurationAction {
+public class P1Z2ConfigurationAction extends DefaultConfigurationAction {
 
 	@Override
 	public void processAction(
@@ -25,11 +24,9 @@ public class P1Z2ConfigurationAction
 			ActionResponse actionResponse)
 		throws Exception {
 
-		String preference = ParamUtil.getString(
-			actionRequest, "preference");
+		String preference = ParamUtil.getString(actionRequest, "preference");
 
-		setPreference(
-			actionRequest, "preference", preference);
+		setPreference(actionRequest, "preference", preference);
 
 		super.processAction(portletConfig, actionRequest, actionResponse);
 	}

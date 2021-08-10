@@ -5,15 +5,10 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 
 <%@ page import="com.liferay.portal.kernel.util.Constants" %>
-<%@ page import="com.liferay.petra.string.StringPool" %>
 
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />
-
-<%
-String preference = (String)portletPreferences.getValue("preference", "preference1");
-%>
 
 <liferay-portlet:actionURL portletConfiguration="<%= true %>" var="configurationActionURL" />
 
@@ -24,7 +19,7 @@ String preference = (String)portletPreferences.getValue("preference", "preferenc
 	<aui:input name="redirect" type="hidden" value="<%= configurationRenderURL %>" />
 
 	<aui:fieldset>
-		<aui:select label="portlet-preference" name="preference" value="<%= preference %>">
+		<aui:select label="portlet-preference" name="preference" value='<%= (String)portletPreferences.getValue("preference", "preference1") %>'>
 			<aui:option label="preference1" value="preference1" />
 			<aui:option label="preference2" value="preference2" />
 			<aui:option label="preference3" value="preference3" />
