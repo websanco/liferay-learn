@@ -25,11 +25,11 @@ The liveness and readiness probes are deployed to all services regardless of the
 
 To change the default values, modify the `lcp.json` file. See the [Configuration via LCP.json](../reference/configuration-via-lcp-json.md) article.
 
-### Liveness Probe
+## Liveness Probe
 
-The liveness probe uses a URL Request (path/port) to validate that a service is running. This probe repeatedly pings a configurable path (by default, `/c/portal/layout`). Often, the liveness probe is a lightweight HTTP server inside the application. 
+The liveness probe uses a URL Request (path/port) to validate that a service is running. This probe repeatedly pings a configurable path (for example, `/c/portal/layout` for the `liferay` service). Often, the liveness probe is a lightweight HTTP server inside the application. 
 
-If the probe gets an HTTP response in the 200 or 300 range, it marks the application as healthy. It fails if the instance is no longer live (for example, due to a crash). If the probe pings the path a number of times (configurable via the probe's `failureThreshold` field in `LCP.json`) and cannot get a valid response, the service automatically restarts.
+If the probe gets an HTTP response in the 200 or 300 range, it marks the application as healthy. It fails if the instance is no longer live (for example, due to a crash). If the probe pings the path a number of times (configurable via the probe's `failureThreshold` field in `LCP.json`) and cannot get a valid response, the service automatically restarts. When the liveness probe fails, it is a sign that either your service is experiencing a problem during startup, or it starts up too slowly for your probe's configuration and you may need to adjust it.
 
 Each service's `LCP.json` file contains the following configuration:
 
@@ -47,13 +47,25 @@ Each service's `LCP.json` file contains the following configuration:
 }
 ```
 
-### Readiness Probe
+### Adjusting Liveness Probe Configurations
 
-The readiness probe uses an executable command. If the command returns with the correct exit code, then the container is marked as healthy. Otherwise, it is marked unhealthy.
+The best configuration for your liveness probe depends on the customizations you have deployed and the expected startup time of your service. The `path` value should be set to whatever route best indicates that your service is up and running. For the `liferay` service, this could be the path to your main Site's home page (such as `/web/guest/home`), or it could be a page hidden from your navigation that takes longer to load.
+
+The `liferay` service's path typically is the only service that may need adjustment to the path, because of the modules or customizations that may be applied to it. You can create a custom OSGi module or servlet to ping instead, for instance, that verifies that your other custom modules are active before accepting a request to signal that your service is live.
+
+The other values in your liveness probe's configuration (`initialDelaySeconds`, `periodSeconds`, and `successThreshold`) should also be tweaked as needed for your service's typical startup. These values should also be tweaked as needed if they are not appropriate for your service's startup process. For example, if your `liferay` service runs extra tasks on startup, it may need more time to perform the liveness check.
+
+You must be aware of any impact to your service's startup time that your customizations (custom modules, scripts, etc.) may have, and adjust your liveness probe's configuration accordingly. The values you configure should be useful in stopping and restarting the service within a reasonable time if the startup fails, but not so short that the probe restarts the service too fast to start successfully.
+
+## Readiness Probe
+
+The readiness probe pings an address like the liveness probe, or it uses an executable command to check the health of your service. If the command returns with the correct exit code, then the container is marked as healthy. Otherwise, it is marked unhealthy.
+
+When the readiness probe fails, it is a sign that your service timed out when performing the configured command. This can be a sign that the service is running too slowly and requires tuning, that it is receiving high traffic and cannot respond to all requests, or even that there is a problem with the command it is running.
 
 As soon as the readiness probe detects that the service is ready, then the service may receive traffic. If the probe detects that the service is no longer ready, then it will stop receiving new traffic. However, the readiness probe will not restart the service on its own.
 
-Each service's `LCP.json` file contains the following:
+Each service's `LCP.json` file contains the following configuration:
 
 ```json
 {
@@ -75,3 +87,9 @@ Oct 04 12:05:53.001 build-14 [webserver-5547c96447-hbrr6] 10.138.15.249 - - [04/
 Oct 04 12:05:53.083 build-14 [webserver-5547c96447-hbrr6] 10.138.0.13 - - [04/Oct/2019:19:05:53 +0000] "GET /nginx_status HTTP/1.1" 200 115 "-" "GoogleHC/1.0" "-"
 Oct 04 12:05:53.293 build-14 [webserver-5547c96447-hbrr6] 10.138.15.251 - - [04/Oct/2019:19:05:53 +0000] "GET /nginx_status HTTP/1.1" 200 115 "-" "GoogleHC/1.0" "-"
 ```
+
+### Adjusting Readiness Probe Configurations
+
+The readiness probe should execute a command that appropriately gauges the health of your service. If your service is responding to requests too slowly and it needs to be cut off from more traffic, then the health check should also experience this slowness so it can respond appropriately. Services like the `webserver`, by default, only ping a specific address to check the service's readiness. However, you may want to create a different command, such as running a custom script to check the health of your service.
+
+If necessary, then you must also adjust the other configuration values (`initialDelaySeconds`, `periodSeconds`, `timeoutSeconds`, and `successThreshold`) as appropriate for your needs. If your service should prefer to serve more requests even if it takes a long time to do so (for example, if the work done to service the request is expected to take a long time), then the configuration should allow for a longer timeout. If your service needs to respond to requests quickly or timeout instead, then the configuration should have a shorter timeout.
