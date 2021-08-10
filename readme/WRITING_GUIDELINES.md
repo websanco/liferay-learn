@@ -1,8 +1,14 @@
 # Documentation Standards
 
-[TOC]
+## Documentation Values
 
-There are several categories of standards:
+Our mission is to satisfy the real world needs of Liferay's users and customers by providing accessible, concise, and cohesive documentation for Liferay's product.
+
+| Value | Article Attributes
+| --- | --- |
+| **Accessible** | <ul><li>Articles quickly demonstrate the real-world value of a feature or customization </li><li>Articles are organized in ways that correspond to solving a user's goals</li><li>Optimizes presentation of ideas using easily skimmable and digestible methods, through usage of tables, visuals, and other methods</li><li>Maintains a neutral tone and language that can be easily understood cross-culturally</li></ul> |
+| **Concise** | <ul><li>Gets to the point oquickly with minimal distractions</li><li>Omits needless words and respects reader's time</li></ul> |
+| **Cohesive** | <ul><li>Regularly answers the question, "How does this relate to the rest of Liferay's other features or products?"</li><li>Features are presented in a way that highlights the strength of the platform and its interrelatedness</li><li>Organization reflects produce cohesion and demonstrates an understanding of user needs</li></ul> |
 
 ## Formatting Standards
 
