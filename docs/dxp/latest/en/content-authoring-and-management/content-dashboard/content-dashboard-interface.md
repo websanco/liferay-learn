@@ -10,7 +10,7 @@ The Content Dashboard interface has the following areas:
 
 ![The Content Dashboard user interface contains three areas of information.](./content-dashboard-interface/images/05.png)
 
-When you [open the Content Dashboard](#accessing-the-content-dashboard), you see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents list](#contents-list) (2) at the button. From the Contents list, you can access the [Content Info sidebar](#content-info-sidebar) (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Content Info sidebar and the Content Performance panel are collapsible elements that show additional details for each item in the Contents List.
+When you [open the Content Dashboard](#accessing-the-content-dashboard), you see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents list](#contents-list) (2) at the bottom. From the Contents list, you can access the [Content Info sidebar](#content-info-sidebar) (3) and the [Content Performance panel](../content-performance-panel/about-the-content-performance-panel.md). The Content Info sidebar and the Content Performance panel can collapse. They show additional details for each item in the Contents List.
 
 To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* option. Alternatively, hover over the article and click *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Panel](../content-performance-panel/about-the-content-performance-panel.md).
 
@@ -55,18 +55,18 @@ In the Content Audit Tool interface you can find:
 
 By default, the bar chart shows the total number of assets for each Category in the selected global Vocabularies, but you can filter this information in different ways:
 
-- Using the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
-- Filtering categories in the chart, by checking or unchecking the Category name in the chart legend.
-- Clicking one of the bars to zoom-in on a specific Category's results.
-- Changing the Vocabularies.
+- Use the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
+- Filter categories in the chart by checking or unchecking the Category name in the chart legend.
+- Click one of the bars to zoom-in on a specific Category's results.
+- Change the Vocabularies.
 
 To change the Vocabularies:
 
-1. Click on the *Configure Chart* icon (![gear icon](../../images/icon-settings.png)) in the Content Audit area.
+1. Click the *Configure Chart* icon (![gear icon](../../images/icon-settings.png)) in the Content Audit area.
 1. In the dual listbox, click the Vocabulary in the *Available* or *In Use* lists and click the selection buttons (![Angle Left](../../images/icon-angle-left.png) ![Angle right](../../images/icon-angle-right.png)) to add or remove the Vocabularies you want to show.
 1. Click the *Up* (![Up](../../images/icon-angle-up.png)) and *Down* (![Down](../../images/icon-angle-down.png)) buttons to order of the Vocabularies in the chart axis.
 1. Click *Save*.
-1. Click the *Flip Axes* (![Flip Axes](../../images/icon-change.png)) icon in the Content Audit area if you need to switch the axis assigned to the selected vocabularies.
+1. Click the *Flip Axes* (![Flip Axes](../../images/icon-change.png)) icon in the Content Audit area if you must switch the axis assigned to the selected vocabularies.
 
     ![Select the Vocabularies in the Content Audit Tool](./content-dashboard-interface/images/12.png)
 
@@ -74,7 +74,7 @@ To change the Vocabularies:
    You can select a maximum of two Vocabularies defined at the Global Site level.
 ```
 
-A grey bar denotes content without any categories in one of the selected Vocabularies. Chart labels for this content are distinctive. For instance, when you choose the Audience Vocabulary, the content that is not categorized under Audience shows the *No Audience Specified* label.
+A gray bar denotes content without any categories in one of the selected Vocabularies. Chart labels for this content are distinctive. For instance, when you choose the Audience Vocabulary, the content that is not categorized under Audience shows the *No Audience Specified* label.
 
 ## Contents List
 
@@ -127,7 +127,7 @@ For each entry in the Contents list, you can access the following options using 
 1. Select one of the predefined filters or a custom filter (denoted by three dots) to create your own filter criteria.
 1. Select the content you want to filter.
 
-The Filter Editor area shows your filters and the total number of results. To remove one or more filters, click the *Close* (![Close](../../images/icon-times.png)) button next to the filter's name, or click *Clear* to remove all the filters and reset the Contents list. In addition to the predefined and custom filters, you can search and filter the assets in the Content View using keywords in the Search field. To understand how the combination of different filters work, read [Understanding How Filtering Works in the Contents List](#understanding-how-filtering-works-in-the-contents-list).
+The Filter Editor area shows your filters and the total results. To remove one or more filters, click the *Close* (![Close](../../images/icon-times.png)) button next to the filter's name, or click *Clear* to remove all filters and reset the Contents list. In addition to the predefined and custom filters, you can search and filter the assets in the Content View using keywords in the Search field. To understand how the combination of different filters works, read [Understanding How Filtering Works in the Contents List](#understanding-how-filtering-works-in-the-contents-list).
 
 ![Use the filter editor to remove a specific filter or all of them from the filter area.](./content-dashboard-interface/images/01.png)
 
@@ -146,8 +146,8 @@ To sort the content,
 
 ### Understanding How Filtering Works in the Contents List
 
-- When you use the Categories or Tags filters with more than one criteria, the results corresponds to content that meets all the criteria (see example A.)
-- When you choose multiple options for the same filter criteria, the Contents list shows the assets matching at least one option (see example B.)
+- When you use the Categories or Tags filters with more than one criteria, the results correspond to content that meets all the criteria (see example A.)
+- When you choose multiple options for the same filter criteria, the Contents list shows assets matching at least one option (see example B.)
 - The criteria from different filters is combined using the `and` operator (see example C.)
 
 | Example| Filter By | Filter Example | Contents List Results |
