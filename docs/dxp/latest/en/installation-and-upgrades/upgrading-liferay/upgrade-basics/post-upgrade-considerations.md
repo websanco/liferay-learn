@@ -8,6 +8,12 @@ Now that you are done upgrading your database, re-enable your production setting
 
 ### Search Indexing
 
+If you disabled search indexing for upgrading to 7.2, re-enable search indexing by removing the `.config` file you used to disable it or by setting `indexReadOnly="false"` in the `.config` file. For example, 
+
+```bash
+rm [Liferay Home]/files/osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+```
+
 Reindexing search indexes is required for most upgrades, but is typically not required for applying a service pack or upgrading to a new GA (rolling release) within the same Liferay version. Here's how to reindex:
 
 1. Click on the *Global Menu* (![Global Menu icon](./post-upgrade-considerations/images/01.png)) and select the *Control Panel* tab. The Control Panel appears.

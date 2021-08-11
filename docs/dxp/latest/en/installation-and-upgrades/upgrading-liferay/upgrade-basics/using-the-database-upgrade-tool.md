@@ -20,6 +20,12 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
+1. If you're upgrading to 7.2, disable search indexing using a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) in your new installation's `[Liferay Home]/files/osgi/config/` folder. For example,
+
+    ```bash
+    echo "indexReadOnly=\"true\"" >> [Liferay Home]/files/osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+    ```
+
 1. If you want to upgrade your Marketplace app data along with the Liferay database upgrade, [download](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md) the latest version of each app targeted for the new Liferay version and copy it to your `[Liferay Home]/deploy` folder. Otherwise, you can install the apps after the database upgrade and upgrade their data as described in the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your new `[Liferay Home]/osgi/configs/` folder.
