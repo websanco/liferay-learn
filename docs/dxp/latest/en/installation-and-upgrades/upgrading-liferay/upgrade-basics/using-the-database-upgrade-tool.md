@@ -2,12 +2,12 @@
 
 The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal CE databases offline.
 
-```important::
-   **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
+```{important}
+**Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
-```important::
-   If you're upgrading from 6.2 or earlier, update your file store configuration. See the `Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>`_ for more information.
+```{important}
+If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) for more information.
 ```
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
@@ -30,12 +30,12 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your new `[Liferay Home]/osgi/configs/` folder.
 
-    ```important::
-       If you're using `Advanced File System Store <../../../system-administration/file-storage/configuring-file-storage.md>`_, you must configure it with a ``.config`` file in the new installation before upgrading the database.
+    ```{important}
+    If you're using `[Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md), you must configure it with a `.config` file in the new installation before upgrading the database.
 
-       Here's an example  ``com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config`` file with the required ``rootDir`` parameter:
+    Here's an example  `com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 
-       ``rootDir="data/document_library"``
+    `rootDir="data/document_library"`
     ```
 
 1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.

@@ -22,16 +22,16 @@ Reindexing search indexes is required for most upgrades, but is typically not re
 
 ![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/02.png)
 
-```note::
-   If you upgraded from an older version (7.1 and below) consider `installing Elasticsearch <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ to handle search indexing.
+```{note}
+If you upgraded from an older version (7.1 and below) consider [installing Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) to handle search indexing.
 ```
 
 ### Database Configurations
 
 Prior to upgrading the database, you may have tuned it for upgrade (see [Database Tuning for Upgrades](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)). Now that the upgrade is complete, restore your production database settings.
 
-```note::
-   If you migrated from a sharded environment during data upgrade, then you must make more adjustments to your configurations to complete the transition to virtual instances. See the `Upgrade and Update Properties <../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties>`_ section for more information.
+```{note}
+If you migrated from a sharded environment during data upgrade, then you must make more adjustments to your configurations to complete the transition to virtual instances. See the [Upgrade and Update Properties](../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties) section for more information.
 ```
 
 ## Installing the Latest Marketplace Apps
