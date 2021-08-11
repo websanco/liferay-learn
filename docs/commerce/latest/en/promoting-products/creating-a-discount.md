@@ -82,7 +82,7 @@ You can make this discount available for all accounts or specific accounts or ac
 To specify which accounts and account groups are eligible for this discount:
 
 1. Click the _Eligibility_ tab.
-1. Click the [Select Account Groups](../account-management/creating-a-new-account-group.md) radio button.
+1. Click the [Select Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md) radio button.
 1. In the _Add Account Groups_ search bar, search for the desired account groups; in this example, _US Accounts East_.
 1. Click _Select_ to add the account group.
 
@@ -111,7 +111,7 @@ To create a discount:
 1. Enter a name: _Spring Sale_.
 1. Select a discount type (for example, _Apply to Subtotal_) from the _Target_ drop down. (See [Discount Types](./introduction-to-discounts.md#types-of-discounts) to learn more about the different discount types.)
 1. Check the box for which channel this discount applies to.
-1. Select which [Account Groups](../account-management/creating-a-new-account-group.md) this discount applies to. In this example, _US East Coast_.
+1. Select which [Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md) this discount applies to. In this example, _US East Coast_.
 1. If using a coupon code, switch the _Use Coupon Code_ toggle to _Yes_. Then enter a code in the _Couple Code_ field. Otherwise leave it as _NO_.
 1. If using a percentage, switch the _Use Percentage_ toggle to _Yes_.
 1. Enter the _Maximum Discount Amount_: $20.00
@@ -140,6 +140,6 @@ In this example, a Discount Rule has been applied to this particular Discount. C
 ## Additional Information
 
 * [Introduction to Discounts](./introduction-to-discounts.md)
-* [Creating a New Account Group](../account-management/creating-a-new-account-group.md)
+* [Creating a New Account Group](../users-and-accounts/account-management/creating-a-new-account-group.md)
 * [Creating a Price List](../managing-a-catalog/managing-prices/creating-a-price-list.md)
 * [Using Price Tiers](../managing-a-catalog/managing-prices/using-price-tiers.md)

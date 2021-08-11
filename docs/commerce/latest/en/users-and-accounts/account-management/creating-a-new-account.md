@@ -28,7 +28,7 @@ Users who have administrative permissions for the store or installation may crea
 
     ![Navigate to Accounts in the Control Panel.](./creating-a-new-account/images/04.png)
 
-1. Click the (![Add icon](../images/icon-add.png)) button.
+1. Click the (![Add icon](../../images/icon-add.png)) button.
 1. Enter the following:
     * **Name**: _your company name_ (Acme International)
     * **Email**: _your company email_ (Acme1@acme.org)
@@ -44,7 +44,7 @@ Users who have administrative permissions for the store or installation may crea
 Users who have administrative permissions for the store or installation may create and update account information in the _Control Panel_.
 
 1. Navigate to the _Control Panel_ → _Users_ → _Accounts_.
-1. Click the (![Add icon](../images/icon-add.png)) button to add a new account.
+1. Click the (![Add icon](../../images/icon-add.png)) button to add a new account.
 1. Enter the following:
     * **Name**: _your company name_ (Acme International)
     * **Email**: _your company email_ (Acme1@acme.org)
@@ -60,7 +60,6 @@ The new account has been created using the Control Panel. Click _Addresses_ to u
 ## Additional Information
 
 * [Account Management](../account-management.md)
-* [Assigning User Roles](../account-management/assigning-account-roles.md)
-* [Inviting Users to an Account](../account-management/inviting-users-to-an-account.md)
-* [Adding Addresses to an Account](../account-management/adding-addresses-to-an-account.md)
-* [Creating a New Account Group](../account-management/creating-a-new-account-group.md)
+* [Inviting Users to an Account](./inviting-users-to-an-account.md)
+* [Adding Addresses to an Account](./adding-addresses-to-an-account.md)
+* [Creating a New Account Group](./creating-a-new-account-group.md)

@@ -4,8 +4,8 @@ By default, all products are visible in a Catalog. However, users can limit a pr
 
 ## Prerequisites
 
-1. One or more [Accounts](../../../account-management.md) have been created.
-1. One or more [Account Groups](../../../account-management/creating-a-new-account-group.md) have been created.
+1. One or more [Accounts](../../../users-and-accounts/account-management.md) have been created.
+1. One or more [Account Groups](../../../users-and-accounts/account-management/creating-a-new-account-group.md) have been created.
 1. Products have been added to a catalog.
 
 ## Configuring a Product's Filter
@@ -63,4 +63,4 @@ This product is now visible to only the accounts that are customer accounts of t
 ## Additional Information
 
 * [Configuring Product Visibility Using Channels](../../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
-* [Creating a New Account Group](../../../account-management/creating-a-new-account-group.md)
+* [Creating a New Account Group](../../../users-and-accounts/account-management/creating-a-new-account-group.md)

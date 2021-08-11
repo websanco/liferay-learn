@@ -1,6 +1,6 @@
 # Settings Permissions
 
-With Liferay Commerce, you can use permissions to control access to Settings applications in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
+With Liferay Commerce, you can use permissions to control access to Settings applications in the Commerce tab of the Global Menu (![Global Menu](../../images/icon-applications-menu.png)).
 
 ![Control access to Settings applications.](./settings-permissions/images/01.png)
 
@@ -54,5 +54,5 @@ Settings applications reference the following resources:
 
 ## Additional Information
 
-* [Availability Estimates](../managing-a-catalog/managing-inventory/availability-estimates.md)
-* [Measurement Units](../store-administration/configuring-shipping-methods/measurement-units.md)
+* [Availability Estimates](../../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [Measurement Units](../../store-administration/configuring-shipping-methods/measurement-units.md)

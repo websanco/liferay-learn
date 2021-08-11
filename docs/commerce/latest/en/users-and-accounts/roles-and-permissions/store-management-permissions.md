@@ -1,6 +1,6 @@
 # Store Management Permissions
 
-With Liferay Commerce, you can use permissions to control access to Store Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
+With Liferay Commerce, you can use permissions to control access to Store Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../../images/icon-applications-menu.png)).
 
 ![Control access to Store Management applications and resources.](./store-management-permissions/images/01.png)
 
@@ -80,7 +80,7 @@ Store Management applications are connected to the following resources:
 
 ## Additional Information
 
-* [Introduction to Channels](../starting-a-store/channels/introduction-to-channels.md)
-* [Managing Channels](../starting-a-store/channels/managing-channels.md)
-* [Channels Reference Guide](../starting-a-store/channels/channels-reference-guide.md)
-* [Currencies Reference](../store-administration/currencies/currencies-reference.md)
+* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
+* [Managing Channels](../../starting-a-store/channels/managing-channels.md)
+* [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)
+* [Currencies Reference](../../store-administration/currencies/currencies-reference.md)

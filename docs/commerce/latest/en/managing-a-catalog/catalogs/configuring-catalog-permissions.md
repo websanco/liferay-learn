@@ -8,7 +8,7 @@ Catalog permissions determine which users can see and modify catalogs and their 
 
 ## Adding Catalog Management Permissions to an Existing Role
 
-Get started by [creating a new custom account role](../../account-management/creating-a-custom-account-role.md) or by modifying an existing role to manage Catalogs and Products. This Role will can be configured to have minium access to system wide functions. To learn more about defining a user permissions, see [Defining Role Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html).
+Get started by creating a new custom role or by modifying an existing role to manage Catalogs and Products. This Role will can be configured to have minimum access to system wide functions. To learn more about defining a user permissions, see [Defining Role Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html).
 
 To define catalog management permissions for an existing role:
 

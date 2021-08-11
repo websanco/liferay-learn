@@ -1,6 +1,6 @@
 # Pricing Permissions
 
-With Liferay Commerce, you can use permissions to control access to Pricing applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
+With Liferay Commerce, you can use permissions to control access to Pricing applications and resources in the Commerce tab of the Global Menu (![Global Menu](../../images/icon-applications-menu.png)).
 
 ![Control access to Pricing applications and resources.](./pricing-permissions/images/01.png)
 
@@ -82,7 +82,7 @@ Pricing applications reference the following resources:
 | Update | Ability to modify Product Group entities |
 | View | Ability to view Product Group entities |
 
-**Commerce Pricing** (listed under Product Groups and [Products](./product-management-permissions-reference.md); previously listed under Control Panel > General Permissions): These permissions grant the ability to perform resource-related operations in the Product Groups application.
+**Commerce Pricing** (listed under Product Groups and [Products](./product-management-permissions.md); previously listed under Control Panel > General Permissions): These permissions grant the ability to perform resource-related operations in the Product Groups application.
 
 | Permission | Description |
 | --- | --- |
@@ -98,5 +98,5 @@ Pricing applications reference the following resources:
 
 ## Additional Information
 
-* [Introduction to Pricing](../managing-a-catalog/managing-prices/introduction-to-pricing.md)
-* [Introduction to Discounts](../promoting-products/introduction-to-discounts.md)
+* [Introduction to Pricing](../../managing-a-catalog/managing-prices/introduction-to-pricing.md)
+* [Introduction to Discounts](../../promoting-products/introduction-to-discounts.md)

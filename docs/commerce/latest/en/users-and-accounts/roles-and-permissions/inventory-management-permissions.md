@@ -1,6 +1,6 @@
 # Inventory Management Permissions
 
-With Liferay Commerce, you can use permissions to control access to Inventory Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
+With Liferay Commerce, you can use permissions to control access to Inventory Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../../images/icon-applications-menu.png)).
 
 ![Control access to Inventory Management applications and resources.](./inventory-management-permissions/images/01.png)
 
@@ -34,7 +34,7 @@ Resource permissions grant specific abilities related to application resources. 
 
 Inventory Management applications reference the following resources:
 
-**Commerce Warehouse** (listed under Warehouses, [Shipments](./order-management-permissions-reference.md), and [Products](./product-management-permissions-reference.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
+**Commerce Warehouse** (listed under Warehouses, [Shipments](./order-management-permissions.md), and [Products](./product-management-permissions.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
 
 | Permission | Description |
 |---|---|
@@ -53,6 +53,6 @@ Inventory Management applications reference the following resources:
 
 ## Additional Information
 
-* [Introduction to Managing Inventory](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
-* [Inventory Management Reference Guide](../managing-a-catalog/managing-inventory/inventory-management-reference-guide.md)
-* [Warehouse Reference Guide](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [Introduction to Managing Inventory](../../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
+* [Inventory Management Reference Guide](../../managing-a-catalog/managing-inventory/inventory-management-reference-guide.md)
+* [Warehouse Reference Guide](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)

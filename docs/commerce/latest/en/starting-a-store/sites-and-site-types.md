@@ -10,7 +10,7 @@ See the [Store Setup Overview](../starting-a-store/store-setup-overview.md) for 
 
 ## Site Types
 
-Liferay Commerce uses Liferay Sites in combination with Site Types. Site Types designate your store's business model and will determine how your storefront works with [Accounts](../account-management.md).
+Liferay Commerce uses Liferay Sites in combination with Site Types. Site Types designate your store's business model and will determine how your storefront works with [Accounts](../users-and-accounts/account-management.md).
 
 The following site types are available:
 
@@ -40,4 +40,4 @@ Changing a site's type also changes which accounts appear in its Accounts widget
 
 * [Store Setup Overview](../starting-a-store/store-setup-overview.md)
 * [Building a Site](https://learn.liferay.com/dxp/latest/en/site_building.html)
-* [Account Management](../account-management.md)
+* [Account Management](../users-and-accounts/account-management.md)

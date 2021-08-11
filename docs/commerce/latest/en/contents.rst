@@ -11,7 +11,7 @@ Contents
    managing_a_catalog
    creating_store_content
    promoting_products
-   account-management.md
+   users-and-accounts.md
    orders_and_fulfillment
    store_administration
    commerce_roles_and_permissions

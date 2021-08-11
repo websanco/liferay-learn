@@ -108,13 +108,12 @@ See [Creating Your Storefront](../creating-store-content/creating-your-storefron
 
 To learn more about how accounts, inviting users accounts, account roles, and more, read the following articles:
 
-* [Introduction to Accounts](../account-management.md)
-* [Creating a New Account](../account-management/creating-a-new-account.md)
-* [Inviting Users to an Account](../account-management/inviting-users-to-an-account.md)
-* [Adding Addresses to an Account](../account-management/adding-addresses-to-an-account.md)
-* [Account Roles](../account-management/account-roles.md)
-* [Assigning Account Roles](../account-management/assigning-account-roles.md)
-* [Creating a New Account Group](../account-management/creating-a-new-account-group.md)
+* [Introduction to Accounts](../users-and-accounts/account-management.md)
+* [Creating a New Account](../users-and-accounts/account-management/creating-a-new-account.md)
+* [Inviting Users to an Account](../users-and-accounts/account-management/inviting-users-to-an-account.md)
+* [Adding Addresses to an Account](../users-and-accounts/account-management/adding-addresses-to-an-account.md)
+* [Account Roles](../users-and-accounts/account-management/account-roles.md)
+* [Creating a New Account Group](../users-and-accounts/account-management/creating-a-new-account-group.md)
 
 ## Managing Orders and Shipments
 

@@ -2,10 +2,6 @@
 
 The organizational structure of B2B sales networks can be mirrored in Liferay Commerce using the Organizations feature. Organizations are hierarchical arrangements of Users that can model real-world organizational hierarchies that enable distributed and simplified management of Users, Roles, Permissions and Accounts.
 
-```note::
-   A Role is a collection of permissions that can be assigned to a User. A Permission is any specific assignable action a User may take, such as viewing a menu, account or widget, assigning Roles to other users, or adding a new product. See the articles on `Roles <https://help.liferay.com/hc/en-us/articles/360018174371-Managing-Roles>`_ and `Permissions <https://help.liferay.com/hc/en-us/articles/360018174391-Defining-Role-Permissions>`_, for more information.
-```
-
 When Organizations are used along with assigning permissions to Organization Roles, Users assigned to an Organization automatically inherit the role-based permissions that were defined for that Organization.
 <!-- The following sentence is removed because I read it and I don't know what specifically it's telling someone - maybe: Organizations (and sub-organizations) can have accounts assigned to them - ensuring that members of an organization have access to the right accounts at the right time.
 

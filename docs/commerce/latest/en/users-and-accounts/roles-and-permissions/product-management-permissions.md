@@ -1,6 +1,6 @@
 # Product Management Permissions
 
-With Liferay Commerce, you can use permissions to control access to Product Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
+With Liferay Commerce, you can use permissions to control access to Product Management applications and resources in the Commerce tab of the Global Menu (![Global Menu](../../images/icon-applications-menu.png)).
 
 ![Control access to Product Management applications and resources.](./product-management-permissions/images/01.png)
 
@@ -54,9 +54,9 @@ Product Management applications reference the following resources:
 
 **Commerce Product Specification** (listed under Catalogs): These permissions grant the ability to perform operations on Product Specification entities, which are used to store information about a Product's attributes. Each is an instance of a Specification template.
 
-**Commerce Pricing** (listed under [Product Groups](./pricing-permissions-reference.md) and Products; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform resource-related operations in the Product Groups application. Product Group entities are used for grouping related Products so Price Lists and Discounts can be easily applied to them.
+**Commerce Pricing** (listed under [Product Groups](./pricing-permissions.md) and Products; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform resource-related operations in the Product Groups application. Product Group entities are used for grouping related Products so Price Lists and Discounts can be easily applied to them.
 
-**Commerce Warehouse** (listed under Products, [Shipments](./order-management-permissions-reference.md) and [Warehouses](./inventory-management-permissions-reference.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
+**Commerce Warehouse** (listed under Products, [Shipments](./order-management-permissions.md) and [Warehouses](./inventory-management-permissions.md)): These permissions grant the ability to perform operations on Warehouse entities. Each Warehouse stores Product inventory, is connected to Channels, and represents a physical location, with an address and geolocation.
 
 **Commerce BOM** (listed under Shop by Diagram Admin; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform resource-related operations in the Shop by Diagram application. BOM resource entities are diagrams that map object components to Product SKUs.  
 
@@ -91,7 +91,7 @@ However, Commerce Products, Commerce Catalogs, Commerce Pricing, and Commerce BO
 |---|---|
 | Add Commerce Product Specification Option | Ability to add Specifications to a Product |
 | Add Option | Ability to add Options to Products |
-| Add Option Category | Ability to add Specificiation Groups to a Produdct for categorizing Specifications |
+| Add Option Category | Ability to add Specification Groups to a Product for categorizing Specifications |
 | Manage Attachments| Ability to manage Product attachments in the Media tab |
 | Manage Images | Ability to manage Product images in the Media tab |
 | Manage Measurement Units | Ability to manage measurement units used for individual Product entities |
@@ -136,6 +136,6 @@ However, Commerce Products, Commerce Catalogs, Commerce Pricing, and Commerce BO
 
 ## Additional Information
 
-* [Products Overview](../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
-* [Creating a New Catalog](../managing-a-catalog/catalogs/creating-a-new-catalog.md)
-* [Using Product Options](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
+* [Products Overview](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
+* [Creating a New Catalog](../../managing-a-catalog/catalogs/creating-a-new-catalog.md)
+* [Using Product Options](../../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)

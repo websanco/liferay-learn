@@ -26,7 +26,7 @@ The new address has been added using the _Account Management_ widget.
 
 Users can add addresses to an account in the _Control Panel_.
 
-1. Click the _Global_ (![Global Menu](../images/icon-applications-menu.png)) button then _Control Panel_.
+1. Click the _Global_ (![Global Menu](../../images/icon-applications-menu.png)) button then _Control Panel_.
 1. Click _Accounts_.
 
     ![Navigate to the Global menu to access the Accounts menu.](./adding-addresses-to-an-account/images/05.png)

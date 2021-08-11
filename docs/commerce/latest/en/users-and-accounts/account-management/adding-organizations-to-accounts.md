@@ -24,7 +24,7 @@ The organization has been added to the account using the Account Management Widg
 
 Users who have administrative permissions for the store or installation may create and update account information in the Control Panel.
 
-1. Navigate to the _Global Menu_ ![Applications Menu icon](../images/icon-applications-menu.png) → _Control Panel_.
+1. Navigate to the _Global Menu_ ![Applications Menu icon](../../images/icon-applications-menu.png) → _Control Panel_.
 1. Click _Accounts_.
 
     ![Navigate to the Global Menu to access the Accounts menu.](./adding-organizations-to-accounts/images/04.png)
@@ -55,7 +55,6 @@ The organization has been added to the account using the Control Panel.
 
 ## Additional Information
 
-* [Account Roles](../account-management/account-roles.md)
-* [Commerce Roles Permissions Reference](../account-management/commerce-roles-permissions-reference.md)
 * [Accounts Management](../account-management.md)
+* [Account Roles](./account-roles.md)
 * [Adding Users to Organizations](https://learn.liferay.com/dxp/latest/en/users-and-permissions/organizations/adding-users-to-organizations.html)

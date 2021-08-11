@@ -57,7 +57,7 @@ The price list (_VIP Customers_ in this example) has been created and applied to
 
 ## Additional Information
 
-* [Creating a New Account Group](../../account-management/creating-a-new-account-group.md)
-* [Creating a New Account](../../account-management/creating-a-new-account.md)
+* [Creating a New Account](../../users-and-accounts/account-management/creating-a-new-account.md)
+* [Creating a New Account Group](../../users-and-accounts/account-management/creating-a-new-account-group.md)
 * [Adding Products to a Price List](./adding-products-to-a-price-list.md)
 * [Using Price Tiers](./using-price-tiers.md)

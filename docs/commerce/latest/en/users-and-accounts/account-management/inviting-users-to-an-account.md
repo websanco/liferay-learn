@@ -25,7 +25,7 @@ This user has been added to the account.
 
 1. Click the account (for example _Acme, Inc_)
 1. Click _Users_ in the left menu.
-1. Click the (![Add icon](../images/icon-add.png)) button to add a new user.
+1. Click the (![Add icon](../../images/icon-add.png)) button to add a new user.
 1. Check the boxes for all the users to be added.
 1. Click _Add_.
 
@@ -47,6 +47,5 @@ The users have been added to the account.
 ## Additional Information
 
 * [Account Management](../account-management.md)
-* [Creating a New Account](../account-management/creating-a-new-account.md)
-* [Assigning Account Roles](../account-management/assigning-account-roles.md)
-* [Creating a New Account Group](../account-management/creating-a-new-account-group.md)
+* [Creating a New Account](./creating-a-new-account.md)
+* [Creating a New Account Group](./creating-a-new-account-group.md)

@@ -1,20 +1,22 @@
-# Commerce Roles
+# Commerce Roles Reference
 
 User roles group permissions necessary for accessing and using Liferay applications and resources. Each role can be scoped to an instance, Site, Organization, Asset Library, or Account. This scope determines which permissions can be assigned to the role. Each permission also has its own scope that determines which applications and resources can be accessed and used. See [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) for more details.
 
-Commerce includes four out-of-the-box roles: Account Administrator, Account Member, Buyer, and Order Manager. While these roles may satisfy your needs, you may want to create additional Commerce roles to better mirror your institutional structure. Some common custom roles include Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
+Commerce includes four [out-of-the-box roles](#out-of-the-box-roles): Account Administrator, Account Member, Buyer, and Order Manager.
+
+While these roles may satisfy your needs, you may want to create additional Commerce roles to better suit your use case. Some [common custom roles](#custom-roles) include Catalog Manager, Inventory Manager, Shipments Manager, Instance Order Manager, and Discount Manager.
 
 ```{note}
-For Liferay 7.3.x and earlier Commerce versions, Sales Agent is also included as an out-of-the-box role.
+For Liferay 7.3.x and earlier Commerce versions, [Sales Agent](#sales-agent) is also included as an out-of-the-box role.
 ```
 
 ## Viewing Permissions
 
 Follow these steps to view and manage permissions associated with a Commerce role:
 
-1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Users* &rarr; *Roles*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Users* &rarr; *Roles*.
 
-   ![Click on Roles in the Control Panel.](./commerce-roles/images/01.png)
+   ![Click on Roles in the Control Panel.](./commerce-roles-reference/images/01.png)
 
 1. Click on the desired role:
 
@@ -33,9 +35,13 @@ Follow these steps to view and manage permissions associated with a Commerce rol
 
    You can also remove or add permissions.
 
-   ![Click on the Define Permissions tab to view and manage role permissions.](./commerce-roles/images/02.png)
+   ![Click on the Define Permissions tab to view and manage role permissions.](./commerce-roles-reference/images/02.png)
 
-## Account Administrator
+## Out-of-the-Box Roles
+
+The following roles are automatically added to your DXP instance during Commerce activation. They are included alongside default DXP roles and can be modified if desired. See [Defining Role Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html) for more information.
+
+### Account Administrator
 
 > Account Role
 
@@ -64,7 +70,7 @@ The following Accounts permissions pertain to the Account Administrator's abilit
 | Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 
-## Account Member
+### Account Member
 
 > Account Role (included in Liferay 7.4+)
 
@@ -74,7 +80,7 @@ This role is automatically assigned to all users within an account and grants ba
 | --- | --- |
 | Accounts > Account Entry: View | Ability to view an Account |
 
-## Buyer
+### Buyer
 
 > Site Role
 
@@ -87,7 +93,7 @@ Users assigned this role can view, create, and check out orders.
 | Open Carts > Commerce Order: View Open Orders | Ability to view open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 
-## Order Manager
+### Order Manager
 
 > Site Role
 
@@ -103,7 +109,9 @@ This Order Manager role grants users all the permissions of Buyers and allows th
 | Open Carts > Commerce Order: View Open Orders | Ability to view all open Orders |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 
-## Common Custom Roles
+## Custom Roles
+
+The following list includes common custom roles you may want to create for your own Commerce instance. These roles can be created in the same way as other DXP roles. See [Creating and Managing Roles](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/creating-and-managing-roles.html) and [Defining Role Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html) for more information
 
 ### Catalog Manager
 
@@ -122,7 +130,7 @@ The Catalog Manager role grants permissions to access, create, edit, and manage 
 
 In addition to the above permissions, you must also assign *View* and *Update* permissions for the individual Catalogs you want the role will manage.
 
-To do this, open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Catalog*. Then, click on the *Actions* button (![Actions Button](../images/icon-actions.png)) for the desired Catalog, and select *Permissions*. Use the check boxes to assign the role *View* and *Update* permissions.
+To do this, open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Catalog*. Then, click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Catalog, and select *Permissions*. Use the check boxes to assign the role *View* and *Update* permissions.
 
 ```{note}
 If you'd like your Catalog Manager to manage Products within a Catalog without the ability to modify the Catalog itself, remove the `Catalogs: Access in Control Panel` and `Catalogs: View` permissions.
@@ -212,13 +220,13 @@ The Shipment Manager role allows a user to process shipments. This includes the 
 
 ## Liferay 7.3 and Earlier
 
-### Sales Agent (Regular Role)
+### Sales Agent
 
-> Out-of-the-box
+> Regular Role
 
 The Sales Agent is a regular role in Liferay Commerce and assignees are able to manage any account assigned to the role without granting administrative permissions. Because it is a regular role, it is found in the *Regular Roles* tab.
 
-![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles/images/06.png)
+![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles-reference/images/06.png)
 
 | Permissions | Description |
 | --- | --- |

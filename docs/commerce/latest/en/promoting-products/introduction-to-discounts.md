@@ -4,7 +4,7 @@ Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr
 
 * Reducing the price of specific products
 * Offering free shipping
-* Tailoring a discount for specific [Account Groups](../account-management/creating-a-new-account-group.md), or to a more narrowly defined group of customers
+* Tailoring a discount for specific [Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md), or to a more narrowly defined group of customers
 * Schedule a promotion for a period of time
 
 ```tip::
