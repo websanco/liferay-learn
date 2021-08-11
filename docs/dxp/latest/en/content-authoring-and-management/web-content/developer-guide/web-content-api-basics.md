@@ -1,18 +1,9 @@
 # Web Content API Basics
 
-<<<<<<< HEAD
 Using the Liferay DXP REST services, you can create and manage structured content on your Site. Structured content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) that uses a Web Content Structure. A Structure defines the information, such as author(s), a summary, and the content included in a Web Content article. Structures ensure that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
 ```{note}
    You can use a Structure with a [Web Content Template](../web-content-templates/creating-web-content-templates.md) to render the Structure content, but a Template is not required to create Structured Content.
-=======
-Using the Liferay DXP REST services, you can create and manage Structured Content on your Site. For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
-
-Structured Content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) using a Structure. With a Structure, you define the information you want to include in a Web Content article. Structures facilitate creating and managing Web Content while ensuring that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
-
-```note::
-   You can use a Structure with a Template to format the content, but a template is not required to create Structured Content.
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
 ```
 
 Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and Structured Content. For more advanced examples managing Structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
@@ -37,14 +28,8 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
    - Password: `test`
 
    ```note::
-<<<<<<< HEAD
       The cURL scripts on this article use these credentials by default. If you change the credentials in your Docker image, replace the username and password before running the scripts.
       These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
-=======
-      The sample cURL scripts on this article use these credentials by default. If you're using different credentials, replace the username and password before running the scripts.
-
-      The following scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
    ```
 
 1. Download and unzip de [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-r4h9.zip):
@@ -59,14 +44,8 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
 
 1. Complete these steps to set up the environment:
 
-<<<<<<< HEAD
    1. [Identify the Services to Consume](#identify-the-services-to-consume)
    1. [Identify the Site Id](#identify-the-site-id)
-=======
-   1. [Identify the Site ID](#identifying-the-site-id)
-   1. [Creating the Sample Structure](#creating-the-sample-structure)
-   1. [Identify the Structure ID](#identifying-the-structure-id)
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
 
 ### Identify the Services to Consume
 
@@ -76,11 +55,7 @@ Use the following services in the Liferay DXP Headless Delivery API to manage We
 - `ContentStructure` for Web Content Structures
 - `ContentTemplate` for Web Content Templates
 
-<<<<<<< HEAD
 To identify these services and the available HTTP methods, use the Liferay API Explorer. For more information, read [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
-=======
-### Creating the Sample Structure
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
 
 ### Identify the Site Id
 
@@ -101,11 +76,7 @@ This tutorial uses a basic Web Content article with a single Text field and the 
 
    ![Create a Basic Web Content article from the Web Content Panel.](./web-content-api-basics/images/01.png)
 
-<<<<<<< HEAD
 1. Enter 'Foo' as the New Web Content name and click *Publish*.
-=======
-You can also identify the Structure ID programmatically. For more information, read [Managing Structures and Templates by Using the REST API](./managing-structures-and-templates-by-using-the-rest-api.md).
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
 
    ![The Web Content Article uses a by-default Basic Web Content Structure.](./web-content-api-basics/images/02.png)
 
@@ -130,9 +101,6 @@ The `StructuredContents_GET_FromSite.sh` cURL script lists the Web Content artic
 | --- | --- |
 | $1 | `siteId` |
 
-<<<<<<< HEAD
-The following code shows the partial JSON output generated by the script:
-=======
 To find your new Web Content article in Liferay DXP, open the Site Menu (![Site menu](../../../images/icon-menu.png)) and go to *Content & Data* &rarr; *Web Content*.
 
 ## Getting the Web Content Articles
@@ -152,7 +120,6 @@ The `StructuredContents_GET_FromSite.sh` cURL script example lists the Web Conte
 | $1 | `siteId` |
 
 The following code shows the partial JSON output generated by the script. The script returns all the Web Content articles on the Site. In this example, you can see a single Web Content article identified by an `id` and a friendly URL in `friendlyUrlPath`. The Web Content uses the Structure in `contentStructureId`. This Structure has a single Text field described in the `contentFieldValue` section under `contentFields`. When you include more elements in your Structure, you can see additional `contentFieldValue` sections describing these elements.
->>>>>>> 08a9c7008 (LRDOCS-9606 minor fixes)
 
 ```json
 {
