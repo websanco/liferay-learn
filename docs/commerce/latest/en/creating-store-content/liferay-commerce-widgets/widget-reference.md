@@ -1,4 +1,4 @@
-# Liferay Commerce Widget Reference List
+# Widget Reference
 
 Widgets are building blocks you can use to add content and dynamic functionality to your Commerce Site. While Liferay DXP includes a wide variety of generic widgets, it also includes dedicated Commerce widgets that you can use to build the desired shopping experience for your customers.
 
@@ -38,5 +38,5 @@ The following article documents all the Liferay Commerce Widgets and their funct
 
 ## Additional Information
 
-* [Creating Your Storefront](./creating-your-storefront.md)
-* [Creating a Catalog Page](./creating-a-catalog-page.md)
+* [Creating Your Storefront](../creating-your-storefront.md)
+* [Creating a Catalog Page](../creating-a-catalog-page.md)
