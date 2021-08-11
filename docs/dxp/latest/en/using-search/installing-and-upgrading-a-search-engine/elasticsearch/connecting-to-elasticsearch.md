@@ -65,7 +65,7 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
 
 
 ```tip::
-   The connectors contain many configuration settings. See the `Elasticsearch Connector Settings <./elasticsearch-connector-settings.md>`_ for their definitions. Most of the configurations correspond to settings available in `Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html>`_.
+   The connectors contain many configuration settings. See the `Elasticsearch Connector Settings <./elasticsearch-connector-configuration-reference.md>`_ for their definitions. Most of the configurations correspond to settings available in `Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html>`_.
 ```
 
 To refer to Elasticsearch servers by name, map each Elasticsearch server name to its IP address in your DNS or your Liferay server's `/etc/hosts` file.
@@ -199,7 +199,7 @@ Now that Liferay is connected to Elasticsearch, you can start using Elasticsearc
 ## Related Topics
 
 * [Securing Elasticsearch](./securing-elasticsearch.md)
-* [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)
+* [Elasticsearch Connector Settings](./elasticsearch-connector-configuration-reference.md)
 * [Using the Sidecar or Embedded Elasticsearch](./using-the-sidecar-or-embedded-elasticsearch.md)
 * [Liferay Enterprise Search](../../liferay_enterprise_search.html)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)

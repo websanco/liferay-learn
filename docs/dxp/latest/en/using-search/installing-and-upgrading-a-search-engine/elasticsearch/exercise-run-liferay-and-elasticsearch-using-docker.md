@@ -90,4 +90,4 @@ Re-index your search and spell check indexes. Both re-index actions are carried 
 * Liferay Enterprise Search (Coming soon)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
 * Administering and Tuning Search (Coming soon)
-* [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)
+* [Elasticsearch Connector Settings](./elasticsearch-connector-configuration-reference.md)
