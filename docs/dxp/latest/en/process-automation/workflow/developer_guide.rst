@@ -11,6 +11,7 @@ Developer Guide
    developer-guide/workflow-definition-node-reference.md
    developer-guide/workflow-task-node-reference.md
    developer-guide/workflow-notification-template-variables.md
+   developer-guide/creating-a-condition-evaluator.md
    developer-guide/apis.rst
 
 -  :doc:`/process-automation/workflow/developer-guide/implementing-workflow`
@@ -20,6 +21,7 @@ Developer Guide
 -  :doc:`/process-automation/workflow/developer-guide/workflow-definition-node-reference`
 -  :doc:`/process-automation/workflow/developer-guide/workflow-notification-template-variables`
 -  :doc:`/process-automation/workflow/developer-guide/workflow-task-node-reference`
+-  :doc:`/process-automation/workflow/developer-guide/creating-a-condition-evaluator`
 
 APIs
 ----
