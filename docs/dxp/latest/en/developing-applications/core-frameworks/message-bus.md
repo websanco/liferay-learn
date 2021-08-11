@@ -31,13 +31,10 @@ The figure below demonstrates component interaction.
 
 Here is an example interaction sequence:
 
-1. `Destination` *D1* is registered with the Message Bus. Any class can register a `Destination`.
-1. `MessageListener`s *ML1* and *ML2* register with `Destination` *D1*.
-1. Arbitrary class *Foo* creates `Message` *M1*.
-1. *Foo* invokes the Message Bus to send `Message` *M1* to `Destination` *D1*.
-1. The Message Bus sends `Message` *M1* to *D1*-registered `MessageListener`s *ML1* and *ML2*.
+1. An arbitrary class sends a `Message` to a registered `Destination`.
+1. Message Bus dispatches the `Message` to the destionation's registered `MessageListener`s.
 
-*Foo* is concerned with using Message Bus to send *M1* to *D1*; it's not concerned with message recipients. `MessageListener`s *ML1* and *ML2* are only concerned with receiving messages at *D1*; they aren't concerned with message senders.
+The message sender is only concerned with using Message Bus to send the message to the destination; it is not concerned with the message recipients. The message listeners are only concerned with receiving messages at the destination; they are not concerned with the message sender.
 
 ## Synchronous and Asynchronous Messaging
 
