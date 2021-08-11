@@ -1,6 +1,6 @@
 # Content Dashboard Interface
 
-> Available: Liferay 7.3+.
+> Available: Liferay 7.3+
 
 The Content Dashboard interface has the following areas:
 
@@ -32,8 +32,8 @@ This tool is the graphical area at the top of the Content Dashboard page. The ch
 
 ![Overview of the Content Audit Tool in the Content Dashboard](./content-dashboard-interface/images/10.png)
 
-```tip::
-   If the Content Audit Tool doesn't show the expected chart, `verify your Categories <../tags-and-categories/defining-categories-and-vocabularies-for-content.md>`__ for the global Vocabularies and ensure that `your content is categorized <../tags-and-categories/organizing-content-with-categories-and-tags.md>`__.
+```{tip}
+If the Content Audit Tool doesn't show the expected chart, [verify your Categories](../tags-and-categories/defining-categories-and-vocabularies-for-content.md) for the global Vocabularies and ensure that [your content is categorized](../tags-and-categories/organizing-content-with-categories-and-tags.md).
 ```
 
 The following video shows and overview of the Content Audit tool:
@@ -70,8 +70,8 @@ To change the Vocabularies:
 
     ![Select the Vocabularies in the Content Audit Tool](./content-dashboard-interface/images/12.png)
 
-```note::
-   You can select a maximum of two Vocabularies defined at the Global Site level.
+```{note}
+You can select a maximum of two Vocabularies defined at the Global Site level.
 ```
 
 A gray bar denotes content without any categories in one of the selected Vocabularies. Chart labels for this content are distinctive. For instance, when you choose the Audience Vocabulary, the content that is not categorized under Audience shows the *No Audience Specified* label.
@@ -104,8 +104,8 @@ In the list of contents, you can find the following columns:
 
 (*) The *Page* (![Page](../../images/icon-page.png)) icon denotes articles based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
 
-```note::
-   The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
+```{note}
+The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
 ```
 
 For each entry in the Contents list, you can access the following options using the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) or hovering over the article and clicking the corresponding option:
@@ -117,8 +117,8 @@ For each entry in the Contents list, you can access the following options using 
 
     ![Access the Content info sidebar and Content Performance panel from the Actions menu or the icons on each content row.](./content-dashboard-interface/images/11.png)
 
-```note::
-   Use the *View*, *Info*, and *View Metrics* options for content based on a Display Page Template. Use the *Edit* option when you have Edit permission for the content.
+```{note}
+Use the *View*, *Info*, and *View Metrics* options for content based on a Display Page Template. Use the *Edit* option when you have Edit permission for the content.
 ```
 
 ### Filtering and Sorting Content in the Contents List
@@ -140,8 +140,8 @@ To sort the content,
 1. Click the *Filter and Order* drop-down menu.
 1. Under the *Order By* section, select the order for the items.
 
-```note::
-   When you close the Content Dashboard page, the default filter and sorting option are set again.
+```{note}
+When you close the Content Dashboard page, the default filter and sorting option are set again.
 ```
 
 ### Understanding How Filtering Works in the Contents List
