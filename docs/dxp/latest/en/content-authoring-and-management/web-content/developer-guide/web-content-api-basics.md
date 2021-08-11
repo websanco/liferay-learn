@@ -12,7 +12,7 @@ You can learn about the following topics:
 
 - [Setting Up Your Environment](#setting-up-your-environment)
 - [Getting the Web Content Articles](#getting-the-web-content-articles)
-- [Getting the Web Content Structure](#getting-the-web-content-structure)
+- [Getting the Web Content Structure by Id](#getting-the-web-content-structure-by-id)
 - [Posting a Basic Web Content Article](#posting-a-basic-web-content-article)
 - [Updating the Web Content Article](#updating-the-web-content-article)
 - [Replacing the Web Content Article](#replacing-the-web-content-article)
@@ -94,7 +94,7 @@ This new Web Content uses a by-default Basic Web Content Structure that is not v
 
 ## Getting the Web Content Articles
 
-The `StructuredContents_GET_FromSite.sh` cURL script lists the Web Content articles in the Site. This script uses the `StructuredContent` service with a `GET` HTTP method with the [Site ID](#identify-the-site-id) as the only parameter.
+The `StructuredContents_GET_FromSite.sh` cURL script lists the Web Content articles in the Site. This script uses the `StructuredContent` service with a `GET` HTTP method with the [Site ID](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -185,7 +185,7 @@ Review the following information in the JSON output:
 
 ### Getting the Web Content Article by Id
 
-The script in [the previous step](#getting-the-web-content-article) returns all the Web Content articles on the Site. To check a specific Web Content, use the article identifier `id` as a reference. The `StructuredContent_GET_ById.sh` script lists a Web Content by `id`. This script uses the `StructuredContent` service with a `GET` HTTP method and the Structured Content `id` as the only parameter.
+The script in [the previous step](#getting-the-web-content-article) returns all the Web Content articles on the Site. To check a specific Web Content, use the article identifier `id` as a reference. The `StructuredContent_GET_ById.sh` script lists a Web Content by `id`. This script uses the `StructuredContent` service with a `GET` HTTP method and the Structured Content `id` parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -199,15 +199,15 @@ The script in [the previous step](#getting-the-web-content-article) returns all 
 | --- | --- |
 | $1 | Structured Content `id` |
 
-## Getting the Web Content Structure
+## Getting the Web Content Structure by Id
 
 The by-default Web Content Structure in the sample Web Content article is not visible in the Liferay DXP user interface. However, you can use the `ContentStructure` service in the REST API to gather the Structure's description.
 
-The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure description using the `ContentStructure` service with the `GET` HTTP method and the Structure ID as the only parameter.
+The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure description using the `ContentStructure` service with the `GET` HTTP method and the Structure ID parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
-| GET | `ContentStructure` | /v1.0/content-structures/{contentStructureId} |
+| GET | `ContentStructure` | `/v1.0/content-structures/{contentStructureId}` |
 
 ```bash
    ./ContentStructure_GET_ById.sh 40697
@@ -243,13 +243,33 @@ This code shows the JSON output generate by the script, where you can identify t
 }
 ```
 
+### Getting the Web Content Structures
+
+The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `StructuredContent_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site ID](#identify-the-site-id) parameter.
+
+| Method | Service | Endpoint |
+| --- | --- | --- |
+| GET | `ContentStructure` | `/v1.0/sites/${1}/content-structures` |
+
+```bash
+   ./StructuredContent_GET_FromSite.sh 20125
+```
+
+| Parameter # | Description |
+| --- | --- |
+| $1 | `siteId` |
+
+```note::
+   The by-default Web Content Structure is not visible using this endpoint.
+```
+
 ## Posting a Basic Web Content Article
 
 The `StructuredContent_POST_ToSite.sh` cURL script example creates a new Web Content using the `POST` HTTP method and the by-default Web Content Structure you analyzed [in the previous step](#getting-the-web-content-structure). The script uses the [Site ID](#identifying-the-site-id) and Structure ID as parameters.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
-| PUT | `StructuredContent` | `/v1.0/sites/{siteID}/structured-contents` |
+| PUT | `StructuredContent` | `/v1.0/sites/{siteId}/structured-contents` |
 
    ```bash
       ./StructuredContent_POST_ToSite.sh 20125 40697
