@@ -28,7 +28,7 @@ The code editor is split into four panes:
 ## Configuration
 
 ```note::
-  Defining configurations for Page Fragments is available in Liferay DXP 7.2 SP1+ and Liferay Portal CE GA2+.
+  Defining configurations for Page Fragments is available in Liferay DXP 7.2 SP1+ and Liferay Portal GA2+.
 ```
 
 The Configuration tab provides input for adding configuration options to the Page Fragment's Configuration Menu. This is equivalent to the `configuration.json` file that the [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-toolkit.md) produces. For example, you can add a selector to your Page Fragment's configuration options that lets users choose a color for the Page Fragment's heading. Defining configuration options for a Page Fragment gives it more flexibility, reducing the number of Page Fragments you must maintain.

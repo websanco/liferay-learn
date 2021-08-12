@@ -26,7 +26,7 @@ To get an example `SimilarResultsContributor` up and running on your instance of
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-    If you're running a different Liferay Portal CE version or Liferay DXP, adjust the above command accordingly.
+    If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly.
 
 1. Download and unzip [Acme Similar Results Contributor](./liferay-r1s1.zip).
 

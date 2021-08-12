@@ -13,7 +13,7 @@ Don't have Docker? Go here first:
 | DXP Edition | Image | Tags |
 | :---------- | :---- | :--- |
 | Liferay DXP (Subscription)| [`dxp`](https://hub.docker.com/r/liferay/dxp) | [here](https://hub.docker.com/r/liferay/dxp/tags) |
-| Liferay Portal CE | [`portal`](https://hub.docker.com/r/liferay/portal) | [here](https://hub.docker.com/r/liferay/portal/tags) |
+| Liferay Portal | [`portal`](https://hub.docker.com/r/liferay/portal) | [here](https://hub.docker.com/r/liferay/portal/tags) |
 
 ```{important}
 Upgrades to enterprise subscriber installations and critical installations should be done using the Database Upgrade Tool. See [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) for more information.

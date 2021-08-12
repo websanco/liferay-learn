@@ -1,13 +1,13 @@
 # Upgrade Overview
 
-Liferay's tools and instructions facilitate upgrading DXP and Portal CE environments safely and quickly. Non-clustered environments that have small data sets, for example can be upgraded using a [Docker image](./upgrading-via-docker.md). DXP environments and Portal CE environments that are complex, have larger data sets, or have many customizations are upgraded using the [Database Upgrade Tool](./using-the-database-upgrade-tool.md).
+Liferay's tools and instructions facilitate upgrading DXP and Portal environments safely and quickly. Non-clustered environments that have small data sets, for example can be upgraded using a [Docker image](./upgrading-via-docker.md). DXP environments and Portal environments that are complex, have larger data sets, or have many customizations are upgraded using the [Database Upgrade Tool](./using-the-database-upgrade-tool.md).
 
 ```warning::
    **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your database and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 ```note::
-   `Upgrading via Docker <./upgrading-via-docker.md>`_ is the easiest way to upgrade a database for a small, casual Portal CE environment.
+   `Upgrading via Docker <./upgrading-via-docker.md>`_ is the easiest way to upgrade a database for a small, casual Portal environment.
 ```
 
 Before starting your upgrade, consider what may be involved. The upgrade topics fall into these categories:

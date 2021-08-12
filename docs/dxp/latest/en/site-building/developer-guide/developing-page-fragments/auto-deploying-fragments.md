@@ -1,6 +1,6 @@
 # Auto-Deploying Fragments
 
-> Available: Liferay Portal CE 7.3 GA1+ and Liferay DXP 7.3+
+> Available: Liferay Portal 7.3 GA1+ and Liferay DXP 7.3+
 
 If you're [developing Page Fragments with your own tooling](./using-the-fragments-toolkit.md#collection-format-overview), you can deploy them by packaging them in ZIP files for importing via the Liferay UI. But you're not limited to using the UI. You can deploy Fragment ZIP files from the command line too. Here you'll learn how to work with Fragment projects and import the Fragments to the Sites you want from the command line using Liferay's auto-deployment mechanism.
 

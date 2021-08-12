@@ -27,12 +27,12 @@ Follow these steps to configure a Widget on a Content Page:
 1. Click *Save* to apply the changes.
 
 ```note::
-  Since Liferay Portal CE 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
+  Since Liferay Portal 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
 ```
 
 ## Configuring Widget Permissions on Content Pages
 
-Since Liferay Portal CE 7.3 GA2, you can configure permissions for widgets from a Content Page. Follow these steps to configure Widget permissions on a Content Page:
+Since Liferay Portal 7.3 GA2, you can configure permissions for widgets from a Content Page. Follow these steps to configure Widget permissions on a Content Page:
 
 1. Hover over the widget.
 1. Open the Options Menu (![Options Menu](../../../images/icon-app-options.png)) and select *Permissions*.

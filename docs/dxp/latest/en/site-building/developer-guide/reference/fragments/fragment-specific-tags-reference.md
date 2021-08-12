@@ -1,13 +1,13 @@
 # Fragment Specific Tags and Attributes Reference
 
-Along with standard HTML, CSS, and JavaScript, you can use Liferay-specific tags and, since Liferay Portal CE 7.3 GA3 and Liferay DXP 7.3, attributes, to make editable sections or embed widgets in your Fragment. Editable elements can be modified before publication, which means that you can create simple, reusable Fragments that have identical formatting, but contain elements that are adaptable to the specific context.
+Along with standard HTML, CSS, and JavaScript, you can use Liferay-specific tags and, since Liferay Portal 7.3 GA3 and Liferay DXP 7.3, attributes, to make editable sections or embed widgets in your Fragment. Editable elements can be modified before publication, which means that you can create simple, reusable Fragments that have identical formatting, but contain elements that are adaptable to the specific context.
 
 Page Fragments have access to these types of liferay-specific tags and attributes that add these features:
 
 - [Editable Text](#making-text-editable)
 - [Editable Images](#making-images-editable)
 - [Editable Links](#creating-editable-links)
-- [Editable HTML (Liferay Portal CE 7.3 GA3+ and DXP 7.3+)](#creating-editable-html)
+- [Editable HTML (Liferay Portal 7.3 GA3+ and DXP 7.3+)](#creating-editable-html)
 - [Embedded Widgets](#including-widgets-within-a-fragment)
 - [Localizable Fragment Fields](#localizing-fragment-configuration-fields)
 
@@ -30,7 +30,7 @@ You can make a Fragment even more dynamic by including a widget. Currently, port
 This reference list the available editable tags and attributes along with examples of how to use them in your Fragments.
 
 ```note::
-  Since Liferay Portal CE 7.3 GA3 and Liferay DXP 7.3, you can use ``data-lfr-editable*`` attributes to define elements as editable, rather than wrapping editable elements with ``lfr-editable`` tags. The old tags still work for backwards compatibility, but we recommend that you use the newer data attributes if you're running Portal CE 7.3 GA3+ or Liferay DXP 7.3, as they are easier to write.
+  Since Liferay Portal 7.3 GA3 and Liferay DXP 7.3, you can use ``data-lfr-editable*`` attributes to define elements as editable, rather than wrapping editable elements with ``lfr-editable`` tags. The old tags still work for backwards compatibility, but we recommend that you use the newer data attributes if you're running Portal 7.3 GA3+ or Liferay DXP 7.3, as they are easier to write.
 ```
 
 ## Making Text Editable
@@ -47,7 +47,7 @@ You can make Fragment text editable by including the `data-lfr-editable-type="te
    All block elements and inline elements are supported for editable text.
 ```
 
-For Liferay Portal CE 7.3 GA2 and below, use the syntax below. A unique ID is required to render the element properly:
+For Liferay Portal 7.3 GA2 and below, use the syntax below. A unique ID is required to render the element properly:
 
 ```html
 <lfr-editable id="unique-id" type="text">
@@ -67,7 +67,7 @@ If you need formatting options like text or color styles, use `rich-text`:
    All block element tags are supported for editable Rich text.
 ```
 
-For Liferay Portal CE 7.3 GA2 and below, use the syntax below:
+For Liferay Portal 7.3 GA2 and below, use the syntax below:
 
 ```html
 <lfr-editable id="unique-id" type="rich-text">
@@ -92,7 +92,7 @@ Images use the same `data-lfr-editable-type` attribute as text, but with the `im
 >
 ```
 
-For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+For Liferay Portal 7.3 GA2 and below, use this syntax:
 
 ```html
 <lfr-editable id="unique-id" type="image">
@@ -131,7 +131,7 @@ There is also a specific syntax for creating editable link elements:
 </a>
 ```
 
-For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+For Liferay Portal 7.3 GA2 and below, use this syntax:
 
 ```html
 <lfr-editable id="unique-id" type="link">
@@ -155,7 +155,7 @@ You can make general HTML elements editable as well by setting the `data-lfr-edi
 </article>
 ```
 
-For Liferay Portal CE 7.3 GA2 and below, use this syntax:
+For Liferay Portal 7.3 GA2 and below, use this syntax:
 
 ```html
 <lfr-editable type="html" id="text1">

@@ -2,9 +2,9 @@
 
 > Subscribers
 
-The Liferay Support Team creates and releases fixes to issues discovered in DXP. The fixes are packaged in ZIP files referred to generally as _patches_. There are patches for security issues, customer-specific issues, and issues reported by the Liferay community. Here you'll learn about the patch types provided to DXP subscribers, [fix delivery](#ce-ga-releases) for Liferay Portal CE users, and the [levels of testing for each patch type](#patch-testing).
+The Liferay Support Team creates and releases fixes to issues discovered in DXP. The fixes are packaged in ZIP files referred to generally as _patches_. There are patches for security issues, customer-specific issues, and issues reported by the Liferay community. Here you'll learn about the patch types provided to DXP subscribers, [fix delivery](#ce-ga-releases) for Liferay Portal users, and the [levels of testing for each patch type](#patch-testing).
 
-Here's a summary of the DXP patch types and the Portal CE fix delivery method.
+Here's a summary of the DXP patch types and the Portal fix delivery method.
 
 | Patch Type | Purpose |
 | :--------- | :------ |
@@ -12,7 +12,7 @@ Here's a summary of the DXP patch types and the Portal CE fix delivery method.
 | [Security Fix Packs](#security-fix-packs) | Address the latest security issues immediately. |
 | [Hotfixes](#hotfixes) | Requested by customers to fix business critical DXP issues fast. |
 | [Service Packs](#service-packs) | Incorporate the latest Fix Pack and can include larger fixes that require more testing. |
-| [Rolling Releases](#rolling-releases) | Apply fixes to Portal CE based on the latest DXP Service Pack. |
+| [Rolling Releases](#rolling-releases) | Apply fixes to Portal based on the latest DXP Service Pack. |
 
 ## Fix Packs
 

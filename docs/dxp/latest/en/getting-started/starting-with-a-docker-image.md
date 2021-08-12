@@ -6,9 +6,9 @@ The latest versions of Liferay are available as Docker images. Follow these step
 Don't have Docker? Go here first: [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/)
 ```
 
-## Get Started with Liferay Portal CE
+## Get Started with Liferay Portal
 
-Liferay Portal CE is the open source and community supported platform for building compelling and flexible web experiences.
+Liferay Portal is the open source and community supported platform for building compelling and flexible web experiences.
 
 1. Get the Docker image.
 

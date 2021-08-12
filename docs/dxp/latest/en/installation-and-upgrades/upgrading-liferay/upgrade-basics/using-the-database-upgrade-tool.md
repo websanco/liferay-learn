@@ -1,6 +1,6 @@
 # Using the Database Upgrade Tool
 
-The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal CE databases offline.
+The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal databases offline.
 
 ```{important}
 **Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
@@ -10,7 +10,7 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) for more information.
 ```
 
-Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal CE environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
+Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
 If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the Database Upgrade Tool, you'll use that tool from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
 
@@ -49,7 +49,7 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 | DXP Edition | Download Instructions |
 | :---------- | :-------------------- |
 | Liferay DXP (Subscription) | Go to the [*Downloads* page](https://customer.liferay.com/group/customer/downloads) and select the DXP version and the _Product/Service Packs_ file type. In the listing that appears, click _Download_ for the _Liferay DXP Upgrade Client_. |
-| Liferay Portal CE | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community). In the _Liferay Portal_ downloads menu, select _Other files_ and click _Download_. The latest Liferay Portal release assets GitHub page appears. Click on `liferay-ce-portal-tools-[version].zip`. |
+| Liferay Portal | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community). In the _Liferay Portal_ downloads menu, select _Other files_ and click _Download_. The latest Liferay Portal release assets GitHub page appears. Click on `liferay-ce-portal-tools-[version].zip`. |
 
 ## Running the Upgrade Tool
 

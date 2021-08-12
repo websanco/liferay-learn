@@ -1,6 +1,6 @@
 # Using the Liferay Commerce Tomcat Bundle
 
-The Liferay Commerce bundle is available for download from the [Liferay Commerce Community Downloads](https://commerce.liferay.dev/download) page. The bundle contains the latest version of Liferay Commerce and Liferay Portal CE pre-deployed to Apache Tomcat.
+The Liferay Commerce bundle is available for download from the [Liferay Commerce Community Downloads](https://commerce.liferay.dev/download) page. The bundle contains the latest version of Liferay Commerce and Liferay Portal pre-deployed to Apache Tomcat.
 
 Before obtaining the bundle, read the [Liferay Commerce Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported technologies.
 

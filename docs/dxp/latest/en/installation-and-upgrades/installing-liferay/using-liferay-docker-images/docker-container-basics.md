@@ -3,7 +3,7 @@
 Docker Hub hosts [Liferay DXP](https://hub.docker.com/r/liferay/dxp) and [Liferay Portal Community Edition (CE)](https://hub.docker.com/r/liferay/portal) Docker images, bundled with Tomcat on Linux. The Liferay Docker Hub pages provide image details and tags for the different releases.
 
 * [Liferay DXP Images](https://hub.docker.com/r/liferay/dxp)
-* [Liferay Portal CE Images](https://hub.docker.com/r/liferay/portal)
+* [Liferay Portal Images](https://hub.docker.com/r/liferay/portal)
 
 Here are the fundamentals for using the containers:
 

@@ -1,9 +1,9 @@
 # Enabling Antivirus Scanning for Uploaded Files
 
-> Available: DXP 7.3 SP 1+, Portal CE 7.3 GA7+, and DXP 7.2 FP 9+
+> Available: DXP 7.3 SP 1+, Portal 7.3 GA7+, and DXP 7.2 FP 9+
 
 ```note::
-   This feature is not currently available on Portal CE 7.2 and earlier versions.
+   This feature is not currently available on Portal 7.2 and earlier versions.
 ```
 
 <!-- TODO: LRDOCS-9341 - Antivirus can be enabled for older versions (7.2 and below) but requires use of portal properties and a local install of ClamAV server which we do not recommend. -->

@@ -101,7 +101,7 @@ Follow these steps to find a Liferay app module's attributes in the Javadoc:
 
     **Liferay DXP**: <https://docs.liferay.com/dxp/apps>
 
-    **Liferay Portal CE**: <https://docs.liferay.com/ce/apps>
+    **Liferay Portal**: <https://docs.liferay.com/ce/apps>
 
 1. Copy the class's package name.
 

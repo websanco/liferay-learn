@@ -50,7 +50,7 @@ Here you can map page elements to available assets by selecting the desired item
 
 ## Layout Elements
 
-> Available: Liferay Portal CE 7.3 GA2+; previously called Layouts with *panels* and *rows*.
+> Available: Liferay Portal 7.3 GA2+; previously called Layouts with *panels* and *rows*.
 
 *Layout Elements* define drop zones and can be used to create the desired page structure. DXP's default layout Fragments include *Containers* and *Grids*. Once configured, you can drag and drop widgets or other Fragments into the defined areas, including additional containers or grids to create even more complex structures.
 

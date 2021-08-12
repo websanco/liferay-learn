@@ -21,7 +21,7 @@ Dispatch provides a convenient UI for viewing and managing all instance [jobs sc
    Each template is an implementation of the `DispatchTaskExecutor` interface, and each Dispatch Task is an instance of the selected template. See [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md) for more information about how it works.
 
    ```note::
-      Liferay DXP provides a variety of Dispatch Task templates, while Liferay Portal CE only includes the Talend Dispatch Task Executor.
+      Liferay DXP provides a variety of Dispatch Task templates, while Liferay Portal only includes the Talend Dispatch Task Executor.
       
       You can also create your own templates. See `Creating a New Dispatch Task Executor <./creating-a-new-dispatch-task-executor.md>`_ to learn how.
    ```
