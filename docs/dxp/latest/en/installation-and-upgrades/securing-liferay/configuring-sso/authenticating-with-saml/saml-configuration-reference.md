@@ -1,14 +1,14 @@
 # SAML Configuration Reference
 
-You can configure the SAML plugin outside the UI through [OSGi configuration files](../../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) and by uploading metadata XML to configure how connections are negotiated.
+You can configure SAML outside the UI through [OSGi configuration files](../../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) and by uploading metadata XML to configure how connections are negotiated.
 
 ## OSGi Configuration Properties
 
-As noted in the previous tutorials, anything related to configuring SP connections must be done through the SAML Admin UI where configurations are saved to Liferay's database. SP connections can no longer be made via properties files as they were in versions prior to 3.1.0.
+As noted previously, anything related to configuring SP connections must be done through the SAML Admin UI where configurations are saved to Liferay's database. SP connections can no longer be made via properties files as they were in versions prior to 3.1.0.
 
-```note::
+:::{note}
    Don't use OSGi `.config` files or Liferay DXP's System Settings Control Panel application to configure SAML providers (IdP or SP). The System Settings UI is auto-generated, and is for advanced administrators. It does not perform the enhanced validation on the fields that the SAML Admin UI performs, so administrators could create invalid configurations.
-```
+:::
 
 This is a portal instance-scoped configuration which can be managed via OSGi Configuration Admin. The affected properties are those in the `SAMLProviderConfiguration` metatype:
 
@@ -41,7 +41,7 @@ If you used Liferay 6.2, please note that the following system wide properties w
 
 The latter two properties were replaced with the single property `com.liferay.saml.runtime.configuration.SamlConfiguration.getMetadataRefreshInterval()`.
 
-Note also the introduction of the *SAML KeyStoreManager Implementation Configuration* in *Control Panel* &rarr; *System Settings* &rarr; Security &rarr; SSO. The options for this configuration are explained above in [Setting up Liferay DXP as a SAML Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md).
+Note also the introduction of the *SAML KeyStoreManager Implementation Configuration* in *Control Panel* &rarr; *System Settings* &rarr; Security &rarr; SSO. The options for this configuration are explained above in [Configuring SAML at the System Level](./configuring-saml-at-the-system-level.md).
 
 In the latest version of the plugin, the `SHA256` algorithm is the default encryption algorithm used in the configuration and to generate keys. The default configuration tries `SHA256`, then `SHA384`, then `SHA512` before falling back to `SHA1`. Because `SHA1` is potentially vulnerable, you can blacklist it using this property:
 

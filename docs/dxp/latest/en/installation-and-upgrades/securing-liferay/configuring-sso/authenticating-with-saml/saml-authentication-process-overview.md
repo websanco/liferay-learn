@@ -8,7 +8,7 @@ Consider IdP initiated SSO first.
 
 Sometimes a user enters the SSO cycle by sending a request directly from the browser to the IdP.
 
-![Identity Provider Initiated SSO authenticates directly.](./images/saml-idp-initiated-sso.png)
+![Identity Provider Initiated SSO authenticates directly.](./saml-authentication-process-overview/images/01.png)
 
 ### The SSO Request to the IdP
 
@@ -24,7 +24,7 @@ If the IdP determines that the user isn't authenticated, it prompts the user wit
 
 ### The SSO Response from the IdP
 
-Upon successful authentication, the IdP constructs a SAML Response. It includes attribute statements configured in the designated Service Provider Connection (SPC; see [Setting Up Liferay as an Identity Provider](./setting-up-liferay-as-a-saml-identity-provider.md) on setting up the SPC in Liferay's SAML adapter).
+Upon successful authentication, the IdP constructs a SAML Response. It includes attribute statements configured in the designated Service Provider Connection (SPC; see [Configuring SAML at the Instance Level](./configuring-saml-at-the-instance-level.md) on setting up the SPC in Liferay's SAML adapter).
 
 The IdP sends the response to the Assertion Consumer Service URL. The request contains two parameters: `SAMLResponse` and `RelayState`.
 
@@ -45,7 +45,7 @@ If a `RelayState` is included in the SAML Response, the user is redirected to it
 
 Most of the time, authentication requests come from the Service Provider.
 
-![Service Provider Initiated SSO](./images/saml-sp-initiated-sso.png)
+![Service Provider Initiated SSO is the usual source of authentication requests.](./saml-authentication-process-overview/images/02.png)
 
 ### The SSO Request to the SP
 
@@ -73,7 +73,7 @@ The Single Log Off request is sent from the user's browser to the IdP or an SP, 
 
 ## Identity Provider Initiated SLO
 
-![Identity Provider Initiated SLO](./images/saml-idp-initiated-slo.png)
+![Identity Provider Initiated SLO is sent directly to the IdP by the user's browser.](./saml-authentication-process-overview/images/03.png)
 
 ### The SLO Request to the IdP
 
@@ -99,7 +99,7 @@ The second SP then delivers the `LogoutResponse` to the IdP. The process is repe
 
 ## Service Provider Initiated SLO
 
-![Service Provider Initiated SLO](./images/saml-sp-initiated-slo.png)
+![Service Provider Initiated SLO happens when the user's browser sends a logout request to the SP.](./saml-authentication-process-overview/images/04.png)
 
 ### The SLO Request to the SP
 

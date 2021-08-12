@@ -23,3 +23,17 @@ Each portal instance can be a SAML provider, either an Identity Provider (IdP) o
 **Entity ID:** Name this SP or IdP. 
 
 **LDAP Import Enabled:** Check this box to import user attributes from the LDAP servers declared in this SP's instance settings. 
+
+**SAML Role:** Choose the role for this provider. Each portal instance can be an Identity Provider (IdP) or a Service Provider (SP), but not both. 
+
+**Session Maximum Age:** The amount of time in seconds the SSO session, managed by the IdP, lasts. 
+
+**Session Idle Timeout:** The amount of time in seconds an idle session lasts before it expires. 
+
+**Sign Authn Requests?:** If configured as an SP, digitally sign Authn requests. 
+
+**Sign Metadata?:** Sign the metadata sent to peer SAML entities. 
+
+**SSL Required:** Check this box to require SSL for the transfer of all SAML messages. All URLs in metadata sent to peers become prefixed with the `https` protocol. 
+
+**Allow showing the login portlet:** Allow the login portlet to appear when no SAML IdP is matched to the login request. Users in this scenario log in locally to Liferay DXP. 
