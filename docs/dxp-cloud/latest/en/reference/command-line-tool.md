@@ -37,8 +37,8 @@ Download the latest version of the [Windows installer](https://cdn.liferay.cloud
 
 You must first uninstall your current version before you can install and use version 3. This prevent conflicts with the same binary name.
 
-```important::
-   The following instructions are specific to uninstalling CLI version 2 and are **not** the same as those for `uninstalling version 3 of the CLI tool <#uninstalling-version-3-of-the-cli-tool>`__.
+```{important}
+The following instructions are specific to uninstalling CLI version 2 and are **not** the same as those for `uninstalling version 3 of the CLI tool <#uninstalling-version-3-of-the-cli-tool>`__.
 ```
 
 ### Uninstalling Version 2 on MacOS or Linux
