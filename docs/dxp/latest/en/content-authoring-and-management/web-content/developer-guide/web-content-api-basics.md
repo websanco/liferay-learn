@@ -245,14 +245,14 @@ This code shows the JSON output generate by the script, where you can identify t
 
 ### Getting the Web Content Structures
 
-The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `StructuredContent_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site ID](#identify-the-site-id) parameter.
+The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site ID](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
 | GET | `ContentStructure` | `/v1.0/sites/${1}/content-structures` |
 
 ```bash
-   ./StructuredContent_GET_FromSite.sh 20125
+   ./ContentStructures_GET_FromSite.sh 20125
 ```
 
 | Parameter # | Description |
