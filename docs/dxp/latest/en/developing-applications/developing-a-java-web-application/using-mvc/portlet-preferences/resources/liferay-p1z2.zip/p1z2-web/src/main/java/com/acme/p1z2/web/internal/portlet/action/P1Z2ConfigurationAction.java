@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 
 @Component(
 	configurationPolicy = ConfigurationPolicy.OPTIONAL,
-	property = "javax.portlet.name=P1Z2Portlet",
+	property = "javax.portlet.name=com_acme_p1z2_web_internal_portlet_P1Z2Portlet",
 	service = ConfigurationAction.class
 )
 public class P1Z2ConfigurationAction extends DefaultConfigurationAction {
