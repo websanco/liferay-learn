@@ -12,7 +12,7 @@ import org.osgi.service.component.annotations.Component;
 		"javax.portlet.display-name=P1Z2 Portlet",
 		"javax.portlet.init-param.config-template=/configuration.jsp",
 		"javax.portlet.init-param.view-template=/view.jsp",
-		"javax.portlet.name=P1Z2Portlet",
+		"javax.portlet.name=P1Z2Portlet"
 	},
 	service = Portlet.class
 )

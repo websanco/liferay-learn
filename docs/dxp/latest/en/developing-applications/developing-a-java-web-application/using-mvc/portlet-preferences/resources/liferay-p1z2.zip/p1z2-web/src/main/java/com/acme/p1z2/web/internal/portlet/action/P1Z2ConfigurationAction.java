@@ -24,7 +24,8 @@ public class P1Z2ConfigurationAction extends DefaultConfigurationAction {
 			ActionResponse actionResponse)
 		throws Exception {
 
-		String color = ParamUtil.getString(actionRequest, "preferences--color--");
+		String color = ParamUtil.getString(
+			actionRequest, "preferences--color--");
 
 		setPreference(actionRequest, "preferences--color--", color);
 
