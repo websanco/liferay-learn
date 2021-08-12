@@ -17,9 +17,9 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 
 	<aui:fieldset>
 		<aui:select label="color" name="preferences--color--" value='<%= (String)portletPreferences.getValue("color", "blue") %>'>
-			<aui:option label="blue_label" value="blue" />
-			<aui:option label="red_label" value="red" />
-			<aui:option label="yellow_label" value="yellow" />
+			<aui:option label="Blue" value="blue" />
+			<aui:option label="Red" value="red" />
+			<aui:option label="Yellow" value="yellow" />
 		</aui:select>
 	</aui:fieldset>
 
