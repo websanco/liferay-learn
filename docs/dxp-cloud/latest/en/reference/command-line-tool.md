@@ -2,6 +2,10 @@
 
 The CLI tool can be used to view and manage your DXP Cloud services. Once installed, you can run `lcp --help` in your terminal to view available actions.
 
+```{tip}
+You can run the `-v` or `--verbose` option at the end of any `lcp` command to see extra logging and information. Run the `--help` flag at the end of any `lcp` command to see the available flags you can use with it.
+```
+
 * [Installing the CLI Tool](#installing-the-cli-tool)
 * [Upgrading the CLI Tool from Version 2 to 3](#upgrading-the-cli-tool-from-version-2-to-3)
 * [Configuring the CLI Remote](#configuring-the-cli-remote)
@@ -9,6 +13,7 @@ The CLI tool can be used to view and manage your DXP Cloud services. Once instal
 * [Changing the Number of Service Instances](#changing-the-number-of-service-instances)
 * [Listing Projects or Services](#listing-projects-or-services)
 * [Restarting a Service](#restarting-a-service)
+* [Deploying to Your DXP Cloud Environment](#deploying-to-your-dxp-cloud-environment)
 * [Accessing a Service's Shell](#accessing-a-services-shell)
 * [Uninstalling Version 3 of the CLI Tool](#uninstalling-version-3-of-the-cli-tool)
 
@@ -199,6 +204,24 @@ Alternatively, restart a service by passing its full URL to `lcp restart`:
 ```shell
 lcp restart --url <serviceID>-<projectID>.lfr.cloud
 ```
+
+## Deploying to Your DXP Cloud Environment
+
+Use the `lcp deploy` command to deploy either a specific service or all of your services to one of your environments:
+
+```shell
+lcp deploy
+```
+
+Running `lcp deploy` from the root directory of your repository deploys all applicable services to your chosen environment. Run the command from one service's folder to specifically deploy that service to the environment.
+
+Run the command with `-r` to specify a remote (by its ID) other than the default:
+
+```shell
+lcp deploy -r <remote-id>
+```
+
+See [Deploying Changes via the CLI Tool](../build-and-deploy/deploying-changes-via-the-cli-tool.md) for more information.
 
 ## Accessing a Service's Shell
 
