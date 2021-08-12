@@ -7,7 +7,6 @@ import javax.portlet.Portlet;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=A4P1 Portlet",

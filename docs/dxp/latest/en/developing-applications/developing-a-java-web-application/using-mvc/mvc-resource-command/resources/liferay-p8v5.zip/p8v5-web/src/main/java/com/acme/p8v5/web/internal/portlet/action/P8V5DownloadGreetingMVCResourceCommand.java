@@ -14,7 +14,6 @@ import javax.portlet.ResourceResponse;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"javax.portlet.name=com_acme_p8v5_web_internal_portlet_P8V5Portlet",
 		"mvc.command.name=/p8v5/download_greeting"
