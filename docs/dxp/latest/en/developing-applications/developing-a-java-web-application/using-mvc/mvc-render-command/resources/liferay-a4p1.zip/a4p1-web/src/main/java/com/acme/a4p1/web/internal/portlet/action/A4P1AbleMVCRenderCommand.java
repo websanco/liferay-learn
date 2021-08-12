@@ -12,11 +12,11 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	property = {
 		"javax.portlet.name=com_acme_a4p1_web_internal_portlet_A4P1Portlet",
-		"mvc.command.name=/a4p1/bar"
+		"mvc.command.name=/a4p1/able"
 	},
 	service = MVCRenderCommand.class
 )
-public class A4P1BarMVCRenderCommand implements MVCRenderCommand {
+public class A4P1AbleMVCRenderCommand implements MVCRenderCommand {
 
 	@Override
 	public String render(
@@ -26,10 +26,10 @@ public class A4P1BarMVCRenderCommand implements MVCRenderCommand {
 			_log.info("Invoke #render(RenderRequest, RenderResponse)");
 		}
 
-		return "/a4p1/bar.jsp";
+		return "/a4p1/able.jsp";
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		A4P1BarMVCRenderCommand.class);
+		A4P1AbleMVCRenderCommand.class);
 
 }
