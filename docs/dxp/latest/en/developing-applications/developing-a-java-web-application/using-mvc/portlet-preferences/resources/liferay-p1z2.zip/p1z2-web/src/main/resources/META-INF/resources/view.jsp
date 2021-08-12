@@ -4,4 +4,4 @@
 
 <portlet:defineObjects />
 
-<%= (String)portletPreferences.getValue("color", "blue") %>
+Color: <%= (String)portletPreferences.getValue("color", "blue") %>
