@@ -9,10 +9,11 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 
 <liferay-portlet:actionURL portletConfiguration="<%= true %>" var="configurationActionURL" />
 
-<liferay-portlet:renderURL portletConfiguration="<%= true %>" var="configurationRenderURL" />
-
 <aui:form action="<%= configurationActionURL %>" method="post" name="fm">
 	<aui:input name="<%= Constants.CMD %>" type="hidden" value="<%= Constants.UPDATE %>" />
+
+	<liferay-portlet:renderURL portletConfiguration="<%= true %>" var="configurationRenderURL" />
+
 	<aui:input name="redirect" type="hidden" value="<%= configurationRenderURL %>" />
 
 	<aui:fieldset>
