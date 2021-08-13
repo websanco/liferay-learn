@@ -127,17 +127,19 @@ The `able.jsp` and `baker.jsp` files indirectly link to each other using portlet
 :language: javascript
 ```
 
-The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. This render URL declares the `mvcRenderCommandName` portlet parameter the value `/a4p1/baker`--this is `A4P1AbleMVCRenderCommand`'s MVC command name. The variable `bakerURL` references this render URL.
+The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. This render URL declares the `mvcRenderCommandName` portlet parameter value `/a4p1/baker`--this is `A4P1AbleMVCRenderCommand`'s MVC command name. The variable `bakerURL` references this render URL.
 
 The hyperlink `<a href="<%= bakerURL %>">Go to Baker</a>` binds the render URL to an action.When a user clicks on the hyperlink, the portlet sends the [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) to `A4P1BakerMVCRenderCommand` because its `mvc.command.name` component property value `/a4p1/baker` matches the `mvcRenderCommandName` parameter value.
 
-`baker.jsp` is similar to `able.jsp` except its portlet render URL `mvcRenderCommandName` parameter value is `/a4p1/able`. Here is `baker.jsp`:
+`baker.jsp` is similar to `able.jsp` except its portlet render URL `mvcRenderCommandName` parameter value is `/a4p1/able`. Each JSP's `portlet:renderURL` tag maps to an MVC Render Command by assigning the MVC Render Command's `mvc.command.name` property value to the tag's `mvcRenderCommandName` portlet parameter.
 
-```{literalinclude} ./mvc-render-command/resources/liferay-a4p1.zip/a4p1-web/src/main/resources/META-INF/resources/a4p1/baker.jsp
-:language: javascript
-```
+| `able.jsp` Portlet Render URL Parameter | `A4P1BakerMVCRenderCommand` Component Property |
+| ----------------------------- | ----------------------------------------------- |
+| `<portlet:param name="mvcRenderCommandName" value="/a4p1/baker" />` | `mvc.command.name=/a4p1/baker` |
 
-The `mvcRenderCommandName` value `/a4p1/able` matches `A4P1AbleMVCRenderCommand`'s `mvc.command.name` component property value. Clicking on `baker.jsp`'s *Go to Able* link invokes `A4P1AbleMVCRenderCommand`'s `render` method, which renders `able.jsp`.
+| `baker.jsp` Portlet Render URL Parameter | `A4P1AbleMVCRenderCommand` Component Property |
+| ----------------------------- | ----------------------------------------------- |
+| `<portlet:param name="mvcRenderCommandName" value="/a4p1/able" />` | `mvc.command.name=/a4p1/able` |
 
 ## What's Next
 
