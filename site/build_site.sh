@@ -261,7 +261,7 @@ function unzip_reference_docs {
 	# liferay-ce-portal-doc-*.zip
 	#
 
-	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/"${LIFERAY_LEARN_PORTAL_DOC_FILE_NAME}".zip > liferay-ce-portal-doc.zip
+	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/"${LIFERAY_LEARN_PORTAL_DOC_FILE_NAME}" > liferay-ce-portal-doc.zip
 
 	7z x liferay-ce-portal-doc.zip
 
