@@ -20,14 +20,14 @@ public class Y4A2AntivirusScanner implements AntivirusScanner {
 	@Override
 	public void scan(byte[] bytes) throws AntivirusScannerException {
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoke #scan(byte)");
+			_log.info("Invoking #scan(byte)");
 		}
 	}
 
 	@Override
 	public void scan(File file) throws AntivirusScannerException {
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoke #scan(File)");
+			_log.info("Invoking #scan(File)");
 		}
 	}
 

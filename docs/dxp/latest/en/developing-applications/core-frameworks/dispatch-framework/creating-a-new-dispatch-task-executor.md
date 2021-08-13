@@ -88,7 +88,7 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    If successful, it should print the following message to the console when executed.
 
    ```log
-   INFO [liferay/dispatch/executor-2][S7A3DispatchTaskExecutor:30] Invoke #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)
+   INFO [liferay/dispatch/executor-2][S7A3DispatchTaskExecutor:30] Invoking #doExecute(DispatchTrigger, DispatchTaskExecutorOutput)
    ```
 
    You can also click the Dispatch Task and go to the *Logs* tab to see a list of all previous runs.

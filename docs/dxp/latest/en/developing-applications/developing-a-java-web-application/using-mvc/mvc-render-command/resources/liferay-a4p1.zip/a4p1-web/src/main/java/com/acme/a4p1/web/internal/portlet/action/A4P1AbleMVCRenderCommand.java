@@ -23,7 +23,7 @@ public class A4P1AbleMVCRenderCommand implements MVCRenderCommand {
 		RenderRequest renderRequest, RenderResponse renderResponse) {
 
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoke #render(RenderRequest, RenderResponse)");
+			_log.info("Invoking #render(RenderRequest, RenderResponse)");
 		}
 
 		return "/a4p1/able.jsp";

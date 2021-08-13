@@ -28,7 +28,7 @@ public class S7A3DispatchTaskExecutor extends BaseDispatchTaskExecutor {
 
 		if (_log.isInfoEnabled()) {
 			_log.info(
-				"Invoke #doExecute(DispatchTrigger, " +
+				"Invoking #doExecute(DispatchTrigger, " +
 					"DispatchTaskExecutorOutput)");
 		}
 	}

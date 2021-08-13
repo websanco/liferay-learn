@@ -409,7 +409,7 @@ Logging Logic:
 ```java
 getUser(long userId) throws PortalException {
     if (_log.isInfoEnabled()) {
-        _log.info("Invoke #getUser(long)");
+        _log.info("Invoking #getUser(long)");
     }
     ... 
 }
