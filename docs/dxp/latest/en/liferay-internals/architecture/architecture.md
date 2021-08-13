@@ -1,16 +1,16 @@
 # Architecture
 
-Liferay DXP/Portal (Liferay) architecture comprises these parts:
+Liferay DXP and Liferay Portal architecture comprises these parts:
 
-**Core:** Bootstraps Liferay and its [frameworks](../../developing-applications/core_frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
+**Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core_frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
 
-**Services:** Liferay and custom functionality is exposed via Java APIs and web APIs.
+**Services:** Expose DXP/Portal functionality and custom functionality via Java APIs and web APIs.
 
 **UI:** The optional web application UI for adding portals, sites, pages, widgets, and content.
 
 You can use the UI and services together or focus solely on using services via [REST web APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
-![Portal sites contain content and widgets. Liferay can also be used "headless"---without the UI.](./architecture/images/01.png)
+![Portal sites contain content and widgets. DXP/Portal can also be used "headless"---without the UI.](./architecture/images/01.png)
 
 The architecture satisfies these requirements:
 
@@ -24,7 +24,7 @@ The Core supports UI and service deployments and orchestrates wiring them togeth
 
 ## Core
 
-Liferay is a web application that runs on your application server. The Core bootstraps the application and Liferay's [built-in frameworks](../../developing-applications/core_frameworks.html).
+DXP/Portal is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core_frameworks.html).
 
 There are frameworks for these things and more:
 
@@ -76,9 +76,9 @@ The service components provide business functionality.
 
 ## Services
 
-Business logic is implemented in services deployed to the component runtime environment. Built-in Core services and framework services operate on Liferay models such as [Users](../../users-and-permissions/users/understanding-users.md), [Roles](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md), [Web Content](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md), [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), and more. You can introduce new models and functionality through custom services. Service components can access each other via dependency injection.
+Business logic is implemented in services deployed to the component runtime environment. Built-in Core services and framework services operate on models such as [Users](../../users-and-permissions/users/understanding-users.md), [Roles](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md), [Web Content](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md), [Documents and Media](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md), and more. You can introduce new models and functionality through custom services. Service components can access each other via dependency injection.
 
-Front-end applications invoke the services to do work. You can deploy Java-based applications that call services directly using the Java APIs, and any web-based (Java and non-Java) application, whether deployed on Liferay or not, can use the web APIs, which include [headless REST APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md) that conform to the [OpenAPI](https://swagger.io/docs/specification/about/) standard and include plain web/REST services. The following figure shows applications and external clients invoking Liferay services.
+Front-end applications invoke the services to do work. You can deploy Java-based applications that call services directly using the Java APIs, and any web-based (Java and non-Java) application, whether deployed on DXP/Portal or not, can use the web APIs, which include [headless REST APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md) that conform to the [OpenAPI](https://swagger.io/docs/specification/about/) standard and include plain web/REST services. The following figure shows applications and external clients invoking Liferay services.
 
 ![Local and remote applications can invoke services via REST web APIs. Java-based portlets can also invoke services via Java APIs.](./architecture/images/03.png)
 
@@ -90,7 +90,7 @@ The web-based UI makes content and service functionality available in browsers.
 
 The UI helps people do work, [collaborate](../../collaboration-and-social/collaboration-and-social-overview.md), and [enjoy content](../../content_authoring_and_management.html). The UI consists of
 
-* [Liferay application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
+* [DXP/Portal application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
 
 * [Applications](../../developing_applications.html): Widgets that provide a user interface for services already deployed. 
 
@@ -98,4 +98,4 @@ The UI helps people do work, [collaborate](../../collaboration-and-social/collab
 
 The [UI architecture](./ui_architecture.html) articles dig deeper into developing and customizing UI components.
 
-As you can see, the Liferay architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, we dive into the Core to describe class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](ui-architecture/ui-architecture.md) topics, if you like. Enjoy exploring the Liferay architecture!
+As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, we dive into the Core to describe class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](ui-architecture/ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
