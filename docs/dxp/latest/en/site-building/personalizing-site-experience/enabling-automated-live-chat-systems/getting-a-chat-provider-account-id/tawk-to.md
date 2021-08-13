@@ -8,13 +8,13 @@
 
 1. Click on the *Administration* button. <!-- @Fabio/Evelyn - please annotate the screenshot so it's more obvious where someone needs to click and look. -->
 
-    ![Administration Button](./tawk-to/images/01.png)
+    ![You can see the Tawk-to Administration Button.](./tawk-to/images/01.png)
 
 1. Go to *Channels* and click on *Chat Widget*.
 
-    ![Chat Widget option](./tawk-to/images/02.png)
+    ![The Chat Widget option is shown.](./tawk-to/images/02.png)
 
 1. Under the *Direct Chat Link* header, Copy the highlighted portion of the URL use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
 
-    ![Copy the chat link](./tawk-to/images/03.png)
+    ![Copy the chat link.](./tawk-to/images/03.png)
