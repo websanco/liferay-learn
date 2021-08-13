@@ -255,7 +255,7 @@ function get_product_version_language_dir_name {
 	echo "${product}"/"${version}"/"${language}"
 }
 
-function publish_reference_docs {
+function unzip_reference_docs {
 
 	#
 	# liferay-ce-portal-doc-*.zip
@@ -295,7 +295,7 @@ function main {
 
 	generate_static_html
 
-	publish_reference_docs
+	unzip_reference_docs
 
 	upload_to_server
 
