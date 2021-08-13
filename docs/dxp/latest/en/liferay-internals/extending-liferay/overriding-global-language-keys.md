@@ -1,24 +1,24 @@
 # Overriding Global Language Keys
 
-Liferay uses language keys for user interface messages. Whether the default language or a language for another locale, the global keys can be overridden by using a custom language module.
+Liferay DXP/Portal implements headings, labels, and messages for the default locale and many other locales using language keys. You can override these keys for any of the locales using new language key values in a module.
 
-```Note
-Most of Liferay's language keys are found in the global language key files. But some may be located in a specific application's module. The process of `overriding module language keys <./overriding-module-language-keys.md>`_ is different from overriding the global keys.
+```{note}
+Many of the language keys are in the global language key files. But some may be located in specific application modules. The process of [overriding module language keys](./overriding-module-language-keys.md) is different from overriding the global keys.
 ```
 
 ## Examining the Global Language Keys
 
-Liferay's global language keys are in the source code or your bundle.
+The global language keys are in the source code and the DXP/Portal bundle.
 
-From the source: 
+In the source: 
 
 `/portal-impl/src/content/Language[xx_XX].properties`
 
-From a bundle:
+In a bundle:
 
 `portal-impl.jar`
 
-You can also view the different language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/master/portal-impl/src/content). You can identify the different languages by the language code in the filename suffix. For example `Language_ja.properties` is for Japanese.
+You can also view the different language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content). You can identify the different translations by the language code in the filename suffix. For example `Language_ja.properties` is for Japanese.
 
 These language key files contain properties that you can override, like the language settings properties: 
 
@@ -31,7 +31,7 @@ lang.user.name.suffix.values=II,III,IV,Jr,Phd,Sr
 ...
 ```
 
-There are also many simple keys you can override to update default messages and labels.
+There are also many simple keys you can override for messages and labels.
 
 ```properties
 category.admin=Admin
@@ -41,23 +41,130 @@ category.cms=Content Management
 ...
 ```
 
-The example code changes the default `publish` language key to a custom key. 
+In Liferay DXP/Portal 7.4+, a module declares overriding the global resource bundle using metadata. In earlier versions, a module declares the override using Java classes.
+
+If your version is earlier than 7.4, skip ahead to [Overriding in Earlier Versions](#overriding-in-earlier-versions). Otherwise, read on to learn how to override language keys in 7.4+.
+
+## Deploy the Example for 7.4+
+
+This example changes the `home` language key setting to this:
 
  ```properties
- publish=Publish
+ home=I2F4 Home
  ```
 
-## Deploy the Example
+Here's how to deploy the example:
 
-To see an example of overriding a global language key:
-
-1. Start Liferay DXP. If you don't already have a docker container, use
+1. Start Liferay DXP/Portal. If you don't already have a docker container, use
 
     ```bash
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-    If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly. 
+    If you're running a different DXP/Portal version, adjust the above command accordingly. 
+
+1. Download and unzip [the latest example](./liferay-i2f4.zip).
+
+    ```bash
+    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-i2f4.zip -O
+    ```
+
+    ```bash
+    unzip liferay-i2f4.zip
+    ```
+
+1. Build and deploy the project module.
+
+    ```bash
+    cd liferay-i2f4
+    ```
+
+    ```bash
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+    ```
+
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
+    ```
+
+1. Confirm the deployment in the Liferay Docker container console.
+
+    ```bash
+    STARTED com.acme.i2f4.impl_1.0.0 [3209]
+    ```
+
+1. Verify the example module's customization. Open your browser to `https://localhost:8080`.
+
+1. Click the menu icon (![Menu](../../images/icon-menu.png)). The home icon label uses the custom language key value.
+
+    ![The home icon is now using the custom language key value.](./overriding-global-language-keys/images/01.png)
+
+1. The example includes custom language key values for multiple locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the customization in that locale. The module overrides language keys for these locales too.
+
+    ![A custom language key is also used for Brazilian Portuguese and Japanese](./overriding-global-language-keys/images/02.png)
+
+Now that you've seen the example, learn how it works. 
+
+## Create a Language Properties File
+
+First select which keys you wish to override. For example, the example module code overrides the `home` language key.
+
+```properties
+home=I2F4 Home
+```
+
+```{important}
+The values for the language keys you declare override the values for those existing keys. All other existing language key settings are preserved.
+```
+
+Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. Use the file name `Language.properties` to override the default locale's language keys. To override a specific locale's keys, use the language properties file naming convention:
+
+```
+Language[xx_XX].properties
+```
+
+For example, if you're overriding Japanese, use `Language_ja.properties`.
+
+## Declare the Override in the Bnd File
+
+In your module's `bnd.bnd` file, specify your language resource provider capability. Here is the example's `Provide-Capability` header:
+
+```{literalinclude} ./overriding-global-language-keys/resources/liferay-i2f4.zip/i2f4-impl/bnd.bnd
+:lines: 4-6
+```
+
+```{note}
+The example ommits a service ranking--it uses OSGi's default ranking `0`, which is higher than the default global resource bundle service ranking `-1`.
+```
+
+Global language key overrides are easiest to manage when they're in the same module.
+
+Although we don't recommend using multiple modules to override global language keys, if you override the same key in multiple modules the language resource provider with the highest service ranking wins.
+
+For example, if you want your module's language keys to take priority over keys from a provider that has service ranking `1`, set your ranking to `2` or higher.
+
+```properties
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language";\
+		service.ranking:Long="2"
+```
+
+Deploy your module to see your new language key values.
+
+## Overriding in Earlier Versions
+
+On Liferay DXP/Portal versions earlier than 7.4, overriding global language keys requires a [language properties file](#create-a-language-properties-file) and a `java.util.ResourceBundle` for each translation being customized. Learn more by deploying the following example and examining its code.
+
+### Deploy the Example for Earlier Versions
+
+This example changes the `publish` language key setting to this:
+
+```properties
+publish=X8F3 Publish
+```
+
+Here's how to deploy the example:
 
 1. Download and unzip [Overriding Global Language Keys](./liferay-x8f3.zip).
 
@@ -69,14 +176,14 @@ To see an example of overriding a global language key:
     unzip liferay-x8f3.zip
     ```
 
-1. From the module root, build and deploy.
+1. Build and deploy the project module.
+
+    ```bash
+    cd liferay-x8f3
+    ```
 
     ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
-
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -85,46 +192,26 @@ To see an example of overriding a global language key:
     STARTED com.acme.x8f3.impl_1.0.0 [3209]
     ```
 
-1. Verify that the example module is working. Open your browser to `https://localhost:8080`
+1. Verify the example module's customization. Open your browser to `https://localhost:8080`.
 
-1. Navigate to a page to see a publish button. For example, click the edit icon (![Edit](../../images/icon-edit.png)) of a Site page. The publish button is now showing the custom language key.
+1. Navigate to a Site page and click the edit icon (![Edit](../../images/icon-edit.png)). The publish button shows the custom language key.
 
-    ![Liferay is now using the custom language key for the publish button.](./overriding-global-language-keys/images/01.png)
+    ![The publish button now uses the custom language key.](./overriding-global-language-keys/images/03.png)
 
-1. The tutorial code also includes examples for other locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
+1. Use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
 
-    ![A custom language key is also used for Portugueses and Japanese](./overriding-global-language-keys/images/02.png)
+    ![A custom language key is also used for Brazilian Portuguese and Japanese](./overriding-global-language-keys/images/04.png)
 
-Now that you've seen the example, let's see how it works. 
+Like the 7.4+ example, this example module specifies custom values in language key files. Instead of using metadata (a `bnd.bnd` file header) to declare the override, however, the module uses `ResourceBundle` classes.
 
-## Create the Language Properties File
+### Create Resource Bundle Classes
 
-First select which keys you wish to override. For example, the tutorial code overrides the `Publish` language key.
+Each locale you're overriding requires a class that extends `java.util.ResourceBundle`. Here's the example resource bundle class for the `en_US` locale:
 
-Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the keys your way. Make sure the filename of your language properties file matches the locale you wish to override. For example, if overriding Japanese, use `Language_ja.properties`.
-
-## Create the Language Resource Bundle
-
-In your module, create a class that extends `java.util.ResourceBundle` for the locale you're overriding. Here's an example resource bundle class for the `en_US` locale:
-
-```java
-@Component(property = "language.id=en_US", service = ResourceBundle.class)
-public class X8F3EnglishResourceBundle extends ResourceBundle {
-
-	@Override
-	public Enumeration<String> getKeys() {
-		return _resourceBundle.getKeys();
-	}
-
-	@Override
-	protected Object handleGetObject(String key) {
-		return _resourceBundle.getObject(key);
-	}
-
-	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_en_US", UTF8Control.INSTANCE);
-
-}
+```{literalinclude} ./overriding-global-language-keys/resources/liferay-x8f3.zip/x8f3-impl/src/main/java/com/acme/x8f3/internal/language/X8F3EnglishResourceBundle.java
+:dedent: 1
+:language: java
+:lines: 10-26
 ```
 
 The class's `_resourceBundle` field is assigned a `ResourceBundle`. The call to `ResourceBundle.getBundle` needs two parameters. The `content.Language_en_US` parameter is the language file's qualified name with respect to the module's `src/main/resources/content` folder. The second parameter is a `control` that sets the language syntax of the resource bundle. To use language syntax identical to Liferay's syntax, import Liferay's `com.liferay.portal.kernel.language.UTF8Control` class and set the second parameter to `UTF8Control.INSTANCE`. 
@@ -143,7 +230,7 @@ The class overrides these methods:
 
 Your resource bundle service component redirects the default language keys to your module's language key overrides.
 
-**Note:** Global language key overrides for multiple locales require a separate resource bundle class for each locale. For example, the tutorial code has one for English, Japanese, and Portuguese. Each resource bundle must specify its locale in the `language.id` component property definition and in the language file qualified name parameter. For example, here is what they look like for the Japanese locale.
+Global language key overrides for multiple locales require a separate resource bundle class for each locale. For example, the tutorial code has one for Brazilian Portuguese, English, and Japanese. Each resource bundle must specify its locale in the `language.id` component property definition and in the language file qualified name parameter. For example, here is what they look like for the Japanese locale.
 
 Component definition:
 
@@ -154,9 +241,11 @@ Component definition:
 Resource bundle assignment:
 
 ```java
-	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_ja", UTF8Control.INSTANCE);
+private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
+    "content.Language_ja", UTF8Control.INSTANCE);
 ```
+
+Deploy your module to see your new language key values.
 
 ## Related Information
 
