@@ -16,11 +16,11 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	property = {
 		"javax.portlet.name=com_acme_p8v5_web_internal_portlet_P8V5Portlet",
-		"mvc.command.name=/p8v5/download_greeting"
+		"mvc.command.name=/p8v5/download"
 	},
 	service = MVCResourceCommand.class
 )
-public class P8V5DownloadGreetingMVCResourceCommand
+public class P8V5DownloadMVCResourceCommand
 	implements MVCResourceCommand {
 
 	@Override
@@ -30,7 +30,7 @@ public class P8V5DownloadGreetingMVCResourceCommand
 
 		try {
 			PortletResponseUtil.sendFile(
-				resourceRequest, resourceResponse, "p8v5_greeting.txt",
+				resourceRequest, resourceResponse, "p8v5.txt",
 				"Hello P8V5!".getBytes(), "text");
 
 			return false;
@@ -43,6 +43,6 @@ public class P8V5DownloadGreetingMVCResourceCommand
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		P8V5DownloadGreetingMVCResourceCommand.class);
+		P8V5DownloadMVCResourceCommand.class);
 
 }
