@@ -256,19 +256,31 @@ function get_product_version_language_dir_name {
 }
 
 function publish_reference_docs {
-	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/liferay-ce-portal-doc-"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"-"${LIFERAY_LEARN_DXP_REF_DOCS_TIMESTAMP}".zip > docs-latest.zip
 
-	7z x docs-latest.zip
+	#
+	# liferay-ce-portal-doc-*.zip
+	#
+
+	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/liferay-ce-portal-doc-"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"-"${LIFERAY_LEARN_DXP_REF_DOCS_TIMESTAMP}".zip > liferay-ce-portal-doc.zip
+
+	7z x liferay-ce-portal-doc.zip
 
 	mv liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/* ./build/output/reference/latest/en/dxp
+
 	rmdir liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}
-	rm -f docs-latest.zip
+
+	rm -f liferay-ce-portal-doc.zip
+
+	#
+	# portlet-api-3.0.1-javadoc.jar
+	#
 
 	curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
 
 	mkdir ../site/build/output/reference/latest/en/dxp/portlet-api
 
 	7z x -o../site/build/output/reference/latest/en/portlet-api portlet-api-3.0.1-javadoc.jar
+
 	rm -f portlet-api-3.0.1-javadoc.jar
 }
 
