@@ -74,22 +74,25 @@ You've seen MVC Action Commands in action. Now see how they work.
 
 ## Examine the Portlet
 
-`L6Y9Portlet` is a minimal [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) that has only four properties.
+`L6Y9Portlet` is a minimal [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java).
 
 ```{literalinclude} ./mvc-action-command/resources/liferay-l6y9.zip/l6y9-web/src/main/java/com/acme/l6y9/web/internal/portlet/L6Y9Portlet.java
 :language: java
 :lines: 9-19
 ```
 
-Its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) properties specify this configuration:
+The [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) `javax.portlet.name` property sets the portlet's name.
 
-* Widget category: `Sample`
-* Display name: `L6Y9 Portlet`
-* Initial view template: `view.jsp`
-* Name: `com_acme_l6y9_web_internal_portlet_L6Y9Portlet`
+```{literalinclude} ./mvc-action-command/resources/liferay-l6y9.zip/l6y9-web/src/main/java/com/acme/l6y9/web/internal/portlet/L6Y9Portlet.java
+:dedent: 2
+:language: java
+:lines: 14
+```
+
+The portlet renders `/view.jsp` by default.
 
 ```{note}
-An `MVCActionCommand` binds to a portlet by the portlet's name (e.g., the portlet's `javax.portlet.name` property value).
+`MVCActionCommand`s bind to a portlet by the portlet's name (e.g., the portlet component `javax.portlet.name` property value).
 ```
 
 The example portlet renders `view.jsp` by default. The portlet's MVC Action Command classes are next.
