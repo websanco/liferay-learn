@@ -15,12 +15,17 @@ By default, login is required to directly access the web interfaces for the DXP 
 
 ## Logging In
 
-1. Navigate to the environment where the _webserver_ service is located.
-1. Click the _webserver_ logo at the top of the page.
+1. Navigate to your chosen environment (_dev_, _prd_, etc.).
 
-    ![webserver](./logging-into-your-dxp-cloud-services/images/02.png)
+1. Click the *Visit Site* dropdown menu at the top of the page.
 
-1. Enter the DXP Cloud Jenkins user name and password when prompted.
+    ![The Visit Site dropdown lists all available endpoints for your Liferay instances in the environment.](./logging-into-your-dxp-cloud-services/images/02.png)
+
+    The dropdown menu lists all of the available endpoints to your `liferay` service you can access, including the default `webserver` service endpoint and any custom domains you have added to the environment.
+
+1. Click on the desired endpoint to access your Liferay instance with the corresponding URL.
+
+1. Enter the DXP Cloud [Jenkins user name and password](#locating-login-credentials) when prompted.
 
     ![authentication](./logging-into-your-dxp-cloud-services/images/03.png)
 
@@ -28,7 +33,17 @@ By default, login is required to directly access the web interfaces for the DXP 
 
     ![DXP 7.2 GA1 Sign In](./logging-into-your-dxp-cloud-services/images/04.png)
 
-Similar steps may be followed to access the Jenkins CI web interface.
+### Finding Default Service URLs
+
+You can also find the default `webserver` endpoint's URL by navigating to the service's page and clicking on the `webserver` logo at the top of the page (which expands into a URL):
+
+![The service name's logo expands into a clickable URL if one is applicable for the service.](./logging-into-your-dxp-cloud-services/images/05.png)
+
+Your [Jenkins login credentials](#locating-login-credentials) are still required when accessing Liferay through this method.
+
+You can follow similar steps to access the Jenkins CI web interface. Navigate to the `ci` service in the `infra` environment to find the Jenkins URL:
+
+![The CI service also has a URL available for the Jenkins CI web interface.](./logging-into-your-dxp-cloud-services/images/06.png)
 
 ## Additional Information
 
