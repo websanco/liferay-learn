@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
-users-and-accounts/roles_and_permissions.md
+users-and-accounts/roles-and-permissions.md
 users-and-accounts/account-management.md
 ```
 
