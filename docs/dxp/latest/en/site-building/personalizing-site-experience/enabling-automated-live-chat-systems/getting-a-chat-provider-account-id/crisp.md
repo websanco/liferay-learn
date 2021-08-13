@@ -16,8 +16,7 @@
 
 1. Click *Setup instructions*.
 
-   Look for the *Website ID* field. The value provided is your Chat Provider Account ID for Crisp.
+   Look for the *Website ID* field. The value provided, highlighted in the screenshot, can be used as the Chat Provider *Account ID* to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
 
     ![Website ID](./crisp/images/03.png)
-
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

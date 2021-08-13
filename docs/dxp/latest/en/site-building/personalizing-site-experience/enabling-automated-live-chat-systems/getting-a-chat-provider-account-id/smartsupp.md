@@ -10,8 +10,7 @@
 
     ![Chat Box](./smartsupp/images/01.png)
 
-1. Your Smartsupp key is found on this page and is highlighted in the screenshot below. This is your Chat Provider Account ID for Smartsupp.
+1. In the screenshot below, the portion that is highlighted will be used as the Liferay Chat Provider Account ID.  Select and copy this portion and use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
 
     ![Smartsupp Key](./smartsupp/images/02.png)
-
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

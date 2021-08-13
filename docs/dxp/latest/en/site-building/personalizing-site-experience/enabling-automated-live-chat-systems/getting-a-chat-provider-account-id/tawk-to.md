@@ -14,10 +14,7 @@
 
     ![Chat Widget option](./tawk-to/images/02.png)
 
-1. Under the *Direct Chat Link* header, copy the portion of text from the URL provided as demonstrated in the screenshot below.
+1. Under the *Direct Chat Link* header, Copy the highlighted portion of the URL use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
 
     ![Copy the chat link](./tawk-to/images/03.png)
-
-    The highlighted portion of the URL is your Tawk.to Account ID.
-
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

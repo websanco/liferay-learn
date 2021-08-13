@@ -10,8 +10,6 @@
 
     ![Dashboard page](./zendesk/images/01.png)
 
-1. Zendesk provides a code snippet to embed their web widget. The Account ID is the portion of the snippet after `...snippet.js?key=`. Select and copy that portion of the snippet.
+1. Zendesk provides a code snippet to embed their web widget. The Account ID is the portion of the snippet after `...snippet.js?key=`. Select and copy that portion of the snippet and use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
    ![Example](./zendesk/images/03.png)
-
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

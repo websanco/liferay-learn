@@ -16,8 +16,8 @@
 
 1. Click on *Installation*.
 
-    Copy the selected portion of the snippet. In the screenshot below, the portion that is higlighted is the Account ID.
+    In the screenshot below, the portion that is highlighted will be used as the Liferay Chat Provider Account ID.  Select and copy this portion and use it as the Chat Provider Account ID to [enable automated live chat integration](./enabling-automated-live-chat-systems.md) with your Liferay instance.
 
     ![Installation](./jivochat/images/03.png)
 
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+

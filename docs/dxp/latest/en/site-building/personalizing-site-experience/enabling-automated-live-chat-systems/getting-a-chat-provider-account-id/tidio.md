@@ -14,8 +14,7 @@
   
     ![Developer under General](./tidio/images/02.png)
 
-1. The *Public Key* provided by Tidio is your Chat Provider Account ID.
+1. Copy the *Public Key* and use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
   
     ![Chat Provider Id](./tidio/images/03.png)
-
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.

@@ -1,9 +1,8 @@
-
 # Enabling Automated Live Chat Systems
 
  > Available: Liferay 7.4 GA2+ 
 
-Liferay now offers integration with a number of live support chat platforms. Enabling this integration adds a familiar chat window to sites on your Liferay instance and can be used as to enable improved support and site experience for your users.
+Liferay now offers integration with a number of live support chat platforms. Enabling this integration adds a chat window to sites on your Liferay instance and can be used to enable improved support and site experience for your users.
 
 Here you learn how to access and use *Click To Chat*.
 
@@ -19,7 +18,7 @@ To enable Click To Chat go to *Instance Settings*.
 
     ![Click To Chat under Content and Data](./enabling-automated-live-chat-systems/images/03.png)
 
-1. Click the *Enable Click to Chat* toggle, to enable Click to Chat for your instance.
+1. To enable Click to Chat for your instance, switch the *Enable Click to Chat* toggle.
 
     ![Click to chat enable switch](./enabling-automated-live-chat-systems/images/04.png)
 
@@ -33,7 +32,7 @@ To enable Click To Chat go to *Instance Settings*.
 
    **Inherit or Override**: Sites inherit configuration from Instance Settings, unless configured otherwise in the site's Site Settings.
 
-1. Select your Chat Provider and input the [Account ID or token](#getting-the-chat-provider-account-id-or-token) given to you from your Chat Provider.
+1. Select your Chat Provider and input the [Account ID or token](#getting-the-chat-provider-account-id-or-token) given to you by your Chat Provider.
 
     ![Chat provider options](./enabling-automated-live-chat-systems/images/06.png)
 

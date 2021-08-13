@@ -16,8 +16,9 @@
 
 1. Click the *Configuration* menu tab.  
 
-    Look for the field value for `websiteToken`. The value is highlighted in the screenshot and can be used as your Chat Provider Account ID.
+    Look for the field value for `websiteToken`. The value is highlighted in the screenshot and can be used as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
 
     ![Configuration and Account Id](./chatwoot/images/03.png)
 
-Use this Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
+
