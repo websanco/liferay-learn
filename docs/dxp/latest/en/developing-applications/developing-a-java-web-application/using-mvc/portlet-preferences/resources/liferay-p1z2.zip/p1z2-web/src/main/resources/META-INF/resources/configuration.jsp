@@ -16,7 +16,7 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 	<aui:input name="redirect" type="hidden" value="<%= configurationRenderURL %>" />
 
 	<aui:fieldset>
-		<aui:select label="color" name="preferences--color--" value='<%= (String)portletPreferences.getValue("color", "blue") %>'>
+		<aui:select label="color" name="color" value='<%= (String)portletPreferences.getValue("color", "blue") %>'>
 			<aui:option label="Blue" value="blue" />
 			<aui:option label="Red" value="red" />
 			<aui:option label="Yellow" value="yellow" />

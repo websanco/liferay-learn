@@ -25,8 +25,8 @@ public class P1Z2ConfigurationAction extends DefaultConfigurationAction {
 		throws Exception {
 
 		setPreference(
-			actionRequest, "preferences--color--",
-			ParamUtil.getString(actionRequest, "preferences--color--"));
+			actionRequest, "color",
+			ParamUtil.getString(actionRequest, "color"));
 
 		super.processAction(portletConfig, actionRequest, actionResponse);
 	}
