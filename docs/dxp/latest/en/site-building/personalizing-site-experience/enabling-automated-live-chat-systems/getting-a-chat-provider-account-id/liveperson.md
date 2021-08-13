@@ -6,7 +6,7 @@
 
 1. Log in to your [LivePerson account](https://authentication.liveperson.net/login.html).
 
-1. Click on the *User icon* on the left bottom corner <!-- @Fabio/Evelyn - I don't know which icon this is from looking at the screenshot. Please annotate the screenshot so it is more obvious) -->
+1. Click on the *User icon* on the left bottom corner. 
 
     ![Home Dashboard](./liveperson/images/01.png)
 

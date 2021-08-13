@@ -6,7 +6,7 @@
 
 1. Log in to your [Tawk.to account](https://dashboard.tawk.to/login).
 
-1. Click on the *Administration* button. <!-- @Fabio/Evelyn - please annotate the screenshot so it's more obvious where someone needs to click and look. -->
+1. Click on the *Administration* button. 
 
     ![You can see the Tawk-to Administration Button.](./tawk-to/images/01.png)
 
