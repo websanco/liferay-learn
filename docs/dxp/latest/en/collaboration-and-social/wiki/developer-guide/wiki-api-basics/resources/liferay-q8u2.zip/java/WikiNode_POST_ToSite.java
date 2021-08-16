@@ -18,7 +18,7 @@ public class WikiNode_POST_ToSite {
 			new WikiNode() {
 				{
 					description = "Foo";
-					name = "Baker Node";
+					name = "Dog Node";
 				}
 			});
 

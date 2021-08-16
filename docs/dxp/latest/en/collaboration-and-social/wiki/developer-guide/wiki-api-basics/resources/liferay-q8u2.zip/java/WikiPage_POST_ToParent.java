@@ -19,7 +19,7 @@ public class WikiPage_POST_ToParent {
 				{
 					content = "Foo";
 					encodingFormat = "text/x-wiki";
-					headline = "Baker Child";
+					headline = "Fox Page";
 				}
 			});
 

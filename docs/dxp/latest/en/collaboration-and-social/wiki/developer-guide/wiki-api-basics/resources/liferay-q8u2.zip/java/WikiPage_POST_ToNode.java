@@ -19,7 +19,7 @@ public class WikiPage_POST_ToNode {
 				{
 					content = "Foo";
 					encodingFormat = "text/x-wiki";
-					headline = "Baker Page";
+					headline = "Dog Page";
 				}
 			});
 
