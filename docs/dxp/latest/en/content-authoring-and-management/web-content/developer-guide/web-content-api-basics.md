@@ -3,7 +3,7 @@
 Using the Liferay DXP REST services, you can create and manage Structured Content on your Site. Structured Content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) using a Web Content Structure. With a Structure, you define the information you want to include in a Web Content article. Structures facilitate creating and managing Web Content while ensuring that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
 ```note::
-   You can use a Structure with a `Template <../web-content-templates/creating-web-content-templates.md>`_ to render the Structure content, but a template is not required to create Structured Content.
+   You can use a Structure with a `Web Content Template <../web-content-templates/creating-web-content-templates.md>`_ to render the Structure content, but a Template is not required to create Structured Content.
 ```
 
 In this article, you use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and Structured Content. For more advanced examples managing Structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
@@ -17,6 +17,7 @@ You can learn about the following topics:
 - [Updating the Web Content Article](#updating-the-web-content-article)
 - [Replacing the Web Content Article](#replacing-the-web-content-article)
 - [Deleting the Web Content Article](#deleting-the-web-content-article)
+- [More Web Content and Web Content Folder Services](#more-web-content-and-web-content-folder-services)
 
 ## Setting Up Your Environment
 
@@ -55,7 +56,7 @@ You can learn about the following topics:
 1. Complete these steps to set up the environment:
 
    1. [Identify the Services to Consume](#identify-the-services-to-consume)
-   1. [Identify the Site ID](#identify-the-site-id)
+   1. [Identify the Site Id](#identify-the-site-id)
 
 ### Identify the Services to Consume
 
@@ -67,13 +68,13 @@ Use the following services in the Liferay DXP Headless Delivery API to manage We
 
 To identify these services and the available HTTP methods, use the Liferay API Explorer. For more information, read [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
-### Identify the Site ID
+### Identify the Site Id
 
 1. Open the Site menu (![Site menu](../../../images/icon-menu.png)) and go to *Configuration* &rarr; *Site Settings*.
 1. Under the Platform section, click *Site Configuration*.
-1. Find the Site identifier under Site ID.
+1. Find the Site identifier under Site Id.
 
-   ![Identify the Site ID under the Site Settings and Site Configuration option.](./web-content-api-basics/images/04.png)
+   ![Identify the Site Id under the Site Settings and Site Configuration option.](./web-content-api-basics/images/04.png)
 
 ### Create a Basic Web Content Article in the User Interface
 
@@ -94,14 +95,14 @@ This new Web Content uses a by-default Basic Web Content Structure that is not v
 
 ## Getting the Web Content Articles
 
-The `StructuredContents_GET_FromSite.sh` cURL script lists the Web Content articles in the Site. This script uses the `StructuredContent` service with a `GET` HTTP method with the [Site ID](#identify-the-site-id) parameter.
+The `StructuredContents_GET_FromSite.sh` cURL script lists the Web Content articles in the Site. This script uses the `StructuredContent` service with a `GET` HTTP method with the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
 | GET | `StructuredContent` | `/v1.0/sites/{siteID}/structured-contents` |
 
 1. On the command prompt, change to the curl directory in the zip folder.
-1. Execute the following command, replacing the parameter with your Site ID:
+1. Execute the following command, replacing the parameter with your Site Id:
 
    ```bash
       ./StructuredContents_GET_FromSite.sh 20125
@@ -179,7 +180,7 @@ Review the following information in the JSON output:
 - The output shows a single Web Content article identified by `id: 41539`, `title: Foo`, and the friendly URL `friendlyUrlPath: foo`.
 - This Web Content uses the by-default Liferay DXP Web Content Structure identified in `contentStructureId`.
 - The Web Content Structure has a single Text field described in the `contentFieldValue` section under `contentFields`. When you include more elements in the Structure, you can see additional `contentFieldValue` sections describing these elements.
-- The Web Content ID you can see in the user interface corresponds to the `key` property in the JSON output.
+- The Web Content Id you can see in the user interface corresponds to the `key` property in the JSON output.
 
    ![The JSON key property corresponds to the Structured Content identifier in the user interface.](./web-content-api-basics/images/03.png)
 
@@ -203,7 +204,7 @@ The script in [the previous step](#getting-the-web-content-article) returns all 
 
 The by-default Web Content Structure in the sample Web Content article is not visible in the Liferay DXP user interface. However, you can use the `ContentStructure` service in the REST API to gather the Structure's description.
 
-The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure description using the `ContentStructure` service with the `GET` HTTP method and the Structure ID parameter.
+The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure description using the `ContentStructure` service with the `GET` HTTP method and the Structure Id parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -245,7 +246,7 @@ This code shows the JSON output generate by the script, where you can identify t
 
 ### Getting the Web Content Structures
 
-The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site ID](#identify-the-site-id) parameter.
+The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -265,7 +266,7 @@ The script in [the previous step](#getting-the-web-content-structure-by-id) retu
 
 ## Posting a Basic Web Content Article
 
-The `StructuredContent_POST_ToSite.sh` cURL script example creates a new Web Content using the `POST` HTTP method and the by-default Web Content Structure you analyzed [in the previous step](#getting-the-web-content-structure). The script uses the [Site ID](#identifying-the-site-id) and Structure ID as parameters.
+The `StructuredContent_POST_ToSite.sh` cURL script example creates a new Web Content using the `POST` HTTP method and the by-default Web Content Structure you analyzed [in the previous step](#getting-the-web-content-structure). The script uses the [Site Id](#identifying-the-site-id) and Structure Id as parameters.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -379,7 +380,7 @@ cURL script parameters:
 Use the `DELETE` HTTP method with the `StructuredContent` service to delete a Web Content article. The `StructuredContent_DELETE_ById` script example uses the Web Content `id` to delete the Web Content:
 
 ```important::
-   When you delete Structured Content using the REST API, you deleted the content permanently, without using the `Liferay DXP Recycle Bin <(../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)>`_.
+   When you delete Web Content using the REST API, you deleted the content permanently, without using the `Liferay DXP Recycle Bin <(../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)>`_.
 ```
 
 | Method | Service | Endpoint |
@@ -395,6 +396,24 @@ cURL script parameters:
 | Parameter # | Description |
 | --- | --- |
 | $1 | Structured Content `id` |
+
+## More Web Content and Web Content Folder Services
+
+The following cURL commands demonstrate more `StructuredContent` and `StructuredContentFolder` services. You can find these scripts in the [sample project folder](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-r4h9.zip).
+
+| File | Description |
+| --- | --- |
+| `StructuredContentFolder_GET_ById.sh` | Lists a Web Content folder's fields. |
+| `StructuredContentFolders_GET_FromSite.sh` | Lists all Web Content folders in the Site. |
+| `StructuredContentFolder_POST_ToSite.sh` | Posts a Web Content folder to a Site. |
+| `StructuredContentFolder_PATCH_ById.sh` | Updates a Web Content Folder. |
+| `StructuredContentFolder_PUT_ById.sh` | Replaces a Web Content Folder. |
+| `StructuredContentFolder_DELETE_ById.sh` | Deletes a Web Content Folder. |
+| `StructuredContent_POST_ToStructuredContentFolder.sh` | Posts a Web Content Article to a folder. |
+
+```important::
+   When you delete a Web Content Folder using the REST API, you deleted the folder and its content permanently, without using the `Liferay DXP Recycle Bin <(../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)>`_.
+```
 
 ## Related Information
 
