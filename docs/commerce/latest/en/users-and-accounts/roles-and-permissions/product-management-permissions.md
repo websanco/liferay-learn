@@ -99,8 +99,8 @@ However, Commerce Products, Commerce Catalogs, Commerce Pricing, and Commerce BO
 | View Price | Ability to view Product price entries |
 | View Rules | Ability to view Product rules |
 
-```note::
-   In Liferay DXP 7.3 and earlier, the *Add Commerce Product Specification Option* and *Add Option Category* permissions were listed under Control Panel > General Permissions.
+```{note}
+In Liferay DXP 7.3 and earlier, the *Add Commerce Product Specification Option* and *Add Option Category* permissions were listed under Control Panel > General Permissions.
 ```
 
 #### Commerce Catalogs
