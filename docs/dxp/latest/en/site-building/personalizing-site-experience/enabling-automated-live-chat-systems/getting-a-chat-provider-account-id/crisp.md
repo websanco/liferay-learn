@@ -8,15 +8,15 @@
 
 1. Click the *Cog* in side navigation bar to access your Crisp account settings.
 
-    ![Dashboard](./crisp/images/01.png)
+    ![Click the Cog in side navigation bar to access your Crisp account settings.](./crisp/images/01.png)
 
 1. Click on *Website Settings*, choose which website you want to connect to your Liferay instance, then click on *Settings*.
 
-    ![Website settings](./crisp/images/02.png)
+    ![Click on Website Settings to choose which website you want to connect to your Liferay instance.](./crisp/images/02.png)
 
 1. Click *Setup instructions*.
 
    Look for the *Website ID* field. The value provided, highlighted in the screenshot, can be used as the Chat Provider *Account ID* to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
 
-    ![Website ID](./crisp/images/03.png)
+    ![Click on Setup instructions to find your Account ID.](./crisp/images/03.png)

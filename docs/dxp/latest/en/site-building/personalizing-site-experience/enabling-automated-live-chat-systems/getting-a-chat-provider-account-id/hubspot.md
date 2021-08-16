@@ -12,7 +12,7 @@ To create and configure a live chat, follow the steps in [Hubspot's Knowledge Ba
 
     Copy the account number that corresponds to the channel you want to use. This number corresponds with the Account ID used when enabling Click to Chat on Liferay Portal.
 
-    ![Id token](./hubspot/images/01.png)
+    ![Go to you profile in the top right corner and copy the account number to the channel you want to use.](./hubspot/images/01.png)
 
 ## Getting the Hubspot API Token
 
@@ -20,15 +20,15 @@ While logged in to your Hubspot account:
 
 1. Click the *Settings* button.
 
-    ![Settings](./hubspot/images/02.png)
+    ![Click on the Settings button.](./hubspot/images/02.png)
 
 1. Click on *Integrations* &rarr; *API Key* on the left side of the page.
 
-    ![Api Key](./hubspot/images/03.png)
+    ![Click on Integrations to access your Api Key.](./hubspot/images/03.png)
 
 1. Click *Show* to reveal your API token key.
 
-    ![Show Api Key](./hubspot/images/04.png)
+    ![Click on Show to reveal your Api token key.](./hubspot/images/04.png)
 
 ## Conclusion
 
