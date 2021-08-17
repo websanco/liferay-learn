@@ -16,4 +16,4 @@
 
 1. Under the *Direct Chat Link* header, Copy the highlighted portion of the URL use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
-    ![An example of a Tawk.to direct chat link is provided, that is the chat provider id.](./tawk-to/images/03.png)
+    ![Use this portion of the Direct Chat Link as the Liferay Chat Account ID.](./tawk-to/images/03.png)
