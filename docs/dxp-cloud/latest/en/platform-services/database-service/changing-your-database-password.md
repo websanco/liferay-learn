@@ -2,8 +2,8 @@
 
 Changing the MySQL password for your [`database` service](./database-service.md) also affects the other services that must connect to the database.
 
-```warning::
-   Updating your database password requires a period of downtime for you to restore a backup to your database service, and then restart all of your services. Plan ahead to make time for this before rotating your database password.
+```{warning}
+Updating your database password requires a period of downtime for you to restore a backup to your database service, and then restart all of your services. Plan ahead to make time for this before rotating your database password.
 ```
 
 ## Creating a Backup
@@ -48,8 +48,8 @@ When you are ready, follow these steps to change your database password:
 
 1. Click _Publish secret_.
 
-    ```note::
-       The services attempt to restart when you click `Publish secret`. However, the database service can only update its password upon image creation, so the service must be deleted and redeployed to update it.
+    ```{note}
+    The services attempt to restart when you click `Publish secret`. However, the database service can only update its password upon image creation, so the service must be deleted and redeployed to update it.
     ```
 
 1. Return to your environment's _Services_ page.
