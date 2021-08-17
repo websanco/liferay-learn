@@ -104,6 +104,10 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
        In the ``Env`` variable value, use backslashes to escape space characters. Don't use quotes.
     ```
 
+    ```{note}
+    See [Database Templates](../../reference/database-templates.md) for database environment variable examples.
+    ```
+
     ```note::
        See `Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating the containers.
     ```
@@ -133,6 +137,10 @@ You can override a container's Portal Properties using a `portal-ext.properties`
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _Portal Properties_.
+
+```{note}
+See [Database Templates](../../reference/database-templates.md) for database portal property examples.
+```
 
 ## Image-Defined Environment Variables
 
