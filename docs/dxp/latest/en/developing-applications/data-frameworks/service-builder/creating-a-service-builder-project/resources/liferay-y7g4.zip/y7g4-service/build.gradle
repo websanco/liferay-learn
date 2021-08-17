@@ -1,0 +1,13 @@
+dependencies {
+	//compile project(":y7g4:y7g4-api")
+
+	compile project(":y7g4-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../y7g4-api/src/main/java"
+}
+
+group = "com.acme.y7g4"
