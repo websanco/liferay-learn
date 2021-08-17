@@ -3,7 +3,7 @@
 Liferay DXP/Portal implements headings, labels, and messages for the default locale and many other locales using language keys. You can override these keys for any of the locales using new language key values in a module.
 
 ```{note}
-Many of the language keys are in the global language key files. But some may be located in specific application modules. The process of [overriding module language keys](./overriding-module-language-keys.md) is different from overriding the global keys.
+Many of the language keys are in the global language key files, but some may be located in specific application modules. The process of [overriding module language keys](./overriding-module-language-keys.md) is different from overriding the global keys.
 ```
 
 ## Examining the Global Language Keys
@@ -18,7 +18,7 @@ In a bundle:
 
 `portal-impl.jar`
 
-You can also view the different language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content). You can identify the different translations by the language code in the filename suffix. For example `Language_ja.properties` is for Japanese.
+You can also view the language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content). You can identify the different languages by the language code in the file name suffix. For example `Language_ja.properties` is for Japanese.
 
 These language key files contain properties that you can override, like the language settings properties: 
 
@@ -41,7 +41,7 @@ category.cms=Content Management
 ...
 ```
 
-In Liferay DXP/Portal 7.4+, a module declares overriding the global resource bundle using metadata. In earlier versions, a module declares the override using Java classes.
+In Liferay DXP/Portal 7.4+, you can use the metadata to declare overrides to the global resource bundle. In earlier versions, Java classes declare the overrides.
 
 If your version is earlier than 7.4, skip ahead to [Overriding in Earlier Versions](#overriding-in-earlier-versions). Otherwise, read on to learn how to override language keys in 7.4+.
 
@@ -97,17 +97,17 @@ Here's how to deploy the example:
 
 1. Click the menu icon (![Menu](../../images/icon-menu.png)). The home icon label uses the custom language key value.
 
-    ![The home icon is now using the custom language key value.](./overriding-global-language-keys/images/01.png)
+    ![The home icon now uses the custom language key value.](./overriding-global-language-keys/images/01.png)
 
 1. The example includes custom language key values for multiple locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the customization in that locale. The module overrides language keys for these locales too.
 
-    ![A custom language key is also used for Brazilian Portuguese and Japanese](./overriding-global-language-keys/images/02.png)
+    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/02.png)
 
-Now that you've seen the example, learn how it works. 
+Now that you've seen the example, here's how it works. 
 
 ## Create a Language Properties File
 
-First select which keys you wish to override. For example, the example module code overrides the `home` language key.
+Select the keys you want to override. The example module overrides the `home` language key.
 
 ```properties
 home=I2F4 Home
@@ -134,12 +134,12 @@ In your module's `bnd.bnd` file, specify your language resource provider capabil
 ```
 
 ```{note}
-The example ommits a service ranking--it uses OSGi's default ranking `0`, which is higher than the default global resource bundle service ranking `-1`.
+The example omits a service ranking---it uses OSGi's default ranking `0`, which is higher than the default global resource bundle service ranking `-1`.
 ```
 
 Global language key overrides are easiest to manage when they're in the same module.
 
-Although we don't recommend using multiple modules to override global language keys, if you override the same key in multiple modules the language resource provider with the highest service ranking wins.
+Although we don't recommend using multiple modules to override global language keys, if you override the same key in multiple modules, the language resource provider with the highest service ranking wins.
 
 For example, if you want your module's language keys to take priority over keys from a provider that has service ranking `1`, set your ranking to `2` or higher.
 
@@ -150,7 +150,7 @@ Provide-Capability:\
 		service.ranking:Long="2"
 ```
 
-Deploy your module to see your new language key values.
+Deploy the module to see your new language key values.
 
 ## Overriding in Earlier Versions
 
@@ -200,9 +200,9 @@ Here's how to deploy the example:
 
 1. Use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
 
-    ![A custom language key is also used for Brazilian Portuguese and Japanese](./overriding-global-language-keys/images/04.png)
+    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/04.png)
 
-Like the 7.4+ example, this example module specifies custom values in language key files. Instead of using metadata (a `bnd.bnd` file header) to declare the override, however, the module uses `ResourceBundle` classes.
+Like the 7.4+ example, this module specifies custom values in language key files. Instead of using metadata (a `bnd.bnd` file header) to declare the override, however, the module uses `ResourceBundle` classes.
 
 ### Create Resource Bundle Classes
 
