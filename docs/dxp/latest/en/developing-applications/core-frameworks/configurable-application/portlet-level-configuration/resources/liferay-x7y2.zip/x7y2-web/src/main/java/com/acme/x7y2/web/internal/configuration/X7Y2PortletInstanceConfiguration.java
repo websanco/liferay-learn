@@ -9,10 +9,10 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 	scope = ExtendedObjectClassDefinition.Scope.PORTLET_INSTANCE
 )
 @Meta.OCD(
-	id = "com.acme.x7y2.web.internal.configuration.X7Y2WebPortletInstanceConfiguration",
+	id = "com.acme.x7y2.web.internal.configuration.X7Y2PortletInstanceConfiguration",
 	name = "X7Y2 Portlet"
 )
-public interface X7Y2WebPortletInstanceConfiguration {
+public interface X7Y2PortletInstanceConfiguration {
 
 	@Meta.AD(
 		deflt = "green", name = "color",

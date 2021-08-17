@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 	property = "javax.portlet.name=com_acme_x7y2_web_internal_portlet_X7Y2Portlet",
 	service = ConfigurationAction.class
 )
-public class X7Y2WebPortletInstanceConfigurationAction
+public class X7Y2PortletInstanceConfigurationAction
 	extends DefaultConfigurationAction {
 
 	@Override

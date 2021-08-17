@@ -1,6 +1,6 @@
 package com.acme.x7y2.web.internal.portlet;
 
-import com.acme.x7y2.web.internal.configuration.X7Y2WebPortletInstanceConfiguration;
+import com.acme.x7y2.web.internal.configuration.X7Y2PortletInstanceConfiguration;
 
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -18,7 +18,7 @@ import javax.portlet.RenderResponse;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	configurationPid = "com.acme.x7y2.web.internal.configuration.X7Y2WebPortletInstanceConfiguration",
+	configurationPid = "com.acme.x7y2.web.internal.configuration.X7Y2PortletInstanceConfiguration",
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=X7Y2 Portlet",
@@ -41,13 +41,13 @@ public class X7Y2Portlet extends MVCPortlet {
 		PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
 
 		try {
-			X7Y2WebPortletInstanceConfiguration
+			X7Y2PortletInstanceConfiguration
 				x7y2WebPortletInstanceConfiguration =
 					portletDisplay.getPortletInstanceConfiguration(
-						X7Y2WebPortletInstanceConfiguration.class);
+						X7Y2PortletInstanceConfiguration.class);
 
 			renderRequest.setAttribute(
-				X7Y2WebPortletInstanceConfiguration.class.getName(),
+				X7Y2PortletInstanceConfiguration.class.getName(),
 				x7y2WebPortletInstanceConfiguration);
 		}
 		catch (ConfigurationException configurationException) {
