@@ -7,8 +7,8 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 * Oracle
 * PostgreSQL
 
-```note::
-   The `Liferay DXP Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ lists the supported databases and versions.
+```{note}
+The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151 lists the supported databases and versions.
 ```
 
 Connecting Liferay DXP to a database requires:
@@ -25,8 +25,8 @@ Once you've selected a database, follow these steps to configure it:
 * [Configure Database User Access](#configure-database-user-access)
 * [Configure the Query Result Sort Order (Optional)](#configure-the-query-result-sort-order-optional)
 
-```important::
-   Always consult the database vendor's documentation before modifying the database.
+```{important}
+Always consult the database vendor's documentation before modifying the database.
 ```
 
 ### Create a Blank Database With UTF-8 Support
@@ -51,8 +51,8 @@ Your organization may have more stringent security policies that require limitin
 1. Install Liferay DXP and start it so that it automatically populates the database.
 1. Once the database has been populated with the Liferay DXP tables, remove all permissions from the Liferay DXP database user except permissions to perform Select, Insert, Update and Delete operations.
 
-```warning::
-   There are some caveats to running Liferay DXP with these constraints. Many plugins create new tables when they’re deployed. Additionally, you must manually run the database upgrade function to upgrade Liferay DXP. If the Liferay DXP database user does not have adequate rights to create/modify/drop tables in the database, you must grant those rights to that user before deploying one of these plugins or starting the Liferay DXP upgrade. Once the tables are created or the upgrade completes, you can remove those rights until the next deploy or upgrade. If your team creates plugins that create their own tables, you must similarly grant temporary rights to the Liferay DXP database user before deploying the plugin.
+```{warning}
+There are some caveats to running Liferay DXP with these constraints. Many plugins create new tables when they’re deployed. Additionally, you must manually run the database upgrade function to upgrade Liferay DXP. If the Liferay DXP database user does not have adequate rights to create/modify/drop tables in the database, you must grant those rights to that user before deploying one of these plugins or starting the Liferay DXP upgrade. Once the tables are created or the upgrade completes, you can remove those rights until the next deploy or upgrade. If your team creates plugins that create their own tables, you must similarly grant temporary rights to the Liferay DXP database user before deploying the plugin.
 ```
 
 ### Configure the Query Result Sort Order (Optional)
@@ -80,10 +80,32 @@ If you're connecting to a proprietary database, like Oracle or DB2, download the
 
 ## Configuring a Data Source
 
-The best option for most people is to set up a built-in data source connection during [DXP startup](../installing-liferay/running-liferay-for-the-first-time.md) using the Setup Wizard.
+You can configure DXP with a built-in data source connection using one of the methods listed in the table below.
+
+| Method | Available with Docker Image | Recommended for Production |
+| :----- | :-------------------------- | :------------------------- |
+| Docker Environmet Variables | Yes | Yes |
+| Portal Properties | Yes* | Yes |
+| Setup Wizard | No | No |
+
+### Docker Environment Variables
+
+You can configure the built-in data source connection by passing DXP environment variables to your Docker image. Please see [Database Templates](./database-templates.md) for examples.
+
+### Portal Properties
+
+You can configure the datasource connection on a Liferay Tomcat Bundle, application server installation, or Docker image using a [portal properties](./portal-properties.md) file. See [Database Templates](./database-templates.md) for examples.
+
+```{note}
+Using a portal properties file with a Docker image requires passing in the file using a bind mount or volume. See [Providing Files to the Container](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) for details.
+```
+
+### Setup Wizard
+
+If you're running DXP for non-production purposes on a Bundle or an application server, you can configure the data source connection during [DXP startup](../installing-liferay/running-liferay-for-the-first-time.md) using the Setup Wizard.
 
 ![The Setup Wizard's database section lets you configure DXP's built-in data source.](./database-configurations/images/01.png)
 
-```note::
-   If you're using a data source managed on your application server. See the instructions for your application server: `Tomcat <../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md>`_, `WildFly <../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md>`_, `JBoss EAP <../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md>`_, `WebLogic <../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md>`_, or `WebSphere <../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md>`_.
+```{note}
+If you're using a data source managed on your application server. See the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
 ```
