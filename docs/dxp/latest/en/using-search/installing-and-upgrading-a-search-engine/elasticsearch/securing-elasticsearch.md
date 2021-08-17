@@ -71,7 +71,7 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
    ```
 
    To generate certificates and keys in `PEM` format, run
-    
+
    ```bash
    ./bin/elasticsearch-certutil cert --pem --ca-cert config/certs/ca.crt --ca-key config/certs/ca.key --dns localhost --ip 127.0.0.1 --name elastic-nodes
    ```
@@ -106,9 +106,9 @@ Enabling Transport Layer Security (TLS) involves generating node certificates an
     elastic-nodes.p12
     elastic-stack-ca.p12
     ```
-    
+
     or
-    
+
     ```bash
     ca.crt
     ca.key
@@ -130,7 +130,7 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
     xpack.security.transport.ssl.enabled: true
     ```
 
-1. Add the certificate, key and certificate authority paths to each node's `elasticsearch.yml`:
+1. Configure transport layer TLS. Add the certificate, key and certificate authority paths to each node's `elasticsearch.yml`:
 
     ```yaml
     # PKCS#12
@@ -140,8 +140,8 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
     xpack.security.transport.ssl.truststore.password: liferay
     # PEM
     #xpack.security.transport.ssl.certificate_authorities: [ "certs/ca.crt" ]
-    #xpack.security.transport.ssl.certificate: certs/elastic-nodes.key
-    #xpack.security.transport.ssl.key: certs/elastic-nodes.crt
+    #xpack.security.transport.ssl.certificate: certs/elastic-nodes.crt
+    #xpack.security.transport.ssl.key: certs/elastic-nodes.key
     
     xpack.security.transport.ssl.verification_mode: certificate
     ```
@@ -154,7 +154,7 @@ The certificates and keys are ready to use in your Elasticsearch configuration.
     xpack.security.http.ssl.enabled: true
     ```
 
-1. Configure the certificate, key, and certificate authority paths to each node's `elasticsearch.yml`:
+1. Configure HTTP layer TLS. Add the certificate, key, and certificate authority paths to each node's `elasticsearch.yml`:
 
     ```yaml
     # PKCS#12
