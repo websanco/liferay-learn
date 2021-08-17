@@ -35,8 +35,8 @@ Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP
 
 ![The CDN's status is visible on the Network page.](./load-balancer/images/02.png)
 
-```note::
-   The CDN is not currently supported for the Dubai/Northern UAE region.
+```{note}
+The CDN is not currently supported for the Dubai/Northern UAE region.
 ```
 
 ### Clearing the CDN Cache
@@ -61,7 +61,7 @@ If it is necessary to clear the CDN cache to force the content to be retrieved a
 
 The request is sent to clear the cache when you click the button. Allow up to 30 minutes for the cache to be cleared.
 
-```warning::
+```{warning}
    Clearing the CDN cache too frequently can negatively impact server performance, because it can cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
 ```
 
@@ -131,8 +131,8 @@ Use the `certs` property in your web server's `LCP.json` file to create a list o
 }
 ```
 
-```note::
-   Mapping multiple SSL certificates to your custom domains requires adding the ``certs`` property to the ``webserver`` service's ``LCP.json`` file. Adding custom domains through the DXP Cloud console instead maps all of the custom domains to a single certificate.
+```{note}
+Mapping multiple SSL certificates to your custom domains requires adding the `certs` property to the `webserver` service's `LCP.json` file. Adding custom domains through the DXP Cloud console instead maps all of the custom domains to a single certificate.
 ```
 
 ### Generating an SSL Certificate
