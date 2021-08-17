@@ -73,9 +73,9 @@ public class E5C9ActionExecutor implements ActionExecutor {
 		_workflowDefinitionManager.deployWorkflowDefinition(
 			_portal.getDefaultCompanyId(), user.getUserId(),
 			LocalizationUtil.updateLocalization(
-				StringPool.BLANK, "title", "R6J9 Conditional Approver",
+				StringPool.BLANK, "title", "E5C9 Single Approver",
 				LocaleUtil.toLanguageId(LocaleUtil.getDefault())),
-			"R6J9 Conditional Approver",
+			"E5C9 Single Approver",
 			FileUtil.getBytes(
 				getClass(), "dependencies/e5c9-workflow-definition.xml"));
 	}
