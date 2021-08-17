@@ -181,8 +181,8 @@ To encode the contents of these files and use them, perform the following steps:
 
 The `key` and `cert` values are now encoded and usable in your web server configuration.
 
-```tip::
-   It is possible to include multiple values for the ``cert`` by concatenating the base64-encoded results into a single string, within the ``crt`` field.
+```{tip}
+It is possible to include multiple values for the `cert` by concatenating certificates together into a single string, and then encoding the result in base-64 for the ``crt`` field.
 ```
 
 The Network page shows any custom certificates, with a maximum of one per service. For more information, see [Custom Domains](./custom-domains.md).
