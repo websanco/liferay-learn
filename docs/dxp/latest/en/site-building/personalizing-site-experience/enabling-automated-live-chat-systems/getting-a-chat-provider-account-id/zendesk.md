@@ -12,7 +12,7 @@
 
 1. (Optional) Go to *Settings* and follow the instructions in the next step.  
 
-    ![You can see the Zendesk settings section.](./zendesk/images/02.png)
+    ![You can see the Zendesk Settings section.](./zendesk/images/02.png)
 
 1. Zendesk provides a code snippet to embed their web widget. The Account ID is the portion of the snippet after `...snippet.js?key=`. Select and copy that portion of the snippet and use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 

@@ -8,11 +8,11 @@
 
 1. Click the *Settings Cog* on the bottom left corner. 
 
-    ![Dashboard](./livechat/images/01.png)
+    ![You can see the LiveChat Dashboard page.](./livechat/images/01.png)
 
 1. Click *Channels* &rarr; *Chat Page*. 
 
-    ![Chat Page](./livechat/images/02.png)
+    ![You can see LiveChat's Chat Page.](./livechat/images/02.png)
 
 1. In the screenshot below, the portion that is highlighted is used as the Liferay Chat Provider Account ID.  Select and copy this portion and use it as the Chat Provider Account ID to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 

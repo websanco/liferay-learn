@@ -18,5 +18,4 @@
 
    Look for the Website ID field. The value provided, highlighted in the screenshot, can be used as the Chat Provider *Account ID* to [enable automated live chat integration](../enabling-automated-live-chat-systems.md) with your Liferay instance.
 
-
     ![Click on Setup instructions to find your Account ID.](./crisp/images/03.png)
