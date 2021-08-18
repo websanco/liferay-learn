@@ -1,6 +1,6 @@
 # Enabling DocuSign Digital Signatures
 
->Available: Liferay Portal 7.4 GA3+
+> Available: Liferay Portal 7.4 GA3+
 
 You can now integrate [DocuSign](https://www.docusign.com/) digital signatures into your Liferay documents. DocuSign is a service that manages documents to be signed electronically. With this integration, you can manage and collect signatures on your documents.
 
@@ -30,7 +30,7 @@ You have three options for your Site settings strategy:
 
 **Always Override:** Every site must provide its own configuration.
 
-**Inherit or Override:** Can be defined in both Instance Settings and Site Settings. If defined in both, Site settings take precedence over Instance settings. 
+**Inherit or Override:** Can be defined in both Instance Settings and Site Settings. If defined in both, Site settings take precedence over Instance settings.
 
 You must now add your digital keys from DocuSign at the appropriate scope in Liferay.
 
@@ -50,7 +50,7 @@ Depending on what you chose for your Site Settings strategy, add your digital ke
 
 1. Click *Save* to enable digital signatures.
 
-## Collecting Document Signing in Documents and Media
+## Collecting Document Signatures in Documents and Media
 
 1. Find the document where you want to collect the digital signatures and click *Actions* &rarr; *Collect Digital Signature*.
 
@@ -64,9 +64,9 @@ Depending on what you chose for your Site Settings strategy, add your digital ke
 
     ![Fill in the envelope's information.](./enabling-docusign-digital-signatures/images/06.png)
 
-1. When the envelope is sent, Recipients must go through [DocuSign's process](https://www.docusign.com/products/electronic-signature/how-docusign-works) to sign the document. 
+1. When the envelope is sent, Recipients must go through [DocuSign's process](https://www.docusign.com/products/electronic-signature/how-docusign-works) to sign the document.
 
-## Tracking Envelope's Status
+## Tracking an Envelope's Status
 
 DocuSign uses the term _envelope_ to denote a document or collection of documents to be signed. Once sent, you can track your envelope status from within Liferay.
 
@@ -78,22 +78,22 @@ You can check the different status labels on the [DocuSign website](https://supp
 
 1. You can also create an envelope directly from this screen using the ![Add Button](../../../images/icon-add.png). You're shown the envelope's screen to enter its information.
 
-1. Use *Filter and Order* or type keywords in the Search bar to filter and sort the list of available envelopes. 
+1. Use *Filter and Order* or type keywords in the Search bar to filter and sort the list of available envelopes.
 
     ![Organize documents through Filter and Order, or the Search Bar.](./enabling-docusign-digital-signatures/images/07.png)
 
-## Downloading Documents 
+## Downloading Documents
 
 1. Click the envelope's name to see its details. You can download the document by clicking the *Download* button or by clicking the *Actions Button* ![Actions Button](../../../images/icon-actions.png) from the Digital Signature screen.
 
    ```{important}
-   Clicking _Download_ fetches the document from DocuSign not from Liferay, since Liferay does not store signed documents. Whether a document is partially or fully signed, the download button retrieves the latest state.   
+   Clicking _Download_ fetches the document from DocuSign not from Liferay, since Liferay does not store signed documents. Whether a document is partially or fully signed, the download button retrieves the latest state.
    ```
 
    ![You can view the details of your envelopes from inside Liferay.](./enabling-docusign-digital-signatures/images/08.png)
 
 ```{warning}
-Disabling the Digital Signature Configuration removes all reference to DocuSign, including the Digital Signature module in the Control Panel. If you disable the feature in Liferay, all envelopes are still visible in DocuSign. If you re-enable digital signatures, the list appears again. 
+Disabling the Digital Signature Configuration removes all reference to DocuSign, including the Digital Signature module in the Control Panel. If you disable the feature in Liferay, all envelopes are still visible in DocuSign. If you re-enable digital signatures, the list appears again.
 ```
 
 ## Additional Information
