@@ -1,6 +1,6 @@
 # Portal Developer Properties
 
-There are [Portal Properties](../../installation-and-upgrades/reference/portal-properties.md) that facilitate development. Liferay's [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) file includes all of them. The `portal-developer.properties` file is enabled by adding this setting to the top of your `portal-developer.properties` file:
+There are [Portal Properties](../../installation-and-upgrades/reference/portal-properties.md) that facilitate development. Liferay's [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) file includes all of them. The `portal-developer.properties` file is enabled by adding this setting to the top of your `portal-ext.properties` file:
 
 ```properties
 include-and-override=portal-developer.properties
