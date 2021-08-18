@@ -46,6 +46,34 @@ For more information on connecting to a VPN, see [VPN Connection](../infrastruct
 
 Now you must deploy the latest stable build on Production to the DR environment. Follow the same steps outlined in [Overview of the DXP Cloud Deployment Workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md).
 
+### Set Up Automated Backup Restores to Disaster Recovery
+
+To finish setting up your Disaster Recovery environment, set up automated backup restores. This ensures that the latest backup is always ready in your DR environment for when an incident occurs.
+
+First, retrieve your production environment's master token (this requires administrator privileges to access the `liferay` service shell):
+
+1. In the DXP Cloud console, navigate to your production environment &rarr; the `liferay` service page.
+
+1. Click on the *Shell* tab.
+
+1. Run this command to get the environment's master token:
+
+    ```bash
+    env | grep LCP_PROJECT_MASTER_TOKEN
+    ```
+
+    The master token is the hexadecimal ID after the `=` in the result.
+
+Once you have the production environment's master token, set these [environment variables](../reference/defining-environment-variables.md) in your DR environment:
+
+  * **LCP_EXTERNAL_PROJECT_MASTER_TOKEN**: your production environment's master token
+
+  * **LCP_EXTERNAL_PROJECT_ID**: the production environment's project ID (for example, `acme-prd`)
+
+  * **LCP_BACKUP_RESTORE_SCHEDULE**: a [cron scheduling](https://crontab.guru/) value that defines the frequency of automated backups. See [Scheduling Automated Backups and Cleanups](../platform-services/backup-service/backup-service-overview.md#scheduling-automated-backups-and-cleanups) for more information.
+
+Saving these variables in your DR environment enables automated restores.
+
 ## During an Incident
 
 Continuing the example above, assume that the Production environment hosted in the *europe-west2* region is scheduled to be backed up hourly at 2:00 PM local time. In this scenario, the region is then compromised at 2:30 PM local time. Because no backups have been generated in the intervening half hour, it is necessary to restore a backup of the database and documents from the Production environment to the Disaster Recovery environment. The last stable environment is the version created at 2:00 PM.
