@@ -14,8 +14,8 @@ See the [Backup service limitations](../../reference/platform-limitations.md#bac
 
 From the Backups page in any environment, you can view backup service information and retained backups, create manual backups, and more.
 
-```note::
-   The Backups page is only available in production environments for backup service versions older than 4.3.5.
+```{note}
+The Backups page is only available in production environments for backup service versions older than 4.3.5.
 ```
 
 Follow these steps to access the Backups page:
@@ -30,8 +30,8 @@ From here, you can perform the following tasks:
 * **View Backup History**: You can view the full list of retained backups in the chosen environment. Each entry lists the backup's name, size, and time of creation.
 * **Create Manual Backups**: You can manually create a backup of the chosen environment. See [Creating a Manual Backup](#creating-a-manual-backup) for more information.
 
-```note::
-   Backup timestamps are displayed automatically based on your browser location, while backup schedules are based on the UTC±00 time zone.
+```{note}
+Backup timestamps are displayed automatically based on your browser location, while backup schedules are based on the UTC±00 time zone.
 ```
 
 From the Backups page, environment administrators also have access to the Actions button (⋮) and can download retained backups or restore environments.
@@ -48,8 +48,8 @@ Once started, the backup service icon will indicate a backup is in progress, and
 
 ![The backup service icon will indicate a backup is in progress, and a new backup will appear in the Backup history.](./backup-service-overview/images/04.png)
 
-```warning::
-   Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a manual backup.
+```{warning}
+Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a manual backup.
 ```
 
 Clicking *View logs* redirects you to the Logs page, where you can view the backup stages in real-time. You can also view backup logs in the *Logs* tab of the backup service's page.
@@ -62,8 +62,8 @@ You can configure the backup service to meet your project's needs via the DXP Cl
 
 See [Environment Variables Reference](#environment-variables-reference) for a list of variables you can use to configure the backup service.
 
-```important::
-   Whenever the backup service is reconfigured, the backup service will restart and may stop receiving requests for some minutes or behave differently depending on the configuration.
+```{important}
+Whenever the backup service is reconfigured, the backup service will restart and may stop receiving requests for some minutes or behave differently depending on the configuration.
 ```
 
 ### Configuring the Backup Service via the DXP Cloud Console
@@ -94,8 +94,8 @@ Follow these steps to configure the backup service via its `LCP.json` file:
 
 1. Use a text editor to open the backup `LCP.json` file located at the following path: `/{your_project_name}/backup/LCP.json`.
 
-   ```note::
-      If you are using version 3.x.x services, then the backup ``LCP.json`` file is located at the following path: ``/{your_project_name}/lcp/backup/LCP.json``.  
+   ```{note}
+   If you are using version 3.x.x services, then the backup `LCP.json` file is located at the following path: `/{your_project_name}/lcp/backup/LCP.json`.  
    ```
 
 1. Scroll down to the environment section.
@@ -118,8 +118,8 @@ See [Configuration via LCP.json](../../reference/configuration-via-lcp-json.md) 
 
 Determining how frequently backups are created and removed can help protect your data and optimize storage. *Only production environments can have scheduled backups.*
 
-```warning::
-   Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. Configure your backup schedule to create backups during times with reduced activity to mitigate the risk of data inconsistency. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a `manual backup <./backup-service-overview.md#creating-a-manual-backup>`__.
+```{warning}
+Backups created while data is actively changing on your Liferay instance risk creating inconsistent data. Configure your backup schedule to create backups during times with reduced activity to mitigate the risk of data inconsistency. To ensure a completely consistent backup, coordinate with your database administrator to freeze updates while you perform a [manual backup](./backup-service-overview.md#creating-a-manual-backup).
 ```
 
 Use the following variables per environment to customize when backups are created and removed:
@@ -128,8 +128,8 @@ Use the following variables per environment to customize when backups are create
 * **Automated Cleanups**: Add the `LCP_BACKUP_CLEANUP_SCHEDULE` variable with a [cron scheduling](https://crontab.guru/) value to set the frequency of automated backup cleanups.
 * **Retention Period**: Add the `LCP_BACKUP_RETENTION_PERIOD` variable with a numerical value (between 1-30) to set the number of days backups are retained before being removed by automated cleanups.
 
-```note::
-   Both standard and non-standard `cron scheduling syntax <https://crontab.guru/>`_ are based on the UTC±00 time zone. When using non-standard cron syntax, automated backups and cleanups run at the start of the specified value. For example, @daily runs backups every day at 00:00 UTC.
+```{note}
+Both standard and non-standard [cron scheduling syntax](https://crontab.guru/) are based on the UTC±00 time zone. When using non-standard cron syntax, automated backups and cleanups run at the start of the specified value. For example, @daily runs backups every day at 00:00 UTC.
 ```
 
 The following `LCP.json` example creates backups every 12 hours (i.e., 00:00 and 12:00 UTC) and performs monthly cleanups that remove backups over 30 days old:
