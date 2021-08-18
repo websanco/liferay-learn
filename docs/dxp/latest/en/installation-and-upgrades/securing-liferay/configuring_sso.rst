@@ -6,7 +6,7 @@ Configuring SSO
 
    configuring-sso/token-based-authentication.md
    configuring-sso/using-openid-connect.md
-   configuring-sso/authenticating_with_saml.rst
+   configuring-sso/authenticating-with-saml.md
    configuring-sso/using-openam.md
    configuring-sso/authenticating-with-cas.md
    configuring-sso/authenticating-with-kerberos.md

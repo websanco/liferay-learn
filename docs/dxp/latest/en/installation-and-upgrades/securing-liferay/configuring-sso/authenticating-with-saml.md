@@ -3,10 +3,10 @@
 ```{toctree}
 :maxdepth: 3
 
-authentication-with-saml/saml-authentication-process-overview.md
-authentication-with-saml/configuring-saml-at-the-system-level.md
-authentication-with-saml/saml-admin.md
-authentication-with-saml/configuring-saml-at-the-instance-level.md
+authenticating-with-saml/saml-authentication-process-overview.md
+authenticating-with-saml/configuring-saml-at-the-system-level.md
+authenticating-with-saml/saml-admin.md
+authenticating-with-saml/configuring-saml-at-the-instance-level.md
 authenticating-with-saml/saml-configuration-reference.md
 ```
 
@@ -18,15 +18,15 @@ The SAML (Security Assertion Markup Language) adapter provides Single Sign On (S
 
 Liferay DXP instances can serve as either Service Provider (SP) or Identity Provider (IdP).
 
-:::{note}
+```{note}
    A single Liferay DXP instance is *either* the SP or the IdP in your SSO setup; it can't be both. You can, however, use separate instances for both purposes (for example, one instance is the SP and another is the IdP).
-:::
+```
 
 You can jump right to configuring SAML or learn how it works:
 
-* [SAML Authentication Process Overview](./authentication-with-saml/saml-authentication-process-overview.md)
-* [Configuring SAML at the System Level](./authentication-with-saml/configuring-saml-at-the-system-level.md)
-* [SAML Admin](./authentication-with-saml/saml-admin.md)
-* [Configuring SAML at the Instance Level](./authentication-with-saml/configuring-saml-at-the-instance-level.md)
+* [SAML Authentication Process Overview](./authenticating-with-saml/saml-authentication-process-overview.md)
+* [Configuring SAML at the System Level](./authenticating-with-saml/configuring-saml-at-the-system-level.md)
+* [SAML Admin](./authenticating-with-saml/saml-admin.md)
+* [Configuring SAML at the Instance Level](./authenticating-with-saml/configuring-saml-at-the-instance-level.md)
 * [SAML Configuration Reference](./authenticating-with-saml/saml-configuration-reference.md)
 
