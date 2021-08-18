@@ -35,26 +35,29 @@ public class X7Y2Portlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 
+		renderRequest.setAttribute(
+			X7Y2PortletInstanceConfiguration.class.getName(),
+			_getX7Y2PortletInstanceConfiguration(renderRequest));
+
+		super.render(renderRequest, renderResponse);
+	}
+
+	private X7Y2PortletInstanceConfiguration
+			_getX7Y2PortletInstanceConfiguration(RenderRequest renderRequest)
+		throws PortletException {
+
 		ThemeDisplay themeDisplay = (ThemeDisplay)renderRequest.getAttribute(
 			WebKeys.THEME_DISPLAY);
 
 		PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
 
 		try {
-			X7Y2PortletInstanceConfiguration
-				x7y2WebPortletInstanceConfiguration =
-					portletDisplay.getPortletInstanceConfiguration(
-						X7Y2PortletInstanceConfiguration.class);
-
-			renderRequest.setAttribute(
-				X7Y2PortletInstanceConfiguration.class.getName(),
-				x7y2WebPortletInstanceConfiguration);
+			return portletDisplay.getPortletInstanceConfiguration(
+				X7Y2PortletInstanceConfiguration.class);
 		}
 		catch (ConfigurationException configurationException) {
 			throw new PortletException(configurationException);
 		}
-
-		super.render(renderRequest, renderResponse);
 	}
 
 }
