@@ -12,19 +12,19 @@ To enable Click To Chat go to *Instance Settings*.
 
 1. Go to the *Global Menu* (![icon](../../../images/icon-applications-menu.png)) &rarr; *Control Panel* &rarr; *Instance Settings*.
 
-    ![Instance Settings](./enabling-automated-live-chat-systems/images/02.png)
+    ![Go to Instance Settings under Control Panel.](./enabling-automated-live-chat-systems/images/02.png)
 
 1. Under the *Content and Data* section, click *Click To Chat*.
 
-    ![Click To Chat under Content and Data](./enabling-automated-live-chat-systems/images/03.png)
+    ![You can see Click To Chat's icon under Content and Data.](./enabling-automated-live-chat-systems/images/03.png)
 
 1. To enable Click to Chat for your instance, switch the *Enable Click to Chat* toggle.
 
-    ![Click to chat enable switch](./enabling-automated-live-chat-systems/images/04.png)
+    ![You can see the enable Click to Chat switch.](./enabling-automated-live-chat-systems/images/04.png)
 
 1. Once enabled, you must select a [Site Settings](../../site_settings.html) Strategy. Site Settings Strategy determines how the Click to Chat feature is enabled across sites that exist on a given [Liferay instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
-    ![Site Settings Strategy](./enabling-automated-live-chat-systems/images/05.png)
+    ![You can see the Site Settings Strategy options.](./enabling-automated-live-chat-systems/images/05.png)
 
    **Always Inherit**: Click To Chat is enabled for all sites on the instance and ignores configurations made in Site Settings.
 
@@ -34,7 +34,7 @@ To enable Click To Chat go to *Instance Settings*.
 
 1. Select your Chat Provider and input the [Account ID or token](#getting-the-chat-provider-account-id-or-token) given to you by your Chat Provider.
 
-    ![Chat provider options](./enabling-automated-live-chat-systems/images/06.png)
+    ![You can see the available options of Chat Providers.](./enabling-automated-live-chat-systems/images/06.png)
 
 1. (Optional) Click the *Guest Users Allowed* toggle to configure whether you want guest users (unauthenticated users) to have access to the Click to Chat feature for your sites.
 
