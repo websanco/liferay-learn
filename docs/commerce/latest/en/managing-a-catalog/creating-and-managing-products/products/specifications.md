@@ -2,7 +2,7 @@
 
 A specification stores a single piece of product information. This can be the product’s dimensions, color, weight, capacity, or any other attribute. Specifications simplifies the process of comparing similar products.
 
-Specification data is ordered into groups, labels and values to make them easy to display, maintain. 
+Specification data is ordered into groups, labels and values to make them easy to display and maintain. 
 
 | Name | Description |
 | --- | --- |
