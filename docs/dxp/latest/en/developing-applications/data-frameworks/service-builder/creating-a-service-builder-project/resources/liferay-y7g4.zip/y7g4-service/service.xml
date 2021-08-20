@@ -3,41 +3,16 @@
 
 <service-builder dependency-injector="ds" package-path="com.acme.y7g4">
 	<namespace>Y7G4</namespace>
-	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" tfoo="foo" tx-manager="sampleTransactionManager uuid="true"">-->
-	<entity local-service="true" name="Foo" remote-service="false" uuid="false">
+	<entity local-service="true" name="Foo" remote-service="false">
 
 		<!-- PK fields -->
 
 		<column name="fooId" primary="true" type="long" />
 
-		<!-- Group instance -->
-
-		<!-- <column name="groupId" type="long" /> -->
-
-		<!-- Audit fields -->
-
-		<!-- <column name="companyId" type="long" />
-		<column name="userId" type="long" />
-		<column name="userName" type="String" />
-		<column name="createDate" type="Date" />
-		<column name="modifiedDate" type="Date" /> -->
-
 		<!-- Other fields -->
 
 		<column name="name" type="String" />
 		<column name="description" type="String" />
-
-		<!-- Order -->
-
-		<!-- <order by="asc">
-			<order-column name="name" />
-		</order> -->
-
-		<!-- Finder methods -->
-
-		<!-- <finder name="G" return-type="Collection">
-			<finder-column name="groupId" />
-		</finder> -->
 
 	</entity>
 </service-builder>
