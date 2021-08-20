@@ -62,7 +62,7 @@ If it is necessary to clear the CDN cache to force the content to be retrieved a
 The request is sent to clear the cache when you click the button. Allow up to 30 minutes for the cache to be cleared.
 
 ```{warning}
-   Clearing the CDN cache too frequently can negatively impact server performance, because it can cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
+Clearing the CDN cache too frequently can negatively impact server performance, because it can cause a short-term spike in requests to your services that the cache would have served otherwise. Limit clearing the cache to exceptional circumstances to mitigate this impact.
 ```
 
 ## Port
