@@ -20,7 +20,7 @@ Specifications defined at the Product level will be overridden by specifications
 1. Click the _Specifications_ tab.
 1. Click the _Specification Groups_ sub-tab. By default, there are five Specification Groups included:
 
-    ![The Specifications tab with the Specification Groups sub-tab selected showing five default Specification Groups](./specifications/images/01.png)
+    ![In the Specification Groups sub-tab, you can view, create, and manage Groups.](./specifications/images/01.png)
 
 To add a new Specification Group, click the (+) button.
 
@@ -31,7 +31,7 @@ To add a new Specification Group, click the (+) button.
 | Priority | Establishes the order to display the specification groups with smaller numbers going first. |
 | Key | Uniquely identifies this group programmatically. |
 
-![Form to add a Specification Group that is displayed after clicking the (+) button](./specifications/images/02.png)
+![To create a Specification Group, enter a title, description, priority and key in the form provided.](./specifications/images/02.png)
 
 ## Specification Labels
 
@@ -42,7 +42,7 @@ To create a specification label:
 1. Click the _Specifications Labels_ sub-tab.
 1. There are nine Specification Labels included by default:
 
-    ![The Specifications tab with the Specification Labels sub-tab selected showing nine default Specification Groups](./specifications/images/03.png)
+    ![In the Specification Labels sub-tab you can view, create and manage Specification Labels.](./specifications/images/03.png)
 
 To add a new Specification Group, click the (+) button.
 
@@ -54,7 +54,7 @@ To add a new Specification Group, click the (+) button.
 | Default Specification Group | Lets you select a group to associate this label with. |
 | Key | Uniquely identifies this group programmatically. |
 
-![Form to add a Specification Label that is displayed after clicking the (+) button](./specifications/images/04.png)
+![To create a Specification Label, enter a label value, description, whether to use it in faceted navigation, a default specification group and a key in the form provided.](./specifications/images/04.png)
 
 The label has been created, but assigning a value to it must be done on the product level.
 
@@ -69,7 +69,7 @@ The label has been created, but assigning a value to it must be done on the prod
 1. Click on the _Specifications_ sub-tab.
 1. The following values have been added by default:
 
-    ![The Specifications sub-tab selected for a product from the Products list](./specifications/images/05.png)
+    ![The Specifications sub-tab shows the default specifications for a product.](./specifications/images/05.png)
 
 1. Click the (+) button.
 1. Check the boxes for one or more specification labels from the list of specification labels.
@@ -88,6 +88,6 @@ Next, edit the label to give it a value.
 | Group | Lets you select a Specification Group. |
 | Priority | Establishes the order to display the specification groups with smaller numbers going first. |
 
-![Form to give a label value that is displayed after clicking Edit](./specifications/images/06.png)
+![To save a Specification Value, click on Edit and enter a value, group and priority in the form provided.](./specifications/images/06.png)
 
 You can also override the specification group that was selected when the label was created. When editing the label to assign a value, you can choose any group from the _Group_ drop-down box. This change applies only to the current product and has no effect on any other products which use the same label.
