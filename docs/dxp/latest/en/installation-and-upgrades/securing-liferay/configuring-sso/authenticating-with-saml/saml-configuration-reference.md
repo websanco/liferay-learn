@@ -7,7 +7,7 @@ You can configure SAML outside the UI through [OSGi configuration files](../../.
 As noted previously, anything related to configuring SP connections must be done through the SAML Admin UI where configurations are saved to Liferay's database. SP connections can no longer be made via properties files as they were in versions prior to 3.1.0.
 
 ```{note}
-   Don't use OSGi `.config` files or Liferay DXP's System Settings Control Panel application to configure SAML providers (IdP or SP). The System Settings UI is auto-generated, and is for advanced administrators. It does not perform the enhanced validation on the fields that the SAML Admin UI performs, so administrators could create invalid configurations.
+Don't use OSGi `.config` files or Liferay DXP's System Settings Control Panel application to configure SAML providers (IdP or SP). The System Settings UI is auto-generated, and is for advanced administrators. It does not perform the enhanced validation on the fields that the SAML Admin UI performs, so administrators could create invalid configurations.
 ```
 
 This is a portal instance-scoped configuration which can be managed via OSGi Configuration Admin. The affected properties are those in the `SAMLProviderConfiguration` metatype:
@@ -98,7 +98,7 @@ For example, if you're stuck connecting to a legacy IdP that only supports `SHA1
 Notice that in the configuration above, the `<md:Extensions>` block has only one signing algorithm: `SHA1`.
 
 ```{note}
-   Since the default configuration falls back to `SHA1`, you shouldn't need to do this unless your legacy system can't negotiate via the fallback mechanism. Also note that if you blacklisted `SHA1`, this won't work. Due to `vulnerabilities in SHA1 <https://en.wikipedia.org/wiki/SHA-1>`__, it's best to avoid using it altogether if possible.
+Since the default configuration falls back to `SHA1`, you shouldn't need to do this unless your legacy system can't negotiate via the fallback mechanism. Also note that if you blacklisted `SHA1`, this won't work. Due to [vulnerabilities in SHA1](https://en.wikipedia.org/wiki/SHA-1, it's best to avoid using it altogether if possible.
 ```
 
 If you've changed your metadata configuration, you can go back to the default configuration if you saved it before making the change. If you didn't, you can provide a URL instead of an uploaded XML file to one of your peers' metadata configurations.

@@ -2,7 +2,7 @@
 
 The SAML Admin panel is the best place to configure your SAML instance. Use it instead of Instance Settings to streamline your SAML administration experience. 
 
-You can configure an Identity Provider (IdP), a Service Provider, and Service Provider connections using SAML Admin. To access it, click the _Global Menu_ (![Global Menu](../../../../../images/icon-applications-menu.png)) &rarr; _Control Panel_ &rarr; _SAML Admin_. 
+You can configure an Identity Provider (IdP), a Service Provider, and Service Provider connections using SAML Admin. To access it, click the _Global Menu_ (![Global Menu](../../../../images/icon-applications-menu.png)) &rarr; _Control Panel_ &rarr; _SAML Admin_. 
 
 ## General Tab
 
