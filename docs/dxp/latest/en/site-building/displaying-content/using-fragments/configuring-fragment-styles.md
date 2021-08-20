@@ -23,7 +23,7 @@ The Fragment's styling is updated.
 
 ## Additional Information
 
-- [Content Pages Overview](./content-pages-overview.md)
+- [Content Pages Overview](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
 - [Using Page Fragments](./using-page-fragments.md)
 - [Fragment Styles Reference](./fragment-styles-reference.md)
 - [Using a Style Book to Standardize Site Appearance](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md)

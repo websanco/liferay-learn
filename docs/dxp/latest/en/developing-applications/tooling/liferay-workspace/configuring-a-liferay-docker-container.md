@@ -46,7 +46,7 @@ A Docker image based on the name of your workspace with `-liferay` appended is c
 
 ## Configuring a Docker Image
 
-Beyond the regular Docker tools for configuring your container, building your container from the Gradle task sets up a folder pointing to [Liferay Home](../../installation-and-upgrades/reference/liferay-home.md), so you can create whatever Liferay configuration you need. You'll find this folder in `configs/docker`. 
+Beyond the regular Docker tools for configuring your container, building your container from the Gradle task sets up a folder pointing to [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md), so you can create whatever Liferay configuration you need. You'll find this folder in `configs/docker`. 
 
 For example, you may want to enable telnet access to your container's Gogo shell. Here's how you'd do it: 
 

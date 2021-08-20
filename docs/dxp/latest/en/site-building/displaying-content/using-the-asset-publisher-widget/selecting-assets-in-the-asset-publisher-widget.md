@@ -18,7 +18,7 @@ To select Assets to publish in the *Asset Publisher* widget,
 
     ![The configuration window has different Asset Selection options under the Setup tab.](selecting-assets-in-the-asset-publisher-widget/images/02.png)
 
-1. Optionally, click *Create a collection from this configuration* to save the configuration as a new [Collection]((../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)). This option is available for the [Dynamic](#dynamic) and [Manual](#manual) Asset selection options.
+1. Optionally, click *Create a collection from this configuration* to save the configuration as a new [Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md). This option is available for the [Dynamic](#dynamic) and [Manual](#manual) Asset selection options.
 
 1. Once you've selected your Assets and configured the widget, click *Save*.
 

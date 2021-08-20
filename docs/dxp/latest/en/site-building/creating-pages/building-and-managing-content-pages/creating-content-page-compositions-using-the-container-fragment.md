@@ -92,7 +92,7 @@ You can save Fragment compositions as new Fragments and reuse them in other Cont
 
 ### Step 4: Setting the Default Container Width in the Style Book
 
-By default, the Container Fragment uses a *Fluid* width configuration. You can change the default setting to *Fixed Width*, and make this property available for other Content Pages based on the same Style Book. In this example with two nested Containers, you may want to configure the outer Container to adapt to the Page width while limiting the maximum width of Container with the text. To learn more about Style Books in Liferay DXP, read [Using a Style Book to Standardize Site Appearance](../using-a-../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md).
+By default, the Container Fragment uses a *Fluid* width configuration. You can change the default setting to *Fixed Width*, and make this property available for other Content Pages based on the same Style Book. In this example with two nested Containers, you may want to configure the outer Container to adapt to the Page width while limiting the maximum width of Container with the text. To learn more about Style Books in Liferay DXP, read [Using a Style Book to Standardize Site Appearance](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md).
 
 ![You can change the Container Width property to use a fixed width or adapt to the Page width.](./creating-content-page-compositions-using-the-container-fragment/images/18.gif)
 

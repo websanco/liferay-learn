@@ -59,6 +59,6 @@ When you enable the *Propagate Fragment Changes Automatically*, the [Fragments E
 
 ## Additional Information
 
-- [Using Fragments](./using-fragments.md)
+- [Using Page Fragments](./using-page-fragments.md)
 - [Configuring Fragment Styles](./configuring-fragment-styles.md)
 - [Content Pages Overview](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)

@@ -46,7 +46,7 @@ We took Themes to the next level by providing Master Pages, Templates, Fragments
 
 ### Style Books
 
-A [Style Book](../site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Style Books provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Style Books for the same Site and a page creator can pick the Style Book for a particular page. Style Books help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
+A [Style Book](../site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) is a group of Styles (CSS rules) you can create using the Style editor UI. Style Books provide "design systems" for UX designers who want to create consistent user experiences across Pages, by leveraging re-usable and sharable styles and style rules. A Theme creator can create multiple Style Books for the same Site and a page creator can pick the Style Book for a particular page. Style Books help reduce inconsistency when multiple content authors and web designers work in parallel to create new experiences.
 
 ## Content Authoring and Management
 
@@ -128,7 +128,7 @@ Now you can tell how many visitors completely read your content. [Content perfor
 
 ## Questions app
 
-If you use your site to support products, the new [Questions app](../collaboration-and-social/using-the-questions-app.md) can help your users find answers to the questions they have about your products. Taking advantage of Liferay's GraphQL APIs and Message Boards infrastructure, the questions app gets users the best answers through voting and marking the most valuable information. 
+If you use your site to support products, the new [Questions app](../collaboration-and-social/questions/using-the-questions-app.md) can help your users find answers to the questions they have about your products. Taking advantage of Liferay's GraphQL APIs and Message Boards infrastructure, the questions app gets users the best answers through voting and marking the most valuable information. 
 
 ![Users can post a question and get answers quickly.](./whats-new-73/images/17.gif)
 
@@ -248,7 +248,7 @@ A new application drawer houses cross-site applications, such as workflow, forms
 
 ### SAML configuration on instance level
 
-This change allows to configure [SAML](../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md) settings on instance level, including handling the certificates. 
+This change allows to configure [SAML](../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml.md) settings on instance level, including handling the certificates. 
 
 A new SAML property was introduced: *Unknown users are strangers*. This property determines the behavior of SAML IdP connection when an End User is a stranger. The property defines if users that do not exist already in the portal database should be classified as strangers. Once classified, the portal instance's existing stranger handling policy determines if the user should be automatically provisioned using information available from the IdP's SAML assertion.
 
@@ -260,7 +260,7 @@ Expired authorizations can now be configured to be removed. After the expired au
 
 ### OpenId Connect configuration on instance level
 
-Each instance can now configure connections to different [OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/other-ssos/using-openid-connect.md) providers. 
+Each instance can now configure connections to different [OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/using-openid-connect.md) providers. 
 
 A system-level OpenId Connect Provider is visible to all instances, acting like a default OpenId Connect Provider. 
 

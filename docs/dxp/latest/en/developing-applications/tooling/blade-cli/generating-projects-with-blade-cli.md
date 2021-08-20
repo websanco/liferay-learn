@@ -81,4 +81,4 @@ If you have Liferay projects prior to version 7.0, they are in a Plugins SDK. To
 
 ## Related Topics
 
-[Liferay Workspace](../../tooling/liferay-workspace.md) <!-- Placeholder until Workspace articles come through. -->
+[Liferay Workspace](../liferay-workspace/what-is-liferay-workspace.md)

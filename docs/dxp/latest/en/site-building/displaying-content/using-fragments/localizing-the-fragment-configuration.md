@@ -31,6 +31,6 @@ You can localize links you enter manually and links from a content field. If the
 
 ## Additional Information
 
-- [Content Pages Overview](./content-pages-overview.md)
-- [Content Page Editor User Interface Reference](./content-page-editor-user-interface-reference.md)
+- [Content Pages Overview](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
+- [Content Page Editor User Interface Reference](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
 - [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md)

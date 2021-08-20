@@ -31,11 +31,11 @@ However, Web Services may provide a simpler way to execute certain tasks. See [S
 
 ### Work with Any Client
 
-Liferay's headless APIs serve data over the web, so any application capable of making web calls can serve as a client. These APIs respond with JSON content by default, but also support XML natively. Extensions can serve content in any other way you might need. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#accept) to learn more.
+Liferay's headless APIs serve data over the web, so any application capable of making web calls can serve as a client. These APIs respond with JSON content by default, but also support XML natively. Extensions can serve content in any other way you might need. See [API Headers Reference](./consuming-apis/api-headers-reference.md#accept) to learn more.
 
 ### Connect Securely
 
-Just like with Liferay's web interface, all interactions via headless API are made using a particular User account (or as a guest). Liferay's APIs support three ways of authenticating: via basic authentication, via OAuth token, and via cookie. See [API Headers Reference](./content-delivery-apis/api-headers-reference.md#authorization) for how to make this happen. It's also possible to make API requests as a guest – see [Making Unauthenticated Requests](./content-delivery-apis/making-unauthenticated-requests.md) for more details.
+Just like with Liferay's web interface, all interactions via headless API are made using a particular User account (or as a guest). Liferay's APIs support three ways of authenticating: via basic authentication, via OAuth token, and via cookie. See [API Headers Reference](./consuming-apis/api-headers-reference.md#authorization) for how to make this happen. It's also possible to make API requests as a guest – see [Making Unauthenticated Requests](./consuming-apis/making-unauthenticated-requests.md) for more details.
 
 ### Keep Data Size Manageable
 
@@ -49,4 +49,4 @@ The `fields` parameter requests only specific fields to be enumerated in each of
 
 The `flatten` parameter executes your request out of a hierarchical context, for hierarchical APIs. This allows you, for instance, to search for any Organization called "Marketing" rather than having to traverse the org-chart to find the relevant Organization.
 
-For specifics on how to use any of these parameters see [API Parameters Reference](./content-delivery-apis/api-parameters-reference.md).
+For specifics on how to use any of these parameters see [API Headers Reference](./consuming-apis/api-headers-reference.md).

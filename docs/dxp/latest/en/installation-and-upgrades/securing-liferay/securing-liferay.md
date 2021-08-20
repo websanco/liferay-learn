@@ -20,7 +20,7 @@ Liferay DXP authentication is flexible. By default, users log into Liferay DXP b
 
 * You can configure [Multi-Factor authentication](./multi-factor-authentication/using-multi-factor-authentication.md).
 * You can [use an SSO to manage](./configuring-sso/README.md) authentication.
-* Liferay can also be [integrated with LDAP](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to validate users instead of using the portal database.
+* Liferay can also be [integrated with LDAP](../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to validate users instead of using the portal database.
 * Guest account creation can be [turned off](./authentication-basics.md#disabling-guest-account-creation).
 
 To learn more, see [Authentication Basics](./authentication-basics.md).

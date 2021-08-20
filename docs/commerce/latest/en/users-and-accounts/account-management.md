@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-account-management/account-management.md
 account-management/creating-a-new-account.md
 account-management/inviting-users-to-an-account.md
 account-management/adding-addresses-to-an-account.md

@@ -41,7 +41,7 @@ Ready to work on workflows? Your next step is [creating workflow tasks](./creati
 
 ## Additional Information
 
-* [Managing Workflows](./managing-workflows.md)
+* [Managing Workflows](../managing-workflows.md)
 * [Workflow Nodes](./workflow-nodes.md)
 * [Using Forks and Joins](./using-forks-and-joins.md)
 * [Using Condition Nodes](./using-condition-nodes.md)

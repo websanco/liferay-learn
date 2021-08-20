@@ -23,7 +23,7 @@ Reindexing search indexes is required for most upgrades, but is typically not re
 ![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/02.png)
 
 ```{note}
-If you upgraded from an older version (7.1 and below) consider [installing Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) to handle search indexing.
+If you upgraded from an older version (7.1 and below) consider [installing Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) to handle search indexing.
 ```
 
 ### Database Configurations

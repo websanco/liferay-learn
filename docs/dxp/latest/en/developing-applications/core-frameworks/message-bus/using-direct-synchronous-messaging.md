@@ -150,7 +150,7 @@ If you want to continue processing immediately after sending a message, see [Usi
 
 ## Additional Information
 
-* [Message Bus](./message-bus.md)
+* [Message Bus](../message-bus.md)
 * [Listening for Messages](./listening-for-messages.md)
 * [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
 * [Listening for Registration Events](./listening-for-registration-events.md)

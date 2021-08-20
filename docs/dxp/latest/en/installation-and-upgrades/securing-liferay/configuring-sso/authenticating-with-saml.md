@@ -19,7 +19,7 @@ The SAML (Security Assertion Markup Language) adapter provides Single Sign On (S
 Liferay DXP instances can serve as either Service Provider (SP) or Identity Provider (IdP).
 
 ```{note}
-   A single Liferay DXP instance is *either* the SP or the IdP in your SSO setup; it can't be both. You can, however, use separate instances for both purposes (for example, one instance is the SP and another is the IdP).
+A single Liferay DXP instance is *either* the SP or the IdP in your SSO setup; it can't be both. You can, however, use separate instances for both purposes (for example, one instance is the SP and another is the IdP).
 ```
 
 You can jump right to configuring SAML or learn how it works:
@@ -29,4 +29,3 @@ You can jump right to configuring SAML or learn how it works:
 * [SAML Admin](./authenticating-with-saml/saml-admin.md)
 * [Configuring SAML at the Instance Level](./authenticating-with-saml/configuring-saml-at-the-instance-level.md)
 * [SAML Configuration Reference](./authenticating-with-saml/saml-configuration-reference.md)
-
