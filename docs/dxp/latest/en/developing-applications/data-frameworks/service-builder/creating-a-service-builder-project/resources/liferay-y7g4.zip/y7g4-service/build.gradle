@@ -1,6 +1,4 @@
 dependencies {
-	//compile project(":y7g4:y7g4-api")
-
 	compile project(":y7g4-api")
 
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"

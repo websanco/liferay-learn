@@ -1,21 +1,6 @@
 Bundle-Name: Acme Y7G4 Service
 Bundle-SymbolicName: com.acme.y7g4.service
 Bundle-Version: 1.0.0
-
-#
-# Use the app's 1.0.0 data schema version
-#
-
 Liferay-Require-SchemaVersion: 1.0.0
-
-#
-# This is a Liferay Service Builder module
-#
-
 Liferay-Service: true
-
-#
-# "Use DS annotations found in the class hierarchy of the component class" - https://bnd.bndtools.org/instructions/dsannotations-options.html
-#
-
 -dsannotations-options: inherit
