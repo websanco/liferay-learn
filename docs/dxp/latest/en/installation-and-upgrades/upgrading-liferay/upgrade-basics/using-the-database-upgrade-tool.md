@@ -31,7 +31,7 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 1. If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md) or [Simple File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) with a modified storage location, export your file store settings to a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your new `[Liferay Home]/osgi/configs/` folder.
 
     ```{important}
-    If you're using `[Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md), you must configure it with a `.config` file in the new installation before upgrading the database.
+    If you're using [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md), you must configure it with a `.config` file in the new installation before upgrading the database.
 
     Here's an example  `com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 
