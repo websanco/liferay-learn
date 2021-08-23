@@ -8,7 +8,7 @@ Note, portlet scoped configuration takes a different approach. See [Portlet Leve
 
 ## Specify Scope in the Configuration Interface
 
-Scoping a configuration requires a few different steps. First, specify the scope in your configuration interface. Use the `@ExtendedObjectClassDefinition` annotation to set your scope. Use `Scope.SYSTEM` for system scope. Use `Scope.COMPANY` for instance scope. Use `Scope.GROUP` for site scope. Use `Scope.PORTLET_INSTANCE` for the portlet scope.
+Scoping a configuration requires a few different steps. First, specify the scope in your configuration interface. Use the `@ExtendedObjectClassDefinition` annotation to set your scope. Use `Scope.SYSTEM` for system scope. Use `Scope.COMPANY` for instance scope. Use `Scope.GROUP` for site scope. 
 
 ```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/configuration/N2F3WebConfiguration.java
    :language: java
