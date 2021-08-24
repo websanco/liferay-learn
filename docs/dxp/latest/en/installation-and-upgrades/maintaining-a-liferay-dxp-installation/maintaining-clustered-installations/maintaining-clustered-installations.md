@@ -12,18 +12,18 @@ The techniques are compared below.
 | Update | Rolling Restart | Blue-Green |
 | --- | --- | --- |
 | Activation keys [1](#one) |  &#10004; | &#10004; |
+| Application server updates | &#10004; | &#10004; |
+| Cluster code changes [2](#two) |  | &#10004; |
+| Fix pack installation and removal (revertable fix pack) | &#10004; | &#10004; |
+| Fix pack installation (non-revertible fix pack) |  | &#10004; |
+| JVM setting changes | &#10004; | &#10004; |
+| Java version (major) |  | &#10004; |
+| Java version (minor) | &#10004; | &#10004; |
 | Plugin/module installation | &#10004; | &#10004; |
 | Plugin/module update (backward-compatible data/schema changes) | &#10004; | &#10004; |
 | Plugin/module update (non-backward-compatible data/schema changes) [3](#three) |  | &#10004; |
-| Fix pack installation and removal (revertable fix pack) | &#10004; | &#10004; |
-| Fix pack installation (non-revertible fix pack) |  | &#10004; |
-| Cluster code changes [2](#two) |  | &#10004; |
 | Portal property changes | &#10004; | &#10004; |
 | System Setting changes via configuration admin files | &#10004; | &#10004; |
-| Application server updates | &#10004; | &#10004; |
-| JVM setting changes | &#10004; | &#10004; |
-| New Java version (minor) | &#10004; | &#10004; |
-| New Java version (major) |  | &#10004; |
 
 [<a name="one">1</a>] Activation key update using Blue-Green is only supported for virtual cluster activation keys. Please see [Virtual Cluster Activation Key for Liferay DXP and Liferay Commerce](https://help.liferay.com/hc/en-us/articles/4402390080141) for details.
 
