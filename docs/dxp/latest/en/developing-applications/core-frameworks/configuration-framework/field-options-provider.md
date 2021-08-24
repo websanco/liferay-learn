@@ -1,6 +1,11 @@
 # Field Options Provider
 
-A [dropdown list can be populated manually](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `@Meta.AD` annotation of the configuration interface. But option labels and values can also be populated automatically with the `ConfigurationFieldOptionsProvider` class.
+You can populate a [drop-down list manually](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `@Meta.AD` annotation of the configuration interface. But option labels and values can also be populated automatically with the `ConfigurationFieldOptionsProvider` class.
+
+<!-- 1. You need to explain above why I would want to populate labels and values with a class. What's the benefit? What are the use cases? 
+     2. Also, please use the active voice. I changed the first sentence to active voice but left the second. 
+     3. Links like the one above should be relative links. Please replace with a relative link. The link you provided will break when we move to docs.liferay.com. 
+     -Rich -->
 
 ## Deploy the Tutorial Code
 
@@ -40,11 +45,15 @@ A [dropdown list can be populated manually](https://learn.liferay.com/dxp/latest
 
     ![The settings UI shows two dropdown lists.](./field-options-provider/images/01.png)
 
-The first dropdown list is manually populated with the `@Meta.AD` annotation. The second dropdown list is populated with the field options provider.
+The first drop-down list is populated manually with the `@Meta.AD` annotation. The second drop-down list is populated with the field options provider.
+
+<!-- Notice I moved the adverb 'manually.' If you have a compound verb (like "is populated"), you want to try not to split it up. -Rich -->
 
 ## Setting the Configuration Interface
 
 [Create a configuration interface](https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.html#creating-the-configuration-interface) and set the configuration field name to be populated.
+
+<!-- Again, please replace the above link with a relative link. -Rich -->
 
 ```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/Z4H3Configuration.java
    :dedent: 1
@@ -73,6 +82,6 @@ Use the `@Component` annotation to register the service. Include the `configurat
 
 Add a `getOptions` method to return a list of `Option`s. The sample project includes an array that sets the `optionValue` as a string of a color and sets the `optionLabel` as the string stored in the `Langauge.properties` file of that color.
 
-The tutorial code uses a simple example of a string array but more complex use cases are also possible. For example, get a list of objects from a web service or even iterate through a database to dynamically populate a list.
+The tutorial code uses a simple example of a string array but more complex use cases are also possible. For example, you can get a list of objects from a web service or even iterate through a database to dynamically populate a list.
 
 See a real Liferay example with [`EnabledClassNamesConfigurationFieldOptionsProvider.java`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-auto-tagger-service/src/main/java/com/liferay/asset/auto/tagger/internal/configuration/admin/definition/EnabledClassNamesConfigurationFieldOptionsProvider.java). This code gets a list of `AssetRendererFactory` objects and iterates through the list, populating a new list of `Option`s, using the asset’s type name as the label and the class name as the value.
