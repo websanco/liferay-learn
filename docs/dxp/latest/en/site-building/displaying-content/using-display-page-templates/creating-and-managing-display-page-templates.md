@@ -2,7 +2,7 @@
 
 A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./about-display-page-templates-and-display-pages.md).
 
-```note::
+```{note}
    Display Page Templates are only supported for Web Content, Documents, Blog Entries, and Categories (starting with Liferay DXP 7.4.)
 ```
 
@@ -60,7 +60,7 @@ To view your Display Page Template usage and unassign your content,
 1. Click the *Actions* menu (![Actions](../../../images/icon-actions.png)) in the top-right corner and select *Assign to Default* or *Unassigned*.
 1. Click *OK*.
 
-If you assign your content to a new Display Page Template, review that the content displays as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md).
+If you assign your content to a new Display Page Template, make sure the content appears as expected. To preview and publish your content, see [Publishing Content with Display Pages](./publishing-content-with-display-pages.md).
 
 ## Additional Information
 
