@@ -1,3 +1,0 @@
-# Upgrade
-
-Coming soon!
