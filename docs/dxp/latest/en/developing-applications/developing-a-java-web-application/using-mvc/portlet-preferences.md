@@ -1,6 +1,6 @@
 # Portlet Preferences
 
-Portlet preferences allow users to configure a preference for an individual portlet. Portlet preferences can be added to any MVC Portlet so that users can have a UI to access and set their preferences.
+Portlet preferences provides a way for admins and users to customize a portlet. Portlet preferences can be added to any MVC Portlet so that users can have a UI to access and set their preferences.
 
 Note, portlet preferences are stored properties that are separate from an application's configuration. To learn more see [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md)
 
@@ -54,29 +54,54 @@ Let's examine how the preferences work.
 
 ## Create the Configuration JSP
 
+The user interface for portlet preferences is provided by the `configuration.jsp` file. 
+
 ```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/resources/META-INF/resources/configuration.jsp
 :language: jsp
 :lines: 8-30
 ```
 
+The JSP file uses `<liferay-portlet:actionURL />` and `<liferay-portlet:renderURL />` tags to construct URLs in the variables `configurationActionURL` and `configurationRenderURL`. 
+
+When a user sumbits the form, the `configurationActionURL` is invoked and the application's `processAction` method is invoked with the `color` included as a request parameter.
+
+A URL parameter named `cmd` is supplied indicating the purpose of the request. The value of the `cmd` parameter is `update`. 
+
 ## Create the Configuration Action
+
+Create a custom configuation action class to be able to access the portlet's preferences. 
 
 ```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/java/com/acme/p1z2/web/internal/portlet/action/P1Z2ConfigurationAction.java
 :language: java
 :lines: 14-34
 ```
 
-## Add the Component Definition
+In the `@Component` annotation, specify the portlet to which the action class applies with a `property` tag.
 
-```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/java/com/acme/p1z2/web/internal/portlet/P1Z2Portlet.java
-:language: java
-:lines: 9-18
-```
+Add the `processAction()` method which reads in the porlet preferences from the configuration form and stores them in the database. In the sample portlet, the method reads in the `color` URL parameter and sets the value as a portlet preference.
 
 ## Add the Preference Logic
+
+Add some logic to the `view.jsp` file to access the portlet's preference.
 
 ```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/resources/META-INF/resources/view.jsp
 :language: jsp
 :lines: 7
 ```
 
+The JSP file checks for the selected portlet preference and returns the value. If no value has been made saved yet, `blue` is returned as the default value.
+
+Note that the `<portlet:defineObjects />` tag is used to make the color variable available in the JSP. 
+
+## Add the Portlet's Path Parameters
+
+In the portlet's `@Component` annotation, add the view template and configuration template path parameters.
+
+```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/java/com/acme/p1z2/web/internal/portlet/P1Z2Portlet.java
+:language: java
+:lines: 9-18
+```
+
+## Related Information
+
+* [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md)
