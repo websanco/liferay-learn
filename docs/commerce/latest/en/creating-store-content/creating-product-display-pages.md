@@ -4,7 +4,7 @@ With Liferay Commerce, you can link individual store products with Site pages to
 
 Follow these steps to set up a display page for your products:
 
-1. Create a new Site page in your Store, and add the *Product Details* widget to it, along with any other desired Page elements. See [Building Content Pages](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/building-and-managing-content-pages/building-content-pages.html) for more information. This page determines the layout used for displaying any linked products.
+1. Create a new Site page in your Store, and add the *Product Details* widget to it, along with any other desired Page elements. See [Building Content Pages](https://learn.liferay.com//dxp/latest/en/site-building/creating-pages/building_and_managing_content_pages.html) for more information. This page determines the layout used for displaying any linked products.
 
 1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Store Management* &rarr; *Channels*.
 
