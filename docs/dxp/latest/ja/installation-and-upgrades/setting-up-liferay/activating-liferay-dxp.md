@@ -35,8 +35,8 @@ DXPを使用する準備が整いました。
 
 DXPをお試し中ですか？ [30日間の試用アクティベーションキー](https://www.liferay.com/products/dxp/30-day-trial)を取得してください。
 
-``` note::
-   Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、LCSのドキュメント<https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->を参照してください。
+```{note}
+Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、LCSのドキュメント <https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->を参照してください。
 ```
 
 ## Liferay DXPの再アクティブ化

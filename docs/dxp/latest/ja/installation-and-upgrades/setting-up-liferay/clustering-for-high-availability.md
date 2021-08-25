@@ -34,6 +34,6 @@ DXPクラスターを構成したら、それにアプリケーションをデ�
 
 例としてクラスタを作成することは、DXPクラスタリングを理解するための優れた最初のステップです。 詳細については、「 [例：単純なDXPクラスター](./example-creating-a-simple-dxp-cluster.md) 作成」から始めてください。 次に、上記の [クラスタリング要件](#clustering-requirements) 対処します。
 
-``` note::
-   This documentation describes DXP-specific cluster configuration without getting into specific implementations of third party software, such as Java EE application servers, HTTP servers, and load balancers. Please consult the documentation for those components to configure them. Before creating a DXP cluster, make sure your OS is not defining the hostname of your system to the local network at 127.0.0.1.
+```{note}
+This documentation describes DXP-specific cluster configuration without getting into specific implementations of third party software, such as Java EE application servers, HTTP servers, and load balancers. Please consult the documentation for those components to configure them. Before creating a DXP cluster, make sure your OS is not defining the hostname of your system to the local network at 127.0.0.1.
 ```

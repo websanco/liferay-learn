@@ -35,14 +35,14 @@ Liferay DXP Dockerイメージの使用
 Liferay DXPのセットアップ
 ----------------------
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-liferay-dxp`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/activating-liferay-dxp`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/connecting-to-a-mail-server`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/mail-server-configuration-reference`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/setting-up-liferay`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/activating-liferay-dxp`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/connecting-to-a-mail-server`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/mail-server-configuration-reference`
 *検索エンジンのインストール
 *ロケールとエンコーディングの選択
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/trial-plugin-installation`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/setting-up-marketplace`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/trial-plugin-installation`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/setting-up-marketplace`
 *Liferayマーケットプレイスの使用
 アプリケーションを手動でインストールする
 *コンテンツ配信ネットワークの使用
@@ -58,20 +58,20 @@ Solrの使用
 ドキュメントライブラリリポジトリの構成
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-the-document-library-repository/document-repository-overview`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-the-document-library-repository/using-amazon-s3-store`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-the-document-library-repository/using-the-advanced-file-system-store`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-the-document-library-repository/using-the-dbstore`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/configuring-the-document-library-repository/using-the-file-system-store`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/document-repository-overview`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-amazon-s3-store`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-advanced-file-system-store`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-dbstore`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-file-system-store`
 
 高可用性のクラスタリング
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/example-creating-a-simple-dxp-cluster`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/database-configuration-for-cluster-nodes`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/configuring-cluster-link`
--  :doc:`/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/configuring-unicast-over-tcp`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/example-creating-a-simple-dxp-cluster`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/database-configuration-for-cluster-nodes`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/configuring-cluster-link`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/configuring-unicast-over-tcp`
 
 Securing Liferay
 ----------------

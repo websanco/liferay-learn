@@ -29,12 +29,12 @@ DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ
 
 <!-- end list -->
 
-``` important::
-    Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
+```{important}
+Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
 ```
 
-``` note::
-   DXP cluster environments can also be set up using an `on-premises DXP Tomcat bundle <../../installing-liferay/installing-a-liferay-tomcat-bundle.md>`_, using `DXP installed to an app server <../../installing-liferay/installing_liferay_on_an_application_server.md>`_ on-premises, or using any combination of Docker containers and DXP installations.
+```{note}
+DXP cluster environments can also be set up using an [on-premises DXP Tomcat bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md), using [DXP installed to an app server](../../installing-liferay/installing_liferay_on_an_application_server.md) on-premises, or using any combination of Docker containers and DXP installations.
 ```
 
 ## コンテナのネットワークを構成する
@@ -494,8 +494,8 @@ docker stop dxp-1
 
 作業中の DXPクラスタを作成しました\!
 
-``` tip::
-   When you're ready to stop containers, use the ``docker container stop [container ID]`` command like you did to stop the DXP container above. Similarly, use the ``docker container start -i [container ID]`` command to restart the containers.
+```{tip}
+When you're ready to stop containers, use the `docker container stop [container ID]` command like you did to stop the DXP container above. Similarly, use the `docker container start -i [container ID]` command to restart the containers.
 ```
 
 ## 次のステップ

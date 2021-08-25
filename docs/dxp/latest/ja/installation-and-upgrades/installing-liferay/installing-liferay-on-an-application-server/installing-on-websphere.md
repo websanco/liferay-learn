@@ -243,7 +243,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
 
 ## メール設定
 
-DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
+DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
 
 WebSphereを使用してメールセッションを管理する場合は、次の手順に従います。
 
@@ -365,7 +365,7 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 ## 次のステップ
 
   - [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md)
-  - [Activating Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md)
+  - [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
   - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)

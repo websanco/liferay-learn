@@ -21,7 +21,7 @@
 
     ![表示スタイルを選択する](./creating-message-boards-categories/images/04.png)
 
-5.  *[Mailing List]* セクションで、*[Active]* トグルを*[NO]* のままにして、カテゴリのメーリングリストを無効にします。 *[YES]* に切り替えた場合は、メールサーバーの設定を入力します。 詳細については、[Setting up Mail](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
+5.  *[Mailing List]* セクションで、*[Active]* トグルを*[NO]* のままにして、カテゴリのメーリングリストを無効にします。 *[YES]* に切り替えた場合は、メールサーバーの設定を入力します。 詳細については、[Setting up Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
 
 6.  匿名ユーザーがカテゴリに投稿できないようにするには、*[Allow Anonymous Emails]* トグルを*[NO]* ままにします。 それ以外の場合で、匿名ユーザーがメッセージボードカテゴリに投稿する電子メールを送信できるようにする場合は、*[Allow Anonymous Emails]* を*[YES]* に切り替えます。
 

@@ -1,6 +1,6 @@
 # アプリやその他のアーティファクトをコンテナにインストールする
 
-アプリケーションやその他のアーティファクト( [DXPアクティベーションキー](../../setting-up-liferay-dxp/activating-liferay-dxp.md)など)は、コンテナの `/mnt/liferay/deploy` フォルダを介してDXPコンテナにインストールされます。 コンテナエントリポイントは、 `/mnt/liferay/deploy` フォルダをコンテナの `[Liferay Home]/deploy` フォルダ (すなわち、 `/opt/liferay/deploy` ) にシンボリックリンクします。 `/mnt/liferay/deploy` フォルダに指定したアーティファクトは、DXPに自動デプロイされます。
+アプリケーションやその他のアーティファクト( [DXPアクティベーションキー](../../setting-up-liferay/activating-liferay-dxp.md)など)は、コンテナの `/mnt/liferay/deploy` フォルダを介してDXPコンテナにインストールされます。 コンテナエントリポイントは、 `/mnt/liferay/deploy` フォルダをコンテナの `[Liferay Home]/deploy` フォルダ (すなわち、 `/opt/liferay/deploy` ) にシンボリックリンクします。 `/mnt/liferay/deploy` フォルダに指定したアーティファクトは、DXPに自動デプロイされます。
 
 アーティファクトをインストールするには、次の2つの方法があります。
 

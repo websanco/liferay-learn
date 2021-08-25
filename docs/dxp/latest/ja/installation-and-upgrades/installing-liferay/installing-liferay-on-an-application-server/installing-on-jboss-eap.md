@@ -80,7 +80,7 @@ DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサ�
 コマンドラインインターフェイスは、ドメインモードの展開に推奨されます。
 
 ``` note::
-   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## JBossの構成
@@ -300,7 +300,7 @@ JBossを使用してデータソースを管理する場合は、次の手順に
 
 ## メールサーバーに接続する
 
-データベース構成と同様に、メールを構成する最も簡単な方法は、DXPにメールセッションを処理させることです。 DXPの内蔵メールセッションを使用したい場合は、このセクションと飛ばしコントロールパネルにある [DXPをメールサーバーに接続](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) に行きます。
+データベース構成と同様に、メールを構成する最も簡単な方法は、DXPにメールセッションを処理させることです。 DXPの内蔵メールセッションを使用したい場合は、このセクションと飛ばしコントロールパネルにある [DXPをメールサーバーに接続](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) に行きます。
 
 JBossとのメールセッションを管理する場合は、次の手順に従います。
 

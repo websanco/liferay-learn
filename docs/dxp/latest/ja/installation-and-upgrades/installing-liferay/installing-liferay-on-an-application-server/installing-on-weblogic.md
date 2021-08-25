@@ -161,7 +161,7 @@ Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプ
 
 ## メールサーバーに接続
 
-組み込みのメールセッションを使用して、Liferay DXP [をメールサーバー](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md) 接続できます。 WebLogicのメールセッションを使用することもできます。
+組み込みのメールセッションを使用して、Liferay DXP [をメールサーバー](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) 接続できます。 WebLogicのメールセッションを使用することもできます。
 
 1.  WebLogicを起動し、管理サーバーのコンソールにログインします。
 
@@ -204,7 +204,7 @@ DXPがすでにデプロイされている場合、`portal-ext.properties`ファ
 9.  配置が完了したら、構成が正しい場合は、[ *Save* ]をクリックします。
 10. DXPをデプロイした管理対象サーバーを起動します。 DXPはすべてのJSPをプリコンパイルしてから起動します。
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 [Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 [Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
 
 WebLogicでDXPを実行しています。
 
@@ -224,10 +224,10 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.md)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay-dxp/setting-up-liferay-dxp.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.md)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay/setting-up-liferay.md)トピックを参照できます。
 
   - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
   - [試用期間中のEEプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
   - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)

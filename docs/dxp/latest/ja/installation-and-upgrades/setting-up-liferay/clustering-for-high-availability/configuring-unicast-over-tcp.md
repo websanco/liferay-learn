@@ -76,8 +76,8 @@
 
 上記のJGroups構成は、通常、Unicast over TCPに必要なすべての構成です。 ただし、非常に特定の場合には、 *（および場合のみ）* のクラスタ・ノードが複数のネットワークにまたがって展開され、次いで `external_addr` TCPトランスポートパラメータは、ファイアウォールの外部（パブリックIP）アドレスに、各ホストに設定されなければなりません。 この種の構成は通常、ノードが地理的に離れている場合にのみ必要です。 これを設定することにより、別々のネットワークにデプロイされたクラスター化されたノード（たとえば、異なるファイアウォールによって分離されたノード）は互いに通信できます。 この構成は、システムのセキュリティ監査でフラグが立てられる場合があります。 詳細については、 [JGroupsドキュメント](http://www.jgroups.org/manual4/index.html#_transport_protocols) を参照してください。
 
-``` note::
-   The ``singleton_name`` TCP attribute was deprecated in JGroups v4.0.0 and has therefore been removed since Liferay DXP 7.2 SP1 and Liferay Portal CE GA2 which use JGroups v 4.1.1-Final.
+```{note}
+The `singleton_name` TCP attribute was deprecated in JGroups v4.0.0 and has therefore been removed since Liferay DXP 7.2 SP1 and Liferay Portal CE GA2 which use JGroups v 4.1.1-Final.
 ```
 
 これで、TCPクラスタリングを介したユニキャストがセットアップされました\！

@@ -59,5 +59,5 @@ Javaのマイナーバージョンの更新はローリング再起動時に適�
 ## 関連トピック
 
   - [Blue Green Deployment](./blue-green-deployments.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
   - [パッチ](../patching-liferay/patching-liferay.md)

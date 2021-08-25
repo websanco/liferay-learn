@@ -47,8 +47,8 @@ DXPは次回の起動時にメールセッションに接続します。
 
 メールサーバーがDXPに接続され、通知を送信する準備ができました。
 
-``` note::
-   `portal-ext.properties<../../reference/portal-properties.md>` __で以下のプロパティを設定し、サーバーを再起動すると、コントロールパネルの値を設定するのと同じ効果があります：``mail.session.jndi.name=mail/MailSession``
+```{note}
+[portal-ext.properties](../../reference/portal-properties.md)で以下のプロパティを設定し、サーバーを再起動すると、コントロールパネルの値を設定するのと同じ効果があります： `mail.session.jndi.name=mail/MailSession`
 ```
 
 ## 追加情報

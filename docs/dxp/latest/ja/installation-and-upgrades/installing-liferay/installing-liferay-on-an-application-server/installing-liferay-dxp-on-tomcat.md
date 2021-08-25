@@ -271,7 +271,7 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
 
 ## メール設定
 
-メールを設定する最も簡単な方法は、DXPに[組み込みのメールセッション](../../setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)を使用することです。 組み込みのメールセッションを使用する場合は、このセクションをスキップできます。
+メールを設定する最も簡単な方法は、DXPに[組み込みのメールセッション](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)を使用することです。 組み込みのメールセッションを使用する場合は、このセクションをスキップできます。
 
 Tomcatを使用してメールセッションを管理する場合は、次の手順に従います。
 
@@ -319,10 +319,10 @@ DXPはTomcatで実行されています。
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.md)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay-dxp/setting-up-liferay-dxp.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.md)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay/setting-up-liferay.md)トピックを参照できます。
 
   - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/installing-the-marketplace-plugin.md)
-  - [Trial Plugin Installation](../../setting-up-liferay-dxp/trial-plugin-installation.md)
+  - [Trial Plugin Installation](../../setting-up-liferay/trial-plugin-installation.md)
   - Installing and Configuring a Search Engine
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay-dxp/configuring-clustering-for-high-availability/01-introduction-to-clustering-liferay-dxp.md)
+  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/configuring-clustering-for-high-availability/01-introduction-to-clustering-liferay-dxp.md)

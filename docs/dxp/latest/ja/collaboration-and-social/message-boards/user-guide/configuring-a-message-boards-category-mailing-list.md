@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-メッセージボードアプリのメーリングリストを設定する前に、[Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)の記事を参照し、DXPインスタンス全体にメールサーバーを設定する一般的な手順について確認してください。
+メッセージボードアプリのメーリングリストを設定する前に、[Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事を参照し、DXPインスタンス全体にメールサーバーを設定する一般的な手順について確認してください。
 
 ## メッセージボードカテゴリにメーリングリストを追加する
 
@@ -47,5 +47,5 @@
 
 ## 関連情報
 
-  - [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)
+  - [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)
   - [Creating Message Board Categories](./creating-message-boards-categories.md)

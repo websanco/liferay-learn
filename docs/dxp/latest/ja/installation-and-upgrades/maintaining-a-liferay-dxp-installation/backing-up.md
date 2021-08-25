@@ -53,7 +53,7 @@ mysqldump --databases my-liferay-database > my-liferay-database-backup.sql
 ## 検索インデックス
 
 ``` important::
-   If you've placed your search index into a database (not recommended; see the `DXP Clustering <../setting-up-liferay-dxp/clustering-for-high-availability.md>`_ article for information on using Cluster Link or Solr), you should back up that database too.
+   If you've placed your search index into a database (not recommended; see the `DXP Clustering <../setting-up-liferay/clustering-for-high-availability.md>`_ article for information on using Cluster Link or Solr), you should back up that database too.
 ```
 
 データセットが大きいユーザーは、バックアップから復元するときに、すべてのコンテンツとアセットのインデックスを再作成することを避けたい場合があります。 この場合、検索インデックスをバックアップすることをお勧めします。 これは、インデックスが格納されている別の [ElasticsearchまたはSolr](https://help.liferay.com/hc/en-us/articles/360028711092-Introduction-to-Installing-a-Search-Engine) 環境がある場合に最も簡単です。 クラスター構成で、インデックスを複製している場合は、各インデックスレプリカをバックアップする必要があります。

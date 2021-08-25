@@ -22,7 +22,7 @@
 
 ### 新規ユーザーのパスワードを設定する
 
-ユーザーを作成すると、Liferay DXPがユーザーのパスワードを生成します。 メールサーバーが[セットアップ](../../installation-and-upgrades/setting-up-liferay-dxp/configuring-mail/connecting-to-a-mail-server.md)されている場合、Liferay DXPはユーザーの新しいパスワードを含む電子メールメッセージを送信します。
+ユーザーを作成すると、Liferay DXPがユーザーのパスワードを生成します。 メールサーバーが[セットアップ](../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)されている場合、Liferay DXPはユーザーの新しいパスワードを含む電子メールメッセージを送信します。
 
 メールサーバーを設定していない場合は、[General]メニューの*[Password]* 項目をクリックして、新しいユーザーのパスワードを手動で設定します。 新しいパスワードを2回入力します。
 

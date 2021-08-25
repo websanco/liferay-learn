@@ -2,8 +2,8 @@
 
 最低でも、DXPクラスタ内のノードがなければならない [同じデータベースを共有するように構成された](./example-creating-a-simple-dxp-cluster.md#configure-cluster-link-and-the-other-server-connections) 機能するために（またはデータベースクラスタ）。 ここで説明する最適化は、DXPクラスターのデータベースパフォーマンスをさらに向上させることができるため、DXPの使用状況と予想されるトランザクション量を考慮して検討する必要があります。
 
-``` warning::
-   Clustering will not work with the embedded HSQL database.
+```{warning}
+Clustering will not work with the embedded HSQL database.
 ```
 
 ## 読み書きデータベース構成
