@@ -30,8 +30,8 @@ The JVM's memory comprises heap and non-heap spaces. The heap contains a space f
 | `-XX:InitialCodeCacheSize=64m` | Initial space for JIT-compiled code. Too small a code cache (`48m` is the default) reduces performance, as the JIT isn't able to optimize high frequency methods. |
 | `-XX:ReservedCodeCacheSize=96m` | Maximum space for JIT-compiled code. |
 
-```warning::
-   Avoid allocating more than 32g to your JVM heap. Your heap size should be commensurate with the speed and quantity of available CPU resources.
+```{warning}
+Avoid allocating more than 32g to your JVM heap. Your heap size should be commensurate with the speed and quantity of available CPU resources.
 ```
 
 ## Set Survivor Space
@@ -81,8 +81,8 @@ Start tuning using parallel throughput collectors in the new generation (ParNew)
 | `-XX:CMSInitiatingOccupancyFraction=85` | Initiates CMS when this percent of old generation space is occupied. |
 | `-XX:+CMSScavengeBeforeRemark` | Execute Eden GCs before re-marking objects of CMS. |
 
-```note::
-   There are additional "new" algorithms like Garbage-First (G1), but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
+```{note}
+There are additional "new" algorithms like Garbage-First (G1), but Liferay Engineering's tests for G1 indicated that it does not improve performance. Since your application performance may vary, you should add G1 to your testing and tuning plans.
 ```
 
 ### Garbage Collection on Java 11

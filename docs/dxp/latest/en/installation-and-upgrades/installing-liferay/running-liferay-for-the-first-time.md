@@ -73,7 +73,7 @@ Congratulations! You have launched your on premises Liferay DXP instance.
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../setting_up_liferay.html) topics:
+You can [sign in as your administrator user](../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../setting-up-liferay.html) topics:
 
 * [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

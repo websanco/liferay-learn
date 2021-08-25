@@ -2,8 +2,8 @@
 
 At minimum, nodes in a DXP cluster must be [configured to share the same database](./example-creating-a-simple-dxp-cluster.md#configure-cluster-link-and-the-other-server-connections) (or database cluster) in order to function. Optimizations discussed here can further improve database performance for a DXP cluster and should be considered with consideration for your usage of DXP and expected transaction volume.
 
-```warning::
-   Clustering will not work with the embedded HSQL database.
+```{warning}
+Clustering will not work with the embedded HSQL database.
 ```
 
 ## Read-Writer Database Configuration

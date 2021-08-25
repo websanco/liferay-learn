@@ -12,8 +12,8 @@ Here are the server containers you'll create:
 | DXP Server | Tomcat | `dxp-1` |
 | DXP Server | Tomcat | `dxp-2` |
 
-```warning::
-   This example is for learning purposes and is not suitable for production use cases. For production environments, you should include an HTTP server for load balancing requests to the DXP servers, use separate database servers for read only and read-write operations, and consider clustering and load balancing database servers, file store servers, and search engine servers. Please read all of the `Clustering for High Availability <./clustering-for-high-availability.md>`_ articles for more information.
+```{warning}
+This example is for learning purposes and is not suitable for production use cases. For production environments, you should include an HTTP server for load balancing requests to the DXP servers, use separate database servers for read only and read-write operations, and consider clustering and load balancing database servers, file store servers, and search engine servers. Please read all of the [Clustering for High Availability](./clustering-for-high-availability.md) articles for more information.
 ```
 
 <!--
@@ -91,8 +91,8 @@ Create and configure an Elasticsearch server:
     docker run -it --name elasticsearch -p 9200:9200 -p 9300:9300 -e cluster.name=LiferayElasticsearchCluster -e ES_JAVA_OPTS="-Xms512m -Xmx512m" -v $(pwd)/elasticsearch/es_data_volume:/usr/share/elasticsearch/data elasticsearch:6.8.7
     ```
 
-    ```note::
-       If the container reports ``max virtual memory areas vm.max_map_count [xxxxx] is too low, increase to at least [xxxxxx]``, then set ``vm.max_map_count`` to a sufficient value using a command like this one: ``sudo sysctl -w vm.max_map_count=[xxxxxx]``. Then start the container.
+    ```{note}
+    If the container reports `max virtual memory areas vm.max_map_count [xxxxx] is too low, increase to at least [xxxxxx]`, then set `vm.max_map_count` to a sufficient value using a command like this one: `sudo sysctl -w vm.max_map_count=[xxxxxx]`. Then start the container.
     ```
 
 1. Install the required Elasticsearch plugins.
@@ -135,8 +135,8 @@ Use [Configuration Files](../../../system-administration/configuring-liferay/con
 
 You'll make these configuration files accessible to the cluster nodes via bind mounts on the DXP server containers.
 
-```note::
-   The ``docker run --add-host elasticsearch:[ip] ...`` commands used later for the DXP servers add ``/etc/hosts/`` entries that map the name _elasticsearch_ to the Elasticsearch server host IP address.
+```{note}
+The `docker run --add-host elasticsearch:[ip] ...` commands used later for the DXP servers add `/etc/hosts/` entries that map the name `elasticsearch` to the Elasticsearch server host IP address.
 ```
 
 ## Start the DXP Cluster
@@ -156,8 +156,8 @@ Start the DXP containers.
 
 1. Get the container IP addresses for the `elasticsearch` and `some-mariadb` containers by executing the [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/) command. The `bridge` network is the default network.
 
-    ```important::
-       In the ``docker run`` commands that follow, you'll replace `[IP address]` with the ``elasticsearch`` and ``some-mariadb`` container IP addresses.
+    ```{important}
+    In the `docker run` commands that follow, you'll replace `[IP address]` with the `elasticsearch` and `some-mariadb` container IP addresses.
     ```
 
 1. Start `dxp-1`.

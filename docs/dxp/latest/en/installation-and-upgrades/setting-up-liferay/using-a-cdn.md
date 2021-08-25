@@ -18,8 +18,8 @@ Here are the resources Liferay supports serving via a CDN:
 
 _\* Requires enabling CDN dynamic resources._
 
-```note::
-   The CDN does not serve resources that are dynamically loaded from external sources.
+```{note}
+The CDN does not serve resources that are dynamically loaded from external sources.
 ```
 
 ## Liferay CDN Requirements
@@ -69,8 +69,8 @@ If you want to add a custom resource to the CDN, package it in your plugin. For 
 
 To use a resource via the CDN, prefix the resource reference with the CDN host name, using `themeDisplay.getCDNDynamicResourcesHost()`.
 
-```important::
-   Don't put anything on the CDN which requires permission checking or complex policy access
+```{important}
+Don't put anything on the CDN which requires permission checking or complex policy access
 ```
 
 Now you know how to serve your site's static resources faster using a CDN.

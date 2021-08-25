@@ -38,8 +38,8 @@ If you have an enterprise subscription, visit the
 
 Trying out DXP? Get a [30 day trial activation key](https://www.liferay.com/products/dxp/30-day-trial).
 
-```note::
-   If you're using Liferay Connected Services (LCS) with Liferay DXP 7.2 or earlier, see the `LCS documentation <https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->`_ for instructions on activating your DXP instance with LCS.
+```{note}
+If you're using Liferay Connected Services (LCS) with Liferay DXP 7.2 or earlier, see the [LCS documentation](https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services-) for instructions on activating your DXP instance with LCS.
 ```
 
 ## Reactivating Liferay DXP

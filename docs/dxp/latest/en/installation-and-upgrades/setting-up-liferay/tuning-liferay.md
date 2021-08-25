@@ -95,8 +95,8 @@ Database connection pools manage database connections for reuse, saving you from
 
 Configure the pool size slightly larger than the thread pool size, unless the thread pool size is large (e.g., 200+). Under normal usage, most worker threads use at most one JDBC connection at a time. Some threads, such as threads that have nested transactions, however, use multiple database connections. Making the connection pool size slightly larger than the thread pool size accounts for such threads.
 
-```note::
-   If the thread pool size is large, making the connection pool a similar size won't help performance.
+```{note}
+If the thread pool size is large, making the connection pool a similar size won't help performance.
 ```
 
 If the number of connections encroaches on your database connection limit, shrink your Counter data source's pool size. Since Counter database transactions are small, fast, and never nested, the Counter connection pool is a good candidate for reducing. For more information on the Counter data source, see [Database Configuration for Cluster Nodes](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md).

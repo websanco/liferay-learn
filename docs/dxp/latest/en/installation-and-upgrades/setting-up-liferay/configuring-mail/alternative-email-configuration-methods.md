@@ -47,8 +47,8 @@ Users can opt to configure a mail session for DXP using their application server
 
 The mail server has been connected to DXP and ready to send notifications.
 
-```note::
-   Setting the following property in `portal-ext.properties <../../reference/portal-properties.md>`__ and restarting your server will have the same effect as setting the value in the Control Panel: ``mail.session.jndi.name=mail/MailSession``
+```{note}
+Setting the following property in [portal-ext.properties](../../reference/portal-properties.md) and restarting your server will have the same effect as setting the value in the Control Panel: `mail.session.jndi.name=mail/MailSession`
 ```
 
 ## Additional Information

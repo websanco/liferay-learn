@@ -79,8 +79,8 @@ Use the following steps to configure Unicast:
 
 The JGroups configuration demonstrated above is typically all that Unicast over TCP requires. However, in a very specific case, if *(and only if)* cluster nodes are deployed across multiple networks, then the `external_addr` TCP transport parameter must be set on each host to the external (public IP) address of the firewall. This kind of configuration is usually only necessary when nodes are geographically separated. By setting this, clustered nodes deployed to separate networks (e.g. separated by different firewalls) can communicate together. This configuration may be flagged in security audits of your system. See [JGroups documentation](http://www.jgroups.org/manual4/index.html#_transport_protocols) for more information.
 
-```note::
-   The ``singleton_name`` TCP attribute was deprecated in JGroups v4.0.0 and has therefore been removed since Liferay DXP 7.2 SP1 and Liferay Portal GA2 which use JGroups v 4.1.1-Final.
+```{note}
+The `singleton_name` TCP attribute was deprecated in JGroups v4.0.0 and has therefore been removed since Liferay DXP 7.2 SP1 and Liferay Portal GA2 which use JGroups v 4.1.1-Final.
 ```
 
 You're now set up for Unicast over TCP clustering!

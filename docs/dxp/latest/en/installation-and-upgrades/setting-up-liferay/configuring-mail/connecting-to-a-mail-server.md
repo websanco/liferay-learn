@@ -2,8 +2,8 @@
 
 Liferay DXP can be configured to use a mail server to send email notifications for a variety of purposes: User registration and password management, Site membership notifications, and content updates. For demonstration purposes, this article walks through configuring the built-in DXP mail session to use Gmail as its mail server.
 
-```warning::
-   If using the `IMAP <https://support.google.com/mail/answer/7126229?hl=en>`__ protocol for a category’s mailing list, make sure to `configure the IMAP inbox to delete messages <https://support.google.com/mail/answer/78892?hl=en>`__ as they are pulled by the email client that sends messages to the users on the mailing list. Otherwise, each email message retained on the server is sent to the mailing list each time there's a new post or update in the category.
+```{warning}
+If using the [IMAP](https://support.google.com/mail/answer/7126229?hl=en) protocol for a category’s mailing list, make sure to [configure the IMAP inbox to delete messages](https://support.google.com/mail/answer/78892?hl=en) as they are pulled by the email client that sends messages to the users on the mailing list. Otherwise, each email message retained on the server is sent to the mailing list each time there's a new post or update in the category.
 ```
 
 ## Configuring DXP Built-in Mail Session

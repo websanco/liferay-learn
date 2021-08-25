@@ -35,6 +35,6 @@ After you've configured your DXP cluster, you can deploy applications to it and 
 
 Creating a cluster by way of example is a great first step in understanding DXP clustering. Start with [Example: Creating a Simple DXP Cluster](./example-creating-a-simple-dxp-cluster.md) to learn more. Then address the [Clustering Requirements](#clustering-requirements) listed above.
 
-```note::
-   This documentation describes DXP-specific cluster configuration without getting into specific implementations of third party software, such as Java EE application servers, HTTP servers, and load balancers. Please consult the documentation for those components to configure them. Before creating a DXP cluster, make sure your OS is not defining the hostname of your system to the local network at 127.0.0.1.
+```{note}
+This documentation describes DXP-specific cluster configuration without getting into specific implementations of third party software, such as Java EE application servers, HTTP servers, and load balancers. Please consult the documentation for those components to configure them. Before creating a DXP cluster, make sure your OS is not defining the hostname of your system to the local network at 127.0.0.1.
 ```
