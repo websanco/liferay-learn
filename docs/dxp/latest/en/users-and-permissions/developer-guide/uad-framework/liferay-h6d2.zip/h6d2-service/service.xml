@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.acme.h6d2">
+	<namespace>H6D2</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="H6D2" remote-service="true" uad-application-name="H6D2" uad-package-path="com.acme.h6d2" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="h6d2Id" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" uad-anonymize-field-name="fullName" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="todo" type="String" uad-nonanonymizable="true" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="todo" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="todo" return-type="Collection">
+			<finder-column name="todo" />
+		</finder>
+
+		<!-- References -->
+
+	</entity>
+</service-builder>

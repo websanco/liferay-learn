@@ -1,0 +1,10 @@
+Bundle-Name: Acme H6D2 API
+Bundle-SymbolicName: com.acme.h6d2.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.h6d2.exception,\
+	com.acme.h6d2.model,\
+	com.acme.h6d2.service,\
+	com.acme.h6d2.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../h6d2-service/service.xml
