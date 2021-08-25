@@ -84,7 +84,7 @@ Next, see how the configuration is read by the MVC Portlet.
     configurationPid = "com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration"
     ```
 
-1. To access the configuration, the `render()` method utilizes a `ConfigurationProvider`. The Configuration Provider API provides methods to retrieve configuration at different levels of scope. The sample project's configuration is instance scoped and uses the `getCompanyConfiguration()` method to retrieve the configuration.
+1. To access the configuration, the `render()` method utilizes a `ConfigurationProvider`. The Configuration Provider API provides methods to retrieve a configuration at different levels of scope. The sample project's configuration is instance scoped and uses the `getCompanyConfiguration()` method to retrieve the configuration.
 
     ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
     :dedent: 1
@@ -96,9 +96,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 ## Create a Configuration Bean Declaration
 
-To use the `ConfigurationProvider`, the configuration class must also be regisered with a `ConfigurationBeanDeclaration`. 
-
-enable retrieval of a scoped configuration, the application's configuration must be registered with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
+To use the `ConfigurationProvider`, the configuration class must also be regisered with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
 
 ```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/settings/definition/N2F3WebConfigurationBeanDeclaration.java
    :language: java
