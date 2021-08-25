@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP 7.4+.
 
-Using a [Display Page Template](./about-display-page-templates-and-display-pages.md) you can render Web Content, Documents, and Blog Entries in a [Display Page](../../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md). Starting with Liferay DXP 7.4, you can also render Categories on a Display Page. This can be useful if you want to showcase multiple products or services that you [organize using Categories](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md). Because Display Pages are ideal to show a catalog of elements in a consistent way, you can use Category-based Display Pages to provide users a consistent experience when browsing your products or services catalog.
+Using a [Display Page Template](./about-display-page-templates-and-display-pages.md) you can render Web Content, Documents, and Blog Entries in a [Display Page](../../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md). Starting with Liferay DXP 7.4, you can also render Categories on a Display Page. This can be useful if you want to showcase multiple products or services that you [organize using Categories](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md). Because Display Pages are ideal for showing a catalog of elements in a consistent way, you can use Category-based Display Pages to provide users a consistent experience when browsing your products or services catalog.
 
 ## Displaying Categories in Display Pages
 
@@ -19,14 +19,14 @@ You can also assign a Display Page Template to multiple Categories at once. Unde
 
 This step-by-step example shows you how to use Categories in combination with a Display Page Template to display the services of a fictional insurance company.
 
-The steps to display your Categories on a Display Page are:
+These are the steps to display your Categories on a Display Page:
 
 1. [Create and edit the Categories you want to display](#step-1-creating-and-editing-the-categories).
 1. [Create the Display Page Template](#step-2-creating-the-display-page-template).
 1. [Edit and publish the Display Page Template](#step-3-edit-and-publish-the-display-page-template).
 
-```warning::
-   The following example shows how to modify a default Display Page Template. To avoid disruptions in your production Site, complete this procedure on a test Site.
+```{warning}
+The following example shows how to modify a default Display Page Template. To avoid disruptions in your production Site, complete this procedure on a test Site.
 ```
 
 ### Step 1: Creating and Editing the Categories
@@ -44,14 +44,14 @@ Create the Categories if they do not exist yet, and edit them to include the inf
 
 ### Step 2: Creating the Display Page Template
 
-Starting with Liferay DXP 7.4, the Display Page Template includes a new option to use Categories as the Content Type.
+Starting with Liferay DXP 7.4, the Display Page Template includes an option to use Categories as the Content Type.
 
 1. Go to *Site Administration* &rarr; *Design* &rarr; *Page Templates*.
 1. Click *Display Page Templates* and click the *Add* (![Add Image](../../../images/icon-add.png)) button.
 1. Select the Master Page Template you want to use for this Display Page Template.
 
-    ```tip::
-       Every Page or Page Template requires a Master Page Template. To learn more, read `Master Page Templates <../../site-building/creating-pages/defining-headers-and-footers/master-page-templates.md>`_.
+    ```{tip}
+    Every Page or Page Template requires a Master Page Template. To learn more, read [Master Page Templates](../../site-building/creating-pages/defining-headers-and-footers/master-page-templates.md).
     ```
 
 1. Enter the *Name* of your Display Page Template and in the *Content Type* drop-down menu, select *Category*.
@@ -64,8 +64,8 @@ Starting with Liferay DXP 7.4, the Display Page Template includes a new option t
 
 After you create the Display Page Template, you can edit the components mappings and layout.
 
-```tip::
-   The Display Page Template editor works like the Content Page Editor. See `Configuring Elements on Content Pages <../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md>`_ for more information.
+```{tip}
+The Display Page Template editor works like the Content Page Editor. See [Configuring Elements on Content Pages](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md) for more information.
 ```
 
 This example shows how to map the Category fields using a [Card Fragment](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md).
