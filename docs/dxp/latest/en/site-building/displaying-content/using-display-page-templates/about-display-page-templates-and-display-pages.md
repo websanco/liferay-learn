@@ -3,13 +3,13 @@
 Display Pages are paired with Display Page Templates to present your content in a pre-defined layout. Similarly to [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md), you organize the Display Page content in [Fragments](../using-fragments/using-page-fragments.md) and [Widgets](../../creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page.md) and use a Display Page Template to organize how that content appears. Using a single Display Page Template, you can apply the same layout multiple times to different content of the same type.
 
 ```{tip}
-   With Content Pages, you can create the Page layout and composition, but you cannot save and reuse them as templates.
+With Content Pages, you can create the Page layout and composition, but you cannot save and reuse them as templates.
 ```
 
 For instance, you can create a Display Page Template for different Web Content Articles and display the content in different Display Pages, each using the same layout but with a unique friendly URL. Additionally, you can define [SEO settings](./configuring-seo-and-open-graph.md) to improve your Pages' search ranking. Display Pages are ideal for showing a catalog of elements in a consistent way, like business case studies, product or service options, or apartments/flats, or job listings.
 
 ```{note}
-   For more information about the different ways of displaying content in Liferay DXP, see [Displaying Content](../displaying-content-intro.md>).
+For more information about the different ways of displaying content in Liferay DXP, see [Displaying Content](../displaying-content-intro.md>).
 ```
 
 ## Understanding Display Page Templates and Display Pages
@@ -45,7 +45,7 @@ On your insurance business website, you want to showcase the different insurance
 ![You can apply the same layout to different content of the same type using a single Display Page Template.](./about-display-page-templates-and-display-pages/images/02.png)
 
 ```{tip}
-   [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) give you the tools to create stunning landing pages.
+[Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) give you the tools to create stunning landing pages.
 ```
 
 You want to use the same layout for each one of the four detail pages describing the different insurance options, and you want to map each field dynamically to the insurance information in your Web Content Articles.

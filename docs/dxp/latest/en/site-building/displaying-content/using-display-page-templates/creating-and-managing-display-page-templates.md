@@ -3,7 +3,7 @@
 A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./about-display-page-templates-and-display-pages.md).
 
 ```{note}
-   Display Page Templates are only supported for Web Content, Documents, Blog Entries, and Categories (starting with Liferay DXP 7.4.)
+Display Page Templates are only supported for Web Content, Documents, Blog Entries, and Categories (starting with Liferay DXP 7.4.)
 ```
 
 ## Creating a Display Page Template
@@ -40,8 +40,8 @@ Now that your Display Page Template is created, you can [publish your content wi
 
 You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of content that uses a specific Display Page Template.
 
-```note::
-   The *View Usages* option does not provide the usage of content assigned to the default Display Page Template.
+```{note}
+The *View Usages* option does not provide the usage of content assigned to the default Display Page Template.
 ```
 
 ![Managing your Display Page Template using the Actions menu](./creating-and-managing-display-page-templates/images/06.png)

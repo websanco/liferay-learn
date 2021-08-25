@@ -10,7 +10,7 @@ To publish your content using a Display Page,
     - For *Categories*, click *Categorization*.
 
     ```{note}
-       Publishing Categories using a Display Page Template is available starting with Liferay DXP 7.4.
+    Publishing Categories using a Display Page Template is available starting with Liferay DXP 7.4.
     ```
 
 1. From the *Actions* (![Actions](../../../images/icon-actions.png)) menu of an existing content, choose *Edit*. Alternatively, click the *Add* (![Add](../../../images/icon-add.png)) button to create a new piece of content.
@@ -22,13 +22,13 @@ To publish your content using a Display Page,
     ![Select a specific display page template to configure it.](./publishing-content-with-display-pages/images/01.png)
 
     ```{note}
-       If you don't choose a specific Display Page Template, your content is published using the [default one](#configuring-a-default-display-page-template) for the content type.
+    If you don't choose a specific Display Page Template, your content is published using the [default one](#configuring-a-default-display-page-template) for the content type.
    ```
 
 1. Click *Select*, click the Display Page Template of your choice, and click *Done*.
 
     ```{tip}
-       You can preview what the display page looks like with the *Preview* button located next to the selected Display Page Template.
+    You can preview what the display page looks like with the *Preview* button located next to the selected Display Page Template.
     ```
 
 1. Scroll down to the *Friendly URL* panel, expand it, and modify the friendly URL if you want. This is the URL the Display Page uses to show your content.
