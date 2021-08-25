@@ -82,7 +82,7 @@ Administrators can run DXP on WildFly in domain mode, but this method is not ful
 The command line interface is recommended for domain mode deployments.
 
 ```note::
-   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## Configuring WildFly
@@ -366,4 +366,4 @@ You can [sign in as your administrator user](../../../getting-started/introducti
 * [Accessing EE Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
-* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

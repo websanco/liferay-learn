@@ -79,4 +79,4 @@ You can [sign in as your administrator user](../../getting-started/introduction-
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 * [Securing Liferay DXP](../securing-liferay/securing-liferay.md)
-* [Clustering for High Availability](../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../setting-up-liferay/clustering-for-high-availability.md)

@@ -1,5 +1,14 @@
 # Clustering for High Availability
 
+```{toctree}
+:maxdepth: 3
+
+clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md
+clustering-for-high-availability/database-configuration-for-cluster-nodes.md
+clustering-for-high-availability/configuring-cluster-link.md
+clustering-for-high-availability/configuring-unicast-over-tcp.md
+```
+
 Liferay DXP can scale to serve everything from the smallest to the largest web sites. Out-of-the-box, it's configured optimally for a single server environment. If you expect to have high traffic or want to improve the overall fault tolerance of your site, consider clustering DXP.
 
 ![Liferay DXP is designed to scale to as large an installation as you need.](./clustering-for-high-availability/images/01.png)

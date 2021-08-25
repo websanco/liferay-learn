@@ -27,6 +27,8 @@
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
 	"dxp/latest/en/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html",
 	"dxp/latest/en/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/en/installation-and-upgrades/setting_up_liferay.html",
+	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering_for_high_availability.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
+	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
 	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
 	"dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html": "dxp/latest/en/users-and-permissions/users/adding-custom-fields-to-users.html",

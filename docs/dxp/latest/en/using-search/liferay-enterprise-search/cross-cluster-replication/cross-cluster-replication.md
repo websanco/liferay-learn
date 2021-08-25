@@ -75,7 +75,7 @@ CCR requires an Elasticsearch Platinum level license, but [LES customers](../../
 ## Connect Liferay DXP to Elasticsearch
 
 ```important::
-   Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the `clustering documentation <../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`__ for more information on setting up a production cluster.
+   Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the `clustering documentation <../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md>`__ for more information on setting up a production cluster.
 ```
 
 All Liferay DXP nodes must have two Elasticsearch configurations: production mode enabled and the remote Elasticsearch connection declared. Supporting this, the remote Elasticsearch connection must be configured in Elasticsearch Connections. Nodes that read from the follower Elasticsearch cluster must also have that additional connection defined. Provide the proper configuration values (via a `.config` file or in System Settings), then start (or restart) the DXP nodes. Make sure the nodes that read and write to the leader indexes are functioning properly.

@@ -28,7 +28,7 @@ Each Liferay DXP node requires a `Liferay Home/portal-ext.properties` file with 
 cluster.link.enabled=true
 ```
 
-This is a simplistic clustering configuration. See [clustering](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md) for a full configuration. 
+This is a simplistic clustering configuration. See [clustering](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md) for a full configuration. 
 
 ## Install Required Elasticsearch Plugins
 

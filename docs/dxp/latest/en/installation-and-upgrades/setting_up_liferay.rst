@@ -20,7 +20,7 @@ Setting Up Liferay
    maintaining-a-liferay-dxp-installation/backing-up.md
    ../../system-administration/installing_and_managing_apps.rst
    setting-up-liferay/using-a-cdn.md
-   setting-up-liferay/clustering_for_high_availability.rst
+   setting-up-liferay/clustering-for-high-availability.md
    setting-up-liferay/tuning-liferay.md
    setting-up-liferay/tuning-your-jvm.md
 
@@ -150,7 +150,7 @@ Deliver static content faster via a Content Delivery Network (CDN). Visit `Using
 Configure High Availability
 ---------------------------
 
-You'll want eliminate or minimize any site downtime. If a server fails or needs to be shut down for maintenance, it's important to have other servers to handle the requests. You can maximize site availability by configuring multiple servers for Liferay, the search engine, and other components. Learn how to cluster servers at `Clustering for High Availability <./setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md>`_.
+You'll want eliminate or minimize any site downtime. If a server fails or needs to be shut down for maintenance, it's important to have other servers to handle the requests. You can maximize site availability by configuring multiple servers for Liferay, the search engine, and other components. Learn how to cluster servers at `Clustering for High Availability <./setting-up-liferay/clustering-for-high-availability.md>`_.
 
 Tune Liferay
 ------------

@@ -22,5 +22,5 @@ For more information, refer to these blue-green deployment articles:
 ## Related Topics
 
 * [Rolling Restarts](./rolling-restarts.md)
-* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
 * [Patching](../patching-liferay/patching-liferay.md)
