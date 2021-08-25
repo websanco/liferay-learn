@@ -26,6 +26,7 @@
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.html",
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
 	"dxp/latest/en/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html",
+	"dxp/latest/en/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/en/installation-and-upgrades/setting_up_liferay.html",
 	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
 	"dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html": "dxp/latest/en/users-and-permissions/users/adding-custom-fields-to-users.html",
@@ -40,6 +41,7 @@
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.html",
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
 	"dxp/latest/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
+	"dxp/latest/ja/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/ja/installation-and-upgrades/setting_up_liferay.html",
 	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
 	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }
