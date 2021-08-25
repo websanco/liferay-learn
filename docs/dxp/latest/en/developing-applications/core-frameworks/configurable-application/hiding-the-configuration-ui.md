@@ -1,13 +1,13 @@
 # Hiding the Configuration UI
 
-A configuration UI is automatically generated after a [configuration interface is created](./setting-and-accessing-configurations.html#creating-the-configuration-interface). If you want to hide this configuration UI, there are two different options:
+A configuration UI is automatically generated after a [configuration interface is created](./setting-and-accessing-configurations.html#creating-the-configuration-interface). But you may have certain use cases in which you want to hide the UI. For example, you don't want an administrator to have access to a specific configuration or you want to hide the configuration based on certain criteria. To hide the configuration UI, you have two different options:
 
 * Use a `generateUI` annotation property
 * Use the configuration visibility interface
 
 ## Using `generateUI`
 
-To hide the configuration UI under any circumstance, include the `ExtendedObjectClassDefinition` annotation property `generateUI` in your configuration interface. Set the property to `false`. Note that this will hide the configuration UI for all scope.
+If you want to hide the configuration UI under all circumstances, include the `ExtendedObjectClassDefinition` annotation property `generateUI` in your configuration interface. Set the property to `false`. Note that this will hide the configuration UI for all scope.
 
 ```java
 @ExtendedObjectClassDefinition(generateUI=false)
@@ -15,7 +15,7 @@ To hide the configuration UI under any circumstance, include the `ExtendedObject
 
 ## Using the Configuration Visibility Interface
 
-The `ConfigurationVisibilityController` is an interface that can be used to selectively hide the configuration UI.
+Use the `ConfigurationVisibilityController` interface if you want to selectively hide the configuration UI.
 
 ### See an Example Implementation
 
@@ -68,4 +68,4 @@ Create the configuration visibility interface for your application.
 
 Identify the configuration interface with the `@Component` annotation. Note that the `configuration.pid` in the `Component` annotation must match the fully qualified class name of the configuration interface.
 
-Write your own logic for the interface's `isVisible` method. The example project uses a simple logic to check the boolean setting of G8V3 Able Configuration. Your application's configuration UI will be hidden or displayed based on your logic.
+Write your own logic for the interface's `isVisible()` method. The example project uses a simple logic to check the boolean setting of G8V3 Able Configuration. In your application, design your own programming logic to hide or show the configuration UI.
