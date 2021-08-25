@@ -35,15 +35,13 @@ Liferay DXP Dockerイメージの使用
 Liferay DXPのセットアップ
 ----------------------
 
--  :doc:`/installation-and-upgrades/setting-up-liferay/setting-up-liferay`
+-  :doc:`/installation-and-upgrades/setting-up-liferay`
 -  :doc:`/installation-and-upgrades/setting-up-liferay/activating-liferay-dxp`
--  :doc:`/installation-and-upgrades/setting-up-liferay/connecting-to-a-mail-server`
--  :doc:`/installation-and-upgrades/setting-up-liferay/mail-server-configuration-reference`
+-  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server`
 *検索エンジンのインストール
 *ロケールとエンコーディングの選択
--  :doc:`/installation-and-upgrades/setting-up-liferay/trial-plugin-installation`
--  :doc:`/installation-and-upgrades/setting-up-liferay/setting-up-marketplace`
 *Liferayマーケットプレイスの使用
+-  :doc:`/system-administration/installing-and-managing-apps/installing-the-marketplace-plugin.md`
 アプリケーションを手動でインストールする
 *コンテンツ配信ネットワークの使用
 * JVMのチューニング
@@ -58,11 +56,10 @@ Solrの使用
 ドキュメントライブラリリポジトリの構成
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/document-repository-overview`
--  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-amazon-s3-store`
--  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-advanced-file-system-store`
--  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-dbstore`
--  :doc:`/installation-and-upgrades/setting-up-liferay/configuring-the-document-library-repository/using-the-file-system-store`
+-  :doc:`/system-administration/file-storage/configuring-file-storage`
+-  :doc:`/system-administration/file-storage/other-file-store-types/amazon-s3-store`
+-  :doc:`/system-administration/file-storage/other-file-store-types/dbstore`
+-  :doc:`/system-administration/file-storage/other-file-store-types/simple-file-system-store`
 
 高可用性のクラスタリング
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,8 +73,8 @@ Solrの使用
 Securing Liferay
 ----------------
 
--  :doc:`/installation-and-upgrades/securing-liferay/securing-liferay`
--  :doc:`/installation-and-upgrades/securing-liferay/configuring-authentication`
+-  :doc:`/installation-and-upgrades/securing-liferay/introduction-to-securing-liferay`
+-  :doc:`/installation-and-upgrades/securing-liferay/authentication-basics`
 
 Securing Web Services
 ~~~~~~~~~~~~~~~~~~~~~

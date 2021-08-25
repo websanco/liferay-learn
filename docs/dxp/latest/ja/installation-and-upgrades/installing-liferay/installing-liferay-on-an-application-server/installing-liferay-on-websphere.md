@@ -376,5 +376,5 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
   - [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
   - Installing and Configuring a Search Engine
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/configuring-clustering-for-high-availability/01-introduction-to-clustering-liferay-dxp.md)
+  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)
   - Maintaining Liferay DXP

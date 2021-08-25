@@ -54,7 +54,7 @@ dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 
 ## クラスター環境でのストアの使用
 
-[クラスター環境](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)では、すべてのノードがアクセスできるネットワークマウントファイルシステムをストアに指定します。 ネットワーク化されたファイルシステムは、すべてのノードからアクセス可能で、同時要求をサポートし、ファイルロックをサポートしている必要があります。 そのようなファイルシステムなしでSimple File System Storeを使用し、複数のユーザーが同時に同じファイルに書き込もうとすると、データが破損する可能性があります。
+[クラスター環境](../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)では、すべてのノードがアクセスできるネットワークマウントファイルシステムをストアに指定します。 ネットワーク化されたファイルシステムは、すべてのノードからアクセス可能で、同時要求をサポートし、ファイルロックをサポートしている必要があります。 そのようなファイルシステムなしでSimple File System Storeを使用し、複数のユーザーが同時に同じファイルに書き込もうとすると、データが破損する可能性があります。
 
 ## 追加情報
 

@@ -85,7 +85,7 @@ You can use the Liferay Connector to SAML 2.0 app as an SSO solution for a clust
 
 If using the Filesystem Keystore Manager (the default):
 
-1. Configure each node of your [Liferay cluster](../../../02-setting-up/07-performance/01-clustering.md) as a SAML service provider as above.
+1. Configure each node of your [Liferay cluster](../../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md) as a SAML service provider as above.
 
 1. Copy the keystore file (`[Liferay Home]/data/keystore.jks`, by default) from the first node to the remaining nodes. This file is the Java keystore that's created by the SAML Provider app. The keystore contains the valid or self-signed certificate managed by the SAML connector app.
 
