@@ -1,13 +1,13 @@
 # Hiding the Configuration UI
 
-A configuration UI is automatically generated after a [configuration interface is created](./setting-and-accessing-configurations.html#creating-the-configuration-interface). But you may have certain use cases in which you want to hide the UI. For example, you don't want an administrator to have access to a specific configuration or you want to hide the configuration based on certain criteria. To hide the configuration UI, you have two different options:
+Liferay generates a configuration UI automatically after a [configuration interface deploys](./setting-and-accessing-configurations.html#creating-the-configuration-interface). But you may have certain use cases where you want to hide the UI. For example, you don't want an administrator to have access to a specific configuration or you want to hide the configuration based on certain criteria. To hide the configuration UI, you have two different options:
 
 * Use a `generateUI` annotation property
 * Use the configuration visibility interface
 
 ## Using `generateUI`
 
-If you want to hide the configuration UI under all circumstances, include the `ExtendedObjectClassDefinition` annotation property `generateUI` in your configuration interface. Set the property to `false`. Note that this will hide the configuration UI for all scope.
+If you want to hide the configuration UI under all circumstances, include the `ExtendedObjectClassDefinition` annotation property `generateUI` in your configuration interface. Set the property to `false`. Note that this hides the configuration UI for all scopes.
 
 ```java
 @ExtendedObjectClassDefinition(generateUI=false)
@@ -15,7 +15,7 @@ If you want to hide the configuration UI under all circumstances, include the `E
 
 ## Using the Configuration Visibility Interface
 
-Use the `ConfigurationVisibilityController` interface if you want to selectively hide the configuration UI.
+Use the `ConfigurationVisibilityController` interface if you want to hide the configuration UI selectively.
 
 ### See an Example Implementation
 
@@ -41,8 +41,8 @@ Use the `ConfigurationVisibilityController` interface if you want to selectively
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
