@@ -50,8 +50,8 @@ To add a new Specification Group, click the *Add* button (![Add Button](../../..
 | --- | --- |
 | Label | Shows the display name of the Label. |
 | Description | Gives a description of the label. |
-| Use in Faceted Navigation | Lets you toggle this label in faceted navigation. |
-| Default Specification Group | Lets you select a group to associate this label with. |
+| Use in Faceted Navigation | Toggle this label to use in faceted navigation. |
+| Default Specification Group | Choose a group to associate this label with. |
 | Key | Uniquely identifies this group programmatically. |
 
 ![Use the provided form to create a Specification Label.](./specifications/images/04.png)
@@ -60,7 +60,7 @@ The label has been created, but assigning a value to it must be done on the Prod
 
 ## Specification Values
 
- Groups and labels are scoped to the catalog, which means, once they are created, they can be assigned to any Product in the catalog. Values, however, are scoped to the Product, and have no impact anywhere but on the Product to which they are assigned.
+ Groups and labels are scoped to the catalog, which means once they are created, they can be assigned to any Product in the catalog. Values, however, are scoped to the Product and have no impact anywhere but on the Product to which they are assigned.
 
  To create a specification label, you must first assign a label to a Product.
 
@@ -85,9 +85,9 @@ Next, edit the label to give it a value.
 |Field | Description |
 |----- | --------- |
 | Value | Gives a short description of what the Product is made of |
-| Group | Lets you select a Specification Group. |
+| Group | Select a Specification Group. |
 | Priority | Establishes the order to display the specification groups with smaller numbers going first. |
 
 ![To store a Specification Value, click on Edit and enter a value, group, and priority in the form provided.](./specifications/images/06.png)
 
-You can also override the specification group that was selected when the label was created. When editing the label to assign a value, you can choose any group from the _Group_ drop-down box. This change applies only to the current Product and has no effect on any other Products which use the same label.
+You can also override the specification group that was selected when the label was created. When editing the label to assign a value, you can choose any group from the _Group_ drop-down box. This change applies only to the current Product and has no effect on other Products that use the same label.
