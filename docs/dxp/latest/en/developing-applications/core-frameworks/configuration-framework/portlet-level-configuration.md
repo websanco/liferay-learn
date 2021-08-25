@@ -1,8 +1,10 @@
 # Portlet Level Configuration
 
-An [application's configuration can be set for different levels of scope](./scoping-configurations.md). Where instance and site scoped configurations use `ConfigurationProvider`, portlet scoped configurations should use `PortletDisplay` as shown in the example below.
+With the configuration framework, you can set your [application's configuration for different levels of scope](./scoping-configurations.md). Where instance and site scoped configurations use `ConfigurationProvider`, portlet scoped configurations should use `PortletDisplay` as shown in the example below. 
 
-Note, an application's configuration is overriden if portlet preferences are implemented and set. See [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) to learn more.
+The configuration framework can be used in conjunction with portlet preferences so that an app can have both a configuration UI in system settings as well a preference UI in the portlet's setup tab.  
+
+Note, an application's configuration is overridden if portlet preferences are implemented and set. See [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) to learn more.
 
 ## See the Example Code
 

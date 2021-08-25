@@ -1,8 +1,8 @@
 # Portlet Preferences
 
-Portlet preferences provides a way for admins and users to customize a portlet. Portlet preferences can be added to any MVC Portlet so that users can have a UI to access and set their preferences.
+You can give administrators and users a way to customize a portlet with portlet preferences. Portlet preferences can be added to any MVC Portlet so that users can have a UI to access and set their preferences.
 
-Note, portlet preferences are stored properties that are separate from an application's configuration. To learn more see [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md)
+Note, portlet preferences are properties that are stored separately from an application's configuration. To learn more see [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md).
 
 ## See a Sample Implementation
 
@@ -42,7 +42,7 @@ Note, portlet preferences are stored properties that are separate from an applic
 
 1. Verify that the example module is working. Open your browser to `https://localhost:8080`
 
-1. Add the P1Z2 portlet to a page. You can find the example portlet under Sample Widgets. Note the default color is set to blue.
+1. Add the P1Z2 portlet to a page. You can find the example portlet under Sample Widgets. Note the default color variable is set to blue.
 
 1. Click on the portlet's options icon (![options icon](../../../images/icon-options.png)) and click *Configuration*. The portlet's preferences window opens.
 
@@ -63,22 +63,22 @@ The user interface for portlet preferences is provided by the `configuration.jsp
 
 The JSP file uses `<liferay-portlet:actionURL />` and `<liferay-portlet:renderURL />` tags to construct URLs in the variables `configurationActionURL` and `configurationRenderURL`. 
 
-When a user sumbits the form, the `configurationActionURL` is invoked and the application's `processAction` method is invoked with the `color` included as a request parameter.
+When a user submits the form, the `configurationActionURL` is invoked and the application's `processAction` method is invoked with the `color` variable included as a request parameter.
 
 A URL parameter named `cmd` is supplied indicating the purpose of the request. The value of the `cmd` parameter is `update`. 
 
 ## Create the Configuration Action
 
-Create a custom configuation action class to be able to access the portlet's preferences. 
+Create a custom configuration action class to be able to access the portlet's preferences. 
 
 ```{literalinclude} ./portlet-preferences/resources/liferay-p1z2.zip/p1z2-web/src/main/java/com/acme/p1z2/web/internal/portlet/action/P1Z2ConfigurationAction.java
 :language: java
 :lines: 14-34
 ```
 
-In the `@Component` annotation, specify the portlet to which the action class applies with a `property` tag.
+In the `@Component` annotation, specify the portlet to which the action class applies to with a `property` tag.
 
-Add the `processAction()` method which reads in the porlet preferences from the configuration form and stores them in the database. In the sample portlet, the method reads in the `color` URL parameter and sets the value as a portlet preference.
+Add the `processAction()` method which reads in the portlet preferences from the configuration form and stores them in the database. In the sample portlet, the method reads in the `color` URL parameter and sets the value as a portlet preference.
 
 ## Add the Preference Logic
 
@@ -91,7 +91,7 @@ Add some logic to the `view.jsp` file to access the portlet's preference.
 
 The JSP file checks for the selected portlet preference and returns the value. If no value has been made saved yet, `blue` is returned as the default value.
 
-Note that the `<portlet:defineObjects />` tag is used to make the color variable available in the JSP. 
+Note that the `<portlet:defineObjects />` tag is used to make the `color` variable available in the JSP. 
 
 ## Add the Portlet's Path Parameters
 
