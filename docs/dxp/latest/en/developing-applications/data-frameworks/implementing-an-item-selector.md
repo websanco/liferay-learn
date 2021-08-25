@@ -14,43 +14,43 @@ To implement an Item Selector, you must embed it in an application, such as a mo
 
 1. Download the sample module:
 
-```bash
-curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
-```
+   ```bash
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
+   ```
 
-```bash
-unzip liferay-f5d5.zip
-```
+   ```bash
+   unzip liferay-f5d5.zip
+   ```
 
 1. Start a Liferay DXP Docker container with the following command:
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
-    ```
+   ```bash
+   docker run -it -m 8g -p 8080:8080 --name lrdev liferay/portal:7.3.2-ga3
+   ```
 
 1. Run the following commands from the root of the module to build and deploy to your Docker container:
 
-    ```bash
-    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
+   ```bash
+   ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
 
-    ```tip::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
-    ```
+   ```{tip}
+   This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
+   ```
 
 1. Confirm the deployment in the Liferay Docker container console.
 
-    ```bash
-    STARTED com.acme.f5d5.web_1.0.0 [1017]
-    ```
+   ```bash
+   STARTED com.acme.f5d5.web_1.0.0 [1017]
+   ```
 
-    The example portlet module is deployed. When you add it to a page, it's a simple portlet with one button: 
+   The example portlet module is deployed. When you add it to a page, it's a simple portlet with one button: 
 
-    ![The portlet has one button that opens the Item Selector.](./implementing-an-item-selector/images/02.png)
+   ![The portlet has one button that opens the Item Selector.](./implementing-an-item-selector/images/02.png)
 
 1. Click the _Select_ button and the Item Selector appears: 
 
-    ![The Item Selector shows items that can be selected by checking the box.](./implementing-an-item-selector/images/03.png)
+   ![The Item Selector shows items that can be selected by checking the box.](./implementing-an-item-selector/images/03.png)
 
 1. Select an item and that item's value appears in a JavaScript alert box. Since this Item Selector selects Roles, the value is the primary key of the Role selected. 
 
@@ -81,14 +81,14 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
         new RoleItemSelectorCriterion();
    ```
 
-   ```tip::
-      If no criterion exists for the type of entity that you need, you can define your own ``ItemSelectorCriterion`` by extending `BaseItemSelectorCriterion <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/BaseItemSelectorCriterion.java>`__.
+   ```{tip}
+   If no criterion exists for the type of entity that you need, you can define your own `ItemSelectorCriterion` by extending [BaseItemSelectorCriterion]).
    ```
 
 1. Next, you need a return type class to represent the information the entities provided when users select them. Return type classes must implement the [`ItemSelectorReturnType` interface](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/ItemSelectorReturnType.html). For example, a return type class may be used to return the entity's URL, UUID, or primary key. The return type class is added to the criterion class created previously.
 
-   ```important::
-      Every criterion used **must** have at least one return type associated with it.
+   ```{important}
+   Every criterion used **must** have at least one return type associated with it.
    ```
 
    This example uses a reference to [`UUIDItemSelectorReturnType`](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.html) to define the selected Roles' `UUID` value as the crucial data to return. If multiple Roles are selected, they are returned as a comma-delimited list.
@@ -97,15 +97,15 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
    If a UUID is not available, the primary key is returned.
    ```
 
-1.  Define the return type by registering it with the item criterion:
+1. Define the return type by registering it with the item criterion:
 
    ```java
-		itemSelectorCriterion.setDesiredItemSelectorReturnTypes(
-			new UUIDItemSelectorReturnType());
+	itemSelectorCriterion.setDesiredItemSelectorReturnTypes(
+		new UUIDItemSelectorReturnType());
    ```
 
-   ```tip::
-       If no return type exists for the type of information that you need, then you can define your own `ItemSelectorReturnType <https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java>`__ implementation.
+   ```{tip}
+   If no return type exists for the type of information that you need, then you can define your own [ItemSelectorReturnType](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java) implementation.
    ```
 
    The item selector uses these two classes to decide what selection views of items (presented as tabs) to show and how to identify each item.
@@ -115,16 +115,15 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
    The [`RequestBackedPortletURLFactory` class](http://docs.liferay.com/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.html) can quickly generate an item selector URL using the criteria:
 
    ```java
-
-		PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
-			RequestBackedPortletURLFactoryUtil.create(renderRequest),
-			renderResponse.getNamespace() + "selectRole",
-			itemSelectorCriterion);
+	PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
+		RequestBackedPortletURLFactoryUtil.create(renderRequest),
+		renderResponse.getNamespace() + "selectRole",
+		itemSelectorCriterion);
    ```
 
-```important::
+   ```{important}
    The String you use to generate the URL (in this example, ``selectRole``) is the dialog's event name. This must match a value you'll use later when creating the dialog in your front-end code.
-```
+   ```
 
 1. Add the item selector URL to the `renderRequest` so that it's available in the JSP:
 
@@ -144,9 +143,7 @@ That's the controller code. Execution now passes to the view layer (the V in MVC
 
 ## Use the Item Selector in Your View
 
-You must retrieve the item selector and define a way to use it in your front-end code Open `view.jsp` from the example. 
-
-1. 
+1. You must retrieve the item selector and define a way to use it in your front-end code Open `view.jsp` from the example. 
 
    ```jsp
    <%
@@ -170,25 +167,25 @@ You must retrieve the item selector and define a way to use it in your front-end
 1. Use the `<script>` tag to embed JavaScript that opens the item selector: 
 
    ```jsp
-<script>
-	var selectRoleButton = document.getElementById('<portlet:namespace />selectRoleButton');
+   <script>
+      var selectRoleButton = document.getElementById('<portlet:namespace />selectRoleButton');
 
-	selectRoleButton.addEventListener(
-		'click',
-		function(event) {
-			new Liferay.Util.openSelectionModal(
-				{
-					onSelect: function (event) {
-						alert(event.value);
-					},
-					selectEventName: '<portlet:namespace />selectRole',
-					title: 'Select Role',
-					url: '<%= request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL) %>'
-				}
-			);
-		}
-	);
-</script>
+      selectRoleButton.addEventListener(
+         'click',
+         function(event) {
+            new Liferay.Util.openSelectionModal(
+               {
+                  onSelect: function (event) {
+                     alert(event.value);
+                  },
+                  selectEventName: '<portlet:namespace />selectRole',
+                  title: 'Select Role',
+                  url: '<%= request.getAttribute(F5D5WebKeys.ITEM_SELECTOR_URL) %>'
+               }
+            );
+         }
+      );
+   </script>
    ```
 
 This snippet of JavaScript first retrieves the Select Role button through its identifier (`portlet:namespace />selectRoleButton`). Then it adds an event listener to create the item selector dialog when clicked.
@@ -199,8 +196,8 @@ The `onSelect` field must define a function to handle the value when it is click
 
 The value for the `eventName` field must match the String you used with the `RequestBackedPortletURLFactory` in the Java code (in this example, `selectRole`). You must also retrieve the item selector URL from the request where the controller stored it, using the same constant to identify it, supplying it in the `url` field. 
 
-```tip::
-   If you want your item selector to support selecting multiple items, you can enable multiple selection by adding ``multiple: true`` to the ``openSelectionModal`` call.
+```{tip}
+If you want your item selector to support selecting multiple items, you can enable multiple selection by adding `multiple: true` to the `openSelectionModal` call.
 ```
 
 Use the item selection, stored in the `event`. The data type and information contained in the result depends on what return type class you used in the Java code. Since this example uses `UUIDItemSelectorReturnType`, the data is a String value with the UUIDs of one or more selected items.
@@ -217,16 +214,16 @@ When you use an item selector, you want the selected value inserted into a form.
 
 1. Find the `<clay:button>` tag. Surround it with a form like this: 
 
+   ```jsp
+   <form name="<portlet:namespace/>fm">
+      <input name="role" /> 
+      <clay:button
+         id='<%= liferayPortletResponse.getNamespace() + "selectRoleButton" %>'
+         label="Select"
+      />
+   </form>
+   ```
 
-```jsp
-<form name="<portlet:namespace/>fm">
-	<input name="role" /> 
-	<clay:button
-		id='<%= liferayPortletResponse.getNamespace() + "selectRoleButton" %>'
-		label="Select"
-	/>
-</form>
-```
    Now you have a form with one input field called `role`. 
 
 1. Scroll down to the JavaScript alert. Replace the JavaScript alert with a call to Liferay's front-end `setFormValues` method: 
