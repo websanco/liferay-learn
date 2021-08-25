@@ -53,7 +53,7 @@ Here's how the configuration framework works.
 
 ## Creating the Configuration Interface
 
-Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). It also defines the configurable attributes. 
+Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). 
 
 In the sample project, the `N2F3WebConfiguration.java` file is the configuration interface. 
 
@@ -84,7 +84,7 @@ Next, see how the configuration is read by the MVC Portlet.
     configurationPid = "com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration"
     ```
 
-1. The `activate()` method has an `@Activate` annotation that invokes the method as soon as the app is started. The `@Modified` annotation ensures the method is invoked whenever the configuration is updated.
+1. To access the configuration, the `render()` method utilizes a `ConfigurationProvider`. The Configuration Provider API provides methods to retrieve configuration at different levels of scope. The sample project's configuration is instance scoped and uses the `getCompanyConfiguration()` method to retrieve the configuration.
 
     ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
     :dedent: 1
@@ -92,17 +92,20 @@ Next, see how the configuration is read by the MVC Portlet.
     :lines: 44-51
     ```
 
-    The `activate()` method calls the `ConfigurableUtil.createConfigurable()` method to convert a map of the configuration's attributes to a typed class. The configuration is stored in a private field. Now this field can be used to retrieve configuration values or set values.
+    The configuration object is added to the request object and can now be read from the request of the application's JSP.
 
-1. A configuration object is added to the request object so its values can be read from a JSP. 
+## Create a Configuration Bean Declaration
 
-    ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
-    :dedent: 1
-    :language: java
-    :lines: 33-42
-    ```
+To use the `ConfigurationProvider`, the configuration class must also be regisered with a `ConfigurationBeanDeclaration`. 
 
-    The configuration can now be read from the request of the application's JSP.
+enable retrieval of a scoped configuration, the application's configuration must be registered with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
+
+```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/settings/definition/N2F3WebConfigurationBeanDeclaration.java
+   :language: java
+   :lines: 9-18
+```
+
+This class has one method that returns the configuration interface class of your application.
 
 ## Accessing the Configuration from a JSP
 
