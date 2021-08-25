@@ -26,8 +26,8 @@ Display Page Templates are only supported for Web Content, Documents, Blog Entri
 
 1. Once you've added Page elements, you can [map](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content) them to content structure fields (e.g., title, description) by double-clicking on an editable field.
 
-   ```tip::
-      Mapped fields are outlined in purple color.
+   ```{tip}
+   Mapped fields are outlined in purple color.
    ```
 
    ![Map Page elements to structure fields.](./creating-and-managing-display-page-templates/images/05.png)
