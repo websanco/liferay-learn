@@ -44,6 +44,8 @@
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
 	"dxp/latest/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
 	"dxp/latest/ja/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/ja/installation-and-upgrades/setting_up_liferay.html",
+	"dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering_for_high_availability.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
+	"dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
 	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
 	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }

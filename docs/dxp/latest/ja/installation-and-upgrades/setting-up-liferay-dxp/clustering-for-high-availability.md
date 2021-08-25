@@ -1,5 +1,14 @@
 # 高可用性のクラスタリング
 
+```{toctree}
+:maxdepth: 3
+
+clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md
+clustering-for-high-availability/database-configuration-for-cluster-nodes.md
+clustering-for-high-availability/configuring-cluster-link.md
+clustering-for-high-availability/configuring-unicast-over-tcp.md
+```
+
 Liferay DXPは、最小から最大までのすべてのWebサイトに対応するように拡張できます。 アウトオブボックスで、単一のサーバー環境に最適な構成になっています。 トラフィックが多いと予想される場合、またはサイトの全体的なフォールトトレランスを向上させたい場合は、DXPのクラスタリングを検討してください。
 ![Liferay DXPは、必要に応じて大規模な設置に対応できるように設計されています。](./clustering-for-high-availability/images/01.png) <!-- I know this image is an oldie but I find the diagram presented in the "example creating a dxp cluster" article a lot clearer. -->
 

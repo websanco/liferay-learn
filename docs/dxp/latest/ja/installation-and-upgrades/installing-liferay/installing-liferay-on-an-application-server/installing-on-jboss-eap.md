@@ -80,7 +80,7 @@ DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサ�
 コマンドラインインターフェイスは、ドメインモードの展開に推奨されます。
 
 ``` note::
-   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## JBossの構成

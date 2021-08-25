@@ -85,7 +85,7 @@ WildFlyは、 *スタンドアロン* モードまたは *ドメイン* モー�
 コマンドラインインターフェイスは、ドメインモードの展開に推奨されます。
 
 ``` note::
-   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md>`_ for more information.
+   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay-dxp/clustering-for-high-availability.md>`_ for more information.
 ```
 
 ## WildFlyの構成
@@ -364,4 +364,4 @@ WildFlyでメールセッションを管理する場合は、次の手順に従�
   - [試用期間中のEEプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
   - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability.md)

@@ -11,7 +11,7 @@ Liferay DXPのセットアップ
    ../../system-administration/installing_and_managing_apps.rst
    setting-up-liferay-dxp/initial-instance-localization.md
    ../../installing_and_upgrading_a_search_engine.rst
-   setting-up-liferay-dxp/clustering_for_high_availability.rst
+   setting-up-liferay-dxp/clustering-for-high-availability.md
 
 .. include:: /installation-and-upgrades/setting-up-liferay-dxp/README.rst
    :start-line: 2

@@ -80,4 +80,4 @@ DXPは、セットアップウィザードで指定したデータベースと�
   - [試用期間中のプラグインへのアクセス](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
   - [検索エンジンのインストール](../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
   - [Liferay DXPのセキュリティ](../securing-liferay/introduction-to-securing-liferay.md)
-  - [高可用性のクラスタリング](../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../setting-up-liferay-dxp/clustering-for-high-availability.md)

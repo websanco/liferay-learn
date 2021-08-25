@@ -368,4 +368,4 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
   - [Activating Liferay DXP](../../setting-up-liferay-dxp/activating-liferay-dxp.md)
   - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
   - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability/clustering-for-high-availability.md)
+  - [高可用性のクラスタリング](../../setting-up-liferay-dxp/clustering-for-high-availability.md)
