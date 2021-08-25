@@ -12,7 +12,7 @@ import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.kernel.workflow.WorkflowDefinitionManager;
 import com.liferay.portal.kernel.workflow.WorkflowException;
-import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
+import com.liferay.portal.kernel.workflow.WorkflowStatusManager;
 import com.liferay.portal.workflow.kaleo.model.KaleoAction;
 import com.liferay.portal.workflow.kaleo.runtime.ExecutionContext;
 import com.liferay.portal.workflow.kaleo.runtime.action.executor.ActionExecutor;
@@ -46,15 +46,15 @@ public class E5C9ActionExecutor implements ActionExecutor {
 			if (Objects.equals(
 					workflowContext.get("transitionName"), "reject")) {
 
-				WorkflowStatusManagerUtil.updateStatus(
+				_workflowStatusManager.updateStatus(
 					WorkflowConstants.STATUS_DENIED, workflowContext);
-				WorkflowStatusManagerUtil.updateStatus(
+				_workflowStatusManager.updateStatus(
 					WorkflowConstants.STATUS_PENDING, workflowContext);
 			}
 			else if (Objects.equals(
 						workflowContext.get("transitionName"), "approve")) {
 
-				WorkflowStatusManagerUtil.updateStatus(
+				_workflowStatusManager.updateStatus(
 					WorkflowConstants.STATUS_APPROVED, workflowContext);
 			}
 		}
@@ -94,5 +94,8 @@ public class E5C9ActionExecutor implements ActionExecutor {
 
 	@Reference
 	private WorkflowDefinitionManager _workflowDefinitionManager;
+
+	@Reference
+	private WorkflowStatusManager _workflowStatusManager;
 
 }
