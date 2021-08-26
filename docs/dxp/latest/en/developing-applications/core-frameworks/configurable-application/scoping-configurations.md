@@ -1,6 +1,6 @@
 # Scoping Configurations
 
-In Liferay DXP, you can set an application's configuration to different levels of scope: System, Instance, Site, or Portlet. For example, if you create an application to have instance scoped configuration, the application can be independently configured for each instance you have set up in your Liferay DXP installation. This is useful because it gives more flexibility and control to each user. For example an administrator of a DXP instance can set a configuration for their own instance that is independent from other instances. 
+In Liferay DXP, you can set an application's configuration to different levels of scope: System, Instance, Site, or Portlet. For example, if you create an application to have instance scoped configuration, the application can be independently configured for each instance you have set up in your Liferay DXP installation. This is useful because it gives more flexibility and control to each user. For example administrators of a DXP instance can set a configuration for their own instance that is independent from other instances. 
 
 To learn more about scope, see [Understanding Configuration Scope](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
 
@@ -21,10 +21,10 @@ To set the scope of a configuration, specify the scope in the configuration inte
 
 To retrieve the configuration, make use of `ConfigurationProvider`. The Configuration Provider API provides an easy way to access the configuration. Choose the specific method for your application needs:
 
-* `getSystemConfiguration()`: Used to obtain system scoped configuration. The application's system level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*.
+* `getSystemConfiguration()`: Obtains system-scoped configuration. The application's system level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*.
 
-* `getCompanyConfiguration()`: Used to obtain instance scoped configuration. Use an instance of `Portal` to retrieve `companyId`. For example, `_portal.getCompanyId(renderRequest)`. The application's instance level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*.
+* `getCompanyConfiguration()`: Obtains instance-scoped configuration. Use an instance of `Portal` to retrieve `companyId`. For example, `_portal.getCompanyId(renderRequest)`. The application's instance level configuration is found in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*.
 
-* `getGroupConfiguration()`: Used to get site scoped configuration. Use an instance of `Portal` to retrieve `groupId`. For example, `_portal.getScopeGroupId(renderRequest)`. The application's site level configuration is found in *Product Menu* &rarr; *Configuration* &rarr; *Site Settings*. Note, this is available in Liferay 7.4.
+* `getGroupConfiguration()`: Gets Site-scoped configuration. Use an instance of `Portal` to retrieve `groupId`. For example, `_portal.getScopeGroupId(renderRequest)`. The application's Site level configuration is found in *Product Menu* &rarr; *Configuration* &rarr; *Site Settings*. Note, this is available in Liferay 7.4.
 
 For portlet scoped configuration see [Portlet Level Configuration](./portlet-level-configuration.md).

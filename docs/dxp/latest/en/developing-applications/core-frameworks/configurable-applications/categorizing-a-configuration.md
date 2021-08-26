@@ -75,7 +75,7 @@ category.foobar=Foobar
 category-section.foobar=Foobar
 ```
 
-Redeploy the sample projject to see the change.
+Redeploy the sample project to see the change.
 
 ![The configuration UI is now in the custom category](./categorizing-a-configuration/images/01.png)
 
