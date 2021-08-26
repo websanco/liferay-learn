@@ -33,7 +33,7 @@ Liferayのコンテンツ配信ネットワーク（CDN）は、DXP Cloudで提�
 
 ## 港
 
-ロードバランサーのサービスエンドポイントがどの内部ポート(`targetPort`)を経由するかを設定できます。 DXPクラウドは、提供するサービスに適したポートを自動的に設定します。
+ロードバランサーのサービスエンドポイントがどの内部ポート(`targetPort`)を経由するかを設定できます。 DXP Cloudは、提供するサービスに適したポートを自動的に設定します。
 
 ``` json
 "targetPort".3000
@@ -70,7 +70,7 @@ Liferayのコンテンツ配信ネットワーク（CDN）は、DXP Cloudで提�
 ```
 
 ``` warning::
-   DXPクラウドでは、カプセル化の境界線を含む、適切にフォーマットされたPEM証明書と鍵のみを受け付けています。 詳細は `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ を参照してください。
+   DXP Cloudでは、カプセル化の境界線を含む、適切にフォーマットされたPEM証明書と鍵のみを受け付けています。 詳細は `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ を参照してください。
 ```
 
 ``` xml
@@ -79,7 +79,7 @@ base64encodedcertificate
 -----END CERTIFICATE-----
 ```
 
-[ネットワーク]ページには、サービスごとに最大1つのカスタム証明書が表示されます。 詳細については、 [カスタムドメイン](./custom-domains.md)参照してください。
+[ネットワーク]ページには、サービスごとに最大1つのカスタム証明書が表示されます。 詳細は、 [カスタムドメイン](./custom-domains.md)参照してください。
 
 ![図4：DXP Cloudは、カスタムドメインをカバーするSSL証明書のステータスを示しています。](./load-balancer/images/04.png)
 
@@ -91,4 +91,4 @@ base64encodedcertificate
 | `カスタムドメイン` | \ ["example.com"、 "www.example.com" \] | カスタムドメインの名前。 複数をリストできます                   |
 | `ターゲットポート` | 3000                                     | ロードバランサーのポート番号                            |
 | `key`      |                                          | SSL証明書のキー                                 |
-| `謄本`       |                                          | Base64形式のSSL証明書のcrt                       |
+| `crt`      |                                          | Base64形式のSSL証明書のcrt                       |

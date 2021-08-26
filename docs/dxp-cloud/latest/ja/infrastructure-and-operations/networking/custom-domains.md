@@ -41,10 +41,10 @@ DXP Cloudは、そのIngress Load Balancerを50個のカスタムドメインに
 カスタムドメインを設定すると、バックエンドで次のプロセスが発生するため、検証に時間がかかる場合があります。
 
 1.  ルートはIngress Load Balancerに追加する必要があります。 これは、リージョンによっては約30分かかる場合があります。
-2.  Liferay DXP Cloudが [達し、SSLサーバー証明書を](https://letsencrypt.org/) に暗号化しましょう。 *Let's Encrypt* サイトがチャレンジで応答します。
+2.  Liferay DXP Cloudは、 [Let's Encrypt](https://letsencrypt.org/) にSSLサーバー証明書を依頼します。 *Let's Encrypt* サイトがチャレンジで応答します。
 3.  チャレンジに合格すると、Ingress Load Balancerは証明書で更新され、サービスが到達可能で安全な状態になります。 チャレンジプロセス中に誰かがドメインにアクセスしようとすると、ブラウザにセキュリティ警告が表示されます。 プロセスがまだ完了していないため、これらの警告は無視しても問題ありません。
 
-カスタムSSL証明書の設定方法など、Liferay DXP CloudのSSL証明書の詳細については、 [ロードバランサー](./load-balancer.md) 記事を参照してください。
+カスタムSSL証明書の設定方法など、Liferay DXP CloudのSSL証明書の詳細は、 [ロードバランサー](./load-balancer.md) 記事を参照してください。
 
 ## 追加情報
 

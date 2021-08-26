@@ -25,7 +25,7 @@ DXP Cloudは、サービスの基盤としてDockerイメージを使用して�
         └── myCustomService
             └── LCP.json
 
-    このファイルに設定を追加する方法の詳細については、[LCP.jsonによる設定 ](../reference/configuration-via-lcp-json.md) を参照してください。
+    このファイルに設定を追加する方法の詳細は、[LCP.jsonによる設定 ](../reference/configuration-via-lcp-json.md) を参照してください。
 
     ``` warning::
         新しいカスタムサービスでビルドをトリガーしても、新しいサービスのために十分なリソースがプロビジョニングされていない場合、他のサービスに割り当てられたリソースに干渉する可能性があります。

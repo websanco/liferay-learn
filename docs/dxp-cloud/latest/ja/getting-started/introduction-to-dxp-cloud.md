@@ -20,7 +20,7 @@ DXP Cloudは、完全なDevOps CI/CD戦略、ツール、ワークフローを�
 
 ## 標準に準拠したセキュリティ、自動バックアップ、柔軟なガバナンス
 
-DXP Cloudはセキュリティを考慮して設計されています。 自信を持ってビルドおよびデプロイミッションクリティカルなサイトDXP雲があることを知っ **ISO 27001** 及び **AICPA SOC2** の認証を受けています。 詳細については、 [セキュリティポリシー](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+Cloud+Data+Security+and+Protection.pdf/78ce7065-9787-1fb2-9c7b-6d7c13f4a3e6?t=1564674972483) を参照してください。
+DXP Cloudはセキュリティを考慮して設計されています。 自信を持ってビルドおよびデプロイミッションクリティカルなサイトDXP雲があることを知っ **ISO 27001** 及び **AICPA SOC2** の認証を受けています。 詳細は、 [セキュリティポリシー](https://www.liferay.com/documents/10182/3292406/Liferay+DXP+Cloud+Data+Security+and+Protection.pdf/78ce7065-9787-1fb2-9c7b-6d7c13f4a3e6?t=1564674972483) を参照してください。
 
 [自動バックアップ](../platform-services/backup-service.md) データの破損や障害が発生した場合に、データとドキュメントが保護され、復元の準備ができていることを確認します。 保存時の暗号化により、ディスクに保存された機密データが、有効なキーなしでユーザーやアプリケーションから読み取られることがなくなります。
 
@@ -34,9 +34,9 @@ DXP Cloudはセキュリティを考慮して設計されています。 自信�
 
 [クラスタリング](../using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md) と [ロードバランシング](../infrastructure-and-operations/networking/load-balancer.md) 、可用性の高い、ダウンタイムのない展開を提供し、ミッションクリティカルなサイトがオンラインのままであることを保証します。 DXP Cloudは、マルチリージョンアーキテクチャを通じてデータを提供し、高可用性を保証します。
 
-[自動スケーリング](../manage-and-optimize/auto-scaling.md) は、予期しないトラフィックスパイクによって安定したパフォーマンスを維持するために、帯域幅とコンピューティング容量が動的に追加されることを保証します。 同様に、アクティビティが少ない期間に、不要なリソースを縮小できます。 チームはインスタンスの使用状況に関する自動通知と電子メールアラートを受信するので、自信を持ってリソースを管理できます。
+[オートスケーリング](../manage-and-optimize/auto-scaling.md) は、予期しないトラフィックスパイクによって安定したパフォーマンスを維持するために、帯域幅とコンピューティング容量が動的に追加されることを保証します。 同様に、アクティビティが少ない期間に、不要なリソースを縮小できます。 チームはインスタンスの使用状況に関する自動通知と電子メールアラートを受信するので、自信を持ってリソースを管理できます。
 
-![図5：需要を満たすためにサーバーを自動スケーリングします。](./introduction-to-dxp-cloud/images/03.png)
+![図5：需要を満たすためにサーバーをオートスケーリングします。](./introduction-to-dxp-cloud/images/03.png)
 
 ## リアルタイムアラート
 
@@ -60,9 +60,9 @@ DXP Cloudはセキュリティを考慮して設計されています。 自信�
 
 ## 洞察に満ちたモニタリング
 
-DXP Cloudは [アプリケーションメトリックス](../manage-and-optimize/application-metrics.md) 提供するため、ITチームはサイトの正常性とコンピューティング要件を経時的に理解できます。 管理者は、すぐに使用できる [Dynatrace統合](../manage-and-optimize/application-metrics.md#advanced-application-metrics-on-production) を使用して、CPUとメモリの使用状況、データ転送速度などをすばやく理解することもできます。
+DXP Cloudは [アプリケーションメトリクスス](../manage-and-optimize/application-metrics.md) 提供するため、ITチームはサイトの正常性とコンピューティング要件を経時的に理解できます。 管理者は、すぐに使用できる [Dynatrace統合](../manage-and-optimize/application-metrics.md#advanced-application-metrics-on-production) を使用して、CPUとメモリの使用状況、データ転送速度などをすばやく理解することもできます。
 
-![図9：さまざまなメトリックを使用して、Liferay DXPインスタンスを含むDXP Cloudサービスを監視します。](./introduction-to-dxp-cloud/images/07.png)
+![図9：さまざまなメトリクスを使用して、Liferay DXPインスタンスを含むDXP Cloudサービスを監視します。](./introduction-to-dxp-cloud/images/07.png)
 
 ## 次のステップ
 

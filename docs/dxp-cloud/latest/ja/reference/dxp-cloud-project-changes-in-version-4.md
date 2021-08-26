@@ -89,7 +89,7 @@ bin/elasticsearch-plugin list
 | 静的コンテンツ   | lcp/webserver/deploy/{ENV}/ | webserver/configs/{ENV}/public/  |
 
 ``` note::
-   webserver/configs/{ENV}/``内のファイルは、DXPクラウドのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 ``/webserver/configs/{ENV}/public/``` のファイルはオーバーライドとして ``var/www/html/`` にコピーされます。
+   webserver/configs/{ENV}/``内のファイルは、DXP Cloudのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 ``/webserver/configs/{ENV}/public/``` のファイルはオーバーライドとして ``var/www/html/`` にコピーされます。
 ```
 
 ### Webサーバー設定の上書き
@@ -102,11 +102,11 @@ bin/elasticsearch-plugin list
    他のファイル名は、代わりにウェブサーバの追加の場所を定義するために使用されます。
 ```
 
-また、 `webserver/configs/{ENV}/`に `nginx.conf` ファイルを追加することで、デフォルトの NGINX 設定を上書きすることもできます。 これを使用して、Webサーバーの動作をさらに定義できます。 詳細については、 [公式のNGINXドキュメント](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) を参照してください。
+また、 `webserver/configs/{ENV}/`に `nginx.conf` ファイルを追加することで、デフォルトの NGINX 設定を上書きすることもできます。 これを使用して、Webサーバーの動作をさらに定義できます。 詳細は、 [公式のNGINXドキュメント](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) を参照してください。
 
 ### パブリックディレクトリの設定
 
-カスタムの静的コンテンツを追加したい場合は、これらのファイルを `webserver/configs/{ENV}/public/`に配置してください。 DXPクラウドはこのパブリックフォルダを探し、その中のすべてのファイルを `/var/www/html`にコピーします。
+カスタムの静的コンテンツを追加したい場合は、これらのファイルを `webserver/configs/{ENV}/public/`に配置してください。 DXP Cloudはこのパブリックフォルダを探し、その中のすべてのファイルを `/var/www/html`にコピーします。
 
 パブリックフォルダーを設定するには、 `conf.d` フォルダー内に場所を追加する必要があります。 例えば、 `.html` ファイル（ `index.html`など）を新しい `webserver/configs/{ENV}/public/static` フォルダに追加するには、一意の `.confを <code>webserver/configs/{ENV}/conf.d` /conf.d {ENV}に追加します。conf</code> の設定ファイルを ` webserver/configs/ {ENV} /conf.d ` に以下の内容で追加します。
 

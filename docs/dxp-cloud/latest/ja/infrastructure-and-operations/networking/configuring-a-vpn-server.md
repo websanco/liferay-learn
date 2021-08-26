@@ -1,16 +1,16 @@
-# VPNセットアップの例
+# VPNサーバーの設定
 
-次のシナリオでは、IPsecまたはOpenVPN VPNサーバーを設定する方法について説明します。 VPNサーバーを設定すると、DXP Cloudの内部ネットワークと本番環境の間に安全な接続を確立できます。 この例では、概念実証としてUbuntu Server 18.0.4を使用しています。 DXP CloudのクライアントからサイトへのVPN機能の概要については、 [クライアントからサイトへのVPN](./client-to-site-vpn.md) 記事をご覧ください。
+以下のシナリオでは、IPsecまたはOpenVPNのVPNサーバーを設定する方法を説明します。 VPNサーバーが設定されると、社内ネットワークとDXP Cloud上の本番環境との間で安全な接続を確立することができます。 この例では、Ubuntu Server 18.0.4をコンセプトの証明として使用しています。 DXP CloudのClient-to-Site VPNs機能の概要については、 [VPN Integration Overview](./vpn-integration-overview.md) の記事をご覧ください。
 
 ``` warning::
-   設定コマンドと値は変更されることがありますので、特定の環境に合わせて変更する必要があります。
+   設定コマンドや値は変更される場合がありますので、お客様の環境に合わせて設定してください。
 ```
 
-## IPsecサーバーの基本セットアップ
+## IPsecサーバーの基本設定
 
-IPsecテストサーバーを設定するには：
+IPsecテストサーバーを設定するには
 
-1.  次のファイルを `/ ipsec.conf` として保存し、 `leftid` 値をVPNサーバーの外部IPに置き換えます。
+1.  以下のファイルを `~/ipsec.conf` として保存し、 `leftid` の値をVPNサーバーの外部IPに置き換えます。
    
         config setup
           charondebug="ike 1, knl 1, cfg 0"
@@ -54,7 +54,7 @@ IPsecテストサーバーを設定するには：
     sudo apt install -y strongswan strongswan-pki
     ```
 
-4.  セキュリティ証明書とキーを設定します。
+4.  セキュリティ証明書と鍵を設定する。
 
     ``` bash
     mkdir -p ~/pki/{cacerts,certs,private}
@@ -76,13 +76,13 @@ IPsecテストサーバーを設定するには：
     sudo cp -r ~/pki/* /etc/ipsec.d/
     ```
 
-5.  [StrongSwan](https://www.strongswan.org/) を設定します(上述の `server.conf` ファイルを参照してください)。
+5.  [StrongSwan](https://www.strongswan.org/) の設定を行います（上述の `server.conf` ファイルを参照）。
 
     ``` bash
     sudo cp ~/ipsec.conf /etc/ipsec.conf
     ```
 
-6.  VPNサーバの認証を設定します。
+6.  VPNサーバーの認証を設定します。
 
     ``` bash
     echo -e ": RSA \"server-key.pem\"\n$USERNAME : EAP \"$PASSWORD\"" | sudo tee /etc/ipsec.secrets
@@ -90,7 +90,7 @@ IPsecテストサーバーを設定するには：
     sudo systemctl restart strongswan
     ```
 
-7.  OSカーネルを設定します。
+7.  OSのカーネルを設定します。
 
     ``` bash
     sudo sed -i 's/#net\/ipv4\/ip_forward=1/net\/ipv4\/ip_forward=1/g' /etc/ufw/sysctl.conf
@@ -99,7 +99,7 @@ IPsecテストサーバーを設定するには：
     echo "net/ipv4/ip_no_pmtu_disc=1" | sudo tee -a /etc/ufw/sysctl.conf
     ```
 
-8.  OSのファイアウォールを設定します。
+8.  OSのファイアウォールを設定する。
 
     ``` bash
     networkInterfaceName=$(ip link | awk -F: '$0 !~ "lo|vir|^[^0-9]"{print $2a;getline}' | head -1)
@@ -121,19 +121,19 @@ IPsecテストサーバーを設定するには：
     sudo ufw enable
     ```
 
-9.  クライアントで使用するサーバ証明書を取得します。
+9.  クライアントで使用するサーバー証明書を取得します。
 
     ``` bash
     cat /etc/ipsec.d/cacerts/ca-cert.pem
     ```
 
-IPsec VPNサーバーが設定されました。
+IPsec VPNサーバーの設定が完了しました。
 
-## OpenVPNサーバーの基本設定
+## OpenVPNサーバの基本設定
 
-OpenVPNサーバーを使用している場合は、次の手順に従います。
+OpenVPNサーバーを使用する場合は、以下の手順に従ってください。
 
-1.  以下の値で `/ server.conf` を作成します。
+1.  以下の値で `~/server.conf` を作成してください。
    
         #Port where the VPN server will answer requests
         port 1194
@@ -210,7 +210,7 @@ OpenVPNサーバーを使用している場合は、次の手順に従います�
     sudo apt-get install -y openvpn easy-rsa
     ```
 
-3.  証明書とキーを設定します。
+3.  証明書と鍵を設定します。
 
     ``` bash
     make-cadir ~/openvpn-ca
@@ -231,14 +231,14 @@ OpenVPNサーバーを使用している場合は、次の手順に従います�
     sudo cp ~/server.conf /etc/openvpn/
     ```
 
-5.  OSカーネルを設定します。
+5.  OSのカーネルを設定します。
 
     ``` bash
     sudo sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
     sudo sysctl -p
     ```
 
-6.  OSファイアウォールを設定する
+6.  OSファイアウォールの設定
 
     ``` bash
     networkInterfaceName=$(ip link | awk -F: '$0 !~ "lo|vir|^[^0-9]"{print $2a;getline}' | head -1)
@@ -250,7 +250,7 @@ OpenVPNサーバーを使用している場合は、次の手順に従います�
     sudo ufw enable
     ```
 
-7.  VPNサーバーサービスを開始します。
+7.  VPNサーバーのサービスを開始します。
 
     ``` bash
     sudo systemctl start openvpn@server
@@ -262,4 +262,9 @@ OpenVPNサーバーを使用している場合は、次の手順に従います�
     sudo adduser myuser
     ```
 
-OpenVPNサーバーが設定されました。
+OpenVPNサーバーの設定が完了しました。
+
+## 追加情報
+
+  - [VPNインテグレーションの概要](./vpn-integration-overview.md)
+  - [DXP CloudへのVPNサーバーの接続](./connecting-a-vpn-server-to-dxp-cloud.md)

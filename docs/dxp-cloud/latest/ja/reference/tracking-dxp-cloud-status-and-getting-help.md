@@ -1,10 +1,10 @@
 # DXP Cloudステータスの追跡とヘルプの取得
 
-ライフレイは、優れた顧客体験の提供に取り組んでいます。 すべてのLiferay DXP Cloudのお客様は、サポート・ナレッジ・ベース、 [ヘルプ・センター](https://liferay-support.zendesk.com/agent/dashboard)のチケット・サポート、 [の電話サポート](https://help.liferay.com/hc/en-us/articles/360017784212)にアクセスすることができます。
+ライフレイは、優れた顧客体験の提供に取り組んでいます。 すべてのLiferay DXP Cloudのお客様は、サポート・ナレッジ・ベース、 [ヘルプ・センター](https://liferay-support.zendesk.com/agent/dashboard)のチケット・サポート、 [電話サポート](https://help.liferay.com/hc/en-us/articles/360017784212)にアクセスすることができます。
 
 > **注：** 詳細はLiferayとの法的契約の対象となります。
 
-法的契約およびサービスの詳細については、 [liferay.com/legal](https://www.liferay.com/legal)参照してください。
+法的契約およびサービスの詳細は、 [liferay.com/legal](https://www.liferay.com/legal)参照してください。
 
 ## ステータスページ
 

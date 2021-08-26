@@ -66,7 +66,7 @@ curl -X POST \
 
 ## Liferay DXP設定のコピー
 
-ポータルプロパティとOSGi構成は、`lcp/liferay/config /`内の環境ごとに適切なフォルダにそれらを置くことによってDXP Cloudにコピーすることができます（例えば、 `DEV`、 `UAT`、または `PRD`、又は `の共通` 全てに適用する）。
+ポータルプロパティとOSGi設定　は、`lcp/liferay/config /`内の環境ごとに適切なフォルダにそれらを置くことによってDXP Cloudにコピーすることができます（例えば、 `DEV`、 `UAT`、または `PRD`、又は `の共通` 全てに適用する）。
 
 ``` 
     |-- lcp
@@ -80,15 +80,15 @@ curl -X POST \
                 |-- uat
 ```
 
-適切なフォルダに配置された `portal-*.properties` という形式のポータル・プロパティは、該当する環境のLiferay DXPサービス内の `$LIFERAY_HOME` に自動的にコピーされます。 OSGiプロパティ（.cfgまたは.configファイル）は、該当する環境のLiferay DXPサービス内の `osgi/configs` フォルダーにコピーされます。
+適切なフォルダに配置された `portal-*.properties` という形式のポータルプロパティは、該当する環境のLiferay DXPサービス内の `$LIFERAY_HOME` に自動的にコピーされます。 OSGiプロパティ（.cfgまたは.configファイル）は、該当する環境のLiferay DXPサービス内の `osgi/configs` フォルダーにコピーされます。
 
 ## サービス設定を追加
 
-残りの設定は、主にDXP Cloudで提供されるサービスを通じて処理されます。 ウェブサーバーと検索設定を翻訳するには、DXPクラウドのサービスを利用しなければならないので、その方法を決定するには計画が必要かもしれません。
+残りの設定は、主にDXP Cloudで提供されるサービスを通じて処理されます。 ウェブサーバーと検索設定を翻訳するには、DXP Cloudのサービスを利用しなければならないので、その方法を決定するには計画が必要かもしれません。
 
-Webサーバーの設定は、Nginxを使用して、webserverサービスを通じて行う必要があります。 このサービスに設定を追加する方法の詳細については、 [Web Server Service](../platform-services/web-server-service.md) を参照してください。 設定自体の詳細については、 [公式Nginxドキュメント](https://docs.nginx.com/) を参照してください。
+Webサーバーの設定は、Nginxを使用して、webserverサービスを通じて行う必要があります。 このサービスに設定を追加する方法の詳細は、 [ウェブサーバーサービス](../platform-services/web-server-service.md) を参照してください。 設定自体の詳細は、 [公式Nginxドキュメント](https://docs.nginx.com/) を参照してください。
 
-検索設定は、Elasticsearchを使用して、検索サービスを介して行う必要があります。 このサービスに設定を追加する方法の詳細については、 [Search Service](../platform-services/search-service.md) を参照してください。 設定自体の詳細については、 [Elasticsearchの公式ドキュメント](https://www.elastic.co/guide/index.html) を参照してください。
+検索設定は、Elasticsearchを使用して、検索サービスを介して行う必要があります。 このサービスに設定を追加する方法の詳細は、 [検索サービス](../platform-services/search-service.md) を参照してください。 設定自体の詳細は、 [Elasticsearchの公式ドキュメント](https://www.elastic.co/guide/index.html) を参照してください。
 
 ## バックアップを復元する
 
@@ -118,4 +118,4 @@ Webサーバーの設定は、Nginxを使用して、webserverサービスを通
 
 ## VPNを使用して外部サービスを接続する
 
-DXP Cloudの既存のサービス（SSOやLDAP統合など）に簡単にマッピングできない外部サービスは、VPNを使用して接続できます。 VPNの設定の詳細については、「 [VPNをDXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-to-dxp-cloud.md) 接続する」を参照してください。
+DXP Cloudの既存のサービス（SSOやLDAP統合など）に簡単にマッピングできない外部サービスは、VPNを使用して接続できます。 VPNの設定の詳細は、「 [VPNをDXP Cloud](../infrastructure-and-operations/networking/connecting-a-vpn-to-dxp-cloud.md) 接続する」を参照してください。

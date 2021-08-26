@@ -26,14 +26,14 @@ Liferay DXPを設定するには、[DXPシステム設定](https://learn.liferay
 
   - `portal-env.properties`：現在の環境にのみ影響するプロパティが含まれます（たとえば、環境ごとに異なる外部サービスの資格情報とURLエンドポイント）
 
-  - `portal-clu.properties`：DXP CloudでLiferay DXPをクラスタリングするための事前設定されたプロパティが含まれています。 詳細については、[Setting Up Clustering in DXP Cloud](./setting-up-clustering-in-dxp-cloud.md)を参照してください。
+  - `portal-clu.properties`：DXP CloudでLiferay DXPをクラスタリングするための事前設定されたプロパティが含まれています。 詳細は、[DXP Cloudでのクラスタリングのセットアップ](./setting-up-clustering-in-dxp-cloud.md)を参照してください。
 
-  - `portal-ext.properties`: Liferay DXP 構成の最終的な変更が含まれています。ほとんどのプロパティは `portal-all.properties` および `portal-env.properties`で構成されているため、このファイルは空であることが多いです。
+  - `portal-ext.properties`: Liferay DXP 設定　の最終的な変更が含まれています。ほとんどのプロパティは `portal-all.properties` および `portal-env.properties`で設定　されているため、このファイルは空であることが多いです。
 
 <!-- end list -->
 
 ``` note::
-   ポータル・プロパティは、環境変数として定義することもできます。 詳細は `環境変数リファレンス <./introduction-to-the-liferay-dxp-service.md#environment-variables-reference>`_ を参照してください。
+   ポータルプロパティは、環境変数として定義することもできます。 詳細は `環境変数リファレンス <./introduction-to-the-liferay-dxp-service.md#environment-variables-reference>`_ を参照してください。
 ```
 
 ## OSGiの設定

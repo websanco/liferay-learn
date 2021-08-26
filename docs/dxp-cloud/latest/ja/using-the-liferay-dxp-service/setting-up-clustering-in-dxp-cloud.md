@@ -40,19 +40,19 @@ Liferayサービスが `scale` プロパティを `1`設定してデプロイさ
    Liferay DXPインスタンスのノード数を増やすと、プロジェクトに割り当てられるCPUコア数が増える可能性があります。 増加したCPUコア数が計画の最大値 `quota <../manage-and-optimize/quotas.md>`_ を超える場合、導入に失敗する可能性があります。
 ```
 
-### 自動スケーリング
+### オートスケーリング
 
-自動スケーリングは、 `LCP.json` `scale` 属性と連動します。 自動スケーリングが有効な場合、 `スケール` プロパティはインスタンスの初期数を決定します。 その後、インスタンスの数は需要に応じて増加します。 詳細については、 [自動スケーリング](../manage-and-optimize/auto-scaling.md) を参照してください。
+オートスケーリングは、 `LCP.json` `scale` 属性と連動します。 オートスケーリングが有効な場合、 `スケール` プロパティはインスタンスの初期数を決定します。 その後、インスタンスの数は需要に応じて増加します。 詳細は、 [オートスケーリング](../manage-and-optimize/auto-scaling.md) を参照してください。
 
 ## クラスタリングポータルプロパティの追加
 
 デフォルトでは、DXP Cloudでクラスタリングを有効にするために追加のポータルプロパティは必要ありません。 クラスタリングをセットアップするために必要な設定は、Liferay DXPサービスの起動時に、Dockerイメージ内の `portal-clu.properties` および `unicast.xml` ファイルにすでにコピーされています。
 
-ただし、クラスタリング用に追加のポータルプロパティが必要な場合は、プロパティをリポジトリに追加できます。 クラスタリング固有のポータルプロパティを上書きするには、選択した環境に適した `コンフィグ` フォルダ内の `portal-clu.properties` ファイルに追加します。 DXPサービスの設定の展開の詳細については、 [Liferay DXPサービス設定](./configuring-the-liferay-dxp-service.md)を参照してください。
+ただし、クラスタリング用に追加のポータルプロパティが必要な場合は、プロパティをリポジトリに追加できます。 クラスタリング固有のポータルプロパティを上書きするには、選択した環境に適した `コンフィグ` フォルダ内の `portal-clu.properties` ファイルに追加します。 DXPサービスの設定の展開の詳細は、 [Liferay DXPサービス設定](./configuring-the-liferay-dxp-service.md)を参照してください。
 
 ## デプロイと確認
 
-選択した環境に設定の変更をデプロイして、クラスタリングが有効になっていることを確認します。 参照してください [DXP Cloud展開のワークフローの概要](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) 詳細については。
+選択した環境に設定の変更をデプロイして、クラスタリングが有効になっていることを確認します。 詳細は、 [DXP Cloudのデプロイメントワークフローの概要](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) を参照してください。
 
 クラスタリングが正しく機能しているかどうかを確認するには、Liferay DXPインスタンスのログで、 `JGroupsReceiver` クラスからの `Accepted View` メッセージを確認します。
 
@@ -69,6 +69,6 @@ Aug 26 09:42:22.779 build-90 [liferay-68b8f6b48d-hdj9t] [dxp] INFO  [Incoming-1,
 
 ## 追加情報
 
-  - [自動スケーリング](../manage-and-optimize/auto-scaling.md)
+  - [オートスケーリング](../manage-and-optimize/auto-scaling.md)
   - [Liferay DXPサービスの概要](./introduction-to-the-liferay-dxp-service.md)
   - [Liferay DXPサービスの設定](./configuring-the-liferay-dxp-service.md)

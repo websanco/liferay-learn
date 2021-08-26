@@ -16,7 +16,7 @@
 
 ### Gitリポジトリの設定
 
-GitHubリポジトリを設定する必要があります。 DXP Cloudリポジトリの設定の詳細については、 [GitHubリポジトリの設定](../getting-started/configuring-your-github-repository.md) を参照してください。
+GitHubリポジトリを設定する必要があります。 DXP Cloudリポジトリの設定の詳細は、 [GitHubリポジトリの設定](../getting-started/configuring-your-github-repository.md) を参照してください。
 
 ### サンプルモジュール
 
