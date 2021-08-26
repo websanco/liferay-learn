@@ -6,11 +6,11 @@ The *Page Menu* widget presents links that can include links to other [Wiki Page
 
    ![Click on Options to configure the Page menu widget.](./using-the-page-menu-widget/images/01.png)
 
-2. In the modal window's Setup tab, select a *Wiki Node* and *Wiki Page*. This determines which page is used as the source of the links. 
+1. In the modal window's Setup tab, select a *Wiki Node* and *Wiki Page*. This determines which page is used as the source of the links. 
     
     ![In the Setup, select the Wiki Node and Wiki Page.](./using-the-page-menu-widget/images/02.png)  
 
-3. Click *Save* to update the widget and close the modal window.
+1. Click *Save* to update the widget and close the modal window.
 
     Once your configuration is saved, the widget displays any links added to the specified Wiki page. 
 
