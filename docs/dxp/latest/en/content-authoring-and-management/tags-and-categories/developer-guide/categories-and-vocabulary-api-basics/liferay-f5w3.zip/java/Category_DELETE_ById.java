@@ -9,9 +9,10 @@ public class Category_DELETE_ById {
 		TaxonomyCategoryResource.Builder builder =
 			TaxonomyCategoryResource.builder();
 
-		TaxonomyCategoryResource taxonomyCategoryResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyCategoryResource taxonomyCategoryResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		taxonomyCategoryResource.deleteTaxonomyCategory(
 			String.valueOf(System.getProperty("taxonomyCategoryId")));

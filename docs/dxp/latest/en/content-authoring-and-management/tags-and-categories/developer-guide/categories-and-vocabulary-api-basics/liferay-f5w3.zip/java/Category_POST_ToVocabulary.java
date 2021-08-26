@@ -10,9 +10,10 @@ public class Category_POST_ToVocabulary {
 		TaxonomyCategoryResource.Builder builder =
 			TaxonomyCategoryResource.builder();
 
-		TaxonomyCategoryResource taxonomyCategoryResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyCategoryResource taxonomyCategoryResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		TaxonomyCategory taxonomyCategory =
 			taxonomyCategoryResource.postTaxonomyVocabularyTaxonomyCategory(

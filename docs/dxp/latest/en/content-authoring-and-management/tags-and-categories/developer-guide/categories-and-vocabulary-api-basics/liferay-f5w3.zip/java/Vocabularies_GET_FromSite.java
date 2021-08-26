@@ -12,14 +12,15 @@ public class Vocabularies_GET_FromSite {
 		TaxonomyVocabularyResource.Builder builder =
 			TaxonomyVocabularyResource.builder();
 
-		TaxonomyVocabularyResource taxonomyVocabularyResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyVocabularyResource taxonomyVocabularyResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		Page<TaxonomyVocabulary> page =
 			taxonomyVocabularyResource.getSiteTaxonomyVocabulariesPage(
-				Long.valueOf(System.getProperty("siteId")), null,
-				null, Pagination.of(1, 2), null);
+				Long.valueOf(System.getProperty("siteId")), null, null,
+				Pagination.of(1, 2), null);
 
 		System.out.println(page);
 	}

@@ -12,14 +12,16 @@ public class Categories_GET_FromVocabulary {
 		TaxonomyCategoryResource.Builder builder =
 			TaxonomyCategoryResource.builder();
 
-		TaxonomyCategoryResource taxonomyCategoryResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyCategoryResource taxonomyCategoryResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		Page<TaxonomyCategory> page =
-			taxonomyCategoryResource.getTaxonomyVocabularyTaxonomyCategoriesPage(
-				Long.valueOf(System.getProperty("vocabularyId")), null,
-				null, Pagination.of(1, 2), null);
+			taxonomyCategoryResource.
+				getTaxonomyVocabularyTaxonomyCategoriesPage(
+					Long.valueOf(System.getProperty("vocabularyId")), null,
+					null, Pagination.of(1, 2), null);
 
 		System.out.println(page);
 	}

@@ -9,9 +9,10 @@ public class Vocabulary_DELETE_ById {
 		TaxonomyVocabularyResource.Builder builder =
 			TaxonomyVocabularyResource.builder();
 
-		TaxonomyVocabularyResource taxonomyVocabularyResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyVocabularyResource taxonomyVocabularyResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		taxonomyVocabularyResource.deleteTaxonomyVocabulary(
 			Long.valueOf(System.getProperty("taxonomyVocabularyId")));

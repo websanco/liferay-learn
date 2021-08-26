@@ -10,9 +10,10 @@ public class Vocabulary_PUT_ById {
 		TaxonomyVocabularyResource.Builder builder =
 			TaxonomyVocabularyResource.builder();
 
-		TaxonomyVocabularyResource taxonomyVocabularyResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		TaxonomyVocabularyResource taxonomyVocabularyResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		TaxonomyVocabulary taxonomyVocabulary =
 			taxonomyVocabularyResource.putTaxonomyVocabulary(
