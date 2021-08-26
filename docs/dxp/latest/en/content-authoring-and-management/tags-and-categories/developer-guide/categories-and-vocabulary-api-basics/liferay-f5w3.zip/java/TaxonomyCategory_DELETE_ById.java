@@ -1,0 +1,20 @@
+import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyCategoryResource;
+
+public class TaxonomyCategory_DELETE_ById {
+
+	/**
+	 * java -classpath .:* -DtaxonomyCategoryId=1234 TaxonomyCategory_DELETE_ById
+	 */
+	public static void main(String[] args) throws Exception {
+		TaxonomyCategoryResource.Builder builder =
+			TaxonomyCategoryResource.builder();
+
+		TaxonomyCategoryResource taxonomyCategoryResource = builder.authentication(
+			"test@liferay.com", "test"
+		).build();
+
+		taxonomyCategoryResource.deleteTaxonomyCategory(
+			Long.valueOf(System.getProperty("taxonomyCategoryId")));
+	}
+
+}
