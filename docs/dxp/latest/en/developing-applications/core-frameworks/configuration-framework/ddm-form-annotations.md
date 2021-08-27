@@ -13,7 +13,7 @@ The auto-generated [configuration interface](./setting-and-accessing-configurati
 1. Download and unzip [DDM Form Annotations](./liferay-v1d9.zip)
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-applications/liferay-v3d9.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-v3d9.zip -O
     ```
 
     ```bash

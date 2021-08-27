@@ -13,8 +13,8 @@ Note, portlet scoped configuration takes a different approach. See [Portlet Leve
 To set the scope of a configuration, specify the scope in the configuration interface. Use the `@ExtendedObjectClassDefinition` annotation to set your scope. Use `Scope.SYSTEM` for system scope. Use `Scope.COMPANY` for instance scope. Use `Scope.GROUP` for site scope. 
 
 ```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/configuration/N2F3WebConfiguration.java
-   :language: java
-   :lines: 7-9
+:language: java
+:lines: 7-9
 ```
 
 ## Use the Configuration Provider

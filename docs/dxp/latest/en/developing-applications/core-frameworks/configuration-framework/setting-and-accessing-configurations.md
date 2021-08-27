@@ -9,10 +9,11 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
     ```bash
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
+
 1. Download and unzip [Setting and Accessing Configurations](./liferay-n2f3.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-applications/liferay-n2f3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-n2f3.zip -O
     ```
 
     ```bash
@@ -43,7 +44,7 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
 
     The UI shows a welcome message along with the three configurable attributes: font color, font family, and font size.
 
-2. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Other click *category.n2f3*.
+1. To change the configuration, navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Other click *category.n2f3*.
 
     ![Click category.n2f3 under the Other category.](./setting-and-accessing-configurations/images/02.png)
 
@@ -99,8 +100,8 @@ Next, see how the configuration is read by the MVC Portlet.
 To use the `ConfigurationProvider`, the configuration class must also be regisered with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
 
 ```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/settings/definition/N2F3WebConfigurationBeanDeclaration.java
-   :language: java
-   :lines: 9-18
+:language: java
+:lines: 9-18
 ```
 
 This class has one method that returns the configuration interface class of your application.

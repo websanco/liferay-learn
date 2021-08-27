@@ -28,7 +28,7 @@ Use the `ConfigurationVisibilityController` interface if you want to hide the co
 1. Download and unzip [Hiding the Configuration UI](./liferay-g8v3.zip)
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-applications/liferay-g8v3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-g8v3.zip -O
     ```
 
     ```bash
