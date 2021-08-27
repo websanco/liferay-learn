@@ -70,7 +70,7 @@ In the module's `src/main/resources/META-INF/resources` folder, create a JSP fil
 ```javascript
 <h4>W3E7 Portlet</h4>
 
-<b>Hello W3E7</b>
+<h5>Hello W3E7</h5>
 ```
 
 The markup above displays "Hello W3E7" in bold.

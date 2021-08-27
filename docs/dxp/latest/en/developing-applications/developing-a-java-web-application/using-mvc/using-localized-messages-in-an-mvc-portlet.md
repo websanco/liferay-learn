@@ -67,7 +67,7 @@ The example project includes a `view.jsp` file with a simple welcome message tha
 
 <h4>B6F5 Portlet</h4>
 
-<b><liferay-ui:message key="b6f5-portlet-welcome" /></b>
+<h5><liferay-ui:message key="b6f5-portlet-welcome" /></h5>
 ```
 
 Note that there is an extra `liferay-ui:message` included in the example jsp file: 
