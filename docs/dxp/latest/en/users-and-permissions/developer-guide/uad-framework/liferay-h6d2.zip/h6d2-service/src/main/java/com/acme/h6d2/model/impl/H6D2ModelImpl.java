@@ -102,9 +102,9 @@ public class H6D2ModelImpl extends BaseModelImpl<H6D2> implements H6D2Model {
 
 	public static final String TABLE_SQL_DROP = "drop table H6D2_H6D2";
 
-	public static final String ORDER_BY_JPQL = " ORDER BY h6d2.todo ASC";
+	public static final String ORDER_BY_JPQL = " ORDER BY h6d2.h6d2Id ASC";
 
-	public static final String ORDER_BY_SQL = " ORDER BY H6D2_H6D2.todo ASC";
+	public static final String ORDER_BY_SQL = " ORDER BY H6D2_H6D2.h6d2Id ASC";
 
 	public static final String DATA_SOURCE = "liferayDataSource";
 
@@ -128,13 +128,14 @@ public class H6D2ModelImpl extends BaseModelImpl<H6D2> implements H6D2Model {
 	 * @deprecated As of Athanasius (7.3.x), replaced by {@link #getColumnBitmask(String)}
 	 */
 	@Deprecated
-	public static final long TODO_COLUMN_BITMASK = 4L;
+	public static final long UUID_COLUMN_BITMASK = 4L;
 
 	/**
-	 * @deprecated As of Athanasius (7.3.x), replaced by {@link #getColumnBitmask(String)}
+	 * @deprecated As of Athanasius (7.3.x), replaced by {@link
+	 *		#getColumnBitmask(String)}
 	 */
 	@Deprecated
-	public static final long UUID_COLUMN_BITMASK = 8L;
+	public static final long H6D2ID_COLUMN_BITMASK = 8L;
 
 	/**
 	 * @deprecated As of Athanasius (7.3.x), with no direct replacement
@@ -552,15 +553,6 @@ public class H6D2ModelImpl extends BaseModelImpl<H6D2> implements H6D2Model {
 		_todo = todo;
 	}
 
-	/**
-	 * @deprecated As of Athanasius (7.3.x), replaced by {@link
-	 *             #getColumnOriginalValue(String)}
-	 */
-	@Deprecated
-	public String getOriginalTodo() {
-		return getColumnOriginalValue("todo");
-	}
-
 	@Override
 	public StagedModelType getStagedModelType() {
 		return new StagedModelType(
@@ -640,15 +632,17 @@ public class H6D2ModelImpl extends BaseModelImpl<H6D2> implements H6D2Model {
 
 	@Override
 	public int compareTo(H6D2 h6d2) {
-		int value = 0;
+		long primaryKey = h6d2.getPrimaryKey();
 
-		value = getTodo().compareTo(h6d2.getTodo());
-
-		if (value != 0) {
-			return value;
+		if (getPrimaryKey() < primaryKey) {
+			return -1;
 		}
-
-		return 0;
+		else if (getPrimaryKey() > primaryKey) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
 	}
 
 	@Override

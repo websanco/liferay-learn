@@ -26,19 +26,5 @@
 
 		<column name="todo" type="String" uad-nonanonymizable="true" />
 
-		<!-- Order -->
-
-		<order by="asc">
-			<order-column name="todo" />
-		</order>
-
-		<!-- Finder methods -->
-
-		<finder name="todo" return-type="Collection">
-			<finder-column name="todo" />
-		</finder>
-
-		<!-- References -->
-
 	</entity>
 </service-builder>
