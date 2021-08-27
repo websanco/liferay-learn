@@ -3,7 +3,6 @@ package com.acme.h6d2.web.internal.portlet;
 import com.acme.h6d2.model.H6D2;
 import com.acme.h6d2.service.H6D2LocalService;
 
-import com.liferay.counter.kernel.service.CounterLocalService;
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.model.User;
@@ -13,20 +12,14 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.WebKeys;
 
-import java.io.IOException;
-
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=H6D2 Portlet",
@@ -37,7 +30,8 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class H6D2Portlet extends MVCPortlet {
 
-	public void addTodo(ActionRequest actionRequest, ActionResponse response)
+	public void addTodo(
+			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(
@@ -60,17 +54,6 @@ public class H6D2Portlet extends MVCPortlet {
 
 		_h6d2LocalService.addH6D2(h6d2);
 	}
-
-	@Override
-	public void doView(
-			RenderRequest renderRequest, RenderResponse renderResponse)
-		throws IOException, PortletException {
-
-		super.doView(renderRequest, renderResponse);
-	}
-
-	@Reference
-	private CounterLocalService _counterLocalService;
 
 	@Reference
 	private H6D2LocalService _h6d2LocalService;
