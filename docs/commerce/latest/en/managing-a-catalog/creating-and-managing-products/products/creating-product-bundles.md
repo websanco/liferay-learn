@@ -18,8 +18,8 @@ Follow these steps to create a Product bundle:
 
    A new Option template is created and applied to your Product using the default Option settings.
 
-   ```tip::
-      Alternatively, you can create an Option Template via the *Options* page in the Commerce tab of the Global Menu. This method is best for commonly used types of bundles. See `Using Product Options <./using-product-options.md>`_ for more information.
+   ```{tip}
+   Alternatively, you can create an Option Template via the *Options* page in the Commerce tab of the Global Menu. This method is best for commonly used types of bundles. See [Using Product Options](./using-product-options.md) for more information.
    ```
 
    ![Go to the Product's Options tab, and create a new Option for your bundle.](./creating-product-bundles/images/01.png)
@@ -36,10 +36,10 @@ Follow these steps to create a Product bundle:
    * **Field Type**: Choose the type of field used for the Option.
    * **Price Type**: Choose whether to use *Static* or *Dynamic* pricing for Option values.
 
-      ```note::
-         *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the current Product's base price.
+      ```{note}
+      *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the current Product's base price.
 
-         Also, since Product bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
+      Also, since Product bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
       ```
 
    ![This form is used to configure the Option's settings.](./creating-product-bundles/images/02.png)
@@ -60,18 +60,18 @@ Follow these steps to create a Product bundle:
    * **Delta Price** (For Static Only): Set a specific price for the value.
    * **Product**: Link an existing SKU to the value and specify its quantity.
 
-   ```important::
-      Each of the Option's values must be unique. This means the same Product+quantity combination cannot be used for multiple values in the same Option. However, the same value can be used in other Options added to the Product.
+   ```{important}
+   Each of the Option's values must be unique. This means the same Product+quantity combination cannot be used for multiple values in the same Option. However, the same value can be used in other Options added to the Product.
 
-      Also bundle values cannot link to other Product bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
+   Also bundle values cannot link to other Product bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
    ```
 
 1. (Optional) If SKU Contributor is enabled for your Option, go to the *SKUs* tab in the Product's Page, click the Add Button, and select *Generate All SKU Combinations*.
 
    This generates a new SKU for each Option value, which you can edit in the SKUs tab.
 
-   ```important::
-      When enabled, customers *must* select a value, even if Required is not enabled for the Option.
+   ```{important}
+   When enabled, customers *must* select a value, even if Required is not enabled for the Option.
    ```
 
 1. Verify your Product Bundle appears in the Product's Display Page.  
