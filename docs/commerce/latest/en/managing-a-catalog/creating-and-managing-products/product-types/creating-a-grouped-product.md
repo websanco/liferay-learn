@@ -5,19 +5,12 @@ In Liferay Commerce, a Grouped Product consists of two or more Products from a C
 To get started, [create](#create-a-grouped-product) a Grouped Product and [add](#adding-product-entries) new Product entries to it. Then, configure the Grouped Product and SKU.
 
 ```{note}
-Besides Grouped Products, Liferay Commerce also supports the creation of Product Bundles. Product Bundles are created using Product Options which lets the user easily customize various aspects of a Product. Take the case of a pre-built computer. The user has the liberty to choose the processor, storage, RAM and graphics card. Based on the user's chosen configuration, the final price of the Product Bundle is calculated. See [Creating Product Bundles](../products/creating-product-bundles.md) and [Product Options](../products/using-product-options.md) for more information.
+In addition to Grouped Products, Liferay Commerce supports the creation of Product bundles using [Product Options](../products/using-product-options.md). With Options, you can define values that link the current Product to other SKUs to be purchased together. The final price is calculated based on the Option's configuration. See [Creating Product Bundles](../products/creating-product-bundles.md) and [Product Options](../products/using-product-options.md) for more information.
 ```
 
 ## Prerequisites
 
-Before creating a Grouped Product, ensure that the following conditions have been met:
-
-1. All Products you want to add to the Grouped Product have been created in the Catalog.
-
-    * All SKUs have been generated.
-    * All prices have been set.
-
-1. Each Product has sufficient inventory.
+Before creating a Grouped Product, ensure you've already generated all of the SKUs you want to group together. At minimum, each SKU should have a set base price and sufficient inventory.
 
 ## Create a Grouped Product
 

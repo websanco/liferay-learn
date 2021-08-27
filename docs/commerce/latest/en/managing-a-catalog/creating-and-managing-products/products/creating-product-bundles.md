@@ -1,11 +1,11 @@
 # Creating Product Bundles
 
-With Liferay Commerce, you can create *Product bundles* using [Product Options](./using-product-options.md). Bundles are combinations of goods or services that customers can purchase together as a single package.
+Liferay Commerce supports the creation of *Product bundles* using [Product Options](./using-product-options.md). With Options, you can define values that link the current Product with other SKUs, whether Simple, Virtual, or Grouped. Once defined, customers can select between Option values when adding the Product to their cart.
 
-For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the Product's base price.
+For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the price of the current Product.
 
 ```{note}
-Besides Product Bundles, Liferay Commerce also supports the creation of Grouped Products to combine Product SKUs for sale. Unlike Product Bundles, Grouped Products are offered at a fixed price. They consist of Products from a Catalog in static configurations, sold either for customer convenience, as part of promotions or to offer special deals. As a prerequisite, all SKUs should be generated and their prices should be set before the creation of a Grouped Product. See [Creating a Grouped Product](../product-types/creating-a-grouped-product.md) for more details.
+In addition to Product bundles, Liferay Commerce provides Grouped Products for combining multiple SKUs for sale. This Product type groups SKUs for customer convenience or special promotions. Unlike Product bundles, each Grouped Product has its own SKU, and its final cost is determined by its own price entry. See [Creating a Grouped Product](../product-types/creating-a-grouped-product.md) for more details.
 ```
 
 Follow these steps to create a Product bundle:
@@ -37,9 +37,9 @@ Follow these steps to create a Product bundle:
    * **Price Type**: Choose whether to use *Static* or *Dynamic* pricing for Option values.
 
       ```note::
-         *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the Product's base price.
+         *Dynamic* uses the link SKU's price for a value, while *Static* uses a fixed price set directly in the value. Dynamic and Static prices are added to the current Product's base price.
 
-         Also, since Product Bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
+         Also, since Product bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
       ```
 
    ![This form is used to configure the Option's settings.](./creating-product-bundles/images/02.png)
@@ -63,7 +63,7 @@ Follow these steps to create a Product bundle:
    ```important::
       Each of the Option's values must be unique. This means the same Product+quantity combination cannot be used for multiple values in the same Option. However, the same value can be used in other Options added to the Product.
 
-      Also bundle values cannot link to other Product Bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
+      Also bundle values cannot link to other Product bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
    ```
 
 1. (Optional) If SKU Contributor is enabled for your Option, go to the *SKUs* tab in the Product's Page, click the Add Button, and select *Generate All SKU Combinations*.
