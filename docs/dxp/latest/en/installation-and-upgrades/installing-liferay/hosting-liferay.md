@@ -48,7 +48,7 @@ To get started,
 
 ## What's Next 
 
-After installing Liferay, go to [Setting Up Liferay](../setting-up-liferay.html) to configure these options:
+After installing Liferay, go to [Setting Up Liferay](../setting-up-liferay.md) to configure these options:
 
 * Search
 * Localization
