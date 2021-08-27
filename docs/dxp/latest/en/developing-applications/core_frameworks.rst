@@ -10,7 +10,7 @@ Core Frameworks
    core-frameworks/scheduler.md
    core-frameworks/dispatch_framework.rst
    core-frameworks/template-engine.md
-   core-frameworks/configurable-applications.md
+   core-frameworks/configuration-framework.md
    core-frameworks/reference.rst
 
 .. raw:: html

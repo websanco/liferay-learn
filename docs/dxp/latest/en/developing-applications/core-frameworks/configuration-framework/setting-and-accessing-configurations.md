@@ -9,10 +9,10 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
     ```bash
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
-1. Download and unzip [Setting and Accessing Configurations](./liferay-e3q3.zip).
+1. Download and unzip [Setting and Accessing Configurations](./liferay-n2f3.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-applications/liferay-e3q3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-applications/liferay-n2f3.zip -O
     ```
 
     ```bash
@@ -53,11 +53,11 @@ Here's how the configuration framework works.
 
 ## Creating the Configuration Interface
 
-Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md). 
+Defining configurable attributes in a configuration interface is enough to generate a configuration UI in [System Settings](../../../system-administration/configuring-liferay/system-settings.md).
 
-In the sample project, the `N2F3WebConfiguration.java` file is the configuration interface. 
+In the sample project, the `N2F3WebConfiguration.java` file is the configuration interface.
 
-```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/configuration/E3Q3WebConfiguration.java
+```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/configuration/N2F3WebConfiguration.java
 :language: java
 :lines: 5-17
 ```
@@ -66,7 +66,7 @@ Note, for this example interface the scope is set to `Scope.COMPANY`. See [Scopi
 
 The interface has three configurable attributes: font color, font family, and font size. Note that color and family are type `string` and size is type `int`.
 
-`Meta.OCD` registers this class as a configuration with a specific ID. 
+`Meta.OCD` registers this class as a configuration with a specific ID.
 
 ```{important}
 Note that the ID must be the fully qualified class name (FQCN) of the configuration interface.
@@ -86,7 +86,7 @@ Next, see how the configuration is read by the MVC Portlet.
 
 1. To access the configuration, the `render()` method utilizes a `ConfigurationProvider`. The Configuration Provider API provides methods to retrieve a configuration at different levels of scope. The sample project's configuration is instance scoped and uses the `getCompanyConfiguration()` method to retrieve the configuration.
 
-    ```{literalinclude} ./setting-and-accessing-configurations/resources/liferay-e3q3.zip/e3q3-web/src/main/java/com/acme/e3q3/web/internal/portlet/E3Q3Portlet.java
+    ```{literalinclude} ./scoping-configurations/resources/liferay-n2f3.zip/n2f3-web/src/main/java/com/acme/n2f3/web/internal/portlet/N2F3Portlet.java
     :dedent: 1
     :language: java
     :lines: 44-51
@@ -107,7 +107,7 @@ This class has one method that returns the configuration interface class of your
 
 ## Accessing the Configuration from a JSP
 
-1. The following import statement adds the configuration interface to the JSP: 
+1. The following import statement adds the configuration interface to the JSP:
 
     ```markup
     <%@ page import="com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration" %>
@@ -121,7 +121,7 @@ This class has one method that returns the configuration interface class of your
     %>
     ```
 
-1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` can now be used in the JSP. 
+1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` can now be used in the JSP.
 
 ## Implementing a Dropdown Selection UI
 
