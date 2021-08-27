@@ -27,7 +27,7 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
     ```
 
     ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -47,9 +47,9 @@ The first drop-down list is populated manually with the `@Meta.AD` annotation. T
 [Create a configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) and set the configuration field name to be populated.
 
 ```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/Z4H3Configuration.java
-   :dedent: 1
-   :language: java
-   :lines: 11-22
+:dedent: 1
+:language: java
+:lines: 11-22
 ```
 
 In the sample project, `providerPopulatedColors` is the configuration field name to be populated.
@@ -59,16 +59,16 @@ In the sample project, `providerPopulatedColors` is the configuration field name
 Create a new class that implements the `ConfigurationFieldOptionsProvider` class. 
 
 ```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
-   :language: java
-   :lines: 14-20
+:language: java
+:lines: 14-20
 ```
 
 Use the `@Component` annotation to register the service. Include the `configuration.field.name` from the previous step. Set the `configuration.pid` to the fully qualified class name of the configuration interface.
 
 ```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/admin/definition/Z4H3ConfigurationFieldOptionsProvider.java
-   :dedent: 1
-   :language: java
-   :lines: 24-46
+:dedent: 1
+:language: java
+:lines: 24-46
 ```
 
 Add a `getOptions` method to return a list of `Option`s. The sample project includes an array that sets the `optionValue` as a string of a color and sets the `optionLabel` as the string stored in the `Langauge.properties` file of that color.
