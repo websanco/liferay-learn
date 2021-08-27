@@ -115,7 +115,7 @@ The `build.gradle` file specifies the module's dependencies.
 
 It depends on one artifact: the Liferay release API JAR. It is a large JAR packed with Liferay, Bnd, and OSGi artifacts associated with the Liferay product release.
 
-The module's name is *Acme R9U2 API*. Its symbolic name--a name that ensures uniqueness--is `com.acme.r9u2.api`. Its semantic version is declared next, and its package is *exported*, which means it's made available to other modules. This module's package is just an API other modules can implement. 
+The module's name is *Acme R9U2 API*. Its symbolic name---a name that ensures uniqueness---is `com.acme.r9u2.api`. Its semantic version is declared next, and its package is *exported*, which means it's made available to other modules. This module's package is just an API other modules can implement. 
 
 Finally, there's the Java class, which in this case is an interface:
 
@@ -153,7 +153,7 @@ It has the same structure as the API module: a build script, a `bnd.bnd` configu
 
 The bundle name, symbolic name, and version are all set similarly to the API. 
 
-Finally, there's no `Export-Package` declaration. A client (which is the project's third module) just wants to use the API: it doesn't care how its implementation works as long as the API returns what it's supposed to return. The client, then, only needs to declare a dependency on the API; the service registry injects the appropriate implementation at runtime. 
+Finally, there's no `Export-Package` declaration. A client (which is the project's third module) just wants to use the API: it doesn't care how its implementation works as long as the API returns what it's supposed to return. The client, then, only needs to declare a dependency on the API; the service registry injects the appropriate implementation at run time. 
 
 Pretty cool, eh? 
 
