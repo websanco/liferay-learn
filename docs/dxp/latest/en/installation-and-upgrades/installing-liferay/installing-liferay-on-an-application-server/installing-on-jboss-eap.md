@@ -57,8 +57,8 @@ Installing DXP on JBoss EAP takes the following steps:
 
     The `osgi` folder provides the necessary modules for the OSGi runtime.
 
-```note::
-   A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
+```{note}
+A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
 ```
 
 **Checkpoint:**
@@ -75,8 +75,8 @@ DXP supports JBoss EAP when it runs in standalone mode but not when it runs in d
 
 The command line interface is recommended for domain mode deployments.
 
-```note::
-   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
+```{note}
+This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## Configuring JBoss
@@ -161,8 +161,8 @@ In the `$JBOSS_HOME/bin/` folder, modify the standalone domain's configuration s
 * Set the preferred protocol stack
 * Increase the default amount of memory available.
 
-```important::
-   For DXP to work properly, the application server JVM must use the ``GMT`` time zone and ``UTF-8`` file encoding.
+```{important}
+For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
 Make the following edits as applicable to the respective operating system:
@@ -208,23 +208,23 @@ Make the following edits as applicable to the respective operating system:
     -Djava.locale.providers=JRE,COMPAT,CLDR
     ```
 
-    ```note::
-       If using the IBM JDK with the JBoss server, complete these additional steps:
+    ```{note}
+    If using the IBM JDK with the JBoss server, complete these additional steps:
     ```
 
 1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert the following dependency within the `<dependencies>` element:
 
-     `<module name="ibm.jdk" />`
+    `<module name="ibm.jdk" />`
 
 1. Navigate to the `$JBOSS_HOME/modules/system/layers/base/sun/jdk/main/module.xml` file and insert the following path names inside the `<paths>...</paths>` element:
 
-```xml
+    ```xml
     <path name="com/sun/crypto" />
     <path name="com/sun/crypto/provider" />
     <path name="com/sun/image/codec/jpeg" />
     <path name="com/sun/org/apache/xml/internal/resolver" />
     <path name="com/sun/org/apache/xml/internal/resolver/tools" />
-```
+    ```
 
 The added paths resolve issues with portal deployment exceptions and image uploading problems.
 
@@ -259,8 +259,8 @@ If using JBoss to manage the data source, follow these steps:
 
     Make sure to replace the database URL, user name, and password with the appropriate values.
 
-    ```note::
-       If the data source ``jndi-name`` must be changed, edit the ``datasource`` element in the ``<default-bindings>`` tag.
+    ```{note}
+    If the data source `jndi-name` must be changed, edit the `datasource` element in the `<default-bindings>` tag.
     ```
 
 1. Add the driver to the `standalone.xml` file's `<drivers>` element also found within the `<datasources>` element.

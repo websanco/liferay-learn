@@ -61,8 +61,8 @@ Installing Liferay DXP on WildFly requires the following steps:
 
    The `osgi` folder provides the necessary modules for the OSGi runtime.
 
-```note::
-   A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
+```{note}
+A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
 ```
 
 **Checkpoint:**
@@ -81,8 +81,8 @@ Administrators can run DXP on WildFly in domain mode, but this method is not ful
 
 The command line interface is recommended for domain mode deployments.
 
-```note::
-   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
+```{note}
+This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## Configuring WildFly
@@ -167,8 +167,8 @@ In the `$WILDFLY_HOME/bin/` folder, open the standalone domain's configuration s
 * Set the preferred protocol stack
 * Increase the default amount of memory available.
 
-```important::
-   For DXP to work properly, the application server JVM must use the ``GMT`` time zone and ``UTF-8`` file encoding.
+```{important}
+For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
 Make the following edits as applicable for the respective operating system:
@@ -225,12 +225,12 @@ If using the IBM JDK with the WildFly server, complete the following additional 
 
 1. Navigate to the `$WILDFLY_HOME/modules/system/layers/base/sun/jdk/main/module.xml` file and insert the following path names inside the `<paths>...</paths>` element:
 
-```xml
-     <path name="com/sun/crypto" />
-     <path name="com/sun/crypto/provider" />
-     <path name="com/sun/org/apache/xml/internal/resolver" />
-     <path name="com/sun/org/apache/xml/internal/resolver/tools" />
-```
+    ```xml
+    <path name="com/sun/crypto" />
+    <path name="com/sun/crypto/provider" />
+    <path name="com/sun/org/apache/xml/internal/resolver" />
+    <path name="com/sun/org/apache/xml/internal/resolver/tools" />
+    ```
 
 The added paths resolve issues with deployment exceptions and image uploading problems.
 
@@ -264,8 +264,8 @@ If using WildFly to manage the data source, follow these steps:
 
     Make sure to replace the database URL, user name, and password with the appropriate values.
 
-    ```note::
-       If the data source ``jndi-name`` must be changed, edit the ``datasource`` element in the ``<default-bindings>`` tag.
+    ```{note}
+    If the data source `jndi-name` must be changed, edit the `datasource` element in the `<default-bindings>` tag.
     ```
 
 1. Add the driver to the `standalone.xml` file's `<drivers>` element also found within the `<datasources>` element.
@@ -344,8 +344,8 @@ If you want to manage your mail session with WildFly, follow these steps:
 1. To trigger deployment of `ROOT.war`, create an empty file named `ROOT.war.dodeploy` in the `$WILDFLY_HOME/standalone/deployments/` folder. On startup, WildFly detects this file and deploys it as a web application.
 1. Start the WildFly application server by navigating to `$WILDFLY_HOME/bin` and running `standalone.bat` or `standalone.sh`.
 
-```note::
-   After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving ``PhaseOptimizer``. These are benign and can be ignored. Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
+```{note}
+After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
 ```
 
 ```
