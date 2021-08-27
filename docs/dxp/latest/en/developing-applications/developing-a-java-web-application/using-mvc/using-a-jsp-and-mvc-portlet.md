@@ -68,9 +68,9 @@ There are two steps for building the example portlet:
 In the module's `src/main/resources/META-INF/resources` folder, create a JSP file to be your view template. The file name is arbitrary; the example JSP file is `view.jsp`. Here is the JSP content.
 
 ```javascript
-<p>
-	<b>Hello W3E7</b>
-</p>
+<h4>W3E7 Portlet</h4>
+
+<b>Hello W3E7</b>
 ```
 
 The markup above displays "Hello W3E7" in bold.

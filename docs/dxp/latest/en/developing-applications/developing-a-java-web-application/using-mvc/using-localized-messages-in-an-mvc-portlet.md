@@ -60,12 +60,14 @@ Language property files for other locales can also be included in the folder. Fo
 
 Create your JSP file and add it to your module's `/src/main/resources/META-INF/resources` folder.
 
-The example project includes a `view.jsp` file with a simple welcome header that uses the liferay-ui tag library.
+The example project includes a `view.jsp` file with a simple welcome message that uses the liferay-ui tag library.
 
 ```jsp
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<h1><liferay-ui:message key="b6f5-portlet-welcome" /></h1>
+<h4>B6F5 Portlet</h4>
+
+<b><liferay-ui:message key="b6f5-portlet-welcome" /></b>
 ```
 
 Note that there is an extra `liferay-ui:message` included in the example jsp file: 
