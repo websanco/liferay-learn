@@ -4,13 +4,15 @@ With Liferay Commerce, you can create *Product bundles* using [Product Options](
 
 For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the Product's base price.
 
-<!--TASK: Insert admonition delineating the difference between Grouped Products and Product bundles.-->
+```{note}
+Besides Product Bundles, Liferay Commerce also supports the creation of Grouped Products to combine Product SKUs for sale. Unlike Product Bundles, Grouped Products are offered at a fixed price. They consist of Products from a Catalog in static configurations, sold either for customer convenience, as part of promotions or to offer special deals. As a prerequisite, all SKUs should be generated and their prices should be set before the creation of a Grouped Product. See [Creating a Grouped Product](../product-types/creating-a-grouped-product.md) for more details.
+```
 
 Follow these steps to create a Product bundle:
 
 1. Open the *Global Menu*, click on the *Commerce* tab, and go to *Product Management* &rarr; *Products*.
 
-1. Click on the *Product* you want to use for the bundle's base Product, and go to the *Options* tab.
+1. Click on the *Product* you want to use as the base Product for the bundle, and go to the *Options* tab.
 
 1. In the *Add Options* field, enter a *name* for your new bundle Option, and click on *Create New*.
 
@@ -40,7 +42,7 @@ Follow these steps to create a Product bundle:
          Also, since Product Bundles use the *Price Type* attribute, they can only use the *Single Selection* and *Select from List* field types.
       ```
 
-   ![Configure the Option's settings](./creating-product-bundles/images/02.png)
+   ![This form is used to configure the Option's settings.](./creating-product-bundles/images/02.png)
 
 1. Scroll down to Values, click the *Add* button (![Add Button](../../../images/icon-add.png)), and enter the following details for your value:
 
@@ -50,7 +52,7 @@ Follow these steps to create a Product bundle:
 
    Repeat this process until you've added all the desired values.
 
-   ![Add values to the Product.](./creating-product-bundles/images/03.png)
+   ![Use this form to add values to the created Option.](./creating-product-bundles/images/03.png)
 
 1. Once created, click on a value to access these additional settings:
 
@@ -61,7 +63,7 @@ Follow these steps to create a Product bundle:
    ```important::
       Each of the Option's values must be unique. This means the same Product+quantity combination cannot be used for multiple values in the same Option. However, the same value can be used in other Options added to the Product.
 
-      Also bundle values cannot link to other Product bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
+      Also bundle values cannot link to other Product Bundles, to Products with a *required* option, or to Products with *subscription* enabled. If the bundle uses *dynamic* pricing, it can only link to *APPROVED* Product instances.
    ```
 
 1. (Optional) If SKU Contributor is enabled for your Option, go to the *SKUs* tab in the Product's Page, click the Add Button, and select *Generate All SKU Combinations*.
@@ -72,9 +74,9 @@ Follow these steps to create a Product bundle:
       When enabled, customers *must* select a value, even if Required is not enabled for the Option.
    ```
 
-1. Verify your Product bundle appears in the Product's Display Page.  
+1. Verify your Product Bundle appears in the Product's Display Page.  
 
-![Customers can select from Product bundle Options in the Product's Display Page](./creating-product-bundles/images/04.png)
+![Customers can make a selection from the Product Bundle Options on the Product's Display Page.](./creating-product-bundles/images/04.png)
 
 ## Additional Information
 

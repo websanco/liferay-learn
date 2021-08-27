@@ -4,7 +4,9 @@ In Liferay Commerce, a Grouped Product consists of two or more Products from a C
 
 To get started, [create](#create-a-grouped-product) a Grouped Product and [add](#adding-product-entries) new Product entries to it. Then, configure the Grouped Product and SKU.
 
-<!--TASK: Insert admonition delineating the difference between Grouped Products and Product bundles. -->
+```{note}
+Besides Grouped Products, Liferay Commerce also supports the creation of Product Bundles. Product Bundles are created using Product Options which lets the user easily customize various aspects of a Product. Take the case of a pre-built computer. The user has the liberty to choose the processor, storage, RAM and graphics card. Based on the user's chosen configuration, the final price of the Product Bundle is calculated. See [Creating Product Bundles](../products/creating-product-bundles.md) and [Product Options](../products/using-product-options.md) for more information.
+```
 
 ## Prerequisites
 
@@ -61,33 +63,33 @@ Once you've created the Grouped Product and associated other Products with it, s
     * **Meta Title**: Brakes Set Combo Kit
 1. Click _Publish_.
 
-Once the Grouped Product entity has been initially created, store administrators will need to associate the individual products to the grouped product entry.
+Once the Grouped Product entity has been initially created, store administrators will need to associate the individual Products to the Grouped Product entry.
 
 ### Associate Products in Group
 
 1. Click the _Grouped_ sub-tab.
 
-   ![Grouped Sub-Tab](./creating-a-grouped-product/images/03.png)
+   ![The Grouped sub-tab lets the user group Products together.](./creating-a-grouped-product/images/03.png)
 
 1. Click the (![Add icon](../../../images/icon-add.png)) button to add a Grouped Entry.
 1. Select the following products: _Brake Fluid_, _Brake Pads_, and _Brake Rotors_.
 1. Click _Add_.
 
-    ![Grouped Sub-Tab](./creating-a-grouped-product/images/04.png)
+    ![Select the Products to be added to the Grouped Product.](./creating-a-grouped-product/images/04.png)
 
 Next, specify the priority (the order in which they are displayed), and the quantity sold in each package. Click the _3-dot_ icon then _Edit_ next to any of the products.
 
-![Adding a Product to a Grouped Product](./creating-a-grouped-product/images/05.png)
+![Configure the Grouped Product's Priority.](./creating-a-grouped-product/images/05.png)
 
-In the image above, the product has been given priority 1.0 which means it will be listed first. Assign incremental values to the other products.
+In the image above, the Product has been given priority 1.0 which means it will be listed first. Assign incremental values to the other Products.
 
-![Grouped Product Priority](./creating-a-grouped-product/images/06.png)
+![The Product Priority decides the order of the Products within a Grouped Product with lower values appearing first.](./creating-a-grouped-product/images/06.png)
 
-Once the products have been grouped, follow the sections above to add Product Options, Generate SKUs, and set the prices. In addition, see the above sections on how to add Product Options, Specifications or upload Product Images.
+Once the Products have been grouped, follow the sections above to add Product Options, Generate SKUs, and set the prices. In addition, see the above sections on how to add Product Options, Specifications or upload Product Images.
 
 ### Setting Prices and Quantities on Liferay Commerce 2.0 and Below
 
-To set product prices and quantities for a Grouped product:
+To set prices and quantities for a Grouped Product:
 
 1. Click the _SKU_ tab.
 1. Click the _3-dot_ icon then _Edit_ next to _default_. (At this point, you can rename the SKU to something more descriptive like _Brakes Set Combo Kit_ on the _Details_ menu.)
@@ -97,7 +99,7 @@ To set product prices and quantities for a Grouped product:
     * **Promo Price**: 0.00
     * **Cost**: 0.00
 
-        ![Grouped Product Pricing](./creating-a-grouped-product/images/08.png)
+        ![Configure the Grouped Product's Pricing.](./creating-a-grouped-product/images/08.png)
 
 1. Click _Save_. (If Promo Price and Cost fields are left as 0.00, no discounts or promotions are applied at this point.)
 1. Click _Price List_ to apply this product to any existing [Price Lists](../../managing-prices/adding-products-to-a-price-list.md).
