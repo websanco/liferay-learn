@@ -33,7 +33,8 @@ public class U8T2Portlet extends MVCPortlet {
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoking #doSomethingElse(ActionRequest, ActionResponse)");
+			_log.info(
+				"Invoking #doSomethingElse(ActionRequest, ActionResponse)");
 		}
 	}
 
@@ -42,7 +43,8 @@ public class U8T2Portlet extends MVCPortlet {
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoking #doSomethingMore(ActionRequest, ActionResponse)");
+			_log.info(
+				"Invoking #doSomethingMore(ActionRequest, ActionResponse)");
 		}
 	}
 

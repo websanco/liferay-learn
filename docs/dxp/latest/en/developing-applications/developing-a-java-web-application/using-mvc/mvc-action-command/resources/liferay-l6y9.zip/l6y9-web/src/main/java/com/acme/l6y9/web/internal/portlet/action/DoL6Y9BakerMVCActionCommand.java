@@ -24,7 +24,8 @@ public class DoL6Y9BakerMVCActionCommand extends BaseMVCActionCommand {
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
 		if (_log.isInfoEnabled()) {
-			_log.info("Invoking #doProcessAction(ActionRequest, ActionResponse)");
+			_log.info(
+				"Invoking #doProcessAction(ActionRequest, ActionResponse)");
 		}
 	}
 

@@ -20,8 +20,7 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = MVCResourceCommand.class
 )
-public class P8V5DownloadMVCResourceCommand
-	implements MVCResourceCommand {
+public class P8V5DownloadMVCResourceCommand implements MVCResourceCommand {
 
 	@Override
 	public boolean serveResource(
