@@ -261,27 +261,30 @@ function unzip_reference_docs {
 	# liferay-ce-portal-doc-*.zip
 	#
 
-	curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/"${LIFERAY_LEARN_PORTAL_DOC_FILE_NAME}" > liferay-ce-portal-doc.zip
+	if [[ ${1} != *".md" ]]
+	then
+		curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/"${LIFERAY_LEARN_PORTAL_DOC_FILE_NAME}" > liferay-ce-portal-doc.zip
 
-	7z x liferay-ce-portal-doc.zip
+		7z x liferay-ce-portal-doc.zip
 
-	mv liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/* ./build/output/reference/latest/en/dxp
+		mv liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/* ./build/output/reference/latest/en/dxp
 
-	rmdir liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}
+		rmdir liferay-ce-portal-doc-${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}
 
-	rm -f liferay-ce-portal-doc.zip
+		rm -f liferay-ce-portal-doc.zip
 
-	#
-	# portlet-api-3.0.1-javadoc.jar
-	#
+		#
+		# portlet-api-3.0.1-javadoc.jar
+		#
 
-	curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
+		curl https://repo1.maven.org/maven2/javax/portlet/portlet-api/3.0.1/portlet-api-3.0.1-javadoc.jar -O
 
-	mkdir ../site/build/output/reference/latest/en/dxp/portlet-api
+		mkdir ../site/build/output/reference/latest/en/dxp/portlet-api
 
-	7z x -o../site/build/output/reference/latest/en/portlet-api portlet-api-3.0.1-javadoc.jar
+		7z x -o../site/build/output/reference/latest/en/portlet-api portlet-api-3.0.1-javadoc.jar
 
-	rm -f portlet-api-3.0.1-javadoc.jar
+		rm -f portlet-api-3.0.1-javadoc.jar
+	fi
 }
 
 function main {
@@ -295,7 +298,7 @@ function main {
 
 	generate_static_html
 
-	unzip_reference_docs
+	unzip_reference_docs ${1}
 
 	upload_to_server
 
