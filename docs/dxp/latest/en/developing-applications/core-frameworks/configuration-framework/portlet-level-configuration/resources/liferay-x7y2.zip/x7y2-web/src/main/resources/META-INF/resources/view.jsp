@@ -4,6 +4,8 @@
 
 <portlet:defineObjects />
 
+<h4>X7Y2 Portlet</h4>
+
 <%
 String color = (String)portletPreferences.getValue("color", "");
 

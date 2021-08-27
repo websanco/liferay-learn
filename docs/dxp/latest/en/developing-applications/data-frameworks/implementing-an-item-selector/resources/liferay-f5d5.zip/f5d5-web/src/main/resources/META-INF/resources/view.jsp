@@ -6,6 +6,8 @@
 
 <portlet:defineObjects />
 
+<h4>F5D5 Portlet</h4>
+
 <clay:button
 	id='<%= liferayPortletResponse.getNamespace() + "selectRoleButton" %>'
 	label="Select"

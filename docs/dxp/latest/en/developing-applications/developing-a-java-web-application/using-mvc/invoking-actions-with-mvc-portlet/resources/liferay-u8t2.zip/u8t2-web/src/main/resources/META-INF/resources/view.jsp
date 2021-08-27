@@ -2,6 +2,8 @@
 
 <portlet:actionURL name="doSomething" var="actionURL" />
 
+<h4>U8T2 Portlet</h4>
+
 <p>
 	<a href="<%= actionURL %>">Do Something</a>
 </p>

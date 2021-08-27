@@ -2,6 +2,8 @@
 
 <%@ page import="com.acme.n2f3.web.internal.configuration.N2F3WebConfiguration" %>
 
+<h4>N2F3 Portlet</h4>
+
 <%
 N2F3WebConfiguration n2f3WebConfiguration = (N2F3WebConfiguration)request.getAttribute(N2F3WebConfiguration.class.getName());
 %>
