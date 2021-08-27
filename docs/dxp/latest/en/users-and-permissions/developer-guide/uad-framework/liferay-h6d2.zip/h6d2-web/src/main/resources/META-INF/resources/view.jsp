@@ -15,39 +15,36 @@ page import="com.acme.h6d2.service.H6D2LocalServiceUtil" %>
 
 <portlet:defineObjects />
 
+<h4>H6D2 Portlet</h4>
+
+<portlet:actionURL name="addH6D2" var="addH6D2Url" />
+
 <p>
-	<b><liferay-ui:message key="h6d2-portlet-welcome" /></b>
-</p>
-
-<div class="container">
-	<portlet:actionURL name="addH6D2" var="addH6D2Url">
-	</portlet:actionURL>
-
 	<aui:form action="<%= addH6D2Url %>">
-		<aui:input name="item" style="width: 50%;" type="text" />
+		<aui:input name="item" type="text" />
 
 		<aui:button type="submit" value="submit" />
 	</aui:form>
-</div>
+</p>
 
 <%
 List<H6D2> h6d2List = H6D2LocalServiceUtil.getH6D2s(-1, -1);
 %>
 
-<h4>Todo List</h4>
+<h5>Todos</h5>
 <c:choose>
 	<c:when test="<%= (h6d2List != null) && (h6d2List.size() > 0) %>">
 		<table>
 			<tbody>
-				<c:forEach items="<%= h6d2List %>" var="H6D2">
+				<c:forEach items="<%= h6d2List %>" var="h6d2">
 					<tr>
-						<td>${H6D2.todo }</td>
+						<td>${h6d2.todo }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</c:when>
 	<c:otherwise>
-		List is empty
+		<em>None</em>
 	</c:otherwise>
 </c:choose>
