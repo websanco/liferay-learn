@@ -60,7 +60,7 @@
 			<action>
 				<name>reject</name>
 				<script>
-					<![CDATA[com.acme.e5c9.kaleo.runtime.scripting.internal.action.E5C9ActionExecutor]]>
+					<![CDATA[com.acme.e5c9.internal.kaleo.runtime.action.executor.E5C9ActionExecutor]]>
 				</script>
 				<script-language>java</script-language>
 				<execution-type>onAssignment</execution-type>
@@ -194,7 +194,7 @@
 			<action>
 				<name>approve</name>
 				<script>
-					<![CDATA[com.acme.e5c9.kaleo.runtime.scripting.internal.action.E5C9ActionExecutor]]>
+					<![CDATA[com.acme.e5c9.internal.kaleo.runtime.action.executor.E5C9ActionExecutor]]>
 				</script>
 				<script-language>java</script-language>
 				<execution-type>onEntry</execution-type>
