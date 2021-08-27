@@ -1,6 +1,6 @@
 # Field Options Provider
 
-You can populate a [drop-down list manually](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `@Meta.AD` annotation of the configuration interface. But you can also populate the option labels and values automatically with the `ConfigurationFieldOptionsProvider` class. This is very useful when you want to populate a drop-down list dynamically. For example, you can fetch a list of objects from a web service or even iterate through a database to dynamically populate the drop-down list.
+You can populate a [drop-down list manually](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) in the `@Meta.AD` annotation of the configuration interface. But you can also populate the option labels and values automatically with the `ConfigurationFieldOptionsProvider` class. This is useful when you want to populate a drop-down list dynamically. For example, you can fetch a list of objects from a web service or iterate through a database to populate the drop-down list dynamically.
 
 ## Deploy the Tutorial Code
 
@@ -38,7 +38,7 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
 
 1. Open your browser to `https://localhost:8080` and navigate to *Control Panel* &rarr; *Configuration* &rarr; *System Settings*. Under Platform click *Third Party*. Click *Z4H3 Configuration* on the left.
 
-    ![The settings UI shows two dropdown lists.](./field-options-provider/images/01.png)
+    ![The settings UI shows two drop-down lists.](./field-options-provider/images/01.png)
 
 The first drop-down list is populated manually with the `@Meta.AD` annotation. The second drop-down list is populated with the field options provider.
 
