@@ -40,6 +40,7 @@
 * [Templates](#templates)
     * [Naming JSP Files](#naming-jsp-files)
     * [Use the Portlet Title in the Main Views](#use-the-portlet-title-in-the-main-views)
+    * [Wrap Subtitles and Section Names in h5 Tags](#wrap-subtitles-and-section-names-in-h5-tags)
 * [Review Process](#review-process)
     * [Run update_examples.sh](#run-update_examplessh)
     * [Test Your Code](#test-your-code)
@@ -457,6 +458,18 @@ Add the portlet title to your main view(s) using this format and replacing `XXXX
 
 ```html
 <h4>XXXX Portlet</h4>
+```
+
+### Wrap Subtitles and Section Names in h5 Tags
+
+Wrap subtitles and section labels in `h5` tags--NOT bold `b` tags.
+
+```html
+<h5>Hello XXXX.</h5>
+```
+
+```html
+<h5>some section</h5>
 ```
 
 ## Review Process 
