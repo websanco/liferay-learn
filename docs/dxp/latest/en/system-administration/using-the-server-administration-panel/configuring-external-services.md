@@ -1,57 +1,72 @@
 # Configuring External Services
 
-There are several external services that can be added on to a Liferay DXP installation to improve user experience.
+Liferay provides integration with external services for converting files and generating file previews. Three of these services can be enabled in the Server Administration settings: [ImageMagick](https://www.imagemagick.org/script/index.php), [Ghostscript](https://www.ghostscript.com/), and [Xuggler](http://www.xuggle.com/xuggler/).
 
-## Enabling Document Previews
-
-Liferay DXP Users can upload and share any type of file via the Documents and Media library, a customizable and permissions-enabled online repository for files (see [Publishing and Sharing](./../../content-authoring-and-management/documents-and-media/publishing_and_sharing.html) for more information).
-
-[PDFBox](https://pdfbox.apache.org/) by default generates Liferay DXP's automatic previews for certain file types (mostly PDFs). You can install two additional tools to generate previews for other file types:
-
-<!--
--   [**OpenOffice:**](https://www.openoffice.org/) or [**LibreOffice:**](https://www.libreoffice.org/)
-    Convert and generate previews for many types of documents.
--->
-
-* [**ImageMagick:**](https://www.imagemagick.org/script/index.php) Generate higher-quality image previews for many types of images.
-
-* [**Xuggler:**](http://www.xuggle.com/xuggler/) Convert and generate previews for audio and video files.
+```{important}
+As of Liferay 7.3.x, the Xuggler integration is deprecated. Users are advised to use Liferay's FFmpeg integration as an alternative. See [Enabling FFmpeg for Audio and Video Previews](../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md) for more information.
+```
 
 ![Enable ImageMagick, Ghostscript, and Xuggler from the External Services tab.](./configuring-external-services/images/01.png)
 
-```note::
-   As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to `System Settings and find the OpenOffice Integration <../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md>`_ entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
+Each external service must be installed on the server before it can be enabled for your Liferay instance. When installing the service, be sure to use the latest stable version for your operating system, as older versions may not run properly with Liferay DXP.
+
+After installing these services, configure your Liferay instance to use them via the Control Panel's Server Administration page.
+
+```{note}
+As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. See [Enabling OpenOffice/LibreOffice Integration](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) for more information.
 ```
 
-First install ImageMagick and Xuggler on the server, then use the Server Administration app's External Services tab to configure their use with Liferay DXP. Make sure to choose the correct versions of these tools for your operating system. Install the latest stable versions, as older versions may not run properly with Liferay DXP. ImageMagick must be installed manually, but you can install Xuggler from the Control Panel.
+## Enabling ImageMagick and Ghostscript
 
-```tip:::
-   Xuggler requires glibc version 2.6 or later on Linux.
+By default, Documents and Media uses [PDFBox](https://pdfbox.apache.org/) to generate previews. [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/) provide faster and higher-quality previews and conversions and supports more image file types. To work, both services must be installed and enabled together.
+
+```{note}
+Depending on your OS, these services may already be installed. If you're on Linux, both are likely already installed. However, they are not likely to be installed on Windows, while they may be on macOS.
 ```
 
-### Configuring ImageMagick in Server Administration
+Once both ImageMagick and Ghostscript are installed on the server, follow these steps to enable these services for your Liferay instance:
 
-Before configuring ImageMagick to generate image and PDF previews, install it and its dependency, Ghostscript. This differs by operating system: on Linux, both are likely already installed. They are not likely to be installed on Windows, but may be on macOS.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), and go to *Control Panel* &rarr; *Configuration* &rarr; *Server Administration*.
 
-1. Download and install [ImageMagick](https://www.imagemagick.org/script/index.php).
+1. Click on the *External Services* tab.
 
-1. Download and install [Ghostscript](https://www.ghostscript.com/).
+1. Check *Enabled* for ImageMagick and Ghostscript.
 
-Once installed, enable ImageMagick in the Server Administration app's External Services tab, or in a [Portal Properties](./../../installation-and-upgrades/reference/portal-properties.md) file. If using `portal-ext.properties`, add the following lines and make sure the search path points to the directories containing the ImageMagick and Ghostscript executables. You may also need to configure the path for fonts used by Ghostscript when in macOS or Unix environments.
+1. Verify the paths to the ImageMagick and Ghostscript executables are correct.
 
-To enable ImageMagick from the Server Administration app's External Services tab,
+1. Configure resource limits.
 
-1. In the *Control Panel*, navigate to *Configuration* &rarr; *Server Administration*, then click the *External Services* tab.
+1. Click *Save* when finished.
 
-1. Expand the ImageMagick and Ghostscript section and select *Enabled*.
+## Enabling Xuggler
 
-1. Verify that the paths to the ImageMagick and Ghostscript executables are correct.
+By default, Documents and Media doesn't generate previews for audio and video files. Using Liferay's Xuggler integration, you can convert and generate previews for these files. If you don't already have Xuggler installed on your server, you can install it via External Services tab under Server Server Administration.
 
-1. Set the Resource limits to use.
+```{tip}
+Xuggler requires glibc version 2.6 or later on Linux.
+```
 
-#### Configuring ImageMagick in a Portal Properties File
+Follow these steps to install and enable Xuggler for your Liferay instance:
 
-ImageMagick can alternatively be enabled in a [Portal Properties](./../../installation-and-upgrades/reference/portal-properties.md) file. If using `portal-ext.properties`, add the following lines and make sure the search path points to the directories containing the ImageMagick and Ghostscript executables. You may also need to configure the path for fonts used by Ghostscript when in macOS or Unix environments.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), and go to *Control Panel* &rarr; *Configuration* &rarr; *Server Administration*.
+
+1. Click on the *External Services* tab.
+
+1. Check *Enabled* for Xuggler.
+
+   If Xuggler is not already installed, you'll be prompted to install it. Select the correct JAR for the OS, and click *Install*. Then, restart the server to apply changes. Once installed, you can return to the *External Services* tab to enable Xuggler.
+
+   ![If Xuggler isn't installed, you'll be prompted to install it.](./configuring-external-services/images/02.png)
+
+1. Click *Save*.
+
+## Using a `portal-ext.properties` File to Enable External Services
+
+In addition to the Control Panel, you can enable these external services using a `portal-ext.properties` file.
+
+### Enabling ImageMagick and Ghostscript
+
+To enable ImageMagick and Ghostscript using a `portal-ext.properties`, add the `imagemagick.enabled` and `imagemagick.global.search.path` properties to your file. Ensure the search path points to the directories containing the ImageMagick and Ghostscript executables. You may also need to configure the path for fonts used by Ghostscript when in macOS or Unix environments.
 
 ```properties
 imagemagick.enabled=true
@@ -60,28 +75,17 @@ imagemagick.global.search.path[unix]=/usr/local/bin:/usr/local/share/ghostscript
 imagemagick.global.search.path[windows]=C:\\Program Files\\ImageMagick
 ```
 
-### Configuring Xuggler in Server Administration
+### Enabling Xuggler
 
-To install and configure Xuggler,
-
-1. In the *Control Panel*, navigate to *Configuration* &rarr; *Server Administration*, then click the *External Services* tab.
-
-1. In the Xuggler section, select the Xuggler `.jar` file that matches your operating system. Then click *Install*.
-
-1. Shut down the application server. If you're enabling Xuggler with a Portal Properties file rather than in Server Administration, jump to the [Enabling Xuggler with a Portal Properties File](#enabling-xuggler-wtih-a-portal-properties-file) section. Otherwise, restart your application server now and then perform the next step.
-
-1. Finish by enabling Xuggler: go back to the External Services tab in Server Administration and select *Enabled*.
-
-   ![Once Xuggler is installed and Liferay DXP is restarted, the Enable check box appears.](./configuring-external-services/images/02.png)
-
-1. Click *Save*.
-
-### Enabling Xuggler with a Portal Properties File
-
-Xuggler can alternatively be enabled with a [Portal Properties](./../../installation-and-upgrades/reference/portal-properties.md) file. Add this line to `portal-ext.properties`,
+To enable Xuggler using a `portal-ext.properties` file, add the following code to the file.
 
 ```properties
 xuggler.enabled=true
 ```
 
 Restart the application server to finish enabling Xuggler.
+
+## Additional Information
+
+* [Configuring Documents and Media Previews](../../content-authoring-and-management/documents-and-media/devops/configuring-documents-and-media-previews.md)
+* [Enabling FFmpeg for Audio and Video Previews](../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)
