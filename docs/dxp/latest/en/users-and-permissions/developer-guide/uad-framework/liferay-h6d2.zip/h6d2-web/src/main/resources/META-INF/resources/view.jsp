@@ -6,8 +6,8 @@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<%@ page import="com.acme.h6d2.model.H6D2" %><%@
-page import="com.acme.h6d2.service.H6D2LocalServiceUtil" %>
+<%@ page import="com.acme.h6d2.model.Todo" %><%@
+page import="com.acme.h6d2.service.TodoLocalServiceUtil" %>
 
 <%@ page import="java.util.List" %>
 
@@ -28,17 +28,17 @@ page import="com.acme.h6d2.service.H6D2LocalServiceUtil" %>
 </p>
 
 <%
-List<H6D2> h6d2List = H6D2LocalServiceUtil.getH6D2s(-1, -1);
+List<Todo> todoList = TodoLocalServiceUtil.getTodos(-1, -1);
 %>
 
 <h5>Todos</h5>
 <c:choose>
-	<c:when test="<%= (h6d2List != null) && (h6d2List.size() > 0) %>">
+	<c:when test="<%= (todoList != null) && (todoList.size() > 0) %>">
 		<table>
 			<tbody>
-				<c:forEach items="<%= h6d2List %>" var="h6d2">
+				<c:forEach items="<%= todoList %>" var="todo">
 					<tr>
-						<td>${h6d2.todo }</td>
+						<td>${todo.name }</td>
 					</tr>
 				</c:forEach>
 			</tbody>

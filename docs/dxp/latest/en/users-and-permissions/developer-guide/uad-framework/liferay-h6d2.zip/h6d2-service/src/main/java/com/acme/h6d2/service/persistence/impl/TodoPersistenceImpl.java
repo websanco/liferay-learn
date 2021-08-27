@@ -14,12 +14,12 @@
 
 package com.acme.h6d2.service.persistence.impl;
 
-import com.acme.h6d2.exception.NoSuchH6D2Exception;
-import com.acme.h6d2.model.H6D2;
-import com.acme.h6d2.model.H6D2Table;
-import com.acme.h6d2.model.impl.H6D2Impl;
-import com.acme.h6d2.model.impl.H6D2ModelImpl;
-import com.acme.h6d2.service.persistence.H6D2Persistence;
+import com.acme.h6d2.exception.NoSuchTodoException;
+import com.acme.h6d2.model.Todo;
+import com.acme.h6d2.model.TodoTable;
+import com.acme.h6d2.model.impl.TodoImpl;
+import com.acme.h6d2.model.impl.TodoModelImpl;
+import com.acme.h6d2.service.persistence.TodoPersistence;
 import com.acme.h6d2.service.persistence.impl.constants.H6D2PersistenceConstants;
 
 import com.liferay.petra.string.StringBundler;
@@ -70,7 +70,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * The persistence implementation for the h6d2 service.
+ * The persistence implementation for the todo service.
  *
  * <p>
  * Caching information and settings can be found in <code>portal.properties</code>
@@ -79,17 +79,17 @@ import org.osgi.service.component.annotations.Reference;
  * @author Brian Wing Shun Chan
  * @generated
  */
-@Component(service = {H6D2Persistence.class, BasePersistence.class})
-public class H6D2PersistenceImpl
-	extends BasePersistenceImpl<H6D2> implements H6D2Persistence {
+@Component(service = {TodoPersistence.class, BasePersistence.class})
+public class TodoPersistenceImpl
+	extends BasePersistenceImpl<Todo> implements TodoPersistence {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. Always use <code>H6D2Util</code> to access the h6d2 persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify or reference this class directly. Always use <code>TodoUtil</code> to access the todo persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static final String FINDER_CLASS_NAME_ENTITY =
-		H6D2Impl.class.getName();
+		TodoImpl.class.getName();
 
 	public static final String FINDER_CLASS_NAME_LIST_WITH_PAGINATION =
 		FINDER_CLASS_NAME_ENTITY + ".List1";
@@ -105,72 +105,72 @@ public class H6D2PersistenceImpl
 	private FinderPath _finderPathCountByUuid;
 
 	/**
-	 * Returns all the h6d2s where uuid = &#63;.
+	 * Returns all the todos where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the matching h6d2s
+	 * @return the matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid(String uuid) {
+	public List<Todo> findByUuid(String uuid) {
 		return findByUuid(uuid, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
 	/**
-	 * Returns a range of all the h6d2s where uuid = &#63;.
+	 * Returns a range of all the todos where uuid = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
-	 * @return the range of matching h6d2s
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
+	 * @return the range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid(String uuid, int start, int end) {
+	public List<Todo> findByUuid(String uuid, int start, int end) {
 		return findByUuid(uuid, start, end, null);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s where uuid = &#63;.
+	 * Returns an ordered range of all the todos where uuid = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching h6d2s
+	 * @return the ordered range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid(
+	public List<Todo> findByUuid(
 		String uuid, int start, int end,
-		OrderByComparator<H6D2> orderByComparator) {
+		OrderByComparator<Todo> orderByComparator) {
 
 		return findByUuid(uuid, start, end, orderByComparator, true);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s where uuid = &#63;.
+	 * Returns an ordered range of all the todos where uuid = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching h6d2s
+	 * @return the ordered range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid(
+	public List<Todo> findByUuid(
 		String uuid, int start, int end,
-		OrderByComparator<H6D2> orderByComparator, boolean useFinderCache) {
+		OrderByComparator<Todo> orderByComparator, boolean useFinderCache) {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -190,14 +190,14 @@ public class H6D2PersistenceImpl
 			finderArgs = new Object[] {uuid, start, end, orderByComparator};
 		}
 
-		List<H6D2> list = null;
+		List<Todo> list = null;
 
 		if (useFinderCache) {
-			list = (List<H6D2>)finderCache.getResult(finderPath, finderArgs);
+			list = (List<Todo>)finderCache.getResult(finderPath, finderArgs);
 
 			if ((list != null) && !list.isEmpty()) {
-				for (H6D2 h6d2 : list) {
-					if (!uuid.equals(h6d2.getUuid())) {
+				for (Todo todo : list) {
+					if (!uuid.equals(todo.getUuid())) {
 						list = null;
 
 						break;
@@ -217,7 +217,7 @@ public class H6D2PersistenceImpl
 				sb = new StringBundler(3);
 			}
 
-			sb.append(_SQL_SELECT_H6D2_WHERE);
+			sb.append(_SQL_SELECT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -235,7 +235,7 @@ public class H6D2PersistenceImpl
 					sb, _ORDER_BY_ENTITY_ALIAS, orderByComparator);
 			}
 			else {
-				sb.append(H6D2ModelImpl.ORDER_BY_JPQL);
+				sb.append(TodoModelImpl.ORDER_BY_JPQL);
 			}
 
 			String sql = sb.toString();
@@ -253,7 +253,7 @@ public class H6D2PersistenceImpl
 					queryPos.add(uuid);
 				}
 
-				list = (List<H6D2>)QueryUtil.list(
+				list = (List<Todo>)QueryUtil.list(
 					query, getDialect(), start, end);
 
 				cacheResult(list);
@@ -274,22 +274,22 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the first h6d2 in the ordered set where uuid = &#63;.
+	 * Returns the first todo in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching h6d2
-	 * @throws NoSuchH6D2Exception if a matching h6d2 could not be found
+	 * @return the first matching todo
+	 * @throws NoSuchTodoException if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 findByUuid_First(
-			String uuid, OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+	public Todo findByUuid_First(
+			String uuid, OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByUuid_First(uuid, orderByComparator);
+		Todo todo = fetchByUuid_First(uuid, orderByComparator);
 
-		if (h6d2 != null) {
-			return h6d2;
+		if (todo != null) {
+			return todo;
 		}
 
 		StringBundler sb = new StringBundler(4);
@@ -301,21 +301,21 @@ public class H6D2PersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchH6D2Exception(sb.toString());
+		throw new NoSuchTodoException(sb.toString());
 	}
 
 	/**
-	 * Returns the first h6d2 in the ordered set where uuid = &#63;.
+	 * Returns the first todo in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the first matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUuid_First(
-		String uuid, OrderByComparator<H6D2> orderByComparator) {
+	public Todo fetchByUuid_First(
+		String uuid, OrderByComparator<Todo> orderByComparator) {
 
-		List<H6D2> list = findByUuid(uuid, 0, 1, orderByComparator);
+		List<Todo> list = findByUuid(uuid, 0, 1, orderByComparator);
 
 		if (!list.isEmpty()) {
 			return list.get(0);
@@ -325,22 +325,22 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the last h6d2 in the ordered set where uuid = &#63;.
+	 * Returns the last todo in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching h6d2
-	 * @throws NoSuchH6D2Exception if a matching h6d2 could not be found
+	 * @return the last matching todo
+	 * @throws NoSuchTodoException if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 findByUuid_Last(
-			String uuid, OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+	public Todo findByUuid_Last(
+			String uuid, OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByUuid_Last(uuid, orderByComparator);
+		Todo todo = fetchByUuid_Last(uuid, orderByComparator);
 
-		if (h6d2 != null) {
-			return h6d2;
+		if (todo != null) {
+			return todo;
 		}
 
 		StringBundler sb = new StringBundler(4);
@@ -352,19 +352,19 @@ public class H6D2PersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchH6D2Exception(sb.toString());
+		throw new NoSuchTodoException(sb.toString());
 	}
 
 	/**
-	 * Returns the last h6d2 in the ordered set where uuid = &#63;.
+	 * Returns the last todo in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the last matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUuid_Last(
-		String uuid, OrderByComparator<H6D2> orderByComparator) {
+	public Todo fetchByUuid_Last(
+		String uuid, OrderByComparator<Todo> orderByComparator) {
 
 		int count = countByUuid(uuid);
 
@@ -372,7 +372,7 @@ public class H6D2PersistenceImpl
 			return null;
 		}
 
-		List<H6D2> list = findByUuid(uuid, count - 1, count, orderByComparator);
+		List<Todo> list = findByUuid(uuid, count - 1, count, orderByComparator);
 
 		if (!list.isEmpty()) {
 			return list.get(0);
@@ -382,37 +382,37 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the h6d2s before and after the current h6d2 in the ordered set where uuid = &#63;.
+	 * Returns the todos before and after the current todo in the ordered set where uuid = &#63;.
 	 *
-	 * @param h6d2Id the primary key of the current h6d2
+	 * @param todoId the primary key of the current todo
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next h6d2
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @return the previous, current, and next todo
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2[] findByUuid_PrevAndNext(
-			long h6d2Id, String uuid, OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+	public Todo[] findByUuid_PrevAndNext(
+			long todoId, String uuid, OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
 		uuid = Objects.toString(uuid, "");
 
-		H6D2 h6d2 = findByPrimaryKey(h6d2Id);
+		Todo todo = findByPrimaryKey(todoId);
 
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			H6D2[] array = new H6D2Impl[3];
+			Todo[] array = new TodoImpl[3];
 
 			array[0] = getByUuid_PrevAndNext(
-				session, h6d2, uuid, orderByComparator, true);
+				session, todo, uuid, orderByComparator, true);
 
-			array[1] = h6d2;
+			array[1] = todo;
 
 			array[2] = getByUuid_PrevAndNext(
-				session, h6d2, uuid, orderByComparator, false);
+				session, todo, uuid, orderByComparator, false);
 
 			return array;
 		}
@@ -424,9 +424,9 @@ public class H6D2PersistenceImpl
 		}
 	}
 
-	protected H6D2 getByUuid_PrevAndNext(
-		Session session, H6D2 h6d2, String uuid,
-		OrderByComparator<H6D2> orderByComparator, boolean previous) {
+	protected Todo getByUuid_PrevAndNext(
+		Session session, Todo todo, String uuid,
+		OrderByComparator<Todo> orderByComparator, boolean previous) {
 
 		StringBundler sb = null;
 
@@ -439,7 +439,7 @@ public class H6D2PersistenceImpl
 			sb = new StringBundler(3);
 		}
 
-		sb.append(_SQL_SELECT_H6D2_WHERE);
+		sb.append(_SQL_SELECT_TODO_WHERE);
 
 		boolean bindUuid = false;
 
@@ -509,7 +509,7 @@ public class H6D2PersistenceImpl
 			}
 		}
 		else {
-			sb.append(H6D2ModelImpl.ORDER_BY_JPQL);
+			sb.append(TodoModelImpl.ORDER_BY_JPQL);
 		}
 
 		String sql = sb.toString();
@@ -527,13 +527,13 @@ public class H6D2PersistenceImpl
 
 		if (orderByComparator != null) {
 			for (Object orderByConditionValue :
-					orderByComparator.getOrderByConditionValues(h6d2)) {
+					orderByComparator.getOrderByConditionValues(todo)) {
 
 				queryPos.add(orderByConditionValue);
 			}
 		}
 
-		List<H6D2> list = query.list();
+		List<Todo> list = query.list();
 
 		if (list.size() == 2) {
 			return list.get(1);
@@ -544,24 +544,24 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Removes all the h6d2s where uuid = &#63; from the database.
+	 * Removes all the todos where uuid = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 */
 	@Override
 	public void removeByUuid(String uuid) {
-		for (H6D2 h6d2 :
+		for (Todo todo :
 				findByUuid(uuid, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
 
-			remove(h6d2);
+			remove(todo);
 		}
 	}
 
 	/**
-	 * Returns the number of h6d2s where uuid = &#63;.
+	 * Returns the number of todos where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the number of matching h6d2s
+	 * @return the number of matching todos
 	 */
 	@Override
 	public int countByUuid(String uuid) {
@@ -576,7 +576,7 @@ public class H6D2PersistenceImpl
 		if (count == null) {
 			StringBundler sb = new StringBundler(2);
 
-			sb.append(_SQL_COUNT_H6D2_WHERE);
+			sb.append(_SQL_COUNT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -619,29 +619,29 @@ public class H6D2PersistenceImpl
 		return count.intValue();
 	}
 
-	private static final String _FINDER_COLUMN_UUID_UUID_2 = "h6d2.uuid = ?";
+	private static final String _FINDER_COLUMN_UUID_UUID_2 = "todo.uuid = ?";
 
 	private static final String _FINDER_COLUMN_UUID_UUID_3 =
-		"(h6d2.uuid IS NULL OR h6d2.uuid = '')";
+		"(todo.uuid IS NULL OR todo.uuid = '')";
 
 	private FinderPath _finderPathFetchByUUID_G;
 	private FinderPath _finderPathCountByUUID_G;
 
 	/**
-	 * Returns the h6d2 where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchH6D2Exception</code> if it could not be found.
+	 * Returns the todo where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchTodoException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching h6d2
-	 * @throws NoSuchH6D2Exception if a matching h6d2 could not be found
+	 * @return the matching todo
+	 * @throws NoSuchTodoException if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 findByUUID_G(String uuid, long groupId)
-		throws NoSuchH6D2Exception {
+	public Todo findByUUID_G(String uuid, long groupId)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByUUID_G(uuid, groupId);
+		Todo todo = fetchByUUID_G(uuid, groupId);
 
-		if (h6d2 == null) {
+		if (todo == null) {
 			StringBundler sb = new StringBundler(6);
 
 			sb.append(_NO_SUCH_ENTITY_WITH_KEY);
@@ -658,34 +658,34 @@ public class H6D2PersistenceImpl
 				_log.debug(sb.toString());
 			}
 
-			throw new NoSuchH6D2Exception(sb.toString());
+			throw new NoSuchTodoException(sb.toString());
 		}
 
-		return h6d2;
+		return todo;
 	}
 
 	/**
-	 * Returns the h6d2 where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the todo where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUUID_G(String uuid, long groupId) {
+	public Todo fetchByUUID_G(String uuid, long groupId) {
 		return fetchByUUID_G(uuid, groupId, true);
 	}
 
 	/**
-	 * Returns the h6d2 where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the todo where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUUID_G(
+	public Todo fetchByUUID_G(
 		String uuid, long groupId, boolean useFinderCache) {
 
 		uuid = Objects.toString(uuid, "");
@@ -703,11 +703,11 @@ public class H6D2PersistenceImpl
 				_finderPathFetchByUUID_G, finderArgs);
 		}
 
-		if (result instanceof H6D2) {
-			H6D2 h6d2 = (H6D2)result;
+		if (result instanceof Todo) {
+			Todo todo = (Todo)result;
 
-			if (!Objects.equals(uuid, h6d2.getUuid()) ||
-				(groupId != h6d2.getGroupId())) {
+			if (!Objects.equals(uuid, todo.getUuid()) ||
+				(groupId != todo.getGroupId())) {
 
 				result = null;
 			}
@@ -716,7 +716,7 @@ public class H6D2PersistenceImpl
 		if (result == null) {
 			StringBundler sb = new StringBundler(4);
 
-			sb.append(_SQL_SELECT_H6D2_WHERE);
+			sb.append(_SQL_SELECT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -748,7 +748,7 @@ public class H6D2PersistenceImpl
 
 				queryPos.add(groupId);
 
-				List<H6D2> list = query.list();
+				List<Todo> list = query.list();
 
 				if (list.isEmpty()) {
 					if (useFinderCache) {
@@ -757,11 +757,11 @@ public class H6D2PersistenceImpl
 					}
 				}
 				else {
-					H6D2 h6d2 = list.get(0);
+					Todo todo = list.get(0);
 
-					result = h6d2;
+					result = todo;
 
-					cacheResult(h6d2);
+					cacheResult(todo);
 				}
 			}
 			catch (Exception exception) {
@@ -776,32 +776,32 @@ public class H6D2PersistenceImpl
 			return null;
 		}
 		else {
-			return (H6D2)result;
+			return (Todo)result;
 		}
 	}
 
 	/**
-	 * Removes the h6d2 where uuid = &#63; and groupId = &#63; from the database.
+	 * Removes the todo where uuid = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the h6d2 that was removed
+	 * @return the todo that was removed
 	 */
 	@Override
-	public H6D2 removeByUUID_G(String uuid, long groupId)
-		throws NoSuchH6D2Exception {
+	public Todo removeByUUID_G(String uuid, long groupId)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = findByUUID_G(uuid, groupId);
+		Todo todo = findByUUID_G(uuid, groupId);
 
-		return remove(h6d2);
+		return remove(todo);
 	}
 
 	/**
-	 * Returns the number of h6d2s where uuid = &#63; and groupId = &#63;.
+	 * Returns the number of todos where uuid = &#63; and groupId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the number of matching h6d2s
+	 * @return the number of matching todos
 	 */
 	@Override
 	public int countByUUID_G(String uuid, long groupId) {
@@ -816,7 +816,7 @@ public class H6D2PersistenceImpl
 		if (count == null) {
 			StringBundler sb = new StringBundler(3);
 
-			sb.append(_SQL_COUNT_H6D2_WHERE);
+			sb.append(_SQL_COUNT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -864,93 +864,93 @@ public class H6D2PersistenceImpl
 	}
 
 	private static final String _FINDER_COLUMN_UUID_G_UUID_2 =
-		"h6d2.uuid = ? AND ";
+		"todo.uuid = ? AND ";
 
 	private static final String _FINDER_COLUMN_UUID_G_UUID_3 =
-		"(h6d2.uuid IS NULL OR h6d2.uuid = '') AND ";
+		"(todo.uuid IS NULL OR todo.uuid = '') AND ";
 
 	private static final String _FINDER_COLUMN_UUID_G_GROUPID_2 =
-		"h6d2.groupId = ?";
+		"todo.groupId = ?";
 
 	private FinderPath _finderPathWithPaginationFindByUuid_C;
 	private FinderPath _finderPathWithoutPaginationFindByUuid_C;
 	private FinderPath _finderPathCountByUuid_C;
 
 	/**
-	 * Returns all the h6d2s where uuid = &#63; and companyId = &#63;.
+	 * Returns all the todos where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the matching h6d2s
+	 * @return the matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid_C(String uuid, long companyId) {
+	public List<Todo> findByUuid_C(String uuid, long companyId) {
 		return findByUuid_C(
 			uuid, companyId, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
 	/**
-	 * Returns a range of all the h6d2s where uuid = &#63; and companyId = &#63;.
+	 * Returns a range of all the todos where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
-	 * @return the range of matching h6d2s
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
+	 * @return the range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid_C(
+	public List<Todo> findByUuid_C(
 		String uuid, long companyId, int start, int end) {
 
 		return findByUuid_C(uuid, companyId, start, end, null);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the todos where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching h6d2s
+	 * @return the ordered range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid_C(
+	public List<Todo> findByUuid_C(
 		String uuid, long companyId, int start, int end,
-		OrderByComparator<H6D2> orderByComparator) {
+		OrderByComparator<Todo> orderByComparator) {
 
 		return findByUuid_C(
 			uuid, companyId, start, end, orderByComparator, true);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the todos where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching h6d2s
+	 * @return the ordered range of matching todos
 	 */
 	@Override
-	public List<H6D2> findByUuid_C(
+	public List<Todo> findByUuid_C(
 		String uuid, long companyId, int start, int end,
-		OrderByComparator<H6D2> orderByComparator, boolean useFinderCache) {
+		OrderByComparator<Todo> orderByComparator, boolean useFinderCache) {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -972,15 +972,15 @@ public class H6D2PersistenceImpl
 			};
 		}
 
-		List<H6D2> list = null;
+		List<Todo> list = null;
 
 		if (useFinderCache) {
-			list = (List<H6D2>)finderCache.getResult(finderPath, finderArgs);
+			list = (List<Todo>)finderCache.getResult(finderPath, finderArgs);
 
 			if ((list != null) && !list.isEmpty()) {
-				for (H6D2 h6d2 : list) {
-					if (!uuid.equals(h6d2.getUuid()) ||
-						(companyId != h6d2.getCompanyId())) {
+				for (Todo todo : list) {
+					if (!uuid.equals(todo.getUuid()) ||
+						(companyId != todo.getCompanyId())) {
 
 						list = null;
 
@@ -1001,7 +1001,7 @@ public class H6D2PersistenceImpl
 				sb = new StringBundler(4);
 			}
 
-			sb.append(_SQL_SELECT_H6D2_WHERE);
+			sb.append(_SQL_SELECT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -1021,7 +1021,7 @@ public class H6D2PersistenceImpl
 					sb, _ORDER_BY_ENTITY_ALIAS, orderByComparator);
 			}
 			else {
-				sb.append(H6D2ModelImpl.ORDER_BY_JPQL);
+				sb.append(TodoModelImpl.ORDER_BY_JPQL);
 			}
 
 			String sql = sb.toString();
@@ -1041,7 +1041,7 @@ public class H6D2PersistenceImpl
 
 				queryPos.add(companyId);
 
-				list = (List<H6D2>)QueryUtil.list(
+				list = (List<Todo>)QueryUtil.list(
 					query, getDialect(), start, end);
 
 				cacheResult(list);
@@ -1062,24 +1062,24 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the first h6d2 in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first todo in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching h6d2
-	 * @throws NoSuchH6D2Exception if a matching h6d2 could not be found
+	 * @return the first matching todo
+	 * @throws NoSuchTodoException if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 findByUuid_C_First(
+	public Todo findByUuid_C_First(
 			String uuid, long companyId,
-			OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+			OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByUuid_C_First(uuid, companyId, orderByComparator);
+		Todo todo = fetchByUuid_C_First(uuid, companyId, orderByComparator);
 
-		if (h6d2 != null) {
-			return h6d2;
+		if (todo != null) {
+			return todo;
 		}
 
 		StringBundler sb = new StringBundler(6);
@@ -1094,23 +1094,23 @@ public class H6D2PersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchH6D2Exception(sb.toString());
+		throw new NoSuchTodoException(sb.toString());
 	}
 
 	/**
-	 * Returns the first h6d2 in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first todo in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the first matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUuid_C_First(
+	public Todo fetchByUuid_C_First(
 		String uuid, long companyId,
-		OrderByComparator<H6D2> orderByComparator) {
+		OrderByComparator<Todo> orderByComparator) {
 
-		List<H6D2> list = findByUuid_C(
+		List<Todo> list = findByUuid_C(
 			uuid, companyId, 0, 1, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -1121,24 +1121,24 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the last h6d2 in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last todo in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching h6d2
-	 * @throws NoSuchH6D2Exception if a matching h6d2 could not be found
+	 * @return the last matching todo
+	 * @throws NoSuchTodoException if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 findByUuid_C_Last(
+	public Todo findByUuid_C_Last(
 			String uuid, long companyId,
-			OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+			OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByUuid_C_Last(uuid, companyId, orderByComparator);
+		Todo todo = fetchByUuid_C_Last(uuid, companyId, orderByComparator);
 
-		if (h6d2 != null) {
-			return h6d2;
+		if (todo != null) {
+			return todo;
 		}
 
 		StringBundler sb = new StringBundler(6);
@@ -1153,21 +1153,21 @@ public class H6D2PersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchH6D2Exception(sb.toString());
+		throw new NoSuchTodoException(sb.toString());
 	}
 
 	/**
-	 * Returns the last h6d2 in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last todo in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching h6d2, or <code>null</code> if a matching h6d2 could not be found
+	 * @return the last matching todo, or <code>null</code> if a matching todo could not be found
 	 */
 	@Override
-	public H6D2 fetchByUuid_C_Last(
+	public Todo fetchByUuid_C_Last(
 		String uuid, long companyId,
-		OrderByComparator<H6D2> orderByComparator) {
+		OrderByComparator<Todo> orderByComparator) {
 
 		int count = countByUuid_C(uuid, companyId);
 
@@ -1175,7 +1175,7 @@ public class H6D2PersistenceImpl
 			return null;
 		}
 
-		List<H6D2> list = findByUuid_C(
+		List<Todo> list = findByUuid_C(
 			uuid, companyId, count - 1, count, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -1186,39 +1186,39 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Returns the h6d2s before and after the current h6d2 in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the todos before and after the current todo in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
-	 * @param h6d2Id the primary key of the current h6d2
+	 * @param todoId the primary key of the current todo
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next h6d2
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @return the previous, current, and next todo
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2[] findByUuid_C_PrevAndNext(
-			long h6d2Id, String uuid, long companyId,
-			OrderByComparator<H6D2> orderByComparator)
-		throws NoSuchH6D2Exception {
+	public Todo[] findByUuid_C_PrevAndNext(
+			long todoId, String uuid, long companyId,
+			OrderByComparator<Todo> orderByComparator)
+		throws NoSuchTodoException {
 
 		uuid = Objects.toString(uuid, "");
 
-		H6D2 h6d2 = findByPrimaryKey(h6d2Id);
+		Todo todo = findByPrimaryKey(todoId);
 
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			H6D2[] array = new H6D2Impl[3];
+			Todo[] array = new TodoImpl[3];
 
 			array[0] = getByUuid_C_PrevAndNext(
-				session, h6d2, uuid, companyId, orderByComparator, true);
+				session, todo, uuid, companyId, orderByComparator, true);
 
-			array[1] = h6d2;
+			array[1] = todo;
 
 			array[2] = getByUuid_C_PrevAndNext(
-				session, h6d2, uuid, companyId, orderByComparator, false);
+				session, todo, uuid, companyId, orderByComparator, false);
 
 			return array;
 		}
@@ -1230,9 +1230,9 @@ public class H6D2PersistenceImpl
 		}
 	}
 
-	protected H6D2 getByUuid_C_PrevAndNext(
-		Session session, H6D2 h6d2, String uuid, long companyId,
-		OrderByComparator<H6D2> orderByComparator, boolean previous) {
+	protected Todo getByUuid_C_PrevAndNext(
+		Session session, Todo todo, String uuid, long companyId,
+		OrderByComparator<Todo> orderByComparator, boolean previous) {
 
 		StringBundler sb = null;
 
@@ -1245,7 +1245,7 @@ public class H6D2PersistenceImpl
 			sb = new StringBundler(4);
 		}
 
-		sb.append(_SQL_SELECT_H6D2_WHERE);
+		sb.append(_SQL_SELECT_TODO_WHERE);
 
 		boolean bindUuid = false;
 
@@ -1317,7 +1317,7 @@ public class H6D2PersistenceImpl
 			}
 		}
 		else {
-			sb.append(H6D2ModelImpl.ORDER_BY_JPQL);
+			sb.append(TodoModelImpl.ORDER_BY_JPQL);
 		}
 
 		String sql = sb.toString();
@@ -1337,13 +1337,13 @@ public class H6D2PersistenceImpl
 
 		if (orderByComparator != null) {
 			for (Object orderByConditionValue :
-					orderByComparator.getOrderByConditionValues(h6d2)) {
+					orderByComparator.getOrderByConditionValues(todo)) {
 
 				queryPos.add(orderByConditionValue);
 			}
 		}
 
-		List<H6D2> list = query.list();
+		List<Todo> list = query.list();
 
 		if (list.size() == 2) {
 			return list.get(1);
@@ -1354,28 +1354,28 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Removes all the h6d2s where uuid = &#63; and companyId = &#63; from the database.
+	 * Removes all the todos where uuid = &#63; and companyId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 */
 	@Override
 	public void removeByUuid_C(String uuid, long companyId) {
-		for (H6D2 h6d2 :
+		for (Todo todo :
 				findByUuid_C(
 					uuid, companyId, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
 					null)) {
 
-			remove(h6d2);
+			remove(todo);
 		}
 	}
 
 	/**
-	 * Returns the number of h6d2s where uuid = &#63; and companyId = &#63;.
+	 * Returns the number of todos where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the number of matching h6d2s
+	 * @return the number of matching todos
 	 */
 	@Override
 	public int countByUuid_C(String uuid, long companyId) {
@@ -1390,7 +1390,7 @@ public class H6D2PersistenceImpl
 		if (count == null) {
 			StringBundler sb = new StringBundler(3);
 
-			sb.append(_SQL_COUNT_H6D2_WHERE);
+			sb.append(_SQL_COUNT_TODO_WHERE);
 
 			boolean bindUuid = false;
 
@@ -1438,61 +1438,61 @@ public class H6D2PersistenceImpl
 	}
 
 	private static final String _FINDER_COLUMN_UUID_C_UUID_2 =
-		"h6d2.uuid = ? AND ";
+		"todo.uuid = ? AND ";
 
 	private static final String _FINDER_COLUMN_UUID_C_UUID_3 =
-		"(h6d2.uuid IS NULL OR h6d2.uuid = '') AND ";
+		"(todo.uuid IS NULL OR todo.uuid = '') AND ";
 
 	private static final String _FINDER_COLUMN_UUID_C_COMPANYID_2 =
-		"h6d2.companyId = ?";
+		"todo.companyId = ?";
 
-	public H6D2PersistenceImpl() {
+	public TodoPersistenceImpl() {
 		Map<String, String> dbColumnNames = new HashMap<String, String>();
 
 		dbColumnNames.put("uuid", "uuid_");
 
 		setDBColumnNames(dbColumnNames);
 
-		setModelClass(H6D2.class);
+		setModelClass(Todo.class);
 
-		setModelImplClass(H6D2Impl.class);
+		setModelImplClass(TodoImpl.class);
 		setModelPKClass(long.class);
 
-		setTable(H6D2Table.INSTANCE);
+		setTable(TodoTable.INSTANCE);
 	}
 
 	/**
-	 * Caches the h6d2 in the entity cache if it is enabled.
+	 * Caches the todo in the entity cache if it is enabled.
 	 *
-	 * @param h6d2 the h6d2
+	 * @param todo the todo
 	 */
 	@Override
-	public void cacheResult(H6D2 h6d2) {
-		entityCache.putResult(H6D2Impl.class, h6d2.getPrimaryKey(), h6d2);
+	public void cacheResult(Todo todo) {
+		entityCache.putResult(TodoImpl.class, todo.getPrimaryKey(), todo);
 
 		finderCache.putResult(
 			_finderPathFetchByUUID_G,
-			new Object[] {h6d2.getUuid(), h6d2.getGroupId()}, h6d2);
+			new Object[] {todo.getUuid(), todo.getGroupId()}, todo);
 	}
 
 	/**
-	 * Caches the h6d2s in the entity cache if it is enabled.
+	 * Caches the todos in the entity cache if it is enabled.
 	 *
-	 * @param h6d2s the h6d2s
+	 * @param todos the todos
 	 */
 	@Override
-	public void cacheResult(List<H6D2> h6d2s) {
-		for (H6D2 h6d2 : h6d2s) {
-			if (entityCache.getResult(H6D2Impl.class, h6d2.getPrimaryKey()) ==
+	public void cacheResult(List<Todo> todos) {
+		for (Todo todo : todos) {
+			if (entityCache.getResult(TodoImpl.class, todo.getPrimaryKey()) ==
 					null) {
 
-				cacheResult(h6d2);
+				cacheResult(todo);
 			}
 		}
 	}
 
 	/**
-	 * Clears the cache for all h6d2s.
+	 * Clears the cache for all todos.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -1500,110 +1500,110 @@ public class H6D2PersistenceImpl
 	 */
 	@Override
 	public void clearCache() {
-		entityCache.clearCache(H6D2Impl.class);
+		entityCache.clearCache(TodoImpl.class);
 
-		finderCache.clearCache(H6D2Impl.class);
+		finderCache.clearCache(TodoImpl.class);
 	}
 
 	/**
-	 * Clears the cache for the h6d2.
+	 * Clears the cache for the todo.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
 	 * </p>
 	 */
 	@Override
-	public void clearCache(H6D2 h6d2) {
-		entityCache.removeResult(H6D2Impl.class, h6d2);
+	public void clearCache(Todo todo) {
+		entityCache.removeResult(TodoImpl.class, todo);
 	}
 
 	@Override
-	public void clearCache(List<H6D2> h6d2s) {
-		for (H6D2 h6d2 : h6d2s) {
-			entityCache.removeResult(H6D2Impl.class, h6d2);
+	public void clearCache(List<Todo> todos) {
+		for (Todo todo : todos) {
+			entityCache.removeResult(TodoImpl.class, todo);
 		}
 	}
 
 	@Override
 	public void clearCache(Set<Serializable> primaryKeys) {
-		finderCache.clearCache(H6D2Impl.class);
+		finderCache.clearCache(TodoImpl.class);
 
 		for (Serializable primaryKey : primaryKeys) {
-			entityCache.removeResult(H6D2Impl.class, primaryKey);
+			entityCache.removeResult(TodoImpl.class, primaryKey);
 		}
 	}
 
-	protected void cacheUniqueFindersCache(H6D2ModelImpl h6d2ModelImpl) {
+	protected void cacheUniqueFindersCache(TodoModelImpl todoModelImpl) {
 		Object[] args = new Object[] {
-			h6d2ModelImpl.getUuid(), h6d2ModelImpl.getGroupId()
+			todoModelImpl.getUuid(), todoModelImpl.getGroupId()
 		};
 
 		finderCache.putResult(_finderPathCountByUUID_G, args, Long.valueOf(1));
-		finderCache.putResult(_finderPathFetchByUUID_G, args, h6d2ModelImpl);
+		finderCache.putResult(_finderPathFetchByUUID_G, args, todoModelImpl);
 	}
 
 	/**
-	 * Creates a new h6d2 with the primary key. Does not add the h6d2 to the database.
+	 * Creates a new todo with the primary key. Does not add the todo to the database.
 	 *
-	 * @param h6d2Id the primary key for the new h6d2
-	 * @return the new h6d2
+	 * @param todoId the primary key for the new todo
+	 * @return the new todo
 	 */
 	@Override
-	public H6D2 create(long h6d2Id) {
-		H6D2 h6d2 = new H6D2Impl();
+	public Todo create(long todoId) {
+		Todo todo = new TodoImpl();
 
-		h6d2.setNew(true);
-		h6d2.setPrimaryKey(h6d2Id);
+		todo.setNew(true);
+		todo.setPrimaryKey(todoId);
 
 		String uuid = PortalUUIDUtil.generate();
 
-		h6d2.setUuid(uuid);
+		todo.setUuid(uuid);
 
-		h6d2.setCompanyId(CompanyThreadLocal.getCompanyId());
+		todo.setCompanyId(CompanyThreadLocal.getCompanyId());
 
-		return h6d2;
+		return todo;
 	}
 
 	/**
-	 * Removes the h6d2 with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the todo with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param h6d2Id the primary key of the h6d2
-	 * @return the h6d2 that was removed
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @param todoId the primary key of the todo
+	 * @return the todo that was removed
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2 remove(long h6d2Id) throws NoSuchH6D2Exception {
-		return remove((Serializable)h6d2Id);
+	public Todo remove(long todoId) throws NoSuchTodoException {
+		return remove((Serializable)todoId);
 	}
 
 	/**
-	 * Removes the h6d2 with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the todo with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param primaryKey the primary key of the h6d2
-	 * @return the h6d2 that was removed
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @param primaryKey the primary key of the todo
+	 * @return the todo that was removed
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2 remove(Serializable primaryKey) throws NoSuchH6D2Exception {
+	public Todo remove(Serializable primaryKey) throws NoSuchTodoException {
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			H6D2 h6d2 = (H6D2)session.get(H6D2Impl.class, primaryKey);
+			Todo todo = (Todo)session.get(TodoImpl.class, primaryKey);
 
-			if (h6d2 == null) {
+			if (todo == null) {
 				if (_log.isDebugEnabled()) {
 					_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 				}
 
-				throw new NoSuchH6D2Exception(
+				throw new NoSuchTodoException(
 					_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			return remove(h6d2);
+			return remove(todo);
 		}
-		catch (NoSuchH6D2Exception noSuchEntityException) {
+		catch (NoSuchTodoException noSuchEntityException) {
 			throw noSuchEntityException;
 		}
 		catch (Exception exception) {
@@ -1615,19 +1615,19 @@ public class H6D2PersistenceImpl
 	}
 
 	@Override
-	protected H6D2 removeImpl(H6D2 h6d2) {
+	protected Todo removeImpl(Todo todo) {
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			if (!session.contains(h6d2)) {
-				h6d2 = (H6D2)session.get(
-					H6D2Impl.class, h6d2.getPrimaryKeyObj());
+			if (!session.contains(todo)) {
+				todo = (Todo)session.get(
+					TodoImpl.class, todo.getPrimaryKeyObj());
 			}
 
-			if (h6d2 != null) {
-				session.delete(h6d2);
+			if (todo != null) {
+				session.delete(todo);
 			}
 		}
 		catch (Exception exception) {
@@ -1637,39 +1637,39 @@ public class H6D2PersistenceImpl
 			closeSession(session);
 		}
 
-		if (h6d2 != null) {
-			clearCache(h6d2);
+		if (todo != null) {
+			clearCache(todo);
 		}
 
-		return h6d2;
+		return todo;
 	}
 
 	@Override
-	public H6D2 updateImpl(H6D2 h6d2) {
-		boolean isNew = h6d2.isNew();
+	public Todo updateImpl(Todo todo) {
+		boolean isNew = todo.isNew();
 
-		if (!(h6d2 instanceof H6D2ModelImpl)) {
+		if (!(todo instanceof TodoModelImpl)) {
 			InvocationHandler invocationHandler = null;
 
-			if (ProxyUtil.isProxyClass(h6d2.getClass())) {
-				invocationHandler = ProxyUtil.getInvocationHandler(h6d2);
+			if (ProxyUtil.isProxyClass(todo.getClass())) {
+				invocationHandler = ProxyUtil.getInvocationHandler(todo);
 
 				throw new IllegalArgumentException(
-					"Implement ModelWrapper in h6d2 proxy " +
+					"Implement ModelWrapper in todo proxy " +
 						invocationHandler.getClass());
 			}
 
 			throw new IllegalArgumentException(
-				"Implement ModelWrapper in custom H6D2 implementation " +
-					h6d2.getClass());
+				"Implement ModelWrapper in custom Todo implementation " +
+					todo.getClass());
 		}
 
-		H6D2ModelImpl h6d2ModelImpl = (H6D2ModelImpl)h6d2;
+		TodoModelImpl todoModelImpl = (TodoModelImpl)todo;
 
-		if (Validator.isNull(h6d2.getUuid())) {
+		if (Validator.isNull(todo.getUuid())) {
 			String uuid = PortalUUIDUtil.generate();
 
-			h6d2.setUuid(uuid);
+			todo.setUuid(uuid);
 		}
 
 		ServiceContext serviceContext =
@@ -1677,21 +1677,21 @@ public class H6D2PersistenceImpl
 
 		Date date = new Date();
 
-		if (isNew && (h6d2.getCreateDate() == null)) {
+		if (isNew && (todo.getCreateDate() == null)) {
 			if (serviceContext == null) {
-				h6d2.setCreateDate(date);
+				todo.setCreateDate(date);
 			}
 			else {
-				h6d2.setCreateDate(serviceContext.getCreateDate(date));
+				todo.setCreateDate(serviceContext.getCreateDate(date));
 			}
 		}
 
-		if (!h6d2ModelImpl.hasSetModifiedDate()) {
+		if (!todoModelImpl.hasSetModifiedDate()) {
 			if (serviceContext == null) {
-				h6d2.setModifiedDate(date);
+				todo.setModifiedDate(date);
 			}
 			else {
-				h6d2.setModifiedDate(serviceContext.getModifiedDate(date));
+				todo.setModifiedDate(serviceContext.getModifiedDate(date));
 			}
 		}
 
@@ -1701,10 +1701,10 @@ public class H6D2PersistenceImpl
 			session = openSession();
 
 			if (isNew) {
-				session.save(h6d2);
+				session.save(todo);
 			}
 			else {
-				h6d2 = (H6D2)session.merge(h6d2);
+				todo = (Todo)session.merge(todo);
 			}
 		}
 		catch (Exception exception) {
@@ -1714,128 +1714,128 @@ public class H6D2PersistenceImpl
 			closeSession(session);
 		}
 
-		entityCache.putResult(H6D2Impl.class, h6d2ModelImpl, false, true);
+		entityCache.putResult(TodoImpl.class, todoModelImpl, false, true);
 
-		cacheUniqueFindersCache(h6d2ModelImpl);
+		cacheUniqueFindersCache(todoModelImpl);
 
 		if (isNew) {
-			h6d2.setNew(false);
+			todo.setNew(false);
 		}
 
-		h6d2.resetOriginalValues();
+		todo.resetOriginalValues();
 
-		return h6d2;
+		return todo;
 	}
 
 	/**
-	 * Returns the h6d2 with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
+	 * Returns the todo with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the h6d2
-	 * @return the h6d2
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @param primaryKey the primary key of the todo
+	 * @return the todo
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2 findByPrimaryKey(Serializable primaryKey)
-		throws NoSuchH6D2Exception {
+	public Todo findByPrimaryKey(Serializable primaryKey)
+		throws NoSuchTodoException {
 
-		H6D2 h6d2 = fetchByPrimaryKey(primaryKey);
+		Todo todo = fetchByPrimaryKey(primaryKey);
 
-		if (h6d2 == null) {
+		if (todo == null) {
 			if (_log.isDebugEnabled()) {
 				_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			throw new NoSuchH6D2Exception(
+			throw new NoSuchTodoException(
 				_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 		}
 
-		return h6d2;
+		return todo;
 	}
 
 	/**
-	 * Returns the h6d2 with the primary key or throws a <code>NoSuchH6D2Exception</code> if it could not be found.
+	 * Returns the todo with the primary key or throws a <code>NoSuchTodoException</code> if it could not be found.
 	 *
-	 * @param h6d2Id the primary key of the h6d2
-	 * @return the h6d2
-	 * @throws NoSuchH6D2Exception if a h6d2 with the primary key could not be found
+	 * @param todoId the primary key of the todo
+	 * @return the todo
+	 * @throws NoSuchTodoException if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2 findByPrimaryKey(long h6d2Id) throws NoSuchH6D2Exception {
-		return findByPrimaryKey((Serializable)h6d2Id);
+	public Todo findByPrimaryKey(long todoId) throws NoSuchTodoException {
+		return findByPrimaryKey((Serializable)todoId);
 	}
 
 	/**
-	 * Returns the h6d2 with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the todo with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param h6d2Id the primary key of the h6d2
-	 * @return the h6d2, or <code>null</code> if a h6d2 with the primary key could not be found
+	 * @param todoId the primary key of the todo
+	 * @return the todo, or <code>null</code> if a todo with the primary key could not be found
 	 */
 	@Override
-	public H6D2 fetchByPrimaryKey(long h6d2Id) {
-		return fetchByPrimaryKey((Serializable)h6d2Id);
+	public Todo fetchByPrimaryKey(long todoId) {
+		return fetchByPrimaryKey((Serializable)todoId);
 	}
 
 	/**
-	 * Returns all the h6d2s.
+	 * Returns all the todos.
 	 *
-	 * @return the h6d2s
+	 * @return the todos
 	 */
 	@Override
-	public List<H6D2> findAll() {
+	public List<Todo> findAll() {
 		return findAll(QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
 	/**
-	 * Returns a range of all the h6d2s.
+	 * Returns a range of all the todos.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
-	 * @return the range of h6d2s
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
+	 * @return the range of todos
 	 */
 	@Override
-	public List<H6D2> findAll(int start, int end) {
+	public List<Todo> findAll(int start, int end) {
 		return findAll(start, end, null);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s.
+	 * Returns an ordered range of all the todos.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of h6d2s
+	 * @return the ordered range of todos
 	 */
 	@Override
-	public List<H6D2> findAll(
-		int start, int end, OrderByComparator<H6D2> orderByComparator) {
+	public List<Todo> findAll(
+		int start, int end, OrderByComparator<Todo> orderByComparator) {
 
 		return findAll(start, end, orderByComparator, true);
 	}
 
 	/**
-	 * Returns an ordered range of all the h6d2s.
+	 * Returns an ordered range of all the todos.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>H6D2ModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>TodoModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of h6d2s
-	 * @param end the upper bound of the range of h6d2s (not inclusive)
+	 * @param start the lower bound of the range of todos
+	 * @param end the upper bound of the range of todos (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of h6d2s
+	 * @return the ordered range of todos
 	 */
 	@Override
-	public List<H6D2> findAll(
-		int start, int end, OrderByComparator<H6D2> orderByComparator,
+	public List<Todo> findAll(
+		int start, int end, OrderByComparator<Todo> orderByComparator,
 		boolean useFinderCache) {
 
 		FinderPath finderPath = null;
@@ -1854,10 +1854,10 @@ public class H6D2PersistenceImpl
 			finderArgs = new Object[] {start, end, orderByComparator};
 		}
 
-		List<H6D2> list = null;
+		List<Todo> list = null;
 
 		if (useFinderCache) {
-			list = (List<H6D2>)finderCache.getResult(finderPath, finderArgs);
+			list = (List<Todo>)finderCache.getResult(finderPath, finderArgs);
 		}
 
 		if (list == null) {
@@ -1868,7 +1868,7 @@ public class H6D2PersistenceImpl
 				sb = new StringBundler(
 					2 + (orderByComparator.getOrderByFields().length * 2));
 
-				sb.append(_SQL_SELECT_H6D2);
+				sb.append(_SQL_SELECT_TODO);
 
 				appendOrderByComparator(
 					sb, _ORDER_BY_ENTITY_ALIAS, orderByComparator);
@@ -1876,9 +1876,9 @@ public class H6D2PersistenceImpl
 				sql = sb.toString();
 			}
 			else {
-				sql = _SQL_SELECT_H6D2;
+				sql = _SQL_SELECT_TODO;
 
-				sql = sql.concat(H6D2ModelImpl.ORDER_BY_JPQL);
+				sql = sql.concat(TodoModelImpl.ORDER_BY_JPQL);
 			}
 
 			Session session = null;
@@ -1888,7 +1888,7 @@ public class H6D2PersistenceImpl
 
 				Query query = session.createQuery(sql);
 
-				list = (List<H6D2>)QueryUtil.list(
+				list = (List<Todo>)QueryUtil.list(
 					query, getDialect(), start, end);
 
 				cacheResult(list);
@@ -1909,20 +1909,20 @@ public class H6D2PersistenceImpl
 	}
 
 	/**
-	 * Removes all the h6d2s from the database.
+	 * Removes all the todos from the database.
 	 *
 	 */
 	@Override
 	public void removeAll() {
-		for (H6D2 h6d2 : findAll()) {
-			remove(h6d2);
+		for (Todo todo : findAll()) {
+			remove(todo);
 		}
 	}
 
 	/**
-	 * Returns the number of h6d2s.
+	 * Returns the number of todos.
 	 *
-	 * @return the number of h6d2s
+	 * @return the number of todos
 	 */
 	@Override
 	public int countAll() {
@@ -1935,7 +1935,7 @@ public class H6D2PersistenceImpl
 			try {
 				session = openSession();
 
-				Query query = session.createQuery(_SQL_COUNT_H6D2);
+				Query query = session.createQuery(_SQL_COUNT_TODO);
 
 				count = (Long)query.uniqueResult();
 
@@ -1965,28 +1965,28 @@ public class H6D2PersistenceImpl
 
 	@Override
 	protected String getPKDBName() {
-		return "h6d2Id";
+		return "todoId";
 	}
 
 	@Override
 	protected String getSelectSQL() {
-		return _SQL_SELECT_H6D2;
+		return _SQL_SELECT_TODO;
 	}
 
 	@Override
 	protected Map<String, Integer> getTableColumnsMap() {
-		return H6D2ModelImpl.TABLE_COLUMNS_MAP;
+		return TodoModelImpl.TABLE_COLUMNS_MAP;
 	}
 
 	/**
-	 * Initializes the h6d2 persistence.
+	 * Initializes the todo persistence.
 	 */
 	@Activate
 	public void activate(BundleContext bundleContext) {
 		_bundleContext = bundleContext;
 
 		_argumentsResolverServiceRegistration = _bundleContext.registerService(
-			ArgumentsResolver.class, new H6D2ModelArgumentsResolver(),
+			ArgumentsResolver.class, new TodoModelArgumentsResolver(),
 			new HashMapDictionary<>());
 
 		_finderPathWithPaginationFindAll = new FinderPath(
@@ -2051,7 +2051,7 @@ public class H6D2PersistenceImpl
 
 	@Deactivate
 	public void deactivate() {
-		entityCache.removeCache(H6D2Impl.class.getName());
+		entityCache.removeCache(TodoImpl.class.getName());
 
 		_argumentsResolverServiceRegistration.unregister();
 	}
@@ -2090,27 +2090,27 @@ public class H6D2PersistenceImpl
 	@Reference
 	protected FinderCache finderCache;
 
-	private static final String _SQL_SELECT_H6D2 = "SELECT h6d2 FROM H6D2 h6d2";
+	private static final String _SQL_SELECT_TODO = "SELECT todo FROM Todo todo";
 
-	private static final String _SQL_SELECT_H6D2_WHERE =
-		"SELECT h6d2 FROM H6D2 h6d2 WHERE ";
+	private static final String _SQL_SELECT_TODO_WHERE =
+		"SELECT todo FROM Todo todo WHERE ";
 
-	private static final String _SQL_COUNT_H6D2 =
-		"SELECT COUNT(h6d2) FROM H6D2 h6d2";
+	private static final String _SQL_COUNT_TODO =
+		"SELECT COUNT(todo) FROM Todo todo";
 
-	private static final String _SQL_COUNT_H6D2_WHERE =
-		"SELECT COUNT(h6d2) FROM H6D2 h6d2 WHERE ";
+	private static final String _SQL_COUNT_TODO_WHERE =
+		"SELECT COUNT(todo) FROM Todo todo WHERE ";
 
-	private static final String _ORDER_BY_ENTITY_ALIAS = "h6d2.";
+	private static final String _ORDER_BY_ENTITY_ALIAS = "todo.";
 
 	private static final String _NO_SUCH_ENTITY_WITH_PRIMARY_KEY =
-		"No H6D2 exists with the primary key ";
+		"No Todo exists with the primary key ";
 
 	private static final String _NO_SUCH_ENTITY_WITH_KEY =
-		"No H6D2 exists with the key {";
+		"No Todo exists with the key {";
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		H6D2PersistenceImpl.class);
+		TodoPersistenceImpl.class);
 
 	private static final Set<String> _badColumnNames = SetUtil.fromArray(
 		new String[] {"uuid"});
@@ -2123,7 +2123,7 @@ public class H6D2PersistenceImpl
 	private ServiceRegistration<ArgumentsResolver>
 		_argumentsResolverServiceRegistration;
 
-	private static class H6D2ModelArgumentsResolver
+	private static class TodoModelArgumentsResolver
 		implements ArgumentsResolver {
 
 		@Override
@@ -2141,12 +2141,12 @@ public class H6D2PersistenceImpl
 				return null;
 			}
 
-			H6D2ModelImpl h6d2ModelImpl = (H6D2ModelImpl)baseModel;
+			TodoModelImpl todoModelImpl = (TodoModelImpl)baseModel;
 
-			long columnBitmask = h6d2ModelImpl.getColumnBitmask();
+			long columnBitmask = todoModelImpl.getColumnBitmask();
 
 			if (!checkColumn || (columnBitmask == 0)) {
-				return _getValue(h6d2ModelImpl, columnNames, original);
+				return _getValue(todoModelImpl, columnNames, original);
 			}
 
 			Long finderPathColumnBitmask = _finderPathColumnBitmasksCache.get(
@@ -2156,7 +2156,7 @@ public class H6D2PersistenceImpl
 				finderPathColumnBitmask = 0L;
 
 				for (String columnName : columnNames) {
-					finderPathColumnBitmask |= h6d2ModelImpl.getColumnBitmask(
+					finderPathColumnBitmask |= todoModelImpl.getColumnBitmask(
 						columnName);
 				}
 
@@ -2165,7 +2165,7 @@ public class H6D2PersistenceImpl
 			}
 
 			if ((columnBitmask & finderPathColumnBitmask) != 0) {
-				return _getValue(h6d2ModelImpl, columnNames, original);
+				return _getValue(todoModelImpl, columnNames, original);
 			}
 
 			return null;
@@ -2173,16 +2173,16 @@ public class H6D2PersistenceImpl
 
 		@Override
 		public String getClassName() {
-			return H6D2Impl.class.getName();
+			return TodoImpl.class.getName();
 		}
 
 		@Override
 		public String getTableName() {
-			return H6D2Table.INSTANCE.getTableName();
+			return TodoTable.INSTANCE.getTableName();
 		}
 
 		private static Object[] _getValue(
-			H6D2ModelImpl h6d2ModelImpl, String[] columnNames,
+			TodoModelImpl todoModelImpl, String[] columnNames,
 			boolean original) {
 
 			Object[] arguments = new Object[columnNames.length];
@@ -2191,11 +2191,11 @@ public class H6D2PersistenceImpl
 				String columnName = columnNames[i];
 
 				if (original) {
-					arguments[i] = h6d2ModelImpl.getColumnOriginalValue(
+					arguments[i] = todoModelImpl.getColumnOriginalValue(
 						columnName);
 				}
 				else {
-					arguments[i] = h6d2ModelImpl.getColumnValue(columnName);
+					arguments[i] = todoModelImpl.getColumnValue(columnName);
 				}
 			}
 

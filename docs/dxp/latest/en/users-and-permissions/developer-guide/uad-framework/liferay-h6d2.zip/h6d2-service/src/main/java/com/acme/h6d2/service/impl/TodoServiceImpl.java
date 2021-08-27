@@ -12,10 +12,23 @@
  * details.
  */
 
-package com.acme.h6d2.model.impl;
+package com.acme.h6d2.service.impl;
+
+import com.acme.h6d2.service.base.TodoServiceBaseImpl;
+
+import com.liferay.portal.aop.AopService;
+
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-public class H6D2Impl extends H6D2BaseImpl {
+@Component(
+	property = {
+		"json.web.service.context.name=h6d2",
+		"json.web.service.context.path=Todo"
+	},
+	service = AopService.class
+)
+public class TodoServiceImpl extends TodoServiceBaseImpl {
 }

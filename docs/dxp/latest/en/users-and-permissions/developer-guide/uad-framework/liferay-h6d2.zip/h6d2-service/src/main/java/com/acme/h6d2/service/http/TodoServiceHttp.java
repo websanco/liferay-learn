@@ -16,7 +16,7 @@ package com.acme.h6d2.service.http;
 
 /**
  * Provides the HTTP utility for the
- * <code>com.acme.h6d2.service.H6D2ServiceUtil</code> service
+ * <code>com.acme.h6d2.service.TodoServiceUtil</code> service
  * utility. The
  * static methods of this class calls the same methods of the service utility.
  * However, the signatures are different because it requires an additional
@@ -38,8 +38,8 @@ package com.acme.h6d2.service.http;
  * </p>
  *
  * @author Brian Wing Shun Chan
- * @see H6D2ServiceSoap
+ * @see TodoServiceSoap
  * @generated
  */
-public class H6D2ServiceHttp {
+public class TodoServiceHttp {
 }

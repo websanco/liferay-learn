@@ -14,7 +14,7 @@
 
 package com.acme.h6d2.model.impl;
 
-import com.acme.h6d2.model.H6D2;
+import com.acme.h6d2.model.Todo;
 
 import com.liferay.petra.lang.HashUtil;
 import com.liferay.petra.string.StringBundler;
@@ -28,12 +28,12 @@ import java.io.ObjectOutput;
 import java.util.Date;
 
 /**
- * The cache model class for representing H6D2 in entity cache.
+ * The cache model class for representing Todo in entity cache.
  *
  * @author Brian Wing Shun Chan
  * @generated
  */
-public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
+public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 
 	@Override
 	public boolean equals(Object object) {
@@ -41,13 +41,13 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 			return true;
 		}
 
-		if (!(object instanceof H6D2CacheModel)) {
+		if (!(object instanceof TodoCacheModel)) {
 			return false;
 		}
 
-		H6D2CacheModel h6d2CacheModel = (H6D2CacheModel)object;
+		TodoCacheModel todoCacheModel = (TodoCacheModel)object;
 
-		if (h6d2Id == h6d2CacheModel.h6d2Id) {
+		if (todoId == todoCacheModel.todoId) {
 			return true;
 		}
 
@@ -56,7 +56,7 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 
 	@Override
 	public int hashCode() {
-		return HashUtil.hash(0, h6d2Id);
+		return HashUtil.hash(0, todoId);
 	}
 
 	@Override
@@ -65,8 +65,8 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 
 		sb.append("{uuid=");
 		sb.append(uuid);
-		sb.append(", h6d2Id=");
-		sb.append(h6d2Id);
+		sb.append(", todoId=");
+		sb.append(todoId);
 		sb.append(", groupId=");
 		sb.append(groupId);
 		sb.append(", companyId=");
@@ -79,67 +79,67 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 		sb.append(createDate);
 		sb.append(", modifiedDate=");
 		sb.append(modifiedDate);
-		sb.append(", todo=");
-		sb.append(todo);
+		sb.append(", name=");
+		sb.append(name);
 		sb.append("}");
 
 		return sb.toString();
 	}
 
 	@Override
-	public H6D2 toEntityModel() {
-		H6D2Impl h6d2Impl = new H6D2Impl();
+	public Todo toEntityModel() {
+		TodoImpl todoImpl = new TodoImpl();
 
 		if (uuid == null) {
-			h6d2Impl.setUuid("");
+			todoImpl.setUuid("");
 		}
 		else {
-			h6d2Impl.setUuid(uuid);
+			todoImpl.setUuid(uuid);
 		}
 
-		h6d2Impl.setH6d2Id(h6d2Id);
-		h6d2Impl.setGroupId(groupId);
-		h6d2Impl.setCompanyId(companyId);
-		h6d2Impl.setUserId(userId);
+		todoImpl.setTodoId(todoId);
+		todoImpl.setGroupId(groupId);
+		todoImpl.setCompanyId(companyId);
+		todoImpl.setUserId(userId);
 
 		if (userName == null) {
-			h6d2Impl.setUserName("");
+			todoImpl.setUserName("");
 		}
 		else {
-			h6d2Impl.setUserName(userName);
+			todoImpl.setUserName(userName);
 		}
 
 		if (createDate == Long.MIN_VALUE) {
-			h6d2Impl.setCreateDate(null);
+			todoImpl.setCreateDate(null);
 		}
 		else {
-			h6d2Impl.setCreateDate(new Date(createDate));
+			todoImpl.setCreateDate(new Date(createDate));
 		}
 
 		if (modifiedDate == Long.MIN_VALUE) {
-			h6d2Impl.setModifiedDate(null);
+			todoImpl.setModifiedDate(null);
 		}
 		else {
-			h6d2Impl.setModifiedDate(new Date(modifiedDate));
+			todoImpl.setModifiedDate(new Date(modifiedDate));
 		}
 
-		if (todo == null) {
-			h6d2Impl.setTodo("");
+		if (name == null) {
+			todoImpl.setName("");
 		}
 		else {
-			h6d2Impl.setTodo(todo);
+			todoImpl.setName(name);
 		}
 
-		h6d2Impl.resetOriginalValues();
+		todoImpl.resetOriginalValues();
 
-		return h6d2Impl;
+		return todoImpl;
 	}
 
 	@Override
 	public void readExternal(ObjectInput objectInput) throws IOException {
 		uuid = objectInput.readUTF();
 
-		h6d2Id = objectInput.readLong();
+		todoId = objectInput.readLong();
 
 		groupId = objectInput.readLong();
 
@@ -149,7 +149,7 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 		userName = objectInput.readUTF();
 		createDate = objectInput.readLong();
 		modifiedDate = objectInput.readLong();
-		todo = objectInput.readUTF();
+		name = objectInput.readUTF();
 	}
 
 	@Override
@@ -161,7 +161,7 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 			objectOutput.writeUTF(uuid);
 		}
 
-		objectOutput.writeLong(h6d2Id);
+		objectOutput.writeLong(todoId);
 
 		objectOutput.writeLong(groupId);
 
@@ -179,22 +179,22 @@ public class H6D2CacheModel implements CacheModel<H6D2>, Externalizable {
 		objectOutput.writeLong(createDate);
 		objectOutput.writeLong(modifiedDate);
 
-		if (todo == null) {
+		if (name == null) {
 			objectOutput.writeUTF("");
 		}
 		else {
-			objectOutput.writeUTF(todo);
+			objectOutput.writeUTF(name);
 		}
 	}
 
 	public String uuid;
-	public long h6d2Id;
+	public long todoId;
 	public long groupId;
 	public long companyId;
 	public long userId;
 	public String userName;
 	public long createDate;
 	public long modifiedDate;
-	public String todo;
+	public String name;
 
 }

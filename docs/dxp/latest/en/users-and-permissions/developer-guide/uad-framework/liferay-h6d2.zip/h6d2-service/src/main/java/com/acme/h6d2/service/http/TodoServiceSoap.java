@@ -16,7 +16,7 @@ package com.acme.h6d2.service.http;
 
 /**
  * Provides the SOAP utility for the
- * <code>com.acme.h6d2.service.H6D2ServiceUtil</code> service
+ * <code>com.acme.h6d2.service.TodoServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
@@ -25,10 +25,10 @@ package com.acme.h6d2.service.http;
  * ServiceBuilder follows certain rules in translating the methods. For example,
  * if the method in the service utility returns a <code>java.util.List</code>,
  * that is translated to an array of
- * <code>com.acme.h6d2.model.H6D2Soap</code>. If the method in the
+ * <code>com.acme.h6d2.model.TodoSoap</code>. If the method in the
  * service utility returns a
- * <code>com.acme.h6d2.model.H6D2</code>, that is translated to a
- * <code>com.acme.h6d2.model.H6D2Soap</code>. Methods that SOAP
+ * <code>com.acme.h6d2.model.Todo</code>, that is translated to a
+ * <code>com.acme.h6d2.model.TodoSoap</code>. Methods that SOAP
  * cannot safely wire are skipped.
  * </p>
  *
@@ -50,10 +50,10 @@ package com.acme.h6d2.service.http;
  * </p>
  *
  * @author Brian Wing Shun Chan
- * @see H6D2ServiceHttp
+ * @see TodoServiceHttp
  * @deprecated As of Athanasius (7.3.x), with no direct replacement
  * @generated
  */
 @Deprecated
-public class H6D2ServiceSoap {
+public class TodoServiceSoap {
 }

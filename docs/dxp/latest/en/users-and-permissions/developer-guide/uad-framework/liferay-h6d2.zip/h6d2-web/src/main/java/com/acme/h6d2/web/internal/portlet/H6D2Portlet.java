@@ -1,7 +1,7 @@
 package com.acme.h6d2.web.internal.portlet;
 
-import com.acme.h6d2.model.H6D2;
-import com.acme.h6d2.service.H6D2LocalService;
+import com.acme.h6d2.model.Todo;
+import com.acme.h6d2.service.TodoLocalService;
 
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -41,24 +41,24 @@ public class H6D2Portlet extends MVCPortlet {
 
 		User user = _portal.getUser(actionRequest);
 
-		H6D2 h6d2 = _h6d2LocalService.createH6D2(
+		Todo todo = _todoLocalService.createTodo(
 			CounterLocalServiceUtil.increment());
 
-		h6d2.setCompanyId(user.getCompanyId());
-		h6d2.setUserId(user.getUserId());
-		h6d2.setUserName(user.getFullName());
+		todo.setCompanyId(user.getCompanyId());
+		todo.setUserId(user.getUserId());
+		todo.setUserName(user.getFullName());
 
-		h6d2.setGroupId(themeDisplay.getSiteGroupId());
+		todo.setGroupId(themeDisplay.getSiteGroupId());
 
-		h6d2.setTodo(item);
+		todo.setName(item);
 
-		_h6d2LocalService.addH6D2(h6d2);
+		_todoLocalService.addTodo(todo);
 	}
 
 	@Reference
-	private H6D2LocalService _h6d2LocalService;
+	private Portal _portal;
 
 	@Reference
-	private Portal _portal;
+	private TodoLocalService _todoLocalService;
 
 }

@@ -14,7 +14,7 @@
 
 package com.acme.h6d2.service.impl;
 
-import com.acme.h6d2.service.base.H6D2LocalServiceBaseImpl;
+import com.acme.h6d2.service.base.TodoLocalServiceBaseImpl;
 
 import com.liferay.portal.aop.AopService;
 
@@ -24,8 +24,8 @@ import org.osgi.service.component.annotations.Component;
  * @author Brian Wing Shun Chan
  */
 @Component(
-	property = "model.class.name=com.acme.h6d2.model.H6D2",
+	property = "model.class.name=com.acme.h6d2.model.Todo",
 	service = AopService.class
 )
-public class H6D2LocalServiceImpl extends H6D2LocalServiceBaseImpl {
+public class TodoLocalServiceImpl extends TodoLocalServiceBaseImpl {
 }

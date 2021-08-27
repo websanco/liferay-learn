@@ -25,12 +25,12 @@ import com.liferay.portal.kernel.transaction.Transactional;
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
- * Provides the remote service interface for H6D2. Methods of this
+ * Provides the remote service interface for Todo. Methods of this
  * service are expected to have security checks based on the propagated JAAS
  * credentials because this service can be accessed remotely.
  *
  * @author Brian Wing Shun Chan
- * @see H6D2ServiceUtil
+ * @see TodoServiceUtil
  * @generated
  */
 @AccessControlled
@@ -40,12 +40,12 @@ import org.osgi.annotation.versioning.ProviderType;
 	isolation = Isolation.PORTAL,
 	rollbackFor = {PortalException.class, SystemException.class}
 )
-public interface H6D2Service extends BaseService {
+public interface TodoService extends BaseService {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this interface directly. Add custom service methods to <code>com.acme.h6d2.service.impl.H6D2ServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the h6d2 remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link H6D2ServiceUtil} if injection and service tracking are not available.
+	 * Never modify this interface directly. Add custom service methods to <code>com.acme.h6d2.service.impl.TodoServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the todo remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link TodoServiceUtil} if injection and service tracking are not available.
 	 */
 
 	/**

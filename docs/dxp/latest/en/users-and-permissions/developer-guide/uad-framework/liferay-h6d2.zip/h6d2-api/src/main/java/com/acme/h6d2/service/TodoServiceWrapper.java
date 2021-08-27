@@ -17,17 +17,17 @@ package com.acme.h6d2.service;
 import com.liferay.portal.kernel.service.ServiceWrapper;
 
 /**
- * Provides a wrapper for {@link H6D2Service}.
+ * Provides a wrapper for {@link TodoService}.
  *
  * @author Brian Wing Shun Chan
- * @see H6D2Service
+ * @see TodoService
  * @generated
  */
-public class H6D2ServiceWrapper
-	implements H6D2Service, ServiceWrapper<H6D2Service> {
+public class TodoServiceWrapper
+	implements ServiceWrapper<TodoService>, TodoService {
 
-	public H6D2ServiceWrapper(H6D2Service h6d2Service) {
-		_h6d2Service = h6d2Service;
+	public TodoServiceWrapper(TodoService todoService) {
+		_todoService = todoService;
 	}
 
 	/**
@@ -37,19 +37,19 @@ public class H6D2ServiceWrapper
 	 */
 	@Override
 	public String getOSGiServiceIdentifier() {
-		return _h6d2Service.getOSGiServiceIdentifier();
+		return _todoService.getOSGiServiceIdentifier();
 	}
 
 	@Override
-	public H6D2Service getWrappedService() {
-		return _h6d2Service;
+	public TodoService getWrappedService() {
+		return _todoService;
 	}
 
 	@Override
-	public void setWrappedService(H6D2Service h6d2Service) {
-		_h6d2Service = h6d2Service;
+	public void setWrappedService(TodoService todoService) {
+		_todoService = todoService;
 	}
 
-	private H6D2Service _h6d2Service;
+	private TodoService _todoService;
 
 }

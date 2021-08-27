@@ -1,3 +1,2 @@
-create index IX_3A34855F on H6D2_H6D2 (todo[$COLUMN_LENGTH:75$]);
-create index IX_D82A7D19 on H6D2_H6D2 (uuid_[$COLUMN_LENGTH:75$], companyId);
-create unique index IX_583175DB on H6D2_H6D2 (uuid_[$COLUMN_LENGTH:75$], groupId);
+create index IX_FE7222A3 on H6D2_Todo (uuid_[$COLUMN_LENGTH:75$], companyId);
+create unique index IX_6A58F5E5 on H6D2_Todo (uuid_[$COLUMN_LENGTH:75$], groupId);

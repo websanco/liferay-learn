@@ -4,11 +4,11 @@
 <service-builder dependency-injector="ds" package-path="com.acme.h6d2">
 	<namespace>H6D2</namespace>
 	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
-	<entity local-service="true" name="H6D2" remote-service="true" uad-application-name="H6D2" uad-package-path="com.acme.h6d2" uuid="true">
+	<entity local-service="true" name="Todo" remote-service="true" uad-application-name="H6D2" uad-package-path="com.acme.h6d2" uuid="true">
 
 		<!-- PK fields -->
 
-		<column name="h6d2Id" primary="true" type="long" />
+		<column name="todoId" primary="true" type="long" />
 
 		<!-- Group instance -->
 
@@ -24,7 +24,7 @@
 
 		<!-- Other fields -->
 
-		<column name="todo" type="String" uad-nonanonymizable="true" />
+		<column name="name" type="String" uad-nonanonymizable="true" />
 
 	</entity>
 </service-builder>

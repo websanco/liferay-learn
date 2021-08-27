@@ -15,23 +15,23 @@
 package com.acme.h6d2.service;
 
 /**
- * Provides the remote service utility for H6D2. This utility wraps
- * <code>com.acme.h6d2.service.impl.H6D2ServiceImpl</code> and is an
+ * Provides the remote service utility for Todo. This utility wraps
+ * <code>com.acme.h6d2.service.impl.TodoServiceImpl</code> and is an
  * access point for service operations in application layer code running on a
  * remote server. Methods of this service are expected to have security checks
  * based on the propagated JAAS credentials because this service can be
  * accessed remotely.
  *
  * @author Brian Wing Shun Chan
- * @see H6D2Service
+ * @see TodoService
  * @generated
  */
-public class H6D2ServiceUtil {
+public class TodoServiceUtil {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this class directly. Add custom service methods to <code>com.acme.h6d2.service.impl.H6D2ServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify this class directly. Add custom service methods to <code>com.acme.h6d2.service.impl.TodoServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 
 	/**
@@ -43,10 +43,10 @@ public class H6D2ServiceUtil {
 		return getService().getOSGiServiceIdentifier();
 	}
 
-	public static H6D2Service getService() {
+	public static TodoService getService() {
 		return _service;
 	}
 
-	private static volatile H6D2Service _service;
+	private static volatile TodoService _service;
 
 }

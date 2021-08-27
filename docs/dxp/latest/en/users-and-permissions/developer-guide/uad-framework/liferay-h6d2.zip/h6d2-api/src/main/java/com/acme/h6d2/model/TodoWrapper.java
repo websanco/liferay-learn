@@ -24,18 +24,18 @@ import java.util.Map;
 
 /**
  * <p>
- * This class is a wrapper for {@link H6D2}.
+ * This class is a wrapper for {@link Todo}.
  * </p>
  *
  * @author Brian Wing Shun Chan
- * @see H6D2
+ * @see Todo
  * @generated
  */
-public class H6D2Wrapper
-	extends BaseModelWrapper<H6D2> implements H6D2, ModelWrapper<H6D2> {
+public class TodoWrapper
+	extends BaseModelWrapper<Todo> implements ModelWrapper<Todo>, Todo {
 
-	public H6D2Wrapper(H6D2 h6d2) {
-		super(h6d2);
+	public TodoWrapper(Todo todo) {
+		super(todo);
 	}
 
 	@Override
@@ -43,14 +43,14 @@ public class H6D2Wrapper
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
 		attributes.put("uuid", getUuid());
-		attributes.put("h6d2Id", getH6d2Id());
+		attributes.put("todoId", getTodoId());
 		attributes.put("groupId", getGroupId());
 		attributes.put("companyId", getCompanyId());
 		attributes.put("userId", getUserId());
 		attributes.put("userName", getUserName());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("modifiedDate", getModifiedDate());
-		attributes.put("todo", getTodo());
+		attributes.put("name", getName());
 
 		return attributes;
 	}
@@ -63,10 +63,10 @@ public class H6D2Wrapper
 			setUuid(uuid);
 		}
 
-		Long h6d2Id = (Long)attributes.get("h6d2Id");
+		Long todoId = (Long)attributes.get("todoId");
 
-		if (h6d2Id != null) {
-			setH6d2Id(h6d2Id);
+		if (todoId != null) {
+			setTodoId(todoId);
 		}
 
 		Long groupId = (Long)attributes.get("groupId");
@@ -105,17 +105,17 @@ public class H6D2Wrapper
 			setModifiedDate(modifiedDate);
 		}
 
-		String todo = (String)attributes.get("todo");
+		String name = (String)attributes.get("name");
 
-		if (todo != null) {
-			setTodo(todo);
+		if (name != null) {
+			setName(name);
 		}
 	}
 
 	/**
-	 * Returns the company ID of this h6d2.
+	 * Returns the company ID of this todo.
 	 *
-	 * @return the company ID of this h6d2
+	 * @return the company ID of this todo
 	 */
 	@Override
 	public long getCompanyId() {
@@ -123,9 +123,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the create date of this h6d2.
+	 * Returns the create date of this todo.
 	 *
-	 * @return the create date of this h6d2
+	 * @return the create date of this todo
 	 */
 	@Override
 	public Date getCreateDate() {
@@ -133,9 +133,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the group ID of this h6d2.
+	 * Returns the group ID of this todo.
 	 *
-	 * @return the group ID of this h6d2
+	 * @return the group ID of this todo
 	 */
 	@Override
 	public long getGroupId() {
@@ -143,19 +143,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the h6d2 ID of this h6d2.
+	 * Returns the modified date of this todo.
 	 *
-	 * @return the h6d2 ID of this h6d2
-	 */
-	@Override
-	public long getH6d2Id() {
-		return model.getH6d2Id();
-	}
-
-	/**
-	 * Returns the modified date of this h6d2.
-	 *
-	 * @return the modified date of this h6d2
+	 * @return the modified date of this todo
 	 */
 	@Override
 	public Date getModifiedDate() {
@@ -163,9 +153,19 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the primary key of this h6d2.
+	 * Returns the name of this todo.
 	 *
-	 * @return the primary key of this h6d2
+	 * @return the name of this todo
+	 */
+	@Override
+	public String getName() {
+		return model.getName();
+	}
+
+	/**
+	 * Returns the primary key of this todo.
+	 *
+	 * @return the primary key of this todo
 	 */
 	@Override
 	public long getPrimaryKey() {
@@ -173,19 +173,19 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the todo of this h6d2.
+	 * Returns the todo ID of this todo.
 	 *
-	 * @return the todo of this h6d2
+	 * @return the todo ID of this todo
 	 */
 	@Override
-	public String getTodo() {
-		return model.getTodo();
+	public long getTodoId() {
+		return model.getTodoId();
 	}
 
 	/**
-	 * Returns the user ID of this h6d2.
+	 * Returns the user ID of this todo.
 	 *
-	 * @return the user ID of this h6d2
+	 * @return the user ID of this todo
 	 */
 	@Override
 	public long getUserId() {
@@ -193,9 +193,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the user name of this h6d2.
+	 * Returns the user name of this todo.
 	 *
-	 * @return the user name of this h6d2
+	 * @return the user name of this todo
 	 */
 	@Override
 	public String getUserName() {
@@ -203,9 +203,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the user uuid of this h6d2.
+	 * Returns the user uuid of this todo.
 	 *
-	 * @return the user uuid of this h6d2
+	 * @return the user uuid of this todo
 	 */
 	@Override
 	public String getUserUuid() {
@@ -213,9 +213,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Returns the uuid of this h6d2.
+	 * Returns the uuid of this todo.
 	 *
-	 * @return the uuid of this h6d2
+	 * @return the uuid of this todo
 	 */
 	@Override
 	public String getUuid() {
@@ -228,9 +228,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the company ID of this h6d2.
+	 * Sets the company ID of this todo.
 	 *
-	 * @param companyId the company ID of this h6d2
+	 * @param companyId the company ID of this todo
 	 */
 	@Override
 	public void setCompanyId(long companyId) {
@@ -238,9 +238,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the create date of this h6d2.
+	 * Sets the create date of this todo.
 	 *
-	 * @param createDate the create date of this h6d2
+	 * @param createDate the create date of this todo
 	 */
 	@Override
 	public void setCreateDate(Date createDate) {
@@ -248,9 +248,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the group ID of this h6d2.
+	 * Sets the group ID of this todo.
 	 *
-	 * @param groupId the group ID of this h6d2
+	 * @param groupId the group ID of this todo
 	 */
 	@Override
 	public void setGroupId(long groupId) {
@@ -258,19 +258,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the h6d2 ID of this h6d2.
+	 * Sets the modified date of this todo.
 	 *
-	 * @param h6d2Id the h6d2 ID of this h6d2
-	 */
-	@Override
-	public void setH6d2Id(long h6d2Id) {
-		model.setH6d2Id(h6d2Id);
-	}
-
-	/**
-	 * Sets the modified date of this h6d2.
-	 *
-	 * @param modifiedDate the modified date of this h6d2
+	 * @param modifiedDate the modified date of this todo
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate) {
@@ -278,9 +268,19 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the primary key of this h6d2.
+	 * Sets the name of this todo.
 	 *
-	 * @param primaryKey the primary key of this h6d2
+	 * @param name the name of this todo
+	 */
+	@Override
+	public void setName(String name) {
+		model.setName(name);
+	}
+
+	/**
+	 * Sets the primary key of this todo.
+	 *
+	 * @param primaryKey the primary key of this todo
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey) {
@@ -288,19 +288,19 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the todo of this h6d2.
+	 * Sets the todo ID of this todo.
 	 *
-	 * @param todo the todo of this h6d2
+	 * @param todoId the todo ID of this todo
 	 */
 	@Override
-	public void setTodo(String todo) {
-		model.setTodo(todo);
+	public void setTodoId(long todoId) {
+		model.setTodoId(todoId);
 	}
 
 	/**
-	 * Sets the user ID of this h6d2.
+	 * Sets the user ID of this todo.
 	 *
-	 * @param userId the user ID of this h6d2
+	 * @param userId the user ID of this todo
 	 */
 	@Override
 	public void setUserId(long userId) {
@@ -308,9 +308,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the user name of this h6d2.
+	 * Sets the user name of this todo.
 	 *
-	 * @param userName the user name of this h6d2
+	 * @param userName the user name of this todo
 	 */
 	@Override
 	public void setUserName(String userName) {
@@ -318,9 +318,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the user uuid of this h6d2.
+	 * Sets the user uuid of this todo.
 	 *
-	 * @param userUuid the user uuid of this h6d2
+	 * @param userUuid the user uuid of this todo
 	 */
 	@Override
 	public void setUserUuid(String userUuid) {
@@ -328,9 +328,9 @@ public class H6D2Wrapper
 	}
 
 	/**
-	 * Sets the uuid of this h6d2.
+	 * Sets the uuid of this todo.
 	 *
-	 * @param uuid the uuid of this h6d2
+	 * @param uuid the uuid of this todo
 	 */
 	@Override
 	public void setUuid(String uuid) {
@@ -343,8 +343,8 @@ public class H6D2Wrapper
 	}
 
 	@Override
-	protected H6D2Wrapper wrap(H6D2 h6d2) {
-		return new H6D2Wrapper(h6d2);
+	protected TodoWrapper wrap(Todo todo) {
+		return new TodoWrapper(todo);
 	}
 
 }

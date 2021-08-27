@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 
 <model-hints>
-	<model name="com.acme.h6d2.model.H6D2">
+	<model name="com.acme.h6d2.model.Todo">
 		<field name="uuid" type="String" />
-		<field name="h6d2Id" type="long" />
+		<field name="todoId" type="long" />
 		<field name="groupId" type="long" />
 		<field name="companyId" type="long" />
 		<field name="userId" type="long" />
 		<field name="userName" type="String" />
 		<field name="createDate" type="Date" />
 		<field name="modifiedDate" type="Date" />
-		<field name="todo" type="String" />
+		<field name="name" type="String" />
 	</model>
 </model-hints>

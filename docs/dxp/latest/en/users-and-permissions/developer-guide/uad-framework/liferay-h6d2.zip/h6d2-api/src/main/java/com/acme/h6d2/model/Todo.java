@@ -21,27 +21,27 @@ import com.liferay.portal.kernel.util.Accessor;
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
- * The extended model interface for the H6D2 service. Represents a row in the &quot;H6D2_H6D2&quot; database table, with each column mapped to a property of this class.
+ * The extended model interface for the Todo service. Represents a row in the &quot;H6D2_Todo&quot; database table, with each column mapped to a property of this class.
  *
  * @author Brian Wing Shun Chan
- * @see H6D2Model
+ * @see TodoModel
  * @generated
  */
-@ImplementationClassName("com.acme.h6d2.model.impl.H6D2Impl")
+@ImplementationClassName("com.acme.h6d2.model.impl.TodoImpl")
 @ProviderType
-public interface H6D2 extends H6D2Model, PersistedModel {
+public interface Todo extends PersistedModel, TodoModel {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this interface directly. Add methods to <code>com.acme.h6d2.model.impl.H6D2Impl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface.
+	 * Never modify this interface directly. Add methods to <code>com.acme.h6d2.model.impl.TodoImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface.
 	 */
-	public static final Accessor<H6D2, Long> H6D2_ID_ACCESSOR =
-		new Accessor<H6D2, Long>() {
+	public static final Accessor<Todo, Long> TODO_ID_ACCESSOR =
+		new Accessor<Todo, Long>() {
 
 			@Override
-			public Long get(H6D2 h6d2) {
-				return h6d2.getH6d2Id();
+			public Long get(Todo todo) {
+				return todo.getTodoId();
 			}
 
 			@Override
@@ -50,8 +50,8 @@ public interface H6D2 extends H6D2Model, PersistedModel {
 			}
 
 			@Override
-			public Class<H6D2> getTypeClass() {
-				return H6D2.class;
+			public Class<Todo> getTypeClass() {
+				return Todo.class;
 			}
 
 		};

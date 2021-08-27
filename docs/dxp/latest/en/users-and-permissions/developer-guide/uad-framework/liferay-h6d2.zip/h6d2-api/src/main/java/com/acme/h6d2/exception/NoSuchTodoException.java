@@ -12,15 +12,28 @@
  * details.
  */
 
-package com.acme.h6d2.uad.display;
+package com.acme.h6d2.exception;
 
-import com.liferay.user.associated.data.display.UADDisplay;
-
-import org.osgi.service.component.annotations.Component;
+import com.liferay.portal.kernel.exception.NoSuchModelException;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(immediate = true, service = UADDisplay.class)
-public class H6D2UADDisplay extends BaseH6D2UADDisplay {
+public class NoSuchTodoException extends NoSuchModelException {
+
+	public NoSuchTodoException() {
+	}
+
+	public NoSuchTodoException(String msg) {
+		super(msg);
+	}
+
+	public NoSuchTodoException(String msg, Throwable throwable) {
+		super(msg, throwable);
+	}
+
+	public NoSuchTodoException(Throwable throwable) {
+		super(throwable);
+	}
+
 }

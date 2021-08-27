@@ -12,23 +12,15 @@
  * details.
  */
 
-package com.acme.h6d2.service.impl;
+package com.acme.h6d2.uad.exporter;
 
-import com.acme.h6d2.service.base.H6D2ServiceBaseImpl;
-
-import com.liferay.portal.aop.AopService;
+import com.liferay.user.associated.data.exporter.UADExporter;
 
 import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(
-	property = {
-		"json.web.service.context.name=h6d2",
-		"json.web.service.context.path=H6D2"
-	},
-	service = AopService.class
-)
-public class H6D2ServiceImpl extends H6D2ServiceBaseImpl {
+@Component(immediate = true, service = UADExporter.class)
+public class TodoUADExporter extends BaseTodoUADExporter {
 }
