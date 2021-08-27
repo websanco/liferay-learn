@@ -37,7 +37,7 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class H6D2Portlet extends MVCPortlet {
 
-	public void addH6D2(ActionRequest actionRequest, ActionResponse response)
+	public void addTodo(ActionRequest actionRequest, ActionResponse response)
 		throws PortalException {
 
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(

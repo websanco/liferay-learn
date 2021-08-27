@@ -17,10 +17,10 @@ page import="com.acme.h6d2.service.H6D2LocalServiceUtil" %>
 
 <h4>H6D2 Portlet</h4>
 
-<portlet:actionURL name="addH6D2" var="addH6D2Url" />
+<portlet:actionURL name="addTodo" var="addTodoURL" />
 
 <p>
-	<aui:form action="<%= addH6D2Url %>">
+	<aui:form action="<%= addTodoURL %>">
 		<aui:input name="item" type="text" />
 
 		<aui:button type="submit" value="submit" />
