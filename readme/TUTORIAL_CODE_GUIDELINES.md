@@ -38,6 +38,8 @@
     * [Logging Output](#logging-output)
         * [Logging an Exception](#logging-an-exception)
 * [Templates](#templates)
+    * [Naming JSP Files](#naming-jsp-files)
+    * [Use the Portlet Title in the Main Views](#use-the-portlet-title-in-the-main-views)
 * [Review Process](#review-process)
     * [Run update_examples.sh](#run-update_examplessh)
     * [Test Your Code](#test-your-code)
@@ -445,7 +447,17 @@ catch (MessageBusException messageBusException) {
 
 Put templates in your web module's `src/main/resources/META-INF/resources/` folder.
 
+### Naming JSP Files
+
 If your module uses a generic view JSP, name it `view.jsp`. If it has more than one, name them `view_1.jsp`, `view_2.jsp`, etc.
+
+### Use the Portlet Title in the Main Views
+
+Add the portlet title to your main view(s) using this format and replacing `XXXX` with your project ID:
+
+```html
+<h4>XXXX Portlet</h4>
+```
 
 ## Review Process 
 
