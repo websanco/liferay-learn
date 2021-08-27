@@ -2,7 +2,7 @@
 
 <h4>C8M3 Portlet</h4>
 
-<b>View 2</b>
+<h5>View 2</h5>
 
 <portlet:renderURL var="view1URL">
 	<portlet:param name="mvcPath" value="/view_1.jsp" />

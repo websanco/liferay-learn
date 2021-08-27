@@ -2,7 +2,7 @@
 
 <h4>A4P1 Portlet</h4>
 
-<b>Baker</b>
+<h5>Baker</h5>
 
 <portlet:renderURL var="ableURL">
 	<portlet:param name="mvcRenderCommandName" value="/a4p1/able" />

@@ -2,7 +2,7 @@
 
 <h4>B6F5 Portlet</h4>
 
-<b><liferay-ui:message key="b6f5-portlet-welcome" /></b>
+<h5><liferay-ui:message key="b6f5-portlet-welcome" /></h5>
 
 <p>
 	<liferay-ui:message key="success" />
