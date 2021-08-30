@@ -72,7 +72,7 @@ Here's how to deploy the example portlet and navigate between its views. For lea
 
     ![You navigated to View 2.](./rendering-views-with-mvc-portlet/images/03.png)
 
-    The log message shows MVC path value `/view_2.jsp`--the path to the View 2 template.
+    The log message shows MVC path value `/view_2.jsp`---the path to the View 2 template.
 
     ```bash
     MVC path /view_2.jsp
