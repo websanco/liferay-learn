@@ -1,9 +1,9 @@
 # Enabling FFmpeg for Audio and Video Previews
 
-Documents and Media provides integration with the [FFmpeg](http://ffmpeg.org/) multimedia framework for generating audio and video file previews. To use this integration, you must first install FFmpeg on your server. If you're working in a clustered environment, it must be installed on each node.  
+Documents and Media provides integration with the [FFmpeg](http://ffmpeg.org/) multimedia framework for generating audio and video file previews. To use this integration, you must first install FFmpeg on your server. If you're working in a clustered environment, it must be installed on each node.
 
-```note::
-   Previously, Liferay used Xuggler to generate video and audio previews. However, the Xuggler library is currently unmaintained. As of Liferay 7.4, users are advised to use FFmpeg for generating previews.
+```{note}
+Previously, Liferay used Xuggler to generate video and audio previews. However, the Xuggler library is currently unmaintained. As of Liferay 7.4, users are advised to use FFmpeg for generating previews.
 ```
 
 Once installed, follow these steps to configure Documents and Media to use FFmpeg:

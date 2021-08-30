@@ -8,16 +8,16 @@ However, since PDFBox only supports a limited number of file types, Liferay also
    To be used for generating previews, the service must first be installed on the server running the Liferay DXP instance. 
 ```
 
-Liferay DXP currently supports integration with the following services.
+Liferay DXP currently supports integration with the following programs.
 
-* [OpenOffice](http://www.openoffice.org) or [LibreOffice](http://www.libreoffice.org): These services can be used in server mode to generate thumbnails and previews for supported file types (`.pdf`, `.docx`, `.odt`, `.ppt`, `.odp`, etc.). You can also use them to convert documents and view them in your browser. See [Enabling OpenOffice/LibreOffice Integration](./enabling-openoffice-libreoffice-integration.md) to learn more.
+* [OpenOffice](http://www.openoffice.org) or [LibreOffice](http://www.libreoffice.org): These programs can be used in server mode to generate thumbnails and previews for supported file types (`.pdf`, `.docx`, `.odt`, `.ppt`, `.odp`, etc.). You can also use them to convert documents and view them in your browser. See [Enabling OpenOffice/LibreOffice Integration](./enabling-openoffice-libreoffice-integration.md) to learn more.
 
-* [ImageMagick](http://www.imagemagick.org) (also requires [Ghostscript](http://www.ghostscript.com)): These services provide fast, high-quality previews and conversions for image files. See [Enabling ImageMagick and Ghostscript](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-imagemagick-and-ghostscript) for more information.
+* [ImageMagick](http://www.imagemagick.org) (also requires [Ghostscript](http://www.ghostscript.com)): These programs provide fast, high-quality previews and conversions for image files. See [Enabling ImageMagick and Ghostscript](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-imagemagick-and-ghostscript) for more information.
 
-* [FFmpeg](http://ffmpeg.org/): This service provides support for audio and video files. In addition to generating file previews, you can and play multimedia in your browser's native HTML 5 player. See [Enabling FFmpeg for Audio and Video Previews](./enabling-ffmpeg-for-audio-and-video-previews.md) for more information.
+* [FFmpeg](http://ffmpeg.org/): This program provides support for audio and video files. In addition to generating file previews, you can and play multimedia in your browser's native HTML 5 player. See [Enabling FFmpeg for Audio and Video Previews](./enabling-ffmpeg-for-audio-and-video-previews.md) for more information.
 
-   ```note::
-      Liferay 7.3.x and earlier versions use `Xuggler <http://www.xuggle.com/xuggler>`_ for generating audio and video previews. See `Enabling Xuggler <../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-xuggler>`_ for more information.
+   ```{note}
+   Liferay 7.3.x and earlier versions use [Xuggler](http://www.xuggle.com/xuggler) for generating audio and video previews. See [Enabling Xuggler](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-xuggler) for more information.
    ```
 
 With these tools installed and configured, Documents and Media can provide in application previews of most file types.
