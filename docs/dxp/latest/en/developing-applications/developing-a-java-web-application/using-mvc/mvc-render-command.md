@@ -127,7 +127,7 @@ The `able.jsp` and `baker.jsp` files indirectly link to each other using portlet
 :language: javascript
 ```
 
-The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. This render URL declares the `mvcRenderCommandName` portlet parameter value `/a4p1/baker`--this is `A4P1AbleMVCRenderCommand`'s MVC command name. The variable `bakerURL` references this render URL.
+The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. This render URL declares the `mvcRenderCommandName` portlet parameter value `/a4p1/baker`---this is `A4P1AbleMVCRenderCommand`'s MVC command name. The variable `bakerURL` references this render URL.
 
 The hyperlink `<a href="<%= bakerURL %>">Go to Baker</a>` binds the render URL to an action.When a user clicks on the hyperlink, the portlet sends the [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) to `A4P1BakerMVCRenderCommand` because its `mvc.command.name` component property value `/a4p1/baker` matches the `mvcRenderCommandName` parameter value.
 
