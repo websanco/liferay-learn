@@ -1,10 +1,10 @@
 import com.liferay.headless.admin.taxonomy.client.dto.v1_0.TaxonomyVocabulary;
 import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyVocabularyResource;
 
-public class Vocabulary_PATCH_ById {
+public class TaxonomyVocabulary_POST_ToSite {
 
 	/**
-	 * java -classpath .:* -DtaxonomyVocabularyId=1234 Vocabulary_PATCH_ById
+	 * java -classpath .:* -DsiteId=1234 TaxonomyVocabulary_POST_ToSite
 	 */
 	public static void main(String[] args) throws Exception {
 		TaxonomyVocabularyResource.Builder builder =
@@ -16,11 +16,11 @@ public class Vocabulary_PATCH_ById {
 			).build();
 
 		TaxonomyVocabulary taxonomyVocabulary =
-			taxonomyVocabularyResource.patchTaxonomyVocabulary(
-				Long.valueOf(System.getProperty("taxonomyVocabularyId")),
+			taxonomyVocabularyResource.postSiteTaxonomyVocabulary(
+				Long.valueOf(System.getProperty("siteId")),
 				new TaxonomyVocabulary() {
 					{
-						description = "Bar";
+						description = "Foo";
 						name = "Baker";
 					}
 				});

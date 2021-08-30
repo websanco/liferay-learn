@@ -1,9 +1,9 @@
 import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyVocabularyResource;
 
-public class Vocabulary_DELETE_ById {
+public class TaxonomyVocabulary_DELETE_ById {
 
 	/**
-	 * java -classpath .:* -DtaxonomyVocabularyId=1234 Vocabulary_DELETE_ById
+	 * java -classpath .:* -DtaxonomyVocabularyId=1234 TaxonomyVocabulary_DELETE_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		TaxonomyVocabularyResource.Builder builder =

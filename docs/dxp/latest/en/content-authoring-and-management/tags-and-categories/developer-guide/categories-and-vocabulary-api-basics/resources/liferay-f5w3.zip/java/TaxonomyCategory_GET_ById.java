@@ -1,10 +1,10 @@
 import com.liferay.headless.admin.taxonomy.client.dto.v1_0.TaxonomyCategory;
 import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyCategoryResource;
 
-public class Category_PATCH_ById {
+public class TaxonomyCategory_GET_ById {
 
 	/**
-	 * java -classpath .:* -DtaxonomyCategoryId=1234 Category_PATCH_ById
+	 * java -classpath .:* -DtaxonomyCategoryId=1234 TaxonomyCategory_GET_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		TaxonomyCategoryResource.Builder builder =
@@ -16,14 +16,8 @@ public class Category_PATCH_ById {
 			).build();
 
 		TaxonomyCategory taxonomyCategory =
-			taxonomyCategoryResource.patchTaxonomyCategory(
-				String.valueOf(System.getProperty("taxonomyCategoryId")),
-				new TaxonomyCategory() {
-					{
-						description = "Bar";
-						name = "Baker";
-					}
-				});
+			taxonomyCategoryResource.getTaxonomyCategory(
+				String.valueOf(System.getProperty("taxonomyCategoryId")));
 
 		System.out.println(taxonomyCategory);
 	}
