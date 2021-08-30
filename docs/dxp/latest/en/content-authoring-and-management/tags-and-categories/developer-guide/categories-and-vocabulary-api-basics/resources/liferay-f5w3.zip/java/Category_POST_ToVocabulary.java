@@ -4,7 +4,7 @@ import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyCategory
 public class Category_POST_ToVocabulary {
 
 	/**
-	 * java -classpath .:* -DvocabularyId=1234 Category_POST_ToVocabulary
+	 * java -classpath .:* -DtaxonomyVocabularyId=1234 Category_POST_ToVocabulary
 	 */
 	public static void main(String[] args) throws Exception {
 		TaxonomyCategoryResource.Builder builder =
@@ -17,7 +17,7 @@ public class Category_POST_ToVocabulary {
 
 		TaxonomyCategory taxonomyCategory =
 			taxonomyCategoryResource.postTaxonomyVocabularyTaxonomyCategory(
-				Long.valueOf(System.getProperty("vocabularyId")),
+				Long.valueOf(System.getProperty("taxonomyVocabularyId")),
 				new TaxonomyCategory() {
 					{
 						description = "Foo";

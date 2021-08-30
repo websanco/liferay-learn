@@ -6,7 +6,7 @@ import com.liferay.headless.admin.taxonomy.client.resource.v1_0.TaxonomyCategory
 public class Categories_GET_FromVocabulary {
 
 	/**
-	 * java -classpath .:* -DvocabularyId=1234 Categories_GET_FromVocabulary
+	 * java -classpath .:* -DtaxonomyVocabularyId=1234 Categories_GET_FromVocabulary
 	 */
 	public static void main(String[] args) throws Exception {
 		TaxonomyCategoryResource.Builder builder =
@@ -20,7 +20,7 @@ public class Categories_GET_FromVocabulary {
 		Page<TaxonomyCategory> page =
 			taxonomyCategoryResource.
 				getTaxonomyVocabularyTaxonomyCategoriesPage(
-					Long.valueOf(System.getProperty("vocabularyId")), null,
+					Long.valueOf(System.getProperty("taxonomyVocabularyId")), null,
 					null, Pagination.of(1, 2), null);
 
 		System.out.println(page);
