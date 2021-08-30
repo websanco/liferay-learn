@@ -56,7 +56,7 @@ Once you've created the Grouped Product and associated other Products with it, s
     * **Meta Title**: Brakes Set Combo Kit
 1. Click _Publish_.
 
-Once the Grouped Product entity has been initially created, store administrators will need to associate the individual Products to the Grouped Product entry.
+Once the Grouped Product entity has been initially created, store administrators must associate the individual Products to the Grouped Product entry.
 
 ### Associate Products in Group
 
@@ -74,7 +74,7 @@ Next, specify the priority (the order in which they are displayed), and the quan
 
 ![Configure the Grouped Product's Priority.](./creating-a-grouped-product/images/05.png)
 
-In the image above, the Product has been given priority 1.0 which means it will be listed first. Assign incremental values to the other Products.
+In the image above, the Product has been given priority 1.0 which means it's listed first. Assign incremental values to the other Products.
 
 ![The Product Priority decides the order of the Products within a Grouped Product with lower values appearing first.](./creating-a-grouped-product/images/06.png)
 
@@ -82,7 +82,7 @@ Once the Products have been grouped, follow the sections above to add Product Op
 
 ### Setting Prices and Quantities on Liferay Commerce 2.0 and Below
 
-To set prices and quantities for a Grouped Product:
+To set prices and quantities for a Grouped Product,
 
 1. Click the _SKU_ tab.
 1. Click the _3-dot_ icon then _Edit_ next to _default_. (At this point, you can rename the SKU to something more descriptive like _Brakes Set Combo Kit_ on the _Details_ menu.)

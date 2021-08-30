@@ -1,6 +1,6 @@
 # Creating Product Bundles
 
-Liferay Commerce supports the creation of *Product bundles* using [Product Options](./using-product-options.md). With Options, you can define values that link the current Product with other SKUs, whether Simple, Virtual, or Grouped. Once defined, customers can select between Option values when adding the Product to their cart.
+Liferay Commerce supports the creation of *Product bundles* using [Product Options](./using-product-options.md). With Options, you can define values that link the current Product with other SKUs, whether Simple, Virtual, or Grouped. Once defined, customers can select different Option values when adding the Product to their cart.
 
 For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the price of the current Product.
 
@@ -12,7 +12,7 @@ Follow these steps to create a Product bundle:
 
 1. Open the *Global Menu*, click on the *Commerce* tab, and go to *Product Management* &rarr; *Products*.
 
-1. Click on the *Product* you want to use as the base Product for the bundle, and go to the *Options* tab.
+1. Click on the *Product* you want to use as the base Product for the bundle and go to the *Options* tab.
 
 1. In the *Add Options* field, enter a *name* for your new bundle Option, and click on *Create New*.
 
