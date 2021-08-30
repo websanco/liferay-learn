@@ -133,7 +133,7 @@ Tune Liferay's JVM, connection pools, and more for optimal performance. See [Tun
 
 ## What's Next
 
-If you're using Liferay DXP and haven't [activated](./setting-up-liferay/activating-liferay-dxp.md) it, do that first. Then continue with [Instance Configuration](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md) and the other [Setup Tasks`_ listed above.
+If you're using Liferay DXP and haven't [activated](./setting-up-liferay/activating-liferay-dxp.md) it, do that first. Then continue with [Instance Configuration](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md) and the other [Setup Tasks](#setup-tasks) listed above.
 
 ```{important}
 Before going to production, configure a process for backing up your installation and data. Please see [Backing Up](./maintaining-a-liferay-dxp-installation/backing-up.md) for details.
