@@ -63,12 +63,12 @@ Here you'll learn how to create an example project for a tutorial. It will be a 
 
 ### Example Project Structure
 
-Here's the structure for an example project that has the ID `c3p1` (more on project IDs shortly). The project is for a tutorial article whose Markdown file will be `implementing-something.md`:
+Here's the structure for an example project that has the ID `c3p5` (more on project IDs shortly). The project is for a tutorial article whose Markdown file will be `implementing-something.md`:
 
 ```
 [tutorial path] // This is the same folder your article will go in later.
-└── implementing-something/resources/liferay-c3p1.zip/
-    └── c3p1-impl // Module
+└── implementing-something/resources/liferay-c3p5.zip/
+    └── c3p5-impl // Module
         ├── bnd.bnd
         ├── build.gradle
         └── src/main/java/ // Your Java code goes here
@@ -86,28 +86,29 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
    ID Pattern:
    ```
-   [a-z][1-9][a-z][1-9]
+   [a-z][2-9][a-z][2-9]
    ```
    
-   Example: `c3p1`
+   Example: `c3p5`
 
     For convenience, these guidelines use `xxxx` as an ID placeholder--replace it with your unique ID.
 
     Here's a way of generating an ID that fits the pattern. 
 
     ```bash
-    tr -cd a-z1-9 < /dev/urandom | head -c 1000 | sed 's/.*\([a-z]\).*\([1-9]\).*\([a-z]\).*\([1-9]\).*/\1\2\3\4\n/'
+    tr -cd a-z2-9 < /dev/urandom | head -c 1000 | sed 's/.*\([a-z]\).*\([2-9]\).*\([a-z]\).*\([2-9]\).*/\1\2\3\4\n/'
     ```
 
-    > **Tip:** Make sure your ID is unique by searching your `liferay-learn` branch for any project folders that use the ID. For example, `find . -name liferay-c3p1.zip`
+    > **Tip:** Make sure your ID is unique by searching your `liferay-learn` branch for any project folders that use the ID. For example, `find . -name liferay-c3p5.zip`
 
     Avoid these things in your ID:
 
-    * Zeros. Zeros are easy to confuse with alphabetical `o` and `O`.
+    * Ones and `L`s. Number `1` and letter `l` are easily confused.
+    * Zeros and `O`s. Number `0` and letters `o` and `O` are easily confused.
     * Your initials (e.g., `j2b3` if your name is Joe Bloggs)
-    * Duplicating characters (e.g., `b1b5` duplicates `b`, `a1z1` duplicates `1`)
-    * Sequential characters (e.g., `a1b2` has sequential characters `a` and `b`, and `1` and `2`)
-    * Repeating part of another ID (e.g., `a8q1` and `a8q2` repeat `a8q`).
+    * Duplicating characters (e.g., `b2b5` duplicates `b`, `a2z2` duplicates `2`)
+    * Sequential characters (e.g., `a2b3` has sequential characters `a` and `b`, and `2` and `3`)
+    * Repeating part of another ID (e.g., `a8q2` and `a8q3` repeat `a8q`).
 
 1. Create your `liferay-xxxx.zip` project folder in a `[tutorial-name]/resources/` folder that's in the same location (shown as `[tutorial path]` below) that you will eventually put the tutorial article Markdown file.
 
@@ -141,7 +142,7 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 1. Copy our Java Workspace template to your project and build your project by running the `update_examples.sh` script from the `liferay-learn/docs` folder. For example,
 
     ```bash
-    ./update_examples.sh c3p1
+    ./update_examples.sh c3p5
     ```
     
     Here's the file structure with the files added by `update_examples.sh`.
@@ -149,13 +150,13 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
 ```
 [tutorial path]
-└── implementing-something/resources/liferay-c3p1.zip/
+└── implementing-something/resources/liferay-c3p5.zip/
     ├── gradle.properties // Specifies the Liferay product/version to build against
     ├── gradlew // Gradle wrapper
     ├── gradlew.bat // Gradle wrapper (Windows)
     ├── settings.gradle // Specifies the artifact repository
     ├── source-formatter-suppressions.xml // Suppresses unneeded code format checks
-    └── c3p1-impl // Module
+    └── c3p5-impl // Module
         ├── bnd.bnd
         └── build.gradle
 ```
@@ -298,8 +299,8 @@ In most cases, prefix class names with the project ID (capitalized).
 | Class Type | Class Name |
 | :--------- | :------------------------- |
 | Interface | *DescribeWhatItIs* (e.g., `Greeter`) |
-| Implementation | XXXX*InterfaceName* (e.g., `C3P1Greeter`) |
-| Portlet | XXXXPortlet (e.g., `C3P1Portlet`) |
+| Implementation | XXXX*InterfaceName* (e.g., `C3P5Greeter`) |
+| Portlet | XXXXPortlet (e.g., `C3P5Portlet`) |
 
 ### Javadoc 
 
@@ -385,17 +386,17 @@ If your module uses localized content, specify the content using language proper
 If your module overrides or extends a Liferay module (target module) and you want to add language keys or override any of the target module language keys, do these two things:
 
 1. [Write Your Custom Language Keys](https://help.liferay.com/hc/en-us/articles/360028808452-Overriding-a-Module-s-Language-Keys#write-custom-language-key-values)
-2. [Prioritize Your Module's Resource Bundle](https://help.liferay.com/hc/en-us/articles/360028808452-Overriding-a-Module-s-Language-Keys#prioritize-your-modules-resource-bundle) 
+1. [Prioritize Your Module's Resource Bundle](https://help.liferay.com/hc/en-us/articles/360028808452-Overriding-a-Module-s-Language-Keys#prioritize-your-modules-resource-bundle) 
 
 Follow the instructions in the above links (especially 2) carefully.
 
 #### Labels and Headings
 
-Include the project ID (in uppercase) in labels and headings. For example, `c1n4` is the project ID used in these Language Keys:
+Include the project ID (in uppercase) in labels and headings. For example, `c2n4` is the project ID used in these Language Keys:
 
 ```properties
-c1n4-commerce-product-type=C1N4 Commerce Product Type
-c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
+c2n4-commerce-product-type=C2N4 Commerce Product Type
+c2n4-screen-navigation-entry=C2N4 Screen Navigation Entry
 ```
 
 ### Logging Output
