@@ -1,3 +1,10 @@
 Bundle-Name: Acme Y7G4 API
 Bundle-SymbolicName: com.acme.y7g4.api
 Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.y7g4.exception,\
+	com.acme.y7g4.model,\
+	com.acme.y7g4.service,\
+	com.acme.y7g4.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../y7g4-service/service.xml
