@@ -1,0 +1,6 @@
+Bundle-Name: Acme W9M6 Web
+Bundle-SymbolicName: com.acme.w9m6.web
+Bundle-Version: 1.0.0
+Liferay-Theme-Contributor-Type: CSS
+Liferay-Theme-Contributor-Weight: 1
+Web-ContextPath: /w9m6-web
