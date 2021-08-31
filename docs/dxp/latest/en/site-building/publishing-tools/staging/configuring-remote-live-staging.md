@@ -130,10 +130,6 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
 Once the process is complete, you are ready to use Remote Live Staging. See [Site Staging UI Reference](./site-staging-ui-reference.md) for information about navigating the Staging environment's publishing features.
 
-```warning::
-   Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the remote publishing process to fail.
-```
-
 ## Remote Live Staging Permissions
 
 When a User attempts to publish changes from Staging to Live, Liferay passes the User's email address, screen name, or User ID to the remote server to perform a permission check. To succeed, the publishing User must have identical credentials and permissions on both servers.
