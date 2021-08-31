@@ -18,7 +18,7 @@ As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Ad
 
 ## Enabling ImageMagick and Ghostscript
 
-By default, Documents and Media uses [PDFBox](https://pdfbox.apache.org/) to generate previews. [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/) provide faster and higher-quality previews and conversions and supports more image file types. To work, both services must be installed and enabled together.
+By default, Documents and Media uses [PDFBox](https://pdfbox.apache.org/) to generate previews. [ImageMagick](https://www.imagemagick.org/script/index.php) and [Ghostscript](https://www.ghostscript.com/) provide faster and higher-quality previews and conversions and support more image file types. To work, both services must be installed and enabled together.
 
 ```{note}
 Depending on your OS, these services may already be installed. If you're on Linux, both are likely already installed. However, they are not likely to be installed on Windows, while they may be on macOS.

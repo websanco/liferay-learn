@@ -1,5 +1,12 @@
 # Using the Server Administration Panel
 
+```{toctree}
+using-the-server-administration-panel/managing-system-resources.md
+using-the-server-administration-panel/configuring-logging.md
+using-the-server-administration-panel/configuring-external-services.md
+using-the-server-administration-panel/configuring-a-shutdown-event.md
+```
+
 Server Administration is a system-scoped administration panel holding a variety of low-level Liferay DXP configurations. In Server Administration you can manage and monitor system memory usage, low-level properties, some third-party integrations, document repository migration, logging, scripting, mail server configuration, and portal shutdown.
 
 You can access Server Administration by clicking *Control Panel* &rarr; *Configuration* &rarr; *Server Administration*.

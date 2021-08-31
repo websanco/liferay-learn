@@ -8,7 +8,7 @@ System Administration
    system-administration/file_storage.rst
    system-administration/configuring_liferay.rst
    system-administration/using_the_script_engine.rst
-   system-administration/using_the_server_administration_panel.rst
+   system-administration/using-the-server-administration-panel.md
 
 .. raw:: html
    :file: landingpage_template.html

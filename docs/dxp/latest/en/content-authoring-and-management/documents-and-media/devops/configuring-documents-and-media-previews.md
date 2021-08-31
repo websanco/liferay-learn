@@ -4,8 +4,8 @@ By default, Liferay DXP uses [PDFBox](https://pdfbox.apache.org) to generate [pr
 
 However, since PDFBox only supports a limited number of file types, Liferay also provides integration with external services to support additional file types. These services can be used to more quickly generate high quality file previews for more of your files.
 
-```important::
-   To be used for generating previews, the service must first be installed on the server running the Liferay DXP instance. 
+```{important}
+To be used for generating previews, the service must first be installed on the server running the Liferay DXP instance. 
 ```
 
 Liferay DXP currently supports integration with the following programs.
@@ -26,3 +26,4 @@ With these tools installed and configured, Documents and Media can provide in ap
 
 * [Previewing Files](../uploading-and-managing/previewing-files.md)
 * [Documents and Media UI Reference](../documents-and-media-ui-reference.md)
+* [Enabling OpenOffice/LibreOffice Integration](./enabling-openoffice-libreoffice-integration.md)
