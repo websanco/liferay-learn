@@ -2,7 +2,7 @@
 
 Liferay Commerce supports the creation of *Product bundles* using [Product Options](./using-product-options.md). With Options, you can define values that link the current Product with other SKUs, whether Simple, Virtual, or Grouped. Once defined, customers can select different Option values when adding the Product to their cart.
 
-For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, energy supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the price of the current Product.
+For example, consider a computer hardware distributor. Customers can select a specific computer model with a standard case, power supply, motherboard, and OS system, but they must choose between other hardware components (e.g., CPU, GPU, RAM, storage). Each Product variant has its own price based on the selected components. The total cost is calculated by adding the price of the selected value to the price of the current Product.
 
 ```{note}
 In addition to Product bundles, Liferay Commerce provides Grouped Products for combining multiple SKUs for sale. This Product type groups SKUs for customer convenience or special promotions. Unlike Product bundles, each Grouped Product has its own SKU, and its final cost is determined by its own price entry. See [Creating a Grouped Product](../product-types/creating-a-grouped-product.md) for more details.
