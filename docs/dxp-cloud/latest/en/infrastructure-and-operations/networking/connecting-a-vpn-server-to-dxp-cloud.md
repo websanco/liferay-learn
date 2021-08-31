@@ -102,6 +102,20 @@ To edit the configuration, go to the environment's details page, and then _Edit.
 
 ![Click the Edit button from the Actions menu when the VPN is not connected to change the configuration.](./connecting-a-vpn-server-to-dxp-cloud/images/09.png)
 
+### Deleting the Configuration
+
+You can completely remove a VPN configuration by using the *Delete VPN* option.
+
+1. From your environment's Settings page, click the Actions menu for the VPN and click Delete VPN.
+
+1. On the Delete VPN page, check the checkbox to confirm the deletion. More checkboxes appear to confirm the effects if the VPN is connected at the time.
+
+![The Delete VPN page.](./connecting-a-vpn-server-to-dxp-cloud/images/10.png)
+
+1. Click Delete VPN at the bottom of the page.
+
+The VPN is deleted and can no longer be used for your environment. Add a new VPN configuration to connect to your environment instead.
+
 ## Additional Information
 
 * [VPN Integration Overview](./vpn-integration-overview.md)
