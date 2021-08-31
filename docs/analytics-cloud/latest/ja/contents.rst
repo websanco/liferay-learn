@@ -6,7 +6,7 @@
    :includehidden:
    :maxdepth: 3
 
-   getting_started
+   getting-started
    connecting-data-sources
    touchpoints
    people

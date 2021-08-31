@@ -1,13 +1,13 @@
-Getting Started
-===============
+# Getting Started
 
-.. toctree::
-   :maxdepth: 1
+```{toctree}
+:maxdepth: 3
 
-   getting-started/signing-up-for-a-new-workspace.md
-   getting-started/multi-factor-authentication.md
-   getting-started/accessing-your-workspace.md
-   getting-started/viewing-the-analytics-dashboard.md
+getting-started/signing-up-for-a-new-workspace.md
+getting-started/multi-factor-authentication.md
+getting-started/accessing-your-workspace.md
+getting-started/viewing-the-analytics-dashboard.md
+```
 
 Your company interacts with lots of people, including existing and prospective customers. On your websites they browse products and services, ask questions, leave feedback, and more. Presenting relevant, interesting site content motivates people to do business with you. Knowing your customers well and understanding how they interact with your digital content can help you improve their experience.
 
@@ -16,9 +16,7 @@ Liferay Analytics Cloud is a cloud-based SaaS offering that works with Liferay D
 .. image:: ./getting-started/images/01.png
   :alt: As you learn about topics that interest your audience, you can speak intelligently about the topics, through online content and in person.
 
-
-Benefits
---------
+## Benefits
 
 Here are key things Analytics Cloud helps you do:
 
@@ -36,13 +34,12 @@ These are just some ways you benefit from using Analytics Cloud. Before getting 
 
 Analytics Cloud helps you understand people, their interaction with your sites, and the paths (or channels) that draw them to your sites in these ways:
 
--  :doc:`/people`
--  :doc:`/touchpoints`
--  :doc:`/touchpoints/pages/paths`
+- [People](./people.md)
+- [Touchpoints](./touchpoint.md)
+- [Path](./touchpoints/pages/paths.md)
 
 
-People
-------
+## People
 
 Existing and prospective customers interact with your company in person, on your websites, and via email and messaging. On Liferay DXP sites, people are registered users or visitors. Analytics Cloud integrates contacts (people) from multiple sources, including Liferay DXP sites, into a single view. It merges contact data into rich profiles of Individuals—unique contacts. You can name contact fields your way, making them most useful to you and your company.
 
@@ -53,9 +50,7 @@ Analytics Cloud lets you aggregate Individuals into Segments. Segments are group
 
 Contact profiles are a big part of Analytics Cloud, but analytics about people’s interaction with your website pages and assets is a bigger part. This type of analytics (called Touchpoint Analytics) helps you determine how effective your content is in achieving your business goals.
 
-
-Touchpoint Analytics
---------------------
+## Touchpoint Analytics
 
 Touchpoints are the locations (pages) where people interact with content. Here are some of the Touchpoint Analytics:
 
@@ -69,10 +64,10 @@ Assets are specific types of content entities on site pages. Traditional web ana
 
 Analytics Cloud supports these Liferay DXP Assets:
 
--  :doc:`/touchpoints/assets/blogs`
--  :doc:`/touchpoints/assets/documents-and-media`
--  :doc:`/touchpoints/assets/forms`
--  :doc:`/touchpoints/assets/web-content`
+- [Blogs](./touchpoints/assets/blogs.md)
+- [Documents and Media](./touchpoints/assets/documents-and-media.md)
+- [Forms](./touchpoints/assets/forms.md)
+- [Web Content](./touchpoints/assets/web-content.md)
 
 Regarding user behavior with a form, for example, Analytics Cloud shows the number of views and submissions, the percentage of users abandoning the form, and the form’s average completion time. A line graph shows the number of views over time.
 
@@ -97,9 +92,7 @@ Negative:
 
 Learning how people get to pages and Assets is also useful. That’s Path Analytics.
 
-
-Path Analytics
---------------
+## Path Analytics
 
 People get to content through different channels (paths):
 
@@ -117,10 +110,9 @@ Path Analytics reports the device and browser types that render your site conten
 You’ve been introduced to Liferay Analytics Cloud and what it offers: Segments, Touchpoints, Paths, and more. It’s time to experience Analytics Cloud for yourself.
 
 
-Next Steps
-----------
+## Next Steps
 
--  :doc:`/getting-started/signing-up-for-a-new-workspace`
--  :doc:`/getting-started/multi-factor-authentication`
--  :doc:`/getting-started/accessing-your-workspace`
--  :doc:`/getting-started/viewing-the-analytics-dashboard`
+- [Signing Up for a New Workspace](./getting-started/signing-up-for-a-new-workspace.md)
+- [Multi-factor Authentication](./getting-started/multi-factor-authentication.md)
+- [Accessing Your Workspace](./getting-started/accessing-your-workspace.md)
+- [Viewing the Analytics Dashboard](./getting-started/viewing-the-analytics-dashboard.md)
