@@ -1,4 +1,4 @@
-## APIs
+# APIs
 
 ```{toctree}
 :maxdepth: 3
