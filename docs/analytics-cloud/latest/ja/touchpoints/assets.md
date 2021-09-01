@@ -11,9 +11,9 @@ assets/documents-and-media.md
 assets/tracking-custom-assets.md
 ```
 
-- [アセット](./touchpoints/assets/assets.md)
-- [Webコンテンツ](./touchpoints/assets/web-content.md)
-- [ブログ](./touchpoints/assets/blogs.md)
-- [フォーム](./touchpoints/assets/forms.md)
-- [ドキュメントとメディア](./touchpoints/assets/documents-and-media.md)
-- [カスタムアセットのトラッキング](./touchpoints/assets/tracking-custom-assets.md)
+- [アセット](./assets/assets.md)
+- [Webコンテンツ](./assets/web-content.md)
+- [ブログ](./assets/blogs.md)
+- [フォーム](./assets/forms.md)
+- [ドキュメントとメディア](./assets/documents-and-media.md)
+- [カスタムアセットのトラッキング](./assets/tracking-custom-assets.md)

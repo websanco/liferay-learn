@@ -7,5 +7,5 @@ segments/segments.md
 segments/creating-segments.md
 ```
 
-- [セグメント](./people/segments/segments.md)
-- [セグメントの作成](./people/segments/creating-segments.md)
+- [セグメント](./segments/segments.md)
+- [セグメントの作成](./segments/creating-segments.md)
