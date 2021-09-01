@@ -16,19 +16,17 @@ Both kinds of data can be obtained from a Liferay DXP instance. If you have othe
 
 Contact data is merged and consolidated into a single customer view. Liferay DXP data sources let you select Organizations and User Groups to sync. Individual contacts are matched by email address. You can define the contact data model using whatever field names and types you want, but Analytics Cloud makes it easy to define trivial model fields by suggesting values.
 
-
 ## Viewing Your Data Sources
 
 Your data sources can be viewed from the navigation panel.
 
-#. Select Settings.
+1. Select Settings.
 
-#. Click on Data Sources.
+1. Click on Data Sources.
 
 The Data Sources page appears and lists all existing data sources.
 
-.. image:: ./connecting-data-sources/images/01.png
-  :alt: View, edit, and add data sources from the Data Sources page.
+![View, edit, and add data sources from the Data Sources page.](./connecting-data-sources/images/01.png)
 
 Unless a teammate has already added a data source, the list is empty. To add a new data source, see the following tutorials:
 
@@ -37,7 +35,6 @@ Unless a teammate has already added a data source, the list is empty. To add a n
 - [Adding a CSV Data Source](./connecting-data-sources/adding-a-csv-data-source.md)
 
 Once you’ve created your data sources, you may need to modify them. See [Managing Data Sources](./workspace-data/managing-data-sources.html) to learn more.
-
 
 ## Next Steps
 

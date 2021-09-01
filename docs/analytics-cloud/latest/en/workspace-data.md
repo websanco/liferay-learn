@@ -19,7 +19,6 @@ Manage the [data and privacy](./workspace-data/data-control-and-privacy.md) of i
 
 View and [manage the different data sources](./workspace-data/managing-data-sources.md) that are connected to your workspace. 
 
-
 ## Next Steps
 
 - [Managing API Access](./workspace-data/managing-api-access.md)

@@ -12,8 +12,7 @@ Touchpoints reflect the many different ways your users and customers interact wi
 
 Analytics Cloud presents a [site-wide reporting dashboard](./touchpoints/sites-dashboard.html) that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for [individual pages](./touchpoints/pages/pages.html) can be easily viewed as well. This includes views, visitors, and bounce rate. [Path analytics](./touchpoints/pages/paths.html) show how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
 
-.. image:: ./touchpoints/images/01.png
-  :alt: The Touchpoints menu provides access to information about Sites, Pages, and Assets.
+![The Touchpoints menu provides access to information about Sites, Pages, and Assets.](./touchpoints/images/01.png)
 
 Navigating to Touchpoints begins with the [Sites Dashboard](./touchpoints/sites-dashboard.html). In Touchpoints, you can also find additional page and asset analytics.
 
@@ -21,12 +20,11 @@ Navigating to Touchpoints begins with the [Sites Dashboard](./touchpoints/sites-
 
 To view the list of Pages with summary data,
 
-.. image:: ./touchpoints/images/02.png
-  :alt: The Pages tab presents pages and several columns of data over a period of time.
+![The Pages tab presents pages and several columns of data over a period of time.](./touchpoints/images/02.png)
 
-#. From the Touchpoints section, click Sites.
+1. From the Touchpoints section, click Sites.
 
-#. Click the Pages tab.
+1. Click the Pages tab.
 
 Order Pages in ascending or descending order based on any one of the following metrics,
 
@@ -46,24 +44,23 @@ The metrics for ordering the Page list are calculated based on the time period s
 * More Preset Periods (Yesterday, Last 28 days, Last 180 days, Last Year)
 * Custom Range
 
-.. note::
+```{note}
    Page data is based on canonical URL. Learn more about [canonicalization](https://moz.com/learn/seo/canonicalization) or [how to set a custom canonical URL in DXP](../../../dxp/latest/en/site-building/creating-pages/page-settings/configuring-individual-pages.html#seo).
+```
 
 To view detailed metrics for a single page, click that page in the table. See [Page Analytics](./touchpoints/pages/pages.html) for more information.
 
-.. image:: ./touchpoints/images/03.png
-  :alt: The Visitor Behavior panel shows detailed statistics over a period of time.
+![The Visitor Behavior panel shows detailed statistics over a period of time.](./touchpoints/images/03.png)
 
 ## Finding Asset Data
 
 To view analytics data on your assets,
 
-.. image:: ./touchpoints/images/04.png
-  :alt: Asset Data is organized by asset type tabs.
+![Asset Data is organized by asset type tabs.](./touchpoints/images/04.png)
 
-#. From the Touchpoints section, click Assets.
+1. From the Touchpoints section, click Assets.
 
-#. Choose an Asset type: Blogs, Documents and Media, Forms, Web Content, or Custom.
+1. Choose an Asset type: Blogs, Documents and Media, Forms, Web Content, or Custom.
 
 To order Assets in ascending or descending order based on any one of the Asset's metrics, click the metric's heading in the table. The metrics differ between Assets. See each Asset's documentation for more information. In addition, you can calculate the metrics over a selected time period by selecting one of the following values from the time period menu (at the top-right of the table):
 
@@ -76,11 +73,9 @@ To order Assets in ascending or descending order based on any one of the Asset's
 
 Click an Asset in the list to see more granular detail.
 
-.. image:: ./touchpoints/images/05.png
-  :alt: Asset specific metrics data identifies viewing trends over time.
+![Asset specific metrics data identifies viewing trends over time.](./touchpoints/images/05.png)
 
 Remember that there are separate lists for different Asset types. More details on each Asset type's metrics are covered in the subsequent articles.
-
 
 ## Next Steps
 

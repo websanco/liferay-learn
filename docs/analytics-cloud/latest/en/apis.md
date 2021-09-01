@@ -13,10 +13,9 @@ Liferay Analytics Cloud supports access to its analytics data via a set of API e
 
 Business can do the following with the Analytics Cloud data:
 
-#. Export analytics data to analyze and create custom reports in other data visualization tool such as Tableau and Microsoft Power BI
-#. Integrate the analytics data with other CRM software to enrich your customer data
-#. Integrate the analytics data in your enterprise business automation, such as personalization, recommendation, and email notifications.
-
+* Export analytics data to analyze and create custom reports in other data visualization tool such as Tableau and Microsoft Power BI
+* Integrate the analytics data with other CRM software to enrich your customer data
+* Integrate the analytics data in your enterprise business automation, such as personalization, recommendation, and email notifications.
 
 ## Next Steps
 
