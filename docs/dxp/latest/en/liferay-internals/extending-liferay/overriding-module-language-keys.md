@@ -204,9 +204,15 @@ The example `Provide-Capability` header has two parts:
     * `service.ranking:Long="2"`: The resource bundle's service ranking is `2`. The OSGi framework applies this service if it outranks all other resource bundle services that target `com.liferay.blogs.web`'s `content.Language` resource bundle. 
     * `servlet.context.name=blogs-web`: The target resource bundle is in servlet context `blogs-web`. 
 
-**Note:** If your override isn't showing, use [Gogo shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to check for competing resource bundle services. It may be that another service outranks yours. To check for competing resource bundle services whose aggregates include `com.liferay.blogs.web`’s resource bundle, for example, execute this Gogo shell command:
+```{note}
+If your override isn't showing, use [Gogo shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to check for competing resource bundle services. It may be that another service outranks yours. To check for competing resource bundle services whose aggregates include `com.liferay.blogs.web`’s resource bundle, for example, execute this Gogo shell command:
 
-    services "(bundle.symbolic.name=com.liferay.blogs.web)"
+`services "(bundle.symbolic.name=com.liferay.blogs.web)"`
+```
+
+```{note}
+You can continue to use your language key override in DXP 7.4+ if the language key name is the same---check the [`/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content) file. Optionally, you can simplify your module by removing the `ResourceBundle` class and replacing the `Provide-Capability` header in your `bnd.bnd` file with the header demonstrated in the [Overriding Global Language Keys](./overriding-global-language-keys.md#declare-the-oOverride-in-the-bnd-file).
+```
 
 Search the results for resource bundle aggregate services whose ranking is higher.
 

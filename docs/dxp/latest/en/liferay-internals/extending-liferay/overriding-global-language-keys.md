@@ -249,6 +249,10 @@ private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
 
 Deploy your module to see your new language key values.
 
+```{note}
+When you're ready to upgrade to DXP 7.4+, you can continue to use your language key override module. Optionally, you can simplify the module by removing the `ResourceBundle` class and specifying the `Provide-Capability` header in your `bnd.bnd` file as demonstrated in the earlier [section](#declare-the-override-in-the-bnd-file).
+```
+
 ## Related Information
 
 * [Overriding Module Language Keys in Earlier Versions](./overriding-module-language-keys.md)
