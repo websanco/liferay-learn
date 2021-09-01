@@ -12,13 +12,15 @@ The global language keys are in the source code and the DXP/Portal bundle.
 
 In the source: 
 
-`/portal-impl/src/content/Language[xx_XX].properties`
+* [`/portal-impl/src/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content)
+* [`/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content)
 
 In a bundle:
 
-`portal-impl.jar`
+* `portal-impl.jar#content/Language[_xx_XX].properties`
+* `Liferay * Foundation - Liferay * Portal Language - Impl.lpkg` &rarr; `com.liferay.portal.language.lang-[version].jar#content/Language[_xx_XX].properties`
 
-You can also view the language key files in our [GitHub repository](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content). You can identify the different languages by the language code in the file name suffix. For example `Language_ja.properties` is for Japanese.
+You can identify the different languages by the language code in the file name suffix. For example `Language_ja.properties` is for Japanese.
 
 These language key files contain properties that you can override, like the language settings properties: 
 
@@ -41,7 +43,7 @@ category.cms=Content Management
 ...
 ```
 
-In Liferay DXP/Portal 7.4+, you can use the metadata to declare overrides to the global resource bundle. In earlier versions, Java classes declare the overrides.
+In Liferay DXP/Portal 7.4+, you can declare overrides using metadata. In earlier versions, Java classes declare the overrides.
 
 If your version is earlier than 7.4, skip ahead to [Overriding in Earlier Versions](#overriding-in-earlier-versions). Otherwise, read on to learn how to override language keys in 7.4+.
 
@@ -120,7 +122,7 @@ The values for the language keys you declare override the values for those exist
 Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. Use the file name `Language.properties` to override the default locale's language keys. To override a specific locale's keys, use the language properties file naming convention:
 
 ```
-Language[xx_XX].properties
+Language[_xx_XX].properties
 ```
 
 For example, if you're overriding Japanese, use `Language_ja.properties`.
@@ -249,4 +251,4 @@ Deploy your module to see your new language key values.
 
 ## Related Information
 
-* [Overriding Module Language Keys](./overriding-module-language-keys.md)
+* [Overriding Module Language Keys in Earlier Versions](./overriding-module-language-keys.md)

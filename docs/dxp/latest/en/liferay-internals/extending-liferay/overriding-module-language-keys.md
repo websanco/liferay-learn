@@ -1,6 +1,10 @@
-# Overriding Module Language Keys
+# Overriding Module Language Keys in Earlier Versions
 
-The language keys of a module can be overridden just like how [global language keys can be overridden](./overriding-global-language-keys.md). The steps are slightly different when working with a module. 
+```{important}
+If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Keys](./overriding-global-language-keys.md).
+```
+
+Overriding Liferay application specific language keys in earlier versions is similar to overriding global language keys in earlier versions but there are additional steps. 
 
 ## Examining Module Language Keys
 
