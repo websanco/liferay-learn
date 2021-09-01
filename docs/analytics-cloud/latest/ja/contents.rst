@@ -13,7 +13,7 @@
    optimization
    apis
    workspace-data
-   workspace_settings
+   workspace-settings
    troubleshooting
 
 索引と表

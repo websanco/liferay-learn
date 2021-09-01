@@ -13,7 +13,7 @@ Contents
    optimization
    apis
    workspace-data
-   workspace_settings
+   workspace-settings
    troubleshooting
 
 Indices and tables
