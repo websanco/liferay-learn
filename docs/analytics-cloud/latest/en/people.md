@@ -29,7 +29,7 @@ By combining robust Individual Profiles and flexible Segment building, Analytics
 
 ### Accounts
 
-- [Accounts](.people/accounts.md)
+- [Accounts](./people/accounts.md)
 
 ### Segments
 

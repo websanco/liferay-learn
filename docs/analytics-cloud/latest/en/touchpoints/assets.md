@@ -11,9 +11,9 @@ assets/documents-and-media.md
 assets/tracking-custom-assets.md
 ```
 
-- [Assets](./touchpoints/assets/assets.md)
-- [Web Content](./touchpoints/assets/web-content.md)
-- [Blogs](./touchpoints/assets/blogs.md)
-- [Forms](./touchpoints/assets/forms.md)
-- [Document and Media](./touchpoints/assets/documents-and-media.md)
-- [Tracking Custom Assets](./touchpoints/assets/tracking-custom-assets.md)
+- [Assets](./assets/assets.md)
+- [Web Content](./assets/web-content.md)
+- [Blogs](./assets/blogs.md)
+- [Forms](./assets/forms.md)
+- [Document and Media](./assets/documents-and-media.md)
+- [Tracking Custom Assets](./assets/tracking-custom-assets.md)
