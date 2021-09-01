@@ -18,7 +18,7 @@ people/segments.md
 
 ## アカウント
 
-- [アカウント](.people/accounts.md)
+- [アカウント](./people/accounts.md)
 
 ## セグメント
 

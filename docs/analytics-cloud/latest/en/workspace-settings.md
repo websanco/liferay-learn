@@ -22,6 +22,6 @@ Keep an eye on your [workspace data usage](./workspace-settings/tracking-usage.m
 ## Next Steps
 
 - [Managing Users](./workspace-settings/managing-users.md)
-- [Managing Properties](.workspace-settings/managing-properties.md)
+- [Managing Properties](./workspace-settings/managing-properties.md)
 - [Tracking Usage](./workspace-settings/tracking-usage.md)
 - [Managing Workspaces](./workspace-settings/managing-workspaces.md)
