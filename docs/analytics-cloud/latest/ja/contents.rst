@@ -12,7 +12,7 @@
    people
    optimization
    apis
-   workspace_data
+   workspace-data
    workspace_settings
    troubleshooting
 

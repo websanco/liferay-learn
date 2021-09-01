@@ -4,8 +4,8 @@
 :maxdepth: 3
 
 touchpoints/sites-dashboard.md
-touchpoints/pages.rst
-touchpoints/assets.rst
+touchpoints/pages.md
+touchpoints/assets.md
 ```
 
 Touchpoints reflect the many different ways your users and customers interact with your brand. Analytics Cloud presents a broad range of analytics data that combines traditional page analytics like page views, with comprehensive site, path, and asset-specific analytics data.

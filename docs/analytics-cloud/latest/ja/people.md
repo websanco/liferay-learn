@@ -4,9 +4,9 @@
 :maxdepth: 3
 
 people/understanding-your-audience.md
-people/individuals.rst
+people/individuals.md
 people/accounts.md
-people/segments.rst
+people/segments.md
 ```
 
 - [オーディエンスの理解](./people/understanding-your-audience.md)

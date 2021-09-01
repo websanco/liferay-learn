@@ -5,8 +5,8 @@
 
 touchpoints/touchpoints.md
 touchpoints/sites-dashboard.md
-touchpoints/pages.rst
-touchpoints/assets.rst
+touchpoints/pages.md
+touchpoints/assets.md
 ```
 
 - [タッチポイント アナリティクス データ](./touchpoints/touchpoints.md)
