@@ -44,7 +44,7 @@ Start by deploying the example theme contributor.
 
 1. Confirm the deployment in the Docker container console.
 
-    ```bash
+    ```
     STARTED com.acme.w9m6.web_1.0.0
     ```
 
@@ -54,41 +54,33 @@ Start by deploying the example theme contributor.
 
 Congratulations, you've successfully built and deployed a new theme contributor.
 
-Next, you'll learn how to create a theme contributor with custom CSS or JS changes.
+Next, you'll learn how a theme contributor looks with custom CSS changes.
 
-## How to Create a Theme Contributor
+## Examine the Example Theme Contributor
 
-To create a theme contributor, you must add properties to a module's `bnd.bnd` file, and then add your customizations to the module.
+A theme contributor, must use a module with properties added to the `bnd.bnd` file, and then customizations added into it. The example theme contributor uses a `custom.css` file to change each page's background color.
 
-### Add Properties to Configure the Theme Contributor
+### Examine the Theme Contributor Properties
 
-In the project's `bnd.bnd` file, add the necessary properties to configure the theme contributor.
+The theme contributor's project has the necessary properties added to its `bnd.bnd` file to configure it.
 
-1. Add a `Web-ContextPath` value to set the context for your theme contributor's resources. In the example module, the context path is `w9m6-web`.
+```{literalinclude} ./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/bnd.bnd
+```
+A theme contributor's `bnd.bnd` file must have these properties for it to properly function:
 
-    ```
-    Web-ContextPath: /w9m6-web
-    ```
+* A `Web-ContextPath` value sets the context for your theme contributor's resources. In the example module, the context path is `w9m6-web`.
 
-1. Add a `Liferay-Theme-Contributor-Type` value to indicate that your module adds a theme contributor. This property can be any arbitrary value.
+* A `Liferay-Theme-Contributor-Type` value indicates that your module adds a theme contributor. This property can be any arbitrary value. The example module uses the value `CSS`.
 
-    ```
-    Liferay-Theme-Contributor-Type: CSS
-    ```
+* A `Liferay-Theme-Contributor-Weight` value configures the weight of your theme contributor's styles versus other contributors. Lower values are given higher priority to override styles from other contributors. The example module uses a weight of `1` to guarantee that the style has the highest priority of any theme contributor.
 
-1. Add a `Liferay-Theme-Contributor-Weight` value to configure the weight of your theme contributor's styles versus other contributors. Lower values are given higher priority to override styles from other contributors. The example module uses a weight of `1` to guarantee that the style has the highest priority.
+Once the `bnd.bnd` file has the necessary properties, the module only needs to have the desired customizations.
 
-    ```
-    Liferay-Theme-Contributor-Weight: 1
-    ```
+### Examine the Style Customizations
 
-Once you have added the necessary properties to your `bnd.bnd` file, you only need to add your desired customizations to the module.
+Any desired CSS or JS files must be added to subfolders within the module. CSS files belong in a `src/main/resources/META-INF/resources/css/` subfolder, and JS files belong in a `src/main/resources/META-INF/resources/js/` subfolder.
 
-### Add Your Style Customizations
-
-Add any desired CSS or JS files to subfolders within your module. Add a `src/main/resources/META-INF/resources/css/` subfolder for any CSS files, and add a `src/main/resources/META-INF/resources/js/` subfolder for any JS files.
-
-This example uses a simple CSS style change to make each page's background blue. This is done with a [`custom.css`](./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/src/main/resources/META-INF/resources/custom.css) file in `src/main/resources/META-INF/resources/`:
+The example theme contributor uses a simple CSS style change to make each page's background blue. This is done with a [`custom.css`](./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/src/main/resources/META-INF/resources/custom.css) file in `src/main/resources/META-INF/resources/`:
 
 ```css
 body, #wrapper {
@@ -96,7 +88,37 @@ body, #wrapper {
 }
 ```
 
-Once you have added your changes with the desired styles or UI elements to the correct subfolders, deploying your module applies them to every page.
+Once all of the desired CSS or JS files are added to the correct subfolders, deploying the module applies them to every page.
+
+## Change the Background Color
+
+Now to see how the theme contributor affects your pages, try changing the background color.
+
+1. Open `src/main/resources/META-INF/resources/css/custom.css` in your project.
+
+1. Change the `background` color property to another color, like `orange`:
+
+    ```css
+    body, #wrapper {
+        background: orange;
+    }
+    ```
+
+1. Build and deploy the example again to your running Docker container:
+
+    ```bash
+    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+    ```
+
+1. Confirm the deployment in the Docker container console.
+
+    ```
+    STARTED com.acme.w9m6.web_1.0.0
+    ```
+
+1. Verify that the theme contributor changed your Site's background to the new color. Open your browser to `https://localhost:8080` to confirm the change.
+
+![Changing the background color in your CSS file affects every page when you deploy it.](./bundling-independent-ui-resources-via-theme-contributors/images/03.png)
 
 ## Conclusion
 
