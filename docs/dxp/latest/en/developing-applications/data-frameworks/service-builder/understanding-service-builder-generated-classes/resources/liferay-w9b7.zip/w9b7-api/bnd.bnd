@@ -1,0 +1,10 @@
+Bundle-Name: Acme W9B7 API
+Bundle-SymbolicName: com.acme.w9b7.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.w9b7.exception,\
+	com.acme.w9b7.model,\
+	com.acme.w9b7.service,\
+	com.acme.w9b7.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../w9b7-service/service.xml
