@@ -76,6 +76,9 @@ public interface EntryLocalService
 	@Indexable(type = IndexableType.REINDEX)
 	public Entry addEntry(Entry entry);
 
+	public Entry addEntry(String name, String description)
+		throws PortalException;
+
 	/**
 	 * Creates a new entry with the primary key. Does not add the entry to the database.
 	 *

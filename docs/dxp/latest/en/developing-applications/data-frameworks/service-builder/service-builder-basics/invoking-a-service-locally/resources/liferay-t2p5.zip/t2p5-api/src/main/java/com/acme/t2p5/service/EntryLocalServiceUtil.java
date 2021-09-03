@@ -60,6 +60,12 @@ public class EntryLocalServiceUtil {
 		return getService().addEntry(entry);
 	}
 
+	public static Entry addEntry(String name, String description)
+		throws PortalException {
+
+		return getService().addEntry(name, description);
+	}
+
 	/**
 	 * Creates a new entry with the primary key. Does not add the entry to the database.
 	 *

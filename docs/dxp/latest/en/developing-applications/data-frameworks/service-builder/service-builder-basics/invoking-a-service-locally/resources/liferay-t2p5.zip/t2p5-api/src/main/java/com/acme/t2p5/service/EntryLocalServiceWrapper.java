@@ -45,6 +45,13 @@ public class EntryLocalServiceWrapper
 		return _entryLocalService.addEntry(entry);
 	}
 
+	@Override
+	public com.acme.t2p5.model.Entry addEntry(String name, String description)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _entryLocalService.addEntry(name, description);
+	}
+
 	/**
 	 * Creates a new entry with the primary key. Does not add the entry to the database.
 	 *
