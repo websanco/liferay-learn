@@ -1,0 +1,10 @@
+Bundle-Name: Acme T2P5 API
+Bundle-SymbolicName: com.acme.t2p5.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.t2p5.exception,\
+	com.acme.t2p5.model,\
+	com.acme.t2p5.service,\
+	com.acme.t2p5.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../t2p5-service/service.xml

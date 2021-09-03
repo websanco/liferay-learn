@@ -1,0 +1,6 @@
+Bundle-Name: Acme T2P5 Service
+Bundle-SymbolicName: com.acme.t2p5.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
