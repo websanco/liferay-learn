@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.acme.w9b7.model.Entry">
+		<field name="entryId" type="long" />
+		<field name="description" type="String" />
+		<field name="name" type="String" />
+	</model>
+</model-hints>

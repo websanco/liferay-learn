@@ -1,11 +1,8 @@
 dependencies {
-	compile project(":w9b7-api")
-
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":w9b7-api")
 }
 
 buildService {
 	apiDir = "../w9b7-api/src/main/java"
 }
-
-group = "com.acme.w9b7"
