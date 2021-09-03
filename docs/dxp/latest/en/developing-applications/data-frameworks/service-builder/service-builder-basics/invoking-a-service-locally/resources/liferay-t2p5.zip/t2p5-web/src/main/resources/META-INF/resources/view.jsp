@@ -39,7 +39,7 @@ List<Entry> entries = (List<Entry>)request.getAttribute("entries");
 			<tbody>
 				<c:forEach items="<%= entries %>" var="entry">
 					<tr>
-						<td>${entry.name }, ${entry.description}</td>
+						<td>${entry}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
