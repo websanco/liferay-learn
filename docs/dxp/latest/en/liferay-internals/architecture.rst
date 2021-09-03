@@ -16,9 +16,9 @@ Architecture
 -  :doc:`/liferay-internals/architecture/architecture` (Coming soon!)
 -  :doc:`/liferay-internals/architecture/liferay-classloader-hierarchy` (Coming soon!)
 -  :doc:`/liferay-internals/architecture/liferay-startup-phases` (Coming soon!)
--  :doc:`/liferay-internals/architecture/the-benefits-of-modularity` (Coming soon!)
--  :doc:`/liferay-internals/architecture/osgi-and-modularity` (Coming soon!)
--  :doc:`/liferay-internals/architecture/module-lifecycle` (Coming soon!)
+-  :doc:`/liferay-internals/architecture/the-benefits-of-modularity`
+-  :doc:`/liferay-internals/architecture/osgi-and-modularity`
+-  :doc:`/liferay-internals/architecture/module-lifecycle`
 -  :doc:`/liferay-internals/architecture/bundle-classloading-flow` (Coming soon!)
 
 UI Architecture
