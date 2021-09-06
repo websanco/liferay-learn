@@ -1,6 +1,6 @@
 # Virtual Product Reference
 
-![Virtual product details](./virtual-product-reference/images/01.png)
+![Details of the Virtual Product.](./virtual-product-reference/images/01.png)
 
 |Field | Description |
 | --- | --- |
@@ -11,17 +11,16 @@
 
 |Field | Description |
 | --- | --- |
-| Activation Status | Status of the order. |
-| Duration | The number of days during which customers keep access to the file. Please note: if product is subscription enabled, the subscription cycles duration will override it. |
-| Max Number of Downloads | Number of times a file can be downloaded. Leave 0 for unlimited downloads. |
+| Activation Status | The Activation Status determines the stage at which the product will become available to download. For example, if it is set to Completed, the product will be available to download once the Order is completed.  |
+| Duration | The number of days for which the customer can access the file. Please note: If product is subscription enabled, the subscription cycle duration will override it. |
+| Max Number of Downloads | Number of times a file can be downloaded. 0 indicates unlimited downloads. |
 
 ## Sample
 
 |Field | Description |
 | --- | --- |
 | Enable Sample | Checkbox to activate or deactivate the availability of a sample. |
-| Sample File URL | If _Enable Sample_ is active, this is the location of the sample. |
-
+| Sample File URL | The location of the sample if _Enable Sample_ is checked.
 ## Terms of Use
 
 |Field | Description |
