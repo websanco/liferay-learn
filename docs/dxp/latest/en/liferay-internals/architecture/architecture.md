@@ -1,12 +1,12 @@
 # Architecture
 
-Liferay DXP and Liferay Portal architecture comprises these parts:
+Liferay DXP and Portal's architecture has three parts: 
 
-**Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core_frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
+1. **Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core_frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
 
-**Services:** Expose DXP/Portal functionality and custom functionality via Java APIs and web APIs.
+1. **Services:** Expose DXP/Portal functionality and custom functionality via Java APIs and web APIs.
 
-**UI:** The optional web application UI for adding portals, sites, pages, widgets, and content.
+1. **UI:** The optional web application UI for adding portals, sites, pages, widgets, and content.
 
 You can use the UI and services together or focus solely on using services via [REST web APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
@@ -70,7 +70,7 @@ The runtime environment supports adding, replacing, and customizing components o
 
 **Customization:** The `PortletA Filter` intercepts and modifies requests to and responses from `PortletA`, affecting the content `PortletA` displays.
 
-Component WAR and module JAR projects install as [OSGi bundles](https://www.osgi.org/) (modules). Liferay's OSGi framework defines the module lifecycle, enforces dependencies, defines the class loading structure, and provides an API and CLI ([Felix Gogo Shell](../../liferay-internals/fundamentals/using-an-osgi-service.md)) for managing modules and components. The Core is configured via [portal properties files](../../installation-and-upgrades/reference/portal-properties.md) and [System Settings](../../system-administration/configuring-liferay/system-settings.md).
+Component WAR and module JAR projects install as [OSGi bundles](https://www.osgi.org/) (modules). Liferay's OSGi framework defines the module life cycle, enforces dependencies, defines the class loading structure, and provides an API and CLI ([Felix Gogo Shell](../../liferay-internals/fundamentals/using-an-osgi-service.md)) for managing modules and components. The Core is configured via [portal properties files](../../installation-and-upgrades/reference/portal-properties.md) and [System Settings](../../system-administration/configuring-liferay/system-settings.md).
 
 The service components provide business functionality.
 
