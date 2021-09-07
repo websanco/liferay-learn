@@ -17,5 +17,5 @@ package com.acme.t2p5.model.impl;
 /**
  * @author Brian Wing Shun Chan
  */
-public class EntryImpl extends EntryBaseImpl {
+public class T2P5EntryImpl extends T2P5EntryBaseImpl {
 }

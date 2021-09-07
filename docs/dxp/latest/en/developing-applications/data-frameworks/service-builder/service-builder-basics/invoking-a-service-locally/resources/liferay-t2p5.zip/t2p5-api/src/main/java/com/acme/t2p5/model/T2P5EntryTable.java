@@ -20,25 +20,25 @@ import com.liferay.petra.sql.dsl.base.BaseTable;
 import java.sql.Types;
 
 /**
- * The table class for the &quot;T2P5_Entry&quot; database table.
+ * The table class for the &quot;T2P5_T2P5Entry&quot; database table.
  *
  * @author Brian Wing Shun Chan
- * @see Entry
+ * @see T2P5Entry
  * @generated
  */
-public class EntryTable extends BaseTable<EntryTable> {
+public class T2P5EntryTable extends BaseTable<T2P5EntryTable> {
 
-	public static final EntryTable INSTANCE = new EntryTable();
+	public static final T2P5EntryTable INSTANCE = new T2P5EntryTable();
 
-	public final Column<EntryTable, Long> entryId = createColumn(
-		"entryId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
-	public final Column<EntryTable, String> description = createColumn(
+	public final Column<T2P5EntryTable, Long> t2p5EntryId = createColumn(
+		"t2p5EntryId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
+	public final Column<T2P5EntryTable, String> description = createColumn(
 		"description", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
-	public final Column<EntryTable, String> name = createColumn(
+	public final Column<T2P5EntryTable, String> name = createColumn(
 		"name", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
-	private EntryTable() {
-		super("T2P5_Entry", EntryTable::new);
+	private T2P5EntryTable() {
+		super("T2P5_T2P5Entry", T2P5EntryTable::new);
 	}
 
 }

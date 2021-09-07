@@ -27,20 +27,20 @@ import java.util.List;
  * @generated
  */
 @Deprecated
-public class EntrySoap implements Serializable {
+public class T2P5EntrySoap implements Serializable {
 
-	public static EntrySoap toSoapModel(Entry model) {
-		EntrySoap soapModel = new EntrySoap();
+	public static T2P5EntrySoap toSoapModel(T2P5Entry model) {
+		T2P5EntrySoap soapModel = new T2P5EntrySoap();
 
-		soapModel.setEntryId(model.getEntryId());
+		soapModel.setT2p5EntryId(model.getT2p5EntryId());
 		soapModel.setDescription(model.getDescription());
 		soapModel.setName(model.getName());
 
 		return soapModel;
 	}
 
-	public static EntrySoap[] toSoapModels(Entry[] models) {
-		EntrySoap[] soapModels = new EntrySoap[models.length];
+	public static T2P5EntrySoap[] toSoapModels(T2P5Entry[] models) {
+		T2P5EntrySoap[] soapModels = new T2P5EntrySoap[models.length];
 
 		for (int i = 0; i < models.length; i++) {
 			soapModels[i] = toSoapModel(models[i]);
@@ -49,14 +49,14 @@ public class EntrySoap implements Serializable {
 		return soapModels;
 	}
 
-	public static EntrySoap[][] toSoapModels(Entry[][] models) {
-		EntrySoap[][] soapModels = null;
+	public static T2P5EntrySoap[][] toSoapModels(T2P5Entry[][] models) {
+		T2P5EntrySoap[][] soapModels = null;
 
 		if (models.length > 0) {
-			soapModels = new EntrySoap[models.length][models[0].length];
+			soapModels = new T2P5EntrySoap[models.length][models[0].length];
 		}
 		else {
-			soapModels = new EntrySoap[0][0];
+			soapModels = new T2P5EntrySoap[0][0];
 		}
 
 		for (int i = 0; i < models.length; i++) {
@@ -66,33 +66,34 @@ public class EntrySoap implements Serializable {
 		return soapModels;
 	}
 
-	public static EntrySoap[] toSoapModels(List<Entry> models) {
-		List<EntrySoap> soapModels = new ArrayList<EntrySoap>(models.size());
+	public static T2P5EntrySoap[] toSoapModels(List<T2P5Entry> models) {
+		List<T2P5EntrySoap> soapModels = new ArrayList<T2P5EntrySoap>(
+			models.size());
 
-		for (Entry model : models) {
+		for (T2P5Entry model : models) {
 			soapModels.add(toSoapModel(model));
 		}
 
-		return soapModels.toArray(new EntrySoap[soapModels.size()]);
+		return soapModels.toArray(new T2P5EntrySoap[soapModels.size()]);
 	}
 
-	public EntrySoap() {
+	public T2P5EntrySoap() {
 	}
 
 	public long getPrimaryKey() {
-		return _entryId;
+		return _t2p5EntryId;
 	}
 
 	public void setPrimaryKey(long pk) {
-		setEntryId(pk);
+		setT2p5EntryId(pk);
 	}
 
-	public long getEntryId() {
-		return _entryId;
+	public long getT2p5EntryId() {
+		return _t2p5EntryId;
 	}
 
-	public void setEntryId(long entryId) {
-		_entryId = entryId;
+	public void setT2p5EntryId(long t2p5EntryId) {
+		_t2p5EntryId = t2p5EntryId;
 	}
 
 	public String getDescription() {
@@ -111,7 +112,7 @@ public class EntrySoap implements Serializable {
 		_name = name;
 	}
 
-	private long _entryId;
+	private long _t2p5EntryId;
 	private String _description;
 	private String _name;
 

@@ -19,20 +19,20 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 /**
  * @author Brian Wing Shun Chan
  */
-public class NoSuchEntryException extends NoSuchModelException {
+public class NoSuchT2P5EntryException extends NoSuchModelException {
 
-	public NoSuchEntryException() {
+	public NoSuchT2P5EntryException() {
 	}
 
-	public NoSuchEntryException(String msg) {
+	public NoSuchT2P5EntryException(String msg) {
 		super(msg);
 	}
 
-	public NoSuchEntryException(String msg, Throwable throwable) {
+	public NoSuchT2P5EntryException(String msg, Throwable throwable) {
 		super(msg, throwable);
 	}
 
-	public NoSuchEntryException(Throwable throwable) {
+	public NoSuchT2P5EntryException(Throwable throwable) {
 		super(throwable);
 	}
 

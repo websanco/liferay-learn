@@ -22,25 +22,26 @@ import java.util.Map;
 
 /**
  * <p>
- * This class is a wrapper for {@link Entry}.
+ * This class is a wrapper for {@link T2P5Entry}.
  * </p>
  *
  * @author Brian Wing Shun Chan
- * @see Entry
+ * @see T2P5Entry
  * @generated
  */
-public class EntryWrapper
-	extends BaseModelWrapper<Entry> implements Entry, ModelWrapper<Entry> {
+public class T2P5EntryWrapper
+	extends BaseModelWrapper<T2P5Entry>
+	implements ModelWrapper<T2P5Entry>, T2P5Entry {
 
-	public EntryWrapper(Entry entry) {
-		super(entry);
+	public T2P5EntryWrapper(T2P5Entry t2p5Entry) {
+		super(t2p5Entry);
 	}
 
 	@Override
 	public Map<String, Object> getModelAttributes() {
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
-		attributes.put("entryId", getEntryId());
+		attributes.put("t2p5EntryId", getT2p5EntryId());
 		attributes.put("description", getDescription());
 		attributes.put("name", getName());
 
@@ -49,10 +50,10 @@ public class EntryWrapper
 
 	@Override
 	public void setModelAttributes(Map<String, Object> attributes) {
-		Long entryId = (Long)attributes.get("entryId");
+		Long t2p5EntryId = (Long)attributes.get("t2p5EntryId");
 
-		if (entryId != null) {
-			setEntryId(entryId);
+		if (t2p5EntryId != null) {
+			setT2p5EntryId(t2p5EntryId);
 		}
 
 		String description = (String)attributes.get("description");
@@ -69,9 +70,9 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Returns the description of this entry.
+	 * Returns the description of this t2p5 entry.
 	 *
-	 * @return the description of this entry
+	 * @return the description of this t2p5 entry
 	 */
 	@Override
 	public String getDescription() {
@@ -79,19 +80,9 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Returns the entry ID of this entry.
+	 * Returns the name of this t2p5 entry.
 	 *
-	 * @return the entry ID of this entry
-	 */
-	@Override
-	public long getEntryId() {
-		return model.getEntryId();
-	}
-
-	/**
-	 * Returns the name of this entry.
-	 *
-	 * @return the name of this entry
+	 * @return the name of this t2p5 entry
 	 */
 	@Override
 	public String getName() {
@@ -99,13 +90,23 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Returns the primary key of this entry.
+	 * Returns the primary key of this t2p5 entry.
 	 *
-	 * @return the primary key of this entry
+	 * @return the primary key of this t2p5 entry
 	 */
 	@Override
 	public long getPrimaryKey() {
 		return model.getPrimaryKey();
+	}
+
+	/**
+	 * Returns the t2p5 entry ID of this t2p5 entry.
+	 *
+	 * @return the t2p5 entry ID of this t2p5 entry
+	 */
+	@Override
+	public long getT2p5EntryId() {
+		return model.getT2p5EntryId();
 	}
 
 	@Override
@@ -114,9 +115,9 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Sets the description of this entry.
+	 * Sets the description of this t2p5 entry.
 	 *
-	 * @param description the description of this entry
+	 * @param description the description of this t2p5 entry
 	 */
 	@Override
 	public void setDescription(String description) {
@@ -124,19 +125,9 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Sets the entry ID of this entry.
+	 * Sets the name of this t2p5 entry.
 	 *
-	 * @param entryId the entry ID of this entry
-	 */
-	@Override
-	public void setEntryId(long entryId) {
-		model.setEntryId(entryId);
-	}
-
-	/**
-	 * Sets the name of this entry.
-	 *
-	 * @param name the name of this entry
+	 * @param name the name of this t2p5 entry
 	 */
 	@Override
 	public void setName(String name) {
@@ -144,18 +135,28 @@ public class EntryWrapper
 	}
 
 	/**
-	 * Sets the primary key of this entry.
+	 * Sets the primary key of this t2p5 entry.
 	 *
-	 * @param primaryKey the primary key of this entry
+	 * @param primaryKey the primary key of this t2p5 entry
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey) {
 		model.setPrimaryKey(primaryKey);
 	}
 
+	/**
+	 * Sets the t2p5 entry ID of this t2p5 entry.
+	 *
+	 * @param t2p5EntryId the t2p5 entry ID of this t2p5 entry
+	 */
 	@Override
-	protected EntryWrapper wrap(Entry entry) {
-		return new EntryWrapper(entry);
+	public void setT2p5EntryId(long t2p5EntryId) {
+		model.setT2p5EntryId(t2p5EntryId);
+	}
+
+	@Override
+	protected T2P5EntryWrapper wrap(T2P5Entry t2p5Entry) {
+		return new T2P5EntryWrapper(t2p5Entry);
 	}
 
 }

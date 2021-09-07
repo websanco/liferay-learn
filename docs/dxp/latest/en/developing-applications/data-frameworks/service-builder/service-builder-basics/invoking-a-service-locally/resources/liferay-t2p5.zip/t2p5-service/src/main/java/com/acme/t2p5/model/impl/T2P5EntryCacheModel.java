@@ -14,7 +14,7 @@
 
 package com.acme.t2p5.model.impl;
 
-import com.acme.t2p5.model.Entry;
+import com.acme.t2p5.model.T2P5Entry;
 
 import com.liferay.petra.lang.HashUtil;
 import com.liferay.petra.string.StringBundler;
@@ -26,12 +26,13 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
 /**
- * The cache model class for representing Entry in entity cache.
+ * The cache model class for representing T2P5Entry in entity cache.
  *
  * @author Brian Wing Shun Chan
  * @generated
  */
-public class EntryCacheModel implements CacheModel<Entry>, Externalizable {
+public class T2P5EntryCacheModel
+	implements CacheModel<T2P5Entry>, Externalizable {
 
 	@Override
 	public boolean equals(Object object) {
@@ -39,13 +40,13 @@ public class EntryCacheModel implements CacheModel<Entry>, Externalizable {
 			return true;
 		}
 
-		if (!(object instanceof EntryCacheModel)) {
+		if (!(object instanceof T2P5EntryCacheModel)) {
 			return false;
 		}
 
-		EntryCacheModel entryCacheModel = (EntryCacheModel)object;
+		T2P5EntryCacheModel t2p5EntryCacheModel = (T2P5EntryCacheModel)object;
 
-		if (entryId == entryCacheModel.entryId) {
+		if (t2p5EntryId == t2p5EntryCacheModel.t2p5EntryId) {
 			return true;
 		}
 
@@ -54,15 +55,15 @@ public class EntryCacheModel implements CacheModel<Entry>, Externalizable {
 
 	@Override
 	public int hashCode() {
-		return HashUtil.hash(0, entryId);
+		return HashUtil.hash(0, t2p5EntryId);
 	}
 
 	@Override
 	public String toString() {
 		StringBundler sb = new StringBundler(7);
 
-		sb.append("{entryId=");
-		sb.append(entryId);
+		sb.append("{t2p5EntryId=");
+		sb.append(t2p5EntryId);
 		sb.append(", description=");
 		sb.append(description);
 		sb.append(", name=");
@@ -73,40 +74,40 @@ public class EntryCacheModel implements CacheModel<Entry>, Externalizable {
 	}
 
 	@Override
-	public Entry toEntityModel() {
-		EntryImpl entryImpl = new EntryImpl();
+	public T2P5Entry toEntityModel() {
+		T2P5EntryImpl t2p5EntryImpl = new T2P5EntryImpl();
 
-		entryImpl.setEntryId(entryId);
+		t2p5EntryImpl.setT2p5EntryId(t2p5EntryId);
 
 		if (description == null) {
-			entryImpl.setDescription("");
+			t2p5EntryImpl.setDescription("");
 		}
 		else {
-			entryImpl.setDescription(description);
+			t2p5EntryImpl.setDescription(description);
 		}
 
 		if (name == null) {
-			entryImpl.setName("");
+			t2p5EntryImpl.setName("");
 		}
 		else {
-			entryImpl.setName(name);
+			t2p5EntryImpl.setName(name);
 		}
 
-		entryImpl.resetOriginalValues();
+		t2p5EntryImpl.resetOriginalValues();
 
-		return entryImpl;
+		return t2p5EntryImpl;
 	}
 
 	@Override
 	public void readExternal(ObjectInput objectInput) throws IOException {
-		entryId = objectInput.readLong();
+		t2p5EntryId = objectInput.readLong();
 		description = objectInput.readUTF();
 		name = objectInput.readUTF();
 	}
 
 	@Override
 	public void writeExternal(ObjectOutput objectOutput) throws IOException {
-		objectOutput.writeLong(entryId);
+		objectOutput.writeLong(t2p5EntryId);
 
 		if (description == null) {
 			objectOutput.writeUTF("");
@@ -123,7 +124,7 @@ public class EntryCacheModel implements CacheModel<Entry>, Externalizable {
 		}
 	}
 
-	public long entryId;
+	public long t2p5EntryId;
 	public String description;
 	public String name;
 

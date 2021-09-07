@@ -14,12 +14,12 @@
 
 package com.acme.t2p5.service.persistence.impl;
 
-import com.acme.t2p5.exception.NoSuchEntryException;
-import com.acme.t2p5.model.Entry;
-import com.acme.t2p5.model.EntryTable;
-import com.acme.t2p5.model.impl.EntryImpl;
-import com.acme.t2p5.model.impl.EntryModelImpl;
-import com.acme.t2p5.service.persistence.EntryPersistence;
+import com.acme.t2p5.exception.NoSuchT2P5EntryException;
+import com.acme.t2p5.model.T2P5Entry;
+import com.acme.t2p5.model.T2P5EntryTable;
+import com.acme.t2p5.model.impl.T2P5EntryImpl;
+import com.acme.t2p5.model.impl.T2P5EntryModelImpl;
+import com.acme.t2p5.service.persistence.T2P5EntryPersistence;
 import com.acme.t2p5.service.persistence.impl.constants.T2P5PersistenceConstants;
 
 import com.liferay.petra.string.StringBundler;
@@ -57,7 +57,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * The persistence implementation for the entry service.
+ * The persistence implementation for the t2p5 entry service.
  *
  * <p>
  * Caching information and settings can be found in <code>portal.properties</code>
@@ -66,17 +66,17 @@ import org.osgi.service.component.annotations.Reference;
  * @author Brian Wing Shun Chan
  * @generated
  */
-@Component(service = {EntryPersistence.class, BasePersistence.class})
-public class EntryPersistenceImpl
-	extends BasePersistenceImpl<Entry> implements EntryPersistence {
+@Component(service = {T2P5EntryPersistence.class, BasePersistence.class})
+public class T2P5EntryPersistenceImpl
+	extends BasePersistenceImpl<T2P5Entry> implements T2P5EntryPersistence {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. Always use <code>EntryUtil</code> to access the entry persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify or reference this class directly. Always use <code>T2P5EntryUtil</code> to access the t2p5 entry persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static final String FINDER_CLASS_NAME_ENTITY =
-		EntryImpl.class.getName();
+		T2P5EntryImpl.class.getName();
 
 	public static final String FINDER_CLASS_NAME_LIST_WITH_PAGINATION =
 		FINDER_CLASS_NAME_ENTITY + ".List1";
@@ -88,43 +88,44 @@ public class EntryPersistenceImpl
 	private FinderPath _finderPathWithoutPaginationFindAll;
 	private FinderPath _finderPathCountAll;
 
-	public EntryPersistenceImpl() {
-		setModelClass(Entry.class);
+	public T2P5EntryPersistenceImpl() {
+		setModelClass(T2P5Entry.class);
 
-		setModelImplClass(EntryImpl.class);
+		setModelImplClass(T2P5EntryImpl.class);
 		setModelPKClass(long.class);
 
-		setTable(EntryTable.INSTANCE);
+		setTable(T2P5EntryTable.INSTANCE);
 	}
 
 	/**
-	 * Caches the entry in the entity cache if it is enabled.
+	 * Caches the t2p5 entry in the entity cache if it is enabled.
 	 *
-	 * @param entry the entry
+	 * @param t2p5Entry the t2p5 entry
 	 */
 	@Override
-	public void cacheResult(Entry entry) {
-		entityCache.putResult(EntryImpl.class, entry.getPrimaryKey(), entry);
+	public void cacheResult(T2P5Entry t2p5Entry) {
+		entityCache.putResult(
+			T2P5EntryImpl.class, t2p5Entry.getPrimaryKey(), t2p5Entry);
 	}
 
 	/**
-	 * Caches the entries in the entity cache if it is enabled.
+	 * Caches the t2p5 entries in the entity cache if it is enabled.
 	 *
-	 * @param entries the entries
+	 * @param t2p5Entries the t2p5 entries
 	 */
 	@Override
-	public void cacheResult(List<Entry> entries) {
-		for (Entry entry : entries) {
-			if (entityCache.getResult(EntryImpl.class, entry.getPrimaryKey()) ==
-					null) {
+	public void cacheResult(List<T2P5Entry> t2p5Entries) {
+		for (T2P5Entry t2p5Entry : t2p5Entries) {
+			if (entityCache.getResult(
+					T2P5EntryImpl.class, t2p5Entry.getPrimaryKey()) == null) {
 
-				cacheResult(entry);
+				cacheResult(t2p5Entry);
 			}
 		}
 	}
 
 	/**
-	 * Clears the cache for all entries.
+	 * Clears the cache for all t2p5 entries.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -132,95 +133,98 @@ public class EntryPersistenceImpl
 	 */
 	@Override
 	public void clearCache() {
-		entityCache.clearCache(EntryImpl.class);
+		entityCache.clearCache(T2P5EntryImpl.class);
 
-		finderCache.clearCache(EntryImpl.class);
+		finderCache.clearCache(T2P5EntryImpl.class);
 	}
 
 	/**
-	 * Clears the cache for the entry.
+	 * Clears the cache for the t2p5 entry.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
 	 * </p>
 	 */
 	@Override
-	public void clearCache(Entry entry) {
-		entityCache.removeResult(EntryImpl.class, entry);
+	public void clearCache(T2P5Entry t2p5Entry) {
+		entityCache.removeResult(T2P5EntryImpl.class, t2p5Entry);
 	}
 
 	@Override
-	public void clearCache(List<Entry> entries) {
-		for (Entry entry : entries) {
-			entityCache.removeResult(EntryImpl.class, entry);
+	public void clearCache(List<T2P5Entry> t2p5Entries) {
+		for (T2P5Entry t2p5Entry : t2p5Entries) {
+			entityCache.removeResult(T2P5EntryImpl.class, t2p5Entry);
 		}
 	}
 
 	@Override
 	public void clearCache(Set<Serializable> primaryKeys) {
-		finderCache.clearCache(EntryImpl.class);
+		finderCache.clearCache(T2P5EntryImpl.class);
 
 		for (Serializable primaryKey : primaryKeys) {
-			entityCache.removeResult(EntryImpl.class, primaryKey);
+			entityCache.removeResult(T2P5EntryImpl.class, primaryKey);
 		}
 	}
 
 	/**
-	 * Creates a new entry with the primary key. Does not add the entry to the database.
+	 * Creates a new t2p5 entry with the primary key. Does not add the t2p5 entry to the database.
 	 *
-	 * @param entryId the primary key for the new entry
-	 * @return the new entry
+	 * @param t2p5EntryId the primary key for the new t2p5 entry
+	 * @return the new t2p5 entry
 	 */
 	@Override
-	public Entry create(long entryId) {
-		Entry entry = new EntryImpl();
+	public T2P5Entry create(long t2p5EntryId) {
+		T2P5Entry t2p5Entry = new T2P5EntryImpl();
 
-		entry.setNew(true);
-		entry.setPrimaryKey(entryId);
+		t2p5Entry.setNew(true);
+		t2p5Entry.setPrimaryKey(t2p5EntryId);
 
-		return entry;
+		return t2p5Entry;
 	}
 
 	/**
-	 * Removes the entry with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the t2p5 entry with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param entryId the primary key of the entry
-	 * @return the entry that was removed
-	 * @throws NoSuchEntryException if a entry with the primary key could not be found
+	 * @param t2p5EntryId the primary key of the t2p5 entry
+	 * @return the t2p5 entry that was removed
+	 * @throws NoSuchT2P5EntryException if a t2p5 entry with the primary key could not be found
 	 */
 	@Override
-	public Entry remove(long entryId) throws NoSuchEntryException {
-		return remove((Serializable)entryId);
+	public T2P5Entry remove(long t2p5EntryId) throws NoSuchT2P5EntryException {
+		return remove((Serializable)t2p5EntryId);
 	}
 
 	/**
-	 * Removes the entry with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the t2p5 entry with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param primaryKey the primary key of the entry
-	 * @return the entry that was removed
-	 * @throws NoSuchEntryException if a entry with the primary key could not be found
+	 * @param primaryKey the primary key of the t2p5 entry
+	 * @return the t2p5 entry that was removed
+	 * @throws NoSuchT2P5EntryException if a t2p5 entry with the primary key could not be found
 	 */
 	@Override
-	public Entry remove(Serializable primaryKey) throws NoSuchEntryException {
+	public T2P5Entry remove(Serializable primaryKey)
+		throws NoSuchT2P5EntryException {
+
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			Entry entry = (Entry)session.get(EntryImpl.class, primaryKey);
+			T2P5Entry t2p5Entry = (T2P5Entry)session.get(
+				T2P5EntryImpl.class, primaryKey);
 
-			if (entry == null) {
+			if (t2p5Entry == null) {
 				if (_log.isDebugEnabled()) {
 					_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 				}
 
-				throw new NoSuchEntryException(
+				throw new NoSuchT2P5EntryException(
 					_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			return remove(entry);
+			return remove(t2p5Entry);
 		}
-		catch (NoSuchEntryException noSuchEntityException) {
+		catch (NoSuchT2P5EntryException noSuchEntityException) {
 			throw noSuchEntityException;
 		}
 		catch (Exception exception) {
@@ -232,19 +236,19 @@ public class EntryPersistenceImpl
 	}
 
 	@Override
-	protected Entry removeImpl(Entry entry) {
+	protected T2P5Entry removeImpl(T2P5Entry t2p5Entry) {
 		Session session = null;
 
 		try {
 			session = openSession();
 
-			if (!session.contains(entry)) {
-				entry = (Entry)session.get(
-					EntryImpl.class, entry.getPrimaryKeyObj());
+			if (!session.contains(t2p5Entry)) {
+				t2p5Entry = (T2P5Entry)session.get(
+					T2P5EntryImpl.class, t2p5Entry.getPrimaryKeyObj());
 			}
 
-			if (entry != null) {
-				session.delete(entry);
+			if (t2p5Entry != null) {
+				session.delete(t2p5Entry);
 			}
 		}
 		catch (Exception exception) {
@@ -254,16 +258,16 @@ public class EntryPersistenceImpl
 			closeSession(session);
 		}
 
-		if (entry != null) {
-			clearCache(entry);
+		if (t2p5Entry != null) {
+			clearCache(t2p5Entry);
 		}
 
-		return entry;
+		return t2p5Entry;
 	}
 
 	@Override
-	public Entry updateImpl(Entry entry) {
-		boolean isNew = entry.isNew();
+	public T2P5Entry updateImpl(T2P5Entry t2p5Entry) {
+		boolean isNew = t2p5Entry.isNew();
 
 		Session session = null;
 
@@ -271,10 +275,10 @@ public class EntryPersistenceImpl
 			session = openSession();
 
 			if (isNew) {
-				session.save(entry);
+				session.save(t2p5Entry);
 			}
 			else {
-				entry = (Entry)session.merge(entry);
+				t2p5Entry = (T2P5Entry)session.merge(t2p5Entry);
 			}
 		}
 		catch (Exception exception) {
@@ -284,126 +288,128 @@ public class EntryPersistenceImpl
 			closeSession(session);
 		}
 
-		entityCache.putResult(EntryImpl.class, entry, false, true);
+		entityCache.putResult(T2P5EntryImpl.class, t2p5Entry, false, true);
 
 		if (isNew) {
-			entry.setNew(false);
+			t2p5Entry.setNew(false);
 		}
 
-		entry.resetOriginalValues();
+		t2p5Entry.resetOriginalValues();
 
-		return entry;
+		return t2p5Entry;
 	}
 
 	/**
-	 * Returns the entry with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
+	 * Returns the t2p5 entry with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the entry
-	 * @return the entry
-	 * @throws NoSuchEntryException if a entry with the primary key could not be found
+	 * @param primaryKey the primary key of the t2p5 entry
+	 * @return the t2p5 entry
+	 * @throws NoSuchT2P5EntryException if a t2p5 entry with the primary key could not be found
 	 */
 	@Override
-	public Entry findByPrimaryKey(Serializable primaryKey)
-		throws NoSuchEntryException {
+	public T2P5Entry findByPrimaryKey(Serializable primaryKey)
+		throws NoSuchT2P5EntryException {
 
-		Entry entry = fetchByPrimaryKey(primaryKey);
+		T2P5Entry t2p5Entry = fetchByPrimaryKey(primaryKey);
 
-		if (entry == null) {
+		if (t2p5Entry == null) {
 			if (_log.isDebugEnabled()) {
 				_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			throw new NoSuchEntryException(
+			throw new NoSuchT2P5EntryException(
 				_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 		}
 
-		return entry;
+		return t2p5Entry;
 	}
 
 	/**
-	 * Returns the entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the t2p5 entry with the primary key or throws a <code>NoSuchT2P5EntryException</code> if it could not be found.
 	 *
-	 * @param entryId the primary key of the entry
-	 * @return the entry
-	 * @throws NoSuchEntryException if a entry with the primary key could not be found
+	 * @param t2p5EntryId the primary key of the t2p5 entry
+	 * @return the t2p5 entry
+	 * @throws NoSuchT2P5EntryException if a t2p5 entry with the primary key could not be found
 	 */
 	@Override
-	public Entry findByPrimaryKey(long entryId) throws NoSuchEntryException {
-		return findByPrimaryKey((Serializable)entryId);
+	public T2P5Entry findByPrimaryKey(long t2p5EntryId)
+		throws NoSuchT2P5EntryException {
+
+		return findByPrimaryKey((Serializable)t2p5EntryId);
 	}
 
 	/**
-	 * Returns the entry with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the t2p5 entry with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param entryId the primary key of the entry
-	 * @return the entry, or <code>null</code> if a entry with the primary key could not be found
+	 * @param t2p5EntryId the primary key of the t2p5 entry
+	 * @return the t2p5 entry, or <code>null</code> if a t2p5 entry with the primary key could not be found
 	 */
 	@Override
-	public Entry fetchByPrimaryKey(long entryId) {
-		return fetchByPrimaryKey((Serializable)entryId);
+	public T2P5Entry fetchByPrimaryKey(long t2p5EntryId) {
+		return fetchByPrimaryKey((Serializable)t2p5EntryId);
 	}
 
 	/**
-	 * Returns all the entries.
+	 * Returns all the t2p5 entries.
 	 *
-	 * @return the entries
+	 * @return the t2p5 entries
 	 */
 	@Override
-	public List<Entry> findAll() {
+	public List<T2P5Entry> findAll() {
 		return findAll(QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
 
 	/**
-	 * Returns a range of all the entries.
+	 * Returns a range of all the t2p5 entries.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>EntryModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>T2P5EntryModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of entries
-	 * @param end the upper bound of the range of entries (not inclusive)
-	 * @return the range of entries
+	 * @param start the lower bound of the range of t2p5 entries
+	 * @param end the upper bound of the range of t2p5 entries (not inclusive)
+	 * @return the range of t2p5 entries
 	 */
 	@Override
-	public List<Entry> findAll(int start, int end) {
+	public List<T2P5Entry> findAll(int start, int end) {
 		return findAll(start, end, null);
 	}
 
 	/**
-	 * Returns an ordered range of all the entries.
+	 * Returns an ordered range of all the t2p5 entries.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>EntryModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>T2P5EntryModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of entries
-	 * @param end the upper bound of the range of entries (not inclusive)
+	 * @param start the lower bound of the range of t2p5 entries
+	 * @param end the upper bound of the range of t2p5 entries (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of entries
+	 * @return the ordered range of t2p5 entries
 	 */
 	@Override
-	public List<Entry> findAll(
-		int start, int end, OrderByComparator<Entry> orderByComparator) {
+	public List<T2P5Entry> findAll(
+		int start, int end, OrderByComparator<T2P5Entry> orderByComparator) {
 
 		return findAll(start, end, orderByComparator, true);
 	}
 
 	/**
-	 * Returns an ordered range of all the entries.
+	 * Returns an ordered range of all the t2p5 entries.
 	 *
 	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>EntryModelImpl</code>.
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>T2P5EntryModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of entries
-	 * @param end the upper bound of the range of entries (not inclusive)
+	 * @param start the lower bound of the range of t2p5 entries
+	 * @param end the upper bound of the range of t2p5 entries (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of entries
+	 * @return the ordered range of t2p5 entries
 	 */
 	@Override
-	public List<Entry> findAll(
-		int start, int end, OrderByComparator<Entry> orderByComparator,
+	public List<T2P5Entry> findAll(
+		int start, int end, OrderByComparator<T2P5Entry> orderByComparator,
 		boolean useFinderCache) {
 
 		FinderPath finderPath = null;
@@ -422,10 +428,11 @@ public class EntryPersistenceImpl
 			finderArgs = new Object[] {start, end, orderByComparator};
 		}
 
-		List<Entry> list = null;
+		List<T2P5Entry> list = null;
 
 		if (useFinderCache) {
-			list = (List<Entry>)finderCache.getResult(finderPath, finderArgs);
+			list = (List<T2P5Entry>)finderCache.getResult(
+				finderPath, finderArgs);
 		}
 
 		if (list == null) {
@@ -436,7 +443,7 @@ public class EntryPersistenceImpl
 				sb = new StringBundler(
 					2 + (orderByComparator.getOrderByFields().length * 2));
 
-				sb.append(_SQL_SELECT_ENTRY);
+				sb.append(_SQL_SELECT_T2P5ENTRY);
 
 				appendOrderByComparator(
 					sb, _ORDER_BY_ENTITY_ALIAS, orderByComparator);
@@ -444,9 +451,9 @@ public class EntryPersistenceImpl
 				sql = sb.toString();
 			}
 			else {
-				sql = _SQL_SELECT_ENTRY;
+				sql = _SQL_SELECT_T2P5ENTRY;
 
-				sql = sql.concat(EntryModelImpl.ORDER_BY_JPQL);
+				sql = sql.concat(T2P5EntryModelImpl.ORDER_BY_JPQL);
 			}
 
 			Session session = null;
@@ -456,7 +463,7 @@ public class EntryPersistenceImpl
 
 				Query query = session.createQuery(sql);
 
-				list = (List<Entry>)QueryUtil.list(
+				list = (List<T2P5Entry>)QueryUtil.list(
 					query, getDialect(), start, end);
 
 				cacheResult(list);
@@ -477,20 +484,20 @@ public class EntryPersistenceImpl
 	}
 
 	/**
-	 * Removes all the entries from the database.
+	 * Removes all the t2p5 entries from the database.
 	 *
 	 */
 	@Override
 	public void removeAll() {
-		for (Entry entry : findAll()) {
-			remove(entry);
+		for (T2P5Entry t2p5Entry : findAll()) {
+			remove(t2p5Entry);
 		}
 	}
 
 	/**
-	 * Returns the number of entries.
+	 * Returns the number of t2p5 entries.
 	 *
-	 * @return the number of entries
+	 * @return the number of t2p5 entries
 	 */
 	@Override
 	public int countAll() {
@@ -503,7 +510,7 @@ public class EntryPersistenceImpl
 			try {
 				session = openSession();
 
-				Query query = session.createQuery(_SQL_COUNT_ENTRY);
+				Query query = session.createQuery(_SQL_COUNT_T2P5ENTRY);
 
 				count = (Long)query.uniqueResult();
 
@@ -528,28 +535,28 @@ public class EntryPersistenceImpl
 
 	@Override
 	protected String getPKDBName() {
-		return "entryId";
+		return "t2p5EntryId";
 	}
 
 	@Override
 	protected String getSelectSQL() {
-		return _SQL_SELECT_ENTRY;
+		return _SQL_SELECT_T2P5ENTRY;
 	}
 
 	@Override
 	protected Map<String, Integer> getTableColumnsMap() {
-		return EntryModelImpl.TABLE_COLUMNS_MAP;
+		return T2P5EntryModelImpl.TABLE_COLUMNS_MAP;
 	}
 
 	/**
-	 * Initializes the entry persistence.
+	 * Initializes the t2p5 entry persistence.
 	 */
 	@Activate
 	public void activate(BundleContext bundleContext) {
 		_bundleContext = bundleContext;
 
 		_argumentsResolverServiceRegistration = _bundleContext.registerService(
-			ArgumentsResolver.class, new EntryModelArgumentsResolver(),
+			ArgumentsResolver.class, new T2P5EntryModelArgumentsResolver(),
 			new HashMapDictionary<>());
 
 		_finderPathWithPaginationFindAll = new FinderPath(
@@ -567,7 +574,7 @@ public class EntryPersistenceImpl
 
 	@Deactivate
 	public void deactivate() {
-		entityCache.removeCache(EntryImpl.class.getName());
+		entityCache.removeCache(T2P5EntryImpl.class.getName());
 
 		_argumentsResolverServiceRegistration.unregister();
 	}
@@ -606,19 +613,19 @@ public class EntryPersistenceImpl
 	@Reference
 	protected FinderCache finderCache;
 
-	private static final String _SQL_SELECT_ENTRY =
-		"SELECT entry FROM Entry entry";
+	private static final String _SQL_SELECT_T2P5ENTRY =
+		"SELECT t2p5Entry FROM T2P5Entry t2p5Entry";
 
-	private static final String _SQL_COUNT_ENTRY =
-		"SELECT COUNT(entry) FROM Entry entry";
+	private static final String _SQL_COUNT_T2P5ENTRY =
+		"SELECT COUNT(t2p5Entry) FROM T2P5Entry t2p5Entry";
 
-	private static final String _ORDER_BY_ENTITY_ALIAS = "entry.";
+	private static final String _ORDER_BY_ENTITY_ALIAS = "t2p5Entry.";
 
 	private static final String _NO_SUCH_ENTITY_WITH_PRIMARY_KEY =
-		"No Entry exists with the primary key ";
+		"No T2P5Entry exists with the primary key ";
 
 	private static final Log _log = LogFactoryUtil.getLog(
-		EntryPersistenceImpl.class);
+		T2P5EntryPersistenceImpl.class);
 
 	@Override
 	protected FinderCache getFinderCache() {
@@ -628,7 +635,7 @@ public class EntryPersistenceImpl
 	private ServiceRegistration<ArgumentsResolver>
 		_argumentsResolverServiceRegistration;
 
-	private static class EntryModelArgumentsResolver
+	private static class T2P5EntryModelArgumentsResolver
 		implements ArgumentsResolver {
 
 		@Override
@@ -646,12 +653,13 @@ public class EntryPersistenceImpl
 				return null;
 			}
 
-			EntryModelImpl entryModelImpl = (EntryModelImpl)baseModel;
+			T2P5EntryModelImpl t2p5EntryModelImpl =
+				(T2P5EntryModelImpl)baseModel;
 
-			long columnBitmask = entryModelImpl.getColumnBitmask();
+			long columnBitmask = t2p5EntryModelImpl.getColumnBitmask();
 
 			if (!checkColumn || (columnBitmask == 0)) {
-				return _getValue(entryModelImpl, columnNames, original);
+				return _getValue(t2p5EntryModelImpl, columnNames, original);
 			}
 
 			Long finderPathColumnBitmask = _finderPathColumnBitmasksCache.get(
@@ -661,8 +669,8 @@ public class EntryPersistenceImpl
 				finderPathColumnBitmask = 0L;
 
 				for (String columnName : columnNames) {
-					finderPathColumnBitmask |= entryModelImpl.getColumnBitmask(
-						columnName);
+					finderPathColumnBitmask |=
+						t2p5EntryModelImpl.getColumnBitmask(columnName);
 				}
 
 				_finderPathColumnBitmasksCache.put(
@@ -670,7 +678,7 @@ public class EntryPersistenceImpl
 			}
 
 			if ((columnBitmask & finderPathColumnBitmask) != 0) {
-				return _getValue(entryModelImpl, columnNames, original);
+				return _getValue(t2p5EntryModelImpl, columnNames, original);
 			}
 
 			return null;
@@ -678,16 +686,16 @@ public class EntryPersistenceImpl
 
 		@Override
 		public String getClassName() {
-			return EntryImpl.class.getName();
+			return T2P5EntryImpl.class.getName();
 		}
 
 		@Override
 		public String getTableName() {
-			return EntryTable.INSTANCE.getTableName();
+			return T2P5EntryTable.INSTANCE.getTableName();
 		}
 
 		private static Object[] _getValue(
-			EntryModelImpl entryModelImpl, String[] columnNames,
+			T2P5EntryModelImpl t2p5EntryModelImpl, String[] columnNames,
 			boolean original) {
 
 			Object[] arguments = new Object[columnNames.length];
@@ -696,11 +704,12 @@ public class EntryPersistenceImpl
 				String columnName = columnNames[i];
 
 				if (original) {
-					arguments[i] = entryModelImpl.getColumnOriginalValue(
+					arguments[i] = t2p5EntryModelImpl.getColumnOriginalValue(
 						columnName);
 				}
 				else {
-					arguments[i] = entryModelImpl.getColumnValue(columnName);
+					arguments[i] = t2p5EntryModelImpl.getColumnValue(
+						columnName);
 				}
 			}
 
