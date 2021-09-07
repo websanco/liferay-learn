@@ -4,7 +4,7 @@
 
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<%@ page import="com.acme.t2p5.model.Entry" %>
+<%@ page import="com.acme.t2p5.model.T2P5Entry" %>
 
 <%@ page import="java.util.List" %>
 
@@ -14,11 +14,11 @@
 
 <hr />
 
-<portlet:actionURL name="addEntry" var="addEntryURL" />
+<portlet:actionURL name="addT2P5Entry" var="addT2P5EntryURL" />
 
 <h5>Add Entry</h5>
 
-<aui:form action="<%= addEntryURL %>">
+<aui:form action="<%= addT2P5EntryURL %>">
 	<aui:input name="name" type="text" />
 	<aui:input name="description" type="text" />
 
@@ -30,7 +30,7 @@
 <h5>Entries</h5>
 
 <%
-List<Entry> entries = (List<Entry>)request.getAttribute("entries");
+List<T2P5Entry> entries = (List<T2P5Entry>)request.getAttribute("entries");
 %>
 
 <c:choose>

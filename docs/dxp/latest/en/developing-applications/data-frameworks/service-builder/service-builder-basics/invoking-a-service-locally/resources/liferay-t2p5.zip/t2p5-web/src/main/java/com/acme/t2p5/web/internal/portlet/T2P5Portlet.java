@@ -1,6 +1,6 @@
 package com.acme.t2p5.web.internal.portlet;
 
-import com.acme.t2p5.service.EntryLocalService;
+import com.acme.t2p5.service.T2P5EntryLocalService;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -28,11 +28,11 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class T2P5Portlet extends MVCPortlet {
 
-	public void addEntry(
+	public void addT2P5Entry(
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
-		_entryLocalService.addEntry(
+		_t2p5EntryLocalService.addT2P5Entry(
 			ParamUtil.getString(actionRequest, "name"),
 			ParamUtil.getString(actionRequest, "description"));
 	}
@@ -43,15 +43,15 @@ public class T2P5Portlet extends MVCPortlet {
 		throws IOException, PortletException {
 
 		renderRequest.setAttribute(
-			"entriesCount", _entryLocalService.getEntriesCount());
+			"entriesCount", _t2p5EntryLocalService.getT2P5EntriesCount());
 
 		renderRequest.setAttribute(
-			"entries", _entryLocalService.getEntries(-1, -1));
+			"entries", _t2p5EntryLocalService.getT2P5Entries(-1, -1));
 
 		super.render(renderRequest, renderResponse);
 	}
 
 	@Reference
-	private EntryLocalService _entryLocalService;
+	private T2P5EntryLocalService _t2p5EntryLocalService;
 
 }
