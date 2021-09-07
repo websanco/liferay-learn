@@ -14,9 +14,11 @@
 
 package com.acme.t2p5.service.impl;
 
+import com.acme.t2p5.model.T2P5Entry;
 import com.acme.t2p5.service.base.T2P5EntryLocalServiceBaseImpl;
 
 import com.liferay.portal.aop.AopService;
+import com.liferay.portal.kernel.exception.PortalException;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -28,4 +30,16 @@ import org.osgi.service.component.annotations.Component;
 	service = AopService.class
 )
 public class T2P5EntryLocalServiceImpl extends T2P5EntryLocalServiceBaseImpl {
+
+	public T2P5Entry addT2P5Entry(String name, String description)
+		throws PortalException {
+
+		T2P5Entry entry = createT2P5Entry(counterLocalService.increment());
+
+		entry.setName(name);
+		entry.setDescription(description);
+
+		return addT2P5Entry(entry);
+	}
+
 }
