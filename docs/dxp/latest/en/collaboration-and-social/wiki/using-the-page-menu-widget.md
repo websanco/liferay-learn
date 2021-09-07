@@ -2,7 +2,7 @@
 
 The *Page Menu* widget presents links that can include links to other [Wiki Pages](./getting-started-with-wikis.md),other DXP site pages, Documents and Media assets, external websites, and more. Once you've added the widget to a Page, you need to configure which Wiki Page it uses and its sources for links. Follow these steps:
 
-1. Click on the widget’s *Options* icon (![Actions Button](../../../images/icon-actions.png)) and select *Configuration*.
+1. Click on the widget’s *Options* icon (![Actions Button](../../images/icon-actions.png)) and select *Configuration*.
 
    ![Click on Options to configure the Page menu widget.](./using-the-page-menu-widget/images/01.png)
 

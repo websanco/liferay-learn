@@ -8,7 +8,7 @@ Collaboration and Social
    collaboration-and-social/message_boards.rst
    collaboration-and-social/notifications_and_requests.rst
    collaboration-and-social/social_tools.rst
-   collaboration-and-social/wiki.rst
+   collaboration-and-social/wiki.md
    collaboration-and-social/questions.rst
    collaboration-and-social/alerts_and_announcements.rst
    ../site-building/building-sites/site-membership/inviting-members-to-your-site.md

@@ -9,7 +9,7 @@ Wiki pages created at the global site scope level are available on all other sit
 ### Creating Globally Scoped Wiki Pages
 
 1. Navigate to the site page where the _Wiki_ widget is deployed.
-1. Mouse over the _Wiki_ widget's name and click _Options_ ![Icon Options](../../../images/icon-widget-options.png) then _Configuration_.
+1. Mouse over the _Wiki_ widget's name and click _Options_ ![Icon Options](../../images/icon-widget-options.png) then _Configuration_.
 
     ![Wiki Options](./scoping-your-wikis/images/10.png)
 
@@ -26,7 +26,7 @@ The _Wiki_ widget has been configured to display content for the _Global_ scope.
 
 ### Managing Globally Scoped _Wiki_ Pages
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)), then click the compass icon (![Compass](../../../images/icon-compass.png)) on the Site Administration menu. This opens the Select Site dialog.
+1. Open the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)), then click the compass icon (![Compass](../../images/icon-compass.png)) on the Site Administration menu. This opens the Select Site dialog.
 1. Select the _My Sites_ tab, then select _Global_.
 
     ![Selecting the Global site](./scoping-your-wikis/images/06.png)
@@ -51,7 +51,7 @@ Creating page scoped message boards allows forum members to view different wikis
 
     ![Two pages before scoping](./scoping-your-wikis/images/03.png)
 
-1. Click the _Options_ icon (![Options](../../../images/icon-widget-options.png)) in the widget's title bar and select _Configuration_.
+1. Click the _Options_ icon (![Options](../../images/icon-widget-options.png)) in the widget's title bar and select _Configuration_.
 1. Click the _Scope_ tab.
 1. Select the page's name or _[YOUR-PAGE] (Create New)_ if the page scope doesn't exist yet.
 
@@ -67,8 +67,8 @@ The second page has been configured for page scope.
 
 Note that administrators must still use the _Site Administration_ menu to administer a page scoped Wiki widget by setting the _Site Administration menu_'s active scope. Follow these steps:
 
-1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)), expand the menu for your Site, and then click _Content & Data_.
-1. The current scope appears just below the Content & Data heading. Default Scope is the current Site. To change this, click the gear icon (![Gear](../../../images/icon-control-menu-gear.png)) and then select your desired scope. This changes the Site Administration menu to reflect scope you selected. To work in a page's scope, for example, select that page from the gear icon. That page's name then becomes the Site Administration menu's title.
+1. Open the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)), expand the menu for your Site, and then click _Content & Data_.
+1. The current scope appears just below the Content & Data heading. Default Scope is the current Site. To change this, click the gear icon (![Gear](../../images/icon-control-menu-gear.png)) and then select your desired scope. This changes the Site Administration menu to reflect scope you selected. To work in a page's scope, for example, select that page from the gear icon. That page's name then becomes the Site Administration menu's title.
 
     ![Selecting the new page scoped wiki](./scoping-your-wikis/images/08.png)
 

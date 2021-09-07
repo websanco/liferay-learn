@@ -7,9 +7,9 @@ Only authenticated users with the [requisite permissions](./wiki-permissions.md)
 ## Creating a New Node
 
 1. Navigate to the site where the wiki is located (for example, _Liferay DXP_).
-1. Expand the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) and then the _Site Administration_ menu.
+1. Expand the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)) and then the _Site Administration_ menu.
 1. Click _Content & Data_ &rarr; _Wiki_.
-1. Click the _Add Wiki_ (![Add](../../../images/icon-add.png)) button.
+1. Click the _Add Wiki_ (![Add](../../images/icon-add.png)) button.
 1. Enter the following:
     * **Name**: New Node
     * **Description**: This is a new node for DXP Guest wiki site.

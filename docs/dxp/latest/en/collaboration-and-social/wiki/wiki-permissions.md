@@ -5,7 +5,7 @@ This article documents permissions in the _Wiki_ widget and serves as a referenc
 ## Wiki Node Permissions
 
 1. Navigate to _Site Administration_ &rarr; _Content & Data_ &rarr; _Wiki_.
-1. Click _Options_ (![Options](../../../images/icon-options.png)) next to the node (for example, _New Node_) then _Permissions_.
+1. Click _Options_ (![Options](../../images/icon-options.png)) next to the node (for example, _New Node_) then _Permissions_.
 
     ![Viewing Wiki Node Permissions](./wiki-permissions/images/06.png)
 
@@ -46,7 +46,7 @@ To view a wiki page's permissions:
 ## Wiki Widget Permissions
 
 1. Navigate to the site page where the _Wiki_ widget has been deployed.
-1. Mouse over the _Wiki_ and click _Options_ (![Options](../../../images/icon-widget-options.png))
+1. Mouse over the _Wiki_ and click _Options_ (![Options](../../images/icon-widget-options.png))
 1. Click _Permissions_.
 
 ![Viewing Wiki Widget Permissions](./wiki-permissions/images/03.png)
@@ -65,7 +65,7 @@ To view a wiki page's permissions:
 These permissions are found in the _Site Administration_.
 
 1. Navigate to _Site Administration_ &rarr; _Content & Data_ &rarr; _Wiki_.
-1. Click the _Options_ (![Widget Options](../../../images/icon-options.png)) &rarr; _Wikis Permissions_.
+1. Click the _Options_ (![Widget Options](../../images/icon-options.png)) &rarr; _Wikis Permissions_.
 
 ![Wikis Options Permissions](./wiki-permissions/images/01.png)
 

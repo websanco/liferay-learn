@@ -24,7 +24,7 @@ DXP includes a full-featured Wiki application that provides a rich writing envir
 
 ![Figure 2: The Wiki widget displays your wiki on a Site page.](./collaboration-and-social-overview/images/02.png)
 
-To begin creating a wiki, see the [Getting Started with Wikis](./wiki/user-guide/getting-started-with-wikis.md) article.
+To begin creating a wiki, see the [Getting Started with Wikis](./wiki/getting-started-with-wikis.md) article.
 
 ## Social Tools
 

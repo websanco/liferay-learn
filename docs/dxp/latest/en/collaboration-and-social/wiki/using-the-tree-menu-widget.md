@@ -14,7 +14,7 @@ The _Tree Menu_ widget lists all the wiki pages and child pages in a particular 
 
 Once the _Tree Menu_ widget has been added to a page, it lists all the pages and child pages in the _Main_ node by default. To switch to another node:
 
-1. Mouse over the widget's border and click _Options_ (![icon-options](../../../images/icon-widget-options.png)).
+1. Mouse over the widget's border and click _Options_ (![icon-options](../../images/icon-widget-options.png)).
 1. Click _Configurations_.
 1. On the _Setup_ tab, select **New Node** from the _Node_ dropdown menu.
 1. Select **All** from _Depth_ dropdown menu.
