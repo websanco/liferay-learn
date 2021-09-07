@@ -6,5 +6,3 @@ Export-Package:\
 	com.acme.w9b7.model,\
 	com.acme.w9b7.service,\
 	com.acme.w9b7.service.persistence
--check: EXPORTS
--includeresource: META-INF/service.xml=../w9b7-service/service.xml
