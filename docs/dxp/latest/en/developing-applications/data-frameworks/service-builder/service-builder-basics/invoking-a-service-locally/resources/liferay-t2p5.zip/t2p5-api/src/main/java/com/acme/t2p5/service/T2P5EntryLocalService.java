@@ -62,6 +62,8 @@ public interface T2P5EntryLocalService
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.acme.t2p5.service.impl.T2P5EntryLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the t2p5 entry local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link T2P5EntryLocalServiceUtil} if injection and service tracking are not available.
 	 */
+	public T2P5Entry addT2P5Entry(String name, String description)
+		throws PortalException;
 
 	/**
 	 * Adds the t2p5 entry to the database. Also notifies the appropriate model listeners.

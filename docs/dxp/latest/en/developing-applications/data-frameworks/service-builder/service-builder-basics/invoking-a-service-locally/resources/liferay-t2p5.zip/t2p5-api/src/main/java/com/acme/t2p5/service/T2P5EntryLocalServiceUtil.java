@@ -45,6 +45,11 @@ public class T2P5EntryLocalServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.acme.t2p5.service.impl.T2P5EntryLocalServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static T2P5Entry addT2P5Entry(String name, String description)
+		throws PortalException {
+
+		return getService().addT2P5Entry(name, description);
+	}
 
 	/**
 	 * Adds the t2p5 entry to the database. Also notifies the appropriate model listeners.

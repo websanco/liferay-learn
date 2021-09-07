@@ -32,6 +32,14 @@ public class T2P5EntryLocalServiceWrapper
 		_t2p5EntryLocalService = t2p5EntryLocalService;
 	}
 
+	@Override
+	public com.acme.t2p5.model.T2P5Entry addT2P5Entry(
+			String name, String description)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _t2p5EntryLocalService.addT2P5Entry(name, description);
+	}
+
 	/**
 	 * Adds the t2p5 entry to the database. Also notifies the appropriate model listeners.
 	 *
