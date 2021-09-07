@@ -43,7 +43,7 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
 1. Download and unzip the example module.
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-b4k8.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/portlet-filters/liferay-b4k8.zip -O
    ```
 
    ```bash
