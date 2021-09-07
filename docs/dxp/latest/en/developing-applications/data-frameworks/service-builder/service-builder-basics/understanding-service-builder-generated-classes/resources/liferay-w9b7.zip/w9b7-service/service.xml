@@ -13,6 +13,5 @@
 
 		<column name="description" type="String" />
 		<column name="name" type="String" />
-
 	</entity>
 </service-builder>
