@@ -37,11 +37,11 @@ Follow these steps to configure auto tagging globally:
 1. Enter a value for **Maximum Number of Tags**. The default value of `0` means that there is no limit.
 1. Click *Save*_ when finished*.
 
-To set the default auto-tagging configuration for all Instances, select *Asset Auto Tagging* under the Virtual Instance Scope section. The available settings are the same as those in the System Scope.
+To set the default auto-tagging configuration for all instances, select *Asset Auto Tagging* under the Virtual Instance Scope section. The available settings are the same as those in the System Scope.
 
 ## Virtual Instance Scope Configuration
 
-When enabled globally, auto-tagging is also enabled by default for each Virtual Instance. You can, however, disable or configure it for each Instance.
+When enabled globally, auto-tagging is also enabled by default for each Virtual Instance. You can, however, disable or configure it for each instance.
 
 Follow these steps to configure Auto Tagging at the Virtual Instance scope:
 

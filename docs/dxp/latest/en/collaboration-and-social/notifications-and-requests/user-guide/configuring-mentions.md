@@ -25,14 +25,14 @@ Site administrators can enable or disable *Mentions* for a Site.
 
 1. Access the Mentions option:
 
-    - In Liferay DXP 7.4+:
+    - In Liferay DXP 7.4+
 
       1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
       1. In the Content and Data section, click *Community Tools* and then click *Mentions*.
 
             ![In Liferay DXP 7.4+, change the Mentions setting from the Site Settings section.](./configuring-mentions/images/04.png)
 
-   - In previous Liferay DXP versions:
+   - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the Social area, expand the *Mentions* option.

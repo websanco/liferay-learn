@@ -1,6 +1,6 @@
 # Managing Content Sharing Across Sites
 
-You can allow Liferay DXP child Sites to display content from parent Sites. This content includes:
+You can allow Liferay DXP child Sites to display content from parent Sites. This content includes
 
 - Web Content Structures
 - Web Content Templates
@@ -21,18 +21,18 @@ You can configure the Content Sharing settings at the Instance or Site scope. Th
 
 ## Configuring Content Sharing at the Site Scope
 
-```note::
-   If you disable the Content Sharing option at the Instance scope, the option is unavailable at the Site scope.
+```{note}
+If you disable Content Sharing at the Instance scope, the option is unavailable at the Site scope.
 ```
 
 1. Access the Content Sharing settings.
 
-   - In Liferay DXP 7.4+:
+   - In Liferay DXP 7.4+
 
       1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
       1. In the Content and Data section, click *Sharing*.
 
-   - In previous Liferay DXP versions:
+   - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the General area, expand the *Documents and Media* section.
@@ -41,7 +41,7 @@ You can configure the Content Sharing settings at the Instance or Site scope. Th
 
 ## Configure the Content Sharing Setting Between Sites and Subsites
 
-In the *Allow subsites to display content from parent sites drop-down menu, select one of the following options:
+In the *Allow subsites to display content from parent sites* drop-down menu, select one of the following options:
 
 - **Enabled by Default**: Child Sites can display content from parent Sites by default. You can change this option at Site scope.
 - **Disabled by Default**: Child Sites cannot display content from parent Sites. You can change this option at Site scope.

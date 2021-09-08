@@ -27,7 +27,7 @@ By default, the Commerce area includes the following settings:
 - Payment
 - Shipping
 
-On this section, you can configure the Commerce settings at the Site scope. For more information about Commerce settings, see [Liferay Commerce Configuration Overview](../../../../../commerce/latest/en/store-administration/liferay-commerce-configuration-overview.html).
+Here you can configure the Commerce settings at the Site scope. For more information about Commerce settings, see [Liferay Commerce Configuration Overview](../../../../../commerce/latest/en/store-administration/liferay-commerce-configuration-overview.html).
 
 ![Default Site Settings for Commerce](./site-settings-ui-reference/images/21.png)
 
@@ -46,15 +46,15 @@ By default, the Platform area includes the following settings:
 
 Use these settings to configure the Google Analytics options for your Site. You can also set the Piwik Analytics tracking code.
 
-```note::
-   In the Piwik configuration, enter the full script code including the script start and end tags.
+```{note}
+In the Piwik configuration, enter the full script code including the script start and end tags.
 ```
 
 If you require a different analytics service, you can add it. See [Adding a New Analytics Service](./adding-a-new-analytics-service.md) for more information and how to add additional fields for different analytics services.
 
 ### Localization
 
-Here you can choose whether to use the installation’s default language options, or define your own for the Site. For more information on setting your Site's language options, read [Site Localization](../site-settings/site-localization.md).
+Here you can choose whether to use the installation's default language options or define your own for the Site. For more information on setting your Site's language options, read [Site Localization](../site-settings/site-localization.md).
 
 ![Use the Localization settings to set your Site language options.](./site-settings-ui-reference/images/22.png)
 
@@ -115,7 +115,7 @@ By default, the Content and Data area includes the following settings:
 
 | Section | Description |
 | --- | --- |
-| Maps | Select which maps API provider to use when displaying geolocalized assets in your Site. Geolocalized assets can be displayed for documents, web content articles, DDL records, and more. See [Geolocating Assets](../../content-authoring-and-management/tags-and-categories/geolocating-assets.md) for more information. |
+| Maps | Select which maps API provider to use when displaying geo-localized assets in your Site. Geo-localized assets can be displayed for documents, web content articles, DDL records, and more. See [Geo-locating Assets](../../content-authoring-and-management/tags-and-categories/geolocating-assets.md) for more information. |
 | Google Places API Key | Set the Google Places API Key. |
 
 ### Click to Chat
@@ -128,15 +128,15 @@ You can see the type of configuration for this setting at the Instance scope und
 
 ![Find the type of configuration at the Instance scope under Site Settings Strategy.](./site-settings-ui-reference/images/23.png)
 
-```note::
-   Depending on your configuration at the Instance scope, you may not be able to update the configuration at Site scope. To verify your Instance Configuation, got to the Site Menu → Control Panel → Instance Settings → Content and Data → Click to Chat.
+```{note}
+Depending on your configuration at the Instance scope, you may not be able to update the configuration at Site scope. To verify your Instance Configuation, got to the Site Menu → Control Panel → Instance Settings → Content and Data → Click to Chat.
 ```
 
 ### Community Tools
 
 | Section | Description |
 | --- | --- |
-| Mentions | Determines whether to allow Users to mention other Users in Site applications. See [Configuring Mention](../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md) for more information. |
+| Mentions | Determines whether to allow Users to mention other Users in Site applications. See [Configuring Mentions](../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md) for more information. |
 | Ratings | Here you can select the type of ratings used for the different Site applications. See [Configuring Content Rating Types](../site-settings/site-content-configurations/configuring-content-rating-type.md) for more information. |
 
 ### Digital Signature
@@ -145,8 +145,8 @@ You can integrate Liferay DXP with DocuSign to manage electronic signatures. The
 
 ![Find the type of configuration at the Instance scope under Site Settings Strategy.](./site-settings-ui-reference/images/24.png)
 
-```note::
-   Depending on your Digital Signature configuration at the Instance scope, you may not be able to update the configuration at Site scope. To verify your Instance Configuation, go to Site Menu → Control Panel → Instance Settings → Content and Data → Digital Signature. 
+```{note}
+Depending on your Digital Signature configuration at the Instance scope, you may not be able to update the configuration at Site scope. To verify your Instance Configuation, go to Site Menu → Control Panel → Instance Settings → Content and Data → Digital Signature. 
 ```
 
 ### Documents and Media
@@ -163,7 +163,7 @@ Using this option, you can enable automatic moderation of user messages on Messa
 
 | Section | Description |
 | --- | --- |
-| Google PageSpeed Insights (Liferay DXP 7.4+) | Enable the Google PageSpeed Insight integration in Liferay DXP. Using this options, you can audit your pages for accessibility issues and check suggestions for fixing them. After you enable Google PageSpeed Insights, you need to provide the API Key and Preferred Strategy. |
+| Google PageSpeed Insights (Liferay DXP 7.4+) | Enable the Google PageSpeed Insight integration in Liferay DXP. Using this option, you can audit your pages for accessibility issues and check suggestions for fixing them. After you enable Google PageSpeed Insights, you need to provide the API Key and Preferred Strategy. |
 | Open Graph | Enable this option to include the Open Graph `meta` tags in the `head` of your Site's pages. These tags define page metadata to create engaging representations of your Site’s content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter. For more information, read [Configuring Open Graph](./configuring-open-graph.md). |
 | Pages | View the Site Public and Private pages. On this section, you can also configure the propagation of changes from a Site template, if one exists. For more information, read [Building Sites with Site Templates](../../../en/site-building/building-sites/building-sites-with-site-templates.md). |
 
@@ -203,8 +203,8 @@ To view a Site's settings, open the Site Menu (![Site Menu](../../images/icon-pr
 
 ![Site Settings are organized into four tabs.](./site-settings-ui-reference/images/01.png)
 
-```note::
-   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./site-localization.md#modifying-localizable-site-fields>`_ or more information.
+```{note}
+Many of these settings can be localized to provide translations based on a user's locale. See [Introduction to Localization](https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization) and [Modifying Localizable Site Fields](./site-localization.md#modifying-localizable-site-fields) for more information.
 ```
 
 ### General

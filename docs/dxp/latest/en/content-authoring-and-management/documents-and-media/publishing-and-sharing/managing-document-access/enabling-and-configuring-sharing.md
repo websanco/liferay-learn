@@ -2,7 +2,7 @@
 
 The Sharing configuration allows users to [share files](./sharing-documents-with-other-users.md) with each other. You can enable file sharing at the Global, Virtual Instance, and Site scopes.
 
-```note::
+```{note}
     Sharing is enabled globally by default.
 ```
 
@@ -22,10 +22,10 @@ The Sharing configuration allows users to [share files](./sharing-documents-with
     - **Enabled:** Check this box to enable sharing globally.
 
 1. Under *Virtual Instance Scope*, select *Sharing*.
-1. Check the *Enable* box to enable sharing for all the Virtual Instances on your system, or uncheck this box to configure sharing for each Virtual Instance.
+1. Check the *Enable* box to enable sharing for all the Virtual Instances on your system. Leaving it unchecked means configuring sharing on each Virtual Instance.
 
-    ```note::
-       When you enable sharing at the System scope, you enable sharing for all the Virtual Instances on your system. To change this behavior and enable sharing on a per-instance basis, uncheck the Sharing option under the Virtual Instance scope section.
+    ```{note}
+    When you enable sharing at the System scope, you enable sharing for all the Virtual Instances on your system. To change this behavior and enable sharing on a per-instance basis, uncheck the Sharing option under the Virtual Instance scope section.
     ```
 
     ![Configure sharing globally.](./enabling-and-configuring-sharing/images/03.png)
@@ -38,8 +38,8 @@ The Sharing configuration allows users to [share files](./sharing-documents-with
 1. Click *Instance Settings*.
 1. Under *Content and Data*, click *Sharing*.
 
-    ```note::
-       The Sharing option is unavailable when Sharing is disabled at the System Scope. See `Global Sharing Configuration <#global-sharing-configuration>`_ to modify the System Scope settings.
+    ```{note}
+    The Sharing option is unavailable when Sharing is disabled at the System Scope. See `Global Sharing Configuration <#global-sharing-configuration>`_ to modify the System Scope settings.
     ```
 
 1. Under *Virtual Instance Scope*, select *Sharing*.
@@ -51,18 +51,18 @@ The Sharing configuration allows users to [share files](./sharing-documents-with
 
 ## Site Sharing Configuration
 
-```note::
-    The Site Sharing option is unavailable when Sharing is disabled at the System or Virtual Instance scopes. See `Global Sharing Configuration <#global-sharing-configuration>`_ and `Virtual Instance Sharing Configuration <#virtual-instance-sharing-configuration>`_ to modify these settings.
+```{note}
+The Site Sharing option is unavailable when Sharing is disabled at the System or Virtual Instance scopes. See `Global Sharing Configuration <#global-sharing-configuration>`_ and `Virtual Instance Sharing Configuration <#virtual-instance-sharing-configuration>`_ to modify these settings.
 ```
 
 1. Access the Site Sharing setting.
 
-   - In Liferay DXP 7.4+:
+   - In Liferay DXP 7.4+
 
       1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
       1. In the Content and Data section, click *Sharing*.
 
-   - In previous Liferay DXP versions:
+   - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the Advanced area, expand the *Content Sharing* section.

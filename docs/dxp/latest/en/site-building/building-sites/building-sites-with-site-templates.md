@@ -12,7 +12,7 @@ Three Site Templates are provided out-of-the-box:
 
 - **Community Site:** Creates a preconfigured Site with the Message Boards, Search, Polls, Recent Content, Wiki, and navigation applications pre-deployed to Site Pages.
 
-- **Intranet Site:** Creates a preconfigured Site for an intranet. The Home page displays the Site members activities, a language selector, and a list of the recent content created in the intranet on the home page. It also provides two additional pages for Documents and Media and external News obtained through public feeds.
+- **Intranet Site:** Creates a preconfigured Site for an intranet. The Home page displays the Site members' activities, a language selector, and a list of the recent content created in the intranet on the home page. It also provides two additional pages for Documents and Media and external News obtained through public feeds.
 
 ## Creating a Site from a Site Template
 
@@ -26,15 +26,15 @@ To create a Site using a Site Template, follow these steps:
 
 1. Enter a name for the Site.
 
-    ```note::
-       Checking the *Create default pages as private (available only to members).* box prevents guest users from viewing Site pages.
+    ```{note}
+    Checking the *Create default pages as private (available only to members).* box prevents guest users from viewing Site pages.
     ```
 
 1. Click *Save*.
 
 1. Configure your [Site settings](../site_settings.md).
 
-    - In Liferay DXP 7.4+:
+    - In Liferay DXP 7.4+
 
       1. From the Site Menu, go to *Configuration* &rarr; *Site Settings*.
       1. In the Content and Data section, click *Pages*.
@@ -42,15 +42,15 @@ To create a Site using a Site Template, follow these steps:
 
             ![In Liferay DXP 7.4+, change the Pages settings from the Pages section.](./building-sites-with-site-templates/images/03.png)
 
-   - In previous Liferay DXP versions:
+   - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the General area, expand the *Pages* section.
 
             ![In previous Liferay DXP versions, change the Pages settings from the Pages section.](./building-sites-with-site-templates/images/02.png)
 
-    ```note::
-       *Enable propagation of changes from the Site Template* enables the Site to receive updates if the Site Template is modified. If changes are made directly to a Site created from a Site Template, the Site will no longer receive updates from the Site Template. See `Merging Site Template Changes <./merging-site-template-changes.md>`_ for more information.
+    ```{note}
+    *Enable propagation of changes from the Site Template* enables the Site to receive updates if the Site Template is modified. If changes are made directly to a Site created from a Site Template, the Site will no longer receive updates from the Site Template. See `Merging Site Template Changes <./merging-site-template-changes.md>`_ for more information.
     ```
 
 1. Click *Save* to create your Site.
@@ -59,8 +59,8 @@ To create a Site using a Site Template, follow these steps:
 
 1. Click *Actions* ( ![Actions icon](../../images/icon-actions.png) ) beside your new Site and select *Go to Public Pages* or *Go to Private Pages* to view it.
 
-    ```tip::
-       To view a newly created *blank site*, you must first create a page for it. See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
+    ```{tip}
+    To view a newly created *blank site*, you must first create a page for it. See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
     ```
 
 ## Related Information
