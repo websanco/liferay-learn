@@ -2,7 +2,7 @@
 
 If you want users to access your portlet's views, you must implement navigation to them. Portlet render URLs help you do this.
 
-Here you'll deploy an example application that uses portlet render URLs. You'll examine how the portlet render URLs set the view path using use MVC Portlet's `mvcPath` parameter.
+Here you'll deploy an example application that uses portlet render URLs. You'll examine how the portlet creates URLs that set the view path using use MVC Portlet's `mvcPath` parameter.
 
 The example portlet has two views: *View 1* displays its name and a link to *View 2*, and vice-versa.
 
@@ -52,9 +52,9 @@ Here's how to deploy the example portlet and navigate between its views. For lea
 
 1. Sign in using the default credentials:
 
-    **User Name:** `test@liferay.com`
+   **User Name:** `test@liferay.com`
 
-    **Password:** `test`
+   **Password:** `test`
 
 1. Add the *C8M3 Portlet* widget from the *Samples* category to a widget page. *View 1* (the portlet's default view) appears.
 
@@ -66,13 +66,13 @@ Here's how to deploy the example portlet and navigate between its views. For lea
     MVC path null
     ```
 
-    The render request doesn't yet include an an MVC path parameter. This is expected. The portlet renders View 1 by default per the portlet class (described later). The next step uses the MVC path parameter.
+    The render request doesn't yet include an MVC path parameter. This is expected. The portlet renders View 1 by default using the portlet class (described later). The next step uses the MVC path parameter.
 
 1. Click *Go to View 2*. View 2 appears.
 
     ![You navigated to View 2.](./rendering-views-with-mvc-portlet/images/03.png)
 
-    The log message shows MVC path value `/view_2.jsp`---the path to the View 2 template.
+    The log message shows the MVC path value `/view_2.jsp`---the path to the View 2 template.
 
     ```bash
     MVC path /view_2.jsp
@@ -80,19 +80,19 @@ Here's how to deploy the example portlet and navigate between its views. For lea
 
 1. Click *Go to View 1*. View 1 appears again.
 
-    ![You navigated back to View 1.](./rendering-views-with-mvc-portlet/images/04.png)
+   ![You navigated back to View 1.](./rendering-views-with-mvc-portlet/images/04.png)
 
-    The log message prints the MVC path `/view_1.jsp`.
+   The log message prints the MVC path `/view_1.jsp`.
 
-    ```bash
+   ```bash
     MVC path /view_1.jsp
-    ```
+   ```
 
 You've made the round trip between the portlet views. Next, learn how the portlet sets a default view and sets paths to views using render URLs and the MVC path request parameter.
 
 ## Setting the Default View
 
-A portlet's default view renders when users first land on the portlet's page. An initiallization param in the portlet class sets the default view. The `C8M3Portlet.java` example class sets the default view in its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) annotation.
+A portlet's default view renders when users first land on the portlet's page. An initialization parameter in the portlet class sets the default view. The `C8M3Portlet.java` example class sets the default view in its [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) annotation.
 
 ```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :language: java
@@ -111,15 +111,15 @@ View 1 has only a heading called *View 1* and a link labeled *Go to View 2*. Her
    :language: jsp
 ```
 
-The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. The render URL above is assigned to the variable `view2URL`. The render URL declares the `portlet:param` named `mvcPath` the value `/view_2.jsp`. When the portlet renders, the `mvcPath` parameter is added to the portlet's [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) object. On processing portlet requests, [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) renders the template assigned to `mvcPath`.
+The `portlet:renderURL` tag comes from the portlet taglib and is assigned the prefix `portlet`. The render URL above is assigned to the variable `view2URL`. The render URL declares the `portlet:param` named `mvcPath` the value `/view_2.jsp`. When the portlet renders, the `mvcPath` parameter is added to the portlet's [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) object. On processing portlet requests, [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) renders the template assigned to `mvcPath`.
 
-A render URL must be bound to an action for the portlet to use the URL. UI components, such as hyperlinks and buttons, produce request objects that portlet render URLs can be bound to. The hyperlink `<a href="<%= view2URL %>">Go to View 2</a>` binds the render URL to an action.
+A render URL must be bound to a UI component, such as a hyperlink or buttons, for the portlet to use the URL. The hyperlink `<a href="<%= view2URL %>">Go to View 2</a>` binds the render URL to a UI component.
 
 When a user clicks on the *Go to View 2* hyperlink, a portlet request that includes the `mvcPath` parameter is sent to the portlet class.
 
 ## Handling the mvcPath Portlet Parameter
 
-When a portlet receives the request object, it can respond to the request object parameters. `C8M3Portlet`'s `render` method response to render requests.
+When a portlet receives the request object, it can respond to the request object parameters. `C8M3Portlet`'s `render` method responds to render requests.
 
 ```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :dedent: 1
