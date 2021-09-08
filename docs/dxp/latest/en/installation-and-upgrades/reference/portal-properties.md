@@ -77,21 +77,17 @@ company.security.auth.type=userId
 
 ## Portal Property Priority
 
-A special property called `include-and-override` defines property override order.
+Portal properties are set from three sources:
 
-1. There are three property sources:
+* The `portal.properties` bundled in the `portal-impl.jar`
+* Extension properties files (e.g., `portal-ext.properties`)
+* [Environment variables](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
 
-    * The `portal-impl.jar/portal.properties` file
-    * Extension properties files
-    * [Env variables](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
-
-1. The last property value read takes priority.
-
-1. Property sources are read in a [deterministic order](#configuration-processing).
+For a given property, the last value read takes priority. The property sources are read in a [deterministic order](#configuration-processing) that is configurable through a property called `include-and-override`.
 
 ### Configuration Processing
 
-Properties are read in this order:
+By default, properties are read in this order:
 
 ```properties
 portal-impl.jar/portal.properties
@@ -107,7 +103,7 @@ include-and-override=${liferay.home}/${external-properties}
 [Liferay Docker Env variables]
 ```
 
-The `portal-impl.jar/portal.properties` file specifies the above `include-and-override` definitions. DXP checks each of the files for additional `include-and-override` definitions, which means you can define your own.
+The `portal-impl.jar/portal.properties` file specifies the above `include-and-override` definitions. If any other valid properties source defines additional or competing `include-and-override` property values, these are used to override the defaults.
 
 ![The list of included extension files your DXP server is using is available in the Server Administration page of the Control Panel's Configuration section](./portal-properties/images/01.png)
 
@@ -118,8 +114,6 @@ Liferay Docker containers aggregate Liferay environment variables into a Portal 
 ```{important}
 If you override a property in more than one file, the **last** defined property source wins. All others are ignored.
 ```
-
-![All of your DXP server's Portal Properties are available to view in the Server Administration page in the Control Panel's Configuration section.](./portal-properties/images/02.png)
 
 ### Portal Property Priority Examples
 
