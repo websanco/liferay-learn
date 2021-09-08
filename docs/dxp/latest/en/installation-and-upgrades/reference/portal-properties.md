@@ -16,7 +16,7 @@ Using a `portal-ext.properties` file to override default properties has these be
 * You can store configurations in a version control system to simplify configuration management.
 * Setting properties in the file before initial startup is the quickest way to configure Liferay.
 
-Portal properties are applied to Liferay Docker containers with environment variables (Env variables) and properties files. Please see [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables) to configure Docker containers with portal properties.  
+Portal properties are applied to Liferay Docker containers with environment variables (Env variables) and properties files. Please see [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables) to configure Docker containers with portal properties. 
 
 **Contents:**
 
@@ -85,13 +85,13 @@ A special property called `include-and-override` defines property override order
     * Extension properties files
     * [Env variables](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
 
-1. The last value defined for a *shared property* (a property defined multiple times) takes priority.
+1. The last property value read takes priority.
 
 1. Property sources are read in a [deterministic order](#configuration-processing).
 
 ### Configuration Processing
 
-Properties are defined in this order:
+Properties are read in this order:
 
 ```properties
 portal-impl.jar/portal.properties
