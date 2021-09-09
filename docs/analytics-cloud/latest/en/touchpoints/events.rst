@@ -4,6 +4,6 @@ Events
 .. toctree::
    :maxdepth: 1
 
-   events/event-analysis.md
+   events/events-analysis.md
 
--  :doc:`/touchpoints/events/event-analysis`
+-  :doc:`/touchpoints/events/events-analysis`

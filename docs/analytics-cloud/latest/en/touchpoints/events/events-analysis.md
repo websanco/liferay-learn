@@ -1,0 +1,29 @@
+# Events Analysis
+
+As individuals visit and interact with your site, Analytics Cloud tracks these events. Many of these events that take place on your Liferay DXP instance are set up to be tracked out-of-the-box. You can also define and track custom events by adding code snippets to your site. Use the events analysis tool to analyze and filter events based on different attributes. To analyze an event, 
+
+1. Navigate to *Touchpoints* &rarr; *Events*. 
+
+2. In the Analyze row, click the add icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
+
+    ![Select an event to analyze.](./events-analysis/images/01.png)
+
+    The Default events are events that are already tracked by Analytics Cloud by default. The Custom events are events that you have defined and set up. See [Definitions for Events](../../workspace-data/defintions/definitions-for-events.md) to learn more.
+
+    Hover over a specific event in the drop-down list to see the event's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description.
+
+3. In the Breakdown row, click the add icon (![Add](../../images/icon-plus.png)) and select breakdown attributes. 
+
+    ![Select breakdowns for your event.](./events-analysis/images/02.png)
+
+    Up to three attributes can be selected in the Breakdown row. Note that each type of event is made up of different attributes. Global attributes are attributes that are collected for all types of events. See [Event Attributes](../../workspace-data/defintions/definitions-for-events.md) to learn more.
+    
+    Hover over a specific attribute in the drop-down list to see the attribute's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description.
+
+4. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event.
+
+5. The default time period is set Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
+
+    ![Select a different time period or compare to previous data.](./events-analysis/images/03.png)
+
+6. To analyze a different event or see a different breakdown click the *X* button of the event or the breakdown to start over.
