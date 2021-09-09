@@ -1,10 +1,22 @@
 # Enabling User Personalization of Widget Pages
 
+```{toctree}
+:maxdepth: 3
+
+configuring-widgets/adding-widgets-to-a-page.md
+configuring-widgets/converting-widget-pages-to-content-pages.md
+configuring-widgets/enabling-user-personalization-of-widget-pages.md
+configuring-widgets/styling-apps-assets-and-widgets-with-widget-templates.md
+configuring-widgets/using-a-widget-template-example.md
+configuring-widgets/setting-a-default-widget-template.md
+```
+
 Administrators can designate some or all of the sections (rows and columns of the page layout) of a Widget Page as customizable for site members. Page customizations are only visible to the user who made the customizations. The steps below cover these topics:
 
-* [Making page sections customizable](#enabling-page-customizations)
-* [Modifying customizable page sections](#customizing-pages)
-* [Assigning non-site members permission to customize pages](#granting-roles-permission-to-customize-pages)
+- [Enabling User Personalization of Widget Pages](#enabling-user-personalization-of-widget-pages)
+  - [Enabling Page Customizations](#enabling-page-customizations)
+  - [Customizing Pages](#customizing-pages)
+  - [Granting Roles Permission to Customize Pages](#granting-roles-permission-to-customize-pages)
 
 ## Enabling Page Customizations
 
@@ -33,7 +45,7 @@ With customization activated for a page, site members can add apps to the custom
   Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
 ```
 
-Site members have access to these contextual options from the page's *Options* menu (![Options](../../../images/icon-options.png)) in the Control Menu:
+Site members have access to these contextual options from the page's *Options* menu (![Options](../../../../images/icon-options.png)) in the Control Menu:
 
 * *View Page without my customizations*: Displays the default page and hides the Add menu.
 
@@ -47,7 +59,7 @@ Administrators of customizable pages have the same two views as Site members: th
 
 ## Granting Roles Permission to Customize Pages
 
-By default, site members can make page customizations but non-site members and guests can't. Administrators can update permissions for an existing Role or [create a new Role](../../../users-and-permissions/roles-and-permissions/README.md) and assign it to other users to give them the ability to customize pages. Follow these steps to grant a Role permissions to customize pages:
+By default, site members can make page customizations but non-site members and guests can't. Administrators can update permissions for an existing Role or [create a new Role](../../../../users-and-permissions/roles-and-permissions/README.md) and assign it to other users to give them the ability to customize pages. Follow these steps to grant a Role permissions to customize pages:
 
 1. Open the Product Menu and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
 

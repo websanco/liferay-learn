@@ -1,10 +1,21 @@
 # Adding Widgets to a Page
 
-Widget are applications that can serve a variety of functions. Some can be used to [display content](../../displaying_content.md) and others are full featured collaboration applications, like the [Message Boards widget](../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md).
+```{toctree}
+:maxdepth: 3
+
+configuring-widgets/adding-widgets-to-a-page.md
+configuring-widgets/converting-widget-pages-to-content-pages.md
+configuring-widgets/enabling-user-personalization-of-widget-pages.md
+configuring-widgets/styling-apps-assets-and-widgets-with-widget-templates.md
+configuring-widgets/using-a-widget-template-example.md
+configuring-widgets/setting-a-default-widget-template.md
+```
+
+Widget are applications that can serve a variety of functions. Some can be used to [display content](../../../displaying_content.md) and others are full featured collaboration applications, like the [Message Boards widget](../../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md).
 
 Follow these steps to add a widget to a Widget Page:
 
-1. Click the *Add* button (![Add](../../../images/icon-add-app.png)) in the Control Menu.
+1. Click the *Add* button (![Add](../../../../images/icon-add-app.png)) in the Control Menu.
 
     ![The Widgets panel contains several default widgets that you can use to add functionality to the page.](./adding-widgets-to-a-page/images/01.png)
 
@@ -23,4 +34,4 @@ Follow these steps to add a widget to a Widget Page:
 
 - [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
 - [Converting Widget Pages to Content Pages](./converting-widget-pages-to-content-pages.md)
-- [Analyze Content Metrics Using the Content Performance Panel](../../../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md)
+- [Analyze Content Metrics Using the Content Performance Panel](../../../../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md)
