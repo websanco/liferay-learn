@@ -17,7 +17,9 @@ public class MessageBoardThread_PUT_ById {
 			Long.valueOf(System.getProperty("messageBoardThreadId")),
 			new MessageBoardThread() {
 				{
-					headline = "Easy Thread";
+					articleBody = "Goo";
+					encodingFormat = "bbcode";
+					headline = "Fox Thread";
 				}
 			});
 		

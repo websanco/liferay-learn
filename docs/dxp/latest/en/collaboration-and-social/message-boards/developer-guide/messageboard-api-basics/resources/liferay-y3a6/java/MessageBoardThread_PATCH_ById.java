@@ -13,11 +13,12 @@ public class MessageBoardThread_PATCH_ById {
 			"test@liferay.com", "test"
 		).build();
 
-
 		MessageBoardThread messageBoardThread = messageBoardThreadResource.patchMessageBoardThread(
 			Long.valueOf(System.getProperty("messageBoardThreadId")),
 			new MessageBoardThread() {
 				{
+					articleBody = "Bar";
+					encodingFormat = "bbcode";
 					headline = "Easy Thread";
 				}
 			});
