@@ -1,3 +1,0 @@
-# Using MVC
-
-Coming soon!
