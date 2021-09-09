@@ -2,7 +2,31 @@
 
 > Subscription Required
 
-Liferay Commerce Enterprise is built on Liferay DXP and requires active DXP and Commerce licenses for use. These licenses are provided as XML (`.xml`) activation keys that must be deployed to your DXP instance to activate all Commerce features.
+Starting with DXP 7.3, all DXP distributables come bundled with Liferay Commerce. The process of activating Liferay Commerce differs based on the version of DXP that you are running. For DXP 7.3+ Commerce 3.0 FP3/SP2, activation is done through the addition of a _Portal Property_. For earlier versions, it is done by deploying an active license file to your bundle, Docker Container or DXP Cloud.
+
+## Activating DXP 7.3 + Commerce 3.0 FP3/SP2
+
+A license key will no longer be required to activate Liferay Commerce starting from DXP 7.3 + Commerce 3.0 FP3/SP2. Instead, a new Portal Property called `enterprise.commerce.product.enabled` should be set to `true`. The portal property can be set in the `portal-ext.properties` file that is located in your `[Liferay Home]` folder or `[USER_HOME]` folder. By default the property value will be set to false. If you use the Setup Wizard, DXP sets those properties in a file called `portal-setup-wizard.properties` in the [Liferay Home] folder. You must restart DXP to apply a new or modified properties file.
+
+### Setting a Portal Property for DXP Bundles
+
+To set a Portal Property:
+
+1. Create a `portal-ext.properties` file in your [Liferay Home] folder or [USER_HOME] folder. It the file is already present, open it.
+
+2. On a new line, add the `enterprise.commerce.product.enabled` property and set it to `true`. It should look like this: `enterprise.commerce.product.enabled=true`.
+
+3. Restart your DXP instance.
+
+4. To verify that the property has been added successfully, click on the _Global Menu_ and select the _Commerce_ tab. All the Commerce modules should be loaded successfully. Alternatively, you can also click on the Global Menu, select the Control Panel tab and navigate to _Server Administration_. Under the _Properties_ tab, select _Portal Properties_ and verify that the property you added appears on the list.
+
+### Setting a Portal Property for Docker Containers
+
+If you use Docker, Portal properties are applied to the containers through environment variables or through a property file. See [Configuring Containers](../../../../dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md#portal-properties) for more information.
+
+## Activating Commerce for Liferay DXP 7.1-7.3 FP2
+
+For earlier versions of Liferay DXP, active DXP and Commerce licenses are required for use. These licenses are provided as XML (`.xml`) activation keys that must be deployed to your DXP instance to activate all Commerce features.
 
 Commerce licenses use many of the same parameters as DXP licenses, including `product-version`, `license-type`, and `expiration-date`. However, restrictions based on system resources (e.g., processor cores) or product version are not implemented in Commerce licenses.
 
