@@ -17,7 +17,7 @@ If you're an experienced developer, this is not the first time you've heard abou
 
 * It's lightweight, as opposed to many other Java MVC frameworks.
 * There are no special configuration files that need to be kept in sync with your code.
-* It's a simple extension of [`GenericPortlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/GenericPortlet.html).
+* It's a simple extension of [`GenericPortlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/GenericPortlet.html).
 * You avoid writing a bunch of boilerplate code, since Liferay's MVC Portlet framework only looks for some pre-defined parameters when the `init()` method is called.
 * The controller can be broken down into MVC command classes, each of which handles the controller code for a particular [portlet phase](./reference/portlets.md) (render, action, and resource serving phases).
 * An MVC command class can serve multiple portlets.
@@ -52,9 +52,9 @@ Generating the skeleton for a multi-module Service Builder-driven MVC applicatio
 
 In a larger application, your `-Portlet` class can become monstrous and unwieldy if it holds all of the controller logic. Liferay provides MVC command classes to break up your controller functionality.
 
-* **[`MVCActionCommand`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html):** Use `-ActionCommand` classes to hold each of your portlet actions, which are invoked by action URLs.
-* **[`MVCRenderCommand`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html):** Use `-RenderCommand` classes to hold a `render` method that dispatches to the appropriate JSP, by responding to render URLs.
-* **[`MVCResourceCommand`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html):** Use `-ResourceCommand` classes to serve resources based on resource URLs.
+* **[`MVCActionCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html):** Use `-ActionCommand` classes to hold each of your portlet actions, which are invoked by action URLs.
+* **[`MVCRenderCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html):** Use `-RenderCommand` classes to hold a `render` method that dispatches to the appropriate JSP, by responding to render URLs.
+* **[`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html):** Use `-ResourceCommand` classes to serve resources based on resource URLs.
 
 There must be some confusing configuration files to keep everything wired together and working properly, right? Wrong: it's all easily managed in the `-Portlet` class's `@Component` annotation.
 
@@ -81,15 +81,15 @@ The `javax.portlet.name` property is required. When using MVC commands, the `jav
 Make your portlet name unique, considering how [Liferay DXP uses the name to create the [portlet's ID](../reference/portlet-descriptor-to-osgi-service-property-map.md#ten).
 ```
 
-There can be some confusion over exactly what kind of `Portlet.class` implementation you're publishing with a component. The service registry expects this to be the [`javax.portlet.Portlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/Portlet.html) interface. Import that, and not, for example, `com.liferay.portal.kernel.model.Portlet`.
+There can be some confusion over exactly what kind of `Portlet.class` implementation you're publishing with a component. The service registry expects this to be the [`javax.portlet.Portlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/Portlet.html) interface. Import that, and not, for example, `com.liferay.portal.kernel.model.Portlet`.
 
 ```{note}
-The DTD [liferay-portlet-app_7_3_0.dtd](https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html) defines all the Liferay-specific attributes you can specify as properties in your portlet components. The properties namespaced with `javax.portlet.` are elements of the [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd).
+The DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html) defines all the Liferay-specific attributes you can specify as properties in your portlet components. The properties namespaced with `javax.portlet.` are elements of the [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd).
 ```
 
 ## A Simpler MVC Portlet
 
-In simpler applications, you don't use MVC commands. Your portlet render URLs specify JSP paths in the `mvcPath` parameter and your [`MVCPortlet`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html) method overrides implement control logic. The following JSP code includes a portlet render URL that specifies the JSP path `/view_2.jsp`:
+In simpler applications, you don't use MVC commands. Your portlet render URLs specify JSP paths in the `mvcPath` parameter and your [`MVCPortlet`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html) method overrides implement control logic. The following JSP code includes a portlet render URL that specifies the JSP path `/view_2.jsp`:
 
 ```jsp
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
