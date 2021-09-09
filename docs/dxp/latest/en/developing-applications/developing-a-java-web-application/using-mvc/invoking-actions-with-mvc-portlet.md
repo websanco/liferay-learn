@@ -54,35 +54,35 @@ The example MVC Portlet has three portlet action URLs that map to separate portl
 
 1. Add the *U8T2 Portlet* widget from the *Samples* category to a widget page. The U8T2 Portlet appears.
 
-    ![You've added the U8T2 Portlet to a page.](./invoking-actions-with-mvc-portlet/images/01.png)
-    
-    The portlet has three links:
+   ![You've added the U8T2 Portlet to a page.](./invoking-actions-with-mvc-portlet/images/01.png)
 
-    * *Do Something*
-    * *Do Something Else*
-    * *Do Something More*
+   The portlet has three links:
+
+   * *Do Something*
+   * *Do Something Else*
+   * *Do Something More*
 
     Clicking each link invokes a different action-handling method. For learning purposes, each method logs a message that identifies itself. 
 
-1. Click *Do Something*. The portlet logs invoking the `doSomething` method.
+1. Click *Do Something*. The portlet logs the `doSomething` method's invocation.
 
     ```bash
     [U8T2Portlet:28] Invoke #doSomething(ActionRequest, ActionResponse)
     ```
 
-1. Click *Do Something Else*. The portlet logs invoking the `doSomethingElse` method.
+1. Click *Do Something Else*. The portlet logs the `doSomethingElse` method's invocation.
 
     ```bash
     [U8T2Portlet:36] Invoke #doSomethingElse(ActionRequest, ActionResponse)
     ```
 
-1. Click *Do Something More*. The portlet logs invoking the `doSomethingMore` method.
+1. Click *Do Something More*. The portlet logs the `doSomethingMore` method's invocation.
 
     ```bash
     [U8T2Portlet:45] Invoke #doSomethingMore(ActionRequest, ActionResponse)
     ```
 
-These actions are trivial, but they demonstrate different ways to map UI components to portlet action-handling methods. Next explore the portlet class and view JSP.
+These actions are trivial, but they demonstrate different ways to map UI components to portlet action-handling methods. Next you'll learn how they work.
 
 ## Examine the Portlet's Action-Handling Methods
 
@@ -142,7 +142,7 @@ The component declares an action URL that binds the action to the portlet's `doS
 
 ## Example 3: Referencing a Portlet Action Name
 
-Lastly, in the following anchor, the JSP declares an action URL that maps to an action-processing method associated with the `nameForTheDoSomethingMoreMethod` portlet action name.
+In the last anchor, the JSP declares an action URL that maps to an action-processing method associated with the `nameForTheDoSomethingMoreMethod` portlet action name.
 
 JSP action URL:
 
@@ -160,7 +160,7 @@ Portlet method:
    :lines: 40-42
 ```
 
-The portlet parameter named `nameForTheDoSomethingMoreMethod` provides looser coupling between the action URL and method. For example, it frees you to change the method name or to assign the `@ProcessAction(name = "nameForTheDoSomethingMoreMethod")` annotation to a different method.
+The portlet parameter called `nameForTheDoSomethingMoreMethod` provides looser coupling between the action URL and method. For example, it frees you to change the method name or to assign the `@ProcessAction(name = "nameForTheDoSomethingMoreMethod")` annotation to a different method.
 
 ## What's Next
 
