@@ -2,8 +2,8 @@
 
 [Tagging assets](../tagging-content-and-managing-tags.md) is a great way to organize content. Typically, the content creator applies tags while creating the content. You can also tag content automatically. For example, you can scan an image on upload and apply tags that describe the image's content. This lets you leverage tags without requiring content creators to apply them manually.
 
-```note::
-   Auto-tagging currently works only for images, text-based documents, text-based web content, and blog entries.
+```{note}
+Auto-tagging currently works only for images, text-based documents, text-based web content, and blog entries.
 ```
 
 Configuring auto-tagging for specific asset types is documented separately:

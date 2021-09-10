@@ -11,7 +11,7 @@ You can configure the default Roles and Teams you assign to new Site members.
 
        ![In Liferay DXP 7.4+, change the Default User Association from the Site Settings section.](./configuring-role-and-team-defaults-for-site-members/images/03.png)
 
-   - In previous Liferay DXP versions
+    - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the Advanced area, find the Default User Associations option.

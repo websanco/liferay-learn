@@ -3,7 +3,7 @@
 The Sharing configuration allows users to [share files](./sharing-documents-with-other-users.md) with each other. You can enable file sharing at the Global, Virtual Instance, and Site scopes.
 
 ```{note}
-    Sharing is enabled globally by default.
+Sharing is enabled globally by default.
 ```
 
 ## Global Sharing Configuration
@@ -39,7 +39,7 @@ The Sharing configuration allows users to [share files](./sharing-documents-with
 1. Under *Content and Data*, click *Sharing*.
 
     ```{note}
-    The Sharing option is unavailable when Sharing is disabled at the System Scope. See `Global Sharing Configuration <#global-sharing-configuration>`_ to modify the System Scope settings.
+    The Sharing option is unavailable when Sharing is disabled at the System Scope. See [Global Sharing Configuration](#global-sharing-configuration) to modify the System Scope settings.
     ```
 
 1. Under *Virtual Instance Scope*, select *Sharing*.
@@ -52,7 +52,7 @@ The Sharing configuration allows users to [share files](./sharing-documents-with
 ## Site Sharing Configuration
 
 ```{note}
-The Site Sharing option is unavailable when Sharing is disabled at the System or Virtual Instance scopes. See `Global Sharing Configuration <#global-sharing-configuration>`_ and `Virtual Instance Sharing Configuration <#virtual-instance-sharing-configuration>`_ to modify these settings.
+The Site Sharing option is unavailable when Sharing is disabled at the System or Virtual Instance scopes. See [Global Sharing Configuration](#global-sharing-configuration) and [Virtual Instance Sharing Configuration](#virtual-instance-sharing-configuration) to modify these settings.
 ```
 
 1. Access the Site Sharing setting.
@@ -74,4 +74,4 @@ The Site Sharing option is unavailable when Sharing is disabled at the System or
 ## Related Information
 
 - [Sharing Documents with Other Users](./sharing-documents-with-other-users.md)
-- [Site Settings UI Reference](../site-../../../site-building/site-settings/site-settings-ui-reference.md)
+- [Site Settings UI Reference](../../../../site-building/site-settings/site-settings-ui-reference.md)

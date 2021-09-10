@@ -19,7 +19,7 @@ To enable or disable the Recycle Bin for a particular site, follow these steps:
 
          ![In Liferay DXP 7.4+, change the Recycle Bin options from the Site Settings section.](./configuring-the-asset-recycle-bin-for-sites/images/02.png)
 
-   - In previous Liferay DXP versions
+    - In previous Liferay DXP versions
 
       1. From the Site Menu, go to *Configuration* &rarr; *Settings*.
       1. Under the Advanced area, expand the *Recycle Bin* section.
