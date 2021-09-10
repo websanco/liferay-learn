@@ -104,7 +104,7 @@ This class invokes the REST service using only three lines of code:
 | :----------------- | :---------- |
 | `NavigationMenuResource.Builder builder = ...` | Gets a `Builder` for generating a `NavigationMenuResource` service instance. |
 | `NavigationMenuResource navigationMenuResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `NavigationMenuResource` service instance. |
-| `NavigationMenu navigationMenu = navigationMenuResource.postSiteNavigationMenu(...);` | Calls the `navigationMenuResource.postSiteNavigationMenu` method, passing in a site ID, a `NavigationMenu` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `NavigationMenu_POST_ToSite.java` for convenience. |
+| `NavigationMenu navigationMenu = navigationMenuResource.postSiteNavigationMenu(...);` | Calls the `navigationMenuResource.postSiteNavigationMenu` method and passes the data to post. |
 
 ```note::
    The ``main`` method's comment demonstrates running the class.
@@ -159,7 +159,7 @@ The site's `NavigationMenu` objects are listed in JSON.
 Get a specific navigation menu with the following cURL or Java command. Replace `1234` with the navigation menu's ID.
 
 ```tip::
-   Use ``NavigationMenus_GET_FromSite.[java|sh]`` to get ``NavigationMenus`` IDs.
+   Use ``NavigationMenus_GET_FromSite.[java|sh]`` to get ``NavigationMenu`` IDs.
 ```
 
 ### NavigationMenu_GET_ById.sh
