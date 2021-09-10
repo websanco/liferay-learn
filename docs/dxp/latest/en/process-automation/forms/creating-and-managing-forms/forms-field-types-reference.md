@@ -54,7 +54,13 @@ Using a radio button, users select one option from a list of options displayed o
 
 ![Single Selection fields show users multiple options, allowing them to select just one.](./forms-field-types-reference/images/05.png)
 
-### Date 
+### Boolean
+
+Users enable or disable a radio button or switch, logging a `true` or `false` response to the displayed text.
+
+![Boolean fields show users a single option, allowing them to select true or false in response.](./forms-field-types-reference/images/17.png)
+
+### Date
 
 Users select a date using a date picker.
 
