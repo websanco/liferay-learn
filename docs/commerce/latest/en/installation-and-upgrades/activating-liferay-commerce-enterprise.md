@@ -8,7 +8,7 @@ Starting with Liferay DXP 7.3, Commerce 3.0 comes with all Liferay bundles and D
 
 For DXP 7.3 FP3/SP2+, users activate Commerce by setting the `enterprise.commerce.product.enabled` portal property to `true`. Once this configuration is applied to a Liferay server, all Commerce modules are enabled and ready for use.
 
-### Configuring Portal Properties for Liferay Bundles
+### Activating Commerce for Liferay Bundles
 
 If you're using a Liferay bundle, you can configure the `enterprise.commerce.product.enabled` property using a `portal-ext.properties` file. Simply add the following property to your Liferay server's `portal-ext.properties` file.
 
@@ -24,9 +24,23 @@ If a `portal-ext.properties` file does not already exist, create one in the `[LI
 If you used the Setup Wizard for your bundle, portal properties are set using the `portal-setup-wizard.properties` file in the `[LIFERAY_HOME]` folder. Since this file takes priority over the `portal-ext.properties` file, ensure it doesn't have a conflicting value for the `enterprise.commerce.product.enabled` property. See [Portal Properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html) to learn more.
 ```
 
-### Configuring Portal Properties for Docker Containers
+### Activating Commerce for Docker Containers
 
-If you're using a Docker container, Portal properties can be configured using either `Env` variables or a `portal-ext.properties` file. See [Configuring Containers](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.html#portal-properties) for more information.
+If you're using a Docker container, the `enterprise.commerce.product.enabled` property can be configured using a `portal-ext.properties` file or overridden using a Docker `env` variable.
+
+To use a `portal-ext.properties` file, simply add the following property to a new line:
+
+```properties
+enterprise.commerce.product.enabled=true
+```
+
+To override the portal property, use the following Docker `env` variable:
+
+```properties
+LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=true
+```
+
+See [Configuring Containers](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.html#portal-properties) for more information.
 
 ### Verifying Successful Activation
 
