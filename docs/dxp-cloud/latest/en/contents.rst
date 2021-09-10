@@ -12,7 +12,7 @@ Contents
    manage_and_optimize
    platform_services
    infrastructure_and_operations
-   troubleshooting
+   troubleshooting.md
    reference
 
 
