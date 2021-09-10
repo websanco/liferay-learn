@@ -115,7 +115,7 @@ This class invokes the REST service using only three lines of code:
 | :----------------- | :---------- |
 | `BlogPostingResource.Builder builder = ...` | Gets a `Builder` for generating a `BlogPostingResource` service instance. |
 | `BlogPostingResource blogPostingResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `BlogPostingResource` service instance. |
-| `BlogPosting blogPosting = blogPostingResource.postSiteBlogPosting(...);` | Calls the `BlogPostingResource.postSiteBlogPosting` method, passing in a site ID, a `BlogPosting` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `BlogPosting_POST_ToSite.java` for convenience. |
+| `BlogPosting blogPosting = blogPostingResource.postSiteBlogPosting(...);` | Calls the `BlogPostingResource.postSiteBlogPosting` method and passes the data to post. |
 
 ```note::
    The ``main`` method's comment demonstrates running the class.
@@ -170,7 +170,7 @@ The site's `BlogPosting` objects are listed in JSON.
 Get a specific blog post with the following cURL or Java command. Replace `1234` with the blog post's ID.
 
 ```tip:: 
-   Use ``BlogPostings_GET_FromSite.[java|sh]`` to get site ``DocBlogPostingument`` IDs.
+   Use ``BlogPostings_GET_FromSite.[java|sh]`` to get ``BlogPosting`` IDs.
 ```
 
 ### BlogPosting_GET_ById.sh
