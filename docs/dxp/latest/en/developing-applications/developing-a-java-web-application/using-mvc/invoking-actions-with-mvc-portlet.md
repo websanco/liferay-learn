@@ -8,7 +8,7 @@ Here you'll learn how to invoke and examine an example portlet that uses action 
 
 The example MVC Portlet has three portlet action URLs that map to separate portlet methods. Here's how to deploy the portlet and trigger its actions.
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
@@ -164,11 +164,11 @@ The portlet parameter called `nameForTheDoSomethingMoreMethod` provides looser c
 
 ## What's Next
 
-Now that you know how to use action URLs, you can concentrate on writing action methods. Alternatively, you could investigate using [MVCActionCommand classes](./mvc-action-command.md). Or if you're ready to explore handling other portlet phases, look at using [MVCRenderCommand](./mcv-render-command.md) and [MVCResourceCommand](./mvc-resource-command.md) classes.
+Now that you know how to use action URLs, you can concentrate on writing action methods. Alternatively, you could investigate using [MVCActionCommand classes](./mvc-action-command.md). Or if you're ready to explore handling other portlet phases, look at using [MVCRenderCommand](./mvc-render-command.md) and [MVCResourceCommand](./mvc-resource-command.md) classes.
 
 ## Additional Information
 
 * [MVCActionCommand classes](./mvc-action-command.md)
-* [MVCRenderCommand](./mcv-render-command.md)
+* [MVCRenderCommand](./mvc-render-command.md)
 * [MVCResourceCommand](./mvc-resource-command.md)
 * [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)

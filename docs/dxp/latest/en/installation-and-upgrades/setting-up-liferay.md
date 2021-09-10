@@ -1,4 +1,4 @@
-## Setting Up Liferay
+# Setting Up Liferay
 
 ```{toctree}
 :maxdepth: 3
@@ -11,7 +11,7 @@ setting-up-liferay/configuring-mail.md
 ../system-administration/file_storage.rst
 ../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
-securing-liferay/securing_liferay.rst
+securing_liferay.rst
 maintaining-a-liferay-dxp-installation/backing-up.md
 ../system-administration/installing_and_managing_apps.rst
 setting-up-liferay/using-a-cdn.md

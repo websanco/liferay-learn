@@ -104,7 +104,7 @@ There comes a point when your code is ready to share with somebody. For that, yo
 
 Liferay Workspace makes it easy to generate your deployment environments, whether they be container-based or traditional. You provide the configuration, run a Gradle task, and you can generate a distributable Docker container or server archive ready to install. Workspace contains an optional `configs` folder where the action happens. 
 
-If you created your workspace using [Blade CLI](../blade-li/generating-projects-with-blade-cli.md), the `configs` folder already exists. If you created your Workspace [manually](./creating-a-liferay-workspace.md), create this folder structure in your Workspace directory: 
+If you created your workspace using [Blade CLI](../blade-cli/generating-projects-with-blade-cli.md), the `configs` folder already exists. If you created your Workspace [manually](./creating-a-liferay-workspace.md), create this folder structure in your Workspace directory: 
 
    ```
    ├── common
@@ -248,4 +248,3 @@ dependencies {
         cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
 }
 ```
-

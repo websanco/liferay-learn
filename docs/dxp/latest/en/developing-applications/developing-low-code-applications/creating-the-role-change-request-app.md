@@ -70,13 +70,13 @@ A Standard app can be created from within the Object Control Panel entry, but no
 
    - Leave the action named _Submit_.
 
-### Deploying the App
+## Deploying the App
 
 Now the app is ready for use. It just needs to be [deployed](./creating-a-standard-application.md#deploying-the-application) so its users can begin sending data.
 
 The Role Change Request app can be deployed as a standalone app with a dedicated link. This is the type of app that should be used after reading some procedures, perhaps in a [Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki) or a company's employee handbook [document](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md). Keeping the link there ensures that employees read the appropriate documentation before kicking off a Role Change Request.
 
-### Using the App
+## Using the App
 
 As with any workflow item, the task must be assigned to a User to fill out and submit the form. The way you do this depends on how you access the workflow task.
 
@@ -90,11 +90,11 @@ Alternatively, you can manage the workflow process of the app's entries from the
 
 To assign the task to a User, use the _Assign To_ menu item. After that you can access the appropriate form by choosing the _Edit_ menu option.
 
-```note::
-   You cannot use the `My Workflow Tasks <../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task>`__ app to manage the steps of a Workflow Powered App.
+```{note}
+You cannot use the [My Workflow Tasks](../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task) app to manage the steps of a Workflow Powered App.
 ```
 
-### Going Further with the Role Change Request App
+## Going Further with the Role Change Request App
 
 Add enhancements to make the Role Change Request app fully functional:
 
