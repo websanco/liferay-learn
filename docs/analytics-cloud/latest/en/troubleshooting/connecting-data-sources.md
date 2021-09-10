@@ -11,12 +11,12 @@ Ensure that the DXP installation has internet access to our Analytic Cloud serve
 * `https://osbasahbackend-{weDeployKey}.lfr.cloud`
 * `https://analytics-js-cdn.liferay.com`
 
-```note::
-   Please contact Liferay Analytics Cloud Support at help.liferay.com to obtain your ``{weDeployKey}`` value.
+```{note}
+Please contact Liferay Analytics Cloud Support at help.liferay.com to obtain your `{weDeployKey}` value.
 ```
 
-```important::
-   For some use cases, such as analyzing corporate intranet usage, your visitors’ browsers are also behind a firewall. In this scenario, you must ensure that the corporate office network also allows outbound access for the above URLs.
+```{important}
+For some use cases, such as analyzing corporate intranet usage, your visitors’ browsers are also behind a firewall. In this scenario, you must ensure that the corporate office network also allows outbound access for the above URLs.
 ```
 
 ## Validating the Connection to Analytics Cloud
@@ -71,12 +71,12 @@ Individual Profiles take longer to process and become available over time.
 
 **Error Message:** `Unsupported version. This method of connection does not support the data source Liferay version. Make sure you are connecting to Liferay 7.0/7.1 instance or try a different method of connection.`
 
-```important::
-   Your Liferay DXP installation must meet the following fix pack minimum requirements:
-     * 7.3 Fix Pack 1
-     * 7.2 Fix Pack 11
-     * 7.1 Fix Pack 21
-     * 7.0 Fix Pack 97
+```{important}
+Your Liferay DXP installation must meet the following fix pack minimum requirements:
+  * 7.3 Fix Pack 1
+  * 7.2 Fix Pack 11
+  * 7.1 Fix Pack 21
+  * 7.0 Fix Pack 97
 ```
 
 **Resolution:**

@@ -24,8 +24,8 @@ You have to sync sites to a property in order to see their data on Analytics Clo
 
 1. Verify that your Liferay DXP instance is syncing with Analytics Cloud by viewing *Instance Settings* -> *Analytics Cloud* in your Liferay DXP instance. The message `Your DXP instance is connected to Analytics Cloud` confirms that your Liferay DXP instance is correctly connected to Analytics Cloud.
 
-    ```important::
-      If you do not see the message ``Your DXP instance is connected to Analytics Cloud.``, please review `Connecting Liferay DXP Sites to Analytics Cloud <./connecting-liferay-dxp-to-analytics-cloud.md>`_.
+    ```{important}
+    If you do not see the message `Your DXP instance is connected to Analytics Cloud.`, please review [Connecting Liferay DXP Sites to Analytics Cloud](./connecting-liferay-dxp-to-analytics-cloud.md).
     ```
 
 1. In your Analytics Cloud workspace, click on *Synced Sites*. A list of available properties that you created on Analytics Cloud appears. Create a new property here for the sites you would like to track.
@@ -36,8 +36,8 @@ You have to sync sites to a property in order to see their data on Analytics Clo
 
     ![Selecting sites to sync with a property.](scoping-sites-and-individuals-using-properties/images/04.png)
 
-    ```important::
-       You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
+    ```{important}
+    You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
     ```
 
 ## Syncing Contacts to a Property
@@ -62,8 +62,8 @@ To assign property permissions, do the following:
 
 1. In your Analytics Cloud workspace, go to *Settings* -> *Properties*, and select the property you wish to manage permissions for.
 
-    ```note::
-       By default, properties are accessible to all users of a workspace in Analytics Cloud. You can change that by clicking on the *Select Users* radio button.
+    ```{note}
+    By default, properties are accessible to all users of a workspace in Analytics Cloud. You can change that by clicking on the *Select Users* radio button.
     ```
 
 1. Add users to a property by clicking *Add User*.

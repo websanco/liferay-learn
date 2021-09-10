@@ -10,11 +10,11 @@ touchpoints/assets.md
 
 Touchpoints reflect the many different ways your users and customers interact with your brand. Analytics Cloud presents a broad range of analytics data that combines traditional page analytics like page views, with comprehensive site, path, and asset-specific analytics data.
 
-Analytics Cloud presents a [site-wide reporting dashboard](./touchpoints/sites-dashboard.html) that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for [individual pages](./touchpoints/pages/pages.html) can be easily viewed as well. This includes views, visitors, and bounce rate. [Path analytics](./touchpoints/pages/paths.html) show how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
+Analytics Cloud presents a [site-wide reporting dashboard](./touchpoints/sites-dashboard.md) that provides a comprehensive report of your entire site. This helps you understand how many unique visitors your site has over time, which pages these visitors access, what their interests are, and more. Analytics for [individual pages](./touchpoints/pages/pages.md) can be easily viewed as well. This includes views, visitors, and bounce rate. [Path analytics](./touchpoints/pages/paths.md) show how visitors arrive at your pages. This includes information on which pages they visit prior to yours, and their location and device type. Finally, you can also track the performance of many Liferay DXP Assets to drill deeper than the page level to determine how you can improve your site's performance.
 
 ![The Touchpoints menu provides access to information about Sites, Pages, and Assets.](./touchpoints/images/01.png)
 
-Navigating to Touchpoints begins with the [Sites Dashboard](./touchpoints/sites-dashboard.html). In Touchpoints, you can also find additional page and asset analytics.
+Navigating to Touchpoints begins with the [Sites Dashboard](./touchpoints/sites-dashboard.md). In Touchpoints, you can also find additional page and asset analytics.
 
 ## Viewing Page Data
 
@@ -45,10 +45,10 @@ The metrics for ordering the Page list are calculated based on the time period s
 * Custom Range
 
 ```{note}
-   Page data is based on canonical URL. Learn more about [canonicalization](https://moz.com/learn/seo/canonicalization) or [how to set a custom canonical URL in DXP](../../../dxp/latest/en/site-building/creating-pages/page-settings/configuring-individual-pages.html#seo).
+Page data is based on canonical URL. Learn more about [canonicalization](https://moz.com/learn/seo/canonicalization) or [how to set a custom canonical URL in DXP](../../../dxp/latest/en/site-building/creating-pages/page-settings/configuring-individual-pages.md#seo).
 ```
 
-To view detailed metrics for a single page, click that page in the table. See [Page Analytics](./touchpoints/pages/pages.html) for more information.
+To view detailed metrics for a single page, click that page in the table. See [Page Analytics](./touchpoints/pages/pages.md) for more information.
 
 ![The Visitor Behavior panel shows detailed statistics over a period of time.](./touchpoints/images/03.png)
 
