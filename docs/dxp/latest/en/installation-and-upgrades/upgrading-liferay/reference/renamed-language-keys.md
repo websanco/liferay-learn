@@ -6,7 +6,7 @@ Source location:
 
 [`liferay-[dxp|portal]/modules/apps/portal-language/portal-language-lang`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang)
 
-Liferay's modules use the [`portal-language-lang`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content) language keys and continue to use the [`portal-impl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content) language keys. Most key names are preserved, but many keys have been refactored into multiple new keys that accomodate module-specific values.
+Liferay's modules use the [`portal-language-lang`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content) language keys and continue to use the [`portal-impl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content) language keys. Most key names are preserved, but many keys have been refactored into multiple new keys that accommodate module-specific values.
 
 Where modules used language keys with the same name but different values, `portal-language-lang` provides new language keys with module-specific suffixes. For example, the `portal-store-gcs` and `portal-store-s3` modules had language keys named `bucket-name-help`. These modules now use language keys that start with `bucket-name-help`, but end with a module-specific suffix.
 
