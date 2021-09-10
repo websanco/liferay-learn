@@ -1,6 +1,6 @@
 # Creating Thread and Heap Dumps
 
-When you are experiencing issues and need to troubleshoot the performance of your `liferay` service, you may need to take thread or heap dumps to help you or DXP Cloud Support optimize your instance or troubleshoot problems. 
+When you are experiencing issues with your `liferay` service's performance, you may need to take thread or heap dumps to help you or DXP Cloud Support optimize your instance or troubleshoot problems. 
 
 Whether you are generating thread or heap dumps, you must follow these steps to use them for troubleshooting:
 
@@ -16,11 +16,11 @@ The next section provides example scripts that you can run to generate thread or
 
 ## Choose a Script to Generate the Dumps
 
-Whether you are generating thread or heap dumps, you must run a script through the `liferay` service's shell.
+Whether you are generating thread or heap dumps, you must run a script through the `liferay` service's [shell](shell-access.md).
 
 ### Thread Dump Creation Script
 
-Thread dumps help you to understand what processes are taking place in your DXP Cloud environment. Having multiple sets of thread dumps gives a more useful view of patterns in your service that may be problematic.
+Thread dumps help you to understand what processes are taking place in your DXP Cloud environment. Having multiple sets of thread dumps gives a more useful view of whether problematic patterns may exist in your Liferay instance.
 
 You can use this script to generate thread dumps for your Liferay instance in any DXP Cloud environment:
 
@@ -67,13 +67,13 @@ echo "[DXP Cloud] Take thread dumps"
 main
 ```
 
-This script creates a new folder in your `liferay` service's `$LIFERAY_HOME/data/` folder (named `thread_dumps/` by default), and then creates multiple timestamped subfolders that each contain a set of thread dumps. By default, it creates **four subfolders** with timestamps about 60 seconds apart, and fills each subfolder with **six thread dumps** about 10 seconds apart. Thread dumps are created with the [jstack utility](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr016.html).
+This script creates a new folder in your `liferay` service's `$LIFERAY_HOME/data/` folder (named `thread_dumps/` by default), and then it creates multiple timestamped subfolders that each contain a set of thread dumps. By default, it creates *four subfolders* with timestamps about 60 seconds apart, and fills each subfolder with *six thread dumps* about 10 seconds apart. Thread dumps are created with the [jstack utility](https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr016.html).
 
-You can make multiple small edits to alter this behavior:
+You can make multiple edits to alter this behavior:
 
-* You can change the name of the directory that thread dumps are saved to by changing `thread_dumps/` at the end of the path on the first line. However, *you must keep the folder inside the `data/` folder* for it to be accessible via backups.
+* You can change the name of the directory that thread dumps are saved to by changing `thread_dumps/` at the end of the path on the first line. However, *you must keep the folder inside the `data/` directory* for it to be accessible via backups.
 
-* You can change the number of iterations in the `main` function to change the number of sets created. You can make the same change in the `take_thread_group` function to change the number of thread dumps per set.
+* You can change the number of iterations in the `main` function's loop to change the number of sets created. You can make the same change in the `take_thread_group` function to change the number of thread dumps per set.
 
 * You can change the period of the `sleep` command (in seconds) in the `main` function to change the frequency of each set being created. You can make the same change in the `take_thread_group` function to change the frequency of thread dumps within each set.
 
@@ -115,13 +115,17 @@ main() {
 main
 ```
 
-This script creates a new folder in your `liferay` service's `$LIFERAY_HOME/data/` folder (named `heap_dumps/` by default), and then create a timestamped subfolder that contains a single, new heap dump. The heap dump is created with the [jmap utility](https://docs.oracle.com/javase/7/docs/technotes/tools/share/jmap.html).
+This script creates a new folder in your `liferay` service's `$LIFERAY_HOME/data/` folder (named `heap_dumps/` by default), and then it creates a timestamped subfolder that contains a single, new heap dump. The heap dump is created with the [jmap utility](https://docs.oracle.com/javase/7/docs/technotes/tools/share/jmap.html).
 
 You can change the name of the directory that thread dumps are saved to by changing `heap_dumps/` at the end of the path on the first line. However, *you must keep the folder inside the `data/` folder* for it to be accessible via backups.
 
 ## Run the Script from the Liferay Service Shell
 
-Once you have a script to use, you must deploy it and run it from the `liferay` service's [shell](./shell-access.md) in the DXP Cloud console.
+Once you have a script to use, you must deploy it and run it from the `liferay` service's shell in the DXP Cloud console.
+
+### Save the Script to Your Project Repository
+
+First, save your chosen script into a directory that you can deploy to your Liferay instance's `$LIFERAY_HOME` folder.
 
 1. Create a new folder for manual scripts in your project repository's Liferay configurations, such as `liferay/configs/{ENV}/diagnostics/`. Creating the folder in the appropriate `liferay/configs/{ENV}/` directory ensures that the folder contents appear in your Liferay instance's `$LIFERAY_HOME` once it is deployed.
 
@@ -141,7 +145,9 @@ Once you have a script to use, you must deploy it and run it from the `liferay` 
 
 1. Save the [desired script's contents](#choose-a-script-to-generate-the-dumps) into the new file.
 
-Once you have the script saved into a subfolder in `liferay/configs/{ENV}/`, you must deploy the file and run it from the shell on the DXP Cloud console.
+### Deploy and Run the Script
+
+Once you have the script saved into a subfolder in `liferay/configs/{ENV}/`, you must deploy the script and run it from the shell on the DXP Cloud console.
 
 1. Follow the steps outlined in [Overview of the DXP Cloud Deployment Workflow](../using-the-liferay-dxp-service/overview-of-the-dxp-cloud-deployment-workflow.md) to deploy the script to the appropriate environment.
 
@@ -181,7 +187,7 @@ Once you have the script saved into a subfolder in `liferay/configs/{ENV}/`, you
     The heap dump script provided [in this section](#heap-dump-creation-script) only generates one heap dump. If you need multiple heap dumps to analyze memory usage at different times, then you must run the script again at those times.
     ```
 
-When the script has finished running, the thread or heap dump(s) are saved into timestamped subfolders available within `$LIFERAY_HOME/data`.
+When the script has finished running, the thread or heap dump(s) are saved into timestamped subfolders available within `$LIFERAY_HOME/data`. Next, you must download the dumps via a backup to retrieve them locally.
 
 ## Download the Dumps via a Backup
 
