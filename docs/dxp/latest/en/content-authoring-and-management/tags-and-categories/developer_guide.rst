@@ -4,11 +4,6 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-   developer-guide/apis.rst
+   developer-guide/tags-api-basics.md
 
-- Implementing Asset Tags and Categories
-
-APIs
-----
-
-Coming soon!
+-  :doc:`/content-authoring-and-management/tags-and-categories/developer-guide/tags-api-basics`
