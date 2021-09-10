@@ -1,6 +1,6 @@
 # MVC Action Command
 
-MVC Action Commands allows you to delegate action handling to different classes. It facilitates managing action logic in `MVCPortlet`s that have multiple actions. Each action URL in the portlet's JSPs invokes a designated MVC Action Command class.
+MVC Action Commands handle actions as separate classes. With Action Commands, you can organize action logic in `MVCPortlet`s that have many actions. Action URLs in the portlet's JSPs invoke a designated MVC Action Command class.
 
 You'll deploy an example portlet that uses MVC Action Commands and then examine it.
 
@@ -54,9 +54,9 @@ The example portlet's two actions log messages that indicate the MVC Action Comm
 
 1. Add the *L6Y9 Portlet* widget from the *Samples* category to a widget page. The L6Y9 Portlet appears.
 
-    ![You've added the L6Y9 Portlet to a page.](./mvc-action-command/images/01.png)
-    
-    The links invoke methods in different `MVCActionCommand` classes. For learning purposes, the methods log messages identifying themselves. 
+   ![You've added the L6Y9 Portlet to a page.](./mvc-action-command/images/01.png)
+
+   The links invoke methods in different `MVCActionCommand` classes. For learning purposes, the methods log messages identifying themselves. 
 
 1. Click *Do L6Y9 Able*. `DoL6Y9AbleMVCActionCommand` logs invoking its `doProcessAction` method.
 
@@ -95,11 +95,31 @@ The portlet renders `/view.jsp` by default.
 `MVCActionCommand`s bind to a portlet by the portlet's name (e.g., the portlet component `javax.portlet.name` property value).
 ```
 
-The example portlet renders `view.jsp` by default. The portlet's MVC Action Command classes are next.
+The example portlet renders `view.jsp` by default. Next you'll see how the JSP invokes the MVC Action Command classes.
+
+## Examine the Portlet Action URLs
+
+The portlet's `view.jsp` file renders links for invoking the portlet's MVC Action Commands.
+
+```{literalinclude} ./mvc-action-command/resources/liferay-l6y9.zip/l6y9-web/src/main/resources/META-INF/resources/view.jsp
+:language: jsp
+```
+
+The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Each tag maps the UI component to an MVC command by assigning the MVC Action Command's `mvc.command.name` property value to the tag's `name` attribute.
+
+| `view.jsp` Portlet Action URL | `DoL6Y9AbleMVCActionCommand` Component Property |
+| ----------------------------- | ----------------------------------------------- |
+| `<portlet:actionURL name="/do_l6y9_able" />` | `mvc.command.name=/l6y9/do_l6y9_able` |
+
+| `view.jsp` Portlet Action URL | `DoL6Y9BakerMVCActionCommand` Component Property |
+| ----------------------------- | ----------------------------------------------- |
+| `<portlet:actionURL name="/do_l6y9_baker" />` | `mvc.command.name=/l6y9/do_l6y9_baker` |
+
+Clicking on the *Do L6Y9 Able* link, for example, invokes `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method.
 
 ## Examine the MVCActionCommand Classes
 
-MVC Action Command classes can implement [`MVCActionCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.java) directly or implement it indirectly by extending [`BaseMVCActionCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCActionCommand.java). `DoL6Y9AbleMVCActionCommand` extends `BaseMVCActionCommand`.
+MVC Action Command classes can implement [`MVCActionCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.java) directly or by extending [`BaseMVCActionCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCActionCommand.java). `DoL6Y9AbleMVCActionCommand` extends `BaseMVCActionCommand`.
 
 ```{literalinclude} ./mvc-action-command/resources/liferay-l6y9.zip/l6y9-web/src/main/java/com/acme/l6y9/web/internal/portlet/action/DoL6Y9AbleMVCActionCommand.java
 :language: java
@@ -115,26 +135,6 @@ You can associate an `MVCActionCommand` component with multiple portlets by decl
 `DoL6Y9BakerMVCActionCommand` is similar to `DoL6Y9AbleMVCActionCommand` except its names contain `Baker` or `baker` instead `Able` or `able`.
 
 Next see how the portlet's JSP maps UI component actions to the commands.
-
-## Examine the Portlet Action URLs
-
-The portlet's `view.jsp` file renders links for invoking the portlet's MVC Action Commands.
-
-```{literalinclude} ./mvc-action-command/resources/liferay-l6y9.zip/l6y9-web/src/main/resources/META-INF/resources/view.jsp
-:language: javascript
-```
-
-The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Each tag maps the UI component to an MVC command by assigning the MVC Action Command's `mvc.command.name` property value to the tag's `name` attribute.
-
-| `view.jsp` Portlet Action URL | `DoL6Y9AbleMVCActionCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
-| `<portlet:actionURL name="/do_l6y9_able" />` | `mvc.command.name=/l6y9/do_l6y9_able` |
-
-| `view.jsp` Portlet Action URL | `DoL6Y9BakerMVCActionCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
-| `<portlet:actionURL name="/do_l6y9_baker" />` | `mvc.command.name=/l6y9/do_l6y9_baker` |
-
-Clicking on the *Do L6Y9 Able* link, for example, invokes `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method.
 
 ## What's Next
 
