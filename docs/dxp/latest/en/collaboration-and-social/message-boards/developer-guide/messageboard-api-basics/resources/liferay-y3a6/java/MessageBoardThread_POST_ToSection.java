@@ -18,7 +18,6 @@ public class MessageBoardThread_POST_ToSection {
 			new MessageBoardThread() {
 				{
 					articleBody = "Foo";
-					encodingFormat = "bbcode";
 					headline = "Dog Thread";
 				}
 			});

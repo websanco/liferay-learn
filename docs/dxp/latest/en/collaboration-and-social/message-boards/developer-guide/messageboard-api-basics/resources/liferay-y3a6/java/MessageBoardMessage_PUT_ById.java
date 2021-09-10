@@ -18,7 +18,6 @@ public class MessageBoardMessage_PUT_ById {
 			new MessageBoardMessage() {
 				{
 					articleBody = "Goo";
-					encodingFormat = "bbcode";
 					headline = "Fox Message";
 				}
 			});

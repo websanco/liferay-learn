@@ -18,7 +18,6 @@ public class MessageBoardThread_PATCH_ById {
 			new MessageBoardThread() {
 				{
 					articleBody = "Bar";
-					encodingFormat = "bbcode";
 					headline = "Easy Thread";
 				}
 			});

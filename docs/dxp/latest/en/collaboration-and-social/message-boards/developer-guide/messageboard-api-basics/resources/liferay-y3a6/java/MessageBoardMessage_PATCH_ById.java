@@ -18,7 +18,6 @@ public class MessageBoardMessage_PATCH_ById {
 			new MessageBoardMessage() {
 				{
 					articleBody = "Bar";
-					encodingFormat = "bbcode";
 					headline = "Easy Message";
 				}
 			});
