@@ -65,3 +65,201 @@ Liferay's REST API's provide services for the navigation menu functionality of L
     ```
 
 ## Examine the cURL Command
+
+The `NavigationMenu_POST_ToSite.sh` script calls the REST service with a cURL command.
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_POST_ToSite.sh
+    :language: bash
+```
+
+Here are the command's arguments:
+
+| Arguments | Description |
+| --------- | ----------- |
+| `-H "Content-Type: application/json"` | Indicates that the request body format is JSON. |
+| `-X POST` | The HTTP method to invoke at the specified endpoint |
+| `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/navigation-menus"` | The REST service endpoint |
+| `-d "{\"name\": \"Foo\"}"` | The data you are requesting to post |
+| `-u "test@liferay.com:test"` | Basic authentication credentials |
+
+```note::
+   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+```
+
+The other cURL commands use similar JSON arguments.
+
+## Examine the Java Class
+
+The `NavigationMenu_POST_ToSite.java` class adds a navigation menu by calling the navigation menu related service.
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/java/NavigationMenu_POST_ToSite.java
+   :dedent: 1
+   :language: java
+   :lines: 9-27
+```
+
+This class invokes the REST service using only three lines of code:
+
+| Line (abbreviated) | Description |
+| :----------------- | :---------- |
+| `NavigationMenuResource.Builder builder = ...` | Gets a `Builder` for generating a `NavigationMenuResource` service instance. |
+| `NavigationMenuResource navigationMenuResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `NavigationMenuResource` service instance. |
+| `NavigationMenu navigationMenu = navigationMenuResource.postSiteNavigationMenu(...);` | Calls the `navigationMenuResource.postSiteNavigationMenu` method, passing in a site ID, a `NavigationMenu` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `NavigationMenu_POST_ToSite.java` for convenience. |
+
+```note::
+   The ``main`` method's comment demonstrates running the class.
+```
+
+The other example Java classes are similar to this one, but call different `NavigationMenuResource` methods.
+
+```important::
+   See `NavigationMenuResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/NavigationMenuResource.java>`_ for service details.
+```
+
+Below are examples of calling other `NavigationMenu` REST services using cURL and Java.
+
+## Get Navigation Menus from Site
+
+You can list a site's navigation menus by executing the following cURL or Java command. As above, replace `1234` with your site's ID.
+
+### NavigationMenus_GET_FromSite.sh
+
+Command:
+
+```bash
+./NavigationMenus_GET_FromSite.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenus_GET_FromSite.sh
+   :language: bash
+```
+
+### NavigationMenus_GET_FromSite.java
+
+Command:
+
+```bash
+java -classpath .:* -DsiteId=1234 NavigationMenus_GET_FromSite
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/java/NavigationMenus_GET_FromSite.java
+   :dedent: 1
+   :language: java
+   :lines: 11-25
+```
+
+The site's `NavigationMenu` objects are listed in JSON.
+
+## Get a Navigation Menu
+
+Get a specific navigation menu with the following cURL or Java command. Replace `1234` with the navigation menu's ID.
+
+```tip::
+   Use ``NavigationMenus_GET_FromSite.[java|sh]`` to get ``NavigationMenus`` IDs.
+```
+
+### NavigationMenu_GET_ById.sh
+
+Command:
+
+```bash
+./NavigationMenu_GET_ById.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_GET_ById.sh
+   :language: bash
+```
+
+### NavigationMenu_GET_ById.java
+
+Command:
+
+```bash
+java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_GET_ById
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/java/NavigationMenu_GET_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-22
+```
+
+The `NavigationMenu` fields are listed in JSON.
+
+## Put a Navigation Menu
+
+Do a complete overwrite of an existing navigation menu with the following cURL and Java commands. Note, replace `1234` with your navigation menu's ID.
+
+### NavigationMenu_PUT_ById.sh
+
+Command:
+
+```bash
+./NavigationMenu_PUT_ById.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_PUT_ById.sh
+   :language: bash
+```
+
+### NavigationMenu_PUT_ById.java
+
+Command:
+
+```bash
+java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_PUT_ById
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/java/NavigationMenu_PUT_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-27
+```
+
+## Delete a Navigation Menu
+
+Delete an existing navigation menu with the following cURL and Java commands. Note, replace `1234` with your navigation menu's ID.
+
+### NavigationMenu_DELETE_ById.sh
+
+Command:
+
+```bash
+./NavigationMenu_DELETE_ById.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_DELETE_ById.sh
+   :language: bash
+```
+
+### NavigationMenu_DELETE_ById.java
+
+Command
+
+```bash
+java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_DELETE_ById
+```
+
+Code:
+
+```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/java/NavigationMenu_DELETE_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 8-18
+```
+
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `NavigationMenu` services and schemas, and has an interface to try out each service.
