@@ -1,28 +1,55 @@
 # Virtual Product Reference
 
-![Details of the Virtual Product.](./virtual-product-reference/images/01.png)
+![Configure unique Virtual Product settings in the Virtual sub-tab.](./virtual-product-reference/images/01.png)
+
+## Details
 
 |Field | Description |
 | --- | --- |
-| URL | Insert the URL where the file is located. |
-| Select File | Upload the file that will be stored in the Liferay Commerce document library. |
+| URL | Set the Product' file using a URL. |
+| Select File | Use the *Select* button to choose from existing files in your document library or upload a new file for use. |
+
+```{note}
+You can only select one file for a Virtual Product.
+```
 
 ## Base Information
 
 |Field | Description |
 | --- | --- |
-| Activation Status | The Activation Status determines the stage at which the product will become available to download. For example, if it is set to Completed, the product will be available to download once the Order is completed.  |
-| Duration | The number of days for which the customer can access the file. Please note: If product is subscription enabled, the subscription cycle duration will override it. |
-| Max Number of Downloads | Number of times a file can be downloaded. 0 indicates unlimited downloads. |
+| Activation Status | Determine the order stage when the digital asset can be downloaded by the customer. For example, if it is set to Completed, the product is made available for download once the Order is completed.  |
+| Duration | Set the number of days a customer can access and download the Product's file; leaving this field `0` grants customers unlimited access. |
+| Max Number of Downloads | Set the number of times a file can be downloaded; leaving this field `0` grants customers unlimited downloads. |
+
+```{important}
+If Product subscription is enabled, the subscription cycle duration overrides the Virtual Product's duration value.
+```
 
 ## Sample
 
 |Field | Description |
 | --- | --- |
-| Enable Sample | Checkbox to activate or deactivate the availability of a sample. |
-| Sample File URL | The location of the sample if _Enable Sample_ is checked.
+| Enable Sample | Use the checkbox to enable or disable a sample download for the Product. |
+| Select Sample File | If enabled, use the *Select* button to choose a sample file from your document library or upload a new file for use. |
+| Sample File URL | If enabled, set the Product' sample file using a URL. |
+
+```{note}
+You can only select one sample file for a Virtual Product.
+```
+
 ## Terms of Use
 
 |Field | Description |
 | --- | --- |
-| Enable Terms of Use | Toggle to enable whether the user must agree to Terms of Use; if enabled, either enter the Terms of Use directly in the text field or link to an existing Web Content article. |
+| Enable Terms of Use | Use the Toggle to enable or disable a Terms of Use document for the Product's file.
+|Select Web Content| If enabled, select an existing Web Content article to use. |
+| Text Editor | If enabled, use the text editor to directly enter the terms of use. |
+
+```{note}
+Any selected Web Content article takes priority over terms added in the text editor.
+```
+
+## Additional Information
+
+* [Introduction to Product Types](./introduction-to-product-types.md)
+* [Creating a Virtual Product](./creating-a-virtual-product.md)
