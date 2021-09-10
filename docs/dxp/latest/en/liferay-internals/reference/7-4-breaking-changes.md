@@ -82,30 +82,6 @@ This change aligns with [Adobe dropping support for Flash](https://www.adobe.com
 
 ---------------------------------------
 
-### Refactored AntivirusScanner Support and Clamd Integration
-- **Date:** 2020-Oct-21
-- **JIRA Ticket:** [LPS-122280](https://issues.liferay.com/browse/LPS-122280)
-
-#### What changed?
-
-The portal's Clamd integration implementation has been replaced by an OSGi service that uses a Clamd remote service. The AntivirusScanner OSGi integration has replaced the AntivirusScanner implementation selection portal properties and AntivirusScanner implementation hook registration portal properties.
-
-#### Who is affected?
-
-This affects you if you are using the portal's Clamd integration implementation or if you are providing your own AntivirusScanner implementation via a hook.
-
-#### How should I update my code?
-
-Enable the new Clamd integration and AntivirusScanner support. See [Enabling Antivirus Scanning for Uploaded Files](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.html).
-
-If you are providing your own AntivirusScanner implementation via a hook, convert it to an OSGi service that has a service ranking higher greater than zero. The Clamd remote service AntivirusScanner implementation service ranking is zero.
-
-#### Why was this change made?
-
-This change supports container environments better and unifies the API to do OSGi integration.
-
----------------------------------------
-
 ### Removed the AssetEntries_AssetCategories Table and Corresponding Code
 - **Date:** 2020-Oct-16
 - **JIRA Ticket:** [LPS-89065](https://issues.liferay.com/browse/LPS-89065)
@@ -127,6 +103,30 @@ Use the new methods in `AssetEntryAssetCategoryRelLocalService`. Note, that the 
 This change removes an unnecessary table and corresponding code.
 
 It is a followup step to the [Liferay AssetEntries_AssetCategories Is No Longer Used](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-2-breaking-changes.html#liferay-assetentries-assetcategories-is-no-longer-used) 7.2 breaking change where the table was replaced by the `AssetEntryAssetCategoryRel` table and the corresponding interfaces in `AssetEntryLocalService` and `AssetCategoryLocalService` were moved into `AssetEntryAssetCategoryRelLocalService`.
+
+---------------------------------------
+
+### Refactored AntivirusScanner Support and Clamd Integration
+- **Date:** 2020-Oct-21
+- **JIRA Ticket:** [LPS-122280](https://issues.liferay.com/browse/LPS-122280)
+
+#### What changed?
+
+The portal's Clamd integration implementation has been replaced by an OSGi service that uses a Clamd remote service. The AntivirusScanner OSGi integration has replaced the AntivirusScanner implementation selection portal properties and AntivirusScanner implementation hook registration portal properties.
+
+#### Who is affected?
+
+This affects you if you are using the portal's Clamd integration implementation or if you are providing your own AntivirusScanner implementation via a hook.
+
+#### How should I update my code?
+
+Enable the new Clamd integration and AntivirusScanner support. See [Enabling Antivirus Scanning for Uploaded Files](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.html).
+
+If you are providing your own AntivirusScanner implementation via a hook, convert it to an OSGi service that has a service ranking higher greater than zero. The Clamd remote service AntivirusScanner implementation service ranking is zero.
+
+#### Why was this change made?
+
+This change supports container environments better and unifies the API to do OSGi integration.
 
 ---------------------------------------
 
@@ -238,7 +238,7 @@ Moving frontend resource minification from run time to build time reduces server
 ---------------------------------------
 
 ### Removed the SoyPortlet Class
-- **Date:** 2020-Dec-9
+- **Date:** 2020-Dec-09
 - **JIRA Ticket:** [LPS-122955](https://issues.liferay.com/browse/LPS-122955)
 
 #### What changed?
@@ -297,6 +297,28 @@ This is done as a way to simplify our frontend technical offering and better foc
 A further exploration and analysis of the different front-end options available can be found in [The State of Frontend Infrastructure](https://liferay.dev/blogs/-/blogs/the-state-of-frontend-infrastructure) including a rationale on why we are moving away from Soy:
 
 > Liferay invested several years into Soy believing it was "the Holy Grail". We believed the ability to compile Closure Templates would provide us with performance comparable to JSP and accommodate reusable components from other JavaScript frameworks. While Soy came close to achieving some of our goals, we never hit the performance we wanted and more importantly, we felt like we were the only people using this technology.
+
+---------------------------------------
+
+### Removed CSS Compatibility Layer
+- **Date:** 2021-Jan-02
+- **JIRA Ticket:** [LPS-123359](https://issues.liferay.com/browse/LPS-123359)
+
+#### What changed?
+
+The support for Boostrap 3 markup has been deleted and is no longer available.
+
+#### Who is affected?
+
+This affects you if you are using Boostrap 3 markup or if you have not correctly migrated to Boostrap 4 markup.
+
+#### How should I update my code?
+
+If you are using Clay markup you can update it by following the last [Clay components](https://clayui.com/docs/components/index.html) version. If your markup is based on Boostrap 3, you can update the markup with Boostrap 4 markup following the [Bootstrap migration guidelines](https://getbootstrap.com/docs/4.4/migration/).
+
+#### Why was this change made?
+
+The configurable CSS compatibility layer simplified migrating from Liferay 7.0 to 7.1 but removing the layer resolves conflicts with new styles and improves general CSS weight.
 
 ---------------------------------------
 
@@ -390,28 +412,6 @@ This change was made for better compliance with [the HTML Standard](https://html
 
 ---------------------------------------
 
-### Removed CSS Compatibility Layer
-- **Date:** 2021-Jan-2
-- **JIRA Ticket:** [LPS-123359](https://issues.liferay.com/browse/LPS-123359)
-
-#### What changed?
-
-The support for Boostrap 3 markup has been deleted and is no longer available.
-
-#### Who is affected?
-
-This affects you if you are using Boostrap 3 markup or if you have not correctly migrated to Boostrap 4 markup.
-
-#### How should I update my code?
-
-If you are using Clay markup you can update it by following the last [Clay components](https://clayui.com/docs/components/index.html) version. If your markup is based on Boostrap 3, you can update the markup with Boostrap 4 markup following the [Bootstrap migration guidelines](https://getbootstrap.com/docs/4.4/migration/).
-
-#### Why was this change made?
-
-The configurable CSS compatibility layer simplified migrating from Liferay 7.0 to 7.1 but removing the layer resolves conflicts with new styles and improves general CSS weight.
-
----------------------------------------
-
 ### item-selector-taglib No Longer fires coverImage-related Events
 - **Date:** 2021-Apr-15
 - **JIRA Ticket:** [LPS-130359](https://issues.liferay.com/browse/LPS-130359)
@@ -456,5 +456,258 @@ Change the token from `token_introspection` to `token.introspection`.
 #### Why was this change made?
 
 This change was made to align and standarize all OAuth 2.0 constants in our code. We recommend using a dot to separate words in feature identifiers.
+
+---------------------------------------
+
+### Removed JournalArticle's Content Field
+- **Date:** 2021-May-21
+- **JIRA Ticket:** [LPS-129058](https://issues.liferay.com/browse/LPS-129058)
+
+#### What changed?
+
+`JournalArticle` content is now stored by Dynamic Data Mapping (DDM) Field services.
+
+#### Who is affected?
+
+This affects you if you are directly setting the `JournalArticle` content field.
+
+#### How should I update my code?
+
+Use `JournalArticleLocalService`'s update methods instead of directly setting the content field.
+
+#### Why was this change made?
+
+This change facilitates referencing file, page, and web content DDM fields in the database without fetching and parsing the content.
+
+---------------------------------------
+
+### Replaced com.liferay.portal.kernel.util.StringBundler with com.liferay.petra.string.StringBundler
+- **Date:** 2021-Jun-25
+- **JIRA Ticket:** [LPS-133200](https://issues.liferay.com/browse/LPS-133200)
+
+#### What changed?
+
+The `com.liferay.petra.string.StringBundler` class has been deprecated. The `com.liferay.portal.kernel.util.StringBundler` class has replaced it.
+
+Here are some methods that now return `com.liferay.petra.string.StringBundler` instead of `com.liferay.portal.kernel.util.StringBundler`:
+
+- `com.liferay.frontend.taglib.dynamic.section.BaseJSPDynamicSection.java#modify`
+- `com.liferay.frontend.taglib.dynamic.section.DynamicSection#modify`
+- `com.liferay.portal.kernel.io.unsync.UnsyncStringWriter#getStringBundler`
+- `com.liferay.portal.kernel.layoutconfiguration.util.RuntimePage#getProcessedTemplate`
+- `com.liferay.portal.kernel.layoutconfiguration.util.RuntimePageUtil#getProcessedTemplate`
+- `com.liferay.portal.kernel.servlet.BufferCacheServletResponse#getStringBundler`
+- `com.liferay.portal.kernel.servlet.taglib.BodyContentWrapper.java#getStringBundler`
+- `com.liferay.portal.kernel.theme.PortletDisplay#getContent`
+- `com.liferay.portal.kernel.util.StringUtil#replaceToStringBundler`
+- `com.liferay.portal.kernel.util.StringUtil#replaceWithStringBundler`
+- `com.liferay.portal.layoutconfiguration.util.PortletRenderer#render`
+- `com.liferay.portal.layoutconfiguration.util.PortletRenderer#renderAjax`
+- `com.liferay.portal.layoutconfiguration.util.RuntimePageImpl#getProcessedTemplate`
+- `com.liferay.taglib.BaseBodyTagSupport#getBodyContentAsStringBundler`
+- `com.liferay.taglib.BodyContentWrapper#getStringBundler`
+- `com.liferay.taglib.aui.NavBarTag#getResponsiveButtonsSB`
+
+#### Who is affected?
+
+This affects you if you call one of these methods.
+
+#### How should I update my code?
+
+Import `com.liferay.petra.string.StringBundler` instead of
+`com.liferay.portal.kernel.util.StringBundler`.
+
+#### Why was this change made?
+
+The `com.liferay.petra.string.StringBundler` class has been deprecated.
+
+---------------------------------------
+
+### UserLocalService related classes have modified public API
+- **Date:** 2021-Jul-07
+- **JIRA Ticket:** [LPS-134096](https://issues.liferay.com/browse/LPS-134096)
+
+#### What changed?
+
+A number of methods which normally return `void` now return a `boolean` value instead. This list includes:
+
+- com.liferay.portal.kernel.service.UserLocalService#addDefaultGroups
+- com.liferay.portal.kernel.service.UserLocalService#addDefaultRoles
+- com.liferay.portal.kernel.service.UserLocalService#addDefaultUserGroups
+- com.liferay.portal.kernel.service.UserLocalServiceUtil#addDefaultGroups
+- com.liferay.portal.kernel.service.UserLocalServiceUtil#addDefaultRoles
+- com.liferay.portal.kernel.service.UserLocalServiceUtil#addDefaultUserGroups
+- com.liferay.portal.kernel.service.UserLocalServiceWrapper#addDefaultGroups
+- com.liferay.portal.kernel.service.UserLocalServiceWrapper#addDefaultRoles
+- com.liferay.portal.kernel.service.UserLocalServiceWrapper#addDefaultUserGroups
+- com.liferay.portal.service.impl.UserLocalServiceImpl#addDefaultGroups
+- com.liferay.portal.service.impl.UserLocalServiceImpl#addDefaultRoles
+- com.liferay.portal.service.impl.UserLocalServiceImpl#addDefaultUserGroups
+
+#### Who is affected?
+
+Everyone calling one of these methods
+
+#### How should I update my code?
+
+No immediate action is needed, but it's important to note the return type has changed.
+
+#### Why was this change made?
+
+This change was made in order to check if default groups, roles, and/or user groups were added to the given user, or if the user already had these associations.
+
+---------------------------------------
+
+### Removed the frontend-css-web CSS module
+- **Date:** 2021-Aug-02
+- **JIRA Ticket:** [LPS-127085](https://issues.liferay.com/browse/LPS-127085)
+
+#### What changed?
+
+The `frontend-css-web` module has been removed and its CSS files have been upgraded.
+
+#### Who is affected?
+
+This change affects the following modules:
+
+- `modules/apps/asset/asset-taglib/`
+- `modules/apps/asset/asset-tags-navigation-web/`
+- `modules/apps/captcha/captcha-taglib/`
+- `modules/apps/comment/comment-web/`
+- `modules/apps/commerce/commerce-product-content-web/`
+- `modules/apps/document-library/document-library-web/`
+- `modules/apps/dynamic-data-lists/dynamic-data-lists-web/`
+- `modules/apps/dynamic-data-mapping/dynamic-data-mapping-form-web/`
+- `modules/apps/dynamic-data-mapping/dynamic-data-mapping-web/`
+- `modules/apps/flags/flags-taglib/`
+- `modules/apps/frontend-css/frontend-css-web/`
+- `modules/apps/frontend-editor/frontend-editor-ckeditor-web/`
+- `modules/apps/frontend-js/frontend-js-aui-web/`
+- `modules/apps/frontend-js/frontend-js-components-web/`
+- `modules/apps/frontend-taglib/frontend-taglib/`
+- `modules/apps/frontend-theme/frontend-theme-styled/`
+- `modules/apps/item-selector/item-selector-taglib/`
+- `modules/apps/knowledge-base/knowledge-base-web/`
+- `modules/apps/mobile-device-rules/mobile-device-rules-web/`
+- `modules/apps/polls/polls-web/`
+- `modules/apps/portal-settings/portal-settings-authentication-cas-web/`
+- `modules/apps/product-navigation/product-navigation-control-menu-web/`
+- `modules/apps/site-navigation/site-navigation-directory-web/`
+- `modules/apps/social/social-bookmarks-taglib/`
+- `modules/apps/staging/staging-taglib/`
+- `modules/apps/wiki/wiki-web/`
+- `modules/dxp/apps/portal-search-tuning/portal-search-tuning-rankings-web/`
+- `portal-kernel/`
+- `portal-web/`
+
+#### How should I update my code?
+
+There are no required code updates.
+
+#### Why was this change made?
+
+This change removes deprecated legacy code from DXP/Portal and improves code performance and code consistency.
+
+---------------------------------------
+
+### Removed Some SanitizedServletResponse Static Methods, the HttpHeaders X_XSS_PROTECTION Constant, and http.header.secure.x.xss.protection Portal Property
+- **Date:** 2021-Aug-05
+- **JIRA Ticket:** [LPS-134188](https://issues.liferay.com/browse/LPS-134188)
+
+#### What changed?
+
+The following methods, constant, and portal property have been removed.
+
+Methods:
+
+- `com.liferay.portal.kernel.servlet.SanitizedServletResponse#disableXSSAuditor`
+- `com.liferay.portal.kernel.servlet.SanitizedServletResponse#disableXSSAuditor`
+- `com.liferay.portal.kernel.servlet.SanitizedServletResponse#disableXSSAuditorOnNextRequest`
+- `com.liferay.portal.kernel.servlet.SanitizedServletResponse#disableXSSAuditorOnNextRequest`
+
+Constant:
+
+- `com.liferay.portal.kernel.servlet.HttpHeaders#X_XSS_PROTECTION`
+
+Portal Property:
+
+- `http.header.secure.x.xss.protection`
+
+#### Who is affected?
+
+This affects you if you call these methods, use the constant, or use the portal property.
+
+#### How should I update my code?
+
+Remove your code that calls these methods or uses the constant. The X-Xss-Protection header has no effect on modern browsers and may give a false sense of security.
+
+Remove the `http.header.secure.x.xss.protection` property from your portal property extension files (e.g., `portal-ext.properties`).
+
+#### Why was this change made?
+
+The X-Xss-Protection header is no longer supported by modern browsers. These static methods, constant, and portal property relate to the X-Xss-Protection header.
+
+---------------------------------------
+
+### Replaced the OpenIdConnectServiceHandler Interface With the OpenIdConnectAuthenticationHandler
+- **Date:** 2021-Aug-09
+- **JIRA Ticket:** [LPS-124898](https://issues.liferay.com/browse/LPS-124898)
+
+#### What changed?
+
+The `OpenIdConnectServiceHandler` interface has been removed and replaced by the `OpenIdConnectAuthenticationHandler` interface.
+
+Old interface:
+
+```
+portal.security.sso.openid.connect.OpenIdConnectServiceHandler
+```
+
+New interface:
+
+```
+portal.security.sso.openid.connect.OpenIdConnectAuthenticationHandler
+```
+
+#### Who is affected?
+
+This affects you if you are implementing or using the `OpenIdConnectServiceHandler` interface.
+
+#### How should I update my code?
+
+If your code invokes the `OpenIdConnectServiceHandler` interface, change it to invoke the `OpenIdConnectAuthenticationHandler` interface. This requires providing an `UnsafeConsumer` for signing in the DXP/Portal user.
+
+If you have implemented the `OpenIdConnectServiceHandler` interface, implement the `OpenIdConnectAuthenticationHandler` interface and provide a way to refresh the user's OIDC access tokens using the provided refresh tokens. If you don't make this provision, sessions will invalidate when the initial access tokens expire.
+
+#### Why was this change made?
+
+This change improves OIDC refresh token handling. The change was made for these reasons:
+
+- To detach the access token refresh process from HTTP request handling. Without this detachment, there can be problems maintaining OIDC sessions with providers that only allow refresh tokens to be used once. Premature portal session invalidation can occur.
+
+- To avoid premature portal session invalidation for OIDC providers that provide refresh tokens that expire at the same time as their corresponding access tokens.
+
+---------------------------------------
+
+### Renamed Language Keys
+
+- **Date:** 2021-Sep-09
+- **JIRA Ticket:** LPS-135504
+
+#### What changed?
+
+All module language keys were moved to a module called `portal-language-lang` at `liferay-[dxp|portal]/modules/apps/portal-language/portal-language-lang`. In some cases where modules used language keys with the same name but different values, language keys were added to accommodate the different values. From an affected module's perspective, the language key has been renamed.
+
+#### Who is affected?
+
+This affects you if you are using or overriding a language key that has been renamed. [Renamed Language Keys](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html) maps the old language key names to the new names.
+
+#### How should I update my code?
+
+Rename all instances of the renamed language keys to their new names based on the mappings in [Renamed Language Keys](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html).
+
+#### Why was this change made?
+
+Centralized language keys are easier to manage.
 
 ---------------------------------------
