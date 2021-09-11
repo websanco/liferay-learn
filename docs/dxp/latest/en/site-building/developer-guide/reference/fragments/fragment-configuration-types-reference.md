@@ -12,8 +12,8 @@ These are the configurable Fragment types available to implement:
 - `videoSelector` (Available Liferay DXP 7.4+)
 - `collectionSelector` (Available Liferay DXP 7.3+)
 
-```note::
-  Configuration values inserted into the FreeMarker context honor the defined ``datatype`` value specified in the JSON file. For example, if the ``dataType`` is String, ``configuration.[name-value]?is_string`` is ``true``.
+```{note}
+Configuration values inserted into the FreeMarker context honor the defined `datatype` value specified in the JSON file. For example, if the `dataType` is String, `configuration.[name-value]?is_string` is `true`.
 ```
 
 ## Checkbox Configuration
@@ -305,8 +305,8 @@ This is useful when you want a Fragment that has an embedded video by default. T
 
 ![With the Video Selector you can include External Videos in Fragments](./fragment-configuration-types-reference/images/06.png)
 
-```note::
-   The `videoSelector` type is compatible with the `External Video <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video>`_ Fragment, but not with the `Video URL <../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url>`_ Fragment.
+```{note}
+The `videoSelector` type is compatible with the [External Video](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video) Fragment, but not with the [Video URL](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url) Fragment.
 ```
 
 ## Collection Selector
@@ -315,8 +315,8 @@ This is useful when you want a Fragment that has an embedded video by default. T
 
 Using the `collectionSelector` configuration type, you can develop a Fragment that includes a [Collection](../../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) or Collection Provider. You can use the `collectionSelector` with both Manual and Dynamic Collections.
 
-```note::
-   Collection Providers allow developers to create specific collections with more advanced criteria. To learn more, read the information about `Creating an Information List Provider <https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider>`_ in the `Info Framework <https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework>`_ developer documentation..
+```{note}
+Collection Providers allow developers to create specific collections with more advanced criteria. To learn more, read the information about [Creating an Information List Provider](https://help.liferay.com/hc/en-us/articles/360029067271-Creating-an-Information-List-Provider) in the [Info Framework](https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework) developer documentation..
 ```
 
 The following JSON configuration shows how to use the `collectionSelector`:
@@ -383,12 +383,12 @@ Using this sample configuration, Collections including both Web Content and Blog
 
 ![A Collection including Web Content and Blog entries corresponds to the Asset type.](./fragment-configuration-types-reference/images/08.png)
 
-```tip::
-   In addition to the `itemTime`, you can specify the `itemSubtype` in the configuration. The `itemSubtype` corresponds to the Asset `classPK`.
+```{tip}
+In addition to the `itemTime`, you can specify the `itemSubtype` in the configuration. The `itemSubtype` corresponds to the Asset `classPK`.
 ```
 
 ## Additional Information
 
-- [Developing Fragments](../developing-page-fragments/developing-fragments-intro.md)
+- [Developing Fragments](../../developing-page-fragments/developing-fragments-intro.md)
 - [Fragment Specific Tags Reference](./fragment-specific-tags-reference.md)
 - [Page Fragment Editor Interface Reference](./page-fragment-editor-interface-reference.md)

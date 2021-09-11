@@ -113,7 +113,7 @@ Entities in your Instances and applications can be customized with additional fi
 
 ## Integrate with Existing Systems
 
-Liferay can integrate with some other systems. For example, if you're using a directory such as LDAP, you can import Users from it. [Connecting to an LDAP Directory](../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) demonstrates the process. Please search this site for integrations you may need.
+Liferay can integrate with some other systems. For example, if you're using a directory such as LDAP, you can import Users from it. [Connecting to an LDAP Directory](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) demonstrates the process. Please search this site for integrations you may need.
 
 ## Configure Media File Previews
 

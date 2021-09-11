@@ -17,42 +17,42 @@ Several search widgets are available to place on Pages. Each one has its own con
 
 ### Search Widgets
 
-For dedicated coverage of the search widgets, see [Search Pages and Widgets](../getting-started/search-overview.md#search-pages-and-widgets).
+For dedicated coverage of the search widgets, see [Search Pages and Widgets](./getting-started/search-overview.md#search-pages-and-widgets).
 
-**Search Results**: Configure how search results are displayed. Read [Displaying Search Results](../search-pages-and-widgets/search-results/configuring-the-search-results-widget.md#displaying-search-results) for more information.
+**Search Results**: Configure how search results are displayed. Read [Displaying Search Results](./search-pages-and-widgets/search-results/configuring-the-search-results-widget.md#displaying-search-results) for more information.
 
-**Search Bar**: Configure the behavior of how search keywords are processed. See [Configuring the Search Bar](../getting-started/searching-for-content.md#configuring-the-search-bar) for more information.
+**Search Bar**: Configure the behavior of how search keywords are processed. See [Configuring the Search Bar](./getting-started/searching-for-content.md#configuring-the-search-bar) for more information.
 
-**Search Facets**: Configure each facet's behavior and URL parameters. See [Facets](../search-pages-and-widgets/search-facets/facets.md) for more information.
+**Search Facets**: Configure each facet's behavior and URL parameters. See [Facets](./search-pages-and-widgets/search-facets/facets.md) for more information.
 
 **Search Options**: This is a special case, where configuring this widget defines page scoped behavior. Add the Search Option widget to a page and define two booleans for the Search Page:
 
 * Allow Empty Searches: By default, failure to enter a keyword returns no results. Enabling this ensure that _all_ results are returned when no keyword is entered in the Search Bar.
 * Basic Facet Selection: By default, facet counts are recalculated after each facet selection. Enable this to turn off facet recounting.
 
-**Search Suggestions**: Suggest better queries and spell check queries. See the [Suggestions Configuration Reference](../search-pages-and-widgets/search-results/enabling-search-suggestions.md#suggestions-configuration-reference) for more information.
+**Search Suggestions**: Suggest better queries and spell check queries. See the [Suggestions Configuration Reference](./search-pages-and-widgets/search-results/enabling-search-suggestions.md#suggestions-configuration-reference) for more information.
 
-**Search Insights**: Add this to the Search Page to inspect the full query string that's constructed by the back-end search code when the User enters a keyword. Only useful for testing and development. See [Search Insights](../search-pages-and-widgets/search-insights.md) for more information.
+**Search Insights**: Add this to the Search Page to inspect the full query string that's constructed by the back-end search code when the User enters a keyword. Only useful for testing and development. See [Search Insights](./search-pages-and-widgets/search-insights.md) for more information.
 
-**Custom Filter**: Add a widget to the page for each of the filters you'd like applied to the search results. Let search page users see and manipulate the filters or make them invisible and/or immutable. See [Filtering Search Results](../search-pages-and-widgets/search-results/filtering-search-results.md) for more information.
+**Custom Filter**: Add a widget to the page for each of the filters you'd like applied to the search results. Let search page users see and manipulate the filters or make them invisible and/or immutable. See [Filtering Search Results](./search-pages-and-widgets/search-results/filtering-search-results.md) for more information.
 
-**Sort**: Let Users reorder the search results based on the value of certain `keyword` fields in the index. For example, show results in alphabetic order of the Title field. The default order is determined by the search engine's _Relevance_ calculation. See [Sorting Search Results](../search-pages-and-widgets/search-results/sorting-search-results.md) for more information.
+**Sort**: Let Users reorder the search results based on the value of certain `keyword` fields in the index. For example, show results in alphabetic order of the Title field. The default order is determined by the search engine's _Relevance_ calculation. See [Sorting Search Results](./search-pages-and-widgets/search-results/sorting-search-results.md) for more information.
 
-**Low Level Search Options:** Configure the search widgets to participate in a search that's aimed at an index other than the _Company Index_. The company index is where the Liferay DXP assets index their data, so many installations will not need this widget. See [Understanding Low Level Search Options](../search-pages-and-widgets/search-results/understanding-low-level-search-options.md) for more information.
+**Low Level Search Options:** Configure the search widgets to participate in a search that's aimed at an index other than the _Company Index_. The company index is where the Liferay DXP assets index their data, so many installations will not need this widget. See [Understanding Low Level Search Options](./search-pages-and-widgets/search-results/understanding-low-level-search-options.md) for more information.
 
-**Similar Results:** Display similar search results to an asset being displayed on a page. See [Similar Results](../search-pages-and-widgets/similar-results.md) for more information.
+**Similar Results:** Display similar search results to an asset being displayed on a page. See [Similar Results](./search-pages-and-widgets/similar-results.md) for more information.
 
-[Liferay Enterprise Search] **Elasticsearch Monitoring:** Liferay Enterprise Search subscribers can access [Elastic's Kibana](https://www.elastic.co/kibana) monitoring tool inside a widget placed on a Liferay DXP Page. See [Monitoring Elasticsearch](../liferay-enterprise-search/monitoring-elasticsearch.md) for more information.
+[Liferay Enterprise Search] **Elasticsearch Monitoring:** Liferay Enterprise Search subscribers can access [Elastic's Kibana](https://www.elastic.co/kibana) monitoring tool inside a widget placed on a Liferay DXP Page. See [Monitoring Elasticsearch](./liferay-enterprise-search/monitoring-elasticsearch.md) for more information.
 
 ## Site Scoped Search Configuration
 
-By the strict definition of [Site Scoped Configuration](../../system-administration/configuring-liferay/understanding-configuration-scope.md), search doesn't have any. However, [Search Pages](../search-pages-and-widgets/working-with-search-pages/search-pages.md) influence Site-specific search behavior. Commonly, Search Pages contain search widgets configured to search for all content within a particular Site.
+By the strict definition of [Site Scoped Configuration](../../system-administration/configuring-liferay/understanding-configuration-scope.md), search doesn't have any. However, [Search Pages](./search-pages-and-widgets/working-with-search-pages/search-pages.md) influence Site-specific search behavior. Commonly, Search Pages contain search widgets configured to search for all content within a particular Site.
 
 ![Configure the scope of a search.](./search-configuration-reference/images/04.png)
 
 There are some important configuration nuances to be aware of when using the Search widgets:
 
-If the header Search Bar (the search bar embedded in the default theme) uses the Search Bar widget, its configuration always requires a _destination page_ to be set, where Users are redirected to complete their search activity, interacting with the other Search widgets (Results, Facets, Suggestions etc.). [Search destination pages](../search-pages-and-widgets/working-with-search-pages/creating-a-search-page.md) are ordinary pages holding the Search widgets. You can have as many pages with Search widgets across the Site as you want.
+If the header Search Bar (the search bar embedded in the default theme) uses the Search Bar widget, its configuration always requires a _destination page_ to be set, where Users are redirected to complete their search activity, interacting with the other Search widgets (Results, Facets, Suggestions etc.). [Search destination pages](./search-pages-and-widgets/working-with-search-pages/creating-a-search-page.md) are ordinary pages holding the Search widgets. You can have as many pages with Search widgets across the Site as you want.
 
 The Search Bar widget is instanceable, so one page can contain multiple Search Bar widgets configured differently. All Search Bar instances must point to a Search Page within the Site to be effective.
 
@@ -70,9 +70,9 @@ Search does not have any Instance scoped entries in the [Instance Settings](../.
 
 The only instance scoped configurations for search are the entries in the Global Menu &rarr; Applications &rarr; Search Tuning:
 
-**Result Rankings:** Customize search results manually by hiding, pinning, and adding results for specific aliases. See [Result Rankings](../search-administration-and-tuning/result-rankings.md) for more information.
+**Result Rankings:** Customize search results manually by hiding, pinning, and adding results for specific aliases. See [Result Rankings](./search-administration-and-tuning/result-rankings.md) for more information.
 
-**Synonyms:** Create synonym sets so that synonymous search terms are matched and scored like an exact match to the search term. See [Synonym Sets](../search-administration-and-tuning/synonym-sets.md) for more information.
+**Synonyms:** Create synonym sets so that synonymous search terms are matched and scored like an exact match to the search term. See [Synonym Sets](./search-administration-and-tuning/synonym-sets.md) for more information.
 
 ## System Scoped Search Configuration
 
@@ -191,13 +191,13 @@ Configure how search responds to matches on the Title field of a document.
 
 ### Cross-Cluster Replication
 
-You'll only see this entry if you have deployed the Cross-Cluster Replication module, which is available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Cross-Cluster Replication](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
+You'll only see this entry if you have deployed the Cross-Cluster Replication module, which is available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Cross-Cluster Replication](./liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
 
 ### Elasticsearch Monitoring
 
 **Configuration File:** `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config`
 
-You can use the Elasticsearch Monitoring configuration if you have deployed the Liferay Enterprise Search Monitoring module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Monitoring Elasticsearch](../liferay-enterprise-search/monitoring-elasticsearch.md) documentation.
+You can use the Elasticsearch Monitoring configuration if you have deployed the Liferay Enterprise Search Monitoring module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Monitoring Elasticsearch](./liferay-enterprise-search/monitoring-elasticsearch.md) documentation.
 
 ### Elasticsearch 7
 
@@ -209,13 +209,13 @@ Configure the connection between Liferay and Elasticsearch 7. See [Configuring t
 
 **Configuration File:** `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[connectionId].config`
 
-Liferay 7.3 can connect to multiple Elasticsearch clusters. Connections are defined in the Elasticsearch Connections entry. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. It's also demonstrated in the [Cross-Cluster Replication](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
+Liferay 7.3 can connect to multiple Elasticsearch clusters. Connections are defined in the Elasticsearch Connections entry. This feature can be used in conjunction with the Low Level Search Options and Search Results widgets to show results from third-party systems using Elasticsearch clusters. It's also demonstrated in the [Cross-Cluster Replication](./liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md) documentation.
 
 ### Learning to Rank
 
 **Configuration File:** `com.liferay.portal.search.learning.to.rank.configuration.LearningToRankConfiguration.config`
 
-You can use the Learning to Rank configuration if you have deployed the Liferay Enterprise Search Learning to Rank module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Learning to Rank](../liferay-enterprise-search/learning-to-rank.md) documentation.
+You can use the Learning to Rank configuration if you have deployed the Liferay Enterprise Search Learning to Rank module, available with a Liferay Enterprise Search subscription. These configuration properties are covered in the dedicated [Learning to Rank](./liferay-enterprise-search/learning-to-rank.md) documentation.
 
 ### Search Web
 

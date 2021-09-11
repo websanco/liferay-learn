@@ -1,7 +1,7 @@
 # Site Localization
 
-```note::
-   If you are setting up your Liferay installation for the first time, we recommend reviewing `Initial Instance Localization <../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md>`_ first.
+```{note}
+If you are setting up your Liferay installation for the first time, we recommend reviewing [Initial Instance Localization](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) first.
 ```
 
 ## Configuring Site Languages

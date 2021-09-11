@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-The Content Performance panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance panel to periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) Pages.
+The Content Performance panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance panel to periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) Pages.
 
 To learn how to analyze your content performance quantitatively using the Content Performance panel, see [Analyze Content Metrics Using the Content Performance panel](./analyze-content-metrics-using-content-performance-panel.md).
 
@@ -14,7 +14,7 @@ You can access the Content Performance panel when the following conditions are m
 
 - The Liferay DXP instance has an active [connection to Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) and your site is synchronized.
 - You have Edit permissions for the Page or content.
-- The content is in a Content Page, Widget Page, or is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
+- The content is in a Content Page, Widget Page, or is based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
 ## Accessing the Content Performance Panel
 
@@ -26,7 +26,7 @@ You can open the Content Performance panel using the *Content Performance* (![Co
 
 ### Accessing the Content Performance Panel from Content Based on a Display Page Template
 
-Using a Display Page Template, you can display Web Content, Documents, or Blog entries in a Display Page using a unique URL. For more information, read [Displaying Content with Display Page Templates](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
+Using a Display Page Template, you can display Web Content, Documents, or Blog entries in a Display Page using a unique URL. For more information, read [Displaying Content with Display Page Templates](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
 1. Go to *Site Administration* &rarr; *Content & Data* &rarr; *Web Content*.
 1. Click the *Web Content* tab.

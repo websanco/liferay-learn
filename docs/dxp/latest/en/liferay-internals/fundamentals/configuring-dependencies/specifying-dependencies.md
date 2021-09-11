@@ -1,6 +1,6 @@
 # Specifying Dependencies
 
-You must satisfy all dependencies to compile and deploy a module successfully. After you [find the dependency artifacts](../finding-artifacts.md), add them as dependencies in your Gradle build file. Liferay already includes many artifacts at run time. If you depend on other artifacts, you must deploy them manually or include them in your module. Here you'll find dependency configuration steps and examples.
+You must satisfy all dependencies to compile and deploy a module successfully. After you [find the dependency artifacts](./finding-artifacts.md), add them as dependencies in your Gradle build file. Liferay already includes many artifacts at run time. If you depend on other artifacts, you must deploy them manually or include them in your module. Here you'll find dependency configuration steps and examples.
 
 ## Configuring Dependencies
 

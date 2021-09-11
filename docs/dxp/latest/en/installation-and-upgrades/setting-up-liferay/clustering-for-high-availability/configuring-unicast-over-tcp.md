@@ -205,4 +205,4 @@ If you have added entities that can be cached or you want to tune the cache conf
 ## Additional Information
 
 * [Configuring Cluster Link](./configuring-cluster-link.md)
-* [Clustering for High Availability](./clustering-for-high-availability.md)
+* [Clustering for High Availability](../clustering-for-high-availability.md)

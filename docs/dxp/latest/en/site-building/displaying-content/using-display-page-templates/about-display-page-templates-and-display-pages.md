@@ -9,7 +9,7 @@ With Content Pages, you can create the Page layout and composition, but you cann
 For instance, you can create a Display Page Template for different Web Content Articles and display the content in different Display Pages, each using the same layout but with a unique friendly URL. Additionally, you can define [SEO settings](./configuring-seo-and-open-graph.md) to improve your Pages' search ranking. Display Pages are ideal for showing a catalog of elements in a consistent way, like business case studies, product or service options, or apartments/flats, or job listings.
 
 ```{note}
-For more information about the different ways of displaying content in Liferay DXP, see [Displaying Content](../displaying-content-intro.md>).
+For more information about the different ways of displaying content in Liferay DXP, see [Displaying Content](../displaying-content-intro.md).
 ```
 
 ## Understanding Display Page Templates and Display Pages

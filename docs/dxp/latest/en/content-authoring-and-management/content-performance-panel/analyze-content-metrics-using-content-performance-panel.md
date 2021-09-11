@@ -2,10 +2,10 @@
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-You can use the Content Performance panel to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance panel, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md).
+You can use the Content Performance panel to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance panel, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
-```important::
-   Content Performance metrics are only available for the `Default Experience <../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md>`_.
+```{important}
+Content Performance metrics are only available for the [Default Experience](../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md).
 ```
 
 Access the Content Performance panel using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) option for your content. You can find this option in the [Applications toolbar](../../getting-started/navigating-dxp.md#applications-bar) and the [Content Dashboard](../content-dashboard/about-the-content-dashboard.md). For more information, see [About the Content Performance Panel](./about-the-content-performance-panel.md).
@@ -29,8 +29,8 @@ The top area in the Content Performance panel provides general information about
 
 The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance panel show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
 
-```note::
-   Even when your content is not translated into a specific language, you may find statistics for that language if users access the content using that language's URL.
+```{note}
+Even when your content is not translated into a specific language, you may find statistics for that language if users access the content using that language's URL.
 ```
 
 ![The top area in the Content Performance panel provides general information about your content.](./analyze-content-metrics-using-content-performance-panel/images/05.png)
@@ -41,8 +41,8 @@ This area shows the number of views for the content or Page URL and how this num
 
 By default, the Engagement area shows the total number of views for the content, along with the number of views in the last seven days. You can change this period in the drop-down time selector and analyze trends over time using the backward and forward buttons (![Arrow left](../../images/icon-angle-left.png) ![Arrow right](../../images/icon-angle-right.png)). Hover over any part of the line chart to show views for a specific time.
 
-```note::
-   If the Engagement chart shows a zero value for a certain period, it means that the information could not be collected or analyzed for that period.
+```{note}
+If the Engagement chart shows a zero value for a certain period, it means that the information could not be collected or analyzed for that period.
 ```
 
 ![The Engagement area in the Content Performance sidebar provides Views information.](./analyze-content-metrics-using-content-performance-panel/images/07.png)
@@ -77,8 +77,8 @@ The following table describes the metrics you can find in the Traffic Channels a
 | Top Referring Pages | Top ten referrer Pages driving traffic to your Page. |
 | Top Referring Domains | Top ten referrer domains driving traffic to your Page. |
 
-```note::
-   Keywords are one or more words that people use to find content.
+```{note}
+Keywords are one or more words that people use to find content.
 ```
 
 ## Related Information

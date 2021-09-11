@@ -19,8 +19,8 @@ Bundle-SymbolicName:  [artifact ID]
 Bundle-Version: [version]
 ```
 
-```important::
-   Artifacts in Liferay DXP fix packs override Liferay DXP installation artifacts. The ``binaries`` folder in a fixpack contains artifacts in subfolders. If your project requires an artifact provided by a fix pack, declare the version from the fixpack when declaring dependencies.
+```{important}
+Artifacts in Liferay DXP fix packs override Liferay DXP installation artifacts. The `binaries` folder in a fixpack contains artifacts in subfolders. If your project requires an artifact provided by a fix pack, declare the version from the fixpack when declaring dependencies.
 ```
 
 Here's where to find core Liferay artifacts: 
@@ -47,8 +47,8 @@ For modules outside the core, you must still specify dependencies on the modules
 | [Reference Docs](#reference-docs) | Liferay modules (per release) |
 | [Maven Central](#maven-central) | All artifact types: Liferay and third party, module and non-module |
 
-```important::
-   ``com.liferay`` is the group ID for all of Liferay's apps and independent modules.
+```{important}
+`com.liferay` is the group ID for all of Liferay's apps and independent modules.
 ```
 
 The App Manager provides the best information on deployed modules.
@@ -91,8 +91,8 @@ Liferay reference documentation also provides Liferay app artifact attributes.
 
 Liferay's app Javadoc lists each app module's artifact ID, version number, and display name. This is the best place to look up Liferay app modules that aren't yet deployed to your Liferay instance.
 
-```note::
-   To find artifact information on a Core Liferay artifact, refer to the previous section *Finding Core Liferay Artifact Attributes*.
+```{note}
+To find artifact information on a Core Liferay artifact, refer to the previous section *Finding Core Liferay Artifact Attributes*.
 ```
 
 Follow these steps to find a Liferay app module's attributes in the Javadoc:
@@ -113,8 +113,8 @@ The heading above the package name shows the module's artifact ID, version numbe
 
 ![Liferay's app Javadoc shows the display name, followed by group ID, artifact ID, and version number in Gradle artifact syntax.](./finding-artifacts/images/06.png)
 
-```note::
-   Module version numbers aren't currently included in any tag library reference docs.
+```{note}
+Module version numbers aren't currently included in any tag library reference docs.
 ```
 
 Next, you'll learn how to look up artifacts on MVNRepository and Maven Central.
@@ -123,8 +123,8 @@ Next, you'll learn how to look up artifacts on MVNRepository and Maven Central.
 
 Most artifacts, regardless of type or origin, are on [MVNRepository](https://mvnrepository.com/) and [Maven Central](https://search.maven.org/). These sites can help you find artifacts based on class packages. It's common to include an artifact's ID in the start of an artifact's package names. For example, if you depend on the class `org.osgi.service.component.annotations.Component`, search for the package name `org.osgi.service.component.annotations` on one of the Maven sites.
 
-```note::
-   Make sure to follow the above instructions to determine the version of Liferay artifacts you need.
+```{note}
+Make sure to follow the above instructions to determine the version of Liferay artifacts you need.
 ```
 
 ## What's Next

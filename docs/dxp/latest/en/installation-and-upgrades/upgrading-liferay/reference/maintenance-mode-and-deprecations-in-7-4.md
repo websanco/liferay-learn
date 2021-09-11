@@ -8,12 +8,12 @@ Obsolete features are eventually removed or replaced with newer, better features
 
 **Deprecated:** The feature will be unsupported as early as the next minor version release. For example, support for a feature deprecated in 7.4 can be dropped as early as 7.5.
 
-```important::
-   Plan to stop using deprecated features because their support may cease as early as the next minor release.
+```{important}
+Plan to stop using deprecated features because their support may cease as early as the next minor release.
 ```
 
-```important::
-   Please see `Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ for details.
+```{important}
+Please see [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) for details.
 ```
 
 ## Deprecated Feature Availability

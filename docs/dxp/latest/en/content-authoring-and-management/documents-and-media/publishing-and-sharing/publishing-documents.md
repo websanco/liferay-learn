@@ -81,7 +81,7 @@ The toolbar at the top of Documents and Media provides these functions:
 **Display Style:** The *Display Style* icon (![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png)) switches between three display types: Cards, List and Table view. 
 
 ![Choose between cards, list, or table view to display your files.](publishing-documents-on-a-dxp-site/images/09.png)
- 
+
 Users can choose the display type of their choice.
 
 Selecting a file reveals several options:
@@ -136,7 +136,7 @@ It is easy to add your documents or media files to other types of assets:
 
 ### Wikis
 
-1. Navigate to the Wiki node. 
+1. Navigate to the Wiki node.
 
 1. Under Related Assets, click on the *Select* button and to select your documents and media to be added to your Wiki page.
 

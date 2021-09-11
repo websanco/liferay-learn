@@ -102,4 +102,4 @@ It's best to test your DXP cluster under load and investigate optimizing your sy
 ## Additional Information
 
 * [Configuring Unicast over TCP](./configuring-unicast-over-tcp.md)
-* [Clustering for High Availability](./clustering-for-high-availability.md)
+* [Clustering for High Availability](../clustering-for-high-availability.md)

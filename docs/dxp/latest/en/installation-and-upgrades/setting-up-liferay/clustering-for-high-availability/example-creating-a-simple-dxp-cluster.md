@@ -13,7 +13,7 @@ Here are the server containers you'll create:
 | DXP Server | Tomcat | `dxp-2` |
 
 ```{warning}
-This example is for learning purposes and is not suitable for production use cases. For production environments, you should include an HTTP server for load balancing requests to the DXP servers, use separate database servers for read only and read-write operations, and consider clustering and load balancing database servers, file store servers, and search engine servers. Please read all of the [Clustering for High Availability](./clustering-for-high-availability.md) articles for more information.
+This example is for learning purposes and is not suitable for production use cases. For production environments, you should include an HTTP server for load balancing requests to the DXP servers, use separate database servers for read only and read-write operations, and consider clustering and load balancing database servers, file store servers, and search engine servers. Please read all of the [Clustering for High Availability](../clustering-for-high-availability.md) articles for more information.
 ```
 
 <!--

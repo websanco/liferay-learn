@@ -12,32 +12,32 @@ Follow these steps to create your own implementation of the `DispatchTaskExecuto
 
    * `dispatch.task.executor.name`: defines the string used for the executor's name in the Dispatch UI.
 
-      ```note::
-         If you want your Dispatch Task to use localized names, add a language key value for the ``dispatch.task.executor.name`` property to the module’s ``resources/content/Language.properties`` file.
+      ```{note}
+      If you want your Dispatch Task to use localized names, add a language key value for the `dispatch.task.executor.name` property to the module’s `resources/content/Language.properties` file.
       ```
 
    * `dispatch.task.executor.type`: defines a unique `type` value to match the right Dispatch Task Executor and Dispatch Trigger.
 
-      ```note::
-         Values must be unique to ensure the correct executor matches. If a value is not unique, the log displays an error on startup indicating which executors have the same property value.
+      ```{note}
+      Values must be unique to ensure the correct executor matches. If a value is not unique, the log displays an error on startup indicating which executors have the same property value.
       ```
 
 1. [**`DispatchTaskExecutor`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java): Implement the `DispatchTaskExecutor` interface or extend an implementation of it (e.g., ``BaseDispatchTaskExecutor``).
 
-      ```important::
-         Implementations of the `DispatchTaskExecutor` interface must handle status logs for Dispatch tasks, because the Dispatch framework depends on those logs to control the concurrent execution of tasks.
+      ```{important}
+      Implementations of the `DispatchTaskExecutor` interface must handle status logs for Dispatch tasks, because the Dispatch framework depends on those logs to control the concurrent execution of tasks.
          
-         For your convenience, Liferay provides the ``BaseDispatchTaskExecutor`` abstract `class <https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/BaseDispatchTaskExecutor.java>`_ that logs the Dispatch task's status as ``IN PROGRESS``, ``SUCCESSFUL``, or ``FAILED``.
+      For your convenience, Liferay provides the `BaseDispatchTaskExecutor` abstract [class](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/BaseDispatchTaskExecutor.java) that logs the Dispatch task's status as `IN PROGRESS`, `SUCCESSFUL`, or `FAILED`.
       ```
 
 1. **Methods**: If you're implementing the `DispatchTaskExecutor` interface directly, override its `execute()` method to implement custom logic. If instead you're extending the ``BaseDispatchTaskExecutor`` abstract class, override its `doExecute()` method.
 
-   ```note::
-      The ``getName()`` method is deprecated and replaced by the ``dispatch.task.executor.name`` property.
+   ```{note}
+   The `getName()` method is deprecated and replaced by the `dispatch.task.executor.name` property.
    ```
 
-   ```tip::
-      You can use the ``dispatchTrigger.getDispatchTaskSettings()`` method to fetch properties set in the Dispatch Task's Settings editor.
+   ```{tip}
+   You can use the `dispatchTrigger.getDispatchTaskSettings()` method to fetch properties set in the Dispatch Task's Settings editor.
    ```
 
 The following sample module demonstrates how to create and deploy a custom Dispatch Task Executor to a Liferay instance.
@@ -46,7 +46,7 @@ The following sample module demonstrates how to create and deploy a custom Dispa
 
 Follow these steps to download, build, and deploy the sample Dispatch Task Executor to a new docker container:
 
-1. Start a new [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a new [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
