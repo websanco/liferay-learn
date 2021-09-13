@@ -34,7 +34,11 @@ In Liferay 7.3, the editable configuration Field Name was removed, and a read-on
 
 This is static text on the form, entered by the form creator. Users do not enter data into paragraph fields. This is useful for longer instructions.
 
-![Paragraph fields can be used to provide longer instructions.](./forms-field-types-reference/images/02.png)
+![Paragraph fields can be used to provide longer blocks of formatted text.](./forms-field-types-reference/images/18.png)
+
+Paragraph fields can be much more than plain text. Create rich content using the embedded content editor.
+
+![Create rich content in paragraph fields using the content editor.](./forms-field-types-reference/images/19.png)
 
 ### Text Field 
 
