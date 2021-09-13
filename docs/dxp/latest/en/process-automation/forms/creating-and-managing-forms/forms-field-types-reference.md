@@ -1,13 +1,13 @@
 # Forms Field Types Reference
 
-This article documents the available elements when building a form.
+The Liferay Forms application contains lots of field types and elements to add to your forms. To discover the available elements,
 
 1. Open the _Product Menu_ (![Product Menu](../../../images/icon-product-menu.png)) and click the compass icon (![Compass](../../../images/icon-compass.png)) on the Site Administration menu. Select the Site where the form will be created.
 1. Click _Content & Data_  &rarr; _Forms_.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)). The form builder view appears.
 1. Click the _Add_ button (![Add](../../../images/icon-add.png)) one more time to display the _Add Elements_ sidebar (if it is not already opened).
 
-![There are many useful out-of-the-box form field types.](./forms-field-types-reference/images/01.png)
+![There are many useful form elements.](./forms-field-types-reference/images/01.png)
 
 ## Field Configuration Overview
 
@@ -30,9 +30,9 @@ In Liferay 7.3, the editable configuration Field Name was removed, and a read-on
 ```
 ## Form Fields and Elements
 
-### Paragraph 
+### Paragraph
 
-This is static text on the form, entered by the form creator. Users do not enter data into paragraph fields. This is useful for longer instructions.
+The paragraph field displays static text on the form, as entered by the form creator. Users do not enter data into paragraph fields. This is useful for longer instructions.
 
 ![Paragraph fields can be used to provide longer blocks of formatted text.](./forms-field-types-reference/images/18.png)
 
@@ -40,19 +40,19 @@ Paragraph fields can be much more than plain text. Create rich content using the
 
 ![Create rich content in paragraph fields using the content editor.](./forms-field-types-reference/images/19.png)
 
-### Text Field 
+### Text Field
 
 Users enter free-form text into these fields. For example, a Full Name field is a text field. By default, a text field keeps all input on a single line of text. To accommodate longer responses, choose the multi-line setting when configuring the text field [as in this example](./creating-forms.md). You can put limits on the text users can enter (e.g., numbers from 1-10, email addresses, etc.) by using the text field's [validation options](./validating-text-and-numeric-field-entries.md).
 
 ![Multi-line text fields allow multiple lines of user input.](./forms-field-types-reference/images/03.png)
 
-### Select from List 
+### Select from List
 
 Users select one option (or more, if configured to allow it) from a list of choices. Choices are entered manually or automatically populated by a [data provider](../data-providers/data-providers-overview.md). For example, a Country of Residence field can be selected from list field populated by a Countries of the World data provider.
 
 ![Select form List fields present users with a dropdown list of options to select from.](./forms-field-types-reference/images/04.png)
 
-### Single Selection 
+### Single Selection
 
 Using a radio button, users select one option from a list of options displayed on the form.
 
@@ -70,27 +70,31 @@ Users select a date using a date picker.
 
 ![Single Selection fields show users multiple options, allowing them to select just one.](./forms-field-types-reference/images/06.png)
 
-### Multiple Selection 
+### Multiple Selection
 
 Users select one or more options from check boxes (or toggles, if configured).
 
 ![Multiple selection fields let users choose more than one of the displayed options.](./forms-field-types-reference/images/07.png)
 
-### Grid 
+### Grid
 
 Using radio buttons, users select from options laid out in rows and columns. One selection can be made per row. This is useful when the same response metric is needed for multiple questions.
 
 ![Grid fields let users respond to multiple inquiries from the same list of responses options.](./forms-field-types-reference/images/08.png)
 
-### Numeric 
+### Numeric
 
 Users enter numeric data (integers or decimals) into numeric fields. Non-numeric input is not accepted.
 
 ![Numeric fields restrict user input to numbers (integers or decimals).](./forms-field-types-reference/images/09.png)
 
-### Upload 
+### Upload
 
-Users can select a file from the Documents and Media library or upload a file from their local file systems.
+Upload fields let users upload a file from the local file system. Logged in Users can choose from files they have previously uploaded or upload a new one.
+
+```note::
+   In 7.2 and 7.3 logged in Users can select an existing file from the Documents and Media library or choose to upload a file from their local file systems.
+   ```
 
 ![Upload fields let users upload files or select from existing Docs and Media entries.](./forms-field-types-reference/images/10.png)
 
@@ -118,7 +122,7 @@ Configure the Guest upload behavior in the Control Panel: System Settings &rarr;
 
 **Maximum Submissions for Guest Upload Fields (`maximumSubmissionsForGuestUploadFields`):** Set the maximum number of times a Guest User can submit a form that includes a Guest-enabled Upload field. The Guest User's IP address is used to keep track of submissions. By default the limit is 5.
 
-### Image 
+### Image
 
 Users can select an image file (`.gif`, `.jpeg`, `.jpg`, or `.png`) from Web Content Images, the Documents and Media library, or upload an image file from their local file systems.
 
@@ -128,13 +132,13 @@ Users can select an image file (`.gif`, `.jpeg`, `.jpg`, or `.png`) from Web Con
    Guest Users cannot access or upload images. Avoid using this field unless only authenticated Users can access the form.
 ```
 
-### Color 
+### Color
 
 Users can enter the hex code of a color by selecting it from the color picker or entering the code directly.
 
 ![Color fields let users enter a color's hex code by selecting the color form a color picker.](./forms-field-types-reference/images/13.png)
 
-### Rich Text 
+### Rich Text
 
 Users can enter Rich Text content (including formatted text, embedded images, attachments, etc.) into a form field.
 
