@@ -2,7 +2,7 @@
 
 When you are experiencing issues with your `liferay` service's performance, you may need to take thread or heap dumps to help you or DXP Cloud Support optimize your instance or troubleshoot problems. 
 
-Whether you are generating thread or heap dumps, you must follow these steps to use them for troubleshooting:
+Follow these steps to generate thread or heap dumps for troubleshooting:
 
 1. [Choose a script to generate the dumps](#choose-a-script-to-generate-the-dumps)
 
@@ -16,7 +16,7 @@ The next section provides example scripts that you can run to generate thread or
 
 ## Choose a Script to Generate the Dumps
 
-Whether you are generating thread or heap dumps, you must run a script through the `liferay` service's [shell](shell-access.md).
+Whether you are generating thread or heap dumps, you can run a script through the `liferay` service's [shell](shell-access.md) to make them available to download via backups.
 
 ### Thread Dump Creation Script
 
