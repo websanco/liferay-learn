@@ -1,6 +1,6 @@
 # Blog API Basics
 
-Liferay's REST API's provide services for the Blogs application to add, modify, and delete blog posts and images. 
+Liferay's REST API's provide services for adding, modifying, and deleting blog posts and images. 
 
 Start by seeing an example of adding a new blog post.
 
@@ -22,9 +22,9 @@ Start by seeing an example of adding a new blog post.
    unzip liferay-r3g4.zip
    ```
 
-2. [Find your site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
+2. [Find your Site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
 
-3. Use the cURL script to add a new blog post to your Site. On the command line, navigate to the `curl` folder. Execute the `BlogPosting_POST_ToSite.sh` script with your site ID as a parameter.
+3. Use the cURL script to add a new blog post to your Site. On the command line, navigate to the `curl` folder. Execute the `BlogPosting_POST_ToSite.sh` script with your Site ID as a parameter.
 
     ```bash
     ./BlogPosting_POST_ToSite.sh 1234
@@ -63,13 +63,13 @@ Start by seeing an example of adding a new blog post.
 
     ![See that a new blog post has been added.](./blog-api-basics/images/01.png)
 
-1. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+1. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files: 
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-1. Run the `BlogPosting_POST_ToSite` class with the following command. Replace the `siteId` value with your site's ID:
+1. Run the `BlogPosting_POST_ToSite` class. Replace the `siteId` value with your site's ID:
 
     ```bash
     java -classpath .:* -DsiteId=1234 BlogPosting_POST_ToSite
@@ -123,8 +123,8 @@ This class invokes the REST service using only three lines of code:
 
 The other example Java classes are similar to this one, but call different `BlogPostingResource` methods.
 
-```important::
-   See `BlogPostingResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/BlogPostingResource.java>`_ for service details.
+```{important}
+See [BlogPostingResource[(https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/BlogPostingResource.java) for service details.
 ```
 
 Below are examples of calling other `BlogPosting` REST services using cURL and Java.
@@ -207,7 +207,7 @@ The `BlogPosting` fields are listed in JSON.
 
 ## Patch a Blog Post
 
-Do a partial edit of an existing blog post with the following cURL and Java commands. Note, replace `1234` with your blog post's ID.
+Do a partial edit of an existing blog post with the following cURL and Java commands. Note: replace `1234` with your blog post's ID.
 
 ### BlogPosting_PATCH_ById.sh
 
