@@ -79,7 +79,7 @@ You can make multiple edits to alter this behavior:
 
 ### Heap Dump Creation Script
 
-Heap dumps help you to understand what data is consuming RAM in your Liferay instance.
+Heap dumps help you to understand what data is consuming RAM in your Liferay instance. If you need to troubleshoot your instance's memory allocation, then you may need to take multiple heap dumps at different, key times to determine if there is an issue.
 
 You can use this script to generate a heap dump for your Liferay instance in any DXP Cloud environment:
 
