@@ -54,21 +54,21 @@ Note the `Bundle-SymbolicName`, `Bundle-Version`, and the `Web-ContextPath`. The
 
 Use the bundle symbolic name or context name to find the language keys specific to the module. Find the module's JAR file and examine its language keys. Liferay follows this module JAR file naming convention:
 
- ```
- [bundle symbolic name]-[version].jar
- ```
+```
+[bundle symbolic name]-[version].jar
+```
 
 For example, the Blogs Web version 5.0.36 module is in `com.liferay.blogs.web-5.0.36.jar`.
 
-Here's where to find the module JAR:
+Here's where to find the module:
 
 * Liferay's [Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/)
 * `[Liferay Home]/osgi/modules`
-* Liferay's [GitHub repository](https://github.com/liferay/liferay-portal/tree/master/modules/apps) for `/modules/apps`
+* Source code at [`liferay-[dxp|portal]/modules/apps`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps).
 
 The language property files are in the module's `src/main/resources/content` folder. Identify the language keys you want to override in the `Language[xx_XX].properties` files.
 
-Note that the language keys for different languages can be identified by the filename ending. For example `Language_ja.properties` would be for Japanese.
+Note that the language keys for different languages and locales can be identified by the filename ending. For example, `Language_ja.properties` is for Japanese.
 
 The example changes the default `Add Blog Entry` language key to a custom key. Now it's time to deploy it. 
 
@@ -78,7 +78,7 @@ The example changes the default `Add Blog Entry` language key to a custom key. N
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Overriding Module Language Keys](./liferay-e6u7.zip).
+1. Download and unzip `liferay-e6u7.zip`.
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-e6u7.zip -O
@@ -91,11 +91,15 @@ The example changes the default `Add Blog Entry` language key to a custom key. N
 1. From the module root, build and deploy.
 
     ```bash
+    cd liferay-e6u7
+    ```
+
+    ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -104,7 +108,13 @@ The example changes the default `Add Blog Entry` language key to a custom key. N
     STARTED com.acme.e6u7.impl_1.0.0 [1650]
     ```
 
-1. Verify that the example module is working. Open your browser to `https://localhost:8080`
+1. Open your browser to `https://localhost:8080`.
+
+1. Sign in using the default credentials:
+
+    **User Name:** `test@liferay.com`
+
+    **Password:** `test`
 
 1. Navigate to *Content & Data* &rarr; *Blogs*. Move your cursor over the add icon (![Add](../../images/icon-add.png)). The message now shows the custom language key.
 
@@ -122,36 +132,26 @@ First select the keys you wish to override. For example, the tutorial code overr
 
 Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the keys your way. Make sure the filename matches the locale you wish to override. For example, if Japanese, use `Language_ja.properties`.
 
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/resources/content/Language_ja.properties
+:language: properties
+```
+
 ## Create the Language Resource Bundle
 
 In your module, create a class that extends `java.util.ResourceBundle` for the locale you're overriding. Here's an example resource bundle class for the `en_US` locale:
 
-```java
-@Component(property = "language.id=en_US", service = ResourceBundle.class)
-public class E6U7EnglishResourceBundle extends ResourceBundle {
-
-	@Override
-	public Enumeration<String> getKeys() {
-		return _resourceBundle.getKeys();
-	}
-
-	@Override
-	protected Object handleGetObject(String key) {
-		return _resourceBundle.getObject(key);
-	}
-
-	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_en_US", UTF8Control.INSTANCE);
-
-}
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
+:language: java
+:lines: 10-26
 ```
 
 The class's `_resourceBundle` field is assigned a `ResourceBundle`. The call to `ResourceBundle.getBundle` needs two parameters. The `content.Language_en_US` parameter is the language file's qualified name with respect to the module's `src/main/resources/content` folder. The second parameter is a `control` that sets the language syntax of the resource bundle. To use language syntax identical to Liferay's syntax, import Liferay's `com.liferay.portal.kernel.language.UTF8Control` class and set the second parameter to `UTF8Control.INSTANCE`. 
 
 The class's `@Component` annotation declares it an OSGi `ResourceBundle` service component. Its `language.id` property designates it for the `en_US` locale. 
 
-```java
-@Component(property = "language.id=en_US", service = ResourceBundle.class)
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
+:language: java
+:lines: 10
 ```
 
 The class overrides these methods:
@@ -166,31 +166,26 @@ Your resource bundle service component redirects the default language keys to yo
 
 Component definition:
 
-```java
-@Component(property = "language.id=ja", service = ResourceBundle.class)
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
+:language: java
+:lines: 10
 ```
 
 Resource bundle assignment:
 
-```java
-	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_ja", UTF8Control.INSTANCE);
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
+:dedent: 1
+:language: java
+:lines: 23-24
 ```
 
 ## Prioritize Your Module's Resource Bundle
 
 For the target module to use your custom language keys, you must specify your resource bundle in the OSGI manifest header. List your module first to prioritize its resource bundle over the target module resource bundle. This aggregates the two resources together. Here's an example of our tutorial module `com.acme.e6u7.impl` prioritizing its resource bundle over the target module `com.liferay.blogs.web`'s resource bundle:
 
-```properties
-Provide-Capability:\
-	liferay.resource.bundle;\
-		resource.bundle.base.name="content.Language",\
-	liferay.resource.bundle;\
-		bundle.symbolic.name=com.liferay.blogs.web;\
-		resource.bundle.aggregate:String="(bundle.symbolic.name=com.acme.e6u7.impl),(bundle.symbolic.name=com.liferay.blogs.web)";\
-		resource.bundle.base.name="content.Language";\
-		service.ranking:Long="2";\
-		servlet.context.name=blogs-web
+```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/bnd.bnd
+:language: properties
+:lines: 4-12
 ```
 
 The example `Provide-Capability` header has two parts: 
