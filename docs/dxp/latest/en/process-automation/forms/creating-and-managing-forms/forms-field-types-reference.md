@@ -13,13 +13,31 @@ The Liferay Forms application contains lots of field types and elements to add t
 
 The field configuration editor sidebar appears whenever you add a new field or click an existing one in the form builder. The available configuration options differ by field type.
 
-All Form Fields have at least two configuration types: basic and advanced. Many forms can be [created](../creating-and-managing-forms/creating-forms.md) with just the basic configurations, which include things like its label, [placeholder text, help text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), and whether the field is required. There are additional field-specific configurations as well.
+All Form Fields have at least two configuration types: basic and advanced. Many forms can be [created](../creating-and-managing-forms/creating-forms.md) with just the basic configurations, which include things like its label, [placeholder text, help text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), whether the field is required, and what the required message says. There are additional field-specific configurations as well.
 
 ![The Select from List field has several basic configurations.](./forms-field-types-reference/images/15.png)
 
-Advanced configurations include [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), search configurations, whether the field is repeatable, and the read-only field ID. There are additional-field-specific configurations as well.
+Advanced configurations include [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), search configurations, whether the field is repeatable, the system/programmatic field reference, and field confirmation. There are additional-field-specific configurations as well.
 
 ![The Text field has several advanced configurations.](./forms-field-types-reference/images/14.png)
+
+### Field Confirmation
+
+Rather than a field in the Form Builder that you add directly to the form body, the confirmation field only appears in the form when you configure a single-line Text or Numeric field to _Require Confirmation_ (using the field's Advanced configuration section). This field ensures that fields with important data are entered correctly (for example, email address fields).
+
+![Confirmation fields help ensure the user enters the correct information.](./forms-field-types-reference/images/21.png)
+
+New configuration options appear when you enable the confirmation field:
+
+**Direction:** Choose Vertical (the default) or Horizontal to determine whether the confirmation field appears below or alongside the original field.
+
+**Label:** Choose the prefix for the original field label. The default value is Confirm, so a field named Email Address has a confirmation field label of _Confirm Email Address_.
+
+**Error Message:** Depending on the field you're asking confirmation of, you can provide a more specific error message.
+
+![Confirmation fields are configurable.](./forms-field-types-reference/images/22.png)
+
+See [Validating Text and Numeric Field Entries](validating-text-and-numeric-field-entries.md) for information on ensuring the user enters information in a valid format.
 
 ### Field Name, Field ID, and Field Reference
 
@@ -142,24 +160,6 @@ Users can enter the hex code of a color by selecting it from the color picker or
 Users can enter Rich Text content (including formatted text, embedded images, attachments, etc.) into a form field.
 
 ![Rich Text fields let users write formatted text with embedded images in a form.](./forms-field-types-reference/images/12.png)
-
-### Field Confirmation
-
-Rather than a field in the Form Builder that you add directly to the form body, the confirmation field only appears when you configure a single-line Text or Numeric field to _Require Confirmation_ (using the field's Advanced configuration section). This field ensures that fields with important data are entered correctly (for example, email address fields).
-
-![Confirmation fields help ensure the user enters the correct information.](./forms-field-types-reference/images/21.png)
-
-New configuration options appear when you enable the confirmation field:
-
-**Direction:** Choose Vertical (the default) or Horizontal to determine whether the confirmation field appears below or alongside the original field.
-
-**Label:** Choose the prefix for the original field label. The default value is Confirm, so a field named Email Address has a confirmation field label of _Confirm Email Address_.
-
-**Error Message:** Depending on the field you're asking confirmation of, you can provide a more specific error message.
-
-![Confirmation fields are configurable.](./forms-field-types-reference/images/22.png)
-
-See [Validating Text and Numeric Field Entries](validating-text-and-numeric-field-entries.md) for information on ensuring the user enters information in a valid format.
 
 ## Additional Information
 
