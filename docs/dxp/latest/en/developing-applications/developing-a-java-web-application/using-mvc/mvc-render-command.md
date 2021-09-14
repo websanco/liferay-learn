@@ -1,6 +1,6 @@
 # MVC Render Command
 
-MVC Render Commands are classes that handle render logic. They are invoked by `MVCPortlet` render URLs and requests. If your render logic is simple and you want to implement all of it in your portlet class, see [Rendering Views with MVC Portlet](./rendering-views-with-mvc-portlet.md). If your render logic is complex or you want clean separation between render paths, use MVC Render Commands.
+MVC Render Commands are classes that handle which page to render. They are invoked by `MVCPortlet` render URLs and requests. If your render logic is simple you can [implement all of it in your portlet class](./rendering-views-with-mvc-portlet.md). If your render logic is complex or you want clean separation between render paths, use MVC Render Commands.
 
 ## Invoke an MVC Render Command
 
@@ -46,9 +46,9 @@ Here you'll deploy an example portlet that renders views using MVC render comman
 
 1. Sign in using the default credentials:
 
-    **User Name:** `test@liferay.com`
+   **User Name:** `test@liferay.com`
 
-    **Password:** `test`
+   **Password:** `test`
 
 1. Add the *A4P1 Portlet* widget from the *Samples* category to a widget page. The A4P1 Portlet appears.
 
@@ -98,7 +98,7 @@ The portlet's MVC Render Command classes are next.
 
 ## Examine the MVCRenderCommand Classes
 
-MVC Render Command classes can implement [`MVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java) directly or implement it indirectly by extending [`BaseMVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCRenderCommand.java). `A4P1AbleMVCRenderCommand` directly implements `MVCRenderCommand`. Here is `A4P1AbleMVCRenderCommand`:
+MVC Render Command classes can implement [`MVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java) directly or extend [`BaseMVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCRenderCommand.java). `A4P1AbleMVCRenderCommand` directly implements `MVCRenderCommand`. Here is `A4P1AbleMVCRenderCommand`:
 
 ```{literalinclude} ./mvc-render-command/resources/liferay-a4p1.zip/a4p1-web/src/main/java/com/acme/a4p1/web/internal/portlet/action/A4P1AbleMVCRenderCommand.java
 :language: java
@@ -115,21 +115,21 @@ When the portlet receives a request parameter that specifies the MVC command nam
 
 `A4P1BakerMVCRenderCommand` is similar to `A4P1AbleMVCRenderCommand` except its MVC command name is `/a4p1/baker` and its render method returns the view path `/a4p1/baker.jsp`.
 
-These example MVC Render Commands provide trivial functionality for demonstration purposes. Implement your MVC Render Command `render` method with logic required to render your views.
+These example MVC Render Commands provide trivial functionality for demonstration purposes. Implement your MVC Render Command's `render` method using logic required to render your views.
 
-The example view JSPs' portlet render URLs trigger the MVC Render Commands.
+The example URLs trigger the MVC Render Commands.
 
 ## Examine the Portlet Render URLs
 
 The `able.jsp` and `baker.jsp` files indirectly link to each other using portlet render URLs. Here is `able.jsp`:
 
 ```{literalinclude} ./mvc-render-command/resources/liferay-a4p1.zip/a4p1-web/src/main/resources/META-INF/resources/a4p1/able.jsp
-:language: javascript
+:language: jsp
 ```
 
 The `portlet:renderURL` tag is available from the portlet taglib and is assigned the prefix `portlet`. This render URL declares the `mvcRenderCommandName` portlet parameter value `/a4p1/baker`---this is `A4P1AbleMVCRenderCommand`'s MVC command name. The variable `bakerURL` references this render URL.
 
-The hyperlink `<a href="<%= bakerURL %>">Go to Baker</a>` binds the render URL to an action.When a user clicks on the hyperlink, the portlet sends the [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) to `A4P1BakerMVCRenderCommand` because its `mvc.command.name` component property value `/a4p1/baker` matches the `mvcRenderCommandName` parameter value.
+The hyperlink `<a href="<%= bakerURL %>">Go to Baker</a>` binds the render URL to an action. When a user clicks on the hyperlink, the portlet sends the [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) to `A4P1BakerMVCRenderCommand` because its `mvc.command.name` component property value `/a4p1/baker` matches the `mvcRenderCommandName` parameter value.
 
 `baker.jsp` is similar to `able.jsp` except its portlet render URL `mvcRenderCommandName` parameter value is `/a4p1/able`. Each JSP's `portlet:renderURL` tag maps to an MVC Render Command by assigning the MVC Render Command's `mvc.command.name` property value to the tag's `mvcRenderCommandName` portlet parameter.
 
