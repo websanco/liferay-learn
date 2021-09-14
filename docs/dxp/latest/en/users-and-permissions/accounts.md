@@ -12,4 +12,4 @@ accounts/account-management-widget.md
 - [Account Users](./accounts/account-users.md)
 - [Account Groups](./accounts/account-groups.md)
 - [Account Roles](./accounts/account-roles.md)
-- [Account Management Widget](./users/accounts/account-management-widget.md)
+- [Account Management Widget](./accounts/account-management-widget.md)
