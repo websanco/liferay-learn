@@ -18,7 +18,7 @@ public class MessageBoardMessage_PATCH_ById {
 			new MessageBoardMessage() {
 				{
 					articleBody = "Bar";
-					headline = "Easy Message";
+					headline = "Fox Message";
 				}
 			});
 		

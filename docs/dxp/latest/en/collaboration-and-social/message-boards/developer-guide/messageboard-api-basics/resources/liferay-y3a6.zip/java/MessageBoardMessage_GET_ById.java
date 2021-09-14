@@ -1,10 +1,10 @@
 import com.liferay.headless.delivery.client.dto.v1_0.MessageBoardMessage;
 import com.liferay.headless.delivery.client.resource.v1_0.MessageBoardMessageResource;
 
-public class MessageBoardMessage_POST_ToThread {
+public class MessageBoardMessage_GET_ById {
 
 	/**
-	 * java -classpath .:* -DmessageBoardThreadId=1234 MessageBoardMessage_POST_ToThread
+	 * java -classpath .:* -DmessageBoardMessageId=1234 MessageBoardMessage_GET_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		MessageBoardMessageResource.Builder builder = MessageBoardMessageResource.builder();
@@ -13,15 +13,9 @@ public class MessageBoardMessage_POST_ToThread {
 			"test@liferay.com", "test"
 		).build();
 
-		MessageBoardMessage messageBoardMessage = messageBoardMessageResource.postMessageBoardThreadMessageBoardMessage(
-			Long.valueOf(System.getProperty("messageBoardThreadId")),
-			new MessageBoardMessage() {
-				{
-					articleBody = "Foo";
-					headline = "Easy Message";
-				}
-			});
-		
+		MessageBoardMessage messageBoardMessage = messageBoardMessageResource.getMessageBoardMessage(
+			Long.valueOf(System.getProperty("messageBoardMessageId")));
+
 		System.out.println(messageBoardMessage);
 	}
 
