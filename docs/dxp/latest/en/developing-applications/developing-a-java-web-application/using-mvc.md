@@ -17,10 +17,10 @@ If you're an experienced developer, this is not the first time you've heard abou
 
 * It's lightweight, as opposed to many other Java MVC frameworks.
 * There are no special configuration files that need to be kept in sync with your code.
-* It's a simple extension of [`GenericPortlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/GenericPortlet.html).
+* It's an extension of [`GenericPortlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/GenericPortlet.html).
 * You avoid writing a bunch of boilerplate code, since Liferay's MVC Portlet framework only looks for some pre-defined parameters when the `init()` method is called.
 * The controller can be broken down into MVC command classes, each of which handles the controller code for a particular [portlet phase](./reference/portlets.md) (render, action, and resource serving phases).
-* An MVC command class can serve multiple portlets.
+* MVC command classes can serve multiple portlets.
 * Liferay's portlets use it. That means there are plenty of robust implementations to reference when you need to design or troubleshoot your Liferay applications.
 
 The Liferay MVC Portlet framework is light and easy to use.
@@ -40,11 +40,11 @@ In MVC, there are three layers.
 
 **Model:** The model layer holds the application data and logic for manipulating it.
 
-**View:** The view layer contains logic for displaying data.
+**View:** The view layer displays data.
 
-**Controller:** The middle man in the MVC pattern, the Controller contains logic for passing the data back and forth between the view and the model layers.
+**Controller:** The middle man in the MVC pattern, the Controller passes the data back and forth between the view and the model layers.
 
-Liferay DXP's applications are divided into multiple discrete [modules](../../liferay-internals/architecture/osgi-and-modularity.md). With [Service Builder](../data-frameworks/service-builder.md), the model layer is generated into a `service` and an `api` [module](../../liferay-internals/fundamentals/module-projects.md). That accounts for the model in the MVC pattern. The view and the controller layers share a module, the `web` module.
+Liferay DXP's applications are divided into multiple discrete [modules](../../liferay-internals/architecture/osgi-and-modularity.md). With [Service Builder](../data-frameworks/service-builder.md), the model layer is generated into `service` and `api` [modules](../../liferay-internals/fundamentals/module-projects.md). The view and the controller layers share a module, the `web` module.
 
 Generating the skeleton for a multi-module Service Builder-driven MVC application [project](../../liferay-internals/fundamentals/module-projects.md) using [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md) saves you lots of time and gets you started on the more important (and interesting, if we're being honest) development work.
 
@@ -117,7 +117,7 @@ If you want to develop control logic in separate MVC command classes, read these
 * [MVC Render Command](./using-mvc/mvc-render-command.md)
 * [MVC Resource Command](./using-mvc/mvc-resource-command.md)
 
-If you're ready to develop your model layer, see [Servie Builder](../data-frameworks/service-builder.md).
+If you're ready to develop your model layer, see [Service Builder](../data-frameworks/service-builder.md).
 
 ## Additional Information
 
