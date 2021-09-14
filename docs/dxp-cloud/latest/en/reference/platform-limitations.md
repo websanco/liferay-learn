@@ -53,6 +53,8 @@ These limitations apply to the [Liferay service](../using-the-liferay-dxp-servic
 
 * **Autoscaling**: When enabled, autoscaling may only add new instances up to a maximum of 10.
 
+* **Document Library Storage**: Your subscription plan determines the size of the `data` volume for (including the document library) for the Liferay service. The default volume size is 100 GB, but it can be increased as long as the size is below 4 TB. A private cluster is required if a project needs more than 4 TB of storage.
+
 * **Session Replication**: Replicating sessions between multiple Liferay instances in DXP Cloud may impact your instances' performance, and is not supported. <!-- Instead, use sticky sessions, or avoid using session storage entirely in your custom applications. -->
 
 ### Dynatrace
