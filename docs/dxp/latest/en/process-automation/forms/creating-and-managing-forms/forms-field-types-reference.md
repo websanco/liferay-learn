@@ -161,6 +161,14 @@ Users can enter Rich Text content (including formatted text, embedded images, at
 
 ![Rich Text fields let users write formatted text with embedded images in a form.](./forms-field-types-reference/images/12.png)
 
+### Search Location
+
+Use the Search Location field(s) in Liferay 7.4+ to collect valid addresses conveniently from form users.
+
+![The Search Location field requires a Google Places API key.](./forms-field-types-reference/images/23.png)
+
+See [Using the Search Location Field](using-the-search-location-field.md) for more information.
+
 ## Additional Information
 
 * [Creating Forms](./creating-forms.md)
