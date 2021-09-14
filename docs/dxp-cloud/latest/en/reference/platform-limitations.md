@@ -51,7 +51,7 @@ These limitations apply to the [Liferay service](../using-the-liferay-dxp-servic
 
 * **Remote Staging**: [Remote Staging](https://learn.liferay.com/dxp/latest/en/site-building/publishing-tools/staging/configuring-remote-live-staging.html) is not available with DXP Cloud. Local Staging is still available and supported.
 
-* **Autoscaling**: When enabled, autoscaling may only add new instances up to a maximum of 10.
+* **Autoscaling**: When enabled, autoscaling may only add new instances up to a default maximum of 10. You can configure a different maximum number of instances, up to 100 instances.
 
 * **Document Library Storage**: Your subscription plan determines the size of the `data` volume for (including the document library) for the Liferay service. The default volume size is 100 GB, but it can be increased as long as the size is below 4 TB. A private cluster is required if a project needs more than 4 TB of storage.
 
