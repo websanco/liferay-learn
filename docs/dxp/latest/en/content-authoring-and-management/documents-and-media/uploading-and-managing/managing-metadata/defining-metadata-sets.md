@@ -10,7 +10,7 @@ Follow these steps to define a new Metadata Set.
 
    ![Click on Documents and Media under Content & Data in the Site Menu.](./defining-metadata-sets/images/01.png)
 
-   To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
+   To access Documents and Media in an Asset Library, navigate to any Library where it's enabled and click on *Documents and Media*.
 
    ![Click on Documents and Media in the Asset Library.](./defining-metadata-sets/images/02.png)
 

@@ -16,7 +16,7 @@ To access Documents and Media in a Site, open the *Site Menu* (![Site Menu](../.
 
 ![Click on Documents and Media under Content & Data in the Site Menu.](./uploading-files/images/01.png)
 
-To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
+To access Documents and Media in an Asset Library, navigate to any Library where it's enabled and click on *Documents and Media*.
 
 ![Click on Documents and Media in the Asset Library.](./uploading-files/images/02.png)
 

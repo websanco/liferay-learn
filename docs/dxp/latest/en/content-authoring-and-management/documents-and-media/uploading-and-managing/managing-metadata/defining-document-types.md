@@ -10,7 +10,7 @@ Follow these steps to define a custom Document Type.
 
    ![Click on Documents and Media under Content & Data in the Site Menu.](./defining-document-types/images/01.png)
 
-   To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
+   To access Documents and Media in an Asset Library, navigate to any Library where it's enabled and click on *Documents and Media*.
 
    ![Click on Documents and Media in the Asset Library.](./defining-document-types/images/02.png)
 
@@ -20,7 +20,7 @@ Follow these steps to define a custom Document Type.
 
 1. Enter a *name* for the Document Type.
 
-1. In the *Builder* tab, drag and drop the desired fields into the designated drop zone.
+1. In the Builder tab, drag and drop the desired fields into the designated drop zone.
 
    ![Add fields in the Builder tab.](./defining-document-types/images/03.png)
 
@@ -32,15 +32,15 @@ Follow these steps to define a custom Document Type.
 
    ![Create and configure field groups.](./defining-document-types/images/05.png)
 
-   ```note::
-      All custom Document Types have the following fields: Upload File, Title, File Name, and Description. Fields added to a custom Document Type are listed in addition to these default fields.
+   ```{note}
+   All custom Document Types have the following fields: Upload File, Title, File Name, and Description. Fields added to a custom Document Type are listed in addition to these default fields.
    ```
 
 1. (Optional) Click on the *Details* tab, and enter a *description*.
 
    ![Enter a description in the Details tab.](./defining-document-types/images/06.png)
 
-1. (Optional) Click on the *Additional Metadata Fields* tab, and select any existing [Metadata Sets](./defining-metadata-sets.md) you want to add to the new Document Type.
+1. (Optional) Click on the *Additional Metadata Fields* tab and select any existing [Metadata Sets](./defining-metadata-sets.md) you want to add to the new Document Type.
 
    ![Add Metadata Sets in the Additional Metadata Fields tab.](./defining-document-types/images/07.png)
 
@@ -54,7 +54,7 @@ Once saved, the new Document Type can now be accessed in the Documents and Media
 
 ![Use the Document Type to start a new upload.](./defining-document-types/images/09.png)
 
-When the Document Type is selected, users are presented with your configured metadata fields. See [Uploading Files](../uploading-files.md) for more information.
+When the Document Type is selected, users see your configured metadata fields. See [Uploading Files](../uploading-files.md) for more information.
 
 ## For Liferay 7.3.x and Earlier Versions
 

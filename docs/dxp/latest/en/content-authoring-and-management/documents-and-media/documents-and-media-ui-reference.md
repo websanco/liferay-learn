@@ -6,16 +6,16 @@ To access Documents and Media in a Site, open the *Site Menu* (![Site Menu](../.
 
 ![Click on Documents and Media under Content & Data in the Site Menu.](./documents-and-media-ui-reference/images/01.png)
 
-To access Documents and Media in an Asset Library, simply navigate to any Library where it's enabled, and click on *Documents and Media*.
+To access Documents and Media in an Asset Library, navigate to any Library where it's enabled, and click on *Documents and Media*.
 
 ![Click on Documents and Media in the Asset Library.](./documents-and-media-ui-reference/images/02.png)
 
 The Documents and Media application has three main tabs: [*Documents and Media*](#documents-and-media-tab), [*Document Types*](#document-types-tab), and [*Metadata Sets*](#metadata-sets-tab).
 
-You can also access additional settings by clicking on the *Actions* button (![Actions Button](../../images/icon-actions.png)) in the [Application Bar](#application-bar-settings).
+You can access additional settings by clicking on the *Actions* button (![Actions Button](../../images/icon-actions.png)) in the [Application Bar](#application-bar-settings).
 
-```note::
-   The Documents and Media UI is the same for Asset Libraries and Sites.
+```{note}
+The Documents and Media UI is the same for Asset Libraries and Sites.
 ```
 
 ## Documents and Media Tab
@@ -24,11 +24,11 @@ You can also access additional settings by clicking on the *Actions* button (![A
 
 The *Documents and Media* tab provides access to the application's primary features. Here you can view, search, add, and manage all digital assets, folders, and connected repositories.
 
-```note::
-   The Home folder serves as the root folder for the Documents and Media application.
+```{note}
+The Home folder serves as the root folder for the Documents and Media application.
 ```
 
-Click the *Add* button (![Add Button](../../images/icon-add.png)) to access the following  default actions. See [Creating Folders](./uploading-and-managing/creating-folders.md) and [Uploading Files](./uploading-and-managing/uploading-files.md) for more information.
+Click the *Add* button (![Add Button](../../images/icon-add.png)) to access these actions: File Upload, Multiple Files Upload, Folder, Repository, Shortcut, External Video Shortcut. See [Creating Folders](./uploading-and-managing/creating-folders.md) and [Uploading Files](./uploading-and-managing/uploading-files.md) for more information.
 
 ![Click the Add button to create a new folder or digital asset.](./documents-and-media-ui-reference/images/04.png)
 
@@ -40,7 +40,7 @@ Click the *Actions* button (![Actions Button](../../images/icon-actions.png)) fo
 
 ![Create custom templates for file uploads in the Document Types tab.](./documents-and-media-ui-reference/images/05.png)
 
-In the *Document Types* tab, you can create and manage custom templates used for adding new files to Documents and Media. These templates are created using metadata fields and provide additional, searchable information for uploaded files.
+Here you can create and manage custom templates used for adding new files to Documents and Media. These templates are created using metadata fields and provide additional, searchable information for uploaded files.
 
 To compose a new Document Type, drag and drop configurable metadata fields into the drop zone. You can also add a description, include custom [Metadata Sets](#metadata-sets-tab), and manage permissions.
 
@@ -52,7 +52,7 @@ Once created, you can use a template to add new digital assets in the Documents 
 
 ![Create custom groups of data fields in the Metadata Sets tab.](./documents-and-media-ui-reference/images/07.png)
 
-In the *Metadata Sets* tab, you can define reusable groups of metadata fields that can be added to custom Document Types. These Metadata Sets are composed in the same way as Document Types, by dragging and dropping metadata fields into the designated drop zone.
+Here you can define reusable groups of metadata fields that can be added to custom Document Types. These Metadata Sets are composed in the same way as Document Types, by dragging and dropping metadata fields into the designated drop zone.
 
 ![Use fields to create reusable Metadata Sets.](./documents-and-media-ui-reference/images/08.png)
 
@@ -90,10 +90,10 @@ Initiate [Export or Import](../../site-building/building-sites/importing-exporti
 
 ### Configuration
 
-Configure email notifications for Documents and Media. When configuring email notifications, you can use default placeholders for parsing information (e.g., `[$COMPANY_ID$]`, `[$DOCUMENT_TYPE$]`, `[$TO_NAME$]`). Available placeholders are listed in each tab under *Definition of Terms*.
+Configure email notifications for Documents and Media. When configuring email notifications, you can use default placeholders for parsing information (e.g., `[$COMPANY_ID$]`, `[$DOCUMENT_TYPE$]`, `[$TO_NAME$]`). Available placeholders appear in each tab under *Definition of Terms*.
 
-```note::
-   Using email notifications requires a connected mail server. See `Connecting to a Mail Server <../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md>`_ for more information.
+```{note}
+Using email notifications requires a connected mail server. See `Connecting to a Mail Server <../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md>`_ for more information.
 ```
 
 **Email From Tab**: Enter a name and email address to use for the email's sender.
