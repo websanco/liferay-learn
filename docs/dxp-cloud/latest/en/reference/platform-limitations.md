@@ -35,7 +35,7 @@ See the further sections below for more details.
 
 These limitations apply to every service in a DXP Cloud environment:
 
-* **Access to Old Logs**: By default, logs are only available from the last 30 days are available for each service. [Submit a Support request](https://help.liferay.com/) to access older logs (up to a year old).
+* **Access to Old Logs**: By default, logs are only available from the last 30 days for each service. [Submit a Support request](https://help.liferay.com/) to access older logs (up to a year old).
 
 * **Additional Instances per Service**: Your subscription plan determines the allowed [`scale` setting](../manage-and-optimize/auto-scaling.md) for your services. By default, all services will have only one additional instance (the Search service must use an odd number of additional instances). The `scale` setting will begin already configured to use the purchased number of instances for your subscription plan.
 
