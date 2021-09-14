@@ -4,8 +4,8 @@ Liferay DXP provides integration with Google Drive so you can create and edit Go
 
 ![Create Docs, Sheets, and Slides via Document.](./enabling-document-creation-and-editing-with-google-drive/images/01.png)
 
-```note::
-   This integration can be enabled globally (i.e., for all portal instances in a DXP installation), or for individual instances. Configurations at an instance level override global configurations.
+```{note}
+This integration can be enabled globally (i.e., for all portal instances in a DXP installation), or for individual instances. Configurations at an instance level override global configurations.
 ```
 
 ## Prerequisites
@@ -35,8 +35,8 @@ Follow these steps to enable Liferay's integration with Google Drive.
 
 1. Enter the Google Project's OAuth 2 *client ID* and *client secret*.
 
-   ```note::
-      The `Google Picker API <https://developers.google.com/picker/docs>`_ enables users to select photos, videos, maps and documents stored in Google from Liferay. It is only necessary when using Liferay's Plugin for Google Drive. See `Enabling Links to Google Drive Documents <./enabling-links-to-google-drive-documents.md>`_ for more information.
+   ```{note}
+   The [Google Picker API](https://developers.google.com/picker/docs) enables users to select photos, videos, maps and documents stored in Google from Liferay. It is only necessary when using Liferay's Plugin for Google Drive. See [Enabling Links to Google Drive Documents](./enabling-links-to-google-drive-documents.md) for more information.
    ```
 
 1. Click on *Save*.
