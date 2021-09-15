@@ -7,14 +7,17 @@ public class MessageBoardThread_GET_ById {
 	 * java -classpath .:* -DmessageBoardThreadId=1234 MessageBoardThread_GET_ById
 	 */
 	public static void main(String[] args) throws Exception {
-		MessageBoardThreadResource.Builder builder = MessageBoardThreadResource.builder();
+		MessageBoardThreadResource.Builder builder =
+			MessageBoardThreadResource.builder();
 
-		MessageBoardThreadResource messageBoardThreadResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		MessageBoardThreadResource messageBoardThreadResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
-		MessageBoardThread messageBoardThread = messageBoardThreadResource.getMessageBoardThread(
-			Long.valueOf(System.getProperty("messageBoardThreadId")));
+		MessageBoardThread messageBoardThread =
+			messageBoardThreadResource.getMessageBoardThread(
+				Long.valueOf(System.getProperty("messageBoardThreadId")));
 
 		System.out.println(messageBoardThread);
 	}

@@ -7,21 +7,24 @@ public class MessageBoardThread_PUT_ById {
 	 * java -classpath .:* -DmessageBoardThreadId=1234 MessageBoardThread_PUT_ById
 	 */
 	public static void main(String[] args) throws Exception {
-		MessageBoardThreadResource.Builder builder = MessageBoardThreadResource.builder();
+		MessageBoardThreadResource.Builder builder =
+			MessageBoardThreadResource.builder();
 
-		MessageBoardThreadResource messageBoardThreadResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		MessageBoardThreadResource messageBoardThreadResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
-		MessageBoardThread messageBoardThread = messageBoardThreadResource.putMessageBoardThread(
-			Long.valueOf(System.getProperty("messageBoardThreadId")),
-			new MessageBoardThread() {
-				{
-					articleBody = "Goo";
-					headline = "Fox Thread";
-				}
-			});
-		
+		MessageBoardThread messageBoardThread =
+			messageBoardThreadResource.putMessageBoardThread(
+				Long.valueOf(System.getProperty("messageBoardThreadId")),
+				new MessageBoardThread() {
+					{
+						articleBody = "Goo";
+						headline = "Fox Thread";
+					}
+				});
+
 		System.out.println(messageBoardThread);
 	}
 

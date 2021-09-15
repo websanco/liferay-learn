@@ -6,11 +6,13 @@ public class MessageBoardSection_DELETE_ById {
 	 * java -classpath .:* -DmessageBoardSectionId=1234 MessageBoardSection_DELETE_ById
 	 */
 	public static void main(String[] args) throws Exception {
-		MessageBoardSectionResource.Builder builder = MessageBoardSectionResource.builder();
+		MessageBoardSectionResource.Builder builder =
+			MessageBoardSectionResource.builder();
 
-		MessageBoardSectionResource messageBoardSectionResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		MessageBoardSectionResource messageBoardSectionResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
 
 		messageBoardSectionResource.deleteMessageBoardSection(
 			Long.valueOf(System.getProperty("messageBoardSectionId")));

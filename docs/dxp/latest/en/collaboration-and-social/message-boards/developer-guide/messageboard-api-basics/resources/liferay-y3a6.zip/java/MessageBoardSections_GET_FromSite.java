@@ -9,15 +9,18 @@ public class MessageBoardSections_GET_FromSite {
 	 * java -classpath .:* -DsiteId=1234 MessageBoardSections_GET_FromSite
 	 */
 	public static void main(String[] args) throws Exception {
-		MessageBoardSectionResource.Builder builder = MessageBoardSectionResource.builder();
-	
-		MessageBoardSectionResource messageBoardSectionResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		MessageBoardSectionResource.Builder builder =
+			MessageBoardSectionResource.builder();
 
-		Page<MessageBoardSection> page = messageBoardSectionResource.getSiteMessageBoardSectionsPage(
-			Long.valueOf(System.getProperty("siteId")), null, null, null, null,
-			Pagination.of(1, 2), null);
+		MessageBoardSectionResource messageBoardSectionResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
+
+		Page<MessageBoardSection> page =
+			messageBoardSectionResource.getSiteMessageBoardSectionsPage(
+				Long.valueOf(System.getProperty("siteId")), null, null, null,
+				null, Pagination.of(1, 2), null);
 
 		System.out.println(page);
 	}
