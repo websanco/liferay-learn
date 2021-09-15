@@ -89,8 +89,8 @@ These actions are trivial, but they demonstrate different ways to map UI compone
 The `U8T2Portlet` class is a standard [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) that has three action-handling methods.
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
-   :language: java
-   :lines: 22-51
+:language: java
+:lines: 14-53
 ```
 
 The [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) annotation marks the class as an OSGi Declarative Services Component that provides the [`Portlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/Portlet.html) service. The properties make the portlet available in the *Sample* widget category, name the portlet *U8T2 Portlet*, and set the portlet's default view template to `/view.jsp`.
@@ -104,7 +104,7 @@ The JSP (discussed next) maps to the example methods using portlet action URLs. 
 The `view.jsp` binds UI components to the portlet's action-handling methods using portlet action URLs. Here's the `view.jsp` code:
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
-   :language: javascript
+:language: javascript
 ```
 
 The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Examine each action URL.
@@ -114,16 +114,16 @@ The first line makes the Portlet 2.0 tag library available via the `portlet` pre
 The `view.jsp` declares the following portlet action URL.
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
-   :language: javascript
-   :lines: 3
+:language: javascript
+:lines: 3
 ```
 
 A `portlet:actionURL`'s `name` attribute maps to the `doSomething` portlet method. The `var` attribute assigns the portlet action URL to an arbitrary variable. This JSP binds the action URL to a hyperlink labeled `Do Something` by referencing the `actionURL` variable.
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
-   :dedent: 1
-   :language: javascript
-   :lines: 6
+:dedent: 1
+:language: javascript
+:lines: 8
 ```
 
 Clicking this link invokes the portlet's `doSomething` method. You can bind the action URL to multiple UI components by referencing the action URL's variable.
@@ -133,9 +133,9 @@ Clicking this link invokes the portlet's `doSomething` method. You can bind the 
 The JSP declares another action URL directly in an anchor component.
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
-   :dedent: 1
-   :language: javascript
-   :lines: 10
+:dedent: 1
+:language: javascript
+:lines: 12
 ```
 
 The component declares an action URL that binds the action to the portlet's `doSomethingElse` method. It's a more compact way of mapping an action URL.
@@ -147,17 +147,17 @@ In the last anchor, the JSP declares an action URL that maps to an action-proces
 JSP action URL:
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/resources/META-INF/resources/view.jsp
-   :dedent: 1
-   :language: javascript
-   :lines: 14
+:dedent: 1
+:language: javascript
+:lines: 16
 ```
 
 Portlet method:
 
 ```{literalinclude} ./invoking-actions-with-mvc-portlet/resources/liferay-u8t2.zip/u8t2-web/src/main/java/com/acme/u8t2/web/internal/portlet/U8T2Portlet.java
-   :dedent: 1
-   :language: java
-   :lines: 40-42
+:dedent: 1
+:language: java
+:lines: 41-49
 ```
 
 The portlet parameter called `nameForTheDoSomethingMoreMethod` provides looser coupling between the action URL and method. For example, it frees you to change the method name or to assign the `@ProcessAction(name = "nameForTheDoSomethingMoreMethod")` annotation to a different method.
