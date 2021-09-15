@@ -6,16 +6,16 @@ Liferay DXP provides integration with Google's Cloud Storage (GCS) service. With
 
 Before enabling this connection, you must first prepare your GCS account. When ready, configure the Liferay instance to use GCS via the Control Panel, and set the `dl.store.impl` portal property to use GCS as the default store.
 
-```important::
-   If a database transaction rollback occurs in a Document Library, the transaction’s file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. This is a limitation of all DXP stores besides DBStore.
+```{important}
+If a database transaction rollback occurs in a Document Library, the transaction’s file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. This is a limitation of all DXP stores besides DBStore.
 ```
 
 ## GCS Prerequisites
 
 Enabling Liferay's GCS integration requires an active GCS account and project. This project must have a [storage bucket](https://cloud.google.com/storage/docs/creating-buckets) and a [service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts) to enable server-to-server, app-level authentication. You must also create a JSON [security key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) for the service account. See official [Google Cloud Storage](https://cloud.google.com/storage/docs) documentation for more information.
 
-```important::
-   The service account's security key must use the JSON key type.
+```{important}
+The service account's security key must use the JSON key type.
 ```
 
 ## Configuring the GCS Store in Liferay
