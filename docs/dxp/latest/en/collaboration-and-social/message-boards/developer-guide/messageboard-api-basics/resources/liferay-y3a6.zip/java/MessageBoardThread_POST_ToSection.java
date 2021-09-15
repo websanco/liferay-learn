@@ -18,7 +18,7 @@ public class MessageBoardThread_POST_ToSection {
 			new MessageBoardThread() {
 				{
 					articleBody = "Foo";
-					headline = "Dog Thread";
+					headline = "Easy Thread";
 				}
 			});
 		

@@ -18,7 +18,7 @@ public class MessageBoardSection_POST_ToSite {
 			new MessageBoardSection() {
 				{
 					description = "Foo";
-					title = "Dog Section";
+					title = "Charlie Section";
 				}
 			});
 		

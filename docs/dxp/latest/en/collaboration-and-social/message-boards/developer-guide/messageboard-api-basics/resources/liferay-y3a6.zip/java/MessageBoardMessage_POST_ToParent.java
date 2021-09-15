@@ -18,7 +18,7 @@ public class MessageBoardMessage_POST_ToParent {
 			new MessageBoardMessage() {
 				{
 					articleBody = "Foo";
-					headline = "How Message";
+					headline = "Fox Message";
 				}
 			});
 		

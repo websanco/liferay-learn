@@ -18,7 +18,7 @@ public class MessageBoardMessage_PUT_ById {
 			new MessageBoardMessage() {
 				{
 					articleBody = "Goo";
-					headline = "George Message";
+					headline = "Easy Message";
 				}
 			});
 		

@@ -18,7 +18,6 @@ public class MessageBoardSection_PATCH_ById {
 			new MessageBoardSection() {
 				{
 					description = "Bar";
-					title = "Easy Section";
 				}
 			});
 		

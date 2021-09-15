@@ -18,7 +18,7 @@ public class MessageBoardSection_PUT_ById {
 			new MessageBoardSection() {
 				{
 					description = "Goo";
-					title = "Fox Section";
+					title = "Dog Section";
 				}
 			});
 		
