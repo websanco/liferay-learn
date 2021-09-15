@@ -94,7 +94,7 @@ You can configure the built-in data source connection by passing DXP environment
 
 ### Portal Properties
 
-You can configure the datasource connection on a Liferay Tomcat Bundle, application server installation, or Docker image using a [portal properties](./portal-properties.md) file. See [Database Templates](./database-templates.md) for examples.
+You can configure the data source connection on a Liferay Tomcat Bundle, application server installation, or Docker image using a [portal properties](./portal-properties.md) file. See [Database Templates](./database-templates.md) for examples.
 
 ```{note}
 Using a portal properties file with a Docker image requires passing in the file using a bind mount or volume. See [Providing Files to the Container](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) for details.
@@ -107,5 +107,5 @@ If you're running DXP for non-production purposes on a Bundle or an application 
 ![The Setup Wizard's database section lets you configure DXP's built-in data source.](./database-configurations/images/01.png)
 
 ```{note}
-If you're using a data source managed on your application server. See the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
+If you're using a data source managed on your application server, see the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
 ```
