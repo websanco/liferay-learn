@@ -2,12 +2,12 @@
 
 With Documents and Media, you can upload any type of file to your Liferay instance's [file store](../../../system-administration/file-storage/configuring-file-storage.md) or connected repositories. Once uploaded, Users with the requisite [permissions](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) can view, edit, download, or share uploaded files.
 
-```note::
-   Users can configure Liferay to tag supported assets automatically when uploaded. See `Configuring Asset Auto Tagging <../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md>`_ to learn more. 
+```{note}
+Users can configure Liferay to tag supported assets automatically when uploaded. See [Configuring Asset Auto Tagging](../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md) to learn more. 
 ```
 
-```important::
-   You can enable automatic antivirus scanning to scan files on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```{important}
+You can enable automatic antivirus scanning to scan files on upload. For details, please see [Enabling Antivirus Scanning for Uploaded Files](../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md).
 ```
 
 In order to upload files, first navigate to the Documents and Media application in a Site or Asset Library.

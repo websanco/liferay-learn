@@ -2,12 +2,12 @@
 
 All files uploaded to Liferay DXP are stored in the instance's designated file store. This includes files uploaded using [Documents and Media](../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), as well as those uploaded using applications that support file attachments (e.g., [Message Boards](../../collaboration-and-social/collaboration-and-social-overview.md)). The file store can be hosted on the local machine, on a network mounted file system, in a database, or in the cloud.
 
-```important::
-   If you are going to production, we highly recommend reviewing the various File Store configuration options and choosing the one that best fits your needs, **before** going live. Doing so can avoid painful file store migrations later in a project's life.
+```{important}
+If you are going to production, we highly recommend reviewing the various File Store configuration options and choosing the one that best fits your needs, **before** going live. Doing so can avoid painful file store migrations later in a project's life.
 ```
 
-```note::
-   The file store is also known as the Document Library.
+```{note}
+The file store is also known as the Document Library.
 ```
 
 ## Configuring Advanced File System Store
@@ -36,8 +36,8 @@ To use the Advanced File System store method, following these steps:
 
 Liferay is now saving files using Advanced File System Store.
 
-```important::
-   Optionally `enable automatic antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```{important}
+Optionally [enable automatic antivirus scanning for uploaded files](./enabling-antivirus-scanning-for-uploaded-files.md).
 ```
 
 ### File Storage in a Clustered Environment
@@ -56,8 +56,8 @@ There are other built-in file storage methods available.
 
 * [DBStore (Database Storage)](./other-file-store-types/dbstore.md) stores files to the DXP database as `blobs`. DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, use the Simple File System Store or the Advanced File System Store.
 
-```warning::
-   File system based stores (Simple, Advanced, S3) do not have transaction rollback capability. If a database transaction rollback occurs in a Document Library, the transaction's file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All stores except `DBStore <./other-file-store-types/dbstore.md>`_ are vulnerable to this limitation.
+```{warning}
+File system based stores (Simple, Advanced, S3) do not have transaction rollback capability. If a database transaction rollback occurs in a Document Library, the transaction's file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All stores except [DBStore](./other-file-store-types/dbstore.md) are vulnerable to this limitation.
 ```
 
 ### Migrating Files Across File Stores
