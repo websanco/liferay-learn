@@ -4,7 +4,7 @@ import com.liferay.headless.delivery.client.resource.v1_0.MessageBoardMessageRes
 public class MessageBoardMessage_POST_ToParent {
 
 	/**
-	 * java -classpath .:* -DmessageBoardMessageId=1234 MessageBoardMessage_POST_ToParent
+	 * java -classpath .:* -DparentMessageBoardMessageId=1234 MessageBoardMessage_POST_ToParent
 	 */
 	public static void main(String[] args) throws Exception {
 		MessageBoardMessageResource.Builder builder = MessageBoardMessageResource.builder();
@@ -14,7 +14,7 @@ public class MessageBoardMessage_POST_ToParent {
 		).build();
 
 		MessageBoardMessage messageBoardMessage = messageBoardMessageResource.postMessageBoardMessageMessageBoardMessage(
-			Long.valueOf(System.getProperty("messageBoardMessageId")),
+			Long.valueOf(System.getProperty("parentMessageBoardMessageId")),
 			new MessageBoardMessage() {
 				{
 					articleBody = "Foo";

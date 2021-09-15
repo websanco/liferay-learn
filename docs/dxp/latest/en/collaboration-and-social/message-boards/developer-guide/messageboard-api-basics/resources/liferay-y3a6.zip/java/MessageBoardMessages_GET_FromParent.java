@@ -6,7 +6,7 @@ import com.liferay.headless.delivery.client.resource.v1_0.MessageBoardMessageRes
 public class MessageBoardMessages_GET_FromParent {
 
 	/**
-	 * java -classpath .:* -DmessageBoardMessageId=1234 MessageBoardMessages_GET_FromParent
+	 * java -classpath .:* -DparentMessageBoardMessageId=1234 MessageBoardMessages_GET_FromParent
 	 */
 	public static void main(String[] args) throws Exception {
 		MessageBoardMessageResource.Builder builder = MessageBoardMessageResource.builder();
@@ -16,7 +16,7 @@ public class MessageBoardMessages_GET_FromParent {
 		).build();
 
 		Page<MessageBoardMessage> page = messageBoardMessageResource.getMessageBoardMessageMessageBoardMessagesPage(
-			Long.valueOf(System.getProperty("messageBoardMessageId")), null, null, null, null,
+			Long.valueOf(System.getProperty("parentMessageBoardMessageId")), null, null, null, null,
 			Pagination.of(1, 2), null);
 		
 		System.out.println(page);
