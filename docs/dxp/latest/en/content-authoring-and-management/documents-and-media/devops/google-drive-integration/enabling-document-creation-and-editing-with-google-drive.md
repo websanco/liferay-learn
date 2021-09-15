@@ -43,8 +43,8 @@ Follow these steps to enable Liferay's integration with Google Drive.
 
 Once enabled, authorized users can create Google Docs, Slides, and Sheets via Documents and Media.
 
-```note::
-   To disable this feature, click on the *Actions* button for Google Drive, and select  *Reset Default Values*.
+```{note}
+To disable this feature, click on the *Actions* button for Google Drive, and select  *Reset Default Values*.
 ```
 
 ## Additional Information
