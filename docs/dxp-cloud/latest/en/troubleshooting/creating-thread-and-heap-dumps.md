@@ -1,6 +1,6 @@
 # Creating Thread and Heap Dumps
 
-When you are experiencing issues with your `liferay` service's performance, you may need to take thread or heap dumps to help you or DXP Cloud Support optimize your instance or troubleshoot problems. 
+When you are experiencing issues with your `liferay` service's performance, you may need to take thread or heap dumps to help you or DXP Cloud Support optimize your instance or troubleshoot problems.
 
 Follow these steps to generate thread or heap dumps for troubleshooting:
 
