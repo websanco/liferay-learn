@@ -181,6 +181,8 @@ These limitations apply to the network configuration of your services in a DXP C
 
 * **Wildcard SSL Certificates**: Wildcard certificates are not supported for Liferay's auto-generated SSL certificates. However, you may configure your instance with custom Wildcard SSL certificates.
 
+* **TCP Port Status**: Some TCP ports may show as open, even if no external traffic can reach the customer environment using it. This is because the ports are open for other projects sharing the same disk on the server, though it is does not present a security risk for your environment.
+
 ## VPN Servers
 
 These limitations apply if you have connected a [VPN server](../infrastructure-and-operations/networking/vpn-integration-overview.md) to the services in your environment:
