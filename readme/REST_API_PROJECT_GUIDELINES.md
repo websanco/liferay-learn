@@ -16,6 +16,11 @@ Here are the things to consider as you're creating REST API client projects.
     * [Configuring dependencies](#configuring-dependencies)
     * [Compiling classes](#compiling-classes)
     * [Running classes](#running-classes)
+* [Resource Titles and Values](#resource-titles-and-values)
+    * [Example Command Sequence](#example-command-sequence)
+    * [Use Unique Titles](#use-unique-titles)
+    * [PATCH Pattern](#patch-pattern)
+    * [PUT Pattern](#put-pattern)
 * [Formatting source code](#formatting-source-code)
 * [Updating permissions](#updating-permissions)
 * [Sending code for review](#sending-code-for-review)
@@ -348,6 +353,55 @@ public static void main(String[] args) throws Exception {
 ```
 
 In the comment, use `1234` in place of any required ID value. If there are multiple ID values, continue with `5678`.
+
+## Resource Titles and Values
+
+Example cURL scripts and Java classes should POST, PATCH, and PUT resource instances to follow these title and value patterns:
+
+* Titles (e.g., message board message headline, web content title, etc) should be based on the [WWII CCB (ICAO) phonetic alphabet](https://en.wikipedia.org/wiki/Allied_military_phonetic_spelling_alphabets#WWII_CCB_(ICAO)_and_NATO_alphabets).
+
+    * `Able`
+    * `Baker`
+    * `Charlie`
+    * etc.
+
+* Values (all other attributes) should use these values:
+    * `Foo`
+    * `Bar`
+    * `Goo`
+
+### Example Command Sequence
+
+The following pseudo code demonstrates using the title and value patterns on the `MessageBoardMessage` resource type:
+
+1. Run cURL commands
+    1. POST title `Able`, value `Foo`
+    1. PATCH to value `Bar`
+    1. PUT title `Baker`, value `Goo`
+1. Run Java classes
+    1. POST title `Charlie`, value `Foo`
+    1. PATCH to value `Bar`
+    1. PUT title `Dog`, value `Goo`
+
+### Use Unique Titles
+
+As developers execute the example scripts and classes, the created or modified resources must use unique titles. This facilitates validating operation success.
+
+For example, if a project's cURL script POSTs a message board message with headline "Able Message", the project's other scripts and Java classes shouldn't add or modify messages to use the same headline "Able Message". Instead, other resources should have the title "Baker Message", "Charlie Message", etc.
+
+Use a unique [WWII CCB (ICAO) phonetic alphabet](https://en.wikipedia.org/wiki/Allied_military_phonetic_spelling_alphabets#WWII_CCB_(ICAO)_and_NATO_alphabets) value (see the title pattern above) in every resource.
+
+### PATCH Pattern
+
+Change only the "value", but keep the "title".
+
+For example, PATCH a resource's value from `Foo` to `Bar`, but keep the resource's title `Able`.
+
+### PUT Pattern
+
+Change the "title" and the "value" to simulate _replacing_ the resource.
+
+For example, PUT a resource that uses a new title `Baker` and new value `Goo`.
 
 ## Formatting Source Code 
 
