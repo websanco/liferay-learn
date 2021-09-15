@@ -129,7 +129,17 @@ MVC Action Command classes can implement [`MVCActionCommand`](https://github.com
 `DoL6Y9AbleMVCActionCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides an `MVCActionCommand` service. `DoL6Y9AbleMVCActionCommand`'s component properties apply the component to the portlet that has the property `javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet` and map the component to an MVC command named `/do_l6y9_able`. When a user triggers an action bound to that command name, `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method executes. For demonstration purposes, the `doProcessAction` method above logs a message that identifies itself.
 
 ```{note}
-You can associate an `MVCActionCommand` component with multiple portlets by declaring a `javax.portlet.name` property for each portlet.
+You can associate an `MVCActionCommand` component with multiple portlets by declaring separate `javax.portlet.name` properties for each portlet:
+
+      
+      @Component(
+         property = {
+            "javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet",
+            "javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y0Portlet",
+            "mvc.command.name=/l6y9/download"
+         },
+         service = MVCActionCommand.class
+      )
 ```
 
 `DoL6Y9BakerMVCActionCommand` is similar to `DoL6Y9AbleMVCActionCommand` except its names contain `Baker` or `baker` instead `Able` or `able`.
