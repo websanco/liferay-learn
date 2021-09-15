@@ -103,8 +103,8 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
 
     Avoid these things in your ID:
 
-    * Ones and `L`s. Number `1` and letter `l` are easily confused.
-    * Zeros and `O`s. Number `0` and letters `o` and `O` are easily confused.
+    * Number `1`, `L`s, and `I`s. Number `1`, letter `l`, and letter `I` are easily confused.
+    * Number `0` and letters `o` and `O`. Number `0` and letters `o` and `O` are easily confused.
     * Your initials (e.g., `j2b3` if your name is Joe Bloggs)
     * Duplicating characters (e.g., `b2b5` duplicates `b`, `a2z2` duplicates `2`)
     * Sequential characters (e.g., `a2b3` has sequential characters `a` and `b`, and `2` and `3`)
