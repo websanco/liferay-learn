@@ -1,6 +1,6 @@
 # MVC Resource Command
 
-MVC Resource Command classes retrieve images, XML, or any other kind of resource from a DXP/Portal instance. Requests or portlet resource URLs invoke MVC Resource Commands.
+MVC Resource Command classes retrieve resources: images, XML, or any other kind of resource from a DXP/Portal instance without triggering any actions or renders. Requests or portlet resource URLs invoke MVC Resource Commands.
 
 You'll deploy an example portlet that uses an MVC Resource Command and then examine it.
 
@@ -55,7 +55,7 @@ The example portlet downloads a simple file using an MVC Resource Command.
 1. Add the *P8V5 Portlet* widget from the *Samples* category to a widget page. The P8V5 Portlet appears.
 
     ![You've added the P8V5 Portlet to a page.](./mvc-resource-command/images/01.png)
-    
+
     The link invokes an MVC Resource Command to download a simple text file.
 
 1. Click *Download*. A file called `p8v5.txt` downloads to your machine.
@@ -100,15 +100,24 @@ MVC Resource Command classes can implement [`MVCResourceCommand`](https://github
 :lines: 16-48
 ```
 
-`P8V5DownloadMVCResourceCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides the `MVCResourceCommand` service. The component properties apply the `P8V5DownloadMVCResourceCommand` to the portlet named `com_acme_p8v5_web_internal_portlet_P8V5Portlet` and map `P8V5DownloadMVCResourceCommand` to the MVC command name `/p8v5/download`.
+`P8V5DownloadMVCResourceCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides the `MVCResourceCommand` service. The component properties apply the `P8V5DownloadMVCResourceCommand` to the portlet named `com_acme_p8v5_web_internal_portlet_P8V5Portlet` and map `P8V5DownloadMVCResourceCommand` to the MVC command name `/p8v5/download`. The name you specify here must match the name declared in the portlet. 
 
 ```{note}
-You can associate an `MVCResourceCommand` component with multiple portlets by declaring a `javax.portlet.name` property for each portlet.
+You can associate an `MVCResourceCommand` component with multiple portlets by declaring separate `javax.portlet.name` properties for each portlet:
+
+      @Component(
+         property = {
+            "javax.portlet.name=com_acme_p8v5_web_internal_portlet_P8V5Portlet",
+            "javax.portlet.name=com_acme_p8v5_web_internal_portlet_P8V6Portlet",
+            "mvc.command.name=/p8v5/download"
+         },
+         service = MVCResourceCommand.class
+      )
 ```
 
 The example `serveResource` method creates a simple text file and sends it to the user via [`PortletResponseUtil`](https://github.com/liferay/liferay-portal/blob/master/portal-kernel/src/com/liferay/portal/kernel/portlet/PortletResponseUtil.java). The method returns `true` if an error occurs or `false` otherwise.
 
-Next see how the portlet's JSP maps a UI component action to the command.
+Next you'll learn how the portlet's JSP maps a UI component action to the command.
 
 ## Examine the Portlet Resource URL
 
