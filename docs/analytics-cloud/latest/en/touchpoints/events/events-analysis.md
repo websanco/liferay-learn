@@ -4,7 +4,7 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
 1. Navigate to *Touchpoints* &rarr; *Events*. 
 
-2. In the Analyze row, click the add icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
+1. In the Analyze row, click the add icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
 
     ![Select an event to analyze.](./events-analysis/images/01.png)
 
@@ -12,7 +12,7 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
     Hover over a specific event in the drop-down list to see the event's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description.
 
-3. In the Breakdown row, click the add icon (![Add](../../images/icon-plus.png)) and select breakdown attributes. 
+1. In the Breakdown row, click the add icon (![Add](../../images/icon-plus.png)) and select breakdown attributes. 
 
     ![Select breakdowns for your event.](./events-analysis/images/02.png)
 
@@ -24,10 +24,12 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
     ![For date, duration, and number, select how to group the data.](./events-analysis/images/03.png)
 
-4. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event.
+2. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event. The drop-down list shows all available attributes that can be used for filtering. The events analysis tool gives the flexibility to filter by attributes that are both related or unrelated to the events and breakdowns selected. 
 
-5. The default time period is set Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
+3. The default time period is set Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
 
     ![Select a different time period or compare to previous data.](./events-analysis/images/04.png)
 
-6. To analyze a different event or see a different breakdown click the *X* button of the event or the breakdown to start over.
+4. Note that there are three tabs (Total, Unique, and Average) to view the breakdown of the event. The Total tab shows the total number of events triggered by all users. The Unique tab shows the total number of unique users who triggered the event. The Average tab shows the average number of events per user.
+
+5. To analyze a different event or see a different breakdown click the *X* button of the event or the breakdown to start over.
