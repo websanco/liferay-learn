@@ -126,5 +126,5 @@ If you're ready to develop your model layer, see [Service Builder](../data-frame
 * [Using Localized Messages in an MVC Portlet](./using-mvc/using-localized-messages-in-an-mvc-portlet.md)
 * [Module Projects](../../liferay-internals/fundamentals/module-projects.md)
 * [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md)
-* [Fundamentals](../../liferay-internals/fundamentals/fundamentals.md)
+* [Fundamentals](../../liferay-internals/fundamentals.md)
 * [Architecture](../../liferay-internals/architecture/architecture.md)

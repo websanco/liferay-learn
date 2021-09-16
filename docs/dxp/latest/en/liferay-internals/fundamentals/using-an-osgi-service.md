@@ -155,11 +155,11 @@ Since the local project `j1h1-api` provides the `Greeter` service, `j1h1-osgi-co
 
 The API and Impl modules defined and provided the `Greeter` service, respectively. The example `j1h1-osgi-commands` module uses the service to create a simple Gogo Shell command. The API-Provider-Consumer contract fosters loose coupling, making your software easy to manage, enhance, and support.
 
-Now that you're familiar with using OSGi services from neighboring projects, you can explore using OSGi services from external artifacts. [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md) demonstrates finding modules and configuring them as dependencies.
+Now that you're familiar with using OSGi services from neighboring projects, you can explore using OSGi services from external artifacts. [Configuring Dependencies](./configuring-dependencies.md) demonstrates finding modules and configuring them as dependencies.
 
 ## Additional Information
 
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)
 * [Semantic Versionings](./semantic-versioning.md)
-* [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
+* [Configuring Dependencies](./configuring-dependencies.md)

@@ -218,7 +218,7 @@ liferay.workspace.product=portal-7.3-ga3
 Lastly, there's no dependency version. That's because Workspace applies the Liferay product API version associated with the release.
 
 ```note::
-   Please see `Configuring Dependencies <./configuring-dependencies/configuring-dependencies.md>`_ for more information.
+   Please see `Configuring Dependencies <./configuring-dependencies.md>`_ for more information.
 ```
 
 ### Specify Metadata
@@ -274,7 +274,7 @@ For details about the module lifecycle, see [Module Lifecycle](../architecture/m
 
 * [APIs as OSGi Services](./apis-as-osgi-services.md)
 * [Using an OSGi Service](./using-an-osgi-service.md)
-* [Configure Dependencies](./configuring-dependencies/configuring-dependencies.md)
+* [Configure Dependencies](./configuring-dependencies.md)
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)
 * [Module Lifecycle](../architecture/module-lifecycle.md)

@@ -211,7 +211,7 @@ You have *defined* a service capability called `Greeter` and *provided* it in a 
 * [Gogo Shell Commands](./using-the-gogo-shell/gogo-shell-commands.md)
 * [Exporting Packages](./exporting-packages.md)
 * [Importing Packages](./importing-packages.md)
-* [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
+* [Configuring Dependencies](./configuring-dependencies.md)
 * [Getting started with OSGi at OSGi EnRoute](https://enroute.osgi.org/)
 * [Declarative Services](https://enroute.osgi.org/FAQ/300-declarative-services.html)
 * [OSGi Alliance](https://www.osgi.org/)

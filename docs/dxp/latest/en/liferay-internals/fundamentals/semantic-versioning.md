@@ -82,4 +82,4 @@ You now know the pros and cons for tracking dependencies as a range and as an ex
 
 * [Importing Packages](./importing-packages.md)
 * [Exporting Packages](./exporting-packages.md)
-* [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
+* [Configuring Dependencies](./configuring-dependencies.md)

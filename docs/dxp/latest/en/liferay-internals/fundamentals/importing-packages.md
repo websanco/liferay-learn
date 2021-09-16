@@ -83,7 +83,7 @@ Congratulations! Now you can import all kinds of packages for your modules to us
 
 ## Additional Information
 
-* [Configuring Dependencies](./configuring-dependencies/configuring-dependencies.md)
+* [Configuring Dependencies](./configuring-dependencies.md)
 * [Blade CLI](../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)
 * [Liferay Developer Studio](../../developing-applications/tooling/developer-studio.md)
 * [Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md)

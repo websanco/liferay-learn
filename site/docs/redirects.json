@@ -30,6 +30,8 @@
 	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering_for_high_availability.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
 	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
 	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/configuring_mail.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/configuring-mail.html",
+	"dxp/latest/en/liferay-internals/fundamentals/configuring_dependencies.html" : "dxp/latest/en/liferay-internals/fundamentals/configuring-dependencies.html",
+	"dxp/latest/en/liferay-internals/fundamentals/configuring-dependencies/configuring-dependencies.html" : "dxp/latest/en/liferay-internals/fundamentals/configuring-dependencies.html",
 	"dxp/latest/en/liferay-internals/fundamentals/fundamentals.html" : "dxp/latest/en/liferay-internals/fundamentals.html",
 	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",

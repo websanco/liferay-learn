@@ -63,6 +63,6 @@ Now you can safely leverage Liferay's exported third party packages!
 
 ## Additional Information
 
-* [Configuring Dependencies](../fundamentals/configuring-dependencies/configuring-dependencies.md)
+* [Configuring Dependencies](../fundamentals/configuring-dependencies.md)
 * [JARs Excluded from WABs](../../developing-applications/reference/jars-excluded-from-wabs.md)
 * [Resolving Third Party Library Package Dependencies](../fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)

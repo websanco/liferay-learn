@@ -9,7 +9,7 @@ fundamentals/using-an-osgi-service.md
 fundamentals/importing-packages.md
 fundamentals/exporting-packages.md
 fundamentals/semantic-versioning.md
-fundamentals/configuring_dependencies.rst
+fundamentals/configuring-dependencies.md
 fundamentals/using_the_gogo_shell.rst
 ```
 
@@ -21,7 +21,7 @@ These are the fundamentals of Liferay DXP's ecosystem.
 
 * **[Module Projects](./fundamentals/module-projects.md)** explains what an OSGi module is, its project structure, and how it is used by Liferay's OSGi framework.
 
-* **[Configuring Dependencies](./fundamentals/configuring-dependencies/configuring-dependencies.md)** demonstrates how to identify and configure Liferay artifacts and third-party artifacts to use their Java packages in your projects.
+* **[Configuring Dependencies](./fundamentals/configuring-dependencies.md)** demonstrates how to identify and configure Liferay artifacts and third-party artifacts to use their Java packages in your projects.
 
 * **[Importing](./fundamentals/importing-packages.md) and [Exporting Packages](./fundamentals/exporting-packages.md)** shows how to use functionality from other modules and publish your functionality for other modules to use. Liferay's tooling detects package use and specifies package imports automatically.
 
