@@ -47,7 +47,7 @@ In an example project, you'll use a `SynchronousMessageSender` to send a message
 
 1. Visit the Liferay instance with your browser at `http://localhost:8080` and sign in using your credentials.
 
-1. Open the [Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 1. In the Gogo Shell command field, enter `x6n5:sendMessage` followed by a message. For example,
 

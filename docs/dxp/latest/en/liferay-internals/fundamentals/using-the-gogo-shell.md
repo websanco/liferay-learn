@@ -1,5 +1,12 @@
 # Using the Gogo Shell
 
+```{toctree}
+:maxdepth: 3
+
+using-the-gogo-shell/command-line-gogo-shell.md
+using-the-gogo-shell/gogo-shell-commands.md
+```
+
 The Gogo shell provides a way to interact with the module framework. Among other things, you can
 
 * Dynamically install/uninstall bundles (modules)
@@ -37,4 +44,4 @@ The Control Panel is the safest, most secure way to access Gogo shell:
 
 ## Conclusion
 
-Now that you know how to run Gogo shell, explore the available [Gogo shell commands](./gogo-shell-commands.md). If you're working in a developer environment, consider Gogo shell from the command line. See [Command Line Gogo Shell](./command-line-gogo-shell.md) for more information.
+Now that you know how to run Gogo shell, explore the available [Gogo shell commands](./using-the-gogo-shell/gogo-shell-commands.md). If you're working in a developer environment, consider Gogo shell from the command line. See [Command Line Gogo Shell](./using-the-gogo-shell/command-line-gogo-shell.md) for more information.

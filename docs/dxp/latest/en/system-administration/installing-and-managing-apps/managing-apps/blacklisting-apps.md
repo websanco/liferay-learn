@@ -1,6 +1,6 @@
 # Blacklisting Apps
 
-The bundle blacklist is a convenient way to uninstall or reinstall multiple apps, OSGi bundles (modules), and WAR plugins at once. It saves you the trouble of managing app, module, and plugin installations individually with the [Application Manager](./using-the-app-manager.md) or [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+The bundle blacklist is a convenient way to uninstall or reinstall multiple apps, OSGi bundles (modules), and WAR plugins at once. It saves you the trouble of managing app, module, and plugin installations individually with the [Application Manager](./using-the-app-manager.md) or [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 ```important::
    The blacklist is an `OSGi configuration <../../configuring-liferay/system-settings/using-configuration-files.md#creating-configuration-files>`_ that DXP uses to uninstall apps. Using it will prevent any apps listed from being installed until they are removed.
@@ -73,7 +73,7 @@ To reinstall blacklisted items, follow these steps:
 To reinstall _all_ the blacklisted items execute one of these options:
 
 * Remove the configuration file.
-* Uninstall the module `com.liferay.portal.bundle.blacklist` using the [Application Manager](./using-the-app-manager.md) or [Felix Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+* Uninstall the module `com.liferay.portal.bundle.blacklist` using the [Application Manager](./using-the-app-manager.md) or [Felix Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 ```tip::
    To temporarily reinstall an item that's been blacklisted, you can remove its symbolic name from the Bundle Blacklist module in *System Settings* and click the *Update* button. If you're using a blacklist config file (in the ``[Liferay Home]/osgi/configs`` folder) and want the item to install on subsequent server startup, make sure to remove the item's symbolic name from the file.
@@ -86,6 +86,6 @@ Congratulations! Now you can manage multiple app, module, and plugin installatio
 ## Additional Information
 
 * [Managing Apps](./using-the-app-manager.md)
-* [Using the Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md)
+* [Using the Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)
 * [Blacklisting OSGi Components](./blacklisting-osgi-components.md)
 * [Configuring Portlets, Themes, and Layout Templates](./configuring-portlets-themes-and-layout-templates.md)

@@ -10,7 +10,7 @@ fundamentals/importing-packages.md
 fundamentals/exporting-packages.md
 fundamentals/semantic-versioning.md
 fundamentals/configuring-dependencies.md
-fundamentals/using_the_gogo_shell.rst
+fundamentals/using-the-gogo-shell.md
 ```
 
 Liferay development projects consist primarily of simple .jar files. These contain a few extra configuration files that make them OSGi modules, but they're easily understandable by anyone who knows Java.
@@ -27,6 +27,6 @@ These are the fundamentals of Liferay DXP's ecosystem.
 
 * **[Semantic Versioning](./fundamentals/semantic-versioning.md)** describes how Liferay manages dependencies on code as it evolves to new versions, so that you can use the same mechanism to manage your version and avoid code breakage.
 
-* **[Gogo Shell](./fundamentals/using-the-gogo-shell/using-the-gogo-shell.md)** shows how you can examine components, debug issues, and manage deployments at runtime by issuing commands into a shell.
+* **[Gogo Shell](./fundamentals/using-the-gogo-shell.md)** shows how you can examine components, debug issues, and manage deployments at runtime by issuing commands into a shell.
 
 You can begin by learning about [module projects](./fundamentals/module-projects.md).

@@ -52,7 +52,7 @@ The example project uses a `SynchronousMessageSender` in default mode to send a 
 
 1. Visit the Liferay instance with your browser at `http://localhost:8080` and sign in using your credentials.
 
-1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 1. In the Gogo shell command field, enter `m4q7:sendMessage` followed by a message. For example,
 

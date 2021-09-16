@@ -132,7 +132,7 @@ You can unregister the example message listener and remove the example destinati
 
 1. Visit the Liferay instance with your browser at `http://localhost:8080` and sign in using your credentials.
 
-1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 1. List the example modules by entering this command in the Gogo shell command field:
 

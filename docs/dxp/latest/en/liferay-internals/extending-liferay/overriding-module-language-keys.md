@@ -8,7 +8,7 @@ Overriding Liferay application specific language keys in earlier versions is sim
 
 ## Examining Module Language Keys
 
-To override a module's language key, you must first gather information about the module in [Gogo shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md). For example if you wish to override a language key in the blogs module, `grep` for the keyword "blogs". The Gogo command and output might look like this: 
+To override a module's language key, you must first gather information about the module in [Gogo shell](../fundamentals/using-the-gogo-shell.md). For example if you wish to override a language key in the blogs module, `grep` for the keyword "blogs". The Gogo command and output might look like this: 
 
  ```
  g! lb | grep Blogs
@@ -200,7 +200,7 @@ The example `Provide-Capability` header has two parts:
     * `servlet.context.name=blogs-web`: The target resource bundle is in servlet context `blogs-web`. 
 
 ```{note}
-If your override isn't showing, use [Gogo shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to check for competing resource bundle services. It may be that another service outranks yours. To check for competing resource bundle services whose aggregates include `com.liferay.blogs.web`’s resource bundle, for example, execute this Gogo shell command:
+If your override isn't showing, use [Gogo shell](../fundamentals/using-the-gogo-shell.md) to check for competing resource bundle services. It may be that another service outranks yours. To check for competing resource bundle services whose aggregates include `com.liferay.blogs.web`’s resource bundle, for example, execute this Gogo shell command:
 
 `services "(bundle.symbolic.name=com.liferay.blogs.web)"`
 ```

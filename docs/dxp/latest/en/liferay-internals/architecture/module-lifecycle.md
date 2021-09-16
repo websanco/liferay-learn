@@ -18,7 +18,7 @@ The figure below illustrates the module life cycle.
 
 ![This state diagram illustrates the module life cycle.](./module-lifecycle/images/01.png) 
 
-You can manage the life cycle with the [Apache Felix Gogo Shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md). You can install/uninstall modules and start/stop them. You can update a module and notify dependent modules to use the update. Liferay's tools, including [Liferay Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md), [Blade CLI](../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md), and [Liferay Dev Studio](https://liferay.dev/-/ide) offer similar shell commands that use the OSGi Admin API.
+You can manage the life cycle with the [Apache Felix Gogo Shell](../fundamentals/using-the-gogo-shell.md). You can install/uninstall modules and start/stop them. You can update a module and notify dependent modules to use the update. Liferay's tools, including [Liferay Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md), [Blade CLI](../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md), and [Liferay Dev Studio](https://liferay.dev/-/ide) offer similar shell commands that use the OSGi Admin API.
 
 On activating a module, its components are enabled. But only *activated* components can be used. Component activation requires all referenced services be satisfied. That is, all services a component references must be registered. The highest ranked service that matches a reference is bound to the component. When the container finds and binds all the services the component references, it registers the component. It's now ready for activation.
 

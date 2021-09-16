@@ -44,7 +44,7 @@ Liferay commonly uses three kinds of modules:
 
 1. **Client** modules consume the APIs.
 
-You'll learn how to create each one by developing a simple command in [Gogo Shell](./using-the-gogo-shell/using-the-gogo-shell.md) to greet users when they enter their names.
+You'll learn how to create each one by developing a simple command in [Gogo Shell](./using-the-gogo-shell.md) to greet users when they enter their names.
 
 ![Gogo shell command that greets users.](./module-projects/images/01.png)
 
@@ -108,7 +108,7 @@ The example module defines an API for generating a greeting.
    **User Name:** `test@liferay.com`
    **Password:** `test`
 
-1. Open the [Gogo Shell](./using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo Shell](./using-the-gogo-shell.md).
 
 1. In the Gogo Shell command field, use `lb` to show the module's information, including its ID. The most recently added module appears last. If you know a keyword in the module name, you can `grep` for it.
 

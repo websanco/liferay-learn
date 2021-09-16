@@ -22,7 +22,7 @@ Liferay commonly uses three kinds of modules:
 
 1. **Client** modules consume the APIs.
 
-You'll learn how to create each one by developing a simple command in [Gogo Shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to greet users when they enter their names.
+You'll learn how to create each one by developing a simple command in [Gogo Shell](../fundamentals/using-the-gogo-shell.md) to greet users when they enter their names.
 
 ![Gogo shell command that greets users.](./osgi-and-modularity/images/01.png)
 
@@ -66,7 +66,7 @@ Start using the example.
     STARTED com.acme.r9u2.osgi.commands_1.0.0
     ```
 
-1. Open the [Gogo Shell](../fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo Shell](../fundamentals/using-the-gogo-shell.md).
 
 1. In the Gogo Shell command field, enter a `r9u2:greet` command to generate a greeting.
 

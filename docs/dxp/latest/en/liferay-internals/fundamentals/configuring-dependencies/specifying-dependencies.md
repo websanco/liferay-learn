@@ -30,7 +30,7 @@ You must satisfy all dependencies to compile and deploy a module successfully. A
     }
     ```
 
-1. Deploy your module and check for unsatisfied package dependencies by using [Gogo Shell commands](../using-the-gogo-shell/using-the-gogo-shell.md) or browsing the logs.
+1. Deploy your module and check for unsatisfied package dependencies by using [Gogo Shell commands](../using-the-gogo-shell.md) or browsing the logs.
 
 1. If you have unsatisfied dependencies, resolve them:
 

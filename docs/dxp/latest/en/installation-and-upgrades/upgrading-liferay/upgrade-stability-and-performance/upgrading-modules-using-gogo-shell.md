@@ -17,7 +17,7 @@ Here are the module upgrade topics:
 
 ## Command Usage
 
-Use the [Gogo Shell portlet](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md) to execute module upgrade and verification commands.
+Use the [Gogo Shell portlet](../../../liferay-internals/fundamentals/using-the-gogo-shell.md) to execute module upgrade and verification commands.
 
 Here are the commands:
 

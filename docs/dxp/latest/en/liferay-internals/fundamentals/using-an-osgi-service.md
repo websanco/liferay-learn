@@ -72,7 +72,7 @@ Start using the example.
     STARTED com.acme.j1h1.osgi.commands_1.0.0
     ```
 
-1. Open the [Gogo Shell](./using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo Shell](./using-the-gogo-shell.md).
 
 1. In the Gogo Shell command field, enter a `j1h1:greet` command to generate a greeting.
 

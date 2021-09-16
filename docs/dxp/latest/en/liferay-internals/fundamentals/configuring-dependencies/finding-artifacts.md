@@ -69,7 +69,7 @@ The App Manager aggregates independent modules in the Independent Modules catego
 
 ![The App Manager aggregates independent modules.](./finding-artifacts/images/03.png)
 
-If you don't know an independent module's group ID, use the [Felix Gogo Shell](../using-the-gogo-shell/using-the-gogo-shell.md) to find it:
+If you don't know an independent module's group ID, use the [Felix Gogo Shell](../using-the-gogo-shell.md) to find it:
 
 1. In the Control Panel's System category, select *Gogo Shell*. Enter commands in the Gogo Shell command prompt.
 

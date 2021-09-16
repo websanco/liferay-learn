@@ -54,7 +54,7 @@ Start the example modules.
 
 1. Go to `http://localhost:8080` and sign in.
 
-1. Go to the [Gogo Shell](./using-the-gogo-shell/using-the-gogo-shell.md).
+1. Go to the [Gogo Shell](./using-the-gogo-shell.md).
 
 1. Get the module IDs using the `lb` Gogo Shell command.
 

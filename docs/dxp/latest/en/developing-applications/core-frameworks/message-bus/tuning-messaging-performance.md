@@ -103,7 +103,7 @@ The example project creates a destination, registers message listeners, and list
 	[acme/w3r2_able-2][W3R2BakerMessageListenerManager:30] Received message payload foo
     ```
 
-1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md).
+1. Open the [Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md).
 
 1. Get the destination statistics by executing the `w3r2:listDestinationStats` command in the Gogo shell command field.
 

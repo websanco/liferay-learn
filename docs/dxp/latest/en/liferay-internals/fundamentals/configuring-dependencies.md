@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-configuring-dependencies.md
 configuring-dependencies/finding-artifacts.md
 configuring-dependencies/specifying-dependencies.md
 configuring-dependencies/resolving-third-party-library-package-dependencies.md
