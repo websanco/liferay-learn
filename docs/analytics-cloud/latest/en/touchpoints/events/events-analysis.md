@@ -18,12 +18,16 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
     Up to three attributes can be selected in the Breakdown row. Note that each type of event is made up of different attributes. Global attributes are attributes that are collected for all types of events. See [Event Attributes](../../workspace-data/defintions/definitions-for-events.md) to learn more.
     
-    Hover over a specific attribute in the drop-down list to see the attribute's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description.
+    Hover over a specific attribute in the drop-down list to see the attribute's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description and data typecast.
+
+    Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Data is cast as either boolean, date, duration, number, or string. The data typecast will determine the parameters available for filtering the analysis. For example, selecting an attribute that has a date typecast will have filtering options such as a before or after time period. Date, duration, and number typecasts also have grouping feature to group the data by a set number. For example, a date typecase will allow you to group the data by day, month, or year. 
+
+    ![For date, duration, and number, select how to group the data.](./events-analysis/images/03.png)
 
 4. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event.
 
 5. The default time period is set Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
 
-    ![Select a different time period or compare to previous data.](./events-analysis/images/03.png)
+    ![Select a different time period or compare to previous data.](./events-analysis/images/04.png)
 
 6. To analyze a different event or see a different breakdown click the *X* button of the event or the breakdown to start over.
