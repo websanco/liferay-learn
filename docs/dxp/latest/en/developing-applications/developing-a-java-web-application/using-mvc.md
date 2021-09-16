@@ -9,6 +9,7 @@ using-mvc/invoking-actions-with-mvc-portlet.md
 using-mvc/mvc-action-command.md
 using-mvc/mvc-render-command.md
 using-mvc/mvc-resource-command.md
+using-mvc/portlet-preferences.md
 using-mvc/using-localized-messages-in-an-mvc-portlet.md
 using-mvc/sharing-localized-messages.md
 ```
@@ -121,6 +122,7 @@ If you're ready to develop your model layer, see [Service Builder](../data-frame
 
 ## Additional Information
 
+* [Portlet Preferences](./using-mvc/portlet-preferencs.md)
 * [Using Localized Messages in an MVC Portlet](./using-mvc/using-localized-messages-in-an-mvc-portlet.md)
 * [Module Projects](../../liferay-internals/fundamentals/module-projects.md)
 * [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md)
