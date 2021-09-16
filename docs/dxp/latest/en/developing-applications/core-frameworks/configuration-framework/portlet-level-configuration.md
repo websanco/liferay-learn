@@ -1,8 +1,8 @@
 # Portlet Level Configuration
 
-With the configuration framework, you can set your [application's configuration for different levels of scope](./scoping-configurations.md). Where instance and site scoped configurations use `ConfigurationProvider`, portlet scoped configurations uses `PortletDisplay` as shown in the example below. 
+With the configuration framework, you can set your [application's configuration for different levels of scope](./scoping-configurations.md). Where Instance and Site-scoped configurations use `ConfigurationProvider`, portlet scoped configurations use `PortletDisplay` as shown in the example below. 
 
-The configuration framework can be used in conjunction with portlet preferences so that an app can have both a configuration UI in system settings as well a preference UI in the portlet's setup tab.  
+The configuration framework can be used in conjunction with portlet preferences so that an app can have both a configuration UI in system settings as well a preference UI in the portlet's setup tab. 
 
 Note, an application's configuration is overridden if portlet preferences are implemented and set by a user. See [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) to learn more.
 
@@ -50,19 +50,19 @@ Note, an application's configuration is overridden if portlet preferences are im
 
     ![Navigate to the application's configuration in system settings.](./portlet-level-configuration/images/01.png)
 
-    Select and save a different default color. Navigate back to the page with the deployed widget. See the color variable is now updated.
+    Select and save a different default color. Navigate back to the page with the deployed widget. The color variable is now updated.
 
-1. Click on the portlet's options icon (![options icon](../../../images/icon-options.png)) and click *Configuration*. The portlet's preferences window opens.
+1. Click the portlet's options icon (![options icon](../../../images/icon-options.png)) and click *Configuration*. The portlet's preferences window opens.
 
     ![Open the portlet's preferences by clicking configuration](./portlet-level-configuration/images/02.png)
 
-    Select and save a different color. Close the window and now the portlet preference is displayed. Note that the application configuration set in system settings will no longer be shown after a portlet preference has been selected.
+    Select and save a different color. Close the window and now the portlet preference appears. Note that the application configuration set in system settings is no longer shown after a portlet preference has been selected.
 
 Let's examine how the application's configuration works together with portlet preferences.
 
 ## Create the Configuration Interface
 
-First create the configuration interface file that will auto-generate the configuration UI in system settings.
+First create the configuration interface file that auto-generates the configuration UI in system settings.
 
 ```{literalinclude} ./portlet-level-configuration/resources/liferay-x7y2.zip/x7y2-web/src/main/java/com/acme/x7y2/web/internal/configuration/X7Y2PortletInstanceConfiguration.java
 :language: java
@@ -71,13 +71,13 @@ First create the configuration interface file that will auto-generate the config
 
 In this example, the scope is set to `PORTLET_INSTANCE`. The interface also defines the configuration options available in the drop-down list.
 
-Note that this example also works with scope set at higher levels (i.e. site, instance, system scope). But a best practices is to mark an application as portlet scope that you intend to use with portlet preferences.
+Note that this example also works with scope set at higher levels (i.e. Site, Instance, system scope). A best practice is to mark an application that you intend to use with portlet preferences as portlet scope.
 
-To learn more about see [Creating the Configuration Interface](./setting-and-accessing-configurations.html#Creating-the-Configuration-Interface).
+To learn more, see [Creating the Configuration Interface](./setting-and-accessing-configurations.html#Creating-the-Configuration-Interface).
 
 ## Add the Configuration Bean Declaration
 
-Like `ConfigurationProvider`, `PortletDisplay` requires a configuration bean declaration file to register the configuration class. To learn more see (./setting-and-accessing-configurations.html#Create-a-Configuration-Bean-Declaration).
+Like `ConfigurationProvider`, `PortletDisplay` requires a configuration bean declaration file to register the configuration class. To learn more see [configuration bean declarations](./setting-and-accessing-configurations.html#Create-a-Configuration-Bean-Declaration).
 
 ## Read the Configuration with PortletDisplay
 
@@ -92,7 +92,7 @@ The `X7Y2PortletInstanceConfiguration` method uses `PortletDisplay` to obtain th
 
 ## Set up Portlet Preferences
 
-For the portlet to have portlet preferences, you need to also add a configuration JSP file and configuration action to your application. To learn more about how these files work in a portlet see the [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) article.
+For the portlet to have portlet preferences, you must also add a configuration JSP file and configuration action to your application. To learn more about how these files work in a portlet, see [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md).
 
 ## Related Information
 
