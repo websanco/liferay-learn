@@ -1,4 +1,12 @@
-# Introduction to Securing Web Services
+# Securing Web Services
+
+```{toctree}
+:maxdepth: 2
+
+securing-web-services/setting-service-access-policies.md
+securing-web-services/using-authentication-verifiers.md
+securing-web-services/setting-up-cors.md
+```
 
 Liferay DXP provides four security layers for web services:
 
@@ -10,17 +18,15 @@ Liferay DXP provides four security layers for web services:
 
 **User permission layer:** Properly implemented web services have permission checks. The user invoking a web service must have permission to invoke the service.
 
-<!-- I would prefer to not include this image until we get design to do a pass on it because I find the visual to be more distracting than helpful in its current iteration. ![Figure 1: To get to a service, a request must pass through the door lock of user permissions, the padlock of the verification layer, the brick wall of service access policies, and finally the safe of predefined IP permissions.](./images/service-access-policies-security-layers.png)  -->
-
 ## Authorization
 
 Liferay DXP contains several adjustable authorization layers:
 
 * Remote IP and HTTPS transport check to limit access to Liferay DXP's Java servlets
 * Extensible Access Control Policies layer to perform portal service-related authorization checks
-* Extensible [Role-based permission framework](../../../users-and-permissions/roles-and-permissions/README.md) for Liferay assets (stored in the database or elsewhere)
+* Extensible [Role-based permission framework](../../users-and-permissions/roles-and-permissions/README.md) for Liferay assets (stored in the database or elsewhere)
 * Portlet container security checks that control portlet access
 * Remote IP check for remote API authentication methods
-* [Service Access Policies](./setting-service-access-policies.md) to control access to remote APIs
-* [Authentication Verifiers](./using-authentication-verifiers.md) that verify provided credentials.
-* [Cross-Origin Resource Sharing](./setting-up-cors.md) configuration can enable retrieving resources from trusted sources only.
+* [Service Access Policies](./securing-web-services/setting-service-access-policies.md) to control access to remote APIs
+* [Authentication Verifiers](./securing-web-services/using-authentication-verifiers.md) that verify provided credentials.
+* [Cross-Origin Resource Sharing](./securing-web-services/setting-up-cors.md) configuration can enable retrieving resources from trusted sources only.

@@ -1,15 +1,11 @@
 # Using Multi-Factor Authentication
 
-> Availability: Liferay DXP 7.3+.
-
-Multi-Factor Authentication (MFA) provides better security by requiring users to prove their identity in multiple ways, or _factors_. The basic user name/password combination is augmented with one or more further, configurable factors. These include the default One Time Password (OTP) and configurable IP address, time-based OTP, and because the system is extensible, any factor you wish to write. 
-
-![Enabling Multi-Factor Authentication and One Time Passwords is a one-click operation. Just make sure the prerequisites are set up first.](./using-multi-factor-authentication/images/01.png)
-
 To enhance your installation's security, you should disable less secure, one-factor forms of authentication, such as Basic Auth, Digest Auth, and WebDAV. You can do this by configuring their [Authentication Verifiers](../securing-web-services/using-authentication-verifiers.md). Note that if you disable WebDAV, this also disables features you might be using: 
 
 * Accessing Documents and Media via desktop computers
 * Accessing Web Content via desktop computers
+
+![Enabling Multi-Factor Authentication and One Time Passwords is a one-click operation. Just make sure the prerequisites are set up first.](./using-multi-factor-authentication/images/01.png)
 
 Ready to get started configuring Multi-Factor Authentication? There are some prerequisites to handle first. 
 
