@@ -30,10 +30,10 @@ public class S1J6Portlet extends GenericPortlet {
 		PrintWriter printWriter = renderResponse.getWriter();
 
 		printWriter.println("This is the portlet.<br />");
-		printWriter.println(_s1J6.doSomething());
+		printWriter.println(_s1j6.doSomething());
 	}
 
 	@Reference
-	private S1J6 _s1J6;
+	private S1J6 _s1j6;
 
 }
