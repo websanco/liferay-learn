@@ -1,6 +1,8 @@
 .DS_Store
 .gradle
 .vscode
+.project
+.settings
 docs/**/build/
 docs/**/bundles/
 docs/**/liferay-????-theme.war
