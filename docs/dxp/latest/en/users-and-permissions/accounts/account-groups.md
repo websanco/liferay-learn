@@ -22,8 +22,10 @@ To create an account group,
 
 To view and edit an existing Account Group,
 
-1. In Account Groups, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account group you want to edit.
+1. In Account Groups, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account group you want to edit. Click *Edit* to see the details page.
 
-1. Click *Edit* to see the details page. View or make changes to the name or description.
+1. View or make changes to the name or description under the Details tab.
 
 1. Click the *Accounts* tab to view or make changes to the group. Click the Add icon (![Add icon](../images/icon-add.png)) if you want to assign more accounts to the group. Click the Remove icon (![Remove icon](../images/icon-delete.png)) of a specific account if you want to remove it from the group. Click *OK* to confirm removing the account.
+
+To delete an Account Group, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account group you want to delete. Click *OK* to confirm your decision.
