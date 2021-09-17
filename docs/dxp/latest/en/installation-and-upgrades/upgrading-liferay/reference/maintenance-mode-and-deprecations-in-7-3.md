@@ -37,7 +37,7 @@ Here are the features deprecated in 7.3:
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | Central Authentication Service (CAS) | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
-| DDM Form Builder, DDL, and Polls | Bundled | Replaced by App Builder and Forms Reports. |
+| Dynamic Data Lists | Bundled | To be replaced by Liferay Objects in Liferay 7.4. |
 | Elasticsearch 6 Connector | Removed | Replaced by Elasticsearch 7 Connector. |
 | Flash widget | Removed | No direct replacement. [FlashPlayer end-of-life](https://www.adobe.com/products/flashplayer/end-of-life.html) is Dec 31, 2020. |
 | Internet Explorer 11 (IE11) browser support | Bundled | Switch to Microsoft Edge with IE11 support enabled. |
@@ -48,6 +48,7 @@ Here are the features deprecated in 7.3:
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
 | OpenAM / OpenSSO | Bundled | Deprecated in 7.2. Migrate to [SAML based authentication](../../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md). |
 | OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md). Deprecated in 7.2. |
+| Polls | Bundled | Replaced by Forms Reports. |
 | Project Template: project-templates-activator | Archived [in GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) | No replacement. |
 | Project Template: project-templates-freemarker-portlet | Archived [in GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) | No replacement. |
 | Screens | Github - iOS: [5.2.0](https://github.com/liferay/liferay-screens/releases/tag/5.2.0), Android: [5.1.0](https://github.com/liferay/liferay-screens/releases/tag/5.1.0-android) |  Use the [Mobile SDK](../../../developing-applications/tooling/other-tools/mobile-sdk.md) and the [Headless APIs](../../..//headless-delivery/consuming_apis.html). |
