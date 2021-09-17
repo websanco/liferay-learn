@@ -1,6 +1,6 @@
 # Definitions for Event Attributes
 
-Different attributes are associated with default and custom events. Global attributes are attributes that are collected for all types of events. Other attributes are specific to different types of events. To view and manage event attributes, navigate to *Settings* &rarr; *Workspace Data* &rarr; *Definitions* &rarr; *Event Attributes*.
+Event attributes are the metadata that provide context for events. Different attributes are associated with default and custom events. Global attributes are attributes that are associated with all types of events. Other attributes may only be associated with certain types of events. To view and manage event attributes, navigate to *Settings* &rarr; *Workspace Data* &rarr; *Definitions* &rarr; *Event Attributes*.
 
 1. Choose a specific attribute under the Global Attributes tab or the Attributes tab. Use the search bar to find a particular attribute.
 
@@ -14,4 +14,4 @@ Different attributes are associated with default and custom events. Global attri
 
     ![Click the Edit button to make changes to the event attribute.](./definitions-for-event-attributes/images/03.png)
 
-    The following data typecasts are available: Boolean, Date, Duration, Number, and String. Note that for most attributes Analytics Cloud automatically detects the data type. Make changes if necessary.
+    The following data typecasts are available: Boolean, Date, Duration, Number, and String. Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Make changes to the typecast if necessary.
