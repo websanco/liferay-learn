@@ -16,20 +16,20 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
     ![Select breakdowns for your event.](./events-analysis/images/02.png)
 
-    Up to three attributes can be selected in the Breakdown row. Note that each type of event is made up of different attributes. Global attributes are attributes that are collected for all types of events. See [Event Attributes](../../workspace-data/defintions/definitions-for-events.md) to learn more.
+    Up to three attributes can be selected in the Breakdown row. Note that each type of event is made up of different attributes. Global attributes are attributes that are collected for all types of events. See [Event Attributes](../../workspace-data/defintions/definitions-for-event-attributes.md) to learn more.
     
-    Hover over a specific attribute in the drop-down list to see the attribute's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description and data typecast.
+    Hover over a specific attribute in the drop-down list to see the attribute's description and data typecast. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description or data typecast.
 
-    Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Data is cast as either boolean, date, duration, number, or string. The data typecast will determine the parameters available for filtering the analysis. For example, selecting an attribute that has a date typecast will have filtering options such as a before or after time period. Date, duration, and number typecasts also have grouping feature to group the data by a set number. For example, a date typecase will allow you to group the data by day, month, or year. 
+    Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Data is cast as either boolean, date, duration, number, or string. The data typecast will determine the parameters available for filtering the analysis. For example, selecting an attribute that has a date typecast will have filtering options such as a before or after time period. Date, duration, and number typecasts also have a grouping feature to group the data by a set number. For example, a date typecast will allow you to group the data by day, month, or year. 
 
     ![For date, duration, and number, select how to group the data.](./events-analysis/images/03.png)
 
-2. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event. The drop-down list shows all available attributes that can be used for filtering. The events analysis tool gives the flexibility to filter by attributes that are both related or unrelated to the events and breakdowns selected. 
+1. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event. The drop-down list shows all available attributes that can be used for filtering. The events analysis tool gives the flexibility to filter by attributes that are both related or unrelated to the events and breakdowns selected. 
 
-3. The default time period is set Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
+1. The default time period is set to Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
 
     ![Select a different time period or compare to previous data.](./events-analysis/images/04.png)
 
-4. Note that there are three tabs (Total, Unique, and Average) to view the breakdown of the event. The Total tab shows the total number of events triggered by all users. The Unique tab shows the total number of unique users who triggered the event. The Average tab shows the average number of events per user.
+    Note that there are three tabs (Total, Unique, and Average) to view the breakdown of the event. The Total tab shows the total number of events triggered by all users. The Unique tab shows the total number of unique users who triggered the event. The Average tab shows the average number of events per user.
 
-5. To analyze a different event or see a different breakdown click the *X* button of the event or the breakdown to start over.
+2. To analyze a different event or see a different breakdown click the close icon (![Close](../../images/icon-close.png)) and close the event or breakdown. Make a new selection to see a new event analysis.
