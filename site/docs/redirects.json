@@ -65,5 +65,9 @@
 	"dxp/latest/ja/installation-and-upgrades/setting-up-liferay-dxp/configuring-mail.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay/configuring-mail.html",
 	"dxp/latest/ja/installation-and-upgrades/setting-up-liferay-dxp/initial-instance-localization.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay/initial-instance-localization.html",
 	"dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
+	"dxp/latest/ja/liferay-internals/fundamentals/configuring-dependencies/configuring-dependencies.html" : "dxp/latest/ja/liferay-internals/fundamentals/configuring-dependencies.html",
+	"dxp/latest/ja/liferay-internals/fundamentals/fundamentals.html" : "dxp/latest/ja/liferay-internals/fundamentals.html",
+	"dxp/latest/ja/liferay-internals/fundamentals/understanding-module-projects.html" : "dxp/latest/ja/liferay-internals/fundamentals/module-projects.html",
+	"dxp/latest/ja/liferay-internals/fundamentals/using-felix-gogo-shell.html" : "dxp/latest/ja/liferay-internals/fundamentals/using-the-gogo-shell.html",
 	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }
