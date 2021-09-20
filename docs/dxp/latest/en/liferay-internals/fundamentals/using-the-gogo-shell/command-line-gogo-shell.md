@@ -2,8 +2,8 @@
 
 If you're in a development environment, you can interact with the module framework locally from the command line.
 
-```warning::
-   Gogo shell should only be run from the command line in development environments. In production environments, run Gogo shell in the Control Panel, as demonstrated in `Using the Gogo Shell <./using-the-gogo-shell.md>`_ .
+```{warning}
+Gogo shell should only be run from the command line in development environments. In production environments, run Gogo shell in the Control Panel, as demonstrated in [Using the Gogo Shell](./using-the-gogo-shell.md) .
 ```
 
 ## Prerequisites
@@ -42,15 +42,15 @@ You can execute commands in a `telnet` session:
 
 1. When you're done executing commands, execute the `disconnect` command to end the session.
 
-```warning::
-   DO NOT execute the following commands. They stop the module framework.
+```{warning}
+DO NOT execute the following commands. They stop the module framework.
 
-   ``close``
+`close`
 
-   ``exit``
+`exit`
 
-   ``shutdown``
- ```
+`shutdown`
+```
 
 ## Conclusion
 

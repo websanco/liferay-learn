@@ -14,15 +14,15 @@ An application can rely on multiple OSGi modules. Resolving their Java package d
 1. Add the non-OSGi JAR as a `compileInclude` dependency:
 
     ```groovy
-   dependencies {
+    dependencies {
         compileInclude group: 'org.apache.shiro', name: 'shiro-core', version: '1.1.0'
-   }
+    }
     ```
 
-   Liferay's `compileInclude` configuration is transitive---it embeds the library and all of its dependencies in the module JAR's `lib` folder and adds the JARs to the module's `Bundle-ClassPath` manifest header.
+    Liferay's `compileInclude` configuration is transitive---it embeds the library and all of its dependencies in the module JAR's `lib` folder and adds the JARs to the module's `Bundle-ClassPath` manifest header.
 
-    ```note::
-       The ``compileInclude`` configuration does not download transitive `optional dependencies <https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html>`_. If you require a package from an optional dependency, resolve the package as you would another third party library package.
+    ```{note}
+    The `compileInclude` configuration does not download transitive [optional dependencies](https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html). If you require a package from an optional dependency, resolve the package as you would another third party library package.
     ```
 
 1. Compile your module.
@@ -37,12 +37,12 @@ An application can rely on multiple OSGi modules. Resolving their Java package d
         *
     ```
 
-   The `!`character negates importing the package. The `*` character represents all packages that the module refers to explicitly. Putting `*` at the end of the list causes Bnd to import all packages your module references.
+    The `!`character negates importing the package. The `*` character represents all packages that the module refers to explicitly. Putting `*` at the end of the list causes Bnd to import all packages your module references.
 
-```note::
-   If your WAR file requires a different version of a third-party package that `Liferay exports already <../../reference/exported-third-party-packages.md>`_, specify that package in your `Import-Package: list <../importing-packages.md>`_. If that package is in an OSGi module, deploy it.
+```{note}
+If your WAR file requires a different version of a third-party package that [Liferay exports already](../../reference/exported-third-party-packages.md), specify that package in your [`Import-Package:` list](../importing-packages.md). If that package is in an OSGi module, deploy it.
 
-   When Liferay DXP deploys a WAR, it converts it to a `WAB <https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.war.html>`_, and it strips already exported third-party JARs out of WABs at deploy time. To force deployment of a different version than Liferay exports, rename that package's non-OSGi JAR differently from the `JAR that the WAB generator excludes <../../../developing-applications/reference/jars-excluded-from-wabs.md>`_ and `embed the JAR <#embedding-a-library>`_ in your project.
+When Liferay DXP deploys a WAR, it converts it to a [WAB](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.war.html), and it strips already exported third-party JARs out of WABs at deploy time. To force deployment of a different version than Liferay exports, rename that package's non-OSGi JAR differently from the [JAR that the WAB generator excludes](../../../developing-applications/reference/jars-excluded-from-wabs.md) and [embed the JAR](#embedding-a-library) in your project.
 ```
 
 Congratulations! You resolved dependencies on packages from non-OSGi JARs.

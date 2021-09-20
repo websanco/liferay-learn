@@ -30,8 +30,8 @@ Liferay service Javadoc is available at these locations:
 * [Liferay CE Apps](https://docs.liferay.com/ce/apps/)
 * [Liferay CE Portal](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/)
 
-```note::
-   For instructions on how to create an OSGi service, please see `APIs as OSGi Services <./apis-as-osgi-services.md>`_.
+```{note}
+For instructions on how to create an OSGi service, please see [APIs as OSGi Services](./apis-as-osgi-services.md).
 ```
 
 ## Deploy the Gogo Shell Command Example
@@ -121,9 +121,9 @@ The method above invokes a `Greeter`'s `greet` method. `com.acme.j1h1.Greeter` i
 Getting an OSGi service from the registry requires adding an [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation to a field of that service type. Add the `@Reference` to your service field.
 
 ```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
-   :dedent: 1
-   :language: java
-   :lines: 18-19
+:dedent: 1
+:language: java
+:lines: 18-19
 ```
 
 The `J1H1OSGiCommands` class has the above private `Greeter` field called `_greeter`. The `@Reference` annotation tells the OSGi runtime to inject the field with a `Greeter` service from the registry. If `J1H1Greeter` is the best matching `Greeter` service component in the registry (it's the only match in this example), the runtime injects `_greeter` with a `J1H1Greeter`.
@@ -133,8 +133,8 @@ The `J1H1OSGiCommands` class has the above private `Greeter` field called `_gree
 Only Declarative Services components can use the `@Reference` annotation. Add the `@Component` annotation to your class and use a `service` attribute to declare your component as implementing a particular service.
 
 ```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/src/main/java/com/acme/j1h1/internal/osgi/commands/J1H1OSGiCommands.java
-   :language: java
-   :lines: 8-12
+:language: java
+:lines: 8-12
 ```
 
 The `J1H1OSGiCommands` class provides an OSGi service of its own type. The two properties define a Gogo shell command with a command function called `greet` in a scope called `j1h1`. The deployed `J1H1OSGiCommands` component provides the Gogo Shell command `j1h1:greet` that takes a `String` as input.
@@ -144,7 +144,7 @@ The `J1H1OSGiCommands` class provides an OSGi service of its own type. The two p
 Your consumer module depends on the API. In your `build.gradle` file, add the API to your dependencies. Here's the `j1h1-osgi-commands` module's `build.gradle` file:
 
 ```{literalinclude} ./using-an-osgi-service/resources/liferay-j1h1.zip/j1h1-osgi-commands/build.gradle
-   :language: groovy
+:language: groovy
 ```
 
 The `release.portal.api` artifact provides the Liferay, Bnd, and OSGi services that the module needs from current Liferay product release. The `liferay.workspace.product` in the `[project root]/gradle.properties` file specifies the release.

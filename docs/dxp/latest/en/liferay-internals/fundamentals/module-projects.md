@@ -191,8 +191,8 @@ The `k8s2-api` module folder contains a `bnd.bnd` metadata file, a `build.gradle
 The example module has only one Java class: an interface called `Greeter`.
 
 ```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/src/main/java/com/acme/k8s2/Greeter.java
-   :language: java
-   :lines: 5-10
+:language: java
+:lines: 5-10
 ```
 
 The [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) annotation tells the service registry that anything implementing the interface provides it (i.e., a `Greeter`). The interface's one method called `greet` asks for a `String` and doesn't return anything.
@@ -204,7 +204,7 @@ Add your own Java code and resources in your module's `src/main/java` folder and
 The `build.gradle` file specifies the module's dependencies.
 
 ```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/build.gradle
-   :language: groovy
+:language: groovy
 ```
 
 It depends on one artifact: the Liferay release API JAR. It is a large JAR packed with Liferay, Bnd, and OSGi artifacts associated with the Liferay product release.
@@ -217,8 +217,8 @@ liferay.workspace.product=portal-7.3-ga3
 
 Lastly, there's no dependency version. That's because Workspace applies the Liferay product API version associated with the release.
 
-```note::
-   Please see `Configuring Dependencies <./configuring-dependencies.md>`_ for more information.
+```{note}
+Please see [Configuring Dependencies](./configuring-dependencies.md) for more information.
 ```
 
 ### Specify Metadata
