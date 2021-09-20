@@ -3,7 +3,7 @@
 If you're in a development environment, you can interact with the module framework locally from the command line.
 
 ```{warning}
-Gogo shell should only be run from the command line in development environments. In production environments, run Gogo shell in the Control Panel, as demonstrated in [Using the Gogo Shell](./using-the-gogo-shell.md) .
+Gogo shell should only be run from the command line in development environments. In production environments, run Gogo shell in the Control Panel, as demonstrated in [Using the Gogo Shell](../using-the-gogo-shell.md) .
 ```
 
 ## Prerequisites
@@ -54,4 +54,4 @@ DO NOT execute the following commands. They stop the module framework.
 
 ## Conclusion
 
-Now that you know how to run Gogo shell from the command line, explore the available [Gogo shell commands](./gogo-shell-commands.md). If you need to use Gogo shell in a production environment, please see [Using the Gogo Shell](./using-the-gogo-shell.md).
+Now that you know how to run Gogo shell from the command line, explore the available [Gogo shell commands](./gogo-shell-commands.md). If you need to use Gogo shell in a production environment, please see [Using the Gogo Shell](../using-the-gogo-shell.md).

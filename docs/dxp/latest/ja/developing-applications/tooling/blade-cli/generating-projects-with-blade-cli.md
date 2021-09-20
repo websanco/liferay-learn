@@ -2,7 +2,7 @@
 Blade CLIは、Liferayプロジェクトを作成、構築、展開するために存在します。 Liferayの「プロジェクト」とは何ですか？ Liferayワークスペースとどのように関連していますか？ --> . 作成したら、これらのプロジェクト（スタンドアロンでもLiferayワークスペースでも）をIDEにインポートするか、直接作業できます。 ここでは、Liferayプロジェクトを作成および管理するさまざまな方法を学びます。
 
 ## Liferayワークスペースの作成
-Liferayワークスペースは、プロジェクトとDevOps構成を保存するマシン上の一連のフォルダーです。 詳細は、[Liferayワークスペース](../../tooling/liferay-workspace.md)を参照してください。 --> for further information. Liferayワークスペースを作成するには、次の手順に従います。
+Liferayワークスペースは、プロジェクトとDevOps構成を保存するマシン上の一連のフォルダーです。 詳細は、[Liferayワークスペース](../../tooling/liferay-workspace/what-is-liferay-workspace.md)を参照してください。 --> for further information. Liferayワークスペースを作成するには、次の手順に従います。
 
 1.  CLIで、Liferayワークスペースを作成するフォルダーに移動します。
 
@@ -77,4 +77,4 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
   - テーマは、Liferay 7.xテーマのようにNodeJSを活用するように変換されます。 Javaベースのテーマを変換するには、代わりにTheme Builder Gradleプラグインを使用する `-t` オプションを追加します。
 
 ## 関連トピック
-[Liferayワークスペース](../../tooling/liferay-workspace.md) <!-- Placeholder until Workspace articles come through. -->
+[Liferayワークスペース](../../tooling/liferay-workspace/what-is-liferay-workspace.md) <!-- Placeholder until Workspace articles come through. -->

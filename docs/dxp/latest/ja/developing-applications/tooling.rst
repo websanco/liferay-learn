@@ -6,7 +6,7 @@
 
    tooling/developer-tools-overview.md
    tooling/blade_cli.rst
-   tooling/liferay-workspace.md
+   tooling/liferay-workspace/what-is-liferay-workspace.md
    tooling/developer-studio.md
    tooling/rest-builder.md
 

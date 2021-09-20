@@ -4,8 +4,6 @@
 :maxdepth: 3
 
 fundamentals/module-projects.md
-fundamentals/apis-as-osgi-services.md
-fundamentals/using-an-osgi-service.md
 fundamentals/importing-packages.md
 fundamentals/exporting-packages.md
 fundamentals/semantic-versioning.md
@@ -19,14 +17,14 @@ OSGiの強力な機能の1つは、DXPのAPIにアクセスするプロジェク
 
 これらは、Liferay DXPのエコシステムの基本です。
 
-  - **[モジュールプロジェクト](./module-projects.md)** では、OSGiモジュールとは何か、そのプロジェクト構造、およびLiferayのOSGiフレームワークでの使用方法について説明します。
+  - **[モジュールプロジェクト](./fundamentals/module-projects.md)** では、OSGiモジュールとは何か、そのプロジェクト構造、およびLiferayのOSGiフレームワークでの使用方法について説明します。
 
-  - **[依存関係の構成](./configuring-dependencies.md)** は、プロジェクトでJavaパッケージを使用するためにLiferayアーティファクトとサードパーティのアーティファクトを識別および構成する方法を示しています。
+  - **[依存関係の構成](./fundamentals/configuring-dependencies.md)** は、プロジェクトでJavaパッケージを使用するためにLiferayアーティファクトとサードパーティのアーティファクトを識別および構成する方法を示しています。
 
-  - **[インポート](./importing-packages.md) および [パッケージのエクスポート](./exporting-packages.md)** は、他のモジュールの機能を使用し、他のモジュールが使用できるように機能を公開する方法を示しています。 Liferayのツールは、パッケージの使用を検出し、パッケージのインポートを自動的に指定します。
+  - **[インポート](./fundamentals/importing-packages.md) および [パッケージのエクスポート](./fundamentals/exporting-packages.md)** は、他のモジュールの機能を使用し、他のモジュールが使用できるように機能を公開する方法を示しています。 Liferayのツールは、パッケージの使用を検出し、パッケージのインポートを自動的に指定します。
 
-  - **[セマンティックバージョニング](./semantic-versioning.md)** は、Liferayが新しいバージョンに進化するときにコードへの依存関係を管理する方法を説明します。これにより、同じメカニズムを使用してバージョンを管理し、コードの破損を回避できます。
+  - **[セマンティックバージョニング](./fundamentals/semantic-versioning.md)** は、Liferayが新しいバージョンに進化するときにコードへの依存関係を管理する方法を説明します。これにより、同じメカニズムを使用してバージョンを管理し、コードの破損を回避できます。
 
-  - **[Gogo Shell](./using-the-gogo-shell.md)** は、シェルにコマンドを発行することにより、コンポーネントの調査、問題のデバッグ、および実行時のデプロイメントの管理方法を示しています。
+  - **[Gogo Shell](./fundamentals/using-the-gogo-shell.md)** は、シェルにコマンドを発行することにより、コンポーネントの調査、問題のデバッグ、および実行時のデプロイメントの管理方法を示しています。
 
-最初に、 [モジュールプロジェクトについて学習します](./module-projects.md)。
+最初に、 [モジュールプロジェクトについて学習します](./fundamentals/module-projects.md)。

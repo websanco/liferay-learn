@@ -29,7 +29,7 @@ You can use Liferay's Baseline Gradle plugin to provide baselining capabilities.
 ./gradlew baseline
 ```
 
-See [Baseline Gradle Plugin](../../developing-applications/tooling/other-tools/gradle-plugins.md) for configuration details. This plugin is not provided in [Liferay Workspace](../../developing-applications/tooling/liferay-workspace.md) by default.
+See [Baseline Gradle Plugin](../../developing-applications/tooling/other-tools/gradle-plugins.md) for configuration details. This plugin is not provided in [Liferay Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) by default.
 
 When you run the `baseline` command, the plugin compares the public exported API of your new module with the latest released non-snapshot module. If there are any changes, it uses the OSGi Semantic Versioning rules to calculate the minimum new version. If your new module has a lower version, it throws errors.
 

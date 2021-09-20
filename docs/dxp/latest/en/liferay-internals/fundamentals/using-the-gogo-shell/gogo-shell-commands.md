@@ -1,6 +1,6 @@
 # Gogo Shell Commands
 
-The Gogo shell executes [Felix Gogo basic commands](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html#basic-commands) and Liferay commands. The Gogo shell is accessible in the [Control Panel](./using-the-gogo-shell.md) (recommended) and from the [command line](./command-line-gogo-shell.md).
+The Gogo shell executes [Felix Gogo basic commands](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html#basic-commands) and Liferay commands. The Gogo shell is accessible in the [Control Panel](../using-the-gogo-shell.md) (recommended) and from the [command line](./command-line-gogo-shell.md).
 
 Here are some commonly used commands:
 
@@ -29,6 +29,6 @@ Here are some commonly used commands:
 
 ## Additional Information
 
-* [Using the Gogo Shell](./using-the-gogo-shell.md)
+* [Using the Gogo Shell](../using-the-gogo-shell.md)
 * [Command Line Gogo Shell](./command-line-gogo-shell.md)
 * [Apache Felix Gogo official documentation](http://felix.apache.org/documentation/subprojects/apache-felix-gogo.html).

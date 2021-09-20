@@ -28,7 +28,7 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 
 2.  紹介の後、 *Next*クリックします。
 
-3.  インストール中に [Liferayワークスペース](../../tooling/liferay-workspace.md) 初期化できます。 Liferayワークスペースは、Liferayプロジェクトを管理するシステム上の環境（一連のフォルダー）です。 今すぐ初期化する場合は、その場所を設定します。
+3.  インストール中に [Liferayワークスペース](../../tooling/liferay-workspace/what-is-liferay-workspace.md) 初期化できます。 Liferayワークスペースは、Liferayプロジェクトを管理するシステム上の環境（一連のフォルダー）です。 今すぐ初期化する場合は、その場所を設定します。
 
     ![Liferayワークスペースは、Liferayプロジェクトを管理するファイルシステム上の一連のフォルダです。](./installing-and-updating-blade-cli/images/02.png)
 
