@@ -8,9 +8,9 @@ Accounts is a feature that is available in Liferay DXP 7.4 and above.
 
 ## Adding an Account User
 
-1. Open the Global Menu (![Global Menu](../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Account Users*.
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Account Users*.
 
-1. Click the Add icon (![Add icon](../images/icon-add.png)) to create a new account user. 
+1. Click the Add icon (![Add icon](../../images/icon-add.png)) to create a new account user. 
 
 1. Select which Account this new user will be associated with.
 
@@ -30,7 +30,7 @@ When you create an account user, Liferay DXP generates a password for the user. 
 
 If you haven't set up a mail server, set a password manually for the user.
 
-1. In Account Users, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account user you want to edit.
+1. In Account Users, click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account user you want to edit.
 
 1. Under the General tab, click *Password*. Set a password for the user and click *Save*.
 
@@ -38,7 +38,7 @@ If you haven't set up a mail server, set a password manually for the user.
 
 To edit an existing Account User,
 
-1. In Account Users, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account user you want to edit.
+1. In Account Users, click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account user you want to edit.
 
 1. Click *Edit* to see the edit user page.
 
@@ -74,11 +74,11 @@ For these reasons and more you must first deactivate an Account User before dele
 
 Deactivating an Account User prevents the user from logging in, but still preserves the user's data and information. 
 
-1. In Account Users, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account user you want to edit.
+1. In Account Users, click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account user you want to edit.
 
 1. Click *Deactivate* and click the *OK* button to confirm your change. The Account User is now deactivated. 
 
-To see a deactivated user, click the *Filter and Order* drop-down menu and click *Inactive* under Filter by Status. You can click the Options icon (![Options icon](../images/icon-actions.png)) of a user and click *Activate* to change a user back to active status.
+To see a deactivated user, click the *Filter and Order* drop-down menu and click *Inactive* under Filter by Status. You can click the Options icon (![Options icon](../../images/icon-actions.png)) of a user and click *Activate* to change a user back to active status.
 
 ### Deleting an Account User
 
@@ -86,7 +86,7 @@ To delete an Account User,
 
 1. In Account Users, click the *Filter and Order* drop-down menu and click *Inactive* under Filter by Status.
 
-1. Click the Options icon (![Options icon](../images/icon-actions.png)) of the inactive user and click *Delete*
+1. Click the Options icon (![Options icon](../../images/icon-actions.png)) of the inactive user and click *Delete*
 
     ![Select the inactive user and click Delete.](./account-users/images/02.png)
 
@@ -96,6 +96,6 @@ To delete an Account User,
 
 You can impersonate an account user to view the system as they would see it. This helps to diagnose permission issues an administrator can't see, such as making sure a User doesn't have access to restricted data. Only users with an administrator role can impersonate a user.
 
-1. In Account Users, click on the Options icon (![Options icon](../images/icon-actions.png)) of the account user you want to edit.
+1. In Account Users, click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account user you want to edit.
 
 2. Click *Impersonate User* and a new window will open with you logged in as that Account User.
