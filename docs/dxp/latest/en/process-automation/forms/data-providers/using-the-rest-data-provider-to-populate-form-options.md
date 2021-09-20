@@ -78,7 +78,7 @@ For example, to apply a region (for example, Americas, Europe, or Oceania) filte
    * **Parameter**: Region
    * **Input Type**: Text
    * **Outputs Label**: Countries of the World with Regions
-   * **Outputs Path**: `*$..name*`
+   * **Outputs Path**: `$..name`
    * **Output Type**: List
 
    To understand more about these values, see [Data Providers Overview](./data-providers-overview.md).
