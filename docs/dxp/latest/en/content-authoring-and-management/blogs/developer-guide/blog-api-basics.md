@@ -157,7 +157,7 @@ java -classpath .:* -DsiteId=1234 BlogPostings_GET_FromSite
 
 Code:
 
-```{literalinclude} ./blog-api-basics/resources/liferay-g9i6.zip/java/BlogPostings_GET_FromSite.java
+```{literalinclude} ./blog-api-basics/resources/liferay-r3g4.zip/java/BlogPostings_GET_FromSite.java
    :dedent: 1
    :language: java
    :lines: 11-23
