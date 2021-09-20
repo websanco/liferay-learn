@@ -40,7 +40,7 @@ Start using the example.
 
 1. Download and unzip `liferay-r9u2.zip`.
 
-    ```curl
+    ```bash
     curl hhttps://learn.liferay.com/dxp/latest/en/liferay-internals/architecture/liferay-r9u2.zip -O
     ```
 

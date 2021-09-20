@@ -31,4 +31,4 @@ Here are some commonly used commands:
 
 * [Using the Gogo Shell](../using-the-gogo-shell.md)
 * [Command Line Gogo Shell](./command-line-gogo-shell.md)
-* [Apache Felix Gogo official documentation](http://felix.apache.org/documentation/subprojects/apache-felix-gogo.html).
+* [Apache Felix Gogo official documentation](http://felix.apache.org/documentation/subprojects/apache-felix-gogo.html)
