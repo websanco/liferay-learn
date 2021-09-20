@@ -49,7 +49,7 @@ To make changes to your account,
 
 1. Selecting the Edit option brings you to a new page with more options:
 
-    ![Select Edit to see more options.](./Accounts/images/03.png)
+    ![Select Edit to see more options.](./accounts/images/03.png)
 
     * Details tab - Modify or add additional information for the Account.
     * Addresses tab - Add or manage billing and shipping addresses.
