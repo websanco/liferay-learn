@@ -6,7 +6,7 @@
 configuring-dependencies/finding-artifacts.md
 configuring-dependencies/specifying-dependencies.md
 configuring-dependencies/resolving-third-party-library-package-dependencies.md
-configuring-dependencies/understanding-excluded-jars.md
+../../developing-applications/reference/jars-excluded-from-wabs.md
 ```
 
 近日公開！

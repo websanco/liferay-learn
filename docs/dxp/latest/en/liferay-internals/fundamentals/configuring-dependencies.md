@@ -6,7 +6,7 @@
 configuring-dependencies/finding-artifacts.md
 configuring-dependencies/specifying-dependencies.md
 configuring-dependencies/resolving-third-party-library-package-dependencies.md
-configuring-dependencies/understanding-excluded-jars.md
+../../developing-applications/reference/jars-excluded-from-wabs.md
 ```
 
 Liferay provides a container where modules can publish and consume functionality through their Java packages. Modules can leverage packages from other modules or traditional libraries by configuring them as dependencies. Here you'll learn how to find artifacts (modules or libraries) and configure dependencies on them.
