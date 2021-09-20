@@ -112,7 +112,16 @@ function generate_sphinx_input {
 		then
 			pushd ../docs
 
-			for article_file_name in $(find "${product_version_language_dir_name}" -name "${1}")
+			local article_file_names=$(find "${product_version_language_dir_name}" -name "${1}")
+
+			if [[ "${article_file_names}" -eq 0 ]]
+			then
+				echo "${1} (No such file)"
+
+				exit 1
+			fi
+
+			for article_file_name in article_file_names
 			do
 				rsync -a ${product_version_language_dir_name}/*.* ${product_version_english_dir_name}/images ../site/build/input/${product_version_language_dir_name}
 
