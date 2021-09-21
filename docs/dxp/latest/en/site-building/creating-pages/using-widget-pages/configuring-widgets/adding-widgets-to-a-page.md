@@ -1,16 +1,5 @@
 # Adding Widgets to a Page
 
-```{toctree}
-:maxdepth: 3
-
-configuring-widgets/adding-widgets-to-a-page.md
-configuring-widgets/converting-widget-pages-to-content-pages.md
-configuring-widgets/enabling-user-personalization-of-widget-pages.md
-configuring-widgets/styling-apps-assets-and-widgets-with-widget-templates.md
-configuring-widgets/using-a-widget-template-example.md
-configuring-widgets/setting-a-default-widget-template.md
-```
-
 Widget are applications that can serve a variety of functions. Some can be used to [display content](../../../displaying_content.md) and others are full featured collaboration applications, like the [Message Boards widget](../../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md).
 
 Follow these steps to add a widget to a Widget Page:

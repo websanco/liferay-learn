@@ -1,5 +1,7 @@
 # Configuring Widgets
 
+Widget Templates define how widgets are rendered and how widgets display content. For example, a widget template can be used to configured to display blog entries horizontally instead of vertically or list assets in different sizes. You can also use a template editor and create custom widget templates.
+
 ```{toctree}
 :maxdepth: 3
 

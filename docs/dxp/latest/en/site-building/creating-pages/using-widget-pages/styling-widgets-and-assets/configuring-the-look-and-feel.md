@@ -1,18 +1,16 @@
 # Getting Started with Widgets Configuration
 
-Widgets that ship with product shares common features. These include look and feel, exporting/importing app data, communication, sharing, permissions, scoping, and configuration templates. These features work together to facilitate information flow within product and provides an enhanced experience for your users.You'll start with look and feel configuration options.
+Widgets that are available out-of-the-box with Liferay DXP share several common features. These include look and feel, exporting/importing app data, communication, sharing, permissions, scoping, and configuration templates. These features work together to facilitate information flow within product and provides an enhanced experience for your users You'll start with look and feel configuration options.
 
 ## Look and Feel Configuration
 
 To access the look and feel configuration menu of any widget, follow these steps:
 
-1.  Click *Options* icon (![Actions Button](../../../../images/icon-actions.png)) in the top
-    right corner of the widget.
+1.  Click *Options* icon (![Actions Button](../../../../images/icon-actions.png)) in the top right corner of the widget.
 
 1.  Select *Look and Feel Configuration*.
 
     *Look and Feel Configuration* has six tabs:
-
     - General
     - Text Styles
     - Background Styles
@@ -20,8 +18,7 @@ To access the look and feel configuration menu of any widget, follow these steps
     - Margin and Padding
     - Advanced Styling
 
-1. After making customizations, click *Save* and refresh your page to apply your
-changes.
+1. After making customizations, click *Save* and refresh your page to apply your changes.
 
 ## General Settings
 
@@ -32,15 +29,13 @@ On the General tab are the following options:
 **Application Decorators** gives you the choice between three decorators: *Barebone*, *Borderless*, and *Decorate*. The Decorate application decorator is the default.
 
 ```{important}
-Be careful about turning widget borders off; some themes assume widget borders are turned on and may not display correctly with them turned
-off.
+Be careful about turning widget borders off; some themes assume widget borders are turned on and may not display correctly with them turned off.
 ```
 ![The General tab of the Look and Feel Configuration menu lets you define a custom widget title and select the widget contrast option using decorators.](./configuring-the-look-and-feel/images/01.png)
 
 ## Text Styles
 
-*Text Styles* configures the format of the text that appears in the widget. The
-options include:
+*Text Styles* configure the format of the text that appears in the widget. The options include:
 
 **Font:** Choose various fonts. You can set the text to bold, italics, or both.
 
@@ -90,6 +85,6 @@ The Advanced Styling tab displays current information about your widget, includi
 
 You can also enter custom CSS class names for your widget and custom CSS code. Clicking the *Add a CSS rule for just this portlet* or *Add a CSS rule for all portlets like this one* links adds the CSS code shells into your custom CSS text box.
 
-## Additional Information 
+## Additional Information
 
 - [Exporting/Importing Widget Data](./exporting-importing-widget-data.md)

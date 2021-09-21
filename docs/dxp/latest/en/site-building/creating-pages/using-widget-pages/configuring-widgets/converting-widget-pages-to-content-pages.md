@@ -1,16 +1,5 @@
 # Converting Widget Pages to Content Pages
 
-```{toctree}
-:maxdepth: 3
-
-configuring-widgets/adding-widgets-to-a-page.md
-configuring-widgets/converting-widget-pages-to-content-pages.md
-configuring-widgets/enabling-user-personalization-of-widget-pages.md
-configuring-widgets/styling-apps-assets-and-widgets-with-widget-templates.md
-configuring-widgets/using-a-widget-template-example.md
-configuring-widgets/setting-a-default-widget-template.md
-```
-
 In previous versions, Widget Pages provided exclusive features, such as custom layouts and customizable columns. Many of these exclusive features are available on Content Pages in 7.3, so in most cases, you'll want to create a Content Page.
 
 If you're upgrading to Liferay Portal 7.3 from a previous version and migrating existing Widget Pages, you can convert them to Content Pages. You can convert a Widget Page to Content Page right away, or you can preview the conversion, make changes, and then convert the page.

@@ -1,19 +1,8 @@
 # Enabling User Personalization of Widget Pages
 
-```{toctree}
-:maxdepth: 3
-
-configuring-widgets/adding-widgets-to-a-page.md
-configuring-widgets/converting-widget-pages-to-content-pages.md
-configuring-widgets/enabling-user-personalization-of-widget-pages.md
-configuring-widgets/styling-apps-assets-and-widgets-with-widget-templates.md
-configuring-widgets/using-a-widget-template-example.md
-configuring-widgets/setting-a-default-widget-template.md
-```
-
 Administrators can designate some or all of the sections (rows and columns of the page layout) of a Widget Page as customizable for site members. Page customizations are only visible to the user who made the customizations. The steps below cover these topics:
 
-- [Enabling User Personalization of Widget Pages](#enabling-user-personalization-of-widget-pages)
+  - [Enabling User Personalization of Widget Pages](#enabling-user-personalization-of-widget-pages)
   - [Enabling Page Customizations](#enabling-page-customizations)
   - [Customizing Pages](#customizing-pages)
   - [Granting Roles Permission to Customize Pages](#granting-roles-permission-to-customize-pages)
