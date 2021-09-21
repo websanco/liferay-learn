@@ -17,13 +17,17 @@ All Form Fields have at least two configuration types: basic and advanced. Many 
 
 ![The Select from List field has several basic configurations.](./forms-field-types-reference/images/15.png)
 
-Advanced configurations include [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), search configurations, whether the field is repeatable, the system/programmatic field reference, and field confirmation. There are additional-field-specific configurations as well.
+Advanced configurations include [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), search configurations, whether the field is repeatable, the system/programmatic field reference, field confirmation, and whether the field is hidden. There are additional-field-specific configurations as well.
 
 ![The Text field has several advanced configurations.](./forms-field-types-reference/images/14.png)
 
+### Hiding Fields
+
+Sometimes it's useful to pass information from an external source (like a [REST Data Provider](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)) into a form field that's only to be used for triggering a [form rule](../form-rules/form-rules-overview.md). In this case, use the Hide Field configuration (new in Liferay 7.4).
+
 ### Field Confirmation
 
-Rather than a field in the Form Builder that you add directly to the form body, the confirmation field only appears in the form when you configure a single-line Text or Numeric field to _Require Confirmation_ (using the field's Advanced configuration section). This field ensures that fields with important data are entered correctly (for example, email address fields).
+Field confirmation is supported in Liferay Forms as of version 7.4. Rather than a field in the Form Builder that you add directly to the form body, the confirmation field only appears in the form when you configure a single-line Text or Numeric field to _Require Confirmation_ (using the field's Advanced configuration section). This field ensures that fields with important data are entered correctly (for example, email address fields).
 
 ![Confirmation fields help ensure the user enters the correct information.](./forms-field-types-reference/images/21.png)
 
