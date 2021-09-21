@@ -1,5 +1,13 @@
 # Webサービスの保護の概要
 
+```{toctree}
+:maxdepth: 2
+
+securing-web-services/setting-service-access-policies.md
+securing-web-services/using-authentication-verifiers.md
+securing-web-services/setting-up-cors.md
+```
+
 Liferay Portalは、Webサービスに4つのセキュリティレイヤーを提供しています。
 
 **IPアクセス許可レイヤー：**Webサービス呼び出し要求の発信元のIPアドレスは、ポータルプロパティファイルでホワイトリストに登録されている必要があります。 ホワイトリストに登録されていないIPアドレスからのWebサービスの呼び出しは自動的に失敗します。
