@@ -37,7 +37,7 @@ New configuration options appear when you enable the confirmation field:
 
 **Label:** Choose the prefix for the original field label. The default value is Confirm, so a field named Email Address has a confirmation field label of _Confirm Email Address_.
 
-**Error Message:** Depending on the field you're asking confirmation of, you can provide a more specific error message.
+**Error Message:** Depending on the field you're confirming, you can provide a more specific error message.
 
 ![Confirmation fields are configurable.](./forms-field-types-reference/images/22.png)
 
@@ -89,7 +89,19 @@ Users enable or disable a radio button or switch, logging a `true` or `false` re
 
 Users select a date using a date picker.
 
-![Single Selection fields show users multiple options, allowing them to select just one.](./forms-field-types-reference/images/06.png)
+![A date picker offers  handy way to select a date.](./forms-field-types-reference/images/06.png)
+
+As of Liferay 7.4, the Advanced configuration of the Date Field includes Validation.
+
+![Enter validation rules for date fields.](./forms-field-types-reference/images/26.png)
+
+Validation options include
+
+**Accepted Date:** Require that the selected date be a future date, a past date, or a specified range.
+
+**Starts From/Ends On:** In the case of future dates, define the date picker Start From date. For past dates, define the Ends On date. Configure whether the date picker should use the Response Date (the date that the user is filling out the form) or a custom date for this value. Both Starts From and Ends On must be configured for a date range validation.
+
+**Error Message:** The error message can be customized to better suit the specific validation rule.
 
 ### Multiple Selection
 

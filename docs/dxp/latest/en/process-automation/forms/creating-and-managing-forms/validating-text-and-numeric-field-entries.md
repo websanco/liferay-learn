@@ -4,6 +4,8 @@ Enable input validation to ensure that only certain values are accepted in a Tex
 
 <!-- Update this. Rename to "Text and Numeric Fields: Validation and Masking" and then add a seciton on "Masking Numeric Fields". Make the section example-oriented with a few useful examples.-->
 
+<!-- Also consider updating because date fields can be validated in 7.4 -->
+
 ## Enabling Field Validation
 
 To enable validation:
