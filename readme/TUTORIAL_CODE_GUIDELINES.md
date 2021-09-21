@@ -17,6 +17,7 @@
         * [Export API Packages](#export-api-packages)
 * [build.gradle](#buildgradle)
 * [Applying the Java Workspace Template to Your Project](#applying-the-java-workspace-template-to-your-project)
+* [Opening Permissions on Your Scripts](#opening-permissions-on-your-scripts)
 * [Packages](#packages)
     * [Package Names for Extensions or Implementations](#package-names-for-extensions-or-implementations)
     * [Portlet Package Names](#portlet-package-names)
@@ -284,6 +285,20 @@ liferay-xxxx.zip/
 └── xxxx-[api|impl|web] // Module
 ```
 
+## Opening Permissions on Your Scripts
+
+Open execute permissions on your project's scripts by running the `update_permissions.sh` command on the project.
+
+```bash
+cd liferay-learn/docs
+```
+
+```bash
+./update_examples.sh xxxx
+```
+
+The script opens execute permissions on your project's scripts.
+
 ## Packages
 
 Follow the Source Formatter rules for package names found in [Java Package Formatting](https://github.com/liferay/liferay-portal/blob/master/modules/util/source-formatter/documentation/package.markdown).
@@ -503,6 +518,7 @@ Wrap subtitles and section labels in `h5` tags--NOT bold `b` tags.
 Overview
 
 1. Run `update_examples.sh xxxx` (replace `xxxx` with project ID) to compile and to run the source formatter.
+1. Run `update_permissions.sh xxxx` to open execute permissions on your scripts.
 1. [Test your code](#test-your-code); the code has to work. 
 1. [Code changes only](#code-changes-only); don't include article changes.
 1. [Submit your code changes](#submit-your-code) to `jhinkey` (Jim Hinkey) here in `liferay-learn`.
@@ -517,7 +533,19 @@ cd docs
 ./update_examples.sh xxxx
 ```
 
-Resolve any reported issues and commit any changes that you or the script made.
+Resolve any reported issues and commit any changes that the script made (e.g., formatting corrections) or that you make.
+
+### Rerun update_permissions.sh
+
+```bash
+cd docs
+```
+
+```bash
+./update_examples.sh xxxx
+```
+
+The script opens execute permissions on your project's scripts.
 
 ### Test Your Code 
 
