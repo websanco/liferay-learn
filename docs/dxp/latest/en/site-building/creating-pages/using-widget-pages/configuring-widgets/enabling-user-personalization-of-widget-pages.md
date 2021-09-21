@@ -30,7 +30,7 @@ With customization activated for a page, site members can add apps to the custom
 * Add or remove apps
 * Configure applications
 
-```note::
+```{note}
   Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
 ```
 
@@ -60,6 +60,6 @@ By default, site members can make page customizations but non-site members and g
 
 1. Scroll down and click *Save* to apply the changes.
 
-```note::
+```{note}
   The *Customize* permission also lets users customize the look and feel of apps and import or export app settings.
 ```
