@@ -60,6 +60,10 @@ liferay
 Once deployed, any files within the `configs/{ENV}/deploy/` directory are copied to the `$LIFERAY_HOME/deploy/` folder in your Liferay service's container.
 
 ```{note}
+Certain files and configurations are forced to be present when an image is deployed, and they may override your added files. Look for the message `DXPCloud Liferay Overrides` in your service's logs to identify when your files are overridden.
+```
+
+```{note}
 If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate `lcp/liferay/deploy/{ENV}` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
@@ -83,8 +87,8 @@ Once deployed, the deployable `.jar` or `.war` files are copied to the `$LIFERAY
 
 To apply hotfixes, add the hotfix ZIP file to a `configs/{ENV}/patching/` folder within the Liferay DXP service directory. When you deploy this change, the hotfix is applied to the Liferay DXP instance.
 
-```{note}
-See [these instructions](./updating-your-dxp-instance-to-a-new-minor-version.md) to update to a new minor version of Liferay DXP instead (such as a new [service pack](../../../../dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md#service-packs)).
+```(note)
+See [these instructions](./updating-your-dxp-instance-to-a-new-minor-version.md) to update to a new minor version of Liferay DXP instead (such as a new [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.html#service-packs)).
 ```
 
 For example, you can deploy a hotfix to your development environment with a structure like the following:
