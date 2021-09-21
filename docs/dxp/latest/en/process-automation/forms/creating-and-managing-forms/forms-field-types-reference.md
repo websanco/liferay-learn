@@ -105,6 +105,17 @@ Users enter numeric data (integers or decimals) into numeric fields. Non-numeric
 
 ![Numeric fields restrict user input to numbers (integers or decimals).](./forms-field-types-reference/images/09.png)
 
+There are some interesting advanced field settings for numeric fields:
+
+- [**Require Confirmation**](#field-confirmation) ensures the user enters data correctly.
+- **[Validation](./validating-text-and-numeric-field-entries.md)** constrains the user input to your pre-configured requirements.
+      ![Validate numeric input.](./forms-field-types-reference/images/25.png)
+- **Input Mask** allows you to display the correct format as the user enters numeric data. The configuration behavior differs between integer fields and decimal fields:
+   - Integer field masks: configure the Format. A second entry, Character Options, is a read-only field setting that provides additional guidance on the character behavior used to define the format.
+      ![Create an input mask for integer fields.](./forms-field-types-reference/images/24.png)
+   - Decimal field masks: Configure the Thousands Separator, the Decimal Separator, and the Prefix or Suffix settings. The thousands separator style can be `None`, `1,000`, `1.000`, or `1 000`. The decimal separator style can be `0.00` or `0,00`. Prefix or Suffix. The prefix or suffix is usually used to define the units of the decimal number. For example, use `$` as a prefix for a field that expects the user to enter a dollar amount.
+      ![Create an input mask for decimal fields.](./forms-field-types-reference/images/23.png)
+
 ### Upload
 
 Upload fields let users upload a file from the local file system. Logged in Users can choose from files they have previously uploaded or upload a new one.

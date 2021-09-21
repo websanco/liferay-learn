@@ -2,6 +2,8 @@
 
 Enable input validation to ensure that only certain values are accepted in a Text or Numeric field.
 
+<!-- Update this. Rename to "Text and Numeric Fields: Validation and Masking" and then add a seciton on "Masking Numeric Fields". Make the section example-oriented with a few useful examples.-->
+
 ## Enabling Field Validation
 
 To enable validation:
