@@ -9,7 +9,7 @@ accounts/account-roles.md
 accounts/account-management-widget.md
 ```
 
-Accounts provide administrators with a way to organize and manage users for various business or professional needs. Unlike [organizations](./organizations.html) or [user groups](./user_groups.html), accounts help facilitate interactions that might take place in business situations such as the purchasing of goods and services or managing existing customers.
+Accounts provide administrators with a way to organize and manage users for various commerce or business needs. Unlike [organizations](./organizations.html) or [user groups](./user_groups.html), accounts help facilitate interactions that might take place in business situations such as the purchasing of goods and services or managing existing customers.
 
 ```{note}
 Accounts is a feature that is available in Liferay DXP 7.4 and above.
@@ -27,7 +27,7 @@ To create an Account,
 
     ![Give you account a name and select the type.](./accounts/images/01.png)
 
-    Account type can be Business, Person or Guest. You can associate multiple Users for a Business type account whereas the Person type account is for an individual user. The Guest type account provides a way for a user to interact with your business or Site as an unregistered user.
+    Account type can be Business, Person or Guest. You can associate multiple Users for a Business type account whereas the Person type account is for an individual user. The Guest type account provides a way for a user to interact with your business or Site as an unregistered user. Note that once an Account is created the type cannot be changed.
 
 ## Making Changes to an Account
 
