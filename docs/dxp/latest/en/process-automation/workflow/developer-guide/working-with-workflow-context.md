@@ -60,7 +60,7 @@ userURL, http://localhost:8080/web/test
 
 ### Accessing Workflow Context Attributes in Workflow Definitions
 
-To access `workflowContext` attributes form a [`<script>`](using-the-script-engine-in-workflow.md), retrieve them with the `get` method:
+To access `workflowContext` attributes form a [`<script>`](using-the-script-engine-in-workflow.md), retrieve them with the `Map#get` method:
 
 ```groovy
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
