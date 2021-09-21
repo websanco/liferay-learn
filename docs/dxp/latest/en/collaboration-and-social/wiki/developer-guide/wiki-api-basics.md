@@ -1,4 +1,4 @@
-# Wiki API Basic
+# Wiki API Basics
 
 Liferay's Headless Delivery application provides REST services for the [Wiki](../getting-started-with-wikis.md) application. With these services, you can add Wiki nodes and pages, list their information, modify their content, or remove them altogether. Here you'll call those services using cURL commands and Java classes.
 
@@ -13,7 +13,7 @@ The following tutorial requires a DXP/Portal 7.3+ instance for testing the tutor
 To start up a new Liferay DXP container, run the following command:
 
 ```docker
-docker run -it -m 8g -p 8080:8080 liferay/dxp:7.3.10-dxp-1
+docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 ```
 
 Once started, retrieve the Site ID. To find your Site ID, open the *Site Menu* (![Site Menu](../../../images/icon-menu.png)), and go to *Configuration* &rarr; *Site Settings* &rarr; *Site Configuration*.
@@ -22,7 +22,7 @@ Once started, retrieve the Site ID. To find your Site ID, open the *Site Menu* (
 
 ### Tutorial Code
 
-This tutorial provides sample code to demonstrate Headless API functionalities. This code includes both sample cURL and Java files for use throughout the tutorial.
+This tutorial provides sample code to demonstrate the Headless API. This code includes both sample cURL and Java files for use throughout the tutorial.
 
 Run the following command to download and unzip the [sample code](https://learn.liferay.com/dxp/latest/en/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip):
 
@@ -99,7 +99,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
    java -classpath .:* -DsiteId={site-id} WikiNode_POST_ToSite
    ```
 
-   The terminal should display the complete schema for the newly created Wiki node. The provided API calls only define the `description` and `name` fields for the new node, though you should copy the node's ID for use with the following GET, PUT, and DELETE methods.
+   The terminal displays the complete schema for the newly created Wiki node. The provided API calls only define the `description` and `name` fields for the new node, though you should copy the node's ID for use with the following GET, PUT, and DELETE methods.
 
    ```bash
    {
@@ -127,7 +127,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
    ```
 
    ```{note}
-   All DXP/Portal instances come with a default Wiki node called `Main`. This node should be listed in the above output, along with any nodes you've created.
+   All DXP/Portal instances come with a default Wiki node called `Main`. This node is shown in the above output, along with any nodes you've created.
    ```
 
 1. Execute the `WikiNode_PUT_ById` shell script or Java class using the Wiki node ID for its parameter. This replaces the details of the specified Wiki node with the details provided in the API call.
@@ -183,7 +183,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
    java -classpath .:* -DwikiNodeId={wiki-node-id} WikiNode_GET_ById
    ```
 
-   Since we deleted the node in the preceding step, it should return the following message.
+   Since you deleted the node in the preceding step, it returns the following message.
 
    ```bash
    {
@@ -194,7 +194,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
 
 ### Calling the WikiPage APIs
 
-In this exercise, you can use either the cURL commands or Java classes to call the WikiPage APIs. The following output examples correspond to the cURL command, which differs from the Java classes output.
+You can use either the cURL commands or Java classes to call the WikiPage APIs. The following output examples correspond to the cURL command, which differs from the Java classes output.
 
 1. Navigate to the `curl` or `java` folder in the `liferay-q8u2` project.
 
@@ -299,7 +299,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
    }
    ```
 
-1. Execute the `WikiPages_GET_FromNode` shell script or Java class using the Wiki node ID for its parameter. This returns a list of all Wiki pages added to the specified node, which should include both of the newly created Wiki pages.
+1. Execute the `WikiPages_GET_FromNode` shell script or Java class using the Wiki node ID for its parameter. This returns a list of all Wiki pages added to the specified node, which includes both of the newly created Wiki pages.
 
    **For cURL:**
 
@@ -381,7 +381,7 @@ In this exercise, you can use either the cURL commands or Java classes to call t
    java -classpath .:* -DwikiPageId={wiki-page-id} WikiPage_GET_ById
    ```
 
-   Since the page was deleted in the preceding step, it should return the following message.
+   Since the page was deleted in the preceding step, you see the following message.
 
    ```bash
    {
