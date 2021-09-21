@@ -15,19 +15,19 @@ Several changes are made between version 3.x and 4.x of the DXP Cloud stack, inc
 
 ## Changes to Docker Image Definitions
 
-Docker images for your services in version 4.x of DXP Cloud are no longer defined in the project's `gradle.properties` file. They are now defined in the `LCP.json` for each service.
+Docker images for your services in version 4.x of DXP Cloud are no longer defined in the project's `gradle.properties` file. They are now defined in the `LCP.json` file for each service.
 
 Upgrading to DXP Cloud Stack version 4 changes every service's Docker image version from `3.x.x` to `4.x.x`. These image changes are in addition to organizational changes to how DXP Cloud projects are structured and function.
 
 ## Project Organization Changes
 
-The biggest change to the repository is that each service's files have been moved to a folder at the root of the repository. The `lcp` folder is removed and is no longer in the path for any of these services. These folders themselves have been reorganized to resemble a Liferay workspace structure. <!-- TODO: Point to workspace documentation -->
+The biggest change to the repository is that each service's files (including their `LCP.json` file) have been moved to a folder at the root of the repository (e.g., `liferay/` or `webserver/`). You can deploy each of these services individually by navigating into these relocated service folders and using the [CLI tool](./command-line-tool.md). The `lcp` folder is removed and is no longer in the path for any of these services. These folders themselves have been reorganized to resemble a [Liferay workspace structure](https://learn.liferay.com/dxp/latest/en/developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.html).
 
 Several other files previously at the root of the repository (including `gradle.properties`, `build.gradle`, and `settings.gradle`) have also been moved into the `liferay` service.
 
 ## Liferay Service Changes
 
-The `liferay` service folder now follows the functional structure of a Liferay Workspace. <!-- TODO: Point to workspace documentation -->
+The `liferay` service folder now follows the functional structure of a [Liferay Workspace](https://learn.liferay.com/dxp/latest/en/developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.html).
 
 All configurations within the `liferay` service now belong in an environment-specific `configs` directory that corresponds to a project's DXP Cloud environments. Additionally, the `license` folder has been removed; add your licenses into the `deploy` folder instead.
 
@@ -43,7 +43,7 @@ The following table summarizes the new organization of your `liferay` service co
 | Licenses | lcp/liferay/license/{ENV}/ | lcp/configs/{ENV}/deploy/ |
 
 ```{note}
-Files within the `configs/{ENV}/` directory will be copied as overrides into the `LIFERAY_HOME` directory in the Liferay container in DXP Cloud.
+Files within the `configs/{ENV}/` directory are copied as overrides into the `LIFERAY_HOME` directory in the Liferay container in DXP Cloud.
 ```
 
 Instead of directly committing hotfixes to the repository, a new CI service environment variable is now available to automatically add when deploying the Liferay service. See [Installing Hotfixes with an Environment Variable](#installing-hotfixes-with-an-environment-variable) for more information.
@@ -63,7 +63,7 @@ All configurations within the `search` service now belong in an environment-spec
 | Elasticsearch license (.json) files | lcp/search/license/{ENV}/ | search/configs/{ENV}/license/ |
 
 ```{note}
-Files in `search/configs/{ENV}/` will be copied as overrides into `usr/shared/elasticsearch/` in the Search container in DXP Cloud. For example, configurations in `search/configs/{ENV}/config/`, such as `elasticsearch.yml`, will be copied into `usr/shared/elasticsearch/config/` and override existing defaults.
+Files in `search/configs/{ENV}/` are copied as overrides into `usr/shared/elasticsearch/` in the Search container in DXP Cloud. For example, configurations in `search/configs/{ENV}/config/`, such as `elasticsearch.yml`, are copied into `usr/shared/elasticsearch/config/` and override existing defaults.
 ```
 
 ### Elasticsearch Plugins
@@ -80,11 +80,11 @@ If you would like to install additional Elasticsearch plugins beyond the ones ou
 
 A default `Jenkinsfile` is no longer required in the repository, as a default pipeline is now defined. Any `Jenkinsfile` is now defined in the `ci` folder, rather than the root of the repository.
 
-Multiple `Jenkinsfile` extension points are now available in the `ci` folder to define procedures at different stages of creating a build. <!-- TODO: Add reference to Jenkinsfile-specific article -->
+Multiple `Jenkinsfile` extension points are now available in the `ci` folder to define procedures at different stages of creating a build. See [Extending the Default Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile) for more information.
 
 ### Installing Hotfixes with an Environment Variable
 
-Instead of directly committing large hotfixes to your Git repository, a new environment variable has been added that allows you to install hotfixes through the CI build process. Add a comma-delimited list of hotfixes to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
+Instead of directly committing large hotfixes to your Git repository, a new environment variable has been added that allows you to install hotfixes through the CI build process. Add a comma-delimited list of hotfixes (with the `.zip` extensions omitted) to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
 
 The following example defines hotfixes using the `LCP.json` file:
 
@@ -108,7 +108,7 @@ See the following table for the new organization of your `webserver` service con
 | Static content | lcp/webserver/deploy/{ENV}/ | webserver/configs/{ENV}/public/ |
 
 ```{note}
-Files in `/webserver/configs/{ENV}/` will be copied as overrides into `/etc/nginx/` in the webserver container in DXP Cloud. Files in `/webserver/configs/{ENV}/public/` will be copied as overrides into `var/www/html/`.
+Files in `/webserver/configs/{ENV}/` are copied as overrides into `/etc/nginx/` in the webserver container in DXP Cloud. Files in `/webserver/configs/{ENV}/public/` are copied as overrides into `var/www/html/`.
 ```
 
 ### Webserver Configuration Overrides
@@ -142,6 +142,8 @@ All configurations within the `backup` service now belong in an environment-spec
 | **File** | **Location in 3.x** | **Location in 4.x** |
 | :--- | :--- | :--- |
 | Custom SQL scripts | lcp/backup/script/{ENV}/ | backup/configs/{ENV}/scripts/ |
+
+All `.sql` scripts deployed to the `backup` service are executed automatically after a backup restore process completes, and the environment that is being restored to executes the scripts from its own `backup` service. You can also compress large `.sql` files, or multiple `.sql` files, in `.tgz`, `.gz`, or `.zip` format and place them in this directory.
 
 ## Known Limitations
 
