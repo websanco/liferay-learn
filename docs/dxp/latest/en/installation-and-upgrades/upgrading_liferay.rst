@@ -8,7 +8,7 @@ Upgrading Liferay
    upgrading-liferay/upgrade_stability_and_performance.rst
    upgrading-liferay/configuration_and_infrastructure.rst
    upgrading-liferay/other_upgrade_scenarios.rst
-   upgrading-liferay/upgrading_custom_development.rst
+   upgrading-liferay/upgrading-custom-development.md
    upgrading-liferay/reference.rst
 
 .. raw:: html
