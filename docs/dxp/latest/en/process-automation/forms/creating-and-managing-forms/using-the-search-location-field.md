@@ -1,6 +1,18 @@
 # Using the Search Location Field
 
+Use a Search Location field so a user can interact with Google's Maps JavaScript  API and Google Places API, selecting a location and getting these fields autofilled in the form:
+
+- Address (e.g., 1400 Montefino Ave.)
+- City (e.g., Diamond Bar)
+- State (e.g., California)
+- Postal Code (e.g., 91765)
+- Country (e.g., USA)
+
+You don't have to display all the fields in the form.
+
 ## Adding and Configuring the Search Location Field
+
+To add the Search Location field to a form,
 
 1. Enable the JavaScript Google Maps API and the Google Places API.
 
@@ -18,16 +30,16 @@
 
    - **Field Label** is for changing the field's label in the form. For example, instead of Search Location you might choose Location Lookup.
    - **Visible Fields** configures which subfields should be shown, and autofilled, in the form. The _Search Location_ text field is always displayed (though the label can be customized). Choose to include Address, City, State, Postal Code, and/or Country subfields.
-   - **Layout** determines whether the subfields are displayed in a single column or in two columns.
-
-<!-- Write a note on looking these subfields up programmatically? -->
+   - **Layout** determines whether Search Location and its subfields are displayed in a single column or in two columns.
 
 ## Entering Data into the Search Location Field
 
-A User interacts with the Search Location field, and whatever fields have been configured as visible in the field settings are autofilled when a location is selected.
+Once the [form is published](./creating-forms.md#publishing-a-form) a user interacts with the Search Location field by entering something about the location: whatever fields have been configured as visible in the field settings are autofilled when a location is selected from the presented options.
 
 ![Begin entering a location and the Google APIs autocomplete valid locations you can select from.](./using-the-search-location-field/images/03.png)
 
 ## Related Content
 
-- [Site Settings]()
+- [Site Settings UI Reference](../../../site-building/site-settings/site-settings-ui-reference.md)
+- [Creating Forms](creating-forms.md)
+- [Using the REST Data Provider to Populate Form Options](../data-providers/using-the-rest-data-provider-to-populate-form-options.md)
