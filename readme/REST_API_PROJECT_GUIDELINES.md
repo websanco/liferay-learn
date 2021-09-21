@@ -224,6 +224,8 @@ curl \
 
 Remove non-essential options that you might get from the API Explorer cURL commands. See the Document API Basics [cURL commands](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/content-authoring-and-management/documents-and-media/developer-guide/document-api-basics/resources/liferay-g9i6.zip/curl) for examples.
 
+Make sure to open execute permissions on the scripts by [running the `update_permissions.sh xxxx` command]((#updating-permissions) on it, where `xxxx` is your project ID.
+
 ## Developing Java Clients
 
 You must call the REST API using Java too. Each resource (e.g., DocumentFolder, Document BlogPosting, etc.) has a resource class--it ends in `Resource`. For example, `DocumentFolder`'s resource class is `DocumentFolderResource`. The resource class provides the REST API Java methods. Calling the API in Java requires understanding how to initialize the resource, how to invoke the resource methods, and how to use the returned value (if any). Start with learning how to initialize the resource.
@@ -428,6 +430,8 @@ cd liferay-learn/docs
 ```bash
 ./update_permissions.sh xxxx
 ```
+
+Commit your modified files.
 
 ## Sending Code For Review 
 
