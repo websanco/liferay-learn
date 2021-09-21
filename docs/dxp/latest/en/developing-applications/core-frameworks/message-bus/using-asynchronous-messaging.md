@@ -40,8 +40,8 @@ Start with sending a message in an example project.
     ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the module JAR to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the module JAR to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
     The Docker container console shows that the module started.
@@ -111,8 +111,8 @@ We'll examine the destination configuration and sender classes. The listener cla
 The `n8k5-able-impl` module's `N8K5AbleMessagingConfigurator` class creates and configures the destination. Here's the code:
 
 ```{literalinclude} ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-able-impl/src/main/java/com/acme/n8k5/able/internal/messaging/N8K5AbleMessagingConfigurator.java
-   :language: java
-   :lines: 15-42
+:language: java
+:lines: 15-42
 ```
 
 Any class can create and configure a destination, but a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) can have injected dependencies, like the `DestinationFactory`. The `_destinationFactory` field's [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) annotation signals Liferay's OSGi framework to inject a `DestinationFactory` instance. 
@@ -124,8 +124,8 @@ In the `_activate` method, `N8K5AbleMessagingConfigurator` uses the [`Destinatio
 The `N8K5Baker` class below sends a message with the payload `"N8K5Baker#_activate"` to the destination named `acme/n8k5_able`.
 
 ```{literalinclude} ./using-asynchronous-messaging/resources/liferay-n8k5.zip/n8k5-baker-impl/src/main/java/com/acme/n8k5/baker/internal/N8K5Baker.java
-   :language: java
-   :lines: 12-23
+:language: java
+:lines: 12-23
 ```
 
 As a Component, `N8K5Baker` uses the `@Reference` annotation to inject a `MessageBus` instance.
@@ -142,8 +142,8 @@ Here are the main message-populating methods:
 
 `N8K5Baker` sends the message to a [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) named `acme/n8k5_able` by calling [`MessageBus`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBus.java)'s `sendMessage(String, Message)` method. The `MessageBus` starts a new thread and sends the `Message` to [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) instances registered to the `acme/n8k5_able` `Destination`. `N8K5Baker`'s thread continues.
 
-```note::
-   If you want receive responses to a ``Message``, set a response destination on the ``Message`` and register a class, such as ``N8K5Baker``, as a ``MessageListener`` to that destination. See `Listening for Messages <./listening-for-messages.md>`_ for details.
+```{note}
+If you want receive responses to a `Message`, set a response destination on the `Message` and register a class, such as `N8K5Baker`, as a `MessageListener` to that destination. See [Listening for Messages](./listening-for-messages.md) for details.
 ```
 
 ## Add Response Handling
@@ -289,14 +289,14 @@ INFO  [acme/n8k5_baker-2][N8K5Baker:30] Received message payload N8K5CharlieMess
 
 `N8K5CharlieMessageListener` receives `N8K5Baker`'s message and then sends a response message to the response destination. `N8K5Baker` receives the response message and prints the message payload.
 
-```note::
-   If you want the classes to exchange messages again, you can restart the modules (OSGi bundles) in the `Gogo Shell <./using-the-gogo-shell.md>`_. List the bundles (``lb``) to get the bundle IDs, stop the bundles (``stop <id>``), and restart the bundles (``start <id>``).
+```{note}
+If you want the classes to exchange messages again, you can restart the modules (OSGi bundles) in the [Gogo Shell](./using-the-gogo-shell.md). List the bundles (`lb`) to get the bundle IDs, stop the bundles (`stop <id>`), and restart the bundles (`start <id>`).
 ```
 
-```note::
-   In classes that aren't OSGi Components, you can send messages using `MessageBusUtil <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusUtil.java>`_  and ``Destination``, ``DestinationConfiguration``, ``Message``, and ``MessageListener`` instances.
+```{note}
+In classes that aren't OSGi Components, you can send messages using [MessageBusUtil](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusUtil.java) and `Destination`, `DestinationConfiguration`, `Message`, and `MessageListener` instances.
    
-   You can register ``Destination`` services as demonstrated, except you must get the ``BundleContext`` a different way (for example, by making these calls: ``Bundle bundle = FrameworkUtil.getBundle(YourClass.class); BundleContext bundleContext = bundle.getBundleContext()``).
+You can register `Destination` services as demonstrated, except you must get the `BundleContext` a different way (for example, by making these calls: `Bundle bundle = FrameworkUtil.getBundle(YourClass.class); BundleContext bundleContext = bundle.getBundleContext()`).
 ```
 
 Congratulations! You've exchanged messages asynchronously between two classes.

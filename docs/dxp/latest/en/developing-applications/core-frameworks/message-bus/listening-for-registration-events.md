@@ -39,8 +39,8 @@ These deploy a destination registration listener, a message listener registratio
     ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the module JAR to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the module JAR to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Add a destination by deploying the `s3z9-baker-impl` module.
@@ -97,8 +97,8 @@ Here's the module overview:
 Message Bus notifies [`MessageBusEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusEventListener.java)s when [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)s are added or removed. Here's the example `MessageBusEventListener` implementation:
 
 ```{literalinclude} ./listening-for-registration-events/resources/liferay-s3z9.zip/s3z9-able-impl/src/main/java/com/acme/s3z9/able/internal/messaging/S3Z9AbleMessageBusEventListener.java
-   :language: java
-   :lines: 10-31
+:language: java
+:lines: 10-31
 ```
 
 The [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) annotation and its `service = MessageBusEventListener.class` attribute signal the runtime framework to register `S3Z9AbleMessageBusEventListener` as a `MessageBusEventListener`. The implementation overrides `MessageBusEventListener`'s two methods:
@@ -113,8 +113,8 @@ The [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/servic
 Message Bus notifies a [`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java) when [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)s register to or unregister from the `DestinationEventListener`'s specified destination. Here's the example `DestinationEventListener` implementation:
 
 ```{literalinclude} ./listening-for-registration-events/resources/liferay-s3z9.zip/s3z9-charlie-impl/src/main/java/com/acme/s3z9/charlie/internal/messaging/S3Z9CharlieDestinationEventListener.java
-   :language: java
-   :lines: 10-38
+:language: java
+:lines: 10-38
 ```
 
 The `@Component` annotation's `property = "destination.name=acme/s3z9_baker"` and `service = MessageBusEventListener.class` attributes signal the runtime framework to register `S3Z9CharlieDestinationEventListener` as a `DestinationEventListener` for the `acme/s3z9_baker` destination. The implementation overrides `DestinationEventListener`'s two methods:
