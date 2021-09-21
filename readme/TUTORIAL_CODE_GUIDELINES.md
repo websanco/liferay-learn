@@ -16,6 +16,7 @@
         * [Initial Bnd Content](#initial-bnd-content)
         * [Export API Packages](#export-api-packages)
 * [build.gradle](#buildgradle)
+* [Applying the Java Workspace Template to Your Project](#applying-the-java-workspace-template-to-your-project)
 * [Packages](#packages)
     * [Package Names for Extensions or Implementations](#package-names-for-extensions-or-implementations)
     * [Portlet Package Names](#portlet-package-names)
@@ -42,7 +43,7 @@
     * [Use the Portlet Title in the Main Views](#use-the-portlet-title-in-the-main-views)
     * [Wrap Subtitles and Section Names in h5 Tags](#wrap-subtitles-and-section-names-in-h5-tags)
 * [Review Process](#review-process)
-    * [Run update_examples.sh](#run-update_examplessh)
+    * [Rerun update_examples.sh](#rerun-update_examplessh)
     * [Test Your Code](#test-your-code)
     * [Code Changes Only](#code-changes-only)
     * [Submit Your Code](#submit-your-code)
@@ -257,6 +258,30 @@ Make sure your `build.gradle` file sets a dependency on `release.portal.api`, un
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 }
+```
+
+## Applying the Java Workspace Template to Your Project
+
+After creating your module `bnd.bnd` file and setting your module portal/dxp API dependency in the `build.gradle` file, generate our standard Java Workspace environment to the project by running the `update_examples.sh` script against your project ID. For example,
+
+```bash
+cd liferay-learn/docs
+```
+
+```bash
+./update_examples.sh xxxx
+```
+
+The script generates the following files to your project:
+
+```
+liferay-xxxx.zip/
+├── gradle.properties // Specifies the Liferay product/version to build against
+├── gradlew // Gradle wrapper
+├── gradlew.bat // Gradle wrapper (Windows)
+├── settings.gradle // Specifies the artifact repository
+├── source-formatter-suppressions.xml // Suppresses unneeded code format checks
+└── xxxx-[api|impl|web] // Module
 ```
 
 ## Packages
@@ -482,7 +507,7 @@ Overview
 1. [Code changes only](#code-changes-only); don't include article changes.
 1. [Submit your code changes](#submit-your-code) to `jhinkey` (Jim Hinkey) here in `liferay-learn`.
 
-### Run update_examples.sh
+### Rerun update_examples.sh
 
 ```bash
 cd docs
