@@ -25,21 +25,21 @@ You can configure your Library now or accept the default settings and start addi
 
 Once you've created an Asset Library, you can configure it at any time by clicking on its *Actions* button ( ![Actions button](../../images/icon-actions.png) ) and selecting *Edit*. Configuration options are organized into three sections: *General*, *Sites*, and *Languages*.
 
-You can also access a Library's settings via its dashboard page. Click on the *Name* of the Asset Library you want to configure and then click on *Settings*.
+You can also access a Library's settings via its dashboard page. Simply click on the *name* of the desired Asset Library, and then click on *Asset Library Settings*.
 
 ### General Settings
 
 Here you can configure an Asset Library's basic information.
 
-**Details**: View a Library's unique ID and configure its name or description.
+**Details**: View a Library's unique ID, and configure its name or description.
 
-**Applications**: Activate or deactivate a Library's supported applications (i.e., Documents and Media, Collections, Web Content). You can activate and deactivate applications without losing data or any existing connections with Sites and other Asset Libraries.
+**Applications**: Activate or deactivate a Library's supported applications (i.e., Documents and Media, Collections, Translation Processes, Web Content). Activated applications can be accessed and used to create and manage digital assets, while inactive applications are not exposed to users. Deactivating an application does not delete the application's content or remove it from connected Sites.
 
-**Sharing**: Enable or disable User sharing of assets in the library.
+**Sharing**: Enable or disable sharing for assets. When enabled, Asset Library members can share its assets with other users.
 
-**Asset Auto Tagging**: Enable or disable [auto tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md). 
+**Asset Auto Tagging**: Enable or disable [auto tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md). When enabled, assets are automatically tagged using the providers configured at the instance level.
 
-**Documents and Media**: Enable or disable HTTP directory browsing for this library. By default, this setting is disabled.
+**Documents and Media**: Enable or disable HTTP directory browsing for this library. By default, this setting is disabled. When enabled, users with view permission for an Asset Library can view files and folders in its document library in their browser (e.g., `http://localhost:8080/documents/asset-library-{assetLibraryId}`).
 
 **Recycle Bin**: Enable or disable Recycle Bin for a Library, and set the maximum age for recycled assets. By default, the maximum age is set to 43200 minutes (i.e., 30 days).
 
@@ -57,8 +57,8 @@ Here you can connect or disconnect individual Sites to an Asset Library, as well
 
 **Disconnect**: Disconnect the selected Site from the Library. When disconnected, the Library's assets are no longer accessible from the Site.
 
-   ```important::
-      You cannot disconnect a Library from a Site while its web content structures are made available. This is to avoid problems in Public Pages using them for their contents.
+   ```{important}
+   You cannot disconnect a Library from a Site while its web content structures are made available. This is to avoid problems in Public Pages using them for their contents.
    ```
 
 ### Languages
@@ -79,7 +79,7 @@ By default, Asset Libraries include the five following Roles:
 
 * **Asset Library Member**: Grants basic permissions and is automatically assigned to Users who belong to an Asset Library.
 
-* **Asset Library Connected Site Member**: Automatically assigned to members of a connected Site. 
+* **Asset Library Connected Site Member**: Automatically assigned to members of a connected Site.
 
 * **Asset Library Content Reviewer**: Grants permissions necessary for reviewing content in a workflow.
 
@@ -87,8 +87,8 @@ By default, Asset Libraries include the five following Roles:
 
 * **Asset Library Owner**: Grants control over all aspects of an Asset Library and is automatically assigned to the Library's creator.
 
-```note::
-   By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you’ll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
+```{note}
+By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you’ll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
 ```
 
 Creating or customizing an Asset Library Role is the same process as for other kinds of Roles. See [Roles and Permissions](../../users-and-permissions/roles_and_permissions.html) for how to create, customize, manage, and assign Roles.
@@ -97,8 +97,8 @@ Creating or customizing an Asset Library Role is the same process as for other k
 
 To remove an Asset Library and its contents from your instance, click its *Actions* button ( ![Actions button](../../images/icon-actions.png) ) and select *Delete*. You are then prompted to confirm the deletion. Once deleted, all contained assets are removed from your database and are no longer available to previously connected Sites.
 
-```warning::
-   Asset Library deletion cannot be undone. Ensure you're removing the correct Asset Library and that you've backed up any assets you want to keep.
+```{warning}
+Asset Library deletion cannot be undone. Ensure you're removing the correct Asset Library and that you've backed up any assets you want to keep.
 ```
 
 ## Additional Information
