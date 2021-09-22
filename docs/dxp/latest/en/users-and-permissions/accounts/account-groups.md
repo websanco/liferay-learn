@@ -2,6 +2,10 @@
 
 Use Account Groups to group Accounts together based on your business or professional needs. For example, group accounts by geography (Americas, Asia Pacific, Europe, etc.). 
 
+```{note}
+Accounts is a feature that is available in Liferay DXP 7.4 and above.
+```
+
 ## Creating an Account Group
 
 To create an account group,
