@@ -75,7 +75,7 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 						isCommerceShippingMethodRestricted(
 							commerceShippingFixedOption.
 								getCommerceShippingMethodId(),
-							commerceAddress.getCommerceCountryId())) {
+							commerceAddress.getCountryId())) {
 
 					continue;
 				}
