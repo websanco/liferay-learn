@@ -10,7 +10,7 @@ There are two categories of Account Roles: instance wide roles and Account speci
 
 To view an instance wide role, 
 
-1. Open the Global Menu (![Global Menu](../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Roles*.
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Roles*.
 
 1. Click the *Account Roles* tab and view the list of available roles.
 
@@ -18,7 +18,7 @@ To view an instance wide role,
 
 To view an Account specific role,
 
-1. Open the Global Menu (![Global Menu](../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
 
 1. Click on the specific Account you wish to view. Click the *Roles* tab and view the list of available roles.
 
@@ -42,7 +42,7 @@ To create an instance wide role,
 
 1. To assign an account user to this role, navigate to *Applications* &rarr; *Accounts*. Select a specific account. 
 
-1. Click the *Roles* tab and click the Options icon (![Options icon](../../images/icon-action.png)) of the role you just created. Click *Assign Users*.
+1. Click the *Roles* tab and click the Options icon (![Options icon](../../images/icon-actions.png)) of the role you just created. Click *Assign Users*.
 
     ![Click the options icon of the account and click Assign Users.](./account-roles/images/02.png)
 
@@ -52,7 +52,7 @@ To create an instance wide role,
 
 To create an account specific role, 
 
-1. Open the Global Menu (![Global Menu](../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
 
 1. Select the specific account for the new role. Click the *Roles* tab and click the Add icon (![Add icon](../../images/icon-add.png)).
 
