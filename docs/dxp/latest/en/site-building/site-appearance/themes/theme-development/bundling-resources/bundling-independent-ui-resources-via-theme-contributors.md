@@ -66,6 +66,7 @@ The theme contributor's project has the necessary properties added to its `bnd.b
 
 ```{literalinclude} ./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/bnd.bnd
 ```
+
 A theme contributor's `bnd.bnd` file must have these properties for it to function:
 
 `Web-ContextPath`: sets the context for your theme contributor's resources. In the example module, the context path is `w9m6-web`.
