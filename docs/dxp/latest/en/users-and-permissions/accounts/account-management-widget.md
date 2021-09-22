@@ -35,7 +35,9 @@ The widget displays the following information:
 * Status - Whether the Account is active or inactive
 * Selected - The checkmark shows the current Account the User is set up to view
 
-Click on the Options icon (![Options icon](../images/icon-actions.png)) of the account you want to edit or manage. The following choices are available:
+Note, when an Account User has access to multiple Accounts, the Selected checkmark indicates which Account the user is currently viewing or managing. This gives the ability to save different settings for each Account such as price or order information.
+
+Click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account you want to edit or manage. The following choices are available:
 
 * Edit - Make changes to the Account
 * Manage Users - Manage the Account Users
