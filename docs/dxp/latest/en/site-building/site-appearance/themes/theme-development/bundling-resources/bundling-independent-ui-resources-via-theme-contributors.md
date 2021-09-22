@@ -1,6 +1,6 @@
 # Bundling Independent UI Resources via Theme Contributors
 
-Theme contributors are modules that contain CSS and JS resources and apply them to every page. They are independent from specific themes, and you can configure them to override specific styles from themes or even each other. Use [themelets](./bundling-and-installing-resources-into-your-theme-via-themelets.md) instead if you want to include separate UI resources on a page and include them in specific themes.
+Theme contributors are modules that contain CSS and JavaScript resources and apply them to every page. They are independent from specific themes, and you can configure them to override specific styles from themes or even each other. Use [themelets](./bundling-and-installing-resources-into-your-theme-via-themelets.md) instead if you want to include separate UI resources on a page and include them in specific themes.
 
 Many menus in Liferay Portal/DXP are packaged as theme contributors, such as the [Site Menu](../../../../../getting-started/navigating-dxp.md#site-menu).
 
@@ -58,7 +58,7 @@ Next, you'll learn how a theme contributor looks with custom CSS changes.
 
 ## Examine the Example Theme Contributor
 
-A theme contributor, must use a module with properties added to the `bnd.bnd` file, and then customizations added into it. The example theme contributor uses a `custom.css` file to change each page's background color.
+A theme contributor is an OSGi module, and must have properties in its `bnd.bnd` file. Customizations are then added in the `resources` folder. The example theme contributor uses a `custom.css` file to change each page's background color.
 
 ### Examine the Theme Contributor Properties
 
@@ -66,19 +66,19 @@ The theme contributor's project has the necessary properties added to its `bnd.b
 
 ```{literalinclude} ./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/bnd.bnd
 ```
-A theme contributor's `bnd.bnd` file must have these properties for it to properly function:
+A theme contributor's `bnd.bnd` file must have these properties for it to function:
 
-* A `Web-ContextPath` value sets the context for your theme contributor's resources. In the example module, the context path is `w9m6-web`.
+`Web-ContextPath`: sets the context for your theme contributor's resources. In the example module, the context path is `w9m6-web`.
 
-* A `Liferay-Theme-Contributor-Type` value indicates that your module adds a theme contributor. This property can be any arbitrary value. The example module uses the value `CSS`.
+`Liferay-Theme-Contributor-Type`: indicates that your module adds a theme contributor. This property can be any arbitrary value. The example module uses the value `CSS`.
 
-* A `Liferay-Theme-Contributor-Weight` value configures the weight of your theme contributor's styles versus other contributors. Lower values are given higher priority to override styles from other contributors. The example module uses a weight of `1` to guarantee that the style has the highest priority of any theme contributor.
+`Liferay-Theme-Contributor-Weight`: configures the weight of your theme contributor's styles versus other contributors. Lower values are given higher priority to override styles from other contributors. The example module uses a weight of `1` to guarantee that the style has the highest priority of any theme contributor.
 
-Once the `bnd.bnd` file has the necessary properties, the module only needs to have the desired customizations.
+Once the `bnd.bnd` file has the necessary properties, the module needs only have the desired customizations.
 
 ### Examine the Style Customizations
 
-Any desired CSS or JS files must be added to subfolders within the module. CSS files belong in a `src/main/resources/META-INF/resources/css/` subfolder, and JS files belong in a `src/main/resources/META-INF/resources/js/` subfolder.
+Any desired CSS or JavaScript files must be added to subfolders within the module. CSS files belong in a `src/main/resources/META-INF/resources/css/` subfolder, and JavaScript files belong in a `src/main/resources/META-INF/resources/js/` subfolder.
 
 The example theme contributor uses a simple CSS style change to make each page's background blue. This is done with a [`custom.css`](./bundling-independent-ui-resources-via-theme-contributors/resources/liferay-w9m6.zip/w9m6-web/src/main/resources/META-INF/resources/custom.css) file in `src/main/resources/META-INF/resources/`:
 
@@ -88,7 +88,7 @@ body, #wrapper {
 }
 ```
 
-Once all of the desired CSS or JS files are added to the correct subfolders, deploying the module applies them to every page.
+Once all of the desired CSS or JavaScript files are added to the correct subfolders, deploying the module applies them to every page.
 
 ## Change the Background Color
 
