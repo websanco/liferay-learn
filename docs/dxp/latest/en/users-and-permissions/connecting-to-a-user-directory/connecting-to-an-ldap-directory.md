@@ -22,18 +22,18 @@ If you have more than one LDAP server, you can arrange the servers by order of p
 
 Alternatively, you can define an LDAP server connection at the System Settings scope through the System Settings menu or with the usage of OSGi `.config` files.
 
-```tip::
-   The LDAP server configuration screen in *Instance Settings* has utilities to assist with configuring an LDAP connection. You can use this utility to validate your settings first, before entering them at the System Settings scope.
+```{tip}
+The LDAP server configuration screen in *Instance Settings* has utilities to assist with configuring an LDAP connection. You can use this utility to validate your settings first, before entering them at the System Settings scope.
 ```
 
 The easiest way to do use `.config` files is to use the GUI and export the configuration. Then you can use the resulting `.config` file anywhere you need it (such as other nodes in a cluster).
 
-```note::
-    To use `config` files for LDAP server configuration, you must specify the Virtual Instance ID (in the source, the variable name is `companyId`) in the exported configuration file, because servers are defined at the instance scope, not the system scope. To do this, specify the virtual instance ID somewhere in the file like this:
-    ::
-      companyId=1234
+```{note}
+To use `config` files for LDAP server configuration, you must specify the Virtual Instance ID (in the source, the variable name is `companyId`) in the exported configuration file, because servers are defined at the instance scope, not the system scope. To do this, specify the virtual instance ID somewhere in the file like this:
 
-    You can find your Virtual Instance ID in *Control Panel* -> *Configuration* -> *Virtual Instances*.
+    companyId=1234
+
+You can find your Virtual Instance ID in *Control Panel* -> *Configuration* -> *Virtual Instances*.
 ```
 
 ## LDAP Server Configuration Reference

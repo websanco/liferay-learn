@@ -28,8 +28,8 @@ Next, you can define mappings from LDAP attributes to Liferay fields. Though LDA
 * *First Name* (e.g., `name` or `givenName`)
 * *Last Name* (e.g., `sn`)
 
-```note::
-   If you intend to create or import users with no email addresses, you must set ::users.email.address.required=false:: in ::portal-ext.properties::. With this set, Liferay auto-generates an email address combining the user ID plus the suffix defined in the property ::users.email.address.auto.suffix=::. Finally, make sure to set Liferay and LDAP authentication to something other than email address.
+```{note}
+If you intend to create or import users with no email addresses, you must set `users.email.address.required=false` in `portal-ext.properties`. With this set, Liferay auto-generates an email address combining the user ID plus the suffix defined in the property `users.email.address.auto.suffix=`. Finally, make sure to set Liferay and LDAP authentication to something other than email address.
 ```
 
 If you want to import LDAP groups as Liferay user groups, make sure you define a mapping for the Liferay group field so that membership information is preserved:
@@ -76,8 +76,8 @@ This section contains settings for exporting Liferay user data to LDAP.
 
 When you've set all your options and tested your connection, click *Save*.
 
-```note::
-   If a user changes a value like a password in Liferay, that change is passed to the LDAP server, provided Liferay has enough schema access to make the change.
+```{note}
+If a user changes a value like a password in Liferay, that change is passed to the LDAP server, provided Liferay has enough schema access to make the change.
 ```
 
 Now you know how to connect an LDAP server to Liferay and how to configure user import behavior, export behavior, and other LDAP settings. There are other configurable options; [Configuring LDAP](./ldap-configuration-reference.md) describes those.
