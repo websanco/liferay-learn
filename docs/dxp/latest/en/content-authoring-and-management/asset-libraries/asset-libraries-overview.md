@@ -4,7 +4,7 @@ Asset Libraries are virtual spaces where you can create and store reusable asset
 
 ![Asset Libraries are virtual spaces where you can create and store reusable assets for your DXP instance.](./asset-libraries-overview/images/01.png)
 
-By organizing content into smaller, focused buckets, you can more easily access and manage content in different Site contexts. Categorize Library assets using [Tags and Categories](../tags-and-categories/organizing-content-with-categories-and-tags.md), improving organization.
+By organizing content into smaller, focused buckets, you can more easily access and manage content in different Site contexts. [Tags and Categories](../tags-and-categories/organizing-content-with-categories-and-tags.md) can also be used to categorize Library assets, further improving organization.
 
 Implement a custom [workflow](../../process-automation/workflow/introduction-to-workflow.md) to direct the publishing process lowering the risk of editing conflicts and content duplication. You can also enable [Staging](../../site-building/publishing-tools/staging/staging-overview.md) for a Library to manage content publishing while maintaining data isolation.
 
