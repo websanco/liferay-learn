@@ -1,6 +1,6 @@
 # Tags API Basics
 
-Liferay's REST API's provide services for the tags functionality of Liferay. You can create and edit tags with the API. Start by seeing an example of adding a new tag. Note that in Liferay codebase tags are called keywords.
+Liferay's REST APIs provide services for Liferay DXP/Portal's tags. You can create and edit tags with the API. Start by seeing an example of adding a new tag. Note that in Liferay's codebase, tags are called keywords.
 
 ## Adding a Tag
 
@@ -20,7 +20,7 @@ Liferay's REST API's provide services for the tags functionality of Liferay. You
    unzip liferay-r7u9.zip
    ```
 
-2. [Find your site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
+2. [Find your Site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
 
 3. Use the cURL script to add a new tag to your Site. On the command line, navigate to the `curl` folder. Execute the `Keyword_POST_ToSite.sh` script with your site ID as a parameter.
 
@@ -48,17 +48,17 @@ Liferay's REST API's provide services for the tags functionality of Liferay. You
    "siteId" : 20125
     ```
 
-4. Go to the Categories application by navigating to *Administration Menu* &rarr; *Categorization* &rarr; *Tags*. See that a new tag has been added.
+4. Go to the Tags application by navigating to *Administration Menu* &rarr; *Categorization* &rarr; *Tags*. See that a new tag has been added.
 
     ![See that a new tag has been added.](./tags-api-basics/images/01.png)
 
-5. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+5. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-6. Run the `Keyword_POST_ToSite` class with the following command. Replace the `siteId` value with your site's ID:
+6. Run the `Keyword_POST_ToSite` class with the following command. Replace the `siteId` value with your Site's ID:
 
     ```bash
     java -classpath .:* -DsiteId=1234 Keyword_POST_ToSite
@@ -83,7 +83,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
 ```{note}
-Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2]()../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -107,7 +107,7 @@ This class invokes the REST service using only three lines of code:
 | `Keyword keyword = keywordResource.postSiteKeyword(...);` | Calls the `keywordResource.postSiteKeyword` method and passes the data to post. |
 
 ```{note}
-The ``main`` method's comment demonstrates running the class.
+The `main` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `KeywordResource` methods.
@@ -120,7 +120,7 @@ Below are examples of calling other `Keyword` REST services using cURL and Java.
 
 ## Get Keyword Posts from Site
 
-You can list a site's tags by executing the following cURL or Java command. As above, replace `1234` with your site's ID.
+You can list a Site's tags by executing the following cURL or Java command. As above, replace `1234` with your Site's ID.
 
 ### Keywords_GET_FromSite.sh
 
@@ -152,7 +152,7 @@ Code:
    :lines: 11-23
 ```
 
-The site's `Keyword` objects are listed in JSON.
+The Site's `Keyword` objects are listed in JSON.
 
 ## Get a Keyword
 
@@ -196,7 +196,7 @@ The `Keyword` fields are listed in JSON.
 
 ## Put a Keyword
 
-Do a complete overwrite of an existing tag with the following cURL and Java commands. Note, replace `1234` with your tag's ID.
+Completely overwrite an existing tag with the following cURL and Java commands. Note, replace `1234` with your tag's ID.
 
 ### Keyword_PUT_ById.sh
 
@@ -262,4 +262,4 @@ Code:
    :lines: 8-17
 ```
 
-The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Keyword` services and schemas, and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Keyword` services and schemas and has an interface to try out each service.
