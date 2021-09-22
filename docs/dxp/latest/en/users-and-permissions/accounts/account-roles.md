@@ -2,6 +2,10 @@
 
 Like [regular roles](../roles-and-permissions/understanding-roles-and-permissions.md) in DXP, [Accounts](../accounts.md) have Account Roles that assign different permissions to different roles. Use Account Roles for your different Account Users based on your business needs.
 
+```{note}
+Accounts is a feature that is available in Liferay DXP 7.4 and above.
+```
+
 ## View Account Roles
 
 There are two categories of Account Roles: instance wide roles and Account specific roles. Instance wide roles are Account Roles that are available across all Accounts in a DXP Instance. Account specific roles are roles that are created and managed for a specific Account.
