@@ -41,3 +41,9 @@ You can use wildcards in the configuration. For example, if you only want to san
 The whitelist and the blacklist work together. Without the blacklist, the above configuration's whitelist must include every content type except `com.liferay.message.boards`, which would be a daunting task to configure.
 
 Use AntiSamy to ensure user-generated content stays safe for other users to view. 
+
+## AntiSamy Sanitizer by Class Name
+
+You may notice another way to configure AntiSamy called _AntiSamy Sanitizer by Class Name_. This is a way for developers to create a more nuanced AntiSamy configuration by specifying an AntiSamy configuration XML file for each model class name. At this time, however, it requires developers to provide AntiSamy configuration files by inserting them into the Liferay AntiSamy module (and then re-deploying it), or by creating a fragment bundle project. 
+
+A tutorial is forthcoming for this, but for now you can find more information in the [developer ticket](https://issues.liferay.com/browse/LPS-112978). 
