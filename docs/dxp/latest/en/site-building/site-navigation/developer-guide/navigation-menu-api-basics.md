@@ -1,6 +1,6 @@
 # Navigation Menu API Basics
 
-Liferay's REST API's provide services for the navigation menu functionality of Liferay. You can create and edit navigation menus with the API. Start by seeing an example of adding a new navigation menu.
+Liferay's REST APIs provide services for Liferay's navigation menus. You can create and edit navigation menus with the API. Start by seeing an example of adding a new navigation menu.
 
 ## Adding a Navigation Menu
 
@@ -50,9 +50,9 @@ Liferay's REST API's provide services for the navigation menu functionality of L
 
 4. Go to the Navigation Menus application by navigating to *Administration Menu* &rarr; *Site Builder* &rarr; *Navigation Menus*. See that a new navigation menu has been added.
 
-    ![See that a new vocabulary has been added.](./navigation-menu-api-basics/images/01.png)
+    ![See that a new Navigation Menu has been added.](./navigation-menu-api-basics/images/01.png)
 
-5. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+5. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
@@ -82,8 +82,8 @@ Here are the command's arguments:
 | `-d "{\"name\": \"Foo\"}"` | The data you are requesting to post |
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
-```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+```{note}
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -106,14 +106,14 @@ This class invokes the REST service using only three lines of code:
 | `NavigationMenuResource navigationMenuResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `NavigationMenuResource` service instance. |
 | `NavigationMenu navigationMenu = navigationMenuResource.postSiteNavigationMenu(...);` | Calls the `navigationMenuResource.postSiteNavigationMenu` method and passes the data to post. |
 
-```note::
-   The ``main`` method's comment demonstrates running the class.
+```{note}
+The ``main`` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `NavigationMenuResource` methods.
 
-```important::
-   See `NavigationMenuResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/NavigationMenuResource.java>`_ for service details.
+```{important}
+See [NavigationMenuResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/NavigationMenuResource.java) for service details.
 ```
 
 Below are examples of calling other `NavigationMenu` REST services using cURL and Java.
@@ -158,8 +158,8 @@ The site's `NavigationMenu` objects are listed in JSON.
 
 Get a specific navigation menu with the following cURL or Java command. Replace `1234` with the navigation menu's ID.
 
-```tip::
-   Use ``NavigationMenus_GET_FromSite.[java|sh]`` to get ``NavigationMenu`` IDs.
+```{tip}
+Use ``NavigationMenus_GET_FromSite.[java|sh]`` to get ``NavigationMenu`` IDs.
 ```
 
 ### NavigationMenu_GET_ById.sh
@@ -262,4 +262,4 @@ Code:
    :lines: 8-18
 ```
 
-The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `NavigationMenu` services and schemas, and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `NavigationMenu` services and schemas and has an interface to try out each service.
