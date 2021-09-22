@@ -27,7 +27,7 @@ You can add any widget as a Facebook app. To do this, you must first get a devel
 
 ## OpenSocial Gadget
 
-OpenSocial comprises a container and a set of APIs for social networking and other web applications. @product@ can serve up applications to be used as  OpenSocial Gadgets on any OpenSocial-compatible pages.
+OpenSocial comprises a container and a set of APIs for social networking and other web applications. Liferay DXP can serve up applications to be used as  OpenSocial Gadgets on any OpenSocial-compatible pages.
 
 1. To serve a Liferay widget on an OpenSocial platform, copy and paste the provided gadget URL, add it to the appropriate configuration page of the OpenSocial platform you're using. Your Liferay instance serves that widget directly onto that platform's page.
 

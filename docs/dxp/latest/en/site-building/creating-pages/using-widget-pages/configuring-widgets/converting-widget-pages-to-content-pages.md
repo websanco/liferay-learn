@@ -10,7 +10,7 @@ If you have multiple pages you want to convert, you can bulk convert them throug
 
 To preview a conversion draft before converting your Widget Page, follow these steps:
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your Site's menu.
+1. Open the Liferay DXP Menu and go to *Site Builder* &rarr; *Pages* under your Site's menu.
 
 1. Open the Actions Menu (![Actions](../../../../images/icon-actions.png)) next to Widget Page and select the *Preview and convert to Content Page* option.
 
@@ -29,7 +29,7 @@ Some features of Widget Pages aren't supported by Content Pages and therefore ca
 * **Custom Page Layouts:** If the layout can be converted, the structure of the layout is conserved and the user is warned and given a chance to review the conversion draft before proceeding. If the layout can't be converted, all widgets are placed in a single row and column and you must manually reorganize them after the page is converted.
 
 ```note::
-  If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Product Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
+  If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Liferay DXP Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
 ```
 
 ```note::
@@ -40,7 +40,7 @@ Some features of Widget Pages aren't supported by Content Pages and therefore ca
 
 Follow these steps to convert Widget Pages to Content Pages without a preview:
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your Site's menu.
+1. Open the Liferay DXP Menu and go to *Site Builder* &rarr; *Pages* under your Site's menu.
 
 1. Check the box for the Widget Page, or multiple Widget Pages, and open the Actions Menu in the Management Toolbar and select the *Convert to Content Page* option.
 
@@ -52,7 +52,7 @@ Follow these steps to convert Widget Pages to Content Pages without a preview:
 
 You can bulk convert all Widget Pages on a Site to Content Pages using the built-in script editor. Follow these steps:
 
-1. Open the Product Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Server Administration* &rarr; *Script*.
+1. Open the Liferay DXP Menu and go to *Control Panel* &rarr; *Configuration* &rarr; *Server Administration* &rarr; *Script*.
 
 1. Enter this script in the script window, making sure to replace the Group ID with your own. The Groovy script uses the [`BulkLayoutConverter` interface](https://docs.liferay.com/dxp/portal/7.3-latest/apps/layout-3.0.0/javadocs/com/liferay/layout/util/BulkLayoutConverter.html) to convert all Widget Pages with the given Group ID to Content Pages:
 

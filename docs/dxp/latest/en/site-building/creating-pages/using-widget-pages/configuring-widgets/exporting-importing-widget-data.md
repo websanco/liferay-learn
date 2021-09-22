@@ -17,11 +17,11 @@ Exporting widget data produces a `.lar` file that you can save and import into a
 ```{important}
 Be careful not to confuse widget-specific `.lar` files with Site-specific `.lar` files. See the [Importing/Exporting Sites and Content](./building-site importing-exporting-sites-and-content.md) article for more information on importing/exporting Site page data.
 ```
-There are two ways to export/import widget content, you can go to the widget's administrative area, or  visit the widget on its page. Both export/import menus work the same, but the administrative area may hold content different from its widget counterpart (e.g., Web Content Admin in Product Menu and Web Content Display widget do not offer same content for export/import), so be wary of your selection.
+There are two ways to export/import widget content, you can go to the widget's administrative area, or  visit the widget on its page. Both export/import menus work the same, but the administrative area may hold content different from its widget counterpart (e.g., Web Content Admin in Liferay DXP Menu and Web Content Display widget do not offer same content for export/import), so be wary of your selection.
 
 To export or import data from the widget's administrative area, follow the steps below.
 
-1.  Go to the widget's designated area in the Product Menu. For example,  if you plan to export Web Content data, go to *Content and Data* &rarr; *Web Content*.
+1.  Go to the widget's designated area in the Liferay DXP Menu. For example,  if you plan to export Web Content data, go to *Content and Data* &rarr; *Web Content*.
 
 1.  Click the *Options* icon  (![Options](../../../../images/icon-actions.png)) from the top right of the page and select *Export/Import*.
 

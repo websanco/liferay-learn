@@ -11,7 +11,7 @@ Administrators can designate some or all of the sections (rows and columns of th
 
 To enable page customizations, follow these steps:
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your site's menu.
+1. Open the Liferay DXP Menu and go to *Site Builder* &rarr; *Pages* under your site's menu.
 
 1. Open the Actions menu next to the page you want to let Site members modify and select *Configure*.
 
@@ -31,7 +31,7 @@ With customization activated for a page, site members can add apps to the custom
 * Configure applications
 
 ```{note}
-  Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
+Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
 ```
 
 Site members have access to these contextual options from the page's *Options* menu (![Options](../../../../images/icon-options.png)) in the Control Menu:
@@ -50,7 +50,7 @@ Administrators of customizable pages have the same two views as Site members: th
 
 By default, site members can make page customizations but non-site members and guests can't. Administrators can update permissions for an existing Role or [create a new Role](../../../../users-and-permissions/roles-and-permissions/README.md) and assign it to other users to give them the ability to customize pages. Follow these steps to grant a Role permissions to customize pages:
 
-1. Open the Product Menu and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
+1. Open the Liferay DXP Menu and go to *Control Panel* &rarr; *Users* &rarr; *Roles*.
 
 1. Open the Actions menu for the Role and select *Edit*.
 
@@ -61,5 +61,5 @@ By default, site members can make page customizations but non-site members and g
 1. Scroll down and click *Save* to apply the changes.
 
 ```{note}
-  The *Customize* permission also lets users customize the look and feel of apps and import or export app settings.
+The *Customize* permission also lets users customize the look and feel of apps and import or export app settings.
 ```
