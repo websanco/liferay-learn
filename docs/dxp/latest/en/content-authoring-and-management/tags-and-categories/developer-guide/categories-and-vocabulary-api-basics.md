@@ -85,7 +85,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
 ```{note}
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2]()../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -109,13 +109,13 @@ This class invokes the REST service using only three lines of code:
 | `TaxonomyVocabulary taxonomyVocabulary = taxonomyVocabularyResource.postSiteTaxonomyVocabulary(...);` | Calls the `postSiteTaxonomyVocabulary` method and passes the data to post. |
 
 ```{note}
-   The ``main`` method's comment demonstrates running the class.
+The ``main`` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `TaxonomyVocabularyResource` methods.
 
 ```{important}
-   See [TaxonomyVocabularyResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-taxonomy/headless-admin-taxonomy-client/src/main/java/com/liferay/headless/admin/taxonomy/client/resource/v1_0/TaxonomyVocabularyResource.java)`_ for service details.
+See [TaxonomyVocabularyResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-taxonomy/headless-admin-taxonomy-client/src/main/java/com/liferay/headless/admin/taxonomy/client/resource/v1_0/TaxonomyVocabularyResource.java) for service details.
 ```
 
 Below are examples of calling other `TaxonomyVocabulary` REST services using cURL and Java.
@@ -161,7 +161,7 @@ The site's `TaxonomyVocabulary` objects are listed in JSON.
 Get a specific vocabulary with the following cURL or Java command. Replace `1234` with the vocabulary's ID.
 
 ```{tip}
-   Use ``TaxonomyVocabularies_GET_FromSite.[java|sh]`` to get ``Vocabulary`` IDs.
+Use ``TaxonomyVocabularies_GET_FromSite.[java|sh]`` to get ``Vocabulary`` IDs.
 ```
 
 ### TaxonomyVocabulary_GET_ById.sh
