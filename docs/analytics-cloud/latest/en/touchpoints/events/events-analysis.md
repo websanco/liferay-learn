@@ -4,29 +4,29 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
 1. Navigate to *Touchpoints* &rarr; *Events*. 
 
-1. In the Analyze row, click the add icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
+1. In the Analyze row, click the _Add_ icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
 
-    ![Select an event to analyze.](./events-analysis/images/01.png)
+   ![Select an event to analyze.](./events-analysis/images/01.png)
 
-    The Default events are events that are already tracked by Analytics Cloud by default. The Custom events are events that you have defined and set up. See [Definitions for Events](../../workspace-data/defintions/definitions-for-events.md) to learn more.
+   The Default events are already tracked by Analytics Cloud. The Custom events are events that you have defined and set up. See [Definitions for Events](../../workspace-data/defintions/definitions-for-events.md) to learn more.
 
-    Hover over a specific event in the drop-down list to see the event's description. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description.
+   Hover over a specific event in the drop-down list to see the event's description. Click the _Pencil_ icon (![Pencil](../../images/icon-edit.png)) to edit the description.
 
-1. In the Breakdown row, click the add icon (![Add](../../images/icon-plus.png)) and select breakdown attributes. 
+1. In the Breakdown row, click the _Add_ icon (![Add](../../images/icon-plus.png)) and select breakdown attributes. 
 
     ![Select breakdowns for your event.](./events-analysis/images/02.png)
 
     Up to three attributes can be selected in the Breakdown row. Note that each type of event is made up of different attributes. Global attributes are attributes that are collected for all types of events. See [Event Attributes](../../workspace-data/defintions/definitions-for-event-attributes.md) to learn more.
-    
-    Hover over a specific attribute in the drop-down list to see the attribute's description and data typecast. Click the pencil icon (![Pencil](../../images/icon-edit.png)) to edit the description or data typecast.
 
-    Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Data is cast as either boolean, date, duration, number, or string. The data typecast will determine the parameters available for filtering the analysis. For example, selecting an attribute that has a date typecast will have filtering options such as a before or after time period. Date, duration, and number typecasts also have a grouping feature to group the data by a set number. For example, a date typecast will allow you to group the data by day, month, or year. 
+    Hover over a specific attribute in the drop-down list to see the attribute's description and data typecast. Click the _Pencil_ icon (![Pencil](../../images/icon-edit.png)) to edit the description or data typecast.
+
+    Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Data is cast as either boolean, date, duration, number, or string. The data typecast determines the parameters available for filtering the analysis. For example, selecting an attribute that has a date typecast has filtering options such as a before or after time period. Date, duration, and number typecasts also have a grouping feature to group the data by a set number. For example, a date typecast enables grouping the data by day, month, or year. 
 
     ![For date, duration, and number, select how to group the data.](./events-analysis/images/03.png)
 
-1. In the Filter row, click the add icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event. The drop-down list shows all available attributes that can be used for filtering. The events analysis tool gives the flexibility to filter by attributes that are both related or unrelated to the events and breakdowns selected. 
+1. In the Filter row, click the _Add_ icon (![Add](../../images/icon-plus.png)) and select attributes to further filter the event. The drop-down list shows all available attributes that can be used for filtering. The events analysis tool gives the flexibility to filter by attributes that are both related or unrelated to the events and breakdowns selected. 
 
-1. The default time period is set to Last 30 days. Click the dropdown arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
+1. The default time period is set to Last 30 days. Click the drop-down arrow to change to a different time period. Place a check on *Compare to Previous* to compare the event data with a previous time period.
 
     ![Select a different time period or compare to previous data.](./events-analysis/images/04.png)
 
