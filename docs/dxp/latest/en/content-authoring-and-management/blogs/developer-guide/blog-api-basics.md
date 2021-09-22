@@ -124,7 +124,7 @@ This class invokes the REST service using only three lines of code:
 The other example Java classes are similar to this one, but call different `BlogPostingResource` methods.
 
 ```{important}
-See [BlogPostingResource[(https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/BlogPostingResource.java) for service details.
+See [BlogPostingResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/BlogPostingResource.java) for service details.
 ```
 
 Below are examples of calling other `BlogPosting` REST services using cURL and Java.
