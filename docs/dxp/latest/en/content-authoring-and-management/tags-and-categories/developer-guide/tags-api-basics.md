@@ -83,7 +83,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
 ```{note}
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -107,13 +107,13 @@ This class invokes the REST service using only three lines of code:
 | `Keyword keyword = keywordResource.postSiteKeyword(...);` | Calls the `keywordResource.postSiteKeyword` method and passes the data to post. |
 
 ```{note}
-   The ``main`` method's comment demonstrates running the class.
+The ``main`` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `KeywordResource` methods.
 
 ```{important}
-   See `KeywordResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-taxonomy/headless-admin-taxonomy-client/src/main/java/com/liferay/headless/admin/taxonomy/client/resource/v1_0/KeywordResource.java>`_ for service details.
+See [KeywordResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-taxonomy/headless-admin-taxonomy-client/src/main/java/com/liferay/headless/admin/taxonomy/client/resource/v1_0/KeywordResource.java) for service details.
 ```
 
 Below are examples of calling other `Keyword` REST services using cURL and Java.
@@ -159,7 +159,7 @@ The site's `Keyword` objects are listed in JSON.
 Get a specific tag with the following cURL or Java command. Replace `1234` with the tag's ID.
 
 ```{tip}
-   Use ``Keywords_GET_FromSite.[java|sh]`` to get site ``Keyword`` IDs.
+Use ``Keywords_GET_FromSite.[java|sh]`` to get site ``Keyword`` IDs.
 ```
 
 ### Keyword_GET_ById.sh
