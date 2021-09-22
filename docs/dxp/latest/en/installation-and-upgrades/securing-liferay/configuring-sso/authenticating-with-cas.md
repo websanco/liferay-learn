@@ -1,20 +1,20 @@
 # Authenticating with CAS (Central Authentication Service)
 
-```important::
-   CAS is deprecated as of Liferay DXP 7.2. Please use `SAML <./authenticating-with-saml/single-sign-on-with-saml.md>`_ instead. 
+```{important}
+CAS is deprecated as of Liferay DXP 7.2. Please use [SAML](./authenticating-with-saml.md) instead. 
 ```
 
 CAS is a widely used open source single sign-on solution and was the first SSO product to be supported by Liferay DXP. Liferay DXP's CAS module includes the CAS client, so there's no need to install it separately.
 
-```note::
-   Liferay DXP supports CAS 3.3.x. If you use a later version of CAS, it is best to use CAS's support for standards such as OpenID Connect or SAML to interface with Liferay DXP.
+```{note}
+Liferay DXP supports CAS 3.3.x. If you use a later version of CAS, it is best to use CAS's support for standards such as OpenID Connect or SAML to interface with Liferay DXP.
 ```
 
 There are three steps to getting Liferay running with CAS:
 
 1. Generate an SSL certificate
-2. Install CAS
-3. Configure Liferay to use CAS
+1. Install CAS
+1. Configure Liferay to use CAS
 
 ## Generating an SSL Certificate
 

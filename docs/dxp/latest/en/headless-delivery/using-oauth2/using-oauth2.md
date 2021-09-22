@@ -5,8 +5,8 @@ OAuth 2.0 is an industry-standard authorization protocol. Users can seamlessly s
 You can jump into creating OAuth 2.0 apps or continue reading to learn how it works.
 
 1. [Creating an OAuth 2.0 Application](./creating-oauth2-applications.md)
-2. [Defining Scopes](./oauth2-scopes.md)
-3. [Authorizing Account Access](./authorizing-account-access-with-oauth2.md)
+1. [Defining Scopes](./oauth2-scopes.md)
+1. [Authorizing Account Access](./authorizing-account-access-with-oauth2.md)
 
 ## Flow of OAuth 2.0
 

@@ -61,4 +61,4 @@ Out-of-the-box, two other authentication factors are included, and there are ext
 
 ## Related Information
 
-[Multi-Factor Authentication Checkers](./multi-factor-authentication-checkers.md)
+* [Multi-Factor Authentication Checkers](./multi-factor-authentication-checkers.md)

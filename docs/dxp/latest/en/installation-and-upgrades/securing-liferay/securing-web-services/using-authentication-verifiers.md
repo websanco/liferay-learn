@@ -9,8 +9,8 @@ If no available `AuthVerifier` can determine that the provided credentials match
 
 There are built-in `AuthVerifier` implementations for the most common situations, such as when remote clients use HTTP Basic or HTTP Digest authentication, send credentials in request parameters, send authenticated `JSESSIONID`s, or use shared secrets to establish trust. Other `AuthVerifier` implementations can be deployed as modules containing implementations of the `AuthVerifier` interface that are registered as services in the OSGi runtime.
 
-```important::
-   The authentication verification layer's focus is on verifying authentication, not on providing credentials. It does NOT issue tokens, credentials, or display Sign In portlets. Instead, the layer verifies existing credentials and authenticated sessions and is a complement to authentication endpoints. To ensure backwards compatibility the default implementations support requests providing user name and password credentials. Thus, the authentication verification layer stands on the border between authentication and authorization.
+```{important}
+The authentication verification layer's focus is on verifying authentication, not on providing credentials. It does NOT issue tokens, credentials, or display Sign In portlets. Instead, the layer verifies existing credentials and authenticated sessions and is a complement to authentication endpoints. To ensure backwards compatibility the default implementations support requests providing user name and password credentials. Thus, the authentication verification layer stands on the border between authentication and authorization.
 ```
 
 ## Authentication Verification Process
@@ -63,7 +63,7 @@ This Auth Verifier is not enabled by default.
 
 As Liferay embraced modularity, this extender was written to enable modules to be part of `TunnelServlet`. It maps `TunnelServlet` and `TunnelingServletAuthVerifier` to the module servlet context. Modules with `Http-Tunnel` in the manifest can make use of the Tunnel Servlet, and can expose the API via `/o/_module_/api/liferay/do`.
 
-Configure it by setting client IP addresses allowed to tunnel. For more information, please see [the properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) as well as remote staging<!-- future link required -->.
+Configure it by setting client IP addresses allowed to tunnel. For more information, please see [the properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) as well as [remote staging](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md).
 
 Note that this is not a recommended way to export remote APIs; it's far better to expose remote services using JAX-RS or Liferay JSON Web Service technologies.
 
@@ -95,7 +95,7 @@ An example of a trusted remote client is the Staging remote publishing feature.
 
 Trusted remote clients authenticate using a shared secret stored in the portal property `tunneling.servlet.shared.secret`. The default value is empty and forbids all access.
 
-Even though the default configuration is enabled by default, access is limited to localhost only. Configure it by setting client IP addresses allowed to tunnel. For more information, please see [the properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) as well as remote staging<!-- future link required -->.
+Even though the default configuration is enabled by default, access is limited to localhost only. Configure it by setting client IP addresses allowed to tunnel. For more information, please see [the properties documentation](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) as well as [remote staging](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md).
 
 ## Related Topics
 

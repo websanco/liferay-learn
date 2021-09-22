@@ -1,7 +1,7 @@
 # Using OpenAM
 
-```important::
-   OpenAM/OpenSSO is deprecated as of Liferay DXP 7.2. Please use `SAML <../authenticating-with-saml/single-sign-on-with-saml.md>`_ instead. 
+```{important}
+OpenAM/OpenSSO is deprecated as of Liferay DXP 7.2. Please use [SAML](./authenticating-with-saml.md) instead. 
 ```
 
 OpenAM is an open source single sign-on solution from the codebase of Sun's System Access Manager product. You can use OpenAM to integrate Liferay DXP into an infrastructure that contains several different authentication schemes against different repositories of identities.
@@ -18,8 +18,8 @@ You can install OpenAM on the same or different server as Liferay DXP. Be sure t
 
 If you want to install OpenAM on the same server as Liferay DXP, you must deploy the OpenAM `.war`, downloadable from [here](https://backstage.forgerock.com/downloads/browse/am/archive/productId:openam). Otherwise, follow the instructions at the [OpenAM 13 site](https://backstage.forgerock.com/docs/openam/13/install-guide/) to install OpenAM.
 
-```note::
-   OpenAM 12 and below work with Liferay DXP, but are at end of life. Because of this, we recommend only OpenAM 13 for production use.
+```{note}
+OpenAM 12 and below work with Liferay DXP, but are at end of life. Because of this, we recommend only OpenAM 13 for production use.
 ```
 
 ## Configuring OpenAM

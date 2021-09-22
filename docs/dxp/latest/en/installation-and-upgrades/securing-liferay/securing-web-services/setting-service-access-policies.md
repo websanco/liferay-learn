@@ -20,8 +20,8 @@ There are 12 Service Access Policies enabled by default. Five of these have to d
 | **SYSTEM_DEFAULT** | Allows access to country/region services by JavaScript calls, so users can switch languages on the fly. Applies to every request, including unauthenticated requests. | &#10004; |
 | **SYSTEM_USER_PASSWORD** | Allows any method to be invoked. Of course, since API functions include permission checks, this call works only if the user has the required permission. It applies to requests for which `AuthVerifierResult.isPasswordBasedAuthentication` is `true`: i.e., whenever user authentication took place using a password. If you want to completely disallow certain API functions from being invoked, you can change the `SYSTEM_USER_PASSWORD` policy to something more restrictive than `*`. | &#10004; |
 
-```note::
-   `SYSTEM_DEFAULT`, and other policies with `Default` configured to `Yes` are applied to all incoming requests, including unauthenticated requests.
+```{note}
+`SYSTEM_DEFAULT`, and other policies with `Default` configured to `Yes` are applied to all incoming requests, including unauthenticated requests.
 ```
 
 The other seven policies have to do with OAuth and JSON web services:
@@ -69,15 +69,15 @@ To create a new Service Access Policy:
 1. Under _Allowed Service Signatures_, type the fully qualified name of a service class that's installed.
 1. Under Method Name, start typing a service method call.
 
-    ```note::
-       Code completion is available for both the `Service Class` and `Method Name` fields.
+    ```{note}
+    Code completion is available for both the `Service Class` and `Method Name` fields.
     ```
 
 1. To specify another service or method, click the plus icon to add another entry.
 1. When done, click *Save*.
 
-```tip::
-   If you know all the method signatures ahead of time, you can click *Switch to Advanced Mode* and enter them all in one field on separate lines.
+```{tip}
+If you know all the method signatures ahead of time, you can click *Switch to Advanced Mode* and enter them all in one field on separate lines.
 ```
 
 <!-- The following two paragraphs feel out of place; not sure where they should go. -->
@@ -105,8 +105,11 @@ These modules provide the service access policy management UI that's accessible 
 ## Configuring the Service Access Policy Module
 
 1. Navigate to _Control Panel_ &rarr; _System Settings_ &rarr; _API Authentication_.
+
     ![Service Access Policy Module Location](./setting-service-access-policies/images/02.png)
+
 1. Click on the _Service Access Policies_ module in the Security section. Click on its name to edit it.
+
 1. The default service access policy configuration can be edited. You can also force a default policy to be applied even when no policies are applied by the `AuthVerifier`.
 
 There's also an `AuthenticatedAccessControlPolicy`. This policy doesn't do anything if a `ServiceAccessPolicyManager` implementation is present. If the service access policy module is disabled, however, the `AuthenticatedAccessControlPolicy` provides a fallback that still requires authenticated access for web services.

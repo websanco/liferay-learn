@@ -27,16 +27,16 @@ Customers are advised to deploy security patches as they are released. For commu
 
 Liferay DXP authentication is flexible. By default, users log into Liferay DXP by using the _Sign In_ widget, which uses the database to authenticate the user. By default, guests can use the Sign In widget to create accounts with default permissions. Nearly every element of the default authentication experience can be changed by an administrator. For example,
 
-* You can configure [Multi-Factor authentication](./multi-factor-authentication/using-multi-factor-authentication.md).
-* You can [use an SSO to manage](./configuring-sso/README.md) authentication.
-* Liferay can also be [integrated with LDAP](../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to validate users instead of using the portal database.
-* Guest account creation can be [turned off](./authentication-basics.md#disabling-guest-account-creation).
+* You can configure [Multi-Factor authentication](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md).
+* You can [use an SSO to manage](./securing-liferay/configuring-sso.md) authentication.
+* Liferay can also be [integrated with LDAP](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) to validate users instead of using the portal database.
+* Guest account creation can be [turned off](./securing-liferay/authentication-basics.md#disabling-guest-account-creation).
 
-To learn more, see [Authentication Basics](./authentication-basics.md).
+To learn more, see [Authentication Basics](./securing-liferay/authentication-basics.md).
 
 ## Permissions
 
-Liferay DXP has a robust role-based access control (RBAC) system. Users can be assigned to Sites, Teams, User Groups, or Organizations. Custom Roles can be created, permissions can be assigned to these Roles, and those Roles can be assigned to Users. Roles are scoped to apply only in a specific context, such as a Site, Organization, or globally. See [Roles and Permissions](../../users-and-permissions/roles-and-permissions/README.md) for more information.
+Liferay DXP has a robust role-based access control (RBAC) system. Users can be assigned to Sites, Teams, User Groups, or Organizations. Custom Roles can be created, permissions can be assigned to these Roles, and those Roles can be assigned to Users. Roles are scoped to apply only in a specific context, such as a Site, Organization, or globally. See [Roles and Permissions](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) for more information.
 
 ## Securing Web Services
 
@@ -71,5 +71,5 @@ There are additional security plugins available from [Liferay Marketplace](https
 
 ## Next Steps
 
-* [Authentication Basics](./authentication-basics.md)
-* [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md)
+* [Authentication Basics](./securing-liferay/authentication-basics.md)
+* [Introduction to Securing Web Services](./securing-liferay/securing-web-services.md)

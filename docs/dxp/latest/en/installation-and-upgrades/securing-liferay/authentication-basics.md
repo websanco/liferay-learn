@@ -2,8 +2,8 @@
 
 By default, Liferay DXP uses the *Sign In* widget to authenticate users.
 
-```note::
-   The Sign In widget appears on the default home page at ``http[s]://[server-name:port]/web/guest/home``. If the Sign In widget is unavailable on any page, it can be accessed directly via its URL: ``http[s]://[server-name:port]/c/portal/login``.
+```{note}
+The Sign In widget appears on the default home page at `http[s]://[server-name:port]/web/guest/home`. If the Sign In widget is unavailable on any page, it can be accessed directly via its URL: `http[s]://[server-name:port]/c/portal/login`.
 ```
 
 ![The default Liferay home page](./authentication-basics/images/01.png)
@@ -29,8 +29,8 @@ Users can be configured to log in using one of three authentication types:
 | Email Address | Determined by administrator or user at account creation  | Yes |
 | User ID | Automatically generated when the account is created | No |
 
-```note::
-   Only one authentication type can be used at a time.
+```{note}
+Only one authentication type can be used at a time.
 ```
 
 Regardless of the authentication type, users must always enter a password. You can create [Password Policies](../../users-and-permissions/roles-and-permissions/configuring-a-password-policy.md) to define password length, password format, expiration periods, and more.
@@ -85,8 +85,8 @@ Prevent bots from creating and logging into accounts by enabling CAPTCHA or reCA
 
     ![CAPTCHA is enabled by default.](./authentication-basics/images/02.png)
 
-    ```note::
-       By default, *Create Account CAPTCHA* and *Send Password CAPTCHA* are enabled. If necessary, enable Message Boards CAPTCHA.
+    ```{note}
+    By default, *Create Account CAPTCHA* and *Send Password CAPTCHA* are enabled. If necessary, enable Message Boards CAPTCHA.
     ```
 
 1. Choose a CAPTCHA engine. By default, Simple CAPTCHA is enabled. You can also select Google's reCAPTCHA, which requires you configure the external service separately. If you select reCAPTCHA, supply your public and private key from Google.
@@ -95,6 +95,6 @@ Prevent bots from creating and logging into accounts by enabling CAPTCHA or reCA
 
 ## Additional Information
 
-* [Securing Liferay](./securing-liferay.md)
-* [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md)
+* [Securing Liferay](../securing-liferay.md)
+* [Introduction to Securing Web Services](./securing-web-services.md)
 * [Configuring a Password Policy](../../users-and-permissions/roles-and-permissions/configuring-a-password-policy.md)
