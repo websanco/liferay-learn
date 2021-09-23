@@ -32,17 +32,31 @@ However, if you would like to define file details before uploading them, follow 
 
 1. Drag and drop files into the designated drop-zone or use the file selector to browse for your files.
 
-1. Configure file details before upload.
+   If you've selected *File Upload*, the upload screen appears as follows.
 
-   If you've selected *File Upload*, you can set the file's Title, File Name, Description, Display Page Template, Public Categories, Related Assets, and Permissions used for your selected file.
+   ![Select a single file to upload.](./uploading-files/images/05.png)
 
-   ![Select a file to upload and configure its details.](./uploading-files/images/05.png)
+   If you've selected *Multiple Files Upload*, the upload screen appears as follows.
 
-   If you've selected *Multiple Files Upload*, you can set the following fields: Description, Document Type, Display Page Template, Public Categories, and Permissions. for all of the selected files.
+   ![Drag and drop or select multiple files to upload.](./uploading-files/images/06.png)
 
-   ![Select multiple to upload, and configure their details.](./uploading-files/images/06.png)
+1. Configure file details before upload. See [Configuring File Upload Reference](#configuring-file-upload-reference) for more details.
 
 1. When finished, click *Publish* to begin the upload process.
+
+## Configuring File Upload Reference
+
+| Field | For Single File Upload | For Multiple File Upload | Description |
+| --- | --- | --- | --- |
+| File/Files | &#10004; | &#10004; | Select the file/files for upload. By default, individual file uploads cannot exceed 100MB. |
+| Title | &#10004; |  | Set a display title used for the file after upload. By default this field is populated with the selected file's original name, but you can change it during or after upload. |
+| File Name | &#10004; |  | Set a new name for the uploaded file. By default this field is populated with the selected file's original name, but you can change it during or after upload. |
+| Description | &#10004; | &#10004; | Add a file description for your uploaded file/files. |
+| Display Page | &#10004; | &#10004; | Select a [Display Page Template](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) for the uploaded file/files. |
+| Categorization | &#10004; | &#10004; | Apply tags and public or internal Categories to the uploaded file/files. |
+| Expiration Date | &#10004; | &#10004; | Determine if and when the file/files expire or should be reviewed. By default, files are set to never expire or require review. If enabled, you the date when the file expires or should be reviewed. See [Setting Expiration and Review Dates for Files](./setting-expiration-and-review-dates-for-files.md) for more information. |
+| Related Assets | &#10004; |  | Select related assets or the file from the Site or connected Asset Library. |
+| Permissions | &#10004; | &#10004; | Set permissions for the uploaded file/files. These settings determine which user roles can view the file and perform other actions related to it (e.g., update, delete). |
 
 ## Additional Information
 
