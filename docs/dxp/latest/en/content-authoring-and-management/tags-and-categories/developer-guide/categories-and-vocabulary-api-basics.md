@@ -1,6 +1,6 @@
 # Categories and Vocabulary API Basics
 
-Liferay's REST API's provide services for the categories and vocabularies functionality of Liferay. You can create and edit vocabularies with the API. You can also associate and edit categories with the API. Start by seeing an example of adding a new vocabulary.
+Liferay's REST APIs provide services for Liferay's categories and vocabularies functionality. You can create and edit vocabularies with the API. You can also associate and edit categories with the API. Start by seeing an example of adding a new vocabulary.
 
 ## Adding a Vocabulary
 
@@ -20,9 +20,9 @@ Liferay's REST API's provide services for the categories and vocabularies functi
    unzip liferay-f5w3.zip
    ```
 
-2. [Find your site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
+2. [Find your Site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
 
-3. Use the cURL script to add a new vocabulary to your Site. On the command line, navigate to the `curl` folder. Execute the `TaxonomyVocabulary_POST_ToSite.sh` script with your site ID as a parameter.
+3. Use the cURL script to add a new vocabulary to your Site. On the command line, navigate to the `curl` folder. Execute the `TaxonomyVocabulary_POST_ToSite.sh` script with your Site ID as a parameter.
 
     ```bash
     ./TaxonomyVocabulary_POST_ToSite.sh 1234
@@ -52,15 +52,15 @@ Liferay's REST API's provide services for the categories and vocabularies functi
 
 4. Go to the Categories application by navigating to *Administration Menu* &rarr; *Categorization* &rarr; *Categories*. See that a new vocabulary has been added.
 
-    ![See that a new vocabulary has been added.](./categories-and-vocabulary-api-basics/images/01.png)
+    ![A new vocabulary has been added.](./categories-and-vocabulary-api-basics/images/01.png)
 
-5. The REST service can also be called with a Java class. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+5. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-6. Run the `TaxonomyVocabulary_POST_ToSite` class with the following command. Replace the `siteId` value with your site's ID:
+6. Run the `TaxonomyVocabulary_POST_ToSite` class with the following command. Replace the `siteId` value with your Site's ID:
 
     ```bash
     java -classpath .:* -DsiteId=1234 TaxonomyVocabulary_POST_ToSite
@@ -85,7 +85,7 @@ Here are the command's arguments:
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
 ```{note}
-Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2]()../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -109,7 +109,7 @@ This class invokes the REST service using only three lines of code:
 | `TaxonomyVocabulary taxonomyVocabulary = taxonomyVocabularyResource.postSiteTaxonomyVocabulary(...);` | Calls the `postSiteTaxonomyVocabulary` method and passes the data to post. |
 
 ```{note}
-The ``main`` method's comment demonstrates running the class.
+The `main` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `TaxonomyVocabularyResource` methods.
@@ -122,7 +122,7 @@ Below are examples of calling other `TaxonomyVocabulary` REST services using cUR
 
 ## Get Vocabularies from Site
 
-You can list a site's vocabularies by executing the following cURL or Java command. As above, replace `1234` with your site's ID.
+You can list a Site's vocabularies by executing the following cURL or Java command. As above, replace `1234` with your Site's ID.
 
 ### TaxonomyVocabularies_GET_FromSite.sh
 
@@ -154,14 +154,14 @@ Code:
    :lines: 11-23
 ```
 
-The site's `TaxonomyVocabulary` objects are listed in JSON.
+The Site's `TaxonomyVocabulary` objects are listed in JSON.
 
 ## Get a Vocabulary
 
 Get a specific vocabulary with the following cURL or Java command. Replace `1234` with the vocabulary's ID.
 
 ```{tip}
-Use ``TaxonomyVocabularies_GET_FromSite.[java|sh]`` to get ``Vocabulary`` IDs.
+Use `TaxonomyVocabularies_GET_FromSite.[java|sh]` to get `Vocabulary` IDs.
 ```
 
 ### TaxonomyVocabulary_GET_ById.sh
@@ -234,7 +234,7 @@ In this example the description is changed from Foo to Bar.
 
 ## Put a Vocabulary
 
-Do a complete overwrite of an existing vocabulary with the following cURL and Java commands. Note, replace `1234` with your vocabulary's ID.
+Overwrite an existing vocabulary with the following cURL and Java commands. Note, replace `1234` with your vocabulary's ID.
 
 ### TaxonomyVocabulary_PUT_ById.sh
 
@@ -302,15 +302,15 @@ Code:
 
 ## Taxonomy Category Services
 
-The cURL commands and Java classes for taxonomy categories works in a similar way with taxonomy vocabularies. Note that some services require the taxonomy vocabulary ID.
+The cURL commands and Java classes for taxonomy categories work similarly to taxonomy vocabularies. Note that some services require the taxonomy vocabulary ID.
 
 | Files | Description |
 | :---- | :---------- |
 | `TaxonomyCategories_GET_FromTaxonomyVocabulary.[java|sh]` | Get a list of categories from a vocabulary. |
-| `TaxonomyCategory_DELETE_ById.[java|sh]` | Deletes a category. |
+| `TaxonomyCategory_DELETE_ById.[java|sh]` | Delete a category. |
 | `TaxonomyCategory_GET_ById[java|sh]` | Get a specific category by ID. |
 | `TaxonomyCategory_PATCH_ById.[java|sh]` | Patch a category. |
 | `TaxonomyCategory_POST_ToTaxonomyVocabulary.[java|sh]` | Post a category to a vocabulary.  |
 | `TaxonomyCategory_PUT_ById.[java|sh]` | Put a category. |
 
-The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `TaxonomyVocabulary` and `TaxonomyCategory` services and schemas, and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `TaxonomyVocabulary` and `TaxonomyCategory` services and schemas and has an interface to try out each service.
