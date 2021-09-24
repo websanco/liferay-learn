@@ -47,10 +47,11 @@ Now you must find the default Site ID:
 1. Sign in using the default credentials:
    **User Name:** `test@liferay.com`
    **Password:** `test`
-1. Go to Control Panel &rarr; Sites &rarr; Sites.
-1. Click the Actions button, and then choose *Go to Site Settings*.
+1. Open the Site menu (![Site menu](../../images/icon-menu.png)) and go to *Configuration* &rarr; *Site Settings*.
+1. Under the Platform section, click *Site Configuration*. For Liferay DXP versions 7.3 and earlier, click the *General* tab.
+1. Find the Site identifier under Site ID.
 
-The Site ID appears at the top of the Details section. It's an Integer, like `20122`.
+   ![Identify the Site Id under the Site Settings and Site Configuration option.](./consuming-rest-services/images/03.png)
 
 ## Make the Service Call Using Credentials with Access to the Data
 
