@@ -6,14 +6,14 @@ Starting with Liferay DXP 7.3, Commerce 3.0 comes with all Liferay bundles and D
 
 > Liferay DXP and Commerce Subscriptions Required
 
-For DXP 7.3 FP3/SP2+, users activate Commerce by setting the `enterprise.commerce.product.enabled` portal property to `true`. Once this configuration is applied to a Liferay server, all Commerce modules are enabled and ready for use.
+For DXP 7.3 FP3/SP2+, users activate Commerce by setting the `enterprise.product.commerce.enabled` portal property to `true`. Once this configuration is applied to a Liferay server, all Commerce modules are enabled and ready for use.
 
 ### Activating Commerce for Liferay Bundles
 
-If you're using a Liferay bundle, you can configure the `enterprise.commerce.product.enabled` property using a `portal-ext.properties` file. Simply add the following property to your Liferay server's `portal-ext.properties` file.
+If you're using a Liferay bundle, you can configure the `enterprise.product.commerce.enabled` property using a `portal-ext.properties` file. Simply add the following property to your Liferay server's `portal-ext.properties` file.
 
 ```properties
-enterprise.commerce.product.enabled=true
+enterprise.product.commerce.enabled=true
 ```
 
 After adding the property, restart the Liferay server to apply your changes.
@@ -21,17 +21,17 @@ After adding the property, restart the Liferay server to apply your changes.
 If a `portal-ext.properties` file does not already exist, create one in the `[LIFERAY_HOME]` or `[USER_HOME]` folder.
 
 ```{note}
-If you used the Setup Wizard for your bundle, portal properties are set using the `portal-setup-wizard.properties` file in the `[LIFERAY_HOME]` folder. Since this file takes priority over the `portal-ext.properties` file, ensure it doesn't have a conflicting value for the `enterprise.commerce.product.enabled` property. See [Portal Properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html) to learn more.
+If you used the Setup Wizard for your bundle, portal properties are set using the `portal-setup-wizard.properties` file in the `[LIFERAY_HOME]` folder. Since this file takes priority over the `portal-ext.properties` file, ensure it doesn't have a conflicting value for the `enterprise.product.commerce.enabled` property. See [Portal Properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html) to learn more.
 ```
 
 ### Activating Commerce for Docker Containers
 
-If you're using a Docker container, the `enterprise.commerce.product.enabled` property can be configured using a `portal-ext.properties` file or overridden using a Docker `env` variable.
+If you're using a Docker container, the `enterprise.product.commerce.enabled` property can be configured using a `portal-ext.properties` file or overridden using a Docker `env` variable.
 
 To use a `portal-ext.properties` file, simply add the following property to a new line:
 
 ```properties
-enterprise.commerce.product.enabled=true
+enterprise.product.commerce.enabled=true
 ```
 
 To override the portal property, use the following Docker `env` variable:
