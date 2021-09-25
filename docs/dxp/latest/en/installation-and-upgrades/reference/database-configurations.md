@@ -8,7 +8,7 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 * PostgreSQL
 
 ```{note}
-The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151 lists the supported databases and versions.
+The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) lists the supported databases and versions.
 ```
 
 Connecting Liferay DXP to a database requires:
@@ -107,5 +107,5 @@ If you're running DXP for non-production purposes on a Bundle or an application 
 ![The Setup Wizard's database section lets you configure DXP's built-in data source.](./database-configurations/images/01.png)
 
 ```{note}
-If you're using a data source managed on your application server, see the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
+If you're using a data source managed on your application server, see the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
 ```

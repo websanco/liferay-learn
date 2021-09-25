@@ -36,8 +36,8 @@ NativeVersionEnabled=false
 StartScriptEnabled=true
 ```
 
-```note::
-   By default, SSL is used with Node Manager. If you want to disable SSL during development, for example, set ``SecureListener=false`` in your ``nodemanager.properties`` file.
+```{note}
+By default, SSL is used with Node Manager. If you want to disable SSL during development, for example, set `SecureListener=false` in your `nodemanager.properties` file.
 ```
 
 See Oracle's [Configuring Java Node Manager](https://docs.oracle.com/middleware/1212/wls/NODEM/java_nodemgr.htm#NODEM173) documentation for details.
@@ -61,13 +61,13 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
     ```
 
     The `DERBY_FLAG` setting disables the Derby server built in to WebLogic, as DXP does not require this server.
-    
+
     `JAVA_OPTIONS` sets DXP's UTF-8 requirement, Lucene usage, and Aspect Oriented Programming via AspectJ.
 
     `JAVA_PROPERTIES` also sets DXP's UTF-8 requirement.
 
-    ```important::
-       For DXP to work properly, the application server JVM must use the ``GMT`` time zone and ``UTF-8`` file encoding.
+    ```{important}
+    For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
     ```
 
     Set `MW_HOME` to the folder containing the WebLogic server on the machine. For example,
@@ -102,8 +102,8 @@ Before installing DXP, set your [*Liferay Home*](../../reference/liferay-home.md
 
 1. Optionally, you can re-WAR the expanded DXP WAR. When you're ready to deploy DXP, you can deploy it as an expanded archive or WAR file. In both cases, DXP reads the property settings once it starts up.
 
-```note::
-   If you need to update ``portal-ext.properties`` after DXP deploys, it is in the user domain's ``autodeploy/ROOT/WEB-INF/classes`` folder. Note that the ``autodeploy/ROOT`` folder contains the DXP deployment.
+```{note}
+If you need to update `portal-ext.properties` after DXP deploys, it is in the user domain's `autodeploy/ROOT/WEB-INF/classes` folder. Note that the `autodeploy/ROOT` folder contains the DXP deployment.
 ```
 
 ## Install DXP Dependencies
@@ -114,8 +114,8 @@ DXP depends on libraries (Dependencies ZIP) and OSGi modules (OSGi Dependencies 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist).
 1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the domain's `lib` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
-```note::
-   A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+```{note}
+A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ## Install Elasticsearch Archives
@@ -202,8 +202,8 @@ If you have a Liferay DXP Enterprise subscription, DXP requests your activation 
 
 Congratulations! You're running DXP on WebLogic.
 
-```note::
-   Adjust the application server's logging level or log filters to avoid excessive benign log messages such as the ones below involving ``PhaseOptimizer``.
+```{note}
+Adjust the application server's logging level or log filters to avoid excessive benign log messages such as the ones below involving `PhaseOptimizer`.
 ```
 
 ```
@@ -223,5 +223,5 @@ You can [sign in as your administrator user](../../../getting-started/introducti
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing EE Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

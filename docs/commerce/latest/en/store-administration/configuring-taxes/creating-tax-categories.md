@@ -2,8 +2,8 @@
 
 Liferay Commerce uses Tax Categories to store and apply tax rates to Channel Products and shipping costs. Once a Tax Category is created, you can use Tax Calculation Engines to [add multiple tax rates](./setting-rates-for-tax-calculations.md) to it. These rates are scoped to the Channel in which they're created. You can then [apply tax rates](applying-tax-rates.md) to Channel Products and shipping costs by assigning the Tax Category to them.
 
-```note::
-   Tax Categories serve as containers for tax rates and must be created before you can apply tax rates to any Products or shipping costs.
+```{note}
+Tax Categories serve as containers for tax rates and must be created before you can apply tax rates to any Products or shipping costs.
 ```
 
 Follow these steps to create a new Tax Category:

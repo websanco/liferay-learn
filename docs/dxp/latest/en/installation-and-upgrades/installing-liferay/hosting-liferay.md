@@ -12,10 +12,10 @@ The Liferay Tomcat bundle is an archive you can extract onto any server, configu
 
 Of course, you can always install Liferay on any supported application server, on premises. 
 
-```note::
-   Enterprise subscribers can `deploy Liferay DXP as a service <../../../../../dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md>`_ on Liferay DXP Cloud. DXP Cloud reduces infrastructure costs (hardware, electricity bills), scales fast to handle more customers, provides a faster time to market, and is easy use.
+```{note}
+Enterprise subscribers can [deploy Liferay DXP as a service](https://learn.liferay.com/dxp-cloud/latest/en/using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.html) on Liferay DXP Cloud. DXP Cloud reduces infrastructure costs (hardware, electricity bills), scales fast to handle more customers, provides a faster time to market, and is easy use.
 
-   If you're interested in DXP Cloud, please see the DXP Cloud `product information <https://www.liferay.com/products/dxp-cloud>`_ or contact a Liferay representative.
+If you're interested in DXP Cloud, please see the DXP Cloud [product information](https://www.liferay.com/products/dxp-cloud) or contact a Liferay representative.
 ```
 
 If you want to develop on Liferay on your own machine, consider these convenient options:
@@ -33,9 +33,10 @@ The Liferay Tomcat Bundle is a ZIP file that has Liferay pre-installed on Tomcat
 
 To get started with a bundle, see [Installing a Liferay Tomcat Bundle](./installing-a-liferay-tomcat-bundle.md).
 
-```warning::
-   In the Docker image and Tomcat bundle, Liferay is configured to use an embedded HSQL database by default. Beyond demonstration purposes, we recommend using a full-featured, `supported RDBMS <https://help.liferay.com/hc/en-us/articles/360049238151>`_. See `Database Configurations <../reference/database-configurations.md>`_ for configuration instructions.
+```{warning}
+In the Docker image and Tomcat bundle, Liferay is configured to use an embedded HSQL database by default. Beyond demonstration purposes, we recommend using a full-featured, [supported RDBMS](https://help.liferay.com/hc/en-us/articles/360049238151). See [Database Configurations](../reference/database-configurations.md) for configuration instructions.
 ```
+
 ## Installing Liferay on an Application Server
 
 You can install Liferay on any [supported application server](https://help.liferay.com/hc/en-us/articles/360049238151). This is typically the most practical installation type to use in DevOps and high availability environments.
@@ -44,7 +45,6 @@ To get started,
 
 1. Choose a supported application server from the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151).
 1. Follow the instructions for installing Liferay on that [application server](./installing_liferay_on_an_application_server.html).
-
 
 ## What's Next 
 
@@ -62,4 +62,4 @@ After installing Liferay, go to [Setting Up Liferay](../setting-up-liferay.md) t
 
 * [Backing Up](../maintaining-a-liferay-dxp-installation/backing-up.md)
 * [Patching Liferay DXP](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)
-* [Securing Liferay](../securing-liferay/securing-liferay.md)
+* [Securing Liferay](../securing-liferay.md)

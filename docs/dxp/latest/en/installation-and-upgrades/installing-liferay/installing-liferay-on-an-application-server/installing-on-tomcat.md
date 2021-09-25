@@ -1,9 +1,9 @@
 # Installing on Tomcat
 
-```important::
-   `Using a Tomcat bundle <../installing-a-liferay-tomcat-bundle.md>`_ or `Docker image <../../../getting-started/starting-with-a-docker-image.md>`_ is the fastest way to get started using Liferay DXP. This article is for users who want to have full control over their Tomcat application server's configuration.
+```{important}
+[Using a Tomcat bundle](../installing-a-liferay-tomcat-bundle.md) or [Docker image](../../../getting-started/starting-with-a-docker-image.md) is the fastest way to get started using Liferay DXP. This article is for users who want to have full control over their Tomcat application server's configuration.
 
-   Review the `Installing a Liferay-Tomcat Bundle <../installing-a-liferay-tomcat-bundle.md>`_ and `Configuring a Database <../configuring-a-database.md>`_ articles before continuing.
+Review the [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md) and [Configuring a Database](../configuring-a-database.md) articles before continuing.
 ```
 
 Installing Liferay DXP on Tomcat requires deploying the DXP WAR file, deploying DXP's dependencies, and configuring Tomcat for DXP.
@@ -18,8 +18,8 @@ In addition to copying dependencies, scripts, and configurations from the Lifera
 
 Liferay DXP requires a Java JDK 8 or 11.
 
-```note::
-   Please see `the compatibility matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ for information on supported JDKs, databases, and environments.  See `JVM Configuration <../../reference/jvm-configuration.md>`_ for recommended JVM settings.
+```{note}
+Please see [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for information on supported JDKs, databases, and environments.  See [JVM Configuration](../../reference/jvm-configuration.md) for recommended JVM settings.
 ```
 
 Here are the basic steps for installing DXP on Tomcat:
@@ -40,8 +40,8 @@ DXP depends on many JARs included in DXP Tomcat bundle. Some of the bundle's JAR
 1. Unzip the OSGi Dependencies ZIP file contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist).
 1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$TOMCAT_HOME/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
-```note::
-   A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+```{note}
+A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ## Configuring Tomcat
@@ -78,12 +78,12 @@ Here are the steps:
     1. Gives the JVM 2GB of RAM
     1. Limits Metaspace to 512MB.
 
-    ```important::
-       DXP requires that the application server JVM use the GMT time zone and UTF-8 file encoding.
+    ```{important}
+    DXP requires that the application server JVM use the GMT time zone and UTF-8 file encoding.
     ```
 
-    ```note::
-       On JDK 11, it's recommended to add this JVM argument to display four-digit years: ``-Djava.locale.providers=JRE,COMPAT,CLDR``
+    ```{note}
+    On JDK 11, it's recommended to add this JVM argument to display four-digit years: `-Djava.locale.providers=JRE,COMPAT,CLDR`
     ```
 
     After installation, these configurations (including these JVM options) can be further tuned for improved performance.
@@ -321,5 +321,5 @@ You can [sign in as your administrator user](../../../getting-started/introducti
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

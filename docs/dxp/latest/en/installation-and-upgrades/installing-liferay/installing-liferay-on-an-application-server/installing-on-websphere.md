@@ -4,16 +4,16 @@ Installing Liferay DXP on WebSphere requires deploying the DXP WAR file, deployi
 
 > IBM&reg; WebSphere&reg; is a trademark of International Business Machines Corporation, registered in many jurisdictions worldwide.
 
-```tip::
-   Throughout this installation and configuration process, WebSphere prompts you to click *Save* to apply changes to the Master Configuration. It is necessary to do so to save the changes.
+```{tip}
+Throughout this installation and configuration process, WebSphere prompts you to click *Save* to apply changes to the Master Configuration. It is necessary to do so to save the changes.
 ```
 
 ## Prerequisites
 
 For Liferay DXP to work correctly, WebSphere 9 (Fix Pack 11 is the latest) must be installed. Go to [IBM Support](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) to find out more information about this fix pack. Liferay DXP does not currently support the WebSphere Application Liberty Profile.
 
-```important::
-   Before installing DXP, please review the `Installing a Liferay-Tomcat Bundle <../installing-a-liferay-tomcat-bundle.md>`_ and `Configuring a Database <../configuring-a-database.md>`_ articles.
+```{important}
+Before installing DXP, please review the [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md) and [Configuring a Database](../configuring-a-database.md) articles.
 ```
 
 The following files are required to install Liferay DXP on the WebSphere application server and are available from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community):
@@ -53,9 +53,9 @@ When the application server binaries have been installed, start the *Profile Man
 1. Check the box *Deploy the administrative console*. This enables a web-based UI for working with the application server. Skip the default applications. (Install these only on a development machine.) Click *Next*.
 1. Set the profile name and location. Specify a performance tuning settings appropriate for your environment.
 
-    ```note::
-       See the WebSphere documentation for more information about performance tuning settings. Click *Next*.
-    ```
+   ```{note}
+   See the WebSphere documentation for more information about performance tuning settings. Click *Next*.
+   ```
 
 1. Choose node, server, and host names for the server. These are specific to a user's environment. Click *Next*.
 1. Administrative security in WebSphere is a way to restrict who has access to the administrative tools. Administrators may want to have it enabled in the environment so that a user name and password are required to administer the WebSphere server. See WebSphere's documentation for more information. Click *Next*.
@@ -74,8 +74,8 @@ Lastly, shut down the application server.
 
 ### Configuring the WebSphere Application Server
 
-```warning::
-   Do not make configuration changes while the application server is running.
+```{warning}
+Do not make configuration changes while the application server is running.
 ```
 
 In this version of WebSphere, servlet filters are not initialized on web application startup, but rather, on first access. This can cause problems when deploying certain apps to DXP. To configure servlet filters to initialize on application startup (i.e., deployment), set the following `webcontainer` properties in the WebSphere application server:
@@ -99,8 +99,8 @@ As a baseline, add `maximumHeapSize="2560"` inside the `jvmEntries` tag. For exa
 <jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ... maximumHeapSize="2560">
 ```
 
-```note::
-   The JVM parameters used here are defaults intended for initial deployment of production systems. Administrators should change the settings to values that best address their specific environments. These must be tuned depending on need.
+```{note}
+The JVM parameters used here are defaults intended for initial deployment of production systems. Administrators should change the settings to values that best address their specific environments. These must be tuned depending on need.
 ```
 
 Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Set the maximum and minimum heap sizes to `2560m` there too. Add the following inside the `jvmEntries` tag:
@@ -109,8 +109,8 @@ Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArgume
 <jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ...genericJvmArguments="-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xms2560m -Xmx2560m">
 ```
 
-```important::
-   For DXP to work properly, the application server JVM must use the ``GMT`` time zone and ``UTF-8`` file encoding.
+```{important}
+For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
 Alternately, set the UTF-8 properties from the WebSphere Admin Console. (See below.)
@@ -145,8 +145,8 @@ By this point, the following steps should be completed:
 1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `[Install Location]/WebSphere/AppServer/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). This is typically `[Install Location]/WebSphere/AppServer/profiles/your-profile/liferay/osgi`.
 
-```note::
-   A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+```{note}
+A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ## Installing Elasticsearch Archives
@@ -206,8 +206,8 @@ To configure DXP's built-in data source with your database when you run DXP for 
 
 If using WebSphere to manage the database connections, follow the instructions below. Otherwise, skip this section if you plan to use DXP's built in data source.
 
-```warning::
-   Liferay uses HSQL by default for demo purposes. HSQL should *not* be used in production instances of Liferay DXP.
+```{warning}
+Liferay uses HSQL by default for demo purposes. HSQL should *not* be used in production instances of Liferay DXP.
 ```
 
 ![Figure 3: WebSphere JDBC providers](./installing-on-websphere/images/03.png)
@@ -238,15 +238,15 @@ If using WebSphere to manage the database connections, follow the instructions b
 1. Click *OK* and save to master configuration.
 1. Do another filter search for the *url* property. Give this property a value that points to the database. For example, a MySQL URL would look like this:
 
-    ```properties
-    jdbc:mysql://localhost/lportal?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
-    ```
+   ```properties
+   jdbc:mysql://localhost/lportal?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
+   ```
 
-    ```tip::
-       For more example URLs, see the `jdbc.default.url` values in `Database Templates <../../reference/database-templates.md>`_.
-    ```
+   ```{tip}
+   For more example URLs, see the `jdbc.default.url` values in [Database Templates](../../reference/database-templates.md).
+   ```
 
-    Click *OK* and save to master configuration.
+   Click *OK* and save to master configuration.
 
 1. Do another filter search for the *password* property. Enter the password for the user ID added earlier as the value for this property. Click *OK* and save to master configuration.
 1. Go back to the data source page by clicking it in the breadcrumb trail. Use the *Test Connection* button to validate configurations to this point.
@@ -366,5 +366,5 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 * [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)
 * [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay/securing-liferay.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

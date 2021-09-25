@@ -22,7 +22,7 @@ Pricing includes the following applications:
 
 **Product Groups**: This application is used to create and manage Product Group entities.
 
-**Tax Categories**: This application is used to create and manage categories for applying tax rates to Channel Products and shipping costs. See [Creating Tax Categories](../store-administration/configuring-taxes/creating-tax-categories.md) for more information.
+**Tax Categories**: This application is used to create and manage categories for applying tax rates to Channel Products and shipping costs. See [Creating Tax Categories](../../store-administration/configuring-taxes/creating-tax-categories.md) for more information.
 
 All Pricing applications have the following permissions:
 

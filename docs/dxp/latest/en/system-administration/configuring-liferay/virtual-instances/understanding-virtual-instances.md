@@ -4,10 +4,10 @@ Liferay DXP can host multiple "portals" on one installation. These are called Vi
 
 Configuration of a Liferay DXP system happens at different [scopes](../understanding-configuration-scope.md). Configuration at the virtual instance scope is the next most broad scope after the system scope. 
 
-```important::
-   The system scope is the highest level configuration scope. All virtual instances are impacted by configuration done at this scope. The *instance* scope applies only to one particular virtual instance.
+```{important}
+The system scope is the highest level configuration scope. All virtual instances are impacted by configuration done at this scope. The *instance* scope applies only to one particular virtual instance.
 
-   If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration apply throughout your system.
+If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration apply throughout your system.
 ```
 
 Perhaps you already have a server hosting a Liferay DXP installation and a database. It has many [Users](../../../users-and-permissions/users/understanding-users.md), [Sites](../../site_building.rst), and specific [instance settings](.//instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
@@ -34,6 +34,6 @@ This section of articles focuses on the *Platform* settings.
 
 ## Related Topics
 
-- [Security](../../../installation-and-upgrades/securing-liferay/securing-liferay.md)
+- [Security](../../../installation-and-upgrades/securing-liferay.md)
 - [Search](./../../using_search.rst)
 - [System Settings](../system-settings.md)

@@ -43,11 +43,11 @@ Liferay DXP has a robust role-based access control (RBAC) system. Users can be a
 
 Liferay Web Services have a multi-layered and configurable approach to security and authorization:
 
-* [Service Access Policies](./securing-web-services/setting-service-access-policies.md) control access to remote APIs.
-* [Authentication Verifiers](./securing-web-services/using-authentication-verifiers.md) verify provided credentials.
-* [Cross-Origin Resource Sharing](./securing-web-services/setting-up-cors.md) configuration can enable retrieving resources from trusted sources only.
+* [Service Access Policies](./securing-liferay/securing-web-services/setting-service-access-policies.md) control access to remote APIs.
+* [Authentication Verifiers](./securing-liferay/securing-web-services/using-authentication-verifiers.md) verify provided credentials.
+* [Cross-Origin Resource Sharing](./securing-liferay/securing-web-services/setting-up-cors.md) configuration can enable retrieving resources from trusted sources only.
 
-See [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md) to learn more.
+See [Introduction to Securing Web Services](./securing-liferay/securing-web-services.md) to learn more.
 
 ## Fine-Tuning Security
 

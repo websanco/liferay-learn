@@ -12,8 +12,8 @@ If you can't locate a System Settings entry by browsing, search for it using the
 
 ![You can search for System Settings entries.](./system-settings/images/03.png)
 
-```note::
-   Some system-scoped configurations can be made in properties files and in the Server Administration application in the Control Panel.
+```{note}
+Some system-scoped configurations can be made in properties files and in the Server Administration application in the Control Panel.
 ```
 
 Liferay DXP contains many applications. The applications and their services may be configurable at several [scopes](./understanding-configuration-scope.md), as defined by the application's developers. Configuration made in System Settings is system scoped or sets system-wide default configurations that can be overridden at another scope.
@@ -28,9 +28,9 @@ Once you find the configuration to modify,
 
 1. Make any changes, then click *Save*. Your configuration changes are saved and applied throughout the system.
 
-    ```important::
-       Content generated using templates (e.g., FreeMarker templates and Application Display Templates) is cached. Cached content might not reflect configuration changes until the cache is invalidated (cleared). The Server Administration -> Resources tab provides cache clearing options.
-    ```
+   ```{important}
+   Content generated using templates (e.g., FreeMarker templates and Application Display Templates) is cached. Cached content might not reflect configuration changes until the cache is invalidated (cleared). The Server Administration -> Resources tab provides cache clearing options.
+   ```
 
 ## Resetting a System Settings Entry
 

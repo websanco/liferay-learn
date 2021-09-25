@@ -10,8 +10,8 @@ Once you've [installed Liferay DXP](./installing-a-liferay-tomcat-bundle.md#inst
     ./liferay-dxp-version/tomcat-version/bin/startup.sh
     ```
 
-    ```note::
-       By default, DXP writes log files to ``[Liferay Home]/logs``
+    ```{note}
+    By default, DXP writes log files to `[Liferay Home]/logs`.
     ```
 
     The Setup Wizard appears in your web browser at `http://localhost:8080`.
@@ -24,8 +24,8 @@ Once you've [installed Liferay DXP](./installing-a-liferay-tomcat-bundle.md#inst
 
 4. In the *Database* section, click *Change* to display the database form.
 
-    ```warning::
-       DO NOT use HSQL in production-grade Liferay DXP instances.
+    ```{warning}
+    DO NOT use HSQL in production-grade Liferay DXP instances.
     ```
 
     ![The Setup Wizard's database form lets you specify the database you created for DXP.](./running-liferay-for-the-first-time/images/02.png)
@@ -78,5 +78,5 @@ You can [sign in as your administrator user](../../getting-started/introduction-
 * [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../securing-liferay/securing-liferay.md)
+* [Securing Liferay DXP](../securing-liferay.md)
 * [Clustering for High Availability](../setting-up-liferay/clustering-for-high-availability.md)
