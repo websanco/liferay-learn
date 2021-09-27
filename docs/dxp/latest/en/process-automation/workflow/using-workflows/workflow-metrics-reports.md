@@ -78,7 +78,7 @@ There's a table view for all the items in the workflow that provides handy filte
 
 **Creation Date**: Shows the date and time the item was submitted to the workflow.
 
-The All Items view can be filtered so you can find the subset of items you want to analyze.
+The columns can be clicked to sort the workflow items in ascending or descending order by a particular field. In addition, workflow items can be filtered so you can find the subset you want to analyze.
 
 ### Filtering by SLA Status
 
