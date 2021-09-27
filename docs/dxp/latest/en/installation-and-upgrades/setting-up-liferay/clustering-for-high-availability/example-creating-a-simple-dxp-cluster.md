@@ -294,7 +294,7 @@ The example DXP server containers uses these settings.
 | LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=\\<br>true | Displays the server address and web server port |
 | LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=\\<br>com.liferay.portal.store.db.DBStore | File Store (Document Library Store) class |
 
-Please see the Env/[Portal Property](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) definitions for more information.
+Please see the Env/[Portal Property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) definitions for more information.
 
 ## Additional Information
 

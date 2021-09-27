@@ -78,7 +78,7 @@ module.framework.web.generator.generated.wabs.store=true
 module.framework.web.generator.generated.wabs.store.dir=${module.framework.base.dir}/wabs
 ```
 
-These properties instruct the WAB generator to store generated WABs in your installation's `osgi/wabs/` folder. The generated WABs have the same structure as the example WAB structure above. The [Module Framework Web Application Bundles](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) properties section explains more details.
+These properties instruct the WAB generator to store generated WABs in your installation's `osgi/wabs/` folder. The generated WABs have the same structure as the example WAB structure above. The [Module Framework Web Application Bundles](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) properties section explains more details.
 
 Awesome! You can deploy your WAR plugin as a WAB and you know how to save a copy of the WAB to examine it!
 

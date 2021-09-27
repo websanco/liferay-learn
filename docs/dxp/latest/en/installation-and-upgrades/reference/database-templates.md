@@ -66,4 +66,4 @@ jdbc.default.password=
 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD= \
 ```
 
-See the [default portal properties](https://docs.liferay.com/ce/portal/7.4-latest/propertiesdoc/portal.properties.html#JDBC) for more database templates.
+See the [default portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) for more database templates.

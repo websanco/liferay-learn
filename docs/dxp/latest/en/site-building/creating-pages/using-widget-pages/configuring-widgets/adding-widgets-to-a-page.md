@@ -16,7 +16,7 @@ Follow these steps to add a widget to a Widget Page:
 ```
 
 ```note::
-  Widgets are rendered according to `render-weight <https://docs.liferay.com/dxp/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages.
+  Widgets are rendered according to `render-weight <https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages.
 ```
 
 ## Additional Information

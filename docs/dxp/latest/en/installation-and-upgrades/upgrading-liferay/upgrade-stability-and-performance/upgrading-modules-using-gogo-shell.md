@@ -137,7 +137,7 @@ Each module has one `Release_` table record, and the value for its `schemaVersio
 
 ## Executing Verify Processes
 
-Some modules have verify processes. These make sure the upgrade executed successfully. Verify processes in the core are automatically executed after upgrading Liferay DXP. You can also execute them by configuring the [`verify.*` portal properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Verify) and restarting your server.
+Some modules have verify processes. These make sure the upgrade executed successfully. Verify processes in the core are automatically executed after upgrading Liferay DXP. You can also execute them by configuring the [`verify.*` portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Verify) and restarting your server.
 
 To check for available verify processes, enter the Gogo shell command `verify:list`. To run a verify process, enter `verify:execute [verify_qualified_name]`.
 

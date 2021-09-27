@@ -124,14 +124,14 @@ server.detector.server.id=tomcat
 
 #### Configuring portal-upgrade-database.properties
 
-Specify the following information to configure the database you're upgrading. Note that these properties correspond to the [JDBC portal properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) you'd use in a `portal-ext.properties` file.
+Specify the following information to configure the database you're upgrading. Note that these properties correspond to the [JDBC portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) you'd use in a `portal-ext.properties` file.
 
 * `jdbc.default.driverClassName`
 * `jdbc.default.url`
 * `jdbc.default.username`
 * `jdbc.default.password`
 
-See the latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) for a reference on these values.
+See the latest [portal properties reference](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) for a reference on these values.
 
 #### Configuring portal-upgrade-ext.properties
 

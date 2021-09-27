@@ -12,13 +12,13 @@ To improve database performance, you can use a read-writer database configuratio
 
 ![Read-Writer Database Interaction](./database-configuration-for-cluster-nodes/images/01.png)
 
-Connections to separate read and read-write [data sources](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) are configured using JDBC or JNDI [Portal Properties](../../reference/portal-properties.md) (e.g., in a [`portal-ext.properties` file](../../reference/portal-properties.md)), as explained in the following sections. The data sources should use separate instances of the DXP database, where the read-write database instance is replicated to the read database instance.
+Connections to separate read and read-write [data sources](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) are configured using JDBC or JNDI [Portal Properties](../../reference/portal-properties.md) (e.g., in a [`portal-ext.properties` file](../../reference/portal-properties.md)), as explained in the following sections. The data sources should use separate instances of the DXP database, where the read-write database instance is replicated to the read database instance.
 
 ### JDBC
 
 Edit your `portal-ext.properties` file following these steps to connect directly to your separate read and write data sources using [JDBC](../../installing-liferay/configuring-a-database.md):
 
-1. Set the default connection pool provider. For provider information, see the [JDBC properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC). The default setting specifies [HikariCP](https://github.com/brettwooldridge/HikariCP) as the pool provider:
+1. Set the default connection pool provider. For provider information, see the [JDBC properties reference](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC). The default setting specifies [HikariCP](https://github.com/brettwooldridge/HikariCP) as the pool provider:
 
     ```properties
     jdbc.default.liferay.pool.provider=hikaricp
@@ -40,7 +40,7 @@ Edit your `portal-ext.properties` file following these steps to connect directly
 
     For example JDBC connection values, please see [Database Templates](../../reference/database-templates.md).
 
-1. Configure DXP to use the write data source (the data source whose prefix is `jdbc.write.`) to create the [Counter](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Counter) data source. A separate data source is always dedicated to the counter.
+1. Configure DXP to use the write data source (the data source whose prefix is `jdbc.write.`) to create the [Counter](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter) data source. A separate data source is always dedicated to the counter.
 
     ```properties
     counter.jdbc.prefix=jdbc.write.
@@ -50,7 +50,7 @@ Edit your `portal-ext.properties` file following these steps to connect directly
 
     Some connection pools used with JDBC4 (check your driver's JDBC version) validate connections automatically. Other connection pools may require additional, vendor-specific connection validation properties---specify them in a Portal Properties file. Refer to your connection pool provider documentation for connection validation details.
 
-1. Enable the read-writer database configuration by copying the default [`spring.configs` and `spring.infrastructure.configs` Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Spring) to your `portal-ext.properties` file and adding the following Spring configuration file paths to them.
+1. Enable the read-writer database configuration by copying the default [`spring.configs` and `spring.infrastructure.configs` Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) to your `portal-ext.properties` file and adding the following Spring configuration file paths to them.
 
     Add to `spring.configs`:
 
@@ -64,7 +64,7 @@ Edit your `portal-ext.properties` file following these steps to connect directly
     META-INF/dynamic-data-source-infrastructure-spring.xml
     ```
 
-    For more information, see the [Spring configuration Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Spring).
+    For more information, see the [Spring configuration Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring).
 
 ### JNDI
 
@@ -84,7 +84,7 @@ Edit your `portal-ext.properties` file following these steps to connect to your 
     jdbc.write.password=[place your password here]
     ```
 
-1. Configure DXP to use the write data source (the data source whose prefix is `jdbc.write.`) to create the [Counter](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Counter) data source. A separate data source is always dedicated to the counter.
+1. Configure DXP to use the write data source (the data source whose prefix is `jdbc.write.`) to create the [Counter](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter) data source. A separate data source is always dedicated to the counter.
 
     ```properties
     counter.jdbc.prefix=jdbc.write.
@@ -94,7 +94,7 @@ Edit your `portal-ext.properties` file following these steps to connect to your 
 
     Some connection pools used with JDBC4 (check your driver's JDBC version) validate connections automatically. Other connection pools may require additional, vendor-specific connection validation properties---specify them in a Portal Properties file. Refer to your connection pool provider documentation for connection validation details.
 
-1. Enable the read-writer database configuration by copying the default [`spring.configs` and `spring.infrastructure.configs` Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Spring) to your `portal-ext.properties` file and add the following Spring configuration file paths to them.
+1. Enable the read-writer database configuration by copying the default [`spring.configs` and `spring.infrastructure.configs` Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) to your `portal-ext.properties` file and add the following Spring configuration file paths to them.
 
     Add to `spring.configs`:
 
@@ -108,7 +108,7 @@ Edit your `portal-ext.properties` file following these steps to connect to your 
     META-INF/dynamic-data-source-infrastructure-spring.xml
     ```
 
-    For more information, see the [Spring configuration Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Spring).
+    For more information, see the [Spring configuration Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring).
 
 DXP uses a read data source, a write data source, and a counter data source the next time it starts.
 

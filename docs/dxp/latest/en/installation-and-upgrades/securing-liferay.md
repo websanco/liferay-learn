@@ -53,12 +53,12 @@ See [Introduction to Securing Web Services](./securing-liferay/securing-web-serv
 
 There are many ways to fine-tune or disable additional security features:
 
-* Configure Liferay Portal's HTTPS [web server](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Web%20Server) address.
-* Configure the list of allowed servers to which users can be [redirected](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Redirect).
-* Configure the list of [portlets](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Portlet) that can be accessed from any page.
+* Configure Liferay Portal's HTTPS [web server](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Web%20Server) address.
+* Configure the list of allowed servers to which users can be [redirected](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Redirect).
+* Configure the list of [portlets](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Portlet) that can be accessed from any page.
 * Configure the file types allowed to be uploaded and downloaded.
 
-These features can be configured using [portal properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html).
+These features can be configured using [portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html).
 
 ```{warning}
 Liferay Portal's philosophy is "secure by default." Please exercise significant caution when modifying security-specific defaults or white-lists. Such actions may lead to security misconfiguration and an insecure deployment.

@@ -101,7 +101,7 @@ If the thread pool size is large, making the connection pool a similar size won'
 
 If the number of connections encroaches on your database connection limit, shrink your Counter data source's pool size. Since Counter database transactions are small, fast, and never nested, the Counter connection pool is a good candidate for reducing. For more information on the Counter data source, see [Database Configuration for Cluster Nodes](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md).
 
-Liferay can use C3PO, DBCP, HikariCP, or Tomcat for connection pooling. The connection pool provider is set using the [`jdbc.default.liferay.pool.provider`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) [Portal Property](../reference/portal-properties.md). HikariCP is the default.
+Liferay can use C3PO, DBCP, HikariCP, or Tomcat for connection pooling. The connection pool provider is set using the [`jdbc.default.liferay.pool.provider`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) [Portal Property](../reference/portal-properties.md). HikariCP is the default.
 
 ```properties
 jdbc.default.liferay.pool.provider=hikaricp
@@ -109,7 +109,7 @@ jdbc.default.maximumPoolSize=85
 jdbc.default.minimumIdle=10
 ```
 
-There are [JDBC connection pool Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) for all of the supported connection pools. See your connection pool vendor's information for additional configuration details.
+There are [JDBC connection pool Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) for all of the supported connection pools. See your connection pool vendor's information for additional configuration details.
 
 As with thread pools, monitor your connection pools and adjust them based on your performance tests.
 

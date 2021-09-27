@@ -1,6 +1,6 @@
 # JARs Excluded from WABs
 
-[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](../../liferay-internals/reference/exported-third-party-packages.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
+[Liferay-generated web application bundles \(WABs\)](./deploying-wars-wab-generator.md) are stripped of third party JARs that contain [packages that Liferay exports](../../liferay-internals/reference/exported-third-party-packages.md) already. Deploying the same third party packages from additional JARs can cause weird errors that are hard to debug. Liferay's [`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md) specifies the excluded JARs. Here's an excerpt from the default `module.framework.web.generator.excluded.paths` property:
 
 ```properties
 module.framework.web.generator.excluded.paths=\
@@ -15,7 +15,7 @@ module.framework.web.generator.excluded.paths=\
 ```
 
 ```note::
-    Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a ``portal-dependency-jars`` property in a `liferay-plugin-package.properties <https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/liferay-plugin-package_7_3_0.properties.html>`_ file.
+    Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a ``portal-dependency-jars`` property in a `liferay-plugin-package.properties <https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html>`_ file.
 ```
 
 ## Including a Different Version of a Third Party Package
@@ -35,7 +35,7 @@ For example, here's how to include a different version of a Spring Framework pac
 
 1. [Find an artifact](../../liferay-internals/fundamentals/configuring-dependencies/finding-artifacts.md) that provides the package version you want.
 
-1. Check the [`module.framework.web.generator.excluded.paths`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Module%20Framework) portal property for the corresponding artifact that Liferay excludes. For example, Liferay excludes these Spring Framework JARs:
+1. Check the [`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework) portal property for the corresponding artifact that Liferay excludes. For example, Liferay excludes these Spring Framework JARs:
 
     ```properties
     module.framework.web.generator.excluded.paths=\

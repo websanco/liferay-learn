@@ -86,9 +86,9 @@ Container [Portal Properties](../../reference/portal-properties.md) can be overr
 
 There's an *Env* variable for each [Portal Property](../../reference/portal-properties.md). Env variables are [Docker environment variables](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file) that override a Liferay Docker container's Portal Properties.
 
-1. In the [Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) online description, find the property you want to override.
+1. In the [Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) online description, find the property you want to override.
 
-1. Copy the `Env` variable name displayed just below the property description. For example, here's the Env variable for the [`jdbc.default.jndi.name`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) Portal Property:
+1. Copy the `Env` variable name displayed just below the property description. For example, here's the Env variable for the [`jdbc.default.jndi.name`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) Portal Property:
 
     ```properties
     Env: LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME
@@ -190,7 +190,7 @@ Here's how to disable it and work with it using a Portal Properties file:
     docker run -e LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
     ```
 
-    The terms of use requirement is based on your Portal Properties. The [default Portal Property setting](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) (search for `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`) requires the terms of use:
+    The terms of use requirement is based on your Portal Properties. The [default Portal Property setting](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) (search for `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`) requires the terms of use:
 
     ```properties
     terms.of.use.required=true
@@ -208,7 +208,7 @@ The container uses your property setting.
 
 ## System Properties
 
-[System Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/system.properties.html) can be overridden using a `system-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
+[System Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/system.properties.html) can be overridden using a `system-ext.properties` file. This example uses a [bind mount](./providing-files-to-the-container.md).
 
 1. Create a host folder and subfolders to create the path `[host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes`.
 

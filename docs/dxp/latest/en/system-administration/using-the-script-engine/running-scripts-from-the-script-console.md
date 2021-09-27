@@ -32,7 +32,7 @@ Here's how to run the sample script in the Script Console:
 
     ![The Script Console's sample Groovy script prints the User count to Script Console output.](./running-scripts-from-the-script-console/images/01.png)
 
-The Groovy sample invokes the Liferay service utility [`UserLocalServiceUtil`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html) to get the user count. Then it uses `out` (a built-in `PrintWriter`) to write the count to the Script Console.
+The Groovy sample invokes the Liferay service utility [`UserLocalServiceUtil`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html) to get the user count. Then it uses `out` (a built-in `PrintWriter`) to write the count to the Script Console.
 
 ```note::
    If you use *System.out.println* instead of *out.println*, your output is printed to Liferay's log file rather than to the Script Console.

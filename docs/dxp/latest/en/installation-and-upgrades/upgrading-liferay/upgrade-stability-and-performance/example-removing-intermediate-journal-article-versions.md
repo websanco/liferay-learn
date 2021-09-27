@@ -6,7 +6,7 @@ Here are example steps for removing intermediate Journal Article versions:
 
 1. **Decide how many of the latest versions to keep.** You must keep the original version and the most recent version, but you may keep additional recent versions too. For example, you may want to keep the two latest versions or just the latest.
 
-2. **Find a method for deleting the entity versions.** Liferay DXP [App APIs](https://docs.liferay.com/dxp/apps/) and the [com.liferay.portal.kernel API](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/) are available options for you to use.
+2. **Find a method for deleting the entity versions.** Liferay DXP [App APIs](https://docs.liferay.com/dxp/apps/) and the [com.liferay.portal.kernel API](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/) are available options for you to use.
 
     If it's a [Service Builder](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder) entity, examine the `delete*` methods in the entity's `*LocalServiceUtil` class.
 
@@ -59,7 +59,7 @@ Here are example steps for removing intermediate Journal Article versions:
         }
         ```
 
-    1. For each `JournalArticleResource` (there's one for each `JournalArticle` entity), build a list of intermediate versions in range of the first or latest versions you want to keep and whose status qualifies them for deletion. For example, you may want to delete intermediate article versions that are approved or expired (i.e., [WorkflowConstants.STATUS_APPROVED or WorkflowConstants.STATUS_EXPIRED](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html)). The `MIN_NUMBER_FIRST_VERSIONS_KEPT` and `MIN_NUMBER_LATEST_VERSIONS_KEPT` variables mark the minimum and maximum number of first (oldest) and latest (newest) versions to keep.
+    1. For each `JournalArticleResource` (there's one for each `JournalArticle` entity), build a list of intermediate versions in range of the first or latest versions you want to keep and whose status qualifies them for deletion. For example, you may want to delete intermediate article versions that are approved or expired (i.e., [WorkflowConstants.STATUS_APPROVED or WorkflowConstants.STATUS_EXPIRED](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html)). The `MIN_NUMBER_FIRST_VERSIONS_KEPT` and `MIN_NUMBER_LATEST_VERSIONS_KEPT` variables mark the minimum and maximum number of first (oldest) and latest (newest) versions to keep.
 
         ```java
         List<Double> journalArticlesVersionsToDelete =

@@ -1,6 +1,6 @@
 # Invoking Liferay Services From Scripts
 
-Many scripting scenarios require invoking Liferay services. [Liferay `*ServiceUtil` classes](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/) are the fastest and most convenient way to invoke Liferay services in the [Script Console](./running-scripts-from-the-script-console.md). Use Groovy to invoke Liferay services the same way you would use Java. Groovy's syntax facilitates writing concise, elegant scripts.
+Many scripting scenarios require invoking Liferay services. [Liferay `*ServiceUtil` classes](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/) are the fastest and most convenient way to invoke Liferay services in the [Script Console](./running-scripts-from-the-script-console.md). Use Groovy to invoke Liferay services the same way you would use Java. Groovy's syntax facilitates writing concise, elegant scripts.
 
 We'll demonstrate by comparing Java code and Groovy code that uses `UserLocalServiceUtil` to retrieve a list of users and print their names to Liferay's log.
 

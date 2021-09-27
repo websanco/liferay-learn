@@ -26,9 +26,9 @@ You can use OSGi services in any Java class.
 Liferay service Javadoc is available at these locations:
 
 * [Liferay DXP Apps](https://docs.liferay.com/dxp/apps/)
-* [Liferay DXP Portal](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/)
+* [Liferay DXP Portal](https://learn.liferay.com/reference/latest/en/dxp/javadocs/)
 * [Liferay CE Apps](https://docs.liferay.com/ce/apps/)
-* [Liferay CE Portal](https://docs.liferay.com/ce/portal/7.3-latest/javadocs/)
+* [Liferay CE Portal](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/)
 
 ```{note}
 For instructions on how to create an OSGi service, please see [APIs as OSGi Services](./apis-as-osgi-services.md).

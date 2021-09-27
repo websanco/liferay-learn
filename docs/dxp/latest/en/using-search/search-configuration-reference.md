@@ -261,4 +261,4 @@ The Field Mappings tab shows you all field mappings that are effective in the sy
 
 ### Portal Properties
 
-Portal properties are system scoped as well. The [Lucene Search](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Lucene%20Search) portal properties configure low level search behavior. Review the properties and their descriptions and determine if they apply to your search requirements. -->
+Portal properties are system scoped as well. The [Lucene Search](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Lucene%20Search) portal properties configure low level search behavior. Review the properties and their descriptions and determine if they apply to your search requirements. -->

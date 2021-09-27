@@ -120,7 +120,7 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
     ./patching-tool.sh info
     ```
 
-    If there are index updates, set the [`database.indexes.update.on.startup`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../../reference/portal-properties.md).
+    If there are index updates, set the [`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../../reference/portal-properties.md).
 
     ```properties
     database.indexes.update.on.startup=true

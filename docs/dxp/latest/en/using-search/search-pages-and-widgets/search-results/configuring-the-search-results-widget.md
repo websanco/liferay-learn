@@ -38,7 +38,7 @@ Results pagination appears at the bottom of the search results:
 http://localhost:8080/web/guest/search?q=test&start=2
 ```
 
-**Pagination Delta:** Set the number of results to display per results page. Defaults to *20* unless you customized the `search.container.page.default.delta` [property](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Search%20Container) in your `portal-ext.properties` file.
+**Pagination Delta:** Set the number of results to display per results page. Defaults to *20* unless you customized the `search.container.page.default.delta` [property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Search%20Container) in your `portal-ext.properties` file.
 
 **Pagination Delta Parameter Name:** Set the name of the URL parameter that stores the Pagination Delta value (`delta` by default). This parameter is visible in the browser if the User changes the number. If the User selects 10 results per page and searches for *test*, the Search Page is reloaded with this URL:
 

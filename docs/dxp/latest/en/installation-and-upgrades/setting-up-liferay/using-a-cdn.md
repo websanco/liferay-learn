@@ -36,7 +36,7 @@ After setting up a qualified CDN, configure Liferay to use it.
 
 Here are the two different methods for configuring a CDN:
 
-1. Set [Content Delivery Network properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) in a [portal properties](../reference/portal-properties.md) file.
+1. Set [Content Delivery Network properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) in a [portal properties](../reference/portal-properties.md) file.
 
 1. Use the Control Panel
 

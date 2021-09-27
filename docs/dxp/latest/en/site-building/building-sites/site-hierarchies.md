@@ -19,7 +19,7 @@ Content sharing is available for Sites within the same hierarchy. For instance, 
 * Widget Templates
 * Data Definitions (Dynamic Data Lists)
 
-See the [Sites Admin Portlet](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Sites%20Admin%20Portlet) section of Liferay's `portal.properties` file for a list of relevant configurable properties. For example, the `Sites.content.sharing.with.children.enabled` property can disable/enable content sharing between Sites and child Sites, while letting Site Administrators configure it per Site.
+See the [Sites Admin Portlet](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Sites%20Admin%20Portlet) section of Liferay's `portal.properties` file for a list of relevant configurable properties. For example, the `Sites.content.sharing.with.children.enabled` property can disable/enable content sharing between Sites and child Sites, while letting Site Administrators configure it per Site.
 
 ## Site Hierarchy Roles and Permissions
 

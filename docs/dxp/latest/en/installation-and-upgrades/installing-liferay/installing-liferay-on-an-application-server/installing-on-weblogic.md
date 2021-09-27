@@ -90,7 +90,7 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
 
 Before installing DXP, set your [*Liferay Home*](../../reference/liferay-home.md) folder location.
 
-1. Create a file called [`portal-ext.properties`](../../reference/portal-properties.md). (It overrides [portal properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html).)
+1. Create a file called [`portal-ext.properties`](../../reference/portal-properties.md). (It overrides [portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html).)
 
 1. In the `portal-ext.properties` file, set the `liferay.home` property to your Liferay Home folder path. In WebLogic, the domain's folder is generally Liferay Home, but any other folder on the machine can be used:
 

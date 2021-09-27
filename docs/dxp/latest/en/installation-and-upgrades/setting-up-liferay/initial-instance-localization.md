@@ -12,8 +12,8 @@ If you want to configure the default virtual instance's localization before star
 
 | **Portal Property** | **Description** |
 | :------------------ | :-------------- |
-| `company.default.locale` | Set it to any available locale, defined for the [`locales`](https://docs.liferay.com/ce/portal/7.3-ga2/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) portal property. |
-| `company.default.time.zone` | Set it to any of the time zones defined in the [`time.zones`](https://docs.liferay.com/ce/portal/7.3-ga2/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) portal property. |
+| `company.default.locale` | Set it to any available locale, defined for the [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) portal property. |
+| `company.default.time.zone` | Set it to any of the time zones defined in the [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) portal property. |
 
 For example,
 

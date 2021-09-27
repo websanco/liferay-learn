@@ -1,6 +1,6 @@
 # Configuring Cluster Link
 
-Enabling Cluster Link activates distributed caching. The cache is distributed across multiple Liferay DXP nodes running concurrently. Cluster Link uses [Ehcache](http://www.ehcache.org) replication. The Ehcache global settings are in the [`portal.properties` file](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Ehcache).
+Enabling Cluster Link activates distributed caching. The cache is distributed across multiple Liferay DXP nodes running concurrently. Cluster Link uses [Ehcache](http://www.ehcache.org) replication. The Ehcache global settings are in the [`portal.properties` file](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Ehcache).
 
 By default Liferay does not copy cached entities between nodes. If an entity is deleted or changed, for example, Cluster Link sends a *remove* message to the other nodes to invalidate this entity in their local caches. Requesting that entity on another node results in a cache *miss*; the entity is then retrieved from the database and put into the local cache. Entities added to one node's local cache are not copied to local caches of the other nodes. An attempt to retrieve a new entity on a node which doesn't have that entity cached results in a cache *miss*. The miss triggers the node to retrieve the entity from the database and store it in its local cache.
 
@@ -22,7 +22,7 @@ To enable Cluster Link, add this [Portal Property](../../reference/portal-proper
 cluster.link.enabled=true
 ```
 
-The [Cluster Link Portal Properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) provide a default configuration that you can override to fit your needs.
+The [Cluster Link Portal Properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link) provide a default configuration that you can override to fit your needs.
 
 Many of the defaults use `localhost`, instead of a real address. In some configurations, however, `localhost` is bound to the internal loopback network (`127.0.0.1` or `::1`), rather than the host's real address. If you still need this configuration, you can make DXP auto detect the real address with this property:
 
@@ -47,7 +47,7 @@ When you enable Cluster Link, DXP's default clustering configuration is enabled.
 
 ### Using Multicast Over UDP
 
-DXP uses two groups of [channels from JGroups](http://www.jgroups.org/manual4/index.html#_channel) to implement multicast over UDP: a control group and a transport group. If you want to customize the [channel properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link), you can do so by adding the following Portal Properties to `portal-ext.properties`:
+DXP uses two groups of [channels from JGroups](http://www.jgroups.org/manual4/index.html#_channel) to implement multicast over UDP: a control group and a transport group. If you want to customize the [channel properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link), you can do so by adding the following Portal Properties to `portal-ext.properties`:
 
 ```properties
 cluster.link.channel.name.control=[your control channel name]
@@ -56,7 +56,7 @@ cluster.link.channel.properties.control=[your control channel properties]
 
 Please see [JGroups's documentation](http://www.jgroups.org/manual4/index.html#protlist) for channel properties. The default configuration sets many properties whose settings are discussed there.
 
-Multicast broadcasts to all devices on the network. Clustered environments on the same network communicate with each other by default. Messages and information (e.g., scheduled tasks) sent between them can lead to unintended consequences. Isolate such cluster environments by either separating them logically or physically on the network, or by configuring each cluster's `portal-ext.properties` to use different sets of [multicast group address and port values](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Multicast).
+Multicast broadcasts to all devices on the network. Clustered environments on the same network communicate with each other by default. Messages and information (e.g., scheduled tasks) sent between them can lead to unintended consequences. Isolate such cluster environments by either separating them logically or physically on the network, or by configuring each cluster's `portal-ext.properties` to use different sets of [multicast group address and port values](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Multicast).
 
 JGroups sets a bind address automatically, using `localhost` by default. In some configurations, however, `localhost` is bound to the internal loopback network (`127.0.0.1` or `::1`), rather than the host's real address. As long as DXP's `cluster.link.autodetect.address` Portal Property points to a server that's contactable, DXP uses that server to automatically detect your host's real address. Here's the default setting:
 

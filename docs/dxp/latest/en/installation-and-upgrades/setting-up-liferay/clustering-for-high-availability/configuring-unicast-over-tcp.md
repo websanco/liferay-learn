@@ -69,7 +69,7 @@ Use the following steps to configure Unicast:
         port_range="0"/>
     ```
 
-1. Modify the [Cluster Link properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) in each node's [`portal-ext.properties` file](../../reference/portal-properties.md) to enable Cluster Link and point to the TCP XML file for each Cluster Link channel:
+1. Modify the [Cluster Link properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link) in each node's [`portal-ext.properties` file](../../reference/portal-properties.md) to enable Cluster Link and point to the TCP XML file for each Cluster Link channel:
 
     ```properties
     cluster.link.enabled=true
@@ -141,7 +141,7 @@ The following steps use Unicast over TCPPing to demonstrate the approach.
     * `tcp-control.xml`
     * `tcp-transport.xml`
 
-1. Modify the [Cluster Link properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) in the node's [`portal-ext.properties` file](../../reference/portal-properties.md) to enable Cluster Link and point to the TCP XML file for each Cluster Link channel:
+1. Modify the [Cluster Link properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link) in the node's [`portal-ext.properties` file](../../reference/portal-properties.md) to enable Cluster Link and point to the TCP XML file for each Cluster Link channel:
 
     ```properties
     cluster.link.enabled=true
