@@ -19,7 +19,7 @@ First, you must deploy an example discount rule type on your instance of Liferay
 1. Start Liferay Commerce.
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip the [Acme Commerce Discount Rule Type](./liferay-m6a8.zip).

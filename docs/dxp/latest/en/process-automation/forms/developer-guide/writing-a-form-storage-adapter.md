@@ -17,7 +17,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
     If you already have a docker container, use

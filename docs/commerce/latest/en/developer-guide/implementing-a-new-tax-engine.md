@@ -19,7 +19,7 @@ In this section, we will get an example tax engine up and running on your instan
 1. Start Liferay Commerce.
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip the [Acme Commerce Tax Engine](./liferay-q4b9.zip).

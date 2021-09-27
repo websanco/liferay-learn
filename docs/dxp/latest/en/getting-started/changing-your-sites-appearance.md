@@ -11,7 +11,7 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
 1. Start up the Liferay DXP Docker image:
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download the WAR containing the [Acme Sample Blue Theme](./liferay-5b2v-theme.war):

@@ -7,7 +7,7 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip [Field Options Provider](./liferay-z4h3.zip)

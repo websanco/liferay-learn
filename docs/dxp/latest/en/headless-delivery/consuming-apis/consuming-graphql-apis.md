@@ -11,7 +11,7 @@ Liferay DXP contains [GraphQL](https://graphql.org) APIs for most of its applica
 You need a running Liferay DXP to call its GraphQL APIs. To obtain one using Docker, run this command:
 
 ```bash
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 ```
 
 After Liferay DXP initializes, you can find the service you need.

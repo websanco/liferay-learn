@@ -19,7 +19,7 @@ In this section, we will get an example low stock activity up and running on you
 1. Start Liferay Commerce.
 
     ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip the [Acme Commerce Low Stock Activity](./liferay-j1e4.zip).

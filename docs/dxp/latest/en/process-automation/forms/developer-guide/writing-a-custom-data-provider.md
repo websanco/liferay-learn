@@ -13,7 +13,7 @@ If the REST Data Provider doesn't serve your purpose, use the `DDMDataProvider` 
 1. Start Liferay.
 
    ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. Download and unzip the Acme XML Data Provider.

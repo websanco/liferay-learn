@@ -7,7 +7,7 @@ You can listen for messages sent to any registered Message Bus destination, whet
 1.  Start the Liferay Docker image:
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. After DXP/Portal initializes, visit it with your browser at `http://localhost:8080`.

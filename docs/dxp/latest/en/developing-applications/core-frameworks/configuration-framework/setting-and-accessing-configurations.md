@@ -7,7 +7,7 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
 1. Start Liferay DXP. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
 1. Download and unzip [Setting and Accessing Configurations](./liferay-n2f3.zip).

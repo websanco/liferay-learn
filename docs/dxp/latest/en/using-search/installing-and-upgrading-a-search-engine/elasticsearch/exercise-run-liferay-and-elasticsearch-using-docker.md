@@ -75,7 +75,7 @@ Specify the properties Liferay DXP needs to connect with Elasticsearch, then run
 1. Once the configuration files are in place, start the DXP container with 
 
    ```bash
-   docker run -it --name dxp73  --add-host elasticsearch790:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+   docker run -it --name dxp73  --add-host elasticsearch790:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. **Checkpoint:** Verify that the Elasticsearch connection is active in Control Panel &rarr; Configuration &rarr; Search.

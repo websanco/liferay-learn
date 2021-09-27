@@ -56,7 +56,7 @@ Here's how to deploy the example:
 1. Start Liferay DXP/Portal. If you don't already have a docker container, use
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
     If you're running a different DXP/Portal version, adjust the above command accordingly. 
