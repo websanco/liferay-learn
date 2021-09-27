@@ -23,12 +23,7 @@ The example module class creates a Gogo Shell command that uses the `Greeter` se
 
 You can use OSGi services in any Java class.
 
-Liferay service Javadoc is available at these locations:
-
-* [Liferay DXP Apps](https://docs.liferay.com/dxp/apps/)
-* [Liferay DXP Portal](https://learn.liferay.com/reference/latest/en/dxp/javadocs/)
-* [Liferay CE Apps](https://docs.liferay.com/ce/apps/)
-* [Liferay CE Portal](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/)
+Liferay service Javadoc is available [here](https://learn.liferay.com/reference/latest/en/dxp.html).
 
 ```{note}
 For instructions on how to create an OSGi service, please see [APIs as OSGi Services](./apis-as-osgi-services.md).
