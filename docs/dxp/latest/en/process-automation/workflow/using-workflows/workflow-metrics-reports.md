@@ -66,6 +66,10 @@ There's a table view for all the items in the workflow that provides handy filte
 
 **ID**: This is the workflow item's numeric identifier to the system. Importantly, you can click this to enter the Item Detail view.
 
+**Due Date:** This is the date, as calculated by the configured SLA, after which the workflow item is considered to have a SLA status of Overdue. It is not related to the Due Date field displayed in My Workflow Tasks screen, accessed from the User personal menu.
+
+![Hover over the due date to see more detailed information about the SLA.](./workflow-metrics-reports/images/12.png)
+
 **Item Subject**: A human readable summary of the item, to help administrators identify the item.
 
 **Process Step**: Identifies where the item is in the workflow.

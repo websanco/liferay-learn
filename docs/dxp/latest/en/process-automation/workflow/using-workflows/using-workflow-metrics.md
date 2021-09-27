@@ -16,7 +16,9 @@ To use _Workflow Metrics_, you must be using Elasticsearch to index your DXP dat
 
 ## Adding SLAs
 
-1. Navigate to the _Control Panel_ &rarr; _Workflow_ &rarr; _Metrics_.
+To add a SLA,
+
+1. In the Global Menu, navigate to the _Applications_ &rarr; _Workflow_ &rarr; _Metrics_.
 1. Click on the title of the Process.
 1. If there's no SLA for the process, a warning message stating as much appears. Click the _Add a new SLA_ link from the warning to access the New SLA form directly.
 
