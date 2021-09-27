@@ -8,7 +8,9 @@ A table view of all installed workflow processes shows you how many items are ov
 
 Access more detailed reports by clicking on one of the workflow processes.
 
-The Reports UI has two main views, represented as tabs: _Dashboard_ and _Performance_.
+The Reports UI has two main views, represented as tabs: _Dashboard_ and _Performance_. At the top of both screens, a piece of important information is displayed: the detailed date and time that the SLA metrics were last recalculated. To learn about the configurability of the metrics recalculation, see [Configuring the SLA Job Interval](using-workflow-metrics.md#configuring-the-sla-job-interval).
+
+![The last time SLA metrics were recaluclated is displayed prominently.](./workflow-metrics-reports/images/13.png)
 
 The Dashboard view is displayed by default. Included are items currently in the workflow process, even those untracked by the SLA. Untracked items include those that pre-date the SLA itself or those that are in the process but have not reached the step where the SLA is triggered.
 
