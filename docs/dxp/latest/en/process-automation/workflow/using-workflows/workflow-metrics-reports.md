@@ -48,7 +48,11 @@ The overall throughput rate for the time period appears in the top of the chart 
 
 **Performance by Step:** See how many SLA breaches occurred at each step and the step's average completion time. If the step is part of at least one SLA definition, discover how many items had their SLA breached at the step and the proportion (as a percentage) of the total breaches that occurred at this step of the process, in comparison with all items that passed through this workflow step.
 
-![View the performance of each workflow step.](./workflow-metrics-reports/images/04.png)
+![View the performance of each workflow step.](./workflow-metrics-reports/images/14.png)
+
+```note::
+   In Liferay 7.4 a version selector was added to the Performance by Step metric. It defaults to displaying metrics for all the workflow definition's versions, but you can choose to display metrics for just one version.
+```
 
 To see a full view of all the step performance metrics, click _View All Steps_.
 
