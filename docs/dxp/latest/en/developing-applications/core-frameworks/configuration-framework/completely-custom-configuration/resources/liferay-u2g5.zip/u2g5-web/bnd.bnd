@@ -1,0 +1,4 @@
+Bundle-Name: Acme U2G5 Web
+Bundle-SymbolicName: com.acme.u2g5.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /u2g5-web
