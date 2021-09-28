@@ -54,7 +54,7 @@ However, if you would like to define file details before uploading them, follow 
 | Description | &#10004; | &#10004; | Add a file description for your uploaded file/files. |
 | Display Page | &#10004; | &#10004; | Select a [Display Page Template](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) for the uploaded file/files. |
 | Categorization | &#10004; | &#10004; | Apply tags and public or internal Categories to the uploaded file/files. |
-| Expiration Date | &#10004; | &#10004; | Determine if and when the file/files expire or should be reviewed. By default, files are set to never expire or require review. If enabled, you the date when the file expires or should be reviewed. See [Setting Expiration and Review Dates for Files](./setting-expiration-and-review-dates-for-files.md) for more information. |
+| Expiration Date | &#10004; | &#10004; | Determine if and when the file/files expire or should be reviewed. By default, files are set to never expire or require review. If enabled, you the date when the file expires or should be reviewed. See [Using File Expiration and Review Dates](./using-file-expiration-and-review-dates.md) for more information. |
 | Related Assets | &#10004; |  | Select related assets or the file from the Site or connected Asset Library. |
 | Permissions | &#10004; | &#10004; | Set permissions for the uploaded file/files. These settings determine which user roles can view the file and perform other actions related to it (e.g., update, delete). |
 
