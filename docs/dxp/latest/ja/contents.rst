@@ -13,7 +13,7 @@
    process_automation
    using_search
    collaboration_and_social
-   users_and_permissions
+   users-and-permissions
    system_administration
    developing_applications
    liferay_internals
