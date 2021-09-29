@@ -6,14 +6,9 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.util.ParamUtil;
 
-import java.io.IOException;
-
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -33,22 +28,8 @@ public class T2P5Portlet extends MVCPortlet {
 		throws PortalException {
 
 		_t2p5EntryLocalService.addT2P5Entry(
-			ParamUtil.getString(actionRequest, "name"),
-			ParamUtil.getString(actionRequest, "description"));
-	}
-
-	@Override
-	public void render(
-			RenderRequest renderRequest, RenderResponse renderResponse)
-		throws IOException, PortletException {
-
-		renderRequest.setAttribute(
-			"entriesCount", _t2p5EntryLocalService.getT2P5EntriesCount());
-
-		renderRequest.setAttribute(
-			"entries", _t2p5EntryLocalService.getT2P5Entries(-1, -1));
-
-		super.render(renderRequest, renderResponse);
+			ParamUtil.getString(actionRequest, "description"),
+			ParamUtil.getString(actionRequest, "name"));
 	}
 
 	@Reference

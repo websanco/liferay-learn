@@ -4,7 +4,8 @@
 
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<%@ page import="com.acme.t2p5.model.T2P5Entry" %>
+<%@ page import="com.acme.t2p5.model.T2P5Entry" %><%@
+page import="com.acme.t2p5.service.T2P5EntryLocalServiceUtil" %>
 
 <%@ page import="java.util.List" %>
 
@@ -14,12 +15,13 @@
 
 <hr />
 
-<portlet:actionURL name="addT2P5Entry" var="addT2P5EntryURL" />
+<h5>Add T2P5 Entry</h5>
 
-<h5>Add Entry</h5>
+<portlet:actionURL name="addT2P5Entry" var="addT2P5EntryURL" />
 
 <aui:form action="<%= addT2P5EntryURL %>">
 	<aui:input name="name" type="text" />
+
 	<aui:input name="description" type="text" />
 
 	<aui:button type="submit" value="submit" />
@@ -30,14 +32,14 @@
 <h5>Entries</h5>
 
 <%
-List<T2P5Entry> entries = (List<T2P5Entry>)request.getAttribute("entries");
+List<T2P5Entry> t2p5Entries = T2P5EntryLocalServiceUtil.getT2P5Entries(-1, -1);
 %>
 
 <c:choose>
-	<c:when test='<%= (entries != null) && ((int)request.getAttribute("entriesCount") > 0) %>'>
+	<c:when test="<%= t2p5Entries.size() > 0 %>">
 		<table>
 			<tbody>
-				<c:forEach items="<%= entries %>" var="entry">
+				<c:forEach items="<%= t2p5Entries %>" var="entry">
 					<tr>
 						<td>${entry}</td>
 					</tr>
@@ -46,6 +48,6 @@ List<T2P5Entry> entries = (List<T2P5Entry>)request.getAttribute("entries");
 		</table>
 	</c:when>
 	<c:otherwise>
-		<em>None</em>
+		<em>There are no T2P5 entries.</em>
 	</c:otherwise>
 </c:choose>
