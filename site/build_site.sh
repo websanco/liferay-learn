@@ -116,7 +116,7 @@ function generate_sphinx_input {
 
 			if [[ "${article_file_names}" -eq 0 ]]
 			then
-				echo "File ${1} does not exist."
+				echo "${1} (No such file)"
 
 				exit 1
 			fi
