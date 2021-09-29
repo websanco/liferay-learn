@@ -34,10 +34,10 @@ public class T2P5EntryLocalServiceWrapper
 
 	@Override
 	public com.acme.t2p5.model.T2P5Entry addT2P5Entry(
-			String name, String description)
+			String description, String name)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
-		return _t2p5EntryLocalService.addT2P5Entry(name, description);
+		return _t2p5EntryLocalService.addT2P5Entry(description, name);
 	}
 
 	/**
