@@ -1,4 +1,4 @@
-# Accounts
+# アカウント
 
 ```{toctree}
 :maxdepth: 3
