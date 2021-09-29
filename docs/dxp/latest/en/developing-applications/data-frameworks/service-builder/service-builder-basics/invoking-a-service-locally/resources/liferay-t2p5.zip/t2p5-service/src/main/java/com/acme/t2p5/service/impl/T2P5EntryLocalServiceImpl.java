@@ -31,15 +31,16 @@ import org.osgi.service.component.annotations.Component;
 )
 public class T2P5EntryLocalServiceImpl extends T2P5EntryLocalServiceBaseImpl {
 
-	public T2P5Entry addT2P5Entry(String name, String description)
+	public T2P5Entry addT2P5Entry(String description, String name)
 		throws PortalException {
 
-		T2P5Entry entry = createT2P5Entry(counterLocalService.increment());
+		T2P5Entry t2p5Entry = t2p5EntryPersistence.create(
+			counterLocalService.increment());
 
-		entry.setName(name);
-		entry.setDescription(description);
+		t2p5Entry.setDescription(description);
+		t2p5Entry.setName(name);
 
-		return addT2P5Entry(entry);
+		return t2p5EntryPersistence.update(t2p5Entry);
 	}
 
 }
