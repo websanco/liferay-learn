@@ -11,24 +11,28 @@
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
+package com.acme.h6d2.exception;
 
-package com.acme.h6d2.service.impl;
-
-import com.acme.h6d2.service.base.TodoServiceBaseImpl;
-
-import com.liferay.portal.aop.AopService;
-
-import org.osgi.service.component.annotations.Component;
+import com.liferay.portal.kernel.exception.NoSuchModelException;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(
-	property = {
-		"json.web.service.context.name=h6d2",
-		"json.web.service.context.path=Todo"
-	},
-	service = AopService.class
-)
-public class TodoServiceImpl extends TodoServiceBaseImpl {
+public class NoSuchEntryException extends NoSuchModelException {
+
+	public NoSuchEntryException() {
+	}
+
+	public NoSuchEntryException(String msg) {
+		super(msg);
+	}
+
+	public NoSuchEntryException(String msg, Throwable throwable) {
+		super(msg, throwable);
+	}
+
+	public NoSuchEntryException(Throwable throwable) {
+		super(throwable);
+	}
+
 }

@@ -12,10 +12,15 @@
  * details.
  */
 
-package com.acme.h6d2.model.impl;
+package com.acme.h6d2.uad.anonymizer;
+
+import com.liferay.user.associated.data.anonymizer.UADAnonymizer;
+
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-public class TodoImpl extends TodoBaseImpl {
+@Component(immediate = true, service = UADAnonymizer.class)
+public class H6D2EntryUADAnonymizer extends BaseH6D2EntryUADAnonymizer {
 }

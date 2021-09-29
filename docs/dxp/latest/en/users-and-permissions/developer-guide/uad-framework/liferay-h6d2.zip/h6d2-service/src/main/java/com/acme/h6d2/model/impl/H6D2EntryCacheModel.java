@@ -14,7 +14,7 @@
 
 package com.acme.h6d2.model.impl;
 
-import com.acme.h6d2.model.Todo;
+import com.acme.h6d2.model.H6D2Entry;
 
 import com.liferay.petra.lang.HashUtil;
 import com.liferay.petra.string.StringBundler;
@@ -28,12 +28,13 @@ import java.io.ObjectOutput;
 import java.util.Date;
 
 /**
- * The cache model class for representing Todo in entity cache.
+ * The cache model class for representing H6D2Entry in entity cache.
  *
  * @author Brian Wing Shun Chan
  * @generated
  */
-public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
+public class H6D2EntryCacheModel
+	implements CacheModel<H6D2Entry>, Externalizable {
 
 	@Override
 	public boolean equals(Object object) {
@@ -41,13 +42,13 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 			return true;
 		}
 
-		if (!(object instanceof TodoCacheModel)) {
+		if (!(object instanceof H6D2EntryCacheModel)) {
 			return false;
 		}
 
-		TodoCacheModel todoCacheModel = (TodoCacheModel)object;
+		H6D2EntryCacheModel h6d2EntryCacheModel = (H6D2EntryCacheModel)object;
 
-		if (todoId == todoCacheModel.todoId) {
+		if (h6d2EntryId == h6d2EntryCacheModel.h6d2EntryId) {
 			return true;
 		}
 
@@ -56,7 +57,7 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 
 	@Override
 	public int hashCode() {
-		return HashUtil.hash(0, todoId);
+		return HashUtil.hash(0, h6d2EntryId);
 	}
 
 	@Override
@@ -65,8 +66,8 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 
 		sb.append("{uuid=");
 		sb.append(uuid);
-		sb.append(", todoId=");
-		sb.append(todoId);
+		sb.append(", h6d2EntryId=");
+		sb.append(h6d2EntryId);
 		sb.append(", groupId=");
 		sb.append(groupId);
 		sb.append(", companyId=");
@@ -87,59 +88,59 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 	}
 
 	@Override
-	public Todo toEntityModel() {
-		TodoImpl todoImpl = new TodoImpl();
+	public H6D2Entry toEntityModel() {
+		H6D2EntryImpl h6d2EntryImpl = new H6D2EntryImpl();
 
 		if (uuid == null) {
-			todoImpl.setUuid("");
+			h6d2EntryImpl.setUuid("");
 		}
 		else {
-			todoImpl.setUuid(uuid);
+			h6d2EntryImpl.setUuid(uuid);
 		}
 
-		todoImpl.setTodoId(todoId);
-		todoImpl.setGroupId(groupId);
-		todoImpl.setCompanyId(companyId);
-		todoImpl.setUserId(userId);
+		h6d2EntryImpl.setH6d2EntryId(h6d2EntryId);
+		h6d2EntryImpl.setGroupId(groupId);
+		h6d2EntryImpl.setCompanyId(companyId);
+		h6d2EntryImpl.setUserId(userId);
 
 		if (userName == null) {
-			todoImpl.setUserName("");
+			h6d2EntryImpl.setUserName("");
 		}
 		else {
-			todoImpl.setUserName(userName);
+			h6d2EntryImpl.setUserName(userName);
 		}
 
 		if (createDate == Long.MIN_VALUE) {
-			todoImpl.setCreateDate(null);
+			h6d2EntryImpl.setCreateDate(null);
 		}
 		else {
-			todoImpl.setCreateDate(new Date(createDate));
+			h6d2EntryImpl.setCreateDate(new Date(createDate));
 		}
 
 		if (modifiedDate == Long.MIN_VALUE) {
-			todoImpl.setModifiedDate(null);
+			h6d2EntryImpl.setModifiedDate(null);
 		}
 		else {
-			todoImpl.setModifiedDate(new Date(modifiedDate));
+			h6d2EntryImpl.setModifiedDate(new Date(modifiedDate));
 		}
 
 		if (name == null) {
-			todoImpl.setName("");
+			h6d2EntryImpl.setName("");
 		}
 		else {
-			todoImpl.setName(name);
+			h6d2EntryImpl.setName(name);
 		}
 
-		todoImpl.resetOriginalValues();
+		h6d2EntryImpl.resetOriginalValues();
 
-		return todoImpl;
+		return h6d2EntryImpl;
 	}
 
 	@Override
 	public void readExternal(ObjectInput objectInput) throws IOException {
 		uuid = objectInput.readUTF();
 
-		todoId = objectInput.readLong();
+		h6d2EntryId = objectInput.readLong();
 
 		groupId = objectInput.readLong();
 
@@ -161,7 +162,7 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 			objectOutput.writeUTF(uuid);
 		}
 
-		objectOutput.writeLong(todoId);
+		objectOutput.writeLong(h6d2EntryId);
 
 		objectOutput.writeLong(groupId);
 
@@ -188,7 +189,7 @@ public class TodoCacheModel implements CacheModel<Todo>, Externalizable {
 	}
 
 	public String uuid;
-	public long todoId;
+	public long h6d2EntryId;
 	public long groupId;
 	public long companyId;
 	public long userId;

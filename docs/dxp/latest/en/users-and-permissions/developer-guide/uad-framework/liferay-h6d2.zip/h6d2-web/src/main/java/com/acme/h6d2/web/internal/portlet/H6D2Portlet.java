@@ -1,7 +1,7 @@
 package com.acme.h6d2.web.internal.portlet;
 
-import com.acme.h6d2.model.Todo;
-import com.acme.h6d2.service.TodoLocalService;
+import com.acme.h6d2.model.H6D2Entry;
+import com.acme.h6d2.service.H6D2EntryLocalService;
 
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -23,42 +23,41 @@ import org.osgi.service.component.annotations.Reference;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"javax.portlet.display-name=H6D2 Portlet",
-		"javax.portlet.init-param.view-template=/view.jsp",
-		"javax.portlet.resource-bundle=content.Language"
+		"javax.portlet.init-param.view-template=/view.jsp"
 	},
 	service = Portlet.class
 )
 public class H6D2Portlet extends MVCPortlet {
 
-	public void addTodo(
+	public void addH6D2Entry(
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(
 			WebKeys.THEME_DISPLAY);
 
-		String item = ParamUtil.getString(actionRequest, "item");
+		String name = ParamUtil.getString(actionRequest, "name");
 
 		User user = _portal.getUser(actionRequest);
 
-		Todo todo = _todoLocalService.createTodo(
+	 	H6D2Entry h6d2Entry = _h6d2EntryLocalService.createH6D2Entry(
 			CounterLocalServiceUtil.increment());
 
-		todo.setCompanyId(user.getCompanyId());
-		todo.setUserId(user.getUserId());
-		todo.setUserName(user.getFullName());
+		h6d2Entry.setCompanyId(user.getCompanyId());
+		h6d2Entry.setUserId(user.getUserId());
+		h6d2Entry.setUserName(user.getFullName());
 
-		todo.setGroupId(themeDisplay.getSiteGroupId());
+		h6d2Entry.setGroupId(themeDisplay.getSiteGroupId());
 
-		todo.setName(item);
+		h6d2Entry.setName(name);
 
-		_todoLocalService.addTodo(todo);
+		_h6d2EntryLocalService.addH6D2Entry(h6d2Entry);
 	}
 
 	@Reference
 	private Portal _portal;
 
 	@Reference
-	private TodoLocalService _todoLocalService;
+	private H6D2EntryLocalService _h6d2EntryLocalService;
 
 }

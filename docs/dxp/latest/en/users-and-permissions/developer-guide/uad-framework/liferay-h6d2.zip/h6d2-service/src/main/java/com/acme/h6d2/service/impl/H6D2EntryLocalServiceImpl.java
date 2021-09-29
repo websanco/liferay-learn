@@ -12,15 +12,20 @@
  * details.
  */
 
-package com.acme.h6d2.uad.display;
+package com.acme.h6d2.service.impl;
 
-import com.liferay.user.associated.data.display.UADDisplay;
+import com.acme.h6d2.service.base.H6D2EntryLocalServiceBaseImpl;
+
+import com.liferay.portal.aop.AopService;
 
 import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(immediate = true, service = UADDisplay.class)
-public class TodoUADDisplay extends BaseTodoUADDisplay {
+@Component(
+	property = "model.class.name=com.acme.h6d2.model.H6D2Entry",
+	service = AopService.class
+)
+public class H6D2EntryLocalServiceImpl extends H6D2EntryLocalServiceBaseImpl {
 }

@@ -1,10 +1,8 @@
-dependencies {
-	compileOnly group: "com.liferay.portal", name: "release.portal.api"
-	compileOnly project(":h6d2-api")
-}
-
 buildService {
 	apiDir = "../h6d2-api/src/main/java"
 }
 
-group = "com.acme.h6d2"
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":h6d2-api")
+}

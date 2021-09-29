@@ -22,37 +22,37 @@ import java.sql.Types;
 import java.util.Date;
 
 /**
- * The table class for the &quot;H6D2_Todo&quot; database table.
+ * The table class for the &quot;H6D2_H6D2Entry&quot; database table.
  *
  * @author Brian Wing Shun Chan
- * @see Todo
+ * @see H6D2Entry
  * @generated
  */
-public class TodoTable extends BaseTable<TodoTable> {
+public class H6D2EntryTable extends BaseTable<H6D2EntryTable> {
 
-	public static final TodoTable INSTANCE = new TodoTable();
+	public static final H6D2EntryTable INSTANCE = new H6D2EntryTable();
 
-	public final Column<TodoTable, String> uuid = createColumn(
+	public final Column<H6D2EntryTable, String> uuid = createColumn(
 		"uuid_", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, Long> todoId = createColumn(
-		"todoId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
-	public final Column<TodoTable, Long> groupId = createColumn(
+	public final Column<H6D2EntryTable, Long> h6d2EntryId = createColumn(
+		"h6d2EntryId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
+	public final Column<H6D2EntryTable, Long> groupId = createColumn(
 		"groupId", Long.class, Types.BIGINT, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, Long> companyId = createColumn(
+	public final Column<H6D2EntryTable, Long> companyId = createColumn(
 		"companyId", Long.class, Types.BIGINT, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, Long> userId = createColumn(
+	public final Column<H6D2EntryTable, Long> userId = createColumn(
 		"userId", Long.class, Types.BIGINT, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, String> userName = createColumn(
+	public final Column<H6D2EntryTable, String> userName = createColumn(
 		"userName", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, Date> createDate = createColumn(
+	public final Column<H6D2EntryTable, Date> createDate = createColumn(
 		"createDate", Date.class, Types.TIMESTAMP, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, Date> modifiedDate = createColumn(
+	public final Column<H6D2EntryTable, Date> modifiedDate = createColumn(
 		"modifiedDate", Date.class, Types.TIMESTAMP, Column.FLAG_DEFAULT);
-	public final Column<TodoTable, String> name = createColumn(
+	public final Column<H6D2EntryTable, String> name = createColumn(
 		"name", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
-	private TodoTable() {
-		super("H6D2_Todo", TodoTable::new);
+	private H6D2EntryTable() {
+		super("H6D2_H6D2Entry", H6D2EntryTable::new);
 	}
 
 }

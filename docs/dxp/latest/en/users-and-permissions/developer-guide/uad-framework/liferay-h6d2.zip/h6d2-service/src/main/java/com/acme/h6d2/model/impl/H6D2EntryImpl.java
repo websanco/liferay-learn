@@ -12,15 +12,10 @@
  * details.
  */
 
-package com.acme.h6d2.uad.exporter;
-
-import com.liferay.user.associated.data.exporter.UADExporter;
-
-import org.osgi.service.component.annotations.Component;
+package com.acme.h6d2.model.impl;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(immediate = true, service = UADExporter.class)
-public class TodoUADExporter extends BaseTodoUADExporter {
+public class H6D2EntryImpl extends H6D2EntryBaseImpl {
 }

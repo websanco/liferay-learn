@@ -12,15 +12,15 @@
  * details.
  */
 
-package com.acme.h6d2.uad.anonymizer;
+package com.acme.h6d2.uad.exporter;
 
-import com.liferay.user.associated.data.anonymizer.UADAnonymizer;
+import com.liferay.user.associated.data.exporter.UADExporter;
 
 import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(immediate = true, service = UADAnonymizer.class)
-public class TodoUADAnonymizer extends BaseTodoUADAnonymizer {
+@Component(immediate = true, service = UADExporter.class)
+public class H6D2EntryUADExporter extends BaseH6D2EntryUADExporter {
 }

@@ -21,20 +21,20 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * This class is used by SOAP remote services, specifically {@link com.acme.h6d2.service.http.TodoServiceSoap}.
+ * This class is used by SOAP remote services.
  *
  * @author Brian Wing Shun Chan
  * @deprecated As of Athanasius (7.3.x), with no direct replacement
  * @generated
  */
 @Deprecated
-public class TodoSoap implements Serializable {
+public class H6D2EntrySoap implements Serializable {
 
-	public static TodoSoap toSoapModel(Todo model) {
-		TodoSoap soapModel = new TodoSoap();
+	public static H6D2EntrySoap toSoapModel(H6D2Entry model) {
+		H6D2EntrySoap soapModel = new H6D2EntrySoap();
 
 		soapModel.setUuid(model.getUuid());
-		soapModel.setTodoId(model.getTodoId());
+		soapModel.setH6d2EntryId(model.getH6d2EntryId());
 		soapModel.setGroupId(model.getGroupId());
 		soapModel.setCompanyId(model.getCompanyId());
 		soapModel.setUserId(model.getUserId());
@@ -46,8 +46,8 @@ public class TodoSoap implements Serializable {
 		return soapModel;
 	}
 
-	public static TodoSoap[] toSoapModels(Todo[] models) {
-		TodoSoap[] soapModels = new TodoSoap[models.length];
+	public static H6D2EntrySoap[] toSoapModels(H6D2Entry[] models) {
+		H6D2EntrySoap[] soapModels = new H6D2EntrySoap[models.length];
 
 		for (int i = 0; i < models.length; i++) {
 			soapModels[i] = toSoapModel(models[i]);
@@ -56,14 +56,14 @@ public class TodoSoap implements Serializable {
 		return soapModels;
 	}
 
-	public static TodoSoap[][] toSoapModels(Todo[][] models) {
-		TodoSoap[][] soapModels = null;
+	public static H6D2EntrySoap[][] toSoapModels(H6D2Entry[][] models) {
+		H6D2EntrySoap[][] soapModels = null;
 
 		if (models.length > 0) {
-			soapModels = new TodoSoap[models.length][models[0].length];
+			soapModels = new H6D2EntrySoap[models.length][models[0].length];
 		}
 		else {
-			soapModels = new TodoSoap[0][0];
+			soapModels = new H6D2EntrySoap[0][0];
 		}
 
 		for (int i = 0; i < models.length; i++) {
@@ -73,25 +73,26 @@ public class TodoSoap implements Serializable {
 		return soapModels;
 	}
 
-	public static TodoSoap[] toSoapModels(List<Todo> models) {
-		List<TodoSoap> soapModels = new ArrayList<TodoSoap>(models.size());
+	public static H6D2EntrySoap[] toSoapModels(List<H6D2Entry> models) {
+		List<H6D2EntrySoap> soapModels = new ArrayList<H6D2EntrySoap>(
+			models.size());
 
-		for (Todo model : models) {
+		for (H6D2Entry model : models) {
 			soapModels.add(toSoapModel(model));
 		}
 
-		return soapModels.toArray(new TodoSoap[soapModels.size()]);
+		return soapModels.toArray(new H6D2EntrySoap[soapModels.size()]);
 	}
 
-	public TodoSoap() {
+	public H6D2EntrySoap() {
 	}
 
 	public long getPrimaryKey() {
-		return _todoId;
+		return _h6d2EntryId;
 	}
 
 	public void setPrimaryKey(long pk) {
-		setTodoId(pk);
+		setH6d2EntryId(pk);
 	}
 
 	public String getUuid() {
@@ -102,12 +103,12 @@ public class TodoSoap implements Serializable {
 		_uuid = uuid;
 	}
 
-	public long getTodoId() {
-		return _todoId;
+	public long getH6d2EntryId() {
+		return _h6d2EntryId;
 	}
 
-	public void setTodoId(long todoId) {
-		_todoId = todoId;
+	public void setH6d2EntryId(long h6d2EntryId) {
+		_h6d2EntryId = h6d2EntryId;
 	}
 
 	public long getGroupId() {
@@ -167,7 +168,7 @@ public class TodoSoap implements Serializable {
 	}
 
 	private String _uuid;
-	private long _todoId;
+	private long _h6d2EntryId;
 	private long _groupId;
 	private long _companyId;
 	private long _userId;

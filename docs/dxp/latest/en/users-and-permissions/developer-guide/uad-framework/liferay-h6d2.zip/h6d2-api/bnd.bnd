@@ -6,5 +6,3 @@ Export-Package:\
 	com.acme.h6d2.model,\
 	com.acme.h6d2.service,\
 	com.acme.h6d2.service.persistence
--check: EXPORTS
--includeresource: META-INF/service.xml=../h6d2-service/service.xml

@@ -2,49 +2,50 @@
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %><%@
-taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
-taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<%@ page import="com.acme.h6d2.model.Todo" %><%@
-page import="com.acme.h6d2.service.TodoLocalServiceUtil" %>
+<%@ page import="com.acme.h6d2.model.H6D2Entry" %><%@
+page import="com.acme.h6d2.service.H6D2EntryLocalServiceUtil" %>
 
 <%@ page import="java.util.List" %>
-
-<liferay-theme:defineObjects />
 
 <portlet:defineObjects />
 
 <h4>H6D2 Portlet</h4>
 
-<portlet:actionURL name="addTodo" var="addTodoURL" />
+<hr />
 
-<p>
-	<aui:form action="<%= addTodoURL %>">
-		<aui:input name="item" type="text" />
+<h5>Add H6D2 Entry</h5>
 
-		<aui:button type="submit" value="submit" />
-	</aui:form>
-</p>
+<portlet:actionURL name="addH6D2Entry" var="addH6D2EntryURL" />
+
+<aui:form action="<%= addH6D2EntryURL %>">
+	<aui:input name="name" type="text" />
+
+	<aui:button type="submit" value="submit" />
+</aui:form>
+
+<hr />
+
+<h5>Entries</h5>
 
 <%
-List<Todo> todoList = TodoLocalServiceUtil.getTodos(-1, -1);
+List<H6D2Entry> h6d2Entries = H6D2EntryLocalServiceUtil.getH6D2Entries(-1, -1);
 %>
 
-<h5>Todos</h5>
 <c:choose>
-	<c:when test="<%= (todoList != null) && (todoList.size() > 0) %>">
+	<c:when test="<%= h6d2Entries.size() > 0 %>">
 		<table>
 			<tbody>
-				<c:forEach items="<%= todoList %>" var="todo">
+				<c:forEach items="<%= h6d2Entries %>" var="entry">
 					<tr>
-						<td>${todo.name }</td>
+						<td>${entry}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</c:when>
 	<c:otherwise>
-		<em>None</em>
+		<em>There are no H6D2 entries.</em>
 	</c:otherwise>
 </c:choose>

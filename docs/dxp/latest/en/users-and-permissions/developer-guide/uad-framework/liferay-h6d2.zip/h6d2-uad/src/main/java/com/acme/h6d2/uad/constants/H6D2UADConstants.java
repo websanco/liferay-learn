@@ -20,6 +20,6 @@ package com.acme.h6d2.uad.constants;
  */
 public class H6D2UADConstants {
 
-	public static final String[] USER_ID_FIELD_NAMES_TODO = {"userId"};
+	public static final String[] USER_ID_FIELD_NAMES_H6D2_ENTRY = {"userId"};
 
 }
