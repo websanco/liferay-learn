@@ -24,7 +24,7 @@ The Core supports UI and service deployments and orchestrates wiring them togeth
 
 ## Core
 
-DXP/Portal is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core_frameworks.html).
+DXP/Portal is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core-frameworks.html).
 
 There are frameworks for these things and more:
 
@@ -54,7 +54,7 @@ The Core provides the component runtime environment for the frameworks, services
 * [Services](../../liferay-internals/fundamentals/apis-as-osgi-services.md)
 * [Service customizations](../../liferay-internals/extending-liferay/overriding-osgi-services.md)
 * [Language Keys \(localized messages\)](../../developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages.md)
-* [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing_a_javascript_application.html)
+* [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing-a-javascript-application.html)
 * [JSP customizations](../../liferay-internals/extending-liferay/customizing-jsps.md)
 * [Portlets \(templates, controllers, and resources\)](../../developing-applications/developing-a-java-web-application/reference/portlets.md)
 * [Portlet filters](../../liferay-internals/extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter.md)
