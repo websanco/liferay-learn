@@ -137,7 +137,7 @@ There are some interesting advanced field settings for numeric fields:
 Upload fields let users upload a file from the local file system. Logged in Users can choose from files they have previously uploaded or upload a new one.
 
 ```note::
-   In 7.2 and 7.3 logged in Users can select an existing file from the Documents and Media library or choose to upload a file from their local file systems.
+   In 7.2 logged in Users can select an existing file from the Documents and Media library or choose to upload a file from their local file systems.
    ```
 
 ![Upload fields let users upload files or select from existing Docs and Media entries.](./forms-field-types-reference/images/10.png)
