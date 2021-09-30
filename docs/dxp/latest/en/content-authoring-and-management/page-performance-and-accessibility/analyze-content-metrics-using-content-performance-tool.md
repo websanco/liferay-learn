@@ -1,16 +1,16 @@
-# Analyze Content Metrics Using the Content Performance Panel
+# Analyze Content Metrics Using the Content Performance Tool
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-You can use the Content Performance panel to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance panel, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
+You can use the Content Performance tool to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance tool, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
 ```{important}
 Content Performance metrics are only available for the [Default Experience](../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md).
 ```
 
-Access the Content Performance panel using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) option for your content. You can find this option in the [Applications toolbar](../../getting-started/navigating-dxp.md#applications-bar) and the [Content Dashboard](../content-dashboard/about-the-content-dashboard.md). For more information, see [About the Content Performance Panel](./about-the-content-performance-panel.md).
+Access the Content Performance tool using the *View Metrics* (![View Metrics](../../images/icon-analytics.png)) option for your content. You can find this option in the [Applications toolbar](../../getting-started/navigating-dxp.md#applications-bar) and the [Content Dashboard](../content-dashboard/about-the-content-dashboard.md). For more information, see [About the Content Performance Tool](./about-the-content-performance-tool.md).
 
-The Content Performance panel contains three different areas:
+The Content Performance tool contains three different areas:
 
 - [Content Information](#reviewing-content-information)
 - [Engagement](#analyzing-content-engagement)
@@ -18,7 +18,7 @@ The Content Performance panel contains three different areas:
 
 ## Reviewing Content Information
 
-The top area in the Content Performance panel provides general information about your content.
+The top area in the Content Performance tool provides general information about your content.
 
 | Label | Description |
 | --- | --- |
@@ -27,13 +27,13 @@ The top area in the Content Performance panel provides general information about
 | Author | Author's name. This information is only available for Web Content using a Display Page Template. |
 | Publication date | Shows the publication date. Note that when you link the asset to a Display Page Template newer than the asset publication date, the publication date corresponds to the Display Page Template creation date. |
 
-The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance panel show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
+The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance tool show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
 
 ```{note}
 Even when your content is not translated into a specific language, you may find statistics for that language if users access the content using that language's URL.
 ```
 
-![The top area in the Content Performance panel provides general information about your content.](./analyze-content-metrics-using-content-performance-panel/images/05.png)
+![The top area in the Content Performance tool provides general information about your content.](./analyze-content-metrics-using-content-performance-tool/images/05.png)
 
 ## Analyzing Content Engagement
 
@@ -45,7 +45,7 @@ By default, the Engagement area shows the total number of views for the content,
 If the Engagement chart shows a zero value for a certain period, it means that the information could not be collected or analyzed for that period.
 ```
 
-![The Engagement area in the Content Performance sidebar provides Views information.](./analyze-content-metrics-using-content-performance-panel/images/07.png)
+![The Engagement area in the Content Performance sidebar provides Views information.](./analyze-content-metrics-using-content-performance-tool/images/07.png)
 
 ## Analyzing Traffic Channels
 
@@ -59,11 +59,11 @@ This part of the Content Performance sidebar provides information about the sour
 | Referral | Sources other than the search engines and same Page's domain |
 | Direct | Other or unknown sources |
 
-![The Search Engines Traffic area in the Content Performance panel provides information about your traffic channels.](./analyze-content-metrics-using-content-performance-panel/images/06.png)
+![The Search Engines Traffic area in the Content Performance tool provides information about your traffic channels.](./analyze-content-metrics-using-content-performance-tool/images/06.png)
 
 When you click one of the traffic channels (A), you can see extended information for the channel (B).
 
-![Click on the traffic channels to access additional channel details.](./analyze-content-metrics-using-content-performance-panel/images/02.png)
+![Click on the traffic channels to access additional channel details.](./analyze-content-metrics-using-content-performance-tool/images/02.png)
 
 The following table describes the metrics you can find in the Traffic Channels area:
 
@@ -83,6 +83,6 @@ Keywords are one or more words that people use to find content.
 
 ## Related Information
 
-- [About the Content Performance Panel](./about-the-content-performance-panel.md)
+- [About the Content Performance Tool](./about-the-content-performance-tool.md)
 - [About the Content Dashboard](../content-dashboard/about-the-content-dashboard.md)
 - [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)

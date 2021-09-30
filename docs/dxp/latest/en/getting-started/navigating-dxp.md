@@ -49,7 +49,7 @@ For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-wid
 - Page Audit (![Page Audit](../images/icon-information.png))
 
 ```note::
-   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-panel/about-the-content-performance-panel.md>`_ is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
+   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md>`_ is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
 ```
 
 ## Personal Menu
