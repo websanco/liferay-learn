@@ -39,9 +39,7 @@ function check_usage {
 
 		if [[ ${1} == *".md" ]]
 		then
-			local article_file_names=$(find ../docs -name "${1}")
-
-			if [[ "${article_file_names}" -eq 0 ]]
+			if [[ $(find ../docs -name "${1}") -eq 0 ]]
 			then
 				echo "File ${1} does not exist."
 
