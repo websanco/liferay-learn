@@ -6,15 +6,15 @@ Our mission is to satisfy the real world needs of Liferay's users and customers 
 
 | Value | Article Attributes
 | --- | --- |
-| **Accessible** | <ul><li>Articles quickly demonstrate the real-world value of a feature or customization </li><li>Articles are organized in ways that correspond to solving a user's goals</li><li>Optimizes presentation of ideas using easily skimmable and digestible methods, through usage of tables, visuals, and other methods</li><li>Maintains a neutral tone and language that can be easily understood cross-culturally</li></ul> |
-| **Concise** | <ul><li>Gets to the point oquickly with minimal distractions</li><li>Omits needless words and respects reader's time</li></ul> |
-| **Cohesive** | <ul><li>Regularly answers the question, "How does this relate to the rest of Liferay's other features or products?"</li><li>Features are presented in a way that highlights the strength of the platform and its interrelatedness</li><li>Organization reflects produce cohesion and demonstrates an understanding of user needs</li></ul> |
+| **Accessible** | <ul><li>Articles quickly demonstrate the real-world value of a feature or customization </li><li>Articles are organized in ways that correspond to solving a user's goals</li><li>Articles are easily skimmed, digested, and optimized through usage of tables, visuals, and other methods</li><li>Articles maintain a neutral tone and language that can be easily understood cross-culturally</li></ul> |
+| **Concise** | <ul><li>Articles get to the point quickly with minimal distractions</li><li>Articles omit needless words and respect reader's time</li></ul> |
+| **Cohesive** | <ul><li>Articles regularly answer the question, "How does this relate to the rest of Liferay's other features or products?"</li><li>Articles present features in a way that highlights the strength of the platform and its complementary features</li><li>Article organization shows complementary features and demonstrates an understanding of user needs</li></ul> |
 
 ## Formatting Standards
 
 ### Line Breaks
 
-Single line; do not break at 80 columns. Separate paragraphs by using two carriage returns.
+Paragraphs are on a single line of text; use dynamic word wrap and do not break at 80 columns. Separate your paragraphs by using two carriage returns.
 
 ```
 This is a paragraph.
@@ -24,7 +24,7 @@ This is another paragraph.
 
 ### Folder Names
 
-Because it’s a static site, folder names become part of the URL. For this reason, we must use appropriately named folders.
+Because documentation is published on a static site, folder names become part of the URL. For this reason, please use appropriately named folders.
 
 `docs/dxp/latest/en/site-building/site-appearance/site-appearance.md`
 
@@ -39,7 +39,7 @@ Single/double space; number all with 1. Multiple paragraphs must be indented to 
 
 1. This is the third item in a numbered list.
 
-   This is another line for the third item.
+   This is another line for the third item, in case the item takes up multiple paragraphs.
 ```
 
 ### Tables
@@ -56,7 +56,7 @@ Single/double space; number all with 1. Multiple paragraphs must be indented to 
 
 ### Bold
 
-Bold is used sparingly in the documentation. Why is this? Because too much bold is distracting. The reader's eye is drawn to bold text more than to anything else. All the headings are bold anyway, so we don't want to use it very much in the body text itself. There is one place where we want to use bold: field Lists.
+Bold is used sparingly in the documentation, because too much bold is distracting. The reader's eye is drawn to bold text more than to anything else. All the headings are bold, so we don't want to use it very much in the body text itself. There is one place where we use bold: field Lists.
 
 When explaining a form that users can fill out, use bold for the field names.
 
@@ -66,23 +66,23 @@ When explaining a form that users can fill out, use bold for the field names.
 
 **Address:** Enter the user's address.
 
-Never end a section with a list of form elements, like I was about to do before I typed this sentence.
+Never end a section with a list of form elements. 
 
 ### Italics
 
-Below are some guidelines for when to use italics.
+Italics are used in more places than bold. Below are some guidelines for when to use italics.
 
 #### **Introducing Concepts**
 
-If you're introducing a concept, italicize the concept the first time you use it. Thereafter, you don't need the italics.
+If you're introducing a concept, italicize the concept the first time you use it. Don't italicize the concept after that. 
 
-**Example:** One of the primary ways of extending the functionality of Liferay Portal is by the use of _plugins_. Plugins are an umbrella term for installable _portlet_, _theme_, _layout template_, and _web module_ Java EE .war files. Though Liferay comes bundled with a number of functional portlets, themes, layout templates, and web modules, plugins provide a means of extending Liferay to be able to do almost anything.
+**Example:** Liferay Portal/DXP is comprised of many OSGi _modules_. A module is a piece of functionality that can be a self-contained application or an extension to existing functionality. 
 
-Notice the italics on _plugins_, _portlet_, _theme_, _layout template_, and _web module_ the first time the terms are used, but none when the terms are used after they are introduced.
+Notice the italics on _modules_ the first time it's used, but none when it's used after its initial introduction.
 
 #### **UI Elements**
 
-When you're telling the user to click on something in the UI, italicize it.
+When you tell the user to click on something in the UI, italicize it.
 
 **Example:** Click the _Save_ button to continue.
 
@@ -90,15 +90,15 @@ If you're referring to a UI element, but there's no direction for the user, capi
 
 **Example:** After clicking the button, the Configuration page appears.
 
-To provide as much clarity on UI elements as possible, let's combine the above two rules:
+To provide as much clarity on UI elements as possible, combine the above two rules:
 
 **Example:** On the Configuration page, click the _Add_ button.
 
-As you can see, the UI element that contains direction for the user is italicized, but the UI element that has no direction is not.
+The UI element that contains direction for the user is italicized, but the UI element that has no direction is not.
 
 ## Terminology Standards
 
-Developers tend to mangle even their own terminology. As a documentation team, we must fix these. If you see terminology in a document and you or your spell checker are in doubt, please look it up.
+It's hard to keep terminology consistent, so when we find an inconsistency in the way a term is used, we must fix it. If you see terminology in a document and you or your spell checker are in doubt, please look it up.
 
 ### Common Examples
 
@@ -116,7 +116,7 @@ Developers tend to mangle even their own terminology. As a documentation team, w
 
 ### Liferay-specific Examples
 
-We also must have standards for our own terminology. Liferay uses terminology that’s fairly common to refer to Liferay-centric concepts. To differentiate the general use of these terms from the Liferay-specific use, we capitalize these terms when we refer to the Liferay-specific variant.
+Liferay has its own terminology, some of which is fairly common terminology that refers to Liferay-centric concepts. To differentiate the general use of these terms from the Liferay-specific use, we capitalize these terms when we refer to the Liferay-specific variant.
 
 * Site
   * Generic: Liferay provides some great tools for designing your site.
@@ -125,13 +125,15 @@ We also must have standards for our own terminology. Liferay uses terminology th
   * Generic: Liferay DXP is flexible enough to be a good fit for any organization.
   * Specific: Liferay Organizations can model the hierarchical structure of any real-world organization.
 * Role
+   * Generic: Liferay DXP/Portal plays a role in security and authentication. 
+   * Specific: Assign the Administrator Role to grant access to the entire system. 
 * User
-* Team
-* User Group
+   * Generic: Analytics Cloud can profile many different types of users. 
+   * Specific: Create a User account and assign it to a Role. 
 
 ### Exclusive Features
 
-Liferay periodically has features that are exclusively available to paid subscribers. Articles that cover these types of features should be denoted in the following way:
+Liferay periodically has features that are exclusively available to paid subscribers. Articles that cover these features should be labeled like this:
 
 ```
 > Subscription Required
@@ -145,13 +147,17 @@ The Strunk and White (_Elements of Style_) Rule 13 states _Omit Needless Words_.
 
 ### Future Tense
 
+Remove all future tense from the documentation. It's highly unlikely you need it to describe anything. 
+
 _This action will create a new record in the database._
 
-This sentence uses the future tense when there’s no need to use the future tense. Make it a goal to remove the future tense from all your Liferay writing. Instead, use the present tense:
+This sentence uses the future tense when there's no need to use the future tense. Instead, use the present tense:
 
 _This action creates a new record in the database._
 
 ### Must
+
+_Must_ is always shorter than any equivalent. 
 
 _To use Assets, you need to have an Asset Renderer and an Asset Renderer Factory._
 
@@ -168,11 +174,13 @@ This is a “dangling participle,” because there’s no object following the f
 * Follow these steps:
 * Do these things:
 
+There's almost always a better construction than "the following." 
+
 ### Subject/Object Agreement
 
 _When a user performs this function, they get feedback._
 
-“User” is singular; “they” is plural. In English, this is incorrect, though it’s becoming more common. There’s an easy way to resolve this in most cases: make the whole thing plural:
+“User” is singular; “they” is plural. In English, this is incorrect, though it’s becoming more common. There’s an easy way to resolve this in most cases. Make the whole thing plural:
 
 * When users perform this function, they get feedback.
 
@@ -195,7 +203,7 @@ In the above examples, you’d use a comma instead of a colon.
 
 ### Replace Wordy Clauses<sup>1</sup>
 
-Here’s a list of common wordy clauses people use, and their shorter replacements. Again, this is an attempt to apply Rule 13 (Omit Needless Words).
+Here’s a list of common wordy clauses people use and their shorter replacements. Again, this is an attempt to apply Rule 13 (Omit Needless Words).
 
 * whether or not = use whether by itself. You only need _or not_ if you mean “regardless of whether”
 * in actual fact = remove or use actually
@@ -262,7 +270,7 @@ Here’s a list of common wordy clauses people use, and their shorter replacemen
 
 ## Editing Standards
 
-Use the text editor that works best for you. Various members of the team use these editors (in alphabetical order):
+Use the text editor that works best for you. Various members and former members of the team use these editors (in alphabetical order):
 
 * Atom
 * Neovim/Vim
@@ -273,16 +281,14 @@ Use the text editor that works best for you. Various members of the team use the
 Make sure your editor can perform these functions:
 
 * Syntax highlighting, not only of Markdown, but also of the various programming languages used by Liferay (Java, JavaScript, Freemarker, Groovy/Gradle, XML, JSON, etc.).
-* Automatic spell check. If a word is highlighted automatically by your spell checker, you’re more likely to catch the error
+* Automatic spell check. If a word is highlighted automatically by your spell checker, you’re more likely to catch the error.
 * Dynamic word wrapping. You must be able to turn this off to format tables and then turn it back on to go back to paragraphs.
 
 If you are new and unsure of which editor to use, see anybody: the whole team loves to evangelize their particular editor.
 
-### VS Code Tips
-
 ## Standards of Voice
 
-Coming soon.
+Though we have many Tech Writers, it's important that the documentation sounds as if there is only one. For this reason, we have standards of voice, where we attempt to write the documentation in such a way as to make the "voice" of the documentation sound consistent throughout all the articles. The standards below are how we make this happen. 
 
 ### Meta-Information
 
@@ -294,11 +300,11 @@ _This series of tutorials walks you…_
 
 _At Liferay, we…_
 
-This is all filler and unnecessary. Keep pronouns strictly to _you_ and don’t talk about reading articles or their format. I (Rich) have spent countless hours trying to excise this from the older docs, so I really don’t want to see it in the new docs.
+This is all filler and unnecessary. Keep pronouns strictly to _you_ and don’t mention articles, their sections, or their format. This is meta-information that's unnecessary. 
 
 ### Cross Links
 
-When linking from one article to another, keep in mind that we avoid meta information (see above), even in links. For example, this is a bad link:
+When linking from one article to another, keep in mind the rule above (avoid meta information), even in links. For example, this is a bad link:
 
 For more information see <span style="text-decoration:underline;">this article</span>.
 
@@ -334,7 +340,7 @@ _You can use Fragments…_
 
 _Create a class…_
 
-Note that you also Omit Needless Words by doing this.
+Note that you also [Omit Needless Words](#phraseology-standards) by doing this.
 
 ### Address the Reader with “You”
 
@@ -366,6 +372,8 @@ Instead, do this:
 
 _The Liferay setup wizard makes connecting to your database and configuring a default administrator easy._
 
+The visually impaired use screen readers to read the documentation, and they need good descriptions of whatever you're illustrating with your image.
+
 ### Assume the Reader Has Read Nothing Else
 
 Each article should be as standalone as possible. Never assume the reader has (or might have) read another article on the same topic. If it’s helpful to link to another article, definitely do it, but avoid language like this:
@@ -380,11 +388,7 @@ _At the bottom of the [form](link) is this other function. Here’s how to use i
 
 ### Spaces / Tabs
 
-Hyperlinks - in-line w/ text - no need to be on separate line
-
-```
-This is a [link](https://www.liferay.com).
-```
+Use spaces, not tabs. This is the opposite of the Liferay code standard, but indenting in Markdown is much more effective with spaces than with tabs. 
 
 ### Formatting Text
 
@@ -400,7 +404,7 @@ _Italics_
 
 Use admonitions to capture the reader’s attention. Admonitions stand out from the main body of text to capture the reader’s attention on something important.
 
-**Do not** overuse admonitions. If admonitions occur too frequently, readers will skip over them.
+**Do not** overuse admonitions. If admonitions occur too frequently, readers skip over them.
 
 The admonitions that we use most frequently are `Tip`, `Warning`, `Note`, and `Important`.
 
@@ -457,15 +461,11 @@ Use one of these prefixes as a naming convention:
 
 ### Image Quality / Capture
 
-Icon images should be captured at a resolution of 20x20.
+Capture icon images at a resolution of 20x20. Resize screen shots to an appropriate width for the page (no more than 800 pixels wide). Crop out any unnecessary UI elements and focus only on what the text is describing. 
 
 ### Image Naming
 
-Images should be named as sequential numbers (01.png, 02.png), etc. Later we will review the cognitive debt this creates.
-
-### Image Captions
-
-Image captions were a part of the old documentation standard. They required a custom extension to the Markdown parser that copied the alt text into a caption below the image. For the new docs, for speed purposes, we will use the same standard we had for captions for alt text with the exception of numbered figures. Alt text should be written as at least one complete sentence describing what’s going on in the image for the benefit of the vision impaired using screen readers.
+Images should be named as sequential numbers (01.png, 02.png), etc. 
 
 ### Highlighting UI Elements
 
@@ -475,31 +475,39 @@ An example using box highlighting:
 
 An example of using numeric annotations:
 
-![](WRITING_GUIDELINES/images/02.png)
+![Numeric annotations should be paired with definitions of those annotations in the text below.](WRITING_GUIDELINES/images/02.png)
+
+If you use numeric annotations, define what's pictured in the text below the image. 
 
 ## Article Naming
 
-Coming soon.
+Article names (file names) should be the same as the article's title, all in lower case, with dashes replacing the spaces. If, for example, you have an article titled _Using Message Boards_, the article's file name should be `using-message-boards.md`. 
 
 ## Videos
 
-Coming soon.
+When including videos, they must be embedded using HTML tags in your Markdown. Videos go in the `images` folder, with file names numbered in sequential order as images. For example, if you have `01.png`, `02.png`, and `03.png` and the next thing you want to embed is a video, name it `04.mp4`. Be sure to include the controls when embedding videos. Here's an example: 
+
+```html
+<video width="100%" height="100%" controls>
+    <source src="./organizing-content-with-categories-and-tags/images/10.mp4" type="video/mp4">
+</video>
+```
 
 ## Working with Multiple Software Versions
 
-Contrary to the content distribution in Liferay Help Center, Liferay Learn does not include different articles for different minor software versions. The same Markdown file describes the same major software version (for example, version 7) with all the updates in minor software version (for example, 7.3, 7.4, and so on.)
+The goal for Liferay's documentation is to be versionless. Rather than have multiple versions of documentation as in the past, we want to avoid proliferating articles for minor software versions. For this reason, the goal is to cover all versions in the same Markdown file.
 
-When updating a Liferay Learn topic in the same minor version, as part of new product functionalities or content migration, consider the following information:
+Sometimes a feature changes drastically enough that you must include separate instructions to cover several Liferay versions, because the user interface is so different. When doing this, have these goals in mind: 
 
 * Do not create a new article to discuss the changes in a new software minor version. Keep all the content for the same software major version in the same article.
-* Place the newest information at the top of the article, and the oldest information at the bottom.
+* Place the newest information at the top of the article and the oldest information at the bottom.
 * Evaluate the impact of the changes in the existing document:
-  * For minor changes, use notes to let users know what product minor version the content applies to. Markdown example: > Available: Liferay 7.3+. If the change requires a header, place the note right after the header.
+  * For minor changes, use notes to let readers know which version the content applies to. Markdown example: `> Available: Liferay 7.3+`. If the change requires a header, place the note right after the header.
   * For major changes, use a dedicated H2 section to discuss the changes and place a note-type admonition at the beginning of the topic cross-linking the H2 (see Markdown Examples.)
 
 ### Markdown Examples
 
-Example 1 — You need to update a product feature discussed in software version 7.2. This feature incorporates a new functionality in 7.3, but the rest of the feature works in the same way it works in 7.2. In this case, use notes to signify the changes for the affected version:
+Example 1: You  must update a product feature discussed in software version 7.2. This feature incorporates new functionality in 7.3, but the rest of the feature works in the same way it works in 7.2. In this case, use notes to signify the changes for the affected version:
 
 ```
 # Organizing Content with Categories and Tags
@@ -515,7 +523,7 @@ Example 1 — You need to update a product feature discussed in software version
 [content specific for 7.3 goes here]
 ```
 
-Example 2 — Consider now the case where you must update content that changes significantly between the existing 7.2 and the new 7.3 version. In this case, write the content for the most recent version at the top, and use an H2 to place the previous content:
+Example 2: If you must update content that changes significantly between the existing 7.2 and the new 7.3 version, write the content for the most recent version at the top and use an H2 to place the previous content:
 
 ````
 # About Collections and Collection Pages
@@ -533,57 +541,16 @@ This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions,
 
 ### Formatting the Previous Content
 
-If you need to copy content from Help Center into Learn or add new content in the same topic, consider the following information:
+If you must copy content from Help Center into Learn or add new content in the same topic, consider the following information:
 
 * Newer versions go at the top of the Markdown file, older versions at the bottom.
 * Copy the content from the source Markdown file; do not use the source HTML file.
-* Create a new H2 for the content you're porting or updating at the end of the Markdown file. This H2 uses the name of the Liferay version the content applies to (for example ## Liferay 7.2.)
-* Update the header levels for the content you port or update. Because you are using an H2 to group this content, all previous H2 should change to H3, all H3 should change to H4, and so on.
-* Format of the content you paste. When copying and pasting content, you may find unexpected line endings or additional spaces between words or paragraphs.
-* If porting content from Help Center:
-  * Remove any formatting options from the alt text in images. In Help Center, alt text contains formatting options like bold or italics. This is not supported in Learn and will cause your local Liferay Learn build to fail with an error similar to img_node['alt'] = ''.join(content).
-  * Copy all the screenshots from the Help Center folder into the corresponding images folder in Learn. Rename the screenshots to use the Learn naming convention (01.png, 02.png, and so on.)
+* Create a new H2 containing the Liferay version for the content you're porting or updating at the end of the Markdown file (for example ## Liferay 7.2). H2s are displayed on the right side Table of Contents on all articles, allowing readers to skip quickly to this content.
+* Update the header levels for the content you port or update. Because you are using an H2 to group this content, demote all previous H2s to H3, all H3s to H4, and so on.
+* Format the content you paste. You may have pasted unexpected line endings or additional spaces between words or paragraphs.
+* If porting content from Help Center,
+  * Remove any formatting options from the alt text in images. The old Markdown processor could handle formatting options like bold or italics in image alt text. The new Markdown processor doesn't support this, and causes your local build to fail with an error similar to img_node['alt'] = ''.join(content).
+  * Copy all the screenshots from the `liferay-docs` folder into the corresponding images folder in Learn. Rename the screenshots to use the Learn naming convention (01.png, 02.png, and so on.)
   * Update all the image links in the Markdown content you're porting, so images display correctly.
 * Always create the local Liferay Learn build and ensure that the content you're porting or updating renders as expected.
 
-## Action Items
-
-## Appendix A: Atom editor settings
-
-Here are some suggested settings for editing articles and code.
-
-### Whitespace
-
-If you use a Whitespace package, disable removal of trailing spaces for Markdown. You can do that with a config.cson file entry (Edit > Config…) like this: \
- \
-".gfm.source":
-
-whitespace:
-
-```
-removeTrailingWhitespace: false
-```
-
-editor:
-
-```
-showInvisibles: true
-```
-
-Setting `showInvisibles: true` helps to call out unwanted whitespace.
-
-### Editor Settings
-
-You can set these for all scopes “*” or as overrides in the Markdown scope  “.gfm.source” to soft wrap lines in your editor, convert tabs to 4 spaces, and disable skipping over tabs with your cursor.
-
-“*”
-
-editor:
-
-```
-atomicSoftTabs: false
-
-softWrap: true
-
-tabLength: 4
-```
