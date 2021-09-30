@@ -1,26 +1,28 @@
 # Example: Using Hidden Fields with Form Rules
 
+Configure Forms fields as hidden in the Advanced configuration tab.
+
+![Hide fields using the advanced setting.](./example-using-hidden-fields-with-form-rules/images/06.png)
+
 There's a hidden field in this form. It holds the Site's ID number, so that it can be passed to a data provider as an input value:
 
 ![The form includes a hidden field that's used to pass information to a data provider.](./example-using-hidden-fields-with-form-rules/images/05.gif)
 
 To follow the example you must first enable local network access in the Data Provider System Settings entry. See [Enabling Access to Data on the Local Network](../data-providers/using-the-rest-data-provider-to-populate-form-options.md#enabling-access-to-data-on-the-local-network) for more information.
 
-This example requires creating two data providers and a form with fours fields and three form rules. The table below contains a summary of the elements:
+This example requires creating two data providers, and a form with four fields and three form rules. The table below contains a summary of the elements:
 
 | Liferay Forms Element | Element Label | Description
 | ------------- | ---------------  | ----------------------------------------------------------------------- |
 | Data Provider | Get Group Users  | Get the Site's/Group's Users and provide a list of their email addresses.
 | Data Provider | Get User by Email | Get the User by the selected email address and provide the first and last name.
-| Form Field    | Hidden Group ID  | A Numeric field that holds the Group ID of the current site.
-| Form Field    | Who are you?     | Use a Select from List field that displays the returned email addresses.
+| Form Field    | Hidden Group ID  | Use a hidden Numeric field to hold the Group ID of the current site.
+| Form Field    | Who are you?     | Use a Select from List field that displays the email addresses returned by the data provider.
 | Form Field    | First Name        | Use a Text field for the User's first name.
 | Form Field    | Last Name         | Use a Text field for the User's last name.
-| Form Rule     | _Not Applicable_  | If the group ID field is not empty, autofill the Select from List field with the email addresses of the Site's Users.
-| Form Rule     | _Not Applicable_  | If the Select from List field is not empty, autofill the first and last name fields retrieved from the data provider.
-| Form Rule     | _Not Applicable_  | If the Select from List field is empty, enable the first and last name fields so the User can manually enter data. If the condition isn't met and the first and last name fields are autofilled form the data provider, these fields re disabled on the form.
-
-Each element of the example is described below.
+| Form Rule     | _Not Applicable_  | If the Hidden Group ID field is not empty, autofill the Select from List field with the email addresses of the Site's Users.
+| Form Rule     | _Not Applicable_  | If the _Who are you?_ field is not empty, autofill the first and last name fields retrieved from the data provider.
+| Form Rule     | _Not Applicable_  | If the _Who are you?_ field is empty, enable the name fields so the User can manually enter data. If the condition isn't met and the first and last name fields are autofilled form the data provider, these fields are disabled on the form.
 
 To configure this example,
 
@@ -48,6 +50,7 @@ To configure this example,
     - URL: _http://localhost:8080/api/jsonws/user/get-user-by-email-address/company-id/20099/email-address/{emailAddress}_
 
         You must retrieve your Liferay Instance's ID (e.g., 20099). It's the Instance ID displayed in Control Panel &rarr; Virtual Instances.
+
     - User Name: _test@liferay.com_ (or your administrator's email address)
     - Password: _[Enter the user's password]_
     - INPUTS:
