@@ -18,28 +18,41 @@ The hierarchy as displayed on _Site Builder_ &rarr; _Pages_ menu is the main ref
 
 ![The Site Builder's Pages Menu serves as the primary reference for all the pages on a site.](./managing-site-navigation/images/01.png)
 
-New pages are created on the _Site Builder_ &rarr; _Pages_ menu. Pages can be public which anyone can view, or private which can only be viewed by Site members. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) to learn how to add a page.
+New pages are created on the _Site Builder_ &rarr; _Pages_ menu. Pages can be public which anyone can view, or private which can only be viewed by Site members. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) to learn how to add a Page.
 
 ## Using Navigation Menus
 
-See [Using Navigation Menus](./using-navigation-menus.md) to learn how to create Navigation Menus and deploy them on a page. See [Configuring Navigation Menus](./configuring-navigation-menus.md) to learn more about how to configure the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) and Navigation Menu Widget.
+See [Using Navigation Menus](./using-navigation-menus.md) to learn how to create Navigation Menus and deploy them on a Page. See [Configuring Navigation Menus](./configuring-navigation-menus.md) to learn more about how to configure the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) and Navigation Menu Widget.
 
 ## Using the Page Tree
 
-Another way to manage a Site's page hierarchy is to use the _Page Tree_. Here, you can view and configure the pages in the current Site.
+Another way to manage a Site's Page hierarchy is to use the _Page Tree_. Here, you can view and configure the pages in the current Site.
 
 To access the page tree,
 
-1. Click the _Product Menu_. 
+1. Click the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)). 
 1. Click _Page Tree_.
 
    ![The Page Tree function is at the top of the product menu.](./managing-site-navigation/images/02.png)
 
-1. The left menu displays the Site's page hierarchy:
+1. The left menu displays the Site's Page hierarchy:
 
     ![View each Site's Page Tree.](./managing-site-navigation/images/03.png)
 
+<<<<<<< HEAD
 In the Page Tree view, you can add more pages in the hierarchy, configure a page, and toggle between Public and Private Pages.
+=======
+1. Change between your public and private Pages using the drop-down menu. You can also choose your Navigation Menus from this drop-down control.
+
+1. From here you can,
+
+   - Find pages in the tree by using the search bar (A).
+   - Click on any Page for a Page preview.
+   - Add Pages or configure Pages using the Add (![Add](../../images/icon-plus.png)) and Configure (![Configure](../../images/icon-settings.png)) buttons, and the Actions menu (![Actions Menu](../../images/icon-actions.png)) next to each Page's name (B).
+   - Modify the order of Pages in the navigation menu by dragging and dropping the Pages in the tree (C).
+
+      ![You can add, preview, configure, or reorder Pages from the Page Tree menu.](./managing-site-navigation/images/04.png)
+>>>>>>> 8b2217f8e (LRDOCS-9594 PR #45 review and udpates)
 
 ## Additional Information
 
