@@ -213,7 +213,7 @@ Use the `lcp deploy` command to deploy either a specific service or all of your 
 lcp deploy
 ```
 
-Running `lcp deploy` from the root directory of your repository deploys all applicable services to your chosen environment. Run the command from one service's folder to specifically deploy that service to the environment.
+Running `lcp deploy` from the root directory of your repository deploys all applicable services to your chosen environment. Run the command from one service's folder (with the service's `LCP.json` file in that folder) to specifically deploy that service to the environment.
 
 Run the command with `-r` to specify a remote (by its ID) other than the default:
 

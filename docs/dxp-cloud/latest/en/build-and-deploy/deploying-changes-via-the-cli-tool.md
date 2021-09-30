@@ -4,8 +4,8 @@ With the CLI tool, you can directly deploy local project changes without trigger
 
 To get started, you first need the [CLI tool](../reference/command-line-tool.md) installed and ready to use, as well as a local copy of your project's Git repository (e.g., [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github), [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html), [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone)).
 
-```note::
-   Although the CLI tool provides a quick way to deploy changes to your project, it's best practice to use the CI service and DXP Cloud console for the majority of deployments. See `Deploying Changes via the DXP Cloud Console <./deploying-changes-via-the-dxp-cloud-console.md>`__ to learn how.
+```{note}
+Although the CLI tool provides a quick way to deploy changes to your project, it's best practice to use the CI service and DXP Cloud console for the majority of deployments. See [Deploying Changes via the DXP Cloud Console](./deploying-changes-via-the-dxp-cloud-console.md) to learn how.
 ```
 
 If you are using version 3.x.x services in your project, you must first [prepare](#preparing-lcpjson-files-in-project-version-3) their `LCP.json` files before deploying changes with the CLI tool.
@@ -37,8 +37,8 @@ For example, use the value from the `liferay.workspace.lcp.search.image` propert
 "image": "@liferay.workspace.lcp.search.image@",
 ```
 
-```note::
-   The ``liferay.workspace.lcp.jenkins.image`` property corresponds to the ``ci`` service.
+```{note}
+The `liferay.workspace.lcp.jenkins.image` property corresponds to the `ci` service.
 ```
 
 ## Adding a Portal Property to the Liferay Service
@@ -59,8 +59,8 @@ Begin the deployment life cycle by adding a portal property to the `dev` environ
    web.server.display.node=true
    ```
 
-   ```note::
-      If you're using version 3.x.x services, then the appropriate folder path is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>`__ for more information on the differences in the directory structure, and `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for how to check the version of your services.
+   ```{note}
+   If you're using version 3.x.x services, then the appropriate folder path is `lcp/liferay/deploy/dev`. See [DXP Cloud Project Changes in Version 4](../reference/dxp-cloud-project-changes-in-version-4.md) for more information on the differences in the directory structure, and [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for how to check the version of your services.
    ```
 
 1. Add and commit your changes with the following commands:
@@ -83,8 +83,8 @@ Once you've committed your changes, follow these steps to create a build of your
    cd <project-folder>/liferay
    ```
 
-   ```important::
-   If you're using version 3.x.x services, you must navigate to the ``lcp`` directory in your repository before running the CLI tool, so that it can traverse the directory and find your services' ``LCP.json`` files.
+   ```{important}
+   If you're using version 3.x.x services, you must navigate to the `lcp` directory in your repository before running the CLI tool, so that it can traverse the directory and find your services' `LCP.json` files.
    ```
 
 1. Run `lcp login`. If you're not already logged in, you are prompted to authenticate your credentials via browser.
@@ -95,6 +95,12 @@ Once you've committed your changes, follow these steps to create a build of your
    ./gradlew clean deploy createDockerfile
    ```
 
+   ```{important}
+   You must first create a Gradle build of the Liferay service before running the `lcp deploy` command. No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
+   ```
+
+1. Copy the `LCP.json` file into the Docker directory before deploying the build.
+
    ```bash
    cp LCP.json build/docker
    ```
@@ -103,9 +109,7 @@ Once you've committed your changes, follow these steps to create a build of your
    cd build/docker
    ```
 
-   ```important::
-      You must first create a Gradle build of the Liferay service before running the ``lcp deploy`` command. No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
-   ```
+   You must copy the `LCP.json` file into the Docker directory, because the `lcp deploy` command must be run from a directory with the service's `LCP.json` file when deploying that service.
 
 1. Run the following command to deploy the build to your `dev` environment:
 
