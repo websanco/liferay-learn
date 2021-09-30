@@ -8,7 +8,7 @@
    developing-applications/developing_a_single_page_application.rst
    developing-applications/developing_a_rest_web_api.rst
    developing-applications/developing-a-java-web-application.md
-   developing-applications/core_frameworks.rst
+   developing-applications/core-frameworks.rst
    developing-applications/data_frameworks.rst
    developing-applications/tooling.rst
 

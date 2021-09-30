@@ -2,7 +2,7 @@
 
 Liferay DXP and Portal's architecture has three parts: 
 
-1. **Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core_frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
+1. **Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core-frameworks.html). The Core provides a runtime environment for managing services, UI components, and customizations.
 
 1. **Services:** Expose DXP/Portal functionality and custom functionality via Java APIs and web APIs.
 
