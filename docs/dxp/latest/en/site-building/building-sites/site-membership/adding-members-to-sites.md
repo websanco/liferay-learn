@@ -1,6 +1,6 @@
 # Adding Members to Sites
 
-Users and Sites are central concepts in Liferay DXP. Sites are where all your content and pages are stored, and Users access and create that content. While User management is covered in depth in [User Management](../../../users_and_permissions.md), there are some configuration options specific to Site management and assigning Users to sites that are relevant here:
+Users and Sites are central concepts in Liferay DXP. Sites are where all your content and pages are stored, and Users access and create that content. While User management is covered in depth in [User Management](../../../users-and-permissions.md), there are some configuration options specific to Site management and assigning Users to sites that are relevant here:
 
 * [Managing Site Membership](#managing-site-membership)
 * Configuring Users to Automatically Join a Site
@@ -15,7 +15,7 @@ Administrators can manage Site members from that Site's *Site Membership* page.
 1. Open *Site Administration* and select the Site that you want to manage members for.
 1. Click on *People* &rarr; *Memberships*
 
-From here you can manage Site memberships, Organizations, and User Group associations. You can learn more about those in [Users and Organizations](../../../users_and_permissions.md). On this page, you can see a list of all of the current Users of the Site and you can add or remove user memberships from the Site.
+From here you can manage Site memberships, Organizations, and User Group associations. You can learn more about those in [Users and Organizations](../../../users-and-permissions.md). On this page, you can see a list of all of the current Users of the Site and you can add or remove user memberships from the Site.
 
 ![The current members of the Site are displayed on the Site Memberships page.](./adding-members-to-sites/images/01.png)
 

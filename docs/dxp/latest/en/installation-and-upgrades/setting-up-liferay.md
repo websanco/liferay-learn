@@ -73,7 +73,7 @@ After you [understand Users](../users-and-permissions/users/understanding-users.
 * Add any necessary [custom User fields](../users-and-permissions/users/adding-custom-fields-to-users.md)
 * Specify whether to allow strangers to create accounts
 * Define [User authentication](./securing-liferay/authentication-basics.md)
-* Configure automatic association of Users to specific Sites, [Roles](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md), and [User Groups](../users-and-permissions/user_groups.html)
+* Configure automatic association of Users to specific Sites, [Roles](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md), and [User Groups](../users-and-permissions/user-groups.md)
 
 Visit [Users](../system-administration/configuring-liferay/virtual-instances/users.md), [User Authentication](../system-administration/configuring-liferay/virtual-instances/user-authentication.md), and [Adding Custom Fields For Users](../users-and-permissions/users/adding-custom-fields-to-users.md) for details.
 

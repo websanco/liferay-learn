@@ -91,7 +91,7 @@ By default, Asset Libraries include the five following Roles:
 By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you’ll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
 ```
 
-Creating or customizing an Asset Library Role is the same process as for other kinds of Roles. See [Roles and Permissions](../../users-and-permissions/roles_and_permissions.html) for how to create, customize, manage, and assign Roles.
+Creating or customizing an Asset Library Role is the same process as for other kinds of Roles. See [Roles and Permissions](../../users-and-permissions/roles-and-permissions.md) for how to create, customize, manage, and assign Roles.
 
 ## Deleting an Asset Library
 

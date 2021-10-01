@@ -50,7 +50,7 @@ If you haven't set up a mail server, click the *Password* item from the General 
 Removing Users is a two-step process for several reasons:
 
 * You or the User may decide you really wanted that account.
-* Users are often tied to content with possible [legal ramifications](../managing_user_data.md) in your country.
+* Users are often tied to content with possible [legal ramifications](../managing-user-data.md) in your country.
 * You may need time to review a User's account activity before removing all evidence of that User's existence.
 
 For these and more reasons, you must first *deactivate* a User before *deleting* that User.
