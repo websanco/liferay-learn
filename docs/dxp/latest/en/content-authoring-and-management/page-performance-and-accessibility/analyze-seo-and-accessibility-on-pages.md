@@ -52,7 +52,7 @@ Configuring the Page Audit tool requires administrative access to Liferay DXP.
 The Page Audit tool is enabled by default, but you need to complete the tool configuration before running a Page audit. This configuration requires:
 
 - Your PageSpeed Insights API key --- Google requires this key to use PageSpeed Insights in an automated way and for running multiple queries per second. To create this API key, see [Get Started with the PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started) in the Google documentation.
-- Your Preferred audit Strategy ---  By default, the Page Audit tool uses a mobile strategy, but you can also configure a desktop strategy to analyze your Pages. The rules for each audit strategy are different and the strategy you choose applies to every Page audit. If you wish to audit the mobile and desktop versions of your pages, you must test each audit strategy separately.
+- Your Preferred audit Strategy ---  By default, the Page Audit tool uses a mobile strategy, but you can also configure a desktop strategy to analyze your Pages. The mobile strategy includes additional rules for auditing your content on small screens. The strategy you choose applies to every Page audit, so if you wish to audit the mobile and desktop versions of your Page, you must run each audit strategy separately.
 
 ![Configure the Page Audit tool API key and audit strategy](./analyze-seo-and-accessibility-on-pages/images/01.png)
 
@@ -72,7 +72,7 @@ To configure the Page Audit tool, you configure the Google PageSpeed Insights se
 
 1. Verify that the Enable Google PageSpeed Insights box is checked.
 1. Copy your Google PageSpeed Insights API key and paste this key under the API Key field.
-1. Choose your Preferred Strategy for the PageSpeed Insights tests. The selected Strategy applies to all page audits.
+1. Choose your Preferred Strategy for the PageSpeed Insights tests. The selected Strategy applies to all Page audits.
 1. Click *Save*.
 
 ### Configuring the Page Audit Tool for the Liferay DXP System
@@ -126,7 +126,7 @@ Consider this information when using the Page Audit tool:
 
 ## Troubleshooting Page Audit Panel Errors
 
-To avoid errors when auditing your pages, ensure that you have [configured a valid Google PageSpeed Insights API Key](#configuring-the-page-audit-tool) and the Page you want to audit is accessible from to the internet.
+To avoid errors when auditing your Pages, ensure that you have [configured a valid Google PageSpeed Insights API Key](#configuring-the-page-audit-tool) and the Page you want to audit is accessible from to the internet.
 
 The most common errors are:
 
