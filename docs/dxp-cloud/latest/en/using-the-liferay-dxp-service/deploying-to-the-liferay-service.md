@@ -10,8 +10,8 @@ The Liferay service image (defined in the `LCP.json` file, like other services) 
 
 Check the [Liferay DXP Docker tags](https://hub.docker.com/r/liferay/dxp/tags) to find the right image for your version of DXP.
 
-```important::
-   The major version number of DXP defined in the ``image`` property of the Liferay service's ``LCP.json`` file **must match** the major version in the ``liferay.workspace.docker.image.liferay`` property in ``liferay/gradle.properties``. The Liferay service may fail to start up after deployment if the two are different.
+```{important}
+The major version number of DXP defined in the `image` property of the Liferay service's `LCP.json` file **must match** the major version in the `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties`. The Liferay service may fail to start up after deployment if the two are different.
 ```
 
 ## CLI Tool Deployment
@@ -59,8 +59,8 @@ liferay
 
 Once deployed, any files within the `configs/{ENV}/deploy/` directory are copied to the `$LIFERAY_HOME/deploy/` folder in your Liferay service's container.
 
-```note::
-   If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate ``lcp/liferay/deploy/{ENV}`` folder. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services in your repository, then themes, portlets, and OSGi modules instead belong in the appropriate `lcp/liferay/deploy/{ENV}` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Building and Deploying Source Code
@@ -73,8 +73,8 @@ A CI build will compile source code within these folders:
 * The `liferay/themes` folder for custom themes
 * The `liferay/wars` folder for exploded WARs
 
-```note::
-   If you are using version 3.x.x services, then these subfolders are located at the root of the repository instead of in the ``liferay/`` directory. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then these subfolders are located at the root of the repository instead of in the `liferay/` directory. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 Once deployed, the deployable `.jar` or `.war` files are copied to the `$LIFERAY_HOME/deploy/` folder in your Liferay service's container. This occurs whether the build in CI compiles your code, or you generate it yourself using the available [Gradle command](#cli-tool-deployment) before deployment.
@@ -83,8 +83,8 @@ Once deployed, the deployable `.jar` or `.war` files are copied to the `$LIFERAY
 
 To apply hotfixes, add the hotfix ZIP file to a `configs/{ENV}/patching/` folder within the Liferay DXP service directory. When you deploy this change, the hotfix is applied to the Liferay DXP instance.
 
-```note::
-   See `these instructions <./updating-your-dxp-instance-to-a-new-minor-version.md>`__ to update to a new minor version of Liferay DXP instead (such as a new `service pack <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs>`__).
+```{note}
+See [these instructions](./updating-your-dxp-instance-to-a-new-minor-version.md) to update to a new minor version of Liferay DXP instead (such as a new [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs)).
 ```
 
 For example, you can deploy a hotfix to your development environment with a structure like the following:
@@ -103,8 +103,8 @@ liferay
 
 Note that hotfixes will each need to be re-applied each time the server starts up. For this reason, updating to the latest Fix Pack or Service pack of the Liferay DXP Docker image in your `LCP.json` file is better than adding many hotfixes into this folder for the long term; you can update the Docker version by replacing the `image` environment variable in this file (in the `liferay/` directory.
 
-```note::
-   If you are using version 3.x.x services, then hotfixes are instead added into the ``lcp/liferay/hotfix/`` folder. The Docker image version in this case is instead defined with the ``liferay.workspace.lcp.liferay.image`` property, in your repository's ``gradle.properties`` file. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then hotfixes are instead added into the `lcp/liferay/hotfix/` folder. The Docker image version in this case is instead defined with the `liferay.workspace.lcp.liferay.image` property, in your repository's `gradle.properties` file. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ### Patching via Environment Variable
@@ -113,8 +113,8 @@ You can also install hotfixes as part of the CI build process instead of directl
 
 Add a comma-delimited list of hotfixes to the `LCP_CI_LIFERAY_DXP_HOTFIXES_{ENV}` environment variable (either through the `Environment Variables` tab in the DXP Cloud console, or in the `ci` service's `LCP.json` file) for the CI service to automatically apply them during the build process.
 
-```note::
-   If you add this environment variable to the ``LCP.json`` for your ``ci`` service, then you must deploy the ``ci`` service to your **infra environment** to complete the update.
+```{note}
+If you add this environment variable to the `LCP.json` for your `ci` service, then you must deploy the `ci` service to your **infra environment** to complete the update.
 ```
 
 See the following example of defining hotfixes through in the `LCP.json` file:
@@ -126,8 +126,8 @@ See the following example of defining hotfixes through in the `LCP.json` file:
 }
 ```
 
-```note::
-   This environment variable is only available if you have upgraded to at least version 4.x.x services. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+This environment variable is only available if you have upgraded to at least version 4.x.x services. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Deploying Licenses
@@ -151,8 +151,8 @@ liferay
 
 Behind the scenes, XML licenses are copied to `$LIFERAY_HOME/deploy`, and AATF licenses are copied to `$LIFERAY_HOME/data`.
 
-```note::
-   If you are using version 3.x.x services, then licenses instead belong in the ``lcp/liferay/license/{ENV}/`` folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then licenses instead belong in the `lcp/liferay/license/{ENV}/` folder in your repository. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Additional Information
