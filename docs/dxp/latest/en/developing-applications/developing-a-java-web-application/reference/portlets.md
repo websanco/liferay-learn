@@ -49,4 +49,4 @@ Here are some ways to get started developing portlets:
 * [Using MVC](../using-mvc.md)
 * [Using Spring](../using-spring.md)
 * [Using JSF](../using-jsf.md)
-* [Developing a Bean Portlet](../developing-a-bean-portlet.md)
+* [Using Bean Portlet](../using-bean-portlet.md)
