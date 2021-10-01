@@ -2,7 +2,7 @@
 
 > Subscribers
 
-Task nodes require interaction by people. To alert the right people and associate the task with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to specific Roles, multiple Roles of a [Role type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, or Regular Role types), to the Asset Creator, to Resource Actions, or to specific Users. Additionally, you can write a script to define the assignment (see below). In the example below, the task has been assigned to the Portal Content Reviewer Role.
+Task nodes require interaction by people. To alert the right people and associate the task with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to specific Roles, multiple Roles of a [Role type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, Asset Library, Account, or Regular Role types), to the Asset Creator, to Resource Actions, or to specific Users. Additionally, you can write a script to define the assignment (see below). In the example below, the task has been assigned to the Portal Content Reviewer Role.
 
 ![You can add an Assignment to a Task node.](./assigning-task-nodes/images/01.png)
 

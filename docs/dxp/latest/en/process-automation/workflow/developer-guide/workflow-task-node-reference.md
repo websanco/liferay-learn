@@ -62,7 +62,7 @@ These have a name and a [script](./using-the-script-engine-in-workflow.md) and a
 Workflow tasks are completed by a User. Assignments make sure the right users can access the tasks. You can choose how you want to configure your assignments. Assignments can be added to
 
 * Specific Roles
-* Multiple Roles of a Role type (Organization, Site, or regular Role types)
+* Multiple Roles of a Role type (Organization, Site, Asset Library, Account, or Regular Role types)
 * Asset creator
 * Resource actions
 * Specific Users
