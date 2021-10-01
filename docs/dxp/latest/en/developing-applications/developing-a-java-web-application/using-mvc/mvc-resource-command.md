@@ -97,7 +97,7 @@ MVC Resource Command classes can implement [`MVCResourceCommand`](https://github
 
 ```{literalinclude} ./mvc-resource-command/resources/liferay-p8v5.zip/p8v5-web/src/main/java/com/acme/p8v5/web/internal/portlet/action/P8V5DownloadMVCResourceCommand.java
 :language: java
-:lines: 16-48
+:lines: 16-47
 ```
 
 `P8V5DownloadMVCResourceCommand` is a [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) that provides the `MVCResourceCommand` service. The component properties apply the `P8V5DownloadMVCResourceCommand` to the portlet named `com_acme_p8v5_web_internal_portlet_P8V5Portlet` and map `P8V5DownloadMVCResourceCommand` to the MVC command name `/p8v5/download`. The name you specify here must match the name declared in the portlet. 
