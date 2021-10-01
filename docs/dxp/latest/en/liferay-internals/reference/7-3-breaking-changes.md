@@ -385,7 +385,7 @@ Developers with custom Control Panel themes should move the call (if any) to the
 
 **Before:**
 
-```markup
+```jsp
 <section class="portlet" id="portlet_${htmlUtil.escapeAttribute(portletDisplay.getId())}">
 	${portletDisplay.writeContent(writer)}
 </section>
@@ -397,7 +397,7 @@ Developers with custom Control Panel themes should move the call (if any) to the
 
 **After:**
 
-```markup
+```jsp
 <#if portletDisplay.isStateMax()>
 	<@liferay.control_menu />
 </#if>
@@ -606,7 +606,7 @@ This affects any code that relies on `Liferay.Poller`; this is usually done via 
 
 There's no direct replacement for the `Liferay.Poller` utility. If you must initialize `Liferay.Poller`, update your JSP to use the code below:
 
-```markup
+```jsp
 <%@ page import="com.liferay.petra.encryptor.Encryptor" %>
 
 <%-- For access to `company` and `themeDisplay`. --%>

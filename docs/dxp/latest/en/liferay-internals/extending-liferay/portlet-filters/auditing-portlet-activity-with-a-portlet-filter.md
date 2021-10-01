@@ -60,7 +60,7 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
 
 1. Confirm the module was successfully deployed and started via the container console.
 
-   ```log
+   ```
    Processing com.acme.b4k8.impl-1.0.0.jar
    STARTED com.acme.b4k8.impl_1.0.0 [1656]
    ```
@@ -69,7 +69,7 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
 
    Whenever a render request is made to the Blogs portlet, the container console shows a warning message with an audit of its render time, average render time, and total number of renders.
 
-   ```log
+   ```
    WARN [http-nio-8080-exec-2][B4K8PortletFilter:54] Blogs portlet rendered in 3 ms with an average of 3 ms out of 1 renders.
    WARN [http-nio-8080-exec-10][B4K8PortletFilter:54] Blogs portlet rendered in 0 ms with an average of 1 ms out of 2 renders.
    ```
