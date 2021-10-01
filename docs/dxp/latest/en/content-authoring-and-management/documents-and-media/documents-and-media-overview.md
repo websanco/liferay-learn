@@ -16,11 +16,11 @@ Once uploaded, you can search, filter, and organize digital assets via the Lifer
 
 Enable Liferay [Workflow](../../process-automation/workflow/using-workflows/activating-workflow.md#activating-workflow-for-specific-applications) for Documents and Media to help manage asset publishing and version updates. When enabled, documents must be reviewed before they are published.
 
-You can configure Documents and Media integrations to [automatically generate previews](./devops/configuring-document-previews.md) for files when uploaded or updated.
+You can configure Documents and Media integrations to [automatically generate previews](./devops/configuring-documents-and-media-previews.md) for files when uploaded or updated.
 
 ![Use Documents and Media integrations to generate file previews.](./documents-and-media-overview/images/02.png)
 
-Files added to Documents and Media can be displayed in applications that support attachments (e.g., Web Content, Message Boards), as well as Page Fragments and widgets (e.g., [Media Gallery](./publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.md)).
+Files added to Documents and Media can be displayed in applications that support attachments (e.g., Web Content, Message Boards), as well as Page Fragments and widgets (e.g., [Media Gallery](./publishing-and-sharing/publishing-documents.md#using-the-media-gallery-widget.md)).
 
 If desired, you can [export](../../site-building/building-sites/importing-exporting-pages-and-content.md) Documents and Media assets as Liferay Archive (`LAR`) files. These files can be used as backups or to import your assets into another Site or Asset Library.
 

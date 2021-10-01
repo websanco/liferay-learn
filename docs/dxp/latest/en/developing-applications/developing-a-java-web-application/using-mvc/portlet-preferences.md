@@ -2,7 +2,7 @@
 
 You can give administrators and users a way to customize a portlet with portlet preferences. Portlet preferences can be added to any MVC Portlet to give users a UI to access and set their preferences.
 
-Note, portlet preferences are properties that are stored separately from an application's configuration. To learn more see [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md).
+Note, portlet preferences are properties that are stored separately from an application's configuration. To learn more see [Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md).
 
 ## See a Sample Implementation
 
@@ -104,4 +104,4 @@ In the portlet's `@Component` annotation, add the view template and configuratio
 
 ## Related Information
 
-* [Portlet Level Configuration](../../core-frameworks/configurable-application/portlet-level-configuration.md)
+* [Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md)
