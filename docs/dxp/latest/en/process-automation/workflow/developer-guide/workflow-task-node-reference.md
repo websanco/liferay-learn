@@ -227,8 +227,8 @@ The above snippet demonstrates how to set up a reassignment action.
 
 Like `<action>` elements, `<timer-action>` elements can contain scripts. See [Using the Script Engine in Workflow](./using-the-script-engine-in-workflow.md) for more information.
 
-```note::
-   A `timer-action` can contain all the same tags as an `action`, with one exception: `execution-type`. Timer actions are always triggered once the time is up, so specifying and execution type of `onEntry`, for example, isn't meaningful inside a timer.
+```{note}
+A `timer-action` can contain all the same tags as an `action`, with one exception: `execution-type`. Timer actions are always triggered once the time is up, so specifying and execution type of `onEntry`, for example, isn't meaningful inside a timer.
 ```
 
 ## Additional Information

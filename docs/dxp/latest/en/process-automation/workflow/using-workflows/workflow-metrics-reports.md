@@ -16,8 +16,8 @@ The Dashboard view is displayed by default. Included are items currently in the 
 
 The Performance view shows metrics for items that have completed processing in the workflow.
 
-```note::
-   **Requires Elasticsearch:** To use Workflow Metrics, you must be using Elasticsearch to index your Liferay DXP data. Read `here <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ to learn about installing Elasticsearch.
+```{note}
+**Requires Elasticsearch:** To use Workflow Metrics, you must be using Elasticsearch to index your Liferay DXP data. Read [here](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) to learn about installing Elasticsearch.
 ```
 
 ## Understanding the Dashboard
@@ -50,8 +50,8 @@ The overall throughput rate for the time period appears in the top of the chart 
 
 ![View the performance of each workflow step.](./workflow-metrics-reports/images/14.png)
 
-```note::
-   In Liferay 7.4 a version selector was added to the Performance by Step metric. It defaults to displaying metrics for all the workflow definition's versions, but you can choose to display metrics for just one version.
+```{note}
+In Liferay 7.4, a version selector was added to the Performance by Step metric. It defaults to displaying metrics for all the workflow definition's versions, but you can choose to display metrics for just one version.
 ```
 
 To see a full view of all the step performance metrics, click _View All Steps_.
