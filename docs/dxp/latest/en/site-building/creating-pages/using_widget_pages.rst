@@ -7,7 +7,7 @@ Using Widget Pages
    using-widget-pages/configuring-widgets.md
    using-widget-pages/styling-widgets-and-assets.md
    
-   Configuring Widgets
+Configuring Widgets
 -------------------
 
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/adding-widgets-to-a-page`
@@ -18,6 +18,7 @@ Using Widget Pages
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/enabling-user-personalization-of-widget-pages`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/creating-a-widget-template`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/using-a-widget-template-example`
+-  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/setting-a-default-widget-template`
 
 Styling Widgets
 ---------------
