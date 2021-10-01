@@ -13,7 +13,7 @@ Architecture
    architecture/bundle-classloading-flow.md
    architecture/ui_architecture.rst
 
--  :doc:`/liferay-internals/architecture/architecture` (Coming soon!)
+-  :doc:`/liferay-internals/architecture/architecture`
 -  :doc:`/liferay-internals/architecture/liferay-classloader-hierarchy` (Coming soon!)
 -  :doc:`/liferay-internals/architecture/liferay-startup-phases` (Coming soon!)
 -  :doc:`/liferay-internals/architecture/the-benefits-of-modularity`
