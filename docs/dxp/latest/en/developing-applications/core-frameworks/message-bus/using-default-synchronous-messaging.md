@@ -159,7 +159,7 @@ The `m4q7-baker-impl` module's `M4Q7BakerOSGiCommands` class provides an OSGi Co
 
 ```{literalinclude} ./using-default-synchronous-messaging/resources/liferay-m4q7.zip/m4q7-baker-impl/src/main/java/com/acme/m4q7/baker/internal/osgi/commands/M4Q7BakerOSGiCommands.java
    :language: java
-   :lines: 12-42
+   :lines: 12-38
 ```
 
 `M4Q7BakerOSGiCommands` is a service `Component` of its own class type. It uses an `@Reference` annotation to inject a `SynchronousMessageSender` that's set to *default* mode (specified by the annotation's `target = "(mode=DEFAULT)"` attribute). 

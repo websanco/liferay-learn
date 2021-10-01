@@ -82,7 +82,7 @@ Override the `receive` method with logic for processing messages. Here's the exa
 ```{literalinclude} ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :dedent: 1
    :language: java
-   :lines: 17-29
+   :lines: 17-27
 ```
 
 The above implementation logs the message payload and destination name. See the [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) class for details on its other methods.

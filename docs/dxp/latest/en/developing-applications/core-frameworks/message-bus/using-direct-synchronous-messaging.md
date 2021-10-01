@@ -107,7 +107,7 @@ The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class provides an OSGi Co
 
 ```{literalinclude} ./using-direct-synchronous-messaging/resources/liferay-x6n5.zip/x6n5-baker-impl/src/main/java/com/acme/x6n5/baker/internal/osgi/commands/X6N5BakerOSGiCommands.java
    :language: java
-   :lines: 12-42
+   :lines: 12-37
 ```
 
 `X6N5BakerOSGiCommands` is a service `Component` of its own class type. It uses a `@Reference` annotation to inject a `SynchronousMessageSender` that's set to *direct* mode (specified by the annotation's `target = "(mode=DIRECT)"` attribute). 
