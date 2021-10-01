@@ -290,7 +290,7 @@ INFO  [acme/n8k5_baker-2][N8K5Baker:30] Received message payload N8K5CharlieMess
 `N8K5CharlieMessageListener` receives `N8K5Baker`'s message and then sends a response message to the response destination. `N8K5Baker` receives the response message and prints the message payload.
 
 ```{note}
-If you want the classes to exchange messages again, you can restart the modules (OSGi bundles) in the [Gogo Shell](./using-the-gogo-shell.md). List the bundles (`lb`) to get the bundle IDs, stop the bundles (`stop <id>`), and restart the bundles (`start <id>`).
+If you want the classes to exchange messages again, you can restart the modules (OSGi bundles) in the [Gogo Shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md). List the bundles (`lb`) to get the bundle IDs, stop the bundles (`stop <id>`), and restart the bundles (`start <id>`).
 ```
 
 ```{note}
