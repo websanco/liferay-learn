@@ -1,5 +1,4 @@
-Localization
-============
+# Localization
 
 ```{toctree}
 :maxdepth: 3

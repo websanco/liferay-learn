@@ -1,5 +1,4 @@
-Dispatch Framework
-==================
+# Dispatch Framework
 
 ```{toctree}
 :maxdepth: 3
