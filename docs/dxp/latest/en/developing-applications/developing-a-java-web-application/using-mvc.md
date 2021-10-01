@@ -122,7 +122,7 @@ If you're ready to develop your model layer, see [Service Builder](../data-frame
 
 ## Additional Information
 
-* [Portlet Preferences](./using-mvc/portlet-preferencs.md)
+* [Portlet Preferences](./using-mvc/portlet-preferences.md)
 * [Using Localized Messages in an MVC Portlet](./using-mvc/using-localized-messages-in-an-mvc-portlet.md)
 * [Module Projects](../../liferay-internals/fundamentals/module-projects.md)
 * [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md)
