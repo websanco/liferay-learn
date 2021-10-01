@@ -10,7 +10,7 @@ Liferay's localization framework is for creating localized messages in your MVC 
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip [Using Localized Messages](./liferay-b6f5.zip).
+1. Download and unzip the example.
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-b6f5.zip -O
