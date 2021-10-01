@@ -69,7 +69,7 @@ Your app's latest version for your new Liferay version may have database schema 
 
 ## Upgrading Custom Development
 
-Plugins (e.g., themes, apps, and customizations) you've developed must be adapted to the new Liferay version. This can be as simple as updating dependencies or involve updating code to API changes. If you forgo updating your custom plugins, they may be disabled on the new Liferay version. [Upgrading Custom Development](../upgrading-custom-development.html) walks through the code upgrade process.
+Plugins (e.g., themes, apps, and customizations) you've developed must be adapted to the new Liferay version. This can be as simple as updating dependencies or involve updating code to API changes. If you forgo updating your custom plugins, they may be disabled on the new Liferay version. [Upgrading Custom Development](../upgrading-custom-development.md) walks through the code upgrade process.
 
 ## Migrating and Updating Configurations and Infrastructure
 
