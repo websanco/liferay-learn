@@ -6,8 +6,8 @@ A search engine is a critical component of your Liferay installation. [Creating 
 
 When you start Liferay, a built-in Elasticsearch server (sidecar) starts simultaneously. This default search engine provides search capabilities as a convenience for testing, but it isn't supported for use in production. [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) describes production-level Elasticsearch setup. [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) describes the default Elasticsearch server (sidecar in 7.3 and embedded in 7.2) features and limitations.
 
-```note::
-   Liferay's `Solr <http://lucene.apache.org/solr>`_ support will receive one more update (to support Solr 8) before being deprecated. Though it can still be used, Solr is not bundled with Liferay and must be connected remotely, even for development and testing. To use Solr, see `Installing Solr <./solr/installing-solr.md>`_.
+```{note}
+Liferay's [Solr](http://lucene.apache.org/solr) support will receive one more update (to support Solr 8) before being deprecated. Though it can still be used, Solr is not bundled with Liferay and must be connected remotely, even for development and testing. To use Solr, see [Installing Solr](./solr/installing-solr.md).
 ```
 
 ## Java Requirements
@@ -36,10 +36,10 @@ A production environment's search engine should be clustered for load management
 
 Elasticsearch is the recommended search engine for search and indexing with Liferay. Solr is planned for deprecation and has [limitations](./solr/solr-limitations.md).
 
-```important::
-   Always refer to the `Search Engine Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360016511651>`_ to find the exact versions supported.
+```{important}
+Always refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) to find the exact versions supported.
 ```
 
 ## What's Next 
 
-[Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) is recommended. If you must use Solr (deprecated), see [Installing Solr](./solr/installing-solr.md). 
+[Installing Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md) is recommended. If you must use Solr (deprecated), see [Installing Solr](./solr/installing-solr.md).
