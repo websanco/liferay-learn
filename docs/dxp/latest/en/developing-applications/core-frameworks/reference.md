@@ -7,7 +7,7 @@ reference/localization.md
 ```
 
 ```{raw} html
-:file: ../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html
