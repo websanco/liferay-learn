@@ -11,7 +11,7 @@ data-frameworks/info-framework.md
 data-frameworks/item-selector.md
 data-frameworks/recycle-bin.md
 data-frameworks/service-builder.md
-data-frameworks/upgrade.md
+data-frameworks/upgrade-processes.md
 ```
 
 ```{raw} html
