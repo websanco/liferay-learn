@@ -1,5 +1,13 @@
 # About the Content Performance Tool
 
+```{toctree}
+:maxdepth: 3
+
+page-performance-and-accessibility/about-the-content-performance-tool.md
+page-performance-and-accessibility/analyze-content-metrics-using-content-performance-tool.md
+page-performance-and-accessibility/analyze-seo-and-accessibility-on-pages.md
+```
+
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
 The Content Performance panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance panel to periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../../site-building/creating-pages/using-widget-pages/configuring-widgets/adding-widgets-to-a-page.md) Pages.
