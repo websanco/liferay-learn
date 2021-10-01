@@ -31,7 +31,7 @@ The following article documents all the Liferay Commerce Widgets and their funct
 | Search Result | This widget displays Product search results according to the selected renderers and configured pagination. |
 | Shipments | This widget displays Channel shipments. With it, users can access shipment and order details. |
 | Shop by Diagram (previously name Commerce BOM) | This widget displays diagrams that map an object's components to individual Product SKUs. |
-| Sort | This widget can be used to sort Products by relevance, price, name, or date added. |
+| Sort | This widget can be used to sort Products by relevance, price, name, or date added. When sorting by price, the widget considers the Product's base price only and is intended more towards simpler use cases not involving Price Lists.  |
 | Specification Facet | This widget allows users to use Product Specifications to refine search results. |
 | Wish List Content | This widget displays the content of a wish list. |
 | Wish Lists | This widget displays all of an Account's wish lists. |
