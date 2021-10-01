@@ -6,19 +6,19 @@ Liferay Commerceを使用すると、ストア商品を個別のサイトペー�
 
 1.  ストアで新しいサイトページを作成し、 *商品詳細*ウィジェットを他の必要なページ要素と一緒に追加します。 詳細は、[Building Content Pages](https://learn.liferay.com/dxp/7.x/en/site-building/creating-pages/building-and-managing-content-pages/building-content-pages.html)を参照してください。 このページで、リンクされた商品を表示する際のレイアウトを決定します。
 
-2.  *[Global Menu]* (![Global Menu](../images/icon-applications-menu.png))を開き、*[Commerce]*タブをクリックし、 *[Store Management]* → *[Channels]*の順に移動します。
+2.  *[Global Menu]* (![Global Menu](../images/icon-applications-menu.png))を開き、*[Commerce]* タブをクリックし、 *[Store Management]* → *[Channels]* の順に移動します。
 
-3.  必要な*チャネル*を選択し、*商品表示ページ*タブをクリック、次に*[Add]*ボタン(![Add Button](../images/icon-add.png))をクリックします。
+3.  必要な*チャネル*を選択し、*商品表示ページ*タブをクリック、次に*[Add]* ボタン(![Add Button](../images/icon-add.png))をクリックします。
 
     ![商品表示ページタブで[Add]をクリックします。](./creating-product-display-pages/images/02.png)
 
-4.  *[商品を選択]*をクリックし、新しいサイトページに紐付ける商品を*選択*します。
+4.  *[商品を選択]* をクリックし、新しいサイトページに紐付ける商品を*選択*します。
 
-5.  *商品表示ページ*で*[Choose]*をクリックし、新しいサイトページを選択して、*[Done]*をクリックします。
+5.  *商品表示ページ*で*[Choose]* をクリックし、新しいサイトページを選択して、*[Done]* をクリックします。
 
     ![新しいページを選択します。](./creating-product-display-pages/images/03.png)
 
-6.  作業が完了したら*[保存]*をクリックします。
+6.  作業が完了したら*[保存]* をクリックします。
 
 これにより、商品と選択したページが即座に関連付けられます。 これで、ユーザーがストアで商品をクリックすると、商品の表示ページにリダイレクトされるようになります。
 

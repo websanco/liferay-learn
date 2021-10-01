@@ -35,9 +35,9 @@ Liferay Commerceの使用を開始するには：
    
        2019-08-09 00:34:51.753 INFO  [main][ThemeHotDeployListener:108] 1 theme for minium-theme is available for use
 
-9.  初回立ち上げ時には、Liferay Commerceのデフォルトコンテンツを投入するためにreindexを実行し、*[Control Panel]* → *[Configuration]* → *[Search]*に移動します。
+9.  初回立ち上げ時には、Liferay Commerceのデフォルトコンテンツを投入するためにreindexを実行し、*[Control Panel]* → *[Configuration]* → *[Search]* に移動します。
 
-10. *[Reindex all search indexes]*の隣にある*[Execute]*をクリックします。
+10. *[Reindex all search indexes]* の隣にある*[Execute]* をクリックします。
 
 Liferay Commerceがデプロイされ、使用できる状態になりました。 ストア管理者は、ストアフロントの構築とカタログの作成を開始できます。
 

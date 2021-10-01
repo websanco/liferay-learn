@@ -6,7 +6,7 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 固定税率を設定するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
 2.  税率を設定するチャネルをクリックします。 Miniumなどのアクセラレータを使用した場合、デフォルトでチャネルが作成されます。
 
@@ -18,7 +18,7 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 5.  *Percentage* および *Active* トグルを *YES*スライドします 。
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 次に、税カテゴリの税率を設定します。
 
@@ -42,17 +42,17 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に進みます。
 
-2.  *[Taxes]*タブをクリックしてから、*[Tax Calculations]*サブタブをクリックします。
+2.  *[Taxes]* タブをクリックしてから、*[Tax Calculations]* サブタブをクリックします。
 
 3.  *[Fixed Tax Rate]* をクリックします。
 
-4.  税を購入価格の割合として定義する場合は、*[Percentage]*トグルを *[YES]* に切り替えます。 税を固定金額として定義するには無効にします。
+4.  税を購入価格の割合として定義する場合は、*[Percentage]* トグルを *[YES]* に切り替えます。 税を固定金額として定義するには無効にします。
 
 5.  トグルを *[YES]* に切り替えます。
 
     ![固定税率を有効にする](./setting-tax-rate-by-fixed-rate/images/01.png)
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 次に、税カテゴリの税率を設定します。
 
@@ -62,7 +62,7 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
     ![税率の設定](./setting-tax-rate-by-fixed-rate/images/02.png)
 
-3.  *[Save]*をクリックします。
+3.  *[Save]* をクリックします。
 
 ストアは、この税カテゴリに該当するすべての注文に対して固定レートを徴収します。
 

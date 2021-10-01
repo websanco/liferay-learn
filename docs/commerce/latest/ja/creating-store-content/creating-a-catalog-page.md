@@ -35,7 +35,7 @@
 
     ![検索バーの構成](./creating-a-catalog-page/images/03.png)
 
-2.  *[Scope]*ドロップダウンメニューから *[Everything]*を選択します。
+2.  *[Scope]* ドロップダウンメニューから *[Everything]* を選択します。
 
     ![すべてのスコープ](./creating-a-catalog-page/images/04.png)
 
@@ -51,7 +51,7 @@ Liferay Commerceでは、ストアマネージャーは、購入者に最初に�
 
 1.  *[Search Options]* ウィジェットで *[Configure additional search options in this page]* をクリックします。
 2.  *[Allow Empty Searches]* チェックボックスをオンにします。
-3.  *[Save]*をクリックします。
+3.  *[Save]* をクリックします。
 4.  *[Configuration]* ウィンドウを閉じます。
 
 このオプションを有効にすると、このカタログ内のすべての商品が *[Search Results]* ウィジェットに表示されます。

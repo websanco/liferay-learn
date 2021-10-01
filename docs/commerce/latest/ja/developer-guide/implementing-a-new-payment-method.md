@@ -86,7 +86,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getDescription(Locale locale);
 ```
 
-> これにより、*[Payment Methods]*管理ページの「Description」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
+> これにより、*[Payment Methods]* 管理ページの「Description」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
 
 ``` java
     public String getKey();
@@ -98,7 +98,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getName(Locale locale);
 ```
 
-> これにより、*[Payment Methods]*管理ページの「Name」列にデータが入力されます。 このメソッドは、`getDescription`メソッドと同様に動作します。
+> これにより、*[Payment Methods]* 管理ページの「Name」列にデータが入力されます。 このメソッドは、`getDescription`メソッドと同様に動作します。
 
 ``` java
     public int getPaymentType();

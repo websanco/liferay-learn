@@ -6,7 +6,7 @@
 
 1.  ブラウザで`http://localhost:8080`を開きます。
 
-2.  *[Sign In]*リンクをクリックします。
+2.  *[Sign In]* リンクをクリックします。
 
     ![サインインリンク](./introduction-to-the-admin-account/images/01.png "サインインリンク")
 
@@ -20,17 +20,17 @@
 
 ### アカウント情報の変更
 
-1.  *商品メニュー*を開き、*[Account Menu]* -\> *[My Account]* -\> *[Account Settings]*に移動します。
+1.  *商品メニュー*を開き、*[Account Menu]* -\> *[My Account]* -\> *[Account Settings]* に移動します。
 
     ![アカウント設定](./introduction-to-the-admin-account/images/02.png "アカウント設定")
 
-2.  *[Information]*タブで、必要に応じてユーザー情報を変更または追加します。
+2.  *[Information]* タブで、必要に応じてユーザー情報を変更または追加します。
 
     ![アカウント情報](./introduction-to-the-admin-account/images/03.png "アカウント情報")
 
 ### ログインパスワードの変更
 
-1.  *商品メニュー*を開き、*[Account Menu]* -\> *[My Account]* -\> *[Account Settings]* -\> *[Password]*に移動します。
+1.  *商品メニュー*を開き、*[Account Menu]* -\> *[My Account]* -\> *[Account Settings]* -\> *[Password]* に移動します。
 
 2.  *現在のパスワード*を入力し、*新しいパスワード*を指定します。
 
@@ -44,7 +44,7 @@
 
 アカウントからログアウトするには：
 
-1.  *商品メニュー*を開き、*[Account Menu]* -\> *[Sign Out]*に移動します。
+1.  *商品メニュー*を開き、*[Account Menu]* -\> *[Sign Out]* に移動します。
 
     ![ログアウト](./introduction-to-the-admin-account/images/05.png "ログアウト")
 

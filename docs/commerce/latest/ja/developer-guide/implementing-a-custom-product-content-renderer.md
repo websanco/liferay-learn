@@ -48,9 +48,9 @@
     STARTED com.acme.q4f7.web_1.0.0
     ```
 
-5.  サンプルの商品コンテンツレンダラーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、Liferay Commerceで商品を含む任意のカタログに移動します。 商品をクリックして[Product Details]ウィジェットを表示し、ウィジェットの *[Configuration]*をクリックします。
+5.  サンプルの商品コンテンツレンダラーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、Liferay Commerceで商品を含む任意のカタログに移動します。 商品をクリックして[Product Details]ウィジェットを表示し、ウィジェットの *[Configuration]* をクリックします。
 
-    *[Custom Renderer]*セクションで、*[Simple]*を選択します。 *[Simple Commerce Product Type Renderer Key]*ドロップダウンで、新しいレンダラー（"Q4F7 Commerce Product Content Renderer"）を選択します。
+    *[Custom Renderer]* セクションで、*[Simple]* を選択します。 *[Simple Commerce Product Type Renderer Key]* ドロップダウンで、新しいレンダラー（"Q4F7 Commerce Product Content Renderer"）を選択します。
 
     ![新しい商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/02.png "新しい商品コンテンツレンダラー")
 

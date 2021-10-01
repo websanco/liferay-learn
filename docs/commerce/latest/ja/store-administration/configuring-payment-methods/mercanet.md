@@ -20,8 +20,8 @@
 
 Mercanetを使用する場合、ストアではユーロを主要通貨として使用する必要があります。 主要通貨を変更するには：
 
-1.  *[Control Panel] → [Commerce] → [Settings]*に移動します。
-2.  *[Currencies]*をクリックします。
+1.  *[Control Panel] → [Commerce] → [Settings]* に移動します。
+2.  *[Currencies]* をクリックします。
 3.  [Euro]の隣の*3ドットアイコン*をクリックします。
 4.  *[Set as Primary]* をクリックします。
 
@@ -31,17 +31,17 @@ Mercanetを使用する場合、ストアではユーロを主要通貨として
 
 ## 支払い方法としてMercanetを有効にする
 
-1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]*に移動します。
-2.  *[Payment Methods]*をクリックします。
-3.  *[Mercanet]*をクリックします。
-4.  *[Configuration]*をクリックします。
+1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]* に移動します。
+2.  *[Payment Methods]* をクリックします。
+3.  *[Mercanet]* をクリックします。
+4.  *[Configuration]* をクリックします。
 5.  次のように入力します：
       - *販売者ID*
       - *秘密鍵*
       - *鍵バージョン*
-6.  ライブサイトの場合は*[Production]*を、テスト環境の場合は*[Test]*または*[Simulation]*を選択します。 ![Mercanetの設定](./mercanet/images/02.png)
-7.  *[Save]*をクリックします。
-8.  *[Mercanet]*の隣にある*3ドットアイコン*をクリックし、次に*[Activate]*をクリックします。
+6.  ライブサイトの場合は*[Production]* を、テスト環境の場合は*[Test]* または*[Simulation]* を選択します。 ![Mercanetの設定](./mercanet/images/02.png)
+7.  *[Save]* をクリックします。
+8.  *[Mercanet]* の隣にある*3ドットアイコン*をクリックし、次に*[Activate]* をクリックします。
 
 Mercanetがストアで有効になりました。
 

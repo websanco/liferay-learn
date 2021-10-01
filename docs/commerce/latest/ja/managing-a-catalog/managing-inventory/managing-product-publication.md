@@ -10,19 +10,19 @@ Liferay Commerceは、ストアマネージャーが商品を**期限切れに�
 
 商品の有効期限のスケジュールは、*コントロールパネル*を使用して行います。 商品の有効期限をスケジュールするには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（たとえば、*U-Joint*）。
 
-3.  *[Products Details]*タブで*[Never Expire]*チェックボックスをオフにします。 この例では、この設定がすべてのSKUに影響します。
+3.  *[Products Details]* タブで*[Never Expire]* チェックボックスをオフにします。 この例では、この設定がすべてのSKUに影響します。
 
 4.  将来の日付で有効期限を入力します。 すべての時間はGMTタイムゾーンを使用して設定されます。
 
     ![商品の有効期限の設定](./managing-product-publication/images/03.png)
 
-5.  *[Publish]*をクリックします。
+5.  *[Publish]* をクリックします。
 
-変更が行われた後、チェック間隔があるため、商品が*[Catalog]*ページから削除されるまでに時間がかかる場合があります。 デフォルトでは、チェック間隔は15分に設定されています。 有効期限日が過ぎた後は、*[Catalog]*ページで検索しても本商品は返されません。 *[Control Panel]*では、商品のステータスは*[Expired]*と表示されます。
+変更が行われた後、チェック間隔があるため、商品が*[Catalog]* ページから削除されるまでに時間がかかる場合があります。 デフォルトでは、チェック間隔は15分に設定されています。 有効期限日が過ぎた後は、*[Catalog]* ページで検索しても本商品は返されません。 *[Control Panel]* では、商品のステータスは*[Expired]* と表示されます。
 
 ![期限切れステータス](./managing-product-publication/images/04.png)
 
@@ -30,13 +30,13 @@ Liferay Commerceは、ストアマネージャーが商品を**期限切れに�
 
 ## 商品を非公開にする
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（たとえば、*U-Joint*）。
 
-    > 必要に応じて*[Schedule]*セクションを展開します。
+    > 必要に応じて*[Schedule]* セクションを展開します。
 
-3.  *[Published]*チェックボックスをオフにします。
+3.  *[Published]* チェックボックスをオフにします。
 
     ![[Published]ボックスをオフにする](./managing-product-publication/images/01.png)
 
@@ -48,7 +48,7 @@ Liferay Commerceは、ストアマネージャーが商品を**期限切れに�
 
 ![非公開になったU-Joint](./managing-product-publication/images/02.png)
 
-商品はカタログで検索できません。 *[Control Panel]*で、商品のステータスが*[Draft]*に設定されています。
+商品はカタログで検索できません。 *[Control Panel]* で、商品のステータスが*[Draft]* に設定されています。
 
 ![非公開になったU-Joint](./managing-product-publication/images/05.png)
 

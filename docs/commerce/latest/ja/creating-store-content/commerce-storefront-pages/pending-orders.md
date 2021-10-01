@@ -2,7 +2,7 @@
 
 [Pending Orders] ページは、オーダーマネージャーがアカウントに関連付けられたすべての未完了の注文を表示できるページです。未完了の注文にはカート内の商品が含まれていますが、精算プロセスは完了していません。 さらに、[Pending Orders] ページには、オーダーマネージャーが同時に複数の注文を作成できるようにする *[Add Order]* ボタンがあります。
 
-[Pending Orders] ページでは、*[Open Carts]* ウィジェットが使用されています。 [Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してサンプルデータを作成している場合は、*[Pending Orders]*ページがすでに作成されており、サイトのナビゲーションメニューにあります。
+[Pending Orders] ページでは、*[Open Carts]* ウィジェットが使用されています。 [Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してサンプルデータを作成している場合は、*[Pending Orders]* ページがすでに作成されており、サイトのナビゲーションメニューにあります。
 
 ![[Pending Orders] ページ](./pending-orders/images/01.png)
 

@@ -2,7 +2,7 @@
 
 [Placed Orders] ページは、注文ステータスに関係なく、**アカウント** ごとに清算プロセスを完了したすべての注文を表示する必須ページです。 このページでは *[Orders]* ウィジェットを使用します。
 
-[Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してサンプルデータを作成している場合は、*[Placed Order]*ページがすでに作成されており、サイトのナビゲーションメニューにあります。
+[Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してサンプルデータを作成している場合は、*[Placed Order]* ページがすでに作成されており、サイトのナビゲーションメニューにあります。
 
 ![[Placed Orders] ページ](./placed-orders/images/01.png)
 

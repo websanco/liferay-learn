@@ -54,7 +54,7 @@
     STARTED com.acme.f2y1.impl_1.0.0
     ```
 
-6.  サンプルの為替レートプロバイダーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[Currencies]*に移動します。 新しい為替レートプロバイダー（"f2y1"）が、*[Exchange Rate Provider]*ドロップダウンの下に表示されます。
+6.  サンプルの為替レートプロバイダーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[Currencies]* に移動します。 新しい為替レートプロバイダー（"f2y1"）が、*[Exchange Rate Provider]* ドロップダウンの下に表示されます。
 
 <!-- end list -->
 

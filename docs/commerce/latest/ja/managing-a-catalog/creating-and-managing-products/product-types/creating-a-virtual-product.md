@@ -4,8 +4,8 @@
 
 ## 仮想商品の作成
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
-2.  (+)ボタンをクリックしてから、*[Virtual]*をクリックします。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
+2.  (+)ボタンをクリックしてから、*[Virtual]* をクリックします。
 3.  次のように入力します：
       - **Catalog**：Sahara.com
       - **Name**: 3年保証
@@ -15,13 +15,13 @@
       - **Meta Title**: 3年保証
       - **Meta Description**: すべての商品の3年保証
       - **Meta Keywords**: 保証、商品、年
-4.  *[Publish]*をクリックします。
+4.  *[Publish]* をクリックします。
 
 この仮想商品を作成したら、ストア管理者はデジタルアセットと法的権利を商品に関連付ける必要があります。
 
 ## 仮想商品の詳細を設定する
 
-1.  *[Virtual]*サブタブをクリックして続行します。
+1.  *[Virtual]* サブタブをクリックして続行します。
 
     ![[Virtual]サブタブ](./creating-a-virtual-product/images/01.png)
 
@@ -36,7 +36,7 @@
 
     ![仮想商品の詳細を追加](./creating-a-virtual-product/images/02.png)
 
-3.  *[Save]*をクリックします。
+3.  *[Save]* をクリックします。
 
 各フィールドの詳細については、記事[Virtual Product Reference](./virtual-product-reference.md)を参照してください。
 
@@ -44,20 +44,20 @@
 
 [商品オプション](../products/customizing-your-product-with-product-options.md)テンプレートを仮想商品に適用できます。 たとえば、電子書籍には、異なる市場に応じて他の表紙を適用できます。
 
-*[Options]*サブタブをクリックして続行します。
+*[Options]* サブタブをクリックして続行します。
 
 ## 価格と数量を設定する
 
 商品の価格と数量を設定するには：
 
-1.  *3ドット*アイコンをクリックして、*[default]*の隣にある*[Edit]*をクリックします。
+1.  *3ドット*アイコンをクリックして、*[default]* の隣にある*[Edit]* をクリックします。
 2.  左側のメニューで *[Pricing]* をクリックします。
 3.  次のように入力します：
       - **Price**: 12.00
       - **Promo Price**: 0.00
       - **Cost**: 0.00
-4.  *[Save]*をクリックします。 （[Promo Price]および[Cost]フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
-5.  *[Price List]*をクリックして、この商品を既存の[[Price Lists]](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+4.  *[Save]* をクリックします。 （[Promo Price]および[Cost]フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
+5.  *[Price List]* をクリックして、この商品を既存の[[Price Lists]](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
 
 価格設定の詳細については、[Introduction to Product Pricing Methods](../../managing-prices/introduction-to-product-pricing-methods.md)を参照してください。
 
@@ -65,13 +65,13 @@
 
 ## 商品仕様を追加
 
-[商品仕様](../products/specifications.md)には、寸法、色、重量、容量、またはその他の属性など、商品に関する有用な商品情報が含まれています。 仕様を追加するには、*[Specifications]*サブタブをクリックします。
+[商品仕様](../products/specifications.md)には、寸法、色、重量、容量、またはその他の属性など、商品に関する有用な商品情報が含まれています。 仕様を追加するには、*[Specifications]* サブタブをクリックします。
 
 ## 商品の画像と添付ファイルをアップロードする
 
-[商品画像](../products/product-images.md)があると、お客様は購入しているものについて把握しやすくなります。 各商品バリアント（SKU）には、独自の商品画像を関連付けることができます。 すべての商品画像を追加するには、*[Images]*サブタブをクリックします。
+[商品画像](../products/product-images.md)があると、お客様は購入しているものについて把握しやすくなります。 各商品バリアント（SKU）には、独自の商品画像を関連付けることができます。 すべての商品画像を追加するには、*[Images]* サブタブをクリックします。
 
-ストア管理者は、特定の商品に関連付けられた添付ファイルを追加することもできます。 ドキュメントを追加するには、*[Attachments]*サブタブをクリックします。
+ストア管理者は、特定の商品に関連付けられた添付ファイルを追加することもできます。 ドキュメントを追加するには、*[Attachments]* サブタブをクリックします。
 
 ## カテゴリによる分類
 

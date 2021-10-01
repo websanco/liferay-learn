@@ -48,9 +48,9 @@
     STARTED com.acme.j1e4.impl_1.0.0
     ```
 
-5.  サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[商品]*に移動します。 次に、任意の商品のメニュー内の*[Edit]*をクリックします。 必要に応じて、 [商品](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
+5.  サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[商品]* に移動します。 次に、任意の商品のメニュー内の*[Edit]* をクリックします。 必要に応じて、 [商品](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
 
-    そこから、*[Configuration]*に移動します。 新しいアクティビティ（"Log a warning message"）が*[Low Stock Action]*ドロップダウンの下に表示されます。
+    そこから、*[Configuration]* に移動します。 新しいアクティビティ（"Log a warning message"）が*[Low Stock Action]* ドロップダウンの下に表示されます。
 
 <!-- end list -->
 

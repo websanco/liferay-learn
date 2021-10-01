@@ -6,7 +6,7 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 住所別に税率を設定するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
 2.  税率を設定するチャネルをクリックします。 Miniumなどのアクセラレータを使用した場合、デフォルトでチャネルが作成されます。
 
@@ -18,7 +18,7 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 5.  *Percentage* および *Active* トグルを *YES*スライドします。
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 次に、カテゴリ別および住所別に税率を設定します。
 
@@ -51,31 +51,31 @@ Liferay Commerceは、固定レートと住所による2種類の税計算をサ
 
 1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に進みます。
 
-2.  *[Taxes]*タブをクリックしてから、*[Tax Calculations]*サブタブをクリックします。
+2.  *[Taxes]* タブをクリックしてから、*[Tax Calculations]* サブタブをクリックします。
 
-3.  *[By Address]*をクリックします。
+3.  *[By Address]* をクリックします。
 
-4.  税を購入価格の割合として定義する場合は、*[Percentage]*トグルを *[YES]* に切り替えます。 税金を固定金額として定義するには、トグルを無効のままにします。
+4.  税を購入価格の割合として定義する場合は、*[Percentage]* トグルを *[YES]* に切り替えます。 税金を固定金額として定義するには、トグルを無効のままにします。
 
-5.  *[Active]* トグルを *[YES]*に切り替えます。
+5.  *[Active]* トグルを *[YES]* に切り替えます。
 
     ![住所別の税率の有効化](./setting-tax-rate-by-address/images/01.png)
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 次に、カテゴリ別および住所別に税率を設定します。
 
-1.  *[Tax Rate Settings]*サブタブをクリックしてから、*[Add Tax Rate Setting]*ボタンをクリックします。
+1.  *[Tax Rate Settings]* サブタブをクリックしてから、*[Add Tax Rate Setting]* ボタンをクリックします。
 
-2.  *[Tax Category]*フィールドから *[Tax Category]* を選択します。
+2.  *[Tax Category]* フィールドから *[Tax Category]* を選択します。
 
-3.  *[Rate]*フィールドに税率を入力します。
+3.  *[Rate]* フィールドに税率を入力します。
 
 4.  国、地域を選択し、郵便番号を入力します。
 
     ![税率の設定](./setting-tax-rate-by-address/images/02.png)
 
-5.  *[Save]*をクリックします。
+5.  *[Save]* をクリックします。
 
 住所固有の税率が設定されました。
 

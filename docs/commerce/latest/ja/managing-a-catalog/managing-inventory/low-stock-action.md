@@ -4,7 +4,7 @@
 
 在庫不足アクションを設定するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（たとえば、*U-Joint*）。
 
@@ -26,7 +26,7 @@
 
     ![在庫不足アクションの商品設定](./low-stock-action/images/01.png)
 
-5.  *[Publish]*をクリックします。
+5.  *[Publish]* をクリックします。
 
 この商品の在庫不足アクションが設定されました。 今後、在庫数が*5*を下回ると、「U-Joint」商品は非公開になります。
 

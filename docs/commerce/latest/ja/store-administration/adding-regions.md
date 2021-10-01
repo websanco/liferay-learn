@@ -2,9 +2,9 @@
 
 この記事では、Liferay Commerceに州、県、またはその他の行政区域を追加する方法について説明します。 デフォルトでは、米国とイタリアの *国* 設定に、それぞれの国の州と県がすべてリストされています。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
 
-2.  *[Countries]*をクリックします。
+2.  *[Countries]* をクリックします。
 
 3.  国をクリックします（この例ではフランス）。
 
@@ -18,16 +18,16 @@
       - **Code**：*FR-GES*
       - **Priority**：6.0
 
-7.  トグルを *[Active]*に切り替えます。
+7.  トグルを *[Active]* に切り替えます。
 
     ![グラン・テスト地域の追加](./adding-regions/images/01.png)
 
-8.  *[Save]*をクリックします。
+8.  *[Save]* をクリックします。
 
-フランスの地域*「グラン・テスト地域圏」*がリージョンのリストに追加されました。 *[Shipping Address]*ページの*[Country]*フィールドでフランスを選択すると、リージョンリストに*グラン・テスト地域圏*が表示されます。 必要に応じてこれらの手順を繰り返します。
+フランスの地域*「グラン・テスト地域圏」*がリージョンのリストに追加されました。 *[Shipping Address]* ページの*[Country]* フィールドでフランスを選択すると、リージョンリストに*グラン・テスト地域圏*が表示されます。 必要に応じてこれらの手順を繰り返します。
 
 ## 追加情報
 
-**注1：***[Code]*フィールドの値は、[ ISO-3166-2 ](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/ISO_3166-2.html)規格のフォーマットに従う必要があります。
+**注1：***[Code]* フィールドの値は、[ ISO-3166-2 ](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/ISO_3166-2.html)規格のフォーマットに従う必要があります。
 
 **注2：**優先度フィールドは、必要に応じて地域を手動でランク付けするために使用できます。

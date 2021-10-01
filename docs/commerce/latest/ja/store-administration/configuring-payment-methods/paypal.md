@@ -4,17 +4,17 @@
 
 PayPalを使用するようにストアを設定する前に、PayPalクライアントIDとクライアントシークレット番号を生成する必要があります。 詳細については、[PayPal開発者ダッシュボード](https://developer.paypal.com/developer/applications/create)にアクセスしてください。
 
-1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]*に移動します。
+1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]* に移動します。
 2.  *[PayPal]* をクリックします。
-3.  *[Configuration]*をクリックします。
+3.  *[Configuration]* をクリックします。
 4.  次のように入力します：
       - **クライアントID**
       - **クライアントシークレット**
-5.  ライブサイトの場合は*[Live]*を、テスト環境の場合は*[Sandbox]*を選択します。
-6.  *[Payment Attempts Max Count]*フィールドに、サブスクリプションをキャンセルする前にサブスクリプションの支払いを試行する回数を入力します。
+5.  ライブサイトの場合は*[Live]* を、テスト環境の場合は*[Sandbox]* を選択します。
+6.  *[Payment Attempts Max Count]* フィールドに、サブスクリプションをキャンセルする前にサブスクリプションの支払いを試行する回数を入力します。
       - 詳細については、PayPalの記事[「Reattempt failed recurring payments with Subscribe buttons」](https://developer.paypal.com/docs/paypal-payments-standard/integration-guide/reattempt-failed-payment/)を参照してください。 ![PayPalの設定](./paypal/images/01.png)
-7.  *[Save]*をクリックします。
-8.  *[PayPal]*の隣にある*3ドットアイコン*をクリックし、次に*[Activate]*をクリックします。
+7.  *[Save]* をクリックします。
+8.  *[PayPal]* の隣にある*3ドットアイコン*をクリックし、次に*[Activate]* をクリックします。
 
 PayPalがストアで有効になりました。
 

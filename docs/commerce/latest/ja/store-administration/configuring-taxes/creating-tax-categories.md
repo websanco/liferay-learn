@@ -4,7 +4,7 @@
 
 新しい税カテゴリを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
 
 2.  [ *Tax Categories* ]タブをクリックします。
 
@@ -19,7 +19,7 @@
 
     ![新しい税カテゴリを追加します。](./creating-tax-categories/images/04.png)
 
-5.  *[Save]*をクリックします。
+5.  *[Save]* をクリックします。
 
 新しい税カテゴリが作成されました。
 
@@ -39,7 +39,7 @@
 
     ![税カテゴリを追加する](./creating-tax-categories/images/01.png)
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 税カテゴリがストアで使用できるようになりました。
 

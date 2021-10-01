@@ -16,7 +16,7 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 ## 商品フィルターチャネルの構成
 
-1.  *[Global Applications]* → *[Commerce]* & *[Products]*をクリックします。
+1.  *[Global Applications]* → *[Commerce]* & *[Products]* をクリックします。
 
 2.  商品をクリックします。
 
@@ -28,7 +28,7 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 5.  目的のチャネル（たとえば、 *Test Channel One*）をクリックします。
 
-6.  *[Add]*をクリックします。
+6.  *[Add]* をクリックします。
 
 これで、チャネルが商品に関連付けられました。
 
@@ -36,7 +36,7 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[コントロールパネル]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[コントロールパネル]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします。
 
@@ -48,7 +48,7 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 5.  目的のチャネル（たとえば、 *Test Channel One*）をクリックします。
 
-6.  *[Add]*をクリックします。
+6.  *[Add]* をクリックします。
 
 これで、チャネルが商品に関連付けられました。
 
@@ -56,21 +56,21 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[コントロールパネル]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[コントロールパネル]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（この例では*Torque Converters*）。
 
 3.  *[Configuration]* サブタブをクリックします。
 
-4.  *[Channels]*サイドバーオプションをクリックします。
+4.  *[Channels]* サイドバーオプションをクリックします。
 
-5.  *[Enable filter channels]*トグルを*[Yes]*に切り替えます。
+5.  *[Enable filter channels]* トグルを*[Yes]* に切り替えます。
 
 6.  商品を表示する各チャネルのボックスをオンにします（この場合は*NA Minium Store* ）。
 
     ![商品構成](./configuring-product-visibility-using-channels/images/02.png)
 
-7.  *[保存]*をクリックします。
+7.  *[保存]* をクリックします。
 
 商品は、選択したチャネルでのみ表示されます。
 

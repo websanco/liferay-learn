@@ -4,7 +4,7 @@
 
 新しいカタログを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Catalogs]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Catalogs]* に移動します。
 
 2.  追加（![Add icon](../../images/icon-add.png)）ボタンをクリックして、新しいカタログを追加します。
 

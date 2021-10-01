@@ -11,7 +11,7 @@ Liferay Commerceは、初期設定で4つのコマース[アカウントロー�
 1.  *コントロールパネル* → *ユーザー* → *ロール*に移動します。
 2.  *サイトのロール*タブをクリックします。
 3.  Commerce Role（たとえば、* Account Administrator * ）をクリックします。
-4.  [*Define Permissions]*タブをクリックします。
+4.  [*Define Permissions]* タブをクリックします。
 
 ## アカウント管理者
 

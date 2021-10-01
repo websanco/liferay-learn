@@ -14,18 +14,18 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ### Open
 
-*[Open]*タブで使用できる注文ステータスには、*[Open]*および*[In Progress]*の2つがあります。
+*[Open]* タブで使用できる注文ステータスには、*[Open]* および*[In Progress]* の2つがあります。
 
 ![注文ステータスの[Open]タブ](./order-management-statuses-reference-guide/images/02.png)
 
 | 注文のステータス    | 説明                                                                    |
 | ----------- | --------------------------------------------------------------------- |
-| Open        | 1つ以上の商品がカートに追加されました。 注文が精算プロセスの途中である可能性があります（*[Order Summary]*ページまで）。 |
+| Open        | 1つ以上の商品がカートに追加されました。 注文が精算プロセスの途中である可能性があります（*[Order Summary]* ページまで）。 |
 | In Progress | 注文は、精算プロセスで*[Order Summary]* ページを越えて支払いステップに進みました。                    |
 
 ### 保留中
 
-*[Pending]*タブでは、*[To Transmit]*という1つの注文ステータスが使用可能です。
+*[Pending]* タブでは、*[To Transmit]* という1つの注文ステータスが使用可能です。
 
 ![注文ステータスの[Pending]タブ](./order-management-statuses-reference-guide/images/03.png)
 
@@ -35,7 +35,7 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ### 送信済み
 
-*[Transmitted]*タブでは、以下にリストされている12個の注文ステータスが使用可能です。
+*[Transmitted]* タブでは、以下にリストされている12個の注文ステータスが使用可能です。
 
 ![注文ステータスの[Transmitted]タブ](./order-management-statuses-reference-guide/images/04.png)
 
@@ -56,7 +56,7 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ## 支払い状況
 
-*支払いステータス* は、 [注文に対して支払いが行われ、受け取られたかどうかに関する情報を提供します](./processing-an-order.md)。 [*[Orders]*メニュー](./orders-menu-reference-guide.md)の*[Pending]*および*[Transmitted]*タブでは、*[Authorized]*、*[Paid]*、および*[Pending]*の3つの支払いステータスが使用可能です。 （*[Open]*タブでは、注文の支払いステータスは常に*[Pending]*です。 ）
+*支払いステータス* は、 [注文に対して支払いが行われ、受け取られたかどうかに関する情報を提供します](./processing-an-order.md)。 [*[Orders]* メニュー](./orders-menu-reference-guide.md)の*[Pending]* および*[Transmitted]* タブでは、*[Authorized]*、*[Paid]*、および*[Pending]* の3つの支払いステータスが使用可能です。 （*[Open]* タブでは、注文の支払いステータスは常に*[Pending]* です。 ）
 
 ![支払い状況](./order-management-statuses-reference-guide/images/05.png)
 
@@ -68,11 +68,11 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ## ワークフローステータス
 
-*[Workflow Status]*には、2つの[注文ワークフロー](../order-workflows/introduction-to-order-workflows.md)のいずれかで注文がどこにあるかに関する情報が提供されます。
+*[Workflow Status]* には、2つの[注文ワークフロー](../order-workflows/introduction-to-order-workflows.md)のいずれかで注文がどこにあるかに関する情報が提供されます。
 
 ### Open
 
-*[Open]*タブの*[Workflow Status]*は、[*承認ワークフロー*](../order-workflows/introduction-to-order-workflows.md#approval-workflow-buyer-side-cart-approval-only)での注文の進行状況を示します。 この注文ワークフローでは、*[Draft]*、*[Pending]*、および*[Approved]*の3つのワークフローステータスが使用可能です。
+*[Open]* タブの*[Workflow Status]* は、[*承認ワークフロー*](../order-workflows/introduction-to-order-workflows.md#approval-workflow-buyer-side-cart-approval-only)での注文の進行状況を示します。 この注文ワークフローでは、*[Draft]*、*[Pending]*、および*[Approved]* の3つのワークフローステータスが使用可能です。
 
 ![ワークフローステータスの[Open]タブ](./order-management-statuses-reference-guide/images/06.png)
 
@@ -84,14 +84,14 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ### 保留中
 
-*[Pending]*タブの*[Workflow Status]*は、[*送信ワークフロー*](../order-workflows/introduction-to-order-workflows.md#transmission-workflow-seller-side-order-approval-only)での注文の進行状況を示します。 この注文ワークフローでは、*[Pending]*および*[Approved]*の2つのワークフローステータスが使用可能です。
+*[Pending]* タブの*[Workflow Status]* は、[*送信ワークフロー*](../order-workflows/introduction-to-order-workflows.md#transmission-workflow-seller-side-order-approval-only)での注文の進行状況を示します。 この注文ワークフローでは、*[Pending]* および*[Approved]* の2つのワークフローステータスが使用可能です。
 
 ![ワークフローステータスの[Pending]および[Transmitted]タブ](./order-management-statuses-reference-guide/images/07.png)
 
 | ワークフローステータス | 説明                                                                                                                                                                                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 保留中         | 順序が置かれているが、それはまだされていない [承認された](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) 販売者。                                                                                                         |
-| 承認済         | 順序が見直されており、 [承認された](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) 販売者、および順序が今することができる [送信](./processing-an-order.md#commerce-20-and-below)。 （注：このワークフローステータスは、*[Transmitted]*タブにも表示されます。） |
+| 承認済         | 順序が見直されており、 [承認された](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) 販売者、および順序が今することができる [送信](./processing-an-order.md#commerce-20-and-below)。 （注：このワークフローステータスは、*[Transmitted]* タブにも表示されます。） |
 
 ## 追加情報
 

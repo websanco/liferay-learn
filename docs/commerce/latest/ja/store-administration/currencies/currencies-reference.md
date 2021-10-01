@@ -2,7 +2,7 @@
 
 Liferay Commerceには、いくつかの通貨が事前設定されており、すぐに使用できます。 注文を処理できるようにするには、各ストアで主要通貨を有効にする必要があります。 この記事は、各通貨に関連付けられたメタデータのリファレンスとして機能します。
 
-通貨を管理するには、*[Control Panel]* → *[Commerce]* → *[Settings]*に移動し、*[Currencies]*タブをクリックします。
+通貨を管理するには、*[Control Panel]* → *[Commerce]* → *[Settings]* に移動し、*[Currencies]* タブをクリックします。
 
 ![新しい通貨を追加する](./currencies-reference/images/01.png)
 

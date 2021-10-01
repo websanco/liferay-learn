@@ -8,7 +8,7 @@ SKUは、商品用に構成されたものとは異なる出荷重量と寸法�
 
 配送オーバーライドを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品（たとえば、 *Generic Coffee*）をクリックします。
 
@@ -24,7 +24,7 @@ SKUは、商品用に構成されたものとは異なる出荷重量と寸法�
 
     ![寸法を入力してください](./overriding-product-level-information/images/02.png)
 
-7.  完了したら、*[Publish]*をクリックします。
+7.  完了したら、*[Publish]* をクリックします。
 
 このSKUの配送オーバーライドが作成されました。
 
@@ -34,7 +34,7 @@ SKUは、商品用に構成されたものとは異なる出荷重量と寸法�
 
 特定のSKUの商品のサブスクリプション設定を上書きするには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品（たとえば、 *Generic Coffee*）をクリックします。
 
@@ -58,7 +58,7 @@ SKUは、商品用に構成されたものとは異なる出荷重量と寸法�
 
     ![寸法を入力してください](./overriding-product-level-information/images/04.png)
 
-11. 完了したら、*[Save]*をクリックします。
+11. 完了したら、*[Save]* をクリックします。
 
 SKUがサブスクリプションベースで利用可能になりました。
 

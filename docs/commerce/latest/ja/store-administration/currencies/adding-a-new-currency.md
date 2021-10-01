@@ -4,11 +4,11 @@ Liferay Commerceでは、すぐに使用できる複数の通貨を事前設定�
 
 新しい通貨を追加するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
 
 2.  *[Currencies]* タブをクリックします。
 
-3.  *[Add Currency]*ボタンをクリックします。
+3.  *[Add Currency]* ボタンをクリックします。
 
 4.  次のように入力します：
 
@@ -21,20 +21,20 @@ Liferay Commerceでは、すぐに使用できる複数の通貨を事前設定�
       - *Exchange Rate：* 1.49701
       - *Priority：* 11
 
-5.  *[Primary]*トグルは *[NO]*のままにします。
+5.  *[Primary]* トグルは *[NO]* のままにします。
 
     ![通貨を追加する](./adding-a-new-currency/images/01.png)
 
-6.  *[Active]* トグルを *[Yes]*に切り替えます。
+6.  *[Active]* トグルを *[Yes]* に切り替えます。
 
-7.  *[Save]*をクリックします。
+7.  *[Save]* をクリックします。
 
 ## 追加情報
 
 ### 注
 
-  - *[Format Pattern]*フィールドには、通貨記号、コンマの間にある桁数、および表示される桁数が必要です。 たとえば、USドルの場合、$\#\#\#,\#\#0.00という形式では、*0*が保持する桁数は常に表示されますが（他の桁が存在しない場合は0）、*\#*が保持する桁数は、占有されている場合にのみ表示されます。 上記の形式の0.01の値は、$0.01として表示されます。
+  - *[Format Pattern]* フィールドには、通貨記号、コンマの間にある桁数、および表示される桁数が必要です。 たとえば、USドルの場合、$\#\#\#,\#\#0.00という形式では、*0*が保持する桁数は常に表示されますが（他の桁が存在しない場合は0）、*\#*が保持する桁数は、占有されている場合にのみ表示されます。 上記の形式の0.01の値は、$0.01として表示されます。
 
-  - *[Rounding Mode]*には、ドロップダウンメニューから[丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer)のタイプが必要です。
+  - *[Rounding Mode]* には、ドロップダウンメニューから[丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer)のタイプが必要です。
 
   - 一部の支払い方法では、ストアが機能するために特定の主要通貨を設定する必要があります。 [Mercanet](../../store-administration/configuring-payment-methods/mercanet.md)では、主要通貨としてEURが必要です。

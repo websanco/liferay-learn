@@ -2,13 +2,13 @@
 
 購入者は、任意の商品を配送するための定額配送オプションを選択できます。 複数の定額オプションを作成することにより、顧客に費用、速さ、またはセキュリティの選択肢を提供できます。
 
-定額配送では、カタログ内のすべての商品に同じ費用がかかります。 ただし、商品の[[Configuration]](../../managing-a-catalog/managing-inventory/product-inventory-configuration-reference.md)タブの*[Shipping Extra Price]*フィールドから個々の商品について例外を作成できます。
+定額配送では、カタログ内のすべての商品に同じ費用がかかります。 ただし、商品の[[Configuration]](../../managing-a-catalog/managing-inventory/product-inventory-configuration-reference.md)タブの*[Shipping Extra Price]* フィールドから個々の商品について例外を作成できます。
 
 デフォルトでは、定額配送方法が有効になっています。
 
 新しい定額配送オプションを追加するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
     ![コントロールパネルのチャネルに移動します。](./using-the-flat-rate-shipping-method/images/02.png)
 
@@ -18,11 +18,11 @@
 
     ![配送方法はチャネルで設定されます。](./using-the-flat-rate-shipping-method/images/03.png)
 
-4.  *[Edit]*をクリックします。
+4.  *[Edit]* をクリックします。
 
-5.  *[Active]* トグルを *[YES]*に切り替えます。
+5.  *[Active]* トグルを *[YES]* に切り替えます。
 
-6.  *[Shipping Options]*タブをクリックします。
+6.  *[Shipping Options]* タブをクリックします。
 
 7.  追加（![Add Icon](../../images/icon-add.png)）ボタンをクリックして、新しい配送オプションを追加します。
 
@@ -34,7 +34,7 @@
 
     ![新しい配送方法オプションを追加します。](./using-the-flat-rate-shipping-method/images/04.png)
 
-9.  *[Save]*をクリックします。
+9.  *[Save]* をクリックします。
 
 10. ウィンドウを閉じます。
 
@@ -48,16 +48,16 @@
 
 新しい定額配送オプションを追加するには：
 
-1.  *[Site Administration]* → *[Commerce]* → *[Settings]*に移動します。
-2.  *[Shipping Methods]*タブをクリックします。
-3.  *[Flat Rate]*をクリックします。
-4.  *[Shipping Options]*タブをクリックします。 （Miniumアクセラレータを使用している場合、*[Standard Delivery]*および*[Expedited Delivery]*がデフォルトで作成されます。）
+1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に移動します。
+2.  *[Shipping Methods]* タブをクリックします。
+3.  *[Flat Rate]* をクリックします。
+4.  *[Shipping Options]* タブをクリックします。 （Miniumアクセラレータを使用している場合、*[Standard Delivery]* および*[Expedited Delivery]* がデフォルトで作成されます。）
 5.  追加（![Add Icon](../../images/icon-add.png)）ボタンをクリックして、新しい配送オプションを追加します。
 6.  次のように入力します：
       - **Name**：7日発送
       - **Amount**：3.95
       - **Priority**：0.0
-7.  *[Save]*をクリックします。
+7.  *[Save]* をクリックします。
 
 新しい配送オプションが追加され、精算プロセスで利用可能になりました。
 

@@ -30,7 +30,7 @@ Liferay Commerceの支払い方法は、[チャネル](../../starting-a-store/ch
 
 ### [Configuration]タブ
 
-支払い方法の*[Configuration]*タブでは、ストア管理者が支払い方法をストアに統合します。
+支払い方法の*[Configuration]* タブでは、ストア管理者が支払い方法をストアに統合します。
 
 各支払い方法を有効にする方法については、対応する記事を参照してください。
 

@@ -35,7 +35,7 @@ Liferay Commerceでは、ストアユーザーが商品のサブスクリプシ�
 
     ![支払いサブスクリプションを構成する](./enabling-subscriptions-for-a-product/images/03.png)
 
-9.  *[Publish]*ボタンをクリックします。
+9.  *[Publish]* ボタンをクリックします。
 
 この商品で支払いサブスクリプションが有効になりました。
 
@@ -57,7 +57,7 @@ Liferay Commerceでは、ストアユーザーが商品のサブスクリプシ�
 
     ![配信サブスクリプションを構成する](./enabling-subscriptions-for-a-product/images/04.png)
 
-6.  *[Publish]*ボタンをクリックします。
+6.  *[Publish]* ボタンをクリックします。
 
 この商品の配信サブスクリプションが有効になりました。
 

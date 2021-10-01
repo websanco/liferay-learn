@@ -4,15 +4,15 @@
 
 価格表で商品の価格レベルを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Price Lists]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Price Lists]* に移動します。
 
 2.  価格表をクリックします（この例では*VIP Customers*）。
 
-3.  *[Entries]*サブタブをクリックします。
+3.  *[Entries]* サブタブをクリックします。
 
 4.  商品をクリックします（この例では*Premium Brake Fluid*）。
 
-5.  *[Tier Price Entries]*サブタブをクリックします。
+5.  *[Tier Price Entries]* サブタブをクリックします。
 
 6.  （+）ボタンをクリックします。
 

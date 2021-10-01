@@ -18,15 +18,15 @@
 
 ボキャブラリとカテゴリを使用して分類を作成したら、カタログ内の商品にカテゴリを追加できます。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
-2.  商品をクリックします。 （Miniumを使用してサンプルデータを含むサイトを作成した場合は、*[Transmission Fluid]*をクリックします。 *Transmission Fluid*商品はすでにサンプルのボキャブラリとカテゴリにリンクされています。）
+2.  商品をクリックします。 （Miniumを使用してサンプルデータを含むサイトを作成した場合は、*[Transmission Fluid]* をクリックします。 *Transmission Fluid*商品はすでにサンプルのボキャブラリとカテゴリにリンクされています。）
 
     ![Commerce 2.1でのカテゴリの関連付け](./organizing-your-catalog-with-product-categories/images/01.png)
 
 3.  [ *詳細* ]タブで、[ *カテゴリ* ウィジェットのカタログの横にある[ *選択* ]をクリックします。
 
-4.  適切なボキャブラリのラベルの下にある*[Select]*ボタンをクリックし、表示されるポップアップで、該当する各カテゴリの横にあるチェックボックスをオンにします。
+4.  適切なボキャブラリのラベルの下にある*[Select]* ボタンをクリックし、表示されるポップアップで、該当する各カテゴリの横にあるチェックボックスをオンにします。
 
     ![カテゴリーの選択](./organizing-your-catalog-with-product-categories/images/02.png)
 
@@ -34,13 +34,13 @@
 
 ### Commerce 2.0以前
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
-2.  商品をクリックしてから、*[Categorization]*タブをクリックします。 （Miniumを使用してサンプルデータを含むサイトを作成した場合は、*[Transmission Fluid]*をクリックします。 *Transmission Fluid*商品はすでにサンプルのボキャブラリとカテゴリにリンクされています。）
+2.  商品をクリックしてから、*[Categorization]* タブをクリックします。 （Miniumを使用してサンプルデータを含むサイトを作成した場合は、*[Transmission Fluid]* をクリックします。 *Transmission Fluid*商品はすでにサンプルのボキャブラリとカテゴリにリンクされています。）
 
     ![カテゴリを管理](./organizing-your-catalog-with-product-categories/images/03.png)
 
-3.  適切なボキャブラリのラベルの下にある*[Select]*ボタンをクリックし、表示されるポップアップで、該当する各カテゴリの横にあるチェックボックスをオンにします。
+3.  適切なボキャブラリのラベルの下にある*[Select]* ボタンをクリックし、表示されるポップアップで、該当する各カテゴリの横にあるチェックボックスをオンにします。
 
 4.  *[Done]* をクリックします。
 

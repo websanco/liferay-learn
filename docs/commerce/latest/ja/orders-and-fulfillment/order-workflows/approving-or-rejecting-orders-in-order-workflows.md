@@ -6,7 +6,7 @@
 
 購入者が事前承認のためにカートを送信するか、販売者承認のために注文を行うと、次のように適切なユーザーが注文を承認または拒否できます。
 
-1.  *[User Administration]* → *[My Account]* → *[Notifications]*に移動します。
+1.  *[User Administration]* → *[My Account]* → *[Notifications]* に移動します。
 
     ![通知](./approving-or-rejecting-orders-in-order-workflows/images/01.png)
 
@@ -14,7 +14,7 @@
 
     ![通知リスト](./approving-or-rejecting-orders-in-order-workflows/images/02.png)
 
-3.  右上隅にある *3ドットアイコン* → *[Assign to Me]*の順にクリックします。
+3.  右上隅にある *3ドットアイコン* → *[Assign to Me]* の順にクリックします。
 
     ![レビュー](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
 
@@ -22,21 +22,21 @@
        または、[割り当て...]をクリックして別のユーザーを選択し、Commerce Orderを確認します。
     ```
 
-4.  コメントを追加し（オプション）、*[Done]*をクリックします。
+4.  コメントを追加し（オプション）、*[Done]* をクリックします。
 
 5.  右上隅にある *3ドットアイコン* → *[Approve]*（または*[Reject]*）の順にクリックします。
 
     ![[Review]ドロップダウン](./approving-or-rejecting-orders-in-order-workflows/images/04.png)
 
-6.  コメントを追加し（オプション）、*[Done]*をクリックします。
+6.  コメントを追加し（オプション）、*[Done]* をクリックします。
 
     ![コメントを追加](./approving-or-rejecting-orders-in-order-workflows/images/05.png)
 
-    レビューされた注文は、 *[My Workflow Tasks]*に表示されます。
+    レビューされた注文は、 *[My Workflow Tasks]* に表示されます。
 
     ![注文が承認されました](./approving-or-rejecting-orders-in-order-workflows/images/06.png)
 
-注文が承認されました（または拒否されました）。 追加の注文を確認するには、*[Notifications]*ページに戻り、上記の手順を繰り返してください。
+注文が承認されました（または拒否されました）。 追加の注文を確認するには、*[Notifications]* ページに戻り、上記の手順を繰り返してください。
 
 ## 追加情報
 

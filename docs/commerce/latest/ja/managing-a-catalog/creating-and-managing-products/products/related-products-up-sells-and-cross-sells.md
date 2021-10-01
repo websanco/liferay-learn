@@ -20,17 +20,17 @@
 
 必要に応じて、商品関係タイプをさらに追加できます。 これには、保証などの無形商品が含まれます。 新しい商品関係を追加するには：
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]*に移動します。
+1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
 
-2.  *[Commerce]*セクションで*[Catalog]*をクリックします。
+2.  *[Commerce]* セクションで*[Catalog]* をクリックします。
 
 3.  左側のメニューで *[Product Relations]* をクリックします。
 
-4.  *[Add]*ボタンをクリックします。
+4.  *[Add]* ボタンをクリックします。
 
-5.  *[Type]*フィールドに新しい商品関係を入力します（保証）。
+5.  *[Type]* フィールドに新しい商品関係を入力します（保証）。
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
     ![新しい商品関係の作成](./related-products-up-sells-and-cross-sells/images/01.png)
 
@@ -38,19 +38,19 @@
 
 ## 商品間の関係の作成
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品を選択します（たとえば、*Brake Pads*）。
 
-3.  *[Product Relations]*サブタブをクリックします。
+3.  *[Product Relations]* サブタブをクリックします。
 
-4.  左側のメニューで、*[Related]*をクリックします。
+4.  左側のメニューで、*[Related]* をクリックします。
 
     ![関連メニュー](./related-products-up-sells-and-cross-sells/images/02.png)
 
-5.  （+）ボタンをクリックして、1つ以上の関係を追加します。 この例では、*[Brake Rotors]*と*[Brake Fluid]*です。
+5.  （+）ボタンをクリックして、1つ以上の関係を追加します。 この例では、*[Brake Rotors]* と*[Brake Fluid]* です。
 
-6.  *[Add]*をクリックします。
+6.  *[Add]* をクリックします。
 
     ![2つの商品を追加する](./related-products-up-sells-and-cross-sells/images/04.png)
 
@@ -64,19 +64,19 @@
 
 1.  商品を検索します（たとえば、*Brake Pads*）。
 
-2.  *[Brake Pads]*をクリックして商品の詳細を表示します。
+2.  *[Brake Pads]* をクリックして商品の詳細を表示します。
 
-3.  ページの一番下までスクロールして、*[Product Publisher]*ウィジェットにリストされている関連商品を表示します。
+3.  ページの一番下までスクロールして、*[Product Publisher]* ウィジェットにリストされている関連商品を表示します。
 
     ![設定メニュー](./related-products-up-sells-and-cross-sells/images/06.png)
 
-4.  *3ドット*アイコン（[Options]）→ *[Configuration]*をクリックします。
+4.  *3ドット*アイコン（[Options]）→ *[Configuration]* をクリックします。
 
-5.  *[Data Source]*ドロップダウンメニューから*[Product Relations related]*を選択します。
+5.  *[Data Source]* ドロップダウンメニューから*[Product Relations related]* を選択します。
 
     ![データソースを選択](./related-products-up-sells-and-cross-sells/images/03.png)
 
-6.  *[Save]*をクリックしてダイアログボックスを閉じます。
+6.  *[Save]* をクリックしてダイアログボックスを閉じます。
 
     ![商品関係：ブレーキローターとブレーキ液](./related-products-up-sells-and-cross-sells/images/05.png)
 

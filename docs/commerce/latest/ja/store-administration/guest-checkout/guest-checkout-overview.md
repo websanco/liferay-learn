@@ -22,7 +22,7 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 
 ゲストチェックアウトには、[サイトページ](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html)に*ゲストのチェックアウト認証*ウィジェットを設置する必要があります。 このページとウィジェットを生成するには、 [チャネル設定](../../starting-a-store/channels/channels-reference-guide.md) のヘルスチェック機能を使用します。
 
-*[Continue as a Guest]*をクリックすると、顧客はログインしたりアカウントを作成したりすることなく、購入を完了することができます。
+*[Continue as a Guest]* をクリックすると、顧客はログインしたりアカウントを作成したりすることなく、購入を完了することができます。
 
 ![別のオプションは、ゲストのチェックアウト認証ウィジェットです。](./guest-checkout-overview/images/02.png)
 

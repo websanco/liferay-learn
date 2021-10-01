@@ -19,11 +19,11 @@ SKUを自動生成するには、以下を完了する必要があります。
 
 商品オプションを作成後、すべての商品バリアントのSKUをすばやく簡単に生成する方法は次のとおりです。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（この例では*Torque Converters*）。
 
-3.  *[SKUs]*サブタブをクリックします。
+3.  *[SKUs]* サブタブをクリックします。
 
 4.  （+）ボタンをクリックします。
 
@@ -39,11 +39,11 @@ BlackとGrayの商品オプションにSKUが生成されました。 必要に�
 
 このSKUを変更するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  商品をクリックします（この例では*Torque Converters*）。
 
-3.  *[SKUs]*タブをクリックします。
+3.  *[SKUs]* タブをクリックします。
 
 4.  *SKU*をクリックします（この例では[*default*]）。
 
@@ -53,7 +53,7 @@ BlackとGrayの商品オプションにSKUが生成されました。 必要に�
 
     ![SKUの編集](./adding-skus-to-your-products/images/02.png)
 
-7.  *[Publish]*をクリックします。
+7.  *[Publish]* をクリックします。
 
 SKUの名前が正常に変更されました。
 

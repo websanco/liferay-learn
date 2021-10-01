@@ -38,7 +38,7 @@
 
     ![次の配達日を変更できます。](./managing-subscriptions/images/04.png)
 
-4.  *[Save]*ボタンをクリックします。
+4.  *[Save]* ボタンをクリックします。
 
 ### サブスクリプション注文の一時停止またはキャンセル
 
@@ -60,7 +60,7 @@
 
 7.  *Ends After* フィールドに **1** を入力します。
 
-8.  *[Save]*をクリックして変更を適用します。
+8.  *[Save]* をクリックして変更を適用します。
 
 ### 発送ステータスの追跡
 
@@ -78,7 +78,7 @@
 
 サブスクリプションを構成するには：
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]*に移動します。
+1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
 
     ![コントロールパネル-システム設定](managing-subscriptions/images/09.png)
 

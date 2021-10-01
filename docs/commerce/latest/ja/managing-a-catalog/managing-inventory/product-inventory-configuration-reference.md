@@ -24,7 +24,7 @@
 
 ## Commerce 2.0以前
 
-各商品の在庫を管理するには、商品の*[Configuration]*タブに移動し、左側のメニューで*[Inventory]*をクリックします。
+各商品の在庫を管理するには、商品の*[Configuration]* タブに移動し、左側のメニューで*[Inventory]* をクリックします。
 
 ![在庫不足アクションの商品設定](./product-inventory-configuration-reference/images/01.png "在庫不足アクションの商品設定")
 

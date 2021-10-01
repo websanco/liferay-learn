@@ -10,15 +10,15 @@
 
 次の手順に従って、受信した注文の通知を作成します。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
     ![Commerce 2.1チャネル](./using-notification-templates/images/03.png)
 
 2.  目的のチャネルをクリックします。
 
-3.  *[Notifications]*タブをクリックします。
+3.  *[Notifications]* タブをクリックします。
 
-4.  *[Notification Templates]*サブタブをクリックします。
+4.  *[Notification Templates]* サブタブをクリックします。
 
 5.  追加（![Add icon](../../images/icon-add.png)）ボタンをクリックして、新しい通知テンプレートを作成します。
 
@@ -27,7 +27,7 @@
       - **Name**：新規注文
       - **Description**：新規注文テンプレート
       - **Type**： Order Placed
-      - **Enabled**：トグルを*[YES]*に切り替えます.
+      - **Enabled**：トグルを*[YES]* に切り替えます.
       - **From Address**：ストアのメールアドレス（例： *<orders@yourstore.com>*）
       - **From Name**：ストアまたは顧客サービス担当者の名前
       - **Subject**：メールの件名（例：*ご注文を受け取りました * ）
@@ -35,7 +35,7 @@
 
     ![2.1での通知テンプレートの追加](./using-notification-templates/images/02.png)
 
-7.  *[Save]*をクリックします。
+7.  *[Save]* をクリックします。
 
 新しい通知テンプレートが保存され、ストアは注文を受信すると、バイヤーに自動メールを送信します。
 
@@ -79,13 +79,13 @@
 
 Commerce 2.0以下でメール通知を作成するには：
 
-1.  *[Site Administration]* → *[Commerce]* → *[Settings]*に移動します。
+1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に移動します。
 
     ![Commerce 2.0サイト設定](./using-notification-templates/images/04.png)
 
-2.  *[Notifications]*タブをクリックします。
+2.  *[Notifications]* タブをクリックします。
 
-3.  *[Notification Templates]*サブタブをクリックします。
+3.  *[Notification Templates]* サブタブをクリックします。
 
 4.  追加（![Add icon](../../images/icon-add.png)）ボタンをクリックして、新しい通知テンプレートを作成します。
 
@@ -97,15 +97,15 @@ Commerce 2.0以下でメール通知を作成するには：
       - **From Address**：ストアのメールアドレス（例： *<orders@yourstore.com>*）
       - **From Name**：ストアまたは顧客サービス担当者の名前
       - **Type**： Order Placed
-      - **Enabled**：トグルを*[YES]*に切り替えます
+      - **Enabled**：トグルを*[YES]* に切り替えます
       - **Subject**：メールの件名（例：*ご注文を受け取りました * ）
       - **本文**： `[%ORDER_CREATOR%]` や `[%ORDER_ID%]` などの変数を使用して、それぞれ顧客の名前と注文IDを表すことができます。 詳細については、 [通知テンプレート変数リファレンスガイド](./notification-template-variables-reference-guide.md) を参照してください。
 
     ![通知テンプレートの追加](./using-notification-templates/images/01.png)
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
-新しい通知テンプレートが保存され、ストアが注文を受け取ると、ストアから購入者に自動メールが送信されます。 テンプレートが作成されると、注文が行われるたびに新しい通知が通知キューに追加されます。 注文が行われたときは、*[Notifications Queue]*サブタブを確認してください。 デフォルトでは、Liferay Commerceは15分ごとにキューをチェックして、未送信の通知を送信します。 間隔を変更する方法については、 [コマース通知キューの構成](./configuring-the-commerce-notification-queue.md)参照してください。
+新しい通知テンプレートが保存され、ストアが注文を受け取ると、ストアから購入者に自動メールが送信されます。 テンプレートが作成されると、注文が行われるたびに新しい通知が通知キューに追加されます。 注文が行われたときは、*[Notifications Queue]* サブタブを確認してください。 デフォルトでは、Liferay Commerceは15分ごとにキューをチェックして、未送信の通知を送信します。 間隔を変更する方法については、 [コマース通知キューの構成](./configuring-the-commerce-notification-queue.md)参照してください。
 
 ## 追加情報
 

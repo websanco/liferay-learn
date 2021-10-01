@@ -50,7 +50,7 @@
     STARTED com.acme.j6x8.impl_1.0.0
     ```
 
-5.  サンプルの配送エンジンが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[Channels]*に移動します。 配送方法のセクションには、当社の配送エンジンを代表する新しい配送方法（「割引レート」）が表示されます。
+5.  サンプルの配送エンジンが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[Channels]* に移動します。 配送方法のセクションには、当社の配送エンジンを代表する新しい配送方法（「割引レート」）が表示されます。
 
 <!-- end list -->
 

@@ -8,19 +8,19 @@
 
 入荷見積りを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]*に移動します。
-2.  *[Availability Estimates]*タブをクリックします。
+1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
+2.  *[Availability Estimates]* タブをクリックします。
 3.  （+）ボタンをクリックして、新しい見積りを追加します。
 4.  次のように入力します：
       - Title：15～21日
       - Priority：4.0
-5.  *[Save]*をクリックします。
+5.  *[Save]* をクリックします。
 
 新しい入荷見積りが追加されました。 優先順位は*4.0*に設定されているため、この期間はメニューの最後に表示されることに注意してください。
 
 ![新しい入荷見積り](./availability-estimates/images/02.png)
 
-在庫不足しきい値を設定すると、この入荷見積りオプションが*[Product Configuration]* → *[Inventory]*メニューに表示されます。
+在庫不足しきい値を設定すると、この入荷見積りオプションが*[Product Configuration]* → *[Inventory]* メニューに表示されます。
 
 ![[Inventory]ドロップダウンの入荷見積り](./availability-estimates/images/03.png)
 

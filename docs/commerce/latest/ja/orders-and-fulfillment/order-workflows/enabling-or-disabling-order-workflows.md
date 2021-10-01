@@ -11,7 +11,7 @@
 
 承認ワークフローを有効にするには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
    
    ![Commerceチャネル](./enabling-or-disabling-order-workflows/images/04.png)
 
@@ -25,7 +25,7 @@
 
 5.  販売者注文受付ワークフローを有効にする場合は、ドロップダウンメニューから[ *単一承認者（バージョン1）* ]を選択します。
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 このチャネルのワークフロープロセスがアクティブ化されました。 両方のワークフローは同時に動作できます。
 
@@ -41,9 +41,9 @@
    
    ![サハラサイト設定](./enabling-or-disabling-order-workflows/images/05.png)
 
-3.  *[Order Workflows]*タブをクリックします。
+3.  *[Order Workflows]* タブをクリックします。
 
-4.  *[Approval Workflow]*フィールドをクリックし、ドロップダウンで利用可能なオプションから選択します。
+4.  *[Approval Workflow]* フィールドをクリックし、ドロップダウンで利用可能なオプションから選択します。
    
    ![承認ワークフロー](./enabling-or-disabling-order-workflows/images/01.png)
 
@@ -51,7 +51,7 @@
    
    ![送信ワークフロー](./enabling-or-disabling-order-workflows/images/02.png)
 
-6.  *[Save]*をクリックします。
+6.  *[Save]* をクリックします。
 
 
 
@@ -63,7 +63,7 @@
 
 ## 追加情報
 
-すぐに使える *シングル承認者（バージョン1）* は、利用可能な注文ワークフローです。 [カスタムワークフロー](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/introduction-to-workflow.html)を作成して、*[Order Workflows]*タブで選択できます。
+すぐに使える *シングル承認者（バージョン1）* は、利用可能な注文ワークフローです。 [カスタムワークフロー](https://learn.liferay.com/dxp/7.x/en/process-automation/workflow/introduction-to-workflow.html)を作成して、*[Order Workflows]* タブで選択できます。
 
   - [注文ワークフローの概要](./introduction-to-order-workflows.md)
   - [注文ワークフローでの注文の承認または拒否](approving-or-rejecting-orders-in-order-workflows.md)

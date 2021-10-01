@@ -10,9 +10,9 @@
 
 オプションテンプレートを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Product]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Product]* に移動します。
 
-2.  *[Options]*タブをクリックします。 ページの左側に既存のテンプレートのリストが表示され、右側に*[Option Template Detail]*フォームが表示されます。
+2.  *[Options]* タブをクリックします。 ページの左側に既存のテンプレートのリストが表示され、右側に*[Option Template Detail]* フォームが表示されます。
 
 3.  （+）をクリックして、オプションテンプレートを追加します。
 
@@ -34,7 +34,7 @@
 
         ![オプションテンプレート](./customizing-your-product-with-product-options/images/01.png)
 
-5.  *[Save]*をクリックします。
+5.  *[Save]* をクリックします。
 
 オプションテンプレートが追加され、すべての商品に適用できます。
 
@@ -48,11 +48,11 @@ SKUコントリビューターには、 [SKU](./adding-skus-to-your-products.md)
 
 ## オプション値の追加
 
-テンプレートで使用されるフィールドタイプによっては、そのオプションに値を作成する必要があります。 この例では、*[Select from List]*には、異なる商品の色などのオプション値が必要です。
+テンプレートで使用されるフィールドタイプによっては、そのオプションに値を作成する必要があります。 この例では、*[Select from List]* には、異なる商品の色などのオプション値が必要です。
 
 複数のオプション値を追加するには：
 
-1.  *[Color]*の隣にある *[Values]*リンクをクリックします。
+1.  *[Color]* の隣にある *[Values]* リンクをクリックします。
 
 2.  [(+) Add Option Values]ボタンをクリックします。
 
@@ -62,13 +62,13 @@ SKUコントリビューターには、 [SKU](./adding-skus-to-your-products.md)
 
       - **Priority:** 1.0
 
-      - **Key:**（*[Name]*フィールドから自動生成）
+      - **Key:**（*[Name]* フィールドから自動生成）
 
         ![オプション値の追加](./customizing-your-product-with-product-options/images/02.png)
 
-4.  *[Save]*をクリックします。
+4.  *[Save]* をクリックします。
 
-これで、*[Black]*が色オプションに追加されます。 さらに色を追加するには、手順を繰り返して優先度を上げます。 たとえば、*白色*を追加して優先度を2.0に設定し、その後に*青色*を優先度3.0で追加できます。 優先度フィールドによってオプションが表示される順序が決定し、最も低い値が最初に表示されることに注意してください。
+これで、*[Black]* が色オプションに追加されます。 さらに色を追加するには、手順を繰り返して優先度を上げます。 たとえば、*白色*を追加して優先度を2.0に設定し、その後に*青色*を優先度3.0で追加できます。 優先度フィールドによってオプションが表示される順序が決定し、最も低い値が最初に表示されることに注意してください。
 
 ## オプションテンプレートを商品に適用する
 
@@ -76,7 +76,7 @@ SKUコントリビューターには、 [SKU](./adding-skus-to-your-products.md)
 
 オプションテンプレートを商品に適用するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
 
 2.  *[Products]* タブをクリックします。
 
@@ -84,29 +84,29 @@ SKUコントリビューターには、 [SKU](./adding-skus-to-your-products.md)
 
     ![商品の選択](./customizing-your-product-with-product-options/images/03.png)
 
-4.  *[Torque Converters]*をクリックします。
+4.  *[Torque Converters]* をクリックします。
 
-5.  *[Options]*タブをクリックします。
+5.  *[Options]* タブをクリックします。
 
     ![[Options]タブ](./customizing-your-product-with-product-options/images/04.png)
 
 6.  （+）ボタンをクリックして、オプションを追加します。
 
-7.  *[Package Quantity]*のボックスをオンにします。
+7.  *[Package Quantity]* のボックスをオンにします。
 
-8.  *[Priority]*フィールドに**1.0**と入力します。
+8.  *[Priority]* フィールドに**1.0**と入力します。
 
     ![オプションを追加](./customizing-your-product-with-product-options/images/05.png)
 
-9.  *[Save]*をクリックします。
+9.  *[Save]* をクリックします。
 
 これで、オプションテンプレートが適用されました。商品がカタログページに表示されると、購入者はさまざまな数量のトルクコンバーターを選択できるようになりました。
 
 ## 追加情報
 
-商品ごとに複数のオプションテンプレートを適用でき、各オプションには独自の表示優先度があることに注意してください。 *[Package Quantity]*（Miniumアクセラレータでデフォルトで作成される）に加えて、上記のオプションテンプレートのセクションで作成した*[Color]*オプションがあります。 テンプレート自体を変更せずに、この画面でオプション値を変更することもできます。
+商品ごとに複数のオプションテンプレートを適用でき、各オプションには独自の表示優先度があることに注意してください。 *[Package Quantity]*（Miniumアクセラレータでデフォルトで作成される）に加えて、上記のオプションテンプレートのセクションで作成した*[Color]* オプションがあります。 テンプレート自体を変更せずに、この画面でオプション値を変更することもできます。
 
-1.  *[Package Quantity]*の隣にある *[Values]*リンクをクリックします。
+1.  *[Package Quantity]* の隣にある *[Values]* リンクをクリックします。
 
 2.  （+）ボタンをクリックして、新しい値を追加します。
 
@@ -116,7 +116,7 @@ SKUコントリビューターには、 [SKU](./adding-skus-to-your-products.md)
       - **Priority:** 5.0
       - **Key**:（自動生成）
 
-4.  *[Save]*をクリックします。
+4.  *[Save]* をクリックします。
 
     ![値の詳細を追加](./customizing-your-product-with-product-options/images/06.png)
 

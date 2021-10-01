@@ -47,28 +47,28 @@ Authorize.netを支払い方法としてアクティブ化するには：
 
     ![Authorize.Netの設定](./authorize.net/images/01.png)
 
-10. *[Save]*をクリックします。
+10. *[Save]* をクリックします。
 
-11. *[Authorize.Net]*の隣にある*3ドットアイコン*をクリックし、次に*[Activate]*をクリックします。
+11. *[Authorize.Net]* の隣にある*3ドットアイコン*をクリックし、次に*[Activate]* をクリックします。
 
 完了すると、Authorize.Netが有効になります。
 
 ### Commerce 2.0以前
 
-1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]*に移動します。
+1.  *[Site Administration] → [Commerce] → [Settings] → [Payment Methods]* に移動します。
 
     ![Authorize.Netの設定](./authorize.net/images/05.png)
 
 2.  追加（+）ボタンをクリックし、次に *Authorize.Net*をクリックします。
 
-3.  *[Configuration]*をクリックします。
+3.  *[Configuration]* をクリックします。
 
 4.  次のように入力します：
 
       - **APIログインID**
       - **トランザクションキー**
 
-5.  ライブサイトの場合は*[Production]*を、テスト環境の場合は*[Sandbox]*を選択します。
+5.  ライブサイトの場合は*[Production]* を、テスト環境の場合は*[Sandbox]* を選択します。
 
 6.  以下の内容を表示するには、以下のオプションをオンにします。
 
@@ -84,9 +84,9 @@ Authorize.netを支払い方法としてアクティブ化するには：
 
         ![Authorize.Netの設定](./authorize.net/images/02.png)
 
-8.  *[Save]*をクリックします。
+8.  *[Save]* をクリックします。
 
-9.  *[Authorize.Net]*の隣にある*3ドットアイコン*をクリックし、次に*[Activate]*をクリックします。
+9.  *[Authorize.Net]* の隣にある*3ドットアイコン*をクリックし、次に*[Activate]* をクリックします。
 
 ## 追加情報
 

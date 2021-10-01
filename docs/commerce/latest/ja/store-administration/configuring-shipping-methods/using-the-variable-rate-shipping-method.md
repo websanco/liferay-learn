@@ -12,7 +12,7 @@
 
 変動料金配送方法を有効にするには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
     ![コントロールパネルのチャネルに移動します。](./using-the-variable-rate-shipping-method/images/07.png)
 
@@ -26,7 +26,7 @@
 
 5
 
-*[Active]* トグルを *[YES]*に切り替えます。</ol>
+*[Active]* トグルを *[YES]* に切り替えます。</ol>
 
 可変レートの配送方法がアクティブになりました。
 
@@ -34,7 +34,7 @@
 
 変動料金配送オプションを追加するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Channels]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Channels]* に移動します。
 
 2.  目的のチャネル（たとえば、Sahara.com）をクリックします。 （Miniumなどのアクセラレータを使用してサイトを作成した場合は、対応するチャネルがデフォルトですでに作成されています。）
 
@@ -44,7 +44,7 @@
 
 5
 
-*[Shipping Options]*タブをクリックします。
+*[Shipping Options]* タブをクリックします。
 
 6
 
@@ -62,7 +62,7 @@
 
 8
 
-*[Save]*をクリックします。
+*[Save]* をクリックします。
 
 9
 
@@ -72,7 +72,7 @@
 
 ## 変動送料の設定
 
-1.  *[Shipping Option Settings]*タブをクリックします。
+1.  *[Shipping Option Settings]* タブをクリックします。
 
 2.  追加（![Add Icon](../../images/icon-add.png)）ボタンをクリックして、変動レートコスト式を追加します。
 
@@ -93,7 +93,7 @@
       - **Rate Unit Weight Price**：このフィールドに入力すると、重量あたりのコストが課せられます。 空白のままにすることができます。
       - **Rate Percentage**：このフィールドに入力すると、注文の小計のパーセンテージに基づいて送料が課せられます。 空白のままにすることができます。
 
-5.  *[Save]*をクリックします。
+5.  *[Save]* をクリックします。
 
 6.  [配送オプション設定の編集]ウィンドウを閉じます。
 
@@ -101,12 +101,12 @@
 
 ### 発送方法の有効化
 
-1.  *[Site Administration]* → *[Commerce]* → *[Settings]*に移動します。
-2.  *[Shipping Methods]*タブをクリックします。
-3.  *[Variable Rate]*をクリックします。
+1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に移動します。
+2.  *[Shipping Methods]* タブをクリックします。
+3.  *[Variable Rate]* をクリックします。
 4.  *[Details]* タブをクリックします。
-5.  *[Active]*ボタンを*[YES]*に切り替えます。
-6.  *[Save]*をクリックします。
+5.  *[Active]* ボタンを*[YES]* に切り替えます。
+6.  *[Save]* をクリックします。
 
 発送方法が有効になりました。
 
@@ -114,13 +114,13 @@
 
 新しい変動レート配送オプションを作成するには：
 
-1.  *[Site Administration]* → *[Commerce]* → *[Settings]*に移動します。
+1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に移動します。
 
-2.  *[Shipping Methods]*タブをクリックします。
+2.  *[Shipping Methods]* タブをクリックします。
 
-3.  *[Variable Rate]*をクリックします。
+3.  *[Variable Rate]* をクリックします。
 
-4.  *[Shipping Options]*タブをクリックします。
+4.  *[Shipping Options]* タブをクリックします。
 
 5.  追加（![Add Icon](../../images/icon-add.png)）ボタンをクリックして、新しい配送オプションを追加します。
 
@@ -132,13 +132,13 @@
 
     ![新しい2 Day Ground配送オプション](./using-the-variable-rate-shipping-method/images/01.png)
 
-7.  *[Save]*をクリックします。
+7.  *[Save]* をクリックします。
 
 新しい配送オプションが作成されました。 この配送オプションの設定を完了するには、変動送料を適用します。
 
 ### 変動送料の設定
 
-1.  *[Shipping Option Settings]*タブをクリックします。
+1.  *[Shipping Option Settings]* タブをクリックします。
 
 2.  （+）ボタンをクリックして、変動レートの原価公式を追加します。
 
@@ -166,7 +166,7 @@
 
         ![2 Day Ground設定](./using-the-variable-rate-shipping-method/images/02.png)
 
-4.  *[Save]*をクリックします。
+4.  *[Save]* をクリックします。
 
 ## 追加情報
 

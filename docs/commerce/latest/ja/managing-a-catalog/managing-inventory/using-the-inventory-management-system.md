@@ -18,7 +18,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
 在庫商品を追加する：
 
-1.  *[コントロールパネル]* → *[Commerce]* → *[在庫]*に移動します。
+1.  *[コントロールパネル]* → *[Commerce]* → *[在庫]* に移動します。
 
 2.  （![Add Icon](../../images/icon-add.png)）アイコンをクリックします。
 
@@ -30,7 +30,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
     ![新しい在庫商品を追加します。](./using-the-inventory-management-system/images/01.png)
 
-4.  完了したら、*[送信]*をクリックします。
+4.  完了したら、*[送信]* をクリックします。
 
 新しい在庫商品が追加されました。
 
@@ -42,7 +42,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
 1.  SKU（12 PACKMOCHA）をクリックします。
 
-2.  3点アイコン（![Actions](../../images/icon-actions.png)）をクリックし、倉庫の横にある*[Edit]*をクリックします。
+2.  3点アイコン（![Actions](../../images/icon-actions.png)）をクリックし、倉庫の横にある*[Edit]* をクリックします。
 
 3.  次のように入力します：
 
@@ -51,7 +51,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
     ![安全在庫量を設定します。](./using-the-inventory-management-system/images/02.png)
 
-4.  完了したら、*[保存]*をクリックします。
+4.  完了したら、*[保存]* をクリックします。
 
 5.  ウィンドウを閉じます。
 
@@ -75,7 +75,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
 1.  SKUをクリックします。
 
-2.  *[入荷]*タブをクリックします。
+2.  *[入荷]* タブをクリックします。
 
 3.  （![Add Icon](../../images/icon-add.png)）アイコンをクリックします。
 
@@ -87,7 +87,7 @@ Liferay Commerceの*在庫管理*システムは、ユーザーがLiferay Commer
 
     ![入荷在庫を追加します。](./using-the-inventory-management-system/images/04.png)
 
-5.  完了したら、*[送信]*をクリックします。
+5.  完了したら、*[送信]* をクリックします。
 
 入荷量が追加されると、 *[概要]* タブで更新されます。
 

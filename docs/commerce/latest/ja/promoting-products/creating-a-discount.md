@@ -4,7 +4,7 @@
 
 新しい割引を作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Discounts]*に移動します。
+1.  *[Control Panel]* → *[Commerce]* → *[Discounts]* に移動します。
 
 2.  （![Add](../images/icon-add.png)）ボタンをクリックして、新しい割引を追加します。
 
@@ -25,11 +25,11 @@
 10. [*Level*](./introduction-to-discounts.md#tiered-discounts)：20.00と入力し
  。 これにより、小計から20％オフになります。</p></li> 
     
-    11 *[Active]* トグルを *[YES]*に切り替えます。
+    11 *[Active]* トグルを *[YES]* に切り替えます。
   
   ![新しい割引](./creating-a-discount/images/01.png)
 
-12 *[Publish]*をクリックします。</ol> 
+12 *[Publish]* をクリックします。</ol> 
 
 ストアでは、指定されたアカウントグループの商品を対象に、選択した商品に20%割引が適用されるようになりました。
 
@@ -39,17 +39,17 @@
 
 割引の対象となる要件を指定するルールを定義できます。 詳細については、 [割引ルール](./introduction-to-discounts.md#discount-rules) を参照してください。
 
-1.  割引が作成されると、*[Detail]*および*[Rules]*の2つのタブが用意されます。 *[Rules]*タブをクリックします。
+1.  割引が作成されると、*[Detail]* および*[Rules]* の2つのタブが用意されます。 *[Rules]* タブをクリックします。
    
    ![割引ルールタブ](./creating-a-discount/images/02.png)
 
 2.  （+）ボタンをクリックして、新しい割引ルールを追加します。
 
-3.  *[Type]* ドロップダウンメニューから *[Cart Total]*を選択します。
+3.  *[Type]* ドロップダウンメニューから *[Cart Total]* を選択します。
 
-4.  *[Cart Total Minimum Amount]*フィールドに15.00と入力します。
+4.  *[Cart Total Minimum Amount]* フィールドに15.00と入力します。
 
-5.  *[保存]*をクリックします。
+5.  *[保存]* をクリックします。
 
 この例では、この特定の割引に割引ルールが適用されました。 顧客は、設定された金額を超えるすべての購入に対してこの割引を受けます。
 

@@ -10,7 +10,7 @@ MiniumはLiferay Commerceの[アクセラレータ](./accelerators.md)であり�
 
 ### ページ
 
-Miniumは、サイトに複数のページとウィジェットを取り込み、購入者に完全なユーザーエクスペリエンスを提供します。 作成されたページの完全なリストを表示するには、*[Site Menu] → [Build] → [Pages]*に移動します。
+Miniumは、サイトに複数のページとウィジェットを取り込み、購入者に完全なユーザーエクスペリエンスを提供します。 作成されたページの完全なリストを表示するには、*[Site Menu] → [Build] → [Pages]* に移動します。
 
 ![Miniumページ](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/01.png)
 

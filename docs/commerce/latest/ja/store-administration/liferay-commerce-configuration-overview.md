@@ -1,10 +1,10 @@
 # Liferay Commerce設定の概要
 
-Liferay Commerceの設定は、Liferay*商品メニュー*のいくつかの場所に分かれています。 Commerceの*[Control Panel]*ドロップダウンには、Liferay Commerceのインストールに*グローバル*に適用される構成と設定が含まれています。 Commerceの*[Site Menu]*ドロップダウンには、特定のストアサイトを対象とする構成と設定が含まれています。
+Liferay Commerceの設定は、Liferay*商品メニュー*のいくつかの場所に分かれています。 Commerceの*[Control Panel]* ドロップダウンには、Liferay Commerceのインストールに*グローバル*に適用される構成と設定が含まれています。 Commerceの*[Site Menu]* ドロップダウンには、特定のストアサイトを対象とする構成と設定が含まれています。
 
 ## Commerceのコントロールパネル
 
-*[Control Panel]* → *[Commerce]*に移動します。 以下の設定のいずれかに変更を加えると、ストアサイト全体に適用されます。
+*[Control Panel]* → *[Commerce]* に移動します。 以下の設定のいずれかに変更を加えると、ストアサイト全体に適用されます。
 
 ![グローバルCommerce設定](./liferay-commerce-configuration-overview/images/01.png)
 
@@ -28,7 +28,7 @@ Liferay Commerceの設定は、Liferay*商品メニュー*のいくつかの場�
 
 次の設定は、選択したストアサイトに限定されます。 ここで行った変更は、同じLiferay Commerceインスタンスでホストされている他のストアには適用されません。
 
-*[Control Panel]* → *[Store Site]* → *[Commerce]*に移動します。
+*[Control Panel]* → *[Store Site]* → *[Commerce]* に移動します。
 
 ![サイトの最小フル設定](./liferay-commerce-configuration-overview/images/03.png)
 
