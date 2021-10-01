@@ -217,7 +217,6 @@ Like the 7.4+ example, this module specifies custom values in language key files
 Each locale you're overriding requires a class that extends `java.util.ResourceBundle`. Here's the example resource bundle class for the `en_US` locale:
 
 ```{literalinclude} ./overriding-global-language-keys/resources/liferay-x8f3.zip/x8f3-impl/src/main/java/com/acme/x8f3/internal/language/X8F3EnglishResourceBundle.java
-:dedent: 1
 :language: java
 :lines: 10-26
 ```
