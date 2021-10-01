@@ -6,7 +6,7 @@
 
 ![同じカタログ内の複数の商品をフィルタリングして、複数のチャネルで販売することができます。](./configuring-product-visibility-using-channels/images/01.png)
 
-Liferay Commerceでのチャネルの使用の詳細については、[Introduction to Channels](./introduction-to-channels.md)を参照してください。
+Liferay Commerceでのチャネルの使用の詳細は、[チャネルについて](./introduction-to-channels.md)を参照してください。
 
 ## 前提条件
 
@@ -16,9 +16,27 @@ Liferay Commerceでのチャネルの使用の詳細については、[Introduct
 
 ## 商品フィルターチャネルの構成
 
+1.  *[Global Applications]* → *[Commerce]* & *[Products]*をクリックします。
+
+2.  商品をクリックします。
+
+3.  *Visibility* タブをクリックします。
+
+    ![2.1での商品の可視性](./configuring-product-visibility-using-channels/images/03.png)
+
+4.  追加ボタンをクリックします。
+
+5.  目的のチャネル（たとえば、 *Test Channel One*）をクリックします。
+
+6.  *[Add]*をクリックします。
+
+これで、チャネルが商品に関連付けられました。
+
+## Commerce 2.1以前
+
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[コントロールパネル]* → *[Commerce]* → *[Products]*に移動します。
 
 2.  商品をクリックします。
 
@@ -38,7 +56,7 @@ Liferay Commerceでのチャネルの使用の詳細については、[Introduct
 
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]*に移動します。
+1.  *[コントロールパネル]* → *[Commerce]* → *[Products]*に移動します。
 
 2.  商品をクリックします（この例では*Torque Converters*）。
 
@@ -52,11 +70,11 @@ Liferay Commerceでのチャネルの使用の詳細については、[Introduct
 
     ![商品構成](./configuring-product-visibility-using-channels/images/02.png)
 
-7.  *[Save]*をクリックします。
+7.  *[保存]*をクリックします。
 
 商品は、選択したチャネルでのみ表示されます。
 
 ## 追加情報
 
-  - [Introduction to Channels](./introduction-to-channels.md)
-  - [Managing Channels](./managing-channels.md)
+  - [チャネルについて](./introduction-to-channels.md)
+  - [チャネル管理](./managing-channels.md)

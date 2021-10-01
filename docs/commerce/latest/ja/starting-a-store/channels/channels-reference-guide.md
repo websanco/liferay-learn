@@ -30,7 +30,7 @@
 
 ![[価格]タブでは、税のカテゴリと価格を設定します。](./channels-reference-guide/images/03.png)
 
-### 健康診断
+### ヘルスチェック
 
 ヘルスチェックにより、ユーザーは、ストアが機能するために必要なウィジェットの不足など、ストアサイトに関する一般的なセットアップの問題をすばやく修正できます。
 
@@ -44,7 +44,7 @@
 
 ### 配送方法
 
-ユーザーはチャネルの配送方法を設定できます。 デフォルトでは、 [フラットレート](../../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) が有効になっています。 ユーザーは [可変レート](../../../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) 配送方法を有効にすることもできます。 加入者は [FedEx](../../../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)有効にすることもでき
+ユーザーはチャネルの配送方法を設定できます。 デフォルトでは、 [一律料金](../../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) が有効になっています。 ユーザーは [可変レート](../../../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) 配送方法を有効にすることもできます。 加入者は [FedEx](../../../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)有効にすることもでき
  。</p> 
 
 最後に、ユーザーは [カスタム配送エンジン](../../../developer-guide/implementing-a-new-shipping-engine.md)使用できます。
@@ -55,7 +55,7 @@
 
 ### 税計算
 
-ユーザーはチャネルの税計算を構成できます。 税率の設定の詳細については、 [住所による税率の設定](../../../store-administration/configuring-taxes/setting-tax-rate-by-address.md) または [固定税による税率の設定](../../../store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.md)を参照してください</p> 
+ユーザーはチャネルの税計算を構成できます。 税率の設定の詳細は、 [住所による税率の設定](../../../store-administration/configuring-taxes/setting-tax-rate-by-address.md) または [固定税による税率の設定](../../../store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.md)を参照してください</p> 
 
 ![ユーザーはチャネルの税計算を構成できます。](./channels-reference-guide/images/07.png)
 
@@ -73,7 +73,7 @@
 
 Liferay Commerceは、さまざまなイベントによってトリガーされる電子メール通知を送信するように構成できます。 イベントによって通知がトリガーされると（注文など）、通知はチャネルの[ *通知キュー* ]タブに記録されます。 デフォルトでは、Liferay Commerceインスタンスは、通知が15分ごとに送信されたかどうかを確認し、43200分（30日）後に未送信の通知を削除します。
 
-詳細については、 [コマース通知キュー](../../../store-administration/sending-emails/configuring-the-commerce-notification-queue.md) 設定の記事を参照してください。
+詳細は、 [コマース通知キュー](../../../store-administration/sending-emails/configuring-the-commerce-notification-queue.md) 設定の記事を参照してください。
 
 
 
@@ -81,9 +81,9 @@ Liferay Commerceは、さまざまなイベントによってトリガーされ�
 
 通知テンプレートを使用すると、ユーザーはメール通知をカスタマイズして、トリガーイベントを定義できます。
 
-メール通知の送信について詳しくは、 [ストアメール](../../../store-administration/sending-emails/store-emails.md)ご覧ください。
+メール通知の送信について詳しくは、 [ストアメール](../../../store-administration/sending-emails/store-emails.md)を参照してください。
 
-通知テンプレートの作成と使用の詳細については、 [通知テンプレートの使用](../../../store-administration/sending-emails/using-notification-templates.md)を参照してください。
+通知テンプレートの作成と使用の詳細は、 [通知テンプレートの使用](../../../store-administration/sending-emails/using-notification-templates.md)を参照してください。
 
 ![通知テンプレートを作成します。](./channels-reference-guide/images/11.png)
 
@@ -91,15 +91,15 @@ Liferay Commerceは、さまざまなイベントによってトリガーされ�
 
 ## カテゴリ表示ページ
 
-[カテゴリ表示ページ]タブには、ストアサイトで作成されたすべてのカテゴリ表示ページのリストが表示されます。 *カテゴリー表示ページ* 使用すると、ユーザーは、特定のカテゴリーでタグ付けされたすべての商品を表示する特定のDXPサイトページを置き換えることができます。 ユーザーは最初に [商品カテゴリ](../../../store-administration/configuring-payment-methods/managing-payment-methods.md)を作成し、それらを目的の商品に関連付けてから、ページを作成する必要があります。
+[カテゴリ表示ページ]タブには、ストアサイトで作成されたすべてのカテゴリ表示ページのリストが表示されます。 *カテゴリー表示ページ* 使用すると、ユーザーは、特定のカテゴリーでタグ付けされたすべての商品を表示する特定のDXPサイトページを置き換えることができます。 ユーザーは最初に [商品カテゴリ](../../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を作成し、それらを目的の商品に関連付けてから、ページを作成する必要があります。
 
-DXPサイトページの作成の詳細については、 [ページの作成](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html)を参照してください。 タグとカテゴリの作成の詳細については、 [タグとカテゴリ](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/tags_and_categories.html)を参照してください。
+DXPサイトページの作成の詳細は、 [ページの作成](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html)を参照してください。 タグとカテゴリの作成の詳細は、 [タグとカテゴリ](https://learn.liferay.com/dxp/7.x/en/content-authoring-and-management/tags_and_categories.html)を参照してください。
 
 
 
 ## 商品表示ページ
 
-商品表示ページは、カテゴリ表示ページと同様の前提で動作します。ユーザーは特定のサイトページを作成して、デフォルトのカタログページの代わりに特定の商品を強調表示できます。 *商品表示ページ* タブで、ユーザーはサイトで作成されたすべての商品表示ページのリストを表示できます。
+商品表示ページは、カテゴリ表示ページと同様の前提で動作します。ユーザーは特定のサイトページを作成して、デフォルトのカタログページの代わりに特定の商品を強調表示できます。 *商品表示ページ* タブで、ユーザーはサイトで作成されたすべての商品表示ページのリストを表示できます。 詳細は、[製品表示ページの作成](../../creating-store-content/creating-product-display-pages.md)を参照してください。
 
 
 
@@ -117,9 +117,16 @@ DXPサイトページの作成の詳細については、 [ページの作成](h
 
 ![発送制限](./channels-reference-guide/images/09.png)
 
+<!--
+## Punch Out
+
+Users can manage their Punch Out procurement systems from here. Purchasing the additional Liferay Commerce Connector to PunchOut2Go ("PunchOut2Go Connector") is required. See [Liferay Commerce Connector to PunchOut2Go]() for more information.
+
+-->
+
 
 
 ## 追加情報
 
   - [チャネルを使用した商品の可視性の構成](./configuring-product-visibility-using-channels.md)
-  - [Enabling or Disabling Order Workflows](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)
+  - [注文ワークフローの有効化または無効化](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)

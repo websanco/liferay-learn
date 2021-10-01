@@ -1,8 +1,8 @@
 # 新しい支払い方法の実装
 
-このチュートリアルでは、[CommercePaymentMethod](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/payment/method/CommercePaymentMethod.java)インターフェイスを実装して、新しい支払い方法を追加する方法を示します。
+このチュートリアルでは、[CommercePaymentMethod](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/payment/method/CommercePaymentMethod.java)インターフェイスを実装して、新しい支払い方法を追加する方法を示します。
 
-支払方法とは、顧客が注文に対して支払う様々な方法を表します。 Liferay Commerceでは、 [Authorize.Net](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-method-authorize-net/src/main/java/com/liferay/commerce/payment/method/authorize/net/internal/AuthorizeNetCommercePaymentMethod.java)、[Mercanet](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-method-mercanet/src/main/java/com/liferay/commerce/payment/method/mercanet/internal/MercanetCommercePaymentMethod.java)、[Money Order](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-method-money-order/src/main/java/com/liferay/commerce/payment/method/money/order/internal/MoneyOrderCommercePaymentMethod.java)、および[PayPal](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)を含むすぐに使える支払方法をいくつか提供しています。
+支払方法とは、顧客が注文に対して支払う様々な方法を表します。 Liferay Commerceは以下のような支払方法を標準で備えています。：[Authorize.Net](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-authorize-net/src/main/java/com/liferay/commerce/payment/method/authorize/net/internal/AuthorizeNetCommercePaymentMethod.java)、[Mercanet](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-mercanet/src/main/java/com/liferay/commerce/payment/method/mercanet/internal/MercanetCommercePaymentMethod.java), [Money Order](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-money-order/src/main/java/com/liferay/commerce/payment/method/money/order/internal/MoneyOrderCommercePaymentMethod.java)、[PayPal](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)
 
 ![すぐに使える支払方法](./implementing-a-new-payment-method/images/01.png "すぐに使える支払方法")
 
@@ -16,16 +16,16 @@
 
 このセクションでは、支払方法をLiferay Commerceのインスタンスで実行する例を示します。 次の手順を実行します：
 
-1.  Liferay Commerceを開始します。
+1.  Liferay Commerceを起動します。
 
     ``` bash
-    docker run -it -p 8080:8080 liferay/commerce:2.0.5
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 2.  [Acme Commerce Payment Method](./liferay-b1c3.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-b1c3.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-b1c3.zip -O
     ```
 
     ``` bash
@@ -48,9 +48,15 @@
     STARTED com.acme.b1c3.impl_1.0.0
     ```
 
-5.  サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、*[Site Administration]* → *[Commerce]* → *[Settings]* → *[Payment Methods]*に移動します。
+5.  サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にグローバルメニュー (![Applications Menu](../images/icon-applications-menu.png))をクリックし、*Commerce* → *Channels*に移動します。その後、*Payment Methods*セクションまでスクロールします。
 
-    ![新しい支払方法](./implementing-a-new-payment-method/images/02.png "新しい支払方法")
+<!-- end list -->
+
+``` note::
+   Liferay Commerce 2.1以前のバージョンでは、*Site Administration* → *Commerce* → *Settings* → *Payment Methods*に移動します。
+```
+
+![新しい支払方法](./implementing-a-new-payment-method/images/02.png "新しい支払方法")
 
 これで、`CommercePaymentMethod`を実装する新しい支払方法を正常に構築およびデプロイできました。
 
@@ -64,16 +70,13 @@
 
 ``` java
 @Component(
-    immediate = true,
-    property = "commerce.payment.engine.method.key=" + B1C3CommercePaymentMethod.KEY,
+    property = "commerce.payment.engine.method.key=b1c3",
     service = CommercePaymentMethod.class
 )
 public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
-
-    public static final String KEY = "Example";
 ```
 
-> Liferay Commerceが[支払方法レジストリ](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-service/src/main/java/com/liferay/commerce/payment/internal/method/CommercePaymentMethodRegistryImpl.java)で新しい支払方法を他の支払方法と区別できるように、支払方法に個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられている支払方法が上書きされます。
+> Liferay Commerceが[支払方法レジストリ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-service/src/main/java/com/liferay/commerce/payment/internal/method/CommercePaymentMethodRegistryImpl.java)で新しい支払方法を他の支払方法と区別できるように、支払方法に個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられている支払方法が上書きされます。
 
 ### `CommercePaymentMethod`インターフェイスを確認する
 
@@ -83,7 +86,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getDescription(Locale locale);
 ```
 
-> これにより、*[Payment Methods]*管理ページの「Description」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
+> これにより、*[Payment Methods]*管理ページの「Description」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
 
 ``` java
     public String getKey();
@@ -144,7 +147,7 @@ public CommercePaymentResult processPayment(
 }
 ```
 
-> このメソッドにカスタム支払いロジックを実装します。 `CommercePaymentResult`には、支払いの処理に関連する情報を格納する必要があります。 詳細については、[CommercePaymentResult.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/payment/result/CommercePaymentResult.java)を参照してください。
+> このメソッドにカスタム支払いロジックを実装します。 `CommercePaymentResult`には、支払いの処理に関連する情報を格納する必要があります。 詳細は、[CommercePaymentResult.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/payment/result/CommercePaymentResult.java)を参照してください。
 
 #### 支払完了ロジックを実装する
 
@@ -170,24 +173,26 @@ public CommercePaymentResult completePayment(
 }
 ```
 
-> このメソッドにカスタム支払完了ロジックを実装します。 `CommercePaymentResult`は、支払いプロセスの完了に関連する情報を格納するコンテナです。 詳細については、[CommercePaymentResult.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/payment/result/CommercePaymentResult.java)を参照してください。
+> このメソッドにカスタム支払完了ロジックを実装します。 `CommercePaymentResult`は、支払いプロセスの完了に関連する情報を格納するコンテナです。 詳細は、[CommercePaymentResult.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/payment/result/CommercePaymentResult.java)を参照してください。
 
 #### オプションのメソッドを実装する
 
-購読、定期的な支払い、払い戻しなど、追加の機能を提供するために実装できる追加のメソッドがあります。 これらは、[CommercePaymentMethod.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/payment/method/CommercePaymentMethod.java)で確認できます。 これらのメソッドはペアで提供されます。1つは有効にするメソッドで、もう1つは特定の機能を実装するメソッドです。
+購読、定期的な支払い、払い戻しなど、追加の機能を提供するために実装できる追加のメソッドがあります。 これらは、[CommercePaymentMethod.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/payment/method/CommercePaymentMethod.java)で確認できます。 これらのメソッドはペアで提供されます。1つは有効にするメソッドで、もう1つは特定の機能を実装するメソッドです。
 
-これらのメソッドの多くは、オンラインAPIを使用した支払方法にとって重要です。 オンライン支払方法の例については、[PayPalCommercePaymentMethod](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)を参照してください。
+これらのメソッドの多くは、オンラインAPIを使用した支払方法にとって重要です。 オンライン支払方法の例については、[PayPalCommercePaymentMethod](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)を参照してください。
 
 この例では、これらのオプションのメソッドをオーバーライドしていません。
 
-#### 言語キーを追加します `Language.properties`
+#### 言語キーを `Language.properties`に追加します。
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
-    example=Example
-    this-is-the-example-payment-method=This is the Example Payment Method.
+``` properties
+b1c3-commerce-payment-method=B1C3 Commerce Payment Method
+pay-via-b1c3-commerce-payment-method=Pay via B1C3 commerce payment method.
+```
 
-> 詳細は、[Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
 
 ## まとめ
 
@@ -195,4 +200,4 @@ public CommercePaymentResult completePayment(
 
 ## 追加情報
 
-  - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
+  - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

@@ -1,8 +1,8 @@
 # 新しい税エンジンの実装
 
-このチュートリアルでは、[CommerceTaxEngine](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxEngine.java)インターフェイスを実装して、新しい税エンジンを追加する方法を示します。
+このチュートリアルでは、[CommerceTaxEngine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxEngine.java)インターフェイスを実装して、新しい税エンジンを追加する方法を示します。
 
-税エンジンは、取引が行われるときに税金の計算を実行します。 Liferay Commerceでは、デフォルトで2つの税エンジン、[FixedCommerceTaxEngine](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-tax-engine-fixed-service/src/main/java/com/liferay/commerce/tax/engine/fixed/internal/engine/FixedCommerceTaxEngine.java)（固定料金用）と[ByAddressCommerceTaxEngine](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-tax-engine-fixed-service/src/main/java/com/liferay/commerce/tax/engine/fixed/internal/engine/ByAddressCommerceTaxEngine.java)（住所別に税金を計算する用）を提供しています。
+税エンジンは、取引が行われるときに税金の計算を実行します。 Liferay Commerceには、デフォルトで2つの税エンジン、[FixedCommerceTaxEngine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-tax-engine-fixed-service/src/main/java/com/liferay/commerce/tax/engine/fixed/internal/engine/FixedCommerceTaxEngine.java)（固定料金用）と[ByAddressCommerceTaxEngine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-tax-engine-fixed-service/src/main/java/com/liferay/commerce/tax/engine/fixed/internal/engine/ByAddressCommerceTaxEngine.java)（住所別に税金を計算する用）が組み込まれています。
 
 ![すぐに使える税エンジン](./implementing-a-new-tax-engine/images/01.png "すぐに使える税エンジン")
 
@@ -19,13 +19,13 @@
 1.  Liferay Commerceを開始します。
 
     ``` bash
-    docker run -it -p 8080:8080 liferay/commerce:2.0.5
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 2.  [Acme Commerce Tax Engine](./liferay-q4b9.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-q4b9.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-q4b9.zip -O
     ```
 
     ``` bash
@@ -48,7 +48,13 @@
     STARTED com.acme.q4b9.impl_1.0.0
     ```
 
-5.  サンプルの税エンジンが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、*[Site Administration]* → *[Commerce]* → *[Settings]* → *[Taxes]* → *[Tax Calculations]*に移動します。 新しい税エンジン（"Flat Tax"）がリストに表示されます。
+5.  サンプルの税エンジンが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[Channels]*に移動します。 新しいチャネルを編集する。 新しい税エンジン（"Q4B9 Commerce Tax Engine"）がリストに表示されます。
+
+<!-- end list -->
+
+``` note::
+   Commerce 2.1以前のバージョンでは、 *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*に移動して、税エンジンを確認します。
+```
 
 ![新しい税エンジン](./implementing-a-new-tax-engine/images/02.png "新しい税エンジン")
 
@@ -64,16 +70,11 @@
 
 ``` java
 @Component(
-    immediate = true,
-    property = "commerce.tax.engine.key=" + Q4B9CommerceTaxEngine.KEY,
-    service = CommerceTaxEngine.class
+    property = "commerce.tax.engine.key=q4b9", service = CommerceTaxEngine.class
 )
-public class Q4B9CommerceTaxEngine implements CommerceTaxEngine {
-
-    public static final String KEY = "Example";
 ```
 
-> Liferay Commerceが[税エンジンレジストリ](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceTaxEngineRegistryImpl.java)で新しいエンジンを他のエンジンと区別できるように、税エンジンに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられている税エンジンが上書きされます。
+> Liferay Commerceが[税エンジンレジストリ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceTaxEngineRegistryImpl.java)で新しいエンジンを他のエンジンと区別できるように、税エンジンに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられている税エンジンが上書きされます。
 
 ### `CommerceTaxEngine`インターフェイスを確認する
 
@@ -85,13 +86,13 @@ public CommerceTaxValue getCommerceTaxValue(
     throws CommerceTaxEngineException;
 ```
 
-> このメソッドでは、税エンジンのビジネスロジックが実装されます。 詳細については、[CommerceTaxValue](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxValue.java)を参照してください。
+> このメソッドでは、税エンジンのビジネスロジックが実装されます。 詳細は[CommerceTaxValue](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxValue.java)を参照してください。
 
 ``` java
 public String getDescription(Locale locale);
 ```
 
-> これは、税エンジンの簡単な説明を返します。 言語キーで説明を取得する際のリファレンスについては、[Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java)の実装を参照してください。
+> これは、税エンジンの簡単な説明を返します。 言語キーで説明を取得する際のリファレンスについては、[Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java)の実装を参照してください。
 
 ``` java
 public String getName(Locale locale);
@@ -114,35 +115,41 @@ public CommerceTaxValue getCommerceTaxValue(
         CommerceTaxCalculateRequest commerceTaxCalculateRequest)
     throws CommerceTaxEngineException {
 
-    BigDecimal flatTaxValue = new BigDecimal("1.50");
+    BigDecimal flatTaxValue = _ONE_POINT_FIVE_ZERO;
 
     if (commerceTaxCalculateRequest.isPercentage()) {
-        flatTaxValue = flatTaxValue.divide(new BigDecimal(100.0));
+        flatTaxValue = _ONE_POINT_FIVE_ZERO.divide(new BigDecimal(100.0));
 
         flatTaxValue = flatTaxValue.multiply(
             commerceTaxCalculateRequest.getPrice());
     }
 
-    return new CommerceTaxValue("flat-tax", KEY, flatTaxValue);
+    return new CommerceTaxValue(
+        "q4b9", "q4b9-commerce-tax-engine", flatTaxValue);
 }
+
+private static final BigDecimal _ONE_POINT_FIVE_ZERO = new BigDecimal(
+    "1.50");
 ```
 
-> `CommerceTaxCalculateRequest`パラメータには、計算に必要な情報が含まれています。 この例では、`CommerceTaxCalculateRequest`からの価格と、レートをパーセンテージとして適用するかどうかを示す値を使用します。 `CommerceTaxCalculateRequest`で使用できる他のメソッドを見つけるには、[CommerceTaxCalculateRequest.java](https://github.com/liferay/com-liferay-commerce/blob/2.0.5/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxCalculateRequest.java)を参照してください。
+> `CommerceTaxCalculateRequest`パラメータには、計算に必要な情報が含まれています。 この例では、`CommerceTaxCalculateRequest`からの価格と、レートをパーセンテージとして適用するかどうかを示す値を使用します。 `CommerceTaxCalculateRequest`で使用できる他のメソッドを見つけるには、[CommerceTaxCalculateRequest.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/tax/CommerceTaxCalculateRequest.java)を参照してください。
 
-#### 言語キーを追加します `Language.properties`
+#### 言語キーを `Language.properties`に追加します。
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
-    a-flat-tax-rate-that-does-not-adjust=A flat tax rate that does not adjust.
-    flat-tax=Flat Tax
+``` properties
+q4b9-commerce-tax-engine=Q4B9 Commerce Tax Engine
+this-tax-engine-serves-a-fixed-x-percent-flat-tax-rate=This tax engine serves a fixed {0} percent flat tax rate.
+```
 
-> 詳細は、[Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
 
 ## まとめ
 
-`CommerceTaxEngine`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい税エンジンを追加しました。
+　 `CommerceTaxEngine`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい税エンジンを追加しました。
 
 ## 追加情報
 
-  - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-  - [Setting Tax Rate by Fixed Rate](../../store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.md)
+  - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
+  - [固定税率の設定](../../store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.md)
