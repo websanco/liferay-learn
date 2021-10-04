@@ -4,12 +4,10 @@
 :maxdepth: 3
 
 styling-widgets-and-assets/configuring-the-look-and-feel.md
-styling-widgets-and-assets/exporting-importing-widget-data.md
-styling-widgets-and-assets/communicating-between-portlet-widgets.md
 styling-widgets-and-assets/sharing-widgets-with-other-sites.md
-styling-widgets-and-assets/setting-widget-permissions.md
-styling-widgets-and-assets/setting-widget-scopes.md
-styling-widgets-and-assets/configuring-templates.md
+styling-widgets-and-assets/creating-a-widget-template.md
+styling-widgets-and-assets/using-a-widget-template-example.md
+styling-widgets-and-assets/setting-a-default-widget-template.md
 ```
 
 ```{raw} html
