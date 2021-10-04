@@ -31,7 +31,7 @@ OpenSocial comprises a container and a set of APIs for social networking and oth
 
 1. To serve a Liferay widget on an OpenSocial platform, copy and paste the provided gadget URL, add it to the appropriate configuration page of the OpenSocial platform you're using. Your Liferay instance serves that widget directly onto that platform's page.
 
-The URL provided is unique to the specific instance of the widget, so you could serve multiple instances of the same widget as different OpenSocial Gadgets.
+    The URL provided is unique to the specific instance of the widget, so you could serve multiple instances of the same widget as different OpenSocial Gadgets.
 
 1. Go to *OpenSocial Gadget* on the Sharing tab, and enable the selector *Allow users to add [application-name] to an OpenSocial platform*.
 
@@ -41,7 +41,7 @@ The URL provided is unique to the specific instance of the widget, so you could 
 
 Netvibes offers a similar environment where users can log in, create their own personal dashboard, and add customizable widgets to it.
 
-1. Go to *Netvibes* on the Sharing tab, enable the *Allow users to add [application-name] to Netvibes pages* selector. You can then use the provided URL to create a custom Netvibes widget based on the instance of the Liferay widget that you're using.
+Go to *Netvibes* on the Sharing tab, enable the *Allow users to add [application-name] to Netvibes pages* selector. You can then use the provided URL to create a custom Netvibes widget based on the instance of the Liferay widget that you're using.
 
 ## Additional Information
 
