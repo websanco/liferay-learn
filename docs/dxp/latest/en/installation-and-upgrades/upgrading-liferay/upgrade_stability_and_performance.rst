@@ -5,7 +5,6 @@ Upgrade Stability and Performance
    :maxdepth: 2
 
    upgrade-stability-and-performance/upgrade-stability-and-performance-overview.md
-   upgrade-stability-and-performance/reporting-upgrade-details.md
    upgrade-stability-and-performance/database-tuning-for-upgrades.md
    upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md
    upgrade-stability-and-performance/example-removing-intermediate-journal-article-versions.md

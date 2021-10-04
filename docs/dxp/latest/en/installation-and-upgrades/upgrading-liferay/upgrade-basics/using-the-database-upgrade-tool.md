@@ -67,7 +67,7 @@ If you installed the new Liferay release on an application server, create a `[Li
     If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) files instead of Docker env variables. The [Portal Properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) lists the Portal Property that corresponds with each Liferay Env variable.
     ```
 
-1. Optionally, enable [upgrade reporting](../upgrade-stability-and-performance/reporting-upgrade-details.md).
+1. Optionally, enable [upgrade reporting](../reference/upgrade-reports.md).
 
     ```bash
     echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties
