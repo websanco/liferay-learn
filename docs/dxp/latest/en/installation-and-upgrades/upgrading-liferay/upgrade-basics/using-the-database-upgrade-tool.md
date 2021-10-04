@@ -12,18 +12,37 @@ If you're upgrading from 6.2 or earlier, update your file store configuration. S
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
-If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the Database Upgrade Tool, you'll use that tool from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version.
+If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the update tool, use that tool from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version. The tool is in the bundle's .
+
+If you installed the new Liferay release on an application server, create a `[Liferay Home]/tools/portal-tools-db-upgrade-client` folder,  download the upgrade tool, and install the tool to the new folder.
+
+| Edition | Download Instructions |
+| :---------- | :-------------------- |
+| Liferay DXP (Subscription) | Go to the [*Downloads* page](https://customer.liferay.com/group/customer/downloads) and select the DXP version and the _Product/Service Packs_ file type. In the listing that appears, click _Download_ for the _Liferay DXP Upgrade Client_. |
+| Liferay Portal | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community). In the _Liferay Portal_ downloads menu, select _Other files_ and click _Download_. The latest Liferay Portal release assets GitHub page appears. Click on `liferay-ce-portal-tools-[version].zip`. |
 
 ## Setting Up a New Installation
 
-1. Install the new Liferay release. If you're upgrading your database for a new Liferay Docker image, install the [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md).
+1. Replace the new Liferay installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
 
-1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
+1. Copy your DXP activation key (Subscription) and your [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
 
 1. If you're upgrading to 7.2, disable search indexing using a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) in your new installation's `[Liferay Home]/files/osgi/config/` folder. For example,
 
     ```bash
-    echo "indexReadOnly=\"true\"" >> [Liferay Home]/files/osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+    cd liferay-home
+    ```
+
+    ```bash
+    mkdir -p osgi/config
+    ```
+
+    ```bash
+    echo "indexReadOnly=\"true\"" >> osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+    ```
+
+    ```{note}
+    DXP/Portal 7.3+ disables/re-enables search indexing automatically.
     ```
 
 1. If you want to upgrade your Marketplace app data along with the Liferay database upgrade, [download](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md) the latest version of each app targeted for the new Liferay version and copy it to your `[Liferay Home]/deploy` folder. Otherwise, you can install the apps after the database upgrade and upgrade their data as described in the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
@@ -40,9 +59,19 @@ If you're [upgrading to a new Liferay Docker image](../../installing-liferay/usi
 
 1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
 
-1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
+1. Use your database vendor's recommended JDBC database driver. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in your [`portal-ext.properties`](../../reference/portal-properties.md) file and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
-    If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) instead of Docker env variables. The [Portal Properties reference](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) lists the corresponding Portal Property with each Liferay Env variable.
+    You can configure the upgrade by answering the upgrade tool prompts or by [using upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration). 
+
+    ```{note}
+    If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) files instead of Docker env variables. The [Portal Properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) lists the Portal Property that corresponds with each Liferay Env variable.
+    ```
+
+1. Optionally, enable [upgrade reporting](../upgrade-stability-and-performance/reporting-upgrade-details.md).
+
+    ```bash
+    echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties
+    ```
 
 1. If your installation is a Liferay Tomcat Bundle, it includes the upgrade tool at `[Liferay Home]/tools/portal-tools-db-upgrade-client`. Otherwise download the tool and install it to that folder.
 
@@ -58,21 +87,24 @@ The upgrade tool is configured via its command line interface, or by [using prop
 The `db_upgrade.sh` script in the `[Liferay Home]/tools/portal-tools-db-upgrade-client` folder invokes the upgrade tool. The `--help` option describes the tool's usage.
 
 ```bash
-db_upgrade.sh --help
+./db_upgrade.sh --help
 ```
 
-Here are steps for upgrading your database with the upgrade tool:
+Here's how to upgrade your database with the upgrade tool:
 
 1. Start the upgrade tool. Here's an example command:
 
     ```bash
     cd liferay-home/tools/portal-tools-db-upgrade-client
-    db_upgrade.sh -j "-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xmx4096m" -l "output.log"
     ```
 
-    The command above executes the upgrade tool with the same JVM options recommended for the application server. File encoding (`UTF-8`), time zone (`GMT`), country, language, and memory settings (`-Xmx value`) should all match your application server's settings. For databases with >= 10 GB of data, we recommend allocated additional memory over the 4 GB default. The `-l "[file]"` arguments direct upgrade tool log messages to the specified file.
+    ```bash
+    ./db_upgrade.sh -j "-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xmx4096m"
+    ```
 
-   If you haven't created [upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration), the upgrade tool prompts you for configuration values, and shows default values in parentheses. Here's an example interaction:
+    The command above executes the upgrade tool with the same JVM options recommended for the application server. File encoding (`UTF-8`), time zone (`GMT`), country, language, and memory settings (`-Xmx value`) should all match your application server's settings. For databases with over 10 GB of data, allocate additional memory using the `-Xmx` option.
+
+    If you haven't configured the upgrade using the [upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration), the upgrade tool prompts you for configuration values, and shows default values in parentheses. Here's an example interaction:
 
     ```
     Please enter your application server (tomcat):
@@ -97,9 +129,9 @@ Here are steps for upgrading your database with the upgrade tool:
 
     If you want to use the default value shown in a prompt, press enter.
 
-    After configuration is complete, the upgrade starts. You can monitor the log file. Log messages are reported for the start and completion of each upgrade process.
+    After configuration completes, the upgrade starts. The tool logs each upgrade process start and completion.
 
-1. After the upgrade completes, check the log for any database upgrade failures or errors. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrade.
+1. After the upgrade completes, check the log for any database upgrade failures, errors, or warnings. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrade.
 
 You have completed the database upgrade and resolved any issues.
 
