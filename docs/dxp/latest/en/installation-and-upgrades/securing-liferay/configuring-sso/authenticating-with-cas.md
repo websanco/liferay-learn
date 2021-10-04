@@ -1,7 +1,7 @@
 # Authenticating with CAS (Central Authentication Service)
 
 ```{important}
-CAS is deprecated as of Liferay DXP 7.2. Please use [SAML](./authenticating-with-saml.md) instead. 
+CAS was deprecated as of Liferay DXP 7.2 and removed as of Liferay DXP 7.4. Please use [SAML](./authenticating-with-saml.md) instead. 
 ```
 
 CAS is a widely used open source single sign-on solution and was the first SSO product to be supported by Liferay DXP. Liferay DXP's CAS module includes the CAS client, so there's no need to install it separately.
