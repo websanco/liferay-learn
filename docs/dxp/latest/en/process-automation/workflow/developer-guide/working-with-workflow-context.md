@@ -6,7 +6,6 @@ For example, with workflow context you can
 
 - [Access any of the existing attributes for use in workflow scripts, custom code, or Freemarker templates.](#accessing-workflow-context-attributes-in-workflow-definitions)
 - [Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or Freemarker templates.](#setting-workflow-context-attributes-in-a-workflow-process-definition)
-- [Set new `workflowContext` attributes in the service layer of custom entities, to be accessed in workflow definition nodes.](#setting-workflow-context-attributes-in-the-service-layer)
 - [Set `ServiceContext` attributes, access them in workflow scripts and notification templates.](#setting-service-context-attributes-for-access-in-workflow-definitions)
 
 ```note::
@@ -108,12 +107,6 @@ workflowContext.put("assetTitle", assetTitle);
    The above code works only if the asset has a ``getTitle`` method (for example, ``JournalArticle``).
 ```
 
-### Setting Workflow Context Attributes in the Service Layer
-
-In the service layer of your custom entity, you can set `workflowContext` attributes that must be accessible in the workflow definition.
-
-<!-- Need a good fake example -->
-
 ### Setting Service Context Attributes for Access in Workflow Definitions
 
 Sometimes in your custom Java code, you'll need to pass information to the workflow definition but there's no `workflowContext` to pass through. For example, if you're writing code that adds Blogs Entries, you can call one of the [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) methods. Even though `workflowContext` isn't a parameter in these methods, `ServiceContext` is. Add a new attribute to the service context:
@@ -122,7 +115,7 @@ Sometimes in your custom Java code, you'll need to pass information to the workf
 serviceContext.setAttribute("customAttributeKey", "customAttributeValue");
 ```
 
-To get the attribute in the workflow definition, retrieve the `ServioceContext` from the `workflowcontext`, the get the attribute using its key:
+To get the attribute in the workflow definition, retrieve the `ServiceContext` from the `workflowcontext`, the get the attribute using its key:
 
 ```groovy
 import com.liferay.portal.kernel.service.ServiceContext;
