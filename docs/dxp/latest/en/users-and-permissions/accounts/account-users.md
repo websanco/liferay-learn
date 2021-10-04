@@ -21,7 +21,7 @@ Accounts is a feature that is available in Liferay DXP 7.4 and above.
     Click the *Save* button to save the new account user.
 
 ```{note}
-Users for Accounts can only be created within this *Account Users* interface. A regular DXP user that is created in the *Users and Organizations* interface cannot be associated with any Accounts.
+Users for Accounts can only be created within this *Account Users* interface. A regular DXP user that is created in the *Users and Organizations* interface cannot be associated with any Accounts. However, an Account User can be managed and edited from *Users and Organizations* after creation.
 ```
 
 ### Setting a Password for an Account User
@@ -94,7 +94,7 @@ To delete an Account User,
 
 ## Impersonating an Account User
 
-You can impersonate an account user to view the system as they would see it. This helps to diagnose permission issues an administrator can't see, such as making sure a User doesn't have access to restricted data. Only users with an administrator role can impersonate a user.
+You can impersonate an account user to view the system as they would see it. This helps to diagnose permission issues an administrator can't see, such as making sure a User doesn't have access to restricted data. Note, only users that have this permissions can impersonate a different user.
 
 1. In Account Users, click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account user you want to edit.
 
