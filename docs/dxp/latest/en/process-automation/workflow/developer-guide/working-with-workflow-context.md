@@ -55,9 +55,7 @@ url, http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay
 userURL, http://localhost:8080/web/test
 ```
 
-## Examples
-
-### Accessing Workflow Context Attributes in Workflow Definitions
+## Accessing Workflow Context Attributes in Workflow Definitions
 
 To access `workflowContext` attributes form a [`<script>`](using-the-script-engine-in-workflow.md), retrieve them with the `Map#get` method:
 
@@ -79,7 +77,7 @@ long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.
 Using the [`WorkflowConstants`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) object fields helps avoid error-prone String literals. The `workflowContext` fields are all prefixed with `CONTEXT` (e.g., `CONTEXT_COMPANY_ID`).
 
 
-### Setting Workflow Context Attributes in A Workflow Process Definition
+## Setting Workflow Context Attributes in Workflow Definitions
 
 To set attributes into the `workflowContext`, use the `Map#put` method. This example sets the `assetTitle`:
 
@@ -107,7 +105,7 @@ workflowContext.put("assetTitle", assetTitle);
    The above code works only if the asset has a ``getTitle`` method (for example, ``JournalArticle``).
 ```
 
-### Setting Service Context Attributes for Access in Workflow Definitions
+## Setting Service Context Attributes for Access in Workflow Definitions
 
 Sometimes in your custom Java code, you'll need to pass information to the workflow definition but there's no `workflowContext` to pass through. For example, if you're writing code that adds Blogs Entries, you can call one of the [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) methods. Even though `workflowContext` isn't a parameter in these methods, `ServiceContext` is. Add a new attribute to the service context:
 
