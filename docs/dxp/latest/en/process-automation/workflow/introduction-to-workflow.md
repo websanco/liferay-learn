@@ -38,6 +38,27 @@ Once an SLA is set, workflow submissions that trigger the SLA timer are automati
 
 See the [Using Workflow Metrics](./using-workflows/using-workflow-metrics.md) article to learn how to add SLAs into your workflows.
 
+## Understanding Workflow Status
+
+An asset in a workflow process always has a status. The status is used to determine important things like whether the asset can be displayed to end users. There are many statuses, but some of the most common and important ones to understand are described here:
+
+- The _draft_ status is assigned to content that can be saved before being ready for either review in the workflow or for viewing by end users. 
+- The _pending_ status denotes that the asset is in a workflow process that's not yet completed.
+- The _approved_ status means the asset is ready for display in the UI for all user's with permission to see it.
+- The _denied_ status is for assets that have failed to make it through a workflow. This status may be used to trigger a notification to the original submitter of the asset, perhaps to prompt a revision and resubmission of the content.
+
+![Content can have a workflow status.](./introduction-to-workflow/images/03.png)
+
+See the source code's [WorkflowConstants class](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) to view all the available statuses.
+
+### Versioned Assets Can Have Multiple Statuses
+
+Versioned assets can have two statuses.
+
+![Versioned assets can have two statuses.](./introduction-to-workflow/images/04.png)
+
+If an already approved asset is updated, it's sent through the workflow again. While the new version is not yet approved in the workflow, a second status is displayed for the asset. The approved version will continue to be used until the new version is approved. The asset's backend code is responsible for determining the displayed version, but most default to displaying the newest approved version.
+
 ## What's Next
 
 * [Activating Workflow](./using-workflows/activating-workflow.md)
