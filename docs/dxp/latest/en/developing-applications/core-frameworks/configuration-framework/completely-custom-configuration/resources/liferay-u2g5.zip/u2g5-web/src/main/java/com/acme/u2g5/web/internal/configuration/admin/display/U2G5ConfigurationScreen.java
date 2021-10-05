@@ -62,7 +62,7 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 			requestDispatcher.include(httpServletRequest, httpServletResponse);
 		}
 		catch (Exception exception) {
-			throw new IOException("Unable to render", exception);
+			throw new IOException("Unable to render /u2g5.jsp", exception);
 		}
 	}
 
