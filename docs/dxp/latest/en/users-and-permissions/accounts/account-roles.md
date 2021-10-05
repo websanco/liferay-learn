@@ -1,6 +1,8 @@
 # Account Roles
 
-Like [regular roles](../roles-and-permissions/understanding-roles-and-permissions.md) in DXP, [Accounts](../accounts.md) have Account Roles that assign different permissions to different roles. Use Account Roles for your different Account Users based on your business needs.
+You can create different Account Roles and define specific permissions for each one. Then assign these roles to different [Account Users](./accounts/account-users.md) to grant appropriate access to their [Accounts](../accounts.md). 
+
+Note that Account Roles are assigned to a user for each specific Account. This offers great flexibility in managing users. For example, a user might have a "Buyer" role for Account "A" but not have that role for Account "B".
 
 ```{note}
 Accounts is a feature that is available in Liferay DXP 7.4 and above.
@@ -8,9 +10,9 @@ Accounts is a feature that is available in Liferay DXP 7.4 and above.
 
 ## View Account Roles
 
-There are two categories of Account Roles: instance wide roles and Account specific roles. Instance wide roles are Account Roles that are available across all Accounts in a DXP Instance. Account specific roles are roles that are created and managed for a specific Account.
+There are two types of Account Roles: Shared and Owned. Shared type Account Roles are roles that are available across all Accounts in a DXP Instance. Owned type Account Roles are roles that are created and managed within a specific Account.
 
-### View Instance Wide Account Roles
+### View Shared Account Roles
 
 To view an instance wide role, 
 
@@ -18,7 +20,7 @@ To view an instance wide role,
 
 1. Click the *Account Roles* tab and view the list of available roles.
 
-### View Account Specific Account Roles
+### View Owned Account Roles
 
 To view an Account specific role,
 
@@ -28,21 +30,23 @@ To view an Account specific role,
 
 ## Creating a New Account Role
 
-Make a choice to create an instance wide role or an account specific role.
+Make a choice to create an Shared Account Role or an Owned Account Role.
 
-### Creating and Assigning an Instance Wide Account Role
+### Creating and Assigning a Shared Account Role
 
-To create an instance wide role,
+To create a Shared Account Role,
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Roles*.
 
 1. Click the *Account Roles* tab. Click the Add icon (![Add icon](../../images/icon-add.png)).
 
-1. Give the new role a title and description. Click *Save* to create the role.
+1. Give the new role a title and description. Click *Save* to create the role. 
 
     ![Give the role a new title and description.](./account-roles/images/01.png)
 
-1. Click the *Define Permissions* tab at the top of the page. Select the different Account permissions to assign to this role. Click *Save* to save the permissions.
+1. Click the *Define Permissions* tab at the top of the page. Select what permissions the role has to act upon the resources owned by the account, including the account itself. For example, selecting the Update permissions would give the role the ability to change the Account's description. Click *Save* to save the permissions.
+
+1. Click the *Define Group Scope Permissions* tab. Select what permissions the role has to act on resources owned by other groups (i.e. sites, channels, asset libraries, etc.). Note that the permissions apply for the account that is [selected as the current account](./account-management-widget.html#using-the-acconut-management-widget).  
 
 1. To assign an account user to this role, navigate to *Applications* &rarr; *Accounts*. Select a specific account. 
 
@@ -52,18 +56,20 @@ To create an instance wide role,
 
 1. Click the Add icon (![Add icon](../../images/icon-add.png)) and assign a user to this role.
 
-### Creating and Assigning an Account Specific Account Role
+### Creating and Assigning an Owned Account Role
 
-To create an account specific role, 
+To create an Owned Account Role, 
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
 
-1. Select the specific account for the new role. Click the *Roles* tab and click the Add icon (![Add icon](../../images/icon-add.png)).
+1. Select the specific account in which to create the new role. Click the *Roles* tab and click the Add icon (![Add icon](../../images/icon-add.png)).
 
 1. Give the new role a title and description. Click *Save* to create the role.
 
-1. Click the *Define Permissions* tab at the top of the page. Select the different Account permissions to assign to this role. 
+1. Click the *Define Permissions* tab at the top of the page. Select what permissions the role has to act upon the resources owned by the account, including the account itself. For example, selecting the Update permissions would give the role the ability to change the Account's description. Click *Save* to save the permissions.
 
     ![Select the permissions to assign to this role.](./account-roles/images/03.png)
 
-1. To assign an account, click the *Assignees* tab. Click the Add icon (![Add icon](../../images/icon-add.png)) and assign a user to this role.
+1. Click the *Define Group Scope Permissions* tab. Select what permissions the role has to act on resources owned by other groups (i.e. sites, channels, asset libraries, etc.). Note that the permissions apply for the account that is [selected as the current account](./account-management-widget.html#using-the-acconut-management-widget).   
+
+2. To assign an account user, click the *Assignees* tab. Click the Add icon (![Add icon](../../images/icon-add.png)) and assign a user to this role.
