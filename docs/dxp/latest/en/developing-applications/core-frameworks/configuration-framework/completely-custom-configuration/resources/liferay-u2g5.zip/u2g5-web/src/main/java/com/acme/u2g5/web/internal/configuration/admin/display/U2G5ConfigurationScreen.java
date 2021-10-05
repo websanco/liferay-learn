@@ -51,13 +51,13 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 		throws IOException {
 
 		try {
+			RequestDispatcher requestDispatcher =
+				_servletContext.getRequestDispatcher("/u2g5.jsp");
+
 			httpServletRequest.setAttribute(
 				U2G5WebConfiguration.class.getName(),
 				_configurationProvider.getSystemConfiguration(
 					U2G5WebConfiguration.class));
-
-			RequestDispatcher requestDispatcher =
-				_servletContext.getRequestDispatcher("/u2g5.jsp");
 
 			requestDispatcher.include(httpServletRequest, httpServletResponse);
 		}
