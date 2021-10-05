@@ -17,8 +17,9 @@ To add the Search Location field to a form,
 1. Enable the JavaScript Google Maps API and the Google Places API.
 
    - Add the Search Location field to a form. If a Google Places API key is not configured in the Site, the field displays a warning message.
- 
+
        ![The Search Location field detects when an API key has not been configured.](./using-the-search-location-field/images/01.png)
+
    - Obtain a single API Key for using both the Google Places API and the Maps JavaScript API.
    - Click the link in the field warning message or navigate to Site Settings (Platform) &rarr; Google Places. Alternatively, use the identical Instance Settings configuration entry.
 

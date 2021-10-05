@@ -2,9 +2,7 @@
 
 Forms can be dynamic, where the answer to one question changes the rest of the form. One answer may allow skipping the next three questions, while another requires answering additional questions. Fields like these are called _conditional fields_. Once you have decided which fields are conditional, use a Form Rule to determine what happens based on the answer to that question (for example, skips page 3 and goes to page 4 on a multi-page form).
 
-As of Liferay 7.4, [form fields](./forms-field-types-reference.md) can even be hidden. This mean that a data provider can populate a hidden field, and the hidden field can be used in a rule to dynamically alter the form.
-
-<!-- Is this complicated enough that it warrants an example? -->
+As of Liferay 7.4, [form fields](../creating-and-managing-forms/forms-field-types-reference.md) can even be hidden. This means that a data provider can populate a hidden field, and the hidden field can be used in a rule to dynamically alter the form.
 
 ## Form Rule Conditions and Actions
 
@@ -13,8 +11,8 @@ Rules have two components:
 * **Conditions** determine whether any actions are executed.
 * **Actions** determine what happens if the condition is met.
 
-```note::
-   Rules are stored in the database in JSON format by default.
+```{note}
+Rules are stored in the database in JSON format by default.
 ```
 
 Users can choose _OR_ or _AND_ to define the relationship between multiple conditions:

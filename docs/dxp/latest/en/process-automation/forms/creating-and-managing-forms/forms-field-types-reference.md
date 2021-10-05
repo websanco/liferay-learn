@@ -136,9 +136,9 @@ There are some interesting advanced field settings for numeric fields:
 
 Upload fields let users upload a file from the local file system. Logged in Users can choose from files they have previously uploaded or upload a new one.
 
-```note::
-   In 7.2 logged in Users can select an existing file from the Documents and Media library or choose to upload a file from their local file systems.
-   ```
+```{note}
+In 7.2 logged in Users can select an existing file from the Documents and Media library or choose to upload a file from their local file systems.
+```
 
 ![Upload fields let users upload files or select from existing Docs and Media entries.](./forms-field-types-reference/images/10.png)
 
@@ -154,8 +154,8 @@ dl.show.hidden.mount.folders=true
 
 Configure the Guest upload behavior in the Control Panel: System Settings &rarr; Forms (Content and Data) &rarr; Forms, or by creating a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named `com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config`.
 
-```tip::
-   To configure the Forms application at the `instance scope <../../../system-administration/configuring-liferay/understanding-configuration-scope.md#scope-definitions>`__, use the Forms entry in Instance Settings.
+```{tip}
+To configure the Forms application at the [instance scope](../../../system-administration/configuring-liferay/understanding-configuration-scope.md#scope-definitions), use the Forms entry in Instance Settings.
 ```
 
 **Guest Upload File Extensions (`guestUploadFileExtensions`):** Enter the comma-separated list of accepted file extensions. By default the following list is supported: `doc`, `docx`, `jpeg`, `jpg`, `pdf`, `png`, `ppt`, `pptx`, `tiff`, `txt`, `xls`, and `xlsx`.
@@ -172,8 +172,8 @@ Users can select an image file (`.gif`, `.jpeg`, `.jpg`, or `.png`) from Web Con
 
 ![Image fields let users upload images or select from existing images in Docs and Media or Web Content Images.](./forms-field-types-reference/images/11.png)
 
-```important::
-   Guest Users cannot access or upload images. Avoid using this field unless only authenticated Users can access the form.
+```{important}
+Guest Users cannot access or upload images. Avoid using this field unless only authenticated Users can access the form.
 ```
 
 ### Color
@@ -198,4 +198,4 @@ See [Using the Search Location Field](using-the-search-location-field.md) for mo
 
 ## Additional Information
 
-* [Creating Forms](./creating-forms.md)
+- [Creating Forms](./creating-forms.md)
