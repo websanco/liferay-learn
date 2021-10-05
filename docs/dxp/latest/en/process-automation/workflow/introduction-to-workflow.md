@@ -57,7 +57,7 @@ Versioned assets can have two statuses.
 
 ![Versioned assets can have two statuses.](./introduction-to-workflow/images/04.png)
 
-If an already approved asset is updated, it's sent through the workflow again. While the new version is not yet approved in the workflow, a second status is displayed for the asset. The approved version will continue to be used until the new version is approved. The asset's backend code is responsible for determining the displayed version, but most default to displaying the newest approved version.
+Most asset's default to displaying the newest approved version. If an already approved asset is updated, a new version is created and sent through the workflow. While the new version is not yet approved in the workflow, a second status is displayed for the asset (e.g., _pending_). The last approved version will continue to be used until the new version is approved.
 
 ## What's Next
 
