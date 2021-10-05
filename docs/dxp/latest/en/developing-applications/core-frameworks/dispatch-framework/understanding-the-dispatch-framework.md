@@ -4,14 +4,14 @@ Liferay Dispatch is a flexible framework built on top of Liferay's Scheduler Eng
 
 The Dispatch framework consists of six essential parts:
 
-* [`DispatchTaskExecutor`](#dispatchtaskexecutor)
+* [`(Base)DispatchTaskExecutor`](#dispatchtaskexecutor)
 * [`DispatchTrigger`](#dispatchtrigger)
 * [`DispatchMessageListener`](#dispatchmessagelistener)
 * [`DispatchTaskExecutorRegistry`](#dispatchtaskexecutorregistry)
 * [`DispatchLog`](#dispatchlog)
 * [`DispatchConfigurator`](#dispatchconfigurator)
 
-## `DispatchTaskExecutor`
+## `(Base)DispatchTaskExecutor`
 
 Implementations of the [`DispatchTaskExecutor`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java) interface create templates for Dispatch Tasks in a Liferay instance. Each implementation of `DispatchTaskExecutor` is registered as an OSGi component and contains the logic executed by the Dispatch Task. All Dispatch Tasks are instances of Java classes that implement the `DispatchTaskExecutor` interface and have the `dispatch.task.executor.name` and `dispatch.task.executor.type` OSGi component properties. See [Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md) to learn more.
 
