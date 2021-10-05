@@ -3,7 +3,9 @@ package com.acme.u2g5.web.internal.configuration.admin.display;
 import com.acme.u2g5.web.internal.configuration.U2G5WebConfiguration;
 
 import com.liferay.configuration.admin.display.ConfigurationScreen;
+import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
+import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
 import java.io.IOException;
 
@@ -32,7 +34,9 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 
 	@Override
 	public String getName(Locale locale) {
-		return "U2G5 Custom Configuration";
+		return LanguageUtil.get(
+			ResourceBundleUtil.getBundle(locale, U2G5ConfigurationScreen.class),
+			"u2g5-custom-configuration");
 	}
 
 	@Override
