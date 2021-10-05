@@ -2,7 +2,7 @@
 
 When you're done using an obsolete Liferay app or capability, you can remove its data. You can use the Control Panel or a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) to do data cleanup.
 
-Here's how to clean up obsolete data:
+Here's how to clean up data from obsolete features:
 
 1. In the *Control Panel*, navigate to *System Settings* &rarr; *Upgrades* (in the *Platform* category) &rarr; *Data Cleanup*. The Data Cleanup screen appears.
 
