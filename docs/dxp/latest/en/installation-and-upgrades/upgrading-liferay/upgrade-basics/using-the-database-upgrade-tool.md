@@ -12,9 +12,9 @@ If you're upgrading from 6.2 or earlier, update your file store configuration. S
 
 Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
-If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the update tool, use that tool from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version. The tool is in the bundle's .
+If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the upgrade tool, use it from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version. The tool is in the bundle's `tools/portal-tools-db-upgrade-client` folder.
 
-If you installed the new Liferay release on an application server, create a `[Liferay Home]/tools/portal-tools-db-upgrade-client` folder,  download the upgrade tool, and install the tool to the new folder.
+If you installed the new Liferay release on an application server, create a `[Liferay Home]/tools/portal-tools-db-upgrade-client` folder, download the upgrade tool, and install the tool to the new folder.
 
 | Edition | Download Instructions |
 | :---------- | :-------------------- |
@@ -27,18 +27,18 @@ If you installed the new Liferay release on an application server, create a `[Li
 
 1. Copy your DXP activation key (Subscription) and your [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
 
-1. If you're upgrading to 7.2, disable search indexing using a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) in your new installation's `[Liferay Home]/files/osgi/config/` folder. For example,
+1. If you're upgrading to 7.2, disable search indexing using a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) in your new installation's `[Liferay Home]/files/osgi/configs/` folder. For example,
 
     ```bash
     cd liferay-home
     ```
 
     ```bash
-    mkdir -p osgi/config
+    mkdir -p osgi/configs
     ```
 
     ```bash
-    echo "indexReadOnly=\"true\"" >> osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
+    echo "indexReadOnly=\"true\"" >> osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
     ```
 
     ```{note}
@@ -64,10 +64,10 @@ If you installed the new Liferay release on an application server, create a `[Li
     You can configure the upgrade by answering the upgrade tool prompts or by [using upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration). 
 
     ```{note}
-    If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) files instead of Docker env variables. The [Portal Properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) lists the Portal Property that corresponds with each Liferay Env variable.
+    If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md), make sure to specify your database connection using [Portal Properties](../../reference/portal-properties.md) files instead of Docker env variables. The [Portal Properties reference](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) lists Portal Properties that correspond with each Liferay Env variable.
     ```
 
-1. Optionally, enable [upgrade reporting](../reference/upgrade-reports.md).
+1. Optionally, enable [upgrade reporting](../reference/upgrade-reports.md) to log the environment, changes, and more to a reports file.
 
     ```bash
     echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties
@@ -131,7 +131,7 @@ Here's how to upgrade your database with the upgrade tool:
 
     After configuration completes, the upgrade starts. The tool logs each upgrade process start and completion.
 
-1. After the upgrade completes, check the log for any database upgrade failures, errors, or warnings. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrade.
+1. After the upgrade completes, check the [upgrade report](../reference/upgrade-reports.md) for any database upgrade failures, errors, or warnings. You can use [Gogo Shell commands](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) to troubleshoot issues and finish the upgrade.
 
 You have completed the database upgrade and resolved any issues.
 
@@ -162,7 +162,7 @@ You've upgraded your Liferay database using the Database Upgrade Tool.
 
 If this was a trial upgrade and you want to shorten the upgrade time, tune your database for upgrade (if you haven't already) and [remove unnecessary data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md) from the database. Repeat this article's steps as necessary.
 
-If you run into issues, see [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md).
+If you run into issues, check the [upgrade report](../reference/upgrade-reports.md) and see [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md).
 
 ## Next Steps
 
