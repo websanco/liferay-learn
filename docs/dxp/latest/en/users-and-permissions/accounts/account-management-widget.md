@@ -22,7 +22,7 @@ To add the Account Management widget to a page,
 
 ## Using the Account Management Widget
 
-The Account Management widget displays different Accounts depending on which Accounts the Account User has access to. For users who have access to multiple Accounts, click the *Filter and Order* tab to quickly find a specific account. Filter by status: Active or Inactive. Filter by type: All, Business, Guest, Person. Also use the search bar to find a specific account.
+The Account management widget displays a list of different Accounts. Note that what is shown is dependent on which Accounts the Account User has access to. Click *Filter and Order* and filter the list or use the search bar to quickly locate a specific account.
 
 ![The account management widget displays different accounts.](./account-management-widget/images/02.png)
 
@@ -33,9 +33,9 @@ The widget displays the following information:
 * Organizations - Any organizations the Account is assigned to
 * Type - The type of Account (i.e. Business, Guest, Person)
 * Status - Whether the Account is active or inactive
-* Selected - The checkmark shows the current Account the User is set up to view
+* Selected - The checkmark indicates the Account selected for the current Site
 
-Note, when an Account User has access to multiple Accounts, the Selected checkmark indicates which Account the user is currently viewing or managing. This gives the ability to save different settings for each Account such as price or order information.
+Note, when an Account User has access to multiple Accounts, the Selected checkmark indicates which Account the user is currently viewing or managing on the Site. This gives the ability to manage different settings for each Account such as price or order information.
 
 Click on the Options icon (![Options icon](../../images/icon-actions.png)) of the account you want to edit or manage. The following choices are available:
 
