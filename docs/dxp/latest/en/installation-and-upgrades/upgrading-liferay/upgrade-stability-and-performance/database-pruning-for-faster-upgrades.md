@@ -10,6 +10,14 @@ Here are the database pruning topics:
 * Finding and Remove Unused Objects
 * Testing with a Copy of the Pruned Database
 
+## Removing Obsolete Data
+
+Your database may have obsolete data or data leftover from obsolete features. Both are easy to clean up.
+
+1. Use the [Data Cleanup](../reference/data-cleanup.md) tool to remove data from obsolete modules.
+
+1. Use the [Data Removal](../reference/data-removal.md) tool to remove obsolete data from available modules.
+
 ## Removing Duplicate Web Content Structure Field Names
 
 If you've used Web Content Management extensively, you might have structures without unique field names. Find and remove duplicate field names before upgrading. If you upgraded to Liferay Portal 6.2 previously and skipped doing this, you'll encounter this error:
@@ -23,14 +31,12 @@ If this error occurs, roll back to your previous backup of Liferay Portal 6.2 an
 
 ## Removing Unused Objects
 
-Your database may have data leftover from obsolete features or unused objects.
+Your database may have data leftover from unused objects.
 
-1. Use the [Data Cleanup](../reference/data-cleanup.md) screen to remove data from obsolete modules.
+1. Identify other unused objects in the UI or by using using `SELECT` queries with your database, and remove the objects either via the UI, the API through the [script console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), or a portlet you create.
 
-2. Identify other unused objects in the UI or by using using `SELECT` queries with your database, and remove the objects either via the UI, the API through the [script console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md), or a portlet you create.
-
-```warning::
-   You should only use Liferay's UI or API to manipulate data because they account for relationships between objects in Liferay DXP. Never use SQL directly on your database to remove records. Your SQL may miss object relationships, orphaning objects and causing performance problems.
+```{warning}
+You should only use Liferay's UI or API to manipulate data because they account for relationships between objects in Liferay DXP. Never use SQL directly on your database to remove records. Your SQL may miss object relationships, orphaning objects and causing performance problems.
 ```
 
 Next are some common places to check for unused objects.
