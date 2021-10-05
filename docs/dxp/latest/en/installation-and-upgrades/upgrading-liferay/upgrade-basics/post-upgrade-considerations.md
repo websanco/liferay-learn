@@ -62,13 +62,13 @@ Unable to add the journal article image {filename} into the file repository
 
 If there aren't any such messages, all of your images should now be in your File Store. You can preview your Web Content articles to verify the images.
 
-### Account for Deprecations and Features in Maintenance Mode
+## Account for Deprecations and Features in Maintenance Mode
 
 If you haven't done so already, review the [deprecations and features in maintenance mode](../reference/maintenance-mode-and-deprecations-in-7-3.md) and plan for handling how they affect your Liferay instance.
 
-### Remove Obsolete Data
+## Remove Obsolete Data
 
-If you're done using data that's unnecessary and useless, you can remove it. Here are two common obsolete data types and tools for removing them.
+If you're done using data that's unnecessary and useless, you can remove it. Here are two common obsolete data situations and tools for removing the data.
 
 * Data from obsolete Liferay apps or modules. The [Data Cleanup](../reference/data-cleanup.md) tool removes it.
 
