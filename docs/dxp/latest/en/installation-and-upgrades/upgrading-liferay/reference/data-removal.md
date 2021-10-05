@@ -1,6 +1,6 @@
 # Data Removal
 
-Current Liferay features may have known unnecessary data. The Data Removal tool removes them.
+Current Liferay features may have known unnecessary data. The Data Removal tool removes this data.
 
 Here's how to remove the obsolete data:
 
