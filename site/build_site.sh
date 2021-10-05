@@ -30,9 +30,9 @@ function check_usage {
 
 	if [ "${#}" -ge 1 ]
 	then
-		if [ "${1}" != "buildref" ] && [ "${1}" != "prod" ]  &&  [[ ${1} != *".md" ]]
+		if [ "${1}" != "prod" ] && [ "${1}" != "reference" ]  &&  [[ ${1} != *".md" ]]
 		then
-			echo "Usage: Pass no arguments to build for development. Pass \"prod\" to build for production. Pass the file name of a markdown article to build a single article preview. Pass \"buildref\" to build for development but include reference documentation."
+			echo "Usage: Pass no arguments to build for development. Pass \"prod\" to build for production. Pass \"reference\" to build for development but also include reference documentation. Pass the file name of a markdown article to build a single article preview."
 
 			exit 1
 		fi
@@ -271,7 +271,7 @@ function unzip_reference_docs {
 	# liferay-ce-portal-doc-*.zip
 	#
 
-	if [ "${1}" == "buildref" ] || [ "${1}" == "prod" ]
+	if [ "${1}" == "prod" ] || [ "${1}" == "reference" ]
 	then
 		curl -L https://github.com/liferay/liferay-portal/releases/download/"${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}"/"${LIFERAY_LEARN_PORTAL_DOC_FILE_NAME}" > liferay-ce-portal-doc.zip
 
