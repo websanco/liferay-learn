@@ -29,14 +29,14 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 
 	@Override
 	public String getKey() {
-		return "u2g5-configuration-name";
+		return "u2g5-configuration";
 	}
 
 	@Override
 	public String getName(Locale locale) {
 		return LanguageUtil.get(
 			ResourceBundleUtil.getBundle(locale, U2G5ConfigurationScreen.class),
-			"u2g5-custom-configuration");
+			"u2g5-configuration");
 	}
 
 	@Override

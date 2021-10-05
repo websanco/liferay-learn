@@ -10,7 +10,7 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 )
 @Meta.OCD(
 	id = "com.acme.u2g5.web.internal.configuration.U2G5WebConfiguration",
-	localization = "content/Language", name = "u2g5-configuration-name"
+	localization = "content/Language", name = "u2g5-configuration"
 )
 public interface U2G5WebConfiguration {
 
