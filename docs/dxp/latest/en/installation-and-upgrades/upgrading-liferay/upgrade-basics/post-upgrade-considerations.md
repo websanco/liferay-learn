@@ -68,7 +68,11 @@ If you haven't done so already, review the [deprecations and features in mainten
 
 ### Remove Obsolete Data
 
-Clean up data from obsolete features. Please see [Data Cleanup](../reference/data-cleanup.md) for more information.
+If you're done using data that's unnecessary and useless, you can remove it. Here are two common obsolete data types and tools for removing them.
+
+* Data from obsolete Liferay apps or modules. The [Data Cleanup](../reference/data-cleanup.md) tool removes it.
+
+* Obsolete data from available Liferay apps and modules. The [Data Removal](../reference/data-removal.md) tool removes it.
 
 ## Conclusion
 
