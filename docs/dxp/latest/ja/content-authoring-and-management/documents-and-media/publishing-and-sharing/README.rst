@@ -4,13 +4,10 @@
 -  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/using-workflow-with-documents-and-media`
 -  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/accessing-documents-with-webdav`
 
-DXPサイトでのドキュメントの公開
+ドキュメントの公開
 ----------------------------------
 
--  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-documents-and-media-widget`
--  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget`
--  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-asset-publisher-widget`
--  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents-on-a-dxp-site/using-documents-in-liferay-dxp-assets`
+-  :doc:`/content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents.md
 
 配信デバイスと画面最適化メディア
 -----------------------------------------

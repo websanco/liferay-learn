@@ -1,0 +1,68 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'ドキュメントの公開',
+					sectionURL: 'publishing-and-sharing/publishing-documents.html',
+				},
+				{
+					sectionName: '配信デバイスと画面最適化メディア',
+					sectionURL: 'publishing-and-sharing/serving_device_and_screen_optimized_media.html',
+					subsections: [
+						{
+							name: 'アダプティブメディアの仕組み',
+							url: 'publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.html'
+						},
+						{
+							name: '画像解像度の追加',
+							url: 'publishing-and-sharing/serving-device-and-screen-optimized-media/adding-image-resolutions.html'
+						},
+						{
+							name: 'サイトコンテンツでの適応画像の使用',
+							url: 'publishing-and-sharing/serving-device-and-screen-optimized-media/using-adapted-images-in-site-content.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ドキュメントアクセスの管理',
+					sectionURL: 'publishing-and-sharing/managing_document_access.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ドキュメントとメディアの共有',
+							url: 'publishing-and-sharing/managing-document-access/sharing-documents-with-other-users.html'
+						},
+						{
+							name: '共有の有効化と構成',
+							url: 'publishing-and-sharing/managing-document-access/enabling-and-configuring-sharing.html'
+						},
+						{
+							name: 'チェックアウトによるドキュメント変更の管理',
+							url: 'publishing-and-sharing/managing-document-access/managing-document-changes-with-checkout.html'
+						},
+						{
+							name: '権限とドキュメント',
+							url: 'publishing-and-sharing/managing-document-access/permissions-and-documents.html'
+						},
+						{
+							name: 'ドキュメントとメディアの権限リファレンス',
+							url: 'publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ドキュメントとメディアでのワークフローの使用',
+					sectionURL: 'publishing-and-sharing/using-workflow-with-documents-and-media.html',
+				},
+				{
+					sectionName: 'WebDAVを使用したドキュメントへのアクセス',
+					sectionURL: 'publishing-and-sharing/accessing-documents-with-webdav.html',
+				},
+			]
+		}
+	})
+</script>

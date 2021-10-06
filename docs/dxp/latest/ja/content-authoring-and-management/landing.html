@@ -6,27 +6,67 @@
 		data: {
 			cards: [
 				{
-					sectionName: 'Web Content',
+					sectionName: 'アセットライブラリ',
+					sectionURL: 'content-authoring-and-management/asset_libraries.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'アセットライブラリの概要',
+							url: 'content-authoring-and-management/asset-libraries/asset-libraries-overview.html'
+						},
+						{
+							name: 'アセットライブラリの作成と管理',
+							url: 'content-authoring-and-management/asset-libraries/creating-and-managing-asset-libraries.html'
+						},
+						{
+							name: 'アセットライブラリコンテンツ',
+							url: 'content-authoring-and-management/asset-libraries/asset-library-content.html'
+						},
+					]
+				},
+				{
+					sectionName: 'コンテンツダッシュボード',
+					sectionURL: 'content-authoring-and-management/content_dashboard.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'コンテンツダッシュボードについて',
+							url: 'content-authoring-and-management/content-dashboard/about-the-content-dashboard.html'
+						},
+						{
+							name: 'コンテンツダッシュボードインターフェイス',
+							url: 'content-authoring-and-management/content-dashboard/content-dashboard-interface.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Webコンテンツ',
 					sectionURL: 'content-authoring-and-management/web_content.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '基本的なWebコンテンツの記事の追加',
-							url: 'content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html'
+							url: 'content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.html'
 						},
 						{
-							name: 'Understanding Structures and Templates (Coming Soon)',
-							url: ''
+							name: 'Web コンテンツストラクチャーを理解する',
+							url: 'content-authoring-and-management/web-content/web-content-structures/understanding-web-content-structures.html'
 						},
 						{
-							name: 'Auto Tagging (Coming Soon)',
-							url: ''
+							name: 'Webコンテンツテンプレートの作成',
+							url: 'content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.html'
 						}
 					]
 				},
 				{
 					sectionName: 'ドキュメントとメディア',
 					sectionURL: 'content-authoring-and-management/documents_and_media.html',
+					showAll: false,
 					subsections: [
+						{
+							name: 'ドキュメントとメディアの紹介',
+							url: 'content-authoring-and-management/documents-and-media/introduction-to-documents-and-media.html'
+						},
 						{
 							name: 'ファイルのアップロード',
 							url: 'content-authoring-and-management/documents-and-media/uploading-and-managing/uploading-files.html'
@@ -35,15 +75,12 @@
 							name: 'フォルダの作成',
 							url: 'content-authoring-and-management/documents-and-media/uploading-and-managing/creating-folders.html'
 						},
-						{
-							name: 'Media Galleryウィジェットの使用',
-							url: 'content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.html'
-						},
 					]
 				},
 				{
 					sectionName: 'ブログ',
 					sectionURL: 'content-authoring-and-management/blogs.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'ブログを始める',
@@ -80,36 +117,53 @@
 				{
 					sectionName: 'タグとカテゴリ',
 					sectionURL: 'content-authoring-and-management/tags_and_categories.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'Tagging Content (Coming Soon)',
-							url: ''
+							name: 'カテゴリとタグを使用したコンテンツの整理',
+							url: 'content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.html'
 						},
 						{
-							name: 'Defining Categories for Content (Coming Soon)',
-							url: ''
+							name: 'コンテンツのカテゴリとボキャブラリの定義',
+							url: 'content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.html'
 						},
 						{
-							name: 'Geolocating Assets (Coming Soon)',
-							url: ''
+							name: 'アセットの地理位置情報',
+							url: 'content-authoring-and-management/tags-and-categories/geolocating-assets.html'
 						},
 					]
 				},
 				{
 					sectionName: 'ごみ箱',
 					sectionURL: 'content-authoring-and-management/recycle_bin.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'ごみ箱の概要',
-							url: 'content-authoring-and-management/recycle-bin/user-guide/introduction-to-the-recycle-bin.html'
+							name: 'ゴミ箱の概要',
+							url: 'content-authoring-and-management/recycle-bin/recycle-bin-overview.html'
 						},
 						{
 							name: 'ごみ箱の使用',
-							url: 'content-authoring-and-management/recycle-bin/user-guide/using-the-recycle-bin.html'
+							url: 'content-authoring-and-management/recycle-bin/using-the-recycle-bin.html'
 						},
 						{
 							name: 'ごみ箱の設定',
-							url: 'content-authoring-and-management/recycle-bin/user-guide/configuring-the-recycle-bin.html'
+							url: 'content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.html'
+						},
+					]
+				},
+				{
+					sectionName: 'コレクションとコレクションページ',
+					sectionURL: 'content-authoring-and-management/collections_and_collection_pages.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'コレクションとコレクションページについて',
+							url: 'content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.html'
+						},
+						{
+							name: 'コレクションの作成',
+							url: 'content-authoring-and-management/collections-and-collection-pages/creating-collections.html'
 						},
 					]
 				},

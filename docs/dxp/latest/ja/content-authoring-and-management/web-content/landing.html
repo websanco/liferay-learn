@@ -1,0 +1,80 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Webコンテンツの記事',
+					sectionURL: 'web-content/web_content_articles.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '基本的なWebコンテンツの記事の追加',
+							url: 'web-content/web-content-articles/adding-a-basic-web-content-article.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Webコンテンツの構造',
+					sectionURL: 'web-content/web_content_structures.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Web コンテンツストラクチャーを理解する',
+							url: 'web-content/web-content-structures/understanding-web-content-structures.html'
+						},
+						{
+							name: 'ストラクチャーの作成',
+							url: 'web-content/web-content-structures/creating-structures.html'
+						},
+						{
+							name: 'Web コンテンツストラクチャーを理解する',
+							url: 'web-content/web-content-structures/understanding-web-content-structures.html'
+						},
+					]
+				},
+				{
+					sectionName: 'コンテンツ テンプレート',
+					sectionURL: 'web-content/web_content_templates.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Webコンテンツテンプレートの作成',
+							url: 'web-content/web-content-templates/creating-web-content-templates.html'
+						},
+						{
+							name: 'テンプレートへのウィジェットの埋め込み',
+							url: 'web-content/web-content-templates/embedding-widgets-in-templates.html'
+						},
+						{
+							name: 'テンプレートでのTaglibの使用',
+							url: 'web-content/web-content-templates/using-taglibs-in-templates.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ウェブコンテンツの翻訳',
+					sectionURL: 'web-content/translating_web_content.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Webコンテンツの手動翻訳',
+							url: 'web-content/translating-web-content/manually-translating-web-content.html'
+						},
+						{
+							name: '翻訳のエクスポートとインポート',
+							url: 'web-content/translating-web-content/exporting-and-importing-translations.html'
+						},
+					]
+				},
+				{
+					sectionName: '開発者ガイド',
+					sectionURL: 'web-content/developer_guide.html',
+					showAll: false,
+				},
+			]
+		}
+	})
+</script>

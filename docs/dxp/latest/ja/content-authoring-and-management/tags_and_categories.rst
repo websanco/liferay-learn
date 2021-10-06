@@ -3,9 +3,28 @@
 .. toctree::
    :maxdepth: 4
 
-   05-tags-and-categories/user_guide.rst
-   05-tags-and-categories/developer_guide.rst
-   05-tags-and-categories/apis.rst
+   tags-and-categories/organizing-content-with-categories-and-tags.md
+   tags-and-categories/tagging-content-and-managing-tags
+   tags-and-categories/defining-categories-and-vocabularies-for-content.md
+   tags-and-categories/geolocating-assets.md
+   tags-and-categories/session-property-vocabularies.md
+   tags-and-categories/auto_tagging.rst
+   tags-and-categories/developer_guide.rst
 
-.. include:: /content-authoring-and-management/05-tags-and-categories/README.rst
-   :start-line: 2
+-  :doc:`/content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags`
+-  :doc:`/content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content`
+-  :doc:`/content-authoring-and-management/tags-and-categories/geolocating-assets`
+-  :doc:`/content-authoring-and-management/tags-and-categories/session-property-vocabularies`
+
+自動タグ付け
+------------
+
+-  :doc:`/content-authoring-and-management/tags-and-categories/auto-tagging/configuring-asset-auto-tagging`
+-  :doc:`/content-authoring-and-management/tags-and-categories/auto-tagging/auto-tagging-images`
+-  :doc:`/content-authoring-and-management/tags-and-categories/auto-tagging/auto-tagging-assets`
+
+開発者ガイド
+---------------
+
+-  :doc:`/content-authoring-and-management/tags-and-categories/developer_guide.rst`
