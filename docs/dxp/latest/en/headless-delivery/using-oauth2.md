@@ -1,5 +1,13 @@
 # Using OAuth 2.0
 
+```{toctree}
+:maxdepth: 3
+
+using-oauth2/creating-oauth2-applications.md
+using-oauth2/authorizing-account-access-with-oauth2.md
+using-oauth2/oauth2-scopes.md
+```
+
 OAuth 2.0 is an industry-standard authorization protocol. Users can seamlessly share select credentials from your Liferay-based website with various clients. OAuth 2.0 works by authorizing password-less access to portions of user-owned resources (such as an email address, a user profile picture, or something else from your account) and other permissioned resources. OAuth 2.0's design encrypts all authorization transport through HTTPS, which prevents data passed between the systems from being intercepted.
 
 You can jump into creating OAuth 2.0 apps or continue reading to learn how it works.
