@@ -32,10 +32,9 @@ public class S5E6EntryAssetRendererFactory
 	public AssetRenderer<S5E6Entry> getAssetRenderer(long classPK, int type)
 		throws PortalException {
 
-		S5E6Entry s5e6Entry = _s5e6EntryLocalService.getS5E6Entry(classPK);
-
 		S5E6EntryAssetRenderer s5e6EntryAssetRenderer =
-			new S5E6EntryAssetRenderer(s5e6Entry);
+			new S5E6EntryAssetRenderer(
+				_s5e6EntryLocalService.getS5E6Entry(classPK));
 
 		s5e6EntryAssetRenderer.setAssetRendererType(type);
 		s5e6EntryAssetRenderer.setServletContext(_servletContext);
