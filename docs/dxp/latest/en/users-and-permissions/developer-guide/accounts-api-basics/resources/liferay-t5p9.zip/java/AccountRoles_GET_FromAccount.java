@@ -6,7 +6,7 @@ import com.liferay.headless.admin.user.client.resource.v1_0.AccountRoleResource;
 public class AccountRoles_GET_FromAccount {
 
 	/**
-	 * java -classpath .:* AccountRoles_GET_FromAccount
+	 * java -classpath .:* -DaccountId=1234 AccountRoles_GET_FromAccount
 	 */
 	public static void main(String[] args) throws Exception {
 		AccountRoleResource.Builder builder = AccountRoleResource.builder();
@@ -16,7 +16,8 @@ public class AccountRoles_GET_FromAccount {
 		).build();
 
 		Page<AccountRole> page = accountRoleResource.getAccountAccountRolesPage(
-			null, null, Pagination.of(1, 2), null);
+			Long.valueOf(System.getProperty("accountId")), null,
+			Pagination.of(1, 2), null);
 
 		System.out.println(page);
 	}

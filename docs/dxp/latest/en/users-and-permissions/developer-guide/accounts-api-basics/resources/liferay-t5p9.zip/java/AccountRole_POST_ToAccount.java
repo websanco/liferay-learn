@@ -4,7 +4,7 @@ import com.liferay.headless.admin.user.client.resource.v1_0.AccountRoleResource;
 public class AccountRole_POST_ToAccount {
 
 	/**
-	 * java -classpath .:* AccountRole_POST_ToAccount
+	 * java -classpath .:* -DaccountId=1234 AccountRole_POST_ToAccount
 	 */
 	public static void main(String[] args) throws Exception {
 		AccountRoleResource.Builder builder = AccountRoleResource.builder();
@@ -14,9 +14,9 @@ public class AccountRole_POST_ToAccount {
 		).build();
 
 		AccountRole accountRole = accountRoleResource.postAccountAccountRole(
+			Long.valueOf(System.getProperty("accountId")),
 			new AccountRole() {
 				{
-					description = "Foo";
 					name = "Baker";
 				}
 			});

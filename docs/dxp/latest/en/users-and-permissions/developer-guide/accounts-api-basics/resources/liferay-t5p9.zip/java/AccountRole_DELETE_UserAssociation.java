@@ -13,10 +13,11 @@ public class AccountRole_DELETE_UserAssociation {
 			"test@liferay.com", "test"
 		).build();
 
-		AccountRole accountRole = accountRoleResource.deleteAccountAccountRoleUserAccountAssociation(
-			Long.valueOf(System.getProperty("accountId")),
-			Long.valueOf(System.getProperty("accountRoleId")),
-			Long.valueOf(System.getProperty("userAccountId")));
+		AccountRole accountRole =
+			accountRoleResource.deleteAccountAccountRoleUserAccountAssociation(
+				Long.valueOf(System.getProperty("accountId")),
+				Long.valueOf(System.getProperty("accountRoleId")),
+				Long.valueOf(System.getProperty("userAccountId")));
 
 		System.out.println(accountRole);
 	}
