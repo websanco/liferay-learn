@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.acme.s5e6" short-no-such-exception-enabled="false">
+	<namespace>S5E6</namespace>
+	<entity local-service="true" name="S5E6Entry" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="S5E6EntryId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

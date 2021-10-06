@@ -1,0 +1,10 @@
+Bundle-Name: Acme S5E6 API
+Bundle-SymbolicName: com.acme.s5e6.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.s5e6.exception,\
+	com.acme.s5e6.model,\
+	com.acme.s5e6.service,\
+	com.acme.s5e6.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../s5e6-service/service.xml
