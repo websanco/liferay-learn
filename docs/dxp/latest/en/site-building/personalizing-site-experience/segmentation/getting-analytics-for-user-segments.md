@@ -2,7 +2,7 @@
 
 > **Subscribers**
 
-To use Analytics Cloud with User Segments, you must first connect your DXP data source to Analytics Cloud and enable synchronization of users and analytics. For more information about Analytics Cloud, including instructions for connecting it with DXP, see the official [Analytics Cloud Documentation](https://help.liferay.com/hc/en-us/categories/360000872551).
+To use Analytics Cloud with User Segments, you must first connect your DXP data source to Analytics Cloud and enable synchronization of users and analytics. For more information about Analytics Cloud, including instructions for connecting it with DXP, see the official [Analytics Cloud Documentation](https://learn.liferay.com/analytics-cloud/latest/en/index.html).
 
 ```important::
   Synchronization with Analytics Cloud is not instant, so once you have connected Analytics Cloud and Liferay DXP, you must first wait for the users and data to synchronize. After that completes, you can create Segments in Analytics Cloud to capture data in DXP.
@@ -10,7 +10,7 @@ To use Analytics Cloud with User Segments, you must first connect your DXP data 
 
 Follow these steps to get Segment analytics:
 
-1. [Create a Segment in Analytics Cloud](https://help.liferay.com/hc/en-us/articles/360006947671-Creating-Segments) if you haven't already.
+1. [Create a Segment in Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/people/segments/creating-segments.html) if you haven't already.
 
     ```note::
       Only Segments that contain at least one member are synchronized with Liferay DXP. This means that empty Segments created with Analytics Cloud are unavailable to use on Liferay DXP.
@@ -23,7 +23,7 @@ Follow these steps to get Segment analytics:
 
 ![When you see Analytics Cloud Segments in the list of Segments, they are marked with the Analytics Cloud icon.](./getting-analytics-for-user-segments/images/02.png)
 
-When you click on the Analytics Cloud Segment, you are directed to Analytics Cloud to edit the segment and change your criteria. You cannot edit Analytics Cloud Segments in Liferay DXP.
+When you click on the Analytics Cloud Segment, you are directed to Analytics Cloud to edit the Segment and change your criteria. You cannot edit Analytics Cloud Segments in Liferay DXP.
 
 ## Related Information
 

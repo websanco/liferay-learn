@@ -37,7 +37,7 @@ Here you can configure an Asset Library's basic information.
 
 **Sharing**: Enable or disable sharing for assets. When enabled, Asset Library members can share its assets with other users.
 
-**Asset Auto Tagging**: Enable or disable [auto tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md). When enabled, assets are automatically tagged using the providers configured at the instance level.
+**Asset Auto Tagging**: Enable or disable [auto tagging](../tags-and-categories/auto-tagging/auto-tagging-assets.md). When enabled, assets are automatically tagged using the providers configured at the instance level.
 
 **Documents and Media**: Enable or disable HTTP directory browsing for this library. By default, this setting is disabled. When enabled, users with view permission for an Asset Library can view files and folders in its document library in their browser (e.g., `http://localhost:8080/documents/asset-library-{assetLibraryId}`).
 
@@ -88,7 +88,7 @@ By default, Asset Libraries include the five following Roles:
 * **Asset Library Owner**: Grants control over all aspects of an Asset Library and is automatically assigned to the Library's creator.
 
 ```{note}
-By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you’ll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
+By default, the Asset Library Member's permissions are more restricted than those of its Site counterpart. This means you'll need to manually grant access to applications, update/delete permissions for content, and more if you want Members to be responsible for managing content.
 ```
 
 Creating or customizing an Asset Library Role is the same process as for other kinds of Roles. See [Roles and Permissions](../../users-and-permissions/roles-and-permissions.md) for how to create, customize, manage, and assign Roles.

@@ -11,7 +11,7 @@ When users visit your website, they interact with your content and show differen
 Configuring content recommendations is a two-step process. First, you track users' behavior and define topics of interest. This step requires [Analytics Cloud connected to your DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html). Based on previous user's behavior in the site, Analytics Cloud defines and ranks topics of interest, and associates these interests to the user identifier in the site. Second, you show users recommended content, based on their interests. This step requires creating a [Dynamic Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and showing this Collection on your website. Analytics Cloud sends to DXP a series of keywords based on users' interests, and these keywords work as a filter in the Collection. You need a Collection to define the type of content you want to show to your users.
 
 ```note::
-    For more information on how to work with Interests in Analytics Cloud, see the `Analytics Cloud documentation <https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html>`_.
+    For more information on how to work with Interests in Analytics Cloud, see the `Analytics Cloud documentation <https://learn.liferay.com/analytics-cloud/latest/en/people/segments/segments.html>`_.
 ```
 
 ![Interests view in Liferay Analytics Cloud](./understanding-content-recommendations/images/01.png)

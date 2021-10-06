@@ -16,7 +16,7 @@ You can map the single-value Content field directly to a Fragment, but you need 
 
 ## Mapping a Web Content Template to a Fragment
 
-1. [Create a Web Content Structure](/../content-authoring-and-management/web-content/web-content-structures/creating-structures.md) that contains the multi-value field you want to map.
+1. [Create a Web Content Structure](../../../content-authoring-and-management/web-content/web-content-structures/creating-structures.md) that contains the multi-value field you want to map.
 1. [Create a Web Content Template](../../../content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates.md) that uses the same Structure with the multi-value field (A).
 1. In the Web Content Template, under Fields (B), select the _variable_ (C) with the multi-value field in the Structure.
 

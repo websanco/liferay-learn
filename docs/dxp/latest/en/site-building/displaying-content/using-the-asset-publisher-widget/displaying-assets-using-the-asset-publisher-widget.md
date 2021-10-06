@@ -1,6 +1,6 @@
 # Displaying Assets Using the Asset Publisher Widget
 
-As you create web content, remember that pieces of [content](../../../content_authoring_and_management.md) are assets, just like message board entries and blog posts. The most common type of asset is [Web Content](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md).
+As you create web content, remember that pieces of content are assets, just like message board entries and blog posts. The most common type of asset is [Web Content](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md).
 The Asset Publisher Widget supports these asset types by default:
 
 * Blogs Entry

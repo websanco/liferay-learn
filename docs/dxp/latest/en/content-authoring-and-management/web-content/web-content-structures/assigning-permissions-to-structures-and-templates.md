@@ -7,7 +7,7 @@ As a best practice, define two different Roles with access to Structures and Web
 * **Content Developer:** Users with this Role have permission to create and edit Structures or Web Content Templates.
 * **Content Creator:** Users this Role have permission to view Structures or Web Content Templates, so they can use them to create content.
 
-For information about how to create Roles, see [Creating and Managing Roles](../../../../users-and-permissions/roles-and-permissions/creating-and-managing-roles.md).
+For information about how to create Roles, see [Creating and Managing Roles](../../../users-and-permissions/roles-and-permissions/creating-and-managing-roles.md).
 
 Consider the following information when you assign permissions to Structures and Web Content Templates:
 
@@ -41,7 +41,7 @@ You can disable template creation completely. Once disabled, Users can no longer
 
 ![Permissions Dialog for Web Content Structures and Templates](./assigning-permissions-to-structures-and-templates/images/01.png).
 
-See [Defining Role Permissions](../../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information on configuring Permissions.
+See [Defining Role Permissions](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information on configuring Permissions.
 
 ## Related Information
 

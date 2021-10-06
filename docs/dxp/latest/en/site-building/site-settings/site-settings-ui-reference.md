@@ -67,17 +67,17 @@ By default, Site Configuration includes the Details and Site URL sections.
 | Setting | Description |
 | --- | --- |
 | Site ID | A unique number automatically generated for a Site at its creation. This ID is permanent and cannot be changed. |
-| Description | Use the this field to explain a Site’s purpose.|
+| Description | Use the this field to explain a Site's purpose.|
 | Parent Site | Designate a Site as a child Site by selecting its parent Site. See [Site Hierarchies](../building-sites/site-hierarchies.md) for more information. |
-| Membership Type | Determines how restrictive a Site’s membership is. See [Changing Site Membership Types](../site-settings/site-users/changing-site-membership-type.md) for more information.|
+| Membership Type | Determines how restrictive a Site's membership is. See [Changing Site Membership Types](../site-settings/site-users/changing-site-membership-type.md) for more information.|
 | Allow Manual Membership Management | Determine whether to allow members to be manually added or removed from a Site. See [Changing Site Membership Type](../site-settings/site-users/changing-site-membership-type.md) for more information. |
 
 #### Site URL
 
 | Setting | Description |
 | --- | --- |
-| Friendly URL | Set a custom URL for both public and private Site pages. See [Configuring Your Site’s Friendly URL](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) for more information. |
-| Public and Private Pages | Set public and private Virtual Hosts to map to a Site’s Public and Private Pages. See [Configuring Virtual Hosts Site URLs](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information. |
+| Friendly URL | Set a custom URL for both public and private Site pages. See [Configuring Your Site's Friendly URL](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) for more information. |
+| Public and Private Pages | Set public and private Virtual Hosts to map to a Site's Public and Private Pages. See [Configuring Virtual Hosts Site URLs](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information. |
 
 ### Third Party
 
@@ -151,7 +151,7 @@ Depending on your Digital Signature configuration at the Instance scope, you may
 
 ### Documents and Media
 
-When enabled, a User with view permission can browse the Site’s document library files and folders. For more information, see [Securing Site Documents Content](../site-settings/site-content-configurations/securing-site-documents-content.md).
+When enabled, a User with view permission can browse the Site's document library files and folders. For more information, see [Securing Site Documents Content](../site-settings/site-content-configurations/securing-site-documents-content.md).
 
 ### Message Boards
 
@@ -164,7 +164,7 @@ Using this option, you can enable automatic moderation of user messages on Messa
 | Section | Description |
 | --- | --- |
 | Google PageSpeed Insights (Liferay DXP 7.4+) | Enable the Google PageSpeed Insight integration in Liferay DXP. Using this option, you can audit your pages for accessibility issues and check suggestions for fixing them. After you enable Google PageSpeed Insights, you need to provide the API Key and Preferred Strategy. |
-| Open Graph | Enable this option to include the Open Graph `meta` tags in the `head` of your Site's pages. These tags define page metadata to create engaging representations of your Site’s content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter. For more information, read [Configuring Open Graph](./configuring-open-graph.md). |
+| Open Graph | Enable this option to include the Open Graph `meta` tags in the `head` of your Site's pages. These tags define page metadata to create engaging representations of your Site's content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter. For more information, read [Configuring Open Graph](./configuring-open-graph.md). |
 | Pages | View the Site Public and Private pages. On this section, you can also configure the propagation of changes from a Site template, if one exists. For more information, read [Building Sites with Site Templates](../../../en/site-building/building-sites/building-sites-with-site-templates.md). |
 
 ### Recycle Bin
@@ -287,7 +287,7 @@ Determine whether to enable document sharing between Site Users. When enabled, U
 
 #### Asset Auto Tagging
 
-Determine whether to enable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at Instance scope. See [Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md) for more information. 
+Determine whether to enable asset auto tagging for a Site. When enabled, assets are auto tagged by the providers configured at Instance scope. See [Configuring Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md) for more information. 
 
 ### Social
 

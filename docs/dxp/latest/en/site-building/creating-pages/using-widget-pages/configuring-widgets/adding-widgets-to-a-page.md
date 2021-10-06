@@ -1,6 +1,6 @@
 # Adding Widgets to a Page
 
-Widget are applications that can serve a variety of functions. Some can be used to [display content](../../../displaying_content.md) and others are full featured collaboration applications, like the [Message Boards widget](../../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md).
+Widget are applications that can serve a variety of functions. Some can be used to [display content](../../../displaying-content/displaying-content-intro.md) and others are full featured collaboration applications, like the [Message Boards widget](../../../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md).
 
 Follow these steps to add a widget to a Widget Page:
 

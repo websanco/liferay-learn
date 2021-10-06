@@ -32,7 +32,7 @@ To create a Site using a Site Template, follow these steps:
 
 1. Click *Save*.
 
-1. Configure your [Site settings](../site_settings.md).
+1. Configure your [Site settings](../site-settings/site-settings-ui-reference.md).
 
     - In Liferay DXP 7.4+
 

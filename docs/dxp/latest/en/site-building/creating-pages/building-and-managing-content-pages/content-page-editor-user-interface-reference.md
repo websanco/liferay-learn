@@ -103,7 +103,7 @@ Here you can view, edit, and manage all web content on the Page. This includes c
 
 ### Page Design Options
 
-Click *Look and Feel* (![Look and Feel](../../../images/icon-format.png)) to change the theme or manage other options for the Page. See [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel) for more information about these options.
+Click *Look and Feel* (![Look and Feel](../../../images/icon-format.png)) to change the [Master Page Template](../defining-headers-and-footers/managing-master-page-templates.md) or [Style Book](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md).
 
 ### Comments
 

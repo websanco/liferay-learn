@@ -48,6 +48,6 @@ When finished, click on *Save* to apply your changes.
 
 ## Additional Information
 
-* [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
+* [Search Engine Optimization](../../optimizing_sites.html)
 * [Site Settings UI Reference](./site-settings-ui-reference.md)
 * [Configuring Individual Pages](./../creating-pages/page-settings/configuring-individual-pages.md)

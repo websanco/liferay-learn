@@ -30,5 +30,5 @@ You can now use OpenOffice/LibreOffice compatible features, which include conver
 
 ## Additional Information
 
-* [Configuring Document Previews](./configuring-document-previews.md)
+* [Configuring Documents and Media Previews](./configuring-documents-and-media-previews.md)
 * [Documents and Media Overview](../documents-and-media-overview.md)

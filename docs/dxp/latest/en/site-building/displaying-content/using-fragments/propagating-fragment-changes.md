@@ -1,6 +1,6 @@
 # Propagating Fragment Changes
 
-By default, [changes to the Fragment's configuration](../../developer-guide/developing-page-fragments/using-the-fragments-editor.md) do not propagate automatically to the [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) using the Fragment. For example, if you use a [Button Fragment](./using-fragments.md#button) of *Primary* type and then change the configuration to use the *Secondary* type, a Content Page using the Fragment does not reflect the change by default.
+By default, [changes to the Fragment's configuration](../../developer-guide/developing-page-fragments/using-the-fragments-editor.md) do not propagate automatically to the [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) using the Fragment. For example, if you use a [Button Fragment](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#button) of *Primary* type and then change the configuration to use the *Secondary* type, a Content Page using the Fragment does not reflect the change by default.
 
 Using *Fragment Propagation*, you can modify this behavior and propagate your Fragment changes to the elements where the Fragment exists. Propagation includes changes in the Fragment configuration and code (HTML, CSS, and JavaScript). In addition to Content Pages, Propagation affects other elements where you use the Fragment, like Master Pages, Page Templates, and Display Page Templates.
 

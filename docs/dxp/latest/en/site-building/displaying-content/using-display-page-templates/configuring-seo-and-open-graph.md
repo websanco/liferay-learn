@@ -89,5 +89,5 @@ By default, this field is unmapped in Display Page templates. This means the tem
 
 ## Additional Information
 
-* [Search Engine Optimization](./../../optimizing_sites.html#search-engine-optimization)
-* [Open Graph](./../../site-settings/configuring-open-graph.md)
+- [Configuring Your Page's Friendly URL](../../creating-pages/page-settings/configuring-your-pages-friendly-url.md)
+- [Configuring Open Graph](./../../site-settings/configuring-open-graph.md)

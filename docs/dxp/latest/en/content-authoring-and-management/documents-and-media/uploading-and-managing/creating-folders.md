@@ -42,7 +42,7 @@ After creating a folder, you can restrict it to allow only certain document type
 
 ## Additional Information
 
-* [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow-workflow.md#documents-and-media-folders)
+* [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow.md)
 * [Uploading Files](./uploading-files.md)
 * [Publishing Documents](../publishing-and-sharing/publishing-documents.md)
 * [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

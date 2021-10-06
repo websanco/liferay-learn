@@ -16,7 +16,7 @@ To run A/B Tests, you must have your Liferay DXP instance [connected to Liferay 
 * Liferay DXP and Analytics Cloud show your test's status and the winning variant when the test finishes.
 * You manage other aspects of your A/B test in Analytics Cloud (test history, statistics, variant comparison, etc.)
 
-For more information about working with A/B Testing in Analytics Cloud, [A/B Testing](https://learn.liferay.com/analytics-cloud/latest/en/touchpoints/a-b-testing.html).
+For more information about working with A/B Testing in Analytics Cloud, [A/B Testing](https://learn.liferay.com/analytics-cloud/latest/en/optimization/a-b-testing.html).
 
 ## Related Information
 
