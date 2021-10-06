@@ -11,7 +11,6 @@
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
-
 package com.acme.s5e6.exception;
 
 import com.liferay.portal.kernel.exception.NoSuchModelException;
@@ -19,20 +18,20 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 /**
  * @author Brian Wing Shun Chan
  */
-public class NoSuchEntryException extends NoSuchModelException {
+public class NoSuchS5E6EntryException extends NoSuchModelException {
 
-	public NoSuchEntryException() {
+	public NoSuchS5E6EntryException() {
 	}
 
-	public NoSuchEntryException(String msg) {
+	public NoSuchS5E6EntryException(String msg) {
 		super(msg);
 	}
 
-	public NoSuchEntryException(String msg, Throwable throwable) {
+	public NoSuchS5E6EntryException(String msg, Throwable throwable) {
 		super(msg, throwable);
 	}
 
-	public NoSuchEntryException(Throwable throwable) {
+	public NoSuchS5E6EntryException(Throwable throwable) {
 		super(throwable);
 	}
 

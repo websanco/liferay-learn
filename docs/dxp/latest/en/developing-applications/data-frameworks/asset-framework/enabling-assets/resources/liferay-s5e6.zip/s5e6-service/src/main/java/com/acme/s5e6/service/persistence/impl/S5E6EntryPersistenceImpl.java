@@ -14,7 +14,7 @@
 
 package com.acme.s5e6.service.persistence.impl;
 
-import com.acme.s5e6.exception.NoSuchEntryException;
+import com.acme.s5e6.exception.NoSuchS5E6EntryException;
 import com.acme.s5e6.model.S5E6Entry;
 import com.acme.s5e6.model.S5E6EntryTable;
 import com.acme.s5e6.model.impl.S5E6EntryImpl;
@@ -281,12 +281,12 @@ public class S5E6EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	@Override
 	public S5E6Entry findByUuid_First(
 			String uuid, OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByUuid_First(uuid, orderByComparator);
 
@@ -303,7 +303,7 @@ public class S5E6EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchS5E6EntryException(sb.toString());
 	}
 
 	/**
@@ -332,12 +332,12 @@ public class S5E6EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	@Override
 	public S5E6Entry findByUuid_Last(
 			String uuid, OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByUuid_Last(uuid, orderByComparator);
 
@@ -354,7 +354,7 @@ public class S5E6EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchS5E6EntryException(sb.toString());
 	}
 
 	/**
@@ -391,13 +391,13 @@ public class S5E6EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
 	public S5E6Entry[] findByUuid_PrevAndNext(
 			long S5E6EntryId, String uuid,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -633,16 +633,16 @@ public class S5E6EntryPersistenceImpl
 	private FinderPath _finderPathCountByUUID_G;
 
 	/**
-	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	@Override
 	public S5E6Entry findByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByUUID_G(uuid, groupId);
 
@@ -663,7 +663,7 @@ public class S5E6EntryPersistenceImpl
 				_log.debug(sb.toString());
 			}
 
-			throw new NoSuchEntryException(sb.toString());
+			throw new NoSuchS5E6EntryException(sb.toString());
 		}
 
 		return s5e6Entry;
@@ -794,7 +794,7 @@ public class S5E6EntryPersistenceImpl
 	 */
 	@Override
 	public S5E6Entry removeByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = findByUUID_G(uuid, groupId);
 
@@ -1075,13 +1075,13 @@ public class S5E6EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	@Override
 	public S5E6Entry findByUuid_C_First(
 			String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByUuid_C_First(
 			uuid, companyId, orderByComparator);
@@ -1102,7 +1102,7 @@ public class S5E6EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchS5E6EntryException(sb.toString());
 	}
 
 	/**
@@ -1135,13 +1135,13 @@ public class S5E6EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	@Override
 	public S5E6Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByUuid_C_Last(
 			uuid, companyId, orderByComparator);
@@ -1162,7 +1162,7 @@ public class S5E6EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchS5E6EntryException(sb.toString());
 	}
 
 	/**
@@ -1202,13 +1202,13 @@ public class S5E6EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
 	public S5E6Entry[] findByUuid_C_PrevAndNext(
 			long S5E6EntryId, String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -1583,10 +1583,10 @@ public class S5E6EntryPersistenceImpl
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry that was removed
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
-	public S5E6Entry remove(long S5E6EntryId) throws NoSuchEntryException {
+	public S5E6Entry remove(long S5E6EntryId) throws NoSuchS5E6EntryException {
 		return remove((Serializable)S5E6EntryId);
 	}
 
@@ -1595,11 +1595,11 @@ public class S5E6EntryPersistenceImpl
 	 *
 	 * @param primaryKey the primary key of the s5e6 entry
 	 * @return the s5e6 entry that was removed
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
 	public S5E6Entry remove(Serializable primaryKey)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		Session session = null;
 
@@ -1614,13 +1614,13 @@ public class S5E6EntryPersistenceImpl
 					_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 				}
 
-				throw new NoSuchEntryException(
+				throw new NoSuchS5E6EntryException(
 					_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
 			return remove(s5e6Entry);
 		}
-		catch (NoSuchEntryException noSuchEntityException) {
+		catch (NoSuchS5E6EntryException noSuchEntityException) {
 			throw noSuchEntityException;
 		}
 		catch (Exception exception) {
@@ -1750,11 +1750,11 @@ public class S5E6EntryPersistenceImpl
 	 *
 	 * @param primaryKey the primary key of the s5e6 entry
 	 * @return the s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
 	public S5E6Entry findByPrimaryKey(Serializable primaryKey)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		S5E6Entry s5e6Entry = fetchByPrimaryKey(primaryKey);
 
@@ -1763,7 +1763,7 @@ public class S5E6EntryPersistenceImpl
 				_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			throw new NoSuchEntryException(
+			throw new NoSuchS5E6EntryException(
 				_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 		}
 
@@ -1771,15 +1771,15 @@ public class S5E6EntryPersistenceImpl
 	}
 
 	/**
-	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	@Override
 	public S5E6Entry findByPrimaryKey(long S5E6EntryId)
-		throws NoSuchEntryException {
+		throws NoSuchS5E6EntryException {
 
 		return findByPrimaryKey((Serializable)S5E6EntryId);
 	}

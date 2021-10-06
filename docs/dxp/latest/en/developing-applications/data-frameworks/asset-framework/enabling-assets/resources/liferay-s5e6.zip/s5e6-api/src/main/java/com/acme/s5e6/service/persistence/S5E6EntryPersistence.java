@@ -14,7 +14,7 @@
 
 package com.acme.s5e6.service.persistence;
 
-import com.acme.s5e6.exception.NoSuchEntryException;
+import com.acme.s5e6.exception.NoSuchS5E6EntryException;
 import com.acme.s5e6.model.S5E6Entry;
 
 import com.liferay.portal.kernel.service.persistence.BasePersistence;
@@ -108,13 +108,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public S5E6Entry findByUuid_First(
 			String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the first s5e6 entry in the ordered set where uuid = &#63;.
@@ -134,13 +134,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public S5E6Entry findByUuid_Last(
 			String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the last s5e6 entry in the ordered set where uuid = &#63;.
@@ -161,13 +161,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public S5E6Entry[] findByUuid_PrevAndNext(
 			long S5E6EntryId, String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Removes all the s5e6 entries where uuid = &#63; from the database.
@@ -185,15 +185,15 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	public int countByUuid(String uuid);
 
 	/**
-	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public S5E6Entry findByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
@@ -223,7 +223,7 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @return the s5e6 entry that was removed
 	 */
 	public S5E6Entry removeByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the number of s5e6 entries where uuid = &#63; and groupId = &#63;.
@@ -306,13 +306,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public S5E6Entry findByUuid_C_First(
 			String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the first s5e6 entry in the ordered set where uuid = &#63; and companyId = &#63;.
@@ -334,13 +334,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public S5E6Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the last s5e6 entry in the ordered set where uuid = &#63; and companyId = &#63;.
@@ -363,13 +363,13 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public S5E6Entry[] findByUuid_C_PrevAndNext(
 			long S5E6EntryId, String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<S5E6Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Removes all the s5e6 entries where uuid = &#63; and companyId = &#63; from the database.
@@ -415,21 +415,21 @@ public interface S5E6EntryPersistence extends BasePersistence<S5E6Entry> {
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry that was removed
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
-	public S5E6Entry remove(long S5E6EntryId) throws NoSuchEntryException;
+	public S5E6Entry remove(long S5E6EntryId) throws NoSuchS5E6EntryException;
 
 	public S5E6Entry updateImpl(S5E6Entry s5e6Entry);
 
 	/**
-	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public S5E6Entry findByPrimaryKey(long S5E6EntryId)
-		throws NoSuchEntryException;
+		throws NoSuchS5E6EntryException;
 
 	/**
 	 * Returns the s5e6 entry with the primary key or returns <code>null</code> if it could not be found.

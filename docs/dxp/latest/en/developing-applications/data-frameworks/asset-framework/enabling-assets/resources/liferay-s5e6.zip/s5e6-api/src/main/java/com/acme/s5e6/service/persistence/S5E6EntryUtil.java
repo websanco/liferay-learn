@@ -199,11 +199,11 @@ public class S5E6EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public static S5E6Entry findByUuid_First(
 			String uuid, OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_First(uuid, orderByComparator);
 	}
@@ -227,11 +227,11 @@ public class S5E6EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public static S5E6Entry findByUuid_Last(
 			String uuid, OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_Last(uuid, orderByComparator);
 	}
@@ -256,12 +256,12 @@ public class S5E6EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public static S5E6Entry[] findByUuid_PrevAndNext(
 			long S5E6EntryId, String uuid,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_PrevAndNext(
 			S5E6EntryId, uuid, orderByComparator);
@@ -287,15 +287,15 @@ public class S5E6EntryUtil {
 	}
 
 	/**
-	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public static S5E6Entry findByUUID_G(String uuid, long groupId)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUUID_G(uuid, groupId);
 	}
@@ -333,7 +333,7 @@ public class S5E6EntryUtil {
 	 * @return the s5e6 entry that was removed
 	 */
 	public static S5E6Entry removeByUUID_G(String uuid, long groupId)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().removeByUUID_G(uuid, groupId);
 	}
@@ -432,12 +432,12 @@ public class S5E6EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public static S5E6Entry findByUuid_C_First(
 			String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_C_First(
 			uuid, companyId, orderByComparator);
@@ -466,12 +466,12 @@ public class S5E6EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching s5e6 entry
-	 * @throws NoSuchEntryException if a matching s5e6 entry could not be found
+	 * @throws NoSuchS5E6EntryException if a matching s5e6 entry could not be found
 	 */
 	public static S5E6Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_C_Last(
 			uuid, companyId, orderByComparator);
@@ -501,12 +501,12 @@ public class S5E6EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public static S5E6Entry[] findByUuid_C_PrevAndNext(
 			long S5E6EntryId, String uuid, long companyId,
 			OrderByComparator<S5E6Entry> orderByComparator)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByUuid_C_PrevAndNext(
 			S5E6EntryId, uuid, companyId, orderByComparator);
@@ -566,10 +566,10 @@ public class S5E6EntryUtil {
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry that was removed
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public static S5E6Entry remove(long S5E6EntryId)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().remove(S5E6EntryId);
 	}
@@ -579,14 +579,14 @@ public class S5E6EntryUtil {
 	}
 
 	/**
-	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the s5e6 entry with the primary key or throws a <code>NoSuchS5E6EntryException</code> if it could not be found.
 	 *
 	 * @param S5E6EntryId the primary key of the s5e6 entry
 	 * @return the s5e6 entry
-	 * @throws NoSuchEntryException if a s5e6 entry with the primary key could not be found
+	 * @throws NoSuchS5E6EntryException if a s5e6 entry with the primary key could not be found
 	 */
 	public static S5E6Entry findByPrimaryKey(long S5E6EntryId)
-		throws com.acme.s5e6.exception.NoSuchEntryException {
+		throws com.acme.s5e6.exception.NoSuchS5E6EntryException {
 
 		return getPersistence().findByPrimaryKey(S5E6EntryId);
 	}
