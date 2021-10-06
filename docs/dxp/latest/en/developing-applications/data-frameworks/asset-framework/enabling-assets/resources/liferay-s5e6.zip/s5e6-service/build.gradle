@@ -1,10 +1,10 @@
+buildService {
+	apiDir = "../s5e6-api/src/main/java"
+}
+
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 	compileOnly project(":s5e6-api")
-}
-
-buildService {
-	apiDir = "../s5e6-api/src/main/java"
 }
 
 group = "com.acme.s5e6"
