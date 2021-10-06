@@ -6,5 +6,3 @@ Export-Package:\
 	com.acme.s5e6.model,\
 	com.acme.s5e6.service,\
 	com.acme.s5e6.service.persistence
--check: EXPORTS
--includeresource: META-INF/service.xml=../s5e6-service/service.xml
