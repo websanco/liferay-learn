@@ -24,7 +24,7 @@ public class S5E6EntryAssetRendererFactory
 	public S5E6EntryAssetRendererFactory() {
 		setClassName(S5E6Entry.class.getName());
 		setLinkable(true);
-		setPortletId("com.acme.s5e6.s5e6Entry");
+		setPortletId("com_acme_s5e6_web_internal_portlet_S5E6Portlet");
 		setSearchable(true);
 	}
 
