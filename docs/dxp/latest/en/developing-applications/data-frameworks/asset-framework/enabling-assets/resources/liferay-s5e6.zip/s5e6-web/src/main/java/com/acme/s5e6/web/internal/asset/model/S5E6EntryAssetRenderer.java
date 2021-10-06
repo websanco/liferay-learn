@@ -56,11 +56,6 @@ public class S5E6EntryAssetRenderer extends BaseJSPAssetRenderer<S5E6Entry> {
 		return _s5e6Entry.getName();
 	}
 
-	//    @Override
-	//    public int getStatus() {
-	//        return _s5e6Entry.getStatus();
-	//    }
-
 	@Override
 	public long getUserId() {
 		return _s5e6Entry.getUserId();
