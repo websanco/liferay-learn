@@ -1,6 +1,6 @@
 # Completely Custom Configuration
 
-A configuration UI is automatically generated when you [create a configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface). But in some cases you may want a completely custom UI for your configuration. For example, you plan to handle the configuration programmatically instead of using Liferay's Configuration Admin service. Or maybe you want the flexibility of creating a completely custom UI.
+A configuration UI is automatically generated when you [create a configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface). But in some cases you may want a completely custom UI for your configuration. For example, you plan to handle the configuration programmatically instead of using Liferay's Configuration Admin. Or maybe you want the flexibility of creating a completely custom UI.
 
 ## See the Example Project
 
@@ -44,7 +44,7 @@ A configuration UI is automatically generated when you [create a configuration i
 
     ![Navigate to U2G5 configuration in system settings.](./completely-custom-configuration/images/01.png)
 
-    Note that this view is being delivered by a custom JSP file.
+    Note that this view is delivered by a custom JSP file. Let's see how this is done.
 
 ## Create the Configuration Interface
 
@@ -55,7 +55,7 @@ Define the configurable attributes in the configuration interface. The sample pr
 :lines: 7-24
 ```
 
-Note that under the `@ExtendedObjectClassDefinition` annotation `generateUI` is set to `false`. This excludes the configuration UI from being generated. 
+Note that under the `@ExtendedObjectClassDefinition` annotation `generateUI` is set to `false`. This excludes the configuration UI from being auto-generated. 
 
 ## Add the Configuration Bean Declaration
 
@@ -92,7 +92,7 @@ To implement `ConfigurationScreen`,
     :lines: 42-45
     ```
 
-1. The `render()` method utilizes a `ConfigurationProvider` to access the configuration. The servlet context provides access to the request dispatcher which allows the custom JSP to read the configuration. 
+1. The `render()` method utilizes `ConfigurationProvider` to get the configuration. The servlet context provides access to the request dispatcher which allows the custom JSP to read the configuration. 
 
     ```{literalinclude} ./completely-custom-configuration/resources/liferay-u2g5.zip/u2g5-web/src/main/java/com/acme/u2g5/web/internal/configuration/admin/display/U2G5ConfigurationScreen.java
     :dedent: 1
@@ -110,7 +110,7 @@ To implement `ConfigurationScreen`,
 
 ## Add the Web-ContextPath
 
-Specify your bundle's `Web-ContextPath` in the `bnd.bnd` file. For example, the sample project has `Web-ContextPath: /u2g5-web` in the BND file. This is what registers the `ServletContext` object in the Configuration Screen file. Note that a servlet context created automatically for portlets but for this sample that has no portlet, the line must be added to the BND file.
+Specify your bundle's `Web-ContextPath` in the `bnd.bnd` file. For example, the sample project has `Web-ContextPath: /u2g5-web` in the Bnd file. This is what registers the `ServletContext` object in the Configuration Screen file. Note that a servlet context is created automatically for portlets but since this sample doesn't have a portlet this line must be added to the Bnd file.
 
 ## Create a Custom JSP 
 
@@ -132,4 +132,4 @@ To create a UI with a custom JSP file,
 
 1. The attributes `fontColor()`, `fontFamily()`, `fontSize()` can now be used in the JSP.
 
-This example project demonstrates a simple UI that reads and displays the configuration values. In your application, implement your own code for a completely custom configuration UI.
+This sample project demonstrates a basic example of how `ConfigurationScreen` can be used to read and display configuration values in a custom JSP. In your application, write your own code and create a completely custom configuration UI to meet your needs.
