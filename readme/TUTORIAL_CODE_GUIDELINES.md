@@ -39,6 +39,7 @@
         * [Labels and Headings](#labels-and-headings)
     * [Logging Output](#logging-output)
         * [Logging an Exception](#logging-an-exception)
+	* [Portlet ID](#portlet-id)
 * [Templates](#templates)
     * [Naming JSP Files](#naming-jsp-files)
     * [Use the Portlet Title in the Main Views](#use-the-portlet-title-in-the-main-views)
@@ -484,6 +485,12 @@ catch (MessageBusException messageBusException) {
 	_log.error(messageBusException, messageBusException);
 }
 ```
+
+### Portlet ID
+
+If your example requires refering to a portlet by its ID, use the [portlet name](#portlet-name).
+
+**Important:** Make sure to assign a name to the `-Portlet` class via a [`javax.portlet.name`](#portlet-name) component property.
 
 ## Templates
 
