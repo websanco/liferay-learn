@@ -40,7 +40,7 @@ public class S5E6EntryLocalServiceImpl extends S5E6EntryLocalServiceBaseImpl {
 
 	@Indexable(type = IndexableType.REINDEX)
 	public S5E6Entry addS5E6Entry(
-			long userId, long groupId, String description, String item,
+			long userId, long groupId, String description, String name,
 			ServiceContext serviceContext)
 		throws PortalException {
 
@@ -55,7 +55,7 @@ public class S5E6EntryLocalServiceImpl extends S5E6EntryLocalServiceBaseImpl {
 		s5e6Entry.setUserId(user.getUserId());
 		s5e6Entry.setUserName(user.getFullName());
 		s5e6Entry.setDescription(description);
-		s5e6Entry.setName(item);
+		s5e6Entry.setName(name);
 
 		s5e6Entry = s5e6EntryPersistence.update(s5e6Entry);
 

@@ -47,8 +47,7 @@ public class S5E6EntryAssetRenderer extends BaseJSPAssetRenderer<S5E6Entry> {
 	@Override
 	public String getSummary(
 		PortletRequest portletRequest, PortletResponse portletResponse) {
-
-		return "S5E6Entry";
+			return _s5e6Entry.getDescription();
 	}
 
 	@Override
