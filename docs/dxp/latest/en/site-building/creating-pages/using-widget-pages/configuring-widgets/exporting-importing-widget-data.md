@@ -102,5 +102,5 @@ Once you've selected the appropriate options, select *Import* and your widget's 
 
 ## Additional Information
 
-- [Communication Between Widgets](./communicating-between-portlet-widgets.md)
+- [Communication Between Widgets](./communication-between-widgets.md)
 - [Importing/Exporting Sites and Content](../../../building-sites/importing-exporting-pages-and-content.md)

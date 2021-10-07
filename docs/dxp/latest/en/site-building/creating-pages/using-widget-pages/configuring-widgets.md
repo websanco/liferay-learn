@@ -7,7 +7,7 @@ Widgets available out-of-the-box with Liferay DXP share several configurable fea
 
 configuring-widgets/adding-widgets-to-a-page.md
 configuring-widgets/exporting-importing-widget-data.md
-configuring-widgets/communicating-between-portlet-widgets.md
+configuring-widgets/communication-between-widgets.md
 configuring-widgets/converting-widget-pages-to-content-pages.md
 configuring-widgets/configuring-templates.md
 configuring-widgets/enabling-user-personalization-of-widget-pages.md

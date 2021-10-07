@@ -12,7 +12,7 @@ Configuring Widgets
 
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/adding-widgets-to-a-page`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/exporting-importing-widget-data`
--  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/communicating-between-portlet-widgets`
+-  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/communication-between-widgets`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/converting-widget-pages-to-content-pages`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/configuring-templates`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/enabling-user-personalization-of-widget-pages`

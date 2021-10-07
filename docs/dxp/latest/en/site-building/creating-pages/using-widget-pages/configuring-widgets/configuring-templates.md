@@ -1,6 +1,6 @@
 # Configuring Templates
 
-Once you've configured a widget, *Configuration Templates* can save those settings in a reusable template. If someone goes in and changes the settings of a particular widget, it then becomes easy to revert those changes back to the original configuration template.
+Once you've configured a widget, *Configuration Templates* can save those settings in a reusable template.
 
 ```{note}
 Configuration templates are only available for widgets placed on a page. Applications available from the Liferay DXP Menu do not provide configuration templates.
