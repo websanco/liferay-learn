@@ -22,3 +22,4 @@ Specific permissions are generally defined for specific widgets. For example, Me
 ## Additional Information
 
 - [Setting Widget Scopes](./setting-widget-scopes.md)
+- [Understanding Roles and Permissions](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
