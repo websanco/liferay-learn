@@ -5,7 +5,7 @@ Using Widget Pages
    :maxdepth: 3
 
    using-widget-pages/configuring-widgets.md
-   using-widget-pages/styling-widgets-and-assets.md
+   using-widget-pages/styling-widgets.md
 
 .. raw:: html
    :file: ../../landingpage_template.html
