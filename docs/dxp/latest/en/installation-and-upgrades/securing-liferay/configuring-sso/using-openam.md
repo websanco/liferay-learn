@@ -1,7 +1,7 @@
 # Using OpenAM
 
 ```{important}
-OpenAM/OpenSSO is deprecated as of Liferay DXP 7.2. Please use [SAML](./authenticating-with-saml.md) instead. 
+Liferay supports only OpenAM version 13. All other versions of OpenAM/OpenSSO are deprecated as of Liferay DXP 7.2. 
 ```
 
 OpenAM is an open source single sign-on solution from the codebase of Sun's System Access Manager product. You can use OpenAM to integrate Liferay DXP into an infrastructure that contains several different authentication schemes against different repositories of identities.
