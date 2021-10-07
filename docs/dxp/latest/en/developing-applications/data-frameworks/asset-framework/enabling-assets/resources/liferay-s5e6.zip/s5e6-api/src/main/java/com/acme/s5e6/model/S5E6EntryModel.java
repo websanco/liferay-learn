@@ -205,6 +205,21 @@ public interface S5E6EntryModel
 	public void setModifiedDate(Date modifiedDate);
 
 	/**
+	 * Returns the description of this s5e6 entry.
+	 *
+	 * @return the description of this s5e6 entry
+	 */
+	@AutoEscape
+	public String getDescription();
+
+	/**
+	 * Sets the description of this s5e6 entry.
+	 *
+	 * @param description the description of this s5e6 entry
+	 */
+	public void setDescription(String description);
+
+	/**
 	 * Returns the name of this s5e6 entry.
 	 *
 	 * @return the name of this s5e6 entry

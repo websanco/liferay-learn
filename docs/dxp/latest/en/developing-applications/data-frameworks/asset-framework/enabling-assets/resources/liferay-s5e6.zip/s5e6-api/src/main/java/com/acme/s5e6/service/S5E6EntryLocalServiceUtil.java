@@ -46,13 +46,12 @@ public class S5E6EntryLocalServiceUtil {
 	 * Never modify this class directly. Add custom service methods to <code>com.acme.s5e6.service.impl.S5E6EntryLocalServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static S5E6Entry addS5E6Entry(
-			long companyId, long groupId, long userId, String userName,
-			String item,
+			long userId, long groupId, String description, String item,
 			com.liferay.portal.kernel.service.ServiceContext serviceContext)
 		throws PortalException {
 
 		return getService().addS5E6Entry(
-			companyId, groupId, userId, userName, item, serviceContext);
+			userId, groupId, description, item, serviceContext);
 	}
 
 	/**

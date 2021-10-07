@@ -23,6 +23,7 @@
 
 		<!-- Other fields -->
 
+		<column name="description" type="String" />
 		<column name="name" type="String" />
 
 		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />

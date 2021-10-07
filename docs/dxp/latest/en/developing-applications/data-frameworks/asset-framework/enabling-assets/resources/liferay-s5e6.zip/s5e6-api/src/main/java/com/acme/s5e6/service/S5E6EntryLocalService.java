@@ -67,8 +67,8 @@ public interface S5E6EntryLocalService
 	 */
 	@Indexable(type = IndexableType.REINDEX)
 	public S5E6Entry addS5E6Entry(
-			long companyId, long groupId, long userId, String userName,
-			String item, ServiceContext serviceContext)
+			long userId, long groupId, String description, String item,
+			ServiceContext serviceContext)
 		throws PortalException;
 
 	/**

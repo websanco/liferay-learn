@@ -80,7 +80,7 @@ public class S5E6EntryModelImpl
 		{"groupId", Types.BIGINT}, {"companyId", Types.BIGINT},
 		{"userId", Types.BIGINT}, {"userName", Types.VARCHAR},
 		{"createDate", Types.TIMESTAMP}, {"modifiedDate", Types.TIMESTAMP},
-		{"name", Types.VARCHAR}
+		{"description", Types.VARCHAR}, {"name", Types.VARCHAR}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -95,11 +95,12 @@ public class S5E6EntryModelImpl
 		TABLE_COLUMNS_MAP.put("userName", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("createDate", Types.TIMESTAMP);
 		TABLE_COLUMNS_MAP.put("modifiedDate", Types.TIMESTAMP);
+		TABLE_COLUMNS_MAP.put("description", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("name", Types.VARCHAR);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table S5E6_S5E6Entry (uuid_ VARCHAR(75) null,S5E6EntryId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,name VARCHAR(75) null)";
+		"create table S5E6_S5E6Entry (uuid_ VARCHAR(75) null,S5E6EntryId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,description VARCHAR(75) null,name VARCHAR(75) null)";
 
 	public static final String TABLE_SQL_DROP = "drop table S5E6_S5E6Entry";
 
@@ -177,6 +178,7 @@ public class S5E6EntryModelImpl
 		model.setUserName(soapModel.getUserName());
 		model.setCreateDate(soapModel.getCreateDate());
 		model.setModifiedDate(soapModel.getModifiedDate());
+		model.setDescription(soapModel.getDescription());
 		model.setName(soapModel.getName());
 
 		return model;
@@ -355,6 +357,10 @@ public class S5E6EntryModelImpl
 		attributeSetterBiConsumers.put(
 			"modifiedDate",
 			(BiConsumer<S5E6Entry, Date>)S5E6Entry::setModifiedDate);
+		attributeGetterFunctions.put("description", S5E6Entry::getDescription);
+		attributeSetterBiConsumers.put(
+			"description",
+			(BiConsumer<S5E6Entry, String>)S5E6Entry::setDescription);
 		attributeGetterFunctions.put("name", S5E6Entry::getName);
 		attributeSetterBiConsumers.put(
 			"name", (BiConsumer<S5E6Entry, String>)S5E6Entry::setName);
@@ -547,6 +553,26 @@ public class S5E6EntryModelImpl
 
 	@JSON
 	@Override
+	public String getDescription() {
+		if (_description == null) {
+			return "";
+		}
+		else {
+			return _description;
+		}
+	}
+
+	@Override
+	public void setDescription(String description) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_description = description;
+	}
+
+	@JSON
+	@Override
 	public String getName() {
 		if (_name == null) {
 			return "";
@@ -635,6 +661,7 @@ public class S5E6EntryModelImpl
 		s5e6EntryImpl.setUserName(getUserName());
 		s5e6EntryImpl.setCreateDate(getCreateDate());
 		s5e6EntryImpl.setModifiedDate(getModifiedDate());
+		s5e6EntryImpl.setDescription(getDescription());
 		s5e6EntryImpl.setName(getName());
 
 		s5e6EntryImpl.resetOriginalValues();
@@ -757,6 +784,14 @@ public class S5E6EntryModelImpl
 			s5e6EntryCacheModel.modifiedDate = Long.MIN_VALUE;
 		}
 
+		s5e6EntryCacheModel.description = getDescription();
+
+		String description = s5e6EntryCacheModel.description;
+
+		if ((description != null) && (description.length() == 0)) {
+			s5e6EntryCacheModel.description = null;
+		}
+
 		s5e6EntryCacheModel.name = getName();
 
 		String name = s5e6EntryCacheModel.name;
@@ -847,6 +882,7 @@ public class S5E6EntryModelImpl
 	private Date _createDate;
 	private Date _modifiedDate;
 	private boolean _setModifiedDate;
+	private String _description;
 	private String _name;
 
 	public <T> T getColumnValue(String columnName) {
@@ -886,6 +922,7 @@ public class S5E6EntryModelImpl
 		_columnOriginalValues.put("userName", _userName);
 		_columnOriginalValues.put("createDate", _createDate);
 		_columnOriginalValues.put("modifiedDate", _modifiedDate);
+		_columnOriginalValues.put("description", _description);
 		_columnOriginalValues.put("name", _name);
 	}
 
@@ -926,7 +963,9 @@ public class S5E6EntryModelImpl
 
 		columnBitmasks.put("modifiedDate", 128L);
 
-		columnBitmasks.put("name", 256L);
+		columnBitmasks.put("description", 256L);
+
+		columnBitmasks.put("name", 512L);
 
 		_columnBitmasks = Collections.unmodifiableMap(columnBitmasks);
 	}

@@ -10,6 +10,7 @@
 		<field name="userName" type="String" />
 		<field name="createDate" type="Date" />
 		<field name="modifiedDate" type="Date" />
+		<field name="description" type="String" />
 		<field name="name" type="String" />
 	</model>
 </model-hints>

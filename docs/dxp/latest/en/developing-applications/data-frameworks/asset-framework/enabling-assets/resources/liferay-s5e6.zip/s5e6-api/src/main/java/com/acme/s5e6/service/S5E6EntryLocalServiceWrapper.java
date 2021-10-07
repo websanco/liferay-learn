@@ -34,13 +34,12 @@ public class S5E6EntryLocalServiceWrapper
 
 	@Override
 	public com.acme.s5e6.model.S5E6Entry addS5E6Entry(
-			long companyId, long groupId, long userId, String userName,
-			String item,
+			long userId, long groupId, String description, String item,
 			com.liferay.portal.kernel.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _s5e6EntryLocalService.addS5E6Entry(
-			companyId, groupId, userId, userName, item, serviceContext);
+			userId, groupId, description, item, serviceContext);
 	}
 
 	/**

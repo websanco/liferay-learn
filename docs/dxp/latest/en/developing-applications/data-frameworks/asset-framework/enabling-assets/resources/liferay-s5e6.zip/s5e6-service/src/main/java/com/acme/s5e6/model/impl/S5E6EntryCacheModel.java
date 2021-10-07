@@ -62,7 +62,7 @@ public class S5E6EntryCacheModel
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(19);
+		StringBundler sb = new StringBundler(21);
 
 		sb.append("{uuid=");
 		sb.append(uuid);
@@ -80,6 +80,8 @@ public class S5E6EntryCacheModel
 		sb.append(createDate);
 		sb.append(", modifiedDate=");
 		sb.append(modifiedDate);
+		sb.append(", description=");
+		sb.append(description);
 		sb.append(", name=");
 		sb.append(name);
 		sb.append("}");
@@ -124,6 +126,13 @@ public class S5E6EntryCacheModel
 			s5e6EntryImpl.setModifiedDate(new Date(modifiedDate));
 		}
 
+		if (description == null) {
+			s5e6EntryImpl.setDescription("");
+		}
+		else {
+			s5e6EntryImpl.setDescription(description);
+		}
+
 		if (name == null) {
 			s5e6EntryImpl.setName("");
 		}
@@ -150,6 +159,7 @@ public class S5E6EntryCacheModel
 		userName = objectInput.readUTF();
 		createDate = objectInput.readLong();
 		modifiedDate = objectInput.readLong();
+		description = objectInput.readUTF();
 		name = objectInput.readUTF();
 	}
 
@@ -180,6 +190,13 @@ public class S5E6EntryCacheModel
 		objectOutput.writeLong(createDate);
 		objectOutput.writeLong(modifiedDate);
 
+		if (description == null) {
+			objectOutput.writeUTF("");
+		}
+		else {
+			objectOutput.writeUTF(description);
+		}
+
 		if (name == null) {
 			objectOutput.writeUTF("");
 		}
@@ -196,6 +213,7 @@ public class S5E6EntryCacheModel
 	public String userName;
 	public long createDate;
 	public long modifiedDate;
+	public String description;
 	public String name;
 
 }

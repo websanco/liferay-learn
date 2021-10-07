@@ -41,6 +41,7 @@ public class S5E6EntrySoap implements Serializable {
 		soapModel.setUserName(model.getUserName());
 		soapModel.setCreateDate(model.getCreateDate());
 		soapModel.setModifiedDate(model.getModifiedDate());
+		soapModel.setDescription(model.getDescription());
 		soapModel.setName(model.getName());
 
 		return soapModel;
@@ -159,6 +160,14 @@ public class S5E6EntrySoap implements Serializable {
 		_modifiedDate = modifiedDate;
 	}
 
+	public String getDescription() {
+		return _description;
+	}
+
+	public void setDescription(String description) {
+		_description = description;
+	}
+
 	public String getName() {
 		return _name;
 	}
@@ -175,6 +184,7 @@ public class S5E6EntrySoap implements Serializable {
 	private String _userName;
 	private Date _createDate;
 	private Date _modifiedDate;
+	private String _description;
 	private String _name;
 
 }
