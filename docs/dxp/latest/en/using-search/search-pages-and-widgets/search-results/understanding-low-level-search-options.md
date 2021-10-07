@@ -35,10 +35,12 @@ The widget has different options to configure:
 **Contributors to Exclude:** Enter the IDs of registered search contributors to be excluded from this search, in a comma-separated list. If not set, all registered search contributors are applied.
 
 ```note::
-   These *Contributors* are components implementing the `com.liferay.portal.search.spi.searcher.SearchRequestContributor` interface (provided by the `com.liferay.portal.search.spi` artifact), which is an extension point (SPI) that intercepts search requests and adds query parts.
+   These *Contributors* are components implementing the ``com.liferay.portal.search.spi.searcher.SearchRequestContributor`` interface (provided by the ``com.liferay.portal.search.spi`` artifact), which is an extension point (SPI) that intercepts search requests and adds query parts.
 ```
 
 **Federated Search Key:** Enter the key of an alternate search this widget is participating in. If not set, this widget participates in the default search. This value is usually the name of an application-defined index.
+
+**Attributes:** This section is useful only for development and testing purposes. Use it to add key/value attributes to the search context that can be read in your custom code (e.g., `searchContext.getAttribute("key")`).
 
 ## Displaying Low Level Search Results
 
