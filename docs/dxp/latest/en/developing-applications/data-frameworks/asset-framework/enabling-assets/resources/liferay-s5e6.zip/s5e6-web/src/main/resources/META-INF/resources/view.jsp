@@ -22,6 +22,8 @@ page import="com.acme.s5e6.service.S5E6EntryLocalServiceUtil" %>
 <aui:form action="<%= addS5E6EntryURL %>">
 	<aui:input name="name" type="text" />
 
+	<aui:input name="description" type="text" />
+
 	<aui:button type="submit" value="submit" />
 </aui:form>
 
