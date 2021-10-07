@@ -41,6 +41,8 @@ Here are the steps for upgrading with a Docker image:
 
     * `deploy`: The Docker container copies artifacts from this folder to the container's auto-deploy folder.
 
+1. If you're using [Commerce](https://learn.liferay.com/commerce/latest/en/index.html), prepare to upgrade it. See [Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html) for details.
+
 1. If you want to upgrade your Marketplace app data along with the Liferay database upgrade, [download](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md) the latest version of each app targeted for the new Liferay version and copy it to your `new-version/deploy` folder. Otherwise, you can install the apps after the database upgrade and upgrade their data as described in the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 
 1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder to the new `files` folder to create `new-version/files/data`.

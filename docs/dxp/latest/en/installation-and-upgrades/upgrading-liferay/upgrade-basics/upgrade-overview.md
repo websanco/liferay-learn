@@ -13,7 +13,7 @@ Liferay's tools and instructions facilitate upgrading DXP and Portal environment
 Before starting your upgrade, consider what may be involved. The upgrade topics fall into these categories:
 
 * [Preparation and Planning](#preparation-and-planning)
-* [Updating Custom Plugin Code](#updating-custom-plugin-code)
+* [Upgrading Custom Development](#upgrading-custom-development)
 * [Migrating Configurations and Infrastructure](#migrating-and-updating-configurations-and-infrastructure)
 * [Improving Upgrade Performance](#improving-upgrade-performance)
 * [Executing the Database Upgrade](#executing-the-database-upgrade)
@@ -52,6 +52,10 @@ Features and configuration defaults may change in new versions of Liferay. See t
 > Subscription
 
 If you have a Liferay DXP subscription, update to the latest fix pack and/or request an upgrade patch to prepare for the database upgrade. File a ticket in the [Help Center](https://help.liferay.com/hc/requests/new) to start this process.
+
+### Prepare for Upgrading Commerce
+
+If you're using [Commerce](https://learn.liferay.com/commerce/latest/en/index.html), prepare to upgrade it before upgrading the Liferay database. See [Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html) for details.
 
 ### Update Marketplace Apps
 
