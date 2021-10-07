@@ -10,8 +10,8 @@ To skip straight to creating Roles and assigning Users, see
 * [Defining Role Permissions](./defining-role-permissions.md)
 * [Assigning Users to Roles](./assigning-users-to-roles.md)
 
-```note::
-`Site Teams <./../../site-building/building-sites/site-membership/creating-teams-for-sites.md>`_ have a dedicated permissions management User Interface.
+```{note}
+[Site Teams](./../../site-building/building-sites/site-membership/creating-teams-for-sites.md) have a dedicated permissions management User Interface.
 ```
 
 ## Roles and Scope
