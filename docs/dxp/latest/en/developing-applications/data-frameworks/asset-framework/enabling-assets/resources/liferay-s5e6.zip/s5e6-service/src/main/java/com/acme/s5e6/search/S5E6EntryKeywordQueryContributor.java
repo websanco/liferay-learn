@@ -25,15 +25,15 @@ public class S5E6EntryKeywordQueryContributor
 		SearchContext searchContext =
 			keywordQueryContributorHelper.getSearchContext();
 
-		queryHelper.addSearchLocalizedTerm(
+		_queryHelper.addSearchLocalizedTerm(
 			booleanQuery, searchContext, Field.CONTENT, false);
-		queryHelper.addSearchTerm(
+		_queryHelper.addSearchTerm(
 			booleanQuery, searchContext, Field.SUBTITLE, false);
-		queryHelper.addSearchLocalizedTerm(
+		_queryHelper.addSearchLocalizedTerm(
 			booleanQuery, searchContext, Field.TITLE, false);
 	}
 
 	@Reference
-	protected QueryHelper queryHelper;
+	private QueryHelper _queryHelper;
 
 }
