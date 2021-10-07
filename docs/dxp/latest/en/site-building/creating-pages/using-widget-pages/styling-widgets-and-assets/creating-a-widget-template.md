@@ -1,15 +1,15 @@
 # Creating a Widget Template
 
-To create a Widget Template, follow these steps:
+Widget Templates are used to customize how a widget looks. You can create templates for a widget’s display and then choose which template is active. To create a Widget Template, follow these steps:
 
 1.  From Site Administration, click the *Site Selector* button (![Compass](../../../../images/icon-compass.png)) to choose the Site where you want to create the widget template.
 
     ![Click on Compass icon to choose a site where you want to create the widget template.](./creating-a-widget-template/images/01.png)
- 
+
 1.  Open *Design* &rarr; *Widget Templates*.
 
     ![Click on Design and Widget templates.](./creating-a-widget-template/images/02.png)
- 
+
 If you selected the Global context, this page shows a list of sample templates available for your apps. These sample templates differ from the default templates already configured in the apps. If you choose a Site to host your template, you must create a custom template for that Site's apps.
 
 ![Click on Design and Widget templates.](./creating-a-widget-template/images/03.png)
@@ -19,9 +19,9 @@ If you selected the Global context, this page shows a list of sample templates a
 1.  Enter your Widget's name.
 
     **Optional** open *Details* to provide a description and a small image to use. You can select the language type for your template.
- 
+
 1.  Within *Details* select a scripting language to use. You can use FreeMarker or Velocity. FreeMarker is recommended.
- 
+
 1.  Use the *Script* section to create the widget template.
 
 1.  Click *Save*.
@@ -49,11 +49,11 @@ After you've saved your widget template, you can manage it through its *Actions*
 
 Additionally, your widget template generates a static URL and a WebDAV URL. These values access the XML source of your template. You can find these URLs by clicking the widget template from the menu and expanding the *Details* section. With the WebDAV URL, Site administrators can add, browse, edit, and delete widget templates on a remote server. If you want to learn more about what the WebDAV URL can do, visit the article on [WebDAV access](../../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md).
 
-|```{note}
+```{note}
 Embedding widgets into widget templates, although possible, is not recommended because this could cause conflicts with other widgets or unexpected behavior (e.g., embedding a widget that aggregates data to the breadcrumb). If embedding a widget into a widget template is your only option, make sure it does not interfere with other widgets.
-``` 
+```
 
-Next you must configure the widget to use the new widget template:
+Next, configure the widget to use the new widget template:
 
 1.  Go to the *Configuration* page for the widget you want to modify and open its *Display Settings*.
 
