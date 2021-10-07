@@ -15,8 +15,9 @@ You may need to export data from a specific widget instance, without regard to c
 Exporting widget data produces a `.lar` file that you can save and import into another widget of the same type. To import widget data, you must select a `.lar` file.
 
 ```{important}
-Be careful not to confuse widget-specific `.lar` files with Site-specific `.lar` files. See the [Importing/Exporting Sites and Content](./building-site importing-exporting-sites-and-content.md) article for more information on importing/exporting Site page data.
+Be careful not to confuse widget-specific `.lar` files with Site-specific `.lar` files. See the [Importing/Exporting Sites and Content](../../../building-sites/importing-exporting-pages-and-content.md) article for more information on importing/exporting Site page data.
 ```
+
 There are two ways to export/import widget content, you can go to the widget's administrative area, or  visit the widget on its page. Both export/import menus work the same, but the administrative area may hold content different from its widget counterpart (e.g., Web Content Admin in Liferay DXP Menu and Web Content Display widget do not offer same content for export/import), so be wary of your selection.
 
 To export or import data from the widget's administrative area, follow the steps below.
@@ -73,17 +74,17 @@ Your LAR file is uploaded and displayed to you for review. Click *Continue*.
 
 Now that you've uploaded and confirmed your LAR file, you're given a similar screen to what you'd be offered during export. Here's options and descriptions for each section:
 
-**Deletions**
+### Deletions
 
 **Delete Application Data Before Importing:** If this is checked, all data created by the application will be deleted before the import process. Be careful, some other applications may be referencing this data. This process cannot be undone. If you are unsure, please do an export first.
 
 **Replicate Individual Deletions:** If this option is chosen, the delete operations performed for content types will be replicated in the target site.
 
-**Permissions**
+### Permissions
 
 **Import Permissions:** If this is checked, the permissions assigned for the exported entries are included.
 
-**Update Data**
+### Update Data
 
 **Mirror:** All data and content inside the imported LAR is newly created the first time while maintaining a reference to the source. Subsequent imports from the same source updates entries instead of creating new entries.
 
@@ -91,7 +92,7 @@ Now that you've uploaded and confirmed your LAR file, you're given a similar scr
 
 **Copy as New:** All data and content inside the imported LAR is created as new entries within the current Site every time the LAR is imported.
 
-**Authorship of the Content**
+### Authorship of the Content
 
 **Use the Original Author:** Keep authorship of imported content whenever possible. Use the current user as author if the original one is not found.
 
@@ -101,5 +102,5 @@ Once you've selected the appropriate options, select *Import* and your widget's 
 
 ## Additional Information
 
-- [Communication Between Widgets](./communicating-between-portlet-widgets.md).
-- [Importing/Exporting Sites and Content](../../../building-sites/importing-exporting-pages-and-content.md).
+- [Communication Between Widgets](./communicating-between-portlet-widgets.md)
+- [Importing/Exporting Sites and Content](../../../building-sites/importing-exporting-pages-and-content.md)
