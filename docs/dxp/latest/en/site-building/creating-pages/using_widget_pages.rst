@@ -16,6 +16,7 @@ Configuring Widgets
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/converting-widget-pages-to-content-pages`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/configuring-templates`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/enabling-user-personalization-of-widget-pages`
+-  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/sharing-widgets-with-other-sites`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/setting-widget-permissions`
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/setting-widget-scopes`
 
@@ -24,7 +25,6 @@ Styling Widgets and Assets
 --------------------------
 
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/configuring-the-look-and-feel`
--  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/sharing-widgets-with-other-sites`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/creating-a-widget-template`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/using-a-widget-template-example`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/setting-a-default-widget-template`

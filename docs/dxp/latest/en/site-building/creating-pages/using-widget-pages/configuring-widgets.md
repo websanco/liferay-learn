@@ -11,6 +11,7 @@ configuring-widgets/communicating-between-portlet-widgets.md
 configuring-widgets/converting-widget-pages-to-content-pages.md
 configuring-widgets/configuring-templates.md
 configuring-widgets/enabling-user-personalization-of-widget-pages.md
+configuring-widgets/sharing-widgets-with-other-sites.md
 configuring-widgets/setting-widget-permissions.md
 configuring-widgets/setting-widget-scopes.md
 ```
