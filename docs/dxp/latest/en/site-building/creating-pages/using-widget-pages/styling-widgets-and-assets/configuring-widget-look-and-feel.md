@@ -84,4 +84,4 @@ You can also enter custom CSS class names for your widget and custom CSS code. C
 
 ## Additional Information
 
-- [Exporting/Importing Widget Data](./exporting-importing-widget-data.md)
+- [Exporting/Importing Widget Data](../configuring-widgets/exporting-importing-widget-data.md)
