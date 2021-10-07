@@ -24,7 +24,7 @@ To use the Low Level Search Options widget, add it to a Search Page:
 
 The widget has different options to configure:
 
-**[Liferay 7.3] Connection ID:** Select the Connection ID of the connection to be used to perform the search.
+**[Liferay 7.3+] Connection ID:** Select the Connection ID of the connection to be used to perform the search.
 
 **Indexes:** Enter the comma-separated names of the alternative indexes to search. Usually, you shouldn't enter a Liferay company index name.
 
@@ -40,7 +40,7 @@ The widget has different options to configure:
 
 **Federated Search Key:** Enter the key of an alternate search this widget is participating in. If not set, this widget participates in the default search. This value is usually the name of an application-defined index.
 
-**Attributes:** This section is useful only for development and testing purposes. Use it to add key/value attributes to the search context that can be read in your custom code (e.g., `searchContext.getAttribute("key")`).
+**[Liferay 7.4+] Attributes:** This section is useful only for development and testing purposes. Use it to add key/value attributes to the search context that can be read in your custom code (e.g., `searchContext.getAttribute("key")`).
 
 ## Displaying Low Level Search Results
 
