@@ -1,6 +1,6 @@
 # Configuring Widgets
 
-Widgets that are available out-of-the-box with Liferay DXP share several common features. These include look and feel, exporting/importing app data, communication, sharing, permissions, scoping, and configuration templates. These features work together to facilitate information flow within Liferay DXP and provides an enhanced experience for your users You'll start with look and feel configuration options.
+Widgets available out-of-the-box with Liferay DXP share several configurable features: look and feel, import/export of widget data, inter-widget communication, and more.
 
 ```{toctree}
 :maxdepth: 3

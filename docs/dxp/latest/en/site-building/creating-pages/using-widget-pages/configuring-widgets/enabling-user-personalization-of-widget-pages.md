@@ -2,10 +2,9 @@
 
 Administrators can designate some or all of the sections (rows and columns of the page layout) of a Widget Page as customizable for site members. Page customizations are only visible to the user who made the customizations. The steps below cover these topics:
 
-  - [Enabling User Personalization of Widget Pages](#enabling-user-personalization-of-widget-pages)
-  - [Enabling Page Customizations](#enabling-page-customizations)
-  - [Customizing Pages](#customizing-pages)
-  - [Granting Roles Permission to Customize Pages](#granting-roles-permission-to-customize-pages)
+- [Enabling Page Customizations](#enabling-page-customizations)
+- [Customizing Pages](#customizing-pages)
+- [Granting Roles Permission to Customize Pages](#granting-roles-permission-to-customize-pages)
 
 ## Enabling Page Customizations
 
@@ -27,8 +26,8 @@ To enable page customizations, follow these steps:
 
 With customization activated for a page, site members can add apps to the customizable sections of the page from the Add menu in the top right. Site members can make two kinds of customizations to customizable regions:
 
-* Add or remove apps
-* Configure applications
+- Add or remove apps
+- Configure applications
 
 ```{note}
 Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
@@ -36,11 +35,11 @@ Site members can't change a non-instanceable app's configuration inside a custom
 
 Site members have access to these contextual options from the page's *Options* menu (![Options](../../../../images/icon-options.png)) in the Control Menu:
 
-* *View Page without my customizations*: Displays the default page and hides the Add menu.
+- *View Page without my customizations*: Displays the default page and hides the Add menu.
 
-* *Reset My Customizations*: Restores the customized page back to the default page, discarding any customizations.
+- *Reset My Customizations*: Restores the customized page back to the default page, discarding any customizations.
 
-* *View My Customized Page*: Displays the page with the user's customizations and makes the Add menu available so users can add widgets to the page.
+- *View My Customized Page*: Displays the page with the user's customizations and makes the Add menu available so users can add widgets to the page.
 
 ![Customizable areas are highlighted green when organizing apps on the page.](./personalizing-pages/images/02.png)
 

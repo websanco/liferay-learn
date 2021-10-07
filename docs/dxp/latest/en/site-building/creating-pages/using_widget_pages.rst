@@ -20,8 +20,8 @@ Configuring Widgets
 -  :doc:`/site-building/creating-pages/using-widget-pages/configuring-widgets/setting-widget-scopes`
 
 
-Styling Widgets
----------------
+Styling Widgets and Assets
+--------------------------
 
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/configuring-the-look-and-feel`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/sharing-widgets-with-other-sites`
