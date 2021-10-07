@@ -1,4 +1,4 @@
-# Configuring the Look and Feel
+# Configuring Widget Look and Feel
 
 To access the look and feel configuration menu of any widget, follow these steps:
 
@@ -27,6 +27,7 @@ On the General tab are the following options:
 ```{important}
 Be careful about turning widget borders off; some themes assume widget borders are turned on and may not display correctly with them turned off.
 ```
+
 ![The General tab of the Look and Feel Configuration menu lets you define a custom widget title and select the widget contrast option using decorators.](./configuring-the-look-and-feel/images/01.png)
 
 ## Text Styles

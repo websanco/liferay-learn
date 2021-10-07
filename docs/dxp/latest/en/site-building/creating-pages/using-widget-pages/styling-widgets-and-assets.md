@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
-styling-widgets-and-assets/configuring-the-look-and-feel.md
+styling-widgets-and-assets/configuring-widget-look-and-feel.md
 styling-widgets-and-assets/creating-a-widget-template.md
 styling-widgets-and-assets/using-a-widget-template-example.md
 styling-widgets-and-assets/setting-a-default-widget-template.md

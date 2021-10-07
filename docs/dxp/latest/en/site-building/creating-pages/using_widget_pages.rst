@@ -24,7 +24,7 @@ Configuring Widgets
 Styling Widgets and Assets
 --------------------------
 
--  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/configuring-the-look-and-feel`
+-  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/configuring-widget-look-and-feel`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/creating-a-widget-template`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/using-a-widget-template-example`
 -  :doc:`/site-building/creating-pages/using-widget-pages/styling-widgets-and-assets/setting-a-default-widget-template`
