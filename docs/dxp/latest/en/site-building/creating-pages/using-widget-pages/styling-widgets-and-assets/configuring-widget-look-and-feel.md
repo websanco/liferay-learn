@@ -28,7 +28,7 @@ On the General tab are the following options:
 Be careful about turning widget borders off; some themes assume widget borders are turned on and may not display correctly with them turned off.
 ```
 
-![The General tab of the Look and Feel Configuration menu lets you define a custom widget title and select the widget contrast option using decorators.](./configuring-the-look-and-feel/images/01.png)
+![The General tab of the Look and Feel Configuration menu lets you define a custom widget title and select the widget contrast option using decorators.](./configuring-widget-look-and-feel/images/01.png)
 
 ## Text Styles
 
@@ -44,7 +44,7 @@ Be careful about turning widget borders off; some themes assume widget borders a
 
 **Text Decoration:** Set to *Underline*, *Overline*, or *Strikethrough*. The default text decoration is *None*.
 
-![The Text Styles tab lets you configure the format of the text that appears in the widget.](./configuring-the-look-and-feel/images/02.png)
+![The Text Styles tab lets you configure the format of the text that appears in the widget.](./configuring-widget-look-and-feel/images/02.png)
 
 **Word Spacing:** Set from -1 em to 0.95 em. 0 em is the default.
 
@@ -56,13 +56,13 @@ Be careful about turning widget borders off; some themes assume widget borders a
 
 The Background Styles tab specifies the widget's background color. When you select the text space, you're given a color palette to choose your background color or you can manually enter any six digit hex color code.
 
-![The Background Styles tab lets you specify the widget's background color.](./configuring-the-look-and-feel/images/03.png)
+![The Background Styles tab lets you specify the widget's background color.](./configuring-widget-look-and-feel/images/03.png)
 
 ## Border Styles
 
 The Border Styles tab, configures your widget's border width, style, and color. For each of these attributes, leave the *Same for All* selector enabled to apply the same settings to top, right, bottom, and left borders.
 
-![The Border Styles tab lets you specify a border width, style, and color for each side of the widget.](./configuring-the-look-and-feel/images/04.png)
+![The Border Styles tab lets you specify a border width, style, and color for each side of the widget.](./configuring-widget-look-and-feel/images/04.png)
 
 For border width, you can specify any % value, em value, or px value. For border style, you can select Dashed, Double, Dotted, Groove, Hidden, Inset, Outset, Ridge, or Solid. For border color, you can enter any six digit hex color code, just like for the text color and background color. You can also use the color palette.
 
@@ -70,7 +70,7 @@ For border width, you can specify any % value, em value, or px value. For border
 
 The Margin and Padding tab specifies margin and padding lengths for the edges of your widget. Just like for border styles, leave the *Same for All* selector enabled to apply the same settings to each side (top, right, bottom, and left) of the widget.
 
-![The Margin and Padding tab allows you to specify margin and padding lengths for the sides of your widget.](./configuring-the-look-and-feel/images/05.png)
+![The Margin and Padding tab allows you to specify margin and padding lengths for the sides of your widget.](./configuring-widget-look-and-feel/images/05.png)
 
 For both padding and margin, you can specify any % value, em value, or px value.
 
