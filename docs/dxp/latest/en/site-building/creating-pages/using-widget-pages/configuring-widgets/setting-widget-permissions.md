@@ -1,4 +1,4 @@
- # Setting Widget Permissions
+# Setting Widget Permissions
 
 All of Liferay's widgets support Liferay DXP robust, fine-grained permissions system. Some higher level permissions can be configured in the permissions tab of the widget's configuration dialog box. You can grant Roles permission to:
 
@@ -21,4 +21,4 @@ Specific permissions are generally defined for specific widgets. For example, Me
 
 ## Additional Information
 
- - [Setting Widget Scopes](./setting-widget-scopes.md)
+- [Setting Widget Scopes](./setting-widget-scopes.md)
