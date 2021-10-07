@@ -10,8 +10,8 @@ When considering a back up plan for Liferay DXP, we recommend backing up the fol
 * [Search Indexes](#search-indexes)
 * [Source Code](#source-code)
 
-```note::
-   DXP Cloud automates and simplifies the process of creating and managing backups of the Document Library and Liferay DXP database. Because DXP Cloud uses a Git-based DevOps pipeline, all configurations for Liferay are also automatically backed up as well. To learn more, see `DXP Cloud Backup Service <https://learn.liferay.com/dxp-cloud/latest/en/platform-services/backup-service/backup-service-overview.html>`_ for more information.
+```{note}
+DXP Cloud automates and simplifies the process of creating and managing backups of the Document Library and Liferay DXP database. Because DXP Cloud uses a Git-based DevOps pipeline, all configurations for Liferay are also automatically backed up as well. To learn more, see [DXP Cloud Backup Service](https://learn.liferay.com/dxp-cloud/latest/en/platform-services/backup-service/backup-service-overview.html) for more information.
 ```
 
 ## Liferay Home
@@ -28,14 +28,14 @@ The Liferay Home folder is important to back up because it contains the followin
 
 * **`/logs` folder:** Contains DXP's log files. If a problem occurs on DXP, the log files provide information for determining what went wrong.
 
-```note::
-   If you are using a Liferay Docker image and are using custom Liferay and application server configuration files via a bind mount, back up those files (e.g., files in your ``[host folder]/files`` folder).
+```{note}
+If you are using a Liferay Docker image and are using custom Liferay and application server configuration files via a bind mount, back up those files (e.g., files in your `[host folder]/files` folder).
 ```
 
 Using a source control repository such as Git, BitBucket, Subversion, or CVS, is a great way to back up your Liferay Home folder.
 
-```important::
-   If you configured your File Store (Document Library) to a location other than a ``[Liferay Home]/data`` subfolder, back up that location.
+```{important}
+If you configured your File Store (Document Library) to a location other than a `[Liferay Home]/data` subfolder, back up that location.
 ```
 
 ## Application Server

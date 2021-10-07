@@ -1,6 +1,6 @@
 # Importing/Exporting Sites and Content
 
-Export/Import lets you export and restore your Site and app data as a LAR (Liferay Archive). There are two primary places Export/Import is used: Sites and apps. You can learn more about exporting/importing app data in the [Exporting/Importing Widget Content]() <!-- TODO: Fix link --> section. In this section, you'll learn how to export and import content and pages for Sites.
+Export/Import lets you export and restore your Site and app data as a LAR (Liferay Archive). There are two primary places Export/Import is used: Sites and apps. You can learn more about exporting/importing app data in [Exporting/Importing Widget Content](../creating-pages/using-widget-pages/configuring-widgets/exporting-importing-widget-data.md). In this section, you'll learn how to export and import content and pages for Sites.
 
 ## Site LAR Properties and Requirements
 
@@ -10,8 +10,8 @@ LARs have these properties and requirements:
 * Some naming collisions are handled automatically. For example, if the LAR you're importing and the Site both have a page with the same friendly URL, a number is appended to the friendly URL and incremented until the collision no longer occurs. The same is true for category names that collide.
 * You can restore your Site with the latest LAR, but to do so you must delete your Site entirely and then create a new Site with the same name to import the LAR into. This avoids potential data conflicts between content that exists both in the LAR and in the Site.
 
-```note::
-   Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the `Backing up a Liferay Portal Installation <../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md>`_ section for information on backing up Liferay Portal.
+```{note}
+Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the [Backing up a Liferay Portal Installation](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md) section for information on backing up Liferay Portal.
 ```
 
 ## Importing and Exporting Pages
