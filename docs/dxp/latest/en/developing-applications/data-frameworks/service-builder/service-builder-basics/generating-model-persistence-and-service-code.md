@@ -131,27 +131,71 @@ cd liferay-y7g4
 ./gradlew y7g4-service:buildService
 ```
 
-Service Builder generates Java classes, database scripts, and configuration files for the model and services.
+Output:
+
+```
+> Task :y7g4-service:buildService
+Building Y7G4Entry
+Writing src/main/java/com/acme/y7g4/service/persistence/impl/Y7G4EntryPersistenceImpl.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/persistence/Y7G4EntryPersistence.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/persistence/Y7G4EntryUtil.java
+Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryModelImpl.java
+Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryBaseImpl.java
+Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryImpl.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/model/Y7G4EntryModel.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/model/Y7G4Entry.java
+Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryCacheModel.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/model/Y7G4EntryWrapper.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/model/Y7G4EntrySoap.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/model/Y7G4EntryTable.java
+Writing src/main/java/com/acme/y7g4/service/impl/Y7G4EntryLocalServiceImpl.java
+Writing src/main/java/com/acme/y7g4/service/base/Y7G4EntryLocalServiceBaseImpl.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/Y7G4EntryLocalService.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/Y7G4EntryLocalServiceUtil.java
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/Y7G4EntryLocalServiceWrapper.java
+Writing src/main/resources/META-INF/module-hbm.xml
+Writing src/main/resources/META-INF/portlet-model-hints.xml
+Writing ../y7g4-api/src/main/java/com/acme/y7g4/exception/NoSuchY7G4EntryException.java
+Writing src/main/java/com/acme/y7g4/service/persistence/impl/constants/Y7G4PersistenceConstants.java
+Writing src/main/resources/META-INF/sql/tables.sql
+Writing src/main/resources/META-INF/sql/tables.sql
+Writing src/main/resources/service.properties
+
+BUILD SUCCESSFUL in 2s
+1 actionable task: 1 executed
+```
+
+Service Builder generates Java classes, database scripts, and configuration files for the model, persistene, and services. The file paths are relative to the `y7g4-service` module. 
 
 Here's an overview of the generated structure:
 
 ```
-liferay-y7g4/y7g4-service/src/main
-├── java
-│   └── com
-│       └── acme
-│           └── y7g4
-│               ├── model // Model implementation
-│               └── service // Persistence and service implementation
-└── resources
-    ├── META-INF
-    │   ├── module-hbm.xml // Hibernate object relational map configuration
-    │   ├── portlet-model-hints.xml // Provides field type information for the UI
-    │   └── sql
-    │       ├── indexes.sql
-    │       ├── sequences.sql
-    │       └── tables.sql
-    └── service.properties // Tracks the service build version
+liferay-y7g4
+├── y7g4-api
+│   └── src
+│       └── main
+│           └── java
+│               └── com
+│                   └── acme
+│                       └── y7g4
+│                           ├── exception // Public exception classes & interfaces
+│                           ├── model // Public model classes & interfaces
+│                           └── service // Public persistence and service classes
+│                                       // & interfaces
+└── y7g4-service
+    └── src/main
+        ├── java/com/acme/y7g4
+        │                 ├── model // Model implementation
+        │                 └── service // Persistence and service implementation
+        └── resources
+            ├── META-INF
+            │   ├── module-hbm.xml // Hibernate object relational map configuration
+            │   ├── portlet-model-hints.xml // Provides field type information for the UI
+            │   └── sql
+            │       ├── indexes.sql
+            │       ├── sequences.sql
+            │       └── tables.sql
+            └── service.properties // Tracks the service build version
 ```
 
 The model, persistence, and service implementation classes were generated to the Java package path `com.acme.y7g4`. Learn about the classes at [Understanding Service Builder Generated Classes](./understanding-service-builder-generated-classes.md).
