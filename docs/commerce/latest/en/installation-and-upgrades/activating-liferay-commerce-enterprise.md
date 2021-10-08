@@ -1,12 +1,12 @@
 # Activating Liferay Commerce Enterprise
 
-Starting with Liferay DXP 7.3, Commerce comes with all Liferay bundles and Docker containers and does not require separate installation. However, to access and use Commerce, the process differs depending on the DXP version you're running. For Liferay DXP 7.4 GA1+, all Commerce modules are enabled by default and ready for use. For DXP 7.3 FP3/SP2+, Commerce is activated using a [*portal property*](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html), while earlier versions use a Commerce license file.
+Starting with Liferay DXP/Portal 7.3, Commerce ships with all Liferay bundles and Docker containers and does not require separate installation. However, to access and use Commerce, the process differs depending on the DXP version you're running. For Liferay DXP 7.4 GA1+, all Commerce modules are enabled by default and ready for use. For DXP 7.3 FP3/SP2+, Commerce is activated using a [portal property](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html), while earlier versions use a Commerce license file.
 
 ## Disabling Liferay Commerce Enterprise for Liferay DXP 7.4 GA1+
 
 > Liferay DXP and Commerce Subscriptions Required
 
-For Liferay DXP 7.4 GA1+, all Commerce modules are enabled by default. Users can disable this by setting the `enterprise.product.commerce.enabled` portal property to `false`. Once this configuration is applied to a Liferay server, all Commerce modules will be disabled.
+For Liferay DXP 7.4 GA1+, all Commerce modules are enabled by default. Users can disable them by setting the `enterprise.product.commerce.enabled` portal property to `false`. 
 
 ### Disabling Commerce for Liferay Bundles
 
@@ -26,15 +26,15 @@ If you used the Setup Wizard for your bundle, portal properties are set using th
 
 ### Disabling Commerce for Docker Containers
 
-If you're using a Docker container, the `enterprise.product.commerce.enabled` property can be configured using a `portal-ext.properties` file or overridden using a Docker `env` variable.
+On a Docker container, you can configure the `enterprise.product.commerce.enabled` property with a `portal-ext.properties` file or with a Docker `env` variable.
 
-To use a `portal-ext.properties` file, simply add the following property to a new line:
+In a `portal-ext.properties` file, add this property:
 
 ```properties
 enterprise.product.commerce.enabled=false
 ```
 
-To override the portal property, use the following Docker `env` variable:
+Or use this Docker `env` variable:
 
 ```properties
 LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=false
@@ -42,17 +42,17 @@ LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=false
 
 See [Configuring Containers](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.html#portal-properties) for more information.
 
-If successful, you will no longer be able to view and access the Commerce modules from the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)).
+If successful, the Commerce modules no longer appear in the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
 ## Activating Liferay Commerce Enterprise for Liferay DXP 7.3 FP3/SP2+
 
 > Liferay DXP and Commerce Subscriptions Required
 
-For DXP 7.3 FP3/SP2+, users activate Commerce by setting the `enterprise.product.commerce.enabled` portal property to `true`. Once this configuration is applied to a Liferay server, all Commerce modules are enabled and ready for use.
+For DXP 7.3 FP3/SP2+, activate Commerce by setting the `enterprise.product.commerce.enabled` portal property to `true`. 
 
 ### Activating Commerce for Liferay Bundles
 
-You can configure the `enterprise.product.commerce.enabled` property using a `portal-ext.properties` file. Add the following property to your Liferay server's `portal-ext.properties` file.
+You can configure the `enterprise.product.commerce.enabled` property using a `portal-ext.properties` file. Add this property to your Liferay server's `portal-ext.properties` file:
 
 ```properties
 enterprise.product.commerce.enabled=true
