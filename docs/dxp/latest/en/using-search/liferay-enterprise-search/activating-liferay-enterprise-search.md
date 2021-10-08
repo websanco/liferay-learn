@@ -1,8 +1,5 @@
 # Activating Liferay Enterprise Search
 
-> Availability: Liferay DXP 7.4+ \
-> Subscription Required
-
 Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. To begin using LES, purchase an LES Add-On Subscription: start by contacting a Liferay sales representative or visit <https://www.liferay.com/contact-sales>.
 
 LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered through Fix Pack and Service Pack releases. If you do not have a subscription to LES, access can be disabled completely by following these steps described below.
