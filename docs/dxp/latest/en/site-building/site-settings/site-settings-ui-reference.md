@@ -188,7 +188,7 @@ By default, the Other area includes the following settings:
 
 | Section | Description |
 | --- | --- |
-| Other | Includes custom Site settings you have defined for your Site, if any. For more information, read [Setting and Accessing Configurations](../../developing-applications/core-frameworks/configurable-application/setting-and-accessing-configurations.md). |
+| Other | Includes custom Site settings you have defined for your Site, if any. For more information, read [Setting and Accessing Configurations](../../developing-applications/core-frameworks/configuration-framework/setting-and-accessing-configurations.md). |
 | Tax | Configure the settings for the Remote Commerce Tax Configuration in Liferay Commerce. For more information, see the [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/index.html) documentation. |
 | category.tax-rate | Configure the settings for the Liferay Commerce Avalara integration. For more information, see the [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/index.html) documentation. |
 

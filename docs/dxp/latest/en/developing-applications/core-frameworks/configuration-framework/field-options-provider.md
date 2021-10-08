@@ -13,7 +13,7 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
 1. Download and unzip [Field Options Provider](./liferay-z4h3.zip)
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/liferay-z4h3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-z4h3.zip -O
     ```
 
     ```bash

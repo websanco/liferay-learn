@@ -19,7 +19,7 @@ Note, an application's configuration is overridden if portlet preferences are im
 1. Download and unzip [Sharing Localized Messages](./liferay-x7y2.zip).
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configurable-application/liferay-x7y2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-x7y2.zip -O
     ```
 
     ```bash
