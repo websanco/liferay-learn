@@ -66,7 +66,7 @@ To identify these services and the available HTTP methods, use the Liferay API E
 
 ### Identify the Site Id
 
-To identify the Site ID, follow the instructions in [this Liferay Learn article](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data).
+To identify the Site ID, follow the instructions [here](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data).
 
 ### Create a Basic Web Content Article in the User Interface
 
