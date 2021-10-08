@@ -1,6 +1,6 @@
 # Generating Model, Persistence, and Service Code
 
-Service Builder makes it easy to define models and generate persistence layers for them. You'll experience this by defining a model called `Y7G4Entry` and generating its persistence layer and services using Service Builder. Then you'll deploy everything to DXP and test it.
+Service Builder makes it easy to define models and generate model, persistence, and service code for them. You'll experience this by defining a model called `Y7G4Entry` and generating code using Service Builder. Then you'll deploy your code to DXP and invoke a service that uses the code.
 
 ## Download the Example Project
 
@@ -392,10 +392,9 @@ Here's what the script did:
 
 ## What's Next
 
-Now that you know how to define a model, generate a persistence layer for it, and work with model instances, you should examine the generated services. Continue with [Understanding the Service Builder Generated Classes](./understanding-service-builder-generated-classes.md).
+Now that you know how to define a model and generate persistence code and service code for it, you should examine the generated service classes. Continue with [Understanding the Service Builder Generated Classes](./understanding-service-builder-generated-classes.md).
 
 ## Additional Information
 
-* [Understanding the Service Builder Generated Classes](./understanding-service-builder-generated-classes.md)
 * [Invoking a Service Locally](./invoking-a-service-locally.md)
 * [What is Liferay Workspace](../../../tooling/liferay-workspace/what-is-liferay-workspace.md)
