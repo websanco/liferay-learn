@@ -9,7 +9,7 @@ LES is enabled by default and requires no additional installation steps. However
 
 ## Local Bundle: Deactivating LES
 
-LES is enabled by default in all Liferay DXP 7.4+ bundles. If you don't have a subscription and the accompanying license to use LES, deactivate it by setting the `enterprise.product.enterprise.search.enabled` [portal property](../../installation-and-upgrades/reference/portal-properties.md) to `false`:
+LES applications are enabled by default in all Liferay DXP 7.4+ bundles. If you don't have a subscription and the accompanying license to use LES, deactivate it by setting the `enterprise.product.enterprise.search.enabled` [portal property](../../installation-and-upgrades/reference/portal-properties.md) to `false`:
 
 ```properties
 enterprise.product.enterprise.search.enabled=false
@@ -17,7 +17,7 @@ enterprise.product.enterprise.search.enabled=false
 
 ## Docker: Deactivating LES
 
-LES is enabled by default in all Liferay DXP 7.4+ Docker images. If you don't have a subscription and the accompanying license to use LES, deactivate it in one of two ways:
+LES applications are enabled by default in all Liferay DXP 7.4+ Docker images. If you don't have a subscription and the accompanying license to use LES, deactivate it in one of two ways:
 
 1. If using properties files to configure the container, deactivate it by setting the `enterprise.product.enterprise.search.enabled` [portal property](../../installation-and-upgrades/reference/portal-properties.md) to `false`:
 
