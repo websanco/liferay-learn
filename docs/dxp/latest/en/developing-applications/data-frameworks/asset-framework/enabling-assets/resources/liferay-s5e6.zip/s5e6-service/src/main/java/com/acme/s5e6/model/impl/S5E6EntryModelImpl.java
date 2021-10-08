@@ -16,7 +16,6 @@ package com.acme.s5e6.model.impl;
 
 import com.acme.s5e6.model.S5E6Entry;
 import com.acme.s5e6.model.S5E6EntryModel;
-import com.acme.s5e6.model.S5E6EntrySoap;
 
 import com.liferay.expando.kernel.model.ExpandoBridge;
 import com.liferay.expando.kernel.util.ExpandoBridgeFactoryUtil;
@@ -24,7 +23,6 @@ import com.liferay.exportimport.kernel.lar.StagedModelType;
 import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.bean.AutoEscapeBeanHandler;
 import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.json.JSON;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.model.ModelWrapper;
 import com.liferay.portal.kernel.model.User;
@@ -42,12 +40,10 @@ import java.lang.reflect.InvocationHandler;
 
 import java.sql.Types;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.BiConsumer;
@@ -64,7 +60,6 @@ import java.util.function.Function;
  * @see S5E6EntryImpl
  * @generated
  */
-@JSON(strict = true)
 public class S5E6EntryModelImpl
 	extends BaseModelImpl<S5E6Entry> implements S5E6EntryModel {
 
@@ -153,57 +148,6 @@ public class S5E6EntryModelImpl
 	 */
 	@Deprecated
 	public static void setFinderCacheEnabled(boolean finderCacheEnabled) {
-	}
-
-	/**
-	 * Converts the soap model instance into a normal model instance.
-	 *
-	 * @param soapModel the soap model instance to convert
-	 * @return the normal model instance
-	 * @deprecated As of Athanasius (7.3.x), with no direct replacement
-	 */
-	@Deprecated
-	public static S5E6Entry toModel(S5E6EntrySoap soapModel) {
-		if (soapModel == null) {
-			return null;
-		}
-
-		S5E6Entry model = new S5E6EntryImpl();
-
-		model.setUuid(soapModel.getUuid());
-		model.setS5E6EntryId(soapModel.getS5E6EntryId());
-		model.setGroupId(soapModel.getGroupId());
-		model.setCompanyId(soapModel.getCompanyId());
-		model.setUserId(soapModel.getUserId());
-		model.setUserName(soapModel.getUserName());
-		model.setCreateDate(soapModel.getCreateDate());
-		model.setModifiedDate(soapModel.getModifiedDate());
-		model.setDescription(soapModel.getDescription());
-		model.setName(soapModel.getName());
-
-		return model;
-	}
-
-	/**
-	 * Converts the soap model instances into normal model instances.
-	 *
-	 * @param soapModels the soap model instances to convert
-	 * @return the normal model instances
-	 * @deprecated As of Athanasius (7.3.x), with no direct replacement
-	 */
-	@Deprecated
-	public static List<S5E6Entry> toModels(S5E6EntrySoap[] soapModels) {
-		if (soapModels == null) {
-			return null;
-		}
-
-		List<S5E6Entry> models = new ArrayList<S5E6Entry>(soapModels.length);
-
-		for (S5E6EntrySoap soapModel : soapModels) {
-			models.add(toModel(soapModel));
-		}
-
-		return models;
 	}
 
 	public S5E6EntryModelImpl() {
@@ -371,7 +315,6 @@ public class S5E6EntryModelImpl
 			(Map)attributeSetterBiConsumers);
 	}
 
-	@JSON
 	@Override
 	public String getUuid() {
 		if (_uuid == null) {
@@ -400,7 +343,6 @@ public class S5E6EntryModelImpl
 		return getColumnOriginalValue("uuid_");
 	}
 
-	@JSON
 	@Override
 	public long getS5E6EntryId() {
 		return _S5E6EntryId;
@@ -415,7 +357,6 @@ public class S5E6EntryModelImpl
 		_S5E6EntryId = S5E6EntryId;
 	}
 
-	@JSON
 	@Override
 	public long getGroupId() {
 		return _groupId;
@@ -439,7 +380,6 @@ public class S5E6EntryModelImpl
 		return GetterUtil.getLong(this.<Long>getColumnOriginalValue("groupId"));
 	}
 
-	@JSON
 	@Override
 	public long getCompanyId() {
 		return _companyId;
@@ -464,7 +404,6 @@ public class S5E6EntryModelImpl
 			this.<Long>getColumnOriginalValue("companyId"));
 	}
 
-	@JSON
 	@Override
 	public long getUserId() {
 		return _userId;
@@ -495,7 +434,6 @@ public class S5E6EntryModelImpl
 	public void setUserUuid(String userUuid) {
 	}
 
-	@JSON
 	@Override
 	public String getUserName() {
 		if (_userName == null) {
@@ -515,7 +453,6 @@ public class S5E6EntryModelImpl
 		_userName = userName;
 	}
 
-	@JSON
 	@Override
 	public Date getCreateDate() {
 		return _createDate;
@@ -530,7 +467,6 @@ public class S5E6EntryModelImpl
 		_createDate = createDate;
 	}
 
-	@JSON
 	@Override
 	public Date getModifiedDate() {
 		return _modifiedDate;
@@ -551,7 +487,6 @@ public class S5E6EntryModelImpl
 		_modifiedDate = modifiedDate;
 	}
 
-	@JSON
 	@Override
 	public String getDescription() {
 		if (_description == null) {
@@ -571,7 +506,6 @@ public class S5E6EntryModelImpl
 		_description = description;
 	}
 
-	@JSON
 	@Override
 	public String getName() {
 		if (_name == null) {

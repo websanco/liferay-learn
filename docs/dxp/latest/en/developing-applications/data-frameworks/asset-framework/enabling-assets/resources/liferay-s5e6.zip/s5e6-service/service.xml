@@ -3,7 +3,7 @@
 
 <service-builder dependency-injector="ds" package-path="com.acme.s5e6" short-no-such-exception-enabled="false">
 	<namespace>S5E6</namespace>
-	<entity local-service="true" name="S5E6Entry" remote-service="true" uuid="true">
+	<entity local-service="true" name="S5E6Entry" remote-service="false" uuid="true">
 
 		<!-- PK fields -->
 
