@@ -34,8 +34,8 @@ The widget has different options to configure:
 
 **Contributors to Exclude:** Enter the IDs of registered search contributors to be excluded from this search, in a comma-separated list. If not set, all registered search contributors are applied.
 
-```note::
-   These *Contributors* are components implementing the ``com.liferay.portal.search.spi.searcher.SearchRequestContributor`` interface (provided by the ``com.liferay.portal.search.spi`` artifact), which is an extension point (SPI) that intercepts search requests and adds query parts.
+```{note}
+These *Contributors* are components implementing the `com.liferay.portal.search.spi.searcher.SearchRequestContributor` interface (provided by the `com.liferay.portal.search.spi` artifact), which is an extension point (SPI) that intercepts search requests and adds query parts.
 ```
 
 **Federated Search Key:** Enter the key of an alternate search this widget is participating in. If not set, this widget participates in the default search. This value is usually the name of an application-defined index.
@@ -87,9 +87,10 @@ Relevance scoring only makes sense within an index. Results coming from separate
 
    Since you’re overriding the default query to search an alternate index, there's nothing in the query by default. Any query clauses you want sent to the search engine must be added manually using [Custom Filter](./filtering-search-results.md) widget(s).
 
-   ```important::
-      Set the Custom Parameter Name to ``q`` to match the default value in the Search Bar's Keywords Parameter Name setting. The matching parameter ensures that the user's keywords, entered into the search bar, are applied to the Custom Filter widget. If a custom value is set in the Keywords Parameter Name of the Search Bar, use that instead of ``q``.
+   ```{important}
+   Set the Custom Parameter Name to `q` to match the default value in the Search Bar's Keywords Parameter Name setting. The matching parameter ensures that the user's keywords, entered into the search bar, are applied to the Custom Filter widget. If a custom value is set in the Keywords Parameter Name of the Search Bar, use that instead of `q`.
    ```
+
 If you’re following the example here to search *liferay-0*, search for *dynamic* in the search bar. You'll see results like this:
 
 ![Example of results from low level search.](./understanding-low-level-search-options/images/03.png)
@@ -100,13 +101,13 @@ To set up a [Search Page](../working-with-search-pages/search-pages.md) that dis
 
 1. Add these widgets to a [new page called _Low Level Search_]( ./../../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md): 
 
-   - One Low Level Search Options
-   - Two [Search Bars](../../getting-started/searching-for-content.md#using-the-search-bar)
-   - Two [Search Results](./configuring-the-search-results-widget.md)
-   - One [Custom Filter](./filtering-search-results.md)
+   * One Low Level Search Options
+   * Two [Search Bars](../../getting-started/searching-for-content.md#using-the-search-bar)
+   * Two [Search Results](./configuring-the-search-results-widget.md)
+   * One [Custom Filter](./filtering-search-results.md)
 
-   ```tip::
-      The 1-2-1 Columns (50/50) `page layout <./../../../site-building/creating-pages/page-settings/configuring-individual-pages.md#page-layout>`__ is convenient for this example.
+   ```{tip}
+   The 1-2-1 Columns (50/50) [page layout](./../../../site-building/creating-pages/page-settings/configuring-individual-pages.md#page-layout) is convenient for this example.
    ```
 
 1. Configure the widgets:
@@ -120,8 +121,8 @@ To set up a [Search Page](../working-with-search-pages/search-pages.md) that dis
    | Search Bar (second) | **Invisible:** `true`<br />**Federated Search Key:** `liferay-0` | Only one Search Bar is used for user input, so this one should be invisible. Importantly, you left the default value for Keywords Parameter Name in both Search Bar widgets. This Search Bar can ingest the search terms entered by users because it shares the parameter with the visible Search Bar on the page. |
    | Custom Filter | **Filter Field:** `title_en_US`<br />**Occur:** `should`<br />**Custom Parameter Name:**`q`<br />**Invisible:** `true`<br />**Federated Search Key:** `liferay-0` | The Custom Filter widget should match the title field of the `liferay-0` index. If you want more filters, add more Custom Filter widgets to the page. |
 
-   ```important::
-      Set the Custom Parameter Name to ``q`` to match the default value in the Search Bar's Keywords Parameter Name setting. The matching parameter ensures that the user's keywords, entered into the search bar, are applied to the Custom Filter widget. If a custom value is set in the Keywords Parameter Name of the Search Bar, use that instead of ``q``.
+   ```{important}
+   Set the Custom Parameter Name to `q` to match the default value in the Search Bar's Keywords Parameter Name setting. The matching parameter ensures that the user's keywords, entered into the search bar, are applied to the Custom Filter widget. If a custom value is set in the Keywords Parameter Name of the Search Bar, use that instead of `q`.
    ```
 
 To test out the Low Level Search page functionality,

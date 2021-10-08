@@ -15,8 +15,8 @@ These settings are organized into the following tabs:
 * [Open Graph](#open-graph)
 * [Custom Meta Tags](#custom-meta-tags)
 
-```note::
-   Many of these settings can be localized to provide translations based on a User's locale. See `Introduction to Localization <../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md>`_ and `Modifying Localizable Site Fields <../../site-settings/configuring-site-languages/modifying-localizable-site-fields.md>`_ for more information.
+```{note}
+Many of these settings can be localized to provide translations based on a User's locale. See [Introduction to Localization](../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) and [Modifying Localizable Site Fields](../../site-settings/site-localization.md#modifying-localizable-site-fields) for more information.
 ```
 
 ## General
@@ -30,8 +30,8 @@ Use the Name field to set a page's title used for Site navigation and displayed 
 ![Use the Name field to set a page's title.](./configuring-individual-pages/images/02.png)
 ![Use the Friendly URL field to set a page's custom URL.](./configuring-individual-pages/images/03.png)
 
-```tip::
-   While a page's name and friendly URL are initially defined together at page creation, they are configured independently afterwards. It is best practice to update them together so that they match.
+```{tip}
+While a page's name and friendly URL are initially defined together at page creation, they are configured independently afterwards. It is best practice to update them together so that they match.
 ```
 
 ### Navigation Menu Widget
@@ -56,16 +56,16 @@ You can also access a CSS editor where you can add custom CSS code to the page. 
 
 ![Determine whether to use the page set's theme settings or define a unique look and feel for your page.](./configuring-individual-pages/images/07.png)
 
-```note::
-   While Widget Pages include the *Look and Feel* tab here, Content Pages include these settings in the *Edit* sidebar menu.
+```{note}
+While Widget Pages include the *Look and Feel* tab here, Content Pages include these settings in the *Edit* sidebar menu.
 ```
 
 ### Advanced Settings
 
 Access additional settings to customize a page's content and features, including query strings, [mobile device rules](../../optimizing-sites/building-a-responsive-site/creating-mobile-device-rules.md), custom fields, and embedded widgets.
 
-```note::
-   While Widget Pages include the Advanced tab here, Content Pages include these settings in the Edit sidebar menu under *Look and Feel*.
+```{note}
+While Widget Pages include the Advanced tab here, Content Pages include these settings in the Edit sidebar menu under *Look and Feel*.
 ```
 
 **Query String**: Use this to provide default parameters for a page when no others exist. Query strings are useful for web content templates.
@@ -76,8 +76,8 @@ Access additional settings to customize a page's content and features, including
 
 **JavaScript**: Add JavaScript code to a page. Any added code is executed at the bottom of the page. You can also access this editor in a Page Set's *Configuration* page.
 
-```tip::
-   If your Site's theme uses JavaScript, it’s best to add custom JavaScript code to the theme rather than an individual page or Page Set. This ensures your Site’s JavaScript code remains in one place. If your theme does not use JavaScript, place all of your Site's JavaScript code here.
+```{tip}
+If your Site's theme uses JavaScript, it’s best to add custom JavaScript code to the theme rather than an individual page or Page Set. This ensures your Site’s JavaScript code remains in one place. If your theme does not use JavaScript, place all of your Site's JavaScript code here.
 ```
 
 **Mobile Device Rules**: Determine whether a page uses its Page Set's rules for mobile devices or is uniquely configured. These rules determine how a page's content renders for different types of mobile devices. 
@@ -88,10 +88,10 @@ Access additional settings to customize a page's content and features, including
 
 **Custom Fields**: View and configure the *Custom Fields* you've defined for Site Pages. See [Custom Fields](../../../system-administration/configuring-liferay/adding-custom-fields.md) for more information.
 
-**Embedded Widgets**: Access widgets you've embedded in a page using [Web Content Templates](./../../../content-authoring-and-management/web-content/web-content-templates/embedding-widgets-in-templates.md), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or Themes. <!--find appropriate link for Themes-->
+**Embedded Widgets**: Access widgets you've embedded in a page using [Web Content Templates](./../../../content-authoring-and-management/web-content/web-content-templates/embedding-widgets-in-templates.md), [Page Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md), or [Themes](../../site-appearance/themes/introduction-to-themes.md).
 
-```note::
-   The *Custom Fields* and *Embedded Widget* sections only appear once you've created custom fields and embedded widgets in a page.
+```{note}
+The *Custom Fields* and *Embedded Widget* sections only appear once you've created custom fields and embedded widgets in a page.
 ```
 
 ## SEO
@@ -114,8 +114,8 @@ Set a custom canonical URL for a page. Custom URLs set in this way take preceden
 
 List words that people are likely to use when searching for your page's content. These keywords contribute to your page's ranking.
 
-```tip::
-   Use keywords often throughout your page's content, including titles, headings, descriptions, paragraphs, and image alt text.
+```{tip}
+Use keywords often throughout your page's content, including titles, headings, descriptions, paragraphs, and image alt text.
 ```
 
 ### Preview SERP
@@ -144,8 +144,8 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 
 [Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta property>` tags to define a page's metadata and create engaging representations of your content. See [Configuring Open Graph](../../site-settings/configuring-open-graph.md) for more information about the following settings.
 
-```note::
-   Open Graph properties defined here override values defined elsewhere in your DXP instance.
+```{note}
+Open Graph properties defined here override values defined elsewhere in your DXP instance.
 ```
 
 ### Image
@@ -153,11 +153,11 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 Use the Image field to define the following Open Graph `<meta>` properties for a page:
 
    ```html
-      <meta property="og:image" content="http://example.com/ogp.jpg" />
-      <meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="400" />
-      <meta property="og:image:height" content="300" />
+   <meta property="og:image" content="http://example.com/ogp.jpg" />
+   <meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
+   <meta property="og:image:type" content="image/jpeg" />
+   <meta property="og:image:width" content="400" />
+   <meta property="og:image:height" content="300" />
    ```
 
 ### Image Alt Description
