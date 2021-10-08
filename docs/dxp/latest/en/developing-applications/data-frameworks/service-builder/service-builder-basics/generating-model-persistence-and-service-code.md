@@ -1,4 +1,4 @@
-# Generating a Persistence Layer
+# Generating Model, Persistence, and Service Code
 
 Service Builder makes it easy to define models and generate persistence layers for them. You'll experience this by defining a model called `Y7G4Entry` and generating its persistence layer and services using Service Builder. Then you'll deploy everything to DXP and test it.
 
@@ -33,14 +33,14 @@ y7g4-api
 
 Here's the `bnd.bnd` file:
 
-```{literalinclude} ./generating-a-persistence-layer/resources/liferay-y7g4.zip/y7g4-api/bnd.bnd
+```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-api/bnd.bnd
 ```
 
 The `Bundle-` headers describe the module artifact. The `Export-Package` header specifies the API packages to publish. See [Module Projects](../../../../liferay-internals/fundamentals/module-projects.md) for details on bnd metadata and how it's used.
 
 The `build.gradle` file declares the module's dependency on DXP/Portal.
 
-```{literalinclude} ./generating-a-persistence-layer/resources/liferay-y7g4.zip/y7g4-api/build.gradle
+```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-api/build.gradle
 :language: groovy
 ```
 
@@ -57,7 +57,7 @@ y7g4-service
 
 Here's the `bnd.bnd` file:
 
-```{literalinclude} ./generating-a-persistence-layer/resources/liferay-y7g4.zip/y7g4-service/bnd.bnd
+```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-service/bnd.bnd
 ```
 
 Once again, the `Bundle-` headers describe the module artifact. Service metadata and a directive follow.
@@ -70,7 +70,7 @@ Once again, the `Bundle-` headers describe the module artifact. Service metadata
 
 Here's the `build.gradle` file:
 
-```{literalinclude} ./generating-a-persistence-layer/resources/liferay-y7g4.zip/y7g4-service/build.gradle
+```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-service/build.gradle
 :language: groovy
 ```
 
@@ -82,7 +82,7 @@ The `service.xml` file defines the `Y7G4Entry` model entity. Service Builder gen
 
 Here's the `service.xml` file:
 
-```{literalinclude} ./generating-a-persistence-layer/resources/liferay-y7g4.zip/y7g4-service/service.xml
+```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-service/service.xml
 ```
 
 The `service-builder` element and its `entity` elements define a `Y7G4Entry` model that has an ID (the primary key), name, and description.
