@@ -1,4 +1,3 @@
-import com.liferay.headless.admin.user.client.dto.v1_0.AccountRole;
 import com.liferay.headless.admin.user.client.resource.v1_0.AccountRoleResource;
 
 public class AccountRole_DELETE_UserAssociation {
@@ -13,13 +12,10 @@ public class AccountRole_DELETE_UserAssociation {
 			"test@liferay.com", "test"
 		).build();
 
-		AccountRole accountRole =
-			accountRoleResource.deleteAccountAccountRoleUserAccountAssociation(
-				Long.valueOf(System.getProperty("accountId")),
-				Long.valueOf(System.getProperty("accountRoleId")),
-				Long.valueOf(System.getProperty("userAccountId")));
-
-		System.out.println(accountRole);
+		accountRoleResource.deleteAccountAccountRoleUserAccountAssociation(
+			Long.valueOf(System.getProperty("accountId")),
+			Long.valueOf(System.getProperty("accountRoleId")),
+			Long.valueOf(System.getProperty("userAccountId")));
 	}
 
 }
