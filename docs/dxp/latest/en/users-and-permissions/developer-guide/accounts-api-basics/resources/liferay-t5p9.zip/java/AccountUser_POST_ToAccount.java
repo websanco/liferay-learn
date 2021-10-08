@@ -17,10 +17,10 @@ public class AccountUser_POST_ToAccount {
 			Long.valueOf(System.getProperty("accountId")),
 			new UserAccount() {
 				{
-					alternateName = "Baker";
-					emailAddress = "baker@liferay.com";
-					familyName = "Foo";
-					givenName = "Baker";
+					alternateName = "Item";
+					emailAddress = "item@liferay.com";
+					familyName = "Jig";
+					givenName = "Item";
 				}
 			});
 
