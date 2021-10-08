@@ -64,16 +64,4 @@ Service Builder caches objects at three levels: *entity*, *finder*, and *Hiberna
 
 Service Builder  automates many of the common tasks associated with creating database persistence code but it doesn't prevent you from creating custom SQL queries.  You can define custom SQL queries in an XML file and implement finder methods to run the queries. If you have some crazy join to do, Service Builder gets out of your way. You can also use dynamic query to access Hibernate's criteria API. 
 
-Service Builder is used exclusively throughout Liferay DXP and its applications, so it's well-tested and robust. It saves lots of development time, both initial development time and time that would have to be spent maintaining, extending, or customizing a project.
-
-## What's Next
-
-Here are the Service Builder topics:
-
-* [Service Builder Basics](./service-builder/service-builder-basics.md): Demonstrates defining a model, generating persistence and service code for it, and creating model instances from an application.
-* [Defining Entities](./service-builder/defining-entities.md) (Coming soon!): Explains how to relate entities, generate code to *find* entities fast, support multi-tenancy, and more. 
-* [Business Logic with Service Builder](./service-builder/business-logic-with-service-builder.md) (Coming soon!): Provides best practices for implementing CRUD operations and whatever operations you need.
-* [Advanced Queries](./service-builder/advanced-queries.md) (Coming soon!): Uses advanced techniques to create maintainable, high-performance queries.
-* [Reference](./service-builder/reference.md) (Coming soon!): Common Service Builder development topics.
-
-Start with [Service Builder Basics](./service-builder/service-builder-basics.md).
+Service Builder is used exclusively throughout Liferay DXP and its applications, so it's well-tested and robust. It saves lots of development time, both initial development time and time that would have to be spent maintaining, extending, or customizing a project. Now start working with Service Builder in [Service Builder Basics](./service-builder/service-builder-basics.md).
