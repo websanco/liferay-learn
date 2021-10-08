@@ -1,6 +1,6 @@
 # Multi-Factor Authentication Checkers
 
-Liferay DXP 7.3 ships with two additional factor checkers for Multi-Factor Authentication. Both of them are disabled by default, because they're only useful in particular circumstances. Once Multi-Factor Authentication is enabled, however, you can configure them. 
+Liferay DXP 7.4 ships with two additional factor checkers for Multi-Factor Authentication. Both of them are disabled by default, because they're only useful in particular circumstances. Once Multi-Factor Authentication is enabled, however, you can configure them. 
 
 ![When you enable Multi-Factor Authentication, the other factor checkers appear.](./multi-factor-authentication-checkers/images/01.png)
 
