@@ -392,7 +392,7 @@ Here's what the script did:
 
 ## What's Next
 
-Now that you know how to define a model and generate persistence code and service code for it, you should examine the generated service classes. Continue with [Understanding the Service Builder Generated Classes](./understanding-service-builder-generated-classes.md).
+Now that you know how to define a model and generate persistence code and service code for it, you should examine the generated service classes. Continue with [Understanding and Extending Generated Classes](./understanding-service-builder-generated-classes.md).
 
 ## Additional Information
 

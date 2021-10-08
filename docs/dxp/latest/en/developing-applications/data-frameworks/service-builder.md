@@ -62,6 +62,8 @@ Service Builder caches objects at three levels: *entity*, *finder*, and *Hiberna
 
 ## Dynamic Query and Custom SQL Query
 
-Service Builder  automates many of the common tasks associated with creating database persistence code but it doesn't prevent you from creating custom SQL queries.  You can define custom SQL queries in an XML file and implement finder methods to run the queries. If you have some crazy join to do, Service Builder gets out of your way. You can also use dynamic query to access Hibernate's criteria API. 
+Service Builder  automates many of the common tasks associated with creating database persistence code but it doesn't prevent you from creating custom SQL queries.  You can define custom SQL queries in an XML file and implement finder methods to run the queries. If you have some crazy join to do, Service Builder gets out of your way. You can also use dynamic query to access Hibernate's criteria API.
+
+## What's Next
 
 Service Builder is used exclusively throughout Liferay DXP and its applications, so it's well-tested and robust. It saves lots of development time, both initial development time and time that would have to be spent maintaining, extending, or customizing a project. Now start working with Service Builder in [Service Builder Basics](./service-builder/service-builder-basics.md).
