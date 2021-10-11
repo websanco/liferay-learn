@@ -1,12 +1,13 @@
-# Advanced Configuration of the Liferay Elasticsearch Connector
+# Adding Settings to the Elasticsearch Connector
 
-The [Elasticsearch connection](./connecting-to-elasticsearch.md) is configured using a [configuration file or via System Settings.](./elasticsearch-connector-configuration-reference.md#configuration-files-and-system-settings-entries).
+The [Elasticsearch connection](./connecting-to-elasticsearch.md) is configured using a [configuration file or via System Settings](./elasticsearch-connector-configuration-reference.md#configuration-files-and-system-settings-entries).
 
 The Elasticsearch connector has a lot of configuration options out of the box; most Elasticsearch settings can be configured by a similarly or identically named Liferay setting (e.g., `httpSSLEnabled`). If you need a special configuration, add the configuration options you need using the [advanced settings](./../elasticsearch/elasticsearch-connector-configuration-reference.md). Most of these special configurations will be adding or overriding settings and mappings. 
 
 * [Adding Index Configurations](#adding-index-configurations)
 * [Adding Type Mappings](#adding-type-mappings)
 * [Overriding Type Mappings](#overriding-type-mappings)
+* [Adding Configurations to the Development Mode Elasticsearch](#adding-configurations-to-the-development-mode-elasticsearch)
 
 If something is configurable for Elasticsearch, it's configurable using the Elasticsearch connector.
 
@@ -14,17 +15,13 @@ If something is configurable for Elasticsearch, it's configurable using the Elas
 
 Think of the available configuration options as being divided into two groups: the most common ones that are easily configured, and more complex configurations requiring a more brute-force approach: these include the `additionalConfigurations`, `additionalIndexConfigurations`, `additionalTypeMappings`, and `overrideTypeMappings` settings. 
 
-[Figure 1: You can add Elasticsearch configurations to the ones currently available in System Settings.](./advanced-configuration-of-the-elasticsearch-connection/images/cfg-elasticsearch-additional-configs.png)
-
-### Additional Configurations
-
-The `additionalConfigurations` configuration defines extra settings (in YAML) for the embedded Elasticsearch. This is only useful for testing environments using the embedded Elasticsearch server. Any node settings normally set in `elasticsearch.yml` can be declared here. See the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html)  for a description of all possible node settings.
+[Figure 1: You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/cfg-elasticsearch-additional-configs.png)
 
 ### Adding Index Configurations
 
-The `additionalIndexConfigurations` configuration defines extra settings (in JSON or YAML) that are applied to the Liferay index when it's created. For example, you can create custom analyzers and filters using this setting. For a complete list of available settings, see the  [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules.html).
+The `additionalIndexConfigurations` configuration defines extra settings (in JSON or YAML) that are applied to the Liferay index when it's created. For example, you can create custom analyzers and filters using this setting. For a complete list of available settings, see the [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules.html).
 
-Here's an example that shows how to configure  [analysis](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules-analysis.html) that can be applied to a field or a dynamic template (see [below](#overriding-type-mappings) for an example application to a dynamic template).
+Here's an example that shows how to configure [analysis](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules-analysis.html) that can be applied to a field or a dynamic template (see [below](#overriding-type-mappings) for an example application to a dynamic template).
 
 ```json
 {  
@@ -70,7 +67,7 @@ As with dynamic templates, you can add sub-field mappings to Liferay's type mapp
 
 See [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/mapping-types.html) for more details on Elasticsearch's field datatypes.
 
-The above example shows how a `fooName` field might be added to Liferay's type mapping. Because `fooName` is not an existing property in the mapping, it  works fine. If you try to override an existing property mapping, index creation fails. Instead use the `overrideTypeMappings` setting to override `properties` in the mapping.
+The above example shows how a `fooName` field might be added to Liferay's type mapping. Because `fooName` is not an existing property in the mapping, it works fine. If you try to override an existing property mapping, index creation fails. Instead use the `overrideTypeMappings` setting to override `properties` in the mapping.
 
 To see that your additional mappings have been added to the `LiferayDocumentType`, use `curl` to access this URL after saving your additions and re-indexing:
 
@@ -108,7 +105,7 @@ Then, from the end of the mappings, delete the concluding three curly braces.
 
 Now modify whatever mappings you'd like. The changes take effect once you save the changes and trigger a re-index from Server Administration. 
 
-Here's a partial example, showing a  [dynamic template](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/dynamic-templates.html) that uses the analysis configuration from `additionalIndexConfigurations` to analyze all string fields that end with `_ja`. You'd include this with all the other default mappings, replacing the provided `template_ja` with this custom one:
+Here's a partial example, showing a [dynamic template](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/dynamic-templates.html) that uses the analysis configuration from `additionalIndexConfigurations` to analyze all string fields that end with `_ja`. You'd include this with all the other default mappings, replacing the provided `template_ja` with this custom one:
 
 ```json
 {
@@ -134,6 +131,10 @@ Here's a partial example, showing a  [dynamic template](https://www.elastic.co/g
 }
 ```
 
+### Adding Configurations to the Development Mode Elasticsearch
+
+Use the Additional Configurations (`additionalConfigurations`) field to define extra settings (in YAML) for the embedded or sidecar Elasticsearch instance. This is only useful for testing environments. Any node settings normally set in `elasticsearch.yml` can be declared here. See the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html)  for a description of all possible node settings.
+
 ## Multi-line YAML Configurations
 
 If you configure the settings from the last section using an OSGi configuration file, you might find yourself needing to write YAML snippets that span multiple lines. The syntax for that is straightforward and just requires appending each line with `\n\`, like this:
@@ -150,3 +151,4 @@ additionalConfigurations=\
 ```
 
 From simple configurations to overriding existing type mappings, Elasticsearch and Liferay's connector to Elasticsearch are configurable.
+
