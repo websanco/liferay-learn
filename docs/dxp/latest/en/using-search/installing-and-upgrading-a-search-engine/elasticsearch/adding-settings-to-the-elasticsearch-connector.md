@@ -15,7 +15,7 @@ If something is configurable for Elasticsearch, it's configurable using the Elas
 
 Think of the available configuration options as being divided into two groups: the most common ones that are easily configured, and more complex configurations requiring a more brute-force approach: these include the `additionalConfigurations`, `additionalIndexConfigurations`, `additionalTypeMappings`, and `overrideTypeMappings` settings. 
 
-[Figure 1: You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/cfg-elasticsearch-additional-configs.png)
+[You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/01.png)
 
 ### Adding Index Configurations
 
