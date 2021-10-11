@@ -13,9 +13,9 @@ If something is configurable for Elasticsearch, it's configurable using the Elas
 
 ## Adding Settings and Mappings to the Liferay Elasticsearch Connector
 
-Think of the available configuration options as being divided into two groups: the most common ones that are easily configured, and more complex configurations requiring a more brute-force approach: these include the `additionalConfigurations`, `additionalIndexConfigurations`, `additionalTypeMappings`, and `overrideTypeMappings` settings. 
+Think of the available configuration options as being divided into two groups: the most common ones that are easily configured, and more complex configurations requiring a more brute-force approach. 
 
-[You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/01.png)
+![You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/01.png)
 
 ### Adding Index Configurations
 
@@ -47,9 +47,11 @@ Here's an example that shows how to configure [analysis](https://www.elastic.co/
 
 ### Adding Type Mappings
 
-`additionalTypeMappings` defines extra mappings for the `LiferayDocumentType` type definition. These are applied when the index is created. Add the mappings using JSON syntax. For more information see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/mapping.html) and [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-put-mapping.html). Use `additionalTypeMappings` for new field (`properties`) mappings and new dynamic templates, but don't try to override existing mappings. If any of the mappings set here overlap with existing mappings, index creation fails. Use `overrideTypeMappings` to replace default mappings.
+`additionalTypeMappings` defines extra mappings. These are applied when the index is created. Add the mappings using JSON syntax. For more information see [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/mapping.html) and [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-put-mapping.html). Use `additionalTypeMappings` for new field (`properties`) mappings and new dynamic templates, but don't try to override existing mappings. If any of the mappings set here overlap with existing mappings, index creation fails. Use `overrideTypeMappings` to replace default mappings.
 
 As with dynamic templates, you can add sub-field mappings to Liferay's type mapping. These are referred to as [properties](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/properties.html) in Elasticsearch.
+
+<!-- we need to update, since the LiferayDocumentType inclusion is old syntax (7.2) -->
 
 ```json
 { 
@@ -71,23 +73,47 @@ The above example shows how a `fooName` field might be added to Liferay's type m
 
 To see that your additional mappings have been added to the `LiferayDocumentType`, use `curl` to access this URL after saving your additions and re-indexing:
 
+<!-- update, the LiferayDocumentType inclusion is old syntax (7.2) -->
+
 ```bash
 curl http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/LiferayDocumentType?pretty
 ```
 
 Here's what it would look like for an Elasticsearch instance running on `localhost:9200`, with a Liferay Company ID of `20116`:
 
+<!-- update, the LiferayDocumentType inclusion is old syntax (7.2) -->
+
 ```bash
 curl http://localhost:9200/liferay-20116/_mapping/LiferayDocumentType?pretty
 ```
 
-In the above URL, `liferay-20116`is the index name. Including it indicates that you want to see the mappings that were used to create the index with that name.
+In the above URL, `liferay-20116` is the index name. Including it indicates that you want to see the mappings that were used to create the index with that name.
 
 ### Overriding Type Mappings
 
 Use `overrideTypeMappings` to override Liferay's default type mappings. This is an advanced feature that should be used only if strictly necessary. If you set this value, the default mappings used to define the Liferay Document Type in Liferay source code (for example, `liferay-type-mappings.json`) are ignored entirely, so include the whole mappings definition in this property, not just the segment you're modifying. To make a modification, find the entire list of the current mappings being used to create the index by navigating to the URL
 
     http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/LiferayDocumentType?pretty
+
+<!-- Provide a 7.3+ dummy URL: http://[HOST]:[PORT]/[COMPANY_ID]/_mapping?pretty -->
+
+#### Overriding Type Mappings in Liferay 7.3+
+<!-- I thought we could cover the different versions like this -->
+
+Copy the contents in as the value of this property (either into System Settings or your OSGi configuration file). Leave the opening curly brace `{`, but delete lines 2 and 3 entirely:
+
+```json
+"liferay-[COMPANY_ID]": {
+    "mappings" : {
+```
+
+Then, from the end of the mappings, delete the concluding two curly braces.
+
+```json
+    }
+}
+```
+#### Overriding Type Mappings in Liferay 7.2
 
 Copy the contents in as the value of this property (either into System Settings or your OSGi configuration file). Leave the opening curly brace `{`, but delete lines 2-4 entirely:
 
@@ -99,13 +125,17 @@ Copy the contents in as the value of this property (either into System Settings 
 
 Then, from the end of the mappings, delete the concluding three curly braces.
 
-            }
+```json
         }
     }
+}
+```
 
 Now modify whatever mappings you'd like. The changes take effect once you save the changes and trigger a re-index from Server Administration. 
 
 Here's a partial example, showing a [dynamic template](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/dynamic-templates.html) that uses the analysis configuration from `additionalIndexConfigurations` to analyze all string fields that end with `_ja`. You'd include this with all the other default mappings, replacing the provided `template_ja` with this custom one:
+
+<!-- update, the LiferayDocumentType inclusion is old syntax (7.2) -->
 
 ```json
 {
