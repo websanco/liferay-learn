@@ -385,6 +385,8 @@ The following pseudo code demonstrates using the title and value patterns on the
     1. PATCH to value `Bar`
     1. PUT title `Dog`, value `Goo`
 
+For complete examples, please see the [Accounts API](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/users-and-permissions/developer-guide/accounts-api-basics/resources/liferay-t5p9.zip) and the [Message Boards API](https://github.com/liferay/liferay-learn/tree/master/docs/dxp/latest/en/collaboration-and-social/message-boards/developer-guide/messageboard-api-basics/resources/liferay-y3a6.zip).
+
 ### Use Unique Titles
 
 As developers execute the example scripts and classes, the created or modified resources must use unique titles. This facilitates validating operation success.
