@@ -84,4 +84,5 @@ http://localhost:8080/web/guest/search?q=data&target=this-site
 
 ## Additional Information
 
+* [Understanding Search Results](../search-pages-and-widgets/search-results/search-results-behavior.md)
 * [Enabling Search Suggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md)
