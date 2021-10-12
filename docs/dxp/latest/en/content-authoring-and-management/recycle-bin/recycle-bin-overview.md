@@ -24,10 +24,10 @@ To move an asset to the Recycle Bin, first switch to the environment containing 
 
 [Using the Recycle Bin](using-the-recycle-bin.md) has the same functionality whether you are working in a Staging environment or a Live environment.
 
-Note that the Recycle Bin is enabled for different asset types when the Staging environment is initially configured. See [Managing Data and Content Types in Staging](../managing-../site-building/publishing-tools/staging/managing-data-and-content-types-in-staging.md) to make any changes.
+Note that the Recycle Bin is enabled for different asset types when the Staging environment is initially configured. See [Managing Data and Content Types in Staging](../../site-building/publishing-tools/staging/managing-data-and-content-types-in-staging.md) to make any changes.
 
-```warning::
-   Check your Recycle Bin before enabling or disabling a Staging environment. You may end up losing assets that are already in the Recycle Bin. 
+```{warning}
+Check your Recycle Bin before enabling or disabling a Staging environment. You may end up losing assets that are already in the Recycle Bin. 
 ```
 
 ## Additional Information
