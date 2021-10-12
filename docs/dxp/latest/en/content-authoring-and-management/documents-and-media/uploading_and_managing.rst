@@ -9,6 +9,7 @@ Uploading and Managing
    uploading-and-managing/previewing-files.md
    uploading-and-managing/deleting-files.md
    uploading-and-managing/editing-images.md
+   uploading-and-managing/using-file-expiration-and-review-dates.md
    uploading-and-managing/linking-to-files-on-google-drive.md
    uploading-and-managing/enabling-docusign-digital-signatures.md
    uploading-and-managing/creating_documents.rst
@@ -19,6 +20,7 @@ Uploading and Managing
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/previewing-files`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/deleting-files`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/editing-images`
+-  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/using-file-expiration-and-review-dates`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/linking-to-files-on-google-drive`
 -  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/enabling-docusign-digital-signatures`
 
