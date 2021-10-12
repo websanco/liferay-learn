@@ -2,14 +2,14 @@
 
 DXP Cloud uses [Jenkins](https://jenkins.io/) to power its continuous integration infrastructure service. When you send a pull request or push a commit to one of your pre-configured GitHub branches, an automatic and configurable build will be triggered.
 
-```note::
-   DXP Cloud customers (using the ``customer`` login) have permissions to manage and review their builds, but do not have full administrative privileges.
+```{note}
+DXP Cloud customers (using the `customer` login) have permissions to manage and review their builds, but do not have full administrative privileges.
 ```
 
 By default, this automated build will compile code and can be configured to execute tests. DXP Cloud will build your services and show their status on your environment's Builds page. If the tests fail, you can check the Jenkins dashboard and logs at `https://ci-companyname-infra.lfr.cloud`.
 
-```note::
-   Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
+```{note}
+Continuous integration only works if you deploy from GitHub, GitLab, or Bitbucket, not the CLI.
 ```
 
 See the [CI service limitations](../reference/platform-limitations.md#continuous-integration-service) for more information.
@@ -67,8 +67,8 @@ Here is a basic overview of the steps in the CI build process:
 1. Load `ci/Jenkinsfile-post-always`, if it exists. This will run both when the
    build fails and when it succeeds.
 
-```note::
-   If you are using version 3.x.x services, then these extensions to the Jenkinsfile are located in the ``lcp/ci/`` folder instead. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then these extensions to the Jenkinsfile are located in the `lcp/ci/` folder instead. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 To see how they are used in the default pipeline, monitor the Jenkins service startup logs. The full default Jenkinsfile is printed out in the startup logs.
@@ -79,12 +79,12 @@ It is possible to use the additional steps in your pipeline to call external ser
 
 You can also create your own pipeline by defining your own `Jenkinsfile` in your repository's `ci/` folder. See the [Jenkins website](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) for more information.
 
-```warning::
-   External services or custom pipelines should be used with discretion and are outside the scope of DXP Cloud Support. Custom Jenkins plugins are not supported.
+```{warning}
+External services or custom pipelines should be used with discretion and are outside the scope of DXP Cloud Support. Custom Jenkins plugins are not supported.
 ```
 
-```note::
-   If you are using version 3.x.x services and defining your own ``Jenkinsfile``, then you should define it at the root of your repository instead. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services and defining your own `Jenkinsfile`, then you should define it at the root of your repository instead. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Reusing Code Between Different Extension Points
@@ -107,8 +107,8 @@ def util = load("ci/util.groovy")
 util.sendSlackMessage("About to create DXP Cloud build...")
 ```
 
-```note::
-   If you are using version 3.x.x services, then these files instead belong in the ``lcp/ci/`` directory in the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then these files instead belong in the `lcp/ci/` directory in the repository. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Environment Variables Reference
