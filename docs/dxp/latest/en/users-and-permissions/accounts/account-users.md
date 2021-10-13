@@ -3,7 +3,7 @@
 Account Users are user accounts that are associated with a Business Account or a Person Account. 
 
 ```{note}
-Accounts is a feature that is available in Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## Adding an Account User
