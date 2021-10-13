@@ -3,7 +3,7 @@
 The Account Management widget makes it easy to manage and access account information. Deploy the widget to any Page. This is a useful way to provide access for those without permission to view the Applications Menu.
 
 ```{note}
-Accounts is a feature that is available in Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## Adding the Account Management Widget to a Page
