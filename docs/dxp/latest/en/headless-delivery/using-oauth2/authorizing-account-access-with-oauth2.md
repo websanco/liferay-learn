@@ -103,13 +103,15 @@ OAuth 2.0 provides a convenient way for client applications to be granted access
 
 Once access is granted, users or administrators are free to revoke access whenever they wish. If this happens to a client, the token becomes invalid and the client must ask the user for authorization again. This puts users in control of what has access to their data, and they can exercise this control at any time.
 
-![Figure 1: Users have complete control over what applications have access to their data in their account profiles.](./authorizing-account-access-with-oauth2/images/01.png)
+![Users have complete control over what applications have access to their data in their account profiles.](./authorizing-account-access-with-oauth2/images/01.png)
 
-In their account areas, users can click *OAuth2 Connected Applications* and see a list of applications they've allowed to access their accounts. From here, they can revoke access by clicking the *Remove Access* item in the Action menu or the *Remove Access* button in the detail screen for the application.
+In their account areas, users can click *My Connected Applications* and see a list of applications they've allowed to access their accounts. From here, they can revoke access by clicking the *Remove Access* item in the Action menu or the *Remove Access* button in the detail screen for the application.
 
-Administrators can view the authorizations in the Authorizations tab of any app in *Control Panel* &rarr; *Configuration* &rarr; *OAuth2 Administration*.
+![In My Connected Applications, users can see their authorized apps and revoke their access.](./authorizing-account-access-with-oauth2/images/02.png)
 
-![Figure 2: All authorizations for an app appear in the Authorizations tab for the app.](./authorizing-account-access-with-oauth2/images/02.png)
+Administrators can view the authorizations in the Authorizations tab of any app in *Control Panel* &rarr; *Configuration* &rarr; *OAuth2 Administration*. If the app is trusted or the Remember My Authorization box was checked, that information appears. 
+
+![All authorizations for an app appear in the Authorizations tab for the app.](./authorizing-account-access-with-oauth2/images/03.png)
 
 Clicking the *Revoke* button on any listed authorization revokes that application's access to that user's account.
 
