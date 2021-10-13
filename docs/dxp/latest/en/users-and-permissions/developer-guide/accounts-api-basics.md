@@ -1,6 +1,6 @@
 # Accounts API Basics
 
-You can manage [Accounts](../accounts.md) and [Account Users](../accounts/account-users.md) from the Applications menu, but you can also use Liferay's REST API's. Call these services to create and manage accounts and related item.
+You can manage [Accounts](../accounts.md) from the Applications menu, but you can also use Liferay's REST API's. Call these services to create and manage accounts.
 
 ## Adding an Account
 
@@ -20,7 +20,7 @@ You can manage [Accounts](../accounts.md) and [Account Users](../accounts/accoun
    unzip liferay-t5p9.zip
    ```
 
-1. Use the cURL script to add a new account to your Site. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script with your site ID as a parameter.
+2. Use the cURL script to add a new account to your Instance. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script.
 
     ```bash
     ./Account_POST_ToInstance.sh
@@ -42,17 +42,17 @@ You can manage [Accounts](../accounts.md) and [Account Users](../accounts/accoun
 
     ```
 
-1. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new account has been added.
+3. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new account has been added.
 
     ![See that a new account has been added.](./accounts-api-basics/images/01.png)
 
-1. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+4. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-2. Run the `Account_POST_ToInstance.java` class with the following command.
+5. Run the `Account_POST_ToInstance.java` class with the following command.
 
     ```bash
     java -classpath .:* Account_POST_ToInstance
@@ -289,3 +289,5 @@ Code:
    :language: java
    :lines: 8-17
 ```
+
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Account` services and schemas and has an interface to try out each service.
