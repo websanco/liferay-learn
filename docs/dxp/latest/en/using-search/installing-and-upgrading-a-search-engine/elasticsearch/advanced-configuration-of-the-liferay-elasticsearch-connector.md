@@ -1,4 +1,4 @@
-# Adding Settings to the Elasticsearch Connector
+# Advanced Configuration of the Liferay Elasticsearch Connector
 
 The [Elasticsearch connection](./connecting-to-elasticsearch.md) is configured using a [configuration file or via System Settings](./elasticsearch-connector-configuration-reference.md#configuration-files-and-system-settings-entries).
 
@@ -15,7 +15,7 @@ If something is configurable for Elasticsearch, it's configurable using the Elas
 
 Think of the available configuration options as being divided into two groups: the most common ones that are easily configured, and more complex configurations requiring a more brute-force approach. 
 
-![You can add Elasticsearch configurations to the ones currently available in System Settings.](./adding-settings-to-the-elasticsearch-connector/images/01.png)
+![You can add Elasticsearch configurations to the ones currently available in System Settings.](./advanced-configuration-of-the-liferay-elasticsearch-connector/images/01.png)
 
 ### Adding Index Configurations
 
