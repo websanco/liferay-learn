@@ -100,14 +100,16 @@ Highlighting is a helpful visual cue that hints at why the result is returned, b
 
 ## Returning Pages in Search Results
 
-In Liferay 7.2+, [page content](../../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) from public content pages is returned in the Search Results widget. For example, you can search for text found in a Paragraph fragment on a public page:
+In Liferay 7.2+, [page content](../../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) from public content pages is returned in the Search Results widget. For example, you can search for text found in a Paragraph fragment on a public page.
 
-![Content from public pages can be searched.](./search-results-behavior/images/07.png)
-
-In the latest Liferay 7.2 and 7.3, and all Liferay 7.4+ releases, page content on private content pages is no longer indexed and thus not returned in the list of search results, regardless of the User's permission to view the page.
+By contrast, in the latest Liferay 7.2 and 7.3, and all Liferay 7.4+ releases, page content on private content pages and staged pages is not indexed and thus not returned in the list of search results, regardless of the User's permission to view the page.
 
 ![Content from private pages cannot be searched.](./search-results-behavior/images/10.png)
 
-The title field of both public and private content pages is indexed in 7.2+, so searching for keywords that match private content page titles still produces hits in the Search Results widget.
+Although the content field is not indexed and searchable for private or staged pages, other fields are available. For example, the title field of both public and private content pages is indexed in 7.2+, so searching for keywords that match private content page titles still produces hits in the Search Results widget.
 
-![Titles from public and private pages can be searched.](./search-results-behavior/images/10.png)
+![Titles from public and private pages can be searched.](./search-results-behavior/images/11.png)
+
+To discover which fields are indexed for content pages, enable the Search Results widget's _Display Results in Document Form_ setting. See [Inspecting Search Engine Documents](./configuring-the-search-results-widget.md#inspecting-search-engine-documents) for more details.
+
+![Inspect the document view of a content page to see what fields are indexed.](./search-results-behavior/images/12.png)
