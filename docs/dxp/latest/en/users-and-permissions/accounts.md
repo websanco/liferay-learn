@@ -12,7 +12,7 @@ accounts/account-management-widget.md
 Accounts provide administrators with a way to organize and manage users for various commerce or business needs. Unlike [organizations](./organizations.html) or [user groups](./user_groups.html), accounts help facilitate interactions that might take place in business situations such as the purchasing of goods and services or managing existing customers.
 
 ```{note}
-Accounts is a feature that is available in Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## Creating an Account
