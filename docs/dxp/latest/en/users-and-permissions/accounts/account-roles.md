@@ -5,7 +5,7 @@ You can create different Account Roles and define specific permissions for each 
 Note that Account Roles are assigned to a user for each specific Account. This offers great flexibility in managing users. For example, a user might have a "Buyer" role for Account "A" but not have that role for Account "B".
 
 ```{note}
-Accounts is a feature that is available in Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## View Account Roles
