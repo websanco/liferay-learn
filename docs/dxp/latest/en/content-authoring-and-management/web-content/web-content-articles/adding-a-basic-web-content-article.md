@@ -6,7 +6,7 @@ Each web content article is based on a structure that defines its available fiel
 
 ## Creating a Basic Web Content Article
 
-1. Open the Site Menu, and navigate to _Content & Data_ → _Web Content_.
+1. Open the Site Menu (![Site Menu](../../../images/icon-menu.png)), and navigate to _Content & Data_ → _Web Content_.
 
 1. Click on the *Add* button (![Add icon](../../../images/icon-add.png)) and select _Basic Web Content_.
 
@@ -41,4 +41,4 @@ When creating or editing a _Basic Web Content_ article, you can access the follo
 
 * [Creating and Managing Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md)
 * [Introduction to Web Content Structures](../web-content-structures/understanding-web-content-structures.md)
-* [Using the Web Content Display Widget](../../../site-building/displaying-content/additional-content-display-options/using-the-web-content-display-widget.md)
+* [Filtering and Sorting Web Content Articles](./filtering-and-sorting-web-content-articles.md)
