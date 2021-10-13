@@ -213,6 +213,18 @@ Upload the database and document library archives to the `backup` service by cal
 
 When the call is complete, a new backup appears from your upload, on the _Backups_ page in the DXP Cloud console.
 
+## Update Your Project's Liferay Image Version
+
+You must update the version of the Liferay image your environment uses so that the upgraded database works correctly.
+
+Update these locations as needed to reflect the new version of Liferay DXP:
+
+* The `image` property in `liferay/LCP.json`. Check the [Services Changelogs](https://help.liferay.com/hc/en-us/sections/360006251311-Services-Changelog) for an updated image, and make sure the upgraded DXP version matches the version in the image (for example, `7.2` in `liferaycloud/liferay-dxp:7.2-4.0.7`).
+
+* The `liferay.workspace.docker.image.liferay` property in `liferay/gradle.properties`. Check the [Liferay DXP Docker Hub page](https://hub.docker.com/r/liferay/dxp/tags) for an image that matches your upgraded DXP version.
+
+When both of these image versions are updated, [deploy the changes](./deploying-to-the-liferay-service.md) to your chosen environment. This prepares the Liferay service for you to restore your uploaded backup.
+
 ## Restore the Backup
 
 Follow these steps to restore a backup to your chosen environment:
