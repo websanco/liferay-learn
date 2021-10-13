@@ -17,7 +17,7 @@ The example portlet downloads a simple file using an MVC Resource Command.
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-p8v5.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-p8v5.zip -O
    ```
 
    ```bash

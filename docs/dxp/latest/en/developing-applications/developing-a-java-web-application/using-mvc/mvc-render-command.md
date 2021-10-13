@@ -15,7 +15,7 @@ Here you'll deploy an example portlet that renders views using MVC render comman
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-a4p1.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-a4p1.zip -O
    ```
 
    ```bash

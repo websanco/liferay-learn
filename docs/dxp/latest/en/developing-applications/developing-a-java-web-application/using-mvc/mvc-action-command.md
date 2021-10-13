@@ -17,7 +17,7 @@ The example portlet's two actions log messages that indicate the MVC Action Comm
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-l6y9.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-l6y9.zip -O
    ```
 
    ```bash
