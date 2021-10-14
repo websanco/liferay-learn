@@ -7,13 +7,13 @@ curl \
 		{
 			"contentFields" : [ {
 				"contentFieldValue" : {
-					"data" : "This is the Goo article text."
+					"data" : "This text describes Goo."
 				},
 				"name" : "TextReference"
 			}, {
 				"contentFieldValue" : {
 					"image" : {
-						"description" : "This is the Goo alt-image description.",
+						"description" : "This text describes the Goo alt-image.",
 						"id" : "${3}"
 					}
 				},
@@ -30,6 +30,6 @@ curl \
 				"name" : "SingleSelectionReference"
 			} ],
 			"contentStructureId" : "${2}",
-			"title" : "This is the Baker article title."
+			"title" : "Baker"
 		}
 	EOF
