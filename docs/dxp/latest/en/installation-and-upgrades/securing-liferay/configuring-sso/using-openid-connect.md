@@ -26,7 +26,7 @@ Collect the information from the provider. You'll need it create the provider co
 
 ## Configuring an OpenID Connect Provider Connection
 
-Go to *Control Panel* &rarr; *Configuration* &rarr; *System Settings* &rarr; *Security* &rarr; *SSO* and select ***OpenID Connect Provider*** under the *System Scope*.
+Go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings* &rarr; *Security* &rarr; *SSO* and select ***OpenID Connect Provider*** under the *System Scope*.
 
 ![Locating OpenID configurations in the System Settings menu.](using-openid-connect/images/01.png)
 
@@ -50,6 +50,7 @@ Follow these steps:
    | **ID Token Signing Algorithms** | Set the supported ID token algorithms manually. Normally, this is "discovered" at the discovery endpoint. You can add as many of these as you need. |
    | **Subject Types** | A Subject Identifier is a unique and never reassigned identifier the provider uses to establish who the user is, and is consumed by the client (i.e., Liferay DXP). There are two types: public (provides the same value to all clients) and private (provides a different value to each client). |
    | **Token Endpoint** | The provider's URL where tokens can be requested. |
+   | **Token Connection Timeout in Milliseconds** | Wait this long when requesting a token for validation before timing out. A value of `0` means wait forever and is not recommended. |
    | **User Information Endpoint** | The OAuth 2.0 protected URL from which user information can be obtained. |
 
 Once you've filled out the form, click *Save*, and you're ready to enable OpenID Connect authentication.
@@ -64,11 +65,11 @@ where `[name]` is a descriptive, but unique name for example `provider1`.
 
 ## Enabling OpenID Connect Authentication
 
-1. Go to *Control Panel* &rarr; *Configuration* &rarr; *System Settings* &rarr; *Security* &rarr; *SSO* and select ***OpenID Connect*** under *Virtual Instance Scope*.
+1. Go to *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings* &rarr; *Security* &rarr; *SSO* and select ***OpenID Connect*** under *Virtual Instance Scope*.
 
     ![Enabling OpenID Connect authentication in Instance Settings.](using-openid-connect/images/02.png)
 
-1. Click the *Enabled* check box, and then click *Save*.
+1. Click the *Enabled* check box and then click *Save*.
 
 An exported configuration results in this System Settings configuration file:
 
