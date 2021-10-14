@@ -24,11 +24,11 @@ Excellent! Now you know how to add OAuth2 authorization for your application to 
 
 **Allowed Authorization Types:** Select the defined OAuth 2 [protocol flows](https://tools.ietf.org/html/rfc6749#section-1.2) your application supports. Several common combinations are defined for you in the various Client Profiles above.
 
-**Client Credentials User:** Select the user whose credentials should be used for the Client Credentials authorization type. This only works for this type. 
+**Client Credentials User:** Select the user whose credentials should be used for the Client Credentials authorization type. This only works for this type.
 
-**Trusted Application:** For authorization code or PKCE flows, check this box to consent to the access token automatically, without requiring the user to allow it. 
+**Trusted Application:** For authorization code or PKCE flows, check this box to consent to the access token automatically, without requiring the user to allow it.
 
-**Remember Device:** For authorization code or PKCE flows, check this box to allow users to grant access automatically on their chosen devices when access tokens expire. 
+**Remember Device:** For authorization code or PKCE flows, check this box to allow users to grant access automatically on their chosen devices when access tokens expire.
 
 After you save the form, it reappears with additional fields:
 
