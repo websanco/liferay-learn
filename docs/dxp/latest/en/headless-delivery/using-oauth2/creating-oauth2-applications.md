@@ -32,7 +32,7 @@ Excellent! Now you know how to add OAuth2 authorization for your application to 
 
 After you save the form, it reappears with additional fields:
 
-**Client ID:** The system generates this for you; it's an identifier for your application, so that @product@ knows what application is being authorized to access user data.
+**Client ID:** The system generates this for you; it's an identifier for your application, so that DXP knows what application is being authorized to access user data.
 
 **Client Secret:** Click the *pencil* icon to generate a client secret. The secret identifies the client during the authorization process (see figure
 1 above). Not all client profiles require a client secret, because some are incapable of keeping it secret! This is when the aforementioned PKCE code challenge and verifier is needed.
@@ -41,4 +41,4 @@ After you save the form, it reappears with additional fields:
 
 **Privacy Policy URL:** Add a link to your application's privacy policy.
 
-**Token Introspection:** Allow your application to retrieve metadata from the token by requesting it from @product@. This implements [RFC 7662](https://tools.ietf.org/html/rfc7662).
+**Token Introspection:** Allow your application to retrieve metadata from the token by requesting it from DXP. This implements [RFC 7662](https://tools.ietf.org/html/rfc7662).
