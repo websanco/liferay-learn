@@ -1,6 +1,8 @@
 # Installing on JBoss EAP
 
-Installing on JBoss EAP requires installing dependencies, modifying scripts and descriptors, and deploying the DXP WAR file. You must also configure your database and mail server connections.
+Installing on JBoss EAP requires installing the DXP WAR, installing dependencies, configuring JBoss, and deploying DXP. You must also configure your database and mail server connections.
+
+## Prerequisites
 
 Liferay DXP requires Java JDK 8 or 11. See [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for further information.
 
@@ -11,15 +13,6 @@ Download these files from the [Help Center](https://customer.liferay.com/downloa
 * Dependencies ZIP file (DXP 7.3 and earlier)
 
 Note that [*Liferay Home*](../../reference/liferay-home.md) is the folder containing the JBoss server folder. After installing and deploying DXP, it generates `data`, `deploy`, and `logs` folders. `$JBOSS_HOME` refers to the JBoss server folder. This folder is usually named `jboss-eap-[version]`.
-
-Installing DXP on JBoss EAP requires these steps:
-
-1. [Installing the DXP WAR](#installing-the-dxp-war)
-1. [Installing dependencies](#installing-dependencies)
-1. [Configuring the application server for DXP](#configuring-jboss)
-1. [Connecting to a Database](#connect-to-a-database)
-1. [Connecting to a Mail Server](#connect-to-a-mail-server)
-1. [Deploying the DXP WAR file to the application server](#deploying-dxp)
 
 ## Installing the DXP WAR
 
@@ -78,16 +71,16 @@ DXP supports JBoss EAP when it runs in standalone mode but not when it runs in d
 The command line interface is recommended for domain mode deployments.
 
 ```{note}
-This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
+This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of instances running on JBoss EAP servers running in standalone mode. Please refer to the [clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## Configuring JBoss
 
-Configuring JBoss to run DXP includes these things:
+Here are the JBoss configuration steps:
 
-* Setting environment variables
-* Setting properties and descriptors
-* Removing unnecessary configurations
+* Set environment variables
+* Specify properties and descriptors
+* Remove unnecessary configurations
 
 Make the following modifications to `$JBOSS_HOME/standalone/configuration/standalone.xml`:
 
@@ -106,13 +99,13 @@ Make the following modifications to `$JBOSS_HOME/standalone/configuration/standa
     </system-properties>
     ```
 
-1. Add the following `<filter-spec>` tag within the `<console-handler>` tag which is directly below the `<level name="INFO"/>` tag:
+1. Add the following `<filter-spec>` tag within the `<console-handler>` tag, which is directly below the `<level name="INFO"/>` tag.
 
     ```xml
     <filter-spec value="not(any(match(&quot;WFLYSRV0059&quot;),match(&quot;WFLYEE0007&quot;)))" />
     ```
 
-1. Add a timeout for the deployment scanner by setting `deployment-timeout="600"` as seen in the excerpt below.
+1. Add a timeout for the deployment scanner by setting `deployment-timeout="600"` as shown here:
 
     ```xml
     <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
@@ -166,13 +159,13 @@ In the `$JBOSS_HOME/bin/` folder, modify the standalone domain's configuration s
 * Increase the default amount of memory available.
 
 ```{important}
-For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
+DXP requires the application server JVM to use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
 Make the following edits to your `standalone.conf` script.
 
-1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, replace this `JAVA_OPTS`
-    statement:
+1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, replace the `JAVA_OPTS`
+    statement. For example, replace this:
 
     ```bash
     JAVA_OPTS="-Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=2560m -Djava.net.preferIPv4Stack=true"
@@ -213,6 +206,10 @@ The Java options and memory arguments are explained below.
 | `-XX:MaxMetaspaceSize` | Maximum space for static content. |
 | `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
+```{note}
+After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
+```
+
 ### Using the IBM JDK
 
 If you're using the IBM JDK with the JBoss server, complete these additional steps:
@@ -233,19 +230,13 @@ If you're using the IBM JDK with the JBoss server, complete these additional ste
 
 The added paths resolve issues with portal deployment exceptions and image uploading problems.
 
-**Checkpoint:**
-
-1. The file encoding, user time-zone, preferred protocol stack have been set in the `JAVA_OPTS` in the `standalone.conf.bat` file.
-
-1. The default amount of memory available has been increased.
-
-The prescribed script modifications are now complete for the DXP installation on JBoss.
+You completed the script modifications.
 
 ## Connect to a Database
 
-The easiest way to handle database configuration is to let DXP manage the data source. Administrators can use [Basic Configuration](../../../getting-started/using-the-setup-wizard.md) to configure DXP's built-in data source. If using the built-in data source, skip this section.
+The easiest way to handle database configuration is to let DXP manage the data source. You can use [Basic Configuration](../../../getting-started/using-the-setup-wizard.md) to configure DXP's built-in data source. If you're using the built-in data source, skip this section.
 
-If using JBoss to manage the data source, follow these steps:
+If you're using JBoss to manage the data source, follow these steps:
 
 1. Get the JDBC JAR from your DXP WAR (7.4+) or from the database vendor, and copy it to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder.
 
@@ -298,19 +289,19 @@ If using JBoss to manage the data source, follow these steps:
     </subsystem>
     ```
 
-1. In a [`portal-ext.properties`](../../reference/portal-properties.md) file in the Liferay Home, specify the data source:
+1. In a [`portal-ext.properties`](../../reference/portal-properties.md) file in the Liferay Home, specify your data source. For example,
 
     ```properties
     jdbc.default.jndi.name=java:jboss/datasources/ExampleDS
     ```
 
-The data source is now configured and ready to be connected to the database.
+The data source is now configured and ready to connect to the database.
 
 ## Connect to a Mail Server
 
-As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [connect DXP to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
+As with database configuration, the easiest mail session to configure is DXP's. If you want to use DXP's built-in mail session, skip this section and [connect to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
 
-If you want to manage the mail session with JBoss, follow these steps:
+If you want to configure the mail session in JBoss, follow these steps:
 
 1. Specify the mail subsystem in the
     `$JBOSS_HOME/standalone/configuration/standalone.xml` file like this:
@@ -332,7 +323,7 @@ If you want to manage the mail session with JBoss, follow these steps:
     </socket-binding-group>
     ```
 
-1. In the `portal-ext.properties` file in Liferay Home, reference the mail session:
+1. In the [`portal-ext.properties`](../../reference/portal-properties.md) file in Liferay Home, reference the mail session. For example,
 
     ```properties
     mail.session.jndi.name=java:jboss/mail/MailSession
@@ -341,9 +332,9 @@ If you want to manage the mail session with JBoss, follow these steps:
 ## Deploying DXP
 
 1. To trigger deployment of the `ROOT.war` file, create an empty file named `ROOT.war.dodeploy` in the `$JBOSS_HOME/standalone/deployments/` folder. On startup, JBoss detects this file and deploys it as a web application.
-1. Start the JBoss application server by navigating to `$JBOSS_HOME/bin` and running `standalone.bat` or `standalone.sh`.
+1. Start the JBoss application server by navigating to `$JBOSS_HOME/bin` and running `standalone.sh` or `standalone.bat`.
 
-After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. Make sure to adjust the app server's logging level or log filters to avoid excessive benign log messages.
+After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. You can turn off these messages by adjusting the app server's logging level or log filters.
 
 ```
 May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
@@ -354,3 +345,17 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
 INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
 current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
 ```
+
+If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md) for more information.
+
+Congratulations! You're running DXP on JBoss EAP.
+
+## Next Steps
+
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building_solutions_on_dxp.html. Or you can explore [additional Liferay DXP setup](../../setting-up-liferay.md) topics:
+
+* [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
+* [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
+* [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

@@ -1,8 +1,10 @@
 # Installing on WebLogic
 
-If you are choosing to use WebLogic as your application server, it is *highly recommended* to install DXP to a WebLogic Managed server. A managed server can start or stop DXP quickly and can be converted to a cluster configuration. The instructions below describe installing DXP to a Managed Server.
+If you are using WebLogic as your application server, it is *highly recommended* to install DXP to a WebLogic Managed server. A managed server can start and stop DXP quickly and can be converted to a cluster configuration. Here you'll install DXP to a Managed Server.
 
-Before installing DXP, configure an Admin Server and a Managed Server following [WebLogic's documentation](http://www.oracle.com/technetwork/middleware/weblogic/documentation/index.html).
+## Prerequisites
+
+Configure an Admin Server and a Managed Server following [WebLogic's documentation](http://www.oracle.com/technetwork/middleware/weblogic/documentation/index.html).
 
 Liferay DXP requires a Java JDK 8 or 11. See [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) to choose a JDK. See [JVM Configuration](../../reference/jvm-configuration.md) for recommended settings.
 
@@ -12,17 +14,7 @@ Download these files from the [Help Center](https://customer.liferay.com/downloa
 * OSGi Dependencies ZIP file
 * Dependencies ZIP file (DXP 7.3 and earlier)
 
-Installing Liferay DXP on WebLogic requires these steps:
-
-1. [Prepare the DXP WAR](#install-the-dxp-war)
-1. [Configure WebLogic for DXP](#configure-weblogic)
-1. [Install the dependencies](#install-dxp-dependencies)
-1. [Install Elasticsearch archives](#install-elasticsearch-archives)
-1. [Connect to Database](#connect-to-database)
-1. [Connect to Mail Server](#connect-to-mail-server)
-1. [Deploy the WAR](#deploy-the-war)
-
-## Prepare the DXP WAR
+## Preparing the DXP WAR
 
 1. Unzip the DXP WAR file to an arbitrary location.
 
@@ -42,7 +34,7 @@ Installing Liferay DXP on WebLogic requires these steps:
 If you need to update `portal-ext.properties` after DXP deploys, it is in the user domain's `autodeploy/ROOT/WEB-INF/classes` folder. Note that the `autodeploy/ROOT` folder contains the DXP deployment.
 ```
 
-## Configure WebLogic
+## Configuring WebLogic
 
 ### Configuring WebLogic's Node Manager
 
@@ -57,7 +49,7 @@ StartScriptEnabled=true
 ```
 
 ```{note}
-By default, SSL is used with Node Manager. If you want to disable SSL during development, for example, set `SecureListener=false` in your `nodemanager.properties` file.
+By default, the Node Manager uses SSL. If you want to disable SSL during development, set `SecureListener=false` in your `nodemanager.properties` file.
 ```
 
 See Oracle's [Configuring Java Node Manager](https://docs.oracle.com/middleware/1212/wls/NODEM/java_nodemgr.htm#NODEM173) documentation for details.
@@ -78,17 +70,17 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
     export USER_MEM_ARGS="-Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
-    The `DERBY_FLAG` setting disables the Derby server built in to WebLogic, as DXP does not require this server.
+    The `DERBY_FLAG` setting disables the WebLogic's built-in Derby server---DXP does not require this server.
 
     `JAVA_OPTIONS` sets DXP's UTF-8 requirement, Lucene usage, and Aspect Oriented Programming via AspectJ.
 
     `JAVA_PROPERTIES` also sets DXP's UTF-8 requirement. TODO use the lowercase one per liferay-portal?
 
     ```{important}
-    For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
+    DXP requires the application server JVM to use the `GMT` time zone and `UTF-8` file encoding.
     ```
 
-    Set `MW_HOME` to the folder containing the WebLogic server on the machine. For example,
+    Set `MW_HOME` to the folder containing the WebLogic server. For example,
 
     ```bash
     export MW_HOME="/Users/ray/Oracle/wls12210"
@@ -96,7 +88,7 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
 
     The `*_MEM_ARGS` variables set DXP's starting and maximum heap memory capacity.
 
-1. Ensure that the Node Manager sets DXP's memory requirements when starting the Managed Server. In the Admin Server's console UI, navigate to the Managed Server where DXP is to be deployed and select the *Server Start* tab. Enter the following parameters into the *Arguments* field:
+1. Make sure the Node Manager sets DXP's memory requirements when starting the Managed Server. In the Admin Server's console UI, navigate to the Managed Server where DXP is to be deployed and select the *Server Start* tab. Enter the following parameters into the *Arguments* field:
 
     ```bash
     -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7
@@ -127,7 +119,11 @@ The Java options and memory arguments are explained below.
 | `-XX:MaxMetaspaceSize` | Maximum space for static content. |
 | `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
-## Install DXP Dependencies
+```{note}
+After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
+```
+
+## Installing Dependencies
 
 DXP depends on OSGi modules (OSGi Dependencies ZIP) and a database driver.
 
@@ -135,14 +131,14 @@ DXP depends on OSGi modules (OSGi Dependencies ZIP) and a database driver.
 1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the domain's `lib` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
-A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ```{note}
 For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the WebLogic domain's `lib` folder.
 ```
 
-## Install Elasticsearch Archives
+## Installing Elasticsearch
 
 When DXP starts, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
 
@@ -162,9 +158,9 @@ DXP contains a built-in Hypersonic database for demonstration purposes, but _it 
 
 Liferay DXP can connect to your database using DXP's built-in data source (recommended) or a JNDI data source on your app server.
 
-To configure DXP's built-in data source when you run DXP for the first time, use the [Setup Wizard](../../../getting-started/using-the-setup-wizard.md). Optionally, configure the data source in your `portal-ext.properties` file based on the [Database Template](../../reference/database-templates.md) for your database.
+You can configure DXP's built-in data source with your database the first time you run DXP by using the [Setup Wizard](../../../getting-started/using-the-setup-wizard.md). Or you can configure the data source in a [`portal-ext.properties` file](../../reference/portal-properties.md) based on the [Database Template](../../reference/database-templates.md) for your database.
 
-Otherwise, you can configure the data source in WebLogic:
+Otherwise, you can configure the data source in WebLogic.
 
 1. Get the JDBC JAR from your DXP WAR (7.4+) or from the database vendor, and copy it to the domain's `lib` folder.
 1. Log in to the AdminServer console.
@@ -177,7 +173,7 @@ Otherwise, you can configure the data source in WebLogic:
 1. Fill in the database information for the MySQL database.
 1. If using MySQL, add the text `?useUnicode=true&characterEncoding=UTF-8&\useFastDateParsing=false` to the URL line and test the connection. If it works, click *Next*.
 1. Select the target for the data source and click *Finish*.
-1. Connect DXP to the JDBC data source. In the `portal-ext.properties` file (see above), enter the following line:
+1. Connect DXP to the JDBC data source. In the `portal-ext.properties` file (see above), enter the data source JNDI name. For example,
 
     ```properties
     jdbc.default.jndi.name=jdbc/LiferayPool
@@ -185,7 +181,7 @@ Otherwise, you can configure the data source in WebLogic:
 
 ## Connect to Mail Server
 
-You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) using its built-in mail session. You can also use WebLogic's mail session:
+You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) using its built-in mail session. Otherwise, you can use WebLogic's mail session:
 
 1. Start WebLogic and log in to the Admin Server's console.
 1. Select *Services* &rarr; *Mail Sessions* from the *Domain Structure* box on the left hand side of the Admin Server's console UI.
@@ -201,11 +197,13 @@ You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configur
     mail.session.jndi.name=mail/MailSession
     ```
 
-If DXP has already been deployed, the `portal-ext.properties` file can be found in the domain's `autodeploy/ROOT/WEB-INF/classes` folder.
+```{note}
+After DXP is deployed, the `portal-ext.properties` file can be found in the domain's `autodeploy/ROOT/WEB-INF/classes` folder.
+```
 
 The changes take effect upon restarting the Managed and Admin servers.
 
-## Deploy the WAR
+## Deploying DXP
 
 Follow these steps to deploy the DXP WAR file:
 
@@ -220,16 +218,10 @@ Follow these steps to deploy the DXP WAR file:
 1. After the deployment finishes, click *Save* if the configuration is correct.
 1. Start the Managed Server where you deployed DXP. DXP precompiles all the JSPs and then launches.
 
-If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md).
-
-Congratulations! You're running DXP on WebLogic.
-
-```{note}
-Adjust the application server's logging level or log filters to avoid excessive benign log messages such as the ones below involving `PhaseOptimizer`.
-```
+After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. You can turn off these messages by adjusting the app server's logging level or log filters.
 
 ```
- May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
      WARNING: Skipping pass gatherExternProperties
 May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
      WARNING: Skipping pass checkControlFlow
@@ -237,6 +229,10 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
      INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
      current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
 ```
+
+If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md) for more information.
+
+Congratulations! You're running DXP on WebLogic.
 
 ## Next Steps
 

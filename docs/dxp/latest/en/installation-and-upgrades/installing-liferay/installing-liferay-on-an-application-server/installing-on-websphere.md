@@ -1,6 +1,6 @@
 # Installing on WebSphere
 
-Installing Liferay DXP on WebSphere requires deploying the DXP WAR file, deploying DXP's dependencies, and configuring WebSphere for DXP.
+Installing Liferay DXP on WebSphere requires installing the DXP WAR, installing dependencies, configuring WebSphere, and starting DXP. You must also configure your database and mail server connections.
 
 > IBM&reg; WebSphere&reg; is a trademark of International Business Machines Corporation, registered in many jurisdictions worldwide.
 
@@ -10,7 +10,7 @@ Throughout this installation and configuration process, WebSphere prompts you to
 
 ## Prerequisites
 
-For Liferay DXP to work correctly, WebSphere 9 (Fix Pack 11 is the latest) must be installed. Go to [IBM Support](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) to find out more information about this fix pack. Liferay DXP does not currently support the WebSphere Application Liberty Profile.
+For Liferay DXP to work correctly, WebSphere 9 (Fix Pack 11 or newer) must be installed. Go to [IBM Support](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) to find out more information about this fix pack. Liferay DXP does not currently support the WebSphere Application Liberty Profile.
 
 ```{important}
 Before installing DXP, please review the [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md) and [Configuring a Database](../configuring-a-database.md) articles.
@@ -26,22 +26,7 @@ Liferay DXP requires a Java JDK 8 or 11. See [the compatibility matrix](https://
 
 The [`[Liferay Home]`](../../reference/liferay-home.md) folder is where Liferay DXP stores and manages files and folders required to function. On WebSphere, the `[Liferay Home]` folder is typically `[Install Location]/WebSphere/AppServer/profiles/[your-profile]/liferay`.
 
-Here are the basic steps for installing DXP on WebSphere:
-
-1. Preparing WebSphere for DXP
-1. Installing DXP Dependencies
-1. Installing Elasticsearch Archives (DXP 7.3+)
-1. Database Configuration
-1. Mail Configuration
-1. Enable Cookies for HTTP Sessions
-1. Deploying the DXP WAR
-1. Setting the JDK Version for Compiling JSPs
-
-## Download the DXP WAR
-
-Download the DXP WAR file to an arbitrary location. You'll use the WAR file later.
-
-## Preparing WebSphere for DXP
+## Configuring WebSphere
 
 ### Creating a WebSphere Profile
 
@@ -82,27 +67,29 @@ Do not make configuration changes while the application server is running.
 
 In this version of WebSphere, servlet filters are not initialized on web application startup, but rather, on first access. This can cause problems when deploying certain apps to DXP. To configure servlet filters to initialize on application startup (i.e., deployment), set the following `webcontainer` properties in the WebSphere application server:
 
-```properties
+```{properties}
 com.ibm.ws.webcontainer.initFilterBeforeInitServlet = true
 com.ibm.ws.webcontainer.invokeFilterInitAtStartup = true
 ```
 
-To set `webcontainer` properties in the WebSphere application server, follow the instructions [in WebSphere's documentation](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395).
+To set `webcontainer` properties in the WebSphere application server, follow the instructions in WebSphere's [documentation](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395).
 
 ### Setting up JVM Parameters for Liferay DXP
 
 Start with modifying this file:
 
-`[Install Location]/WebSphere/AppServer/profiles/your-profile/config/cells/your-cell/nodes/your-node/servers/your-server/server.xml`
+```
+[Install Location]/WebSphere/AppServer/profiles/your-profile/config/cells/your-cell/nodes/your-node/servers/your-server/server.xml
+```
 
 As a baseline, add `maximumHeapSize="2560"` inside the `jvmEntries` tag. For example:
 
-```
+```xml
 <jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ... maximumHeapSize="2560">
 ```
 
 ```{note}
-The JVM parameters used here are defaults intended for initial deployment of production systems. Administrators should change the settings to values that best address their specific environments. These must be tuned depending on need.
+After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
 ```
 
 Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Increase the maximum and minimum heap sizes there too. Add the following inside the `jvmEntries` tag:
@@ -140,7 +127,7 @@ The Java options and memory arguments are explained below.
 
 ### Removing the `secureSessionCookie` Tag
 
-In the same profile, delete a problematic `secureSessionCookie` tag that can cause DXP startup errors. Note that this is just a default setting; once DXP is installed, you should tune it appropriately based on your usage.
+In the same profile, delete a problematic `secureSessionCookie` tag that can cause DXP startup errors. Note, this is just a default setting; once DXP is installed, tune WebSphere appropriately based on your usage.
 
 In `[Install Location]/WebSphere/AppServer/profiles/your-profile/config/cells/your-cell/cell.xml`, delete the `secureSessionCookie` tag containing `xmi:id="SecureSessionCookie_1"`.
 
@@ -162,13 +149,17 @@ By this point, the following steps should be completed:
 1. The server's time zone is set to GMT.
 1. The `secureSessionCookie` tag has been removed.
 
-## Installing DXP Dependencies
+## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). Liferay's OSGi runtime depends on these modules.
 1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `[Install Location]/WebSphere/AppServer/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
-A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+```
+
+```{note}
+For DXP 7.3 and earlier, Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder.
 ```
 
 ```{note}
@@ -318,18 +309,7 @@ This occurs because DXP cannot use the HTTPS cookie when using HTTP. The end res
 1. Click *Apply*.
 1. Click *Save*.
 
-## Enable UTF-8 TODO
-
-If UTF-8 has not been enabled by adding the `-Dfile.encoding=UTF-8` property in the `server.xml`, administrators can also do so in the Administrative Console.
-
-1. Click *Application Servers* &rarr; *server1* &rarr; *Process definition*.
-1. Click *Java Virtual Machine* under *Additional Properties*.
-1. Enter `-Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT` in the *Generic JVM arguments* field.
-1. Click *Apply* and then *Save* to master configuration.
-
-Once the changes have been saved, DXP can parse special characters if there is localized content.
-
-## Deploying the DXP `.war` File
+## Deploying DXP
 
 1. In WebSphere's administrative console, click *Applications* &rarr; *New Application* &rarr; *New Enterprise Application*.
 1. Browse to the DXP `.war` file, select it, and click *Next*.
@@ -361,7 +341,7 @@ The exact path to the `ibm-web-ext.xmi` file depends on the WebSphere installati
 
 Note that the DXP `.war` comes pre-packaged with the `ibm-web-ext.xmi` file; this format is functionally the same as `.xml` and WebSphere recognizes both formats. For more general information on how WebSphere compiles JSPs see IBM's official documentation for [WebSphere Application Server 9.0.0.x](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/rweb_jspengine.html).
 
-## Start DXP
+## Starting DXP
 
 1. If administrators are using DXP's [setup wizard](../running-liferay-for-the-first-time.md), skip to the next step. However, if administrators are using WebSphere's data source and mail session, create a file called `portal-ext.properties` in the Liferay Home folder. Place the following configuration in the file:
 
@@ -387,10 +367,16 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 |     current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
 ```
 
+If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md) for more information.
+
+Congratulations! You're running WebSphere.
+
 ## Next Steps
 
-* [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)
-* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building_solutions_on_dxp.html. Or you can explore [additional Liferay DXP setup](../../setting-up-liferay.md) topics:
+
+* [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
+* [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 * [Securing Liferay DXP](../../securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
