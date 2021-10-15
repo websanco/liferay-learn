@@ -1,6 +1,6 @@
 # Creating an Action Executor
 
-Workflow nodes can contain `<action>` elements that execute custom logic via [Groovy scripts](using-the-script-engine-in-workflow.md).
+Workflow nodes can contain `<action>` elements that execute custom logic via [Groovy scripts](./using-the-script-engine-in-workflow.md).
 
 ```xml
 <action>
@@ -18,7 +18,7 @@ Workflow nodes can contain `<action>` elements that execute custom logic via [Gr
 </action>
 ```
 
-Instead of writing the action logic in Groovy directly in a workflow definition `<script>` element, you can execute Java logic by implementing the `ActionExecutor` interface.
+Instead of writing the Groovy action logic directly in a workflow definition `<script>` element, you can execute Java logic by implementing the `ActionExecutor` interface.
 
 1. Write the Java implementation.
 2. Call the Java class from the workflow definition XML file.
@@ -65,7 +65,7 @@ First deploy and observe a working `ActionExecutor`.
 
 ## Test the Action Executor
 
-To use the Acme E5C9 Action Executor, set the workflow definition for use with Blogs Entries, and add a new Blogs Entry with the administrative User.
+To use the Acme E5C9 Action Executor, set the workflow definition for use with Blogs Entries and add a new Blogs Entry with the administrative User.
 
 1. In the Applications tab of the Global Menu, go to Workflow &rarr; Process Builder.
 
@@ -75,7 +75,7 @@ To use the Acme E5C9 Action Executor, set the workflow definition for use with B
 
 1. Using the default administrative User Test Test, open the Site menu &rarr; Content & Data &rarr; Blogs.
 
-1. Click the Add button (![Add](../../../images/icon-add.png)).
+1. Click the _Add_ button (![Add](../../../images/icon-add.png)).
 
 1. Enter something into the Title and Content fields, then click _Submit for Publication_.
 
@@ -83,7 +83,7 @@ To use the Acme E5C9 Action Executor, set the workflow definition for use with B
 
    The workflow framework set the status as pending. From this point onward, the status updates are made using the logic in the action executor.
 
-1. [Approve the Blogs Entry in the workflow.](../using-workflows/reviewing-assets.md#approving-or-rejecting-a-task).
+1. [Approve the Blogs Entry in the workflow](../using-workflows/reviewing-assets.md#approving-or-rejecting-a-task).
 
    ![This approval or rejection is accomplished by the E5C9 Action Executor.](./creating-an-action-executor/images/01.png)
 
@@ -93,7 +93,7 @@ If you assign the Single Approver workflow to Blogs Entries, you can see it work
 
 The Acme E5C9 Implementation project extracts the status-setting logic of the Single Approver definition's workflow scripts into its single Java class, `E5C9ActionExecutor`.
 
-In addition to the action executor the project includes and autoloads a workflow definition called the E5C9 Single Approver, which is only different form the default Single Approver in that it uses the action executor class's logic instead of Groovy scripting directly in the workflow definition.
+In addition to the action executor, the project includes and autoloads a workflow definition called the E5C9 Single Approver, which has the same logic as the default Single Approver but uses the action executor class's logic instead of Groovy scripting directly in the workflow definition.
 
 ```{literalinclude} ./creating-an-action-executor/resources/liferay-e5c9.zip/e5c9-impl/src/main/java/com/acme/e5c9/internal/workflow/kaleo/runtime/scripting/internal/action/E5C9ActionExecutor.java
    :dedent: 4
@@ -131,7 +131,7 @@ The `workflowContext` is used to get the transition most recently executed, so t
 
 ### Calling the ActionExecutor in the Workflow Definition
 
-The E5C9 Single Approver workflow definition that was autoloaded by the Acme E5C9 Implementation project is nearly identical to the Single Approver definition that ships with Liferay. The differences are entirely in the script elements of the state and task nodes, which are greatly simplified in the E5C9 Single Approver definition because all logic is outsourced to the action executor class. Both of the definition's actions (reject and approve) have identical script tags:
+The E5C9 Single Approver workflow definition auto-loaded by the Acme E5C9 Implementation project is nearly identical to the Single Approver definition that ships with Liferay. The differences are entirely in the script elements of the state and task nodes, which are greatly simplified in the E5C9 Single Approver definition because all logic is outsourced to the action executor class. Both of the definition's actions (reject and approve) have identical script tags:
 
 ```{literalinclude} ./creating-an-action-executor/resources/liferay-e5c9.zip/e5c9-impl/src/main/resources/com/acme/e5c9/internal/workflow/kaleo/runtime/scripting/internal/action/dependencies/e5c9-workflow-definition.xml
    :dedent: 4
@@ -139,6 +139,6 @@ The E5C9 Single Approver workflow definition that was autoloaded by the Acme E5C
    :lines: 62-65
 ```
 
-The script tags are still necessary, but now they simply point the workflow framework at the action executor that holds the logic.
+The script tags are still necessary, but now they point the workflow framework to the action executor that holds the logic.
 
 You aren't limited to calling a single action executor in your workflow definition. For example, the `E5C9ActionExecutor` has logic to determine the transition before setting the workflow status. However, if the logic was more complex each action in the workflow could be backed by a separate `ActionExecutor` implementation, and these implementations can be reused in other workflow definitions.
