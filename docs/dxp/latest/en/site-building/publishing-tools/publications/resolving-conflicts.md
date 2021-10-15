@@ -25,7 +25,7 @@ By contrast, manual resolutions require intervention before being able to publis
 * **Discard**: You're shown all changes to be discarded. You can click on *Discard* to permanently remove them from your publication.
 
    ```warning::
-      Discarding is permanent and cannot be reversed. Ensure you've saved any changes you want to keep before using discarding them from your publication.
+      Discarding is permanent and cannot be reversed. Ensure you've saved any changes you want to keep before discarding them from your publication.
    ```
 
 ## Resolving Modification Conflicts
