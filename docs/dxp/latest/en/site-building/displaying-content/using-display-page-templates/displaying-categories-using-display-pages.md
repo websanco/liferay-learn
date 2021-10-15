@@ -31,13 +31,13 @@ The following example shows how to modify a default Display Page Template. To av
 
 ### Step 1: Creating and Editing the Categories
 
-Create the Categories if they do not exist yet, and edit them to include the information you want to map on the Display Page. This example creates two new Categories with a description and a picture, each Category corresponding to a different service.
+Create the Categories if they do not exist yet, and include the information you want to map on the Display Page. This example creates two new Categories with a description and a picture, each Category corresponding to a different service.
 
 1. [Create a new Category](../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md#defininig-categories)) named *Car Insurance*.
 1. In the Categories application, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu for your new category and select *Edit*.
 1. Click the *Details* tab and add a *Description* of this Category.
 
-    ![Edit the Category and add a Description.](./displaying-categories-using-display-pages/images/01.png)
+   ![Edit the Category and add a Description.](./displaying-categories-using-display-pages/images/01.png)
 
 1. Click the *Images* tab and add an image for the Category using the *Add Image* (![Add Image](../../../images/icon-add.png)) button.
 1. Click again on the *Details* tab and then click *Save*.
@@ -76,7 +76,7 @@ This example shows how to map the Category fields using a [Card Fragment](../../
 1. In the Mapping area and the *Source* drop-down menu, select *Category* if it's not selected already.
 1. Click the *Field* drop-down menu and select *Name* (C) to map your Category's name to the Card's title.
 
-    ![Map the Category fields in the Display Page Template using a Card Fragment.](./displaying-categories-using-display-pages/images/03.png)
+   ![Map the Category fields in the Display Page Template using a Card Fragment.](./displaying-categories-using-display-pages/images/03.png)
 
 1. Repeat the same mapping process for the Card description and Card image. This list summarizes the Card Fragment to Category Field mappings in the example:
 
@@ -87,12 +87,12 @@ This example shows how to map the Category fields using a [Card Fragment](../../
 1. Click *Publish*.
 1. Under the *Display Page Templates* list, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu for the new Display Page Template and choose *Mark as Default*.
 
-    ![Set the Display Page Template as default using the Actions menu.](./displaying-categories-using-display-pages/images/04.png)
+   ![Set the Display Page Template as default using the Actions menu.](./displaying-categories-using-display-pages/images/04.png)
 
 1. Go to *Site Administration* &rarr; *Categorization* &rarr; *Categories* and select the Vocabulary with the Categories from [Step 1](#step-1-creating-and-editing-the-categories).
 1. On any Category, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu and select *View Display Page*.
 
-    ![Open the Display Page for one of the categories using the Actions Menu option.](./displaying-categories-using-display-pages/images/05.png)
+   ![Open the Display Page for one of the categories using the Actions Menu option.](./displaying-categories-using-display-pages/images/05.png)
 
 The Display Page uses your Display Page Template mappings to show the Category fields. The Display Page URL is unique for the selected Category.
 

@@ -4,8 +4,8 @@ Using Categories, you can group similar assets and organize your content. Along 
 
 You group categories using [vocabularies](#defining-vocabularies), and you create a hierarchy of categories using [subcategories](#creating-subcategories). You can use the vocabularies and categories at the Global Site in any other Site, but you can only create or edit Global Vocabularies at the Global Site.
 
-```note::
-   Only Site administrators can manage Categories and Vocabularies in the Categories panel.
+```{note}
+Only Site administrators can manage Categories and Vocabularies in the Categories panel.
 ```
 
 ## Defining Vocabularies
@@ -20,14 +20,14 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
 
    **Visibility:** See [Vocabularies Visibility](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) for more information.
 
-   ```important::
-      You cannot change the Visibility after saving the Vocabulary.
+   ```{important}
+   You cannot change the Visibility after saving the Vocabulary.
    ```
 
    **Associated Asset Type:** Select the allowed asset types for applying a Category from this Vocabulary. Set *Required* to *Yes* if you want this type of asset always to have a category.
 
-   ```tip::
-     Click the *Add* button under the *Associated Asset Type* section to include more than one asset type.
+   ```{tip}
+   Click the *Add* button under the *Associated Asset Type* section to include more than one asset type.
    ```
 
    ![Define the category options for multiple asset types.](./defining-categories-and-vocabularies-for-content/images/02.png)
@@ -41,8 +41,8 @@ You group categories using [vocabularies](#defining-vocabularies), and you creat
 
 You create and manage Categories in the Site Menu &rarr; *Categorization* &rarr; *Categories* panel. You can also create new categories from the Categorization section in the Content Editor, using the Select button for each Vocabulary.
 
-```important::
-   You can create a maximum of 150 Categories in one Vocabulary.
+```{important}
+You can create a maximum of 150 Categories in one Vocabulary.
 ```
 
 ![Add new Categories from the Categorization section in the Content Editor.](./defining-categories-and-vocabularies-for-content/images/04.png)
@@ -55,8 +55,8 @@ You create and manage Categories in the Site Menu &rarr; *Categorization* &rarr;
 1. Enter a *Name* for the Category and, optionally, a *Description*.
 1. Under the Display Page section, choose a specific Display Page for the Category or use the default one.
 
-   ```note::
-      Display Pages for Categories are available starting with Liferay DXP 7.4. For more information, read `Displaying Categories Using Display Pages <../../site-building/displaying-content/using-display-page-templates/displaying-categories-using-display-pages.md>`_.
+   ```{note}
+   Display Pages for Categories are available starting with Liferay DXP 7.4. For more information, read [Displaying Categories Using Display Pages](../../site-building/displaying-content/using-display-page-templates/displaying-categories-using-display-pages.md).
    ```
 
 1. Click *Save* or *Save and Add a New One* to add more categories.
@@ -83,8 +83,8 @@ You can move a category to a different Vocabulary, or as a subcategory in the sa
 
 1. Select the *Vocabulary* and *Category* where you want to move the Category.
 
-    ```note::
-       You can only move a Category into a Vocabulary of the same `Visibility type <./organizing-content-with-categories-and-tags.md#vocabulary-visibility>`_.
+    ```{note}
+    You can only move a Category into a Vocabulary of the same [Visibility type](./organizing-content-with-categories-and-tags.md#vocabulary-visibility).
     ```
 
 ### Editing Additional Category Properties
