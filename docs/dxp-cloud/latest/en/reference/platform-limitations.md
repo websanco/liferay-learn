@@ -77,7 +77,7 @@ These limitations apply to the [Database service](../platform-services/database-
 
 * **Database Size**: The maximum size for a database is normally 100 GB. [Submit a Support request](https://help.liferay.com/) to increase this limit.
 
-* **Downtime**: Database maintenance may cause downtime every few months. This downtime usually lasts about two minutes. This may not come with a notification in advance.
+* **Downtime**: Database maintenance may cause downtime every few months. This downtime usually lasts about two minutes. This may not come with a notification in advance. You can set a [preferred maintenance window](../platform-services/database-service.md#database-maintenance-window-variables) to mitigate the impact of downtime.
 
 * **Read/write splits**: Configuring a read/write split in your database service is not supported in DXP Cloud.
 
