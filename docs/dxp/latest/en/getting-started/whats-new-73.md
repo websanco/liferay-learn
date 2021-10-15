@@ -254,7 +254,7 @@ A new SAML property was introduced: *Unknown users are strangers*. This property
 
 ### OAuth 2 configuration on instance level
 
-The [OAuth 2](../headless-delivery/using-oauth2/using-oauth2.md) application scopes screen has been simplified, so you have more control over the presentation of scopes during application authorization requests. For example, two scopes relating to two separate API applications can be presented as if they are one.
+The [OAuth 2](../headless-delivery/using-oauth2.md) application scopes screen has been simplified, so you have more control over the presentation of scopes during application authorization requests. For example, two scopes relating to two separate API applications can be presented as if they are one.
 
 Expired authorizations can now be configured to be removed. After the expired authorizations afterlife duration, the authorization data is automatically removed by a scheduled process running in the background.
 

@@ -78,7 +78,7 @@ For both padding and margin, you can specify any % value, em value, or px value.
 
 The Advanced Styling tab displays current information about your widget, including your widget's Liferay ID and CSS classes.
 
-![Figure 6: The Advanced Styling tab displays your widget's Liferay ID and allows you to enter CSS code to customize the look and feel of your widget.](./configuring-the-look-and-feel/images/06.png)
+![Figure 6: The Advanced Styling tab displays your widget's Liferay ID and allows you to enter CSS code to customize the look and feel of your widget.](./configuring-widget-look-and-feel/images/06.png)
 
 You can also enter custom CSS class names for your widget and custom CSS code. Clicking the *Add a CSS rule for just this portlet* or *Add a CSS rule for all portlets like this one* links adds the CSS code shells into your custom CSS text box.
 

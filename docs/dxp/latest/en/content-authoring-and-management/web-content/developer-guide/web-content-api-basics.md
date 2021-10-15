@@ -1,12 +1,5 @@
 # Web Content API Basics
 
-```{toctree}
-:maxdepth: 3
-
-developer-guide/web-content-api-basics.md
-developer-guide/advanced-web-content-api.md
-```
-
 Using the Liferay DXP REST services, you can create and manage structured content on your Site. Structured content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) that uses a Web Content Structure. A Structure defines the information, such as author(s), a summary, and the content included in a Web Content Article. Structures ensure that the content includes all the required information. For more information, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
 ```{note}
@@ -24,7 +17,7 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
     ```
 
    ```{note}
-      Use at least 8 GB of memory for the Liferay DXP Docker image.
+   Use at least 8 GB of memory for the Liferay DXP Docker image.
    ```
 
 1. After Liferay DXP initializes, open your browser at `http://localhost:8080`.

@@ -122,4 +122,4 @@ Congratulations! You've created a web application using a JSP and one simple Jav
 ## Additional Information
 
 * [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md)
-* [Using MVC](./using-mvc.md)
+* [Using MVC](../using-mvc.md)
