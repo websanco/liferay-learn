@@ -1,29 +1,45 @@
 # Installing on JBoss EAP
 
-Installing on JBoss EAP requires deploying dependencies, modifying scripts, modifying config `xml` files, and deploying the DXP WAR file. You must also configure your database and mail server connections.
+Installing on JBoss EAP requires installing dependencies, modifying scripts and descriptors, and deploying the DXP WAR file. You must also configure your database and mail server connections.
 
 Liferay DXP requires Java JDK 8 or 11. See [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for further information.
 
 Download these files from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community):
 
 * DXP WAR file
-* Dependencies ZIP file
 * OSGi Dependencies ZIP file
+* Dependencies ZIP file (DXP 7.3 and earlier)
 
-Note that [*Liferay Home*](../../reference/liferay-home.md) is the folder containing the JBoss server folder. After installing and deploying DXP, the Liferay Home folder contains the JBoss server folder as well as `data`, `deploy`, `logs`, and `osgi` folders. `$JBOSS_HOME` refers to the JBoss server folder. This folder is usually named `jboss-eap-[version]`.
+Note that [*Liferay Home*](../../reference/liferay-home.md) is the folder containing the JBoss server folder. After installing and deploying DXP, it generates `data`, `deploy`, and `logs` folders. `$JBOSS_HOME` refers to the JBoss server folder. This folder is usually named `jboss-eap-[version]`.
 
-Installing DXP on JBoss EAP takes the following steps:
+Installing DXP on JBoss EAP requires these steps:
 
-1. [Installing dependencies to the application server](#installing-dependencies)
+1. [Installing the DXP WAR](#installing-the-dxp-war)
+1. [Installing dependencies](#installing-dependencies)
 1. [Configuring the application server for DXP](#configuring-jboss)
-1. [Connect to a Database](#connect-to-a-database)
-1. [Connect to a Mail Server](#connect-to-a-mail-server)
+1. [Connecting to a Database](#connect-to-a-database)
+1. [Connecting to a Mail Server](#connect-to-a-mail-server)
 1. [Deploying the DXP WAR file to the application server](#deploying-dxp)
+
+## Installing the DXP WAR
+
+1. If the folder `$JBOSS_HOME/standalone/deployments/ROOT.war` already exists in the JBoss installation, delete all of its subfolders and files. Otherwise, create a new folder called `$JBOSS_HOME/standalone/deployments/ROOT.war`.
+1. Unzip the DXP `.war` file into the `ROOT.war` folder.
 
 ## Installing Dependencies
 
-1. Create the folder `$JBOSS_HOME/modules/com/liferay/portal/main` if it doesn't exist and extract the JARs from the dependencies ZIP into this folder.
-1. The Portal/DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder (create this folder if it doesn't exist). Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+
+```{note}
+DXP includes a Hypersonic database that is useful for testing purposes. **Do not** use HSQL for production instances.
+```
+
+### Install Dependencies for Earlier Versions
+
+For DXP 7.3 and earlier, follow these additional steps:
+
+1. Unzip the Dependencies ZIP file to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder (create this folder if it doesn't exist).
 1. Create the file `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
 
     ```xml
@@ -53,21 +69,7 @@ Installing DXP on JBoss EAP takes the following steps:
     <resource-root path="com.liferay.petra.concurrent.jar" />
     ```
 
-1. Create an `osgi` folder in the [Liferay Home](../../reference/liferay-home.md) folder. Extract the OSGi Dependencies ZIP file that you downloaded into the `[Liferay Home]/osgi` folder.
-
-    The `osgi` folder provides the necessary modules for the OSGi runtime.
-
-```{note}
-A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
-```
-
-**Checkpoint:**
-
-1. The dependencies files have been unzipped into the `$JBOSS_HOME/modules/com/liferay/portal/main` folder and a database jar.
-1. The `module.xml` contains all JARs in the `<resource-root-path>` elements.
-1. The `osgi` dependencies have been unzipped into the `osgi` folder.
-
-### Running DXP on JBoss EAP in Standalone Mode vs. Domain Mode
+## Running DXP on JBoss EAP in Standalone Mode vs. Domain Mode
 
 JBoss EAP can be launched in either *standalone* mode or *domain* mode. Domain mode allows multiple application server instances to be managed from a single control point. A collection of such application servers is known as a *domain*. For more information on standalone mode vs. domain mode, please refer to the section on this topic in the [JBoss EAP Product Documentation](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/introduction_to_jboss_eap/overview_of_jboss_eap#operating_modes).
 
@@ -152,7 +154,9 @@ Before continuing, verify the following properties have been set in the `standal
 1. The new `<security-domain>` is created.
 1. Welcome content is removed.
 
-Next, configure the JVM and startup scripts.
+Next, modify the configuration script.
+
+### Modifying the Configuration Script
 
 In the `$JBOSS_HOME/bin/` folder, modify the standalone domain's configuration script file `standalone.conf` (`standalone.conf.bat` on Windows):
 
@@ -202,15 +206,15 @@ Make the following edits as applicable to the respective operating system:
     JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Djboss.as.management.blocking.timeout=480 -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxMetaspaceSize=512m"
     ```
 
-    On JDK 11, add this JVM argument to display four-digit years.
+On JDK 11, add this JVM argument to display four-digit years.
 
-    ```bash
-    -Djava.locale.providers=JRE,COMPAT,CLDR
-    ```
+```bash
+-Djava.locale.providers=JRE,COMPAT,CLDR
+```
 
-    ```{note}
-    If using the IBM JDK with the JBoss server, complete these additional steps:
-    ```
+### Using the IBM JDK
+
+If you're using the IBM JDK with the JBoss server, complete these additional steps:
 
 1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert the following dependency within the `<dependencies>` element:
 
@@ -335,9 +339,7 @@ If you want to manage the mail session with JBoss, follow these steps:
 
 ## Deploying DXP
 
-1. If the folder `$JBOSS_HOME/standalone/deployments/ROOT.war` already exists in the JBoss installation, delete all of its subfolders and files. Otherwise, create a new folder called `$JBOSS_HOME/standalone/deployments/ROOT.war`.
-1. Unzip the DXP `.war` file into the `ROOT.war` folder.
-1. To trigger deployment of `ROOT.war`, create an empty file named `ROOT.war.dodeploy` in the `$JBOSS_HOME/standalone/deployments/` folder. On startup, JBoss detects this file and deploys it as a web application.
+1. To trigger deployment of the `ROOT.war` file, create an empty file named `ROOT.war.dodeploy` in the `$JBOSS_HOME/standalone/deployments/` folder. On startup, JBoss detects this file and deploys it as a web application.
 1. Start the JBoss application server by navigating to `$JBOSS_HOME/bin` and running `standalone.bat` or `standalone.sh`.
 
 After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. Make sure to adjust the app server's logging level or log filters to avoid excessive benign log messages.

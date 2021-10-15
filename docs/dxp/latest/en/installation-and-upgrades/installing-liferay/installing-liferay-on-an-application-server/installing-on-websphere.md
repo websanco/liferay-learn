@@ -19,10 +19,8 @@ Before installing DXP, please review the [Installing a Liferay-Tomcat Bundle](..
 The following files are required to install Liferay DXP on the WebSphere application server and are available from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community):
 
 * DXP WAR file
-* Dependencies ZIP file
 * OSGi Dependencies ZIP file
-
-See [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md) to learn more about available Liferay DXP downloads.
+* Dependencies ZIP file (DXP 7.3 and earlier)
 
 Liferay DXP requires a Java JDK 8 or 11. See [the compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) to choose a JDK. See [JVM Configuration](../../reference/jvm-configuration.md) for recommended settings.
 
@@ -32,12 +30,16 @@ Here are the basic steps for installing DXP on WebSphere:
 
 1. Preparing WebSphere for DXP
 1. Installing DXP Dependencies
-1. Installing Elasticsearch Archives (7.3 only)
+1. Installing Elasticsearch Archives (DXP 7.3+)
 1. Database Configuration
 1. Mail Configuration
 1. Enable Cookies for HTTP Sessions
 1. Deploying the DXP WAR
 1. Setting the JDK Version for Compiling JSPs
+
+## Download the DXP WAR
+
+Download the DXP WAR file to an arbitrary location. You'll use the WAR file later.
 
 ## Preparing WebSphere for DXP
 
@@ -141,12 +143,15 @@ By this point, the following steps should be completed:
 
 ## Installing DXP Dependencies
 
-1. Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder.
-1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `[Install Location]/WebSphere/AppServer/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
-1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). This is typically `[Install Location]/WebSphere/AppServer/profiles/your-profile/liferay/osgi`.
+1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). Liferay's OSGi runtime depends on these modules.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `[Install Location]/WebSphere/AppServer/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+```
+
+```{note}
+For DXP/Portal 7.3 and earlier, Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder.
 ```
 
 ## Installing Elasticsearch Archives

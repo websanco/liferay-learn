@@ -7,8 +7,8 @@ Liferay DXP requires Java JDK 8 or 11. See [the compatibility matrix](https://he
 Download these files from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community). Administrators must download the following:
 
 * DXP WAR file
-* Dependencies ZIP file
 * OSGi Dependencies ZIP file
+* Dependencies ZIP file (DXP 7.3 and earlier)
 
 Before proceeding, you should understand the difference between [*Liferay Home*](../../reference/liferay-home.md) and `$WILDFLY_HOME` because they are referenced below as shorthand:
 
@@ -18,17 +18,33 @@ Before proceeding, you should understand the difference between [*Liferay Home*]
 
 Installing Liferay DXP on WildFly requires the following steps:
 
+1. [Installing the DXP WAR](#installing-the-dxp-war)
 1. [Installing dependencies to the application server](#installing-dependencies)
 1. [Configuring the application server for DXP](#configuring-wildfly)
 1. [Connect to a Database](#connect-to-a-database)
 1. [Connect to a Mail Server](#connect-to-a-mail-server)
 1. [Deploying the DXP WAR file to the application server](#deploying-dxp)
 
+## Installing the DXP WAR
+
+1. If you're starting with a clean Wildfly installation and a `$WILDFLY_HOME/standalone/deployments/ROOT.war` folder exists, delete all of its subfolders and files.
+1. Unzip the DXP WAR file into the `$WILDFLY_HOME/standalone/deployments/ROOT.war` folder (create this folder if it doesn't exist).
+
 ## Installing Dependencies
 
-1. Create the folder `$WILDFLY_HOME/modules/com/liferay/portal/main` if it does not already exist and extract the Dependencies ZIP JARs here.
-1. The Portal/DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
-1. Create the file `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
+1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main`. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+
+```{note}
+A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
+```
+
+### Installing Dependencies for Earlier Versions
+
+For DXP 7.3 and earlier, follow these additional steps:
+
+1. Unzip the Dependencies ZIP file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main`.
+1. Create a file called `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies.
 
     ```xml
     <?xml version="1.0"?>
@@ -51,19 +67,11 @@ Installing Liferay DXP on WildFly requires the following steps:
 
     Replace `[place your database vendor's JAR file name here]` with the driver JAR for your database.
 
-    For each JAR in the Liferay dependencies ZIP, add a `resource-root` element with its `path` attribute set to the JAR name. For example, add a `resource-root` element like this for the `com.liferay.petra.concurrent.jar` file:
+    For each JAR in the Dependencies ZIP, add a `resource-root` element with its `path` attribute set to the JAR name. For example, add a `resource-root` element like this for the `com.liferay.petra.concurrent.jar` file:
 
     ```xml
     <resource-root path="com.liferay.petra.concurrent.jar" />
     ```
-
-1. Create an `osgi` folder in your [Liferay Home](../../reference/liferay-home.md) folder. Extract the OSGi Dependencies ZIP file that you downloaded into the `[Liferay Home]/osgi` folder.
-
-   The `osgi` folder provides the necessary modules for the OSGi runtime.
-
-```{note}
-A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
-```
 
 **Checkpoint:**
 
@@ -339,14 +347,8 @@ If you want to manage your mail session with WildFly, follow these steps:
 
 ## Deploying DXP
 
-1. If the folder `$WILDFLY_HOME/standalone/deployments/ROOT.war` already exists in the WildFly installation, delete all of its subfolders and files. Otherwise, create a new folder called `$WILDFLY_HOME/standalone/deployments/ROOT.war`.
-1. Unzip the DXP `.war` file into the `ROOT.war` folder.
-1. To trigger deployment of `ROOT.war`, create an empty file named `ROOT.war.dodeploy` in the `$WILDFLY_HOME/standalone/deployments/` folder. On startup, WildFly detects this file and deploys it as a web application.
-1. Start the WildFly application server by navigating to `$WILDFLY_HOME/bin` and running `standalone.bat` or `standalone.sh`.
-
-```{note}
-After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
-```
+1. To trigger deploying `ROOT.war`, create an empty file called `ROOT.war.dodeploy` in the `$WILDFLY_HOME/standalone/deployments/` folder.
+1. Start the WildFly application server by navigating to `$WILDFLY_HOME/bin` and running `standalone.bat` or `standalone.sh`. WildFly detects the `ROOT.war.dodeploy` file and deploys the web application matching the file prefix (i.e., `ROOT.war`).
 
 ```
 May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process

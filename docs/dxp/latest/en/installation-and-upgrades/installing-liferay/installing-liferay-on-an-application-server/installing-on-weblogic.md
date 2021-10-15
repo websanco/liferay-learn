@@ -9,18 +9,38 @@ Liferay DXP requires a Java JDK 8 or 11. See [the compatibility matrix](https://
 Download these files from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community):
 
 * DXP WAR file
-* Dependencies ZIP file
 * OSGi Dependencies ZIP file
+* Dependencies ZIP file (DXP 7.3 and earlier)
 
-Installing Liferay DXP on WebLogic requires the following steps:
+Installing Liferay DXP on WebLogic requires these steps:
 
+1. [Prepare the DXP WAR](#install-the-dxp-war)
 1. [Configure WebLogic for DXP](#configure-weblogic)
-1. [Declare the Liferay Home folder](#declare-the-liferay-home-folder)
 1. [Install the dependencies](#install-dxp-dependencies)
 1. [Install Elasticsearch archives](#install-elasticsearch-archives)
 1. [Connect to Database](#connect-to-database)
 1. [Connect to Mail Server](#connect-to-mail-server)
 1. [Deploy the WAR](#deploy-the-war)
+
+## Prepare the DXP WAR
+
+1. Unzip the DXP WAR file to an arbitrary location.
+
+1. Create a file called [`portal-ext.properties`](../../reference/portal-properties.md) in the expanded WAR's `WEB-INF/classes` folder.
+
+1. In the `portal-ext.properties` file, set the `liferay.home` property to your [*Liferay Home*](../../reference/liferay-home.md) folder path. In WebLogic, [`[Liferay Home]`](../../reference/liferay-home.md) is typically set to the domain's folder, but you can use any local folder. For example,
+
+    ```properties
+    liferay.home=/full/path/to/your/liferay/home/folder
+    ```
+
+1. Package the `portal-ext.properties` in your DXP WAR file by expanding the DXP WAR file and copying the `portal-ext.properties` file into the `WEB-INF/classes` folder.
+
+1. Optionally, you can re-WAR the expanded DXP WAR. When you're ready to deploy DXP, you can deploy it as an expanded archive or WAR file. In both cases, DXP reads the property settings once it starts up.
+
+```{note}
+If you need to update `portal-ext.properties` after DXP deploys, it is in the user domain's `autodeploy/ROOT/WEB-INF/classes` folder. Note that the `autodeploy/ROOT` folder contains the DXP deployment.
+```
 
 ## Configure WebLogic
 
@@ -86,53 +106,38 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
 
 1. Click *Save*.
 
-## Declare the Liferay Home Folder
-
-Before installing DXP, set your [*Liferay Home*](../../reference/liferay-home.md) folder location.
-
-1. Create a file called [`portal-ext.properties`](../../reference/portal-properties.md). (It overrides [portal properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html).)
-
-1. In the `portal-ext.properties` file, set the `liferay.home` property to your Liferay Home folder path. In WebLogic, the domain's folder is generally Liferay Home, but any other folder on the machine can be used:
-
-    ```properties
-    liferay.home=/full/path/to/your/liferay/home/folder
-    ```
-
-1. Package the `portal-ext.properties` in your DXP WAR file by expanding the DXP WAR file and copying the `portal-ext.properties` file into the `WEB-INF/classes` folder.
-
-1. Optionally, you can re-WAR the expanded DXP WAR. When you're ready to deploy DXP, you can deploy it as an expanded archive or WAR file. In both cases, DXP reads the property settings once it starts up.
-
 ```{note}
 If you need to update `portal-ext.properties` after DXP deploys, it is in the user domain's `autodeploy/ROOT/WEB-INF/classes` folder. Note that the `autodeploy/ROOT` folder contains the DXP deployment.
 ```
 
 ## Install DXP Dependencies
 
-DXP depends on libraries (Dependencies ZIP) and OSGi modules (OSGi Dependencies ZIP).
+DXP depends on OSGi modules (OSGi Dependencies ZIP) and a database driver.
 
-1. Unzip the Dependencies ZIP file into the WebLogic domain's `lib` folder.
-1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist).
-1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the domain's `lib` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the domain's `lib` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
+```{note}
+For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the WebLogic domain's `lib` folder.
+```
+
 ## Install Elasticsearch Archives
 
-When you start Liferay DXP 7.3, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
+When DXP starts, it installs and starts a default [sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) Elasticsearch server. For the installation to succeed, you must provide some archives:
 
-1. Download the following archives:
+Download the following archives to your `[Liferay Home]` folder.
 
-    * [Elasticsearch OSS No JDK 7.9](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/release-notes-7.9.0.html) ([available here--7.9.0](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-no-jdk-7-9-0))
-    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.9.0.zip))
-    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.9.0.zip))
-    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.9.0.zip))
-    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.9.0.zip))
+* [Elasticsearch OSS No JDK 7.9](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/release-notes-7.9.0.html) ([available here--7.9.0](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-no-jdk-7-9-0))
+* [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-icu.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.9.0.zip))
+* [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-kuromoji.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.9.0.zip))
+* [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-smartcn.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.9.0.zip))
+* [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-stempel.html) ([download](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.9.0.zip))
 
-1. Copy the downloaded files into `[Liferay Home]`.
-
-When Liferay DXP is started, the archives are unpackaged and installed, and the sidecar Elasticsearch server is started.
+On DXP startup, DXP unpackages the archives, installs them, and starts the sidecar Elasticsearch server.
 
 ## Connect to Database
 

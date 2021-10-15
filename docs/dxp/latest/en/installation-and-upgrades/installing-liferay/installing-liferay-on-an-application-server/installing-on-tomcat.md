@@ -13,8 +13,8 @@ The simplest and easiest way to accomplish this is by [downloading the Liferay D
 In addition to copying dependencies, scripts, and configurations from the Liferay Tomcat bundle files (or manually downloading and configuring), you must also download these files from the [Help Center](https://customer.liferay.com/downloads) (subscription) or from [Liferay Community Downloads](https://www.liferay.com/downloads-community):
 
 * DXP WAR file
-* Dependencies ZIP file
 * OSGi Dependencies ZIP file
+* Dependencies ZIP file (DXP 7.3 and earlier)
 
 Liferay DXP requires a Java JDK 8 or 11.
 
@@ -24,6 +24,7 @@ Please see [the compatibility matrix](https://help.liferay.com/hc/en-us/articles
 
 Here are the basic steps for installing DXP on Tomcat:
 
+1. [Installing the DXP WAR](#installing-the-dxp-war)
 1. [Installing Dependencies](#installing-dependencies)
 1. [Configuring Tomcat](#configuring-tomcat)
 1. [Database Configuration](#database-configuration)
@@ -32,16 +33,24 @@ Here are the basic steps for installing DXP on Tomcat:
 
 The Tomcat server parent folder is [*Liferay Home*](../../reference/liferay-home.md). `$TOMCAT_HOME` refers to Tomcat server folder. It is usually named `tomcat-[version]` or `apache-tomcat-[version]`.
 
+## Installing the DXP WAR
+
+1. If you're starting with a clean Tomcat installation, delete the contents of the `$CATALINA_BASE/webapps/ROOT` folder. This removes the default Tomcat home page.
+1. Extract the DXP `.war` file contents to `$CATALINA_BASE/webapps/ROOT`.
+
 ## Installing Dependencies
 
-DXP depends on many JARs included in DXP Tomcat bundle. Some of the bundle's JARs are not strictly required but can still be useful. If you're not using a Tomcat bundle, you'll use the Liferay JARs in the *Dependencies* archive and the *OSGi Dependencies* archive you downloaded and third-party JARs as described below.
+DXP depends on many JARs included in Liferay-Tomcat bundle. Some of the bundle's JARs are not strictly required but can still be useful. If you're not using a Tomcat bundle, you'll use the *OSGi Dependencies* archive you downloaded and any third-party JAR dependencies as described below.
 
-1. Unzip the Dependencies ZIP file contents in the `$TOMCAT_HOME/lib/ext` folder (create this folder if it doesn't exist).
-1. Unzip the OSGi Dependencies ZIP file contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist).
-1. The DXP 7.4+ WAR includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$TOMCAT_HOME/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. Unzip the OSGi Dependencies ZIP file contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$TOMCAT_HOME/lib/ext` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
-A Hypersonic database is bundled with Portal/DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
+A Hypersonic database is bundled with DXP/Portal and is useful for testing purposes. **Do not** use HSQL for production instances.
+```
+
+```{note}
+For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the `$TOMCAT_HOME/lib/ext` folder (create this folder if it doesn't exist).
 ```
 
 ## Configuring Tomcat
@@ -88,7 +97,7 @@ Here are the steps:
 
     After installation, these configurations (including these JVM options) can be further tuned for improved performance.
 
-2. If you have a DXP Tomcat bundle, copy its `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` file to the corresponding location in the application server. Create the file path if it doesn't exist and the `ROOT.xml` file.
+1. If you have a DXP Tomcat bundle, copy its `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` file to the corresponding location in the application server. Create the file path if it doesn't exist and the `ROOT.xml` file.
 
     The `ROOT.xml` file specifies a web application context for DXP which looks like this:
 
@@ -104,39 +113,12 @@ Here are the steps:
             userClassNames="com.liferay.portal.kernel.security.jaas.PortalPrincipal"
             roleClassNames="com.liferay.portal.kernel.security.jaas.PortalRole"
         />-->
-
-        <!--
-        Uncomment the following to disable persistent sessions across reboots.
-        -->
-
-        <!--<Manager pathname="" />-->
-
-        <!--
-        Uncomment the following to not use sessions. See the property
-        "session.disabled" in portal.properties.
-        -->
-
-        <!--<Manager className="com.liferay.support.tomcat.session.SessionLessManagerBase" />-->
-
-        <Resources>
-            <PreResources
-                base="${catalina.base}/lib/ext/portal"
-                className="com.liferay.support.tomcat.webresources.ExtResourceSet"
-                webAppMount="/WEB-INF/lib"
-            />
-        </Resources>
     </Context>
     ```
 
-     Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for configuring a JAAS realm, disabling persistent sessions, and disabling sessions entirely.
+     Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for configuring a JAAS realm.
 
-3. Provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending this value to the `common.loader` property:
-
-    ```
-    ,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
-    ```
-
-4. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
+1. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
 
     Old:
 
@@ -162,7 +144,7 @@ Here are the steps:
     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />
     ```
 
-5. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
+1. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
 
     ```xml
     <!-- <Valve className="org.apache.catalina.valves.AccessLogValve"
@@ -171,7 +153,7 @@ Here are the steps:
            pattern="%h %l %u %t &quot;%r&quot; %s %b" /> -->
     ```
 
-6. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
+1. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
 
     ```properties
     org.apache.catalina.startup.Catalina.level=INFO
@@ -180,7 +162,7 @@ Here are the steps:
     org.apache.level=WARNING
     ```
 
-7. In `$CATALINA_HOME/conf/web.xml`, set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool. Add the following elements above the `jsp` servlet element's `<load-on-startup>` element.
+1. In `$CATALINA_HOME/conf/web.xml`, set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool. Add the following elements above the `jsp` servlet element's `<load-on-startup>` element.
 
     ```xml
     <init-param>
@@ -197,26 +179,32 @@ Here are the steps:
     </init-param>
     ```
 
-8. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. This configuration improves application server startup performance. The default is to check for extra metadata.
+1. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. This configuration improves application server startup performance. The default is to check for extra metadata.
 
-9. If using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
+1. If using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
 
     ```bash
     chmod a+x *.sh
     ```
+
+For DXP 7.3 and earlier, provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending these values to the `common.loader` property value:
+
+```
+,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
+```
 
 **Checkpoint:**
 
 1. The file encoding, user time-zone, and preferred protocol stack are set in the `setenv.sh`.
 1. The default memory available and Metaspace limit are set.
 1. `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` declares the web application context.
-1. The `common.loader` property in `$CATALINA_BASE/conf/catalina.properties`grants Catalina access to the JARs in `$CATALINA_BASE/lib/ext`.
 1. `$CATALINA_BASE/conf/server.xml` sets UTF-8 encoding.
-1. `$CATALINA_BASE/conf/server.xml` does not declare any valve for writing host access logs. *(optional)*
+1. `$CATALINA_BASE/conf/server.xml` does not declare any value for writing host access logs. *(optional)*
 1. `$CATALINA_HOME/conf/logging.properties` sets the desired log levels.
 1. `$CATALINA_HOME/conf/web.xml` sets the tag handler pool and sets Java 8 as the JSP compiler.
 1. `$CATALINA_HOME/conf/web.xml` specifies for the application server to refrain from looking for extra metadata. *(optional)*
 1. The scripts in Tomcat's `bin` folders are executable.
+1. The `common.loader` property in `$CATALINA_BASE/conf/catalina.properties`grants Catalina access to the JARs in `$CATALINA_BASE/lib/ext`. (7.3 and earlier)
 
 The application server is configured to run DXP.
 
@@ -308,9 +296,9 @@ The mail session for Tomcat has been configured.
 
 ## Deploying DXP
 
-1. If this is manual installation on a clean Tomcat server, delete the contents of the `$CATALINA_BASE/webapps/ROOT` folder. This removes the default Tomcat home page.
-1. Extract the DXP `.war` file contents to `$CATALINA_BASE/webapps/ROOT`.
-1. Start Tomcat by navigating to `$CATALINA_HOME/bin` and executing `./startup.sh`. Alternatively, execute `./catalina.sh run` to tail DXP's log file. The log audits startup activities and is useful for debugging deployment.
+Start Tomcat by navigating to `$CATALINA_HOME/bin` and executing `./startup.sh`. Alternatively, execute `./catalina.sh run` to tail DXP's log file. The log audits startup activities and is useful for debugging deployment.
+
+If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md) for more information.
 
 Congratulations! You're running DXP on Tomcat.
 
