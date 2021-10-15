@@ -179,23 +179,7 @@ In the `$WILDFLY_HOME/bin/` folder, open the standalone domain's configuration s
 For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
-Make the following edits as applicable for the respective operating system:
-
-**Windows:**
-
-1. Comment out the initial `JAVA_OPTS` assignment:
-
-    ```bash
-    rem set "JAVA_OPTS=-Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=2560m"
-    ```
-
-1. Add the following `JAVA_OPTS` assignment one line above the `:JAVA_OPTS_SET` line found at end of the file:
-
-    ```bash
-    set "JAVA_OPTS=%JAVA_OPTS% -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Djboss.as.management.blocking.timeout=480 -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxMetaspaceSize=512m -XX:MetaspaceSize=200m"
-    ```
-
-**Unix:**
+Make the following edits to your `standalone.conf` script.
 
 1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, replace this `JAVA_OPTS` statement:
 
@@ -206,22 +190,37 @@ Make the following edits as applicable for the respective operating system:
     with this:
 
     ```bash
-    JAVA_OPTS="-Djava.net.preferIPv4Stack=true"
+    JAVA_OPTS=
     ```
 
 1. Add the following statement to the bottom of the file:
 
     ```bash
-    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Djboss.as.management.blocking.timeout=480 -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxMetaspaceSize=512m -XX:MetaspaceSize=200m"
+    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
-This sets the file encoding to UTF-8, prefers an IPv4 stack over IPv6, sets the time zone to GMT, gives the JVM 2GB of RAM, and limits Metaspace to 512MB.
+The Java options and memory arguments are explained below.
 
-On JDK 11, add this JVM argument to display four-digit years.
+**JVM Options Explained**
 
-```bash
--Djava.locale.providers=JRE,COMPAT,CLDR
-```
+| Option | Explanation |
+| :----- | :---------- |
+| `-Dfile.encoding=UTF-8` | DXP requires UTF-8 file encoding. |
+| `-Djava.locale.providers=JRE,COMPAT,CLDR` | This is required for displaying four-digit dates on JDK 11. |
+| `-Djava.net.preferIPv4Stack=true` | Prefers an IPv4 stack over IPv6. |
+| `-Duser.timezone=GMT` | DXP requires the application server JVM to use the GMT time zone. |
+
+**Memory Arguments Explained**
+
+| Memory Arguments | Explanation |
+| :--------------- | :---------- |
+| `-Xms` | Initial space for the heap. |
+| `-Xmx` | Maximum space for the heap. |
+| `-XX:NewSize`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
+| `-XX:MaxNewSize` | Maximum new space. |
+| `-XX:MetaspaceSize` | Initial space for static content. |
+| `-XX:MaxMetaspaceSize` | Maximum space for static content. |
+| `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
 After installation, tune the system (including these JVM options) for performance.
 

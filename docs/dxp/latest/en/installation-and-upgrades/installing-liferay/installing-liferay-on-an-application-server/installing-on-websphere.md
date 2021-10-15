@@ -91,7 +91,7 @@ To set `webcontainer` properties in the WebSphere application server, follow the
 
 ### Setting up JVM Parameters for Liferay DXP
 
-Next, in the WebSphere profile, set an argument that supports DXP's JVM requirements. Modify this file:
+Start with modifying this file:
 
 `[Install Location]/WebSphere/AppServer/profiles/your-profile/config/cells/your-cell/nodes/your-node/servers/your-server/server.xml`
 
@@ -105,17 +105,38 @@ As a baseline, add `maximumHeapSize="2560"` inside the `jvmEntries` tag. For exa
 The JVM parameters used here are defaults intended for initial deployment of production systems. Administrators should change the settings to values that best address their specific environments. These must be tuned depending on need.
 ```
 
-Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Set the maximum and minimum heap sizes to `2560m` there too. Add the following inside the `jvmEntries` tag:
+Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Increase the maximum and minimum heap sizes there too. Add the following inside the `jvmEntries` tag:
 
 ```xml
-<jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ...genericJvmArguments="-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xms2560m -Xmx2560m">
+<jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ...genericJvmArguments="--Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms6144m -Xmx6144m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7">
 ```
 
 ```{important}
 For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
-Alternately, set the UTF-8 properties from the WebSphere Admin Console. (See below.)
+The Java options and memory arguments are explained below.
+
+**JVM Options Explained**
+
+| Option | Explanation |
+| :----- | :---------- |
+| `-Dfile.encoding=UTF-8` | DXP requires UTF-8 file encoding. |
+| `-Djava.locale.providers=JRE,COMPAT,CLDR` | This is required for displaying four-digit dates on JDK 11. |
+| `-Djava.net.preferIPv4Stack=true` | Prefers an IPv4 stack over IPv6. |
+| `-Duser.timezone=GMT` | DXP requires the application server JVM to use the GMT time zone. |
+
+**Memory Arguments Explained**
+
+| Memory Arguments | Explanation |
+| :--------------- | :---------- |
+| `-Xms` | Initial space for the heap. |
+| `-Xmx` | Maximum space for the heap. |
+| `-XX:NewSize`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
+| `-XX:MaxNewSize` | Maximum new space. |
+| `-XX:MetaspaceSize` | Initial space for static content. |
+| `-XX:MaxMetaspaceSize` | Maximum space for static content. |
+| `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
 ### Removing the `secureSessionCookie` Tag
 
@@ -297,13 +318,13 @@ This occurs because DXP cannot use the HTTPS cookie when using HTTP. The end res
 1. Click *Apply*.
 1. Click *Save*.
 
-## Enable UTF-8
+## Enable UTF-8 TODO
 
 If UTF-8 has not been enabled by adding the `-Dfile.encoding=UTF-8` property in the `server.xml`, administrators can also do so in the Administrative Console.
 
 1. Click *Application Servers* &rarr; *server1* &rarr; *Process definition*.
 1. Click *Java Virtual Machine* under *Additional Properties*.
-1. Enter `-Dfile.encoding=UTF-8` in the *Generic JVM arguments* field.
+1. Enter `-Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT` in the *Generic JVM arguments* field.
 1. Click *Apply* and then *Save* to master configuration.
 
 Once the changes have been saved, DXP can parse special characters if there is localized content.

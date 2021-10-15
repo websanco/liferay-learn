@@ -72,19 +72,17 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
 
     ```bash
     export DERBY_FLAG="false"
-    export JAVA_OPTIONS="${JAVA_OPTIONS} -Dfile.encoding=UTF-8 -Duser.timezone=GMT -da:org.apache.lucene... -da:org.aspectj..."
+    export JAVA_OPTIONS="${JAVA_OPTIONS} -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -da:org.apache.lucene... -da:org.aspectj..."
     export JAVA_PROPERTIES="-Dfile.encoding=UTF-8 ${JAVA_PROPERTIES} ${CLUSTER_PROPERTIES}"
     export MW_HOME="[place your WebLogic Server folder path here]"
-    export USER_MEM_ARGS="-Xmx2560m -Xms2560m"
-    export WLS_MEM_ARGS_64BIT="-Xms2560m -Xmx2560m"
-    export WLS_MEM_ARGS_32BIT="-Xms2560m -Xmx2560m"
+    export USER_MEM_ARGS="-Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
     The `DERBY_FLAG` setting disables the Derby server built in to WebLogic, as DXP does not require this server.
 
     `JAVA_OPTIONS` sets DXP's UTF-8 requirement, Lucene usage, and Aspect Oriented Programming via AspectJ.
 
-    `JAVA_PROPERTIES` also sets DXP's UTF-8 requirement.
+    `JAVA_PROPERTIES` also sets DXP's UTF-8 requirement. TODO use the lowercase one per liferay-portal?
 
     ```{important}
     For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
@@ -101,14 +99,33 @@ Configure the JVM and other options in a `setUserOverridesLate` WebLogic startup
 1. Ensure that the Node Manager sets DXP's memory requirements when starting the Managed Server. In the Admin Server's console UI, navigate to the Managed Server where DXP is to be deployed and select the *Server Start* tab. Enter the following parameters into the *Arguments* field:
 
     ```bash
-    -Xmx2560m -Xms2560m -XX:MaxMetaspaceSize=512m
+    -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7
     ```
 
 1. Click *Save*.
 
-```{note}
-If you need to update `portal-ext.properties` after DXP deploys, it is in the user domain's `autodeploy/ROOT/WEB-INF/classes` folder. Note that the `autodeploy/ROOT` folder contains the DXP deployment.
-```
+The Java options and memory arguments are explained below.
+
+**JVM Options Explained**
+
+| Option | Explanation |
+| :----- | :---------- |
+| `-Dfile.encoding=UTF-8` | DXP requires UTF-8 file encoding. |
+| `-Djava.locale.providers=JRE,COMPAT,CLDR` | This is required for displaying four-digit dates on JDK 11. |
+| `-Djava.net.preferIPv4Stack=true` | Prefers an IPv4 stack over IPv6. |
+| `-Duser.timezone=GMT` | DXP requires the application server JVM to use the GMT time zone. |
+
+**Memory Arguments Explained**
+
+| Memory Arguments | Explanation |
+| :--------------- | :---------- |
+| `-Xms` | Initial space for the heap. |
+| `-Xmx` | Maximum space for the heap. |
+| `-XX:NewSize`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
+| `-XX:MaxNewSize` | Maximum new space. |
+| `-XX:MetaspaceSize` | Initial space for static content. |
+| `-XX:MaxMetaspaceSize` | Maximum space for static content. |
+| `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
 ## Install DXP Dependencies
 

@@ -75,25 +75,29 @@ Here are the steps:
     Then configure Catalina's JVM options to support DXP.
 
     ```bash
-    CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxMetaspaceSize=512m"
+    CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
-    This does the following:
+    **JVM Options Explained**
 
-    1. Sets the file encoding to UTF-8.
-    1. Prefers an IPv4 stack over IPv6.
-    1. Prevents Tomcat from working around garbage collection bugs relating to static or final fields (these bugs don't exist in DXP and working around them causes problems with the logging system).
-    1. Sets the time zone to GMT
-    1. Gives the JVM 2GB of RAM
-    1. Limits Metaspace to 512MB.
+    | Option | Explanation |
+    | :----- | :---------- |
+    | `-Dfile.encoding=UTF-8` | DXP requires UTF-8 file encoding. |
+    | `-Djava.locale.providers=JRE,COMPAT,CLDR` | This is required for displaying four-digit dates on JDK 11. |
+    | `-Djava.net.preferIPv4Stack=true` | Prefers an IPv4 stack over IPv6. |
+    | `-Duser.timezone=GMT` | DXP requires the application server JVM to use the GMT time zone. |
 
-    ```{important}
-    DXP requires that the application server JVM use the GMT time zone and UTF-8 file encoding.
-    ```
+    **Memory Arguments Explained**
 
-    ```{note}
-    On JDK 11, it's recommended to add this JVM argument to display four-digit years: `-Djava.locale.providers=JRE,COMPAT,CLDR`
-    ```
+    | Memory Arguments | Explanation |
+    | :--------------- | :---------- |
+    | `-Xms` | Initial space for the heap. |
+    | `-Xmx` | Maximum space for the heap. |
+    | `-XX:NewSize`| Initial new space. Setting the new size to half of the total heap typically provides better performance than using a smaller new size. |
+    | `-XX:MaxNewSize` | Maximum new space. |
+    | `-XX:MetaspaceSize` | Initial space for static content. |
+    | `-XX:MaxMetaspaceSize` | Maximum space for static content. |
+    | `-XX:SurvivorRatio` | Ratio of the new space to the survivor space. The survivor space holds young generation objects before being promoted to old generation space. |
 
     After installation, these configurations (including these JVM options) can be further tuned for improved performance.
 
@@ -162,7 +166,7 @@ Here are the steps:
     org.apache.level=WARNING
     ```
 
-1. In `$CATALINA_HOME/conf/web.xml`, set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool. Add the following elements above the `jsp` servlet element's `<load-on-startup>` element.
+1. For DXP 7.3 and earlier, open the `$CATALINA_HOME/conf/web.xml` file and set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool by adding the following elements above the `jsp` servlet element's `<load-on-startup>` element.
 
     ```xml
     <init-param>
@@ -187,16 +191,22 @@ Here are the steps:
     chmod a+x *.sh
     ```
 
-For DXP 7.3 and earlier, provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by opening your `$CATALINA_BASE/conf/catalina.properties` file and appending these values to the `common.loader` property value:
+For DXP 7.4+, Liferay's Tomcat support JAR is part of the DXP web application. The JAR needs to be in the common class loader for DXP to use the JAR's file scanner in DXP's web application context. Provide Catalina access to file by opening your `$CATALINA_BASE/conf/catalina.properties` file and adding this value to the beginning of the `common.loader` property's comma-separated value list:
+
+```properties
+"${catalina.home}/webapps/ROOT/WEB-INF/lib/support-tomcat.jar"
+```
+
+For DXP 7.3 and earlier, provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by adding these values to the beginning of the `common.loader` property's value list:
 
 ```
-,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
+"${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
 ```
 
 **Checkpoint:**
 
 1. The file encoding, user time-zone, and preferred protocol stack are set in the `setenv.sh`.
-1. The default memory available and Metaspace limit are set.
+1. The default memory available and Metaspace limits are set.
 1. `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml` declares the web application context.
 1. `$CATALINA_BASE/conf/server.xml` sets UTF-8 encoding.
 1. `$CATALINA_BASE/conf/server.xml` does not declare any value for writing host access logs. *(optional)*
@@ -204,7 +214,7 @@ For DXP 7.3 and earlier, provide Catalina access to the JARs in `$CATALINA_BASE/
 1. `$CATALINA_HOME/conf/web.xml` sets the tag handler pool and sets Java 8 as the JSP compiler.
 1. `$CATALINA_HOME/conf/web.xml` specifies for the application server to refrain from looking for extra metadata. *(optional)*
 1. The scripts in Tomcat's `bin` folders are executable.
-1. The `common.loader` property in `$CATALINA_BASE/conf/catalina.properties`grants Catalina access to the JARs in `$CATALINA_BASE/lib/ext`. (7.3 and earlier)
+1. The `common.loader` property in `$CATALINA_BASE/conf/catalina.properties`grants Catalina access to required JARs.
 
 The application server is configured to run DXP.
 
