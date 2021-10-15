@@ -24,13 +24,13 @@ Follow these steps to enable subscriptions for a Product:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Product Management* &rarr; *Products*.
 
-2. Click on the *Subscription* tab.
+1. Click on the *Subscription* tab.
 
     ![Click on the Product's Subscription tab.](./enabling-subscriptions-for-a-product/images/02.png)
 
-3. Use the toggle switch to enable *Payment Subscription* and/or *Delivery Subscription*.
+1. Use the toggle switch to enable *Payment Subscription* and/or *Delivery Subscription*.
 
-4. Use the *Subscription Type* field to select the subscription's time unit:
+1. Use the *Subscription Type* field to select the subscription's time unit:
 
    * Day
    * Week
@@ -39,13 +39,13 @@ Follow these steps to enable subscriptions for a Product:
 
    If you select Week, Month, or Year, you'll also have to determine the day on which each unit begins.
 
-5. Use the *Subscription Length* field to determine the length of a subscription period.
+1. Use the *Subscription Length* field to determine the length of a subscription period.
 
-6. Use the toggle switch to determine whether the subscription automatically ends.
+1. Use the toggle switch to determine whether the subscription automatically ends.
 
     ![Configuring the payment subscription.](./enabling-subscriptions-for-a-product/images/03.png)
 
-7. Click on *Publish* when finished.
+1. Click on *Publish* when finished.
 
 The subscription is now enabled for the selected Product.
 
