@@ -2,13 +2,41 @@
 
 To enhance the quality of your experience with Liferay Commerce, Liferay provides periodic product upgrades with bug fixes and new features. Users should consider regularly updating to the latest release.
 
+## Upgrading to Commerce 4.0
+
+Starting with Liferay Commerce 3.0, Commerce is now bundled with Liferay DXP. To upgrade to Commerce 4.0, you must first upgrade your base Liferay DXP installation to DXP 7.4 and perform a search reindex.
+
+```{warning}
+   After upgrading to 7.4, do **not** deploy the Commerce ``LPKG`` again. The Commerce 4.0 modules are bundled with 7.4. Deploying the ``LPKG`` causes conflicts.
+```
+
+To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html). Once DXP is upgraded to 7.4, execute a reindex.
+
+### Prerequisite for upgrading to Liferay Commerce 4.0
+
+The CommerceCountry table is deprecated in Liferay Commerce 4.0 and is being replaced by the Country table. While the CommerceCountry table only required the name of the country, the Country table requires the name and the Alpha-2 (a2) and Alpha-3 (a3) code for each country.
+
+The CommerceCountry table may be populated if you are using the Minium Accelerator or if you are using your own values. If you are not using the Minium Accelerator, the table can be empty. As a prerequisite before upgrading to Liferay DXP 7.4, you must ensure that each country in the CommerceCountry table has its ISO code pre-populated. See [Country Codes (ISO)](https://www.iso.org/obp/ui/#search/code) for more information.
+
+![The CommerceCountry table and the Country table.](./upgrading-liferay-commerce/images/01.png)
+
+### Executing a Post-Upgrade Reindex
+
+After upgrading to DXP 7.4, execute a full search reindex.
+
+1. Open the _Global Menu_, and go to _Control Panel_ &rarr; _Search_.
+
+    ![Go to Search in the Control Panel tab.](./upgrading-liferay-commerce/images/02.png)
+
+1. Under the _Index Actions_ tab, click on _Execute_ for _Reindex all search indexes_.
+
+Once the the reindex has finished, verify it was successful by going to _Commerce_ &rarr; _Products_ in the Global Menu and confirming that all products are displayed.
+
 ## Upgrading to Commerce 3.0 from 2.1 and Below
 
-Starting with Liferay Commerce 3.0, Commerce is now bundled with Liferay DXP 7.3. In order to upgrade to Commerce 3.0, you must first upgrade your base Liferay DXP installation to DXP 7.3 and then execute a search reindex.
+In order to upgrade to Commerce 3.0, you must first upgrade your base Liferay DXP installation to DXP 7.3 and then execute a search reindex.
 
-To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html). Once DXP is upgraded to 7.3, execute a reindex.
-
-```warning::
+```{warning}
    After upgrading to 7.3, do **not** deploy the Commerce ``LPKG`` again. The Commerce 3.0 modules are bundled with 7.3. Deploying the ``LPKG`` causes conflicts.
 ```
 
@@ -28,7 +56,7 @@ Once the the reindex has finished, verify it was successful by going to _Commerc
 
 Liferay Commerce provides a seamless upgrade process to Commerce 2.1.x, whether from version 1.1.x or 2.0.x.
 
-```note::
+```{note}
    Upgrading from 1.1.x to 2.1.x does **not** require an incremental upgrade to 2.0.x.
 ```
 
