@@ -45,13 +45,13 @@ When the application server binaries have been installed, start the *Profile Man
    ```
 
 1. Choose node, server, and host names for the server. These are specific to a user's environment. Click *Next*.
-1. Administrative security in WebSphere is a way to restrict who has access to the administrative tools. Administrators may want to have it enabled in the environment so that a user name and password are required to administer the WebSphere server. See WebSphere's documentation for more information. Click *Next*.
+1. Administrative security in WebSphere is a way to restrict who has access to the administrative tools. You may want to have it enabled in the environment so that a user name and password are required to administer the WebSphere server. See WebSphere's documentation for more information. Click *Next*.
 1. Each profile needs a security certificate, which comes next in the wizard. If the certificates are not already generated, choose the option to generate a personal certificate and a signing certificate and click *Next*.
 1. Once the certificates are generated, set a password for the keystore. Click *Next*.
-1. Administrators can customize the ports this server profile uses. Be sure to choose ports that are open on the machine. When choosing ports, the wizard automatically detects existing WebSphere installations and if it finds activity, will increment ports by one.
+1. You can customize the ports this server profile uses. Be sure to choose ports that are open on the machine. When choosing ports, the wizard automatically detects existing WebSphere installations and if it finds activity, will increment ports by one.
 1. Choose whether to start this profile when the machine starts. Click *Next*.
 1. WebSphere ships with IBM HTTP Server. Choose whether you want a web server definition, so that this JVM receives requests forwarded from the HTTP server. See WebSphere's documentation for details on this. When finished, click *Next*.
-1. The wizard then displays a summary of what was selected, enabling administrators to keep their choices or go back and change something. When finished, click *Next*.
+1. The wizard then displays a summary of what was selected, enabling you to keep your choices or go back and change something. When finished, click *Next*.
 
 WebSphere then creates the profile and finishes with a message indicating that the profile was created successfully.
 
@@ -92,7 +92,7 @@ As a baseline, add `maximumHeapSize="2560"` inside the `jvmEntries` tag. For exa
 After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
 ```
 
-Administrators can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Increase the maximum and minimum heap sizes there too. Add the following inside the `jvmEntries` tag:
+You can set the UTF-8 properties in the `<jvmEntries genericJvmArguments=.../>` attribute in `server.xml`. This is required or else international characters will not be parsed correctly. Increase the maximum and minimum heap sizes there too. Add the following inside the `jvmEntries` tag:
 
 ```xml
 <jvmEntries xmi:id="JavaVirtualMachine_1183122130078" ...genericJvmArguments="--Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms6144m -Xmx6144m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7">
@@ -267,6 +267,11 @@ Liferay uses HSQL by default for demo purposes. HSQL should *not* be used in pro
 
 1. Do another filter search for the *password* property. Enter the password for the user ID added earlier as the value for this property. Click *OK* and save to master configuration.
 1. Go back to the data source page by clicking it in the breadcrumb trail. Use the *Test Connection* button to validate configurations to this point.
+1. In a `portal-ext.properties` file in **[Liferay_Home]**, specify the data source. For example,
+
+    ```properties
+    jdbc.default.jndi.name=jdbc/LiferayPool
+    ```
 
 ## Mail Configuration
 
@@ -286,6 +291,11 @@ If you want to use WebSphere to manage the mail session, follow these steps:
     ![Figure 6: Applying Java security in the Mail Session](./installing-on-websphere/images/06.png)
 
 1. Click *Apply*.
+1. In a `portal-ext.properties` file in Liferay Home, specify the mail session. For example,
+
+    ```properties
+    mail.session.jndi.name=mail/MailSession
+    ```
 
 Note that it might be necessary to retrieve a SSL certificate from mail server and add it to WebSphere's trust store. See WebSphere's documentation for instructions on this.
 
@@ -343,11 +353,9 @@ Note that the DXP `.war` comes pre-packaged with the `ibm-web-ext.xmi` file; thi
 
 ## Starting DXP
 
-1. If administrators are using DXP's [setup wizard](../running-liferay-for-the-first-time.md), skip to the next step. However, if administrators are using WebSphere's data source and mail session, create a file called `portal-ext.properties` in the Liferay Home folder. Place the following configuration in the file:
+1. If you want to use the [Setup Wizard](../running-liferay-for-the-first-time.md), skip to the next step. However, if your are using WebSphere's data source and mail session and you want to bypass the Setup Wizard, set this portal property in your `portal-ext.properties` file:
 
     ```properties
-    jdbc.default.jndi.name=jdbc/LiferayPool
-    mail.session.jndi.name=mail/MailSession
     setup.wizard.enabled=false
     ```
 
