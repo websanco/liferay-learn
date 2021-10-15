@@ -184,16 +184,16 @@ Continue configuring Tomcat.
     chmod a+x *.sh
     ```
 
-For DXP 7.4+, Liferay's Tomcat support JAR is part of the DXP web application. The JAR needs to be in the common class loader for DXP to use the JAR's file scanner in DXP's web application context. Provide Catalina access to file by opening your `$CATALINA_BASE/conf/catalina.properties` file and adding this value to the beginning of the `common.loader` property's comma-separated value list:
+Liferay's Tomcat support JAR is part of the DXP web application. DXP uses the JAR's file scanner. The JAR needs to be in the common class loader for DXP to use it. Provide Catalina access to the file by opening your `$CATALINA_BASE/conf/catalina.properties` file and adding this value to the beginning of the `common.loader` property's comma-separated value list:
 
 ```properties
-"${catalina.home}/webapps/ROOT/WEB-INF/lib/support-tomcat.jar"
+"${catalina.home}/webapps/ROOT/WEB-INF/lib/support-tomcat.jar",
 ```
 
 For DXP 7.3 and earlier, provide Catalina access to the JARs in `$CATALINA_BASE/lib/ext` by adding these values to the beginning of the `common.loader` property's value list:
 
 ```
-"${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
+"${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar",
 ```
 
 **Checkpoint:**
@@ -217,7 +217,7 @@ DXP contains a built-in Hypersonic database which is great for demonstration pur
 
 Liferay DXP can connect with your database using DXP's built-in data source (recommended) or using a data source you create on your app server.
 
-You can configure DXP's built-in data source with your database the first time you run DXP by using the [Setup Wizard](../../../getting-started/using-the-setup-wizard.md). Or you can configure the data source in a [`portal-ext.properties` file](../../reference/portal-properties.md) based on the [Database Template](../../reference/database-templates.md) for your database.
+You can configure DXP's built-in data source with your database the first time you run DXP by using the [Setup Wizard](../running-liferay-for-the-first-time.md). Or you can configure the data source in a [`portal-ext.properties` file](../../reference/portal-properties.md) based on the [Database Template](../../reference/database-templates.md) for your database.
 
 Otherwise, you can configure the data source in Tomcat.
 

@@ -234,7 +234,7 @@ You completed the script modifications.
 
 ## Connect to a Database
 
-The easiest way to handle database configuration is to let DXP manage the data source. You can use [Basic Configuration](../../../getting-started/using-the-setup-wizard.md) to configure DXP's built-in data source. If you're using the built-in data source, skip this section.
+The easiest way to handle database configuration is to let DXP manage the data source. You can use the [Setup Wizard](../running-liferay-for-the-first-time.md) to configure DXP's built-in data source. If you're using the built-in data source, skip this section.
 
 If you're using JBoss to manage the data source, follow these steps:
 

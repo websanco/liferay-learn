@@ -241,7 +241,7 @@ The prescribed script modifications are now complete for the DXP installation on
 
 ## Connect to a Database
 
-The easiest way to handle database configuration is to let DXP manage the data source. Use [Basic Configuration](../../../getting-started/using-the-setup-wizard.md) to configure DXP's built-in data source. If using the built-in data source, skip this section.
+The easiest way to handle database configuration is to let DXP manage the data source. Use the[Setup Wizard](../running-liferay-for-the-first-time.md) to configure DXP's built-in data source. If using the built-in data source, skip this section.
 
 If using WildFly to manage the data source, follow these steps:
 
