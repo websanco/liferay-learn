@@ -1,12 +1,22 @@
-# 商品タイプについて
+# 商品タイプ
+
+```{toctree}
+:maxdepth: 3
+
+product-types/introduction-to-product-types.md
+product-types/creating-a-simple-product.md
+product-types/creating-a-grouped-product.md
+product-types/creating-a-virtual-product.md
+product-types/virtual-product-reference.md
+```
 
 このカタログは、シンプル、グループ、仮想の3つの商品タイプをサポートしています。
 
-**[シンプル商品](./creating-a-simple-product.md)**：在庫が追跡される物理的な商品。
+**[シンプル商品](./product-types/creating-a-simple-product.md)**：在庫が追跡される物理的な商品。
 
-**[グループ商品](./creating-a-grouped-product.md)**：カタログから2つ以上の商品をパッケージ化し、1つのアイテムとして販売されるもの。 グループ商品は在庫で追跡されます。 グループ商品には、シンプル商品、他のグループ化された商品、または仮想商品を含めることができます。
+**[グループ商品](./product-types/creating-a-grouped-product.md)**：カタログから2つ以上の商品をパッケージ化し、1つのアイテムとして販売されるもの。 グループ商品は在庫で追跡されます。 グループ商品には、シンプル商品、他のグループ化された商品、または仮想商品を含めることができます。
 
-**[仮想商品](./creating-a-virtual-product.md)**：仮想商品とは、ダウンロード可能な、または期間が指定されている無形の商品です。 例には、音楽ファイル、電子出版物、サービス、および保証が含まれます。 それ以外の場合は、シンプル商品タイプを使用します。
+**[仮想商品](./product-types/creating-a-virtual-product.md)**：仮想商品とは、ダウンロード可能な、または期間が指定されている無形の商品です。 例には、音楽ファイル、電子出版物、サービス、および保証が含まれます。 それ以外の場合は、シンプル商品タイプを使用します。
 
 ## 商品詳細リファレンス
 
@@ -39,7 +49,7 @@
 
 ## 追加情報
 
-  - [シンプル商品の作成](./creating-a-simple-product.md)
-  - [グループ商品の作成](./creating-a-grouped-product.md)
-  - [仮想商品の作成](./creating-a-virtual-product.md)
-  - [仮想商品リファレンス](./virtual-product-reference.md)
+  - [シンプル商品の作成](./product-types/creating-a-simple-product.md)
+  - [グループ商品の作成](./product-types/creating-a-grouped-product.md)
+  - [仮想商品の作成](./product-types/creating-a-virtual-product.md)
+  - [仮想商品リファレンス](./product-types/virtual-product-reference.md)

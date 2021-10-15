@@ -2,9 +2,13 @@
 
 > Subscription Required
 
-Bill of Materials (BOM) diagrams identify component parts belonging to a product. Users can create and annotate BOM diagrams in Liferay Commerce that reference products in the store. BOM diagrams can then be displayed on a site page.
+Bill of Materials (BOM) diagrams identify component parts belonging to a product. Users can create and annotate BOM diagrams in Liferay Commerce that reference products in the store. BOM diagrams can then be displayed on a Site page.
 
 BOM diagrams are comprised of two parts: the Diagram and Mapped Products.
+
+```{important}
+BOMs are no longer available starting from Liferay Commerce 4.0. They are replaced by a more robust Shop by Diagram feature. Read [Shop by Diagram](../product-types/shop-by-diagram.md) for more information. 
+```
 
 ## Adding a New BOM Diagram
 
@@ -22,15 +26,15 @@ Once the image has been uploaded, map the parts to the products in the catalog.
 
 1. Click the _Entries_ tab.
 
-    ![BOM Entries tab](./managing-boms/images/02.png)
+    ![Click the Entries tab to view and map entries to the image.](./managing-boms/images/02.png)
 
-1. The _Mapped Products_ pane on the right lists all subparts. When users hover the mouse over the diagram, a plus sign appears.
+2. The _Mapped Products_ pane on the right lists all subparts. When users hover the mouse over the diagram, a plus sign appears.
 
-    ![BOM Entries tab](./managing-boms/images/03.png)
+    ![A new Product can be mapped to the BOM by clicking on the plus sign.](./managing-boms/images/03.png)
 
-1. Click on the part of the diagram that is associated with product (for example, _Fuel Injector 1_).
+3. Click on the part of the diagram that is associated with product (for example, _Fuel Injector 1_).
 
-1. Enter the following:
+4. Enter the following:
 
     * **Number**: 1 (numeric ordering of the mapped product list)
     * **Product**: MIN59999 (the product name or SKU)
@@ -41,7 +45,7 @@ Once the image has been uploaded, map the parts to the products in the catalog.
 
     ![Begin associating products in the BOM diagram.](./managing-boms/images/04.png)
 
-1. Click _Save_.
+5. Click _Save_.
 
 Continue adding the rest of the products. Each entry must have a unique numeric identifier in the list of Mapped Products, even if there is more than one of the same product. In this example, there are two fuel injectors and both have a distinct product mapping number.
 
