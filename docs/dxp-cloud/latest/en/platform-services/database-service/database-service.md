@@ -16,6 +16,16 @@ Name                       | Default Value              | Description      |
 `LCP_MASTER_USER_NAME`     | `dxpcloud`                 | Master username. |
 `LCP_MASTER_USER_PASSWORD` | `LCP_PROJECT_MASTER_TOKEN` | Master password. |
 
+### Database Maintenance Window Variables
+
+Your DXP Cloud environment's database service will occasionally require downtime for scheduled maintenance, typically for about two minutes. You can configure a preferred window for this maintenance to take place so that you can reduce the downtime's impact. By default, no specific time preference is defined.
+
+Name                      | Acceptable Values  | Description                                                             |
+------------------------- | ------------------ | ----------------------------------------------------------------------- |
+`LCP_GCP_MW_DAY`          | `1` through `7`    | Preferred day of the week (Sunday (1) through Saturday (7)).            |
+`LCP_GCP_MW_HOUR`         | `0` through `23`   | Preferred hour of the day (in UTC time).                                |
+`LCP_GCP_MW_UPDATE_TRACK` | `canary`, `stable` | Set `canary` to update earlier, up to a week before other environments. | 
+
 ### Google Cloud MySQL Flags
 
 You can pass MySQL flags in as environment variables. The available flags are listed in the
@@ -25,10 +35,10 @@ You can pass MySQL flags in as environment variables. The available flags are li
    As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's `Operational Guidelines <https://cloud.google.com/sql/docs/mysql/operational-guidelines>`_.
 ```
 
-Name                                   | Acceptable Value | Default Value |
--------------------------------------- | ---------------- | ------------- |
-`LCP_GCP_DATABASE_FLAG_GENERAL_LOG`    | `on, off`        | `off`         |
-`LCP_GCP_DATABASE_FLAG_SLOW_QUERY_LOG` | `on, off`        | `off`         |
+Name                                   | Acceptable Values | Default Value |
+-------------------------------------- | ----------------- | ------------- |
+`LCP_GCP_DATABASE_FLAG_GENERAL_LOG`    | `on, off`         | `off`         |
+`LCP_GCP_DATABASE_FLAG_SLOW_QUERY_LOG` | `on, off`         | `off`         |
 
 ## Related Information
 
