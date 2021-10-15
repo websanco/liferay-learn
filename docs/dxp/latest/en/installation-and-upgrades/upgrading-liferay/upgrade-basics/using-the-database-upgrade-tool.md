@@ -75,13 +75,6 @@ If you installed the new Liferay release on an application server, create a `[Li
     echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties
     ```
 
-1. If your installation is a Liferay Tomcat Bundle, it includes the upgrade tool at `[Liferay Home]/tools/portal-tools-db-upgrade-client`. Otherwise download the tool and install it to that folder.
-
-| DXP Edition | Download Instructions |
-| :---------- | :-------------------- |
-| Liferay DXP (Subscription) | Go to the [*Downloads* page](https://customer.liferay.com/group/customer/downloads) and select the DXP version and the _Product/Service Packs_ file type. In the listing that appears, click _Download_ for the _Liferay DXP Upgrade Client_. |
-| Liferay Portal | Go to the [_Downloads_ page](https://www.liferay.com/downloads-community). In the _Liferay Portal_ downloads menu, select _Other files_ and click _Download_. The latest Liferay Portal release assets GitHub page appears. Click on `liferay-ce-portal-tools-[version].zip`. |
-
 ## Running the Upgrade Tool
 
 The upgrade tool is configured via its command line interface, or by [using properties files](../reference/database-upgrade-tool-reference.md#manual-configuration).
