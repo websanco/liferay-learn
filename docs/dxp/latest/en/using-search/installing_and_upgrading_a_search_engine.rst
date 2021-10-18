@@ -22,6 +22,8 @@ Elasticsearch
 -  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/troubleshooting-elasticsearch-installation`
 -  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/exercise-run-liferay-and-elasticsearch-using-docker`
 -  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch`
+-  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/elasticsearch-connector-configuration-reference`
+-  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/advanced-configuration-of-the-liferay-elasticsearch-connector`
 
 Solr
 ----
