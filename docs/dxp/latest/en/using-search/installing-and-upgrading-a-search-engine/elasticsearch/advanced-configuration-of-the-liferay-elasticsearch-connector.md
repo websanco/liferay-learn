@@ -51,39 +51,7 @@ Here's an example that shows how to configure [analysis](https://www.elastic.co/
 
 As with dynamic templates, you can add sub-field mappings to Liferay's type mapping. These are referred to as [properties](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/properties.html) in Elasticsearch.
 
-#### Overriding Type Mappings in Liferay 7.3+
-
-To add a property in Liferay 7.3+, use this JSON syntax:
-
-```json
-{ 
-    "properties": {   
-        "fooName": {
-            "index": "true",
-            "store": "true",
-            "type": "keyword"
-        }
-    }   
-}
-```
-
-To see that your additional mappings have been added to the Liferay mappings, use `curl` to access this URL after saving your additions and re-indexing:
-
-```bash
-curl http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/?pretty
-```
-
-Here's what it would look like for an Elasticsearch instance running on `localhost:9200`, with a Liferay Company ID of `20116`:
-
-```bash
-curl http://localhost:9200/liferay-20116/_mapping/?pretty
-```
-
-In the above URL, `liferay-20116` is the index name. Including it indicates that you want to see the mappings that were used to create the index with that name.
-
-#### Adding Type Mappings in Liferay 7.2
-
-To add a property in Liferay 7.2, use this JSON syntax:
+To add a property, use this JSON syntax:
 
 ```json
 { 
@@ -102,13 +70,13 @@ To add a property in Liferay 7.2, use this JSON syntax:
 To see that your additional mappings have been added to the Liferay mappings, use `curl` to access this URL after saving your additions and re-indexing:
 
 ```bash
-curl http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/LiferayDocumentType?pretty
+curl http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping?pretty
 ```
 
 Here's what it would look like for an Elasticsearch instance running on `localhost:9200`, with a Liferay Company ID of `20116`:
 
 ```bash
-curl http://localhost:9200/liferay-20116/_mapping/LiferayDocumentType?pretty
+curl http://localhost:9200/liferay-20116/_mapping?pretty
 ```
 
 In the above URL, `liferay-20116` is the index name. Including it indicates that you want to see the mappings that were used to create the index with that name.
@@ -122,15 +90,13 @@ The above example shows how a `fooName` field might be added to Liferay's type m
 
 Use `overrideTypeMappings` to override Liferay's default type mappings and exert control over how data is indexed into the [company and system indexes](../../search-administration-and-tuning/elasticsearch-indexes-reference.md). This is an advanced feature that should be used only if strictly necessary. If you set this value, the default mappings used to define the Liferay Document Type in Liferay source code (for example, `liferay-type-mappings.json`) are ignored entirely, so include the whole mappings definition in this property, not just the segment you're modifying.
 
-#### Overriding Type Mappings in Liferay 7.3+
-
 To make a modification, find the entire list of the current mappings being used to create the index by navigating to the URL
 
 ```
-http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/?pretty
+http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping?pretty
 ```
 
-Copy the contents in as the value of this property (either into System Settings or your OSGi configuration file). Leave the opening curly brace `{`, but delete lines 2 and 3 entirely:
+Copy the contents in as the value of this property (either into System Settings or your OSGi configuration file). Leave the opening curly brace `{`, but delete lines 2 and 3 entirely (the line with the index name and the line with `mappings`):
 
 ```json
 "liferay-[COMPANY_ID]": {
@@ -140,56 +106,6 @@ Copy the contents in as the value of this property (either into System Settings 
 Then, from the end of the mappings, delete the concluding two curly braces.
 
 ```json
-    }
-}
-```
-
-Now modify whatever mappings you'd like. The changes take effect once you save the changes and trigger a re-index from Server Administration. 
-
-Here's a partial example, showing a [dynamic template](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/dynamic-templates.html) that uses the analysis configuration from `additionalIndexConfigurations` to analyze all string fields that end with `_ja`. You'd include this with all the other default mappings, replacing the provided `template_ja` with this custom one:
-
-```json
-{
-    "dynamic_templates": [
-        {
-            "template_ja": {
-                "mapping": {
-                    "analyzer": "kuromoji_liferay_custom",
-                    "index": "analyzed",
-                    "store": "true",
-                    "term_vector": "with_positions_offsets",
-                    "type": "string"
-                },
-                "match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
-                "match_mapping_type": "string",
-                "match_pattern": "regex"
-            }
-            ...
-        }
-    ]
-}
-```
-
-#### Overriding Type Mappings in Liferay 7.2
-
-To make a modification, find the entire list of the current mappings being used to create the index by navigating to the URL
-
-```
-http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping/LiferayDocumentType?pretty
-```
-
-Copy the contents in as the value of this property (either into System Settings or your OSGi configuration file). Leave the opening curly brace `{`, but delete lines 2-4 entirely:
-
-```json
-"liferay-[COMPANY_ID]": {
-    "mappings" : {
-        "LiferayDocumentType" : {
-```
-
-Then, from the end of the mappings, delete the concluding three curly braces.
-
-```json
-        }
     }
 }
 ```
