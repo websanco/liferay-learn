@@ -99,7 +99,7 @@ Here's how to upgrade your database with the upgrade tool:
 
     The command above executes the upgrade tool with the same JVM options recommended for the application server. File encoding (`UTF-8`), time zone (`GMT`), country, language, and memory settings (`-Xmx value`) should all match your application server's settings. For databases with over 10 GB of data, allocate additional memory using the `-Xmx` option.
 
-    If you haven't configured the upgrade using the [upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration), the upgrade tool prompts you for configuration values, and shows default values in parentheses. Here's an example interaction:
+    If you haven't configured the upgrade using the [upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration), the upgrade tool prompts you for configuration values and shows default values in parentheses. Here's an example interaction:
 
     ```
     Please enter your application server (tomcat):
