@@ -4,18 +4,18 @@
 
 For example, with workflow context you can
 
-- [Access any of the existing attributes for use in workflow scripts, custom code, or Freemarker templates.](#accessing-workflow-context-attributes-in-workflow-definitions)
-- [Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or Freemarker templates.](#setting-workflow-context-attributes-in-a-workflow-process-definition)
+- [Access any of the existing attributes for use in workflow scripts, custom code, or FreeMarker templates.](#accessing-workflow-context-attributes-in-workflow-definitions)
+- [Set new attributes at one step of a workflow process for access in workflow scripts, custom code, or FreeMarker templates.](#setting-workflow-context-attributes-in-a-workflow-process-definition)
 - [Set `ServiceContext` attributes, access them in workflow scripts and notification templates.](#setting-service-context-attributes-for-access-in-workflow-definitions)
 
-```note::
-   Use ``ServiceContext`` to set attributes in contexts where a ``workflowContext`` is not available. For example, if your custom code calls ``BlogsEntryLocalService#addEntry``, you must provide a ``ServiceContext`` object to it. You can use ``ServiceContext#setAttribute`` to pass in data that you want to access in the workflow. 
+```{note}
+Use `ServiceContext` to set attributes in contexts where a `workflowContext` is not available. For example, if your custom code calls `BlogsEntryLocalService#addEntry`, you must provide a `ServiceContext` object to it. You can use `ServiceContext#setAttribute` to pass in data that you want to access in the workflow. 
 ```
 There are some important things to be aware of when working with `workflowContext`:
 
 - It must be modifiable, therefore it isn't thread safe. Caution is advised in parallel execution contexts.
 
-   For example, in a workflow with a fork node, updating the  ``workflowContext`` in both forks of the workflow is not recommended.
+  For example, in a workflow with a fork node, updating the `workflowContext` in both forks of the workflow is not recommended.
 
 - Its first type parameter (the `key` for the attribute) is a String. This is used to look up the value stored in the second attribute.
 - Its second type parameter (the `value` for each attribute) is a `Serializable` because it's stored in the database. This ensures that it's accessible at every step of the workflow.
@@ -41,7 +41,7 @@ To print the workflow context keys and values in any workflow node, you can add 
 
 When the node is entered, output is printed to the log:
 
-```bash
+```
 entryType, Blogs Entry
 companyId, 37401
 entryClassPK, 40226
@@ -65,7 +65,7 @@ import com.liferay.portal.kernel.workflow.WorkflowConstants;
 String className = (String)workflowContext.get(WorkflowConstants.CONTEXT_ENTRY_CLASS_NAME);
 ```
 
-The above example retrieves a String, but some of the `workflowContext` attributes must be used as `long`s (for example, when passed as method parameters). The `GetterUtil` utility class helps with this:
+The above example retrieves a `String`, but some of the `workflowContext` attributes must be used as `long`s (for example, when passed as method parameters). The `GetterUtil` utility class helps with this:
 
 ```groovy
 import com.liferay.portal.kernel.util.GetterUtil;
@@ -101,19 +101,19 @@ String assetTitle = assetRenderer.getAssetObject().getTitle();
 workflowContext.put("assetTitle", assetTitle);
 ```
 
-```tip::
-   The above code works only if the asset has a ``getTitle`` method (for example, ``JournalArticle``).
+```{tip}
+The above code works only if the asset has a `getTitle` method (for example, `JournalArticle`).
 ```
 
 ## Setting Service Context Attributes for Access in Workflow Definitions
 
-Sometimes in your custom Java code, you'll need to pass information to the workflow definition but there's no `workflowContext` to pass through. For example, if you're writing code that adds Blogs Entries, you can call one of the [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) methods. Even though `workflowContext` isn't a parameter in these methods, `ServiceContext` is. Add a new attribute to the service context:
+Sometimes in your custom Java code, you must pass information to the workflow definition but there's no `workflowContext` to pass through. For example, if you're writing code that adds Blogs Entries, you can call one of the [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) methods. Even though `workflowContext` isn't a parameter in these methods, `ServiceContext` is. Add a new attribute to the service context:
 
 ```java
 serviceContext.setAttribute("customAttributeKey", "customAttributeValue");
 ```
 
-To get the attribute in the workflow definition, retrieve the `ServiceContext` from the `workflowcontext`, the get the attribute using its key:
+To get the attribute in the workflow definition, retrieve the `ServiceContext` from the `workflowContext`, the get the attribute using its key:
 
 ```groovy
 import com.liferay.portal.kernel.service.ServiceContext;
