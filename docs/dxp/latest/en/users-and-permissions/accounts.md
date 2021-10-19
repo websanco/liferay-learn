@@ -9,33 +9,33 @@ accounts/account-roles.md
 accounts/account-management-widget.md
 ```
 
-Accounts provide administrators with a way to organize and manage users for various commerce or business needs. Unlike [organizations](./organizations.html) or [user groups](./user_groups.html), accounts help facilitate interactions that might take place in business situations such as the purchasing of goods and services or managing existing customers.
+Accounts provide administrators with a way to organize and manage users for various commerce or business needs. Unlike [organizations](./organizations.md) or [user groups](./user-groups.md), accounts help facilitate interactions that might take place in business situations such as the purchasing of goods and services or managing existing customers.
+
+There are three different account types, *Business*, *Person*, and *Guest* types. Business accounts all you to associate multiple users to an account. Person type accounts can only have one account associated with them. Guest-type accounts provide a way for unregistered users to interact with your business or site.
 
 ```{note}
-Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/users-and-accounts/account-management.html), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## Creating an Account
 
 1. Open the Global Menu (![Global Menu](../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
 
-1. Click the _Add_ icon (![Add icon](../images/icon-add.png)) to create a new account. 
+1. Click the _Add_ icon (![Add icon](../images/icon-add.png)) to create a new account.
 
-1. Give your account a name and select the type. 
+1. Give your account a name and select the type. Note that once an Account is created the type cannot be changed.
 
    ![Give you account a name and select the type.](./accounts/images/01.png)
 
-   Account type can be Business, Person or Guest. You can associate multiple Users for a Business type account whereas the Person type account is for an individual user. The Guest type account provides a way for a user to interact with your business or Site as an unregistered user. Note that once an Account is created the type cannot be changed.
-
 1. Add additional information for your account such as Tax ID or description. Click *Save* to create the new account.
 
-1. After creating an account, tabs appear at the top of the page. 
+1. After creating an account, tabs appear at the top of the page.
 
    ![New tabs appear after creating an account.](./accounts/images/02.png)
 
 ### Details Tab
 
-The Details tab displays the main information about the account such as the account name and type. A default billing address and shipping address can also be set here. [Categories](../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md) or [Custom Fields](../system-administration/configuring-liferay/adding-custom-fields.md) can also be added for further customization of the account. 
+The Details tab displays the main information about the account such as the account name and type. A default billing address and shipping address can also be set here. [Categories](../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md) or [Custom Fields](../system-administration/configuring-liferay/adding-custom-fields.md) can also be added for further customization of the account.
 
 ### Addresses Tab
 
@@ -67,13 +67,13 @@ The Account Groups tab displays the different group memberships for the account.
 
 ### Roles Tab
 
-The Roles tab displays the different Roles that are available for the account. Note, this tab does not exist for Guest type accounts. To create an Account Role, 
+The Roles tab displays the different Roles that are available for the account. Note, this tab does not exist for Guest type accounts. To create an Account Role,
 
-1. Click the _Add_ icon (![Add icon](../images/icon-add.png)). 
+1. Click the _Add_ icon (![Add icon](../images/icon-add.png)).
 
 1. On the following page, give the Role a title and description. Click *Save*.
 
-1. Once the Role is created, you can define permissions and assign Users. Click the *Define Permissions* tab and choose the permissions for the Role. 
+1. Once the Role is created, you can define permissions and assign Users. Click the *Define Permissions* tab and choose the permissions for the Role.
 
 1. Click the *Assignees* tab to assign a User to the Role. Click the _Add_ icon (![Add icon](../images/icon-add.png)) to select a User and click the *Assign* button.
 
@@ -93,9 +93,9 @@ See [Account Roles](./accounts/account-roles.md) to learn more.
    * Deactivate - Deactivate an Account.
    * Delete - Delete an Account.
 
-   Note that for Person Account type, there is no Manage Users functionality. 
+   Note that for Person Account type, there is no Manage Users functionality.
 
-2. Selecting the Edit option shows more options:
+1. Selecting the Edit option shows more options:
 
    ![Select Edit to see more options.](./accounts/images/02.png)
 
@@ -108,7 +108,7 @@ See [Account Roles](./accounts/account-roles.md) to learn more.
 
 ## Related Information
 
-- [Account Users](./accounts/account-users.md)
-- [Account Groups](./accounts/account-groups.md)
-- [Account Roles](./accounts/account-roles.md)
-- [Account Management Widget](./accounts/account-management-widget.md)
+* [Account Users](./accounts/account-users.md)
+* [Account Groups](./accounts/account-groups.md)
+* [Account Roles](./accounts/account-roles.md)
+* [Account Management Widget](./accounts/account-management-widget.md)
