@@ -1,0 +1,72 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'ワークフローの概要',
+					sectionURL: 'workflow/introduction-to-workflow.html',
+				},
+				{
+					sectionName: 'ワークフローの設計と管理',
+					sectionURL: 'workflow/designing_and_managing_workflows.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ワークフローの構築 (近日公開！)',
+							url: 'workflow/designing-and-managing-workflows/building-workflows.html'
+						},
+						{
+							name: 'ワークフローの管理',
+							url: 'workflow/designing-and-managing-workflows/managing-workflows.html'
+						},
+						{
+							name: 'ワークフローデザイナーの概要',
+							url: 'workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ワークフローの使用',
+					sectionURL: 'workflow/using_workflows.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ワークフローのアクティブ化',
+							url: 'workflow/using-workflows/activating-workflow.html'
+						},
+						{
+							name: 'アセットの確認',
+							url: 'workflow/using-workflows/reviewing-assets.html'
+						},
+						{
+							name: 'ワークフローメトリクスの使用',
+							url: 'workflow/using-workflows/using-workflow-metrics.html'
+						},
+					]
+				},
+				{
+					sectionName: '開発者ガイド',
+					sectionURL: 'workflow/developer_guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ワークフローでのスクリプトエンジンの使用',
+							url: 'workflow/developer-guide/using-the-script-engine-in-workflow.html'
+						},
+						{
+							name: 'XMLワークフロー定義の作成',
+							url: 'workflow/developer-guide/crafting-xml-workflow-definitions.html'
+						},
+						{
+							name: 'ワークフロー定義ノードリファレンス',
+							url: 'workflow/developer-guide/workflow-definition-node-reference.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

@@ -4,9 +4,13 @@
 .. toctree::
    :maxdepth: 3
 
-   workflow/user_guide.rst
+   workflow/introduction-to-workflow.md
+   workflow/designing_and_managing_workflows.rst
+   workflow/using_workflows.rst
    workflow/developer_guide.rst
-   workflow/apis.rst
 
-.. include:: /process-automation/workflow/README.rst
-   :start-line: 2
+.. raw:: html
+   :file: ../landingpage_template.html
+
+.. raw:: html
+   :file: workflow/landing.html

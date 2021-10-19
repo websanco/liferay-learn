@@ -1,0 +1,121 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'フォームの概要',
+					sectionURL: 'forms/introduction-to-forms.html',
+				},
+				{
+					sectionName: 'フォームの作成と管理',
+					sectionURL: 'forms/creating_and_managing_forms.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フォームの作成',
+							url: 'forms/creating-and-managing-forms/creating-forms.html'
+						},
+						{
+							name: 'フォームレイアウトのカスタマイズ',
+							url: 'forms/creating-and-managing-forms/customizing-form-layouts.html'
+						},
+						{
+							name: 'フォームフィールドタイプのリファレンス',
+							url: 'forms/creating-and-managing-forms/forms-field-types-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'フォームの共有と送信数の管理',
+					sectionURL: 'forms/sharing_forms_and_managing_submissions.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フォームの共有',
+							url: 'forms/sharing-forms-and-managing-submissions/sharing-forms.html'
+						},
+						{
+							name: 'フォームエントリーの管理',
+							url: 'forms/sharing-forms-and-managing-submissions/managing-form-entries.html'
+						},
+						{
+							name: 'フォーム送信でのCAPTCHAの有効化',
+							url: 'forms/sharing-forms-and-managing-submissions/enabling-captcha-on-form-submissions.html'
+						},
+					]
+				},
+				{
+					sectionName: 'フォームルール',
+					sectionURL: 'forms/form_rules.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フォームルールの概要',
+							url: 'forms/form-rules/form-rules-overview.html'
+						},
+						{
+							name: '必須ルールの使用',
+							url: 'forms/form-rules/using-the-require-rule.html'
+						},
+						{
+							name: '自動入力ルールの使用',
+							url: 'forms/form-rules/using-the-autofill-rule.html'
+						},
+					]
+				},
+				{
+					sectionName: 'データプロバイダー',
+					sectionURL: 'forms/data_providers.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'データプロバイダーの概要',
+							url: 'forms/data-providers/data-providers-overview.html'
+						},
+						{
+							name: 'データプロバイダーを使用したフォームオプションの入力',
+							url: 'forms/data-providers/using-data-providers-to-populate-form-options.html'
+						},
+					]
+				},
+				{
+					sectionName: '動的データリスト',
+					sectionURL: 'forms/dynamic_data_lists.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '動的データリストの概要 (近日公開！)',
+							url: 'forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.html'
+						},
+						{
+							name: 'テンプレートを使用してフォームとリストを表示する (近日公開！)',
+							url: 'forms/dynamic-data-lists/using-templates-to-display-forms-and-lists.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Kaleoフォーム (近日公開！)',
+					sectionURL: 'forms/kaleo_forms.html',
+				},
+				{
+					sectionName: '開発者ガイド',
+					sectionURL: 'forms/developer_guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フォームストレージアダプターの書き込み',
+							url: 'forms/developer-guide/writing-a-form-storage-adapter.html'
+						},
+						{
+							name: 'フォームストレージアダプターについて',
+							url: 'forms/developer-guide/understanding-form-storage-adapters.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
