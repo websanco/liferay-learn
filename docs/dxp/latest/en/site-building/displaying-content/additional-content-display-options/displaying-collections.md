@@ -6,8 +6,8 @@ You can display a Collection by adding a Collection Page, or a Collection Displa
 
 By default, any User can see a Collection's content. However, you can create *Personalized Variations* of these items using Segments. For more information, see [Customizing Collections Using Segments](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections).
 
-```note::
-   Before displaying a Collection, you must create one. For more information, see `Creating Collections <../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md>`_.
+```{note}
+Before displaying a Collection, you must create one. For more information, see [Creating Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md).
 ```
 
 ## Displaying Collections on a Page
@@ -34,8 +34,8 @@ Follow these steps to add a Collection Page:
 
 1. To show the Collection, map its content to page elements. See the [Mapping Components](#mapping-components-to-display-a-collection-s-assets) section for more information.
 
-```important::
-   You cannot create a child page under a Collection Page.
+```{important}
+You cannot create a child page under a Collection Page.
 ```
 
 You now have a Collection Page displaying your chosen Collection, within a Collection Display Fragment.
@@ -85,8 +85,8 @@ You can also configure the item style (how each asset is individually displayed)
 
 Map these elements to the assets in the Collection Display Fragment by dragging them into the cells of the fragment.
 
-```note::
-   Depending on the option you have chosen for a Collection Display Fragment's List style, you may not be able to drag components into the fragment. If you cannot drag components into the fragment, then you can only configure the style to display the assets by selecting a different option under `List item style`, unless you choose a different List style.
+```{note}
+Depending on the option you have chosen for a Collection Display Fragment's List style, you may not be able to drag components into the fragment. If you cannot drag components into the fragment, then you can only configure the style to display the assets by selecting a different option under `List item style`, unless you choose a different List style.
 ```
 
 1. In the Page Editor, click the *Collection Display* representing your Collection.
@@ -97,8 +97,8 @@ Map these elements to the assets in the Collection Display Fragment by dragging 
 
     ![Add fragments or widgets to the Collection Display and configure the display properties.](./displaying-collections/images/06.gif)
 
-    ```note::
-        If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection automatically use the same layout settings.
+    ```{note}
+    If the Collection Display contains more than one item, you can drag the Fragment or Widget to any of them. The rest of the items in your Collection automatically use the same layout settings.
     ```
 
 1. Click the Fragment or Widget on the Collection Display.
@@ -114,6 +114,30 @@ Map these elements to the assets in the Collection Display Fragment by dragging 
     ![Add Fragments and Widgets to the Collection Display and map the content fields.](./displaying-collections/images/08.gif)
 
 1. Click *Publish*.
+
+## Paginating Display Items
+
+> Available: Liferay DXP 7.4+.
+
+Starting with Liferay DXP 7.4, you can paginate the Collection items using the Pagination configuration. This option provides two important advantages:
+
+- It is easier to show Collections with a large number of items. Instead of showing all the items in the Collection, you can decide how many items to show at once, while allowing users to move back and forward through the list of items in the Collection.
+- Breaking the visible list of items into smaller groups reduces the server overhead, improving the server response time and user experience.
+
+To paginate the display items in the Collection Display,
+
+1. Click the Edit icon (![Edit icon](../../../images/icon-edit.png)) on the Content Page with the Collection Display.
+
+1. Click the Browser icon (![Add widget icon](../../../images/icon-cursor.png)) to open the Fragments and Widgets panel.
+
+1. Under Page Elements, select the Collection Display you want to paginate.
+
+1. In the General Settings, choose the pagination options:
+
+    - Pagination: None (no pagination), Numeric, or Simple (Previous/Next controls).
+    - Maximum Number of Items: Number of items you want to show on each page.
+
+    ![Choose the pagination options for the Collection Display items.](./images/../displaying-collections/images/12.gif)
 
 ## Viewing Collections Usage Throughout the Site
 
