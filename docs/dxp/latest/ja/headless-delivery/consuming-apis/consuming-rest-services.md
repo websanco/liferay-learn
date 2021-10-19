@@ -13,7 +13,7 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 RESTサービスを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
 
 ``` bash
-docker run -it -p 8080:8080 liferay/portal:7.3.2-ga3
+docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 ```
 
 Liferay DXPのRESTサービスは、次のURLで公開されています。
@@ -42,7 +42,7 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 
 1.  デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
 2.  [Control Panel] → [Sites] → [Sites]に移動します。
-3.  [Actions]ボタンをクリックし、*[Go to Site Settings]* を選択します。
+3.  [アクション]ボタンをクリックし、*[Go to Site Settings]* を選択します。
 
 サイトIDが[Details]セクションの上部に表示されます。 `20122`のような整数になります。
 

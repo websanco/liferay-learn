@@ -11,7 +11,7 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
 
 ``` bash
-docker run -it -p 8080：8080 liferay/portal：7.3.2-ga3
+docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 ```
 
 Liferay DXPの初期化後、必要なサービスを見つけることができます。
@@ -35,22 +35,24 @@ Liferay DXPの初期化後、必要なサービスを見つけることができ
 7.  API全体のリストが表示されます。上部の検索を使用するか下にスクロールして、 `createSiteBlogPosting`への呼び出しを見つけます。
 
     ``` graphql
-    createSiteBlogPosting（
-      blogPosting：InputBlogPosting
-      siteKey：String！
+    createSiteBlogPosting(
+      blogPosting: InputBlogPosting
+      siteKey: String!
       ): BlogPosting
     ```
 
+<!-- end list -->
+
 ``` note::
-   スキーマを直接要求することで、ローカルインストールのAPIを見つけることもできます
+   You can also discover your local installation's APIs by requesting the schema directly:
 
    ``curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'``
 
 
-   このURLは認証を必要としませんが、返されたスキーマを管理するのはかなり面倒です。 このため、付属のGraphQLクライアントを使用することをお勧めします。
+   This URL does not require authentication, but it's quite cumbersome to manage the returned schema. For this reason, it's better to use the included GraphQL client.
 ```
 
-![含まれているGraphQLクライアントには、スキーマドキュメントブラウザがあります。](./images/01.png)
+![含まれているGraphQLクライアントには、スキーマドキュメントブラウザがあります。](./consuming-graphql-apis/images/01.png)
 
 APIでは、エントリが投稿されるブログを含むサイトを把握している必要があるため、最初にサイトIDを見つける必要があります。
 
@@ -152,7 +154,7 @@ GraphQLスキーマによって、ブログエントリを投稿するために�
 
 追加したブログエントリがGraphQLクライアントの右ペインに表示されます。
 
-![GraphQLクライアントを使用すると、ブラウザから直接GraphQLサービスを簡単に呼び出すことができます。](../../images/02.png)
+![GraphQLクライアントを使用すると、ブラウザから直接GraphQLサービスを簡単に呼び出すことができます。](./consuming-graphql-apis/images/02.png)
 
 Liferay DXPは、ミューテーションでリクエストされたフィールドを含むブログエントリのJSON表現を返します。
 
@@ -170,7 +172,7 @@ Liferay DXPは、ミューテーションでリクエストされたフィール
 ```
 
 ``` note::
-これらのリクエストは、Curl：
+You can make these requests with any web client, such as Curl:
 
    ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
 ```
@@ -274,4 +276,4 @@ mutation {
 }
 ```
 
-　 Liferay DXPのGraphQLサービスを呼び出す方法を学びました。 上記の例では基本認証を使用していることに注意してください。本番環境では、OAuth2を使用して安全な方法でサービスを呼び出します。
+Liferay DXPのGraphQLサービスを呼び出す方法を学びました。 上記の例では基本認証を使用していることに注意してください。本番環境では、OAuth2を使用して安全な方法でサービスを呼び出します。
