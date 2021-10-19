@@ -2,16 +2,16 @@
 
 Liferay periodically releases new minor and major versions of Liferay DXP that include security and bug fixes, as well as enhancements. To upgrade to a new major Liferay DXP version increment, you must upgrade the DXP database.
 
-```note::
-   For large data sets in production, there are several additional considerations to performing for a smooth upgrade. See `the guide to upgrading Liferay DXP <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html>`__ for a comprehensive overview of the core upgrade.
+```{note}
+For large data sets in production, there are several additional considerations to performing for a smooth upgrade. For example, custom code or Marketplace apps may require additional updates to continue working properly. See [the guide to upgrading Liferay DXP](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) for a comprehensive overview of the core upgrade.
 ```
 
-```note::
-   To update to new minor versions or service packs, instead see `Updating to a New Version of Liferay DXP <./updating-your-dxp-instance-to-a-new-minor-version.md>`_.
+```{note}
+To update to new minor versions or service packs, instead see [Updating to a New Version of Liferay DXP](./updating-your-dxp-instance-to-a-new-minor-version.md).
 ```
 
-```important::
-   Upgrading an environment in DXP Cloud requires restoring an upgraded database, and therefore involves downtime for the Liferay service to restart. Plan ahead for this downtime for production environments.
+```{important}
+Upgrading an environment in DXP Cloud requires restoring an upgraded database, and therefore involves downtime for the Liferay service to restart. Plan ahead for this downtime for production environments.
 ```
 
 Review the following steps to perform a database upgrade:
@@ -31,8 +31,8 @@ Before beginning the upgrade procedure, make sure you have the following prerequ
 * [A locally available MySQL installation](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
 * [Downloaded bundle of Liferay DXP](https://customer.liferay.com/en_US/downloads) for the version of DXP you are upgrading to. Extract this bundle to a location of your choosing.
 
-```important::
-   Download a fresh bundle for the upgrade instead of reusing an old one. Otherwise, data from previous usage of the bundle may interfere with the data upgrade.
+```{important}
+Download a fresh bundle for the upgrade instead of reusing an old one. Otherwise, data from previous usage of the bundle may interfere with the data upgrade.
 ```
 
 ## Download a Backup
@@ -109,8 +109,8 @@ The database and document library are now in place and ready for you to perform 
 
 DXP bundles provide an upgrade tool that is used for data upgrades. This tool is invoked through a script included in the bundle, `db_upgrade.sh`.
 
-```note::
-   The database upgrade tool can be pre-configured for more flexibility when running it. See `Using the Database Upgrade Tool <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html>`__ for more information on advanced usage.
+```{note}
+The database upgrade tool can be pre-configured for more flexibility when running it. See [Using the Database Upgrade Tool](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html) for more information on advanced usage.
 ```
 
 Open a command prompt within your `LIFERAY_HOME/tools/portal-tools-db-upgrade-client` folder. Then, run the following command:
@@ -173,8 +173,8 @@ Now that your Liferay installation has been upgraded, use the following steps to
     tar -czvf volume.tgz document_library
     ```
 
-    ```important::
-       If the data volume you downloaded contained more folders (such as a ``license/`` folder), then add these as additional arguments after ``document_library``.
+    ```{important}
+    If the data volume you downloaded contained more folders (such as a `license/` folder), then add these as additional arguments after `document_library`.
     ```
 
 ### Export and Compress the Upgraded Database
@@ -243,8 +243,8 @@ Follow these steps to restore a backup to your chosen environment:
 
 1. Click _Restore to environment_.
 
-    ```note::
-       The chosen environment will be unavailable while the the backup is being deployed.
+    ```{note}
+    The chosen environment will be unavailable while the the backup is being deployed.
     ```
 
 <!-- I'd also want to know if there is a zero downtime way to do an upgrade - because that's one of the next questions I would ask if I put myself in the shoes of someone trying to run a prod and business critical env. We may not be ready to say anything about that - but just a thought to put in your mind as potentially a future iteration of this - or let's say if we find out that you CAN do a zero downtime upgrade using a DR environment, then we should update this article to say so. An example:
