@@ -1,0 +1,28 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Reactの使用 (近日公開！)',
+					sectionURL: 'developing-a-javascript-application/using-react.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Reactコンポーネントユーティリティーリファレンス',
+							url: 'developing-a-javascript-application/using-react/react-component-utilities-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Angularの使用 (近日公開！)'
+				},
+				{
+					sectionName: 'Vue.jsの使用 (近日公開！)'
+				},
+			]
+		}
+	})
+</script>
