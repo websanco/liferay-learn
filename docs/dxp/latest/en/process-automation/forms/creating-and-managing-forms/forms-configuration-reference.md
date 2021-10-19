@@ -14,20 +14,22 @@ See [Exporting and Importing Forms](./exporting-and-importing-forms.md) and [Imp
 
 Each form has its own Settings menu.
 
-To access the Settings menu, choose the desired form (for example, _Guest Survey Feedback_). Click the ![Options](../../../images/icon-options.png) icon in the upper right then _Settings_.
+To access the Settings menu, choose the desired form (for example, _Guest Survey Feedback_). Click the ![Settings](../../../images/icon-settings.png) icon in the upper right.
 
 ### Form Options
 
-![Clicking the Form Options contains these settings.](./forms-configuration-reference/images/02.png)
+![The Settings menu contains these options.](./forms-configuration-reference/images/02.png)
 
-| Field | Description |
-| --- | --- |
-| Require User Authentication | Requires sign in before submitting the form |
-| CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
-| Save Answers Automatically | Saves answers to the form automatically |
-| Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
-| Select a Storage Type | Sets JSON as the default storage type; not editable. |
-| Select a [Workflow](./advanced-forms-usage/using-forms-with-a-workflow.md) | Select a workflow definition to review the form submission; workflow is deactivated by default. |
+| Section | Field | Description |
+| ------- | --- | --- |
+| General | Require User Authentication | Requires sign in before submitting the form |
+| General | CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
+| General | Save Answers Automatically | Saves answers to the form automatically |
+| General | Select a Storage Type | Sets the [storage adapter](../developer-guide/understanding-form-storage-adapters.md) for submitted records; not editable. |
+| General | Select a [Workflow](./advanced-forms-usage/using-forms-with-a-workflow.md) | Select a workflow definition to review the form submission; workflow is deactivated by default. |
+| Personalization | Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
+| Personalization | Submit Button Label | Changes the label of the Submit button to something more appropriate for your specific use case (e.g, _Vote_ or _Register_). |
+| Notifications | Send an Email Notification for Each Entry | Specifies whether an [email notification](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) sent to the form creator each time a form record is submitted. |
 
 ### Email Notifications
 
