@@ -2,10 +2,6 @@
 
 Account Users are User accounts that are associated with a Business Account or a Person Account.
 
-```{note}
-Accounts is a feature, originally found in [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/users-and-accounts/account-management.html), that is now a part of Liferay DXP 7.4 and above.
-```
-
 ## Adding an Account User
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Account Users*.

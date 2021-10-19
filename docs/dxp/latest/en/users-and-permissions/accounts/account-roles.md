@@ -4,10 +4,6 @@ You can create different Account Roles and define specific permissions for each 
 
 Note that Account Roles are assigned to a User for each specific Account. This offers great flexibility in managing Users. For example, a User might have a "Buyer" Role for Account "A" but not have that Role for Account "B".
 
-```{note}
-Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
-```
-
 ## View Account Roles
 
 There are two types of Account Roles: Shared and Owned. Shared type Account Roles are available across all Accounts in a DXP Instance. Owned type Account Roles are created and managed within a specific Account.
@@ -40,7 +36,7 @@ Make a choice to create an Shared Account Role or an Owned Account Role.
 
 1. Click the *Define Permissions* tab at the top of the page. Select what permissions the Role has to act upon the resources owned by the Account, including the Account itself. For example, selecting Update permissions enables the Role to change the Account's description. Click *Save* to save the permissions.
 
-1. Click the *Define Group Scope Permissions* tab. Select what permissions the Role has to act on resources owned by other groups (i.e. Sites, channels, asset libraries, etc.). Note that the permissions apply for the Account that is [selected as the current account](./account-management-widget.html#using-the-acconut-management-widget). 
+1. Click the *Define Group Scope Permissions* tab. Select what permissions the Role has to act on resources owned by other groups (i.e. Sites, channels, asset libraries, etc.). Note that the permissions apply for the Account that is [selected as the current account](./account-management-widget.md#using-the-account-management-widget). 
 
 1. To assign an Account User to this Role, navigate to *Applications* &rarr; *Accounts*. Select a specific account. 
 
@@ -62,6 +58,6 @@ Make a choice to create an Shared Account Role or an Owned Account Role.
 
    ![Select the permissions to assign to this role.](./account-roles/images/03.png)
 
-1. Click the *Define Group Scope Permissions* tab. Select what permissions the Role has to act on resources owned by other groups (i.e. Sites, channels, asset libraries, etc.). Note that the permissions apply for the Account that is [selected as the current account](./account-management-widget.html#using-the-acconut-management-widget).
+1. Click the *Define Group Scope Permissions* tab. Select what permissions the Role has to act on resources owned by other groups (i.e. Sites, channels, asset libraries, etc.). Note that the permissions apply for the Account that is [selected as the current account](./account-management-widget.md#using-the-account-management-widget).
 
-2. To assign an Account User, click the *Assignees* tab. Click the _Add_ icon (![Add icon](../../images/icon-add.png)) and assign a User to this Role.
+1. To assign an Account User, click the *Assignees* tab. Click the _Add_ icon (![Add icon](../../images/icon-add.png)) and assign a User to this Role.
