@@ -53,7 +53,7 @@ These limitations apply to the [Liferay service](../using-the-liferay-dxp-servic
 
 * **Autoscaling**: When enabled, autoscaling may only add new instances up to a default maximum of 10. You can configure a different maximum number of instances, up to 100 instances.
 
-* **Document Library Storage**: Your subscription plan determines the size of the `data` volume for (including the document library) for the Liferay service. The default volume size is 100 GB, but it can be increased as long as the size is below 4 TB. A private cluster is required if a project needs more than 4 TB of storage.
+* **Document Library Storage**: Your subscription plan determines the size of the `data` volume for the Liferay service, this includes storage used for Liferay's Document Library. The default volume size is 100 GB, but it can be increased as long as the size is below 4 TB. A private cluster is required if a project needs more than 4 TB of storage.
 
 * **Session Replication**: Replicating sessions between multiple Liferay instances in DXP Cloud may impact your instances' performance, and is not supported. <!-- Instead, use sticky sessions, or avoid using session storage entirely in your custom applications. -->
 
@@ -177,11 +177,11 @@ These limitations apply to the network configuration of your services in a DXP C
 
 * **Maximum SSL Certificates**: A maximum of 14 custom SSL certificates are allowed. The provider issuing the certificates may also impose its own limitations to make this less.
 
-* **Public IP Addresses**: By default, every environment has one public IP address, and services within the environment have internal IP addresses. However, you can configure a service's ports to be external, assigning a public IP address to the service. Note that exposing a service's endpoints to the internet is *not recommended,* because it bypasses DDoS protection from the [HTTPS load balancer](../infrastructure-and-operations/networking/load-balancer.md).
+* **Public IP Addresses**: By default, every environment has one public IP address, and services within the environment have internal IP addresses. However, you can configure a service's ports to be external, assigning a public IP address to the service. Exposing a service's endpoints to the internet is *not recommended*, because it bypasses DDoS protection from the [HTTPS load balancer](../infrastructure-and-operations/networking/load-balancer.md).
 
 * **Wildcard SSL Certificates**: Wildcard certificates are not supported for Liferay's auto-generated SSL certificates. However, you may configure your instance with custom Wildcard SSL certificates.
 
-* **TCP Port Status**: Some TCP ports may show as open, even if no external traffic can reach the customer environment using it. This is because the ports are open for other projects sharing the same disk on the server, though it is does not present a security risk for your environment.
+* **TCP Port Status**: Some TCP ports may show as open, even if no external traffic can reach the customer environment using it. These ports are open for other projects sharing the same disk on the server, and do not pose a security risk for your environment.
 
 ## VPN Servers
 
