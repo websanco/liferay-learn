@@ -82,7 +82,13 @@ Follow these steps to add a Relationships tab:
 
 ## Selecting a Default Layout
 
-Once you've added at least one required field to the Object Layout, you can set it as the Object's default Layout. This ensures your custom layout is used for displaying and creating Object entries. If no custom layout is select as the Object's default layout, the Object uses its automatically generated layout.
+Once you've added the desired fields and relationships to your custom layout, you can set it as the Object's default layout. This ensures it is used for creating and editing the Object's entries. If no custom layout is selected as default, the Object uses its automatically generated layout.
+
+```{important}
+In order to select a custom layout as default, the Object must have at least one required field, and all required Object fields must be added to the layout's first tab.
+```
+
+Follow these steps to select a default layout for an Object.
 
 1. Click on the desired layout.
 
@@ -90,7 +96,7 @@ Once you've added at least one required field to the Object Layout, you can set 
 
 1. Click on *Save*.
 
-The layout will now be used for creating and editing the Object's entries.
+The layout will now be used when creating and editing the Object's entries.
 
 ## Additional Information
 
