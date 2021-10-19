@@ -10,8 +10,8 @@ For more information about global scope and site management, see this article ab
 
 Before organizing your catalog, it needs to be populated with Categories. See the [Creating a New Product Category](./creating-a-new-product-category.md) article.
 
-```note::
-   If you used an accelerator like Minium to create your site with sample data, the Vocabulary and Categories are populated in the Global scope. This means all the sample categories are available in all sites.
+```{note}
+If you used an accelerator like Minium to create your site with sample data, the Vocabulary and Categories are populated in the Global scope. This means all the sample categories are available in all sites.
 ```
 
 ## Managing Product Categories

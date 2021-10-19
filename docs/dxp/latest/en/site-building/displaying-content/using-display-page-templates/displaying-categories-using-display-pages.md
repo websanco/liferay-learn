@@ -33,7 +33,7 @@ The following example shows how to modify a default Display Page Template. To av
 
 Create the Categories if they do not exist yet, and include the information you want to map on the Display Page. This example creates two new Categories with a description and a picture, each Category corresponding to a different service.
 
-1. [Create a new Category](../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md#defininig-categories)) named *Car Insurance*.
+1. [Create a new Category](../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md#defininig-categories) named *Car Insurance*.
 1. In the Categories application, click the *Actions* (![Actions](../../../images/icon-actions.png)) menu for your new category and select *Edit*.
 1. Click the *Details* tab and add a *Description* of this Category.
 
@@ -51,7 +51,7 @@ Starting with Liferay DXP 7.4, the Display Page Template includes an option to u
 1. Select the Master Page Template you want to use for this Display Page Template.
 
     ```{tip}
-    Every Page or Page Template requires a Master Page Template. To learn more, read [Master Page Templates](../../site-building/creating-pages/defining-headers-and-footers/master-page-templates.md).
+    Every Page or Page Template requires a Master Page Template. To learn more, read [Master Page Templates](../../creating-pages/defining-headers-and-footers/master-page-templates.md).
     ```
 
 1. Enter the *Name* of your Display Page Template and in the *Content Type* drop-down menu, select *Category*.

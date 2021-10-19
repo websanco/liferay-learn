@@ -47,3 +47,7 @@ The default Category Display page must contain the Category Content widget to di
 ```
 
 This establishes a relationship between the category and the selected Page. Each time a user clicks on the specific category, they are redirected to the new category display page. To view and manage your category display pages, use the Category Display Pages tab under Channel Settings.
+
+## Additional Information
+
+- [Displaying Categories Using Display Pages](https://learn.liferay.com/dxp/latest/en/site-building/displaying-content/using-display-page-templates/displaying-categories-using-display-pages.html)
