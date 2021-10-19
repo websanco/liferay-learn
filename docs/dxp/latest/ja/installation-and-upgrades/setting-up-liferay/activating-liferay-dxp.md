@@ -1,6 +1,6 @@
 # Liferay DXPのアクティブ化
 
-> サブスクライバー
+> 変更通知を受け取り（購読）が必要
 
 Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用してアクティブ化します。 アクティベーションキーは、DXPサブスクリプション契約期間または試用契約を指定します。 [Liferay DXPを初めて実行する](../installing-liferay/running-liferay-for-the-first-time.md)と、ライセンスページが表示され、アクティベーションキーが要求されます。
 
@@ -35,8 +35,8 @@ DXPを使用する準備が整いました。
 
 DXPをお試し中ですか？ [30日間の試用アクティベーションキー](https://www.liferay.com/products/dxp/30-day-trial)を取得してください。
 
-```{note}
-Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、LCSのドキュメント <https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->を参照してください。
+``` note::
+   Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、LCSのドキュメント<https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->を参照してください。
 ```
 
 ## Liferay DXPの再アクティブ化

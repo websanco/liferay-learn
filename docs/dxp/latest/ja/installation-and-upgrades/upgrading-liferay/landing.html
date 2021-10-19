@@ -1,0 +1,102 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'アップグレードの基本',
+					sectionURL: 'upgrading-liferay/upgrade_basics.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'アップグレードの概要',
+							url: 'upgrading-liferay/upgrade-basics/upgrade-overview.html'
+						},
+						{
+							name: 'Dockerによるアップグレード',
+							url: 'upgrading-liferay/upgrade-basics/upgrading-via-docker.html'
+						},
+						{
+							name: 'データベースアップグレードツールの使用',
+							url: 'upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html'
+						},
+					]
+				},
+				{
+					sectionName: 'アップグレードの安定性とパフォーマンス',
+					sectionURL: 'upgrading-liferay/upgrade_stability_and_performance.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'アップグレードの安定性とパフォーマンスの概要',
+							url: 'upgrading-liferay/upgrade-stability-and-performance/upgrade-stability-and-performance-overview.html'
+						},
+						{
+							name: 'アップグレードのためのデータベース調整',
+							url: 'upgrading-liferay/upgrade-stability-and-performance/database-tuning-for-upgrades.html'
+						},
+						{
+							name: 'より高速なアップグレードのためのデータベースのプルーニング',
+							url: 'upgrading-liferay/upgrade-stability-and-performance/database-pruning-for-faster-upgrades.html'
+						},
+					]
+				},
+				{
+					sectionName: '構成とインフラストラクチャ',
+					sectionURL: 'upgrading-liferay/configuration_and_infrastructure.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '構成とプロパティの移行',
+							url: 'upgrading-liferay/configuration-and-infrastructure/migrating-configurations-and-properties.html'
+						},
+						{
+							name: 'ファイルストアの更新',
+							url: 'upgrading-liferay/configuration-and-infrastructure/updating-the-file-store.html'
+						},
+					]
+				},
+				{
+					sectionName: 'その他のアップグレードシナリオ',
+					sectionURL: 'upgrading-liferay/other_upgrade_scenarios.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'クラスター化されたインストールの維持',
+							url: 'maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html'
+						},
+						{
+							name: 'シャード化された環境のアップグレード',
+							url: 'upgrading-liferay/other-upgrade-scenarios/upgrading-a-sharded-environment.html'
+						},
+					]
+				},
+				{
+					sectionName: 'カスタム開発のアップグレード',
+					sectionURL: 'upgrading-liferay/upgrading_custom_development.html',
+				},
+				{
+					sectionName: '参照',
+					sectionURL: 'upgrading-liferay/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '7.3のメンテナンスモードと非推奨',
+							url: 'upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-3.html'
+						},
+						{
+							name: '7.3でのデフォルト設定の変更',
+							url: 'upgrading-liferay/reference/default-setting-changes-in-7-3.html'
+						},
+						{
+							name: 'データベースアップグレードツールのリファレンス',
+							url: 'upgrading-liferay/reference/database-upgrade-tool-reference.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

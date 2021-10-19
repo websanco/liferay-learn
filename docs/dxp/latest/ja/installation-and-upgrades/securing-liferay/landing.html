@@ -1,0 +1,64 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Webサービスの保護の概要',
+					sectionURL: 'securing-liferay/securing-web-services.html',
+				},
+				{
+					sectionName: '認証の基本',
+					sectionURL: 'securing-liferay/authentication-basics.html',
+				},
+				{
+					sectionName: 'Configuring Single Sign-On',
+					sectionURL: 'securing-liferay/configuring-sso.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'トークンベースのシングルサインオン認証',
+							url: 'securing-liferay/configuring-sso/token-based-authentication.html'
+						},
+						{
+							name: 'Kerberosによる認証',
+							url: 'securing-liferay/configuring-sso/authenticating-with-kerberos.html'
+						},
+					]
+				},
+				{
+					sectionName: '多要素認証',
+					sectionURL: 'securing-liferay/multi_factor_authentication.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '多要素認証の使用',
+							url: 'securing-liferay/multi-factor-authentication/using-multi-factor-authentication.html'
+						},
+						{
+							name: '多要素認証チェッカー',
+							url: 'securing-liferay/multi-factor-authentication/multi-factor-authentication-checkers.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Webサービスの保護の概要',
+					sectionURL: 'securing-liferay/securing-web-services.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サービスアクセスポリシーの設定',
+							url: 'securing-liferay/securing-web-services/setting-service-access-policies.html'
+						},
+						{
+							name: 'Authentication Verifierの使用',
+							url: 'securing-liferay/securing-web-services/using-authentication-verifiers.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

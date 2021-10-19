@@ -1,4 +1,4 @@
-# DXP Dockerコンテナの基本
+# Dockerコンテナの基本
 
 Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Liferay Portal Community Edition (CE)](https://hub.docker.com/r/liferay/portal) Linux 上の Tomcat にバンドルされたDockerイメージ。 Liferay Docker Hubページには、さまざまなリリースのイメージの詳細とタグが表示されます。
 
@@ -21,30 +21,30 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
 1.  [ホストポート（例： `8080`）をコンテナの `8080` ポートにマップするコンテナ](https://docs.docker.com/engine/reference/commandline/run/) を実行します。
 
     ``` bash
-    docker run -it --name [some name] -p 8080:8080 liferay/portal:7.3.2-ga3
+    docker run -it --name [some name] -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
     ``` note::
-       Naming your container is optional but can facilitate managing the container.
+       コンテナの命名はオプションですが、コンテナの管理が容易になります。
     ```
 
 
-    The container runs and prints log messages, including this Tomcat startup completion message:
+    コンテナが実行され、次のTomcatの起動完了メッセージを含むログメッセージが記録されます。
     
         INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [xx,xxx] milliseconds
 
-2.  DXP UIを`https://localhost:8080` でブラウザで開きます。
+2.  Liferay UIを`https://localhost:8080` でブラウザで開きます。
 
-    ![Liferay DXPの最初のランディングページ。](./docker-container-basics/images/01.png)
+    ![Liferayのランディングページです。](./docker-container-basics/images/01.png)
 
-DXPを使用する準備が整いました。
+Liferayを使用する準備が整いました。
 
 ## ログの表示
 
-DXPログメッセージとログファイルは、ライブで表示したり、ホストにコピーしたりできます。
+Liferayログメッセージとログファイルは、ライブで表示したり、ホストにコピーしたりできます。
 
 ``` tip::
-   The ``[container]`` value is the name you entered via ``--name [some name]`` in your ``run`` command.
+   ``[container]``値は、 `` run``コマンドで `` --name [some name] ``を介して入力した名前です。
 ```
 
 ### `Dockerログ` コマンド
@@ -71,8 +71,8 @@ docker cp [container]:/opt/liferay/logs/liferay.[timestamp].log .
 
 | 方法                                                                                                                                                                                                        | 利点:                                                                                                                                           | 欠点:                                                                                                                                                                     |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `docker exec [container] /opt/liferay/tomcat/bin/shutdown.sh`                                                                                                                                             | DXP、Tomcat、およびその他のアプリがリソースを解放できるようにします。 コンテナエントリポイントは、 [シャットダウン後のスクリプト](./container-lifecycle-and-api.md#post-shutdown-phase-api) を実行します。 |                                                                                                                                                                         |
-| `i `引数を指定して実行しているターミナルセッションで `Ctrl-C` を実行します。<br><br>注意：これは SIGINT または [`SIGKILL` シグナルをアタッチされたコンテナに送信します。](https://docs.docker.com/engine/reference/commandline/attach/#extended-description) | コンテナを停止する最速の方法。                                                                                                                               | DXP、Tomcat、およびコンテナエントリポイントは、リソースを解放せずにすぐに停止します。 エントリポイントの [シャットダウン後フェーズ](./container-lifecycle-and-api.md#post-shutdown-phase-api) はスキップされます。 本番環境ではこの方法を使用しないでください |
+| `docker exec [container] /opt/liferay/tomcat/bin/shutdown.sh`                                                                                                                                             | Liferay、Tomcat、およびその他のアプリがリソースを解放できるようにします。 コンテナエントリポイントは、 [シャットダウン後のスクリプト](./container-lifecycle-and-api.md#post-shutdown-phase-api) を実行します。 |                                                                                                                                                                         |
+| `i `引数を指定して実行しているターミナルセッションで `Ctrl-C` を実行します。<br><br>注意：これは SIGINT または [`SIGKILL` シグナルをアタッチされたコンテナに送信します。](https://docs.docker.com/engine/reference/commandline/attach/#extended-description) | コンテナを停止する最速の方法。                                                                                                                               | Liferay、Tomcat、およびコンテナエントリポイントは、リソースを解放せずにすぐに停止します。 エントリポイントの [シャットダウン後フェーズ](./container-lifecycle-and-api.md#post-shutdown-phase-api) はスキップされます。 本番環境ではこの方法を使用しないでください |
 
 ## コンテナの再起動
 
@@ -83,16 +83,17 @@ docker start [container]
 ```
 
 ``` warning::
-   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 `DXPコンテナライフサイクルとAPI <./container-lifecycle-and-api.md#lifecycle>`_ 」を参照してください）。 あなたが実行していることを確認任意の `スクリプト作成します <./running-scripts-in-containers.md>` _ は、エントリー・ポイントを経由して安全に再実行することができます。
+   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「`Container Lifecycle and API <./container-lifecycle-and-api.md#lifecycle>`_」を参照してください）。 エントリーポイントを介して実行している<./running-scripts-in-containers.md>`_スクリプトが安全に再実行できることを確認してください。
 ```
 
-これで、DXPコンテナの開始、停止、監視の基本を理解できました。
+これで、Liferayコンテナの開始、停止、監視の基本を理解できました。
 
 ## 次のステップ
 
-コンテナのエントリーポイントが何をするのか知りたい、コンテナのAPIを知りたい場合は、[DXP Container Lifecycle and API](./container-lifecycle-and-api.md)を参照してください。 コンテナの使用を開始する場合は、次のいずれかの使用例を実行してください。
+コンテナのエントリーポイントが何をするのか知りたい、コンテナのAPIを知りたい場合は、[Container Lifecycle and API](./container-lifecycle-and-api.md)を参照してください。 コンテナの使用を開始する場合は、次のいずれかの使用例を実行してください。
 
-  - [DXPコンテナの構成](./configuring-containers.md)
-  - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
-  - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)
+  - [Configuring Containers](./configuring-containers.md)
+  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
+  - [Patching DXP in Docker](./patching-dxp-in-docker.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
+  - [Upgrading to a New Docker Image](./upgrading-to-a-new-docker-image.md)

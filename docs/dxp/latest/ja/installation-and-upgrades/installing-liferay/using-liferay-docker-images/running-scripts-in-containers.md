@@ -1,6 +1,6 @@
 # コンテナでのスクリプトの実行
 
-TomcatおよびDXPファイルの設定、アーティファクトの展開、およびパッチの適用以外に、DXPコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./container-lifecycle-and-api.md)いくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
+TomcatおよびLiferayファイルの設定、アーティファクトの展開、およびパッチの適用以外に、Liferayコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./container-lifecycle-and-api.md)のいくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
 
 | ライフサイクルフェーズ | 説明                                 | ターゲットコンテナフォルダー                             |
 |:----------- |:---------------------------------- |:------------------------------------------ |
@@ -13,7 +13,7 @@ TomcatおよびDXPファイルの設定、アーティファクトの展開、�
 
 ## 構成フェーズでのスクリプトの実行
 
-TomcatとDXPを構成する方法が、構成フェーズが提供する方法以外にもある場合は、それらを構成フェーズスクリプトに実装します。 構成フェーズの詳細については、 [DXP Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) を参照してください。
+TomcatとLiferayを構成する方法が、構成フェーズが提供する方法以外にもある場合は、それらを構成フェーズスクリプトに実装します。 構成フェーズの詳細は、[コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md#lifecycle)を参照してください。
 
 ここでは、バインドマウントを使用して構成フェーズスクリプトを設定する手順を示します。
 
@@ -24,7 +24,7 @@ TomcatとDXPを構成する方法が、構成フェーズが提供する方法�
     ```
 
     ``` tip::
-       If you plan to `mount the container's /mnt/liferay folder <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ already, you can put your Configure Phase scripts into a folder called ``scripts`` in your local mount folder to include in the Configure Phase. The ``[local-folder]/scripts`` folder would map to the container's ``/mnt/liferay/scripts`` folder.
+       `コンテナの /mnt/liferay フォルダ <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ をすでにマウントする予定の場合は、構成フェーズスクリプトをローカルマウントフォルダ内の``scripts``というフォルダに配置して、構成フェーズに含めることができます。 ``[local-folder]/scripts``フォルダは、コンテナの``/mnt/liferay/scripts``フォルダにマップされます。
     ```
 
 2.  事前設定アクションを実行するためのスクリプトを作成します。
@@ -122,6 +122,6 @@ inside some-pre-configure-script.sh
 
 ## 追加情報
 
-  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
-  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+  - [Docker Container Basics](./docker-container-basics.md)
+  - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)

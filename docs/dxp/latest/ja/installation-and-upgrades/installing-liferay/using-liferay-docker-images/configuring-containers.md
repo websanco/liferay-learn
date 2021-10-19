@@ -1,6 +1,6 @@
-# DXPコンテナの構成
+# コンテナの設定
 
-DXPインストールで構成可能なものはすべて、DXP Dockerコンテナで構成できます。
+Liferayインストールで構成可能なものはすべて、Liferay Dockerコンテナで構成できます。
 
 設定する最も一般的なものは次のとおりです。
 
@@ -8,12 +8,12 @@ DXPインストールで構成可能なものはすべて、DXP Dockerコンテ�
   - [ポータルプロパティ](#portal-properties)
   - [画像定義の環境変数](#image-defined-environment-variables)
   - [システムプロパティ](#system-properties)
-  - [System Settings](#system-settings)
+  - [システム設定](#system-settings)
 
 <!-- end list -->
 
 ``` note::
-   The configuration use cases that involve providing a file to the container are demonstrated here using `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_. You can also use `volumes <https://docs.docker.com/storage/volumes/>`_ and in some cases, use a ``docker cp`` command. See `Providing File to the Container <./providing-files-to-the-container.md>`_ for more information.
+   ここでは、コンテナにファイルを提供する設定のユースケースを、 `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_ を使用して示しています。 また、 `volumes <https://docs.docker.com/storage/volumes/>`_ を使ったり、場合によっては ``docker cp`` コマンドを使うこともできます。 詳細は、 `Providing File to the Container <./providing-files-to-the-container.md>`_ を参照してください。
 ```
 
 ## JVMオプション
@@ -29,16 +29,16 @@ docker run -it --name [container] -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\
 ```
 
 ``` warning::
-   In the ``LIFERAY_JVM_OPTS`` value, use backslashes to escape space characters. Don't use quotes.
+   `` LIFERAY_JVM_OPTS``値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
 ```
 
 コンテナは Tomcat の `CATALINA_OPTS` に追加された `LIFERAY_JVM_OPTS` で実行されます。
 
 ### setenv.shファイルの置き換え
 
-JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` スクリプトを上書きすることが含まれます。 `setenv.sh` スクリプトを素早く作成する方法は、DXPコンテナからコピーすることです。 スクリプトのコピーを変更して新しいコンテナで使用する方法は次のとおりです。
+JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` スクリプトを上書きすることが含まれます。 `setenv.sh` スクリプトを素早く作成する方法は、Liferayコンテナからコピーすることです。 スクリプトのコピーを変更して新しいコンテナで使用する方法は次のとおりです。
 
-1.  既存のDXPコンテナがある場合は、起動します。 それ以外の場合は、新しいものを実行します。
+1.  既存のLiferayコンテナがある場合は、起動します。 それ以外の場合は、新しいものを実行します。
 
     ``` bash
     docker run -it --name tmp-dxp -p 8080:8080 liferay/dxp:[tag]
@@ -70,27 +70,27 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
 ``` note::
-   Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+   コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
 ```
 
 ``` note::
-   See `DXP Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating DXP containers.
+   Liferayコンテナの起動と動作に関する詳細は、 `Docker Container Basics <./docker-container-basics.md>`_ を参照してください。
 ```
 
 ## ポータルプロパティ
 
-DXPコンテナ [ポータルプロパティ](../../reference/portal-properties.md) は、以下の2つの方法でオーバーライドできます：
+コンテナの[ポータルプロパティ](../../reference/portal-properties.md) は、以下の2つの方法でオーバーライドできます：
 
   - [Liferay環境変数の使用](#using-liferay-env-variables)
   - [ポータルプロパティファイルの使用](#using-a-portal-properties-file)
 
 ### Liferay環境変数の使用
 
-*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 Envプロパティは、DXP Dockerコンテナのポータルプロパティをオーバーライドします。
+*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 Envプロパティは、Liferay Dockerコンテナのポータルプロパティをオーバーライドします。
 
-1.  [ポータル プロパティ](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html) のオンライン 説明で、オーバーライドするプロパティを見つけます。
+1.  [ポータル プロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) のオンライン 説明で、オーバーライドするプロパティを見つけます。
 
-2.  プロパティ説明のすぐ下に表示される `Env` 変数名をコピーします。 例えば、 [`jdbc.default.jndi.name`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) ポータルプロパティのEnv変数は次のとおりです。
+2.  プロパティ説明のすぐ下に表示される `Env` 変数名をコピーします。 例えば、 [`jdbc.default.jndi.name`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) ポータルプロパティのEnv変数は次のとおりです。
 
     ``` properties
     Env: LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME
@@ -101,18 +101,18 @@ DXPコンテナ [ポータルプロパティ](../../reference/portal-properties.
         docker run -it --name [container] -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
 
     ``` warning::
-       In the ``Env`` variable value, use backslashes to escape space characters. Don't use quotes.
+       ``Env``変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
     ``` note::
-       See `DXP Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating the containers.
+       コンテナの起動と動作に関する詳細は、 `Docker Container Basics <./docker-container-basics.md>`_ を参照してください。
     ```
 
-プロパティは *構成* → *サーバー管理* → *プロパティ* → *ポータルプロパティ* で表示されます。
+プロパティは、コントロールパネルの *[設定]* → *[サーバー管理]* → *[プロパティ]* → *[ポータルプロパティ]* で表示されます。
 
 ### ポータルプロパティファイルの使用
 
-DXPコンテナのポータルプロパティは、 `portal-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
+コンテナのポータルプロパティは、 `portal-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
 
 1.  ホストフォルダと `files` というサブフォルダを作成します。
 
@@ -182,7 +182,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     docker run -e LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
     ```
 
-    利用規約の要件は、ポータルプロパティに基づいています。 [デフォルトのポータルプロパティ設定](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html) （ `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`を検索）には、利用規約が必要です。
+    利用規約の要件は、ポータルプロパティに基づいています。 [デフォルトのポータルプロパティ設定](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) （ `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`を検索）には、利用規約が必要です。
 
     ``` properties
     terms.of.use.required=true
@@ -200,7 +200,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 
 ## システムプロパティ
 
-[システムプロパティ](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html) は `system-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
+[システムプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/system.properties.html) は `system-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
 
 1.  `[host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes` を作成します。
 
@@ -221,20 +221,20 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     ```
 
     ``` note::
-       Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
     ```
 
 プロパティは、コントロールパネルの *構成* → *サーバー管理* → *プロパティ* → *システムプロパティ*で表示されます。
 
-## System Settings
+## システム設定
 
-DXPシステム設定は、 [コントロールパネル](https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings) または [構成ファイル](https://help.liferay.com/hc/en-us/articles/360029131651-Understanding-System-Configuration-Files) （`.config` ファイル）をコンテナに提供することで構成できます。 最初から `.config` ファイルを作成するか、UIからコンポーネント設定値をエクスポートすることができます。
+Liferayシステム設定は、 [コントロールパネル](../../../system-administration/configuring-liferay/system-settings.md) または [構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) （`.config` ファイル）をコンテナに提供することで構成できます。 最初から `.config` ファイルを作成するか、UIからコンポーネント設定値をエクスポートすることができます。
 
 次のいずれかの方法を使用して、システム設定を変更します。
 
   - [新しいコンテナへの構成の適用](#applying-configurations-to-a-new-container)
   - [実行時の構成ファイルの適用](#applying-configuration-files-at-run-time)
-  - [コントロールパネルの使用](https://help.liferay.com/hc/en-us/articles/360029131591-System-Settings)
+  - [コントロールパネルの使用](../../../system-administration/configuring-liferay/system-settings.md)
 
 ### 新しいコンテナへの構成の適用
 
@@ -250,17 +250,17 @@ DXPシステム設定は、 [コントロールパネル](https://help.liferay.c
    
         cp ~/*.config [host folder path]/files/osgi/configs
 
-3.  バインドする `-v` オプションを使用してDXPコンテナを実行すると、ホストフォルダがマウントされます。
+3.  バインドする `-v` オプションを使用してコンテナを実行すると、ホストフォルダがマウントされます。
 
     ``` bash
     docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
     ``` note::
-       Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
     ```
 
-システムコンポーネントの構成は、そのコンポーネントの画面の *構成* → *システム設定*、DXPのコントロールパネルに表示されます。
+システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、*[設定]* → *[システム設定]* に表示されます。
 
 ### 実行時の構成ファイルの適用
 
@@ -272,12 +272,12 @@ docker cp [config file] [container]:/opt/liferay/osgi/configs
 
 ## まとめ
 
-DXPコンテナのJVMオプション、ポータルプロパティ、DXPイメージ環境変数、システムプロパティ、およびシステム設定を構成する方法をマスターしました。
+LiferayコンテナのJVMオプション、ポータルプロパティ、イメージ環境変数、システムプロパティ、およびシステム設定を構成する方法をマスターしました。
 
 ## 追加情報
 
-  - [DXP Dockerコンテナの基本](./docker-container-basics.md)
-  - [DXPコンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+  - [Docker Container Basics](./docker-container-basics.md)
+  - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-  - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
-  - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)
+  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
+  - [Patching DXP in Docker](./patching-dxp-in-docker.md)

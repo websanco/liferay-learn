@@ -3,6 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
+clustering-for-high-availability/clustering-for-high-availability.md
 clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md
 clustering-for-high-availability/database-configuration-for-cluster-nodes.md
 clustering-for-high-availability/configuring-cluster-link.md
@@ -24,16 +25,16 @@ Liferay DXPは、複数のマシンのクラスター（水平クラスター）
 
 3.  すべてのノードにアクセス可能な [ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md)
 
-4.  オプションでクラスター化されている [検索エンジン（DXPの外部で実行）](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md)
+4.  オプションでクラスター化されている [検索エンジン（DXPの外部で実行）](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 
 5.  [すべてのノード間で通信とキャッシュレプリケーションを有効にするように構成されたクラスターリンク](./configuring-cluster-link.md)
 
-DXPクラスターを構成したら、それにアプリケーションをデプロイし、ユーザーエクスペリエンスを引き続き改善できます。 詳細については、「 [クラスタ化インストールの維持](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) 」を参照してください。
+DXPクラスターを構成したら、それにアプリケーションをデプロイし、ユーザーエクスペリエンスを引き続き改善できます。 詳細は、「 [クラスタ化インストールの維持](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) 」を参照してください。
 
 ## 次のステップ
 
-例としてクラスタを作成することは、DXPクラスタリングを理解するための優れた最初のステップです。 詳細については、「 [例：単純なDXPクラスター](./example-creating-a-simple-dxp-cluster.md) 作成」から始めてください。 次に、上記の [クラスタリング要件](#clustering-requirements) 対処します。
+例としてクラスタを作成することは、DXPクラスタリングを理解するための優れた最初のステップです。 詳細は、「 [例：単純なDXPクラスター](./example-creating-a-simple-dxp-cluster.md) 作成」から始めてください。 次に、上記の [クラスタリング要件](#clustering-requirements) 対処します。
 
-```{note}
-This documentation describes DXP-specific cluster configuration without getting into specific implementations of third party software, such as Java EE application servers, HTTP servers, and load balancers. Please consult the documentation for those components to configure them. Before creating a DXP cluster, make sure your OS is not defining the hostname of your system to the local network at 127.0.0.1.
+``` note::
+   このドキュメントでは、Java EEアプリケーションサーバー、HTTPサーバー、ロードバランサーなどのサードパーティソフトウェアの特定の実装に触れずに、DXP固有のクラスター構成について説明します。 それらを構成するには、それらのコンポーネントのドキュメントを参照してください。 DXPクラスターを作成する前に、OSが127.0.0.1のローカルネットワークに対してシステムのホスト名を定義していないことを確認してください。
 ```

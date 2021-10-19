@@ -1,115 +1,125 @@
 <script type="module">
-   import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
 
-   const page = new Vue({
-      el: '#landingPage',
-      data: {
-         cards: [
-            {
-               sectionName: 'Liferayのインストール',
-               sectionURL: 'installation-and-upgrades/installing_liferay.html',
-               subsections: [
-                  {
-                     name: 'Liferay-Tomcatバンドルのインストール',
-                     url: 'installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html'
-                  },
-                  {
-                     name: 'データベースの構成',
-                     url: 'installation-and-upgrades/installing-liferay/configuring-a-database.html'
-                  },
-                  {
-                     name: 'DXP Dockerコンテナの基本',
-                     url: 'installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.html'
-                  },
-               ]
-            },
-            {
-               sectionName: 'Liferay DXPのセットアップ',
-               sectionURL: 'installation-and-upgrades/setting-up-liferay.html',
-               subsections: [
-                  {
-                     name: 'メールサーバーに接続する',
-                     url: 'installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html'
-                  },
-                  {
-                     name: 'ファイルストレージの構成',
-                     url: 'system-administration/file-storage/configuring-file-storage.html'
-                  },
-                  {
-                     name: '高可用性のクラスタリング',
-                     url: 'installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html'
-                  },
-               ]
-            },
-            {
-               sectionName: 'Securing Liferay',
-               sectionURL: 'installation-and-upgrades/securing-liferay.html',
-               subsections: [
-                  {
-                     name: '認証の基本',
-                     url: 'installation-and-upgrades/securing-liferay/authentication-basics.html'
-                  },
-                  {
-                     name: 'OAuth 2.0の使用の概要',
-                     url: 'installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.html'
-                  },
-               ]
-            },
-            {
-               sectionName: 'Liferay DXPインストールの管理',
-               sectionURL: 'installation-and-upgrades/maintaining_a_liferay_dxp_installation.html',
-               subsections: [
-                  {
-                     name: 'バックアップ',
-                     url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.html'
-                  },
-                  {
-                     name: 'クラスター化されたインストールの維持',
-                     url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html'
-                  },
-                  {
-                     name: 'ライフレイのパッチ',
-                     url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html'
-                  },
-               ]
-            },
-            {
-               sectionName: 'Liferay DXPのアップグレード',
-               sectionURL: 'installation-and-upgrades/upgrading_liferay_dxp.html',
-               subsections: [
-                  {
-                     name: 'アップグレードの概要',
-                     url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html'
-                  },
-                  {
-                     name: 'Dockerによるアップグレード',
-                     url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrading-via-docker.html'
-                  },
-                  {
-                     name: 'データベースアップグレードツールの使用',
-                     url: 'installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.html'
-                  },
-               ]
-            },
-            {
-               sectionName: '参照',
-               sectionURL: 'installation-and-upgrades/reference.html',
-               subsections: [
-                  {
-                     name: 'Liferay Home',
-                     url: 'installation-and-upgrades/reference/liferay-home.html'
-                  },
-                  {
-                     name: 'ポータルプロパティ',
-                     url: 'installation-and-upgrades/reference/portal-properties.html'
-                  },
-                  {
-                     name: 'データベーステンプレート',
-                     url: 'installation-and-upgrades/reference/database-templates.html'
-                  },
-               ]
-            },
-         ]
-      }
-   })
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Liferayのインストール',
+					sectionURL: 'installation-and-upgrades/installing_liferay.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Liferay-Tomcatバンドルのインストール',
+							url: 'installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.html'
+						},
+						{
+							name: 'データベースの構成',
+							url: 'installation-and-upgrades/installing-liferay/configuring-a-database.html'
+						},
+						{
+							name: 'Dockerコンテナの基本',
+							url: 'installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Liferayのセットアップ',
+					sectionURL: 'installation-and-upgrades/setting_up_liferay.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'メールサーバーに接続する',
+							url: 'installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html'
+						},
+						{
+							name: 'ファイルストレージの構成',
+							url: 'system-administration/file-storage/configuring-file-storage.html'
+						},
+						{
+							name: '高可用性のクラスタリング',
+							url: 'installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Liferayの保護',
+					sectionURL: 'installation-and-upgrades/securing-liferay.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '認証の基本',
+							url: 'installation-and-upgrades/securing-liferay/authentication-basics.html'
+						},
+						{
+							name: 'Configuring Single Sign-On',
+							url: 'installation-and-upgrades/securing-liferay/configuring-sso.html'
+						},
+						{
+							name: 'Webサービスの保護の概要',
+							url: 'installation-and-upgrades/securing-liferay/securing-web-services.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Liferay DXPインストールの管理',
+					sectionURL: 'installation-and-upgrades/maintaining_a_liferay_dxp_installation.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'バックアップ',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.html'
+						},
+						{
+							name: 'クラスター化されたインストールの維持',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html'
+						},
+						{
+							name: 'ライフレイのパッチ',
+							url: 'installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Liferayのアップグレード',
+					sectionURL: 'installation-and-upgrades/upgrading_liferay.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'アップグレードの概要',
+							url: 'installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html'
+						},
+						{
+							name: 'Dockerによるアップグレード',
+							url: 'installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker.html'
+						},
+						{
+							name: 'データベースアップグレードツールの使用',
+							url: 'installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html'
+						},
+					]
+				},
+				{
+					sectionName: '参照',
+					sectionURL: 'installation-and-upgrades/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Liferay Home',
+							url: 'installation-and-upgrades/reference/liferay-home.html'
+						},
+						{
+							name: 'ポータルプロパティ',
+							url: 'installation-and-upgrades/reference/portal-properties.html'
+						},
+						{
+							name: 'データベーステンプレート',
+							url: 'installation-and-upgrades/reference/database-templates.html'
+						},
+					]
+				},
+			]
+		}
+	})
 </script>

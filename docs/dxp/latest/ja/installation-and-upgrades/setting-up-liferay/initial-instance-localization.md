@@ -35,17 +35,15 @@ company.default.time.zone=Europe/Lisbon
 すでにDXPを起動している場合は、コントロールパネルでインスタンスのデフォルトの言語とタイムゾーンを変更します。
 
 ## コントロールパネル
-仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの *Localization* ページを使用して変更できます。 手順については、 [仮想インスタンスのローカライズの設定](../../system-administration/virtual_instances.html) 参照してください。
+
+仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの *Localization* ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
 
 ## まとめ
-DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細については、 [サイトローカリゼーション](../../site-building/06-site-settings/site_localization.html)をご覧ください <!-- placeholder link for now--> 。</p> 
 
-
+DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [Sサイトローカリゼーション](../../site-building/site-settings/configuring_site_languages.html)を参照してください。
 
 ## 追加情報
 
-  - [仮想インスタンスのローカリゼーションの構成](../../system-administration/virtual_instances.html)
-
-  - [グローバル言語キーのオーバーライド](https://help.liferay.com/hc/en-us/articles/360029122551-Overriding-Global-Language-Keys)
-
-  - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)
+  - [Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)
+  - [Overriding Global Language Keys](https://help.liferay.com/hc/en-us/articles/360029122551-Overriding-Global-Language-Keys)
+  - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)

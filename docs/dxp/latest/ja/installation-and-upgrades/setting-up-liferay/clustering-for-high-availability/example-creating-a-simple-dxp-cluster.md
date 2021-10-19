@@ -1,89 +1,56 @@
 # 例：単純なDXPクラスターの作成
 
-DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ](https://docs.docker.com/get-started/overview/)を使用して、単一のマシンに2ノードのDXPクラスタ環境をセットアップすることです。 ここでは、必要な各サーバーと2つのDXPアプリサーバーノードをそれぞれのコンテナに準備します。 コンテナは、Dockerブリッジネットワークを介してコンテナ名で相互に参照します。 これは、DXPクラスタ開発環境をセットアップするための迅速な方法です。
+DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ](https://docs.docker.com/get-started/overview/)を使用して、単一のマシンに2ノードのDXPクラスタ環境をセットアップすることです。 ここでは、データベース、検索エンジン、およびファイルストア用のサーバーコンテナとともに、2つのDXPサーバーコンテナを作成します。
 
-作成するサーバーは次のとおりです。
+作成するサーバーコンテナは次のとおりです。
 
-| サーバータイプ | 実装            | サーバーコンテナ        |
+| サーバータイプ | 実装            | コンテナ名           |
 |:------- |:------------- |:--------------- |
 | データベース  | MariaDB       | `some-mariadb`  |
-| 検索エンジン  | Elasticsearch | `elasticsearch` |
 | ファイルストア | DBStore       | `some-mariadb`  |
-| アプリサーバー | Tomcat        | `dxp-1`         |
-| アプリサーバー | Tomcat        | `dxp-2`         |
-| アプリサーバー | Apache Httpd  | `httpd`         |
+| 検索エンジン  | Elasticsearch | `elasticsearch` |
+| DXPサーバー | Tomcat        | `dxp-1`         |
+| DXPサーバー | Tomcat        | `dxp-2`         |
 
-次の図は、作成するDXPクラスター環境を示しています。
-
-![DXPクラスター環境。](./example-creating-a-simple-dxp-cluster/images/01.png)
-
-クラスタを作成する手順は次のとおりです。
-
-1.  [コンテナのネットワークを構成します](#configure-a-network-for-the-containers) （例固有）
-2.  [データベースサーバーの準備](#prepare-a-database-server)
-3.  [検索エンジンを準備する](#prepare-a-search-engine)
-4.  [ファイルストアを準備する](#prepare-a-file-store)
-5.  [DXPサーバークラスターの構成](#configure-the-dxp-server-cluster)
-6.  [クラスターの前面にWebサーバーを配置する](#front-the-cluster-with-a-web-server)
-7.  [クラスターをテストする](#test-the-cluster)
-
-<!-- end list -->
-
-```{important}
-Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
+``` warning::
+   この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、 `Clustering for High Availability <./clustering-for-high-availability.md>`_ のすべての記事をお読みください。
 ```
 
-```{note}
-DXP cluster environments can also be set up using an [on-premises DXP Tomcat bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md), using [DXP installed to an app server](../../installing-liferay/installing_liferay_on_an_application_server.md) on-premises, or using any combination of Docker containers and DXP installations.
-```
 
-## コンテナのネットワークを構成する
+<!--
+![DXP cluster environment.](./example-creating-a-simple-dxp-cluster/images/01.png)
+Should we remove this diagram since it includes a load balancer? -->
 
-この例のサーバーコンテナは同じマシンで実行されるため、サーバーのIPアドレスは複雑になる可能性があります。 [Dockerブリッジネットワーク](https://docs.docker.com/network/bridge/)ですべてのコンテナを起動することにより、コンテナはIPアドレスではなくコンテナ名で相互に参照できます。 この種の環境以外では、IPアドレスが使用されます。
+主な手順は次のとおりです。
 
-ホストマシンで使用するコンテナ用に任意の名前のDockerブリッジネットワークを作成します。
+1.  [データベースサーバーを起動する](#prepare-a-database-server)
+2.  [ファイルストアサーバーを起動する](#prepare-a-file-store-server)
+3.  [検索エンジンサーバーを起動する](#prepare-a-search-engine-server)
+4.  [各ノードの検索エンジンを設定する](#configure-the-search-engine-for-each-node)
+5.  [DXPクラスターを開始する](#start-the-dxp-cluster)
+6.  [DXPクラスターをテストする](#test-the-dxp-cluster)
 
-``` bash
-docker network create --driver=bridge my-bridge
-```
+## データベースサーバーを起動する
 
-`my-bridge` と呼ばれるブリッジネットワークが利用可能です。
+DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、[互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151)を参照してください。 詳細は、[クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)を参照してください。
 
-## データベースサーバーの準備
+データベースサーバーとDXPデータベースを作成します。
 
-DXPクラスターには、すべてのアプリサーバーノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソース、データベースサーバー、またはデータベースサーバークラスターです。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://www.liferay.com/compatibility-matrix) を参照してください。
-
-[MariaDB Dockerイメージ](https://hub.docker.com/_/mariadb/)基づいてデータベースサーバーコンテナを作成します。
-
-1.  MariaDBデータベースサーバーコンテナを作成します。 まず、MariaDB Dockerイメージをダウンロードします。
+1.  MariaDB Dockerコンテナを起動します。
 
     ``` bash
-    docker pull mariadb:10.2
+    docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:10.2
     ```
 
-    Maria DB Dockerイメージを実行します。
+2.  コンテナ上のシェルで、[DXPデータベースを作成](../../reference/database-configurations.md)します。
+
+    データベースサーバーにサインインします。
 
     ``` bash
-    docker run --name some-mariadb --network=my-bridge -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:10.2
+    docker exec -it some-mariadb bash -c "/usr/bin/mysql -uroot -pmy-secret-pw"
     ```
 
-    `docker run` コマンドは、 `my-bridge` Dockerネットワーク上に `some-mariadb` というMariaDB Dockerコンテナを作成します。 データベースサーバーの `root` ユーザーパスワードは `my-secret-pw`です。 詳細については、 [MariaDB Docker Hubページ](https://hub.docker.com/_/mariadb/) を参照してください。
-
-2.  コンテナ上のシェルで、[DXP用のデータベース](../../reference/database-configurations.md)を作成します。
-
-    MariaDBコンテナのターミナルに接続します。
-
-    ``` bash
-    docker exec -it some-mariadb bash
-    ```
-
-    データベースにログインします。
-
-    ``` bash
-    mysql -uroot -pmy-secret-pw
-    ```
-
-    データベースを作成します。
+    DXP用のデータベースを作成します。
 
     ``` sql
     create database dxp_db character set utf8;
@@ -95,414 +62,242 @@ DXPクラスターには、すべてのアプリサーバーノードからア�
     quit
     ```
 
-    ターミナルセッションを終了します。
+    bashセッションを終了します。
 
     ``` bash
     exit
     ```
 
-詳細については、「 [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md) 」を参照してください。
+データベースサーバーでDXP用の準備が整いました。
 
-データベースサーバーはDXPの準備ができています。
+## ファイルストアサーバーを起動する
 
-## 検索エンジンを準備する
+DXPクラスターには、すべてのDXPクラスターノードからアクセスできるファイルストアが必要です。 便宜上、この例では、DXPデータベースで構成された [DBStoreファイルストア](../../../system-administration/file-storage/other-file-store-types/dbstore.md)を使用しています。 この例ですでに起動しているデータベースサーバーには、ファイルストアが含まれています。 すべてのファイルストアタイプの設定については、[ファイルストレージの構成](../../../system-administration/file-storage/configuring-file-storage.md)を参照してください。
 
-DXPクラスターには、すべてのアプリサーバーノードからアクセス可能な検索エンジン（個別のプロセスとして実行）が必要です。 詳細については、「 [検索エンジン](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) インストール」を参照してください。
+## 検索エンジンサーバーを起動する
 
-[Elasticsearch Dockerイメージ](https://hub.docker.com/_/elasticsearch)基づいて検索エンジンコンテナを作成します。
+DXPクラスターには、すべてのDXPクラスターノードからアクセス可能な検索エンジン（個別のプロセスとして実行）が必要です。 詳細は、[検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)を参照してください。
 
-1.  DXPバージョンと互換性のあるElasticsearch Dockerイメージをダウンロードします。
+Elasticsearchサーバーを作成して設定します。
 
-    ``` bash
-    docker pull elasticsearch:6.8.7
-    ```
-
-2.  Elasticsearchコンテナを起動し、コンテナのデータフォルダーをホストマシンフォルダーにマウントします。
-
-    Elasticsearchインデックスを保持するフォルダーを作成します。
+1.  Elasticsearchサーバーのデータボリュームを保存するためのローカルフォルダを設定します。 例:
 
     ``` bash
-    mkdir -p ~/elasticsearch/es_data_volume
+    mkdir -p elasticsearch/es_data_volume
     ```
 
-    Elasticsearchコンテナを実行します。
+2.  `elasticsearch`という名前のElasticsearchコンテナを起動します。
 
     ``` bash
-    docker run -it -p 9200:9200 -p 9300:9300  -e cluster.name=LiferayElasticsearchCluster -e ES_JAVA_OPTS="-Xms512m -Xmx512m" --network my-bridge --name elasticsearch -v ~/elasticsearch/es_data_volume:/usr/share/elasticsearch/data elasticsearch:6.8.7
+    docker run -it --name elasticsearch -p 9200:9200 -p 9300:9300 -e cluster.name=LiferayElasticsearchCluster -e ES_JAVA_OPTS="-Xms512m -Xmx512m" -v $(pwd)/elasticsearch/es_data_volume:/usr/share/elasticsearch/data elasticsearch:6.8.7
     ```
 
-    `docker run` コマンドは、ポート `9200` およびポート `9300`で公開するElasticsearch Dockerコンテナを作成し、 `LiferayElasticsearchCluster`と呼ばれるElasticsearchクラスターを持ちます。 `512m` の初期メモリがサーバーに割り当てられます。 `-v ...` オプションは、コンテナのデータフォルダーを、作成したホストマシンフォルダーにマップします。
+    ``` note::
+       コンテナが``max virtual memory areas vm.max_map_count [xxxxx] is too low, increase to at least [xxxxxx]``と報告してきたら、``sudo sysctl -w vm.max_map_count=[xxxxxx]``のようなコマンドを使って ``vm.max_map_count``を十分な値に設定してください。 次に、コンテナを起動します。
+    ```
 
-3.  コンテナのシェルに、必要なElasticsearchプラグインをインストールします。
-
-    Elasticsearchコンテナターミナルに接続します。
+3.  必要なElasticsearchプラグインをインストールします。
 
     ``` bash
-    docker exec -it elasticsearch bash
+    docker exec -it elasticsearch bash -c '/usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-smartcn && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-stempel'
     ```
 
-    `/elasticsearch` ディレクトリに移動します。
+検索エンジンは検索インデックスを管理する準備ができました。
+
+## ノードごとに検索エンジンサーバーを設定する
+
+各DXPノードにElasticsearchを設定するには、[設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用します。
+
+1.  設定ファイルの場所を作成します。
 
     ``` bash
-    cd /usr/share/elasticsearch
+    mkdir -p dxp-1/files/osgi/configs dxp-2/files/osgi/configs
     ```
 
-    必要なプラグインをインストールします。
+2.  `dxp-1`サーバーノードのElasticsearchを設定します。
 
     ``` bash
-    ./bin/elasticsearch-plugin install analysis-icu
-    ```
-
-    ``` bash
-    ./bin/elasticsearch-plugin install analysis-kuromoji
-    ```
-
-    ``` bash
-    ./bin/elasticsearch-plugin install analysis-smartcn
-    ```
-
-    ``` bash
-    ./bin/elasticsearch-plugin install analysis-stempel
-    ```
-
-
-    Finish your terminal session.
-
-    ``` bash
-    exit
-    ```
-
-検索エンジンは、DXPの検索インデックスを保存および取得する準備ができました。
-
-## ファイルストアを準備する
-
-DXPクラスターには、すべてのアプリサーバーノードからアクセスできるファイルストアが必要です。 便宜上、この例では、DXPデータベースで構成された [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) 使用しています。 アプリサーバーノードによって構成されます（次で説明します）。 他のファイルストアタイプについては、 [ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md) を参照してください。
-
-## DXPサーバークラスターの構成
-
-クラスターノードとして追加する各DXPアプリサーバーは、クラスター用に構成し、作成したサーバーに接続するように構成する必要があります。
-
-設定する項目の概要は次のとおりです。
-
-| 項目        | 構成方法                                                                                  |
-|:--------- |:------------------------------------------------------------------------------------- |
-| 検索エンジン接続  | [設定ファイル](../../../system-administration/system-settings/using-configuration-files.md) |
-| データソース接続  | `portal-ext.properties` ファイル                                                          |
-| ファイルストア接続 | `portal-ext.properties` ファイル。 ファイルストアの種類によっては、構成ファイルも必要です。                            |
-| クラスターリンク  | `portal-ext.properties` ファイル                                                          |
-
-[ポータルプロパティ](../../reference/portal-properties.md) は、Docker環境変数または `portal-ext.properties` ファイルを使用して指定できます。 この例ではいくつかのプロパティを使用するため、プロパティファイルが使用されます。
-
-ノード構成を整理する1つの方法は、各ノードのフォルダーを作成することです。
-
-``` bash
-mkdir dxp-1 dxp-2
-```
-
-DXPサーバーノードを構成する準備が整いました。
-
-### 検索エンジン接続を構成する
-
-1.  検索エンジン [構成ファイル](../../../system-administration/system-settings/using-configuration-files.md)作成します。
-
-    `/osgi/config/` フォルダーを作成します。
-
-    ``` bash
-    mkdir -p dxp-1/files/osgi/configs
-    ```
-
-    検索エンジン構成ファイルを作成します。
-
-    ``` bash
-    touch dxp-1/files/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config
-    ```
-
-2.  次のElasticsearchサーバー接続設定を `.config` ファイルに追加します。
-
-    ``` properties
+    cat <<EOT >> dxp-1/files/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config
     operationMode="REMOTE"
     transportAddresses="elasticsearch:9300"
     clusterName="LiferayElasticsearchCluster"
+    EOT
     ```
 
-3.  構成を他のノードにコピーします。
-
-    2番目のDXPノード用に `/osgi/config/` ディレクトリを作成します。
+3.  `dxp-2`サーバーノードのElasticsearchを設定します。
 
     ``` bash
-    mkdir -p dxp-2/files/osgi/configs
+    cat <<EOT >> dxp-2/files/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config
+    operationMode="REMOTE"
+    transportAddresses="elasticsearch:9300"
+    clusterName="LiferayElasticsearchCluster"
+    EOT
     ```
 
-    検索構成を2番目のDXPノードにコピーします。
+これらの設定ファイルを、DXPサーバーコンテナのバインドマウントを介してクラスターノードからアクセスできるようにします。
 
-    ``` bash
-    cp dxp-1/files/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config dxp-2/files/osgi/configs/
-    ```
-
-詳細については、「 [構成ファイルの使用](../../../system-administration/system-settings/using-configuration-files.md) 」を参照してください。
-
-### クラスタリンクとその他のサーバー接続を構成する
-
-各DXPサーバーで、 [ポータルプロパティ](../../reference/portal-properties.md) を使用して、クラスターリンクを有効にし、データソースとファイルストアとの接続を構成します。
-
-1.  各ノードに `portal-ext.properties` ファイルを作成します。
-
-    ``` bash
-    touch dxp-1/files/portal-ext.properties
-    ```
-
-    ``` bash
-    touch dxp-2/files/portal-ext.properties
-    ```
-
-2.  以下の構成を `dxp-1/files/portal-ext.properties` ファイルに追加します。
-
-    ``` properties
-    jdbc.default.jndi.name=
-
-    jdbc.default.driverClassName=org.mariadb.jdbc.Driver
-    jdbc.default.url=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
-    jdbc.default.username=root
-    jdbc.default.password=my-secret-pw
-
-    dl.store.impl=com.liferay.portal.store.db.DBStore
-
-    cluster.link.enabled=true
-
-    cluster.link.autodetect.address=some-mariadb:3306
-
-    cluster.link.channel.logic.name.control=control-channel-logic-name-1
-    cluster.link.channel.logic.name.transport.0=transport-channel-logic-name-1
-
-    web.server.display.node=true
-    ```
-
-3.  以下の構成を `dxp-2/files/portal-ext.properties` ファイルに追加します。
-
-    ``` properties
-    jdbc.default.jndi.name=
-
-    jdbc.default.driverClassName=org.mariadb.jdbc.Driver
-    jdbc.default.url=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
-    jdbc.default.username=root
-    jdbc.default.password=my-secret-pw
-
-    dl.store.impl=com.liferay.portal.store.db.DBStore
-
-    cluster.link.enabled=true
-
-    cluster.link.autodetect.address=some-mariadb:3306
-
-    cluster.link.channel.logic.name.control=control-channel-logic-name-2
-    cluster.link.channel.logic.name.transport.0=transport-channel-logic-name-2
-
-    web.server.display.node=true
-    ```
-
-サーバー接続の構成、クラスターリンクの有効化と構成に必要なプロパティを構成しました。 Cluster Linkはノード間の通信を可能にし、ノード間でキャッシュを複製します。
-
-以下の表は、共通および固有のプロパティ設定を示しています。
-
-#### 共通のプロパティ
-
-これらのプロパティ設定は、各ノードに共通です。
-
-| プロパティ設定                                                                                                                             | 説明                                |
-|:----------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------- |
-| `cluster.link.autodetect.address=some-mariadb:3306`                                                                                 | クラスターノードアドレスを取得するためにpingする既知のアドレス |
-| `cluster.link.enabled=true`                                                                                                         | クラスタリンクを有効にする                     |
-| `dl.store.impl=com.liferay.portal.store.db.DBStore`                                                                                 | ファイルストア（ドキュメントライブラリストア）クラス        |
-| `jdbc.default.jndi.name=`                                                                                                           | データソースJNDI名                       |
-| `jdbc.default.driverClassName=org.mariadb.jdbc.Driver`                                                                              | データベースドライバークラス                    |
-| `jdbc.default.url=jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false` | データソースURL                         |
-| `jdbc.default.username=root`                                                                                                        | データベース管理者のユーザー名                   |
-| `jdbc.default.password=my-secret-pw`                                                                                                | データベース管理者ユーザーのパスワード               |
-| `web.server.display.node=true`                                                                                                      | サーバーアドレスとウェブサーバーポートを表示します         |
-
-#### 特徴的な特性
-
-次のポートプロパティとクラスターロジック名のプロパティは、各ノードを区別します。
-
-| プロパティ                                         | dxp-1                          | dxp-2                          |
-|:--------------------------------------------- |:------------------------------ |:------------------------------ |
-| `cluster.link.channel.logic.name.control`     | control-channel-logic-name-1   | control-channel-logic-name-2   |
-| `cluster.link.channel.logic.name.transport.0` | transport-channel-logic-name-1 | transport-channel-logic-name-2 |
-
-クラスタ構成の詳細については、 [Cluster Link](./configuring-cluster-link.md) を参照してください。
-
-## クラスターの前面にWebサーバーを配置する
-
-最後に、Webサーバーはリバースプロキシおよびロードバランサーとして使用されます。 すべてのリクエストを受け入れ、最も利用可能なアプリケーションサーバーにリダイレクトします。 Webサーバーは、アプリケーションサーバーをユーザーに対して透過的にします。
-
-この例では、アプリケーションサーバークラスターの前に、要求数によって負荷を分散する [Apache Webサーバー](http://httpd.apache.org/) ています。 しかし、希望するWebサーバーをDXPの前に置くことができます。
-
-1.  [Apache Web Serverイメージ](https://hub.docker.com/_/httpd)ダウンロードします。
-
-    ``` bash
-    docker pull httpd
-    ```
-
-2.  Webサーバーのコンテナを作成します。
-
-    ``` bash
-    docker run -it --name httpd -p 80:80 --network my-bridge httpd
-    ```
-
-3.  構成ファイルをローカルにコピーして編集します。
-
-    ``` bash
-    docker cp httpd:/usr/local/apache2/conf/httpd.conf .
-    ```
-
-4.  `httpd.conf` ファイルで、これらのモジュールをロードするための行を追加またはコメント解除します。
-   
-        LoadModule xml2enc_module modules/mod_xml2enc.so
-        LoadModule proxy_html_module modules/mod_proxy_html.so
-        LoadModule proxy_module modules/mod_proxy.so
-        LoadModule proxy_http_module modules/mod_proxy_http.so
-        LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
-        LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
-        LoadModule slotmem_shm_module modules/mod_slotmem_shm.so
-        LoadModule ssl_module modules/mod_ssl.so
-        LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so
-        LoadModule lbmethod_bytraffic_module modules/mod_lbmethod_bytraffic.so
-
-5.  `httpd.conf` ファイルの最後に [`VirtualHost` 要素](https://httpd.apache.org/docs/2.4/vhosts/) を追加して、リクエストプロキシと負荷分散を構成します（Apacheの [`byrequests` メソッド](https://httpd.apache.org/docs/2.4/mod/mod_lbmethod_byrequests.html)）。<VirtualHost *:80> ProxyRequests off ProxyPass / balancer://liferaycluster/ ProxyPassReverse / balancer://liferaycluster/ # Set the header for the http protocol RequestHeader set X-Forwarded-Proto "http" # Serve /excluded from the local httpd data ProxyPass /excluded ! # Preserve the host when invoking tomcat ProxyPreserveHost on Header add Set-Cookie "ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/" env=BALANCER_ROUTE_CHANGED <Proxy balancer:> BalancerMember "http://dxp-1:8080" route=liferay1 BalancerMember "http://dxp-2:8080" route=liferay2 ProxySet lbmethod=byrequests ProxySet stickysession=ROUTEID </Proxy> </VirtualHost>
-
-6.  編集した `httpd.conf` ファイルを `httpd` コンテナにコピーします。
-
-    ``` bash
-    docker cp httpd.conf httpd:/usr/local/apache2/conf
-    ```
-
-7.  `httpd` コンテナを再起動して、変更を適用します。
-
-    ``` bash
-    docker stop httpd
-    docker start -i httpd
-    ```
-
-Webサーバーは、要求をプロキシし、DXPアプリケーションサーバー間で要求の負荷を分散する準備ができています。 DXPクラスターの動作を確認する時が来ました。
-
-## DXPクラスタノードを起動します。
-
-DXPクラスターノードコンテナには次の構成があります。
-
-| 設定               | dxp-1                       | dxp-2                       |
-|:---------------- |:--------------------------- |:--------------------------- |
-| AJPポートマッピング      | `8009:8009`                 | `9009:8009`                 |
-| HTTPポートマッピング     | `8080:8080`                 | `9080:8080`                 |
-| OSGiコンテナポートマッピング | `11311:11311`               | `11312:11311`               |
-| ボリュームバインドマウント    | `$(pwd)/dxp-1:/mnt/liferay` | `$(pwd)/dxp-2:/mnt/liferay` |
-
-ホストポートはコンテナポートにマッピングされています。 固有のホストポートは、ホストでの衝突を防ぎます。 コンテナポートは、各コンテナ内で一意である必要があるだけなので、各ノードで同じにすることができます（たとえば、各コンテナは、WebサーバーのHTTPポートとして `8080` を使用します）。 サンプルのプロキシサーバーとロードバランサは、各コンテナのHTTPポートを介してリクエストをコンテナに転送することに注意してください。 以下は、 `httpd.conf` ファイルからのプロキシ構成の抜粋です。
-
-``` 
-  ...
-  <Proxy balancer://liferaycluster>
-    BalancerMember "http://dxp-1:8080" route=liferay1
-    BalancerMember "http://dxp-2:8080" route=liferay2
-    ...
-  </Proxy>
-  ...
+``` note::
+   後でDXPサーバーに使用される``docker run --add-host elasticsearch:[ip] ...``コマンドは、名前_elasticsearch_をElasticsearchサーバーのホストIPアドレスにマップする``/etc/hosts/``エントリを追加します。
 ```
 
-上記の表で、OSGiコンテナのポートマッピングは、各コンテナでGogoシェルを使用するためのものです。 ボリュームバインドマウントは、DXPコンテナの構成フェーズを利用して、 `portal-ext.properties` ファイルをDXPサーバーの [Liferay Home](../../reference/liferay-home.md)にコピーします。
+## DXPクラスターを開始する
 
-DXPクラスターノードを起動します。
+DXPクラスターノードコンテナには、次の固有の設定があります。
 
-1.  開始 `dxp-1`：
+| 設定                        | dxp-1                          | dxp-2                          |
+|:------------------------- |:------------------------------ |:------------------------------ |
+| AJPポートマッピング               | `8009:8009`                    | `9009:8009`                    |
+| HTTPポートマッピング              | `8080:8080`                    | `9080:8080`                    |
+| OSGiコンテナポートマッピング          | `11311:11311`                  | `11312:11311`                  |
+| バインドマウント                  | `$(pwd)/dxp-1:/mnt/liferay`    | `$(pwd)/dxp-2:/mnt/liferay`    |
+| クラスターリンク制御チャネルのロジック名      | control-channel-logic-name-1   | control-channel-logic-name-2   |
+| クラスターリンクトランスポートチャネルのロジック名 | transport-channel-logic-name-1 | transport-channel-logic-name-2 |
 
-    ``` bash
-    docker run -it --name dxp-1 --network my-bridge -p 8009:8009 -p 8080:8080 -p 11311:11311 -v $(pwd)/dxp-1:/mnt/liferay liferay/portal:7.3.1-ga2
+DXPコンテナを起動します。
+
+1.  [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/)コマンドを実行して、`elasticsearch`および`some-mariadb`コンテナのコンテナIPアドレスを取得します。 `bridge`ネットワークがデフォルトネットワークです。
+
+    ``` important::
+       次の``docker run``コマンドでは、`[IP address]`を``elasticsearch``および``some-mariadb``コンテナのIPアドレスに置き換えます。
     ```
 
-    DXPの起動が完了すると、次のようなJGroupsクラスターメッセージがコンソールに出力されます。
+2.  `dxp-1`を開始します。
+
+    読みやすいように拡張されたコマンド：
 
     ``` bash
-    ...
-    INFO  [SCR Component Actor][JGroupsClusterChannelFactory:173] Autodetecting JGroups outgoing IP address and interface for some-mariadb:3306
-    INFO  [SCR Component Actor][JGroupsClusterChannelFactory:210] Setting JGroups outgoing IP address to 172.18.0.4 and interface to eth0
-
-    -------------------------------------------------------------------
-    GMS: address=control-channel-logic-name-1, cluster=liferay-channel-control, physical address=172.18.0.4:47533
-    -------------------------------------------------------------------
-    INFO  [SCR Component Actor][JGroupsReceiver:93] Accepted view [control-channel-logic-name-1|0] (1)[control-channel-logic-name-1]
-    INFO  [SCR Component Actor][JGroupsClusterChannel:110] Create a new JGroups channel {channelName: liferay-channel-control, localAddress: control-channel-logic-name-1, ...
-    ...
-    -------------------------------------------------------------------
-    GMS: address=transport-channel-logic-name-1, cluster=liferay-channel-transport-0, physical address=172.18.0.4:53231
-    -------------------------------------------------------------------
-    ...
-    INFO  [SCR Component Actor][JGroupsReceiver:93] Accepted view [transport-channel-logic-name-1|0] (1) [transport-channel-logic-name-1]
-    INFO  [SCR Component Actor][JGroupsClusterChannel:110] Create a new JGroups channel {channelName: liferay-channel-transport-0, localAddress: transport-channel-logic-name-1,...
-    ...
+    docker run -it \
+      --add-host elasticsearch:[IP address] \
+      --add-host some-mariadb:[IP address] \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME="" \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL="jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-1 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-1 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 \
+      -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true \
+      -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore \
+      --name dxp-1 \
+      -p 11311:11311 \
+      -p 8009:8009 \
+      -p 8080:8080 \
+      -v $(pwd)/dxp-1:/mnt/liferay \
+      liferay/portal:7.3.2-ga3
     ```
 
-    上記のメッセージは、次のことを示しています。
-
-      - JGroupsは `dxp-1`のIPアドレスを `"172.18.0.4`として自動検出し` 。</li>
-<li>JGroupsは <code>dxp-1`の制御チャネルを作成し、それをJGroupsビューに受け入れました。
-      - JGroupsは `dxp-1`のトランスポートチャネルを作成し、それをJGroupsビュー（クラスター）に受け入れました。
-
-2.  開始 `dxp-2`：
+    1行に凝縮されたコマンド：
 
     ``` bash
-    docker run -it --name dxp-2 --network my-bridge -p 9009:8009 -p 9080:8080 -p 11312:11311 -v $(pwd)/dxp-2:/mnt/liferay liferay/portal:7.3.1-ga2
+    docker run -it --name dxp-1  --add-host elasticsearch:[IP address] --add-host some-mariadb:[IP address] -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME="" -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL="jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-1 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-1 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore --name dxp-1 -p 11311:11311 -p 8009:8009 -p 8080:8080 -v $(pwd)/dxp-1:/mnt/liferay [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-    `dxp-2` ノードが起動すると、 `dxp-1` は次のようなクラスターメッセージをコンソールに出力します。
+3.  `dxp-2`を開始します。
+
+    読みやすいように拡張されたコマンド：
 
     ``` bash
-    INFO  [jgroups-42,liferay-channel-control,control-channel-logic-name-1][JGroupsReceiver:93] Accepted view [control-channel-logic-name-1|1] (2) [control-channel-logic-name-1, control-channel-logic-name-2]
-    INFO  [jgroups-41,liferay-channel-transport-0,transport-channel-logic-name-1][JGroupsReceiver:93] Accepted view [transport-channel-logic-name-1|1] (2) [transport-channel-logic-name-1, transport-channel-logic-name-2]
-    INFO  [default-2][ClusterExecutorImpl:544] Updated cluster node {bindInetAddress=/172.18.0.5, clusterNodeId=e6ee6b63-4625-1996-0bd6-dd2edf106d95, portalInetSocketAddress=/127.0.0.1:8080, portalProtocol=http}
+    docker run -it \
+      --add-host elasticsearch:[IP address] \
+      --add-host some-mariadb:[IP address] \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME="" \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL="jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root \
+      -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-2 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-2 \
+      -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 \
+      -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true \
+      -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore \
+      --name dxp-2 \
+      -p 11312:11311 \
+      -p 9009:8009 \
+      -p 9080:8080 \
+      -v $(pwd)/dxp-2:/mnt/liferay \
+      liferay/portal:7.3.2-ga3
     ```
 
-    これらのメッセージは、 `dxp-2`のIPアドレス（`172.18.0.5`）と、JGroupsが `dxp-2`の制御チャネルとトランスポートチャネルを作成し、チャネルをJGroupsビューに受け入れたことを示しています。
+    1行に凝縮されたコマンド：
 
-DXPは<http://localhost>にあります。 Webサーバーが要求をDXPサーバークラスターに送信します。
+    ``` bash
+    docker run -it --add-host elasticsearch:[IP address] --add-host some-mariadb:[IP address] -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME="" -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.mariadb.jdbc.Driver -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL="jdbc:mariadb://some-mariadb:3306/dxp_db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=my-secret-pw -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=true -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_CONTROL=control-channel-logic-name-2 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_CHANNEL_PERIOD_LOGIC_PERIOD_NAME_PERIOD_TRANSPORT_PERIOD_NUMBER0=transport-channel-logic-name-2 -e LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_AUTODETECT_PERIOD_ADDRESS=some-mariadb:3306 -e LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true -e LIFERAY_DL_PERIOD_STORE_PERIOD_IMPL=com.liferay.portal.store.db.DBStore --name dxp-2 -p 11312:11311 -p 9009:8009 -p 9080:8080 -v $(pwd)/dxp-2:/mnt/liferay [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    ```
 
-### クラスターをテストする
+`--add-host [domain]:[IP address]`オプションは、ドメイン名をマップする`/etc/hosts`[ファイルエントリ](https://docs.docker.com/engine/reference/run/#managing-etchosts)をIPアドレスに追加します。 これにより、設定（環境変数、ポータルプロパティ、 `.config`ファイルなど）がドメイン名でサーバーを参照できるようになります。
 
-クラスターをテストして、ノードに同じコンテンツの変更が表示され、少なくとも1つのクラスターノードが実行されている場合にDXPが引き続き使用できることを確認します。
+`-e [variable]=[value]`オプションは、DXPコンテナ環境変数を設定します。 詳細は、 [付録A：環境設定](#appendix-a-environment-settings) を参照してください。
 
-<http://localhost> にコンテンツ (言語選択ウィジェットなど) をサイトに追加することから始めます。
+### DXPノードにアクセスする
 
-ノードのアドレスとポートに注意してください(`ノード: [adress]:[port]`)。 ノードはDockerコンテナで実行されているため、IPアドレスの代わりにコンテナIDが表示されます。 例として下図を参照してください。
+DXPクラスターノードは、次のURLで入手できます。
 
-![DXPクラスタノードの上部に言語セレクタウィジェットがあり、下部にコンテナIDとポートが表示されます。](./example-creating-a-simple-dxp-cluster/images/02.png)
+  - DXP-1：<http://localhost:8080>
+  - DXP-2：<http://localhost:9080>
 
-`docker container ls -a` コマンドを使用して、コンテナIDをDXPコンテナと一致させることができます。
+次の図は、クラスターノードのホームページを示しています。
 
-``` bash
-$ docker container ls -a | grep dxp-1
-0335b3568fa1        liferay/portal:7.3.1-ga2       "/bin/sh -c /usr/loc…"   About an hour ago   Up About an hour (healthy)   8000/tcp, 8009/tcp, 11311/tcp, 0.0.0.0:8080->8080/tcp   dxp-1
-$ docker container ls -a | grep dxp-2
-aa547271b4d3        liferay/portal:7.3.1-ga2       "/bin/sh -c /usr/loc…"   43 minutes ago      Up 43 minutes (healthy)      8000/tcp, 8009/tcp, 11311/tcp, 0.0.0.0:9080->8080/tcp   dxp-2
-```
+![DXPクラスターノード。](./example-creating-a-simple-dxp-cluster/images/02.png)
 
-そのDXPコンテナを停止して、サーバーのフェイルオーバーをテストします。 たとえば、ブラウザが `dxp-1` コンテナを使用している場合は、そのコンテナを停止します。
+各ノードのコンテナIDとポート（`ノード：  [id]:[port]`）は、各ページの下部に表示されます。 `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true`環境設定により、この表示機能が有効になりました。 [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/)コマンドを使用してコンテナのIDを見つけることができます。
 
-``` bash
-docker stop dxp-1
-```
+### コンテンツを検索エンジンにインデックス付けする
 
-ブラウザを更新して、残りのDXPサーバーがリクエストを処理し、以前に追加したコンテンツを表示していることを確認します。
+DXPコンテンツのインデックス作成を開始します。
+
+1.  *[コントロールパネル] → [設定] → [検索機能]* に移動します。
+
+2.  [アクションをインデックスする]タブで、次のオプションをクリックします。
+
+      - *Reindex all search indexes*
+      - *Reindex all spell check indexes*
+
+コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [Search Overview](../../../using-search/getting-started/search-overview.html)を参照してください。
+
+## DXPクラスターをテストする
+
+ノード間のデータ同期をテストします。
+
+1.  クラスタノードの1つにコンテンツを追加します。
+
+    たとえば、*New Stuff*という名前の新しいウィジェットページを追加し、それに言語セレクタウィジェットを追加します。
+
+2.  他のクラスターノードのUIを更新します。
+
+両方のノードに同じ新しいコンテンツが表示されます。
 
 ![コンテンツはクラスターノード間で同期されます。](./example-creating-a-simple-dxp-cluster/images/03.png)
 
 作業中の DXPクラスタを作成しました\!
 
-```{tip}
-When you're ready to stop containers, use the `docker container stop [container ID]` command like you did to stop the DXP container above. Similarly, use the `docker container start -i [container ID]` command to restart the containers.
-```
-
 ## 次のステップ
 
-DXPクラスターの [データベース](./database-configuration-for-cluster-nodes.md) を調整します。
+DXPクラスター用に[データベース](./database-configuration-for-cluster-nodes.md)を設定します。
+
+## 付録A：環境設定
+
+サンプルのDXPサーバーコンテナは次の設定を使用しています。
+
+| 設定                                                                                                                                                                                                    | 説明                                |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------- |
+| LIFERAY\_JDBC\_PERIOD\_DEFAULT\_PERIOD\_JNDI\_PERIOD\_NAME=                                                                                                                             | データソースJNDI名                       |
+| LIFERAY\_JDBC\_PERIOD\_DEFAULT\_PERIOD\_DRIVER\_UPPERCASEC\_LASS\\<br>\_UPPERCASEN\_AME=\\<br>org.mariadb.jdbc.Driver                                               | データベースドライバークラス                    |
+| LIFERAY\_JDBC\_PERIOD\_DEFAULT\_PERIOD\_URL=\\<br>jdbc:mariadb://some-mariadb:3306/dxp\_db?\\<br>useUnicode=true\&characterEncoding=UTF-8\&useFastDateParsing=false     | データソースURL                         |
+| LIFERAY\_JDBC\_PERIOD\_DEFAULT\_PERIOD\_USERNAME=\\<br>root                                                                                                                         | データベース管理者のユーザー名                   |
+| LIFERAY\_JDBC\_PERIOD\_DEFAULT\_PERIOD\_PASSWORD=\\<br>my-secret-pw                                                                                                                 | データベース管理者ユーザーのパスワード               |
+| LIFERAY\_CLUSTER\_PERIOD\_LINK\_PERIOD\_ENABLED=\\<br>true                                                                                                                          | クラスタリンクを有効にする                     |
+| LIFERAY\_CLUSTER\_PERIOD\_LINK\_PERIOD\_CHANNEL\_PERIOD\_LOGIC\_PERIOD\_NAME\\<br>\_PERIOD\_CONTROL=\\<br>control-channel-logic-name-2                          | クラスターノードの一意のコントロールチャネル名           |
+| LIFERAY\_CLUSTER\_PERIOD\_LINK\_PERIOD\_CHANNEL\_PERIOD\_LOGIC\_PERIOD\_NAME\\<br>\_PERIOD\_TRANSPORT\_PERIOD\_NUMBER0=\\<br>transport-channel-logic-name-2 | クラスターノードの一意のトランスポートチャネル名          |
+| LIFERAY\_CLUSTER\_PERIOD\_LINK\_PERIOD\_AUTODETECT\_PERIOD\_ADDRESS=\\<br>some-mariadb:3306                                                                                     | クラスターノードアドレスを取得するためにpingする既知のアドレス |
+| LIFERAY\_WEB\_PERIOD\_SERVER\_PERIOD\_DISPLAY\_PERIOD\_NODE=\\<br>true                                                                                                          | サーバーアドレスとウェブサーバーポートを表示します         |
+| LIFERAY\_DL\_PERIOD\_STORE\_PERIOD\_IMPL=\\<br>com.liferay.portal.store.db.DBStore                                                                                                  | ファイルストア（ドキュメントライブラリストア）クラス        |
+
+詳細は、Env/[ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)の定義を参照してください。
 
 ## 追加情報
 
   - [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)
-  - [クラスタリンクの構成](./configuring-cluster-link.md)
+  - [Configuring Cluster Link](./configuring-cluster-link.md)

@@ -1,8 +1,8 @@
 # コンテナへのファイルの提供
 
-DXPコンテナは、提供されたファイルを使用して、次のユースケースを実行します。
+Liferayコンテナは、提供されたファイルを使用して、次のユースケースを実行します。
 
-  - `.properties` ファイルと `.config` ファイルでDXPを構成する
+  - `.properties` ファイルと `.config` ファイルでLiferayを構成する
   - Tomcatを構成する
   - アプリとその他のアーティファクトをデプロイする
   - パッチツールを更新する
@@ -16,7 +16,7 @@ DXPコンテナは、提供されたファイルを使用して、次のユー�
   - `/mnt/liferay`
   - `/user/local/liferay/scripts`
 
-[DXPコンテナライフサイクルおよびAPI](./container-lifecycle-and-api.md) は、スキャンされたサブフォルダー、コンテナがそれらをスキャンするフェーズ、およびそれらのファイルに対して実行されるアクションを指定します。
+[コンテナライフサイクルおよびAPI](./container-lifecycle-and-api.md) は、スキャンされたサブフォルダ、コンテナがそれらをスキャンするフェーズ、およびそれらのファイルに対して実行されるアクションを指定します。
 
 いくつかの方法でコンテナにファイルを提供できます。
 
@@ -28,7 +28,7 @@ DXPコンテナは、提供されたファイルを使用して、次のユー�
 
 アーティファクトのデプロイと `.config` ファイルの使用を除いて、すべての使用例では、コンテナの作成時にファイルを使用できるようにする必要があります。 バインドマウントとボリュームはこれを実現します。 アーティファクトのデプロイと `.config` ファイルの適用は、バインドマウントとボリュームを使用してコンテナを作成するか、実行時に `docker cp`を使用して実行できます。
 
-バインドマウントは、ファイルを提供するためのボリュームよりも単純であるため、ここでの例で使用されています。 コンテナにマウントするためのファイルを準備するときは、管理しやすい方法でファイルを整理すると便利です。 ここでは、DXPコンテナへのバインドマウント、ファイルの整理、および `docker cp` について説明します。
+バインドマウントは、ファイルを提供するためのボリュームよりも単純であるため、ここでの例で使用されています。 コンテナにマウントするためのファイルを準備するときは、管理しやすい方法でファイルを整理すると便利です。 ここでは、Liferayコンテナへのバインドマウント、ファイルの整理、および `docker cp`の使用について説明します。
 
 ## バインドマウント形式
 
@@ -54,7 +54,7 @@ DXPコンテナは、提供されたファイルを使用して、次のユー�
 
 ## バインドマウント用のファイルの整理
 
-DXPコンテナのバインドマウントは、いくつかの方法で整理できます。
+Liferayコンテナのバインドマウントは、いくつかの方法で整理できます。
 
   - キーフォルダの 1 つまたは両方にバインドします: `/mnt/liferay` 、 `/usr/local/liferay/scripts`
   - サブフォルダーにバインドする
@@ -64,9 +64,9 @@ DXPコンテナのバインドマウントは、いくつかの方法で整理�
 
 ### バインドマウントの例
 
-| 方法                             | 例                                                                                                                                                               | 利点:                                   | 欠点:                                                                                          |
+| 方式                             | 例                                                                                                                                                               | 長所                                    | 短所                                                                                           |
 |:------------------------------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------- |:-------------------------------------------------------------------------------------------- |
-| `/mnt/liferay`にマウント            | `-v[host-path]:/mnt/liferay`                                                                                                                                    | 入力ファイルを一元化します。                        | 入力ファイルは、コンテナが予期するサブフォルダーに編成する必要があります（上記の [リストされている場所を参照してください](#scanned-container-folders)）。 |
+| `/mnt/liferay`にマウント            | `-v [host-path]:/mnt/liferay`                                                                                                                                   | 入力ファイルを一元化します。                        | 入力ファイルは、コンテナが予期するサブフォルダーに編成する必要があります（上記の [リストされている場所を参照してください](#scanned-container-folders)）。 |
 | `/mnt/liferay` サブフォルダーに個別にマウント | `-v [host-path]/[folder-1]:/mnt/liferay/deploy -v [host-path]/[folder-2]:/mnt/liferay/files`<br><br><br>注: `[host-path]` は同じパスまたは異なるパスでも可能です。 | ホスト上のさまざまな場所で入力ファイルグループを使用する柔軟性。      | 管理するホストファイルの場所が増えました。                                                                        |
 | 個々のファイルにマウント                   | `-v [host path]/setenv.sh:/mnt/liferay/files/tomcat/bin/setenv.sh`                                                                                              | 入力ファイルは、 `docker run` コマンドで明確に表示されます。 | 長いドッカーランコマンド。 管理するホストファイルの場所がさらに増えます。                                                        |
 
@@ -74,17 +74,17 @@ DXPコンテナのバインドマウントは、いくつかの方法で整理�
 
 ## バインド ホストフォルダを `/mnt/liferay`にマウントする
 
-DXPへの構成、パッチ適用、および展開のためにファイルを集中管理する場合は、ホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントすることを検討してください。
+Liferayへの構成、パッチ適用、および展開のためにファイルを集中管理する場合は、ホストフォルダをコンテナの `/mnt/liferay` フォルダにバインドマウントすることを検討してください。
 
 ``` note::
-   Most of the examples in the use case articles use this bind mount strategy.
+   ユースケース記事のほとんどの例では、このバインドマウント戦略を使用しています。
 ```
 
 手順は次のとおりです。
 
 1.  ホスト上のフォルダーをベースフォルダーとして機能するように指定します。
 
-2.  ベースホストフォルダーで、コンテナが作用するすべての `/mnt/liferay` サブフォルダーに対応するサブフォルダーを作成します。 コンテナフォルダーの詳細については、 [DXP Container LifecycleおよびAPI](./dxp-container-lifecycle) を参照してください。
+2.  ベースホストフォルダーで、コンテナが作用するすべての `/mnt/liferay` サブフォルダーに対応するサブフォルダーを作成します。 コンテナフォルダの詳細は、[コンテナのライフサイクルとAPI](./dxp-container-lifecycle)を参照してください。
 
     ``` bash
     cd [host folder]
@@ -100,12 +100,12 @@ DXPへの構成、パッチ適用、および展開のためにファイルを�
      └───scripts
 
     ``` note::
-       You don't have to create all of the subfolders, just the ones you're populating.
+       すべてのサブフォルダを作成する必要はありません。入力するサブフォルダだけを作成します。
     ```
 
 3.  コンテナが作用するファイルをサブフォルダに入力します。
 
-    例えば、 [で `portal-ext.properties` ファイルを追加して](./configuring-containers.md#portal-properties) 、DXPを構成し、 [でSecurity Fix Pack](./patching-dxp-in-docker.md) を追加してインストールできます。
+    例えば、 [`portal-ext.properties` ファイルを追加して](./configuring-containers.md#portal-properties) 、DXPを構成し、 [セキュリティフィックスパック](./patching-dxp-in-docker.md) を追加してインストールできます。
 
     結果：
    
@@ -121,22 +121,34 @@ DXPへの構成、パッチ適用、および展開のためにファイルを�
     docker run -v [host folder path]:/mnt/liferay ...
     ```
 
-[DXPコンテナライフサイクル](./container-lifecycle-and-api.md#liferay-phases)に従って、新しいコンテナはマウントされたホストフォルダー内のファイル（およびネストされたフォルダー）に作用し、Tomcatを起動します
+[コンテナライフサイクル](./container-lifecycle-and-api.md#liferay-phases)に従って、新しいコンテナはマウントされたホストフォルダ内のファイル（およびネストされたフォルダ）に作用し、Tomcatを起動します
 
 ## `docker cp`を使用する
 
-実行中のコンテナにデプロイする新しいアプリ、アーティファクト、または `.config` ファイルがある場合は、 `docker cp`使用します。 次に、アプリをコンテナにコピーする例を示します。
+[`docker cp`](https://docs.docker.com/engine/reference/commandline/cp/)コマンドは、アプリケーション、モジュール、および構成をDockerコンテナにデプロイするための便利な代替手段です。
 
 ``` bash
-docker cp ~/my-apps/some-app.lpkg [container]:/mnt/liferay/deploy
+docker cp [file] [container]:[folder path]
 ```
 
-`.config` ファイルを適用するには、それをコンテナの `/mnt/liferay/files/osgi/configs` フォルダーにコピーする必要があることに注意してください。
+アプリケーションのデプロイ：
+
+``` bash
+docker cp some_app.lpkg my_container:/opt/liferay/deploy
+```
+
+[設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)のデプロイ：
+
+``` bash
+docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config my_container:/opt/liferay/osgi/configs
+```
+
+しかし、macOSなどのオペレーティングシステムでは、`docker cp`を使用すると、ファイル権限の問題が発生する場合があります。 このような場合は、バインドマウント（このセクションで説明）またはボリュームを使用してください。
 
 ## まとめ
 
-バインドマウントと `docker cp` コマンドを使用してコンテナにファイルを提供する方法をマスターしました。 詳細については、 [DXP Container Lifecycle and API](./container-lifecycle-and-api.md) を参照してください。 ユースケースの詳細については、次の記事を参照してください。
+バインドマウントと `docker cp` コマンドを使用してコンテナにファイルを提供する方法をマスターしました。 詳細は、 [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md) を参照してください。 ユースケースの詳細は、次の記事を参照してください。
 
-  - [DXPコンテナの構成](./configuring-containers.md)
-  - [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
-  - [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)
+  - [Configuring Containers](./configuring-containers.md)
+  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
+  - [Patching DXP in Docker](./patching-dxp-in-docker.md)

@@ -1,7 +1,7 @@
 # クラスタリンクの構成
 
 Cluster Linkを有効にすると、分散キャッシュがアクティブになります。 キャッシュは、同時に実行されている複数のLiferay DXPノードに分散されます。 Cluster Linkは [Ehcache](http://www.ehcache.org) レプリケーションを使用し
- 。 Ehcacheグローバル設定は [`portal.properties` ファイル](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Ehcache)ます。</p> 
+ 。 Ehcacheグローバル設定は [`portal.properties` ファイル](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Ehcache)にあります。</p> 
 
 デフォルトでは、Liferayはノード間でキャッシュされたエンティティをコピーしません。 たとえば、エンティティが削除または変更された場合、クラスターリンクは他のノードに *削除* メッセージを送信して、ローカルキャッシュ内のこのエンティティを無効にします。 別のノードでそのエンティティを要求すると、キャッシュ *ミス*ます。次に、エンティティがデータベースから取得され、ローカルキャッシュに入れられます。 1つのノードのローカルキャッシュに追加されたエンティティは、他のノードのローカルキャッシュにはコピーされません。 エンティティがキャッシュされていないノードで新しいエンティティを取得しようとすると、キャッシュ *ミス* になります。 ミスにより、ノードがトリガーされてデータベースからエンティティが取得され、ローカルキャッシュに格納されます。
 
@@ -28,7 +28,7 @@ cluster.link.enabled=true
 ```
 
 
-[Cluster Linkポータルプロパティ](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) は、ニーズに合わせてオーバーライドできるデフォルト構成を提供します。
+[Cluster Linkポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) は、ニーズに合わせてオーバーライドできるデフォルト構成を提供します。
 
 デフォルトの多くは、実際のアドレスの代わりに `localhost`使用します。 ただし、一部の構成では、 `localhost` は、ホストの実際のアドレスではなく、内部ループバックネットワーク（`127.0.0.1` または `:: 1`）にバインドされています。 それでもこの設定が必要な場合は、DXPにこのプロパティを使用して実際のアドレスを自動検出させることができます。
 
@@ -54,13 +54,13 @@ Cluster Linkには、ノード間の1対多タイプの通信を提供する拡�
 
 ## クラスタリンクの構成
 
-Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、*UDP上のIPマルチキャスト*を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細については、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
+Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、*UDP上のIPマルチキャスト*を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細は、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
 
 
 
 ### UDPを介したマルチキャストの使用
 
-DXPは、JGroups</a> チャネルの2つのグループを使用して、UDPを介したマルチキャストを実装します。コントロールグループとトランスポートグループです。 [チャネルのプロパティ](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Cluster%20Link)をカスタマイズする場合は、次のポータルプロパティを `portal-ext.properties`追加することにより、カスタマイズできます。</p> 
+DXPは、JGroups</a> チャネルの2つのグループを使用して、UDPを介したマルチキャストを実装します。コントロールグループとトランスポートグループです。 [チャネルのプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link)をカスタマイズする場合は、次のポータルプロパティを `portal-ext.properties`追加することにより、カスタマイズできます。</p> 
 
 
 
@@ -72,7 +72,7 @@ cluster.link.channel.properties.control=[your control channel properties]
 
 チャネルのプロパティについては、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#protlist) を参照してください。 デフォルトの構成では、そこで説明されている設定を持つ多くのプロパティが設定されます。
 
-マルチキャストは、ネットワーク上のすべてのデバイスにブロードキャストします。 同じネットワーク上のクラスター環境は、デフォルトで互いに通信します。 それらの間で送信されるメッセージと情報（たとえば、スケジュールされたタスク）は、意図しない結果につながる可能性があります。 ネットワーク上で論理的または物理的にそれらを分離するか、各クラスターの `portal-ext.properties` を構成して、 [マルチキャストグループアドレスとポート値の異なるセットを使用するようにして、そのようなクラスター環境を分離します](https://docs.liferay.com/portal/7.3-latest/propertiesdoc/portal.properties.html#Multicast)。
+マルチキャストは、ネットワーク上のすべてのデバイスにブロードキャストします。 同じネットワーク上のクラスター環境は、デフォルトで互いに通信します。 それらの間で送信されるメッセージと情報（たとえば、スケジュールされたタスク）は、意図しない結果につながる可能性があります。 ネットワーク上で論理的または物理的にそれらを分離するか、各クラスターの `portal-ext.properties` を構成して、 [マルチキャストグループアドレスとポート値の異なるセットを使用するようにして、そのようなクラスター環境を分離します](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Multicast)。
 
 JGroupsはデフォルトで `localhost` を使用してバインドアドレスを自動的に設定します。 ただし、一部の構成では、 `localhost` は、ホストの実際のアドレスではなく、内部ループバックネットワーク（`127.0.0.1` または `:: 1`）にバインドされています。 DXPの `cluster.link.autodetect.address` ポータルプロパティが接続可能なサーバーを指している限り、DXPはそのサーバーを使用してホストの実際のアドレスを自動的に検出します。 デフォルトの設定は次のとおりです。
 
@@ -135,5 +135,5 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 ## 追加情報
 
-  - [TCPを介したユニキャストの構成](./configuring-unicast-over-tcp.md)
-  - [高可用性のクラスタリング](./clustering-for-high-availability.md)
+  - [Configuring Unicast over TCP](./configuring-unicast-over-tcp.md)
+  - [Clustering for High Availability](./clustering-for-high-availability.md)

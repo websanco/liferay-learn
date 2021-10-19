@@ -2,8 +2,8 @@
 
 Liferay DXPは、メールサーバーを使用して、ユーザー登録とパスワード管理、サイトメンバーシップ通知、コンテンツの更新などのさまざまな目的で電子メール通知を送信するように構成できます。 この記事では、デモ目的として、Gmailをメールサーバーとして使用するように組み込みのDXPメールセッションを構成する手順を説明します。
 
-```{warning}
-カテゴリのメーリングリストに [IMAP](https://support.google.com/mail/answer/7126229?hl=en) プロトコルを使用している場合は、[メーリングリストのユーザーにメッセージを送信するメールクライアントによってメッセージがプルされたときにメッセージが削除されるようにIMAP受信トレイを設定](https://support.google.com/mail/answer/78892?hl=en) してください。 そうしないと、サーバーに保持されている各電子メールメッセージは、カテゴリに新しい投稿や更新があるたびにメーリングリストに送信されます。
+``` warning::
+   カテゴリのメーリングリストにIMAP<https://support.google.com/mail/answer/7126229?hl=en>プロトコルを使用している場合は、メーリングリストのユーザーにメッセージを送信するメールクライアントによってメッセージがプルされたときにメッセージが削除されるようにIMAP受信トレイを設定<https://support.google.com/mail/answer/78892?hl=en>してください。 そうしないと、サーバーに保持されている各電子メールメッセージは、カテゴリに新しい投稿や更新があるたびにメーリングリストに送信されます。
 ```
 
 ## DXP組み込みメールセッションの構成
@@ -18,7 +18,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
       - **Incoming POP Server：**pop.gmail.com
 
-      - **Incoming Port：** 465
+      - **Incoming Port：** 110
 
       - **Use a Secure Network Connection：**Flagged
 
@@ -28,7 +28,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
       - **Outgoing SMTP Server：**smtp.gmail.com
 
-      - **Outgoing Port：**110
+      - **Outgoing Port：**465
 
       - **Use a Secure Network Connection：**Flagged
 
@@ -40,7 +40,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
         ![メールサーバーの構成](./connecting-to-a-mail-server/images/01.png)
 
-4.  *[保存]* をクリックします。
+4.  *[Save]* をクリックします。
 
 DXPがすぐにメールセッションに接続します。
 
@@ -68,7 +68,7 @@ To validate that you configured the mail session correctly, do the following:
 | Outgoing Port                                                                       | SMTPサーバーがリスンしているポート。                                                                          |
 | Use a Secure Network Connection                                                     | SMTPサーバーに接続するときに暗号化された接続を使用します。                                                               |
 | User Name                                                                           | DXPがSMTPサーバーへのログインに使用するユーザーID。                                                                |
-| Password                                                                            | DXPがSMTPサーバーへのログインに使用するパスワード。                                                                 |
+| パスワード                                                                               | DXPがSMTPサーバーへのログインに使用するパスワード。                                                                 |
 | Manually specify additional JavaMail properties to override the above configuration | このフィールドは、追加のJavaMail設定用です。                                                                    |
 
 ## 追加情報

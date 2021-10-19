@@ -45,7 +45,8 @@ announcements.email.to.address=noreply@domain.invalid
 
 次のメールはデフォルトでブラックリストに登録されており、DXPのインストールでは使用できません。
 
-  - `noreply@liferay.com`
+  - `noreply@liferay.com
+`
   - `test@liferay.com`
   - `noreply@domain.invalid`
   - `test@domain.invalid`
@@ -53,7 +54,7 @@ announcements.email.to.address=noreply@domain.invalid
 上記のメールを使用しようとすると、`WARN`トレースが記録されます。
 
 ``` bash
-Email xxx will be ignored because it is included in mail.send.blacklist
+メールxxxはmail.send.blacklistに含まれているため、無視されます
 ```
 
 ## 追加情報
