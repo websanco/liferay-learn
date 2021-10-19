@@ -1,9 +1,9 @@
 # Account Users
 
-Account Users are User accounts that are associated with a Business Account or a Person Account. 
+Account Users are User accounts that are associated with a Business Account or a Person Account.
 
 ```{note}
-Accounts is a feature, originally found in [Liferay Commerce](../../../../latest/en/users-and-accounts/account-management.md), that is now a part of Liferay DXP 7.4 and above.
+Accounts is a feature, originally found in [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/users-and-accounts/account-management.html), that is now a part of Liferay DXP 7.4 and above.
 ```
 
 ## Adding an Account User
@@ -63,7 +63,7 @@ The following options are available in the Edit User page:
 Deleting an Account User is a two-step process: 
 
 * You may decide that you want to keep the Account User after all.
-* There may be user data that is tied with [legal requirements](./managing_user_data.html) you need to address. 
+* There may be user data that is tied with [legal requirements](../managing-user-data.md) you need to address. 
 * You may require more time to review a User's account before deletion.
 
 For these reasons and more you must first deactivate an Account User before deleting an Account User.
