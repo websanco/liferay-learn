@@ -7,6 +7,9 @@ core-frameworks/configuration-framework.md
 core-frameworks/dispatch-framework.md
 core-frameworks/message-bus.md
 core-frameworks/reference.md
+core-frameworks/dependency-injection.md
+core-frameworks/portlet-providers.md
+core-frameworks/servlets.md
 ```
 
 ```{raw} html
