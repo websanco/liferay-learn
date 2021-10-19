@@ -197,5 +197,5 @@ Liferay's Kaleo Workflow Engine and Liferay's Script Engine makes for a powerful
 ## Additional Information
 
 * [Introduction to Workflow](../introduction-to-workflow.md)
-* [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console)
+* [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)
 * [Script Examples](../../../system-administration/using-the-script-engine/script-examples.md)
