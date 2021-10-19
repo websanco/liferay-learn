@@ -12,7 +12,7 @@ When you upgrade data, it's important to know the changes made and any issues th
 * Errors and each type's frequency
 * Warnings and each type's frequency
 
-The tool reports this information to a file called `upgrade_report.info` in the `tools/portal-tools-db-upgrade-client/reports` folder. On subsequent upgrades the tool appends a timestamp to the file name (e.g., `upgrade_report.info.1631029824000`) and then reports new upgrade details to a new `upgrade_report.info` file.
+The tool reports this information to a file called `upgrade_report.info` in the `tools/portal-tools-db-upgrade-client/reports` folder. On subsequent upgrades, the tool appends a time stamp to the file name (e.g., `upgrade_report.info.1631029824000`) and then reports new upgrade details to a new `upgrade_report.info` file.
 
 ```{note}
 Upgrade reporting is available for Liferay DXP/Portal 7.4+.
