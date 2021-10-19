@@ -14,11 +14,9 @@ Follow these steps to add a Layout to an Object:
 
 1. Click on the *Layouts* tab, and click on the *Add* button (![Add Button]()).
 
-1. Enter a *Name*, and click on *Save*. This creates a blank layout that you can use to organize fields and relationships into tabs.
+1. Enter a *Name*, and click on *Save*. This creates a blank layout.
 
-1. Click on the newly created layout, check the *Default* box, and click on *Save*. This ensures your custom layout is used for displaying and creating Object entries. If unchecked, the Object uses its automatically generated layout.
-
-You can now add tabs to your custom layout and determine how the Object's fields and relationships are organized in them.
+You can now add tabs to your custom layout and determine how the Object's fields and relationships are organized for entry creation and editing.
 
 ## Designing Layout Tabs
 
@@ -81,6 +79,18 @@ Follow these steps to add a Relationships tab:
    ```
 
 1. Click on *Save*.
+
+## Selecting a Default Layout
+
+Once you've added at least one required field to the Object Layout, you can set it as the Object's default Layout. This ensures your custom layout is used for displaying and creating Object entries. If no custom layout is select as the Object's default layout, the Object uses its automatically generated layout.
+
+1. Click on the desired layout.
+
+1. In the Basic Details tab, check the *Default* box.
+
+1. Click on *Save*.
+
+The layout will now be used for creating and editing the Object's entries.
 
 ## Additional Information
 
