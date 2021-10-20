@@ -65,3 +65,7 @@ To unblock a custom event from the Block List, check the box next to the event a
 ![Select a custom event and click Unblock Events.](./definitions-for-events/images/04.png)
 
 To block a custom event, from the Custom Events tab check the box next to the event and click *Block Events*. Or click the block icon (![block icon](../../images/icon-block.png)) to the right of the event name.
+
+## Additional Information
+
+* [Events Analysis](../../touchpoints/events/events-analysis.md)

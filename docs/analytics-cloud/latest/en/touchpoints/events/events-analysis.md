@@ -33,3 +33,8 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
     Note that there are three tabs (Total, Unique, and Average) to view the breakdown of the event. The Total tab shows the total number of events triggered by all users. The Unique tab shows the total number of unique users who triggered the event. The Average tab shows the average number of events per user.
 
 1. To analyze a different event or see a different breakdown click the close icon (![Close](../../images/icon-close.png)) and close the event or breakdown. Make a new selection to see a new event analysis.
+
+## Additional Information
+
+* [Definitions for Events](../../workspace-data/definitions/definitions-for-events.md)
+* [Definitions for Event Attributes](../../workspace-data/definitions/definitions-for-event-attributes.md)
