@@ -85,7 +85,6 @@ See [here](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/mapping-t
 
 The above example shows how a `fooName` field might be added to Liferay's type mapping. Because `fooName` is not an existing property in the mapping, it works fine. If you try to override an existing property mapping, index creation fails. Instead use the `overrideTypeMappings` setting to override `properties` in the mapping.
 
-
 ### Overriding Type Mappings
 
 Use `overrideTypeMappings` to override Liferay's default type mappings and exert control over how data is indexed into the [company and system indexes](../../search-administration-and-tuning/elasticsearch-indexes-reference.md). This is an advanced feature that should be used only if strictly necessary. If you set this value, the default mappings used to define the Liferay Document Type in Liferay source code (for example, `liferay-type-mappings.json`) are ignored entirely, so include the whole mappings definition in this property, not just the segment you're modifying.
@@ -110,7 +109,7 @@ Then, from the end of the mappings, delete the concluding two curly braces.
 }
 ```
 
-Now modify whatever mappings you'd like. The changes take effect once you save the changes and trigger a re-index from Server Administration. 
+Now modify whatever mappings you'd like. The changes take effect once you save the changes and trigger a re-index from [Server Administration](../../../system-administration/using-the-server-administration-panel.md). 
 
 Here's a partial example, showing a [dynamic template](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/dynamic-templates.html) that uses the analysis configuration from `additionalIndexConfigurations` to analyze all string fields that end with `_ja`. You'd include this with all the other default mappings, replacing the provided `template_ja` with this custom one:
 
@@ -158,4 +157,3 @@ additionalConfigurations=\
 ```
 
 From simple configurations to overriding existing type mappings, Elasticsearch and Liferay's connector to Elasticsearch are configurable.
-
