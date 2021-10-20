@@ -18,6 +18,8 @@ Creating and Managing Forms
    creating-and-managing-forms/forms-configuration-reference.md
    creating-and-managing-forms/validation-conditions-reference.md
    creating-and-managing-forms/forms-permissions-reference.md
+   creating-and-managing-forms/using-storage-adapters.md
+   creating-and-managing-forms/customizing-the-submit-button.md
 
 
 -  :doc:`/process-automation/forms/creating-and-managing-forms/creating-forms`
@@ -30,6 +32,8 @@ Creating and Managing Forms
 -  :doc:`/process-automation/forms/creating-and-managing-forms/translating-forms`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/customizing-auto-save-behavior`
 -  :doc:`/process-automation/forms/creating-and-managing-forms/exporting-and-importing-forms`
+-  :doc:`/process-automation/forms/creating-and-managing-forms/using-storage-adapters`
+-  :doc:`/process-automation/forms/creating-and-managing-forms/customizing-the-submit-button`
 
 Reference
 ---------
