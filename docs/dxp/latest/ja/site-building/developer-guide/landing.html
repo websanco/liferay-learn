@@ -1,0 +1,49 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'ページフラグメントの開発',
+					sectionURL: 'developer-guide/developing_page_fragments.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フラグメントエディターの使用',
+							url: 'developer-guide/developing-page-fragments/using-the-fragments-editor.html'
+						},
+						{
+							name: 'フラグメントツールキットの使用',
+							url: 'developer-guide/developing-page-fragments/using-the-fragments-toolkit.html'
+						},
+						{
+							name: 'フラグメントへの構成オプションの追加',
+							url: 'developer-guide/developing-page-fragments/adding-configuration-options-to-fragments.html'
+						},
+					]
+				},
+				{
+					sectionName: '開発者リファレンス',
+					sectionURL: 'developer-guide/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フラグメントツールキットコマンドリファレンス',
+							url: 'developer-guide/reference/fragments/fragments-toolkit-command-reference.html'
+						},
+						{
+							name: 'ページ フラグメントエディタのインターフェイスリファレンス',
+							url: 'developer-guide/reference/fragments/page-fragment-editor-interface-reference.html'
+						},
+						{
+							name: 'フラグメント設定タイプのリファレンス',
+							url: 'developer-guide/reference/fragments/fragment-configuration-types-reference.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

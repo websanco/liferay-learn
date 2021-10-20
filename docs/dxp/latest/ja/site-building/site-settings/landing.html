@@ -1,0 +1,84 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'サイトユーザー',
+					sectionURL: 'site-settings/site_users.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サイトメンバーシップタイプの変更',
+							url: 'site-settings/site-users/changing-site-membership-type.html'
+						},
+						{
+							name: 'サイトメンバーのロールとチームのデフォルトの設定',
+							url: 'site-settings/site-users/configuring-role-and-team-defaults-for-site-members.html'
+						},
+						{
+							name: 'メンションの設定',
+							url: '../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.html'
+						}
+					]
+				},
+				{
+					sectionName: 'サイトURLの管理',
+					sectionURL: 'site-settings/managing_site_urls.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サイトのフレンドリURLを設定する',
+							url: 'site-settings/managing-site-urls/configuring-your-sites-friendly-url.html'
+						},
+						{
+							name: 'バーチャルホストのサイトURLの設定',
+							url: 'site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.html'
+						},
+						{
+							name: 'リダイレクションツールの使用',
+							url: 'site-settings/managing-site-urls/using-the-redirection-tool.html'
+						},
+					]
+				},
+				{
+					sectionName: 'サイトコンテンツの設定',
+					sectionURL: 'site-settings/site_content_configurations.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サイトのアセットごみ箱の設定',
+							url: 'site-settings/site-content-configurations/configuring-the-asset-recycle-bin-for-sites.html'
+						},
+						{
+							name: 'コンテンツの評価タイプの設定',
+							url: 'site-settings/site-content-configurations/configuring-content-rating-type.html'
+						},
+						{
+							name: 'サイト間でのコンテンツ共有の管理',
+							url: 'site-settings/site-content-configurations/managing-content-sharing-globally.html'
+						},
+					]
+				},
+				{
+					sectionName: 'サイトのローカライゼーション',
+					sectionURL: 'site-settings/site-localization.html',
+				},
+				{
+					sectionName: '新しいアナリティクスサービスの追加',
+					sectionURL: 'site-settings/adding-a-new-analytics-service.html',
+				},
+				{
+					sectionName: 'Open Graphの設定',
+					sectionURL: 'site-settings/configuring-open-graph.html',
+				},
+				{
+					sectionName: 'サイト設定UIリファレンス',
+					sectionURL: 'site-settings/site-settings-ui-reference.html',
+				},
+			]
+		}
+	})
+</script>

@@ -1,0 +1,25 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Site Appearance',
+				},
+				{
+					sectionName: 'マスターページテンプレート',
+					sectionURL: 'creating-pages/defining-headers-and-footers/master-page-templates.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'マスターページテンプレートの作成',
+							url: 'creating-pages/defining-headers-and-footers/creating-a-master-page-template.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

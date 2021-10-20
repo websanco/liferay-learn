@@ -8,6 +8,7 @@
 				{
 					sectionName: 'サイトの構築',
 					sectionURL: 'site-building/building_sites.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'サイトを追加する',
@@ -18,14 +19,15 @@
 							url: 'site-building/building-sites/building-sites-with-site-templates.html'
 						},
 						{
-							name: 'Understanding Site Membership (Coming Soon)',
-							url: ''
+							name: 'サイトメンバーシップについて',
+							url: 'site-building/building-sites/site-membership/understanding-site-membership.html'
 						}
 					]
 				},
 				{
 					sectionName: 'ページの作成',
 					sectionURL: 'site-building/creating_pages.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'サイトにページを追加する',
@@ -35,42 +37,65 @@
 							name: 'コンテンツページの概要',
 							url: 'site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.html'
 						},
+					]
+				},
+				{
+					sectionName: 'サイトの外観',
+					sectionURL: 'site-building/site_appearance.html',
+					showAll: false,
+					subsections: [
 						{
-							name: 'コンテンツページの構築',
-							url: 'site-building/creating-pages/building-and-managing-content-pages/building-content-pages.html'
+							name: 'スタイルブックを使用してサイトの外観を標準化する',
+							url: 'site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html'
+						},
+						{
+							name: 'スタイルブックトークンの定義',
+							url: 'site-building/site-appearance/developer-guide/style-book-token-definitions.html'
 						},
 					]
 				},
 				{
 					sectionName: 'コンテンツの表示',
 					sectionURL: 'site-building/displaying_content.html',
+					showAll: false,
 					subsections: [
-						{
-							name: 'Using Web Content Display (Coming Soon)',
-							url: ''
-						},
-						{
-							name: 'Using the Asset Publisher (Coming Soon)',
-							url: ''
-						},
 						{
 							name: 'ページフラグメントの使用',
 							url: 'site-building/displaying-content/using-fragments/using-page-fragments.html'
 						},
+						{
+							name: 'Webコンテンツの表示ウィジェットの使用',
+							url: 'site-building/displaying-content/using-the-web-content-display-widget.html'
+						},
 					]
 				},
 				{
-					sectionName: 'Site Navigation',
+					sectionName: 'サイトナビゲーション',
+					sectionURL: 'site-building/site_navigation.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'Configuring Site Navigation (Coming Soon)',
-							url: ''
+							name: 'サイトナビゲーションの管理',
+							url: 'site-building/site-navigation/managing-site-navigation.html'
+						},
+						{
+							name: 'ページ階層の管理',
+							url: 'site-building/site-navigation/managing-page-hierarchies.html'
+						},
+						{
+							name: 'ナビゲーションメニューの使用',
+							url: 'site-building/site-navigation/using-navigation-menus.html'
+						},
+						{
+							name: 'ナビゲーションメニューの設定',
+							url: 'site-building/site-navigation/configuring-navigation-menus.html'
 						},
 					]
 				},
 				{
 					sectionName: 'サイトエクスペリエンスのパーソナライズ',
-					sectionURL: 'site-building/personalizing-site-experience/personalizing-site-experience.html',
+					sectionURL: 'site-building/personalizing_site_experience.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'ユーザーセグメントの作成と管理',
@@ -87,24 +112,77 @@
 					]
 				},
 				{
-					sectionName: 'Optimizing Sites',
+					sectionName: '公開ツール',
+					sectionURL: 'site-building/publishing_tools.html',
 					subsections: [
 						{
-							name: 'SEOの最適化',
-							url: 'site-building/optimizing-sites/seo_optimization.html'
+							name: '公開ツールの概要',
+							url: 'site-building/publishing-tools/introduction-to-publishing-tools.html'
 						},
 						{
-							name: 'A/Bテスト',
-							url: 'site-building/optimizing-sites/ab_testing.html'
+							name: 'ステージングの概要',
+							url: 'site-building/publishing-tools/staging/staging-overview.html'
+						},
+						{
+							name: 'パブリケーションの概要',
+							url: 'site-building/publishing-tools/publications/publications-overview.html'
 						},
 					]
 				},
 				{
-					sectionName: 'Site Settings',
+					sectionName: 'サイトの最適化',
+					sectionURL: 'site-building/optimizing_sites.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'Site Localization (Coming Soon)',
-							url: ''
+							name: 'サイトの最適化',
+							url: 'site-building/optimizing_sites.html#search-engine-optimization'
+						},
+						{
+							name: 'A/Bテスト',
+							url: 'site-building/optimizing-sites/ab-testing/ab-testing.html'
+						},
+						{
+							name: 'レスポンシブサイトの構築の概要',
+							url: 'site-building/optimizing-sites/building-a-responsive-site/building-a-responsive-site.html'
+						},
+					]
+				},
+				{
+					sectionName: 'サイト設定',
+					sectionURL: 'site-building/site_settings.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サイトメンバーシップタイプの変更',
+							url: 'site-building/site-settings/site-users/changing-site-membership-type.html'
+						},
+						{
+							name: 'サイトのフレンドリURLを設定する',
+							url: 'site-building/site-settings/managing-site-urls/configuring-your-sites-friendly-url.html'
+						},
+						{
+							name: 'サイト間でのコンテンツ共有の管理',
+							url: 'site-building/site-settings/site-content-configurations/managing-content-sharing-globally.html'
+						},
+					]
+				},
+				{
+					sectionName: '開発者ガイド',
+					sectionURL: 'site-building/developer_guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'フラグメントの開発',
+							url: 'site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html'
+						},
+						{
+							name: 'フラグメントエディターの使用',
+							url: 'site-building/developer-guide/developing-page-fragments/using-the-fragments-editor.html'
+						},
+						{
+							name: 'フラグメントツールキットの使用',
+							url: 'site-building/developer-guide/developing-page-fragments/using-the-fragments-toolkit.html'
 						},
 					]
 				},

@@ -1,0 +1,28 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+			{
+				sectionName: 'Configuring Widgets',
+				showAll: false,
+				subsections: [
+					{
+						name: 'ページへのウィジェットの追加',
+						url: 'using-widget-pages/adding-widgets-to-a-page.html'
+					},
+					{
+						name: 'ウィジェットページをコンテンツページに変換する',
+						url: 'using-widget-pages/converting-widget-pages-to-content-pages.html'
+					},
+					{
+						name: 'ウィジェットページのユーザーパーソナライズの有効化',
+						url: 'using-widget-pages/enabling-user-personalization-of-widget-pages.html'
+					},
+				]
+			},
+		}
+	})
+</script>

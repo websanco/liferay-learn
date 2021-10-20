@@ -1,0 +1,90 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Webコンテンツの表示ウィジェットの使用',
+					sectionURL: 'displaying-content/using-the-web-content-display-widget.html',
+				},
+				{
+					sectionName: 'コレクションの表示',
+					sectionURL: 'displaying-content/displaying-collections.html',
+				},
+				{
+					sectionName: 'Asset Publisherウィジェットの使用',
+					sectionURL: 'displaying-content/using_the_asset_publisher_widget.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'アセットの表示',
+							url: 'displaying-content/using-the-asset-publisher-widget/displaying-assets-intro.html'
+						},
+						{
+							name: 'アセットパブリッシャーのアセットの選択',
+							url: 'displaying-content/using-the-asset-publisher-widget/selecting-assets-for-the-asset-publisher.html'
+						},
+						{
+							name: '表示設定の構成',
+							url: 'displaying-content/using-the-asset-publisher-widget/configuring-display-settings.html'
+						},
+					]
+				},
+				{
+					sectionName: 'iframeウィジェットの使用',
+					sectionURL: 'displaying-content/using-the-iframe-widget.html',
+				},
+				{
+					sectionName: 'フラグメントの使用',
+					sectionURL: 'displaying-content/using_fragments.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ページフラグメントの使用',
+							url: 'displaying-content/using-fragments/using-page-fragments.html'
+						},
+						{
+							name: 'ページフラグメントの管理',
+							url: 'displaying-content/using-fragments/managing-page-fragments.html'
+						},
+						{
+							name: 'ページフラグメントの変更の伝播',
+							url: 'displaying-content/using-fragments/propagating-page-fragment-changes.html'
+						},
+					]
+				},
+				{
+					sectionName: '表示ページテンプレートの使用',
+					sectionURL: 'displaying-content/using_display_page_templates.html',
+					subsections: [
+						{
+							name: '表示ページテンプレートの作成と管理',
+							url: 'displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.html'
+						},
+						{
+							name: '表示ページテンプレートを使用したコンテンツの表示',
+							url: 'displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.html'
+						},
+						{
+							name: '表示ページによるコンテンツの公開',
+							url: 'displaying-content/using-display-page-templates/publishing-content-with-display-pages.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ウィジェットのカスタマイズ',
+					sectionURL: 'displaying-content/customizing_widgets.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ウィジェットテンプレートを使用したウィジェットのスタイル設定',
+							url: 'displaying-content/customizing-widgets/styling-widgets-with-widget-templates.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

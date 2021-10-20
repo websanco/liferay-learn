@@ -1,0 +1,37 @@
+<div class="component-l3m9-card">
+	<div class="card">
+		<img
+			class="card-img-top"
+			data-lfr-editable-id="01-image"
+			data-lfr-editable-type="image"
+			src="https://clayui.com/images/home/lexicon_symbol.svg"
+		/>
+
+		<div class="card-body">
+			<h5
+				class="card-title"
+				data-lfr-editable-id="02-title"
+				data-lfr-editable-type="rich-text"
+			>
+				編集可能なカードタイトル
+			</h5>
+
+			<p
+				class="card-text"
+				data-lfr-editable-id="03-text"
+				data-lfr-editable-type="rich-text"
+			>
+				ここには編集可能なテキストがあります。
+			</p>
+
+			<a
+				class="btn btn-primary"
+				data-lfr-editable-id="04-label"
+				data-lfr-editable-type="link"
+				href="#"
+			>
+				編集可能なリンク
+			</a>
+		</div>
+	</div>
+</div>
