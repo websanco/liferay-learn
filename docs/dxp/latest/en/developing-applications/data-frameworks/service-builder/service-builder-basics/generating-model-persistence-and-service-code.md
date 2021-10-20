@@ -64,9 +64,9 @@ Once again, the `Bundle-` headers describe the module artifact. Service metadata
 
 | Metadata | Description |
 | :------- | :---------- |
-| `Liferay-Require-SchemaVersion: 1.0.0` | Application data schema version. When you release application versions that have database schema changes, you'll increment the version. |
+| `Liferay-Require-SchemaVersion: 1.0.0` | Your application's data schema version. When you release application versions that have database schema changes, you'll increment the version. |
 | `Liferay-Service: true` | The module provides a Liferay Service. |
-| `-dsannotations-options: inherit` | OSGi service component classes are to inherit [OSGi Declarative Services](../../../../liferay-internals/fundamentals/apis-as-osgi-services.md) annotations from their class hierarchy. For example, extension classes can access all the services that ancestor fields reference via the `@Reference` annotation. |
+| `-dsannotations-options: inherit` | OSGi service component classes inherit [OSGi Declarative Services](../../../../liferay-internals/fundamentals/apis-as-osgi-services.md) annotations from their class hierarchy. For example, extension classes can access all the services that ancestor fields reference via the `@Reference` annotation. |
 
 Here's the `build.gradle` file:
 
@@ -165,7 +165,7 @@ BUILD SUCCESSFUL in 2s
 1 actionable task: 1 executed
 ```
 
-Service Builder generates Java classes, database scripts, and configuration files for the model, persistene, and services. The file paths are relative to the `y7g4-service` module. 
+Service Builder generates Java classes, database scripts, and configuration files for the model, persistence, and services. The file paths are relative to the `y7g4-service` module. 
 
 Here's an overview of the generated structure:
 
@@ -220,7 +220,7 @@ The `module-hbm.xml` file specifies the Hibernate object relational map.
 </hibernate-mapping>
 ```
 
-The `module-hbm.xml` file maps `Y7G4EntryImpl` objects to the `Y7G4_Y7G4Entry` table. For more information on mapping with Hibernate, visit [Hibernate](https://hibernate.org/).
+The `module-hbm.xml` file maps `Y7G4EntryImpl` objects to the `Y7G4_Y7G4Entry` table. For more information on mapping with Hibernate, visit [Hibernate](https://hibernate.org).
 
 The `tables.sql` script specifies the `Y7G4_Y7G4Entry` table.
 
@@ -232,13 +232,13 @@ create table Y7G4_Y7G4Entry (
 );
 ```
 
-`y7g4EntryId` is the primary key. `name` and `description` are attributes. When you deploy the module, DXP creates the table by running the `tables.sql` script.
+`y7g4EntryId` is the primary key. `name` and `description` are attributes. When you deploy the module, DXP/Portal creates the table by running the `tables.sql` script.
 
 Since this `service.xml` file's elements don't specify indexes or sequences, the `indexes.sql` or `sequences.sql` scripts are empty.
 
 ## Deploy the Persistence Layer and Services
 
-It's time to create the persistence layer and services by deploying the generated code to a DXP server. The server will use a data source on a separate MariaDB database server---it's easier to examine a database on MariaDB than the bundled Hypersonic server. After deploying everything, you'll verify the tables and test the services.
+It's time to create the persistence layer and services by deploying the generated code to a DXP server. The server uses a data source on a separate MariaDB database server---it's easier to examine a database on MariaDB than the bundled Hypersonic server. After deploying everything, you'll verify the tables and test the services.
 
 ### Create the Database
 
@@ -268,7 +268,7 @@ It's time to create the persistence layer and services by deploying the generate
     quit
     ```
 
-1. Get the MariaDB container IP address by invoking the Docker's `network inspect`](https://docs.docker.com/engine/reference/commandline/network_inspect/) command on the default network (`bridge`) 
+1. Get the MariaDB container IP address by invoking Docker's `network inspect`](https://docs.docker.com/engine/reference/commandline/network_inspect/) command on the default network (`bridge`) 
 
     ```bash
     docker network inspect bridge
