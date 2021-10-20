@@ -1,6 +1,6 @@
 # Understanding and Extending Generated Classes
 
-Service Builder not only [generates tables for your entity](./generating-a-persistence-layer.md) but it also generates model, persistence, and service classes for it. Here you'll examine generated classes for an entity called `W9B7Entry`. Then you'll extend the local service with a new method and invoke it.
+Service Builder generates both [tables for your entity](./generating-a-persistence-layer.md) and model, persistence, and service classes for it. Here you'll examine generated classes for an entity called `W9B7Entry`. Then you'll extend the local service with a new method and invoke it.
 
 Get started by downloading and unzipping the example project:
 
@@ -77,17 +77,16 @@ The API classes define the public interface, utilities, and constants.
 
 | API Class | Description |
 | :-------- | :---------- |
-| `W9B7Entry` | `W9B7Entry` model interface which extends `W9B7EntryModel`. |
-| `W9B7EntryModel` | Base model interface. This interface and its `W9B7EntryModelImpl` implementation serve only as a container for the default property accessors Service Builder generates. Any helper methods and all application logic should be added to `W9B7EntryImpl`. |
+| `W9B7Entry` | `W9B7Entry` model interface; extends `W9B7EntryModel`. |
+| `W9B7EntryModel` | Base model interface. This interface and its `W9B7EntryModelImpl` implementation serve only as containers for the default property accessors Service Builder generates. Any helper methods and all application logic should be added to `W9B7EntryImpl`. |
 | `W9B7EntrySoap` | SOAP model, similar to `W9B7EntryModelImpl`. `W9B7EntrySoap` is serializable; it does not implement `W9B7Entry`. |
 | `W9B7EntryTable` | Represents the entity's table. |
-| `W9B7EntryWrapper` | Wrapper, wraps `W9B7Entry`. This class is designed to be extended and it lets you [customize the entity](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
+| `W9B7EntryWrapper` | Wrapper, wraps `W9B7Entry`. This class is there to be extended to [customize the entity](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
 | `W9B7EntryPersistence` | Persistence interface that defines CRUD methods for the entity such as `create`, `remove`, `countAll`, `find`, `findAll`, etc. |
-| `W9B7EntryUtil` | Persistence utility class that wraps `W9B7EntryPersistenceImpl` and provides direct access to the database for CRUD operations. This utility should only be used by the service layer; in your portlet classes, use the `W9B7Entry` class by referencing it with the [`@Reference` annotation](../../../liferay-internals/fundamentals/using-an-osgi-service.md). |
+| `W9B7EntryUtil` | Persistence utility class that wraps `W9B7EntryPersistenceImpl` and provides direct access to the database for CRUD operations. This utility should only be used by the service layer; in your portlet classes, use the `W9B7Entry` class by injecting it with the [`@Reference` annotation](../../../liferay-internals/fundamentals/using-an-osgi-service.md). |
 | `W9B7EntryLocalService` | Local service interface. |
 | `W9B7EntryLocalServiceUtil` | Local service utility class which wraps `W9B7EntryLocalServiceImpl`. |
-| `W9B7EntryLocalServiceWrapper` | Local service wrapper which implements `W9B7EntryLocalService`. This class is designed to be extended and it lets you [customize the entity's local services](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
-
+| `W9B7EntryLocalServiceWrapper` | Local service wrapper which implements `W9B7EntryLocalService`. This class is there to be extended to [customize the entity's local services](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
 
 ## Service Implementation Classes
 
@@ -99,7 +98,7 @@ These classes implement the model, persistence, and service layer.
 | `W9B7EntryCacheModel` | Represents the `W9B7Entry` entity in cache. |
 | `W9B7EntryImpl` (**MODIFIABLE**) | Model implementation. You can use this class to add helper methods and application logic to your model. If you don't add any helper methods or application logic, only the auto-generated field getters and setters are available. Whenever you add or modify methods in this class, Service Builder propagates the changes to the `W9B7Entry` interface the next time you run it. |
 | `W9B7EntryLocalServiceBaseImpl` | Local service base implementation. This is an abstract class. Service Builder injects a number of instances of various service and persistence classes into this class. |
-| `W9B7EntryLocalServiceImpl` (**MODIFIABLE**) | Local service implementation. This is the only class in the local service that you should modify | it's where you add your business logic. For any methods added or modified here, Service Builder propagates the changes to the `W9B7EntryLocalService` interface the next time you run it. |
+| `W9B7EntryLocalServiceImpl` (**MODIFIABLE**) | Local service implementation. This is the only class in the local service that you should modify. It's where you add your business logic. For any methods added or modified here, Service Builder propagates the changes to the `W9B7EntryLocalService` interface the next time you run it. |
 | `W9B7EntryModelImpl` | Base model implementation. |
 | `W9B7EntryPersistenceImpl` | Persistence implementation class that implements `W9B7EntryPersistence`. |
 
@@ -153,7 +152,7 @@ Extend the local service by adding a convenience method for creating a `W9B7Entr
     Writing src/main/resources/service.properties
     ```
 
-    Service Builder updated the local service API to support the new local service method implementation. 
+   Service Builder updated the local service API to support the new local service method implementation. 
 
 1. Check for the new method signature in the `w9b7-api` module's `W9B7EntryLocalService` class. 
 
@@ -226,4 +225,4 @@ Congratulations! You've successfully added a new service method.
 
 ## What's Next
 
-Now that you understand the Service Builder generated classes and how to add a local service method, learn how to [invoke a service from a portlet](./invoking-a-service-from-a-portlet.md).
+Now that you understand the Service Builder generated classes and how to add a local service method, you can learn how to [invoke a service from a portlet](./invoking-a-service-from-a-portlet.md).
