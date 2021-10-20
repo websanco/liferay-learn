@@ -81,7 +81,9 @@ The name, email address, account name, and first seen date is given for known in
 
 As a Segment's members interact with your pages and assets, Analytics Cloud's Interests algorithm determines the level of interest the Segment has with your site's topics. Knowing these topics helps you communicate with the Segment members to create content that interests them.
 
-See Customer Insights for details on the Interests insight.
+![The Interests tab shows interest information based on your segments.](./segments/images/08.png)
+
+The Individuals tab shows a list of names of people interested in the topic. The Active Pages tab shows a list of pages that include the interest keyword(s) that were recently viewed by segment members. The Inactive Pages tab shows a list of pages that include the interest keyword(s) but have not been recently viewed.
 
 ## Distribution Tab
 
