@@ -1,0 +1,98 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '構成スコープについて',
+					sectionURL: 'configuring-liferay/understanding-configuration-scope.html',
+				},
+				{
+					sectionName: 'システム設定',
+					sectionURL: 'configuring-liferay/system-settings.html',
+				},
+				{
+					sectionName: 'カスタムフィールドの追加',
+					sectionURL: 'configuring-liferay/adding-custom-fields.html',
+				},
+				{
+					sectionName: '設定ファイルとファクトリー',
+					sectionURL: 'configuring-liferay/configuration_files_and_factories.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '構成ファイルの使用',
+							url: 'configuring-liferay/configuration-files-and-factories/using-configuration-files.html'
+						},
+						{
+							name: '工場構成の使用',
+							url: 'configuring-liferay/configuration-files-and-factories/using-factory-configuration.html'
+						},
+					]
+				},
+				{
+					sectionName: '仮想インスタンス',
+					sectionURL: 'configuring-liferay/virtual_instances.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '仮想インスタンスを理解する',
+							url: 'configuring-liferay/virtual-instances/understanding-virtual-instances.html'
+						},
+						{
+							name: '仮想インスタンスの追加',
+							url: 'configuring-liferay/virtual-instances/adding-a-virtual-instance.html'
+						},
+						{
+							name: 'インスタンス設定',
+							url: 'configuring-liferay/virtual-instances/instance-configuration.html'
+						},
+					]
+				},
+				{
+					sectionName: 'セキュリティ設定',
+					sectionURL: 'configuring-liferay/security_settings.html',
+					subsections: [
+						{
+							name: 'アップロードされたファイルのウイルス対策スキャンを有効にする',
+							url: '../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.html'
+						},
+					]
+				},
+				{
+					sectionName: '共通タスク',
+					sectionURL: 'configuring-liferay/common-tasks.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'OpenOffice / LibreOffice統合の有効化 (近日公開！)',
+							url: '../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.html'
+						},
+						{
+							name: 'メールサーバーに接続する',
+							url: '../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html'
+						},
+						{
+							name: 'メール設定',
+							url: 'configuring-liferay/virtual-instances/email-settings.html'
+						},
+						{
+							name: 'インスタンス設定',
+							url: 'configuring-liferay/virtual-instances/instance-configuration.html#terms-of-use'
+						},
+						{
+							name: '認証の基本',
+							url: '../installation-and-upgrades/securing-liferay/authentication-basics.html'
+						},
+						{
+							name: 'ユーザー',
+							url: 'configuring-liferay/virtual-instances/users.html#default-user-associations'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
