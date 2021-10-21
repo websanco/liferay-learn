@@ -1,13 +1,5 @@
 # Analyze SEO and Accessibility on Pages
 
-```{toctree}
-:maxdepth: 3
-
-page-performance-and-accessibility/about-the-content-performance-tool.md
-page-performance-and-accessibility/analyze-content-metrics-using-content-performance-tool.md
-page-performance-and-accessibility/analyze-seo-and-accessibility-on-pages.md
-```
-
 Starting with Liferay DXP 7.4, you can use the Page Audit tool to examine your Pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) service, providing specific recommendations for Liferay DXP. Using this tool, content authors can
 
 - Verify that Pages are optimized for search engine indexing and visibility, so Pages rank better in search results and reach the right audience.
@@ -52,7 +44,7 @@ Configuring the Page Audit tool requires administrative access to Liferay DXP.
 The Page Audit tool is enabled by default, but you need to complete the tool configuration before running a Page audit. This configuration requires:
 
 - Your PageSpeed Insights API key. Google requires this key to use PageSpeed Insights in an automated way and for running multiple queries per second. To create this API key, see [Get Started with the PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started) in the Google documentation.
-- Your Preferred audit Strategy. By default, the Page Audit tool uses a mobile strategy, but you can also configure a desktop strategy to analyze your Pages. The mobile strategy includes additional rules for auditing your content on small screens. The strategy you choose applies to every Page audit, so if you wish to audit the mobile and desktop versions of your Page, you must run each audit strategy separately.
+- A Preferred Strategy for page audits. By default, the Page Audit tool uses a mobile strategy, but you can also configure a desktop strategy to analyze your Pages. The mobile strategy includes additional rules for auditing your content on small screens. The strategy you choose applies to every Page audit, so if you wish to audit the mobile and desktop versions of your Page, you must run each audit strategy separately.
 
 ![Configure the Page Audit tool API key and audit strategy](./analyze-seo-and-accessibility-on-pages/images/01.png)
 
@@ -95,8 +87,11 @@ To disable the Page Audit tool globally, uncheck the Enable Google PageSpeed Ins
 
    ![Click the Page Audit button to start a new Page audit.](./analyze-seo-and-accessibility-on-pages/images/05.png)
 
-1. If you have not configured Page Audit yet, the Page Audit panel prompts you to complete the configuration. In this case, click *Configure* and [complete the configuration](#configuring-the-page-audit-tool).
-1. If you have configured Page Audit, the Page Audit panel shows the Launch Page Audit button.
+   ```{note}
+   If you have not configured Page Audit yet, the Page Audit panel prompts you to complete the configuration. In this case, click *Configure* and [complete the configuration](#configuring-the-page-audit-tool).
+   ```
+
+1. The Page Audit panel shows the Launch Page Audit button.
 1. Click *Launch Page Audit* to connect your Page to Google PageSpeed Insights and start the audit process.
 
 After running a test, you can always review the last audit results by opening the Page and clicking the Page Audit (![Page Audit](../../images/icon-information.png)) button.
@@ -121,7 +116,7 @@ Consider this information when using the Page Audit tool:
 - The Page Audit tool analyzes your Page for SEO and accessibility issues at a given time. If your Page or Page's content changes (for example, when you show dynamic content), your test results may vary.
 - Page Audit shows results for the [Default Experience](../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md) only.
 - If your Page is localized, you can run a Page Audit test for each language. Before running the test, click the _flag_ button in the Page Audit tool and choose the language.
- 
+
   ![You can change the Page language you want to audit using the flag button in the Page Audit tool.](./analyze-seo-and-accessibility-on-pages/images/06.gif)
 
 - If you're publishing your Pages using [Remote Live Staging](../../site-building/publishing-tools/staging/staging-overview.md) and your Staging environment is not connected to the internet, you can use the Page Audit tool in the Live environment, but you can only fix the issues in the Staging environment.

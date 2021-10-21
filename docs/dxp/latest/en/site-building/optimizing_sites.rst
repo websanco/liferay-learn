@@ -7,6 +7,8 @@ Optimizing Sites
    optimizing-sites/ab_testing.rst
    optimizing-sites/building_a_responsive_site.rst
 
+From having top-tier SEO, to understanding and acting on your site's content, to building a site that is accessible to all types of users, Liferay provides tools to help you understand site issues and take action.
+
 Search Engine Optimization
 --------------------------
 
@@ -17,6 +19,13 @@ Search Engine Optimization
 -  :doc:`/site-building/site-settings/managing-site-urls/using-the-redirection-tool`
 -  :doc:`/site-building/displaying-content/using-display-page-templates/configuring-seo-and-open-graph`
 -  :doc:`/site-building/site-settings/configuring-open-graph`
+
+Page Performance and Accessibility
+----------------------------------
+
+-  :doc:`/content-authoring-and-management/page-performance-and-accessibility/about-the-content-performance-tool`
+-  :doc:`/content-authoring-and-management/page-performance-and-accessibility/analyze-content-metrics-using-content-performance-tool`
+-  :doc:`/content-authoring-and-management/page-performance-and-accessibility/analyze-seo-and-accessibility-on-pages`
 
 A/B Testing
 -----------
