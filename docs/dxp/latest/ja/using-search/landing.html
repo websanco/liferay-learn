@@ -8,6 +8,7 @@
 				{
 					sectionName: 'はじめに',
 					sectionURL: 'using-search/getting_started.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '検索の概要',
@@ -17,11 +18,16 @@
 							name: 'コンテンツの検索',
 							url: 'using-search/getting-started/searching-for-content.html'
 						},
+						{
+							name: '7.3の検索の新機能',
+							url: 'using-search/getting-started/whats-new-in-search-for-73.html'
+						},
 					]
 				},
 				{
 					sectionName: '検索ページとウィジェット',
 					sectionURL: 'using-search/search_pages_and_widgets.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '検索ページ',
@@ -40,52 +46,59 @@
 				{
 					sectionName: '検索エンジンのインストールとアップグレード',
 					sectionURL: 'using-search/installing_and_upgrading_a_search_engine.html',
+					showAll: false,
 					subsections: [
-            {
-							name: '検索エンジンのインストールの概要',
-							url: 'using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.html'
+						{
+							name: '検索エンジンのインストール',
+							url: 'using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.html'
 						},
 						{
-							name: 'Installing Elasticsearch (Coming Soon)',
-						},
-						{
-							name: 'Installing Solr (Coming Soon)',
+							name: 'Elasticsearchを開始する',
+							url: 'using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.html'
 						},
 					]
 				},
 				{
 					sectionName: '検索管理とチューニング',
 					sectionURL: 'using-search/search_administration_and_tuning.html',
+					showAll: false,
 					subsections: [
 						{
+							name: '同義語セット',
+							url: 'using-search/search-administration-and-tuning/synonym-sets.html'
+						},
+						{
+							name: '結果ランキング',
+							url: 'using-search/search-administration-and-tuning/result-rankings.html'
+						},
+						{
 							name: 'Search Administration Panel Overview (Coming Soon)',
-						},
-						{
-							name: 'Search Tuning (Coming Soon)',
-						},
-						{
-							name: 'Troubleshooting Search (Coming Soon)',
 						},
 					]
 				},
 				{
 					sectionName: 'Liferay Enterprise Search',
 					sectionURL: 'using-search/liferay_enterprise_search.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'Configuring Cross-Cluster Replication (Coming Soon)',
+							name: 'クロスクラスターレプリケーション',
+							url: 'using-search/liferay-enterprise-search/cross_cluster_replication.html'
 						},
 						{
-							name: 'Monitoring Elasticsearch from Liferay DXP (Coming Soon)',
+							name: 'Elasticsearchのモニタリング',
+							url: 'using-search/liferay-enterprise-search/monitoring-elasticsearch.html'
 						},
 						{
-							name: 'Learning to Rank (Coming Soon)',
+							name: 'Learning to Rank',
+							url: 'using-search/liferay-enterprise-search/learning-to-rank.html',
 						},
 					]
 				},
-        {
+				{
 					sectionName: '開発者ガイド',
 					sectionURL: 'using-search/developer_guide.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '同様の結果ウィジェットへのカスタムコンテンツの提供',
@@ -95,9 +108,13 @@
 							name: 'Aggregations (Coming Soon)',
 						},
 						{
-							name: 'Model Entity Indexing (Coming Soon)',
+							name: `Model Entity Indexing (Coming Soon)`,
 						},
 					]
+				},
+				{
+					sectionName: '検索の構成 (近日公開！)',
+					sectionURL: 'using-search/user-guide/configuring-search.html',
 				},
 			]
 		}
