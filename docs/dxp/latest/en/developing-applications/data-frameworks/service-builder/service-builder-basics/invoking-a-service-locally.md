@@ -1,6 +1,6 @@
 # Invoking a Service Locally
 
-Service Builder services that are deployed to DXP/Portal are available to invoke from other classes in the same JVM. These services are *local* to the classes.
+Service Builder services that are deployed to DXP/Portal can be invoked from other classes in the same JVM. These services are *local* to the classes.
 
 Service Builder services are Declarative Services (DS) Components, which means they're managed in a container. Consumers request components from the container and the container provides a matching component instance.
 
@@ -113,7 +113,7 @@ The `t2p5-web` module's `T2P5Portlet` class handles requests to add `T2P5Entry` 
 
 `T2P5Portlet` is an [`MVCPortlet`](../../../developing-a-java-web-application/using-mvc.md). It has a `T2P5EntryLocalService` field called `_t2p5EntryLocalService` and an action-handling method called `addT2P5Entry`.
 
-The `_t2p5EntryLocalService` field's `@Reference` annotation signals the runtime framework to inject the field with a `T2P5EntryLocalService` component instance.
+The `_t2p5EntryLocalService` field's `@Reference` annotation signals the runtime framework to inject a `T2P5EntryLocalService` component instance into the field.
 
 ```{note}
 For more information on using the `@Reference` annotation and acessing services in other ways, see *Dependency Injection* in [Core Frameworks](../../../core-frameworks.md).
@@ -125,7 +125,7 @@ The portlet's `view.jsp` template (next) submits `ActionRequest`s to `T2P5Portle
 
 ## Examine the JSP
 
-The `view.jsp` provides a form for adding entries and lists all the current entries.
+The `view.jsp` provides a form for adding entries and shows all the current entries.
 
 ```{literalinclude} ./invoking-a-service-locally/resources/liferay-t2p5.zip/t2p5-web/src/main/resources/META-INF/resources/view.jsp
 :language: jsp
@@ -143,19 +143,19 @@ It imports these classes:
 * `T2P5EntryLocalServiceUtil`
 * `java.util.List`
 
-The page's *Add T2P5 Entry* section provides a form for adding an entry. The `<portlet:defineObjects />` tag makes standard portlet objects available to the template---the `aui` tags use these objects.
+The page's *Add T2P5 Entry* section provides a form for adding an entry. The `<portlet:defineObjects />` tag makes standard portlet objects available to the template. The `aui` tags use these objects.
 
-The `<portlet:actionURL name="addT2P5Entry" var="addT2P5EntryURL" />` tag maps the `addT2P5EntryURL` variable to a portlet action named `addT2P5Entry`. Submitting an `ActionRequest` with this `actionUrL` triggers invoking the portlet's method `addT2P5Entry` because it maps to the `actionUrl` name `addT2P5Entry`.
+The `<portlet:actionURL name="addT2P5Entry" var="addT2P5EntryURL" />` tag maps the `addT2P5EntryURL` variable to a portlet action named `addT2P5Entry`. Submitting an `ActionRequest` with this `actionURL` invokes the portlet's method `addT2P5Entry` because it maps to the `actionUrl` name `addT2P5Entry`.
 
-The `<aui:form>` presents text fields for an entry's name and description. On submitting the form, those values are passed along with an `ActionRequest` to the portlet method.
+The `<aui:form>` renders text fields for an entry's name and description. On submitting the form, its values are passed along with an `ActionRequest` to the portlet method.
 
 ```{note}
 For more information on portlet actions, see [Invoking Actions with MVC Portlet](../../../developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet.md).
 ```
 
-The page's *Entries* section lists all the entries. It gets all the entries by calling `T2P5EntryLocalServiceUtil.getT2P5Entries(-1, -1)`---the `-1` min and max range values tell the method to return all the entries.
+The page's *Entries* section lists all the entries. It gets all the entries by calling `T2P5EntryLocalServiceUtil.getT2P5Entries(-1, -1)` The `-1` min and max range values tell the method to return all the entries.
 
-You've invoked a Service Builder service from a portlet application. The services are easy to use in MVC Portlet.
+You've invoked a Service Builder service from a portlet application. These services are easy to use in MVC Portlet.
 
 ## What's Next
 
