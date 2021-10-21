@@ -6,8 +6,8 @@ However, before changing the secret's value, you can add the current username to
 
 Keep in mind that changing the username can affect other services connected to the database, such as the `liferay` and `backup` services. These services must also restart when the database username is changed to continue working.
 
-```note::
-   If no database username secret exists, then your Project service uses the ``LCP_MASTER_USER_NAME`` variable. This variable is defined in the ``LCP.json`` file and uses ``dxpcloud`` as its default value.
+```{note}
+If no database username secret exists, then your Project service uses the `LCP_MASTER_USER_NAME` variable. This variable is defined in the `LCP.json` file and uses `dxpcloud` as its default value.
 ```
 
 ## Retaining Database Usernames

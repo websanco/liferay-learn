@@ -18,7 +18,7 @@ Name                       | Default Value              | Description      |
 
 ### Database Maintenance Window Variables
 
-Your DXP Cloud environment's database service will occasionally require downtime for scheduled maintenance, typically for about two minutes. You can configure a preferred window for this maintenance to take place so that you can reduce the downtime's impact. By default, no specific time preference is defined.
+Your DXP Cloud environment's database service occasionally requires downtime for scheduled maintenance, typically for about two minutes. You can configure a preferred window for this maintenance to take place to reduce the downtime's impact. By default, no specific time preference is defined.
 
 Name                      | Acceptable Values  | Description                                                             |
 ------------------------- | ------------------ | ----------------------------------------------------------------------- |
@@ -31,8 +31,8 @@ Name                      | Acceptable Values  | Description                    
 You can pass MySQL flags in as environment variables. The available flags are listed in the
 [Google Cloud documentation](https://cloud.google.com/sql/docs/mysql/flags). Each flag must be prepended with `LCP_GCP_DATABASE_FLAG_` to work in Liferay DXP Cloud. Below are common flags that can be useful for debugging in a development environment, but should NOT be used in a production environment as they have significant performance costs.
 
-```warning::
-   As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's `Operational Guidelines <https://cloud.google.com/sql/docs/mysql/operational-guidelines>`_.
+```{warning}
+As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's [Operational Guidelines](https://cloud.google.com/sql/docs/mysql/operational-guidelines).
 ```
 
 Name                                   | Acceptable Values | Default Value |
