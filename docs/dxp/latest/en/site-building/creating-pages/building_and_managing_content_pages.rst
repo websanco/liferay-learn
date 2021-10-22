@@ -13,6 +13,7 @@ Building and Managing Content Pages
    building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment.md
    building-and-managing-content-pages/using-widgets-on-a-content-page.md
    building-and-managing-content-pages/managing-web-content-on-content-pages.md
+   building-and-managing-content-pages/manually-translating-content-pages.md
 
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/content-pages-overview`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages`
@@ -23,3 +24,4 @@ Building and Managing Content Pages
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page`
 -  :doc:`/site-building/creating-pages/building-and-managing-content-pages/managing-web-content-on-content-pages`
+-  :doc:`/site-building/creating-pages/building-and-managing-content-pages/manually-translating-content-pages`
