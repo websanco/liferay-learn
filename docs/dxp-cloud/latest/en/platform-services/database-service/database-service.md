@@ -22,7 +22,7 @@ Your DXP Cloud environment's database service occasionally requires downtime for
 
 Name                      | Acceptable Values  | Description                                                             |
 ------------------------- | ------------------ | ----------------------------------------------------------------------- |
-`LCP_GCP_MW_DAY`          | `1` through `7`    | Preferred day of the week (Sunday (1) through Saturday (7)).            |
+`LCP_GCP_MW_DAY`          | `1` through `7`    | Preferred day of the week (Monday (1) through Sunday (7), in UTC time). |
 `LCP_GCP_MW_HOUR`         | `0` through `23`   | Preferred hour of the day (in UTC time).                                |
 `LCP_GCP_MW_UPDATE_TRACK` | `canary`, `stable` | Set `canary` to update earlier, up to a week before other environments. | 
 
