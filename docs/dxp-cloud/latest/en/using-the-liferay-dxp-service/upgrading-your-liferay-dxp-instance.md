@@ -20,8 +20,8 @@ Review the following steps to perform a database upgrade:
 1. [Download a backup](#download-a-backup)
 1. [Extract and import the data](#extract-and-import-the-data)
 1. [Perform the data upgrade](#perform-the-data-upgrade)
-1. [Compress the database and document library](#compress-the-database-and-document-library)
-1. [Call the upload API](#call-the-upload-api)
+1. [Compress the document library and database](#compress-the-document-library-and-database)
+1. [Upload the document library and database](#upload-the-document-library-and-database)
 1. [Restore the backup](#restore-the-backup)
 
 ## Install Prerequisites
@@ -191,27 +191,27 @@ Now that your Liferay installation has been upgraded, use the following steps to
     tar zcvf database.tgz database.gz
     ```
 
-The database and Liferay data volume are now ready to upload using the `backup` service's upload API.
+The database and Liferay data volume are now ready to upload the database and document library to the `backup` service.
 
-## Call the Upload API
+## Upload the Document Library and Database
 
-Upload the database and document library archives to the `backup` service by calling the upload API:
+Upload the database and document library archives to the `backup` service via the console:
 
 1. If you are not already logged in, log into the [DXP Cloud console](https://console.liferay.cloud/login).
 
-1. Open `https://api.liferay.cloud/user` in a browser.
+1. Navigate to the *Backups* page for the appropriate environment.
 
-1. Copy your user session token from the JSON string shown at this URL. Copy only the value for the `token` property (removing the quotation marks).
+1. Click *Upload Backup...* near the top of the screen.
 
-1. Run the following command to call the upload API after modifying it for your project:
+    ![Click the Upload Backup button to access the upload page.](./upgrading-your-liferay-dxp-instance/images/03.png)
 
-    ```bash
-    curl -X POST https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload -H 'Content-Type: multipart/form-data' -H 'Authorization: Bearer <USER-TOKEN>' -F 'database=@/path/to/folder/database.tgz' -F 'volume=@/path/to/folder/volume.tgz'
-    ```
+1. On the Upload Backup page, expand the appropriate environment, and then click the `+` icons for both the database and document library to upload them.
 
-    Replace `<PROJECT-NAME>` with the name of your project, and `/path/to/folder/` with the path your `.tgz` archives are located. Replace `<ENV>` with the abbreviation for the environment you want to upload the upgraded backup to (such as `dev`).
+    ![Click the icons to upload both the database and document library as .gz archives.](./upgrading-your-liferay-dxp-instance/images/04.png)
 
-When the call is complete, a new backup appears from your upload, on the _Backups_ page in the DXP Cloud console.
+1. When both the database dump and document library are uploaded, click *Initiate Upload*.
+
+When the upload is complete, a new backup appears at the top of the list on the Backups page.
 
 ## Update Your Project's Liferay Image Version
 
@@ -231,15 +231,15 @@ Follow these steps to restore a backup to your chosen environment:
 
 1. Log into the DXP Cloud console, if you are not already logged in.
 
-1. Navigate to the environment [you uploaded your backup to](#call-the-upload-api), then click _Backups_ from the side menu.
+1. Navigate to the environment [you uploaded your backup to](#upload-the-document-library-and-database), then click _Backups_ from the side menu.
 
 1. Choose a backup from the list, and then click _Restore to_ from the Actions menu for that backup.
 
-    ![Select Restore to... from the Actions menu for the uploaded backup.](./upgrading-your-liferay-dxp-instance/images/03.png)
+    ![Select Restore to... from the Actions menu for the uploaded backup.](./upgrading-your-liferay-dxp-instance/images/05.png)
 
 1. Select one of your environments to restore to from the drop-down list (e.g., your `dev` environment).
 
-    ![Select an environment to deploy the backup to.](./upgrading-your-liferay-dxp-instance/images/04.png)
+    ![Select an environment to deploy the backup to.](./upgrading-your-liferay-dxp-instance/images/06.png)
 
 1. Click _Restore to environment_.
 
