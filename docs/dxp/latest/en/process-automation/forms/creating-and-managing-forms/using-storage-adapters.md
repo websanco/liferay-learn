@@ -4,7 +4,7 @@ When a User adds a form record, Liferay routes the processing of the request thr
 
 ![The storage adapter for Liferay Forms is configurable.](./using-storage-adapters/images/01.png)
 
-The default JSON storage adapter was renamed in Liferay 7.4 to _Default_. In early releases of Liferay 7.4, the JSON adapter was still present for backwards compatibility, but removal is planned for a later version. In addition to the Default adapter, there's an Object storage adapter, beginning in Liferay 7.4. If your system contains any [custom storage adapters](../developer-guide/writing-a-form-storage-adapter.md) there may be even more.
+The default _JSON_ storage adapter was renamed in Liferay 7.4 to _Default_. In addition to the default adapter, there's an _Object_ storage adapter, beginning in Liferay 7.4. If your system contains any [custom storage adapters](../developer-guide/writing-a-form-storage-adapter.md) there may be even more.
 
 ```{note}
 An [upgrade process](../../../developing-applications/data-frameworks/upgrade-processes.md) is in place that moves existing forms to the Liferay 7.4 Default storage adapter.
@@ -25,5 +25,5 @@ You cannot change the storage adapter after a form has been saved. All existing 
 | Storage Type | Description | Liferay Version |
 | ------------ | ----------- | --------------- |
 | Default      | Use the Default adapter to store the form's records in JSON in the Liferay Forms database tables. | 7.4+ |
-| JSON | Use the JSON adapter in Liferay 7.2 and 7.3 to store the form's records in JSON in the Liferay Forms database tables. Do not use the JSON adapter in Liferay 7.4+ as it is for backwards compatibility only. | 7.2 and 7.3 |
 | Object       | Use the Object adapter to map the form's records to a Liferay Object. After choosing this option you must select an existing Liferay Object and map the form's fields to the Object's fields. The form record data is stored in JSON in the Object's dedicated database table. | 7.4+ |
+| JSON | Use the JSON adapter in Liferay 7.2 and 7.3 to store the form's records in JSON in the Liferay Forms database tables. | 7.2 and 7.3 |
