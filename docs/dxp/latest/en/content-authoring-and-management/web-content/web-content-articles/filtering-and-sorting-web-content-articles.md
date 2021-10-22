@@ -1,20 +1,20 @@
 # Filtering and Sorting Web Content Articles
 
-By default, the Web Content application (*Site Menu* &rarr; *Content & Data* &rarr; *Web Content*) shows a list of all the Web Content Articles you have access to. When you work with many items, the filtering and sorting options can help you find and review this content list faster.
+By default, the Web Content application (*Site Menu* &rarr; *Content & Data* &rarr; *Web Content*) shows a list of all the Web Content Articles you can access. When you work with many items, the filtering and sorting options can help you find and review this content list faster.
 
 ![You can filter and sort the Web Content Articles from the Web Content application.](./filtering-and-sorting-web-content-articles/images/01.png)
 
-When viewing all assets, assets in a specific folder, or resultant assets from a Web Content search, you can use three different filter and sort options,
+When viewing all assets, assets in a specific folder, or assets resulting from a Web Content search, you can use three different filter and sort options:
 
 - [Filter by Navigation](#filter-by-navigation)
 - [Filter by Status](#filter-by-status)
 - [Order by](#order-by)
 
-You can combine these filter and sort options. For example, you can choose the [*Mine* filter](#filter-by-navigation) in combination with the [*Draft* filter](#filer-by-status) and the [sort by *Modified Date*](#order-by) to obtain a list of your articles in Draft status ordered by modified date.
+You can combine these filter and sort options. For example, if you choose the [*Mine* filter](#filter-by-navigation) along with the [*Draft*](#filer-by-status) and the [sort by *Modified Date*](#order-by) filters, you obtain a list of your articles in Draft status ordered by modified date.
 
 ## Filter by Navigation
 
-When you filter by navigation, you filter all the Web Content you have permission to view, independently of what folder this content exists or what search keyword you use in the search field.
+When you filter by navigation, you filter all the Web Content you have permission to view, independently of where this content exists or what search keyword you use in the search field.
 
 | Filter Option | Description |
 | :--- | :--- |
