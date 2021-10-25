@@ -4,12 +4,12 @@
 :maxdepth: 3
 
 core-frameworks/configuration-framework.md
+core-frameworks/dependency-injection.md
 core-frameworks/dispatch-framework.md
 core-frameworks/message-bus.md
-core-frameworks/reference.md
-core-frameworks/dependency-injection.md
 core-frameworks/portlet-providers.md
 core-frameworks/servlets.md
+core-frameworks/reference.md
 ```
 
 ```{raw} html
