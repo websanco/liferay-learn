@@ -29,9 +29,11 @@ com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration~d
 ```
 
 ```{note}
-Factory Configuration file names in Liferay  DXP/Portal versions 7.0-7.3 use a dash (`-`) instead of a tilde (`~`) to separate the name from the subname. For example,
+The name of a Factory Configuration file exported in Liferay DXP/Portal versions 7.0-7.3 uses a dash (`-`) instead of a tilde (`~`) to separate the configuration name and subname. For example,
 
-`com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration~default.config`
+`com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-default.config`
+
+Dash is still a supported name separator.
 ```
 
 The next instance contains a unique *subname* (something other than *default*). It's good practice to use a descriptive name that sheds light on when this instance should be used. Following the example from [Adding a New Organization Type](../../../users-and-permissions/organizations/adding-a-new-organization-type.md), you could add the _League_ type with a configuration file named 
