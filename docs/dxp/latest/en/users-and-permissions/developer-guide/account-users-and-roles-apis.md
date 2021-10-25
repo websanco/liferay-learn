@@ -1,6 +1,6 @@
 # Account Users and Roles APIs
 
-You can manage [Account Users](../accounts/account-users.md) and [Account Roles](../accounts/account-roles.md) from the Applications menu, but you can also use Liferay's REST API's. Call these services to create and manage account users and roles.
+You can manage [Account Users](../accounts/account-users.md) and [Account Roles](../accounts/account-roles.md) from the Applications menu, but you can also use Liferay's REST APIs. Call these services to create and manage Account Users and Roles.
 
 ## Adding an Account User
 
@@ -24,13 +24,13 @@ You can manage [Account Users](../accounts/account-users.md) and [Account Roles]
 
 1. Use the cURL script to add a new account user to the account. On the command line, navigate to the `curl` folder. Execute the `AccountUser_POST_ToAccount.sh` script with the account ID as a parameter.
 
-    ```bash
-    ./AccountUser_POST_ToAccount.sh 1234
-    ```
+   ```bash
+   ./AccountUser_POST_ToAccount.sh 1234
+   ```
 
-    The JSON response shows a new account has been added:
+   The JSON response shows a new account has been added:
 
-    ```bash
+   ```bash
         {
         "accountBriefs" : [ {
             "id" : 38935,
@@ -79,9 +79,9 @@ You can manage [Account Users](../accounts/account-users.md) and [Account Roles]
         }     
     ```
 
-1. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. Click the account you created a user for. Click the *Users* tab and see the new user that was created.
+1. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. Click the account you created a User for. Click the *Users* tab and see the new User that was created.
 
-    ![See that a new account user has been added.](./account-users-and-roles-apis/images/01.png)
+  ![See that a new account user has been added.](./account-users-and-roles-apis/images/01.png)
 
 1. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
@@ -91,9 +91,9 @@ You can manage [Account Users](../accounts/account-users.md) and [Account Roles]
 
 2. Run the `AccountUser_POST_ToAccount.java` class with the following command. Replace `1234` with the account's ID.
 
-    ```bash
-    java -classpath .:* -DaccountId=1234 AccountUser_POST_ToAccount
-    ```
+   ```bash
+   java -classpath .:* -DaccountId=1234 AccountUser_POST_ToAccount
+   ```
 
 ## Examine the cURL Command
 
@@ -121,7 +121,7 @@ The other cURL commands use similar JSON arguments.
 
 ## Examine the Java Class
 
-The `Account_POST_ToInstance.java` class adds an account user by calling the related service.
+The `Account_POST_ToInstance.java` class adds an Account User by calling the related service.
 
 ```{literalinclude} ./accounts-api-basics/resources/liferay-t5p9.zip/java/Account_POST_ToInstance.java
    :dedent: 1
@@ -183,11 +183,11 @@ Code:
    :lines: 11-23
 ```
 
-The Account's `UserAccount` objects are listed in JSON.
+The Account's `UserAccount` objects appear in JSON.
 
 ## Post an Account Role
 
-Create a new account role for a specific account. Note, replace `1234` with your account's ID/
+Create a new Account Role for a specific account. Note, replace `1234` with your account's ID.
 
 ### AccountRole_POST_ToAccount.sh
 
@@ -221,7 +221,7 @@ Code:
 
 ## Associate a User to an Account Role
 
-You can associate a user with a specific account role. Replace `1234` with your account's ID. Replace `5678` with your account role's ID. Replace `9012` with your account user's ID.
+You can associate a User with a specific Account Role. Replace `1234` with your Account's ID. Replace `5678` with your Account Role's ID. Replace `9012` with your Account User's ID.
 
 ### AccountRole_POST_UserAssociation.sh
 
@@ -255,7 +255,7 @@ Code:
 
 ## Get Account Roles from an Account
 
-You can list an account's account roles by executing the following cURL or Java command. Replace `1234` with your account's ID.
+You can list an Account's Account Roles by executing the following cURL or Java command. Replace `1234` with your Account's ID.
 
 ### AccountRoles_GET_FromAccount.sh
 
@@ -287,11 +287,11 @@ Code:
    :lines: 11-23
 ```
 
-The Account's `AccountRole` objects are listed in JSON.
+The Account's `AccountRole` objects appear in JSON.
 
 ## Remove Account Role User Association
 
-Remove an account role association from a specific account user. Replace `1234` with your account's ID. Replace `5678` with your account role's ID. Replace `9012` with your account user's ID.
+Remove an Account Role association from a specific Account User. Replace `1234` with your Account's ID. Replace `5678` with your Account Role's ID. Replace `9012` with your Account User's ID.
 
 ### AccountRole_DELETE_UserAssociation.sh
 
@@ -323,4 +323,4 @@ Code:
    :lines: 8-19
 ```
 
-The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Account` services and schemas and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) shows all of the `Account` services and schemas and has an interface to try out each service.
