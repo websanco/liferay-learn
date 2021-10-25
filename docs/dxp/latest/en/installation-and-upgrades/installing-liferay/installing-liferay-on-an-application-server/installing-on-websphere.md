@@ -67,7 +67,7 @@ Do not make configuration changes while the application server is running.
 
 In this version of WebSphere, servlet filters are not initialized on web application startup, but rather, on first access. This can cause problems when deploying certain apps to DXP. To configure servlet filters to initialize on application startup (i.e., deployment), set the following `webcontainer` properties in the WebSphere application server:
 
-```{properties}
+```properties
 com.ibm.ws.webcontainer.initFilterBeforeInitServlet = true
 com.ibm.ws.webcontainer.invokeFilterInitAtStartup = true
 ```
@@ -377,7 +377,7 @@ After deploying DXP, there may be excessive warnings and log messages, such as t
 
 If you have a Liferay DXP Enterprise subscription, DXP requests your activation key. See [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md) for more information.
 
-Congratulations! You're running WebSphere.
+Congratulations! You're running Liferay DXP on WebSphere.
 
 ## Next Steps
 
