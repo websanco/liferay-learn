@@ -45,7 +45,7 @@ Follow these steps to create a new publication for your instance.
 
 ![Enter a name and description for your publication, and click Create.](./creating-and-managing-publications/images/03.png)
 
-Publications created in this way use the current production environment as their baseline, without adding any changes. All changes made in your publication are tracked as deviations from the production environment at the time it is created.
+This creates a new publication based on the production environment. The publication is automatically updated with any changes made in production provided they don't conflict with changes made in the publication.
 
 After creating a new publication, you can begin adding changes to it. See [Making and Publishing Changes](./making-and-publishing-changes.md) to learn more about the editing and publishing process.
 
