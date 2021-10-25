@@ -15,37 +15,33 @@ Create a new template using the Add button (![Add button](../../../images/icon-a
 
 Search engine optimization (SEO) refers to the methods used to improve your Page's ranking in a search engine results page (SERP). With Liferay DXP, you can create Display Page templates that dynamically configure your displayed content for optimal SEO.
 
+```{note}
+Liferay provides translations for mapped fields when possible. However, text provided outside of mapped fields is not translated.
+```
+
 ### HTML Title
 
-The *HTML Title* field defines a Display Page's `<title>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to `${title}`, but you can build your title combining multiple mapped fields provided by the selector. 
+The *HTML Title* field defines a Display Page's `<title>` tag. This title is used by search engines to rank your Page and serves as the Page's heading in search engine results. By default, Display Page templates map this field to `${title}`. If desired, you you can use the field selector to combine multiple mapped fields and build your own HTML title.
 
 The recommended length for an *HTML title* is under 60 characters.
 
-Default value in HTML title:
-![image](https://user-images.githubusercontent.com/67901/137364376-07ac46f4-fc32-466c-a400-5c498ed6424d.png)
-
-Custom value in HTML title:
-![image](https://user-images.githubusercontent.com/67901/137364659-2f22e395-5a6f-46f1-a847-e424706852b3.png)
-
-For example, ${title} - ${authorName} produces something like:
-
-```
-<title>New awesome feature - Jane Doe </title>
+```{tip}
+It is best practice to update the SEO and Open Graph titles together.
 ```
 
-```note::
-   Take into account that we do not provide translations to the text outside mapped fields. We provide translations for mapped files when possible.
-```
-
+![Combine multiple mapped fields to build your own HTML title.](./configuring-seo-and-open-graph/images/02.png)
 
 ### Description
 
-The *Description* field defines a Display Page's description `<meta>` tag. This description is used by search engines to rank your Page and appears in search engine results as a preview of your Page. By default, Display Page templates map this field to *Description*, but you can build your description combining multiple mapped fields provided by the selector.
+The *Description* field defines a Display Page's description `<meta>` tag. This description is used by search engines to rank your Page and appears in search engine results as a preview of your Page. By default, Display Page templates map this field to `${description}`. If desired, you can build your HTML description by combining multiple mapped fields provided by the selector.
 
 The recommended length for a Page's description is under 155 characters.
 
-![image](https://user-images.githubusercontent.com/67901/137366431-42c77f9b-f42b-4a2e-a34f-8e46a98f0dd5.png)
+```{tip}
+It is best practice to update the SEO and Open Graph descriptions together.
+```
 
+![Combine multiple mapped fields to create a custom HTML description.](./configuring-seo-and-open-graph/images/03.png)
 
 ### Robots
 
@@ -63,22 +59,31 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 [Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
 
-```note::
-   For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
+For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
+
+```{note}
+Liferay provides translations for mapped fields when possible. However, text provided outside of mapped fields is not translated.
 ```
 
 ### Title
 
-The *Title* field defines a Display Page's `og:title` property, which defines the title displayed for your content in rich previews. By default, this field is mapped to `${title}`, like the HTML title field for SEO. While you can build your title with the mapped fields that the selector gives you, it is best practice to update the SEO and Open Graph titles together.
+The *Title* field defines a Display Page's `og:title` property, which defines the title displayed for your content in rich previews. By default, this field is mapped to `${title}`. If desired, you can use the field selector to combine multiple mapped fields and build your own Open Graph title.
 
-![image](https://user-images.githubusercontent.com/67901/137367173-6041c671-509f-437a-a245-84d5cf5604e8.png)
+```{tip}
+It is best practice to update the SEO and Open Graph titles together.
+```
 
+![Combine multiple mapped fields to create a custom og:title value.](./configuring-seo-and-open-graph/images/06.png)
 
 ### Description
 
-The *Description* field defines a Display Page's `og:description` property which determines the description displayed for your content in rich previews. By default, Display Page templates map this field to *Description*, just like the description field for SEO. While you can build your description with the mapped fields that the selector gives you, it is best practice to update the SEO and Open Graph titles together.
+The *Description* field defines a Display Page's `og:description` property which determines the description displayed for your content in rich previews. By default, this field is mapped to `${description}`. If desired, you can use the field selector to combine multiple mapped fields and build your own Open Graph description.
 
-![The Description field defines a Display Page's og:description property.](./configuring-seo-and-open-graph/images/07.png)
+```{tip}
+It is best practice to update the SEO and Open Graph descriptions together.
+```
+
+![Combine multiple mapped fields to create a custom og:description value.](./configuring-seo-and-open-graph/images/07.png)
 
 ### Image
 
