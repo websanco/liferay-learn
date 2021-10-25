@@ -1,6 +1,6 @@
 # Accounts API Basics
 
-You can manage [Accounts](../accounts.md) from the Applications menu, but you can also use Liferay's REST API's. Call these services to create and manage accounts.
+You can manage [Accounts](../accounts.md) from the Applications menu, but you can also use Liferay's REST APIs. Call these services to create and manage accounts.
 
 ## Adding an Account
 
@@ -20,13 +20,13 @@ You can manage [Accounts](../accounts.md) from the Applications menu, but you ca
    unzip liferay-t5p9.zip
    ```
 
-2. Use the cURL script to add a new account to your Instance. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script.
+2. Use the cURL script to add a new Account to your instance. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script.
 
     ```bash
     ./Account_POST_ToInstance.sh
     ```
 
-    The JSON response shows a new account has been added:
+    The JSON response shows a new Account has been added:
 
     ```bash
     "description" : "Foo",
@@ -42,9 +42,9 @@ You can manage [Accounts](../accounts.md) from the Applications menu, but you ca
 
     ```
 
-3. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new account has been added.
+3. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new Account has been added.
 
-    ![See that a new account has been added.](./accounts-api-basics/images/01.png)
+   ![See that a new account has been added.](./accounts-api-basics/images/01.png)
 
 4. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
@@ -84,7 +84,7 @@ The other cURL commands use similar JSON arguments.
 
 ## Examine the Java Class
 
-The `Account_POST_ToInstance.java` class adds an account by calling the account related service.
+The `Account_POST_ToInstance.java` class adds an account by calling the Account-related service.
 
 ```{literalinclude} ./accounts-api-basics/resources/liferay-t5p9.zip/java/Account_POST_ToInstance.java
    :dedent: 1
@@ -96,7 +96,7 @@ This class invokes the REST service using only three lines of code:
 
 | Line (abbreviated) | Description |
 | :----------------- | :---------- |
-| `AccountResource.Builder builder = ...` | Gets a `Builder` for generating a `AccountResource` service instance. |
+| `AccountResource.Builder builder = ...` | Gets a `Builder` for generating an `AccountResource` service instance. |
 | `AccountResource accountResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `AccountResource` service instance. |
 | `Account account = accountResource.postAccount(...);` | Calls the `accountResource.postAccount` method and passes the data to post. |
 
@@ -114,7 +114,7 @@ Below are examples of calling other `Account` REST services using cURL and Java.
 
 ## Get Accounts from Instance
 
-You can list a accounts by executing the following cURL or Java command.
+You can list Accounts by executing the following cURL or Java command.
 
 ### Accounts_GET_FromInstance.sh
 
@@ -146,11 +146,11 @@ Code:
    :lines: 11-22
 ```
 
-The Instance's `Account` objects are listed in JSON.
+The Instance's `Account` objects appear in JSON.
 
 ## Get an Account
 
-Get a specific account with the following cURL or Java command.
+Get a specific Account with the following cURL or Java command.
 
 ```{tip}
 Use ``Accounts_GET_FromInstance.[java|sh]`` to get instance ``Account`` IDs.
@@ -186,11 +186,11 @@ Code:
    :lines: 9-20
 ```
 
-The `Account` fields are listed in JSON.
+The `Account` fields appear in JSON.
 
 ## Patch an Account
 
-Do a partial edit of an existing account with the following cURL and Java commands. Note, replace `1234` with your account's ID.
+Do a partial edit of an existing Account with the following cURL and Java commands. Note, replace `1234` with your Account's ID.
 
 ### Account_PATCH_ById.sh
 
@@ -224,7 +224,7 @@ Code:
 
 ## Put an Account
 
-Completely overwrite an existing account with the following cURL and Java commands. Note, replace `1234` with your account's ID.
+Completely overwrite an existing Account with the following cURL and Java commands. Note, replace `1234` with your Account's ID.
 
 ### Account_PUT_ById.sh
 
@@ -258,7 +258,7 @@ Code:
 
 ## Delete an Account
 
-Delete an existing account with the following cURL and Java commands. Note, replace `1234` with your account's ID.
+Delete an existing Account with the following cURL and Java commands. Note, replace `1234` with your Account's ID.
 
 ### Account_DELETE_ById.sh
 
@@ -290,4 +290,4 @@ Code:
    :lines: 8-17
 ```
 
-The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) lists all of the `Account` services and schemas and has an interface to try out each service.
+The [API Explorer](../../../headless-delivery/consuming-apis/consuming-rest-services.md) shows all of the `Account` services and schemas and has an interface to try out each service.
