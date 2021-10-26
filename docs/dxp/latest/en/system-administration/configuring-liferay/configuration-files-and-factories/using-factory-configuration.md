@@ -22,18 +22,25 @@ As with single-instance configurations, you can set factory configurations in th
 my.service.ServiceConfiguration.config
 ```
 
-If your service supports factory configurations, use the convention of calling the configuration's first instance `-default.config`. The default Organization type is named in this way: 
+If your service supports factory configurations, use the convention of calling the configuration's first instance `~default.config`. The default Organization type is named in this way: 
 
 ```bash
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration~default.config
 ```
 
 ```{note}
-The name of a Factory Configuration file exported in Liferay DXP/Portal versions 7.0-7.3 uses a dash (`-`) instead of a tilde (`~`) to separate the configuration name and subname. For example,
+Instead of using a tilde (`~`) to separate a Factory Configuration file's name and subname, 
+Liferay DXP/Portal versions 7.0-7.3 use a dash (`-`) or an underline (`_`), depending on your browser and OS. For example,
+
+Dash:
 
 `com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-default.config`
 
-Dash is still a supported name separator.
+Underline:
+
+`com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration_default.config`
+
+Although tilde is the preferred separator character, dash and underline are still supported.
 ```
 
 The next instance contains a unique *subname* (something other than *default*). It's good practice to use a descriptive name that sheds light on when this instance should be used. Following the example from [Adding a New Organization Type](../../../users-and-permissions/organizations/adding-a-new-organization-type.md), you could add the _League_ type with a configuration file named 
