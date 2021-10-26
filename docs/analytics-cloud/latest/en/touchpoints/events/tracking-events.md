@@ -2,12 +2,13 @@
 
 You can track events for analysis by adding JavaScript code to your Liferay DXP site pages. The code you add interacts with Analytic Cloud's APIs to capture what users are doing on your website. Then these events can be analyzed with the [Events Analysis](./events-analsis.md) tool. 
 
-To do this, use `Analytics.track` in your JavaScript code and define your event name and properties.
+To do this, use `Analytics.track` in your JavaScript code and define your event name and attributes.
 
 | Field | Description |
 | ----- | ----------- |
 | `event` | The name of your event. We recommend using a human-readable name that can be easily understood for when doing events analysis (e.g. "Add to Cart Click") |
-| `attributes` | The different attributes of the event you wish to track |
+| `attributes` | The different attributes of the event you wish to track (e.g. price, product name, quantity, etc.) |
+
 
 For example, you could track how users are adding items to their shopping cart. Add JavaScript code to the product page of your website to track these events. Select attributes such as price, product name, and quantity to track with the event. Here's a simple example:
 
@@ -16,11 +17,15 @@ For example, you could track how users are adding items to their shopping cart. 
 // Add some event listener logic for when a user clicks the Add to Cart button
 
 Analytics.track("Add to Cart Click",{
-    price,
-    productName,
-    quantity,
+    price: productPrice(),
+    productName: productName(),
+    quantity: productQuantity(),
 });
 ```
+
+The following data typecasts can be sent for attributes: Boolean, Date, Duration, Number, and String. Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Make changes to the typecast if necessary in [Definitions for Event Attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) found in the settings page of Analytics Cloud.
+
+Note, in addition to the attributes you specify, there are [global attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) that are automatically associated with all events.
 
 ## Adding JavaScript Code 
 
