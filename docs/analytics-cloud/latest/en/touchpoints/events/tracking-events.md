@@ -25,6 +25,14 @@ Analytics.track("Add to Cart Click",{
 
 The following data typecasts can be sent for attributes: Boolean, Date, Duration, Number, and String. Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Make changes to the typecast if necessary in [Definitions for Event Attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) found in the settings page of Analytics Cloud.
 
+| Attribute Type | Description |
+| -------------- | ----------- |
+| Boolean | `true` or `false`, case insensitive |
+| Date | ISO-8061 format ((yyyy-MM-dd'T'HH:mm:ss.SSSX) |
+| Duration | In milliseconds, non-negative |
+| Number | Without thousands separator, decimal separator is okay |
+| String | If no other format matches, Analytics Cloud will assume string |
+
 Note, in addition to the attributes you specify, there are [global attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) that are automatically associated with all events.
 
 ## Adding JavaScript Code 
@@ -43,7 +51,7 @@ The simplest way to add the JavaScript code is to modify an individual page. Not
 
     ![Paste the JavaScript code into the text box.](./tracking-events/images/01.png)
 
-2. Click *Save* and now your page is ready to track events.
+1. Click *Save* and now your page is ready to track events.
 
 To learn more, see [Configuring Individual Pages](../../../../../dxp/latest/en/site-building/creating-pages/page-settings/configuring-individual-pages.md).
 
@@ -61,9 +69,11 @@ Another way to add the Javascript code is to create a page fragment that can be 
 
     ![Paste the Javascript code into the JavaScript field.](./tracking-events/images/02.png)
 
-2. Click *Save* and now the page fragment is ready to use.
+    Note, you may need additional code that fetches attribute values or logic that triggers the `Analytics.track` code.
 
-3. Navigate to the content page you wish to add the fragment to. Click the *Edit* icon ![Edit icon.](../../images/icon-edit.png) to open the page editor. Locate the fragment you just created and drag it to your page. Click *Publish*.
+1. Click *Save* and now the page fragment is ready to use.
+
+1. Navigate to the content page you wish to add the fragment to. Click the *Edit* icon ![Edit icon.](../../images/icon-edit.png) to open the page editor. Locate the fragment you just created and drag it to your page. Click *Publish*.
 
 To learn more, see [Developing Fragments](../../../../../dxp/latest/en/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.md).
 
