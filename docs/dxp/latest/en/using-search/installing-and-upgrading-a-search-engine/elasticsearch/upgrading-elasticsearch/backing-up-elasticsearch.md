@@ -2,6 +2,7 @@
 
 [Elasticsearch replicas](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules.html#index-modules-settings) protect against a node going down, but they won't help you with a catastrophic failure. Only good backup practices can help you then.
 
+<!-- Revise this part about the search tuning indexes being stored only in the index--for 7.4 it's likely not true anymore -->
 One good occasion to back up and test restoring your Elasticsearch indexes is before you [upgrade](./upgrading-search-for-liferay-73.md). In fact, taking a [snapshot of your app-specific indexes (like Liferay's Search Tuning indexes)](#backing-up-and-restoring-indexes-used-for-primary-storage) is essential if your data is stored only in the search index. The snapshot can be used to reindex your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
 
 ```{tip}
@@ -188,6 +189,8 @@ DELETE /restored_liferay-20116index_3
 Nobody likes catastrophic failure on a production system, but Elasticsearch's API for taking snapshots and restoring indexes can help you rest easy knowing that your search cluster can be restored if disaster strikes. For more details and options, read Elastic's [Snapshot and Restore documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html).
 
 ## Backing Up and Restoring Indexes Used for Primary Storage
+
+<!-- verify whether anything has changed--can you simply reindex now? probably still needed because on 7.3 customers may have non-db-backed tuning data. also, when a customer upgrades to the new tuning paradigm where data is stored in the DB and tunings cane be re-indexed, how can a customer bring their index-only tuning data into the db? -->
 
 Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md). There are no records for these applications in the database.
 

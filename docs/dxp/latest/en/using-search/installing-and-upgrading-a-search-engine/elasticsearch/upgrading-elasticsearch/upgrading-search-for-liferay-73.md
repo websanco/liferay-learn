@@ -3,9 +3,19 @@
 After upgrading Liferay, there are additional steps to upgrade the search experience. The exact steps depend on your existing search engine installation and Liferay version, but you'll always want to start by [backing up your existing indexes](./backing-up-elasticsearch.md).
 
 ```{important}
+<<<<<<< HEAD
 Always consult Liferay's [Breaking Changes](../../../../liferay-internals/reference/7-3-breaking-changes.md)_ before upgrading. One such breaking change that impacts the upgraded search experience: [Dynamic Data Mapping fields in Elasticsearch have changed to a nested document](../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document)_. 
 
 This change affects custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
+=======
+* Always consult Liferay's [Breaking Changes](../../../../liferay-internals/reference/7-3-breaking-changes.md) before upgrading. One such breaking change that impacts the upgraded 7.3 search experience: [Dynamic Data Mapping fields in Elasticsearch have changed to a nested document](../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document). 
+
+   This change affects custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
+
+* Solr integration is deprecated as of Liferay 7.3, replaced by Elasticsearch integration. Migrating to Elasticsearch requires [setting up Elasticsearch](./../getting-started-with-elasticsearch.md) and [connecting Liferay](./../connecting-to-elasticsearch.md) to it.
+
+* Elasticsearch 6.x is not supported on Liferay 7.3.
+>>>>>>> 9dfffb5b1 (LRDOCS-9736,)
 ```
 
 ## Search Upgrade Overview
@@ -111,3 +121,5 @@ Now that you know your upgrade path, start upgrading to use Liferay 7.3 with the
 * [Connecting to Elasticsearch](../connecting-to-elasticsearch.md)
 * [Securing Elasticsearch](../securing-elasticsearch.md)
 * [Upgrading Liferay](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md)
+* [What's New in Search for 7.3?](../../../getting-started/whats-new-in-search-for-73.md)
+

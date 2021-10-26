@@ -1,11 +1,11 @@
 # Upgrading to Elasticsearch 7
 
-Elasticsearch 7 is supported for Liferay 7.3 out of the box. For specific version compatibility details, refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651).
+Elasticsearch 7 is supported for Liferay 7.3+ out of the box. For specific version compatibility details, refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651).
 
-For Liferay 7.2, Elasticsearch 7 is supported via the [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) (version `3.x`). If you're upgrading to Liferay 7.3 or wanting to bring your existing 7.2 search engine to Elasticsearch 7, you must also upgrade your Elasticsearch servers. To set up a new Liferay 7.2 system, install Elasticsearch 7 and follow the [installation guide](../getting-started-with-elasticsearch.md).
+For Liferay 7.2, Elasticsearch 7 is supported via the [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307) (version `3.x`). If you're upgrading to Liferay 7.3+ or bringing your existing 7.2 search engine to Elasticsearch 7, you must upgrade your Elasticsearch servers. To set up a new Liferay 7.2 system, install Elasticsearch 7 and follow the [installation guide](../getting-started-with-elasticsearch.md).
 
 ```{important}
-Before upgrading Elasticsearch, back up your existing data. If something goes wrong during or after the upgrade, roll back to the previous version using the uncorrupted index snapshots. Follow the steps in [Backing up Elasticsearch](./backing-up-elasticsearch.md)_.
+Before upgrading Elasticsearch, back up your existing data. If something goes wrong during or after the upgrade, roll back to the previous version using the uncorrupted index snapshots. Follow the steps in `Backing up Elasticsearch <./backing-up-elasticsearch.md>`__.
 ```
 
 To upgrade an existing Elasticsearch server (or cluster) to Elasticsearch 7,
@@ -93,4 +93,4 @@ Since your Elasticsearch 6 and 7 are currently two separate installations, this 
 
 1.  Start the Elasticsearch server and then restart the Liferay Connector to Elasticsearch 6.
 
-Once your upgrade is completed, see the [new search features available in Liferay 7.3](../../../getting-started/whats-new-in-search-for-73.md). 
+Once your upgrade is completed, see the [new search features available in your Liferay version.](../../../getting_started.html). 
