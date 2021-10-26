@@ -1,15 +1,15 @@
-# Sending Custom Events
+# Tracking Custom Events
 
-You can send custom events for analysis by adding JavaScript code to your Liferay DXP site pages. The code you add interacts with Analytic Cloud's APIs to capture what users are doing on your website. Then these events can be analyzed with the [Events Analysis](./events-analsis.md) tool. 
+You can track custom events for analysis by adding JavaScript code to your Liferay DXP site pages. The code you add interacts with Analytic Cloud's APIs to capture what users are doing on your website. Then these events can be analyzed with the [Events Analysis](./events-analsis.md) tool. 
 
 To do this, use `Analytics.track` in your JavaScript code and define your event name and properties.
 
 | Field | Description |
 | ----- | ----------- |
 | `event` | The name of your custom event. We recommend using a human-readable name that can be easily understood for when doing events analysis (e.g. "Add to Cart Click") |
-| `attributes` | The different attributes of the event you wish to collect for analysis |
+| `attributes` | The different attributes of the event you wish to track |
 
-For example, you could track how users are adding items to their shopping cart. Add JavaScript code to the product page of your website to track these events. Select attributes such as price, product name, and quantity to send with the event. Here's a simple example:
+For example, you could track how users are adding items to their shopping cart. Add JavaScript code to the product page of your website to track these events. Select attributes such as price, product name, and quantity to track with the event. Here's a simple example:
 
 ```javascript
 
@@ -24,7 +24,7 @@ Analytics.track("Add to Cart Click",{
 
 ## Adding JavaScript Code 
 
-There a few different ways you can add JavaScript code to enable sending custom events. Modifying an individual page, adding a page fragment, or using a custom implementation.
+There a few different ways you can add JavaScript code to enable tracking custom events. Modifying an individual page, adding a page fragment, or using a custom implementation.
 
 ### Modify An Individual Page
 
@@ -36,7 +36,7 @@ The simplest way to add the JavaScript code is to modify an individual page. Not
 
 1. Paste the JavaScript code in the text box area under *JavaScript*. This is located under the Advanced tab.
 
-    ![Paste the JavaScript code into the text box.](./sending-custom-events/images/01.png)
+    ![Paste the JavaScript code into the text box.](./tracking-custom-events/images/01.png)
 
 1. Click *Save* and now your page is ready to track custom events.
 
@@ -54,7 +54,7 @@ Another way to add the Javascript code is to create a page fragment that can be 
 
 1. Click on the *Code* tab and Paste the JavaScript code into the JavaScript field.
 
-    ![Paste the Javascript code into the JavaScript field.](./sending-custom-events/images/02.png)
+    ![Paste the Javascript code into the JavaScript field.](./tracking-custom-events/images/02.png)
 
 1. Click *Save* and now the page fragment is ready to use.
 
