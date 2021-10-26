@@ -17,9 +17,9 @@ For example, you could track how users are adding items to their shopping cart. 
 // Add some event listener logic for when a user clicks the Add to Cart button
 
 Analytics.track("Add to Cart Click",{
-    price: productPrice(),
-    productName: productName(),
-    quantity: productQuantity(),
+    'price': productPrice(),
+    'productName': productName(),
+    'quantity': productQuantity(),
 });
 ```
 
@@ -27,11 +27,11 @@ The following data typecasts can be sent for attributes: Boolean, Date, Duration
 
 | Attribute Type | Description |
 | -------------- | ----------- |
-| Boolean | `true` or `false`, case insensitive |
-| Date | ISO-8061 format ((yyyy-MM-dd'T'HH:mm:ss.SSSX) |
-| Duration | In milliseconds, non-negative |
-| Number | Without thousands separator, decimal separator is okay |
-| String | If no other format matches, Analytics Cloud will assume string |
+| `Boolean` | `true` or `false`, case insensitive |
+| `Date` | ISO-8061 format ((yyyy-MM-dd'T'HH:mm:ss.SSSX) |
+| `Duration` | In milliseconds, non-negative |
+| `Number` | Without thousands separator, decimal separator is okay |
+| `String` | If no other format matches, Analytics Cloud will assume string |
 
 Note, in addition to the attributes you specify, there are [global attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) that are automatically associated with all events.
 
