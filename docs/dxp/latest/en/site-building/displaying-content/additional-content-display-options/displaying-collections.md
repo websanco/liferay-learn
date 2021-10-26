@@ -86,7 +86,7 @@ You can also configure the item style (how each asset is individually displayed)
 Map these elements to the assets in the Collection Display Fragment by dragging them into the cells of the fragment.
 
 ```{note}
-Depending on the option you have chosen for a Collection Display Fragment's List style, you may not be able to drag components into the fragment. If you cannot drag components into the fragment, then you can only configure the style to display the assets by selecting a different option under `List item style`, unless you choose a different List style.
+Depending on the option you have chosen for a Collection Display Fragment's List style, you may not be able to drag components into the fragment. If you cannot drag components into the fragment, you can choose a different List style or select a different option under `List item style`. 
 ```
 
 1. In the Page Editor, click the *Collection Display* representing your Collection.
@@ -111,7 +111,7 @@ Depending on the option you have chosen for a Collection Display Fragment's List
 
 1. Add more Fragments or Widgets as necessary and map the content to the content Fields.
 
-    ![Add Fragments and Widgets to the Collection Display and map the content fields.](./displaying-collections/images/08.gif)
+   ![Add Fragments and Widgets to the Collection Display and map the content fields.](./displaying-collections/images/08.gif)
 
 1. Click *Publish*.
 
