@@ -44,7 +44,7 @@ See [Configuring Containers](https://learn.liferay.com/dxp/latest/en/installatio
 
 If successful, the Commerce modules no longer appear in the Global Menu (![Global Menu](../images/icon-applications-menu.png)).
 
-## Activating Liferay Commerce Enterprise for Liferay DXP 7.3 FP3/SP2+
+## Activating Liferay Commerce Enterprise for Liferay DXP 7.3 FP3/SP3+
 
 > Liferay DXP and Commerce Subscriptions Required
 
