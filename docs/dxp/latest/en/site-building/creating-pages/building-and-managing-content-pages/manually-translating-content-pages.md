@@ -2,9 +2,9 @@
 
 Liferay integrates translation functionality with *Content Pages*, so you can create engaging, localized experiences for your global users. Users with the required permissions can manually translate Site content to any available language. You can also integrate the translation process with custom workflows to streamline the review and publication process for new translations.
 
-   ```{important}
-   To translate Content Pages, users must have either Update permission for Content Pages or translations permissions for one or more languages
-   ```
+```{important}
+To translate Content Pages, users must have either Update permission for Content Pages or translations permissions for one or more languages
+```
 
 ## Translating Content Pages
 
