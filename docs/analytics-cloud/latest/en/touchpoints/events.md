@@ -8,4 +8,4 @@ events/events-analysis.md
 ```
 
 - [Events Analysis](./events/events-analysis.md)
-- [Tracking Custom Events](./events/tracking-custom-events.md)
+- [Tracking Events](./events/tracking-events.md)
