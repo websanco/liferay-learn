@@ -30,17 +30,17 @@ com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration~d
 
 ```{note}
 Instead of using a tilde (`~`) to separate a Factory Configuration file's name and subname, 
-Liferay DXP/Portal versions 7.0-7.3 use a dash (`-`) or an underline (`_`), depending on your browser and OS. For example,
+Liferay DXP/Portal versions 7.0-7.3 use a dash (`-`) or an underscore (`_`), depending on your browser and OS. For example,
 
 Dash:
 
 `com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-default.config`
 
-Underline:
+Underscore:
 
 `com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration_default.config`
 
-Although tilde is the preferred separator character, dash and underline are still supported.
+Although tilde is the preferred separator character, dash and underscore are still supported.
 ```
 
 The next instance contains a unique *subname* (something other than *default*). It's good practice to use a descriptive name that sheds light on when this instance should be used. Following the example from [Adding a New Organization Type](../../../users-and-permissions/organizations/adding-a-new-organization-type.md), you could add the _League_ type with a configuration file named 
@@ -59,10 +59,10 @@ Some System Settings entries that support factory configuration don't ship with 
 com.liferay.user.associated.data.web.internal.configuration.AnonymousUserConfiguration~6befcd73-7c8b-4597-b396-a18f64f8c308.config
 ```
 
-If you're exporting the configuration file for deployment in a separate system, you can rename part of the exported filename after the first `~` to use a more descriptive subname. Be careful: if you rename the file and deploy it to the same system it was exported from, the new subname marks it as an entirely new configuration. You'll end up with an additional configuration instance in this case, not just a renamed one.
+If you're exporting the configuration file for deployment in a separate system, you can rename part of the exported file name after the first `~` to use a more descriptive subname. Be careful: if you rename the file and deploy it to the same system it was exported from, the new subname marks it as an entirely new configuration. You'll end up with an additional configuration instance in this case, not just a renamed one.
 
-```warning::
-   For configuration entries supporting factory configurations, omitting the subname from a `.config` file's name causes System Settings to disallow adding new entries for the configuration entry targeted by this `.config` file. This is caused by a known bug. See `LPS-76352 <https://issues.liferay.com/browse/LPS-76352>`_ for more information. Once an improperly named configuration file is deployed, you can't add any entries for the configuration in question from its System Settings entry.
+```{warning}
+For configuration entries supporting factory configurations, omitting the subname from a `.config` file's name causes System Settings to disallow adding new entries for the configuration entry targeted by this `.config` file. This is caused by a known bug. See [LPS-76352](https://issues.liferay.com/browse/LPS-76352) for more information. Once an improperly named configuration file is deployed, you can't add any entries for the configuration in question from its System Settings entry.
 
-   Deploying an erroneous (lacking a subname) `.config` file doesn't disable anything permanently. Rename the file using the proper convention described above or remove it entirely and start over.
+Deploying an erroneous (lacking a subname) `.config` file doesn't disable anything permanently. Rename the file using the proper convention described above or remove it entirely and start over.
 ```
