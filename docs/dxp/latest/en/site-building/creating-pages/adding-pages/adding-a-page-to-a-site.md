@@ -15,19 +15,19 @@ You can add a new Page from the Pages administration screen or from the Page Tre
     ![The Pages screen lets you edit your Site pages as a whole.](./adding-a-page-to-a-site/images/02.png)
 
     ```{note}
-       Starting with 7.3, the default Home Page is a Content Page instead of a Widget Page.
+    Starting with 7.3, the default Home Page is a Content Page instead of a Widget Page.
     ```
 
 1. Under Collections, select a Basic or Global template for your page. To start with an empty [Content Page](../understanding-pages/understanding-pages.md#page-types), click the *Blank* [Master Page Template](../defining-headers-and-footers/master-page-templates.md). Alternatively, click one of the Page templates under the Other heading.
 
-    ![Select a Basic or Global Template for your Page.](./adding-a-page-to-a-site/images/03.png)
+   ![Select a Basic or Global Template for your Page.](./adding-a-page-to-a-site/images/03.png)
 
-1. In the Add Page dialog, enter a Name, and click *Add*.
+1. In the Add Page dialog, enter a Name and click *Add*.
 
-1. For a new Widget Page, configure the remaining settings, and then click *Save*.
+1. For a new Widget Page, configure the remaining settings and then click *Save*.
 
 ```{tip}
-By default, new pages are included in the Navigation Menu for the site. To configure this Navigation Menu, see [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
+By default, new pages are included in the Navigation Menu for the Site. To configure this Navigation Menu, see [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
 ```
 
 ### Adding a New Page from the Page Tree Menu
@@ -38,7 +38,7 @@ By default, new pages are included in the Navigation Menu for the site. To confi
 
 1. Click the *Add* (![Add](../../../images/icon-add-app.png)) button to add a new Page.
 
-    ![Adding a new Page using the Page Tree menu.](adding-a-page-to-a-site/images/04.png)
+   ![Adding a new Page using the Page Tree menu.](adding-a-page-to-a-site/images/04.png)
 
 1. Follow the standard steps for creating a page, as outlined [above](#adding-a-new-page).
 
@@ -56,12 +56,12 @@ You can add child Pages from the Page administration or the Page Tree (Liferay D
 
 1. Click the *Add* button (![Add](../../../images/icon-duplicate.png)) next to an existing Page.
 
-    ![Click the Add buton next to an exiting Page to create a new child Page.](./adding-a-page-to-a-site/images/05.png)
+   ![Click the Add buton next to an exiting Page to create a new child Page.](./adding-a-page-to-a-site/images/05.png)
 
 1. Follow the standard steps for creating a Page, as outlined [above](#adding-a-new-page).
 
 ```{tip}
-Using the Actions Menu (![Actions Menu](../../../images/icon-actions.png)) next to the Page, you can preview a Content Page draft (Liferay DXP 7.2+) or approve a draft (Liferay DXP 7.2 only). These options are available for Pages in "draft" status and users with page editing permission.
+Using the Actions Menu (![Actions Menu](../../../images/icon-actions.png)) next to the Page, you can preview a Content Page draft (Liferay DXP 7.2+) or approve a draft (Liferay DXP 7.2 only). These options are available for Pages in draft status and Users with page editing permission.
 ```
 
 ### Adding a Child Page from the Pages Tree
