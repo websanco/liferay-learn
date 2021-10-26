@@ -12,7 +12,7 @@ Payment Subscriptions can only be enabled when using PayPal or other custom-paym
 
 A _Delivery Subscription_ is analogous to a magazine subscription. Here, a lump-sum amount is paid upfront and a shipment is created on a recurring basis.
 
-Both Payment Subscriptions and Delivery Subscriptions can be combined for scenarios where an item or a group of items need to be shipped out and the customer is billed on a recurring basis for it.
+Both Payment Subscriptions and Delivery Subscriptions can be combined for scenarios where an item or a group of items must be shipped out and the customer is billed on a recurring basis for it.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Follow these steps to enable subscriptions for a Product:
 
 1. Use the toggle switch to determine whether the subscription automatically ends.
 
-    ![Configuring the payment subscription.](./enabling-subscriptions-for-a-product/images/03.png)
+    ![Configure the payment subscription.](./enabling-subscriptions-for-a-product/images/03.png)
 
 1. Click on *Publish* when finished.
 
