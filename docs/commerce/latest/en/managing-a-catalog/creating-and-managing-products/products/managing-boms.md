@@ -34,13 +34,13 @@ Once the image has been uploaded, map the parts to the products in the catalog.
 
 3. Click on the part of the diagram that is associated with product (for example, _Fuel Injector 1_).
 
-4. Enter the following:
+4. Enter this information:
 
     * **Number**: 1 (numeric ordering of the mapped product list)
     * **Product**: MIN59999 (the product name or SKU)
 
       ```tip::
-         Text auto-complete will show suggestions as you type in the name of a product.
+         Text auto-complete shows suggestions as you type in the name of a product.
       ```
 
     ![Begin associating products in the BOM diagram.](./managing-boms/images/04.png)
