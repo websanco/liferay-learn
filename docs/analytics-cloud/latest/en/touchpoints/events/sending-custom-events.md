@@ -1,15 +1,15 @@
 # Sending Custom Events
 
-You can send custom events for analysis by adding JavaScript code to your Site's pages. The code you add interacts with Analytic Cloud's APIs to capture what users are doing on your website.
+You can send custom events for analysis by adding JavaScript code to your Liferay DXP site pages. The code you add interacts with Analytic Cloud's APIs to capture what users are doing on your website. Then these events can be analyzed with the [Events Analysis](./events-analsis.md) tool. 
 
-Use `Analytics.track` in your JavaScript code and define your event name and properties.
+To do this, use `Analytics.track` in your JavaScript code and define your event name and properties.
 
 | Field | Description |
 | ----- | ----------- |
-| `event` | Name of custom event. We recommend using a human-readable name that can be easily understood for when doing events analysis (e.g. "Add to Cart Click") |
-| `attributes` | The different attributes of the event you wish to send |
+| `event` | The name of your custom event. We recommend using a human-readable name that can be easily understood for when doing events analysis (e.g. "Add to Cart Click") |
+| `attributes` | The different attributes of the event you wish to collect for analysis |
 
-For example, track how users are adding items to their shopping cart. Add JavaScript code to the product page of your website to track these events. Select attributes such as price, product name, and quantity to send with the event.
+For example, you could track how users are adding items to their shopping cart. Add JavaScript code to the product page of your website to track these events. Select attributes such as price, product name, and quantity to send with the event. Here's a simple example:
 
 ```javascript
 
@@ -24,7 +24,7 @@ Analytics.track("Add to Cart Click",{
 
 ## Adding JavaScript Code 
 
-There a few different ways you can add JavaScript code to enable sending custom events. Modify an individual page, add a page fragment, or use a custom implementation.
+There a few different ways you can add JavaScript code to enable sending custom events. Modifying an individual page, adding a page fragment, or using a custom implementation.
 
 ### Modify An Individual Page
 
