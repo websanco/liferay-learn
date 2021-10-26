@@ -42,8 +42,8 @@ for (user in users){
 
 Importing `com.liferay.portal.kernel.model.User` and `java.util.List` isn't necessary because the Script Console makes them available. And the Groovy syntax is simpler than the Java syntax.
 
-```note::
-   If the service doesn't have a ``*ServiceUtil`` class, use a `Service Tracker <../../developing-applications/core-frameworks/dependency-injection.md>`_ to access the service.
+```{note}
+If the service doesn't have a `*ServiceUtil` class, use a [Service Tracker](../../developing-applications/core-frameworks/dependency-injection.md) to access the service.
 ```
 
 ## Next Steps
