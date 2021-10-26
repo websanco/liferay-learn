@@ -43,9 +43,9 @@ There a few different ways you can add JavaScript code to enable tracking events
 
 The simplest way to add the JavaScript code is to modify an individual page. Note, make sure to use Widget Pages that have the ability to add JavaScript code to a page.
 
-1. Click the Product Menu ![Product Menu icon.](../../images/icon-product-menu.png) and navigate to *Site Builder* &rarr; *Pages*. 
+1. Click the Product Menu (![Product Menu icon.](../../images/icon-product-menu.png)) and navigate to *Site Builder* &rarr; *Pages*. 
 
-1. Click the *Actions* icon ![Actions icon.](../../images/icon-actions.png) of the individual page and click *Configure*
+1. Click the *Actions* icon (![Actions icon.](../../images/icon-actions.png)) of the individual page and click *Configure*
 
 1. Paste the JavaScript code in the text box area under *JavaScript*. This is located under the Advanced tab.
 
@@ -59,11 +59,11 @@ To learn more, see [Configuring Individual Pages](../../../../../dxp/latest/en/s
 
 Another way to add the Javascript code is to create a page fragment that can be added to a Content Page. You get more scalability by being able to quickly add the fragment to any page on your website.
 
-1. Click the Product Menu ![Product Menu icon.](../../images/icon-product-menu.png) and navigate to *Design* &rarr; *Fragments*. 
+1. Click the Product Menu (![Product Menu icon.](../../images/icon-product-menu.png)) and navigate to *Design* &rarr; *Fragments*. 
 
-1. Click the *Plus* icon ![Plus icon.](../../images/icon-plus.png) under Collections to create a new fragment collection.
+1. Click the *Plus* icon (![Plus icon.](../../images/icon-plus.png)) under Collections to create a new fragment collection.
 
-1. Click the *Add* icon ![Add icon.](../../images/icon-add.png) to create a new fragment.
+1. Click the *Add* icon (![Add icon.](../../images/icon-add.png)) to create a new fragment.
 
 1. Click on the *Code* tab and Paste the JavaScript code into the JavaScript field.
 
@@ -73,7 +73,7 @@ Another way to add the Javascript code is to create a page fragment that can be 
 
 1. Click *Save* and now the page fragment is ready to use.
 
-1. Navigate to the content page you wish to add the fragment to. Click the *Edit* icon ![Edit icon.](../../images/icon-edit.png) to open the page editor. Locate the fragment you just created and drag it to your page. Click *Publish*.
+1. Navigate to the content page you wish to add the fragment to. Click the *Edit* icon (![Edit icon.](../../images/icon-edit.png)) to open the page editor. Locate the fragment you just created and drag it to your page. Click *Publish*.
 
 To learn more, see [Developing Fragments](../../../../../dxp/latest/en/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.md).
 

@@ -34,7 +34,7 @@ Note, only administrators can hide or show events.
 
 ## Custom Events
 
-Custom events are a useful way to define and track events that are specific to your business needs. For example, you might track a form on your site that customers use to make payments. Once the specific event is defined and configured on your site, Analytics Cloud collects data for the event. 
+Custom events are a useful way to define and track events that are specific to your business needs. For example, you might track a form on your site that customers use to make payments. Once the specific event is defined and configured on your site, Analytics Cloud collects data for the event. See [Tracking Events](../../touchpoints/events/tracking-events.md) to learn more.
 
 Click on the *Custom Events* tab to see all the events that have been defined and are being tracked. Note that there is a limit of 100 custom events that can be tracked at any given time. 
 

@@ -1,6 +1,6 @@
 # Events Analysis
 
-As individuals visit and interact with your site, Analytics Cloud tracks these events. Many of these events that take place on your Liferay DXP instance are set up to be tracked out-of-the-box. You can also define and track custom events by adding code snippets to your site. Use the events analysis tool to analyze and filter events based on different attributes. To analyze an event, 
+As individuals visit and interact with your site, Analytics Cloud tracks these events. Many of these events that take place on your Liferay DXP instance are set up to be tracked out-of-the-box. You can also [define and track custom events](./tracking-events.md) by adding code snippets to your site. Use the events analysis tool to analyze and filter events based on different attributes. To analyze an event, 
 
 1. Navigate to *Touchpoints* &rarr; *Events*. 
 
