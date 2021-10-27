@@ -44,11 +44,11 @@ Follow these steps to edit the Object draft.
 
    ![Modify the Object's name, label and plural label if desired.](./creating-objects/images/03.png)
 
-1. Determine the scope of the Object's data and where it can be accessed in the Liferay UI.
+1. Determine the Object's *scope*. This determines how the Object's data is stored.
 
-   **Company** (default): When scoped by Company, the application is made available in the Global Menu and its data can be accessed globally.
+   **Company** (default): When scoped by Company, the Object's data is stored per Liferay instance.
 
-   **Site**: When scoped by Site, the application is deployed to all Sites and is made available in the Site Menu; any generated data is scoped to the Site in which it's created.
+   **Site**: When scoped by Site, the Object's data is stored per Site.
 
    ```{important}
    Once published, an Object's scope cannot be changed.
@@ -56,7 +56,11 @@ Follow these steps to edit the Object draft.
 
    ![Select a scope and panel category key for the Object.](./creating-objects/images/04.png)
 
-1. Select a *Panel Category Key* to determine where the Object is listed in either the Site Menu or Global Menu.
+1. Select a *Panel Category Key* to determine where the Object is listed in the Liferay UI.
+
+   If the Object is scoped by Company, you can place it in the *Global Menu*.
+
+   If the Object is scoped by Site, you can place it in the *Site Menu*.
 
 1. Click on *Save* before moving on to the next steps. Any unsaved changes in the *Details* tab will be lost when you navigate to the other tabs.
 
@@ -83,11 +87,10 @@ Follow these steps to edit the Object draft.
 Whenever you add a field, relationship, or layout, the Object draft is automatically saved. Once you've finished configuring and editing the draft, you can [publish](#publishing-object-drafts) it in the *Details* tab to create the application.
 
 ## Publishing Object Drafts
-<!--REFINE SECTION-->
 
 Publishing an Object creates and activates your new application. When activated, users can access it in the Portal UI according to its scope and panel category key. Before publishing your Object, review the following information to understand the consequences of publishing a draft.
 
-### What Happens During Publishing <!--REVIEW-->
+### What Happens During Publishing
 
 The publishing process includes the following operations:
 
@@ -105,11 +108,11 @@ The publishing process includes the following operations:
 
 * The Object is integrated with Forms, so you can select the Object as a data storage option.
 
-### Configuration Restrictions for Published Objects <!--REVIEW-->
+### Configuration Restrictions for Published Objects
 
 In order to prevent data loss and system conflicts, some configuration options are removed for Objects, fields, and relationships after they are published.
 
-* Published Objects cannot be removed.
+* Published Objects cannot be deleted or unpublished.
 
 * The name and scope of a published Object cannot be changed.
 
