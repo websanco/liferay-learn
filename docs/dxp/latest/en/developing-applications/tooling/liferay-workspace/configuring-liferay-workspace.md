@@ -35,7 +35,7 @@ Congratulations! Your Workspace is now upgraded.
 You may want to update the version of Liferay that Workspace compiles for. This is handled by a single property: 
 
 ```properties
-liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN$]
+liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE$]
 ```
 
 Update the property's value to the version of Liferay for which you're developing code. Your workspace's dependencies are then automatically updated to the new version. 
