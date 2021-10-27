@@ -50,3 +50,8 @@ The `fields` parameter requests only specific fields to be enumerated in each of
 The `flatten` parameter executes your request out of a hierarchical context, for hierarchical APIs. This allows you, for instance, to search for any Organization called "Marketing" rather than having to traverse the org-chart to find the relevant Organization.
 
 For specifics on how to use any of these parameters see [API Headers Reference](./consuming-apis/api-headers-reference.md).
+
+## Related Information
+
+- [Consuming Rest Services](../headless-delivery/consuming-apis/consuming-rest-services.md)
+- [Consuming GraphQL APIs](../headless-delivery/consuming-apis/consuming-graphql-apis.md)
