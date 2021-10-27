@@ -1,1 +1,0 @@
-../../scripts/init_java_example.sh
