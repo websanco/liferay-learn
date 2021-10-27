@@ -5,7 +5,7 @@ The Objects portlet provides a powerful way to manage both system and custom Obj
 ![Use the Objects portlet to view and manage both system and custom Objects.](./managing-objects/images/01.png)
 
 ```{note}
-See [Objects Application Permissions](../objects-admin-permission.md) to learn more about the permissions necessary for performing the following management actions.
+See [Objects Application Permissions](../objects-admin-permission.md) to learn more about the permissions necessary for performing these management actions.
 ```
 
 ## Editing and Extending Objects
@@ -54,7 +54,7 @@ Follow these steps to deactivate or activate a custom Object via the Objects por
 
 1. In the Details tab, set the toggle switch to either *Active* or *Inactive*.
 
-  ![Switch the Object to Activate or Inactive. ](./managing-objects/images/05.png)
+    ![Switch the Object to Activate or Inactive. ](./managing-objects/images/05.png)
 
 1. Click on *Save*.
 

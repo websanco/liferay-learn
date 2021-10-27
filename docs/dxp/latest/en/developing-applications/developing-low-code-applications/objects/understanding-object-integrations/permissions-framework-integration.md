@@ -1,6 +1,6 @@
 # Permissions Framework Integration
 
-When an Object is created, it is automatically integrated with Liferay's Permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to manage user access to individual Objects and their entries. With role-based access control, you can ensure only appropriate users can view and use your application data.
+When an Object is created, it is automatically integrated with Liferay's Permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to manage user access to individual Objects and their entries. With role-based access control, you can ensure only appropriate users can view and use your application's data.
 
 When defining role permissions, active Objects are listed according to their scope and panel category key.
 

@@ -1,4 +1,4 @@
-# Objects Admin Permission
+# Objects Application Permissions
 
 Like other Liferay applications, the Objects portlet is integrated with the permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to user roles to determine which users have access to the Objects portlet and its data.
 
@@ -10,7 +10,7 @@ See [Defining Role Permissions](../../../users-and-permissions/roles-and-permiss
 
 Application permissions grant the ability to perform general application-related operations and do not include [resource-related permissions](#object-resource-permissions).
 
-The Objects portlet has the following application permissions.
+The Objects portlet has the following application permissions
 
 | Permission | Description |
 | --- | --- |

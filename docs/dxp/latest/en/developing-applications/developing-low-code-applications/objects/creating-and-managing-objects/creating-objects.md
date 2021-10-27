@@ -1,6 +1,6 @@
 # Creating Objects
 
-Liferay Objects provides low-code development capabilities in the Liferay UI. Using the Objects portlet, you can build fully integrated Liferay applications without having to develop any code or manually deploy modules. This process includes [creating](#creating-object-drafts) an initial draft of the Object, [editing](#editing-object-drafts) the Object draft, and finally [publishing](#publishing-object-drafts) the draft to create the new application. Publishing an Object draft creates a fully integrated Liferay application that can be [managed and extended](./managing-objects.md) at any time via the Objects portlet.
+Liferay Objects provides low-code development capabilities in the Liferay UI. Using the Objects portlet, you can build fully integrated Liferay applications without writing any code or manually deploy modules. This process includes [creating](#creating-object-drafts) an initial draft of the Object, [editing](#editing-object-drafts) the Object draft, and finally [publishing](#publishing-object-drafts) the draft to create the new application. Publishing an Object draft creates a fully integrated Liferay application that can be [managed and extended](./managing-objects.md) at any time via the Objects portlet.
 
 ## Creating Object Drafts
 
@@ -30,7 +30,7 @@ Once saved, a new Object draft is created without any fields, relationships, lay
 
 ## Editing Object Drafts
 
-Before an Object is published, you can configure any of its settings and elements. This includes the scope of its data, its name, panel category key, fields, relationships, and layouts. Once published, some of these configuration options are removed. See [Publishing Object Drafts](#publishing-object-drafts) for more information.
+Before an Object is published, you can configure its settings and elements. This includes the scope of its data, its name, panel category key, fields, relationships, and layouts. Once published, some of these configuration options are removed. See [Publishing Object Drafts](#publishing-object-drafts) for more information.
 
 Follow these steps to edit the Object draft.
 
@@ -85,7 +85,7 @@ Whenever you add a field, relationship, or layout, the Object draft is automatic
 ## Publishing Object Drafts
 <!--REFINE SECTION-->
 
-Publishing an Object creates and activates your new application. When activated, users can access it in the Portal UI according to its scope and panel category key. However, before publishing your Object, review the following information to understand the consequences of publishing a draft.
+Publishing an Object creates and activates your new application. When activated, users can access it in the Portal UI according to its scope and panel category key. Before publishing your Object, review the following information to understand the consequences of publishing a draft.
 
 ### What Happens During Publishing <!--REVIEW-->
 
@@ -97,7 +97,7 @@ The publishing process includes the following operations:
 
 * A Collection Provider is created for displaying the Object's entries.
 
-* The Object is integrated with Info framework, so you can select the Object as a content type for a Display Page Template
+* The Object is integrated with Info framework, so you can select the Object as a content type for a [Display Page Template](../../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)
 
 * The Object is integrated with the [Permissions framework](../understanding-object-integrations/permissions-framework-integration.md), so you can manage permissions for the new application and its resources.
 
