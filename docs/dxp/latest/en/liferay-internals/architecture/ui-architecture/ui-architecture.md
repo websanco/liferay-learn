@@ -1,3 +1,9 @@
 # UI Architecture
 
-Coming soon!
+```{raw} html
+:file: ../../../landingpage_template.html
+```
+
+```{raw} html
+:file:  ui-architecture/landing.html
+```

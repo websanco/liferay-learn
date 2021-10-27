@@ -1,0 +1,37 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+			
+				{
+					sectionName: 'Architecture',
+					sectionURL: 'liferay-internals/architecture/architecture.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'The Benefits of Modularity',
+							url: 'liferay-internals/architecture/the-benefits-of-modularity.html'
+						},
+						{
+							name: 'OSGi and Modularity',
+							url: 'liferay-internals/architecture/osgi-and-modularity.html'
+						},
+						{
+							name: 'Module Life Cycle',
+							url: 'liferay-internals/architecture/module-lifecycle.html'
+						},
+						{
+							name: 'UI Architecture',
+							url: 'liferay-internals/architecture/ui-architecture.html'
+						},
+					]
+				},
+					]
+				},
+			]
+		}
+	})
+</script>

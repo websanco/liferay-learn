@@ -11,7 +11,7 @@ Architecture
    architecture/osgi-and-modularity.md
    architecture/module-lifecycle.md
    architecture/bundle-classloading-flow.md
-   architecture/ui_architecture.rst
+   architecture/ui-architecture.md
 
 -  :doc:`/liferay-internals/architecture/architecture`
 -  :doc:`/liferay-internals/architecture/liferay-classloader-hierarchy` (Coming soon!)
@@ -24,6 +24,6 @@ Architecture
 UI Architecture
 ---------------
 
--  :doc:`/liferay-internals/architecture/ui-architecture/ui-architecture` (Coming soon!)
--  :doc:`/liferay-internals/architecture/ui-architecture/theme-components` (Coming soon!)
--  :doc:`/liferay-internals/architecture/ui-architecture/understanding-the-page-layout` (Coming soon!)
+-  :doc:`/liferay-internals/architecture/ui-architecture/ui-architecture` ((Help Center)
+-  :doc:`/liferay-internals/architecture/ui-architecture/theme-components` ((Help Center)
+-  :doc:`/liferay-internals/architecture/ui-architecture/understanding-the-page-layout` ((Help Center)
