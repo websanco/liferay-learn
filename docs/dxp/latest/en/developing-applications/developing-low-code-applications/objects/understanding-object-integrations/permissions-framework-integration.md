@@ -14,7 +14,7 @@ Custom Objects include the following standard application permissions according 
 | --- | --- |
 | Access in Control Panel (Company Scope Only) | Ability to access the Object in the Global Menu |
 | Access in Site and Asset Library Administration (Site Scope Only) | Ability to access the Object in the Site Menu or Asset Library |
-| Configuration | Ability to view and set the Objects's configuration options |
+| Configuration | Ability to view and set the Object's configuration options |
 | Permissions | Ability to view and modify the Object's permissions |
 | Preferences | Ability to view and set the Object's preferences |
 | View | Ability to view the Object's application page |
@@ -34,7 +34,7 @@ Each Object also has the following resource permissions.
 | Permission | Description |
 | --- | --- |
 | Add Object Entry | Ability to create an Object entry |
-| Permissions | Ability to view and manage permissions related to Object entries. |
+| Permissions | Ability to view and manage permissions related to Object entries |
 
 ### Actions on Database Entities
 

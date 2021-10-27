@@ -12,21 +12,23 @@ Follow these steps to add a Layout to an Object:
 
 1. Open the *Objects* portlet, and click on the desired *Object*.
 
-1. Click on the *Layouts* tab, and click on the *Add* button (![Add Button]()).
+1. Click on the *Layouts* tab, and click on the *Add* button (![Add Button](../../../../images/icon-add.png)).
 
-1. Enter a *Name*, and click on *Save*. This creates a blank layout.
+   ![Click on the Add button in the Layouts tab, enter a Name for the new layout, and click on Save.](./designing-object-layouts/images/01.png)
 
-You can now add tabs to your custom layout and determine how the Object's fields and relationships are organized for entry creation and editing.
+1. Enter a *Name*, and click on *Save*.
 
-## Designing Layout Tabs
+Once saved, a new blank layout is created. You can now click on  You can now [add tabs](#adding-layout-tabs) to your custom layout and determine how the Object's fields and relationships are organized for entry creation and editing.
 
-Object entry elements can be organized into two types of tabs:
+## Adding Layout Tabs
+<!--TASK: Add drag and drop details once implemented.-->
+Object elements can be organized into two types of tabs:
 
-[**Fields**](#adding-fields-tabs): This type of tab is used to display Object entry fields. This includes fields created directly in the Object or those inherited from a *One to Many* relationship. <!--TASK: Add in One to One after implemented-->
+[**Fields**](#fields-tabs): This type of tab is used to display Object entry fields. This includes fields created directly in the Object or those inherited from a *One to Many* relationship. <!--TASK: Add in One to One after implemented-->
 
-[**Relationships**](#adding-relationships-tabs): This type of tab is used to display relationship tables and must be used for displaying the parent side of *One to Many* relationships and both sides of *Many to Many* relationships.
+[**Relationships**](#relationships-tabs): This type of tab is used to display relationship tables and must be used for displaying the parent side of *One to Many* relationships and both sides of *Many to Many* relationships.
 
-To design your layout, repeat the following steps until you've added all the desired [fields](#adding-fields-tabs) and [relationships](#adding-relationships-tabs). <!--SME INPUT: Are users supposed to be able to drag and drop layout elements (e.g, tabs, blocks, fields)?-->
+To design your layout, repeat the following steps until you've added all the desired [fields](#adding-fields-tabs) and [relationships](#adding-relationships-tabs).
 
 ```{important}
 Only the first tab is displayed during Object entry creation. Other tabs are displayed only when editing the Object entry.
@@ -34,49 +36,63 @@ Only the first tab is displayed during Object entry creation. Other tabs are dis
 Also, the first tab in a layout cannot contain relationships, and a Relationships tab can only be added to a layout after it has a Fields tab.
 ```
 
-### Adding Fields Tabs
+### Fields Tabs
 
 Follow these steps to add a Fields tab:
 
-1. Click on the desired layout, go to the *Layout* tab, and click on *Add Tab*.
+1. Click on the desired layout, and go to the *Layout* tab.
 
-1. Enter a *Label* for the tab. This value determines the tab's display name in the Liferay UI.
+   ![](./designing-object-layouts/images/02.png)
 
-1. For tab type, select *Fields* and click on *Save*.
+1. Click on *Add Tab*, enter a *Label*, select the *Fields* type, and click on *Save*.
 
-1. Click on *Add Block* for the tab to define a sub-section.
+   The Label value determines the tab's display name in the Liferay UI.
+
+   ![Click on Add Tab, enter a Label, select the Fields type, and click on Save.](./designing-object-layouts/images/03.png)
+
+1. Click on *Add Block*, enter a *Label*, and click on *Save*.
+
+   This creates a tab subsection that you can add fields to. The Label value determines the block's display name in the Liferay UI.
 
    ```{note}
    Fields cannot be added directly to a tab; they must be organized into blocks.
    ```
 
-1. Enter a *Label* for the block, and click on *Save*. This value determines the block's display name in the Liferay UI.
+   ![Click on Add Block, enter a Label, and click on Save.](./designing-object-layouts/images/04.png)
 
-1. Use the toggle button to determine whether or not the block is *collapsible*.
-
-1. Click on *Add Field* to add fields to the block.
-
-1. Select the desired field, and determine whether the field is displayed in one, two, or three columns.
+1. Click on *Add Field*, select the desired field, determine whether the field is displayed in one, two, or three columns, and click on *Save*.
 
    ```{note}
    A field can only be used once in a layout.
    ```
 
+   ![Click on Add Field, choose a field, select the number of columns the field is displayed in, and click on Save.](./designing-object-layouts/images/05.png)
+
+1. Click on *Add Field* to add more fields to the block, or click on *Add Block* to add a new block to the tab for additional fields.
+
+1. Use the toggle switch to determine whether or not the block is *collapsible*.
+
+   ![Use the toggle switch to determine whether or not the block is collapsible.](./designing-object-layouts/images/06.png)
+
 1. Click on *Save*.
 
-### Adding Relationships Tabs
+### Relationships Tabs
 
 Follow these steps to add a Relationships tab:
 
-1. Click on the desired layout, go to the *Layout* tab, and click on *Add Tab*.
+1. Click on the desired layout, and go to the *Layout* tab.
 
-1. Enter a *Label* for the tab. This value determines the tab's display name in the Liferay UI.
+   ![Click on the desired layout, and go to the Layout tab.](./designing-object-layouts/images/07.png)
+
+1. Click on *Add Tab*, enter a *Label*. This value determines the tab's display name in the Liferay UI.
 
 1. For tab type, click on *Relationships*, and then select from available *One to Many* or *Many to Many* relationships. This determines the relationship table displayed in the tab.
 
    ```{note}
-   You can only select the Relationships type if the layout has at least one Fields tab. A relationships tab cannot be the first tab in an Object layout. This is because relationships cannot be set at entry creation, since an entry must first exist before it can be related to another Object entity. <!--REFINE-->
+   You can only select the Relationships type if the layout has at least one Fields tab. A Relationships tab cannot be the first tab in an Object layout, because relationships cannot be set at entry creation. An entry must first exist before it can be related to another Object entity.
    ```
+
+   ![For tab type, select Relationships, and then choose either One to Many or Many to Many to determine the relationship table.](./designing-object-layouts/images/08.png)
 
 1. Click on *Save*.
 
@@ -85,7 +101,7 @@ Follow these steps to add a Relationships tab:
 Once you've added the desired fields and relationships to your custom layout, you can set it as the Object's default layout. This ensures it is used for creating and editing the Object's entries. If no custom layout is selected as default, the Object uses its automatically generated layout.
 
 ```{important}
-In order to select a custom layout as default, the Object must have at least one required field, and all required Object fields must be added to the layout's first tab.
+In order to select a custom layout as default, all required Object fields must be added to the layout's first tab.
 ```
 
 Follow these steps to select a default layout for an Object.
@@ -93,6 +109,8 @@ Follow these steps to select a default layout for an Object.
 1. Click on the desired layout.
 
 1. In the Basic Details tab, check the *Default* box.
+
+   ![Check the Default box and click on Save.](./designing-object-layouts/images/09.png)
 
 1. Click on *Save*.
 

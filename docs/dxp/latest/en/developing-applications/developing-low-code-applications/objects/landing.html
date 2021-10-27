@@ -1,0 +1,75 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Introduction to Objects',
+					sectionURL: 'objects/introduction-to-objects.html',
+				},
+				{
+					sectionName: 'Creating and Managing Objects',
+					sectionURL: 'objects/creating-and-managing-objects.html',
+					subsections: [
+						{
+							name: 'Creating Objects',
+							url: 'objects/creating-and-managing-objects/creating-objects.html'
+						},
+						{
+							name: 'Managing Objects',
+							url: 'objects/creating-and-managing-objects/managing-objects.html'
+						},
+						{
+							name: 'Adding Fields to Objects',
+							url: 'objects/creating-and-managing-objects/adding-fields-to-objects.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Using Objects in Sites (Coming Soon)',
+					sectionURL: 'objects/using-objects-in-sites.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Creating Forms for Objects (Coming Soon)',
+							url: 'objects/using-objects-in-sites/creating-forms-for-objects.html'
+						},
+						{
+							name: 'Displaying Object Entries (Coming Soon)',
+							url: 'objects/using-objects-in-sites/displaying-object-entries.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Understanding Object Integrations',
+					sectionURL: 'objects/understanding-object-integrations.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Permissions Framework Integration',
+							url: 'objects/understanding-object-integrations/permissions-framework-integration.html'
+						},
+						{
+							name: 'Headless Framework Integration',
+							url: 'objects/understanding-object-integrations/headless-framework-integration.html'
+						},
+						{
+							name: 'Assets Framework Integration (Coming Soon)',
+							url: 'objects/understanding-object-integrations/assets-framework-integration.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Using Picklists',
+					sectionURL: 'objects/using-picklists.html',
+				},
+				{
+					sectionName: 'Objects Application Permissions',
+					sectionURL: 'objects/objects-application-permissions.html',
+				}
+			]
+		}
+	})
+</script>
