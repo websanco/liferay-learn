@@ -20,10 +20,4 @@ Architecture
 -  :doc:`/liferay-internals/architecture/osgi-and-modularity`
 -  :doc:`/liferay-internals/architecture/module-lifecycle`
 -  :doc:`/liferay-internals/architecture/bundle-classloading-flow` (Coming soon!)
-
-UI Architecture
----------------
-
--  :doc:`/liferay-internals/architecture/ui-architecture/ui-architecture` (Help Center)
--  :doc:`/liferay-internals/architecture/ui-architecture/theme-components` (Help Center)
--  :doc:`/liferay-internals/architecture/ui-architecture/understanding-the-page-layout` (Help Center)
+-  :doc:`/liferay-internals/architecture/ui-architecture`
