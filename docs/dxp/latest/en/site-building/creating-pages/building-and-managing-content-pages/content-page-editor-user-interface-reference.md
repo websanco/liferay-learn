@@ -65,16 +65,20 @@ After making your changes, click *Preview* (![Preview](../../../images/icon-prev
 
 ## Editing Sidebar
 
-> Available: Liferay DXP 7.4+. For previous Liferay DXP versions, see [Editing Sidebar in 7.3](#editing-sidebar-in-7.3)
-
 Depending on your selected editing mode, you can access these options in the edit sidebar:
 
 - ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
-- ![Browser](../../../images/icon-browser.png) - [Browser](#browser)
+- ![Browser](../../../images/icon-browser.png) - [Browser](#browser) (Liferay DXP 7.4)
 - ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](#page-design-options)
 - ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
 
-![Click Edit to access the Content Page sidebar menu.](content-page-editor-user-interface-reference/images/03.png)
+Before DXP 7.4, the Browser (![Browser](../../../images/icon-browser.png)) button functionality was provided by these two controls:
+
+- ![Selection](../../../images/icon-pages-tree.png) - [Selection](#selection)
+- ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
+
+
+![Content Page sidebar controls differences between Liferay DXP 7.4+ and previous versions.](content-page-editor-user-interface-reference/images/03.png)
 
 ### Fragments and Widgets
 
@@ -90,21 +94,28 @@ In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../
 
 ### Browser
 
+> Available: Liferay DXP 7.4+
+
 The *Browser* sidebar panel (![Browser](../../../images/icon-browser.png)) allows you to view, edit, and manage all web content on the Page. The mapped content on a Page can be from different types of assets: documents and media, web content articles, etc. This includes content displayed in widgets and mapped to content fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information. 
 
-   ![Browser tab allows you to view, edit, and manage web content on the page.](./content-page-editor-user-interface-reference/images/02.gif)
+   ![Browser tab allows you to view, edit, and manage web content on the Page.](./content-page-editor-user-interface-reference/images/02.gif)
 
-- **Page Elements**: in Page Elements you can view a hierarchical outline of all Page elements, select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) for more information.  
+- **Page Elements**: Page Elements shows a hierarchical outline of all Page elements, where you can select, configure, or remove those elements. Clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) for more information.  
 
-```{note}
+   ```{note}
    A Page's Header and Footer are not listed in the Page Elements panel hierarchy. This is because you can only modify them in the [Master Page Template](../defining-headers-and-footers/master-page-templates.md).
-```
+   ```
 
-- **Page Content**: In Page Content you can access the content included in the Page and the options to edit them. All content is distributed by its types and they are shown with its essential information, name and subtype. You can filter content by type or name, so you can quickly find and edit it. You can also see a model with all collection items, add an item to the collection, and open an image editor. It is possible to quickly edit the Inline Text from the edit button in the sidebar.
+- **Page Content**: From Page Content, you can access the content included in the Page and the options to edit them. This content is grouped by type, including essential information, name, and subtype. From here you can complete different actions:
 
-```{note}
-If a content has already been filtered by type, the name filter only searches on that type. And when the content is hovered from the sidebar, a visual help appears in the elements that make use of the content.
-```
+  - Filter content by type or name, so you can quickly find and edit it.
+  - See all the [Collection](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) items, add new items.
+  - Edit images or the inline text using the editing controls.
+  - Edit the Inline Text from the edit button in the sidebar.
+
+   ```{tip}
+   When you filter content by type, your search is narrowed for that type. Hover over the search results to highlight the corresponding Page element.
+   ```
 
 ### Page Design Options
 
@@ -115,33 +126,12 @@ Click *Look and Feel* (![Look and Feel](../../../images/icon-format.png)) to cha
 Use Page Fragment comments to collaborate with team members while developing your Content Page. Once made, you can view, edit, delete, or reply to open comments in the Content Page sidebar's Comments panel (![Comments icon](../../../images/icon-comments-w.png)). If [mentions](../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) are enabled, you can tag Users with Page update permissions as part of your comment.
 
 ```{note}
-   For versions prior to 7.3+, comments are disabled by default. To enable Page comments, go to *Control Panel* → *Configuration* → *System Settings* → *Pages* → *Content Page Editor*. Then, check the *Comments Enabled* checkbox, and click *Update*.
+   For versions prior to 7.3+, comments are disabled by default. To enable Page comments, go to *Control Panel* → *Configuration* → *System Settings* → *Pages* → *Content Page Editor*. Then, check the *Comments Enabled* box, and click *Update*.
 ```
-## Editing Sidebar in 7.3
-
-Depending on your selected editing mode, you can access these options in the edit sidebar:
-
-- ![Fragments and Widgets](../../../images/icon-cards2.png) - [Fragments and Widgets](#fragments-and-widgets)
-- ![Selection](../../../images/icon-pages-tree.png) - [Selection](#selection)
-- ![Contents](../../../images/icon-list-ul.png) - [Contents](#contents)
-- ![Page Design Options](../../../images/icon-format.png) - [Page Design Options](#page-design-options)
-- ![Comments](../../../images/icon-comments-w.png) - [Comments](#comments)
-
-![Click Edit to access the Content Page sidebar menu.](content-page-editor-user-interface-reference/images/03.png)
-
-### Fragments and Widgets
-
-In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../../images/icon-cards2.png)), you can access both out-of-the-box and custom Page elements for building your Page.
-
-- **Fragments**: Fragments are extensible, reusable, drag-and-drop elements that serve as the primary building blocks for Content Pages. Examples include layout elements, videos, and banner images with text overlay. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) to learn more about DXP's out-of-the-box fragments, or [Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) to learn how to create your own.
-
-   ```{note}
-      For a description of the different Page Fragments in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md>).
-   ```
-
-- **Widgets**: As in other DXP contexts, widgets are [applications](../../../developing_applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
 
 ### Selection
+
+> Available: Liferay DXP 7.3.
 
 In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) for more information.
 
@@ -153,19 +143,9 @@ In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png
 
 ### Contents
 
+> Available: Liferay DXP 7.3.
+
 Here you can view, edit, and manage all web content on the Page. This includes content displayed in widgets and mapped to content fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
-
-### Page Design Options
-
-Click *Look and Feel* (![Look and Feel](../../../images/icon-format.png)) to change the [Master Page Template](../defining-headers-and-footers/managing-master-page-templates.md) or [Style Book](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md).
-
-### Comments
-
-Use Page Fragment comments to collaborate with team members while developing your Content Page. Once made, you can view, edit, delete, or reply to open comments in the Content Page sidebar's Comments panel (![Comments icon](../../../images/icon-comments-w.png)). If [mentions](../../../collaboration-and-social/notifications-and-requests/user-guide/mentioning-users.md) are enabled, you can tag Users with Page update permissions as part of your comment.
-
-```{note}
-   For versions prior to 7.3+, comments are disabled by default. To enable Page comments, go to *Control Panel* → *Configuration* → *System Settings* → *Pages* → *Content Page Editor*. Then, check the *Comments Enabled* checkbox, and click *Update*.
-```
 
 ## Additional Information
 
