@@ -11,9 +11,9 @@ Here you'll create two simple time off management applications with App Builder,
 
 ## Creating a Custom Object
 
-1. Open the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Custom Objects.
+1. Open the Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)) and navigate to Control Panel &rarr; App Builder &rarr; Custom Objects.
 
-1. Click the add button (![Add](../../images/icon-add.png)).
+1. Click the add button (![Add](../../../images/icon-add.png)).
 
 1. Enter the name: _Time Off Request_.
 
@@ -76,7 +76,7 @@ The Time Off Request has two apps to deploy: a widget application for adding to 
 
 1. Open the Time Off Request (Control Panel &rarr; App Builder &rarr; Custom Objects).
 
-1. From the _Apps_ tab, click the Add button (![Add](../../images/icon-add.png)).
+1. From the _Apps_ tab, click the Add button (![Add](../../../images/icon-add.png)).
 
    ```note::
       If you want to create a `Workflow Powered` app for the object (available to DXP subscribers), you must create and deploy the app from the Apps entry in the Application Menu. See `Creating a Workflow Powered Application <./creating-a-workflow-powered-application.md>`__ for details.

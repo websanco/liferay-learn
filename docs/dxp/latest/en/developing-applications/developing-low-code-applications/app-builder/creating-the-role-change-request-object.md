@@ -8,7 +8,7 @@ Consider a Human Resources application that collects employee requests to change
 
 Here you'll create the backing object, form views, and table views. See [Creating the Role Change Request App](./creating-the-role-change-request-app.md) to create the Workflow Powered App itself.
 
-For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is in how you create the app from the elements of the App Builder framework. You can create the object, form views, and table views from the Objects entry in Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) &rarr; Applications &rarr; App Builder.
+For detailed instructions on creating App Builder objects, form views, and table views, see [Creating a Standard Application](./creating-a-standard-application.md). The same object can back a Standard App or a Workflow Powered App. The difference is in how you create the app from the elements of the App Builder framework. You can create the object, form views, and table views from the Objects entry in Applications Menu (![Applications Menu](../../../images/icon-applications-menu.png)) &rarr; Applications &rarr; App Builder.
 
 ## **Object:** Create the object named _Role Change Request_.
 
@@ -58,5 +58,5 @@ For detailed instructions on creating App Builder objects, form views, and table
 
 * [App Builder Overview](./app-builder-overview.md)
 * [Creating a Standard Application](./creating-a-standard-application.md)
-* [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
-* [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [Workflow](../../../process-automation/workflow/introduction-to-workflow.md)
+* [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
