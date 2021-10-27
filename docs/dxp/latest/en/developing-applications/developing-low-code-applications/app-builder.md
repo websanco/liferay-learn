@@ -3,11 +3,11 @@
 ```{toctree}
 :maxdepth: 3
 
-developing-low-code-applications/app-builder/app-builder-overview.md
-developing-low-code-applications/app-builder/creating-a-standard-application.md
-developing-low-code-applications/app-builder/creating-a-workflow-powered-application.md
-developing-low-code-applications/app-builder/creating-the-role-change-request-object.md
-developing-low-code-applications/app-builder/creating-the-role-change-request-app.md
+app-builder/app-builder-overview.md
+app-builder/creating-a-standard-application.md
+app-builder/creating-a-workflow-powered-application.md
+app-builder/creating-the-role-change-request-object.md
+app-builder/creating-the-role-change-request-app.md
 ```
 
 ```{raw} html

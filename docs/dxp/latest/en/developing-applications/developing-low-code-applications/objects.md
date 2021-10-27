@@ -3,12 +3,12 @@
 ```{toctree}
 :maxdepth: 3
 
-developing-low-code-applications/objects/introduction-to-objects.md
-developing-low-code-applications/objects/creating-and-managing-objects.md
-developing-low-code-applications/objects/using-objects-in-sites.md
-developing-low-code-applications/objects/understanding-object-integrations.md
-developing-low-code-applications/objects/using-picklists.md
-developing-low-code-applications/objects/objects-application-permissions.md
+objects/introduction-to-objects.md
+objects/creating-and-managing-objects.md
+objects/using-objects-in-sites.md
+objects/understanding-object-integrations.md
+objects/using-picklists.md
+objects/objects-application-permissions.md
 ```
 
 ```{raw} html
