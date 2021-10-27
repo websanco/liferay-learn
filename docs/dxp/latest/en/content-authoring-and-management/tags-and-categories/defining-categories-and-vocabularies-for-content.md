@@ -35,7 +35,7 @@ Only Site administrators can manage Categories and Vocabularies in the Categorie
 1. Click *Save*.
 1. To edit an existing vocabulary, click the *Actions* (![Actions](../../images/icon-actions.png)) menu next to the Vocabulary name and select *Edit*.
 
-    ![Edit an existing Vocabulary using the Actions menu.](./defining-categories-and-vocabularies-for-content/images/08.gif)
+    ![Edit an existing Vocabulary using the Actions menu.](./defining-categories-and-vocabularies-for-content/images/08.png)
 
 ## Defining Categories
 
