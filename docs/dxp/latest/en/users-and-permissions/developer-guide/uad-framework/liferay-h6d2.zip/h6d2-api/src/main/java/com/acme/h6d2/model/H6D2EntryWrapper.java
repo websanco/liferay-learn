@@ -113,6 +113,11 @@ public class H6D2EntryWrapper
 		}
 	}
 
+	@Override
+	public H6D2Entry cloneWithOriginalValues() {
+		return wrap(model.cloneWithOriginalValues());
+	}
+
 	/**
 	 * Returns the company ID of this h6d2 entry.
 	 *

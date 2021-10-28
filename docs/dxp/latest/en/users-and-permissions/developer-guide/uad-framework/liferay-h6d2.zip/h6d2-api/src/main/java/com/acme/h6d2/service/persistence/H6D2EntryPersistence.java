@@ -14,7 +14,7 @@
 
 package com.acme.h6d2.service.persistence;
 
-import com.acme.h6d2.exception.NoSuchEntryException;
+import com.acme.h6d2.exception.NoSuchH6D2EntryException;
 import com.acme.h6d2.model.H6D2Entry;
 
 import com.liferay.portal.kernel.service.persistence.BasePersistence;
@@ -108,13 +108,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public H6D2Entry findByUuid_First(
 			String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the first h6d2 entry in the ordered set where uuid = &#63;.
@@ -134,13 +134,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public H6D2Entry findByUuid_Last(
 			String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the last h6d2 entry in the ordered set where uuid = &#63;.
@@ -161,13 +161,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public H6D2Entry[] findByUuid_PrevAndNext(
 			long h6d2EntryId, String uuid,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Removes all the h6d2 entries where uuid = &#63; from the database.
@@ -185,15 +185,15 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	public int countByUuid(String uuid);
 
 	/**
-	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public H6D2Entry findByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
@@ -223,7 +223,7 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @return the h6d2 entry that was removed
 	 */
 	public H6D2Entry removeByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the number of h6d2 entries where uuid = &#63; and groupId = &#63;.
@@ -306,13 +306,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public H6D2Entry findByUuid_C_First(
 			String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the first h6d2 entry in the ordered set where uuid = &#63; and companyId = &#63;.
@@ -334,13 +334,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public H6D2Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the last h6d2 entry in the ordered set where uuid = &#63; and companyId = &#63;.
@@ -363,13 +363,13 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public H6D2Entry[] findByUuid_C_PrevAndNext(
 			long h6d2EntryId, String uuid, long companyId,
 			com.liferay.portal.kernel.util.OrderByComparator<H6D2Entry>
 				orderByComparator)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Removes all the h6d2 entries where uuid = &#63; and companyId = &#63; from the database.
@@ -415,21 +415,21 @@ public interface H6D2EntryPersistence extends BasePersistence<H6D2Entry> {
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry that was removed
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
-	public H6D2Entry remove(long h6d2EntryId) throws NoSuchEntryException;
+	public H6D2Entry remove(long h6d2EntryId) throws NoSuchH6D2EntryException;
 
 	public H6D2Entry updateImpl(H6D2Entry h6d2Entry);
 
 	/**
-	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public H6D2Entry findByPrimaryKey(long h6d2EntryId)
-		throws NoSuchEntryException;
+		throws NoSuchH6D2EntryException;
 
 	/**
 	 * Returns the h6d2 entry with the primary key or returns <code>null</code> if it could not be found.

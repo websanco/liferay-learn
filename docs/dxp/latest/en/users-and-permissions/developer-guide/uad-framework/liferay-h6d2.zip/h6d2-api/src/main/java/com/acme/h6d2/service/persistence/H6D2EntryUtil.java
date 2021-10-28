@@ -199,11 +199,11 @@ public class H6D2EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public static H6D2Entry findByUuid_First(
 			String uuid, OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_First(uuid, orderByComparator);
 	}
@@ -227,11 +227,11 @@ public class H6D2EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public static H6D2Entry findByUuid_Last(
 			String uuid, OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_Last(uuid, orderByComparator);
 	}
@@ -256,12 +256,12 @@ public class H6D2EntryUtil {
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public static H6D2Entry[] findByUuid_PrevAndNext(
 			long h6d2EntryId, String uuid,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_PrevAndNext(
 			h6d2EntryId, uuid, orderByComparator);
@@ -287,15 +287,15 @@ public class H6D2EntryUtil {
 	}
 
 	/**
-	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public static H6D2Entry findByUUID_G(String uuid, long groupId)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUUID_G(uuid, groupId);
 	}
@@ -333,7 +333,7 @@ public class H6D2EntryUtil {
 	 * @return the h6d2 entry that was removed
 	 */
 	public static H6D2Entry removeByUUID_G(String uuid, long groupId)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().removeByUUID_G(uuid, groupId);
 	}
@@ -432,12 +432,12 @@ public class H6D2EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public static H6D2Entry findByUuid_C_First(
 			String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_C_First(
 			uuid, companyId, orderByComparator);
@@ -466,12 +466,12 @@ public class H6D2EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	public static H6D2Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_C_Last(
 			uuid, companyId, orderByComparator);
@@ -501,12 +501,12 @@ public class H6D2EntryUtil {
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public static H6D2Entry[] findByUuid_C_PrevAndNext(
 			long h6d2EntryId, String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByUuid_C_PrevAndNext(
 			h6d2EntryId, uuid, companyId, orderByComparator);
@@ -566,10 +566,10 @@ public class H6D2EntryUtil {
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry that was removed
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public static H6D2Entry remove(long h6d2EntryId)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().remove(h6d2EntryId);
 	}
@@ -579,14 +579,14 @@ public class H6D2EntryUtil {
 	}
 
 	/**
-	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	public static H6D2Entry findByPrimaryKey(long h6d2EntryId)
-		throws com.acme.h6d2.exception.NoSuchEntryException {
+		throws com.acme.h6d2.exception.NoSuchH6D2EntryException {
 
 		return getPersistence().findByPrimaryKey(h6d2EntryId);
 	}

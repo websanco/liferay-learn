@@ -18,6 +18,8 @@ import com.acme.h6d2.model.H6D2Entry;
 import com.acme.h6d2.service.H6D2EntryLocalService;
 import com.acme.h6d2.uad.constants.H6D2UADConstants;
 
+import com.liferay.asset.kernel.model.AssetEntry;
+import com.liferay.asset.kernel.service.AssetEntryLocalService;
 import com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.model.User;
@@ -48,6 +50,8 @@ public abstract class BaseH6D2EntryUADAnonymizer
 		if (h6d2Entry.getUserId() == userId) {
 			h6d2Entry.setUserId(anonymousUser.getUserId());
 			h6d2Entry.setUserName(anonymousUser.getFullName());
+
+			autoAnonymizeAssetEntry(h6d2Entry, anonymousUser);
 		}
 
 		h6d2EntryLocalService.updateH6D2Entry(h6d2Entry);
@@ -63,6 +67,19 @@ public abstract class BaseH6D2EntryUADAnonymizer
 		return H6D2Entry.class;
 	}
 
+	protected void autoAnonymizeAssetEntry(
+		H6D2Entry h6d2Entry, User anonymousUser) {
+
+		AssetEntry assetEntry = fetchAssetEntry(h6d2Entry);
+
+		if (assetEntry != null) {
+			assetEntry.setUserId(anonymousUser.getUserId());
+			assetEntry.setUserName(anonymousUser.getFullName());
+
+			assetEntryLocalService.updateAssetEntry(assetEntry);
+		}
+	}
+
 	@Override
 	protected ActionableDynamicQuery doGetActionableDynamicQuery() {
 		return h6d2EntryLocalService.getActionableDynamicQuery();
@@ -72,6 +89,14 @@ public abstract class BaseH6D2EntryUADAnonymizer
 	protected String[] doGetUserIdFieldNames() {
 		return H6D2UADConstants.USER_ID_FIELD_NAMES_H6D2_ENTRY;
 	}
+
+	protected AssetEntry fetchAssetEntry(H6D2Entry h6d2Entry) {
+		return assetEntryLocalService.fetchEntry(
+			H6D2Entry.class.getName(), h6d2Entry.getH6d2EntryId());
+	}
+
+	@Reference
+	protected AssetEntryLocalService assetEntryLocalService;
 
 	@Reference
 	protected H6D2EntryLocalService h6d2EntryLocalService;

@@ -219,4 +219,7 @@ public interface H6D2EntryModel
 	 */
 	public void setName(String name);
 
+	@Override
+	public H6D2Entry cloneWithOriginalValues();
+
 }

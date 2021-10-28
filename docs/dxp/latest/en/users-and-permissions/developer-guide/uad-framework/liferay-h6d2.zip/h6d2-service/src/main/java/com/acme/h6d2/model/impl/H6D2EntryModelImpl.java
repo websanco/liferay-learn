@@ -32,12 +32,14 @@ import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
+import com.liferay.portal.kernel.util.StringUtil;
 
 import java.io.Serializable;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 
+import java.sql.Blob;
 import java.sql.Types;
 
 import java.util.Collections;
@@ -579,6 +581,28 @@ public class H6D2EntryModelImpl
 	}
 
 	@Override
+	public H6D2Entry cloneWithOriginalValues() {
+		H6D2EntryImpl h6d2EntryImpl = new H6D2EntryImpl();
+
+		h6d2EntryImpl.setUuid(this.<String>getColumnOriginalValue("uuid_"));
+		h6d2EntryImpl.setH6d2EntryId(
+			this.<Long>getColumnOriginalValue("h6d2EntryId"));
+		h6d2EntryImpl.setGroupId(this.<Long>getColumnOriginalValue("groupId"));
+		h6d2EntryImpl.setCompanyId(
+			this.<Long>getColumnOriginalValue("companyId"));
+		h6d2EntryImpl.setUserId(this.<Long>getColumnOriginalValue("userId"));
+		h6d2EntryImpl.setUserName(
+			this.<String>getColumnOriginalValue("userName"));
+		h6d2EntryImpl.setCreateDate(
+			this.<Date>getColumnOriginalValue("createDate"));
+		h6d2EntryImpl.setModifiedDate(
+			this.<Date>getColumnOriginalValue("modifiedDate"));
+		h6d2EntryImpl.setName(this.<String>getColumnOriginalValue("name"));
+
+		return h6d2EntryImpl;
+	}
+
+	@Override
 	public int compareTo(H6D2Entry h6d2Entry) {
 		long primaryKey = h6d2Entry.getPrimaryKey();
 
@@ -710,7 +734,7 @@ public class H6D2EntryModelImpl
 			getAttributeGetterFunctions();
 
 		StringBundler sb = new StringBundler(
-			(4 * attributeGetterFunctions.size()) + 2);
+			(5 * attributeGetterFunctions.size()) + 2);
 
 		sb.append("{");
 
@@ -721,9 +745,26 @@ public class H6D2EntryModelImpl
 			Function<H6D2Entry, Object> attributeGetterFunction =
 				entry.getValue();
 
+			sb.append("\"");
 			sb.append(attributeName);
-			sb.append("=");
-			sb.append(attributeGetterFunction.apply((H6D2Entry)this));
+			sb.append("\": ");
+
+			Object value = attributeGetterFunction.apply((H6D2Entry)this);
+
+			if (value == null) {
+				sb.append("null");
+			}
+			else if (value instanceof Blob || value instanceof Date ||
+					 value instanceof Map || value instanceof String) {
+
+				sb.append(
+					"\"" + StringUtil.replace(value.toString(), "\"", "'") +
+						"\"");
+			}
+			else {
+				sb.append(value);
+			}
+
 			sb.append(", ");
 		}
 

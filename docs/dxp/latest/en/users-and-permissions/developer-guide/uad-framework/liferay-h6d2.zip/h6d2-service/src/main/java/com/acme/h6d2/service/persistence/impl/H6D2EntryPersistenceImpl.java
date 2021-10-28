@@ -14,7 +14,7 @@
 
 package com.acme.h6d2.service.persistence.impl;
 
-import com.acme.h6d2.exception.NoSuchEntryException;
+import com.acme.h6d2.exception.NoSuchH6D2EntryException;
 import com.acme.h6d2.model.H6D2Entry;
 import com.acme.h6d2.model.H6D2EntryTable;
 import com.acme.h6d2.model.impl.H6D2EntryImpl;
@@ -24,7 +24,6 @@ import com.acme.h6d2.service.persistence.impl.constants.H6D2PersistenceConstants
 
 import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.configuration.Configuration;
-import com.liferay.portal.kernel.dao.orm.ArgumentsResolver;
 import com.liferay.portal.kernel.dao.orm.EntityCache;
 import com.liferay.portal.kernel.dao.orm.FinderCache;
 import com.liferay.portal.kernel.dao.orm.FinderPath;
@@ -35,14 +34,15 @@ import com.liferay.portal.kernel.dao.orm.Session;
 import com.liferay.portal.kernel.dao.orm.SessionFactory;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.model.BaseModel;
 import com.liferay.portal.kernel.security.auth.CompanyThreadLocal;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.ServiceContextThreadLocal;
 import com.liferay.portal.kernel.service.persistence.BasePersistence;
 import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
-import com.liferay.portal.kernel.util.HashMapDictionary;
+import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
+import com.liferay.portal.kernel.util.PropsKeys;
+import com.liferay.portal.kernel.util.PropsUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
 import com.liferay.portal.kernel.util.SetUtil;
 import com.liferay.portal.kernel.util.Validator;
@@ -58,12 +58,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 import javax.sql.DataSource;
 
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -281,12 +278,12 @@ public class H6D2EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	@Override
 	public H6D2Entry findByUuid_First(
 			String uuid, OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByUuid_First(uuid, orderByComparator);
 
@@ -303,7 +300,7 @@ public class H6D2EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchH6D2EntryException(sb.toString());
 	}
 
 	/**
@@ -332,12 +329,12 @@ public class H6D2EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	@Override
 	public H6D2Entry findByUuid_Last(
 			String uuid, OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByUuid_Last(uuid, orderByComparator);
 
@@ -354,7 +351,7 @@ public class H6D2EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchH6D2EntryException(sb.toString());
 	}
 
 	/**
@@ -391,13 +388,13 @@ public class H6D2EntryPersistenceImpl
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
 	public H6D2Entry[] findByUuid_PrevAndNext(
 			long h6d2EntryId, String uuid,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -633,16 +630,16 @@ public class H6D2EntryPersistenceImpl
 	private FinderPath _finderPathCountByUUID_G;
 
 	/**
-	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @return the matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	@Override
 	public H6D2Entry findByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByUUID_G(uuid, groupId);
 
@@ -663,7 +660,7 @@ public class H6D2EntryPersistenceImpl
 				_log.debug(sb.toString());
 			}
 
-			throw new NoSuchEntryException(sb.toString());
+			throw new NoSuchH6D2EntryException(sb.toString());
 		}
 
 		return h6d2Entry;
@@ -794,7 +791,7 @@ public class H6D2EntryPersistenceImpl
 	 */
 	@Override
 	public H6D2Entry removeByUUID_G(String uuid, long groupId)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = findByUUID_G(uuid, groupId);
 
@@ -1075,13 +1072,13 @@ public class H6D2EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	@Override
 	public H6D2Entry findByUuid_C_First(
 			String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByUuid_C_First(
 			uuid, companyId, orderByComparator);
@@ -1102,7 +1099,7 @@ public class H6D2EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchH6D2EntryException(sb.toString());
 	}
 
 	/**
@@ -1135,13 +1132,13 @@ public class H6D2EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the last matching h6d2 entry
-	 * @throws NoSuchEntryException if a matching h6d2 entry could not be found
+	 * @throws NoSuchH6D2EntryException if a matching h6d2 entry could not be found
 	 */
 	@Override
 	public H6D2Entry findByUuid_C_Last(
 			String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByUuid_C_Last(
 			uuid, companyId, orderByComparator);
@@ -1162,7 +1159,7 @@ public class H6D2EntryPersistenceImpl
 
 		sb.append("}");
 
-		throw new NoSuchEntryException(sb.toString());
+		throw new NoSuchH6D2EntryException(sb.toString());
 	}
 
 	/**
@@ -1202,13 +1199,13 @@ public class H6D2EntryPersistenceImpl
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the previous, current, and next h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
 	public H6D2Entry[] findByUuid_C_PrevAndNext(
 			long h6d2EntryId, String uuid, long companyId,
 			OrderByComparator<H6D2Entry> orderByComparator)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		uuid = Objects.toString(uuid, "");
 
@@ -1486,6 +1483,8 @@ public class H6D2EntryPersistenceImpl
 			h6d2Entry);
 	}
 
+	private int _valueObjectFinderCacheListThreshold;
+
 	/**
 	 * Caches the h6d2 entries in the entity cache if it is enabled.
 	 *
@@ -1493,6 +1492,13 @@ public class H6D2EntryPersistenceImpl
 	 */
 	@Override
 	public void cacheResult(List<H6D2Entry> h6d2Entries) {
+		if ((_valueObjectFinderCacheListThreshold == 0) ||
+			((_valueObjectFinderCacheListThreshold > 0) &&
+			 (h6d2Entries.size() > _valueObjectFinderCacheListThreshold))) {
+
+			return;
+		}
+
 		for (H6D2Entry h6d2Entry : h6d2Entries) {
 			if (entityCache.getResult(
 					H6D2EntryImpl.class, h6d2Entry.getPrimaryKey()) == null) {
@@ -1583,10 +1589,10 @@ public class H6D2EntryPersistenceImpl
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry that was removed
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
-	public H6D2Entry remove(long h6d2EntryId) throws NoSuchEntryException {
+	public H6D2Entry remove(long h6d2EntryId) throws NoSuchH6D2EntryException {
 		return remove((Serializable)h6d2EntryId);
 	}
 
@@ -1595,11 +1601,11 @@ public class H6D2EntryPersistenceImpl
 	 *
 	 * @param primaryKey the primary key of the h6d2 entry
 	 * @return the h6d2 entry that was removed
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
 	public H6D2Entry remove(Serializable primaryKey)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		Session session = null;
 
@@ -1614,13 +1620,13 @@ public class H6D2EntryPersistenceImpl
 					_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 				}
 
-				throw new NoSuchEntryException(
+				throw new NoSuchH6D2EntryException(
 					_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
 			return remove(h6d2Entry);
 		}
-		catch (NoSuchEntryException noSuchEntityException) {
+		catch (NoSuchH6D2EntryException noSuchEntityException) {
 			throw noSuchEntityException;
 		}
 		catch (Exception exception) {
@@ -1750,11 +1756,11 @@ public class H6D2EntryPersistenceImpl
 	 *
 	 * @param primaryKey the primary key of the h6d2 entry
 	 * @return the h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
 	public H6D2Entry findByPrimaryKey(Serializable primaryKey)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		H6D2Entry h6d2Entry = fetchByPrimaryKey(primaryKey);
 
@@ -1763,7 +1769,7 @@ public class H6D2EntryPersistenceImpl
 				_log.debug(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 			}
 
-			throw new NoSuchEntryException(
+			throw new NoSuchH6D2EntryException(
 				_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
 		}
 
@@ -1771,15 +1777,15 @@ public class H6D2EntryPersistenceImpl
 	}
 
 	/**
-	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchEntryException</code> if it could not be found.
+	 * Returns the h6d2 entry with the primary key or throws a <code>NoSuchH6D2EntryException</code> if it could not be found.
 	 *
 	 * @param h6d2EntryId the primary key of the h6d2 entry
 	 * @return the h6d2 entry
-	 * @throws NoSuchEntryException if a h6d2 entry with the primary key could not be found
+	 * @throws NoSuchH6D2EntryException if a h6d2 entry with the primary key could not be found
 	 */
 	@Override
 	public H6D2Entry findByPrimaryKey(long h6d2EntryId)
-		throws NoSuchEntryException {
+		throws NoSuchH6D2EntryException {
 
 		return findByPrimaryKey((Serializable)h6d2EntryId);
 	}
@@ -2003,12 +2009,9 @@ public class H6D2EntryPersistenceImpl
 	 * Initializes the h6d2 entry persistence.
 	 */
 	@Activate
-	public void activate(BundleContext bundleContext) {
-		_bundleContext = bundleContext;
-
-		_argumentsResolverServiceRegistration = _bundleContext.registerService(
-			ArgumentsResolver.class, new H6D2EntryModelArgumentsResolver(),
-			new HashMapDictionary<>());
+	public void activate() {
+		_valueObjectFinderCacheListThreshold = GetterUtil.getInteger(
+			PropsUtil.get(PropsKeys.VALUE_OBJECT_FINDER_CACHE_LIST_THRESHOLD));
 
 		_finderPathWithPaginationFindAll = new FinderPath(
 			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findAll", new String[0],
@@ -2073,8 +2076,6 @@ public class H6D2EntryPersistenceImpl
 	@Deactivate
 	public void deactivate() {
 		entityCache.removeCache(H6D2EntryImpl.class.getName());
-
-		_argumentsResolverServiceRegistration.unregister();
 	}
 
 	@Override
@@ -2102,8 +2103,6 @@ public class H6D2EntryPersistenceImpl
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		super.setSessionFactory(sessionFactory);
 	}
-
-	private BundleContext _bundleContext;
 
 	@Reference
 	protected EntityCache entityCache;
@@ -2142,93 +2141,7 @@ public class H6D2EntryPersistenceImpl
 		return finderCache;
 	}
 
-	private ServiceRegistration<ArgumentsResolver>
-		_argumentsResolverServiceRegistration;
-
-	private static class H6D2EntryModelArgumentsResolver
-		implements ArgumentsResolver {
-
-		@Override
-		public Object[] getArguments(
-			FinderPath finderPath, BaseModel<?> baseModel, boolean checkColumn,
-			boolean original) {
-
-			String[] columnNames = finderPath.getColumnNames();
-
-			if ((columnNames == null) || (columnNames.length == 0)) {
-				if (baseModel.isNew()) {
-					return FINDER_ARGS_EMPTY;
-				}
-
-				return null;
-			}
-
-			H6D2EntryModelImpl h6d2EntryModelImpl =
-				(H6D2EntryModelImpl)baseModel;
-
-			long columnBitmask = h6d2EntryModelImpl.getColumnBitmask();
-
-			if (!checkColumn || (columnBitmask == 0)) {
-				return _getValue(h6d2EntryModelImpl, columnNames, original);
-			}
-
-			Long finderPathColumnBitmask = _finderPathColumnBitmasksCache.get(
-				finderPath);
-
-			if (finderPathColumnBitmask == null) {
-				finderPathColumnBitmask = 0L;
-
-				for (String columnName : columnNames) {
-					finderPathColumnBitmask |=
-						h6d2EntryModelImpl.getColumnBitmask(columnName);
-				}
-
-				_finderPathColumnBitmasksCache.put(
-					finderPath, finderPathColumnBitmask);
-			}
-
-			if ((columnBitmask & finderPathColumnBitmask) != 0) {
-				return _getValue(h6d2EntryModelImpl, columnNames, original);
-			}
-
-			return null;
-		}
-
-		@Override
-		public String getClassName() {
-			return H6D2EntryImpl.class.getName();
-		}
-
-		@Override
-		public String getTableName() {
-			return H6D2EntryTable.INSTANCE.getTableName();
-		}
-
-		private static Object[] _getValue(
-			H6D2EntryModelImpl h6d2EntryModelImpl, String[] columnNames,
-			boolean original) {
-
-			Object[] arguments = new Object[columnNames.length];
-
-			for (int i = 0; i < arguments.length; i++) {
-				String columnName = columnNames[i];
-
-				if (original) {
-					arguments[i] = h6d2EntryModelImpl.getColumnOriginalValue(
-						columnName);
-				}
-				else {
-					arguments[i] = h6d2EntryModelImpl.getColumnValue(
-						columnName);
-				}
-			}
-
-			return arguments;
-		}
-
-		private static final Map<FinderPath, Long>
-			_finderPathColumnBitmasksCache = new ConcurrentHashMap<>();
-
-	}
+	@Reference
+	private H6D2EntryModelArgumentsResolver _h6d2EntryModelArgumentsResolver;
 
 }
