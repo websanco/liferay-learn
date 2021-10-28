@@ -4,7 +4,7 @@ With Liferay Commerce, you can create and manage subscriptions for [Simple](../p
 
 ## Payment and Delivery Subscriptions
 
-A _Payment Subscription_ is analogous to an electricity bill or Netflix subscription. Here, a specific amount is debited from your bank account on a recurring basis to continue services. 
+A _Payment Subscription_ is analogous to an electricity bill or Netflix subscription. Here, a specific amount is debited from a bank account on a recurring basis to continue services.
 
 ```{important}
 Payment Subscriptions can only be enabled when using PayPal or other custom-payment methods that support recurring payments.
