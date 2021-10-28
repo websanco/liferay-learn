@@ -12,7 +12,7 @@ After upgrading to 7.4, do *not* deploy the Commerce `LPKG` again. The Commerce 
 
 To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html). Once DXP is upgraded to 7.4, execute a re-index.
 
-### Prerequisite for upgrading to Liferay Commerce 4.0
+### Prerequisite for Upgrading to Liferay Commerce 4.0
 
 The `CommerceCountry` table is deprecated in Liferay Commerce 4.0 and is being replaced by the `Country` table. While the `CommerceCountry` table only required the name of the country, the Country table requires the name and the Alpha-2 (a2) and Alpha-3 (a3) code for each country.
 
