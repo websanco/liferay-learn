@@ -13,7 +13,7 @@ curl \
 			}, {
 				"contentFieldValue" : {
 					"image" : {
-						"description" : "This text describes the Foo alt-image.",
+						"description" : "This text describes Foo's image.",
 						"id" : "${3}"
 					}
 				},
