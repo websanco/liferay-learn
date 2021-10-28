@@ -48,7 +48,7 @@ Pages in draft status show an asterisk (*) next to its name in the Page Tree.
 
 ## Adding a Child Page
 
-You can add child Pages from the Page administration or the Page Tree (Liferay DXP +7.3 only).
+You can add child Pages from the Page administration or the Page Tree (Liferay DXP 7.3+ only).
 
 ### Adding a Child Page from Pages Administration
 
