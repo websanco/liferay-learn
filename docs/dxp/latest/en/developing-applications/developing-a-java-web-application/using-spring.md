@@ -1,4 +1,4 @@
-# Using Bean Portlet
+# Using Spring
 
 ```{raw} html
 :file: ../../landingpage_template.html
