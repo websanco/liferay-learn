@@ -2,8 +2,8 @@
 
 Analytics Cloud's [Recommendation API](../../optimization/content-recommendation-api.md) suggests topics of interest based on user interactions with content in Liferay DXP. Administrators can exclude certain keywords from the recommendation API, therefore preventing Analytics Cloud from suggesting content based on those keywords. This is useful for further curating suggested content.
 
-```note
-    Currently interest topics are only supported in English. Non-English content is filtered out.
+```{note}
+Currently interest topics are only supported in English. Non-English content is filtered out.
 ```
 
 ## Understanding Interests
