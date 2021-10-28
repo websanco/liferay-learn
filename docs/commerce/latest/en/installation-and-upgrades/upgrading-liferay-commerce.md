@@ -46,7 +46,7 @@ After upgrading to DXP 7.3, execute a full search re-index.
 
 1. Open the _Global Menu_ and go to _Control Panel_ &rarr; _Search_.
 
-   ![Go to Search in the Control Panel tab.](./upgrading-liferay-commerce/images/01.png)
+   ![Go to Search in the Control Panel tab.](./upgrading-liferay-commerce/images/02.png)
 
 1. Under the _Index Actions_ tab, click on _Execute_ for _Reindex all search indexes_.
 
