@@ -40,7 +40,7 @@ public class H6D2Portlet extends MVCPortlet {
 
 		User user = _portal.getUser(actionRequest);
 
-	 	H6D2Entry h6d2Entry = _h6d2EntryLocalService.createH6D2Entry(
+		H6D2Entry h6d2Entry = _h6d2EntryLocalService.createH6D2Entry(
 			CounterLocalServiceUtil.increment());
 
 		h6d2Entry.setCompanyId(user.getCompanyId());
@@ -55,9 +55,9 @@ public class H6D2Portlet extends MVCPortlet {
 	}
 
 	@Reference
-	private Portal _portal;
+	private H6D2EntryLocalService _h6d2EntryLocalService;
 
 	@Reference
-	private H6D2EntryLocalService _h6d2EntryLocalService;
+	private Portal _portal;
 
 }
