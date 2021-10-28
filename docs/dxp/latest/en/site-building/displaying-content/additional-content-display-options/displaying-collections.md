@@ -117,12 +117,12 @@ Depending on the option you have chosen for a Collection Display Fragment's List
 
 ## Paginating Display Items
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP 7.4+
 
 Starting with Liferay DXP 7.4, you can paginate the Collection items using the Pagination configuration. This option provides two important advantages:
 
-- It is easier to show Collections with a large number of items. Instead of showing all the items in the Collection, you can decide how many items to show at once, while allowing users to move back and forward through the list of items in the Collection.
-- Breaking the visible list of items into smaller groups reduces the server overhead, improving the server response time and user experience.
+* It is easier to show Collections with a large number of items. Instead of showing all the items in the Collection, you can decide how many items to show at once, while allowing users to move back and forward through the list of items in the Collection.
+* Breaking the visible list of items into smaller groups reduces the server overhead, improving the server response time and user experience.
 
 To paginate the display items in the Collection Display,
 
@@ -134,8 +134,8 @@ To paginate the display items in the Collection Display,
 
 1. In the General Settings, choose the pagination options:
 
-    - Pagination: None (no pagination), Numeric, or Simple (Previous/Next controls).
-    - Maximum Number of Items: Number of items you want to show on each page.
+    * Pagination: None (no pagination), Numeric, or Simple (Previous/Next controls).
+    * Maximum Number of Items: Number of items you want to show on each page.
 
     ![Choose the pagination options for the Collection Display items.](./images/../displaying-collections/images/12.gif)
 
@@ -159,28 +159,28 @@ Content Sets are primarily displayed through the Asset Publisher. It is currentl
 To display the Content Sets, start with a blank page, and then add the necessary Asset Publishers and configure them to display the Content Sets.
 
 1. Create a new *Home* page for your site as a Widget Page with a 1 column layout. If you're using a fresh Liferay DXP bundle, you can just remove the *Hello World* widget from the sample *Home* page.
-2. Open the *Add* menu and add two *Content Management* &rarr; *Asset Publishers* to the page stacked vertically.
-3. Click ![Options](../../../images/icon-app-options.png) &rarr; *Configuration* for the top Asset Publisher.
-4. Under *Asset Selection* choose *Content Set*.
+1. Open the *Add* menu and add two *Content Management* &rarr; *Asset Publishers* to the page stacked vertically.
+1. Click ![Options](../../../images/icon-app-options.png) &rarr; *Configuration* for the top Asset Publisher.
+1. Under *Asset Selection* choose *Content Set*.
 
     ![The Asset Publisher has a number of options available for selecting its source for content.](./displaying-collections/images/20.png)
 
-5. Open *Select Content Set* and click *Select*.
-6. Click on the *Space Program Images* Content Set.
-7. Click *Save*.
+1. Open *Select Content Set* and click *Select*.
+1. Click on the *Space Program Images* Content Set.
+1. Click *Save*.
 
 Now the images will appear at the top of the page. You can manage the way the content is displayed---like what metadata appears---or even create a *Widget Template* to style the content, but the items which display and the order in which they appear are determined by the Content Set.
 
 Now configure the bottom Asset Publisher with the other Content Set.
 
 1. Click ![Options](../../../images/icon-app-options.png) &rarr; *Configuration* for the bottom Asset Publisher.
-2. Under *Asset Selection* choose *Content Set*.
-3. Open *Select Content Set* and click *Select*.
-4. Click on the *Trending* Content Set.
+1. Under *Asset Selection* choose *Content Set*.
+1. Open *Select Content Set* and click *Select*.
+1. Click on the *Trending* Content Set.
 
     ![Select the Content Set you want to use.](./displaying-collections/images/21.png)
 
-5. Click *Save*.
+1. Click *Save*.
 
 Again, you can manage various display settings, but the items which appear and their order are determined by the Content Set criteria.
 
@@ -191,15 +191,15 @@ Again, you can manage various display settings, but the items which appear and t
 To demonstrate both the management of both static and dynamic Content Sets, upload a new image, tag it, and add it to the static set manually.
 
 1. Upload a new image, and under *Categorization* tag it as *trending*.
-2. Without lifting another finger, the image is added to the top of the *Trending* Content List.
+1. Without lifting another finger, the image is added to the top of the *Trending* Content List.
 
     ![The result is dynamically added to the Content List wherever it is displayed.](./displaying-collections/images/23.png)
 
-3. To add it to the manual set, go back to *Site Administration* &rarr; *Content & Data* &rarr; *Site Builder*.
-4. Click on *Space Program Images* or select ![Options](../../../images/icon-options.png) &rarr; *Edit* next to *Space Program Images*.
-5. Next to *Asset Entries* click *Select* &rarr; *Basic Document*.
-6. Select the new image and click *Add*.
-7. Navigate back to the *Home* page to see your image added to the list.
+1. To add it to the manual set, go back to *Site Administration* &rarr; *Content & Data* &rarr; *Site Builder*.
+1. Click on *Space Program Images* or select ![Options](../../../images/icon-options.png) &rarr; *Edit* next to *Space Program Images*.
+1. Next to *Asset Entries* click *Select* &rarr; *Basic Document*.
+1. Select the new image and click *Add*.
+1. Navigate back to the *Home* page to see your image added to the list.
 
 Content Sets are a powerful feature which provide one place to easily define content and other assets to be displayed all over your site. Their reusability also means less repeated work involved in getting great content delivered to your users.
 
