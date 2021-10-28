@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
-events/events-analysis.md
+events/tracking-events.md
 events/events-analysis.md
 ```
 
