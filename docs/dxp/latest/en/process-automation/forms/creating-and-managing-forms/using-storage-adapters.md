@@ -24,6 +24,6 @@ You cannot change the storage adapter after a form has been saved. All existing 
 
 | Storage Type | Description | Liferay Version |
 | ------------ | ----------- | --------------- |
-| Default      | Use the Default adapter to store the form's records in JSON in the Liferay Forms database tables. | 7.4+ |
+| Default      | Use the default adapter to store the form's records in the Liferay Forms database tables. | 7.4+ |
 | Object       | Use the Object adapter to map the form's records to a Liferay Object. After choosing this option you must select an existing Liferay Object and map the form's fields to the Object's fields. The form record data is stored in JSON in the Object's dedicated database table. | 7.4+ |
 | JSON | Use the JSON adapter in Liferay 7.2 and 7.3 to store the form's records in JSON in the Liferay Forms database tables. | 7.2 and 7.3 |

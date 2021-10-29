@@ -22,7 +22,7 @@ To configure Form email notifications:
 
     **From Address:** The sender's email address. You can use `noreply@example.com`, so that recipients don't try to reply.
 
-    **To Address:** The recipient's email address (e.g., `test@example.com`).
+    **To Address:** The recipient's email address (e.g., `test@example.com`). Enter multiple To Addresses using a comma-separated list.
 
     **Subject:** The email's subject.
 
