@@ -17,7 +17,7 @@ Here's how to replace a license:
 1. Open a Bash shell in your container.
 
     ```bash
-    docker exec -it [container_id] bash
+    docker exec -it [container] bash
     ```
 
 1. Remove the existing license files.
@@ -41,7 +41,7 @@ Here's how to replace a license:
 1. Copy the new license/key file to the container.
 
     ```bash
-    docker cp [license].xml [container_id]:/opt/liferay/deploy
+    docker cp [license file] [container]:/opt/liferay/deploy
     ```
 
     Alternatively, if you have associated a [bind mount](./providing-files-to-the-container.md) with the container, you can copy the license/key file to the folder mapped to `/mnt/liferay/deploy`.
