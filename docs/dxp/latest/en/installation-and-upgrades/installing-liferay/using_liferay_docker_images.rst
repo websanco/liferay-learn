@@ -8,6 +8,7 @@ Using Liferay Docker Images
    using-liferay-docker-images/container-lifecycle-and-api.md
    using-liferay-docker-images/configuring-containers.md
    using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers.md
+   using-liferay-docker-images/licensing-dxp-in-docker.md
    using-liferay-docker-images/patching-dxp-in-docker.md
    using-liferay-docker-images/running-scripts-in-containers.md
    using-liferay-docker-images/providing-files-to-the-container.md
@@ -17,6 +18,7 @@ Using Liferay Docker Images
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/licensing-dxp-in-docker`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/patching-dxp-in-docker`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/running-scripts-in-containers`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container`
