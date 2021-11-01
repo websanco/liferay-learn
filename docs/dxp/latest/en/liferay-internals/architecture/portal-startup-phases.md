@@ -71,4 +71,4 @@ In your `liferay-portal-ext.properties` file, you can override the following  pr
 
 [Waiting on Lifecycle Events](/docs/7-2/customization/-/knowledge_base/c/waiting-on-lifecycle-events) TODO
 
-[OSGi Services and Dependency Injection with Declarative Services](/docs/7-2/frameworks/-/knowledge_base/f/declarative-services)  <!-- Is this the right article?  [OSGi services](./using-an-osgi-service.md). -->
+[OSGi Services and Dependency Injection with Declarative Services](/docs/7-2/frameworks/-/knowledge_base/f/declarative-services)  <!-- Is this the right article?    [OSGi services](./using-an-osgi-service.md). -->
