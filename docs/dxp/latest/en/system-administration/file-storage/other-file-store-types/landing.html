@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Simple File System Store',
+					sectionURL: ' other-file-store-types/simple-file-system-store.html',
+				},
+				{
+					sectionName: 'Amazon S3 Store',
+					sectionURL: 'other-file-store-types/amazon-s3-store.html',
+				},
+				{
+					sectionName: 'Dbstore',
+					sectionURL: 'other-file-store-types/dbstore.html',
+				},
+				{
+					sectionName: 'IBM Cloud Object Storage',
+					sectionURL: ' other-file-store-types/ibm-cloud-object-storage.html',
+				},
+				{
+					sectionName: 'Google Cloud Storage',
+					sectionURL: 'other-file-store-types/google-cloud-storage.html',
+				},
+				{
+					sectionName: `Microsoft Azure Blob Storage`,
+					sectionURL: `other-file-store-types/microsoft-azure-blob-storage.html`,
+				},
+			]
+		}
+	})
+</script>
