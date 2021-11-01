@@ -1,6 +1,6 @@
 # Licensing DXP in Docker
 
-If you're using a DXP trial license that's expiring or you have a new license (activation key) you need to install, you can replace your container's existing license.
+If you're using a DXP trial license that's expiring or you have a new license (activation key) you must install, you can replace your container's existing license.
 
 Here's an example license expiration log message:
 
@@ -9,7 +9,7 @@ ERROR [fileinstall-directory-watcher][LicenseManager:?] DXP Development license 
 ```
 
 ```{note}
-Each DXP Docker image contains a temporary trial license (`trial-dxp-license-[id-number].xml`) that typically expires one month after the image was created.
+Each DXP Docker image contains a temporary trial license (`trial-dxp-license-[id-number].xml`) that expires one month after the image was created.
 ```
 
 Here's how to replace a license:
