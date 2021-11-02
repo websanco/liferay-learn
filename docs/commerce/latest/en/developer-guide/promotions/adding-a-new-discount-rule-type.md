@@ -64,22 +64,11 @@ Next, you'll dive deeper to learn more.
 
 Now it's time to review the example you deployed. There are two classes: a discount rule type class and a JSP contributor for a custom UI input. Follow these steps: 
 
-- [Adding a New Discount Rule Type](#adding-a-new-discount-rule-type)
-  - [Overview](#overview)
-  - [Deploy an Example](#deploy-an-example)
-  - [Walk Through the Example](#walk-through-the-example)
-    - [Annotate the Discount Rule Type Class for OSGi Registration](#annotate-the-discount-rule-type-class-for-osgi-registration)
-    - [Review the `CommerceDiscountRuleType` Interface](#review-the-commercediscountruletype-interface)
-    - [Annotate the JSP Contributor Class for OSGi Registration](#annotate-the-jsp-contributor-class-for-osgi-registration)
-    - [Review the `CommerceDiscountRuleTypeJSPContributor` Interface](#review-the-commercediscountruletypejspcontributor-interface)
-    - [Complete the Discount Rule Type](#complete-the-discount-rule-type)
-      - [Configure the `ServletContext` for the Module](#configure-the-servletcontext-for-the-module)
-      - [Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` Method](#implement-the-commercediscountruletypejspcontributors-render-method)
-      - [Add the Evaluation Logic to `evaluate`](#add-the-evaluation-logic-to-evaluate)
-      - [Add a JSP to Render the Custom UI Input](#add-a-jsp-to-render-the-custom-ui-input)
-      - [Add the Language Keys to `Language.properties`](#add-the-language-keys-to-languageproperties)
-  - [Conclusion](#conclusion)
-  - [Additional Information](#additional-information)
+* [Annotate the Discount Rule Type Class for OSGi Registration](#annotate-the-discount-rule-type-class-for-osgi-registration)
+* [Review the `CommerceDiscountRuleType` Interface](#review-the-commercediscountruletype-interface)
+* [Annotate the JSP Contributor Class for OSGi Registration](#annotate-the-jsp-contributor-class-for-osgi-registration)
+* [Review the `CommerceDiscountRuleTypeJSPContributor` Interface](#review-the-commercediscountruletypejspcontributor-interface)
+* [Complete the Discount Rule Type](#complete-the-discount-rule-type)
 
 ### Annotate the Discount Rule Type Class for OSGi Registration
 
@@ -154,22 +143,11 @@ public void render(
 
 The discount rule type is comprised of back-end logic for evaluating when to apply a discount rule to an order, logic to render UI inputs for the discount rule type, and the custom UI inputs themselves. Follow these steps: 
 
-- [Adding a New Discount Rule Type](#adding-a-new-discount-rule-type)
-  - [Overview](#overview)
-  - [Deploy an Example](#deploy-an-example)
-  - [Walk Through the Example](#walk-through-the-example)
-    - [Annotate the Discount Rule Type Class for OSGi Registration](#annotate-the-discount-rule-type-class-for-osgi-registration)
-    - [Review the `CommerceDiscountRuleType` Interface](#review-the-commercediscountruletype-interface)
-    - [Annotate the JSP Contributor Class for OSGi Registration](#annotate-the-jsp-contributor-class-for-osgi-registration)
-    - [Review the `CommerceDiscountRuleTypeJSPContributor` Interface](#review-the-commercediscountruletypejspcontributor-interface)
-    - [Complete the Discount Rule Type](#complete-the-discount-rule-type)
-      - [Configure the `ServletContext` for the Module](#configure-the-servletcontext-for-the-module)
-      - [Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` Method](#implement-the-commercediscountruletypejspcontributors-render-method)
-      - [Add the Evaluation Logic to `evaluate`](#add-the-evaluation-logic-to-evaluate)
-      - [Add a JSP to Render the Custom UI Input](#add-a-jsp-to-render-the-custom-ui-input)
-      - [Add the Language Keys to `Language.properties`](#add-the-language-keys-to-languageproperties)
-  - [Conclusion](#conclusion)
-  - [Additional Information](#additional-information)
+* [Configure the `ServletContext` for the module.](#configure-the-servletcontext-for-the-module)
+* [Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` method.](#implement-the-commercediscountruletypejspcontributors-render-method)
+* [Add the evaluation logic to `evaluate`.](#add-the-evaluation-logic-to-evaluate)
+* [Add a JSP to render the custom UI input.](#add-a-jsp-to-render-the-custom-ui-input)
+* [Add the language keys to `Language.properties`.](#add-the-language-keys-to-languageproperties)
 
 #### Configure the `ServletContext` for the Module
 
