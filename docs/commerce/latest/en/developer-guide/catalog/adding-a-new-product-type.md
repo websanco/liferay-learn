@@ -64,24 +64,12 @@ Next, let's dive deeper to learn more.
 
 In this section, we will review the example we deployed. We will create two classes: a product type class and a screen navigation entry class for a custom screen. Walk through the following:
 
-- [Adding a New Product Type](#adding-a-new-product-type)
-  - [Overview](#overview)
-  - [Deploy an Example](#deploy-an-example)
-  - [Walk Through the Example](#walk-through-the-example)
-    - [Annotate the Product Type Class for OSGi Registration](#annotate-the-product-type-class-for-osgi-registration)
-    - [Review the `CPType` Interface](#review-the-cptype-interface)
-    - [Annotate the Screen Navigation Entry Class for OSGi Registration](#annotate-the-screen-navigation-entry-class-for-osgi-registration)
-    - [Review the `ScreenNavigationCategory` Interface](#review-the-screennavigationcategory-interface)
-    - [Review the `ScreenNavigationEntry` Interface](#review-the-screennavigationentry-interface)
-    - [Complete the Product Type](#complete-the-product-type)
-      - [Configure the `ServletContext` for the Module](#configure-the-servletcontext-for-the-module)
-      - [Implement the `ScreenNavigationEntry`'s `render` Method](#implement-the-screennavigationentrys-render-method)
-      - [Override the `ScreenNavigationEntry`'s `isVisible` Method](#override-the-screennavigationentrys-isvisible-method)
-      - [Add the Product Type Deletion Logic to `deleteCPDefinition`](#add-the-product-type-deletion-logic-to-deletecpdefinition)
-      - [Add a JSP to Render the Custom Screen](#add-a-jsp-to-render-the-custom-screen)
-      - [Add the Language Key to `Language.properties`](#add-the-language-key-to-languageproperties)
-  - [Conclusion](#conclusion)
-  - [Additional Information](#additional-information)
+* [Annotate the Product Type Class for OSGi Registration](#annotate-the-product-type-class-for-osgi-registration)
+* [Review the `CPType` Interface](#review-the-cptype-interface)
+* [Annotate the Screen Navigation Entry Class for OSGi Registration](#annotate-the-screen-navigation-entry-class-for-osgi-registration)
+* [Review the `ScreenNavigationCategory` Interface](#review-the-screennavigationcategory-interface)
+* [Review the `ScreenNavigationEntry` Interface](#review-the-screennavigationentry-interface)
+* [Complete the Product Type](#complete-the-product-type)
 
 ### Annotate the Product Type Class for OSGi Registration
 
@@ -201,24 +189,12 @@ public void render(
 
 The product type is comprised of backend logic for deleting the product, logic to render the screen in the navigation menu, and the custom screen itself. Do the following:
 
-- [Adding a New Product Type](#adding-a-new-product-type)
-  - [Overview](#overview)
-  - [Deploy an Example](#deploy-an-example)
-  - [Walk Through the Example](#walk-through-the-example)
-    - [Annotate the Product Type Class for OSGi Registration](#annotate-the-product-type-class-for-osgi-registration)
-    - [Review the `CPType` Interface](#review-the-cptype-interface)
-    - [Annotate the Screen Navigation Entry Class for OSGi Registration](#annotate-the-screen-navigation-entry-class-for-osgi-registration)
-    - [Review the `ScreenNavigationCategory` Interface](#review-the-screennavigationcategory-interface)
-    - [Review the `ScreenNavigationEntry` Interface](#review-the-screennavigationentry-interface)
-    - [Complete the Product Type](#complete-the-product-type)
-      - [Configure the `ServletContext` for the Module](#configure-the-servletcontext-for-the-module)
-      - [Implement the `ScreenNavigationEntry`'s `render` Method](#implement-the-screennavigationentrys-render-method)
-      - [Override the `ScreenNavigationEntry`'s `isVisible` Method](#override-the-screennavigationentrys-isvisible-method)
-      - [Add the Product Type Deletion Logic to `deleteCPDefinition`](#add-the-product-type-deletion-logic-to-deletecpdefinition)
-      - [Add a JSP to Render the Custom Screen](#add-a-jsp-to-render-the-custom-screen)
-      - [Add the Language Key to `Language.properties`](#add-the-language-key-to-languageproperties)
-  - [Conclusion](#conclusion)
-  - [Additional Information](#additional-information)
+* [Configure the `ServletContext` for the module.](#configure-the-servletcontext-for-the-module)
+* [Implement the `ScreenNavigationEntry`'s `render` method.](#implement-the-screennavigationentrys-render-method)
+* [Override the `ScreenNavigationEntry`'s `isVisible` method.](#override-the-screennavigationentrys-isvisible-method)
+* [Add the product type deletion logic to `deleteCPDefinition`.](#add-the-product-type-deletion-logic-to-deletecpdefinition)
+* [Add a JSP to render the custom screen.](#add-a-jsp-to-render-the-custom-screen)
+* [Add the language key to `Language.properties`.](#add-the-language-key-to-languageproperties)
 
 #### Configure the `ServletContext` for the Module
 
