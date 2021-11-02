@@ -23,7 +23,6 @@ Liferay Commerce開発者ガイドへようこそ。このチュートリアル�
 :file: developer-guide/landing.html
 ```
 
-
 ## 参考資料
 
 * [管理者API](https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce)
