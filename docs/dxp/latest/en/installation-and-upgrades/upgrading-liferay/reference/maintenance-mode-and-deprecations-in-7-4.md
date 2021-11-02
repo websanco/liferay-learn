@@ -20,7 +20,7 @@ Please see [Maintenance Mode and Deprecation Policies](https://help.liferay.com/
 
 Deprecated features have different availability:
 
-**Bundled:** The feature is included in the Liferay product.
+**Bundled:** The feature is included in the Liferay software.
 
 **Marketplace:** The feature is included in a Marketplace app final version.
 
@@ -36,8 +36,31 @@ Here are the features deprecated in 7.4:
 
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
-| EXT Plugin Support | Removed | Replaced by configuration settings and standard [extension points](../../../liferay-internals/extending_liferay.html). |
-| App Builder | Removed | To be relaunched as Liferay Objects in Liferay 7.4. |
+| App Builder, App Builder Workflow | Removed | Replaced by [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects/introduction-to-objects.md). |
+| Bill of Materials (BOM) | Removed | To be replaced by Shop By Diagram. |
+| Bootstrap 3 & Bootstrap 4 compatibility layer | Removed | Opt in to adding a compatibility layer during [Theme upgrade](../../../site-building/site-appearance/themes/upgrading-a-theme.md) or manually add the layer.  |
+| Central Authentication Service (CAS) | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
+| Commerce Categories Navigation widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) [Navigation Menu](../../../site-building/site-navigation/configuring-navigation-menus.md) support. |
+| Commerce Category Content widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). |
+| Digest Authentication | Bundled | Digest Authentication  requires weak password hash storage, which is a vulnerability. |
+| Dynamic Data Lists | Bundled | Deprecated in 7.3. It is replaced by [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects/introduction-to-objects.md). |
+| EXT Plugins support | Removed | Replaced by configuration settings and standard extension points. |
+| Image Editor (Soy-based) | Removed | Replaced by a React-based image editor. |
+| Google Login/SSO | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
+| JAAS support code | Bundled | No replacement. |
+| Liferay Mobile Device Detection Enterprise | Archived | Deprecated in 7.2. Contact 51Degrees for up-to-date definitions. |
+| Liferay Mobile Device Detection Enterprise | Archived | Deprecated in 7.2. It has no direct replacement. |
+| Liferay Push | Final | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
+| Liferay Sync Connector and Sync Client | Archived | Deprecated in 7.3. It has no direct replacement. |
+| Live Users | Bundled | Deprecated in 7.2. It is replaced by [Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html) |
+| Mobile SDK | Removed | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
+| NTLM | Archived | Deprecated in 7.2. It is replaced by [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). If you're using NTLM to authenticate Microsoft Windows™ accounts with , switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). |
+| OAuth 1.0a | Archived | Deprecated in 7.2. It is replaced by Liferay Connector to OAuth 2.0 |
+| Search widget (classic) | Bundled | Deprecated in 7.1. It is replaced by the [Search widgets](../../../using-search/search-pages-and-widgets/search-results/search-results.md). |
+| SOAP Web Services | Bundled (disabled by default) | Replaced by JSON web services, REST services, and GraphQL services. |
+| Solr Connector | Removed | Deprecated in 7.3. It is replaced by Elasticsearch. |
+| Theme: Hello World | Archived | Deprecated in 7.3. There is no direct replacement. |
+| Web Contnt Search widget | Archived |  |
 
 Features deprecated in earlier Liferay versions may also need to be considered, if you are upgrading from an earlier version.
 
@@ -50,7 +73,11 @@ Features deprecated in earlier Liferay versions may also need to be considered, 
 
 Here are the features moved to Maintenance Mode in 7.4:
 
-* TBD
+| Feature | Notes |
+| :------ | :---- |
+| Export/Import | To be replaced replaced by [Publications](../../../site-building/publishing-tools/publications/publications-overview.md). |
+| Kaleo Forms | To be replaced replaced by business processes for [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects/introduction-to-objects.md). |
+| Staging | To be replaced replaced by [Publications](../../../site-building/publishing-tools/publications/publications-overview.md). |
 
 ## Additional Information
 
