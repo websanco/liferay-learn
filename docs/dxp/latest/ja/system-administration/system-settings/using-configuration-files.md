@@ -22,7 +22,7 @@
 com.liferay.journal.configuration.JournalServiceConfiguration.config
 ```
 
-![Web Content System Settingsエントリには、バックエンドID com.liferay.journal.configurationがあります。JournalServiceConfiguration。](./using-configuration-files/images/01.png)
+![Web Content System Settingsエントリには、バックエンドID com.liferay.journal.configurationがあります。JournalServiceConfiguration。](../configuring-liferay/configuration-files-and-factories/using-configuration-files/images/01.png)
 
 システムは構成ファイルの名前を強制します。 名前を編集すると、構成エントリへのリンクが壊れ、それ以上のカスタマイズは有効になりません。 唯一の例外は [ファクトリ構成](./using-factory-configuration.md)で、一意のサブネームを提供できる場合があります。
 
@@ -48,7 +48,7 @@ multiValueSetting=["Value 1","Value 2", ...]
 
 [コンテンツ]セクションの[システム設定]で[Webコンテンツ]カテゴリを開き、仮想インスタンスのスコープとして[ *Webコンテンツ* を選択します。 *Characters Blacklist*複数の単一値エントリが表示されます。
 
-![Web Content System Settingsエントリには、多くの文字ブラックリストフィールドがあります。](./using-configuration-files/images/02.png)
+![Web Content System Settingsエントリには、多くの文字ブラックリストフィールドがあります。](../configuring-liferay/configuration-files-and-factories/using-configuration-files/images/02.png)
 
 構成ファイルでは、これはカンマ区切り値の配列を持つ単一のキーで表されます。
 

@@ -9,7 +9,7 @@
 5.  *[設定と有効化]* パネルを展開し、有効にするオプションのボックスをオンにします。
 6.  *[メタデータ]* パネルを展開し、オプションを[設定可能一覧]ボックスから[現在]ボックスに移動して、各アセットのメタデータを表示します。 たとえば、表示するタグとカテゴリを選択できます。 その後、ユーザーはタグとカテゴリをクリックして、表示されたアセットを手動でフィルタリングできます。
 
-![表示されたアセットに関するさまざまな種類のメタデータを表示するようにアセットパブリッシャーを設定できます。](./configuring-display-settings/images/04.png)
+![表示されたアセットに関するさまざまな種類のメタデータを表示するようにアセットパブリッシャーを設定できます。](./configuring-asset-publisher-display-settings/images/04.png)
 
 1.  *[グループ化]* パネルを展開し、オプションでグループ化ルールを設定します。
 2.  *[保存]* をクリックし、表示設定を適用します。
@@ -18,7 +18,7 @@
 
 ### 表示設定
 
-![アセットパブリッシャーでは、いくつかの表示設定を使用できます。](./configuring-display-settings/images/01.png)
+![アセットパブリッシャーでは、いくつかの表示設定を使用できます。](./configuring-asset-publisher-display-settings/images/01.png)
 
 これらのテンプレートは、デフォルトですべてのサイトにあります。
 
@@ -44,9 +44,9 @@
 
 印刷、フラグ、評価、コメント、コメントの評価、ソーシャルブックマークなどの多くは、他のアプリケーションと同じように機能します。
 
-![有効にできるオプションがいくつかあります。](./configuring-display-settings/images/03.png)
+![有効にできるオプションがいくつかあります。](./configuring-asset-publisher-display-settings/images/03.png)
 
-![アセットパブリッシャーでソーシャルブックマークを表示できます。](./configuring-display-settings/images/02.png)
+![アセットパブリッシャーでソーシャルブックマークを表示できます。](./configuring-asset-publisher-display-settings/images/02.png)
 
 次のオプションを使用できます。
 
@@ -69,14 +69,14 @@
 
 このセクションでは、アセットエントリーとともに表示するメタデータを指定します。 メタデータを[設定可能一覧]ボックスから[現在]ボックスに移動して含めます。
 
-![アセットとともにいくつかの異なるタイプのメタデータを表示できます。](./configuring-display-settings/images/04.png)
+![アセットとともにいくつかの異なるタイプのメタデータを表示できます。](./configuring-asset-publisher-display-settings/images/04.png)
 
 ### グループ化
 
 *[グループ化]* セクションは、表示されたアセットをどのグループに分割するかを指定します。 アセットをタイプ別またはボキャブラリ別にグループ化できます (定義済みの場合)。
 
-![アセットを異なるグループに分けることができます。](./configuring-display-settings/images/05.png)
+![アセットを異なるグループに分けることができます。](./configuring-asset-publisher-display-settings/images/05.png)
 
 たとえば、*[メンバーシップタイプ]* というボキャブラリがあり、*[Premium]* と*[Regular]* の2つのカテゴリがあるとします。 メンバーシップタイプでアセットをグループ化すると、[Premium]カテゴリのすべてのアセットが1つのグループに表示され、[Regular]カテゴリのすべてのアセットが別のグループに表示されます。 グループ化ルールは、[順序付けルール](./selecting-assets-for-the-asset-publisher.md#configuring-asset-display-ordering)の前に適用されます。 順序付けルールは、アセットのグループごとに個別に適用されます。 下の図の例では、アセットをタイプ別にグループ化しています。画像は、Webコンテンツ記事の後にリストされます。
 
-![アセットをタイプ別にグループ化できます。](./configuring-display-settings/images/06.png)
+![アセットをタイプ別にグループ化できます。](./configuring-asset-publisher-display-settings/images/06.png)

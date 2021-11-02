@@ -16,7 +16,7 @@
 
 2.  「get-countries」と検索します。
 
-    ![get-countries Webサービスを検索します。](./using-data-providers-to-populate-form-options/images/01.png)
+    ![get-countries Webサービスを検索します。](./using-the-rest-data-provider-to-populate-form-options/images/01.png)
 
 3.  *[Invoke]* をクリックします。
 
@@ -34,7 +34,7 @@
 
 3.  *[ローカルネットワークへのアクセス]* チェックボックスにチェックを入れます。
 
-    ![ローカルネットワークへのアクセス権限を付与します。](./using-data-providers-to-populate-form-options/images/02.png)
+    ![ローカルネットワークへのアクセス権限を付与します。](./using-the-rest-data-provider-to-populate-form-options/images/02.png)
 
 4.  完了したら、*[保存]* をクリックします。
 
@@ -50,7 +50,7 @@
 
 4.  *[データプロバイダー]* タブをクリックします。
 
-    ![[データプロバイダー]タブに移動します。](./using-data-providers-to-populate-form-options/images/03.png)
+    ![[データプロバイダー]タブに移動します。](./using-the-rest-data-provider-to-populate-form-options/images/03.png)
 
 5.  追加ボタン（![Add](../../../images/icon-add.png)）をクリックします。
 
@@ -65,7 +65,7 @@
       - **Outputs Path**: `$..nameCurrentValue`
       - **Outputs Type**: List
 
-    ![値を入力します。](./using-data-providers-to-populate-form-options/images/04.png)
+    ![値を入力します。](./using-the-rest-data-provider-to-populate-form-options/images/04.png)
 
 7.  完了したら、*[保存]* をクリックします。
 
@@ -106,7 +106,7 @@
 
 3.  アクションボタン（![Actions](../../../images/icon-actions.png)）をクリックし、データプロバイダーの横にある*[権限設定]* をクリックします。
 
-    ![ゲストの表示権限を付与します。](./using-data-providers-to-populate-form-options/images/06.png)
+    ![ゲストの表示権限を付与します。](./using-the-rest-data-provider-to-populate-form-options/images/06.png)
 
 4.  必要な権限を付与します。
 
@@ -126,13 +126,13 @@
 
 5.  [Choose an Output Parameter]ドロップダウンメニューから*[Country Name]* を選択します。
 
-    ![[リストから選択]フィールドのデータプロバイダーの値を設定します。](./using-data-providers-to-populate-form-options/images/05.png)
+    ![[リストから選択]フィールドのデータプロバイダーの値を設定します。](./using-the-rest-data-provider-to-populate-form-options/images/05.png)
 
 6.  完了したら、*[フォームを保存]* をクリックします。
 
 データプロバイダーが選択フィールドの入力に使用されるようになりました。
 
-![フォームのユーザーは、データプロバイダーによって入力されたリストからオプションを選択します。](./using-data-providers-to-populate-form-options/images/07.png)
+![フォームのユーザーは、データプロバイダーによって入力されたリストからオプションを選択します。](./using-the-rest-data-provider-to-populate-form-options/images/07.png)
 
 ## データプロバイダーのエラーのトラブルシューティング
 

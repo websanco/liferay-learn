@@ -8,11 +8,11 @@
 
 2.  ノード（たとえば*New Node*）の横にある*オプション*（![Options](../../../images/icon-options.png)）をクリックし、*[Permissions]* をクリックします。
 
-    ![Wikiノードの権限の表示](./wiki-permissions/images/06.png)
+    ![Wikiノードの権限の表示](../wiki-permissions/images/06.png)
 
 利用可能な* wikiノード*権限は次のとおりです。
 
-![Wikiノードの権限の表示](./wiki-permissions/images/05.png)
+![Wikiノードの権限の表示](../wiki-permissions/images/05.png)
 
 | 権限             | 説明                                                                                                                   |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -32,7 +32,7 @@ Wikiページの権限を表示するには：
 1.  任意のWikiページで、*[Details]* をクリックします。
 2.  *[Advanced Actions]* セクションで*[Permissions]* をクリックします。
 
-![Wikiページの権限の表示](./wiki-permissions/images/04.png)
+![Wikiページの権限の表示](../wiki-permissions/images/04.png)
 
 | 権限                | 説明                                 |
 | ----------------- | ---------------------------------- |
@@ -50,7 +50,7 @@ Wikiページの権限を表示するには：
 2.  *[Wiki]* の上にマウスを置き、*オプション*（![Options](../../../images/icon-widget-options.png)）をクリックします。
 3.  *[Permissions]* をクリックします。
 
-![Wikiウィジェットの権限の表示](./wiki-permissions/images/03.png)
+![Wikiウィジェットの権限の表示](../wiki-permissions/images/03.png)
 
 | 権限                   | 説明                                                     |
 | -------------------- | ------------------------------------------------------ |
@@ -68,11 +68,11 @@ Wikiページの権限を表示するには：
 1.  *[Site Administration]* → *[Content & Data]* → *[Wiki]* に移動します。
 2.  *オプション*（![Widget Options](../../../images/icon-options.png)） → *[Wikis Permissions]* の順にクリックします。
 
-![Wikiオプションの権限](./wiki-permissions/images/01.png)
+![Wikiオプションの権限](../wiki-permissions/images/01.png)
 
 使用可能な権限は次のとおりです。
 
-![Wikiオプションの権限](./wiki-permissions/images/02.png)
+![Wikiオプションの権限](../wiki-permissions/images/02.png)
 
 | 権限          | 説明                        |
 | ----------- | ------------------------- |

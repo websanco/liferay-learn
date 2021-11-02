@@ -12,7 +12,7 @@
 
 2.  *[設定]* を選択して、設定ウィンドウを表示します。
 
-    ![設定ウィンドウには、4つの異なるタブがあります。](selecting-assets-for-the-asset-publisher/images/02.png)
+    ![設定ウィンドウには、4つの異なるタブがあります。](selecting-assets-in-the-asset-publisher-widget/images/02.png)
 
     [Setup] タブの下には、構成するさまざまなオプションを含むいくつかのサブタブがあります。 [データ選択方法]セクションで、アセットを絞り込む方法を選択できます。
 
@@ -20,13 +20,13 @@
 
     **手動:** ここでは、パラメータを設定し、特定のアセットを手動で絞り込むことができます。 [範囲]セクションで、さまざまなサイトから選択します。 [アセットエントリー]で、*[選択]* ボタンをクリックして、特定のタイプのアセットを絞り込みます。 たとえば、画像を絞り込む場合は、*[画像]* を選択し、含める画像それぞれにチェックマークを入れます。
 
-    ![これは、画像をフィルタリングして手動でアイテムを選択する例です](selecting-assets-for-the-asset-publisher/images/03.png)
+    ![これは、画像をフィルタリングして手動でアイテムを選択する例です](selecting-assets-in-the-asset-publisher-widget/images/03.png)
 
     選択が完了したら、*[追加]* ボタンをクリックします。 選択に基づいて新しいコレクションが作成されます。
 
     **コレクション:** このオプションを選択して、以前に保存したコレクションから選択します。 [コレクションを選択]で、*[選択]* ボタンをクリックしてコレクションを選択します。
 
-    ![[選択]をクリックして、保存済みの選択項目から選択します。](selecting-assets-for-the-asset-publisher/images/04.png)
+    ![[選択]をクリックして、保存済みの選択項目から選択します。](selecting-assets-in-the-asset-publisher-widget/images/04.png)
 
     詳細は、[About Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)のページを参照してください。
 

@@ -17,9 +17,9 @@ OSGiコンポーネントを無効にするには、次の手順に従います�
 
 2.  [Component Blacklist]画面で、無効にするコンポーネントの名前を追加し、*[保存]* ボタンをクリックします。 コンポーネントはすぐに無効になります。
 
-    ![このブラックリストは、コンポーネントcom.liferay.portal.security.ldap.internal.authenticator.LDAPAuthおよびcom.liferay.ip.geocoder.sample.web.internal.portlet.IPGeocoderSamplePortletを無効にします。](./blacklisting-osgi-components/images/01.png)
+    ![このブラックリストは、コンポーネントcom.liferay.portal.security.ldap.internal.authenticator.LDAPAuthおよびcom.liferay.ip.geocoder.sample.web.internal.portlet.IPGeocoderSamplePortletを無効にします。](./managing-apps/blacklisting-osgi-components/images/01.png)
 
-3.  ブラックリストをエクスポートするには、コンポーネントブラックリストモジュールのアクションボタン（![アクション](./blacklisting-osgi-components/images/02.png)）、*[Export]* をクリックします。 ブラックリスト構成ファイルがダウンロードされます（`com.liferay.portal.component.blacklist.internal.ComponentBlacklistConfiguration.config`）。 サンプルのリストから作成されたファイルの内容は次のとおりです。
+3.  ブラックリストをエクスポートするには、コンポーネントブラックリストモジュールのアクションボタン（![アクション](./managing-apps/blacklisting-osgi-components/images/02.png)）、*[Export]* をクリックします。 ブラックリスト構成ファイルがダウンロードされます（`com.liferay.portal.component.blacklist.internal.ComponentBlacklistConfiguration.config`）。 サンプルのリストから作成されたファイルの内容は次のとおりです。
 
     ``` properties
     blacklistComponentNames=["com.liferay.portal.security.ldap.internal.authenticator.LDAPAuth","com.liferay.ip.geocoder.sample.web.internal.portlet.IPGeocoderSamplePortlet "]

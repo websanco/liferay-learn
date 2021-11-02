@@ -17,7 +17,7 @@
 
 新しいノードが作成されました。 同じサイトに複数のノードを作成できます。
 
-![新しいノードを作成する](./creating-a-node/images/01.png)
+![新しいノードを作成する](../creating-a-node/images/01.png)
 
 ## 新しいノードを選択する
 
@@ -28,7 +28,7 @@
 3.  *[New Node]* が*[Wiki]* ウィジェット内に表示されることを確認します。
 4.  *[New Node]* をクリックします。
 
-![新しいノードを選択する](./creating-a-node/images/02.png)
+![新しいノードを選択する](../creating-a-node/images/02.png)
 
 新しいノードで、*[This page is empty. Edit it to add some text.]* をクリックして、現在のノードの*[FrontPage]* ページを編集します。
 

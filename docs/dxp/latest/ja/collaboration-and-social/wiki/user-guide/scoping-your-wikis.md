@@ -12,19 +12,19 @@
 
 2.  *[Wiki]* ウィジェットの名前の上にマウスを置き、*オプション* （![Icon Options](../../../images/icon-widget-options.png)）、*[Configuration]* の順にクリックします。
 
-    ![Wikiオプション](./scoping-your-wikis/images/10.png)
+    ![Wikiオプション](../scoping-your-wikis/images/10.png)
 
 3.  *[Scope]* をクリックします。
 
 4.  *[Scope]* ドロップダウンメニューから**[Global]**を選択します。
 
-    ![グローバルスコープの選択](./scoping-your-wikis/images/01.png)
+    ![グローバルスコープの選択](../scoping-your-wikis/images/01.png)
 
 5.  *[保存]* をクリックしてウィンドウを閉じます。
 
 *[Wiki]* ウィジェットが、*グローバルスコープ*のコンテンツを表示するように設定されました。
 
-![グローバルスコープの表示](./scoping-your-wikis/images/02.png)
+![グローバルスコープの表示](../scoping-your-wikis/images/02.png)
 
 ### グローバルスコープの*Wiki*ページの管理
 
@@ -32,11 +32,11 @@
 
 2.  *[My Sites]* タブを選択し、*[Global]* を選択します。
 
-    ![グローバルサイトの選択](./scoping-your-wikis/images/06.png)
+    ![グローバルサイトの選択](../scoping-your-wikis/images/06.png)
 
 3.  *[Content & Data]* → *[Wiki]* の順にクリックします。
 
-![グローバルスコープのWiki](./scoping-your-wikis/images/07.png)
+![グローバルスコープのWiki](../scoping-your-wikis/images/07.png)
 
 ここで行った変更はグローバルスコープに適用されます。
 
@@ -52,7 +52,7 @@
 
 1.  スコープ指定するページに移動します（*Second Wiki*）。
 
-    ![スコーピング前の2ページ](./scoping-your-wikis/images/03.png)
+    ![スコーピング前の2ページ](../scoping-your-wikis/images/03.png)
 
 2.  ウィジェットのタイトルバーにある*オプション*アイコン（![Options](../../../images/icon-widget-options.png)）をクリックし、*[Configuration]* を選択します。
 
@@ -60,13 +60,13 @@
 
 4.  ページの名前を選択するか、ページのスコープがまだ存在しない場合は*\[\[YOUR-PAGE\\] (Create New)]* を選択します。
 
-    ![ページスコープの選択](./scoping-your-wikis/images/04.png)
+    ![ページスコープの選択](../scoping-your-wikis/images/04.png)
 
 5.  *[保存]* をクリックしてダイアログウインドウを閉じます。
 
 2番目のページがページスコープに設定されました。
 
-![新しいページスコープのWikiの表示](./scoping-your-wikis/images/05.png)
+![新しいページスコープのWikiの表示](../scoping-your-wikis/images/05.png)
 
 ### ページスコープのWikiの管理
 
@@ -76,13 +76,13 @@
 
 2.  現在のスコープが[Content & Data]見出しのすぐ下に表示されます。 デフォルトのスコープは現在のサイトです。 これを変更するには、歯車のアイコン（![Gear](../../../images/icon-control-menu-gear.png)）をクリックし、目的のスコープを選択します。 これにより、サイト管理メニューが変更され、選択したスコープが反映されます。 たとえば、ページのスコープで作業するには、歯車アイコンからそのページを選択します。 そのページの名前がサイト管理メニューのタイトルになります。
 
-    ![新しいページスコープのWikiの選択](./scoping-your-wikis/images/08.png)
+    ![新しいページスコープのWikiの選択](../scoping-your-wikis/images/08.png)
 
 3.  *[Wiki]* をクリックします。
 
 ここで行う変更は、前のステップで選択したスコープに適用されます。
 
-![新しいページスコープのWikiの選択](./scoping-your-wikis/images/09.png)
+![新しいページスコープのWikiの選択](../scoping-your-wikis/images/09.png)
 
 ## 追加情報
 

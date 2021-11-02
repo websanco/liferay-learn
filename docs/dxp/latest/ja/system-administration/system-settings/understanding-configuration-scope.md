@@ -4,25 +4,25 @@ Liferay DXPのサービスとアプリケーションの設定は、4つのレ�
 
 <!-- Ideally, I think it would be more helpful for the below image to be a diagram that represents the relationship scopes have to one another. -->
 
-![一部のシステム設定カテゴリは、複数のスコープのエントリを保持します。](./understanding-configuration-scope/images/02.png)
+![一部のシステム設定カテゴリは、複数のスコープのエントリを保持します。](../configuring-liferay/understanding-configuration-scope/images/02.png)
 
 ## スコープの定義
 
 **システムスコープ：** システムスコープのエントリに対して行われた構成は、システム全体でのアプリケーションの最終的な値です。 それらはシステム全体に影響を与え、他の場所で上書きされません。
 
-![一部のシステム設定エントリは、システムスコープです。](./understanding-configuration-scope/images/01.png)
+![一部のシステム設定エントリは、システムスコープです。](../configuring-liferay/understanding-configuration-scope/images/01.png)
 
 **仮想インスタンスのスコープ：** 仮想インスタンスレベルでの構成は、インスタンス設定で上書きされます。
 
-![一部のシステム設定は仮想インスタンススコープです。](./understanding-configuration-scope/images/05.png)
+![一部のシステム設定は仮想インスタンススコープです。](../configuring-liferay/understanding-configuration-scope/images/05.png)
 
 **サイトスコープ：** このスコープでの構成は、各サイトで上書きされます。
 
-![一部のシステム設定はサイトスコープです。](./understanding-configuration-scope//images/03.png)
+![一部のシステム設定はサイトスコープです。](../configuring-liferay/understanding-configuration-scope/images/03.png)
 
 **ウィジェットスコープ：** このスコープでの構成は、各ウィジェットインスタンスでオーバーライドされます。
 
-![一部のシステム設定エントリはウィジェットスコープです。](./understanding-configuration-scope/images/04.png)
+![一部のシステム設定エントリはウィジェットスコープです。](../configuring-liferay/understanding-configuration-scope/images/04.png)
 
 ## 例：ブログのコメントの構成とオーバーライド
 
@@ -38,7 +38,7 @@ Liferay DXPのサービスとアプリケーションの設定は、4つのレ�
 
 同じ[コメントを有効にする]チェックボックスが表示され、デフォルトはfalse（オフ）になっています。 ウィジェット構成のボックスをチェックすると、システム設定エントリが上書きされます。 システム設定の構成を変更しても、このウィジェットには影響がありません。
 
-![ウィジェット自体からウィジェットスコープのシステム設定を上書きします。](./understanding-configuration-scope/images/06.png)
+![ウィジェット自体からウィジェットスコープのシステム設定を上書きします。](../configuring-liferay/understanding-configuration-scope/images/06.png)
 
 ## システム設定とインスタンス設定
 インスタンス設定システム設定に似ていますが、仮想インスタンススコープでアプリケーションとサービスを構成します。 システム設定と同様に、インスタンス設定の構成エントリに、 *デフォルト値にリセット* するオプションがあります。 これにより、インスタンス設定で、指定したカスタム構成が削除され、システムスコープの現在の値（デフォルトまたはカスタム）が仮想インスタンススコープのデフォルトになります。

@@ -12,7 +12,7 @@
 
 スタイルブックを構成するためのオプションを定義するトークンは、カテゴリにグループ化されます。 スタイルブックを編集しているときに、各カテゴリがドロップダウンメニューのオプションの1つとして表示されます。
 
-![ドロップダウンメニューの各オプションは、スタイルブックのトークンの1つのカテゴリに対応しています。](./style-book-token-definitions/images/01.png)
+![ドロップダウンメニューの各オプションは、スタイルブックのトークンの1つのカテゴリに対応しています。](../style-books/developer-guide/style-book-token-definitions/images/01.png)
 
 `frontend-token-definition.json`ファイル内の`frontendTokenCategories`フィールド内でこれらの各カテゴリを定義します。
 
@@ -36,7 +36,7 @@
 
 たとえば、デフォルトの標準テーマを使用すると、*ボタンプライマリ*トークンセット（*ボタン*カテゴリ内）には、標準のボタンの色オプションのすべてのトークンが含まれています。
 
-![ボタンプライマリトークンセットには、標準テーマにおけるメインボタンのカスタマイズ可能な色がすべて含まれています。](./style-book-token-definitions/images/02.png)
+![ボタンプライマリトークンセットには、標準テーマにおけるメインボタンのカスタマイズ可能な色がすべて含まれています。](../style-books/developer-guide/style-book-token-definitions/images/02.png)
 
 カテゴリの`frontendTokenSets`フィールド内に各トークンセットを定義します。
 

@@ -12,7 +12,7 @@
 
 3.  [Pages]ページで、*追加*ボタン（![Add](../../images/icon-add.png)）をクリックしてトップレベルのページを作成します。
 
-    ![[Pages]画面では、サイトページ全体を編集できます。](./adding-a-page-to-a-site/images/01.png)
+    ![[Pages]画面では、サイトページ全体を編集できます。](./adding-pages/adding-a-page-to-a-site/images/01.png)
 
     ``` tip::
        または、Liferay DXP 7.3以降では、サイト名の横にあるページツリーアイコンをクリックして、ページツリーメニューを開くことができます。 ページツリーメニューを使用すると、検索バーでキーワードによってページをすばやく検索したり、ページを選択してそのページに移動したり、アクションメニューからページを追加したりすることもできます。
@@ -20,7 +20,7 @@
 
 4.  *[Blank]* をクリックして[コンテンツページ](./understanding-pages.md#page-types)を作成するか、*[Other]* 見出しの下の[別のページタイプ](./other-page-types.md)を選択するか、あるは*[Global Template]* メニューの下に表示されるページテンプレートを選択します。 Liferay DXP 7.3より前のバージョンでは、ページタイプは*[Basic Pages]* にリストされています。
 
-    ![ページを追加するときは、ページタイプを選択する必要があります。](./adding-a-page-to-a-site/images/04.png)
+    ![ページを追加するときは、ページタイプを選択する必要があります。](./adding-pages/adding-a-page-to-a-site/images/04.png)
 
 5.  名前を入力し、ページの残りの設定を構成します。
 
@@ -38,7 +38,7 @@
 
 2.  既存のページの横にあるアクションメニューから*[Add Child Page]* を選択して、ネストされた子ページを作成します。
 
-    ![ページツリーメニューを使用して子ページを追加する。](adding-a-page-to-a-site/images/05.png)
+    ![ページツリーメニューを使用して子ページを追加する。](./adding-pages/adding-a-page-to-a-site/images/05.png)
 
 3.  上記のページを作成するための標準的な手順に従います。
 

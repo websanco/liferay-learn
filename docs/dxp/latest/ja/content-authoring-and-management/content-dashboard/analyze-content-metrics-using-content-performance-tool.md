@@ -4,7 +4,7 @@
 
 [コンテンツダッシュボード](./about-the-content-dashboard.md)のコンテンツパフォーマンスツールを使用して、既読数と閲覧数、トラフィックチャンネル、サイトにユーザーを誘導するキーワードなど、コンテンツに関するメトリクスを分析できます。 コンテンツパフォーマンスサイドバーを使用して、コンテンツチームはコンテンツ戦略の実行を定期的に評価し、定量的データに基づいてこの戦略を適応させることができます。
 
-![コンテンツダッシュボードインターフェイスからコンテンツパフォーマンスサイドバーを開きます](./analyze-content-metrics-using-content-performance-tool/images/01.png)
+![コンテンツダッシュボードインターフェイスからコンテンツパフォーマンスサイドバーを開きます](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/01.png)
 
 コンテンツパフォーマンスにアクセスするには、次の条件を満たす必要があります。
 
@@ -19,7 +19,7 @@
 
 コンテンツダッシュボードの外部からパフォーマンスメトリクスにアクセスすることもできます。 *[統計情報を表示]* ボタンは、Webコンテンツのレイアウトを編集する権限がある場合、Webコンテンツの閲覧モードで使用できます。
 
-![[統計情報を表示]ボタンからコンテンツパフォーマンスメトリクスにアクセスします](./analyze-content-metrics-using-content-performance-tool/images/08.png)
+![[統計情報を表示]ボタンからコンテンツパフォーマンスメトリクスにアクセスします](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/08.png)
 
 コンテンツがさまざまな言語にローカライズされている場合、 *[Languages Translated Into]* セクションで各言語のメトリクスを表示することができます。 これを行うには、言語アイコンセレクターをクリックして、言語を選択します。
 
@@ -27,7 +27,7 @@
    言語選択は、ローカライズされたコンテンツでのみ使用できます。
 ```
 
-![言語を選択します ](./analyze-content-metrics-using-content-performance-tool/images/03.png)
+![言語を選択します ](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/03.png)
 
 コンテンツパフォーマンスサイドバーには、2つの異なる領域が含まれています。
 
@@ -38,7 +38,7 @@
 
 この領域には、コンテンツの閲覧数と既読数、およびこれらのメトリクスの時間経過による変化が表示されます。 閲覧数と既読数は、コンテンツパフォーマンスを理解し、コンテンツの洞察を発見するための2つの重要な値です。 ある特定のコンテンツにアクセスする訪問者が、このコンテンツを読むかどうかはわかりません。 コンテンツに訪問するだけのオーディエンス（閲覧数）とコンテンツに興味を持つオーディエンス（既読数）を区別するために、Liferayでは、記事の長さ、言語、スクロール動作などのパラメーターを考慮する特殊なアルゴリズムを使用しています。
 
-![コンテンツパフォーマンスサイドバーのエンゲージメント領域には、既読数と閲覧数の情報が表示されます](./analyze-content-metrics-using-content-performance-tool/images/06.png)
+![コンテンツパフォーマンスサイドバーのエンゲージメント領域には、既読数と閲覧数の情報が表示されます](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/06.png)
 
 デフォルトでは、エンゲージメント領域には、過去7日間の閲覧数と既読数とともに、コンテンツの閲覧数と既読数の総数が表示されます。 ドロップダウン時間セレクターでこの期間を変更し、戻るボタンと進むボタン（![Arrow left](../../images/icon-angle-left.png) ![Arrow right](../../images/icon-angle-right.png)）を使用して時間の経過に伴う傾向を分析できます。 折れ線グラフの任意の部分にカーソルを合わせると、特定の時間の閲覧数と既読数が表示されます。
 
@@ -54,7 +54,7 @@
 
   - **有料** --- 有料キーワードでコンテンツを検索している人。
 
-    ![コンテンツパフォーマンスサイドバーの検索エンジントラフィック領域には、トラフィックソースに関する情報が提供されます](./analyze-content-metrics-using-content-performance-tool/images/07.png)
+    ![コンテンツパフォーマンスサイドバーの検索エンジントラフィック領域には、トラフィックソースに関する情報が提供されます](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/07.png)
 
 図のソースをクリックして（1）、これらのソースに関する追加のメトリクスにアクセスしたり（2）、国別に情報を絞り込んだりできます。 次の表で、これらのメトリクスについて説明します。
 
@@ -69,7 +69,7 @@
    キーワードとは、ユーザーがコンテンツを検索するために使用する1つ以上の単語です。
 ```
 
-![トラフィックチャンネルをクリックして、追加の詳細にアクセスします](./analyze-content-metrics-using-content-performance-tool/images/02.png)
+![トラフィックチャンネルをクリックして、追加の詳細にアクセスします](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/02.png)
 
 ## 関連情報
 

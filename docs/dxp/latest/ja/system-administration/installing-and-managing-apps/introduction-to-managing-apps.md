@@ -6,7 +6,7 @@
 
 Liferay マーケットプレイスは、アプリを共有、閲覧、ダウンロードするためのハブです。 アプリの閲覧や購入が可能で、インストールするためにすばやく追加できます。 詳細については、[Using the Liferay Marketplace](./purchasing-apps-on-liferay-marketplace.md)を参照してください。
 
-![Liferay マーケットプレイスを使用して、アプリをすばやく購入してDXPインストールに追加します。](./introduction-to-managing-apps/images/01.png)
+![Liferay マーケットプレイスを使用して、アプリをすばやく購入してDXPインストールに追加します。](./getting-started/installing-and-managing-apps/images/01.png)
 
 アプリを購入したら、それをダウンロードしてインストールする方法がいくつかあります。 詳細については、[Downloading Apps](./downloading-apps.md)を参照してください。
 

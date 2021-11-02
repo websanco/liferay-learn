@@ -26,7 +26,7 @@
 
 10. メタデータフィールドをエディターにドラッグアンドドロップします。
 
-    ![メタデータセットのフィールドをキャンバスに追加します。](./using-metadata-sets/images/01.png)
+    ![メタデータセットのフィールドをキャンバスに追加します。](./defining-metadata-sets/images/01.png)
 
 11. *[保存]* をクリックします。
 
@@ -58,7 +58,7 @@
 
 2.  設定値を編集するには、[Settings]テーブルで設定値をダブルクリックして、新しい値を入力します。
 
-    ![フィールドの値を編集する](./using-metadata-sets/images/02.png)
+    ![フィールドの値を編集する](./defining-metadata-sets/images/02.png)
 
 3.  完了したら、*[保存]* をクリックします。
 
@@ -70,13 +70,13 @@
 
 2.  言語をクリックします（例：*French (France)*）。 別のロケールを追加するには、この手順を繰り返します。
 
-    ![翻訳を追加する。](./using-metadata-sets/images/03.png)
+    ![翻訳を追加する。](./defining-metadata-sets/images/03.png)
 
 3.  [Available Translations]セクションに追加されたら、言語を表すフラグをクリックします。
 
 4.  必要な値を変更します。
 
-    ![フィールド名の翻訳](./using-metadata-sets/images/04.png)
+    ![フィールド名の翻訳](./defining-metadata-sets/images/04.png)
 
 5.  完了したら、*[保存]* をクリックします。
 

@@ -24,7 +24,7 @@ DXPは、ブラックリストにあるインストール済みのアプリ、�
 
 2.  [Bundle Blacklist]画面で、アンインストールする[モジュール](https://help.liferay.com/hc/en-us/articles/360035467532-OSGi-and-Modularity#modules)JAR、LPKGファイル、またはWARのバンドルシンボリック名（[下の表](#blacklist-bundle-symbolic-names)を参照）を追加します。 完了したら、*[保存]* ボタンをクリックします。 DXPはブラックリストに登録されたモジュールをすぐにアンインストールします。
 
-    ![このブラックリストは、com.liferay.docs.greeting.apiモジュール、Liferay マーケットプレイスアプリのLPKG、およびクラシックテーマのプラグインWARをアンインストールします。](./blacklisting-apps/images/02.png)
+    ![このブラックリストは、com.liferay.docs.greeting.apiモジュール、Liferay マーケットプレイスアプリのLPKG、およびクラシックテーマのプラグインWARをアンインストールします。](./managing-apps/blacklisting-apps/images/02.png)
 
 ### 構成ファイルによるブラックリスト登録
 
@@ -35,7 +35,7 @@ DXPは、ブラックリストにあるインストール済みのアプリ、�
 
 次の手順に従って、構成ファイルを使用してブラックリストに登録します。
 
-1.  現在使用中のブラックリストをエクスポートするには、そのアクションボタン（![アクション](./blacklisting-apps/images/03.png)）をクリックしてから、*[Export]* をクリックします。 ブラックリスト構成ファイルがダウンロードされます（`com.liferay.portal.bundle.blacklist.internal.BundleBlacklistConfiguration.config`）。 次に、サンプルのブラックリストをエクスポートしたときのファイルの内容を示します。
+1.  現在使用中のブラックリストをエクスポートするには、そのアクションボタン（![アクション](./managing-apps/blacklisting-apps/images/03.png)）をクリックしてから、*[Export]* をクリックします。 ブラックリスト構成ファイルがダウンロードされます（`com.liferay.portal.bundle.blacklist.internal.BundleBlacklistConfiguration.config`）。 次に、サンプルのブラックリストをエクスポートしたときのファイルの内容を示します。
 
     ``` properties
     blacklistBundleSymbolicNames=["com.liferay.docs.greeting.api","Liferay\ Marketplace","classic-theme"]

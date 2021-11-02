@@ -6,11 +6,11 @@
 
 関心のあるセクション（コンテンツやデータなど）を探して必要な構成に移動し、そのカテゴリ（ワークフローなど）を参照します。
 
-![システム設定のエントリは、セクション（コンテンツやデータなど）とカテゴリ（アセットなど）で構成されています。](./system-settings/images/02.png)
+![システム設定のエントリは、セクション（コンテンツやデータなど）とカテゴリ（アセットなど）で構成されています。](../configuring-liferay/system-settings/images/02.png)
 
 参照してもシステム設定エントリが見つからない場合は、検索バーを使用して検索します。
 
-![システム設定エントリを検索できます。](./system-settings/images/03.png)
+![システム設定エントリを検索できます。](../configuring-liferay/system-settings/images/03.png)
 
 ``` note::
    Some system-scoped configurations can be made in properties files and in the Server Administration application in the Control Panel.
@@ -36,7 +36,7 @@ Liferay DXPには多くのアプリケーションが含まれています。 �
 
 システム設定をデフォルト値にリセットするには、アクションボタン（![Actions](../../images/icon-actions.png)）をクリックし、次に[ *デフォルト値のリセット*]をクリックします。
 
-![構成への変更を保存した後、デフォルト値のリセットおよびエクスポートのアクションが使用可能になります。](./system-settings/images/04.png)
+![構成への変更を保存した後、デフォルト値のリセットおよびエクスポートのアクションが使用可能になります。](../configuring-liferay/system-settings/images/04.png)
 
 ## 構成のエクスポートと展開
 

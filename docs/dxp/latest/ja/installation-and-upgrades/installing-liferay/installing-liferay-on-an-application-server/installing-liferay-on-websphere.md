@@ -46,7 +46,7 @@ WebSphereにDXPをインストールするための基本的な手順は次の�
 
 2.  *アドバンスト*プロファイルの作成オプションをクリックし、*[Next]* をクリックします。 アドバンスト プロファイルを使用して、プロファイルの場所やプロファイルの名前、ノードとホストなどの設定値を指定したり、特定のポートを割り当てたり、オプションで管理コンソールとサンプルアプリケーションをデプロイするかどうか、またWeb IBM HTTP ServerのWebサーバー定義を追加するかどうかを選択します。 これらのオプションの詳細については、WebSphereのドキュメントを参照してください。
 
-    ![図1：アドバンストプロファイルオプションを選択して、独自の設定を指定します。](./installing-liferay-on-websphere/images/01.png)
+    ![図1：アドバンストプロファイルオプションを選択して、独自の設定を指定します。](./installing-on-websphere/images/01.png)
 
 3.  *[Deploy the administrative console]* ボックスをオンにします。 これにより、アプリケーションサーバーを操作するためのWebベースのUIが有効になります。 デフォルトのアプリケーションをスキップします。 （これらは開発マシンにのみインストールしてください。）*[Next]* をクリックします。
 
@@ -74,7 +74,7 @@ WebSphereにDXPをインストールするための基本的な手順は次の�
 
 WebSphereはプロファイルを作成し、プロファイルが正常に作成されたことを示すメッセージで終了します。
 
-![図2：プロファイルを作成する前の設定例](./installing-liferay-on-websphere/images/02.png)
+![図2：プロファイルを作成する前の設定例](./installing-on-websphere/images/02.png)
 
 最後に、アプリケーションサーバーをシャットダウンします。
 
@@ -188,7 +188,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
    Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HSQLは、Liferay DXPの本番環境インスタンスでは使用*しない*でください。
 ```
 
-![図3：WebSphere JDBCプロバイダー](./installing-liferay-on-websphere/images/03.png)
+![図3：WebSphere JDBCプロバイダー](./installing-on-websphere/images/03.png)
 
 1.  WebSphereを起動します。
 
@@ -204,7 +204,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
 
 7.  設定を確認し、*[Finish]* をクリックします。 最終的な構成は次のようになります。
 
-    ![図4：完成したJDBCプロバイダーの構成。](./installing-liferay-on-websphere/images/04.png)
+    ![図4：完成したJDBCプロバイダーの構成。](./installing-on-websphere/images/04.png)
 
 8.  新しいプロバイダー構成が表に表示されたらクリックします。
 
@@ -222,7 +222,7 @@ WebSphereを使用してデータベース接続を管理する場合は、以�
 
 15. *user*を検索語句に入力し、*[Go]* をクリックします。
 
-    ![図5：WebSphereでのデータソースプロパティの変更](././installing-liferay-on-websphere/images/05.png)
+    ![図5：WebSphereでのデータソースプロパティの変更](././installing-on-websphere/images/05.png)
 
 16. *user*プロパティを選択し、ユーザー名の値をデータベースに付与します。
 
@@ -265,7 +265,7 @@ WebSphereを使用してメールセッションを管理する場合は、次�
 
 6.  *[Security] → [Global Security]* をクリックし、*[Use Java 2 security to restrict application access to local resources]* が選択されている場合は選択を解除します。
 
-    ![図6：メールセッションでのJavaセキュリティの適用](./installing-liferay-on-websphere/images/06.png)
+    ![図6：メールセッションでのJavaセキュリティの適用](./installing-on-websphere/images/06.png)
 
 7.  *[Apply]* をクリックします。
 
@@ -322,7 +322,7 @@ User 0 is not allowed to access URL http://localhost:9081/web/guest/home and por
 
 9.  DXPがインストールされたら、*[Save to Master Configuration]* をクリックします。
 
-    ![図7：デプロイする前に、デプロイオプションを確認します。](./installing-liferay-on-websphere/images/07.png)
+    ![図7：デプロイする前に、デプロイオプションを確認します。](./installing-on-websphere/images/07.png)
 
 DXPがインストールされました。 DXPを開始する前に、いくつかの必要な手順があります。
 

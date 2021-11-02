@@ -21,11 +21,11 @@ Liferay DXPを起動して、すぐに使用できる検索機能の探索を開
 
 デフォルトの検索ページ（`localhost：8080/search`）は検索ページテンプレートに基づいており、適切な検索ウィジェットのセットが含まれていますが、カスタマイズも可能です。
 
-![検索ページテンプレートは便利です。](./search-overview/images/05.png)
+![検索ページテンプレートは便利です。](../getting-started/search-overview/images/05.png)
 
 検索ウィジェットをページに追加するには、ページの[追加]ボタンをクリックし、[ *ウィジェット*]を選択して、[検索]カテゴリを開きます。
 
-![検索ウィジェットをページに追加します。](./search-overview/images/07.png)
+![検索ウィジェットをページに追加します。](../getting-started/search-overview/images/07.png)
 
 検索ページの作成の詳細については、こちら [読みください](https://help.liferay.com/hc/en-us/articles/360028821052-Configuring-Search-Pages)。
 
@@ -37,11 +37,11 @@ Liferay DXPを起動して、すぐに使用できる検索機能の探索を開
 
 システムスコープの検索構成の多くは、[システム設定]→[検索]にあります。
 
-![検索システム設定は多数あります。](./search-overview/images/06.png)
+![検索システム設定は多数あります。](../getting-started/search-overview/images/06.png)
 
 追加の管理画面は、[コントロールパネル]→[構成]→[検索]セクションにあります。
 
-![検索管理画面は有益で便利です。](./search-overview/images/08.png)
+![検索管理画面は有益で便利です。](../getting-started/search-overview/images/08.png)
 
 検索の構成について詳しくは、こちらの [読みください](./configuring-search.md)。
 
@@ -70,7 +70,7 @@ Once a search engine holding your indexed data is freely communicating with Life
 
 Sites often feature lots of content split over lots of asset types. Web content articles, documents and media files, and blogs entries are just a few examples. Most content types are *assets*.Under the hood, assets use the [Asset API](https://help.liferay.com/hc/en-us/sections/360004656831-Asset-Framework) and [indexing code](#custom-development-in-search). Any content that has these features can be searched in Liferay DXP's out-of-the-box search widgets. 
 
-![The Type Facet configuration lists the searchable out-of-the-box asset types.](./search-overview/images/01.png)
+![The Type Facet configuration lists the searchable out-of-the-box asset types.](../getting-started/search-overview/images/01.png)
 
 ## Bundled Search Features
 
@@ -88,7 +88,7 @@ A bunch of search widgets are bundled with Liferay DXP:
 - Suggestions
 - X-Pack Monitoring (LES)
 
-![Compose the search widgets to build your search page any way you see fit.](./search-overview/images/05.png)
+![Compose the search widgets to build your search page any way you see fit.](../getting-started/search-overview/images/05.png)
 
 Administrative search functionality is also included:
 
@@ -99,7 +99,7 @@ Administrative search functionality is also included:
 - Viewing Indexes and Field Mappings
 - Indexing Actions
 
-![Much of the administrative configuration is done via System Settings.](./search-overview/images/06.png)
+![Much of the administrative configuration is done via System Settings.](../getting-started/search-overview/images/06.png)
 
 The behavior and configuration of these features is described in the User Guide section.
 
@@ -115,11 +115,11 @@ Actually the rest of this stuff is probably unnecessary here. Preserving for now
 
 Find a search bar (there's one embedded in every page by default), enter a term, and click *Enter*.
 
-![There's a search bar embedded on all pages by default.](./search-overview/images/02.png)
+![There's a search bar embedded on all pages by default.](../getting-started/search-overview/images/02.png)
 
 After search is triggered, a results page appears. If there are hits to search engine documents, they appear as search results in the right hand column. In the left hand column are search facets.
 
-![Results are displayed in the Search Results portlet.](./search-overview/images/03.png)
+![Results are displayed in the Search Results portlet.](../getting-started/search-overview/images/03.png)
 
 The search bar, search results, and search facets make up three powerful features in the search UI.
 
@@ -144,7 +144,7 @@ Facets allow users of the Search application to filter search results. Think of 
 - Modified
 - Custom
 
-![Site and Type are two of the facet sets you'll encounter. They let you drill down to results that contain the search terms you entered.](./search-overview/images/04.png)
+![Site and Type are two of the facet sets you'll encounter. They let you drill down to results that contain the search terms you entered.](../getting-started/search-overview/images/04.png)
 
 You've probably used something similar on any number of sites. You search for an item, are presented with a list of results alongside a list of buckets you can click to further drill down into the search results, without entering additional search terms. Search facets work the same way.
 -->

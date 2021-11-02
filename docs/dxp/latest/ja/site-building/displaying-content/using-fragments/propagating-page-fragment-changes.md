@@ -16,7 +16,7 @@
 
 4.  *Usages and Propagation* ページから、Page Fragmentの変更が伝播するコンテンツページ、コンテンツページテンプレート、および表示ページを選択します。 さまざまなフィルターと選択オプションを使用して、更新をページにすばやく適用できます。
 
-    ![[使用法と伝播]ページには、伝播によって更新されたページが表示されます。](./propagating-page-fragment-changes/images/01.png)
+    ![[使用法と伝播]ページには、伝播によって更新されたページが表示されます。](./propagating-fragment-changes/images/01.png)
 
 5.  *伝播* アイコン（![Propagate](../../../images/icon-propagate.png)）をクリックして、変更を伝播します。
 
@@ -44,8 +44,8 @@
 
 3.  *フラグメントの変更を自動的に反映* 設定を有効にし、 *保存* をクリックして変更を適用します。
 
-![ページフラグメントの伝達を有効にすると、開発者はページフラグメントの変更をすべてのページに自動的に伝達できます。](./propagating-page-fragment-changes/images/02.png)
+![ページフラグメントの伝達を有効にすると、開発者はページフラグメントの変更をすべてのページに自動的に伝達できます。](./propagating-fragment-changes/images/02.png)
 
 ページフラグメントの更新が自動的に反映されるようになりました\！ ページフラグメントエディターは、ページフラグメントの自動伝達が有効になっているという通知を表示します。
 
-![自動伝播が有効になると通知されます。](./propagating-page-fragment-changes/images/03.png)
+![自動伝播が有効になると通知されます。](./propagating-fragment-changes/images/03.png)

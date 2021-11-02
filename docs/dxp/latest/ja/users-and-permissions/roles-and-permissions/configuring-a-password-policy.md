@@ -10,7 +10,7 @@
 
 3.  設定ウィンドウで、パスワードポリシーの名前と説明を入力します。
 
-    ![設定ウィンドウで特定のパラメーターを設定します](configuring-a-password-policy/images/02.png)
+    ![設定ウィンドウで特定のパラメーターを設定します](../roles-and-permissions/configuring-a-password-policy/images/02.png)
 
 4.  ポリシーのパラメーターを設定します（以下を参照）。 完了したら、* [保存]*をクリックします。
 

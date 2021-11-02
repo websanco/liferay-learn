@@ -24,7 +24,7 @@ Liferay DXPの最新バージョンは、Dockerイメージとして入手でき
 
 3.  ブラウザで`https://localhost:8080`を開きます。
 
-    ![Liferay DXPの最初のランディングページ。](./starting-with-a-dxp-docker-image/images/01.png)
+    ![Liferay DXPの最初のランディングページ。](./starting-with-a-docker-image/images/01.png)
 
 ## 次のステップ
 

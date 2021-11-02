@@ -24,7 +24,7 @@
 
 2.  新しいページを追加したいレベルで*新規ページ*ボタン (![New Page](../../images/icon-plus.png)) をクリックし、*[コレクションページを追加]* を選択します。
 
-    ![ページ管理から新しいコレクションページを作成します。](./displaying-collections/images/01.png)
+    ![ページ管理から新しいコレクションページを作成します。](./additional-content-display-options/displaying-collections/images/01.png)
 
 3.  *[コレクション]* タブから、コレクションの1つを選択します。
 
@@ -46,7 +46,7 @@
 
 コレクション表示フラグメントは、コンテンツページにコレクションを表示します。 選択したコレクションを任意のスタイルまたはレイアウトで表示するように構成できます。
 
-![コレクション表示フラグメントを使用して、コレクションを目的の形式で表示します。](./displaying-collections/images/02.png)
+![コレクション表示フラグメントを使用して、コレクションを目的の形式で表示します。](./additional-content-display-options/displaying-collections/images/02.png)
 
 コレクション表示フラグメントに既存のコレクションを追加するには:
 
@@ -60,7 +60,7 @@
 
 5.  ボタンをクリックして、パネルの*[一般]* セクションに表示するフラグメントのコレクションを選択します。
 
-    ![ボタンをクリックして、コレクション表示フラグメントのコレクションを選択します。](./displaying-collections/images/03.png)
+    ![ボタンをクリックして、コレクション表示フラグメントのコレクションを選択します。](./additional-content-display-options/displaying-collections/images/03.png)
 
 コレクション表示フラグメントがページに表示され、選択したコレクションが表示されます。
 
@@ -75,7 +75,7 @@
   - **リストアイテムのスタイル**: 個々のアセットのフォーマットに使用されるスタイル。 このオプションは、選択したリストのスタイルによっては表示されない場合があります。
   - **最大項目数**: フラグメントが一度に表示できるアセットの最大数
 
-![構成したコレクションを含むコレクション表示フラグメントをクリックすると、より多くの構成オプションが表示されます。](./displaying-collections/images/04.png)
+![構成したコレクションを含むコレクション表示フラグメントをクリックすると、より多くの構成オプションが表示されます。](./additional-content-display-options/displaying-collections/images/04.png)
 
 コレクション内のアセットを構成どおりに表示する準備ができたら、ページを公開します。
 
@@ -97,7 +97,7 @@
 
 3.  *[フラグメントとウィジェット]* サイドバーパネルから、コレクション項目の表示に使用するコンポーネントをドラッグアンドドロップします。
 
-    ![フラグメントまたはウィジェットをコレクション表示に追加し、表示プロパティを構成します。](./displaying-collections/images/06.gif)
+    ![フラグメントまたはウィジェットをコレクション表示に追加し、表示プロパティを構成します。](./additional-content-display-options/displaying-collections/images/06.gif)
 
     ``` note::
         コレクション表示に複数の項目が含まれている場合、フラグメントまたはウィジェットをそれらのいずれかにドラッグできます。 コレクション内の残りの項目は、自動的に同じレイアウト設定を使用します。
@@ -109,11 +109,11 @@
 
 6.  *[マッピング]* 列で、コレクションにマッピングする*フィールド*を選択します。
 
-    ![フラグメントとウィジェットをコレクション項目にマップします](./displaying-collections/images/07.gif)
+    ![フラグメントとウィジェットをコレクション項目にマップします](./additional-content-display-options/displaying-collections/images/07.gif)
 
 7.  必要に応じてフラグメントまたはウィジェットを追加し、コンテンツをコンテンツフィールドにマッピングします。
 
-    ![フラグメントとウィジェットをコレクション表示に追加し、コンテンツフィールドをマッピングします。](./displaying-collections/images/08.gif)
+    ![フラグメントとウィジェットをコレクション表示に追加し、コンテンツフィールドをマッピングします。](./additional-content-display-options/displaying-collections/images/08.gif)
 
 8.  *[Publish]* をクリックします。
 
@@ -124,7 +124,7 @@
 1.  *[サイト管理]* → *[サイトビルダー]* → *[コレクション]* に移動します。
 2.  *[コレクション]* タブで、確認するコレクションの横にあるアクション（![Actions Menu](../../images/icon-actions.png)）メニューをクリックし、*[利用数を表示]* を選択します。
 
-![[利用数を表示] を選択して、サイト全体でコレクションがどのように使用されているかを把握します](./displaying-collections/images/05.png)
+![[利用数を表示] を選択して、サイト全体でコレクションがどのように使用されているかを把握します](./additional-content-display-options/displaying-collections/images/05.png)
 
 ## Liferay DXP 7.2
 
@@ -144,7 +144,7 @@
 
 4.  *[データ選択方法]* の下で、*[コンテンツセット]* を選択します。
 
-    ![アセットパブリッシャーには、コンテンツのソースを選択するためのオプションがいくつかあります。](./displaying-collections/images/20.png)
+    ![アセットパブリッシャーには、コンテンツのソースを選択するためのオプションがいくつかあります。](./additional-content-display-options/displaying-collections/images/20.png)
 
 5.  *[コンテンツセットの選択]* を開き、*[選択]* をクリックします。
 
@@ -164,13 +164,13 @@
 
 4.  *[Trending]* コンテンツセットをクリックします。
 
-    ![使用するコンテンツセットを選択します。](./displaying-collections/images/21.png)
+    ![使用するコンテンツセットを選択します。](./additional-content-display-options/displaying-collections/images/21.png)
 
 5.  *[保存]* をクリックします。
 
 ここでも、さまざまな表示設定を管理できますが、表示される項目とその順序はコンテンツセットの基準によって決まります。
 
-![結果は、標準のアセットパブリッシャーの出力として表示されます。 ここでは、ウィジェットテンプレートを作成して、よりスタイリッシュで魅力的なものにすることができます。](./displaying-collections/images/22.png)
+![結果は、標準のアセットパブリッシャーの出力として表示されます。 ここでは、ウィジェットテンプレートを作成して、よりスタイリッシュで魅力的なものにすることができます。](./additional-content-display-options/displaying-collections/images/22.png)
 
 #### 既存のコンテンツセットへの項目の追加
 
@@ -180,7 +180,7 @@
 
 2.  何もしなくても、画像が*Trending*コンテンツリストの先頭に追加されます。
 
-    ![結果は、表示されるコンテンツリストに動的に追加されます。](./displaying-collections/images/23.png)
+    ![結果は、表示されるコンテンツリストに動的に追加されます。](./additional-content-display-options/displaying-collections/images/23.png)
 
 3.  手動セットに追加するには、*[サイト管理]* → *[Content & Data]* → *[サイトビルダー]* に戻ります。
 

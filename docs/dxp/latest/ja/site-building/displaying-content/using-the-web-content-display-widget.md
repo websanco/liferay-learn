@@ -8,7 +8,7 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
 1.  編集 ( ![Edit icon](../../images/icon-edit.png) ) モード (コンテンツ ページを使用している場合) に入り、 [ページにWebコンテンツの表示ウィジェットを追加します](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md)。
 
-    ![Webコンテンツの表示アプリをページに追加して、新しいWebコンテンツ記事の表示を開始します。](./using-the-web-content-display-widget/images/01.png)
+    ![Webコンテンツの表示アプリをページに追加して、新しいWebコンテンツ記事の表示を開始します。](./additional-content-display-options/using-the-web-content-display-widget/images/01.png)
 
 2.  [Webコンテンツの表示ウィジェットの構成メニューを開きます](TODO:adding-widgets#configuration-menu)。
 
@@ -39,7 +39,7 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
       - *コメント*
       - *コメントの評価*
 
-![Webコンテンツの公開は簡単です。 最低限、公開したいコンテンツを選択すればよいだけです。 また、多くのオプション機能を有効にして、ユーザーがコンテンツを操作できるようにすることもできます。](./using-the-web-content-display-widget/images/02.png)
+![Webコンテンツの公開は簡単です。 最低限、公開したいコンテンツを選択すればよいだけです。 また、多くのオプション機能を有効にして、ユーザーがコンテンツを操作できるようにすることもできます。](./additional-content-display-options/using-the-web-content-display-widget/images/02.png)
 
 ### ゲストのコメントを有効にする
 
@@ -69,7 +69,7 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
 Liferay Portalのインスタンスで[OpenOffice/LibreOfficeの統合を有効](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)にしている場合は、コンテンツのドキュメントの変換を有効にできます。 その後、ユーザーは選択した形式でコンテンツをダウンロードできます。 *ユーザーツール*のリストで、Webコンテンツ表示の設定ページに希望する変換オプションを有効にします。
 
-![アセットの変換オプションが一覧表示されます。](./using-the-web-content-display-widget/images/03.png)
+![アセットの変換オプションが一覧表示されます。](./additional-content-display-options/using-the-web-content-display-widget/images/03.png)
 
 ## 関連情報
 

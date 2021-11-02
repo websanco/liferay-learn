@@ -8,7 +8,7 @@
 
 2.  右上隅のプロフィール画像をクリックし、*[Purchased Apps]* を選択します。 [Purchased Apps]ページが表示され、購入したアプリのアイコンがプロジェクト別に整理されて表示されます。
 
-    ![購入したアプリは、マーケットプレイスとliferay.comアカウントのホームページで管理できます。](./renewing-apps/images/01.png)
+    ![購入したアプリは、マーケットプレイスとliferay.comアカウントのホームページで管理できます。](./managing-apps/renewing-apps/images/01.png)
 
 3.  アプリのアイコンをクリックします。 アプリの詳細が表示されます。
 

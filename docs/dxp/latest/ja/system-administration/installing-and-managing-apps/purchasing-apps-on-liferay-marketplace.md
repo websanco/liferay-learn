@@ -2,7 +2,7 @@
 
 Liferay マーケットプレイスは、アプリを共有、閲覧、ダウンロードするためのハブです。 マーケットプレイスはLiferayのエコシステム全体を活用して、ユーザーフレンドリーなワンストップショップでアプリをリリースおよび共有します。
 
-![Liferay マーケットプレイスのホームページでは、新しいアプリが強調表示され、アプリがカテゴリ別に一覧表示され、検索が行われます。](./purchasing-apps-on-liferay-marketplace/images/01.png)
+![Liferay マーケットプレイスのホームページでは、新しいアプリが強調表示され、アプリがカテゴリ別に一覧表示され、検索が行われます。](./getting-started/using-marketplace/images/01.png)
 
 マーケットプレイスプラグインを使用すると、コントロールパネルでマーケットプレイスを利用できます。 プラグインはDXP Tomcatバンドルに組み込まれていますが、アプリケーションサーバーのDXPインストールにもインストールできます。 インストールにマーケットプレイスをインストールする必要がある場合は、 [Installing the Marketplace Plugin](./installing-the-marketplace-plugin.md)を参照してください。
 
@@ -44,7 +44,7 @@ DXPからマーケットプレイスに入る方法は次のとおりです。
 
 各セクションの*[See All]* リンクには、そのセクションのすべてのアプリが一覧表示されます。
 
-![[Communication]アプリページなどの各アプリカテゴリページには、そのカテゴリに公開されたアプリが一覧表示されます。](./purchasing-apps-on-liferay-marketplace/images/02.png)
+![[Communication]アプリページなどの各アプリカテゴリページには、そのカテゴリに公開されたアプリが一覧表示されます。](./getting-started/using-marketplace/images/02.png)
 
 ページの上部で、次の方法でマーケットプレイスを検索できます。
 
@@ -55,11 +55,11 @@ DXPからマーケットプレイスに入る方法は次のとおりです。
 
 ページの下部にある*[Weekly Stats]* には、最新のアプリと最新のアップデート済みのアプリが一覧表示され、アプリのダウンロードとビューの傾向グラフが表示されます。
 
-![[Weekly stats]には、新しいアプリ、アプリのアップデート、マーケットプレイスのアクティビティの傾向が一覧表示されます。](./purchasing-apps-on-liferay-marketplace/images/03.png)
+![[Weekly stats]には、新しいアプリ、アプリのアップデート、マーケットプレイスのアクティビティの傾向が一覧表示されます。](./getting-started/using-marketplace/images/03.png)
 
 アプリをクリックして詳細を表示します。
 
-![アプリをクリックすると、スクリーンショットとアプリの詳細が表示されます。](./purchasing-apps-on-liferay-marketplace/images/04.png)
+![アプリをクリックすると、スクリーンショットとアプリの詳細が表示されます。](./getting-started/using-marketplace/images/04.png)
 
 ## アプリの購入
 

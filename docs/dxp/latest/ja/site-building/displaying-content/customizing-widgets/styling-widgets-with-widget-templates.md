@@ -8,11 +8,11 @@
 
 1.  製品メニューから、 *Site Builder* → *Widget Templates*をクリックします。
 
-    ![ウィジェットテンプレートページ。](./styling-widgets-with-widget-templates/images/01.png)
+    ![ウィジェットテンプレートページ。](../additional-content-display-options/styling-widgets-with-widget-templates/images/01.png)
 
 2.  *追加* （![Add icon](../../../images/icon-add.png)）ボタンをクリックし、ウィジェットテンプレートを作成するウィジェットを選択します（例： *アセットパブリッシャー*）。
 
-    ![ウィジェットテンプレート作成ページ。](./styling-widgets-with-widget-templates/images/02.png)
+    ![ウィジェットテンプレート作成ページ。](../additional-content-display-options/styling-widgets-with-widget-templates/images/02.png)
 
 3.  ウィジェットテンプレートの名前を追加します。
 
@@ -34,7 +34,7 @@
 
 2.  [テンプレートの表示]ドロップダウンメニューを見つけ、目的のテンプレートの名前を選択します。
 
-    ![Asset Publisher構成の[表示テンプレート]ドロップダウンボックス。](./styling-widgets-with-widget-templates/images/03.png)
+    ![Asset Publisher構成の[表示テンプレート]ドロップダウンボックス。](../additional-content-display-options/styling-widgets-with-widget-templates/images/03.png)
 
     ``` note::
        This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.

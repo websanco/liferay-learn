@@ -17,7 +17,7 @@
 
     Webブラウザの`http://localhost:8080`にセットアップウィザードが表示されます。
     
-    ![[起動が完了すると、DXPはWebブラウザを起動し、[Basic Configuration]ページを表示します。]（./running-liferay-dxp-for-the-first-time/images/01.png）
+    ![[起動が完了すると、DXPはWebブラウザを起動し、[Basic Configuration]ページを表示します。]（./running-liferay-for-the-first-time/images/01.png）
 
 2.  ポータルの*[Name]*、*[Default Language]* および*[Time Zone]* を設定します。
 
@@ -29,7 +29,7 @@
        本番環境グレードのLiferay DXPインスタンスではHSQLを使用しないでください。
     ```
 
-    ![セットアップウィザードのデータベースフォームでは、DXP用に作成したデータベースを指定できます。](./running-liferay-dxp-for-the-first-time/images/02.png)
+    ![セットアップウィザードのデータベースフォームでは、DXP用に作成したデータベースを指定できます。](./running-liferay-for-the-first-time/images/02.png)
 
 5.  データベースを指定します。
 
@@ -68,7 +68,7 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 DXPは、セットアップウィザードで指定したデータベースとポータルの設定値を使用して初期化します。 DXPのホームページが`http://localhost:8080`に表示されます。
 
-![DXPを構成してサーバーを再起動すると、DXPのホームページが表示され、サインインできるようになります\!](./running-liferay-dxp-for-the-first-time/images/03.png)
+![DXPを構成してサーバーを再起動すると、DXPのホームページが表示され、サインインできるようになります\!](./running-liferay-for-the-first-time/images/03.png)
 
 オンプレミスのLiferay DXPインスタンスを起動しました。
 

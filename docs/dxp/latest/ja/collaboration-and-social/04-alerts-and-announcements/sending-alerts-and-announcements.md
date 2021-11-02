@@ -4,7 +4,7 @@
 
 警告ウィジェットは、優先度の高い情報（たとえば、計画されたダウンタイム警告、セキュリティ警告など）を表示するように設計されています。 各警告には、赤い*[重要]* タグのラベルが付いています。
 
-![赤い重要タグが付いた警告の例。](./sending-alerts-and-announcements/images/01.png)
+![赤い重要タグが付いた警告の例。](../alerts-and-announcements/sending-alerts-and-announcements/images/01.png)
 
 お知らせウィジェットには、送信したい他のすべての情報を表示できます。 各お知らせには赤いタグがありません。 重要な警告と平凡なお知らせを分けるために、警告ウィジェットとお知らせウィジェットを別のページに配置することができます。 ただし、どちらのウィジェットを使用しても、必要な情報を表示できます。
 
@@ -20,11 +20,11 @@
 
 1.  ページの上部にある*追加*アイコン（![Add icon](../../images/icon-add-app.png)）をクリックして、ウィジェットを追加します。 [ニュース]セクションの下にある警告ウィジェットまたはお知らせウィジェットを見つけて、ページにドラッグします。
 
-    ![警告ウィジェットまたはお知らせウィジェットを見つけて、ページに追加します。](./sending-alerts-and-announcements/images/02.png)
+    ![警告ウィジェットまたはお知らせウィジェットを見つけて、ページに追加します。](../alerts-and-announcements/sending-alerts-and-announcements/images/02.png)
 
 2.  警告やお知らせを作成するには、*[警告を追加する]* または*[お知らせの追加]* をクリックします。 新しいウィンドウが開きます。
 
-    ![警告またはお知らせを作成するための新しいウィンドウが開きます。](./sending-alerts-and-announcements/images/03.png)
+    ![警告またはお知らせを作成するための新しいウィンドウが開きます。](../alerts-and-announcements/sending-alerts-and-announcements/images/03.png)
 
 3.  [タイトル]フィールドを使用して、警告またはお知らせにタイトルを付けます。 [コンテンツ]フィールドにテキストを追加します。
 
@@ -52,7 +52,7 @@
 
 2.  *[Preferences]* タブをクリックして、 *[通知設定]* オプションを見つけます。
 
-    ![[Preferences]タブをクリックして、設定を確認します。](./sending-alerts-and-announcements/images/06.png)
+    ![[Preferences]タブをクリックして、設定を確認します。](../alerts-and-announcements/sending-alerts-and-announcements/images/06.png)
 
 3.  警告とお知らせは、ウィジェットが構成されているページに常に表示されます。 ユーザーは、警告やお知らせを電子メールで受信することもできます。 [一般]、[ニュース]、または[テスト]タイプから選択します。
 
@@ -74,7 +74,7 @@
 
     コントロールパネルで、*[通常権限]* をクリックし、*[通常のお知らせを追加する]* を選択します。 *[保存]* をクリックします。
 
-    ![これらのオプションの[権限の定義]タブをクリックします。](./sending-alerts-and-announcements/images/07.png)
+    ![これらのオプションの[権限の定義]タブをクリックします。](../alerts-and-announcements/sending-alerts-and-announcements/images/07.png)
 
     [権限の定義]タブに戻ります。 *[サイトとアセットライブラリの管理]* → *[アプリケーション]* → *[お知らせ]* に移動します。 すべてのリソース権限を選択し、*[保存]* をクリックします。
 

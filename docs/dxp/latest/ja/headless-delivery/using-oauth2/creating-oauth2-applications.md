@@ -2,13 +2,13 @@
 
 OAuth 2.0を使用して承認できるアプリケーションがある場合、Liferayがそれを認識できるように、そのアプリケーションを登録する必要があります。 これを行うには、*[Control Panel]* → *[Configuration]* → *[OAuth2 Administration]* にアクセスします。
 
-1.  *追加*（![add](../../../../images/icon-add.png)）ボタンをクリックします。
+1.  *追加*（![add](../../images/icon-add.png)）ボタンをクリックします。
 
 2.  フォームに記入します（[以下の説明](#oauth2-administration-reference)）。
 
 3.  *[保存]* をクリックしてアプリケーションを保存します。
 
-    ![図1：アプリケーションを追加すると登録され、ユーザーが自分のデータへのアクセスを承認できるようになります。](./introduction-to-using-oauth2/images/01.png)
+    ![図1：アプリケーションを追加すると登録され、ユーザーが自分のデータへのアクセスを承認できるようになります。](./creating-oauth2-applications/images/01.png)
 
 アプリケーションのOAuth2認証をLiferayポータルに追加する方法をマスターしました。 次に、アプリケーションがアクセスできるユーザーデータのスコープを定義する必要があります。
 
