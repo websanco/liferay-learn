@@ -16,42 +16,40 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
-		"commerce.order.status.key=" + M4V7ProcessingCommerceOrderStatus.KEY,
-		"commerce.order.status.priority:Integer=" + M4V7ProcessingCommerceOrderStatus.PRIORITY,
+		"commerce.order.status.key=" + CommerceOrderConstants.ORDER_STATUS_PROCESSING,
+		"commerce.order.status.priority:Integer=50",
 		"service.ranking:Integer=101"
 	},
 	service = CommerceOrderStatus.class
 )
 public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 
-	public static final int KEY =
-		CommerceOrderConstants.ORDER_STATUS_PROCESSING;
-
-	public static final int PRIORITY = 50;
-
 	@Override
 	public CommerceOrder doTransition(CommerceOrder commerceOrder, long userId)
 		throws PortalException {
 
-		commerceOrder.setOrderStatus(KEY);
+		commerceOrder.setOrderStatus(
+			CommerceOrderConstants.ORDER_STATUS_PROCESSING);
 
 		return _commerceOrderService.updateCommerceOrder(commerceOrder);
 	}
 
 	@Override
 	public int getKey() {
-		return KEY;
+		return CommerceOrderConstants.ORDER_STATUS_PROCESSING;
 	}
 
 	@Override
 	public String getLabel(Locale locale) {
 		return LanguageUtil.get(
-			locale, CommerceOrderConstants.getOrderStatusLabel(KEY));
+			locale,
+			CommerceOrderConstants.getOrderStatusLabel(
+				CommerceOrderConstants.ORDER_STATUS_PROCESSING));
 	}
 
 	@Override
 	public int getPriority() {
-		return PRIORITY;
+		return 50;
 	}
 
 	@Override

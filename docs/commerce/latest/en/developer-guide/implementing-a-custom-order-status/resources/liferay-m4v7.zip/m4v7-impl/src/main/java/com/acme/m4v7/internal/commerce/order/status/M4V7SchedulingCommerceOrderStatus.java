@@ -24,53 +24,25 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
-		"commerce.order.status.key=" + M4V7SchedulingCommerceOrderStatus.KEY,
-		"commerce.order.status.priority:Integer=" + M4V7SchedulingCommerceOrderStatus.PRIORITY
+		"commerce.order.status.key=99",
+		"commerce.order.status.priority:Integer=40"
 	},
 	service = CommerceOrderStatus.class
 )
 public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 
-	public static final int KEY = 99;
-
-	public static final int PRIORITY = 40;
-
-	public static List<String> asList(Object object) {
-		if (object instanceof String) {
-			return new ArrayList<>(Collections.singletonList((String)object));
-		}
-		else if (object instanceof String[]) {
-			return new ArrayList<>(Arrays.asList((String[])object));
-		}
-		else if (object instanceof Collection) {
-			Collection<?> collection = (Collection<?>)object;
-
-			if (!collection.isEmpty()) {
-				Iterator<?> iterator = collection.iterator();
-
-				Object element = iterator.next();
-
-				if (element instanceof String) {
-					return new ArrayList<>((Collection<String>)object);
-				}
-			}
-		}
-
-		return new ArrayList<>();
-	}
-
 	@Override
 	public CommerceOrder doTransition(CommerceOrder commerceOrder, long userId)
 		throws PortalException {
 
-		commerceOrder.setOrderStatus(KEY);
+		commerceOrder.setOrderStatus(99);
 
 		return _commerceOrderService.updateCommerceOrder(commerceOrder);
 	}
 
 	@Override
 	public int getKey() {
-		return KEY;
+		return 99;
 	}
 
 	@Override
@@ -80,7 +52,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 
 	@Override
 	public int getPriority() {
-		return PRIORITY;
+		return 40;
 	}
 
 	@Override
@@ -90,7 +62,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		Object attributeValueObject = GetterUtil.getObject(
 			expandoBridge.getAttribute("Scheduling"));
 
-		List<String> attributeValueList = asList(attributeValueObject);
+		List<String> attributeValueList = _asList(attributeValueObject);
 
 		String schedulingStatus =
 			attributeValueList.isEmpty() ? "Pending" :
@@ -114,6 +86,30 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		}
 
 		return false;
+	}
+
+	private List<String> _asList(Object object) {
+		if (object instanceof String) {
+			return new ArrayList<>(Collections.singletonList((String)object));
+		}
+		else if (object instanceof String[]) {
+			return new ArrayList<>(Arrays.asList((String[])object));
+		}
+		else if (object instanceof Collection) {
+			Collection<?> collection = (Collection<?>)object;
+
+			if (!collection.isEmpty()) {
+				Iterator<?> iterator = collection.iterator();
+
+				Object element = iterator.next();
+
+				if (element instanceof String) {
+					return new ArrayList<>((Collection<String>)object);
+				}
+			}
+		}
+
+		return new ArrayList<>();
 	}
 
 	@Reference(
