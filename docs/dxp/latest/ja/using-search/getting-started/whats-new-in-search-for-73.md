@@ -24,7 +24,7 @@ DXP 7.3にバンドルされているElasticsearch 7コネクタは、[Elastic�
 
 *Liferay Enterprise Search Security*（以前の*Liferay Connector to X-Pack Security*）モジュールの機能は、*Liferay Connector to Elasticsearch 7*に含まれています。 CE/DXP 7.3のすべてのお客様は、[Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) サブスクリプションなしでElasticsearchクラスターに安全に接続できます。
 
-[アップグレード](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md)ガイドには、暗号化設定をElasticsearch 7コネクタに移動するための情報が含まれています。
+[アップグレード](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.rst)ガイドには、暗号化設定をElasticsearch 7コネクタに移動するための情報が含まれています。
 
 ### 複数のElasticsearch接続
 
@@ -166,8 +166,8 @@ Elasticsearchのバージョンに依存しない`IndexSettingsContributor`が�
 
 オープンソース（OSS）版のElasticsearch 7.9.0（ライセンスはApache 2.0）がLiferay CE/DXP 7.3のTomcatバンドルにバンドルされ、*サイドカー*のJVMで同時に起動します。 このサイドカーのインストールは、*開発モード*と呼ばれ、以前の*組み込み*モードに置き換わるものです（どちらも本番環境のインストールではサポートされていません）。 サイドカーのシステム設定には、Elasticsearch 7設定に専用のプロパティがあります。 デフォルトでは、HTTPポート9201で実行されます。 詳細については、[Using the Sidecar or Embedded Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)を参照してください。
 
-Elasticsearch 7.9.0 OSSバージョンは、最初の起動時に自動ダウンロードされます。 リソースをダウンロードするための外部サイトにデプロイメントが到達できない場合は、[サイドカーサーバー](../installing-and-upgrading-a-search-engine/elasticsearch/installing-the-elasticsearch-sidecar.md)の手動インストールを参照してください。
+Elasticsearch 7.9.0 OSSバージョンは、最初の起動時に自動ダウンロードされます。 リソースをダウンロードするための外部サイトにデプロイメントが到達できない場合は、[サイドカーサーバー](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)の手動インストールを参照してください。
 
 ## DXP 7.3へのアップグレード
 
-以前のDXPバージョンから7.3にアップグレードするには、[RESTクライアント](#the-elasticsearch-7-connector-is-based-on-the-rest-client)に切り替えるため、いくつかの特別な手順が必要です。 アップグレードに役立つ重要な情報については、[アップグレードのドキュメンテーション](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md)を参照してください。
+以前のDXPバージョンから7.3にアップグレードするには、[RESTクライアント](#the-elasticsearch-7-connector-is-based-on-the-rest-client)に切り替えるため、いくつかの特別な手順が必要です。 アップグレードに役立つ重要な情報については、[アップグレードのドキュメンテーション](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.rst)を参照してください。

@@ -75,4 +75,4 @@
 
 ## 追加情報
 
-  - [コンテンツのタグ付け](../tagging-content.md)
+  - [コンテンツのタグ付け](../tagging-content-and-managing-tags.md)

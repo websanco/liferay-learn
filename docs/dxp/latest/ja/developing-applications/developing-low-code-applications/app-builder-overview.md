@@ -6,7 +6,7 @@
 
 ![このアプリビルダーオブジェクトには、2つの個別のアプリケーションがデプロイされています。](./app-builder-overview/images/01.png)
 
-[Liferayフォーム](../../process-automation/forms/user-guide/introduction-to-forms.md)アプリケーションに同様のフォーム構築機能が含まれているのに、アプリビルダーを使用する理由は何でしょうか。 それらの違いの要約を次に示します。
+[Liferayフォーム](../../process-automation/forms/introduction-to-forms.md)アプリケーションに同様のフォーム構築機能が含まれているのに、アプリビルダーを使用する理由は何でしょうか。 それらの違いの要約を次に示します。
 
 | 機能                                | Liferayフォーム | アプリビルダー |
 | --------------------------------- |:-----------:|:-------:|
@@ -23,7 +23,7 @@
 
 ## アプリを作成する
 
-アプリビルダーで作成されたアプリは、アプリビルダーのUIで定義されている3つのコンポーネント（オブジェクト、フォームビュー、テーブルビュー）で構成されています。 アプリケーションのビルドに直接進むには、次の記事[Creating an Application with App Builder](./creating-an-application-with-app-builder.md)を参照してください 。
+アプリビルダーで作成されたアプリは、アプリビルダーのUIで定義されている3つのコンポーネント（オブジェクト、フォームビュー、テーブルビュー）で構成されています。 アプリケーションのビルドに直接進むには、次の記事[Creating an Application with App Builder](./creating-a-standard-application.md)を参照してください 。
 
 ### アプリビルダーオブジェクト
 
@@ -76,4 +76,4 @@
 
 ## 次のステップ
 
-  - [Creating an Application with App Builder](./creating-an-application-with-app-builder.md)
+  - [Creating an Application with App Builder](./creating-a-standard-application.md)

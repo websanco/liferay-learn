@@ -82,4 +82,4 @@ Liferay DXPのページに配置された各ウィジェットインスタンス
 
   - [ロール権限の定義](./defining-role-permissions.md)
 
-  - [ロールへのユーザーの割り当て](./assigning-user-to-roles.md)
+  - [ロールへのユーザーの割り当て](./assigning-users-to-roles.md)

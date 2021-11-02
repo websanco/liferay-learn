@@ -47,7 +47,7 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
     
     ![オプションで、動的コレクションでフィルターを使用して、コンテンツリコメンデーションをフィルタリングできます。](./configuring-content-recommendations/images/04.png)
 
-  - コンテンツリコメンデーションを特定のユーザーグループ（たとえば、「ドイツのWebサイト訪問者」）にターゲティングする場合は、[パーソナライズされたバリエーションを使用して](./experience-personalization/personalizing-collections.md)動的コレクションをセグメントと組み合わせることができます。
+  - コンテンツリコメンデーションを特定のユーザーグループ（たとえば、「ドイツのWebサイト訪問者」）にターゲティングする場合は、[パーソナライズされたバリエーションを使用して](./personalizing-collections.md)動的コレクションをセグメントと組み合わせることができます。
     
     ![特定のユーザーセグメント向けにコンテンツリコメンデーションのコレクションをカスタマイズする](./configuring-content-recommendations/images/05.png)
 

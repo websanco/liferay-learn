@@ -48,7 +48,7 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
-これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 最も簡単な方法は、URLで資格情報データを渡す基本認証を使用することです。 これは安全ではないため、この方法は開発時にのみ使用すべきです。 本番環境では、アプリケーションは[OAuth2](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md)を介してユーザーを承認する必要があります。
+これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 最も簡単な方法は、URLで資格情報データを渡す基本認証を使用することです。 これは安全ではないため、この方法は開発時にのみ使用すべきです。 本番環境では、アプリケーションは[OAuth2](../using-oauth2/introduction-to-using-oauth2.md)を介してユーザーを承認する必要があります。
 
 以下の例では[ curl](https://curl.haxx.se)を使用しています。
 
@@ -62,7 +62,7 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/"
 
 ### OAuth2を使用してサービスを呼び出す
 
-本番環境では、[OAuth2アプリケーション](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/creating-oauth2-applications.md)を作成し、OAuth2プロセスを使用して認証トークンを取得します。 トークンを取得したら、それをHTTPヘッダーに指定します。
+本番環境では、[OAuth2アプリケーション](../using-oauth2/creating-oauth2-applications.md)を作成し、OAuth2プロセスを使用して認証トークンを取得します。 トークンを取得したら、それをHTTPヘッダーに指定します。
 
 ``` bash
 curl -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings

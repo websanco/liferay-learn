@@ -96,4 +96,4 @@ Liferayのアセットとリソースの多くは、カスタムフィールド�
 
 ## 追加情報
 
-  - [Adding Custom Fields for Users](../../users-and-permissions/devops/adding-custom-fields-to-users.md)
+  - [Adding Custom Fields for Users](../../users-and-permissions/users/adding-custom-fields-to-users.md)

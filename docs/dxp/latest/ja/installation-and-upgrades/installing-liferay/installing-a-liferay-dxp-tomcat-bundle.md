@@ -35,4 +35,4 @@ Liferay DXPには**Java JDK 8または11**が必要です。 JDKをインスト�
 
 ## 次のステップ
 
-  - [Configuring a Database](./configuring-a-database.md)
+  - [Configuring a Database](../installing-liferay/configuring-a-database.md)

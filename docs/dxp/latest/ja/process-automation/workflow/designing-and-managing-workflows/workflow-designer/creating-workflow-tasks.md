@@ -2,7 +2,7 @@
 
 > サブスクライバー
 
-デフォルトの[唯一の承認者の定義](./workflow-designer-overview/resources/single-approver-definition.xml)では、ワークフローのタスクを簡単に紹介しています。 タスクノードはレビューとアップデートの2つしかありません。 コンテンツ制作者がアセットをレビューのために提出すると、ワークフローはレビューノードに入ります。 レビューでは、アセットを承認または拒否できます。 拒否された場合、プロセスはアップデートタスクに移行します。 その後、送信者はアセットを修正し、レビューのために再送信することができます。
+デフォルトの[唯一の承認者の定義](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)では、ワークフローのタスクを簡単に紹介しています。 タスクノードはレビューとアップデートの2つしかありません。 コンテンツ制作者がアセットをレビューのために提出すると、ワークフローはレビューノードに入ります。 レビューでは、アセットを承認または拒否できます。 拒否された場合、プロセスはアップデートタスクに移行します。 その後、送信者はアセットを修正し、レビューのために再送信することができます。
 
 ![唯一の承認者の定義には、2つのタスクノードがあります。](./creating-workflow-tasks/images/01.png)
 

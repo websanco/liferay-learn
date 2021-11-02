@@ -17,7 +17,7 @@
 
 ## コマンドの使用
 
-[Gogoシェルポートレット](../../../liferay-internals/fundamentals/using-the-gogo-shell/using-the-gogo-shell.md)を使用して、モジュールのアップグレードおよび検証コマンドを実行します。
+[Gogoシェルポートレット](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)を使用して、モジュールのアップグレードおよび検証コマンドを実行します。
 
 コマンドは次のとおりです。
 

@@ -2,7 +2,7 @@
 
 > 変更通知を受け取り（購読）が必要
 
-Liferayにアップロードされたファイルを自動的にスキャンしてウイルスを検出できます。 ウイルス対策スキャナーを有効にすると、[ドキュメントとメディア](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md)、[掲示板](../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md)などのLiferayアプリケーションへのアップロード時にファイルがチェックされます。 ウイルスが見つかった場合は、報告され、ユーザーが拒否できます。
+Liferayにアップロードされたファイルを自動的にスキャンしてウイルスを検出できます。 ウイルス対策スキャナーを有効にすると、[ドキュメントとメディア](../../content-authoring-and-management/documents-and-media/introduction-to-documents-and-media.md)、[掲示板](../../collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards.md)などのLiferayアプリケーションへのアップロード時にファイルがチェックされます。 ウイルスが見つかった場合は、報告され、ユーザーが拒否できます。
 
 ![スキャナーは、ドキュメントとメディアやその他のLiferayアプリケーションへのアップロード時にウイルスに感染したファイルを検出します。](./enabling-antivirus-scanning-for-uploaded-files/images/01.png)
 
@@ -24,7 +24,7 @@ Clamdウイルス対策スキャナーを有効にする方法は次のとおり
        Load your ClamAV database before starting Clamd.
     ```
 
-2.  次の[ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md)または[Docker環境変数](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)を設定して、[ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md)（ドキュメントライブラリ）のウイルス対策を有効にします。
+2.  次の[ポータルプロパティ](configuring-file-storage.md)または[Docker環境変数](../../installation-and-upgrades/reference/portal-properties.md)を設定して、[ファイルストア](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)（ドキュメントライブラリ）のウイルス対策を有効にします。
 
     ポータルプロパティ：
 

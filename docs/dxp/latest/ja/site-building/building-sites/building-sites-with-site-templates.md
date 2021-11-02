@@ -26,7 +26,7 @@
 
 4.  *[保存]* をクリックします。
 
-5.  [サイト設定](../06-site-settings/README.md)を構成します。
+5.  [サイト設定](../site-settings/README.rst)を構成します。
 
 6.  フォームの下の*[Pages]* パネルを開きます。
 

@@ -38,6 +38,6 @@ LiferayポータルCEの修正は、新しいポータルCE GAリリースとし
 
 7.  `upgrade：check` [Gogo Shellコマンド](https://help.liferay.com/hc/en-us/articles/360029070351-Using-the-Felix-Gogo-Shell) を実行して、データがアップグレードされていないすべてのモジュールをリストします。
 
-8.  これらのモジュールのデータをアップグレードするには、 [Gogo Shellコマンド](../../upgrading-liferay-dxp/upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) を使用します。
+8.  これらのモジュールのデータをアップグレードするには、 [Gogo Shellコマンド](../../upgrading-liferay/upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md) を使用します。
 
 Portal CEインストールを新しいGAリリースに更新しました\！

@@ -30,7 +30,7 @@
 
 ## ロールを削除する
 
-ロールを削除するには、そのアクションメニュー（![Actions](../../images/icon-actions.png)）をクリックし、[ *削除*]を選択します。 あなたが削除を確認した後、ロールは、任意のと一緒に、すぐに削除された [ワークフロータスクの割り当て](../../process-automation/workflow/user-guide/reviewing-assets.md) ロールに関連します。
+ロールを削除するには、そのアクションメニュー（![Actions](../../images/icon-actions.png)）をクリックし、[ *削除*]を選択します。 あなたが削除を確認した後、ロールは、任意のと一緒に、すぐに削除された [ワークフロータスクの割り当て](../../process-automation/workflow/using-workflows/reviewing-assets.md) ロールに関連します。
 
 ![結果を受け入れる場合は、[OK]をクリックしてロールを削除します。](./creating-and-managing-roles/images/03.png)
 

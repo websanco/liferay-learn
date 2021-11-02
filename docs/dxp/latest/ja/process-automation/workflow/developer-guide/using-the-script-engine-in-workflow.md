@@ -1,6 +1,6 @@
 # ワークフローでのスクリプトエンジンの使用
 
-Liferayの[ワークフローエンジン](../user-guide/introduction-to-workflow.md)は、エンタープライズ環境でコンテンツを確認および承認するための堅牢なシステムです。 スクリプトを利用しなくても、強力で堅牢なワークフローソリューションです。 スクリプトを追加すると、次のレベルに進みます。 これらのスクリプトは[スクリプトコンソール](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)からは実行されませんが、[XMLワークフロー定義](https://help.liferay.com/hc/en-us/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)に埋め込まれ、ワークフローの実行中に実行されます。
+Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、エンタープライズ環境でコンテンツを確認および承認するための堅牢なシステムです。 スクリプトを利用しなくても、強力で堅牢なワークフローソリューションです。 スクリプトを追加すると、次のレベルに進みます。 これらのスクリプトは[スクリプトコンソール](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)からは実行されませんが、[XMLワークフロー定義](https://help.liferay.com/hc/en-us/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)に埋め込まれ、ワークフローの実行中に実行されます。
 
 ワークフロースクリプトのトピックは次のとおりです。
 
@@ -195,6 +195,6 @@ LiferayのKaleoワークフローエンジンとLiferayのスクリプトエン�
 
 ## 追加情報
 
-  - [Introduction to Workflow](../user-guide/introduction-to-workflow.md)
-  - [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console)
+  - [Introduction to Workflow](../introduction-to-workflow.md)
+  - [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)
   - [Script Examples](../../../system-administration/using-the-script-engine/script-examples.md)

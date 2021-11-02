@@ -25,10 +25,3 @@
     ![コントロールパネルで組織からユーザーを削除する](./adding-users-to-organizations/images/02.png)
 
 2.  [保存]をクリックします。
-
-## 追加情報
-
-  - [アカウントへの組織の追加](../account-management/adding-organizations-to-accounts.md)
-  - [アカウントのイントロダクション](../account-management/introduction-to-accounts.md)
-  - [Account Roles](../account-management/account-roles.md)
-  - [コマースロールの権限リファレンス](../account-management/commerce-roles-permissions-reference.md)

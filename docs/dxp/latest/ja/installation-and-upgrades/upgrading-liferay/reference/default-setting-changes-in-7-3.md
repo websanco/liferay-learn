@@ -2,7 +2,7 @@
 
 Liferay DXPのほとんどの新しいバージョンには、デフォルト設定の変更が含まれています。 古いバージョンのデフォルトを使用する場合は、変更を確認して、古いバージョンのデフォルトを維持するか、新しいバージョンのデフォルトを受け入れるかを決定する必要があります。
 
-最新の[ポータルプロパティリファレンス](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)では、プロパティの説明と例を示しています。 多くのプロパティは、[OSGi 設定ファイル](../../../system-administration/system-settings/using-configuration-files.md)で置き換えられ、[[システム設定]](../../../system-administration/system-settings/system-settings.md)のUIからアクセスできるようになりました。
+最新の[ポータルプロパティリファレンス](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)では、プロパティの説明と例を示しています。 多くのプロパティは、[OSGi 設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)で置き換えられ、[[システム設定]](../../../system-administration/system-settings/system-settings.md)のUIからアクセスできるようになりました。
 
 7.2から7.3への変更は次のとおりです。
 

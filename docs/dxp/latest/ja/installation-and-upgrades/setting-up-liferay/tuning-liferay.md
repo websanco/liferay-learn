@@ -99,7 +99,7 @@ CPUベースの負荷をテストする場合、またはCPU容量が心配な�
    スレッドプールサイズが大きい場合、接続プールを同じサイズにしてもパフォーマンスは向上しません。
 ```
 
-接続数がデータベース接続制限に違反している場合は、カウンターデータソースのプールサイズを縮小してください。 カウンターデータベースのトランザクション数は少なく、高速で、ネストされることはないため、カウンター接続プールは削減に適した候補となります。 カウンターデータソースの詳細は、[クラスタノードのデータベース構成](docs/dxp/7.x/en/installation-and-upgrades/setting-up-liferay-dxp/clustering-for-high-availability/database-configuration-for-cluster-nodes.md)を参照してください。
+接続数がデータベース接続制限に違反している場合は、カウンターデータソースのプールサイズを縮小してください。 カウンターデータベースのトランザクション数は少なく、高速で、ネストされることはないため、カウンター接続プールは削減に適した候補となります。 カウンターデータソースの詳細は、[クラスタノードのデータベース構成](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md)を参照してください。
 
 Liferayは、接続プールにC3PO、DBCP、HikariCP、またはTomcatを使用できます。 接続プールプロバイダーは、[`jdbc.default.liferay.pool.provider`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC)[ポータルプロパティ](../reference/portal-properties.md)を使用して設定します。 HikariCPがデフォルトです。
 

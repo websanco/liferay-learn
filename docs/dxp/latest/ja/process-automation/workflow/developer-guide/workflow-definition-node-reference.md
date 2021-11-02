@@ -47,7 +47,7 @@
 
 *条件ノード*は、条件が満たされているかどうかを判別し、満たされている場合は、ワークフローを適切なノードに移行します。 たとえば、提出されたドキュメントが契約書である場合、それは法務チームに送られる必要があります。それ以外の場合は、マーケティングチームに送られます。
 
-以下は、[Category Specific Approval](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml)ワークフロー定義の`determine-branch`条件を示しています。
+以下は、[Category Specific Approval](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)ワークフロー定義の`determine-branch`条件を示しています。
 
 ``` xml
 <condition>

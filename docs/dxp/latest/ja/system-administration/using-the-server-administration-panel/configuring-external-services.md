@@ -4,7 +4,7 @@
 
 ## ドキュメントのプレビューを有効にする
 
-Liferay DXPユーザーは、Documents and Mediaライブラリを介して、あらゆるタイプのファイルをアップロードおよび共有できます。これは、ファイルのカスタマイズ可能で権限が有効なオンラインリポジトリです（詳細については、 [公開と共有](./../../content-authoring-and-management/documents-and-media/publishing-and-sharing/README.md) を参照）。
+Liferay DXPユーザーは、Documents and Mediaライブラリを介して、あらゆるタイプのファイルをアップロードおよび共有できます。これは、ファイルのカスタマイズ可能で権限が有効なオンラインリポジトリです（詳細については、 [公開と共有](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) を参照）。
 
 [PDFBox](https://pdfbox.apache.org/) はデフォルトで、特定のファイルタイプ（主にPDF）のLiferay DXPの自動プレビューを生成します。 2つの追加ツールをインストールして、他のファイルタイプのプレビューを生成できます。
 
@@ -40,7 +40,7 @@ ImageMagickを設定して画像とPDFプレビューを生成する前に、そ
    
    2  [Ghostscript](https://www.ghostscript.com/)ダウンロードしてインストールし 。</p></li> </ol> 
   
-  インストールしたら、サーバー管理アプリの[外部サービス]タブまたは [ポータルプロパティ](./../../installation-and-upgrades/reference/portal-properties.md) ファイルでImageMagickを有効にします。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
+  インストールしたら、サーバー管理アプリの[外部サービス]タブまたは [ポータルプロパティ](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) ファイルでImageMagickを有効にします。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
   
   サーバー管理アプリの[外部サービス]タブからImageMagickを有効にするには、
   
@@ -56,7 +56,7 @@ ImageMagickを設定して画像とPDFプレビューを生成する前に、そ
 
 #### ポータルプロパティファイルでのImageMagickの構成
 
-あるいは、 [ポータルプロパティ](./../../installation-and-upgrades/reference/portal-properties.md) ファイルでImageMagickを有効にできます。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
+あるいは、 [ポータルプロパティ](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) ファイルでImageMagickを有効にできます。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
 
 
 
@@ -90,7 +90,7 @@ Xugglerをインストールして構成するには、
 
 ### ポータルプロパティファイルでXugglerを有効にする
 
-Xugglerは、 [Portal Properties](./../../installation-and-upgrades/reference/portal-properties.md) ファイルを使用して有効にすることもできます。 この行を `portal-ext.properties`に追加し`</p>
+Xugglerは、 [Portal Properties](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) ファイルを使用して有効にすることもできます。 この行を `portal-ext.properties`に追加し`</p>
 
 <pre><code class="properties">xuggler.enabled=true
 `</pre> 

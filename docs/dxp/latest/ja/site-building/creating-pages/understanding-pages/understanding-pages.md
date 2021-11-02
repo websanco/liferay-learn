@@ -30,8 +30,8 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 
 コンテンツページを使用すると、追加の強力な機能と利点にアクセスできます。
 
-  - [パーソナライズされたアダプティブサイトエクスペリエンス](../../personalizing-site-experience/README.md)
-  - [A/Bテスト](../../optimizing-sites/02-ab-testing/README.md)
+  - [パーソナライズされたアダプティブサイトエクスペリエンス](../../personalizing-site-experience/personalizing-site-experience.md)
+  - [A/Bテスト](../../optimizing-sites/ab-testing/ab-testing.md)
   - 親しみやすいコンテンツとサイト構築のエクスペリエンス
 
 コンテンツページの詳細については、[Content Page Overview](../building-and-managing-content-pages/content-pages-overview.md)を参照してください。 すぐにページを作成するには、[Building Content Pages](../building-and-managing-content-pages/building-content-pages.md)を参照してください。

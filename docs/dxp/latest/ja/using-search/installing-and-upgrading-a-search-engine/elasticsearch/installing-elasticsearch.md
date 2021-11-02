@@ -174,7 +174,7 @@ Elasticsearchは[Liferayからの接続](./connecting-to-elasticsearch.md)の準
 ## 追加のトピック
 
   - [Securing Elasticsearch](./securing-elasticsearch.md)
-  - [Liferay Enterprise Search](../../liferay_enterprise_search.md)
+  - [Liferay Enterprise Search](../../liferay_enterprise_search.rst)
   - [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
-  - [Administering and Tuning Search](../../search_administration_and_tuning.md)
+  - [Administering and Tuning Search](../../search_administration_and_tuning.rst)
   - [Elasticsearch Connector Settings](./elasticsearch-connector-settings.md)

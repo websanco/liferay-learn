@@ -41,4 +41,4 @@
 
 ![ユーザーが要求できない使用禁止名とメールを設定します。](./user-authentication/images/02.png)
 
-サードパーティー認証サービスの設定やシングルサインオン（SSO）の設定については、[セキュリティのドキュメンテーション](../../../installation-and-upgrades/securing_liferay.html)で説明します。
+サードパーティー認証サービスの設定やシングルサインオン（SSO）の設定については、[セキュリティのドキュメンテーション](../../../installation-and-upgrades/securing-liferay.md)で説明します。

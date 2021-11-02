@@ -43,7 +43,7 @@ DXPのアプリ管理UIを使用して、アプリをローカルサーバーに
 
 ### コントロールパネルを介したマーケットプレイス
 
-DXPのコントロールパネルからマーケットプレイスにアクセスします。 マーケットプレイスWebサイトからの場合と同じ方法でマーケットプレイスを閲覧します。 コントロールパネルでアプリを購入すると、アプリがダウンロードされ、DXPインスタンスに自動的にインストールされます。 詳細については、[Purchasing Apps on Liferay Marpletace](./purchasing-apps-on-liferay-marketplace.md)を参照してください。
+DXPのコントロールパネルからマーケットプレイスにアクセスします。 マーケットプレイスWebサイトからの場合と同じ方法でマーケットプレイスを閲覧します。 コントロールパネルでアプリを購入すると、アプリがダウンロードされ、DXPインスタンスに自動的にインストールされます。 詳細については、[Purchasing Apps on Liferay Marpletace](../installing-and-managing-apps/purchasing-apps-on-liferay-marketplace.md)を参照してください。
 
 ``` note::
    [Marketplace]画面を使用してアプリをインストールしている場合、アプリをアンインストールする最も簡単な方法は、コントロールパネルの[Purchased Apps]画面を使用することです。

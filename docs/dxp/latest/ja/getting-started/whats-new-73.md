@@ -128,7 +128,7 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ## 質問アプリ
 
-サイトで製品をサポートしている場合、新機能である[質問アプリ](../collaboration-and-social/using-the-questions-app.md)により、ユーザーが製品に関する質問の回答を検索できるようにします。 LiferayのGraphQL APIと掲示板のインフラストラクチャーを活用して、質問アプリは、回答への投票や最も役立つ回答をマーキングすることで、ユーザーにベストな回答を提供します。
+サイトで製品をサポートしている場合、新機能である[質問アプリ](../collaboration-and-social/questions/using-the-questions-app.md)により、ユーザーが製品に関する質問の回答を検索できるようにします。 LiferayのGraphQL APIと掲示板のインフラストラクチャーを活用して、質問アプリは、回答への投票や最も役立つ回答をマーキングすることで、ユーザーにベストな回答を提供します。
 
 ![ユーザーは質問の投稿後、すぐに回答を得ることができます。](./whats-new-73/images/17.gif)
 
@@ -248,19 +248,19 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ### インスタンスレベルでのSAMLの設定
 
-今回の変更により、証明書の取り扱いを含むインスタンスレベルで[SAML](../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md)を設定できるようになりました。
+今回の変更により、証明書の取り扱いを含むインスタンスレベルで[SAML](../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml.md)を設定できるようになりました。
 
 新しいSAMLプロパティ、*「不明なユーザーはゲストです」*が導入されました。  このプロパティにより、エンドユーザーがゲストである場合のSAML IdP接続の動作が決まります。 このプロパティは、ポータルデータベースに既に存在しないユーザーをゲストとして分類するかどうかを定義します。 分類後、ポータルインスタンスの既存のゲスト処理ポリシーにより、IdPのSAMLアサーションから得られる情報を使用して、ユーザーを自動的にプロビジョニングするかどうかを決定します。
 
 ### インスタンスレベルでのOAuth 2の設定
 
-[OAuth 2](../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md)アプリケーションスコープの画面が簡素化されたため、アプリケーションの認証要求中にスコープの表示をより制御できるようになりました。 たとえば、2つのAPIアプリケーションに関連する2つのスコープを、1つのスコープであるかのように表示することができます。
+[OAuth 2](../headless-delivery/using_oauth2.rst)アプリケーションスコープの画面が簡素化されたため、アプリケーションの認証要求中にスコープの表示をより制御できるようになりました。 たとえば、2つのAPIアプリケーションに関連する2つのスコープを、1つのスコープであるかのように表示することができます。
 
 有効期限切れの認証情報を削除する設定も可能です。 有効期限切れの認証情報の猶予期間後、バックグラウンドで実行されている予定されたプロセスにより、認証データが自動的に削除されます。
 
 ### インスタンスレベルでのOpenId Connectの設定
 
-各インスタンスでは、異なる[OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/other-ssos/using-openid-connect.md)プロバイダへの接続を設定できます。
+各インスタンスでは、異なる[OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/using-openid-connect.md)プロバイダへの接続を設定できます。
 
 システムレベルのOpenId Connectプロバイダーは、すべてのインスタンスに表示され、デフォルトのOpenId Connectプロバイダーと同じように動作します。
 
@@ -272,7 +272,7 @@ URLパターンは、始めにインスタンスレベルで、次にシステ�
 
 ## 検索機能
 
-[ElasticsearchとのLiferay DXP 7.3の検索エンジンコネクター](../using-search/installing-and-upgrading-a-search-engine/elasticsearch.md)の改良、変更をいくつか行いました。
+[ElasticsearchとのLiferay DXP 7.3の検索エンジンコネクター](../using-search/installing-and-upgrading-a-search-engine/elasticsearch.rst)の改良、変更をいくつか行いました。
 
 ### Elasticsearch 7のサポート
 

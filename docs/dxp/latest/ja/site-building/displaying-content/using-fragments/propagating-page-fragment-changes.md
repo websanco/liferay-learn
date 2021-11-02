@@ -1,6 +1,6 @@
 # ページフラグメントの変更の伝播
 
-デフォルトでは、ページフラグメントに行われた更新が自動的に表示されません [コンテンツページ](../../creating-pages/content-pages-overview.md)、 [ページテンプレートコンテンツ](../../creating-pages/creating-a-page-template.md)、および [の表示ページ](./creating-a-display-page-template.md) それらを使用しています。 手動で変更を伝播する必要があります。 これにより、ページ作成者が知らなくてもページが自動的に更新されなくなります。 ただし、ワークフローを有効にしていない場合、または開発中に変更をテストする場合は、自動伝播を有効にすることができます。 詳細については、 [自動ページフラグメント伝播の有効化](#enabling-automatic-page-fragment-propagation) を参照してください。
+デフォルトでは、ページフラグメントに行われた更新が自動的に表示されません [コンテンツページ](../../creating-pages/content-pages-overview.md)、 [ページテンプレートコンテンツ](../../creating-pages/adding-pages/creating-a-page-template.md)、および [の表示ページ](../using-display-page-templates/creating-and-managing-display-page-templates.md) それらを使用しています。 手動で変更を伝播する必要があります。 これにより、ページ作成者が知らなくてもページが自動的に更新されなくなります。 ただし、ワークフローを有効にしていない場合、または開発中に変更をテストする場合は、自動伝播を有効にすることができます。 詳細については、 [自動ページフラグメント伝播の有効化](#enabling-automatic-page-fragment-propagation) を参照してください。
 
 ## ページフラグメントの変更を手動で伝播する
 

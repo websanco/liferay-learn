@@ -10,7 +10,7 @@ Liferay DXPには、ユーザーがブログ、Webコンテンツ、Wikiなど�
 
 既定のワークフロープロセスは、*Single Approver*と呼ばれます。このプロセスでは、公開前に提出物を確認および承認する人が1名必要です。
 
-詳細は、 [ワークフローのアクティブ化](./activating-workflow.md)および[sending assets through review](./reviewing-assets.md) を参照してください。
+詳細は、 [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)および[sending assets through review](./using-workflows/reviewing-assets.md) を参照してください。
 
 ## ワークフローの構築
 
@@ -18,10 +18,10 @@ Liferay DXPには、ユーザーがブログ、Webコンテンツ、Wikiなど�
 
   - [Crafting Review Processes in XML](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)
   - [Visually Designing Review Processes](https://help.liferay.com/hc/articles/360028821892-Workflow-Designer)（サブスクライバー）
-  - [Uploading Workflow Definitions](./managing-workflows.md#uploading-a-new-workflow-definitions)
-  - [Managing Workflow Definitions](./managing-workflows.md)
+  - [Uploading Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definitions)
+  - [Managing Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md)
 
-独自のワークフローの構築を開始するには、[Building Workflows](./building-workflows.md)を参照してください。
+独自のワークフローの構築を開始するには、[Building Workflows](./designing-and-managing-workflows/building-workflows.md)を参照してください。
 
 ### ワークフローメトリクスを使用したSLAの実装
 
@@ -36,10 +36,10 @@ SLAが設定されると、SLAタイマーをトリガーするワークフロ�
 
 ![SLAに基づいて生成されたワークフローレポートを参照してください。](./introduction-to-workflow/images/02.png)
 
-SLAをワークフローに追加する方法については、[Using Workflow Metrics](./using-workflow-metrics.md)の記事を参照してください。
+SLAをワークフローに追加する方法については、[Using Workflow Metrics](./using-workflows/using-workflow-metrics.md)の記事を参照してください。
 
 ## 次のステップ
 
-  - [ワークフローのアクティブ化](./activating-workflow.md)
-  - [Managing Workflows](./managing-workflows.md)
-  - [Workflow Designer Overview](./workflow-designer-overview.md)
+  - [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)
+  - [Managing Workflows](./designing-and-managing-workflows/managing-workflows.md)
+  - [Workflow Designer Overview](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)

@@ -53,7 +53,7 @@ DXPの*サイトメニュー*のドロップダウンには、現在表示され
   - [ページを追加する](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
   - [コンテンツを作成する](../content-authoring-and-management/README.md)
   - [サイトメンバーシップを管理する](../site-building/building-sites/adding-members-to-sites.md)
-  - [サイトの動作と機能の設定と最適化](../site-building/optimizing-sites/README.md)
+  - [サイトの動作と機能の設定と最適化](../site-building/optimizing-sites/README.rst)
   - など・・・
 
 ## 次のステップ

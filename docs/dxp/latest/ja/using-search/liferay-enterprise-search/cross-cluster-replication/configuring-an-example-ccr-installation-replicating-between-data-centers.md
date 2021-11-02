@@ -28,7 +28,7 @@
 cluster.link.enabled=true
 ```
 
-これは単純なクラスタリング構成です。 完全な構成については、[クラスタリング](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)を参照してください。
+これは単純なクラスタリング構成です。 完全な構成については、[クラスタリング](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)を参照してください。
 
 ## 必要なElasticsearchプラグインのインストール
 

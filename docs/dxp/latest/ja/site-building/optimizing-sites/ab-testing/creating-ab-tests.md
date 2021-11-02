@@ -77,5 +77,5 @@ A/Bテストを作成するには、最初に[テストを作成](#creating-the-
 
   - [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
   - [A/B Testing](./ab-testing.md)
-  - [Configuring A/B Testing](./configuring-ab-testing.md)
+  - [Configuring A/B Testing](./creating-ab-tests.md)
   - [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)

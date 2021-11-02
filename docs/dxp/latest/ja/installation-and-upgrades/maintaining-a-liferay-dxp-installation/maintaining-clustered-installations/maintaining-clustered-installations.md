@@ -48,4 +48,4 @@
 
   - [Rolling Restarts](./rolling-restarts.md)
   - [Blue-Green Deployments](./blue-green-deployments.md)
-  - [サーバー管理](./../../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md)
+  - [サーバー管理](../../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md)

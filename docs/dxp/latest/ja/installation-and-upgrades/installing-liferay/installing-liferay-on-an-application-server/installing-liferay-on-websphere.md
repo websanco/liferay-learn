@@ -375,6 +375,6 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
   - [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md)
   - [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
   - Installing and Configuring a Search Engine
-  - [Securing Liferay DXP](../../securing-liferay/introduction-to-securing-liferay.md)
+  - [Securing Liferay DXP](../../securing-liferay.md)
   - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)
   - Maintaining Liferay DXP

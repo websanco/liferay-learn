@@ -10,14 +10,14 @@
 
 ユーザーやアプリケーションを認証する他の方法を設定できます。
 
-  - [LDAP](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)
-  - [SAML](./configuring-sso/authenticating-with-saml/saml-authentication-process-overview.md.md)
+  - [LDAP](../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)
+  - [SAML](./configuring-sso/authenticating-with-saml/saml-authentication-process-overview.md)
   - [Kerberos](./configuring-sso/authenticating-with-kerberos.md)
-  - [OpenID Connect](./configuring-sso/other-ssos/using-openid-connect.md)
+  - [OpenID Connect](./configuring-sso/using-openid-connect.md)
   - [トークンベースのソリューション](./configuring-sso/token-based-authentication.md)
-  - [OAuth 2.0](./configuring-sso/using-oauth2/introduction-to-using-oauth2.md)
+  - [OAuth 2.0](../../headless-delivery/using_oauth2.rst)
 
-[Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)はリモートアプリケーションの認証を管理でき、[認証パイプライン](../../developing-applications/README.md)はユーザーが1つまたは複数のシステムによって検証される方法を定義します。
+[Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)はリモートアプリケーションの認証を管理でき、認証パイプラインはユーザーが1つまたは複数のシステムによって検証される方法を定義します。
 
 ## 認証タイプ
 
@@ -33,7 +33,7 @@
    一度に使用できる認証タイプは1つだけです。
 ```
 
-認証タイプに関係なく、ユーザーは常にパスワードを入力する必要があります。 [パスワードポリシー](../../users-and-permissions/devops/README.md)を作成して、パスワードの長さ、パスワードの形式、有効期限などを定義できます。
+認証タイプに関係なく、ユーザーは常にパスワードを入力する必要があります。 パスワードポリシーを作成して、パスワードの長さ、パスワードの形式、有効期限などを定義できます。
 
 *認証タイプ*は、コントロールパネルまたはプロパティファイルから設定できます。
 
@@ -101,5 +101,5 @@ CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウント�
 
 ## 追加情報
 
-  - [Securing Liferay](./introduction-to-securing-liferay.md)
-  - [Introduction to Securing Web Services](./securing-web-services/introduction-to-securing-web-services.md)
+  - [Securing Liferay](../securing-liferay.md)
+  - [Introduction to Securing Web Services](./securing-web-services.md)

@@ -41,4 +41,4 @@
 
   - [パッチのインストール](./installing-patches.md)
   - [パッチタイプについて](./understanding-patch-types.md)
-  - [パッチを適用したインストールのスリム化](./advanced-patching/slimming-down-patched-installations.md)
+  - [パッチを適用したインストールのスリム化](advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)

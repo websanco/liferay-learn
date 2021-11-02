@@ -6,7 +6,7 @@
 
 条件は、指定された条件が満たされているかどうかをチェックするゲートキーパーの役割を果たし、その条件に基づいて、適切なレビュアを割り当てたり、特定のタスクに移行したりするなど、アセットに対してアクションを起こします。
 
-[Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml)には、条件ノードの例が含まれています。
+[Category Specific Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)には、条件ノードの例が含まれています。
 
 1.  *[グローバルメニュー]* → *[アプリケーション]* → *[ワークフロー]* → *[Process Builder]* に移動します。
 
@@ -18,7 +18,7 @@
 
 5.  *[ファイルをインポート]* をクリックします。
 
-6.  [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml)をアップロードします。
+6.  [Category Specific Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)をアップロードします。
 
 7.  *[図]* タブをクリックします。
 

@@ -191,7 +191,7 @@ DELETE /restored_liferay-20116index_3
 
 ## 検索の調整インデックスのバックアップと復元
 
-Elasticsearchインデックスのスナップショットを作成することを強くお勧めします。プライマリストレージ形式として機能するインデックス（[同義語セット](../../../search-administration-and-tuning/synonym-sets.md)や[結果ランキング](../../../search-administration-and-tuning/result-ranking)など）の場合は特にお勧めします。 データベースには、これらのアプリケーションのレコードはありません。
+Elasticsearchインデックスのスナップショットを作成することを強くお勧めします。プライマリストレージ形式として機能するインデックス（[同義語セット](../../../search-administration-and-tuning/synonym-sets.md)や[結果ランキング](../../../search-administration-and-tuning/result-rankings.md)など）の場合は特にお勧めします。 データベースには、これらのアプリケーションのレコードはありません。
 
 Elasticsearchの[スナップショットおよび復元](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html)機能を使用して、検索の調整インデックスをバックアップおよび復元できます。
 
@@ -287,4 +287,4 @@ POST _reindex/
 
 ## 追加情報
 
-[Search Administration and Tuning](../../../search_administration_and_tuning.md)
+[Search Administration and Tuning](../../../search_administration_and_tuning.rst)

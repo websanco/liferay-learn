@@ -4,7 +4,7 @@
 
 以下の手順は、Webコンテンツテンプレートをフラグメントにマップする方法を示しています。
 
-1.  マッピングしたいフィールドを含むWebコンテンツ記事と同じストラクチャーを使用する[Webコンテンツテンプレートを作成](../../../content-authoring-and-management/web-content/03-web-content-templates/README.md)します。 例えば、以下のWebコンテンツ記事は、ストラクチャー*Web Content with Audience*を使用しています。
+1.  マッピングしたいフィールドを含むWebコンテンツ記事と同じストラクチャーを使用する[Webコンテンツテンプレートを作成](../../../content-authoring-and-management/web-content/web_content_templates.rst)します。 例えば、以下のWebコンテンツ記事は、ストラクチャー*Web Content with Audience*を使用しています。
 
     ![Webコンテンツ記事と同じストラクチャーを使用するテンプレートを作成します。](./mapping-web-content-templates-to-fragments/images/01.png)
 

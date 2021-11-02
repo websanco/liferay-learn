@@ -7,7 +7,7 @@ Process Builderのワークフローデザイナーは、ワークフローの�
 ![デザイナーのキャンバスにノードをドラッグアンドドロップします。](./workflow-designer-overview/images/01.png)
 
 ``` tip::
-   また、[Process Builder]の[ソース]タブからXML定義を書き込んだり、アップロードしたりすることもできます。 `Managing Workflows <../managing-workflows.md#uploading-a-new-workflow-definition>`_ を参照してください。
+   また、[Process Builder]の[ソース]タブからXML定義を書き込んだり、アップロードしたりすることもできます。 `Managing Workflows <.../managing-workflows.md#uploading-a-new-workflow-definition>`_ を参照してください。
 ```
 
 ワークフローデザイナーは、すべての[ワークフローノード](./workflow-nodes.md)のタイプをサポートしています。
@@ -22,10 +22,10 @@ Process Builderのワークフローデザイナーは、ワークフローの�
 
 デフォルトでは、1つのワークフロー定義（唯一の承認者ワークフローの定義）のみがインストールされています。 その他の定義はこちらからダウンロードできます。
 
-  - [Category-Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml)
-  - [Legal Marketing Definition](./workflow-designer-overview/resources/legal-marketing-definition.xml)
-  - [Single Approver Definition with Scripted Assignment](./workflow-designer-overview/resources/single-approver-definition-scripted-assignment.xml)
-  - [Single Approver Definition](./workflow-designer-overview/resources/single-approver-definition.xml)
+  - [Category-Specific Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)
+  - [Legal Marketing Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/legal-marketing-definition.xml)
+  - [Single Approver Definition with Scripted Assignment](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)
+  - [Single Approver Definition](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)
 
 ## ワークフローの構築
 
@@ -41,7 +41,7 @@ Process Builderのワークフローデザイナーは、ワークフローの�
 
 ## 追加情報
 
-  - [Managing Workflows](./managing-workflows.md)
+  - [Managing Workflows](../managing-workflows.md)
   - [Workflow Nodes](./workflow-nodes.md)
   - [Using Forks and Joins](./using-forks-and-joins.md)
   - [Using Condition Nodes](./using-condition-nodes.md)

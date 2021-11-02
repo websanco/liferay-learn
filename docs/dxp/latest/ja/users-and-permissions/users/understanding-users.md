@@ -1,6 +1,6 @@
 # ユーザーについて
 
-Liferayサイトにアクセスするすべての人は、ユーザーと見なされます。 認証されていないユーザーは、*ゲスト*ユーザーと見なされます。 Liferayには、システムを完全に制御し、システムにアクセスできるデフォルトの管理者ユーザーが付属しています。 [ロールと権限](../roles-and-permissions/README.md)は、ユーザーがサイトで表示および実行できる内容を管理するものです。
+Liferayサイトにアクセスするすべての人は、ユーザーと見なされます。 認証されていないユーザーは、*ゲスト*ユーザーと見なされます。 Liferayには、システムを完全に制御し、システムにアクセスできるデフォルトの管理者ユーザーが付属しています。 [ロールと権限](../roles-and-permissions.md)は、ユーザーがサイトで表示および実行できる内容を管理するものです。
 
 ユーザーは3つの一般的なカテゴリに分類されます。
 
@@ -20,7 +20,7 @@ Liferayサイトにアクセスするすべての人は、ユーザーと見な�
 
 ### ユーザーの追加
 
-管理者は、コントロールパネルの[Users and Organizations]セクションまたは[APIを使用](../developer-guide/README.md)してユーザーを追加できます。 新規ユーザーは管理者が作成したり、オープン登録が設定されている場合は自分で登録したり、LDAPサーバーから同期したりできます。 詳細については、[Adding and Managing Users](./adding-and-managing-users.md)を参照してください。
+管理者は、コントロールパネルの[Users and Organizations]セクションまたは[APIを使用](../developer-guide/user-account-api-basics.md)してユーザーを追加できます。 新規ユーザーは管理者が作成したり、オープン登録が設定されている場合は自分で登録したり、LDAPサーバーから同期したりできます。 詳細については、[Adding and Managing Users](./adding-and-managing-users.md)を参照してください。
 
 #### オープン登録
 
@@ -30,7 +30,7 @@ Liferayサイトにアクセスするすべての人は、ユーザーと見な�
 
 #### ユーザーディレクトリの設定
 
-LDAPでユーザーを管理する組織は、LDAPサーバーをLiferayと同期してユーザーをインポートできます。 詳細については、[こちらの記事](../devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
+LDAPでユーザーを管理する組織は、LDAPサーバーをLiferayと同期してユーザーをインポートできます。 詳細については、[こちらの記事](../connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
 
 
 <!-- #### Other Methods
@@ -39,7 +39,7 @@ Are there other methods of adding users? -->
 
 ## ユーザーアクセスの管理
 
-ユーザーアクセスは、ロールと権限によって制御されます。 権限は、ユーザーが実行できることと実行できないことを定義します。 ロールは、権限をグループ化したものです。 権限は、ロールの権限を定義し、事前設定されたロールにユーザーを割り当てることによって設定されます。 ユーザーのアクセス管理について詳しくは、[Roles and Permissions](../roles-and-permissions/README.md)を参照してください。
+ユーザーアクセスは、ロールと権限によって制御されます。 権限は、ユーザーが実行できることと実行できないことを定義します。 ロールは、権限をグループ化したものです。 権限は、ロールの権限を定義し、事前設定されたロールにユーザーを割り当てることによって設定されます。 ユーザーのアクセス管理について詳しくは、[Roles and Permissions](../roles-and-permissions.md)を参照してください。
 
 ## ユーザーの整理
 

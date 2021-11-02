@@ -33,7 +33,7 @@ DXPは、アダプティブメディアアプリを使用して、ドキュメ�
 
 ### 移行プロセスの実行
 
-移行プロセスは、[Gogoコンソールコマンド](/dxp/7.x/en/liferay-internals/fundamentals/using-felix-gogo-shell.md)のセットです。
+移行プロセスは、[Gogoコンソールコマンド](../../../../liferay-internals/fundamentals/using-the-gogo-shell.md)のセットです。
 
 1.  *[グローバルメニュー]* → *[コントロールパネル]* → *[Gogo シェル]* に移動します。
 

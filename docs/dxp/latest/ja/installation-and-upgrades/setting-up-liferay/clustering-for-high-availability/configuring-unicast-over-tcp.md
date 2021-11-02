@@ -201,4 +201,4 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
 ## 追加情報
 
   - [Configuring Cluster Link](./configuring-cluster-link.md)
-  - [Clustering for High Availability](./clustering-for-high-availability.md)
+  - [Clustering for High Availability](../clustering-for-high-availability.md)

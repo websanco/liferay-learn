@@ -1,6 +1,6 @@
 # Gogo シェルコマンド
 
-Gogoシェルは、[Felix Gogoの基本コマンド](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html#basic-commands)とLiferayのコマンドを実行します。 Gogoシェルには、[コントロールパネル](./using-the-gogo-shell.md)（推奨）および[コマンドライン](./command-line-gogo-shell.md)からアクセスできます。
+Gogoシェルは、[Felix Gogoの基本コマンド](https://felix.apache.org/documentation/subprojects/apache-felix-gogo.html#basic-commands)とLiferayのコマンドを実行します。 Gogoシェルには、[コントロールパネル](../using-the-gogo-shell.md)（推奨）および[コマンドライン](./command-line-gogo-shell.md)からアクセスできます。
 
 一般的に使用されるコマンドは次のとおりです。
 
@@ -29,6 +29,6 @@ Gogoシェルは、[Felix Gogoの基本コマンド](https://felix.apache.org/do
 
 ## 追加情報
 
-  - [Using the Gogo Shell](./using-the-gogo-shell.md)
+  - [Using the Gogo Shell](../using-the-gogo-shell.md)
   - [Command Line Gogo Shell](./command-line-gogo-shell.md)
   - [Apache Felix Gogo official documentation](http://felix.apache.org/documentation/subprojects/apache-felix-gogo.html).

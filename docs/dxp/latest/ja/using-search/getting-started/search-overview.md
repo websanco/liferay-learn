@@ -29,7 +29,7 @@ Liferay DXPを起動して、すぐに使用できる検索機能の探索を開
 
 検索ページの作成の詳細については、こちら [読みください](https://help.liferay.com/hc/en-us/articles/360028821052-Configuring-Search-Pages)。
 
-各ウィジェットの機能の詳細については、[こちら](../search-pages-and-widgets/README.md)を読みください。
+各ウィジェットの機能の詳細については、[こちら](../search-pages-and-widgets/working-with-search-pages/search-pages.md)を読みください。
 
 ## 検索の構成と管理
 
@@ -43,7 +43,7 @@ Liferay DXPを起動して、すぐに使用できる検索機能の探索を開
 
 ![検索管理画面は有益で便利です。](./search-overview/images/08.png)
 
-検索の構成について詳しくは、こちらの [読みください](../search-administration-and-tuning/README.md)。
+検索の構成について詳しくは、こちらの [読みください](../search_administration_and_tuning.rst)。
 
 ## 検索におけるカスタム開発
 

@@ -60,7 +60,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
      Currently installed patches:
      ...
 
-5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning)が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
+5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning)が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
 
     ``` important::
        If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
@@ -140,5 +140,5 @@ DXPバンドルとDXPアプリケーションサーバーのインストール�
   - [パッチツールのインストール](./installing-the-patching-tool.md)
   - [パッチツールの構成](./configuring-the-patching-tool.md)
   - [パッチのアンインストール](./uninstalling-patches.md)
-  - [パッチを適用したインストールのスリム化](./advanced-patching/slimming-down-patched-installations.md)
-  - [スリムバンドルの使用](./advanced-patching/using-slim-bundles.md)
+  - [パッチを適用したインストールのスリム化](advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
+  - [スリムバンドルの使用](advanced-patching-for-dxp-7-2/using-slim-bundles.md)

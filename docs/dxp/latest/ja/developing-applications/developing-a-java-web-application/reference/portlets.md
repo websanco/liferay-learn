@@ -49,4 +49,4 @@ Liferay DXPでWebフロントエンドを開発するすべての方法には、
   - [Using MVC](../using-mvc.md)
   - [Using Spring](../using-spring.md)
   - [Using JSF](../using-jsf.md)
-  - [Developing a Bean Portlet](../developing-a-bean-portlet.md)
+  - [Developing a Bean Portlet](../using-bean-portlet.md)

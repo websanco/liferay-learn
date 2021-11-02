@@ -93,7 +93,7 @@
 
 ### アセットの自動タグ付け
 
-サイトのアセットの自動タグ付けを有効にするかどうかを決定します。 有効にすると、アセットはインスタンスレベルで設定されたプロバイダーによって自動タグ付けされます。 詳細については、[Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.md)を参照してください。
+サイトのアセットの自動タグ付けを有効にするかどうかを決定します。 有効にすると、アセットはインスタンスレベルで設定されたプロバイダーによって自動タグ付けされます。 詳細については、[Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto_tagging.rst)を参照してください。
 
 ## ソーシャル
 

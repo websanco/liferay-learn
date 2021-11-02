@@ -11,7 +11,7 @@ DXPインスタンスを開発して保守するときは、最新の修正で�
   - **ホットフィックス：** ビジネスクリティカルなDXP問題を迅速に修正するために顧客から要求されました。
   - **サービスパック：** より多くのテストを必要とする大きな修正を組み込みます。 Service Packリリースは、Service Packで構築され、TomcatにバンドルされているDXPも提供します。
 
-[パッチタイプ](./understanding-patch-types) は、すべてのパッチオプションを説明します。
+[パッチタイプ](./understanding-patch-types.md) は、すべてのパッチオプションを説明します。
 
 ## パッチのインストール
 
@@ -27,8 +27,8 @@ DXPインスタンスを開発して保守するときは、最新の修正で�
 
   - [パッチ情報の取得](./getting-patch-information.md)
   - [パッチのアンインストール](./uninstalling-patches.md)
-  - [パッチを適用したインストールのスリム化](./advanced-patching/slimming-down-patched-installations.md)
-  - [スリムバンドルの使用](./advanced-patching/using-slim-bundles.md)
-  - [パッチとカスタムプラグイン間の衝突の処理](./advanced-patching/custom-code-and-patch-compatibility.md)
+  - [パッチを適用したインストールのスリム化](./advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
+  - [スリムバンドルの使用](./advanced-patching-for-dxp-7-2/using-slim-bundles.md)
+  - [パッチとカスタムプラグイン間の衝突の処理](./advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
 
 パッチ適用の概要を理解したところで、使用可能な [パッチタイプ](./understanding-patch-types.md) について学習します。 その後、 [パッチのインストール](./installing-patches.md)続いて、パッチを適用する準備が整います。

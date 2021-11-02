@@ -1,6 +1,6 @@
 # フラグメントスタイルの設定
 
-フラグメントスタイルを使用して、ページフラグメントのルックアンドフィールをカスタマイズできます。 枠線を追加したり、フォントや背景色を変更したり、背景画像をアップロードしたりできます。 使用可能なすべてのスタイルの完全なリストについては、[Fragment Styles Reference](./fragment-styles-reference.md)を参照してください。 使用可能なスタイリングオプションはスタイルブックで定義されています。詳細は、[新しいスタイルブックの作成](../../site-appearance/creating-a-style-book.md)を参照してください。
+フラグメントスタイルを使用して、ページフラグメントのルックアンドフィールをカスタマイズできます。 枠線を追加したり、フォントや背景色を変更したり、背景画像をアップロードしたりできます。 使用可能なすべてのスタイルの完全なリストについては、[Fragment Styles Reference](./fragment-styles-reference.md)を参照してください。 使用可能なスタイリングオプションはスタイルブックで定義されています。詳細は、[新しいスタイルブックの作成](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)を参照してください。
 
 ``` tip::
    スタイルの多くはCSSクラスに対応しています。 CSSの知識がある方は、多くのフィールドに見覚えがあるでしょう。
@@ -31,5 +31,5 @@
   - [Content Pages Overview](./content-pages-overview.md)
   - [フラグメントの使用](./using-fragments.md)
   - [Fragment Styles Reference](./fragment-styles-reference.md)
-  - [新しいスタイルブックの作成](../../site-appearance/creating-a-style-book.md)
+  - [新しいスタイルブックの作成](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)
   - [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)

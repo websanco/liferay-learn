@@ -228,7 +228,7 @@ mail.session.jndi.name=mail/DevMailSession
 
 ## システム設定と構成ファイルの使用
 
-一部のプロパティは[システム設定](../../system-administration/system-settings/system-settings.md)と[設定ファイル](../../system-administration/system-settings/using-configuration-files.md)を使用して設定できます。 たとえば、SAML認証プロパティは、システム設定で使用できるプロパティです。
+一部のプロパティは[システム設定](../../system-administration/configuring-liferay/system-settings.md)と[設定ファイル](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用して設定できます。 たとえば、SAML認証プロパティは、システム設定で使用できるプロパティです。
 
 DXPデータベースに格納されているプロパティは、ポータルプロパティファイルで設定されているプロパティよりも優先されます。
 
@@ -240,6 +240,6 @@ DXPデータベースに格納されているプロパティは、ポータル�
 
   - [ポータルプロパティ](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html)
 
-  - [システム設定](../../system-administration/system-settings/system-settings.md)
+  - [システム設定](../../system-administration/configuring-liferay/system-settings.md)
 
-  - [構成ファイルについて](../../system-administration/system-settings/using-configuration-files.md)
+  - [構成ファイルについて](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)

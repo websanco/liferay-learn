@@ -72,4 +72,4 @@ Webコンテンツは頻繁に更新される傾向があるため、バージ�
 
   - [Staging Overview](./staging-overview.md)
   - [公開プロセスを理解する](./understanding-the-publishing-process.md)
-  - [Staging UI Reference](./staging-ui-reference)
+  - [Staging UI Reference](./staging-ui-reference.md)

@@ -36,7 +36,7 @@ LiferayのヘッドレスAPIはWeb経由でデータを提供するため、Web�
 
 ### 安全に接続する
 
-LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介したすべてのインタラクションは、特定のユーザーアカウントを使用して（またはゲストとして）行われます。 LiferayのAPIは、基本認証、OAuthトークン、Cookieの3つの認証方法をサポートしています。 詳しくは、[APIヘッダーリファレンス](./content-delivery-apis/api-headers-reference.md#authorization)を参照してください。 ゲストとしてAPIリクエストを行うことも可能です。詳細は、[認証されていないリクエストを行う](./content-delivery-apis/making-unauthenticated-requests.md)を参照してください。
+LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介したすべてのインタラクションは、特定のユーザーアカウントを使用して（またはゲストとして）行われます。 LiferayのAPIは、基本認証、OAuthトークン、Cookieの3つの認証方法をサポートしています。 詳しくは、[APIヘッダーリファレンス](./content-delivery-apis/api-headers-reference.md#authorization)を参照してください。 ゲストとしてAPIリクエストを行うことも可能です。詳細は、[認証されていないリクエストを行う](./consuming-apis/making-unauthenticated-requests.md)を参照してください。
 
 ### データサイズを管理しやすくする
 
@@ -50,4 +50,4 @@ LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介し�
 
 `flatten`パラメーターは、階層APIの場合、階層コンテキストからリクエストを実行します。 これにより、たとえば、関連する組織を見つけるために組織図をトラバースする必要がなく、「マーケティング」と呼ばれる組織で検索を実行できます。
 
-これらのパラメーターのいずれかを使用する方法の詳細は、[API Parameters Reference](./content-delivery-apis/api-parameters-reference.md)を参照してください。
+これらのパラメーターのいずれかを使用する方法の詳細は、[API Parameters Reference](./consuming-apis/api-headers-reference.md)を参照してください。

@@ -48,7 +48,7 @@
 
 > 利用可能：Liferay DXP 7.2 SP3 +
 
-[サイトロール](../understanding-roles-and-permissions.md) はセグメントに割り当てることができますが、サイト管理者とサイト所有者の2つの例外があります。
+[サイトロール](./understanding-roles-and-permissions.md) はセグメントに割り当てることができますが、サイト管理者とサイト所有者の2つの例外があります。
 
 1.  サイトメニュー→People→セグメント（アクション）
 

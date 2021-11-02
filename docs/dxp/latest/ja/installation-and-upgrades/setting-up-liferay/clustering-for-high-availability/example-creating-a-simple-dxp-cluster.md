@@ -255,7 +255,7 @@ DXPコンテンツのインデックス作成を開始します。
       - *Reindex all search indexes*
       - *Reindex all spell check indexes*
 
-コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [Search Overview](../../../using-search/getting-started/search-overview.html)を参照してください。
+コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [Search Overview](../../../using-search/getting-started/search-overview.md)を参照してください。
 
 ## DXPクラスターをテストする
 

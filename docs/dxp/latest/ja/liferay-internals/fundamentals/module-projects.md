@@ -42,7 +42,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 
 3.  **クライアント**モジュールはAPIを消費します。
 
-[Gogo シェル](./using-the-gogo-shell/using-the-gogo-shell.md)でユーザーが名前を入力したときにあいさつ文を表示する簡単なコマンドを開発することで、それぞれを作成する方法を学習します。
+[Gogo シェル](./using-the-gogo-shell.md)でユーザーが名前を入力したときにあいさつ文を表示する簡単なコマンドを開発することで、それぞれを作成する方法を学習します。
 
 ![ユーザーに挨拶をするGogoシェルコマンド。](./module-projects/images/01.png)
 
@@ -102,7 +102,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 
     **ユーザ名：** `test@liferay.com`  **パスワード：** `test`
 
-6.  [Gogo シェル](./using-the-gogo-shell/using-the-gogo-shell.md)を開きます。
+6.  [Gogo シェル](./using-the-gogo-shell.md)を開きます。
 
 7.  Gogo シェルのコマンド欄に `lb` と入力すると、モジュールのIDなどの情報が表示されます。 最後に追加されたモジュールが最後に表示されます。 モジュール名のキーワードがわかっていれば、 `grep` で探すことができます。
 
@@ -154,7 +154,7 @@ Liferayのモジュールは、Gradleのビルドインフラストラクチャ�
 | `gradle/`           | Gradleのラッパーが含まれています。                                                                                        |
 | `gradlew[.bat]`     | タスクを実行するためにGradleラッパーを呼び出します                                                                                |
 | `gradle.properties` | Liferayの製品バージョンを指定します                                                                                       |
-| `settings.gradle`   | [Liferay Workspace](../../developing-applications/tooling/liferay-workspace.md) のプラグインを含むGradleプラグインを適用します。 |
+| `settings.gradle`   | [Liferay Workspace](../../developing-applications/tooling.rst) のプラグインを含むGradleプラグインを適用します。 |
 
 サンプルプロジェクトの `k8s2-api` フォルダのように、新しいサブフォルダにモジュールを追加したり、新しい [Liferay Workspace](../../developing-applications/tooling/liferay-workspace.md) にモジュールを作成することができます。
 
@@ -216,7 +216,7 @@ liferay.workspace.product=portal-7.3-ga3
 最後に、依存性のあるバージョンはありません。 これは、ワークスペースがリリースに関連するLiferay製品のAPIバージョンを適用するためです。
 
 ``` note::
-   詳しくは、 `Configuring Dependencies <./configuring-dependencies/configuring-dependencies.md>`_ を参照してください。
+   詳しくは、 `Configuring Dependencies <./configuring-dependencies.md>`_ を参照してください。
 ```
 
 ### メタデータの指定
@@ -271,7 +271,7 @@ Bndは`bnd.bnd`ファイルからすべてのヘッダーをプロパゲート�
 ## 追加情報
 
   - [APIs as OSGi Services](./apis-as-osgi-services.md)
-  - [Using an OSGi Service](./using-an-osgi-servce.md)
-  - [Configure Dependencies](./configuring-dependencies/configuring-dependencies.md)
+  - [Using an OSGi Service](./using-an-osgi-service.md)
+  - [Configure Dependencies](./configuring-dependencies.md)
   - [Importing Packages](./importing-packages.md)
   - [Exporting Packages](./exporting-packages.md)

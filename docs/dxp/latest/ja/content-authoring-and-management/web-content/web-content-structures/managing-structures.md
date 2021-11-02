@@ -15,7 +15,7 @@
 
 **デフォルト値の編集:** フォームを開いて、ストラクチャーのフィールドのデフォルト値を設定します。 詳細は[下記](#editing-default-values)を参照してください。
 
-**テンプレートの管理:** ストラクチャーを使用するWebコンテンツテンプレートのフィルターされたセットを含む*[テンプレート]* タブを開きます。 ここから、Webコンテンツテンプレートを管理（編集、コピー、削除、および権限の設定）できます。 詳細は、[Managing Templates](../web-content-templates/managing-templates.md)を参照してください。
+**テンプレートの管理:** ストラクチャーを使用するWebコンテンツテンプレートのフィルターされたセットを含む*[テンプレート]* タブを開きます。 ここから、Webコンテンツテンプレートを管理（編集、コピー、削除、および権限の設定）できます。 詳細は、[Managing Templates](../web-content-templates/creating-web-content-templates.md)を参照してください。
 
 **権限設定:** ストラクチャーの権限設定ダイアログを開きます。 詳細は、[Webコンテンツストラクチャーとテンプレートへのアクセス許可の割り当て](./assigning-permissions-to-structures-and-templates.md)を参照してください。
 

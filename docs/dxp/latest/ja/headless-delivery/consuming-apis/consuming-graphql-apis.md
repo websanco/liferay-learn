@@ -70,7 +70,7 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
-これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 含まれているGraphQLクライアントは、ブラウザーを使用して認証します。 スタンドアロンクライアントを作成する計画の場合は、 [OAuth2](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md)介してユーザーを承認する必要があります。
+これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 含まれているGraphQLクライアントは、ブラウザーを使用して認証します。 スタンドアロンクライアントを作成する計画の場合は、 [OAuth2](../using-oauth2/introduction-to-using-oauth2.md)介してユーザーを承認する必要があります。
 
 開発中は、URLで資格情報データを渡す基本認証を使用する方がはるかに簡単です。 これは安全ではないため、 *このメソッドをプロダクションに使用しません。*
 
@@ -84,7 +84,7 @@ curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:
 
 ### OAuth2を使用してサービスを呼び出す
 
-本番環境では、[OAuth2アプリケーション](../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/creating-oauth2-applications.md)を作成し、OAuth2プロセスを使用して認証トークンを取得します。 トークンを取得したら、それをHTTPヘッダーに指定します。
+本番環境では、[OAuth2アプリケーション](../using-oauth2/creating-oauth2-applications.md)を作成し、OAuth2プロセスを使用して認証トークンを取得します。 トークンを取得したら、それをHTTPヘッダーに指定します。
 
 ``` bash
 curl --request POST --url http://localhost:8080/o/graphql -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'

@@ -1,6 +1,6 @@
 # ファイルストレージの構成
 
-ファイル（[ドキュメントとメディア](../../../collaboration-and-social/collaboration-and-social-overview.md)など）を格納し、添付ファイル（[メッセージボード](../../../collaboration-and-social/collaboration-and-social-overview.md)など）をサポートするウィジェットは、DXPのファイルストアを使用します。 ファイルはファイルストアに保存され、取得されます。 ファイルストアは、ローカルマシン上、ネットワークにマウントされたファイルシステム上、データベース、またはクラウドでホストできます。
+ファイル（[ドキュメントとメディア](../../collaboration-and-social/collaboration-and-social-overview.md)など）を格納し、添付ファイル（[メッセージボード](../../collaboration-and-social/collaboration-and-social-overview.md)など）をサポートするウィジェットは、DXPのファイルストアを使用します。 ファイルはファイルストアに保存され、取得されます。 ファイルストアは、ローカルマシン上、ネットワークにマウントされたファイルシステム上、データベース、またはクラウドでホストできます。
 
 ``` important::
    本番環境に移行する場合は、さまざまなファイルストア構成オプションを確認し、本番環境に移行する前に、ニーズに最適なオプションを選択することを強くお勧めします。 そうすることで、プロジェクトの後半でファイル保管場所を移行する手間を省くことができます。
@@ -14,7 +14,7 @@ Advanced File System Storeは、フォルダ内のファイルをアルファベ
 
 Advanced File System Store方式を使用するには、次の手順に従います。
 
-1.  次のプロパティを使用して[`portal-ext.properties`](../../../installation-and-upgrades/reference/portal-properties.md)を設定します。
+1.  次のプロパティを使用して[`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md)を設定します。
 
     ``` properties
     dl.store.impl=com.liferay.portal.store.file.system.AdvancedFileSystemStore
@@ -24,7 +24,7 @@ Advanced File System Store方式を使用するには、次の手順に従いま
 
 3.  コントロールパネルで、*[Configuration]* → *[System Settings]* → *[File Storage]* に移動します。
 
-4.  *[Advanced File System Store]* 画面で、*[Root Directory]* を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
+4.  *[Advanced File System Store]* 画面で、*[Root Directory]* を[Liferay Home](../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
 
     ![Advanced File System Store画面](./configuring-file-storage/images/02.png)
 

@@ -47,5 +47,5 @@ JAX-RS開発者は、 `@CORS` アノテーションを使用して、デプロ�
 
 ## 追加情報
 
-  - [Securing Liferay](../introduction-to-securing-liferay.md)
-  - [Introduction to Securing Web Services](./introduction-to-securing-web-services.md)
+  - [Securing Liferay](../../securing-liferay.md)
+  - [Introduction to Securing Web Services](../securing-web-services.md)

@@ -136,4 +136,4 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 ## 追加情報
 
   - [Configuring Unicast over TCP](./configuring-unicast-over-tcp.md)
-  - [Clustering for High Availability](./clustering-for-high-availability.md)
+  - [Clustering for High Availability](../clustering-for-high-availability.md)

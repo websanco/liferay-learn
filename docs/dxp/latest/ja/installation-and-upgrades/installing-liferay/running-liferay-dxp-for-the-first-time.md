@@ -1,6 +1,6 @@
 # Liferay DXPを初めて実行する
 
-[Liferay DXPをインストール](./installing-a-liferay-dxp-tomcat-bundle.md#installing)して[データベースを構成](./configuring-a-database.md)すると、Liferay DXPを実行する準備が整います。
+[Liferay DXPをインストール](./installing-a-liferay-dxp-tomcat-bundle.md#installing)して[データベースを構成](../installing-liferay/configuring-a-database.md)すると、Liferay DXPを実行する準備が整います。
 
 ## Liferay DXPを起動する
 
@@ -46,7 +46,7 @@
 
 セットアップウィザードは、設定値を[Liferay Home](../reference/liferay-home.md)の`portal-setup-wizard.properties`ファイルに保存します。
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 [Activating Liferay DXP](./activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 [Activating Liferay DXP](../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
 
 最後に、サーバーを再起動するようプロンプト表示されます。
 
@@ -74,9 +74,10 @@ DXPは、セットアップウィザードで指定したデータベースと�
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../building-solutions-on-dxp/README.md)を開始できます。 または、[Liferay DXPのその他のセットアップ](../setting-up-liferay.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../setting_up_liferay.rst)トピックを参照できます。
 
   - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/introduction-to-managing-apps.md)
+  - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
   - Installing and Configuring a Search Engine
-  - [Securing Liferay DXP](../securing-liferay/introduction-to-securing-liferay.md)
+  - [Securing Liferay DXP](../securing-liferay.md)
   - [Introduction to Clustering Liferay DXP](../setting-up-liferay/clustering-for-high-availability.md)

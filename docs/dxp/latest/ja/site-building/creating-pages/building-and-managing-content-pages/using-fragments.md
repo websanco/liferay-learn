@@ -189,6 +189,6 @@ DXPは、個々のフラグメントとそのサブ要素を構成するため�
 
 ## 追加情報
 
-  - [Content Page Overview](./content-page-overview.md)
+  - [Content Page Overview](./content-pages-overview.md)
   - [Building Content Pages](./building-content-pages.md)
   - [Editing Content Pages](./editing-content-pages.md)

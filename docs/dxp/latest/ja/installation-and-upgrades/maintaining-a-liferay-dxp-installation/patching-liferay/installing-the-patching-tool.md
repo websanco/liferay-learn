@@ -33,4 +33,4 @@ Patching Toolは、インストールするパッチに新しいPatching Toolバ
 
   - [パッチツールの構成](./configuring-the-patching-tool.md)
   - [パッチのインストール](./installing-patches.md)
-  - [カスタムコードとパッチの互換性](./advanced-patching/custom-code-and-patch-compatibility.md)
+  - [カスタムコードとパッチの互換性](./advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)

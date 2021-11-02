@@ -20,7 +20,7 @@ DXPのテンプレートエディタを使用している場合、テンプレ�
    FreeMarkerの`` utilLocator``、`` objectUtil``、および`` staticUtil``変数はデフォルトで無効になっています。 これらの変数は、リモートでコードが実行されたり特権が昇格されたりする脆弱性があるため、信頼できるテンプレート開発者に対してのみ有効にする必要があります。 
 ```
 
-テンプレートを保存すると、DXPはWebDAV URLと静的URLを提供します。 これらの値は、ストラクチャーのXMLソースにアクセスします。 保存後にテンプレートに戻り、*[Details]* セクションを展開すると、これらのURLを見つけることができます。 WebDAVとWebDAV URLの使用の詳細は、[WebDAV Access](../../../documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md)セクションを参照してください。
+テンプレートを保存すると、DXPはWebDAV URLと静的URLを提供します。 これらの値は、ストラクチャーのXMLソースにアクセスします。 保存後にテンプレートに戻り、*[Details]* セクションを展開すると、これらのURLを見つけることができます。 WebDAVとWebDAV URLの使用の詳細は、[WebDAV Access](../../documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md)セクションを参照してください。
 
 ## 追加情報
 

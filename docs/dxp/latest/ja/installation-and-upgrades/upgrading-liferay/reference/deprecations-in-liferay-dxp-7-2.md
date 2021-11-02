@@ -29,7 +29,7 @@ DXP 7.2で非推奨となった機能は次のとおりです。
 
 | 機能             | 利用可能性 | メモ                                                                                                                                                                                                                                                         |
 | -------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| オーディエンスターゲティング | アーカイブ | [パーソナライゼーション](https://help.liferay.com/hc/en-us/articles/360028721372-Introduction-to-Segmentation-and-Personalization)に置き換えられました（[Migrating from Audience Targeting](./96-migrating-from-audience-targeting/01-migrating-from-audience-targeting.md)を参照）。 |
+| オーディエンスターゲティング | アーカイブ | [パーソナライゼーション](https://help.liferay.com/hc/en-us/articles/360028721372-Introduction-to-Segmentation-and-Personalization)に置き換えられました（[Migrating from Audience Targeting](https://help.liferay.com/hc/en-us/articles/360028711992-Manually-Migrating-from-Audience-Targeting)を参照）。 |
 
 ## Web Experience
 
@@ -74,4 +74,4 @@ NTLMを使用してMicrosoft Windows™アカウントをLiferay DXPで認証し
 
 ## メンテナンスモードのアプリケーション
 
-すぐに対処する必要はありませんが、DXP 7.2でメンテナンスモードになっているアプリケーションについても考慮することを推奨します。これらのアプリケーションは廃止されたりアーカイブされたりすることはありませんが、バグ修正以外のアップデートを受け取ることはありません。 詳細については、[Features in Maintenance Mode](./features-in-maintenance-mode.md)を参照してください。
+すぐに対処する必要はありませんが、DXP 7.2でメンテナンスモードになっているアプリケーションについても考慮することを推奨します。これらのアプリケーションは廃止されたりアーカイブされたりすることはありませんが、バグ修正以外のアップデートを受け取ることはありません。 詳細については、[Features in Maintenance Mode](features-in-maintenance-mode.md)を参照してください。

@@ -8,7 +8,7 @@ OAuth 2.0では、アプリケーションはユーザーデータの制限さ�
 
 ## JSONWSサービスのスコープの作成
 
-スコープを作成する最も一般的な方法は、`OAUTH2_`という名前のプレフィックスが付いた[サービスアクセスポリシー](../../securing-web-services/setting-service-access-policies.md)を作成することです。 この命名規則により、ポリシーはOAuthアプリケーションの設定画面にスコープとして表示されます。
+スコープを作成する最も一般的な方法は、`OAUTH2_`という名前のプレフィックスが付いた[サービスアクセスポリシー](../../installation-and-upgrades/securing-liferay/securing-web-services/setting-service-access-policies.md)を作成することです。 この命名規則により、ポリシーはOAuthアプリケーションの設定画面にスコープとして表示されます。
 
 たとえば、アプリケーションがメールアドレスを取得するためにユーザーのプロファイル情報にアクセスする必要があるとします。 アプリケーションにアクセス許可を付与するには、*[Control Panel]* → *[Configuration]* → *[Service Access Policy]* に移動し、次の図に示すポリシーを作成します。
 

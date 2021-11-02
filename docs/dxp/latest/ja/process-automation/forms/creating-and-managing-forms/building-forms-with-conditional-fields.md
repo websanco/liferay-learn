@@ -17,19 +17,19 @@
 
 回答者に追加の質問に答えてもらいたい場合は、*表示・非表示*ルールを使用します。 例えば、キャンプの登録フォームには、キャンプ参加者が18歳以上であるかどうかという質問があります。 答えが*「いいえ」*の場合、フォームには保護者の名前を尋ねる追加フィールドが表示されます。 それ以外の場合、参加者が*「はい」*と答えた場合、保護者の名前を尋ねるフィールドは非表示になります。
 
-詳しくは、[Using the Show-Hide Rule](./form-rules/using-the-show-hide-rule.md)の記事を参照してください。
+詳しくは、[Using the Show-Hide Rule](../form-rules/using-the-show-hide-rule.md)の記事を参照してください。
 
 ## 有効化・無効化ルール
 
 表示・非表示ルールと同様に、*有効化・無効化*ルールは、1つまたは複数の条件に基づいてフィールドを編集可能にします。 任意の情報を入力したり、特定のグループに該当するユーザーのみからデータを収集する場合に便利です。 例えば、キャンプ場や病院では、治療に影響を与える可能性のある薬やアレルギーを記入してもらうことがあります。 このフィールドは、ユーザーが「はい」を選択した場合のみ編集可能です。
 
-詳しくは、[Using the Enable-Disable Rule](./form-rules/using-the-enable-disable-rule.md)の記事を参照してください。
+詳しくは、[Using the Enable-Disable Rule](../form-rules/using-the-enable-disable-rule.md)の記事を参照してください。
 
 ## ページへ移動ルール
 
 また、 *ページへ移動*のフォームルールを使用するというオプションもあります。 その名の通り、回答者は回答に応じてフォームの別のページにジャンプすることができます。 これは、フォームの一部のユーザーにだけ適用されるページがある場合に便利です。
 
-詳しくは、[Using the Jump-to-Page Rule](./form-rules/using-the-jump-to-page-rule.md)の記事を参照してください。
+詳しくは、[Using the Jump-to-Page Rule](../form-rules/using-the-jump-to-page-rule.md)の記事を参照してください。
 
 ## 自動入力ルール
 

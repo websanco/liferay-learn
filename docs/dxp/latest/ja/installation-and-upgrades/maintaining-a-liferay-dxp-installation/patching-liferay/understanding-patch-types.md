@@ -74,7 +74,7 @@ Service Packは、元のDXP GAメジャーリリースの上に構築されて�
 
 ## ポータルCEの配信を修正
 
-Liferay Portal CE GAリリースはDXPサービスパックに基づいており、通常、対応するサービスパックの数週間後に利用可能になります。 同じ修正が含まれていますが、EE専用機能の修正は含まれていません。 詳細については、 [LiferayポータルCE](./updating-liferay-portal-ce.md) 更新を参照してください。
+Liferay Portal CE GAリリースはDXPサービスパックに基づいており、通常、対応するサービスパックの数週間後に利用可能になります。 同じ修正が含まれていますが、EE専用機能の修正は含まれていません。 詳細については、 [LiferayポータルCE](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md) 更新を参照してください。
 
 
 
@@ -124,4 +124,4 @@ Liferayが修正プログラムを提供するために提供するパッチの�
 
   - [パッチのインストール](./installing-patches.md)
   - [パッチツールのインストール](./installing-the-patching-tool.md)
-  - [LiferayポータルCEの更新](./updating-liferay-portal-ce.md)
+  - [LiferayポータルCEの更新](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md)

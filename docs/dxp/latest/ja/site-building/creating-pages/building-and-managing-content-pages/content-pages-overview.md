@@ -13,7 +13,7 @@ Liferay DXPで使用されるデフォルトのページタイプはコンテン
   - [ルックアンドフィール](#look-and-feel)
   - [コメント](#comments)
 
-Liferay Portalには、ページの作成に使用できるいくつかのレイアウト、フラグメント、およびウィジェットが付属しています。 開発者は、[独自のフラグメントを作成](../developer-guide/developing-page-fragments/developing-fragments-intro.md)してこれらに追加できます。
+Liferay Portalには、ページの作成に使用できるいくつかのレイアウト、フラグメント、およびウィジェットが付属しています。 開発者は、[独自のフラグメントを作成](../../displaying-content/using-fragments/using-page-fragments.md)してこれらに追加できます。
 
 ## フラグメント
 
@@ -22,7 +22,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` -->
 
 > 入手可能：Liferay 7.3以降。以前は *セクション* と *セクションビルダー* パネルに分割されていました。
-ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、[テキスト](./building-content-pages.md#editing-text)、[画像](./building-content-pages.md#editing-an-image)、[リンク](./building-content-pages.md#editing-a-hyperlink)などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに[これらの要素をマッピング](./building-content-pages.md#mapping-content)することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](../../developer-guide/developing-page-fragments/fragment-specific-tags-reference.md)を参照してください。
+ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、[テキスト](./building-content-pages.md#editing-text)、[画像](./building-content-pages.md#editing-an-image)、[リンク](./building-content-pages.md#editing-a-hyperlink)などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに[これらの要素をマッピング](./building-content-pages.md#mapping-content)することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](../../displaying-content/using-fragments/using-page-fragments.md)を参照してください。
 ### レイアウト要素
 
 <!-- ```note::
@@ -101,7 +101,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 
 ## ワークフロー
 
-LiferayのポータルCE 7.3 GA2のとおり、 [ワークフロー](../../../process-automation/workflow/user-guide/introduction-to-workflow.md) コンテンツページのためにサポートされています。
+LiferayのポータルCE 7.3 GA2のとおり、 [ワークフロー](./building-content-pages.md) コンテンツページのためにサポートされています。
 
 ## 関連情報
 

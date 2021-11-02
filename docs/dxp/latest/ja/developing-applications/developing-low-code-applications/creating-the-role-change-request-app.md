@@ -74,7 +74,7 @@
 
 これで、アプリを使用する準備が整いました。 ユーザーがデータの送信を開始できるように、[デプロイ](./creating-a-standard-application.md#deploying-the-application)する必要があります。
 
-ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に[Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki)または会社の従業員ハンドブック[ドキュメント](../../content-authoring-and-management/documents-and-media/sharing-documents-and-media.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
+ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に[Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki)または会社の従業員ハンドブック[ドキュメント](../../content-authoring-and-management/documents-and-media/publishing-and-sharing/managing-document-access/sharing-documents-with-other-users.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
 
 ### アプリの使用
 

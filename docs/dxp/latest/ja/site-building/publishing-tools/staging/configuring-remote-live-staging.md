@@ -130,7 +130,7 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
 
 ローカルユーザーにステージングから本番環境への変更を公開する権限を与えるには、リモートサーバー上のユーザーに対して同一の権限を持つ同一のユーザーアカウントを作成します。
 
-このプロセスを簡素化するために、LDAPを使用して、選択したユーザーアカウントをローカルサーバーからリモートサーバーにコピーできます。 詳細は、[Connecting to an LDAP Directory](../../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
+このプロセスを簡素化するために、LDAPを使用して、選択したユーザーアカウントをローカルサーバーからリモートサーバーにコピーできます。 詳細は、[Connecting to an LDAP Directory](../../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
 
 ## リモートステージングのバッファサイズの設定
 

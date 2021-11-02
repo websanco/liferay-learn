@@ -14,7 +14,7 @@ Learning to Rankは、[ソートウィジェット](../search-pages-and-widgets/
 
 LES Learning to Rankがデプロイされているが、（おそらくはソートウィジェットを使用するために）特定の検索ページで無効にする必要がある場合、
 
-1.  [低レベル検索オプション](../search-pages-and-widgets/understanding-low-level-search-options.md)ウィジェットを検索ページに追加します。
+1.  [低レベル検索オプション](../search-pages-and-widgets/search-results/understanding-low-level-search-options.md)ウィジェットを検索ページに追加します。
 
 2.  クリックしてウィジェットの設定画面を開きます
 

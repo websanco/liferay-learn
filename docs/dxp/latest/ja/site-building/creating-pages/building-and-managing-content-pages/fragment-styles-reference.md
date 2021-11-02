@@ -17,7 +17,7 @@
    スタイルの多くはCSSクラスに対応しています。 CSSの知識がある方は、以下の多くのフィールドに見覚えがあるでしょう。
 ```
 
-次のスタイルの多くにはトークンが定義されています。詳細は、[Creating a Style Book](../../site-appearance/creating-a-style-book.md)および[Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)を参照してください。
+次のスタイルの多くにはトークンが定義されています。詳細は、[Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)および[Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)を参照してください。
 
 ## マージン
 
@@ -107,5 +107,5 @@
   - [Configuring Fragment Styles](./configuring-fragment-styles.md)
   - [Content Pages Overview](./content-pages-overview.md)
   - [フラグメントの使用](./using-fragments.md)
-  - [新しいスタイルブックの作成](../../site-appearance/creating-a-style-book.md)
+  - [新しいスタイルブックの作成](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)
   - [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)

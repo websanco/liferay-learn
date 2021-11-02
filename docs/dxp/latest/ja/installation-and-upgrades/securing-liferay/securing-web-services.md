@@ -26,9 +26,9 @@ Liferay DXPには、いくつかの調整可能な承認レイヤーが含まれ
 
   - Liferay PortalのJavaサーブレットへのアクセスを制限するためのリモートIPおよびHTTPSトランスポートチェック
   - ポータルサービス関連の承認チェックを実行するための拡張可能なアクセスコントロールポリシーレイヤー
-  - Liferayアセット用の拡張可能な[ロールベースの権限フレームワーク](../../../users-and-permissions/roles-and-permissions/README.md)（データベースまたは他の場所に保存されています）
+  - Liferayアセット用の拡張可能な[ロールベースの権限フレームワーク](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)（データベースまたは他の場所に保存されています）
   - ポートレットアクセスを制御するポートレットコンテナのセキュリティチェック
   - リモートAPI認証方法のリモートIPチェック
-  - リモートAPIへのアクセスを制御する[サービスアクセスポリシー](./setting-service-access-policies.md)
-  - 提供された資格情報を検証する[Authentication Verifier](./using-authentication-verifiers.md)。
-  - [クロスオリジンリソース共有](./setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。
+  - リモートAPIへのアクセスを制御する[サービスアクセスポリシー](./securing-web-services/setting-service-access-policies.md)
+  - 提供された資格情報を検証する[Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)。
+  - [クロスオリジンリソース共有](./securing-web-services/setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。

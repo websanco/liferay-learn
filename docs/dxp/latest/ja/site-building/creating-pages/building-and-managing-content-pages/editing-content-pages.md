@@ -39,7 +39,7 @@
 
 ### プレビューと公開
 
-変更を加えたら、*プレビュー*アイコン（![Preview](../../../images/icon-preview.png)）をクリックして、ページの公開ビューを表示します。 変更をプレビューしながら、表示するエクスペリエンス、言語、およびデバイスレイアウトを選択できます。 完了したら、* [Publish]* をクリックします。 デフォルトでは、公開すると変更がすぐに公開されます。 ただし、カスタム[ワークフロー](../../../process-automation/workflow/user-guide/introduction-to-workflow.md)を有効にしてレビューと公開のプロセスを指示している場合は、[Publish]をクリックすると定義済みの手順が開始されます。
+変更を加えたら、*プレビュー*アイコン（![Preview](../../../images/icon-preview.png)）をクリックして、ページの公開ビューを表示します。 変更をプレビューしながら、表示するエクスペリエンス、言語、およびデバイスレイアウトを選択できます。 完了したら、* [Publish]* をクリックします。 デフォルトでは、公開すると変更がすぐに公開されます。 ただし、カスタム[ワークフロー](../../../process-automation/workflow/introduction-to-workflow.md)を有効にしてレビューと公開のプロセスを指示している場合は、[Publish]をクリックすると定義済みの手順が開始されます。
 
 ## 編集サイドバー
 
@@ -57,7 +57,7 @@
 
 フラグメントとウィジェットサイドバーパネル（ ![Fragments and Widgets icon](../../../images/icon-cards2.png) ）では、ページを作成するために、すぐに使用できるページ要素とカスタムページ要素の両方にアクセスできます。
 
-  - **フラグメント**：フラグメントは、コンテンツページの主要な構成要素として機能する、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細は[フラグメントの使用](./using-fragments.md) を、独自のフラグメントを作成する方法については[Developing Fragments](../../developer-guide/developing-Page-fragments/developing-fragments-intro.md)を参照してください。
+  - **フラグメント**：フラグメントは、コンテンツページの主要な構成要素として機能する、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細は[フラグメントの使用](./using-fragments.md) を、独自のフラグメントを作成する方法については[Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)を参照してください。
 
   - **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する[アプリケーション](../../../developing_applications.html)です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
 
@@ -155,7 +155,7 @@
 
 ### ルックアンドフィール
 
-*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、[Creating Pages](/dxp/7.x/en/site-building/creating_pages.html)で詳しく説明しています。
+*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、[Creating Pages](../../creating_pages.rst)で詳しく説明しています。
 
 ### コメント
 
@@ -177,7 +177,7 @@
 
 ### タイトルバー
 
-タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、[Creating Pages](/dxp/7.x/en/site-building/creating_pages.html)で詳しく説明しています。
+タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、[Creating Pages](../../creating_pages.rst)で詳しく説明しています。
 
 ![タイトルバーには、いくつかのツールが組み込まれています。](./editing-content-pages/images/28.png)
 

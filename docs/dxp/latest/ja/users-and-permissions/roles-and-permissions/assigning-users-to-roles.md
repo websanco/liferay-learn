@@ -93,7 +93,7 @@
 | 単一のアセットライブラリ | 組織 <br />ユーザーグループ <br /> 個別ユーザー |
 
 
-1.  [Asset Library](../../site-building/understanding-asset-libraries.md) メニュー→People→Membershipsに移動します。
+1.  [Asset Library](../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md) メニュー→People→Membershipsに移動します。
 
 2.  ロールを割り当てるメンバーシップタイプのタブをクリックします。 サイトと同様に、アセットライブラリはユーザー（つまり、個々のサイトメンバー）、組織、またはユーザーグループに割り当てられます。
 

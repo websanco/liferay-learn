@@ -28,7 +28,7 @@
 
 1.  [ユーザーグループ](./creating-and-managing-user-groups.md#creating-a-user-group)作成します。
 2.  ユーザーグループをサイトに割り当てます（[は上記を参照](#managing-site-membership-with-user-groups)）。
-3.  サイトロールを作成し、その権限を定義します（ [ロールと権限](../roles-and-permissions/README.md)を参照）。
+3.  サイトロールを作成し、その権限を定義します（ [ロールと権限](../roles-and-permissions.md)を参照）。
 4.  ユーザーグループにロールを割り当てます。
 
 サイトのメンバーである既存のユーザーグループに既存のサイトロールを割り当てるには、

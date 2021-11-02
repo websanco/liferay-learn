@@ -4,7 +4,7 @@ DXPは、アプリケーションサーバーのJVMで実行されます。 シ�
 
 アプリケーションサーバーの規定のスクリプトは、システムプロパティを追加/変更するための最も安全な場所です。 システムプロパティを集中化するために使用できます。 すべてのプロパティをJVM引数として渡すと、アプリケーションサーバーの起動時にすべてのプロパティが設定されるため、タイミングの問題がなくなります。 アプリケーションサーバー、DXP、およびその他すべてのWebアプリケーションは、プロパティをすぐに使用できます。
 
-ただし、DXPは、必要なプロパティを設定するための便宜として、 [`portal-impl.jar/system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html) ファイルを使用します。 `system.properties` ファイルは、 `system-ext.properties` ファイルを使用して拡張またはオーバーライドできます。 システムプロパティファイルは、アプリケーションサーバーの起動後に [ポータルアプリケーションクラスローダー](../../liferay-internals/customizing-the-core/reference/portal-application-classloaders.md) によって読み込まれます。 DXPがシステムプロパティを使用して構成するいくつかの機能を次に示します。
+ただし、DXPは、必要なプロパティを設定するための便宜として、 [`portal-impl.jar/system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html) ファイルを使用します。 `system.properties` ファイルは、 `system-ext.properties` ファイルを使用して拡張またはオーバーライドできます。 システムプロパティファイルは、アプリケーションサーバーの起動後にポータルアプリケーションクラスローダーによって読み込まれます。 DXPがシステムプロパティを使用して構成するいくつかの機能を次に示します。
 
   - ファイルのエンコーディング
   - ロギング

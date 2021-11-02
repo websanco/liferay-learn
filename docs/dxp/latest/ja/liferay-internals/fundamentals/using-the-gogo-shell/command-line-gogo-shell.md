@@ -3,7 +3,7 @@
 開発環境にいる場合は、コマンドラインからローカルでモジュールフレームワークを操作できます。
 
 ``` warning::
-   Gogoシェルは、開発環境のコマンドラインからのみ実行してください。 本番環境では、 `Using the Gogo Shell <./using-the-gogo-shell.md>`_ で説明されているように、コントロールパネルでGogoシェルを実行してください。
+   Gogoシェルは、開発環境のコマンドラインからのみ実行してください。 本番環境では、 `Using the Gogo Shell <../using-the-gogo-shell.md>`_ で説明されているように、コントロールパネルでGogoシェルを実行してください。
 ```
 
 ## 前提条件
@@ -56,4 +56,4 @@ blade sh [another Gogo shell command]
 
 ## まとめ
 
-コマンドラインからGogoシェルを実行する方法がわかったので、使用可能な[Gogoシェルコマンド](./gogo-shell-commands.md)を調べます。 本番環境でGogoシェルを使用する必要がある場合は、[Using the Gogo Shell](./using-the-gogo-shell.md)を参照してください。
+コマンドラインからGogoシェルを実行する方法がわかったので、使用可能な[Gogoシェルコマンド](./gogo-shell-commands.md)を調べます。 本番環境でGogoシェルを使用する必要がある場合は、[Using the Gogo Shell](../using-the-gogo-shell.md)を参照してください。

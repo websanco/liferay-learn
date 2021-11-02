@@ -27,26 +27,26 @@ Liferayのインストールのセキュリティ保護には、ホスティン�
 
 LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは*[Sign In]* ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは[Sign In]ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
 
-  - [多要素認証](./multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
-  - [SSOを使用して](./configuring-sso/README.md)認証を管理できます。
-  - Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../../users-and-permissions/devops/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
-  - ゲストアカウントの作成を[オフ](./authentication-basics.md#disabling-guest-account-creation)にすることができます。
+  - [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
+  - [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
+  - Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
+  - ゲストアカウントの作成を[オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation)にすることができます。
 
-詳細は、[認証の基本](./authentication-basics.md)を参照してください。
+詳細は、[認証の基本](./securing-liferay/authentication-basics.md)を参照してください。
 
 ## パーミッション
 
-Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../../users-and-permissions/roles-and-permissions/README.md)を参照してください。
+Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
 ## Webサービスの保護
 
 Liferay Webサービスには、セキュリティと承認に対する多層的で構成可能なアプローチがあります。
 
-  - [サービスアクセスポリシー](./securing-web-services/setting-service-access-policies.md)は、リモートAPIへのアクセスを制御します。
-  - [Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)は、提供された資格情報を検証します。
-  - [クロスオリジンリソース共有](./securing-web-services/setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。
+  - [サービスアクセスポリシー](./securing-liferay/securing-web-services/setting-service-access-policies.md)は、リモートAPIへのアクセスを制御します。
+  - [Authentication Verifier](./securing-liferay/securing-web-services/using-authentication-verifiers.md)は、提供された資格情報を検証します。
+  - [クロスオリジンリソース共有](./securing-liferay/securing-web-services/setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。
 
-詳細は、[Webサービスの保護の概要](./securing-web-services/introduction-to-securing-web-services.md)を参照してください。
+詳細は、[Webサービスの保護の概要](./securing-liferay/securing-web-services.md)を参照してください。
 
 ## セキュリティの微調整
 
@@ -71,5 +71,5 @@ Liferay Portalのインストールのセキュリティ保護の詳細は、[�
 
 ## 次のステップ
 
-  - [認証の基本](./authentication-basics.md)
-  - [Webサービスの保護の概要](./securing-web-services/introduction-to-securing-web-services.md)
+  - [認証の基本](./securing-liferay/authentication-basics.md)
+  - [Webサービスの保護の概要](./securing-liferay/securing-web-services.md)
