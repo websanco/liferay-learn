@@ -48,7 +48,7 @@
     STARTED com.acme.b1c3.impl_1.0.0
     ```
 
-5.  サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にグローバルメニュー (![Applications Menu](../images/icon-applications-menu.png))をクリックし、*Commerce* → *Channels*に移動します。その後、*Payment Methods*セクションまでスクロールします。
+5.  サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にグローバルメニュー (![Applications Menu](../../images/icon-applications-menu.png))をクリックし、*Commerce* → *Channels*に移動します。その後、*Payment Methods*セクションまでスクロールします。
 
 <!-- end list -->
 

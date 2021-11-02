@@ -48,7 +48,7 @@
     STARTED com.acme.m6a8.web_1.0.0
     ```
 
-5.  サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[割引]* に移動します。 メニュー内の*[Edit]* をクリックして、割引を適用します。 *[ルール]* セクションまでスクロールし、(+)アイコンをクリックして、新しい割引ルールを追加します。 *[タイプ]* ドロップダウンの下に、新しい割引ルールタイプ（「Has a minimum number of products」）が表示されます。
+5.  サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、グローバルメニュー（![Applications Menu](../../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[割引]* に移動します。 メニュー内の*[Edit]* をクリックして、割引を適用します。 *[ルール]* セクションまでスクロールし、(+)アイコンをクリックして、新しい割引ルールを追加します。 *[タイプ]* ドロップダウンの下に、新しい割引ルールタイプ（「Has a minimum number of products」）が表示されます。
 
 <!-- end list -->
 

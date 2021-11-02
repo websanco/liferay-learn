@@ -48,7 +48,7 @@ In this section, we will get an example payment method up and running on your in
 	STARTED com.acme.b1c3.impl_1.0.0
 	```
 
-1. Verify that the example payment method was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../images/icon-applications-menu.png)), navigate to _Commerce_ → _Channels_, and scroll to the _Payment Methods_ section.
+1. Verify that the example payment method was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)), navigate to _Commerce_ → _Channels_, and scroll to the _Payment Methods_ section.
 
 ```note::
    In Liferay Commerce 2.1 and earlier, navigate to *Site Administration* → *Commerce* → *Settings* → *Payment Methods*.

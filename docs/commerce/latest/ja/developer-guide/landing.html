@@ -1,0 +1,84 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Catalog',
+					sectionURL: 'developer-guide/catalog.html',
+					subsections: [
+						{
+							name: '新しい商品タイプの追加',
+							url: 'developer-guide/catalog/adding-a-new-product-type.html'
+						}
+					]
+				},
+				{
+					sectionName: 'コンテント',
+					sectionURL: 'developer-guide/content.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'カスタム商品コンテンツレンダラーの実装',
+							url: 'developer-guide/content/implementing-a-custom-product-content-renderer.html'
+						}
+					]
+				},
+                {
+					sectionName: '在庫管理',
+					sectionURL: 'developer-guide/managing-inventory.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'カスタムの在庫不足アクティビティの実装',
+							url: 'developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.html'
+						}
+					]
+				},
+                {
+					sectionName: 'マーケティング',
+					sectionURL: 'developer-guide/marketing.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '[Product Publisher]ウィジェット用の新しい商品データソースの追加',
+							url: 'developer-guide/account-management/adding-a-new-product-data-source-for-the-product-publisher-widget.html'
+						}
+					]
+				},
+                {
+					sectionName: 'プロモーション',
+					sectionURL: 'developer-guide/promotions.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '新しい割引ルールタイプの追加',
+							url: 'developer-guide/account-management/adding-a-new-discount-rule-type.html'
+						}
+					]
+				},
+                {
+					sectionName: '販売',
+					sectionURL: 'developer-guide/sales.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'カスタム清算ステップの実装',
+							url: 'developer-guide/sales/implementing-a-custom-checkout-step.html'
+						},
+						{
+							name: 'カスタム注文バリデーターの実装',
+							url: 'developer-guide/sales/implementing-a-custom-order-validator.html'
+						},
+						{
+							name: '新しい支払い方法の実装',
+							url: 'developer-guide/sales/implementing-a-new-payment-method.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>

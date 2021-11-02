@@ -48,7 +48,7 @@
     STARTED com.acme.c1n4.web_1.0.0
     ```
 
-5.  サンプルの商品タイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[商品]* に移動します。 次に、（+）アイコンをクリックして、新しい商品を追加します。 新しい商品タイプ（「Example」）が、選択するタイプのリストに表示されます。
+5.  サンプルの商品タイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 グローバルメニュー（![Applications Menu](../../images/icon-applications-menu.png)）をクリックし、*[Commerce]*→*[商品]* に移動します。 次に、（+）アイコンをクリックして、新しい商品を追加します。 新しい商品タイプ（「Example」）が、選択するタイプのリストに表示されます。
 
 <!-- end list -->
 

@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'カスタム清算ステップの実装',
+					sectionURL: 'sales/implementing-a-custom-checkout-step.html',
+				},
+				{
+					sectionName: 'カスタム注文バリデーターの実装',
+					sectionURL: 'sales/implementing-a-custom-order-validator.html',
+				},
+				{
+					sectionName: '新しい支払い方法の実装',
+					sectionURL: 'sales/implementing-a-new-payment-method.html',
+				},
+				{
+					sectionName: '新しい配送エンジンの実装',
+					sectionURL: 'sales/implementing-a-new-shipping-engine.html',
+				},
+				{
+					sectionName: '新しい税エンジンの実装',
+					sectionURL: 'sales/implementing-a-new-tax-engine.html',
+				},
+				{
+					sectionName: 'カスタム為替レートプロバイダーの実装',
+					sectionURL: 'sales/implementing-an-exchange-rate-provider.html',
+				}
+			]
+		}
+	})
+</script>

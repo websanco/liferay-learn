@@ -1,0 +1,84 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Catalog',
+					sectionURL: 'developer-guide/catalog.html',
+					subsections: [
+						{
+							name: 'Adding a new Product Type',
+							url: 'developer-guide/catalog/adding-a-new-product-type.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Content',
+					sectionURL: 'developer-guide/content.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Implementing a Custom Product Renderer',
+							url: 'developer-guide/content/implementing-a-custom-product-content-renderer.html'
+						}
+					]
+				},
+                {
+					sectionName: 'Managing Inventory',
+					sectionURL: 'developer-guide/managing-inventory.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Implementing a Custom Low Stock Activity',
+							url: 'developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.html'
+						}
+					]
+				},
+                {
+					sectionName: 'Marketing',
+					sectionURL: 'developer-guide/marketing.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Adding a New Product Data Source for the Product Publisher Widget',
+							url: 'developer-guide/account-management/adding-a-new-product-data-source-for-the-product-publisher-widget.html'
+						}
+					]
+				},
+                {
+					sectionName: 'Promotions',
+					sectionURL: 'developer-guide/promotions.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Adding a New Discount Rule Type',
+							url: 'developer-guide/account-management/adding-a-new-discount-rule-type.html'
+						}
+					]
+				},
+                {
+					sectionName: 'Sales',
+					sectionURL: 'developer-guide/sales.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Implementing a Custom Checkout Step',
+							url: 'developer-guide/sales/implementing-a-custom-checkout-step.html'
+						},
+						{
+							name: 'Implementing a Custom Order Validator',
+							url: 'developer-guide/sales/implementing-a-custom-order-validator.html'
+						},
+						{
+							name: 'Implementing a New Payment Method',
+							url: 'developer-guide/sales/implementing-a-new-payment-method.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>
