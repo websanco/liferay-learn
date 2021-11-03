@@ -100,6 +100,6 @@ The Marketplace is now available to use in the Control Panel.
 
 ## Additional information
 
-* [Installing Apps](../installing-apps/installing-apps.md)
-* [Renewing Apps](../managing-apps/renewing-apps.md)
+* [Installing Apps](./installing-apps.md)
+* [Renewing Apps](./managing-apps/renewing-apps.md)
 * [Liferay Marketplace Developer Portal](https://marketplace.liferay.dev/)

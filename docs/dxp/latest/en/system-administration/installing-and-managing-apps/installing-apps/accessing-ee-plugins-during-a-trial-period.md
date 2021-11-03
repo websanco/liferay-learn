@@ -26,5 +26,5 @@ A list of EE plugins appears. During your trial period, you can access and use t
 
 ## Additional Information
 
-* [Installing Apps](./installing-apps.md)
+* [Installing Apps](../installing-apps.md)
 * [Renewing Apps](../managing-apps/renewing-apps.md)

@@ -50,8 +50,8 @@ Here are the steps for downloading an app in the Purchased Apps UI:
 
 1. When you've found the app version you want, click _App_ to download it.
 
-The app downloads as an LPKG file. You can [install the app](./installing-apps.md) via this file.
+The app downloads as an LPKG file. You can [install the app](../installing-apps.md) via this file.
 
 ## Next Steps
 
-* [Installing Apps](./installing-apps.md)
+* [Installing Apps](../installing-apps.md)
