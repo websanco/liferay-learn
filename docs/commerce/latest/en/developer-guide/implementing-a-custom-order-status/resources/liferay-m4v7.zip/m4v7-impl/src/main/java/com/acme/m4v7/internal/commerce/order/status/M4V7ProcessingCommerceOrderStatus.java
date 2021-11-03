@@ -18,7 +18,7 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 	property = {
 		"commerce.order.status.key=" + CommerceOrderConstants.ORDER_STATUS_PROCESSING,
 		"commerce.order.status.priority:Integer=50",
-		"service.ranking:Integer=101"
+		"service.ranking:Integer=100"
 	},
 	service = CommerceOrderStatus.class
 )
