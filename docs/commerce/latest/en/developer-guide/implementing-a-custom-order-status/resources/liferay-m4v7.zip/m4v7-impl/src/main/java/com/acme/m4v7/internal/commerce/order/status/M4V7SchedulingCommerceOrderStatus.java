@@ -64,12 +64,12 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 
 		List<String> attributeValueList = _asList(attributeValueObject);
 
-		String schedulingStatus =
-			attributeValueList.isEmpty() ? "Pending" :
-				attributeValueList.get(0);
+		if (!attributeValueList.isEmpty()) {
+			String schedulingStatus = attributeValueList.get(0);
 
-		if (schedulingStatus.equalsIgnoreCase("Confirmed")) {
-			return true;
+			if (schedulingStatus.equals("Confirmed")) {
+				return true;
+			}
 		}
 
 		return false;
