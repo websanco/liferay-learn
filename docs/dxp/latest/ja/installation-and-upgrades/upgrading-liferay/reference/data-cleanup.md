@@ -21,7 +21,7 @@
 サーバーから廃止されたデータが削除されました。
 
 ``` note::
-   ``com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config`` `設定ファイル <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ を使用して、（Liferay Dockerコンテナ<../upgrade-basics/upgrading-via-docker.md>`_またはローカルマシンで）サーバーの起動時にモジュールデータをクリーンアップすることもできます。 クリーンアップ後、 `osgi`フォルダから設定ファイルを削除します。
+   ``com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config`` `設定ファイル <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ を使用して、 `Liferay Dockerコンテナ <../upgrade-basics/upgrading-via-docker.md>`_ またはローカルマシンで）サーバーの起動時にモジュールデータをクリーンアップすることもできます。 クリーンアップ後、 `osgi`フォルダから設定ファイルを削除します。
 ```
 
 ## 追加情報

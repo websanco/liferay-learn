@@ -1,7 +1,7 @@
 # コレクションの作成
 
 ``` note::
-   この情報はLiferay DXP 7.3以降に適用されます。 以前のLiferay DXPのバージョンについては、`Liferay DXP 7.2 <#liferay-dxp-7-2>`_を参照してください。
+   この情報はLiferay DXP 7.3以降に適用されます。 以前のLiferay DXPのバージョンについては、 `Liferay DXP 7.2 <#liferay-dxp-7-2>`_ を参照してください。
 ```
 
 *手動*コレクションまたは*動的*コレクションを作成できます。 コレクションの種類については、[コレクションとコレクションページについて](./about-collections-and-collection-pages.md)を参照してください。
