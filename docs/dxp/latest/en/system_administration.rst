@@ -4,7 +4,7 @@ System Administration
 .. toctree::
    :maxdepth: 4
 
-   system-administration/installing_and_managing_apps.rst
+   system-administration/installing-and-managing-apps.md
    system-administration/file-storage.md
    system-administration/configuring_liferay.rst
    system-administration/using_the_script_engine.rst

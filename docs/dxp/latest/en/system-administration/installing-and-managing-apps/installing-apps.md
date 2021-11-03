@@ -1,5 +1,12 @@
 # Installing Apps
 
+```{toctree}
+:maxdepth: 3
+
+installing-apps/downloading-apps.md
+installing-apps/accessing-ee-plugins-during-a-trial-period.md
+```
+
 After downloading an app as an LPKG file from the [Marketplace website](https://web.liferay.com/marketplace),  the next step is to install it to a local DXP instance.
 
 You can use either of the following methods to install a new app to your instance:
