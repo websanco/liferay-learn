@@ -88,7 +88,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		return false;
 	}
 
-	private List<String> _asList(Object object) {
+	private static List<String> _asList(Object object) {
 		if (object instanceof String) {
 			return new ArrayList<>(Collections.singletonList((String)object));
 		}
