@@ -1,5 +1,13 @@
 # Using the Script Engine
 
+```{toctree}
+:maxdepth: 3
+
+using-the-script-engine/invoking-liferay-services-from-scripts.md
+using-the-script-engine/running-scripts-from-the-script-console.md
+using-the-script-engine/script-examples.md
+```
+
 DXP provides a robust script engine for executing [Groovy](http://groovy-lang.org/) scripts to maintain your Liferay DXP instance. You can execute scripts to perform maintenance tasks involving data cleanup, user maintenance operations, bulk Liferay API invocations, or even system level operations.
 
 ![The Script Console executes Groovy scripts and provides context variables, such as the current actionRequest. The Script Console was designed for invoking Liferay Services.](./using-the-script-engine/images/01.png)
@@ -15,7 +23,7 @@ The Script Console is available in the Control Panel. To use the Script Engine, 
 
 ## Next Steps
 
-* [Invoking Liferay Services](./invoking-liferay-services-from-scripts.md)
-* [Running Scripts from the Script Console](./running-scripts-from-the-script-console.md)
+* [Invoking Liferay Services](./using-the-script-engine/invoking-liferay-services-from-scripts.md)
+* [Running Scripts from the Script Console](./using-the-script-engine/running-scripts-from-the-script-console.md)
 * [Using the Script Engine with Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-* [Script Examples](./script-examples.md)
+* [Script Examples](./using-the-script-engine/script-examples.md)
