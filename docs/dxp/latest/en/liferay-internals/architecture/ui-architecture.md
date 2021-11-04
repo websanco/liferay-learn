@@ -1,4 +1,4 @@
-##  UI Architecture
+## UI Architecture
 
 ```{raw} html
 :file: ../../landingpage_template.html
