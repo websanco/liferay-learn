@@ -9,7 +9,7 @@ Liferay Internals
    liferay-internals/extending_liferay.rst
    liferay-internals/customizing_web_apis.rst
    liferay-internals/contributing_to_liferay_development.rst
-   liferay-internals/reference.rst
+   liferay-internals/reference.md
 
 .. raw:: html
    :file: landingpage_template.html
