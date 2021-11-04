@@ -69,6 +69,11 @@ public class W9B7EntryWrapper
 		}
 	}
 
+	@Override
+	public W9B7Entry cloneWithOriginalValues() {
+		return wrap(model.cloneWithOriginalValues());
+	}
+
 	/**
 	 * Returns the description of this w9b7 entry.
 	 *

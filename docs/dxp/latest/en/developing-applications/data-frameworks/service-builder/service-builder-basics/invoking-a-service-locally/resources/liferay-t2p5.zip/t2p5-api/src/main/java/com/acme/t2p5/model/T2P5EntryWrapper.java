@@ -69,6 +69,11 @@ public class T2P5EntryWrapper
 		}
 	}
 
+	@Override
+	public T2P5Entry cloneWithOriginalValues() {
+		return wrap(model.cloneWithOriginalValues());
+	}
+
 	/**
 	 * Returns the description of this t2p5 entry.
 	 *

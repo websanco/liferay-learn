@@ -26,15 +26,18 @@ import com.liferay.portal.kernel.model.ModelWrapper;
 import com.liferay.portal.kernel.model.impl.BaseModelImpl;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.ProxyUtil;
+import com.liferay.portal.kernel.util.StringUtil;
 
 import java.io.Serializable;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 
+import java.sql.Blob;
 import java.sql.Types;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -374,6 +377,19 @@ public class T2P5EntryModelImpl
 	}
 
 	@Override
+	public T2P5Entry cloneWithOriginalValues() {
+		T2P5EntryImpl t2p5EntryImpl = new T2P5EntryImpl();
+
+		t2p5EntryImpl.setT2p5EntryId(
+			this.<Long>getColumnOriginalValue("t2p5EntryId"));
+		t2p5EntryImpl.setDescription(
+			this.<String>getColumnOriginalValue("description"));
+		t2p5EntryImpl.setName(this.<String>getColumnOriginalValue("name"));
+
+		return t2p5EntryImpl;
+	}
+
+	@Override
 	public int compareTo(T2P5Entry t2p5Entry) {
 		long primaryKey = t2p5Entry.getPrimaryKey();
 
@@ -471,7 +487,7 @@ public class T2P5EntryModelImpl
 			getAttributeGetterFunctions();
 
 		StringBundler sb = new StringBundler(
-			(4 * attributeGetterFunctions.size()) + 2);
+			(5 * attributeGetterFunctions.size()) + 2);
 
 		sb.append("{");
 
@@ -482,9 +498,26 @@ public class T2P5EntryModelImpl
 			Function<T2P5Entry, Object> attributeGetterFunction =
 				entry.getValue();
 
+			sb.append("\"");
 			sb.append(attributeName);
-			sb.append("=");
-			sb.append(attributeGetterFunction.apply((T2P5Entry)this));
+			sb.append("\": ");
+
+			Object value = attributeGetterFunction.apply((T2P5Entry)this);
+
+			if (value == null) {
+				sb.append("null");
+			}
+			else if (value instanceof Blob || value instanceof Date ||
+					 value instanceof Map || value instanceof String) {
+
+				sb.append(
+					"\"" + StringUtil.replace(value.toString(), "\"", "'") +
+						"\"");
+			}
+			else {
+				sb.append(value);
+			}
+
 			sb.append(", ");
 		}
 

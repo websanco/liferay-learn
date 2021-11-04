@@ -97,4 +97,7 @@ public interface W9B7EntryModel extends BaseModel<W9B7Entry> {
 	 */
 	public void setName(String name);
 
+	@Override
+	public W9B7Entry cloneWithOriginalValues();
+
 }

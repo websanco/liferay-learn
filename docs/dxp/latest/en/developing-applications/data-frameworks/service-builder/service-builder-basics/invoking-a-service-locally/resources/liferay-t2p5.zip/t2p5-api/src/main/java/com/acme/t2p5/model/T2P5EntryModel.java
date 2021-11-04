@@ -97,4 +97,7 @@ public interface T2P5EntryModel extends BaseModel<T2P5Entry> {
 	 */
 	public void setName(String name);
 
+	@Override
+	public T2P5Entry cloneWithOriginalValues();
+
 }
