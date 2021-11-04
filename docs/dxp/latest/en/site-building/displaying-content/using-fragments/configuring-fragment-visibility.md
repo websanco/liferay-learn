@@ -1,16 +1,40 @@
 # Configuring Fragment Visibility
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP 7.4+
 
-[Fragments](../using-fragments/using-page-fragments.md) allow you to customize the layout and information on your [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Starting with Liferay DXP 7.4, you can configure the Fragment's visibility based on the screen size the client uses to access the Page. This way, you can adapt your content to each platform and improve the user experience.
+[Fragments](../using-fragments/using-page-fragments.md) allow you to customize the layout and information on your [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Starting with Liferay DXP 7.4, you can configure the Fragments' visibility based on the user's screen size. For instance, you can configure a Fragment to be hidden for a user accessing your Page from a computer, while making the Fragment visible for a user accessing the same Page from a smartphone.
 
-You configure the Fragment visibility for each screen size from the Content Page editor, using the Viewport control on the top of the Page.
+You configure the Fragment visibility for each screen size from the [Content Page editor](../contnet-page-../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md), using the viewport controls on the top of the Page editor.
 
 ![Configure the Fragment's visibility on your Content Page using the Viewports control.](./configuring-fragment-visibility/images/01.png)
 
-The Fragment's visibility and styles you apply to one viewport on the left are applied to all the viewports on the right, unless you specify different styles for one of the right-side viewports. So, for example, if you hide a Fragment on the Desktop viewport, the Fragment is also hidden on the mobile viewports. But if you make the Fragment visible on one mobile viewport, it remains visible on that viewport. From a user experience perspective, in this example, the Fragment is hidden when accessing the Page from a computer, but it's visible when using a smartphone.
+## Understanding Fragment Visibility and Styles Inheritance
 
-This tables summarizes each viewport's behavior:
+The Fragment's visibility and styles you apply to a viewport on the left-hand side are applied to all the viewports on the right-hand side, unless you specify different styles for one of the right-hand side viewports. For example, if you hide a Fragment on the Desktop viewport, the Fragment is also hidden on all other viewports. This table summarizes this configuration:
+
+| Viewport | Visible? | Fragment Visibility Setting |
+| :--- | :--- | :--- |
+| Desktop (A) | No | Hidden |
+| Tablet (B) | No | Default / Inherited |
+| Landscape Phone (C) | No | Default / Inherited |
+| Portrait Phone (D) | No | Default / Inherited |
+
+![Viewport on the right side inherit the configuration from viewports in the left side.](./configuring-fragment-visibility/images/07.png)
+
+If, from this setup, you now make the Fragment visible on the Landscape Phone (for example), the Fragment stays visible on that viewport and the Portrait Phone viewport. This tables summarizes the new configuration:
+
+| Viewport | Visible? | Fragment Visibility Setting |
+| :--- | :--- | :--- |
+| Desktop (A) | No | Hidden |
+| Tablet (B) | No | Default / Inherited |
+| Landscape Phone (C) | Yes | Visible |
+| Portrait Phone (D) | Yes | Default / Inherited |
+
+From a user experience perspective, in this example, the Fragment is hidden when accessing the Page from a computer, but it's visible when using a smartphone.
+
+## Content Page Editor Viewports Behavior
+
+This table summarizes each viewport's behavior:
 
 | Viewport | Description |
 | --- | --- |
@@ -36,16 +60,16 @@ You can change the Fragment visibility on your Content Pages in three different 
       ![Changing the Fragment's visibility from the Page Elements area in the Content Page editor sidebar.](./configuring-fragment-visibility/images/04.gif)
 
 ```{tip}
-To restore a Fragment you have hidden, from the Browser Page Elements area, click the *Hide* (![Hide](../../../images/icon-hide.png)) or *Unhide* (![Unhide](../../../images/icon-preview.png)) control next to the Page Fragment.
+To restore a Fragment you have hidden, from the Browser Page Elements area, click the *Unhide* (![Unhide](../../../images/icon-preview.png)) control next to the Page Fragment.
 ```
 
 ## Example: Using Fragment Visibility
 
-Consider this example. Your insurance company wants to promote a new mobile app that lets customers manage their insurance policies. You want to promote this app when users access your Page from a smartphone. In this case, you can create a promotional banner for your new mobile app and make this banner visible only on the Smartphone viewports.
+Consider this example. Your insurance company wants to promote a new mobile app that lets customers manage their insurance policies. You want to promote this app when users access your Page from a smartphone. In this case, you can create a promotional banner for your new smartphone app and make this banner visible only on the Smartphone viewports.
 
 To do so,
 
-1. From the default Desktop viewport, add a new Fragment with your promotional text.
+1. From the default Desktop viewport, add a new Fragment with your the promotional text for the smartphone app.
 1. Hide the Fragment with your promotional text. The Fragment is now hidden in all viewports.
 1. Click the *Landscape Phone* viewport. Changes on this viewport affect the Portrait Phone viewport as well.
 1. [Change the Fragment visibility](#changing-fragment-visibility) to unhide your promotional text in the Phone viewports.
@@ -65,4 +89,4 @@ To restore the default viewport visibility, click on the viewport and click the 
 
 - [Managing Page Fragments](./managing-page-fragments.md)
 - [Creating Content Page Compositions Using the Container Fragment](../../creating-pages/building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment.md)
-- [Page Fragments User Inteface Reference](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md)
+- [Page Fragments User Interface Reference](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md)
