@@ -96,6 +96,6 @@ The UI helps people do work, [collaborate](../../collaboration-and-social/collab
 
 * [Themes](../../site-building/site-appearance/themes/introduction-to-themes.md): Plugins for styling Sites with a unique look and feel.
 
-The [UI architecture](./ui_architecture.html) articles dig deeper into developing and customizing UI components.
+The [UI architecture](./ui-architecture.html) articles dig deeper into developing and customizing UI components.
 
-As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, we dive into the Core to describe class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](ui-architecture/ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
+As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, we dive into the Core to describe class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](./ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
