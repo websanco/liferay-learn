@@ -1,6 +1,6 @@
 # Installing on WildFly
 
-Installing on WildFly requires installing the DXP WAR, installing dependencies, configuring WebSphere, and deploying DXP on WildFly. You must also configure your database and mail server connections.
+Installing on WildFly requires installing the DXP WAR, installing dependencies, configuring WildFly, and deploying DXP on WildFly. You must also configure your database and mail server connections.
 
 ## Prerequisites
 
@@ -64,10 +64,9 @@ For DXP 7.3 and earlier, follow these additional steps:
 
 **Checkpoint:**
 
-1. The contents of the Dependencies zip have been placed in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder.
+1. The OSGi dependencies have been unzipped in the `[Liferay Home]/osgi` folder.
 1. Your database vendor's JDBC driver is installed.
 1. The `module.xml` has listed all JARs in the `<resource-root>` elements.
-1. The OSGi dependencies have been unzipped in the `osgi` folder located inside the `[Liferay Home]` folder.
 
 ### Running DXP on WildFly in Standalone Mode vs. Domain Mode
 
@@ -92,13 +91,13 @@ Configuring WildFly to run DXP includes these things:
 
 Make the following modifications to `$WILDFLY_HOME/standalone/configuration/standalone.xml`:
 
-1. In the `<jsp-config>` tag, set the Java VM compatibility for Liferay source and class files. They are compatible with Java 8 by default.
+1. Configure Java 8 VM compatibility for the servlet container's JSPs. In the `<jsp-config>` tag of the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...`'s `<servlet-container name="default">` element, set `development`, `source-vm`, and `target-vm` attributes like this:
 
     ```xml
     <jsp-config development="true" source-vm="1.8" target-vm="1.8" />
     ```
 
-1. Locate the closing `</extensions>` tag. Directly beneath that tag, insert the following system properties:
+1. Locate the closing `</extensions>` tag in the `<server>`s. Directly beneath that closing tag, insert the following system properties, if they don't already exist:
 
     ```xml
     <system-properties>
@@ -107,21 +106,19 @@ Make the following modifications to `$WILDFLY_HOME/standalone/configuration/stan
     </system-properties>
     ```
 
-1. Add the following `<filter-spec>` tag within the `<console-handler>` tag which is directly below the `<level name="INFO"/>` tag:
+1. In the `<subsystem xmlns="urn:jboss:domain:logging:8.0">`'s `<console-handler>` tag, add the following `<filter-spec>` tag directly below the `<level name="INFO"/>` tag.
 
     ```xml
     <filter-spec value="not(any(match(&quot;WFLYSRV0059&quot;),match(&quot;WFLYEE0007&quot;)))" />
     ```
 
-1. Add a timeout for the deployment scanner by setting `deployment-timeout="600"` as seen in the excerpt below.
+1. Add a `deployment-timeout="600"` setting to the `<deployment-scanner>` tag in the `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">` element. For example,
 
     ```xml
-    <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
-        <deployment-scanner deployment-timeout="600" path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>
-    </subsystem>
+    <deployment-scanner deployment-timeout="600" path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>
     ```
 
-1. Add the following JAAS security domain to the security subsystem `<security-domains>` defined in the element `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">`.
+1. Add Liferay's JAAS security domain to the `<subsystem xmlns="urn:jboss:domain:security:2.0">`'s `<security-domains>` element. Here is the domain code to add:
 
     ```xml
     <security-domain name="PortalRealm">
@@ -131,7 +128,7 @@ Make the following modifications to `$WILDFLY_HOME/standalone/configuration/stan
     </security-domain>
     ```
 
-1. Remove the welcome content code snippets:
+1. Remove these welcome content elements from the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...>` element:
 
     ```xml
     <location name="/" handler="welcome-content"/>
@@ -157,7 +154,7 @@ Before continuing, verify the following properties have been set in the `standal
 
 Next, configure the JVM and startup scripts:
 
-In the `$WILDFLY_HOME/bin/` folder, open the standalone domain's configuration script file `standalone.conf` (`standalone.conf.bat` on Windows):
+In the `$WILDFLY_HOME/bin/` folder, open the standalone domain's configuration script file `standalone.conf`:
 
 * Set the file encoding to `UTF-8`
 * Set the user time zone to `GMT`
@@ -170,7 +167,7 @@ For DXP to work properly, the application server JVM must use the `GMT` time zon
 
 Make the following edits to your `standalone.conf` script.
 
-1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, replace this `JAVA_OPTS` statement:
+1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, remove the JVM sizing options from the `JAVA_OPTS` assignment. For example, replace this
 
     ```bash
     JAVA_OPTS="-Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true"
@@ -179,13 +176,13 @@ Make the following edits to your `standalone.conf` script.
     with this:
 
     ```bash
-    JAVA_OPTS=
+    JAVA_OPTS="-Djava.net.preferIPv4Stack=true"
     ```
 
-1. Add the following statement to the bottom of the file:
+1. Add this Java options setting at the end of the file:
 
     ```bash
-    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 The Java options and memory arguments are explained below.
@@ -226,6 +223,7 @@ If you're using the IBM JDK with the WildFly server, complete these additional s
     ```xml
     <path name="com/sun/crypto" />
     <path name="com/sun/crypto/provider" />
+    <path name="com/sun/image/codec/jpeg" />
     <path name="com/sun/org/apache/xml/internal/resolver" />
     <path name="com/sun/org/apache/xml/internal/resolver/tools" />
     ```
@@ -338,7 +336,7 @@ If you want to manage your mail session with WildFly, follow these steps:
 ## Deploying DXP
 
 1. To trigger deploying `ROOT.war`, create an empty file called `ROOT.war.dodeploy` in the `$WILDFLY_HOME/standalone/deployments/` folder.
-1. Start the WildFly application server by navigating to `$WILDFLY_HOME/bin` and running `standalone.bat` or `standalone.sh`. WildFly detects the `ROOT.war.dodeploy` file and deploys the web application matching the file prefix (i.e., `ROOT.war`).
+1. Start the WildFly application server by navigating to `$WILDFLY_HOME/bin` and running `standalone.sh`. WildFly detects the `ROOT.war.dodeploy` file and deploys the web application matching the file prefix (i.e., `ROOT.war`).
 
 After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. You can turn off these messages by adjusting the app server's logging level or log filters.
 
