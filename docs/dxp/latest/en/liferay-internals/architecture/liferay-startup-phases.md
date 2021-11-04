@@ -18,11 +18,11 @@ The Portal Context Initialization phase runs first with these tasks:
 
 1. OSGi framework is initialized.
 
-1. Spring Phase 1: INFRASTRUCTURE beans specified by the Spring context files listed in Portal property [`spring.infrastructure.configs`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) are loaded. 
+1. Spring Phase 1: INFRASTRUCTURE beans specified by the Spring context files listed in the [`spring.infrastructure.configs`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) Portal Property are loaded. 
 
 
-1. INFRASTRUCTURE beans are published as [OSGi services](/docs/7-2/frameworks/-/knowledge_base/f/declarative-services).<!-- Is this the right article?  [OSGi services](./using-an-osgi-service.md) -->
-   
+1. INFRASTRUCTURE beans are published as [OSGi services](./osgi-and-modularity.md).
+
 1. OSGi framework starts.
 
     1. Static bundles are installed and started.
@@ -32,16 +32,16 @@ The Portal Context Initialization phase runs first with these tasks:
 
 1. Spring Phase 2: MAIN
 
-    1. Load Spring beans specified by the Spring context files listed in Portal property [`spring.configs`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring).
+    1. Load Spring beans specified by the Spring context files listed in the [`spring.configs`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) Portal Property.
     1. A [`ModuleServiceLifecycle` event service](#moduleservicelifecycle-events) with a service property `module.service.lifecycle` value `spring.initialized` (i.e., [`SPRING_INITIALIZED`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/constant-values.html#com.liferay.portal.kernel.module.framework.ModuleServiceLifecycle.SPRING_INITIALIZED)) registers.
 
-1. MAIN Spring beans are published as [OSGi services](/docs/7-2/frameworks/-/knowledge_base/f/declarative-services). <!-- Is this the right article?  [OSGi services](./using-an-osgi-service.md). -->
+1. MAIN Spring beans are published as OSGi services.
 
 ### Main Servlet Initialization Phase
 
 Here's the phase's activity sequence:
 
-1. The [`ModuleServiceLifecycle` event service](#moduleservicelifecycle-events) is updated with the service property `module.service.lifecycle` value  `database.initialized` (i.e., [`DATABASE_INITIALIZED`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/constant-values.html#com.liferay.portal.kernel.module.framework.ModuleServiceLifecycle.DATABASE_INITIALIZED)).
+1. The [`ModuleServiceLifecycle` event service](#moduleservicelifecycle-events) is updated with the service property `module.service.lifecycle` value `database.initialized` (i.e., [`DATABASE_INITIALIZED`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/constant-values.html#com.liferay.portal.kernel.module.framework.ModuleServiceLifecycle.DATABASE_INITIALIZED)).
 
 1. The [Global Startup event](#portal-startup-events) fires.
 
@@ -57,15 +57,15 @@ The ways to act on events depends on the event type. These subsections describe 
 
 ### ModuleServiceLifecycle Events
 
-[You can wait for and act on `ModuleServiceLifecycle` event services.](/docs/7-2/customization/-/knowledge_base/c/waiting-on-lifecycle-events) TODO
+You can wait for and act on `ModuleServiceLifecycle` event services. See Listening on Liferay Lifecycle Events (Coming soon).
 
 ### Liferay Startup Phases
 
-In your `liferay-portal-ext.properties` file, you can override the following  properties and add your own [`LifecycleAction`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/events/LifecycleEvent.html) classes to the list of action classes to invoke on the events.
+In a [Portal Properties](../../installation-and-upgrades/reference/portal-properties.md) file (e.g., `portal-ext.properties`), you can override the following properties and add your own [`LifecycleAction`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/events/LifecycleEvent.html) classes to the list of action classes to invoke on events.
 
-**Global Startup Event** runs once when Liferay DXP initializes. The [`global.startup.events` property](hhttps://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Startup%20Events) defines the event's default actions.
+**Global Startup Event** runs once when Liferay DXP/Portal initializes. The [`global.startup.events` property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Startup%20Events) defines the event's default actions.
 
-**Application Startup Events** runs once for each Site instance Liferay DXP initializes. The [`application.startup.events` property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Startup%20Events) defines the event's default actions.
+**Application Startup Events** runs once for each Site instance DXP initializes. The [`application.startup.events` property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Startup%20Events) defines the event's default actions.
 
 ## Additional Information
 
