@@ -1,16 +1,16 @@
 # Architecture
 
-Liferay DXP and Portal's architecture has three parts: 
+The Liferay DXP/Portal architecture has three parts: 
 
-1. **Core:** Bootstraps DXP/Portal and its [frameworks](../../developing-applications/core-frameworks.md). The Core provides a runtime environment for managing services, UI components, and customizations.
+1. **Core:** Bootstraps DXP and its [frameworks](../../developing-applications/core-frameworks.md). The Core provides a runtime environment for managing services, UI components, and customizations.
 
-1. **Services:** Expose DXP/Portal functionality and custom functionality via Java APIs and web APIs.
+1. **Services:** Expose DXP functionality and custom functionality via Java APIs and web APIs.
 
 1. **UI:** The optional web application UI for adding portals, sites, pages, widgets, and content.
 
-You can use the UI and services together or focus solely on using services via [REST web APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md).
+You can use the UI and services together or focus solely on using services via [REST APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md) or [GraphQL APIs](../../headless-delivery/consuming-apis/consuming-graphql-apis.md).
 
-![Portal sites contain content and widgets. DXP/Portal can also be used "headless"---without the UI.](./architecture/images/01.png)
+![Sites contain content and widgets. DXP can also be used "headless"---without the UI.](./architecture/images/01.png)
 
 The architecture satisfies these requirements:
 
@@ -24,7 +24,7 @@ The Core supports UI and service deployments and orchestrates wiring them togeth
 
 ## Core
 
-DXP/Portal is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core-frameworks.md).
+DXP is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core-frameworks.md).
 
 There are frameworks for these things and more:
 
@@ -51,13 +51,13 @@ There are frameworks for these things and more:
 
 The Core provides the component runtime environment for the frameworks, services, and UI. Here are some component examples:
 
-* [Services](../../liferay-internals/fundamentals/apis-as-osgi-services.md)
-* [Service customizations](../../liferay-internals/extending-liferay/overriding-osgi-services.md)
+* [Services](../fundamentals/apis-as-osgi-services.md)
+* [Service customizations](../extending-liferay/overriding-osgi-services.md)
 * [Language Keys \(localized messages\)](../../developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages.md)
 * [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing-a-javascript-application.html)
-* [JSP customizations](../../liferay-internals/extending-liferay/customizing-jsps.md)
+* [JSP customizations](../extending-liferay/customizing-jsps.md)
 * [Portlets \(templates, controllers, and resources\)](../../developing-applications/developing-a-java-web-application/reference/portlets.md)
-* [Portlet filters](../../liferay-internals/extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter.md)
+* [Portlet filters](../extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter.md)
 * [Themes](../../site-building/site-appearance/themes/introduction-to-themes.md)
 
 The following figure shows these component types in the runtime environment.
@@ -66,11 +66,11 @@ The following figure shows these component types in the runtime environment.
 
 The runtime environment supports adding, replacing, and customizing components on-the-fly. This makes the following scenarios possible:
 
-**Replacement:** If the `ServiceC Impl 2` component has a higher ranking than existing component `ServiceC Impl 1`, `ServiceC Impl 2` is used in its place.
+**Replacement:** If the `ServiceC Impl 2` component has a higher ranking than existing component `ServiceC Impl 1`, `ServiceC Impl 2` is used.
 
 **Customization:** The `PortletA Filter` intercepts and modifies requests to and responses from `PortletA`, affecting the content `PortletA` displays.
 
-Component WAR and module JAR projects install as [OSGi bundles](https://www.osgi.org/) (modules). Liferay's OSGi framework defines the module life cycle, enforces dependencies, defines the class loading structure, and provides an API and CLI ([Felix Gogo Shell](../../liferay-internals/fundamentals/using-an-osgi-service.md)) for managing modules and components. The Core is configured via [portal properties files](../../installation-and-upgrades/reference/portal-properties.md) and [System Settings](../../system-administration/configuring-liferay/system-settings.md).
+Component WAR and [module JAR projects](../fundamentals/module-projects.md) install as [OSGi bundles](https://www.osgi.org/) (modules). Liferay's OSGi framework defines the module life cycle, enforces dependencies, defines the class loading structure, and provides an API and CLI ([Felix Gogo Shell](../fundamentals/using-an-osgi-service.md)) for managing modules and components. The Core is configured via [Portal Properties files](../../installation-and-upgrades/reference/portal-properties.md) and [System Settings](../../system-administration/configuring-liferay/system-settings.md).
 
 The service components provide business functionality.
 
@@ -78,19 +78,19 @@ The service components provide business functionality.
 
 Business logic is implemented in services deployed to the component runtime environment. Built-in Core services and framework services operate on models such as [Users](../../users-and-permissions/users/understanding-users.md), [Roles](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md), [Web Content](../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md), [Documents and Media](../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), and more. You can introduce new models and functionality through custom services. Service components can access each other via dependency injection.
 
-Front-end applications invoke the services to do work. You can deploy Java-based applications that call services directly using the Java APIs, and any web-based (Java and non-Java) application, whether deployed on DXP/Portal or not, can use the web APIs, which include [headless REST APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md) that conform to the [OpenAPI](https://swagger.io/docs/specification/about/) standard and include plain web/REST services. The following figure shows applications and external clients invoking Liferay services.
+Front-end applications invoke the services to do work. You can deploy Java-based applications that call services directly using the Java APIs. Any web-based (Java and non-Java) application, whether deployed on DXP or not, can use the web APIs, including [REST APIs](../../headless-delivery/consuming-apis/consuming-rest-services.md) that conform to the [OpenAPI](https://swagger.io/docs/specification/about/) standard, [GraphQL APIs](../../headless-delivery/consuming-apis/consuming-graphql-apis.md), and plain web/REST services. The following figure shows applications and external clients invoking Liferay services.
 
 ![Local and remote applications can invoke services via REST web APIs. Java-based portlets can also invoke services via Java APIs.](./architecture/images/03.png)
 
-Liferay services are built using [Service Builder](../../developing-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md). The services are easy to [override and extend](../../liferay-internals/extending-liferay/overriding-osgi-services.md) too.
+Liferay services are built using [Service Builder](../../developing-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md). The services are easy to [override and extend](../extending-liferay/overriding-osgi-services.md) too.
 
 The web-based UI makes content and service functionality available in browsers.
 
 ## UI
 
-The UI helps people do work, [collaborate](../../collaboration-and-social/collaboration-and-social-overview.md), and [enjoy content](../../content_authoring_and_management.html). The UI consists of
+The UI helps people do work, [collaborate](../../collaboration-and-social/collaboration-and-social-overview.md), and [enjoy content](../../content_authoring_and_management.html). Here's what the UI consists of:
 
-* [DXP/Portal application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
+* [DXP application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
 
 * [Applications](../../developing_applications.html): Widgets that provide a user interface for services already deployed. 
 
@@ -98,4 +98,4 @@ The UI helps people do work, [collaborate](../../collaboration-and-social/collab
 
 The [UI architecture](./ui-architecture.html) articles dig deeper into developing and customizing UI components.
 
-As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, we dive into the Core to describe class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](./ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
+As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, dive into the Core to learn class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](./ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
