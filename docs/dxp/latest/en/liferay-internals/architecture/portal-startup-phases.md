@@ -59,7 +59,7 @@ The ways to act on events depends on the event type. These subsections describe 
 
 [You can wait for and act on `ModuleServiceLifecycle` event services.](/docs/7-2/customization/-/knowledge_base/c/waiting-on-lifecycle-events) TODO
 
-### Portal Startup Events
+### Liferay Startup Phases
 
 In your `liferay-portal-ext.properties` file, you can override the following  properties and add your own [`LifecycleAction`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/events/LifecycleEvent.html) classes to the list of action classes to invoke on the events.
 
@@ -67,8 +67,8 @@ In your `liferay-portal-ext.properties` file, you can override the following  pr
 
 **Application Startup Events** runs once for each Site instance Liferay DXP initializes. The [`application.startup.events` property](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Startup%20Events) defines the event's default actions.
 
-## Related Topics
+## Additional Information
 
-[Waiting on Lifecycle Events](/docs/7-2/customization/-/knowledge_base/c/waiting-on-lifecycle-events) TODO
-
-[OSGi Services and Dependency Injection with Declarative Services](/docs/7-2/frameworks/-/knowledge_base/f/declarative-services)  <!-- Is this the right article?    [OSGi services](./using-an-osgi-service.md). -->
+* Listening on Liferay Lifecycle Events (Coming soon)
+* [Module Lifecycle](./module-lifecycle.md)
+* [OSGi and Modularity](./osgi-and-modularity.md)
