@@ -127,4 +127,4 @@ If you're ready to develop your model layer, see [Service Builder](../data-frame
 * [Module Projects](../../liferay-internals/fundamentals/module-projects.md)
 * [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md)
 * [Fundamentals](../../liferay-internals/fundamentals.md)
-* [Architecture](../../liferay-internals/architecture/architecture.md)
+* [Architecture](../../liferay-internals/architecture.md)
