@@ -6,14 +6,14 @@ _Condition_ nodes are useful for acting  (transitioning, assigning, etc.) condit
 
 Conditions act as a gatekeeper by checking whether the specified conditions are met, and then acting on the asset---assigning the right reviewer, or transitioning to a certain task, based on those conditions.
 
-The [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Condition node:
+The [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Condition node:
 
 1. Navigate to the _Global Menu_ &rarr;  _Applications_ &rarr; _Workflow_ &rarr; _Process Builder_.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. In the workflow designer Canvas, enter a name for the workflow.
 1. Click the _Source_ tab.
 1. Click _Import A File_.
-1. Upload the [Category Specific Definition](./workflow-designer-overview/resources/category-specific-definition.xml).
+1. Upload the [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml).
 1. Click the _Diagram_ tab.
 1. Double Click on the _Condition_ node to configure the node's properties.
 1. Click _Value_ next to _Script_.
