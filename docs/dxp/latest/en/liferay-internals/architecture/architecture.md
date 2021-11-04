@@ -54,7 +54,7 @@ The Core provides the component runtime environment for the frameworks, services
 * [Services](../fundamentals/apis-as-osgi-services.md)
 * [Service customizations](../extending-liferay/overriding-osgi-services.md)
 * [Language Keys \(localized messages\)](../../developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages.md)
-* [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing-a-javascript-application.html)
+* [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing-a-javascript-application/using-react.md)
 * [JSP customizations](../extending-liferay/customizing-jsps.md)
 * [Portlets \(templates, controllers, and resources\)](../../developing-applications/developing-a-java-web-application/reference/portlets.md)
 * [Portlet filters](../extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter.md)
@@ -88,14 +88,14 @@ The web-based UI makes content and service functionality available in browsers.
 
 ## UI
 
-The UI helps people do work, [collaborate](../../collaboration-and-social/collaboration-and-social-overview.md), and [enjoy content](../../content_authoring_and_management.html). Here's what the UI consists of:
+The UI helps people do work, [collaborate](../../collaboration-and-social/collaboration-and-social-overview.md), and enjoy content. Here's what the UI consists of:
 
 * [DXP application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
 
-* [Applications](../../developing_applications.html): Widgets that provide a user interface for services already deployed. 
+* [Applications](../../developing-applications/developing-a-java-web-application.md): Widgets that provide a user interface for services already deployed. 
 
 * [Themes](../../site-building/site-appearance/themes/introduction-to-themes.md): Plugins for styling Sites with a unique look and feel.
 
-The [UI architecture](./ui-architecture.html) articles dig deeper into developing and customizing UI components.
+The [UI architecture](./ui-architecture.md) articles dig deeper into developing and customizing UI components.
 
 As you can see, the architecture supports developing services, UI components, and customizations. The architecture section covers Core, service, and UI topics. Next, dive into the Core to learn class loading, modularity, and more. But you can jump ahead to any service or [UI architecture](./ui-architecture.md) topics, if you like. Enjoy exploring the architecture!
