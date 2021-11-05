@@ -14,3 +14,4 @@ liferay-commerce-widgets/widget-reference.md
 
 ```{raw} html
 :file: liferay-commerce-widgets/landing.html
+```

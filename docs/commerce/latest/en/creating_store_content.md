@@ -20,3 +20,4 @@ creating-store-content/liferay-commerce-widgets.md
 
 ```{raw} html
 :file: creating-store-content/landing.html
+```
