@@ -1,6 +1,6 @@
 # Installing on JBoss EAP
 
-Installing on JBoss EAP requires installing the DXP WAR, installing dependencies, configuring JBoss, and deploying DXP. You must also configure your database and mail server connections.
+Installing on JBoss EAP requires installing the DXP WAR, installing dependencies, configuring JBoss, and deploying DXP on JBoss. You must also configure your database and mail server connections.
 
 ## Prerequisites
 
@@ -12,17 +12,21 @@ Download these files from the [Help Center](https://customer.liferay.com/downloa
 * OSGi Dependencies ZIP file
 * Dependencies ZIP file (DXP 7.3 and earlier)
 
-Note that [*Liferay Home*](../../reference/liferay-home.md) is the folder containing the JBoss server folder. After installing and deploying DXP, it generates `data`, `deploy`, and `logs` folders. `$JBOSS_HOME` refers to the JBoss server folder. This folder is usually named `jboss-eap-[version]`.
+The installation steps use these terms:
+
+[`[Liferay Home]`](../../reference/liferay-home.md): The folder containing the JBoss server folder (referred to as `$JBOSS_HOME`). After installing and deploying DXP, it generates `data`, `deploy`, and `logs` folders.
+
+`$JBOSS_HOME`: The JBoss server folder. It is usually named `jboss-eap-[version]`.
 
 ## Installing the DXP WAR
 
-1. If the folder `$JBOSS_HOME/standalone/deployments/ROOT.war` already exists in the JBoss installation, delete all of its subfolders and files. Otherwise, create a new folder called `$JBOSS_HOME/standalone/deployments/ROOT.war`.
-1. Unzip the DXP `.war` file into the `ROOT.war` folder.
+1. If you're starting with a clean JBoss installation and a `$JBOSS_HOME/standalone/deployments/ROOT.war` folder exists, delete all of its subfolders and files.
+1. Unzip the DXP WAR file into the `$JBOSS_HOME/standalone/deployments/ROOT.war` folder (create this folder if it doesn't exist).
 
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder (create this folder if it doesn't exist). Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to a folder called `$JBOSS_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist). Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 DXP includes a Hypersonic database that is useful for testing purposes. **Do not** use HSQL for production instances.
@@ -32,7 +36,7 @@ DXP includes a Hypersonic database that is useful for testing purposes. **Do not
 
 For DXP 7.3 and earlier, follow these additional steps:
 
-1. Unzip the Dependencies ZIP file to the `$JBOSS_HOME/modules/com/liferay/portal/main` folder (create this folder if it doesn't exist).
+1. Unzip the Dependencies ZIP file to a folder called `$JBOSS_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist).
 1. Create the file `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
 
     ```xml
@@ -68,10 +72,10 @@ JBoss EAP can be launched in either *standalone* mode or *domain* mode. Domain m
 
 DXP supports JBoss EAP when it runs in standalone mode but not when it runs in domain mode. DXP's auto-deploy does not work with a managed deployment, since JBoss manages the content of a managed deployment by copying files (exploded or non-exploded). This prevents JSP hooks and Ext plugins from working as intended. For example, JSP hooks don't work on JBoss EAP running in managed domain mode, since DXP's JSP override mechanism relies on the application server. Since JSP hooks and Ext plugins are deprecated, however, you may not be using them.
 
-The command line interface is recommended for domain mode deployments.
+If you use domain mode deployment, use the command line interface.
 
 ```{note}
-This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of instances running on JBoss EAP servers running in standalone mode. Please refer to the [clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
+This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the [clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## Configuring JBoss
@@ -84,13 +88,13 @@ Here are the JBoss configuration steps:
 
 Make the following modifications to `$JBOSS_HOME/standalone/configuration/standalone.xml`:
 
-1. In the `<jsp-config>` tag, set the Java VM compatibility for Liferay Java source and class files. They are compatible with Java 8 by default.
+1. Configure the servlet container to use Java 8 VM compatibility with JSPs. Locate the default servlet container `<servlet-container name="default">` in the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...` element. In the servlet container's `<jsp-config>` element, set `development`, `source-vm`, and `target-vm` attributes like this:
 
     ```xml
     <jsp-config development="true" source-vm="1.8" target-vm="1.8" />
     ```
 
-1. Locate the closing `</extensions>` tag. Directly beneath that tag, insert these system properties:
+1. Locate the closing `</extensions>` tag. Directly beneath that closing tag, insert the following system properties, if they don't already exist:
 
     ```xml
     <system-properties>
@@ -99,21 +103,19 @@ Make the following modifications to `$JBOSS_HOME/standalone/configuration/standa
     </system-properties>
     ```
 
-1. Add the following `<filter-spec>` tag within the `<console-handler>` tag, which is directly below the `<level name="INFO"/>` tag.
+1. Filter out `WFLYSRV0059` and `WFLYEE0007` messages from the log. In the `<subsystem xmlns="urn:jboss:domain:logging:8.0">` element's `<console-handler>` tag, add the following `<filter-spec>` tag directly below the `<level name="INFO"/>` tag.
 
     ```xml
     <filter-spec value="not(any(match(&quot;WFLYSRV0059&quot;),match(&quot;WFLYEE0007&quot;)))" />
     ```
 
-1. Add a timeout for the deployment scanner by setting `deployment-timeout="600"` as shown here:
+1. Add a deployment scanner timeout by adding a `deployment-timeout="600"` setting to the `<deployment-scanner>` tag in the `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">` element. For example,
 
     ```xml
-    <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
-        <deployment-scanner deployment-timeout="600" path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"/>
-    </subsystem>
+    <deployment-scanner deployment-timeout="600" path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>
     ```
 
-1. Add the following JAAS security domain to the security subsystem `<security-domains>` defined in the element `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">`.
+1. Add Liferay's JAAS security domain to the `<subsystem xmlns="urn:jboss:domain:security:2.0">`'s `<security-domains>` element. Here is the domain code to add:
 
     ```xml
     <security-domain name="PortalRealm">
@@ -123,17 +125,17 @@ Make the following modifications to `$JBOSS_HOME/standalone/configuration/standa
     </security-domain>
     ```
 
-1. Remove the welcome content code snippets:
+1. Comment out the welcome content elements from the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...>` element. For example,
 
     ```xml
-    <location name="/" handler="welcome-content"/>
+    <!--<location name="/" handler="welcome-content"/>-->
     ```
 
     and
 
     ```xml
     <handlers>
-        <file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>
+        <!--<file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>-->
     </handlers>
     ```
 
@@ -145,13 +147,11 @@ Before continuing, verify the following properties have been set in the `standal
 1. The new `<filter-spec>` is added.
 1. The `<deployment-timeout>` is set to `360`.
 1. The new `<security-domain>` is created.
-1. Welcome content is removed.
+1. Welcome content is disabled.
 
-Next, modify the configuration script.
+Next, configure the JVM and startup scripts:
 
-### Modifying the Configuration Script
-
-In the `$JBOSS_HOME/bin/` folder, modify the standalone domain's configuration script file `standalone.conf` (`standalone.conf.bat` on Windows):
+In the `$JBOSS_HOME/bin/` folder, modify the standalone domain's configuration script file `standalone.conf`:
 
 * Set the file encoding to `UTF-8`
 * Set the user time zone to `GMT`
@@ -164,8 +164,7 @@ DXP requires the application server JVM to use the `GMT` time zone and `UTF-8` f
 
 Make the following edits to your `standalone.conf` script.
 
-1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, replace the `JAVA_OPTS`
-    statement. For example, replace this:
+1. Below the `if [ "x$JAVA_OPTS" = "x" ];` statement, remove the JVM sizing options from the `JAVA_OPTS` assignment. For example, replace this
 
     ```bash
     JAVA_OPTS="-Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=2560m -Djava.net.preferIPv4Stack=true"
@@ -177,10 +176,10 @@ Make the following edits to your `standalone.conf` script.
     JAVA_OPTS="-Djava.net.preferIPv4Stack=true"
     ```
 
-1. Add the following statement to the bottom of the file:
+1. Add this Java options setting at the end of the file:
 
     ```bash
-    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 The Java options and memory arguments are explained below.
@@ -214,11 +213,11 @@ After installing DXP, these configurations (including these JVM options) can be 
 
 If you're using the IBM JDK with the JBoss server, complete these additional steps:
 
-1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert the following dependency within the `<dependencies>` element:
+1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert this dependency within the `<dependencies>` element:
 
     `<module name="ibm.jdk" />`
 
-1. Navigate to the `$JBOSS_HOME/modules/system/layers/base/sun/jdk/main/module.xml` file and insert the following path names inside the `<paths>...</paths>` element:
+1. Navigate to the `$JBOSS_HOME/modules/system/layers/base/sun/jdk/main/module.xml` file and insert these paths inside the `<paths>...</paths>` element:
 
     ```xml
     <path name="com/sun/crypto" />
@@ -229,8 +228,6 @@ If you're using the IBM JDK with the JBoss server, complete these additional ste
     ```
 
 The added paths resolve issues with portal deployment exceptions and image uploading problems.
-
-You completed the script modifications.
 
 ## Connect to a Database
 
@@ -331,8 +328,8 @@ If you want to configure the mail session in JBoss, follow these steps:
 
 ## Deploying DXP
 
-1. To trigger deployment of the `ROOT.war` file, create an empty file named `ROOT.war.dodeploy` in the `$JBOSS_HOME/standalone/deployments/` folder. On startup, JBoss detects this file and deploys it as a web application.
-1. Start the JBoss application server by navigating to `$JBOSS_HOME/bin` and running `standalone.sh` or `standalone.bat`.
+1. To trigger deployment `ROOT.war`, create an empty file named `ROOT.war.dodeploy` in the `$JBOSS_HOME/standalone/deployments/` folder.
+1. Start the JBoss application server by navigating to `$JBOSS_HOME/bin` and running `standalone.sh`. JBoss detects the `ROOT.war.dodeploy` file and deploys the web application matching the file prefix (i.e., `ROOT.war`).
 
 After deploying DXP, you may see excessive warnings and log messages such as the ones below, involving `PhaseOptimizer`. These are benign and can be ignored. You can turn off these messages by adjusting the app server's logging level or log filters.
 

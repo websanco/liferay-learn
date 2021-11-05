@@ -12,7 +12,11 @@ Download these files from the [Help Center](https://customer.liferay.com/downloa
 * OSGi Dependencies ZIP file
 * Dependencies ZIP file (DXP 7.3 and earlier)
 
-[`[Liferay Home]`](../../reference/liferay-home.md) is the folder containing the WildFly server folder. After installing and deploying DXP, the Liferay Home folder contains the WildFly server folder as well as `data`, `deploy`, `logs`, and `osgi` folders. `$WILDFLY_HOME` refers to the WildFly server folder. It is usually named `wildfly-[version]`.
+The installation steps use these terms:
+
+[`[Liferay Home]`](../../reference/liferay-home.md): The folder containing the WildFly server folder (referred to as `$WILDFLY_HOME`). After installing and deploying DXP, it generates `data`, `deploy`, and `logs` folders.
+
+`$WILDFLY_HOME`: The WildFly server folder. It is usually named `wildfly-[version]`.
 
 ## Installing the DXP WAR
 
@@ -22,7 +26,7 @@ Download these files from the [Help Center](https://customer.liferay.com/downloa
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main`. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist). Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production DXP instances.
@@ -32,7 +36,7 @@ A Hypersonic database is bundled with DXP and is useful for testing purposes. **
 
 For DXP 7.3 and earlier, follow these additional steps:
 
-1. Unzip the Dependencies ZIP file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main`.
+1. Unzip the Dependencies ZIP file to a folder called `$WILDFLY_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist).
 1. Create a file called `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies.
 
     ```xml
@@ -68,17 +72,17 @@ For DXP 7.3 and earlier, follow these additional steps:
 1. Your database vendor's JDBC driver is installed.
 1. The `module.xml` has listed all JARs in the `<resource-root>` elements.
 
-### Running DXP on WildFly in Standalone Mode vs. Domain Mode
+## Running DXP on WildFly in Standalone Mode vs. Domain Mode
 
 WildFly can be launched in either *standalone* mode or *domain* mode. Domain mode allows multiple application server instances to be managed from a single control point. A collection of such application servers is known as a *domain*. For more information on standalone mode vs. domain mode, please refer to the section on this topic in the [WildFly Admin Guide](https://docs.jboss.org/author/display/WFLY/Admin+Guide#AdminGuide-Operatingmodes).
 DXP fully supports WildFly in standalone mode but not in domain mode.
 
-Administrators can run DXP on WildFly in domain mode, but this method is not fully supported. In particular, DXP's auto-deploy does not work with a managed deployment, since WildFly manages the content of a managed deployment by copying files (exploded or non-exploded). This prevents JSP hooks and Ext plugins from working as intended. For example, JSP hooks don't work on WildFly running in managed domain mode, since DXP's JSP override mechanism relies on the application server. Since JSP hooks and Ext plugins are deprecated, however, you may not be using them.
+DXP supports WildFly when it runs in standalone mode but not when it runs in domain mode. DXP's auto-deploy does not work with a managed deployment, since WildFly manages the content of a managed deployment by copying files (exploded or non-exploded). This prevents JSP hooks and Ext plugins from working as intended. For example, JSP hooks don't work on WildFly running in managed domain mode, since DXP's JSP override mechanism relies on the application server. Since JSP hooks and Ext plugins are deprecated, however, you may not be using them.
 
-The command line interface is recommended for domain mode deployments.
+If you use domain mode deployment, use the command line interface.
 
 ```{note}
-This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
+This does not prevent DXP from running in a clustered environment on multiple WildFly servers. You can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the [clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## Configuring WildFly
@@ -91,7 +95,7 @@ Configuring WildFly to run DXP includes these things:
 
 Make the following modifications to `$WILDFLY_HOME/standalone/configuration/standalone.xml`:
 
-1. Configure Java 8 VM compatibility for the servlet container's JSPs. In the `<jsp-config>` tag of the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...`'s `<servlet-container name="default">` element, set `development`, `source-vm`, and `target-vm` attributes like this:
+1. Configure the servlet container to use Java 8 VM compatibility with JSPs. Locate the default servlet container `<servlet-container name="default">` in the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...` element. In the servlet container's `<jsp-config>` element, set `development`, `source-vm`, and `target-vm` attributes like this:
 
     ```xml
     <jsp-config development="true" source-vm="1.8" target-vm="1.8" />
@@ -106,13 +110,13 @@ Make the following modifications to `$WILDFLY_HOME/standalone/configuration/stan
     </system-properties>
     ```
 
-1. In the `<subsystem xmlns="urn:jboss:domain:logging:8.0">`'s `<console-handler>` tag, add the following `<filter-spec>` tag directly below the `<level name="INFO"/>` tag.
+1. Filter out `WFLYSRV0059` and `WFLYEE0007` messages from the log. In the `<subsystem xmlns="urn:jboss:domain:logging:8.0">` element's `<console-handler>` tag, add the following `<filter-spec>` tag directly below the `<level name="INFO"/>` tag.
 
     ```xml
     <filter-spec value="not(any(match(&quot;WFLYSRV0059&quot;),match(&quot;WFLYEE0007&quot;)))" />
     ```
 
-1. Add a `deployment-timeout="600"` setting to the `<deployment-scanner>` tag in the `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">` element. For example,
+1. Add a deployment scanner timeout by adding a `deployment-timeout="600"` setting to the `<deployment-scanner>` tag in the `<subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">` element. For example,
 
     ```xml
     <deployment-scanner deployment-timeout="600" path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>
@@ -128,17 +132,17 @@ Make the following modifications to `$WILDFLY_HOME/standalone/configuration/stan
     </security-domain>
     ```
 
-1. Remove these welcome content elements from the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...>` element:
+1. Comment out the welcome content elements from the `<subsystem xmlns="urn:jboss:domain:undertow:12.0" ...>` element. For example,
 
     ```xml
-    <location name="/" handler="welcome-content"/>
+    <!--<location name="/" handler="welcome-content"/>-->
     ```
 
     and
 
     ```xml
     <handlers>
-        <file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>
+        <!--<file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>-->
     </handlers>
     ```
 
@@ -150,7 +154,7 @@ Before continuing, verify the following properties have been set in the `standal
 1. The new `<filter-spec>` is added.
 1. The `<deployment-timeout>` is set to `600`.
 1. The new `<security-domain>` is created.
-1. Welcome content is removed.
+1. Welcome content is disabled.
 
 Next, configure the JVM and startup scripts:
 
@@ -162,7 +166,7 @@ In the `$WILDFLY_HOME/bin/` folder, open the standalone domain's configuration s
 * Increase the default amount of memory available.
 
 ```{important}
-For DXP to work properly, the application server JVM must use the `GMT` time zone and `UTF-8` file encoding.
+DXP requires the application server JVM to use the `GMT` time zone and `UTF-8` file encoding.
 ```
 
 Make the following edits to your `standalone.conf` script.
