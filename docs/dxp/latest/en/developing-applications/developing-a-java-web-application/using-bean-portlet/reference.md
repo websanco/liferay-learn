@@ -3,12 +3,11 @@
 ```{toctree}
 :maxdepth: 3
 
-reference/portlets.md
-reference/portlet-3-opt-in.md
+reference/cdi-portlet-predefined-beans.md
 ```
 
 ```{raw} html
-:file: ../../landingpage_template.html
+:file: ../../../landingpage_template.html
 ```
 
 ```{raw} html
