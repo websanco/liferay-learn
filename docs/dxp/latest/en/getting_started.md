@@ -3,6 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
+getting-started/whats-new-74.md
 getting-started/whats-new-73.md
 getting-started/starting-with-a-docker-image.md
 getting-started/introduction-to-the-admin-account.md
