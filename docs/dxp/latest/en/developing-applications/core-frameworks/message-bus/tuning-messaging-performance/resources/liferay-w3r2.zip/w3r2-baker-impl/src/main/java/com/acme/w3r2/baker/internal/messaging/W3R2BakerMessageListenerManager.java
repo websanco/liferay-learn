@@ -25,11 +25,9 @@ public class W3R2BakerMessageListenerManager {
 					@Override
 					public void receive(Message message) {
 						if (_log.isInfoEnabled()) {
-							Object payload = message.getPayload();
-
 							_log.info(
 								"Received message payload " +
-									payload.toString());
+									String.valueOf(message.getPayload()));
 						}
 					}
 
