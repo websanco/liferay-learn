@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP 7.4+
 
-[Fragments](../using-fragments/using-page-fragments.md) allow you to customize the layout and information on your [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Starting with Liferay DXP 7.4, you can configure the Fragments' visibility based on the user's screen size. For instance, you can configure a Fragment to be hidden for a user accessing your Page from a computer, while making the Fragment visible for a user accessing the same Page from a smartphone.
+[Fragments](../using-fragments/using-page-fragments.md) allow you to customize the layout and information on your [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md). Starting with Liferay DXP 7.4, you can configure the Fragments' visibility based on the user's screen size. For instance, you can configure a Fragment to be hidden for a user accessing your Page from a computer while making the Fragment visible for a user accessing the same Page from a smartphone.
 
 You configure the Fragment visibility for each screen size from the [Content Page editor](../contnet-page-../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md), using the viewport controls on the top of the Page editor.
 
@@ -21,7 +21,7 @@ The Fragment's visibility and styles you apply to a viewport on the left-hand si
 
 ![Viewport on the right side inherit the configuration from viewports in the left side.](./configuring-fragment-visibility/images/07.png)
 
-If, from this setup, you now make the Fragment visible on the Landscape Phone (for example), the Fragment stays visible on that viewport and the Portrait Phone viewport. This tables summarizes the new configuration:
+From this setup, if you now make the Fragment visible on the Landscape Phone (for example), the Fragment stays visible on that viewport and the Portrait Phone viewport. This table summarizes the new configuration:
 
 | Viewport | Visible? | Fragment Visibility Setting |
 | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ If, from this setup, you now make the Fragment visible on the Landscape Phone (f
 | Landscape Phone (C) | Yes | Visible |
 | Portrait Phone (D) | Yes | Default / Inherited |
 
-From a user experience perspective, in this example, the Fragment is hidden when accessing the Page from a computer, but it's visible when using a smartphone.
+In this example, the Fragment is hidden when accessing the Page from a computer, but it's visible when using a smartphone.
 
 ## Content Page Editor Viewports Behavior
 
@@ -60,7 +60,7 @@ You can change the Fragment visibility on your Content Pages in three different 
       ![Changing the Fragment's visibility from the Page Elements area in the Content Page editor sidebar.](./configuring-fragment-visibility/images/04.gif)
 
 ```{tip}
-To restore a Fragment you have hidden, from the Browser Page Elements area, click the *Unhide* (![Unhide](../../../images/icon-preview.png)) control next to the Page Fragment.
+To restore a hidden Fragment, from the Browser Page Elements area, click the *Unhide* (![Unhide](../../../images/icon-preview.png)) control next to the Page Fragment.
 ```
 
 ## Example: Using Fragment Visibility
@@ -69,7 +69,7 @@ Consider this example. Your insurance company wants to promote a new mobile app 
 
 To do so,
 
-1. From the default Desktop viewport, add a new Fragment with your the promotional text for the smartphone app.
+1. From the default Desktop viewport, add a new Fragment with your promotional text for the smartphone app.
 1. Hide the Fragment with your promotional text. The Fragment is now hidden in all viewports.
 1. Click the *Landscape Phone* viewport. Changes on this viewport affect the Portrait Phone viewport as well.
 1. [Change the Fragment visibility](#changing-fragment-visibility) to unhide your promotional text in the Phone viewports.

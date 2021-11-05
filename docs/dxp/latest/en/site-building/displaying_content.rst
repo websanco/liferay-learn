@@ -6,7 +6,7 @@ Displaying Content
 
    displaying-content/displaying-content-intro.md
    displaying-content/using_the_asset_publisher_widget.rst
-   displaying-content/using_fragments.rst
+   displaying-content/using-fragments.md
    displaying-content/using_display_page_templates.rst
    displaying-content/additional_content_display_options.rst
 
