@@ -2,12 +2,12 @@
 
 Liferay's tools and instructions facilitate upgrading DXP and Portal environments safely and quickly. Non-clustered environments that have small data sets, for example can be upgraded using a [Docker image](./upgrading-via-docker.md). DXP environments and Portal environments that are complex, have larger data sets, or have many customizations are upgraded using the [Database Upgrade Tool](./using-the-database-upgrade-tool.md).
 
-```warning::
-   **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your database and installation before upgrading. Testing the upgrade process on backup copies is advised.
+```{warning}
+**Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your database and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
-```note::
-   `Upgrading via Docker <./upgrading-via-docker.md>`_ is the easiest way to upgrade a database for a small, casual Portal environment.
+```{note}
+[Upgrading via Docker](./upgrading-via-docker.md) is the easiest way to upgrade a database for a small, casual Portal environment.
 ```
 
 Before starting your upgrade, consider what may be involved. The upgrade topics fall into these categories:
@@ -36,8 +36,8 @@ If you're upgrading Liferay Portal to a new GA for the same minor version (for e
 
 If your path includes upgrading to Liferay Portal 6.2, follow the [Liferay Portal 6.2 upgrade instructions](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay) first.
 
-```note::
-   Some new Liferay versions rename table columns. Any `virtual columns <https://en.wikipedia.org/wiki/Virtual_column>`_ associated with these columns inhibit database upgrade and must be removed before the upgrade. After the upgrade, you can add equivalent virtual columns. See `Troubleshooting Upgrades <../reference/troubleshooting-upgrades.md>`_ for details.
+```{note}
+Some new Liferay versions rename table columns. Any [virtual columns](https://en.wikipedia.org/wiki/Virtual_column) associated with these columns inhibit database upgrade and must be removed before the upgrade. After the upgrade, you can add equivalent virtual columns. See [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md) for details.
 ```
 
 ### Review Deprecations and Changes to Default Settings
@@ -61,8 +61,8 @@ If you're using [Commerce](https://learn.liferay.com/commerce/latest/en/index.ht
 
 Before upgrading the Liferay database, update your Marketplace apps for the Liferay version you're currently on and test the updated apps. Skipping app updates can be problematic and can prevent the apps from enabling on the new Liferay version.
 
-```important::
-   Do this on your current installation before database upgrade.
+```{important}
+Do this on your current installation before database upgrade.
 ```
 
 Your app's latest version for your new Liferay version may have database schema changes that require data upgrades. You can upgrade the app data *during* or *after* your Liferay database upgrade.
@@ -79,12 +79,12 @@ Plugins (e.g., themes, apps, and customizations) you've developed must be adapte
 
 Configurations and supporting infrastructure must be migrated and updated from your previous installation to your new one.
 
-```important::
-   If you're upgrading from 6.2 or earlier, update your file store configuration. See the `Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>`_ for more information.
+```{important}
+If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) for more information.
 ```
 
-```important::
-   If you've overridden the ``locales`` `Portal Property <../../../installation-and-upgrades/reference/portal-properties.md>`_, override it in the new installation before upgrading. This assures upgrading data for all of your locales.
+```{important}
+If you've overridden the `locales` [Portal Property](../../../installation-and-upgrades/reference/portal-properties.md), override it in the new installation before upgrading. This assures upgrading data for all of your locales.
 ```
 
 You can wait until after database upgrade to update your other settings. See these [Migrating Configurations and Properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md) for more information.

@@ -32,8 +32,8 @@ Here are the settings updates DXP upgrade processes require:
 * [Database driver](#database-drivers)
 * Document library store implementation name (See [Updating the File Store](./updating-the-file-store.md#updating-the-store-implementation-class-name))
 
-```important::
-   Check your Marketplace apps and custom code for settings updates they require.
+```{important}
+Check your Marketplace apps and custom code for settings updates they require.
 ```
 
 ### Database Drivers
@@ -50,8 +50,8 @@ See the [Database Templates](../../reference/database-templates.md) for more dri
 
 ## Migrating Portal Properties
 
-```important::
-   If you've overridden the ``locales`` `Portal Property <../../../installation-and-upgrades/reference/portal-properties.md>`_, override it in the new installation before upgrading. This assures upgrading data for all of your locales.
+```{important}
+If you've overridden the `locales` [Portal Property](../../../installation-and-upgrades/reference/portal-properties.md), override it in the new installation before upgrading. This assures upgrading data for all of your locales.
 ```
 
 The properties discussed here can be updated after database upgrade. Migrating properties involves these actions:
@@ -115,8 +115,8 @@ rootDir="{document_library_path}"
 
 Put the `.config` files in a folder called `[Liferay Home]/osgi/configs`.
 
-```tip::
-   The Control Panel's *System Settings* screens (under *Configuration*) manage the OSGi Config Admin values. These screens are the most accurate way to create ``.config`` files. Find the screen that configures the feature you want to configure, click *Save*, and then use the options button to `export the screen's configuration <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ to a ``.config`` file.
+```{tip}
+The Control Panel's *System Settings* screens (under *Configuration*) manage the OSGi Config Admin values. These screens are the most accurate way to create ``.config`` files. Find the screen that configures the feature you want to configure, click *Save*, and then use the options button to [export the screen's configuration](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) to a `.config` file.
 ```
 
 ### Special Property Migration Considerations
@@ -137,8 +137,8 @@ There are resources for migrating properties related to specific environments, L
     sprite.enabled=true
     ```
 
-   ```note::
-      You can build image sprites using any framework you like and deploy them in your plugins.
+   ```{note}
+   You can build image sprites using any framework you like and deploy them in your plugins.
    ```
 
 ## Next Steps
