@@ -2,8 +2,17 @@
 
 [Elasticsearch replicas](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules.html#index-modules-settings) protect against a node going down, but they won't help you with a catastrophic failure. Only good backup practices can help you then.
 
-<!-- Revise this part about the search tuning indexes being stored only in the index--for 7.4 it's likely not true anymore -->
-One good occasion to back up and test restoring your Elasticsearch indexes is before you [upgrade](./upgrading-search-for-liferay-73.md). In fact, taking a [snapshot of your app-specific indexes (like Liferay's Search Tuning indexes)](#backing-up-and-restoring-indexes-used-for-primary-storage) is essential if your data is stored only in the search index. The snapshot can be used to reindex your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
+## Backing Up Indexes Before Upgrading
+
+It's best practice to back up the indexes under all upgrade scenarios, even if the indexed data can be restored by re-indexing from Liferay's database. Taking a [snapshot of your app-specific indexes](#backing-up-and-restoring-indexes-used-for-primary-storage) (like Liferay's Search Tuning indexes in Liferay 7.2 and 7.3) is essential if your data is stored only in the search index. The snapshot can be used to reindex your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
+
+Here are some representative upgrade scenarios:
+
+* Upgrading the Elasticsearch cluster independently of Liferay: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
+* Upgrading Liferay and connecting to the same Elasticsearch cluster: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
+* Upgrading Liferay and connecting to a different Elasticsearch cluster: backing up all indexes is recommended. Restoring from snapshot is necessary for all primary storage indexes. If you're using either of Liferay's search tuning features (Result Ranking and Synonym Sets), you must also [import the indexed data into the Liferay database](upgrading-search-with-liferay.md#importing-the-search-tuning-indexes-in-7.4). 
+
+## Creating Elasticsearch Cluster Backups
 
 ```{tip}
 It's convenient to create and manage snapshots via the [Kibana 7.x UI](https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html)_.
@@ -21,7 +30,7 @@ Back up your Elasticsearch cluster and test restoring the backup in three steps:
 For more detailed information, refer to Elastic's [Elasticsearch administration guide](https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html), and in particular to the [Snapshot and Restore module](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html).
 ```
 
-## Create a Repository
+### Create a Repository
 
 First [create a repository](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-register-repository.html) to store your snapshots. Here are the supported repository types:
 
@@ -58,7 +67,7 @@ If you created the repository correctly, the command returns this result:
 
 Now that the repository exists, create a snapshot.
 
-## Take a Snapshot of the Cluster
+### Take a Snapshot of the Cluster
 
 The easiest snapshot approach is to create a [snapshot of all the indexes in your cluster](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-take-snapshot.html). For example,
 
@@ -190,8 +199,6 @@ Nobody likes catastrophic failure on a production system, but Elasticsearch's AP
 
 ## Backing Up and Restoring Indexes Used for Primary Storage
 
-<!-- verify whether anything has changed--can you simply reindex now on 7.4? probably still needed because on 7.3 customers may have non-db-backed tuning data. also, when a customer upgrades to the new tuning paradigm where data is stored in the DB and tunings cane be re-indexed, how can a customer bring their index-only tuning data into the db? -->
-
 Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md) on Liferay 7.2 and 7.3. There are no records for these applications in the database.
 
 You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to back up and restore the Search Tuning indexes.
@@ -234,7 +241,7 @@ You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/
     }
     ```
 
-   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated from the database, like the Synonym Sets and Result Rankings indexes.
+   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated from the database, like the Synonym Sets and Result Rankings indexes in Liferay 7.2 and 7.3.
 
 1. To [restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-restore-snapshot.html) specific indexes from a snapshot using a different name, run a `restore` API call similar to this:
 
