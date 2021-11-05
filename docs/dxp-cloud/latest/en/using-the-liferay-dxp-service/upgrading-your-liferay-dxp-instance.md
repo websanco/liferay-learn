@@ -211,6 +211,10 @@ Upload the database and document library archives to the `backup` service via th
 
 1. When both the database dump and document library are uploaded, click *Initiate Upload*.
 
+```{note}
+You can also upload the database dump and document library via the upload APIs. See the [Backup Service APIs](../platform-services/backup-service/downloading-and-uploading-backups.md#backup-service-apis) for more information.
+```
+
 When the upload is complete, a new backup appears at the top of the list on the Backups page.
 
 ## Update Your Project's Liferay Image Version
