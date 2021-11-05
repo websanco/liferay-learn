@@ -1,10 +1,10 @@
 # Using the Sidecar or Embedded Elasticsearch
 
-The Liferay Tomcat bundles installed via a ZIP file or Docker image include an Elasticsearch node that starts with Liferay. The node in Liferay 7.3 runs in a separate JVM as a sidecar server and the node in Liferay 7.2 is embedded in the Liferay server.
+The Liferay Tomcat bundles installed via a ZIP file or Docker image include an Elasticsearch node that starts with Liferay. The node in Liferay 7.3+ runs in a separate JVM as a sidecar server and the node in Liferay 7.2 is embedded in the Liferay server.
 
 The Elasticsearch server is accessible at these URLs:
 
-* <http://localhost:9201> on Liferay 7.3
+* <http://localhost:9201> on Liferay 7.3+
 * <http://localhost:9200> on Liferay 7.2
 
 Here's example sidecar server output:
@@ -52,8 +52,9 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 
 ## App Server Differences
 
-While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Liferay Portal 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Liferay WAR onto any supported application server.
+While an Elasticsearch sidecar server is bundled beginning with Liferay DXP 7.3 and Liferay Portal 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Liferay WAR onto any supported application server.
 
+<!-- We must update this. Ask Tibor if anything is different now in 7.4, particularly with the auto-downloaded information-->
 | Liferay DXP Flavor       | Default Elasticsearch | Pre-Installed | Requires Manual Intervention |
 | ------------------------ | ------------------- | ------------- | ---------------------------- |
 | Tomcat bundle: 7.3 GA4+  | Sidecar             | &#10004;      | &#10008;                     |
@@ -67,8 +68,7 @@ While an Elasticsearch sidecar server is bundled with Liferay DXP 7.3 and Lifera
 
 If you downloaded a bundle for an application server besides Tomcat, when you start the server an Elasticsearch distribution is downloaded on-the-fly and started as a sidecar server.
 
-Installation instructions for Liferay DXP 7.3 on the [WebSphere](../../../installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md) and [Weblogic](../../../installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md) application servers include directions for manually providing the Elasticsearch archives required for the sidecar server to be initialized.
-<!-- ongoing work, LRDOCS-8008 -->
+Installation instructions for Liferay on the [WebSphere](../../../installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md) and [Weblogic](../../../installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md) application servers include directions for manually providing the Elasticsearch archives required for the sidecar server to be initialized.
 
 ```{important}
 The bundled Elasticsearch server is useful for development and testing purposes and must not be used in production. See [Installing Elasticsearch](./getting-started-with-elasticsearch.md) to learn about installing a remote search engine.

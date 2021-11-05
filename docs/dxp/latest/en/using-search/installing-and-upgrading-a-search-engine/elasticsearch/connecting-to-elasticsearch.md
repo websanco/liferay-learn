@@ -2,7 +2,7 @@
 
 After [setting up Elasticsearch](./installing-elasticsearch.md), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-elasticsearch-connectors) you're configuring:
 
-* Liferay 7.3: Liferay Connector to Elasticsearch is included in the Liferay DXP 7.3 and CE 7.3 GA4+. It's also available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
+* Liferay 7.3+: Liferay Connector to Elasticsearch is included in Liferay 7.3 and 7.4. It's also available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
 * Liferay 7.2: Liferay Connector to Elasticsearch is available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
 
 Notable installation and configuration procedure differences are presented here. 
@@ -15,7 +15,7 @@ If you're on Liferay 7.2, skip to [Liferay 7.2: Installing Elasticsearch 7 Conne
 
 ## Configuring the Connector
 
-The Elasticsearch 7 connector is configured for Liferay 7.3 via a configuration file named `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`. 
+The Elasticsearch 7 connector is configured for Liferay 7.3+ via a configuration file named `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`. 
 
 After specifying the configuration in the file, you can deploy it by placing it into your `[Liferay Home]/osgi/configs/` folder.
 
@@ -29,7 +29,7 @@ Alternatively, you can configure the connector in the user interface. In the Glo
 
 > In Liferay 7.2, The Control Panel is in the Product Menu (![Product Menu](../../../images/icon-product-menu.png)).
 
-A simple 7.3 connector configuration enables production mode (`productionModeEnabled="true"`) and sets the URL to each Elasticsearch node (`networkHostAddresses=["http://es-node:9200"]`).
+A simple Liferay 7.3+ connector configuration enables production mode (`productionModeEnabled="true"`) and sets the URL to each Elasticsearch node (`networkHostAddresses=["http://es-node:9200"]`).
 
 1. Create the following configuration file:
 
@@ -40,10 +40,10 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
 1. Specify the configuration properties in the `.config` file. Here's an example that includes [security properties](./securing-elasticsearch.md) commented out (note that you'd need to use `https` network host addresses when encryption is enabled):
 
     ```properties
-    # In CE/DXP7.3, productionModeEnabled replaces operationMode (deprecated):
+    # In CE/DXP7.3+, productionModeEnabled replaces operationMode (deprecated):
     productionModeEnabled=B"true"
     networkHostAddresses=["http://es-node1:9200","http://es-node3:9201","http://es-node3:9202"]
-    # In CE/DXP 7.3 the security settings are included in the ElasticsearchConfiguration
+    # In CE/DXP 7.3+ the security settings are included in the ElasticsearchConfiguration
     # In CE/DXP 7.2 the security settings go in com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config
     # Authentication
     #authenticationEnabled=B"true"
@@ -162,7 +162,7 @@ If Elasticsearch is [installed and running](./installing-elasticsearch.md), star
 
 Re-index the search indexes and spell check indexes. Invoke both of these actions in the Index Actions tab of Control Panel &rarr; Configuration &rarr; Search.
 
-On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
+On Liferay 7.3+, Re-index the [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md) indexes from the Workflow Metrics Settings window: 
 
 1. From the Global Menu (![Applications Menu](../../../images/icon-applications-menu.png)) navigate to Applications &rarr; Workflow Metrics. 
 
@@ -182,6 +182,7 @@ The bundled connector to Elasticsearch is not always the best choice for your in
 
 | Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Operation Modes |
 | ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | --------------- |
+| Liferay 7.4, all varieties | Liferay Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)\* |
 | CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)\* |
 | CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\*\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded / Remote |
 | CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | Marketplace: [CE](https://web.liferay.com/marketplace/-/mp/application/170642090), [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004; |  Embedded / Remote |

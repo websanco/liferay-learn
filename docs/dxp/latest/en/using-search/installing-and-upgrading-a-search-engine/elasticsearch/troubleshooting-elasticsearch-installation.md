@@ -14,7 +14,7 @@ The value of the `transportAddresses` property in the Elasticsearch connector co
 
 ## Network Host Addresses
 
-In Liferay 7.3, the bundled Elasticsearch server (sidecar) runs on port `9201` by default. This means that setting the `networkHostAddress` of your remote Elasticsearch installation using Elasticsearch's default HTTP port (`9200`) will not cause a conflict. As with the transport addresses, make sure to list all master and data node addresses of the cluster.
+In Liferay 7.3+, the bundled Elasticsearch server (sidecar) runs on port `9201` by default. This means that setting the `networkHostAddress` of your remote Elasticsearch installation using Elasticsearch's default HTTP port (`9200`) will not cause a conflict. As with the transport addresses, make sure to list all master and data node addresses of the cluster.
 
 ## Cluster Sniffing (Additional Configurations)
 
