@@ -4,26 +4,26 @@
 
 ### Set Any Element as a Click Target in A/B Testing
 
-You can now [run AB tests on any element on the page.](https://learn.liferay.com/dxp/latest/en/site-building/optimizing-sites/ab-testing/creating-ab-tests.html) . Before Liferay DXP 7.4, you could only select buttons and links as a Click Goal. With Liferay DXP 7.4, you can now select any page element by including its element ID.
+You can now [run AB tests on any element on the page](../site-building/optimizing-sites/ab-testing/creating-ab-tests.md). Before Liferay DXP 7.4, you could only select buttons and links as a Click Goal. With Liferay DXP 7.4, you can now select any page element by including its element ID.
 
 ![You can now run AB tests on any element on the page.](./whats-new-74/images/image4.png)
 
 ### More Insightful Content Audit Tool
 
-In the [Content Audit Tool](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/content-dashboard/content-dashboard-interface.html] in the Content Dashboard, you can now click on the bars to zoom in on
+In the [Content Audit Tool](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md) in the Content Dashboard, you can now click on the bars to zoom in on
 the results; and content assigned to only one vocabulary category is now represented in the graph. Marketers can now easily spot miscategorized content using this new set of enhancements.
 
 ![Zoom in on Content Audit results.](./whats-new-74/images/image3.png)
 
 ### Content Audit Tool UX Improvements
 
-We've also made several usability improvements to the [Content Audit Tool](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/content-dashboard/content-dashboard-interface.html) in the Content Dashboard. For example, now it is much easier to select the vocabularies to be audited, and it is possible to flip the bar chart axes with a click.
+We've also made several usability improvements to the [Content Audit Tool](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md) in the Content Dashboard. For example, now it is much easier to select the vocabularies to be audited, and it is possible to flip the bar chart axes with a click.
 
 ![Select vocabularies and flip the bar chart axes.](./whats-new-74/images/image10.png)
 
 ### Traffic Acquisition Channels in the Content Performance Tool
 
-The traffic acquisition channels in the [Content Performance Tool](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.html)  use Analytics Cloud data and include measurements for organic and paid search, social traffic, and referrals. A channel's detail view reveals all referring URLs and domains.
+The traffic acquisition channels in the [Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md)  use Analytics Cloud data and include measurements for organic and paid search, social traffic, and referrals. A channel's detail view reveals all referring URLs and domains.
 
 ![Traffic acquisition channels include search, social and referral data.](./whats-new-74/images/image9.png)
 
@@ -38,19 +38,19 @@ The Content Performance Panel is now available for all pages: display pages temp
 
 ### Page Audit
 
-Starting with Liferay DXP 7.4, you can use the Page Audit tool for auditing your pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) service, providing specific recommendations for Liferay DXP. With the new Page audit tool, you can check your page\'s compliance with the best performance, accessibility, search engine metadata, and SEO practices.
+Starting with Liferay DXP 7.4, you can use the Page Audit tool for auditing your pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) service, providing specific recommendations for Liferay DXP. With the new Page audit tool, you can check your page's compliance with the best performance, accessibility, search engine metadata, and SEO practices.
 
 ![Google PageSpeed Insights integration provides recommendations.](./whats-new-74/images/image2.png)
 
 ### More Flexibility to Replicate and Draft Experiences
 
-You can now draft and duplicate [Liferay DXP Experiences](https://learn.liferay.com/dxp/latest/en/site-building/personalizing-site-experience/experience-personalization/content-page-personalization.html) and replace the default experience with another. These enhancements provide much more flexibility when creating and managing Experiences.
+You can now draft and duplicate [Liferay DXP Experiences](../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md) and replace the default experience with another. These enhancements provide much more flexibility when creating and managing Experiences.
 
 ![Replicate and Draft Experiences easily.](./whats-new-74/images/image7.png)
 
 ### Documents Now Visible in the Content Dashboard
 
-Documents now appear in the [Content Dashboard](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/content-dashboard/about-the-content-dashboard.html), with new filters based on asset type or MIME type. You can access these filters in the Filter and Order drop-down menu in the Content Dashboard.
+Documents now appear in the [Content Dashboard](../content-authoring-and-management/content-dashboard/about-the-content-dashboard.md), with new filters based on asset type or MIME type. You can access these filters in the Filter and Order drop-down menu in the Content Dashboard.
 
 ![There are new filters in the Content Dashboard.](./whats-new-74/images/image1.png)
 
@@ -138,7 +138,7 @@ You can hide a Fragment on one Viewport while keeping it visible on another. Thi
 
 ### Native support for Adaptive Media in Content Pages and Display Page Templates
 
-You can now use [adaptive media in Content Page images](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.html) to adjust the image resolution dynamically, based on the target screen size. After you [add an image resolution in Adaptive Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/adding-image-resolutions.html), the resolution appears in the Resolution drop-down menu for your Content Page image.
+You can now use [adaptive media in Content Page images](../site-building/creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md) to adjust the image resolution dynamically, based on the target screen size. After you [add an image resolution in Adaptive Media](../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/adding-image-resolutions.md), the resolution appears in the Resolution drop-down menu for your Content Page image.
 
 ![Adaptive Media can now adjust image resolutions dynamically based on screen size.](./whats-new-74/images/image13.png)
 
