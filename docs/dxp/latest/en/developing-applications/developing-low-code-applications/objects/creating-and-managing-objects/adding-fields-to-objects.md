@@ -26,6 +26,10 @@ Follow these steps to add a new field to an Object:
 
    **Field Name**: This value determines the field's name in the backend and uses camel case. Once a field is published, this value cannot be changed.
 
+   ```{important}
+   The following field names are reserved by Liferay and cannot be used for custom fields: `companyId`, `createDate`, `groupId`, `id`, `lastPublishDate`, `modifiedDate`, `status`, `statusByUserId`, `statusByUserName`, `statusDate`, `userId`, `userName`. If users attempt to create a field using one of these field names, Liferay displays an error message.
+   ```
+
 1. Select a field *Type*. See [Field Type Reference](#field-type-reference) for more information.
 
 1. Determine whether or not the field is *Mandatory*.
