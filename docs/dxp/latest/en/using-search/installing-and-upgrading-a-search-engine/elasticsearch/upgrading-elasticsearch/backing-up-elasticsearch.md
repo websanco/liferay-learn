@@ -190,9 +190,9 @@ Nobody likes catastrophic failure on a production system, but Elasticsearch's AP
 
 ## Backing Up and Restoring Indexes Used for Primary Storage
 
-<!-- verify whether anything has changed--can you simply reindex now? probably still needed because on 7.3 customers may have non-db-backed tuning data. also, when a customer upgrades to the new tuning paradigm where data is stored in the DB and tunings cane be re-indexed, how can a customer bring their index-only tuning data into the db? -->
+<!-- verify whether anything has changed--can you simply reindex now on 7.4? probably still needed because on 7.3 customers may have non-db-backed tuning data. also, when a customer upgrades to the new tuning paradigm where data is stored in the DB and tunings cane be re-indexed, how can a customer bring their index-only tuning data into the db? -->
 
-Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md). There are no records for these applications in the database.
+Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md) on Liferay 7.2 and 7.3. There are no records for these applications in the database.
 
 You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to back up and restore the Search Tuning indexes.
 
@@ -278,7 +278,7 @@ The out-of-the-box Search Tuning index names depend on your Liferay version and 
 | ------------------------- | --------------------- |
 | Liferay DXP 7.2 SP2/FP5 and below| `liferay-search-tuning-rankings`<br />`liferay-search-tuning-synonyms-liferay-<companyId>` |
 | Liferay DXP 7.2 SP3/FP8 and above | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
-| Liferay DXP 7.3, all patches  | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
+| Liferay DXP 7.3+, all patches  | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
 
 The `<companyId>` (e.g., `20101`) belongs to a given `Company` record in the database. It is displayed as _Instance ID_ in the UI and represents a [Virtual Instance](../../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
