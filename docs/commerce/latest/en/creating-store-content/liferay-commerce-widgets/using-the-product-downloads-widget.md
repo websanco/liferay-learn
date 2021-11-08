@@ -14,12 +14,12 @@ Follow the steps below to use the Product Downloads widget.
 
     ![The Product Downloads widget is activated and ready for use.](./using-the-product-downloads-widget/images/02.png)
 
-This automatically activates the widget and it is ready for use. Once a Virtual Product is purchased, based on its *Activation Status*, the asset will be displayed here. 
+This automatically activates the widget and it is ready for use. Once a Virtual Product is purchased, based on its *Activation Status*, the asset is displayed here.
 
 | Configuration | Effect on Visibility |
 | --- | --- |
 | Activation Status | This determines the order stage at which the asset becomes available to download (i.e., Completed, Pending, or Processing). |
-| Duration | The number of days for which the asset will be available to download. |
+| Duration | The number of days for which the asset is available to download. |
 | Max Number of Downloads | The number of times the asset can be downloaded for a single purchase. |
 
 The table above details the configuration options available to a Virtual Product. These options control the visibility of the product on the Product Downloads widget.
