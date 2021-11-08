@@ -1,4 +1,4 @@
-package com.liferay.internal.commerce.order.status;
+package com.acme.m4v7.internal.commerce.order.status;
 
 import com.liferay.commerce.constants.CommerceOrderConstants;
 import com.liferay.commerce.model.CommerceOrder;
