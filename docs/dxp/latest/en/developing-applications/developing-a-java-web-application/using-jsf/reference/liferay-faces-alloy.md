@@ -1,9 +1,9 @@
-# Understanding Liferay Faces Alloy
+# Liferay Faces Alloy
 
 Liferay Faces Alloy is distributed in a `.jar` file. You can add Liferay Faces Alloy as a dependency to your portlet projects, to use AlloyUI in a way that is consistent with JSF development. 
 
 ```{note}
-   AlloyUI is deprecated in Liferay DXP 7.2.
+AlloyUI is deprecated in Liferay DXP 7.2.
 ```
 
 During the creation of a JSF portlet in Liferay IDE/Developer Studio, you have the option of choosing the portlet's JSF Component Suite. The options include *JSF standard*, [*ICEfaces*](http://www.icesoft.org/java/projects/ICEfaces/overview.jsf), [*PrimeFaces*](http://primefaces.org/), [*RichFaces*](http://richfaces.jboss.org/), and *Liferay Faces Alloy*.
@@ -22,8 +22,6 @@ As you can see, it's extremely easy to configure your JSF application to use Lif
 
 ## Additional Information 
 
-[Developing a JSF Portlet Application](./developing-a-jsf-portlet-application)
-
-[Understanding Liferay Faces Bridge](./understanding-liferay-faces-bridge)
-
-[Understanding Liferay Faces Portal](./understanding-liferay-faces-portal)
+* [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360029069451-Developing-a-JSF-Portlet-Application)
+* [Liferay Faces Bridge](./liferay-faces-bridge.md)
+* [Liferay Faces Portal](./liferay-faces-portal.md)

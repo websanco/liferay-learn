@@ -1,4 +1,4 @@
-# Understanding Liferay Faces Bridge
+# Liferay Faces Bridge
 
 Liferay Faces Bridge enables you to deploy JSF web apps as portlets without writing portlet-specific code. It also contains innovative features that make it possible to leverage the power of JSF 2.x inside a portlet application.
 
@@ -36,12 +36,10 @@ Besides ensuring that the two lifecycles connect correctly, the JSF portlet brid
 
 The JSR 329/378 standards defines several configuration options prefixed with the `javax.portlet.faces` namespace. Liferay Faces Bridge defines additional implementation-specific options prefixed with the `com.liferay.faces.bridge` namespace. 
 
-Liferay Faces Bridge is an essential part of the JSF development process for Liferay DXP. Visit the [JSF Portlets with Liferay Faces](/docs/7-1/tutorials/-/knowledge_base/t/jsf-portlets-with-liferay-faces) section of tutorials for more information on JSF development for Liferay DXP.
+Liferay Faces Bridge is an essential part of the JSF development process for Liferay DXP/Portal. See [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360029069451-Developing-a-JSF-Portlet-Application) for more information.
 
 ## Additional Information
 
-[Understanding Liferay Faces Alloy](./understanding-liferay-faces-alloy)
-
-[Understanding Liferay Faces Portal](./understanding-liferay-faces-portal)
-
-[Service Builder](./service-builder)
+* [Liferay Faces Alloy](./liferay-faces-alloy.md)
+* [Liferay Faces Portal](./liferay-faces-portal.md)
+* [Service Builder](../../../data-frameworks/service-builder.md)
