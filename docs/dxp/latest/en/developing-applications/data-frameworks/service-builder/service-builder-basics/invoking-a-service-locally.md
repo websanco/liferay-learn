@@ -19,7 +19,7 @@ Here you'll invoke a Service Builder service from a [portlet](../../../developin
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.comdxp/latest/en/developing-applications/data-frameworks/service-builder/service-builder-basics/liferay-t2p5.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/service-builder/service-builder-basics/liferay-t2p5.zip -O
    ```
 
    ```bash

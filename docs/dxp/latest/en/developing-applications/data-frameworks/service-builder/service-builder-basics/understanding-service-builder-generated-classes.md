@@ -5,7 +5,7 @@ Service Builder generates both [tables for your entity](./generating-a-persisten
 Get started by downloading and unzipping the example project:
 
 ```bash
-curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-w9b7.zip -O
+curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/service-builder/service-builder-basics/liferay-w9b7.zip -O
 ```
 
 ```bash

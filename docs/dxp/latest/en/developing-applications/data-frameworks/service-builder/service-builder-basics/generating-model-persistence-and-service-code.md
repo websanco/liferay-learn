@@ -7,7 +7,7 @@ Service Builder makes it easy to define models and generate model, persistence, 
 Download and unzip the example project.
 
 ```bash
-curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-y7g4.zip -O
+curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/service-builder/service-builder-basics/liferay-y7g4.zip -O
 ```
 
 ```bash
