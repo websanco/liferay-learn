@@ -4,7 +4,7 @@ A portlet must specify version 3.0 to "opt in" to the Portlet 3.0 API. The 3.0 P
 
 ## Standard Portlet `@PortletApplication` Annotation
 
-Standard portlets need only specify the [`@PortletApplication`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/annotations/PortletApplication.html) annotation.
+Standard portlets need only specify the [`@PortletApplication`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletApplication.html) annotation.
 
 ```java
 @PortletApplication(version="3.0") // 3.0 is the default for this annotation attribute

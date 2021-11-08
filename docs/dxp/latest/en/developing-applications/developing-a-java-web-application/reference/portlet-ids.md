@@ -1,6 +1,6 @@
-# Fully Qualified Portlet IDs
+# Portlet IDs
 
-Below is a listing of the portlet IDs for the default portlets in Liferay DXP. You  can use these IDs to embed portlets in your theme's  [sitemap](/docs/7-2/frameworks/-/knowledge_base/f/defining-portlets-in-a-sitemap.md).  <!--Where is the article? -->
+Below is a listing of the portlet IDs for the default portlets in Liferay DXP. You  can use these IDs to embed portlets in your theme's  sitemap.
 
 **Collaboration**
 
