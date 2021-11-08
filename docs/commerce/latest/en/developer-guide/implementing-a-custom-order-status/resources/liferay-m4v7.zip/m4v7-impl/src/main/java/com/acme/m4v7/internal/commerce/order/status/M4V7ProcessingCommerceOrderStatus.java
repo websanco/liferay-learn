@@ -74,10 +74,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 		return false;
 	}
 
-	@Reference(
-		policy = ReferencePolicy.DYNAMIC,
-		policyOption = ReferencePolicyOption.GREEDY
-	)
-	private volatile CommerceOrderService _commerceOrderService;
+	@Reference
+	private CommerceOrderService _commerceOrderService;
 
 }

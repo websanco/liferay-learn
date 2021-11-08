@@ -107,10 +107,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		return new ArrayList<>();
 	}
 
-	@Reference(
-		policy = ReferencePolicy.DYNAMIC,
-		policyOption = ReferencePolicyOption.GREEDY
-	)
-	private volatile CommerceOrderService _commerceOrderService;
+	@Reference
+	private CommerceOrderService _commerceOrderService;
 
 }
