@@ -7,7 +7,7 @@ The Sidecar Elasticsearch server bundled with Liferay 7.3+ uses the Elasticsearc
 ```
 
 ```{note}
-If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the `snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`__. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
+If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the `snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`__. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes on Liferay DXP 7.2 and 7.3.
 ```
 
 ## Environment Setup for Production-Like Installation
