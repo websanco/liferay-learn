@@ -89,13 +89,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	}
 
 	private List<String> _asList(Object object) {
-		if (object instanceof String) {
-			return new ArrayList<>(Collections.singletonList((String)object));
-		}
-		else if (object instanceof String[]) {
-			return new ArrayList<>(Arrays.asList((String[])object));
-		}
-		else if (object instanceof Collection) {
+		if (object instanceof Collection) {
 			Collection<?> collection = (Collection<?>)object;
 
 			if (!collection.isEmpty()) {
@@ -107,6 +101,12 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 					return new ArrayList<>((Collection<String>)object);
 				}
 			}
+		}
+		else if (object instanceof String) {
+			return new ArrayList<>(Collections.singletonList((String)object));
+		}
+		else if (object instanceof String[]) {
+			return new ArrayList<>(Arrays.asList((String[])object));
 		}
 
 		return new ArrayList<>();
