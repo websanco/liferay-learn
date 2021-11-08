@@ -201,7 +201,7 @@ The `liferay-portlet.xml` file applies Liferay-specific settings that provide mo
 
 ```xml 
 <?xml version="1.0"?>
-<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 7.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_7_1_0.dtd">
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 7.4.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_7_4_0.dtd">
 
 <liferay-portlet-app>
 	<portlet>
@@ -232,7 +232,7 @@ This `<portlet/>` element associates an icon with the portlet and indicates that
 
 The `<role-mapper/>` elements associate the portlet with default Liferay DXP user roles. 
 
-The [liferay-portlet-app DTD](https://docs.liferay.com/dxp/portal/7.2-latest/definitions/liferay-portlet-app_7_2_0.dtd.html) defines the `liferay-portlet.xml` file. 
+The [`liferay-portlet-app-[version].dtd` file](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) defines the `liferay-portlet.xml` file. 
 
 ## liferay-display.xml
 
@@ -240,7 +240,7 @@ The `liferay-display.xml` applies display characteristics to the portlet. For ex
 
 ```xml
 <?xml version="1.0"?>
-<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 7.2.0//EN" "http://www.liferay.com/dtd/liferay-display_7_2_0.dtd">
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 7.4.0//EN" "http://www.liferay.com/dtd/liferay-display_7_4_0.dtd">
 
 <display>
 <category name="category.sample">
@@ -249,7 +249,7 @@ The `liferay-display.xml` applies display characteristics to the portlet. For ex
 </display>
 ```
 
-See [liferay-display DTD](https://docs.liferay.com/dxp/portal/7.2-latest/definitions/liferay-display_7_2_0.dtd.html) for details. 
+See [`liferay-display-[version].dtd` file](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) for details. 
 
 It's time to look at the application contexts. 
 
@@ -356,7 +356,7 @@ This file specifies the application's name, version, Java package imports/export
 author=N/A
 change-log=
 licenses=N/A
-liferay-versions=7.1.0+
+liferay-versions=7.2.0+
 long-description=
 module-group-id=com.mycompany
 module-incremental-version=1
@@ -368,19 +368,18 @@ Bundle-Version: 1.0.0
 Import-Package: com.liferay.portal.webserver,com.liferay.portal.kernel.servlet.filters.invoker
 ```
 
-It uses this OSGi metadata header to [import required Java packages](../../../../../dxp/fundamentals/liferay-internals/importing-packages):
+It uses this OSGi metadata header to [import required Java packages](../../../..//liferay-internals/fundamentals/importing-packages.md):
 
 ```{properties}
 Import-Package: com.liferay.portal.webserver,\
 com.liferay.portal.kernel.servlet.filters.invoker
 ```
 
-On deploying the portlet application WAR file, the [WAB Generator](../../../../../dxp/developing-applications/reference/deploying-wars(wab-generator)) adds the specified OSGi metadata to the resulting web application bundle (WAB) that's deployed to Liferay's runtime framework.
+On deploying the portlet application WAR file, the [WAB Generator](../../../reference/deploying-wars-wab-generator.md) adds the specified OSGi metadata to the resulting web application bundle (WAB) that's deployed to Liferay's runtime framework.
 
-The [liferay-plugin-package reference document](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/liferay-plugin-package_7_2_0.properties.html) describes the `liferay-plugin-package.properties` file. 
+The [`liferay-plugin-package-[version].dtd` file](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) describes the `liferay-plugin-package.properties` file. 
 
 ## Additional Information  
 
-[PortletMVC4Spring Annotations](../portletmvc4spring-annotations)
-
-[Migrating to PortletMVC4Spring](../migrating-to-portletmvc4spring)
+* [PortletMVC4Spring Annotations](./portletmvc4spring-annotations.md)
+* [Migrating to PortletMVC4Spring \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360030614052-Migrating-to-PortletMVC4Spring)

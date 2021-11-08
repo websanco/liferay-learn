@@ -30,7 +30,7 @@ mvn archetype:generate \
 
 ## Project Structure 
 
-The Maven commands generate a project that includes Model and Controller classes, View templates, a resource bundle, a stylesheet, and more. The [Spring contexts and configuration files](../portletmvc4spring-configuration-files) set PortletMVC4Spring development essentials. Here's the resulting project structure: 
+The Maven commands generate a project that includes Model and Controller classes, View templates, a resource bundle, a stylesheet, and more. The [Spring contexts and configuration files](./portletmvc4spring-configuration-files.md) set PortletMVC4Spring development essentials. Here's the resulting project structure: 
 
 * `[com.mycompany.my.form.jsp.portlet]`/ &rarr; Arbitrary project name
     * `src/`
