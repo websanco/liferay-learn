@@ -24,7 +24,7 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
-		"commerce.order.status.key=99",
+		"commerce.order.status.key=31415926535",
 		"commerce.order.status.priority:Integer=40"
 	},
 	service = CommerceOrderStatus.class
@@ -35,14 +35,14 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	public CommerceOrder doTransition(CommerceOrder commerceOrder, long userId)
 		throws PortalException {
 
-		commerceOrder.setOrderStatus(99);
+		commerceOrder.setOrderStatus(31415926535);
 
 		return _commerceOrderService.updateCommerceOrder(commerceOrder);
 	}
 
 	@Override
 	public int getKey() {
-		return 99;
+		return 31415926535;
 	}
 
 	@Override

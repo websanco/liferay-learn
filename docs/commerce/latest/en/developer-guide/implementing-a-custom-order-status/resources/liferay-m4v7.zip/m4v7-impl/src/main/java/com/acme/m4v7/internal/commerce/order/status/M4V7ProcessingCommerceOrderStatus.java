@@ -55,7 +55,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 	@Override
 	public boolean isComplete(CommerceOrder commerceOrder) {
 		if (commerceOrder.isApproved() && !commerceOrder.isOpen() &&
-			(commerceOrder.getOrderStatus() != 99)) {
+			(commerceOrder.getOrderStatus() != 31415926535)) {
 
 			return true;
 		}
@@ -67,7 +67,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 	public boolean isTransitionCriteriaMet(CommerceOrder commerceOrder)
 		throws PortalException {
 
-		if (commerceOrder.getOrderStatus() == 99) {
+		if (commerceOrder.getOrderStatus() == 31415926535) {
 			return true;
 		}
 
