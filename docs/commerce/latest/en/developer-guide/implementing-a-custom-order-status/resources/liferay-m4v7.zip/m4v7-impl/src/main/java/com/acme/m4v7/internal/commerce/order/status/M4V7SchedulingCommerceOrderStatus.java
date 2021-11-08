@@ -47,7 +47,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 
 	@Override
 	public String getLabel(Locale locale) {
-		return LanguageUtil.get(locale, "Scheduling");
+		return LanguageUtil.get(locale, "scheduling");
 	}
 
 	@Override
@@ -60,14 +60,14 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		ExpandoBridge expandoBridge = commerceOrder.getExpandoBridge();
 
 		Object attributeValueObject = GetterUtil.getObject(
-			expandoBridge.getAttribute("Scheduling"));
+			expandoBridge.getAttribute("m4v7Scheduling"));
 
 		List<String> attributeValueList = _toList(attributeValueObject);
 
 		if (!attributeValueList.isEmpty()) {
 			String schedulingStatus = attributeValueList.get(0);
 
-			if (schedulingStatus.equals("Confirmed")) {
+			if (schedulingStatus.equals("confirmed")) {
 				return true;
 			}
 		}
