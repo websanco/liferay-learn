@@ -5,9 +5,9 @@ While upgrading Liferay, there are additional considerations to account for with
 * See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651): it's always recommended to run the latest supported Elasticsearch version.
 * Liferay Enterprise Search applications are now bundled with Liferay DXP. No additional installation steps are required. See [Activating Liferay Enterprise Search](../../../liferay-enterprise-search/activating-liferay-enterprise-search.md) for more information.
 * If you're already on a supported Elasticsearch version, you may opt to continue using the existing Elasticsearch instance, without updating it.
-* Beginning in Liferay 7.4, the Search Tuning (Synonym Sets and Result Rankings) indexes are backed by database tables. If the search engine is connected to Liferay during Liferay's upgrade, the data will be propagated to the database for you. If you are setting up a new Elasticsearch instance, you'll need to [backup and restore the search tuning indexes](./backing-up-elasticsearch.md), then run a [Groovy script](#importing-the-search-tuning-indexes-in-74) to manually import the index data into the new database tables.
+* Beginning in Liferay 7.4, the Search Tuning (Synonym Sets and Result Rankings) indexes are backed by database tables. If the search engine is connected to Liferay during Liferay's upgrade, the data will be propagated to the database for you. If you are setting up a new Elasticsearch instance, you'll need to [backup and restore the search tuning indexes](./backing-up-elasticsearch.md), then run a [Groovy script](#importing-the-search-tuning-indexes-in-7-4) to manually import the index data into the new database tables.
 
-## Upgrading Steps
+## Upgrade Steps
 
 ```{important}
 [Back up the search indexes](./backing-up-elasticsearch.md) before proceeding with these steps.
@@ -81,7 +81,7 @@ If you're upgrading from Liferay 7.2, the renaming of apps and configurations ha
 
 ## Importing the Search Tuning Indexes in 7.4
 
-There are the following Liferay DXP Search Tuning indexes in the Elasticsearch cluster: 
+The following Liferay DXP Search Tuning indexes are in the Elasticsearch cluster: 
 
 * `liferay-[companyId]-search-tuning-rankings`
 * `liferay-[companyId]-search-tuning-synonyms`

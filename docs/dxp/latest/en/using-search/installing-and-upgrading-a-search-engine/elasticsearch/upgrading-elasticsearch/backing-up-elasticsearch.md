@@ -10,7 +10,7 @@ Here are some representative upgrade scenarios:
 
 * Upgrading the Elasticsearch cluster independently of Liferay: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
 * Upgrading Liferay and connecting to the same Elasticsearch cluster: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
-* Upgrading Liferay and connecting to a different Elasticsearch cluster: backing up all indexes is recommended. Restoring from snapshot is necessary for all primary storage indexes. If you're using either of Liferay's search tuning features (Result Ranking and Synonym Sets), you must also [import the indexed data into the Liferay database](upgrading-search-with-liferay.md#importing-the-search-tuning-indexes-in-7.4) after upgrading to Liferay DXP 7.4. 
+* Upgrading Liferay and connecting to a different Elasticsearch cluster: backing up all indexes is recommended. Restoring from snapshot is necessary for all primary storage indexes. If you're using either of Liferay's search tuning features (Result Ranking and Synonym Sets), you must also [import the indexed data into the Liferay database](upgrading-search-infrastructure.md#importing-the-search-tuning-indexes-in-7-4) after upgrading to Liferay DXP 7.4. 
 
 ## Creating Elasticsearch Cluster Backups
 
