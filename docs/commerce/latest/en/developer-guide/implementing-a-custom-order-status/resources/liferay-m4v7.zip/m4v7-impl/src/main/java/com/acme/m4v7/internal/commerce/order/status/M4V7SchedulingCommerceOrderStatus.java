@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -59,18 +60,14 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	public boolean isComplete(CommerceOrder commerceOrder) {
 		ExpandoBridge expandoBridge = commerceOrder.getExpandoBridge();
 
-		List<String> attributeValueList = _toList(
+		List<String> list = _toList(
 			expandoBridge.getAttribute("m4v7Scheduling"));
 
-		if (!attributeValueList.isEmpty()) {
-			String schedulingStatus = attributeValueList.get(0);
-
-			if (schedulingStatus.equals("confirmed")) {
-				return true;
-			}
+		if (list.isEmpty()) {
+			return false;
 		}
 
-		return false;
+		return Objects.equals(list.get(0), "confirmed");
 	}
 
 	@Override
