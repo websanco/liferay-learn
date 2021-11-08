@@ -62,7 +62,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		Object attributeValueObject = GetterUtil.getObject(
 			expandoBridge.getAttribute("Scheduling"));
 
-		List<String> attributeValueList = _asList(attributeValueObject);
+		List<String> attributeValueList = _toList(attributeValueObject);
 
 		if (!attributeValueList.isEmpty()) {
 			String schedulingStatus = attributeValueList.get(0);
@@ -88,7 +88,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		return false;
 	}
 
-	private List<String> _asList(Object object) {
+	private List<String> _toList(Object object) {
 		if (object instanceof Collection) {
 			Collection<?> collection = (Collection<?>)object;
 
