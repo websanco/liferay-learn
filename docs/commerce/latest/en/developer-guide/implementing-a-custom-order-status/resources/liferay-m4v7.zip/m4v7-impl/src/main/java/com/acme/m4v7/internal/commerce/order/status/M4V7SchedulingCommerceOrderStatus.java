@@ -45,7 +45,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 
 	@Override
 	public String getLabel(Locale locale) {
-		return LanguageUtil.get(locale, "scheduling");
+		return "Scheduling";
 	}
 
 	@Override
