@@ -59,10 +59,8 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	public boolean isComplete(CommerceOrder commerceOrder) {
 		ExpandoBridge expandoBridge = commerceOrder.getExpandoBridge();
 
-		Object attributeValueObject = expandoBridge.getAttribute(
-			"m4v7Scheduling");
-
-		List<String> attributeValueList = _toList(attributeValueObject);
+		List<String> attributeValueList = _toList(
+			expandoBridge.getAttribute("m4v7Scheduling"));
 
 		if (!attributeValueList.isEmpty()) {
 			String schedulingStatus = attributeValueList.get(0);
