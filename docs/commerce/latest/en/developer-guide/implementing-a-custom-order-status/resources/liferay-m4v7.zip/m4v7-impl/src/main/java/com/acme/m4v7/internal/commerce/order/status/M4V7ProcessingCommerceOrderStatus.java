@@ -11,8 +11,6 @@ import java.util.Locale;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferencePolicy;
-import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
@@ -55,7 +53,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 	@Override
 	public boolean isComplete(CommerceOrder commerceOrder) {
 		if (commerceOrder.isApproved() && !commerceOrder.isOpen() &&
-			(commerceOrder.getOrderStatus() != 31415926535)) {
+			(commerceOrder.getOrderStatus() != 314159265)) {
 
 			return true;
 		}
@@ -67,7 +65,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 	public boolean isTransitionCriteriaMet(CommerceOrder commerceOrder)
 		throws PortalException {
 
-		if (commerceOrder.getOrderStatus() == 31415926535) {
+		if (commerceOrder.getOrderStatus() == 314159265) {
 			return true;
 		}
 

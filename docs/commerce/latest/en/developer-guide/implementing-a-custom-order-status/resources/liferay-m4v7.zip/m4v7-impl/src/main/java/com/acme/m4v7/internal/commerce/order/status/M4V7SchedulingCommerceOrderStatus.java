@@ -7,7 +7,6 @@ import com.liferay.commerce.service.CommerceOrderService;
 import com.liferay.expando.kernel.model.ExpandoBridge;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
-import com.liferay.portal.kernel.util.GetterUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,12 +19,10 @@ import java.util.Objects;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferencePolicy;
-import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
-		"commerce.order.status.key=31415926535",
+		"commerce.order.status.key=314159265",
 		"commerce.order.status.priority:Integer=40"
 	},
 	service = CommerceOrderStatus.class
@@ -36,14 +33,14 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	public CommerceOrder doTransition(CommerceOrder commerceOrder, long userId)
 		throws PortalException {
 
-		commerceOrder.setOrderStatus(31415926535);
+		commerceOrder.setOrderStatus(314159265);
 
 		return _commerceOrderService.updateCommerceOrder(commerceOrder);
 	}
 
 	@Override
 	public int getKey() {
-		return 31415926535;
+		return 314159265;
 	}
 
 	@Override
