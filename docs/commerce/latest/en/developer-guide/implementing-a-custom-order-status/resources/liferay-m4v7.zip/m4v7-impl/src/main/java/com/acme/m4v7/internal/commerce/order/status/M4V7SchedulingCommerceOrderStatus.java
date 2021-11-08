@@ -6,14 +6,8 @@ import com.liferay.commerce.order.status.CommerceOrderStatus;
 import com.liferay.commerce.service.CommerceOrderService;
 import com.liferay.expando.kernel.model.ExpandoBridge;
 import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.util.ArrayUtil;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -57,14 +51,14 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 	public boolean isComplete(CommerceOrder commerceOrder) {
 		ExpandoBridge expandoBridge = commerceOrder.getExpandoBridge();
 
-		List<String> list = _toList(
-			expandoBridge.getAttribute("m4v7Scheduling"));
+		String[] values = (String[])expandoBridge.getAttribute(
+			"m4v7Scheduling");
 
-		if (list.isEmpty()) {
+		if (ArrayUtil.isEmpty(values)) {
 			return false;
 		}
 
-		return Objects.equals(list.get(0), "Confirmed");
+		return Objects.equals(values[0], "Confirmed");
 	}
 
 	@Override
@@ -78,30 +72,6 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 		}
 
 		return false;
-	}
-
-	private List<String> _toList(Object object) {
-		if (object instanceof Collection) {
-			Collection<?> collection = (Collection<?>)object;
-
-			if (!collection.isEmpty()) {
-				Iterator<?> iterator = collection.iterator();
-
-				Object element = iterator.next();
-
-				if (element instanceof String) {
-					return new ArrayList<>((Collection<String>)object);
-				}
-			}
-		}
-		else if (object instanceof String) {
-			return new ArrayList<>(Collections.singletonList((String)object));
-		}
-		else if (object instanceof String[]) {
-			return new ArrayList<>(Arrays.asList((String[])object));
-		}
-
-		return new ArrayList<>();
 	}
 
 	@Reference
