@@ -88,11 +88,47 @@ The following Liferay DXP Search Tuning indexes are in the Elasticsearch cluster
 
 If you were using the search tuning features in the pre-upgrade system, but the search tuning index documents are not present in the post-upgrade cluster, you must first [backup and restore the search tuning indexes](./backing-up-elasticsearch.md) from the pre-upgrade cluster to the post-upgrade cluster, then run a Groovy script to manually import the index data into the new database tables. This can happen if you are connecting to a new Elasticsearch cluster instead of upgrading the pre-upgrade cluster.
 
-<!-- Provide the usage for the groovy script. -->
+To run the Groovy import script,
 
-## What's Next 
+1. Go to the scripting console. Navigate to the Script tab in Control Panel &rarr; Server Administration.
 
-Now that you know your upgrade path, start upgrading to use Liferay 7.4 with the latest [Elasticsearch](./upgrading-to-elasticsearch-7.md) search engine.
+1. Run the following script to import the Result Rankings data into its database table:
+
+   ```groovy
+   import com.liferay.portal.instances.service.PortalInstancesLocalService;
+   import com.liferay.portal.search.tuning.rankings.storage.RankingsDatabaseImporter;
+   import com.liferay.registry.Registry;
+   import com.liferay.registry.RegistryUtil;
+   
+   Registry registry = RegistryUtil.getRegistry();
+   
+   PortalInstancesLocalService portalInstancesLocalService = registry.getServices(PortalInstancesLocalService.class, null)[0];
+   RankingsDatabaseImporter rankingsDatabaseImporter = registry.getServices(RankingsDatabaseImporter.class, null)[0];
+   
+   for (long companyId : portalInstancesLocalService.getCompanyIds()) {
+   	rankingsDatabaseImporter.populateDatabase(companyId);
+   }
+   ```
+
+1. Run the following script to import the Synonym Sets data into its database table:
+
+   ```groovy
+   import com.liferay.portal.instances.service.PortalInstancesLocalService;
+   import com.liferay.portal.search.tuning.synonyms.storage.SynonymSetsDatabaseImporter;
+   import com.liferay.registry.Registry;
+   import com.liferay.registry.RegistryUtil;
+   
+   Registry registry = RegistryUtil.getRegistry();
+   
+   PortalInstancesLocalService portalInstancesLocalService = registry.getServices(PortalInstancesLocalService.class, null)[0];
+   SynonymSetsDatabaseImporter synonymSetsDatabaseImporter = registry.getServices(SynonymSetsDatabaseImporter.class, null)[0];
+   
+   for (long companyId : portalInstancesLocalService.getCompanyIds()) {
+   	synonymSetsDatabaseImporter.populateDatabase(companyId);
+   }
+   ```
+
+1. Make sure you test the Synonym Sets and Result Rankings to ensure everything is working as expected.
 
 ## Additional Information
 
