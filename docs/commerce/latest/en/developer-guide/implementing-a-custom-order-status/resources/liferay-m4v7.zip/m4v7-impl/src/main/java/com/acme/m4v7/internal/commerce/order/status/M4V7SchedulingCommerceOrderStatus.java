@@ -64,7 +64,7 @@ public class M4V7SchedulingCommerceOrderStatus implements CommerceOrderStatus {
 			return false;
 		}
 
-		return Objects.equals(list.get(0), "confirmed");
+		return Objects.equals(list.get(0), "Confirmed");
 	}
 
 	@Override
