@@ -4,13 +4,13 @@
 
 ## Backing Up Indexes Before Upgrading
 
-It's best practice to back up the indexes under all upgrade scenarios, even if the indexed data can be restored by re-indexing from Liferay's database. Taking a [snapshot of your app-specific indexes](#backing-up-and-restoring-indexes-used-for-primary-storage) (like Liferay's Search Tuning indexes in Liferay 7.2 and 7.3) is essential if your data is stored only in the search index. The snapshot can be used to reindex your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
+It's best practice to back up the indexes under all upgrade scenarios, even if the indexed data can be restored by re-indexing from Liferay's database. Taking a [snapshot of your app-specific indexes](#backing-up-and-restoring-indexes-used-for-primary-storage) (like Liferay's Search Tuning indexes in Liferay DXP 7.2 and 7.3) is essential if your data is stored only in the search index. The snapshot can be used to restore your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
 
 Here are some representative upgrade scenarios:
 
 * Upgrading the Elasticsearch cluster independently of Liferay: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
 * Upgrading Liferay and connecting to the same Elasticsearch cluster: backing up all indexes is recommended. Restoring data from the snapshot is not needed, because all indexes remain in the system.
-* Upgrading Liferay and connecting to a different Elasticsearch cluster: backing up all indexes is recommended. Restoring from snapshot is necessary for all primary storage indexes. If you're using either of Liferay's search tuning features (Result Ranking and Synonym Sets), you must also [import the indexed data into the Liferay database](upgrading-search-with-liferay.md#importing-the-search-tuning-indexes-in-7.4). 
+* Upgrading Liferay and connecting to a different Elasticsearch cluster: backing up all indexes is recommended. Restoring from snapshot is necessary for all primary storage indexes. If you're using either of Liferay's search tuning features (Result Ranking and Synonym Sets), you must also [import the indexed data into the Liferay database](upgrading-search-with-liferay.md#importing-the-search-tuning-indexes-in-7.4) after upgrading to Liferay DXP 7.4. 
 
 ## Creating Elasticsearch Cluster Backups
 
@@ -199,7 +199,7 @@ Nobody likes catastrophic failure on a production system, but Elasticsearch's AP
 
 ## Backing Up and Restoring Indexes Used for Primary Storage
 
-Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md) on Liferay 7.2 and 7.3. There are no records for these applications in the database.
+Creating a snapshot of your Elasticsearch indexes is highly recommended, especially for indexes that act as the primary storage format: for example, [Synonym Sets](../../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../../search-administration-and-tuning/result-rankings.md) on Liferay DXP 7.2 and 7.3. There are no records for these applications in the database.
 
 You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to back up and restore the Search Tuning indexes.
 
@@ -241,7 +241,7 @@ You can use Elasticsearch's [snapshot and restore](https://www.elastic.co/guide/
     }
     ```
 
-   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated from the database, like the Synonym Sets and Result Rankings indexes in Liferay 7.2 and 7.3.
+   If you want to create a snapshot for all Liferay indexes, you can use `"indices": "liferay*,workflow-metrics*"` instead. If you're in an upgrade scenario, it can make sense to take a snapshot of just the indexes that can't be recreated from the database, like the Synonym Sets and Result Rankings indexes in Liferay DXP 7.2 and 7.3.
 
 1. To [restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshots-restore-snapshot.html) specific indexes from a snapshot using a different name, run a `restore` API call similar to this:
 
@@ -285,7 +285,7 @@ The out-of-the-box Search Tuning index names depend on your Liferay version and 
 | ------------------------- | --------------------- |
 | Liferay DXP 7.2 SP2/FP5 and below| `liferay-search-tuning-rankings`<br />`liferay-search-tuning-synonyms-liferay-<companyId>` |
 | Liferay DXP 7.2 SP3/FP8 and above | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
-| Liferay DXP 7.3+, all patches  | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
+| Liferay DXP 7.3 GA1+ and 7.4 GA1+  | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
 
 The `<companyId>` (e.g., `20101`) belongs to a given `Company` record in the database. It is displayed as _Instance ID_ in the UI and represents a [Virtual Instance](../../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
