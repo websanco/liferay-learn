@@ -1,8 +1,8 @@
 # CDI Portlet Predefined Beans
 
-Liferay DXP provides injectable portlet artifacts for [CDI](/docs/7-2/frameworks/-/knowledge_base/f/cdi-dependency-injection) <!--not in the portal--> called Portlet Predefined Beans, as specified by [JSR 362](https://jcp.org/en/jsr/detail?id=362).  There are two types of predefined beans:
+Liferay DXP provides injectable portlet artifacts for CDI called Portlet Predefined Beans, as specified by [JSR 362](https://jcp.org/en/jsr/detail?id=362).  There are two types of predefined beans:
 
-* Portlet Request Scoped Beans ([`@PortletRequestScoped`](https://docs.liferay.com/portlet | - | api/3.0/javadocs/javax/portlet/annotations/PortletRequestScoped.html)) 
+* Portlet Request Scoped Beans ([`@PortletRequestScoped`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletRequestScoped.html) 
 
 * Dependent Scoped Beans ([`@Dependent` scoped](https://docs.oracle.com/javaee/7/api/javax/enterprise/context/Dependent.html))
 
@@ -14,7 +14,7 @@ The table below describes these attributes for each bean:
 
 **Qualifier:** Annotation applied to the bean for defining and selecting a bean implementation. 
 
-**Valid during (phase):** The  [portlet phases](../../developing-a-java-web-application/reference/portlets.md) in which the bean is valid. 
+**Valid during (phase):** The  [portlet phases](../../reference/portlets.md) in which the bean is valid. 
 
 ## Portlet Request Scoped Beans
 
@@ -71,4 +71,4 @@ Table 2: Dependent Scoped Beans[^2]
 
 ## Additional Information
 
-[CDI Dependency Injection](./cdi-dependency-injection.md)
+[CDI Dependency Injection](../../../core-frameworks/dependency-injection.md)

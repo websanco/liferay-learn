@@ -6,10 +6,8 @@
 using-bean-portlet/reference.md
 ```
 
-```{raw} html
-:file: ../../landingpage_template.html
-```
+Portlet 3.0, the [JSR 362](https://jcp.org/en/jsr/detail?id=362) standard, features a style of portlet development called Bean Portlets that use Contexts and Dependency Injection (CDI). Bean Portlets fully leverage [all the Portlet 3.0 features](https://portals.apache.org/pluto/v301/v3Features.html) in compliant portals, and are fully supported in Liferay DXP.
 
-```{raw} html
-:file: using-bean-portlet/landing.html
-```
+* [Bean Portlet \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360028708752-Bean-Portlet)
+* [Creating a Bean Portlet \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360028708772-Creating-a-Bean-Portlet)
+* [Reference](./using-bean-portlet/reference.md)
