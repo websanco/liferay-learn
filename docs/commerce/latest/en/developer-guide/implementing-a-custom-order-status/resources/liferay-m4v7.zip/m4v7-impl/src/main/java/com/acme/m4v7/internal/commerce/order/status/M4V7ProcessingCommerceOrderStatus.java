@@ -54,7 +54,7 @@ public class M4V7ProcessingCommerceOrderStatus implements CommerceOrderStatus {
 
 	@Override
 	public boolean isComplete(CommerceOrder commerceOrder) {
-		if (!commerceOrder.isOpen() && commerceOrder.isApproved() &&
+		if (commerceOrder.isApproved() && !commerceOrder.isOpen() &&
 			(commerceOrder.getOrderStatus() != 99)) {
 
 			return true;
