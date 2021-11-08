@@ -18,9 +18,7 @@ public class M4Q7CharlieMessageListener implements MessageListener {
 	@Override
 	public void receive(Message message) {
 		if (_log.isInfoEnabled()) {
-			_log.info(
-				"Received message payload " +
-					String.valueOf(message.getPayload()));
+			_log.info("Received message payload " + message.getPayload());
 		}
 
 		_messageBus.sendMessage(

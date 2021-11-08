@@ -27,7 +27,7 @@ public class W3R2BakerMessageListenerManager {
 						if (_log.isInfoEnabled()) {
 							_log.info(
 								"Received message payload " +
-									String.valueOf(message.getPayload()));
+									message.getPayload());
 						}
 					}
 

@@ -17,9 +17,7 @@ public class W3A4MessageListener implements MessageListener {
 	@Override
 	public void receive(Message message) {
 		if (_log.isInfoEnabled()) {
-			_log.info(
-				"Received message payload " +
-					String.valueOf(message.getPayload()));
+			_log.info("Received message payload " + message.getPayload());
 		}
 	}
 
