@@ -78,7 +78,7 @@ Note that there is an extra `liferay-ui:message` included in the example jsp fil
 
 This demonstrates that if no such key is found in the `Language.properties` file, the label appears instead. 
 
-Learn more about tag libraries in [Liferay Tag Library Reference](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/). Each tag library has a list of attributes that can be passed to the tag.
+Learn more about tag libraries in [Liferay Tag Library Reference](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/index.html). Each tag library has a list of attributes that can be passed to the tag.
 
 ## Add the Component Definition
 

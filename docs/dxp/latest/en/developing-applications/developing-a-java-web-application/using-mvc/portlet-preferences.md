@@ -14,7 +14,7 @@ Note, portlet preferences are properties that are stored separately from an appl
 
     If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly. 
 
-1. Download and unzip [Portlet Preferences](./liferay-p1z2.zip).
+1. Download and unzip the example.
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-p1z2.zip -O

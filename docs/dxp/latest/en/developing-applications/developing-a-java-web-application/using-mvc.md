@@ -79,13 +79,13 @@ public class HelloWorldPortlet extends MVCPortlet {
 The `javax.portlet.name` property is required. When using MVC commands, the `javax.portlet.name` property value links particular portlet URL/command combinations to the correct portlet.
 
 ```{important}
-Make your portlet name unique, considering how [Liferay DXP uses the name to create the [portlet's ID](../reference/portlet-descriptor-to-osgi-service-property-map.md#ten).
+Make your portlet name unique, considering how [Liferay DXP uses the name to create the [portlet's ID](./reference/portlet-descriptor-to-osgi-service-property-map.md#ten).
 ```
 
 There can be some confusion over exactly what kind of `Portlet.class` implementation you're publishing with a component. The service registry expects this to be the [`javax.portlet.Portlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/Portlet.html) interface. Import that, and not, for example, `com.liferay.portal.kernel.model.Portlet`.
 
 ```{note}
-The DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html) defines all the Liferay-specific attributes you can specify as properties in your portlet components. The properties namespaced with `javax.portlet.` are elements of the [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd).
+The [`liferay-portlet-app_[version].dtd` file](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) defines all the Liferay-specific attributes you can specify as properties in your portlet components. The properties namespaced with `javax.portlet.` are elements of the [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd).
 ```
 
 ## A Simpler MVC Portlet

@@ -112,7 +112,7 @@ The `property` attribute's value describes the portlet web application. The `com
 The `javax.portlet.init-param.view-template=/view.jsp` property declares the view template path with respect to the application's `resources/META-INF/resources` folder. When you add the portlet to a page, the `resources/META-INF/resources/view.jsp` view template renders.
 
 ```{note}
-The [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md) specifies how OSGi component property values map to traditional portlet descriptors.
+The [Portlet Descriptor to OSGi Service Property Map](../reference/portlet-descriptor-to-osgi-service-property-map.md) specifies how OSGi component property values map to traditional portlet descriptors.
 ```
 
 ## What's Next
@@ -121,5 +121,5 @@ Congratulations! You've created a web application using a JSP and one simple Jav
 
 ## Additional Information
 
-* [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md)
+* [Portlet Descriptor to OSGi Service Property Map](../reference/portlet-descriptor-to-osgi-service-property-map.md)
 * [Using MVC](../using-mvc.md)
