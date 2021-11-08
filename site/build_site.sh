@@ -71,7 +71,7 @@ function configure_env {
 
 	check_utils 7z pip3
 
-	pip install pipenv
+	pip install pipenv==2021.5.29
 
 	pipenv install
 
