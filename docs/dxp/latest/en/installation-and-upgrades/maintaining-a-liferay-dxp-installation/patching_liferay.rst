@@ -13,7 +13,7 @@ Patching Liferay
    patching-liferay/getting-patch-information.md
    ../upgrading-liferay/upgrade-basics/upgrading-via-docker.md
    patching-liferay/accessing-dxp-patch-code.md
-   patching-liferay/advanced_patching_for_dxp_7_2.rst
+   patching-liferay/advanced-patching-for-dxp-7-2.md
 
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay`
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types`
