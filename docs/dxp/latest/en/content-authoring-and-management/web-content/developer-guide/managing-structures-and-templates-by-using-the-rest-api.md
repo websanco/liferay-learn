@@ -1,19 +1,19 @@
 # Managing Structures and Templates by Using the REST API
 
-Web Content Structures define the information to include in a Web Content article. Structures facilitate creating and managing Web Content, while ensuring that the content includes all the required information. You can associate a Structure with a Web Content Template. A Template determines how content fields are rendered on a Page. The following table summarizes the available options using the Liferay DXP REST API with Web Content Structures and Templates:
+Web Content Structures define the information included in a Web Content article. Structures facilitate creating and managing Web Content, while ensuring that the content includes all the required information. You can associate a Structure with a Web Content Template. A Template determines how content fields are rendered on a Page. The following table summarizes the available options using the Liferay DXP REST API with Web Content Structures and Templates:
 
 | Available Options | Unavailable Options |
 | --- | --- | 
 | <ul><li>Gather Structures and Templates information</li><li>Replace Structures permissions</li></ul> | <ul><li>Create Structures or Templates</li><li>Delete Structures or Templates</li></ul> |
 
-In this article, you use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn how to manage Structured Content. You can learn about the following topics:
+Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn how to manage Structured Content. You can learn about the following topics:
 
 - [Setting Up Your Environment](#setting-up-your-environment)
-- [Identifying the Service to Consume]
-- [Getting the Structures and Templates]
-- [Replacing the Structure]
-- [Getting the Structure Permissions]
-- [Replacing the Structure Permissions]
+- [Identifying the Service to Consume](#identifying-the-service-to-consume)
+- [Getting the Site Structures](#getting-the-site-structures)
+- [Getting the Site Templates](#getting-the-site-templates)
+- [Getting the Structure Permissions](#getting-the-structure-permissions)
+- [Replacing the Structure Permissions](#replacing-the-structure-permissions)
 
 ## Setting Up Your Environment
 
@@ -30,13 +30,13 @@ In this article, you use a pre-built Liferay DXP Docker image with several [cURL
    - User Name: `test@liferay.com`
    - Password: `test`
 
-   ```note::
-      The sample cURL scripts on this article use this user name and password by default. If you're usign different credentials, replace the values before running the scripts.
+   ```{note}
+   The sample cURL scripts use this user name and password by default. If you're using different credentials, replace the values before running the scripts.
 
-      The scripts in this article use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
+   These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
    ```
 
-1. Download and unzip de [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b1.zip):
+1. Download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b1.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b1.zip -O
@@ -62,8 +62,8 @@ In this article, you use a pre-built Liferay DXP Docker image with several [cURL
 
 ### Create the Structure and Template Samples
 
-```note::
-   You cannot create a Structure or Template programmatically using the REST API.
+```{note}
+You cannot create a Structure or Template programmatically using the REST API.
 ```
 
 To create the Structure, read [Creating Structures](../web-content-structures/creating-structures.md). To create the Template, read [Creating Web Content Templates](../web-content-templates/creating-web-content-templates.md) and create a Template based on the sample Structure. This tutorial uses a basic Structure with a single Text field to demonstrate the `ContentStructure` service.
@@ -78,11 +78,11 @@ To create the Structure, read [Creating Structures](../web-content-structures/cr
 
    ![In the Structures tab, identify the ID for your Structure under the ID column.](./managing-structures-and-templates-by-using-the-rest-api/images/01.png)
 
-You can also identify the Structure ID programatically. For more information, read [Managing Structures and Templates by Using the REST API](./managing-structures-and-templates-by-using-the-rest-api.md).
+You can also identify the Structure ID programmatically. For more information, read [Managing Structures and Templates by Using the REST API](./managing-structures-and-templates-by-using-the-rest-api.md).
 
 ## Identifying the Service to Consume
 
-Use the `StructuredContent` service in the Liferay DXP Headless Delivery API to manage Web Content. To identify this service and all the different HTTP methods, use the Liferay API Explorer. For more information, read [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
+Use the `StructuredContent` service in the Liferay DXP Headless Delivery API to manage Web Content. To identify this service and all the different HTTP methods, use the Liferay API Explorer. For more information, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
 ## Getting the Site Structures
 
@@ -101,7 +101,7 @@ table
 | --- | --- |
 | $1 | `siteId`|
 
-The following code shows the JSON output generate by the script. The script returns all the Structures in the Site. In this example you can see a single Structure identified by an `id` and a `name`.
+The following code shows the JSON output generated by the script. The script returns all the Structures in the Site. In this example you can see a single Structure identified by an `id` and a `name`.
 
 ```json
    {
@@ -145,7 +145,7 @@ The following code shows the JSON output generate by the script. The script retu
    }
 ```
 
-The Structure has a single Text field described in the `dataType` section under `contentStructureFields`. When you include more elements on the Structure, you can see additional sections under `contentStructureFields`. The following code shows the partial JSON output for a Structure with a Text (`"dataType" : "string"`) and Image fields (`"dataType" : "image"`):
+The Structure has a single Text field described in the `dataType` section under `contentStructureFields`. When you include more elements on the Structure, you can see additional sections under `contentStructureFields`. Below is the partial JSON output for a Structure with a Text (`"dataType" : "string"`) and Image fields (`"dataType" : "image"`):
 
 ```json
    {
@@ -200,7 +200,7 @@ cURL script parameters:
 | --- | --- |
 | $1 | `siteId`|
 
-The following code shows the partial JSON output generate by the script. The script returns all the Templates in the Site. In this example you can see a single Template identified by an `id` and a `name`. The `contentStructureId` corresponds to the associated Structure ID and the `templateScript` corresponds to the FreeMaker Template Language describing the Template.
+Below is the partial JSON output generated by the script. The script returns all the Templates in the Site. In this example you can see a single Template identified by an `id` and a `name`. The `contentStructureId` corresponds to the associated Structure ID and the `templateScript` corresponds to the FreeMarker Template Language describing the Template.
 
 ```json
    {
@@ -231,8 +231,8 @@ The following code shows the partial JSON output generate by the script. The scr
    }
 ```
 
-```note::
-   For more information about Templates, read `Creating Web Content Templates <../web-content-templates/creating-web-content-templates.md>`_.
+```{note}
+For more information about Templates, read [Creating Web Content Templates](../web-content-templates/creating-web-content-templates.md).
 ```
 
 ## Getting the Structure Permissions
@@ -253,7 +253,7 @@ cURL script parameters:
 | --- | --- |
 | $1 | Structure `id` |
 
-The JSON output includes the permissions under the `items` section. In this example, there is only one role with permissions on the sample Structure in `roleName`, with the list of permission in `actionIds`:
+The JSON output includes the permissions under the `items` section. In this example, there is only one Role with permissions on the sample Structure in `roleName`, with the list of permission in `actionIds`:
 
 ```json
     {
@@ -279,13 +279,13 @@ The JSON output includes the permissions under the `items` section. In this exam
     }
 ```
 
-```note::
-   To learn how to manage permissions, see `Assigning Permissions to Web Content Structures and Templates <../assigning-web-content-structures/assigning-permissions-to-structures-and-templates.md>`_.
+```{note}
+To learn how to manage permissions, see [Assigning Permissions to Web Content Structures and Templates] (../assigning-web-content-structures/assigning-permissions-to-structures-and-templates.md).
 ```
 
 ## Replacing the Structure Permissions
 
-Use the `PUT` HTTP method with the `ContentStructure` service to replace the original Structure permission. This script example uses the Structured Content identifier `id` to include the `DELETE` and `VIEW` permissions for the Power User role:
+Use the `PUT` HTTP method with the `ContentStructure` service to replace the original Structure permission. This script example uses the Structured Content identifier `id` to include the `DELETE` and `VIEW` permissions for the Power User Role:
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -301,7 +301,7 @@ cURL script parameters:
 | --- | --- |
 | $1 | Structure `id` |
 
-The JSON output shows two entries under the `items` section, one for each role:
+The JSON output shows two entries under the `items` section, one for each Role:
 
 ```json
     {
@@ -329,6 +329,3 @@ The JSON output shows two entries under the `items` section, one for each role:
     "totalCount" : 2
     }
 ```
-
-## Related Information
-
