@@ -1,11 +1,11 @@
 # Advanced Web Content API
 
-Using the Liferay DXP REST services, you can create and manage structured content on your Site. Structured content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) that uses a Web Content Structure. A Structure defines the information, such as author(s), a summary, and the content included in a Web Content article. Structures ensure that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
+Using the Liferay DXP REST services, you can create and manage your Site's structured content. Structured content is [Web Content](../web-content-articles/adding-a-basic-web-content-article.md) that uses a Web Content Structure. A Structure defines the information, such as author(s), a summary, and the content included in a Web Content article. Structures ensure that the content includes all the required information. For more information on Structures, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
 Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and structured content. For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
 ```{note}
-   For an introduction to the Web Content API, see [Web Content API Basics](./web-content-api-basics.md).
+For an introduction to the Web Content API, see [Web Content API Basics](./web-content-api-basics.md).
 ```
 
 ## Setting Up Your Environment
@@ -28,11 +28,11 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
    - Password: `test`
 
    ```{note}
-   - The cURL scripts on this article use these credentials by default. If you change the credentials in your Docker image, replace the username and password before running the scripts.
+   - The cURL scripts here use these credentials by default. If you change the credentials in your Docker image, replace the user name and password before running the scripts.
    - These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
    ```
 
-1. Download and unzip de [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip):
+1. Download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip -O
@@ -52,11 +52,11 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
 
 ### Adding the Images to Liferay DXP
 
-Here, you'll work with a Web Content article with different content fields, including images. To add these images for the sample Web Content article, follow these steps:
+Here, you'll work with a Web Content article containing different content fields, including images. To add these images for the sample Web Content article, follow these steps:
 
 1. Open the Site menu (![Site menu](../../../images/icon-menu.png)) and go to *Content & Data* &rarr; *Documents and Media*.
 1. Click the *Add* button (![Add](../../../images/icon-add.png)) and select *Multiple Files Upload*.
-1. Drag and drop the `foo.png`, `bar.png`, and `goo.png` images in the [sample project folder](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip) onto the drop area.
+1. Drag and drop the `foo.png`, `bar.png`, and `goo.png` images from the [sample project folder](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip) onto the drop area.
 1. Click *Publish*.
 
 Alternatively, you can use the `Document_POST_ToSite.sh` script to post each image separately using the REST API `Document` service.
@@ -119,9 +119,9 @@ You cannot create a Web Content Structure programmatically using the REST API.
    - First option value: `Foo`
    - Second option value: `Goo`
 
-      ![Create a new Web Content Structure in the user interface.](./advanced-web-content-api/images/01.png)
+   ![Create a new Web Content Structure in the user interface.](./advanced-web-content-api/images/01.png)
 
-1. Click each of the Structure fields and update their respective Field Reference value (see table below). You can find the Field Reference values on the sidebar, under the Advanced section.
+1. Click each Structure field and update its Field Reference value (see table below). You can find the Field Reference values on the sidebar, under the Advanced section.
 
 1. Click *Save*.
 
@@ -134,7 +134,7 @@ You cannot create a Web Content Structure programmatically using the REST API.
 
   ![Update the Structure fields Field Reference values.](./advanced-web-content-api/images/03.gif)
 
-For more information, read [Creating Structures](../web-content-structures/creating-structures.md).
+For more information, see [Creating Structures](../web-content-structures/creating-structures.md).
 
 ### Create the Sample Templates
 
@@ -142,16 +142,16 @@ For more information, read [Creating Structures](../web-content-structures/creat
 You cannot create a Web Content Template programmatically using the REST API.
 ```
 
-Create a first Web Content Template including the Structure's `image` field,
+Create a Web Content Template including the Structure's `image` field:
 
 1. Open the Site menu (![Site menu](../../../images/icon-menu.png)) and go to *Content & Data* &rarr; *Web Content*.
 1. Select the *Templates* tab and click the *Add* button (![Add](../../../images/icon-add.png)).
-1. Type "Foo" as your Template name.
+1. Type _Foo_ as your Template name.
 1. From the Properties side panel, click the *Add* button (![Add](../../../images/icon-plus.png)) next to the Structure field.
 
    ![Click the Add button next to the Structure field to link your Template to the Structure.](./advanced-web-content-api/images/06.png)
 
-1. Select the Foo Web Content Structure from the [previous section](#create-the-structure-sample).
+1. Select the _Foo_ Web Content Structure from the [previous section](#create-the-structure-sample).
 1. Delete the default `<#-- -->` block comment included in the FreeMarker editor.
 1. On the sidebar, click *Elements* (![Elements](../../../images/icon-list-ul.png)).
 1. Under the Fields group, click the *Text*, *Image*, *Date*, and *Single Selection* fields to add them to your Template. Ensure that each field starts with a new line in the FreeMarker editor.
@@ -160,28 +160,28 @@ Create a first Web Content Template including the Structure's `image` field,
 
 1. Click *Save*.
 
-Create a second Web Content Template without the Structure's `image` field,
+Create a second Web Content Template without the Structure's `image` field:
 
 1. Under the Templates tab, click the *Actions* button (![Actions](../../../images/icon-actions.png)) and select *Copy*.
 
    ![Copy the first Template using the *Actions* menu.](./advanced-web-content-api/images/10.png)
 
-1. Update the Template's name to "Goo" and click *Copy*.
+1. Update the Template's name to _Goo_ and click *Copy*.
 
    ![Update the Template's name to "Goo".](./advanced-web-content-api/images/09.png)
 
-1. Under the Templates tab, click the new Goo template.
+1. Under the Templates tab, click the new _Goo_ template.
 1. In the Template editor, remove the image information `<#if (ImageReference.getData())></#if>` from the FreeMarker script.
 
    ![Remove the image information from the Template.](./advanced-web-content-api/images/11.gif)
 
 1. Click *Save*.
 
- For more information, read [Creating Web Content Templates](../web-content-templates/creating-web-content-templates.md)
+ For more information, see [Creating Web Content Templates](../web-content-templates/creating-web-content-templates.md).
 
 ## Get the Web Content Structure Id
 
-To return all the existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
+To return all existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -314,7 +314,7 @@ Use the `ContentTemplates_GET_FromSite` script to obtain all the Site's Template
 | --- | --- |
 | $1 | `siteId` |
 
-This code shows the JSON output from the script. Notice this information:
+Below is the JSON output from the script. Notice this information:
 
 - There are two different templates in this JSON output: `"name": "Foo"` and `"name": "Goo"`.
 - The `contentStructureId` field indicates the Web Content Structure linked to the Template.
@@ -390,7 +390,7 @@ This code shows the JSON output from the script. Notice this information:
 
 ### Get a Web Content Template by Id
 
-The script in [the previous section](#getting-the-web-content-templates) gathers all the Site's Web Content Templates, but you can obtain information about a particular Template by referencing its Id. Use the `ContentTemplate_GET_ById.sh` cURL script for this purpose. This script uses the Site Id and Template Id parameters.
+The script [above](#getting-the-web-content-templates) gathers all the Site's Web Content Templates, but you can get information about a particular Template by referencing its Id. Use the `ContentTemplate_GET_ById.sh` cURL script for this purpose. This script uses the Site Id and Template Id parameters.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -407,7 +407,7 @@ The script in [the previous section](#getting-the-web-content-templates) gathers
 
 ## Post the Web Content Article
 
-The `StructuredContent_POST_ToSite.sh` cURL script creates a new Web Content using the `POST` HTTP method and the sample Structure you [created before](#create-the-sample-structure). The script uses the [Site Id](#identifying-the-site-id), Structure Id, and foo.png's [image Id](#getting-the-images-ids) as parameters.
+The `StructuredContent_POST_ToSite.sh` cURL script creates a new Web Content article using the `POST` HTTP method and the sample Structure you [created before](#create-the-sample-structure). The script uses the [Site Id](#identifying-the-site-id), Structure Id, and foo.png's [image Id](#getting-the-images-ids) as parameters.
 
 | Method | Service | Endpoint |
 | --- | --- | --- |
@@ -429,7 +429,7 @@ To find your new Web Content article in Liferay DXP, open the *Site Menu* (![Sit
 
 ![Web Content article from the POST HTTP method.](./advanced-web-content-api/images/08.png)
 
-This code shows the JSON output from the script. The script posts:
+Below is the JSON output from the script. The script posts
 
 - A new Web Content article named `"title" : "Able"`
 - Four `contentFields` values defining the article's body:
@@ -540,7 +540,7 @@ Note: PATCH option information will be included in a follow-up (see LPS-137932).
 
 ## Get the Web Content Article Rendered with a Particular Template
 
-A Web Content article is not linked to a particular Template. The Template is the way the Web Content renders, and you can use different Templates for the same Web Content. For more information, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
+A Web Content article is not linked to a particular Template. The Template defines how the Web Content renders, and you can use different Templates for the same Web Content. For more information, read [Understanding Web Content Structures](../web-content-structures/understanding-web-content-structures.md).
 
 ```{tip}
 Because a Web Content article is not linked to a particular Template, you cannot specify a Template when you `POST` a new article (the HTTP `POST` method ignores the `renderedContents` section describing the Template.)
@@ -562,7 +562,7 @@ Here is the script output using the Template with the `image` field:
 Foo<picture data-fileentryid="43795"><source media="(max-width:300px)" srcset="http://localhost:8080/o/adaptive-media/image/43795/Thumbnail-300x300/foo.png?t=1629897455431, /o/adaptive-media/image/43795/Preview-1000x0/foo.png?t=1629897455431 2x" /><source media="(max-width:600px) and (min-width:300px)" srcset="http://localhost:8080/o/adaptive-media/image/43795/Preview-1000x0/foo.png?t=1629897455431" /><img alt="Foo alt-image description" data-fileentryid="43795" src="http://localhost:8080/documents/20125/0/foo.png/50956e56-9571-8f73-ae6e-9fca20fe0e3a?t=1629897455431" /></picture>30 Aug 2021 - 00:00:00Option1314292
 ```
 
-If we specify the Web Content Template without the `image` field instead, the `<picture></picture>` information doesn't render in the output. Here is the script output using the Template without the `image` field:
+If you specify the Web Content Template without the `image` field instead, the `<picture></picture>` information doesn't render in the output. Here is the script output using the Template without the `image` field:
 
 ```bash
 ./StructuredContentRendered_GET_ById.sh 43849 43823 
