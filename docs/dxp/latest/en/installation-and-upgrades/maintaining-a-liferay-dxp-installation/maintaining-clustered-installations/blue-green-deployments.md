@@ -19,7 +19,7 @@ For more information, refer to these blue-green deployment articles:
 * [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
 * [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
 
-## Related Topics
+## Additional Information
 
 * [Rolling Restarts](./rolling-restarts.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

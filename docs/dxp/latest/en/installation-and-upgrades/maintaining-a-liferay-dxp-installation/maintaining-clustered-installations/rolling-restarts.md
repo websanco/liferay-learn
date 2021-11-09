@@ -6,14 +6,14 @@ Here are the rolling restart steps:
 
 1. Shut down one cluster node (JVM instance).
 
-2. Update/modify the deployment for that node (see the maintenance scenarios that follow).
+1. Update/modify the deployment for that node (see the maintenance scenarios that follow).
 
-3. Start the node.
+1. Start the node.
 
-4. Repeat these steps for all other cluster nodes.
+1. Repeat these steps for all other cluster nodes.
 
-    ```note::
-      Maintenance scenarios vary in how they behave in rolling restarts. For example, UI changes in a plugin update are only visible on the updated nodes. Users on nodes that haven't been updated don't see the UI changes. Maintenance scenarios might have specific cases that cannot be performed in rolling restarts --- the scenario descriptions mention these cases.
+    ```{note}
+    Maintenance scenarios vary in how they behave in rolling restarts. For example, UI changes in a plugin update are only visible on the updated nodes. Users on nodes that haven't been updated don't see the UI changes. Maintenance scenarios might have specific cases that cannot be performed in rolling restarts --- the scenario descriptions mention these cases.
     ```
 
 The maintenance scenarios eligible for rolling restart are described below.
@@ -56,7 +56,7 @@ Minor version updates of Java can be applied in rolling restarts. Major version 
 
 All rolling restart eligible updates can be applied using the rolling restart steps listed earlier. Other updates must be done differently as described next.
 
-## Related Topics
+## Additional Information
 
 * [Blue Green Deployment](./blue-green-deployments.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

@@ -7,7 +7,7 @@ Maintaining a Liferay DXP Installation
    maintaining-a-liferay-dxp-installation/backing-up.md
    upgrading-liferay/upgrade-basics/upgrading-via-docker.md
    maintaining-a-liferay-dxp-installation/patching_liferay.rst
-   maintaining-a-liferay-dxp-installation/maintaining_clustered_installations.rst
+   maintaining-a-liferay-dxp-installation/maintaining-clustered-installations.rst
 
 -  :doc:`/installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker`

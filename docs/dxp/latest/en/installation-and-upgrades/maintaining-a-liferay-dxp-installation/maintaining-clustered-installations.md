@@ -1,9 +1,17 @@
 # Maintaining Clustered Installations
 
-Setting up your Liferay DXP installation to function in a [cluster](../../setting-up-liferay/clustering-for-high-availability.md) provides performance and scalability improvements, but also requires additional consideration to properly support and maintain. This includes deploying new and updated plugins and modules, [installing patches and fix packs](../patching-liferay/patching-liferay.md), changing configurations, and more. The Liferay DXP cluster maintenance methods outlined maximize server uptime and minimize risks for server maintenance. Liferay DXP supports using standard cluster maintenance techniques:
+```{toctree}
+:maxdepth: 3
 
-* [Rolling restarts](./rolling-restarts.md): Nodes are shut down and updated one at a time.
-* [Blue-Green deployment](./blue-green-deployments.md): Blue-Green involves duplicating the current environment (*blue* environment), updating the duplicate (*green* environment), and cutting over users to the updated environment (green).
+maintaining-clustered-installations/maintaining-clustered-installations.md
+maintaining-clustered-installations/rolling-restarts.md
+maintaining-clustered-installations/blue-green-deployments.md
+```
+
+Setting up your Liferay DXP installation to function in a [cluster](../setting-up-liferay/clustering-for-high-availability.md) provides performance and scalability improvements, but also requires additional consideration to properly support and maintain. This includes deploying new and updated plugins and modules, [installing patches and fix packs](./patching-liferay/patching-liferay.md), changing configurations, and more. The Liferay DXP cluster maintenance methods outlined maximize server uptime and minimize risks for server maintenance. Liferay DXP supports using standard cluster maintenance techniques:
+
+* [Rolling restarts](./maintaining-clustered-installations/rolling-restarts.md): Nodes are shut down and updated one at a time.
+* [Blue-Green deployment](./maintaining-clustered-installations/blue-green-deployments.md): Blue-Green involves duplicating the current environment (*blue* environment), updating the duplicate (*green* environment), and cutting over users to the updated environment (green).
 
 The techniques are compared below.
 
@@ -50,6 +58,6 @@ backward-compatible include, but are not limited to these:
 
 ## Additional Information
 
-* [Rolling Restarts](./rolling-restarts.md)
-* [Blue-Green Deployments](./blue-green-deployments.md)
-* [Server Administration](./../../../system-administration/using-the-server-administration-panel.md)
+* [Rolling Restarts](./maintaining-clustered-installations/rolling-restarts.md)
+* [Blue-Green Deployments](./maintaining-clustered-installations/blue-green-deployments.md)
+* [Server Administration](../../system-administration/using-the-server-administration-panel.md)
