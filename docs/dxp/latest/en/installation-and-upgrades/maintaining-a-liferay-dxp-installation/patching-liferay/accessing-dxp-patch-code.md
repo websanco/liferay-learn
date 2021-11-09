@@ -4,8 +4,8 @@ Liferay DXP Fix Pack and Hotfix source code is available in a private GitHub rep
 
 ![Fix Pack and Hotfix Tags.](./accessing-dxp-patch-code/images/01.png)
 
-```note::
-   Fix Packs are tagged in their respective DXP version branch (i.e., ``7.0.x``, ``7.1.x``, etc.). Hotfixes have their own branches tagged at the branch head. Since the code at the hotfix branch head and hotfix tag are the same, fetching the branch or tag accesses the same code.
+```{note}
+Fix Packs are tagged in their respective DXP version branch (i.e., `7.0.x`, `7.1.x`, etc.). Hotfixes have their own branches tagged at the branch head. Since the code at the hotfix branch head and hotfix tag are the same, fetching the branch or tag accesses the same code.
 ```
 
 Here's what you can do with the code:
@@ -19,11 +19,11 @@ The figure below shows file diffs between two hotfixes.
 
 ![Tag comparison.](./accessing-dxp-patch-code/images/02.png)
 
-```note::
-   Tagged branches for Liferay DXP 7.0 and 7.1 patch source code are available starting from these Fix Pack baselines: 
+```{note}
+Tagged branches for Liferay DXP 7.0 and 7.1 patch source code are available starting from these Fix Pack baselines: 
 
-   * Liferay DXP 7.1 Fix Pack 19
-   * Liferay DXP 7.0 Fix Pack 96
+* Liferay DXP 7.1 Fix Pack 19
+* Liferay DXP 7.0 Fix Pack 96
 ```
 
 Build files are excluded from the source code because Liferay DXP source code customization is not supported. Liferay DXP's extension points are the only supported customization method. 
@@ -31,8 +31,8 @@ Build files are excluded from the source code because Liferay DXP source code cu
 * If you want a new extension point or new functionality, please submit a feature request in [JIRA](https://issues.liferay.com).
 * If you need assistance customizing Liferay DXP or making a feature request, please contact your Account Executive or Customer Experience Manager.
 
-```note::
-   Former Patching Tool source mode commands ``diff`` and ``store`` are not available for DXP 7.3+. They have been removed with no direct replacement. If you've been patching your DXP source code in previous DXP versions and you're upgrading to DXP 7.3+, please examine the new DXP source code and adapt to it.
+```{note}
+Former Patching Tool source mode commands `diff` and `store` are not available for DXP 7.3+. They have been removed with no direct replacement. If you've been patching your DXP source code in previous DXP versions and you're upgrading to DXP 7.3+, please examine the new DXP source code and adapt to it.
 ```
 
 ## Requesting Repository Access
@@ -46,14 +46,14 @@ The DXP source code in the GitHub repository at <https://github.com/liferay/life
 1. Enter the requested information, making sure to include the person's first and last name.
 1. Click *Submit*.
 
-```note::
-   You can submit access requests on behalf of other project team members.
+```{note}
+You can submit access requests on behalf of other project team members.
 ```
 
 Once your request is approved, you'll receive a repository access invitation email. If you misplace an invitation, access it in GitHub at <https://github.com/liferay/liferay-dxp/invitations>.
 
-```note::
-   Requests are processed as soon as possible, in the order they're received. If request volume is high, we may not be able to process your request immediately.
+```{note}
+Requests are processed as soon as possible, in the order they're received. If request volume is high, we may not be able to process your request immediately.
 ```
 
 Your repository access approval gives you *Read* level permissions. Here are some actions you can perform:
@@ -64,12 +64,12 @@ Your repository access approval gives you *Read* level permissions. Here are som
 
 Access is maintained for the duration of your Liferay DXP Subscription.
 
-```warning::
-   Invitations remain active for seven days and can be accepted even if the team member is no longer listed in the Project Details page. For example, if a GitHub user name is entered incorrectly it belongs to someone, that person can access the repository temporarily. To prevent this, the system checks weekly for new repository collaborators that don't belong to any active Liferay projects and automatically revokes their access.
+```{warning}
+Invitations remain active for seven days and can be accepted even if the team member is no longer listed in the Project Details page. For example, if a GitHub user name is entered incorrectly it belongs to someone, that person can access the repository temporarily. To prevent this, the system checks weekly for new repository collaborators that don't belong to any active Liferay projects and automatically revokes their access.
 ```
 
-```important::
-   GitHub user name changes invalidate respository access. If you change a user name, `remove access for the user <#removing-access>`_ and then request access using the new GitHub user name.
+```{important}
+GitHub user name changes invalidate respository access. If you change a user name, [remove access for the user](#removing-access) and then request access using the new GitHub user name.
 ```
 
 ## Removing Access

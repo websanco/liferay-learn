@@ -31,8 +31,8 @@ If you want to remove all or most of your patches, it may be easier to use the P
 
 1. Bring your installation back up to a desired patch level by [installing the applicable patches](./installing-patches.md).
 
-```tip::
-   It's helpful to store your patches in a convenient location in case you want to restore your installation to a particular patch level. You can always download fix packs again from the `Customer Portal <https://customer.liferay.com/downloads>`_.
+```{tip}
+It's helpful to store your patches in a convenient location in case you want to restore your installation to a particular patch level. You can always download fix packs again from the [Customer Portal](https://customer.liferay.com/downloads).
 ```
 
 ## Reverting a Hotfix

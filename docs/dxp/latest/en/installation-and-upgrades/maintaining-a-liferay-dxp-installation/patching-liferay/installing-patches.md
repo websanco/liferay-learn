@@ -4,11 +4,11 @@
 
 The patching steps for DXP bundles and DXP application server installations are similar. Since DXP bundles include the preconfigured Patching Tool, you can apply patches right away. DXP application server installations, however, require installing and configuring the Patching Tool before patching.
 
-```warning::
-   **Always** `back up <../backing-up.md>`_ your database and installation before patching.
+```{warning}
+**Always** [back up](../backing-up.md) your database and installation before patching.
 ```
 
-If you're patching a DXP bundle, continue with the basic patching steps below. If you're patching DXP on an application server, [make additional preparations](#preparing-to-patch-dxp-on-an-application-server) _before_ following the patching steps.
+If you're patching a DXP bundle, continue with the basic patching steps below. If you're patching DXP on an application server, [make additional preparations](#preparing-to-patch-dxp-on-an-application-server) *before* following the patching steps.
 
 
 ## Patching Steps
@@ -22,8 +22,8 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
 
     Reasons:
 
-    * On Windows systems, files in use are locked and can't be patched.
     * On Unix-style systems, you can usually replace files that are running, but the old ones reside in memory.
+    * On Windows systems, files in use are locked and can't be patched.
 
 1.  Install the patch by running the Patching Tool's `install` command from the `patching-tool` folder:
 
@@ -95,18 +95,14 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
 
     Delete the application server cache. Please consult the application server vendor's documentation on where where to find the cache.
 
-    ```warning::
-       **Do not delete these two files:** ``patching-backup-deps.zip`` and ``patching-backup.zip``. The Patching Tool creates them in the DXP application's ``WEB-INF`` folder. The Patching Tool examines them to determine previous Fix Pack files to revert before installing a new Fix Pack.
+    ```{note}
+    If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next DXP startup ensures that such modules reinstall with the appropriate state.
     ```
 
-    ```note::
-       If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next DXP startup ensures that such modules reinstall with the appropriate state.
-    ```
+1.  If the patch release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
 
-1.  If you installed a Service Pack and its release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
-
-    ```important::
-       If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
+    ```{important}
+    If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
     ```
 
 1.  If you customized DXP's `web.xml` file, merge your customizations into the new `web.xml` file that the Fix Pack includes. Fix Packs always overwrite the existing `web.xml` file.
@@ -128,21 +124,21 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
 
     Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure that your custom indexes do not use this naming convention.
 
-1.  If you are installing DXP 7.3+ back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
+1.  If you are installing DXP 7.3 back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
 
 1.  Start the application server again.
 
 Congratulations! Your DXP instance is patched and running.
 
-```note::
-   If the patch doesn't install or if you're unable to resolve errors that occur, please open a `Help Center ticket <https://help.liferay.com/hc/>`_ and provide the full Patching Tool ``info`` output by running ``./patching-tool.sh info > output.txt`` and attaching the ``output.txt`` file to the ticket.
+```{note}
+If the patch doesn't install or if you're unable to resolve errors that occur, please open a [Help Center ticket](https://help.liferay.com/hc/) and provide the full Patching Tool `info` output by running `./patching-tool.sh info > output.txt` and attaching the `output.txt` file to the ticket.
 ````
 
 ## Preparing to Patch DXP on an Application Server
 
 If you installed DXP on an application server, make these preparations:
 
-1.  If you're patching DXP 7.3+ and it is deployed as a `.war` file, unzip the `.war` to a temporary location for patching.
+1.  If you're patching DXP 7.3 and it is deployed as a `.war` file, unzip the `.war` to a temporary location for patching.
 
 1.  [Install the Patching Tool](./installing-the-patching-tool.md), if you have not yet installed it.
 
@@ -153,7 +149,7 @@ If you installed DXP on an application server, make these preparations:
     ./patching-tool.sh auto-discovery
     ```
 
-1. If you're patching DXP 7.3+, set the Patching Tool's `war.path` property (e.g., in `default.properties`) to your unzipped DXP `.war` location.
+1. If you're patching DXP 7.3, set the Patching Tool's `war.path` property (e.g., in `default.properties`) to your unzipped DXP `.war` location.
 
 1. Continue with the [Patching Steps](#basic-patching-steps) in the previous section.
 
