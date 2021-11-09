@@ -1,6 +1,8 @@
-# What's New in Search for 7.3?
+# What's New in Search for 7.4?
 
 ## Elasticsearch Integration
+
+<!--Is there anything to say here? -->
 
 ### Elasticsearch 7 Support
 
@@ -39,6 +41,20 @@ Configure connections to multiple Elasticsearch clusters. In Liferay DXP 7.2 it 
 See the [Sidecar](#a-sidecar-elasticsearch-7-is-bundled) section under [Development](#development).
 
 ## Search Infrastructure & Administration
+
+<!--
+Elasticsearch 7.15.x Compatibility Out-of-the-Box
+
+Minimum required version of standalone/remote Elasticsearch: 7.14
+
+Client version: 7.14.1
+
+Highest compatible minor version (at the time of the release): 7.15
+
+Sidecar Elasticsearch server version (for development and testing only, not supported): 7.10.2 (OSS)
+
+Server Administrators can limit the scope of the reindex actions to selected Virtual instances 
+-->
 
 ### Multi-Tenant Index Names
 
@@ -98,6 +114,8 @@ See [Similar Results](../search-pages-and-widgets/similar-results.md) for detail
 
 ## Search Tuning
 
+<!-- Now backed by database tables -->
+
 > **Subscribers**
 
 ### Search Tuning: Result Rankings
@@ -117,6 +135,9 @@ Result Rankings are a graphical UI for custom-tuning the result relevancy for a 
 Synonyms relate queries with similar meaning, giving equivalent weight to the synonymous queries when searching. For example, the queries "mobile phone", "cell phone", and "hand phone" have equivalent meanings and can be used interchangeably. Defining a synonym set with these three queries shows users searching for "mobile phone" documents containing the words "cell phone" or "hand phone". See the [Synonyms documentation from Elastic](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html).
 
 ## Liferay Enterprise Search (LES)
+
+<!-- Bundled apps: Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered through Fix Pack and Service Pack releases.
+-->
 
 > **[LES Subscribers](https://www.liferay.com/products/dxp/enterprise-search)**
 
@@ -152,6 +173,8 @@ Though not explicitly linked to the Liferay CE/DXP 7.3 release, these apps were 
 
 ## Development
 
+<!-- Probably nothing to say here -->
+
 ### New Index Settings Contributor Extension Point
 
 > Availability: Liferay CE 7.3 GA6+, Liferay DXP 7.3 GA1+
@@ -170,9 +193,12 @@ The Open Source (OSS) version of Elasticsearch 7.9.0 (licensed under Apache 2.0)
 
 The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please refer to manually installing a [sidecar server](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) if your deployment is not able to reach external sites to download resources.
 
-## Upgrading to DXP 7.3
+## Upgrading to DXP 7.4
 
-Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult the [upgrade documentation](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md) for important information to assist your upgrade journey.
+Upgrading from a previous DXP version to 7.4 requires no special considerations for most setups. If using Liferay Enterprise Search or Search Tuning, however, make sure you consider these points: 
+
+1. The Search Tuning applications are now backed by database tables, whereas previous versions used Elasticsearch indexes for their data storage. See [Upgrading Search Infrastructure](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-search-infrastructure.md) for more information.
+1. The Liferay Enterprise Search applications are bundles with Liferay DXP. When upgrading to 7.4 no additional installation steps are required.
 
 ## Related Topics
 
