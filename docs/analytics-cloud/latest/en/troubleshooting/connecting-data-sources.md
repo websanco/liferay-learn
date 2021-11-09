@@ -12,7 +12,7 @@ Ensure that the DXP installation has internet access to our Analytic Cloud serve
 * `https://analytics-js-cdn.liferay.com`
 
 ```{note}
-Note, the {regionKey} is based on the initial selection during workspace setup (i.e. {ac-southamericaeast1}, {ac-europewest2}, {ac-europewest3}, or {ac-uswest1}).
+Note, the {regionKey} is based on the initial selection during workspace setup (i.e. ac-southamericaeast1, ac-europewest2, ac-europewest3, or ac-uswest1).
 ```
 
 ```{important}
