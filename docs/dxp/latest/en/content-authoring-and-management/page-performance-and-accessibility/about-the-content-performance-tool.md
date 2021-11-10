@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-The Content Performance panel is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance panel to periodically assess and adapt their content strategy. The Content Performance panel is available for assets based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../../site-building/creating-pages/using-widget-pages/configuring-widgets/adding-widgets-to-a-page.md) Pages.
+The Content Performance tool is a global application for analyzing performance metrics of your content, like traffic acquisition channels or the number of views over time. Content teams can use the Content Performance tool to periodically assess and adapt their content strategy. The Content Performance tool is available for assets based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md) and starting with Liferay DXP 7.4, for [Content](../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) and [Widget](../../site-building/creating-pages/using-widget-pages/configuring-widgets/adding-widgets-to-a-page.md) Pages.
 
 To learn how to analyze your content performance quantitatively using the Content Performance tool, see [Analyze Content Metrics Using the Content Performance Tool](./analyze-content-metrics-using-content-performance-tool.md).
 
@@ -20,7 +20,7 @@ You can access the Content Performance tool when the following conditions are me
 
 You can open the Content Performance tool using the *Content Performance* (![Content Performance](../../images/icon-analytics.png)) button from
 
-- [Content based on a Display Page Template](#accessing-the-content-performance-tool-from-content-based-on-a-display-page-template), like Web Content, Documents, or Blog entries.
+- [Content based on a Display Page Template](#accessing-the-content-performance-tool-from-content-based-on-a-display-page-template), like Web Content, Documents and Media, or Blog entries.
 - [Content or Widget Pages](#accessing-the-content-performance-tool-from-content-or-widget-pages) (Liferay DXP 7.4+).
 - [The Content Dashboard](#accessing-the-content-performance-tool-from-the-content-dashboard).
 

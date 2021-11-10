@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
 
-You can use the Content Performance tool to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your page. In the Content Performance tool, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
+You can use the Content Performance tool to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your Page. In the Content Performance tool, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
 ```{important}
 Content Performance metrics are only available for the [Default Experience](../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md).
@@ -37,7 +37,7 @@ Even when your content is not translated into a specific language, you may find 
 
 ## Analyzing Content Engagement
 
-This area shows the number of views for the content or Page URL and how this number changes over time. The number of views is key to understanding content performance and discovering content insights. For Web Content based on a Display Page Template, the Engagement area also shows the number of reads. A visitor accessing the Web Content may or may not read it. To distinguish the audience that only visits the content (number of Views) from the audience engaging with the content (number of Reads), Liferay uses a specialized algorithm that considers parameters like article length, language, and scroll behavior, among others.
+This area shows the number of views for the content or Page URL and how this number changes over time. The number of views is key to understanding content performance and discovering content insights. For Web Content or Documents and Media based on a Display Page Template, the Engagement area also shows the number of reads. A visitor accessing the Web Content may or may not read it. To distinguish the audience that only visits the content (number of Views) from the audience engaging with the content (number of Reads), Liferay uses a specialized algorithm that considers parameters like article length, language, and scroll behavior, among others.
 
 By default, the Engagement area shows the total number of views for the content, along with the number of views in the last seven days. You can change this period in the drop-down time selector and analyze trends over time using the backward and forward buttons (![Arrow left](../../images/icon-angle-left.png) ![Arrow right](../../images/icon-angle-right.png)). Hover over any part of the line chart to show views for a specific time.
 
@@ -45,7 +45,7 @@ By default, the Engagement area shows the total number of views for the content,
 If the Engagement chart shows a zero value for a certain period, it means that the information could not be collected or analyzed for that period.
 ```
 
-![The Engagement area in the Content Performance sidebar provides Views information.](./analyze-content-metrics-using-content-performance-tool/images/07.png)
+![The Engagement area in the Content Performance tool provides Views information.](./analyze-content-metrics-using-content-performance-tool/images/07.png)
 
 ## Analyzing Traffic Channels
 

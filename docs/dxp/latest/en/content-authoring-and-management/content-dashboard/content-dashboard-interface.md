@@ -178,5 +178,5 @@ To open the Information sidebar,
 ## Related Information
 
 - [About the Content Dashboard](./about-the-content-dashboard.md)
-- [About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md)
+- [About the Content Performance Tool](../page-performance-and-accessibility/about-the-content-performance-tool.md)
 - [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
