@@ -3,7 +3,7 @@ package com.acme.h6d2.web.internal.portlet;
 import com.acme.h6d2.model.H6D2Entry;
 import com.acme.h6d2.service.H6D2EntryLocalService;
 
-import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
+import com.liferay.counter.kernel.service.CounterLocalService;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -41,7 +41,7 @@ public class H6D2Portlet extends MVCPortlet {
 		User user = _portal.getUser(actionRequest);
 
 		H6D2Entry h6d2Entry = _h6d2EntryLocalService.createH6D2Entry(
-			CounterLocalServiceUtil.increment());
+			_counterLocalService.increment());
 
 		h6d2Entry.setCompanyId(user.getCompanyId());
 		h6d2Entry.setUserId(user.getUserId());
@@ -53,6 +53,9 @@ public class H6D2Portlet extends MVCPortlet {
 
 		_h6d2EntryLocalService.addH6D2Entry(h6d2Entry);
 	}
+
+	@Reference
+	private CounterLocalService _counterLocalService;
 
 	@Reference
 	private H6D2EntryLocalService _h6d2EntryLocalService;
