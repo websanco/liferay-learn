@@ -234,4 +234,7 @@ public interface S5E6EntryModel
 	 */
 	public void setName(String name);
 
+	@Override
+	public S5E6Entry cloneWithOriginalValues();
+
 }

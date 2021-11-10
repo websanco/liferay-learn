@@ -32,12 +32,14 @@ import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
+import com.liferay.portal.kernel.util.StringUtil;
 
 import java.io.Serializable;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 
+import java.sql.Blob;
 import java.sql.Types;
 
 import java.util.Collections;
@@ -604,6 +606,30 @@ public class S5E6EntryModelImpl
 	}
 
 	@Override
+	public S5E6Entry cloneWithOriginalValues() {
+		S5E6EntryImpl s5e6EntryImpl = new S5E6EntryImpl();
+
+		s5e6EntryImpl.setUuid(this.<String>getColumnOriginalValue("uuid_"));
+		s5e6EntryImpl.setS5E6EntryId(
+			this.<Long>getColumnOriginalValue("S5E6EntryId"));
+		s5e6EntryImpl.setGroupId(this.<Long>getColumnOriginalValue("groupId"));
+		s5e6EntryImpl.setCompanyId(
+			this.<Long>getColumnOriginalValue("companyId"));
+		s5e6EntryImpl.setUserId(this.<Long>getColumnOriginalValue("userId"));
+		s5e6EntryImpl.setUserName(
+			this.<String>getColumnOriginalValue("userName"));
+		s5e6EntryImpl.setCreateDate(
+			this.<Date>getColumnOriginalValue("createDate"));
+		s5e6EntryImpl.setModifiedDate(
+			this.<Date>getColumnOriginalValue("modifiedDate"));
+		s5e6EntryImpl.setDescription(
+			this.<String>getColumnOriginalValue("description"));
+		s5e6EntryImpl.setName(this.<String>getColumnOriginalValue("name"));
+
+		return s5e6EntryImpl;
+	}
+
+	@Override
 	public int compareTo(S5E6Entry s5e6Entry) {
 		long primaryKey = s5e6Entry.getPrimaryKey();
 
@@ -743,7 +769,7 @@ public class S5E6EntryModelImpl
 			getAttributeGetterFunctions();
 
 		StringBundler sb = new StringBundler(
-			(4 * attributeGetterFunctions.size()) + 2);
+			(5 * attributeGetterFunctions.size()) + 2);
 
 		sb.append("{");
 
@@ -754,9 +780,26 @@ public class S5E6EntryModelImpl
 			Function<S5E6Entry, Object> attributeGetterFunction =
 				entry.getValue();
 
+			sb.append("\"");
 			sb.append(attributeName);
-			sb.append("=");
-			sb.append(attributeGetterFunction.apply((S5E6Entry)this));
+			sb.append("\": ");
+
+			Object value = attributeGetterFunction.apply((S5E6Entry)this);
+
+			if (value == null) {
+				sb.append("null");
+			}
+			else if (value instanceof Blob || value instanceof Date ||
+					 value instanceof Map || value instanceof String) {
+
+				sb.append(
+					"\"" + StringUtil.replace(value.toString(), "\"", "'") +
+						"\"");
+			}
+			else {
+				sb.append(value);
+			}
+
 			sb.append(", ");
 		}
 

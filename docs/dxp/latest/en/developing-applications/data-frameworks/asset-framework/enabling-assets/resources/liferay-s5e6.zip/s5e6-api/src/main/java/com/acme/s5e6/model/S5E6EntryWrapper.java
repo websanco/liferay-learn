@@ -120,6 +120,11 @@ public class S5E6EntryWrapper
 		}
 	}
 
+	@Override
+	public S5E6Entry cloneWithOriginalValues() {
+		return wrap(model.cloneWithOriginalValues());
+	}
+
 	/**
 	 * Returns the company ID of this s5e6 entry.
 	 *
