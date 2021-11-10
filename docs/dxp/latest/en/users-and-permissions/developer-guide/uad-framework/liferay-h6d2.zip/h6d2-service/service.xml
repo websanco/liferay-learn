@@ -24,6 +24,5 @@
 		<!-- Other fields -->
 
 		<column name="name" type="String" uad-nonanonymizable="true" />
-
 	</entity>
 </service-builder>
