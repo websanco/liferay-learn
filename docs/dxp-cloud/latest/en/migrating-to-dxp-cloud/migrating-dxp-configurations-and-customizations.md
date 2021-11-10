@@ -1,3 +1,3 @@
-# Migrating DXP Configurations and Customizations
+# Step 4: Migrating DXP Configurations and Customizations
 
 Coming soon!
