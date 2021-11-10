@@ -25,7 +25,12 @@ To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../
 
 This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for the combination of categories in the global Vocabularies you select. This chart takes into account:
 
-- Web content articles exclusively, across all Sites and Asset Libraries.
+- [Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and [Documents and Media](../documents-and-media/documents-and-media-overview.md) across all Sites and Asset Libraries.
+
+    ```{note}
+    Documents and Media are available in the Content Dashboard starting with Liferay DXP 7.4+.
+    ```
+
 - Content you can access.
 - The existing [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
 - A maximum of two global Vocabularies (for the *x* and *y* axes.)
@@ -95,6 +100,7 @@ In the list of contents, you can find the following columns:
 | --- | --- |
 | Title | Article title(*). |
 | Author | Author's name. |
+| Type | Specifies a [Web Content Article](../web-content/web-content-articles/adding-a-basic-web-content-article.md) or [Documents](../documents-and-media/documents-and-media-overview.md) asset type (available in Liferay DXP 7.4+.) |
 | Subtype | Article's [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
 | Site or Asset Library | Location of the article in the Liferay DXP instance. |
 | Status | Article workflow status. Articles with more than one version in different statuses show all than statuses. |
