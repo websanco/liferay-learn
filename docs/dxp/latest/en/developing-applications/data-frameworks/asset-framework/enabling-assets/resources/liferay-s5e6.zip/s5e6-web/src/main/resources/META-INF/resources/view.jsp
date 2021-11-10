@@ -29,7 +29,7 @@ page import="com.acme.s5e6.service.S5E6EntryLocalServiceUtil" %>
 
 <hr />
 
-<h5>Entries</h5>
+<h5>S5E6 Entries</h5>
 
 <%
 List<S5E6Entry> s5e6Entries = S5E6EntryLocalServiceUtil.getS5E6Entries(-1, -1);
