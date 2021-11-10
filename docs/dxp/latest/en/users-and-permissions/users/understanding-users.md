@@ -6,7 +6,7 @@ Users break down into three general categories:
 
 | User | Default Access | Notes |
 | --- | --- | --- |
-| [Administrator](../../getting-started/introduction-to-the-admin-account.md) | Liferay Admin with full system access | We *strongly* recommend that users change the password for this account promptly after installation. |
+| [Administrator](../../getting-started/introduction-to-the-admin-account.md) | Liferay Admin with full system access. | We *strongly* recommend that users change the password for this account promptly after installation. |
 | Guest | View access to Public Pages and Sites. In most cases cannot create or add content unless explicitly permitted. | By default, Guest users can create an account on a Liferay Site to view and interact with *Public* Sites. |
 | User | View access to Pages and Sites they are members of. Able to create content. | Users get defined default permissions and can be elevated to Organization or Site Administrators. |
 

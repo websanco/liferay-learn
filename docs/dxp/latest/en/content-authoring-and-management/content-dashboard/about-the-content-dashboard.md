@@ -2,7 +2,7 @@
 
 > Available: Liferay 7.3+.
 
-The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries in the [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool).
+The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries.
 
 ```{note}
 For analyzing performance metrics of your content, use the [Content Performance panel](../content-performance-tool/about-the-content-performance-tool.md).

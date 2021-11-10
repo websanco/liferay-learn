@@ -33,9 +33,9 @@ Follow these steps to create a new Kaleo Forms process:
 
 1. Select a *Workflow* to use for your new process's forms.
 
-   You can choose from existing, published workflows, or create a new one.
+   You can choose from published workflows or create a new one.
 
-   * To choose an existing, published workflow, click on its *Actions* button ![Actions Button](../../../images/icon-actions.png), and select *Choose*. You can also select *Edit* to modify the workflow before choosing it.
+   * To choose a published workflow, click on its *Actions* button ![Actions Button](../../../images/icon-actions.png), and select *Choose*. You can also select *Edit* to modify the workflow before choosing it.
 
    * To create a new workflow, click on *Add Workflow*, and incorporate the desired elements. See [Workflow Designer Overview](../../workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md) for more information. When finished, click on *Publish* and close the dialogue window to update the list of available workflows to choose from.
 

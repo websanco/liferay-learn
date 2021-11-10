@@ -86,7 +86,7 @@ When a test is running, you can terminate it by selecting Terminate from the Sum
 
 ![](a-b-testing/images/07.png)
 
-### Winnder Declared
+### Winner Declared
 
 Once your A/B test successfully finishes, a Variant is declared a winner. At this state, you can perform the following actions:
 

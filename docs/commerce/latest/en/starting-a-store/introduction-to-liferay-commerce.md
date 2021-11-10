@@ -16,7 +16,7 @@ Just want to get started? Launch Liferay Commerce _fast_ [using the Liferay Comm
 
 ## Modern Storefront Pages and Content Management
 
-Liferay Commerce includes a wide range of tools for setting up a storefront. New search tools, for instance, are designed specifically for product catalogs, while customizable widgets make it easy to add common UI elements—such as Checkout and View Cart—to a page. Learn more about [Building a Storefront](../creating-store-content/creating-your-storefront.md).
+Liferay Commerce includes a wide range of tools for setting up a storefront. New search tools, for instance, are designed specifically for product catalogs, while customizable widgets make it easy to add common UI elements, such as Checkout and View Cart, to a page. Learn more about [Building a Storefront](../creating-store-content/creating-your-storefront.md).
 
 ![Liferay Commerce Dashboard](./introduction-to-liferay-commerce/images/01.png)
 

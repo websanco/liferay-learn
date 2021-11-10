@@ -1,16 +1,16 @@
 # Navigating DXP
 
-Liferay DXP's out-of-the-box navigation is organized into three major areas: the _Personal Menu_, _Global Menu_, and _Site Menu_.
+Liferay DXP's out-of-the-box navigation is organized into three major areas: _Personal Menu_, _Global Menu_, and _Site Menu_.
 
 ## Site Menu
 
-The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site that is being currently viewed. The Site Menu may be hidden until you expand it by clicking the icon ( ![Site Menu icon](../images/icon-menu.png) ) at the upper-left corner of the screen.
+The DXP _Site Menu_ on the left side of the screen contains actions, content, and configurations that are scoped to the specific site currently being viewed. You can click on the Site Menu icon (![Site Menu](../images/icon-menu.png)) in the Application Bar to expand or hide the Site Menu.
 
 ![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
 
-```note::
-   The *Site Menu* indicates the selected Site. In this example the Site is `Liferay`. You may change what site you are working with by clicking the Compass Icon in the Site Menu.
-```
+
+The *Site Menu* indicates the selected Site. In the above example, the Site is `Liferay`. You can change what site you are working with by clicking the Compass Icon ( ![Compass Icon](../images/icon-compass.png) ) in the Site Menu.
+
 
 The following common site building and management activities can be done in the _Site Menu_:
 
@@ -22,7 +22,7 @@ The following common site building and management activities can be done in the 
 
 ## Applications Bar
 
-The _Application Bar_ appears across the different pages and applications in the [Site Menu](#site-menu). The Application Bar shows an Actions (![Actions](../images/icon-actions.png)) menu with different options, depending on the application that is open at the moment.
+The _Application Bar_ appears at the top of each page and application listed in the [Site Menu](#site-menu). The Application Bar shows an Actions (![Actions](../images/icon-actions.png)) menu with different options depending on the application that is open at the moment.
 
 ![The actions available in the Application Bar depend on the application open at the moment.](./navigating-dxp/images/07.png)
 
@@ -30,7 +30,7 @@ When you open a Page in view mode, the available tools in the Applications Bar c
 
 ![Content Pages and Widget Pages show a different set of tools in the Application Bar.](./navigating-dxp/images/08.png)
 
-For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are
+For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are:
 
 - Edit (![Edit](../images/icon-edit.png))
 - Configure Page (![Configure Page](../images/icon-settings.png))
@@ -39,7 +39,7 @@ For [Content Pages](../site-building/creating-pages/building-and-managing-conten
 - A/B Test (![A/B Test](../images/icon-ab-testing.png))
 - Page Audit (![Page Audit](../images/icon-information.png))
 
-For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are
+For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are:
 
 - Configure Page (![Configure Page](../images/icon-settings.png))
 - Toggle Controls (![Toggle Controls](../images/icon-preview.png))
@@ -74,7 +74,7 @@ The DXP _Global Menu_ contains the _Applications Menu_ and the _Control Panel_. 
    By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
 ```
 
-You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side.
+You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side of the screen.
 
 ### Applications Menu
 
@@ -120,7 +120,7 @@ The following common administrative activities can be done in the Control Panel:
 
 ## DXP 7.1 and 7.2
 
-In Liferay DXP versions prior to 7.3, all of the contents of the Global Menu are instead contained within the Control Panel. The Control Panel itself is located above the Site Menu on the left side of the screen in these versions.
+In Liferay DXP versions prior to 7.3, the contents of the Global menu are found within the Control Panel, which is located above the Site Menu on the left side of the screen.
 
 ![The Control Panel in DXP 7.1 and 7.2 is located above the Site Menu.](./navigating-dxp/images/06.png)
 
