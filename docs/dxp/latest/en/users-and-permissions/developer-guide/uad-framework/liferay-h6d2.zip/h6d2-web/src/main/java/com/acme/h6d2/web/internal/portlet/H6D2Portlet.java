@@ -36,8 +36,6 @@ public class H6D2Portlet extends MVCPortlet {
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(
 			WebKeys.THEME_DISPLAY);
 
-		String name = ParamUtil.getString(actionRequest, "name");
-
 		User user = _portal.getUser(actionRequest);
 
 		H6D2Entry h6d2Entry = _h6d2EntryLocalService.createH6D2Entry(
@@ -49,7 +47,7 @@ public class H6D2Portlet extends MVCPortlet {
 
 		h6d2Entry.setGroupId(themeDisplay.getSiteGroupId());
 
-		h6d2Entry.setName(name);
+		h6d2Entry.setName(ParamUtil.getString(actionRequest, "name"));
 
 		_h6d2EntryLocalService.addH6D2Entry(h6d2Entry);
 	}
