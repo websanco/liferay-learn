@@ -29,7 +29,7 @@ page import="com.acme.t2p5.service.T2P5EntryLocalServiceUtil" %>
 
 <hr />
 
-<h5>Entries</h5>
+<h5>T2P5 Entries</h5>
 
 <%
 List<T2P5Entry> t2p5Entries = T2P5EntryLocalServiceUtil.getT2P5Entries(-1, -1);

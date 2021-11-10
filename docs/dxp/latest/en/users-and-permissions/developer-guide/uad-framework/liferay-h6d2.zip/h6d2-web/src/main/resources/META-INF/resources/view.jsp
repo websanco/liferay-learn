@@ -27,7 +27,7 @@ page import="com.acme.h6d2.service.H6D2EntryLocalServiceUtil" %>
 
 <hr />
 
-<h5>Entries</h5>
+<h5>H6D2 Entries</h5>
 
 <%
 List<H6D2Entry> h6d2Entries = H6D2EntryLocalServiceUtil.getH6D2Entries(-1, -1);
