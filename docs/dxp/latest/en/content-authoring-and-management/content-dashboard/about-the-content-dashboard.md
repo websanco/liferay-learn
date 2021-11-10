@@ -5,7 +5,7 @@
 The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries.
 
 ```{note}
-For analyzing performance metrics of your content, use the [Content Performance tool](../content-performance-tool/about-the-content-performance-tool.md).
+For analyzing performance metrics of your content, use the [Content Performance tool](../page-performance-and-accessibility/about-the-content-performance-tool.md).
 ```
 
 Using the Content Dashboard, content authors and marketers can analyze their content in different ways:
