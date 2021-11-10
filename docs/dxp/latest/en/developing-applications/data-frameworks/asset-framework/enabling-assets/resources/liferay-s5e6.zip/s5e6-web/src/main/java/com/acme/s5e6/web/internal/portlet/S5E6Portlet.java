@@ -3,12 +3,13 @@ package com.acme.s5e6.web.internal.portlet;
 import com.acme.s5e6.model.S5E6Entry;
 import com.acme.s5e6.service.S5E6EntryLocalService;
 
+import com.liferay.counter.kernel.service.CounterLocalService;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-import com.liferay.portal.kernel.service.ServiceContext;
-import com.liferay.portal.kernel.service.ServiceContextFactory;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import javax.portlet.ActionRequest;
@@ -36,14 +37,29 @@ public class S5E6Portlet extends MVCPortlet {
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(
 			WebKeys.THEME_DISPLAY);
 
-		ServiceContext serviceContext = ServiceContextFactory.getInstance(
-			S5E6Entry.class.getName(), actionRequest);
+		User user = _portal.getUser(actionRequest);
 
-		_s5e6EntryLocalService.addS5E6Entry(
-			themeDisplay.getUserId(), themeDisplay.getSiteGroupId(),
-			ParamUtil.getString(actionRequest, "description"),
-			ParamUtil.getString(actionRequest, "name"), serviceContext);
+		S5E6Entry s5e6Entry = _s5e6EntryLocalService.createS5E6Entry(
+			_counterLocalService.increment());
+
+		s5e6Entry.setCompanyId(user.getCompanyId());
+		s5e6Entry.setUserId(user.getUserId());
+		s5e6Entry.setUserName(user.getFullName());
+
+		s5e6Entry.setGroupId(themeDisplay.getSiteGroupId());
+
+		s5e6Entry.setName(ParamUtil.getString(actionRequest, "name"));
+		s5e6Entry.setDescription(
+			ParamUtil.getString(actionRequest, "description"));
+
+		_s5e6EntryLocalService.addS5E6Entry(s5e6Entry);
 	}
+
+	@Reference
+	private CounterLocalService _counterLocalService;
+
+	@Reference
+	private Portal _portal;
 
 	@Reference
 	private S5E6EntryLocalService _s5e6EntryLocalService;
