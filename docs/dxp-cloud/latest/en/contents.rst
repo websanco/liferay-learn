@@ -12,6 +12,7 @@ Contents
    manage-and-optimize.md
    platform-services.md
    infrastructure-and-operations.md
+   migrating_to_dxp_cloud.md
    troubleshooting.md
    reference.md
 
