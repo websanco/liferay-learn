@@ -2,7 +2,7 @@
 
 > Subscribers
 
-Patching DXP on an application server and updating the Patching Tool are done manually.
+The Patching Tool is easy to install and update.
 
 ## Installation
 

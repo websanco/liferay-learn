@@ -1,21 +1,33 @@
-# Patching Liferay
+# Patching DXP 7.3 and Earlier
+
+```{note}
+Liferay DXP/Portal 7.4+ follows a rolling release model that uses Updates. Please see [Updating Liferay](../updating-liferay.md) if you are applying a 7.4+ Update. 7.4+ Hotfixes are patches. If you're applying a Hotfix, continue reading.
+```
 
 As Liferay releases fixes, you'll want to keep your DXP instances up to date. Liferay aggregates fixes and makes them available to Enterprise Subscribers in ZIP files called _patches_.
 
-## Patch Types
+## Patch Types for DXP 7.3 and Earlier
 
 There are several different kinds of patches, and they serve different purposes.
 
 * **Fix Packs:** Resolve the most recent issues.
 * **Security Fix Packs:** Address the latest security issues immediately.
+
+For all DXP versions:
+
 * **Hotfixes:** Requested by customers to fix business critical DXP issues fast.
+
+For DXP 7.3 and earlier:
+
+* **Fix Packs:** Resolve the most recent issues.
+* **Security Fix Packs:** Address the latest security issues immediately. Note, DXP 7.4+ uses Security Updates---please see [Updating Liferay](../updating-liferay.md) for details.
 * **Service Packs:** Incorporate larger fixes that require more testing. Service Pack releases also include full DXP Service Pack Tomcat bundles.
 
-[Patch Types](./understanding-patch-types) explains all of the patch options.
+[Patch Types for DXP 7.3 and Earlier](./understanding-patch-types) explains the patch options above in detail.
 
 ## Installing Patches
 
-Once you have a patch you need, you can use Liferay's Patching Tool to apply it. [Installing Patches](./installing-patches.md) provides the basic steps for patching DXP safely and comprehensively.
+Once you have a patch you need, apply it using the Patching Tool. [Installing Patches](./installing-patches.md) provides the basic steps for patching DXP safely and comprehensively.
 
 ## Configuring the Patching Tool
 
@@ -23,7 +35,7 @@ The [`patching-tool.sh auto-discovery` command](./configuring-the-patching-tool.
 
 ## Other Patching Topics
 
-As you start applying patches regularly, you may need to submit patch information in support requests or uninstall patches you no longer need.
+As you apply patches, you may need to submit patch information in support requests or uninstall patches you no longer need.
 
 * [Getting Patch Information](./getting-patch-information.md)
 * [Uninstalling Patches](./uninstalling-patches.md)

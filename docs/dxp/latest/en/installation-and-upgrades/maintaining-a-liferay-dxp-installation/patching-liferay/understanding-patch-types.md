@@ -1,4 +1,4 @@
-# Understanding Patch Types
+# Understanding Patch Types for DXP 7.3 and Earlier
 
 > Subscribers
 
@@ -16,7 +16,9 @@ Here's a summary of the DXP patch types and the Portal fix delivery method.
 
 ## Fix Packs
 
-A Fix Pack is a bundled collection of the latest fixes for DXP subscribers. They address issues in the DXP core and Marketplace applications that ship with DXP. Fix Packs are cumulative: each one contains all the fixes from previous Fix Pack and the latest Security Fix Packs.
+> Liferay DXP 7.3 and earlier
+
+A Fix Pack is a bundled collection of the latest fixes for DXP 7.3 and earlier for subscribers. They address issues in the DXP core and Marketplace applications that ship with DXP. Fix Packs are cumulative: each one contains all the fixes from previous Fix Pack and the latest Security Fix Packs.
 
 Fix Packs are available on the Help Center's [Downloads](https://customer.liferay.com/downloads) page and are installed using the [Patching Tool](./installing-patches.md). Release notes and change logs accompany each Fix Pack. Release notes highlight key information, such as important changes and security fixes. Change logs provide detailed information about each fix.
 
@@ -27,6 +29,8 @@ In DXP 7.2, the Patching Tool uninstalls the old fix pack, replacing it with the
 ```
 
 ## Security Fix Packs
+
+> Liferay DXP 7.3 and earlier
 
 [DXP Security Fix Packs](https://help.liferay.com/hc/en-us/articles/360035038331) address the latest critical security issues. They are available on the Help Center's [Downloads](https://customer.liferay.com/downloads) page and are installed using the [Patching Tool](./installing-patches.md).
 
@@ -47,15 +51,17 @@ Security Fix Packs do not change your DXP installation's regular Fix Pack level.
 
 ## Hotfixes
 
-A Hotfix is a fix or collection of fixes requested by a customer and delivered in between Fix Pack releases to address confirmed critical issues in DXP. You can request at Hotfix via a [Help Center ticket](https://help.liferay.com/hc). The Liferay Support Team works with you to determine if the issue is with the product, and provides a fix for any unintended product behavior.
+A Hotfix is a fix or collection of fixes requested by a customer and delivered in between 7.4 update releases or between 7.3 or 7.2 Fix Pack releases. Hotfixes address confirmed critical issues in DXP. You can request at Hotfix via a [Help Center ticket](https://help.liferay.com/hc). The Liferay Support Team works with you to determine if the issue is with the product, and provides a fix for any unintended product behavior.
 
-A Hotfix can depend on a particular Fix Pack level. If you attempt to install it without installing the Fix Pack first, the Patching Tool reports the required Fix Pack level. Go to the [Customer Portal](https://customer.liferay.com/downloads) and obtain the Fix Pack. Once all the necessary patches are downloaded to the `patches` folder, the Patching Tool installs them.
+In DXP 7.3 or 7.2, a Hotfix can depend on a particular Fix Pack level. If you attempt to install it without installing the base Fix Pack first, the Patching Tool reports the required Fix Pack level. Go to the [Customer Portal](https://customer.liferay.com/downloads) and obtain the base Fix Pack. Once all the necessary patches are downloaded to the `patches` folder, the Patching Tool installs them.
 
 ```{important}
 In DXP 7.2, if you already have a Hotfix installed and a Fix Pack that contains that Hotfix is released, the Patching Tool manages integrating them. Fix packs always supersede Hotfixes; when you install a Fix Pack, any Hotfixes it contains are uninstalled and the Fix Pack version of the fix is installed in its place.
 ```
 
 ## Service Packs
+
+> Liferay DXP 7.3 and earlier
 
 A Service Pack is built on top of the original DXP GA major release and includes the latest Fix Pack, Patching Tool, and bundled Marketplace applications. Fixes that require more time to implement and test can be reserved for Service Packs.
 
@@ -97,7 +103,7 @@ The following table describes the testing applied to each patch type.
     * Patching Tool
     * and more
 
-* [Security page](https://help.liferay.com/hc/en-us/categories/360000892792-Security): Links to security-related overviews, advisories, and Fix Packs.
+* [Security page](https://help.liferay.com/hc/en-us/categories/360000892792-Security): Links to security-related overviews, advisories, Security Updates (7.4) and Security Fix Packs (7.3 and earlier).
 
 The Help Center is also a launching point for account support, support FAQs and more. Liferay is here to help!
 

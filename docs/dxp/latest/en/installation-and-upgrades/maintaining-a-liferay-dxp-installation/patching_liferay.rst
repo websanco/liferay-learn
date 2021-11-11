@@ -1,5 +1,5 @@
-Patching Liferay
-================
+Patching DXP 7.3 and Earlier
+============================
 
 .. toctree::
    :maxdepth: 3
