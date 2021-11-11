@@ -74,7 +74,7 @@ The DXP _Global Menu_ contains the _Applications Menu_ and the _Control Panel_. 
    By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
 ```
 
-You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side of the screen.
+You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side of the interface.
 
 ### Applications Menu
 
@@ -130,5 +130,5 @@ Continue our Getting Started walkthrough and learn about [Creating Your First Si
 
 ## Related Information
 
-- [Creating your first Site](./creating-your-first-site.md)
-- [Changing your Site's Appearance](./changing-your-sites-appearance.md)
+* [Creating your first Site](./creating-your-first-site.md)
+* [Changing your Site's Appearance](./changing-your-sites-appearance.md)
