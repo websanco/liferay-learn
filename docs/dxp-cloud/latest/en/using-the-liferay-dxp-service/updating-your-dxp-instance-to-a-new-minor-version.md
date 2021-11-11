@@ -2,12 +2,12 @@
 
 Regularly updating your Liferay DXP installation is an important part of maintaining your DXP Cloud environment. Use the available tags on the [Liferay DXP Docker Hub page](https://hub.docker.com/r/liferay/dxp/tags) to update and deploy your service.
 
-```note::
-   Upgrading to a new major version (such as Liferay DXP 7.3) requires a different procedure from a smaller version update. See `Upgrading Your Liferay DXP Instance <./upgrading-your-liferay-dxp-instance.md>`__ for more information.
+```{note}
+Upgrading to a new major version (such as Liferay DXP 7.3) requires a different procedure from a smaller version update. See [Upgrading Your Liferay DXP Instance](./upgrading-your-liferay-dxp-instance.md) for more information.
 ```
 
-```note::
-   If you want to install a `hotfix <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#hotfixes>`__, then follow `these steps <./deploying-to-the-liferay-service.md#deploying-hotfixes>`__ instead.
+```{note}
+If you want to install a [hotfix](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#hotfixes), then follow [these steps](./deploying-to-the-liferay-service.md#deploying-hotfixes) instead.
 ```
 
 ## Enabling Module Upgrades for DXP 7.3+
@@ -28,8 +28,8 @@ This allows your modules to perform the necessary upgrades for the new minor ver
 
 Minor version updates to Liferay DXP also require a change to your project's repository.
 
-```important::
-   If you are using `clustered services <./setting-up-clustering-in-dxp-cloud.md>`_ and updating to any version that changes the Liferay database schema (such as a `service pack <https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs>`_), then follow `these steps <#updating-to-a-new-service-pack-with-clustering-enabled>`_.
+```{important}
+If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html#service-packs), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
 ```
 
 Perform these steps to update and deploy changes in your project repository:

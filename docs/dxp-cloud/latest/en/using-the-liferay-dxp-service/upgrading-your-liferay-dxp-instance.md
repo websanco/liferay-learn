@@ -3,7 +3,7 @@
 Liferay periodically releases new minor and major versions of Liferay DXP that include security and bug fixes, as well as enhancements. To upgrade to a new major Liferay DXP version increment, you must upgrade the DXP database.
 
 ```{note}
-For large data sets in production, there are several additional considerations to performing for a smooth upgrade. For example, custom code or Marketplace apps may require additional updates to continue working properly. See [the guide to upgrading Liferay DXP](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) for a comprehensive overview of the core upgrade.
+For large data sets in production, there are several additional considerations to perform a smooth upgrade. For example, custom code or Marketplace apps may require additional updates to continue working properly. See [the guide to upgrading Liferay DXP](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) for a comprehensive overview of the core upgrade.
 ```
 
 ```{note}
@@ -26,13 +26,13 @@ Review the following steps to perform a database upgrade:
 
 ## Install Prerequisites
 
-Before beginning the upgrade procedure, make sure you have the following prerequisites:
+Before beginning the upgrade procedure, satisfy the following prerequisites:
 
 * [A locally available MySQL installation](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
 * [Downloaded bundle of Liferay DXP](https://customer.liferay.com/en_US/downloads) for the version of DXP you are upgrading to. Extract this bundle to a location of your choosing.
 
 ```{important}
-Download a fresh bundle for the upgrade instead of reusing an old one. Otherwise, data from previous usage of the bundle may interfere with the data upgrade.
+Download a fresh bundle for the upgrade instead of reusing an old one. Data from previous usage may interfere with the data upgrade.
 ```
 
 ## Download a Backup
@@ -157,11 +157,11 @@ Test the bundle locally to ensure the upgrade completed smoothly. You can test t
 ./catalina.sh run
 ```
 
-Once the upgrade is complete and verified, your database and data volume are ready to be uploaded back to DXP Cloud.
+Once the upgrade is complete and verified, your database and data volume are ready to be uploaded to DXP Cloud.
 
 ## Compress the Document Library and Database
 
-Now that your Liferay installation has been upgraded, use the following steps to prepare to upload them again to your `backup` service
+Now that your Liferay installation has been upgraded, use the following steps to prepare to upload them to your `backup` service
 
 ### Compress the Document Library
 
@@ -191,11 +191,11 @@ Now that your Liferay installation has been upgraded, use the following steps to
     tar zcvf database.tgz database.gz
     ```
 
-The database and Liferay data volume are now ready to upload the database and document library to the `backup` service.
+The database and Liferay data volume are now ready for upload to the `backup` service.
 
 ## Upload the Document Library and Database
 
-Upload the database and document library archives to the `backup` service via the console:
+Upload the document library and database archives to the `backup` service via the console:
 
 1. If you are not already logged in, log into the [DXP Cloud console](https://console.liferay.cloud/login).
 
@@ -205,7 +205,7 @@ Upload the database and document library archives to the `backup` service via th
 
     ![Click the Upload Backup button to access the upload page.](./upgrading-your-liferay-dxp-instance/images/03.png)
 
-1. On the Upload Backup page, expand the appropriate environment, and then click the `+` icons for both the database and document library to upload them.
+1. On the Upload Backup page, expand the appropriate environment, and click the `+` icons for both the database and document library to upload them.
 
     ![Click the icons to upload both the database and document library as .gz archives.](./upgrading-your-liferay-dxp-instance/images/04.png)
 
@@ -264,5 +264,5 @@ Congratulations! You have upgraded your DXP database to the new version and depl
 Learn more about DXP upgrades:
 
 * [Liferay DXP Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)
-* [Updating Your DXP Instance to a New Minor Version)(./updating-your-dxp-instance-to-a-new-minor-version.md)
+* [Updating Your DXP Instance to a New Minor Version](./updating-your-dxp-instance-to-a-new-minor-version.md)
 * [Using the Database Upgrade Tool](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html)
