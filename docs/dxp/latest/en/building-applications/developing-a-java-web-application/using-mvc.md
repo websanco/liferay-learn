@@ -12,6 +12,7 @@ using-mvc/mvc-resource-command.md
 using-mvc/portlet-preferences.md
 using-mvc/using-localized-messages-in-an-mvc-portlet.md
 using-mvc/sharing-localized-messages.md
+using-mvc/tag-libraries.md
 ```
 
 If you're an experienced developer, this is not the first time you've heard about Model View Controller. If there are so many implementations of MVC frameworks in Java, why did Liferay create yet another one? Stay with us and you'll see that Liferay MVC Portlet provides these benefits:
