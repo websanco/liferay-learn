@@ -1,25 +1,20 @@
 # What's New in Search for 7.4?
 
-## Elasticsearch Integration
+This article enumerates the highlights and new features added to Liferay's search infrastructure for the 7.4 release. New features include those added to the product for Liferay CE 7.4 GA4 and Liferay DXP 7.4 GA1.
 
-### Elasticsearch 7 Support
+## Elasticsearch 7 Integration
 
-The following information is valid as of the Liferay DXP 7.4 GA1 and Liferay CE 7.4 GA4 releases. Check the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for the latest information.
-
-* Liferay 7.4 is compatible with Elasticsearch 7.15.x. 
-
-* The minimum required version of Elasticsearch for Liferay 7.4 is 7.14.x. The client application in Liferay uses Elasticsearch 7.14.1.
-
-* The [Sidecar Elasticsearch server](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) uses the open source distribution and is a slightly older version than that supported in production: Elasticsearch OSS 7.10.2.
+Elasticsearch 7 is supported in Liferay 7.4. Check the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for the latest information, including the minimum supported version, the client version, and the latest supported Elasticsearch version.
 
 ![Elasticsearch 7.15 is supported to run with Liferay DXP 7.4 GA1.](./whats-new-in-search-for-74/images/03.png)
 ```{important}
+
 Elasticsearch 6.x is not supported on Liferay CE/DXP 7.4.
 ```
 
 ## Search Infrastructure & Administration
 
-### Re-Index Each Virtual Instance's Indexes 
+### Re-Index Virtual Instances Independently
 
 Beginning in Liferay 7.4, Server Administrators can limit the scope of the re-index actions to specific [Virtual Instances](../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md). To choose which instances the index actions apply to,
 
@@ -30,13 +25,25 @@ Beginning in Liferay 7.4, Server Administrators can limit the scope of the re-in
 
 ## Search Widgets
 
-No updates?
+### Searching for Liferay Objects
+
+To support searching for [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), some search widgets have been enhanced:
+
+* The Type Facet automatically includes published Objects: 
+
+   ![Published Objects are added to the Type Facet widget.](./whats-new-in-search-for-74/images/05.png)
+
+* The Search Results widget automatically displays the Object Entry's title and a summary.
+
+   ![A title and a content summary are displayed for Object Entries.](./whats-new-in-search-for-74/images/06.png)
+
+<!-- * If configured in the Object, a display page can be shown when the Object Entry is clicked in Search Results. -->
+
+<!-- TODO: To learn more about Liferay Objects and search, read [Searching for Object](LINK). -->
 
 ## Search Tuning
 
-<!-- Now backed by database tables -->
-
-> **Subscribers**
+> **DXP Subscribers**
 
 ### Search Tuning Data is Stored in the Database 
 
@@ -52,13 +59,9 @@ To learn about how this impacts the upgrade process, read [Upgrading Search Infr
 
 ### LES Installation is Simplified
 
-Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered with Liferay DXP updates.
+Starting with Liferay DXP 7.4, the [Liferay Enterprise Search (LES)](../liferay_enterprise_search.md) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered with Liferay DXP updates.
 
 ![The LES apps, like Cross-Cluster Replication, are installed with Liferay DXP 7.4.](./whats-new-in-search-for-74/images/04.png)
-
-## Development
-
-<!-- Probably nothing to say here -->
 
 ## Upgrading to DXP 7.4
 
