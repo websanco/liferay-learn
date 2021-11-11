@@ -26,8 +26,8 @@ Consider the following information when you create multiple experiences for the 
   - An Experience is inactive when placed below an experience targeted to the *Anyone* Segment.
   - New Experiences are listed below the *Default* experience and inactive by default.
   
-  ```tip::
-    When multiple Experiences target the same Segment, Liferay DXP shows the active one next to the Experience's name.
+  ```{tip}
+  When multiple Experiences target the same Segment, Liferay DXP shows the active one next to the Experience's name.
   ```
 
 To better understand how the Experiences' precedence works, consider this example of a Content Page with four custom Experiences:
@@ -50,16 +50,16 @@ In this example:
 
 When you create a new Experience, you define its target language(s), along with a default. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide Experiences in users' own languages. For example, if the user language is configured as es-ES and users visit a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language they see is es-ES.
 
-  ```note::
-     Liferay DXP uses the user-configured language for authenticated users and, by default, the default Portal language for anonymous users.
+  ```{note}
+  Liferay DXP uses the user-configured language for authenticated users and, by default, the default Portal language for anonymous users.
   ```
 
 You can configure the Experience using the languages available for your Site. To change the available Site languages, see [Site Localization](../../site-settings/site-localization.md).
 
 ![In addition to the default language, you can define additional languages for the Experience.](./content-page-personalization/images/02.png)
 
-```note::
-   When a user visits a Page and there is an Experience targeted to the user's Segment but not localized into the user's language, the user sees the Experience in the default language.
+```{note}
+When a user visits a Page and there is an Experience targeted to the user's Segment but not localized into the user's language, the user sees the Experience in the default language.
 ```
 
 You can add or remove languages from the Experience using the [Edit Experience](./creating-and-managing-experiences.md#managing-content-page-experiences) (![Edit Experience](../../../images/icon-edit.png)) button, except for the default language that is always selected. The language selector button for the Experience only shows the languages configured for that particular Experience.

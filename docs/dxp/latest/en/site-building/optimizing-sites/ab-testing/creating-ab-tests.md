@@ -13,8 +13,8 @@ Before creating A/B tests, remember these things:
 
 To create the A/B test, [create the test](#creating-the-test) first, and then create one or more [test Variants](#creating-the-test-variant).
 
-```important::
-   Verify that your environment `meets the requirements <./verifying-ab-test-requirements.md>`_ for A/B Testing before creating the test.
+```{important}
+Verify that your environment [meets the requirements](./verifying-ab-test-requirements.md) for A/B Testing before creating the test.
 ```
 
 ## Creating the Test
@@ -34,8 +34,8 @@ To create the A/B test, [create the test](#creating-the-test) first, and then cr
 
 1. Click *Save* to save the test as a *Draft* (not yet visible to visitors).
 
-    ```note::
-      You can always edit or delete the new A/B Test by clicking the *Actions* button next to the A/B Test name. Deleted tests are not recoverable (i.e., not sent to the Recycle Bin). These options are not available for an active running test.
+    ```{note}
+    You can always edit or delete the new A/B Test by clicking the *Actions* button next to the A/B Test name. Deleted tests are not recoverable (i.e., not sent to the Recycle Bin). These options are not available for an active running test.
     ```
 
 ## Creating the Test Variant
@@ -58,8 +58,8 @@ A test Variant is a customization of the Experience you want to optimize with A/
 
         ![Click the Set Element as Click Target button to select it](./creating-ab-tests/images/01.png)
 
-         ```note::
-            The click target element applies to the whole A/B Test and must be present in all Variants.
+         ```{note}
+         The click target element applies to the whole A/B Test and must be present in all Variants.
          ```
 
 1. Under the *Variants* section, click *Create Variant*.

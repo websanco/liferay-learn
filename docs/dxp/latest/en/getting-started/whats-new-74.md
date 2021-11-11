@@ -25,7 +25,7 @@ We've also made several usability improvements to the [Content Audit Tool](../co
 
 ### Traffic Acquisition Channels in the Content Performance Tool
 
-The traffic acquisition channels in the [Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md)  use Analytics Cloud data and include measurements for organic and paid search, social traffic, and referrals. A channel's detail view reveals all referring URLs and domains.
+The traffic acquisition channels in the [Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md) use [Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html) data and include measurements for organic and paid search, social traffic, and referrals. A channel's detail view reveals all referring URLs and domains.
 
 ![Traffic acquisition channels include search, social and referral data.](./whats-new-74/images/image9.png)
 
