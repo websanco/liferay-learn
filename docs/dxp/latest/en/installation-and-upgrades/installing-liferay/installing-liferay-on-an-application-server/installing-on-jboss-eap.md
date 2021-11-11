@@ -26,7 +26,32 @@ The installation steps use these terms:
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB, MySQL, and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to a folder called `$JBOSS_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist). Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file and place it on the global class path at this location (create the folder if it doesn't exist):
+
+    ```bash
+    $JBOSS_HOME/modules/com/liferay/portal/main
+    ```
+
+    Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+
+1. Create a file called `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main`. In the file, add this content and enter your database vendor's JAR file name in `path` value for the <resource-root> element.
+
+    ```xml
+    <?xml version="1.0"?>
+
+    <module xmlns="urn:jboss:module:1.0" name="com.liferay.portal">
+        <resources>
+            <resource-root path="[place your database vendor's JAR file name here]" />
+        </resources>
+        <dependencies>
+            <module name="javax.api" />
+            <module name="javax.mail.api" />
+            <module name="javax.servlet.api" />
+            <module name="javax.servlet.jsp.api" />
+            <module name="javax.transaction.api" />
+        </dependencies>
+    </module>
+    ```
 
 ```{note}
 DXP includes a Hypersonic database that is useful for testing purposes. **Do not** use HSQL for production instances.
@@ -145,7 +170,7 @@ Before continuing, verify the following properties have been set in the `standal
 
 1. The new `<system-property>` is added.
 1. The new `<filter-spec>` is added.
-1. The `<deployment-timeout>` is set to `360`.
+1. The `<deployment-timeout>` is set to `600`.
 1. The new `<security-domain>` is created.
 1. Welcome content is disabled.
 
@@ -279,9 +304,9 @@ If you're using JBoss to manage the data source, follow these steps:
                     <password>root</password>
                 </security>
             </datasource>
-            <drivers>
-                <driver name="mysql" module="com.liferay.portal"/>
-            </drivers>
+            <driver name="mysql" module="com.liferay.portal">
+                <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+            </driver>
         </datasources>
     </subsystem>
     ```
