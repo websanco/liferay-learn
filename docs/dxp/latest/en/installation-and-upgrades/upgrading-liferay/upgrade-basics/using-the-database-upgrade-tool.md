@@ -3,7 +3,7 @@
 The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP and Liferay Portal databases offline.
 
 ```{important}
-**Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
+**Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 ```{important}
@@ -23,9 +23,9 @@ If you installed the new Liferay release on an application server, create a `[Li
 
 ## Setting Up a New Installation
 
-1. Replace the new Liferay installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md).
+1. Replace the new Liferay installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](../../maintaining-a-liferay-installation/backing-up.md).
 
-1. Copy your DXP activation key (Subscription) and your [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
+1. Copy your DXP activation key (Subscription) and your [OSGi configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) from your [backup](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) to the new installation.
 
 1. If you're upgrading to 7.2, disable search indexing using a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) in your new installation's `[Liferay Home]/files/osgi/configs/` folder. For example,
 
@@ -59,7 +59,7 @@ If you installed the new Liferay release on an application server, create a `[Li
     `rootDir="data/document_library"`
     ```
 
-1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) to the new installation.
+1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) to the new installation.
 
 1. Use your database vendor's recommended JDBC database driver. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in your [`portal-ext.properties`](../../reference/portal-properties.md) file and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
@@ -138,7 +138,7 @@ Now that the database upgrade is complete, test it.
 
 1. Examine the [Post-Upgrade Considerations](./post-upgrade-considerations.md).
 
-1. Copy and merge your custom [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
+1. Copy and merge your custom [Liferay Home files](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-installation/backing-up.md#application-server) from your backup to the new installation. The files may include but are not limited to these:
 
     * `/license/*`: Activation keys. (Subscription)
     * `/log/*`: Log files.

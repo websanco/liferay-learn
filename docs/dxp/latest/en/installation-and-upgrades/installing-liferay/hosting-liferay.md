@@ -60,6 +60,6 @@ After installing Liferay, go to [Setting Up Liferay](../setting-up-liferay.md) t
 
 ## Additional Information
 
-* [Backing Up](../maintaining-a-liferay-dxp-installation/backing-up.md)
-* [Patching Liferay DXP](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)
+* [Backing Up](../maintaining-a-liferay-installation/backing-up.md)
+* [Patching Liferay DXP](../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)
 * [Securing Liferay](../securing-liferay.md)

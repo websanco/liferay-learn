@@ -10,7 +10,7 @@ When you upgrade a DXP instance for a production release, the data upgrades must
 
 ## Creating a Test Environment
 
-It's important to test upgrading in an environment that separate from production but that uses the same data, configurations, and apps. You can use copies of your installation (Liferay Home), database, and Marketplace apps. These should be readily available from your [backup of DXP](../../maintaining-a-liferay-dxp-installation/backing-up.md).
+It's important to test upgrading in an environment that separate from production but that uses the same data, configurations, and apps. You can use copies of your installation (Liferay Home), database, and Marketplace apps. These should be readily available from your [backup of DXP](../../maintaining-a-liferay-installation/backing-up.md).
 
 ## Pruning Unnecessary Data
 
@@ -32,4 +32,4 @@ After you've upgraded your DXP instance successfully, you can orchestrate releas
 
 ## Additional Information 
 
-* [Updating Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+* [Updating Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)

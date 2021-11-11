@@ -20,7 +20,7 @@ Upgrades to enterprise subscriber installations and critical installations shoul
 ```
 
 ```{important}
-**Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your database and existing installation before upgrading. Testing the upgrade process on backup copies is advised.
+**Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your database and existing installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 ## Upgrading with the Latest Docker Image
@@ -47,7 +47,7 @@ Here are the steps for upgrading with a Docker image:
 
 1. If you're using an embedded [Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md) engine or a local [File Store \(Document Library\)](../../../system-administration/file-storage/configuring-file-storage.md), copy the `[Liferay Home]/data` folder to the new `files` folder to create `new-version/files/data`.
 
-1. Copy and merge the [Liferay Home files](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key to `new-version/files/license/`. The files may include but are not limited to these:
+1. Copy and merge the [Liferay Home files](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-installation/backing-up.md#application-server) from your backup to their corresponding locations in the `files` folder (your new `[Liferay Home]`). For example, copy your activation key to `new-version/files/license/`. The files may include but are not limited to these:
 
     * `/license/*`: Activation keys. (Subscription)
 
@@ -126,6 +126,6 @@ If the upgraded database is all you need, then enjoy using your new Liferay inst
 
 * [Upgrading Custom Development](../upgrading-custom-development.md) demonstrates adapting custom plugin code to a new Liferay version.
 
-* [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) describes how to upgrade in a clustered environment.
+* [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md) describes how to upgrade in a clustered environment.
 
 * [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md)

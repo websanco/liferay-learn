@@ -1,6 +1,6 @@
 # DockerでDXPにパッチを適用する
 
-Liferayの[パッチ](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)はDXPの問題を修正し、パッチツールがパッチを適用します。 Liferayは、[Docker Hub](https://hub.docker.com/r/liferay/dxp)上で、新しい[フィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#fix-packs)、[セキュリティフィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs)、[サービスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#service-packs)がそれぞれあらかじめ組み込まれたイメージを提供しています。 また、LiferayはDXPコンテナにインストールする[セキュリティフィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs)、[ホットフィックス](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#hotfixes)、および新しい[パッチツール](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md)のバージョンも提供しています。
+Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md) とパッチを適用するためのパッチツールを提供しています。 移行先の新しい DXPイメージ( [Docker Hub](https://hub.docker.com/r/liferay/dxp))として、フィックスパックとサービスパックを提供します。 Liferayは、コンテナにインストールするセキュリティフィックスパック、ホットフィックス、および新しいパッチツールバージョンも提供します。
 
 > エンタープライズサブスクリプション
 

@@ -12,7 +12,6 @@ setting-up-liferay/configuring-mail.md
 ../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
 securing_liferay.rst
-maintaining-a-liferay-dxp-installation/backing-up.md
 ../system-administration/installing_and_managing_apps.rst
 setting-up-liferay/using-a-cdn.md
 setting-up-liferay/clustering-for-high-availability.md
@@ -93,7 +92,7 @@ It's really important to secure Liferay too. Go to [Securing Liferay](./securing
 
 ## Configure Backups
 
-As you develop your virtual instance make sure to back it up. See [Backing Up](./maintaining-a-liferay-dxp-installation/backing-up.md) for guidance.
+As you develop your virtual instance make sure to back it up. See [Backing Up](./maintaining-a-liferay-installation/backing-up.md) for guidance.
 
 ## Other Setup Tasks
 
@@ -136,5 +135,5 @@ Tune Liferay's JVM, connection pools, and more for optimal performance. See [Tun
 If you're using Liferay DXP and haven't [activated](./setting-up-liferay/activating-liferay-dxp.md) it, do that first. Then continue with [Instance Configuration](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md) and the other [Setup Tasks](#setup-tasks) listed above.
 
 ```{important}
-Before going to production, configure a process for backing up your installation and data. Please see [Backing Up](./maintaining-a-liferay-dxp-installation/backing-up.md) for details.
+Before going to production, configure a process for backing up your installation and data. Please see [Backing Up](./maintaining-a-liferay-installation/backing-up.md) for details.
 ```

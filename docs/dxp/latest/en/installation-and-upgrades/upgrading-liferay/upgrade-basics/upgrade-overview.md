@@ -3,7 +3,7 @@
 Liferay's tools and instructions facilitate upgrading DXP and Portal environments safely and quickly. Non-clustered environments that have small data sets, for example can be upgraded using a [Docker image](./upgrading-via-docker.md). DXP environments and Portal environments that are complex, have larger data sets, or have many customizations are upgraded using the [Database Upgrade Tool](./using-the-database-upgrade-tool.md).
 
 ```{warning}
-**Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your database and installation before upgrading. Testing the upgrade process on backup copies is advised.
+**Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your database and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 ```{note}
@@ -121,4 +121,4 @@ Now that you're familiar with the upgrade components, you can upgrade your Lifer
 Additionally, refer to these other upgrade scenarios if they relate to your upgrade:
 
 * [Upgrading a Sharded Environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md)
-* [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+* [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)
