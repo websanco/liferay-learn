@@ -60,4 +60,4 @@ That description throws around a lot of terms. Definitions provided below.
 
 **Callback URI:** Also called a Redirection Endpoint URI. After authorization is complete, the authorization server (i.e., Liferay) sends the client to this location.
 
-Ready to start configuring OAuth 2.0? The next step is to [create an application](./creating-oauth2-applications.md).
+Ready to start configuring OAuth 2.0? The next step is to [create an application](./using-oauth2/creating-oauth2-applications.md).

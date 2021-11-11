@@ -1,9 +1,8 @@
 # Enabling Automated Live Chat Systems
 
- > Available: Liferay Portal 7.4 GA2+ 
+ > Available: Liferay Portal 7.4 GA2+
 
 Liferay now offers integration with a number of live support chat platforms. Enabling this integration adds a chat window to sites on your Liferay instance and can be used to enable improved support and site experience for your users.
-
 
 ## Enabling Click To Chat
 

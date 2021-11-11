@@ -1,5 +1,7 @@
 # What's New in Liferay DXP 7.4
 
+Liferay DXP 7.4 comes with enhanced functionality and exciting improvements that make it even easier for both technical and non-technical users to deliver and optimize digital experiences.
+
 ## Optimizing Digital Experiences with Data-Driven Insight
 
 ### Set Any Element as a Click Target in A/B Testing
@@ -33,12 +35,11 @@ The Content Performance Panel is now available for all pages: display pages temp
 
 ![The Content Performance Panel can be used for all page types.](./whats-new-74/images/image6.png)
 
-
 ## Empowering Practitioners to Build Rich Digital Experiences
 
 ### Page Audit
 
-Starting with Liferay DXP 7.4, you can use the Page Audit tool for auditing your pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) service, providing specific recommendations for Liferay DXP. With the new Page audit tool, you can check your page's compliance with the best performance, accessibility, search engine metadata, and SEO practices.
+Starting with Liferay DXP 7.4, you can use [the Page Audit tool](../content-authoring-and-management/page-performance-and-accessibility/analyze-seo-and-accessibility-on-pages.md) for auditing your pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) service, providing specific recommendations for Liferay DXP. With the new Page audit tool, you can check your page's compliance with the best performance, accessibility, search engine metadata, and SEO practices.
 
 ![Google PageSpeed Insights integration provides recommendations.](./whats-new-74/images/image2.png)
 
@@ -58,7 +59,7 @@ Documents now appear in the [Content Dashboard](../content-authoring-and-managem
 
 Account Users can view and/or administer their company's details, addresses, assigned users, associated Organizations, Groups, and Roles without needing to leave their website, as well as minimize the need for assistance from a Portal administrator to administer Accounts on their behalf.
 
-## Create a Seamless B2B Buying Experience: Commerce 4.0 provides added stability and improvements
+## Create a Seamless B2B Buying Experience: Commerce 4.0 Provides Added Stability and Improvements
 
 ### Optimized Product Images for Specific Devices
 
@@ -66,15 +67,15 @@ Page load speed is optimized by changing the quality of a picture depending on t
 
 ### Different Pricing and Discounts Based on Order Types
 
-Sellers can change pricing and discounts depending on order conditions, such as when an order is marked as urgent vs a stock order. 
+Sellers can change pricing and discounts depending on order conditions, such as when an order is marked as urgent vs a stock order.
 
 ### Improved Organization Management Widget
 
-The Org Chart widget is now the Organization Management widget, and it makes it easy to manage your sales network within the same platform that you are serving your buyers. 
+The Org Chart widget is now the Organization Management widget, and it makes it easy to manage your sales network within the same platform that you are serving your buyers.
 
 ## Business Users Can Build Applications Without Writing Code
 
-With Liferay Objects, you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
+With [Liferay Objects](../developing-applications/developing-low-code-applications/objects/introduction-to-objects.md), you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
 
 ### Manage Custom Objects Though the UI
 
@@ -90,7 +91,7 @@ All the capabilities from Forms can be leveraged to insert data into specific ob
 
 ### Objects Relationships
 
-You can solve complex use cases with object relationships, easy way to relate objects with not only custom objects, but also native objects shipped with Liferay, such as Blog entries or web content.
+You can solve complex use cases with [object relationships](../developing-applications/developing-low-code-applications/objects/creating-and-managing-objects/defining-object-relationships.md), easy way to relate objects with not only custom objects, but also native objects shipped with Liferay, such as Blog entries or web content.
 
 ### Objects Integration with DXP Frameworks
 
@@ -132,25 +133,25 @@ When building a Collection Provider with the Info Framework, developers can now 
 
 ### Show/Hide Fragments Based on Viewport
 
-You can hide a Fragment on one Viewport while keeping it visible on another. This new capability allows you to further customize your content\'s responsiveness for a specific user platform.
+You can hide a Fragment on one Viewport while keeping it visible on another. This new capability allows you to further customize your content's responsiveness for a specific user platform.
 
 ![You can hide a Fragment on one Viewport while keeping it visible on another.](./whats-new-74/images/image8.png)
 
-### Native support for Adaptive Media in Content Pages and Display Page Templates
+### Native Support for Adaptive Media in Content Pages and Display Page Templates
 
 You can now use [adaptive media in Content Page images](../site-building/creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md) to adjust the image resolution dynamically, based on the target screen size. After you [add an image resolution in Adaptive Media](../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/adding-image-resolutions.md), the resolution appears in the Resolution drop-down menu for your Content Page image.
 
-![Adaptive Media can now adjust image resolutions dynamically based on screen size.](./whats-new-74/images/image13.png)
+![Adaptive Media can now adjust image resolutions dynamically based on screen size.](./whats-new-74/images/image13.gif)
 
 ## Reducing the Cost and Effort to Launch and Maintain Digital Experiences
 
 ### Automatic Translation for Web Content
 
-This feature helps accelerate the process of translating web content articles. This continues the efforts made in 7.3 to help streamline the translation process of content. With this feature, translators can focus on polishing a translation instead of starting from scratch.
+This feature helps accelerate the process of [translating web content articles](../content-authoring-and-management/web-content/translating-web-content/automatically-translating-web-content.md). This continues the efforts made in 7.3 to help streamline the translation process of content. With this feature, translators can focus on polishing a translation instead of starting from scratch.
 
 ### Expiration Dates for Documents
 
-This feature helps content managers control outdated documents and prevent them from being published, for example, due to a temporary license.
+This feature helps content managers [control outdated documents](../content-authoring-and-management/documents-and-media/uploading-and-managing/using-file-expiration-and-review-dates.md) and prevent them from being published, for example, due to a temporary license.
 
 ### Improved WYSIWYG Editor
 
@@ -164,47 +165,47 @@ Implementing Staging support in Asset Libraries will help customers reduce the a
 
 ### Advanced File Uploader Options When Uploading Documents and Media
 
-Customers use Documents and media as a media repository to store elements that later are used to create content. However there are situations, for example a blog post or something informal, where the assets used during content creation are uploaded during the content creation process.
+Customers use Documents and Media as a media repository to store elements that later are used to create content. However there are situations, for example a blog post or something informal, where the assets used during content creation are uploaded during the content creation process.
 
-To accelerate this process, content creators can now create folders as well as upload files with all the metadata needed from the item selector in order to reduce time and effort in the content creation process. 
+To accelerate this process, content creators can now create folders as well as upload files with all the metadata needed from the item selector in order to reduce time and effort in the content creation process.
 
 ### Collaborate on Publications
 
-Publications often involves multiple content editors working on a single project. You can now invite teammates to join your publication to view, edit, or publish. You can also discuss changes through the new comment system. Items that are still going through workflow must be approved before they can be published. 
+Publications often involves multiple content editors working on a single project. You can now invite teammates to join your publication to view, edit, or publish. You can also discuss changes through the new comment system. Items that are still going through workflow must be approved before they can be published.
 
-### Improved Staging performance
+### Improved Staging Performance
 
-Publishing Pages in Staging can now be streamlined by publishing only the Page needed without reference to its parent or children. You can also choose whether Asset Links are published along with the Pages. 
+Publishing Pages in Staging can now be streamlined by publishing only the Page needed without reference to its parent or children. You can also choose whether Asset Links are published along with the Pages.
 
 ### Elasticsearch 7.15.x Compatibility Out-of-the-Box
 
-Liferay DXP 7.4 comes with Elasticsearch 7.15.x; Elasticsearch Sidecar (for development and testing only, not supported) version is 7.10.2 in the open source product. 
+Liferay DXP 7.4 comes with Elasticsearch 7.15.x; Elasticsearch Sidecar (for development and testing only, not supported) version is 7.10.2 in the open source product.
 
 ### Liferay Enterprise Search (LES) Applications Are Now Bundled
 
-Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, an LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered through Fix Pack and Service Pack releases.
+Starting with Liferay DXP 7.4, the [Liferay Enterprise Search (LES) applications are included](../using-search/liferay-enterprise-search/activating-liferay-enterprise-search.md) with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, an LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered through Fix Pack and Service Pack releases.
 
 ## Leverage Liferay as the Foundation in Your Interconnected Enterprise Landscape
 
 ### DXP Accounts
 
-DXP Accounts can model respective entities (companies, employees, and the responsibilities pertaining to their job), facilitates the interactions between these entities (such as purchasing of goods and services), and enables you to document relevant information to support these interactions (Tax ID, Billing and Shipping addresses, personnel structures).
+DXP Accounts can model respective entities (companies, employees, and the responsibilities pertaining to their job), facilitate the interactions between these entities (such as purchasing of goods and services), and enable you to document relevant information to support these interactions (Tax ID, Billing and Shipping addresses, personnel structures).
 
 ### APIs Everywhere
 
-Liferay DXP includes REST and GraphQL APIs for user management, Site pages and experience, languages, permissions, structured content, and more. 
+Liferay DXP includes REST and GraphQL APIs for user management, Site pages and experience, languages, permissions, structured content, and more.
 
 ### OAuth2 Enhancements
 
 You can configure registered OAuth 2 applications as trusted applications to avoid manual authorization when obtaining a token.
 
-You can also register OAuth 2 applications so users can have their devices remember their manual authorization (i.e., "remember me"). 
+You can also register OAuth 2 applications so users can have their devices remember their manual authorization (i.e., "remember me").
 
-You can now revoke all existing authorizations of a registered OAuth 2 application with a single click at the OAuth 2 applications' list screen. 
+You can now revoke all existing authorizations of a registered OAuth 2 application with a single click at the OAuth 2 applications' list screen.
 
 ### FIDO2 Based Hardware Key Factor Support in Multi-Factor-Authentication
 
-Users can now use the built in multi-factor authentication to leverage common devices (fingerprint readers, USB keys) to authenticate to online services in both mobile and desktop environments. 
+Users can now use the built in multi-factor authentication to [leverage common devices](../installation-and-upgrades/securing-liferay/multi-factor-authentication/fast-identity-online-2.md) (fingerprint readers, USB keys) to authenticate to online services in both mobile and desktop environments.
 
 ### Better Data Management in and Maintenance of SAML
 
@@ -214,7 +215,7 @@ There is also a full backwards compatibility: the existing behavior is maintaine
 
 ### Click to Chat Integration
 
-An out-of-the-box integration with a number of chat platforms is available.  Enabling the integration under Instance Settings enables users to chat with representatives at their own convenience.  Please note that a separate subscription with the chat provider is required. The following chat providers are available for OOTB integration:
+An out-of-the-box [integration with a number of chat platforms](../site-building/personalizing-site-experience/enabling-automated-live-chat-systems/enabling-automated-live-chat-systems.md) is available.  Enabling the integration under Instance Settings enables users to chat with representatives at their own convenience.  Please note that a separate subscription with the chat provider is required. The following chat providers are available for OOTB integration:
 
 * Chatwoot
 * Crisp
@@ -229,4 +230,4 @@ An out-of-the-box integration with a number of chat platforms is available.  Ena
 
 ### DocuSign Integration
 
-An out-of-the-box integration with DocuSign is available. Enabling the integration under Instance Settings enables users to send Digital Signature Envelopes with documents to DocuSign from Documents and Media and the Digital Signature module in the Control Panel.  Users can view previously sent Digital Signature Envelopes to see their status and download signed documents. A separate subscription with DocuSign is required.
+An out-of-the-box [integration with DocuSign](../content-authoring-and-management/documents-and-media/uploading-and-managing/enabling-docusign-digital-signatures.md) is available. Enabling the integration under Instance Settings enables users to send Digital Signature Envelopes with documents to DocuSign from Documents and Media and the Digital Signature module in the Control Panel.  Users can view previously sent Digital Signature Envelopes to see their status and download signed documents. A separate subscription with DocuSign is required.
