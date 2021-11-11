@@ -11,7 +11,7 @@ LARs have these properties and requirements:
 * You can restore your Site with the latest LAR, but to do so you must delete your Site entirely and then create a new Site with the same name to import the LAR into. This avoids potential data conflicts between content that exists both in the LAR and in the Site.
 
 ```{note}
-Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the [Backing up a Liferay Portal Installation](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md) section for information on backing up Liferay Portal.
+Periodically exporting LARs is *not* a backup solution; it should only be used to migrate information between two environments. Please refer to the [Backing up a Liferay Portal Installation](../../installation-and-upgrades/maintaining-a-liferay-installation/backing-up.md) section for information on backing up Liferay Portal.
 ```
 
 ## Importing and Exporting Pages

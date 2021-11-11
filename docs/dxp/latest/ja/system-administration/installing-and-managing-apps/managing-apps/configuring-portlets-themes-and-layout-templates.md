@@ -20,5 +20,5 @@
 
 ## 追加情報
 
-  - [Maintaining Clustered Installations](../../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+  - [Maintaining Clustered Installations](../../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)
   - [アプリをブラックリストにする](./blacklisting-apps.md)

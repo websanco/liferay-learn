@@ -9,7 +9,7 @@
 [サーバー管理](../using-the-server-administration-panel/using-the-server-administration-panel.md) のデータ移行ユーティリティは、移行を容易にします。
 
 ```{warning}
-移行する前に、**必ず** [ファイルストアとデータベースをバックアップ](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーで移行プロセスをテストすることをお勧めします。
+ 移行する前に、**必ず** `ファイルストアとデータベースをバックアップ <../../installation-and-upgrades/maintaining-a-liferay-installation/backing-up.md>`_ してください。 バックアップコピーで移行プロセスをテストすることをお勧めします。
 ```
 
 ## ファイルの移行

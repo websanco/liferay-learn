@@ -57,4 +57,4 @@
 
   - [アプリのブラックリスト登録](./blacklisting-apps.md)
   - [OSGiコンポーネントのブラックリスト登録](./blacklisting-osgi-components.md)
-  - [Maintaining a Clustered Installation](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+  - [Maintaining a Clustered Installation](../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)

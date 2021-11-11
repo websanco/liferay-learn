@@ -2,9 +2,9 @@
 
 Fix Packs are released on a periodic basis and include bug and security fixes. If you are installing a fix pack to an installation that has custom code deployed, we recommend that you deploy and test the fix pack with your custom code on a test environment prior to installing on production.
 
-See [Patching Liferay](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html) and [Understanding Patch Types](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html) to learn about the various types of patches.
+See [Patching Liferay](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.html) and [Understanding Patch Types](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.html) to learn about the various types of patches.
 
-To learn how to apply a patch, see [Installing Patches](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-patches.html).
+To learn how to apply a patch, see [Installing Patches](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.html).
 
 Liferay Commerce 3.0 (open source) users have access to the same bug and security updates through new releases of Liferay Portal 7.3.
 
