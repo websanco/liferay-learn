@@ -84,7 +84,7 @@ http://localhost:8080/web/guest/search?q=data&target=this-site
 
 ## Searching for Liferay Objects
 
-Liferay 7.4 includes [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) can then be queried returned in the Search Results widget. 
+Liferay 7.4 includes [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) can then be queried and returned in the Search Results widget. 
 
 ```{important}
 The scope of the Object determines how it must be searched:
