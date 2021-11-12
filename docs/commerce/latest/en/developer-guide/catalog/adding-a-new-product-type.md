@@ -38,8 +38,8 @@ In this section, we will get an example product type up and running on your inst
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -50,8 +50,8 @@ In this section, we will get an example product type up and running on your inst
 
 1. Verify that the example product type was added. Open your browser to `https://localhost:8080`. Click the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Products_. Then click on the (+) icon to add a new product. The new product type ("Example") will be present in the list of types to choose from.
 
-```note::
-   In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*.
+```{note}
+In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*.
 ```
 
 ![New product type](./adding-a-new-product-type/images/02.png "New product type")

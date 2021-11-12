@@ -38,8 +38,8 @@ In this section, we will get an example low stock activity up and running on you
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -52,8 +52,8 @@ In this section, we will get an example low stock activity up and running on you
 
    From there, navigate to _Configuration_. The new activity ("Log a warning message") will be present under the _Low Stock Action_ dropdown.
 
-```note::
-  In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*. 
+```{note}
+In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*. 
 ```
 
 ![New low stock activity](./implementing-a-custom-low-stock-activity/images/02.png "New low stock activity")

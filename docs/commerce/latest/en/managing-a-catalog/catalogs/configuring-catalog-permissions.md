@@ -2,8 +2,8 @@
 
 Catalog permissions determine which users can see and modify catalogs and their related products. Admin users have these permissions by default and these permissions can be added to new roles that have been added to the system.
 
-```note::
-   Individual product view permissions are managed by modifying the channels that they are available in. See `Configuring Product Visibility Using Channels <../../starting-a-store/channels/configuring-product-visibility-using-channels.md>`_ to learn more.
+```{note}
+Individual product view permissions are managed by modifying the channels that they are available in. See [Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md) to learn more.
 ```
 
 ## Adding Catalog Management Permissions to an Existing Role

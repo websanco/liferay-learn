@@ -34,8 +34,8 @@ The Admin user is created by default in any new installation of Liferay Commerce
 
     ![Setting a Password](./introduction-to-the-admin-account/images/04.png "Setting a Password")
 
-    ```note::
-       This screen is where the `Password Reminder Question` may also be updated.
+    ```{note}
+    This screen is where the `Password Reminder Question` may also be updated.
     ```
 
 ### Signing Out
@@ -78,8 +78,8 @@ To log out of your account:
 
     ![Setting a Password](./introduction-to-the-admin-account/images/04.png "Setting a Password")
 
-    ```note::
-       This screen is where the `Password Reminder Question` may also be updated.
+    ```{note}
+    This screen is where the `Password Reminder Question` may also be updated.
     ```
 
 #### Signing Out

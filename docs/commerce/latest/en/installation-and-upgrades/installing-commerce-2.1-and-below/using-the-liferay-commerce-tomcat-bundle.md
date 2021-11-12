@@ -17,8 +17,8 @@ To use the Liferay Commerce bundle, follow these steps:
     * Navigate to `$CATALINA_HOME/bin`.
     * Execute `./catalina.sh run`. For *Windows* users, run: `catalina run`
 
-    ```tip::
-       Wait until you see ``org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds``
+    ```{tip}
+    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`
     ```
 
 1. Open your browser to `https://localhost:8080`.

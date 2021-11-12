@@ -4,12 +4,12 @@ With Liferay Commerce, you can add multiple SKUs to a Product to represent Produ
 
 ![Product variants are displayed in the Product Details widget.](./creating-skus-for-product-variants/images/01.png)
 
-```note::
-   Without Product Options, only one SKU can be active for a Product at a time.
+```{note}
+Without Product Options, only one SKU can be active for a Product at a time.
 ```
 
-```tip::
-   It’s highly recommended that Product Option values are finalized before using them to create SKUs. See `Using Product Options <./using-product-options.md`>_ for more information.
+```{tip}
+It’s highly recommended that Product Option values are finalized before using them to create SKUs. See `Using Product Options <./using-product-options.md`>_ for more information.
 ```
 
 ## Automatically Generating Multiple SKUs
@@ -34,8 +34,8 @@ Follow these steps to generate and activate multiple SKUs for a Product:
 
 Follow these steps to manually create a Product SKU for individual Option values:
 
-   ```important::
-      While SKU Contributor is enabled, each manually created SKU must be mapped to an Option value.
+   ```{important}
+   While SKU Contributor is enabled, each manually created SKU must be mapped to an Option value.
    ```
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
@@ -58,10 +58,10 @@ If Allow Back Orders is enabled for the Product, all published SKUs with a set b
 
 ![Add inventory for each Product SKU.](./creating-skus-for-product-variants/images/06.png)
 
-```note::
-   If all SKU inventory is 0 and Allow Back Orders is disabled, then none of the Product variants are listed in the Product Details widget. However, if only one SKU reaches 0, then all variants are listed. 
-   
-   If *Allow Back Orders* is enabled, then all Options are listed in the Product Details widget, regardless of inventory. 
+```{note}
+If all SKU inventory is 0 and Allow Back Orders is disabled, then none of the Product variants are listed in the Product Details widget. However, if only one SKU reaches 0, then all variants are listed. 
+
+If *Allow Back Orders* is enabled, then all Options are listed in the Product Details widget, regardless of inventory. 
 ```
 
 ## SKU Fields Reference

@@ -31,8 +31,8 @@ Follow these steps to add a new price modifier to a Price List:
 
 Once created, you can finish configuring the modifier by clicking on it in the Price Modifiers tab.
 
-```note::
-   Available configuration options vary depending on the selected target for your modifier.
+```{note}
+Available configuration options vary depending on the selected target for your modifier.
 ```
 
 ## Configuring a Modifier's General Information

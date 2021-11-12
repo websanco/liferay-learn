@@ -14,8 +14,8 @@ After providing their email, Guests are then prompted to log in, create an accou
 
 When a Guest submits an order, it is processed the same as any other order. See [Processing an Order](../../orders-and-fulfillment/orders/processing-an-order.md) for more information.
 
-```note::
-   Guests do not share order histories with other authenticated users, even if they have the same email addresses.
+```{note}
+Guests do not share order histories with other authenticated users, even if they have the same email addresses.
 ```
 
 ## Creating a Guest Checkout Authentication Page

@@ -2,8 +2,8 @@
 
 Account Groups allow accounts to be grouped based on business criteria, such as grouping accounts by geographic region (US West Coast, the Midwest, and the South). Sellers may then apply discounts or target marketing campaigns to specific Account Groups.
 
-```note::
-   As of Liferay Commerce 2.0, Account Groups has replaced User Segmentation.
+```{note}
+As of Liferay Commerce 2.0, Account Groups has replaced User Segmentation.
 ```
 
 To create an account group:

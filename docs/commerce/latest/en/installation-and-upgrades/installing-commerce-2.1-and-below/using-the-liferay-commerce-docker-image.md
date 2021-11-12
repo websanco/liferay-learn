@@ -4,8 +4,8 @@ The latest version Liferay Commerce is available as a docker image. Follow these
 
 1. Get Liferay Commerce
 
-    ```tip::
-       Don't have Docker? Go here first: `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_
+    ```{tip}
+    Don't have Docker? Go here first: [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/)
     ```
 
     ```bash
@@ -18,8 +18,8 @@ The latest version Liferay Commerce is available as a docker image. Follow these
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-    ```important::
-       Wait until you see ``org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds``
+    ```{important}
+    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`
     ```
 
 1. Open your browser to `https://localhost:8080`

@@ -38,8 +38,8 @@ In this section, we will get an example tax engine up and running on your instan
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console.
@@ -50,8 +50,8 @@ In this section, we will get an example tax engine up and running on your instan
 
 1. Verify that the example tax engine was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Channels_. Edit a channel. The new tax engine ("Q4B9 Commerce Tax Engine") will be present in the list shown.
 
-```note::
-   In Commerce 2.1 and earlier, find the tax engines by navigating to *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*.
+```{note}
+In Commerce 2.1 and earlier, find the tax engines by navigating to *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*.
 ```
 
 ![New tax engine](./implementing-a-new-tax-engine/images/02.png "New tax engine")

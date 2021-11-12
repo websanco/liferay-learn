@@ -38,8 +38,8 @@ First, you must deploy an example discount rule type on your instance of Liferay
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -50,8 +50,8 @@ First, you must deploy an example discount rule type on your instance of Liferay
 
 1. Verify that the example discount rule type was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to _Commerce_ → _Discounts_. Click _Edit_ within the menu for any discount. Scroll down to the _Rules_ section, click the (+) icon to add a new discount rule. The new discount rule type ("Has a minimum number of products") is present under the _Type_ dropdown.
 
-```note::
-   In Liferay Commerce 2.1 and earlier, find the discounts by navigating to *Control Panel* → *Commerce* → *Discounts*. Click any *Edit* within the menu for any discount and then click *Rules* at the top of the screen.
+```{note}
+In Liferay Commerce 2.1 and earlier, find the discounts by navigating to *Control Panel* → *Commerce* → *Discounts*. Click any *Edit* within the menu for any discount and then click *Rules* at the top of the screen.
 ```
 
 ![New discount rule type](./adding-a-new-discount-rule-type/images/02.png "New discount rule type")

@@ -34,8 +34,8 @@ Once you have created Product Options and generated the corresponding SKUs, you 
 1. Go to the _Global Applications_ menu → _Commerce_ → _Products_.
 1. Click on a product, in this example, _Hoses_.
 
-    ```note::
-       If you had used Minium to create your store and sample data, this product was added by the Minium accelerator.
+    ```{note}
+    If you had used Minium to create your store and sample data, this product was added by the Minium accelerator.
     ```
 
 1. Click the _Media_ sub-tab.
@@ -93,8 +93,8 @@ Once you have created Product Options and generated the corresponding SKUs, you 
 1. Navigate to _Control Panel_ → _Commerce_ → _Products_.
 1. Click on a product, in this example, _Hoses_.
 
-    ```note::
-       If you had used Minium to create your store and sample data, this product was added by the Minium accelerator.
+    ```{note}
+    If you had used Minium to create your store and sample data, this product was added by the Minium accelerator.
     ```
 
 1. Click the _Media_ sub-tab.

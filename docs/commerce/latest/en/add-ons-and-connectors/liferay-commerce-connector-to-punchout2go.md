@@ -6,8 +6,8 @@ Liferay provides a PunchOut2Go connector that enables Commerce integration with 
 
 <!--![Punch Out Flow Diagram](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
-```important::
-   The PunchOut2Go connector requires Liferay Commerce 2.1.2 and Liferay DXP 7.1 FP18+ or 7.2 FP6+.
+```{important}
+The PunchOut2Go connector requires Liferay Commerce 2.1.2 and Liferay DXP 7.1 FP18+ or 7.2 FP6+.
 ```
 
 ## Deploy the PunchOut2Go Connector

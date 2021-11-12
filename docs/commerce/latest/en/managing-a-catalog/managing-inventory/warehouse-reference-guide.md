@@ -4,8 +4,8 @@ Warehouses represent physical locations where product inventory is managed and s
 
 To manage your Warehouses, navigate to the _Global Applications_ → _Commerce_ → _Settings_. Click the _Warehouses_ tab.
 
-```note::
-   Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2.1.
+```{note}
+Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2.1.
 ```
 
 ## Warehouse Name

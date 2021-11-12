@@ -2,8 +2,8 @@
 
 Commerce Products can be connected to other assets in Liferay Commerce by using the [Related Assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) relationship.
 
-```note::
-   Performing a search reindex may be necessary for Commerce Products to appear as a Related Asset option when editing content.
+```{note}
+Performing a search reindex may be necessary for Commerce Products to appear as a Related Asset option when editing content.
 ```
 
 ## Configure the Asset Browser to Search the Database

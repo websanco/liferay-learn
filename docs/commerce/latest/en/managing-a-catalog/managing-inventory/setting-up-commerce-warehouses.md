@@ -4,8 +4,8 @@ Commerce Warehouses represent physical locations where Product inventory is stor
 
 When using an [accelerator](../../starting-a-store/accelerators.md) to create a Commerce Site, three sample Warehouses are created.
 
-```note::
-   When setting up commerce warehouses, users may need to first enable the applicable country and region location of the Warehouse (state or province). See `Adding Regions <../../store-administration/adding-regions.md>`_ for more information.
+```{note}
+When setting up commerce warehouses, users may need to first enable the applicable country and region location of the Warehouse (state or province). See [Adding Regions](../../store-administration/adding-regions.md) for more information.
 ```
 
 ## Adding a Warehouse

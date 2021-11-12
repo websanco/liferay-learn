@@ -7,12 +7,12 @@ Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr
 * Tailoring a discount for specific [Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md), or to a more narrowly defined group of customers
 * Schedule a promotion for a period of time
 
-```tip::
-   Discounts are not the same as a *Price List*. For more information on Pricing see `Introduction to Pricing <../managing-a-catalog/managing-prices/introduction-to-pricing.md>`_, `Creating a Price List <../managing-a-catalog/managing-prices/creating-a-price-list.md>`_, and `Using Price Tiers <../managing-a-catalog/managing-prices/using-price-tiers.md>`_.
+```{tip}
+Discounts are not the same as a *Price List*. For more information on Pricing see [Introduction to Pricing](../managing-a-catalog/managing-prices/introduction-to-pricing.md), [Creating a Price List](../managing-a-catalog/managing-prices/creating-a-price-list.md), and [Using Price Tiers](../managing-a-catalog/managing-prices/using-price-tiers.md).
 ```
 
-```note::
-   For Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Many Commerce settings in prior versions are located there or in *Site Administration*.
+```{note}
+For Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Many Commerce settings in prior versions are located there or in *Site Administration*.
 ```
 
 ## Discount Types

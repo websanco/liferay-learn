@@ -12,8 +12,8 @@ Once the buyer has submitted his cart for pre-approval, or placed an order for s
 
    ![Click Assign to Me to assign the review task to yourself.](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
 
-    ```note::
-       Alternatively, click `Assign to...` and select another user to review the Commerce Order.
+    ```{note}
+    Alternatively, click `Assign to...` and select another user to review the Commerce Order.
     ```
 
 1. Add a comment (optionally) and click *Done*.
@@ -47,8 +47,8 @@ Once the buyer has submitted his cart for pre-approval, or placed an order for s
 
    ![Click "Assign to Me" to assign the review task to yourself.](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
 
-    ```note::
-       Alternatively, click `Assign to...` and select another user to review the Commerce Order.
+    ```{note}
+    Alternatively, click `Assign to...` and select another user to review the Commerce Order.
     ```
 
 1. Add a comment (optionally) and click *Done*.

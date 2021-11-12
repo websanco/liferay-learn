@@ -2,10 +2,10 @@
 
 Liferay Commerce includes the *Price Range Facet* widget for quickly filtering Product search results by price. To use this widget, ensure the Commerce Search Results widget is also deployed to the desired page.
 
-```note::
-   Starting with Liferay DXP 7.3 SP2, the Price Range Facet widget uses a Product's lowest price for filtering results.
+```{note}
+Starting with Liferay DXP 7.3 SP2, the Price Range Facet widget uses a Product's lowest price for filtering results.
 
-   For earlier Commerce versions, the widget uses a Product's base price and only works with Products that have a single SKU. Products with multiple SKUs are not displayed when the facet is active.
+For earlier Commerce versions, the widget uses a Product's base price and only works with Products that have a single SKU. Products with multiple SKUs are not displayed when the facet is active.
 ```
 
 ![Use the Price Range Facet widget to filter Channel Products by price.](using-the-price-range-facet-widget/images/01.png)

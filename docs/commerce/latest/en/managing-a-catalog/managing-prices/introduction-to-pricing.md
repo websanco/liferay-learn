@@ -8,8 +8,8 @@ The following article provides an overview of Commerce pricing and how Product a
 * [How Commerce Calculates Product Prices](#how-commerce-calculates-product-prices)
 * [How Commerce Calculates Order Prices](#how-commerce-calculates-order-prices)
 
-```note::
-   The following overview describes the Commerce Pricing Engine v2.0+. This engine version is the default algorithm used for Commerce 3.0+ and Portal/DXP 7.3+. Commerce 2.1.x and earlier versions use Commerce's `Pricing Engine v1.0 <#pricing-engine-v1-0-reference>`_ by default. If desired, you can `change the Pricing Engine version <#enabling-pricing-engine-v2-0-in-commerce-2-1-x>`_ used for the instance.
+```{note}
+The following overview describes the Commerce Pricing Engine v2.0+. This engine version is the default algorithm used for Commerce 3.0+ and Portal/DXP 7.3+. Commerce 2.1.x and earlier versions use Commerce's [Pricing Engine v1.0](#pricing-engine-v1-0-reference) by default. If desired, you can [change the Pricing Engine version](#enabling-pricing-engine-v2-0-in-commerce-2-1-x) used for the instance.
 ```
 
 ## Components of Commerce's Pricing System
@@ -67,8 +67,8 @@ When calculating an SKU's unit price, Commerce first searches for any Price List
 
 * If no applicable Price List exists, the SKU's Base Price List entry is used for the SKU's unit price.
 
-```note::
-   During this process, Commerce also checks for applicable tier prices. If one exists, its price is used in place of the default list price for specific quantities.
+```{note}
+During this process, Commerce also checks for applicable tier prices. If one exists, its price is used in place of the default list price for specific quantities.
 ```
 
 ### Calculating an SKU's Promo Price
@@ -101,8 +101,8 @@ Finally, Commerce adds together the discounted shipping cost and discounted subt
 | Tiered Price List (Tiered Price, Tiered Promo) | Special pricing (or currencies) per Product and buyer _at bulk quantities_ | Yes | Price Lists | Selected buyers (Accounts & Account Groups) | Individual Product SKUs |
 | Discount | Modifies price for a group of Products or buyers (Can limit quantity and use coupon codes) | No | Discounts | Selected Buyers (Accounts & Account Groups or those who meet certain qualifications) | Groups of Products (or Individual Product SKUs) |
 
-```note::
-   In the Commerce Pricing Engine v1.0, price entries include three components: an SKU, a standard price, and a promo price. In v2.0, each is a separate entity.
+```{note}
+In the Commerce Pricing Engine v1.0, price entries include three components: an SKU, a standard price, and a promo price. In v2.0, each is a separate entity.
 ```
 
 ![Pricing Hierarchy Diagram](./introduction-to-pricing/images/01.png)

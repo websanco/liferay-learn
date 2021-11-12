@@ -12,8 +12,8 @@ Follow these steps to add tiered pricing to an existing Price List:
 
 1. Use the radio button in the *Price Tiers* section to select either *Bulk Pricing* or *Tiered Pricing*.
 
-   ```note::
-      While both price tier options are configured in the same way, they apply prices differently. *Bulk Pricing* applies the same tier price to all items in qualifying bulk orders, while *Tiered Pricing* applies different prices to order items according to defined pricing tiers.      
+   ```{note}
+   While both price tier options are configured in the same way, they apply prices differently. *Bulk Pricing* applies the same tier price to all items in qualifying bulk orders, while *Tiered Pricing* applies different prices to order items according to defined pricing tiers.      
    ```
 
 1. Click the *Add* button (![Add icon](../../images/icon-add.png)).
@@ -24,8 +24,8 @@ Follow these steps to add tiered pricing to an existing Price List:
 
 1. Determine whether the tier price overrides active discounts on the product. If enabled, you can define custom discount levels for buyers who have been offered the list price and purchased the minimum quantity.
 
-   ```note::
-      You can set different discount levels that are applied on top of each other and modify the price. If there are two discounts on the same level (e.g., L1), the algorithm applies the better of the two. However, if there are two discounts on different levels (e.g., L1 and L2) the algorithm applies both.
+   ```{note}
+   You can set different discount levels that are applied on top of each other and modify the price. If there are two discounts on the same level (e.g., L1), the algorithm applies the better of the two. However, if there are two discounts on different levels (e.g., L1 and L2) the algorithm applies both.
    ```
 
    ![Add a tiered pricing entry.](./using-price-tiers/images/02.png)

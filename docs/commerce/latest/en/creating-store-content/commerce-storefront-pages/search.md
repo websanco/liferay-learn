@@ -6,10 +6,10 @@ If using the [Minium Accelerator](../../starting-a-store/using-the-minium-accele
 
 ![Minium Search page](./search/images/01.png)
 
-```note::
-   The Search Bar widget is scoped to include *Everything*. This is necessary for displaying Products, since Products are created in Catalogs at the global level and are not Site-scoped. 
-   
-   Also, the Search Options widget is set to *Allow Empty Searches*. This allows customers to browse and filter all content visible to the Channel.
+```{note}
+The Search Bar widget is scoped to include *Everything*. This is necessary for displaying Products, since Products are created in Catalogs at the global level and are not Site-scoped. 
+
+Also, the Search Options widget is set to *Allow Empty Searches*. This allows customers to browse and filter all content visible to the Channel.
 ```
 
 ## Additional Information

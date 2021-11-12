@@ -48,8 +48,8 @@ The placeholder image is now replaced for this catalog and is used for all produ
 
 ### Liferay Commerce 2.0 and Below
 
-```tip::
-   On Liferay Commerce 2.0 and below, the same placeholder image is used globally across catalogs created on a Liferay Commerce instance.
+```{tip}
+On Liferay Commerce 2.0 and below, the same placeholder image is used globally across catalogs created on a Liferay Commerce instance.
 ```
 
 To replace the existing placeholder image:

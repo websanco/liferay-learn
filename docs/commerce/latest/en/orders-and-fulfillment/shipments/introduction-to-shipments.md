@@ -2,8 +2,8 @@
 
 Create shipments first in the _Orders_ menu as part of [processing an order](../orders/processing-an-order.md). Once an order is processed, you are redirected to the _Shipments_ menu to complete order processing.
 
-```note::
-   A single shipment may contain multiple orders but all the orders must be created by the *same* account.
+```{note}
+A single shipment may contain multiple orders but all the orders must be created by the *same* account.
 ```
 
 Navigate to _Global Applications_ → _Commerce_ → _Orders_. Select an order that is ready to be shipped and click the _Create Shipment_ button.

@@ -34,8 +34,8 @@ Follow these steps to create an Option Template:
 
    When enabled, the Option's values are used to create [SKUs](./creating-skus-for-product-variants.md) for Product variants. Customers are required to select from available option values.
 
-   ```note::
-      SKU Contributor can only be enabled with the *Single Selection* and *Select from List* field types.
+   ```{note}
+   SKU Contributor can only be enabled with the *Single Selection* and *Select from List* field types.
    ```
 
 1. Click on *Save* when finished.
@@ -44,8 +44,8 @@ Follow these steps to create an Option Template:
 
 Once created, you can add [generic values](#adding-values-to-option-templates) to the Options template or skip this step and [apply the Option](#applying-an-option-template-to-a-product) to individual products.
 
-```note::
-   Alternatively, you can create basic Option templates via the *Products* page. Go to *Global Menu* → *Commerce tab* → *Product Management* → *Products*. Then select your desired *Product*, and click on the *Options* tab. Enter a name for your new Option into the *Add Option* field, and click *Create New*. An Option template is immediately created and applied to the Product. 
+```{note}
+Alternatively, you can create basic Option templates via the *Products* page. Go to *Global Menu* → *Commerce tab* → *Product Management* → *Products*. Then select your desired *Product*, and click on the *Options* tab. Enter a name for your new Option into the *Add Option* field, and click *Create New*. An Option template is immediately created and applied to the Product. 
 ```
 
 ## Adding Values to Option Templates
@@ -86,8 +86,8 @@ The Option is immediately applied to the Product, and customers can access the O
 
 If desired, you can add multiple Options to the same Product. See [Creating SKUs for Product Variants](./creating-skus-for-product-variants.md) for more information.
 
-```important::
-   If SKU Contributor is enabled, you'll need to manually generate SKUs for the Option's values after they're created. To do this, go to the Product's *SKUs* tab, click on the *Add* button, and select *Generate All SKU Combinations*. Unique SKUs are immediately generated for each value. If the SKUs are not generated, the Option's field will not display its values.
+```{important}
+If SKU Contributor is enabled, you'll need to manually generate SKUs for the Option's values after they're created. To do this, go to the Product's *SKUs* tab, click on the *Add* button, and select *Generate All SKU Combinations*. Unique SKUs are immediately generated for each value. If the SKUs are not generated, the Option's field will not display its values.
 ```
 
 ![Customers can view and use the Option field in the Product's display page.](./using-product-options/images/05.png)
@@ -96,8 +96,8 @@ If desired, you can add multiple Options to the same Product. See [Creating SKUs
 
 Once an Option is applied to a Product, you can access additional configuration settings for the Option and its values.
 
-```note::
-   Changes made to a Product's Option do not affect the Option template, and vice versa.
+```{note}
+Changes made to a Product's Option do not affect the Option template, and vice versa.
 ```
 
 ### Additional Option Settings
@@ -110,8 +110,8 @@ Once an Option is applied to a Product, you can access additional configuration 
 
   * *Static* pricing uses a fixed price for the Option's values. If the value is linked to a Product, the Static price overrides the Product's instance price without affecting its list price.
 
-```note::
-   The price type attribute is only compatible with the *Single Selection* and *Select from List* field types.
+```{note}
+The price type attribute is only compatible with the *Single Selection* and *Select from List* field types.
 ```
 
 ### Additional Value Settings
@@ -122,8 +122,8 @@ Once an Option is applied to a Product, you can access additional configuration 
 
 * **Product**: Link an existing SKU to the value and specify its quantity.
 
-```note::
-   Products can only be linked to Options with the price type attribute.
+```{note}
+Products can only be linked to Options with the price type attribute.
 ```
 
 ## Commerce 2.1 and Below
@@ -154,8 +154,8 @@ When _Use in Faceted Navigation_ is switched to _Active_, users have the ability
 
 A SKU contributor can be assigned a unique price and other attributes for each variant via [SKUs](./creating-skus-for-product-variants.md). If enabled, the option must have a SKU in order to be sold.
 
-```warning::
-   You cannot use a Boolean option as a SKU contributor. Attempting to use a Boolean option as a SKU contributor shows the following warning message: ``SKU Contributor cannot be set as true for the selected Field Type.``
+```{warning}
+You cannot use a Boolean option as a SKU contributor. Attempting to use a Boolean option as a SKU contributor shows the following warning message: `SKU Contributor cannot be set as true for the selected Field Type.`
 ```
 
 ### Adding Option Values

@@ -9,8 +9,8 @@ Liferay provides a connector for integrating and pushing data between Salesforce
 
 Once purchased, you can [download]() and [deploy]() the Salesforce Connector to a Liferay instance as an `.lpkg` file. This file contains multiple Talend Jobs that map data fields in Liferay Commerce to data fields in Salesforce. Once deployed, Dispatch Tasks are automatically created for each Talend Job. They can then be configured and run manually via the Dispatch UI, or scheduled to run at specific time intervals.
 
-```note::
-   The Liferay Commerce Connector to Salesforce is compatible with Liferay DXP 7.1.x+.
+```{note}
+The Liferay Commerce Connector to Salesforce is compatible with Liferay DXP 7.1.x+.
 ```
 
 ## Supported Entities
@@ -29,10 +29,10 @@ The following chart lists supported Salesforce entities with their Liferay count
 | OrderItem | Order Item | &#10004; | &#10004; |
 | OrderNote | Order Note | &#10004; | &#10004; |
 
-```note::
-   Salesforce has no equivalent entity to Liferay Commerce Catalogs. 
-   
-   Importing Salesforce Products to Commerce requires a Catalog with `externalReferenceCode` equal to `SALESFORCE`. If such a Catalog does not already exist, Commerce automatically creates a default Catalog during the `Products` Task execution. This Catalog is then used to store This Catalog is created with default value, .  if such a Catalog does not already exist.   
+```{note}
+Salesforce has no equivalent entity to Liferay Commerce Catalogs. 
+
+Importing Salesforce Products to Commerce requires a Catalog with `externalReferenceCode` equal to `SALESFORCE`. If such a Catalog does not already exist, Commerce automatically creates a default Catalog during the `Products` Task execution. This Catalog is then used to store This Catalog is created with default value, .  if such a Catalog does not already exist.   
 ```
 
 ## Deploying the Connector
@@ -62,8 +62,8 @@ Follow these steps to deploy the Salesforce connector to a DXP instance:
 
 When created, the settings editor for each Talend Dispatch Task is automatically populated with default context parameters. These parameters can be used to provide necessary credentials and to modify each task's behavior in runtime.
 
-```warning::
-   Be careful when removing parameters from the settings editor. If you leave a key with a blank value, it will disappear when the settings are saved. If the keys and their values are lost, they cannot be restored, and you'll have to recreate the Talend Dispatch Task.
+```{warning}
+Be careful when removing parameters from the settings editor. If you leave a key with a blank value, it will disappear when the settings are saved. If the keys and their values are lost, they cannot be restored, and you'll have to recreate the Talend Dispatch Task.
 ```
 
 ### Credentials Reference
@@ -128,8 +128,8 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 
 Once configured, you can run each task manually by clicking *Run Now*, or schedule them to run automatically. See [Using Dispatch]() for more information.
 
-```important::
-   Running these Talend Dispatch Tasks can be resource intensive and degrade platform performance. To reduce performance impact, avoid running them during peak use hours.
+```{important}
+Running these Talend Dispatch Tasks can be resource intensive and degrade platform performance. To reduce performance impact, avoid running them during peak use hours.
 ```
 
 ## Additional Information -->

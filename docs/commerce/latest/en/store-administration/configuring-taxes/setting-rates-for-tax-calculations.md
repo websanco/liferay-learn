@@ -10,8 +10,8 @@ Liferay Commerce includes built-in tools for defining and applying tax rates to 
 
 Commerce tax engines define calculations for tax rates when a transaction is made. Liferay provides two out-of-the-box engines (i.e., *Fixed Tax Rate* and *By Address*), though you can design and implement [custom engines](../../developer-guide/implementing-a-new-tax-engine.md).
 
-```note::
-   Tax Categories can contain multiple tax rates created using either the same or different tax engine.
+```{note}
+Tax Categories can contain multiple tax rates created using either the same or different tax engine.
 ```
 
 ### Fixed Tax Rate
@@ -46,8 +46,8 @@ Follow these steps to configure a tax calculation type:
 
 1. Click on *Save* when finished.
 
-```note::
-   You must save your changes before navigating to another tab. Otherwise, they are lost.
+```{note}
+You must save your changes before navigating to another tab. Otherwise, they are lost.
 ```
 
 ![Configure the tax calculation, and click on Save.](./setting-rates-for-tax-calculations/images/02.png)

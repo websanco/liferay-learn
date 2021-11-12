@@ -10,8 +10,8 @@ For example, consider a US-based business with two Channels, one for US customer
 
 In this example, the USD prices are converted to EUR prices and stored in the EU Channel. These stored prices are then used for the Channel's connected Site. This ensures that German customers see EUR prices when browsing the EU Channel's Site, while US customers accessing the US Channel's Site see USD prices. When orders are created, each Channel uses its stored prices in the appropriate currency.
 
-```note::
-   You can view available currencies via the *Currencies* page in the *Commerce* tab of the *Global Menu*. Here you can edit, prioritize, add/remove, and activate/deactivate currencies. See `Currencies Reference <./currencies-reference.md>`_ and `Adding a New Currency <./adding-a-new-currency.md>`_ for more information.
+```{note}
+You can view available currencies via the *Currencies* page in the *Commerce* tab of the *Global Menu*. Here you can edit, prioritize, add/remove, and activate/deactivate currencies. See [Currencies Reference](./currencies-reference.md) and [Adding a New Currency](./adding-a-new-currency.md) for more information.
 ```
 
 <!-- Update article once [COMMERCE-5171](https://issues.liferay.com/browse/COMMERCE-5171) is implemented. It removes Catalog Currency and uses the Base Price List currency alone as currency basis. -->

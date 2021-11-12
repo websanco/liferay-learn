@@ -74,8 +74,8 @@ Order information in the *Orders* menu can also be presented to other users – 
 
 In this tab, the order activity is exclusively on the buyer's side. A new order is created in the _Open_ tab when a buyer adds products to their cart. The order remains in this tab until the buyer places the order.
 
-```note::
-   If *Approval Workflow* is enabled, orders remain in the *Open* tab until the workflow process has completed and the order is placed.
+```{note}
+If *Approval Workflow* is enabled, orders remain in the *Open* tab until the workflow process has completed and the order is placed.
 ```
 
 ![Open Tab](./orders-menu-reference-guide/images/02.png "Open Tab")
@@ -84,8 +84,8 @@ In this tab, the order activity is exclusively on the buyer's side. A new order 
 
 The _Pending_ tab serves as a holding place for orders – this is helpful for business contexts where not all placed orders are immediately transmitted. When a buyer places an order, the order moves to the _Pending_ tab. Here, the seller can [modify, cancel or transmit the order](./processing-an-order.md#commerce-20-and-below).
 
-```note::
-   If *Transmission Workflow* is enabled, orders remain in the *Pending* tab throughout the workflow process, even if the seller rejects an order, sending it back to the buyer.
+```{note}
+If *Transmission Workflow* is enabled, orders remain in the *Pending* tab throughout the workflow process, even if the seller rejects an order, sending it back to the buyer.
 ```
 
 ![Pending Tab](./orders-menu-reference-guide/images/03.png "Pending Tab")
